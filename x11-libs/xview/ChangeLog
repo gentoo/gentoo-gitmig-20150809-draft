@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.14 2005/06/28 09:27:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/ChangeLog,v 1.15 2005/08/14 00:55:23 ribosome Exp $
+
+*xview-3.2-r4 (14 Aug 2005)
+
+  14 Aug 2005; Olivier Fisette <ribosome@gentoo.org> +xview-3.2-r4.ebuild:
+  Fixed bug #88001: xview no longer builds its own versions of msgfmt and
+  xgettext.
 
   28 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xview-3.2.ebuild,
   xview-3.2-r1.ebuild, xview-3.2-r3.ebuild:
