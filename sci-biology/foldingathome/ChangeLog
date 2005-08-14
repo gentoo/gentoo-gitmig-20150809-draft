@@ -1,6 +1,16 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.9 2005/04/22 13:47:18 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.10 2005/08/14 02:31:39 ribosome Exp $
+
+*foldingathome-5.0.2-r4 (14 Aug 2005)
+
+  14 Aug 2005; Olivier Fisette <ribosome@gentoo.org> +files/init-5.0.2-r4,
+  +foldingathome-5.0.2-r4.ebuild:
+  Fixed bug #95697: license is now correct and the binaries are no longer
+  stripped since we are not allowed to modify them. Thanks to Ian Kelly
+  <kellyia@udel.edu>. Fixed bugs #90247 and #93047: Foldingathome init script
+  now uses start-stop-daemon. Thanks to James Lademann
+  <jwlademann@myrealbox.com>.
 
   22 Apr 2005; Danny van Dyk <kugelfang@gentoo.org>
   foldingathome-5.0.2-r3.ebuild:
