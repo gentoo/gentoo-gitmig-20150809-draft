@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.7 2005/08/12 13:53:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.8 2005/08/14 15:37:34 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -129,7 +129,8 @@ src_unpack() {
 	#
 	#   LIBPERL=libperl.so.${SLOT}.`echo ${PV} | cut -d. -f1,2`
 	#
-	cd ${S}; epatch ${FILESDIR}/${PN}-create-libperl-soname.patch
+	cd ${S}; 
+	use userland_Darwin || epatch ${FILESDIR}/${PN}-create-libperl-soname.patch
 
 	# uclibc support - dragonheart 2004.06.16
 	# Now upstreamed - MPC 2005.06.28
@@ -242,14 +243,18 @@ src_install() {
 	if [ "${PN}" = "libperl" ]
 	then
 		dolib.so ${WORKDIR}/${LIBPERL}
-		preplib
+		if [[ ${USERLAND} == "Darwin" ]]; then
+			install_name_tool -id /usr/$(get_libdir)/${LIBPERL} ${D}/usr/$(get_libdir)/${LIBPERL}
+		else
+			preplib
+		fi
 	else
 		# Need to do this, else apps do not link to dynamic version of
 		# the library ...
 		local coredir="/usr/lib/perl5/${PV}/${myarch}${mythreading}/CORE"
 		dodir ${coredir}
 		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
-		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname).${PERLSLOT}
+		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname ${PERLSLOT})
 		dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
 
 		# Fix for "stupid" modules and programs
