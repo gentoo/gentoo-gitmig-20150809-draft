@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.2 2005/08/07 18:22:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.3 2005/08/14 23:53:19 morfic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,6 +26,14 @@ RDEPEND="${DEPEND}
 	java? ( || ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 ) )"
 
 src_unpack() {
+
+	echo
+	einfo "The 'server' USE flag will build tightvnc's server."
+	einfo "If '-server' is chosen only the client is built to save space."
+	einfo "Stop the build now if you need to add 'server' to USE flags.\n"
+	ebeep
+	epause 5
+
 	unpack ${A} && cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-gentoo.security.patch

@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21b1b39e5b6ff5ad359ba9f5fce634ec ChangeLog 7207
+MD5 26c51c630aa32d1a1444d50bcc2d9e84 ChangeLog 7328
 MD5 59a8848188e5992cbe142be7d6285ee5 metadata.xml 309
 MD5 ad61c2374702756a5341de9f1a63efda tightvnc-1.2.8.ebuild 1595
 MD5 3cc698e0e4dc7d3c778411161b5af86d tightvnc-1.2.9-r1.ebuild 1717
 MD5 c3388af0849a29205dbf0a090a78f2c4 tightvnc-1.3_alpha5.ebuild 1871
-MD5 c8b94a398ad2269a5a37ccc0f499bfe0 tightvnc-1.3_alpha7.ebuild 1883
+MD5 a51d14af2aeb21edf264185bb276b9f1 tightvnc-1.3_alpha7.ebuild 2113
 MD5 68903d8d341d5f9a8d576dee0716f4b8 files/README.JavaViewer 18585
 MD5 11be6d47e594297c9a92c56056df2f73 files/digest-tightvnc-1.2.8 76
 MD5 db5ea3a3551303c5cd4362c657ba3a08 files/digest-tightvnc-1.2.9-r1 76
@@ -33,10 +30,3 @@ MD5 e972798c3780581c31b4c0a4b35dfbb6 files/digest-tightvnc-1.3_alpha7 78
 MD5 19c42aff4dfa179a0b028316e845e14f files/4.0/0121_all_4.2.99.3-build-libs-with-pic.patch 949
 MD5 55068075897cef6ddd710f410ba25c21 files/4.0/0160_all_4.2.99.4-IncludeSharedObjectInNormalLib.patch 1692
 MD5 da10d05f6a76bdc27a59276c0acde9d9 files/4.0/0180_amd64_4.2.99.4-glx-nopic.patch 364
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9iwe/aM9DdBw91cRAqAZAJ9L1MpBZPbwUwP063W8j/u2HhT0CwCffNv0
-GknyN2VbZoiGoRaGAoPnnAg=
-=FurM
------END PGP SIGNATURE-----
