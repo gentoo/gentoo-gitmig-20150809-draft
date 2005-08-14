@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cssc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.5 2004/09/05 17:09:28 aliz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/ChangeLog,v 1.6 2005/08/14 10:10:21 dragonheart Exp $
+
+*cssc-1.0.1 (14 Aug 2005)
+
+  14 Aug 2005; Daniel Black <dragonheart@gentoo.org> +cssc-1.0.1.ebuild:
+  version bump
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> cssc-0.15_alpha0.ebuild:
   Added amd64 keyword, closing #58829.
