@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a91494c339ee2d20ad7c8dab9b406d44 ChangeLog 643
 MD5 e13553e6ad2699888a46ac397af65c6b libXfont-0.99.0.ebuild 802
 MD5 72c3f4dae8a5a60fde55afd4ccdb4b44 files/digest-libXfont-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/r97gIKl8Uu19MoRAtWOAJwJ6zKDzb9918dvH4JNKmvZNYJ+KgCaAm37
+QUTDV8471D7/BgyZZdvLXy4=
+=HzeA
+-----END PGP SIGNATURE-----

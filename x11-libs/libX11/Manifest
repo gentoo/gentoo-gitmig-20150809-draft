@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f304ad3df575b0d9fdf6808f055634a0 libX11-0.99.0.ebuild 721
 MD5 1f1d53d892431aa832f50744bb14b6e0 ChangeLog 463
 MD5 5791b507bbab4f14939c3af04f8ce577 files/digest-libX11-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/r5wgIKl8Uu19MoRAiQcAKCAi8SZr2Luho+5HGqAfbU9fTK/rgCfRhKk
+qQtFiAYvGV7DXkaNgeigVDA=
+=MojW
+-----END PGP SIGNATURE-----

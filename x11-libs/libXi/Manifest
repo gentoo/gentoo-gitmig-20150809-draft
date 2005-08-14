@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a08093d7467b95ec85d42f4c84d2af7 libXi-0.99.0.ebuild 597
 MD5 9a189296567d02e6aeb1bf47bdad82d3 ChangeLog 456
 MD5 42644609044d54f2deab0de444d56adf files/digest-libXi-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/r+DgIKl8Uu19MoRAm8yAJ0UJEoISvW0qrdGwRbeCkKqYgMBTQCeLLVp
+0RmfV6nDwWwJnODbuF5+pAk=
+=CEmv
+-----END PGP SIGNATURE-----

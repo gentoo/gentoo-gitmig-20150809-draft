@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a70945eef3c140164269c0c85d6caef libXrender-0.9.0.ebuild 555
 MD5 336c715ed4c8bb62c3810ff757db583e ChangeLog 480
 MD5 8884522cd1402374dce7460b6de22c84 files/digest-libXrender-0.9.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/r5+gIKl8Uu19MoRAkZyAJ9a+i7VOqOHGDKa+iMnh2FpbjgnSACfZawU
+R3v3FiJ8G2HnGJ4QI1aYyrg=
+=ny7i
+-----END PGP SIGNATURE-----
