@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.55 2005/08/13 03:23:05 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.56 2005/08/14 06:28:23 genone Exp $
+
+*sylpheed-claws-1.9.13-r1 (14 Aug 2005)
+
+  14 Aug 2005; Marius Mauch <genone@gentoo.org> sylpheed-claws-1.0.5.ebuild,
+  -sylpheed-claws-1.9.9.ebuild, -sylpheed-claws-1.9.11.ebuild,
+  +sylpheed-claws-1.9.13-r1.ebuild:
+  Added a few cleanups and enhancements contributed by TGL (bug #102417) as
+  1.9.13-r1. Removing some old gtk2 ebuilds.
+  Marking 1.0.5 stable on x86 and amd64.
 
 *sylpheed-claws-1.9.13 (13 Aug 2005)
 
