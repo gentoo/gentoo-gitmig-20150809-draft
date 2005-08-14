@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.63-r2.ebuild,v 1.5 2005/08/01 20:51:53 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.63-r2.ebuild,v 1.6 2005/08/14 00:31:52 ticho Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ maildir_warn() {
 	einfo "To use /var/spool/mail INBOX again, set"
 	einfo "\"disable-these-drivers=md\" in your .pinerc file."
 	einfo
-	einfo "Alternately, you might want to read following webpage, which explains, how to"
+	einfo "Alternately, you might want to read following webpage, which explains how to"
 	einfo "use multiple mailboxes simultaneously:"
 	echo
 	echo "http://www.math.washington.edu/~chappa/pine/pine-info/collections/incoming-folders/"

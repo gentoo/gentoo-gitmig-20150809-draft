@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.63-r1.ebuild,v 1.2 2005/08/14 00:31:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.63-r3.ebuild,v 1.1 2005/08/14 00:31:52 ticho Exp $
 
 inherit eutils
 
 # Using this ugly hack, since we're making our own versioned copies of chappa 
-# patch, as upstream doesn't version them. (see #59573) 
-CHAPPA_PF="${P}-r1"
+# patch, as upstream doesn't version them, and patch revision number doesn't
+# always have to correspond to ebuild revision number. (see #59573) 
+CHAPPA_PF="${P}-r3"
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
 HOMEPAGE="http://www.washington.edu/pine/
@@ -20,7 +21,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ~ppc-macos ia64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
 IUSE="ssl ldap kerberos largeterminal pam passfile debug"
 
 DEPEND="virtual/libc
