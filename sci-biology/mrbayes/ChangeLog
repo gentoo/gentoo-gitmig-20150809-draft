@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/mrbayes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.5 2005/02/20 05:47:16 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/ChangeLog,v 1.6 2005/08/14 23:52:27 ribosome Exp $
+
+*mrbayes-3.1.1 (14 Aug 2005)
+
+  14 Aug 2005; Olivier Fisette <ribosome@gentoo.org> metadata.xml,
+  +mrbayes-3.1.1.ebuild:
+  New version. Added MPI support.
 
   20 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> mrbayes-3.0.ebuild:
   Stable x86 and ppc-macos
