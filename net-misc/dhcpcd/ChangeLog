@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.57 2005/08/12 08:46:00 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.58 2005/08/14 09:50:02 corsair Exp $
+
+  14 Aug 2005; Markus Rothe <corsair@gentoo.org> dhcpcd-2.0.0.ebuild:
+  Added ~ppc64
 
   12 Aug 2005; David Holm <dholm@gentoo.org> dhcpcd-2.0.0.ebuild:
   Readded to ~ppc. Please don't remove it without filing a proper bug report.
