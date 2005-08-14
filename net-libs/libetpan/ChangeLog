@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.8 2005/08/13 03:12:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.9 2005/08/14 15:37:10 weeve Exp $
+
+  14 Aug 2005; Jason Wever <weeve@gentoo.org> libetpan-0.38.ebuild:
+  Added ~sparc keyword, resolves bug #102313.
 
   13 Aug 2005; Marius Mauch <genone@gentoo.org> libetpan-0.38.ebuild:
   added ~amd64 keyword
