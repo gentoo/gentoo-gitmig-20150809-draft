@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.35 2005/08/14 15:29:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.36 2005/08/14 21:50:55 ferdy Exp $
+
+  14 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> HTML-Mason-1.30.ebuild:
+  Marked ~alpha, wrt bug #102503
 
 *HTML-Mason-1.30 (14 Aug 2005)
 
