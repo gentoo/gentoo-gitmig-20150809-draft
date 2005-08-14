@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r5.ebuild,v 1.4 2005/08/13 17:34:09 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r5.ebuild,v 1.5 2005/08/14 21:06:43 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -24,7 +24,7 @@ IUSE="gnome java mozdevelop mozsvg mozcalendar"
 RDEPEND="java? ( virtual/jre )
 	>=media-libs/libmng-1.0.0
 	mozsvg? (
-		>=x11-base/xorg-x11-6.7.0-r2
+		!<x11-base/xorg-x11-6.7.0-r2
 		x11-libs/cairo
 	)
 	>=www-client/mozilla-launcher-1.39"

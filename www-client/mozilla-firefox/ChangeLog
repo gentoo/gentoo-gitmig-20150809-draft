@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.66 2005/08/13 17:34:09 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.67 2005/08/14 21:06:43 anarchy Exp $
+
+  14 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-1.0.6-r5.ebuild:
+  Adjusted dep wrt bug #102539
 
   13 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
   mozilla-firefox-1.0.6-r5.ebuild:
