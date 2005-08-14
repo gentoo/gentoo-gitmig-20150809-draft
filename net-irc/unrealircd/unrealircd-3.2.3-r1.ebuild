@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.3-r1.ebuild,v 1.3 2005/06/29 16:08:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.3-r1.ebuild,v 1.4 2005/08/14 20:32:12 swegener Exp $
 
-inherit eutils ssl-cert versionator
+inherit eutils ssl-cert versionator multilib
 
 MY_P=Unreal${PV}
 
@@ -84,7 +84,7 @@ src_install() {
 
 	newbin src/ircd unrealircd || die "newbin failed"
 
-	exeinto /usr/lib/unrealircd/modules
+	exeinto /usr/$(get_libdir)/unrealircd/modules
 	doexe src/modules/*.so || die "doexe failed"
 
 	dodir /etc/unrealircd || die "dodir failed"
@@ -104,7 +104,7 @@ src_install() {
 	doins networks/*.network || die "doins failed"
 
 	sed -i \
-		-e s:src/modules:/usr/lib/unrealircd/modules: \
+		-e s:src/modules:/usr/$(get_libdir)/unrealircd/modules: \
 		-e s:ircd\\.log:/var/log/unrealircd/ircd.log: \
 		${D}/etc/unrealircd/unrealircd.conf
 
