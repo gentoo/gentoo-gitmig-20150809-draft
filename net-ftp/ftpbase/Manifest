@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 611b8b67b07e868d32dac881ab4bb5f5 ftpbase-0.00.ebuild 2449
-MD5 99ac742285f0557e40b5382715e2f77d ChangeLog 1211
 MD5 f545d2bcdb5641a7863b64be435382e2 metadata.xml 285
+MD5 43c108c3ecb6bd5c7551932d03751454 ftpbase-0.00.ebuild 2448
+MD5 99ac742285f0557e40b5382715e2f77d ChangeLog 1211
 MD5 bd59faca8d7138ac67e99d94507b04f9 files/ftpusers 407
-MD5 9e7d64873559cebdc60ee1d0d7845ce7 files/ftp-pamd-include 747
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ftpbase-0.00 0
 MD5 7be20c7c1b62bb7e65994bd7a686695e files/ftp-pamd 807
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7L4XViELBEf1JB0RAjN1AJ9xs97dg5OW7B6CrCSPQbrJK//rsQCdGhoe
-tRn1EZWtceRp1E6ec1oLpGY=
-=+vdV
------END PGP SIGNATURE-----
+MD5 9e7d64873559cebdc60ee1d0d7845ce7 files/ftp-pamd-include 747
