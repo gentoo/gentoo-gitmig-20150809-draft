@@ -7,13 +7,13 @@ MD5 5c7d7d954668e2395e1aa050f2c646fb metadata.xml 333
 MD5 20377d2f973c6331fa9db305694cfa3e flexlm-9.5-r1.ebuild 2145
 MD5 1cd702ac8282f4716d4dcaa7bacf0f79 files/90flexlm 70
 MD5 ef848515f7535e89d36b4a423bdb8c5f files/digest-flexlm-9.2.1 162
+MD5 26527bed7559b8e81b17d5714bd39264 files/digest-flexlm-9.5-r1 303
 MD5 a502d0fc0218c285e9ecff97a4bdd76f files/flexlm-conf 549
 MD5 49414f160b69f21c8f9a21ef0ea5ddf8 files/flexlm-init 470
-MD5 0ed860b182f7388a6f3e3b75db129bd1 files/digest-flexlm-9.5-r1 298
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+w+GArHZZzCEUG0RAvFjAJ4n1FX4wrvUo9R3m32mdZDEiFL+/QCfTqWg
-AbzM0U9tnrqvyoRh0PpSxnE=
-=frQE
+iD8DBQFC/7KpArHZZzCEUG0RApq/AJ9fjfsnqOzVUMce6XXsdq9ZoupRtwCeKq1M
+rEPGjb4QItwgyhC3MMC2fBg=
+=CIkY
 -----END PGP SIGNATURE-----
