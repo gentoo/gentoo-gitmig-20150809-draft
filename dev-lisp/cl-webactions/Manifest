@@ -1,4 +1,16 @@
-MD5 8245525e10b19991fa08db196cba3c52 ChangeLog 1013
-MD5 45ff01a913f65a492659504caff8eeaa cl-webactions-1.2.42.20050220.ebuild 1161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7dba21ed34ea82b4ca8eb8977a6790b6 ChangeLog 1178
+MD5 488b07978d34f353bdea99f4ba7a0494 cl-webactions-1.2.42.20050805.ebuild 1171
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 45ff01a913f65a492659504caff8eeaa cl-webactions-1.2.42.20050220.ebuild 1161
+MD5 4647f20ceef5e201f48238231cc3810a files/digest-cl-webactions-1.2.42.20050805 97
 MD5 da9c8b6af57dbf3f2e1db4347b533f71 files/digest-cl-webactions-1.2.42.20050220 92
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFC/8iEyiNZaEAZA+ARAgy9AJoDl7xA49JmuCBOG1SOmwqdfhUIQwCdHkNH
+8Yh9qbj4VDz0jnG+6Xkt4K0=
+=vSxf
+-----END PGP SIGNATURE-----

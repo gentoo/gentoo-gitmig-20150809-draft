@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-webactions
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-webactions/ChangeLog,v 1.5 2005/05/24 18:48:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-webactions/ChangeLog,v 1.6 2005/08/14 22:39:24 mkennedy Exp $
+
+*cl-webactions-1.2.42.20050805 (14 Aug 2005)
+
+  14 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +cl-webactions-1.2.42.20050805.ebuild:
+  New upstream version.
 
   24 May 2005; <mkennedy@gentoo.org> cl-webactions-1.2.42.20050220.ebuild:
   Keywording ~sparc
