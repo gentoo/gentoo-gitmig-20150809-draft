@@ -1,0 +1,147 @@
+--- XFree86-4.2.99.3/xc/programs/xinit/startx.cpp.startx	2002-09-19 02:19:38.000000000 +0200
++++ XFree86-4.2.99.3/xc/programs/xinit/startx.cpp	2002-12-23 13:13:22.000000000 +0100
+@@ -52,8 +52,6 @@
+ userserverrc=$HOME/.xserverrc
+ sysclientrc=XINITDIR/xinitrc
+ sysserverrc=XINITDIR/xserverrc
+-defaultclient=BINDIR/xterm
+-defaultserver=BINDIR/X
+ defaultclientargs=""
+ defaultserverargs=""
+ clientargs=""
+@@ -82,60 +80,41 @@
+ whoseargs="client"
+ while [ x"$1" != x ]; do
+     case "$1" in
+-    XCOMM '' required to prevent cpp from treating "/*" as a C comment.
+-    /''*|\./''*)
+-	if [ "$whoseargs" = "client" ]; then
+-	    if [ x"$clientargs" = x ]; then
+-		client="$1"
+-	    else
+-		clientargs="$clientargs $1"
+-	    fi
+-	else
+-	    if [ x"$serverargs" = x ]; then
+-		server="$1"
+-	    else
+-		serverargs="$serverargs $1"
+-	    fi
+-	fi
+-	;;
+-    --)
+-	whoseargs="server"
+-	;;
+-    *)
+-	if [ "$whoseargs" = "client" ]; then
+-	    clientargs="$clientargs $1"
+-	else
+-	    XCOMM display must be the FIRST server argument
+-	    if [ x"$serverargs" = x ] && @@
+-		 expr "$1" : ':[0-9][0-9]*$' > /dev/null 2>&1; then
+-		display="$1"
+-	    else
+-		serverargs="$serverargs $1"
+-	    fi
+-	fi
+-	;;
++      /''*|\.*)       if [ "$whoseargs" = "client" ]; then
++                  if [ "x$clientargs" = x ]; then
++                      clientargs="$1"
++                  else
++                      clientargs="$clientargs $1"
++                  fi
++              else
++                  if [ "x$serverargs" = x ]; then
++                      serverargs="$1"
++                  else
++                      serverargs="$serverargs $1"
++                  fi
++              fi ;;
++      --)     whoseargs="server" ;;
++      *)      if [ "$whoseargs" = "client" ]; then
++                  if [ "x$clientargs" = x ]; then
++                      clientargs="$defaultclientargs $1"
++                  else
++                      clientargs="$clientargs $1"
++                  fi
++              else
++                  case "$1" in
++                      :[0-9]*) display="$1"; serverargs="$serverargs $1";;
++                      *) serverargs="$serverargs $1" ;;
++                  esac
++              fi ;;
+     esac
+     shift
+ done
+ 
+-XCOMM process client arguments
+-if [ x"$client" = x ]; then
+-    XCOMM if no client arguments either, use rc file instead
+-    if [ x"$clientargs" = x ]; then
+-	client="$defaultclientargs"
+-    else
+-	client=$defaultclient
+-    fi
++if [ x"$clientargs" = x ]; then
++	clientargs="$defaultclientargs"
+ fi
+-
+-XCOMM process server arguments
+-if [ x"$server" = x ]; then
+-    XCOMM if no server arguments or display either, use rc file instead
+-    if [ x"$serverargs" = x -a x"$display" = x ]; then
+-	server="$defaultserverargs"
+-    else
+-	server=$defaultserver
+-    fi
++if [ x"$serverargs" = x ]; then
++	serverargs="$defaultserverargs"
+ fi
+ 
+ if [ x"$XAUTHORITY" = x ]; then
+@@ -172,7 +151,9 @@
+ done
+ #endif
+ 
+-xinit $client $clientargs -- $server $display $serverargs
++cleanup() {
++    [ -n "$PID" ] && kill $PID > /dev/null 2>&1
++
+ 
+ if [ x"$removelist" != x ]; then
+     xauth remove $removelist
+@@ -195,3 +176,15 @@
+ #if defined(sun) && !defined(i386)
+ kbd_mode -a
+ #endif
++}
++
++
++trap cleanup 0
++
++xinit $clientargs -- $serverargs -deferglyphs 16 &
++
++PID=$!
++
++wait $PID
++
++unset PID
+--- XFree86-4.2.99.3/xc/programs/xinit/xinit.c.startx	2002-05-31 20:46:13.000000000 +0200
++++ XFree86-4.2.99.3/xc/programs/xinit/xinit.c	2002-12-23 13:27:35.000000000 +0100
+@@ -431,6 +431,7 @@
+ 	signal(SIGINT, sigCatch);
+ 	signal(SIGHUP, sigCatch);
+ 	signal(SIGPIPE, sigCatch);
++	signal(SIGTERM, sigCatch);
+ #else
+ 	/* Let those signal interrupt the wait() call in the main loop */
+ 	memset(&sa, 0, sizeof sa);
+@@ -442,6 +443,7 @@
+ 	sigaction(SIGINT, &sa, NULL);
+ 	sigaction(SIGHUP, &sa, NULL);
+ 	sigaction(SIGPIPE, &sa, NULL);
++	sigaction(SIGTERM, &sa, NULL);
+ #endif
+ 	signal(SIGALRM, sigAlarm);
+ 	signal(SIGUSR1, sigUsr1);

@@ -1,6 +1,14 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.3 2005/08/11 07:33:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.4 2005/08/14 00:12:38 spyderous Exp $
+
+*xinit-0.99.0-r2 (14 Aug 2005)
+
+  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/Xsession,
+  +files/chooser.sh, +files/gentoo-startx-customization.patch,
+  +files/startDM.sh, +files/xinitrc, +xinit-0.99.0-r2.ebuild:
+  Add all the old Gentoo xinit stuff, so it works properly with /etc/rc.conf
+  and so on.
 
 *xinit-0.99.0-r1 (11 Aug 2005)
 
