@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.6 2005/08/15 15:15:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.7 2005/08/15 18:30:55 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 		http://mutt.kiev.ua/download/${P}/${compressed_patch}
 		http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
 		nntp? (
-			http://dev.gentoo.org/~agriffis/${nntp_patch}
+			http://dev.gentoo.org/~agriffis/dist/${nntp_patch}
 			mirror://gentoo/mutt-1.5.7-mixmaster+nntp.patch
 		)
 		http://wwwcip.informatik.uni-erlangen.de/~sithglan/mutt/${header_cache_patch}
