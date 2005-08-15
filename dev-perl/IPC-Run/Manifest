@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2965f278e5af43360d5cb84378184317 IPC-Run-0.78.ebuild 491
-MD5 6184d9fdefed80b50671804c179811e7 ChangeLog 485
+MD5 2fb281ec51cc9a0191eaea6b3281ad6d ChangeLog 593
+MD5 c1d426c11b6efafa1ca72ebb11285a3b IPC-Run-0.78.ebuild 489
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fa5f4827c73053d1e9faa4f57699960c files/digest-IPC-Run-0.78 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2pd/tG5z4I8BtQoRAlt/AJ0fz72B0/yqKpsEytTZiDE+vXG+VgCfabJz
-7sbbQLxfvWRn04nN5geAL2s=
-=JSk4
------END PGP SIGNATURE-----
