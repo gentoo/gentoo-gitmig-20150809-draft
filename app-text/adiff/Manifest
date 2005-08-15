@@ -3,11 +3,11 @@ Hash: SHA1
 
 MD5 55869cc7456c4a5c7661eb3354c3e8a4 adiff-1.2.ebuild 651
 MD5 37ffce63e72f513d9ec88b94d4f9c48b ChangeLog 347
-MD5 9b021224eac1375e9b1c9654afdb5126 files/digest-adiff-1.2 53
+MD5 458b217c57d461ba4e4c2a4215f30057 files/digest-adiff-1.2 53
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDAMbcBXaUFmZvwyMRAuJ4AJ4iHdUMTy584XB7LY4HBjfh3Q/0xgCgujlS
-5lggv9/xIVOpfgfHcCoEVaE=
-=2K3+
+iD8DBQFDAODRBXaUFmZvwyMRAnjNAJwLPEp6ukvuMSKizsBwv0oVTWKZTQCffU6O
+8a99PnUSiIhcqvWw79pk9/c=
+=MZKW
 -----END PGP SIGNATURE-----
