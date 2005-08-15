@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9b0ce39efcefba8cfd81538bd0b761c6 ChangeLog 779
-MD5 42dc31194dd0eea6f04fc2c26c3a02b6 News-Newsrc-1.08.ebuild 553
+MD5 0066e9c2c5520c9a089b0524af23d0f2 News-Newsrc-1.08.ebuild 551
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 99d1caff394281f0032983cade7ff80b files/digest-News-Newsrc-1.08 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcY94tG5z4I8BtQoRAv9lAJ4iD6lCsvuhJ/2k6JF6Qj2/XEmFNACfcsWO
-u498gh2StLUFzhs2Mib3xAM=
-=TsnR
------END PGP SIGNATURE-----

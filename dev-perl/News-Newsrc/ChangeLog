@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/News-Newsrc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.6 2005/04/29 01:37:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.7 2005/08/15 11:30:11 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org>
+  News-Newsrc-1.08.ebuild:
+  Marking stable x86 and sparc
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   News-Newsrc-1.08.ebuild:

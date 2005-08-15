@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.16 2005/05/01 18:05:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.17 2005/08/15 11:18:45 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org> -Locale-PO-0.11.ebuild,
+  Locale-PO-0.14.ebuild:
+  Marking stable x86 and sparc
 
   01 May 2005; Tom Martin <slarti@gentoo.org> Locale-PO-0.12.ebuild:
   Stable on amd64.
