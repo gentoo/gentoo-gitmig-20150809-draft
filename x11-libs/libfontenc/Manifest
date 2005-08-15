@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b4d5d9ad318b2e5693c48040e7f9ac9 libfontenc-0.99.0.ebuild 424
-MD5 93ddfb32b3268912f251c8150aa30ede ChangeLog 485
+MD5 a61276838e0fc2a6c5bdaacf850c36e4 libfontenc-0.99.0.ebuild 430
+MD5 8f2b9439c04defe05b1ba616ca991f0e ChangeLog 576
 MD5 3809df95e91c23a082aa51ff8afbd5a9 files/digest-libfontenc-0.99.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r92gIKl8Uu19MoRAqGfAJ9ubBiyQG/+lO+Dxlu7ClDpryDxEgCfWc1q
-95heGXT2MUc0VFLX1v1/JZ8=
-=Aib+
------END PGP SIGNATURE-----

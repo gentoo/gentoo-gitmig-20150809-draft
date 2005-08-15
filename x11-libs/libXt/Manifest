@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d1076854f44129a7cbb9b91d3224dafc libXt-0.99.0.ebuild 552
-MD5 dc8e580d0af418d10def92c9d9be382f ChangeLog 456
+MD5 26c7fd87b4b21ad8797dba167db3bf8a libXt-0.99.0.ebuild 558
+MD5 8fa48a533b4e4cb7d7a1405b585813b8 ChangeLog 542
 MD5 0ac09fd426a5da9d15d635f897c38a53 files/digest-libXt-0.99.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r6WgIKl8Uu19MoRAt0sAJ9bjW0xYTPKSWAn1mI78x2Fyq9jNgCghEw3
-Bv3bbNidFZaCfq4IOV0m0Mo=
-=J9b2
------END PGP SIGNATURE-----
