@@ -1,0 +1,9 @@
+# ChangeLog for app-text/adiff
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/ChangeLog,v 1.1 2005/08/15 16:45:56 agriffis Exp $
+
+*adiff-1.2 (15 Aug 2005)
+
+  15 Aug 2005; Aron Griffis <agriffis@gentoo.org> +adiff-1.2.ebuild:
+  New ebuild for adiff, a wordwise diff program
+
