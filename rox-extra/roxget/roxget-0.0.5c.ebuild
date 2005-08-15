@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.3 2005/03/06 00:00:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.4 2005/08/15 00:31:35 kugelfang Exp $
 
 DESCRIPTION="ROXget - Download Handler for the ROX Desktop"
 
@@ -16,7 +16,7 @@ LICENSE="MIT"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
