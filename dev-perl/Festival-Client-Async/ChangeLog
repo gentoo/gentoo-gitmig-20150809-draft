@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Festival-Client-Async
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.6 2005/04/25 15:13:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.7 2005/08/15 10:38:27 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org>
+  Festival-Client-Async-0.0303.ebuild:
+  Marking stable sparc
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Festival-Client-Async-0.0303.ebuild:
