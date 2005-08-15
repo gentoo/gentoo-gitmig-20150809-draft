@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a8a72e2802b968fd4fc41e8ebd8b9bfd xcursor-themes-0.99.0.ebuild 493
 MD5 b1bedc2baed2c4a57985a3d1207ed791 ChangeLog 603
 MD5 bb3e47d1a01ff8ae9c2220c341563417 files/digest-xcursor-themes-0.99.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDANiu2G5bA0cA/ScRAq1CAJ4r5jIhe4FH+YNxAurQ7zgzjcWuiQCgxiLZ
+/uX8hhA3dUP7psn0TLnCqBU=
+=v0kJ
+-----END PGP SIGNATURE-----
