@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-1.0.3.ebuild,v 1.2 2005/07/20 11:07:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-1.0.3.ebuild,v 1.3 2005/08/15 13:28:42 greg_g Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freehackers.org/~tnagy/kdissert/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-util/scons-0.96.1

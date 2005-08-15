@@ -3,10 +3,10 @@ MD5 16618911a74f1d354c9182b9a6604f78 kdissert-0.3.5.ebuild 705
 MD5 9b283b2209783888d3daebe0d853d32a kdissert-0.3.8.ebuild 830
 MD5 5e11d5b831f09ec6582941d8341d5f77 kdissert-0.3.6.ebuild 872
 MD5 3209a945158fca844eafaffa641d94ed kdissert-0.3.4.1.ebuild 789
-MD5 40794a8d0d0b364b0cbe3d0d57676193 ChangeLog 1965
+MD5 e5ecde9e9abaeb7958166a1f7f497b21 ChangeLog 2056
 MD5 7f2ddc62c44294a0a1c757ec4c119977 kdissert-1.0.4.ebuild 850
 MD5 c86fe6978818707f6e0e4d9622b84d00 kdissert-0.9.0.ebuild 1077
-MD5 daa5104369adf07d1fc5e9e60d53c72f kdissert-1.0.3.ebuild 881
+MD5 935de6fae57077ee990a606f0c675ae8 kdissert-1.0.3.ebuild 881
 MD5 ef77b4610b24300747f45ae4149a0596 files/digest-kdissert-0.3.6 73
 MD5 71b86669952830efc0ede94ff27e3ed4 files/kdissert-0.9.0-SConstruct.diff 419
 MD5 0be0a2244445e05702735133b2c9679b files/digest-kdissert-0.3.8 73
