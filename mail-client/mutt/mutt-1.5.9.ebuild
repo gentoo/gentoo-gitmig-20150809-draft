@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.5 2005/08/11 23:46:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.6 2005/08/15 15:15:01 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -110,6 +110,7 @@ src_compile() {
 		--with-regex \
 		--disable-fcntl --enable-flock --enable-nfs-fix \
 		--with-mixmaster \
+		--without-sasl \
 		--enable-external-dotlock"
 
 	# See Bug #22787
