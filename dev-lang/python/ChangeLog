@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.155 2005/08/11 02:53:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.156 2005/08/15 21:31:11 kloeri Exp $
+
+  15 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5-r1.ebuild,
+  python-2.4.1-r1.ebuild:
+  Fix bug 88777 in ~arch versions.
 
   11 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/python-2.4.1-bindir-libdir.patch,

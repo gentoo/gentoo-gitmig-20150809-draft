@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.5 2005/08/11 15:05:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1-r1.ebuild,v 1.6 2005/08/15 21:31:11 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -44,7 +44,9 @@ DEPEND=">=sys-libs/zlib-1.1.3
 #       it to compile python. We just need to ensure that when we install
 #       python, we definitely have fchksum support. - liquidx
 
-RDEPEND="${DEPEND} 	dev-python/python-fchksum"
+# NOTE: changed RDEPEND to PDEPEND to resolve bug 88777. - kloeri
+
+PDEPEND="${DEPEND} 	dev-python/python-fchksum"
 
 PROVIDE="virtual/python"
 
