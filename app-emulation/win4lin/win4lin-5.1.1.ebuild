@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.6 2005/04/17 22:28:12 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.7 2005/08/15 16:51:48 plasmaroo Exp $
 
 inherit eutils
 
@@ -19,8 +19,7 @@ LICENSE="NeTraverse"
 KEYWORDS="-* x86"
 
 DEPEND="app-arch/rpm2targz
-		virtual/winkernel
-		!app-emulation/win4lin"
+	!app-emulation/win4lin"
 
 pkg_setup() {
 	if has_version '<=app-emulation/win4lin-5.1'; then
@@ -39,9 +38,8 @@ src_unpack() {
 }
 
 src_compile() {
-	einfo "nothing to compile; binary package."
-	einfo "Remember you need a kernel patched like"
-	einfo "win4lin-sources or gs-sources."
+	einfo "Nothing to compile; binary package."
+	einfo "Remember you need a patched kernel."
 }
 
 src_install() {

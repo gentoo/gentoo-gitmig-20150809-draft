@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-4.0.22.ebuild,v 1.9 2005/04/17 22:28:12 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-4.0.22.ebuild,v 1.10 2005/08/15 16:51:48 plasmaroo Exp $
 
 IUSE="doc"
 
@@ -17,8 +17,7 @@ SLOT="0"
 LICENSE="NeTraverse"
 KEYWORDS="-* x86"
 
-DEPEND="app-arch/rpm2targz
-	sys-kernel/win4lin-sources"
+DEPEND="app-arch/rpm2targz"
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/${MY_P}.rpm
