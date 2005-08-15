@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/jabber4r
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jabber4r/ChangeLog,v 1.1 2005/08/15 13:04:54 citizen428 Exp $
+
+*jabber4r-0.8.0 (15 Aug 2005)
+
+  15 Aug 2005; Michael Kohl <citizen428@gentoo.org> +jabber4r-0.8.0.ebuild:
+  Initial import. Closing bug #75549.
+
