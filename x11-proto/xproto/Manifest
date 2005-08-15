@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1434fe1e25473c90b71d183eb738d2b5 xproto-7.0.ebuild 514
 MD5 790995782c11d1ed7b2484b58c1edb3d ChangeLog 546
 MD5 09ec22c13a78aec2c398322b1848d489 files/digest-xproto-7.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALO22G5bA0cA/ScRAlPtAJ0WR0wqh6MGchAua/jpRfFTsBCsQwCg0Ncn
+GbBZphojY2BZPT9EdxMq3Sk=
+=qGwI
+-----END PGP SIGNATURE-----

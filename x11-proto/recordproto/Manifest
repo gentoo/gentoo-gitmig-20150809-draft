@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd0667b2091ece9fe6707100bde1ab06 recordproto-1.13.ebuild 525
 MD5 f39a59cb289088c49db226d521479f3c ChangeLog 582
 MD5 d60ca01e62493a607d2126c3271982df files/digest-recordproto-1.13 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALO22G5bA0cA/ScRAh5YAKDUqaFPvBpjlu4u6CVotQK53/OZLACgvt4X
+2+q7tHAuDGSLWozCfEyBqPE=
+=0UH3
+-----END PGP SIGNATURE-----

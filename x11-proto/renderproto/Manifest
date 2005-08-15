@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6c45fd4869456c562ee420db6e1513bb renderproto-0.9.ebuild 524
 MD5 a4436481d06fa8bb6454abf2d362c2bc ChangeLog 578
 MD5 8beb294a6d3242dc0ad0161febf630b5 files/digest-renderproto-0.9 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALO32G5bA0cA/ScRAnkUAKCbPv/ICrLQyzpBQYLG2SeEn/l7/gCgrTK7
+R0MF5B7nYwQ/qvjZrsAvx1Y=
+=XK2z
+-----END PGP SIGNATURE-----

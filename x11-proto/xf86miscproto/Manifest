@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a3750b55aaf8b3c5bd1413d2814ed952 xf86miscproto-0.9.ebuild 530
 MD5 32626428be7113ee84af0b24275256dd ChangeLog 592
 MD5 be66bd2b11f3f39889fc520f4ed68b4f files/digest-xf86miscproto-0.9 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALO22G5bA0cA/ScRAmbrAJ977cfE/lnE75GHKTVXwb14EwD6LwCeMKOS
+UNISWDAZhwuv1mf2/Co1wK8=
+=YPrV
+-----END PGP SIGNATURE-----

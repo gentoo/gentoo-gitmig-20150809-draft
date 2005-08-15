@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a443dbfdaa84e3c84ce63e40cb91d8c ChangeLog 598
 MD5 b6ea0edbe375fc6d87c60e9c6d91a932 fontcacheproto-0.1.ebuild 533
 MD5 34d667d9d3dc1e9424db87ae0b0c65cd files/digest-fontcacheproto-0.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALO22G5bA0cA/ScRApN6AKDNiE9f8n5GvwjcwwCa5ozwu+34NQCeMtdj
+LIZE5KDr/Jsopfg/WJ9LS+M=
+=vKxq
+-----END PGP SIGNATURE-----
