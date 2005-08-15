@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Calc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.22 2005/04/30 19:23:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.23 2005/08/15 10:01:15 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org> -Date-Calc-5.3.ebuild:
+  Cleaning out stale ebuild
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> Date-Calc-5.4.ebuild:
   Stable on ppc.
