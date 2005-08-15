@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/perl-support
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.4 2005/08/08 22:32:15 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.5 2005/08/15 00:28:54 metalgod Exp $
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org> perl-support-2.6.ebuild:
+  Added ~amd64 keywords.
 
 *perl-support-2.6 (08 Aug 2005)
 
