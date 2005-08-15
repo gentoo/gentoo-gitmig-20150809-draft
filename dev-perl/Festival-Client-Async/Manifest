@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 787904cdec72e9d45b44198d96159e8f ChangeLog 759
-MD5 06b5dbc2be963e8b6d48569d267a08e1 Festival-Client-Async-0.0303.ebuild 512
+MD5 81d2dc98702a76771acb4dd1b38b2c17 ChangeLog 877
+MD5 977b6abdb8d8d7e12a9efc4148d194f6 Festival-Client-Async-0.0303.ebuild 511
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0c01d40e89e9333725c2dbbd4df49243 files/digest-Festival-Client-Async-0.0303 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbQkQtG5z4I8BtQoRAl5lAJwJobvIaI677SZFSEoW/riLCYxr0QCgi+i8
-FqjvxhUlsbO5++QYOJ8VMDY=
-=wxjw
------END PGP SIGNATURE-----

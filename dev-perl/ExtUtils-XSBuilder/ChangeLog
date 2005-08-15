@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-XSBuilder
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSBuilder/ChangeLog,v 1.5 2005/08/14 21:20:13 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSBuilder/ChangeLog,v 1.6 2005/08/15 10:36:58 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org>
+  -ExtUtils-XSBuilder-0.25.ebuild, ExtUtils-XSBuilder-0.27.ebuild:
+  Marking stable x86 and sparc
 
   14 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
   ExtUtils-XSBuilder-0.27.ebuild:

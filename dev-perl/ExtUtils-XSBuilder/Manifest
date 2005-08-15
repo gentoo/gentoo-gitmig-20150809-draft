@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 680cb7e0b67741e86000f1d03c4399de ExtUtils-XSBuilder-0.27.ebuild 624
-MD5 3fcc50742bc1cbe2af0fe6abe609f934 ChangeLog 905
-MD5 b4035e2a75fdb11f44a7d700633da2ef ExtUtils-XSBuilder-0.25.ebuild 620
+MD5 2cf58db90957ca593cf78180df05250d ChangeLog 1063
+MD5 ba2b743cc6a1363b47a13587bfe5c10b ExtUtils-XSBuilder-0.27.ebuild 626
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 66377d76e42e1d8ceb9c69a42cc22d98 files/digest-ExtUtils-XSBuilder-0.25 74
 MD5 cde4dfc7fe87e1f3db1a679fadc5eb92 files/digest-ExtUtils-XSBuilder-0.27 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFC/7WiViELBEf1JB0RApGPAJ4qsV+jBjnHGTfHmqIPJqXjPdr8mQCeJLPw
-Nq1pv1A1GRroeXfLsisnrQo=
-=GEo9
+iD8DBQFDAHBctG5z4I8BtQoRAkAYAJ9goSsE0mkALlBAjVQLRrlV7DeEMgCfYI+j
+zRZ+USSzqsO0kTECl2L1flo=
+=MxB+
 -----END PGP SIGNATURE-----
