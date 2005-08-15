@@ -1,4 +1,6 @@
 MD5 1803721c94e929bc8a941ae4f5c4c160 libqalculate-0.8.0.ebuild 880
-MD5 234f7d40d87416a113b350ad8906c6d7 ChangeLog 663
+MD5 8178aafdbd3d1bcac4c39f76c5e2b91f libqalculate-0.8.1.1.ebuild 883
+MD5 210d25080bc0d78090f699181ebc728c ChangeLog 801
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+MD5 2b47144c6436521714ff42311362d404 files/digest-libqalculate-0.8.1.1 72
 MD5 c210c6e4ec4f0f714180cab06e5bbc2f files/digest-libqalculate-0.8.0 70
