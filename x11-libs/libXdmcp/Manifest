@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a48fce94d4c05649dd9c6ebde91c0c2c libXdmcp-0.99.0.ebuild 536
 MD5 444d660e9dfe6ebb649f2930901da2bc ChangeLog 562
 MD5 78a80fe5508b95469c0e21027a856397 files/digest-libXdmcp-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALdz2G5bA0cA/ScRAkMGAKDZwY405Bj10PObizM3t0L6xMrqggCeNq2S
+gDsQlr2SSmmIHXNmFkhRNPM=
+=Vt8W
+-----END PGP SIGNATURE-----

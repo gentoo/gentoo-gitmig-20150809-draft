@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 859a7f6dbd01e4a5ad5688b4f5e6f48b libXau-0.99.0.ebuild 530
 MD5 1a7e395b23a380223e658795badf031c ChangeLog 550
 MD5 307da1c8c237ae455de8b9e27ddb38fc files/digest-libXau-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDALdz2G5bA0cA/ScRAmgAAKDLWTZqxnbQxTWzBCvdcLYErclJNQCg7fzO
+GsZPp1n5nifciALyTPw90F8=
+=OH1Q
+-----END PGP SIGNATURE-----
