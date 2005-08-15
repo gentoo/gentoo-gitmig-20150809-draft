@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/bsd-games-non-free
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.10 2005/06/15 18:40:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/ChangeLog,v 1.11 2005/08/15 05:34:43 mr_bones_ Exp $
+
+*bsd-games-non-free-2.17 (15 Aug 2005)
+
+  15 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +bsd-games-non-free-2.17.ebuild:
+  version bump
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   bsd-games-non-free-2.13.ebuild:
