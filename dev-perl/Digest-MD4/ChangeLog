@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.14 2005/05/10 02:05:12 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.15 2005/08/15 10:11:19 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org> -Digest-MD4-1.1.ebuild,
+  Digest-MD4-1.5.ebuild:
+  Marking stable x86 and sparc
 
 *Digest-MD4-1.5 (10 May 2005)
 
