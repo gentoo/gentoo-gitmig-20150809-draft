@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 aee9d717251fdc62c9ef0a4a8fbe7840 iceauth-0.99.0.ebuild 436
 MD5 3632f71e42d833ba8b434468aa64ba46 ChangeLog 557
 MD5 226d5dc40985e1cbaa39cd8e6b2573ca files/digest-iceauth-0.99.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDANeq2G5bA0cA/ScRAtxCAJoCPWrCOi2jFeSwqx7S3K9En6/CxQCgmYGC
-A95UBHB39RkSzQmFZjxk4kA=
-=OtXi
------END PGP SIGNATURE-----

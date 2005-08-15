@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 67b20a7f0dda273084041c3d3b64733d xauth-0.99.0.ebuild 465
 MD5 72df1168eddc899d92e3e532e3595870 ChangeLog 543
 MD5 90404d10addaf1b73adf8051cc3f7c77 files/digest-xauth-0.99.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDANd12G5bA0cA/ScRAgSVAJ4sPYIHzqBWiizzCKtgV0XkZrhy2wCggAPK
-NgZeXwNG+WNqSYk9GkR7MjM=
-=B57f
------END PGP SIGNATURE-----
