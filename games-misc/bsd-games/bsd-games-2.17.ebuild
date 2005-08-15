@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.1 2005/08/15 02:32:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.2 2005/08/15 02:46:28 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -84,6 +84,7 @@ src_install() {
 	build_game battlestar && do_statefile battlestar.log
 	build_game canfield && do_statefile cfscores
 	build_game cribbage && do_statefile criblog
+	build_game hack && keepdir "${GAMES_STATEDIR}"/hack
 	build_game robots && do_statefile robots_roll
 	build_game sail && do_statefile saillog
 	build_game snake && do_statefile snake.log && do_statefile snakerawscores
@@ -94,6 +95,7 @@ src_install() {
 	# extra docs
 	build_game atc && { docinto atc ; dodoc atc/BUGS; }
 	build_game boggle && { docinto boggle ; dodoc boggle/README{,.linux}; }
+	build_game hack && { docinto hack ; dodoc hack/{OWNER,Original_READ_ME,READ_ME,help}; }
 	build_game hunt && { docinto hunt ; dodoc hunt/README{,.linux}; }
 	build_game phantasia && { docinto phantasia ; dodoc phantasia/{OWNER,README}; }
 	build_game trek && { docinto trek ; dodoc trek/USD.doc/trek.me; }
