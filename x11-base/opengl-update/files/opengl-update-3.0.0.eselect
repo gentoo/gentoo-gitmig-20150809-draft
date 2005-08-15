@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0.eselect,v 1.3 2005/08/13 20:29:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0.eselect,v 1.4 2005/08/15 17:50:51 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -17,12 +17,6 @@ ENV_D="${ROOT}/etc/env.d/03opengl"
 PREFIX="${ROOT}/usr"
 DST_PREFIX="${ROOT}/usr"
 USE_PROFILE_HEADERS="no"
-
-check_user() {
-	if [[ $(id -u) -ne 0 ]]; then
-		die -q "Must be run as root."
-	fi
-}
 
 check_version() {
 	if portageq has_version / 'x11-base/xorg-x11'; then
@@ -67,7 +61,7 @@ set_new_implementation() {
 	local AVAIL_IMPLEMS=$(get_implementations)
 
 	check_version
-	check_user
+	check_root
 
 	# Set a sane umask... bug #83115
 	umask 022
@@ -108,11 +102,11 @@ set_new_implementation() {
 				# linked just needs the .so
 				for file in ${PREFIX}/${LIBDIR}/opengl/${GL_LOCAL}/lib/libGL{,core}.{so,a,la}; do
 					[[ -f "${file}" ]] || continue
-					[[ -f "${file##*/}" ]] && rm -f ${file##*/}
+					[[ -f "$(basename ${file})" ]] && rm -f $(basename ${file})
 
 					# Fix libtool archives (#48297)
 					if [[ "${file%.la}" != "${file}" ]]; then
-						sed "s:${PREFIX}/[^/]*/opengl/[^/]*/lib:${DST_PREFIX}/${LIBDIR}:g" ${file} > ${file##*/}
+						sed "s:${PREFIX}/[^/]*/opengl/[^/]*/lib:${DST_PREFIX}/${LIBDIR}:g" ${file} > $(basename ${file})
 					else
 						ln -s ${file}
 					fi
@@ -129,11 +123,11 @@ set_new_implementation() {
 
 					for file in ${PREFIX}/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls/libGL{,core}.{so,a,la}; do
 						[[ -f "${file}" ]] || continue
-						[[ -f "${file##*/}" ]] && rm -f ${file##*/}
+						[[ -f "$(basename ${file})" ]] && rm -f $(basename ${file})
 
 						# Fix libtool archives (#48297)
 						if [ "${file%.la}" != "${file}" ]; then
-							sed "s:${PREFIX}/[^/]*/opengl/[^/]*/lib:${DST_PREFIX}/${LIBDIR}:g" ${file} > ${file##*/}
+							sed "s:${PREFIX}/[^/]*/opengl/[^/]*/lib:${DST_PREFIX}/${LIBDIR}:g" ${file} > $(basename ${file})
 						else
 							ln -s ${file}
 						fi
@@ -158,11 +152,11 @@ set_new_implementation() {
 
 					for file in ${PREFIX}/${LIBDIR}/opengl/${GL_LOCAL}/extensions/*.{so,a,la}; do
 						[[ -f "${file}" ]] || continue
-						[[ -f "${file##*/}" ]] && rm -f ${file##*/}
+						[[ -f "$(basename ${file})" ]] && rm -f $(basename ${file})
 
 						# Fix libtool archives (#48297)
 						if [[ "${file%.la}" != "${file}" ]]; then
-							sed "s:${PREFIX}/[^/]*/opengl/[^/]*/lib:${DST_PREFIX}/${LIBDIR}:g" ${file} > ${file##*/}
+							sed "s:${PREFIX}/[^/]*/opengl/[^/]*/lib:${DST_PREFIX}/${LIBDIR}:g" ${file} > $(basename ${file})
 						else
 							ln -s ${file}
 						fi
