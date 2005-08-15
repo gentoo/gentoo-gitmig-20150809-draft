@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.28 2005/08/05 19:30:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.29 2005/08/15 18:26:40 robbat2 Exp $
+
+  15 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  bridge-utils-1.0.6-r3.ebuild:
+  1.0.6-r3 to stable x86, so that it works for 2.4 users, and also throw in a
+  bit more error checking (bug #102588).
 
 *bridge-utils-1.0.6-r3 (05 Aug 2005)
 

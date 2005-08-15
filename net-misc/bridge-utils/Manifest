@@ -2,8 +2,8 @@ MD5 0d6d3f3c84b9fd514a08af08ba76ad0f bridge-utils-1.0.4.ebuild 1169
 MD5 cc3eb091df9ed82c98ec18b221b951a9 bridge-utils-1.0.6-r2.ebuild 1395
 MD5 b9d5cf5a4a11a82972f20d974423c918 bridge-utils-0.9.6-r2.ebuild 1104
 MD5 2c6ca210a0063810c357673b36d2eac0 bridge-utils-1.0.6.ebuild 1268
-MD5 e65bac146ce8a3acf4ab57f816122af1 bridge-utils-1.0.6-r3.ebuild 1607
-MD5 b9f8b38bf308bcdbc9249d0992c514cf ChangeLog 4665
+MD5 dd26bc077760d833b694e947565a03c3 bridge-utils-1.0.6-r3.ebuild 1635
+MD5 d8fc0f4c2052b3eceff85c6786253b4d ChangeLog 4870
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6-r2 69
 MD5 69312e372ac3b1c445dd53c8abf3cd57 files/digest-bridge-utils-1.0.6-r3 69
