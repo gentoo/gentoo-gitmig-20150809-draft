@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.5.3.ebuild,v 1.2 2005/05/07 11:38:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/gazpacho-0.5.3.ebuild,v 1.3 2005/08/15 00:23:06 metalgod Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/0.5/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
