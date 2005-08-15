@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-cursor-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cursor-misc/ChangeLog,v 1.4 2005/08/14 23:52:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cursor-misc/ChangeLog,v 1.5 2005/08/15 17:54:53 herbs Exp $
+
+  15 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
+  font-cursor-misc-0.99.0.ebuild:
+  Marked ~amd64.
 
   14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   font-cursor-misc-0.99.0.ebuild:
