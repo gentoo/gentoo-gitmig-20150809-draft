@@ -1,12 +1,5 @@
 --- ../parrot-0.2.3/config/gen/makefiles/root.in	2005-07-29 12:07:33.000000000 +0200
 +++ config/gen/makefiles/root.in	2005-08-07 17:40:26.000000000 +0200
-@@ -1,5 +1,5 @@
- # Copyright: 2001-2005 The Perl Foundation.  All Rights Reserved.
--# $Id: root.in.patch,v 1.1 2005/08/15 06:30:56 mcummings Exp $
-+# $Id: root.in.patch,v 1.1 2005/08/15 06:30:56 mcummings Exp $
- 
- ###############################################################################
- # NOTES:
 @@ -656,10 +656,8 @@
  runtime/parrot/include/config.fpmc : myconfig config_lib.pasm $(MINIPARROT)
  	@echo Invoking Parrot to generate runtime/parrot/include/config.fpmc --cross your fingers

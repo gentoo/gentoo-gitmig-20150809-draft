@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.2.3.ebuild,v 1.1 2005/08/15 06:30:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.2.3.ebuild,v 1.2 2005/08/15 08:28:43 mcummings Exp $
 
 inherit base eutils
 
@@ -25,10 +25,10 @@ src_unpack ()   {
 	unpack ${A}
 	cd ${S}
 	#see https://rt.perl.org/rt3/Ticket/Display.html?id=36818
-	epatch ${FILESDIR}/mod_parrot.patch
+	cd ${S}; epatch ${FILESDIR}/mod_parrot.patch
 	#see https://rt.perl.org/rt3/Ticket/Display.html?id=36812
-	epatch ${FILESDIR}/root.in.patch
-	epatch ${FILESDIR}/parrot-config.patch
+	cd ${S}; epatch ${FILESDIR}/root.in.patch
+	cd ${S}; epatch ${FILESDIR}/parrot-config.patch
 }
 
 src_compile()	{
