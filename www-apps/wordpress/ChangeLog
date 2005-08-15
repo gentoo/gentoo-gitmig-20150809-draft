@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.25 2005/08/15 05:25:00 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.26 2005/08/15 06:31:17 superlag Exp $
+
+  15 Aug 2005; Aaron Kulbe <superlag@gentoo.org> wordpress-1.5.2.ebuild:
+  Setting proper keywords. Sorry guys.
 
 *wordpress-1.5.2 (15 Aug 2005)
 
