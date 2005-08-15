@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-cleanice
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.10 2005/08/02 08:48:00 leonardop Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.11 2005/08/15 08:37:00 leonardop Exp $
+
+  15 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-cleanice-2.4.0.ebuild:
+  Marking stable on x86 early, since previous versions have problems with
+  deprecated widgets (bug #85731).
 
 *gtk-engines-cleanice-2.4.0 (02 Aug 2005)
 
