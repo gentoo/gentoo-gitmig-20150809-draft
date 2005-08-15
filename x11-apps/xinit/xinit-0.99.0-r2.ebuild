@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-0.99.0-r2.ebuild,v 1.1 2005/08/14 00:12:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-0.99.0-r2.ebuild,v 1.2 2005/08/15 17:55:50 herbs Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,7 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="X.Org xinit application"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
