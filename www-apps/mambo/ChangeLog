@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.13 2005/07/03 18:11:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.14 2005/08/15 23:32:07 rl03 Exp $
+
+  15 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
+  mambo-4.5.2.3.ebuild:
+  minor cleanup
 
   03 Jul 2005; Renat Lumpau <rl03@gentoo.org> mambo-4.5.2.3.ebuild:
   Clean up pkg_config. Fix #71289

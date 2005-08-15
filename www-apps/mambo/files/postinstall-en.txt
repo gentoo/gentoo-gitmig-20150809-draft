@@ -4,7 +4,8 @@ You are almost done!
 
   1. Restart Apache
 
-  2. Login on http://YOURHOST and finish the installation. IMPORTANT: the web
+  2. Login on http://${VHOST_HOSTNAME}${VHOST_APPDIR} 
+  and finish the installation. IMPORTANT: the web
   installer will complain that configuration.php is not writeable. When you
   are done, create configuration.php in ${MY_INSTALLDIR} and copy the generated
   configuration into it. Then execute the following:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.3.ebuild,v 1.2 2005/07/03 18:11:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.3.ebuild,v 1.3 2005/08/15 23:32:07 rl03 Exp $
 
 inherit webapp eutils
 
@@ -22,7 +22,7 @@ DEPEND="app-arch/unzip"
 
 pkg_setup () {
 	webapp_pkg_setup
-	einfo "Please make sure that your PHP is compiled with zlib, XML, and MySQL support"
+	einfo "Please make sure that your PHP is compiled with XML, and MySQL support"
 }
 
 src_install () {

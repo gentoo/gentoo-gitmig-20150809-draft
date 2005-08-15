@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d2f02a63099a6c70f6f0e44b3c9dd6e mambo-4.5.2.3.ebuild 2934
-MD5 88b5493f75a45f5915bb2cbad521cd95 ChangeLog 2022
+MD5 138e36eb1e1ab5c2a3f9f94fa85ce07c mambo-4.5.2.3.ebuild 2928
+MD5 1acfa91efc5036bdb5f2cb9f17ab1fa1 ChangeLog 2135
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 e061f7e080ca70cc58815179056d3313 files/postinstall-en.txt 925
+MD5 478117b4add9c425dcb3e2051e90dcb6 files/postinstall-en.txt 952
 MD5 6c941a8ae21f670067d3ce092d91b9cc files/digest-mambo-4.5.2.3 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCyCpXEzitwsaoONoRAos1AJ9Z/HiDt93XrLYvqSsg0INSZbmikgCfV7n7
-6x/dSFp+BgypPas0LjyeybQ=
-=kwio
+iD8DBQFDASYDEzitwsaoONoRAj0YAJ0YHbuOdN0R+AvGlIm/8h9GBdZQUgCaArfK
+TIc6wIlUlpGa1w3fIVEKw8s=
+=GA75
 -----END PGP SIGNATURE-----
