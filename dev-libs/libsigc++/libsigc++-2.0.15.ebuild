@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.15.ebuild,v 1.1 2005/07/12 17:12:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.15.ebuild,v 1.2 2005/08/15 12:03:14 ka0ttic Exp $
 
 inherit eutils gnome.org flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://libsigc.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~ppc64 ~hppa ~ppc-macos ~ia64 ~mips"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 mips ~ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE="debug doc test"
 
 src_unpack() {
