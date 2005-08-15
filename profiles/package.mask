@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4274 2005/08/14 18:06:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4275 2005/08/15 09:25:59 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -579,10 +579,6 @@ net-p2p/mhxd
 # Masking for security reasons, pending removal,
 # use net-im/kpopup instead
 net-im/kpopper
-
-# Diego Pettenò <flameeyes@gentoo.org> (27 Jun 2005)
-# Upstream beta versions, not for final users.
-=media-sound/amarok-1.3_beta*
 
 # Thierry Carrez <koon@gentoo.org> (27 Jun 2005)
 # Package contains insecure tmpfile handling, bug #93792
