@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.148 2005/08/10 12:29:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.149 2005/08/15 13:56:41 leonardop Exp $
+
+*glib-2.8.0 (15 Aug 2005)
+
+  15 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> glib-2.8.0.ebuild:
+  New version.
 
   10 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> glib-2.6.4.ebuild:
   Stable on mips.
