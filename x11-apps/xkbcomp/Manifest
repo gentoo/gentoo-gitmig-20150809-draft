@@ -1,3 +1,5 @@
-MD5 7c66f9f41ca9ed882a8e09bb5b6a03af ChangeLog 468
+MD5 f3a6df3e9b3e263888d94cb25af8fd9b ChangeLog 634
 MD5 5a89529a22555a2d55d74cc2db3a4d2b xkbcomp-0.99.0.ebuild 434
+MD5 c216e29d1b082bd218ad062d522aa531 xkbcomp-0.99.0-r1.ebuild 559
 MD5 ac7b6aeddc4bf31acc3f0b13d6128ff8 files/digest-xkbcomp-0.99.0 67
+MD5 ac7b6aeddc4bf31acc3f0b13d6128ff8 files/digest-xkbcomp-0.99.0-r1 67
