@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa397b8a906e39b05cef63b1413cd561 xinit-0.99.0-r1.ebuild 476
 MD5 d479f76a0cb01178c23538f2164bb773 xinit-0.99.0.ebuild 407
 MD5 d9528db2046edd173e3d3ee09c23033b xinit-0.99.0-r2.ebuild 920
@@ -11,3 +14,10 @@ MD5 8d14d094be7182b9870a0727a5d8e87b files/nolisten-tcp-and-black-background.pat
 MD5 43b5841663dae8bf44827af629fbcf35 files/chooser.sh 1572
 MD5 965333ca03efda8a7302620a63c429f6 files/startDM.sh 922
 MD5 c6b1ec1d810ca971703b0cc7291d3e7c files/gentoo-startx-customization.patch 3931
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAQDn2G5bA0cA/ScRApOQAKCY/HzC3+qdnS7azRb7O8Hi/TiETQCfbGVG
+iZo3eZATXMr6YeZas9q1Fe4=
+=3twA
+-----END PGP SIGNATURE-----
