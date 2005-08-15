@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.120 2005/07/20 09:30:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.121 2005/08/15 03:50:09 augustus Exp $
+
+*nvidia-kernel-1.0.7676 (15 Aug 2005)
+
+  15 Aug 2005; <augustus@gentoo.org> +nvidia-kernel-1.0.7676.ebuild:
+  NVIDIA version bump.
 
   20 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -nvidia-kernel-1.0.6629-r1.ebuild, -nvidia-kernel-1.0.7664.ebuild:

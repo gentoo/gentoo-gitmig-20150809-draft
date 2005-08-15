@@ -1,19 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d4ace836f8120da5bc64048bccb1be74 ChangeLog 20971
 MD5 e06e73d71a54036f83abf35efc6322e3 metadata.xml 302
-MD5 84d76e7e47009583e937b217a139924a nvidia-glx-1.0.6111-r2.ebuild 7643
+MD5 4f8e4d2f47ed520254fb8e887aa96c28 nvidia-glx-1.0.7676.ebuild 8208
 MD5 6ca7c051a89c2afafcef2bf3befa6b44 nvidia-glx-1.0.7167-r2.ebuild 7863
 MD5 1d833c80b4453ffd5f2c46d2c342f61a nvidia-glx-1.0.7174-r4.ebuild 8261
+MD5 84d76e7e47009583e937b217a139924a nvidia-glx-1.0.6111-r2.ebuild 7643
 MD5 d146a360883f212b328c4f0f0922d310 nvidia-glx-1.0.6629-r6.ebuild 7643
 MD5 4f8e4d2f47ed520254fb8e887aa96c28 nvidia-glx-1.0.7667.ebuild 8208
 MD5 c3afc69f917a783ebd53cf2de38065dc files/09nvidia 61
 MD5 6e47667cc38d8ce4ac2f4c7dbb392abe files/libGL.la-r2 751
-MD5 61c3ebdd8604c971bf969ea03040d170 files/digest-nvidia-glx-1.0.7174-r4 163
+MD5 4ea42a34abde5c81fe828b09afab7651 files/digest-nvidia-glx-1.0.7676 163
 MD5 97b3ec5488fb7f7f6cdde31ee42e45af files/digest-nvidia-glx-1.0.7167-r2 163
-MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-glx-1.0.6629-r6 163
+MD5 61c3ebdd8604c971bf969ea03040d170 files/digest-nvidia-glx-1.0.7174-r4 163
 MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-glx-1.0.6111-r2 163
+MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-glx-1.0.6629-r6 163
 MD5 ef2c4ecedb45b67d79b43ffe58c660cf files/digest-nvidia-glx-1.0.7667 163
 MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/1.0.6111/NVIDIA_glx-1.0.6111-defines.patch 437
 MD5 32901fb95c4fdc6cfa6b762498240b3c files/1.0.6111/NVIDIA_glx-1.0.6111-glheader.patch 380
@@ -21,10 +20,3 @@ MD5 6f55327ce020f7ed0d433ea99dacb315 files/1.0.6111/NVIDIA_glx-1.0.6111-makefile
 MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/1.0.6629/NVIDIA_glx-1.0.6629-defines.patch 437
 MD5 32901fb95c4fdc6cfa6b762498240b3c files/1.0.6629/NVIDIA_glx-1.0.6629-glheader.patch 380
 MD5 f6f00d8e915e18f456ad615b4ebd8a21 files/1.0.6629/NVIDIA_glx-1.0.6629-makefile.patch 602
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3jKIArHZZzCEUG0RArAJAJwJRhSfNEt0MbpYmo3c3L4ZKTkrUACfdH0S
-5bwuCLUj5o4zJw/DrRI2vDw=
-=Xf04
------END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.99 2005/07/20 11:15:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.100 2005/08/15 03:50:44 augustus Exp $
+
+*nvidia-glx-1.0.7676 (15 Aug 2005)
+
+  15 Aug 2005; <augustus@gentoo.org> +nvidia-glx-1.0.7676.ebuild:
+  NVIDIA version bump.
 
   20 Jul 2005; Jeremy Huddleston <eradicator@gentoo.org> -files/libGL.la,
   -nvidia-glx-1.0.6111-r1.ebuild, nvidia-glx-1.0.6111-r2.ebuild,
