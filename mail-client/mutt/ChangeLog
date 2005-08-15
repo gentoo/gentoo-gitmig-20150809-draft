@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.56 2005/08/15 15:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.57 2005/08/15 20:54:28 agriffis Exp $
+
+  15 Aug 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.9.ebuild:
+  mutt-1.5.9 doesn't build with berkdb, so disable hcache unless USE=gdbm.
+  This is fixed in 1.5.10, so whenever that lands in portage, we can re-enable
+  it #95139
 
   15 Aug 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.9.ebuild:
   Explicitly disable sasl-1 as we do in the muttng ebuild

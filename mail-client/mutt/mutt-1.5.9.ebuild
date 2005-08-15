@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.7 2005/08/15 18:30:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.8 2005/08/15 20:54:28 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,14 +29,13 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 	)"
 #	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
 #	http://www.mutt.org.ua/download/${P}/${nntp_patch}
-IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl slang smime ssl vanilla"
+IUSE="buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl slang smime ssl vanilla" # berkdb
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~mips ~ppc64 ~ppc-macos"
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	gdbm?    ( sys-libs/gdbm )
-	!gdbm?   ( berkdb? ( >=sys-libs/db-4 ) )
 	slang?   ( >=sys-libs/slang-1.4.2 )
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
@@ -49,6 +48,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
 	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
+#	!gdbm?   ( berkdb? ( >=sys-libs/db-4 ) )
 DEPEND="${RDEPEND}
 	net-mail/mailbase
 	sys-devel/autoconf
@@ -120,8 +120,8 @@ src_compile() {
 	# hcache feature requires at least one database is in USE.
 	if use gdbm; then
 		myconf="${myconf} --enable-hcache --with-gdbm --without-bdb"
-	elif use berkdb; then
-		myconf="${myconf} --enable-hcache --with-bdb --without-gdbm"
+#	elif use berkdb; then
+#		myconf="${myconf} --enable-hcache --with-bdb --without-gdbm"
 	else
 		myconf="${myconf} --disable-hcache --without-gdbm --without-bdb"
 	fi
