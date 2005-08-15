@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 172820c4ae2511b5894d60cf64661bc8 xhost-0.99.0.ebuild 430
 MD5 844b2ecb8e1bf9d4e9974413019547c6 ChangeLog 543
 MD5 d47c0fb93bec00d81788e4d992be415d files/digest-xhost-0.99.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDANgA2G5bA0cA/ScRAgkzAKCd9lMxwcvhElOKPFJCaACBWnkRHgCghd1D
+y31Z1JnLYjjPiYX8fMTm84w=
+=xKvJ
+-----END PGP SIGNATURE-----

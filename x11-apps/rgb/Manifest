@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44f53cde66eb25d32ddcd1910f617963 rgb-0.99.0-r1.ebuild 463
 MD5 1289a694446817d367855e4bf051a3e1 rgb-0.99.0.ebuild 417
 MD5 5c4b0801a8b59d94156f7507d89273e7 ChangeLog 778
 MD5 a0e8d44f277795142cd2f367dfba4c0c files/digest-rgb-0.99.0 62
 MD5 7bb4ec5db2b791569bb91c5fc4aa7810 files/rgb-path.patch 811
 MD5 a0e8d44f277795142cd2f367dfba4c0c files/digest-rgb-0.99.0-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDANnd2G5bA0cA/ScRArHUAKDuC+09uI2aU1ijTBFUdG3EUOZjRwCfSHx8
+PO4bq6MkjUWLd4YhI6kv298=
+=kVq4
+-----END PGP SIGNATURE-----
