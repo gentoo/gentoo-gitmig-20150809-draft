@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.16 2005/08/15 18:11:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.17 2005/08/15 19:03:08 mr_bones_ Exp $
+
+  15 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  maelstrom-3.0.6-r1.ebuild:
+  tidy; use DESTDIR; quoting
 
   15 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   maelstrom-3.0.6-r1.ebuild:
