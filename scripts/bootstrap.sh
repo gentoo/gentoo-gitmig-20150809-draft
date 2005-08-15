@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.75 2005/06/22 21:37:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.76 2005/08/15 18:35:51 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -61,7 +61,6 @@ unset STRAP_EMERGE_OPTS
 STRAP_RUN=1
 V_ECHO=env
 DEBUG=0
-GENTOO_VERS=2005.0 # Mostly for fluff ;)
 
 for opt in "$@" ; do
 	case ${opt} in
@@ -79,9 +78,9 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.75 2005/06/22 21:37:17 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.76 2005/08/15 18:35:51 wolf31o2 Exp $"
 			cvsver=${cvsver##*,v }
-			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
+			einfo "Gentoo Linux bootstrap ${cvsver%%Exp*}"
 			exit 0
 			;;
 		*)
@@ -117,7 +116,7 @@ fi
 
 [[ -e /etc/profile ]] && source /etc/profile
 
-echo -e "\n${GOOD}Gentoo Linux ${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
+echo -e "\n${GOOD}Gentoo Linux; ${BRACKET}http://www.gentoo.org/${NORMAL}"
 echo -e "Copyright 1999-2005 Gentoo Foundation; Distributed under the GPLv2"
 if [[ ${STRAP_EMERGE_OPTS:0:2} = "-f" ]] ; then
 	echo "Fetching all bootstrap-related archives ..."
