@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3762e4afce18f43de01d6588462c6983 ChangeLog 616
 MD5 2dd36adc562f18f14bb914015e4ed994 MIME-Types-1.13.ebuild 472
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 45ff15f2ed7ef6d91da8547042ce1149 files/digest-MIME-Types-1.13 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFDAHr7tG5z4I8BtQoRAhsKAJ0cbOJjk6gbMhD0Tw9Ic5TSmsh73wCcCXoY
+YlEt3VvlYQtlE/WbTaAy4Lk=
+=CIew
+-----END PGP SIGNATURE-----
