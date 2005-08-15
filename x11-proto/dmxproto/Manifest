@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 827338a81ca2ddcdd4137449ff2a0353 dmxproto-2.2.ebuild 509
-MD5 36c2fa9660d3a39187e2a001741cc31e ChangeLog 472
+MD5 a4041c603c54004be9adeb339db9753b dmxproto-2.2.ebuild 515
+MD5 8e30f9da2c818cc100e93bdae649c4f4 ChangeLog 558
 MD5 d33fff72f655293a0e9411b7f6c0a93c files/digest-dmxproto-2.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r7egIKl8Uu19MoRAnXyAJ9r88XzEAxe6c6bhiiTM6VtEbO3IgCfa7yT
-3oLupgcJ52wTwZ14wevN+eA=
-=sXJr
------END PGP SIGNATURE-----

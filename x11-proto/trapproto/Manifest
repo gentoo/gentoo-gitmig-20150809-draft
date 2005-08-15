@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59c022176c625b1f24ab6e640ce1e772 trapproto-3.4.ebuild 512
-MD5 cbf4e33ec8e07fa479e88b980a4bad22 ChangeLog 479
+MD5 f71ce33a1d87a897303674ea609d1599 trapproto-3.4.ebuild 518
+MD5 3ee15144ef3fbc12bdf1023da13ff7d6 ChangeLog 566
 MD5 004793dba6ce628945df9a8471901ff0 files/digest-trapproto-3.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r1mgIKl8Uu19MoRAjU8AJ4+1rLwLOV/E1eLRt7Eh5fEb7vvGQCfbcnH
-7oFH2wQmFuoQsh89ei3A50g=
-=MD0P
------END PGP SIGNATURE-----

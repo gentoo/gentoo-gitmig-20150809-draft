@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b53467437c3b3b3cd3ef31ffbc3511a xcmiscproto-1.1.ebuild 518
-MD5 667d97f5285eee30e1867edfb45d8e83 ChangeLog 489
+MD5 29858a2cb6449b70f3f6b76381274cb8 xcmiscproto-1.1.ebuild 524
+MD5 1eb0ee05d8b97b67b6502b29ad030d5d ChangeLog 578
 MD5 4e5f41311aff270d0c0b5208e21da83e files/digest-xcmiscproto-1.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r7NgIKl8Uu19MoRAoOlAJ4mPyAQG33CdIiifXRZORc4G8TvlQCggqzN
-xz6/xIkUUF4CiCvECVrO5n0=
-=+ecf
------END PGP SIGNATURE-----

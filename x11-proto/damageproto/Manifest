@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 98fc891df8475d1ac328838f1e486e86 ChangeLog 489
-MD5 97a28a00ccdc1ec360f83e2ad61a7f12 damageproto-1.0.ebuild 518
+MD5 eca0e8f8dd097a6e4b044efabae18f7b damageproto-1.0.ebuild 524
+MD5 050d9252c310a3edb2d78eded84d07ec ChangeLog 578
 MD5 a08a6b8bf2d2f799de213c4ce615ebae files/digest-damageproto-1.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r7jgIKl8Uu19MoRAgo6AJ9d1q8hnnATLnEppJqjhBprOuhbawCaAoV5
-HhFLFiqpk7/6+TdLpcOJmEk=
-=fifv
------END PGP SIGNATURE-----

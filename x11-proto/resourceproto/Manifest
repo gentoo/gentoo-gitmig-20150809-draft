@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 459ec05500876d2b94343b4105db29a7 resourceproto-1.0.ebuild 524
-MD5 4e00636f1d240edd0cf95c0e8247a3e3 ChangeLog 501
+MD5 28225e0bf8170e34486f28d12116917b resourceproto-1.0.ebuild 530
+MD5 d46ca44b6cddc00de329bab56424fa60 ChangeLog 592
 MD5 132945a9bec6796f8acdf583e6ed5b30 files/digest-resourceproto-1.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r77gIKl8Uu19MoRArbmAJ9wPPokiDXUFV18Cikf/RmUEfpGAACdF3+a
-XjQF7Vmd5l92s1TcyXv5yu8=
-=rcdD
------END PGP SIGNATURE-----

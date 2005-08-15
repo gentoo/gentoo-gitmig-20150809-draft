@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39a68fbab139ec214e82b1f5c961d416 xf86dgaproto-2.0.ebuild 521
-MD5 885a1405e97f0875dc206ba0707910c1 ChangeLog 494
+MD5 5ea75374d4724eaa5054138ad9c3c772 xf86dgaproto-2.0.ebuild 527
+MD5 3fd174bb4738eda86e238ee28913c62f ChangeLog 584
 MD5 36c67ee603c281511b4938552f965633 files/digest-xf86dgaproto-2.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r7tgIKl8Uu19MoRAjG5AJ9Vyv3xdSW8MAnGHXHX/L05wpsDJwCfa0be
-goqC+vWK/3icbb0Ri1A4Ofg=
-=HByD
------END PGP SIGNATURE-----

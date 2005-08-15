@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 13dfec591363e3a4b1e8025ab1d5bc46 randrproto-1.1.ebuild 515
-MD5 7082b38322af28bca3ebbb22412221fb ChangeLog 484
+MD5 4b0f21a3be27c2c765e6296c3d0a6510 randrproto-1.1.ebuild 521
+MD5 f1a59bd9035b02862acc08d844359bd6 ChangeLog 572
 MD5 ae0440c5f5ddfa5df3dda05c3da31721 files/digest-randrproto-1.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/r8VgIKl8Uu19MoRArgeAJ9dxNMRX5NlDdaiSH9ko4WpX2keewCfd2Y7
-njr/M4o7TfsgrSfrQE0MRMM=
-=r3Jj
------END PGP SIGNATURE-----
