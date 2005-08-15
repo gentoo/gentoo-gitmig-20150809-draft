@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r2.ebuild,v 1.1 2005/08/14 18:23:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r2.ebuild,v 1.2 2005/08/15 04:21:23 spyderous Exp $
 
 inherit eutils toolchain-funcs
 
@@ -124,7 +124,9 @@ src_install() {
 	# Install libtool archives
 	insinto /usr/$(get_libdir)
 	# (#67729) Needs to be lib, not $(get_libdir)
-	doins ${FILESDIR}/lib/*.la
+	doins ${FILESDIR}/lib/libGLU.la ${FILESDIR}/lib/libOSMesa.la
+	insinto /usr/lib/opengl/xorg-x11/lib
+	doins ${FILESDIR}/lib/libGL.la
 
 	# Create the two-number versioned libs (.so.#.#), since only .so.# and
 	# .so.#.#.# were made
