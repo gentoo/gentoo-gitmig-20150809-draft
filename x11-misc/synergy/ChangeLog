@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.25 2005/08/15 10:10:11 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.26 2005/08/15 10:12:43 nakano Exp $
+
+  15 Aug 2005; Masatomo Nakano <nakano@gentoo.org> synergy-1.2.3.ebuild:
+  Marked stable on x86.
 
 *synergy-1.2.4 (15 Aug 2005)
 
