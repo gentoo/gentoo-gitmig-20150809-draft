@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r2.ebuild,v 1.2 2005/08/15 04:21:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r2.ebuild,v 1.3 2005/08/15 20:41:47 herbs Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 OPENGL_DIR="xorg-x11"
 
@@ -18,7 +18,7 @@ SRC_URI="http://xorg.freedesktop.org/extras/${MY_P}.tar.gz
 	http://dev.gentoo.org/~spyderous/xorg-x11/Mesa-6.3.1.1-update-to-CVS-HEAD-20050811.patch.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="motif"
 
 RDEPEND="dev-libs/expat
@@ -100,6 +100,10 @@ src_unpack() {
 #		echo "GLW_SOURCES = GLwDrawA.c GLwMDrawA.c" >> ${HOSTCONF}
 		echo "GLW_SOURCES += GLwMDrawA.c" >> ${HOSTCONF}
 	fi
+
+	# Fix install libdir
+	sed -i -e "s:LIB_DIR=\$1/lib:LIB_DIR=\$1/$(get_libdir):" \
+			${S}/bin/installmesa || die "sed failed"
 }
 
 src_compile() {
@@ -116,7 +120,7 @@ src_install() {
 	dodir /usr/$(get_libdir)/xorg/modules/dri
 	exeinto /usr/$(get_libdir)/xorg/modules/dri
 	einfo "Installing drivers to ${EXEDESTTREE}."
-	find ${S}/lib -name '*_dri.so' | xargs doexe
+	find ${S}/lib* -name '*_dri.so' | xargs doexe
 
 	fix_opengl_symlinks
 	dynamic_libgl_install
@@ -125,14 +129,14 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	# (#67729) Needs to be lib, not $(get_libdir)
 	doins ${FILESDIR}/lib/libGLU.la ${FILESDIR}/lib/libOSMesa.la
-	insinto /usr/lib/opengl/xorg-x11/lib
+	insinto /usr/$(get_libdir)/opengl/xorg-x11/lib
 	doins ${FILESDIR}/lib/libGL.la
 
 	# Create the two-number versioned libs (.so.#.#), since only .so.# and
 	# .so.#.#.# were made
-	dosym libGLU.so.1.3.060301 /usr/lib/libGLU.so.1.3
-	dosym libGLw.so.1.0.0 /usr/lib/libGLw.so.1.0
-	dosym libOSMesa.so.6.3.060301 /usr/lib/libOSMesa.so.6.3
+	dosym libGLU.so.1.3.060301 /usr/$(get_libdir)/libGLU.so.1.3
+	dosym libGLw.so.1.0.0 /usr/$(get_libdir)/libGLw.so.1.0
+	dosym libOSMesa.so.6.3.060301 /usr/$(get_libdir)/libOSMesa.so.6.3
 
 	# Figure out why libGL.so.1.5 is built (directfb), and why it's linked to
 	# as the default libGL.so.1

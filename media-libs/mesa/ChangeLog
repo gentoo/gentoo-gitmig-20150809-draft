@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.26 2005/08/15 04:21:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.27 2005/08/15 20:41:47 herbs Exp $
+
+  15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> mesa-6.3.1.1-r2.ebuild:
+  Fix multilib issue and add ~amd64 keyword.
 
   15 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   mesa-6.3.1.1-r2.ebuild:
