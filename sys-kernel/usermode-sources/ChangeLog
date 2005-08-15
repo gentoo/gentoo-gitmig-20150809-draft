@@ -1,6 +1,30 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.69 2005/07/13 14:55:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.70 2005/08/15 16:58:58 plasmaroo Exp $
+
+  15 Aug 2005; <plasmaroo@gentoo.org> -usermode-sources-2.4.27.ebuild,
+  -files/usermode-sources-2.4.26.CAN-2004-0394.patch,
+  -files/usermode-sources-2.4.27.CAN-2004-1295.patch,
+  -files/usermode-sources-2.4.77094.patch,
+  -files/usermode-sources-2.4.77666.patch,
+  -files/usermode-sources-2.4.78362.patch,
+  -files/usermode-sources-2.4.78363.patch,
+  -files/usermode-sources-2.4.CAN-2004-0495.patch,
+  -files/usermode-sources-2.4.CAN-2004-0535.patch,
+  -files/usermode-sources-2.4.CAN-2004-0685.patch,
+  -files/usermode-sources-2.4.CAN-2004-1016.patch,
+  -files/usermode-sources-2.4.CAN-2004-1056.patch,
+  -files/usermode-sources-2.4.CAN-2004-1137.patch,
+  -files/usermode-sources-2.4.FPULockup-53804.patch,
+  -files/usermode-sources-2.4.XDRWrapFix.patch,
+  -files/usermode-sources-2.4.binfmt_a.out.patch,
+  -files/usermode-sources-2.4.binfmt_elf.patch,
+  -files/usermode-sources-2.4.brk-locked.patch,
+  -files/usermode-sources-2.4.cmdlineLeak.patch,
+  -files/usermode-sources-2.4.smbfs.patch,
+  -files/usermode-sources-2.4.vma.patch,
+  -files/usermode-sources.AF_UNIX.patch:
+  Remove 2.4 due to open security issues and lack of a maintainer.
 
 *usermode-sources-2.6.12-r1 (13 Jul 2005)
 
