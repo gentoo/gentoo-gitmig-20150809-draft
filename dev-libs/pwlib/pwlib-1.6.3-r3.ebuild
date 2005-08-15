@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r3.ebuild,v 1.1 2005/02/03 19:57:59 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.3-r3.ebuild,v 1.2 2005/08/15 19:43:02 stkn Exp $
 
 inherit multilib
 
@@ -38,6 +38,10 @@ src_unpack() {
 		-e "s:-mcpu=\$(CPUTYPE)::" \
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
 		unix.mak
+
+	# newer esound package doesn't install libesd.a anymore,
+	# use dynamic library instead (fixes #100432)
+	epatch ${FILESDIR}/pwlib-1.6.3-dyn-esd.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.4.ebuild,v 1.3 2005/07/27 10:35:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.4.ebuild,v 1.4 2005/08/15 19:43:02 stkn Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -38,6 +38,10 @@ src_unpack() {
 		-e "s:-mcpu=\$(CPUTYPE)::" \
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
 		unix.mak
+
+	# newer esound package doesn't install libesd.a anymore,
+	# use dynamic library instead (fixes #100432)
+	epatch ${FILESDIR}/pwlib-1.6.3-dyn-esd.patch
 }
 
 src_compile() {

@@ -1,0 +1,11 @@
+--- make/unix.mak	2004-11-16 11:32:34.000000000 +1100
++++ make/unix.mak.N	2005-07-27 14:12:35.000000000 +1000
+@@ -928,7 +928,7 @@
+ # define ESDDIR variables if installed
+ ifdef  ESDDIR
+ STDCCFLAGS	+= -I$(ESDDIR)/include -DUSE_ESD=1
+-ENDLDLIBS	+= $(ESDDIR)/lib/libesd.a  # to avoid name conflicts
++ENDLDLIBS	+= -lesd  # to avoid name conflicts
+ HAS_ESD		= 1
+ endif
+ 
