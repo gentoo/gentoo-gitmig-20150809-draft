@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d85a798f58d0d6cf811227109f72354 rbldnsd-0.995.ebuild 996
+MD5 34cbc33b208a38d2e678a9e5e711071d rbldnsd-0.995.ebuild 1029
 MD5 ac6ea19228e1f51f8f58e80b4bb85eaa metadata.xml 1069
-MD5 b1748aac8ac7857bbab68b43ef495823 ChangeLog 479
-MD5 39b8b3c62c59df6d3ddbedc84e11ef9b files/confd 634
+MD5 bbf4c9a6cd82ac5185fbd5e2570b2d83 ChangeLog 619
+MD5 0b5faddf5429d76570ae12d02b9aa0fd files/confd 635
 MD5 1c33419fe27dc0734d6dd55204f1979d files/example 495
 MD5 edc6a1efd2f4ae0f0140e976de8a40c6 files/initd 475
 MD5 bfb7395472a78a3c734d2107a165a85f files/digest-rbldnsd-0.995 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDAQq1FdQwWVoAgN4RAlZrAJ9uKtbgkoEn2KoWtEC0X0uaVQfGbgCgqHye
-sIJZbX7eJGZ0sy5Er1wkPOY=
-=TbwZ
+iD8DBQFDAQ1ZFdQwWVoAgN4RAmEHAKDHXM22xh7psWFlFF3qa2qBiQtlsACfTK4C
+oxhjppkrN/61lu9qr5wloI4=
+=bCKO
 -----END PGP SIGNATURE-----
