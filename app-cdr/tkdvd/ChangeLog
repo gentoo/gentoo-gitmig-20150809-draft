@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/tkdvd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.2 2005/06/26 18:33:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.3 2005/08/15 02:29:28 metalgod Exp $
+
+*tkdvd-3.7 (15 Aug 2005)
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org> +tkdvd-3.7.ebuild:
+  Version Bump. Added a missing dependency.
 
   26 Jun 2005; Simon Stelling <blubb@gentoo.org> tkdvd-3.4.ebuild:
   added ~amd64 keyword
