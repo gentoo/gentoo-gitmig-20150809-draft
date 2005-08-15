@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.66 2005/08/06 19:00:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.67 2005/08/15 19:30:24 stkn Exp $
+
+  15 Aug 2005; <stkn@gentoo.org> -openh323-1.12.2-r1.ebuild,
+  -openh323-1.13.2.ebuild, -openh323-1.13.2-r1.ebuild,
+  -openh323-1.13.5.ebuild, -openh323-1.15.2.ebuild:
+  Removed obsolete ebuilds.
 
   06 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   openh323-1.13.2-r2.ebuild:
