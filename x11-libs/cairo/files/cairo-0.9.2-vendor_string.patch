@@ -1,0 +1,15 @@
+--- src/cairo-xlib-surface.c.orig	2005-08-10 16:52:14.000000000 +0300
++++ src/cairo-xlib-surface.c	2005-08-15 18:09:31.000000000 +0300
+@@ -1633,10 +1633,10 @@
+     }
+ 
+     surface->buggy_repeat = FALSE;
+-    if (strcmp (ServerVendor (dpy), "The X.Org Foundation") == 0) {
++    if (strstr (ServerVendor (dpy), "The X.Org Foundation") != NULL) {
+ 	if (VendorRelease (dpy) <= 60802000)
+ 	    surface->buggy_repeat = TRUE;
+-    } else if (strcmp (ServerVendor (dpy), "The XFree86 Project, Inc") == 0) {
++    } else if (strstr (ServerVendor (dpy), "The XFree86 Project, Inc") != NULL) {
+ 	if (VendorRelease (dpy) <= 40400000)
+ 	    surface->buggy_repeat = TRUE;
+     }
