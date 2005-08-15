@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26eadef8f65db36b09a95cabba990b10 ChangeLog 1800
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 4398dfba6fc4304e02a48827a920dcce ExtUtils-CBuilder-0.03.ebuild 610
+MD5 941f10360b5983ec245d5384db60003b ChangeLog 1952
 MD5 9f0335a18fa76f863d7126e9dc45d9a5 ExtUtils-CBuilder-0.05.ebuild 578
-MD5 52fa4250160346d3126b903c8e0a8a11 ExtUtils-CBuilder-0.12.ebuild 589
-MD5 29df3894e4b2a998727a82f6ff725f5c files/digest-ExtUtils-CBuilder-0.12 73
-MD5 eb59e605851252b96ff1e683599e7178 files/digest-ExtUtils-CBuilder-0.03 73
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 6a115778d2c6d3b970ead3e9ebf5754b ExtUtils-CBuilder-0.12.ebuild 587
 MD5 3d4691ee408930374086bb665dceb605 files/digest-ExtUtils-CBuilder-0.05 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2tTytG5z4I8BtQoRAmDyAKCKmmFrA6TD5OJQ9CXuHsTcOYUaTgCggRfd
-WjzhaMpJyndDo1yzK0cL5Xg=
-=DhyM
------END PGP SIGNATURE-----
+MD5 29df3894e4b2a998727a82f6ff725f5c files/digest-ExtUtils-CBuilder-0.12 73
