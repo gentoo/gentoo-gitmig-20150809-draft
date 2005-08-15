@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.18 2005/07/05 21:27:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.19 2005/08/15 03:05:19 metalgod Exp $
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org> scrollz-1.9.5.ebuild:
+  Marked Stable on AMD64.
 
   05 Jul 2005; Sven Wegener <swegener@gentoo.org> scrollz-1.9.5.ebuild:
   Marked stable on x86.
