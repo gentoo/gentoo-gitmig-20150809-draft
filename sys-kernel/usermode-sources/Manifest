@@ -1,37 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 022e16f7f3153fc675535ae063775516 usermode-sources-2.6.12-r1.ebuild 886
-MD5 aa34b8764539acfc458342524f7ac787 usermode-sources-2.4.27.ebuild 1647
-MD5 ce729ac605c2c624440efababb309f74 ChangeLog 19600
+MD5 08a336d2c9ac2365c0bd72e7e04c952d ChangeLog 20752
 MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
-MD5 f751a3e304cbed92529ab6783b91e7ba files/digest-usermode-sources-2.4.27 134
-MD5 60d25ff310fc6abfdce39ec9e47345af files/usermode-sources-2.4.CAN-2004-0685.patch 2809
-MD5 1e1fe7bb98c80db4644f4b7fd7dd5d32 files/usermode-sources-2.4.smbfs.patch 3434
-MD5 757ee1239c3f14645ccea3640d551e11 files/usermode-sources-2.4.CAN-2004-1056.patch 11249
-MD5 c9da1bc82b906f6abc648c056e7bf662 files/usermode-sources-2.4.FPULockup-53804.patch 354
-MD5 b0a1f80aff51d6601e8924329023b241 files/usermode-sources.AF_UNIX.patch 515
-MD5 915e8d7a0618736caa44d96968015467 files/usermode-sources-2.4.binfmt_elf.patch 2346
-MD5 d4a740ae56c2049247083af387a22a85 files/usermode-sources-2.4.26.CAN-2004-0394.patch 350
-MD5 2b3ddb8b8b15f8da35ade38544b57857 files/usermode-sources-2.4.XDRWrapFix.patch 1499
+MD5 022e16f7f3153fc675535ae063775516 usermode-sources-2.6.12-r1.ebuild 886
 MD5 ead6f3b52ff4aa4bf6c38cc2f8abe1e3 files/digest-usermode-sources-2.6.12-r1 211
-MD5 0f66013f643c79c97fda489618a4e2fd files/usermode-sources-2.4.CAN-2004-0535.patch 476
-MD5 dc18e982f8149588a291956481885a8c files/usermode-sources-2.4.CAN-2004-0495.patch 17549
-MD5 b6cd2468a246169a6e2f969c44e3f341 files/usermode-sources-2.4.78362.patch 10372
-MD5 1efe4024e443e60db5fd9b21b22fabd2 files/usermode-sources-2.4.77666.patch 1724
-MD5 1d78b90e495e432432e095ee47bbc2fc files/usermode-sources-2.4.77094.patch 452
-MD5 b46a34c10b4df53c66711f87f039c305 files/usermode-sources-2.4.27.CAN-2004-1295.patch 721
-MD5 792fa9165e5ae65d46ee206c7f7a4fc9 files/usermode-sources-2.4.78363.patch 788
-MD5 8c35751caf824a9dacb02e80d6189b2e files/usermode-sources-2.4.CAN-2004-1137.patch 1764
-MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/usermode-sources-2.4.CAN-2004-1016.patch 2835
-MD5 b9a94233e1457787352e5f85e3e3582d files/usermode-sources-2.4.binfmt_a.out.patch 2009
-MD5 a37241da52edeb7fb1d4989b28eee9cd files/usermode-sources-2.4.brk-locked.patch 8523
-MD5 d1ccc2047be533c992f67270a150a210 files/usermode-sources-2.4.cmdlineLeak.patch 388
-MD5 c27699e9d62f7d46213bd51f87636163 files/usermode-sources-2.4.vma.patch 8143
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1SwLTOXg++0VvJQRAhi3AKCv7L5X3Sl8qhtiS4wl4lPI2c7vYgCdExR7
-PsgsRZBpgyAtW0DMqF3fj4U=
-=P5qo
------END PGP SIGNATURE-----
