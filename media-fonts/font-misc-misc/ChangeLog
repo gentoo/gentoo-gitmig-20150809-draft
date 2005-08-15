@@ -1,10 +1,10 @@
 # ChangeLog for media-fonts/font-misc-misc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.6 2005/08/15 17:31:27 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.7 2005/08/15 17:49:26 herbs Exp $
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
   font-misc-misc-0.99.0.ebuild:
-  Marked ~amd64
+  Marked ~amd64.
 
   14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   font-misc-misc-0.99.0.ebuild:
