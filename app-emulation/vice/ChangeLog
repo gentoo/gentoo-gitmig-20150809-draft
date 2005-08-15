@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.24 2005/05/04 16:11:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.25 2005/08/15 14:18:34 mr_bones_ Exp $
+
+  15 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> vice-1.14-r1.ebuild,
+  vice-1.16.ebuild:
+  disabled gnome support since it doesn't work.  see bug #101901 and discussion.
 
   04 May 2005; Hanno Boeck <hanno@gentoo.org> +files/vice_gcc4_patch.gz,
   vice-1.16.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.5 2005/06/21 05:11:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.6 2005/08/15 14:18:34 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="arts gnome nls sdl X Xaw3d readline"
+IUSE="arts nls sdl X Xaw3d readline"
 
 # FIXME: esound is required until configure.in is patched.
 DEPEND="virtual/libc
@@ -19,7 +19,6 @@ DEPEND="virtual/libc
 	media-libs/libpng
 	sys-libs/zlib
 	arts? ( kde-base/arts )
-	gnome? ( gnome-base/gnome-libs )
 	readline? ( sys-libs/readline )
 	sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )
@@ -33,6 +32,8 @@ src_unpack() {
 src_compile() {
 	# disabled ffmpeg support since ffmpeg isn't slotted and later
 	# versions aren't compatible with the vice code (bug #81795)
+	# disabled gnome support since it doesn't work.
+	# see bug #101901 and discussion.
 	egamesconf \
 		--disable-dependency-tracking \
 		--enable-fullscreen \
@@ -42,7 +43,7 @@ src_compile() {
 		--with-resid \
 		--without-midas \
 		--disable-ffmpeg \
-		$(use_enable gnome gnomeui) \
+		--disable-gnomeui \
 		$(use_enable nls) \
 		$(use_with X x) \
 		$(use_with Xaw3d xaw3d) \

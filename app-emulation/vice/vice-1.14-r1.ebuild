@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.14-r1.ebuild,v 1.7 2005/06/21 04:41:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.14-r1.ebuild,v 1.8 2005/08/15 14:18:34 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,11 +11,10 @@ SRC_URI="ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="sdl nls gnome arts"
+IUSE="arts nls sdl"
 
 DEPEND="virtual/x11
 	sdl? ( media-libs/libsdl )
-	gnome? ( gnome-base/gnome-libs )
 	arts? ( kde-base/arts )"
 
 src_unpack() {
@@ -28,13 +27,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# disabled gnome support since it doesn't work.
+	# see bug #101901 and discussion.
 	egamesconf \
 		--enable-fullscreen \
 		--disable-dependency-tracking \
-		$(use_with sdl) \
-		$(use_enable gnome gnomeui) \
+		--disable-gnomeui \
 		$(use_with arts) \
 		$(use_enable nls) \
+		$(use_with sdl) \
 		|| die
 	emake || die "emake failed"
 }
