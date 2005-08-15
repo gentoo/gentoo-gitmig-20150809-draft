@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4275 2005/08/15 09:25:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4276 2005/08/15 17:02:41 plasmaroo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -459,14 +459,6 @@ dev-lang/gwydion-dylan-bin
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
 dev-lisp/cl-blog
-
-# Tim Yamin <plasmaroo@gentoo.org> (31 Jul 2005)
-# No maintainer, open security bugs. Scheduled for removal
-# for the 16th of August unless somebody takes these packages
-# up as per my gentoo-dev mail on the 16th of July.
-## sys-kernel/win4lin-sources
-sys-kernel/uclinux-sources
-<sys-kernel/usermode-sources-2.6
 
 # Marinus Schraal <foser@gentoo.org> (31 Jul 2005)
 # Development release of gtk+ stack for testing
