@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urlgrabber
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.4 2005/06/28 10:18:07 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.5 2005/08/15 00:20:34 metalgod Exp $
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org> urlgrabber-2.9.6.ebuild:
+  Added ~amd64 keywords.
 
 *urlgrabber-2.9.6 (28 Jun 2005)
 
