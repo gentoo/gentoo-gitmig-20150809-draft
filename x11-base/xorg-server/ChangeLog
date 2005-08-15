@@ -1,10 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.23 2005/08/15 15:18:39 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.24 2005/08/15 15:23:04 herbs Exp $
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
   xorg-server-0.99.1-r3.ebuild:
-  Marked ~amd64
+  Marked ~amd64.
 
   14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/xorg-server-0.99.1-x86_64-1.patch, xorg-server-0.99.1-r3.ebuild:
