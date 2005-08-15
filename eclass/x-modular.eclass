@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.4 2005/08/14 23:45:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.5 2005/08/15 00:33:31 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -15,7 +15,6 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 inherit eutils
 
 # Directory prefix to use for everything
-# Change to /usr/X11R6 once it's standard
 XDIR="/usr"
 
 IUSE=""
