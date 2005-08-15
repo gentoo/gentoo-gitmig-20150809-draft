@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/recordproto-1.13.ebuild,v 1.3 2005/08/14 03:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/recordproto-1.13.ebuild,v 1.4 2005/08/15 15:24:13 herbs Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org Record protocol headers"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~s390 ~sparc ~x86"
 #IUSE="X gnome"
 #DEPEND=""
 #RDEPEND=""
