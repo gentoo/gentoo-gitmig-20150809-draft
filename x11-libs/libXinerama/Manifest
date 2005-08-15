@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0ee835dbef5f9687897d2fd1180f8ae2 libXinerama-0.99.0.ebuild 601
 MD5 e3377bfb34ecf266969fcfd8b0055cc6 ChangeLog 583
 MD5 f20d8695e8cdafabfcc6ec513365e4af files/digest-libXinerama-0.99.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDANqd2G5bA0cA/ScRAoY2AKCEmGG9KsCzzXv16j7mFAQvAN1uIgCdGoyn
+hnVAJjClSDhJdtvLlM95fbs=
+=lCOp
+-----END PGP SIGNATURE-----

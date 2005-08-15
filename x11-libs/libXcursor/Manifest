@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ec2ea4d8689eb43d31e5baf924a6817 libXcursor-1.1.3.ebuild 573
 MD5 1d749119b3526e4349dba13e4856cc6c ChangeLog 571
 MD5 8701bf076c08a0b51249fd0bf4ddeb01 files/digest-libXcursor-1.1.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDANkH2G5bA0cA/ScRAr04AJ9agPH6v3SATmmQ/x6Ujfe+oOfVvQCcDRnQ
+b+FqZepIJ67D3bsuR5M6uag=
+=nWCf
+-----END PGP SIGNATURE-----
