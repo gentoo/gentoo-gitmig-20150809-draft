@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.15 2005/08/09 21:25:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.16 2005/08/15 18:11:18 wolf31o2 Exp $
+
+  15 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  maelstrom-3.0.6-r1.ebuild:
+  Fixed epatch line and closing bug #102618.
 
   09 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -files/maelstrom-3.0.6-security.patch, -maelstrom-3.0.5.ebuild,
