@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.2.1.ebuild,v 1.3 2005/07/14 21:07:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.2.3.ebuild,v 1.1 2005/08/15 06:30:56 mcummings Exp $
 
 inherit base eutils
 
@@ -11,11 +11,9 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
-IUSE="gdbm gmp python"
+IUSE="test"
 
-#this ebuild has been tested with the given perl
-#if we trust the README then 5.6 should also be ok.
-DEPEND=">=dev-lang/perl-5.8.5-r2
+DEPEND="dev-lang/perl
 		>=dev-libs/icu-2.6
 		gdbm? ( >=sys-libs/gdbm-1.8.3-r1 )
 		gmp? ( >=dev-libs/gmp-4.1.4 )
@@ -26,12 +24,16 @@ DEPEND=">=dev-lang/perl-5.8.5-r2
 src_unpack ()   {
 	unpack ${A}
 	cd ${S}
+	#see https://rt.perl.org/rt3/Ticket/Display.html?id=36818
 	epatch ${FILESDIR}/mod_parrot.patch
+	#see https://rt.perl.org/rt3/Ticket/Display.html?id=36812
+	epatch ${FILESDIR}/root.in.patch
+	epatch ${FILESDIR}/parrot-config.patch
 }
 
 src_compile()	{
 	#This configure defines the DESTDIR for make.
-	perl Configure.pl --prefix=${D}|| die "Perl ./Configure.pl failed"
+	perl Configure.pl --prefix=/usr/lib/${P} || die "Perl ./Configure.pl failed"
 	emake -j1 || die "emake failed"
 }
 
@@ -52,12 +54,21 @@ src_install()	{
 	insinto /usr/lib/${P}
 	doins config_lib.pasm
 
-	#copy Header files
+	#copy Header files - this should be done by "make install"
 	dodir /usr/lib/${P}/include
 	dodir /usr/lib/${P}/include/parrot
 	insinto /usr/lib/${P}/include/parrot/
 	doins ${S}/include/parrot/*.h
 
+	#necessary for mod_parrot-0.3
+	dodir /usr/lib/${P}/src/
+	insinto /usr/lib/${P}/src/
+	doins ${S}/src/parrot_config.o
+
 	dodir /usr/share/doc/${P}
-	dodoc README RESPONSIBLE_PARTIES ABI_CHANGES ChangeLog CREDITS
+	dodoc README RESPONSIBLE_PARTIES ABI_CHANGES ChangeLog CREDITS NEWS
+}
+
+src_test()	{
+	emake test || die "test failed"
 }

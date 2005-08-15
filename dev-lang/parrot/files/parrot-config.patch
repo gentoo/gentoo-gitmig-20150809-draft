@@ -1,0 +1,21 @@
+--- parrot-0.2.3/parrot-config.imc	2005-04-11 11:54:11.000000000 +0200
++++ parrot/parrot-config.imc	2005-08-06 13:33:29.000000000 +0200
+@@ -27,9 +27,11 @@
+     .local int argc
+     argc = argv
+     if argc < 2 goto usage
+-    .local pmc conf_hash
++    .local pmc interp, conf_hash
+     .local string key
+-    conf_hash = _config()
++    .include "iglobals.pasm"
++    interp = getinterp
++    conf_hash = interp[.IGLOBALS_CONFIG_HASH]
+     .local int i
+     i = 1
+ loop:
+@@ -70,4 +72,3 @@
+     printerr ": config-key\n"
+     exit 1
+ .end
+-   .include "library/config.imc"

@@ -1,14 +1,22 @@
---- src/call_list.txt	2005-05-08 10:46:37.000000000 +0200
-+++ call_list.in.txt	2005-05-10 22:19:26.000000000 +0200
-@@ -281,6 +281,11 @@
+--- src/call_list.txt	2005-07-12 15:08:57.000000000 +0200
++++ src/call_list.txt.new	2005-08-06 13:26:32.000000000 +0200
+@@ -285,6 +285,19 @@
  i	tp
  v	tiiiptt
  i	Pip
 +p   J
++t   J
 +t   Jp
++p   Jp
 +t   Jpt
 +i   Jp
++i   Jpi
 +i   JPip
++v   ptt
++v   pit
++i   Jpii
++i   ip
++
  
  # PyBuiltins
  P	JOPP
