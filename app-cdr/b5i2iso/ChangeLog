@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/b5i2iso
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.2 2005/05/30 18:00:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/b5i2iso/ChangeLog,v 1.3 2005/08/15 00:55:40 metalgod Exp $
+
+*b5i2iso-0.2 (15 Aug 2005)
+
+  15 Aug 2005; Luis Medinas <metalgod@gentoo.org> +b5i2iso-0.2.ebuild:
+  Version Bump. Added ~amd64 keywords.
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> b5i2iso-0.1.ebuild:
   Moved from gcc.eclass to toolchain-funcs.eclass.
