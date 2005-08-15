@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r6.ebuild,v 1.1 2005/08/15 18:47:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r6.ebuild,v 1.2 2005/08/15 20:50:28 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -223,7 +223,7 @@ src_install() {
 	keepdir ${MOZILLA_FIVE_HOME}/chrome.d
 	keepdir ${MOZILLA_FIVE_HOME}/extensions.d
 	cp ${D}${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt \
-		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt
+		${D}${MOZILLA_FIVE_HOME}/chrome.d/0_base-chrome.txt || die "failed to copy"
 
 	# Create /usr/bin/firefox
 	install_mozilla_launcher_stub firefox ${MOZILLA_FIVE_HOME}
@@ -251,8 +251,8 @@ src_install() {
 	einfo "Installing includes and idl files..."
 	dodir ${MOZILLA_FIVE_HOME}/include/idl /usr/include
 	cd ${S}/dist
-	cp -LfR include/* ${D}${MOZILLA_FIVE_HOME}/include
-	cp -LfR idl/* ${D}${MOZILLA_FIVE_HOME}/include/idl
+	cp -LfR include/* ${D}${MOZILLA_FIVE_HOME}/include || die "failed to copy"
+	cp -LfR idl/* ${D}${MOZILLA_FIVE_HOME}/include/idl || die "failed to copy"
 
 	# Install the NSS/SSL libs, headers and tools
 	if use ssl; then
@@ -274,7 +274,7 @@ src_install() {
 		make install || die "make failed"
 		# Gets installed as symbolic links ...
 		# cp -Lf ${WORKDIR}/nss/bin/* ${D}/usr/bin
-		cp -Lf ${WORKDIR}/nss/lib/* ${D}${MOZILLA_FIVE_HOME}
+		cp -Lf ${WORKDIR}/nss/lib/* ${D}${MOZILLA_FIVE_HOME} || die "failed to copy"
 
 		# Need to unset these incase we want to rebuild, else the build
 		# gets newked.
