@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd4e18514dc633ac3a6c033b848c677a gkrellm-themes-0.1.ebuild 7336
+MD5 4bae9279ed2f2b82f1a1cf29c1c64f0c gkrellm-themes-0.1.ebuild 7311
 MD5 3df6c118e3aafe98dea41e8e3e51ec7b ChangeLog 1465
 MD5 25337439620ee06f28cf452cc1174deb metadata.xml 347
-MD5 78ad4172a701b3fbb6414680eb9fbc4f files/digest-gkrellm-themes-0.1 12032
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC630qEZCkKN40op4RApNJAJsEg6PpcWYQaaLe4/DsIqQ/sQUUCQCeM9X/
-iCBa3qFfIJUlEYFmf0/1YPU=
-=uiSL
------END PGP SIGNATURE-----
+MD5 cfc7f9df433533dcbdc41da5058b41c7 files/digest-gkrellm-themes-0.1 11978
