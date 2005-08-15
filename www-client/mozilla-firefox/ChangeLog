@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.67 2005/08/14 21:06:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.68 2005/08/15 18:47:48 anarchy Exp $
+
+*mozilla-firefox-1.0.6-r6 (15 Aug 2005)
+
+  15 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +files/mozilla-rpath-1.patch, +mozilla-firefox-1.0.6-r6.ebuild:
+  add rpath patch, p.masked for further testing, also mozcalendar removed as
+  it is busted majoryly
 
   14 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
   mozilla-firefox-1.0.6-r5.ebuild:
