@@ -2,16 +2,18 @@
 Hash: SHA1
 
 MD5 886e2c224cbc555a71f3a3510b12c29f f-prot-4.5.4-r1.ebuild 1877
+MD5 84082bf24b21de874305c8d1ece7a27e f-prot-4.6.0-r1.ebuild 1898
 MD5 5ffef451fdeadb27e1770d8feb3b5304 f-prot-4.6.0.ebuild 1848
-MD5 532eb3cbb61f61d9c63012c0759771ad ChangeLog 8727
+MD5 2f815b76240525cd488797a29632ade4 ChangeLog 8946
 MD5 3bf44a2cd492aedb8f27a23f2fe357ff metadata.xml 261
 MD5 c0075e0b3eeeaf1ebb478a49c4b9d7f9 files/digest-f-prot-4.6.0 70
 MD5 f3be9aa98602afac91eca0dceca62edd files/digest-f-prot-4.5.4-r1 70
+MD5 c0075e0b3eeeaf1ebb478a49c4b9d7f9 files/digest-f-prot-4.6.0-r1 70
 MD5 c07e3b0148a64826500324924b3d71f8 files/f-prot.sh 122
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC/i62QlM6RnzZP+IRAmytAJ4mt2YWxttGVTrthBVKckv1lY54hQCfXD2B
-ITSfKbH4jm8XFWnC9Lv1Qe0=
-=VoEJ
+iD8DBQFC/+b4QlM6RnzZP+IRAuy1AKCArDzs2jj+izJLBtsM5mvl0mxmjgCcDddm
+uOFN25yU1P7eEl+Kb3YB4ic=
+=ycyQ
 -----END PGP SIGNATURE-----
