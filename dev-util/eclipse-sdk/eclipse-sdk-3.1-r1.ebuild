@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.6 2005/07/26 00:03:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1-r1.ebuild,v 1.7 2005/08/15 18:56:16 karltk Exp $
 
 inherit eutils java-utils
 
@@ -75,12 +75,6 @@ src_unpack() {
 	einfo "Cleaning out prebuilt code"
 	clean-prebuilt-code
 
-	einfo "Patching build"
-	process-build
-
-	einfo "Patching makefiles"
-	process-makefiles
-
 	einfo "Patching makefiles"
 	process-makefiles
 
@@ -108,18 +102,20 @@ src_compile() {
 	einfo "Bootstrapping ecj"
 	ant -lib jdtcoresrc/ecj.jar -q -f jdtcoresrc/compilejdtcore.xml || die "Failed to bootstrap ecj"
 
-#	einfo "Building launcher"
-#	build-native
-#	cp features/org.eclipse.platform.launchers/library/gtk/eclipse \
-#		eclipse-gtk || die "Failed to copy launcher"
-
 	einfo "Compiling Eclipse -- see ${S}/compilelog.txt for details"
-	ant -lib jdtcoresrc/ecj.jar -q -f build.xml \
+	ANT_OPTS="-Xmx1024M -XX:CompileThreshold=1500" \
+		ant -lib jdtcoresrc/ecj.jar -q -f build.xml \
 		-DinstallOs=linux \
 		-DinstallWs=gtk \
 		-DinstallArch=${eclipsearch} \
 		-Dbootclasspath=${bootclasspath} \
 		-Dlibsconfig=true \
+		-DjavacTarget=1.4 \
+		-DjavacSource=1.4 \
+		-DjavacVerbose=false \
+		-DjavacFailOnError=true \
+		-DjavacDebugInfo=true \
+		-DbuildId="Gentoo Linux ${PF}" \
 		|| die "Failed to compile Eclipse"
 
 	cp launchertmp/eclipse eclipse-gtk || die "Cannot find eclipse binary"
@@ -203,38 +199,6 @@ function setup-mozilla-opts()
 		-I${GECKO_SDK}/include/embed_base \
 		-I${JAVA_HOME}/include/linux"
 	export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
-}
-
-function process-build() {
-
-	local targetOptimization="1.4"
-	local ant_opts="-Xmx1024M"
-
-# Eclipse has ~10 classes that do not yet compile with java 5.0
-#	if (java-utils_is-vm-version-ge 1 5 0) ; then
-#		targetOptimization="1.5"
-#	fi
-
-	einfo "Optimizing for Java ${targetOptimization} VM"
-
-	# Some sun JVM's have only server VM and no client VM. To speed up things
-	# use a same compiler threshold that client VM defaults to
-	if [ ! -z "`java-config --java-version | fgrep "Server VM"`" ] ; then
-		ant_opts="${ant_opts} -XX:CompileThreshold=1500"
-	fi
-
-	# Eclipse has started to respect global flags so patching the main build is enough
-	local properties="-DjavacTarget=${targetOptimization} \
-	 -DjavacSource=${targetOptimization} \
-	 -DjavacVerbose=false \
-	 -DjavacFailOnError=true \
-	 -DjavacDebugInfo=true \
-	 -DbuildId=\"Gentoo Linux ${PF}\""
-
-	sed \
-		-e "s/ant -q /ant -q ${properties} /" \
-		-e "s/ANT_OPTS=-Xmx1000M/ANT_OPTS=\"${ant_opts}\"/" \
-		-i build || die "Failed to patch build script"
 }
 
 function build-native() {
