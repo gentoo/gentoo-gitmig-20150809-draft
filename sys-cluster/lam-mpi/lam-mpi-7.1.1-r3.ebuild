@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r2.ebuild,v 1.6 2005/08/03 14:30:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r3.ebuild,v 1.1 2005/08/15 03:30:47 kugelfang Exp $
 
 inherit fortran flag-o-matic
 
@@ -30,11 +30,9 @@ LICENSE="as-is"
 src_unpack() {
 	unpack ${A}
 
-	# Taken out for the moment. I'll address this as soon as possible.
-	# Seems like romio needs (all?) ADIOI libraries built as shared libs
-	# as well.
-	# Danny van Dyk <kugelfang@gentoo.org> 2005/07/06
-	#epatch ${FILESDIR}/${P}-shared-romio.patch
+	# Fixes BUG #88110.
+	# Danny van Dyk <kugelfang@gentoo.org> 2005/08/15
+	epatch ${FILESDIR}/${P}-shared-romio.patch
 	cd ${S}/romio/util/
 	sed -i "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${D}/usr/share/doc/${PF}\"|" romioinstall.in
 

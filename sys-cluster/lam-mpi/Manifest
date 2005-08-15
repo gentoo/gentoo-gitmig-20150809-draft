@@ -1,17 +1,23 @@
-MD5 41d424eee28f1515720100d976011546 ChangeLog 7474
-MD5 74a4f93a4a855ce5f78a87832ddfaa0f lam-mpi-7.0.4-r1.ebuild 1695
-MD5 09cdcdb1957de0316945e360f642c9f2 lam-mpi-7.0.4.ebuild 1442
-MD5 861dcc1aa59b0e097079f547c7fe6b88 lam-mpi-7.0.6.ebuild 1616
-MD5 3153a7853eaf73aa32f5fc141111ba3a lam-mpi-7.1.1.ebuild 1455
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 211b5dea2394c72a53db7a7154802a8a ChangeLog 7776
 MD5 ae841b28d60b0120213eb738f4a05c73 lam-mpi-7.1.ebuild 1619
+MD5 09cdcdb1957de0316945e360f642c9f2 lam-mpi-7.0.4.ebuild 1442
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
-MD5 2fd75cb9d36d397b7b3bcfa6a5c07a0a lam-mpi-7.1.1-r1.ebuild 1662
-MD5 70c795cdfc4265322058800bd11e143e lam-mpi-7.1.1-r2.ebuild 2713
+MD5 74a4f93a4a855ce5f78a87832ddfaa0f lam-mpi-7.0.4-r1.ebuild 1695
+MD5 861dcc1aa59b0e097079f547c7fe6b88 lam-mpi-7.0.6.ebuild 1616
+MD5 cfc9346f6fe08f5fb84ae8d649474a77 lam-mpi-7.1.1-r3.ebuild 2586
+MD5 8f2271274cdef6f58358e701c71663c9 files/digest-lam-mpi-7.1 61
+MD5 bcac54d719834a00296b9fdf7026d117 files/lam-mpi-7.1.1-shared-romio.patch 10522
 MD5 1d7b0bf28395a80f386bf8ea489c69b8 files/digest-lam-mpi-7.0.4 63
 MD5 1d7b0bf28395a80f386bf8ea489c69b8 files/digest-lam-mpi-7.0.4-r1 63
 MD5 38b6624ba4098ca823b9d317705ca44c files/digest-lam-mpi-7.0.6 63
-MD5 8f2271274cdef6f58358e701c71663c9 files/digest-lam-mpi-7.1 61
-MD5 3af34eb73976278d39527a330bb6c7b2 files/digest-lam-mpi-7.1.1 63
-MD5 14d6b11ac532da9b84fb41053033edd2 files/lam-mpi-7.1.1-shared-romio.patch 1427
-MD5 3af34eb73976278d39527a330bb6c7b2 files/digest-lam-mpi-7.1.1-r1 63
-MD5 3af34eb73976278d39527a330bb6c7b2 files/digest-lam-mpi-7.1.1-r2 63
+MD5 3af34eb73976278d39527a330bb6c7b2 files/digest-lam-mpi-7.1.1-r3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDAA255mJXAu5GbtIRAt06AJ0behEvXogMzDWDzs7zg2sV9g9aDgCfeMf+
+jBKXDbnlnCrQ55elU8cHFD4=
+=42mj
+-----END PGP SIGNATURE-----

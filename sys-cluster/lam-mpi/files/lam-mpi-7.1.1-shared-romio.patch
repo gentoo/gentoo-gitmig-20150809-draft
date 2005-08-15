@@ -1,46 +1,343 @@
-diff -urN lam-7.1.1.orig/romio/mpi-io/Makefile.in lam-7.1.1/romio/mpi-io/Makefile.in
---- lam-7.1.1.orig/romio/mpi-io/Makefile.in	2003-03-25 14:41:35.000000000 -0800
-+++ lam-7.1.1/romio/mpi-io/Makefile.in	2005-05-24 16:12:46.000000000 -0700
-@@ -1,6 +1,9 @@
+diff -ur lam-7.1.1.orig/romio/Makefile.in lam-7.1.1/romio/Makefile.in
+--- lam-7.1.1.orig/romio/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/Makefile.in	2005-08-15 03:34:38.000000000 +0200
+@@ -111,11 +111,12 @@
+             echo " " ;\
+             echo compiling ROMIO in directory $$dir ;\
+ 	    sleep 1;\
+-            (cd $$dir && $(MAKE) ;) ;\
++            (cd $$dir && $(MAKE) all ;) ;\
+             if [ $$? != 0 ] ; then \
+                 echo "Make failed in directory $$dir" ; exit 1 ;\
+             fi ;\
+          done
++	$(MAKE) -f mpi-io/Makefile shared
+ 
+ profile: 
+ 	@if [ "@HAVE_WEAK_SYMBOLS@" = 0 ] ; then \
+diff -ur lam-7.1.1.orig/romio/adio/ad_hfs/Makefile.in lam-7.1.1/romio/adio/ad_hfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_hfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_hfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,10 +16,14 @@
+       ad_hfs_resize.o ad_hfs_seek.o \
+       ad_hfs.o
+ 
+-default: $(LIBNAME)
++dir:
++	mkdir -p $(SODIR)
++
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_HFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_HFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_nfs/Makefile.in lam-7.1.1/romio/adio/ad_nfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_nfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_nfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,10 +16,14 @@
+       ad_nfs_resize.o \
+       ad_nfs_setsh.o ad_nfs_getsh.o ad_nfs.o
+ 
+-default: $(LIBNAME)
++dir:
++	@mkdir -p $(SODIR)
++
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_NFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_NFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_pfs/Makefile.in lam-7.1.1/romio/adio/ad_pfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_pfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_pfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@  -I${srcdir}/../include -I../include
+@@ -14,11 +16,14 @@
+       ad_pfs_flush.o ad_pfs_seek.o ad_pfs_resize.o ad_pfs_hints.o \
+       ad_pfs.o
+ 
++dir:
++	@mkdir -p $(SODIR)
+ 
+-default: $(LIBNAME)
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_PFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_PFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_piofs/Makefile.in lam-7.1.1/romio/adio/ad_piofs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_piofs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_piofs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,11 +16,14 @@
+       ad_piofs_seek.o ad_piofs_resize.o ad_piofs_hints.o \
+       ad_piofs.o
+ 
++dir:
++	@mkdir -p $(SODIR)
+ 
+-default: $(LIBNAME)
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_PIOFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_PIOFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_pvfs/Makefile.in lam-7.1.1/romio/adio/ad_pvfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_pvfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_pvfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,10 +16,14 @@
+       ad_pvfs_flush.o ad_pvfs_seek.o ad_pvfs_resize.o ad_pvfs_hints.o \
+       ad_pvfs_delete.o ad_pvfs.o
+ 
+-default: $(LIBNAME)
++dir:
++	@mkdir -p $(SODIR)
++
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_PVFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_PVFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_sfs/Makefile.in lam-7.1.1/romio/adio/ad_sfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_sfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_sfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,10 +16,14 @@
+       ad_sfs_flush.o ad_sfs_resize.o \
+       ad_sfs.o
+ 
+-default: $(LIBNAME)
++dir:
++	@mkdir -p $(SODIR)
++
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_SFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_SFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_testfs/Makefile.in lam-7.1.1/romio/adio/ad_testfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_testfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_testfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -15,10 +17,14 @@
+ 	ad_testfs_seek.o ad_testfs_resize.o ad_testfs_hints.o \
+ 	ad_testfs_delete.o ad_testfs.o
+ 
+-default: $(LIBNAME)
++dir:
++	@mkdir -p $(SODIR)
++
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_TESTFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_TESTFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_ufs/Makefile.in lam-7.1.1/romio/adio/ad_ufs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_ufs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_ufs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,11 +16,14 @@
+       ad_ufs_resize.o \
+       ad_ufs.o
+ 
++dir:
++	@mkdir -p $(SODIR)
+ 
+-default: $(LIBNAME)
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_UFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_UFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/ad_xfs/Makefile.in lam-7.1.1/romio/adio/ad_xfs/Makefile.in
+--- lam-7.1.1.orig/romio/adio/ad_xfs/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/ad_xfs/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ srcdir      = @srcdir@
+ 
+ INCLUDE_DIR = -I@MPI_INCLUDE_DIR@ -I${srcdir}/../include -I../include
+@@ -14,10 +16,14 @@
+       ad_xfs_resize.o ad_xfs_seek.o ad_xfs_hints.o \
+       ad_xfs.o
+ 
+-default: $(LIBNAME)
++dir:
++	mkdir -p $(SODIR)
++
++all: dir $(LIBNAME)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+ $(LIBNAME): $(AD_XFS_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_XFS_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/adio/common/Makefile.in lam-7.1.1/romio/adio/common/Makefile.in
+--- lam-7.1.1.orig/romio/adio/common/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/adio/common/Makefile.in	2005-08-15 04:07:28.000000000 +0200
+@@ -1,6 +1,8 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
+ MPI         = @MPI@
+ srcdir      = @srcdir@
+ 
+@@ -19,8 +21,12 @@
+ 
+ all: $(LIBNAME)
+ 
++dir:
++	@mkdir -p $(SODIR)
++
+ .c.o:
+ 	$(CC) $(CFLAGS) $(INC) -c $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
+ 
+-$(LIBNAME): $(AD_OBJECTS)
++$(LIBNAME): dir $(AD_OBJECTS)
+ 	$(AR) $(LIBNAME) $(AD_OBJECTS)
+diff -ur lam-7.1.1.orig/romio/mpi-io/Makefile.in lam-7.1.1/romio/mpi-io/Makefile.in
+--- lam-7.1.1.orig/romio/mpi-io/Makefile.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/mpi-io/Makefile.in	2005-08-15 03:34:25.000000000 +0200
+@@ -1,6 +1,10 @@
  CC          = @CC@
  AR          = @AR@
  LIBNAME     = @LIBNAME@
 +PICFLAGS    = -fPIC -DPIC
 +SOFLAGS     = -shared
-+SONAME      = $(basename @LIBNAME@).so
++SODIR       = $(addsuffix .libs/,$(dir $(LIBNAME)))
++SONAME      = $(basename $(LIBNAME)).so
  RANLIB      = @RANLIB@
  srcdir      = @srcdir@
  
-@@ -55,10 +58,14 @@
+@@ -55,10 +59,14 @@
  
  all: $(LIBNAME)
  
 +dir:
-+	mkdir -p shared/
++	mkdir -p $(SODIR)
 +
  .SUFFIXES: $(SUFFIXES) .p
  
  .c.o:
  	$(CC) $(CFLAGS) -c $<
-+	$(CC) $(CFLAGS) $(PICFLAGS) -c -o shared/$@ $<
++	$(CC) $(CFLAGS) $(PICFLAGS) -c -o $(addprefix $(SODIR),$@) $<
  
  .c.p:
  	@cp $(srcdir)/$*.c _$*.c
-@@ -69,8 +76,10 @@
+@@ -69,8 +77,11 @@
  	$(AR) $(LIBNAME) $(MPIO_REAL_POBJECTS)
  	@rm -f _*.o
  
 -$(LIBNAME): $(MPIO_OBJECTS)
 +$(LIBNAME): dir $(MPIO_OBJECTS)
  	$(AR) $(LIBNAME) $(MPIO_OBJECTS)
-+	$(CC) $(SOFLAGS) -o $(SONAME) $(addprefix shared/, $(MPIO_OBJECTS))
++	
++shared:
++	$(CC) $(SOFLAGS) -o $(SONAME) $(SODIR)/* 
  
  clean:
  	@rm -f *.o
-+	@rm -f shared/*.o
-diff -urN lam-7.1.1.orig/romio/util/romioinstall.in lam-7.1.1/romio/util/romioinstall.in
---- lam-7.1.1.orig/romio/util/romioinstall.in	2003-03-25 14:41:35.000000000 -0800
-+++ lam-7.1.1/romio/util/romioinstall.in	2005-05-24 16:10:30.000000000 -0700
+diff -ur lam-7.1.1.orig/romio/util/romioinstall.in lam-7.1.1/romio/util/romioinstall.in
+--- lam-7.1.1.orig/romio/util/romioinstall.in	2005-08-15 02:51:08.000000000 +0200
++++ lam-7.1.1/romio/util/romioinstall.in	2005-08-15 03:34:25.000000000 +0200
 @@ -128,6 +128,7 @@
  # Library files
  dir="$libdir"
