@@ -1,4 +1,16 @@
-MD5 11fbbf2735738267a3fc238d7f04a018 ChangeLog 548
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 441fffd18112fbe07a88ffc376d29da9 transaction-simple-1.3.0.ebuild 523
+MD5 efe848a664a8b2545df0f6040b23378c transaction-simple-1.1.1.ebuild 847
+MD5 192912639c093e88e5daf97fc1bce9d8 ChangeLog 797
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 bea90699b18b7d325d2b5812e68fc3ca transaction-simple-1.1.1.ebuild 843
 MD5 cb0fdae0bb069768434547df12ae42b8 files/digest-transaction-simple-1.1.1 75
+MD5 c392d1c1d4f609a4e5fa29ab09ecf579 files/digest-transaction-simple-1.3.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFDAKNNehlBotwFZuQRAoUyAJ4xoN1AjCu2ZuO+VOFjGaglRL43RQCfbu6Y
+bJUcKbRt+Cw5CBrPt530s3o=
+=UHwp
+-----END PGP SIGNATURE-----
