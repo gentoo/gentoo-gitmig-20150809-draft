@@ -1,0 +1,11 @@
+# ChangeLog for net-dns/rbldnsd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.1 2005/08/15 22:05:32 chriswhite Exp $
+
+*rbldnsd-0.995 (15 Aug 2005)
+
+  15 Aug 2005; Chris White <chriswhite@gentoo.org> +files/confd,
+  +files/example, +files/initd, +metadata.xml, +rbldnsd-0.995.ebuild:
+  Initial commit to the tree. This closes bug #39975. Thanks to Martin
+  Hierling for the initial ebuild.
+
