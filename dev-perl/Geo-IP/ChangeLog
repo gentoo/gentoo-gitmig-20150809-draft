@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.17 2005/08/13 23:22:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.18 2005/08/15 10:40:54 mcummings Exp $
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org> -Geo-IP-1.21.ebuild:
+  Cleaning stale ebuild
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> Geo-IP-1.25.ebuild:
   Stable on ppc.
