@@ -1,6 +1,13 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.12 2005/08/13 04:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.13 2005/08/15 02:32:49 mr_bones_ Exp $
+
+*bsd-games-2.17 (15 Aug 2005)
+
+  15 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/bsd-games-2.17-gcc4.patch, +files/2.17-64bit.patch,
+  +bsd-games-2.17.ebuild:
+  version bump
 
   13 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/bsd-games-2.13-gcc4.patch, bsd-games-2.13-r1.ebuild:
