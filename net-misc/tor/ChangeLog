@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.47 2005/08/15 12:53:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.48 2005/08/15 13:11:29 hansmi Exp $
+
+  15 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> tor-0.1.0.14.ebuild:
+  Stable on ppc.
 
   15 Aug 2005; Markus Rothe <corsair@gentoo.org> tor-0.1.0.14.ebuild:
   Stable on ppc64 (bug #102245)
