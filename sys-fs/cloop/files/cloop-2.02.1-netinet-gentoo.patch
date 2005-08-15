@@ -1,0 +1,18 @@
+--- cloop-2.02/advancecomp-1.9_create_compressed_fs/advfs.cc.orig	2005-08-15 11:36:42.000000000 +0200
++++ cloop-2.02/advancecomp-1.9_create_compressed_fs/advfs.cc	2005-08-15 11:37:05.000000000 +0200
+@@ -21,6 +21,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/stat.h>
++#include <netinet/in.h>
+ #include <fcntl.h>
+ #include <zlib.h>
+ #include "compressed_loop.h"
+@@ -30,7 +31,6 @@
+ #include "compress.h"
+ #include "siglock.h"
+ #define __OPTIMIZE__
+-#include <netinet/in.h>
+ #include <asm/byteorder.h>
+ 
+ #include "lib/mng.h"

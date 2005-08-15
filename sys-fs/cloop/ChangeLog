@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/cloop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.8 2005/05/17 19:30:17 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.9 2005/08/15 09:43:33 genstef Exp $
+
+*cloop-2.02.1 (15 Aug 2005)
+
+  15 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/cloop-2.02.1-netinet-gentoo.patch, +cloop-2.02.1.ebuild:
+  Verson bump
 
   17 May 2005; Daniel Drake <dsd@gentoo.org>
   +files/cloop-2.01.5-netinet-gentoo.patch, cloop-2.01.5-r1.ebuild:
