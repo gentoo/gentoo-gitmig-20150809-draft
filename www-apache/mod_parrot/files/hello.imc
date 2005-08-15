@@ -1,0 +1,16 @@
+.namespace [ 'HelloWorld' ]
+
+.sub _handler
+    .param pmc r
+    .local pmc ap_const
+    .local int status
+
+    r.'puts'('<H1>Hello World!</H1>')
+
+    ap_const = find_global 'Apache::Constants', 'ap_constants'
+    status = ap_const['OK']
+
+    .pcc_begin_return
+        .return status
+    .pcc_end_return
+.end

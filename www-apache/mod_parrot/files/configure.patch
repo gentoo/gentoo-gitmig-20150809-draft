@@ -1,0 +1,11 @@
+--- /var/tmp/portage/mod_parrot-0.3/work/mod_parrot-0.3/Configure.pl	2005-08-02 21:17:22.000000000 +0200
++++ mod_parrot-0.3/Configure.pl	2005-08-12 17:36:01.000000000 +0200
+@@ -76,7 +76,7 @@
+ my $cflags = " -I$parrot_build_dir/include";
+ $cflags .= " -DMPM_IS_THREADED" if (mpm_is_threaded($mpm));
+ my $ldflags = parrot_config('ldflags') . " -L$parrot_build_dir/blib/lib";
+-my $libs = parrot_config('libs') . ' -lparrot';
++my $libs = parrot_config('libs') . ' -lparrot -licuuc';
+ 
+ print "Generating Makefile...";
+ my $template;

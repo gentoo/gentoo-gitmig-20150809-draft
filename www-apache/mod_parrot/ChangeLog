@@ -1,0 +1,11 @@
+# ChangeLog for www-apache/mod_parrot
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_parrot/ChangeLog,v 1.1 2005/08/15 09:04:12 mcummings Exp $
+
+*mod_parrot-0.3 (15 Aug 2005)
+
+  15 Aug 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +files/configure.patch, +files/hello.imc, +files/mod_parrot.conf,
+  +mod_parrot-0.3.ebuild:
+  Bug 88367, courtesy Adrian Lambeck
+

@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 09ca60b5df93156965c2803c79a08ad7 mod_parrot-0.3.ebuild 2128
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 282d777a8fc366162163a7c5a768d721 ChangeLog 451
+MD5 b93d7db3090fc25e0b2a8d82b13d1db1 files/hello.imc 308
+MD5 a84c1f7a16b3202a5019aa9c4105b8d4 files/mod_parrot.conf 587
+MD5 d32e93eda43971108e048458d4b6badd files/configure.patch 529
+MD5 3891bfb26d033f2d92c14eaa53d7a93c files/digest-mod_parrot-0.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFDAFqetG5z4I8BtQoRAssNAKCLc34S3q5gnbyMGxxpGxzkklsIDgCfdCCH
+qkI6qKTGnIE02FPTYtGsq7s=
+=IfFu
+-----END PGP SIGNATURE-----
