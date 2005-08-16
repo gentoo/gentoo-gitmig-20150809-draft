@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c7ae74d80c4fd172fc83b5f41de30ea4 bzip2-1.0.2-r5.ebuild 2203
 MD5 e8540965a44b4e9dcf222940fdd9cd3e bzip2-1.0.3-r5.ebuild 2351
@@ -14,3 +17,10 @@ MD5 d1cf85cb43e35c9ecba9954295318ab8 files/bzip2-1.0.3-saneso.patch 323
 MD5 5f7a98f0aaaed6554126d30e28383ee0 files/bzip2-1.0.2-progress.patch 6141
 MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r5 63
 MD5 613ebf0fa8c5fd2ed2973ffe0d727e2a files/bzip2-1.0.3-shared-largefile-support.patch 404
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDAeoCKRy60XGEcJIRAtJVAKCLwdws5X9x9kfC09DQSs+59py88ACdGhCK
+F5UwfDxFTnUO5FejS9FYnYA=
+=ERNI
+-----END PGP SIGNATURE-----
