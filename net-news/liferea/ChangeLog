@@ -1,6 +1,12 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.10 2005/08/14 10:12:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.11 2005/08/16 13:44:14 citizen428 Exp $
+
+*liferea-0.9.6 (16 Aug 2005)
+
+  16 Aug 2005; Michael Kohl <citizen428@gentoo.org> -liferea-0.9.1.ebuild,
+  liferea-0.9.3.ebuild, +liferea-0.9.6.ebuild:
+  Added 0.9.6, marked 0.9.3 stable on x86, removed 0.9.1.
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> liferea-0.9.2.ebuild:
   Stable on ppc.
