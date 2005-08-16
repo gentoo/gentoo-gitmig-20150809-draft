@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.2 2005/08/08 20:14:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.3 2005/08/16 02:53:03 spyderous Exp $
+
+*xdm-0.99.0-r1 (16 Aug 2005)
+
+  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/Xsession,
+  +files/xdm.pamd, +files/xdm.start, +xdm-0.99.0-r1.ebuild:
+  Install all the files monolith did, including init script. (#97897) Remove
+  pam_console reference in pam file.
 
   08 Aug 2005; Ferris McCormick <fmccor@gentoo.org> xdm-0.99.0.ebuild:
   Add ~sparc keyword (Modular X testing).
