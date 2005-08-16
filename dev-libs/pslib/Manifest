@@ -1,4 +1,6 @@
-MD5 631c06525908e6ea7b65d27a8d932c15 ChangeLog 490
+MD5 a9d9d3cea44542ebd5821473bc45032f ChangeLog 621
 MD5 619b858577edb26a03cdf700b6997618 metadata.xml 186
 MD5 2b51aa2db104d77965732d6ca9661025 pslib-0.2.4.ebuild 699
+MD5 bf866b5256900791833a083f770d4ff7 pslib-0.2.6.ebuild 702
 MD5 284307d9a72ed22ebed2eb9461ce6e92 files/digest-pslib-0.2.4 63
+MD5 6d23f69d30ea9b67f43d0c2c04ce6b29 files/digest-pslib-0.2.6 63
