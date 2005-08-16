@@ -1,5 +1,5 @@
 MD5 640380bbe0c13e53eede83b9d41af78e ChangeLog 591
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
-MD5 7d37ab4144b440b7824f688e53c52cf9 traceproto-1.1.1.ebuild 948
+MD5 31b6ee2adff386963b1adf10ebe09595 traceproto-1.1.1.ebuild 955
 MD5 e489db124aef70ee3c4067dcc0f15c2d files/digest-traceproto-1.1.1 68
 MD5 1a3c5caf1acac2a8326789361bf81663 files/traceproto-1.1.1-fix-warnings.diff 2407
