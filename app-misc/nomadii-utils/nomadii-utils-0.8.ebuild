@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.13 2005/01/01 15:16:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.14 2005/08/16 18:10:55 seemant Exp $
 
 IUSE="readline"
 
@@ -18,10 +18,9 @@ DEPEND=">=sys-libs/ncurses-5.2
 	readline? ( >=sys-libs/readline-4.1 )"
 
 src_compile() {
-	sed -i -e "s:^LIBTERMCAP=-ltermcap$:LIBTERMCAP=-lncurses:" \
-		Makefile
-
-	sed -i -e "s:^OPTIMIZER= -O2$:OPTIMIZER= ${CFLAGS}:" \
+	sed -i \
+		-e "s:^LIBTERMCAP=-ltermcap$:LIBTERMCAP=-lncurses:" \
+		-e "s:^OPTIMIZER= -O2$:OPTIMIZER= ${CFLAGS}:" \
 		Makefile
 
 	if ! use readline ; then
@@ -39,10 +38,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! groupmod usb; then
-		groupadd -g 85 usb || die "problem adding group usb"
-	fi
-
 	echo
 	einfo "To use nomadii, you need to have usbdevfs compiled in your kernel"
 	einfo "Look for: CONFIG_USB_DEVICEFS or Preliminary USB device filesystem"
