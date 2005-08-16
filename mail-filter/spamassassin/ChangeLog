@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.67 2005/06/28 23:08:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.68 2005/08/16 09:52:10 mcummings Exp $
+
+  16 Aug 2005; Michael Cummings <mcummings@gentoo.org> files/3.0.0-spamd.conf,
+  +files/secrets.cf, -spamassassin-2.64-r1.ebuild,
+  -spamassassin-3.0.2-r1.ebuild, -spamassassin-3.0.3.ebuild,
+  spamassassin-3.0.4.ebuild:
+  Cleaning up; bug 91430 resolved, added secrets.cf and a note to the local.cf
+  file
 
   28 Jun 2005; Michael Cummings <mcummings@gentoo.org>
   files/3.0.0-spamd.init, spamassassin-3.0.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.10 2005/06/28 23:08:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.4.ebuild,v 1.11 2005/08/16 09:52:10 mcummings Exp $
 
 inherit perl-module
 
@@ -168,6 +168,14 @@ src_install () {
 		dodoc spamd/PROTOCOL
 		dohtml doc/*.html
 	fi
+
+	cp ${FILESDIR}/secrets.cf ${D}/etc/mail/spamassassin/secrets.cf
+	fperms 0400 ${D}/etc/mail/spamassassin/secrets.cf
+	echo " ">> ${D}/etc/mail/spamassassin/local.cf
+	echo "# Sensitive data, such as database connection info, should">> ${D}/etc/mail/spamassassin/local.cf
+	echo "# be stored in /etc/mail/spamassassin/secrets.cf with">> ${D}/etc/mail/spamassassin/local.cf
+	echo "# appropriate permissions">> ${D}/etc/mail/spamassassin/local.cf
+
 }
 
 pkg_postinst() {
@@ -205,4 +213,6 @@ pkg_postinst() {
 	ewarn "and is vulnerable to DoS attacks (and eternal doom) if"
 	ewarn "configured to do so"
 	ewarn
+	ewarn "If you plan on using the -u flag to spamd, please read the notes"
+	ewarn "in /etc/conf.d/spamd regarding the location of the pid file."
 }
