@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1-r1.ebuild,v 1.5 2005/08/03 11:48:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1-r1.ebuild,v 1.6 2005/08/16 10:55:19 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,9 +37,9 @@ RDEPEND="
 	smartcard? ( dev-libs/libusb )
 	selinux? ( sec-policy/selinux-gnupg )
 	usb? ( dev-libs/libusb )"
-# waiting on arm arch - bug #76234
+
 RDEPEND="${RDEPEND}
-	!arm? ( X? ( || ( media-gfx/xloadimage media-gfx/xli ) ) )"
+	X? ( || (  media-gfx/xloadimage media-gfx/xli ) )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl"
@@ -92,26 +92,25 @@ src_compile() {
 	# configure doesn't trean --disable-asm correctly
 	use x86 && myconf="${myconf} --enable-asm"
 
-	# waiting on arm bug #76234
-	use arm || myconf="${myconf} `use_enable X photo-viewers`"
 
 	# fix compile problem on ppc64
 	use ppc64 && myconf="${myconf} --disable-asm"
 
 	econf \
-		`use_enable ldap` \
+		$(use_enable ldap) \
 		--enable-mailto \
 		--enable-hkp \
 		--enable-finger \
-		`use_with !zlib included-zlib` \
-		`use_with curl libcurl /usr` \
-		`use_enable nls` \
-		`use_enable bzip2` \
-		`use_enable smartcard card-support` \
-		`use_enable selinux selinux-support` \
-		`use_with caps capabilities` \
-		`use_with readline` \
-		`use_with usb libusb /usr` \
+		$(use_with !zlib included-zlib) \
+		$(use_with curl libcurl /usr) \
+		$(use_enable nls) \
+		$(use_enable bzip2) \
+		$(use_enable smartcard card-support) \
+		$(use_enable selinux selinux-support) \
+		$(use_with caps capabilities) \
+		$(use_with readline) \
+		$(use_with usb libusb /usr) \
+		$(use_enable X photo-viewers) \
 		--enable-static-rnd=linux \
 		--libexecdir=/usr/libexec \
 		--enable-sha512 \

@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.126 2005/08/06 03:53:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.127 2005/08/16 10:55:19 dragonheart Exp $
+
+  16 Aug 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.4.1.ebuild,
+  gnupg-1.4.1-r1.ebuild, gnupg-1.4.2-r1.ebuild, -gnupg-1.9.15-r1.ebuild:
+  keyword/use flag cleanup with arm stable xli (bug #76234). remove 1.9.15
 
 *gnupg-1.9.18 (06 Aug 2005)
 
