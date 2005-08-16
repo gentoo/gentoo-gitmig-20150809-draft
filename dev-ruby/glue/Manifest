@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 db4186da6551c04f5f149658d96861bc glue-0.22.0.ebuild 500
 MD5 e196d5dca85e25c5903beaa6ebf65fdc ChangeLog 416
 MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
 MD5 3a1190e91aceeeb47889abd99a4d50ed files/digest-glue-0.22.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFDAhJMehlBotwFZuQRAuDGAJ4y7g9/ySK1V32h1HwWDbgCHqo1zwCgolOl
+NrkXNWh8SuvV9tCMHYUQdyU=
+=mnGD
+-----END PGP SIGNATURE-----
