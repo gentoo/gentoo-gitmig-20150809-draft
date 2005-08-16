@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.443 2005/08/16 01:31:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.444 2005/08/16 01:41:21 halcy0n Exp $
+
+  16 Aug 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.1.ebuild:
+  Update 4.0.1's patchset.  Dropped a patch that caused issues on PPC.  Fixes
+  bug #97939
 
   16 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> gcc-3.4.4.ebuild:
   Stable amd64.
