@@ -1,8 +1,0 @@
---- ldapbrowser.orig/lbe.sh	Tue Jan 29 00:30:24 2002
-+++ ldapbrowser/lbe.sh	Tue Jan 29 00:24:18 2002
-@@ -15,4 +15,5 @@
-     ARG1=$1
- fi
- 
-+cd /opt/ldap*
- ${JAVA} ${OPTIONS} -jar lbe.jar $ARG1 $2 $3 $4 $5 $6 $7 $8 $9
