@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmsmixer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.17 2005/08/02 19:54:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsmixer/ChangeLog,v 1.18 2005/08/16 10:10:59 s4t4n Exp $
+
+  16 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmsmixer-0.5.1.ebuild,
+  wmsmixer-0.5.ebuild:
+  Updated HOMEPAGE, closes #101187.
 
   02 Aug 2005; Markus Rothe <corsair@gentoo.org> wmsmixer-0.5.1.ebuild:
   Stable on ppc64
