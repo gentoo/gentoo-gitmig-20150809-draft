@@ -1,3 +1,6 @@
-MD5 f57c77b7c7243a5f95ba542eaf724d96 ChangeLog 508
 MD5 d035545d7803331d3458beef5f7ded61 xf86-video-ati-6.5.6.ebuild 669
+MD5 8ebde3915ff606955f99c6dde9589958 ChangeLog 778
+MD5 f9c454eef3f71a178d2aeccfc8353a6e xf86-video-ati-6.5.6-r1.ebuild 736
 MD5 73547ec47cd075a80b875b58f9ac3532 files/digest-xf86-video-ati-6.5.6 73
+MD5 73547ec47cd075a80b875b58f9ac3532 files/digest-xf86-video-ati-6.5.6-r1 73
+MD5 e9296af01f62cf628bfb2b969a8121c6 files/detect-dga-cpio-etc-per-platform.patch 3885
