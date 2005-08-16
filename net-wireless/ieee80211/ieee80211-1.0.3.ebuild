@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.0.3.ebuild,v 1.2 2005/08/09 21:37:57 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.0.3.ebuild,v 1.3 2005/08/16 12:30:29 brix Exp $
 
 inherit linux-mod
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="!<=net-wireless/ipw2100-1.1.0
 		!<=net-wireless/ipw2200-1.0.4"

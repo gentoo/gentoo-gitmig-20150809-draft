@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.36 2005/07/13 10:16:29 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.37 2005/08/16 12:36:10 brix Exp $
+
+  16 Aug 2005; Henrik Brix Andersen <brix@gentoo.org> ChangeLog:
+  Stable on x86.
 
   13 Jul 2005; <brix@gentoo.org> -files/hostapd-0.4.0-conf.d,
   -files/hostapd-0.4.0-init.d, -files/hostapd-0.4.1-conf.d,

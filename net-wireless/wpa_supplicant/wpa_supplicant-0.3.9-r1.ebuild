@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.3.9-r1.ebuild,v 1.1 2005/07/13 18:18:51 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.3.9-r1.ebuild,v 1.2 2005/08/16 12:37:22 brix Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${MY_P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="gsm readline ssl"
 
 DEPEND="gsm? ( sys-apps/pcsc-lite )
