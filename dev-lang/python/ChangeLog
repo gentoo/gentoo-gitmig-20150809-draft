@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.156 2005/08/15 21:31:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.157 2005/08/16 22:00:31 kloeri Exp $
+
+  16 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.3.4-r1.ebuild,
+  python-2.3.5.ebuild:
+  Add fix for bug 88777 to arch versions.
 
   15 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5-r1.ebuild,
   python-2.4.1-r1.ebuild:

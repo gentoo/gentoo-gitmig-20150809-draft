@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4-r1.ebuild,v 1.9 2005/05/30 02:33:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4-r1.ebuild,v 1.10 2005/08/16 22:00:31 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -34,7 +34,9 @@ DEPEND=">=sys-libs/zlib-1.1.3
 		dev-libs/expat
 	)"
 
-RDEPEND="${DEPEND} dev-python/python-fchksum"
+# NOTE: changed RDEPEND to PDEPEND to resolve bug 88777. - kloeri
+
+PDEPEND="${DEPEND} dev-python/python-fchksum"
 
 # The dev-python/python-fchksum RDEPEND is needed to that this python provides
 # the functionality expected from previous pythons.
