@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.47 2005/06/13 23:17:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.48 2005/08/16 13:13:17 gustavoz Exp $
+
+  16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> grep-2.5.1-r8.ebuild:
+  Stable on sparc
 
   13 Jun 2005; Mike Frysinger <vapier@gentoo.org>
   +files/grep-2.5.1-libintl.patch, grep-2.5.1-r8.ebuild:
