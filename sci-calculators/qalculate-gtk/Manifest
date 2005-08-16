@@ -1,4 +1,6 @@
+MD5 a47463c225f4533e832633d59df4007b qalculate-gtk-0.8.1.ebuild 788
 MD5 eaecf90f7f56bfe8cf83182fe52cc659 ChangeLog 598
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 47824c8037b8d87471623e62aeaab815 qalculate-gtk-0.8.0.ebuild 779
 MD5 734c64b7e4fa42a5dfcb70f424178b1c files/digest-qalculate-gtk-0.8.0 72
+MD5 ba487672f4176a31fe1dbe121169f7bb files/digest-qalculate-gtk-0.8.1 72
