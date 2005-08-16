@@ -1,6 +1,16 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.59 2005/08/11 20:21:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.60 2005/08/16 22:15:55 metalgod Exp $
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> +acroread-7.0.1.1.ebuild:
+  Version Bump Fix Security bug #102730. Removed mozilla use flag and added
+  nsplugin local use flag to fix bug #101165.
+
+*acroread-7.0.1.1 (16 Aug 2005)
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> +acroread-7.0.1.1.ebuild:
+  Version Bump Fix Security bug #102730. Removed mozilla use flag and added
+  nsplugin local use flag to fix bug #101165.
 
   11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> acroread-5.10.ebuild,
   acroread-7.0.0.2-r2.ebuild:
