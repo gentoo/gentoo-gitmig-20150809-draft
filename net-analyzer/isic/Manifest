@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b3aa40aa16be03b7c00754984bdad156 ChangeLog 1557
-MD5 fbf63d9cffbd1fd5da61a5af752d8c79 isic-0.06.ebuild 757
+MD5 925b88162c68044ab83c087c914dad69 ChangeLog 1642
+MD5 ac7ce73fce53f6881d1f170fbf7458b0 isic-0.06.ebuild 758
 MD5 f00333dfc594456606fe48bf50a9c392 metadata.xml 320
 MD5 7d4f90aea0221994b56ea15b508e8b92 files/digest-isic-0.06 57
 MD5 7ba4a54861b9cc413402b7c4b09c4bbd files/isic-0.06-gcc4.patch 1824
 MD5 761301ac69be4d5a63cf74dd9a933115 files/isic-0.06-makefile.patch 1495
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6sDomdTrptrqvGERAmdJAJ40NtsM5Rr6CzB/bWdn5BIh7kI0lwCgkrBr
-1PRJ1IkSCFAHuF67rrs3h84=
-=7FNz
------END PGP SIGNATURE-----

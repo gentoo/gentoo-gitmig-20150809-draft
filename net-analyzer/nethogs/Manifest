@@ -1,5 +1,5 @@
-MD5 293afe8cd39362d4539df840ce406a98 ChangeLog 855
+MD5 aa3afd25d00bddd50729400748c16877 ChangeLog 950
 MD5 1385d77b0c1cbc2ad11db1d3abea9721 metadata.xml 735
-MD5 abb7b85a85b719b8d6669509a3f7a807 nethogs-0.6.0.ebuild 864
+MD5 06b135339db764cda7c09916062ad9c3 nethogs-0.6.0.ebuild 871
 MD5 91d6d413a6fddc0318223e2c73caa452 files/digest-nethogs-0.6.0 64
 MD5 ee1f4e4bcff506362fd7463b85016f54 files/nethogs-0.6.0-gcc34.diff 397
