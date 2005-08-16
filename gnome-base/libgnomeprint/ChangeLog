@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.99 2005/08/08 14:43:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.100 2005/08/16 23:06:43 leonardop Exp $
+
+*libgnomeprint-2.11.0 (16 Aug 2005)
+
+  16 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +libgnomeprint-2.11.0.ebuild:
+  New version. Added 'static' USE flag.
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org>
   libgnomeprint-2.10.3.ebuild:
