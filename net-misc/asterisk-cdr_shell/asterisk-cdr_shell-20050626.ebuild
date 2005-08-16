@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/asterisk-cdr_shell-20050626.ebuild,v 1.2 2005/07/02 09:34:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/asterisk-cdr_shell-20050626.ebuild,v 1.3 2005/08/16 16:45:07 stkn Exp $
 
 inherit eutils
 
@@ -25,8 +25,15 @@ src_unpack() {
 	# use asterisk-config...
 	epatch ${FILESDIR}/${MY_PN}-${PV}-astcfg.diff
 
-	# patch for asterisk stable
-	epatch ${FILESDIR}/${MY_PN}-${PV}-stable.diff
+	if has_version "<net-misc/asterisk-1.1.0"; then
+		einfo "Building for Asterisk-1.0.x"
+		# patch for asterisk stable
+		epatch ${FILESDIR}/${MY_PN}-${PV}-stable.diff
+	else
+		einfo "Building for Asterisk-1.2.x"
+		# patch for asterisk 1.2
+		epatch ${FILESDIR}/${MY_PN}-${PV}-ast1.2.diff
+	fi
 }
 
 src_compile() {
