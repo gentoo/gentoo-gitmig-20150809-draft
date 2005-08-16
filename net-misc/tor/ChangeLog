@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.48 2005/08/15 13:11:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.49 2005/08/16 02:38:25 weeve Exp $
+
+  16 Aug 2005; Jason Wever <weeve@gentoo.org> tor-0.1.0.14.ebuild:
+  Stable on SPARC wrt security bug #102245.
 
   15 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> tor-0.1.0.14.ebuild:
   Stable on ppc.
