@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba252cc54bec64fd91b38fe0380c8cc8 ChangeLog 9170
-MD5 daebc60c16acc07ed92730622923edc6 mod_ssl-2.8.22-r1.ebuild 1777
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 3d6d4eb3c348958fdff07d102c804331 mod_ssl-2.8.22.ebuild 2305
-MD5 13338aa13b7124ea1609e8560cbaabeb mod_ssl-2.8.18.ebuild 2188
-MD5 5fb666b241c86fff4ddc0880de44be48 mod_ssl-2.8.17.ebuild 2188
+MD5 bbb586df2f07216912fce9393932984b mod_ssl-2.8.22-r1.ebuild 1780
 MD5 8caaa97021cfd052c33fc36ec9a5458a mod_ssl-2.8.20.ebuild 2289
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 c6e2135048cbccc9899a3131fc60a845 mod_ssl-2.8.19.ebuild 2290
+MD5 13338aa13b7124ea1609e8560cbaabeb mod_ssl-2.8.18.ebuild 2188
 MD5 86c74e1d2f258764b5586a33b1bf609a mod_ssl-2.8.21.ebuild 2300
-MD5 dd92adba34e6b36ef6fd2750869e1a18 files/gentestcrt.sh 8801
+MD5 b349032c6051d3e3ae1bf53f52859a25 mod_ssl-2.8.22.ebuild 2309
+MD5 5fb666b241c86fff4ddc0880de44be48 mod_ssl-2.8.17.ebuild 2188
+MD5 ba252cc54bec64fd91b38fe0380c8cc8 ChangeLog 9170
 MD5 515630b3e53faa458b8ec7a0e73bef55 files/10_mod_ssl.conf 2859
-MD5 f53031df0c0d1a5bd75a9151d0810e9e files/digest-mod_ssl-2.8.18 73
-MD5 71ac46d211c8aa42c7a5e51c6165862a files/mod_ssl.conf 2460
-MD5 289c880e2ff1c2de91eda32e7e486085 files/digest-mod_ssl-2.8.21 73
-MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22 73
-MD5 89239995d079a1bd9abc580e2264c71b files/digest-mod_ssl-2.8.19 73
-MD5 dd87f058ab62ac5c5da4b03713e9184a files/digest-mod_ssl-2.8.20 73
-MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22-r1 73
 MD5 959a0125c23ead91b0071f4ffc54e9bc files/default-ssl.conf 7653
-MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
+MD5 f53031df0c0d1a5bd75a9151d0810e9e files/digest-mod_ssl-2.8.18 73
+MD5 289c880e2ff1c2de91eda32e7e486085 files/digest-mod_ssl-2.8.21 73
+MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22-r1 73
 MD5 8270779f233bc311118f53ebce7338e7 files/ssl.default-vhost.conf 6985
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2ZsycsIHjyDViGQRAopgAKDE5yw/hY/KZtsoqhaQcQ5M/+AiGgCg6VmT
-F+OCxhGwmRkAPQjNPWCMBDo=
-=8U/B
------END PGP SIGNATURE-----
+MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
+MD5 71ac46d211c8aa42c7a5e51c6165862a files/mod_ssl.conf 2460
+MD5 dd92adba34e6b36ef6fd2750869e1a18 files/gentestcrt.sh 8801
+MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22 73
+MD5 dd87f058ab62ac5c5da4b03713e9184a files/digest-mod_ssl-2.8.20 73
+MD5 89239995d079a1bd9abc580e2264c71b files/digest-mod_ssl-2.8.19 73
