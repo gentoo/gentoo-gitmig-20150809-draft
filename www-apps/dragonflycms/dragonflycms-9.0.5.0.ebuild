@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.5.0.ebuild,v 1.3 2005/07/04 18:25:53 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.0.5.0.ebuild,v 1.4 2005/08/16 05:15:05 vapier Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
 http://dev.gentoo.org/~sejo/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~arm ~ppc ~s390 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
