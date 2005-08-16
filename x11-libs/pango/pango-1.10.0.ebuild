@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.9.1.ebuild,v 1.3 2005/08/15 19:22:56 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.0.ebuild,v 1.1 2005/08/16 19:44:32 leonardop Exp $
 
-inherit eutils gnome2
+inherit eutils gnome.org gnome2
 
 DESCRIPTION="Text rendering and layout library"
 HOMEPAGE="http://www.pango.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.7/${P}.tar.bz2"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
@@ -15,15 +14,23 @@ IUSE="doc static"
 
 RDEPEND="virtual/x11
 	virtual/xft
-	>=dev-libs/glib-2.6
+	>=dev-libs/glib-2.5.7
 	>=media-libs/fontconfig-1.0.1
 	>=media-libs/freetype-2
-	>=x11-libs/cairo-0.6"
+	>=x11-libs/cairo-0.5.2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
+	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1
-		=app-text/docbook-xml-dtd-4.1.2* )"
+		~app-text/docbook-xml-dtd-4.1.2 )"
+
+DOCS="AUTHORS ChangeLog* NEWS README TODO*"
+USE_DESTDIR="1"
+
+
+pkg_setup() {
+	G2CONF="$(use_enable static)"
+}
 
 src_unpack() {
 
@@ -33,9 +40,6 @@ src_unpack() {
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
 	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
-
-	# Patch from upstream CVS to fix compilation with latest cairo
-	epatch ${FILESDIR}/${P}-example_update.patch
 
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system
@@ -47,10 +51,6 @@ src_unpack() {
 	epunt_cxx
 
 }
-
-DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO*"
-
-G2CONF="${G2CONF} `use_enable static`"
 
 src_install() {
 
@@ -73,5 +73,3 @@ pkg_postinst() {
 	fi
 
 }
-
-USE_DESTDIR="1"
