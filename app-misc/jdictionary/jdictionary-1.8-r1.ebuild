@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/jdictionary-1.8-r1.ebuild,v 1.5 2005/07/31 21:03:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/jdictionary-1.8-r1.ebuild,v 1.6 2005/08/16 19:23:35 blubb Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/jdictionary/jdictionary-${PV/./_}.zip"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 RDEPEND=">=virtual/jre-1.3"
 DEPEND=">=virtual/jdk-1.3
