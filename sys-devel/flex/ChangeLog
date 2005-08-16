@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.30 2005/08/11 04:14:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.31 2005/08/16 13:04:22 gustavoz Exp $
+
+  16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> flex-2.5.4a-r6.ebuild:
+  Stable on sparc
 
   11 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/flex-2.5.31-include.patch, flex-2.5.31.ebuild:
