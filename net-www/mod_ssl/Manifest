@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bbb586df2f07216912fce9393932984b mod_ssl-2.8.22-r1.ebuild 1780
 MD5 8caaa97021cfd052c33fc36ec9a5458a mod_ssl-2.8.20.ebuild 2289
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
@@ -19,3 +22,10 @@ MD5 dd92adba34e6b36ef6fd2750869e1a18 files/gentestcrt.sh 8801
 MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22 73
 MD5 dd87f058ab62ac5c5da4b03713e9184a files/digest-mod_ssl-2.8.20 73
 MD5 89239995d079a1bd9abc580e2264c71b files/digest-mod_ssl-2.8.19 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAW/YgIKl8Uu19MoRAhUvAJ91o3DYEFngmCTt9d1IPrzHu4wE4ACeM9C9
+eHvVyEctq3jzHAD9fJRz6PM=
+=rFHU
+-----END PGP SIGNATURE-----
