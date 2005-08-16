@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.22 2005/08/10 16:23:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.23 2005/08/16 13:17:12 metalgod Exp $
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> dmalloc-5.4.2.ebuild:
+  Added ~amd64 keywords.
 
   10 Aug 2005; Markus Rothe <corsair@gentoo.org> dmalloc-5.4.2.ebuild:
   added ~ppc64
