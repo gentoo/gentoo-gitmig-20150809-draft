@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 437d9a126a558753c5c800a575c64c6d gossip-0.7.8.ebuild 894
-MD5 82b9d7296670f18ad728682fe64f8d66 gossip-0.8.ebuild 974
-MD5 9a9ed8f43621c860f0323fcd365a2dbf metadata.xml 271
 MD5 9629b65413873bf3701936c9601cfc82 gossip-0.7.6.ebuild 850
-MD5 13be147432afa97ab86cb157d2e06d8e ChangeLog 4007
+MD5 437d9a126a558753c5c800a575c64c6d gossip-0.7.8.ebuild 894
+MD5 906e2ab1e943b7cd601677dfe1e1b405 gossip-0.9.ebuild 870
+MD5 82b9d7296670f18ad728682fe64f8d66 gossip-0.8.ebuild 974
+MD5 a2849be2191170f3086c6c5c95093add ChangeLog 4118
+MD5 9a9ed8f43621c860f0323fcd365a2dbf metadata.xml 271
+MD5 8f16fde24fd9fe4c80d9aa70a0674dec files/digest-gossip-0.8 63
+MD5 3db79d8ff10d29aaa94dbc80cb13a37b files/digest-gossip-0.9 63
 MD5 4050efbfb3d0d651099c4786b55eed9d files/digest-gossip-0.7.6 65
 MD5 8306015f92ba6d545883f19eaf3baa4d files/digest-gossip-0.7.8 65
-MD5 8f16fde24fd9fe4c80d9aa70a0674dec files/digest-gossip-0.8 63
 MD5 4d6353e147a3018802c29a0de9fc5c17 files/gossip-0.8-find_xss.patch 491
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3HSemOfEJZHYOKcRApUQAJsEstH8bCR6LjIiRqzqh2a0JR/BhwCeNiI9
-PE3Dkhm3KajACDLhumyAZ1Q=
-=yEiK
------END PGP SIGNATURE-----

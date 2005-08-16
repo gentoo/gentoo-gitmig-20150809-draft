@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.27 2005/07/19 03:29:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.28 2005/08/16 13:45:23 foser Exp $
+
+*gossip-0.9 (16 Aug 2005)
+
+  16 Aug 2005; Marinus Schraal <foser@gentoo.org> gossip-0.9.ebuild :
+  New release
 
   19 Jul 2005; Olivier Crête <tester@gentoo.org> gossip-0.8.ebuild:
   Marking amd64 (it is as stable as on x86)
