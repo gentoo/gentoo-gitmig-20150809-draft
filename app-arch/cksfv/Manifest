@@ -1,9 +1,17 @@
-MD5 cb8e3ca5eed85bccf3b77b2c7ba7dbff cksfv-1.3.6.ebuild 791
-MD5 6be208db50fcd12af0093fdae2607e3b ChangeLog 2010
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d76dbd915da21064a3923452e2bfa232 cksfv-1.3.5.ebuild 770
 MD5 08529dc8a202ab35f89e69dab4ee71f4 cksfv-1.3.3.ebuild 643
-MD5 d075ea384a1a816bb173bfc0598208c6 cksfv-1.3.4.ebuild 593
-MD5 6c26a630ea3f8d5d3e5318e7cf03a080 cksfv-1.3.5.ebuild 771
-MD5 143c9b1bab6c4bbe7851810ba2d05ddb files/digest-cksfv-1.3.3 63
+MD5 6be208db50fcd12af0093fdae2607e3b ChangeLog 2010
+MD5 5f5157da4a44bb0b281186f3a68db8d9 cksfv-1.3.6.ebuild 821
 MD5 fb06833cc9afeee51087ed9c7b3bdb6b files/digest-cksfv-1.3.6 63
+MD5 143c9b1bab6c4bbe7851810ba2d05ddb files/digest-cksfv-1.3.3 63
 MD5 c2e4f585431c4c3d7580b29d5e951c05 files/digest-cksfv-1.3.5 63
-MD5 37436879c341395535f396eb478409a9 files/digest-cksfv-1.3.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAnO5gIKl8Uu19MoRAsN0AJ9zhsb7XYZnrLKkuH5GiFcv3dmvDwCfc10b
+o9/5NKPZ3ax7sNaqcRsTi0c=
+=4vFQ
+-----END PGP SIGNATURE-----
