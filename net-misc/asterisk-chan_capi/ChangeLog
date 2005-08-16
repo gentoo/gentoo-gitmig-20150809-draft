@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-chan_capi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.4 2005/05/10 12:11:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.5 2005/08/16 16:30:33 stkn Exp $
+
+  16 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-chan_capi-0.3.5.ebuild, asterisk-chan_capi-0.4.0_pre1.ebuild:
+  Block >=asterisk-1.1.0, because 1.2.0(_pre) is not supported at the moment.
 
   10 May 2005; David Holm <dholm@gentoo.org>
   asterisk-chan_capi-0.4.0_pre1.ebuild:
