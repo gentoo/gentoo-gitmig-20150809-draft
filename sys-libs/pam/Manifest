@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45e4ffa616491f670f6b43f7482889e7 pam-0.77-r6.ebuild 8080
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
 MD5 a12e7f860965fe8642486460693e8aa2 pam-0.77-r8.ebuild 8152
@@ -11,3 +14,10 @@ MD5 73f196808b2658496c9a9bd525ca30da files/README.pam_console 2615
 MD5 652f6b0ebdc63b0aa9ca6e1783c468a1 files/pam_env.conf 2980
 MD5 2d840b9afde7319bc8a8f7676582af11 files/pam.d/other 139
 MD5 c3d3871612bfb718a50454c8fba54b64 files/pam.d/system-auth 402
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAXwZgIKl8Uu19MoRArldAJ9xiscfnjqJ1Nhp0BqWBjPWxOUCVACfW0cu
+ndVZYsgITvxrjmFScDHpNuo=
+=vrss
+-----END PGP SIGNATURE-----
