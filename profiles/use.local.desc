@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1388 2005/08/16 08:56:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1389 2005/08/16 16:02:28 citizen428 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -302,6 +302,7 @@ dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/visual:numarray - enable support for numarray
 dev-python/visual:numeric - enable support for numeric
+dev-ruby/nitro:xslt - enable xslt support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
