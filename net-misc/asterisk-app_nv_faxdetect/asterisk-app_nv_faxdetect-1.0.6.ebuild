@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/asterisk-app_nv_faxdetect-1.0.6.ebuild,v 1.3 2005/07/08 20:51:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_nv_faxdetect/asterisk-app_nv_faxdetect-1.0.6.ebuild,v 1.4 2005/08/16 16:39:19 stkn Exp $
 
 inherit eutils
 
@@ -27,8 +27,14 @@ src_unpack() {
 	cd ${S}
 	# use asterisk-config...
 	epatch ${FILESDIR}/app_nv_faxdetect-${PV}-astcfg.diff
-	# change callerid to asterisk stable
-	epatch ${FILESDIR}/app_nv_faxdetect-${PV}-aststable.diff
+
+	if has_version "<net-misc/asterisk-1.1.0"; then
+		einfo "Building for Asterisk-1.0.x"
+		# change callerid to asterisk stable
+		epatch ${FILESDIR}/app_nv_faxdetect-${PV}-aststable.diff
+	else
+		einfo "Building for Asterisk-1.2.x"
+	fi
 }
 
 src_compile() {
