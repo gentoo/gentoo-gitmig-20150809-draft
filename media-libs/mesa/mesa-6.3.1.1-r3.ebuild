@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r3.ebuild,v 1.1 2005/08/16 03:18:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r3.ebuild,v 1.2 2005/08/16 03:36:14 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -131,7 +131,8 @@ src_install() {
 	# Install libtool archives
 	insinto /usr/$(get_libdir)
 	# (#67729) Needs to be lib, not $(get_libdir)
-	doins ${FILESDIR}/lib/libGLU.la ${FILESDIR}/lib/libOSMesa.la
+	doins ${FILESDIR}/lib/libGLU.la
+	#doins ${FILESDIR}/lib/libOSMesa.la
 	insinto /usr/$(get_libdir)/opengl/xorg-x11/lib
 	doins ${FILESDIR}/lib/libGL.la
 
@@ -139,7 +140,7 @@ src_install() {
 	# .so.#.#.# were made
 	dosym libGLU.so.1.3.060301 /usr/$(get_libdir)/libGLU.so.1.3
 	dosym libGLw.so.1.0.0 /usr/$(get_libdir)/libGLw.so.1.0
-	dosym libOSMesa.so.6.3.060301 /usr/$(get_libdir)/libOSMesa.so.6.3
+	#dosym libOSMesa.so.6.3.060301 /usr/$(get_libdir)/libOSMesa.so.6.3
 
 	# Figure out why libGL.so.1.5 is built (directfb), and why it's linked to
 	# as the default libGL.so.1

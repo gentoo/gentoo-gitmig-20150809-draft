@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.28 2005/08/16 03:18:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.29 2005/08/16 03:36:14 spyderous Exp $
+
+  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  mesa-6.3.1.1-r3.ebuild:
+  libOSMesa isn't building anymore, so stop symlinking and installing libtool
+  archives.
 
 *mesa-6.3.1.1-r3 (16 Aug 2005)
 
