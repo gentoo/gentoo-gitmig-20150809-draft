@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d.ebuild,v 1.6 2005/01/01 13:37:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d.ebuild,v 1.7 2005/08/16 13:20:41 metalgod Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.4.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ia64"
+KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
 IUSE="perl"
 
 RDEPEND="perl? ( dev-lang/perl )

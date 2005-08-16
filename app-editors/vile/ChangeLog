@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.20 2005/07/16 00:30:00 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.21 2005/08/16 13:19:40 metalgod Exp $
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> vile-9.4d.ebuild:
+  Added ~amd64 keywords.
 
   16 Jul 2005; <gongloo@gentoo.org> vile-9.4d.ebuild:
   Keyworded ~ppc-macos. Closes bug 98113.
