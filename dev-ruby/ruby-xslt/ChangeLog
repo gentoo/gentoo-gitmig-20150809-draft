@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-xslt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.1 2005/08/16 14:45:38 citizen428 Exp $
+
+*ruby-xslt-0.8.1 (16 Aug 2005)
+
+  16 Aug 2005; Michael Kohl <citizen428@gentoo.org> +ruby-xslt-0.8.1.ebuild:
+  Initial import. Added as an optional dependency for dev-ruby/nitro.
+
