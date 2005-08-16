@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r4.ebuild,v 1.4 2005/07/05 22:59:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r4.ebuild,v 1.5 2005/08/16 05:14:32 vericgar Exp $
 
 inherit eutils fixheadtails
 
@@ -250,7 +250,7 @@ pkg_postinst() {
 		einfo "if it exists. You must remove the old configuration first"
 		einfo
 		einfo "For more information, see"
-		einfo "  http://dev.gentoo.org/~vericgar/doc/apache-package-refresh.html"
+		einfo "  http://www.gentoo.org/doc/en/apache-upgrading.xml"
 		einfo
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r12.ebuild,v 1.3 2005/07/13 04:26:12 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r12.ebuild,v 1.4 2005/08/16 05:14:32 vericgar Exp $
 
 inherit eutils gnuconfig
 
@@ -342,7 +342,7 @@ pkg_postinst() {
 		einfo "You should also at this time rebuild all your modules"
 		einfo
 		einfo "For more information, see"
-		einfo "    http://dev.gentoo.org/~vericgar/doc/apache-package-refresh.html"
+		einfo "  http://www.gentoo.org/doc/en/apache-upgrading.xml"
 		einfo
 	fi
 
