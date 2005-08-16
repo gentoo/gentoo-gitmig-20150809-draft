@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.65 2005/07/20 22:38:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.66 2005/08/16 03:24:36 vapier Exp $
+
+  16 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/ntp-4.2.0.20050303-rlimit-memlock.patch, ntp-4.2.0.20050303.ebuild:
+  Add fix for memlock issues #99713 by Marcin Deranek and Christoph Gysin.
 
   20 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> ntp-4.1.2.ebuild,
   ntp-4.2.0-r2.ebuild, ntp-4.2.0.20040617.ebuild,

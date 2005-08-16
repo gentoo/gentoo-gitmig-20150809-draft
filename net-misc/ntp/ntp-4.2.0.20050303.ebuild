@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303.ebuild,v 1.3 2005/07/20 22:38:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20050303.ebuild,v 1.4 2005/08/16 03:24:36 vapier Exp $
 
 inherit eutils
 
@@ -52,6 +52,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/4.2.0.20040617-debug-fix.patch
 	epatch "${FILESDIR}"/4.2.0.20040617-freebsd.patch
 	epatch "${FILESDIR}"/ntp-4.2.0-gcc4.patch
+	epatch "${FILESDIR}"/ntp-4.2.0.20050303-rlimit-memlock.patch #99713
 
 	sed -i \
 		-e 's:md5\.h:touch_not_my_md5:g' \
