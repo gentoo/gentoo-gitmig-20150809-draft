@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.17 2005/07/07 21:44:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.18 2005/08/16 21:02:07 wolf31o2 Exp $
+
+  16 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  mkxf86config-0.9.1.ebuild:
+  Removed livecd from IUSE since it wasn't used anymore.
 
 *mkxf86config-0.9.1 (07 Jul 2005)
 
