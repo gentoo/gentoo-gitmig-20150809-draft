@@ -1,0 +1,22 @@
+# ChangeLog for x11-misc/xcursor-themes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.1 2005/08/16 02:21:38 spyderous Exp $
+
+  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xcursor-themes-0.99.0.ebuild:
+  Move to x11-themes from x11-misc.
+
+  15 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
+  xcursor-themes-0.99.0.ebuild:
+  Marked ~amd64.
+
+  08 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  xcursor-themes-0.99.0.ebuild:
+  Add ~sparc keyword (X Modular testing).
+
+*xcursor-themes-0.99.0 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xcursor-themes-0.99.0.ebuild:
+  Initial commit for modular X.
+
