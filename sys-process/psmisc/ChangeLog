@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.9 2005/04/29 23:06:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.10 2005/08/16 13:19:13 gustavoz Exp $
+
+  16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> psmisc-21.6.ebuild:
+  Stable on sparc
 
   29 Apr 2005; Mike Frysinger <vapier@gentoo.org>
   +files/psmisc-21.6-scanf.patch, psmisc-21.6.ebuild:
