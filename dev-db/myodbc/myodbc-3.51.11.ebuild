@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.11.ebuild,v 1.3 2005/07/27 20:50:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.11.ebuild,v 1.4 2005/08/16 19:43:21 vivo Exp $
 
 MY_PN="MyODBC"
 MY_P="${MY_PN}-${PV}"
@@ -33,6 +33,8 @@ src_compile() {
 		--with-mysql-includes=/usr/include/mysql \
 		--with-odbc-ini=/etc/unixODBC/odbc.ini \
 		--with-unixODBC=/usr \
+		--disable-test \
+		--without-samples \
 		${myconf} || die "econf failed"
 
 	emake || die "emake failed"
