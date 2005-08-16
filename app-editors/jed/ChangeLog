@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.26 2005/01/01 13:28:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.27 2005/08/16 16:06:29 grobian Exp $
+
+  16 Aug 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/jed-0.99.16-darwin.patch, jed-0.99.16-r2.ebuild:
+  Adding a patch by <tchiwam at gentoo dot org> on order to successfully compile
+  on ppc-macos.  Marking ~ppc-macos
 
   25 Nov 2004; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r2.ebuild:
   fix typo for -r2 with RDEPEND/DEPEND (#72396)

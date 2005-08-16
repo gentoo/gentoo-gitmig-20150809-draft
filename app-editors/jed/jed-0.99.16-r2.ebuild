@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.13 2005/01/01 13:28:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r2.ebuild,v 1.14 2005/08/16 16:06:29 grobian Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/v0.99/${P0}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ~ppc64"
+KEYWORDS="amd64 ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE="X gpm truetype"
 
 RDEPEND=">=sys-libs/slang-1.4.5
@@ -27,6 +27,7 @@ PROVIDE="virtual/editor"
 src_unpack() {
 	unpack ${A}
 	cd ${S}; epatch ${FILESDIR}/${P}-jed.info.patch
+	use userland_Darwin && epatch ${FILESDIR}/${P}-darwin.patch
 }
 
 src_compile() {
@@ -65,9 +66,12 @@ src_compile() {
 }
 
 src_install() {
+	# make install in ${S} claims everything is up-to-date,
+	# so we manually cd ${S}/src before installing
+	cd ${S}/src
 	make DESTDIR=${D} install || die
 
-	cd doc
+	cd ${S}/doc
 	cp README AUTHORS
 
 	cd ${S}
