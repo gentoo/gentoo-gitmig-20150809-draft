@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camsource
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.11 2005/04/24 10:17:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/ChangeLog,v 1.12 2005/08/16 13:23:02 metalgod Exp $
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> camsource-0.7.0-r1.ebuild:
+  Added ~amd64 keywords. Closes bug #98422.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   camsource-0.7.0-r1.ebuild:
