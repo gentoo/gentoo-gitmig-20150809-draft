@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.1 2005/08/16 22:57:43 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.2 2005/08/16 23:03:32 truedfx Exp $
 
 inherit eutils gnuconfig
 
@@ -86,7 +86,7 @@ src_compile() {
 		strip-linguas -i po
 		set -- "$@" --enable-linguas=" ${LINGUAS} "
 	else
-		set -- "$@" --enable-linguas
+		set -- "$@" --enable-linguas=""
 	fi
 
 	econf "$@" || die "configure failed"
