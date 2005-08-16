@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.4 2005/07/08 11:18:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.5 2005/08/16 23:48:51 latexer Exp $
 
 inherit gnome2 mono eutils multilib
 
@@ -74,6 +74,8 @@ src_unpack() {
 	# Fix the install location of the dbus service file
 	sed -i "s:libdir)/dbus-1.0:datadir)/dbus-1:" \
 		${S}/data/Makefile.am || die "sed failed"
+
+	epatch ${FILESDIR}/${P}-gtk-sharp-2.x.90-compat.diff || die
 
 	autoconf || die "autoconf failed"
 	automake || die "automake failed"
