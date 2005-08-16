@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpano12
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.7 2005/08/11 00:10:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano12/ChangeLog,v 1.8 2005/08/16 13:28:33 metalgod Exp $
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> libpano12-2.7.0.10.ebuild:
+  Added ~amd64 keywords. Closes bug #102149.
 
   11 Aug 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding self to metadata.
