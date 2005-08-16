@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.21 2005/08/15 09:12:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.22 2005/08/16 13:46:17 gustavoz Exp $
+
+  16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> pump-0.8.21-r7.ebuild:
+  Stable on sparc wrt #102585
 
   15 Aug 2005; Roy Marples <uberlord@gentoo.org> pump-0.8.21-r7.ebuild:
   Stable on amd64 and x86.
