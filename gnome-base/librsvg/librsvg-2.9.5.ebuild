@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.9.5.ebuild,v 1.11 2005/07/12 03:12:31 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.9.5.ebuild,v 1.12 2005/08/16 18:55:51 blubb Exp $
 
 inherit gnome2 multilib
 
@@ -36,11 +36,13 @@ G2CONF="${G2CONF} \
 	--enable-pixbuf-loader \
 	--enable-gtk-theme"
 
-# An arch specific config directory is used on multilib systems
-has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
-
 DOCS="AUTHORS ChangeLog README NEWS TODO"
+
+pkg_setup() {
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+}
 
 src_install() {
 
