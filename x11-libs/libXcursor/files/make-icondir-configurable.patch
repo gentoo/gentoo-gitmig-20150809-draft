@@ -1,0 +1,63 @@
+diff -Nur libXcursor-1.1.3.orig/acinclude.m4 libXcursor-1.1.3/acinclude.m4
+--- libXcursor-1.1.3.orig/acinclude.m4	1970-01-01 01:00:00.000000000 +0100
++++ libXcursor-1.1.3/acinclude.m4	2005-08-16 03:37:56.000000000 +0200
+@@ -0,0 +1,11 @@
++AC_DEFUN([AC_DEFINE_DIR], [
++  prefix_NONE=
++  exec_prefix_NONE=
++  test "x$prefix" = xNONE && prefix_NONE=yes && prefix=$ac_default_prefix
++  test "x$exec_prefix" = xNONE && exec_prefix_NONE=yes && exec_prefix=$prefix
++  eval ac_define_dir="\"[$]$2\""
++  AC_SUBST($1, "$ac_define_dir")
++  AC_DEFINE_UNQUOTED($1, "$ac_define_dir", [$3])
++  test "$prefix_NONE" && prefix=NONE
++  test "$exec_prefix_NONE" && exec_prefix=NONE
++])
+diff -Nur libXcursor-1.1.3.orig/configure.ac libXcursor-1.1.3/configure.ac
+--- libXcursor-1.1.3.orig/configure.ac	2005-08-01 22:15:27.000000000 +0200
++++ libXcursor-1.1.3/configure.ac	2005-08-16 03:37:56.000000000 +0200
+@@ -46,6 +46,19 @@
+ AC_SUBST(DEP_CFLAGS)
+ AC_SUBST(DEP_LIBS)
+ 
++# Customizable X cursor search directories
++DEFAULT_ICONDIR="\${prefix}/lib/X11/icons"
++DEFAULT_XCURSORPATH="~/.icons:$datadir/icons:$datadir/pixmaps"
++
++AC_ARG_WITH(icondir,	[  --with-icondir=DIR ],
++			[ ICONDIR="$withval" ],
++			[ ICONDIR="$DEFAULT_ICONDIR" ])
++AC_ARG_WITH(xcursor-path, AS_HELP_STRING([--with-xcursorpath=DIRLIST],[default X cursor search path, colon-delimited]),
++			[ XCURSORPATH="$withval:$ICONDIR" ],
++			[ XCURSORPATH="$DEFAULT_XCURSORPATH:$ICONDIR" ])
++
++AC_DEFINE_DIR(XCURSORPATH, XCURSORPATH, [Default X cursor search path])
++
+ XORG_RELEASE_VERSION
+ 
+ AC_OUTPUT([Makefile
+diff -Nur libXcursor-1.1.3.orig/src/library.c libXcursor-1.1.3/src/library.c
+--- libXcursor-1.1.3.orig/src/library.c	2005-08-01 22:15:43.000000000 +0200
++++ libXcursor-1.1.3/src/library.c	2005-08-16 03:37:56.000000000 +0200
+@@ -26,12 +26,6 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#ifndef ICONDIR
+-#define ICONDIR "/usr/X11R6/lib/X11/icons"
+-#endif
+-
+-#define CURSORPATH "~/.icons:/usr/share/icons:/usr/share/pixmaps:"ICONDIR
+-
+ const char *
+ XcursorLibraryPath (void)
+ {
+@@ -41,7 +35,7 @@
+     {
+ 	path = getenv ("XCURSOR_PATH");
+ 	if (!path)
+-	    path = CURSORPATH;
++	    path = XCURSORPATH;
+     }
+     return path;
+ }
