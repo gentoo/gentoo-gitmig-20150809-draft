@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kvoctrain
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.17 2005/08/15 14:12:14 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.18 2005/08/16 02:53:55 weeve Exp $
+
+  16 Aug 2005; Jason Wever <weeve@gentoo.org> kvoctrain-3.4.1-r1.ebuild:
+  Stable on SPARC wrt security bug #102577.
 
   15 Aug 2005; Luis Medinas <metalgod@gentoo.org> kvoctrain-3.4.1-r1.ebuild:
   Stable on AMD64. Closes bug #102577
