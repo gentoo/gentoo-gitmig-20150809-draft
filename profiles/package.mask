@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4284 2005/08/16 17:27:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4285 2005/08/16 17:52:01 seemant Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1445,10 +1445,6 @@ dev-db/mergeant
 # masked because of unhealthy groupadd operation in postinst
 # needs sorting out on the policy
 app-misc/nomadii-utils
-
-# <seemant@gentoo.org> (25 Jul 2002)
-# masked while licensing is sorted out
-app-misc/ldapbrowser
 
 # <raker@gentoo.org> (16 Jul 2002)
 # libwmfun completes compiling but doesn't appear to support PLDrawString
