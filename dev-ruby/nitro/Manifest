@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b87f7f0a86afab8163edc6663ca331c0 nitro-0.22.0.ebuild 860
+MD5 2cebd71b9f6e82441f8b2f6ada4af9eb ChangeLog 420
+MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
+MD5 9b5fb154e4b8126d7b73842030db01e3 files/digest-nitro-0.22.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFDAhg2ehlBotwFZuQRAkuMAJ0Vwc8zz+JPJb3Lq/swVkeJIkeAkACcCiEw
++XrcHU2DX5i0uha04puQ48Q=
+=62Xw
+-----END PGP SIGNATURE-----

@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/nitro
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.1 2005/08/16 16:45:07 citizen428 Exp $
+
+*nitro-0.22.0 (16 Aug 2005)
+
+  16 Aug 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +nitro-0.22.0.ebuild:
+  Initial import; ebuild submitted by Jochen Schalanda <jochen@schalanda.de>
+  in bug #102512
+
