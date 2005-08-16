@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmifinfo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.10 2005/04/11 07:42:39 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.11 2005/08/16 10:20:31 s4t4n Exp $
+
+*wmifinfo-0.09 (16 Aug 2005)
+
+  16 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmifinfo-0.09.ebuild:
+  Version bump. Closes #100811.
 
   11 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmifinfo-0.06.ebuild:
   Wiped out older version.

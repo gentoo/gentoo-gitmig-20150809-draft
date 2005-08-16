@@ -1,4 +1,6 @@
+MD5 53db171a53aa0c4e9131b9463f9c7690 wmifinfo-0.09.ebuild 683
 MD5 1688d06275cff9d49485a0513d5fd33f wmifinfo-0.08.ebuild 682
-MD5 03d2580f5da2e3a1db283ef8eb7ad275 ChangeLog 1336
+MD5 27d10c9eb9937b2c5181811c9f96eb67 ChangeLog 1473
 MD5 3926e20e1166bb22e2fa4c570adbff44 metadata.xml 173
 MD5 f184b72a7fe8cc5213d5c1f17e9c008f files/digest-wmifinfo-0.08 61
+MD5 4c51754aea1b3076540c0b68fa4f1f79 files/digest-wmifinfo-0.09 61
