@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0.ebuild,v 1.9 2005/07/09 16:04:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0.ebuild,v 1.10 2005/08/16 16:34:20 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jaxen.org/"
 SRC_URI="mirror://sourceforge/jaxen/${P}-FCS.tar.gz"
 LICENSE="jaxen"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 IUSE="doc junit source"
 RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.3* )
 	dev-java/xalan
