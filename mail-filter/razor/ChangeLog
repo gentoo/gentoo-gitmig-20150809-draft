@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.42 2005/07/10 16:13:24 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.43 2005/08/16 02:17:33 ticho Exp $
+
+*razor-2.77 (16 Aug 2005)
+
+  16 Aug 2005; Andrej Kacian <ticho@gentoo.org> +razor-2.77.ebuild:
+  Version bump. Closes bug #101070.
 
   10 Jul 2005; Tom Martin <slarti@gentoo.org> razor-2.75.ebuild:
   Marked ~ia64.
