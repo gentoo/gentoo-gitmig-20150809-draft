@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200508161.ebuild,v 1.1 2005/08/16 05:59:16 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/mod_depends-0.7.0_p200508161.ebuild,v 1.2 2005/08/16 06:43:46 trapni Exp $
 
 inherit eutils apache-module
 
@@ -13,7 +13,7 @@ LICENSE="Apache-2.0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-APACHE2_MOD_CONF="47_${PN}"
+APACHE2_MOD_CONF="09_${PN}"
 APACHE2_MOD_DEFINE="DEPENDS"
 
 S="${WORKDIR}/${PN}"
