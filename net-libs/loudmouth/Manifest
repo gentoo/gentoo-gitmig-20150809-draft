@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 e89c7f9d64ded599dc2950968f7b6ded loudmouth-0.16.ebuild 621
-MD5 0673db7a9ee7383543f2475a5d7c3128 ChangeLog 3570
-MD5 0e52ccc8bcf7bed0a04eb40b97cf5952 loudmouth-0.17.1.ebuild 793
-MD5 b266bb34fcef3783f32a963ecc501ad2 loudmouth-0.17.2.ebuild 795
 MD5 d3a8e167c56545ba1a2aaf703d9c894c loudmouth-0.17.2-r2.ebuild 908
-MD5 1198670c7a9b3819274997b05c6131ca files/digest-loudmouth-0.16 67
+MD5 b266bb34fcef3783f32a963ecc501ad2 loudmouth-0.17.2.ebuild 795
+MD5 e89c7f9d64ded599dc2950968f7b6ded loudmouth-0.16.ebuild 621
+MD5 d582320844bf973cd01819c5df5b9ad4 loudmouth-1.0.1.ebuild 607
+MD5 76eaff7a9043fef37bbbb8208bef391c ChangeLog 3691
+MD5 0e52ccc8bcf7bed0a04eb40b97cf5952 loudmouth-0.17.1.ebuild 793
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5c9d9cbecc7012f358b36f0cde4b75a2 files/digest-loudmouth-0.17.1 69
 MD5 a556924d584687a8f363eed4bb9c743f files/digest-loudmouth-0.17.2 69
 MD5 3683fa9c59f744e00481d05e55c763cf files/loudmouth-0.17.2-gnutls_deprecation.patch 782
+MD5 26c44f134406e99f0210b82d0df1d541 files/digest-loudmouth-1.0.1 68
 MD5 a556924d584687a8f363eed4bb9c743f files/digest-loudmouth-0.17.2-r2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3cQDmOfEJZHYOKcRAtJrAJwLtBkHgp2vuYPeUqRLHD3m9mgk3gCffyFB
-M0A99rTmBeGCbXyxMHocBJk=
-=/tvn
------END PGP SIGNATURE-----
+MD5 1198670c7a9b3819274997b05c6131ca files/digest-loudmouth-0.16 67
