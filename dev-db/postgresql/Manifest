@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b97f1ff215bab634316e5cf9cee6598e postgresql-7.3.6-r2.ebuild 7869
 MD5 1bf725f1e46685699f62d97f7ca0e821 postgresql-7.3.9-r1.ebuild 8078
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
@@ -55,3 +58,10 @@ MD5 62959a2ffd56e0e360b1437467c573a7 files/pg_autovacuum.init-8.0.1 1414
 MD5 9787933dfca9cc3858468186231a9df1 files/postgresql.conf-7.4.8 390
 MD5 2e87af398df0a957bf2f2dff754ac174 files/postgresql-7.4.7-vacuum-delay.patch 8918
 MD5 eae31db55e9908de6d955d3efc931bbc files/postgresql.init-7.4.8 1279
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAW8ugIKl8Uu19MoRAizEAJ9/eTVxQQALKYEVFnQCYZfbEYIPyQCfe/1U
+P+x4Q5kbkQe4OoPeU6h84sc=
+=Ru2y
+-----END PGP SIGNATURE-----

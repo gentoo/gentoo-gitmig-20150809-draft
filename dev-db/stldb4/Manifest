@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
 MD5 d557b4ce616f26188c6294d60b333929 stldb4-0.3.7.ebuild 817
 MD5 e775e6e30e72dd0129eb71cfcb7b4c68 stldb4-0.3.13.ebuild 825
 MD5 0ec0ce90ed167c55f4504f6d4c9cfd15 ChangeLog 537
 MD5 bc3215a0cbff8de4b5d788acc3752aa7 files/digest-stldb4-0.3.7 66
 MD5 a0edb977afc428cf1eafc548adeaa723 files/digest-stldb4-0.3.13 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAW8ugIKl8Uu19MoRAmEKAJ9o08xOIW37V9N8pwixLcndyxuyDgCaApZv
+/JoikAv8Bi01SlMj5KMo2Ao=
+=xPdE
+-----END PGP SIGNATURE-----
