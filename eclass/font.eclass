@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.15 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.16 2005/08/16 06:38:04 spyderous Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -39,7 +39,6 @@ font_xfont_config() {
 		mkfontdir \
 			-e /usr/share/fonts/encodings \
 			-e /usr/share/fonts/encodings/large \
-			-e /usr/X11R6/$(get_libdir)/X11/fonts/encodings \
 			"${D}/usr/share/fonts/${PN}"
 		if [ -e "${FONT_S}/fonts.alias" ] ; then
 			doins "${FONT_S}/fonts.alias"
