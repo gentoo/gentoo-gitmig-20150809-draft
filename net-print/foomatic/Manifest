@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 4584d06693d2d858d39f0a87bf9a6d90 foomatic-3.0.2.ebuild 543
 MD5 3fef09cf55df58b2b28ac94706d31850 ChangeLog 4372
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-foomatic-3.0.2 0
 MD5 19c39503a125b48caf5e4f2bd956bc61 files/perl-module.diff 722
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAXgLgIKl8Uu19MoRAq0KAJ9djYViK7vxY6BerQlis2dEm3TtXACfeDQg
+Vy6mpq4i8jqBKoeguzxrdgU=
+=hUs0
+-----END PGP SIGNATURE-----
