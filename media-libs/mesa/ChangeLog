@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.27 2005/08/15 20:41:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.28 2005/08/16 03:18:05 spyderous Exp $
+
+*mesa-6.3.1.1-r3 (16 Aug 2005)
+
+  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +mesa-6.3.1.1-r3.ebuild:
+  Fix direct rendering on r200 by adding USING_EGL=0. Turning off EGL takes a
+  lot of work.
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> mesa-6.3.1.1-r2.ebuild:
   Fix multilib issue and add ~amd64 keyword.
