@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4278 2005/08/15 23:22:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4279 2005/08/16 00:18:44 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Renat Lumpau <rl03@gentoo.org> (15 Aug 2005)
+# To be removed. See bug #74985. Upstream dead, doesn't work.
+net-p2p/zuul
 
 # Jory A. Pratt <anarchy@gentoo.org> (15 Aug 2005)
 # Mozilla rpath inclusion. For testing purposes only.
