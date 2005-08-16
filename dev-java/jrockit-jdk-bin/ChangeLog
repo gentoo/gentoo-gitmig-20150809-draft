@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.12 2005/07/27 09:40:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.13 2005/08/16 18:05:14 agriffis Exp $
+
+  16 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  jrockit-jdk-bin-1.5.0.03.ebuild:
+  Fix HOMEPAGE
 
   27 Jul 2005; Thomas Matthijs <axxo@gentoo.org>
   jrockit-jdk-bin-1.5.0.03.ebuild:
