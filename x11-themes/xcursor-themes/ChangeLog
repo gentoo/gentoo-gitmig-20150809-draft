@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xcursor-themes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.1 2005/08/16 02:21:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.2 2005/08/16 02:25:54 spyderous Exp $
+
+*xcursor-themes-0.99.0-r1 (16 Aug 2005)
+
+  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/make-cursordir-configurable.patch,
+  +xcursor-themes-0.99.0-r1.ebuild:
+  Make cursors install to the same directory as they did in monolith. Patch
+  from Christophe Saout <christophe@saout.de>.
 
   16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xcursor-themes-0.99.0.ebuild:
