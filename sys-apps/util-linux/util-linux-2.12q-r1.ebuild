@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.2 2005/07/09 23:24:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.3 2005/08/16 22:10:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -46,7 +46,6 @@ src_unpack() {
 	cd "${S}"
 
 	# crypto support
-	! use old-crypt && \
 	use crypt && epatch "${WORKDIR}"/loop-AES-v${LOOP_AES_VER}/${P}.diff
 
 	# Fix rare failures with -j4 or higher

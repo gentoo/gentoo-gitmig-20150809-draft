@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ff9ff35124110104cec062d7b263baed util-linux-2.12q.ebuild 4807
-MD5 3ce3a57f1a507ce364c232d5d7b6ff02 util-linux-2.12p-r1.ebuild 4418
-MD5 4e04ed93a1dcd23ae8cb7b270cdb97df util-linux-2.12q-r1.ebuild 4853
+MD5 40353e338343ed2b6a8f23259c881e49 util-linux-2.12q.ebuild 4785
+MD5 3539732064102ec9896b7ae3b90e8e99 util-linux-2.12p-r1.ebuild 4396
+MD5 c59edd70ed061e693c0f9fe6bc6ad375 util-linux-2.12q-r1.ebuild 4831
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 756af6a79fdf6371ee07ccbc9ca0153b util-linux-2.12i-r1.ebuild 3821
+MD5 af4d9067188d2b9be9ff65f0a2482a1f util-linux-2.12i-r1.ebuild 3846
 MD5 612c360bed155592aadebf39410bfe9d ChangeLog 17789
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
@@ -34,9 +34,9 @@ MD5 d927611f34139a40f1fc9f4162c61f8a files/util-linux-2.12-kernel-2.6.patch 2964
 MD5 0b95e856fd2f375270cf2ec4eaa69c8a files/crypto-loop.confd 505
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0FzhgIKl8Uu19MoRAjrOAJ9mlCtorSbGu3BDS8CR9KRyHrH/dACZAUnH
-o2Zn3ijb8CIB6pbqnqJqrF0=
-=P8ck
+iD8DBQFDAmR0gIKl8Uu19MoRAimCAJ9LS0nIfJ9MdYbBNrzh8b5JEGQVEgCfbXEp
+o/kPHgdn3JYVtUYgxCvhzA8=
+=BisZ
 -----END PGP SIGNATURE-----
