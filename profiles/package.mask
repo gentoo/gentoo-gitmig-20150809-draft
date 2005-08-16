@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4279 2005/08/16 00:18:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4280 2005/08/16 02:21:14 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -399,6 +399,7 @@ x11-proto/xf86rushproto
 x11-proto/xf86vidmodeproto
 x11-proto/xproto
 x11-proto/xproxymanagementprotocol
+x11-themes/xcursor-themes
 
 # Matthias Schwarzott <zzam@gentoo.org> (07 Aug 2005)
 # Masked because it depends on masked vdr ebuild
