@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.15 2005/04/29 23:54:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.16 2005/08/16 22:09:49 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -43,7 +43,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch
 
 	# Fix unreadable df output
-	epatch ${FILESDIR}/no-symlink-resolve.patch
+	[[ -e /dev/.devfsd ]] && epatch ${FILESDIR}/no-symlink-resolve.patch
 
 	# Add the O option to agetty to display DNS domainname in the issue
 	# file, thanks to Marius Mauch <genone@genone.de>, bug #22275.
