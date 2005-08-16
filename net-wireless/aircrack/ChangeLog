@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/aircrack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/ChangeLog,v 1.9 2005/08/10 12:33:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/ChangeLog,v 1.10 2005/08/16 21:42:17 dragonheart Exp $
+
+*aircrack-2.22 (16 Aug 2005)
+
+  16 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/aircrack-2.1-amd64.patch, -aircrack-2.1-r1.ebuild,
+  -aircrack-2.2.ebuild, +aircrack-2.22.ebuild:
+  version bump / old version cleanout
 
 *aircrack-2.21 (10 Aug 2005)
 

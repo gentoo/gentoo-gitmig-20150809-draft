@@ -1,29 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.1-r1.ebuild,v 1.5 2005/08/04 08:47:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.22.ebuild,v 1.1 2005/08/16 21:42:17 dragonheart Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs
+
+MY_P=${P/_b/-b}
 
 DESCRIPTION="WLAN tool for breaking 802.11 WEP keys"
 HOMEPAGE="http://www.cr0.net:8040/code/network/aircrack/"
-SRC_URI="mirror://gentoo/${P}.tgz"
+SRC_URI="http://100h.org/wlan/aircrack/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
 	virtual/libpcap"
-
-src_unpack(){
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-amd64.patch
-}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake -e CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
