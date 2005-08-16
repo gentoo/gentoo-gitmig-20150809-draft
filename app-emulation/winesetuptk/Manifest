@@ -1,6 +1,17 @@
-MD5 b5ec4c39149b632b02104356a398276b ChangeLog 2006
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2757f31c348b5bb2d1c73032387759ca metadata.xml 278
+MD5 782a41df0f5e1901cfd2cc1b33caf3ac winesetuptk-0.7.ebuild 1194
 MD5 ce5574e4a8cd88341667b02de843d104 winesetuptk-0.6.0b-r3.ebuild 1246
-MD5 6028e9c2c6da13454f0d4f00a0beb05b winesetuptk-0.7.ebuild 1103
-MD5 980700b0965e1ffe84d9c9e2e0ff519a files/digest-winesetuptk-0.6.0b-r3 75
+MD5 367546fc16a5c8caaf9d4966d272476c ChangeLog 2183
+MD5 4a4aeb3dc5ae5ed42a83e8f11641ec03 files/winesetuptk-0.7-perms.patch 410
 MD5 4efdbaaa9921a8bcacb4dc5d5a4b7f0b files/digest-winesetuptk-0.7 68
+MD5 980700b0965e1ffe84d9c9e2e0ff519a files/digest-winesetuptk-0.6.0b-r3 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAWKngIKl8Uu19MoRAvOBAJsE1dLnBNVZerhJBhSjqiY/D+aDtwCfQPDT
+v6SfiSSlxCGTfAjFmBKI4rs=
+=YcPb
+-----END PGP SIGNATURE-----
