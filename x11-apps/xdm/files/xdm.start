@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/files/xdm.start,v 1.1 2005/08/16 02:53:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/files/xdm.start,v 1.2 2005/08/16 20:17:09 spyderous Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -62,17 +62,14 @@ setup_dm() {
 			;;
 		*)
 			EXE=
-			for x in /usr/bin /usr/X11R6/bin
-			do
-				# Fix #65586, where MY_XDM is empty so EXE=somedir
-				[ -x "${x}/${MY_XDM}" -a -f "${x}/${MY_XDM}" ] \
-					&& EXE="${x}/${MY_XDM}"
-			done
-			[ -z "${EXE}" ] && EXE="/usr/X11R6/bin/xdm"
+			# Fix #65586, where MY_XDM is empty so EXE=somedir
+			[ -x "/usr/bin/${MY_XDM}" -a -f "/usr/bin/${MY_XDM}" ] \
+				&& EXE="/usr/bin/${MY_XDM}"
+			[ -z "${EXE}" ] && EXE="/usr/bin/xdm"
 			;;
 	esac
 
-	test ! -x "${EXE}" && EXE=/usr/X11R6/bin/xdm
+	test ! -x "${EXE}" && EXE=/usr/bin/xdm
 
 	SERVICE="${EXE##*/}"
 }

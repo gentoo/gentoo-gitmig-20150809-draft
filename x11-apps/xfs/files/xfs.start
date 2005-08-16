@@ -2,7 +2,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/files/xfs.start,v 1.1 2005/08/16 03:08:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/files/xfs.start,v 1.2 2005/08/16 20:13:43 spyderous Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -184,9 +184,9 @@ setup_font_dirs() {
 	umask 022
 
 	local NEEDED_BIN
-	local NEEDED_BINS="/usr/X11R6/bin/mkfontdir
-		/usr/X11R6/bin/mkfontscale
-		/usr/X11R6/bin/ttmkfdir"
+	local NEEDED_BINS="/usr/bin/mkfontdir
+		/usr/bin/mkfontscale
+		/usr/bin/ttmkfdir"
 	for NEEDED_BIN in ${NEEDED_BINS}
 	do
 		if [ ! -x ${NEEDED_BIN} ]
@@ -204,7 +204,7 @@ setup_font_dirs() {
 	fi
 
 	# Generate the encodings.dir ...
-	/usr/X11R6/bin/mkfontdir -n \
+	/usr/bin/mkfontdir -n \
 		-e /usr/share/fonts/encodings \
 		-e /usr/share/fonts/encodings/large \
 		-- /usr/share/fonts/encodings
@@ -241,14 +241,14 @@ setup_font_dirs() {
 			if [ "${x/encodings}" = "${x}" -a \
 			     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
 			then
-				/usr/X11R6/bin/ttmkfdir -x 2 \
+				/usr/bin/ttmkfdir -x 2 \
 					-e /usr/share/fonts/encodings/encodings.dir \
 					-o ${x}/fonts.scale -d ${x} > /dev/null
 				# ttmkfdir fails on some stuff, so try mkfontscale if it does
 				local ttmkfdir_return=$?
 				if [ ${ttmkfdir_return} -ne 0 ]
 				then
-					/usr/X11R6/bin/mkfontscale \
+					/usr/bin/mkfontscale \
 						-a /usr/share/fonts/encodings/encodings.dir \
 						-- ${x}
 				fi
@@ -257,7 +257,7 @@ setup_font_dirs() {
 			elif [ "${x/encodings}" = "${x}" -a \
 				-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]
 			then
-				/usr/X11R6/bin/mkfontscale \
+				/usr/bin/mkfontscale \
 					-a /usr/share/fonts/encodings/encodings.dir \
 					-- ${x}
 			fi
@@ -265,17 +265,17 @@ setup_font_dirs() {
 		  	# Now generate fonts.dir files ...
 			if [ "${x/encodings}" = "${x}" ]
 			then
-				/usr/X11R6/bin/mkfontdir \
+				/usr/bin/mkfontdir \
 					-e /usr/share/fonts/encodings \
 					-e /usr/share/fonts/encodings/large \
 					-- ${x} > /dev/null
 			fi
 
-			if [ "${x/encodings}" = "${x}" -a -x /usr/X11R6/bin/xftcache ] && \
+			if [ "${x/encodings}" = "${x}" -a -x /usr/bin/xftcache ] && \
 			   [ -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 			then
 				# xftcache is broken, but run it anyhow ...
-				/usr/X11R6/bin/xftcache ${x} &> /dev/null
+				/usr/bin/xftcache ${x} &> /dev/null
 			fi
 			eend 0
 
@@ -312,11 +312,11 @@ start() {
 		mkdir /tmp/.font-unix
 		chmod 1777 /tmp/.font-unix
 
-		start-stop-daemon --start --quiet --exec /usr/X11R6/bin/xfs \
+		start-stop-daemon --start --quiet --exec /usr/bin/xfs \
 			-- -daemon -config /etc/X11/fs/config \
 				-droppriv -user xfs -port ${XFS_PORT} 1>&2
 	else
-		start-stop-daemon --start --quiet --exec /usr/X11R6/bin/xfs \
+		start-stop-daemon --start --quiet --exec /usr/bin/xfs \
 			-- -daemon -config /etc/X11/fs/config \
 				-port ${XFS_PORT} 1>&2
 	fi
@@ -325,7 +325,7 @@ start() {
 
 stop() {
 	ebegin "Stopping X Font Server"
-	start-stop-daemon --stop --quiet --exec /usr/X11R6/bin/xfs 1>&2
+	start-stop-daemon --stop --quiet --exec /usr/bin/xfs 1>&2
 	rm -rf /tmp/.font-unix
 	eend $?
 }

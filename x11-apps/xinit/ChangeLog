@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.5 2005/08/15 17:55:50 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.6 2005/08/16 20:18:24 spyderous Exp $
+
+  16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; files/chooser.sh,
+  files/xinitrc:
+  Get rid of references to /usr/X11R6.
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> xinit-0.99.0-r2.ebuild:
   Marked ~amd64.
