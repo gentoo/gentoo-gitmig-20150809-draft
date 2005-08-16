@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pslib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.3 2005/08/16 12:59:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.4 2005/08/16 13:01:47 metalgod Exp $
+
+  16 Aug 2005; Luis Medinas <metalgod@gentoo.org> pslib-0.2.4.ebuild:
+  Marked Stable on AMD64. Fix Headers.
 
 *pslib-0.2.6 (16 Aug 2005)
 
