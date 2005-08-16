@@ -1,6 +1,19 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.4 2005/05/21 16:46:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.5 2005/08/16 10:12:19 uberlord Exp $
+
+*websvn-1.61-r1 (16 Aug 2005)
+
+  16 Aug 2005; Roy Marples <uberlord@gentoo.org>
+  +files/websvn-1.61-r1.patch, +websvn-1.61-r1.ebuild:
+  Created a patch from the below user submitted patches to websvn
+  
+  http://websvn.tigris.org/issues/show_bug.cgi?id=29
+  http://websvn.tigris.org/issues/show_bug.cgi?id=31
+  http://websvn.tigris.org/issues/show_bug.cgi?id=33
+  http://websvn.tigris.org/issues/show_bug.cgi?id=37
+  
+  Fixes our #102675
 
   21 May 2005; Simon Stelling <blubb@gentoo.org> websvn-1.61.ebuild:
   added ~amd64 keyword
