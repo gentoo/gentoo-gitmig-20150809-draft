@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.8.ebuild,v 1.1 2005/08/08 15:44:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.8.ebuild,v 1.2 2005/08/16 18:51:38 blubb Exp $
 
-inherit eutils kde-functions flag-o-matic
+inherit eutils kde-functions flag-o-matic multilib
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -38,9 +38,11 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
 
-# An arch specific config directory is used on multilib systems
-has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+pkg_setup() {
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+}
 
 src_unpack() {
 	unpack ${A}
