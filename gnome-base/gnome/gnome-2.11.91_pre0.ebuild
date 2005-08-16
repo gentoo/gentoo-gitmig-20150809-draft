@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.1 2005/08/14 20:55:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.2 2005/08/16 01:55:09 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -18,11 +18,10 @@ S=${WORKDIR}
 
 # Work in progress. Please check out the missing dependencies; once you commit
 # new ebuilds that satisfy any of them, uncomment the relevant lines.
-RDEPEND="!gnome-base/gnome-core"
+RDEPEND="!gnome-base/gnome-core
 
-#	>=dev-libs/glib-2.7.7
-#	>=x11-libs/gtk+-2.7.5
-RDEPEND="${RDEPEND}
+	>=dev-libs/glib-2.7.7
+	>=x11-libs/gtk+-2.7.5
 	>=dev-libs/atk-1.10.1
 	>=x11-libs/pango-1.9.1
 
