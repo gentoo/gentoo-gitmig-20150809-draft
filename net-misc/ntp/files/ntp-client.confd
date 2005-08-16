@@ -1,6 +1,4 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.10 2005/01/28 22:37:09 vapier Exp $
+# /etc/conf.d/ntp-client
 
 # Command to run to set the clock initially
 # Most people should just leave this line alone ...

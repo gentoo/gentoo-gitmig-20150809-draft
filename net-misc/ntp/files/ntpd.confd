@@ -1,6 +1,4 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.confd,v 1.15 2004/07/15 00:05:46 agriffis Exp $
+# /etc/conf.d/ntpd
 
 # Options to pass to the ntpd process
 # Most people should leave this line alone ...

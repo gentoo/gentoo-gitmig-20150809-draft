@@ -1,43 +1,34 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2b43c6098f33419619ca9900ca0c9373 ChangeLog 9693
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
-MD5 4874c08acda470ce7373d36b64c39c09 ntp-4.1.2.ebuild 3162
 MD5 83f2eeda43c58418beeb559aa5e2aa4a ntp-4.2.0-r2.ebuild 3727
-MD5 5630d9dddf4eda3f1e45a888b9718915 ntp-4.2.0.20040617-r2.ebuild 4254
+MD5 4874c08acda470ce7373d36b64c39c09 ntp-4.1.2.ebuild 3162
 MD5 18aaba1ae83478ceb695993fa5bd3d30 ntp-4.2.0.20040617.ebuild 3983
-MD5 553b90b6db1bd3429dac99bd136dcb18 ntp-4.2.0.20050303.ebuild 4216
-MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
-MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
-MD5 24574e6ad1b468152839c10361b51a0f files/4.2.0-linux-config-phone.patch 711
-MD5 d07dbc58315f577cc6d1dd8614f95cb1 files/4.2.0-ntpdate-quiet.patch 1117
-MD5 5fecd7747324b76551f514df62a4d78d files/4.2.0.20040617-debug-fix.patch 232
-MD5 759c1adb57e9c61f519fe938902f1df7 files/4.2.0.20040617-errno-fix.patch 493
-MD5 0c3a6df816f448a870e070797c22f72e files/4.2.0.20040617-hostname.patch 8476
-MD5 c51a9f2f2c85ab3bcdc54a1a9e3bedb6 files/4.2.0.20040617-ipv6-fixes.patch 2541
-MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
-MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
-MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
-MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617 166
-MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617-r2 166
+MD5 21e636680cfe8de4ce739e83a0154d69 ntp-4.2.0.20050303.ebuild 4282
+MD5 5630d9dddf4eda3f1e45a888b9718915 ntp-4.2.0.20040617-r2.ebuild 4254
+MD5 45b9527b4081b952e7a0b350c39b6796 ChangeLog 9893
 MD5 dded11ceec4b8f2c1b140341a357f507 files/linux-config-phone.patch 747
-MD5 e327d521e4dfb0c967941eeb84ad9207 files/ntp-4.1.1b-syscall-libc.patch 424
+MD5 4d502821fd36c5a63b14ae4b54cb3526 files/ntpd-4.1.2.confd 185
 MD5 20c344cec35350fe17773665094b2e57 files/ntp-4.2.0-gcc4.patch 1607
-MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
-MD5 ab2d8e5ff97df5fdd02bfd1b7e4be633 files/ntp-client.confd 949
-MD5 5eecb47ab966b2003b73b8cbd371de40 files/ntp-client.rc 933
-MD5 5bd3924f5720b97837969ec4ec4d5e09 files/ntp.conf 1451
-MD5 8f2b873f4294daf289f6e8787fd30439 files/ntpd-4.1.2.confd 394
-MD5 87951141777f50b2e4a2347a96f987b8 files/ntpd-4.1.2.rc 806
-MD5 83dde3b948b28c278d496252494c935f files/ntpd.confd 393
+MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617-r2 166
 MD5 0ce27073d67a016693a77314b6bfd4f5 files/ntpd.rc 741
+MD5 5bd3924f5720b97837969ec4ec4d5e09 files/ntp.conf 1451
+MD5 0c3a6df816f448a870e070797c22f72e files/4.2.0.20040617-hostname.patch 8476
 MD5 2bc77f5ebab9804cdc2dff52ab4c267a files/4.2.0.20040617-freebsd.patch 803
 MD5 df7cdf79440109a1535f013c796aabce files/digest-ntp-4.2.0.20050303 166
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3tKej5H05b2HAEkRAsBZAJoCkQ5pWqZJXH5tCxyKQ3fmbvo8pgCdEvDO
-RCmhASzSDp/+Aj6aP5lLEno=
-=s3x+
------END PGP SIGNATURE-----
+MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
+MD5 5fecd7747324b76551f514df62a4d78d files/4.2.0.20040617-debug-fix.patch 232
+MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
+MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
+MD5 5e1591f145a63cf66ee20ab65495781a files/ntpd.confd 189
+MD5 5eecb47ab966b2003b73b8cbd371de40 files/ntp-client.rc 933
+MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
+MD5 339d87d68d483b28f5b70dd76cbc20c4 files/ntp-4.2.0.20050303-rlimit-memlock.patch 839
+MD5 87951141777f50b2e4a2347a96f987b8 files/ntpd-4.1.2.rc 806
+MD5 d07dbc58315f577cc6d1dd8614f95cb1 files/4.2.0-ntpdate-quiet.patch 1117
+MD5 c51a9f2f2c85ab3bcdc54a1a9e3bedb6 files/4.2.0.20040617-ipv6-fixes.patch 2541
+MD5 47d7106c23cb6ac99c5bbfdcd2f3a7fa files/ntp-client.confd 747
+MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
+MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
+MD5 e327d521e4dfb0c967941eeb84ad9207 files/ntp-4.1.1b-syscall-libc.patch 424
+MD5 24574e6ad1b468152839c10361b51a0f files/4.2.0-linux-config-phone.patch 711
+MD5 759c1adb57e9c61f519fe938902f1df7 files/4.2.0.20040617-errno-fix.patch 493
+MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617 166
