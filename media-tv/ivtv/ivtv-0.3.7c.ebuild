@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.7c.ebuild,v 1.1 2005/08/13 19:46:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.7c.ebuild,v 1.2 2005/08/16 20:08:08 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -17,6 +17,7 @@ RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-*"
+# THIS EBUILD IS FOR DEVELOPMENT PURPOSES ONLY. IT IS UNSUPPORTED
 
 IUSE=""
 S="${WORKDIR}/${MY_P}"
@@ -36,6 +37,8 @@ pkg_setup() {
 		saa7127(extra:${S}/driver)
 		cx25840(extra:${S}/driver)"
 	linux_chkconfig_present FB && MODULE_NAMES="${MODULE_NAMES}"
+	
+	einfo "Unsupported development ebuild"
 }
 
 src_unpack() {
