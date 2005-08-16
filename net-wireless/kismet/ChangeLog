@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.73 2005/08/12 01:39:21 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.74 2005/08/16 13:16:16 brix Exp $
+
+*kismet-2005.08.1 (16 Aug 2005)
+
+  16 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/kismet-2005.08.1-conf.d, +files/kismet-2005.08.1-init.d,
+  +kismet-2005.08.1.ebuild:
+  Version bump. Please note that ethereal wiretap support has been removed in
+  this release.
 
 *kismet-2005.07.1a (25 Jul 2005)
 
