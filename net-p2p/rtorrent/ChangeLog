@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.12 2005/08/13 21:54:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.13 2005/08/16 19:50:23 flameeyes Exp $
+
+*rtorrent-0.3.2 (16 Aug 2005)
+
+  16 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> -rtorrent-0.3.1.ebuild,
+  +rtorrent-0.3.2.ebuild:
+  Update to bugfix release 0.3.2.
 
 *rtorrent-0.3.1 (13 Aug 2005)
 
