@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.3 2005/05/30 06:53:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.4 2005/08/16 19:16:52 cardoe Exp $
 
 inherit virtualx eutils font
 
@@ -77,7 +77,7 @@ src_install() {
 
 	use X || use xv || \
 		rm -f ${D}/usr/share/man/man1/{pia,propwatch}.1 \
-			${D}/usr/share/man,man/fr,man/es}/man1/xawtv.1 \
+			${D}/usr/share/{man,man/fr,man/es}/man1/xawtv.1 \
 			${D}/usr/share/{man,man/es}/man1/{rootv,v4lctl,xawtv-remote}.1
 
 	use motif || \
