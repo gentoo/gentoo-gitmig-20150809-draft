@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cdcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.21 2005/04/08 19:38:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.22 2005/08/17 10:27:50 flameeyes Exp $
+
+*cdcd-0.6.6-r1 (17 Aug 2005)
+
+  17 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/cdcd-0.6.6-fbsd.patch, +cdcd-0.6.6-r1.ebuild:
+  Added patch for G/FBSD compatibility, updated HOMEPAGE and removed
+  installation of COPYING file.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> cdcd-0.6.6.ebuild:
   Stable on ppc64
