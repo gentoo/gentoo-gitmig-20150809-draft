@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.10.ebuild,v 1.2 2005/08/17 20:20:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.10-r1.ebuild,v 1.1 2005/08/17 22:42:48 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,6 +9,7 @@ patch_compressed="patch-${PV}.rr.compressed.gz"
 patch_mbox_hook="patch-1.5.6.dw.mbox-hook.1"
 patch_pgp_timeout="patch-1.5.6.dw.pgp-timeout.1"
 patch_imap_fcc_status="mutt-1.5.4-imap-fcc-status.patch"
+patch_collapse_flagged="patch-1.5.4.lpr.collapse_flagged"
 opt_patch_nntp="patch-${PV}.vvv.nntp-gentoo.bz2"
 
 DESCRIPTION="a small but very powerful text-based mail client"
@@ -20,6 +21,7 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}i.tar.gz
 		http://www.woolridge.ca/${PN}/patches/${patch_mbox_hook}
 		http://www.woolridge.ca/${PN}/patches/${patch_pgp_timeout}
 		http://www.plumlocosoft.com/software/download/${patch_imap_fcc_status}
+		http://debian.lpr.ch/Mutt/${patch_collapse_flagged}
 		nntp? (
 			http://dev.gentoo.org/~agriffis/dist/${opt_patch_nntp}
 			mirror://gentoo/mutt-1.5.7-mixmaster+nntp.patch

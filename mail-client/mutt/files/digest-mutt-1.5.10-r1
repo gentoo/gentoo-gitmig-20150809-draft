@@ -4,5 +4,6 @@ MD5 f6cd5bd6c030d5d691d347a6e9d75b6a patch-1.5.10.rr.compressed.gz 10095
 MD5 1ea285e44d0fe45eb841559914b57170 patch-1.5.6.dw.mbox-hook.1 6445
 MD5 758dff57c494e86ac885ef2ecb736f11 patch-1.5.6.dw.pgp-timeout.1 1448
 MD5 b65ec75e68ff9a0b6aca59d40822affc mutt-1.5.4-imap-fcc-status.patch 380
+MD5 93ea23bda53ca73a724954ee076bcfc3 patch-1.5.4.lpr.collapse_flagged 4790
 MD5 b6c5ba3052ce62173d8773094afacbdf patch-1.5.10.vvv.nntp-gentoo.bz2 72894
 MD5 404cb8677bb50937405531931629562f mutt-1.5.7-mixmaster+nntp.patch 310
