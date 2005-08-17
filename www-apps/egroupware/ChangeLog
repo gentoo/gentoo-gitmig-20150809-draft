@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.30 2005/08/16 21:45:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.31 2005/08/17 10:21:10 rl03 Exp $
+
+  17 Aug 2005; Renat Lumpau <rl03@gentoo.org> egroupware-1.0.0.009.ebuild:
+  stable on x86
 
   16 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   egroupware-1.0.0.009.ebuild:
