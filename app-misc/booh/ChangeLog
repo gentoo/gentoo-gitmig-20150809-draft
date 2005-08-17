@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/booh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.10 2005/08/17 11:48:58 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.11 2005/08/17 11:52:48 dams Exp $
+
+*booh-0.8.2 (17 Aug 2005)
+
+  17 Aug 2005; <dams@gentoo.org> +booh-0.8.2.ebuild:
+  version bump
 
   17 Aug 2005; <dams@gentoo.org> booh-0.8.1.ebuild:
   added dep on ruby-gtk2 ( #102750 )
