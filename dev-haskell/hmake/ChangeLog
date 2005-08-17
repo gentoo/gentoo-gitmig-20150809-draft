@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.16 2005/08/05 13:54:23 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.17 2005/08/17 12:51:36 kosmikus Exp $
+
+  17 Aug 2005; Andres Loeh <loeh@gentoo.org> hmake-3.10.ebuild:
+  Added dependency on sandbox-1.2.12 due to bug #97441.
 
   05 Aug 2005; Andres Loeh <kosmikus@gentoo.org> -hmake-3.08.ebuild,
   -hmake-3.09.ebuild:
