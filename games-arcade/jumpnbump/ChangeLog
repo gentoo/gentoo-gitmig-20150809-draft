@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/jumpnbump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.10 2005/02/25 16:12:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.11 2005/08/17 16:48:15 mr_bones_ Exp $
+
+  17 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  jumpnbump-1.50-r1.ebuild:
+  add desktop entry support (bug #83302)
 
   25 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -jumpnbump-1.41-r1.ebuild, jumpnbump-1.50-r1.ebuild, -jumpnbump-1.50.ebuild:

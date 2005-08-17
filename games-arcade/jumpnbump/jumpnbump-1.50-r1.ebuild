@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.3 2005/02/25 16:12:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.4 2005/08/17 16:48:15 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -42,5 +42,7 @@ src_install() {
 	use kde || rm -f "${D}${GAMES_BINDIR}/jumpnbump-kdialog"
 	use svga || rm -f "${D}${GAMES_BINDIR}/jumpnbump.svgalib"
 	use tcltk || rm -f "${D}${GAMES_BINDIR}/jnbmenu.tcl"
+	newicon sdl/jumpnbump64.xpm ${PN}.xpm
+	make_desktop_entry jumpnbump "Jump n Bump" ${PN}.xpm
 	prepgamesdirs
 }
