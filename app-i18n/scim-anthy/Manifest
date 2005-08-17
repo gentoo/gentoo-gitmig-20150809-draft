@@ -1,12 +1,20 @@
-MD5 79dae0a9da035d21a6a863dd4fe24221 ChangeLog 2454
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 74d3af95c62699e454595b540959e4c3 scim-anthy-0.5.2.ebuild 1024
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 163f742393c67625e8551fe8491e8ecd scim-anthy-0.4.3.ebuild 1071
-MD5 1ba3d67a4b87f64e5da32e3f49bfc5d1 scim-anthy-0.5.3.ebuild 1024
-MD5 03768820874e26f052ac2ffbda2f4b86 scim-anthy-0.4.2.ebuild 1066
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 d90ab4901bcdae11d52d4c20bf989674 ChangeLog 2657
+MD5 b5d914adfba5e91d42068779f21d718f scim-anthy-0.6.1.ebuild 1024
+MD5 276eba98077126c4b52f85d08389e29f scim-anthy-0.5.3.ebuild 1023
 MD5 076cee0147e72b0fe8ecfaeed4d9d136 scim-anthy-0.6.0.ebuild 1024
 MD5 3f6fbdd8d7fb1233643d6a4b13c14dde files/digest-scim-anthy-0.4.3 68
-MD5 ab9fd3efe440fc2beca9651d67ebf25a files/digest-scim-anthy-0.5.2 68
+MD5 c37fbcc4207cabb9615761df5d84bdc3 files/digest-scim-anthy-0.6.1 68
 MD5 e7bf6c6ea71a0dadd1e3373bfeffb8dd files/digest-scim-anthy-0.5.3 68
-MD5 6640d2a6809b389aa59bbd8ad2f72126 files/digest-scim-anthy-0.4.2 68
 MD5 b3721f2aa5b8f9f3616b06ab7c6e71a7 files/digest-scim-anthy-0.6.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDAxR6VWNWqTUmv+0RAiuuAJ4qhzveOz2+gxuOYTYKCVa72/0DTwCfQ22t
+Plz9Sd0cWqqbfKu12WnOF38=
+=OiM+
+-----END PGP SIGNATURE-----
