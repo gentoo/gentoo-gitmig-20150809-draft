@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d763aea45fefd3cc0782622df72042dc ioncube_loaders-2.4.ebuild 1356
 MD5 fb507bea603060a672fdbce4f8ff7c34 ChangeLog 1174
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 029193ee3d6bd54f75a66454dc33bd30 files/digest-ioncube_loaders-2.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAu7haGfFFLhbXWkRAuMoAJ4syA0KGp7fkNqZ5GDeH5Xp2zFBYQCfdTrR
+IAksKbYwHDgriDap0Tq84So=
+=9zUg
+-----END PGP SIGNATURE-----
