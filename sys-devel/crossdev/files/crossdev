@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.30 2005/08/06 20:50:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.31 2005/08/17 22:48:32 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -97,6 +97,10 @@ parse_target() {
 		      GVER="3.4.4"; BVER="2.16.1";
 		      GUSE="-fortran -gtk -gcj -objc";;
 
+		msp430)
+		      TARCH=${HARCH}; CPOST="";
+		      STAGE=${STAGE_BINUTILS};;
+
 		ps2*) einfo "The ps2 target is really an alias for the ee/iop/dvp targets"
 		      ${CROSSDEV} -t ee  || exit 1
 		      ${CROSSDEV} -t iop || exit 1
@@ -144,8 +148,9 @@ parse_target() {
 
 			Special Targets:
 			   avr
+			   msp430
 			   ps2 (alias for the following 3 targets)
-			   ee / iop / dvp (playstation2 targets)
+			   ee / iop / dvp (Playstation 2 targets)
 			EOF
 			exit 0
 			;;
