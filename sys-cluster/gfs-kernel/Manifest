@@ -1,4 +1,14 @@
-MD5 8dadab627de2bb1c7dbf12e7366263e5 ChangeLog 1117
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe7943da4070fb914ca7fbb50ff5d821 ChangeLog 1119
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 5e06fcb8a9efd3eae3dd6198df0d334e gfs-kernel-1.00.00.ebuild 1139
+MD5 bdde29704b60cfeebdebf6acdfd6b8b8 gfs-kernel-1.00.00.ebuild 1106
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gfs-kernel-1.00.00 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDAyCNgMUyd/cdjWsRApg7AJ9ucRR4mMVdrId+sF7vPAx6V/RqWwCfaleN
+m59hjNv6x6TX3UStkaHLZ0s=
+=JouI
+-----END PGP SIGNATURE-----
