@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.00.00.ebuild,v 1.2 2005/07/01 09:53:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.00.00.ebuild,v 1.3 2005/08/17 11:06:23 xmerlin Exp $
 
 CLUSTER_VERSION="1.00.00"
 DESCRIPTION="General-purpose distributed lock manager"
@@ -25,7 +25,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/dlm.rc dlm || die
+	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
 
 	dodoc doc/*.txt
 }
