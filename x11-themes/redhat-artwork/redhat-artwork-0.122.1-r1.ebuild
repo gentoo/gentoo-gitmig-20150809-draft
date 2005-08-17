@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.122.1-r1.ebuild,v 1.5 2005/05/14 21:00:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.122.1-r1.ebuild,v 1.6 2005/08/17 03:14:43 smithj Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -115,9 +115,10 @@ src_install () {
 	sed -i -e 's|Screenshot=|#Screenshot=|' GdmGreeterTheme.desktop
 
 	# move cursors to /usr/share/cursors/${X11_IMPL}
-	X11_IMPLEM_P="$(best_version virtual/x11)"
-	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-	X11_IMPLEM="${X11_IMPLEM##*\/}"
+	#X11_IMPLEM_P="$(best_version virtual/x11)"
+	#X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+	#X11_IMPLEM="${X11_IMPLEM##*\/}"
+	X11_IMPLEM="xorg-x11"
 
 	for x in Bluecurve Bluecurve-inverse; do
 		dodir /usr/share/cursors/${X11_IMPLEM}/${x}
