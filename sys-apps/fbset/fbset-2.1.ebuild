@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.28 2004/10/19 13:39:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.29 2005/08/17 19:56:48 pauldv Exp $
 
 inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="A utility to set the framebuffer videomode"
-HOMEPAGE="http://linux-fbdev.org/"
+HOMEPAGE="http://members.chello.be/cr26864/Linux/fbdev/"
 SRC_URI="http://home.tvd.be/cr26864/Linux/fbdev/${P}.tar.gz"
 
 LICENSE="GPL-2"
