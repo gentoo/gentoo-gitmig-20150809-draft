@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1389 2005/08/16 16:02:28 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1390 2005/08/17 04:39:39 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -133,6 +133,7 @@ app-shells/scsh:scsh - Use a non-FHS directory layout.
 app-shells/scsh-install-lib:scsh - Use a non-FHS directory layout.
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/acroread:noplugin - Do not install the acroread browser plugin
+app-text/acroread:nsplugin - Builds plugins for Netscape compatible browsers
 app-text/crm114:mew - Add support for using the mewdecode mime decoder.
 app-text/crm114:mimencode - Adds support for using the mimencode mime
 app-text/crm114:normalizemime - Add support for using the normalizemime
