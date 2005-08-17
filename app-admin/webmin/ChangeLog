@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.94 2005/08/14 10:14:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.95 2005/08/17 20:53:57 eradicator Exp $
+
+  17 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/webmin-gentoo-init:
+  Fixed init script.  Bug #102826.
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> webmin-1.210.ebuild:
   Stable on ppc.
