@@ -1,20 +1,33 @@
-MD5 26778eeae02efa7edaaa7ba70b57f1bf quota-3.12.ebuild 1487
-MD5 74314648b2f958005401509dc4f28f7c quota-3.06-r1.ebuild 1110
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ea4be89fe367297ba6721ee412eccba3 quota-3.12-r1.ebuild 1983
-MD5 3b0d727039fde18c0e522f27c464c7a0 ChangeLog 5701
-MD5 7afded315805e2de5acdd2cb9d18dd2a quota-3.09.ebuild 1489
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be7bff0cad4168ed03f93cd88046aed1 quota-3.06.ebuild 1049
-MD5 f1d0274fc6065eab74906118ef2dec78 quota-3.10.ebuild 1488
+MD5 581be997b7957c9625051bb0f2395b7c quota-3.12.ebuild 1527
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 53c954a74fbaaae5404bd01aba98c70b quota-3.12-r1.ebuild 2025
+MD5 0b39449699a014733fe19bed4951b99e quota-3.09.ebuild 1528
+MD5 74314648b2f958005401509dc4f28f7c quota-3.06-r1.ebuild 1110
+MD5 9ca9de73ca8d92cb03be23e385238a84 quota-3.13.ebuild 1732
 MD5 c9bf6241835697ca7fcfa96bfc68411c quota-3.06-r2.ebuild 1219
-MD5 e4ed06a1fb75aa40c8c323fbc3d0d0ff files/quota.rc 650
+MD5 d4872811895c8b289ba42c7684a510fd ChangeLog 5815
+MD5 e9d1a99cc3ca8a548e7a34e250465aa8 quota-3.10.ebuild 1527
+MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06-r1 62
 MD5 bce0e9a711e2b89bce6d9039014ab837 files/digest-quota-3.12 62
 MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06 62
-MD5 a579acd7ad0608bc16126d5d86da7804 files/digest-quota-3.10 62
-MD5 0d3ff3aaef898c9bb1d7243e20e93913 files/quota-no-quotactl-manpage.patch 958
 MD5 0a55ad0559999fe3044a502022c513ed files/digest-quota-3.09 62
 MD5 e7dd5ca4d40c611ea2f88232e50431e9 files/quota-3.06-no-stripping.patch 583
 MD5 bce0e9a711e2b89bce6d9039014ab837 files/digest-quota-3.12-r1 62
-MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06-r1 62
+MD5 aa2267ef899d604c2ba54db0258b57ed files/quota.confd 203
+MD5 e4ed06a1fb75aa40c8c323fbc3d0d0ff files/quota.rc 650
+MD5 3aceb5bd141994b959f4c43535c6347e files/quota.rc6 585
+MD5 a579acd7ad0608bc16126d5d86da7804 files/digest-quota-3.10 62
+MD5 8f3e0af699eecc5818d01529d5348387 files/digest-quota-3.13 62
 MD5 fe63ca32e32411f6aa067fdc6d451ae9 files/digest-quota-3.06-r2 62
-MD5 7868c75f59b802646554096ebf161574 files/quota.rc6 689
+MD5 0d3ff3aaef898c9bb1d7243e20e93913 files/quota-no-quotactl-manpage.patch 958
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAoS7gIKl8Uu19MoRAv0aAJ4iJ0xElYmeD066sJRkjenfhy2t2ACfZJ+g
+79NZie/PyCdev3ioXqbW4GY=
+=xuG2
+-----END PGP SIGNATURE-----
