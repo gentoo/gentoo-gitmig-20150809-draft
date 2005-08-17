@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/convertfs-20050113.ebuild,v 1.2 2005/08/17 10:12:35 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/convertfs-20050113.ebuild,v 1.3 2005/08/17 10:13:48 sbriesen Exp $
 
 DESCRIPTION="A tool to convert filesystems in-place"
 HOMEPAGE="http://tzukanov.narod.ru/convertfs/"
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e "s:\./\(devclone\):\1:g" -e "s:\./\(devremap\):\1:g" \
-		-e "s:\./\(prepindex\):\1:g" convertfs_dumb contrib/convertfs 
+		-e "s:\./\(prepindex\):\1:g" convertfs_dumb contrib/convertfs
 }
 
 src_compile() {
