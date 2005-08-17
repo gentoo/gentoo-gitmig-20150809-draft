@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ede64d111ad9daedeb8b34b0d655b716 gsmlib-1.11_pre030826.ebuild 811
 MD5 000da42d4ab1227504f2505b02064951 metadata.xml 254
 MD5 7d26b4ade36bb8155f0c3cfef600655b gsmlib-1.10.ebuild 600
@@ -7,3 +10,10 @@ MD5 40a642b1fa81b93d94d9ada2cada37d0 files/digest-gsmlib-1.11_pre041028 73
 MD5 9358266ac12314de9a89dc071fbd6485 files/digest-gsmlib-1.11_pre030826 73
 MD5 5cf9803b268e78717cf97deb06f9a2ce files/gsmlib-1.11-include-gcc34-fix.patch 1436
 MD5 ca07bc08da15e439dfee58227b2255f5 files/digest-gsmlib-1.10 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDAzhFKRy60XGEcJIRAlX6AJ9TMIxknptfKzYeqscYfQepKqsCRgCgoahm
+8MUGZkJAoo1dteCCmdJ7Oxw=
+=JFm2
+-----END PGP SIGNATURE-----
