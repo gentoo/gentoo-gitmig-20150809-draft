@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/cfg-update
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.2 2005/07/22 14:42:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.3 2005/08/17 16:57:13 truedfx Exp $
+
+  17 Aug 2005; Harald van Dĳk <truedfx@gentoo.org> cfg-update-1.7.1.ebuild:
+  Don't require both kdiff3 and xxdiff when just one of them will do
+  Suggested by <andreas.boerner@w84u.org>
 
   22 Jul 2005; <dang@gentoo.org> cfg-update-1.7.1.ebuild:
   Added ~amd64
