@@ -1,13 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 379fe85f28b239759571a828ac67ac8b bsd-games-2.17.ebuild 3849
 MD5 2f9735e488afcef504f656aebd330569 bsd-games-2.13-r1.ebuild 3823
-MD5 cc3b405ad0d0efd4a743410458434512 ChangeLog 2036
-MD5 7b405328dec7855e30134bf6164ce565 files/2.13-gentoo.patch 254
-MD5 1eb5517d165adf9425cb382abc6c6528 files/digest-bsd-games-2.13-r1 67
-MD5 cd4e0a199968b029d1d043c45b36b0c8 files/config.params-gentoo 1244
-MD5 a11b834c3e9102314333db5acf29c876 files/bsd-games-2.13-gcc4.patch 840
-MD5 ecbae8c67d0898a9e4d428b940de45a2 files/bsd-games-2.17-gcc4.patch 893
-MD5 cb372290d9037a0b968c5dede115709e files/digest-bsd-games-2.17 209
-MD5 d7db0213c9e81e091c2c9ec0b4d0c763 files/2.13-64bit.patch 701
+MD5 0c89363053201a102bce175a2d081ebb bsd-games-2.17.ebuild 3836
+MD5 b9465ae16ca8fa61cd805a7901a9f042 ChangeLog 2221
 MD5 d7db0213c9e81e091c2c9ec0b4d0c763 files/2.17-64bit.patch 701
+MD5 1eb5517d165adf9425cb382abc6c6528 files/digest-bsd-games-2.13-r1 67
+MD5 ecbae8c67d0898a9e4d428b940de45a2 files/bsd-games-2.17-gcc4.patch 893
+MD5 7b405328dec7855e30134bf6164ce565 files/2.13-gentoo.patch 254
+MD5 d7db0213c9e81e091c2c9ec0b4d0c763 files/2.13-64bit.patch 701
+MD5 cb372290d9037a0b968c5dede115709e files/digest-bsd-games-2.17 209
 MD5 fa8fffba1c31764862eacba7536a0bbf files/2.13-debian-11.patch 9384
+MD5 a11b834c3e9102314333db5acf29c876 files/bsd-games-2.13-gcc4.patch 840
+MD5 cd4e0a199968b029d1d043c45b36b0c8 files/config.params-gentoo 1244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAqfMgIKl8Uu19MoRAq3+AJ9jQ9QFDxIOxisJvoEVIDheSsn+AQCZAXeB
+lpVKAf8vYeJfSl94EsRxsXc=
+=SxOf
+-----END PGP SIGNATURE-----

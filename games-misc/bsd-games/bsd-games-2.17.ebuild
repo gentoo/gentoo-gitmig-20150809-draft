@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.2 2005/08/15 02:46:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.3 2005/08/17 02:58:01 vapier Exp $
 
 inherit eutils games
 
@@ -24,11 +24,11 @@ DEPEND="${RDEPEND}
 	sys-devel/bison"
 
 # Set GAMES_TO_BUILD variable to whatever you want
-export GAMES_TO_BUILD=${GAMES_TO_BUILD:="adventure arithmetic atc
+export GAMES_TO_BUILD=${GAMES_TO_BUILD:=adventure arithmetic atc
 backgammon banner battlestar bcd boggle caesar canfield countmail cribbage
-dab dm factor fish fortune gomoku hack hangman hunt mille monop morse
+dab dm factor fish gomoku hack hangman hunt mille monop morse
 number phantasia pig pom ppt primes quiz rain random robots sail snake
-tetris trek wargames worm worms wtf wump"}
+tetris trek wargames worm worms wtf wump}
 
 src_unpack() {
 	unpack ${A}
