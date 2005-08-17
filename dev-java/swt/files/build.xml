@@ -1,4 +1,4 @@
-<project name="SWT" default="jar_all" basedir=".">
+<project name="SWT" default="jar" basedir=".">
    <property name="src" location="."/>
    <property name="build" location="build"/>
 
@@ -11,48 +11,7 @@
       <javac srcdir="${src}" destdir="${build}"/>
    </target>
 
-   <target name="jar_cairo" depends="compile">
-      <jar destfile="swt-cairo.jar" basedir="${build}">
-         <fileset dir="${build}/org/eclipse/swt/internal/cairo"/>
-      </jar>
+   <target name="jar" depends="compile">
+      <jar destfile="swt.jar" basedir="${build}"/>
    </target>
-
-   <target name="jar_mozilla" depends="compile">
-      <jar destfile="swt-mozilla.jar" basedir="${build}">
-         <fileset dir="${build}/org/eclipse/swt/internal/mozilla"/>
-      </jar>
-   </target>
-   
-   <target name="jar_swt-pi" depends="compile">
-      <jar destfile="swt-pi.jar" basedir="${build}">
-         <fileset dir="${build}/org/eclipse/swt/internal">
-            <include name="Library.class"/>
-            <include name="Lock.class"/>
-            <include name="Platform.class"/>
-         </fileset>
-         <fileset dir="${build}/org/eclipse/swt/internal/accessibility"/>
-         <fileset dir="${build}/org/eclipse/swt/internal/cde"/>
-         <fileset dir="${build}/org/eclipse/swt/internal/gnome"/>
-         <fileset dir="${build}/org/eclipse/swt/internal/gtk"/>
-         <fileset dir="${build}/org/eclipse/swt/internal/kde"/>
-      </jar>
-   </target>
-   
-   <target name="jar_swt" depends="compile">
-      <jar destfile="swt.jar" basedir="${build}">
-         <fileset dir="${build}/org/eclipse/swt/internal">
-            <exclude name="Library.class"/>
-            <exclude name="Lock.class"/>
-            <exclude name="Platform.class"/>
-            <exclude name="accessibility/**/*"/>
-            <exclude name="cairo/**/*"/>
-            <exclude name="cde/**/*"/>
-            <exclude name="gnome/**/*"/>
-            <exclude name="gtk/**/*"/>
-            <exclude name="kde/**/*"/>
-         </fileset>
-      </jar>
-   </target>
-
-   <target name="jar_all" depends="jar_cairo,jar_mozilla,jar_swt-pi,jar_swt"/>
 </project>

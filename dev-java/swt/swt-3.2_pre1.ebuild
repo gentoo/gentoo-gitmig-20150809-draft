@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1.ebuild,v 1.9 2005/07/18 17:54:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.1 2005/08/17 08:26:18 compnerd Exp $
 
 inherit eutils java-pkg
 
-MY_DMF="R-3.1-200506271435"
-MY_VERSION="3.1"
+MY_DMF="S-3.2M1-200508111530"
+MY_VERSION="3.2M1"
 
 DESCRIPTION="GTK based SWT Library"
 HOMEPAGE="http://www.eclipse.org/"
@@ -15,18 +15,19 @@ SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_V
 
 SLOT="3"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="accessibility cairo firefox gnome mozilla"
 RDEPEND=">=virtual/jre-1.4
 		 mozilla? (
-		 			 firefox? ( >=www-client/mozilla-firefox-1.0.3 )
+		 			 firefox? ( >=www-client/mozilla-firefox-1.0.6 )
 					!firefox? ( >=www-client/mozilla-1.4 )
 				  )
 		 gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
 		 cairo? ( >=x11-libs/cairo-0.3.0 )"
 DEPEND=">=virtual/jdk-1.4
 		${RDEPEND}
+		  dev-util/pkgconfig
 		  dev-java/ant-core
 		  app-arch/unzip"
 
@@ -56,7 +57,7 @@ src_unpack() {
 	fi
 
 	# Clean up the directory structure
-	for f in *; do
+	for f in $(ls); do
 		if [[ "${f}" != "src.zip" ]] ; then
 			rm -rf ${f}
 		fi
@@ -70,8 +71,13 @@ src_unpack() {
 	rm -rf about_files/
 	rm -f .classpath .project
 
+	# CARIO 0.9.2 API Patch
+	if has_version '>=x11-libs/cairo-0.9.2' ; then
+		epatch ${FILESDIR}/swt-cairo-0.9.2.patch
+	fi
+
 	# Replace the build.xml to allow compilation without Eclipse tasks
-	cp ${FILESDIR}/build-${PV}.xml ${S}/build.xml || die "Unable to update build.xml"
+	cp ${FILESDIR}/build.xml ${S}/build.xml || die "Unable to update build.xml"
 	mkdir ${S}/src && mv ${S}/org ${S}/src || die "Unable to restructure SWT sources"
 }
 
@@ -97,27 +103,27 @@ src_compile() {
 	# Fix the pointer size for AMD64
 	[[ ${ARCH} == 'amd64' ]] && export SWT_PTR_CFLAGS=-DSWT_PTR_SIZE_64
 
-	echo "Building AWT library"
+	einfo "Building AWT library"
 	emake -f make_linux.mak make_awt || die "Failed to build AWT support"
 
-	echo "Building SWT library"
+	einfo "Building SWT library"
 	emake -f make_linux.mak make_swt || die "Failed to build SWT support"
 
 	if use accessibility ; then
-		echo "Building JAVA-AT-SPI bridge"
+		einfo "Building JAVA-AT-SPI bridge"
 		emake -f make_linux.mak make_atk || die "Failed to build ATK support"
 	fi
 
 	if use gnome ; then
-		echo "Building GNOME VFS support"
+		einfo "Building GNOME VFS support"
 		emake -f make_linux.mak make_gnome || die "Failed to build GNOME VFS support"
 	fi
 
 	if use mozilla ; then
 		if use firefox ; then
-			GECKO_SDK=/usr/lib/MozillaFirefox
+			GECKO_SDK="$(pkg-config firefox-xpcom --variable=libdir)"
 		else
-			GECKO_SDK=/usr/lib/mozilla
+			GECKO_SDK="$(pkg-config mozilla-xpcom --variable=libdir)"
 		fi
 
 		export GECKO_INCLUDES="-include ${GECKO_SDK}/include/mozilla-config.h \
@@ -130,23 +136,22 @@ src_compile() {
 						-I${GECKO_SDK}/include/embedstring -I${GECKO_SDK}/include/embedstring/include"
 		export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
 
-		echo "Building the Mozilla component"
+		einfo "Building the Mozilla component"
 		emake -f make_linux.mak make_mozilla || die "Failed to build Mozilla support"
 	fi
 
 	if use cairo ; then
-		echo "Building CAIRO support"
+		einfo "Building CAIRO support"
 		emake -f make_linux.mak make_cairo || die "Unable to build CAIRO support"
 	fi
 
-	echo "Building JNI libraries"
+	einfo "Building JNI libraries"
 	ant compile || die "Failed to compile JNI interfaces"
 
-	echo "Creating missing files"
-	echo "version 3.138" > ${S}/build/version.txt
+	einfo "Creating missing files"
 	cp ${FILESDIR}/SWTMessages.properties ${S}/build/org/eclipse/swt/internal/
 
-	echo "Packing JNI libraries"
+	einfo "Packing JNI libraries"
 	ant jar || die "Failed to create JNI jar"
 }
 
