@@ -11,16 +11,16 @@ MD5 d6b4a7de2926d22a6b52f4d129ce3e7f files/digest-opengl-update-2.2.3-r1 116
 MD5 78f2778d5b41874016deb3135122b189 files/opengl-update-2.2.1 9849
 MD5 219a292f64caeaa46b333eecde2197f2 files/digest-opengl-update-2.2.1 116
 MD5 ae5b820a1034139870f7b0867f37be17 files/opengl-update-2.2.2 9702
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-opengl-update-3.0.0 0
 MD5 219a292f64caeaa46b333eecde2197f2 files/digest-opengl-update-2.2.3 116
 MD5 541a391b04dd49521480458bac48529d files/opengl-update-2.2.3 9859
 MD5 91d9c17541be018d065a7838d7149c86 files/opengl-update-2.1.1 9110
 MD5 763717ca92a7b90da3ad6726770d2b77 files/opengl-update-3.0.0 4204
 MD5 600714175bf22abf40ed067b3dcb600d files/glxext.h-inttypes.patch 671
-MD5 d6b4a7de2926d22a6b52f4d129ce3e7f files/digest-opengl-update-3.0.0 116
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDA7IVArHZZzCEUG0RAtybAJ9RiC0HtJY7XR31FHIttXlOTO+g+ACfRzxO
-eaAgiTqPxaoUfPe3KCZ2U/8=
-=22DB
+iD8DBQFDA7JTArHZZzCEUG0RAiXDAJ9redhVMnYGgSNWPdmxVlpOCIkX5QCdGv23
+IfyExljrMh5wykj4PRmoCq8=
+=103R
 -----END PGP SIGNATURE-----
