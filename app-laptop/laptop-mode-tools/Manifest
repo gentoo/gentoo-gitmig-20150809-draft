@@ -2,8 +2,9 @@ MD5 e4d1bba6487157f22fb38246433d287d laptop-mode-tools-1.08.ebuild 1833
 MD5 6e72d093a3ec1898ad572ab643e66433 laptop-mode-tools-1.05.ebuild 1893
 MD5 732bd552db1a4970ac251284914280e0 laptop-mode-tools-1.07.ebuild 1833
 MD5 da2b22ed64efe90693a598cf64851d95 laptop-mode-tools-1.09.ebuild 1833
-MD5 e343f03bf6f9234cca09f57996e43433 ChangeLog 2388
+MD5 13965cc38bd760cdd7d0a06fb1eadad1 ChangeLog 2570
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 936a7e7a55cf20c924c2540f868dd715 laptop-mode-tools-1.10.ebuild 1833
 MD5 c1eea7d093ae2fbfbd27a61160bdc942 files/laptop-mode-tools-1.08-init.d 703
 MD5 bbf9b10381551598942a6a4a4ed0bf77 files/laptop-mode-tools-1.05.init 699
 MD5 b4c455fa575ba17a067f493ece07e108 files/laptop-mode-tools-1.07-init.d 703
@@ -12,3 +13,5 @@ MD5 4099ded830cee79005e7cc73ccc44907 files/digest-laptop-mode-tools-1.05 73
 MD5 32b30237252e86c6e7a1dce931e4deaa files/digest-laptop-mode-tools-1.07 73
 MD5 68c13aa2f74475845a3f0fadf542e4b6 files/digest-laptop-mode-tools-1.08 73
 MD5 e2a60b88d057a2f0328d0eb09d9c32d5 files/digest-laptop-mode-tools-1.09 73
+MD5 59399fabe810264253938e9391627d07 files/digest-laptop-mode-tools-1.10 73
+MD5 5eace2dedcf9b5a9e2e703c6f1fed2a4 files/laptop-mode-tools-1.10-init.d 703
