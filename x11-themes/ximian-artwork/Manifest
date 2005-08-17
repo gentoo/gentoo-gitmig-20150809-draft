@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7ae38e096bf13141681272b5c090c67d ChangeLog 3617
+MD5 6b832fc7c297d41320e50f2208e49b5b ChangeLog 3794
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 790667f9af7e90c46f0bed74ab0c2f74 ximian-artwork-0.2.29.0.6.3.ebuild 2004
-MD5 0d8621d6895ec4b70a3d986e014ed27d ximian-artwork-0.2.32.1.ebuild 1947
+MD5 271c9e8753da43de12d7aced139e9347 ximian-artwork-0.2.32.1.ebuild 1972
 MD5 f3b6233f881db50604d1cceebc2c2b40 files/digest-ximian-artwork-0.2.29.0.6.3 88
 MD5 658478d0857190dcb5b10e815bf0c704 files/digest-ximian-artwork-0.2.32.1 80
 MD5 481c98be012989222f01734d8c6e43e4 files/ximian-artwork-0.2.26-corruption_fix.patch 716
@@ -14,7 +14,7 @@ MD5 97a527cd1be3926af01ecbff0cc1311d files/ximian-artwork-0.2.32.1-disable_indus
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDAq4Xl5AvwDPiUowRAk+LAKCkSUcYOA8pl8ISSganiOlatfZrOQCfVBDa
-4UIra3edoDIZDTDp+55O+fg=
-=BFyB
+iD8DBQFDAq5tl5AvwDPiUowRAkp2AJ4mjqVNllL19Nhlju5I+lhJhwEStQCg1GGH
+n5pTc9Ir//SmOeGwfTY2Rd4=
+=R/pP
 -----END PGP SIGNATURE-----
