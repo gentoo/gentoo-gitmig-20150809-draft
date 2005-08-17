@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.42.ebuild,v 1.2 2005/08/10 00:36:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.42.ebuild,v 1.3 2005/08/17 16:41:54 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="|| ( ( x11-misc/xtoolwait x11-apps/xwininfo x11-apps/xdpyinfo x11-apps/xprop ) virtual/x11 )"
 
 S=${WORKDIR}
 
