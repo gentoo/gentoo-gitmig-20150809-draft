@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210.ebuild,v 1.8 2005/08/14 10:14:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.210-r1.ebuild,v 1.1 2005/08/17 21:07:00 eradicator Exp $
 
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
@@ -121,6 +121,9 @@ src_install() {
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
 	keepdir /var/log/webmin/
+
+	rm -rf ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1
+	rm -f ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1.tar.gz
 }
 
 pkg_postinst() {
