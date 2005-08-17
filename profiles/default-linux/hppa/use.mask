@@ -144,3 +144,5 @@ bmp
 freetts
 
 lirc
+
+3dfx
