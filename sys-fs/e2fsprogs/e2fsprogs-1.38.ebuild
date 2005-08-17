@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.9 2005/08/11 03:38:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.38.ebuild,v 1.10 2005/08/17 02:10:28 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -76,6 +76,7 @@ src_compile() {
 		eerror "attachment to http://bugs.gentoo.org/show_bug.cgi?id=81096"
 		die "Preventing included intl cruft from building"
 	fi
+	mkdir -p lib/{blkid,e2p,et,ext2fs,ss,uuid}/{checker,elfshared,pic,profiled} #102412
 	# Parallel make sometimes fails
 	emake -j1 COMPILE_ET=compile_et || die
 }
