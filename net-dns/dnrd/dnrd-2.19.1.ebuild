@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.19.1.ebuild,v 1.1 2005/07/21 15:11:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.19.1.ebuild,v 1.2 2005/08/17 16:52:02 chriswhite Exp $
 
 inherit gnuconfig eutils
 
@@ -36,5 +36,5 @@ src_install() {
 
 pkg_postinst() {
 	enewgroup dnrd
-	enewuser dnrd -1 /bin/false /etc/dnrd dnrd
+	enewuser dnrd -1 /bin/false /dev/null dnrd
 }
