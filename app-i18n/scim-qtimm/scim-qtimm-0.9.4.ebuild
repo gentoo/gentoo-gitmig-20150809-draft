@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.2.ebuild,v 1.2 2005/07/31 08:48:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.1 2005/08/17 10:27:30 usata Exp $
 
 inherit kde-functions
 
@@ -14,16 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls arts"
 
-DEPEND="|| ( >=app-i18n/scim-1.3 >=app-i18n/scim-cvs-1.3 )
+DEPEND="|| ( >=app-i18n/scim-1.4.2 >=app-i18n/scim-cvs-1.4.2 )
 	nls? ( sys-devel/gettext )
 	arts? ( kde-base/arts )
 	$(qt_min_version 3.3.4)"
 
-S="${WORKDIR}/${PN}"
-
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt-bc(recommended) or immqt USE flag enabled."
+		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
 	fi
 }
 
