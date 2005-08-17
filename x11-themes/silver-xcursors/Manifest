@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd12722218446f9b77cf602c75719be5 ChangeLog 1999
 MD5 93f02cf17e28c71ad2a43ecc2399b56f metadata.xml 279
 MD5 08feb67b1aef531030bb3fb032c33ec1 silver-xcursors-0.4.ebuild 1896
 MD5 d63fa85c7f2ec4a227617435dbc2f935 files/digest-silver-xcursors-0.4 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAq9Bl5AvwDPiUowRAv9TAKCtmFeJSVes55s9ZnvtmUuzdBjvrQCfQpqu
+n2LL6zMiavsE+pIdc4nZqAk=
+=0lXI
+-----END PGP SIGNATURE-----

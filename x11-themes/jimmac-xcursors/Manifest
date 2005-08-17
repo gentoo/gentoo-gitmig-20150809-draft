@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 109c18e9d72a46fc73a6aa7bd8d808f3 ChangeLog 723
 MD5 67480968255dfe131b5dbe20b934a2ab metadata.xml 322
 MD5 2131bf1d1617dc547e604bad71a43769 jimmac-xcursors-0.0.1.ebuild 1679
 MD5 a1f0ae5fab146934b1dc2b47a25ab4f7 files/digest-jimmac-xcursors-0.0.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAq79l5AvwDPiUowRAg2GAJwPVC1M0srTQqk+6kxQTiX25qYUdQCfYROk
+V4env0BuoYXaNtZ//K+9oRY=
+=y9PX
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7ae38e096bf13141681272b5c090c67d ChangeLog 3617
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 790667f9af7e90c46f0bed74ab0c2f74 ximian-artwork-0.2.29.0.6.3.ebuild 2004
@@ -8,3 +11,10 @@ MD5 481c98be012989222f01734d8c6e43e4 files/ximian-artwork-0.2.26-corruption_fix.
 MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
 MD5 4f09d13cbbc85be041773d463dd83fc3 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
 MD5 97a527cd1be3926af01ecbff0cc1311d files/ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDAq4Xl5AvwDPiUowRAk+LAKCkSUcYOA8pl8ISSganiOlatfZrOQCfVBDa
+4UIra3edoDIZDTDp+55O+fg=
+=BFyB
+-----END PGP SIGNATURE-----
