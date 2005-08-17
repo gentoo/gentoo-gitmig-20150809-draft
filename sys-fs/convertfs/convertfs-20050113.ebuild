@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/convertfs-20050113.ebuild,v 1.1 2005/05/13 18:46:53 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/convertfs-20050113.ebuild,v 1.2 2005/08/17 10:12:35 sbriesen Exp $
 
 DESCRIPTION="A tool to convert filesystems in-place"
 HOMEPAGE="http://tzukanov.narod.ru/convertfs/"
@@ -13,20 +13,22 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	sed -i ${S}/Makefile -e "s/^\(CFLAGS=\).*\$/\1${CFLAGS}/"
+	cd "${S}"
+	sed -i -e "s:\./\(devclone\):\1:g" -e "s:\./\(devremap\):\1:g" \
+		-e "s:\./\(prepindex\):\1:g" convertfs_dumb contrib/convertfs 
 }
 
 src_compile() {
-	emake devclone devremap prepindex || die
+	emake CFLAGS="${CFLAGS}" devclone devremap prepindex || die "emake failed"
 }
 
 src_install() {
-	into /
-	dosbin convertfs_dumb devclone devremap prepindex contrib/convertfs || die
+	dodoc convertfs_dumb
+	into / && dosbin devclone devremap prepindex contrib/convertfs
 }
 
 pkg_postinst() {
