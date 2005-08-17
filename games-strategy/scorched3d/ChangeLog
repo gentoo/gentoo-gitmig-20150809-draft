@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.23 2005/08/10 03:35:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.24 2005/08/17 19:18:03 mr_bones_ Exp $
+
+  17 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> scorched3d-39.ebuild:
+  stable for x86
 
   10 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> scorched3d-39.ebuild:
   upstream patch for compile with USE=mysql (bug #101903)
