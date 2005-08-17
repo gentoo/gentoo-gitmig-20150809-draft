@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.183 2005/08/13 03:52:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.184 2005/08/17 22:46:09 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1058,8 +1058,6 @@ gcc_do_configure() {
 		# for nearly all native systems. Therefore, we highly recommend you
 		# not provide a configure target when configuring a native compiler."
 		confgcc="${confgcc} --target=${CTARGET}"
-
-		is_crosscompile && confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 	fi
 	[[ -n ${CBUILD} ]] && confgcc="${confgcc} --build=${CBUILD}"
 
