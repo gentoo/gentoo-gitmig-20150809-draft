@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6cf66c6ef5acdbfa7452e9f4ba4a3d62 ChangeLog 498
+MD5 4beaceecc8dda3d1045b4dc533f09276 ChangeLog 638
+MD5 45a54f7ab38b5954a8189bcbb1bcb0f1 jakarta-jstl-1.1.2.ebuild 1719
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 ce103fb427d3ca62ec8fc8ad47998cd3 jakarta-jstl-1.1.2.ebuild 1714
 MD5 8c701edd23836a70f273903ebfa44382 files/digest-jakarta-jstl-1.1.2 86
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2PHl/rLF9B432nYRAvKmAJwI3IFi8/DnaBur085XU3kV2BPYpACeNhWh
-gdEvpazPcbU1fbLoqxCPNRU=
-=GLwS
+iD8DBQFDA43lQiJ/wx066S4RAqQtAJ9QKRkytzlrARqaFHT4cyfrbs0MFACeOq9n
+TKIgxVoxHyfRavKwRlAII0c=
+=w1V1
 -----END PGP SIGNATURE-----

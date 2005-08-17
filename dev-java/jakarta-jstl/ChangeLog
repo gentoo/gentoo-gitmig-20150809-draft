@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-jstl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.2 2005/05/04 09:05:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.3 2005/08/17 19:19:38 betelgeuse Exp $
+
+  17 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
+  jakarta-jstl-1.1.2.ebuild:
+  Marked stable on x86 in preparation for Netbeans 4.0.
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jakarta-jstl-1.1.2.ebuild:
