@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.30 2005/08/10 00:36:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.31 2005/08/17 16:37:44 agriffis Exp $
+
+*mozilla-launcher-1.45 (17 Aug 2005)
+
+  17 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.45.ebuild:
+  Bump to 1.45 which removes the fake_user stuff, no longer necessary with
+  current browsers. This allows the modular X deps to be shorter
 
   10 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
   mozilla-launcher-1.42.ebuild:

@@ -1,15 +1,27 @@
-MD5 63a4e56962b491b02f79009245eae969 ChangeLog 15514
-MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
-MD5 8f813a83fb8f29bd6c860c9dde7d7e63 mozilla-launcher-1.35.ebuild 1015
-MD5 70a19e8491ee4674aaa4c92412570584 mozilla-launcher-1.39.ebuild 1025
-MD5 ca39cdecc420c119a976ba736ea46303 mozilla-launcher-1.41.ebuild 1015
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6345e8113d69dc31206bcf47b7ebb4d3 mozilla-launcher-1.45.ebuild 932
 MD5 3f7a862c42e829c39f7584466c830172 mozilla-launcher-1.42.ebuild 921
 MD5 e27a084f6eb15720eb5e9182c53a576f mozilla-launcher-1.44.ebuild 932
-MD5 a69b664a54ef105f276f52f14670092d files/digest-mozilla-launcher-1.35 68
-MD5 5f2388f082f553879f178d465eb546a3 files/mozilla-launcher-1.35-multilib.patch 1297
-MD5 a0bbf60e5a59de57c03c4a23e5e3d22d files/digest-mozilla-launcher-1.39 68
-MD5 29ef6c963fe90532a8d9c606f8b6b885 files/mozilla-launcher-1.39-multilib.patch 1457
-MD5 75b4e03263918476c53b6cac8bac2e9d files/digest-mozilla-launcher-1.41 68
+MD5 8f813a83fb8f29bd6c860c9dde7d7e63 mozilla-launcher-1.35.ebuild 1015
+MD5 ca39cdecc420c119a976ba736ea46303 mozilla-launcher-1.41.ebuild 1015
+MD5 1ad517839f4bf6b47828cb149333c1b7 ChangeLog 15777
+MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
+MD5 70a19e8491ee4674aaa4c92412570584 mozilla-launcher-1.39.ebuild 1025
 MD5 be5a0ad8bb87165cb87a3b52b109b0f5 files/mozilla-launcher-1.41-multilib.patch 1457
+MD5 a69b664a54ef105f276f52f14670092d files/digest-mozilla-launcher-1.35 68
+MD5 a0bbf60e5a59de57c03c4a23e5e3d22d files/digest-mozilla-launcher-1.39 68
+MD5 75b4e03263918476c53b6cac8bac2e9d files/digest-mozilla-launcher-1.41 68
 MD5 8b51f2f7080e8882dfe65666d4fc3c96 files/digest-mozilla-launcher-1.42 68
 MD5 291ed170a9f784d43616dbaa4936381f files/digest-mozilla-launcher-1.44 68
+MD5 d757f8b84d0cc93ac988c839ec461e5b files/digest-mozilla-launcher-1.45 68
+MD5 5f2388f082f553879f178d465eb546a3 files/mozilla-launcher-1.35-multilib.patch 1297
+MD5 29ef6c963fe90532a8d9c606f8b6b885 files/mozilla-launcher-1.39-multilib.patch 1457
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDA2ftBXaUFmZvwyMRAuDIAKCzGmxJ5io9qDBhiviJBJ67zXudIACbBakY
+BFRp6O9ujU22+Sqd+xmCkuo=
+=e2uS
+-----END PGP SIGNATURE-----
