@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.28 2005/08/02 21:10:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.29 2005/08/17 15:27:08 ka0ttic Exp $
+
+  17 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gamin-0.1.3.ebuild:
+  Marked ~mips.
 
   02 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/gamin-0.1.3-freebsd.patch:
