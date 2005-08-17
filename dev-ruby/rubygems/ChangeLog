@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.13 2005/08/01 18:49:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.14 2005/08/17 19:09:38 grobian Exp $
+
+  17 Aug 2005; Fabian Groffen <grobian@gentoo.org> rubygems-0.8.10.ebuild:
+  Marking ~ppc-macos
 
   01 Aug 2005; Ferris McCormick <fmccor@gentoo.org> rubygems-0.8.10.ebuild:
   Add ~sparc keyword (required for rails).
