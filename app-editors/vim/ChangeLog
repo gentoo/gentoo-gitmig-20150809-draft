@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.184 2005/08/17 20:50:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.185 2005/08/17 21:51:00 agriffis Exp $
+
+  17 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  vim-7.0_alpha20050809.ebuild:
+  Mark -alpha since varargs stuff is broken
 
 *vim-7.0_alpha20050817 (17 Aug 2005)
 
