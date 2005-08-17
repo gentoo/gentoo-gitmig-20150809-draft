@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.123 2005/08/07 00:24:25 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.124 2005/08/17 21:40:03 metalgod Exp $
+
+*cdrtools-2.01.01_alpha03 (17 Aug 2005)
+
+  17 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/cdrtools-2.01a32-scan.patch, +cdrtools-2.01.01_alpha03.ebuild:
+  New cdrtools development version. Added a patch for scsi scanning.
 
   07 Aug 2005; Lars Weiler <pylon@gentoo.org>
   cdrtools-2.01.01_alpha01-r2.ebuild:
