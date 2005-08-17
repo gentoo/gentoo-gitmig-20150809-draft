@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
+MD5 4f9cd35a2f9eb800a6dece1060792d36 ChangeLog 444
+MD5 dea845482886f53b604596aac0ddd5db eselect-opengl-1.0.0.ebuild 2691
+MD5 a40a114acd750bcc1d2423153aa80193 files/digest-eselect-opengl-1.0.0 183
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDA69JArHZZzCEUG0RAlHoAJ45r/R6wiIqn36LICIy3uhKfsEFuQCfRCLg
+GJSP3pjaeHveqQxNMstNWUw=
+=+dKe
+-----END PGP SIGNATURE-----

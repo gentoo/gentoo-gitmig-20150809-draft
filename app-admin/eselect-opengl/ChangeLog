@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-opengl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.1 2005/08/17 21:42:20 eradicator Exp $
+
+*eselect-opengl-1.0.0 (17 Aug 2005)
+
+  17 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +eselect-opengl-1.0.0.ebuild:
+  Added eselect opengl module which will be a replacement for opengl-update.
+
