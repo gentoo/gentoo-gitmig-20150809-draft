@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.3 2005/08/17 02:58:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17.ebuild,v 1.4 2005/08/17 03:12:49 vapier Exp $
 
 inherit eutils games
 
@@ -35,7 +35,7 @@ src_unpack() {
 	cd "${S}"
 	epatch \
 		"${DISTDIR}/bsdgames_${PV}-2.diff.gz" \
-		"${FILESDIR}"/${PV}-64bit.patch \
+		"${FILESDIR}"/${P}-64bit.patch \
 		"${FILESDIR}"/${P}-gcc4.patch
 
 	sed -i \
