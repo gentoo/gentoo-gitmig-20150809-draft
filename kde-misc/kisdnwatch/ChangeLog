@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kisdnwatch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.4 2005/06/26 08:39:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.5 2005/08/17 10:08:01 greg_g Exp $
+
+*kisdnwatch-01.00.10 (17 Aug 2005)
+
+  17 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kisdnwatch-01.00.10-configure.patch, +kisdnwatch-01.00.10.ebuild:
+  New version (#102687).
 
   26 Jun 2005; Simon Stelling <blubb@gentoo.org> kisdnwatch-01.00.08.ebuild:
   added ~amd64 keyword
