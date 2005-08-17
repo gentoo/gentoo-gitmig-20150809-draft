@@ -7,6 +7,8 @@ MD5 f61af9ffe92c91e54629f467c6941a62 glade-sharp-1.9.3.1.ebuild 416
 MD5 e009741dffb4f7c162b51e9867350156 glade-sharp-1.9.5.ebuild 408
 MD5 986c6e1025555e875083a60b7d16ab89 glade-sharp-1.0.8-r1.ebuild 383
 MD5 1e353abab533384ea9d5f5a604815efb glade-sharp-1.0.10.ebuild 382
+MD5 ceb6fadbc65aa82ea530f6103eac4276 glade-sharp-2.3.90.ebuild 414
+MD5 ceb6fadbc65aa82ea530f6103eac4276 glade-sharp-2.5.90.ebuild 414
 MD5 d3c03463afacd40a934397a076f9bf9b files/digest-glade-sharp-2.5.5 147
 MD5 ff5a2a47c3e1d785fc179c922857e409 files/digest-glade-sharp-1.0.6 147
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-glade-sharp-1.0.8 147
@@ -14,3 +16,5 @@ MD5 fef3bd202b3f48969673897302f3be4c files/digest-glade-sharp-1.0.8-r1 147
 MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-glade-sharp-1.9.3.1 151
 MD5 2f754d97c9892c6b5cd78fb43433df9d files/digest-glade-sharp-1.9.5 147
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-glade-sharp-1.0.10 149
+MD5 554c819702b5e8da1a9de736edfda060 files/digest-glade-sharp-2.3.90 149
+MD5 a46ade80323f449b3edc0c044255118e files/digest-glade-sharp-2.5.90 149

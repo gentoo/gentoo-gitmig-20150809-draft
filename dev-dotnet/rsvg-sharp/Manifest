@@ -4,9 +4,11 @@ MD5 eae40d9f1b2a97383b55ca10273ea77c rsvg-sharp-1.0.6.ebuild 444
 MD5 fd3d98dd34d64f611b6fdbdab20ce173 rsvg-sharp-1.0.8.ebuild 444
 MD5 0ce366330cd69d3791bc4436f93502d4 ChangeLog 2640
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 6a7eab4f79a53e58996e71ac2ec22bc3 rsvg-sharp-2.3.90.ebuild 477
 MD5 d28a042da557f901eb59983dd5f90b76 rsvg-sharp-1.9.3.1.ebuild 479
 MD5 d3155555fcfb22bda45dfa3af40febed rsvg-sharp-1.9.5.ebuild 477
 MD5 e3d2d2704795ff4e9fe1d511f5d46b55 rsvg-sharp-1.0.8-r1.ebuild 447
+MD5 6a7eab4f79a53e58996e71ac2ec22bc3 rsvg-sharp-2.5.90.ebuild 477
 MD5 d3c03463afacd40a934397a076f9bf9b files/digest-rsvg-sharp-2.5.5 147
 MD5 ff5a2a47c3e1d785fc179c922857e409 files/digest-rsvg-sharp-1.0.6 147
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-rsvg-sharp-1.0.8 147
@@ -14,3 +16,5 @@ MD5 fef3bd202b3f48969673897302f3be4c files/digest-rsvg-sharp-1.0.8-r1 147
 MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-rsvg-sharp-1.9.3.1 151
 MD5 2f754d97c9892c6b5cd78fb43433df9d files/digest-rsvg-sharp-1.9.5 147
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-rsvg-sharp-1.0.10 149
+MD5 554c819702b5e8da1a9de736edfda060 files/digest-rsvg-sharp-2.3.90 149
+MD5 a46ade80323f449b3edc0c044255118e files/digest-rsvg-sharp-2.5.90 149
