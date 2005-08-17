@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.54 2005/08/02 17:37:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.55 2005/08/17 22:00:43 leonardop Exp $
+
+*evolution-data-server-1.3.7 (17 Aug 2005)
+
+  17 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +evolution-data-server-1.3.7.ebuild,
+  +files/evolution-data-server-no_lazy_bindings.patch:
+  New version. Added 'static' and 'krb4' USE flags. Updated dependencies.
+  Added patch to avoid lazy linking in a setgid binary.
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org>
   evolution-data-server-1.2.3.ebuild:
