@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.10.ebuild,v 1.1 2005/08/17 20:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.10.ebuild,v 1.2 2005/08/17 20:20:50 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}i.tar.gz
 			mirror://gentoo/mutt-1.5.7-mixmaster+nntp.patch
 		)
 	)"
-IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl slang smime ssl vanilla"
+IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl smime ssl vanilla"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
@@ -33,7 +33,6 @@ RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	gdbm?    ( sys-libs/gdbm )
 	!gdbm?   ( berkdb? ( >=sys-libs/db-4 ) )
-	slang?   ( >=sys-libs/slang-1.4.2 )
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
@@ -99,6 +98,7 @@ src_compile() {
 		$(use_enable smime) \
 		$(use_enable cjk default-japanese) \
 		$(use_enable debug) \
+		--with-curses \
 		--sysconfdir=/etc/${PN} \
 		--with-docdir=/usr/share/doc/${PN}-${PVR} \
 		--with-regex \
@@ -143,15 +143,6 @@ src_compile() {
 	if use buffysize; then
 		ewarn "USE=buffy-size is just a workaround. Disable it if you don't need it."
 		myconf="${myconf} --enable-buffy-size"
-	fi
-
-	if use slang; then
-		myconf="${myconf} --with-slang"
-	else
-		# --without-slang won't work
-		# specify --with-curses if you don't want slang
-		# (26 Sep 2001 agriffis)
-		myconf="${myconf} --with-curses"
 	fi
 
 	if use mbox; then

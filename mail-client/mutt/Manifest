@@ -5,8 +5,8 @@ MD5 b684c056a91bcad2e4f3d99c9332c1a0 mutt-1.5.8-r2.ebuild 4961
 MD5 cb2a1c4875a1f091afd9577f4f61d2e8 mutt-1.5.8-r1.ebuild 4605
 MD5 8838ca64d9cd8c5e27b83645106b1ddc mutt-1.5.9.ebuild 6268
 MD5 dc42018781b04e0934dcfc4f3a6e6303 mutt-1.4.2.1.ebuild 3331
-MD5 3561f136fca8611849cf32e706444eb6 mutt-1.5.10.ebuild 5699
-MD5 3aa3a34bc04553ac132b595b5d08281b ChangeLog 18296
+MD5 a94fbaae608333ccae09d189e27cc753 mutt-1.5.10.ebuild 5466
+MD5 f06df233332561319b3b7b14b672d2fe ChangeLog 18415
 MD5 f46d05fe0172cb035a01f40d25242d30 metadata.xml 253
 MD5 6064ff5a3d1a71ccdb48f88872feb3a3 files/Muttrc 667
 MD5 3f1450d2a3bdb1e595bf5820239364cc files/digest-mutt-1.5.9 659
@@ -23,7 +23,7 @@ MD5 25e242fd402f42d5bd5230dbe9ea68a6 files/slang.patch 493
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDA5g9BXaUFmZvwyMRAsz3AKCje3mjeXHa92y+NVovGMWhc53LMwCfS8PX
-2K0mKsNFWWlq6XWVJf5XlOU=
-=WanG
+iD8DBQFDA5w9BXaUFmZvwyMRAhWmAKCr/GglwwylGcG9B3rZkqBCXKWqBwCdH+f9
+pDL3zEuumV4G4448EG0pJqk=
+=xfvq
 -----END PGP SIGNATURE-----
