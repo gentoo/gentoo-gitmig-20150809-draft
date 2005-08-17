@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.2 2005/08/16 01:55:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.3 2005/08/17 04:17:26 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -39,17 +39,16 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gnome-keyring-0.4.3"
 #	>=gnome-extra/gnome-keyring-manager-2.11.1
 
-#	>=gnome-base/gconf-2.11.90
 #	>=gnome-base/gnome-vfs-2.11.90
 RDEPEND="${RDEPEND}
+	>=gnome-base/gconf-2.11.90
 	>=net-libs/libsoup-2.2.5
 
 	>=gnome-base/libbonobo-2.10
-	>=gnome-base/libbonoboui-2.10"
-#	>=gnome-base/libgnome-2.11.2
-#	>=gnome-base/libgnomeui-2.11.2
-#	>=gnome-base/libgnomecanvas-2.11.1
-RDEPEND="${RDEPEND}
+	>=gnome-base/libbonoboui-2.10
+	>=gnome-base/libgnome-2.11.2
+	>=gnome-base/libgnomeui-2.11.2
+	>=gnome-base/libgnomecanvas-2.11.1
 	>=gnome-base/libglade-2.5.1"
 
 #	>=gnome-extra/bug-buddy-2.11.1
@@ -71,9 +70,8 @@ RDEPEND="${RDEPEND}
 #	>=gnome-extra/gcalctool-5.6.26
 RDEPEND="${RDEPEND}
 	>=gnome-extra/gconf-editor-2.10
-	>=gnome-base/gdm-2.8.0.2"
-#	>=app-editors/gedit-2.11.91
-RDEPEND="${RDEPEND}
+	>=gnome-base/gdm-2.8.0.2
+	>=app-editors/gedit-2.11.91
 
 	>=app-text/evince-0.3.2"
 
@@ -94,9 +92,9 @@ RDEPEND="${RDEPEND}
 
 #	>=x11-libs/gtksourceview-1.3.91
 RDEPEND="${RDEPEND}
-	>=gnome-extra/gucharmap-1.4.3"
-#	>=gnome-base/libgnomeprint-2.11
-#	>=gnome-base/libgnomeprintui-2.11
+	>=gnome-extra/gucharmap-1.4.3
+	>=gnome-base/libgnomeprint-2.11
+	>=gnome-base/libgnomeprintui-2.11"
 
 #	>=gnome-extra/gnome-utils-2.11.91
 #	>=gnome-extra/gnome-games-2.11.4
