@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4287 2005/08/17 00:38:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4288 2005/08/17 08:02:13 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -526,11 +526,6 @@ net-misc/powerd
 # Konstantin Arkhipov <voxus@gentoo.org> (14 Jul 2005)
 # Masked for security reasons.
 <=sys-kernel/openmosix-sources-2.4.30
-
-# Sebastian Bergmann (sebastian@gentoo.org) (12 Jul 2005)
-# Unmaintained upstream for over two years and binary-only, thus
-# not compatible with recent PHP versions.
-dev-php/php-accelerator
 
 # Chris White (chriswhite@gentoo.org) (08 Jul 2005)
 # Masking initial import of ipodder as it has some issues
