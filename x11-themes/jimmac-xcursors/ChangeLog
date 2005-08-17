@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/jimmac-xcursors
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/ChangeLog,v 1.3 2005/07/20 13:56:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/ChangeLog,v 1.4 2005/08/17 03:28:47 smithj Exp $
+
+  17 Aug 2005; Jonathan Smith <smithj@gentoo.org>
+  jimmac-xcursors-0.0.1.ebuild:
+  made xorg-x11 the x11 implementation... to help modular x
 
   20 Jul 2005; Markus Rothe <corsair@gentoo.org>
   jimmac-xcursors-0.0.1.ebuild:

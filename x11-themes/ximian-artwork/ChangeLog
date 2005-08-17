@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.22 2005/06/25 14:01:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.23 2005/08/17 03:24:57 smithj Exp $
+
+  17 Aug 2005; Jonathan Smith <smithj@gentoo.org>
+  ximian-artwork-0.2.29.0.6.3.ebuild:
+  made xorg-x11 the x11 implementation... to help modular x
 
 *ximian-artwork-0.2.32.1 (25 Jun 2005)
 
