@@ -3,8 +3,9 @@ Hash: SHA1
 
 MD5 6a5e7834acbb57c4d7b7263ce97d2e20 libsigc++-1.2.5.ebuild 1476
 MD5 47250b26164016336e14098ca923768f libsigc++-2.0.14.ebuild 1825
+MD5 178cfae90bd28de2e9be54a843654867 libsigc++-2.0.16.ebuild 1831
 MD5 2dce41630775743cced6079f6629dfb8 libsigc++-2.0.11.ebuild 1287
-MD5 06b2145fd697f9cda9e380e453107c6e ChangeLog 8601
+MD5 fd1e1685fcd6e4e8719066f295fd108f ChangeLog 8726
 MD5 6b17a879fe86bc2b447e8d3c6489f0c6 libsigc++-2.0.5.ebuild 1446
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
 MD5 09db05165ade799adc26846ff7c3eb5f libsigc++-1.0.4-r2.ebuild 1568
@@ -14,12 +15,13 @@ MD5 2456d199198c3d5a0d0f0edb607589c8 files/digest-libsigc++-2.0.5 68
 MD5 10662f31c9be983522a9e54748c50069 files/digest-libsigc++-2.0.11 70
 MD5 c2eb227beae20aeebcd20a4f2c72612e files/digest-libsigc++-2.0.14 69
 MD5 ec7114fb42bbacbfc6e3b6a12358d03f files/digest-libsigc++-2.0.15 70
+MD5 869331ce881d79cadfeea8080a79d3c1 files/digest-libsigc++-2.0.16 70
 MD5 b1f9c8d8239349f2f8501d3ff425b77b files/gcc-3.4.patch 692
 MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDAITCEZCkKN40op4RAkTTAJ9+Ggh/Iy8KJDwLMWPcebwvgX08sQCffAq9
-mW5x6JkTf8Rpp735SH/9G98=
-=19gW
+iD8DBQFDA3uoEZCkKN40op4RAhbOAJ4gl3h2L1J8/wDWIliFMy657tndHwCeO7Gu
+e0ZpbYrtrjDWizNhsQeh6Jg=
+=3f4u
 -----END PGP SIGNATURE-----
