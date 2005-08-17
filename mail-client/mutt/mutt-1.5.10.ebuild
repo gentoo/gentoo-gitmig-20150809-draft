@@ -1,41 +1,38 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.9.ebuild,v 1.9 2005/08/17 20:03:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.10.ebuild,v 1.1 2005/08/17 20:03:48 agriffis Exp $
 
 inherit eutils flag-o-matic
 
-edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo-r2.bz2"
-compressed_patch="patch-${PV}.rr.compressed.gz"
-nntp_patch="patch-${PV}.vvv.nntp-gentoo.bz2"
-mbox_hook_patch="patch-1.5.6.dw.mbox-hook.1"
-header_cache_patch="mutt-cvs-header-cache.29"
-pgp_timeout_patch="patch-1.5.6.dw.pgp-timeout.1"
-assumed_charset_patch="patch-1.5.6.tt.assumed_charset.1.gz"
+patch_assumed_charset="patch-1.5.10.tt.assumed_charset.1.gz"
+patch_compressed="patch-${PV}.rr.compressed.gz"
+patch_mbox_hook="patch-1.5.6.dw.mbox-hook.1"
+patch_pgp_timeout="patch-1.5.6.dw.pgp-timeout.1"
+patch_imap_fcc_status="mutt-1.5.4-imap-fcc-status.patch"
+opt_patch_nntp="patch-${PV}.vvv.nntp-gentoo.bz2"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
-SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
+SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}i.tar.gz
 	!vanilla? (
-		http://dev.gentoo.org/~agriffis/dist/${edit_threads_patch}
-		http://www.emaillab.org/mutt/1.5/${assumed_charset_patch}
-		http://mutt.kiev.ua/download/${P}/${compressed_patch}
-		http://www.woolridge.ca/mutt/patches/${mbox_hook_patch}
+		http://www.emaillab.org/${PN}/${PV}/${patch_assumed_charset}
+		http://mutt.kiev.ua/download/${P}/${patch_compressed}
+		http://www.woolridge.ca/${PN}/patches/${patch_mbox_hook}
+		http://www.woolridge.ca/${PN}/patches/${patch_pgp_timeout}
+		http://www.plumlocosoft.com/software/download/${patch_imap_fcc_status}
 		nntp? (
-			http://dev.gentoo.org/~agriffis/dist/${nntp_patch}
+			http://dev.gentoo.org/~agriffis/dist/${opt_patch_nntp}
 			mirror://gentoo/mutt-1.5.7-mixmaster+nntp.patch
 		)
-		http://wwwcip.informatik.uni-erlangen.de/~sithglan/mutt/${header_cache_patch}
-		http://www.woolridge.ca/mutt/patches/${pgp_timeout_patch}
 	)"
-#	http://cedricduval.free.fr/mutt/patches/download/${edit_threads_patch}
-#	http://www.mutt.org.ua/download/${P}/${nntp_patch}
-IUSE="buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl slang smime ssl vanilla" # berkdb
+IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl slang smime ssl vanilla"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	gdbm?    ( sys-libs/gdbm )
+	!gdbm?   ( berkdb? ( >=sys-libs/db-4 ) )
 	slang?   ( >=sys-libs/slang-1.4.2 )
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
@@ -48,7 +45,6 @@ RDEPEND="nls? ( sys-devel/gettext )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
 	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
-#	!gdbm?   ( berkdb? ( >=sys-libs/db-4 ) )
 DEPEND="${RDEPEND}
 	net-mail/mailbase
 	sys-devel/autoconf
@@ -70,21 +66,20 @@ src_unpack() {
 	epatch ${FILESDIR}/mutt-1.5.9-sasl.patch
 
 	# disable sgml conversion since it fails with sgml2html
-	epatch ${FILESDIR}/mutt-1.5.9-nodoc.patch
+	epatch ${FILESDIR}/mutt-1.5.10-nodoc.patch
 
-	if ! use vanilla; then
-		epatch ${DISTDIR}/${compressed_patch}
-		epatch ${DISTDIR}/${edit_threads_patch}
-		epatch ${DISTDIR}/${mbox_hook_patch}
-		epatch ${DISTDIR}/${header_cache_patch}
-		epatch ${DISTDIR}/${pgp_timeout_patch}
-		epatch ${DISTDIR}/${assumed_charset_patch}
+	if ! use vanilla ; then
+		for p in ${!patch_*} ; do
+			epatch ${DISTDIR}/${!p}
+		done
+
 		if use nntp; then
-			epatch ${DISTDIR}/${nntp_patch}
+			epatch ${DISTDIR}/${opt_patch_nntp}
 			# Allow mutt to build with mixmaster and nntp both enabled
 			epatch ${DISTDIR}/mutt-1.5.7-mixmaster+nntp.patch
 		fi
 
+		rm -rf configure autom4te.cache
 		aclocal -I m4					|| die "aclocal failed"
 		autoheader						|| die "autoheader failed"
 		emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
@@ -119,8 +114,8 @@ src_compile() {
 	# hcache feature requires at least one database is in USE.
 	if use gdbm; then
 		myconf="${myconf} --enable-hcache --with-gdbm --without-bdb"
-#	elif use berkdb; then
-#		myconf="${myconf} --enable-hcache --with-bdb --without-gdbm"
+	elif use berkdb; then
+		myconf="${myconf} --enable-hcache --with-bdb --without-gdbm"
 	else
 		myconf="${myconf} --disable-hcache --without-gdbm --without-bdb"
 	fi
@@ -152,9 +147,8 @@ src_compile() {
 
 	if use slang; then
 		myconf="${myconf} --with-slang"
-		ewarn "If you want a transparent background, merge ${PN} with USE=-slang."
 	else
-		# --without-slang doesn't work;
+		# --without-slang won't work
 		# specify --with-curses if you don't want slang
 		# (26 Sep 2001 agriffis)
 		myconf="${myconf} --with-curses"
@@ -167,9 +161,6 @@ src_compile() {
 	fi
 
 	if ! use vanilla; then
-		# imap part of edit_threads patch
-		myconf="${myconf} $(use_enable imap imap-edit-threads)"
-
 		# rr.compressed patch
 		myconf="${myconf} --enable-compressed"
 

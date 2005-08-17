@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.57 2005/08/15 20:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.58 2005/08/17 20:03:48 agriffis Exp $
+
+*mutt-1.5.10 (17 Aug 2005)
+
+  17 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/mutt-1.5.10-nodoc.patch, mutt-1.4.2.1.ebuild, mutt-1.5.9.ebuild,
+  +mutt-1.5.10.ebuild:
+  Bump to 1.5.10 #102183. Add imap-fcc-status patch, suggested by Pedro
+  Algarvio. This patch is primarily useful for people that send mail with
+  Courier IMAP's outbox feature. Remove the edit_threads and header_cache
+  patches since these are now integrated into 1.5.10. Re-enable berkdb for
+  header caching; it didn't work in 1.5.9.
 
   15 Aug 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.9.ebuild:
   mutt-1.5.9 doesn't build with berkdb, so disable hcache unless USE=gdbm.

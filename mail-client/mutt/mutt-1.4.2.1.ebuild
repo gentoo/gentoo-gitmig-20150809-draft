@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.8 2005/08/11 22:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.9 2005/08/17 20:03:48 agriffis Exp $
 
 IUSE="cjk imap mbox nls slang ssl vanilla"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~mips"
+KEYWORDS="alpha hppa ~mips ppc sparc x86"
 
 pkg_setup() {
 	if ! use imap; then
