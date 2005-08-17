@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.12-r1.ebuild,v 1.2 2005/06/03 23:06:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.12-r1.ebuild,v 1.3 2005/08/17 00:27:50 vapier Exp $
 
 inherit eutils
 
@@ -59,6 +59,7 @@ src_install() {
 	dodoc Changelog
 
 	newinitd "${FILESDIR}"/quota.rc6 quota
+	newconfd "${FILESDIR}"/quota.confd quota
 
 	if use ldap ; then
 		insinto /etc/openldap/schema

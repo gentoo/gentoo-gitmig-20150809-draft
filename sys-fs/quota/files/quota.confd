@@ -1,0 +1,15 @@
+# /etc/init.d/quota
+
+# Run quotacheck ?
+RUN_QUOTACHECK="yes"
+
+# Options for quotacheck
+QUOTACHECK_OPTS="-avug"
+
+
+# Options for quotaon
+QUOTAON_OPTS="-avug"
+
+
+# Options for quotaoff
+QUOTAOFF_OPTS="-avug"
