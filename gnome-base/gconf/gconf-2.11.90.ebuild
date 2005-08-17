@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.11.90.ebuild,v 1.1 2005/08/17 01:38:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.11.90.ebuild,v 1.2 2005/08/17 01:42:23 leonardop Exp $
 
 inherit gnome2
 
@@ -37,6 +37,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	G2CONF="$(use_enable static) --enable-gtk"
+	kill_gconf
 }
 
 src_install() {
@@ -72,12 +73,6 @@ kill_gconf() {
 		/usr/bin/gconftool-2 --shutdown
 	fi
 	return 0
-
-}
-
-pkg_setup() {
-
-	kill_gconf
 
 }
 
