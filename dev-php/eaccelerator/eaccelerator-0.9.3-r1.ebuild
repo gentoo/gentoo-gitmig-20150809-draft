@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.3 2005/07/17 09:51:18 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.4 2005/08/17 08:01:04 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND="$DEPEND
 		!dev-php/ioncube_loaders
-		!dev-php/php-accelerator
 		!dev-php/PECL-apc"
 
 HTTPD_USER=root

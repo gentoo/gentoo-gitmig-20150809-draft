@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.16 2005/07/17 09:51:18 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.17 2005/08/17 08:01:04 sebastian Exp $
+
+  17 Aug 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  eaccelerator-0.9.3.ebuild, eaccelerator-0.9.3-r1.ebuild:
+  php-accelerator has been dropped.
 
   17 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
   eaccelerator-0.9.3-r1.ebuild:
