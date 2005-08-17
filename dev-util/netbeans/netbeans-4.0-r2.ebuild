@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r2.ebuild,v 1.1 2005/07/19 18:39:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-4.0-r2.ebuild,v 1.2 2005/08/17 21:05:02 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -215,8 +215,8 @@ src_unpack () {
 
 	cd ${S}/junit/external/
 	touch junit-3.8.1-api.zip
-	java-pkg_jar-from ${JUNIT}
 	unscramble_and_empty
+	java-pkg_jar-from ${JUNIT}
 
 	cd ${S}/tasklist/external/
 	unscramble_and_empty
@@ -404,5 +404,7 @@ function remove_unscrambling() {
 
 	xsltproc -o ${T}/out.xml ${FILESDIR}/emptyunscramble.xsl ${file} \
 		|| die "Failed to remove unscrambling from one of the build.xml files"
-	mv ${T}/out.xml ${file}
+
+	mv ${T}/out.xml ${file} \
+		|| die "Failed to create a build.xml file without unscrambling"
 }
