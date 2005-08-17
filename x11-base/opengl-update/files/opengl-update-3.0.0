@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0,v 1.3 2005/08/13 07:54:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-3.0.0,v 1.4 2005/08/17 21:51:02 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -48,8 +48,8 @@ Examples:
        This will setup things to use libGL.so from the nVidia drivers.
 
 WARNING: opengl-update is deprecated and is just a frontend to the opengl
-         eselect module.  A future version will drop support for the
-         opengl-update command.  Please see 'eselect opengl help'
+         eselect module.  In the future, opengl-update will be removed
+         from portage.  Please see 'eselect opengl help'
 
 FOO
 }
@@ -138,10 +138,18 @@ case ${ACTION} in
 		eselect opengl show
 	;;
 	old-implementation)
+		ewarn "opengl-update is deprecated and is just a frontend to the opengl"
+		ewarn "eselect module.  In the future, opengl-update will be removed"
+		ewarn "from portage.  Please see 'eselect opengl help'"
+
 		eselect opengl set --use-old
 		exit $?
 	;;
 	set-implementation)
+		ewarn "opengl-update is deprecated and is just a frontend to the opengl"
+		ewarn "eselect module.  In the future, opengl-update will be removed"
+		ewarn "from portage.  Please see 'eselect opengl help'"
+
 		if [[ ${USE_PROFILE_HEADERS} == "yes" ]] ; then
 			eselect opengl set ${NEW_GL_IMPLEM} --prefix="${PREFIX}" --dst-prefix="${DST_PREFIX}" --impl-headers
 		else
