@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.16 2005/08/17 18:42:36 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.17 2005/08/17 18:49:21 vivo Exp $
+
+  17 Aug 2005; Francesco Riosa <vivo@gentoo.org>
+  mysqlnavigator-1.4.2.ebuild:
+  stable on x86 mainly to remove 1.4.1 without remove the entire package
 
   17 Aug 2005; Francesco Riosa <vivo@gentoo.org>
   +files/mysqlnavigator-1.4.1-about.patch,
