@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.1.ebuild,v 1.10 2005/07/25 15:39:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.1.ebuild,v 1.11 2005/08/17 18:42:36 vivo Exp $
 
-inherit qt3
+inherit eutils qt3
 
 IUSE=""
 DESCRIPTION="Advanced Qt based front end to mysql"
@@ -17,6 +17,11 @@ DEPEND=">=dev-db/mysql-3.23.49
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-about.patch || die
+	epatch ${FILESDIR}/${P}-mysql.patch || die
+	#this permit to build against mysql >= 4.1.3       
+	epatch ${FILESDIR}/${PN}-1.4.2-mysql-gt-4.1.3.patch || die
 	cd ${S}/src/mysql
 	rm */*_moc.cpp
 }

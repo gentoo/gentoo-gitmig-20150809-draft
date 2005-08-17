@@ -1,0 +1,14 @@
+diff -ruN mysqlnavigator-1.4.1.orig/src/mysql/mainwindow/mainwindowslotschema.cxx mysqlnavigator-1.4.1/src/mysql/mainwindow/mainwindowslotschema.cxx
+--- mysqlnavigator-1.4.1.orig/src/mysql/mainwindow/mainwindowslotschema.cxx	2002-10-08 09:05:59.000000000 +0200
++++ mysqlnavigator-1.4.1/src/mysql/mainwindow/mainwindowslotschema.cxx	2005-07-11 15:34:14.000000000 +0200
+@@ -5,6 +5,10 @@
+ #include <qdatetime.h>
+ #include <qcursor.h>
+ 
++#define USE_OLD_FUNCTIONS
++
++#include <mysql.h>
++
+ #include <stdio.h>
+ 
+ #include "mainwindow.h"

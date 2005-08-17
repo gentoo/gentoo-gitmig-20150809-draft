@@ -1,0 +1,73 @@
+--- mysqlnavigator.orig/src/mysql/mainwindow/mainwindowslotshutdown.cxx	2002-03-05 05:13:22.000000000 +0100
++++ mysqlnavigator-1.4.2/src/mysql/mainwindow/mainwindowslotshutdown.cxx	2005-08-17 16:49:04.000000000 +0200
+@@ -8,8 +8,11 @@
+ 		
+ 	if(z == 1)
+ 		return;
+-		
++#if MYSQL_VERSION_ID>=40103		
++	if(mysql_shutdown(&mysql, SHUTDOWN_DEFAULT))
++#else
+ 	if(mysql_shutdown(&mysql))
++#endif
+ 	{
+ 		QMessageBox::critical(this, tr("MySQL Navigator"), QString::fromLocal8Bit(mysql_error(&mysql)));
+ 	}
+--- mysqlnavigator.orig/src/mysql/mainwindow/mainwindowslotschema.cxx	2002-10-07 10:07:24.000000000 +0200
++++ mysqlnavigator-1.4.2/src/mysql/mainwindow/mainwindowslotschema.cxx	2005-08-17 18:02:41.000000000 +0200
+@@ -505,6 +505,8 @@
+ 
+ 	bool z = FALSE;
+ 
++	char query[1024];
++
+ 	
+ 
+ 	QString sql = QInputDialog::getText(tr("MySQL Navigator"), tr("Please enter database name you will create."), QLineEdit::Normal, QString::null, &z, this );
+@@ -515,8 +515,18 @@
+ 
+ 	{
+ 
++#if MYSQL_VERSION_ID>=40103
++
++		sprintf (query, "CREATE DATABASE %s", sql.latin1());
++
++		if (mysql_query(&mysql, query) != 0)
++
++#else
++
+ 		if((mysql_create_db(&mysql, sql.latin1())))
+ 
++#endif
++
+ 		{
+ 
+ 			QMessageBox::critical(this, tr("MySQL Navigator"), QString::fromLocal8Bit(mysql_error(&mysql)));
+@@ -577,6 +579,8 @@
+ 
+ 	QString sql = database->text(0);
+ 
++	char query[1024];
++
+ 
+ 
+ 	if(database == NULL)
+@@ -605,8 +615,18 @@
+ 
+ 		
+ 
++#if MYSQL_VERSION_ID>=40103
++
++		sprintf (query, "DROP DATABASE %s", sql.latin1());
++
++		if (mysql_query(&mysql, query) != 0)
++
++#else
++
+ 		if((mysql_drop_db(&mysql, sql.latin1())))
+ 
++#endif
++
+ 		{
+ 
+ 			QMessageBox::critical(this, tr("MySQL Navigator"), QString::fromLocal8Bit(mysql_error(&mysql)));
