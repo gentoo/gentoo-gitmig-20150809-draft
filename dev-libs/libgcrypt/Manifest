@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bc7f9a9e6bc37a9a7f9289af4c3581e7 ChangeLog 8237
-MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
-MD5 7eaa2dbe7ef43fccc1bffa5214da04fa libgcrypt-1.2.1.ebuild 1034
-MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
+MD5 4e5086ca6645aed250079bd046fcb78c libgcrypt-1.2.1.ebuild 1032
 MD5 aac9d14d38568a9aab54928cc3e05a5c libgcrypt-1.1.94.ebuild 992
 MD5 dd3b6ee3caf7dc34c0ffa5758993c72a libgcrypt-1.2.0.ebuild 1050
+MD5 e04ce4b3ccafdf1cdc3e2069a75ac11c libgcrypt-1.1.12.ebuild 1123
+MD5 c5af61b35f87ab2709a517723c677100 ChangeLog 8322
+MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
 MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
 MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9d9FmdTrptrqvGERArbsAJ0WnBOxz558bq1wD5CPruTT/8DMngCffsFE
-+yGDCD8lfXXudEy/4nncsfA=
-=PeWp
------END PGP SIGNATURE-----
