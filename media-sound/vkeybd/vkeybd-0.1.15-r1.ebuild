@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.1 2005/07/18 17:58:19 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.2 2005/08/17 21:51:04 fvdpol Exp $
 
 IUSE="alsa oss ladcca"
 
@@ -32,10 +32,12 @@ src_compile() {
 	else
 		myconf="${myconf} USE_ALSA=0 USE_AWE=1 USE_MIDI=1"
 	fi
-	use ladcca && myconf="${myconf} USE_LADCCA=1"
 
-	use ladcca && sed -i "s/USE_LADCCA *=.*$/USE_LADCCA = 1/" ${S}/Makefile || \
-		die "Error altering Makefile"
+	if use ladcca ; then
+		myconf="${myconf} USE_LADCCA=1"
+		sed -i "s/USE_LADCCA *=.*$/USE_LADCCA = 1/" ${S}/Makefile || \
+			die "Error altering Makefile"
+	fi
 
 	make ${myconf} TCL_VERSION=$TCL_VERSION || die "Make failed."
 }
