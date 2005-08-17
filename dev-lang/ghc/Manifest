@@ -1,33 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc3fbd0dd8b83c728645c8669f38e35a ChangeLog 11477
+MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
+MD5 0d86c04351540d3ffaec2c4fff098a90 ghc-6.2.2.ebuild 5563
+MD5 4159ff00144d8d3d6f3fb0d0e0afcb51 ghc-6.4.ebuild 6089
+MD5 c1bc9a1d1132a93d270d044c806a2280 ChangeLog 11866
+MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+MD5 558c6b9e9b0e15185b69cdfe241dad9a files/ghc-updater 8775
+MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
+MD5 ffd472c0685cf2766ce6533265f9a3c9 files/ghc-6.4-powerpc.patch 908
 MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
-MD5 2e1bd1157c6d47093864b670d6b51a64 files/digest-ghc-6.2 65
-MD5 2e1bd1157c6d47093864b670d6b51a64 files/digest-ghc-6.2-r1 65
-MD5 0cc23d312b60d64e20735768503db1c6 files/digest-ghc-6.2.1-r1 67
 MD5 9e9c22452b545fd9ec1367155c15d8e2 files/digest-ghc-6.2.2 67
 MD5 75417bc4dea34cd08ea105457ccd3032 files/digest-ghc-6.4 65
-MD5 d4a4184d5dcf525047332f9c68e522f7 files/ghc-5.04.3-r1.patch 2717
 MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
-MD5 627087e51858d514520531cedbd372f8 files/ghc-6.2.1-linker.patch.bz2 658
-MD5 9c184505ec441675c94d47a3110fa754 files/ghc-6.2.documentation.patch 721
-MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
-MD5 c2e63b1796b9c089a23a07b0eb6e76a7 files/ghc-6.2.hardened.patch.bz2 362
-MD5 ffd472c0685cf2766ce6533265f9a3c9 files/ghc-6.4-powerpc.patch 908
-MD5 558c6b9e9b0e15185b69cdfe241dad9a files/ghc-updater 8775
-MD5 9da9270be8ac4d92d6a5c23fd519cc3c files/lndir.c 8050
-MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
-MD5 80f9ac24762d1342df58d731a756956d ghc-6.2-r1.ebuild 5190
-MD5 2852eaf66fdd3a9ae5fcf1082bb014b3 ghc-6.2.1-r1.ebuild 5794
-MD5 df7da96c59eed3d1177ed33b6d8ee37d ghc-6.2.2.ebuild 5497
-MD5 ea84406fb33d27987c0f7d51ece23975 ghc-6.2.ebuild 5007
-MD5 4159ff00144d8d3d6f3fb0d0e0afcb51 ghc-6.4.ebuild 6089
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0BPnI1lqEGTUzyQRAkXeAJ9gRpkXnTUGOGcVyXxLSe4l3CgRswCffxWj
-9kHgXt3gMTHK+M0ndW73K10=
-=/GXx
------END PGP SIGNATURE-----
