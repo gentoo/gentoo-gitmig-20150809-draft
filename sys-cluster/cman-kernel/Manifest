@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 deab45445c0e0050b0ccfdd7b1379dc0 ChangeLog 942
-MD5 2f59abb6b97f6dbcec1eba969f6802f8 cman-kernel-1.00.00.ebuild 1016
+MD5 57afb6bcf5500ffb46dd6b4b3354827f cman-kernel-1.00.00.ebuild 1040
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-cman-kernel-1.00.00 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDAxDzgMUyd/cdjWsRAp4OAJ9eyh2qTTSQ6w9V1iGXf9BOBYHT8wCdGKQN
-gEemDpgvNtk3NIipVcp6m+I=
-=ZFfT
+iD8DBQFDAx10gMUyd/cdjWsRAleBAJ9Lp/dcxt3c6cBrn80YTv2sw7OMCgCfUcDm
+9LX6EUQ0sE9yCEGvcmr3pas=
+=Ouow
 -----END PGP SIGNATURE-----
