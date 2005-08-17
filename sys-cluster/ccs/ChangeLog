@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/ccs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.16 2005/08/17 10:33:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.17 2005/08/17 10:44:13 xmerlin Exp $
+
+*ccs-1.00.00-r1 (17 Aug 2005)
+
+  17 Aug 2005; Christian Zoffoli <xmerlin@gentoo.org> +ccs-1.00.00-r1.ebuild,
+  -ccs-1.00.00.ebuild:
+  fixed init file installation.
 
   17 Aug 2005; Christian Zoffoli <xmerlin@gentoo.org> ccs-1.00.00.ebuild:
   ebuild cleanup.
