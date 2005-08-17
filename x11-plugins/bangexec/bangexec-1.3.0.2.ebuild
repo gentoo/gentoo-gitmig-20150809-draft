@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.3.0.2.ebuild,v 1.2 2005/07/14 23:24:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/bangexec-1.3.0.2.ebuild,v 1.3 2005/08/17 17:35:24 gothgirl Exp $
+
+inherit eutils
 
 DESCRIPTION="GAIM Shell OutPut Plugin"
 HOMEPAGE="http://bard.sytes.net/bangexec/"

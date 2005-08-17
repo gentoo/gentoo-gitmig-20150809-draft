@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 bf9b9323a5e4317b5af3bb776cdc09ef ChangeLog 643
 MD5 7380bd69545790ad59d926f438fc4a90 bangexec-1.1.4.ebuild 567
-MD5 9d348f625785580612180949797d460a bangexec-1.3.0.2.ebuild 734
+MD5 dc2f0aa35fc2859508b29c6d01d658b6 bangexec-1.3.0.2.ebuild 750
 MD5 4b99f359473ae71ab533a344b914ac8b bangexec-1.3.0.ebuild 732
+MD5 6e02fad382bd1a9b6254edec6fa160aa metadata.xml 328
 MD5 59b4546351bd63b971a748fbc2e2d4b7 files/digest-bangexec-1.1.4 67
 MD5 fa222649cec6e1fb53dada7d114ef0f2 files/digest-bangexec-1.3.0 67
 MD5 ccb652f4ad08f18b75286a0c93f63e73 files/digest-bangexec-1.3.0.2 69
-MD5 6e02fad382bd1a9b6254edec6fa160aa metadata.xml 328
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1vRJI1lqEGTUzyQRAvLPAKCzSgVNXzNuGKKPM5vKO/yAggXsAACfbZOM
-5cPpVtAdIdcrOjcC2hwmzTw=
-=qlvY
------END PGP SIGNATURE-----
