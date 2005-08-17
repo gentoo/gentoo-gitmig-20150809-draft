@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r6.ebuild,v 1.2 2005/08/15 20:50:28 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.6-r6.ebuild,v 1.3 2005/08/17 17:52:05 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
@@ -293,7 +293,8 @@ src_install() {
 
 	# Fix firefox-config and install it
 	sed -i -e "s|/usr/lib/firefox-${PV}|${MOZILLA_FIVE_HOME}|g
-		s|/usr/include/firefox-${PV}|${MOZILLA_FIVE_HOME}/include|g" \
+		s|/usr/include/firefox-${PV}|${MOZILLA_FIVE_HOME}/include|g
+		s|\(echo -L.*\)\($\)|\1 -Wl,-R${MOZILLA_FIVE_HOME}\2" \
 		${S}/build/unix/firefox-config
 	exeinto ${MOZILLA_FIVE_HOME}
 	doexe ${S}/build/unix/firefox-config
