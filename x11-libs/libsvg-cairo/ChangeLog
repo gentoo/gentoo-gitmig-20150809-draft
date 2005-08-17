@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.13 2005/08/17 08:37:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.14 2005/08/17 15:02:39 compnerd Exp $
+
+  17 Aug 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  libsvg-cairo-0.1.6.ebuild:
+  Fixing version changes on the depends that never got saved.
 
   17 Aug 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   libsvg-cairo-0.1.4.ebuild, libsvg-cairo-0.1.5.ebuild,
