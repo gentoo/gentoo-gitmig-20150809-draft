@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.8 2005/08/13 03:54:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.9 2005/08/17 00:36:34 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -683,6 +683,7 @@ setup_flags() {
 
 	# Lock glibc at -O2 -- linuxthreads needs it and we want to be
 	# conservative here
+	filter-flags -O?
 	append-flags -O2
 }
 
