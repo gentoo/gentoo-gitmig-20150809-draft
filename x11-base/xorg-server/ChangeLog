@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.25 2005/08/16 20:54:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.26 2005/08/17 18:48:54 spyderous Exp $
+
+  17 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xorg-server-fbmmx-local.patch, xorg-server-0.99.1-r3.ebuild:
+  (fd.o #4073) Fix compilation failures at fbmmx.c. Patch from Diego Pettenó
+  <flameeyes@gentoo.org>.
 
   16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r3.ebuild:
