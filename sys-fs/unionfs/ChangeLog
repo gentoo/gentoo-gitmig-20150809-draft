@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.14 2005/08/11 08:59:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.15 2005/08/17 17:59:42 malc Exp $
+
+  17 Aug 2005; Malcolm Lashley <malc@gentoo.org>
+  +files/unionfs-1.0.13-amd64.patch, unionfs-1.0.13.ebuild:
+  #102782 - remove patch which is no longer required, add new general patch to
+  fix typecasting in debug statements on amd64
 
 *unionfs-1.0.13 (11 Aug 2005)
 
