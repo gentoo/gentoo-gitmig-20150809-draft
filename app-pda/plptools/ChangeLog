@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/plptools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/ChangeLog,v 1.12 2005/05/06 09:32:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/ChangeLog,v 1.13 2005/08/17 12:52:57 greg_g Exp $
+
+*plptools-0.13 (17 Aug 2005)
+
+  17 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/plptools-0.13-gcc.patch, +plptools-0.13.ebuild:
+  New version, which fixes bug #62245.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> plptools-0.12.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

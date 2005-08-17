@@ -1,23 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af13aa51f3ecef135487262aa096fa4e plptools-0.12.ebuild 1010
-MD5 b854d97359695ba2b16d3e51219d3264 plptools-0.11-r1.ebuild 862
-MD5 c387ceb6421b35a45048944ad6fd5a9e plptools-0.11.ebuild 859
-MD5 bb821ce857c34867a95a1583779cd97b ChangeLog 1387
 MD5 8f1a395f7ca3054f5cd79687dbda0881 metadata.xml 216
-MD5 b3ce73e6781d2293d40d0048fcb48c84 files/plptools-0.11-gentoo.patch 516
+MD5 b854d97359695ba2b16d3e51219d3264 plptools-0.11-r1.ebuild 862
+MD5 b10ead17b91a28a727d632ee3e439909 plptools-0.13.ebuild 1122
+MD5 ecba7a39b1fc6378099daebc22a85a4a ChangeLog 1562
+MD5 c387ceb6421b35a45048944ad6fd5a9e plptools-0.11.ebuild 859
+MD5 af13aa51f3ecef135487262aa096fa4e plptools-0.12.ebuild 1010
 MD5 ab42a6f1d4c18d5eee94ce1cb6ba971d files/psion 1113
+MD5 1534eb395b69672eeca9811a91419817 files/plptools-0.12-gentoo.patch 446
+MD5 210a1eb511ed63dfceff6031b11dc487 files/plptools-0.13-gcc.patch 963
+MD5 d96984b93d3435d81a37b8b0f6bed2bf files/digest-plptools-0.12 65
+MD5 ada7c64a2c3655d40ddb78570ac41671 files/digest-plptools-0.11 65
+MD5 2f6fe881ef5cb577c7b28b43cf4ae3c3 files/digest-plptools-0.13 66
 MD5 269a36c59ac1b22d516036062c4c1d97 files/plptools-0.12-assert.h.patch 1024
+MD5 b3ce73e6781d2293d40d0048fcb48c84 files/plptools-0.11-gentoo.patch 516
 MD5 26b69a1efa7dd33edd7beb83ba2b15cd files/psion.conf 94
 MD5 ada7c64a2c3655d40ddb78570ac41671 files/digest-plptools-0.11-r1 65
-MD5 ada7c64a2c3655d40ddb78570ac41671 files/digest-plptools-0.11 65
-MD5 d96984b93d3435d81a37b8b0f6bed2bf files/digest-plptools-0.12 65
-MD5 1534eb395b69672eeca9811a91419817 files/plptools-0.12-gentoo.patch 446
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFCeznsI1lqEGTUzyQRAgtoAJ9dxFUQLwf8/E5ogvag6l0bWdr6SQCXZqCv
-uZtfP+uWL6yvGE7ADYXRbg==
-=e013
------END PGP SIGNATURE-----

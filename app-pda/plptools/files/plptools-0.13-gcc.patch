@@ -1,0 +1,27 @@
+diff -Nur plptools-0.13.orig/lib/Enum.h plptools-0.13/lib/Enum.h
+--- plptools-0.13.orig/lib/Enum.h	2005-04-16 17:21:47.000000000 +0200
++++ plptools-0.13/lib/Enum.h	2005-08-17 13:57:14.000000000 +0200
+@@ -264,6 +264,8 @@
+     }
+ };
+ 
++template<typename E> typename Enum<E>::sdata Enum<E>::staticData;
++
+ /**
+  * Helper macro to construct an enumeration wrapper Enum<E> for
+  * a specific enum type.
+@@ -303,12 +305,12 @@
+   * data for this Enumeration wrapper.				
+   */								
+ #define ENUM_DEFINITION(EnumName, initWith)			\
+-template < EnumName >  Enum< EnumName >::sdata Enum< EnumName >::staticData;	\
++template Enum< EnumName >::sdata Enum< EnumName >::staticData;	\
+ /**								\
+   * actual definition of the constructor for the static data.	\
+   * This is called implicitly by the definition above.		\
+   */								\
+-Enum<EnumName>::sdata::sdata() :				\
++template <> Enum<EnumName>::sdata::sdata() :				\
+ name(#EnumName),defaultValue(initWith)
+ 
+ /**
