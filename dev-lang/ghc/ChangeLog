@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.61 2005/05/20 15:04:18 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.62 2005/08/17 10:26:09 kosmikus Exp $
+
+  17 Aug 2005; Andres Loeh <loeh@gentoo.org> -files/ghc-5.04.3-r1.patch,
+  -files/ghc-6.2.1-linker.patch.bz2, -files/ghc-6.2.documentation.patch,
+  -files/ghc-6.2.hardened.patch.bz2, -files/lndir.c, -ghc-6.2.ebuild,
+  -ghc-6.2-r1.ebuild, -ghc-6.2.1-r1.ebuild, ghc-6.2.2.ebuild:
+  Removed ~amd64 keyword for ghc-6.2.2, because ghc-6.2.2 is broken on this
+  arch. Cleaned up old versions.
 
   20 May 2005; <duncan@gentoo.org> ghc-6.2.2.ebuild:
   Add ~sparc to KEYWORDS and disable GHCi support on sparc since it does not
