@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.27 2005/08/16 14:34:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.28 2005/08/17 15:45:28 ka0ttic Exp $
+
+*lighttpd-1.4.0.20050817.1210 (17 Aug 2005)
+
+  17 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/lighttpd-1.4.0.20050817.1210-fix-config-segv.diff,
+  +lighttpd-1.4.0.20050817.1210.ebuild:
+  Added 1.4.0 pre-release for folks to test/play with.
 
   16 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
   -files/lighttpd-1.3.16-zope-deserves-lovins-too.diff,
