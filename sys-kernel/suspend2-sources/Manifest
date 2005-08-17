@@ -3,13 +3,15 @@ MD5 2b429ae0891c541752a19e0fd7424c9b suspend2-sources-2.6.12-r4.ebuild 2109
 MD5 8bded6a42fa287daafcd56e7321d1a16 suspend2-sources-2.6.12-r1.ebuild 2108
 MD5 83edc0c7b4c66c7474a126bf93908df8 suspend2-sources-2.6.12-r3.ebuild 2109
 MD5 af3a2dc84edfa599714c447ccd2b58a2 suspend2-sources-2.6.12.ebuild 1965
-MD5 f0af3edb5db26ae6260add80799eae39 ChangeLog 1142
+MD5 d10401e6d9d972e8b3ea19466c027e6a ChangeLog 1336
+MD5 6de3f53a09fc1b16a6965fef6cfdc70f suspend2-sources-2.6.12-r5.ebuild 2109
 MD5 e40cb3df546efa5003fe3778c5a50854 metadata.xml 275
 MD5 320c41493bbe3f054a0a90d92c98e67f files/linux-2.6.12-try_to_freeze.patch 3190
 MD5 2c8a57cd0e140e095595b6ba9e57cead files/digest-suspend2-sources-2.6.12-r1 310
 MD5 b62a3f98230d6a6c2da3d0373b15c073 files/digest-suspend2-sources-2.6.12-r2 310
 MD5 8458667412a03e74ce0536c1bf562f87 files/digest-suspend2-sources-2.6.12-r3 312
 MD5 5a18408a59f2e14d821454f4ab158643 files/digest-suspend2-sources-2.6.12-r4 312
+MD5 a52b2429f74b0629c13f2f028cbd4682 files/digest-suspend2-sources-2.6.12-r5 312
 MD5 2c13f91d861547f897bd8bc3e4d7e9cb files/digest-suspend2-sources-2.6.12 310
 MD5 2b6c45a5cc42e34edf11954e71a95815 files/4306_dm-bbr-create_workqueue.patch 548
 MD5 0b4371d982e38217edb8af1023bb4803 files/linux-2.6.12-vesafb-tng-suspend2.patch 633
