@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.7c.ebuild,v 1.2 2005/08/16 20:08:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.7c.ebuild,v 1.3 2005/08/17 05:30:29 mr_bones_ Exp $
 
 inherit eutils linux-mod
 
@@ -37,7 +37,7 @@ pkg_setup() {
 		saa7127(extra:${S}/driver)
 		cx25840(extra:${S}/driver)"
 	linux_chkconfig_present FB && MODULE_NAMES="${MODULE_NAMES}"
-	
+
 	einfo "Unsupported development ebuild"
 }
 
@@ -50,7 +50,7 @@ src_unpack() {
 	sed -e "s:^KERNVER = .*:KERNVER = ${KV_FULL}:g" \
 		-i ${S}/driver/Makefile2.* || die "sed failed"
 
-	# This powerpc patch patches the source of the driver to disable DMA on ppc, 
+	# This powerpc patch patches the source of the driver to disable DMA on ppc,
 	# instead PIO is used. Also, it force enables -fsigned-char and does not
 	# build some modules that contain x86 asm.
 
@@ -111,10 +111,10 @@ pkg_postinst() {
 	einfo "3) Then perform a 'update-modules'."
 	echo
 	# The MCE versions of the PVR cards come without remote control because (I
-	# assume) a remote control is included in Windows Media Center Edition. It 
-	# is probably a good idea to just say that if your package comes with a 
-	# remote then emerge lirc. Lirc should build all drivers anyway. 
-	# 
+	# assume) a remote control is included in Windows Media Center Edition. It
+	# is probably a good idea to just say that if your package comes with a
+	# remote then emerge lirc. Lirc should build all drivers anyway.
+	#
 	# einfo "To get the ir remote working, you'll need to emerge lirc"
 	# einfo "with the following set:"
 	# einfo "LIRC_OPTS=\"--with-x --with-driver=hauppauge --with-major=61 "
