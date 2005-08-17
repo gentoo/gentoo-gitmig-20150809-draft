@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.41 2005/08/11 17:06:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.42 2005/08/17 15:54:30 ka0ttic Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  17 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  portage-2.1.0_alpha20050718.ebuild:
+  Marked ~mips.
 
 *portage-2.1.0_alpha20050718 (11 Aug 2005)
 

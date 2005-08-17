@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.0_alpha20050718.ebuild,v 1.2 2005/08/11 19:03:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.0_alpha20050718.ebuild,v 1.3 2005/08/17 15:54:30 ka0ttic Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gentoo.org"
 RESTRICT=""
 
 #KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5
