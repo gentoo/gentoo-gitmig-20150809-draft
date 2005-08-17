@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.11.1.ebuild,v 1.1 2005/08/17 15:31:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.11.1.ebuild,v 1.2 2005/08/17 17:08:40 leonardop Exp $
 
 inherit gnome2
 
@@ -31,6 +31,8 @@ pkg_setup() {
 	G2CONF="$(use_enable static)"
 }
 
-src_install() {
-	gnome2_src_install _sklocalstatedir=${D}/var/lib/scrollkeeper
+src_unpack() {
+	unpack ${A}
+
+	gnome2_omf_fix ${S}/docs/Makefile.in
 }
