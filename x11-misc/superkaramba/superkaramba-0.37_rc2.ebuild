@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.37_rc2.ebuild,v 1.1 2005/08/15 09:35:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.37_rc2.ebuild,v 1.2 2005/08/17 10:21:02 greg_g Exp $
 
 inherit kde
 
@@ -23,8 +23,7 @@ S="${WORKDIR}/${PN}"
 need-kde 3.2
 
 src_compile() {
-	# hack, until the configure script supports a switch
-	use xmms || export ac_cv_have_xmms=no
+	local myconf="$(use_with xmms)"
 
 	kde_src_compile
 }
