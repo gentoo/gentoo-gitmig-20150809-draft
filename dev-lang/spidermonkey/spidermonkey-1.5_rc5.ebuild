@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.9 2005/02/19 12:20:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc5.ebuild,v 1.10 2005/08/17 03:12:23 squash Exp $
 
 MY_PV="${PV/_/-}"
 DESCRIPTION="Stand-alone JavaScript C library"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/js/js-${MY_PV}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="sparc x86"
 IUSE=""
 
 DEPEND=""

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 67a5eefa02493c7e454b8c6c69ba7c79 ChangeLog 1499
-MD5 b0a39d97a54b44ecd77f8b5671cd7fdd spidermonkey-1.5_rc6.ebuild 1147
-MD5 58a66a4afd410f29e7507a837e4a12e6 spidermonkey-1.5_rc5.ebuild 795
+MD5 fcf506eeef4c52d110c89ccf778faa6b ChangeLog 1604
+MD5 92316cef417fab365401f2ce9d8f7394 spidermonkey-1.5_rc5.ebuild 802
 MD5 15f3923dfe0861bb637f0070debeb4e7 spidermonkey-1.5_rc6-r1.ebuild 1302
-MD5 432f897c13753f70b1dea5c066c10ac1 files/spidermonkey-1.5_rc6-va_copy-fix.patch 1129
-MD5 8e216cdd6972fcc5206162ef5f0a9702 files/digest-spidermonkey-1.5_rc6-r1 64
+MD5 b0a39d97a54b44ecd77f8b5671cd7fdd spidermonkey-1.5_rc6.ebuild 1147
 MD5 e7bfb72073e1ade3470d60ba93042804 files/digest-spidermonkey-1.5_rc5 63
 MD5 8e216cdd6972fcc5206162ef5f0a9702 files/digest-spidermonkey-1.5_rc6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7m9zcsIHjyDViGQRApWrAKDYj1fj4ZyF518lnvjUdc5HUUtgEgCbBhMb
-DQAlgrLwaSWIDycEPv2OBds=
-=gbFx
------END PGP SIGNATURE-----
+MD5 8e216cdd6972fcc5206162ef5f0a9702 files/digest-spidermonkey-1.5_rc6-r1 64
+MD5 432f897c13753f70b1dea5c066c10ac1 files/spidermonkey-1.5_rc6-va_copy-fix.patch 1129

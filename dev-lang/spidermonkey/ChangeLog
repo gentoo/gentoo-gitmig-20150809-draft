@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.9 2005/08/01 18:52:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.10 2005/08/17 03:12:23 squash Exp $
+
+  17 Aug 2005; Josh Grebe <squash@gentoo.org> spidermonkey-1.5_rc5.ebuild:
+  GOod on sparc, bug #89510
 
   01 Aug 2005; Joseph Jezak <josejx@gentoo.org>
   spidermonkey-1.5_rc6-r1.ebuild:
