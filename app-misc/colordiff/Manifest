@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9c7a775b72ac9e8a0c69c4393c0412c0 colordiff-1.0.3.ebuild 694
 MD5 b596c9b0607492f0220562001e9b0522 colordiff-1.0.5.ebuild 816
-MD5 33dcf83936b316f9797508e2271ebf50 colordiff-1.0.5-r2.ebuild 1175
+MD5 7fead49614548cb54202926293647604 colordiff-1.0.5-r2.ebuild 1174
 MD5 6910173c184c33c6bd6a597850f05c71 colordiff-1.0.4.ebuild 782
-MD5 33cf0ae2f86c722b6155ae87d02a1717 ChangeLog 5335
+MD5 390492d603e5d2d06a533ce57b01d97c ChangeLog 5438
 MD5 8114f79f8735648770d8f37c32861c88 metadata.xml 252
 MD5 c2d6494ef389461d2fdfdce78184e4da files/digest-colordiff-1.0.3 66
 MD5 aacbfa4b314f437baac1ee478ff3996a files/digest-colordiff-1.0.4 66
 MD5 bfff6fd1ace0929c4d81692c93b0eaee files/digest-colordiff-1.0.5 66
 MD5 bfff6fd1ace0929c4d81692c93b0eaee files/digest-colordiff-1.0.5-r2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+JqHEZCkKN40op4RAoIfAJsGmZnFuV94LlWND+ll+2XIqD5sPQCfQemJ
-BtYV7owNtc6NvSkuTFims5k=
-=IKwE
------END PGP SIGNATURE-----
