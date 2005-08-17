@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.444 2005/08/16 01:41:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.445 2005/08/17 01:36:12 vapier Exp $
+
+  17 Aug 2005; Mike Frysinger <vapier@gentoo.org> gcc-3.3.6.ebuild,
+  gcc-3.4.4.ebuild:
+  Add a patch for arm and one for m68k, a fix for an infinite loop in gcc
+  #102244, and fixes for canadian cross-compiling a native compiler.
 
   16 Aug 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.1.ebuild:
   Update 4.0.1's patchset.  Dropped a patch that caused issues on PPC.  Fixes
