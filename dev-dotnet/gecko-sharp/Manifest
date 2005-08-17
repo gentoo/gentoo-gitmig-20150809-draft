@@ -1,24 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 7ce28bb3a53b6dd66f2dd27fdb116e8e gecko-sharp-0.7-r1.ebuild 1267
 MD5 b066a0a800c3aa974941a7c76abc2c57 gecko-sharp-0.5-r2.ebuild 747
 MD5 d27402ee4b50cb8f1dc0b545c1694b04 gecko-sharp-0.6.ebuild 892
+MD5 1ee07e9f4ac2e44cf6d379ffeaaba880 ChangeLog 4573
+MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+MD5 7ce28bb3a53b6dd66f2dd27fdb116e8e gecko-sharp-0.7-r1.ebuild 1267
 MD5 78064d7fec0828e184e83b4a2b9b82e5 gecko-sharp-0.10.ebuild 1286
-MD5 c915be29dee139fce817ccd9b941d5ef ChangeLog 4468
-MD5 a23fed44e980c33f3c407d9a75898c9e gecko-sharp-0.7.ebuild 990
-MD5 9aa313387703e02ad1bcddcde0729a66 files/digest-gecko-sharp-0.6 67
 MD5 41db66016dd18480802fc0e658a04746 files/digest-gecko-sharp-0.5-r2 67
+MD5 9aa313387703e02ad1bcddcde0729a66 files/digest-gecko-sharp-0.6 67
 MD5 54b9bdcc1876fbeb916b8a5fb29adaa2 files/gecko-sharp-0.7-1.9.3-compat.diff 698
-MD5 14676f9b1811b8d166a7749bae1daa52 files/gecko-sharp-webshot-fix.patch 386
-MD5 e1474f95b8a6ffc1af4ec208a4bab724 files/digest-gecko-sharp-0.10 72
 MD5 a38f4e44ece71af1b0528ace678cb4d5 files/digest-gecko-sharp-0.7-r1 67
-MD5 a38f4e44ece71af1b0528ace678cb4d5 files/digest-gecko-sharp-0.7 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCureYQcyUawK/P5kRAgJSAJ9Y5mG1WAGoPRsrVqrIOM6btltsuwCfY7wj
-CcHIGL/wQPLyslOAUuVkXa4=
-=WBQB
------END PGP SIGNATURE-----
+MD5 e1474f95b8a6ffc1af4ec208a4bab724 files/digest-gecko-sharp-0.10 72
+MD5 14676f9b1811b8d166a7749bae1daa52 files/gecko-sharp-webshot-fix.patch 386
