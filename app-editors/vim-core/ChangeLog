@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.169 2005/08/17 20:50:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.170 2005/08/17 22:06:30 agriffis Exp $
+
+  17 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  vim-core-7.0_alpha20050809.ebuild:
+  Mark -alpha since varargs stuff is broken
 
 *vim-core-7.0_alpha20050817 (17 Aug 2005)
 
