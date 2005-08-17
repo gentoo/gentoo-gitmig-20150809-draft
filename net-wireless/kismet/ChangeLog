@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.76 2005/08/16 21:34:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.77 2005/08/17 14:22:21 brix Exp $
+
+  17 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  -files/kismet-2005.04.1-conf.d, -files/kismet-2005.04.1-init.d,
+  -files/kismet-2005.06.1-conf.d, -files/kismet-2005.06.1-init.d,
+  -files/kismet-2005.07.1-conf.d, -files/kismet-2005.07.1-init.d,
+  -files/kismet-2005.07.1a-conf.d, -files/kismet-2005.07.1a-init.d,
+  -kismet-2005.04.1.ebuild, -kismet-2005.04.1-r2.ebuild,
+  -kismet-2005.06.1.ebuild, -kismet-2005.07.1.ebuild,
+  -kismet-2005.07.1a.ebuild:
+  Removed vulnerable versions, bug #102702.
 
   16 Aug 2005; Jory A. Pratt <anarchy@gentoo.org> kismet-2005.08.1.ebuild:
   PPC stable wrt bug #102702
