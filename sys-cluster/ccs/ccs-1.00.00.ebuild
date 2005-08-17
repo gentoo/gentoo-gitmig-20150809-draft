@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-1.00.00.ebuild,v 1.2 2005/07/01 09:57:02 dholm Exp $
-
-inherit linux-mod
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-1.00.00.ebuild,v 1.3 2005/08/17 10:33:41 xmerlin Exp $
 
 CLUSTER_VERSION="1.00.00"
 DESCRIPTION="cluster configuration system to manage the cluster config file"
@@ -27,9 +25,7 @@ RDEPEND=">=sys-cluster/magma-1.00.00
 S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN}"
 
 src_compile() {
-	check_KV
-
-	./configure --kernel_src=${KERNEL_DIR} || die
+	./configure || die
 	emake || die
 }
 
