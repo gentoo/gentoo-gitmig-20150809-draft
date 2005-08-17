@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.8.1.ebuild,v 1.1 2005/08/11 22:30:32 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.8.1.ebuild,v 1.2 2005/08/17 11:48:58 dams Exp $
 
 DESCRIPTION="Static HTML photo album generator"
 HOMEPAGE="http://www.zarb.org/~gc/html/booh.html"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="gtk transcode encode exif"
 
-DEPEND=">=dev-lang/ruby-1.8.2
+DEPEND=">=ruby-gtk2-0.12.0
+	>=dev-lang/ruby-1.8.2
 	>=dev-ruby/ruby-gettext-0.8.0
 	gtk? ( >=dev-ruby/ruby-gtk2-0.12.0
 	>=x11-libs/gtk+-2.6.0 )
