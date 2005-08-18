@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.5 2005/08/18 17:38:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.6 2005/08/18 17:40:45 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -143,7 +143,7 @@ RDEPEND="${RDEPEND}
 		>=app-accessibility/dasher-3.2.15
 		>=app-accessibility/gnome-mag-0.12.1
 		>=app-accessibility/gnome-speech-0.3.7
-		>=app-accessibility/gok-1.0.5 
+		>=app-accessibility/gok-1.0.5
 		>=app-accessibility/gnopernicus-0.11.4 )"
 
 # Development tools
