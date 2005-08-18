@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c7bb5518eeda8ee4bbc5c795faf73e4a ChangeLog 2001
-MD5 22534d0c72fe6746d8d0cdbf5ad72eb6 yacc-1.9.1-r2.ebuild 1538
-MD5 c5a221a78a10f6156ea9ddb2ade30598 files/yacc-1.9.1-ia64.patch 504
+MD5 9f6eb07f22fb32af7ef2a43dd7d22a75 yacc-1.9.1-r2.ebuild 1544
+MD5 15bc2d9cb295526fc915b650d71c4fd9 ChangeLog 2092
 MD5 afeab71394d9c421389458f63b2cb173 files/digest-yacc-1.9.1-r2 60
 MD5 df645d0e6382050201af35e3002dfc5b files/mkstemp.patch 413
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfKWHjUHll2nfF60RAmmtAJ41F+byEOlkoslF8gnOeosP6fA8CgCeI4Wg
-syY+cSxMR///ICclANI4RCQ=
-=GSaR
------END PGP SIGNATURE-----
+MD5 c5a221a78a10f6156ea9ddb2ade30598 files/yacc-1.9.1-ia64.patch 504

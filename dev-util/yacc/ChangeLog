@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/yacc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.15 2005/05/07 11:23:04 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.16 2005/08/18 22:55:37 matsuu Exp $
+
+  18 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> yacc-1.9.1-r2.ebuild:
+  Stable on sh.
 
   07 May 2005; Elfyn McBratney <beu@gentoo.org> yacc-1.9.1-r2.ebuild:
   Add a more descriptive, er, DESCRIPTION - bug #85712.
