@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1391 2005/08/18 07:16:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1392 2005/08/18 09:40:54 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -564,7 +564,6 @@ media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
-media-video/ffmpeg:dts - Enables libdts (5.1 surround sound audio) support
 media-video/ffmpeg:network - Enables network streaming support
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/gxine:nsplugin - Builds plugins for Netscape compatible browsers
@@ -584,7 +583,6 @@ media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags
-media-video/mplayer:dts	- Enables libdts (5.1 surround sound audio) support
 media-video/mplayer:edl - Enables usage of Edit Decision Lists
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
 media-video/mplayer:live - Enables live.com streaming media support
@@ -601,7 +599,6 @@ media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/nvidia-glx:dlloader - Enable dynamic module loader instead of ELF loader.  Installs nvidia_drv.so instead of nvidia_drv.o.
 media-video/realplayer:nsplugin - Builds plugins for Netscape compatible browsers
-media-video/thoggen:dts - Enables libdts support
 media-video/transcode:fame - Enables libfame support
 media-video/transcode:lzo - Enables LZO compression support
 media-video/transcode:mjpeg - Enables mjpegtools support
@@ -613,7 +610,6 @@ media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
 media-video/vlc:cdio - Enables libcdio support for cd interaction
 media-video/vlc:corba - Enables corba interface support
 media-video/vlc:daap - Enables DAAP shares services discovery support
-media-video/vlc:dts - Enables DTS audio support
 media-video/vlc:freetype - Enables freetype font support
 media-video/vlc:httpd - Enables a web based interface for vlc
 media-video/vlc:live - Enables LIVE.com support
