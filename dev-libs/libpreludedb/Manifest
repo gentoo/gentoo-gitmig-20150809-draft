@@ -1,6 +1,16 @@
-MD5 14795c76abdfce8569af1688e09d82b8 libpreludedb-0.9.0_rc8.ebuild 1692
-MD5 ac0ae275db0aadc9d5e67f065de536da ChangeLog 1493
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 968502da3f1870d81f933284e971bc2e libpreludedb-0.9.0_rc12.ebuild 1690
+MD5 44e3ec2eaa550a3d93f7d98df668d0d7 ChangeLog 1664
 MD5 46a99e432c86964e317f92a77160a836 metadata.xml 256
 MD5 500c7521096a4b30f7c1039c4b62d992 libpreludedb-0.9.0_rc10.ebuild 1693
 MD5 0e61f3547ab245ac74d50a6f9fc32157 files/digest-libpreludedb-0.9.0_rc10 75
-MD5 ed1e21f932f17324907946ed721261f0 files/digest-libpreludedb-0.9.0_rc8 74
+MD5 e850f2b2c16b8d27e059ca02f21d7481 files/digest-libpreludedb-0.9.0_rc12 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBOuLEZCkKN40op4RAtfkAKCZXJLSrP2SNy12R/SYUpTOVCXiqwCeIW25
+EIO+//UtyhGGHVuNwkApBNs=
+=AmA9
+-----END PGP SIGNATURE-----
