@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.40 2005/08/15 18:42:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.41 2005/08/18 17:13:00 cardoe Exp $
+
+*cairo-0.9.2-r1 (18 Aug 2005)
+
+  18 Aug 2005; Doug Goldstein <cardoe@gentoo.org> -cairo-0.9.2.ebuild,
+  +cairo-0.9.2-r1.ebuild:
+  Added glitz support back to the Cairo 0.9.x branch
 
 *cairo-0.9.2 (15 Aug 2005)
 
