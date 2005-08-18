@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.3 2005/08/17 04:17:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.4 2005/08/18 06:58:33 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -36,8 +36,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-libs/libIDL-0.8.6
 	>=gnome-base/orbit-2.12.2
 
-	>=gnome-base/gnome-keyring-0.4.3"
-#	>=gnome-extra/gnome-keyring-manager-2.11.1
+	>=gnome-base/gnome-keyring-0.4.3
+	>=gnome-extra/gnome-keyring-manager-2.11.1"
 
 #	>=gnome-base/gnome-vfs-2.11.90
 RDEPEND="${RDEPEND}
@@ -49,10 +49,10 @@ RDEPEND="${RDEPEND}
 	>=gnome-base/libgnome-2.11.2
 	>=gnome-base/libgnomeui-2.11.2
 	>=gnome-base/libgnomecanvas-2.11.1
-	>=gnome-base/libglade-2.5.1"
+	>=gnome-base/libglade-2.5.1
 
-#	>=gnome-extra/bug-buddy-2.11.1
-#	>=gnome-base/control-center-2.11.90
+	>=gnome-extra/bug-buddy-2.11.1
+	>=gnome-base/control-center-2.11.90"
 
 #	>=gnome-base/eel-2.11.91
 #	>=gnome-base/nautilus-2.11.91
@@ -79,7 +79,8 @@ RDEPEND="${RDEPEND}
 #	>=gnome-base/gnome-desktop-2.11.90
 #	>=gnome-base/gnome-applets-2.11.91
 #	>=gnome-base/gnome-panel-2.11.90
-#	>=gnome-base/gnome-menus-2.11.90
+RDEPEND="${RDEPEND}
+	>=gnome-base/gnome-menus-2.11.90"
 
 #	>=x11-themes/gnome-icon-theme-2.11.91
 #	>=x11-themes/gnome-themes-2.11.91
@@ -122,11 +123,13 @@ RDEPEND="${RDEPEND}
 
 #	hal? ( >=gnome-base/gnome-volume-manager-1.3.2 )
 
+RDEPEND="${RDEPEND}
+	>=gnome-extra/libgtkhtml-3.7.6"
 #	>=mail-client/evolution-2.3.7
-#	>=gnome-extra/evolution-data-server-1.3.7
+RDEPEND="${RDEPEND}
+	>=gnome-extra/evolution-data-server-1.3.7"
 #	>=gnome-extra/evolution-exchange-2.3.7
 #	>=gnome-extra/evolution-webcal-2.3.91
-#	>=gnome-extra/libgtkhtml-3.7.6
 
 #	>=net-misc/vino-2.11.90
 
@@ -141,14 +144,15 @@ RDEPEND="${RDEPEND}
 		>=app-accessibility/dasher-3.2.15
 		>=app-accessibility/gnome-mag-0.12.1
 		>=app-accessibility/gnome-speech-0.3.7
-		>=app-accessibility/gok-1.0.5 )"
-#		>=app-accessibility/gnopernicus-0.11.4
+		>=app-accessibility/gok-1.0.5 
+		>=app-accessibility/gnopernicus-0.11.4 )"
 
 # Development tools
 #   scrollkeeper
 #   pkgconfig
 #   intltool
 #   gtk-doc
+#   gnome-doc-utils
 
 
 pkg_postinst() {
