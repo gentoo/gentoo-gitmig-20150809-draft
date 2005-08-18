@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.86 2005/07/26 05:17:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.87 2005/08/18 22:36:28 vapier Exp $
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/modutils-2.4.27-no-nested-function.patch:
+  Fix by the PaX guys to remove executable stack markings.
 
   26 Jul 2005; Mike Frysinger <vapier@gentoo.org>
   module-init-tools-3.2_pre7-r1.ebuild:

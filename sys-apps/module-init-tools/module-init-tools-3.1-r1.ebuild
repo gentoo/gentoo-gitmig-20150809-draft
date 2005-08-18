@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.3 2005/07/15 09:42:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.4 2005/08/18 22:36:28 vapier Exp $
 
-inherit flag-o-matic eutils gnuconfig toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs
 
 MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
@@ -16,7 +16,7 @@ SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE=""
 #IUSE="no-old-linux"
 
@@ -27,19 +27,12 @@ PROVIDE="virtual/modutils"
 src_unpack() {
 	unpack ${A}
 
-	# With the b0rked modutils, "modprobe hid" does work. But if something
-	# (like hotplug) tries to auto-load hid (because another module needs it,
-	# via the kernel module auto-loader) and keybdev.o or mousedev.o don't
-	# exist, then the "above" clause fails and the hid module never gets
-	# loaded, and then things like USB will fail.  Thus we remove it all
-	# together.
-	#
-	# <drobbins@gentoo.org> (26 Mar 2003)
 #	if ! use no-old-linux ; then
 		cd "${WORKDIR}"/modutils-${MODUTILS_PV}
 		epatch "${FILESDIR}"/modutils-2.4.27-alias.patch
 		epatch "${FILESDIR}"/modutils-2.4.27-gcc.patch
 		epatch "${FILESDIR}"/modutils-2.4.27-flex.patch
+		epatch "${FILESDIR}"/modutils-2.4.27-no-nested-function.patch
 #	fi
 
 	# Support legacy .o modules
@@ -62,16 +55,13 @@ src_unpack() {
 
 	rm -f missing
 	export WANT_AUTOMAKE=1.6
-	automake --add-missing
-
-	cd ${S}
-	gnuconfig_update
-#	if ! use no-old-linux ; then
-		cp config.{guess,sub} ${WORKDIR}/modutils-${MODUTILS_PV}/
-#	fi
+	automake --add-missing || die
 }
 
 src_compile() {
+	# Configure script uses BUILDCFLAGS for cross-compiles but this
+	# defaults to CFLAGS which can be bad mojo
+	export BUILDCFLAGS=-pipe
 	export BUILDCC="$(tc-getBUILD_CC)"
 
 #	if ! use no-old-linux ; then
