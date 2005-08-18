@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c60e6bc950c02ef18bd30fe4acd0b04c vm-arm-1.0.1.ebuild 1521
 MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
-MD5 296501e5bca3c0be5d402a30fd665ebb ChangeLog 357
+MD5 b07790d505e14328653bad5051a61360 vm-arm-1.0.2.ebuild 1527
+MD5 77b958a5995af13fd5d3361b9d6e6c93 ChangeLog 501
+MD5 6b1b0646c2ab6a711d2cc263e7e0af47 files/digest-vm-arm-1.0.2 81
 MD5 37ea286f6d3fc98b3eae3bfd80d2f092 files/digest-vm-arm-1.0.1 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBA4YgIKl8Uu19MoRAvisAJ9YkT3AinhU/VeNZBDXZt2ZyQe0/QCeIdrg
+8ZPEb/AcYQ5ltW2LKUjdf3E=
+=lk5b
+-----END PGP SIGNATURE-----

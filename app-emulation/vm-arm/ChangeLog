@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vm-arm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vm-arm/ChangeLog,v 1.1 2005/05/25 04:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vm-arm/ChangeLog,v 1.2 2005/08/18 04:26:28 vapier Exp $
+
+*vm-arm-1.0.2 (18 Aug 2005)
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org> +vm-arm-1.0.2.ebuild:
+  Version bump #93488 by Yuri Vasilevski.
 
 *vm-arm-1.0.1 (25 May 2005)
 
