@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.3 2005/08/16 22:10:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.4 2005/08/18 02:02:02 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -84,6 +84,9 @@ src_unpack() {
 
 	# don't build fdisk on m68k
 	epatch ${FILESDIR}/${PN}-2.12q-no-m68k-fdisk.patch
+
+	# don't force umask to 022 #93671
+	epatch ${FILESDIR}/${PN}-2.12q-dont-umask.patch
 
 	# Enable random features
 	local mconfigs="MCONFIG"

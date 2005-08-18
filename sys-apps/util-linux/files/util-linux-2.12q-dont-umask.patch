@@ -1,0 +1,17 @@
+Don't force umask to 022 or the -o umask option doesn't work.
+
+Patch by Daniel Drake.
+
+http://bugs.gentoo.org/93671
+
+--- mount/mount.c
++++ mount/mount.c
+@@ -1491,8 +1491,6 @@ main(int argc, char *argv[]) {
+ 	if ((p = strrchr(progname, '/')) != NULL)
+ 		progname = p+1;
+ 
+-	umask(022);
+-
+ 	/* People report that a mount called from init without console
+ 	   writes error messages to /etc/mtab
+ 	   Let us try to avoid getting fd's 0,1,2 */
