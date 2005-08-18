@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 bb3ce78b1857ae43ea81929073e36590 java-getopt-1.0.9.ebuild 838
-MD5 e5e0523e8171916e4d15d8f0362bdaa8 java-getopt-1.0.10.ebuild 845
-MD5 c65cf926381872ff640cf978ef956b74 ChangeLog 1207
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 78c61c0dab6e3b935fd4e9e270bf78ca ChangeLog 1306
+MD5 a3ceb47a6b168dc486ebf1bc97663beb java-getopt-1.0.10.ebuild 846
 MD5 f1e4ef407b1542fc56a559aded2b49c0 files/digest-java-getopt-1.0.9 68
 MD5 65efd41a087d22f82770644b6512ec36 files/digest-java-getopt-1.0.10 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC17tq/rLF9B432nYRAupKAJ91gYjUrF6IR7PE77OoShRoPA0I8wCgn/DZ
-nxUMkMmzFKAHNmyigKEO/sM=
-=FI5F
------END PGP SIGNATURE-----
