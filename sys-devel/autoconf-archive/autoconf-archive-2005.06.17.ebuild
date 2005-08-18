@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2005.06.17.ebuild,v 1.1 2005/07/04 21:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2005.06.17.ebuild,v 1.2 2005/08/18 01:54:50 vapier Exp $
 
 MY_PV=${PV//./-}
 DESCRIPTION="GNU Autoconf Macro Archive"
@@ -9,7 +9,7 @@ SRC_URI="http://autoconf-archive.cryp.to/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=""
