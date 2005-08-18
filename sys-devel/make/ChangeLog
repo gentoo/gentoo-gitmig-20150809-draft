@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.26 2005/08/16 13:08:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.27 2005/08/18 18:41:38 hansmi Exp $
+
+  18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> make-3.80-r2.ebuild:
+  Stable on ppc.
 
   16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> make-3.80-r2.ebuild:
   Stable on sparc
