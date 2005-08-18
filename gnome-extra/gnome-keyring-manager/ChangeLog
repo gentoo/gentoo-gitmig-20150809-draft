@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-keyring-manager
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.1 2005/08/17 15:31:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/ChangeLog,v 1.2 2005/08/18 11:42:14 seemant Exp $
+
+  18 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  gnome-keyring-manager-2.11.1.ebuild:
+  keyworded for amd64 testing
 
 *gnome-keyring-manager-2.11.1 (17 Aug 2005)
 
