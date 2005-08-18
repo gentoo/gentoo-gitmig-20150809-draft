@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.14 2005/07/28 14:24:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.15 2005/08/18 02:17:29 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	EPATCH_MULTI_MSG="Applying patches from Mandrake ..." \
 	EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/mandrake
 
 	# Apply the ACL patches. 
@@ -41,6 +42,7 @@ src_unpack() {
 	if use acl ; then
 		mv "${PATCHDIR}"/generic/00{2,4}* "${PATCHDIR}"/excluded
 		mv "${PATCHDIR}"/selinux/001_all_coreutils-noacl* "${PATCHDIR}"/excluded
+		EPATCH_MULTI_MSG="Applying ACL patches ..." \
 		EPATCH_SUFFIX="patch" epatch "${PATCHDIR}"/acl
 	else
 		mv "${PATCHDIR}"/selinux/001_all_coreutils-acl* "${PATCHDIR}"/excluded
@@ -66,14 +68,6 @@ src_unpack() {
 	# When cross-compiling, we can't do that since 'bin' isn't 
 	# a native binary, so let's just install outdated man-pages.
 	tc-is-cross-compiler && touch man/*.1
-}
-
-src_compile() {
-	if ! type -p cvs > /dev/null ; then
-		# Fix issues with gettext's autopoint if cvs is not installed,
-		# bug #28920.
-		export AUTOPOINT="/bin/true"
-	fi
 
 	ebegin "Reconfiguring configure scripts (be patient)"
 	export WANT_AUTOMAKE=1.8
@@ -87,12 +81,25 @@ src_compile() {
 	autoconf || die "autoconf"
 	automake || die "automake"
 	eend $?
+}
 
+src_compile() {
+	if ! type -p cvs > /dev/null ; then
+		# Fix issues with gettext's autopoint if cvs is not installed,
+		# bug #28920.
+		export AUTOPOINT="/bin/true"
+	fi
+
+	local myconf=""
+	[[ ${USERLAND} == "GNU" ]] \
+		&& myconf="${myconf} --bindir=/bin" \
+		|| myconf="${myconf} --program-prefix=g"
+	
 	econf \
-		--bindir=/bin \
 		--enable-largefile \
 		$(use_enable nls) \
 		$(use_enable selinux) \
+		${myconf} \
 		|| die "econf"
 
 	use static && append-ldflags -static
@@ -112,24 +119,25 @@ src_test() {
 src_install() {
 	make install DESTDIR="${D}" || die
 
-	# add DIRCOLORS
 	insinto /etc
-	doins ${FILESDIR}/DIR_COLORS
+	doins "${FILESDIR}"/DIR_COLORS
 
-	# move non-critical packages into /usr
-	cd "${D}"
-	dodir /usr/bin
-	mv bin/{csplit,expand,factor,fmt,fold,join,md5sum,nl,od} usr/bin
-	mv bin/{paste,pathchk,pinky,pr,printf,sha1sum,shred,sum,tac} usr/bin
-	mv bin/{tail,test,[,tsort,unexpand,users} usr/bin
-	cd bin
-	local x
-	for x in * ; do
-		dosym /bin/${x} /usr/bin/${x}
-	done
+	if [[ ${USERLAND} == "GNU" ]] ; then
+		# move non-critical packages into /usr
+		cd "${D}"
+		dodir /usr/bin
+		mv bin/{csplit,expand,factor,fmt,fold,join,md5sum,nl,od} usr/bin
+		mv bin/{paste,pathchk,pinky,pr,printf,sha1sum,shred,sum,tac} usr/bin
+		mv bin/{tail,test,[,tsort,unexpand,users} usr/bin
+		cd bin
+		local x
+		for x in * ; do
+			dosym /bin/${x} /usr/bin/${x}
+		done
+	fi
 
 	if ! use build ; then
-		cd ${S}
+		cd "${S}"
 		dodoc AUTHORS ChangeLog* NEWS README* THANKS TODO
 	else
 		rm -r "${D}"/usr/share
@@ -137,10 +145,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	[[ ${USERLAND} != "GNU" ]] && return 0
+
 	# hostname does not get removed as it is included with older stage1
 	# tarballs, and net-tools installs to /bin
-	if [ -e ${ROOT}/usr/bin/hostname ] && [ ! -L ${ROOT}/usr/bin/hostname ]
-	then
-		rm -f ${ROOT}/usr/bin/hostname
+	if [[ -e ${ROOT}/usr/bin/hostname && ! -L ${ROOT}/usr/bin/hostname ]] ; then
+		rm -f "${ROOT}"/usr/bin/hostname
 	fi
 }
