@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.27 2005/06/24 14:00:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.28 2005/08/18 18:47:24 smithj Exp $
+
+  18 Aug 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml:
+  maintainer update (again)
 
 *d4x-2.5.0-r1 (24 Jun 2005)
 

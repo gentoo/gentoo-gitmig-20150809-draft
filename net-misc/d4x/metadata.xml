@@ -2,5 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-misc</herd>
+
+<!-- smithj says that liquidx isn't actively maintaining this anymore
 <maintainer><email>liquidx@gentoo.org</email></maintainer>
+
+-->
+
 </pkgmetadata>
