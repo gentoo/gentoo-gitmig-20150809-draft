@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aadcb924cfda535fd04d2563fb45733b jcommon-0.9.7.ebuild 988
-MD5 7e3fff463b562eec88fa23794099d3fb jcommon-0.9.7-r1.ebuild 1004
-MD5 2475d9e2894a01863de1bc83cf18ee15 ChangeLog 1267
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9f602fac6bfe6fae0b67f408c4dba7a5 ChangeLog 1368
+MD5 14ce11b9560b218b067232839d159cf9 jcommon-0.9.7-r1.ebuild 1005
+MD5 aadcb924cfda535fd04d2563fb45733b jcommon-0.9.7.ebuild 988
 MD5 8eaa092f9e56aa5c625aad517d4b9887 files/digest-jcommon-0.9.7 65
 MD5 8eaa092f9e56aa5c625aad517d4b9887 files/digest-jcommon-0.9.7-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3Vli/rLF9B432nYRAkpPAKDOgWz8bQJ59XhTQDIlWYJ0t8ciEgCfRUzB
-nXkUf+wBbGzNmzZQWSGz8QI=
-=nuqn
------END PGP SIGNATURE-----
