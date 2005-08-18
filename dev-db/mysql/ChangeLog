@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.219 2005/08/18 09:23:48 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.220 2005/08/18 16:39:28 vivo Exp $
+
+  18 Aug 2005; Francesco Riosa <vivo@gentoo.org>
+  -files/mysql-4.0.25-r1-asm-pic-fixes.patch, -mysql-3.23.58.ebuild,
+  -mysql-4.0.22-r1.ebuild, -mysql-4.0.23.ebuild, -mysql-4.0.23-r1.ebuild,
+  -mysql-4.0.23-r2.ebuild, -mysql-4.0.24-r1.ebuild, -mysql-4.0.24-r2.ebuild,
+  -mysql-4.0.25-r1.ebuild, -mysql-4.1.8.ebuild, -mysql-4.1.8-r1.ebuild:
+  Cleanup of dated unstable packages, backup at
+  http://dev.gentoo.org/~vivo/misc/BACKUP-mysql-20050818.tar.gz
 
   18 Aug 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
   mysql-4.1.13-r1.ebuild, mysql-5.0.9_beta-r2.ebuild,
