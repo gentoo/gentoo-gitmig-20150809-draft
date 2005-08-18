@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19b.ebuild,v 1.1 2005/07/25 06:38:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19b.ebuild,v 1.2 2005/08/18 02:41:35 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils toolchain-funcs
 
@@ -22,7 +22,8 @@ IUSE="doc lesstif nosource"
 DEPEND="=dev-lisp/common-lisp-controller-4*
 	doc? ( virtual/tetex )
 	lesstif? ( x11-libs/lesstif )
-	!lesstif? ( x11-libs/openmotif )"
+	!lesstif? ( x11-libs/openmotif )
+	sys-devel/bc"
 
 PROVIDE="virtual/commonlisp"
 

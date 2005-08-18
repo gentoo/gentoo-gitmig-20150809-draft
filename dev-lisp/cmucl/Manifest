@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19267815fc1ed124db4b3be5e84b0b96 ChangeLog 3111
-MD5 9994809e3b2eb12039dc158ca6b6f83d cmucl-19b.ebuild 4834
-MD5 f900b54b1910b1b6889db5be972e30a1 cmucl-18e-r4.ebuild 2947
-MD5 04e7b9338f8791a730a97679c904964a cmucl-19a-r1.ebuild 4669
+MD5 65d17ac13eef90dadb0dc0d9ecc7cac0 ChangeLog 3290
+MD5 10302f1464f3d8c0dc5fcddb26536441 cmucl-19b.ebuild 4848
+MD5 93ccb861f2d7f46f773ced90f3ed61ca cmucl-18e-r4.ebuild 2963
+MD5 06e069d6d55039826fdd58ce9222ffa2 cmucl-19a-r1.ebuild 4683
 MD5 929688a2167434e2a4f0169de47e7428 metadata.xml 1107
 MD5 a7972648eda13df8cec3a330f29a45b9 files/digest-cmucl-19b 239
 MD5 df309c5d109052b9c57d79bb4aac5871 files/digest-cmucl-18e-r4 137
@@ -24,9 +24,9 @@ MD5 4db43f75da9d79658837b4ce0e7be3bb files/19b/herald-save.lisp-gentoo.patch 831
 MD5 b23a0a0d355d92b1a2123de8acd61418 files/19b/install-clc.lisp 1749
 MD5 190f38f6f6f33f3e1ceee848d2583573 files/19b/site-init.lisp.in 1935
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC5IkRyiNZaEAZA+ARAkfjAJ469YWCAuvLHwiKDS01tfxJjgQUXQCeJpfV
-SDzYCjaKAcnshLgym8l1Rk0=
-=vXU9
+iD8DBQFDA/WYyiNZaEAZA+ARAvcyAJ4zBBMQcMgPFp+DGmQaa/C0sTNxJACeMGbg
+aX40rtZBVmc4p72WIOrQPPM=
+=zehu
 -----END PGP SIGNATURE-----
