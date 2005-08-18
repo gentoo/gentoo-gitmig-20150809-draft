@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.1.ebuild,v 1.1 2005/08/18 18:59:46 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.1.ebuild,v 1.2 2005/08/18 22:28:48 smithj Exp $
 
 IUSE="nls esd gnome oss kde"
 
 inherit eutils flag-o-matic
 
-S="${WORKDIR}/${P}final"
 DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${P}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
