@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.55 2005/08/18 17:55:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.56 2005/08/18 18:02:49 stkn Exp $
 
 *zaptel-1.0.9_p1-r1 (18 Aug 2005)
 
@@ -8,7 +8,7 @@
   zaptel-1.0.6.ebuild, zaptel-1.0.6-r1.ebuild, zaptel-1.0.7.ebuild,
   zaptel-1.0.7-r1.ebuild, zaptel-1.0.8.ebuild, zaptel-1.0.9_p1.ebuild,
   +zaptel-1.0.9_p1-r1.ebuild:
-  Version bump (bristuff update) and fixed bristuff part of SRC_URI (after
+  Revision bump (bristuff update) and fixed bristuff part of SRC_URI (after
   site redesign).
 
 *zaptel-1.0.9_p1 (28 Jul 2005)
