@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/xmame
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.47 2005/08/16 21:54:53 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.48 2005/08/18 22:48:57 vapier Exp $
+
+*xmame-0.99-r1 (18 Aug 2005)
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/xmame-0.99-mcr3.patch, +xmame-0.99-r1.ebuild:
+  Add patch from upstream to fix a coredump in some games #102987 by Avuton
+  Olrich.
 
 *xmame-0.99 (16 Aug 2005)
 
