@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.72 2005/08/03 01:31:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.73 2005/08/18 00:54:39 vapier Exp $
+
+*busybox-1.01 (18 Aug 2005)
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org> +busybox-1.01.ebuild:
+  Version bump.
 
 *busybox-1.1_pre20050802 (03 Aug 2005)
 
