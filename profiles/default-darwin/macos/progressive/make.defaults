@@ -6,4 +6,5 @@
 KERNEL=Darwin
 ELIBC=Darwin
 USERLAND=Darwin
+USE="ppc-macos"
 FEATURES="-collision-protect -fakeroot -sandbox -userpriv"
