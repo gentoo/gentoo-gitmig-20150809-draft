@@ -1,4 +1,14 @@
-MD5 cc06bd168676819782196c6401a04786 ChangeLog 2200
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c8f92d92f710179d3f47870dffc26dc8 oaf-0.6.10.ebuild 1142
+MD5 d072bcf425c3a2c44722743bc11bb380 ChangeLog 2310
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 7cbf1c99fef485c69d7c3d8f901a4554 oaf-0.6.10.ebuild 1069
 MD5 3d83936ec476ca5f5f44ef110432b55f files/digest-oaf-0.6.10 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBRZe2G5bA0cA/ScRApGFAKCoeav1qfweMnMtVkTgXi43avTcjACg7Pnh
++eMVb0NbZMvv/ZkhrRFp1l8=
+=E+WZ
+-----END PGP SIGNATURE-----

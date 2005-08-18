@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.21 2004/12/16 11:01:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.22 2005/08/18 23:14:21 herbs Exp $
 
-inherit gnome.org libtool gnuconfig
+inherit gnome.org libtool gnuconfig multilib
 
 DESCRIPTION="Object Activation Framework for GNOME"
 HOMEPAGE="http://www.gnome.org/"
@@ -30,6 +30,7 @@ src_compile() {
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
@@ -40,6 +41,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		mandir=${D}/usr/share/man \
 		sysconfdir=${D}/etc \
 		localstatedir=${D}/var/lib \
