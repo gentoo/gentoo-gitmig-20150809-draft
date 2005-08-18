@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.35.2.ebuild,v 1.1 2005/08/18 08:12:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.35.2.ebuild,v 1.2 2005/08/18 18:37:31 swegener Exp $
 
 inherit eutils mono python multilib debug
 
@@ -15,17 +15,17 @@ LICENSE="|| ( GPL-2 AFL-2.1 )"
 KEYWORDS="~x86 ~ppc ~amd64 ~ppc64 ~ia64 ~sparc"
 
 RDEPEND=">=dev-libs/glib-2.6
-	xml2? ( >=dev-libs/libxml2 )
+	xml2? ( dev-libs/libxml2 )
 	!xml2? ( dev-libs/expat )
-	X? ||(
+	X? ( || (
 		(
 		x11-libs/libXt
 		x11-libs/libX11
 		)
-	virtual/x11 )
+	virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.4
-		>=dev-python/pyrex )
+		dev-python/pyrex )
 	qt? ( =x11-libs/qt-3* )
 	mono? ( >=dev-lang/mono-0.95 )"
 
