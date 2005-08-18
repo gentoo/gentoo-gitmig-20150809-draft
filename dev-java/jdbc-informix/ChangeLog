@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-informix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.10 2005/05/06 13:28:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.11 2005/08/18 18:32:05 hansmi Exp $
+
+  18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  jdbc-informix-221-r5.ebuild:
+  Stable on ppc.
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   jdbc-informix-221-r4.ebuild, jdbc-informix-221-r5.ebuild:
