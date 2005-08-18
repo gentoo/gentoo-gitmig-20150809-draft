@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.00.00.ebuild,v 1.5 2005/08/17 17:46:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.00.00.ebuild,v 1.6 2005/08/18 17:30:38 swegener Exp $
 
 inherit linux-mod
 
@@ -15,8 +15,8 @@ KEYWORDS="~ppc ~x86"
 
 IUSE=""
 DEPEND="|| (
-		>=vanilla-sources-2.6.12
-		>=gentoo-sources-2.6.12
+		>=sys-kernel/vanilla-sources-2.6.12
+		>=sys-kernel/gentoo-sources-2.6.12
 	)"
 RDEPEND=""
 
