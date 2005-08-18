@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/capiisdnmon-0.42.ebuild,v 1.3 2005/08/08 10:59:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/capiisdnmon-0.42-r1.ebuild,v 1.1 2005/08/18 21:35:04 genstef Exp $
 
 inherit eutils
 
@@ -28,4 +28,7 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+
+	newicon icon1.xpm capiisdnmon.xpm
+	make_desktop_entry capiIsdnMon "CAPI ISDN Monitor" capiisdnmon.xpm
 }
