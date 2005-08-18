@@ -1,17 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7.ebuild,v 1.5 2005/08/18 17:55:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.9_p1-r1.ebuild,v 1.1 2005/08/18 17:55:09 stkn Exp $
 
-IUSE="devfs26 bri florz"
+IUSE="devfs26 bri florz rtc"
 
 inherit toolchain-funcs eutils linux-mod
 
-BRI_VERSION="0.2.0-RC7k"
-FLORZ_VERSION="0.2.0-RC7j_florz-4"
+BRI_VERSION="0.2.0-RC8n"
+FLORZ_VERSION="0.2.0-RC8j_florz-8"
+
+MY_PV="${PV/_p/.}"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/old/zaptel-${PV}.tar.gz
+SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zaptel-${MY_PV}.tar.gz
 	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
 	 florz? ( http://zaphfc.florz.dyndns.org/zaphfc_${FLORZ_VERSION}.diff.gz )"
 
@@ -22,6 +24,8 @@ KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND="virtual/libc
 	virtual/linux-sources
 	>=dev-libs/newt-0.50.0"
+
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
 	linux-mod_pkg_setup
@@ -36,11 +40,8 @@ pkg_setup() {
 		einfo "   * enable the devfs26 useflag (see below)"
 		einfo ""
 		einfo "There's an experimental patch which adds devfs support when using linux-2.6, but:"
-		einfo "  1. It's an ugly hack atm and needs a cleanup..."
-		einfo "  2. I was only abled to test loding / unloading with the ztd-eth driver..."
-		einfo "  3. I _really_ don't know if it works with real hardware..."
-		einfo "  4. It disables udev support to avoid conflicts"
-		eerror "  5. And more important: This is not officially supported by Digium / the Asterisk project!"
+		einfo "   1. It disables udev support to avoid conflicts"
+		ewarn "   2. It is not supported by Digium / the Asterisk project!"
 		einfo ""
 		einfo "If you're still interested, abort now (ctrl+c) and enable the devfs26 USE-flag"
 		einfo "Feedback and bug-reports should go to: stkn@gentoo.org"
@@ -55,8 +56,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	# >= 1.0.7 requires new patch (-modulesd patch renamed to -gentoo)
-	epatch ${FILESDIR}/${PN}-1.0.7-gentoo.diff
+	# patch makefile(s) for gentoo
+	epatch ${FILESDIR}/${PN}-1.0.9-gentoo.diff
 
 	# devfs support
 	if use devfs26; then
@@ -66,6 +67,11 @@ src_unpack() {
 		# disable udev
 		sed -i -e "s:#define[\t ]\+\(CONFIG_ZAP_UDEV\):#undef \1:" \
 			zconfig.h
+
+		# fix Makefile to not create device nodes for
+		# devfs enabled 2.6 kernels
+		sed -i -e 's:grep udevd:grep -q \"udevd\\|devfsd\":' \
+			Makefile || die "QA error: No substitution performed"
 	fi
 
 	# apply patch for gcc-3.4.x if that's the compiler in use...
@@ -83,20 +89,23 @@ src_unpack() {
 
 		if use florz; then
 			einfo "Using florz patches (${FLORZ_VERSION}) for zaphfc"
+
 			epatch ${WORKDIR}/zaphfc_${FLORZ_VERSION}.diff
 		fi
 
 		# patch includes
 		sed -i  -e "s:^#include.*zaptel\.h.*:#include <zaptel.h>:" \
 			qozap/qozap.c \
-			zaphfc/zaphfc.c
+			zaphfc/zaphfc.c \
+			cwain/cwain.c
 
 		# patch makefiles
 		sed -i  -e "s:^ZAP[\t ]*=.*:ZAP=-I${S}:" \
 			-e "s:^MODCONF=.*:MODCONF=/etc/modules.d/zaptel:" \
 			-e "s:linux-2.6:linux:g" \
 			qozap/Makefile \
-			zaphfc/Makefile
+			zaphfc/Makefile \
+			cwain/Makefile
 
 		sed -i  -e "s:^\(CFLAGS+=-I. \).*:\1 \$(ZAP):" \
 			zaphfc/Makefile
@@ -104,17 +113,32 @@ src_unpack() {
 
 	# replace `uname -r` with ${KV_FULL} in all Makefiles
 	find ${WORKDIR} -iname "Makefile" -exec sed -i -e "s:\`uname -r\`:${KV_FULL}:g" {} \;
+
+	cd ${S}
+	#######################################################################
+	# apply other patches here,
+	# make sure they work with things that have been added before!
+	#
+
+	# apply x86 rtc patch for ztdummy (http://bugs.digium.com/view.php?id=4301)
+	# this won't have any effect on non-x86 systems...
+	if use rtc; then
+		if use x86 || use amd64; then
+			epatch ${FILESDIR}/${PN}-1.0.9-rtc.patch
+		else
+			ewarn "RTC is unsupported on your arch, skipping patch"
+		fi
+	fi
 }
 
 src_compile() {
-	# TODO: bristuff modules
-
 	make ARCH=$(tc-arch-kernel) KERNEL_SOURCE=/usr/src/linux || die
 
 	if use bri; then
 		cd ${WORKDIR}/bristuff-${BRI_VERSION}
-		make ARCH=$(tc-arch-kernel) -C qozap || die
+		make ARCH=$(tc-arch-kernel) -C qozap  || die
 		make ARCH=$(tc-arch-kernel) -C zaphfc || die
+		make ARCH=$(tc-arch-kernel) -C cwain  || die
 	fi
 }
 
@@ -134,6 +158,7 @@ src_install() {
 		insinto /lib/modules/${KV_FULL}/misc
 		doins qozap/qozap.${KV_OBJ}
 		doins zaphfc/zaphfc.${KV_OBJ}
+		doins cwain/cwain.${KV_OBJ}
 
 		# install example configs for octoBRI and quadBRI
 		insinto /etc
@@ -154,13 +179,28 @@ src_install() {
 
 		docinto bristuff/zaphfc
 		dodoc zaphfc/LICENSE zaphfc/*.conf
+
+		docinto bristuff/cwain
+		dodoc cwain/TODO cwain/LICENSE
 	fi
 
 	# install init script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/zaptel.rc6 zaptel
-	insinto /etc/conf.d
-	newins ${FILESDIR}/zaptel.confd zaptel
+	newinitd ${FILESDIR}/zaptel.rc6 zaptel
+	newconfd ${FILESDIR}/zaptel.confd zaptel
+
+	# install devfsd rule file
+	insinto /etc/devfs.d
+	newins ${FILESDIR}/zaptel.devfsd zaptel
+
+	# install udev rule file
+	insinto /etc/udev/rules.d
+	newins ${FILESDIR}/zaptel.udevd 10-zaptel.rules
+
+	# fix permissions if there's no udev / devfs around
+	if [[ -d ${D}/dev/zap ]]; then
+		chown -R root:dialout	${D}/dev/zap
+		chmod -R u=rwX,g=rwX,o= ${D}/dev/zap
+	fi
 }
 
 pkg_postinst() {
@@ -178,20 +218,6 @@ pkg_postinst() {
 	einfo "Use the /etc/init.d/zaptel script to load zaptel.conf settings on startup!"
 	echo
 
-	# devfs26 disables udev ... so don't nag users
-	if ! use devfs26; then
-# FIXME!! Can we (we should) do this automatically
-		einfo "If you're using udev add the following to"
-		einfo "/etc/udev/rules.d/50-udev.rules (as in README.udev):"
-		einfo "# Section for zaptel device"
-		einfo "KERNEL=\"zapctl\",     NAME=\"zap/ctl\""
-		einfo "KERNEL=\"zaptimer\",   NAME=\"zap/timer\""
-		einfo "KERNEL=\"zapchannel\", NAME=\"zap/channel\""
-		einfo "KERNEL=\"zappseudo\",  NAME=\"zap/pseudo\""
-		einfo "KERNEL=\"zap[0-9]*\",  NAME=\"zap/%n\""
-		echo
-	fi
-
 	if use bri; then
 		einfo "Bristuff configs have been merged as:"
 		einfo ""
@@ -205,5 +231,11 @@ pkg_postinst() {
 		einfo "    zapata.conf.quadBRI"
 		einfo "    zapata.conf.octoBRI"
 		echo
+	fi
+
+	# fix permissions if there's no udev / devfs around
+	if [[ -d ${ROOT}/dev/zap ]]; then
+		chown -R root:dialout	${ROOT}/dev/zap
+		chmod -R u=rwX,g=rwX,o= ${ROOT}/dev/zap
 	fi
 }
