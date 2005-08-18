@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.47 2005/04/24 12:40:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.48 2005/08/18 16:15:50 malverian Exp $
+
+*anjuta-1.2.4 (18 Aug 2005)
+
+  18 Aug 2005; Philip Walls <malverian@gentoo.org> anjuta-1.2.4.ebuild:
+  Version bump, fixes Pango rendering issue. Marking stable on all archs
+  that have stable keywords for Pango 1.8.x and were marked stable for
+  anjuta-1.2.2*
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   anjuta-1.2.2-r1.ebuild:
