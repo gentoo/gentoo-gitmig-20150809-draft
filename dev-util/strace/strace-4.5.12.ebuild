@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.1 2005/08/12 02:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.12.ebuild,v 1.2 2005/08/18 00:24:41 vapier Exp $
 
 inherit flag-o-matic
 
@@ -17,12 +17,14 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	if [[ ${CTARGET:-${CHOST}} == *-freebsd* ]] ; then
 		epatch ${FILESDIR}/${P}-fbsd.patch
-		aclocal && autoconf && automake || die "autotools failed"
 	fi
+	# Fix support for newer glibc snapshots #102080
+	epatch "${FILESDIR}"/${P}-quota.patch
+	aclocal && autoheader && autoconf && automake || die "autotools failed"
 
 	# Fix SuperH support
 	epatch "${FILESDIR}"/strace-dont-use-REG_SYSCALL-for-sh.patch

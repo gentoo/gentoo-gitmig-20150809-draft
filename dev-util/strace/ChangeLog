@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.65 2005/08/12 02:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.66 2005/08/18 00:24:41 vapier Exp $
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.12-quota.patch, strace-4.5.12.ebuild:
+  Fix building with newer glibc snapshots with a patch from upstream cvs
+  #102080 by Alexey Maximov/Hanno Meyer-Thurow/Mark Loeser.
 
 *strace-4.5.12 (12 Aug 2005)
 

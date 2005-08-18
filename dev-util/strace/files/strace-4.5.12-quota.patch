@@ -1,0 +1,89 @@
+Changes from upstream cvs to fix breakage with newer glibc's
+
+http://bugs.gentoo.org/102080
+
+--- strace-4.5.12/configure.ac
++++ strace-4.5.12/configure.ac
+@@ -216,6 +216,8 @@
+ 
+ AC_CHECK_TYPES([struct user_desc],,, [#include <asm/ldt.h>])
+ 
++AC_CHECK_MEMBERS([struct dqblk.dqb_curblocks],,, [#include <sys/quota.h>])
++
+ AC_CHECK_DECLS([sys_errlist])
+ AC_CHECK_DECLS([sys_siglist, _sys_siglist],,, [#include <signal.h>])
+ 
+--- strace-4.5.12/resource.c
++++ strace-4.5.12/resource.c
+@@ -464,6 +464,7 @@
+ 
+ #ifdef LINUX
+ 
++#define OLD_CMD(c)	((c)<<8)
+ #define NEW_CMD(c)      ((0x80<<16)+(c))
+ #define XQM_CMD(c)      (('X'<<8)+(c))
+ #define NEW_COMMAND(c) (( ((c) >> SUBCMDSHIFT) & (0x80 << 16)))
+@@ -471,15 +472,15 @@
+ #define OLD_COMMAND(c) (!NEW_COMMAND(c) && !XQM_COMMAND(c))
+ 
+ static const struct xlat quotacmds[] = {
+-	{ Q_QUOTAON,	"Q_QUOTAON"	},
+-	{ Q_QUOTAOFF,	"Q_QUOTAOFF"	},
+-	{ Q_GETQUOTA,	"Q_GETQUOTA"	},
+-	{ Q_SETQUOTA,	"Q_SETQUOTA"	},
+-	{ Q_SETUSE,	"Q_SETUSE"	},
+-	{ Q_SYNC,	"Q_SYNC"	},
+-	{ Q_SETQLIM,	"Q_SETQLIM"	},
+-	{ Q_GETSTATS,	"Q_GETSTATS"	},
+-	{ Q_RSQUASH,	"Q_RSQUASH"	},
++	{ OLD_CMD(0x1),	"Q_QUOTAON"	},
++	{ OLD_CMD(0x2),	"Q_QUOTAOFF"	},
++	{ OLD_CMD(0x3),	"Q_GETQUOTA"	},
++	{ OLD_CMD(0x4),	"Q_SETQUOTA"	},
++	{ OLD_CMD(0x5),	"Q_SETUSE"	},
++	{ OLD_CMD(0x6),	"Q_SYNC"	},
++	{ OLD_CMD(0x7),	"Q_SETQLIM"	},
++	{ OLD_CMD(0x8),	"Q_GETSTATS"	},
++	{ OLD_CMD(0x10),"Q_RSQUASH"	},
+ 	{ NEW_CMD(0x1), "Q_SYNC"        },
+ 	{ NEW_CMD(0x2), "Q_QUOTAON"     },
+ 	{ NEW_CMD(0x3), "Q_QUOTAOFF"    },
+@@ -528,21 +529,29 @@
+ 
+ 		if (!tcp->u_arg[3])
+ 			tprintf("NULL");
+-               else if (!verbose(tcp) || !OLD_COMMAND(cmd))
++               else if (!verbose(tcp) ||
++#ifdef HAVE_STRUCT_DQBLK_DQB_CURBLOCKS
++			!
++#endif
++			OLD_COMMAND(cmd))
+ 			tprintf("%#lx", tcp->u_arg[3]);
+                 else if (umoven(tcp, tcp->u_arg[3], sizeof(struct dqblk),
+                     (char *) &dq) < 0)
+                         tprintf("???");
+ 		else {
+                         tprintf("{");
+-			tprintf("%u, ", dq.dqb_bhardlimit);
+-			tprintf("%u, ", dq.dqb_bsoftlimit);
+-			tprintf("%u, ", dq.dqb_curblocks);
+-			tprintf("%u, ", dq.dqb_ihardlimit);
+-			tprintf("%u, ", dq.dqb_isoftlimit);
+-			tprintf("%u, ", dq.dqb_curinodes);
+-			tprintf("%lu, ", dq.dqb_btime);
+-			tprintf("%lu", dq.dqb_itime);
++			tprintf("%llu, ", (unsigned long long) dq.dqb_bhardlimit);
++			tprintf("%llu, ", (unsigned long long) dq.dqb_bsoftlimit);
++#ifdef HAVE_STRUCT_DQBLK_DQB_CURBLOCKS
++			tprintf("%llu, ", (unsigned long long) dq.dqb_curblocks);
++#else
++			tprintf("%llu, ", (unsigned long long) dq.dqb_curspace);
++#endif
++			tprintf("%llu, ", (unsigned long long) dq.dqb_ihardlimit);
++			tprintf("%llu, ", (unsigned long long) dq.dqb_isoftlimit);
++			tprintf("%llu, ", (unsigned long long) dq.dqb_curinodes);
++			tprintf("%llu, ", (unsigned long long) dq.dqb_btime);
++			tprintf("%llu", (unsigned long long) dq.dqb_itime);
+                         tprintf("}");
+ 		}
+ 
