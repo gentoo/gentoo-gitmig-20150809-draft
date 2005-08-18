@@ -4,14 +4,14 @@ Hash: SHA1
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 fff1a8181bbfa0f4e7dca93103f6faf0 coreutils-5.2.1-r2.ebuild 4195
 MD5 807c6725595232e514faa32d6c127051 ChangeLog 22190
-MD5 185a8fdef1ac667826092db322ba46ad coreutils-5.2.1-r6.ebuild 4599
+MD5 4f3bf0e70d7d8559235fec22a00609a6 coreutils-5.2.1-r6.ebuild 4598
 MD5 562be8875293fa477947cff0cc46d37e files/DIR_COLORS 4073
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
 MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDA+/RgIKl8Uu19MoRAtCLAJ9DjX5s8XH9wEiWoutmFsTVi3h0mgCfVgbr
-VTQOKR+H5LWf9UGHRUzthr0=
-=5TeH
+iD8DBQFDA+/zgIKl8Uu19MoRAvVOAJ9oDty7OaOMCwMs9V15FXsgcfoH9gCcCPZS
+k2lFJNGZPmNwOVu5/GFXKJU=
+=eaHw
 -----END PGP SIGNATURE-----
