@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4294 2005/08/18 07:02:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4295 2005/08/18 07:45:49 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,6 +26,7 @@
 # Added here for Gnome purposes
 >=sys-apps/hal-0.5
 >=sys-apps/dbus-0.30
+>=gnome-extra/hal-device-manager-0.5
 
 # Aaron Walker <ka0ttic@gentoo.org> (17 August 2005)
 # pre-release.
