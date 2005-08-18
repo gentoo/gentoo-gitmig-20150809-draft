@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0995299f57e8c96db5b87a5dfeb1b068 lwp-2.0.ebuild 816
-MD5 edc0a1b3c7140d6180c997423a40bf0c ChangeLog 2872
-MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
 MD5 2db297cc92ec3ad44329e42662b5b29f lwp-1.12.ebuild 771
+MD5 b3d359ca317597972a78408b12065b7a lwp-2.0.ebuild 815
+MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
+MD5 522ed798d00670e616cf09210afea470 ChangeLog 2960
 MD5 642fb581dc4613a8c351d35ddfbfeaaf files/lwp-1.10-amd64.patch 1929
-MD5 30ec12e50fe24609f01a4b5887448a42 files/digest-lwp-2.0 59
-MD5 147bcbca707eadf9faeea72963a197e1 files/lwp-2.0-amd64.patch 866
 MD5 03ac15a8c125277e302e9cf95873de89 files/digest-lwp-1.12 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3XHHKf2g/qXtneoRAjocAJ9ND6uHcf7/vZyL/i76e9jIDdBY3gCgoL1Q
-r1eRKqXsS507MdK9yxzBY/w=
-=PHL8
------END PGP SIGNATURE-----
+MD5 147bcbca707eadf9faeea72963a197e1 files/lwp-2.0-amd64.patch 866
+MD5 30ec12e50fe24609f01a4b5887448a42 files/digest-lwp-2.0 59
