@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.34 2005/08/02 18:50:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.35 2005/08/18 17:47:43 stkn Exp $
+
+*libpri-1.0.9-r1 (18 Aug 2005)
+
+  18 Aug 2005; <stkn@gentoo.org> libpri-1.0.6.ebuild, libpri-1.0.7.ebuild,
+  libpri-1.0.7-r1.ebuild, libpri-1.0.8.ebuild, libpri-1.0.9.ebuild,
+  +libpri-1.0.9-r1.ebuild:
+  Version bump and fixed bristuff part of SRC_URI (after site redesign).
 
   02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> libpri-1.0.8.ebuild:
   Stable on sparc
