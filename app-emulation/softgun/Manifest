@@ -1,8 +1,20 @@
-MD5 38adb128c2f71b05818ddb36a8291cad ChangeLog 698
-MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 650891749c4602c2c4836d4200d97025 softgun-0.07.ebuild 990
+MD5 c739d18b0a68a7401cf1f3029f2e302b softgun-0.11.ebuild 923
+MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
 MD5 97eb29afd28ce41b1a0d3e3cbd28b5f6 softgun-0.08.ebuild 993
 MD5 76fdd3a9b5611e47f624422029244ab8 softgun-0.09.ebuild 997
-MD5 ad6c326f2a31bc17f529c4d0fa6296a1 files/digest-softgun-0.07 61
-MD5 d6b2da592b3ea5021781d5d47bb6b693 files/digest-softgun-0.08 61
+MD5 76d0492c3a5d147fa2fb798e04a5ce96 ChangeLog 836
 MD5 1b6d021ae1cb5e1c8b7d7378fec95c91 files/digest-softgun-0.09 61
+MD5 d6b2da592b3ea5021781d5d47bb6b693 files/digest-softgun-0.08 61
+MD5 99ab2b27701261e75ac758d3c0191439 files/digest-softgun-0.11 61
+MD5 ad6c326f2a31bc17f529c4d0fa6296a1 files/digest-softgun-0.07 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDA9PjgIKl8Uu19MoRAhT6AJ9Ea8mpXBhjAormC3XyG9gjx7v7QQCfUPOo
+0NNoUo5G4F4n4hcxca/wZnE=
+=zAb/
+-----END PGP SIGNATURE-----
