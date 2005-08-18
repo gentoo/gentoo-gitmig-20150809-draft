@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.218 2005/08/18 00:47:43 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.219 2005/08/18 09:23:48 vivo Exp $
 
   18 Aug 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
   mysql-4.1.13-r1.ebuild, mysql-5.0.9_beta-r2.ebuild,
@@ -8,7 +8,8 @@
   Fix permission of $DATADIR (again) bug #95320
 
   17 Aug 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild:
-  Stable on x86 and amd64, this fix bug #42968 too
+  Stable on x86 and amd64, this fix bug #42968 too.
+  Thanks to Martin Mokrejs to pointing this out.
 
   12 Aug 2005; Francesco Riosa <vivo@gentoo.org>
   -files/mysql-3.23-db-3.2.3.diff, -files/mysql-3.23.51-tcpd.patch,
