@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/hal-device-manager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/ChangeLog,v 1.5 2005/05/08 20:35:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/ChangeLog,v 1.6 2005/08/18 07:56:26 cardoe Exp $
+
+  18 Aug 2005; Doug Goldstein <cardoe@gentoo.org> ChangeLog:
+  Added 0.5 ebuild for consistency & deleted 0.2.x ebuild
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org>
   hal-device-manager-0.2.98.ebuild:
