@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.9 2005/05/17 11:36:47 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.10 2005/08/18 01:56:19 araujo Exp $
+
+*gnu-smalltalk-2.1.11 (18 Aug 2005)
+
+  18 Aug 2005; Luis F. Araujo <araujo@gentoo.org>
+  +files/2.1.11-gst-image-temp.patch, +gnu-smalltalk-2.1.11.ebuild:
+  Added new version of GNU SmallTalk. Changed some commands to use
+  ebuilds-scripts
 
   17 May 2005; Luis F. Araujo <araujo@gentoo.org>
   gnu-smalltalk-2.1.10-r1.ebuild:
