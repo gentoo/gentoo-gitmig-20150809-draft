@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8.ebuild,v 1.7 2005/08/11 04:18:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8.ebuild,v 1.8 2005/08/18 00:13:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 LICENSE="openssl"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="emacs test bindist"
+IUSE="emacs test bindist zlib"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -84,6 +84,8 @@ src_compile() {
 	# EC:    ????????? ??/??/2015
 	local confopts=""
 	use bindist && confopts="no-idea no-rc5 no-mdc2 -no-ec"
+
+	use zlib && confopts="${confopts} zlib-dynamic"
 
 	local sslout=$(./gentoo.config)
 	einfo "Use configuration ${sslout}"

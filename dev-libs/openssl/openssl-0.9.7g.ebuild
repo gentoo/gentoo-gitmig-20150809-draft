@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.16 2005/08/13 14:20:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.17 2005/08/18 00:13:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="openssl"
 SLOT="0"
 # ia64 is ABI incompat atm, do not change the KEYWORD
 KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="emacs test bindist"
+IUSE="emacs test bindist zlib"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -89,6 +89,8 @@ src_compile() {
 	# EC:    ????????? ??/??/2015
 	local confopts=""
 	use bindist && confopts="no-idea no-rc5 no-mdc2 -no-ec"
+
+	use zlib && confopts="${confopts} zlib-dynamic"
 
 	local sslout=$(./gentoo.config)
 	einfo "Use configuration ${sslout}"
