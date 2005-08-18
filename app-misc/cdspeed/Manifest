@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa0c21b5458bbf492d42e51558ce0be3 cdspeed-0.4.ebuild 842
+MD5 498f0df4cfbb20829e65884e5dd1220f ChangeLog 1725
 MD5 a60a9e06d493b8d21a6757dd1071a12d cdspeed-0.3.ebuild 837
-MD5 cacc7ac62a36fb0660cc45459dd75d98 ChangeLog 1635
+MD5 75df5c425d9799c059ea6302893bac6e cdspeed-0.4.ebuild 839
 MD5 acc15f5059a345c17e4f3d5a39426826 files/digest-cdspeed-0.3 61
 MD5 08326d5b148c0cae42828eec81c11e2b files/digest-cdspeed-0.4 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDAetDKRy60XGEcJIRAtebAKCTJjDsck+QZ6V/oDb/GwaBr0QvEQCfXI2J
-3roCCsH92YITCTnk4aLFtcE=
-=r2es
------END PGP SIGNATURE-----

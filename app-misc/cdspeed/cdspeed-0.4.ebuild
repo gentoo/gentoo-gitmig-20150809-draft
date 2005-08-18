@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.4.ebuild,v 1.3 2005/08/16 13:32:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.4.ebuild,v 1.4 2005/08/18 18:35:33 hansmi Exp $
 
 DESCRIPTION="Change the speed of your CD drive"
 HOMEPAGE="http://linuxfocus.org/~guido/"
@@ -8,7 +8,7 @@ SRC_URI="http://linuxfocus.org/~guido/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ppc sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
