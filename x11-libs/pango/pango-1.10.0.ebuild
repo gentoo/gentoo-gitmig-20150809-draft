@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.0.ebuild,v 1.1 2005/08/16 19:44:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.0.ebuild,v 1.2 2005/08/18 17:41:26 leonardop Exp $
 
 inherit eutils gnome.org gnome2
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/x11
 	>=dev-libs/glib-2.5.7
 	>=media-libs/fontconfig-1.0.1
 	>=media-libs/freetype-2
-	>=x11-libs/cairo-0.5.2"
+	>x11-libs/cairo-0.5.2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
