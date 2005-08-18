@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.22 2005/08/03 20:17:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.23 2005/08/18 21:52:23 allanonjl Exp $
+
+*gnome-doc-utils-0.3.2 (18 Aug 2005)
+
+  18 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +gnome-doc-utils-0.3.2.ebuild:
+  new version, get rid of omf fix, adding missing gnome2_pkg_post{inst,rm},
+  put GCONF with --disable-scrollkeeper in pkg_setup
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   gnome-doc-utils-0.2.0.ebuild:
