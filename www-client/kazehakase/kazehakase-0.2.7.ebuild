@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.7.ebuild,v 1.3 2005/07/14 23:34:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.7.ebuild,v 1.4 2005/08/18 18:49:11 hansmi Exp $
 
 IUSE="migemo estraier thumbnail firefox"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/14508/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 LICENSE="GPL-2"
 
 DEPEND="!firefox? ( >=www-client/mozilla-1.7 )
