@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8275264c6c1ea8fe1f2e4b7856a8f28c vultureng-0.6.ebuild 1997
-MD5 922fc4d12f5e8f0ac7aef037eba10f74 vultureng-0.8.ebuild 1994
-MD5 dcd73647567b4b1ad89b475dda6064dd vultureng-0.7.ebuild 1994
-MD5 31153b61f17adce6b41acd353050a41b ChangeLog 818
+MD5 d209a7080f42e7e559213a8fac3d10a1 vultureng-0.7.ebuild 1979
+MD5 608359daaf03d0f2ea2b0db102c65040 ChangeLog 1055
 MD5 4b8497c2752c2caff82d4e2d99b695a9 metadata.xml 245
-MD5 6befc587a6fc87175425a4999570270b files/digest-vultureng-0.6 66
-MD5 b8f04a173281536feefd7b511b4ab04b files/digest-vultureng-0.7 66
+MD5 24745c2aaacc115ffc82fbde885fbb01 vultureng-0.6.ebuild 1978
+MD5 6a4128843d018989f43f3860758a38f3 vultureng-0.8.ebuild 1981
 MD5 6898e93bb4daf8b53aeba0407d2d1d14 files/digest-vultureng-0.8 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC60nFNSP4Vda7IdsRAvkOAJ0VJR1ZlSFJJn92V2VFECviUKpuWgCfWhVk
-s1fF8uQRi6kmdAFNwKf4w0M=
-=8yfb
------END PGP SIGNATURE-----
+MD5 b8f04a173281536feefd7b511b4ab04b files/digest-vultureng-0.7 66
+MD5 6befc587a6fc87175425a4999570270b files/digest-vultureng-0.6 66

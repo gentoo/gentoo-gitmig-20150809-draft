@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/vultureng
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/ChangeLog,v 1.6 2005/07/30 09:34:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/ChangeLog,v 1.7 2005/08/18 14:17:53 dams Exp $
+
+  18 Aug 2005; <dams@gentoo.org> vultureng-0.6.ebuild, vultureng-0.7.ebuild,
+  vultureng-0.8.ebuild:
+  corrected IUSE and dependancy, bug #102837
+
+  18 Aug 2005; <dams@gentoo.org> vultureng-0.8.ebuild:
+  corrected dependancy, bug #102837
 
   30 Jul 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   net-proxy herd

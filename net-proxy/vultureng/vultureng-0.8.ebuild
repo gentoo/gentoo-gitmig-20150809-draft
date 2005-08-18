@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-0.8.ebuild,v 1.1 2005/06/21 14:46:33 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-0.8.ebuild,v 1.2 2005/08/18 14:17:53 dams Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~x86"
-#IUSE="apache2 sqlite"
+IUSE=""
 
 INTRINsec_HOME="/opt/INTRINsec"
 
@@ -25,7 +25,7 @@ dev-perl/libwww-perl
 net-www/mod_security
 >=www-apache/mod_perl-1.99
 >=net-www/apache-2.0.52
-dev-php/mod_php
+virtual/httpd-php
 dev-php/PECL-sqlite
 app-admin/sudo
 net-www/mod_ssl
