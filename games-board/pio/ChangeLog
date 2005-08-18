@@ -1,6 +1,11 @@
 # ChangeLog for games-board/pio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pio/ChangeLog,v 1.1 2005/07/21 03:00:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pio/ChangeLog,v 1.2 2005/08/18 17:16:43 rizzo Exp $
+
+*pio-0.9.23 (18 Aug 2005)
+
+  18 Aug 2005; Don Seiler <rizzo@gentoo.org> +pio-0.9.23.ebuild:
+  Version bump
 
 *pio-0.9.19 (21 Jul 2005)
 
