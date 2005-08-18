@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a0a7f3a05180727b18bd895d43e03708 ChangeLog 2036
+MD5 dc728bb1f153f6a83e06fcb775cb1869 ChangeLog 2272
+MD5 d10ff595b42d01c97e824430ccdcfe92 libdts-0.0.2-r2.ebuild 1366
 MD5 54bd93cd5d53bea79dfc9554eca7b56d libdts-0.0.2-r1.ebuild 1297
 MD5 418e8000e6a6318f7d3163c1fb10d444 libdts-0.0.2.ebuild 967
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 836ecceae60d425fffa2eeef45fb8695 libdts-0.0.2-r2.ebuild 1327
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2 64
-MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2-r1 64
+MD5 fd6b9d9fe6c3ddd6a9c69a3f5fa00fdd files/libdts-0.0.2-freebsd.patch 501
 MD5 ab9838cb8c25fd47f0bee4b94a3d3e26 files/libdts-0.0.2-libtool.patch 3208
 MD5 16606801cd83f170926d1212513689f6 files/libdts-0.0.2-libtool2.patch 3222
+MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2-r1 64
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2-r2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC33Znj5H05b2HAEkRAjFmAKCWls3rXcNO+7Rr1TBP37lIiTzdOQCeNfBG
-h+FInRUbJMZGU5uhz3bmUbA=
-=E7nC
+iD8DBQFDBJO0j5H05b2HAEkRAmHrAJ9BldXE5m/GZz46mx1NCccfvLBqUACfXiPs
+6kvS2GeZWAaah4qP0h2Owso=
+=grM8
 -----END PGP SIGNATURE-----

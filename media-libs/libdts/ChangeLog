@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.15 2005/07/21 10:17:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.16 2005/08/18 13:56:32 flameeyes Exp $
+
+  18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libdts-0.0.2-freebsd.patch, libdts-0.0.2-r2.ebuild:
+  Added patch for Gentoo/FreeBSD compatibility (similar to a52dec). Thanks to
+  Alberto Zennaro for let me know of this.
 
 *libdts-0.0.2-r2 (21 Jul 2005)
 
