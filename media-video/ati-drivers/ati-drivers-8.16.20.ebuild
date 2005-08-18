@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20.ebuild,v 1.2 2005/08/18 15:54:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20.ebuild,v 1.3 2005/08/18 18:35:30 swegener Exp $
 
 IUSE="opengl"
 
@@ -73,7 +73,7 @@ src_unpack() {
 #	then
 #	fi
 	epatch ${FILESDIR}/ioctl32.patch
-	
+
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
 
