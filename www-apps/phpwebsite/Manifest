@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f0ceddfc13e8544bb31b729450ae5d90 phpwebsite-0.10.2_rc1.ebuild 1442
 MD5 24a724cdfd1390bba450f4b7c1a9dfc5 metadata.xml 360
+MD5 9566ce0dba37ac9f5b86a1da7404f964 ChangeLog 7980
 MD5 aaa9b8722dbe6595cd274b6173a1e45e phpwebsite-0.10.1-r1.ebuild 1642
-MD5 f93b280cad3d9b382b9de4f46260d083 phpwebsite-0.10.2_rc1.ebuild 1445
-MD5 1638aaf63f90f7178476a688f63c2036 ChangeLog 7878
-MD5 2ca9ac185775bab6e8fbecf0584c5c67 files/digest-phpwebsite-0.10.1-r1 159
-MD5 e5cab3ec158303e1d64a76d9eacd5cb6 files/postinstall-en.txt 4642
 MD5 0f181e50286192df906dd979448e0fd5 files/phpwebsite-0.10.1-xml-rpc.diff 1188
 MD5 238d5c7341d91b9017d5dac84124884d files/digest-phpwebsite-0.10.2_rc1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDBKt8KRy60XGEcJIRAonyAKCKs5KkZ0MA04NxK3T611AAe5ZTPQCeOYdY
-76/J1sKdL9lZG3t3i1evf3E=
-=TvMY
------END PGP SIGNATURE-----
+MD5 2ca9ac185775bab6e8fbecf0584c5c67 files/digest-phpwebsite-0.10.1-r1 159
+MD5 e5cab3ec158303e1d64a76d9eacd5cb6 files/postinstall-en.txt 4642
