@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.24 2005/07/19 21:32:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.25 2005/08/18 18:34:18 hansmi Exp $
+
+  18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> lwp-2.0.ebuild:
+  Stable on ppc.
 
   19 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> lwp-2.0.ebuild:
   Stable on alpha.
