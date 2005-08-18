@@ -5,8 +5,8 @@ MD5 47d0a60400a6785be278b336b21b5209 ati-drivers-8.13.3.ebuild 6800
 MD5 c5dff4c727e2af27370a644010deacb9 ati-drivers-8.14.13.ebuild 6800
 MD5 68687aca2c12a22ee54a41c3e44474fa ati-drivers-8.14.13-r1.ebuild 6529
 MD5 093c6498a344252964268bae7f88487e ati-drivers-8.12.10.ebuild 6746
-MD5 1b9da7ca6c97ac7b6f3c7e508e8ff73f ati-drivers-8.16.20.ebuild 6304
-MD5 119694884fcfda0375fcd0253cc96b28 ChangeLog 18030
+MD5 d4173eb9b796d3bec37d1c5ad18ad910 ati-drivers-8.16.20.ebuild 6339
+MD5 fd545eef37894fc8ff33447d0d5bc083 ChangeLog 18125
 MD5 e7facf4c6e40ede98655179dbe98377f ati-drivers-8.13.4.ebuild 6916
 MD5 594314a4a5243fae95ca414ac615e93e ati-drivers-8.8.25-r3.ebuild 5753
 MD5 8784654c96339c98675ef8fb27db41e8 ati-drivers-8.14.13-r3.ebuild 7610
