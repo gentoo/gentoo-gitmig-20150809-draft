@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.221 2005/08/18 18:06:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.222 2005/08/18 19:01:21 killerfox Exp $
+
+  18 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  mysql-4.0.25-r2.ebuild:
+  Stable on hppa.
 
   18 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mysql-4.0.25-r2.ebuild:
