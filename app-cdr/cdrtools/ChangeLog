@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.124 2005/08/17 21:40:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.125 2005/08/18 14:26:46 pylon Exp $
+
+  18 Aug 2005; Lars Weiler <pylon@gentoo.org>
+  cdrtools-2.01.01_alpha03.ebuild:
+  Take out the iconv-patch for mkisofs, as it fails on the current version.
 
 *cdrtools-2.01.01_alpha03 (17 Aug 2005)
 

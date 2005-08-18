@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha03.ebuild,v 1.1 2005/08/17 21:40:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha03.ebuild,v 1.2 2005/08/18 14:26:46 pylon Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -31,11 +31,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
 
 	epatch ${FILESDIR}/${PN}-2.01a32-scan.patch
-
-	# UTF-8 support, see Bug #28369
-	if use unicode; then
-		epatch ${FILESDIR}/mkisofs-iconv-10.patch || die "Can't apply utf-8 patch"
-	fi
 
 	# Add support for On-The-Fly AES encryption
 	# http://burbon04.gmxhome.de/linux/CDREncryption.html
