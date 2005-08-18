@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4186d877c3fa2ef9d3433adf9f1b751c less-382-r2.ebuild 767
+MD5 adb0b1124c355f33197454d2be87bfd3 less-382-r2.ebuild 791
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a5d7ec44664c5c3766d0973291477765 less-385_p4.ebuild 1131
-MD5 2aaa4d79df0dbf51d83d34fafc68f58b less-385.ebuild 776
-MD5 8c1422a7e45ec2d2d0b9e97bd4867091 ChangeLog 5217
+MD5 efac081790d9ee84f111c7b864468925 less-385_p4.ebuild 1155
+MD5 147e4c10285042fad83d0c3592498e8c less-385.ebuild 800
+MD5 f7b5efd4e9960e9c06ea0ee233b7d2a8 ChangeLog 5362
 MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
 MD5 a4095ecfedd62ce5a648f0c5ff6f8d47 files/lesspipe.sh 2020
 MD5 c9bb99cd4f916916f975c59d38c3d590 files/digest-less-385 60
 MD5 07e2862dc300b691cba6dfb12426b732 files/digest-less-385_p4 126
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3vpogIKl8Uu19MoRApdzAKCD04AXxAYSLuyO69WSc3YiLl+FCQCcDRDR
-1YUQyM9UhsiYWqDGfOPS7GI=
-=BLW5
+iD8DBQFDBAhmgIKl8Uu19MoRAg/pAJ9THCAy7qjq2Vq8QtAMAw590YonPwCePZoH
+Vt6fmO/1xNIa9t07SwzYlfQ=
+=+mlJ
 -----END PGP SIGNATURE-----

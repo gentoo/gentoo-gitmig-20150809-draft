@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.40 2005/06/19 07:54:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.41 2005/08/18 04:02:14 vapier Exp $
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org> less-382-r2.ebuild,
+  less-385.ebuild, less-385_p4.ebuild:
+  Add a PROVIDE for virtual/pager.
 
 *less-385_p4 (19 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.14 2005/05/23 22:30:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.15 2005/08/18 04:02:14 vapier Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/"
@@ -12,6 +12,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
+PROVIDE="virtual/pager"
 
 src_install() {
 	dobin less lessecho lesskey || die

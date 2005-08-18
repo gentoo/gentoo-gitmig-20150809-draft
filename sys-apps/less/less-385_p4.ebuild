@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4.ebuild,v 1.2 2005/07/16 06:13:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4.ebuild,v 1.3 2005/08/18 04:02:14 vapier Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
+PROVIDE="virtual/pager"
 
 S=${WORKDIR}/${MY_P}
 
