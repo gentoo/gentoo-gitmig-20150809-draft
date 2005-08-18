@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.121 2005/08/08 14:47:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.122 2005/08/18 00:24:40 leonardop Exp $
+
+*control-center-2.11.91 (17 Aug 2005)
+
+  17 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +control-center-2.11.91.ebuild,
+  +files/control-center-2.11.91-xft_check.patch:
+  New version. Added 'eds' USE flag. Added patch to avoid forcing a
+  dependency on x11-libs/libXft for now. Gentoo's patchset for xorg-x11
+  already includes the fix that this check strives for.
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org>
   control-center-2.10.1-r1.ebuild:

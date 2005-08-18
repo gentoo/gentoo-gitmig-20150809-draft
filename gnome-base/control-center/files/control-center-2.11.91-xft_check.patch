@@ -1,0 +1,12 @@
+diff -NurdB control-center-2.11.91/configure.in control-center-2.11.91-patched/configure.in
+--- control-center-2.11.91/configure.in	2005-08-17 12:21:25.000000000 -0500
++++ control-center-2.11.91-patched/configure.in	2005-08-17 17:28:21.000000000 -0500
+@@ -23,7 +23,7 @@
+ 
+ m4_define(gnomevfs_minver, 2.0.0)
+ m4_define(fontconfig_minver, 1.0.0)
+-m4_define(xft_minver, 2.1.7)
++m4_define(xft_minver, 2)
+ m4_define(gtk_minver, 2.6.0)
+ m4_define(libbonobo_minver, 2.0.0)
+ m4_define(libgnomeui_minver, 2.2.0)
