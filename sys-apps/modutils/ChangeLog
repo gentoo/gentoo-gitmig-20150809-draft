@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/modutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.50 2005/07/14 02:59:09 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.51 2005/08/18 22:30:15 vapier Exp $
+
+*modutils-2.4.27-r1 (18 Aug 2005)
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/modutils-2.4.27-no-nested-function.patch,
+  +modutils-2.4.27-r1.ebuild:
+  Fix by the PaX guys to remove executable stack markings.
 
   14 Jul 2005; Mike Frysinger <vapier@gentoo.org>
   +files/modutils-2.4.27-alias.patch, +files/modutils-2.4.27-flex.patch,

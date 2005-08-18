@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8fea62130720627999427a1f9c21cd82 modutils-2.4.27.ebuild 1034
 MD5 9607bc10d8f0a9ad4676f3fe95d08a47 ChangeLog 7754
@@ -12,3 +15,10 @@ MD5 123430bcca454dfee74acef6f3525a17 files/digest-modutils-2.4.27 68
 MD5 123430bcca454dfee74acef6f3525a17 files/digest-modutils-2.4.27-r1 68
 MD5 d5504b6d6ed1ef697275b3a48a1e49e7 files/2.4.27-gcc34.patch 231
 MD5 d836ad11c092b2c55cc5b398c2af485b files/digest-modutils-2.4.26 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBQwPgIKl8Uu19MoRArCPAJ9im0fPdpY2hGYfmcpm+1rM0nWiZACcDpaw
+iqZTVvUfKSkd1kl8W4ik/FQ=
+=JT3O
+-----END PGP SIGNATURE-----
