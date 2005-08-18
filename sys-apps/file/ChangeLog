@@ -1,28 +1,16 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.86 2005/08/18 04:10:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.87 2005/08/18 22:27:24 vapier Exp $
 
-  18 Aug 2005; Mike Frysinger <vapier@gentoo.org> file-4.14.ebuild:
-  Mask until #101298 / #101639 / #102520 get sorted out.
+*file-4.15 (18 Aug 2005)
 
-  09 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> file-4.13.ebuild:
-  Stable on mips.
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org> +file-4.15.ebuild:
+  Version bump to fix up #101298 by PIERRE Benoît / #101639 by Preston 
+  Crow / #102520 by Daniel Drake.
 
   24 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/file-4.14-gcc2.patch, file-4.14.ebuild:
   Fix building with gcc2.
-
-  20 Jul 2005; Markus Rothe <corsair@gentoo.org> file-4.13.ebuild:
-  Stable on ppc64
-
-  19 Jul 2005; Bryan Ã˜stergaard <kloeri@gentoo.org> file-4.13.ebuild:
-  Stable on alpha.
-
-  18 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> file-4.13.ebuild:
-  Stable on sparc
-
-  18 Jul 2005; Joseph Jezak <josejx@gentoo.org> file-4.13.ebuild:
-  Marked ppc stable.
 
 *file-4.14 (17 Jul 2005)
 
