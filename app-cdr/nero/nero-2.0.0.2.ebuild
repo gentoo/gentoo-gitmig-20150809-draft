@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.2.ebuild,v 1.1 2005/08/18 12:02:17 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.0.0.2.ebuild,v 1.2 2005/08/18 17:25:39 mr_bones_ Exp $
 
 inherit eutils rpm
 
@@ -81,7 +81,7 @@ pkg_postinst() {
 	einfo
 	einfo "NOTE: This is demo software, it will run for a trial"
 	einfo "period only until unlocked with a serial number."
-	einfo "See ${HOMEPAGE} for details." 
+	einfo "See ${HOMEPAGE} for details."
 	einfo
 	einfo "Technical support for NeroLINUX is provided by CDFreaks"
 	einfo "Linux forum at http://club.cdfreaks.com/forumdisplay.php?f=104"
