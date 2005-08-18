@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.16 2005/08/06 04:05:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.17 2005/08/18 18:36:37 ka0ttic Exp $
+
+  18 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/source-highlight-2.0-boost_regex_error.diff,
+  +files/source-highlight-2.1.1-boost_regex_error.diff,
+  source-highlight-2.0.ebuild, source-highlight-2.1.1.ebuild:
+  Added patches for 2.0 and 2.1.1 to use boost::regex_error if >=boost-1.33.0
+  is installed.
 
 *source-highlight-2.1.1 (05 Aug 2005)
 

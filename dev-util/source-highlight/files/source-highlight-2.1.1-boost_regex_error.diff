@@ -1,0 +1,79 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN source-highlight-2.1.1.orig/src/lib/regexpstatebuilder.cpp source-highlight-2.1.1/src/lib/regexpstatebuilder.cpp
+--- source-highlight-2.1.1.orig/src/lib/regexpstatebuilder.cpp	2005-08-18 11:53:18.000000000 -0400
++++ source-highlight-2.1.1/src/lib/regexpstatebuilder.cpp	2005-08-18 11:55:09.000000000 -0400
+@@ -33,7 +33,7 @@
+ {
+   try {
+     state->add_exp(exp, parserInfo, f);
+-  } catch (boost::bad_expression &e) {
++  } catch (boost::regex_error &e) {
+     printError("wrong original expression: " + orig);
+     throw e;
+   }
+@@ -44,7 +44,7 @@
+   bool ok = true;
+   try {
+     state->freeze();
+-  } catch (boost::bad_expression &e) {
++  } catch (boost::regex_error &e) {
+     ok = false;
+   }
+ 
+@@ -91,13 +91,13 @@
+       build(*it, temp_state);
+       try {
+         temp_state->freeze();
+-      } catch (boost::bad_expression &e) {
++      } catch (boost::regex_error &e) {
+         printError("problem in this expression: " + (*it)->toString());
+         throw e;
+       }
+     }
+   } else
+-    throw boost::bad_expression("internal error");
++    throw boost::regex_error(boost::regex_constants::error_bad_pattern);
+ }
+ 
+ void
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN source-highlight-2.1.1.orig/src/lib/test_langdefparser_main.cpp source-highlight-2.1.1/src/lib/test_langdefparser_main.cpp
+--- source-highlight-2.1.1.orig/src/lib/test_langdefparser_main.cpp	2005-08-18 11:53:18.000000000 -0400
++++ source-highlight-2.1.1/src/lib/test_langdefparser_main.cpp	2005-08-18 11:53:45.000000000 -0400
+@@ -31,7 +31,7 @@
+       
+     try {
+       boost::regex ex(ex_string);
+-    } catch (boost::bad_expression &e) {
++    } catch (boost::regex_error &e) {
+       cerr << "bad expression: " << ex_string << endl;
+     }
+   }
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN source-highlight-2.1.1.orig/src/regexpstate.cpp source-highlight-2.1.1/src/regexpstate.cpp
+--- source-highlight-2.1.1.orig/src/regexpstate.cpp	2005-08-18 11:53:18.000000000 -0400
++++ source-highlight-2.1.1/src/regexpstate.cpp	2005-08-18 11:53:45.000000000 -0400
+@@ -57,12 +57,12 @@
+ }
+ 
+ void
+-RegExpState::freeze() throw(boost::bad_expression)
++RegExpState::freeze() throw(boost::regex_error)
+ {
+   const string &buffered = buffer.str();
+   try {
+     reg_exp.assign(buffered);
+-  } catch (boost::bad_expression &e) {
++  } catch (boost::regex_error &e) {
+     printError("bad expression: " + buffered);
+     throw e;
+   }
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN source-highlight-2.1.1.orig/src/regexpstate.h source-highlight-2.1.1/src/regexpstate.h
+--- source-highlight-2.1.1.orig/src/regexpstate.h	2005-08-18 11:53:18.000000000 -0400
++++ source-highlight-2.1.1/src/regexpstate.h	2005-08-18 11:55:21.000000000 -0400
+@@ -69,7 +69,7 @@
+ 
+   const std::string &get_elem(int index = -1);
+   void add_exp(const std::string &s, ParserInfo *parserInfo, RegExpFormatterPtr f);
+-  void freeze() throw(boost::bad_expression);
++  void freeze() throw(boost::regex_error);
+   void add_normal_formatter(RegExpFormatterPtr f);
+   RegExpFormatterPtr getLastFormatter() const { return formatters[formatters.size()-1];}
+ };
