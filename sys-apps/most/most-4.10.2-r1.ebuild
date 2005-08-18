@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.1 2005/08/14 11:25:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.10.2-r1.ebuild,v 1.2 2005/08/18 15:17:09 ka0ttic Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An extremely excellent text file reader"
 HOMEPAGE="http://freshmeat.net/projects/most/"
@@ -30,7 +30,7 @@ src_install() {
 	# Changing this to use src/${ARCH}objs/most probably isn't a good
 	# idea...
 	local objsdir
-	case ${ARCH} in
+	case $(tc-arch) in
 		x86)
 			objsdir=x86objs
 		;;
