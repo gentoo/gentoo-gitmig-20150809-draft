@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.15.ebuild,v 1.4 2005/08/16 14:34:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.15.ebuild,v 1.5 2005/08/18 16:54:24 ka0ttic Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 	local myconf="--libdir=/usr/$(get_libdir)/${PN}"
 
 	einfo "Regenerating automake/autoconf files"
-	autoreconf -f -i || die "autoreconf failed"
+	autoreconf -f || die "autoreconf failed"
 
 	econf ${myconf} \
 		$(use_enable ipv6) \

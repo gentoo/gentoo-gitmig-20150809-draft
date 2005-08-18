@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.20050817.1210.ebuild,v 1.1 2005/08/17 15:45:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.20050817.1210.ebuild,v 1.2 2005/08/18 16:54:24 ka0ttic Exp $
 
 inherit eutils versionator
 
@@ -50,7 +50,7 @@ src_unpack() {
 
 src_compile() {
 #    einfo "Regenerating automake/autoconf files"
-#    autoreconf -f -i || die "autoreconf failed"
+#    autoreconf -f || die "autoreconf failed"
 
 	econf \
 		--libdir=/usr/$(get_libdir)/${PN} \
