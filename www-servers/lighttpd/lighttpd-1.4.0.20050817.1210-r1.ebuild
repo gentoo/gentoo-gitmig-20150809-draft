@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.20050817.1210.ebuild,v 1.2 2005/08/18 16:54:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.20050817.1210-r1.ebuild,v 1.1 2005/08/18 22:37:09 ka0ttic Exp $
 
 inherit eutils versionator
 
@@ -33,11 +33,6 @@ RDEPEND="virtual/libc
 LIGHTTPD_DIR="/var/www/localhost/htdocs/"
 LOG_DIR="/var/log/lighttpd/"
 
-pkg_setup() {
-	enewgroup lighttpd
-	enewuser lighttpd -1 -1 "${LIGHTTPD_DIR}" lighttpd
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -46,6 +41,7 @@ src_unpack() {
 	use php && epatch ${FILESDIR}/${PN}-1.3.13-php.diff
 
 	epatch ${FILESDIR}/${P}-fix-config-segv.diff
+	epatch ${FILESDIR}/${P}-fix-mod_userdir.diff
 }
 
 src_compile() {
@@ -65,6 +61,8 @@ src_compile() {
 }
 
 src_install() {
+	keepdir ${LIGHTTPD_DIR} ${LOG_DIR}
+
 	make DESTDIR="${D}" install || die "make install failed"
 
 	insinto /etc
@@ -77,13 +75,16 @@ src_install() {
 		newconfd ${FILESDIR}/spawn-fcgi.confd spawn-fcgi
 	fi
 
-	keepdir ${LIGHTTPD_DIR} ${LOG_DIR} || die "keepdir failed"
-	fowners lighttpd:lighttpd ${LOG_DIR} || die "fowners failed"
-
 	dodoc README COPYING
 	cd doc
 	dodoc *.txt *.sh
 	newdoc lighttpd.conf lighttpd.conf.example || die "newdoc failed"
+}
+
+pkg_preinst() {
+	enewgroup lighttpd || die "enewgroup failed"
+	enewuser lighttpd -1 -1 "${LIGHTTPD_DIR}" lighttpd || die "enewuser failed"
+	chown lighttpd:lighttpd ${IMAGE}${LOG_DIR}
 }
 
 pkg_postinst () {
