@@ -1,0 +1,81 @@
+diff -ur -x '*~' toxine-0.6.3/configure.ac toxine-0.6.3-configure/configure.ac
+--- toxine-0.6.3/configure.ac	2004-04-16 18:32:30.000000000 +0200
++++ toxine-0.6.3-configure/configure.ac	2005-08-18 23:37:09.000000000 +0200
+@@ -167,26 +167,48 @@
+ dnl
+ dnl ncurses
+ dnl
+-AC_CHECK_HEADERS(curses.h)
+-AC_CHECK_LIB(ncurses, cbreak,
+-	      AC_DEFINE(HAVE_NCURSES,,[Define this if you have ncurses installed])
+-	      ac_have_ncurses="yes"
+-	      NCURSES_LIB="-lncurses")
+-AC_SUBST(NCURSES_LIB)
+-AM_CONDITIONAL(HAVE_NCURSES, test x$ac_have_ncurses = "xyes")
++AC_ARG_WITH(ncurses,
++   [  --without-ncurses       Turn off ncurses support.],
++   [], with_ncurses=yes)
++
++if test x"$with_ncurses" = xyes; then
++  AC_CHECK_HEADERS(curses.h)
++  AC_CHECK_LIB(ncurses, cbreak,
++               AC_DEFINE(HAVE_NCURSES,,[Define this if you have ncurses installed])
++               ac_have_ncurses="yes"
++               NCURSES_LIB="-lncurses")
++  AC_SUBST(NCURSES_LIB)
++fi
+ 
++AM_CONDITIONAL(HAVE_NCURSES, test x$ac_have_ncurses = "xyes")
+ 
+ dnl
+ dnl Checks for Ascii-Art library
+ dnl
+-AM_PATH_AALIB(1.2,, AC_MSG_RESULT([*** All of AALIB dependent parts will be disabled ***]))
++AC_ARG_WITH(aalib,
++   [  --without-aalib         Turn off AALIB support.],
++   [], with_aalib=yes)
++
++if test x"$with_aalib" = xyes; then
++  AM_PATH_AALIB(1.2.0,,)
++else
++  no_aalib=yes
++fi
+ AM_CONDITIONAL(HAVE_AA, test x$no_aalib != "xyes")
+ 
+ 
+ dnl 
+ dnl checks for Color AsCii Art library
+ dnl 
+-AM_PATH_CACA(0.8,, AC_MSG_RESULT([*** All CACA-dependent parts will be disabled ***]))
++AC_ARG_WITH(libcaca,
++   [  --without-libcaca       Turn off CACA support.],
++   [], with_libcaca=yes)
++
++if test x"$with_libcaca" = xyes; then
++  AM_PATH_CACA(0.3,, AC_MSG_RESULT([*** All CACA-dependent parts will be disabled ***]))
++else
++  no_caca=yes
++fi
+ AM_CONDITIONAL(HAVE_CACA, test x$no_caca != "xyes")
+ 
+ 
+@@ -231,7 +253,7 @@
+ fi
+ 
+ case "$host_or_hostalias" in
+-  i386-*-freebsd*)
++  i?86-*-freebsd*)
+     CFLAGS="$CFLAGS -pipe -fomit-frame-pointer $f_af $f_al $f_aj $m_wm $m_psb -fexpensive-optimizations $f_si $f_nsa -ffast-math -funroll-loops -finline-functions -D_REENTRANT"
+     DEBUG_CFLAGS="$X_CFLAGS $DEBUG_CFLAGS -D_REENTRANT -DDEBUG"
+     AC_DEFINE(__i386__,1,[Define this if you're running x86 architecture])
+@@ -350,6 +372,10 @@
+     CFLAGS="$CFLAGS -O3"
+     DEBUG_CFLAGS="$DEBUG_CFLAGS -O3"
+     ;;
++  
++  x86_64-*)
++    dnl let default
++    ;;
+ 
+   *)
+     echo "Host type '$host' ($host_alias) is currently not supported by xine"

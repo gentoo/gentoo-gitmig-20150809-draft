@@ -1,0 +1,14 @@
+diff -ur toxine-0.6.3/src/main.c toxine-0.6.3-gcc4/src/main.c
+--- toxine-0.6.3/src/main.c	2004-04-12 17:55:02.000000000 +0200
++++ toxine-0.6.3-gcc4/src/main.c	2005-08-18 23:47:48.000000000 +0200
+@@ -127,8 +127,8 @@
+     }
+ 
+     toxine_free(tox->configfile);
+-    toxine_free((char *)tox->video.name);
+-    toxine_free((char *)tox->audio.name);
++    free((char *)tox->video.name);
++    free((char *)tox->audio.name);
+     toxine_free(tox->command.line);
+     toxine_free(tox->command.remain);
+     toxine_free(tox->command.command);
