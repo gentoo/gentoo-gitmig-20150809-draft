@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/glitz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.11 2005/05/09 02:46:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.12 2005/08/18 09:10:46 cardoe Exp $
+
+*glitz-0.4.4 (18 Aug 2005)
+
+  18 Aug 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  +glitz-0.4.4.ebuild:
+  adding latest glitz for cairo 0.9.2 support
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org>
   glitz-0.3.0.20050115.ebuild, glitz-0.4.0.ebuild:
