@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.41 2005/06/17 20:46:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.42 2005/08/18 07:19:37 cardoe Exp $
+
+*hal-0.5.2 (18 Aug 2005)
+
+  18 Aug 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  +hal-0.5.2.ebuild, +hal-unmount.dev, +0.5-hald.rc, 
+  +hal-0.5.1-old_storage_policy.patch:
+  added HAL 0.5.2, but masked, as per Gnome herd's request.
+  Added self to maintainership so I can work out 0.5.x issues
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> hal-0.4.7-r2.ebuild:
   Stable on ppc.
