@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.46 2005/07/27 17:42:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.47 2005/08/18 08:12:51 cardoe Exp $
+
+*dbus-0.35.2 (18 Aug 2005)
+
+  18 Aug 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  +dbus-0.35.2.ebuild:
+  added dbus 0.35.2 to tree, p.mask'd as per Gnome herd's request
+  added self to maintainership to receive the issues
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> dbus-0.23-r3.ebuild,
   dbus-0.23.4-r1.ebuild:

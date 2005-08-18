@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
+<herd>gentopia</herd>
 <maintainer>
 	<email>foser@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>cardoe@gentoo.org</email>
 </maintainer>
 </pkgmetadata>

@@ -1,9 +1,13 @@
-MD5 ce9d224d9cf42057490798a19ac98bed ChangeLog 6430
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1836414109de0837d0c1e08ab63d60d ChangeLog 6665
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
 MD5 fedfd2a1281d8773038a8036a2a75ef8 dbus-0.23.2-r1.ebuild 3454
 MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
-MD5 5b5bcd9c1a432b2c8157b0004a073f72 metadata.xml 224
 MD5 bb8292b02298d653808cb0d0edd271da dbus-0.23.4.ebuild 3413
+MD5 f33c0c04340639e98aeaed265a7a6cd1 metadata.xml 307
+MD5 138f915571d271eac9abdd691d0f0c8c dbus-0.35.2.ebuild 3524
 MD5 129780aacfd90191b7357bc6ae029bc2 dbus-0.23.4-r1.ebuild 3448
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
 MD5 6e8a551caef6f55569fa4724d3cf1fe0 files/dbus 663
@@ -19,3 +23,11 @@ MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2 64
 MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2-r1 64
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4 64
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
+MD5 99a00e39ad05196f86d2b674e4cabff4 files/digest-dbus-0.35.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBENFBtvusYtCZMsRAktSAJwPYlG1ge3DPvDcqb+4MTnV2R89yQCeOMn9
+Ai1Tva3zc/Ck3mG0q00hY6k=
+=iM/V
+-----END PGP SIGNATURE-----
