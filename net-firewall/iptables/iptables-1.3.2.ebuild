@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.2.ebuild,v 1.6 2005/08/18 14:56:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.2.ebuild,v 1.7 2005/08/18 22:53:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -154,6 +154,6 @@ pkg_postinst() {
 	fi
 	echo
 	ewarn "When upgrading from iptables-1.2.x, you may be unable to remove"
-	ewarn "rules added with iptables-1.3.x.  This is a known issue, please see:"
+	ewarn "rules added with iptables-1.2.x.  This is a known issue, please see:"
 	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=92535"
 }
