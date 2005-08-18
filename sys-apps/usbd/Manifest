@@ -1,6 +1,16 @@
-MD5 337a742f8ac3dd511ba621e3ea440a07 ChangeLog 1017
-MD5 08d7aaf9884cc15a93fcd56e122a3883 usbd-0.1.ebuild 950
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 08d7aaf9884cc15a93fcd56e122a3883 usbd-0.1.ebuild 950
+MD5 5816bea86cde94d632d4085f6fa9b201 ChangeLog 1165
 MD5 44582f35ae2f6b3765620c92aabba729 files/digest-usbd-0.1 60
 MD5 cd512f356018c4f3df27a9476167eba0 files/usbd-gcc-3.4.patch 238
-MD5 8b5a41a7335d390fbf46a49b9759a252 files/usbd 400
+MD5 2b3a69a1ad06df68015258e6f1036f00 files/usbd 388
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDA9V9gIKl8Uu19MoRAvKhAJ406bN2slcUoF9UFTmLr7IBHjEb7QCeOZwM
+yktzTQn2rv7JtGv14CW6gkk=
+=rMa5
+-----END PGP SIGNATURE-----
