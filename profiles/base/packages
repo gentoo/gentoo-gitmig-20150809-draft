@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.33 2005/06/02 23:37:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.34 2005/08/18 04:03:17 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -43,7 +43,6 @@
 *sys-apps/grep
 *sys-apps/groff
 *sys-apps/kbd
-*sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/net-tools
@@ -78,4 +77,5 @@
 *virtual/libc
 *virtual/modutils
 *virtual/os-headers
+*virtual/pager
 *virtual/ssh

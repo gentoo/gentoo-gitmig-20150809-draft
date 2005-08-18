@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.70 2005/08/01 15:17:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.71 2005/08/18 04:03:17 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -58,6 +58,7 @@ virtual/mpi					sys-cluster/mpich
 virtual/mta					mail-mta/ssmtp
 virtual/ooo					app-office/openoffice-bin
 virtual/opengl				x11-base/xorg-x11
+virtual/pager				sys-apps/less
 # Only have this for >=pam-0.78, as we want to make use of the 'include'
 # directive to phase out pam_stack.
 virtual/pam					>=sys-libs/pam-0.78
@@ -78,7 +79,7 @@ virtual/sylpheed			mail-client/sylpheed
 virtual/tetex				app-text/tetex
 virtual/textbrowser			www-client/links
 virtual/tftp				net-ftp/tftp-hpa
-virtual/utempter 			sys-apps/utempter
+virtual/utempter			sys-apps/utempter
 virtual/w3m					www-client/w3m
 virtual/winkernel			sys-kernel/win4lin-sources
 virtual/x11					x11-base/xorg-x11
