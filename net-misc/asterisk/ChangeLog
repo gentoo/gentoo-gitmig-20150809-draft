@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.73 2005/08/02 18:55:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.74 2005/08/18 18:01:48 stkn Exp $
+
+*asterisk-1.0.9-r1 (18 Aug 2005)
+
+  18 Aug 2005; <stkn@gentoo.org> asterisk-1.0.6-r1.ebuild,
+  asterisk-1.0.7-r1.ebuild, asterisk-1.0.8.ebuild, asterisk-1.0.9.ebuild,
+  +asterisk-1.0.9-r1.ebuild:
+  Revision bump (bristuff update) and fixed bristuff part of SRC_URI (after
+  site redesign).
 
   02 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> asterisk-1.0.8.ebuild:
   Stable on sparc

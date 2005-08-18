@@ -1,40 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a02d714a0cea48cce4aa6a1f237df63 asterisk-1.0.9.ebuild 13371
-MD5 2b60745345f4072343ab5de54d717488 asterisk-1.0.8.ebuild 13484
-MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 13dc6ccd1a6df943f810c51e949c4728 asterisk-1.0.7-r1.ebuild 13360
+MD5 52656872fa2b24fdf5d2c67a5ab11fe3 asterisk-1.0.6-r1.ebuild 13740
 MD5 8a58b364b0ad9e0a2f2a88365da7afd5 asterisk-1.0.5-r2.ebuild 11975
-MD5 dd6c6b7f4015bd3469119952d5126a7a asterisk-1.0.6-r1.ebuild 13746
-MD5 3975b5a2779f62d1fcd496a8ec9dd325 ChangeLog 14101
-MD5 48a3518349e2abfe20fa918a9db5eea2 files/digest-asterisk-1.0.7-r1 210
-MD5 f399592939cd5b43b7851e20744a108e files/digest-asterisk-1.0.6-r1 210
+MD5 b3c9d42daec8c35fc86a2aae967675ca asterisk-1.0.8.ebuild 13474
+MD5 b2049851325410f0027c86bd8dd48ed3 asterisk-1.0.9.ebuild 13365
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+MD5 75819e8bdf92f57ca2fd179e130a3daf ChangeLog 14388
+MD5 e5f4219548aa3adbf265827f48667a1a asterisk-1.0.7-r1.ebuild 13354
+MD5 f0786dc0b399be32e5e46c426e3bab9a asterisk-1.0.9-r1.ebuild 13368
 MD5 97ed00bdccf7c70d5fcbf37580da91c4 files/digest-asterisk-1.0.5-r2 139
 MD5 b3bbedde09faea609a0357b21eafa596 files/digest-asterisk-1.0.8 210
+MD5 58b3329253168e6dfb4c8ecbb98aeecd files/digest-asterisk-1.0.9-r1 210
+MD5 48a3518349e2abfe20fa918a9db5eea2 files/digest-asterisk-1.0.7-r1 210
+MD5 f399592939cd5b43b7851e20744a108e files/digest-asterisk-1.0.6-r1 210
 MD5 19916e691993701d9707674f9f046bd6 files/digest-asterisk-1.0.9 210
-MD5 1d5c7f8847a95005af3ffb0699bba20f files/1.0.0/asterisk.confd.sec 528
-MD5 ab552fbbe803766b5291d61942dbcd9f files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff 860
-MD5 d8501003cf3148ae662a03866e734481 files/1.0.0/asterisk-1.0.7-manager-cli-segv.patch 4008
-MD5 38064faca1838d7c57bb26293741f31b files/1.0.0/asterisk-1.0.8-hppa.patch 1274
-MD5 5e1e00b71a830e487787ce48be04ccdc files/1.0.0/asterisk-1.0.8-initgroups.diff 1558
-MD5 0c31aac944f4fdff2b26b446d0d0eef4 files/1.0.0/asterisk-1.0.7-initgroups.diff 1826
-MD5 08d718c04e911f465f867577d649d204 files/1.0.0/asterisk-1.0.5-uclibc-dns.diff 304
-MD5 920f8ae54f895cfa46a8a037c865e59a files/1.0.0/asterisk.rc6 517
-MD5 b2446878d3b46ea595a7994ae8de0499 files/1.0.0/asterisk-1.0.7-scripts.diff 1629
-MD5 54c23dc3014fee285ac62bf121125a34 files/1.0.0/asterisk.rc6.sec 1208
-MD5 f0fe0308b464c71f83cf2483388c8058 files/1.0.0/asterisk-1.0.1-linux26.diff 474
-MD5 6a50db2ee46d4139128d0c4225ac071f files/1.0.0/asterisk-uclibc-dns.diff 433
-MD5 8929203070b56a9d9204423cc5b3349a files/1.0.0/asterisk-1.0.9-weak-references.diff 8406
-MD5 93d2e0533a32a38e21f99f278f635266 files/1.0.0/asterisk-1.0.5-speex.diff 1214
-MD5 18fb1b2e1fbf2f19e8a9a600eab4c5c8 files/1.0.0/asterisk-1.0.8-callerid.patch 631
 MD5 f20e5b869d5e221194187dd7f504d38b files/1.0.0/asterisk-1.0.5-astcfg-0.0.2.diff 5829
-MD5 85e291d6eb70a24fdc82469ed53bfe54 files/1.0.0/asterisk.confd 283
+MD5 0c31aac944f4fdff2b26b446d0d0eef4 files/1.0.0/asterisk-1.0.7-initgroups.diff 1826
+MD5 93d2e0533a32a38e21f99f278f635266 files/1.0.0/asterisk-1.0.5-speex.diff 1214
 MD5 a839d8b6b55e3b6ad17b9a7f4be2e6ba files/1.0.0/asterisk-1.0.5-hppa.patch 909
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC78HPKRy60XGEcJIRAiNVAJ99jgS4kWg8tUFvKIVgCsoTJYTGIgCcCDtb
-JqactgrFA5Ydc4FOMeF6kvM=
-=q5UW
------END PGP SIGNATURE-----
+MD5 54c23dc3014fee285ac62bf121125a34 files/1.0.0/asterisk.rc6.sec 1208
+MD5 b2446878d3b46ea595a7994ae8de0499 files/1.0.0/asterisk-1.0.7-scripts.diff 1629
+MD5 920f8ae54f895cfa46a8a037c865e59a files/1.0.0/asterisk.rc6 517
+MD5 d8501003cf3148ae662a03866e734481 files/1.0.0/asterisk-1.0.7-manager-cli-segv.patch 4008
+MD5 ab552fbbe803766b5291d61942dbcd9f files/1.0.0/res_perl-1.0.7-bristuff-0.2.0.diff 860
+MD5 85e291d6eb70a24fdc82469ed53bfe54 files/1.0.0/asterisk.confd 283
+MD5 5e1e00b71a830e487787ce48be04ccdc files/1.0.0/asterisk-1.0.8-initgroups.diff 1558
+MD5 1d5c7f8847a95005af3ffb0699bba20f files/1.0.0/asterisk.confd.sec 528
+MD5 f0fe0308b464c71f83cf2483388c8058 files/1.0.0/asterisk-1.0.1-linux26.diff 474
+MD5 08d718c04e911f465f867577d649d204 files/1.0.0/asterisk-1.0.5-uclibc-dns.diff 304
+MD5 8929203070b56a9d9204423cc5b3349a files/1.0.0/asterisk-1.0.9-weak-references.diff 8406
+MD5 18fb1b2e1fbf2f19e8a9a600eab4c5c8 files/1.0.0/asterisk-1.0.8-callerid.patch 631
+MD5 6a50db2ee46d4139128d0c4225ac071f files/1.0.0/asterisk-uclibc-dns.diff 433
+MD5 38064faca1838d7c57bb26293741f31b files/1.0.0/asterisk-1.0.8-hppa.patch 1274

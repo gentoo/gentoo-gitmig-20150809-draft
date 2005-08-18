@@ -8,7 +8,7 @@ MD5 eba1c1de60b3265358142667f9ffa29b zaptel-1.0.9_p1-r1.ebuild 6639
 MD5 a2f85c43f924825aa60f686fac8a18e2 zaptel-1.0.3.ebuild 3514
 MD5 17f9150ae20c23fc5d81a51bdc1d8eab zaptel-1.0.6.ebuild 6260
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 20ca497edaec3b185313b28ed4e593eb ChangeLog 10236
+MD5 300d47c62ab1ebca1fcfcff14ea77938 ChangeLog 10237
 MD5 3f9ea369b365b565b7e3fefd79d32c9e zaptel-1.0.4.ebuild 4459
 MD5 66c86744220e6716f15393caf0ee408d files/digest-zaptel-1.0.3 64
 MD5 6029a1280d38d8c67577bc7a873fd336 files/zaptel-1.0.9-rtc.patch 4238
