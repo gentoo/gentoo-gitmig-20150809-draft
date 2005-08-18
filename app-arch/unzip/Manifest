@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2e626b006660a8e6d8e884d4b5728d4 ChangeLog 3558
 MD5 4c9cca80bd3bde938e8921913622b498 unzip-5.50-r2.ebuild 1129
-MD5 a6403db8b7de120bb6f6ad13cbdbc303 unzip-5.52.ebuild 1155
-MD5 583a5d8bbc70fb1d858c5e40d686e8ce files/digest-unzip-5.50-r2 61
+MD5 13a3adb23a48bf7303ae4062816c90b7 unzip-5.52.ebuild 1153
+MD5 b92d89a8688d97803f5ee5a3997bdea6 ChangeLog 3648
 MD5 96a480a7d42cba427e44955d142d670c files/digest-unzip-5.52 61
+MD5 583a5d8bbc70fb1d858c5e40d686e8ce files/digest-unzip-5.50-r2 61
 MD5 3b01796cbe10d9492bd8c0825bc83544 files/unzip-5.50-dotdot.patch 3236
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDBJRiEZCkKN40op4RApyyAJ9hdY3kPMeqvb0ljhtUKOaOp1Ge/QCfWIwB
-Nv1V1k2FsMuwXTSwid021EQ=
-=GwMV
------END PGP SIGNATURE-----
