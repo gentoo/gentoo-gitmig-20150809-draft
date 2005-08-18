@@ -1,4 +1,14 @@
-MD5 abc8dd99e0e6d885ca9115e6a6a22df5 lv-4.51.ebuild 780
-MD5 16d9cbb7c3a0195d454be7f3b977fdf3 ChangeLog 2170
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d93c954aa7a3c2b338522e15933ac71f lv-4.51.ebuild 792
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 35d8b04d704355dfc9a39d0820b272ce ChangeLog 2279
 MD5 6e674dc34af30fcd3a0b281902b9a06d files/digest-lv-4.51 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBAiwgIKl8Uu19MoRAjbeAJ929MlqIp1rRMdf/aA5zf1bmYWOPgCfaQMe
+zD4/3u/aTcIRClYmTDF1z7c=
+=a4pt
+-----END PGP SIGNATURE-----
