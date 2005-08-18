@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4297 2005/08/18 16:50:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4298 2005/08/18 21:30:34 vivo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1455,3 +1455,8 @@ app-text/sgml2x
 # <sekretarz@gentoo.org> (30 Jul 2005)
 # several major bugs reported by upstream, more info on inkscape.org 
 =media-gfx/inkscape-0.42
+
+# Pre-removal masking
+# <vivo@gentoo.org> (18 Aug 2005)
+dev-db/mysqltool
+
