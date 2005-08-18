@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.35 2005/08/17 23:33:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.36 2005/08/18 15:38:24 gustavoz Exp $
+
+  18 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  phpwebsite-0.10.2_rc1.ebuild:
+  Stable on sparc wrt #102785
 
 *phpwebsite-0.10.2_rc1 (17 Aug 2005)
 
