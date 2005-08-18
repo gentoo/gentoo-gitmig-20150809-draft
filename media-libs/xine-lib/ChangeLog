@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.241 2005/08/18 09:45:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.242 2005/08/18 19:12:32 flameeyes Exp $
+
+  18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.0-r1.ebuild:
+  Added patch to let sdl support compile on FreeBSD.
 
 *xine-lib-1.1.0-r1 (18 Aug 2005)
 
