@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 38041a10de5d4b59c65e23e628872779 autoconf-archive-2005.08.12.ebuild 869
 MD5 afc5e38e833f5829c07f3b49de2fdc10 autoconf-archive-2005.06.17.ebuild 869
-MD5 c60b2b7274e55222e27e2b652fc6cdf0 ChangeLog 727
+MD5 73e86d05a4bd69e4c5e7f1099d28b32e ChangeLog 900
 MD5 d92a6c79beaad99c575eec23923c5bd5 files/digest-autoconf-archive-2005.06.17 80
+MD5 f5c27aca11d0164ba6e6dbffb9feb780 files/digest-autoconf-archive-2005.08.12 80
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDA+qPgIKl8Uu19MoRApqDAJ0ZkDxjvKNafztf+tS+Bk2JKPeAzACghCqS
-71RLCbZOiEUFRYaxYuypCPQ=
-=MHev
+iD8DBQFDA+vagIKl8Uu19MoRAobXAJwMilFhRSPp7Myal7ZvuPJE5yN9EQCfciZ3
+kRzPGV9BV8V8VVn53nGQqsU=
+=FOHt
 -----END PGP SIGNATURE-----
