@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.1-r1.ebuild,v 1.1 2005/07/18 15:26:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.1-r1.ebuild,v 1.2 2005/08/18 11:39:26 satya Exp $
 
 
 inherit eutils
@@ -52,12 +52,12 @@ src_install() {
 #	for script in ${script_list}; do
 #		dosym ${sbin_dir}/${script} ${sbin_ln_dir}/${script}
 #	done
-#	#docs
-#	dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
-#	if use doc; then
-#		insinto /usr/share/doc/${PF}/doc;      doins ${S}/doc/*
-#		insinto /usr/share/doc/${PF}/doc/html; doins ${S}/doc/html/*
-#	fi
+	#docs
+	dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
+	if use doc; then
+		insinto /usr/share/doc/${PF}/doc;      doins ${S}/doc/*
+		insinto /usr/share/doc/${PF}/doc/html; doins ${S}/doc/html/*
+	fi
 }
 
 pkg_postinst() {
