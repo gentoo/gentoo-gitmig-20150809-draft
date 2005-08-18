@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 f5186fa59adc3e32cf8d6def5275a25a initng-0.1.5.ebuild 890
+MD5 08618e71f6ae8a8e7a164e26347d8f22 initng-0.1.8.ebuild 899
 MD5 0b8d1340eb817ee5095810122ab382fd initng-0.1.7.ebuild 890
 MD5 368084b1a03bc21451a836827d56a5e5 initng-0.1.6.ebuild 890
-MD5 f5186fa59adc3e32cf8d6def5275a25a initng-0.1.5.ebuild 890
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 227c39686bf501d63c382db88bb12749 initng-0.1.8.ebuild 890
-MD5 cd45f1123302e20b43738abdc35b1123 ChangeLog 2206
-MD5 1185e192c292024f062c3c135f4ad046 files/digest-initng-0.1.8 65
-MD5 dad380564e1eb4c1c6a6315d013bbf6e files/digest-initng-0.1.7 65
-MD5 653bd3e19383ebb67cd8bff2388febb8 files/digest-initng-0.1.5 65
+MD5 2ab8fdc314a6eca87179aee83eb03df9 ChangeLog 2303
 MD5 8e3fec5e092c4ebaa9fcac2c51a95737 files/digest-initng-0.1.6 65
+MD5 dad380564e1eb4c1c6a6315d013bbf6e files/digest-initng-0.1.7 65
+MD5 1185e192c292024f062c3c135f4ad046 files/digest-initng-0.1.8 65
+MD5 653bd3e19383ebb67cd8bff2388febb8 files/digest-initng-0.1.5 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC/StMgIKl8Uu19MoRApsYAJ9RE6neU1Yno5jZamPc1sxILtuWfgCffUhj
-dL8xMLEG4LiOuhtHrtXgL/I=
-=udeJ
+iD8DBQFDBKI0KRy60XGEcJIRAu4SAJ99yx2f8d6zwOTD4F0PPaJG+PGCMwCfa9lq
+5SmXaDz7f7ih2mtfw3Awtl0=
+=teEK
 -----END PGP SIGNATURE-----
