@@ -1,6 +1,9 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.19 2005/08/17 17:46:15 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.20 2005/08/18 15:03:42 gustavoz Exp $
+
+  18 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> manedit-0.6.1.ebuild:
+  Stable on sparc wrt #102870
 
   17 Aug 2005; Paul Varner <fuzzyray@gentoo.org> manedit-0.6.1.ebuild:
   Stable on x86
