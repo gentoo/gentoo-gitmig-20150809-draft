@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.9_beta-r2.ebuild,v 1.3 2005/07/29 11:39:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.9_beta-r2.ebuild,v 1.4 2005/08/18 00:47:43 vivo Exp $
 
 inherit flag-o-matic versionator
 
@@ -294,11 +294,15 @@ src_install() {
 
 	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
 
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 /bin/false /dev/null mysql \
+	|| die "problem adding user mysql"
+
 	diropts "-m0750"
 	if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
 		dodir "${DATADIR}"
 		keepdir "${DATADIR}"
-		chown -R "${D}/${DATADIR}"
+		chown -R mysql:mysql "${D}/${DATADIR}"
 	fi
 
 	dodir /var/log/mysql
@@ -502,12 +506,6 @@ pkg_config() {
 	kill $( cat ${ROOT}/var/run/mysqld/mysqld.pid )
 	rm  "${sqltmp}"
 	einfo "done"
-}
-
-pkg_preinst() {
-	enewgroup mysql 60 || die "problem adding group mysql"
-	enewuser mysql 60 /bin/false /var/lib/mysql mysql \
-	|| die "problem adding user mysql"
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.6 2005/08/17 18:04:12 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.7 2005/08/18 00:47:43 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -238,6 +238,10 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
 
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 /bin/false /dev/null mysql \
+	|| die "problem adding user mysql"
+
 	diropts "-m0750"
 	dodir "${DATADIR}" /var/log/mysql
 
@@ -413,12 +417,6 @@ pkg_config() {
 	[[ $retstatus == 0 ]] || die "Failed to communicate with MySQL server"
 
 	einfo "done"
-}
-
-pkg_preinst() {
-	enewgroup mysql 60 || die "problem adding group mysql"
-	enewuser mysql 60 /bin/false /var/lib/mysql mysql \
-	|| die "problem adding user mysql"
 }
 
 pkg_postinst() {
