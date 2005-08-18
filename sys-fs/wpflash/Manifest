@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb4b9ad6a45ce24f59bb1e64a909ca97 wpflash-0.ebuild 637
+MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
+MD5 82294da9d49c565a77aa57890b890c00 ChangeLog 322
+MD5 8e8598105c3c0be37b1b5bec87db8eec files/wpflash-gentoo.patch 5050
+MD5 a8ef40c2fd547f4584c86ce34e128777 files/digest-wpflash-0 53
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDA/cQgIKl8Uu19MoRAgPqAJ4lb7Kh55yeU2MExbnJv8WgqE/HlACfRUc7
+vBKJ2ORDPTENzmUXSzDdYS0=
+=9Q7J
+-----END PGP SIGNATURE-----
