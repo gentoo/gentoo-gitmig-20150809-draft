@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/hugs98
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.22 2005/07/25 16:18:11 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.23 2005/08/18 14:18:37 yoswink Exp $
+
+  18 Aug 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  hugs98-2005.3-r1.ebuild:
+  Keyworded ~alpha wrt #98560
 
 *hugs98-2005.3-r1 (25 Jul 2005)
 
