@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.36 2005/07/19 19:20:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.37 2005/08/18 18:54:32 hansmi Exp $
+
+  18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> i2c-2.8.7.ebuild,
+  i2c-2.9.0.ebuild, i2c-2.9.1.ebuild:
+  Removed from ppc, which doesn't support 2.4.x kernels anymore. Kernel 2.6.x
+  provides I2C support.
 
   19 Jul 2005; <brix@gentoo.org> i2c-2.9.1.ebuild:
   Stable on x86.
