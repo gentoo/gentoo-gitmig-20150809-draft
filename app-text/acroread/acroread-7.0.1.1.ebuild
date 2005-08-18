@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.1.1.ebuild,v 1.1 2005/08/16 22:15:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.1.1.ebuild,v 1.2 2005/08/18 01:07:09 metalgod Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -10,11 +10,19 @@ SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0"
 SRC_FOOT="-$(replace_version_separator 3 "-").i386.rpm"
 SRC_URI="linguas_de? ( ${SRC_HEAD}/deu/AdobeReader_deu${SRC_FOOT} )
 	!linguas_de? ( linguas_fr? ( ${SRC_HEAD}/fra/AdobeReader_fra${SRC_FOOT} )
-	!linguas_fr? ( linguas_ja? ( ${SRC_HEAD}/jpn/AdobeReader_jpn${SRC_FOOT} )
+	!linguas_fr? ( linguas_sv? ( ${SRC_HEAD}/sve/AdobeReader_sve${SRC_FOOT} )
+	!linguas_sv? ( linguas_es? ( ${SRC_HEAD}/esp/AdobeReader_esp${SRC_FOOT} )
+	!linguas_es? ( linguas_pt? ( ${SRC_HEAD}/ptb/AdobeReader_ptb${SRC_FOOT} )
+	!linguas_pt? ( linguas_no? ( ${SRC_HEAD}/nor/AdobeReader_nor${SRC_FOOT} )
+	!linguas_no? ( linguas_it? ( ${SRC_HEAD}/ita/AdobeReader_ita${SRC_FOOT} )
+	!linguas_it? ( linguas_fi? ( ${SRC_HEAD}/suo/AdobeReader_suo${SRC_FOOT} )
+	!linguas_fi? ( linguas_nl? ( ${SRC_HEAD}/nld/AdobeReader_nld${SRC_FOOT} )
+	!linguas_nl? ( linguas_da? ( ${SRC_HEAD}/dan/AdobeReader_dan${SRC_FOOT} )
+	!linguas_da? ( linguas_ja? ( ${SRC_HEAD}/jpn/AdobeReader_jpn${SRC_FOOT} )
 	!linguas_ja? ( linguas_ko? ( ${SRC_HEAD}/kor/AdobeReader_kor${SRC_FOOT} )
 	!linguas_ko? ( linguas_zh_CN? ( ${SRC_HEAD}/chs/AdobeReader_chs${SRC_FOOT} )
 	!linguas_zh_CN? ( linguas_zh_TW? ( ${SRC_HEAD}/cht/AdobeReader_cht${SRC_FOOT} )
-	!linguas_zh_TW? ( ${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT} ) ) ) ) ) )"
+	!linguas_zh_TW? ( ${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT} ) ) ) ) ) ) ) ) ) ) ) ) ) )"
 LICENSE="Adobe"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

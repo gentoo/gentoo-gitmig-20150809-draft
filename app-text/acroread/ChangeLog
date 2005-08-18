@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.60 2005/08/16 22:15:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.61 2005/08/18 01:07:09 metalgod Exp $
+
+  18 Aug 2005; Luis Medinas <metalgod@gentoo.org> acroread-7.0.1.1.ebuild:
+  Adding every languages packs available. Fixes bug #102795.
 
   16 Aug 2005; Luis Medinas <metalgod@gentoo.org> +acroread-7.0.1.1.ebuild:
   Version Bump Fix Security bug #102730. Removed mozilla use flag and added
