@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.30 2005/08/16 13:23:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.31 2005/08/18 13:58:50 ka0ttic Exp $
+
+  18 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> unzip-5.52.ebuild:
+  Stable on mips.
 
   16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> unzip-5.52.ebuild:
   Stable on sparc
