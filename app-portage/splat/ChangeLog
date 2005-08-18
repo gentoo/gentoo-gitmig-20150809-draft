@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/splat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.16 2005/08/16 13:42:38 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.17 2005/08/18 18:29:53 hansmi Exp $
+
+  18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> splat-0.08.ebuild:
+  Stable on ppc.
 
   16 Aug 2005; Ian Leitch <port001@gentoo.org> splat-0.08.ebuild:
   Stable on x86
