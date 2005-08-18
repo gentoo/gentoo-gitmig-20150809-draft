@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.32.ebuild,v 1.1 2005/04/05 04:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/hlstats-1.32.ebuild,v 1.2 2005/08/18 02:23:40 vapier Exp $
 
 inherit games webapp
 
@@ -12,11 +12,11 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
+DEPEND=""
 RDEPEND="dev-lang/perl
 	dev-db/mysql
 	net-www/apache
-	dev-php/mod_php"
+	virtual/php"
 
 pkg_setup() {
 	webapp_pkg_setup
