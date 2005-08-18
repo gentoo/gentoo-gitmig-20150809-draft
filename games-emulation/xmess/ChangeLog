@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.34 2005/08/16 22:22:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.35 2005/08/18 22:55:01 vapier Exp $
+
+*xmess-0.99-r1 (18 Aug 2005)
+
+  18 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/xmess-0.99-mcr3.patch, +xmess-0.99-r1.ebuild:
+  Add patch from upstream to fix a coredump in some games #102987 by Avuton
+  Olrich.
 
 *xmess-0.99 (16 Aug 2005)
 
