@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4299 2005/08/18 21:45:21 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4300 2005/08/18 22:10:31 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
+# Toxine needs to be verified with upstream for a few issues.
+media-video/toxine
 
 # Doug Goldstein <cardoe@gentoo.org> (18 August 2005)
 # Masking 0.5.x of HAL & 0.3x of DBUS since they break API
