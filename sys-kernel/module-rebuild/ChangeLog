@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.8 2005/07/05 17:17:20 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.9 2005/08/18 01:22:45 weeve Exp $
+
+  18 Aug 2005; Jason Wever <weeve@gentoo.org> module-rebuild-0.5.ebuild:
+  Added ~sparc keyword.
 
   05 Jul 2005; John Mylchreest <johnm@gentoo.org> module-rebuild-0.5.ebuild:
   Marking stable to push new database change. No known, or expected bugs.
