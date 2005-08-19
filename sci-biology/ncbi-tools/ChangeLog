@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.20 2005/08/09 15:52:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.21 2005/08/19 19:11:55 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ncbi-tools-20050429.ebuild:
+  Removed from ppc (xlc not available).
 
   09 Aug 2005; Brent Baude <ranger@gentoo.org>
   +files/ncbi-tools-20050605-lop.patch,
