@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c461e2952ea7e7ebed1bd756becec2aa ChangeLog 1787
-MD5 ae8843192d7ae9b6b06801f3b3247392 libwpd-0.7.1.ebuild 654
 MD5 71a2cbd885492d38000f7a0226e62284 libwpd-0.7.2.ebuild 661
+MD5 2d1db42a677969a834a57f723c74a536 libwpd-0.8.2.ebuild 736
+MD5 9bbcfcd5da06000a869754cda19b25e6 ChangeLog 1883
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ab215ecfc7c69e04506f6ca8263da4ca libwpd-0.8.2.ebuild 723
+MD5 ae8843192d7ae9b6b06801f3b3247392 libwpd-0.7.1.ebuild 654
 MD5 15bfdcb6f86c239b6a90414b4dfeed49 files/digest-libwpd-0.7.1 64
 MD5 95c86ec8c33955b7d8d5e243ea27dea0 files/digest-libwpd-0.7.2 64
 MD5 ccaf4e0348b06f4d02ad4a482bfed4b3 files/digest-libwpd-0.8.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5OI5r2QksT29OyARAvzWAJwPj4pGl790nihxbP3JnCNWKHan5QCfe3xg
-Fq52yAvtJMVS/bqAAkDB+20=
-=eT+q
------END PGP SIGNATURE-----
