@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/skey
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.32 2005/04/08 10:26:39 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.33 2005/08/19 22:27:28 vapier Exp $
+
+  19 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/skey-1.1.5-bind-now.patch, skey-1.1.5-r5.ebuild:
+  Remove shadow from DEPEND #103055 and clean up a bit.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> skey-1.1.5-r4.ebuild:
   Stable on ppc64

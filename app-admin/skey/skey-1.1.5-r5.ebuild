@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.3 2005/07/09 16:53:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.4 2005/08/19 22:27:28 vapier Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -13,52 +13,53 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
-DEPEND="sys-libs/cracklib
-	sys-apps/shadow
-	dev-lang/perl
-	virtual/libc"
-# XXX: skeyaudit requires mailx.
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}
+	sys-libs/cracklib"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
 	# porting some updates to this skey implementation from the
 	# NetBSD project, some other updates and fixes, and the addition
 	# of some new features like shadow password and cracklib support.
 	# 	(05 Nov 2003) -taviso@gentoo.org
-	epatch ${FILESDIR}/skey-1.1.5-gentoo.diff.gz
+	epatch "${FILESDIR}"/skey-1.1.5-gentoo.diff.gz
 
 	# glibc 2.2.x does not define LOGIN_NAME_MAX #33315
 	# 	(12 Nov 2003) -taviso@gentoo.org
-	epatch ${FILESDIR}/skey-login_name_max.diff
+	epatch "${FILESDIR}"/skey-login_name_max.diff
 
-	epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch "${FILESDIR}"/${P}-fPIC.patch
+	epatch "${FILESDIR}"/${P}-bind-now.patch
 
 	# allow invokation as otp-foo. #71015
 	# 	(03 Mar 2005) -taviso.
-	epatch ${FILESDIR}/${P}-otp.diff
+	epatch "${FILESDIR}"/${P}-otp.diff
 
 	# set the default hash function to md5, #63995
 	# 	(14 Sep 2004) -taviso
 	append-flags -DSKEY_HASH_DEFAULT=1
 
-	# avoid suid related security issues.
-	append-ldflags -Wl,-z,now
-}
-
-src_compile() {
 	# skeyprune wont honour @sysconfdir@
-	sed -i 's#/etc/skeykeys#/etc/skey/skeykeys#g' skeyprune.pl skeyprune.8
+	sed -i \
+		-e 's:/etc/skeykeys:/etc/skey/skeykeys:g' \
+		skeyprune.pl skeyprune.8 || die
 
 	# skeyprune uses a case sensitive regex to check for zeroed entries
-	sed -i 's#\(if ( ! /.*/\)#\1i#g' skeyprune.pl
+	sed -i \
+		-e 's:\(if ( ! /.*/\):\1i:g' \
+		skeyprune.pl || die
 
 	# skeyinit(1) describes md4 as the default hash algorithm, which
 	# is no longer the case. #64971
 	sed -i \
 		's#\(md4\) \((the default)\), \(md5\) or \(sha1.\)#\1, \3 \2 or \4#g' \
 		skeyinit.1
+}
 
+src_compile() {
 	econf --sysconfdir=/etc/skey || die
 	emake || die
 }
@@ -74,7 +75,7 @@ src_install() {
 	newsbin skeyprune.pl skeyprune
 	newbin skeyaudit.sh skeyaudit
 	dolib.a libskey.a
-	dolib.so libskey.so.1.1.5 libskey.so.1.1 libskey.so.1 libskey.so
+	dolib.so libskey.so.1.1.5 libskey.so.1.1 libskey.so.1 libskey.so || die
 
 	insinto /usr/include
 	doins skey.h
@@ -88,7 +89,7 @@ src_install() {
 	# can generate their passwords.
 	fperms u+s,og-r /usr/bin/skeyinit /usr/bin/skeyinfo
 
-	dodoc README CHANGES md4.copyright md5.copyright
+	dodoc README CHANGES
 
 	prepallman
 }
