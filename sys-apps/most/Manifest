@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8ea1b5132bf96ecbfd8d07501718599 most-4.9.5.ebuild 1526
-MD5 8e44bf156727af67aeeaa8344dc8f278 most-4.9.2.ebuild 935
-MD5 48e912be5783e336359539d19f31a1c6 most-4.10.2-r1.ebuild 1528
-MD5 088d55a8c9a267591def4e72a3572843 ChangeLog 3462
+MD5 c6a080c10298fefae6b494525bde8713 ChangeLog 3559
 MD5 e2d614fd87eac1a4402def83a459af86 metadata.xml 164
+MD5 8e44bf156727af67aeeaa8344dc8f278 most-4.9.2.ebuild 935
 MD5 1f3b29668972289ae7d1434746126f96 most-4.9.4.ebuild 936
+MD5 2db74aa021526031b6973ec410e862ab most-4.9.5.ebuild 1527
+MD5 48e912be5783e336359539d19f31a1c6 most-4.10.2-r1.ebuild 1528
 MD5 a23dcc37cb7e0fb3d5fde35a36d9f270 files/digest-most-4.9.2 61
 MD5 fca955f15889eb7ffb4639dd1484ccfa files/digest-most-4.9.4 62
 MD5 f50722839e33523b309eda86c46e465d files/digest-most-4.9.5 62
-MD5 472794b01f4d3b05bb43788c16776853 files/most-4.10.2-fix-goto-line.diff 529
 MD5 92687eb187b1e9a13f22c1d593123f14 files/digest-most-4.10.2-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBKbpEZCkKN40op4RAlo3AJ4/nJlkpPmCaMtewjIF1ICYlIJqawCfdpoO
-QV5H01Ih2xv5LPCBx6c4mT4=
-=SgOo
------END PGP SIGNATURE-----
+MD5 472794b01f4d3b05bb43788c16776853 files/most-4.10.2-fix-goto-line.diff 529

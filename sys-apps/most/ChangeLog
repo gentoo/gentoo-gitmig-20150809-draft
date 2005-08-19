@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.23 2005/08/18 15:18:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.24 2005/08/19 03:32:59 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org> most-4.9.5.ebuild:
+  Marked Stable on AMD64.
 
   18 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> most-4.10.2-r1.ebuild:
   Use tc-arch() instead of ${ARCH}.
