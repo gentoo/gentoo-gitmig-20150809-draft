@@ -1,0 +1,12 @@
+# ChangeLog for app-text/iso-codes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.1 2005/08/19 19:58:53 joem Exp $
+
+*iso-codes-0.47 (18 Aug 2005)
+
+  18 Aug 2005; Joe McCann <joem@gentoo.org> +metadata.xml,
+  +iso-codes-0.47.ebuild:
+  First commit to tree. This package contains SO-639 Language code list, the
+  ISO-3166 Territory code list, and ISO-3166-2 sub-territory lists, and all
+  their translations in gettext .po form
+
