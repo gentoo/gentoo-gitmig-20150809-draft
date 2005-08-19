@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.32 2005/08/01 13:20:54 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.33 2005/08/19 22:46:57 ferdy Exp $
+
+*nbsmtp-1.00-r3 (19 Aug 2005)
+*nbsmtp-1.00-r2 (19 Aug 2005)
+
+  19 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> -nbsmtp-1.00-r1.ebuild,
+  +nbsmtp-1.00-r2.ebuild, +nbsmtp-1.00-r3.ebuild:
+  Bump to use emake instead of make. Also fix #102098 and #103051 by blocking
+  virtual/mta and providing wrapper-nbsmtp. Remove -r1
 
   01 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
   -files/nbsmtp-CRAM-MD5.diff, -nbsmtp-0.99.ebuild, -nbsmtp-0.99-r1.ebuild:
