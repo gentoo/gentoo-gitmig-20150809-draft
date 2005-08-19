@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/scsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.15 2005/08/11 14:51:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.16 2005/08/19 19:28:07 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> scsh-0.6.6.ebuild:
+  Readded ~ppc. Don't drop keywords, please.
 
   11 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> scsh-0.6.6.ebuild:
   Back to ~sparc since the maintainer dropped it
@@ -10,7 +13,7 @@
   09 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/0.6.6-Makefile.in-doc-dir-gentoo.patch, +scsh-0.6.6.ebuild:
   New upstream; First SCSH port to use the SCSH eclass; Resolves Bug #58564;
-  Ebuild and eclass (scsh.eclass) contibuted by Johannes Brügmann and Dominik
+  Ebuild and eclass (scsh.eclass) contibuted by Johannes BrÃ¼gmann and Dominik
   Brugger
 
 *scsh-0.6.5 (26 Feb 2004)
