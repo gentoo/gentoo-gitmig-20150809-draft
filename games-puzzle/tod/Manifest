@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 b0662b8b52fec11f76ffd1b664252e4a ChangeLog 339
+MD5 ad7c048c88e15d12e64a394a63d04db2 tod-0.ebuild 881
+MD5 aaabc4fed4897548287b0533ee9239e2 files/digest-tod-0 55
+MD5 83bc1cae0ee9d4d09b38cb2a013726d3 files/tod-0-makefile.patch 332
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBTL8gIKl8Uu19MoRApD+AJ9Z1/dhzbmb2/DtywJ/EWQGEkgFzACffgTm
+gA0NMlJ7wy5UPILHokGoQOo=
+=5hjt
+-----END PGP SIGNATURE-----
