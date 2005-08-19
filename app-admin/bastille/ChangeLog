@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.16 2005/07/31 05:21:10 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.17 2005/08/19 23:33:34 battousai Exp $
+
+  19 Aug 2005; Bryan Stine <battousai@gentoo.org> bastille-3.0.2.ebuild:
+  Fix keywords.
 
 *bastille-3.0.2 (31 Jul 2005)
 
