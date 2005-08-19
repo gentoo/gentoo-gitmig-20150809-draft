@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/pisg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.40 2005/07/07 17:17:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.41 2005/08/19 15:28:54 swegener Exp $
+
+*pisg-0.67 (19 Aug 2005)
+
+  19 Aug 2005; Sven Wegener <swegener@gentoo.org> +pisg-0.67.ebuild:
+  Version bump.
 
   07 Jul 2005; Sven Wegener <swegener@gentoo.org>
   -files/0.56-network-option-fix.patch, -pisg-0.65.ebuild:
