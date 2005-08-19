@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 7d69206869b48babf029268cba2bf8c3 trailblazer-0.9.ebuild 1123
+MD5 3e2a75ea8b13b0922f1b9d6f6a9044a6 ChangeLog 367
+MD5 32b58618b9853d4138a4d61c9ccfe729 files/digest-trailblazer-0.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBTR4gIKl8Uu19MoRAvGZAJ95Peq1hYc94dil7GI/dmejiYveVACcDUO3
+OZamG0Fxp7BI9GSL/BEBMlE=
+=szyh
+-----END PGP SIGNATURE-----
