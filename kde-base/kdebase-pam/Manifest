@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0388bfd52ebe9d794300c0ad29252539 ChangeLog 2988
-MD5 a0f671ff0e0e4a888e87fc8d4263120a kdebase-pam-4.ebuild 551
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 54a397f6351a9da627d33e4267ce18a3 kdebase-pam-6.ebuild 550
+MD5 a7e765629aef255ffabb3cc6b58e9e3d ChangeLog 3088
 MD5 31dea466278cbbdb28425dbced99ff19 kdebase-pam-5.ebuild 554
-MD5 39d08e7e95ee2ba16a70d65e202f1e45 kdebase-pam-6.ebuild 555
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-pam-4 0
+MD5 a0f671ff0e0e4a888e87fc8d4263120a kdebase-pam-4.ebuild 551
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
-MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-pam-5 0
-MD5 722767981ebf7e09dda75264e5d6f155 files/kde-np.pam-5 236
-MD5 43ce12fb996a669b5b6a0fbba878bab7 files/kde.pam-5 237
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-pam-6 0
 MD5 23b83482c0496d7414ba241e13b3bdba files/kde-np.pam-6 196
+MD5 722767981ebf7e09dda75264e5d6f155 files/kde-np.pam-5 236
 MD5 2ce6abeca73a825ffcba5c0852dcb81d files/kde.pam-6 197
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8MZ5j5H05b2HAEkRAmq6AJ0Y2t66+kLrFUj84wmotG94bpcdFwCfVX11
-tiKQo9Aechr+QwEAz6r4y7w=
-=k1Br
------END PGP SIGNATURE-----
+MD5 43ce12fb996a669b5b6a0fbba878bab7 files/kde.pam-5 237
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-pam-5 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-pam-6 0
+MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-pam-4 0
