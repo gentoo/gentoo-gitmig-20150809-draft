@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.5.ebuild,v 1.1 2005/08/13 16:04:14 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.5.ebuild,v 1.2 2005/08/19 23:33:37 vanquirius Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Giram (Giram is really a modeller). A 3d modeller for POV-ray"
 HOMEPAGE="http://www.giram.org"
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fbsd.patch
 	cd ${S}/povfront
 	sed -i -e "s:strlen (g_config_file_to_parse) == 0:g_config_file_to_parse == NULL:" povfront.c
+	cd ${S}; elibtoolize
 }
 
 src_compile() {
