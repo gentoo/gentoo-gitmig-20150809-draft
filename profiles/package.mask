@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4301 2005/08/19 15:53:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4302 2005/08/19 18:54:36 stkn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,16 @@
 ##
 ##   End example
 ##
+
+# Stefan Knoblich <stkn@gentoo.org> (19 August 2005)
+# Asterisk-1.2.0_pre and related ebuilds, still work-in-progress.
+# Sangoma Wanpipe drivers, untested (compiles fine on 2.4 and 2.6).
+>=net-libs/libpri-1.2.0_pre20050818
+>=net-misc/zaptel-1.2.0_pre20050818
+>=net-misc/asterisk-1.2.0_pre20050818
+>=net-misc/asterisk-addons-1.2.0_pre20050818
+>=net-libs/osptoolkit-3.3.1
+>=net-misc/wanpipe-2.3.2_p4
 
 # Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
 # Toxine needs to be verified with upstream for a few issues.
