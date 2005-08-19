@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.2 2005/08/19 04:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.3 2005/08/19 05:22:21 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -103,7 +103,12 @@ check_cpu_opts() {
 		ewarn "Available CPU options:"
 		UCLIBC_CPU=$(eval echo ${!cpu_var})
 		echo ${UCLIBC_CPU}
-		export UCLIBC_CPU=${UCLIBC_CPU%% *}
+		case ${CTARGET} in
+			mips[1234]*) export UCLIBC_CPU="MIPS_ISA_${CTARGET:4:1}";;
+			sh[2345]*)   export UCLIBC_CPU="SH${CTARGET:2:1}";;
+			i[456]86*)   export UCLIBC_CPU="${CTARGET:1:1}86";;
+			*)           export UCLIBC_CPU=${UCLIBC_CPU%% *};;
+		esac
 	else
 		local cpu found=0
 		for cpu in $(eval echo ${!cpu_var}) ; do
