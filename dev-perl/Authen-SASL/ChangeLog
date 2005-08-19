@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.19 2005/08/15 09:52:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.20 2005/08/19 19:34:07 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Authen-SASL-2.09.ebuild:
+  Stable on hppa and ppc.
 
   15 Aug 2005; Michael Cummings <mcummings@gentoo.org>
   -Authen-SASL-2.08.ebuild, Authen-SASL-2.09.ebuild:
