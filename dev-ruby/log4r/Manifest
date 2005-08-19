@@ -1,5 +1,4 @@
-MD5 f16bf34b7a38ff1ebe3ce4dec7df136c log4r-1.0.5.ebuild 528
+MD5 b4b5ddf19cc4b74ce93882b9fd9feda1 log4r-1.0.5.ebuild 527
+MD5 c18262e6ea768ce6cf68e8015e9009e9 ChangeLog 334
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 f292adb992ba6a573d876385af53bf7d files/digest-log4r-1.0.5 60
-MD5 40fb0b9f093ec0e46fa02ab0fb0de1c7 files/digest-facets-0.6.3 61
-MD5 5edc679d6e09aca2242c2169462f51a6 files/digest-ruby-activeldap-0.5.7 69
