@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 21c9bd65b924f959e9ec675d33b6df27 metadata.xml 222
 MD5 6f0c9ab8babd9f09d69f1d197fc1f0cc freepops-0.0.27-r1.ebuild 1193
-MD5 1eb9a218ef0f3d6e0b696cf85fa53357 freepops-0.0.31.ebuild 1191
-MD5 e54585ffa26b95907c99af2cba6fe735 ChangeLog 2549
-MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.31-srcmake.patch 466
-MD5 87de47c4792aa1687b9d521a4e4c313a files/freepops-0.0.27-initd.patch 634
+MD5 34b01736e1d0b44967869522f096103d ChangeLog 2642
+MD5 98c599d235e47a75f8ddee78c4ec2b83 freepops-0.0.31.ebuild 1190
 MD5 787d8c0e312170927dde02eadb05f199 files/digest-freepops-0.0.31 68
+MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.31-srcmake.patch 466
 MD5 d7ca204372719b1d3fa4aca59cf9a442 files/digest-freepops-0.0.27-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/0JFgIKl8Uu19MoRAt8FAJ4nzvL9qK21d0A0nlFaRUJNkV6znQCfdSwz
-k+vKKmmGsRIHvvAmEMgav5g=
-=72Rb
------END PGP SIGNATURE-----
+MD5 87de47c4792aa1687b9d521a4e4c313a files/freepops-0.0.27-initd.patch 634
