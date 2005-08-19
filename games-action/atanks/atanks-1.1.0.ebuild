@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.12 2005/08/10 18:44:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.13 2005/08/19 02:31:54 halcy0n Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -22,12 +22,10 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	#apply both patches to compile with gcc-3.4.0 closing bug #49457
-	if [ "$(gcc-major-version)" -ge "3" -a "$(gcc-minor-version)" -ge "4" ]
-	then
-		epatch "${FILESDIR}/atanks-gcc34.patch"
-	fi
+
 	epatch "${FILESDIR}/${PV}-gentoo.patch"
+
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 
 	DATA_DIR="${GAMES_DATADIR}/${PN}"
 	sed -i \

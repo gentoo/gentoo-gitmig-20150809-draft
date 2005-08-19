@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 894584a4ef6246c490c1379291b0003a atanks-1.1.0.ebuild 1404
-MD5 895a0b978e05113587e11ee95ba6653e ChangeLog 2996
+MD5 85536d6b7e3cf3d30297b6081fcaa8f7 ChangeLog 3315
+MD5 21a6d0930ae7d81f77c793636203c0a5 atanks-1.1.0.ebuild 1256
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ea52207aee01685ed0e4b52b4cd66958 files/digest-atanks-1.1.0 65
 MD5 e3857ce0d93e17bc2ad85dca19571131 files/1.1.0-gentoo.patch 5379
-MD5 f1a4b436c0ef59132f761306104d2904 files/atanks-gcc34.patch 1229
+MD5 ea52207aee01685ed0e4b52b4cd66958 files/digest-atanks-1.1.0 65
+MD5 847ff435578601cfeba1de5e58d0d2cb files/atanks-1.1.0-gcc4.patch 1212
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+ksWomPajV0RnrERApwfAJ4/5iHOBV5c7Z5/OcbXbJKJ0/ZxiACfeEWf
-K70lsHFv9hB20SOLx5BbUms=
-=rdfD
+iD8DBQFDBUSqCRZPokWLroQRAgKDAKDZruVyQ3whLykbdQKd7enqQ2t0WACdENzm
+DwTi7PY+egtBYF3efB3getU=
+=Kfnb
 -----END PGP SIGNATURE-----

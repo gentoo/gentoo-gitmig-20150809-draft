@@ -1,6 +1,12 @@
 # ChangeLog for games-action/atanks
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.15 2005/08/10 18:44:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.16 2005/08/19 02:31:54 halcy0n Exp $
+
+  19 Aug 2005; Mark Loeser <halcy0n@gentoo.org> -files/atanks-gcc34.patch,
+  +files/atanks-1.1.0-gcc4.patch, atanks-1.1.0.ebuild:
+  Fix compilation on GCC-4.  Similar fix as was needed for gcc-3.4, but this one
+  sucks less.  Removed the old fix and apply this one in all cases since it
+  doesn't break on gcc-3.3.
 
   10 Aug 2005; <dang@gentoo.org> atanks-1.1.0.ebuild:
   Keyworded ~amd64

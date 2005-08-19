@@ -1,18 +1,18 @@
 diff -ur atanks-orig/src/player.cc atanks/src/player.cc
---- atanks-orig/src/player.cc	2004-09-04 02:12:37.847112834 -0400
-+++ atanks/src/player.cc	2004-09-04 02:17:54.685582198 -0400
+--- atanks-orig/src/player.cc	2005-08-18 22:02:59.000000000 -0400
++++ atanks/src/player.cc	2005-08-18 22:05:58.000000000 -0400
 @@ -1009,12 +1009,12 @@
  		if (weapNum >= RIOT_CHARGE && weapNum <= RIOT_BLAST) {
  			// add points only within range and above ctank
  			if (	(cy > ctank->y - (radius / 2)) ||
 -				(abs (ctank->x - cx) > radius))
-+				(abs ((int)ctank->x - cx) > radius))
++				(fabs (ctank->x - cx) > radius))
  				continue;
  		} else if (weapNum >= SML_ROLLER && weapNum <= DTH_ROLLER) {
  			// Only aim rollers above other tanks
  			if (cy > tankY + TANKHEIGHT &&
 -				abs (ctank->x - cx) > radius)
-+				abs ((int)ctank->x - cx) > radius)
++				fabs (ctank->x - cx) > radius)
  				continue;
  		} else if (weapNum >= SML_LAZER && weapNum <= LRG_LAZER) {
  			// Lazer can only be aimed above horizontal
@@ -21,7 +21,7 @@ diff -ur atanks-orig/src/player.cc atanks/src/player.cc
  				// add sqrt distances for each tank * potential damage
  				long int totalEffectiveDamage = calcTotalEffectiveDamage (itemNum);
 -				_targetMatrix[(int)ctank->x] += sqrt (abs (ctank->x - ltank->x)) * totalEffectiveDamage;
-+				_targetMatrix[(int)ctank->x] += sqrt (abs ((int)ctank->x - (int)ltank->x)) * totalEffectiveDamage;
++				_targetMatrix[(int)ctank->x] += sqrt (fabs (ctank->x - ltank->x)) * totalEffectiveDamage;
  
  			}
  		}
