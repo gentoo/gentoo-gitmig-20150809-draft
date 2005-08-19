@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.39 2005/07/25 11:50:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.40 2005/08/19 19:40:21 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gtk-perl-0.7009-r2.ebuild:
+  Added to ~ppc.
 
   25 Jul 2005; Guy Martin <gmsoft@gentoo.org> gtk-perl-0.7009-r2.ebuild:
   Stable on hppa.
