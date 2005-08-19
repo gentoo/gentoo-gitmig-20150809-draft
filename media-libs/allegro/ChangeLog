@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.42 2005/08/10 18:37:30 dang Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.43 2005/08/19 06:00:04 vapier Exp $
+
+  19 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/allegro-4.1.18-m4.patch, allegro-4.1.18.ebuild:
+  Fix aclocal underquoted warnings.
 
   10 Aug 2005; <dang@gentoo.org> allegro-4.1.18.ebuild:
   Keyworded ~amd64

@@ -1,18 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 364f2f88ed70d3d2c0aa266841da8ccd allegro-4.0.3.ebuild 2176
-MD5 41f92e4ab86bc4fa04a522bb9a1d715e allegro-4.1.14.ebuild 2032
-MD5 fff9021d6d52230fcaa675b7151ea170 ChangeLog 5409
 MD5 69afb3c206fdd20a361ee6dbff286ace metadata.xml 636
-MD5 150e6e786ca94f47873d0053e9d70cc3 allegro-4.1.18.ebuild 2186
+MD5 76ae9f93346ff3f030b16c21f92703b2 allegro-4.1.18.ebuild 2234
+MD5 41f92e4ab86bc4fa04a522bb9a1d715e allegro-4.1.14.ebuild 2032
+MD5 364f2f88ed70d3d2c0aa266841da8ccd allegro-4.0.3.ebuild 2176
+MD5 e94a801111b5798d237c3e711a726675 ChangeLog 5555
 MD5 9f28e5d796c572eb801998504cf84fbb files/digest-allegro-4.0.3 66
 MD5 cbde62e7be820f69c7c202d3ff4ac241 files/digest-allegro-4.1.14 67
 MD5 2f5e0d90784068cfc9473e07a4eb1b7f files/digest-allegro-4.1.18 67
+MD5 80085d45008c152850633d5746809bd0 files/allegro-4.1.18-m4.patch 468
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+kmComPajV0RnrERAkGUAJ97uOYE8+qif4mlOj4W8hgj8DgMogCcDyJ/
-Rq1qIHWXp6z5GE8+xhimZE8=
-=VJLH
+iD8DBQFDBXWDgIKl8Uu19MoRAsfQAKCAkWA0mjDstedpBIk++qAhaNM0dACfXvPR
+pJvSvnCXHzPSLkuJhyHqh8o=
+=gcja
 -----END PGP SIGNATURE-----

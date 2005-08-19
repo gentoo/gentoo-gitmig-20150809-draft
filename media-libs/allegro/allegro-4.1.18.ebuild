@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.18.ebuild,v 1.2 2005/08/10 18:37:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.18.ebuild,v 1.3 2005/08/19 06:00:04 vapier Exp $
 
 inherit flag-o-matic
 
@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 	sed -i \
 		-e 's/&_oss_\(numfrags\|fragsize\)/NULL/' \
 		"${S}/setup/setup.c" \
