@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.37 2005/08/08 15:01:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.38 2005/08/19 19:08:10 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> prosite-19.6.ebuild:
+  Stable on ppc.
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org> prosite-19.6.ebuild:
   Stable on ppc64
