@@ -1,0 +1,11 @@
+--- embed/mozilla/Makefile.in	2005-06-20 23:20:14.000000000 +0200
++++ /root/Makefile.in	2005-06-20 23:20:09.000000000 +0200
+@@ -406,6 +406,8 @@
+ 	windowwatcher		\
+ 	xmlextras		\
+ 	xpcom			\
++	find\
++	pref\
+ 	xpconnect
+ 
+ libephymozillaembed_la_CPPFLAGS = \
