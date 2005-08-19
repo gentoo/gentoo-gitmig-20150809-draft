@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dnotify
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.15 2005/07/17 13:33:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.16 2005/08/19 21:53:46 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> dnotify-0.17.1.ebuild:
+  Stable on ppc.
 
 *dnotify-0.18.0 (17 Jul 2005)
 
