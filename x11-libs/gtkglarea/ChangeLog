@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglarea
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.28 2005/07/16 01:07:43 allanonjl Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.29 2005/08/19 06:05:59 vapier Exp $
+
+  19 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gtkglarea-1.2.3-m4.patch, gtkglarea-1.2.3-r1.ebuild:
+  Fix aclocal underquoted warnings.
 
   16 Jul 2005; John N. Laliberte <allanonjl@gentoo.org>
   gtkglarea-1.99.0.ebuild:

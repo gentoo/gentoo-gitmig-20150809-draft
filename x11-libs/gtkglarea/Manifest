@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a5a571b261ebdbc8fdbe9ac9721e53f7 gtkglarea-1.2.3-r1.ebuild 1109
-MD5 fc30972897ec6e3dc99886a695499dae gtkglarea-1.99.0.ebuild 955
-MD5 0b4d68b98b4724ddb2fe00a74c791f3f ChangeLog 3106
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 eae108bfe267c86628ec823c70a27b0d gtkglarea-1.2.3-r1.ebuild 1155
+MD5 fc30972897ec6e3dc99886a695499dae gtkglarea-1.99.0.ebuild 955
+MD5 267f95756fd6b8fb6939bb4693e296bb ChangeLog 3252
 MD5 0cf1a1b6421616a534c50a4410c7f2d8 files/digest-gtkglarea-1.2.3-r1 67
+MD5 cf5103633e96b0320f959d7cd5490f66 files/gtkglarea-1.2.3-m4.patch 285
 MD5 f49438c0f88d925df7289b2314a02362 files/digest-gtkglarea-1.99.0 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC47fy2G5bA0cA/ScRAr5ZAJ0V8JOKxpTCC0sE+bM4LEPqMEXj1QCdH6Bp
-AMQBhtaz/lBNVFm/RRxAcfw=
-=bzns
+iD8DBQFDBXbqgIKl8Uu19MoRAowzAJ9PEfJrRyAcHrdlhY8fBucgu9hRTACfU1PB
+z6hAMQWwb/UYoa+3/MoNyOM=
+=Yyns
 -----END PGP SIGNATURE-----

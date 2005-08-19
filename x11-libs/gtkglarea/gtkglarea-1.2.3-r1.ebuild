@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.21 2005/07/24 15:46:31 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.22 2005/08/19 06:05:59 vapier Exp $
 
-inherit multilib
+inherit eutils multilib
 
 # GTKGLArea has been abandoned by the author. We'll continue to mirror the
 # source on Gentoo mirrors.
@@ -22,7 +22,8 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 	if [ $(get_libdir) != "lib" ] ; then
 		libtoolize --copy --force || die "libtoolize failed"
 		aclocal || die "aclocal failed"
