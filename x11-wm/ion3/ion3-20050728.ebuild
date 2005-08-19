@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20050502.ebuild,v 1.1 2005/05/11 02:39:26 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20050728.ebuild,v 1.1 2005/08/19 12:06:54 twp Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/${MY_PN}
 
 src_compile() {
 
-	autoreconf
+	autoreconf -i
 
 	local myconf=""
 
