@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4b92999572b325c39933a0bc5a46052e cgdb-0.5.1.ebuild 670
-MD5 487640c7263345d695f334ec20190774 cgdb-0.5.3.ebuild 668
-MD5 911957095485ceae2f2b8bc30d82c75e cgdb-0.5.2.ebuild 668
-MD5 81ef971cc754c38539bc2177e5c5cd36 ChangeLog 2063
 MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
-MD5 5aad6ad5ff54ce54cc7e48ff62a2b5eb files/digest-cgdb-0.5.1 62
+MD5 41ce8e2adb21df168a3e75cf678c5654 ChangeLog 2153
+MD5 487640c7263345d695f334ec20190774 cgdb-0.5.3.ebuild 668
+MD5 ce465b08ed5b28f6ef12c22a380c8726 cgdb-0.5.2.ebuild 666
 MD5 e03db6f69ed1408b5b8ac9de2f622812 files/digest-cgdb-0.5.2 62
 MD5 cf7bdcd88b32cc550af750d5fc588cf7 files/digest-cgdb-0.5.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+NbqEZCkKN40op4RAiRCAKCdhGb+hWBnXRn8Xsn3hBZyzLHwhwCgoQqL
-dk63N3Cwf8TyhgRYq1MH1gM=
-=kqU7
------END PGP SIGNATURE-----
+MD5 5aad6ad5ff54ce54cc7e48ff62a2b5eb files/digest-cgdb-0.5.1 62
