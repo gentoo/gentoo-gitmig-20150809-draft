@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.37 2005/08/18 18:54:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.38 2005/08/19 10:19:05 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> i2c-2.9.1.ebuild:
+  Readded to ~ppc as a temporary fix.
 
   18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> i2c-2.8.7.ebuild,
   i2c-2.9.0.ebuild, i2c-2.9.1.ebuild:
