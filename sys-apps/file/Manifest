@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c6073a11ea3fcb5cc0d1625a54aad8d4 file-4.12.ebuild 2081
-MD5 5c11ddad240c78d7d4afb5577a4b5550 file-4.15.ebuild 1359
-MD5 38fb58232bdc578cad8b10acd16069b7 file-4.13.ebuild 2296
+MD5 30111fda39ec8ab7ddb1223189a32380 file-4.15.ebuild 1344
+MD5 213bc8ded7a22b2fcb129f4ee60e892c file-4.13.ebuild 2226
 MD5 d565d5003ccb755877835667dbf91f7b ChangeLog 10919
 MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.13-cross-compile.patch 964
 MD5 a952f0eca26a046e4b815529d2b734ef files/misc.magic 71
@@ -18,7 +18,7 @@ MD5 66df8eecd30769daeb3f643dc6432db3 files/file-4.xx-mips-gentoo.patch 5578
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBQtlgIKl8Uu19MoRAkqXAJ9O/OxnzE5DxQ22HCQGFXT5VKk/dQCfdomZ
-3pJxO6w07Pg/1baUciBrtfE=
-=ZokM
+iD8DBQFDBgRCgIKl8Uu19MoRAt6tAJ40ODRaxOiv11blu67lT8xdtIIyzgCff9xH
+YadwqaXXMkzcnnQVTrskGuA=
+=tc6h
 -----END PGP SIGNATURE-----

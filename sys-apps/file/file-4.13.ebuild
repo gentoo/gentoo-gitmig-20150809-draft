@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.13.ebuild,v 1.10 2005/08/09 16:00:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.13.ebuild,v 1.11 2005/08/19 16:08:57 vapier Exp $
 
 inherit flag-o-matic eutils distutils libtool toolchain-funcs
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="python build"
 
-DEPEND="!build? ( python? ( virtual/python ) )"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -53,6 +53,7 @@ src_compile() {
 	emake || die "emake failed"
 	emake -C magic || die "emake magic failed"
 
+	use build && return 0
 	use python && cd python && distutils_src_compile
 }
 
@@ -63,8 +64,6 @@ src_install() {
 	if ! use build ; then
 		dodoc ChangeLog MAINT README
 		use python && cd python && distutils_src_install
-	else
-		rm -r "${D}"/usr/share/man "${D}"/usr/lib/*.a
 	fi
 }
 

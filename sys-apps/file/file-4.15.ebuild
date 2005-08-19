@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.15.ebuild,v 1.1 2005/08/18 22:27:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.15.ebuild,v 1.2 2005/08/19 16:08:57 vapier Exp $
 
 inherit distutils libtool
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="python build"
 
-DEPEND="!build? ( python? ( virtual/python ) )"
+DEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -33,6 +33,7 @@ src_compile() {
 	econf --datadir=/usr/share/misc || die
 	emake || die "emake failed"
 
+	use build && return 0
 	use python && cd python && distutils_src_compile
 }
 
