@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.8 2005/07/07 09:01:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.9 2005/08/19 20:19:22 joem Exp $
+
+*epiphany-extensions-1.7.4 (19 Aug 2005)
+
+  19 Aug 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-extensions-1.7.4-fix_includes.patch,
+  epiphany-extensions-1.6.4.ebuild, +epiphany-extensions-1.7.4.ebuild:
+  new version, remove adblock extension from previous build
 
   07 Jul 2005; David Holm <dholm@gentoo.org>
   epiphany-extensions-1.6.4.ebuild:

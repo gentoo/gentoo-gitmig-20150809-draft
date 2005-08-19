@@ -1,0 +1,49 @@
+diff -ur ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/adblock/mozilla/Makefile.in epiphany-extensions-1.7.1/extensions/adblock/mozilla/Makefile.in
+--- ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/adblock/mozilla/Makefile.in	2005-06-05 15:01:37.000000000 +0200
++++ epiphany-extensions-1.7.1/extensions/adblock/mozilla/Makefile.in	2005-06-20 23:59:23.000000000 +0200
+@@ -271,6 +271,8 @@
+ 	content		\
+ 	docshell	\
+ 	dom		\
++	necko\
++	webbrwsr\
+ 	xpcom
+ 
+ libadblockmozilla_la_CPPFLAGS = \
+Only in epiphany-extensions-1.7.1/extensions/adblock/mozilla: Makefile.in~
+diff -ur ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/error-viewer/mozilla/Makefile.in epiphany-extensions-1.7.1/extensions/error-viewer/mozilla/Makefile.in
+--- ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/error-viewer/mozilla/Makefile.in	2005-06-05 15:01:44.000000000 +0200
++++ epiphany-extensions-1.7.1/extensions/error-viewer/mozilla/Makefile.in	2005-06-20 23:58:12.000000000 +0200
+@@ -280,6 +280,7 @@
+ 	.		\
+ 	dom		\
+ 	jsconsole	\
++	webbrwsr\
+ 	necko
+ 
+ liberrorviewermozilla_la_CPPFLAGS = \
+Only in epiphany-extensions-1.7.1/extensions/error-viewer/mozilla: Makefile.in~
+diff -ur ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/page-info/mozilla/Makefile.in epiphany-extensions-1.7.1/extensions/page-info/mozilla/Makefile.in
+--- ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/page-info/mozilla/Makefile.in	2005-06-05 15:01:46.000000000 +0200
++++ epiphany-extensions-1.7.1/extensions/page-info/mozilla/Makefile.in	2005-06-20 23:58:33.000000000 +0200
+@@ -273,6 +273,7 @@
+ 	dom		\
+ 	layout		\
+ 	nkcache		\
++	pref\
+ 	necko		\
+ 	uconv		\
+ 	webbrwsr
+Only in epiphany-extensions-1.7.1/extensions/page-info/mozilla: Makefile.in~
+diff -ur ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/select-stylesheet/mozilla/Makefile.in epiphany-extensions-1.7.1/extensions/select-stylesheet/mozilla/Makefile.in
+--- ../../epiphany-extensions-1.7.1/work/epiphany-extensions-1.7.1/extensions/select-stylesheet/mozilla/Makefile.in	2005-06-05 15:01:48.000000000 +0200
++++ epiphany-extensions-1.7.1/extensions/select-stylesheet/mozilla/Makefile.in	2005-06-20 23:58:57.000000000 +0200
+@@ -267,6 +267,7 @@
+ mozilla_include_subdirs = \
+ 	.		\
+ 	necko		\
++	dom\
+ 	nkcache		\
+ 	webbrwsr
+ 
+Only in epiphany-extensions-1.7.1/extensions/select-stylesheet/mozilla: Makefile.in~

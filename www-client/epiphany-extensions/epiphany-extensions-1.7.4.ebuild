@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.6.4.ebuild,v 1.3 2005/08/19 20:19:22 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.7.4.ebuild,v 1.1 2005/08/19 20:19:22 joem Exp $
 
 inherit eutils gnome2
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~x86"
 IUSE="debug firefox static"
 
-RDEPEND=">=www-client/epiphany-1.6
+RDEPEND=">=www-client/epiphany-1.7.4
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PN}-1.6.0-fix_includes.patch
+	epatch ${FILESDIR}/${P}-fix_includes.patch
 }
 
 USE_DESTDIR="1"
@@ -39,12 +39,13 @@ USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_compile() {
-	local extensions="actions bookmarks-tray certificates dashboard
-	error-viewer extensions-manager-ui gestures page-info sample sample-mozilla
-	select-stylesheet sidebar smart-bookmarks tab-groups tab-states tabsmenu"
+	local extensions="actions adblock bookmarks-tray certificates dashboard
+	error-viewer extensions-manager-ui gestures greasemonkey page-info sample
+	sample-mozilla rss select-stylesheet sidebar python-console smart-bookmarks
+	tab-groups tab-states tabsmenu"
 
 	# The find extension doesn't compile against mozilla
-	use firefox && extensions="${extensions} find"
+	#use firefox && extensions="${extensions} find"
 
 	if built_with_use www-client/epiphany dbus; then
 		extensions="${extensions} net-monitor"
