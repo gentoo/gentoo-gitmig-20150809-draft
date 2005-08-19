@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/outguess
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/outguess/ChangeLog,v 1.7 2005/01/01 12:35:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/outguess/ChangeLog,v 1.8 2005/08/19 04:00:16 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org> outguess-0.2.ebuild:
+  Added ~amd64 keywords.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   outguess-0.2.ebuild:

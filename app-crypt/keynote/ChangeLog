@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keynote
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.5 2005/01/01 12:32:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.6 2005/08/19 04:01:54 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org> keynote-2.3.ebuild:
+  Added ~amd64 keywords.
 
   20 Jun 2004; <pyrania@gentoo.org> keynote-2.3.ebuild:
   Stable on x86.
