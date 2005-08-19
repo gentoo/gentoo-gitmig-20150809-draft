@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/splat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.17 2005/08/18 18:29:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.18 2005/08/19 03:26:35 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org> splat-0.08.ebuild:
+  Added ~amd64 keywords.
 
   18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> splat-0.08.ebuild:
   Stable on ppc.
