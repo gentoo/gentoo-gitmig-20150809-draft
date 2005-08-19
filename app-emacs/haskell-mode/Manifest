@@ -1,7 +1,19 @@
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 581f77b8971c042da7de0ce96253b238 ChangeLog 1577
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e98412e1df46334a45b108a0bd1bb13 ChangeLog 1790
 MD5 7a5121a398fafc4a703a009bd0600ee5 haskell-mode-1.44-r1.ebuild 698
 MD5 493956070152e69311adba81c897c305 haskell-mode-1.45.ebuild 716
-MD5 0dfd307298e9d2c80f00001a80d95f89 files/50haskell-mode-gentoo.el 476
-MD5 3edceb0669468d22b8452e51be961441 files/digest-haskell-mode-1.45 68
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 ce59fa1474407136123ba41cfb35c81d haskell-mode-2.0.ebuild 1073
+MD5 91d511588d15fb8c96e0b69626998588 files/50haskell-mode-gentoo.el 474
 MD5 a310c35d01a33d349ce788cb408b70c3 files/digest-haskell-mode-1.44-r1 68
+MD5 3edceb0669468d22b8452e51be961441 files/digest-haskell-mode-1.45 68
+MD5 044015ce9c79f8d7b8a61af0aff9413e files/digest-haskell-mode-2.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBU5SyiNZaEAZA+ARAjw1AJ9O5fsrCPdYUcUol7UdhU9v/MiHtACfW70t
+l722MEylEC+vt6PI44SCilU=
+=wjjs
+-----END PGP SIGNATURE-----

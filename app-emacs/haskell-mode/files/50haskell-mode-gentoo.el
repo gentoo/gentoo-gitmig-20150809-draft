@@ -1,7 +1,7 @@
 
-;;; uboat site-lisp configuration
+;;; haskell-mode site-lisp configuration
  
-(setq load-path (cons "@SITELISP@" load-path))
+(add-to-list 'load-path "@SITELISP@")
 (setq auto-mode-alist
       (append auto-mode-alist
               '(("\\.[hg]s$"  . haskell-mode)
