@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.184 2005/08/17 22:46:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.185 2005/08/19 17:55:25 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -90,12 +90,7 @@ fi
 PREFIX=${TOOLCHAIN_PREFIX:-/usr}
 
 if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
-	if version_is_at_least 3.4.0 ; then
-		# GCC 3.4 no longer uses gcc-lib.
-		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
-	else
-		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
-	fi
+	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
 	LIBEXECPATH=${TOOLCHAIN_LIBEXE:-${PREFIX}/libexec/gcc/${CTARGET}/${GCC_CONFIG_VER}}
 	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
 	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
@@ -1032,18 +1027,11 @@ gcc-compiler-configure() {
 gcc_do_configure() {
 	local confgcc
 
-	if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
-		confgcc="--enable-version-specific-runtime-libs"
-	elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
-		confgcc="--libdir=${LIBPATH}"
-	else
-		die "bad GCC_VAR_TYPE"
-	fi
-
 	# Set configuration based on path variables
 	confgcc="${confgcc} \
 		--prefix=${PREFIX} \
 		--bindir=${BINPATH} \
+		--libdir=${LIBPATH} \
 		--includedir=${INCLUDEPATH} \
 		--datadir=${DATAPATH} \
 		--mandir=${DATAPATH}/man \
