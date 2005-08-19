@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.24 2005/05/16 08:06:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.25 2005/08/19 23:15:23 vanquirius Exp $
+
+*etherape-0.9.3 (19 Aug 2005)
+
+  19 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/etherape-0.9.3-res_mkquery.patch, -etherape-0.9.1.ebuild,
+  +etherape-0.9.3.ebuild:
+  Version bump. Ported res_mkquery.patch to 0.9.3. Compiles and runs with gcc4
+  without patching.
 
   16 May 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/etherape-0.9.1-gcc4.diff, etherape-0.9.1.ebuild:

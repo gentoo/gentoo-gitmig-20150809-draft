@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.10 2005/05/16 08:06:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.3.ebuild,v 1.1 2005/08/19 23:15:23 vanquirius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.0
@@ -22,8 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-res_mkquery.patch
-	epatch ${FILESDIR}/${P}-fix-mkinstalldirs.diff
-	epatch ${FILESDIR}/${P}-gcc4.diff
+	epatch ${FILESDIR}/${PN}-0.9.1-fix-mkinstalldirs.diff
 }
 
 src_compile() {
@@ -47,4 +46,3 @@ src_install() {
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog FAQ INSTALL NEWS OVERVIEW
 	dodoc README* TODO
 }
-
