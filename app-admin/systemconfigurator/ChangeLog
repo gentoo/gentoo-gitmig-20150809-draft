@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/systemconfigurator
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.10 2005/06/30 13:10:41 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemconfigurator/ChangeLog,v 1.11 2005/08/19 03:42:51 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  systemconfigurator-2.2.2.ebuild:
+  Added ~amd64 keywords.
 
 *systemconfigurator-2.2.2 (30 Jun 2005)
  
