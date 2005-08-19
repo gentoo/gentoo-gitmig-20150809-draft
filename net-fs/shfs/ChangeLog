@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.19 2005/06/09 23:23:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.20 2005/08/19 19:51:40 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> shfs-0.35-r1.ebuild:
+  Stable on ppc.
 
   09 Jun 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/0.35/shfs-0.35-gcc4.patch:
