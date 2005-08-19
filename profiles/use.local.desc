@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1393 2005/08/19 19:15:55 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1394 2005/08/19 19:39:01 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -765,8 +765,12 @@ net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpassw
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/asterisk:bri - Enable ISDN BRI support (bristuff)
+net-misc/asterisk:h323 - Build the H.323 channel driver bundled with Asterisk
+net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
 net-misc/asterisk:nopri - Disable pri support
+net-misc/asterisk:nosamples - Don't install sample sound and configuration files
 net-misc/asterisk:nozaptel - Disable zaptel support
+net-misc/asterisk:osp - Enable support for the Open Settlement Protocol
 net-misc/asterisk:pri - Enables pri support (>=asterisk-1.0.1)
 net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
 net-misc/asterisk:vmdbmysql - Enable mysql db support in voicemail application
