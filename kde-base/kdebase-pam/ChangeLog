@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.19 2005/08/03 13:27:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.20 2005/08/19 19:48:36 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kdebase-pam-6.ebuild:
+  Stable on hppa and ppc.
 
   03 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> kdebase-pam-6.ebuild:
   Stable on amd64.

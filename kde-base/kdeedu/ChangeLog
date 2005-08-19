@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.147 2005/08/16 09:17:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.148 2005/08/19 19:50:05 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  kdeedu-3.4.1-r1.ebuild:
+  Stable on hppa and ppc.
 
   16 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> kdeedu-3.3.2-r2.ebuild:
   Stable on ia64, bug 102577.
