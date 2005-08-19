@@ -1,6 +1,16 @@
-MD5 92500dfa6b4ca8d80b1927e166098d3a ChangeLog 661
-MD5 25653cfbb708f4be592670355732ded5 armagetronad-0.2.7.1.ebuild 2069
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 617e831d7f4c02cd72d67800bcf0144f files/armagetronad 1102
+MD5 6b9061968d579bce929bc3ee073c4887 armagetronad-0.2.7.1.ebuild 2068
+MD5 92500dfa6b4ca8d80b1927e166098d3a ChangeLog 661
 MD5 37312a765833708af1d1712bc4fad0ac files/armagetronad-ded 1340
+MD5 617e831d7f4c02cd72d67800bcf0144f files/armagetronad 1102
 MD5 6a1cb0c3d1b6316c534867da55cd7049 files/digest-armagetronad-0.2.7.1 196
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBTelgIKl8Uu19MoRApapAJ9ew75GgkFlZa2JYKy+B4d5EHosRQCdHg8D
+VWOSs6H/FsSFjuVz+gWvvCI=
+=NQfZ
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.4 2005/06/19 08:52:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1.ebuild,v 1.5 2005/08/19 01:36:10 vapier Exp $
 
 
 inherit flag-o-matic eutils games
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/armagetronad/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 RDEPEND="sys-libs/zlib
