@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4304 2005/08/19 20:20:12 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4305 2005/08/19 22:30:39 ferdy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -849,6 +849,7 @@ dev-dotnet/winelib
 net-mail/mailer-config
 =net-mail/mailwrapper-0.2.1-r1
 =mail-mta/nbsmtp-1.00-r1
+=mail-mta/nbsmtp-1.00-r3
 =mail-mta/msmtp-1.4.0-r1
 =mail-mta/msmtp-1.4.1-r1
 =mail-mta/msmtp-1.4.2-r1
