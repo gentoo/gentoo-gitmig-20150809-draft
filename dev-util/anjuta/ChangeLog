@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.48 2005/08/18 16:15:50 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.49 2005/08/19 11:49:11 weeve Exp $
+
+  19 Aug 2005; Jason Wever <weeve@gentoo.org> anjuta-1.2.4.ebuild:
+  Marked this ~sparc as it should have been committed as maintainer cannot
+  follow keywording policies.
 
 *anjuta-1.2.4 (18 Aug 2005)
 
