@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b0312772393b62576701f0a0e714cc9e ChangeLog 1048
-MD5 f2e48bae97dad4e6e6bccdb212124ae0 files/digest-qemu-softmmu-0.7.0-r1 127
-MD5 fd7335121f3422f52ac0dfe371ffb6b8 files/digest-qemu-softmmu-0.7.1 125
-MD5 72280464fdfd2d1cfe66d86515efdd4d files/digest-qemu-softmmu-0.7.1-r1 127
-MD5 1d5ef12a594467dced5bfce6c07ed893 files/kqemu-0.7.1-sysfs.patch 1631
-MD5 87ec2e1fa832612fb834d7dd49cf7e5c files/kqemu-sysfs.patch 2094
-MD5 3202f7445799cce82ccaac9749e1443d files/qemu-softmmu-0.7.0-errno.patch 487
-MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
-MD5 754955c38d3fe7db22e4bb6842c93c05 qemu-softmmu-0.7.0-r1.ebuild 3956
-MD5 b436cfe5986d3b25e7d87df04748e49f qemu-softmmu-0.7.1-r1.ebuild 4062
+MD5 71427aafd803ca5b894962efee04123d qemu-softmmu-0.7.1-r1.ebuild 4035
 MD5 159c47c6f540254c4f4318ed833ad4cb qemu-softmmu-0.7.1.ebuild 3992
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9Ot5I1lqEGTUzyQRAlhuAJwM/xWZRRiUapWxxb3cxs4uMjnPqQCdEc90
-NqxkGydlMNcH+oQUCWAVbCE=
-=tcpN
------END PGP SIGNATURE-----
+MD5 754955c38d3fe7db22e4bb6842c93c05 qemu-softmmu-0.7.0-r1.ebuild 3956
+MD5 2a8e225909a3327d5814db17177b9d8a ChangeLog 1400
+MD5 898131aae735c3477ff2f9c6882f1178 metadata.xml 223
+MD5 fd7335121f3422f52ac0dfe371ffb6b8 files/digest-qemu-softmmu-0.7.1 125
+MD5 3202f7445799cce82ccaac9749e1443d files/qemu-softmmu-0.7.0-errno.patch 487
+MD5 1d5ef12a594467dced5bfce6c07ed893 files/kqemu-0.7.1-sysfs.patch 1631
+MD5 f2e48bae97dad4e6e6bccdb212124ae0 files/digest-qemu-softmmu-0.7.0-r1 127
+MD5 72280464fdfd2d1cfe66d86515efdd4d files/digest-qemu-softmmu-0.7.1-r1 127
+MD5 87ec2e1fa832612fb834d7dd49cf7e5c files/kqemu-sysfs.patch 2094

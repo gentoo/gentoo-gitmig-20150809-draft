@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.5 2005/08/06 15:41:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.6 2005/08/19 21:37:02 agriffis Exp $
+
+  19 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  qemu-softmmu-0.7.1-r1.ebuild:
+  Minor ebuild fixups, particularly move MODULE_NAMES setting into pkg_setup.
+  The kqemu-sysfs patch is not compatible with 2.6.13-rc1+ because the new
+  interfaces are GPL-only, so refrain from applying the patch on those
+  versions; http://lkml.org/lkml/2005/7/4/5
 
 *qemu-softmmu-0.7.1-r1 (06 Aug 2005)
 
