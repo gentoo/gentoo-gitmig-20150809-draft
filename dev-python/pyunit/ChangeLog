@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyunit
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.6 2004/06/25 01:46:55 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.7 2005/08/19 03:44:17 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org> ChangeLog:
+  Added ~amd64 keywords.
 
 *pyunit-1.4.1 (28 Oct 2002)
 
