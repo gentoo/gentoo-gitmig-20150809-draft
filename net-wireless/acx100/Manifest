@@ -1,4 +1,16 @@
-MD5 cbe55c7c32af7dfead0bb28e9821a9a0 ChangeLog 2187
-MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44ea8fdbb751aaffe960b3753d7bc157 ChangeLog 2645
 MD5 b1b1c282801e90a82099b5a384f38dc2 acx100-0.2.0_pre8-r6.ebuild 1526
+MD5 e33a934a5fbdbda18c6de4e049d8e1d3 acx100-0.2.4.ebuild 1524
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 e2e4d69daf2b215f28b9cd5b532b3c88 files/digest-acx100-0.2.0_pre8-r6 147
+MD5 c17c9f12395a46910f1d908b6fcc9f69 files/digest-acx100-0.2.4 120
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBgOIBtvusYtCZMsRAvvfAJ9as052blkDSxpJTMp4PGg7ShRC/QCfRHa2
+/Trx6oMZ+yVzCWAadlye5xA=
+=0je7
+-----END PGP SIGNATURE-----
