@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.20050817.1210-r1.ebuild,v 1.1 2005/08/18 22:37:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.20050819.1044.ebuild,v 1.1 2005/08/19 14:57:12 ka0ttic Exp $
 
 inherit eutils versionator
 
@@ -37,17 +37,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.diff
-#    epatch ${FILESDIR}/${PN}-1.3.13-no-mysql-means-no-mysql.diff
 	use php && epatch ${FILESDIR}/${PN}-1.3.13-php.diff
-
-	epatch ${FILESDIR}/${P}-fix-config-segv.diff
-	epatch ${FILESDIR}/${P}-fix-mod_userdir.diff
 }
 
 src_compile() {
-#    einfo "Regenerating automake/autoconf files"
-#    autoreconf -f || die "autoreconf failed"
-
 	econf \
 		--libdir=/usr/$(get_libdir)/${PN} \
 		--enable-lfs \

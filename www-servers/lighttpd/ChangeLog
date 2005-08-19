@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.30 2005/08/18 22:37:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.31 2005/08/19 14:57:12 ka0ttic Exp $
+
+*lighttpd-1.4.0.20050819.1044 (19 Aug 2005)
+
+  19 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/lighttpd-1.4.0.20050817.1210-fix-config-segv.diff,
+  -files/lighttpd-1.4.0.20050817.1210-fix-mod_userdir.diff,
+  -lighttpd-1.4.0.20050817.1210-r1.ebuild,
+  +lighttpd-1.4.0.20050819.1044.ebuild:
+  Another pre-release.
 
 *lighttpd-1.4.0.20050817.1210-r1 (18 Aug 2005)
 
