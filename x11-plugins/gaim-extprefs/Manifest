@@ -1,9 +1,19 @@
-MD5 c108e1fce8030a3df6de062b101cc62c gaim-extprefs-0.5.ebuild 796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ea733f952a3dbf743ed837d688d4ff5 metadata.xml 331
-MD5 9b9f0211ed946d3b4579ad40599ffac1 ChangeLog 1858
 MD5 ada0fe081e6b55460c3ab3af792f3f86 gaim-extprefs-0.4.ebuild 837
+MD5 2ecb841962cbe6fde74916f8845ee3d4 gaim-extprefs-0.5.ebuild 798
+MD5 237093ce78d12b6df2b25eea4e45a284 ChangeLog 1962
 MD5 cf2e004221534fcb67712031c61cc1d0 gaim-extprefs-0.4-r1.ebuild 1021
-MD5 369aa0fe80ad18c85e651da3da476b4f files/digest-gaim-extprefs-0.5 69
-MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4 68
 MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4-r1 68
 MD5 22d0ed82c098cff251a1abc3064b0a1b files/gaim-extprefs-0.4-64bitfix.patch 2611
+MD5 8208e6ff994eddc392fee60515f96f43 files/digest-gaim-extprefs-0.4 68
+MD5 369aa0fe80ad18c85e651da3da476b4f files/digest-gaim-extprefs-0.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDBdaPKRy60XGEcJIRAg6iAJ442z3qwi+NUDze3ESr8/cJlfmEUACgo1zd
+U9x35IoujdkEgo833vRHdtI=
+=fxsi
+-----END PGP SIGNATURE-----
