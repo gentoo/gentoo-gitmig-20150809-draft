@@ -1,8 +1,19 @@
-MD5 2fccbf151524d2852ca881a4c9635a01 hpijs-1.7.1.ebuild 2167
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f3f4da462851d23c6808edcaae02238e ChangeLog 4211
 MD5 29c3dda867492a08ea041bbc009fbece hpijs-1.5.ebuild 2072
+MD5 4bb6026a773d9b387b5b9dce14117099 hpijs-1.7.1.ebuild 2204
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 2c5e1fbf3f531bce905c1d72f3a27800 ChangeLog 4051
-MD5 f332f0c4b395ed9a2c8d89cf38787447 files/hpijs-1.5-gcc34.patch 1482
+MD5 4a45d7f2afffa6ae0b5a8c27d7608ddc files/digest-hpijs-1.5 143
 MD5 001779aa38e92ba16c9ee47f6c0051d9 files/digest-hpijs-1.7.1 144
 MD5 153b11771cdc5889cbe726925c862292 files/hpijs-1.4.1-rss.1.patch 6182
-MD5 4a45d7f2afffa6ae0b5a8c27d7608ddc files/digest-hpijs-1.5 143
+MD5 f332f0c4b395ed9a2c8d89cf38787447 files/hpijs-1.5-gcc34.patch 1482
+MD5 b4f87a9b64a8c5dc510112a789429ea9 files/hpijs-1.7.1-gcc4.patch 348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBkm9CRZPokWLroQRAkXWAKCeCRwup+F88HW7doaqStpAHxDvZACgoFYl
+Oyt6rHIeJuoEZDH2TVaSl3w=
+=OYrL
+-----END PGP SIGNATURE-----

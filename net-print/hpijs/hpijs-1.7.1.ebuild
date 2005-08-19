@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.6 2005/06/17 20:29:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.7 2005/08/19 21:05:53 halcy0n Exp $
 
 inherit eutils gnuconfig
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 	gnuconfig_update
 	epatch ${FILESDIR}/hpijs-1.4.1-rss.1.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile () {

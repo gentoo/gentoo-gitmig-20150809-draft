@@ -1,0 +1,11 @@
+diff -ur hpijs-1.7.1-orig/printerproxy.h hpijs-1.7.1/printerproxy.h
+--- hpijs-1.7.1-orig/printerproxy.h	2005-08-18 18:07:18.000000000 -0400
++++ hpijs-1.7.1/printerproxy.h	2005-08-18 18:08:44.000000000 -0400
+@@ -46,6 +46,7 @@
+     VOTE_EXACT_MATCH = 100                  //!< exact match id on this printer
+ };
+ 
++class Printer;
+ 
+ 
+ //PrinterProxy
