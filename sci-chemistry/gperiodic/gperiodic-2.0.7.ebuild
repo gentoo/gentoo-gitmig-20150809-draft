@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.7.ebuild,v 1.2 2005/02/04 23:48:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.7.ebuild,v 1.3 2005/08/19 11:53:38 cryos Exp $
 
 inherit toolchain-funcs
 
@@ -46,6 +46,9 @@ src_install() {
 	# Fix permissions
 	chmod 644 ${D}/usr/share/pixmaps/*
 	chmod 644 ${D}/usr/share/applications/*
+
+	# Fix the chemistry category in the .desktop file, bug 97202.
+	sed -i -e "s|Chemestry|Chemistry|" ${D}/usr/share/applications/gperiodic.desktop
 
 	# The man page seems to have been removed too.
 #	doman man/gperiodic.1
