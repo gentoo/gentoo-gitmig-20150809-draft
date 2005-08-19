@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.56 2005/08/17 19:19:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.57 2005/08/19 05:14:41 mr_bones_ Exp $
+
+  19 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-0.9.4.ebuild,
+  wesnoth-0.9.5.ebuild:
+  filter -fstack-protector again for bug #88899 - Upstream says it's a gcc-3
+  issue that is addressed in gcc-4.
 
   17 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-0.9.5.ebuild:
   stable for x86
