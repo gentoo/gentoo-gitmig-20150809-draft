@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.104 2005/08/18 15:54:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.105 2005/08/19 03:15:25 lu_zero Exp $
+
+  19 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.14.13-r2.ebuild, ati-drivers-8.16.20.ebuild:
+  8.16.20 seems to have too many issues.
+  8.14.13-r2 marked stable on x86 and amd64
 
   18 Aug 2005; Luca Barbato <lu_zero@gentoo.org> ChangeLog:
   Readded ioctl32.patch for amd64
