@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb9a1fa35b808b9431bc21eb883ace98 ChangeLog 465
-MD5 3fb65f2e9052017e6b5637345fdb1081 toxine-0.6.3.ebuild 1295
+MD5 23d0c90a4c4ce5359bc19cd1e2a7698e ChangeLog 619
+MD5 d2bd6e3f075b9ebe90af01a88c33d09e toxine-0.6.3.ebuild 1330
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 add3f1d4c9ff4a333b42042658cb8521 files/toxine-0.6.3-gcc4.patch 533
+MD5 5650d3830b5b67954a7927180e784d76 files/toxine-0.6.3-nox.patch 1236
 MD5 73614b82fc7fd731d3501c21f541311e files/digest-toxine-0.6.3 64
 MD5 84d6bad99dfaa6bca6e774afe297a3ba files/toxine-0.6.3-configure.patch 2505
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBQfjj5H05b2HAEkRAmbNAJsGM5fp5cILzO16DVLVplG4RJ/q5wCfRVWk
-spm10lYAffxGMp+WKebE1TM=
-=hgzm
+iD8DBQFDBjPbj5H05b2HAEkRAsAuAJ9vK2RbezhYyBm/D3Zbj1yzAm+X8ACcCnoU
+Bjy9vLkGpIFsuuD3zsVOj+k=
+=WPR1
 -----END PGP SIGNATURE-----

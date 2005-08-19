@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/toxine-0.6.3.ebuild,v 1.1 2005/08/18 22:12:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/toxine-0.6.3.ebuild,v 1.2 2005/08/19 19:31:52 flameeyes Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-configure.patch
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-nox.patch
 
 	aclocal -I m4 || die "aclocal failed"
 	autoconf || die "autoconf failed"

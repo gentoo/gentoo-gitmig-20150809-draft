@@ -1,6 +1,10 @@
 # ChangeLog for media-video/toxine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/ChangeLog,v 1.1 2005/08/18 22:12:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/ChangeLog,v 1.2 2005/08/19 19:31:52 flameeyes Exp $
+
+  19 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/toxine-0.6.3-nox.patch, toxine-0.6.3.ebuild:
+  Added patch to build fine without X at all.
 
 *toxine-0.6.3 (18 Aug 2005)
 
