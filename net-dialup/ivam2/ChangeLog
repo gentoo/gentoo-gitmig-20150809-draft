@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ivam2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ChangeLog,v 1.5 2005/07/04 07:43:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ChangeLog,v 1.6 2005/08/19 20:51:57 sbriesen Exp $
+
+  19 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org> files/ivam2.init,
+  ivam2-0.3-r1.ebuild:
+  stable on x86
 
   04 Jul 2005; David Holm <dholm@gentoo.org> ivam2-0.3-r1.ebuild:
   Added to ~ppc.

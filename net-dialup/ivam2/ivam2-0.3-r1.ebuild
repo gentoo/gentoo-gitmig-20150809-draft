@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.3 2005/07/20 05:49:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ivam2/ivam2-0.3-r1.ebuild,v 1.4 2005/08/19 20:51:57 sbriesen Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Automatic phone answering machine software for ISDN"
 SRC_URI="http://0pointer.de/lennart/projects/ivam2/${P}.tar.gz"
 HOMEPAGE="http://0pointer.de/lennart/projects/ivam2/"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
@@ -21,13 +21,12 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	media-sound/sox
 	media-sound/vorbis-tools
-	|| ( net-mail/metamail dev-libs/openssl )" #needed for base64 encoding
+	|| ( net-mail/metamail dev-libs/openssl )"  # needed for base64 encoding
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-base64-enc.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-base64-enc.patch"
 }
 
 src_compile() {
@@ -38,11 +37,10 @@ src_compile() {
 
 src_install() {
 	keepdir /var/spool/ivam2
-	make install DESTDIR=${D} || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc doc/{README,README.VoiceBox,TODO}
 	dohtml doc/*.{html,css}
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ivam2.init ivam2
+	newinitd "${FILESDIR}/ivam2.init" ivam2
 }
 
 pkg_preinst() {
