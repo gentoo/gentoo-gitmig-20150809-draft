@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/abakus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.1 2005/06/18 08:07:15 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/ChangeLog,v 1.2 2005/08/19 17:58:12 centic Exp $
+
+*abakus-0.90 (19 Aug 2005)
+
+  19 Aug 2005; Dominik Stadler <centic@gentoo.org> +abakus-0.90.ebuild:
+  Add new version 0.90
 
 *abakus-0.80.2 (18 Jun 2005)
 
