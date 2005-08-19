@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.13 2005/04/21 19:24:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.14 2005/08/19 03:35:16 metalgod Exp $
+
+  19 Aug 2005; Luis Medinas <metalgod@gentoo.org> jitac-0.2.0-r1.ebuild:
+  Added ~amd64 keywords.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> jitac-0.2.0.ebuild:
   stable on amd64
