@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 163f742393c67625e8551fe8491e8ecd scim-anthy-0.4.3.ebuild 1071
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 d90ab4901bcdae11d52d4c20bf989674 ChangeLog 2657
 MD5 b5d914adfba5e91d42068779f21d718f scim-anthy-0.6.1.ebuild 1024
-MD5 276eba98077126c4b52f85d08389e29f scim-anthy-0.5.3.ebuild 1023
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 7f77f41d4c021a67c2ae2dec31e984b1 ChangeLog 2757
 MD5 076cee0147e72b0fe8ecfaeed4d9d136 scim-anthy-0.6.0.ebuild 1024
-MD5 3f6fbdd8d7fb1233643d6a4b13c14dde files/digest-scim-anthy-0.4.3 68
-MD5 c37fbcc4207cabb9615761df5d84bdc3 files/digest-scim-anthy-0.6.1 68
+MD5 2334e89ad86c9bfebb9801055ec9b6e5 scim-anthy-0.5.3.ebuild 1023
+MD5 163f742393c67625e8551fe8491e8ecd scim-anthy-0.4.3.ebuild 1071
 MD5 e7bf6c6ea71a0dadd1e3373bfeffb8dd files/digest-scim-anthy-0.5.3 68
 MD5 b3721f2aa5b8f9f3616b06ab7c6e71a7 files/digest-scim-anthy-0.6.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDAxR6VWNWqTUmv+0RAiuuAJ4qhzveOz2+gxuOYTYKCVa72/0DTwCfQ22t
-Plz9Sd0cWqqbfKu12WnOF38=
-=OiM+
------END PGP SIGNATURE-----
+MD5 c37fbcc4207cabb9615761df5d84bdc3 files/digest-scim-anthy-0.6.1 68
+MD5 3f6fbdd8d7fb1233643d6a4b13c14dde files/digest-scim-anthy-0.4.3 68

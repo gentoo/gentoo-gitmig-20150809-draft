@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-anthy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.18 2005/08/17 10:56:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.19 2005/08/19 21:58:39 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  scim-anthy-0.5.3.ebuild:
+  Stable on ppc.
 
 *scim-anthy-0.6.1 (17 Aug 2005)
 
