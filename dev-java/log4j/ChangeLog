@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.31 2005/07/15 09:54:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.32 2005/08/19 20:22:54 betelgeuse Exp $
+
+*log4j-1.2.11 (19 Aug 2005)
+
+  19 Aug 2005; Petteri Räty <betelgeuse@gentoo.org> +log4j-1.2.11.ebuild:
+  Version bump. Resolves bug #102627.
 
   15 Jul 2005; Thomas Matthijs <axxo@gentoo.org> log4j-1.2.9.ebuild:
   Oeps, commited a wrong ebuild, fixes also 99078, sorry
