@@ -1,0 +1,56 @@
+--- libpri/Makefile.orig	2005-06-22 00:47:39.000000000 +0200
++++ libpri/Makefile	2005-07-25 17:48:27.000000000 +0200
+@@ -38,33 +38,18 @@
+ DYNAMIC_LIBRARY=libpri.so.1.0
+ STATIC_OBJS=copy_string.o pri.o q921.o prisched.o q931.o pri_facility.o
+ DYNAMIC_OBJS=copy_string.lo pri.lo q921.lo prisched.lo q931.lo pri_facility.lo
+-CFLAGS=-Wall -Werror -Wstrict-prototypes -Wmissing-prototypes -g $(ALERTING) $(LIBPRI_COUNTERS)
++CFLAGS+=-Wall -Werror -Wstrict-prototypes -Wmissing-prototypes -g $(ALERTING) $(LIBPRI_COUNTERS)
+ INSTALL_PREFIX=
+ INSTALL_BASE=/usr
+-ifeq (${OSARCH},Linux)
+-LDCONFIG_FLAGS=-n
+-else
+ ifeq (${OSARCH},FreeBSD)
+-LDCONFIG_FLAGS=-m
+ CFLAGS += -I../zaptel -I../zapata
+ endif
+-endif
+ ifeq (${OSARCH},SunOS)
+ CFLAGS += -DSOLARIS -I../zaptel-solaris -lsocket -lnsl
+ SOFLAGS = 
+-LDCONFIG = echo
+ INSTALL_BASE = /usr/local
+ else
+ SOFLAGS = -Wl,-soname,libpri.so.1
+-LDCONFIG = /sbin/ldconfig
+-endif
+-
+-#The problem with sparc is the best stuff is in newer versions of gcc (post 3.0) only.
+-#This works for even old (2.96) versions of gcc and provides a small boost either way.
+-#A ultrasparc cpu is really v9 but the stock debian stable 3.0 gcc doesnt support it.
+-ifeq ($(PROC),sparc64)
+-PROC=ultrasparc
+-CFLAGS += -mtune=$(PROC) -O3 -pipe -fomit-frame-pointer -mcpu=v8
+ endif
+ 
+ all: depend $(STATIC_LIBRARY) $(DYNAMIC_LIBRARY)
+@@ -82,10 +67,8 @@
+ 	mkdir -p $(INSTALL_PREFIX)/$(INSTALL_BASE)/include
+ 	install -m 644 libpri.h $(INSTALL_PREFIX)/$(INSTALL_BASE)/include
+ 	install -m 755 $(DYNAMIC_LIBRARY) $(INSTALL_PREFIX)/$(INSTALL_BASE)/lib
+-	if [ -x /usr/sbin/sestatus ] && ( /usr/sbin/sestatus | grep "SELinux status:" | grep -q "enabled"); then  restorecon -v $(INSTALL_PREFIX)/$(INSTALL_BASE)/lib/$(DYNAMIC_LIBRARY); fi
+ 	( cd $(INSTALL_PREFIX)/$(INSTALL_BASE)/lib ; ln -sf libpri.so.1 libpri.so )
+ 	install -m 644 $(STATIC_LIBRARY) $(INSTALL_PREFIX)/$(INSTALL_BASE)/lib
+-	$(LDCONFIG)
+ 
+ uninstall:
+ 	@echo "Removing Libpri"
+@@ -119,7 +102,6 @@
+ 
+ $(DYNAMIC_LIBRARY): $(DYNAMIC_OBJS)
+ 	$(CC) -shared $(SOFLAGS) -o $@ $(DYNAMIC_OBJS)
+-	$(LDCONFIG) $(LDCONFIG_FLAGS) .
+ 	ln -sf libpri.so.1 libpri.so
+ 
+ clean:
