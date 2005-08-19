@@ -1,6 +1,19 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.173 2005/08/17 17:53:03 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.174 2005/08/19 07:43:37 leonardop Exp $
+
+*gtk+-2.8.0-r2 (19 Aug 2005)
+
+  19 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/gtk+-2.8.0-dep_checks.patch, +files/gtk+-2.8.0-gdk_fix.patch,
+  +gtk+-2.8.0-r2.ebuild:
+  Patches from upstream CVS to fix gdk warnings and related side-effects, as
+  wall as sanitizing some dependencies (bug #102854).
+
+*gtk+-2.6.10 (18 Aug 2005)
+
+  18 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> +gtk+-2.6.10.ebuild:
+  New version from the stable branch.
 
 *gtk+-2.8.0-r1 (17 Aug 2005)
 

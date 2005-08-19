@@ -1,15 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.0.ebuild,v 1.1 2005/08/16 01:37:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.0-r2.ebuild,v 1.1 2005/08/19 07:43:37 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="${SRC_URI}
-	mirror://gentoo/gtk+-2-smoothscroll-r6.patch"
-#	amd64? ( http://dev.gentoo.org/~kingtaco/gtk+-2.6.1-lib64.patch.bz2 )"
-# Patch doesn't apply anymore, see bug #101289
+	mirror://gentoo/gtk+-2-smoothscroll-r6.patch.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -23,6 +21,7 @@ RDEPEND="virtual/x11
 	>=x11-libs/cairo-0.9.2
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
+	media-libs/fontconfig
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
 
@@ -54,13 +53,19 @@ src_unpack() {
 	epatch ${DISTDIR}/${PN}-2-smoothscroll-r6.patch
 
 	cd ${S}
+
+	# Some sanity checks from upstream.
+	epatch ${FILESDIR}/${P}-dep_checks.patch
+	# Avoid Gdk warnings and other side-effects.
+	epatch ${FILESDIR}/${P}-gdk_fix.patch
+
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
-	# has_multilib_profile && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
+	has_multilib_profile && epatch ${FILESDIR}/gtk+-2.8.0-multilib.patch
 
 	# and this line is just here to make building emul-linux-x86-gtklibs a bit
 	# easier, so even this should be amd64 specific.
-	# use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
+	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${FILESDIR}/gtk+-2.8.0-multilib.patch
 
 	# patch for ppc64 (#64359)
 	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch

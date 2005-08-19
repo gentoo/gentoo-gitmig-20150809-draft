@@ -1,0 +1,12 @@
+diff -NurdB gtk+-2.8.0/gdk/x11/gdkwindow-x11.c gtk+-2.8.0-patched/gdk/x11/gdkwindow-x11.c
+--- gtk+-2.8.0/gdk/x11/gdkwindow-x11.c	2005-08-12 08:13:54.000000000 -0500
++++ gtk+-2.8.0-patched/gdk/x11/gdkwindow-x11.c	2005-08-18 16:47:48.000000000 -0500
+@@ -2913,7 +2913,7 @@
+   g_return_if_fail (pixmap == NULL || !parent_relative);
+   g_return_if_fail (pixmap == NULL || gdk_drawable_get_depth (window) == gdk_drawable_get_depth (pixmap));
+ 
+-  if (!gdk_drawable_get_colormap (pixmap))
++  if (pixmap && !gdk_drawable_get_colormap (pixmap))
+     {
+       g_warning ("gdk_window_set_back_pixmap(): pixmap must have a colormap");
+       return;

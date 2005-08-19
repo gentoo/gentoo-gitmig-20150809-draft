@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.0-r1.ebuild,v 1.1 2005/08/17 17:53:03 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10.ebuild,v 1.1 2005/08/19 07:43:37 leonardop Exp $
 
-inherit gnome.org flag-o-matic eutils debug
+inherit flag-o-matic eutils
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="${SRC_URI}
-	mirror://gentoo/gtk+-2-smoothscroll-r6.patch"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2
+	mirror://gentoo/gtk+-2.6-smoothscroll-r5.patch.bz2
+	amd64? ( http://dev.gentoo.org/~kingtaco/gtk+-2.6.1-lib64.patch.bz2 )"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -15,10 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc tiff jpeg static"
 
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.7.1
+	>=dev-libs/glib-2.6
 	>=dev-libs/atk-1.0.1
-	>=x11-libs/pango-1.9
-	>=x11-libs/cairo-0.9.2
+	>=x11-libs/pango-1.8
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
@@ -28,17 +28,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	sys-devel/autoconf
 	>=sys-devel/automake-1.7.9
-	doc? (
-		>=dev-util/gtk-doc-1.4
-		~app-text/docbook-xml-dtd-4.1.2 )"
+	doc? ( >=dev-util/gtk-doc-1 )"
 
-
-pkg_setup() {
-	# An arch specific config directory is used on multilib systems
-	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
-}
+# An arch specific config directory is used on multilib systems
+has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 
 src_unpack() {
 
@@ -49,16 +44,15 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
-	epatch ${DISTDIR}/${PN}-2-smoothscroll-r6.patch
+	epatch ${DISTDIR}/${PN}-2.6-smoothscroll-r5.patch
 
 	cd ${S}
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
-	has_multilib_profile && epatch ${FILESDIR}/gtk+-2.8.0-multilib.patch
-
+	has_multilib_profile && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 	# and this line is just here to make building emul-linux-x86-gtklibs a bit
 	# easier, so even this should be amd64 specific.
-	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${FILESDIR}/gtk+-2.8.0-multilib.patch
+	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 
 	# patch for ppc64 (#64359)
 	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
