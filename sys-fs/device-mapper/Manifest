@@ -2,23 +2,25 @@
 Hash: SHA1
 
 MD5 4418fd5199014b10b9f76bb8f1ab1bcc device-mapper-1.01.01.ebuild 1186
-MD5 b0aae51a67757b0acc911fa53cecbe6e device-mapper-1.01.03.ebuild 1193
-MD5 f051c5ddc506fc6a65c4644d7ee3352d device-mapper-1.00.19-r2.ebuild 1170
-MD5 d2c409f5510e1f9291ec1939f0c3692a device-mapper-1.00.21.ebuild 1179
-MD5 09e6fe43cfae55b108e7247aa78f2a11 device-mapper-1.01.00.ebuild 1175
-MD5 96e093de6a3fc35e8575f91efa4dbbc7 ChangeLog 6243
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 aaf96e8a4fd3711078f75fe3fac2072b files/dmtab 426
-MD5 a60628a7ac701c252155b3f5d32004c4 files/digest-device-mapper-1.00.21 70
-MD5 5f73ee137a6bfb893f1ec3a691dbf614 files/digest-device-mapper-1.01.00 70
-MD5 825c5c5f51389f52bc6fa2a59c056c74 files/digest-device-mapper-1.01.01 70
-MD5 598551bf56dbc299bb5f4e415af15a47 files/digest-device-mapper-1.01.03 70
+MD5 f051c5ddc506fc6a65c4644d7ee3352d device-mapper-1.00.19-r2.ebuild 1170
+MD5 09e6fe43cfae55b108e7247aa78f2a11 device-mapper-1.01.00.ebuild 1175
+MD5 d2c409f5510e1f9291ec1939f0c3692a device-mapper-1.00.21.ebuild 1179
+MD5 2f5e48e73ac001ad15923ac4d7c26e99 device-mapper-1.01.04.ebuild 1062
+MD5 03b6ad28e6afe4bc985f817030878d26 ChangeLog 6410
+MD5 2fc0cdbdfe44f9d350d90b44e10d1c67 device-mapper-1.01.03.ebuild 1188
 MD5 b5dd92354fb75caa4956a92d5aa2e0ea files/digest-device-mapper-1.00.19-r2 70
+MD5 aaf96e8a4fd3711078f75fe3fac2072b files/dmtab 426
 MD5 ab82e97df1e8ce801b65daa33c8cbfb0 files/dm-start.sh 1935
+MD5 598551bf56dbc299bb5f4e415af15a47 files/digest-device-mapper-1.01.03 70
+MD5 3fc77eb6eb999eed47e505401962ea5e files/digest-device-mapper-1.01.04 70
+MD5 a60628a7ac701c252155b3f5d32004c4 files/digest-device-mapper-1.00.21 70
+MD5 825c5c5f51389f52bc6fa2a59c056c74 files/digest-device-mapper-1.01.01 70
+MD5 5f73ee137a6bfb893f1ec3a691dbf614 files/digest-device-mapper-1.01.00 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC90CdEZCkKN40op4RAiyOAJ4jnSqBt5Q84CXM2IjWn5TfRA+YZACff2G1
-VBDwrRSU68Q5wMEq+vQJkCk=
-=bCaG
+iD8DBQFDBmcdgIKl8Uu19MoRAgIEAJ44QdMu3xEeJBAmO5wrMvqyVoJ5bgCcCSko
+e7XjmrTDvHU4LyrmgAncfnE=
+=YrTn
 -----END PGP SIGNATURE-----
