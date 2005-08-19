@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urwvn-fonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.2 2005/04/24 16:02:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.3 2005/08/19 06:41:39 pclouds Exp $
+
+  19 Aug 2005; <pclouds@gentoo.org> urwvn-fonts-2.0.ebuild:
+  Stable on x86
 
   24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> urwvn-fonts-2.0.ebuild:
   Marked ~amd64.
