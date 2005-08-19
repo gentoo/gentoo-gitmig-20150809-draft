@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors-modules
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors-modules/ChangeLog,v 1.2 2005/07/19 19:21:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors-modules/ChangeLog,v 1.3 2005/08/19 15:35:02 brix Exp $
+
+  19 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  lm_sensors-modules-2.9.1.ebuild:
+  No linux-2.4.x support for ppc.
 
   19 Jul 2005; <brix@gentoo.org> lm_sensors-modules-2.9.1.ebuild:
   Stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.1.ebuild,v 1.5 2005/07/21 13:43:50 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.1.ebuild,v 1.6 2005/08/19 15:35:32 brix Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 
 IUSE="sensord"
-
 DEPEND="sys-apps/sed
-		|| (  >=virtual/linux-sources-2.5 sys-apps/lm_sensors-modules )"
+		ppc? ( >=virtual/linux-sources-2.5 )
+		!ppc? ( || (  >=virtual/linux-sources-2.5 sys-apps/lm_sensors-modules ) )"
 RDEPEND="dev-lang/perl
 		sensord? ( net-analyzer/rrdtool )"
 
@@ -24,7 +24,12 @@ pkg_setup() {
 	linux-info_pkg_setup
 
 	if kernel_is 2 4; then
-		if ! has_version =sys-apps/lm_sensors-modules-${PV}; then
+		if use ppc; then
+			eerror
+			eerror "${P} does not support kernel 2.4.x under PPC."
+			eerror
+			die "${P} does not support kernel 2.4.x under PPC."
+		elif ! has_version =sys-apps/lm_sensors-modules-${PV}; then
 			eerror
 			eerror "${P} needs sys-apps/lm_sensors-modules-${PV} to be installed"
 			eerror "for kernel 2.4.x"

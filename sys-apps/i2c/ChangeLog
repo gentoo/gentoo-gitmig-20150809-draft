@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.38 2005/08/19 10:19:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.39 2005/08/19 15:35:45 brix Exp $
+
+  19 Aug 2005; Henrik Brix Andersen <brix@gentoo.org> i2c-2.9.1.ebuild:
+  No linux-2.4.x support for ppc.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> i2c-2.9.1.ebuild:
   Readded to ~ppc as a temporary fix.
