@@ -1,0 +1,124 @@
+--- zaptel/Makefile.orig	2005-08-15 18:18:49.000000000 +0200
++++ zaptel/Makefile	2005-08-15 18:33:42.000000000 +0200
+@@ -21,7 +21,7 @@
+ endif
+ KINCLUDES:=$(KSRC)/include
+ 
+-CFLAGS+=-I. -O4 -g -Wall -DBUILDING_TONEZONE #-DTONEZONE_DRIVER
++CFLAGS+=-I. -g -Wall -DBUILDING_TONEZONE #-DTONEZONE_DRIVER
+ CFLAGS_PPC:=$(shell if uname -m | grep -q ppc; then echo "-fsigned-char"; fi)
+ CFLAGS_X86-64:=$(shell if uname -m | grep -q x86_64; then echo "-m64"; fi)
+ CFLAGS+=$(CFLAGS_PPC) $(CFLAGS_X64-64)
+@@ -55,27 +55,7 @@
+   BUILDVER:=linux24
+ endif
+ 
+-ifeq ($(BUILDVER),linux26)
+-  ifneq (,$(wildcard $(ROOT_PREFIX)/etc/modprobe.d))
+-    MODCONF:=$(ROOT_PREFIX)/etc/modprobe.d/zaptel
+-  else
+-    ifneq (,$(wildcard $(ROOT_PREFIX)/etc/modprobe.conf))
+-      MODCONF:=$(ROOT_PREFIX)/etc/modprobe.conf
+-    else
+-      ifneq (,$(wildcard $(ROOT_PREFIX)/etc/conf.modules))
+-        MODCONF:=$(ROOT_PREFIX)/etc/conf.modules
+-      endif
+-    endif
+-  endif
+-else # BUILDVER == linux24
+-  ifneq (,$(wildcard $(ROOT_PREFIX)/etc/modutils))
+-    MODCONF:=$(ROOT_PREFIX)/etc/modutils/zaptel
+-   else
+-    ifneq (,$(wildcard $(ROOT_PREFIX)/etc/modules.conf))
+-      MODCONF:=$(ROOT_PREFIX)/etc/modules.conf
+-     endif
+-  endif
+-endif
++MODCONF:=$(INSTALL_PREFIX)/etc/modules.d/zaptel
+ 
+ ifeq (${BUILDVER},linux24)
+ #We only support DEVFS in linux 2.4 kernels, since its considered obsolete post 2.4
+@@ -83,7 +63,7 @@
+ endif
+ ifeq (${BUILDVER},linux26)
+ #Tests for newer linux-2.6 udev support
+-DYNFS:=$(shell ps ax | grep -v grep | grep udevd && echo "yes")
++DYNFS:=$(shell ps ax | grep -v grep | grep -q udevd && echo "yes")
+ endif
+ 
+ CHKCONFIG:=$(shell sh -c 'type -p chkconfig' 2> /dev/null)
+@@ -312,7 +292,7 @@
+ 	docbook2man -o doc doc/ztmonitor.sgml
+ 	gzip doc/ztmonitor.8
+ 
+-install: all devices
++install: devices
+ 	install -D -m 755 ztcfg $(INSTALL_PREFIX)/sbin/ztcfg
+ 	if [ -f sethdlc-new ]; then \
+ 		install -D -m 755 sethdlc-new $(INSTALL_PREFIX)/sbin/sethdlc; \
+@@ -339,49 +319,27 @@
+ 		rm -f $(INSTALL_PREFIX)/lib/modules/$(KVERS)/misc/wcfxs.o; \
+ 	fi
+ 	install -D -m 755 $(LIBTONEZONE_SO) $(INSTALL_PREFIX)/usr/lib/$(LIBTONEZONE_SO).$(LIBTONEZONE_SO_MAJOR_VER).$(LIBTONEZONE_SO_MINOR_VER)
+-	[ `id -u` = 0 ] && /sbin/ldconfig || :
+ 	rm -f $(INSTALL_PREFIX)/usr/lib/$(LIBTONEZONE_SO)
+ 	ln -sf $(LIBTONEZONE_SO).$(LIBTONEZONE_SO_MAJOR_VER) $(INSTALL_PREFIX)/usr/lib/$(LIBTONEZONE_SO)
+-	if [ -x /usr/sbin/sestatus ] && (/usr/sbin/sestatus | grep "SELinux status:" | grep -q "enabled") ; then restorecon -v $(INSTALL_PREFIX)/usr/lib/$(LIBTONEZONE_SO); fi
+ 	install -D -m 644 zaptel.h $(INSTALL_PREFIX)/usr/include/linux/zaptel.h
+ 	install -D -m 644 torisa.h $(INSTALL_PREFIX)/usr/include/linux/torisa.h
+ 	install -D -m 644 tonezone.h $(INSTALL_PREFIX)/usr/include/tonezone.h
+-	install -m 644 doc/ztcfg.8.gz $(INSTALL_PREFIX)/usr/share/man/man8
+-	install -m 644 doc/ztmonitor.8.gz $(INSTALL_PREFIX)/usr/share/man/man8
+-	install -m 644 doc/zttool.8.gz $(INSTALL_PREFIX)/usr/share/man/man8
+-	if [ -f $(MODCONF) ]; then mv -f $(MODCONF) $(MODCONF).bak ; fi
+-	cat $(MODCONF).bak | grep -v "alias char-major-250" | \
+-	grep -v "post-install torisa /sbin/ztcfg" | \
+-	grep -v "post-install wcfxsusb /sbin/ztcfg" | \
+-	grep -v "alias wctdm" | \
+-	grep -v "post-install wctdm /sbin/ztcfg" > $(MODCONF) || true
++	install -D -m 644 doc/ztcfg.8.gz $(INSTALL_PREFIX)/usr/share/man/man8
++	install -D -m 644 doc/ztmonitor.8.gz $(INSTALL_PREFIX)/usr/share/man/man8
++	install -D -m 644 doc/zttool.8.gz $(INSTALL_PREFIX)/usr/share/man/man8
++	if [ ! -d `dirname $(MODCONF)` ]; then install -d -m 755 `dirname $(MODCONF)` ; fi
+ 	if ! grep "options torisa" $(MODCONF); then \
+ 		echo "options torisa base=$(BASEADDR)" >> $(MODCONF); \
+ 	fi
+ 	if ! grep "alias char-major-196" $(MODCONF); then \
+ 		echo "alias char-major-196 $(PRIMARY)" >> $(MODCONF); \
+ 	fi
+-	for x in $(MODULES); do \
+-		if ! grep -q "post-install $$x" $(MODCONF); then \
+-			if ! grep -q "install $$x " $(MODCONF); then \
+-				if [ "$$x" != "zaptel" ] ; then \
+-					if [ -f zaptel.ko ]; then echo "install $$x /sbin/modprobe --ignore-install $$x && /sbin/ztcfg" >> $(MODCONF); \
+-					else echo "post-install $$x /sbin/ztcfg" >> $(MODCONF); \
+-					fi; \
+-				fi; \
+-			fi; \
+-		fi; \
+-	done
+ 	if ! grep "alias wcfxs" $(MODCONF); then \
+ 		echo "alias wcfxs wctdm" >> $(MODCONF); \
+ 	fi
+ 	if ! grep "alias wct2xxp" $(MODCONF); then \
+ 		echo "alias wct2xxp wct4xxp" >> $(MODCONF); \
+ 	fi
+-	if [ -d /etc/modutils ]; then \
+-		/sbin/update-modules ; \
+-	fi
+-	[ `id -u` = 0 ] && /sbin/depmod -a || :
+ 	[ -f $(CONFIG_FILE) ] || install -D -m 644 zaptel.conf.sample $(CONFIG_FILE)
+ 
+ install-udev:
+--- zaptel/zconfig.h.orig	2005-08-16 21:33:25.000000000 +0200
++++ zaptel/zconfig.h	2005-08-16 21:33:58.000000000 +0200
+@@ -133,5 +133,10 @@
+  */
+ /* #define EMFLASH */
+ 
++/*
++ * Enable RTC support
++ */
++/* #define USE_RTC */
++
+ #endif
