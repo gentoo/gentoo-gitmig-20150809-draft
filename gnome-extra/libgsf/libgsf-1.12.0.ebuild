@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.12.0.ebuild,v 1.8 2005/07/31 13:18:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.12.0.ebuild,v 1.9 2005/08/19 03:22:51 metalgod Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="doc gnome static"
 
 # FIXME : should add optional bz2 support
