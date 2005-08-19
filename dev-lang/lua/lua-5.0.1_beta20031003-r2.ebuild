@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r2.ebuild,v 1.7 2005/02/06 01:01:06 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r2.ebuild,v 1.8 2005/08/19 10:19:01 twp Exp $
 
 inherit eutils
 
@@ -79,8 +79,6 @@ src_install() {
 
 	insinto /usr/share/lua
 	doins etc/compat.lua
-	insinto /etc
-	newins etc/lua.magic magic
 	insinto /usr/share/pixmaps
 	doins etc/lua.xpm
 	insinto /usr/lib/pkgconfig

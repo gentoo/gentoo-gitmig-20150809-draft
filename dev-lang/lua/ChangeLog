@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.39 2005/07/28 05:09:29 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.40 2005/08/19 10:19:01 twp Exp $
+
+  19 Aug 2005; Tom Payne <twp@gentoo.org> lua-5.0.1_beta20031003-r2.ebuild,
+  lua-5.0.2.ebuild, lua-5.0.2-r1.ebuild:
+  Don't install /etc/magic. Bug # 102970.
 
   28 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> lua-5.0.2-r1.ebuild:
   Ported patch from 5.0.2 version to this version. Only affects ppc-macos
