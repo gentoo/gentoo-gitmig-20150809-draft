@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.19 2005/08/10 19:11:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.20 2005/08/19 19:06:51 hansmi Exp $
+
+  19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> dog-1.7-r2.ebuild:
+  Stable on ppc.
 
   10 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> dog-1.7-r1.ebuild,
   dog-1.7-r2.ebuild:
