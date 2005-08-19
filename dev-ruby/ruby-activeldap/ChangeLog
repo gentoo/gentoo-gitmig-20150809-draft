@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-activeldap
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.1 2005/08/19 15:03:38 tigger Exp $
+
+*ruby-activeldap-0.5.7 (19 Aug 2005)
+
+  19 Aug 2005; Rob Holland <tigger@gentoo.org> +metadata.xml,
+  +ruby-activeldap-0.5.7.ebuild:
+  Initial version.
+
