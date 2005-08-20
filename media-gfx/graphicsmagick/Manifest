@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4351530c2e7459c607a2f19cbcd1f693 ChangeLog 3334
+MD5 413b2187fa0385a7afd7672911dbb446 ChangeLog 3435
 MD5 ded8cc3796c1c2d79702b832850518dc graphicsmagick-1.1.5-r1.ebuild 2437
 MD5 f28ab825c8f582c4ffa270c04678251f graphicsmagick-1.1.5.ebuild 2365
+MD5 fb60859d59ba424ff2b2bdedfc9cd370 graphicsmagick-1.1.6-r1.ebuild 2600
 MD5 d09ae3822260a51a2804d7fe838464b7 graphicsmagick-1.1.6.ebuild 2434
 MD5 eae2172901a7cc6b7a6e37fc9267a2b9 metadata.xml 197
-MD5 76b481fc4b3c1887665f156ab0075178 graphicsmagick-1.1.6-r1.ebuild 2597
 MD5 c07ee30f29005c8130ae5639813149b7 files/digest-graphicsmagick-1.1.5 74
 MD5 c07ee30f29005c8130ae5639813149b7 files/digest-graphicsmagick-1.1.5-r1 74
 MD5 0ae4b45e8525b3c84deeae402fd11c79 files/digest-graphicsmagick-1.1.6 74
 MD5 0ae4b45e8525b3c84deeae402fd11c79 files/digest-graphicsmagick-1.1.6-r1 74
 MD5 0d86c7176f6338aed5b5f86af8f76d63 files/xwd-dos.patch 1103
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC78ctZ/iYVBmujdURAhJ8AKCCFYh8WXC1KNERdQc6jwFoi+mmqACgtcjh
-HxGWaoaZ0mguePVI8KlPpnY=
-=79Qx
------END PGP SIGNATURE-----
