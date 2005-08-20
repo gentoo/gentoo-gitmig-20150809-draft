@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.12_p5-r1.ebuild,v 1.1 2005/08/15 23:53:14 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.12_p6.ebuild,v 1.1 2005/08/20 19:07:48 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -33,7 +33,8 @@ UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE}
 	1001
 	1002
 	1003
-	1004"
+	1004
+	1005"
 
 DESCRIPTION="Full sources for the Linux kernel with Con Kolivas' high performance patchset and Gentoo's basic patchset."
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
