@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.58 2005/08/19 19:43:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.59 2005/08/20 02:07:47 weeve Exp $
+
+  20 Aug 2005; Jason Wever <weeve@gentoo.org> wesnoth-0.9.5.ebuild:
+  Stable on SPARC.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> wesnoth-0.9.5.ebuild:
   Stable on ppc.
