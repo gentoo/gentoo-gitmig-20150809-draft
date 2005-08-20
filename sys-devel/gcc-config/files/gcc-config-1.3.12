@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.12,v 1.3 2005/08/05 15:21:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.12,v 1.4 2005/08/20 07:36:08 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -93,7 +93,10 @@ get_real_chost() {
 
 	if [[ -z ${REAL_CHOST} ]] ; then
 		eerror "$0: Could not get portage CHOST!"
-		return 1
+		eerror "$0: You should verify that CHOST is set in one of these places:"
+		eerror "$0:  - ${ROOT}/etc/make.conf"
+		eerror "$0:  - active environment"
+		exit 1
 	fi
 }
 
@@ -463,6 +466,9 @@ for x in "$@" ; do
 		-O|--use-old)
 			if get_current_profile &>/dev/null ; then
 				CC_COMP="$(get_current_profile)"
+			else
+				eerror "No profile selected, unable to utilize --use-old"
+				exit 1
 			fi
 			;;
 		-f|--force)
