@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/pwmanager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.4 2005/08/10 13:40:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/ChangeLog,v 1.5 2005/08/20 17:11:38 greg_g Exp $
+
+  20 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> pwmanager-1.2.3.ebuild:
+  Stable on x86.
 
   10 Aug 2005; Simon Stelling <blubb@gentoo.org> pwmanager-1.2.3.ebuild:
   added ~amd64 keyword

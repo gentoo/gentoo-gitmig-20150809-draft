@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/kooldock-0.3-r1.ebuild,v 1.1 2005/03/31 22:54:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/kooldock-0.3-r1.ebuild,v 1.2 2005/08/20 17:23:08 greg_g Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://ktown.kde.cl/kooldock/dist/${P}.tar.gz"
 S=${WORKDIR}/${PN}
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 SLOT="0"
 IUSE=""
