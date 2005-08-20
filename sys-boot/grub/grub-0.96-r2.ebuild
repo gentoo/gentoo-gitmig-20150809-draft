@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.7 2005/08/01 10:34:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.8 2005/08/20 00:03:11 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="static netboot"
+IUSE="static netboot custom-cflags"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5"
 DEPEND="${RDEPEND}
@@ -69,7 +69,7 @@ src_compile() {
 	# CFLAGS has to be undefined running econf, else -fno-stack-protector detection fails.
 	# STAGE2_CFLAGS is not allowed to be used on emake command-line, it overwrites
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
-	unset CFLAGS
+	use custom-cflags || unset CFLAGS
 
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
