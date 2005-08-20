@@ -4,15 +4,17 @@ Hash: SHA1
 MD5 bab81c9c47e60449685700d1ffbd53fa edb-9999.ebuild 634
 MD5 eb2707d80970d395c93d1c6c5c29b43e edb-1.0.5.003.ebuild 628
 MD5 2d0647a67387b6483b9e24bafb1d794d metadata.xml 602
+MD5 0ac7f91a951919b37a9bd60cf932a530 edb-1.0.5.004.ebuild 612
 MD5 c8d7813a16e65983760de03bb62d317b edb-1.0.5.ebuild 653
 MD5 e648d36362a6f8bb2036085e9923fa6d ChangeLog 1348
+MD5 6a7f71b99bcaced007cddf65735034e0 files/digest-edb-1.0.5.004 65
 MD5 c0389bb566ce69a9f267601e2033e2d4 files/digest-edb-1.0.5.003 65
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-edb-9999 0
 MD5 51d95c6f5c812a7a345fdfc4312012c4 files/digest-edb-1.0.5 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCxHG7gIKl8Uu19MoRAlq4AJ934d6jDZqEa350IY6SfuKusI7R7ACdFNgi
-rIAtraRK/vyCIK/ll9HDCnE=
-=X2A1
+iD8DBQFDBrwzgIKl8Uu19MoRAjmaAJ95WcVLGoyuIfECOEVsZu1jO/FQ9ACfYQbx
+/5rPFGJCdmrUyOLeP3OhheY=
+=3exG
 -----END PGP SIGNATURE-----
