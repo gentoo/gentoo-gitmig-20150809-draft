@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libtermcap-compat
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.27 2005/07/28 14:37:45 seemant Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.28 2005/08/20 04:22:41 vapier Exp $
+
+*libtermcap-compat-2.0.8-r2 (20 Aug 2005)
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +libtermcap-compat-2.0.8-r2.ebuild:
+  Version bump to start deprecating this craptastic package.
 
   28 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
   -libtermcap-compat-1.2.3.ebuild, -libtermcap-compat-2.0.8.ebuild,

@@ -1,8 +1,18 @@
-MD5 d1ccb176825dbf5fc367e830e51d1952 ChangeLog 3669
-MD5 ad7b90113822b0469737c25d4d28611c libtermcap-compat-1.2.3-r1.ebuild 1387
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6fdbddb178ac8f4ad820b9b239cc197b libtermcap-compat-2.0.8-r2.ebuild 1409
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 417a2b2e89abb0f2f502880bf52222e2 libtermcap-compat-2.0.8-r1.ebuild 1575
-MD5 86463dc73dac3761dc5cfa83c3ec83ef files/digest-libtermcap-compat-1.2.3-r1 72
+MD5 e4c495e6effb4372d8b4a1189b7bfd4d libtermcap-compat-2.0.8-r1.ebuild 1570
+MD5 96d21ddd5f180229bfc30eb538c76e5d ChangeLog 3861
 MD5 88a1c08b3377362fbf228dd424880fe9 files/digest-libtermcap-compat-2.0.8-r1 211
-MD5 f44d7442f29d0a63d10f7633925ccd6e files/libtermcap-compat-2.0.8-fPIC.patch 740
+MD5 88a1c08b3377362fbf228dd424880fe9 files/digest-libtermcap-compat-2.0.8-r2 211
 MD5 c5389fda988845f0c56af4ec72c8d524 files/libtermcap-compat_bcopy_fix.patch 314
+MD5 f44d7442f29d0a63d10f7633925ccd6e files/libtermcap-compat-2.0.8-fPIC.patch 740
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBrA0gIKl8Uu19MoRAq8ZAJsEjR9Oh2Ypx55A8a5DhIWrvoeQ4gCcCXYa
+4P349VJbBQJf4j3AkxsVJxg=
+=B6B2
+-----END PGP SIGNATURE-----
