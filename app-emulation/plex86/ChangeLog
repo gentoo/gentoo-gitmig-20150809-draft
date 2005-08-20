@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/plex86
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/ChangeLog,v 1.6 2005/03/22 23:57:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/ChangeLog,v 1.7 2005/08/20 17:38:44 vanquirius Exp $
+
+*plex86-20021117-r1 (20 Aug 2005)
+
+  20 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/plex86-20021117-hacks.patch, plex86-20021117.ebuild,
+  +plex86-20021117-r1.ebuild:
+  Attempting to fix bug 54526. Fixed malign warnings in -r0, added a DANGEROUS
+  patch in -r1 to allow this thing to compile.
 
   22 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> plex86-20021117.ebuild:
   Fix einfo, bug #70868

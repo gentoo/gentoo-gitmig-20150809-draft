@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.12 2005/08/20 17:38:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117-r1.ebuild,v 1.1 2005/08/20 17:38:44 vanquirius Exp $
+
+inherit eutils
 
 DESCRIPTION="Plex86 is THE opensource free-software alternative for VMWare, VirtualPC, and other IA-32 on IA-32 \"Virtual PC products.\""
 HOMEPAGE="http://savannah.gnu.org/projects/plex86/ http://sourceforge.net/projects/plex86/"
@@ -8,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/plex86/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="X sdl"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r7
@@ -28,6 +30,9 @@ src_unpack() {
 	sed -i \
 		-e s/'inclide'/'include'/ user/plugins/bochs/iodev/eth_fbsd.cc \
 			|| die "sed eth_fbsd.cc failed"
+
+	# DANGEROUS patch to allow compilation
+	epatch ${FILESDIR}/${P}-hacks.patch
 }
 
 src_compile() {
