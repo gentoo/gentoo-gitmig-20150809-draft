@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2005.06.13.ebuild,v 1.1 2005/08/20 19:03:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2005.06.13.ebuild,v 1.2 2005/08/20 19:05:36 ribosome Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 SLOT="0"
 IUSE="ginac qhull"
 
-DEPEND="=sci-mathematics/octave-2.1.69
+DEPEND="=sci-mathematics/octave-2.1.69*
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
 		!amd64? ( ginac? ( sci-mathematics/ginac ) )
