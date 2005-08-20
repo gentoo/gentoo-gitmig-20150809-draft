@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb29d511556e9ade99d77ca3362f7e52 libSM-0.99.0.ebuild 559
-MD5 7cb7d2b06f946c4973f29f8bbce4e640 ChangeLog 542
+MD5 635aea6bcbf4d37bbe112526c25dff9b ChangeLog 629
+MD5 a5e5e0e9ae3a7c36ad49dd91b0a20381 libSM-0.99.0.ebuild 566
 MD5 2cd01337002ecac41a09f25e3470a5f5 files/digest-libSM-0.99.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDALdz2G5bA0cA/ScRAmF9AKDpw5KRiI8nl2Pm16sy1CUIQ+n9ggCg64OA
-HjBS8XLxv2YQwoKuRqMX2i0=
-=8vTu
------END PGP SIGNATURE-----
