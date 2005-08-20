@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.19 2005/08/11 20:22:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/ChangeLog,v 1.20 2005/08/20 16:41:35 anarchy Exp $
+
+*mozilla-bin-1.7.11 (20 Aug 2005)
+
+  20 Aug 2005; Jory A. Pratt <anarchy@gentoo.org>
+  +mozilla-bin-1.7.11.ebuild:
+  fixes for regressions in 1.7.10
 
   11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   mozilla-bin-1.7.10-r1.ebuild:
