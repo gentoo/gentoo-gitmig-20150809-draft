@@ -1,0 +1,19 @@
+diff -urN libXScrnSaver-0.99.0.orig/src/Makefile.am libXScrnSaver-0.99.0/src/Makefile.am
+--- libXScrnSaver-0.99.0.orig/src/Makefile.am	2005-08-01 13:15:26.000000000 -0700
++++ libXScrnSaver-0.99.0/src/Makefile.am	2005-08-19 22:38:03.000000000 -0700
+@@ -1,11 +1,11 @@
+ AM_CFLAGS = $(DEP_CFLAGS)
+-lib_LTLIBRARIES = libXScrnSaver.la
++lib_LTLIBRARIES = libXss.la
+ 
+-libXScrnSaver_la_SOURCES = \
++libXss_la_SOURCES = \
+          XScrnSaver.c
+ 
+-libXScrnSaver_la_LIBADD = $(DEP_LIBS)
++libXss_la_LIBADD = $(DEP_LIBS)
+ 
+-libXScrnSaver_la_LDFLAGS = -version-info 7:0:0 -no-undefined
++libXss_la_LDFLAGS = -version-info 7:0:0 -no-undefined
+ 
+ 
