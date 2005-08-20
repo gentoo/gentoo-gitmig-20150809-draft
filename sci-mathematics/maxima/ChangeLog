@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.7 2005/08/20 18:16:23 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.8 2005/08/20 20:55:56 ribosome Exp $
+
+*maxima-5.9.1-r3 (20 Aug 2005)
+
+  20 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/maxima-5.9.1-unicode-fix.patch, +maxima-5.9.1-r3.ebuild:
+  New revision incorporating a Unicode patch, thanks to Thomas Weidner
+  <3.14159@gmx.net> (fixes bug #92644).
 
   20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> maxima-5.9.1-r2.ebuild:
   Depend on >=gcl-2.6.7 (fixes bug #81869). Removed ~amd64 previously added by

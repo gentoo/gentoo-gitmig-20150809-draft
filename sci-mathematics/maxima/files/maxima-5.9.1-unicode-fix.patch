@@ -1,0 +1,190 @@
+diff -ru maxima-5.9.1/src/cl-info.lisp maxima-5.9.1.new/src/cl-info.lisp
+--- maxima-5.9.1/src/cl-info.lisp	2004-07-27 03:16:12.000000000 +0200
++++ maxima-5.9.1.new/src/cl-info.lisp	2005-05-14 23:51:29.607052432 +0200
+@@ -118,7 +118,7 @@
+ (eval-when (compile eval load)
+ (defun sharp-u-reader (stream subchar arg)
+   (declare (ignore subchar arg))
+-  (let ((tem (make-array 10 :element-type 'base-char
++  (let ((tem (make-array 10 :element-type 'character
+ 			 :fill-pointer 0 :adjustable t)))
+     (unless (eql (read-char stream) #\")
+       (error "sharp-u-reader reader needs a \"right after it"))
+@@ -132,7 +132,7 @@
+ 					    (#\r . #\return))))
+ 			   ch))))
+        (vector-push-extend ch tem)))
+-    (coerce tem '(simple-array base-char (*)))))
++    (coerce tem '(simple-array character (*)))))
+ 
+ (set-dispatch-macro-character #\# #\u 'sharp-u-reader)
+ )
+@@ -153,7 +153,7 @@
+ 	(error "illegal file start ~a" start))
+       #-gcl
+       (let ((tem (make-array (- len start)
+-			     :element-type 'base-char)))
++			     :element-type 'character)))
+ 	(when (> start 0)
+ 	  (file-position st start))
+ 	(read-sequence tem st :start 0 :end (length tem))
+@@ -249,7 +249,7 @@
+ 	       ((> extra 0)
+ 		(setq tem 
+ 		      (make-array (+ (length x) extra)
+-				  :element-type 'base-char :fill-pointer 0))
++				  :element-type 'character :fill-pointer 0))
+ 		(setq i 0)
+ 		(go AGAIN))
+ 	       (t (setq tem x)))
+diff -ru maxima-5.9.1/src/numerical/f2cl-lib.lisp maxima-5.9.1.new/src/numerical/f2cl-lib.lisp
+--- maxima-5.9.1/src/numerical/f2cl-lib.lisp	2004-06-19 22:32:49.000000000 +0200
++++ maxima-5.9.1.new/src/numerical/f2cl-lib.lisp	2005-05-14 23:51:29.593054560 +0200
+@@ -1125,7 +1125,7 @@
+ 		      `',dims
+ 		      `(list ,@dims))))
+     `(let ((,init (make-array ,new-dims
+-			      :element-type `(simple-array base-char (,',@len))
++			      :element-type `(simple-array character (,',@len))
+ 			      :initial-element (make-string ,@len))))
+        (dotimes (k (array-total-size ,init))
+ 	 (setf (aref ,init k)
+diff -ru maxima-5.9.1/src/numerical/slatec/xercnt.lisp maxima-5.9.1.new/src/numerical/slatec/xercnt.lisp
+--- maxima-5.9.1/src/numerical/slatec/xercnt.lisp	2004-06-19 22:32:50.000000000 +0200
++++ maxima-5.9.1.new/src/numerical/slatec/xercnt.lisp	2005-05-14 23:51:29.562059272 +0200
+@@ -10,7 +10,7 @@
+ 
+ (defun xercnt (librar subrou messg nerr level kontrl)
+   (declare (type f2cl-lib:integer4 kontrl level nerr)
+-           (type (simple-array base-char (*)) messg subrou librar))
++           (type (simple-array character (*)) messg subrou librar))
+   (prog ()
+     (declare)
+     (go end_label)
+diff -ru maxima-5.9.1/src/numerical/slatec/xermsg.lisp maxima-5.9.1.new/src/numerical/slatec/xermsg.lisp
+--- maxima-5.9.1/src/numerical/slatec/xermsg.lisp	2004-06-19 22:32:50.000000000 +0200
++++ maxima-5.9.1.new/src/numerical/slatec/xermsg.lisp	2005-05-14 23:51:29.563059120 +0200
+@@ -10,23 +10,23 @@
+ 
+ (defun xermsg (librar subrou messg nerr level)
+   (declare (type f2cl-lib:integer4 level nerr)
+-           (type (simple-array base-char (*)) messg subrou librar))
++           (type (simple-array character (*)) messg subrou librar))
+   (prog ((lfirst
+-          (make-array '(20) :element-type 'base-char :initial-element #\Space))
++          (make-array '(20) :element-type 'character :initial-element #\Space))
+          (temp
+-          (make-array '(72) :element-type 'base-char :initial-element #\Space))
++          (make-array '(72) :element-type 'character :initial-element #\Space))
+          (xlibr
+-          (make-array '(8) :element-type 'base-char :initial-element #\Space))
++          (make-array '(8) :element-type 'character :initial-element #\Space))
+          (xsubr
+-          (make-array '(8) :element-type 'base-char :initial-element #\Space))
++          (make-array '(8) :element-type 'character :initial-element #\Space))
+          (ltemp 0) (mkntrl 0) (llevel 0) (lerr 0) (kount 0) (i 0) (kdummy 0)
+          (f2cl-lib:f2cl-// 0.0f0) (maxmes 0) (lkntrl 0))
+     (declare (type single-float f2cl-lib:f2cl-//)
+              (type f2cl-lib:integer4 lkntrl maxmes kdummy i kount lerr llevel
+               mkntrl ltemp)
+-             (type (simple-array base-char (8)) xsubr xlibr)
+-             (type (simple-array base-char (72)) temp)
+-             (type (simple-array base-char (20)) lfirst))
++             (type (simple-array character (8)) xsubr xlibr)
++             (type (simple-array character (72)) temp)
++             (type (simple-array character (20)) lfirst))
+     (setf lkntrl (j4save 2 0 f2cl-lib:%false%))
+     (setf maxmes (j4save 4 0 f2cl-lib:%false%))
+     (cond
+diff -ru maxima-5.9.1/src/numerical/slatec/xerprn.lisp maxima-5.9.1.new/src/numerical/slatec/xerprn.lisp
+--- maxima-5.9.1/src/numerical/slatec/xerprn.lisp	2004-06-19 22:32:50.000000000 +0200
++++ maxima-5.9.1.new/src/numerical/slatec/xerprn.lisp	2005-05-14 23:51:29.564058968 +0200
+@@ -9,15 +9,15 @@
+ 
+ 
+ (let* ((newlin "$$"))
+-  (declare (type (simple-array base-char (2)) newlin))
++  (declare (type (simple-array character (2)) newlin))
+   (defun xerprn (prefix npref messg nwrap)
+     (declare (type f2cl-lib:integer4 nwrap npref)
+-             (type (simple-array base-char (*)) messg prefix))
++             (type (simple-array character (*)) messg prefix))
+     (prog ((iu (make-array 5 :element-type 'f2cl-lib:integer4)) (nunit 0)
+            (cbuff
+             (make-array '(148)
+                         :element-type
+-                        'base-char
++                        'character
+                         :initial-element
+                         #\Space))
+            (idelta 0) (lpiece 0) (nextc 0) (lenmsg 0) (lwrap 0) (lpref 0) (i 0)
+@@ -25,7 +25,7 @@
+       (declare (type (simple-array f2cl-lib:integer4 (5)) iu)
+                (type f2cl-lib:integer4 n i lpref lwrap lenmsg nextc lpiece
+                 idelta nunit)
+-               (type (simple-array base-char (148)) cbuff))
++               (type (simple-array character (148)) cbuff))
+       (multiple-value-bind
+           (var-0 var-1)
+           (xgetua iu nunit)
+diff -ru maxima-5.9.1/src/numerical/slatec/xersve.lisp maxima-5.9.1.new/src/numerical/slatec/xersve.lisp
+--- maxima-5.9.1/src/numerical/slatec/xersve.lisp	2004-06-19 22:32:50.000000000 +0200
++++ maxima-5.9.1.new/src/numerical/slatec/xersve.lisp	2005-05-14 23:51:29.564058968 +0200
+@@ -20,37 +20,37 @@
+         (nmsg 0))
+     (declare (type f2cl-lib:integer4 nmsg kountx)
+              (type (simple-array f2cl-lib:integer4 (*)) kount levtab nertab)
+-             (type (simple-array (simple-array base-char (20)) (*)) mestab)
+-             (type (simple-array (simple-array base-char (8)) (*)) subtab
++             (type (simple-array (simple-array character (20)) (*)) mestab)
++             (type (simple-array (simple-array character (8)) (*)) subtab
+               libtab))
+     (setq kountx 0)
+     (setq nmsg 0)
+     (defun xersve (librar subrou messg kflag nerr level icount)
+       (declare (type f2cl-lib:integer4 icount level nerr kflag)
+-               (type (simple-array base-char (*)) messg subrou librar))
++               (type (simple-array character (*)) messg subrou librar))
+       (prog ((mes
+               (make-array '(20)
+                           :element-type
+-                          'base-char
++                          'character
+                           :initial-element
+                           #\Space))
+              (lib
+               (make-array '(8)
+                           :element-type
+-                          'base-char
++                          'character
+                           :initial-element
+                           #\Space))
+              (sub
+               (make-array '(8)
+                           :element-type
+-                          'base-char
++                          'character
+                           :initial-element
+                           #\Space))
+              (lun (make-array 5 :element-type 'f2cl-lib:integer4)) (i 0)
+              (iunit 0) (kunit 0) (nunit 0))
+         (declare (type f2cl-lib:integer4 nunit kunit iunit i)
+-                 (type (simple-array base-char (20)) mes)
+-                 (type (simple-array base-char (8)) lib sub)
++                 (type (simple-array character (20)) mes)
++                 (type (simple-array character (8)) lib sub)
+                  (type (simple-array f2cl-lib:integer4 (5)) lun))
+         (cond
+          ((<= kflag 0) (if (= nmsg 0) (go end_label))
+diff -ru maxima-5.9.1/src/server.lisp maxima-5.9.1.new/src/server.lisp
+--- maxima-5.9.1/src/server.lisp	2004-06-19 22:32:51.000000000 +0200
++++ maxima-5.9.1.new/src/server.lisp	2005-05-14 23:51:29.820020056 +0200
+@@ -48,7 +48,7 @@
+ 	      :element-type (if bin '(unsigned-byte 8) 'character)))
+     #+gcl (si::socket port :host host)
+     #+lispworks (comm:open-tcp-stream host port :direction :io :element-type
+-                                      (if bin 'unsigned-byte 'base-char))
++                                      (if bin 'unsigned-byte 'character))
+     #-(or allegro clisp cmu sbcl gcl lispworks)
+     (error 'not-implemented :proc (list 'open-socket host port bin))))
+ 
