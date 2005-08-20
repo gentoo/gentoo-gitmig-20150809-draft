@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.3 2005/08/16 18:46:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.4 2005/08/20 22:55:31 lu_zero Exp $
+
+  20 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  xf86-video-ati-6.5.6.ebuild, xf86-video-ati-6.5.6-r1.ebuild:
+  Marked ~ppc
 
 *xf86-video-ati-6.5.6-r1 (16 Aug 2005)
 
