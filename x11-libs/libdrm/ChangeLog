@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.3 2005/08/15 15:40:10 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.4 2005/08/20 06:12:08 spyderous Exp $
+
+*libdrm-1.0.3 (20 Aug 2005)
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +libdrm-1.0.3.ebuild:
+  Bump.
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> libdrm-1.0.1.ebuild:
   Marked ~amd64
