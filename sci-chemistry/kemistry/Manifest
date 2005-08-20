@@ -1,5 +1,5 @@
-MD5 3771e66e30a01fab4588bc647952d2c4 kemistry-0.7.ebuild 667
-MD5 1e59746738ba79c45f8ea1d90a9d4171 ChangeLog 2622
+MD5 d2c578246da745485aa2be3c963d43ae kemistry-0.7.ebuild 709
+MD5 268ab242119f449aea8acf36243e6ac0 ChangeLog 2812
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 c3996b6e2fbc3c51e3cb7420a61cfed3 files/kemistry-0.7-gcc3.4.patch 2128
 MD5 228927d1d7c84e2f350740b3ed134944 files/kemistry-0.7-fPIC.patch 1966

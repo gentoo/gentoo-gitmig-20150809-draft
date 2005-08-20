@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/kemistry
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.5 2005/06/25 21:50:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.6 2005/08/20 16:44:44 ribosome Exp $
+
+  20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> kemistry-0.7.ebuild:
+  Changed dependency from kdebase to kdelibs and kdesdk-misc (and
+  corresponding meta-packages) (see bug #83058).
 
   25 Jun 2005; Olivier Fisette <ribosome@gentoo.org>
   -files/kemistry-0.6-gcc3.2.patch, -kemistry-0.6.ebuild:
