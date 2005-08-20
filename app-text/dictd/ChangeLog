@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.26 2005/04/24 13:52:51 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.27 2005/08/20 19:15:55 grobian Exp $
+
+  20 Aug 2005; Fabian Groffen <grobian@gentoo.org> dictd-1.10.0.ebuild:
+  Marking ~ppc-macos (bug #103171)
 
 *dictd-1.10.0 (24 Apr 2005)
 
