@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.17 2005/08/05 20:27:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.18 2005/08/20 11:45:19 dragonheart Exp $
+
+*cmake-2.2.0 (20 Aug 2005)
+
+  20 Aug 2005; Daniel Black <dragonheart@gentoo.org> -cmake-2.0.3.ebuild,
+  cmake-2.0.6.ebuild, +cmake-2.2.0.ebuild:
+  version bump (bug #99045). thanks david somers. x86 stable on 2.0.6. old
+  version removal
 
   05 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> cmake-2.0.6.ebuild:
   Added ~mips.

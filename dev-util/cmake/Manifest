@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96b27fbe0525c9b9458aa3658f7ea732 ChangeLog 2500
-MD5 c6b03a1ec05a8e37974b80f538336726 cmake-2.0.3.ebuild 792
+MD5 17579664339b7282782210a7745a80d2 ChangeLog 2743
 MD5 9284e2f2c1af67f999a793be06af8ef9 cmake-2.0.5.ebuild 791
-MD5 cce3017e0b3414c9d844622bf539e698 cmake-2.0.6.ebuild 911
 MD5 c7008534123f6886fbc11f82417c0b39 metadata.xml 347
-MD5 42e278a7308d53c16401c551e185ce9b files/digest-cmake-2.0.3 64
-MD5 583f594b8088c13f635368d141de40cb files/digest-cmake-2.0.5 64
+MD5 afc5613cb230c0ec86fc796df63cde40 cmake-2.0.6.ebuild 914
+MD5 9c913b69851732891574702f6dcb9e73 cmake-2.2.0.ebuild 976
 MD5 beb07080ff2955d2e023b17bc15e6b67 files/digest-cmake-2.0.6 64
+MD5 6b3e76d4d01f10ed7f93bb39cc603f8c files/digest-cmake-2.2.0 64
+MD5 583f594b8088c13f635368d141de40cb files/digest-cmake-2.0.5 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8/q0EZCkKN40op4RAplUAKC1UILQ5Dfoh7FMZlE1RsdIRG9GkACfdzoY
-xTgszT4IWqdT84l6X0JgkPg=
-=4b+G
+iD8DBQFDBxfnmdTrptrqvGERAhlVAJ9XwtXEc083hUk/5HZTVjmIRWIUcgCfUbcH
+mzSfUaH+BY3OeY9mYc9/1aE=
+=Rfyj
 -----END PGP SIGNATURE-----
