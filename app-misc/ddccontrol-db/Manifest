@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 316d86f6211590390d675f0d958e02df ChangeLog 475
 MD5 146678a09830a8e22f58ffbc7da5465f ddccontrol-db-20050715.ebuild 779
-MD5 45c584f76a967199b1434ebb1e779ca8 files/digest-ddccontrol-db-20050715 74
+MD5 146678a09830a8e22f58ffbc7da5465f ddccontrol-db-20050813.ebuild 779
+MD5 316d86f6211590390d675f0d958e02df ChangeLog 475
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8SRzI1lqEGTUzyQRAn9nAJ4l9OvQ+gIJDqpIhZ0YlUZF1F9+pwCfT4ks
-07Jq+qhP+YlYO8zuN6A89AU=
-=X3J1
------END PGP SIGNATURE-----
+MD5 45c584f76a967199b1434ebb1e779ca8 files/digest-ddccontrol-db-20050715 74
+MD5 f59a3b0b36a9eb6f18773ba2a6d6beb3 files/digest-ddccontrol-db-20050813 74
