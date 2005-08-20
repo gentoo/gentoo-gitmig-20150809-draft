@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>web-apps</herd>
-<longdescription>Zuul is yet another PHP front-end for mldonkey. It allows full access to many of the features of mldonkey including starting/viewing downloads, viewing uploads, viewing servers, and setting all the options.</longdescription>
-</pkgmetadata>
