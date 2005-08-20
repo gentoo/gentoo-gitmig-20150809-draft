@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.13-r3.ebuild,v 1.7 2005/08/18 16:54:24 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.13-r3.ebuild,v 1.8 2005/08/20 14:12:43 ka0ttic Exp $
 
 inherit eutils
 
@@ -50,8 +50,12 @@ src_unpack() {
 src_compile() {
 	local my_conf="--libdir=/usr/$(get_libdir)/${PN}"
 
+	# somehow during the process the BSD COPYING gets
+	# overwritten with a GPL one
+	mv COPYING{,.orig}
 	einfo "Regenerating automake/autoconf files"
-	autoreconf -f || die "autoreconf failed"
+	autoreconf -f -i || die "autoreconf failed"
+	mv COPYING{.orig,}
 
 	econf ${my_conf} \
 		$(use_with mysql) \

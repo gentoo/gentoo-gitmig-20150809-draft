@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.ebuild,v 1.1 2005/08/19 15:53:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.0.ebuild,v 1.2 2005/08/20 14:12:44 ka0ttic Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.diff
 	use php && epatch ${FILESDIR}/${PN}-1.3.13-php.diff
+	epatch ${FILESDIR}/${P}-stat-cache.diff
 }
 
 src_compile() {

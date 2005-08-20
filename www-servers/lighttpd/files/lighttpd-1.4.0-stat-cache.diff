@@ -1,0 +1,11 @@
+--- lighttpd-1.4.0/src/stat_cache.c	2005-08-11 01:26:16.000000000 +0300
++++ lighttpd-1.4.0/src/stat_cache.c	2005-08-19 21:22:20.000000000 +0300
+@@ -181,7 +181,7 @@
+ }
+ 
+ #ifdef HAVE_XATTR
+-static int stat_cache_entry_attr_get(buffer *buf, char *name) {
++static int stat_cache_attr_get(buffer *buf, char *name) {
+ 	int attrlen;
+ 	int ret;
+ 	
