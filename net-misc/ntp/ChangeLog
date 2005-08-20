@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.66 2005/08/16 03:24:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.67 2005/08/20 04:10:15 vapier Exp $
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org> files/ntpd.rc:
+  Pass --exec to ssd when stopping so we kill the right process #82859 by
+  Peter Wendrich.
 
   16 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/ntp-4.2.0.20050303-rlimit-memlock.patch, ntp-4.2.0.20050303.ebuild:
