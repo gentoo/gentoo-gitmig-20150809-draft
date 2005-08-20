@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rgb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.5 2005/08/20 22:36:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.6 2005/08/20 23:58:12 spyderous Exp $
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -rgb-0.99.0.ebuild:
+  Remove old versions.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> rgb-0.99.0.ebuild,
   rgb-0.99.0-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.4 2005/08/16 20:13:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.5 2005/08/20 23:57:00 spyderous Exp $
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -xfs-0.99.0.ebuild:
+  Remove old versions.
 
   16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; files/xfs.start:
   Get rid of references to /usr/X11R6.
