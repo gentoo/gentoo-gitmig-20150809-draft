@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.2.ebuild,v 1.6 2005/08/20 18:32:29 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.2.ebuild,v 1.7 2005/08/20 18:40:54 battousai Exp $
 
 inherit toolchain-funcs eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 	sed -i -e "s:BINDIR = \\\$(DESTDIR)/usr/local/bin:BINDIR = ${D}/usr/bin:g" ${S}/Makefile
 	sed -i -e "s:CC = gcc:CC = $(tc-getCC):g" ${S}/Makefile
 	sed -i -e "s:CDEBUGFLAGS = -O2:CDEBUGFLAGS = ${CFLAGS}:g" ${S}/Makefile
-	sed -i -e "s:MANDIR = .*:MANDIR = \\\$(DESTDIR)/usr/share/man:" ${S}/Makefile
+	sed -i -e "s:MANDIR = .*:MANDIR = \\\$(DESTDIR)/usr/share/man/man1:" ${S}/Makefile
 	sed -i -e "s:INSTALLED_X = .*:INSTALLED_X = \\\$(DESTDIR)/usr:" ${S}/Makefile
 }
 
