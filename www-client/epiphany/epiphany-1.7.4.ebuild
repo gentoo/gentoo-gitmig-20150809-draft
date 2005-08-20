@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.7.4.ebuild,v 1.2 2005/08/19 20:12:34 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.7.4.ebuild,v 1.3 2005/08/20 22:48:21 joem Exp $
 
 inherit eutils gnome2
 
@@ -26,6 +26,7 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=gnome-base/orbit-2
 	>=gnome-base/gconf-2
 	>=app-text/gnome-doc-utils-0.3.2
+	>=app-text/iso-codes-0.47
 	!firefox? ( >=www-client/mozilla-1.7.3 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	dbus? ( >=sys-apps/dbus-0.22 )

@@ -3,9 +3,11 @@ MD5 82452a5693e265225e96d4222547dafa epiphany-extensions-1.6.0.ebuild 1210
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e2281d1a43dee1f005d07cb43110aeb1 epiphany-extensions-1.6.4.ebuild 1971
 MD5 d1883b0297778d7f0cdcbbc01a6f198f epiphany-extensions-1.7.4.ebuild 1989
+MD5 dd6a344b8baf9337432adbd7be531860 epiphany-extensions-1.6.4-r1.ebuild 1974
 MD5 707f7a46f60ea0b7cf60bda490cdbf9e files/digest-epiphany-extensions-1.6.0 78
 MD5 372d4cda16db1e3215081c3a6d513141 files/digest-epiphany-extensions-1.6.4 78
 MD5 cc94941ad96bbbd969542ee260c77e4c files/epiphany-extensions-1.6.0-disable_bookmarks-tray_label.patch 1034
 MD5 6b4caa4057fe795d71689814affe5100 files/epiphany-extensions-1.6.0-fix_includes.patch 1412
 MD5 62eba0080b13e7b9650d12374138a2de files/digest-epiphany-extensions-1.7.4 78
 MD5 facd371dca75721b247923b903369a05 files/epiphany-extensions-1.7.4-fix_includes.patch 2504
+MD5 372d4cda16db1e3215081c3a6d513141 files/digest-epiphany-extensions-1.6.4-r1 78
