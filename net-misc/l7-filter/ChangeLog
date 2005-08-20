@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.15 2005/07/11 13:59:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.16 2005/08/20 04:37:19 dragonheart Exp $
+
+  20 Aug 2005; Daniel Black <dragonheart@gentoo.org> l7-filter-1.4.ebuild:
+  added patch to work with 2.6.12/13 headers (bug #102813). Added check for
+  existing installation (bug #102802). x86 and ppc keyworded 1.4
 
   11 Jul 2005; Simon Stelling <blubb@gentoo.org> l7-filter-1.4.ebuild:
   added ~amd64 keyword

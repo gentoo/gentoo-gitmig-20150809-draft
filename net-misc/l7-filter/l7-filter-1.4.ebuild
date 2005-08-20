@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.4 2005/07/11 13:59:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.5 2005/08/20 04:37:19 dragonheart Exp $
 
 inherit linux-info eutils
 
 MY_P=netfilter-layer7-v${PV}
 DESCRIPTION="Kernel modules for layer 7 iptables filtering"
 HOMEPAGE="http://l7-filter.sourceforge.net"
-SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
+	mirror://sourceforge/l7-filter/additional_patch_for_2.6.13.diff"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 SLOT="${KV}"
 S=${WORKDIR}/${MY_P}
@@ -20,7 +21,13 @@ src_unpack() {
 
 	pkg_postinst
 
-	unpack ${A}
+	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ]
+	then
+		ewarn "already installed ${PF} for kernel ${KV_FULL}"
+		return 0;
+	fi
+
+	unpack ${MY_P}.tar.gz
 
 	cd ${S}
 
@@ -72,6 +79,12 @@ src_unpack() {
 	#patch the copied kernel source
 	cd ${S}/kernel
 	epatch ${S}/${PATCH}
+
+	# bug #102813
+	if kernel_is ge 2 6 11
+	then
+		epatch ${DISTDIR}/additional_patch_for_2.6.13.diff
+	fi
 }
 
 src_compile() {
