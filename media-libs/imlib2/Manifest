@@ -1,26 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 81998f3d34c245e1c659d83daf551630 imlib2-1.2.0.007.ebuild 1161
 MD5 4795c0cb40349fb84538fe52668f893c imlib2-1.2.0-r2.ebuild 1149
-MD5 806ab39476cce5d3e0206efc7e94c1db imlib2-9999.ebuild 935
+MD5 e7efc920fcf4000664c957fd59cdb403 imlib2-9999.ebuild 931
 MD5 0c36280f1141c2ab86d0bd09ceec038a metadata.xml 2284
-MD5 51354283edbb82dd3521decc05b03d3b imlib2-1.1.2.ebuild 1007
+MD5 f1bc1213d78582917418f710244ee654 imlib2-1.2.1.004.ebuild 1030
 MD5 79da67e250cc153a8a523e4bc2209843 imlib2-1.2.0.007-r2.ebuild 1203
 MD5 48f5b3c292c95823c018c027606d2fd9 ChangeLog 4969
-MD5 1d4f605193247283ce4fac45d2a10c58 files/digest-imlib2-1.2.0.007 68
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-imlib2-9999 0
 MD5 00966d224a91444676648c49ecc1eaf4 files/digest-imlib2-1.2.0-r2 64
 MD5 3a2a6d558d381a6e8355a223b8b0f842 files/imlib2-1.2.0.007-x-typo.patch 298
 MD5 9495afd4021ac839ef2aff52b3520cf5 files/imlib2-PIC.patch 15063
+MD5 a865da182f052747ee963334d77f8142 files/digest-imlib2-1.2.1.004 68
 MD5 e493696ea98688132769496642a1044c files/imlib2-1.2.0-loaders.patch 2613
 MD5 540efed058c6dccad80586ddd3af9604 files/imlib-1.2.0-bounds-check.patch 1076
-MD5 78f8f17705b3e58fd3f15a898dfa2e25 files/digest-imlib2-1.1.2 64
 MD5 1d4f605193247283ce4fac45d2a10c58 files/digest-imlib2-1.2.0.007-r2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDA9DrgIKl8Uu19MoRAs/FAJ0RYufccOVHBLqnKz3F93S7b58FOQCdH9hB
-08TzVySmcLXIWrY0CyhT8To=
-=nVzH
------END PGP SIGNATURE-----
