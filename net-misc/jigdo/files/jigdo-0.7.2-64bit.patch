@@ -1,0 +1,36 @@
+diff -Nrua jigdo-0.7.2.orig/src/cachefile.cc jigdo-0.7.2/src/cachefile.cc
+--- jigdo-0.7.2.orig/src/cachefile.cc	2005-08-20 12:43:57.000000000 -0600
++++ jigdo-0.7.2/src/cachefile.cc	2005-08-20 12:45:54.000000000 -0600
+@@ -1,4 +1,4 @@
+-/* $Id: jigdo-0.7.2-64bit.patch,v 1.1 2005/08/20 19:22:38 weeve Exp $ -*- C++ -*-
++/* $Id: jigdo-0.7.2-64bit.patch,v 1.1 2005/08/20 19:22:38 weeve Exp $ -*- C++ -*-
+   __   _
+   |_) /|  Copyright (C) 2001-2003  |  richard@
+   | \/¯|  Richard Atterer          |  atterer.net
+@@ -131,7 +131,7 @@
+ //________________________________________
+ 
+ Status CacheFile::findName(const byte*& resultData, size_t& resultSize,
+-    const string& fileName, long long int& resultFileSize,
++    const string& fileName, off_t& resultFileSize,
+     time_t& resultMtime) {
+   DBT key; memset(&key, 0, sizeof(DBT));
+   key.data = const_cast<char*>(fileName.c_str());
+diff -Nrua jigdo-0.7.2.orig/src/cachefile.hh jigdo-0.7.2/src/cachefile.hh
+--- jigdo-0.7.2.orig/src/cachefile.hh	2005-08-20 12:43:57.000000000 -0600
++++ jigdo-0.7.2/src/cachefile.hh	2005-08-20 12:45:54.000000000 -0600
+@@ -1,4 +1,4 @@
+-/* $Id: jigdo-0.7.2-64bit.patch,v 1.1 2005/08/20 19:22:38 weeve Exp $ -*- C++ -*-
++/* $Id: jigdo-0.7.2-64bit.patch,v 1.1 2005/08/20 19:22:38 weeve Exp $ -*- C++ -*-
+   __   _
+   |_) /|  Copyright (C) 2001-2002  |  richard@
+   | \/¯|  Richard Atterer          |  atterer.net
+@@ -94,7 +94,7 @@
+       only valid until the next database operation. */
+   Status findName(const byte*& resultData, size_t& resultSize,
+                   const string& fileName,
+-                  long long int& resultFileSize, time_t& resultMtime);
++                  off_t& resultFileSize, time_t& resultMtime);
+ 
+   /** Insert/overwrite entry for the given file (name must be
+       absolute, file must have the supplied mtime and size). The data
