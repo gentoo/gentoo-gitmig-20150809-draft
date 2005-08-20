@@ -1,40 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1df4e1be57111fb6bb58e32a4417ca82 xbox-sources-2.6.10-r2.ebuild 1034
-MD5 d2b9540dd03dbf408ca07c92041160c6 xbox-sources-2.6.11.7.ebuild 743
-MD5 c7a57661a75ca4d5137b4ecb4b05c147 ChangeLog 9902
+MD5 1498f4d0c66e44b514fb30c2a5faa91b ChangeLog 10039
 MD5 c2a56d354398d9255422286f7af425ee metadata.xml 351
 MD5 5c0ac5c83aae891582a0fcd38980040f xbox-sources-2.4.29.ebuild 760
+MD5 d2b9540dd03dbf408ca07c92041160c6 xbox-sources-2.6.11.7.ebuild 743
+MD5 3191e85e95059a1dbd15d49aea68aecc xbox-sources-2.6.12.5.ebuild 621
 MD5 91fa67b5d40ec71b9100ca14a9966402 xbox-sources-2.4.28-r4.ebuild 1017
-MD5 08bc733159be011e83d11401f0a67a64 files/digest-xbox-sources-2.6.11.7 208
-MD5 1d78b90e495e432432e095ee47bbc2fc files/xbox-sources-2.4.28.77094.patch 452
-MD5 792fa9165e5ae65d46ee206c7f7a4fc9 files/xbox-sources-2.4.28.78363.patch 788
-MD5 8220c1bd949620000d8cb140587af9a2 files/digest-xbox-sources-2.6.10-r2 146
-MD5 cd0a7533c43364e377348613c6d76bb7 files/xbox-sources-2.6.10.brk-locked.patch 9736
-MD5 8c35751caf824a9dacb02e80d6189b2e files/xbox-sources-2.4.28.CAN-2004-1137.patch 1764
-MD5 8812f60b8d02b0b3b4c46a3311ddd851 files/xbox-sources-2.6.10.smbfs.patch 2662
-MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/xbox-sources-2.4.28.CAN-2004-1016.patch 2835
-MD5 7695b79187fcc27339ab62af1112ec11 files/xbox-sources-2.6.10.74070.patch 525
-MD5 b0a1f80aff51d6601e8924329023b241 files/xbox-sources.AF_UNIX.patch 515
-MD5 77a23c26c0468c64ee5bc13c9999d79b files/xbox-sources-2.6.10.82141.patch 7684
-MD5 655251f31f0bdc85bdd0cd0280af22b7 files/xbox-sources-2.6.10.75963.patch 979
-MD5 c942eca63f26d0e933a366491340e95b files/xbox-sources-2.6.8.1.CAN-2004-1056.patch 6187
-MD5 eb75782ba6714f1c78b956e1497816f3 files/xbox-sources-2.6.10.81106.patch 826
-MD5 c27699e9d62f7d46213bd51f87636163 files/xbox-sources-2.4.28.vma.patch 8143
-MD5 a3f4cfc55b03f9a6104da43da9c38928 files/xbox-sources-2.6.10.77923.patch 1094
-MD5 757ee1239c3f14645ccea3640d551e11 files/xbox-sources-2.4.28.CAN-2004-1056.patch 11249
-MD5 01cd908ed2515a0bd37c9b45fbe758a6 files/xbox-sources-2.6.10.77666.patch 5942
+MD5 1df4e1be57111fb6bb58e32a4417ca82 xbox-sources-2.6.10-r2.ebuild 1034
+MD5 703b136a244ccde7a8f419b7753cd55e files/digest-xbox-sources-2.4.29 226
 MD5 e0d5b095eef177dd9cb377c1ba881066 files/digest-xbox-sources-2.4.28-r4 226
+MD5 8220c1bd949620000d8cb140587af9a2 files/digest-xbox-sources-2.6.10-r2 146
+MD5 c27699e9d62f7d46213bd51f87636163 files/xbox-sources-2.4.28.vma.patch 8143
 MD5 b9a94233e1457787352e5f85e3e3582d files/xbox-sources-2.4.28.binfmt_a.out.patch 2009
 MD5 6cf860a301930c8cac126ab0c4d859d4 files/xbox-sources-2.4.28.brk-locked.patch 8202
-MD5 b6cd2468a246169a6e2f969c44e3f341 files/xbox-sources-2.4.28.78362.patch 10372
+MD5 1d78b90e495e432432e095ee47bbc2fc files/xbox-sources-2.4.28.77094.patch 452
 MD5 1efe4024e443e60db5fd9b21b22fabd2 files/xbox-sources-2.4.28.77666.patch 1724
-MD5 703b136a244ccde7a8f419b7753cd55e files/digest-xbox-sources-2.4.29 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYqRVI1lqEGTUzyQRAmeQAJ97Is8D85+2sCwg9d2575XviZATewCg2pkn
-ClsTStmrbTP4fUwc19mZ8tg=
-=PuLe
------END PGP SIGNATURE-----
+MD5 b6cd2468a246169a6e2f969c44e3f341 files/xbox-sources-2.4.28.78362.patch 10372
+MD5 792fa9165e5ae65d46ee206c7f7a4fc9 files/xbox-sources-2.4.28.78363.patch 788
+MD5 7695b79187fcc27339ab62af1112ec11 files/xbox-sources-2.6.10.74070.patch 525
+MD5 655251f31f0bdc85bdd0cd0280af22b7 files/xbox-sources-2.6.10.75963.patch 979
+MD5 01cd908ed2515a0bd37c9b45fbe758a6 files/xbox-sources-2.6.10.77666.patch 5942
+MD5 a3f4cfc55b03f9a6104da43da9c38928 files/xbox-sources-2.6.10.77923.patch 1094
+MD5 eb75782ba6714f1c78b956e1497816f3 files/xbox-sources-2.6.10.81106.patch 826
+MD5 77a23c26c0468c64ee5bc13c9999d79b files/xbox-sources-2.6.10.82141.patch 7684
+MD5 8812f60b8d02b0b3b4c46a3311ddd851 files/xbox-sources-2.6.10.smbfs.patch 2662
+MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/xbox-sources-2.4.28.CAN-2004-1016.patch 2835
+MD5 757ee1239c3f14645ccea3640d551e11 files/xbox-sources-2.4.28.CAN-2004-1056.patch 11249
+MD5 8c35751caf824a9dacb02e80d6189b2e files/xbox-sources-2.4.28.CAN-2004-1137.patch 1764
+MD5 c942eca63f26d0e933a366491340e95b files/xbox-sources-2.6.8.1.CAN-2004-1056.patch 6187
+MD5 cd0a7533c43364e377348613c6d76bb7 files/xbox-sources-2.6.10.brk-locked.patch 9736
+MD5 b0a1f80aff51d6601e8924329023b241 files/xbox-sources.AF_UNIX.patch 515
+MD5 825681c2f2e6bd9d2a12415bbdb211c2 files/digest-xbox-sources-2.6.12.5 211
+MD5 08bc733159be011e83d11401f0a67a64 files/digest-xbox-sources-2.6.11.7 208
