@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/redo-1.02.ebuild,v 1.8 2005/04/21 18:40:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/redo-1.02.ebuild,v 1.9 2005/08/20 19:27:30 grobian Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.wonderworks.com/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~alpha ~ppc-macos"
+KEYWORDS="~alpha amd64 ~ppc-macos x86"
 IUSE=""
 
 SITEFILE=50redo-gentoo.el
