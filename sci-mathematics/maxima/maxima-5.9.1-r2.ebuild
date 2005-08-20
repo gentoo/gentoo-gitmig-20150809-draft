@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r2.ebuild,v 1.2 2005/07/01 19:18:14 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r2.ebuild,v 1.3 2005/08/20 18:16:23 ribosome Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/maxima/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86"
 IUSE="cmucl clisp gcl sbcl tetex emacs auctex"
 
 DEPEND="tetex? ( virtual/tetex )
@@ -20,7 +20,7 @@ DEPEND="tetex? ( virtual/tetex )
 	x86? ( !clisp?	( !sbcl? ( !gcl? ( !cmucl? ( dev-lisp/cmucl ) ) ) ) )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	x86? ( cmucl? ( >=dev-lisp/cmucl-19a ) )
-	x86? ( gcl?	  ( >=dev-lisp/gcl-2.6.4 ) )
+	x86? ( gcl?	  ( >=dev-lisp/gcl-2.6.7 ) )
 	x86? ( sbcl?  ( >=dev-lisp/sbcl-0.8.14 ) )"
 RDEPEND=">=dev-lang/tk-8.3.3
 	 >=media-gfx/gnuplot-4.0-r1"
