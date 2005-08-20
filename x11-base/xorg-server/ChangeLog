@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.26 2005/08/17 18:48:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.27 2005/08/20 22:53:03 spyderous Exp $
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1.ebuild, xorg-server-0.99.1-r1.ebuild,
+  xorg-server-0.99.1-r2.ebuild, xorg-server-0.99.1-r3.ebuild:
+  panoramixproto moved to xineramaproto.
 
   17 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/xorg-server-fbmmx-local.patch, xorg-server-0.99.1-r3.ebuild:
