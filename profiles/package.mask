@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4309 2005/08/20 15:36:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4310 2005/08/20 22:19:54 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -65,10 +65,6 @@ media-video/toxine
 =dev-dotnet/gtk-sharp-2*
 =dev-dotnet/rsvg-sharp-2*
 =dev-dotnet/vte-sharp-2*
-
-# Renat Lumpau <rl03@gentoo.org> (15 Aug 2005)
-# To be removed. See bug #74985. Upstream dead, doesn't work.
-net-p2p/zuul
 
 # Jory A. Pratt <anarchy@gentoo.org> (15 Aug 2005)
 # Mozilla rpath inclusion. For testing purposes only.
