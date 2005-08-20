@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/kst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.7 2005/06/17 18:40:54 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.8 2005/08/20 17:49:49 ribosome Exp $
+
+  20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> -kst-0.94.ebuild,
+  kst-0.97.ebuild, -kst-0.99.ebuild, -kst-1.0.0.ebuild, kst-1.1.0.ebuild:
+  Changed dependency from kdebase to kdelibs (see bug #83059). Added 1.1.0 to
+  x86. Pruned old versions.
 
 *kst-1.1.0 (17 Jun 2005)
 
