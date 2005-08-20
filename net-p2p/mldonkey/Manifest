@@ -1,22 +1,35 @@
-MD5 29c93beb8a325548b6d81f1c5b311385 mldonkey-2.5.16-r10.ebuild 2691
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 025d675c80640fef94b37a459f1bb465 ChangeLog 14660
 MD5 74e4ceef69a9fc3a7a76299e5f4d2ed8 metadata.xml 307
-MD5 21af0ab6db3a70e8d04a2bd3506995a4 ChangeLog 14355
-MD5 e4d631474942d4a724d5be73a39df379 mldonkey-2.5.21-r2.ebuild 2692
-MD5 0eb263f37a1d27990436054b98ed0f99 mldonkey-2.6.0.ebuild 3563
-MD5 e898f4bf79d82a45616f500872d06576 mldonkey-2.5.27-r1.ebuild 2756
+MD5 29c93beb8a325548b6d81f1c5b311385 mldonkey-2.5.16-r10.ebuild 2691
 MD5 a92ec1a9e1c381c49b544c81221a8bd0 mldonkey-2.5.16-r9.ebuild 2660
+MD5 e4d631474942d4a724d5be73a39df379 mldonkey-2.5.21-r2.ebuild 2692
+MD5 e898f4bf79d82a45616f500872d06576 mldonkey-2.5.27-r1.ebuild 2756
 MD5 5e2cc55c3eb55fe36b6edd16b591422d mldonkey-2.5.28-r4.ebuild 2801
-MD5 855aedd7fba1ffe74d7f6c0bce98f45f files/mldonkey.png 6835
-MD5 476ec69e79e7c93a7bdaa6cb049c0857 files/mldonkey.confd 836
-MD5 6df804eab9a1d919e43d09f42c700b40 files/digest-mldonkey-2.5.27-r1 129
+MD5 0eb263f37a1d27990436054b98ed0f99 mldonkey-2.6.0.ebuild 3563
+MD5 22becfd3bff5607d5b441c1398eea660 mldonkey-2.6.2.ebuild 5162
 MD5 a929dcdb98bcc52d06066afb45960ea9 files/2.5.28-config.patch 586
-MD5 2db375201ae817eaa7075507d9700eed files/digest-mldonkey-2.6.0 68
-MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.16-configure.patch 540
-MD5 05622542c4f7a93553ab90d66f871b2d files/mldonkey-2.6.0-gtk2-gentoo.patch 497
-MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.21-configure.patch 540
-MD5 b1c7f6fe232921bb9516c1007f34efd4 files/digest-mldonkey-2.5.16-r9 128
-MD5 4083205e52db56c9d64c4a67db61cbf2 files/digest-mldonkey-2.5.28-r4 129
-MD5 f145ba120c09f53b0032ea8b3f930128 files/digest-mldonkey-2.5.21-r2 126
-MD5 ac93ed074d62909b2a496045f0740127 files/mldonkey 336
-MD5 8eb1c3cd8359a02e5bc736805a940e7f files/mldonkey.initd 2996
 MD5 0df6a96e1107b6967473bbfdf5f4c9d6 files/digest-mldonkey-2.5.16-r10 128
+MD5 b1c7f6fe232921bb9516c1007f34efd4 files/digest-mldonkey-2.5.16-r9 128
+MD5 f145ba120c09f53b0032ea8b3f930128 files/digest-mldonkey-2.5.21-r2 126
+MD5 6df804eab9a1d919e43d09f42c700b40 files/digest-mldonkey-2.5.27-r1 129
+MD5 4083205e52db56c9d64c4a67db61cbf2 files/digest-mldonkey-2.5.28-r4 129
+MD5 ac93ed074d62909b2a496045f0740127 files/mldonkey 336
+MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.16-configure.patch 540
+MD5 be0c71929c461b50601e8715706a4a16 files/mldonkey-2.5.21-configure.patch 540
+MD5 476ec69e79e7c93a7bdaa6cb049c0857 files/mldonkey.confd 836
+MD5 8eb1c3cd8359a02e5bc736805a940e7f files/mldonkey.initd 2996
+MD5 855aedd7fba1ffe74d7f6c0bce98f45f files/mldonkey.png 6835
+MD5 2db375201ae817eaa7075507d9700eed files/digest-mldonkey-2.6.0 68
+MD5 05622542c4f7a93553ab90d66f871b2d files/mldonkey-2.6.0-gtk2-gentoo.patch 497
+MD5 1a2193572c54f97cc4006b6c79e704aa files/digest-mldonkey-2.6.2 144
+MD5 93e16748ad44af182177978057266aa7 files/mldonkey-gui.desktop 263
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDB93DZ/iYVBmujdURAtj1AKDyrtAbgBCyLie6QvhFo0kBi+SJnQCfbQmq
+TitzePzr/DyYO1j1ORWb/AU=
+=UP8U
+-----END PGP SIGNATURE-----

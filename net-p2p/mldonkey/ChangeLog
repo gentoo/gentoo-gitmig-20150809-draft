@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.86 2005/08/07 13:40:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.87 2005/08/20 23:45:36 sekretarz Exp $
+
+*mldonkey-2.6.2 (21 Aug 2005)
+
+  21 Aug 2005; <sekretarz@gentoo.org> +files/mldonkey-gui.desktop,
+  +mldonkey-2.6.2.ebuild:
+  Version bump, added mozilla use flag and installing ed2k handler for
+  mozilla/firefox, installing of desktop file. Thanks Przemyslaw Maciag
+  <p_maciag@wp.pl> in bug #102097
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   mldonkey-2.5.16-r9.ebuild:

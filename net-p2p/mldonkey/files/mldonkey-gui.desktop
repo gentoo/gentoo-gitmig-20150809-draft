@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=0.9.4
+Encoding=UTF-8
+Name=MLDonkey GUI
+Comment=MLDonkey graphical interface
+Comment[pl]=Graficzny interfejs do programu MLDonkey
+Exec=mlgui
+Icon=mldonkey.png
+Terminal=false
+Type=Application
+Categories=GTK;Network;P2P;
+# vi: encoding=utf-8
