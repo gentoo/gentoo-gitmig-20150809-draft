@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4307 2005/08/19 23:32:03 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4308 2005/08/20 08:55:41 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -951,13 +951,6 @@ media-video/gv4l
 # Needs more testing.
 =dev-php/PEAR-PEAR-1.3.5-r1
 
-# Aron Griffis <agriffis@gentoo.org> (10 Mar 2005)
-# For baselayout-1.12, alpha/beta signify baselayout developers only;
-# rc signifies ~arch; 1.12.0 release will signify ~arch candidate for quick
-# stable.
-=sys-apps/baselayout-1.12.0_alpha*
-=sys-apps/baselayout-1.12.0_beta*
-
 # Alastair Tse <liquidx@gentoo.org> (09 Mar 2005)
 # Unsupported upstream, superceded by qc-usb.
 media-video/qce-ga
@@ -970,10 +963,6 @@ media-video/qce-ga
 # security masked by request of bug #79720
 x11-misc/xfontselector
 app-admin/qtsvc
-
-# Jeremy Huddleston <eradicator@gentoo.org> (01 Mar 2005)
-# Still in development.  Doesn't work right.  I know it doesn't work right.  Don't use it.  Also, it triggers a sandbox bug.
-=sys-devel/gcc-config-1.4.0
 
 # Paul de Vrieze <pauldv@gentoo.org> (27 Feb 2005)
 # This whole module should be deleted. It overlaps subversion
