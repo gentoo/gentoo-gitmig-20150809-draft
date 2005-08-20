@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a84a0ee5e2df455128d18f9fb53e65b4 xf86-input-mouse-1.0.0.ebuild 473
-MD5 6f6aa5880d3be90ce2123bbe838e8c25 ChangeLog 617
+MD5 0f4929d589175caec0c243729a7ef552 ChangeLog 716
+MD5 bda8786add8fc1b471cfd4a339b3cf4b xf86-input-mouse-1.0.0.ebuild 480
 MD5 3cf942defb85735037210ae62722c2c3 files/digest-xf86-input-mouse-1.0.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDANtP2G5bA0cA/ScRAj6eAJ4/rDEOZxevrz9QU05bKBGMUlU9RgCeMOJk
-MFzjjLRLI2V1cxbXhnm7+Wc=
-=63Mt
------END PGP SIGNATURE-----

@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d548ec58077b5eb638516c4ed4b7c685 xf86-input-keyboard-1.0.0.ebuild 482
-MD5 eb990efb8d993ef162ae7b1594e6ae8a ChangeLog 635
+MD5 155de621e7de87134691970e80b943ee ChangeLog 737
+MD5 48a07e9ab44fd1091fd7cfd4a518b59e xf86-input-keyboard-1.0.0.ebuild 489
 MD5 d3ad8f46a3d9db56229bec8b9d63f650 files/digest-xf86-input-keyboard-1.0.0 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDANuR2G5bA0cA/ScRAmUcAJ4rZf79jwVsxfXLrZXNgxkESqbPSACgzSwE
-vyKsukUlPRtu7HpxktflMZI=
-=qfpL
------END PGP SIGNATURE-----
