@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.9 2005/06/25 10:12:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.10 2005/08/20 16:52:58 weeve Exp $
+
+  20 Aug 2005; Jason Wever <weeve@gentoo.org> cpufrequtils-0.3-r1.ebuild:
+  Added ~sparc keyword.
 
   25 Jun 2005; <brix@gentoo.org> -cpufrequtils-0.2.ebuild,
   -cpufrequtils-0.3.ebuild:
