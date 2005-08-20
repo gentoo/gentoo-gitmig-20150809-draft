@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813.ebuild,v 1.1 2005/08/14 00:18:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813.ebuild,v 1.2 2005/08/20 15:15:06 cryos Exp $
 
 inherit eutils
 
@@ -17,15 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="server X"
 
-RDEPEND=" X? ( virtual/x11
-	virtual/glut
-	virtual/glu
-	>=x11-libs/wxGTK-2.6.0 )
+RDEPEND="X? ( virtual/x11
+		virtual/glut
+		virtual/glu
+		>=x11-libs/wxGTK-2.6.0 )
 	server? ( net-www/apache
-	>=dev-db/mysql-4.0.24
-	>=dev-php/php-4.3.10
-	>=dev-lang/python-2.2.3
-	dev-python/mysql-python )"
+		>=dev-db/mysql-4.0.24
+		virtual/php
+		>=dev-lang/python-2.2.3
+		dev-python/mysql-python )"
 DEPEND=">=sys-devel/gcc-3.0.4
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.9.3
