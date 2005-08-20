@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28cfaaf4ceaff0e57b324b6df7b13e6c util-macros-0.99.0.ebuild 423
-MD5 f7c84f913ed76b7f4bea67e15240cf19 ChangeLog 719
+MD5 50f1b9ed3178b436658248f6adb551b7 ChangeLog 812
+MD5 01df3632917f64f07a7e9c2f3c4edb7d util-macros-0.99.0.ebuild 430
 MD5 dde7a1d6783de856b2070cfa418b0702 files/digest-util-macros-0.99.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDALUg2G5bA0cA/ScRAkLdAJ4j+uNWxcl0kjtPpIMql3X84WPhXQCgl7ee
-lJfUNhzIq9gTpB0sWScjHtU=
-=gP3F
------END PGP SIGNATURE-----

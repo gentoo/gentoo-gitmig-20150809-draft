@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.4 2005/08/15 15:30:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.5 2005/08/20 22:08:12 lu_zero Exp $
+
+  20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> util-macros-0.99.0.ebuild:
+  Marked ~ppc
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> util-macros-0.99.0.ebuild:
   Marked ~amd64
