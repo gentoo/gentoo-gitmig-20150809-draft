@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.15.ebuild,v 1.6 2005/08/20 14:12:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.3.15.ebuild,v 1.7 2005/08/20 14:30:54 ka0ttic Exp $
 
 inherit eutils
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE="mysql ssl php xattr ldap ipv6"
 
-RDEPEND="virtual/libc
-		app-arch/bzip2
+RDEPEND="app-arch/bzip2
 		>=dev-libs/libpcre-3.1
 		>=sys-libs/zlib-1.1
+		attr? ( sys-apps/attr )
 		ldap? ( >=net-nds/openldap-2.1.26 )
 		mysql? ( >=dev-db/mysql-4.0.0 )
 		ssl? ( >=dev-libs/openssl-0.9.7 )
