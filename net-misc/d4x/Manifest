@@ -1,14 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f6b308640a90e3999b99273857f5cea7 d4x-2.03.ebuild 1508
-MD5 d0be3c2f56247e922965f9e0368e94bc ChangeLog 5055
+MD5 3d5b63818e4a1e8d703c78eaaa8b555f ChangeLog 5260
 MD5 b9f339e71a8ba17f3be1a9a37bdffaa8 d4x-2.5.1.ebuild 1787
 MD5 c1d99567166886bdb3e9f215fca712c0 d4x-2.4.1-r1.ebuild 1982
-MD5 586f2c8f75ea8e139ab09d52358ec269 d4x-2.5.0-r1.ebuild 1870
-MD5 36d22c70e92c701495997f556665eefd d4x-2.5.0.ebuild 1818
-MD5 e05e1950df1ce9a17eb6d72c5b542863 d4x-2.5.0_rc2.ebuild 1806
-MD5 cbf5c5aaf2b961fa27a574a0ada32761 d4x-2.5.0_rc4.ebuild 1877
+MD5 1a5d0162ab11f8382fbf615f00a4ae24 d4x-2.5.0-r1.ebuild 1868
 MD5 3f142d03f332a3f7047929a1b476c14f metadata.xml 301
 MD5 95b235ef645b366b79c6d4465afce23b files/digest-d4x-2.5.1 62
 MD5 07dde74dfe302bab95327f285a5a16ba files/d4x-2.4.1-fix-statusbar-crash.patch 772
@@ -16,16 +12,12 @@ MD5 512e25cdcccd73401a82518c6e49ae8c files/d4x-2.5.0-fix-compile-gtk26.patch 295
 MD5 5b49dbe10d588970e6f766cfdb310e67 files/d4x-2.5.0_rc2-gtk24.patch 279
 MD5 7025e0ce352893c55b23ffeea8f87d1c files/d4x-2.5.0_rc4-fix-cast.patch 317
 MD5 a9d346bf4f3d64d906935b663747e434 files/d4x-sndserv-bigendian.patch 502
-MD5 724445bfed12d4bafd7bb97eef1d669c files/digest-d4x-2.03 61
 MD5 3e8783cc051415a9ee4f756fcc45c925 files/digest-d4x-2.4.1-r1 62
-MD5 4f038da47df5648c8799469e62ec03b6 files/digest-d4x-2.5.0 67
 MD5 4f038da47df5648c8799469e62ec03b6 files/digest-d4x-2.5.0-r1 67
-MD5 fc389107a8b5d040a989fe1d220beb3e files/digest-d4x-2.5.0_rc2 65
-MD5 145551a0dbe79421f8b102a726996ea7 files/digest-d4x-2.5.0_rc4 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBQuvl5AvwDPiUowRAtz+AJ9x+29t534cYwpSZ4Nznw9zT48PSwCgqJ4M
-btCg4cLJrct2r0sK+mNsomo=
-=68WA
+iD8DBQFDB3nUl5AvwDPiUowRAh4IAJ4/xqVrx1Zmk/XNVHpuckKDszxcygCdEpEo
+z8VbhV2KakBvUUcBYyUsSmI=
+=uX7W
 -----END PGP SIGNATURE-----
