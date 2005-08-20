@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-2.7.ebuild,v 1.1 2004/12/28 18:21:40 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-2.7.ebuild,v 1.2 2005/08/20 07:55:57 hansmi Exp $
 
 MY_P="${P/-}"
 MY_P="${MY_P/.}"
@@ -11,7 +11,7 @@ SRC_URI="ftp://nssdcftp.gsfc.nasa.gov/standards/cdf/dist/${MY_P}/unix/${MY_P}-di
 	java? ( ftp://nssdcftp.gsfc.nasa.gov/standards/cdf/dist/${MY_P}/unix/${MY_P}-dist-java.tar.gz )"
 LICENSE="CDF"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE="ncurses java"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )"
