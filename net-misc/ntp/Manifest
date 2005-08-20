@@ -4,7 +4,6 @@ Hash: SHA1
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
 MD5 83f2eeda43c58418beeb559aa5e2aa4a ntp-4.2.0-r2.ebuild 3727
 MD5 4874c08acda470ce7373d36b64c39c09 ntp-4.1.2.ebuild 3162
-MD5 18aaba1ae83478ceb695993fa5bd3d30 ntp-4.2.0.20040617.ebuild 3983
 MD5 21e636680cfe8de4ce739e83a0154d69 ntp-4.2.0.20050303.ebuild 4282
 MD5 5630d9dddf4eda3f1e45a888b9718915 ntp-4.2.0.20040617-r2.ebuild 4254
 MD5 e4ed1616ad073439b0b9e46ef7895f32 ChangeLog 10051
@@ -34,11 +33,10 @@ MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
 MD5 e327d521e4dfb0c967941eeb84ad9207 files/ntp-4.1.1b-syscall-libc.patch 424
 MD5 24574e6ad1b468152839c10361b51a0f files/4.2.0-linux-config-phone.patch 711
 MD5 759c1adb57e9c61f519fe938902f1df7 files/4.2.0.20040617-errno-fix.patch 493
-MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617 166
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFDBq1KgIKl8Uu19MoRAqizAJ9urMUSr6IOuEbGh4Srj9sXGPtyYACXf3pk
-YH9MHnrvts0ZwnBStIyz+g==
-=JJgY
+iD8DBQFDBq2NgIKl8Uu19MoRAjVRAJ9eJntDiHtiQJjyyn4+1ZmGl9PZDQCffckV
+Reo3RUdwsx6T3BdOEVCnGyE=
+=jRCd
 -----END PGP SIGNATURE-----
