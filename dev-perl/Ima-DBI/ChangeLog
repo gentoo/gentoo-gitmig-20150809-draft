@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Ima-DBI
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/ChangeLog,v 1.7 2005/05/25 15:09:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/ChangeLog,v 1.8 2005/08/20 07:58:19 hansmi Exp $
+
+  20 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> Ima-DBI-0.33.ebuild:
+  Added to ~ppc (bug #101116).
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Ima-DBI-0.33.ebuild:
   dev-perl/Test-Simple => perl-core/Test-Simple migration
