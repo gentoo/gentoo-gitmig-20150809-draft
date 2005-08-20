@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/rio
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.4 2005/01/01 15:21:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/ChangeLog,v 1.5 2005/08/20 03:07:11 vanquirius Exp $
+
+*rio-1.0.7-r1 (20 Aug 2005)
+
+  20 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/rio-1.0.7-gentoo.patch, +files/rio-1.0.7-makefile.patch,
+  rio-1.0.7.ebuild, +rio-1.0.7-r1.ebuild:
+  Fix ebuild to make it work. rio is no longer installed suid, please use sudo
+  or su to use it properly. -r1 gets patched to avoid warning messages. Fixes
+  bug 61887. Thanks to Chase Hargraves <io@absolutek.ca>, Joshua Kinard
+  <kumba@gentoo.org> and others.
 
   07 Oct 2003; Joel Hill <hillster@gentoo.org> rio-1.0.7.ebuild:
   cleanup, marking stable.
