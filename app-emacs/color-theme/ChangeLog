@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/color-theme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.17 2005/07/16 15:46:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.18 2005/08/20 18:25:34 grobian Exp $
+
+  20 Aug 2005; Fabian Groffen <grobian@gentoo.org>
+  color-theme-6.5.4-r1.ebuild:
+  Marking ~ppc-macos (bug #72582)
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> color-theme-6.5.4-r1.ebuild:
   Marked ppc stable for bug #99185.

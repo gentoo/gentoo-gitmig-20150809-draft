@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ef38ebaf156dbf3e18c049bfdc59aa8 ChangeLog 2325
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 d6008ee4ddd88de84b78b9634d4e0203 color-theme-6.5.4-r1.ebuild 943
 MD5 bc2cb2a3d72ce0f611cdb1544f205f24 color-theme-6.5.4.ebuild 632
+MD5 0a1fd43e829429fc412b43f6ccb3ce7f color-theme-6.5.4-r1.ebuild 955
+MD5 18929f4d3aff5e0358dac3bf2b121d27 ChangeLog 2443
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 47143d30cb8c65d6ea55a7984331405d files/digest-color-theme-6.5.4-r1 69
-MD5 47143d30cb8c65d6ea55a7984331405d files/digest-color-theme-6.5.4 69
-MD5 00a25d11e7177936fb464386a60997c8 files/50color-theme-gentoo.el 104
 MD5 205de53bc919ce2c7ad70f62e7287ad1 files/6.5.4-easy-menu-gentoo.patch 537
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2SvzcsIHjyDViGQRArBZAKDbLE9zglHuxJ6yfyYWPD4/fm+U5gCeI/kv
-riR/D4hEG/3V8uPRK9K1T/s=
-=MZIJ
------END PGP SIGNATURE-----
+MD5 00a25d11e7177936fb464386a60997c8 files/50color-theme-gentoo.el 104
+MD5 47143d30cb8c65d6ea55a7984331405d files/digest-color-theme-6.5.4 69
