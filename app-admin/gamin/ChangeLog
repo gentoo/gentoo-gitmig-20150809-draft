@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.29 2005/08/17 15:27:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.30 2005/08/20 16:01:13 azarah Exp $
+
+*gamin-0.1.5 (20 Aug 2005)
+
+  20 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/gamin-0.1.5-inotify-legacy-backend.patch, +gamin-0.1.5.ebuild:
+  Update version.
 
   17 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gamin-0.1.3.ebuild:
   Marked ~mips.
