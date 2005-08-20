@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.6 2005/08/18 17:40:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.7 2005/08/20 00:14:34 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -104,15 +104,14 @@ RDEPEND="${RDEPEND}
 #	>=gnome-extra/gnome-system-monitor-2.11.91
 
 RDEPEND="${RDEPEND}
-	>=gnome-base/librsvg-2.9.5"
-#	>=x11-libs/libwnck-2.11.91
-#	>=x11-wm/metacity-2.11.2
-RDEPEND="${RDEPEND}
+	>=gnome-base/librsvg-2.9.5
+	>=x11-libs/libwnck-2.11.91
+	>=x11-wm/metacity-2.11.2
 
 	>=x11-libs/startup-notification-0.8
 
-	>=gnome-extra/gnome2-user-docs-2.8.1"
-#	>=gnome-extra/yelp-2.11.1
+	>=gnome-extra/gnome2-user-docs-2.8.1
+	>=gnome-extra/yelp-2.11.1"
 #	>=gnome-extra/zenity-2.11.91
 
 #	>=net-analyzer/gnome-netstatus-2.11.90
