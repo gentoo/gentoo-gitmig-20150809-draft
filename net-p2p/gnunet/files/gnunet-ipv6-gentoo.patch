@@ -1,0 +1,48 @@
+diff -Naur src/include/gnunet_util.h /tmp/GNUnet-0.6.6b/src/include/gnunet_util.h
+--- src/include/gnunet_util.h	2005-02-28 00:43:33.000000000 +0100
++++ /tmp/GNUnet-0.6.6b/src/include/gnunet_util.h	2005-08-03 14:35:23.000000000 +0200
+@@ -1067,7 +1067,7 @@
+  * @param routeList a string specifying the forbidden networks
+  * @return the converted list, NULL if the synatx is flawed
+  */
+-CIDR6Network * parseRoutes6(const char * routeList);
++CIDR6Network * parseRoutes6(char * routeList);
+ 
+ 
+ 
+diff -Naur src/transports/tcp6.c /tmp/GNUnet-0.6.6b/src/transports/tcp6.c
+--- src/transports/tcp6.c	2005-01-26 02:58:46.000000000 +0100
++++ /tmp/GNUnet-0.6.6b/src/transports/tcp6.c	2005-08-03 14:34:56.000000000 +0200
+@@ -825,6 +825,7 @@
+   }
+   ok = SYSERR;
+   MUTEX_LOCK(&tcp6lock);
++  int sucess;
+   if (tcp6Session->wpos > 0) {
+     ret = 0;
+   } else {
+diff -Naur src/transports/udp6.c /tmp/GNUnet-0.6.6b/src/transports/udp6.c
+--- src/transports/udp6.c	2005-01-26 02:58:46.000000000 +0100
++++ /tmp/GNUnet-0.6.6b/src/transports/udp6.c	2005-08-03 14:35:09.000000000 +0200
+@@ -275,6 +275,7 @@
+ #endif
+     /* quick test of the packet, if failed, repeat! */
+     if (size != ntohs(udp6m.size)) {
++	  char * tmp = MALLOC(INET6_ADDRSTRLEN);
+       LOG(LOG_WARNING,
+ 	  _("Packed received from %s:%d (UDP6) failed format check."),
+ 	  inet_ntop(AF_INET6,
+diff -Naur src/util/ipcheck.c /tmp/GNUnet-0.6.6b/src/util/ipcheck.c
+--- src/util/ipcheck.c	2005-01-26 02:58:55.000000000 +0100
++++ /tmp/GNUnet-0.6.6b/src/util/ipcheck.c	2005-08-03 14:34:41.000000000 +0200
+@@ -281,8 +281,8 @@
+  * @param ip the IP to check (in network byte order)
+  * @return NO if the IP is not in the list, YES if it it is
+  */
+-int checkIP6Listed(CIDR6Network * list,
+-		   IP6addr * ip) {
++int checkIP6Listed(const CIDR6Network * list,
++		   const IP6addr * ip) {
+   unsigned int i;
+   unsigned int j;
+   struct in6_addr zero;
