@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.2 2005/06/03 06:42:36 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.3 2005/08/20 19:20:21 ribosome Exp $
+
+  20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> vtk-4.2.6.ebuild:
+  Removed unused "data" USE flag (fixes bug #100418).
 
   03 Jun 2005; Patrick Dawson <pkdawson@gentoo.org> vtk-4.2.6.ebuild:
   Typo fix.

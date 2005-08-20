@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.3 2005/07/14 13:19:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.4 2005/08/20 19:20:21 ribosome Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/VTK-${MY_PV}-LatestRelease.tar.gz
 LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE="data doc examples java mpi patented python tcltk threads"
+IUSE="doc examples java mpi patented python tcltk threads"
 RDEPEND="java? ( virtual/jdk )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
@@ -130,7 +130,7 @@ src_install() {
 
 	# environment
 	echo "LDPATH=${LDPATH}" > ${T}/40${PN}
-	use data && echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> ${T}/40${PN}
+	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> ${T}/40${PN}
 	if use java; then
 		echo "CLASSPATH=/usr/share/${PN}/${PN}.jar" >> ${T}/40${PN}
 		echo "LD_LIBRARY_PATH=/usr/lib/${PN}" >> ${T}/40${PN}
