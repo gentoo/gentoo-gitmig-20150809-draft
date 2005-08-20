@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/isdndump
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdndump/ChangeLog,v 1.1 2005/08/20 11:49:55 sbriesen Exp $
+
+*isdndump-0.01 (20 Aug 2005)
+
+  20 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +isdndump-0.01.ebuild:
+  initial commit.
+
