@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-openvpn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-openvpn/ChangeLog,v 1.1 2005/06/26 18:29:44 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-openvpn/ChangeLog,v 1.2 2005/08/20 17:48:14 kaiowas Exp $
+
+  20 Aug 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-openvpn-20050618.ebuild:
+  mark stable
 
 *selinux-openvpn-20050618 (26 Jun 2005)
 
