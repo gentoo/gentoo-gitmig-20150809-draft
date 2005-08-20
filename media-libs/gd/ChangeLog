@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.20 2005/02/10 01:50:35 j4rg0n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.21 2005/08/20 03:51:09 vapier Exp $
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org> gd-2.0.32.ebuild:
+  Add support for USE=fontconfig #79375 by Jung Tae-young.
 
   09 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> gd-2.0.28.ebuild,
   gd-2.0.32.ebuild:

@@ -1,7 +1,15 @@
-MD5 e50897abe12b58c60561ded542b7a10d ChangeLog 8671
-MD5 1f37566e22b2fc2c94f363286f5b2d3a gd-2.0.32.ebuild 978
-MD5 4c8950464a3799e7ebf09bdd909867f7 gd-2.0.28.ebuild 967
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 312563b7288a2111976b24b0865d9df8 metadata.xml 1227
-MD5 ef1f623ab65a05b7e14e9bd61bb02c65 files/digest-gd-2.0.32 61
-MD5 0390d6e9e4897c0a947f1744a760a23a files/digest-gd-2.0.28 61
+MD5 0ce76a500e6f6c4c651fb3ea3ec6a581 gd-2.0.32.ebuild 989
+MD5 a2daafe76864c6dd2ba671004ca0e739 ChangeLog 8799
 MD5 38fb558a8071c00ce93e35aede13aaf6 files/2.0.31-png-check.patch 369
+MD5 ef1f623ab65a05b7e14e9bd61bb02c65 files/digest-gd-2.0.32 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBqjQgIKl8Uu19MoRAv8eAJ9KxC86jXImuZ8qEPoEK3B+uu4cUQCdELrJ
+Roddfs0ctknfPtSgzAuQt/g=
+=kdKu
+-----END PGP SIGNATURE-----
