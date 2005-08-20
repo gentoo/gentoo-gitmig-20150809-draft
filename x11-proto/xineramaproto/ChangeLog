@@ -1,0 +1,23 @@
+# ChangeLog for x11-proto/panoramixproto
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.1 2005/08/20 22:46:23 spyderous Exp $
+
+*xineramaproto-1.1 (20 Aug 2005)
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xineramaproto-1.1.ebuild:
+  Moved from panoramixproto.
+
+  15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> panoramixproto-1.1.ebuild:
+  Marked ~amd64
+
+  08 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  panoramixproto-1.1.ebuild:
+  Add ~sparc keyword (modular X testing on sparc).
+
+*panoramixproto-1.1 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +panoramixproto-1.1.ebuild:
+  Initial commit for modular X
+
