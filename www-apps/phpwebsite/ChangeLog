@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.38 2005/08/19 11:36:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.39 2005/08/20 15:26:34 yoswink Exp $
+
+  20 Aug 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  phpwebsite-0.10.2_rc1.ebuild:
+  Stable on alpha wrt security bug #102785
 
   19 Aug 2005; Renat Lumpau <rl03@gentoo.org> phpwebsite-0.10.2_rc1.ebuild:
   stable on x86 wrt security bug #102785.
