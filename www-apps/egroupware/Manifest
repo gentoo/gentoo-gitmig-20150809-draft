@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 eb49d34b04f2bce057fd6268f8be36ad egroupware-1.0.0.008_p2.ebuild 1269
-MD5 b9d8a4fdb03cad49475ae5778810f3b0 egroupware-1.0.0.009.ebuild 1258
-MD5 77ee05767ec3dedb612a7caba90f7c15 ChangeLog 5869
+MD5 3e9c1d79e7df0063d3741c46411068ec egroupware-1.0.0.009.ebuild 1260
+MD5 c52685f73ea38554135347792b27ae63 ChangeLog 6000
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 506e1fa082cbd8fe4c0c1c7c17de57c4 egroupware-1.0.0.008.ebuild 1263
 MD5 e76f8e156f0ad2ebdbdb725b9954d33f files/postinstall-en.txt 393
@@ -13,7 +13,7 @@ MD5 3c35ce6fb7ab5a61d8bb801b79d7599a files/digest-egroupware-1.0.0.008_p2 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDAw+rEzitwsaoONoRAvx5AJ992iaBrWYBhZc9sFgdUEdgwZ7TdgCg1JIp
-YOW4YWdhOGPRznGZ3Mg6E6o=
-=+oaF
+iD8DBQFDB2tY3og80iZgVQgRAuKfAJ41mJZjgZt9tQo4DCsCgCNOT5/6PQCeOXff
+GDz1z6tQandBDttzjSdTty4=
+=MCB9
 -----END PGP SIGNATURE-----
