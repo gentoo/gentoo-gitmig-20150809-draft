@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6738099dd97790fc5888c1b40b2a033b fontsproto-2.0.ebuild 521
-MD5 08be22409d1399eeee63d1b6ac4274a4 ChangeLog 572
+MD5 9a6a76ba8ad74a0582e7cd51e80ddc15 ChangeLog 661
+MD5 82599d3c50911e464a4379ec0fe3d883 fontsproto-2.0.ebuild 528
 MD5 b5611f74a9fabdf567baff941a934921 files/digest-fontsproto-2.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDALO32G5bA0cA/ScRAgQKAKDXlJsPNy92AEpyjUcYBAvStkOucwCfXtkA
-OKYYIQIDtrYuUozx71Aebgo=
-=jJt8
------END PGP SIGNATURE-----
