@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/htmlize
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/ChangeLog,v 1.8 2005/06/29 17:45:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlize/ChangeLog,v 1.9 2005/08/20 19:05:48 grobian Exp $
+
+  20 Aug 2005; Fabian Groffen <grobian@gentoo.org> htmlize-1.16.ebuild:
+  Marking ~ppc-macos (bug #103170)
 
   29 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org> -htmlize-0.67.ebuild,
   htmlize-1.16.ebuild:
