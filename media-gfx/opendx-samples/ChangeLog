@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/opendx-samples
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx-samples/ChangeLog,v 1.1 2005/08/08 14:56:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx-samples/ChangeLog,v 1.2 2005/08/20 07:54:02 hansmi Exp $
+
+  20 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  opendx-samples-4.3.2.ebuild:
+  Added to ~ppc (#101951).
 
 *opendx-samples-4.3.2 (08 Aug 2005)
 

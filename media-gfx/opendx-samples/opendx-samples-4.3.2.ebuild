@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx-samples/opendx-samples-4.3.2.ebuild,v 1.1 2005/08/08 14:56:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx-samples/opendx-samples-4.3.2.ebuild,v 1.2 2005/08/20 07:54:02 hansmi Exp $
 
 S="${WORKDIR}/dxsamples-${PV}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://opendx.npaci.edu/source/dxsamples-${PV}.tar.gz"
 LICENSE="IPL-1"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="=media-gfx/opendx-${PV}*"
