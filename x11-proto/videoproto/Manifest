@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fbd3905effb1d7d7c04e491dfb16746c videoproto-2.2.ebuild 521
-MD5 3ffd3961a4232d7a55572482f7f6c00e ChangeLog 572
+MD5 b3e4995b02877ce47e06a70ad9f5322c ChangeLog 661
+MD5 ac28c8167bae64af621dc3fde5b870ca videoproto-2.2.ebuild 528
 MD5 526b9ee86dbc63eb64940da9e73334b3 files/digest-videoproto-2.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDALO32G5bA0cA/ScRAjh4AKCK4tBQfrozNuRei2iDDTd4W+X6TACePeB4
-CFqIe5TNbPjYQihHqI6yZo0=
-=O9U0
------END PGP SIGNATURE-----
