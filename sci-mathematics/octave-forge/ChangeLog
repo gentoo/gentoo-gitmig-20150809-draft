@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave-forge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.9 2005/06/26 02:13:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.10 2005/08/20 19:03:19 ribosome Exp $
+
+*octave-forge-2005.06.13 (20 Aug 2005)
+
+  20 Aug 2005; Olivier Fisette <ribosome@gentoo.org>
+  +octave-forge-2005.06.13.ebuild:
+  New version. Depends strictly on Octave 2.69 rather than 2.69 or later like
+  previous ebuilds (see bug #99781). This dependency should be kept in sync as
+  new versions of Octave and Octave-Forge are released.
 
   26 Jun 2005; Olivier Fisette <ribosome@gentoo.org>
   -files/octave-2.1.57+.patch, -files/octave-forge-2004.02.12-fPIC.patch,
