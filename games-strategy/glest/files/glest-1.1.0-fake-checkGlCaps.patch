@@ -1,0 +1,10 @@
+--- glest_game/renderer.cpp
++++ glest_game/renderer.cpp
+@@ -2393,6 +2393,7 @@
+ 
+ void Renderer::checkGlCaps(){
+ 
++return;
+ 	//opengl 1.3
+ 	if(!isGlVersionSupported(1, 3, 0)){
+ 		throw runtime_error("Your system doesn't support OpenGL version 1.3\nYou may solve this problem by installing your latest video card drivers");

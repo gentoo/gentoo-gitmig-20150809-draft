@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.3 2005/06/13 00:10:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.4 2005/08/20 02:06:24 vapier Exp $
+
+*glest-1.1.0 (20 Aug 2005)
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/glest-1.1.0-fake-checkGlCaps.patch, files/glest,
+  +glest-1.1.0.ebuild:
+  Version bump #98617 by Dennis Schridde.
 
   13 Jun 2005; Mike Frysinger <vapier@gentoo.org>
   +files/glest-1.0.10_p7-fake-checkGlCaps.patch, glest-1.0.10_p7.ebuild:

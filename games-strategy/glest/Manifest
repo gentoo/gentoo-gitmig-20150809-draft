@@ -1,6 +1,19 @@
-MD5 5bb989c52f433b02624524136636d89f glest-1.0.10_p7.ebuild 2346
-MD5 d989c2706f05befcf47e3286aaa06ecf ChangeLog 718
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 704449ca017fe5f35a53024e3daa2a4c files/digest-glest-1.0.10_p7 306
-MD5 cbc9ee2193e3623d8e7fc3a999e7d465 files/glest 498
+MD5 5bb989c52f433b02624524136636d89f glest-1.0.10_p7.ebuild 2346
+MD5 e055588f6124b18cd40e84dd7459ed46 glest-1.1.0.ebuild 2226
+MD5 3cf2b6cd58da4b3a292653e097a32a7a ChangeLog 920
 MD5 a36bd77a690a0460b5a2f1abccd7e859 files/glest-1.0.10_p7-fake-checkGlCaps.patch 250
+MD5 91226a67fca5c8d33e0b6c9e70984a21 files/digest-glest-1.1.0 298
+MD5 db5c350e24bf74413a314d023e375ce3 files/glest-1.1.0-fake-checkGlCaps.patch 322
+MD5 34b0cb001c745a9991f7168d297c0e45 files/glest 488
+MD5 704449ca017fe5f35a53024e3daa2a4c files/digest-glest-1.0.10_p7 306
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBpBBgIKl8Uu19MoRAqNIAJ9hHY2JqR1Ue/mXx5mQZgp5pXuYmACfRq1F
+//8lZj9UJXG0CaDa9PaOXF8=
+=KhKm
+-----END PGP SIGNATURE-----

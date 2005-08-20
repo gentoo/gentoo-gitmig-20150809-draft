@@ -6,9 +6,10 @@ GLESTDIR="$GAMESDIR/glest"
 if [ ! -d ~/.glest ]; then
 	mkdir ~/.glest
 fi
-for d in data Tech map tileset lib/glest ; do
-	if [ ! -L ~/.glest/${d} ] ; then
-		ln -s "${GLESTDIR}"/${d} ~/.glest/${d##*/}
+for d in "${GLESTDIR}"/* lib/glest ; do
+	s=${d##*/}
+	if [ ! -L ~/.glest/${s} ] ; then
+		ln -s "${d}" ~/.glest/${s}
 	fi
 done
 if [ ! -e ~/.glest/glest.ini ] ; then
