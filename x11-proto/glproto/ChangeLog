@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.8 2005/08/15 15:24:13 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.9 2005/08/20 22:46:31 lu_zero Exp $
+
+  20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> glproto-1.4.ebuild,
+  glproto-1.4-r1.ebuild:
+  Marked ~ppc
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> glproto-1.4-r1.ebuild:
   Marked ~amd64
