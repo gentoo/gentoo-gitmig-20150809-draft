@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbitmaps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.3 2005/08/15 18:06:07 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.4 2005/08/20 22:35:51 lu_zero Exp $
+
+  20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> xbitmaps-0.99.0.ebuild:
+  Marked ~ppc
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> xbitmaps-0.99.0.ebuild:
   Marked ~amd64.
