@@ -1,22 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d94e4740e6202096147d788e76e1e25 ChangeLog 2014
-MD5 0ae802e1a953200840c25dab4d87dafd kst-0.94.ebuild 525
-MD5 c07bbe2be9efabdbda74b114ae2f1b80 kst-0.97.ebuild 529
-MD5 40d13e9f8221d24c908fdd90480afcd7 kst-0.99.ebuild 566
-MD5 2f00e9487f4a2531aa3a11df7d16a3dc kst-1.0.0.ebuild 567
+MD5 3031d578551124826d60e7fdbe69c5cb kst-0.97.ebuild 496
+MD5 acff8d6b4ad53d7339f9a29ac8299fdd kst-1.1.0.ebuild 616
+MD5 ac958df83c56fa761cec6fd7c8c8e711 ChangeLog 2268
 MD5 862e7941cb21c9dd10e8bd6183f21fb0 metadata.xml 173
-MD5 8ba21ad901cbeecf137844aa6d058829 kst-1.1.0.ebuild 650
 MD5 b3c3b4529c7a84a69be4e52b98c71a53 files/digest-kst-1.1.0 63
-MD5 124f013d204eb93390b67c4a9442e5aa files/digest-kst-0.94 61
 MD5 19eccdaf16ff3e3301ad96c85fd3417b files/digest-kst-0.97 61
-MD5 eda462e34c4db01289aca79fcb10f263 files/digest-kst-0.99 61
-MD5 a9c083343a53c0028f39d92ac01dc93a files/digest-kst-1.0.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsxlW7IRIh26aCTkRAlx8AJ9cpFcdlqeLdTRuzo+T+Qf73QFfcwCdH7mB
-FHdptoOyllnPx6tkCA/b3CI=
-=n2TU
------END PGP SIGNATURE-----
