@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.30 2005/08/17 16:37:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.31 2005/08/20 19:57:52 spyderous Exp $
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  mesa-6.3.1.1-r3.ebuild:
+  Stop installing glut headers to avoid conflicts with virtual/glut providers.
+  Reported by Andrej Kacian <ticho@gentoo.org>.
 
   17 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   mesa-6.3.1.1-r3.ebuild:

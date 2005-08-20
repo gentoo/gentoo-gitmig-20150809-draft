@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r3.ebuild,v 1.3 2005/08/17 16:37:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r3.ebuild,v 1.4 2005/08/20 19:57:52 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -87,6 +87,9 @@ src_unpack() {
 	# Removed glut, since we have separate freeglut/glut ebuilds
 	# Remove EGL, since Brian Paul says it's not ready for a release
 	echo "SRC_DIRS = glx/x11 mesa glu glw" >> ${HOSTCONF}
+
+	# Get rid of glut includes
+	rm -f ${S}/include/GL/glut*h
 
 	# r200 breaks without this, since it's the only EGL-enabled driver so far
 	echo "USING_EGL = 0" >> ${HOSTCONF}
