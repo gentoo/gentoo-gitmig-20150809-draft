@@ -1,0 +1,48 @@
+diff -ur silky-0.5.4/configure silky-0.5.4-new/configure
+--- silky-0.5.4/configure	2005-03-19 16:56:47.000000000 +0100
++++ silky-0.5.4-new/configure	2005-08-20 16:34:52.000000000 +0200
+@@ -26624,20 +26624,20 @@
+         echo "$as_me:$LINENO: checking for silc" >&5
+ echo $ECHO_N "checking for silc... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "silc" ; then
++        if $PKG_CONFIG --exists "silcclient" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking SILC_CFLAGS" >&5
+ echo $ECHO_N "checking SILC_CFLAGS... $ECHO_C" >&6
+-            SILC_CFLAGS=`$PKG_CONFIG --cflags "silc"`
++            SILC_CFLAGS=`$PKG_CONFIG --cflags "silcclient"`
+             echo "$as_me:$LINENO: result: $SILC_CFLAGS" >&5
+ echo "${ECHO_T}$SILC_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking SILC_LIBS" >&5
+ echo $ECHO_N "checking SILC_LIBS... $ECHO_C" >&6
+-            SILC_LIBS=`$PKG_CONFIG --libs "silc"`
++            SILC_LIBS=`$PKG_CONFIG --libs "silcclient"`
+             echo "$as_me:$LINENO: result: $SILC_LIBS" >&5
+ echo "${ECHO_T}$SILC_LIBS" >&6
+         else
+@@ -26645,7 +26645,7 @@
+             SILC_LIBS=""
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+-            SILC_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "silc"`
++            SILC_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "silcclient"`
+ 
+         fi
+ 
+Only in silky-0.5.4-new: configure.in
+diff -ur silky-0.5.4/src/main.c silky-0.5.4-new/src/main.c
+--- silky-0.5.4/src/main.c	2005-03-19 09:18:03.000000000 +0100
++++ silky-0.5.4-new/src/main.c	2005-08-20 16:25:12.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include <glib.h>
+ #include <glade/glade.h>
+ #include <gtk/gtk.h>
++#include <getopt.h>
+ #include <silcincludes.h>
+ #include <silcclient.h>
+ 

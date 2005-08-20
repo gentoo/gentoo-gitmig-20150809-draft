@@ -1,8 +1,19 @@
-MD5 b9fdb558af0dc40960d563eb57947c0f metadata.xml 221
-MD5 16075041be504ec047871dfff0bf92db ChangeLog 1958
-MD5 6d1f626cefd6e273bf77537e8d0f03e1 silky-0.5.2.ebuild 914
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf019be6e8c6cb0e6144f8bfffc063c8 silky-0.5.4.ebuild 915
 MD5 95d2f6925cd1116a28c6321d776ae382 silky-0.5.1.ebuild 914
-MD5 f04074a3bef29e8e6a52bcdff807d541 silky-0.5.4.ebuild 800
+MD5 6d1f626cefd6e273bf77537e8d0f03e1 silky-0.5.2.ebuild 914
+MD5 13cfa14a5792bbbd47334ef752f3f79d ChangeLog 2162
+MD5 b9fdb558af0dc40960d563eb57947c0f metadata.xml 221
+MD5 503565a71edccf299762fa80d5242be0 files/digest-silky-0.5.1 63
 MD5 900486724c3fdb64a030bf3ac331fa2c files/digest-silky-0.5.2 63
 MD5 64b0ff9aabc431d9800b93cfcb98002a files/digest-silky-0.5.4 63
-MD5 503565a71edccf299762fa80d5242be0 files/digest-silky-0.5.1 63
+MD5 799fd743b2b48bc4967bf8909af1bc05 files/silky-0.5.4-getopt.patch 1931
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDB0BoQlM6RnzZP+IRAoyHAKCmbS0bwy6RZghk3zIDt5qwTDSWdwCeKX0+
+0oo/tdK/IQL96QVZFOJLkEo=
+=V87c
+-----END PGP SIGNATURE-----
