@@ -1,8 +1,16 @@
-MD5 61f196112abc2a347c9898dc8011aeb4 cryptlib-3.1.ebuild 1576
-MD5 ce777d120cdfbf96d6b23919c8879626 cryptlib-3.2.ebuild 1576
-MD5 fe9d4aaa699ba00b504cff874ac2cfd9 ChangeLog 1956
-MD5 2e2fa706ab5b2e666b1f6017fcfd6a56 cryptlib-3.1_beta05.ebuild 1574
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e8ee9d0e7d7080c18fb2fb83617b806f ChangeLog 2255
+MD5 1dedee7a3250a51625eecd30517141ae cryptlib-3.2.ebuild 1669
 MD5 243594eeb2106bc851cb98b68fbd0b3c metadata.xml 217
-MD5 10b7a4980672a1ae9c230f3ab3120cff files/digest-cryptlib-3.1_beta05 116
-MD5 a431ffce099320ba14651701b73fcca0 files/digest-cryptlib-3.1 110
+MD5 e52f3dfabac86d07aaf126678d49af35 cryptlib-3.2.1.ebuild 1643
+MD5 e03b101c9f3f5cf0fcb1b32670788bdd files/digest-cryptlib-3.2.1 111
 MD5 ee1413d8c49650dde4b95ffe4b5bb8c6 files/digest-cryptlib-3.2 110
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBuVqmdTrptrqvGERAiBmAKCOyU9bR1JKO+avt9zZjyzwG8meQwCePV9a
+XPaBoCL3oImIAIohgMnK5zo=
+=xWk0
+-----END PGP SIGNATURE-----

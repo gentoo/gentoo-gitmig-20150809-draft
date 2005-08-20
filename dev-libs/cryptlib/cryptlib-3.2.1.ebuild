@@ -1,19 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.1_beta05.ebuild,v 1.7 2005/02/17 17:15:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.2.1.ebuild,v 1.1 2005/08/20 08:09:58 dragonheart Exp $
+
+inherit versionator multilib
 
 S=${WORKDIR}
-MY_PV=${PV/./}; MY_PV=${MY_PV/_/}
+MY_PV=$(delete_all_version_separators ${PV})
 DESCRIPTION="Powerful security toolkit for adding encryption to software"
 HOMEPAGE="http://www.cs.auckland.ac.nz/~pgut001/cryptlib/"
-SRC_URI="mirror://gentoo/cl${MY_PV}.zip
+SRC_URI="ftp://ftp.franken.de/pub/crypt/cryptlib/cl${MY_PV}.zip
 	doc? ( ftp://ftp.franken.de/pub/crypt/cryptlib/manual.pdf )"
 
 LICENSE="Sleepycat"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 
-IUSE="static doc"
+IUSE="doc static"
 
 DEPEND=">=sys-apps/sed-4
 	app-arch/unzip"
@@ -22,10 +24,7 @@ RDEPEND=""
 src_unpack() {
 	# Can't use unpack because we need the '-a' option
 	unzip -qoa ${DISTDIR}/cl${MY_PV}.zip
-	sed -i \
-		-e 's/make endian/$(MAKE) endian/' \
-		-e 's/make TARGET/$(MAKE) TARGET/' makefile || \
-			die "sed makefile failed"
+	sed -i -e 's/@?make/$(MAKE)/g' makefile || die "sed makefile failed"
 }
 
 src_compile() {
@@ -40,7 +39,8 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so libcl.so*              || die "dolib.so failed"
+	dolib.so libcl.so.${PV}   || die "dolib.so failed"
+	dosym /usr/$(get_libdir)/libcl.so.${PV} /usr/$(get_libdir)/libcl.so
 	if useq static ; then
 		dolib.a libcl.a             || die "dolib.a failed"
 	fi
