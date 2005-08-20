@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1c7dbef97fa1bf38acc38cf34efede20 metadata.xml 1119
 MD5 51dd03f72598578b23e1b5c8d14ee4cd embryo-0.9.1.007.ebuild 320
 MD5 d848e297125e97a94447952f5b4c3260 embryo-0.9.1.013.ebuild 303
@@ -6,3 +9,10 @@ MD5 dd60e8885817007fc93f43ec634a5d6e ChangeLog 307
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-embryo-9999 0
 MD5 b6ef6cfa676a5e3846af81553340902c files/digest-embryo-0.9.1.007 68
 MD5 fd84de745fbed8a2d007c1d217fe5fcb files/digest-embryo-0.9.1.013 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBrz9gIKl8Uu19MoRAmI/AJsHoc+Ujjx2DD/Lf59oUhCH8gTCMQCfSb+p
+iEO4C+I8AhsBDQp5l2IX4y4=
+=uyb/
+-----END PGP SIGNATURE-----
