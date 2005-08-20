@@ -2,10 +2,10 @@
 
 # Please uncomment the type of mouse you have and the appropriate MOUSEDEV entry
 
-#MOUSE=ps2
+MOUSE=ps2
 #MOUSE=imps2
 #MOUSEDEV=/dev/psaux
-#MOUSEDEV=/dev/input/mice
+MOUSEDEV=/dev/input/mice
 
 # Extra settings
 
