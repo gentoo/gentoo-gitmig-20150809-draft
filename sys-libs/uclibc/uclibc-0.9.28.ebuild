@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.3 2005/08/19 05:22:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.4 2005/08/20 06:55:20 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -33,13 +33,17 @@ LICENSE="LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="-* ~sh" #~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
+KEYWORDS="-* sh" #~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
 IUSE="build debug hardened ipv6 minimal nls pregen userlocales wordexp"
 RESTRICT="nostrip"
 
-DEPEND="virtual/os-headers"
+if [[ ${CTARGET} == ${CHOST} ]] ; then
+	DEPEND="virtual/os-headers"
+	PROVIDE="virtual/libc"
+elif [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+	DEPEND="${CATEGORY}/linux-headers ${CATEGORY}/binutils ${CATEGORY}/gcc"
+fi
 RDEPEND=""
-[[ ${CTARGET} == ${CHOST} ]] && PROVIDE="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
@@ -82,6 +86,8 @@ pkg_setup() {
 		die "switching from nls is baaaad"
 	fi
 }
+
+PIE_STABLE="arm mips ppc x86"
 
 CPU_AMD64=""
 CPU_ARM="GENERIC_ARM ARM{610,710,720T,920T,922T,926T,_{SA110,SA1100,XSCALE}}"
@@ -128,6 +134,7 @@ src_unpack() {
 		&& subversion_src_unpack \
 		|| unpack ${A}
 	cd "${S}"
+
 	check_cpu_opts
 
 	echo
@@ -233,6 +240,7 @@ src_unpack() {
 	# we need to do it independently of hardened to get ssp.c built into libc
 	sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
 	echo "UCLIBC_HAS_SSP=y" >> .config
+	echo "SSP_USE_ERANDOM=n" >> .config
 	echo "PROPOLICE_BLOCK_ABRT=n" >> .config
 	if use debug ; then
 		echo "PROPOLICE_BLOCK_SEGV=y" >> .config
@@ -242,23 +250,24 @@ src_unpack() {
 		echo "PROPOLICE_BLOCK_KILL=y" >> .config
 	fi
 
-	if use hardened ; then
+	echo "UCLIBC_BUILD_RELRO=y" >> .config
+	echo "UCLIBC_BUILD_NOEXECSTACK=y" >> .config
+	if use hardened && has $(tc-arch) ${PIE_STABLE} ; then
 		echo "UCLIBC_BUILD_PIE=y" >> .config
-		echo "SSP_QUICK_CANARY=n" >> .config
-		echo "UCLIBC_BUILD_SSP=y" >> .config
-		echo "UCLIBC_BUILD_RELRO=y" >> .config
-		echo "UCLIBC_BUILD_NOW=y" >> .config
-		echo "UCLIBC_BUILD_NOEXECSTACK=y" >> .config
 	else
 		echo "UCLIBC_BUILD_PIE=n" >> .config
+	fi
+	if use hardened ; then
+		echo "SSP_QUICK_CANARY=n" >> .config
+		echo "UCLIBC_BUILD_SSP=y" >> .config
+		echo "UCLIBC_BUILD_NOW=y" >> .config
+	else
 		echo "SSP_QUICK_CANARY=y" >> .config
 		echo "UCLIBC_BUILD_SSP=n" >> .config
-		echo "UCLIBC_BUILD_RELRO=n" >> .config
 		echo "UCLIBC_BUILD_NOW=n" >> .config
-		echo "UCLIBC_BUILD_NOEXECSTACK=n" >> .config
 	fi
 
-	# we are building against system installed kernel headers
+	# setup build and run paths
 	local cross=${CTARGET}-
 	type -p ${cross}ar > /dev/null || cross=""
 	sed -i \
@@ -270,8 +279,6 @@ src_unpack() {
 		.config || die
 
 	yes "" 2> /dev/null | make -s oldconfig > /dev/null || die "could not make oldconfig"
-
-	chmod +x extra/scripts/relative_path.sh
 
 	cp .config myconfig
 
@@ -354,7 +361,7 @@ src_install() {
 
 	if ! use build ; then
 		dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
-		doman docs/man/*.1
+		doman docs/man/*.[1-9]
 	fi
 }
 
