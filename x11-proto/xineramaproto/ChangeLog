@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/panoramixproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.4 2005/08/20 23:04:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.5 2005/08/20 23:05:05 spyderous Exp $
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xineramaproto-1.1.ebuild:
+  Get rid of older ebuild.
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   files/digest-xineramaproto-1.1-r1:
