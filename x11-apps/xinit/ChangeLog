@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.6 2005/08/16 20:18:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.7 2005/08/20 20:21:19 spyderous Exp $
+
+  20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; files/xinitrc:
+  System files shouldn't have a . prefix. Change to Xresources and Xmodmap.
 
   16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; files/chooser.sh,
   files/xinitrc:

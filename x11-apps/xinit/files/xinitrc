@@ -4,8 +4,8 @@
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 xinitdir=/usr/lib/X11/xinit
-sysresources=$xinitdir/.Xresources
-sysmodmap=$xinitdir/.Xmodmap
+sysresources=$xinitdir/Xresources
+sysmodmap=$xinitdir/Xmodmap
 
 # merge in defaults and keymaps
 
