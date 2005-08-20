@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.125 2005/07/15 12:30:13 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.126 2005/08/20 03:46:44 vapier Exp $
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org> files/sshd.rc6:
+  Before starting sshd, sanity check the config file #101893 by Eric Brown.
 
 *openssh-4.1_p1-r1 (15 Jul 2005)
 *openssh-4.0_p1-r2 (15 Jul 2005)
