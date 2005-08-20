@@ -1,7 +1,9 @@
 For new installations:
   touch ${MY_INSTALLDIR}/.htaccess ${MY_INSTALLDIR}/config.php
-  mkdir ${MY_INSTALLDIR}/albums
-  chown ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} ${MY_INSTALLDIR}/.htaccess ${MY_INSTALLDIR}/config.php ${MY_INSTALLDIR}/albums
+  chown ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} ${MY_INSTALLDIR}/.htaccess ${MY_INSTALLDIR}/config.php
 
-Then point your browser to http://${VHOST_HOSTNAME}/gallery/setup/
+Then create an albums directory and set permissions, e.g.,
+ chown ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} my_albums_directory
+
+Now, point your browser to http://${VHOST_HOSTNAME}${VHOST_APPDIR}/setup/
 and follow the instructions.

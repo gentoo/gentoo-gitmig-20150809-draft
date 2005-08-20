@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.20 2005/06/30 20:46:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.21 2005/08/20 22:00:21 rl03 Exp $
+
+  20 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
+  Fixed postinstall instructions wrt bug #103096.
 
   30 Jun 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
   gallery-1.5.ebuild:
