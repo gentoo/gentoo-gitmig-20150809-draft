@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 93ad4ae30cee654d5998fb3fe2b958b1 emotion-0.0.1.003.ebuild 461
 MD5 1562d70842c98fac8b76917c103917f7 emotion-0.0.1.004.ebuild 444
@@ -6,3 +9,10 @@ MD5 e80d95d8833877a69419f5239b83cb53 ChangeLog 336
 MD5 7b4acc459fa0f45ac498b9d0f50b1cbc files/digest-emotion-0.0.1.003 69
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emotion-9999 0
 MD5 aec0d2ba104188e40464ed83e07672df files/digest-emotion-0.0.1.004 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBrz6gIKl8Uu19MoRAlKXAJ9bQVxrnjCMza4gKX4OLu6b0QId2ACcDAS4
+0BXdhYWrd1+9LxPFcQnUEbM=
+=Quat
+-----END PGP SIGNATURE-----

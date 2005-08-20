@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9c0335f523e6d123f4432085e3f64738 epsilon-9999.ebuild 380
 MD5 4c5579aeec205ecb5bf7526d2eba3256 metadata.xml 1064
 MD5 7a0217f1b88daeb5e972ada2e80b44a5 epsilon-0.3.0.003.ebuild 385
@@ -6,3 +9,10 @@ MD5 b8d87d62c420fe3441ef08ff481710b0 epsilon-0.3.0.004.ebuild 368
 MD5 d6f81364c4ca445f3916173d392fcadb files/digest-epsilon-0.3.0.003 69
 MD5 696410bed14680c420461e7ad3390485 files/digest-epsilon-0.3.0.004 69
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-epsilon-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBr3TgIKl8Uu19MoRAtDnAKCAD6zZs7yTfEp/kH628CoBrxU5igCfc67e
+PCyKWcWtQx1jI1F3EvsS3jE=
+=vA/8
+-----END PGP SIGNATURE-----
