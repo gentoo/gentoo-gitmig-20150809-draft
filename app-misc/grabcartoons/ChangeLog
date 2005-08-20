@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/grabcartoons
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.1 2005/08/20 05:04:18 vapier Exp $
+
+*grabcartoons-1.11 (20 Aug 2005)
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Grzegorz Artur Daszuta #68777.

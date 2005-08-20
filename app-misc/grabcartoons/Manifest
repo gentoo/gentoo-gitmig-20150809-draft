@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0693318936638ffe2beb7aa93e94d7d2 grabcartoons-1.11.ebuild 514
+MD5 bf570f7e9e4ea73f135a07d020f462ff ChangeLog 371
+MD5 f17e549dc5412e14a5ddbc1e99aee567 files/digest-grabcartoons-1.11 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBrn2gIKl8Uu19MoRAvH2AJkB/zt4bQyYecJGPua7M0xbRgevgACdH6RE
+DS2p4ZjFf8QEuZy5AxAofM0=
+=atYH
+-----END PGP SIGNATURE-----
