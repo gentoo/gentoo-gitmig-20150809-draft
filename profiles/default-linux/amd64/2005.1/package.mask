@@ -1,8 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/package.mask,v 1.1 2005/06/04 21:20:09 eradicator Exp $
-
-# Jeremy Huddleston <eradicator@gentoo.org>
-# Use linux headers which give us asm-i386 headers as well
-<sys-kernel/linux-headers-2.6.8.1-r3
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/package.mask,v 1.2 2005/08/20 00:45:37 vapier Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # These are provided by non-emul packages now
