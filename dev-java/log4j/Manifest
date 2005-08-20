@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb267fb725658a1444793d7e58673b4f ChangeLog 3753
+MD5 d8ec4b1d68cedc3b613772a44ba3ebc2 ChangeLog 4002
 MD5 8e947ece0ccb5698c9d1bae8dfcfc6e8 log4j-1.2.9.ebuild 1635
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 5e6d09fc69c440d98f311a0e8062e544 log4j-1.2.11.ebuild 1645
+MD5 429d1aa64a490d6ed97645256aa927e1 log4j-1.2.11.ebuild 1791
 MD5 d55e5a6d5e0b3b7044122df1b3c55830 files/digest-log4j-1.2.9 72
 MD5 c7a6fa71142e97d11735ceccc088752b files/digest-log4j-1.2.11 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBj+6QiJ/wx066S4RAsXMAJ0dz+Bo11qsgKBBfUypXbeDxoKnywCfXCTk
-PsEl55QctleSW3o0Pk5pIMw=
-=oBWn
+iD8DBQFDBxtPQiJ/wx066S4RAiDOAJ9LvKaYQR8e1hB2Bghf6ApxWAd+jACginpO
+LAmZ7oyGbQBD9Q470k8wPPw=
+=JhR4
 -----END PGP SIGNATURE-----

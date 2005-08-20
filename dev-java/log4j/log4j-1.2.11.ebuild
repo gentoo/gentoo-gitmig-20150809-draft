@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.11.ebuild,v 1.1 2005/08/19 20:22:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.11.ebuild,v 1.2 2005/08/20 11:59:53 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,11 @@ IUSE="doc javamail jikes jms jmx source"
 RDEPEND=">=virtual/jre-1.4
 	javamail? ( dev-java/sun-javamail-bin dev-java/sun-jaf-bin )
 	jmx? ( dev-java/jmx )
-	jms? || ( =dev-java/openjms-0.7.6* =dev-java/openjms-bin-0.7.6* )"
+	jms? ( =dev-java/openjms-bin-0.7.6 )"
+
+# We should get log4j working with openjms but at the moment that would bring
+# a circular dependency.
+#	jms? ( || (=dev-java/openjms-0.7.6* =dev-java/openjms-bin-0.7.6* ))"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
 	jikes? ( dev-java/jikes )

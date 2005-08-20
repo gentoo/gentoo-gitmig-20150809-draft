@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.32 2005/08/19 20:22:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.33 2005/08/20 11:59:53 betelgeuse Exp $
+
+  20 Aug 2005; Petteri Räty <betelgeuse@gentoo.org> log4j-1.2.11.ebuild:
+  Reverted the behaviour of the jms use flag to the old one until a fix to the 
+  circular dependency that openjms from source brings can be solved. Fixes
+  bug #103112 too.
 
 *log4j-1.2.11 (19 Aug 2005)
 
