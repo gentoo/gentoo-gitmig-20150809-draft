@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.44 2005/07/12 00:02:32 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.45 2005/08/20 18:40:02 flameeyes Exp $
+
+  20 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gnome-system-tools-1.2.0-r1.ebuild:
+  Depend on shadow only for GNU userland. See bug #103121.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
   gnome-system-tools-1.2.0-r1.ebuild:

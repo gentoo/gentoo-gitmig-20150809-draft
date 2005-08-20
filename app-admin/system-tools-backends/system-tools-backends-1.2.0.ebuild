@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-1.2.0.ebuild,v 1.12 2005/07/11 23:39:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-1.2.0.ebuild,v 1.13 2005/08/20 18:35:25 flameeyes Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="net-misc/openssh
-	sys-apps/shadow
+	userland_GNU? ( sys-apps/shadow )
 	>=dev-libs/libxml2-2.4.12
 	!<app-admin/gnome-system-tools-1.1.91"
 

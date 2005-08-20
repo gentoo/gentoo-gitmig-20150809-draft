@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0-r1.ebuild,v 1.12 2005/07/12 00:02:32 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0-r1.ebuild,v 1.13 2005/08/20 18:40:02 flameeyes Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="nfs samba"
 
 RDEPEND="net-misc/openssh
-	sys-apps/shadow
+	userland_GNU? ( sys-apps/shadow )
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libgnomeui-2.9.0
 	>=gnome-base/libglade-2.4
