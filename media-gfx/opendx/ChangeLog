@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/opendx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.14 2005/07/25 13:39:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.15 2005/08/20 07:56:00 hansmi Exp $
+
+  20 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  opendx-4.3.2-r1.ebuild:
+  Stable on ppc (bug #101923).
 
   25 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   opendx-4.3.2-r1.ebuild:
