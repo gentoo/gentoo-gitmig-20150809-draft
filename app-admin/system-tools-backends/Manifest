@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ba83f4bb9234feb7eebf435b5e41c23 ChangeLog 1453
+MD5 df90c405b4cf24e88dcbfdeca263d8ce system-tools-backends-1.3.2.ebuild 763
 MD5 aab38d32daaa9ee6e5c99cd978603fac system-tools-backends-1.2.0.ebuild 754
+MD5 5276a301134fb13a7d270ecb7f056dc5 ChangeLog 1608
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 946729e7340edc6a1bae2e1a5e02a1d2 files/digest-system-tools-backends-1.2.0 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDB3gVj5H05b2HAEkRAmk9AKCX0wCICn/83lHRq2X6hHM8cQ0DygCdHDo1
-LAHHUmiXaI0Mg2n8KlUqu1g=
-=mf/0
------END PGP SIGNATURE-----
+MD5 bede0b202b80dfb05045d2fcf8b26773 files/digest-system-tools-backends-1.3.2 80
