@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61dc278613f2255afae0b438e0694b73 xcursorgen-0.99.0.ebuild 474
-MD5 c3fecfc4b7aa0a360901c71966ebe6f0 ChangeLog 577
+MD5 caa541c8ce2d5ee8aa6c8bdb95212044 ChangeLog 669
+MD5 a7561816df8d853c0b2320c50203e993 xcursorgen-0.99.0.ebuild 481
 MD5 b44d55ae8bcce033bcdbf1d416a86acb files/digest-xcursorgen-0.99.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDAQDn2G5bA0cA/ScRAs1EAJ98pH/gAvMN93CMdcawwSXi4nyJQACgj5Ga
-1zEeRHnu3mqnfs4WUkyAfO8=
-=cff9
------END PGP SIGNATURE-----

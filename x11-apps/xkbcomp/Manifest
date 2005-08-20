@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7671491472c6dbc76033ddb9be5df701 xkbcomp-0.99.0-r1.ebuild 562
-MD5 5a89529a22555a2d55d74cc2db3a4d2b xkbcomp-0.99.0.ebuild 434
-MD5 29fbdc88a26221862c0c1e462fa47845 ChangeLog 723
-MD5 ac7b6aeddc4bf31acc3f0b13d6128ff8 files/digest-xkbcomp-0.99.0 67
+MD5 4ee0ae539c55ada13c74803ca5682d17 ChangeLog 840
+MD5 8ac6c1ea716bb270def1048ab229f8ee xkbcomp-0.99.0.ebuild 440
+MD5 4c9778fb9fef161182d6b22da187985c xkbcomp-0.99.0-r1.ebuild 569
 MD5 ac7b6aeddc4bf31acc3f0b13d6128ff8 files/digest-xkbcomp-0.99.0-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDAQDn2G5bA0cA/ScRApXHAJ9v4aZwDHmNhtUXsUG0YKE9EytNkACgxXGV
-K7LRc2lDAGCftwz0zSZjgIY=
-=ns7w
------END PGP SIGNATURE-----
+MD5 ac7b6aeddc4bf31acc3f0b13d6128ff8 files/digest-xkbcomp-0.99.0 67
