@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.4 2005/08/15 18:11:05 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.5 2005/08/20 23:02:30 lu_zero Exp $
+
+  20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> libXft-2.1.7.ebuild:
+  Marked ~ppc
 
   15 Aug 2005; Herbie Hopkins <herbs@gentoo.org> libXft-2.1.7.ebuild:
   Marked ~amd64.
