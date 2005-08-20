@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2400
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/ChangeLog,v 1.1 2005/08/16 22:37:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/ChangeLog,v 1.2 2005/08/20 13:55:49 genstef Exp $
+
+  20 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  rt2400-1.2.2_beta3.ebuild:
+  Give out a better error message for SMP not supported
 
 *rt2400-1.2.2_beta3 (16 Aug 2005)
 

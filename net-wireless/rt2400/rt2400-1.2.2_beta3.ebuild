@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.1 2005/08/16 22:37:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.2 2005/08/20 13:55:49 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -19,7 +19,7 @@ DEPEND="net-wireless/wireless-tools
 S=${WORKDIR}/${MY_P}
 MODULE_NAMES="rt2400(net:${S}/Module)"
 CONFIG_CHECK="NET_RADIO BROKEN_ON_SMP"
-SMP_ERROR="SMP Processors and Kernels are currently not supported"
+BROKEN_ON_SMP_ERROR="SMP Processors and Kernels are currently not supported"
 MODULESD_RT2400_ALIASES=('ra? rt2400')
 
 
