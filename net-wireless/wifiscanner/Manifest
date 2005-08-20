@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb0063a507510cd6dc50eb89f69b771c ChangeLog 546
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
-MD5 402ae0eb2da9bcd32db8c36c7b7e5ec4 wifiscanner-0.9.6.ebuild 732
+MD5 81a70000b1df2a828dcb1f79167d0e58 ChangeLog 655
+MD5 7ab55cf1ed1fe89ec130214b13e3ec59 wifiscanner-0.9.6.ebuild 732
 MD5 10cf9090b7a15f68769afc6f412843b5 files/digest-wifiscanner-0.9.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCchhxmdTrptrqvGERAi+3AJ48qmbMGHrnxVPBh3Kc3+S8CLSjRgCffh+/
-7G+wU9Hkx7gw5mBYRPPLzws=
-=20o5
------END PGP SIGNATURE-----
