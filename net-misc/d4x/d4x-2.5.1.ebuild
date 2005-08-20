@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.1.ebuild,v 1.2 2005/08/18 22:28:48 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.1.ebuild,v 1.3 2005/08/20 23:40:39 smithj Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -17,6 +17,7 @@ LICENSE="Artistic"
 DEPEND=">=x11-libs/gtk+-2.0.6
 	>=dev-libs/glib-2.0.6
 	>=sys-devel/gettext-0.11.2
+	>=dev-libs/openssl-0.9.7f
 	esd? ( >=media-sound/esound-0.2.7 )"
 
 src_unpack() {
