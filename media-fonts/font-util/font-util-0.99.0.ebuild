@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/font-util-0.99.0.ebuild,v 1.3 2005/08/15 17:53:40 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/font-util-0.99.0.ebuild,v 1.4 2005/08/20 22:14:02 lu_zero Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -8,7 +8,7 @@ SNAPSHOT="yes"
 inherit x-modular
 
 DESCRIPTION="BigReqs prototype headers"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
