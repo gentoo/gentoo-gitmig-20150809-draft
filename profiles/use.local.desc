@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1395 2005/08/20 00:01:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1396 2005/08/20 01:50:46 vericgar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -844,11 +844,11 @@ net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-www/apache:lingerd - Enable support for lingerd
-net-www/apache:mpm-leader - Adds support for the leader Apache MPM
-net-www/apache:mpm-peruser - Adds support for the peruser Apache MPM
-net-www/apache:mpm-prefork - Adds support for the prefork Apache MPM
-net-www/apache:mpm-threadpool - Adds support for the threadpool Apache MPM
-net-www/apache:mpm-worker - Adds support for the worker Apache MPM
+net-www/apache:mpm-leader - (experimental) Leader MPM - leaders/followers varient of worker MPM
+net-www/apache:mpm-peruser - (experimental) Peruser MPM - child processes have seperate user/group ids
+net-www/apache:mpm-prefork - Prefork MPM - non-threaded, forking MPM - similiar manner to Apache 1.3
+net-www/apache:mpm-threadpool - (experimental) Threadpool MPM - keeps pool of idle threads to handle requests
+net-www/apache:mpm-worker - Worker MPM - hybrid multi-process multi-thread MPM
 net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
