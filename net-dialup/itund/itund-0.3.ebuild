@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/itund-0.3.ebuild,v 1.2 2005/07/31 11:14:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/itund-0.3.ebuild,v 1.3 2005/08/20 20:13:00 sbriesen Exp $
 
 inherit eutils
 
@@ -17,14 +17,14 @@ DEPEND="sys-libs/zlib
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# patch Makefile to use our CFLAGS
 	sed -i -e "s:^\(CFLAGS=.*\) -O2 :\1 ${CFLAGS} :g" Makefile
 
 	# apply CAPI V3 patch conditionally
 	grep 2>/dev/null -q CAPI_LIBRARY_V2 /usr/include/capiutils.h \
-		&& epatch ${FILESDIR}/${P}-capiv3.patch
+		&& epatch "${FILESDIR}/${P}-capiv3.patch"
 }
 
 src_compile() {
