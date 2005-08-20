@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1394 2005/08/19 19:39:01 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1395 2005/08/20 00:01:26 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -931,6 +931,7 @@ sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube
 sys-boot/arcboot:ip27 - Disables support for SGI Origin (IP27)
 sys-boot/arcboot:ip28 - Disables support for SGI Indigo2 Impact R10000 (IP28)
 sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
+sys-boot/grub:custom-cflags - Enables custom cflags
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
