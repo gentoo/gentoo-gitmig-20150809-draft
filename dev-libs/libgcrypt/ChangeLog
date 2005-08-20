@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.57 2005/08/17 22:41:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.58 2005/08/20 09:05:53 dragonheart Exp $
+
+*libgcrypt-1.2.1-r1 (20 Aug 2005)
+
+  20 Aug 2005; Daniel Black <dragonheart@gentoo.org>  libgcrypt-1.2.1-r1.ebuild files/digest-libgcrypt-1.2.1-r1
+  revision bump to force pic static libraries (bug #96022)
 
   17 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> libgcrypt-1.2.1.ebuild:
   Stable on sh.
