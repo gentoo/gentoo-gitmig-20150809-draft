@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.28 2005/07/31 04:22:27 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.29 2005/08/20 18:55:20 grobian Exp $
+
+  20 Aug 2005; Fabian Groffen <grobian@gentoo.org> xforms-1.0.90.ebuild:
+  Marking ~ppc-macos (bug #73012)
 
   31 Jul 2005; Marcelo Goes <vanquirius@gentoo.org> xforms-1.0.ebuild,
   xforms-1.0-r1.ebuild, xforms-1.0.90.ebuild:
