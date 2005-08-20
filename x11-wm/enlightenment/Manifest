@@ -1,16 +1,24 @@
-MD5 e58a523f218b83377e26940d3b59d4c7 enlightenment-0.16.5-r4.ebuild 1602
-MD5 7ed1cbab645402fbf7666ed95588542d metadata.xml 1572
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 242498d15c9802751483069071de9743 enlightenment-0.16.6.ebuild 1850
-MD5 f9bfbd20936062acfaf5b489045d0a25 enlightenment-0.16.7.2.ebuild 1112
-MD5 01f03287317f38152e719341daf701bf ChangeLog 5629
+MD5 7ed1cbab645402fbf7666ed95588542d metadata.xml 1572
+MD5 e58a523f218b83377e26940d3b59d4c7 enlightenment-0.16.5-r4.ebuild 1602
 MD5 2750723b8c2d9fd9e62559097bb44aef enlightenment-0.16.9999.ebuild 1455
-MD5 7c6ecfb48fc4feea8537def3b1bdead0 enlightenment-0.16.7.1.ebuild 1104
+MD5 01f03287317f38152e719341daf701bf ChangeLog 5629
+MD5 f9bfbd20936062acfaf5b489045d0a25 enlightenment-0.16.7.2.ebuild 1112
 MD5 c0e73afcafa0fbb90610eef266a75c82 files/0.16.6-kde-menu.patch 454
-MD5 943d1947d4bd7b7ee6387ba5827166a4 files/enlightenment 33
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enlightenment-0.16.9999 0
-MD5 01290d54c8d28735c2fe344796bfa7ba files/digest-enlightenment-0.16.7.2 75
-MD5 24c537c993ea9c463f993b24a872183c files/digest-enlightenment-0.16.6 74
-MD5 a14032af79e61036a0a14c903b11b774 files/digest-enlightenment-0.16.7.1 75
-MD5 fbe59612181a2fb8c213b815a2f45ebd files/0.16.6-edox.patch 2775
-MD5 de50be73f3493d4787a6533b08077d06 files/cursors.cfg 686
 MD5 d819ee46c7b2aa186f90e4bd21ae9ec9 files/digest-enlightenment-0.16.5-r4 74
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enlightenment-0.16.9999 0
+MD5 fbe59612181a2fb8c213b815a2f45ebd files/0.16.6-edox.patch 2775
+MD5 01290d54c8d28735c2fe344796bfa7ba files/digest-enlightenment-0.16.7.2 75
+MD5 943d1947d4bd7b7ee6387ba5827166a4 files/enlightenment 33
+MD5 24c537c993ea9c463f993b24a872183c files/digest-enlightenment-0.16.6 74
+MD5 de50be73f3493d4787a6533b08077d06 files/cursors.cfg 686
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDBrqGgIKl8Uu19MoRAguOAJ0a7RQ6w+DJPeolPtV3hBkDHFHGqwCfVM+y
+o9DpzFWRHzWXamA/473/H50=
+=iGKa
+-----END PGP SIGNATURE-----
