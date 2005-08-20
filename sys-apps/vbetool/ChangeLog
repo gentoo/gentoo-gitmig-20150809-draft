@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vbetool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.2 2005/08/08 21:39:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.3 2005/08/20 08:16:43 robbat2 Exp $
+
+  20 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
+  files/vbetool-0.3-pci-compile-fix.patch:
+  Bug #103062, use a slightly better PCI bug patch.
 
 *vbetool-0.3 (08 Aug 2005)
 
