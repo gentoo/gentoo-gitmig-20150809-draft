@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.395 2005/07/28 22:59:12 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.396 2005/08/20 01:31:10 vericgar Exp $
+
+*apache-2.0.54-r14 (20 Aug 2005)
+*apache-2.0.54-r9 (20 Aug 2005)
+
+  20 Aug 2005; Michael Stewart <vericgar@gentoo.org>
+  +apache-2.0.54-r9.ebuild, +apache-2.0.54-r14.ebuild:
+  Add patch to fix byterange bug that can cause a DoS. Fixes bug 102991
 
   28 Jul 2005; Michael Stewart <vericgar@gentoo.org>
   +apache-2.0.54-r13.ebuild:
