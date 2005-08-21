@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.17 2005/07/29 16:44:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.18 2005/08/21 11:46:58 ka0ttic Exp $
+
+*gnome-vfsmm-2.11.1 (21 Aug 2005)
+*gnome-vfsmm-2.10.0 (21 Aug 2005)
+
+  21 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +gnome-vfsmm-2.10.0.ebuild,
+  +gnome-vfsmm-2.11.1.ebuild:
+  Dual version bumps; added 2.10.0 and 2.11.1 (masked).
 
   29 Jul 2005; Guy Martin <gmsoft@gentoo.org> gnome-vfsmm-2.6.1.ebuild:
   Stable on hppa.
