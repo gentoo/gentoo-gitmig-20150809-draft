@@ -23,7 +23,7 @@ MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.9_p1-opensc.patch.bz2 1381
 MD5 85aadb893604467d9fbce08e15c1d445 files/digest-openssh-4.0_p1-r2 360
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 4bee5c8ce11f30487154c3742e004f7d files/openssh-4.0_p1-smartcard-ldap-happy.patch 545
-MD5 95e348031a7ed6905b9c3230bc7f916f files/sshd.rc6 1235
+MD5 5afc89edd73f522a5b3757a518dffb34 files/sshd.rc6 1293
 MD5 73f3b46d27bd413eb79350a2ce412bf6 files/openssh-3.9_p1-pamfix.patch.bz2 1125
 MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
 MD5 f68837d6568b1c98ef01db0ab629a171 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5935
@@ -49,7 +49,7 @@ MD5 f5e33d1831f95c821a08893bcf3e3f5f files/openssh-4.0_p1-sftplogging-1.2-gentoo
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBqfGgIKl8Uu19MoRAkXKAJ417gZmvrPEeCMlUZ/oBAQToBamXACeNAZ3
-Ld5jdAu4gpb8S5cALbqjOBQ=
-=5iyR
+iD8DBQFDCNGfgIKl8Uu19MoRAo7xAJ95T6a8fdlK1Ie3dFh0DZCxMxlHCgCfVANS
+4KdLbO96GUzNGbGIHFTOkm4=
+=aXZ8
 -----END PGP SIGNATURE-----
