@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.1_rc2.ebuild,v 1.1 2005/08/21 00:33:05 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.1_rc2.ebuild,v 1.2 2005/08/21 17:33:40 rl03 Exp $
 
 inherit webapp
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="imagemagick"
 
 RDEPEND=">=net-www/apache-1.3.24-r1
-	>=virtual/php-4.1
+	virtual/php
 	>=media-gfx/jhead-1.6
 	app-arch/unzip
 	media-libs/jpeg
