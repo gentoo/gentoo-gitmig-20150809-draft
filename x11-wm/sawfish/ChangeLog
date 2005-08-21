@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.54 2005/08/16 22:57:43 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.55 2005/08/21 16:12:33 agriffis Exp $
+
+  21 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  sawfish-1.3.20040120-r1.ebuild:
+  stable alpha amd64 ia64 x86
 
 *sawfish-1.3.20050816 (16 Aug 2005)
 
