@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r4.ebuild,v 1.9 2005/08/09 19:29:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.11-r4.ebuild,v 1.10 2005/08/21 18:27:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch ${FILESDIR}/pcimodules-${P}.diff
 	epatch ${FILESDIR}/${PV}-sysfs.patch #38645
