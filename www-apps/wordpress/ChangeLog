@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.28 2005/08/16 02:27:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.29 2005/08/21 06:50:13 tester Exp $
+
+  21 Aug 2005; Olivier Crête <tester@gentoo.org> wordpress-1.5.2.ebuild:
+  Stable on x86 per security bug #102002
 
   16 Aug 2005; Jason Wever <weeve@gentoo.org> wordpress-1.5.2.ebuild:
   Stable on SPARC wrt bug #102002.
