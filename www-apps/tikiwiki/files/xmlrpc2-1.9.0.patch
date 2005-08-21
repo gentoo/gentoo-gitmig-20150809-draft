@@ -1,24 +1,6 @@
-===================================================================
-RCS file: /cvsroot/tikiwiki/tiki/commxmlrpc.php,v
-retrieving revision 1.14.2.1
-retrieving revision 1.14.2.2
-diff -u -r1.14.2.1 -r1.14.2.2
---- tikiwiki/tiki/commxmlrpc.php	2005/01/01 00:11:21	1.14.2.1
-+++ tikiwiki/tiki/commxmlrpc.php	2005/08/18 09:13:33	1.14.2.2
-@@ -1,19 +1,18 @@
- <?php
- 
--// $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/files/xmlrpc2-1.9.0.patch,v 1.1 2005/08/21 16:40:31 rl03 Exp $
-+// $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/files/xmlrpc2-1.9.0.patch,v 1.1 2005/08/21 16:40:31 rl03 Exp $
- 
- // Copyright (c) 2002-2005, Luis Argerich, Garland Foster, Eduardo Polidor, et. al.
- // All Rights Reserved. See copyright.txt for details and a complete list of authors.
- // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
- 
--# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/files/xmlrpc2-1.9.0.patch,v 1.1 2005/08/21 16:40:31 rl03 Exp $
-+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/files/xmlrpc2-1.9.0.patch,v 1.1 2005/08/21 16:40:31 rl03 Exp $
- include_once("lib/init/initlib.php");
- include_once ('db/tiki-db.php');
+--- commxmlrpc.php.old	2005-08-21 15:01:21.000000000 -0400
++++ commxmlrpc.php	2005-08-21 15:01:57.000000000 -0400
+@@ -10,8 +10,7 @@
  
  include_once ('lib/tikilib.php');
  include_once ('lib/userslib.php');
@@ -28,7 +10,7 @@ diff -u -r1.14.2.1 -r1.14.2.2
  include_once ('lib/commcenter/commlib.php');
  
  $tikilib = new Tikilib($dbTiki);
-@@ -28,7 +27,7 @@
+@@ -26,7 +25,7 @@
  	"sendArticle" => array("function" => "sendArticle")
  );
  
@@ -37,7 +19,7 @@ diff -u -r1.14.2.1 -r1.14.2.2
  
  /* Validates the user and returns user information */
  function sendPage($params) {
-@@ -51,18 +50,18 @@
+@@ -49,18 +48,18 @@
  	$description = $pp->scalarval();
  	// 
  	if (!$userlib->validate_user($username, $password, '', '')) {
@@ -59,7 +41,7 @@ diff -u -r1.14.2.1 -r1.14.2.2
  }
  
  function sendArticle($params) {
-@@ -116,12 +115,12 @@
+@@ -114,12 +113,12 @@
  
  	// 
  	if (!$userlib->validate_user($username, $password, '', '')) {
@@ -74,7 +56,7 @@ diff -u -r1.14.2.1 -r1.14.2.2
  	}
  
  	// Store the page in the tiki_received_pages_table
-@@ -134,7 +133,7 @@
+@@ -132,7 +131,7 @@
  	$commlib->receive_article($site, $username, $title, $authorName, $size, $use_image, $image_name, $image_type, $image_size,
  		$image_x, $image_y, $image_data, $publishDate, $expireDate, $created, $heading, $body, $hash, $author, $type, $rating);
  

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.13 2005/08/21 16:40:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.14 2005/08/21 19:03:41 rl03 Exp $
+
+  21 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/xmlrpc2-1.8.5.patch,
+  files/xmlrpc2-1.9.0.patch:
+  Fixed broken patches
 
 *tikiwiki-1.9.0-r1 (21 Aug 2005)
 *tikiwiki-1.8.5-r2 (21 Aug 2005)
