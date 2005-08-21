@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f027b773b88e19f1842f0a814c59c8a ChangeLog 1208
-MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 2866514f7df655b80a5036bbe4edc78d sipsak-0.8.6.ebuild 569
 MD5 f1bf4e23e45c32fa3a33ee08f039ab6c sipsak-0.8.12.ebuild 579
-MD5 31840af362f871b286960c581c5fcd93 sipsak-0.9.1.ebuild 604
+MD5 2866514f7df655b80a5036bbe4edc78d sipsak-0.8.6.ebuild 569
+MD5 c6defefe38a1142dc66d86fe621bd0dd sipsak-0.9.1.ebuild 611
+MD5 cabbb9c25c14429b4db582415faee474 ChangeLog 1312
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 940affa56618884a75018052679d7dff files/digest-sipsak-0.8.6 65
-MD5 664d12107bdc14c139ce9a5f6dc6c4fe files/digest-sipsak-0.8.12 65
 MD5 2220372a4422369074370bdd16dece71 files/digest-sipsak-0.9.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCBX/mdTrptrqvGERAq7OAJ9/LTPc4eb6pTVXgjuX98uUGi0ViwCdFz5V
-RCTg/GsQFO79Ku3LtdODreM=
-=kaLc
------END PGP SIGNATURE-----
+MD5 664d12107bdc14c139ce9a5f6dc6c4fe files/digest-sipsak-0.8.12 65
