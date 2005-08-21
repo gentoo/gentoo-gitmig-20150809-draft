@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4319 2005/08/21 19:25:26 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4320 2005/08/21 23:37:29 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -98,7 +98,6 @@ media-video/toxine
 >=media-sound/sound-juicer-2.11
 >=media-gfx/eog-2.11
 >=www-client/epiphany-1.7
->=www-client/epiphany-extensions-1.7
 >=app-arch/file-roller-2.11
 >=gnome-extra/gcalctool-5.6.26
 >=app-editors/gedit-2.11
@@ -135,10 +134,12 @@ media-video/toxine
 >=app-admin/gnome-system-tools-1.3
 >=app-admin/system-tools-backends-1.3
 >=app-accessibility/gnopernicus-0.11
+# additional packages, not in the meta-ebuild
 >=dev-python/gnome-python-2.11
 >=app-text/gnome-doc-utils-0.3
 >=dev-cpp/gnome-vfsmm-2.11
 >=dev-cpp/libgnomecanvasmm-2.11
+>=www-client/epiphany-extensions-1.7
 # -- gnome mask end
 
 # <genstef@gentoo.org> (14 Aug 2005
