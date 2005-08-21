@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg-mmx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.14 2005/08/21 04:34:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.15 2005/08/21 16:33:45 chainsaw Exp $
+
+  21 Aug 2005; Tony Vroon <chainsaw@gentoo.org> +jpeg-mmx-0.1.6.ebuild:
+  -r1 causes sandbox violation. Putting last working release back in the tree.
 
 *jpeg-mmx-0.1.6-r1 (21 Aug 2005)
 
