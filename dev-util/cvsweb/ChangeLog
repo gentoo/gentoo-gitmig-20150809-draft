@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsweb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/ChangeLog,v 1.6 2005/04/16 00:40:23 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/ChangeLog,v 1.7 2005/08/21 15:13:44 rl03 Exp $
+
+  21 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/reconfig:
+  Housekeeping
 
   16 Apr 2005; Elfyn McBratney <beu@gentoo.org> cvsweb-1.93-r1.ebuild,
   cvsweb-1.112.ebuild:

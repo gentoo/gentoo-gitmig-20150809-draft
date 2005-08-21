@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-3.0.1.ebuild,v 1.3 2005/07/16 15:35:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-3.0.1.ebuild,v 1.4 2005/08/21 15:13:44 rl03 Exp $
 
 inherit webapp
 
