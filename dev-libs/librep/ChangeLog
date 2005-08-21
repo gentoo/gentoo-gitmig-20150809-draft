@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.25 2005/06/23 01:17:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.26 2005/08/21 17:07:00 truedfx Exp $
+
+  21 Aug 2005; Harald van Dĳk <truedfx@gentoo.org> metadata.xml:
+  Marking myself as maintainer
 
 *librep-0.17-r1 (23 Jun 2005)
 
