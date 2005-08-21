@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.14 2005/05/07 00:20:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.15 2005/08/21 02:45:34 halcy0n Exp $
 
 IUSE="mmx"
 
@@ -29,6 +29,8 @@ src_unpack() {
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-m4.patch
+	# bug #101397
+	epatch ${FILESDIR}/${P}-asm.patch
 }
 
 src_compile() {

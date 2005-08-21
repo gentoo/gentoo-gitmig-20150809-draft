@@ -1,7 +1,18 @@
-MD5 af29e6374e551f2e2c44e2a9b1dbe8eb ChangeLog 1689
-MD5 f8f068434bd92fc0e43da0f08bc4ba76 libmovtar-0.1.3-r1.ebuild 1025
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fdc1b72a9a97427d63cd2592a90466f4 ChangeLog 1918
+MD5 9a046aad42cddbcb70822f18194c4d7a libmovtar-0.1.3-r1.ebuild 1073
 MD5 25473b6655fde2985f9e373862873020 metadata.xml 159
 MD5 2a61a0e27ed6619e4462dc607c4ce0ac files/digest-libmovtar-0.1.3-r1 67
 MD5 cedf741244f17031bc40505160893af2 files/jpegint.h 15712
 MD5 f1372fda16838484031b86fbed77a8f0 files/libmovtar-0.1.3-gcc4.patch 454
 MD5 c933da042a042cbe35ac8ff95a773e4d files/libmovtar-0.1.3-m4.patch 787
+MD5 ea0706326665d31bbe239b762158b5aa files/libmovtar-0.1.3-asm.patch 5179
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDB+reCRZPokWLroQRAuOgAKC5vUZJ1eZRPLqh0qlQMmp3XnSivACeJnPs
+X1rDfv+S5vELQoNLB0VRIhY=
+=dKp7
+-----END PGP SIGNATURE-----

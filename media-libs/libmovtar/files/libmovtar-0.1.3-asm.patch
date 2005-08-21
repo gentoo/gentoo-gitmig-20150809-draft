@@ -1,0 +1,121 @@
+diff -ur libmovtar-0.1.3-orig/movtar_play.c libmovtar-0.1.3/movtar_play.c
+--- libmovtar-0.1.3-orig/movtar_play.c	2005-08-20 16:24:54.000000000 -0400
++++ libmovtar-0.1.3/movtar_play.c	2005-08-20 16:48:03.000000000 -0400
+@@ -173,8 +173,11 @@
+ 	  "punpcklbw %%mm7,%%mm0\n"// mm0: y3 y2 y1 y0 - expand to 16 bit
+ 	  "punpcklbw %%mm7,%%mm1\n"// mm1: cb3 cb2 cb1 cb0
+ 	  "punpcklbw %%mm7,%%mm2\n"// mm2: cr3 cr2 cr1 cr0
+-	  "psubw te0,%%mm1\n"  //minus 128 for cb and cr
+-	  "psubw te0,%%mm2\n"
++	  //"psubw te0,%%mm1\n"  //minus 128 for cb and cr
++	  //"psubw te0,%%mm2\n"
++		"psubw %4,%%mm1\n"  //minus 128 for cb and cr
++	  "psubw %4,%%mm2\n"
++
+ 	  "psllw $2,%%mm1\n"       // shift left 2 bits for Cr and Cb to fit the mult constants
+ 	  "psllw $2,%%mm2\n"
+ 
+@@ -190,8 +193,11 @@
+ 	  //------------------
+ 	  // R    G     B  
+ 
+-	  "pmulhw te1,%%mm3\n"// multiplicate in the constants: mm3: cb1/green cb1/blue cb0/green cb0/blue
+-	  "pmulhw te2,%%mm4\n"// mm4: cr1/red cb1/green cr0/red cr0/green
++	  //"pmulhw te1,%%mm3\n"// multiplicate in the constants: mm3: cb1/green cb1/blue cb0/green cb0/blue
++	  //"pmulhw te2,%%mm4\n"// mm4: cr1/red cb1/green cr0/red cr0/green
++		 "pmulhw %5,%%mm3\n"// multiplicate in the constants: mm3: cb1/green cb1/blue cb0/green cb0/blue
++	  "pmulhw %6,%%mm4\n"// mm4: cr1/red cb1/green cr0/red cr0/green
++
+ 
+ 	  "movq %%mm0,%%mm5\n"      // mm5: y3 y2 y1 y0
+ 	  "punpcklwd %%mm5,%%mm5\n" // expand to 32 bit: y1 y1 y0 y0
+@@ -223,8 +229,11 @@
+ 	  "punpckhwd %%mm0,%%mm0\n" //mm0 = y3 y3 y2 y2
+ 	  "punpckhwd %%mm1,%%mm1\n" //mm1 = cb3 cb3 cb2 cb2
+ 	  "punpckhwd %%mm2,%%mm2\n" //mm2 = cr3 cr3 cr2 cr2
+-	  "pmulhw te1,%%mm1\n"      //mm1 = cb * ?
+-	  "pmulhw te2,%%mm2\n"      //mm2 = cr * ?
++	  //"pmulhw te1,%%mm1\n"      //mm1 = cb * ?
++	  //"pmulhw te2,%%mm2\n"      //mm2 = cr * ?
++	  "pmulhw %5,%%mm1\n"      //mm1 = cb * ?
++	  "pmulhw %6,%%mm2\n"      //mm2 = cr * ?
++
+ 	  "movq %%mm0,%%mm3\n"      //mm3 = y3 y3 y2 y2
+ 	  "punpcklwd %%mm3,%%mm3\n" //mm3 = y2 y2 y2 y2
+ 	  "punpckhwd %%mm0,%%mm0\n" //mm0 = y3 y3 y3 y3
+@@ -250,7 +259,8 @@
+ 	  "movq %%mm3,8%0\n"       //  save two more RGB pixels
+ 
+ 	  :"=m"(outptr[0])
+-	  :"m"(inptr0[0]),"m"(inptr1[0]),"m"(inptr2[0]) //y cb cr
++	  :"m"(inptr0[0]),"m"(inptr1[0]),"m"(inptr2[0]),"m"(te0),"m"(te1),
++		"m"(te2) //y cb cr
+ 	  : "st");
+ #endif
+       outptr+=16;
+@@ -318,8 +328,11 @@
+ 	  "punpcklbw %%mm7,%%mm0\n"// mm0: y3 y2 y1 y0 - expand to 16 bit
+ 	  "punpcklbw %%mm7,%%mm1\n"// mm1: cb3 cb2 cb1 cb0
+ 	  "punpcklbw %%mm7,%%mm2\n"// mm2: cr3 cr2 cr1 cr0
+-	  "psubw te0,%%mm1\n"  //minus 128 for cb and cr
+-	  "psubw te0,%%mm2\n"
++	  //"psubw te0,%%mm1\n"  //minus 128 for cb and cr
++//	  "psubw te0,%%mm2\n"
++		"psubw %5,%%mm1\n"  //minus 128 for cb and cr
++	  "psubw %5,%%mm2\n"
++
+ 	  "psllw $2,%%mm1\n"       // shift left 2 bits for Cr and Cb to fit the mult constants
+ 	  "psllw $2,%%mm2\n"
+ 
+@@ -335,8 +348,11 @@
+ 	  //------------------
+ 	  // R    G     B  
+ 
+-	  "pmulhw te1,%%mm3\n"// multiplicate in the constants: mm3: cb1/green cb1/blue cb0/green cb0/blue
+-	  "pmulhw te2,%%mm4\n"// mm4: cr1/red cb1/green cr0/red cr0/green
++	  //"pmulhw te1,%%mm3\n"// multiplicate in the constants: mm3: cb1/green cb1/blue cb0/green cb0/blue
++	  //"pmulhw te2,%%mm4\n"// mm4: cr1/red cb1/green cr0/red cr0/green
++	  "pmulhw %6,%%mm3\n"// multiplicate in the constants: mm3: cb1/green cb1/blue cb0/green cb0/blue
++	  "pmulhw %7,%%mm4\n"// mm4: cr1/red cb1/green cr0/red cr0/green
++
+ 
+ 	  "movq %%mm0,%%mm5\n"      // mm5: y3 y2 y1 y0
+ 	  "punpcklwd %%mm5,%%mm5\n" // expand to 32 bit: y1 y1 y0 y0
+@@ -367,8 +383,11 @@
+ 	  "punpckhwd %%mm0,%%mm0\n" //mm0 = y3 y3 y2 y2
+ 	  "punpckhwd %%mm1,%%mm1\n" //mm1 = cb3 cb3 cb2 cb2
+ 	  "punpckhwd %%mm2,%%mm2\n" //mm2 = cr3 cr3 cr2 cr2
+-	  "pmulhw te1,%%mm1\n"      //mm1 = cb * ?
+-	  "pmulhw te2,%%mm2\n"      //mm2 = cr * ?
++//	  "pmulhw te1,%%mm1\n"      //mm1 = cb * ?
++//	  "pmulhw te2,%%mm2\n"      //mm2 = cr * ?
++	  "pmulhw %6,%%mm1\n"      //mm1 = cb * ?
++	  "pmulhw %7,%%mm2\n"      //mm2 = cr * ?
++
+ 	  "movq %%mm0,%%mm3\n"      //mm3 = y3 y3 y2 y2
+ 	  "punpcklwd %%mm3,%%mm3\n" //mm3 = y2 y2 y2 y2
+ 	  "punpckhwd %%mm0,%%mm0\n" //mm0 = y3 y3 y3 y3
+@@ -439,18 +458,20 @@
+ 	  // and would replace all the workaround code below !!!! Reason: There is no packusdw !! 
+           "movq %%mm5, %%mm6\n" // copy mm5
+ 	  "psrlq $16, %%mm6\n" // shift out pixel 1, keep pixel 0
+-	  "pand shiftmask, %%mm5\n" // and out pixel 0
++	  //"pand shiftmask, %%mm5\n" // and out pixel 0
++	  "pand %4, %%mm5\n" // and out pixel 0
+ 	  "por %%mm6, %%mm5\n" // or pix 0 and pix 1 together
+ 	  "movd %%mm5, %0\n" // write pix 0 and 1 out
+ 
+           "movq %%mm3, %%mm0\n" // copy mm3
+ 	  "psrlq $16, %%mm0\n" // shift out pixel 3, keep pixel 2
+-	  "pand shiftmask, %%mm3\n" // and out pixel 2
++	  "pand %4, %%mm3\n" // and out pixel 2
+ 	  "por %%mm0, %%mm3\n" // or pix 3 and pix 2 together
+ 	  "movd %%mm3, 4%0\n" // write pix 2 and 3
+ 
+ 	  :"=m"(outptr[0])
+-	  :"m"(inptr0[0]),"m"(inptr1[0]),"m"(inptr2[0]) //y cb cr
++	  :"m"(inptr0[0]),"m"(inptr1[0]),"m"(inptr2[0]),"m"(shiftmask),"m"(te0),
++			"m"(te1), "m"(te2)//y cb cr
+ 	  : "st");
+ #endif
+       outptr+=8;
