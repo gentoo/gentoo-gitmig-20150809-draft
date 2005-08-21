@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/hap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/ChangeLog,v 1.5 2005/06/05 11:50:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/ChangeLog,v 1.6 2005/08/21 10:39:30 ferdy Exp $
+
+*hap-3.7-r1 (21 Aug 2005)
+
+  21 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> +hap-3.7-r1.ebuild:
+  fix to use our CFLAGS and fix to not use libtermcap wrt bug #103105
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> hap-3.7.ebuild:
   Stable on ppc.
