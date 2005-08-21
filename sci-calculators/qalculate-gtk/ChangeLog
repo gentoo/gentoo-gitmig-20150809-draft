@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/qalculate-gtk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.7 2005/08/15 23:58:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.8 2005/08/21 17:12:55 weeve Exp $
+
+  21 Aug 2005; Jason Wever <weeve@gentoo.org> qalculate-gtk-0.8.1.ebuild:
+  Added ~sparc keyword, resolves bug #102413.
 
 *qalculate-gtk-0.8.1 (15 Aug 2005)
 
