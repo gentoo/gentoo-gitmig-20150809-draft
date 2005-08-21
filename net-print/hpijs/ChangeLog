@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.39 2005/08/19 21:05:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.40 2005/08/21 10:01:01 killerfox Exp $
+
+  21 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> hpijs-1.7.1.ebuild:
+  Stable on hppa.
 
   19 Aug 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/hpijs-1.7.1-gcc4.patch, hpijs-1.7.1.ebuild:

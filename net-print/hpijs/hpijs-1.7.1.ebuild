@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.7 2005/08/19 21:05:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.7.1.ebuild,v 1.8 2005/08/21 10:01:01 killerfox Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ppc sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc sparc x86"
 IUSE="cups foomaticdb ppds"
 
 DEPEND="virtual/ghostscript
