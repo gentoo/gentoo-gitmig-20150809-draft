@@ -50,3 +50,4 @@ slotmove >x11-themes/gtk-engines-2 0 2
 move www-client/raggle net-news/raggle
 move x11-misc/xcursor-themes x11-themes/xcursor-themes
 move x11-proto/panoramixproto x11-proto/xineramaproto
+move sci-calculators/qalculate sci-calculators/qalculate-gtk
