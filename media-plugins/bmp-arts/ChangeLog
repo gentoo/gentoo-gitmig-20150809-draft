@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-arts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-arts/ChangeLog,v 1.1 2005/08/21 17:00:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-arts/ChangeLog,v 1.2 2005/08/21 18:42:54 flameeyes Exp $
+
+  21 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> bmp-arts-0.7.2.ebuild:
+  Marked ~amd64.
 
 *bmp-arts-0.7.2 (21 Aug 2005)
 

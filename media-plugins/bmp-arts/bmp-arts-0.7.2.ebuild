@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-arts/bmp-arts-0.7.2.ebuild,v 1.1 2005/08/21 17:00:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-arts/bmp-arts-0.7.2.ebuild,v 1.2 2005/08/21 18:42:54 flameeyes Exp $
 
 inherit eutils
 IUSE=""
@@ -11,7 +11,7 @@ SRC_URI="http://www.intelligenzartificiale.it/public/blog/res/bmp-arts-plugin-${
 HOMEPAGE="http://www.sosdg.org/~larne/w/Plugin_list"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="media-sound/beep-media-player
 	kde-base/arts"
