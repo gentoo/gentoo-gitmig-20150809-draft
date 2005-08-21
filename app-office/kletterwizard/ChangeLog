@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kletterwizard
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.12 2005/04/22 22:12:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.13 2005/08/21 20:02:51 greg_g Exp $
+
+  21 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kletterwizard-0.9.6.ebuild:
+  Correct KDE dependency (#83058).
 
   22 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   kletterwizard-0.9.6.ebuild:
