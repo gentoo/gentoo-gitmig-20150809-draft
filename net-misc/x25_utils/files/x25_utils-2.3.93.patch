@@ -1,0 +1,135 @@
+--- telnet/commands.c.orig	1996-12-15 23:00:16.000000000 +0100
++++ telnet/commands.c	2005-08-21 04:47:29.000000000 +0200
+@@ -55,7 +55,8 @@
+ #include <netdb.h>
+ #include <ctype.h>
+ #include <pwd.h>
+-#include <varargs.h>
++#include <stdio.h>
++#include <stdarg.h>
+ #include <errno.h>
+ 
+ #include <arpa/inet.h>
+@@ -80,7 +81,7 @@
+ 
+ #ifndef       MAXHOSTNAMELEN
+ #define       MAXHOSTNAMELEN 64
+-#endif        MAXHOSTNAMELEN
++#endif     /* MAXHOSTNAMELEN */
+ 
+ char	*hostname;
+ static char _hostname[MAXHOSTNAMELEN];
+@@ -91,7 +92,7 @@
+ extern char **genget();
+ extern int Ambiguous();
+ 
+-static call();
++static call(void *fmt, ...);
+ 
+ typedef struct {
+ 	char	*name;		/* command name */
+@@ -2330,8 +2331,7 @@
+ 
+     /*VARARGS1*/
+     static
+-call(va_alist)
+-    va_dcl
++call(void *fmt, ...)
+ {
+     va_list ap;
+     typedef int (*intrtn_t)();
+@@ -2339,7 +2339,7 @@
+     char *args[100];
+     int argno = 0;
+ 
+-    va_start(ap);
++    va_start(ap, fmt);
+     routine = (va_arg(ap, intrtn_t));
+     while ((args[argno++] = va_arg(ap, char *)) != 0) {
+ 	;
+--- telnet/sys_bsd.c.orig	2000-10-20 17:07:34.000000000 +0200
++++ telnet/sys_bsd.c	2005-08-21 04:47:29.000000000 +0200
+@@ -604,14 +604,14 @@
+ #endif	/* SIGTSTP */
+ #ifdef	SIGINFO
+ 	static SIG_FUNC_RET ayt();
+-#endif	SIGINFO
++#endif	/* SIGINFO */
+ 
+ #ifdef	SIGTSTP
+ 	(void) signal(SIGTSTP, susp);
+ #endif	/* SIGTSTP */
+ #ifdef	SIGINFO
+ 	(void) signal(SIGINFO, ayt);
+-#endif	SIGINFO
++#endif	/* SIGINFO */
+ #if	defined(USE_TERMIO) && defined(NOKERNINFO)
+ 	tmp_tc.c_lflag |= NOKERNINFO;
+ #endif
+@@ -653,7 +653,7 @@
+     } else {
+ #ifdef	SIGINFO
+ 	(void) signal(SIGINFO, ayt_status);
+-#endif	SIGINFO
++#endif	/* SIGINFO */
+ #ifdef	SIGTSTP
+ 	(void) signal(SIGTSTP, SIG_DFL);
+ /*	(void) sigsetmask(sigblock(0) & ~(1<<(SIGTSTP-1))); */
+--- telnet/telnet.c.orig	1996-12-15 22:38:11.000000000 +0100
++++ telnet/telnet.c	2005-08-21 04:49:44.000000000 +0200
+@@ -50,6 +50,7 @@
+ #include <sgtty.h>
+ 
+ #include <ctype.h>
++#include <stdlib.h>
+ 
+ #include "ring.h"
+ 
+@@ -193,7 +194,7 @@
+ 
+ 
+ #ifdef	notdef
+-#include <varargs.h>
++#include <stdarg.h>
+ 
+     /*VARARGS*/
+     static void
+--- telnetd/utility.c.orig	2000-12-07 19:50:37.000000000 +0100
++++ telnetd/utility.c	2005-08-21 04:47:29.000000000 +0200
+@@ -40,6 +40,7 @@
+ #include <sys/utsname.h>
+ #include "telnetd.h"
+ #include <string.h>
++#include <time.h>
+ 
+ /*
+  * utility functions performing io related tasks
+--- telnetd/sys_term.c.orig	2000-12-01 00:22:49.000000000 +0100
++++ telnetd/sys_term.c	2005-08-21 04:54:01.000000000 +0200
+@@ -39,6 +39,7 @@
+ static char rcsid[] = "$Id: x25_utils-2.3.93.patch,v 1.1 2005/08/21 03:18:45 sbriesen Exp $";
+ #endif /* not lint */
+ 
++#include <stdint.h>
+ #include "telnetd.h"
+ #include "pathnames.h"
+ 
+@@ -1380,14 +1381,14 @@
+ 	}
+ 	for (cpp = argv; *cpp; cpp++)
+ 		;
+-	if (cpp == &argv[(int)argv[-1]]) {
++	if (cpp == &argv[(intptr_t)argv[-1]]) {
+ 		--argv;
+-		*argv = (char *)((int)(*argv) + 10);
+-		argv = (char **)realloc(argv, (int)(*argv) + 2);
++		*argv = (char *)((intptr_t)(*argv) + 10);
++		argv = (char **)realloc(argv, (intptr_t)(*argv) + 2);
+ 		if (argv == NULL)
+ 			return(NULL);
+ 		argv++;
+-		cpp = &argv[(int)argv[-1] - 10];
++		cpp = &argv[(intptr_t)argv[-1] - 10];
+ 	}
+ 	*cpp++ = val;
+ 	*cpp = 0;

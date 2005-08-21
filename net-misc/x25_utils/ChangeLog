@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/x25_utils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x25_utils/ChangeLog,v 1.1 2005/08/21 03:18:45 sbriesen Exp $
+
+*x25_utils-2.3.93 (21 Aug 2005)
+
+  21 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/x25_utils-2.3.93.patch, +metadata.xml, +x25_utils-2.3.93.ebuild:
+  initial commit, including gcc3 and 64-Bit patches.
+
