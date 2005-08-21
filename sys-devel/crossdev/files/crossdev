@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.31 2005/08/17 22:48:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.32 2005/08/21 03:48:15 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -61,7 +61,8 @@ parse_target() {
 	if [[ ${CTARGET/-} == ${CTARGET} || -z ${CPOST} ]] ; then
 		case ${CPRE} in
 			x86|i?86*|amd64|x86_64*) CPOST="pc-linux-gnu";;
-			*) CPOST="unknown-linux-gnu"
+			s390*) CPOST="ibm-linux-gnu";;
+			*) CPOST="unknown-linux-gnu";;
 		esac
 	fi
 
