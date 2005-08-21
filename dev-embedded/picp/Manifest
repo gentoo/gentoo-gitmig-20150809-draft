@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 a4b2314a857ad053274eb6f9eaddcf0c picp-0.6.4.ebuild 712
 MD5 03d7ba2a50909ebf12df34033d99f95f metadata.xml 236
-MD5 09bd374309e136ef27d393bf8936386d ChangeLog 611
+MD5 d0c41c5f69b4a285a0083da590584180 ChangeLog 773
 MD5 ff6e34b74cf9821581a3b68ecffc31dc picp-0.6.5.ebuild 1036
+MD5 0f5c4d6802c050f2e90dbf6704ad337a picp-0.6.7.ebuild 1026
 MD5 0b99b678f38d332f932913971e20bff4 files/digest-picp-0.6.4 61
 MD5 6c99ac554182ab498d89aa27669d609d files/digest-picp-0.6.5 62
+MD5 1545eab9aa022153537630482b455736 files/digest-picp-0.6.7 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFB5nLhmdTrptrqvGERAp8MAJ0YU1A7U673QQscUBm98iMJSF7uDgCfbGZS
-qaakmhZ/twflKBvAmzZZj2U=
-=xfIp
+iD8DBQFDCGmEmdTrptrqvGERAmnCAJoCtkgdLdKpM++IOH/XZQJSaP96kgCfcc3m
+7+Es1QKD7c23Yq9/CcnbDjY=
+=975U
 -----END PGP SIGNATURE-----
