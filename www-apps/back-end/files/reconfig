@@ -1,6 +1,13 @@
 #!/bin/bash
-if [ $1 = "start" -o $1 = "install" ]; then
+
+die() {
+	echo "#####"
+	echo $1
+	echo "#####"
+	exit 1
+}
+
+if [ $1 = "install" ]; then
 	# fix location of SQL tables
-	sed -e "s|../tables/|${VHOST_ROOT}/${PN}/tables/|" -i ${MY_INSTALLDIR}/config_setup.php
+	sed -e "s|../tables/|'${VHOST_ROOT}/${PN}-${PVR}/tables/|" -i ${MY_INSTALLDIR}/config_setup.php || die "sed failed"
 fi
-# we don't clean up because the user should have removed config_setup.php per postinstall instructions

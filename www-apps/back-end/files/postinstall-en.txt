@@ -1,10 +1,15 @@
-Browse to http://${VHOST_HOSTNAME}/${PN} and complete the installation. 
+Now, create a database for back-end to use, fex:
 
-When you are done,:
-- edit ${MY_INSTALLDIR}/config.ini.php and set 
-classdir = "${VHOST_ROOT}/${PN}/class"
+ mysqladmin create be7
 
-- rm ${MY_INSTALLDIR}/config_setup.php and 
+Browse to http://${VHOST_HOSTNAME}${VHOST_APPDIR} and complete the installation
+
+When you are done:
+
+- edit ${MY_INSTALLDIR}/config.ini.php and set
+classdir = "${VHOST_ROOT}/${PN}-${PVR}/class"
+
+- rm ${MY_INSTALLDIR}/config_setup.php and
 - chmod 644 ${MY_INSTALLDIR}/config.ini.php
 
 Change the god password but don't delete the accound yet.

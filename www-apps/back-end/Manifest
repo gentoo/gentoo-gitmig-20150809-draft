@@ -1,6 +1,16 @@
-MD5 671f045edc773211442ecb1dbbcaaab2 ChangeLog 820
-MD5 f54bf726337e91d6c33667dd696add46 back-end-0.7.1.2.ebuild 1397
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c6732df8b96ae41533e998e9ef43f2a0 back-end-0.7.2.1.ebuild 1380
+MD5 80627de8c574da4dabb1861cac4881a0 ChangeLog 1010
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 6296918b10c4dbe3aea4326191951a96 files/digest-back-end-0.7.1.2 68
-MD5 43c5bc7ad48e732dfebc7e63c7413228 files/postinstall-en.txt 469
-MD5 82f99d40ca4b55651716629585d48ed5 files/reconfig 281
+MD5 c86bc682fcec7fd0f037e8fef4cd8d90 files/postinstall-en.txt 555
+MD5 d3f9e8e8743505e23dacd88221d77a67 files/digest-back-end-0.7.2.1 68
+MD5 2017d5e6838cb5fc6636a5ac794cf096 files/reconfig 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCLBiEzitwsaoONoRAoECAKDTHaKBJ6TcUbCEAH6FvsibJe2M+ACghKsv
+m/OSUu5bEQfZe7f5mtKvYCw=
+=Aau5
+-----END PGP SIGNATURE-----
