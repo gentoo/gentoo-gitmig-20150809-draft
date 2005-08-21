@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/par2cmdline-0.4-r1.ebuild,v 1.1 2005/08/13 22:25:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/par2cmdline-0.4-r1.ebuild,v 1.2 2005/08/21 22:43:53 swegener Exp $
 
 inherit eutils
 
@@ -18,13 +18,12 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${FILESDIR}"/${P}-wildcard-fix.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
-	local DOCLIST="AUTHORS INSTALL ChangeLog NEWS PORTING README ROADMAP"
-	chmod -x ${DOCLIST}
-	dodoc ${DOCLIST}
+	make install DESTDIR="${D}" || die "make install failed"
+	dodoc AUTHORS ChangeLog README
 }
