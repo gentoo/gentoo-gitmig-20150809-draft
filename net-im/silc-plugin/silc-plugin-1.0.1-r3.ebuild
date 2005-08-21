@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r3.ebuild,v 1.1 2005/08/02 14:04:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r3.ebuild,v 1.2 2005/08/21 22:23:00 ticho Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="debug"
 
 # All necessary dependencies are pulled in by irssi.
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	=dev-libs/glib-1.2*"
 RDEPEND=">=net-irc/irssi-${IRSSI_PV}
 	>=dev-perl/MIME-tools-5.413
 	dev-perl/File-MMagic
