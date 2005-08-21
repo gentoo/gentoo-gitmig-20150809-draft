@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/bmp-arts
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-arts/ChangeLog,v 1.1 2005/08/21 17:00:09 chainsaw Exp $
+
+*bmp-arts-0.7.2 (21 Aug 2005)
+
+  21 Aug 2005; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +bmp-arts-0.7.2.ebuild:
+  Initial commit, ebuild by Matteo Settenvini <matteo-ml@member.fsf.org> in
+  bug #99242.
+

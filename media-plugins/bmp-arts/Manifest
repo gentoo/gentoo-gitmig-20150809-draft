@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 571edc3e51af8c77b570fd91199ff63f ChangeLog 430
+MD5 95c4b1c253bdde4ec2d8f9ccb8f29a3e bmp-arts-0.7.2.ebuild 891
+MD5 b7db7944a11c8579da169bd755721d5b files/digest-bmp-arts-0.7.2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCLMyp5vW4rUFj5oRAlA/AJ4qy5rKq0ZQuljl3EAMkRUfCDOT6gCfaVMf
+/YrfZPc7HJpwH9MPbWBOJOg=
+=k3K7
+-----END PGP SIGNATURE-----
