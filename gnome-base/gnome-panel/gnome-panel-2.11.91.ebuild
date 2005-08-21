@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.11.91.ebuild,v 1.1 2005/08/19 20:25:26 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.11.91.ebuild,v 1.2 2005/08/21 19:43:33 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc eds static"
 
 RDEPEND=">=x11-libs/gtk+-2.7.1
@@ -37,7 +37,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 USE_DESTDIR="1"
-G2CONF="${G2CONF} $(use_enable eds) $(use_enable static) --disable-scrollkeeper"
+
+
+pkg_setup() {
+	G2CONF="$(use_enable eds) $(use_enable static) --disable-scrollkeeper"
+}
 
 src_compile() {
 
@@ -60,12 +64,6 @@ pkg_postinst() {
 		${ROOT}/usr/bin/gconftool-2 --direct --config-source \
 			${GCONF_CONFIG_SOURCE} --load=${entries}
 		rm -f ${entries}
-	fi
-
-	local updater=`which gtk-update-icon-cache`
-	if [ -x "$updater" ]; then
-		einfo "Updating icon cache"
-		$updater -qf ${ROOT}/usr/share/icons/hicolor
 	fi
 
 	# Calling this late so it doesn't process the GConf schemas file we already
