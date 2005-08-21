@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.11 2005/08/14 10:10:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.12 2005/08/21 04:15:27 ribosome Exp $
+
+*octave-2.1.71 (21 Aug 2005)
+
+  21 Aug 2005; Olivier Fisette <ribosome@gentoo.org> octave-2.1.69.ebuild,
+  +octave-2.1.71.ebuild:
+  New version (fixes bug #99481), along with a sed trick to remove Portage
+  paths in ls-R files (fixes bug #92565). Thanks to Colin Macdonald
+  <cbm@sfu.ca>.
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> octave-2.1.69.ebuild:
   Stable on ppc.
