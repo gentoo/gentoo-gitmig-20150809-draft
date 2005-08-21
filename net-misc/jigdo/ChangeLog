@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.10 2005/08/20 19:22:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.11 2005/08/21 22:05:08 weeve Exp $
+
+  21 Aug 2005; Jason Wever <weeve@gentoo.org> files/jigdo-0.7.2-64bit.patch:
+  Fixed patch to resolve bug #103238.
 
 *jigdo-0.7.2 (20 Aug 2005)
 
