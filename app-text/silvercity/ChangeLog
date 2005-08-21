@@ -1,6 +1,9 @@
 # ChangeLog for app-text/silvercity
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.8 2005/07/06 11:39:35 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/ChangeLog,v 1.9 2005/08/21 15:23:37 dju Exp $
+
+  21 Aug 2005; Julien Allanos <dju@gentoo.org> silvercity-0.9.5-r1.ebuild:
+  Removed useless RESTRICT="nomirror", fixes bug #103240.
 
   06 Jul 2005; Julien Allanos <dju@gentoo.org> metadata.xml,
   -silvercity-0.9.5.ebuild:
