@@ -5,7 +5,7 @@ To complete installation, you must
 
 If you are upgrading from an earlier version and are using phpMyAdmin's
 features for master/foreign tables be sure to read
-  http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/Documentation.html#col_com
+  http://${VHOST_HOSTNAME}${VHOST_APPDIR}/Documentation.html#col_com
 You will need to perform the ALTER TABLE step yourself.
 
-Finally, point your browser to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/.
+Finally, point your browser to http://${VHOST_HOSTNAME}${VHOST_APPDIR}
