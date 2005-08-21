@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.44 2005/08/07 23:03:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.45 2005/08/21 04:52:07 vapier Exp $
+
+  21 Aug 2005; Mike Frysinger <vapier@gentoo.org> gpm-1.20.1-r5.ebuild:
+  Disable emacs support #99533.
 
   07 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gpm-1.20.1-r4.ebuild:
   Stable on mips.

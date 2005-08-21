@@ -1,8 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r5.ebuild,v 1.1 2005/08/07 22:09:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r5.ebuild,v 1.2 2005/08/21 04:52:07 vapier Exp $
 
-inherit eutils toolchain-funcs elisp-common
+# emacs support disabled due to Bug 99533
+
+inherit eutils toolchain-funcs
+#elisp-common
 
 PATCH_VER="1.4"
 DESCRIPTION="Console-based mouse driver"
@@ -16,8 +19,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux emacs"
 
-DEPEND="sys-libs/ncurses
-	emacs? ( virtual/emacs )"
+DEPEND="sys-libs/ncurses"
+#	emacs? ( virtual/emacs )"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
 
 src_unpack() {
@@ -38,11 +41,11 @@ src_compile() {
 		EMACS=: \
 		|| die "emake failed"
 
-	local lisp="emacs/t-mouse.el emacs/t-mouse.elc"
-	if use emacs ; then
-		cd "${S}"/contrib ; make clean
-		make EMACS=emacs ELISP="${lisp}" || die
-	fi
+#	local lisp="emacs/t-mouse.el emacs/t-mouse.elc"
+#	if use emacs ; then
+#		cd "${S}"/contrib ; make clean
+#		make EMACS=emacs ELISP="${lisp}" || die
+#	fi
 }
 
 src_install() {
@@ -54,10 +57,10 @@ src_install() {
 	mv "${D}"/$(get_libdir)/*.a "${D}"/usr/$(get_libdir)/
 	gen_usr_ldscript libgpm.so
 
-	if use emacs ; then
-		cd ${S}/contrib/emacs
-		elisp-install . t-mouse*
-	fi
+#	if use emacs ; then
+#		cd "${S}"/contrib/emacs
+#		elisp-install . t-mouse*
+#	fi
 
 	insinto /etc/gpm
 	doins conf/gpm-*.conf
