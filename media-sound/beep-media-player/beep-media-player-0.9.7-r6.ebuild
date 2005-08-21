@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r6.ebuild,v 1.6 2005/07/21 03:48:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r6.ebuild,v 1.7 2005/08/21 23:12:22 metalgod Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/beepmp/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ppc64 sparc x86"
 
 # beep-config has a runtime depend on pkg-config
 RDEPEND="app-arch/unzip
