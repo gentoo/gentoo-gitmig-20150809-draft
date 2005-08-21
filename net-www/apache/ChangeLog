@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.398 2005/08/20 14:11:18 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.399 2005/08/21 11:49:29 ferdy Exp $
+
+  21 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  apache-2.0.54-r9.ebuild:
+  alpha stable wrt bug #102991
 
   20 Aug 2005; Josh Grebe <squash@gentoo.org> apache-2.0.54-r9.ebuild:
   -m Stable on sparc, bug #102991
