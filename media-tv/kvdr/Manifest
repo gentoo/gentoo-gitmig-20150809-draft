@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4f1cd83be78082cf2f56fdc1ae7db5c8 ChangeLog 922
-MD5 81ea43dc81615b16f9288b017f16864b files/digest-kvdr-0.61 58
-MD5 f2748d6f9b54f39ee1b9fac4a03938ff files/digest-kvdr-0.62 58
-MD5 667a63d127aaffe69088f64c7b6b0626 kvdr-0.61.ebuild 718
-MD5 341e0b1750e7d4dc1135675fe3d7a339 kvdr-0.62.ebuild 718
 MD5 81d399b55522e5bbb43378a21469a3bf metadata.xml 225
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC7UW4I1lqEGTUzyQRAhrVAKDbOxrWXAHAeZ+3Mnbs3XGQZPnJxgCfcgSr
-o3dTmwmpyMqzP3YHEM1Zk18=
-=Hn3u
------END PGP SIGNATURE-----
+MD5 341e0b1750e7d4dc1135675fe3d7a339 kvdr-0.62.ebuild 718
+MD5 4f1cd83be78082cf2f56fdc1ae7db5c8 ChangeLog 922
+MD5 f2748d6f9b54f39ee1b9fac4a03938ff files/digest-kvdr-0.62 58
