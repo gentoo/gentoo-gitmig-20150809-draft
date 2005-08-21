@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.28 2005/07/15 17:23:01 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.29 2005/08/21 17:22:59 fserb Exp $
+
+*pygame-1.7.1 (21 Aug 2005)
+
+  21 Aug 2005; Fernando Serboncini <fserb@gentoo.org>
+  -files/mixer.c-pause.patch, -files/music.c-pause.patch,
+  +pygame-1.7.1.ebuild:
+  Version bump
 
   15 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> pygame-1.6.2.ebuild:
   Stable on hppa.
