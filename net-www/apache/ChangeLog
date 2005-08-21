@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.399 2005/08/21 11:49:29 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.400 2005/08/21 12:01:54 ferdy Exp $
+
+  21 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> Manifest:
+  fix manifest
 
   21 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
   apache-2.0.54-r9.ebuild:
