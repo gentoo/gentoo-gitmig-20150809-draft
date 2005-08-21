@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 89e2305b0bc740500791127b756af456 bugs-bug-genie-1.7.1.ebuild 997
 MD5 92da06be464be92fafc0e33fcab3c073 ChangeLog 1108
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 8c1b4d53a9794646061928a9a036c8b6 files/digest-bugs-bug-genie-1.7.1 60
 MD5 b7f5cb0f5d933404fcec3322eb4da94c files/postinstall-en.txt 113
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCLEbEzitwsaoONoRArmjAKCV/RCWgaAnfc1WlPqNPTUG2GwyjwCglGmI
+3Zr1AurzesKux8TiBJf8ETA=
+=9BQ6
+-----END PGP SIGNATURE-----
