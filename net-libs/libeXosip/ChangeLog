@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libeXosip
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.1 2005/08/21 04:32:53 dragonheart Exp $
+
+*libeXosip-1.9.1_pre16 (21 Aug 2005)
+*libeXosip-0.9.0 (21 Aug 2005)
+
+  21 Aug 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +libeXosip-0.9.0.ebuild, +libeXosip-1.9.1_pre16.ebuild:
+  Initial import as per bug #94919. Thanks to Christoph Mockenhaupt
+
