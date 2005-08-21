@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.28 2005/07/06 03:38:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.29 2005/08/21 02:55:13 spyderous Exp $
+
+*kdrive-6.6.1_pre20050820 (21 Aug 2005)
+
+  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/startxkd,
+  +kdrive-6.6.1_pre20050820.ebuild:
+  New snapshot of kdrive, a pack of tiny X servers. Perhaps the most
+  interesting part of this is Xglx, a server layered on top of OpenGL. It runs
+  on an OpenGL-enabled X server, similar to how Xnest works. Another
+  interesting new server is Xephyr, which is like Xnest but supports the
+  composite/damage extensions, also it can run at different bpp than the host,
+  e.g. 8bpp on a 24bpp host. The other included servers are: Xfbdev Xvesa
+  Xmach64 Xmga Xnvidia Xr128 Xsmi Xchips Xpm2 Xvia Xneomagic Xati Xfake Xi810
+  Xepson. Xfake can be useful in combination with apps like luminocity. This
+  builds against the modular X framework, so you need to be using modular X to
+  use it.
 
   06 Jul 2005; Donnie Berkholz <spyderous@gentoo.org>;
   kdrive-4.3.0-r5.ebuild:

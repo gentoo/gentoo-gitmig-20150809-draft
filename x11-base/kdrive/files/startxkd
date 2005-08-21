@@ -1,0 +1,24 @@
+#!/bin/sh
+case $0 in
+	*/*)
+	dir=`dirname $0`/
+	;;
+esac
+
+server="Xvesa"
+#server="Xfbdev"
+
+#screen="-screen 1024x768x16"
+screen="-screen 1280x1024x16"
+
+rgb="-rgba rgb"
+
+mouse="-2button -mouse /dev/psaux -mouse /dev/input/mice,5"
+
+opts="-dpi 96 -nolisten tcp"
+
+#switchcmd="-switchCmd /usr/X11R6/bin/touchpad"
+
+fontpath="-fp /usr/share/fonts"
+
+exec ${dir}${server} $opts $rgb $screen $mouse $switchcmd $fontpath
