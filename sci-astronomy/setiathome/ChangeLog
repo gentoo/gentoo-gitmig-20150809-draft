@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/setiathome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.4 2005/06/26 11:53:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.5 2005/08/21 15:25:01 cryos Exp $
+
+*setiathome-4.18 (21 Aug 2005)
+
+  21 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> +files/app_info.xml,
+  +setiathome-4.18.ebuild:
+  Initial import of the new boinc based SETI@Home clients, closes bug 70303.
+  Thanks to Tony Murray <tonymurray@fastmail.fm> and everyone else for
+  contributing to this ebuild.
 
   26 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   setiathome-3.03-r2.ebuild:
