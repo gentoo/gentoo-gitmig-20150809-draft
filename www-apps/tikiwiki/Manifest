@@ -3,16 +3,22 @@ Hash: SHA1
 
 MD5 9428e2c5313b6733e9476a441c3eb576 tikiwiki-1.8.5-r1.ebuild 2339
 MD5 3df178d3364ec7a6fd53340327e0cd3b tikiwiki-1.9.0.ebuild 2590
-MD5 207e65ab4e7d69b86a9bc2b5f6caf4d7 ChangeLog 3860
+MD5 99b47adaab8cbfdb8c4134bcc79e0c8e tikiwiki-1.9.0-r1.ebuild 2585
+MD5 356f47328f3f1121c2aac61300bf55ba tikiwiki-1.8.5-r2.ebuild 2328
+MD5 57b5c1180523bf54e5f7048af12a4f87 ChangeLog 4123
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 a43526d55fa814d5e9af0042767a6600 files/postinstall-en.txt 1407
 MD5 6366ec5badc9e0d9d20befdf8052c73a files/digest-tikiwiki-1.8.5-r1 68
+MD5 6366ec5badc9e0d9d20befdf8052c73a files/digest-tikiwiki-1.8.5-r2 68
 MD5 b0e0921fd97e18c1e6746aacc75f87fa files/tikiwiki-1.8.5-xmlrpc.patch 1093
+MD5 28eb632d3d2985010cc05afcd084acd4 files/digest-tikiwiki-1.9.0-r1 68
 MD5 28eb632d3d2985010cc05afcd084acd4 files/digest-tikiwiki-1.9.0 68
+MD5 fc197be3ba9b71ed00cf261cc1ae7704 files/xmlrpc2-1.9.0.patch 3618
+MD5 6f0655e02b480fb7a32ac97e5ca2bd6b files/xmlrpc2-1.8.5.patch 3618
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0TMvEzitwsaoONoRAv8eAJsHM8YZ9QeqQHtIh5BS9CzVVC+dpACfduMl
-1qVaC6gko9uRFHQVwmhmm94=
-=uGzt
+iD8DBQFDCK6VEzitwsaoONoRAnZ1AKDD9vh01HJdmDz5pLFbiAlgV92PtACg0QRR
+kj0ler8NMsoJaJGvQ5r+vL8=
+=ocXL
 -----END PGP SIGNATURE-----
