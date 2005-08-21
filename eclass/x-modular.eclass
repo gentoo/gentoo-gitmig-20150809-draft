@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.5 2005/08/15 00:33:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.6 2005/08/21 04:56:53 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -102,14 +102,22 @@ x-modular_src_unpack() {
 	x-modular_reconf_source
 }
 
-x-modular_src_compile() {
+x-modular_src_configure() {
 	# If prefix isn't set here, .pc files cause problems
 	if [ -x ./configure ]; then
 		econf --prefix=${XDIR} \
 			--datadir=${XDIR}/share \
 			${CONFIGURE_OPTIONS}
 	fi
+}
+
+x-modular_src_make() {
 	emake || die "emake failed"
+}
+
+x-modular_src_compile() {
+	x-modular_src_configure
+	x-modular_src_make
 }
 
 x-modular_src_install() {
