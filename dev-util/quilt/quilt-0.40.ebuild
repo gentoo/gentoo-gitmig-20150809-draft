@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.40.ebuild,v 1.2 2005/07/05 22:51:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.40.ebuild,v 1.3 2005/08/21 23:56:58 metalgod Exp $
 
 inherit bash-completion
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/q/quilt/${P//-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-util/diffstat

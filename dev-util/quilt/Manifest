@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ab3de6bb64aa7ebfa3d7c05538b8271 quilt-0.39.ebuild 1047
-MD5 d8e8fa9c9b7e244244c38ccc5189453d quilt-0.40.ebuild 1047
-MD5 54de0b3520bdcab79b7c58dbcd0e66c0 quilt-0.32-r1.ebuild 775
-MD5 3b718ff3a9bf1e797e07183aa8b02659 quilt-0.42.ebuild 1048
-MD5 e5a248f0b0bee8b17d106d6f6c9cadbf ChangeLog 1637
+MD5 c56cd5a3ece98fa395e41b35fd8b7ebd ChangeLog 1734
 MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
+MD5 54de0b3520bdcab79b7c58dbcd0e66c0 quilt-0.32-r1.ebuild 775
+MD5 8ab3de6bb64aa7ebfa3d7c05538b8271 quilt-0.39.ebuild 1047
+MD5 9d37848ba4c93a3a95c72c87c3607bed quilt-0.40.ebuild 1047
+MD5 3b718ff3a9bf1e797e07183aa8b02659 quilt-0.42.ebuild 1048
+MD5 c6fbb2eecd1ee85a0db63fea70a2416d files/digest-quilt-0.32-r1 62
 MD5 f833281ba40e1a4b8319065751487a3b files/digest-quilt-0.39 67
 MD5 1cfc6f4adacb34934f4b8c041841a32a files/digest-quilt-0.40 67
 MD5 8a2317a2de8dda18a984210f271e015a files/digest-quilt-0.42 62
-MD5 c6fbb2eecd1ee85a0db63fea70a2416d files/digest-quilt-0.32-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6sTBEZCkKN40op4RAs/AAKCf2zRQpwyV1ocuuLDVatKYzL7J4ACfUQ0B
-/BIMfp5glGhwEIE6+8cg3BA=
-=mNP4
------END PGP SIGNATURE-----
