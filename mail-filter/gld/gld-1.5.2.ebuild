@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.2.ebuild,v 1.3 2005/08/14 10:10:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.2.ebuild,v 1.4 2005/08/21 11:44:07 slarti Exp $
+
+inherit eutils
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -18,6 +20,12 @@ DEPEND="virtual/libc
 	!postgres? ( dev-db/mysql )"
 RDEPEND="${DEPEND}
 	>=mail-mta/postfix-2.1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-mxgrey-fix.patch
+}
 
 src_compile() {
 	# It's kind of weird. $(use_with postgres pgsql) won't work...
