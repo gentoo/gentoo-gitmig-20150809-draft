@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.3.7.ebuild,v 1.1 2005/08/18 17:31:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.3.7-r1.ebuild,v 1.1 2005/08/21 04:14:00 leonardop Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -50,7 +50,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	gstreamer? (
 		=media-libs/gstreamer-0.8*
 		=media-libs/gst-plugins-0.8* )
-	dbus? ( <sys-apps/dbus-0.30 )
+	dbus? ( sys-apps/dbus )
 	mono? ( >=dev-lang/mono-1 )"
 
 DEPEND="${RDEPEND}
