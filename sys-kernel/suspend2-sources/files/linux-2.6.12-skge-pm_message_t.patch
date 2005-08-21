@@ -1,0 +1,21 @@
+diff -urp linux-2.6.12/drivers/net/skge.c linux-2.6.12-skge-pm_message_t/drivers/net/skge.c
+--- linux-2.6.12/drivers/net/skge.c	2005-08-21 16:41:40.000000000 +0200
++++ linux-2.6.12-skge-pm_message_t/drivers/net/skge.c	2005-08-21 16:46:53.000000000 +0200
+@@ -3237,7 +3237,7 @@ static void __devexit skge_remove(struct
+ }
+ 
+ #ifdef CONFIG_PM
+-static int skge_suspend(struct pci_dev *pdev, u32 state)
++static int skge_suspend(struct pci_dev *pdev, pm_message_t state)
+ {
+ 	struct skge_hw *hw  = pci_get_drvdata(pdev);
+ 	int i, wol = 0;
+@@ -3257,7 +3257,7 @@ static int skge_suspend(struct pci_dev *
+ 	}
+ 
+ 	pci_save_state(pdev);
+-	pci_enable_wake(pdev, state, wol);
++	pci_enable_wake(pdev, pci_choose_state(pdev, state), wol);
+ 	pci_disable_device(pdev);
+ 	pci_set_power_state(pdev, pci_choose_state(pdev, state));
+ 

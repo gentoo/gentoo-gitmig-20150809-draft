@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/suspend2-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.6 2005/08/17 14:30:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/ChangeLog,v 1.7 2005/08/21 14:54:39 brix Exp $
+
+*suspend2-sources-2.6.12-r6 (21 Aug 2005)
+
+  21 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/linux-2.6.12-skge-pm_message_t.patch,
+  +suspend2-sources-2.6.12-r6.ebuild:
+  Fix compilation of skge, bug #103127.
 
 *suspend2-sources-2.6.12-r5 (17 Aug 2005)
 
