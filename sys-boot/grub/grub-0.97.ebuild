@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97.ebuild,v 1.1 2005/08/20 00:03:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97.ebuild,v 1.2 2005/08/21 02:24:04 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -113,8 +113,8 @@ src_test() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	if use netboot ; then
-		exeinto /usr/lib/grub
-		doexe nbgrub pxegrub stage2/stage2.netboot
+		exeinto /usr/lib/grub/${CHOST}
+		doexe nbgrub pxegrub stage2/stage2.netboot || die "netboot install"
 	fi
 
 	insinto /boot/grub

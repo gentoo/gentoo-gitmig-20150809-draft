@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 70d277c51cf834fc480f28e631960cf6 grub-0.96-r2.ebuild 4588
-MD5 6a3fa6901a3a5d3e8a2435bc70b11051 grub-0.96-r1.ebuild 4733
-MD5 b47bf0819ddd6057262dbff2ee1a1d5a grub-0.96-r3.ebuild 4568
-MD5 1eef54e9c246858e8998857f8ca77e22 grub-0.94-r1.ebuild 3519
-MD5 f0a2b3429a6fe02a7ad675a392464a8a grub-0.97.ebuild 4484
+MD5 bb061c69fc3ad3e5484726111bacb933 grub-0.96-r2.ebuild 4597
+MD5 39a70f2e6c41b7e432c0f5603d01c1da grub-0.96-r1.ebuild 4742
+MD5 80623fad414fd78bb04b0479b94d76df grub-0.96-r3.ebuild 4577
+MD5 c634a95c2668abba2e886a917b363d5d grub-0.94-r1.ebuild 3528
+MD5 98aac6dc17a7d909ca1de859ef1394a2 grub-0.97.ebuild 4518
 MD5 c8d30bf5c47b6d9cb935d2adb12a9ac9 grub-0.92-r1.ebuild 2629
-MD5 60953a0178bea28f654ff25560f17947 ChangeLog 15676
+MD5 ace1405356b6428d5d0b6c8251b32320 ChangeLog 15964
 MD5 97d88870847fafcf5fe4162f6d273e74 files/digest-grub-0.96-r2 193
 MD5 c5c746f1feb71d47fb2f5481590b83df files/digest-grub-0.94-r1 190
 MD5 80b2642d044b2ad2983d3925c4531952 files/digest-grub-0.97 191
@@ -18,7 +18,7 @@ MD5 5695c7ea410b6913901208938e05b1ad files/digest-grub-0.92-r1 190
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBnNrgIKl8Uu19MoRAkEIAJ9ABJt8otynVFOJH9OoiPeuOs0xAQCdE7F2
-txcgVBC0b4l2ufLM105PrDg=
-=ovDA
+iD8DBQFDB+XqgIKl8Uu19MoRAo9cAJ9/5TEAV5N4PkLr1q5xS6ZulmjaHwCdGwH+
+0Qe8shQm7vjzEVT8jc55pYg=
+=osBe
 -----END PGP SIGNATURE-----

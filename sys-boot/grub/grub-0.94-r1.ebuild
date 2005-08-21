@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.23 2005/08/05 03:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.24 2005/08/21 02:24:04 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -92,7 +92,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	exeinto /usr/lib/grub
+	exeinto /usr/lib/grub/${CHOST}
 	doexe nbgrub pxegrub stage2/stage2 stage2/stage2.netboot
 
 	insinto /boot/grub
