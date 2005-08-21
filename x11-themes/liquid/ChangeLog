@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/liquid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.6 2005/05/06 00:24:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.7 2005/08/21 21:35:59 greg_g Exp $
+
+  21 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> liquid-0.9.7.ebuild:
+  Correct KDE dependency (#83058).
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> liquid-0.9.7.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
