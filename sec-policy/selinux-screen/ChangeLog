@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-screen
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.1 2005/08/21 23:44:31 spb Exp $
+
+*selinux-screen-20050821 (21 Aug 2005)
+
+  21 Aug 2005; Stephen Bennett <spb@gentoo.org> +metadata.xml,
+  +selinux-screen-20050821.ebuild:
+  Initial import.
+
