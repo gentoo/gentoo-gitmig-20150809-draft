@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1398 2005/08/21 00:28:48 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1399 2005/08/21 15:23:19 cryos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -862,6 +862,7 @@ net-www/mod_log_sql:dbi - Enables support for libDBI
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
+sci-astronomy/setiathome:server - Enable compilation of server
 sci-biology/hmmer:pvm - Adds support for parallel virtual machine.
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program.
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities.
