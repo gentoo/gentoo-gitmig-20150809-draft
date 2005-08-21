@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.50 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.51 2005/08/21 02:24:37 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
 inherit eutils
-
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
@@ -24,7 +23,7 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 	inherit cvs
 elif [[ ${PV/.200?????/} != ${PV} ]] ; then
 	ECVS_STATE="snap"
-elif [[ ${PV/.00?} != ${PV} ]] ; then
+elif [[ ${PV%%.0??} != ${PV} ]] ; then
 	EKEY_STATE="snap"
 fi
 
