@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.87 2005/08/20 23:45:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.88 2005/08/21 20:56:58 sekretarz Exp $
+
+  21 Aug 2005; <sekretarz@gentoo.org> mldonkey-2.6.2.ebuild:
+  Added missing parentheses in DEPEND and RDEPEND. Fixed some typos. Bug
+  #103237 and #103131
 
 *mldonkey-2.6.2 (21 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.2.ebuild,v 1.1 2005/08/20 23:45:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.2.ebuild,v 1.2 2005/08/21 20:56:58 sekretarz Exp $
 
 inherit eutils
 
@@ -18,16 +18,16 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
 
 RDEPEND="dev-lang/perl
-	gtk2? >=gnome-base/librsvg-2.4.0
-	gtk2? >=dev-ml/lablgtk-2.4
-	gtk? =dev-ml/lablgtk-1.2.7*
-	oldgtk? =dev-ml/lablgtk-1.2.7*
-	gd? >=media-libs/gd-2.0.28"
+	gtk2? ( >=gnome-base/librsvg-2.4.0
+			>=dev-ml/lablgtk-2.4 )
+	gtk? ( =dev-ml/lablgtk-1.2.7* )
+	oldgtk? ( =dev-ml/lablgtk-1.2.7* )
+	gd? ( >=media-libs/gd-2.0.28 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
-	!batch? >=dev-lang/ocaml-3.08.3
-	batch? net-misc/wget"
+	!batch? ( >=dev-lang/ocaml-3.08.3 )
+	batch? ( net-misc/wget )"
 
 MLUSER="p2p"
 
@@ -43,17 +43,17 @@ pkg_setup() {
 
 	if (use gtk && use gtk2) || (use gtk && use oldgtk) || (use gtk2 && use oldgtk); then
 		eerror "Only one GUI must be chosen! (gtk || gtk2 || oldgtk)"
-		die
+		die "Choose only one GUI"
 	fi
 
 	if use guionly && !(use gtk2 || use gtk || use oldgtk); then
 		eerror "You need to choose a GUI (gtk || gtk2 || oldgtk)"
-		die
+		die "You have guionly enabled, but you haven't chosen any of GUIs"
 	fi
 
 	if use gtk2 && !(built_with_use dev-ml/lablgtk svg); then
 		eerror "dev-ml/lablgtk must be built with the 'svg' USE flag to use the gtk2 gui"
-		die
+		die "Recompile dev-ml/lablgtk with enabled svg USE flag"
 	fi
 }
 
@@ -116,11 +116,8 @@ src_install() {
 	if (use gtk2 || use gtk || use oldgtk); then
 		dobin mlgui mlguistarter mlchat mlim mlprogress
 
-		insinto /usr/share/applications
-		doins ${FILESDIR}/${PN}-gui.desktop
-
-		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/${PN}.png
+		domenu ${FILESDIR}/${PN}-gui.desktop
+		doicon ${FILESDIR}/${PN}.png
 	fi
 
 	if use doc ; then
@@ -144,7 +141,7 @@ src_install() {
 	fi
 
 	if use mozilla; then
-		insinto /usr/share/{PN}
+		insinto /usr/share/${PN}
 		doins ${DISTFILES}/mldonkey_protocol_handler-${MOZVER}.xpi
 	fi;
 }
