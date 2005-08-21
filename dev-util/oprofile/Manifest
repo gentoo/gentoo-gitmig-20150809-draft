@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6e14d162299d44869dddd337e130bcf6 ChangeLog 2626
-MD5 26253b92a26a505d340c30e8bd9be1d3 files/digest-oprofile-0.8.1 66
-MD5 c2c6ccfba6b301b507f80d5b1d595cf9 files/digest-oprofile-0.8.2 66
-MD5 3f9580dac61b935958e6f8671c7d6ce0 files/digest-oprofile-0.9 64
-MD5 37dee2be2710a99023888aa0be7f00cd files/oprofile-0.8.2.patch 669
-MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
-MD5 1589c45cac2148fa72acfa8c951b5666 oprofile-0.8.1.ebuild 1872
+MD5 135ff630712ab8618156e9c033e976e0 oprofile-0.9.1.ebuild 1969
 MD5 f497dd7e57dc1fb635884b9f853545c3 oprofile-0.8.2.ebuild 1970
 MD5 901bb3a2c4999894236a9c1e226a2527 oprofile-0.9.ebuild 1968
+MD5 82ff1b1c4ac027dc592230047b389465 ChangeLog 2768
+MD5 1589c45cac2148fa72acfa8c951b5666 oprofile-0.8.1.ebuild 1872
+MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
+MD5 26253b92a26a505d340c30e8bd9be1d3 files/digest-oprofile-0.8.1 66
+MD5 c2c6ccfba6b301b507f80d5b1d595cf9 files/digest-oprofile-0.8.2 66
+MD5 270affd330807662827e4183ae6f00a4 files/digest-oprofile-0.9.1 66
+MD5 3f9580dac61b935958e6f8671c7d6ce0 files/digest-oprofile-0.9 64
+MD5 37dee2be2710a99023888aa0be7f00cd files/oprofile-0.8.2.patch 669
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC6Y6JI1lqEGTUzyQRAo5xAJoDHDtc6ugknGml0EsHyLOMMmsowACfbi0x
-lv947RA9F4sIPangvnJiZtE=
-=YvEQ
+iD4DBQFDCODOchej4aZK9/cRAshzAJ41n2dJNGbpETAJK3yLkawFoawCxACY2Sbr
+M+fotmwKtP7O/NgAnJFmTA==
+=xiaw
 -----END PGP SIGNATURE-----
