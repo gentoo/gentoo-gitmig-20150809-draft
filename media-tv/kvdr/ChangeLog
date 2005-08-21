@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kvdr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.6 2005/07/28 21:07:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.7 2005/08/21 20:47:59 greg_g Exp $
+
+*kvdr-0.63 (21 Aug 2005)
+
+  21 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> +kvdr-0.63.ebuild:
+  New version and cleanup, fixing bug #81086.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> kvdr-0.61.ebuild,
   kvdr-0.62.ebuild:
