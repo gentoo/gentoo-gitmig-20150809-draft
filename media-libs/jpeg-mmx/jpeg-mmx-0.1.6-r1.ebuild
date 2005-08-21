@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-0.1.6-r1.ebuild,v 1.1 2005/08/21 04:34:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-0.1.6-r1.ebuild,v 1.2 2005/08/21 18:09:24 vapier Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/include/jpeg-mmx
-	make install-headers prefix="${D}"/usr || die "headers"
+	make install-headers includedir="${D}"/usr/include/jpeg-mmx || die "headers"
 
 	for x in cjpeg djpeg jpegtran ; do
 		newbin .libs/${x} ${x}-mmx || die "dobin ${x}"
