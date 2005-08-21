@@ -3,17 +3,19 @@ Hash: SHA1
 
 MD5 97afc085ffc474a07103d8fd3f0e3e88 phpldapadmin-0.9.6c.ebuild 1018
 MD5 83cd6adf810538b4569700dda6ea9eab phpldapadmin-0.9.5.ebuild 1013
-MD5 e117bd3b28964f0565bd62ff50253900 ChangeLog 1952
+MD5 0a19f9770201f2e8ff7bb48f7cb9d27c phpldapadmin-0.9.7_alpha4.ebuild 926
+MD5 8dfa8d6d4a0ce8b94e07eeaaa9d40726 ChangeLog 2119
 MD5 e9b9e4888a6ca818b883131b53ab9c04 phpldapadmin-0.9.6.ebuild 1017
 MD5 2b9f3758019e1a5695a4e4d3e3152383 metadata.xml 275
 MD5 62c674c040dea528ab9e02009ebc835c files/digest-phpldapadmin-0.9.5 70
 MD5 9a33a746aab9a3fa0100f27794427bda files/digest-phpldapadmin-0.9.6 70
+MD5 c876b6e9a2ec430d216f871bc38eff76 files/digest-phpldapadmin-0.9.7_alpha4 77
 MD5 633f669b517977c88d2e02a8f6c8254c files/digest-phpldapadmin-0.9.6c 71
-MD5 4a3de5c22fb420c075cca598a6101e1b files/postinstall-en.txt 186
+MD5 306450e12d7022d610333cf736164286 files/postinstall-en.txt 124
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCzUYrEzitwsaoONoRApVDAJ4/2aalFetG74fjd7C5DhKSK71KwgCfdspL
-mujeyNidffMmJV9nNsrGao0=
-=63vD
+iD8DBQFDCKDNEzitwsaoONoRAtqOAJ96nG5R4zYz3tMFaysZoypoiBSNmwCghNPf
+wK8jtGy1lp1g/1E0d34cw2k=
+=z9/t
 -----END PGP SIGNATURE-----
