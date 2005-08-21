@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.0-r1.ebuild,v 1.2 2005/04/29 22:47:37 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.4-r1.ebuild,v 1.1 2005/08/21 19:25:43 slarti Exp $
 
 inherit mailer
 
@@ -9,15 +9,16 @@ HOMEPAGE="http://msmtp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~alpha"
-IUSE="ssl gnutls sasl doc"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="ssl gnutls sasl doc nls"
 DEPEND="virtual/libc
 	dev-util/pkgconfig
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.2.0 )
 		!gnutls? ( >=dev-libs/openssl-0.9.6 )
 	)
-	sasl? ( >=virtual/gsasl-0.2.4 )"
+	sasl? ( >=virtual/gsasl-0.2.4 )
+	nls? ( sys-devel/gettext )"
 
 src_compile () {
 	local myconf
@@ -32,6 +33,7 @@ src_compile () {
 
 	econf \
 		$(use_enable sasl gsasl) \
+		$(use_enable nls) \
 		${myconf} \
 		|| die "configure failed"
 
@@ -44,7 +46,7 @@ src_install () {
 	if use mailwrapper ; then
 		mailer_install_conf
 	else
-		dodir /usr/sbin /usr/lib
+		dodir /usr/sbin
 		dosym /usr/bin/msmtp /usr/sbin/sendmail || die "dosym failed"
 	fi
 
