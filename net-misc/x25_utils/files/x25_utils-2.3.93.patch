@@ -1,3 +1,14 @@
+--- Makefile.orig	2000-10-20 16:14:28.000000000 +0200
++++ Makefile	2005-08-21 05:39:41.000000000 +0200
+@@ -43,7 +43,7 @@
+ SUB = libtelnet telnet telnetd trace route
+ 
+ all:
+-	for i in $(SUB); do make -C  $$i; done
++	for i in $(SUB); do make -C  $$i || exit 1; done
+ 
+ install:
+ 	for i in $(SUB); do make -C  $$i install; done
 --- telnet/commands.c.orig	1996-12-15 23:00:16.000000000 +0100
 +++ telnet/commands.c	2005-08-21 04:47:29.000000000 +0200
 @@ -55,7 +55,8 @@
@@ -107,7 +118,7 @@
 --- telnetd/sys_term.c.orig	2000-12-01 00:22:49.000000000 +0100
 +++ telnetd/sys_term.c	2005-08-21 04:54:01.000000000 +0200
 @@ -39,6 +39,7 @@
- static char rcsid[] = "$Id: x25_utils-2.3.93.patch,v 1.1 2005/08/21 03:18:45 sbriesen Exp $";
+ static char rcsid[] = "$Id: x25_utils-2.3.93.patch,v 1.2 2005/08/21 03:43:17 sbriesen Exp $";
  #endif /* not lint */
  
 +#include <stdint.h>
