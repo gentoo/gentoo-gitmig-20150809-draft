@@ -1,6 +1,16 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.125 2005/08/18 14:26:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.126 2005/08/21 02:36:34 metalgod Exp $
+
+*cdrtools-2.01.01_alpha03-r1 (21 Aug 2005)
+
+  21 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/cdrtools-2.01.01a03-rezero.patch,
+  +files/cdrtools-2.01.01a03-warnings.patch,
+  +files/cdrtools-2.01a27-writemode.patch,
+  +cdrtools-2.01.01_alpha03-r1.ebuild:
+  Added a few patches to fix cdrecord problems when users needs to burn
+  cd/dvd. Fixes bug #102940.
 
   18 Aug 2005; Lars Weiler <pylon@gentoo.org>
   cdrtools-2.01.01_alpha03.ebuild:
