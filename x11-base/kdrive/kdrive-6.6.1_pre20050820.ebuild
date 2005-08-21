@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.1 2005/08/21 02:55:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-6.6.1_pre20050820.ebuild,v 1.2 2005/08/21 06:08:20 mr_bones_ Exp $
 
 SNAPSHOT="yes"
 
