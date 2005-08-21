@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.7 2005/08/20 00:14:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre0.ebuild,v 1.8 2005/08/21 21:27:03 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -73,10 +73,10 @@ RDEPEND="${RDEPEND}
 	>=gnome-base/gdm-2.8.0.2
 	>=app-editors/gedit-2.11.91
 
-	>=app-text/evince-0.3.2"
+	>=app-text/evince-0.3.2
 
+	>=gnome-base/gnome-desktop-2.11.90"
 #	>=gnome-base/gnome-session-2.11.90
-#	>=gnome-base/gnome-desktop-2.11.90
 #	>=gnome-base/gnome-applets-2.11.91
 #	>=gnome-base/gnome-panel-2.11.90
 RDEPEND="${RDEPEND}
@@ -88,8 +88,8 @@ RDEPEND="${RDEPEND}
 	>=x11-themes/gtk-engines-2.6.4
 	>=x11-themes/gnome-backgrounds-2.10.2
 
-	>=x11-libs/vte-0.11.14"
-#	>=x11-terms/gnome-terminal-2.11.2
+	>=x11-libs/vte-0.11.14
+	>=x11-terms/gnome-terminal-2.11.2"
 
 #	>=x11-libs/gtksourceview-1.3.91
 RDEPEND="${RDEPEND}
@@ -111,8 +111,8 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/startup-notification-0.8
 
 	>=gnome-extra/gnome2-user-docs-2.8.1
-	>=gnome-extra/yelp-2.11.1"
-#	>=gnome-extra/zenity-2.11.91
+	>=gnome-extra/yelp-2.11.1
+	>=gnome-extra/zenity-2.11.91"
 
 #	>=net-analyzer/gnome-netstatus-2.11.90
 #	>=net-analyzer/gnome-nettool-1.3.91
