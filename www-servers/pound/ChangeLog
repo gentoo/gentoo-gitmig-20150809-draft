@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.9 2005/07/07 15:45:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.10 2005/08/21 15:50:57 rl03 Exp $
+
+  21 Aug 2005; Renat Lumpau <rl03@gentoo.org> metadata.xml:
+  Reassigning to www-servers
 
 *pound-1.9 (07 Jul 2005)
 
