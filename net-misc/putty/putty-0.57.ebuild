@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.57.ebuild,v 1.6 2005/08/21 13:29:39 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.57.ebuild,v 1.7 2005/08/21 18:21:24 taviso Exp $
 
 inherit eutils
 
@@ -20,23 +20,27 @@ DEPEND="${RDEPEND} dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-
 	ebegin "Generating Makefiles"
-	cd ${S}; perl ${S}/mkfiles.pl || die
+		cd ${S}; perl ${S}/mkfiles.pl || die
 	eend $?
 
 	ebegin "Setting CFLAGS"
-	sed -i "s!-O2!${CFLAGS}!g" ${S}/unix/Makefile.gtk
-
-	# prevent gtk-config from being used without gtk
-	if ! use gtk; then
-		sed -i "s/gtk-config/true/g" ${S}/unix/Makefile.gtk
-	fi
+		# bug #103268
+		sed -i "s/-Werror//" ${S}/unix/Makefile.gtk
+		sed -i "s!-O2!${CFLAGS}!g" ${S}/unix/Makefile.gtk
+		# bug #44836
+		# prevent gtk-config from being used without gtk
+		if ! use gtk; then
+			sed -i "s/gtk-config/true/g" ${S}/unix/Makefile.gtk
+		fi
 	eend $?
 }
 
 src_compile() {
-	cd ${S}/unix;
+	cd ${S}/unix
+
+	# compile all targets if gtk is required, otherwise
+	# just non-X utilities.
 	if use gtk; then
 		emake -f Makefile.gtk
 	else
@@ -46,34 +50,25 @@ src_compile() {
 
 src_install() {
 	cd ${S}/doc
-
-	if use gtk; then
-		doman pterm.1 putty.1 puttytel.1
-	fi
-
+	use gtk && doman pterm.1 putty.1 puttytel.1
 	doman puttygen.1 plink.1
 
 	cd ${S}/unix
-
-	if use gtk; then
-		dobin pterm putty puttytel
-	fi
-
+	use gtk && dobin pterm putty puttytel
 	dobin puttygen plink pscp psftp
 
 	cd ${S}
-
 	dodoc README README.txt LICENCE CHECKLST.txt LATEST.VER website.url
 	use doc && dodoc doc/*
 
 	prepallman
 
 	# install desktop file provided by Gustav Schaffter in #49577
-	if use gtk; then
+	use gtk && {
 		dodir /usr/share/applications
 		insinto /usr/share/applications
 		doins ${FILESDIR}/putty.desktop
-	fi
+	}
 
 	if test ! -c /dev/ptmx; then
 		ewarn

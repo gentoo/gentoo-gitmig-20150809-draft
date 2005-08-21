@@ -1,5 +1,5 @@
-MD5 754f83f3cf48b87d08a29c429a2165c2 putty-0.57.ebuild 1695
-MD5 f5b160bf233f924c3030a87a4ac24fa3 ChangeLog 3465
+MD5 4a383beb375f4954b2af0c9d53acfc22 putty-0.57.ebuild 1820
+MD5 100121157f8df739c1824c18117fe7d7 ChangeLog 3548
 MD5 a95f430323d2b9413a9ae45efb4d616c metadata.xml 549
 MD5 3a07269379d199e6363fbe0250c5899a files/digest-putty-0.57 63
 MD5 4f674a5fd23877ac6d76c6d9baa33041 files/putty-ut_time.patch 824
