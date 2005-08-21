@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.57.ebuild,v 1.5 2005/05/01 18:24:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.57.ebuild,v 1.6 2005/08/21 13:29:39 taviso Exp $
 
 inherit eutils
 
@@ -12,9 +12,9 @@ LICENSE="MIT"
 
 SLOT="0"
 KEYWORDS="x86 alpha ppc ~sparc amd64"
-IUSE="doc"
+IUSE="doc gtk"
 
-RDEPEND="=x11-libs/gtk+-1.2* virtual/x11"
+RDEPEND="gtk? ( =x11-libs/gtk+-1.2* virtual/x11 )"
 
 DEPEND="${RDEPEND} dev-lang/perl"
 
@@ -27,21 +27,39 @@ src_unpack() {
 
 	ebegin "Setting CFLAGS"
 	sed -i "s!-O2!${CFLAGS}!g" ${S}/unix/Makefile.gtk
+
+	# prevent gtk-config from being used without gtk
+	if ! use gtk; then
+		sed -i "s/gtk-config/true/g" ${S}/unix/Makefile.gtk
+	fi
 	eend $?
 }
 
 src_compile() {
-	cd ${S}/unix; emake -f Makefile.gtk || die "make failed"
+	cd ${S}/unix;
+	if use gtk; then
+		emake -f Makefile.gtk
+	else
+		emake -f Makefile.gtk puttygen plink pscp psftp
+	fi
 }
 
 src_install() {
 	cd ${S}/doc
 
-	doman plink.1 pterm.1 putty.1 puttytel.1 puttygen.1
+	if use gtk; then
+		doman pterm.1 putty.1 puttytel.1
+	fi
+
+	doman puttygen.1 plink.1
 
 	cd ${S}/unix
 
-	dobin plink pterm putty puttytel psftp pscp puttygen
+	if use gtk; then
+		dobin pterm putty puttytel
+	fi
+
+	dobin puttygen plink pscp psftp
 
 	cd ${S}
 
@@ -51,9 +69,11 @@ src_install() {
 	prepallman
 
 	# install desktop file provided by Gustav Schaffter in #49577
-	dodir /usr/share/applications
-	insinto /usr/share/applications
-	doins ${FILESDIR}/putty.desktop
+	if use gtk; then
+		dodir /usr/share/applications
+		insinto /usr/share/applications
+		doins ${FILESDIR}/putty.desktop
+	fi
 
 	if test ! -c /dev/ptmx; then
 		ewarn
