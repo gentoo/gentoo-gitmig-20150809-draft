@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.27 2005/08/20 22:53:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.28 2005/08/21 02:39:07 spyderous Exp $
+
+*xorg-server-0.99.1-r4 (21 Aug 2005)
+
+  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-server-0.99.1-r4.ebuild:
+  Update to today's CVS. This adds a USE flag for xprint. Also, get rid of the
+  glx USE flag, because everybody should get it.
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1.ebuild, xorg-server-0.99.1-r1.ebuild,

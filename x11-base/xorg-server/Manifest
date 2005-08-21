@@ -1,8 +1,9 @@
 MD5 933ccecdb5fe78b9be1e98c7f37330c2 xorg-server-0.99.1-r1.ebuild 3020
-MD5 0c1ce8037b5a65a3ce0db346c5b57024 ChangeLog 4975
+MD5 4d44a5ecdb79cd635dae0b34516be848 ChangeLog 5230
 MD5 ec3dcd9bb675ec4c10e298b660b200d6 xorg-server-0.99.1.ebuild 2887
 MD5 a77ae0249ac2bde41bcb938adca6b411 xorg-server-0.99.1-r2.ebuild 3228
 MD5 7ba44f65da461a86dd463bcbf984b834 xorg-server-0.99.1-r3.ebuild 3552
+MD5 fce26ca043edacc74f8c3378c12471a0 xorg-server-0.99.1-r4.ebuild 3593
 MD5 139d1af499d5fd30cbb118284544e3f6 files/xorg-composite.patch 2397
 MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1 137
 MD5 44296a07d7ed76922dd604d93b00ab18 files/digest-xorg-server-0.99.1-r1 137
@@ -12,3 +13,4 @@ MD5 bf2ef74202eb0877dc40a8d0f5b38430 files/digest-xorg-server-0.99.1-r2 239
 MD5 bf2ef74202eb0877dc40a8d0f5b38430 files/digest-xorg-server-0.99.1-r3 239
 MD5 15b113cf1db95c72eb12426c0f2bf9ae files/xorg-server-0.99.1-x86_64-1.patch 452
 MD5 f176158b79ddb098f9ffb61551423eb1 files/xorg-server-fbmmx-local.patch 1210
+MD5 c701b68bb6d7f5d733fc97598b9c60e6 files/digest-xorg-server-0.99.1-r4 237
