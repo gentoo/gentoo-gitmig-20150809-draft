@@ -5,5 +5,5 @@ For new installations:
 Then create an albums directory and set permissions, e.g.,
  chown ${VHOST_SERVER_GID}:${VHOST_SERVER_UID} my_albums_directory
 
-Now, point your browser to http://${VHOST_HOSTNAME}${VHOST_APPDIR}/setup/
+Now, point your browser to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/setup/
 and follow the instructions.
