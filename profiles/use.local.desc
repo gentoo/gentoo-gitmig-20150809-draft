@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1397 2005/08/20 23:42:24 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1398 2005/08/21 00:28:48 rl03 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1011,6 +1011,7 @@ www-apps/dspam-web:neural - Build neural support for dspam
 www-apps/dspam-web:procmail - Build procmail filter support
 www-apps/dspam-web:sqlite3 - Build sqlite 3 support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
+www-apps/gallery:netpbm - Add NetPBM support
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
