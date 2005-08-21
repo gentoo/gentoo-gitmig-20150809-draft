@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x25_utils/x25_utils-2.3.93.ebuild,v 1.1 2005/08/21 03:18:45 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x25_utils/x25_utils-2.3.93.ebuild,v 1.2 2005/08/21 03:33:18 sbriesen Exp $
 
 inherit eutils linux-info
 
@@ -24,7 +24,7 @@ src_unpack() {
 	cd "${S}"
 
 	# patch Makefile to catch errors
-	sed -i -e "s:\(\$\$i\);:\1 || exit;:g" Makefile
+	sed -i -e "s:\(\$\$i\);:\1 || exit 1;:g" Makefile
 
 	# patch telnet/telnetd
 	epatch "${FILESDIR}/${P}.patch"
