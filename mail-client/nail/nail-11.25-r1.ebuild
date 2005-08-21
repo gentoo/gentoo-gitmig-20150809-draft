@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r1.ebuild,v 1.3 2005/08/21 19:50:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r1.ebuild,v 1.4 2005/08/21 23:23:33 metalgod Exp $
 
 inherit eutils
 DESCRIPTION="Nail is an enhanced mailx-compatible mail client"
@@ -12,7 +12,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE="ssl"
 
 src_compile() {
