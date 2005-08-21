@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r4.ebuild,v 1.2 2005/08/21 13:15:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r4.ebuild,v 1.3 2005/08/21 22:00:15 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -26,7 +26,8 @@ SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~spyderous/xorg-x11/xorg-server-0.99.1-update-to-CVS-HEAD-${CVS_UPDATE_DATE}.patch.gz"
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="dri ipv6 minimal xprint"
+#IUSE="dri ipv6 minimal xprint"
+IUSE="dri ipv6 minimal"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -67,9 +68,9 @@ DEPEND="${RDEPEND}
 	x11-proto/bigreqsproto
 	x11-proto/xcmiscproto
 	x11-proto/glproto
-	xprint? ( x11-proto/printproto )
 	dri? ( x11-proto/xf86driproto
 		x11-libs/libdrm )"
+#	xprint? ( x11-proto/printproto )
 
 pkg_setup() {
 	# localstatedir is used for the log location; we need to override the default
@@ -81,7 +82,7 @@ pkg_setup() {
 		$(use_enable !minimal xvfb)
 		$(use_enable !minimal xnest)
 		$(use_enable dri)
-		$(use_enable xprint)
+		--disable-xprint
 		--with-mesa-source=${WORKDIR}/${MESA_P}
 		--enable-glx
 		--enable-xorg
@@ -89,6 +90,7 @@ pkg_setup() {
 		--enable-xevie
 		--sysconfdir=/etc/X11
 		--localstatedir=/var"
+#		$(use_enable xprint)
 
 	# X won't start if -fomit-frame-pointer isn't filtered
 	filter-flags -fomit-frame-pointer
