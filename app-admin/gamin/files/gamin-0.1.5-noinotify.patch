@@ -1,0 +1,42 @@
+diff -ur -x '*~' gamin-0.1.5/server/gam_server.c gamin-0.1.5-fbsd/server/gam_server.c
+--- gamin-0.1.5/server/gam_server.c	2005-08-09 20:30:12.000000000 +0200
++++ gamin-0.1.5-fbsd/server/gam_server.c	2005-08-21 12:21:49.000000000 +0200
+@@ -170,9 +170,11 @@
+ 	if (gam_exclude_check (path)) 
+ 	{
+ 		GAM_DEBUG(DEBUG_INFO, "g_a_s: %s excluded\n", path);
++#if ENABLE_INOTIFY
+ 		if (gam_inotify_is_running())
+ 			return gam_poll_add_subscription (sub);
+ 		else
++#endif
+ 			return gam_backend_add_subscription(sub);
+ 	} else {
+ 		gam_fs_mon_type type;
+@@ -211,9 +213,11 @@
+ 
+ 	if (gam_exclude_check (path)) 
+ 	{
++#if ENABLE_INOTIFY
+ 		if (gam_inotify_is_running())
+ 			return gam_poll_remove_subscription (sub);
+ 		else
++#endif
+ 			return gam_backend_remove_subscription(sub);
+ 	} else {
+ 		gam_fs_mon_type type;
+@@ -300,10 +304,13 @@
+ 
+     reqno = gam_subscription_get_reqno(sub);
+ 
++#if ENABLE_INOTIFY
+ 	if (gam_inotify_is_running())
+ 	{
+ 		gam_queue_event(conn, reqno, event, subpath, len);
+-	} else {
++	} else
++#endif
++	{
+ 		if (gam_send_event(conn, reqno, event, subpath, len) < 0) {
+ 		GAM_DEBUG(DEBUG_INFO, "Failed to send event to PID %d\n",
+ 			  gam_connection_get_pid(conn));

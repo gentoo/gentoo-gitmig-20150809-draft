@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.30 2005/08/20 16:01:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.31 2005/08/21 10:28:40 flameeyes Exp $
+
+  21 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gamin-0.1.5-noinotify.patch, gamin-0.1.5.ebuild:
+  Added patch to fix build when inotify is not enabled (from gamin CVS).
 
 *gamin-0.1.5 (20 Aug 2005)
 
