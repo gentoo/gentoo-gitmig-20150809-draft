@@ -1,9 +1,19 @@
-MD5 3bb1b73f82fff7d73980e46b3ac60b84 ChangeLog 3797
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb0797d43ae9e4509e2103ffa7426a7d librep-0.16.2.ebuild 1224
-MD5 4d73d3d832b8e0fc7e88e861589c3987 librep-0.17-r1.ebuild 1321
+MD5 091a5e894acb07dafb639f3fe766b9c5 librep-0.17-r1.ebuild 1317
 MD5 480474336414d1a7f92e33f628fb9a8e librep-0.17.ebuild 1281
+MD5 fd17b549d444425413d7c58ead12c69a ChangeLog 3902
 MD5 aabaa608acb879f04a961ad9e6d8e19c metadata.xml 233
-MD5 f3efabdde310e7d8da74859ea2af221c files/digest-librep-0.16.2 65
-MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r1 64
+MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17 64
 MD5 8c655620e7f5d0dc0ee9b8ef6351158d files/librep-0.15.2-exec.patch 425
+MD5 f3efabdde310e7d8da74859ea2af221c files/digest-librep-0.16.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCLlHBXaUFmZvwyMRAorXAJ4l/OzJfRLPQCE0uzcaZnh0SdHUgACgqhSD
+fqNPKjW+syY5wY8qFPbMFkk=
+=tcMM
+-----END PGP SIGNATURE-----
