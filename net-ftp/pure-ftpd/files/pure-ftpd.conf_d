@@ -53,9 +53,14 @@ MISC_OTHER="-A -x -j -R -B"
 # -j [ If the home directory of a user doesn't exist, auto-create it ]
 # -M [ Allow anonymous users to create directories. ]
 # -R [ Disallow users (even non-anonymous ones) usage of the CHMOD command ]
-# -x [ Authenticated users can read/write files beginning with a dot ('.') 
-#       Anonymous users can't, for security reasons ]
-# -X [ Users can't write/read files and directories starting with a dot ('.') ]
+# -x [ In  normal  operation mode, authenticated users can read/write
+#	files beginning with a dot ('.'). Anonymous users can't, for security reasons
+#	(like changing banners or a forgotten .rhosts). When '-x' is used, authenticated
+#	users can download dot-files, but not overwrite/create  them,  even  if they own
+#	them. ]
+# -X [ This  flag  is  identical  to  the  previous one (writing
+#       dot-files is prohibited), but in addition, users can't even *read* files and
+#       directories beginning with a dot (like "cd .ssh"). ]
 # -D [ List files beginning with a dot ('.') even when the client doesn't
 #      append the '-a' option to the list command. A workaround for badly
 #      configured FTP clients. ]
