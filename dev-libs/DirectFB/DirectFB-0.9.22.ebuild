@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.4 2005/05/19 03:42:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.5 2005/08/21 02:32:58 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 -mips ppc -sparc x86"
-IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse static sysfs truetype"
+IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse static sysfs truetype zlib"
 
 DEPEND="sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
@@ -22,6 +22,7 @@ DEPEND="sdl? ( media-libs/libsdl )
 	jpeg? ( media-libs/jpeg )
 	mpeg? ( media-libs/libmpeg3 )
 	sysfs? ( sys-fs/sysfsutils )
+	zlib? ( sys-libs/zlib )
 	truetype? ( >=media-libs/freetype-2.0.1 )"
 
 pkg_setup() {
@@ -29,11 +30,13 @@ pkg_setup() {
 		ewarn "All video drivers will be built since you did not specify"
 		ewarn "via the VIDEO_CARDS variable what video card you use."
 		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
+		echo
 	fi
 	if [[ -z ${INPUT_DRIVERS} ]] ; then
 		ewarn "All input drivers will be built since you did not specify"
 		ewarn "via the INPUT_DRIVERS variable which input drivers to use."
 		einfo "DirectFB supports: ${IUSE_INPUT_DRIVERS} all none"
+		echo
 	fi
 }
 
@@ -96,6 +99,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable static) \
 		$(use_enable sysfs) \
+		$(use_enable zlib) \
 		${sdlconf} \
 		--with-gfxdrivers="${vidcards}" \
 		--with-inputdrivers="${inputdrivers}" \
