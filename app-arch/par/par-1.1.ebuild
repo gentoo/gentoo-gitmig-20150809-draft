@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.22 2005/01/01 11:50:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.23 2005/08/21 22:37:44 swegener Exp $
 
 DESCRIPTION="Parchive archive fixing tool"
 HOMEPAGE="http://parchive.sourceforge.net/"
@@ -11,23 +11,16 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ~ppc-macos"
 IUSE=""
 
-RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND=""
+RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/par-cmdline
-
-src_unpack() {
-	unpack par-v${PV}.tar.gz
-	cd ${S}
-	sed -i "s/CFLAGS.*/CFLAGS = -Wall ${CFLAGS}/" Makefile
-}
+S="${WORKDIR}"/par-cmdline
 
 src_compile() {
-	emake || die
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	dobin par || die
-	dodoc AUTHORS NEWS README rs.doc
+	dobin par || die "dobin failed"
+	dodoc AUTHORS NEWS README
 }
