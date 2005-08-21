@@ -1,6 +1,4 @@
 MD5 81d399b55522e5bbb43378a21469a3bf metadata.xml 225
 MD5 ffff8a08e2ce93834ef797f3b3a191f6 kvdr-0.63.ebuild 739
-MD5 341e0b1750e7d4dc1135675fe3d7a339 kvdr-0.62.ebuild 718
 MD5 200c1fdb8d8a7f9156299eb88337b3d4 ChangeLog 1065
-MD5 f2748d6f9b54f39ee1b9fac4a03938ff files/digest-kvdr-0.62 58
 MD5 0a9f47484f81bd1ab83ff655b7ea4773 files/digest-kvdr-0.63 58
