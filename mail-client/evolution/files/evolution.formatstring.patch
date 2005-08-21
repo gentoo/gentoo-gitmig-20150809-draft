@@ -1,0 +1,62 @@
+--- calendar/gui/e-cal-component-preview.c.old	2004-04-18 20:01:19.000000000 +0200
++++ calendar/gui/e-cal-component-preview.c	2005-08-02 11:44:49.000000000 +0200
+@@ -285,7 +285,7 @@ write_html (GtkHTMLStream *stream, ECal 
+ 					str = g_string_append_c (str, text.value[i]);
+ 			}
+ 
+-			gtk_html_stream_printf (stream, str->str);
++			gtk_html_stream_printf (stream, "%s", str->str);
+ 			g_string_free (str, TRUE);
+ 		}
+ 
+--- addressbook/gui/widgets/eab-contact-display.c.old	2005-02-14 17:09:03.000000000 +0100
++++ addressbook/gui/widgets/eab-contact-display.c	2005-08-02 13:38:21.000000000 +0200
+@@ -338,7 +338,7 @@ render_contact (GtkHTMLStream *html_stre
+ 	accum_attribute (accum, contact, _("Yahoo"), E_CONTACT_IM_YAHOO_HOME_1, YAHOO_ICON, 0);
+ 
+ 	if (accum->len > 0)
+-		gtk_html_stream_printf (html_stream, accum->str);
++		gtk_html_stream_printf (html_stream, "%s", accum->str);
+ 
+ 	end_block (html_stream);
+ 
+@@ -353,7 +353,7 @@ render_contact (GtkHTMLStream *html_stre
+ 
+ 	if (accum->len > 0) {
+ 		start_block (html_stream, _("work"));
+-		gtk_html_stream_printf (html_stream, accum->str);
++		gtk_html_stream_printf (html_stream, "%s", accum->str);
+ 		end_block (html_stream);
+ 	}
+ 
+@@ -368,7 +368,7 @@ render_contact (GtkHTMLStream *html_stre
+ 
+ 	if (accum->len > 0) {
+ 		start_block (html_stream, _("personal"));
+-		gtk_html_stream_printf (html_stream, accum->str);
++		gtk_html_stream_printf (html_stream, "%s", accum->str);
+ 		end_block (html_stream);
+ 	}
+ 
+--- calendar/gui/e-calendar-view.c.old	2005-02-14 17:09:04.000000000 +0100
++++ calendar/gui/e-calendar-view.c	2005-08-02 14:12:47.000000000 +0200
+@@ -1074,7 +1074,7 @@ on_save_as (GtkWidget *widget, gpointer 
+ 		return;
+ 	}
+ 	
+-	fprintf (file, ical_string);
++	fprintf (file, "%s", ical_string);
+ 	g_free (ical_string);
+ 	fclose (file);
+ 
+--- calendar/gui/e-calendar-table.c.old	2004-09-24 17:49:27.000000000 +0200
++++ calendar/gui/e-calendar-table.c	2005-08-02 14:15:12.000000000 +0200
+@@ -1212,7 +1212,7 @@ e_calendar_table_on_save_as (GtkWidget *
+ 		return;
+ 	}
+ 	
+-	fprintf (file, ical_string);
++	fprintf (file, "%s", ical_string);
+ 	g_free (ical_string);
+ 	fclose (file);
+ }
