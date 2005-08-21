@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.19 2005/08/17 00:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.20 2005/08/21 04:25:11 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -619,6 +619,9 @@ setup_flags() {
 	has_multilib_profile && CTARGET_OPT="$(get_abi_CHOST)"
 
 	case $(tc-arch) in
+		amd64)
+			CFLAGS_x86="-m32"
+		;;
 		ppc)
 			append-flags "-freorder-blocks"
 		;;
