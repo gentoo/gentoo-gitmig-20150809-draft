@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.14 2005/08/20 20:38:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.15 2005/08/21 09:49:34 genstef Exp $
+
+  21 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  -files/davfs2.nokernelsrc.patch, files/include-compiler.patch,
+  -files/include_compiler.patch, -davfs2-0.2.3-r1.ebuild,
+  -davfs2-0.2.4.ebuild:
+  Fix amd64 compile thanks to Marc <marcpg@gmx.de> in bug 102357, remove old
+  ebuilds
 
 *davfs2-0.2.4-r1 (20 Aug 2005)
 
