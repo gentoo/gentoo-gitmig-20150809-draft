@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.55 2005/08/13 18:40:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.56 2005/08/21 16:31:24 vanquirius Exp $
+
+*graphviz-2.4-r1 (21 Aug 2005)
+
+  21 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/graphviz-2.4.conf, +graphviz-2.4-r1.ebuild:
+  Revision bump. Install a sample configuration file for bug 101337. Thanks to
+  everyone participating in the bug.
 
   13 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> graphviz-1.10.ebuild:
   Use mirror://gentoo for src_uri since this version is no longer available in
