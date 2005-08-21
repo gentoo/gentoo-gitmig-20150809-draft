@@ -13,12 +13,13 @@ screen="-screen 1280x1024x16"
 
 rgb="-rgba rgb"
 
-mouse="-2button -mouse /dev/psaux -mouse /dev/input/mice,5"
+mouse="-mouse /dev/input/mice,5"
 
 opts="-dpi 96 -nolisten tcp"
 
-#switchcmd="-switchCmd /usr/X11R6/bin/touchpad"
+#switchcmd="-switchCmd /usr/bin/touchpad"
 
-fontpath="-fp /usr/share/fonts"
+#fontpath="-fp /usr/share/fonts"
+#fontpath=""
 
-exec ${dir}${server} $opts $rgb $screen $mouse $switchcmd $fontpath
+exec ${dir}${server} $opts $rgb $screen $mouse $switchcmd $fontpath $*

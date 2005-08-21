@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.29 2005/08/21 02:55:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.30 2005/08/21 05:36:32 spyderous Exp $
+
+  21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; files/startxkd:
+  Fix up startxkd so it works better for me.
 
 *kdrive-6.6.1_pre20050820 (21 Aug 2005)
 
