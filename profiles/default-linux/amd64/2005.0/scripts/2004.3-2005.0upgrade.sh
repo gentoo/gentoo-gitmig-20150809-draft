@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/scripts/2004.3-2005.0upgrade.sh,v 1.7 2005/08/09 01:47:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/scripts/2004.3-2005.0upgrade.sh,v 1.8 2005/08/21 04:28:00 eradicator Exp $
 
 TMPDIR="$(portageq envvar PORTAGE_TMPDIR)"
 PORTDIR="$(portageq envvar PORTDIR)"
@@ -212,7 +212,7 @@ if [[ ! -f step4 ]]; then
 fi
 
 if [[ ! -f step5 ]]; then
-	emerge -v --oneshot "=$(portageq match / sys-libs/glibc)" || myDie "emerge glibc failed"
+	emerge -v --oneshot sys-libs/glibc || myDie "emerge glibc failed"
 	touch step5
 fi
 
