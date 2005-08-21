@@ -1,5 +1,5 @@
-MD5 951981815988e63c61e9c25ef58fe330 octave-forge-2004.11.16-r1.ebuild 2265
-MD5 a115a7f1f6c2b0481b9af393e3ea7f8a octave-forge-2005.06.13.ebuild 2269
+MD5 ea7677dfdbf3fb96e543120d8f75d26e octave-forge-2004.11.16-r1.ebuild 2269
+MD5 c0b992412fda6a292815ccacec4c3fec octave-forge-2005.06.13.ebuild 2326
 MD5 95df7d1e148433d157c178c826f3cb94 ChangeLog 4338
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 64ae87b1b1190c6a51f7dfd91be73d05 files/octave-forge-mex.patch 1580
