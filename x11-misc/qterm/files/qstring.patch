@@ -1,0 +1,29 @@
+--- qtermiplocation.cpp.bak	2005-07-27 18:24:46.000000000 +0800
++++ qtermiplocation.cpp	2005-07-27 18:25:09.000000000 +0800
+@@ -79,13 +79,13 @@
+ 	if( fseek( fp, (long)offset, SEEK_SET ) ==-1 )
+ 	{
+ 		qDebug( " readLineFrom error 1 " );
+-		ret_str = QCString(NULL);
++		ret_str = QCString(0);
+ 		return -1;
+ 	}
+ 	if( fgets( (char *) str, 512, fp ) == NULL )
+ 	{
+ 		qDebug( " readLineFrom error 2 " );
+-		ret_str = QCString(NULL);
++		ret_str = QCString(0);
+ 		return -1;
+ 	}
+ 	ret_str = str;
+--- qtermtextline.cpp.bak	2005-07-27 18:22:23.000000000 +0800
++++ qtermtextline.cpp	2005-07-27 18:23:00.000000000 +0800
+@@ -235,7 +235,7 @@
+ 
+ 	
+ 	if(index>=m_length)
+-		return NULL;
++		return QCString(0);
+ 		
+ 	printf("index=%d len=%d m_length=%d\n", index, len, m_length);
+ 	
