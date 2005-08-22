@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.88 2005/08/08 13:12:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.89 2005/08/22 12:04:47 flameeyes Exp $
+
+*avidemux-2.1_pre1 (22 Aug 2005)
+
+  22 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +avidemux-2.1_pre1.ebuild:
+  Added pre version of Avidemux 2.1, with heavy patching. Need quite a bit of
+  testing.
 
   08 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> avidemux-2.0.42.ebuild:
   Added patch to respect CXXFLAGS.
