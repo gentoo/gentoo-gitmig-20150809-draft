@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.108 2005/08/08 14:50:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.109 2005/08/22 18:29:39 ferdy Exp $
+
+  22 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> gal-2.4.3.ebuild:
+  stable on alpha
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org> gal-2.4.3.ebuild:
   Stable on ppc64
