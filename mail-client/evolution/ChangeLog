@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.94 2005/08/22 20:19:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.95 2005/08/22 22:26:26 kloeri Exp $
+
+  22 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> ChangeLog:
+  Stable on ia64, bug 102051.
 
   22 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   evolution-2.2.3-r3.ebuild:
