@@ -1,0 +1,6 @@
+MD5 bdedaba398dcf06b1f002bbb5d01d155 kload-0.9.4.ebuild 1041
+MD5 d6c43d1bf505ec6194ac851a3a7c6531 ChangeLog 429
+MD5 fb41d485ecc1a293fd040d19dbf58fb0 metadata.xml 366
+MD5 247b11049aa8d57b2c90812caacb5a98 files/kloadd.confd 107
+MD5 09cb59fc75dc4f2db76410bf734edf4f files/kloadd.initd 488
+MD5 d150f9205197841fa03d6d52336690cd files/digest-kload-0.9.4 62
