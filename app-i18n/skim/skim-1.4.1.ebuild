@@ -1,6 +1,6 @@
 # Copyright 2000-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.1.ebuild,v 1.1 2005/08/11 13:13:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.1.ebuild,v 1.2 2005/08/22 21:58:47 usata Exp $
 
 inherit kde multilib
 
@@ -38,12 +38,16 @@ pkg_postinst() {
 	einfo "such as .xinitrc to incorporate"
 	einfo
 	einfo '	export XMODIFIERS=@im=SCIM'
+	einfo ' export QT_IM_MODULE=scim'
+	einfo ' export GTK_IM_MODULE=scim'
 	einfo '	export LANG="zh_CN.GBK"'
 	einfo '	startkde'
 	einfo
 	einfo "or if you prefer English interface,"
 	einfo
 	einfo '	export XMODIFIERS=@im=SCIM'
+	einfo ' export QT_IM_MODULE=scim'
+	einfo ' export GTK_IM_MODULE=scim'
 	einfo '	export LC_CTYPE="zh_CN.GBK"'
 	einfo '	startkde'
 	einfo
