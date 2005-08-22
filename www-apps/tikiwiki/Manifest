@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 99b47adaab8cbfdb8c4134bcc79e0c8e tikiwiki-1.9.0-r1.ebuild 2585
 MD5 9e6f558c7e3fe223eb0f506f6e62b429 tikiwiki-1.8.5-r2.ebuild 2329
 MD5 1ac5dd395da610cb57f02a762d2c2ce1 ChangeLog 4687
@@ -7,3 +10,10 @@ MD5 6366ec5badc9e0d9d20befdf8052c73a files/digest-tikiwiki-1.8.5-r2 68
 MD5 28eb632d3d2985010cc05afcd084acd4 files/digest-tikiwiki-1.9.0-r1 68
 MD5 f9b53d80344d059dda253d001af38c8c files/xmlrpc2-1.9.0.patch 2587
 MD5 b0640c9b04a5e76a0a888afbe7860c41 files/xmlrpc2-1.8.5.patch 2587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCk1ZEzitwsaoONoRAnaTAJ41H0RdLUHuY4IYYslTGpVo2LtQigCdEqLI
+YLzd1LTUMitVP01uyvW8hUU=
+=/RGl
+-----END PGP SIGNATURE-----
