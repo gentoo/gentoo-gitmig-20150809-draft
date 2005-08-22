@@ -1,18 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a330d108aba1ec4937addc23fa5aac89 phprojekt-4.2.3.ebuild 1176
-MD5 eea89c0dabae70387f7719049a97935c phprojekt-4.2-r1.ebuild 1138
-MD5 eee9b6c96fe6a20b510e5a8148a414bb phprojekt-3.2a.ebuild 855
+MD5 da4dce9c9d300f39da45931cd0fb9c43 ChangeLog 3515
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 44eb5fa421847006074f59edd9248739 ChangeLog 3294
-MD5 607b350d1fa8a2cd503643fa8ac1ad55 phprojekt-4.2-r2.ebuild 1307
-MD5 e746872e0b2bdb657b55aac6dc8ff7e2 phprojekt-4.0-r1.ebuild 839
-MD5 5ba749dee7d3985f8600279123d1e215 phprojekt-4.2.ebuild 964
-MD5 5874764cf1d4098657316fd112bdf037 phprojekt-4.1.ebuild 835
-MD5 0a2c5111e69c0d6f6c3299c5d892f427 files/digest-phprojekt-4.2.3 170
-MD5 a5312d2a7dbb70b1d0416e37c9fd82d8 files/digest-phprojekt-3.2a 61
-MD5 06ec2426a542cce49d52bdb2e293404d files/digest-phprojekt-4.2-r2 168
-MD5 a4fc4523f14a2ad77b9d00dd7e386b88 files/digest-phprojekt-4.0-r1 65
-MD5 6eaeb910f5378708b62665ecdaaf8be2 files/phprojekt-4.2.3-fix-chat-vuln.diff 773
-MD5 6d1069d70f3ff3b4f87db9ca117da41d files/digest-phprojekt-4.1 65
 MD5 b22d3aff81f01ade762c248b632b59af files/postinstall-en.txt 566
-MD5 9795a83201163bd130899be5e47aaad3 files/digest-phprojekt-4.2 66
-MD5 938b9d2863dfb43c71b95e95dfa47fec files/digest-phprojekt-4.2-r1 118
+MD5 6eaeb910f5378708b62665ecdaaf8be2 files/phprojekt-4.2.3-fix-chat-vuln.diff 773
+MD5 0a2c5111e69c0d6f6c3299c5d892f427 files/digest-phprojekt-4.2.3 170
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCkDsEzitwsaoONoRAvQXAJ9UWVYXo1hxx92lDrDBJ0QhWMVvUwCbBW9u
+WOutXVt2wWxdcdn6ctgLAog=
+=g+3m
+-----END PGP SIGNATURE-----
