@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.10 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.11 2005/08/22 16:20:30 swegener Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -121,7 +121,7 @@ cannadic_pkg_postinst() {
 
 		if [ -n "${CANNADICS}" ] ; then
 			einfo "e.g) add $(for d in ${CANNADICS}; do
-				echo -n \"$d\"\ 
+				echo -n "\"$d\" "
 				done)to section use-dictionary()."
 			einfo "For details, see documents under /usr/share/doc/${PF}"
 		fi
@@ -146,7 +146,7 @@ cannadic_pkg_postrm() {
 
 		if [ -n "${CANNADICS}" ] ; then
 			einfo "e.g) delete $(for d in ${CANNADICS}; do
-				echo -n \"$d\"\  
+				echo -n "\"$d\" "
 				done)from section use-dictionary()."
 		fi
 

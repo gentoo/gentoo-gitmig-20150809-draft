@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.20 2005/07/22 03:33:25 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.21 2005/08/22 16:20:30 swegener Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -34,7 +34,7 @@ if [[ ${GOODIES} = "1" ]]; then
 	SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
 	[[ -z ${HOMEPAGE} ]] && HOMEPAGE="http://xfce-goodies.berlios.de/"
 fi
-	
+
 [[ -n ${SRC_URI} ]] \
 	|| SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src${ZIP}/${P}${COMPRESS}"
 

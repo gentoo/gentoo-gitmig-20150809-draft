@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.31 2005/08/08 20:07:43 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.32 2005/08/22 16:20:30 swegener Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -85,7 +85,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # create_ml_includes /usr/include/asm __i386__:/usr/include/asm-i386 __x86_64__:/usr/include/asm-x86_64
 
 # get_libname [version]
-# returns libname with proper suffix {.so,.dylib} and optionally supplied version 
+# returns libname with proper suffix {.so,.dylib} and optionally supplied version
 # for ELF/MACH-O shared objects
 #
 # Example:

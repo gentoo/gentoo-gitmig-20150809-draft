@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.125 2005/07/29 13:59:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.126 2005/08/22 16:20:30 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -84,7 +84,7 @@ kde_src_compile() {
 	mkdir -p $T/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
-	
+
 	# Fix bug 96177: if KDEROOTHOME is defined, the ebuild accesses the real homedir via it, and not our exported $HOME
 	unset KDEHOME
 	unset KDEROOTHOME

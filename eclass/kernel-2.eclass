@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.139 2005/08/13 04:18:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.140 2005/08/22 16:20:30 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -463,7 +463,7 @@ install_headers() {
 			ml_inc="${ml_inc} ${multi_defs%% *}:${ddir}/asm-${d}"
 			multi_defs=${multi_defs#* }
 		done
-		create_ml_includes ${ddir}/asm ${ml_inc} 
+		create_ml_includes ${ddir}/asm ${ml_inc}
 	fi
 
 	if kernel_is 2 6; then
