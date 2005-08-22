@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 37330f87e87c8fceb266a57f66bfdb81 gdm-2.6.0.9-r2.ebuild 3561
-MD5 596d61903d01a211bbf4ef6da1dc5c08 ChangeLog 14507
-MD5 99d51336d48af433104a5ce8b0e8aaaa gdm-2.6.0.9-r3.ebuild 3315
+MD5 0d8cbc4b58fb7f8fb44d8232a79cd424 ChangeLog 14600
+MD5 cb63c34545fa427731c668b35453344d gdm-2.6.0.9-r3.ebuild 3317
 MD5 dc176d15d4147fc47f76ed34c97db7d2 gdm-2.6.0.7.ebuild 3271
 MD5 a01020f6434821e8d2c7e119b6f4304d gdm-2.8.0.1-r1.ebuild 3721
 MD5 084377ebed8de78b83e9f9c90d87e128 gdm-2.8.0.2.ebuild 3653
@@ -30,3 +33,10 @@ MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
 MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0-openpam/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.2.5/security/console.apps/gdmconfig 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDClciBXaUFmZvwyMRAj2CAKCkx06ba8hnQm3a9IRow1UltEsljwCgmd35
+nYxJ1iVwrqSFemPKpRmFg2s=
+=6i3Q
+-----END PGP SIGNATURE-----
