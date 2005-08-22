@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.1 2005/08/21 15:25:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.2 2005/08/22 13:20:10 cryos Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,10 +8,8 @@ MY_PN="seti_boinc-client-cvs"
 MY_PV="2005-08-20"
 BOINC_PN="boinc_public-cvs"
 BOINC_PV="2005-08-13"
-INSTDIR="/var/lib/boinc/projects/setiathome.berkeley.edu"
 
-
-DESCRIPTION="Search for Extraterrestrial Intelligence SETI@Home"
+DESCRIPTION="Search for Extraterrestrial Intelligence SETI@home"
 HOMEPAGE="http://setiweb.ssl.berkeley.edu/"
 SRC_URI="http://boinc.ssl.berkeley.edu/source/nightly/${BOINC_PN}-${BOINC_PV}.tar.gz
 	http://setiweb.ssl.berkeley.edu/sah/seti_source/nightly/${MY_PN}-${MY_PV}.tar.gz"
@@ -35,7 +33,8 @@ src_compile() {
 }
 
 src_install() {
-	BINNAME=setiathome-${PV}.${CHOST}
+	local INSTDIR="/var/lib/boinc/projects/setiathome.berkeley.edu"
+	local BINNAME=setiathome-${PV}.${CHOST}
 	exeinto ${INSTDIR}
 	doexe ${S}/client/${BINNAME}
 
@@ -48,5 +47,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown -R boinc:boinc ${INSTDIR}
+	chown -R boinc:boinc /var/lib/boinc
 }

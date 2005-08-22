@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/setiathome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.5 2005/08/21 15:25:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.6 2005/08/22 13:20:10 cryos Exp $
+
+  22 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> setiathome-4.18.ebuild:
+  A few small updates to fix a typo and change perms of /var/lib/boinc.
 
 *setiathome-4.18 (21 Aug 2005)
 

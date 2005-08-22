@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 4ff6fc7ddcc3cc4130c3d8d04e3f058a setiathome-3.03-r2.ebuild 2151
 MD5 3ad691ed19cf5b2e4cc414d72160d3d1 setiathome-3.03-r1.ebuild 2194
-MD5 1d23efa34b7389c83d94827a128dde42 setiathome-4.18.ebuild 1432
-MD5 4203aa73437407461d2d0ebd32f7aee3 ChangeLog 5505
+MD5 ea9641558fd41ad58ce63024baa9cb54 setiathome-4.18.ebuild 1448
+MD5 e30b0caba31c27907fe21f48f65648fb ChangeLog 5655
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 2e2e20a64df13c2d3aa9a8e5b7e48efd setiathome-3.08-r4.ebuild 2328
 MD5 40c346e90ce3b19f80ee7e10340e9da4 files/seti-init.d-r1 1396
@@ -19,7 +19,7 @@ MD5 5d17f0de19d8a17b19630e964e6af47e files/app_info.xml 300
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDCJzrntT9W3vfTuoRAsDPAJ9/P4ofZMzpwbhXAI7isRvor5ZfwwCfaqyR
-HzSge0WFndCJMW7VSiQ90iU=
-=oFTs
+iD8DBQFDCdErntT9W3vfTuoRAqL0AJ0XsD3c8QD1JHcZXMfFcx+YnqexLQCfdpE6
+XHPRRDAkoVWHrGUXbU8uLRg=
+=ARDR
 -----END PGP SIGNATURE-----
