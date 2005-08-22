@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.5 2005/08/16 01:33:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.6 2005/08/22 17:53:07 ranger Exp $
+
+*iprutils-2.0.15.3-r1 (22 Aug 2005)
+
+  22 Aug 2005; Brent Baude <ranger@gentoo.org> +files/iprdump,
+  +files/iprinit, +files/iprupdate, +iprutils-2.0.15.3-r1.ebuild:
+  Adding a new iprutils ebuild called - iprutils-2.0.15.3-r1.ebuild. Changes
+  include referencing a new iprdd version, depping sysfsutils-1.3, and the
+  addition of 3 init.d scripts.
 
   16 Aug 2005; Brent Baude <ranger@gentoo.org> iprutils-2.0.13.7-r2.ebuild:
   Added ~ppc to iprutils which had applied to ppc64 before only, but with the
