@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.1 2004/12/10 03:50:16 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl-cvs/gcl-cvs-2.7.0.ebuild,v 1.2 2005/08/22 18:42:07 mkennedy Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -11,7 +11,7 @@ ECVS_USER="anoncvs"
 ECVS_CVS_OPTIONS="-dP"
 ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAzFQovi+67xa+wymRz9u3plx0ntQnELBoNU4SCl3RkwSFZkrZsRTC0fTpOKatQNs1r/BLFoVt21oVFwIXVevGQwB+Lf0Z+5w9qwVAQNu/YUAFHBPTqBze4wYK/gSWqQOLoj7rOhZk0xtAS6USqcfKdzMdRWgeuZ550P6gSzEHfv0="
 
-inherit cvs elisp-common flag-o-matic eutils alternatives common-lisp-common
+inherit cvs elisp-common flag-o-matic eutils alternatives
 
 DESCRIPTION="GNU Common Lisp"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
@@ -20,7 +20,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="emacs readline debug X tcltk custreloc dlopen gprof doc"
-SANDBOX_DISABLED="1"
 RESTRICT="$RESTRICT nostrip"
 
 DEPEND=">=app-text/texi2html-1.64
@@ -32,14 +31,12 @@ DEPEND=">=app-text/texi2html-1.64
 	tcltk? ( dev-lang/tk )
 	sys-devel/autoconf
 	sys-devel/automake
-	sys-devel/libtool
-	dev-lisp/common-lisp-controller
-	>=dev-lisp/cl-defsystem3-3.3i-r3
-	>=dev-lisp/cl-asdf-1.84"
+	sys-devel/libtool"
 
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_compile() {
+	export SANDBOX_ON="0"
 	WANT_AUTOCONF=2.5 autoconf || die
 
 	sed -e "s/gcl-doc/${PF}/g" ${S}/info/makefile > ${T}/makefile
@@ -139,6 +136,7 @@ src_compile() {
 }
 
 src_install() {
+	export SANDBOX_ON="0"
 	make DESTDIR=${D} install || die
 	mv ${D}/usr/lib/gcl-${PV} ${D}/usr/lib/gcl
 	doinfo ${D}/usr/lib/gcl/info/*.info*
@@ -168,11 +166,6 @@ src_install() {
 	dosed "s,@SYS@,/usr/lib/gcl/unixport,g" /usr/bin/gcl
 	dosed "s,@DIR@,/usr/lib/gcl,g" /usr/bin/gcl
 
-	exeinto /usr/lib/common-lisp/bin
-	doexe ${FILESDIR}/gcl.sh
-	cp ${D}/usr/lib/gcl/unixport/saved_ansi_gcl \
-		${D}/usr/lib/gcl/unixport/saved_ansi_gcl.dist
-
 	dodoc readme* RELEASE* ChangeLog* doc/*
 	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${PF}
 
@@ -181,7 +174,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	standard-impl-postinst gcl
 	use emacs && elisp-site-regen
 }
 

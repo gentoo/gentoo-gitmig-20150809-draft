@@ -1,7 +1,17 @@
-MD5 8a0e9f87c35805708759eedc623d81d9 gcl-cvs-2.7.0.ebuild 4803
-MD5 f5e01b0780c94f26a9d55318d0cc8559 ChangeLog 454
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0ea663f9a8d3ae9b31ae299c30b46f59 ChangeLog 547
+MD5 3f9464e29c82db1f287c63b07436e931 gcl-cvs-2.7.0.ebuild 4533
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 a41a2768d93594ca21bacd91ac190b9e files/gcl 423
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcl-cvs-2.7.0 0
+MD5 a41a2768d93594ca21bacd91ac190b9e files/gcl 423
 MD5 b50734a2467c73c778cd5cfeff195a9e files/gcl.notcltk 364
 MD5 26e3534653b788a9e2ca38eed9ae8137 files/gcl.sh 2794
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDChyqyiNZaEAZA+ARAuqtAJ9SWLECMzmeNQ8o/3wistOaYHP+vQCfZ2EC
+0DDUAfd7NIzdqISf3ZKGDvU=
+=igEs
+-----END PGP SIGNATURE-----
