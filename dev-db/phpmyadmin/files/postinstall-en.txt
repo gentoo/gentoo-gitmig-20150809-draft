@@ -8,4 +8,4 @@ features for master/foreign tables be sure to read
   http://${VHOST_HOSTNAME}${VHOST_APPDIR}/Documentation.html#col_com
 You will need to perform the ALTER TABLE step yourself.
 
-Finally, point your browser to http://${VHOST_HOSTNAME}${VHOST_APPDIR}
+Finally, point your browser to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
