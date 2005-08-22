@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.33 2005/08/22 05:48:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.34 2005/08/22 05:54:33 spyderous Exp $
+
+  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.3.2.ebuild:
+  Move EXTRA_LIB_PATH blanking out from within a sparc block, because it
+  should be used for everyone. Also move arch-specific section away from
+  generic sections.
 
 *mesa-6.3.2 (22 Aug 2005)
 

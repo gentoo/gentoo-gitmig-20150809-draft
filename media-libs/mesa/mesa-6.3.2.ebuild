@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.1 2005/08/22 05:48:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.2 2005/08/22 05:54:33 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -63,17 +63,19 @@ src_unpack() {
 	epatch ${FILESDIR}/mesa-add-dri-asm-files.patch
 
 	# Set up linux-dri configs
-	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
 	if use sparc; then
-		# Kill this; we don't want /usr/X11R6/lib ever to be searched in this
-		# build.
-		echo "EXTRA_LIB_PATH =" >> ${HOSTCONF}
 		einfo "Define the sparc DRI drivers."
 		echo "DRI_DIRS = ffb mach64 mga radeon savage" >> ${HOSTCONF}
 		einfo "Explicitly note that sparc assembly code is not working."
 		echo "ASM_FLAGS =" >> ${HOSTCONF}
 		echo "ASM_SOURCES =" >> ${HOSTCONF}
 	fi
+
+	# Kill this; we don't want /usr/X11R6/lib ever to be searched in this
+	# build.
+	echo "EXTRA_LIB_PATH =" >> ${HOSTCONF}
+
+	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
 	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
 	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
 
