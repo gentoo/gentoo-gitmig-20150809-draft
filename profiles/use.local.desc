@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1400 2005/08/22 12:20:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1401 2005/08/22 16:00:52 ka0ttic Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1053,6 +1053,8 @@ www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mi
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
 www-servers/gorg:apache - Install apache
+www-servers/lighttpd:lua - Use lua for mod_cml
+www-servers/lighttpd:webdav - Enables webdev properties
 www-servers/lighttpd:xattr - if you want extended attributes enabled
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
