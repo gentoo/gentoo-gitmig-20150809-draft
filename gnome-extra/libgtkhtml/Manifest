@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8eb7d73f7ddc4b82bf6f9a25dab630d4 libgtkhtml-2.6.0.ebuild 933
 MD5 f75eecc58fc39bea1305864cd93d5fe0 libgtkhtml-3.2.5.ebuild 1182
 MD5 f8db4bae0fc1e4925a6a622b20339308 libgtkhtml-3.6.2.ebuild 1187
@@ -22,3 +25,10 @@ MD5 dec731b7d8ca685be1de143a447a827f files/digest-libgtkhtml-3.6.2 67
 MD5 a33e3e5cbe2eca2d51d36a75ec052ae7 files/digest-libgtkhtml-3.7.6 67
 MD5 c3a4d4c5994a804fef9d7c8009d5bb67 files/libgtkhtml-fix_preedit.patch 2439
 MD5 2e7135d7b2ce243b2df4b22e6f8531ce files/digest-libgtkhtml-3.0.10-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDChn1ViELBEf1JB0RAh3PAJ9HW3wlDmXwVzoYiXCpix9gWFAKegCdEzQ8
+L8F32EBS51+e2BxYdTLEvlY=
+=PfD/
+-----END PGP SIGNATURE-----
