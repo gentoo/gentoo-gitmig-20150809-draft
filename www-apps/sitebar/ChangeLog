@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/sitebar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.4 2005/07/03 18:24:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.5 2005/08/22 22:07:13 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
+  sitebar-3.3.3.ebuild:
+  Housekeeping
 
 *sitebar-3.3.3 (03 Jul 2005)
 

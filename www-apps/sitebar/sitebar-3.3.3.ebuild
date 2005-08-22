@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.3.ebuild,v 1.1 2005/07/03 18:24:26 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.3.ebuild,v 1.2 2005/08/22 22:07:13 rl03 Exp $
 
 inherit webapp
 
@@ -15,13 +15,9 @@ S=${WORKDIR}/${MY_PN}-${PV}
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.bz2"
 
 DEPEND="net-www/apache
-		>=virtual/php-4.1
+		virtual/php
 		>=dev-db/mysql-3.23"
 LICENSE="GPL-2"
-
-src_compile() {
-	:;
-}
 
 src_install() {
 	webapp_src_preinst

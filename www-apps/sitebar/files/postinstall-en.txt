@@ -1,2 +1,1 @@
-
-Now go to http://${VHOST_HOSTNAME}/sitebar/sitebar.php to complete the installation.
+Now go to http://${VHOST_HOSTNAME}${VHOST_APPDIR}/sitebar.php to complete the installation.
