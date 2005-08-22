@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1399 2005/08/21 15:23:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1400 2005/08/22 12:20:18 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -842,10 +842,12 @@ net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
+net-wireless/hostapd:madwifi - Add support for madwifi-driver (Atheros chipset)
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:gsm - Add support for EAP-SIM authentication algorithm
+net-wireless/wpa_supplicant:madwifi - Add support for madwifi-driver (Atheros chipset)
 net-www/apache:lingerd - Enable support for lingerd
 net-www/apache:mpm-leader - (experimental) Leader MPM - leaders/followers varient of worker MPM
 net-www/apache:mpm-peruser - (experimental) Peruser MPM - child processes have seperate user/group ids
