@@ -1,5 +1,5 @@
-MD5 d07b48a18ba32fc4ffd2c4b281a286f6 twiki-20041030.ebuild 1378
-MD5 33da7b73f2a89b67b9d9a304080941ed ChangeLog 3245
+MD5 92872e036efba580668e29a12da1d3dd twiki-20041030.ebuild 1378
+MD5 889ea77fb14101813d892655d77ba9e2 ChangeLog 3374
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 d6ef3da92ece6d68c83fa4be8f6f97be files/twiki.conf 508
 MD5 fab10473182738fadb4188bf90af8162 files/execwithsearch.patch 653

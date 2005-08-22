@@ -4,7 +4,7 @@ MD5 ea00f276ebf42d01ad99cd393d7abd74 groupoffice-2.13.ebuild 1634
 MD5 e9f8498d6bf6f5a848e20729343f85cb groupoffice-2.09.ebuild 955
 MD5 ed5cc77434c59133d35e0c4714a5df57 groupoffice-2.04.ebuild 1864
 MD5 db3d765f32e22da52b933016fc38d493 groupoffice-2.10.ebuild 955
-MD5 b697d64e86b7c3397ecfed2b5350de4a ChangeLog 4164
+MD5 3d6c74f3a369ab2e647d6cd0ad966ce6 ChangeLog 4254
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 9af82c8e056682b507eaf5e9ff95011a groupoffice-2.12.ebuild 956
 MD5 252288f5d0f5b81c836d57317005d1b7 files/postinstall-en.txt 403
