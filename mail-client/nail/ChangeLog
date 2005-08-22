@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.35 2005/08/22 19:15:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.36 2005/08/22 20:06:36 ferdy Exp $
+
+*nail-11.25-r2 (22 Aug 2005)
+
+  22 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/nail-nosocket.patch, +nail-11.25-r2.ebuild:
+  Inlude a fix to allow it to be built without network support
 
   22 Aug 2005; Markus Rothe <corsair@gentoo.org> nail-11.25-r1.ebuild:
   Stable on ppc64 (bug #103291)
