@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.32 2005/08/22 03:39:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.33 2005/08/22 05:48:59 spyderous Exp $
+
+*mesa-6.3.2 (22 Aug 2005)
+
+  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/mesa-add-dri-asm-files.patch, +mesa-6.3.2.ebuild:
+  Bump to latest devel release. The assembly files in DRI drivers didn't get
+  packaged, so add mesa-add-dri-asm-files.patch to patch them in. I think this
+  release will also fix 32/64 systems, if they also have the latest DRM.
 
   22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -files/fix-include-locations.patch, -files/fix-xthreads-location.patch,
