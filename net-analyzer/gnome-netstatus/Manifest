@@ -1,27 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b1d926c364cf0b6efec206177870e16 gnome-netstatus-2.6.2.1.ebuild 670
+MD5 0c64ead885d28adfe6f3ae05c61647e0 ChangeLog 4789
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 b4c68b7924b28a279cd6a2d46958ec91 gnome-netstatus-2.6.0.1.ebuild 674
-MD5 39ce0ee2dda6bfbf1a1e4584f0542e08 gnome-netstatus-2.6.1.ebuild 677
-MD5 41f43a375701043f24d76058b1c2290a ChangeLog 4677
-MD5 0cbeac852658e3e4dbe607fd95c1b360 gnome-netstatus-2.6.2.ebuild 677
-MD5 f588592c8db4ef062cda2e718a0650ff gnome-netstatus-2.8.0.ebuild 685
 MD5 97f8a858994fc26019a6d6edb1511d18 gnome-netstatus-2.10.0.ebuild 699
-MD5 443f5cfac71d41901343505a3a283ddd gnome-netstatus-2.10.0-r1.ebuild 795
-MD5 d591a3e47db5dfed76221301dbdc96c3 files/digest-gnome-netstatus-2.6.1 74
-MD5 3ca1bab54cf4bc341080c99f3378ec9a files/digest-gnome-netstatus-2.6.0.1 76
-MD5 7f61f272dda76b950cbc635bc986eeae files/digest-gnome-netstatus-2.6.2.1 76
-MD5 7d1baea0c16ddc30f27277bb6a2f6603 files/digest-gnome-netstatus-2.6.2 74
-MD5 5d9cd90606db784ec634cc6b9ae781fc files/digest-gnome-netstatus-2.8.0 74
+MD5 68040e8c223de5d884381f1518797fbe gnome-netstatus-2.10.0-r1.ebuild 797
 MD5 1be6bc7c3c71d0d777fbef0592e7218b files/digest-gnome-netstatus-2.10.0 75
-MD5 20268c12e6447722fccaf6d5178ab2b8 files/gnome-netstatus-2.10.0-amd64.patch 410
 MD5 1be6bc7c3c71d0d777fbef0592e7218b files/digest-gnome-netstatus-2.10.0-r1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3G92mOfEJZHYOKcRAp5uAJ4zu06UTkL05dh45BBuQpCzcdAntwCgiklf
-RjD3sr4I8lqVTSKYHM8rR/w=
-=BPfb
------END PGP SIGNATURE-----
+MD5 20268c12e6447722fccaf6d5178ab2b8 files/gnome-netstatus-2.10.0-amd64.patch 410
