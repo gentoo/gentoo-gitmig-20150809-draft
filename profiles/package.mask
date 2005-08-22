@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4325 2005/08/22 12:13:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4326 2005/08/22 23:38:29 genone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -163,20 +163,6 @@ media-video/toxine
 # http://bugs.gentoo.org/102104
 =net-wireless/madwifi-driver-0.1_pre20050809
 =net-wireless/madwifi-driver-0.1_pre20050809-r1
-
-# <genone@gentoo.org> (13 Aug 2005)
-# gtk2 versions, going to be unmasked soon
->=mail-client/sylpheed-claws-1.9
-# <genone@gentoo.org> (13 Aug 2005)
-# Plugins for gtk2 versions.
->=mail-client/sylpheed-claws-pgpinline-0.5-r1
->=mail-client/sylpheed-claws-mailmbox-1.2
->=mail-client/sylpheed-claws-cachesaver-0.5
->=mail-client/sylpheed-claws-vcalendar-1.6
->=mail-client/sylpheed-claws-fetchinfo-0.4.6
->=mail-client/sylpheed-claws-maildir-0.8
->=mail-client/sylpheed-claws-etpan-privacy-0.9
->=mail-client/sylpheed-claws-perl-0.3
 
 # Jeremy Huddleston <eradicator@gentoo.org> (13 Aug 2005)
 # eselect module version still being tested...
