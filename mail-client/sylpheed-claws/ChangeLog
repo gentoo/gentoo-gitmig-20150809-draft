@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.59 2005/08/20 07:48:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.60 2005/08/22 22:05:14 genone Exp $
+
+  22 Aug 2005; <genone@gentoo.org> sylpheed-claws-1.0.4.ebuild,
+  sylpheed-claws-1.0.4a.ebuild, sylpheed-claws-1.0.5.ebuild,
+  sylpheed-claws-1.9.12.ebuild, sylpheed-claws-1.9.13.ebuild,
+  sylpheed-claws-1.9.13-r1.ebuild:
+  Added clamav dependency for clamav plugin, thanks to Daniel Webert for 
+  pointing this out.
 
   20 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   sylpheed-claws-1.9.13-r1.ebuild:

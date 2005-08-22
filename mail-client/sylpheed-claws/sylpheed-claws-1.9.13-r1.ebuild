@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.9.13-r1.ebuild,v 1.3 2005/08/20 07:48:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.9.13-r1.ebuild,v 1.4 2005/08/22 22:05:14 genone Exp $
 
 IUSE="nls gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc"
 
@@ -28,6 +28,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.4
 	crypt? ( >=app-crypt/gpgme-0.4 )
 	dillo? ( www-client/dillo )
 	spell? ( virtual/aspell-dict )
+	clamav? ( app-antivirus/clamav )
 	nls? ( >=sys-devel/gettext-0.12 )
 	kde? ( kde-base/kdelibs )
 	imap? ( >=net-libs/libetpan-0.38 )
