@@ -1,10 +1,31 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.54 2005/08/22 09:14:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.55 2005/08/22 22:27:50 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
 inherit eutils
+
+# ECVS_STATE's:
+#	release      [default]
+#		KEYWORDS arch
+#		SRC_URI  $P.tar.gz
+#		S        $WORKDIR/$P
+#
+#	snap         $PV has .200##### datestamp or .### counter
+#		KEYWORDS ~arch
+#		SRC_URI  $P.tar.bz2
+#		S        $WORKDIR/$P
+#
+#	live         $PV has a 9999 marker
+#		KEYWORDS -*
+#		SRC_URI  `cvs up`
+#		S        $WORKDIR/$ECVS_MODULE
+#
+# Overrides:
+#	KEYWORDS    EKEY_STATE
+#	SRC_URI     EURI_STATE
+#	S           EURI_STATE
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
@@ -21,18 +42,16 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 	ECVS_SERVER=${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}
 	ECVS_STATE="live"
 	inherit cvs
-elif [[ ${PV/.200?????/} != ${PV} ]] ; then
+elif [[ ${PV/.200[3-9][0-1][0-9][0-3][0-9]/} != ${PV} ]] ; then
 	ECVS_STATE="snap"
-# commented because it breaks imlib2, ecore and others - genstef
-#elif [[ ${PV%%.[0-9][0-9][0-9]} != ${PV} ]] ; then
-#	ECVS_STATE="snap"
+elif [[ ${PV%%.[0-9][0-9][0-9]} != ${PV} ]] ; then
+	ECVS_STATE="snap"
+	EURI_STATE="release"
 fi
-# commented because einfoe in global scope should not be used - genstef
-#einfo $PV == $ECVS_STATE
 
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
-case ${ECVS_STATE} in
+case ${EURI_STATE:-${ECVS_STATE}} in
 	release) SRC_URI="http://enlightenment.freedesktop.org/files/${P}.tar.gz mirror://sourceforge/enlightenment/${P}.tar.gz";;
 	snap)    SRC_URI="mirror://gentoo/${P}.tar.bz2";;
 	live)    SRC_URI="";;
@@ -50,7 +69,7 @@ IUSE="nls doc"
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-case ${ECVS_STATE} in
+case ${EURI_STATE:-${ECVS_STATE}} in
 	release) S=${WORKDIR}/${P};;
 	snap)    S=${WORKDIR}/${PN};;
 	live)    S=${WORKDIR}/${ECVS_MODULE};;
@@ -126,8 +145,8 @@ enlightenment_src_compile() {
 }
 
 enlightenment_src_install() {
-	make install DESTDIR=${D} || enlightenment_die
-	find ${D} -name CVS -type d -exec rm -rf '{}' \; 2>/dev/null
+	make install DESTDIR="${D}" || enlightenment_die
+	find "${D}" -name CVS -type d -exec rm -rf '{}' \; 2>/dev/null
 	dodoc AUTHORS ChangeLog NEWS README TODO ${EDOCS}
 	use doc && [[ -d doc ]] && dohtml -r doc/*
 }
