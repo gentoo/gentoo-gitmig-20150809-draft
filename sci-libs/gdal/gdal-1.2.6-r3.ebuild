@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r3.ebuild,v 1.1 2005/08/04 00:05:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r3.ebuild,v 1.2 2005/08/22 16:32:27 swegener Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -47,7 +47,7 @@ src_unpack() {
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
 		einfo	"Checking is HDF4 compiled with szip..."
-		if built_with_use hdf szip ; then
+		if built_with_use sci-libs/hdf szip ; then
 			einfo	"Found HDF4 compiled with szip. Nice."
 		else
 			ewarn 	"HDF4 must be compiled with szip USE flag!"
