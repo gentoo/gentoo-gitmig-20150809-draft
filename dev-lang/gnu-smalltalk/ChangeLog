@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.10 2005/08/18 01:56:19 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.11 2005/08/22 18:30:04 fmccor Exp $
+
+  22 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  gnu-smalltalk-2.1.11.ebuild:
+  Add ~sparc keyword.  Builds and runs all tests successfully, and
+  gst has run well on sparc systems for years.
 
 *gnu-smalltalk-2.1.11 (18 Aug 2005)
 

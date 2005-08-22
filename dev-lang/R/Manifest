@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07eb317545d872a3967a256da22ae559 R-2.1.1.ebuild 2661
-MD5 54a2c33b1f528a94b8d07cc247a05e39 ChangeLog 8692
 MD5 fc5ae27d8f8ad03adc952dc27fe62c8b R-2.1.0-r1.ebuild 2659
+MD5 3a67f61b4888319313d8ba79590f27c3 ChangeLog 8825
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 a3da9043771f68dc08167f298bcaccef R-2.0.1.ebuild 3753
-MD5 1be6338417fd08a609cb02164398a26b files/digest-R-2.1.1 61
+MD5 96b2cffebfce74b3ed83fc295d789a95 R-2.1.1.ebuild 2655
+MD5 35b08f0bf56b91051f76faa75d70eb9f files/digest-R-2.1.0-r1 61
 MD5 44015fe4137f1326769e89f2c2c2eda7 files/R-logo.png 4867
 MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
-MD5 eec0037e7f2073028a10b5028ee8b0bc files/digest-R-2.0.1 61
-MD5 35b08f0bf56b91051f76faa75d70eb9f files/digest-R-2.1.0-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxS+x5mJXAu5GbtIRArHPAJ0dqh+ow3Wmxzu9AwJXoNLjuVIKEACfc/Kz
-365x9mTGCRaVED807kYS7kY=
-=xEmv
------END PGP SIGNATURE-----
+MD5 1be6338417fd08a609cb02164398a26b files/digest-R-2.1.1 61
