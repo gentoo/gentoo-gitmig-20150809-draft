@@ -1,3 +1,4 @@
-MD5 3ad2ef43a6529dd311e80785cfcd4dc3 xdpyinfo-0.99.0.ebuild 842
-MD5 992edc6f651ef3c22b188f87fd0dbca9 ChangeLog 599
+MD5 f7c687b88f5c40af03b6522059ef2e85 xdpyinfo-0.99.0.ebuild 884
+MD5 b0013d8c1738a94a03a59b7044a10912 ChangeLog 769
 MD5 6453b4398f2dfe421e785ae76b8be63d files/digest-xdpyinfo-0.99.0 67
+MD5 98f2babe4660c8a5112133b01b62edde files/xineramaproto.patch 610
