@@ -1,4 +1,16 @@
-MD5 f399cc9f9628c8a1ae1cee4500166dca ChangeLog 504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2a5da7c4b62bbd0be2985eee4ae403e8 ChangeLog 679
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
 MD5 9b225b40b96ee94ecf13b15a9e7c43a3 wepdecrypt-0.6.ebuild 746
+MD5 2e4af653ae912ece1008f58a7a42ee33 wepdecrypt-0.7.ebuild 1054
 MD5 e49207bf0ce5d9c2120dda758124196b files/digest-wepdecrypt-0.6 65
+MD5 e716a841224316bea78aec9e1c6901c5 files/digest-wepdecrypt-0.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCd/ZmdTrptrqvGERAlSbAKCArth/Jcf2u3Gjnj6PZgIkdPkUHwCeJZkN
+0BF8hHDMXHNi2jGMZm1K1J8=
+=BROk
+-----END PGP SIGNATURE-----
