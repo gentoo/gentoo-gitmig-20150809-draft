@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.240 2005/08/19 14:52:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.241 2005/08/22 13:13:47 greg_g Exp $
+
+  22 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/qt-3.3.4-gcc4-volatile.patch, qt-3.3.4-r7.ebuild:
+  Add patch to fix miscompilation with gcc4 (#102892).
 
 *qt-4.0.1 (19 Aug 2005)
 

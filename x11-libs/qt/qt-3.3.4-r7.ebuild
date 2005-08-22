@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r7.ebuild,v 1.2 2005/08/08 10:55:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r7.ebuild,v 1.3 2005/08/22 13:13:47 greg_g Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -99,8 +99,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-0051-qtoolbar_77047.patch
 	epatch ${FILESDIR}/${P}-0047-fix-kmenu-widget.diff
 
-	# patch for gcc4
+	# patches for gcc4
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}-gcc4-volatile.patch"
 
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
