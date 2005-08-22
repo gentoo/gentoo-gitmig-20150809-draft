@@ -1,9 +1,9 @@
 If you are using Apache, consider adding something like this to your
 apache.conf:
 
-ScriptAlias /viewcvs /var/www/${VHOST_ROOT}/cgi-bin/viewcvs/viewcvs.cgi
-ScriptAlias /cvsquery /var/www/${VHOST_ROOT}/cgi-bin/viewcvs/cvsquery.cgi
+ScriptAlias /viewcvs ${VHOST_CGIBINDIR}/${PN}/viewcvs.cgi
+ScriptAlias /cvsquery ${VHOST_CGIBINDIR}/${PN}/cvsquery.cgi
 
-Before using viewcvs, be sure to configure it properly. 
+Before using viewcvs, be sure to configure it properly.
 Edit ${VHOST_ROOT}/${PN}/viewcvs.conf and ${VHOST_ROOT}/${PN}/cvsgraph.conf to
 suit your needs.

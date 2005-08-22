@@ -1,13 +1,12 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/files/reconfig,v 1.3 2005/05/24 02:34:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/files/reconfig,v 1.4 2005/08/22 23:26:34 rl03 Exp $
 
-if [ $1 = "start" -o $1 = "install" ]; then
+if [ $1 = "install" ]; then
 	find ${VHOST_CGIBINDIR}/viewcvs ${VHOST_ROOT}/viewcvs -type f \
 	| xargs sed -e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"${VHOST_ROOT}/viewcvs/lib\"|g
 	s,\(^CONF_PATHNAME\)\(.*\$\),\1 = \"${VHOST_ROOT}/viewcvs/viewcvs.conf\",g
 	s,\(<VIEWCVS_INSTALL_DIRECTORY>\),${VHOST_ROOT}/viewcvs,g" -i
 	
 elif [ $1 = "clean" ]; then
-	rm -rf ${VHOST_CGIBINDIR}/viewcvs
-	rm -rf ${VHOST_ROOT}/viewcvs/templates
+	echo $1
 fi
