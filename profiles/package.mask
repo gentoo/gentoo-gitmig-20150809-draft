@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4322 2005/08/22 04:39:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4323 2005/08/22 08:02:20 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Benedikt Boehm <hollow@gentoo.org>
+# Masked for testing
+=sys-kernel/vserver-sources-2.1.0_pre1
 
 # Leonardo Boshell <leonardop@gentoo.org> (22 Aug 2005)
 # To be removed. Provided by gnome-base/libbonobo.
