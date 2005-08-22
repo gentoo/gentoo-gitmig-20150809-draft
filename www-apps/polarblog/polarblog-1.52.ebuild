@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.52.ebuild,v 1.1 2005/07/07 20:55:12 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.52.ebuild,v 1.2 2005/08/22 21:55:33 rl03 Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="
 	>=dev-db/mysql-3.23.23
-	>=virtual/php-4
+	virtual/php
 "
 
 LICENSE="GPL-2"

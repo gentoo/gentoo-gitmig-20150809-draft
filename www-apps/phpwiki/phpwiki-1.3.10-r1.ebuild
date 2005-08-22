@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r1.ebuild,v 1.1 2005/07/05 22:25:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r1.ebuild,v 1.2 2005/08/22 21:52:43 rl03 Exp $
 
 inherit eutils webapp
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/php-4.0.6
+RDEPEND="virtual/php
 	net-www/apache"
 
 src_unpack() {

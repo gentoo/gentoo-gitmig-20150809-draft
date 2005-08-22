@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwiki
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.8 2005/07/07 16:40:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/ChangeLog,v 1.9 2005/08/22 21:52:43 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> phpwiki-1.3.10-r1.ebuild:
+  Housekeeping
 
   07 Jul 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-1.3-en.txt:
   Mention location of db schemas wrt #70579.
