@@ -1,17 +1,27 @@
-MD5 2c0f0c295b886eff7a4fef23c4822669 lvm-user-1.0.7-r2.ebuild 1790
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6c4843e465bc701edfd2848bc61b9816 lvm-user-1.0.7-r3.ebuild 1923
-MD5 7b301d7420e1c916ab2c582cf98928ff metadata.xml 256
+MD5 585de65dca6a06cf98f085d24937a915 lvm-user-1.0.8-r1.ebuild 2146
 MD5 af522a2bf30dd73356656143e3068b2f lvm-user-1.0.7-r4.ebuild 2063
-MD5 544e5db75fa17d4da701d42767fe0bd4 ChangeLog 5689
+MD5 7b301d7420e1c916ab2c582cf98928ff metadata.xml 256
+MD5 2c0f0c295b886eff7a4fef23c4822669 lvm-user-1.0.7-r2.ebuild 1790
 MD5 92336fa695c6dca54cc10b46cd44bdef lvm-user-1.0.8.ebuild 2061
-MD5 420509bb68fce4e5a98cc887166ee602 lvm-user-1.0.8-r1.ebuild 2145
-MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r2 61
-MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r3 61
-MD5 7484cb0ecb2a997be4910a8612e951cf files/lvm-user-1.0.7-statics.patch 1040
-MD5 5a13a84be2257b542d2ff7dce74e3af7 files/lvm-user-1.0.7-tmpfile.patch 554
-MD5 aba804ce68a3bbfe20f5312a3891958e files/lvm-user-start.sh 789
-MD5 79c525e785e11238d90c6a4f2d0283d5 files/lvm-user-stop.sh 440
+MD5 07d0b6be1712bda8f0baf2e0e57d7cd3 ChangeLog 5807
 MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r4 61
-MD5 a8fa868a4e24685af74bec39b76e33a9 files/digest-lvm-user-1.0.8 61
-MD5 89c60d1ba90b7e04abb957c0fee57449 files/lvm-user-gcc-3.4.patch 1736
+MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r2 61
+MD5 aba804ce68a3bbfe20f5312a3891958e files/lvm-user-start.sh 789
+MD5 b8c544acbd931e92ce7d68d1f54ef230 files/digest-lvm-user-1.0.7-r3 61
 MD5 a8fa868a4e24685af74bec39b76e33a9 files/digest-lvm-user-1.0.8-r1 61
+MD5 5a13a84be2257b542d2ff7dce74e3af7 files/lvm-user-1.0.7-tmpfile.patch 554
+MD5 a8fa868a4e24685af74bec39b76e33a9 files/digest-lvm-user-1.0.8 61
+MD5 79c525e785e11238d90c6a4f2d0283d5 files/lvm-user-stop.sh 440
+MD5 89c60d1ba90b7e04abb957c0fee57449 files/lvm-user-gcc-3.4.patch 1736
+MD5 7484cb0ecb2a997be4910a8612e951cf files/lvm-user-1.0.7-statics.patch 1040
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCiA4KRy60XGEcJIRAqG0AJ40FaYdLfs2wkoWTBXBlFAaxailMACfax+B
+EyIDexLEPmSay7HRJ0Wntc8=
+=6Vfu
+-----END PGP SIGNATURE-----
