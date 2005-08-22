@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.1 2005/08/19 14:52:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.2 2005/08/22 13:22:01 greg_g Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -67,8 +67,7 @@ src_unpack() {
 
 	cd ${S}
 
-	cp configure configure.orig
-	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
+	sed -i -e 's:read acceptance:acceptance=yes:' configure
 
 	cd mkspecs/$(qt_mkspecs_dir)
 	# set c/xxflags and ldflags
@@ -82,9 +81,12 @@ src_unpack() {
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
 		qmake.conf
+
+	# Do not link with -rpath. See bug #75181.
+	sed -i -e "s:QMAKE_RPATH.*=.*:QMAKE_RPATH=:" \
+		qmake.conf
 	cd ${S}
 
-	epatch ${FILESDIR}/qt4-rpath.patch
 	epatch ${FILESDIR}/qt4-nomkdir.patch
 
 	if [[ $(gcc-major-version = "4") ]]; then
