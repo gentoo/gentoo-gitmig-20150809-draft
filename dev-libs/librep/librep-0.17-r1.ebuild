@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.2 2005/08/21 17:26:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.3 2005/08/22 05:50:56 truedfx Exp $
 
 IUSE="readline"
 
@@ -38,6 +38,7 @@ src_compile() {
 	CC=$(tc-getCC) econf \
 		--libexecdir=/usr/lib \
 		--without-gmp \
+		--without-ffi \
 		${myconf} || die "configure failure"
 
 	make host_type=${CHOST} || die "compile failure"
