@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.5-r2.ebuild,v 1.1 2005/08/21 16:40:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.5-r2.ebuild,v 1.2 2005/08/22 20:18:42 hansmi Exp $
 
 inherit eutils webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 RDEPEND="virtual/php
 	media-gfx/graphviz"
