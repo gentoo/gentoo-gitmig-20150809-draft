@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.5 2005/08/22 05:40:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.6 2005/08/22 23:43:15 swegener Exp $
 
 inherit eutils
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="dbus doc gtk python"
 
-RDEPEND=">=dev-libs/glib-2
-	dev-libs/libdaemon
+RDEPEND="dev-libs/libdaemon
 	dev-libs/expat
 	gtk? (
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
+		>=dev-libs/glib-2
 	)
 	python? (
 		>=virtual/python-2.4
@@ -36,11 +36,13 @@ pkg_setup() {
 src_compile() {
 	econf \
 		--localstatedir=/var \
+		--with-distro=gentoo \
 		--disable-xmltoman \
 		$(use_enable doc doxygen-doc) \
 		$(use_enable python) \
 		$(use_enable dbus) \
 		$(use_enable gtk) \
+		$(use_enable gtk glib) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
