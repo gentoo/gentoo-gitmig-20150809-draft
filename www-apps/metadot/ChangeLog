@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/metadot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.10 2005/07/03 00:05:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.11 2005/08/22 20:25:29 rl03 Exp $
+
+*metadot-6.4_p3 (22 Aug 2005)
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> -files/reconfig-6.4_p1,
+  +files/reconfig-6.4_p3, -files/postinstall-en-6.4_p1.txt,
+  +files/postinstall-en-6.4_p3.txt, -metadot-6.4_p1.ebuild,
+  +metadot-6.4_p3.ebuild:
+  Version bump
 
 *metadot-6.4_p1 (03 Jul 2005)
 

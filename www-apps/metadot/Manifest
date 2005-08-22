@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8f7ad8eb82393195da714fc086b0b218 ChangeLog 1618
-MD5 04f2425090275b79624c2ef14ef107ff files/digest-metadot-6.1.6 65
-MD5 51bec7b28e3566a165beee434dddcf84 files/digest-metadot-6.4_p1 65
-MD5 f06f271783c0db5fcb541f0fc51812a1 files/metadot.conf 445
-MD5 20d7f02a98e7e1bdd83cc868dc128863 files/postinstall-en-6.1.6.txt 1567
-MD5 d93311c38519df3fae207f71a2e32740 files/postinstall-en-6.4_p1.txt 1179
-MD5 c7ad307b2475e81f9e5a15c731185dd4 files/reconfig-6.1.6 337
-MD5 4d364e382fb8ea9bdc56917fc07c712f files/reconfig-6.4_p1 300
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 eec3bea9bfeac07b61431628ef64c7ae metadot-6.4_p3.ebuild 1813
 MD5 ac855f436614ae41195eaff4f8c0a127 metadot-6.1.6.ebuild 1389
-MD5 4df71f06df5fa5b00a4fd0b43b2a5d3c metadot-6.4_p1.ebuild 1812
+MD5 7bd342eb61f3816f3272fe0fc3808f1a ChangeLog 1881
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 d94b7dade124ac6fcecd869a69a59f48 files/reconfig-6.4_p3 370
+MD5 b1809a8ab63a1d37f0ec2467a7f1420f files/postinstall-en-6.4_p3.txt 1186
+MD5 04f2425090275b79624c2ef14ef107ff files/digest-metadot-6.1.6 65
+MD5 20d7f02a98e7e1bdd83cc868dc128863 files/postinstall-en-6.1.6.txt 1567
+MD5 a46f23e9d0e84956e0d476a0a52a1f32 files/digest-metadot-6.4_p3 65
+MD5 f06f271783c0db5fcb541f0fc51812a1 files/metadot.conf 445
+MD5 c7ad307b2475e81f9e5a15c731185dd4 files/reconfig-6.1.6 337
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC2Sm3I1lqEGTUzyQRAnUXAKCEYNn931ZYnod8a9wKQpN8FZrVPQCfU0Qv
-cpV4vuTEOHWvIYoRFe4A/oA=
-=s5UH
+iD8DBQFDCjTTEzitwsaoONoRAkynAJ922ZqI94fmCIQ8fAN3MElbRi/PfwCfa7rz
+9rpoDnNhe8Gm+yUJ9Gx9t1c=
+=uFiV
 -----END PGP SIGNATURE-----
