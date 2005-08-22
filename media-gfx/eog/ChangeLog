@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.97 2005/08/08 14:56:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.98 2005/08/22 04:25:35 leonardop Exp $
+
+*eog-2.11.90 (22 Aug 2005)
+
+  22 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/eog-2.11.90-pkgconfig_macro.patch, +eog-2.11.90.ebuild:
+  New version. Added 'lcms' USE flag.
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org> eog-2.10.0.ebuild:
   Stable on ppc64
