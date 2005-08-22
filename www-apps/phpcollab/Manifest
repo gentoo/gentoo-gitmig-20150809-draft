@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 33f4ba24db23f164db7112b0a7a70fa2 phpcollab-2.4.ebuild 1103
 MD5 edb8b84420e91755c660582a1b952b55 phpcollab-2.5_rc3.ebuild 1079
 MD5 b0ee1ccce07548ab044647a1080f310e ChangeLog 905
@@ -5,3 +8,10 @@ MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 47743bac09ee0035d6f56132dcd9b002 files/digest-phpcollab-2.4 65
 MD5 a14e5f4b4c49b22f13b279b10f8e34db files/digest-phpcollab-2.5_rc3 70
 MD5 5ab4ea0b5c1c54747bf642414f1b36e3 files/postinstall-en.txt 314
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCj5aEzitwsaoONoRAq0kAJ40X9Jsmb6/rXhjSeRewm1Wyt5wNACgijcg
+yWKMs/QcOhmYhGCvv5KR7F8=
+=vMp5
+-----END PGP SIGNATURE-----
