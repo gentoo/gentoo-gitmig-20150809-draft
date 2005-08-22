@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1-r2.ebuild,v 1.12 2005/02/06 10:40:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1-r2.ebuild,v 1.13 2005/08/22 23:31:32 flameeyes Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install () {
 	cd ${S}/build
 	make install
 	dodir /usr
-	cp -rfL dist/* ${D}/usr
+	cp -RfL dist/* ${D}/usr
 	rm -rf ${D}/usr/bin/lib*.so
 
 	# there have been /usr/lib/nspr changes (like the ldpath below), but never
