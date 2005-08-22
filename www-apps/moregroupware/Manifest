@@ -1,6 +1,18 @@
-MD5 b9a851b10329f9d4a970e77dce76bc24 ChangeLog 773
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6857604716a3d766c0f47e60d4c1e83f moregroupware-0.7.3.ebuild 771
+MD5 62b72c7052873b2ef2b3379d1cdbd47b ChangeLog 924
+MD5 a9cc809ff3051e27f2648bc68449a809 moregroupware-0.7.2.ebuild 804
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 9e0678d237468e1970250c3df4287db5 moregroupware-0.7.2.ebuild 808
+MD5 29ab05e7616b369da7c1b8b72e47d7ec files/postinstall-en.txt 373
 MD5 bdd1af21cf674ab9392bb2487569112f files/digest-moregroupware-0.7.2 77
-MD5 c81c6b9fc937775f5944aadd25c9e65f files/postinstall-en.txt 379
+MD5 37665b24bd6b0757fc9cbbbc791a23a3 files/digest-moregroupware-0.7.3 77
 MD5 c712e596258661bc51900999f0cf01f0 files/reconfig 138
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCjnREzitwsaoONoRAjrXAKDKeQs8zpwE45kuPIcGJwSlpc+RoQCguvnA
+yjDzyM7t09zRbJL3TD4VAlM=
+=FGcR
+-----END PGP SIGNATURE-----
