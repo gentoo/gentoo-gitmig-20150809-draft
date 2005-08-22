@@ -1,11 +1,21 @@
-MD5 91b5905abb97bcd2fe7624d823011246 ChangeLog 3780
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 29561e5bbbd7c13e9f5615abe1a43d38 ChangeLog 3959
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 867d2f4c5aee28005b82f5a94052c151 numeric-22.0.ebuild 812
-MD5 2ffcf0a55ea7cf8a52d71f0c72c753a8 numeric-23.1.ebuild 797
-MD5 500db348df40d9f4aa9000fbf660edd0 numeric-23.7.ebuild 891
-MD5 e12e348f687cf68fed087a05237382fa numeric-23.8.ebuild 864
+MD5 e3d5095f77a67728f076a7e7f9abddcc numeric-22.0.ebuild 808
+MD5 612753ac1e044abc11a29c465a97becb numeric-23.1.ebuild 792
+MD5 598f1b5f5e58079150ed166f9abac372 numeric-23.7.ebuild 885
+MD5 1eea5e4c951a1cf20434e116fe8661cf numeric-23.8.ebuild 859
+MD5 b962c2f9fe39159f4c6025bb24cdf701 files/numeric-23.7.patch 2311
 MD5 543b62c79215183872d1f43ee1033c0b files/digest-numeric-22.0 64
 MD5 a52c0be4669341bbf82129377ca75f2e files/digest-numeric-23.1 64
 MD5 f7fae5c73c85e5d2038f4b1c7d634d7b files/digest-numeric-23.7 64
 MD5 6c2043e258fdbea77284f56bae42b32a files/digest-numeric-23.8 64
-MD5 b962c2f9fe39159f4c6025bb24cdf701 files/numeric-23.7.patch 2311
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDClNs2jLqHNfbg2URAvnIAJ9NI1O5o8htKQD7sFtR9TdvqKqiRgCfSjKg
+coq4U+2Ol6i9YhqWGo9CCLc=
+=e8+Z
+-----END PGP SIGNATURE-----

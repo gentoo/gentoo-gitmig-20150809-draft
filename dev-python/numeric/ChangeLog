@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.23 2005/07/21 14:56:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.24 2005/08/22 22:34:17 lucass Exp $
+
+  22 Aug 2005; Lukasz Strzygowski <lucass@gentoo.org> numeric-22.0.ebuild,
+  numeric-23.1.ebuild, numeric-23.7.ebuild, numeric-23.8.ebuild:
+  Fixed homepage. Closing bug #103371.
 
   21 Jul 2005; Markus Rothe <corsair@gentoo.org> numeric-23.7.ebuild:
   Stable on ppc64

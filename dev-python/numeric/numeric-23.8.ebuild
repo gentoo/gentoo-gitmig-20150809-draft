@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.8.ebuild,v 1.2 2005/07/11 23:09:21 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.8.ebuild,v 1.3 2005/08/22 22:34:17 lucass Exp $
 
 inherit distutils eutils
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Numerical Python adds a fast, compact, multidimensional array language facility to Python."
 SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz"
-HOMEPAGE="http://www.pfdubois.com/numpy/"
+HOMEPAGE="http://numeric.scipy.org/"
 
 IUSE=""
 SLOT="0"
