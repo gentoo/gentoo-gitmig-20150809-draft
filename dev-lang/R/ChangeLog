@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.56 2005/07/01 11:53:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.57 2005/08/22 18:31:41 cryos Exp $
+
+  22 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> -R-2.0.1.ebuild,
+  R-2.1.1.ebuild:
+  Removed old version. Stable on amd64 and x86.
 
 *R-2.1.1 (01 Jul 2005)
 
