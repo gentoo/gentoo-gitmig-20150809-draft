@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.30 2005/06/06 09:46:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.31 2005/08/22 21:36:36 agriffis Exp $
+
+  22 Aug 2005; Aron Griffis <agriffis@gentoo.org> terminus-font-4.14.ebuild:
+  stable alpha amd64 ia64 x86
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> terminus-font-4.12.ebuild:
   Stable on ppc64
