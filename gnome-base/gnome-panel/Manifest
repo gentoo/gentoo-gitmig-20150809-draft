@@ -1,7 +1,10 @@
-MD5 9d387e7ded6f0e69c2f1491c9284fd4d gnome-panel-2.10.2.ebuild 1980
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0243f9987e04742ed45443972b7c1836 gnome-panel-2.10.2.ebuild 1983
 MD5 1ab5abca58ed191a20538e5298dbf5bf gnome-panel-1.4.2-r2.ebuild 2079
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 03b5867ac60bf777b094b90ff62feb0d ChangeLog 18657
+MD5 6ea892ce28ef051b13c1ff0933950935 ChangeLog 18751
 MD5 4649f2b770ef152d0ebc8a8c67e33973 gnome-panel-2.11.91.ebuild 1867
 MD5 e396d648e215308e9b6f3b10c57ffd00 gnome-panel-2.10.0-r1.ebuild 1896
 MD5 f7e2e4cf2f4edcca0070acfc88ebec43 gnome-panel-1.4.1.ebuild 1821
@@ -12,3 +15,10 @@ MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
 MD5 30ed8bbd528d5b284c0b489cd8c52210 files/digest-gnome-panel-1.4.2-r2 70
 MD5 9519d1c688ac6efb1156b207e75051a5 files/digest-gnome-panel-2.11.91 73
 MD5 afd54e022092a94648da54cd0c646241 files/digest-gnome-panel-2.6.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmMYBXaUFmZvwyMRAhvaAKDPNZ2pmCmlwxAk/Y5t9Hhsi4NbcQCgpW17
+gva0MrPHvUWJ/F3utzWlKds=
+=xi40
+-----END PGP SIGNATURE-----
