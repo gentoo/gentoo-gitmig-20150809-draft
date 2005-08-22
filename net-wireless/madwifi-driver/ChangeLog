@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.24 2005/08/10 12:44:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.25 2005/08/22 12:16:42 brix Exp $
+
+*madwifi-driver-0.1_pre20050809-r1 (22 Aug 2005)
+*madwifi-driver-0.1_pre20050420-r1 (22 Aug 2005)
+
+  22 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +madwifi-driver-0.1_pre20050420-r1.ebuild,
+  +madwifi-driver-0.1_pre20050809-r1.ebuild:
+  Install header files for use by net-wireless/hostapd and
+  net-wireless/wpa_supplicant.
 
 *madwifi-driver-0.1_pre20050809 (10 Aug 2005)
 
