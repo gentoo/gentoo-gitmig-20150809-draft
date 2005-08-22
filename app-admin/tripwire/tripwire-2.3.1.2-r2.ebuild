@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.6 2005/08/05 17:35:32 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.7 2005/08/22 18:08:01 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -45,7 +45,7 @@ src_compile() {
 	strip-flags
 	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""' -fno-strict-aliasing
 
-	einfo "Preapring build..."
+	einfo "Preparing build..."
 		rm -f ${S}/configure
 		ebegin "	Running aclocal"
 			aclocal &> /dev/null || true

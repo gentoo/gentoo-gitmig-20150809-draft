@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 580d9ceb02cd9b72594c46548b81d5f4 tripwire-2.3.1.2-r2.ebuild 2826
+MD5 d846d9e5f1826e553513d8640c1093b6 tripwire-2.3.1.2-r2.ebuild 2826
 MD5 b1afb5171fb12827d214ec74053d13b5 tripwire-2.3.1.2-r1.ebuild 2858
-MD5 698e110310819363aca00185feff7444 ChangeLog 2678
+MD5 4da136b7ca6ed91fe4e71904349a7d71 ChangeLog 2773
 MD5 96f9cca8215d6e0286f08431592d3677 metadata.xml 597
 MD5 fa08ee8d578671e3f18b1ce684e0fa31 files/tripwire-2.3.1-2-fhs.patch.bz2 327
 MD5 7b5cac2555db706d0bdc2c49d7f6b9e9 files/tripwire-mkstemp.patch.bz2 564
@@ -20,10 +17,3 @@ MD5 033e88454d3adcf1cfc83270b4dc452e files/tripwire.cron 315
 MD5 6e77715bf58f0e8122d2a2ec2344edab files/tripwire-jbj.patch.bz2 791
 MD5 e68a00cf5ccdd906adec70a54fdfb66b files/tripwire.gif 4679
 MD5 9bbdaa3abc2c11b40d15b5d19d2c56f0 files/tripwire.txt 8401
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC86OB2G5bA0cA/ScRAj/5AKCmrRo8HN1tlg73WvjG9fT6Bzwt8ACfX1A8
-XGXucz1pc1ckHffh30iQcR0=
-=CW+B
------END PGP SIGNATURE-----
