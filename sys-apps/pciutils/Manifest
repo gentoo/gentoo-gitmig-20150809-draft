@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d4062ef41c41818433a19737e1f9f02 pciutils-2.1.11-r5.ebuild 2174
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 3cc5492771e2af5f8f4536ed60b6b6bf ChangeLog 7390
 MD5 7b93384d2dbd916f4d30ad7156b4cb30 pciutils-2.1.11-r3.ebuild 2108
+MD5 5d4062ef41c41818433a19737e1f9f02 pciutils-2.1.11-r5.ebuild 2174
 MD5 a253f31ceb366bb6cb39b66d28da87d9 pciutils-2.1.11-r4.ebuild 2184
-MD5 8b85a8a3a0b043135d76ec647d05221a ChangeLog 7386
-MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
-MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
-MD5 e13a2f5b8e9b5ae650934e8d674941f7 files/2.1.11-fix-pci-ids-location-refs.patch 1530
-MD5 f8bc3cef20829127ecab494b6b9c886c files/pciutils-2.1.11-bsd.patch 1105
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1532c4c74daf454495048467b2a8b04b files/2.1.11-sysfs.patch 10425
-MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
-MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
-MD5 6a0ae94d528195517f54f66653f8322e files/pciutils-2.1.11-gentoo-paths.patch 521
-MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r4 131
 MD5 70f9f6cb767230245ac30ec658b3fd0a files/pciutils-2.1.11-fix-pci-ids-location-refs.patch 925
+MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
+MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r4 131
+MD5 e13a2f5b8e9b5ae650934e8d674941f7 files/2.1.11-fix-pci-ids-location-refs.patch 1530
+MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
+MD5 6a0ae94d528195517f54f66653f8322e files/pciutils-2.1.11-gentoo-paths.patch 521
+MD5 f8bc3cef20829127ecab494b6b9c886c files/pciutils-2.1.11-bsd.patch 1105
+MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
+MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r3 131
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCk3HgIKl8Uu19MoRAtgcAJ9Lb2gtSGI9hZspAnIH7sVm8U36AwCfZJ2E
-7aSawE0kCPbA9aJMtNILII4=
-=RmaF
+iD8DBQFDCk+tj5H05b2HAEkRAvhBAJ9QjaQiXUfu5FrGy7hx9lvqc7qmlQCeIL0O
+iDY75CIfjZgJ10Lpwnoyzuw=
+=WPXW
 -----END PGP SIGNATURE-----
