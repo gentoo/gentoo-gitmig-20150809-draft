@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.23 2005/07/06 04:20:10 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.24 2005/08/22 19:07:17 gustavoz Exp $
+
+  22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> libpqxx-2.5.1.ebuild:
+  Stable on sparc
 
   06 Jul 2005; Masatomo Nakano <nakano@gentoo.org> libpqxx-2.5.1.ebuild:
   Marked stable on x86.

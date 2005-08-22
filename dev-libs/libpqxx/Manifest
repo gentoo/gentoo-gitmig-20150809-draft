@@ -1,17 +1,27 @@
-MD5 a80ee973d94ddb56b237d746bc7ba0d9 libpqxx-1.5.1.ebuild 641
-MD5 8c480eb205b1d6fe1344f52e5a6bfceb libpqxx-2.4.3.ebuild 772
-MD5 4ae7ff0a0d685258b2fa579a90b57b06 libpqxx-2.5.1.ebuild 949
-MD5 7137eafc9fce2742a2519ef52ba5011c libpqxx-2.4.2.ebuild 764
-MD5 e81da6850d37b6e66ba950e3fc952df2 libpqxx-2.5.5.ebuild 951
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9caea5d5cfe96a553590bbc30127a924 libpqxx-2.5.1.ebuild 950
 MD5 224d17bf04a29c1eb7153d11f1bb23b6 libpqxx-2.5.0.ebuild 772
-MD5 b4a1a1b973b007c0ea2894e69f2860f4 libpqxx-2.4.4.ebuild 772
-MD5 bb9214fb9e0bef0cf025d129526b3039 ChangeLog 2933
+MD5 7137eafc9fce2742a2519ef52ba5011c libpqxx-2.4.2.ebuild 764
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 2a8419c7caf7af646a1ca98881f87ce6 files/libpqxx-2.5.1-gentoo.patch 2723
-MD5 d39c8cbc896e3b969b033909dd5f219f files/digest-libpqxx-1.5.1 65
+MD5 8c480eb205b1d6fe1344f52e5a6bfceb libpqxx-2.4.3.ebuild 772
+MD5 b4a1a1b973b007c0ea2894e69f2860f4 libpqxx-2.4.4.ebuild 772
+MD5 e81da6850d37b6e66ba950e3fc952df2 libpqxx-2.5.5.ebuild 951
+MD5 a80ee973d94ddb56b237d746bc7ba0d9 libpqxx-1.5.1.ebuild 641
+MD5 d0db81268438de40b1088accf60c743e ChangeLog 3030
 MD5 57d7af2a593c8346b4612601bb42aba9 files/digest-libpqxx-2.4.2 65
-MD5 98e4de7d10cd8235ba9e1c6e4653e288 files/digest-libpqxx-2.4.3 65
-MD5 974778e9611f54a4cb5d0cd38579c72f files/digest-libpqxx-2.4.4 65
-MD5 476866b2e0021cd468033603c82bad9c files/digest-libpqxx-2.5.0 65
+MD5 d39c8cbc896e3b969b033909dd5f219f files/digest-libpqxx-1.5.1 65
 MD5 61d6e21fb56cf32a3efde681da879bd7 files/digest-libpqxx-2.5.1 66
+MD5 974778e9611f54a4cb5d0cd38579c72f files/digest-libpqxx-2.4.4 65
 MD5 b06c606cdbb874ef138ce65d362cc8bd files/digest-libpqxx-2.5.5 66
+MD5 98e4de7d10cd8235ba9e1c6e4653e288 files/digest-libpqxx-2.4.3 65
+MD5 2a8419c7caf7af646a1ca98881f87ce6 files/libpqxx-2.5.1-gentoo.patch 2723
+MD5 476866b2e0021cd468033603c82bad9c files/digest-libpqxx-2.5.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCiKCKRy60XGEcJIRAlEqAKCK2lBCMg2q7QUTpfmBGGHKWikdRwCgo+Un
+h8F9e5hrsDbn9yYF+sD4R0Y=
+=8IgM
+-----END PGP SIGNATURE-----
