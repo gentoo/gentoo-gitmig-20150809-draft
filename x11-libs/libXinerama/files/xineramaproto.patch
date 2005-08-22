@@ -1,0 +1,12 @@
+diff -urN libXinerama-0.99.0.orig/configure.ac libXinerama-0.99.0/configure.ac
+--- libXinerama-0.99.0.orig/configure.ac	2005-08-01 13:15:28.000000000 -0700
++++ libXinerama-0.99.0/configure.ac	2005-08-22 00:58:55.000000000 -0700
+@@ -33,7 +33,7 @@
+ AC_PROG_LIBTOOL
+ 
+ # Check for dependencies
+-PKG_CHECK_MODULES(DEP, x11 xext xextproto panoramixproto)
++PKG_CHECK_MODULES(DEP, x11 xext xextproto xineramaproto)
+ 
+ AC_SUBST(DEP_CFLAGS)
+ AC_SUBST(DEP_LIBS)

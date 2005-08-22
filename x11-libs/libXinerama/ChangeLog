@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXinerama
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.4 2005/08/20 22:51:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.5 2005/08/22 08:02:57 spyderous Exp $
+
+  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xineramaproto.patch, libXinerama-0.99.0.ebuild:
+  Look for xineramaproto, not panoramix. Reported by steev.
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   libXinerama-0.99.0.ebuild:
