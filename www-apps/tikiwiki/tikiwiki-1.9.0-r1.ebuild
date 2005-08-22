@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.0-r1.ebuild,v 1.1 2005/08/21 16:40:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.0-r1.ebuild,v 1.2 2005/08/22 22:13:00 rl03 Exp $
 
 inherit webapp eutils
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 IUSE="mysql postgres graphviz"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-RDEPEND=">=virtual/php-4.3
+RDEPEND="virtual/php
 	mysql? ( >=dev-db/mysql-4 )
 	postgres? ( dev-db/postgresql )
 	graphviz? ( media-gfx/graphviz )
