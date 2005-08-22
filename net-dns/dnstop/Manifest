@@ -1,4 +1,6 @@
+MD5 617d501b17d88f56c45acb6bb8955970 dnstop-20050405.ebuild 716
 MD5 5c03a105622dbd96e30380bf94e810de dnstop-20031113.ebuild 726
-MD5 12a7fd763a3dde5ea468c4869cb8e358 ChangeLog 1302
+MD5 709dbbca2fbcaebcad7198573d833325 ChangeLog 1433
 MD5 c546ddef0d0bcf060c017bc93b2dc621 metadata.xml 257
 MD5 5559ca03ec5be95b7d52e70d7f2ff39d files/digest-dnstop-20031113 65
+MD5 20d96baa17f19520d6f4d948b0fd89e7 files/digest-dnstop-20050405 66
