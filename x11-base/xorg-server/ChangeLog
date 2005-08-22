@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.31 2005/08/21 22:00:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.32 2005/08/22 17:49:11 spyderous Exp $
+
+*xorg-server-0.99.1-r5 (22 Aug 2005)
+
+  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/fix-xnest.patch, +xorg-server-0.99.1-r5.ebuild:
+  Update to CVS as of 20050822. This should make amd64 and sparc work. Update
+  included mesa to 6.3.2. Stop forcing glx on, it's on by default. Add
+  --disable-static so we don't build .a files for server modules. Add
+  fix-xnest.patch to fix breakage in the Xnest linking, caused by the
+  configure.ac reworking a couple of days ago.
 
   21 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r4.ebuild:

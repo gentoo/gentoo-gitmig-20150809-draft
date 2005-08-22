@@ -1,0 +1,18 @@
+Index: xorg/configure.ac
+===================================================================
+RCS file: /cvs/xorg/xserver/xorg/configure.ac,v
+retrieving revision 1.61
+diff -u -b -B -r1.61 configure.ac
+--- xorg/configure.ac	22 Aug 2005 09:15:20 -0000	1.61
++++ xorg/configure.ac	22 Aug 2005 16:21:26 -0000
+@@ -538,8 +538,9 @@
+ dnl Xnest DDX
+ 
+ AC_MSG_CHECKING([whether to build Xnest DDX])
++PKG_CHECK_MODULES(XNESTMODULES, [xfont xext x11], [have_xnest=yes], [have_xnest=no])
+ if test "x$XNEST" = xauto; then
+-	PKG_CHECK_MODULES(XNESTMODULES, [xfont xext x11], [XNEST=yes], [XNEST=no])
++	XNEST="$have_xnest"
+ fi
+ AC_MSG_RESULT([$XNEST])
+ AM_CONDITIONAL(XNEST, [test "x$XNEST" = xyes])
