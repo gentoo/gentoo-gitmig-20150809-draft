@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7273e940e12629263ee0a626bd22dcdc scrnsaverproto-1.0.ebuild 544
 MD5 2e7f18c938b50699a45da9a3f7a240a6 ChangeLog 691
 MD5 f311c4310437c3ead10830c425c201d6 files/digest-scrnsaverproto-1.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl59gIKl8Uu19MoRAt/zAJ9lLEfP2L6pyncdKL8oRj96KiBlKwCfd5Vk
+x/MiGQzyIzB60LoVmVDJSO8=
+=XMNX
+-----END PGP SIGNATURE-----

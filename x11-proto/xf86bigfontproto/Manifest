@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47961eed6c8b79faeea78348d0ecba70 xf86bigfontproto-1.1.ebuild 550
 MD5 6f43bd614fa9543d978203e5c222bc67 ChangeLog 709
 MD5 e9be3c0c30a933338db00dec65772246 files/digest-xf86bigfontproto-1.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl6SgIKl8Uu19MoRAtOAAJ96Pbn0PrKfH0/kK36HeKH4hmruVACfd/Xv
+AkGCzOY+uBOMYCqhvsLz8hQ=
+=dzuA
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 901ba538c43d4dacb54f3dd13a376cc2 kbproto-1.0.ebuild 523
 MD5 ae02c584b7a7f4d0662a47c648d12742 ChangeLog 638
 MD5 d587838cec435aa66a49af0c3512a5a4 files/digest-kbproto-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl3wgIKl8Uu19MoRAjrjAJwMsFB8f/TtyyhI1+zHAGABsbWISgCfc+nV
+qdiDlsCvT2HAT/RlZ7mQQpg=
+=sZ5u
+-----END PGP SIGNATURE-----

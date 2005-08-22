@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0ca64ae58cf17a331d0aef0ad14fb529 compositeproto-0.2.ebuild 544
 MD5 27205557171f41677a98c2df5fa8ae38 ChangeLog 691
 MD5 5768de4cffc33a40fa7d5ba5dab288ab files/digest-compositeproto-0.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl34gIKl8Uu19MoRAupxAJ9Cvd7dr0iYayEOuW8UYt77+jQb1QCfc5yn
+sVQROJNWqP+wKwk/dTYixS8=
+=dfao
+-----END PGP SIGNATURE-----

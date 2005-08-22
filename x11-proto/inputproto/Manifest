@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 439a2aa692f9d21c5a0bdf2e3582bb9e inputproto-1.3.ebuild 532
 MD5 dd134cb3c6a7920ab15a9917a1cfca2f ChangeLog 661
 MD5 f39511d5f3210e9fe28d3d63645408fc files/digest-inputproto-1.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl4ZgIKl8Uu19MoRAuf5AJwKwWDGismrhhIEYvDHq/RF3D1hbACfbOgY
+obzozJLbmYD3++71Gu4aokU=
+=N9lg
+-----END PGP SIGNATURE-----

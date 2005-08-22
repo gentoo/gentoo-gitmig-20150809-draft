@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 073c8c4b0346c96ad37ff0422810f8e5 fixesproto-3.0.ebuild 532
 MD5 3b17330aeb468be607f3cdd937bcd7e1 ChangeLog 661
 MD5 c187881a846fb48cda601d58d4376d54 files/digest-fixesproto-3.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl6kgIKl8Uu19MoRAhmIAJ907l67Y/+QfVWV8rZwG/PCt8avVQCfU8MJ
+GyOoNg54YuksvfO6Rh+YKTQ=
+=8Gt4
+-----END PGP SIGNATURE-----

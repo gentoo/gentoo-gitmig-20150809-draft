@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3793e364fd81332be46ff298c6cc986b xextproto-7.0.ebuild 529
 MD5 cd2d4335890af323a8f4499ee7dcc8c2 ChangeLog 654
 MD5 a27527c4a94e2215c581778fbe5a6275 files/digest-xextproto-7.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl4AgIKl8Uu19MoRAk/WAJwMPW/YycJ/qzSCxJQeNS/pCgSRkwCdGlfv
+LB2Ga8Pn5uxMC6lY/3HFU/c=
+=+WvE
+-----END PGP SIGNATURE-----

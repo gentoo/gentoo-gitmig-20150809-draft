@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b97365e08ae4b3be461bbad93e7cc54 evieext-1.0.ebuild 525
 MD5 a2debef5440c2bd014d8c43981203861 ChangeLog 638
 MD5 0128904dbcce506be3559d1bddbb0cf1 files/digest-evieext-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl6IgIKl8Uu19MoRAlMJAJ9YD14kBz+EWjReYf09pAT3o39q1gCfWmWN
+9K2ONiMZZOXAHKiLSMseAL4=
+=uPEm
+-----END PGP SIGNATURE-----

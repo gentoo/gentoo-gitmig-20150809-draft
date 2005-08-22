@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1287e5a38f578a989762b25ed6207ee5 panoramixproto-1.1.ebuild 544
 MD5 b076286542d99d9af8196c4ddb6d2c8a ChangeLog 691
 MD5 0806f410c9f772eb146ff6aee363ae51 files/digest-panoramixproto-1.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCl6KgIKl8Uu19MoRAqSLAJ9P7OS+eYE2fxjoO7kvauKhh86NtwCfb5FR
+DmOiSFcRqNawDl2RCmINKto=
+=TnuE
+-----END PGP SIGNATURE-----
