@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.72 2005/08/22 08:55:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.73 2005/08/22 10:44:06 phosphan Exp $
+
+  22 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.16-r1.ebuild:
+  Filtering -ffast-math (bug #103118)
 
 *sane-backends-1.0.16-r1 (22 Aug 2005)
 
