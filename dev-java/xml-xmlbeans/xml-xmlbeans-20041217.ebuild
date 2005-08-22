@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.10 2005/07/20 14:58:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.11 2005/08/22 19:00:35 gustavoz Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="x86 amd64 ~ppc ~sparc"
+KEYWORDS="x86 amd64 ~ppc sparc"
 IUSE="doc junit source"
 
 RDEPEND=">=virtual/jre-1.4

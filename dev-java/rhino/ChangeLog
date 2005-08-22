@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.31 2005/07/20 15:09:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.32 2005/08/22 19:03:30 gustavoz Exp $
+
+  22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> rhino-1.6.1-r1.ebuild:
+  Stable on sparc
 
   20 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> rhino-1.6.1-r1.ebuild:
   Gimme ~sparc
