@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.14 2005/05/23 07:15:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.15 2005/08/22 20:27:05 hansmi Exp $
+
+  22 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openttd-0.4.0.1.ebuild:
+  Stable on ppc (bug 102631).
 
 *openttd-0.4.0.1 (23 May 2005)
 
