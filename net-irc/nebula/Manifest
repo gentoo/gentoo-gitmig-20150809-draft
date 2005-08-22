@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21762ffc25176423e1c379f94b83166d nebula-0.4.ebuild 587
-MD5 9152b1e9bc3e63cbfd9a515cc5c93ec8 ChangeLog 496
-MD5 03e3ca111731dac759186976b8900259 metadata.xml 539
+MD5 a947dabd6e75fc0e21d8860ad2c75b3e ChangeLog 623
 MD5 c3b249d96c7f2b19b55b1b161d82c0f7 files/digest-nebula-0.4 62
+MD5 9f871a2a0eabd4765920ac49ee0d33f9 files/digest-nebula-0.5 62
+MD5 03e3ca111731dac759186976b8900259 metadata.xml 539
+MD5 21762ffc25176423e1c379f94b83166d nebula-0.4.ebuild 587
+MD5 d85f10794d1d10377c1d810702995c32 nebula-0.5.ebuild 588
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCqKC+I1lqEGTUzyQRArZwAKCnlDdHNNR+WxMLdn+1EbRMbUXkEgCcDGHs
-rHwg1LJFnge1qgIbaeO9Oow=
-=WZZL
+iD8DBQFDCVObI1lqEGTUzyQRAo8EAKDWVvFw5g9S93b3tnh2cAFozzQFvgCdGLiN
+s8yLhzGx6yYg9ojaMR1/dbY=
+=SEqE
 -----END PGP SIGNATURE-----
