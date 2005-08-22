@@ -1,13 +1,13 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.38 2005/08/22 12:51:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.39 2005/08/22 12:54:59 brix Exp $
 
 *hostapd-0.4.4 (22 Aug 2005)
 
   22 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
   +files/hostapd-0.4.4-conf.d, +files/hostapd-0.4.4-init.d,
   +hostapd-0.4.4.ebuild:
-  Version bump. Compile against headers installed by
+  New development snapshot. Compile against headers installed by
   net-wireless/madwifi-driver instead of local snapshot.
 
   16 Aug 2005; Henrik Brix Andersen <brix@gentoo.org> ChangeLog:
