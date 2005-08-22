@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.122 2005/08/22 04:17:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.123 2005/08/22 12:28:00 flameeyes Exp $
+
+  22 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gnome-applets-2.10.1.ebuild:
+  Make apm and acpid dependency conditional on Linux kernel as per bug #103123.
 
   22 Aug 2005; Sven Wegener <swegener@gentoo.org>
   gnome-applets-2.6.2.ebuild, gnome-applets-2.8.2.ebuild,
