@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre1.ebuild,v 1.1 2005/08/22 01:30:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre1.ebuild,v 1.2 2005/08/22 02:12:14 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -40,9 +40,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-keyring-manager-2.11.1
 
 	>=gnome-base/gnome-vfs-2.11.90
-	"
 
-RDEPEND="${RDEPEND}
 	>=gnome-base/gconf-2.11.90
 	>=net-libs/libsoup-2.2.5
 
@@ -58,9 +56,6 @@ RDEPEND="${RDEPEND}
 
 	>=gnome-base/eel-2.11.91
 	>=gnome-base/nautilus-2.11.91
-	"
-
-RDEPEND="${RDEPEND}
 
 	>=media-libs/gstreamer-0.8.10
 	>=media-libs/gst-plugins-0.8.10"
@@ -74,9 +69,7 @@ RDEPEND="${RDEPEND}
 	>=www-client/epiphany-1.7.3
 	>=app-arch/file-roller-2.11.91
 	>=gnome-extra/gcalctool-5.6.26
-	"
 
-RDEPEND="${RDEPEND}
 	>=gnome-extra/gconf-editor-2.10
 	>=gnome-base/gdm-2.8.0.2
 	>=app-editors/gedit-2.11.91
@@ -91,9 +84,7 @@ RDEPEND="${RDEPEND}
 	>=gnome-base/gnome-menus-2.11.90
 	>=x11-themes/gnome-icon-theme-2.11.91
 	>=x11-themes/gnome-themes-2.11.91
-	"
 
-RDEPEND="${RDEPEND}
 	>=x11-themes/gtk-engines-2.6.4
 	>=x11-themes/gnome-backgrounds-2.10.2
 
@@ -124,13 +115,13 @@ RDEPEND="${RDEPEND}
 
 	>=gnome-extra/gnome2-user-docs-2.8.1
 	>=gnome-extra/yelp-2.11.1
-	>=gnome-extra/zenity-2.11.91"
+	>=gnome-extra/zenity-2.11.91
 
-#	>=net-analyzer/gnome-netstatus-2.11.90
-#	>=net-analyzer/gnome-nettool-1.3.91
+	>=net-analyzer/gnome-netstatus-2.11.90
+	>=net-analyzer/gnome-nettool-1.3.91
 
-#	cdr? ( >=gnome-extra/nautilus-cd-burner-2.11.6 )
-#	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.11.6 )
+	cdr? ( >=gnome-extra/nautilus-cd-burner-2.11.6 )
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.11.6 )"
 
 #	hal? ( >=gnome-base/gnome-volume-manager-1.3.2 )
 
@@ -146,9 +137,6 @@ RDEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=app-admin/gnome-system-tools-1.3.2
 	>=app-admin/system-tools-backends-1.3.2
-	"
-
-RDEPEND="${RDEPEND}
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1.1
