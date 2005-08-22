@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.50 2005/07/11 21:03:56 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.51 2005/08/22 12:12:10 brix Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -374,37 +374,6 @@ generate_modulesd() {
 	return 0
 }
 
-display_postinst() {
-	# if we haven't determined the version yet, we need too.
-	get_version;
-
-	local modulename moduledir sourcedir moduletemp file i
-
-	file=${ROOT}/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}
-	file=${file/\/\///}
-
-	for i in ${MODULE_IGNORE}
-	do
-		MODULE_NAMES=${MODULE_NAMES//${i}(*}
-	done
-
-	if [[ -n ${MODULE_NAMES} ]]
-	then
-		einfo "If you would like to load this module automatically upon boot"
-		einfo "please type the following as root:"
-		for i in ${MODULE_NAMES}
-		do
-			unset libdir srcdir objdir
-			for n in $(find_module_params ${i})
-			do
-				eval ${n/:*}=${n/*:/}
-			done
-			einfo "    # echo \"${modulename}\" >> ${file}"
-		done
-		einfo
-	fi
-}
-
 find_module_params() {
 	local matched_offset=0 matched_opts=0 test="${@}" temp_var result
 	local i=0 y=0 z=0
@@ -531,7 +500,6 @@ linux-mod_pkg_postinst() {
 	update_depmod;
 	update_modules;
 	update_moduledb;
-	display_postinst;
 }
 
 linux-mod_pkg_postrm() {
