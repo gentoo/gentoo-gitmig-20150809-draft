@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpgroupware
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.15 2005/07/06 20:25:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.16 2005/08/22 21:02:52 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
+  phpgroupware-0.9.16.006.ebuild:
+  Housekeeping
 
   06 Jul 2005; Simon Stelling <blubb@gentoo.org>
   -phpgroupware-0.9.16.004.ebuild, -phpgroupware-0.9.16.005.ebuild:

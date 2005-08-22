@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.006.ebuild,v 1.3 2005/07/06 20:18:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.006.ebuild,v 1.4 2005/08/22 21:02:52 rl03 Exp $
 
 inherit webapp
 
@@ -13,7 +13,7 @@ IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 ~hppa ppc ~sparc ~x86"
 
-RDEPEND=">=dev-php/mod_php-4.1"
+RDEPEND="virtual/httpd-php"
 
 src_unpack() {
 	unpack ${A}
