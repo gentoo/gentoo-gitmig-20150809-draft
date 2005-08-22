@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68c9adda876aa0502dc093be172195ef ChangeLog 4496
+MD5 f0895c2f585ded764d279695fbc0f62b ChangeLog 4582
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 94cd435d058eaa693b3019f895b210f8 skim-1.4.0.ebuild 1522
+MD5 061ac661457067dc071025a821b1c2eb skim-1.4.0.ebuild 1659
 MD5 c1a718dd44a9d44af5669e337935045c skim-1.2.3.ebuild 1185
-MD5 903dcfa69ae924b0ecd40f47ab122eec skim-1.4.1.ebuild 1518
+MD5 3c217ef266c62cacef306aea9b99e711 skim-1.4.1.ebuild 1660
 MD5 f4fdd703970a0cca979bef289bb569b2 skim-1.3.1.ebuild 1134
 MD5 c91303045f74536acab4c1acb4ab9e30 files/digest-skim-1.2.3 64
 MD5 209a989fc8cf4d26de3e7f402769e2a9 files/digest-skim-1.4.0 64
 MD5 9f3e930c55590fe519f75e387d27ae1f files/digest-skim-1.3.1 64
 MD5 421d42ba961204816564723772d95f45 files/digest-skim-1.4.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC+0uvVWNWqTUmv+0RAvudAKCZ/4CblPSuTLSc4jbIiAjrL9KnWQCfb49/
-v7iC0UYsWcO5MpfeZF10K6s=
-=Sth1
------END PGP SIGNATURE-----
