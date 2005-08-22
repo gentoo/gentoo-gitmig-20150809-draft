@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 109e8afbd38231afdec85ad5730d447c ChangeLog 1936
 MD5 5c14db9863c9c3035ab38194db3fd2e0 metadata.xml 222
-MD5 f1977c03e217b7596cd55e2ca360f365 phpxmlrpc-1.2.ebuild 971
-MD5 f0d4fa8642a4e56d9ce0d30f4bf776ad ChangeLog 1830
 MD5 f40d9dfa64221e0f215ca7580398f081 phpxmlrpc-1.1.1.ebuild 823
+MD5 b3d5f8d7b32fb8ce3cefa8100e7361e9 phpxmlrpc-1.2.ebuild 970
 MD5 27bbe57425296d1eaefca4f021ce0f9d files/digest-phpxmlrpc-1.1.1 60
 MD5 b726a4bdc8588da827a75f2526234692 files/digest-phpxmlrpc-1.2 59
 MD5 e947e6868c02b0f1fe81317b49080f85 files/phpxmlrpc-1.2-gentoo.patch 1168
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDClHtKf2g/qXtneoRAuW4AJ9vxcU/4s68ZTUGy6bUhzOG/xs8QACgq3ad
+BmUbyRjd/x8evQBfieXaiK0=
+=FEpB
+-----END PGP SIGNATURE-----
