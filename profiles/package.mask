@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4321 2005/08/22 02:55:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4322 2005/08/22 04:39:27 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Leonardo Boshell <leonardop@gentoo.org> (22 Aug 2005)
+# To be removed. Provided by gnome-base/libbonobo.
+gnome-base/bonobo-activation
 
 # Sven Wegener <swegener@gentoo.org> (22 August 2005)
 # Depends on experimental/p.mask'ed dbus
