@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 92872e036efba580668e29a12da1d3dd twiki-20041030.ebuild 1378
 MD5 889ea77fb14101813d892655d77ba9e2 ChangeLog 3374
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
@@ -6,3 +9,10 @@ MD5 fab10473182738fadb4188bf90af8162 files/execwithsearch.patch 653
 MD5 538297b9f7809dff8d3d1ade91b3698c files/postinstall-en.txt 722
 MD5 67624b3735f6d1c92bce9dacf2cb36b8 files/digest-twiki-20041030 67
 MD5 f4898afe44208d27fee4ab3910b8cc88 files/reconfig 588
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDClbIEzitwsaoONoRAjnAAKC5wqwhyUOJiEImXCZkxl4lyYJAyACeOM6v
+z5/8GYiXHef56Zz3+R4hDy4=
+=lBC2
+-----END PGP SIGNATURE-----

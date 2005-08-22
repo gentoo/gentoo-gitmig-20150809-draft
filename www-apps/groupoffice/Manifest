@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b417702e37814a93777fe92611ab3123 groupoffice-2.11a.ebuild 956
 MD5 b04a05402ef560925b9358f13db57899 groupoffice-2.02.ebuild 1865
 MD5 ea00f276ebf42d01ad99cd393d7abd74 groupoffice-2.13.ebuild 1634
@@ -16,3 +19,10 @@ MD5 f26fd7d079d2d1b897e210d725f3f4e1 files/digest-groupoffice-2.10 73
 MD5 2ffc086e706637a4b29e375e2417a83b files/digest-groupoffice-2.12 73
 MD5 4f44d03fe37a5f608410fb1d13774f8c files/digest-groupoffice-2.13 73
 MD5 fb7074ba1a64d6bcecd6d5a55683497e files/digest-groupoffice-2.11a 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDClfhEzitwsaoONoRAvHxAJ45yLjpwMOSLMmjdIHikdJs21f9GACgj351
+CKnraxLv+BscTO4DACKKTr8=
+=FYG9
+-----END PGP SIGNATURE-----

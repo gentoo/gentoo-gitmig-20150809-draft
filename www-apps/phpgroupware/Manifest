@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 455d2c06ea1014ad5fdd39221a1f7d99 phpgroupware-0.9.16.006.ebuild 925
 MD5 d50eb8ef1141915b127bd24a2f103f8d ChangeLog 6508
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 a6a9e83c4e8b3627e2dda944e8f87564 files/digest-phpgroupware-0.9.16.006 78
 MD5 08ae6601164920e53b3ade996ea7166a files/postinstall-en.txt 249
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDClnQEzitwsaoONoRAvVSAJ46QdS7bykBB7oinudjsYPNmIHRAwCdHpqs
+NH+ic6nEdu2Nc1PjPgt0pG8=
+=fjIb
+-----END PGP SIGNATURE-----
