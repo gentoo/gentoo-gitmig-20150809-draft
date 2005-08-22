@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.42 2005/08/21 17:27:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.43 2005/08/22 18:37:29 gustavoz Exp $
+
+  22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  rep-gtk-0.18-r2.ebuild:
+  Stable on sparc wrt #103251
 
   21 Aug 2005; Aron Griffis <agriffis@gentoo.org> rep-gtk-0.18-r2.ebuild:
   stable alpha amd64 ia64 x86
