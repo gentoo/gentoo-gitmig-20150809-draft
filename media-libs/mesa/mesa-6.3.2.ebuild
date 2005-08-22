@@ -1,8 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.2 2005/08/22 05:54:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.3 2005/08/22 06:00:32 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
+
+# Arches that need to define their own sets of DRI drivers, please do so in
+# a variable up here, and use that variable below. This helps us to separate the
+# data from the code.
+DRI_DRIVERS_SPARC="ffb mach64 mga radeon savage"
 
 OPENGL_DIR="xorg-x11"
 
@@ -65,7 +70,7 @@ src_unpack() {
 	# Set up linux-dri configs
 	if use sparc; then
 		einfo "Define the sparc DRI drivers."
-		echo "DRI_DIRS = ffb mach64 mga radeon savage" >> ${HOSTCONF}
+		echo "DRI_DIRS = ${DRI_DRIVERS_SPARC}" >> ${HOSTCONF}
 		einfo "Explicitly note that sparc assembly code is not working."
 		echo "ASM_FLAGS =" >> ${HOSTCONF}
 		echo "ASM_SOURCES =" >> ${HOSTCONF}

@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.34 2005/08/22 05:54:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.35 2005/08/22 06:00:32 spyderous Exp $
+
+  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.3.2.ebuild:
+  Split out an arch-specific variable DRI_DRIVERS_${ARCH} for defining which
+  drivers to build. Put it up at the top, to try separating data from code.
+  Perhaps doing something similar in pkg_setup(), but having if...elif and
+  just DRI_DRIVERS, would work reasonably, but it doesn't isolate the data as
+  well.
 
   22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; mesa-6.3.2.ebuild:
   Move EXTRA_LIB_PATH blanking out from within a sparc block, because it
