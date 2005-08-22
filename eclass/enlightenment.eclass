@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.53 2005/08/21 19:06:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.54 2005/08/22 09:14:34 genstef Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -23,10 +23,12 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 	inherit cvs
 elif [[ ${PV/.200?????/} != ${PV} ]] ; then
 	ECVS_STATE="snap"
-elif [[ ${PV%%.[0-9][0-9][0-9]} != ${PV} ]] ; then
-	ECVS_STATE="snap"
+# commented because it breaks imlib2, ecore and others - genstef
+#elif [[ ${PV%%.[0-9][0-9][0-9]} != ${PV} ]] ; then
+#	ECVS_STATE="snap"
 fi
-einfo $PV == $ECVS_STATE
+# commented because einfoe in global scope should not be used - genstef
+#einfo $PV == $ECVS_STATE
 
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
