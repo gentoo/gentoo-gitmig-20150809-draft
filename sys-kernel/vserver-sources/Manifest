@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 50f614fbeb42151f55f06a1d1a6a46d1 ChangeLog 4446
+MD5 15f8284cf2747c48f8eddeccecfae7ff ChangeLog 4619
 MD5 0f960f0c8cbf4395346622ce8a433dea metadata.xml 469
 MD5 57666c0cdbfc95b7d7e87e0bb2ca9d07 vserver-sources-1.9.5.ebuild 751
 MD5 22f3abff922822380e6d48a7fb894c1f vserver-sources-2.0_rc6.ebuild 719
 MD5 44210ae39fb0c34ba34878b4b77db0e2 vserver-sources-2.0_rc8.ebuild 778
 MD5 32b24f2ddde7e33d66fdd675b085467a vserver-sources-2.0.ebuild 740
+MD5 1245f073146eda9b8e97c12462c7bf47 vserver-sources-2.0-r1.ebuild 743
 MD5 6e89fc7860e9cb1c51f6fe718320f88d files/delta-locks-fix02.diff 682
 MD5 eeba2c8f8e1d02662a34ddbb3821f384 files/digest-vserver-sources-1.9.5 199
+MD5 9ad64ba1a94849ed87ff74df46547308 files/digest-vserver-sources-2.0-r1 299
 MD5 be5caa6f1100b337de66289210b3bd80 files/digest-vserver-sources-2.0 296
 MD5 b7971fff5cbeaa464da2dd22c2d82c8b files/digest-vserver-sources-2.0_rc6 298
 MD5 3c1bfbd29376cc0f5d8e499e1dc19007 files/digest-vserver-sources-2.0_rc8 300
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC965omPFBzbX68WERAtlJAJ9SEHFcrOAP1obJ+9n1d/qzn4paLACeJb25
-0Vb8ovHliqaafG9kUHwGGm4=
-=2XZG
+iD8DBQFDCXj8mPFBzbX68WERAgmJAJ0Vaq7zVjYVeGGHip2/J1Q3EgCxkACeLLMF
+Ns3vAuDqqxqa05AN31AfsyI=
+=5Gvt
 -----END PGP SIGNATURE-----
