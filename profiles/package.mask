@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4323 2005/08/22 08:02:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4324 2005/08/22 12:03:22 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (22 Aug 2005)
+# Pre-release heavy patched
+=media-video/avidemux-2.1_pre*
 
 # Benedikt Boehm <hollow@gentoo.org>
 # Masked for testing
