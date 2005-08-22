@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.5 2005/08/22 22:02:52 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.6 2005/08/22 22:03:52 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> -coppermine-1.3.3.ebuild:
+  Removing vulnerable versions
 
 *coppermine-1.3.4 (22 Aug 2005)
 
