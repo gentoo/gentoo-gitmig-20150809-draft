@@ -1,8 +1,18 @@
-MD5 3fe5d182d332fc3a509571f0bddde913 ChangeLog 4878
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 214bd86b55faf27f2db3e938bb62f7aa nail-11.25-r1.ebuild 1432
 MD5 b0c010b0212638a72c54a72ba6053db6 nail-11.20.ebuild 2121
 MD5 7f43acb89cb196fd87f503be8f75f678 nail-11.22.ebuild 2130
-MD5 98b1d2b9e4c59abd44cce45f52690e9e nail-11.25-r1.ebuild 1433
+MD5 0d5499de829b5b08186fe50356e129e4 ChangeLog 4985
+MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r1 63
 MD5 1d08241dbf0e85e0fbd84acd2eee579e files/digest-nail-11.20 63
 MD5 e1c6a2dec491cb6b6a57344c05e75ca3 files/digest-nail-11.22 63
-MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCgtRKRy60XGEcJIRAlHKAJ4igb+WiLD3Th/qo08+ZaPA9k10KACgg2ON
+RuqHvPEddLkhQfFhblKE6rY=
+=B/MU
+-----END PGP SIGNATURE-----
