@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.91 2005/07/03 09:42:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.92 2005/08/22 15:51:51 ka0ttic Exp $
+
+  22 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> sqlite-3.2.1-r3.ebuild,
+  sqlite-3.2.2.ebuild:
+  Added ~mips.
 
   03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> sqlite-3.2.1-r3.ebuild:
   Stable on alpha.
