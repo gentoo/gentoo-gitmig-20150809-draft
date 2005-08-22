@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-cleanice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.13 2005/08/19 19:20:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.14 2005/08/22 00:09:58 metalgod Exp $
+
+  22 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  gtk-engines-cleanice-2.4.0.ebuild:
+  Marked Stable on AMD64.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   gtk-engines-cleanice-2.4.0.ebuild:
