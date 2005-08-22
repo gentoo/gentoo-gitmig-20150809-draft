@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8ead5eadf6b202fa189f289ff4751d1a font-winitzki-cyrillic-0.99.0.ebuild 689
 MD5 9109b6af4c468cff9d8a492599b89a4f ChangeLog 893
 MD5 504dbcd03fb71cf1c2ac05787080f1d8 files/digest-font-winitzki-cyrillic-0.99.0 81
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmaAgIKl8Uu19MoRAuVCAJ4kQ4CSuE/3RVc7PN62DxVC+fhHFQCeItC7
+l7A9CUfyA8zsdVYGlE9kP6Q=
+=0M+n
+-----END PGP SIGNATURE-----

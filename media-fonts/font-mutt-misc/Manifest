@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f180d8fd78bf088eadef76ce6f7ff3ee font-mutt-misc-0.99.0.ebuild 673
 MD5 2012ad3955ddc75c720ca6f84d9cd1b3 ChangeLog 837
 MD5 65d64cc8b1402ead85bed549ea4cfdb2 files/digest-font-mutt-misc-0.99.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmZogIKl8Uu19MoRAm9sAJ4j6ZuoNVbPCR6S6cFYcHbFcgxKaACfX7A/
+r+SsovQAPEnS6yoi61ZSw40=
+=ZuNa
+-----END PGP SIGNATURE-----

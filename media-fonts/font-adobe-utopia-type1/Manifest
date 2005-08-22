@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ed6cd319ecb24184e78becd4fb8e2f16 font-adobe-utopia-type1-0.99.0.ebuild 695
 MD5 af5c13583ec1103b47cbacba388602b9 ChangeLog 900
 MD5 df07d26ab1f84941c0ef12d80e890daa files/digest-font-adobe-utopia-type1-0.99.0 83
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmXlgIKl8Uu19MoRAgOqAJ4pSu9VbaOY+MOiUbu4lgVO6sxD1QCeIidu
+jbx1Tf3dQFaMuXyK8yRAFvk=
+=qRIr
+-----END PGP SIGNATURE-----
