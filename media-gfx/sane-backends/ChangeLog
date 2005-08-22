@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.71 2005/08/22 07:26:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.72 2005/08/22 08:55:12 phosphan Exp $
+
+*sane-backends-1.0.16-r1 (22 Aug 2005)
+
+  22 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +sane-backends-1.0.16-r1.ebuild:
+  Adding again the BrotherMFC-Patch from sourceforge, adapted for .16 by Joachim
+  Feise.
 
   22 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.16.ebuild:
