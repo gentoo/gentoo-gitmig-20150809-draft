@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.31 2005/08/20 19:57:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.32 2005/08/22 03:39:25 spyderous Exp $
+
+  22 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/fix-include-locations.patch, -files/fix-xthreads-location.patch,
+  -files/use-xthreads.patch, -mesa-6.3.1.1.ebuild, -mesa-6.3.1.1-r1.ebuild,
+  -mesa-6.3.1.1-r2.ebuild:
+  Pull old versions.
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   mesa-6.3.1.1-r3.ebuild:
