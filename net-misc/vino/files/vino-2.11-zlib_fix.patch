@@ -1,0 +1,17 @@
+diff -NurdB vino-2.11.90/server/libvncserver/zrle.c vino-2.11.90-patched/server/libvncserver/zrle.c
+--- vino-2.11.90/server/libvncserver/zrle.c	2004-02-05 03:55:25.000000000 -0500
++++ vino-2.11.90-patched/server/libvncserver/zrle.c	2005-08-22 17:30:06.000000000 -0500
+@@ -28,6 +28,8 @@
+ #include <zrleoutstream.h>
+ 
+ 
++#ifdef HAVE_LIBZ
++
+ #define GET_IMAGE_INTO_BUF(tx,ty,tw,th,buf)                                \
+ {  char *fbptr = (cl->screen->frameBuffer                                   \
+ 		 + (cl->screen->paddedWidthInBytes * ty)                   \
+@@ -181,3 +183,4 @@
+   cl->zrleData = NULL;
+ }
+ 
++#endif  /* HAVE_LIBZ */
