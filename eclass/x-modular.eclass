@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.6 2005/08/21 04:56:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.7 2005/08/22 17:46:03 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -42,6 +42,12 @@ if [[ "${PN/#font}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
 		media-fonts/encodings"
 	PDEPEND="${PDEPEND}
 		media-fonts/font-alias"
+fi
+
+# If we're a driver package
+if [[ "${PN/#xf86-video}" != "${PN}" ]] | [[ "${PN}" != "xf86-input" ]]; then
+	# Don't build static driver modules
+	DRIVER_OPTIONS="--disable-static"
 fi
 
 DEPEND="${DEPEND}
@@ -107,6 +113,7 @@ x-modular_src_configure() {
 	if [ -x ./configure ]; then
 		econf --prefix=${XDIR} \
 			--datadir=${XDIR}/share \
+			${DRIVER_OPTIONS} \
 			${CONFIGURE_OPTIONS}
 	fi
 }
@@ -129,6 +136,12 @@ x-modular_src_install() {
 # einstall forces datadir, so we need to re-force it
 #		datadir=${XDIR}/share \
 #		mandir=${XDIR}/share/man \
+
+	# Don't install libtool archives for server modules
+	if [[ -e ${D}/usr/lib/xorg/modules ]]; then
+		find ${D}/usr/lib/xorg/modules -name '*.la' \
+			| xargs rm -f
+	fi
 }
 
 x-modular_pkg_preinst() {
