@@ -1,9 +1,19 @@
-MD5 fb36084905d1b599c4f916884eebedc9 ChangeLog 9560
-MD5 8e760afb659cce24229c97d07f79b0b6 gentoo-0.11.51.ebuild 1120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28c27820d168f916837834f711435591 metadata.xml 257
 MD5 6ddda8790f008a404e6c20a411585b77 gentoo-0.11.54.ebuild 1191
-MD5 5ba60a6e5a9ee9e14516c9b57ad68ada gentoo-0.11.55.ebuild 1195
+MD5 fbb99a51dc9cbe23d2f3faf6f36a1f49 gentoo-0.11.55.ebuild 1195
+MD5 8e760afb659cce24229c97d07f79b0b6 gentoo-0.11.51.ebuild 1120
+MD5 b59dcf55daae711d18e45c2e6ae27f7a ChangeLog 9657
+MD5 40dc6fe7bbeae11645df46657ff209be files/digest-gentoo-0.11.55 67
 MD5 938766b6b79e0c6c2000ce02879a70e0 files/digest-gentoo-0.11.51 67
 MD5 5ce199fdf587f5572c2269660f3edf67 files/gentoo.desktop 142
-MD5 40dc6fe7bbeae11645df46657ff209be files/digest-gentoo-0.11.55 67
 MD5 2beeab17927a22f99d79b08059a91337 files/digest-gentoo-0.11.54 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCjO7KRy60XGEcJIRAi04AJ0VqUkGN7SlCedm4CI9XWnuTMgJhwCffE9v
+/1ngSVTjdfvmw+Ihm2OuhO4=
+=g5CQ
+-----END PGP SIGNATURE-----
