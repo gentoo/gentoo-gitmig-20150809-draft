@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 634ddbd924c8ab0623b3dc97b501fcbb ChangeLog 696
-MD5 720b2a63e662d623d04de80211187424 files/digest-net6-1.0.1 62
-MD5 092fe9c2d7c04aed2afd539cb4062e73 files/digest-net6-1.1.0 62
+MD5 fb27618204952abce429bf5458d7e57b ChangeLog 821
 MD5 0c1617ed145bf486b4d1a5cbb61476c2 metadata.xml 333
-MD5 6ba55066648d24be7c4ad74199938298 net6-1.0.1.ebuild 610
-MD5 68d52cd48c4dc972bba534d08170eeab net6-1.1.0.ebuild 609
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/7P+I1lqEGTUzyQRAmB+AJ9SqDbmLUGOO0o++3IWMHnNtHoOjACgjfOS
-UIPtU+DfcU2Id3cPgt6+C+g=
-=TI7D
------END PGP SIGNATURE-----
+MD5 a3c8b1a1a09661798c834a3fd05783be net6-1.1.0.ebuild 607
+MD5 092fe9c2d7c04aed2afd539cb4062e73 files/digest-net6-1.1.0 62
