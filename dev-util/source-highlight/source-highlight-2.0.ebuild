@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.0.ebuild,v 1.4 2005/08/18 18:36:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.0.ebuild,v 1.5 2005/08/22 16:35:44 swegener Exp $
 
 inherit bash-completion versionator eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	built_with_use boost threadsonly && \
+	built_with_use dev-libs/boost threadsonly && \
 		myconf="--with-boost-regex=boost_regex-gcc-mt"
 
 	econf ${myconf} || die "econf failed"
