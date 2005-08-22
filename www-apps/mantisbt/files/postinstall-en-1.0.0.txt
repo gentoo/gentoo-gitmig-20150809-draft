@@ -1,7 +1,7 @@
 If you are upgrading from an earlier version, you can use the upgrade scripts
 at admin/ to execute the pending database updates.
 
-To install, visit: http://${VHOST_HOSTNAME}/mantisbt/admin/install.php
+To install, visit: http://${VHOST_HOSTNAME}${VHOST_APPDIR}/admin/install.php
 Then log in: administrator/root.
 You can load up admin/check.php to see if everything is working correctly.
 

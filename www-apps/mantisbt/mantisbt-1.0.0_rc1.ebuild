@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.0_rc1.ebuild,v 1.2 2005/08/12 19:36:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.0_rc1.ebuild,v 1.3 2005/08/22 18:54:03 rl03 Exp $
 
 inherit webapp
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="
 	>=dev-db/mysql-3.23.32
 	net-www/apache
-	>=virtual/php-4.0.6
+	virtual/php
 "
 
 LICENSE="GPL-2"
