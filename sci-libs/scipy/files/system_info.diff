@@ -1,0 +1,67 @@
+*** SciPy_complete-0.3.2/scipy_core/scipy_distutils/system_info.py	Tue Jun  1 10:27:47 2004
+--- SciPy_complete-0.3.2_new/scipy_core/scipy_distutils/system_info.py	Mon Aug 22 15:06:44 2005
+***************
+*** 1,3 ****
+--- 1,7 ----
++ # Modified to avoid linking directly to the atlas libraries if present.
++ # This would break the dynamic switching between different lapack
++ # implementations at run time (pbienst@gentoo.org)
++ 
+  #!/usr/bin/env python
+  """
+  This file defines a set of system_info classes for getting
+***************
+*** 553,558 ****
+--- 557,563 ----
+          atlas = None
+          lapack = None
+          atlas_1 = None
++         return
+          for d in lib_dirs:
+              atlas = self.check_libs(d,atlas_libs,[])
+              lapack_atlas = self.check_libs(d,['lapack_atlas'],[])
+***************
+*** 635,640 ****
+--- 640,646 ----
+                                     self._lib_names + ['atlas'])
+          atlas = None
+          atlas_1 = None
++         return
+          for d in lib_dirs:
+              atlas = self.check_libs(d,atlas_libs,[])
+              if atlas is not None:
+***************
+*** 659,674 ****
+          return
+  
+  class atlas_threads_info(atlas_info):
+!     _lib_names = ['ptf77blas','ptcblas']
+  
+  class atlas_blas_threads_info(atlas_blas_info):
+!     _lib_names = ['ptf77blas','ptcblas']
+  
+  class lapack_atlas_info(atlas_info):
+!     _lib_names = ['lapack_atlas'] + atlas_info._lib_names
+  
+  class lapack_atlas_threads_info(atlas_threads_info):
+!     _lib_names = ['lapack_atlas'] + atlas_threads_info._lib_names
+  
+  class lapack_info(system_info):
+      section = 'lapack'
+--- 665,680 ----
+          return
+  
+  class atlas_threads_info(atlas_info):
+!     _lib_names = [] #['ptf77blas','ptcblas']
+  
+  class atlas_blas_threads_info(atlas_blas_info):
+!     _lib_names = [] #['ptf77blas','ptcblas']
+  
+  class lapack_atlas_info(atlas_info):
+!     _lib_names = [] #['lapack_atlas'] + atlas_info._lib_names
+  
+  class lapack_atlas_threads_info(atlas_threads_info):
+!     _lib_names = [] #['lapack_atlas'] + atlas_threads_info._lib_names
+  
+  class lapack_info(system_info):
+      section = 'lapack'

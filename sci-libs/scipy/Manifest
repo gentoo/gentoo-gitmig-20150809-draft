@@ -1,0 +1,5 @@
+MD5 2147c6991d25232a30351710c44138ae scipy-0.3.2.ebuild 1549
+MD5 fc6189cd82baf2023e3667455578cc22 ChangeLog 418
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 a5ac5edc39d8266b13659fd429e8e939 files/system_info.diff 2155
+MD5 1b281bbd7d7655bf8fb89c5cb8e05db0 files/digest-scipy-0.3.2 73

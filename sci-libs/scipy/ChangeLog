@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/scipy
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.1 2005/08/22 16:31:29 pbienst Exp $
+
+*scipy-0.3.2 (22 Aug 2005)
+
+  22 Aug 2005; Peter Bienstman <pbienst@gentoo.org> +files/system_info.diff,
+  +metadata.xml, +scipy-0.3.2.ebuild:
+  Initial import. Closes 24593. Thanks to D. Grant, D. Dale and others.
+
