@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 eff66571c6c0713874f93aa2797d79e3 ChangeLog 5541
-MD5 2c44dfddced8e8086204d1f6ea4c12ae linuxwacom-0.6.9.ebuild 2960
-MD5 80b71911286cca0ce9148fd3e86fe4d5 linuxwacom-0.6.6.ebuild 3537
-MD5 086e8fd79eca51dc3b219ade9fbb9a85 metadata.xml 268
-MD5 22abf1918269ba9122ed300afd97e325 linuxwacom-0.6.7.ebuild 3304
-MD5 4d1f188a0157fcf3eadb3164b6055573 linuxwacom-0.6.8.ebuild 3306
-MD5 da5ae4274a9f0bb9b38d9ea2f7dc43c1 files/digest-linuxwacom-0.6.9 69
 MD5 fe1457589d41bcc4b2407351e6ae2faf files/digest-linuxwacom-0.6.6 69
-MD5 97ebb9a35c19c6f15f8fb9ac4b847d09 files/linuxwacom-0.6.6-nonx86.patch 609
 MD5 c63cfe07a0a7457ddc796feee5501b6a files/digest-linuxwacom-0.6.7 69
 MD5 5cad69052ceddf84cea16c74fef9b805 files/digest-linuxwacom-0.6.8 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+lO1ArHZZzCEUG0RAiMmAJ4jn8u4kXyWXX45b1eLe7QyfRq7ZwCfRivp
-hMx2TQHWsXl1N8rRnNxGPfc=
-=TNXq
------END PGP SIGNATURE-----
+MD5 da5ae4274a9f0bb9b38d9ea2f7dc43c1 files/digest-linuxwacom-0.6.9 69
+MD5 97ebb9a35c19c6f15f8fb9ac4b847d09 files/linuxwacom-0.6.6-nonx86.patch 609
+MD5 1f2a238ea4933201edeaa1f4f621bcb5 linuxwacom-0.6.6.ebuild 3545
+MD5 f607624b145fb786dc4102db3b03b3d3 linuxwacom-0.6.7.ebuild 3312
+MD5 86d0874c6eca613250b931b633ef4902 linuxwacom-0.6.8.ebuild 3318
+MD5 824e451a5c15298391be18fdd8a19d0f linuxwacom-0.6.9.ebuild 2967
+MD5 086e8fd79eca51dc3b219ade9fbb9a85 metadata.xml 268

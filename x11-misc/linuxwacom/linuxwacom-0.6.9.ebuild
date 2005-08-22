@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.9.ebuild,v 1.3 2005/08/10 19:20:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.9.ebuild,v 1.4 2005/08/22 16:29:44 swegener Exp $
 
 IUSE="dlloader gtk gtk2 tcltk sdk usb"
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use sdk; then
-		if ! built_with_use xorg-x11 sdk
+		if ! built_with_use x11-base/xorg-x11 sdk
 		then
 			eerror "This package builds against the X.Org SDK, and therefore requires"
 			eerror "that you have emerged xorg-x11 with the sdk USE flag enabled."
