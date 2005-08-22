@@ -1,0 +1,57 @@
+Fixup support for FreeBSD.
+
+Patch by Diego Pettenò.
+
+http://bugs.gentoo.org/103241
+
+--- pcimodules.c
++++ pcimodules.c
+@@ -16,7 +16,6 @@
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+-#include <malloc.h>
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/utsname.h>
+--- lib/fbsd-device.c
++++ lib/fbsd-device.c
+@@ -13,10 +13,21 @@
+ 
+ #include <fcntl.h>
+ #include <string.h>
++#include <errno.h>
+ #include <unistd.h>
++#include <osreldate.h>
+ 
+-#include <pci/pcivar.h>
+-#include <pci/pci_ioctl.h>
++#if __FreeBSD_version < 500000
++#  include <pci/pcivar.h>
++#else
++#  include <dev/pci/pcivar.h>
++#endif
++
++#if __FreeBSD_version < 430000
++#  include <pci/pci_ioctl.h>
++#else
++#  include <sys/pciio.h>
++#endif
+ 
+ #include "internal.h"
+ 
+@@ -75,8 +86,12 @@
+   pi.pi_reg = pos;
+   pi.pi_width = len;
+ 	
+-  if (ioctl(d->access->fd, PCIOCREAD, &pi) < 0)
+-    d->access->error("fbsd_read: ioctl(PCIOCREAD) failed");
++  if (ioctl(d->access->fd, PCIOCREAD, &pi) < 0) {
++    if (errno == ENODEV)
++      return 0;
++    else
++      d->access->error("fbsd_read: ioctl(PCIOCREAD) failed");
++  }
+   
+   switch (len)
+     {
