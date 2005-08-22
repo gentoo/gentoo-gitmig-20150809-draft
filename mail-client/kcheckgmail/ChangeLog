@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/kcheckgmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.9 2005/08/20 12:00:47 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.10 2005/08/22 08:53:52 greg_g Exp $
+
+  22 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> kcheckgmail-0.5.4.ebuild:
+  Stable on x86.
 
 *kcheckgmail-0.5.4 (20 Aug 2005)
 
