@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.3 2005/08/22 05:50:56 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.4 2005/08/22 18:35:10 gustavoz Exp $
 
 IUSE="readline"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://librep.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 
 RDEPEND=">=sys-libs/gdbm-1.8.0
 	readline? ( sys-libs/readline )"

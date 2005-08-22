@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.28 2005/08/22 05:50:56 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.29 2005/08/22 18:35:10 gustavoz Exp $
+
+  22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> librep-0.17-r1.ebuild:
+  Stable on sparc wrt #103251
 
   22 Aug 2005; Harald van Dĳk <truedfx@gentoo.org> librep-0.17-r1.ebuild:
   Don't autodetect ffi, for now never enable it
