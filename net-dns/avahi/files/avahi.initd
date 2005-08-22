@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/files/avahi.initd,v 1.1 2005/08/22 03:04:37 swegener Exp $
+
+opts="${opts} reload"
+
+depend() {
+	use net dbus
+}
+
+start() {
+	ebegin "Starting Avahi daemon"
+	/usr/sbin/avahi-daemon -D
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Avahi daemon"
+	/usr/sbin/avahi-daemon -k
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading Avahi daemon"
+	/usr/sbin/avahi-daemon -r
+	eend $?
+}
