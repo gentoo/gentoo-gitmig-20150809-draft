@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8b855de19cb65e23192336a9f90f4274 ChangeLog 1638
+MD5 241a94dc6b2611304c3d9bd4e8e0c7a1 ChangeLog 1751
 MD5 c4c768958c9fb685125ffc0399983685 files/digest-par2cmdline-0.4 67
 MD5 c4c768958c9fb685125ffc0399983685 files/digest-par2cmdline-0.4-r1 67
 MD5 d52515669d3bc43f19c545fd6405dacc files/par2cmdline-0.4-gcc4.patch 2064
 MD5 63535457a22c3f35097d27d7af6e8d10 files/par2cmdline-0.4-wildcard-fix.patch 1928
 MD5 18340e702678d0aecf6bc57cbc7ba177 metadata.xml 274
-MD5 e1c5f1562b962bb2f654fb7210a10e9a par2cmdline-0.4-r1.ebuild 721
+MD5 ef6142b7a7b5c9a865fabb4acdca0f0c par2cmdline-0.4-r1.ebuild 856
 MD5 c94644ad155ca9b9876df4dad13105cb par2cmdline-0.4.ebuild 630
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCQOzI1lqEGTUzyQRAs73AKDFV5CC/iy6pQ764ma3GZ17bizVTACfVOG0
-Mq7/rVoCMvf1ejVXetghi8I=
-=mTtp
+iD8DBQFDCU5FI1lqEGTUzyQRAtYmAKC6sor19Ri8V4i56vigFa+YiKfaLgCgvy05
+YlG3/DbVhDi4hQH9SN7U0qY=
+=Hk6p
 -----END PGP SIGNATURE-----
