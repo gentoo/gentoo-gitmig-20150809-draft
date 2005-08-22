@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.2.ebuild,v 1.12 2005/06/10 15:04:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.6.2.ebuild,v 1.13 2005/08/22 04:17:16 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -49,7 +49,7 @@ src_install () {
 
 	for BLERHG  in accessx-status battstat cdplayer charpick drivemount geyes gkb-new gtik gweather mailcheck mini-commander mixer modemlights multiload screen-exec stickynotes wireless; do
 			docinto ${BLERHG}
-			dodoc ${BLERHG}/[ChangeLog,AUTHORS,NEWS,TODO] ${BLERHG}/README*
+			dodoc ${BLERHG}/{ChangeLog,AUTHORS,NEWS,TODO} ${BLERHG}/README*
 	done
 
 }

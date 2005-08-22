@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.10.0.ebuild,v 1.15 2005/07/12 03:36:57 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.10.0.ebuild,v 1.16 2005/08/22 04:17:16 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -61,8 +61,7 @@ src_install() {
 				  mini-commander mixer modemlights multiload \
 				  null_applet stickynotes trashapplet; do
 			docinto ${APPLET}
-			dodoc ${APPLET}/[ChangeLog,AUTHORS,NEWS,TODO] ${APPLET}/README*
+			dodoc ${APPLET}/{ChangeLog,AUTHORS,NEWS,TODO} ${APPLET}/README*
 	done
 
 }
-
