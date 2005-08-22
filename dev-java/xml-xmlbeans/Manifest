@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f7eb11c0417ec3403532aa25b5a6c6e metadata.xml 1122
 MD5 bd49c542b88e58caf88acfda5b798170 xml-xmlbeans-20041217.ebuild 1434
 MD5 fc75bde2465dec1a6d8be093a29a17c5 ChangeLog 1720
 MD5 d17fbe1ca053cfb927b65bec2afd966f files/digest-xml-xmlbeans-20041217 75
 MD5 27c134bfb7f6284ad713592a1bba9919 files/xml-xmlbeans-gentoo.patch 7484
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCiDxKRy60XGEcJIRArwcAKCAC90FrYTvlwf5lAmCOzL5kctWAACfabOa
+Cnn8N3cYLNhrO2lUy3Z7Eus=
+=PWJQ
+-----END PGP SIGNATURE-----
