@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.6.ebuild,v 1.3 2005/04/22 09:46:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.6.ebuild,v 1.4 2005/08/22 06:07:45 mkennedy Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -148,7 +148,7 @@ src_install() {
 
 	dodoc readme* RELEASE* ChangeLog* doc/*
 
-	find ${D}/usr/lib/gcl-2.6.5/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
+	find ${D}/usr/lib/gcl-${PV}/ -type f \( -perm 640 -o -perm 750 \) -exec chmod 0644 '{}' \;
 }
 
 pkg_postinst() {
