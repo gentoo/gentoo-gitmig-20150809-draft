@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gquilt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.7 2005/07/22 12:23:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.8 2005/08/22 00:01:04 metalgod Exp $
+
+  22 Aug 2005; Luis Medinas <metalgod@gentoo.org> gquilt-0.12.ebuild:
+  Added ~amd64 Keywords.
 
 *gquilt-0.12 (22 Jul 2005)
 
