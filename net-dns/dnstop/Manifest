@@ -1,17 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2a40c50dce1195c403b17a772d64565 ChangeLog 1085
-MD5 9dba8a5d76b58f3d05091b2694006917 dnstop-20030124.ebuild 703
-MD5 fe2c6fa449e6d23d300929ef938ffc60 dnstop-20030228.ebuild 732
-MD5 8fef80d301c8abd4f4861e05330c45d6 dnstop-20031113.ebuild 733
-MD5 f253c14e9fd625129c3947a9eee0b639 files/digest-dnstop-20030124 65
-MD5 62d027147b3b5980c98fa019ae575ad1 files/digest-dnstop-20030228 65
+MD5 5c03a105622dbd96e30380bf94e810de dnstop-20031113.ebuild 726
+MD5 12a7fd763a3dde5ea468c4869cb8e358 ChangeLog 1302
+MD5 c546ddef0d0bcf060c017bc93b2dc621 metadata.xml 257
 MD5 5559ca03ec5be95b7d52e70d7f2ff39d files/digest-dnstop-20031113 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+/3dmdTrptrqvGERAk3bAJ9cUMvo+R64VnbO+qiZhk3Sl0E/ugCeOeJ0
-wOKZNlLTX+IXd0z7iZp5Py4=
-=R6CZ
------END PGP SIGNATURE-----
