@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/creox-0.2.2_rc2.ebuild,v 1.9 2005/08/13 12:56:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/creox/creox-0.2.2_rc2.ebuild,v 1.10 2005/08/22 16:37:39 swegener Exp $
 
 inherit kde eutils
 
@@ -21,7 +21,7 @@ DEPEND="media-sound/jack-audio-connection-kit
 need-kde 3
 
 pkg_setup() {
-	if ! built_with_use kdelibs arts ; then
+	if ! built_with_use kde-base/kdelibs arts ; then
 		eerror "${CATEGORY}/${P} requires you to build kdelibs with arts useflag on."
 		die
 	fi

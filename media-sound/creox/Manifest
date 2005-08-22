@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e6df99423f5b4a2a16f3f9cea66be950 ChangeLog 1203
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 ff2b4eab903c99d4fbd89d07c08716cc creox-0.2.2_rc2.ebuild 817
+MD5 49e5bf909b12ec8bd6061c105fe47f8b creox-0.2.2_rc2.ebuild 826
 MD5 63cdddedab359f2b04ae837290c459e6 files/creox-0.2.2_rc2-ebusy.patch 3129
 MD5 b4a14d554e1672d522b4030363f02999 files/digest-creox-0.2.2_rc2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC/e4Yj5H05b2HAEkRAhkoAJ9tpa5OxuvfRMU8yHRqi16WJXtPOgCfWD6D
-xXsrLoHANXvxuQQ8nfh5ws4=
-=ErmV
------END PGP SIGNATURE-----
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
