@@ -1,41 +1,51 @@
-MD5 7563e67d30d7fbb6a90d2ab5c16d413a ChangeLog 4765
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0d35953e8d20a584860aec805fb3176f netkit-rsh-0.17-r5.ebuild 1956
-MD5 9333e69cd9b7e6600062eee0b01c592a netkit-rsh-0.17-r6.ebuild 1680
-MD5 ba1cb47f0c5a85e0e037270f3994918f netkit-rsh-0.17-r7.ebuild 1694
+MD5 1e651e3bb0dad06fc1d7a10db5b3e281 netkit-rsh-0.17-r7.ebuild 1724
+MD5 524b466dcb2793a0a08e77bb9956db67 netkit-rsh-0.17-r6.ebuild 1707
+MD5 7563e67d30d7fbb6a90d2ab5c16d413a ChangeLog 4765
 MD5 00dc5439d1237d8da5351107131d6e28 files/digest-netkit-rsh-0.17-r5 71
-MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r6 126
-MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r7 126
-MD5 49b955e20153259f348033f607b9cac8 files/netkit-rsh-0.10-stdarg.patch 952
-MD5 97e5406e59c08d21c2b06f9de5b1731f files/netkit-rsh-0.16-jbj.patch 1105
-MD5 177a1cdcf36f1c698b8e94ac8b6abfc7 files/netkit-rsh-0.16-jbj4.patch 314
-MD5 bfd431692675af108693a643a4a7213f files/netkit-rsh-0.16-nokrb.patch 5117
-MD5 2c6b59c60e873a8bb3037837b5c4acfa files/netkit-rsh-0.16-prompt.patch 1145
-MD5 ec86ca590fe01a6337ac02dd0576e4d2 files/netkit-rsh-0.16-rlogin=rsh.patch 265
-MD5 5374e29074410610466a46a367b1324e files/netkit-rsh-0.17-chdir.patch 1294
-MD5 aca6e5f8860ac79411a050072ba76b88 files/netkit-rsh-0.17-checkdir.patch 701
-MD5 f60ba4a805df1970aa974b4bfd2e0b94 files/netkit-rsh-0.17-errno.patch 1301
-MD5 62db9f7ed41a99ff61980d853100f3a8 files/netkit-rsh-0.17-ignchld.patch 706
-MD5 32b64fc78b0854585f06df0a540f0528 files/netkit-rsh-0.17-lfs.patch 774
-MD5 d5a4e566c929a48240e3d7dffbb0660c files/netkit-rsh-0.17-nohost.patch 1647
-MD5 edac8eeb92441f7fbbe7fc3ba0f28e7b files/netkit-rsh-0.17-nohostcheck.patch 4385
 MD5 63c48d7feff5c54b16aecf12626c293b files/netkit-rsh-0.17-pam-nologin.patch 531
-MD5 372cee3fa5d8ef96a745c2f82c6f5830 files/netkit-rsh-0.17-pam-sess.patch 498
-MD5 832c05ebc6e994b74d08bb648e54233f files/netkit-rsh-0.17-pre20000412-jbj5.patch 1003
-MD5 7581ec0ca6e11e19ea3957a842329253 files/netkit-rsh-0.17-rexec-netrc.patch 6852
-MD5 59f1a214971eac5d5ccb239d131c3d50 files/netkit-rsh-0.17-rexec-sig.patch 531
-MD5 153c322d0e2565819b3ed63a73dfcd32 files/netkit-rsh-0.17-rexec.patch 1615
-MD5 47b233c663e185795193bb878b3cad32 files/netkit-rsh-0.17-sectty.patch 1454
+MD5 85d47a9df3698dfa22f21aa92c345902 files/rlogin.xinetd 282
 MD5 f1f297025fb545f4cf2dc02e6c63867f files/netkit-rsh-0.17-strip.patch 2459
 MD5 6bb199dffcf2c9f158ca571310bb5569 files/netkit-rsh-0.17-userandhost.patch 2188
-MD5 645b699bd649a22d2d0ef57b0efd9e93 files/redhat.spec 805
-MD5 849aa086002eda305d4d6d59a94fadd8 files/rexec.pamd 457
-MD5 8115f8e19b1c44ef73362ab422bc001e files/rexec.pamd-include 303
 MD5 501cf426db7510decc4dee17b07c5ea2 files/rexec.xinetd 280
-MD5 ec3d6de902670c90897507f4a098f668 files/rlogin.pamd 580
-MD5 de71a64316c629deb1587a183526cd37 files/rlogin.pamd-include 386
-MD5 85d47a9df3698dfa22f21aa92c345902 files/rlogin.xinetd 282
-MD5 14c9e8ca2d9f8b9ae525e14fdd13df31 files/rlogind-auth.diff 260
-MD5 7b9d8d0930734500608538c166d0179a files/rsh.pamd 445
+MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r7 126
+MD5 59f1a214971eac5d5ccb239d131c3d50 files/netkit-rsh-0.17-rexec-sig.patch 531
+MD5 47b233c663e185795193bb878b3cad32 files/netkit-rsh-0.17-sectty.patch 1454
+MD5 d5a4e566c929a48240e3d7dffbb0660c files/netkit-rsh-0.17-nohost.patch 1647
 MD5 d369da65b87f3866ddb93e5aca52f712 files/rsh.pamd-include 412
-MD5 0586a4c1829df038be6179b9be20c458 files/rsh.xinetd 279
+MD5 14c9e8ca2d9f8b9ae525e14fdd13df31 files/rlogind-auth.diff 260
+MD5 f60ba4a805df1970aa974b4bfd2e0b94 files/netkit-rsh-0.17-errno.patch 1301
+MD5 ec86ca590fe01a6337ac02dd0576e4d2 files/netkit-rsh-0.16-rlogin=rsh.patch 265
+MD5 49b955e20153259f348033f607b9cac8 files/netkit-rsh-0.10-stdarg.patch 952
+MD5 32b64fc78b0854585f06df0a540f0528 files/netkit-rsh-0.17-lfs.patch 774
+MD5 edac8eeb92441f7fbbe7fc3ba0f28e7b files/netkit-rsh-0.17-nohostcheck.patch 4385
+MD5 832c05ebc6e994b74d08bb648e54233f files/netkit-rsh-0.17-pre20000412-jbj5.patch 1003
+MD5 8115f8e19b1c44ef73362ab422bc001e files/rexec.pamd-include 303
+MD5 62db9f7ed41a99ff61980d853100f3a8 files/netkit-rsh-0.17-ignchld.patch 706
+MD5 849aa086002eda305d4d6d59a94fadd8 files/rexec.pamd 457
+MD5 bfd431692675af108693a643a4a7213f files/netkit-rsh-0.16-nokrb.patch 5117
+MD5 ec3d6de902670c90897507f4a098f668 files/rlogin.pamd 580
+MD5 aca6e5f8860ac79411a050072ba76b88 files/netkit-rsh-0.17-checkdir.patch 701
+MD5 645b699bd649a22d2d0ef57b0efd9e93 files/redhat.spec 805
+MD5 5b6497e87f4d7de5851f57d8ba73d75b files/digest-netkit-rsh-0.17-r6 126
+MD5 7b9d8d0930734500608538c166d0179a files/rsh.pamd 445
+MD5 153c322d0e2565819b3ed63a73dfcd32 files/netkit-rsh-0.17-rexec.patch 1615
+MD5 7581ec0ca6e11e19ea3957a842329253 files/netkit-rsh-0.17-rexec-netrc.patch 6852
+MD5 2c6b59c60e873a8bb3037837b5c4acfa files/netkit-rsh-0.16-prompt.patch 1145
+MD5 de71a64316c629deb1587a183526cd37 files/rlogin.pamd-include 386
 MD5 9b184bf125dc1c12dea5364f6aeb2f69 files/va_start.diff 569
+MD5 5374e29074410610466a46a367b1324e files/netkit-rsh-0.17-chdir.patch 1294
+MD5 97e5406e59c08d21c2b06f9de5b1731f files/netkit-rsh-0.16-jbj.patch 1105
+MD5 0586a4c1829df038be6179b9be20c458 files/rsh.xinetd 279
+MD5 177a1cdcf36f1c698b8e94ac8b6abfc7 files/netkit-rsh-0.16-jbj4.patch 314
+MD5 372cee3fa5d8ef96a745c2f82c6f5830 files/netkit-rsh-0.17-pam-sess.patch 498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCk65gIKl8Uu19MoRAps1AJwLSNb1UJhQxZ4gciDlef+442bRMQCdGyaB
+ObCNvEB349iS/MN4PEYxGDs=
+=0W4u
+-----END PGP SIGNATURE-----
