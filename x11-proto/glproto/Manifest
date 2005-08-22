@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d8da14cf8a391e07972cdcf6ea46add8 glproto-1.4.ebuild 1478
+MD5 9a06cb924efb110d085e6c15de7fe9b7 glproto-1.4-r1.ebuild 1488
 MD5 afed0afada89027c3bd50a5cb9c5f428 ChangeLog 1405
-MD5 ab5f90c9505bb5a77bf080f273a03949 glproto-1.4.ebuild 1468
-MD5 8cae00dd99803eb208c628074ded25d4 glproto-1.4-r1.ebuild 1478
 MD5 6a9182efc5f985cb40b92436c638034b files/digest-glproto-1.4 63
 MD5 6a9182efc5f985cb40b92436c638034b files/digest-glproto-1.4-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmDtgIKl8Uu19MoRAoF2AJ0VVOghByEjHPw65u3owJbauOvRWACgg2zv
+3sas2F387kvlBkJ+5cCWOtI=
+=tVVR
+-----END PGP SIGNATURE-----
