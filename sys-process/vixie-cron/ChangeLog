@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.19 2005/08/13 23:08:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.20 2005/08/22 00:26:03 metalgod Exp $
+
+  22 Aug 2005; Luis Medinas <metalgod@gentoo.org> vixie-cron-4.1-r8.ebuild:
+  Marked Stable on AMD64.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   vixie-cron-4.1-r8.ebuild:
