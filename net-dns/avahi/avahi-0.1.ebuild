@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.3 2005/08/22 03:47:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.4 2005/08/22 05:23:03 swegener Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
 	)
-	python? ( virtual/python )
+	python? ( >=virtual/python-2.4 )
 	dbus? ( >=sys-apps/dbus-0.30 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
