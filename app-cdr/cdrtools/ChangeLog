@@ -1,6 +1,16 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.126 2005/08/21 02:36:34 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.127 2005/08/22 04:27:59 metalgod Exp $
+
+*cdrtools-2.01.01_alpha03-r2 (22 Aug 2005)
+
+  22 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  -files/cdrtools-2.01a32-scan.patch,
+  +files/cdrtools-2.01.01a01-scanbus.patch,
+  -cdrtools-2.01.01_alpha03.ebuild, -cdrtools-2.01.01_alpha03-r1.ebuild,
+  +cdrtools-2.01.01_alpha03-r2.ebuild:
+  Removed problematic revisions of cdrtools-2.01.01_alpha03. Removed CFLAGS
+  for x86 that fix bug #102878. Added a patch that fix -scanbus.
 
 *cdrtools-2.01.01_alpha03-r1 (21 Aug 2005)
 

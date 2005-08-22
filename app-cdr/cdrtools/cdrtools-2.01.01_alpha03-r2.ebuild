@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha03.ebuild,v 1.2 2005/08/18 14:26:46 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha03-r2.ebuild,v 1.1 2005/08/22 04:27:59 metalgod Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="on-the-fly-crypt unicode"
 
 DEPEND="virtual/libc
@@ -30,7 +30,10 @@ src_unpack() {
 	# CAN-2004-0806 - Bug 63187
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
 
-	epatch ${FILESDIR}/${PN}-2.01a32-scan.patch
+	epatch ${FILESDIR}/${PN}-2.01a27-writemode.patch
+	epatch ${FILESDIR}/${PN}-2.01.01a03-warnings.patch
+	epatch ${FILESDIR}/${PN}-2.01.01a01-scanbus.patch
+	epatch ${FILESDIR}/${PN}-2.01.01a03-rezero.patch
 
 	# Add support for On-The-Fly AES encryption
 	# http://burbon04.gmxhome.de/linux/CDREncryption.html
@@ -38,6 +41,7 @@ src_unpack() {
 		epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
 	fi
 
+	# ppc-macos support
 	cd ${S}/DEFAULTS
 	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
 	sed -i "s:/opt/schily:/usr:g" Defaults.${MYARCH}
@@ -57,7 +61,10 @@ src_compile() {
 	gnuconfig_update
 
 	use unicode && append-flags "-finput-charset=ISO-8859-1 -fexec-charset=UTF-8"
-
+	if use x86;
+		then
+		strip-flags
+	fi
 	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
 
@@ -91,7 +98,7 @@ src_install() {
 	doins include/scg/*.h
 
 	cd ${S}
-	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
+	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,clone,copy,DiskT@2,linux-shm,multi,parallel,raw,rscsi,sony,verify} START READMEs/README.linux
 	doman */*.1
 	doman */*.8
 
