@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3afc35efcead8b0a0140328badf97ad2 mkfontscale-0.99.0.ebuild 477
 MD5 d55dd40c46a7aee5a0f303aafd1cd8aa ChangeLog 675
-MD5 704fa811461f4b9d9f0bd23567132042 mkfontscale-0.99.0.ebuild 467
 MD5 b333547d334c7cc23e5948319f6a202a files/digest-mkfontscale-0.99.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDClzfgIKl8Uu19MoRAtekAJ9PosuNCtXcBE2yPH1N5CrspxqZ7gCfeTHD
+mAwwSdQ/SytJISgYyPBG9Zw=
+=wMUK
+-----END PGP SIGNATURE-----
