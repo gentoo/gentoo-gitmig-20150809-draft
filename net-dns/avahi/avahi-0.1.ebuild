@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.1 2005/08/22 03:04:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.2 2005/08/22 03:26:53 swegener Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ pkg_setup() {
 
 src_compile() {
 	econf \
+		--localstatedir=/var \
 		--disable-xmltoman \
 		$(use_enable doc doxygen-doc) \
 		$(use_enable python) \
