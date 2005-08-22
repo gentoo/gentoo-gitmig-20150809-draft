@@ -30,7 +30,7 @@ function of the web frontend.
 
 > chmod 644 /var/log/apache2/access_log 
 
-Now you can go to http://${VHOST_HOSTNAME}${VHOST_APPDIR} and use the
+Now you can go to http://${VHOST_HOSTNAME}/${VHOST_APPDIR} and use the
 application.
 
 ------------------------------------------------------------------------

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpcollab
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/ChangeLog,v 1.5 2005/08/22 21:06:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpcollab/ChangeLog,v 1.6 2005/08/22 23:02:47 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
+  Housekeeping
 
 *phpcollab-2.5_rc3 (22 Aug 2005)
 

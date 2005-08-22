@@ -12,7 +12,7 @@ cd ${MY_INSTALLDIR}/setup
 ./secure_phpws.sh setup
 
 Once you have a database ready proceed to
-http://${VHOST_HOSTNAME}${VHOST_APPDIR} to continue installation.
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR} to continue installation.
 
 Once you are done with installation you need to run:
 

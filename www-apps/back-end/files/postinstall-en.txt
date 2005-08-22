@@ -2,7 +2,7 @@ Now, create a database for back-end to use, fex:
 
  mysqladmin create be7
 
-Browse to http://${VHOST_HOSTNAME}${VHOST_APPDIR} and complete the installation
+Browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR} and complete the installation
 
 When you are done:
 

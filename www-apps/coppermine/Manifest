@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dc7727f1cd87af66533023d4c4abd89f coppermine-1.3.4.ebuild 1197
 MD5 582cf38848a4bce97da3cd5b17704acf ChangeLog 1080
 MD5 4f723686129a68a7dcb5ce4e21c775ad metadata.xml 223
 MD5 bfdfc969829e2247f3b8ecf5fec1d861 files/digest-coppermine-1.3.4 58
-MD5 71e70a58df9f688fdef915c80e7f473f files/postinstall-en.txt 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDCkvTEzitwsaoONoRAu+tAKC/ICCc/Cm/l6BRa0IqfL87v5wScACgysLy
-GWeZU5CalWkE//H0RJxNe3c=
-=VIyC
------END PGP SIGNATURE-----
+MD5 ea33c1ce025613ef9346a01b37e1cc20 files/postinstall-en.txt 212

@@ -27,7 +27,7 @@ You also need to set the MySQL passwords for the dms and dmsadmin user in
 the ${MY_INSTALLDIR}/config/environment.php file so that knowledgeTree can
 access the database.
 
-Now you can go to http://${VHOST_HOSTNAME}${VHOST_APPDIR} and log in
+Now you can go to http://${VHOST_HOSTNAME}/${VHOST_APPDIR} and log in
 as user "admin" with the password "admin".
 
 ------------------------------------------------------------------------

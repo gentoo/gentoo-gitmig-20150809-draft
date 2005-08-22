@@ -1,4 +1,4 @@
-Now browse to http://${VHOST_HOSTNAME}${VHOST_APPDIR}
+Now browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
 to complete the install.
 
 Note: User data are stored in ${VHOST_ROOT}/groupoffice-<VERSION>/userdata

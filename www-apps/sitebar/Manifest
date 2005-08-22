@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 95cc051853d97357b402d2d5c5eb19d5 sitebar-3.3.3.ebuild 886
 MD5 a270386c115b8776372883f1dd9ef9d5 ChangeLog 873
 MD5 e5ff6b38f58910b1a158919cc8ab3601 sitebar-3.2.6.ebuild 841
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 f7a9f046ec1729bad0bc492e23bb148f files/postinstall-en.txt 92
+MD5 bdd0317fff7e2cccecc51d7d97cd8dc7 files/postinstall-en.txt 93
 MD5 55c56a38fde4a9d4d2c9cd141259ccba files/digest-sitebar-3.2.6 66
 MD5 ef9082a8a38ad403f80d049f1d91644b files/digest-sitebar-3.3.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDCkycEzitwsaoONoRAjYBAJ9xJl2G/GRXR0NLaOv8kzPyYfx45wCfWCs9
-AaNT4kKEjeK1EX/KkU72Vt0=
-=PAOw
------END PGP SIGNATURE-----

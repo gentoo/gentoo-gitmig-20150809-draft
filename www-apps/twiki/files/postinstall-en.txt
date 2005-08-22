@@ -1,15 +1,15 @@
 
 You are almost done! 
 
-1. Apache configs have been installed for you. You will need to restart 
+1. Apache configs have been installed for you. You will need to restart
    Apache for them to take effect.
 
 2. You may want to edit TWiki's config to suit your needs:
    ${MY_INSTALLDIR}/lib/TWiki.cfg
 
 3. Run the testenv script from your browser:
-   http://${VHOST_HOSTNAME}/twiki/bin/testenv.
-   It will show you the user name of the CGI scripts, a table listing all CGI 
+   http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/bin/testenv
+   It will show you the user name of the CGI scripts, a table listing all CGI
    environment variables, and a test of your configuration file.
 
 4. Read the install guide
@@ -17,4 +17,4 @@ You are almost done!
    particularly if you wish to set up email preferences or I18N.
 
 5. Visit http://${VHOST_HOSTNAME}/twiki, or
-   http://${VHOST_HOSTNAME}/twiki/bin/view 
+   http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/bin/view

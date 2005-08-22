@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.8 2005/08/22 18:54:03 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.9 2005/08/22 22:58:33 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org>
+  files/postinstall-en-1.0.0.txt:
+  Housekeeping
 
   22 Aug 2005; Renat Lumpau <rl03@gentoo.org>
   files/postinstall-en-1.0.0.txt, mantisbt-1.0.0_rc1.ebuild:

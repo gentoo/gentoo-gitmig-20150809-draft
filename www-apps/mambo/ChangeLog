@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.15 2005/08/22 18:58:03 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.16 2005/08/22 22:57:43 rl03 Exp $
+
+  22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
+  Housekeeping
 
   22 Aug 2005; Renat Lumpau <rl03@gentoo.org> mambo-4.5.2.3.ebuild:
   Housekeeping

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 61952d8022cd90ab01af0526b8404142 openwebstats-1.1.ebuild 1019
 MD5 58b4259b170f9f5981e524b7440cec6a ChangeLog 535
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 5b6e5f719c8ac89d80563e3a2fdbf90b files/postinstall-en.txt 1244
+MD5 6d0f42c05b37787650a9bc6d893669a9 files/postinstall-en.txt 1245
 MD5 9cd494690c72b7e0eadedda10bc3e148 files/config.php 2106
 MD5 d550fb469b3eeb7f034cd04d8134465d files/digest-openwebstats-1.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC+Lv5EzitwsaoONoRAh/BAJ9c9xm3VDLzfuCzMet+kCJdNCZRYwCghuiq
-R1jllRMBzXvo9B2KdiRt9+0=
-=lA4u
------END PGP SIGNATURE-----

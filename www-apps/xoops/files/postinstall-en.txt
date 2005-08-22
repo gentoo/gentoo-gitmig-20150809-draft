@@ -4,7 +4,7 @@ You will need to
 
  chmod 666 ${MY_INSTALLDIR}/mainfile.php
 
-Then browse to http://${VHOST_HOSTNAME}${VHOST_APPDIR}
+Then browse to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
 
 When you are done with the installer:
 

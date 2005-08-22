@@ -1,15 +1,25 @@
 #!/bin/bash
+
+die() {
+	echo "#####"
+	echo $1
+	echo "#####"
+	exit 1
+}
+
 if [ $1 = "install" ]; then
-	[[ -a /etc/apache/vhosts.d/twiki.conf ]] && sed -e "s|HOST|${VHOST_HOSTNAME}|
+	if [ -a /etc/apache/vhosts.d/twiki.conf ]; then
+		sed -e "s|HOST|${VHOST_HOSTNAME}|
 		s|DOCROOT|${VHOST_HTDOCSDIR}|
-		s|ROOTDIR|${MY_INSTALLDIR}|g" -i /etc/apache/vhosts.d/twiki.conf
+		s|ROOTDIR|${MY_INSTALLDIR}|g" -i /etc/apache/vhosts.d/twiki.conf || die "sed failed"
+	fi
 
 	# fix lib locations
-	sed -e "s|../lib|${MY_INSTALLDIR}/lib|" -i ${MY_INSTALLDIR}/bin/setlib.cfg
+	sed -e "s|../lib|${MY_INSTALLDIR}/lib|" -i ${MY_INSTALLDIR}/bin/setlib.cfg || die
 
 	# fix TWiki.cfg
 	sed -e "s|http://your.domain.com|http://${VHOST_HOSTNAME}|
-		s|/home/httpd/twiki|${MY_INSTALLDIR}|g" -i ${MY_INSTALLDIR}/lib/TWiki.cfg
+		s|/home/httpd/twiki|${MY_INSTALLDIR}|g" -i ${MY_INSTALLDIR}/lib/TWiki.cfg || die
 else
 	echo $1
 fi

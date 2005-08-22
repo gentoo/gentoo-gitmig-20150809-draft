@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030.ebuild,v 1.2 2005/06/29 20:02:40 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030.ebuild,v 1.3 2005/08/22 22:50:36 rl03 Exp $
 
-inherit webapp eutils
+inherit webapp eutils depend.apache
 
 DESCRIPTION="A Web Based Collaboration Platform"
 HOMEPAGE="http://twiki.org/"
@@ -31,10 +31,6 @@ src_unpack() {
 	find . -name '*,v' -exec sed -i 's|nobody:|apache:|g' '{}' ';'
 }
 
-src_compile() {
-	:;
-}
-
 src_install() {
 	webapp_src_preinst
 
@@ -42,8 +38,7 @@ src_install() {
 
 	dodoc readme.txt license.txt
 
-	dodir /etc/apache/vhosts.d
-	insinto /etc/apache/vhosts.d
+	insinto ${APACHE1_VHOSTDIR}
 	doins ${FILESDIR}/twiki.conf
 
 	chmod 0755 ${D}/${MY_HTDOCSDIR}/bin/*
