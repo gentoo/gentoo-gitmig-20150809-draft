@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/files/avahi.initd,v 1.1 2005/08/22 03:04:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/files/avahi.initd,v 1.2 2005/08/22 03:47:19 swegener Exp $
 
 opts="${opts} reload"
 
@@ -10,19 +10,19 @@ depend() {
 }
 
 start() {
-	ebegin "Starting Avahi daemon"
+	ebegin "Starting avahi-daemon"
 	/usr/sbin/avahi-daemon -D
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping Avahi daemon"
+	ebegin "Stopping avahi-daemon"
 	/usr/sbin/avahi-daemon -k
 	eend $?
 }
 
 reload() {
-	ebegin "Reloading Avahi daemon"
+	ebegin "Reloading avahi-daemon"
 	/usr/sbin/avahi-daemon -r
 	eend $?
 }

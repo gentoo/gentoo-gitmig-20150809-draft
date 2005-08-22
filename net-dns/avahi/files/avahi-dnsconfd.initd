@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/files/avahi-dnsconfd.initd,v 1.1 2005/08/22 03:47:19 swegener Exp $
+
+opts="${opts} reload"
+
+depend() {
+	need avahi
+	use net
+}
+
+start() {
+	ebegin "Starting avahi-dnsconfd"
+	/usr/sbin/avahi-dnsconfd -D
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping avahi-dnsconfd"
+	/usr/sbin/avahi-dnsconfd -k
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading avahi-dnsconfd"
+	/usr/sbin/avahi-dnsconfd -r
+	eend $?
+}

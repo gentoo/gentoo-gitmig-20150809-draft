@@ -1,10 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.1 2005/08/22 03:04:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.2 2005/08/22 03:47:19 swegener Exp $
 
 *avahi-0.1 (22 Aug 2005)
 
   22 Aug 2005; Sven Wegener <swegener@gentoo.org> +files/avahi.initd,
-  +metadata.xml, +avahi-0.1.ebuild:
+  +files/avahi-dnsconfd.initd, +metadata.xml, +avahi-0.1.ebuild:
   Initial commit, ebuild written by me.
 

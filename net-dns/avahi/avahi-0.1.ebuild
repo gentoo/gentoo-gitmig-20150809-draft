@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.2 2005/08/22 03:26:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.3 2005/08/22 03:47:19 swegener Exp $
 
 inherit eutils
 
@@ -46,5 +46,6 @@ src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 
 	newinitd "${FILESDIR}"/avahi.initd avahi
+	newinitd "${FILESDIR}"/avahi-dnsconfd.initd avahi-dnsconfd
 	dodoc docs/{AUTHORS,README,TODO}
 }
