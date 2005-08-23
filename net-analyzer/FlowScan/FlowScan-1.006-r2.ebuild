@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.2 2005/08/12 10:26:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/FlowScan/FlowScan-1.006-r2.ebuild,v 1.3 2005/08/23 21:54:28 dragonheart Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="|| ( app-shells/pdksh app-shells/ksh )
 
 pkg_setup() {
 	enewgroup flows
-	enewuser flows -1 /bin/false /var/lib/flows flows
+	enewuser flows -1 -1 /var/lib/flows flows
 }
 
 src_compile() {
