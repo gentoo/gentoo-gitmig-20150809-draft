@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libuninameslist
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.7 2005/08/20 17:42:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.8 2005/08/23 20:27:32 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libuninameslist-20030713.ebuild:
+  Stable on sparc
 
   20 Aug 2005; Fabian Groffen <grobian@gentoo.org>
   libuninameslist-20030713.ebuild:
