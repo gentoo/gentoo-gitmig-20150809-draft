@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.23 2005/08/07 12:07:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.24 2005/08/23 02:49:58 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> iozone-3.242.ebuild:
+  stable on ia64
 
   07 Aug 2005; Simon Stelling <blubb@gentoo.org> iozone-3.242.ebuild:
   stable on amd64
