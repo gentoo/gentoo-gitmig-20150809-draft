@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.13 2005/02/22 22:35:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.14 2005/08/23 13:21:37 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,7 +22,7 @@ RDEPEND="selinux? ( sec-policy/selinux-portmap )"
 
 pkg_setup() {
 	enewgroup rpc 111
-	enewuser rpc 111 /bin/false /dev/null rpc
+	enewuser rpc 111 -1 /dev/null rpc
 }
 
 src_unpack() {

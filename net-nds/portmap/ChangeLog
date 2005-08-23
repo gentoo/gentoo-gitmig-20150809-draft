@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.31 2005/02/22 22:35:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.32 2005/08/23 13:21:37 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> portmap-5b-r9.ebuild:
+  Use -1 instead of /bin/false on enewuser call.
 
   22 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   +files/portmap-5b-no-SYS.patch, portmap-5b-r9.ebuild:

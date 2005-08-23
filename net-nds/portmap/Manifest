@@ -1,14 +1,24 @@
-MD5 add2963ac6e016110cd159075fe57b57 ChangeLog 4407
-MD5 f4fdf8480456ccccd3cc1b23e9809c9d portmap-5b-r9.ebuild 1998
-MD5 b806d1f955acd4cdb322e74159cc17f5 files/portmap.confd 275
-MD5 887940376974bf01ecf94fd032f224eb files/portmap-5b-include-errno_h.patch 403
-MD5 417c9dc094234061ad301e5b5413b120 files/portmap.rc6 1132
-MD5 0ec47652f96bfda762a2ffc72a78f002 files/portmap_5beta.dif 8871
-MD5 c4cab1b374730a709460d95211200852 files/portmap-4.0-cleanup.patch 2193
-MD5 7667fe1c5070f9f57c1beb25015bb7be files/portmap-4.0-malloc.patch 9067
-MD5 49ef87c468b07ca837a1282faca5647b files/portmap-4.0-rpc_user.patch 1779
-MD5 d0820fd449ae88e56f2a3e78b96bb9d1 files/portmap-4.0-sigpipe.patch 353
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f328e9265f2f5610d9d8d0c3b1b7a513 ChangeLog 4535
+MD5 5ce90742848c7ff2e36dfc7ab72daa8a portmap-5b-r9.ebuild 1993
 MD5 44dae63001c0ad007604a7ba55403838 files/digest-portmap-5b-r9 64
-MD5 8b7fc4f54e294754bbd464ec3b6f919b files/portmap-5b-optional-tcpd.patch 1066
-MD5 5bef50780d3ffa439bc12d3e238f2e14 files/portmap-5b-loopback-only.patch 2007
+MD5 887940376974bf01ecf94fd032f224eb files/portmap-5b-include-errno_h.patch 403
 MD5 14b082c837898bb8901a41a43306d0f2 files/portmap-5b-no-SYS.patch 541
+MD5 c4cab1b374730a709460d95211200852 files/portmap-4.0-cleanup.patch 2193
+MD5 0ec47652f96bfda762a2ffc72a78f002 files/portmap_5beta.dif 8871
+MD5 b806d1f955acd4cdb322e74159cc17f5 files/portmap.confd 275
+MD5 417c9dc094234061ad301e5b5413b120 files/portmap.rc6 1132
+MD5 d0820fd449ae88e56f2a3e78b96bb9d1 files/portmap-4.0-sigpipe.patch 353
+MD5 49ef87c468b07ca837a1282faca5647b files/portmap-4.0-rpc_user.patch 1779
+MD5 5bef50780d3ffa439bc12d3e238f2e14 files/portmap-5b-loopback-only.patch 2007
+MD5 8b7fc4f54e294754bbd464ec3b6f919b files/portmap-5b-optional-tcpd.patch 1066
+MD5 7667fe1c5070f9f57c1beb25015bb7be files/portmap-4.0-malloc.patch 9067
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyL5j5H05b2HAEkRAgzzAJ9Kwubdmhd/SkGWLOOerNJbk+YW2ACfSJFD
++YvdLbZSULtY0ste9+v3oOg=
+=X/Yf
+-----END PGP SIGNATURE-----
