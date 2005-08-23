@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc80d0661b7e84ccf9533273bf56bfda cgilib-0.5-r1.ebuild 986
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 bd38e7605069fa2ea080a89a9a388b32 ChangeLog 1880
@@ -5,3 +8,10 @@ MD5 224b37ab9a09df962afe0f0035c86114 cgilib-0.5.ebuild 755
 MD5 81af59a7b4da26191ad1d4ca2f68137c files/cgilib-0.5-cgitest.diff 792
 MD5 7b0e4e09c6696f543a80f54e6d9de1f8 files/digest-cgilib-0.5-r1 61
 MD5 7b0e4e09c6696f543a80f54e6d9de1f8 files/digest-cgilib-0.5 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDC0fkBXaUFmZvwyMRAmEjAKDLl7Dw/uBUSNi1tA37WcDle7x1+wCg0nnI
+pRDl7k0RDDe1uX7a4iJ/Kxo=
+=7+mP
+-----END PGP SIGNATURE-----
