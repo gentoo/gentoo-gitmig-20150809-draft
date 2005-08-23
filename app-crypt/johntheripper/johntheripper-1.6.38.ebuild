@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.38.ebuild,v 1.2 2005/08/23 21:23:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.38.ebuild,v 1.3 2005/08/23 21:37:47 dragonheart Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -58,14 +58,10 @@ src_compile() {
 }
 
 
-#src_test() {
-#	cd run
-#	mkdir etc
-#	mkdir lib
-#	ln john.conf etc
-#	cp ${ROOT}/lib/libc.so.? /lib/ld-linux.so.? lib
-#	chroot . john --test
-#}
+src_test() {
+	cd run
+	./john --test || die 'self test failed'
+}
 
 src_install() {
 	# config files
