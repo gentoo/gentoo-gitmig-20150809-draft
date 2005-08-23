@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.5.ebuild,v 1.6 2005/08/23 19:07:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.5.ebuild,v 1.7 2005/08/23 19:16:38 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
@@ -45,7 +45,7 @@ src_install() {
 	egamesinstall || die
 
 	dodir "${GAMES_DATADIR}/${MY_PN}"
-	cp -dpR ${WORKDIR}/data/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
+	cp -pPR ${WORKDIR}/data/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
 
 	dodir /usr/share/games
 	dosym /usr/games/lib/FlightGear /usr/share/games/FlightGear
