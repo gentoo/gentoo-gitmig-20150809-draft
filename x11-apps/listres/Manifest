@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 740a77e74aab05c9a6a1d09f64d44e49 listres-0.99.0.ebuild 662
 MD5 51ada042a397fbaa5ee0f4611a0491ec ChangeLog 468
 MD5 60c8277df82dd59b74e292aba08e911b files/digest-listres-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCoOigIKl8Uu19MoRAm1wAJ9qnkS5f8ug2HbJhqCgDyYDJGjifACfVtd1
+7zl7AGHBP9wtl9GYAPffSbk=
+=5UY0
+-----END PGP SIGNATURE-----

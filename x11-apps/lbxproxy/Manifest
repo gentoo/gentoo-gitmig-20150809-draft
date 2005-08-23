@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d9a64c55dea69a0bff1eb7c9a9041f5c lbxproxy-0.99.0.ebuild 536
 MD5 a4482fa43eae3e2c88f1ee7871dd42bd ChangeLog 473
 MD5 cc5c333bac297f84d1b2a16a9fb5be80 files/digest-lbxproxy-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCoL1gIKl8Uu19MoRApGLAJ9LmFHWJreEuSppQfceW8RbXNIjkQCeM+HI
+s8MOZ0PCDdo5HtL1juxEUeU=
+=vygQ
+-----END PGP SIGNATURE-----
