@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 75999e621cf452b2c832f11cb0e3163c PEAR-System_Command-1.0-r1.ebuild 400
 MD5 5089182d4b2c662d12c9deedad8cf76c ChangeLog 2595
-MD5 4d7988f5550a099965ddca23251f112d PEAR-System_Command-1.0.1.ebuild 410
+MD5 516651a3b5edc0eb33cedfb670ca3980 PEAR-System_Command-1.0.1.ebuild 409
+MD5 75999e621cf452b2c832f11cb0e3163c PEAR-System_Command-1.0-r1.ebuild 400
 MD5 e55540b6fdb1e230cc3a5913d7a22f05 files/digest-PEAR-System_Command-1.0.1 67
 MD5 e7969ca0fd974c0868561ab95a66d1d8 files/digest-PEAR-System_Command-1.0-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCvXU3KRy60XGEcJIRAvNiAKCIvS+vct6lzn+EXGkS47jwFmfJOwCbBO1t
-1pka1epXlXrfcpEUvhdH3hg=
-=Mblm
------END PGP SIGNATURE-----
