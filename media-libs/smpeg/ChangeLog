@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/smpeg
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.20 2005/03/29 06:55:26 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.21 2005/08/23 03:10:35 vapier Exp $
+
+*smpeg-0.4.4-r6 (23 Aug 2005)
+
+  23 Aug 2005; Mike Frysinger <vapier@gentoo.org> -smpeg-0.4.4-r5.ebuild,
+  +smpeg-0.4.4-r6.ebuild:
+  Force a re-emerge of smpeg since current versions of libsdl change how it
+  links against libstdc++.
 
 *smpeg-0.4.4-r5 (29 Mar 2005)
 
