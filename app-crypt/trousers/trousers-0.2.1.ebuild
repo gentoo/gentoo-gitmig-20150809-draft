@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.2.1.ebuild,v 1.1 2005/07/30 09:39:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.2.1.ebuild,v 1.2 2005/08/23 21:46:35 dragonheart Exp $
 
 inherit eutils linux-info
 
@@ -58,7 +58,7 @@ pkg_setup() {
 
 	# New user/group for the daemon
 	enewgroup tss
-	enewuser tss -1 /bin/false /var/lib/tpm tss
+	enewuser tss -1 -1 /var/lib/tpm tss
 }
 
 src_unpack() {

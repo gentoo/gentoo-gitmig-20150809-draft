@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d76efcbfa2c2baf692070074ece18eb5 trousers-0.2.0.ebuild 2512
+MD5 2aca9dfedba0376e48f7bd528d51c8a3 trousers-0.2.0.ebuild 2504
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
-MD5 083eefec5fb8b2dbd31e933e9e5a6013 ChangeLog 1411
-MD5 45b698fa6e680ce442487732f4e270f0 trousers-0.2.1.ebuild 2512
-MD5 1f1f422c71a4989f1cd4e95209a6070a trousers-0.1.11-r1.ebuild 2615
+MD5 37f07e51ecf22076ad90a57746bfbc8e ChangeLog 1597
+MD5 96f009653b9a482b8a1f7378693908a0 trousers-0.2.1.ebuild 2504
+MD5 a222f65b878fa62ea7f585be41721984 trousers-0.1.11-r1.ebuild 2607
 MD5 22f51c734f799c5519585dfd17183633 files/digest-trousers-0.2.0 67
 MD5 d1b7e938c45e716e4e813560e0394388 files/trousers-0.2.0-nouseradd.patch 1220
 MD5 05e27e046284f46a7da59bf3dbbdddf0 files/tcsd.confd 372
@@ -14,9 +14,9 @@ MD5 1973b3178958981f8002711e433d4a39 files/digest-trousers-0.2.1 67
 MD5 a0c59b3b9088b1773498e993ccdad67c files/digest-trousers-0.1.11-r1 68
 MD5 4b7644dcacf663d68866ec1580d4de57 files/trousers-0.2.1-nouseradd.patch 988
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC60rbmdTrptrqvGERAhzfAJ4kfD8L3G0HG1qZsuqvAamPPmbitQCfXOLQ
-Eu4wSAz2+1O7WIkoriDmMxY=
-=nNbf
+iD8DBQFDC5lJmdTrptrqvGERAkYZAJ0dbzqNzC0a6QWnhIsekC9IJ6g7LACeMAmK
+YNGwof4jmGP5Z2kcVm2VcyI=
+=Aysb
 -----END PGP SIGNATURE-----

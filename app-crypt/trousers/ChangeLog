@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.6 2005/07/30 09:39:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.7 2005/08/23 21:46:35 dragonheart Exp $
+
+  23 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  trousers-0.1.11-r1.ebuild, trousers-0.2.0.ebuild, trousers-0.2.1.ebuild:
+  QA fix removing /bin/false from enewuser - bug #103421
 
 *trousers-0.2.1 (30 Jul 2005)
 
