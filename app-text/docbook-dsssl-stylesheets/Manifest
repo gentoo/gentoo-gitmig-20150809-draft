@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d868b353b991a150bae7f1e6b95869de docbook-dsssl-stylesheets-1.77-r2.ebuild 1595
-MD5 ad865c89eb4f2c27ec91b17a791c94d3 docbook-dsssl-stylesheets-1.79.ebuild 1657
-MD5 fd87e3c3626fdb98e3f45248c8fdbab3 ChangeLog 4081
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 fd87e3c3626fdb98e3f45248c8fdbab3 ChangeLog 4081
+MD5 d868b353b991a150bae7f1e6b95869de docbook-dsssl-stylesheets-1.77-r2.ebuild 1595
+MD5 70a3fa70fd2b9e993faf6d9239a34fa8 docbook-dsssl-stylesheets-1.79.ebuild 1656
+MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r2 70
 MD5 aa413b2500a9fa5f6ac08e657d0958d5 files/docbook-dsssl-stylesheets-1.77.Makefile 676
 MD5 b699a5dd4e690ad2197647822d5aac92 files/digest-docbook-dsssl-stylesheets-1.79 71
-MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r2 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8OnQViELBEf1JB0RAv6SAJ9HIfX3v4Zb3ELeBsNsxSCjWWE7AQCfVe/g
-uQruFVgbQcnC0EesuICXnHw=
-=UudB
------END PGP SIGNATURE-----
