@@ -1,6 +1,11 @@
 # ChangeLog for games-util/ucon64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.6 2005/06/05 11:36:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.7 2005/08/23 17:15:46 mr_bones_ Exp $
+
+*ucon64-2.0.0 (23 Aug 2005)
+
+  23 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> +ucon64-2.0.0.ebuild:
+  version bump
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> ucon64-1.9.8.4.ebuild:
   Stable on ppc.
