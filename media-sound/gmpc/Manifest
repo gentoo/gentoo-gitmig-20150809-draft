@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fbad4b1626dce9cca4aad2c05cf64e11 gmpc-0.11.2.ebuild 608
-MD5 f450262fe087fb0cdd78082b50747fd8 gmpc-0.12.0.ebuild 631
-MD5 f1a52844c8b152f3adf7643c5baf21c6 gmpc-0.12.0-r1.ebuild 819
+MD5 c61f841435cc11d992b3ed06921f27f9 ChangeLog 1392
 MD5 8a1baa3abf6a035b9c379964deaaa01d gmpc-0.11.1.ebuild 598
-MD5 588b22aceaa605d5a42720ed4ae45ae4 ChangeLog 1249
 MD5 3a05fb17d7dc8a018b36f13aea905095 metadata.xml 246
-MD5 5214ef3146f35bdf9c44402a2c3a05fe files/digest-gmpc-0.12.0-r1 63
+MD5 fbad4b1626dce9cca4aad2c05cf64e11 gmpc-0.11.2.ebuild 608
+MD5 e906689619abd8089c93db54f84f19f3 gmpc-0.12.0-r1.ebuild 824
+MD5 f22f2427638c53ab7e99f54b0d9ac235 gmpc-0.12.0.ebuild 636
 MD5 5567d1af31dd0e2b12ef5a6e1b890b07 files/digest-gmpc-0.11.1 63
 MD5 6e064fd7bebd731f2ac30ae1e51ecd97 files/digest-gmpc-0.11.2 63
 MD5 5214ef3146f35bdf9c44402a2c3a05fe files/digest-gmpc-0.12.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC3ZGQlM6RnzZP+IRAhBdAJ9l4i4+PmW/nCySBgSMsoaYeV11lACglXF1
-Lgx4UcdCSrjTlQE4q0sKUNo=
-=gdTf
------END PGP SIGNATURE-----
+MD5 5214ef3146f35bdf9c44402a2c3a05fe files/digest-gmpc-0.12.0-r1 63
