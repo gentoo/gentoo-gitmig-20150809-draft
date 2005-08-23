@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r9.ebuild,v 1.8 2005/08/21 19:42:50 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r9.ebuild,v 1.9 2005/08/23 17:09:10 vericgar Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -206,7 +206,7 @@ src_install () {
 
 	# setup apache user and group
 	enewgroup apache 81
-	enewuser apache 81 /bin/false /var/www apache
+	enewuser apache 81 -1 /var/www apache
 
 	local i
 	make DESTDIR=${D} install || die
