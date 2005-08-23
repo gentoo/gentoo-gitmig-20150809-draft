@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r2.ebuild,v 1.6 2005/07/25 22:22:48 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.5-r2.ebuild,v 1.7 2005/08/23 13:57:43 stkn Exp $
 
 inherit eutils perl-module
 
@@ -321,7 +321,7 @@ src_install() {
 pkg_preinst() {
 	einfo "Adding asterisk user and group"
 	enewgroup asterisk
-	enewuser asterisk -1 /bin/false /var/lib/asterisk asterisk
+	enewuser asterisk -1 -1 /var/lib/asterisk asterisk
 }
 
 pkg_postinst() {
