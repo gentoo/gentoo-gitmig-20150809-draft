@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.8 2005/06/12 14:29:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.9 2005/08/23 22:33:41 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> exo-0.2.0-r1.ebuild:
+  stable on ia64
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> exo-0.2.0-r1.ebuild,
   exo-0.3.0_pre1.ebuild, exo-0.3.0.ebuild:

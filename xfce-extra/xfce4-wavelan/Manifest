@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb2b712558bc23830164aa2f08c75bbd xfce4-wavelan-0.4.1-r1.ebuild 380
 MD5 e27d25896df25a52694e374ea498a49e xfce4-wavelan-0.4.1.ebuild 722
-MD5 3a3aa39f85c9593d074a7128f0df4f9e ChangeLog 879
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 ba5ee60f6d06ce87f11c3c36e51a558a files/digest-xfce4-wavelan-0.4.1-r1 78
+MD5 3a3aa39f85c9593d074a7128f0df4f9e ChangeLog 879
+MD5 cd03ec0b707361a75fd0e99ed866859d xfce4-wavelan-0.4.1-r1.ebuild 379
 MD5 f80c05eaebc0b09cb6f2a345c5ab89f8 files/digest-xfce4-wavelan-0.4.1 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrEZLI1lqEGTUzyQRAl7GAKCdrJXr4CVU1LahB59htJFl24wjtACggUMm
-xuojR/FXyKW6GEo71N32Fkk=
-=LXo+
------END PGP SIGNATURE-----
+MD5 ba5ee60f6d06ce87f11c3c36e51a558a files/digest-xfce4-wavelan-0.4.1-r1 78
