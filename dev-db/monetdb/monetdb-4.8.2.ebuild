@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.8.2.ebuild,v 1.1 2005/08/07 13:23:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.8.2.ebuild,v 1.2 2005/08/23 14:33:36 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,8 +21,8 @@ DEPEND="virtual/libc
 		sys-devel/flex
 		ppc-macos? ( sys-devel/bison )
 		!ppc-macos? ( >=sys-devel/bison-1.33 )
-		>=sys-devel/gcc-3.3*
-		java? ( >=virtual/jdk-1.4* )
+		>=sys-devel/gcc-3.3
+		java? ( >=virtual/jdk-1.4 )
 		readline? ( >=sys-libs/readline-4.1 )
 		dev-libs/libxml2"
 
