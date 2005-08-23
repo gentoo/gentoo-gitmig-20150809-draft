@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/tkseti
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/tkseti/ChangeLog,v 1.2 2004/12/24 20:00:34 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/tkseti/ChangeLog,v 1.3 2005/08/23 16:53:12 fmccor Exp $
+
+  23 Aug 2005; Ferris McCormick <fmccor@gentoo.org> tkseti-3.06.ebuild:
+  Conver sparc --> ~sparc, as there is no stable version of setiathome for
+  sparc (old stable version is no longer supported.).
 
 *tkseti-3.06 (23 Dec 2004)
 
