@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5f4740fb644d92b74368e0dd3d18d3f beforelight-0.99.0.ebuild 493
 MD5 894f2c8dcaace4725ed021d24c4c91d0 ChangeLog 659
 MD5 9004a378f0ac9252d6f8e89146b7e5d2 files/digest-beforelight-0.99.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCnpkgIKl8Uu19MoRAsPKAJ9fq3Ywgr3MrpP0EAJUE9oK0rbPuACdFZJE
+Srdbh5RQ2fRkoUs6D43nqgg=
+=L0YJ
+-----END PGP SIGNATURE-----

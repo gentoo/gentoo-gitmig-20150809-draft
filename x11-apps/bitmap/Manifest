@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d2ebaa4deffc23d039625520b7e0fc56 bitmap-0.99.0.ebuild 662
 MD5 5aadf7728415f547c49b17085ceccb02 ChangeLog 463
 MD5 d6d3cf0f93f8859831e591dce2561e04 files/digest-bitmap-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCnpygIKl8Uu19MoRAv7cAJ4hpx/L8rYxysMxmqFaOfSCRT6S1wCfftyh
+EWj1THg59LgmRxIRZ55mAZU=
+=+HBm
+-----END PGP SIGNATURE-----
