@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0cf7b8fa6efdaf098a655551dc67e98c ChangeLog 1010
+MD5 7fe075fd25aba4c5b93c5ebcf944706d ChangeLog 1108
 MD5 3b29644ed837c4144751a234659caa55 libredblack-1.2.ebuild 760
-MD5 2a5ae0fa99b36a84a648a8c0c0cf2cb9 libredblack-1.3.ebuild 766
+MD5 f6833d1308c959ae84c03036f362acf8 libredblack-1.3.ebuild 767
 MD5 7fb6bf6d06157c049992cce724f8f4e0 files/digest-libredblack-1.2 67
 MD5 072a7c6aa6572efbd4436e77d5791c7b files/digest-libredblack-1.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1CcI1lqEGTUzyQRAiMAAKCqB1d0LzyfezG6tvnHGbT/2BIXqQCeL2Oc
-L6LPyh+ByPxad+Fd0xu8n+s=
-=Un0q
------END PGP SIGNATURE-----
