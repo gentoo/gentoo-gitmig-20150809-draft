@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.92 2005/07/13 05:14:43 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.93 2005/08/23 02:02:41 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> at-spi-1.6.4.ebuild:
+  stable on ia64
 
   13 Jul 2005; Stephen P. Becker <geoman@gentoo.org> at-spi-1.6.4.ebuild:
   stable on mips
