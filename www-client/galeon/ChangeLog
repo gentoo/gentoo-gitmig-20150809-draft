@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.17 2005/08/13 23:38:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.18 2005/08/23 21:07:36 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> galeon-1.3.21.ebuild:
+  stable on ia64
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> galeon-1.3.21.ebuild:
   Stable on ppc.
