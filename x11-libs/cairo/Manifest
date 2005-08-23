@@ -2,10 +2,10 @@ MD5 3a4cce771cdc4714c6931467622c9ddc cairo-0.1.23-r1.ebuild 757
 MD5 43ded6c4bff0885355373b438d1e9a56 cairo-0.9.2-r1.ebuild 1536
 MD5 4db2c222787dd6470523acdfe996891e cairo-0.2.0-r1.ebuild 900
 MD5 ea284a6e24864155e0176859cbddf1b3 metadata.xml 335
-MD5 cdad553ff1d9349a27acce32052a3dfb ChangeLog 5890
+MD5 eba3019d177712663b5cab44b12ea2a1 ChangeLog 5983
 MD5 627da87d1d67830749f3dafde81804ca cairo-0.3.0.ebuild 843
 MD5 1d2ad415e2e6db1a58640bb93b15a34f cairo-0.4.0.ebuild 994
-MD5 4b6915b133e9035daee896c05b3a62f4 cairo-0.3.0-r2.ebuild 996
+MD5 c307699f3bb9e8e6f81b2aba114c1ea2 cairo-0.3.0-r2.ebuild 998
 MD5 cd449933066600e3ac62fa22651a8120 files/xrender.pc 151
 MD5 2a0e4de10c4b8aacdb9b5991825b30d5 files/digest-cairo-0.3.0-r2 63
 MD5 ee0e0ddbf61c280106ae3683503054a8 files/digest-cairo-0.2.0-r1 63
