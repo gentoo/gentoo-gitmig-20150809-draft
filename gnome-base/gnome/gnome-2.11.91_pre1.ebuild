@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre1.ebuild,v 1.3 2005/08/22 07:15:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre1.ebuild,v 1.4 2005/08/23 03:07:05 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -89,10 +89,9 @@ RDEPEND="${RDEPEND}
 	>=x11-themes/gnome-backgrounds-2.10.2
 
 	>=x11-libs/vte-0.11.14
-	>=x11-terms/gnome-terminal-2.11.2"
+	>=x11-terms/gnome-terminal-2.11.2
 
-#	>=x11-libs/gtksourceview-1.3.91
-RDEPEND="${RDEPEND}
+	>=x11-libs/gtksourceview-1.3.91
 	>=gnome-extra/gucharmap-1.4.3
 	>=gnome-base/libgnomeprint-2.11
 	>=gnome-base/libgnomeprintui-2.11"
@@ -101,13 +100,11 @@ RDEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	>=gnome-extra/gnome-games-2.11.4
-	>=gnome-extra/gnome-system-monitor-2.11.91
-"
-
-#	>=gnome-base/libgtop-2.11.91
-
-RDEPEND="${RDEPEND}
 	>=gnome-base/librsvg-2.9.5
+
+	>=gnome-extra/gnome-system-monitor-2.11.91
+	>=gnome-base/libgtop-2.11.91
+
 	>=x11-libs/libwnck-2.11.91
 	>=x11-wm/metacity-2.11.2
 
@@ -132,9 +129,9 @@ RDEPEND="${RDEPEND}
 #	>=gnome-extra/evolution-exchange-2.3.7
 #	>=gnome-extra/evolution-webcal-2.3.91
 
-#	>=net-misc/vino-2.11.90
-
 RDEPEND="${RDEPEND}
+	>=net-misc/vino-2.11.90
+
 	>=app-admin/gnome-system-tools-1.3.2
 	>=app-admin/system-tools-backends-1.3.2
 
