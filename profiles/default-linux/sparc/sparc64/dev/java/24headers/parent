@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/gcc33/parent,v 1.2 2005/05/10 02:14:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/java/24headers/parent,v 1.1 2005/08/23 23:01:22 eradicator Exp $
 
 # This file describes the parent profile to this.  In most cases this will
 # just be the name of the parent directory

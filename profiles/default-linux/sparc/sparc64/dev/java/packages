@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/gcc33/packages,v 1.2 2005/03/07 01:42:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/java/packages,v 1.1 2005/08/23 23:01:22 eradicator Exp $
 
 # Lock to gcc-3.3.x
 -*>=sys-devel/gcc-3.4.3-r1
