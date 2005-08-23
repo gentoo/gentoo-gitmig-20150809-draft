@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.71 2005/08/07 06:36:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.72 2005/08/23 20:34:26 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> e2fsprogs-1.38.ebuild:
+  stable on ia64
 
   07 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/e2fsprogs-1.38-disconnected-inodes.patch, e2fsprogs-1.38.ebuild:
