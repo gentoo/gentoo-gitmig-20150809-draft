@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.26 2005/07/17 10:17:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.27 2005/08/23 01:13:09 hparker Exp $
+
+  23 Aug 2005; Homer Parker <hparker@gentoo.org> apachetop-0.12.5.ebuild:
+  Marked stable on amd64
 
   17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   apachetop-0.12.5.ebuild:
