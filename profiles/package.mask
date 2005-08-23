@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4328 2005/08/23 06:43:18 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4329 2005/08/23 23:15:38 eradicator Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -167,11 +167,6 @@ media-video/toxine
 # http://bugs.gentoo.org/102104
 =net-wireless/madwifi-driver-0.1_pre20050809
 =net-wireless/madwifi-driver-0.1_pre20050809-r1
-
-# Jeremy Huddleston <eradicator@gentoo.org> (13 Aug 2005)
-# eselect module version still being tested...
->=x11-base/opengl-update-3.0.0
-app-admin/eselect-opengl
 
 # Marius Mauch <genone@gentoo.org> (11 Aug 2005)
 # yes, this is a new portage, but not with the long awaited new dep resolver
