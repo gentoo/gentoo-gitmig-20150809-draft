@@ -1,5 +1,5 @@
 MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
 MD5 c39f752c777891f242763131e4c39333 ChangeLog 936
-MD5 2ba0e8143fd650b611fb54b2b5e6b792 kshutdown-0.6.0.ebuild 594
+MD5 7e7062106494e118a03cdc51a8a18c3d kshutdown-0.6.0.ebuild 601
 MD5 84ede688edce48bdffbd9ae801575289 files/digest-kshutdown-0.6.0 68
 MD5 97e80e69f35ea1528ac7f174bc01a6f8 files/kshutdown-0.6.0-makefile-fix.patch 660
