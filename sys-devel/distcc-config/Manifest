@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 4cfd180b3d2c0f2bc72b47f4d2f86408 ChangeLog 376
 MD5 a3f375c273e29aca9b2be7ec19299513 distcc-config-1.3.ebuild 575
-MD5 44987cf1d44728c26f1890ecfc26c3c1 metadata.xml 340
 MD5 c68a7deb09ddd39c470cebaeb8863b83 files/digest-distcc-config-1.3 68
+MD5 75efaf772a6c78df9ec1441cb98f34a1 metadata.xml 335
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCvuyfI7fK2cqeyXkRAuhHAJ4vk9SR9mK5P37xAaf1IjcpRnECRwCgy21s
-290LKSVvfAJI3wlwagft7ss=
-=CaVH
+iD8DBQFDC1FFI1lqEGTUzyQRAsVdAJ9VjUsu6a464RekBq9wI9SnSLAe8wCgsTs3
+eScFq64j1h57P5Mu+YUzNBY=
+=T4mt
 -----END PGP SIGNATURE-----
