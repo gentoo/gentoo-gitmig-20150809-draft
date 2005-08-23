@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6ed5e294da12c9b8b40d9cdf60867cca ChangeLog 10715
-MD5 9cabb3205b8d1e1b81e26e5c1e4f94b6 emacs-21.4-r1.ebuild 4398
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 767c6035b2be8309041a7c2e81bfd7a0 emacs-18.59.ebuild 2007
 MD5 27ad4010641ab075702e1ca9bea2e506 emacs-22.0.50_pre20050225.ebuild 5421
+MD5 83a939dd4866234b1c1014d61ad6f8a3 emacs-21.4-r1.ebuild 4397
+MD5 767c6035b2be8309041a7c2e81bfd7a0 emacs-18.59.ebuild 2007
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 870802726485f04f143c5e053d7a9209 emacs-21.4.ebuild 4141
-MD5 ef8adf470d7d95802802b3860ef8d9a9 files/emacs-21.3-xorg.patch 394
-MD5 2f000567bd6037e79de677b0edd814ab files/60emacs-21.envd 34
-MD5 0d61f19c0e6fcdb6657ae1d4d9e69801 files/60emacs-22.0.50.envd 39
-MD5 3a0ce8880fff1be2f5e8281633532546 files/emacs-22.0.50.desktop 242
-MD5 56a239d1965c2bac249e787b1ef6a1f5 files/digest-emacs-21.4 126
-MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
-MD5 0d7a5eba9d25e527c53da9a73c3bb767 files/digest-emacs-18.59 216
-MD5 bb29381a50b72e88d869fb09a2c0a34e files/emacs-21.3-amd64.patch 7938
-MD5 77362e2a2494f71a2869096cc89ca8f2 files/digest-emacs-21.4-r1 127
-MD5 3763ec7eaed9e5bb4da2f3f7c3795594 files/emacs-21.3-hppa.patch 2493
+MD5 6ed5e294da12c9b8b40d9cdf60867cca ChangeLog 10715
 MD5 2aaf4fc4c9513f13c4edb24327247f83 files/emacs-21.3-ppc64.patch 1622
-MD5 f6a4a0f9d36297f686ca56fae7bcef68 files/digest-emacs-22.0.50_pre20050225 242
+MD5 0d61f19c0e6fcdb6657ae1d4d9e69801 files/60emacs-22.0.50.envd 39
+MD5 bb29381a50b72e88d869fb09a2c0a34e files/emacs-21.3-amd64.patch 7938
+MD5 0d7a5eba9d25e527c53da9a73c3bb767 files/digest-emacs-18.59 216
+MD5 77362e2a2494f71a2869096cc89ca8f2 files/digest-emacs-21.4-r1 127
 MD5 ab4757cbbda4ac6f848021b947d1f2b2 files/emacs-21.desktop 238
 MD5 277b238c9263aabcc2ef92de1d6d68bb files/emacs-nofink-gentoo.diff 1520
 MD5 2f1bf0e4f91897570110704adbaf48dc files/emacs-21.2-sh.patch 5782
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8RFbKf2g/qXtneoRAvNKAJ95Iv1T7vQMGgxfGhDLwgqYvaiyFQCffoCN
-b/FhDB1T1j5yTZUR6BFIlOU=
-=XMaZ
------END PGP SIGNATURE-----
+MD5 f6a4a0f9d36297f686ca56fae7bcef68 files/digest-emacs-22.0.50_pre20050225 242
+MD5 ef8adf470d7d95802802b3860ef8d9a9 files/emacs-21.3-xorg.patch 394
+MD5 3763ec7eaed9e5bb4da2f3f7c3795594 files/emacs-21.3-hppa.patch 2493
+MD5 56a239d1965c2bac249e787b1ef6a1f5 files/digest-emacs-21.4 126
+MD5 2f000567bd6037e79de677b0edd814ab files/60emacs-21.envd 34
+MD5 3a0ce8880fff1be2f5e8281633532546 files/emacs-22.0.50.desktop 242
+MD5 5f423550e3d32b7c0511eccd93a94750 files/emacs-subdirs-el-gentoo.diff 1369
