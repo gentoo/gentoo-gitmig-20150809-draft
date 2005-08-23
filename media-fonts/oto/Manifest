@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 0f4ced6f7ed41c4cfe235c0017c6c829 oto-0.4.ebuild 582
 MD5 6826855e5de285c0be4f7206afc4139a ChangeLog 595
 MD5 de495fbb7e490bcf31e2a3812aba79c3 files/digest-oto-0.4 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC53rKRy60XGEcJIRAvbLAJ9D6uQQlbibsCIiwxyeVC0Oelzj1wCgoQTt
+WeDOwlDpdGgWwgUpg7O8un4=
+=GHRW
+-----END PGP SIGNATURE-----

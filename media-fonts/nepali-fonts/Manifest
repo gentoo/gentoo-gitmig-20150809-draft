@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 49c005f17555f1d8896f0c883b4116fe nepali-fonts-1-r1.ebuild 627
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 11964d9324db66cb91bc48939e612bd7 ChangeLog 1525
 MD5 dd8bfa69cb93ddd4b0a181d014c28282 files/digest-nepali-fonts-1-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC51lKRy60XGEcJIRAgIwAJ4qlZcnMEpqolk+b/kOrCMCR+YDGACfaZC6
+2WlL8vHSkyPZGrjvzwH6dzI=
+=/J6L
+-----END PGP SIGNATURE-----

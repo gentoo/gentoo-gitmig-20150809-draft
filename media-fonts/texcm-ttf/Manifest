@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 ca8693669d9a0a58ef52e3823e136bd8 texcm-ttf-1.0.ebuild 565
 MD5 15a32f4f5e74f97809272062aa49fdde ChangeLog 613
 MD5 eefa913fa0c2c5c01c9c5a0605da35ca files/digest-texcm-ttf-1.0 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC5wpKRy60XGEcJIRAsjsAKCCRXwkF02zOuSvcYoJr3QHKtmCygCeIE3i
+JEy6JkFkwS1UMK71F67mFCc=
+=qZLm
+-----END PGP SIGNATURE-----

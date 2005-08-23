@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ebe12af257b47919ad6ded659e9818e7 ttf-gentium-1.0.1.ebuild 798
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 4c9f139a843b565225b9de9769992cc5 ChangeLog 928
 MD5 77a5f9f4b983ded4bf9374e683633115 files/digest-ttf-gentium-1.0.1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC5yKKRy60XGEcJIRApMDAJ0cCQ481doIgVLc2arpCqUGkO0UbQCeJBru
+F7G+ZZ+ugm/egHzTH/LMHSM=
+=HfT3
+-----END PGP SIGNATURE-----
