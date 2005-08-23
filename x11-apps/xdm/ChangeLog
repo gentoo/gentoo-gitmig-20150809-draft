@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.5 2005/08/20 22:39:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.6 2005/08/23 12:19:37 herbs Exp $
+
+  23 Aug 2005; Herbie Hopkins <herbs@gentoo.org> xdm-0.99.0-r1.ebuild:
+  Marked ~amd64.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> xdm-0.99.0.ebuild,
   xdm-0.99.0-r1.ebuild:
