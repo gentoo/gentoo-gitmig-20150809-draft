@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.8 2005/08/14 04:07:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.9 2005/08/23 13:26:43 uberlord Exp $
 
 inherit eutils pam
 
@@ -58,7 +58,7 @@ pkg_setup() {
 src_install() {
 	# Add our default ftp user
 	enewgroup ftp 21
-	enewuser ftp 21 /bin/false /home/ftp ftp
+	enewuser ftp 21 -1 /home/ftp ftp
 
 	# The ftpusers file is a list of people who are NOT allowed
 	# to use the ftp service.
