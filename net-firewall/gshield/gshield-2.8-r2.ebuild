@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.5 2005/07/26 11:54:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.6 2005/08/23 18:14:56 flameeyes Exp $
 
 # re-capitalize gShield
 S=${WORKDIR}/gShield-${PV}
@@ -20,7 +20,7 @@ RDEPEND="net-firewall/iptables
 src_install() {
 	# config files
 	dodir /etc/gshield
-	cp -a * ${D}/etc/gshield
+	cp -pPR * ${D}/etc/gshield
 	ln -s gshield ${D}/etc/firewall
 
 	# get rid of docs from config

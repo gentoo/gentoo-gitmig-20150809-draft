@@ -1,4 +1,14 @@
-MD5 fb2c5f8e8393adf66972ff8002481696 ChangeLog 1478
-MD5 70368965119c74a9b482f36ae1af16f9 gshield-2.8-r2.ebuild 1521
-MD5 35bd7996b009c8816bc810139001de45 files/digest-gshield-2.8-r2 59
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 791cd16769f4ef782bb507d11f386c23 ChangeLog 1578
+MD5 12b1171e8d9d1b6e69038c819576eb84 gshield-2.8-r2.ebuild 1527
 MD5 c30931b8fa657e89dfc003f26a7d99af files/gshield.init 648
+MD5 35bd7996b009c8816bc810139001de45 files/digest-gshield-2.8-r2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC2e8j5H05b2HAEkRAsC5AKCSjVEdTndjXaXNhXimqQWDwyBWqgCcCnPi
+mVJhxaCZ4dpQmm2bxJ3vz94=
+=hffk
+-----END PGP SIGNATURE-----
