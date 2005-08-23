@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.32 2005/04/25 17:23:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.33 2005/08/23 17:15:45 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> id3lib-3.8.3-r3.ebuild:
+  Don't use cp -a.
 
   25 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> id3lib-3.8.3-r3.ebuild:
   removed no-deprecated from cppflags, not needed any longer. therefor

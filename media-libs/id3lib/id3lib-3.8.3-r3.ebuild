@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.6 2005/04/25 17:23:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.7 2005/08/23 17:15:45 flameeyes Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_install() {
 
 	# some example programs to be placed in docs dir.
 	if use doc; then
-		cp -a examples ${D}/usr/share/doc/${PF}/examples
+		cp -pPR examples ${D}/usr/share/doc/${PF}/examples
 		cd ${D}/usr/share/doc/${PF}/examples
 		make distclean
 	fi

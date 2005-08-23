@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/divx4linux
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.19 2004/07/01 07:55:23 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.20 2005/08/23 17:13:27 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  divx4linux-20030428-r1.ebuild:
+  Don't use cp -a.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   divx4linux-20020418-r1.ebuild, divx4linux-20020418-r2.ebuild,
