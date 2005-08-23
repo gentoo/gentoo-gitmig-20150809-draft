@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a0bac4701d06df397b392098fcf9e7b ChangeLog 485
 MD5 bf031b62f7b4ac78e0ed331b8825674e dokuwiki-20050713.ebuild 1487
-MD5 494ac870858e3c1dd3e6e1ca041856fa metadata.xml 703
 MD5 a65ef20ee770f09cfcd76f346f3da136 files/digest-dokuwiki-20050713 68
 MD5 1b5b86b6942f3451fc286451dbaf7c4a files/postinstall-en.txt 1590
+MD5 0922f8bcb85431dab1ce19e2675e2e24 metadata.xml 704
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC1GyI1lqEGTUzyQRAiDOAKCeAeIOGW/TVaRjzbMyr+6ZcHKQmwCfQY6j
+HFYW7CfgPEIl/tSmwM1rDCc=
+=htgb
+-----END PGP SIGNATURE-----
