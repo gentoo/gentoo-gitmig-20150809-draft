@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.101 2005/08/03 04:55:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.102 2005/08/23 01:13:01 vapier Exp $
+
+  23 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-cvs-winelauncher-temp.patch, wine-20041019-r3.ebuild,
+  wine-20050111-r1.ebuild, wine-20050211.ebuild, wine-20050310-r1.ebuild,
+  wine-20050419.ebuild, wine-20050524.ebuild, wine-20050628.ebuild,
+  wine-20050725.ebuild:
+  Add patch from upstream to address insecure tempfile usage #101773.
 
   03 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/wine-20050725-gcc-32bit.patch, wine-20050524.ebuild,
