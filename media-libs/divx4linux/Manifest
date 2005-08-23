@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d12d52182f53c21679dc13f5921dbe4f ChangeLog 2479
 MD5 0f40faee427c4e33f9678b6f86c17a05 divx4linux-20020418-r2.ebuild 883
 MD5 a3174e10c318ad237585b47e2147733c divx4linux-20030428-r1.ebuild 1050
@@ -8,3 +11,10 @@ MD5 0a602f7e67ee30147c7dcaa4306de006 files/digest-divx4linux-20030428 75
 MD5 0a602f7e67ee30147c7dcaa4306de006 files/digest-divx4linux-20030428-r1 75
 MD5 6e445fc11f256e7f78b59f59bb8dce7b files/digest-divx4linux-20020418-r2 71
 MD5 6e445fc11f256e7f78b59f59bb8dce7b files/digest-divx4linux-20020418-r1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC1lij5H05b2HAEkRAvU1AKCc2Wdx2dQAj8dD+9Zsq2OTnr9AKgCfatG2
+HVDgXOl0RYHNeURu5OqCVKg=
+=uoXf
+-----END PGP SIGNATURE-----
