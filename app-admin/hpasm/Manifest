@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 08e071c05e243d52ab0701e357572762 ChangeLog 1583
-MD5 c2a38c4d029266b1a55646aec8370306 hpasm-6.30.0.12-r1.ebuild 2400
+MD5 0e216e90bbbe158c9f10ac197eca5df0 hpasm-6.30.0.12-r1.ebuild 2400
+MD5 1d83bb949c76c00afbf10836d4efeb9d ChangeLog 1683
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 abbf2c075cd154e71c9cb90ad061b39e files/digest-hpasm-6.30.0.12-r1 80
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCviSEmdTrptrqvGERAnIjAJ0S2ZJRobjodVerpbVeLjfHPtZS/QCeMrvM
-ayaWjp/3ERrPq/4XXzcqcoU=
-=MBMa
+iD8DBQFDC1+Dj5H05b2HAEkRAqorAKCeFjOBaJmuuVD/NPGmzLg3vurxdQCeMMFN
+uu+yadZZ5noEIc34vO9YD4Y=
+=I5YK
 -----END PGP SIGNATURE-----
