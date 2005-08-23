@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.3.3.ebuild,v 1.3 2005/06/16 13:24:44 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.3.3.ebuild,v 1.4 2005/08/23 12:47:51 tigger Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="dev-lang/perl
 
 pkg_setup() {
 	enewgroup tenshi
-	enewuser tenshi -1 /bin/false /var/lib/tenshi tenshi
+	enewuser tenshi -1 -1 /var/lib/tenshi tenshi
 }
 
 src_install() {
