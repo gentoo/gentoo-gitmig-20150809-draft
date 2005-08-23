@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-1.3-r2.ebuild,v 1.7 2005/07/26 18:31:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-1.3-r2.ebuild,v 1.8 2005/08/23 03:28:51 agriffis Exp $
 
 inherit pam
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/utils/console/vlock-1.3.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/pam"
