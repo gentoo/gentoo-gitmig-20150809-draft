@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.3 2005/08/20 22:38:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.4 2005/08/23 12:16:58 herbs Exp $
+
+  23 Aug 2005; Herbie Hopkins <herbs@gentoo.org> libXaw-0.99.0.ebuild:
+  Marked ~amd64.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> libXaw-0.99.0.ebuild:
   Marked ~ppc
