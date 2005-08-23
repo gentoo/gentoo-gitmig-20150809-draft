@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre1.ebuild,v 1.4 2005/08/23 03:07:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.11.91_pre1.ebuild,v 1.5 2005/08/23 07:36:30 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -58,10 +58,10 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/nautilus-2.11.91
 
 	>=media-libs/gstreamer-0.8.10
-	>=media-libs/gst-plugins-0.8.10"
-#	>=gnome-extra/gnome-media-2.11.91
+	>=media-libs/gst-plugins-0.8.10
+	>=gnome-extra/gnome-media-2.11.91
+	>=media-sound/sound-juicer-2.11.90"
 #	>=media-video/totem-1.1.3
-#	>=media-sound/sound-juicer-2.11.90
 
 RDEPEND="${RDEPEND}
 	>=media-gfx/eog-2.11.90
@@ -125,9 +125,9 @@ RDEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=gnome-extra/libgtkhtml-3.7.6
 	>=mail-client/evolution-2.3.7
-	>=gnome-extra/evolution-data-server-1.3.7"
+	>=gnome-extra/evolution-data-server-1.3.7
+	>=gnome-extra/evolution-webcal-2.3.91"
 #	>=gnome-extra/evolution-exchange-2.3.7
-#	>=gnome-extra/evolution-webcal-2.3.91
 
 RDEPEND="${RDEPEND}
 	>=net-misc/vino-2.11.90
