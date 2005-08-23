@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10bc395ffc5ca86f80cb63e02eec5150 ChangeLog 791
-MD5 e0c78f8feedf112aea99efd8271cd58f arabeyes-fonts-1.1.ebuild 674
+MD5 b3a7553b9a11c17d6563e262649de19e arabeyes-fonts-1.1.ebuild 682
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 10bc395ffc5ca86f80cb63e02eec5150 ChangeLog 791
 MD5 452955e9232b42232174234d23e4ff8e files/digest-arabeyes-fonts-1.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5fWij5H05b2HAEkRAtt8AJ9dPuV9+raWGJm2Nx/+8/M5hJowtACgiW2i
-uPap3Y1L1+bl6n8ykX3IlBs=
-=3Q4t
------END PGP SIGNATURE-----

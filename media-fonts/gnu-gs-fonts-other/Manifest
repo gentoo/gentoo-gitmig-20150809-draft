@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26b20b7eb689bca34900fc90173b220e ChangeLog 1504
-MD5 c356f63b01752457ed2967bbf35cb0ea gnu-gs-fonts-other-6.0.ebuild 610
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 23b4ab3e5f5121a9949bc5d4d151b21b gnu-gs-fonts-other-6.0.ebuild 616
+MD5 26b20b7eb689bca34900fc90173b220e ChangeLog 1504
 MD5 2f127332fd214957fc4809b216c3610b files/digest-gnu-gs-fonts-other-6.0 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1+whj5H05b2HAEkRAm2KAJ9gte0Wlo7pVipnMCPPsdScG84MZwCgmJb9
-dKYudodmRuLSGj2JQA6cajw=
-=RLru
------END PGP SIGNATURE-----
