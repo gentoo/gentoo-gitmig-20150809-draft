@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.38.ebuild,v 1.1 2005/08/23 14:04:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.38.ebuild,v 1.2 2005/08/23 21:23:38 dragonheart Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ MY_PBASE=${P/theripper/}
 S=${WORKDIR}/${MY_PBASE}
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/john/"
-SRC_URI="http://www.openwall.com/john/b/${MY_PBASE}.tar.gz"
+SRC_URI="http://www.openwall.com/john/c/${MY_PBASE}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
