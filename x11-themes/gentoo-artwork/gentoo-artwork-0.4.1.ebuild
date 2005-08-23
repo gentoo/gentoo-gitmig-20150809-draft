@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.1.ebuild,v 1.2 2005/03/04 18:29:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.1.ebuild,v 1.3 2005/08/23 23:28:14 spock Exp $
 
 DESCRIPTION="A collection of miscellaneous Gentoo Linux logos and artwork"
 SRC_URI="mirror://gentoo/gentoo-artwork-0.2.tar.bz2
@@ -40,7 +40,7 @@ src_install() {
 	# pixmaps
 	dodir /usr/share/pixmaps/gentoo/
 	cd ${S}/pixmaps
-	cp -a . ${D}/usr/share/pixmaps/gentoo/
+	cp -pPR . ${D}/usr/share/pixmaps/gentoo/
 	rm ${D}/usr/share/pixmaps/gentoo/CREDITS
 
 	if use kde ; then

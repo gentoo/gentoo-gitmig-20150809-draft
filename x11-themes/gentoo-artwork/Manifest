@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 29f700aadfcbbd09e291f90e1ca2dd8d gentoo-artwork-0.4.1.ebuild 1925
-MD5 dd0db002319ac7cb94f568931c22c41e ChangeLog 2176
+MD5 caf4aacdd5160c8e71a85c3b07af603c gentoo-artwork-0.4.1.ebuild 1927
+MD5 ec0afe598238d87d40f68918a0fee9f6 ChangeLog 2293
 MD5 42bb15c37e072cf6216b4692514d08c9 metadata.xml 275
 MD5 de1f0ea045c9198cdf5873099611aafb files/digest-gentoo-artwork-0.4.1 292
 MD5 575bd06a169679bee6fc2ad12fa8e386 files/offensive_list 48
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKKk0chej4aZK9/cRAhBdAJ9BQwDDVkvPEOLgJSM9ou3H+3ebjACePc74
-BBRG+WKlIKZV91eIBSLSI+o=
-=EioK
------END PGP SIGNATURE-----
