@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.5.ebuild,v 1.3 2005/05/05 22:54:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.5.ebuild,v 1.4 2005/08/23 23:58:59 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://sources.redhat.com/automake/"
@@ -21,14 +21,13 @@ RDEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "/^@setfilename/s|automake|automake${SLOT}|" \
 		-e "s|automake: (automake)|automake v${SLOT}: (automake${SLOT})|" \
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
 		doc/automake.texi || die "sed failed"
-	epatch ${FILESDIR}/${PN}-1.9.3-infopage-namechange.patch
-	gnuconfig_update
+	epatch "${FILESDIR}"/${PN}-1.9.3-infopage-namechange.patch
 	export WANT_AUTOCONF=2.5
 }
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.18 2005/03/13 04:40:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.19 2005/08/23 23:58:59 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 MY_P="${P/_/-}"
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
@@ -19,21 +19,20 @@ DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.59-r6
 	sys-devel/gnuconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/automake-1.4-libtoolize.patch
-	epatch ${FILESDIR}/automake-1.4-subdirs-89656.patch
-	epatch ${FILESDIR}/automake-1.4-ansi2knr-stdlib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/automake-1.4-libtoolize.patch
+	epatch "${FILESDIR}"/automake-1.4-subdirs-89656.patch
+	epatch "${FILESDIR}"/automake-1.4-ansi2knr-stdlib.patch
 	sed -i 's:error\.test::' tests/Makefile.in #79529
 	sed -i \
 		-e "/^@setfilename/s|automake|automake${SLOT}|" \
 		-e "s|automake: (automake)|automake v${SLOT}: (automake${SLOT})|" \
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
 		automake.texi || die "sed failed"
-	gnuconfig_update
 	export WANT_AUTOCONF=2.5
 }
 

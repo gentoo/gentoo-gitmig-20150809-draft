@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.23 2005/03/13 04:40:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.24 2005/08/23 23:58:59 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://sources.redhat.com/automake/"
@@ -20,26 +20,25 @@ DEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-target_hook.patch
-	epatch ${FILESDIR}/${P}-slot.patch
-	epatch ${FILESDIR}/${P}-test-fixes.patch #79505
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-target_hook.patch
+	epatch "${FILESDIR}"/${P}-slot.patch
+	epatch "${FILESDIR}"/${P}-test-fixes.patch #79505
 	sed -i \
 		-e "/^@setfilename/s|automake|automake${SLOT}|" \
 		-e "s|automake: (automake)|automake v${SLOT}: (automake${SLOT})|" \
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
 		automake.texi || die "sed failed"
-	gnuconfig_update
 	export WANT_AUTOCONF=2.5
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	make install DESTDIR="${D}" || die "make install failed"
 
 	local x=
 	for x in aclocal automake ; do
-		mv "${D}"/usr/bin/${x}{,-${SLOT}}
-		mv "${D}"/usr/share/${x}{,-${SLOT}}
+		mv "${D}"/usr/bin/${x}{,-${SLOT}} || die "rename ${x}"
+		mv "${D}"/usr/share/${x}{,-${SLOT}} || die "move ${x}"
 	done
 
 	dodoc NEWS README THANKS TODO AUTHORS ChangeLog
