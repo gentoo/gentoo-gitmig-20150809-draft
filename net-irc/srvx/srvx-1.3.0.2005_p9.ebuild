@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.0.2005_p9.ebuild,v 1.1 2005/01/30 13:31:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.0.2005_p9.ebuild,v 1.2 2005/08/23 13:07:45 swegener Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=sys-devel/automake-1.8
 	>=sys-devel/autoconf-2.59"
 RDEPEND=""
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_compile() {
 	local PROTOCOL="p10" MALLOC="system" DEBUG=""
@@ -65,16 +65,16 @@ src_install() {
 		docs/{access-levels,cookies,helpserv,ircd-modes}.txt \
 		|| die "dodoc failed"
 
-	newinitd ${FILESDIR}/srvx.init.d srvx || die "newinitd failed"
-	newconfd ${FILESDIR}/srvx.conf.d srvx || die "newconfd failed"
+	newinitd "${FILESDIR}"/srvx.init.d srvx || die "newinitd failed"
+	newconfd "${FILESDIR}"/srvx.conf.d srvx || die "newconfd failed"
 }
 
 pkg_setup() {
 	enewgroup srvx
-	enewuser srvx -1 /bin/false /var/lib/srvx srvx
+	enewuser srvx -1 -1 /var/lib/srvx srvx
 }
 
 pkg_postinst() {
-	chown -R srvx:srvx ${ROOT}/etc/srvx ${ROOT}/var/lib/srvx
-	chmod 0700 ${ROOT}/etc/srvx ${ROOT}/var/lib/srvx
+	chown -R srvx:srvx "${ROOT}"/etc/srvx "${ROOT}"/var/lib/srvx
+	chmod 0700 "${ROOT}"/etc/srvx "${ROOT}"/var/lib/srvx
 }
