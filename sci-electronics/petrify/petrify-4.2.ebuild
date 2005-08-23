@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/petrify-4.2.ebuild,v 1.2 2004/12/27 21:06:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/petrify-4.2.ebuild,v 1.3 2005/08/23 20:46:29 chrb Exp $
 
 DESCRIPTION="Synthesize Petri nets into asynchronous circuits"
 HOMEPAGE="http://www.lsi.upc.es/~jordic/petrify/"
@@ -21,7 +21,7 @@ src_install () {
 	dosym /opt/petrify/petrify /opt/petrify/write_sg
 	dodoc doc/*
 	doman man/man1/*
-	cp -a lib/petrify.lib ${D}/opt/petrify
+	cp -pPR lib/petrify.lib ${D}/opt/petrify
 	dodir /etc/env.d
 	echo "PATH=/opt/petrify" > ${D}/etc/env.d/00petrify
 }

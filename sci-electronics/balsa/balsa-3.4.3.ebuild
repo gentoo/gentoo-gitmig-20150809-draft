@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.4.3.ebuild,v 1.1 2005/05/26 22:27:28 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.4.3.ebuild,v 1.2 2005/08/23 20:44:53 chrb Exp $
 
 inherit eutils
 
@@ -100,7 +100,7 @@ src_install() {
 
 	# install manual and examples
 	dodir /usr/share/doc/${P}/
-	cp -ar ${WORKDIR}/Examples ${D}/usr/share/doc/${P}/
+	cp -pPR ${WORKDIR}/Examples ${D}/usr/share/doc/${P}/
 	dodoc ${DISTDIR}/BalsaManual${My_PV}.pdf
 
 	# install AMS035 tech

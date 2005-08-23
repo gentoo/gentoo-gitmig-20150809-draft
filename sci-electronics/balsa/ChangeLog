@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/balsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.4 2005/05/26 22:27:28 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.5 2005/08/23 20:44:53 chrb Exp $
+
+  23 Aug 2005; Chris Bainbridge <chrb@gentoo.org> balsa-3.4.3.ebuild:
+  cp -a bad. #103487
 
 *balsa-3.4.3 (26 May 2005)
 
