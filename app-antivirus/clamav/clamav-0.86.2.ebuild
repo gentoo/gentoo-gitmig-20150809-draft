@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86.2.ebuild,v 1.9 2005/08/23 02:46:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.86.2.ebuild,v 1.10 2005/08/23 13:17:09 ticho Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -35,7 +35,7 @@ pkg_setup() {
 		fi
 	fi
 	enewgroup clamav
-	enewuser clamav -1 /bin/false /dev/null clamav
+	enewuser clamav -1 -1 /dev/null clamav
 	pwconv || die
 }
 

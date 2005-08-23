@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.101 2005/08/23 02:46:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.102 2005/08/23 13:17:09 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> clamav-0.86.2.ebuild:
+  Use -1 for shell argument to enewuser. Bug #103421.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> clamav-0.86.2.ebuild:
   stable on ia64
