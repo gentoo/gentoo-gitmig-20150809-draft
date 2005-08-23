@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.11.1-r2.ebuild,v 1.1 2005/08/03 18:57:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.11.1-r2.ebuild,v 1.2 2005/08/23 17:26:29 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic pam
 
@@ -130,7 +130,7 @@ pkg_postinst() {
 
 	if [ "${CHECK1}" != "${CHECK2}" ]
 	then
-		cp -a ${ROOT}/etc/login.defs ${ROOT}/etc/login.defs.bak
+		cp -pPR ${ROOT}/etc/login.defs ${ROOT}/etc/login.defs.bak
 		mv -f ${ROOT}/etc/login.defs.new ${ROOT}/etc/login.defs
 	elif [ ! -f ${ROOT}/etc/login.defs ]
 	then
