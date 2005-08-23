@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.77 2005/08/08 18:01:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.78 2005/08/23 03:07:59 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> doxygen-1.4.2.ebuild:
+  stable on ia64
 
   08 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> doxygen-1.4.2.ebuild:
   Stable on mips.
