@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-1.0.ebuild,v 1.2 2005/05/18 20:08:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-1.0.ebuild,v 1.3 2005/08/23 19:26:05 wolf31o2 Exp $
 
 inherit eutils perl-module
 
@@ -49,7 +49,7 @@ src_compile() {
 src_install() {
 	dodir ${dir}
 	cp -r ${S}/stock ${Ddir} || die "Copying files"
-	cp -a ${S}/tftpboot ${D} || die "Copying tftpboot"
+	cp -pPR ${S}/tftpboot ${D} || die "Copying tftpboot"
 	dodir ${dir}/tools
 	dosym /usr/bin/mksquashfs ${dir}/tools/mksquashfs
 	dodoc Documentation/ChangeLog

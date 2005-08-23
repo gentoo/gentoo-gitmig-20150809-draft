@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.25 2005/05/18 20:08:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.26 2005/08/23 19:26:05 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.6-r4.ebuild,
+  pxes-0.7.ebuild, pxes-0.8.ebuild, pxes-0.9.ebuild, pxes-0.9-r1.ebuild,
+  pxes-1.0.ebuild:
+  cp -a -> cp -pPR for bug #103487.
 
   18 May 2005; Sven Wegener <swegener@gentoo.org> pxes-0.6-r4.ebuild,
   pxes-0.7.ebuild, pxes-0.8.ebuild, pxes-0.9.ebuild, pxes-0.9-r1.ebuild,

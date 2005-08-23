@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e1052bc876f096545606eac870c4eab5 pxes-0.9-r1.ebuild 1743
-MD5 e200e5bb3d06ba924ee84abb422401a8 pxes-0.7.ebuild 1469
-MD5 d72f3f168258a5f2194d466c5c7ddf8c pxes-1.0.ebuild 1724
-MD5 9612a29262939696d73643ee72da2000 pxes-0.9.ebuild 1355
-MD5 20920f75d3e9d1ddbc2f7ff85b8c64a8 pxes-0.6-r4.ebuild 1387
-MD5 cc0f1541894f0fdfd36e2d748bf66a4e pxes-0.8.ebuild 1263
-MD5 25af1ae0e931fb9155b3cec3a360b5e5 ChangeLog 3617
+MD5 aae440be3fee9a9b5d962256b9edfad7 ChangeLog 3820
 MD5 dc3371c7348c1a1e429a032198b6db20 metadata.xml 645
+MD5 3de6f8ae27cd8e30b5f410525fc5e999 pxes-0.6-r4.ebuild 1389
+MD5 0ef0193ffb1b5256e85243bb03a998fb pxes-0.7.ebuild 1471
+MD5 9276779941a5eb757c9310008726a5ac pxes-0.8.ebuild 1266
+MD5 c643df1054b9b598fb0599cabf850666 pxes-0.9.ebuild 1357
+MD5 9462363c459b8bdd5e70bac421f1c8a1 pxes-1.0.ebuild 1726
+MD5 5869e17151d572133bda647b9d2ef131 pxes-0.9-r1.ebuild 1745
+MD5 cd62bae9012dcfb2741b0d78ab20dd5b files/digest-pxes-1.0 142
 MD5 1708574c57ea3dbb43faa2a5abe17a5d files/digest-pxes-0.6-r4 206
-MD5 c26357ce69d1a5de2b37834c63e91833 files/digest-pxes-0.9-r1 142
-MD5 f3afb0ef2357d69147125eeb6cda6c43 files/makedevices.sh 1626
 MD5 587792f4ed87b201b12047186b3c19c4 files/digest-pxes-0.7 208
 MD5 b491b02f1152ab8f37c398206f16cbfd files/digest-pxes-0.8 142
 MD5 c26357ce69d1a5de2b37834c63e91833 files/digest-pxes-0.9 142
-MD5 cd62bae9012dcfb2741b0d78ab20dd5b files/digest-pxes-1.0 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCi6DuI1lqEGTUzyQRAvICAKCJGc+Yn0vSD3qFCEMMjAJkooIJTACgla7t
-HB91/5TkdDS0On8pe7jRau0=
-=fflK
------END PGP SIGNATURE-----
+MD5 f3afb0ef2357d69147125eeb6cda6c43 files/makedevices.sh 1626
+MD5 c26357ce69d1a5de2b37834c63e91833 files/digest-pxes-0.9-r1 142

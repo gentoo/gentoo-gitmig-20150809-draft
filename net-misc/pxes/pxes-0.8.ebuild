@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.8.ebuild,v 1.9 2005/05/18 20:08:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.8.ebuild,v 1.10 2005/08/23 19:26:05 wolf31o2 Exp $
 
 inherit perl-module
 
@@ -42,7 +42,7 @@ src_install() {
 	dodir ${dir}
 	cd ${Ddir}
 	cp -r ${S}/stock ${Ddir} || die "Copying files"
-	cp -a ${S}/tftpboot ${D}
+	cp -pPR ${S}/tftpboot ${D}
 	dodoc Documentation/ChangeLog
 	dohtml -r Documentation/html/*
 	cd ${WORKDIR}/pxesconfig-${PV}
