@@ -1,0 +1,24 @@
+--- config.xml.ori	2005-06-12 18:39:21.007989736 +0100
++++ config.xml	2005-06-12 18:41:56.621332912 +0100
+@@ -8,10 +8,10 @@
+ 
+ <!-- The location of the spool directory.. if relative, relative to the PyMSNt dir.
+ Do not include the jid of the transport -->
+-<!-- <spooldir>/path/to/data</spooldir> -->
++<spooldir>/var/spool/pymsn-t</spooldir>
+ 
+ <!-- The location of the PID file (if relative, relative to the PyMSNt dir) -->
+-<pid>PyMSNt.pid</pid>
++<pid>/var/run/PyMSNt.pid</pid>
+ 
+ 
+ <!-- The IP address of the main Jabber server to connect to -->
+@@ -51,7 +51,7 @@
+ <debugSmart/>
+ <!-- Set the debug log file location here, (comment out to output to the screen) -->
+ <!-- (if relative, relative to the PyMSNt dir) -->
+-<debugLog>debug.log</debugLog>
++<debugLog>/var/spool/pymsn-t/debug.log</debugLog>
+ 
+ 
+ </pymsnt>
