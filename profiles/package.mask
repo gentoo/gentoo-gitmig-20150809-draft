@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4327 2005/08/23 02:34:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4328 2005/08/23 06:43:18 wschlich Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1291,10 +1291,6 @@ app-accessibility/speechd-up
 # Still in the testing phase.
 # Just changed the package name, so I'm fixing the line up.
 app-admin/mailmin
-
-# <humpback@gentoo.org> (07 Apr 2004)
-# these are here waiting for jabberd2
->=net-im/jabberd-2
 
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
