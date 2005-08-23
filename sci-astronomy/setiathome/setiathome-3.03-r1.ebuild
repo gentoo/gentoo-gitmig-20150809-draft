@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.03-r1.ebuild,v 1.2 2005/03/17 08:59:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-3.03-r1.ebuild,v 1.3 2005/08/23 15:23:24 fmccor Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -16,7 +16,7 @@ SRC_URI="ppc? ( ftp://alien.ssl.berkeley.edu/pub/setiathome-${PV}.powerpc-unknow
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ppc sparc -alpha hppa ia64"
+KEYWORDS="ppc -alpha hppa ia64"
 IUSE="X"
 RESTRICT="nomirror"
 

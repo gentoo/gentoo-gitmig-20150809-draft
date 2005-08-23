@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.2 2005/08/22 13:20:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.3 2005/08/23 15:23:24 fmccor Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="http://boinc.ssl.berkeley.edu/source/nightly/${BOINC_PN}-${BOINC_PV}.ta
 IUSE="server"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND="~sci-misc/boinc-4.72.20050813"
 

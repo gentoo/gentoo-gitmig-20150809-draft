@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/setiathome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.6 2005/08/22 13:20:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.7 2005/08/23 15:23:24 fmccor Exp $
+
+  23 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  setiathome-3.03-r1.ebuild, setiathome-3.03-r2.ebuild,
+  setiathome-4.18.ebuild:
+  Add ~sparc keyword for setiathome-4.18 (Bug #103250) --- builds and
+  installs successfully on sparc.  Remove sparc from versions
+  setiathome-3.03-r{1,2}:  There are no downloads for these versions any
+  more.
 
   22 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> setiathome-4.18.ebuild:
   A few small updates to fix a typo and change perms of /var/lib/boinc.
