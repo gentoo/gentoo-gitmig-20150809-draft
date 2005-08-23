@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.27 2005/08/16 05:39:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.28 2005/08/23 17:28:09 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -368,7 +368,7 @@ pkg_postinst() {
 			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
 			echo
 
-			cp -a ${ROOT}/etc/pam.d/system-auth \
+			cp -pPR ${ROOT}/etc/pam.d/system-auth \
 				${ROOT}/etc/pam.d/system-auth.bak;
 			mv -f ${ROOT}/etc/pam.d/system-auth.new \
 				${ROOT}/etc/pam.d/system-auth
