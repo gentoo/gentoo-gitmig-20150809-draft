@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cgilib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.13 2005/08/23 15:59:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.14 2005/08/23 16:04:29 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> cgilib-0.5.ebuild,
+  cgilib-0.5-r1.ebuild:
+  Added ~mips.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> cgilib-0.5.ebuild:
   stable on ia64
