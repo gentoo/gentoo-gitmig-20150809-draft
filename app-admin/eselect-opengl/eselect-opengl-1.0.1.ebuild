@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.0.ebuild,v 1.1 2005/08/17 21:42:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.1.ebuild,v 1.1 2005/08/23 23:13:23 eradicator Exp $
 
 inherit multilib
 
