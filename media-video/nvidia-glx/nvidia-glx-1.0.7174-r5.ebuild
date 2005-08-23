@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7667.ebuild,v 1.2 2005/07/20 11:15:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r5.ebuild,v 1.1 2005/08/23 23:32:46 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -18,14 +18,16 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 LICENSE="NVIDIA"
 SLOT="0"
 
+# Support for some older cards was removed from newer versions, so don't delete
+# this package unless a "legacy" update has been released by nVidia -- eradicator
 KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="nostrip multilib-pkg-force"
-IUSE="dlloader"
+IUSE=""
 
 RDEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-2.2.0
+	eselect-opengl
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
 
@@ -182,14 +184,10 @@ src_install-libs() {
 	fi
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
-	# The below section was changed to fix bug #96514 and bug #91101.
-	if use dlloader; then
-		[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so ]] && \
-			doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so
-	else
-		[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ]] && \
-			doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
-	fi
+	[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ]] && \
+		doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
+	[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so ]] && \
+		doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so
 
 	insinto ${X11_LIB_DIR}
 	[[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a ]] && \
@@ -221,12 +219,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#switch to the nvidia implementation
-	if [[ ${ROOT} == "/" ]] ; then
-		/usr/sbin/opengl-update nvidia
-	fi
+	/usr/bin/eselect opengl set nvidia
 
 	echo
-	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
+	einfo "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
 	echo
 	einfo "You may also be interested in media-video/nvidia-settings"
 	echo
@@ -268,5 +264,5 @@ want_tls() {
 }
 
 pkg_postrm() {
-	opengl-update --use-old xorg-x11
+	/usr/bin/eselect opengl set --use-old xorg-x11
 }

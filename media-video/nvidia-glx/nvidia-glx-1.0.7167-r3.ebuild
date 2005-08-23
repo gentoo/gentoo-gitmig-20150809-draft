@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r4.ebuild,v 1.3 2005/07/20 09:28:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.1 2005/08/23 23:32:46 eradicator Exp $
 
 inherit eutils multilib versionator
 
-X86_PKG_V="pkg0"
+X86_PKG_V="pkg1"
 AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
@@ -18,22 +18,16 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 LICENSE="NVIDIA"
 SLOT="0"
 
-# Support for some older cards was removed from newer versions, so don't delete
-# this package unless a "legacy" update has been released by nVidia -- eradicator
 KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-2.2.0
+	eselect-opengl
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
-
-#	!<sys-libs/glibc-2.3.4.20040619-r2"
-# The !<sys-libs/glibc-2.3.4.20040619-r2 is to ensure our glibc has tls
-# support if we are atleast CHOST=i486.
 
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
@@ -73,11 +67,11 @@ src_unpack() {
 	# Patchs go below here, add breif description
 	cd ${S}
 	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
+	epatch ${NV_PATCH_PREFIX//7167/6629}-makefile.patch
 	# Use the correct defines to make gtkglext build work
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
+	epatch ${NV_PATCH_PREFIX//7167/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
+	epatch ${NV_PATCH_PREFIX//7167/6629}-glheader.patch
 
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
 	# 16 July 2004, opengl-update is now supplying glext.h for system wide
@@ -219,12 +213,10 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#switch to the nvidia implementation
-	if [[ ${ROOT} == "/" ]] ; then
-		/usr/sbin/opengl-update nvidia
-	fi
+	/usr/bin/eselect opengl set nvidia
 
 	echo
-	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
+	einfo "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
 	echo
 	einfo "You may also be interested in media-video/nvidia-settings"
 	echo
@@ -266,5 +258,5 @@ want_tls() {
 }
 
 pkg_postrm() {
-	opengl-update --use-old xorg-x11
+	/usr/bin/eselect opengl set --use-old xorg-x11
 }

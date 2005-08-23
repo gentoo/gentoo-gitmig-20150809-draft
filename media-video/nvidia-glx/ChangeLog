@@ -1,6 +1,21 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.100 2005/08/15 03:50:44 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.101 2005/08/23 23:32:46 eradicator Exp $
+
+*nvidia-glx-1.0.7676-r1 (23 Aug 2005)
+*nvidia-glx-1.0.7667-r1 (23 Aug 2005)
+*nvidia-glx-1.0.7174-r5 (23 Aug 2005)
+*nvidia-glx-1.0.7167-r3 (23 Aug 2005)
+*nvidia-glx-1.0.6629-r7 (23 Aug 2005)
+*nvidia-glx-1.0.6111-r3 (23 Aug 2005)
+
+  23 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +nvidia-glx-1.0.6111-r3.ebuild, +nvidia-glx-1.0.6629-r7.ebuild,
+  +nvidia-glx-1.0.7167-r3.ebuild, -nvidia-glx-1.0.7174-r4.ebuild,
+  +nvidia-glx-1.0.7174-r5.ebuild, -nvidia-glx-1.0.7667.ebuild,
+  +nvidia-glx-1.0.7667-r1.ebuild, -nvidia-glx-1.0.7676.ebuild,
+  +nvidia-glx-1.0.7676-r1.ebuild:
+  Revbumps to use the new opengl eselect module instead of opengl-update.
 
 *nvidia-glx-1.0.7676 (15 Aug 2005)
 

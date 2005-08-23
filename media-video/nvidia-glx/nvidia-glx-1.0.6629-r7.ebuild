@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676.ebuild,v 1.1 2005/08/15 03:50:45 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r7.ebuild,v 1.1 2005/08/23 23:32:46 eradicator Exp $
 
 inherit eutils multilib versionator
 
-X86_PKG_V="pkg0"
+X86_PKG_V="pkg1"
 AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
@@ -21,17 +21,13 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="nostrip multilib-pkg-force"
-IUSE="dlloader"
+IUSE=""
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-2.2.0
+	app-admin/eselect-opengl
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
-
-#	!<sys-libs/glibc-2.3.4.20040619-r2"
-# The !<sys-libs/glibc-2.3.4.20040619-r2 is to ensure our glibc has tls
-# support if we are atleast CHOST=i486.
 
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
@@ -63,19 +59,17 @@ pkg_setup() {
 }
 
 src_unpack() {
-	local NV_PATCH_PREFIX="${FILESDIR}/${PV}/NVIDIA_glx-${PV}"
-
 	cd ${WORKDIR}
 	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
 
 	# Patchs go below here, add breif description
 	cd ${S}
 	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
+	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-makefile.patch
 	# Use the correct defines to make gtkglext build work
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
+	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
+	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-glheader.patch
 
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
 	# 16 July 2004, opengl-update is now supplying glext.h for system wide
@@ -86,15 +80,14 @@ src_unpack() {
 
 src_install() {
 	local MLTEST=$(type dyn_unpack)
-
-	if [[ "${MLTEST/set_abi}" == "${MLTEST}" ]] && has_multilib_profile ; then
+	if [ "${MLTEST/set_abi}" = "${MLTEST}" ] && has_multilib_profile; then
 		local OABI=${ABI}
-		for ABI in $(get_install_abis) ; do
+		for ABI in $(get_install_abis); do
 			src_install-libs
 		done
 		ABI=${OABI}
 		unset OABI
-	elif use amd64 ; then
+	elif use amd64; then
 		src_install-libs lib32 $(get_multilibdir)
 		src_install-libs lib $(get_libdir)
 
@@ -119,10 +112,10 @@ src_install-libs() {
 	local pkglibdir=lib
 	local inslibdir=$(get_libdir)
 
-	if [[ ${#} -eq 2 ]] ; then
+	if [ ${#} -eq 2 ]; then
 		pkglibdir=${1}
 		inslibdir=${2}
-	elif has_multilib_profile && [[ ${ABI} == "x86" ]] ; then
+	elif has_multilib_profile && [ "${ABI}" == "x86" ]; then
 		pkglibdir=lib32
 	fi
 
@@ -182,25 +175,15 @@ src_install-libs() {
 	fi
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
-	# The below section was changed to fix bug #96514 and bug #91101.
-	if use dlloader; then
-		[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so ]] && \
-			doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so
-	else
-		[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ]] && \
-			doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
-	fi
+	[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ] && doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
 
 	insinto ${X11_LIB_DIR}
-	[[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a ]] && \
-		doins usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a
+	[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a ] && doins usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a
 	exeinto ${X11_LIB_DIR}
-	[[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV} ]] && \
-		doexe usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV}
+	[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV} ] && doexe usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV}
 
 	exeinto ${NV_ROOT}/extensions
-	[[ -f usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} ]] && \
-		newexe usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} libglx.so
+	[ -f usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} ] && newexe usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} libglx.so
 
 	# Includes
 	insinto ${NV_ROOT}/include
@@ -210,23 +193,23 @@ src_install-libs() {
 pkg_preinst() {
 	# Clean the dinamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
-	if [[ -d ${ROOT}/usr/lib/opengl/nvidia ]] ; then
+	if [ -d ${ROOT}/usr/lib/opengl/nvidia ]
+	then
 		rm -rf ${ROOT}/usr/lib/opengl/nvidia/*
 	fi
 	# Make sure we nuke the old nvidia-glx's env.d file
-	if [[ -e ${ROOT}/etc/env.d/09nvidia ]] ; then
+	if [ -e ${ROOT}/etc/env.d/09nvidia ]
+	then
 		rm -f ${ROOT}/etc/env.d/09nvidia
 	fi
 }
 
 pkg_postinst() {
 	#switch to the nvidia implementation
-	if [[ ${ROOT} == "/" ]] ; then
-		/usr/sbin/opengl-update nvidia
-	fi
+	/usr/bin/eselect opengl set nvidia
 
 	echo
-	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
+	einfo "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
 	echo
 	einfo "You may also be interested in media-video/nvidia-settings"
 	echo
@@ -268,5 +251,5 @@ want_tls() {
 }
 
 pkg_postrm() {
-	opengl-update --use-old xorg-x11
+	/usr/bin/eselect opengl set --use-old xorg-x11
 }
