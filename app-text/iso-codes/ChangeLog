@@ -1,6 +1,11 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.1 2005/08/19 19:58:53 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.2 2005/08/23 22:57:33 leonardop Exp $
+
+  23 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  iso-codes-0.47.ebuild:
+  Use a shorter description. Fix LICENSE. Use a mirror URI style. Install a
+  few docs with dodoc.
 
 *iso-codes-0.47 (18 Aug 2005)
 
