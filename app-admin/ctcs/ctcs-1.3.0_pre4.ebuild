@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.21 2005/03/03 16:25:44 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ctcs/ctcs-1.3.0_pre4.ebuild,v 1.22 2005/08/23 17:47:47 flameeyes Exp $
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -41,17 +41,17 @@ src_install() {
 	dodir /usr/ctcs/runin/bin/
 
 #	cp -R ${S}/runin ${D}/usr/ctcs/runin
-	cp -Rap ${S}/lib ${D}/usr/ctcs/lib
-	cp -Rap ${S}/selftest ${D}/usr/ctcs/selftest
-	cp -Rap ${S}/sample ${D}/usr/ctcs/sample
+	cp -pPR ${S}/lib ${D}/usr/ctcs/lib
+	cp -pPR ${S}/selftest ${D}/usr/ctcs/selftest
+	cp -pPR ${S}/sample ${D}/usr/ctcs/sample
 
 	# The 'binaries'
-	cp -ap ${S}/burnreset ${S}/check-requirements ${S}/check-syntax ${S}/color \
+	cp -p ${S}/burnreset ${S}/check-requirements ${S}/check-syntax ${S}/color \
 		${S}/newburn ${S}/newburn-generator ${S}/report ${S}/run ${D}/usr/ctcs/
 
-	cp -ap ${S}/runin/src/random ${S}/runin/src/prandom ${D}/usr/ctcs/runin/bin/
-	cp -ap ${S}/runin/src/flushb ${D}/usr/ctcs/runin/bin/flushb.real
-	cp -ap ${S}/runin/src/chartst ${S}/runin/src/memtst.src/memtst \
+	cp -pPR ${S}/runin/src/random ${S}/runin/src/prandom ${D}/usr/ctcs/runin/bin/
+	cp -pPR ${S}/runin/src/flushb ${D}/usr/ctcs/runin/bin/flushb.real
+	cp -pPR ${S}/runin/src/chartst ${S}/runin/src/memtst.src/memtst \
 		${D}/usr/ctcs/runin/
 
 	for f in burnBX burnMMX burnP5 burnP6 burnK6 burnK7; do

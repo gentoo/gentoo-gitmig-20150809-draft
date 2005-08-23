@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.6.ebuild,v 1.5 2005/01/01 11:24:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.6.ebuild,v 1.6 2005/08/23 17:49:21 flameeyes Exp $
 
 DESCRIPTION="Runset Init suite, a replacement for sysv style initd"
 HOMEPAGE="http://www.icewalkers.com/softlib/app/app_00233.html"
@@ -29,5 +29,5 @@ END-INFO-DIR-ENTRY
 EOF
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog LSM NEWS README
-	cp -a ${S}/sample ${D}/usr/share/doc/${PF}/
+	cp -pPR ${S}/sample ${D}/usr/share/doc/${PF}/
 }

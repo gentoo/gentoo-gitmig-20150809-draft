@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/runset
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.11 2005/01/01 11:24:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.12 2005/08/23 17:49:21 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> runset-1.6.ebuild:
+  Don't use cp -a.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> runset-1.6.ebuild:
   Masked runset-1.6.ebuild stable for ppc
