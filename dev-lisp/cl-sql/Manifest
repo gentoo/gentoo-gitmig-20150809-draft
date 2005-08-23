@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22f593be78c281b1c23cdcb32dd3ff1d ChangeLog 3876
+MD5 5f27fe892b380159c6a2394bd975484d ChangeLog 3976
 MD5 ff064f760141928cbcc89e41f4d16e2d cl-sql-3.1.10-r1.ebuild 3387
 MD5 25a7993f47b4e9b1261a9956a8d61d90 metadata.xml 431
-MD5 c2a134d1905a229e872438e4cb20daad cl-sql-3.2.1.ebuild 3398
+MD5 5d20410776a812d8696ef9c59bf8637a cl-sql-3.2.1.ebuild 3397
 MD5 6f0cca850627210bc6677fc498ec5235 files/digest-cl-sql-3.1.10-r1 64
 MD5 3cba61937a7bfeb858a4f8fcfede7989 files/digest-cl-sql-3.2.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFDCXPkyiNZaEAZA+ARApdXAJwIqKONiw70I41JAH/+Hl3h7Uh81wCY4rZW
-2s6XTBfNfHy3hSRfIF5aNA==
-=2aRG
+iD8DBQFDC2jRyiNZaEAZA+ARArheAJ4ujnu/Ki0hjObJ4g7iFSSxBecQ/wCeMDRs
+lgi7cJODrarA+CUbtETHi+g=
+=pMDv
 -----END PGP SIGNATURE-----
