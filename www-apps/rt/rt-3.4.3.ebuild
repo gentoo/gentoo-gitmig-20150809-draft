@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.1 2005/08/11 23:45:59 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.2 2005/08/23 19:29:07 rl03 Exp $
 
 inherit webapp eutils
 
@@ -119,7 +119,7 @@ add_user_rt() {
 
 	einfo " - Userid: ${euid}"
 
-	enewuser rt ${euid} /bin/false /dev/null rt > /dev/null
+	enewuser rt ${euid} -1 /dev/null rt > /dev/null
 	return 0
 }
 

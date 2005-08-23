@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 2d55314d5a0dc44ed84ff04cda740034 rt-3.4.2-r1.ebuild 5438
-MD5 c261128f93c38e440555abfde62db370 rt-3.4.3.ebuild 5508
+MD5 045002e419f3171a81a06cdd7582b098 rt-3.4.3.ebuild 5500
 MD5 e28b5c19f33196d18983e2db57aad44f rt-3.2.1.ebuild 4217
-MD5 69f4ae7b1adaddd5230ec9231eba7e53 ChangeLog 3374
+MD5 783cb55d6cd13c9b2b450180b2f4a7e5 ChangeLog 3480
 MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
 MD5 af335c7cab7bfc09dbd08feba51d2879 files/digest-rt-3.4.2-r1 61
 MD5 5f5c3f76ea4676e743612e38341780fe files/digest-rt-3.2.1 61
@@ -22,7 +22,7 @@ MD5 73c354dd8ba0f64a74e5c6cd01b33834 files/3.4.2/rt_apache2_fcgi.conf 993
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC++NBEzitwsaoONoRAmAnAJ9gdX8+yPtDXTIvHLacPpcnxB9/QQCfax0f
-CyRYBO6Mrfnq5dNkRRkc6kQ=
-=4qn6
+iD8DBQFDC3kdEzitwsaoONoRArzOAJ0VcDUgMpCPDimQa9T0PkdhxSF8zACfbE3n
+xqHg5MX8Yx/2quj5n1qd22o=
+=x1EQ
 -----END PGP SIGNATURE-----
