@@ -86,9 +86,6 @@ nas
 odbc
 postgres
 
-# masked until the missing dylib extension is fixed
-pcre
-
 # breaks clisp builds
 fastcgi
 
