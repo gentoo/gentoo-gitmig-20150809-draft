@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 81af13d45943a9638f0d7de071256bf8 lighttpd-1.3.16.ebuild 2549
 MD5 49ded22216ffc6092d1a1e04a6e420c1 lighttpd-1.3.13-r3.ebuild 2607
-MD5 67d5f19b3fc3fb8079ad39868c0a95a6 lighttpd-1.4.1.ebuild 4862
-MD5 8b5d92b4aed3c62cb7270e292eafc356 ChangeLog 10500
+MD5 9c3e9269d6b586681d2dac764a336288 lighttpd-1.4.1.ebuild 3989
+MD5 22a8d647c75b7b9fb2a22a9f6a45d996 ChangeLog 10606
 MD5 6a9d4814404d8d51327e5b8306ee3d7e metadata.xml 726
 MD5 1d925aed297ec4541fb230dd19e11bc1 files/spawn-fcgi.confd 1076
 MD5 f984dc26b2bc491272d302ab453f6e6b files/lighttpd-1.3.13-ldap-binddn.diff 3863
@@ -27,7 +27,7 @@ MD5 cac2b9328b62830cb4601f83695b541e files/conf/mime-types.conf 2965
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCfboEZCkKN40op4RAsz1AKCbl5RvOCQLZUpHzAkUlYmtFewN4wCeIO6R
-y6q8BGp9Sx0Lj9QGP6ZqKo4=
-=3VIE
+iD8DBQFDCnphEZCkKN40op4RAs2UAJ9K7fzj88QSPKYXtNlaOZH2QNzYYACfZzU6
+j1PaZEj8/Z71sDEMFplvVnE=
+=weLK
 -----END PGP SIGNATURE-----

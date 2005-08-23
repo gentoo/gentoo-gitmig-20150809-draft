@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.1.ebuild,v 1.1 2005/08/22 16:01:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.1.ebuild,v 1.2 2005/08/23 01:21:48 ka0ttic Exp $
 
-inherit eutils check-kernel toolchain-funcs
+inherit eutils toolchain-funcs
 
 # bug #97661 - tests try to load modules from /usr/lib/lighttpd.
 # Needless to say, this will fail because either
@@ -41,8 +41,7 @@ RDEPEND="app-arch/bzip2
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
 
-# update certain parts of lighttpd.conf based on
-# conditionals (such as kernel, USE flags, etc).
+# update certain parts of lighttpd.conf based on conditionals
 update_config() {
 	local config="/etc/lighttpd/lighttpd.conf"
 
@@ -53,29 +52,6 @@ update_config() {
 	# enable stat() caching
 	use fam && \
 		dosed 's|#\(.*stat-cache.*$\)|\1|' ${config}
-
-	# Note to arch maintainers, the "linux-sysepoll" event-handler doesn't
-	# seem to work on mips even with a 2.6 kernel, so please make sure you
-	# test the respective server.event-handler option before adding your
-	# arch.
-	case "$(tc-arch)" in
-		x86)
-			# use appropriate server.event-handler directive based on kernel
-			if use kernel_linux ; then
-
-				is_2_6_kernel && \
-					dosed 's|#\(.*event-handler.*sysepoll.*$\)|\1|' ${config}
-
-				is_2_4_kernel &&
-					dosed 's|#\(.*event-handler.*rtsig.*$\)|\1|' ${config}
-
-			elif use kernel_FreeBSD ; then
-				dosed 's|#\(.*event-handler.*kqueue.*$\)|\1|' ${config}
-			fi
-			;;
-		*)
-			;;
-	esac
 }
 
 src_unpack() {
@@ -97,16 +73,8 @@ src_compile() {
 #    automake --add-missing --copy || die "automake failed"
 #    autoconf || die "autoconf failed"
 
-	local myconf="--libdir=/usr/$(get_libdir)/${PN}"
-
-	# upstream recommends disabling LFS support with a 2.4.x kernel
-	if is_2_4_kernel ; then
-		myconf="${myconf} --disable-lfs"
-	else
-		myconf="${myconf} --enable-lfs"
-	fi
-
-	econf ${myconf} \
+	econf --libdir=/usr/$(get_libdir)/${PN} \
+		--enable-lfs \
 		$(use_enable ipv6) \
 		$(use_with fam gamin) \
 		$(use_with gdbm) \
