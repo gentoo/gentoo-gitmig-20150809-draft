@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4dfa2e42480e78859270651d55932b8 smpeg-0.4.4-r5.ebuild 1600
-MD5 f29cad817e61bb94d6244bdeece339fd ChangeLog 2964
+MD5 23c62460dfe595881ed6b677553311b3 smpeg-0.4.4-r6.ebuild 1600
+MD5 048cff2a038c980a2c7a2631339ed9c7 ChangeLog 3199
+MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r6 63
 MD5 f70fffdbc4af6ca684817ede925c6087 files/smpeg-0.4.4-config.patch 472
 MD5 dcc2db7c8aa509096fc557b99bd35490 files/smpeg-0.4.4-m4.patch 233
-MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r5 63
 MD5 ff8036a570bdd3a43ed9710f91ca0556 files/smpeg-0.4.4-gnu-stack.patch 907
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6w26gIKl8Uu19MoRArZ4AJ9aAIlPeXxTedUNUgtlISRUMlw5mgCfeN7L
-5zi2bMdl4jvCt96lFyJPPVU=
-=PET8
------END PGP SIGNATURE-----
