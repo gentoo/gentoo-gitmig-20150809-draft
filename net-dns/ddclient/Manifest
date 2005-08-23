@@ -1,11 +1,21 @@
-MD5 085d0d1e822807866fa3c77a4fe8ea12 ChangeLog 3714
-MD5 8a294636aa63272177527a8786f6e458 metadata.xml 335
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b63cb5ce756b41980648237f3dd868a0 ChangeLog 3845
 MD5 7c0eab9aa1738bc6cc77ab7d1199b152 ddclient-3.6.3.ebuild 780
-MD5 11dc49b855de075e148d4942f858c321 ddclient-3.6.6.ebuild 1691
-MD5 938d0005b167a69deca19f3b6de7738f files/ddclient.rc6 718
-MD5 bfa4dd80f9d6255946772e0adb981bf7 files/digest-ddclient-3.6.3 65
-MD5 488f3a86b6234899dc87b1d1475b9f8c files/digest-ddclient-3.6.6 65
+MD5 8a294636aa63272177527a8786f6e458 metadata.xml 335
+MD5 da0e4b13148d834775e69ad5ad94860b ddclient-3.6.6.ebuild 1687
 MD5 8547bd5960dc49726d62e1699742e474 files/ddclient-daemon0inconfig.diff 581
-MD5 71bb38899e4dd28eb29fdab1f29c8d26 files/ddclient-mss1.diff 415
 MD5 b05219cfd27200ba052fcada5fde3430 files/ddclient-gentoo.diff 422
+MD5 71bb38899e4dd28eb29fdab1f29c8d26 files/ddclient-mss1.diff 415
+MD5 938d0005b167a69deca19f3b6de7738f files/ddclient.rc6 718
+MD5 488f3a86b6234899dc87b1d1475b9f8c files/digest-ddclient-3.6.6 65
+MD5 bfa4dd80f9d6255946772e0adb981bf7 files/digest-ddclient-3.6.3 65
 MD5 edb34c213f0018c0a0a8e6e09f83e45e files/ddclient.init 732
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC5wOmdTrptrqvGERAqt+AKCLjaCxvKi5/KrR8mf9wkrkT22xiQCfaBFZ
+cYypkREG5t72czomzusjgio=
+=9qcl
+-----END PGP SIGNATURE-----

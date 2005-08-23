@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.20 2005/04/28 12:27:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.21 2005/08/23 21:58:23 dragonheart Exp $
+
+  23 Aug 2005; Daniel Black <dragonheart@gentoo.org> ddclient-3.6.6.ebuild:
+  removing /bin/false from enewuser - bug #103421
 
   28 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.3.ebuild,
   ddclient-3.6.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.7 2005/04/28 12:27:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.8 2005/08/23 21:58:23 dragonheart Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND="dev-lang/perl"
 
 pkg_setup() {
 	enewgroup ddclient
-	enewuser ddclient -1 /bin/false /dev/null ddclient
+	enewuser ddclient -1 -1 /dev/null ddclient
 }
 
 src_unpack() {
