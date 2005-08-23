@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ca023531b8504b06dd1028cc2100f6ab xdm-0.99.0-r1.ebuild 867
 MD5 56ff48c705766342b8d577da6ec34aca xdm-0.99.0.ebuild 678
 MD5 0c9ff8651572a233f0b3417d84c3ed9f ChangeLog 1030
@@ -6,3 +9,10 @@ MD5 c6dd3e9a9e557b9cba51ff77cb6108a4 files/Xsession 1521
 MD5 d138f3f50b73fd1c0670ac927a5bc295 files/xdm.pamd 257
 MD5 d73361c3f6f0e02b6250ec10fc75339b files/digest-xdm-0.99.0 63
 MD5 a450ed630abbeb76251b69ad9133fc03 files/xdm.start 3411
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCxRv2G5bA0cA/ScRAlacAJ9jzTisr0vc/Bmz5dHp5BvGL4dxnQCg0IsE
+5/HFcTL0jpCOcshFRxcZ2s4=
+=1RMP
+-----END PGP SIGNATURE-----
