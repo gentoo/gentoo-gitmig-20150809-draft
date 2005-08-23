@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4-r1.ebuild,v 1.4 2005/06/09 13:23:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4-r1.ebuild,v 1.5 2005/08/23 21:16:04 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -115,9 +115,9 @@ src_install() {
 
 	einfo "Installing menu shortcuts..."
 	dodir /usr/share
-	cp -a ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
+	cp -pPR ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 
-	use kde && cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}/usr/share
+	use kde && cp -pPR ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}/usr/share
 
 	for x in ${D}${INSTDIR}/share/kde/net/*.desktop; do
 		# We have to handle soffice and setup differently

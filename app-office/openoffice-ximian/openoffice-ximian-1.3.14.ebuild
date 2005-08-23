@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.14.ebuild,v 1.3 2005/06/29 20:48:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.14.ebuild,v 1.4 2005/08/23 21:18:38 suka Exp $
 
 # Notes:
 #
@@ -319,14 +319,14 @@ src_unpack() {
 
 	einfo "Installing / Scaling Icons"
 	${PATCHDIR}/bin/scale-icons ${S} || die
-	cp -af ${ICONDIR}/* ${S} || die
+	cp -pPRf ${ICONDIR}/* ${S} || die
 
 	einfo "Copying splash screens in place"
-	cp -af ${WORKDIR}/gentoo-splash/open*.bmp ${S}/offmgr/res/ || die
+	cp -pPRf ${WORKDIR}/gentoo-splash/open*.bmp ${S}/offmgr/res/ || die
 
 	einfo "Copying libpwd tarball in build dir"
 	mkdir -p ${S}/libwpd/download/ || die
-	cp -af ${DISTDIR}/libwpd-0.8.0.tar.gz ${S}/libwpd/download/ || die
+	cp -pPRf ${DISTDIR}/libwpd-0.8.0.tar.gz ${S}/libwpd/download/ || die
 
 	einfo "Munging font mappings ..."
 	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu || die

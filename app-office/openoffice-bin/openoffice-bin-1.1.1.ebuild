@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.17 2005/01/29 12:13:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.18 2005/08/23 21:16:04 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -159,7 +159,7 @@ src_install() {
 		doins ${kdeloc}/.directory
 		dodir /usr/share
 		# Install the icons and mime info
-		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
+		cp -pPR ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 
 		for x in ${kdeloc}/*.desktop
 		do
