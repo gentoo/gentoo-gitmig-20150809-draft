@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.35.ebuild,v 1.1 2005/08/11 09:31:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.35.ebuild,v 1.2 2005/08/23 10:27:04 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -137,6 +137,7 @@ src_unpack() {
 	for i in $(find . -name Makefile); do
 		sed -i 's:-C \$(KDIR) SUBDIRS=:-C $(KDIR) $(if $(KBUILD_OUTPUT),O=$(KBUILD_OUTPUT)) SUBDIRS=:' ${i}
 		sed -i 's:$(PWD)/../lib/$(CARD)-lib.o:$(LIBDIR)/$(CARD)-lib.o:' ${i}
+		sed -i "s:\$(PWD)/../lib/driver-lib.o:${S}/e2220pc/lib/driver-lib.o:" ${i}
 		convert_to_m ${i}
 	done
 }
