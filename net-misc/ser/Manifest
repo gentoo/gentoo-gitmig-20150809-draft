@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ee53641669d3c08560198d706c9d2f11 ser-0.9.0.ebuild 3650
 MD5 922d6546e4ca772db657a8dc45743da6 ser-0.8.10.ebuild 1736
 MD5 1bfbee0d5c39510630621dc1bd9e2900 ChangeLog 2377
@@ -15,3 +18,10 @@ MD5 16fc6b4f457162a12869d1ac72dc86f5 files/ser.rc6 549
 MD5 13df81c549263be3a93c93095cac54c2 files/ethz-1.0-ser-0.9.0.diff 378
 MD5 978419896dcd1a055ff3da9c3bfbcdd0 files/digest-ser-0.8.9 65
 MD5 6e319943ee713a85093870eb1c28a0d6 files/ldap-1.0-ser-0.9.0.diff 301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyHtj5H05b2HAEkRAjkFAJ44+4kvv1EbJPc2t6gzLrKpoBd/rgCgiBSY
+F4/ZHvbP6aTFyZ781Nq0FUs=
+=xywe
+-----END PGP SIGNATURE-----

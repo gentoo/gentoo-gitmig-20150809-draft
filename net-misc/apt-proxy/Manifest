@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bb1a38ad1ab3be16bd701e2c9a0fb434 ChangeLog 668
 MD5 9d91e4c49de1e0862ac896a03b5e694f apt-proxy-1.3.0.ebuild 1780
 MD5 d1d1a00aaf40c6c5ef34fcb8324d2d4a files/apt-proxy 454
 MD5 1490f2b8b736c9a2e867916fa179ea62 files/apt-proxy-1.3.0-sh.patch 438
 MD5 53f976abbe98f7765b80a2471282dcde files/digest-apt-proxy-1.3.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyGRj5H05b2HAEkRAo77AJ99ONPHOyxMidMnrLSOG0eJI4VvtQCfacxs
+fOJD+WRy7GK+0gOMPyXAPDc=
+=ayUa
+-----END PGP SIGNATURE-----
