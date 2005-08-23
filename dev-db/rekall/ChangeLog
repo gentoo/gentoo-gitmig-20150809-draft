@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/rekall
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.16 2005/06/27 20:57:54 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.17 2005/08/23 22:10:24 greg_g Exp $
+
+  23 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> rekall-2.2.4.ebuild:
+  Stable on x86.
 
   27 Jun 2005; Herbie Hopkins <herbs@gentoo.org> rekall-2.2.4.ebuild:
   Marked ~amd64 wrt bug #97252.
