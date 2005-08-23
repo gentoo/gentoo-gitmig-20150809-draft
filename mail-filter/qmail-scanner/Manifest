@@ -1,17 +1,27 @@
-MD5 79f1d76ef1e5316e6fbf87bb40985d63 ChangeLog 7051
-MD5 7df733d43f5875dfc63bae636203b8cb metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e006e289d10b3c7fce92af8a88abadca qmail-scanner-1.23-r3.ebuild 4926
+MD5 dc661487c83e84ee96b2a0a58d5adcab qmail-scanner-1.24.ebuild 4923
+MD5 cbe8226432164d97611c827769eff304 qmail-scanner-1.25-r1.ebuild 5029
+MD5 07f4c2d13a3303e475b855ed197acb72 qmail-scanner-1.23-r2.ebuild 4928
 MD5 e38875beaf16ef06fcb01c61a720990d qmail-scanner-1.16-r2.ebuild 2319
-MD5 874e8edcd5b3ea24aaf900091b4682ff qmail-scanner-1.23-r2.ebuild 4939
-MD5 88d1eaad615ece7c3b44a2463a41c794 qmail-scanner-1.23-r3.ebuild 4937
-MD5 973f03bc899ab4e4697b61394d2b4fae qmail-scanner-1.24.ebuild 4934
-MD5 03f67716ec37877c147a5cb552572cb0 qmail-scanner-1.25-r1.ebuild 5037
-MD5 dfe13e53837618c6554e704dea5bd7de qmail-scanner-1.25.ebuild 4979
+MD5 0d4399742121dd7d17b17ad37247cf6c ChangeLog 7304
+MD5 7df733d43f5875dfc63bae636203b8cb metadata.xml 158
+MD5 44b2d926f6fc0a7490ab5deeecf2577d qmail-scanner-1.25.ebuild 4968
+MD5 6f6fc9e3db3985ba4ae5a6203d2d6abf files/qmailscanner.cronjob 50
+MD5 b626340aa9646bcd929b6f8ce0e4a0e2 files/digest-qmail-scanner-1.24 139
+MD5 ccef1593fec0a4c9435fe1d5dd881309 files/digest-qmail-scanner-1.25 140
+MD5 055c5ac64c689a669b8ccd6bc5f6553d files/qmailscanner.logrotate 147
+MD5 1d80eca1d4792a4073f51eb59f02960b files/qmail-scanner-queue.pl.patch 240
 MD5 21cbccfc2015bf74d509a5b329ef4b30 files/digest-qmail-scanner-1.16-r2 67
 MD5 c6351759d589862bf81247f857fb2038 files/digest-qmail-scanner-1.23-r2 139
 MD5 109da745344755ce96b85ccb255ff736 files/digest-qmail-scanner-1.23-r3 139
-MD5 b626340aa9646bcd929b6f8ce0e4a0e2 files/digest-qmail-scanner-1.24 139
-MD5 ccef1593fec0a4c9435fe1d5dd881309 files/digest-qmail-scanner-1.25 140
 MD5 ff83ea44513fae0bbfc5bcacbc34e394 files/digest-qmail-scanner-1.25-r1 140
-MD5 1d80eca1d4792a4073f51eb59f02960b files/qmail-scanner-queue.pl.patch 240
-MD5 6f6fc9e3db3985ba4ae5a6203d2d6abf files/qmailscanner.cronjob 50
-MD5 055c5ac64c689a669b8ccd6bc5f6553d files/qmailscanner.logrotate 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyPsQlM6RnzZP+IRArBIAKCKzFVnvQvSGZi83Ggg0kAdqTUuKACfWC4A
+iVWgPieYkLhWbQQwEr7ajlE=
+=m3Uu
+-----END PGP SIGNATURE-----

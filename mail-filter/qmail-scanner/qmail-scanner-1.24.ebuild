@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.24.ebuild,v 1.5 2005/05/30 18:44:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.24.ebuild,v 1.6 2005/08/23 13:25:24 ticho Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -32,7 +32,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 
 pkg_setup() {
 	enewgroup qscand 210
-	enewuser qscand 210 /bin/false /var/spool/qmailscan qscand
+	enewuser qscand 210 -1 /var/spool/qmailscan qscand
 }
 
 pkg_preinst() {
