@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.3.1.4319.0.ebuild,v 1.2 2005/07/09 22:56:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/unsermake/unsermake-0.3.1.4319.0.ebuild,v 1.3 2005/08/23 17:31:32 flameeyes Exp $
 
 IUSE=""
 DESCRIPTION="Unsermake - Advanced KDE build system"
@@ -21,7 +21,7 @@ src_compile()
 src_install()
 {
 	dodir /usr/kde/unsermake
-	cp -a ${S}/* ${D}/usr/kde/unsermake
+	cp -pPR ${S}/* ${D}/usr/kde/unsermake
 }
 
 pkg_postinst()
