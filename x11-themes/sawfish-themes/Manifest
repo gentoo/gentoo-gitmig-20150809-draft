@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 821ef6f91e185f716145ffa6d4bfb277 sawfish-themes-0.0.1-r1.ebuild 805
 MD5 e4a4bd2493844e170a433a2495e263dd sawfish-themes-0.0.1-r3.ebuild 3002
 MD5 d70c68877cb2d1c94823194d95aba3d9 ChangeLog 1947
 MD5 bf3a142da50a69d2f147e1b9c8527e8b files/digest-sawfish-themes-0.0.1-r3 3329
 MD5 e051461e73b1005dcc5e3ef5f4ee000b files/digest-sawfish-themes-0.0.1-r1 126
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC6LHKRy60XGEcJIRAsk1AJ9GthyauBuYXkHYC/qM2nIqCp5gfwCfcuk3
+Ieqra5srfOCRnXIXPuyyo8M=
+=GleH
+-----END PGP SIGNATURE-----
