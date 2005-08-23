@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.10 2005/04/02 08:47:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.ebuild,v 1.11 2005/08/23 17:52:28 flameeyes Exp $
 
 inherit gnuconfig
 
@@ -39,5 +39,5 @@ src_install() {
 	docinto xlhtml
 	dodoc xlhtml/{ChangeLog,README,THANKS,TODO}
 	rm -rf xlhtml/contrib/CVS
-	cp -ra xlhtml/contrib ${D}/usr/share/doc/${PF}/xlhtml
+	cp -pPR xlhtml/contrib ${D}/usr/share/doc/${PF}/xlhtml
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sword-modules
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.14 2005/07/27 03:22:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.15 2005/08/23 17:54:25 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  sword-modules-20041209.ebuild:
+  Don't use cp -a.
 
   27 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
   sword-modules-20040503.ebuild, sword-modules-20041209.ebuild:

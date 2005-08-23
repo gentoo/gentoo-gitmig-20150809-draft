@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.4 2005/07/27 03:22:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-20041209.ebuild,v 1.5 2005/08/23 17:54:25 flameeyes Exp $
 
 CROSSWIREFTP="http://www.crosswire.org/ftpmirror/pub/sword/packages/rawzip"
 DESCRIPTION="a collection of modules for the sword project"
@@ -83,7 +83,7 @@ src_compile() {
 
 src_install () {
 	dodir /usr/share/sword/modules || die
-	cp -a ${S}/modules/* ${D}/usr/share/sword/modules/ || die
+	cp -pPR ${S}/modules/* ${D}/usr/share/sword/modules/ || die
 	dodir /usr/share/sword/mods.d || die
 	cp ${S}/mods.d/* ${D}/usr/share/sword/mods.d/ || die
 }
