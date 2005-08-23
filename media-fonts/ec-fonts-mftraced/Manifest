@@ -1,4 +1,14 @@
-MD5 4e6316ecb0fe05c0c46bbe8b5f69035d ec-fonts-mftraced-1.0.8.ebuild 1177
-MD5 f677120f8973c5b1b3ec833c9c831b22 ChangeLog 862
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 50117cfdeb267d9181cf9cacac87d8a6 metadata.xml 256
+MD5 5ee1c8cd04c3d596bc797a291ad8a099 ec-fonts-mftraced-1.0.8.ebuild 1176
+MD5 fe642344f5a23eb60d77d1ef49f412e2 ChangeLog 969
 MD5 0bdccd13567695dc92156286dbc7e32e files/digest-ec-fonts-mftraced-1.0.8 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC4jyKRy60XGEcJIRAl5WAJ90iEHe9TEXmSCKZtOzu11+RZLfywCgjIxv
+TzdSTRXuZT67mzTfcBT1a0A=
+=BFyU
+-----END PGP SIGNATURE-----
