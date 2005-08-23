@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ipodslave-0.6.2.ebuild,v 1.4 2005/07/09 04:02:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ipodslave-0.6.2.ebuild,v 1.5 2005/08/23 21:12:07 malc Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://kpod.sourceforge.net/ipodslave/"
 SRC_URI="mirror://sourceforge/kpod/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="media-libs/id3lib"
 
