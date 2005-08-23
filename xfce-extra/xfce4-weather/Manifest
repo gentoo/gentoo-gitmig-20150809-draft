@@ -2,8 +2,8 @@ MD5 155c1ba67e68d225489b501e7e5ba790 xfce4-weather-0.3.9.1-r1.ebuild 375
 MD5 de3394f83ebd1cb70abbc0f06a86da58 xfce4-weather-0.4.0.ebuild 360
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 f53ee25c7619ca5724d7fc941d269955 xfce4-weather-0.4.9.ebuild 379
-MD5 dd6f52a285561ecb95ab4848b4a449e1 ChangeLog 1177
-MD5 71aa2e7c7251d8202980b2d3f97041dd xfce4-weather-0.4.1.ebuild 377
+MD5 13cbc2f55fd491698451dcc5d6192d14 ChangeLog 1275
+MD5 7ab6fa073c622a687aad96b4dc406d3d xfce4-weather-0.4.1.ebuild 379
 MD5 3c3a25cc31302cbe7287379a408df018 xfce4-weather-0.3.9.1.ebuild 706
 MD5 28a8646a05ce69fdda6cdcc567d218f0 files/digest-xfce4-weather-0.4.9 78
 MD5 be989a36ac26d1548a8f34f645093c49 files/digest-xfce4-weather-0.4.0 78
