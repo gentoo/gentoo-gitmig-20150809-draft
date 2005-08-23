@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 32c504666cfbf4b5945eff5786ca636f ChangeLog 1613
 MD5 848a155311c1ec257784baf656d4f0b8 drupal-4.5.2.ebuild 30653
-MD5 41fb77d21adb05d706a2ba5ff4f17799 drupal-4.6.2.ebuild 3753
-MD5 31a7762b97d644514268dab18f853a27 metadata.xml 274
-MD5 3696ea6a2d2569722c9feebb2c9a7093 files/digest-drupal-4.6.2 64
-MD5 6b1fbcd29d9526434338ea3f8b61e5c0 files/digest-drupal-4.5.2 64
-MD5 0f20a567ce1310d62af69bd56921cea3 files/postinstall-en.txt 2595
+MD5 f339293d241227bd0e737862a102341f drupal-4.6.2.ebuild 3756
+MD5 57ac487dc3baa53dc38afabe1f689999 files/4.6.0/engines 12
 MD5 044a234820dd9d17176aeecb72317f97 files/4.6.0/language 81
 MD5 3ddf6c4a30991fd5618b3f0e88e1b6de files/4.6.0/modules 1455
 MD5 1c97d7ff8b82cf1bbfebde2a2e533d90 files/4.6.0/themes 204
-MD5 57ac487dc3baa53dc38afabe1f689999 files/4.6.0/engines 12
+MD5 6b1fbcd29d9526434338ea3f8b61e5c0 files/digest-drupal-4.5.2 64
+MD5 3696ea6a2d2569722c9feebb2c9a7093 files/digest-drupal-4.6.2 64
+MD5 0f20a567ce1310d62af69bd56921cea3 files/postinstall-en.txt 2595
+MD5 31a7762b97d644514268dab18f853a27 metadata.xml 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCzZ6I1lqEGTUzyQRAj2WAKDUPJUwWk1cBVl0qoEPBzGM5ZMl7gCgzhWi
+l+wHgemaw4UMmkwgYkoxQow=
+=q8ZU
+-----END PGP SIGNATURE-----
