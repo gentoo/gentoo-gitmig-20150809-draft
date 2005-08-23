@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.0.ebuild,v 1.3 2005/08/23 19:48:57 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.7.ebuild,v 1.1 2005/08/23 19:48:57 batlogg Exp $
 
 inherit eutils
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
-SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-final.tar.gz"
+SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-final.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
 IUSE="unicode"
 
 RDEPEND="=dev-lang/python-2.3*"
@@ -52,7 +52,6 @@ src_install() {
 	dodoc README.txt
 	dodoc doc/*.txt
 	docinto PLATFORMS ; dodoc doc/PLATFORMS/*
-	docinto ZEO ; dodoc doc/ZEO/*
 
 	# Patched StructuredText will accept source text formatted in utf-8 encoding, 
 	# apply all formattings and output utf-8 encoded text.
@@ -73,7 +72,7 @@ src_install() {
 	 	einfo "import sys"
 		einfo "sys.setdefaultencoding('utf8')"
 		cd ${S}/lib/python/StructuredText/
-		epatch ${FILESDIR}/2.7.6/i18n-1.0.0.patch
+		epatch ${FILESDIR}/${PV}/i18n-1.0.0.patch
 		sleep 15
 		cd ${S}
 	fi
@@ -92,7 +91,7 @@ pkg_postinst() {
 	# create the zope user and group for backward compatibility
 	enewgroup ${ZGID} 261
 	usermod -g ${ZGID} ${ZUID} 2>&1 >/dev/null || \
-	enewuser ${ZUID} 261 -1 /var/lib/zope  ${ZGID}
+	enewuser ${ZUID} 261 /bin/false /var/lib/zope  ${ZGID}
 
 	einfo "Be warned that you need at least one zope instance to run zope."
 	einfo "Please emerge zope-config for futher instance management."
