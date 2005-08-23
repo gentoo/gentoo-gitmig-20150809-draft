@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unfonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.6 2005/07/15 17:16:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.7 2005/08/23 21:25:20 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> unfonts-1.0.ebuild:
+  Added ~sparc
 
   15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> unfonts-1.0.ebuild:
   Stable on amd64.

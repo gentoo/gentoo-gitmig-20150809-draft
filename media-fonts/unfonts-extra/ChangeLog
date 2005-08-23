@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unfonts-extra
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.4 2005/07/15 17:17:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.5 2005/08/23 21:26:41 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  unfonts-extra-1.0.1.ebuild:
+  Added ~sparc
 
   15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   unfonts-extra-1.0.1.ebuild:
