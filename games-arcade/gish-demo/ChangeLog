@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gish-demo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.3 2005/08/11 20:32:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.4 2005/08/23 19:00:00 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  gish-demo-1.0.0.ebuild:
+  cp -a -> cp -dpR for bug #103487.
 
   11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> gish-demo-1.0.0.ebuild:
   Call has_multilib_profile from pkg_setup instead of global scope.
