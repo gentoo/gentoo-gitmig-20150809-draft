@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.14.ebuild,v 1.6 2005/08/17 01:46:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.14.ebuild,v 1.7 2005/08/23 17:19:16 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -144,7 +144,7 @@ pkg_setup() {
 	# xfs user
 	if use font-server; then
 		enewgroup xfs 33
-		enewuser xfs 33 /bin/false /etc/X11/fs xfs
+		enewuser xfs 33 -1 /etc/X11/fs xfs
 	fi
 }
 
