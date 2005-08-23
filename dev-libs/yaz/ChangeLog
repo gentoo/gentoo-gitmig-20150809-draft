@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.22 2005/08/19 19:33:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.23 2005/08/23 16:11:51 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> yaz-2.1.8-r1.ebuild:
+  stable on ia64
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> yaz-2.1.8-r1.ebuild:
   Stable on ppc.
