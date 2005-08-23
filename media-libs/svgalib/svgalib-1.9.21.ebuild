@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.10 2005/05/15 18:39:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.11 2005/08/23 18:09:41 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -73,7 +73,7 @@ src_compile() {
 	rm -f src/svgalib_helper.h
 	make OPTIMIZE="${CFLAGS}" -C src libvga.so.${PV} \
 		|| die "Failed to build libvga.so.${PV}!"
-	cp -a src/libvga.so.${PV} sharedlib/
+	cp -pPR src/libvga.so.${PV} sharedlib/
 	# Build threeDKit ...
 	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"

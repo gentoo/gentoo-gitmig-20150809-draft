@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-0.1.6-r1.ebuild,v 1.2 2005/08/21 18:09:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-0.1.6-r1.ebuild,v 1.3 2005/08/23 18:06:35 flameeyes Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 	done
 
 	dolib.a .libs/libjpeg-mmx.a || die "dolib.a"
-	cp -a .libs/libjpeg-mmx.so* libjpeg-mmx.la "${D}"/usr/lib/ || die "dolib.so"
+	cp -pPR .libs/libjpeg-mmx.so* libjpeg-mmx.la "${D}"/usr/lib/ || die "dolib.so"
 
 	dodoc README change.log structure.doc libjpeg.doc
 }

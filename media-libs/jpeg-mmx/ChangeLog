@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg-mmx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.16 2005/08/21 18:09:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.17 2005/08/23 18:06:35 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  jpeg-mmx-0.1.6-r1.ebuild:
+  Don't use cp -a.
 
 *jpeg-mmx-0.1.6-r1 (21 Aug 2005)
 
