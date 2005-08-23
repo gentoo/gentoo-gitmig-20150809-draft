@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.9.ebuild,v 1.1 2005/08/07 20:23:39 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.9.ebuild,v 1.2 2005/08/23 21:53:35 humpback Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,7 +67,7 @@ src_install() {
 
 	## add user and group
 	enewgroup jabber
-	enewuser jabber -1 /bin/false /var/jabberd jabber
+	enewuser jabber -1 -1 /var/jabberd jabber
 
 	## set binary permissions
 	fowners :jabber /usr/bin/{jabberd,router,resolver,sm,c2s,s2s}
@@ -83,7 +83,7 @@ src_install() {
 		done
 	done
 
-	#ä jabberd config & init script
+	#Ã¤ jabberd config & init script
 	exeinto /etc/init.d; newexe ${FILESDIR}/jabber.init.bundled jabber
 #	exeinto /etc/init.d; newexe ${FILESDIR}/jabber.init.gentoo jabber
 	exeinto /etc/jabberd; newexe ${FILESDIR}/self-cert.jabberd-2.sh self-cert.sh

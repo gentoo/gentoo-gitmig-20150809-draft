@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.59 2005/08/07 20:26:46 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.60 2005/08/23 21:53:35 humpback Exp $
+
+  23 Aug 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  jabberd-1.4.3-r5.ebuild, jabberd-2.0.9.ebuild:
+  QA issue #103421
 
   07 Aug 2005; Wolfram Schlich <wschlich@gentoo.org>
   -files/jabberd-2.0.8-r2-FindBin.patch, -jabberd-2.0.8-r2.ebuild:

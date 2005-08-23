@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44ddbc343931de2f3bfe01390ab72532 ChangeLog 424
+MD5 11bcb83c95b22b24bc3ab9fc1efcc4a5 pymsn-t-0.9.3.ebuild 1799
+MD5 70973c84d0c0842216a5dda75381f01c ChangeLog 740
 MD5 08d64f26d0872c7dfe0f37e7ea6a83c3 metadata.xml 301
-MD5 b43fbc268a47deef5d7c5df21e904710 pymsn-t-0.9.2.ebuild 1605
-MD5 a5d34b92f593910aa4e4e6efd01d3dbf files/digest-pymsn-t-0.9.2 63
-MD5 eccf7d429ba0a26d05d96e04376d203e files/pymsn-t-0.9.2-arguments.patch 256
+MD5 0bda0fd24a1c22f02fd4cdc790263cbd files/pymsn-t-0.9.3-config.patch 818
+MD5 3c853ee1b4448f47ca75529ac5a2e955 files/digest-pymsn-t-0.9.3 63
 MD5 786423ba715473aa0fa09fc54b0725d0 files/pymsn-t.initd 405
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCe17A8zY1VwezZiERAtm4AJ9mStTQZ9K2ConVFGWFwDf2ZOsZWwCgo4Rf
-zG7AqN2o5lFq96xcUV54GJg=
-=dIR/
------END PGP SIGNATURE-----
+MD5 eccf7d429ba0a26d05d96e04376d203e files/pymsn-t-0.9.3-arguments.patch 256

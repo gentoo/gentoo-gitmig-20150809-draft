@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.3 2005/04/16 14:00:58 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.4 2005/08/23 21:54:59 humpback Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 
 src_install() {
 	enewgroup jabber
-	enewuser ejabberd -1 /bin/false /var/run/ejabberd jabber
+	enewuser ejabberd -1 -1 /var/run/ejabberd jabber
 
 	make DESTDIR=${D} install || die "install failed"
 
