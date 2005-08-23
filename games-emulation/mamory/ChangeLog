@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mamory
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/ChangeLog,v 1.12 2005/05/26 16:46:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/ChangeLog,v 1.13 2005/08/23 16:17:21 mr_bones_ Exp $
+
+*mamory-0.2.20 (23 Aug 2005)
+
+  23 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +mamory-0.2.20.ebuild:
+  version bump
 
 *mamory-0.2.19 (26 May 2005)
 

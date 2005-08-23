@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 89f73a0f98171201ef269a21f025ff48 mamory-0.2.19.ebuild 763
-MD5 bbc51f3c06bb2345cbb45944c596ebda ChangeLog 1633
+MD5 a23d58aee6721dca6829f01b85df1196 mamory-0.2.20.ebuild 763
+MD5 874f11d127b797b38275c778ef3b09d5 ChangeLog 1759
+MD5 3beba72b666374df5abb9e31252a78d5 files/digest-mamory-0.2.20 65
 MD5 443aa46a1059b6341a9e4b9eb1eb9d7b files/digest-mamory-0.2.19 65
