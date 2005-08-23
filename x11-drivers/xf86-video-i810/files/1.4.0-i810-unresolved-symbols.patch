@@ -1,0 +1,13 @@
+https://bugs.freedesktop.org/show_bug.cgi?id=4066
+
+--- src/Makefile.am.old	2005-08-12 21:03:59.000000000 -0600
++++ src/Makefile.am	2005-08-12 21:04:19.000000000 -0600
+@@ -23,7 +23,7 @@
+ # -avoid-version prevents gratuitous .0.0.0 version numbers on the end
+ # _ladir passes a dummy rpath to libtool so the thing will actually link
+ # TODO: -nostdlib/-Bstatic/-lgcc platform magic, not installing the .a, etc.
+-AM_CFLAGS = @XORG_CFLAGS@ @DRI_CFLAGS@ -DI830_XV
++AM_CFLAGS = @XORG_CFLAGS@ @DRI_CFLAGS@ -DI830_XV -DBUILD_FOR_I830
+ 
+ i810_drv_la_LTLIBRARIES = i810_drv.la
+ i810_drv_la_LDFLAGS = -module -avoid-version

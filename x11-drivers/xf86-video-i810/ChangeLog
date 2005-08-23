@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.3 2005/08/12 21:14:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.4 2005/08/23 01:14:39 spyderous Exp $
+
+*xf86-video-i810-1.4.0-r2 (23 Aug 2005)
+
+  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/1.4.0-i810-unresolved-symbols.patch,
+  +xf86-video-i810-1.4.0-r2.ebuild:
+  (fd.o #4066) Add 1.4.0-i810-unresolved-symbols.patch to make i810 driver work.
 
   12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -files/dri.patch:
   Pull unused patch.
