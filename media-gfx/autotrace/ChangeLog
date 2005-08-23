@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.18 2005/06/03 14:49:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.19 2005/08/23 20:31:43 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  autotrace-0.31.1-r1.ebuild:
+  Stable on sparc
 
   03 Jun 2005; Luca Barbato <lu_zero@gentoo.org> metadata.xml:
   Metadata fix
