@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.5-r1.ebuild,v 1.7 2005/07/17 13:36:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.5-r1.ebuild,v 1.8 2005/08/23 01:43:01 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -31,6 +31,7 @@ src_unpack() {
 		-e '/install/s: --strip : :' \
 		-e '/ALL_CFLAGS += $(call check_gcc,-fweb,)/d' \
 		-e '/ALL_CFLAGS += $(call check_gcc,-Wstrict-aliasing=2,)/s,=2,,' \
+		-e "/^lib64/s:=.*:=$(get_libdir):" \
 		Makefile || die "sed Makefile"
 	use ppc && sed -i -e 's:-m64::g' Makefile
 
@@ -53,7 +54,6 @@ src_unpack() {
 src_compile() {
 	replace-flags -O3 -O2
 	emake \
-		lib64="$(get_libdir)" \
 		CC="$(tc-getCC)" \
 		CPPFLAGS="${CPPFLAGS}" \
 		CFLAGS="${CFLAGS}" \
