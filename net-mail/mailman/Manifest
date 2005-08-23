@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 76603f9b147d34de9a95b655c5e0b8d6 mailman-2.1.6.ebuild 4348
 MD5 05917f40fa7c6b761831a298ff3d4662 mailman-2.1.5-r3.ebuild 4447
 MD5 8c528315bd7d3fd689d76c7b88027f8d mailman-2.1.5-r5.ebuild 4018
@@ -26,3 +29,10 @@ MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r3 63
 MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r4 63
 MD5 136d82be0bd84eff6961446171dbe288 files/digest-mailman-2.1.5-r5 63
 MD5 ce6d06f51e3da34e92048369e9fe14d2 files/mailman.rc 597
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyb/QlM6RnzZP+IRAs5MAJ9KNl+uD1u5cI5ynwB13H0cwb1sJQCggx3J
+XMWzNWofECkhdWAtAWOFQK4=
+=TZ1S
+-----END PGP SIGNATURE-----
