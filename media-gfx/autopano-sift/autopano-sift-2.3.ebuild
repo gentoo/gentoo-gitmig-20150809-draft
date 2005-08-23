@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.3.ebuild,v 1.1 2005/08/10 23:02:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.3.ebuild,v 1.2 2005/08/23 01:07:00 hparker Exp $
 
 DESCRIPTION="SIFT algorithm for automatic panorama creation"
 HOMEPAGE="http://user.cs.tu-berlin.de/~nowozin/autopano-sift/"
 SRC_URI="http://user.cs.tu-berlin.de/~nowozin/autopano-sift/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
