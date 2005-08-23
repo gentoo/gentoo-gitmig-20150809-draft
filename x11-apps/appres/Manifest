@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f706dd9f1ad9337c5c0ffd84d67ce445 appres-0.99.0.ebuild 437
 MD5 bdcc80754717b04510324e16b1cea941 ChangeLog 463
 MD5 9f343d8d89afad7b128590f7fe341d60 files/digest-appres-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCm3xgIKl8Uu19MoRAvVQAJkBPSUafammPa7n3cG37ppRCnRLRwCfQw2o
+NXX9BV9pVjc3RajUk2V+4gw=
+=hNpU
+-----END PGP SIGNATURE-----

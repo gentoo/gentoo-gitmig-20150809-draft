@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d191d11111977a66693d6f30cdcddc37 bdftopcf-0.99.0.ebuild 441
 MD5 ff87425c7fa8d2119191a59f84f96dec ChangeLog 653
 MD5 fe4ed2eb4a706fddfc7eedb74723d765 files/digest-bdftopcf-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCm4AgIKl8Uu19MoRAnnHAJ9Xw7Xv0EtDpzrdupD4kKOtRq73WwCfXnOs
+iJsUmF9fWL68A2K3lijOzLs=
+=+Vbj
+-----END PGP SIGNATURE-----
