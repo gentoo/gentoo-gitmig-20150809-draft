@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.0-r1.ebuild,v 1.2 2005/08/22 22:13:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.0-r1.ebuild,v 1.3 2005/08/23 19:32:54 rl03 Exp $
 
 inherit webapp eutils
 
@@ -59,7 +59,7 @@ src_install() {
 
 	# The bulk goes into htdocs
 	# but don't copy INSTALL and README
-	cp -a [[:lower:]]* ${D}/${MY_HTDOCSDIR}
+	cp -pPR [[:lower:]]* ${D}/${MY_HTDOCSDIR}
 
 	# Recursively set server ownership to allow server to write
 	# This is the rough equivalent of the setup.sh script

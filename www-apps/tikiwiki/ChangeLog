@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.17 2005/08/22 22:13:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.18 2005/08/23 19:32:54 rl03 Exp $
+
+  23 Aug 2005; Renat Lumpau <rl03@gentoo.org> tikiwiki-1.9.0-r1.ebuild:
+  Fixing cp -a wrt bug #103487
 
   22 Aug 2005; Renat Lumpau <rl03@gentoo.org> tikiwiki-1.9.0-r1.ebuild:
   Housekeeping
