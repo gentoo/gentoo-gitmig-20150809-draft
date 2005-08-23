@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ezra-sil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ChangeLog,v 1.2 2005/07/26 08:40:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ezra-sil/ChangeLog,v 1.3 2005/08/23 21:05:42 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> ezra-sil-2.0.ebuild:
+  Keyworded ~sparc
 
   26 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> ezra-sil-2.0.ebuild:
   Added to ~amd64.

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/essays1743
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.2 2005/07/26 08:37:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.3 2005/08/23 21:07:01 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> essays1743-1.0.ebuild:
+  Keyworded ~sparc
 
   26 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> essays1743-1.0.ebuild:
   Added to ~amd64.
