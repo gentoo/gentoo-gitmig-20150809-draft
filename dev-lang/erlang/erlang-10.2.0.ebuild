@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.6 2005/07/02 19:19:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.7 2005/08/23 03:03:24 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic elisp-common
 
@@ -31,7 +31,7 @@ SITEFILE=50erlang-gentoo.el
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-export-TARGET.patch
+	epatch "${FILESDIR}"/${PN}-10.2.6-export-TARGET.patch
 }
 
 src_compile() {
