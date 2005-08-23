@@ -1,33 +1,33 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.15 2005/08/23 00:08:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.16 2005/08/23 00:09:36 vapier Exp $
 
-S=${WORKDIR}/freefont
 DESCRIPTION="A Collection of Free Type1 Fonts"
+HOMEPAGE="http://www.gimp.org/"
 SRC_URI="mirror://gimp/fonts/${P}.tar.gz"
-HOMEPAGE="http://www.gimp.org"
-KEYWORDS="~alpha amd64 arm ppc ppc64 s390 sparc x86"
-SLOT="0"
+
 LICENSE="freedist"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm ppc ppc64 s390 sparc x86"
 IUSE="X"
 
-src_install () {
-	insinto /usr/share/fonts/freefont
-	doins *.pfb
+S=${WORKDIR}/freefont
 
-	if use X ;
-	then
-		mkfontscale
-		mkfontdir
-		doins fonts.*
+src_install() {
+	insinto /usr/share/fonts/freefont
+	doins *.pfb || die "ins pfb"
+
+	if use X ; then
+		mkfontscale || die "mkfontscale"
+		mkfontdir || die "mkfontdir"
+		doins fonts.* || die "doins fonts"
 	fi
 
 	dodoc README *.license
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ] &&  [ -x /usr/bin/fc-cache ]
-	then
+	if [ "${ROOT}" = "/" ] &&  [ -x /usr/bin/fc-cache ] ; then
 		echo
 		einfo "Creating font cache..."
 		HOME="/root" /usr/bin/fc-cache -f
