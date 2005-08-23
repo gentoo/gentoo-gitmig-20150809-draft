@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.11.20050330.ebuild,v 1.2 2005/08/09 22:33:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.11.20050330.ebuild,v 1.3 2005/08/23 23:55:13 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
 	epatch "${FILESDIR}"/${P}-stack.patch
+	epatch "${FILESDIR}"/${P}-parallel-build.patch
 	#68948 - esfq/wrr patches
 	epatch \
 		"${FILESDIR}"/2.6.12-rc1-esfq.patch \
