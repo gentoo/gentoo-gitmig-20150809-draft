@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.10 2005/02/03 10:14:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.11 2005/08/23 22:06:40 chainsaw Exp $
+
+  23 Aug 2005; Tony Vroon <chainsaw@gentoo.org> mp3gain-1.4.5.ebuild,
+  mp3gain-1.4.6.ebuild:
+  Stable on x86.
 
 *mp3gain-1.4.6 (03 Feb 2005)
 
