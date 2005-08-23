@@ -1,8 +1,18 @@
-MD5 91a410357bc1006c4807cd3000dfac99 ChangeLog 1410
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5c244ddee2b0c62421aee265e517f7cc shttpd-1.25.ebuild 1780
+MD5 bd88fc019826c4dd830b35e2d40824cb ChangeLog 1524
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
-MD5 fc33f9e3557be0fa4fdd1caa58466dbf shttpd-1.25.ebuild 1789
 MD5 96f18a2cb4943dc62955312a2b7005bc files/digest-shttpd-1.25 62
+MD5 9ea0f73dae901e0662a60f73ea7a34d4 files/shttpd.xinetd 330
 MD5 0c7096f8e2cdb81487516d8cddab2bc0 files/shttpd.conf 1679
 MD5 9db0958112ac0cb70a60afb3fab685de files/shttpd.confd 639
 MD5 af3d01bc4e48b2f3ff04c0e4d899e18f files/shttpd.initd 1231
-MD5 9ea0f73dae901e0662a60f73ea7a34d4 files/shttpd.xinetd 330
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCytgEZCkKN40op4RAvyyAJ9Y4Oe173Lose6FNp+PPOyCcPQ8gQCdEcBU
+adDW7qh5k+5oSjIgxeabIQI=
+=vrIh
+-----END PGP SIGNATURE-----

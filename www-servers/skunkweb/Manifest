@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 01b03bf1f57445b370145fb9484f088d skunkweb-3.4_beta5-r1.ebuild 2612
-MD5 282902426ab8170334187dde271e83a5 skunkweb-3.4.0.ebuild 2671
-MD5 36c9a01b68ab94ab8ee649b184eb5dd3 skunkweb-3.4.0-r1.ebuild 2287
-MD5 527d09abb3537235ef5e0caef2b6db68 ChangeLog 2518
+MD5 09109c1437d71094652d27fc2d1c8753 skunkweb-3.4_beta5-r1.ebuild 2604
+MD5 ab38d0e8bc5ccdb3bb4cdda58cc971d3 skunkweb-3.4.0.ebuild 2663
+MD5 a36a94c0a34520f0a28dd8b3a5491c38 skunkweb-3.4.0-r1.ebuild 2276
+MD5 a3b40c55b2aa759c81e74b18d801d69d ChangeLog 2726
 MD5 8ed4fe3b3e2b2cde0b1eb44f5767d209 metadata.xml 536
-MD5 989480f737f375492dd5444bd6fb8272 skunkweb-3.4_beta5.ebuild 2233
+MD5 ae70a87dc0a16e8c3809944e67befaa4 skunkweb-3.4_beta5.ebuild 2225
 MD5 f649daf3fb435a3f6edc0307de265e57 files/digest-skunkweb-3.4.0 67
 MD5 2b9e491bd99ee6babcfc6eb3f824e646 files/skunkweb-init 518
 MD5 33defac2f69099260dac7f1a043b2643 files/digest-skunkweb-3.4_beta5 67
@@ -14,10 +11,3 @@ MD5 595ca4b94aee6033c092990fdaed80e2 files/skunkweb-cron-cache_cleaner 108
 MD5 33defac2f69099260dac7f1a043b2643 files/digest-skunkweb-3.4_beta5-r1 67
 MD5 2843ae875786bb890bad903d0f005381 files/100_mod_skunkweb.conf 1727
 MD5 f649daf3fb435a3f6edc0307de265e57 files/digest-skunkweb-3.4.0-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz1Q4BXaUFmZvwyMRAkmBAKDYuF4m3dMkeIFLAAFe6HTBs/SN0wCfbCFK
-+tl6D6XowUrO8Cwz+b23IhU=
-=+aPi
------END PGP SIGNATURE-----

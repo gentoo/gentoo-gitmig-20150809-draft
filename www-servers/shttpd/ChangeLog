@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/shttpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.6 2005/08/16 13:18:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.7 2005/08/23 13:56:47 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> shttpd-1.25.ebuild:
+  Use -1 instead of /bin/false, bug #103421.
 
   16 Aug 2005; Luis Medinas <metalgod@gentoo.org> shttpd-1.25.ebuild:
   Added ~amd64 keywords. Closes bug #99272.
