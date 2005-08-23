@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-ethereal
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ethereal/ChangeLog,v 1.1 2005/08/23 06:14:18 kaiowas Exp $
+
+*selinux-ethereal-20050716 (23 Aug 2005)
+
+  23 Aug 2005; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-ethereal-20050716.ebuild:
+  initial commit
+
