@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f6c4d0c0d91b1a1a8c7bc89b17d44040 qmail-1.03-r16.ebuild 21428
 MD5 85378e7d3c494be73cefbf7e9863365d qmail-1.03-r15.ebuild 18807
 MD5 c4a45ded213c13f7bca0c31f85f1c11b ChangeLog 31768
@@ -68,3 +71,10 @@ MD5 0f5e8b8c5d8ab208beee57281c7cf215 files/1.03-r16/qmail-remote-auth-log-fix.pa
 MD5 0600d03067d6a112ff8fef64f8952f5c files/1.03-r16/qmail-1.03-env-servercert.patch 1306
 MD5 b968f9de39ff3cac7e6abbd8705af5f2 files/1.03-r16/qmail-smtpd-relay-reject.gentoo.patch 1206
 MD5 a8f7776c6f7e51e1d23c5d086714b329 files/1.03-r16/invalid-envelope-sender-log.patch 418
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyYpQlM6RnzZP+IRArMdAJ9fCXBqUFUZ2/tVDmRsj5ocXuB+AgCgkAiW
+X67vDQ8iT0XEjogqNj4QG3k=
+=wbM0
+-----END PGP SIGNATURE-----

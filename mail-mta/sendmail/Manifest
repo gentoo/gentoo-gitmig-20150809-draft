@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a64ea83203b75855ea6fdb16f95b2a38 sendmail-8.13.3.ebuild 5992
 MD5 c77f180f8a2e154ffd41becf19407a59 sendmail-8.13.1-r1.ebuild 5962
 MD5 61cfa97f228f4e0839717271a73bd2aa sendmail-8.13.4-r1.ebuild 6287
@@ -20,3 +23,10 @@ MD5 0027be040b9dacdf253813fe2ddb8982 files/digest-sendmail-8.13.1-r1 68
 MD5 470e80bc008f602eb5fcc165f9e3546b files/digest-sendmail-8.13.4-r1 68
 MD5 7b2a2b2f8f608ddbd8b0c1b910ffb981 files/sendmail-delivered_hdr.patch 341
 MD5 4b37f61de2fd8de372a4bd8ab6f92edf files/sendmail-8.12.2-smrsh-paths.patch 5625
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyVzQlM6RnzZP+IRAoNiAJ9dryanMe1d6fvId51hjwalJovqswCcCF1u
+DaPlDX50XZ63y5O5NaAt7sY=
+=wcW+
+-----END PGP SIGNATURE-----
