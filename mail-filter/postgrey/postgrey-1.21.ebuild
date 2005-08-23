@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.21.ebuild,v 1.4 2005/06/13 21:43:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/postgrey-1.21.ebuild,v 1.5 2005/08/23 13:13:34 ticho Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ KEYWORDS="x86 amd64 ~alpha"
 
 pkg_setup() {
 	enewgroup postgrey
-	enewuser postgrey -1 /bin/false /dev/null postgrey
+	enewuser postgrey -1 -1 /dev/null postgrey
 }
 
 src_install () {
