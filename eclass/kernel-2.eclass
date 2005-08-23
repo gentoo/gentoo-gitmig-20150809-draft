@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.140 2005/08/22 16:20:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.141 2005/08/23 01:57:59 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
 #
 # Maintainer: John Mylchreest <johnm@gentoo.org>
-# Copyright 2005 Gentoo Linux
 #
 # Please direct your bugs to the current eclass maintainer :)
 
@@ -306,7 +305,8 @@ unpack_2_4() {
 	cd "${S}"
 	# this file is required for other things to build properly,
 	# so we autogenerate it
-	make mrproper ${xmakeopts} || die "make mrproper died"
+	make mrproper ${xmakeopts} || die "make mrproper failed"
+	make symlinks ${xmakeopts} || die "make symlinks failed"
 	make include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
 	echo ">>> version.h compiled successfully."
 }
