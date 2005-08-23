@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.77 2005/08/03 03:42:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.78 2005/08/23 13:50:11 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> snort-2.3.0-r1.ebuild,
+  snort-2.3.2.ebuild, snort-2.3.3.ebuild, snort-2.3.3-r1.ebuild,
+  snort-2.4.0.ebuild:
+  Use -1 instead of /bin/false, bug #103421.
 
   03 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> snort-2.4.0.ebuild:
   Install community rules.

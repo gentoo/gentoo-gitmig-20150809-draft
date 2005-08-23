@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.14 2005/06/23 07:29:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.15 2005/08/23 13:43:25 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> flow-tools-0.67.ebuild,
+  flow-tools-0.68.ebuild, flow-tools-0.68-r1.ebuild:
+  Use -1 instead of /bin/false, bug #103421.
 
   23 Jun 2005; David Holm <dholm@gentoo.org> flow-tools-0.68-r1.ebuild:
   Added to ~ppc.

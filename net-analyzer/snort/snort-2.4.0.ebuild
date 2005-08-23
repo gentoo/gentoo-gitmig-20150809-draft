@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.5 2005/08/03 03:42:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.6 2005/08/23 13:50:11 ka0ttic Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -37,7 +37,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	enewgroup snort
-	enewuser snort -1 /bin/false /dev/null snort
+	enewuser snort -1 -1 /dev/null snort
 }
 
 src_unpack() {
