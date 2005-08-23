@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/zh-kcfonts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.8 2005/08/13 23:36:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.9 2005/08/23 21:43:59 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  zh-kcfonts-1.05-r1.ebuild:
+  Added ~sparc
 
   13 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   zh-kcfonts-1.05-r1.ebuild:

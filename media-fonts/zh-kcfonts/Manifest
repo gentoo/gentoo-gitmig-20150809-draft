@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 bff38eaac666848279f0ef4c525ade03 zh-kcfonts-1.05.ebuild 933
 MD5 aca41e8b6733a013bb06bd48ca750871 zh-kcfonts-1.05-r1.ebuild 825
 MD5 94f14a45ab6c517ccafe036259fe1e2f ChangeLog 1387
 MD5 fcd29c965b2324922c1717732227a787 files/digest-zh-kcfonts-1.05-r1 65
 MD5 fcd29c965b2324922c1717732227a787 files/digest-zh-kcfonts-1.05 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC5iyKRy60XGEcJIRAh6IAJwNFZ+rARvDUwsJDeVYPebH3EPcNwCgtF+e
+kFw/oTb3iUIR4go5xM4k0us=
+=8CAS
+-----END PGP SIGNATURE-----
