@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.9.12.ebuild,v 1.2 2005/08/22 22:05:14 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.9.12.ebuild,v 1.3 2005/08/23 11:32:38 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
@@ -118,10 +118,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	ewarn "External plugins need specially adjusted versions, see the "
-	ewarn "relevant package.mask entry for the available gtk2 versions."
-	ewarn "Some plugins may not have a gtk2 version available."
 	echo
 	einfo "For safety reasons this version will use the alternate configuration"
 	einfo "directory ~/.sylpheed-claws instead of ~/.sylpheed, so you have to"
