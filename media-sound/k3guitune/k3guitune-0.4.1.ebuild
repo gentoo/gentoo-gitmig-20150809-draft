@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.4.1.ebuild,v 1.6 2005/04/03 16:48:08 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.4.1.ebuild,v 1.7 2005/08/23 22:23:05 greg_g Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="A program for KDE that lets you tune musical instruments."
 HOMEPAGE="http://home.planet.nl/~lamer024/k3guitune.html"
