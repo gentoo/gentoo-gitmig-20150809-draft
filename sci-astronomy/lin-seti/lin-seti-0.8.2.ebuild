@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/lin-seti/lin-seti-0.8.2.ebuild,v 1.3 2005/01/11 12:30:00 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/lin-seti/lin-seti-0.8.2.ebuild,v 1.4 2005/08/23 16:52:32 fmccor Exp $
 
 DESCRIPTION="A Seti@Home cache manager, cache-compatible with Seti Driver. Can be run as system daemon."
 HOMEPAGE="http://lin-seti.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc sparc hppa"
+KEYWORDS="hppa ~ppc ~sparc x86"
 
 DEPEND="sci-astronomy/setiathome"
 

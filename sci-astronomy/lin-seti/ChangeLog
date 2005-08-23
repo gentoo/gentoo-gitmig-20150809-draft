@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/lin-seti
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/lin-seti/ChangeLog,v 1.5 2005/08/01 10:07:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/lin-seti/ChangeLog,v 1.6 2005/08/23 16:52:32 fmccor Exp $
+
+  23 Aug 2005; Ferris McCormick <fmccor@gentoo.org> lin-seti-0.7.6.ebuild,
+  lin-seti-0.8.2.ebuild:
+  Downgrade sparc keyword to ~sparc, as the older versions of setiathome
+  can no longer be built, and the only buildable version for sparc is in
+  test.
 
   01 Aug 2005; Simon Stelling <blubb@gentoo.org> lin-seti-0.8.3.ebuild:
   added ~amd64 keyword
