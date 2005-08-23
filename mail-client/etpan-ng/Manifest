@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9df01b5f8e077b58b625f91b4b1554dd ChangeLog 351
+MD5 798aad06e5d5b40ef677cce21a7361ba ChangeLog 440
 MD5 0a9d3ca5456904229c60e35e4452132a metadata.xml 254
-MD5 d332a419cabd74c9c8ff72fbbd528519 etpan-ng-0.6.1.ebuild 818
+MD5 ce865a54d5f65ecfdb12f24d3270ca1b etpan-ng-0.6.1.ebuild 817
 MD5 9434b4b4de90f5012f93db2e03e304ee files/digest-etpan-ng-0.6.1 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCusM0QlM6RnzZP+IRAiztAKCZVMEJqinwUDNThvhuasgks2Lu8gCgpAQ2
-7iwvlA6qpqzfP7i8fq8O8wM=
-=SN56
+iD8DBQFDCz8YQlM6RnzZP+IRAu3rAJ4w5RH/RC2KYde4429eptwGycu9SwCfUIyY
+6O6vIC0Gv+1k67N2p3jCMk4=
+=oHQN
 -----END PGP SIGNATURE-----
