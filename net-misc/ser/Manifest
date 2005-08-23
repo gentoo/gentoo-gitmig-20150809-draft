@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87d82e67a3e883df8b47644975307102 ChangeLog 2252
-MD5 fed13355f56f22d0c86cb7d50b9cb7a0 files/digest-ser-0.8.10 66
-MD5 cb00e866f91ec26e7767fd653a0623c1 files/digest-ser-0.8.11 67
-MD5 e9eb82d4237eadc1afda58dba2267aed files/digest-ser-0.8.14 67
-MD5 978419896dcd1a055ff3da9c3bfbcdd0 files/digest-ser-0.8.9 65
-MD5 08495f4d275d4340fcb21b69cac7d38c files/digest-ser-0.9.0 343
-MD5 13df81c549263be3a93c93095cac54c2 files/ethz-1.0-ser-0.9.0.diff 378
-MD5 6e319943ee713a85093870eb1c28a0d6 files/ldap-1.0-ser-0.9.0.diff 301
-MD5 60e8a72a005fd298e920e6746c788980 files/ldaps-1.0-ser-0.9.0.diff 342
-MD5 15fa155bb1e13bb038e1f97814ac9cfc files/ser.confd 359
-MD5 16fc6b4f457162a12869d1ac72dc86f5 files/ser.rc6 549
-MD5 731bfb3fccee7dbf639442d29948484c files/silomail-1.0-ser-0.9.0.diff 309
+MD5 ee53641669d3c08560198d706c9d2f11 ser-0.9.0.ebuild 3650
 MD5 922d6546e4ca772db657a8dc45743da6 ser-0.8.10.ebuild 1736
+MD5 1bfbee0d5c39510630621dc1bd9e2900 ChangeLog 2377
+MD5 8dc5bb445065ac1d73ab59d970074692 ser-0.8.9.ebuild 1502
 MD5 4f62326ce305054924e82ba3e7a372eb ser-0.8.11.ebuild 2510
 MD5 298db3537f635f7512230937aced072e ser-0.8.14.ebuild 2517
-MD5 8dc5bb445065ac1d73ab59d970074692 ser-0.8.9.ebuild 1502
-MD5 07cc9bce19f87c4ba4cc796b9e30f0cf ser-0.9.0.ebuild 3657
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1SIgI1lqEGTUzyQRAgCYAKCdyEd8FMnJj8Tm6XUvow7l0hwRkQCbBZc0
-z2+2SPI9EMGmBCw6WD4eL4U=
-=uq+C
------END PGP SIGNATURE-----
+MD5 15fa155bb1e13bb038e1f97814ac9cfc files/ser.confd 359
+MD5 60e8a72a005fd298e920e6746c788980 files/ldaps-1.0-ser-0.9.0.diff 342
+MD5 e9eb82d4237eadc1afda58dba2267aed files/digest-ser-0.8.14 67
+MD5 731bfb3fccee7dbf639442d29948484c files/silomail-1.0-ser-0.9.0.diff 309
+MD5 fed13355f56f22d0c86cb7d50b9cb7a0 files/digest-ser-0.8.10 66
+MD5 08495f4d275d4340fcb21b69cac7d38c files/digest-ser-0.9.0 343
+MD5 cb00e866f91ec26e7767fd653a0623c1 files/digest-ser-0.8.11 67
+MD5 16fc6b4f457162a12869d1ac72dc86f5 files/ser.rc6 549
+MD5 13df81c549263be3a93c93095cac54c2 files/ethz-1.0-ser-0.9.0.diff 378
+MD5 978419896dcd1a055ff3da9c3bfbcdd0 files/digest-ser-0.8.9 65
+MD5 6e319943ee713a85093870eb1c28a0d6 files/ldap-1.0-ser-0.9.0.diff 301
