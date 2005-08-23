@@ -1,4 +1,14 @@
-MD5 d7eb1ce08c5825aea648dca10aac298b ChangeLog 747
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 eebf151dd55670ee9dc097bbe30a517e ogg2mp3-0.5.ebuild 598
+MD5 9eb47c0a3421b53792f408a0f124b375 ChangeLog 836
+MD5 83d82cd656f00739ff801e22b42c8558 ogg2mp3-0.5.ebuild 600
 MD5 94ab85f7f30706aa09034b3839c38a86 files/digest-ogg2mp3-0.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC6P2p5vW4rUFj5oRAiFoAJ0aRBlFhV/mDqjjAI/jZNX5V3zeeQCeIS+s
+f9/CNV1f2LLO0tINYA2HCj8=
+=ehBS
+-----END PGP SIGNATURE-----
