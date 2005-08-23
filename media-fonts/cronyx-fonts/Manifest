@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 246293541c5f78eee6d06ac2b5f6de47 cronyx-fonts-2.3.1-r1.ebuild 1801
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 4ee7b4d1173d2b68e3ecb4d9b5288143 ChangeLog 1210
 MD5 b4e9ecfe13c53dedb9a770132b8bc035 files/digest-cronyx-fonts-2.3.1-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCzMwKRy60XGEcJIRAplgAKCNE9qJU5aWcegCIfNVMvi+0ffWEgCgqghq
+1CJ1B3ipi9PMqrPO2etAZHU=
+=JqRS
+-----END PGP SIGNATURE-----

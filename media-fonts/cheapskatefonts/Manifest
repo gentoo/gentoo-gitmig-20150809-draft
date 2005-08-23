@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cee2324dcf2eb43d47a0947c975cf72b cheapskatefonts-1.0.ebuild 1223
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 bfc364790d8ed07a55b71d42604c2717 ChangeLog 641
 MD5 2de098b04e860322b60357d35f18f197 files/digest-cheapskatefonts-1.0 690
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCzVOKRy60XGEcJIRApkDAKCqhPpBAXPJVXJnIDpHcYoNo6YllACdE4TZ
++xLp7OwpKzFxZE7pO6cTqF4=
+=PVbt
+-----END PGP SIGNATURE-----
