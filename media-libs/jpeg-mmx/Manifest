@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 81d64b78d789c3b7bd7d011001a63e91 jpeg-mmx-0.1.6-r1.ebuild 1171
-MD5 7c1e24fe5514ab26dbd747c29a289cd9 ChangeLog 2434
-MD5 683af9622e30fd6fd39694fda1049c37 files/jpeg-mmx-0.1.6-PIC.patch 1450
-MD5 a7968b3622999698bfb390cf300b5b21 files/jpeg-mmx-0.1.6-makefile.patch 617
+MD5 986514435fd303cbce5c9256b0d5e08c ChangeLog 2538
+MD5 0b7d09bf780c8ec367d9df26222c314d jpeg-mmx-0.1.6-r1.ebuild 1176
 MD5 57d8f724c8c106355a0eae9961b436a3 files/digest-jpeg-mmx-0.1.6-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCMOJgIKl8Uu19MoRAmvpAJ9A+dHPK6Psi2CLcFtOo45CeAYhTQCfTnDb
-nn8OgtbrOL87FF2FsYS4IFU=
-=tTbq
------END PGP SIGNATURE-----
+MD5 a7968b3622999698bfb390cf300b5b21 files/jpeg-mmx-0.1.6-makefile.patch 617
+MD5 683af9622e30fd6fd39694fda1049c37 files/jpeg-mmx-0.1.6-PIC.patch 1450
