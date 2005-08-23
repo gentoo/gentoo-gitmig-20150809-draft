@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/vdict
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/ChangeLog,v 1.1 2005/02/22 10:52:46 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/vdict/ChangeLog,v 1.2 2005/08/23 22:26:37 pclouds Exp $
+
+  23 Aug 2005; <pclouds@gentoo.org> vdict-1.94.ebuild:
+  Stable on x86
 
 *vdict-1.94 (22 Feb 2005)
 
