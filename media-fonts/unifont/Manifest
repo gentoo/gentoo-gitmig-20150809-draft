@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 5ea5122dc1af284bb758c742b0a56894 unifont-1.0-r2.ebuild 867
 MD5 0ac9658e2facb142d499eb1ae99bc2f7 ChangeLog 1699
 MD5 e311237fdbe3e6f0c2d3aba7de2dafd3 files/digest-unifont-1.0-r2 132
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC5VPKRy60XGEcJIRAm2HAKCjHQRPxrTI7FcePJ+8yXwfPpaUjQCfcOBt
+j5n8xuBr5IQBy8DJr9lnUso=
+=SO1s
+-----END PGP SIGNATURE-----
