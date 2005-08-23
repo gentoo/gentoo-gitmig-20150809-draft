@@ -1,3 +1,5 @@
+https://bugs.freedesktop.org/show_bug.cgi?id=4149
+
 diff -Nur libXScrnSaver-0.99.0.orig/src/Makefile.am libXScrnSaver-0.99.0/src/Makefile.am
 --- libXScrnSaver-0.99.0.orig/src/Makefile.am	2005-08-01 22:15:26.000000000 +0200
 +++ libXScrnSaver-0.99.0/src/Makefile.am	2005-08-21 03:35:14.000000000 +0200

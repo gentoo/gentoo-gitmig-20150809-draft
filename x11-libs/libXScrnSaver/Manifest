@@ -1,4 +1,4 @@
-MD5 de5ed9c276595812e138addc97321ac9 ChangeLog 1243
+MD5 7dc5cd568740fe4d8daed25ada2d79a6 ChangeLog 1425
 MD5 b10e6776d25a9dc52f7bb987e6836e02 libXScrnSaver-0.99.0-r2.ebuild 647
-MD5 6494a78c3bb8c0e62a005129104d87a0 files/fix-libname.patch 1084
+MD5 841152652a5ed56abcce48b9f770fbe8 files/fix-libname.patch 1135
 MD5 c1c30f637c282a8d3e36ecf48b528673 files/digest-libXScrnSaver-0.99.0-r2 73
