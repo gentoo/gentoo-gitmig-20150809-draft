@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80d22748041a7fdc3108e6858d4aa10d ChangeLog 388
 MD5 20a24492f2c12fcd78a2db87b65d1409 metadata.xml 510
 MD5 c3ef46bd0a71da1274a3a163f6ced5ed selinux-ethereal-20050716.ebuild 482
 MD5 a2cb89854b934562e85ce6f306fab44f files/digest-selinux-ethereal-20050716 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFDCs5yGSBEIeh4AEYRAlu7AJ49QsRvwK32euvOiT5jx2XA9IBupACdHukq
+4Pfu99OSup9MGbdmvbTuL50=
+=7ydo
+-----END PGP SIGNATURE-----
