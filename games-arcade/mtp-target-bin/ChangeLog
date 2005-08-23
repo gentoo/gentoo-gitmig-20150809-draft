@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/mtp-target-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.6 2005/07/19 22:44:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.7 2005/08/23 19:00:52 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  mtp-target-bin-1.2.0.ebuild:
+  cp -a -> cp -dpR for bug #103487.
 
   19 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   mtp-target-bin-1.2.0.ebuild:
