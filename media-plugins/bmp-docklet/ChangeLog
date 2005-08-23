@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-docklet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-docklet/ChangeLog,v 1.4 2005/07/17 21:22:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-docklet/ChangeLog,v 1.5 2005/08/23 22:21:00 chainsaw Exp $
+
+  23 Aug 2005; Tony Vroon <chainsaw@gentoo.org> bmp-docklet-1.3.ebuild:
+  1.3 stable on x86.
 
 *bmp-docklet-1.3 (17 Jul 2005)
 
