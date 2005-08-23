@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.33 2005/08/23 01:04:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.34 2005/08/23 01:06:27 spyderous Exp $
+
+  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/check-for-glproto.patch, -files/fix-xf86misc-typo.patch,
+  -files/xorg-server-0.99.1-x86_64-1.patch, -xorg-server-0.99.1-r4.ebuild:
+  Pull old version.
 
   23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/0.99.1-r5-check-for-glproto.patch, xorg-server-0.99.1-r5.ebuild:
