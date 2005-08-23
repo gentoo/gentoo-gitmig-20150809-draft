@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXScrnSaver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.5 2005/08/20 23:54:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.6 2005/08/23 00:58:02 spyderous Exp $
+
+  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  files/fix-libname.patch:
+  (#fd.o 4149) Fix up the pkgconfig file too.
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -libXScrnSaver-0.99.0.ebuild, -libXScrnSaver-0.99.0-r1.ebuild:
