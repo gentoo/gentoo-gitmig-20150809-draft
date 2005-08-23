@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.21.ebuild,v 1.4 2005/07/11 01:54:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.21.ebuild,v 1.5 2005/08/23 13:21:44 ticho Exp $
 
 inherit eutils linux-info
 
@@ -41,7 +41,7 @@ pkg_setup() {
 	fi
 
 	enewgroup xmail
-	enewuser xmail -1 /bin/false /dev/null xmail
+	enewuser xmail -1 -1 /dev/null xmail
 }
 
 src_compile() {

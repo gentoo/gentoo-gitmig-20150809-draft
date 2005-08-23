@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.16-r1.ebuild,v 1.5 2005/01/27 17:25:35 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/xmail-1.16-r1.ebuild,v 1.6 2005/08/23 13:21:44 ticho Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/mta"
 
 pkg_setup() {
 	enewgroup xmail
-	enewuser xmail -1 /bin/false /dev/null xmail
+	enewuser xmail -1 -1 /dev/null xmail
 }
 
 src_compile() {

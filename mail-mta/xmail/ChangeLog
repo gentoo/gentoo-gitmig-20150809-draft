@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/xmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.14 2005/07/11 01:54:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.15 2005/08/23 13:21:44 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> xmail-1.16-r1.ebuild,
+  xmail-1.20.ebuild, xmail-1.21.ebuild:
+  Use -1 for shell argument to enewuser. Bug #103421.
 
   11 Jul 2005; Andrej Kacian <ticho@gentoo.org> xmail-1.21.ebuild:
   Stable on x86. Closes bug #97405, reported by Brian Dilks <bdilks at
