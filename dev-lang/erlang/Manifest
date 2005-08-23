@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 43171ab60d5165460d0f6122d342c1e7 ChangeLog 4060
-MD5 d0c7b54ad61876c2cf9679c3b4181c6a erlang-10.2.0.ebuild 2364
+MD5 dc1d9134a5f6e8146cc4ca6c5e130f0a erlang-10.2.0.ebuild 2372
 MD5 d3fa74507536bf7336f52760425d03c6 erlang-10.2.6.ebuild 2979
 MD5 f947170e5f0fef952a0efc7dcc947f37 erlang-8b.ebuild 1178
 MD5 952017d9165b65d7786b75dbf44a10e2 erlang-9c-r1.ebuild 1686
@@ -22,10 +19,3 @@ MD5 ae2205c16664d70f5ea47d249b2e566f files/digest-erlang-9c-r3 66
 MD5 b1f610dc1caa7c176d7da4919bcabba9 files/erlang-10.2.6-export-TARGET.patch 242
 MD5 e88b4d733b41026e691a981320ac7806 files/erlang-9c.patch.gz 1503
 MD5 aea374917adc11a2d42b0b9d1bba3598 metadata.xml 402
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3F1aI1lqEGTUzyQRAsfIAJ9KuXT3y4Vwa5FvFE+bWSfU+yr5KwCg1eCt
-8duutOqaycjPo/bmYmO07JI=
-=8TNA
------END PGP SIGNATURE-----
