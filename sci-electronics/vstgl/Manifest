@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca4683cac64b98b2bc92a6a1e8a5a885 vstgl-0.6.2.ebuild 689
-MD5 37058438e1d99e2c818651b4bf264567 ChangeLog 1075
+MD5 99bae3a0256c2d07785ff477ba21a94b ChangeLog 1163
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 33ba6e9da94d890fddf19819f75d548a vstgl-0.6.2.ebuild 686
 MD5 5b87122659464a12173ce6caeaffdd22 files/digest-vstgl-0.6.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0HpbI1lqEGTUzyQRApDcAKDY9/fvIK1GCtzUEoENnDw2nj3JSgCbBgBh
-Ku2aPauvJT8VvA3OQb5/PgY=
-=VMDq
------END PGP SIGNATURE-----
