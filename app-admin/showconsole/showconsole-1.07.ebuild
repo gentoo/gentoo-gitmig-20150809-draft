@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.07.ebuild,v 1.5 2005/08/23 01:33:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.07.ebuild,v 1.6 2005/08/23 06:47:28 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc x86"
+KEYWORDS="amd64 arm hppa ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
