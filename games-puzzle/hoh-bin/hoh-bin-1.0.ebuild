@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.0.ebuild,v 1.4 2005/08/23 19:05:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.0.ebuild,v 1.5 2005/08/23 19:18:23 wolf31o2 Exp $
 
 inherit games
 
@@ -32,7 +32,7 @@ src_install() {
 
 	dogamesbin "${T}/hoh"            || die "dogames bin failed"
 	dodir "${DATADIR}" "${DOCDIR}"   || die "dodir failed"
-	cp -dpRf data/* "${D}/${DATADIR}/" || die "cp failed (data)"
-	cp -dpRf docs/* "${D}/${DOCDIR}/"  || die "cp failed (docs)"
+	cp -pPRf data/* "${D}/${DATADIR}/" || die "cp failed (data)"
+	cp -pPRf docs/* "${D}/${DOCDIR}/"  || die "cp failed (docs)"
 	prepgamesdirs
 }

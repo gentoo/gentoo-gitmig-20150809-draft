@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/hoh-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/ChangeLog,v 1.5 2005/08/23 19:05:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/ChangeLog,v 1.6 2005/08/23 19:18:23 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> hoh-bin-1.0.ebuild,
+  hoh-bin-1.01.ebuild:
+  cp -dpR -> cp -pPR for bug #103487.
 
   23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> hoh-bin-1.0.ebuild,
   hoh-bin-1.01.ebuild:
