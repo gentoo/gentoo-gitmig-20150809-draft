@@ -1,9 +1,12 @@
-MD5 3a438dd2101b80cdb26a981677faadee snort-2.3.3.ebuild 3907
-MD5 e68ded8e00cf76a5e80200683a979b1c snort-2.3.0-r1.ebuild 4203
-MD5 c4e8dadf298d54805b607787b2af00bb snort-2.3.3-r1.ebuild 3978
-MD5 f527eab7cd92e742e9649b6d0a879885 snort-2.3.2.ebuild 4209
-MD5 22015b86d03e177d8d90bfe2d2eca5b0 snort-2.4.0.ebuild 4007
-MD5 76c60880cdeeedc26ec0ce598633fc64 ChangeLog 15300
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed632830d73e468735c73dc4acaa0cc2 snort-2.3.3.ebuild 3903
+MD5 bca601c10581b168c51558fe0ae04ffb snort-2.3.0-r1.ebuild 4199
+MD5 3472932670976df4f4c9f147ee35b5fd snort-2.3.3-r1.ebuild 3974
+MD5 8cca347231e9fe3363163759a3518c0b snort-2.3.2.ebuild 4205
+MD5 ec9535aa95b271df14db7f3f87236635 snort-2.4.0.ebuild 4004
+MD5 960f8aa426b05194a56ea4ccad979cb6 ChangeLog 15297
 MD5 53edc4328d9adeaf087c65ea94b1594b metadata.xml 246
 MD5 04f9ed946469f7954b6bd27f8f1aca39 files/digest-snort-2.3.3-r1 284
 MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
@@ -13,3 +16,10 @@ MD5 24851ef65be2d80a70ba4bebe3e8c0ff files/digest-snort-2.3.3 287
 MD5 aa391777096e34289f4f134153224986 files/digest-snort-2.4.0 271
 MD5 446f8d2b3435b8a6be738da978670605 files/snort.confd 423
 MD5 a9fc70d50c4512c835aa428f4b198fae files/digest-snort-2.3.0-r1 287
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCymoEZCkKN40op4RAp58AJsGqPm5GDnENrwC9mM4nXCfIxhZ6QCfeRRl
+lciFpGXhfSri8qWjvUmUTk4=
+=+UwF
+-----END PGP SIGNATURE-----

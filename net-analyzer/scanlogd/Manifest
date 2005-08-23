@@ -1,7 +1,17 @@
-MD5 76cab2b99b303df3e21dacba5f8b94f7 scanlogd-2.2.5.ebuild 862
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a60e1a0203aada57629a256558d7faf scanlogd-2.2.5.ebuild 863
 MD5 394a78abf8870808be867ff6fa40700b scanlogd-2.2.ebuild 910
-MD5 93d96a392f66bc0e39cb19f7e1b01110 ChangeLog 1271
+MD5 0cf3330d4e21972b8d7d18c163dbe786 ChangeLog 1272
 MD5 ec2d6d79ae70a3531cc4c1349fbaec41 metadata.xml 237
 MD5 6a8c9bce33e75966ebc0d4695c1d6f8c files/scanlogd.rc 497
 MD5 f3b5d3f3b476cf7d249d5063d9965cd4 files/digest-scanlogd-2.2 62
 MD5 4be54a9e63a2d22f46e9c511151231e6 files/digest-scanlogd-2.2.5 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCyjCEZCkKN40op4RAnrQAJ93CJYxnXErKrAno1kcvhAttuyk/wCfblhj
+Lpl/0vh+2xL2knMUzHxGnb8=
+=nDMI
+-----END PGP SIGNATURE-----
