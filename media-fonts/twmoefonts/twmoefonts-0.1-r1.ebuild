@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1-r1.ebuild,v 1.7 2005/08/13 23:31:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/twmoefonts/twmoefonts-0.1-r1.ebuild,v 1.8 2005/08/23 21:54:45 gustavoz Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ncu.edu.tw/FreeBSD/distfiles/zh-moettf/moe_kai.ttf
 HOMEPAGE=""	# Unable to find homepage
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 FONT_SUFFIX="ttf"
 

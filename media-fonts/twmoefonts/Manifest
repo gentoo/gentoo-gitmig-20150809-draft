@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 016069e9fe68e19bf38d8ef22d3a1cf5 ChangeLog 1478
+MD5 b672a8950d4323e9a364177922add59c twmoefonts-0.1-r1.ebuild 774
 MD5 2ed80f15512488dd4a8e20e4f276a38c twmoefonts-0.1.ebuild 1829
-MD5 73a93db97c21ba51275af8f7386a03fb twmoefonts-0.1-r1.ebuild 776
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+MD5 7c291f76a22ee0baa47f8846bff5bfbe ChangeLog 1579
 MD5 8b3a21830f52cad5dc7d0dcec619b8b6 files/TW-fonts.scale 506
 MD5 540b5aec6f287a68fed032654d533ad7 files/digest-twmoefonts-0.1 115
 MD5 540b5aec6f287a68fed032654d533ad7 files/digest-twmoefonts-0.1-r1 115
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC/oMCj5H05b2HAEkRAgU7AJ9rn8wwFYUeLf5F0fSGzPFpnso2TgCeIMml
-RIh62DYLFjxMlE/MhEU7BDc=
-=Pyje
+iD8DBQFDC5s8KRy60XGEcJIRAvvJAJ9ASG/2G/hIrfo5Ai1w/WM3rc1bFQCghKEy
+BIxsRT6k515zQjAmCLRhndU=
+=oifE
 -----END PGP SIGNATURE-----
