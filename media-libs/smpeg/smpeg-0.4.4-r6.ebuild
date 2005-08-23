@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r6.ebuild,v 1.1 2005/08/23 03:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r6.ebuild,v 1.2 2005/08/23 19:57:29 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,6 +37,11 @@ src_unpack() {
 }
 
 src_compile() {
+	export CC="$(tc-getCC)"
+	export CXX="$(tc-getCXX)"
+	export RANLIB="$(tc-getRANLIB)"
+	export AR="$(tc-getAR)"
+
 	# --enable-mmx causes test apps to crash on startup #470
 	#	$(use_enable mmx) \
 	econf \

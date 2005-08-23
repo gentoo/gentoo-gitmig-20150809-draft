@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.21 2005/08/23 03:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.22 2005/08/23 19:57:29 eradicator Exp $
+
+  23 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  smpeg-0.4.4-r6.ebuild:
+  Using proper toolchain.
 
 *smpeg-0.4.4-r6 (23 Aug 2005)
 
