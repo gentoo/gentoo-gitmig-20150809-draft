@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.77 2005/07/07 02:34:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.78 2005/08/23 13:30:18 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> postfix-2.2.1.ebuild,
+  postfix-2.2.1-r1.ebuild, postfix-2.2.2.ebuild, postfix-2.2.2-r1.ebuild,
+  postfix-2.2.2-r2.ebuild, postfix-2.2.3.ebuild, postfix-2.2.3-r1.ebuild,
+  postfix-2.2.4.ebuild:
+  Use -1 for shell argument to enewuser. Bug #103421.
 
   05 Jul 2005; Andrej Kacian <ticho@gentoo.org> postfix-2.2.3-r1.ebuild,
   postfix-2.2.4.ebuild:
