@@ -1,6 +1,4 @@
-MD5 2bfb3b5bff6415eea4475fd1e7bc222b ChangeLog 1025
-MD5 2768634ce7ae5ae7b882b49a980145ff kchmviewer-0.92.ebuild 1126
 MD5 bc5757868e9f06d6048259da3a5918aa metadata.xml 157
+MD5 2bfb3b5bff6415eea4475fd1e7bc222b ChangeLog 1025
 MD5 6daf1ad77e2f9ecfd2a20ceeda77af5c kchmviewer-1.0.ebuild 1120
-MD5 592da28c4b1d813c7bfaa5315b6f144b files/digest-kchmviewer-0.92 67
 MD5 be90ea3ca4215ac70256f1c2bb918ef3 files/digest-kchmviewer-1.0 67
