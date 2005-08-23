@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r6.ebuild,v 1.4 2005/07/11 14:27:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r6.ebuild,v 1.5 2005/08/23 19:28:16 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -65,7 +65,7 @@ src_unpack() {
 
 src_install() {
 	dodir ${dir}/bin
-	cp -a bin/* ${Ddir}/bin
+	cp -pPR bin/* ${Ddir}/bin
 
 	dodir ${dir}/lib
 	cp -dr lib/* ${Ddir}/lib
@@ -95,7 +95,7 @@ src_install() {
 	doenvd ${FILESDIR}/90vmware || die "doenvd"
 
 	dodir /etc/vmware/
-	cp -a etc/* ${D}/etc/vmware/
+	cp -pPR etc/* ${D}/etc/vmware/
 
 	dodir /etc/vmware/init.d
 	dodir /etc/vmware/init.d/rc0.d
@@ -105,7 +105,7 @@ src_install() {
 	dodir /etc/vmware/init.d/rc4.d
 	dodir /etc/vmware/init.d/rc5.d
 	dodir /etc/vmware/init.d/rc6.d
-	cp -a installer/services.sh ${D}/etc/vmware/init.d/vmware || die
+	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware || die
 
 	# This is to fix a problem where if someone merges vmware and then
 	# before configuring vmware they upgrade or re-merge the vmware

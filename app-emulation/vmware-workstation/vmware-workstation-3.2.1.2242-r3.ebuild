@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.8 2005/07/11 14:27:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.9 2005/08/23 19:28:16 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -70,10 +70,10 @@ src_install() {
 	epatch ${FILESDIR}/${PV}/vmware-config.pl-gcc-generalized.patch
 
 	dodir ${dir}/bin
-	cp -a bin/* ${Ddir}/bin
+	cp -pPR bin/* ${Ddir}/bin
 
 	dodir ${Ddir}/lib
-	cp -a lib/* ${Ddir}/lib
+	cp -pPR lib/* ${Ddir}/lib
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
@@ -98,7 +98,7 @@ src_install() {
 	doenvd ${FILESDIR}/${PV}/90vmware || die "doenvd"
 
 	dodir /etc/vmware/
-	cp -a etc/* ${D}/etc/vmware/
+	cp -pPR etc/* ${D}/etc/vmware/
 
 	dodir /etc/vmware/init.d
 	dodir /etc/vmware/init.d/rc0.d
@@ -108,7 +108,7 @@ src_install() {
 	dodir /etc/vmware/init.d/rc4.d
 	dodir /etc/vmware/init.d/rc5.d
 	dodir /etc/vmware/init.d/rc6.d
-	cp -a installer/services.sh ${D}/etc/vmware/init.d/vmware
+	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware
 
 	# This is to fix a problem where if someone merges vmware and then
 	# before configuring vmware they upgrade or re-merge the vmware
