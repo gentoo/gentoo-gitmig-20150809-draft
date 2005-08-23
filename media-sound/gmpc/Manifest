@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 fbad4b1626dce9cca4aad2c05cf64e11 gmpc-0.11.2.ebuild 608
 MD5 f450262fe087fb0cdd78082b50747fd8 gmpc-0.12.0.ebuild 631
-MD5 800019f9f5230e10d9eb81db076d1262 gmpc-0.12.0-r1.ebuild 744
+MD5 f1a52844c8b152f3adf7643c5baf21c6 gmpc-0.12.0-r1.ebuild 819
 MD5 8a1baa3abf6a035b9c379964deaaa01d gmpc-0.11.1.ebuild 598
 MD5 588b22aceaa605d5a42720ed4ae45ae4 ChangeLog 1249
 MD5 3a05fb17d7dc8a018b36f13aea905095 metadata.xml 246
@@ -14,7 +14,7 @@ MD5 5214ef3146f35bdf9c44402a2c3a05fe files/digest-gmpc-0.12.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDC3XDQlM6RnzZP+IRAttSAKC4q3xn0l8ikmd/x+/67fDaaz+1SQCeOk9U
-KRCwnXbuVt7feyNmN7nBksY=
-=Dc6/
+iD8DBQFDC3ZGQlM6RnzZP+IRAhBdAJ9l4i4+PmW/nCySBgSMsoaYeV11lACglXF1
+Lgx4UcdCSrjTlQE4q0sKUNo=
+=gdTf
 -----END PGP SIGNATURE-----

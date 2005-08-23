@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.12.0-r1.ebuild,v 1.1 2005/08/23 19:14:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.12.0-r1.ebuild,v 1.2 2005/08/23 19:16:57 ticho Exp $
 
 IUSE="gnome"
 
@@ -21,6 +21,10 @@ DEPEND=">=x11-libs/gtk+-2.4
 src_compile() {
 	econf $(use_enable gnome gnome-vfs) || die "configure failed"
 	emake || die "make failed"
+}
+
+src_install() {
+	make DESTDIR=${D} install || die "make install failed"
 }
 
 DOCS="AUTHORS ChangeLog NEWS README"
