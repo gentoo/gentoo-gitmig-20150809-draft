@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.27 2005/04/21 18:05:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.28 2005/08/23 14:04:28 dragonheart Exp $
+
+*johntheripper-1.6.38 (23 Aug 2005)
+*johntheripper-1.6.37_p11 (23 Aug 2005)
+
+  23 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  -johntheripper-1.6.37_p1.ebuild, +johntheripper-1.6.37_p11.ebuild,
+  +johntheripper-1.6.38.ebuild:
+  fixes to bug #76399 (removed johntheripper-1.6.37_p1). replaced with
+  johntheripper-1.6.37_p11 and johntheripper-1.6.38
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org>
   johntheripper-1.6.37_p1.ebuild:
