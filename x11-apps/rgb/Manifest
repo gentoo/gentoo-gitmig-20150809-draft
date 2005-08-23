@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0f5b68e0ee9cbc7e695d0f507d8b53b4 rgb-0.99.0-r1.ebuild 480
 MD5 10d28348dcaa22962db6afbb92197efc ChangeLog 988
 MD5 7bb4ec5db2b791569bb91c5fc4aa7810 files/rgb-path.patch 811
 MD5 a0e8d44f277795142cd2f367dfba4c0c files/digest-rgb-0.99.0-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpBdgIKl8Uu19MoRAtruAJ9S3tog/sAY9wjvaA+Rj3obCZN7eQCeJSZG
+2PUASYJlsBjUkFDM4usTmdk=
+=NP/e
+-----END PGP SIGNATURE-----

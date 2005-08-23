@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6c8a1fd9686db6d5a82151ec7fd0482 smproxy-0.99.0.ebuild 440
 MD5 566aba3108455c86774ad50979a0c7ce ChangeLog 468
 MD5 67c1b3b34aa26aa326380454b578b650 files/digest-smproxy-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpB7gIKl8Uu19MoRArFHAJsFmfshVDYrvX9bSp0tesueksEK8gCfWNJJ
+ey95G6oApfNloLVTnHaH378=
+=jtjX
+-----END PGP SIGNATURE-----

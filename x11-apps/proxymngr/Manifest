@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8513c6a9d20c6ae8837665c70490bb74 proxymngr-0.99.0.ebuild 499
 MD5 153d8b6da58c996739a3794225021e2e ChangeLog 478
 MD5 4ab0d2e0615f8ddec808855d456c9bc3 files/digest-proxymngr-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpBXgIKl8Uu19MoRAst/AJ9kUlzcwmOamcQ+ZMv/2ZyxeAb+fgCeL66y
+nEQFgZWuAdnXqZ7B7aFa8IY=
+=l8CP
+-----END PGP SIGNATURE-----

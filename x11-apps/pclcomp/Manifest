@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2c6a8b5403464e6ef5cde77729c0426 pclcomp-0.99.0.ebuild 409
 MD5 8442530969fdf4c0f70553f4bb12c984 ChangeLog 468
 MD5 a3742b95cac5021ada83a1885fcf51c9 files/digest-pclcomp-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpBRgIKl8Uu19MoRAvNCAJ0UJBNPPrw/BlBjFTEwD3qgw3tChwCfY05F
+v5z4moEhw8c+hKFEKc4Tq8g=
+=84Ca
+-----END PGP SIGNATURE-----

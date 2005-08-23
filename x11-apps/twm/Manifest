@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 585802c625d84d5f55fdd555b903228b twm-0.99.0.ebuild 445
 MD5 bc221aed80de3b0b945ba3728afe12ea ChangeLog 446
 MD5 3156d15ead919b9a87c84bfb1e614cf3 files/digest-twm-0.99.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpCJgIKl8Uu19MoRApyNAJ48zr0khO/0m8UShGlHM5QpO8g1DACff4lg
+aOawiYHALUT3Ur8NXQeYb3A=
+=i29S
+-----END PGP SIGNATURE-----

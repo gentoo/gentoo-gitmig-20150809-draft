@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 98f08af67f85285ebacc959e0277ca63 rstart-0.99.0.ebuild 508
 MD5 77e8ca44267a0f9540aaf0f2b40820db ChangeLog 492
 MD5 cdd5a59500569e6aa3443f33ea500d45 files/digest-rstart-0.99.0 65
 MD5 f2e4dcff95e33ac48480e6cf5b315bc0 files/rstart-destdir.patch 3060
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpBigIKl8Uu19MoRAlumAJ9kHzYzU8hbcUmzlcawi9Jv8Rjn5wCfR4p6
+Bxs+yLqGeIb57QWahwuCCUA=
+=l+92
+-----END PGP SIGNATURE-----
