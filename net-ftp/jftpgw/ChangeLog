@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/jftpgw
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/jftpgw/ChangeLog,v 1.7 2004/07/01 22:15:46 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/jftpgw/ChangeLog,v 1.8 2005/08/23 13:09:29 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  jftpgw-0.13.4-r1.ebuild:
+  Use -1 instead of /bin/false on enewuser call.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jftpgw-0.13.4-r1.ebuild:

@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3ebfc661c9fc593f34f4f5193ccbac7f ChangeLog 1042
-MD5 a4ee703cf1ed2663a36a25528c123175 jftpgw-0.13.4-r1.ebuild 1128
-MD5 5b8929834163de8835af5442df0500ff files/digest-jftpgw-0.13.4-r1 65
+MD5 474e8335938d099ab8b123c581b3688d ChangeLog 1171
+MD5 92e8f02e2ad776899905e90f4bdce4f4 jftpgw-0.13.4-r1.ebuild 1119
 MD5 7c34a4c782110ac0cf496f066dda0b6a files/jftpgw.rc 409
+MD5 5b8929834163de8835af5442df0500ff files/digest-jftpgw-0.13.4-r1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBYx9UHTu7gpaalycRAmWnAKCUa6Ck7XhcE9G93iWSLydPT0LwfwCfdXfM
-XWmlLOR+lsixIRACDswwPEw=
-=6m/z
+iD8DBQFDCyAhj5H05b2HAEkRAmbWAJ42h0nghzh1bw4dI/7OdArsxiMBFwCfVAym
+yOgdMrYTneOXF1qnnhkwbg8=
+=Uk0Y
 -----END PGP SIGNATURE-----

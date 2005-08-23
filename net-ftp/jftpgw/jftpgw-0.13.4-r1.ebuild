@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/jftpgw/jftpgw-0.13.4-r1.ebuild,v 1.7 2004/07/01 22:15:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/jftpgw/jftpgw-0.13.4-r1.ebuild,v 1.8 2005/08/23 13:09:29 flameeyes Exp $
 
 inherit eutils
 
@@ -41,5 +41,5 @@ src_install() {
 		dosed "s:nobody:${PN}:" /etc/xinetd.d/jftpgw
 	fi
 
-	enewuser ${PN} -1 /bin/false /dev/null nobody
+	enewuser ${PN} -1 -1 /dev/null nobody
 }
