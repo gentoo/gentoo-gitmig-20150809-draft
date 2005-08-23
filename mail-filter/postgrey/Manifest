@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57ab962ca5ee8ba6361c1fe3ba6fa4c0 ChangeLog 1095
+MD5 3b4063c8e7db588b82423e6790a3d383 ChangeLog 1220
 MD5 97640b63104544cebd37ca40384a056b metadata.xml 304
-MD5 91786c1a9ebd8417f273e1e96f2f7a0f postgrey-1.21.ebuild 1933
+MD5 e55ff6309759aeea439124bf583fbda5 postgrey-1.21.ebuild 1925
 MD5 5370c321ee9c00814bce5054c6eabaa2 files/postgrey.rc 1113
 MD5 2197c50ab163af184389dbf781d6bc21 files/digest-postgrey-1.21 64
 MD5 0a8923ebd6b1d2679cb9b1bf046da061 files/postgrey.conf 1625
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtKwrQlM6RnzZP+IRAoPrAJ9MLHg2z/fD+TiPb2lNxnrUs1rnCwCgrKf7
-DHeeOXsBcP97nAERmJsbRUI=
-=DHFi
------END PGP SIGNATURE-----

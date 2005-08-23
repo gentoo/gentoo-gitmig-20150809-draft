@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.9 2005/07/07 02:01:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.10 2005/08/23 13:12:06 ticho Exp $
 
 inherit eutils
 
@@ -86,7 +86,7 @@ src_compile() {
 
 src_install() {
 	enewgroup amavis
-	enewuser amavis -1 /bin/false ${AMAVIS_ROOT} amavis
+	enewuser amavis -1 -1 ${AMAVIS_ROOT} amavis
 
 	dosbin amavisd amavisd-agent amavisd-nanny
 
