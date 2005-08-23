@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/sather
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/ChangeLog,v 1.7 2004/06/24 22:55:43 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/ChangeLog,v 1.8 2005/08/23 17:59:01 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> sather-1.3.ebuild:
+  Don't use cp -a.
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
   sather-1.3.ebuild:

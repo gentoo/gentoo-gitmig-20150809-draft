@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.16 2004/07/14 13:50:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.17 2005/08/23 17:59:01 flameeyes Exp $
 
 inherit eutils
 
@@ -54,7 +54,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr
-	cp -a ${WORKDIR}/${MY_P} ${D}/usr/sather
+	cp -pPR ${WORKDIR}/${MY_P} ${D}/usr/sather
 	rm -rf ${D}/usr/${PN}/bin/sacomp.code
 	rm -rf ${D}/usr/${PN}/bin/sacomp-boot.code
 	rm -rf ${D}/usr/${PN}/sacomp
@@ -66,8 +66,8 @@ src_install() {
 
 	cd ${WORKDIR}
 	dodoc doc/${PN}-specification-000328.ps.gz doc/${PN}-tutorial-000328.ps.gz doc/satish-thatte.ps.gz doc/Descript.ps.gz
-	cp -a doc/specification.html ${D}/usr/share/doc/${P}
-	cp -a doc/tutorial.html ${D}/usr/share/doc/${P}
+	cp -pPR doc/specification.html ${D}/usr/share/doc/${P}
+	cp -pPR doc/tutorial.html ${D}/usr/share/doc/${P}
 
 	dodir /etc/env.d
 cat >> ${D}/etc/env.d/05sather <<EOF
