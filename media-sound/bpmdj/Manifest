@@ -1,9 +1,19 @@
-MD5 f14eac4b2cc948a5ae6ca37b64372555 bpmdj-2.5.ebuild 1102
-MD5 40213d2fdb2cf2fd40adc9c0df932d9f bpmdj-2.7.ebuild 1675
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd7d00901325249ad32ac915384d81db bpmdj-2.7.ebuild 1681
+MD5 64b006a88b659ba45a655e892d156563 ChangeLog 3521
 MD5 e8c601c4f54359cb867907c9701ad0a8 bpmdj-2.6.ebuild 1599
-MD5 613e9eb642ac57b5d9d3ba5e00d085a5 ChangeLog 3426
+MD5 f14eac4b2cc948a5ae6ca37b64372555 bpmdj-2.5.ebuild 1102
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3a9529455bb8bc91f60925011fb648bb files/bpmdj-2.6-errno.patch 375
+MD5 fa52f73194ecd28f22727e5d107a839b files/digest-bpmdj-2.7 65
 MD5 2b34dadd03537b0845c2d9133f59def2 files/digest-bpmdj-2.5 65
 MD5 02340215aa4fd9277ca1ccdc0d252e3e files/digest-bpmdj-2.6 65
-MD5 fa52f73194ecd28f22727e5d107a839b files/digest-bpmdj-2.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC1pOj5H05b2HAEkRAj1FAJwKdl4IqQc5RdyJC83P8I+UXg3soACeNN+x
+ks5Z2S/3S2A8xkdQctjnOyI=
+=yUuW
+-----END PGP SIGNATURE-----

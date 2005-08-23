@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.7.ebuild,v 1.2 2005/07/28 21:06:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.7.ebuild,v 1.3 2005/08/23 17:17:38 flameeyes Exp $
 
 IUSE="mp3 oggvorbis"
 
@@ -47,5 +47,5 @@ src_install () {
 	use oggvorbis && doexe bpmdj-import-ogg.pl
 	dodoc authors changelog copyright readme todo || die "dodoc failed"
 	mkdir -p ${D}/usr/share/bpmdj
-	cp -a sequences ${D}/usr/share/bpmdj/ || die "cp failed"
+	cp -pPR sequences ${D}/usr/share/bpmdj/ || die "cp failed"
 }

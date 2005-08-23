@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.21 2005/07/28 21:06:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.22 2005/08/23 17:17:38 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> bpmdj-2.7.ebuild:
+  Don't use cp -a.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> bpmdj-2.6.ebuild,
   bpmdj-2.7.ebuild:
