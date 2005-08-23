@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.19 2005/04/21 19:13:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.20 2005/08/23 19:07:03 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  flightgear-0.9.4.ebuild, flightgear-0.9.5.ebuild, flightgear-0.9.8.ebuild:
+  cp -a -> cp -dpR for bug #103487.
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   flightgear-0.9.8.ebuild:
