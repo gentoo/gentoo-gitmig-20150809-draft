@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25ffca91ab9fd293ea41fc652090b8da ChangeLog 3350
 MD5 3e474572fe4df01c7632a78f013c6d1e STLport-4.5.3-r3.ebuild 1086
 MD5 f480213ed01d6d7700f14c15cb0f5229 STLport-5.0_rc2.ebuild 1317
@@ -12,3 +15,10 @@ MD5 e4ade56502c64dc0858dd39acf14be1a files/STLport-vector.patch 1106
 MD5 7949a0c399ae8cd1c8c6d7ada426848f files/4.6.2-optimize.patch 999
 MD5 ed6eaa01140ef3f87b9675a4261fe9e0 files/digest-STLport-5.0_rc2 66
 MD5 09523b4faaaa2b30b411fd23cba14271 files/STLport-5.0_rc2-stlp-float-type.patch 340
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC2RZj5H05b2HAEkRAvChAJwLJDv094l9ywcSL/EzGpYWlsrRNACgg+AR
+RQub69kIE5JBrL8DUe0CyQM=
+=7Edj
+-----END PGP SIGNATURE-----
