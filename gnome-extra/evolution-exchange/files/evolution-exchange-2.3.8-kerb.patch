@@ -1,0 +1,12 @@
+--- evolution-exchange-2.3.7/configure.in	2005-08-07 23:34:32.000000000 -0400
++++ evolution-exchange-2.3.7.new/configure.in	2005-08-22 18:26:49.000000000 -0400
+@@ -211,7 +211,8 @@
+ 	LDFLAGS="$LDFLAGS -L$with_krb5_libs $mitlibs"
+ 	AC_TRY_LINK_FUNC(krb5_init_context, ac_cv_lib_kerberos5="$mitlibs",
+ 	[
+-		LDFLAGS="$LDFLAGS_save -L$with_krb5_libs $heimlibs"
++		#LDFLAGS="$LDFLAGS_save -L$with_krb5_libs $heimlibs"
++		LDFLAGS="`krb5-config --libs`"
+ 		AC_TRY_LINK_FUNC(krb5_init_context, ac_cv_lib_kerberos5="$heimlibs", ac_cv_lib_kerberos5="no")
+ 	])
+ 	LDFLAGS="$LDFLAGS_save"
