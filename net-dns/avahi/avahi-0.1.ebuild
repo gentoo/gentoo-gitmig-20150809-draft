@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.7 2005/08/23 00:10:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.8 2005/08/23 11:11:31 swegener Exp $
 
 inherit eutils linux-info
 
@@ -66,7 +66,7 @@ src_install() {
 	# Try to remove this directory, it exists if we don't have python support
 	rmdir "${D}"/avahi &>/dev/null
 
-	newinitd "${FILESDIR}"/avahi.initd avahi
+	newinitd "${FILESDIR}"/avahi-daemon.initd avahi-daemon
 	newinitd "${FILESDIR}"/avahi-dnsconfd.initd avahi-dnsconfd
 	dodoc docs/{AUTHORS,README,TODO}
 }
