@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/captive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.6 2005/03/05 07:47:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.7 2005/08/23 13:10:28 genstef Exp $
+
+  23 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
+  captive-1.1.5-r2.ebuild:
+  Fix enewuser for BSD, bug 103421
 
   05 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
   -captive-1.1.5-r1.ebuild:

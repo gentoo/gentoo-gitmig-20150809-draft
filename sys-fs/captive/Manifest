@@ -1,5 +1,5 @@
-MD5 83beedabc64d9ad76e15053ae066e4dd captive-1.1.5-r2.ebuild 2818
-MD5 09f2adc0281ba200d13ef410c4ea96c9 ChangeLog 2059
+MD5 e713979a7c0acc2e3f22f790a59bd5eb captive-1.1.5-r2.ebuild 2806
+MD5 8c84d819d5e001a5d9e39d2da3466b68 ChangeLog 2175
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
 MD5 09de72e8ea997c51e2cdd999343d63ac files/add-extra-opts-for-user-access-to-mount-t-captive.patch 647
 MD5 00da6b972db84ffd52c945b07c3204d4 files/digest-captive-1.1.5-r2 148

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.5-r2.ebuild,v 1.2 2005/02/15 17:57:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.5-r2.ebuild,v 1.3 2005/08/23 13:10:28 genstef Exp $
 
 inherit eutils
 
@@ -31,8 +31,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	einfo "Adding captive user and group"
 	enewgroup captive || die "enewgroup captive failed"
-	enewuser captive -1 /bin/false /dev/null captive \
-		|| die "enewuser captive failed"
+	enewuser captive -1 -1 /dev/null captive || die "enewuser captive failed"
 }
 
 src_unpack() {
