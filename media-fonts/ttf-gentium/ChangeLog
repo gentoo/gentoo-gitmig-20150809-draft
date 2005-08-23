@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-gentium
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ChangeLog,v 1.4 2005/01/03 20:01:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ChangeLog,v 1.5 2005/08/23 22:00:21 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ttf-gentium-1.0.1.ebuild:
+  Added ~sparc
 
   03 Jan 2005; Markus Rothe <corsair@gentoo.org> ttf-gentium-1.0.1.ebuild:
   Stable on ppc64

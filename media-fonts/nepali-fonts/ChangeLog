@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/nepali-fonts
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/ChangeLog,v 1.6 2004/09/29 06:34:29 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/ChangeLog,v 1.7 2005/08/23 22:04:01 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  nepali-fonts-1-r1.ebuild:
+  Added ~sparc
 
   29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> nepali-fonts-1-r1.ebuild,
   -nepali-fonts-1.ebuild:

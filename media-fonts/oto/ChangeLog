@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/oto
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.4 2004/07/01 10:48:52 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.5 2005/08/23 22:06:16 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> oto-0.4.ebuild:
+  Added ~sparc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> oto-0.4.ebuild:
   virtual/glibc -> virtual/libc

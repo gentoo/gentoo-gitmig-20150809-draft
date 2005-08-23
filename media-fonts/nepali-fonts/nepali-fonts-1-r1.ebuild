@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/nepali-fonts-1-r1.ebuild,v 1.10 2005/08/23 00:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nepali-fonts/nepali-fonts-1-r1.ebuild,v 1.11 2005/08/23 22:04:01 gustavoz Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 ~sparc x86"
 IUSE=""
 
 DEPEND=""
