@@ -1,6 +1,16 @@
-MD5 9b4d6281bbfb123bd13e48d8246c2045 ChangeLog 1161
-MD5 779874f0cdf856ec613d1abf93c31001 xcursor-themes-0.99.0.ebuild 502
-MD5 8114b9ec014399b0d8501a50a53891ac xcursor-themes-0.99.0-r1.ebuild 627
-MD5 c6018649c97cb078e02a77ca12345864 files/make-cursordir-configurable.patch 496
-MD5 bb3e47d1a01ff8ae9c2220c341563417 files/digest-xcursor-themes-0.99.0-r1 74
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8352871ed36825765077e4182c527838 ChangeLog 1164
 MD5 bb3e47d1a01ff8ae9c2220c341563417 files/digest-xcursor-themes-0.99.0 74
+MD5 bb3e47d1a01ff8ae9c2220c341563417 files/digest-xcursor-themes-0.99.0-r1 74
+MD5 c6018649c97cb078e02a77ca12345864 files/make-cursordir-configurable.patch 496
+MD5 8114b9ec014399b0d8501a50a53891ac xcursor-themes-0.99.0-r1.ebuild 627
+MD5 779874f0cdf856ec613d1abf93c31001 xcursor-themes-0.99.0.ebuild 502
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCz/EI1lqEGTUzyQRAhXtAJ9qHOBchmLWoh9UIzdJEWW2Cro9IwCeMewL
+RNsc6LmJ0XgPqnu5sI3ETQo=
+=L7ut
+-----END PGP SIGNATURE-----
