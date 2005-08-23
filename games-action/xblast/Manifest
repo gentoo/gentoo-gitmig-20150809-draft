@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db457744a183697f6f973fa378459982 xblast-2.10.0.ebuild 966
-MD5 6ae6aa6e8e83fbc53ad4c3ead72dd067 xblast-2.10.2.ebuild 1794
-MD5 49afa29b11df78adf0563ee169fcc83d ChangeLog 1150
+MD5 3ab5084ce70920bab76fa4fab484d75d ChangeLog 1266
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 db457744a183697f6f973fa378459982 xblast-2.10.0.ebuild 966
+MD5 786ae4b4422ad578ccc03ded37445c19 xblast-2.10.2.ebuild 1799
 MD5 dff9802b5ea122b563a59b39b9a55307 files/2.10.0-makefile.patch 2643
 MD5 35fd4678be628eab8eb22b97e89af153 files/digest-xblast-2.10.0 83
 MD5 5607f339ca03244bb9f8e6e7ecbc4197 files/digest-xblast-2.10.2 402
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCnCvYntT9W3vfTuoRAtOtAJ9RhiYybDozkiO9n5W8LNxvG8kZHACfWoZV
-6Od7nV4Z6Tc295kn/cCoccA=
-=XoXm
------END PGP SIGNATURE-----
