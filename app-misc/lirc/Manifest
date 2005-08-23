@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 96ca0ec1569d376d62648478e648abc1 lirc-0.7.2.ebuild 4422
 MD5 57ee6a35c4bfcdac11e34f82a7ac2768 lirc-0.7.0-r1.ebuild 4494
 MD5 eb7c38a7e1620656ffd7c9e2eb9ae951 lirc-0.7.1.ebuild 4422
@@ -17,3 +20,10 @@ MD5 1106aad81c744af1a4c82b0cb66b3513 files/lirc-0.7.0-xbox.patch.bz2 10512
 MD5 ab567186b553096440ee53918e52b867 files/lirc-0.7.0_pre7-streamzap.patch.bz2 10724
 MD5 ee2b49c33fb3b2a65122cfc698d9e100 files/xbox-lircd.conf 784
 MD5 d874cf5e0b5c21cd211acea456f171d7 files/lirc-0.7.0-configure.in.patch 747
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCwECevY57Fted3ERAgo2AJ44a/7ZrKKP3ZqJ5nhT6oSs9dJVSACfV8EN
+2AHgylGIvCellt0+J3midzQ=
+=EEG3
+-----END PGP SIGNATURE-----
