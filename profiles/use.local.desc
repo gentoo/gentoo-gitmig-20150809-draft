@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1402 2005/08/22 20:05:06 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1403 2005/08/23 23:55:18 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -497,6 +497,7 @@ media-gfx/pornview:mplayer - Enables mplayer support
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
 media-gfx/splashutils:kdgraphics - Use KD_GRAPHICS for silent mode. This will cover ALL messages (even when there's a kernel panic) with the silent splash image. If the splash daemon dies, this might leave the console dead.
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
+media-libs/gd:fontconfig - Enable support for managing custom fonts via fontconfig
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
