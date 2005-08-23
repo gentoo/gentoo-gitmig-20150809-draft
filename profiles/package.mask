@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4326 2005/08/22 23:38:29 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4327 2005/08/23 02:34:49 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luis Medinas <metalgod@gentoo.org> (23 Aug 2005)
+# Mask -alpha03 versions until i stablize that version
+>=app-cdr/cdrtools-2.01.01_alpha03
 
 # Diego Pettenò <flameeyes@gentoo.org> (22 Aug 2005)
 # Pre-release heavy patched
