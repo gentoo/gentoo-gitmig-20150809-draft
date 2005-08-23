@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.45 2005/08/23 03:14:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.46 2005/08/23 18:18:56 grobian Exp $
+
+  23 Aug 2005; Fabian Groffen <grobian@gentoo.org> mp-3.3.14.ebuild:
+  Marking ~ppc-macos
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> mp-3.3.12.ebuild:
   stable on ia64
