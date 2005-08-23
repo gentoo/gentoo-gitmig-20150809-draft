@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acf255d4a4917ef42667567dd09f3e0f fslsfonts-0.99.0.ebuild 446
 MD5 faebf8a13d335e7f6b0b5ed2a2958a6d ChangeLog 478
 MD5 0ceadc204448499927a6111cf06ac655 files/digest-fslsfonts-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCn/7gIKl8Uu19MoRAkRoAJoD+d6JjvdQdvJQ752qLBW7TDMw0ACfcHC0
+ZpwV4m/6gCAvQq6TXnWwPRg=
+=BNxK
+-----END PGP SIGNATURE-----

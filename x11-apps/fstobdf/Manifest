@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2b13c0372859bdcba38fd9281d735790 fstobdf-0.99.0.ebuild 440
 MD5 4775defb091c56e9b4611c37c104f937 ChangeLog 468
 MD5 12ea4845d8868c4671a6fafbca4d4c09 files/digest-fstobdf-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCoASgIKl8Uu19MoRAstUAJ4s0J8uao9r+/5ETq6iW1CSXbBqoACffD4r
+AdViBSsZ9p2r6r/YUi+EFBI=
+=/olU
+-----END PGP SIGNATURE-----
