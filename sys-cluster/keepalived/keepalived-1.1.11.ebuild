@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.11.ebuild,v 1.7 2005/06/17 20:53:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.11.ebuild,v 1.8 2005/08/23 20:29:27 agriffis Exp $
 
 DESCRIPTION="add a strong & robust keepalive facility to the Linux Virtual Server project"
 HOMEPAGE="http://www.keepalived.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.keepalived.org/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 s390 ~sparc x86"
+KEYWORDS="amd64 ia64 ppc ~ppc64 s390 ~sparc x86"
 IUSE="debug profile"
 
 DEPEND="dev-libs/popt
