@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a26a5a0a50460db56b7147c68b5b27b raggle-0.4.0.ebuild 847
-MD5 f65b397409ce4aca086fd839f5d9f6c0 ChangeLog 4304
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a3d475ce510269452205129e351e692d raggle-0.4.1.ebuild 801
+MD5 a5cfcd44ea75985b446888a2ed961ba4 ChangeLog 4300
 MD5 470efcfc756989ce5029e59cd82a4daf files/digest-raggle-0.4.0 64
 MD5 220a6a60c1a06603ab285c3a94f947f1 files/digest-raggle-0.4.1 64
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 9a26a5a0a50460db56b7147c68b5b27b raggle-0.4.0.ebuild 847
+MD5 a3d475ce510269452205129e351e692d raggle-0.4.1.ebuild 801
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC90HRehlBotwFZuQRAkwGAJ9JgCmGlWUvzVIsgskURolJC0L3UQCfdIfW
-xBGzs9v/U+FpU+PgjQaS9QA=
-=JwCJ
+iD8DBQFDC0AjI1lqEGTUzyQRArMYAJ9ERRULToBRK5gZXc9/07gRsDta9QCffCvy
+4INtFYMAUKILlVeBpkARpXU=
+=zoQN
 -----END PGP SIGNATURE-----
