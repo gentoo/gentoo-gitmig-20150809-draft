@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.10 2004/09/28 20:22:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.11 2005/08/23 17:23:49 flameeyes Exp $
 
 IUSE=""
 
@@ -25,7 +25,7 @@ src_compile() {
 src_install() {
 		dodoc COPYING README changelog todo
 		docinto notes
-		cp -a notes/* ${D}/usr/share/doc/${PF}/notes
+		cp -pPR notes/* ${D}/usr/share/doc/${PF}/notes
 		prepalldocs
 		exeinto /usr/bin
 		doexe sulu

@@ -1,6 +1,16 @@
-MD5 57625056d72aa425cfe760eeea8375f1 ChangeLog 834
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 060f644e1652cb3969f3685daea8a9f7 ChangeLog 924
+MD5 859d0270876388fcb8e998fb8e891dbb sulu-0.15.ebuild 1055
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 9db4b86ca59040eece6a2533e908f343 sulu-0.15.ebuild 1054
-MD5 fbb9264abbe9f1c59fd0f265805e66c7 files/digest-sulu-0.15 57
 MD5 99cbf17175441e086c66a38f0d48e4df files/uproar 120
 MD5 97b575f4dede79a805133e1e3bbdf132 files/uproar.usermap 604
+MD5 fbb9264abbe9f1c59fd0f265805e66c7 files/digest-sulu-0.15 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC1vAj5H05b2HAEkRAqrwAJ0eKnHKnHJVoQq5Ec2Zc/ClCaPNGQCfeKNq
+E1a2SC4GbCV22bmvIyHyg/E=
+=cSXH
+-----END PGP SIGNATURE-----
