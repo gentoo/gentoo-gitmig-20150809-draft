@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r3.ebuild,v 1.7 2005/05/24 14:28:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r3.ebuild,v 1.8 2005/08/23 17:57:09 flameeyes Exp $
 
 inherit perl-module
 
@@ -57,7 +57,7 @@ src_install() {
 
 	# the cgi and images..
 	dodir ${__apache_document_root__}/mysqltool
-	cp -a htdocs/* ${D}/${__apache_document_root__}/mysqltool
+	cp -pPR htdocs/* ${D}/${__apache_document_root__}/mysqltool
 	rm ${D}/${__apache_document_root__}/mysqltool/mysqltool.conf
 
 	# the config file..

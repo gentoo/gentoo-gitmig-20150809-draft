@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.23 2005/05/24 14:28:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.24 2005/08/23 17:57:09 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mysqltool-0.95-r3.ebuild:
+  Don't use cp -a.
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   mysqltool-0.95-r1.ebuild, mysqltool-0.95-r2.ebuild,
