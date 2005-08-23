@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18.ebuild,v 1.5 2005/07/26 12:56:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18.ebuild,v 1.6 2005/08/23 22:03:28 dragonheart Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="clamav? ( >=app-antivirus/clamav-0.80 )"
 
 pkg_setup() {
 	enewgroup ftpproxy
-	enewuser ftpproxy -1 /bin/false /var/spool/frox ftpproxy
+	enewuser ftpproxy -1 -1 /var/spool/frox ftpproxy
 }
 
 src_compile() {

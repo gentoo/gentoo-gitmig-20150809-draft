@@ -1,6 +1,16 @@
-MD5 7364833097385931a64727dd6b2132e6 ChangeLog 1164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 6c63e9c35de946ce22c441d26f640e91 frox-0.7.18.ebuild 1790
+MD5 c6c5e1148efa44b4a3539278bbb06df4 ChangeLog 1294
+MD5 d1ede9dc096fa5b565620e2c01f02653 frox-0.7.18.ebuild 1788
 MD5 c24bdfcbd28e6bd71f002adc5527b092 files/frox.rc 1080
-MD5 e80a76dccec13cd8104fe980f63395fd files/config-0.7.18.patch 1953
 MD5 4fc077cd1a556548e43d1bbc6176c1fb files/digest-frox-0.7.18 64
+MD5 e80a76dccec13cd8104fe980f63395fd files/config-0.7.18.patch 1953
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC50/mdTrptrqvGERAqYEAJ9npBAB9ZhswDUmLcW+Kc6pGE59iACgh7Eg
+3phveDSfXmCB1bM1W39iM0A=
+=lbE6
+-----END PGP SIGNATURE-----
