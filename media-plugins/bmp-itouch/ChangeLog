@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-itouch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/ChangeLog,v 1.10 2005/01/26 19:21:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-itouch/ChangeLog,v 1.11 2005/08/23 21:29:04 chainsaw Exp $
+
+  23 Aug 2005; Tony Vroon <chainsaw@gentoo.org> bmp-itouch-1.0.1.ebuild:
+  1.0.1 stable on x86.
 
 *bmp-itouch-1.0.1 (26 Jan 2005)
 

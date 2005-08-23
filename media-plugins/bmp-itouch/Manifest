@@ -1,6 +1,16 @@
-MD5 c500eb197f35d5580eeefed1d42f6cef bmp-itouch-1.0.1.ebuild 918
-MD5 05fe7cea4fb4fba4b3bf7cd2562f9ee6 bmp-itouch-1.0.0.ebuild 918
-MD5 3d4ec4674edb19794a4f5cad59965af5 ChangeLog 1553
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 433be15e194a4897901cbfe9968451bd ChangeLog 1650
+MD5 ed0077d22ac869cfcbfbed0835a862ab bmp-itouch-1.0.1.ebuild 917
+MD5 05fe7cea4fb4fba4b3bf7cd2562f9ee6 bmp-itouch-1.0.0.ebuild 918
 MD5 9116bb62fd057e8ef09068d774c34b8b files/digest-bmp-itouch-1.0.0 68
 MD5 f9083de3b141c3c4dd08396859129463 files/digest-bmp-itouch-1.0.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC5Uzp5vW4rUFj5oRAitYAKC59CeL3yVlguOJcj/RCFYaH30jjwCffeCX
+edYEK7BlPeuKFkqcQnVyWI8=
+=E2Q8
+-----END PGP SIGNATURE-----
