@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.44 2005/07/31 12:00:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.45 2005/08/23 18:55:31 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> afterstep-1.8.11-r2.ebuild,
+  afterstep-2.00.04.ebuild, afterstep-2.00.05.ebuild,
+  afterstep-2.1.1.ebuild, afterstep-2.1.2.ebuild:
+  Use cp -pPR and not cp -a,  bug 103487.
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> afterstep-2.1.2.ebuild:
   Added ~amd64.

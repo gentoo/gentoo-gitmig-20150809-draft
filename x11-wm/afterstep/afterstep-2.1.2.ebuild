@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.1.2.ebuild,v 1.2 2005/07/31 12:00:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.1.2.ebuild,v 1.3 2005/08/23 18:55:31 ka0ttic Exp $
 
 inherit flag-o-matic
 
@@ -76,10 +76,10 @@ src_install() {
 
 	# This fixes a bug with shared libraries
 	rm ${D}/usr/lib/{libAfterImage.a,libAfterBase.a}
-	cp -a ${S}/libAfterImage/libAfterImage.so* ${D}/usr/lib
-	cp -a ${S}/libAfterBase/libAfterBase.so* ${D}/usr/lib
-	cp -a ${S}/libAfterConf/libAfterConf.so* ${D}/usr/lib
-	cp -a ${S}/libAfterStep/libAfterStep.so* ${D}/usr/lib
+	cp -pPR ${S}/libAfterImage/libAfterImage.so* ${D}/usr/lib
+	cp -pPR ${S}/libAfterBase/libAfterBase.so* ${D}/usr/lib
+	cp -pPR ${S}/libAfterConf/libAfterConf.so* ${D}/usr/lib
+	cp -pPR ${S}/libAfterStep/libAfterStep.so* ${D}/usr/lib
 
 	# Create a symlink from MonitorWharf to Wharf
 	rm ${D}/usr/bin/MonitorWharf
@@ -87,9 +87,9 @@ src_install() {
 
 	# Handle the documentation
 	dodoc COPYRIGHT ChangeLog INSTALL NEW* README* TEAM UPGRADE
-	cp -a ${S}/TODO ${D}/usr/share/doc/${PF}/
+	cp -pPR ${S}/TODO ${D}/usr/share/doc/${PF}/
 	dodir /usr/share/doc/${PF}/html
-	cp -a ${S}/doc/* ${D}/usr/share/doc/${PF}/html
+	cp -pPR ${S}/doc/* ${D}/usr/share/doc/${PF}/html
 	rm ${D}/usr/share/doc/${PF}/html/{Makefile*,afterstepdoc.in}
 
 	dodir /usr/share/xsessions
