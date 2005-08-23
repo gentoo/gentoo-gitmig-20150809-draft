@@ -1,10 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/gturing-0.1.1.ebuild,v 1.1 2004/12/28 05:48:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gturing/gturing-0.1.1.ebuild,v 1.2 2005/08/23 02:47:35 ribosome Exp $
 
-DESCRIPTION="GNOME turing machine simulator for"
+inherit eutils
+
+DESCRIPTION="GNOME turing machine simulator"
 HOMEPAGE="http://www.nuclecu.unam.mx/~arturo/gTuring/"
-SRC_URI="mirror://gnome/sources/gturing/0.1/${P}.tar.bz2"
+SRC_URI="mirror://gnome/sources/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -13,12 +15,20 @@ IUSE=""
 
 DEPEND=">=gnome-base/libgnomeui-2.0.0"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gettext.patch
+}
+
 src_compile() {
-	econf || die "econf failed"
+	econf || die
 	emake || die
 }
 
 src_install() {
-	einstall
+	einstall || die
 	dodoc README AUTHORS NEWS TODO
+	insinto /usr/share/doc/${PF}/examples
+	doins tapes/*.tur
 }

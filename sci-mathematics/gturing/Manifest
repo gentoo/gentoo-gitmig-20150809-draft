@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87f1504a768482d4c39415a2696bcd01 gturing-0.1.1.ebuild 609
-MD5 e5ce026a0556cc95ef27f7bf1cb75363 ChangeLog 838
+MD5 cd56ea5911c164818eb4ad67ecdf314a gturing-0.1.1.ebuild 754
+MD5 fc3b3bccdfd66aa1e1b20e3157dcfead ChangeLog 1016
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4e495972145cafe97e445160e6cde60e files/digest-gturing-0.1.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0b2TI1lqEGTUzyQRAk6FAJ9rJ80nGoEaQm6rrEOws0dfk7qX/QCgjkSs
-a4K+MJtzD4treChlGtIN2Ks=
-=FsDk
------END PGP SIGNATURE-----
+MD5 e93c10925468636db26e343be058ff99 files/gturing-0.1.1-gettext.patch 418
