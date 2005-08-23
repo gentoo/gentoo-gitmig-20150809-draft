@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvsd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.20 2005/08/10 23:39:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.21 2005/08/23 13:39:39 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> cvsd-1.0.7.ebuild,
+  cvsd-1.0.8.ebuild:
+  Use -1 instead of /bin/false, bug #103421.
 
   10 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> cvsd-1.0.7.ebuild,
   cvsd-1.0.8.ebuild:
