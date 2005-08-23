@@ -1,3 +1,13 @@
-MD5 fbf62d136dbe3e9b13f9f2667b4489e1 ChangeLog 497
-MD5 3ba93dfe42d1426b38821cdadf67ad9b libXcomposite-0.2.0.ebuild 599
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fdc0fcfb3248f110208f21f468753346 libXcomposite-0.2.0.ebuild 605
+MD5 2b9bc18396728320d656d58376360e4a ChangeLog 591
 MD5 28f34303582cefb87fb9d208e406244a files/digest-libXcomposite-0.2.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC7dO2G5bA0cA/ScRAt2lAKDb3bPM0JZyGfvNhcHD/8XadGYr+gCgmfsj
+moyUfE28y9K/XuaSHtc1aqo=
+=50h9
+-----END PGP SIGNATURE-----
