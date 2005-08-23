@@ -1,0 +1,49 @@
+Allow people to add users with dots in their names.
+
+http://bugs.gentoo.org/22920
+
+--- libmisc/chkname.c
++++ libmisc/chkname.c
+@@ -18,7 +18,7 @@
+ static int good_name (const char *name)
+ {
+ 	/*
+-	 * User/group names must match [a-z_][a-z0-9_-]*
++	 * User/group names must match [a-z_][a-z0-9_-.$]*
+ 	 */
+ 	if (!*name || !((*name >= 'a' && *name <= 'z') || *name == '_'))
+ 		return 0;
+@@ -27,6 +27,7 @@
+ 		if (!((*name >= 'a' && *name <= 'z') ||
+ 		      (*name >= '0' && *name <= '9') ||
+ 		      *name == '_' || *name == '-' ||
++		      *name == '.' ||
+ 		      (*name == '$' && *(name + 1) == '\0')))
+ 			return 0;
+ 	}
+--- man/useradd.8
++++ man/useradd.8
+@@ -128,6 +128,23 @@
+ If no options are specified,
+ \fBuseradd\fR
+ displays the current default values.
++.SH RESTRICTS
++Currently,  the  shadow  suite  enforces  the following restrictions on 
++user names:
++
++.nf
++\- must begin with a lower case letter or underscore
++\- can only contain lower case letters, underscores, and dashes
++\- may end with a dollar sign
++\- regex for these requirements: [a\-z_][a\-z0-9_\-$]*
++.fi
++
++The length of usernames is restricted by glibc (via the UT_NAMESIZE define 
++in the utmp header file).  This may range from 8 characters on older 
++systems to 32 characters on newer systems.
++
++Note Gentoo adds a patch which allows people to create usernames with a 
++dot in them.
+ .SH "NOTES"
+ .PP
+ The system administrator is responsible for placing the default user files in the

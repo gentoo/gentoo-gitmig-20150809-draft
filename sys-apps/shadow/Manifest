@@ -5,17 +5,19 @@ MD5 840517568840af149e28404e84fa0445 shadow-4.0.7-r1.ebuild 6580
 MD5 2581b4daddefcf73a30d69ac42fdfd1a shadow-4.0.5-r3.ebuild 5614
 MD5 0d5c36f8f3aba41c16444ef5543141ec shadow-4.0.7-r4.ebuild 7185
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 febb7c4aee5c745df857e72907d88727 shadow-4.0.12.ebuild 7028
 MD5 d05731401a4ba818c6ece98914223b33 shadow-4.0.7-r3.ebuild 7051
 MD5 c1228dc68400586288618dadf4c27e6a shadow-4.0.7.ebuild 5580
 MD5 8ebdad16442d9a43713adffd95e9162b shadow-4.0.6-r1.ebuild 5619
 MD5 d9ec6b146a66930c1a7b4de28cdeae84 shadow-4.0.11.1-r2.ebuild 7213
 MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
-MD5 5d9114be49b9e44f82c8370485d8a24d ChangeLog 22277
+MD5 14251ed7e3cf0063e3d5cb3dd6c4a83e ChangeLog 22490
 MD5 db870979ea0f600d0bd8137520e2251a shadow-4.0.4.1-r4.ebuild 5961
 MD5 a71e46be63e0aa72da21ce938c3417bc shadow-4.0.11.1-r1.ebuild 7082
 MD5 e32464f2df5a85f4f6c67bc78e9a23d1 files/shadow-4.0.7-nscd-socket-path.patch 1081
 MD5 20fd2dc35b8671b91e120b90281b4cf3 files/shadow-4.0.5-hack-X-envvars.patch 521
 MD5 8bf11ce0e8ee683fe290462473871dab files/shadow-4.0.6-long-groupnames.patch 1625
+MD5 b52179dd78e6b6d207600184022114db files/shadow-4.0.12-dots-in-usernames.patch 1466
 MD5 020e030c2d09b206e88cf9051ced6244 files/shadow-4.0.4.1-nonis.patch 1504
 MD5 aaf16ddabef285df169e37254b13561c files/shadow-4.0.4.1-selinux.diff 4296
 MD5 c5e9081ed43837797e2f1617b7ce1c24 files/shadow-4.0.5-fix-adding-of-pam_env-set-env-vars.patch 285
@@ -23,6 +25,7 @@ MD5 450a2289f2a383296ad9af005e46da74 files/shadow-4.0.11.1-ngettext.patch 1038
 MD5 7becc41b4f7264483ee3ff0ca8277084 files/shadow-4.0.4.1-passwd-typo.patch 438
 MD5 f9846ea2aeefba54443ef5d6796f0bbc files/shadow-4.0.10-nls-manpages.patch 367
 MD5 b8efca60a25e256eebe54c3d0db0760f files/shadow-4.0.4.1-gcc34-xmalloc.patch 361
+MD5 cec3e64e953a7f3f96a1e89d73b62899 files/digest-shadow-4.0.12 67
 MD5 90e2ab53494f677dc23b5137d6e39110 files/shadow-4.0.6-fix-configure.patch 3047
 MD5 13cddd2e24cbcaf5164e13f9105c222c files/shadow-4.0.7-perms.patch 1768
 MD5 46c2be2ed8b26ec007e3ed1f476491d8 files/digest-shadow-4.0.7-r1 66
@@ -49,6 +52,7 @@ MD5 391991f50203bd8b7738474051befdee files/shadow-4.0.5-remove-else.patch 531
 MD5 ae5d078bc6b651b5f081dcfc64b5df69 files/shadow-4.0.11.1-perms.patch 1659
 MD5 c31db5c71b0cdfca75346abc2887aa02 files/shadow-4.0.5-nls-manpages.patch 362
 MD5 6355d65b618395c4adf46f733269546c files/shadow-4.0.10-dots-in-usernames.patch 1894
+MD5 804242385ef14139f4b46167396f26f8 files/shadow-4.0.12-long-groupnames.patch 923
 MD5 fda41657b856ffaeec5a2734b312409b files/shadow-4.0.5-fix-mail-configure.patch 5452
 MD5 70b7c7f1725841e335e5f2361fc9ebab files/shadow-4.0.7-nscd-EPIPE-failure.patch 947
 MD5 d06833980d79d4f001b6064a3f52f938 files/shadow-4.0.7-iswheel.patch 416
@@ -77,7 +81,7 @@ MD5 a5721c39446539b751dceae4b054542b files/pam.d/shadow 171
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+oy4gIKl8Uu19MoRArAzAJ9gPA07Bx61L+NQASYQuurObSEcUACfekIS
-W0SQpo7645WkoJE5gngCaoQ=
-=rr6P
+iD8DBQFDCn+agIKl8Uu19MoRAtlsAJ4m5mYP98PZ6zTRNlf4Mnd9FMTTTgCfTaXY
+/VzA4Yzwz38khwQZ5KGkf40=
+=CEcL
 -----END PGP SIGNATURE-----
