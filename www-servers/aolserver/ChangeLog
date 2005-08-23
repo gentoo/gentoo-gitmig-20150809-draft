@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/aolserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.8 2005/02/27 22:09:56 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.9 2005/08/23 16:00:57 port001 Exp $
+
+  23 Aug 2005; Ian Leitch <port001@gentoo.org> aolserver-4.0.9-r1.ebuild,
+  aolserver-4.0.10.ebuild:
+  Allow enewuser to choose the correct shell, bug #103421
 
   27 Feb 2005; Ian Leitch <port001@gentoo.org> aolserver-4.0.10.ebuild:
   Install sample-config.tcl into /usr/share/doc instead of /usr/share/aolserver

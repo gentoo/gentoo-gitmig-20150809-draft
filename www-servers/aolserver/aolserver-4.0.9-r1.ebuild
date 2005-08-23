@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.9-r1.ebuild,v 1.1 2005/01/05 23:35:42 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.9-r1.ebuild,v 1.2 2005/08/23 16:00:57 port001 Exp $
 
 inherit eutils
 
@@ -120,7 +120,7 @@ src_install () {
 	keepdir /var/run/aolserver
 
 	enewgroup aolserver
-	enewuser aolserver -1 /bin/false ${ns_data} aolserver
+	enewuser aolserver -1 -1 ${ns_data} aolserver
 
 	chown -R root:aolserver ${D}/${ns_data}
 	chmod -R g+w ${D}/${ns_data}
@@ -239,7 +239,7 @@ pkg_config() {
 	then
 		ebegin "Updating user 'aolserver'"
 			userdel aolserver
-			enewuser aolserver -1 /bin/false ${ns_data} aolserver
+			enewuser aolserver -1 -1 ${ns_data} aolserver
 		eend $?
 	fi
 }
