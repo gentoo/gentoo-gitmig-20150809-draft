@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.126 2005/08/22 16:20:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.127 2005/08/23 14:55:11 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -10,7 +10,7 @@
 inherit base eutils kde-functions
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
-IUSE="${IUSE} debug arts xinerama kdeenablefinal"
+IUSE="debug arts xinerama kdeenablefinal"
 
 DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/autoconf

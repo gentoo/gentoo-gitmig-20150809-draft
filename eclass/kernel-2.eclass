@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.141 2005/08/23 01:57:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.142 2005/08/23 14:55:11 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -270,10 +270,10 @@ if [[ ${ETYPE} == sources ]]; then
 	kernel_is gt 2 4 && PROVIDE="${PROVIDE} virtual/alsa"
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the Linux kernel"
-	IUSE="${IUSE} symlink build doc"
+	IUSE="symlink build doc"
 elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
-	IUSE="${IUSE}"
+	IUSE=""
 
 	if [[ ${CTARGET} = ${CHOST} ]]; then
 		DEPEND="!virtual/os-headers"

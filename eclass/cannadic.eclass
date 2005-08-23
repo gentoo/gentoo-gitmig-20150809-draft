@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.11 2005/08/22 16:20:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.12 2005/08/23 14:55:11 swegener Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -10,7 +10,7 @@
 
 EXPORT_FUNCTIONS src_install pkg_setup pkg_postinst pkg_postrm
 
-IUSE="${IUSE} canna"
+IUSE="canna"
 
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://canna.sourceforge.jp/"		# you need to change this!

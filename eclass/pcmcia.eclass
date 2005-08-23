@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.10 2005/08/23 14:55:11 swegener Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -23,9 +23,8 @@
 
 inherit eutils
 
-
 DESCRIPTION="eclass for drivers that may build against pcmcia-cs"
-IUSE="${IUSE} pcmcia"
+IUSE="pcmcia"
 
 # Be VERY careful when pumping the PCMCIA_BASE_VERSION. May require remaking some patches, etc
 # Ugly, but portage doesn't like more dynamics SRC_URIs.

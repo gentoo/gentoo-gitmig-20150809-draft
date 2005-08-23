@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.35 2005/07/14 15:38:16 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.36 2005/08/23 14:55:11 swegener Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,8 +20,8 @@
 # ------------------------------------------------------------------------
 
 SLOT="${PVR}"
-IUSE="$IUSE vhosts"
-DEPEND="$DEPEND net-www/webapp-config app-portage/gentoolkit"
+IUSE="vhosts"
+DEPEND="net-www/webapp-config app-portage/gentoolkit"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install pkg_prerm
 

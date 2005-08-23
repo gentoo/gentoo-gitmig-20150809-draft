@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.118 2005/08/09 23:19:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.119 2005/08/23 14:55:11 swegener Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -54,10 +54,10 @@ else
 fi
 
 if [[ "${MY_PN}" == "vim-core" ]] ; then
-	IUSE="$IUSE livecd"
+	IUSE="${IUSE} livecd"
 else
-	IUSE="$IUSE cscope gpm perl python ruby"
-	DEPEND="$DEPEND
+	IUSE="${IUSE} cscope gpm perl python ruby"
+	DEPEND="${DEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
@@ -65,7 +65,7 @@ else
 		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )
 		ruby?    ( virtual/ruby )"
-	RDEPEND="$RDEPEND
+	RDEPEND="${RDEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
@@ -75,11 +75,11 @@ else
 		ruby?    ( virtual/ruby )"
 
 	if [[ "${MY_PN}" == "vim" ]] ; then
-		IUSE="$IUSE vim-with-x minimal"
-		DEPEND="$DEPEND vim-with-x? ( virtual/x11 )"
-		RDEPEND="$RDEPEND vim-with-x? ( virtual/x11 )"
+		IUSE="${IUSE} vim-with-x minimal"
+		DEPEND="${DEPEND} vim-with-x? ( virtual/x11 )"
+		RDEPEND="${RDEPEND} vim-with-x? ( virtual/x11 )"
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
-		IUSE="$IUSE gnome gtk gtk2 motif"
+		IUSE="${IUSE} gnome gtk gtk2 motif"
 	fi
 fi
 
@@ -90,20 +90,20 @@ fi
 if [[ $(get_major_version ) -ge 7 ]] ; then
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
 		IUSE="${IUSE} tcltk mzscheme"
-		DEPEND="$DEPEND
+		DEPEND="${DEPEND}
 			tcltk?    ( dev-lang/tcl )
 			mzscheme? ( dev-lisp/mzscheme )"
-		RDEPEND="$RDEPEND
+		RDEPEND="${RDEPEND}
 			tcltk?    ( dev-lang/tcl )
 			mzscheme? ( dev-lisp/mzscheme )"
 	fi
 	if [[ "${MY_PN}" == "gvim" ]] ; then
-		IUSE="$IUSE netbeans aqua nextaw qt"
-		DEPEND="$DEPEND   netbeans? ( dev-util/netbeans )"
-		RDEPEND="$RDEPEND netbeans? ( dev-util/netbeans )"
+		IUSE="${IUSE} netbeans aqua nextaw qt"
+		DEPEND="${DEPEND}   netbeans? ( dev-util/netbeans )"
+		RDEPEND="${RDEPEND} netbeans? ( dev-util/netbeans )"
 	fi
 	if [[ "${MY_PN}" == "vim" ]] ; then
-		IUSE="$IUSE vim-pager"
+		IUSE="${IUSE} vim-pager"
 	fi
 
 	# app-vim blocks
@@ -123,25 +123,25 @@ LICENSE="vim"
 # Portage dependancy is for use_with/use_enable.
 # ctags dependancy allows help tags to be rebuilt properly, along
 # with detection of exuberant-ctags by configure.
-DEPEND="$DEPEND
+DEPEND="${DEPEND}
 	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	dev-util/ctags"
-RDEPEND="$RDEPEND dev-util/ctags"
+RDEPEND="${RDEPEND} dev-util/ctags"
 
 if version_is_at_least "6.3.075" ; then
-	DEPEND="$DEPEND
+	DEPEND="${DEPEND}
 		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
 		termcap-compat?   ( sys-libs/libtermcap-compat )"
-	RDEPEND="$RDEPEND
+	RDEPEND="${RDEPEND}
 		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
 		termcap-compat?   ( sys-libs/libtermcap-compat )"
 else
-	DEPEND="$DEPEND
+	DEPEND="${DEPEND}
 		ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
 		!ncurses? ( sys-libs/libtermcap-compat )"
-	RDEPEND="$RDEPEND
+	RDEPEND="${RDEPEND}
 		ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
 		!ncurses? ( sys-libs/libtermcap-compat )"
 fi

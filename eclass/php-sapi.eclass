@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.85 2005/08/11 09:04:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.86 2005/08/23 14:55:11 swegener Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -43,7 +43,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.6-includepath.diff http://dev.gentoo
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam png postgres snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
+IUSE="X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam png postgres snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql debug"
 
 # Hardened-PHP support
 #

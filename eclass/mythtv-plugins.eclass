@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.9 2005/08/23 14:55:11 swegener Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org
 #
 
 inherit multilib
 
-IUSE="${IUSE} debug mmx"
+IUSE="debug mmx"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install
 MYTHPLUGINS="mythbrowser mythdvd mythgallery mythgame mythmusic mythnews mythphone mythvideo mythweather mythweb"
