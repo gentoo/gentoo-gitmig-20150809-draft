@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6d91f6594f81f5a277c2d0baf3b8d4b autotrace-0.31.1.ebuild 672
 MD5 94328d8f5876abf1b939df3dc0b22c14 metadata.xml 223
 MD5 098b6d83a85e7f2045a1f45837044260 autotrace-0.31.1-r1.ebuild 1053
@@ -5,3 +8,10 @@ MD5 a9c51cc6248bb7cb6567f2a4f1e187df ChangeLog 2319
 MD5 f142e4322a72c3246f11a99b53e2d702 files/digest-autotrace-0.31.1 68
 MD5 e5551f2f94c0ff55ce8a6394e574dcc5 files/autotrace-imagemagick.patch 962
 MD5 f142e4322a72c3246f11a99b53e2d702 files/digest-autotrace-0.31.1-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC4fSKRy60XGEcJIRAv7BAJ9z+cEaDW7mdU42jfRl6JOI+9ZQDwCgs9fb
+NduSoPIZ20hzJmEQKa9rW8o=
+=w9RH
+-----END PGP SIGNATURE-----
