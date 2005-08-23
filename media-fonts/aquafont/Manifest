@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 413e8e02705aefa54803d8f18500f8d4 aquafont-2.7-r2.ebuild 681
 MD5 117c948e67f3c237ee780d844c589f0d ChangeLog 1971
 MD5 e00993330d733d8e649b907ca2d91994 files/digest-aquafont-2.7-r2 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmhxgIKl8Uu19MoRAnHRAJ9Rx94WT8gHKbjNU7STb+cxheEUWwCbB91X
+L2xkzligOAqAz19Yj9wysxw=
+=G/UP
+-----END PGP SIGNATURE-----
