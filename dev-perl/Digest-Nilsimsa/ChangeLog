@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-Nilsimsa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.13 2005/07/10 16:12:11 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.14 2005/08/23 16:14:24 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Digest-Nilsimsa-0.06-r1.ebuild:
+  stable on ia64
 
   10 Jul 2005; Tom Martin <slarti@gentoo.org>
   Digest-Nilsimsa-0.06-r1.ebuild:

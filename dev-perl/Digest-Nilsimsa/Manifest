@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 010b5e82c9667d241efb10062805ad19 ChangeLog 1216
+MD5 988330516efabf4eb02c8c4107087d57 Digest-Nilsimsa-0.06-r1.ebuild 548
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 61dcd48a129cd1e28139bdd891eea214 Digest-Nilsimsa-0.06-r1.ebuild 549
+MD5 010b5e82c9667d241efb10062805ad19 ChangeLog 1216
 MD5 51ddd017b750a7c559ddb75bf547a859 files/digest-Digest-Nilsimsa-0.06-r1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0UkFCHk4+ZoBpvsRAm/4AKCvNVWLKcOtfL63D2FJwKx4kWbx6QCfVnd7
-4HcDQoyNSR8zh7iVOKZUrA8=
-=0LQM
------END PGP SIGNATURE-----

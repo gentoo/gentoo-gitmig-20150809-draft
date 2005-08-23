@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.36 2005/08/21 09:54:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.37 2005/08/23 16:15:24 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> GD-2.23.ebuild:
+  stable on ia64
 
   21 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> GD-2.23.ebuild:
   Stable on hppa.
