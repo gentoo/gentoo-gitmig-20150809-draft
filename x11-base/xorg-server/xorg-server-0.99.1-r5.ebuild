@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r5.ebuild,v 1.1 2005/08/22 17:49:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r5.ebuild,v 1.2 2005/08/23 01:04:45 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -15,9 +15,10 @@ MESA_PV="6.3.2"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
-CVS_UPDATE_DATE="20050822"
+CVS_UPDATE_DATE="20050822-1"
 
 PATCHES="${WORKDIR}/${P}-update-to-CVS-HEAD-${CVS_UPDATE_DATE}.patch
+	${FILESDIR}/${PVR}-check-for-glproto.patch
 	${FILESDIR}/fix-xnest.patch"
 
 SRC_URI="${SRC_URI}
@@ -88,6 +89,7 @@ pkg_setup() {
 		--enable-xevie
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
+		--with-xkb-path=/usr/lib/X11/xkb
 		--disable-static"
 #		$(use_enable xprint)
 

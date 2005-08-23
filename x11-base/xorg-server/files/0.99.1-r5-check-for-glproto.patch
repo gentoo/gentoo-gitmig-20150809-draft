@@ -1,0 +1,25 @@
+https://bugs.freedesktop.org/show_bug.cgi?id=3990
+
+diff -urN xorg-server-0.99.1.orig/configure.ac xorg-server-0.99.1/configure.ac
+--- xorg-server-0.99.1.orig/configure.ac	2005-08-22 16:26:40.000000000 -0700
++++ xorg-server-0.99.1/configure.ac	2005-08-22 16:38:06.000000000 -0700
+@@ -340,6 +340,9 @@
+ 	PKG_CHECK_MODULES([LIBDRM], [libdrm])
+ 	AC_SUBST(DRIPROTO_CFLAGS)
+ 	AC_SUBST(LIBDRM_CFLAGS)
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ 
+ AM_CONDITIONAL(XINERAMA, [test "x$XINERAMA" = xyes])
+@@ -520,6 +523,9 @@
+ 	DMX_INCLUDES="$XEXT_INC $RENDER_INC $XTRAP_INC $RECORD_INC"
+ 	XDMX_LIBS="$FB_LIB $MI_LIB $XEXT_LIB $RENDER_LIB $XTRAP_LIB $RECORD_LIB $XI_LIB $XKB_LIB $XKB_STUB_LIB $MIEXT_DAMAGE_LIB $OS_LIB $MIEXT_SHADOW_LIB"
+ 	AC_SUBST([XDMX_LIBS])
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ 
+ 
