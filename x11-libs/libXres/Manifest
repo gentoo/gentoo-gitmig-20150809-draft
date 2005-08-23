@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb8f3f9631b0b3ce2320c2e03820713a libXres-0.99.0.ebuild 567
 MD5 c62e5908ca7c6bed9cf4dfab9a4c2033 ChangeLog 557
 MD5 8c189f687176fd178905d12129439bf7 files/digest-libXres-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCxee2G5bA0cA/ScRAueqAKCEpvKtHqZP3ZidDK9lD+MFDz1lfACfRDGA
+x5ZpZ/WYy4oV2w4iMo0FXQc=
+=dp2g
+-----END PGP SIGNATURE-----
