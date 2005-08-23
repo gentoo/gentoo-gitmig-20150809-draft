@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.6.0.ebuild,v 1.2 2005/07/08 03:35:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.6.0.ebuild,v 1.3 2005/08/23 22:49:33 halcy0n Exp $
 
 MY_PV=${PV//./_}
 MY_P=${PN}-src_${MY_PV}
@@ -32,7 +32,7 @@ src_install () {
 
 	if use doc; then
 		dodir /usr/share/doc/${P}
-		cp -a ${S}/samples ${D}/usr/share/doc/${P}
+		cp -pPR ${S}/samples ${D}/usr/share/doc/${P}
 		cd ${S}/doc; doxygen
 		dohtml -r html
 	fi
