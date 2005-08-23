@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/publicfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.6 2005/07/25 18:40:53 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.7 2005/08/23 13:24:05 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  publicfile-0.52-r1.ebuild:
+  Use -1 instead of /bin/false on enewuser call.
 
   25 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org>
   publicfile-0.52-r1.ebuild:
