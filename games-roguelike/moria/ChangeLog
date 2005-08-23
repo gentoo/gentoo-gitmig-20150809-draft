@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/moria
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.6 2005/05/17 06:02:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.7 2005/08/23 23:02:19 mr_bones_ Exp $
+
+  23 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  files/5.5.2-gentoo-paths.patch:
+  fix permissions on score file (bug #103491)
 
   17 May 2005; Michael Sterrett <mr_bones_@gentoo.org> moria-5.5.2.ebuild:
   use toolchain-funs; tidy

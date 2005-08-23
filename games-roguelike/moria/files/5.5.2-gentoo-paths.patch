@@ -14,7 +14,7 @@
  	(cd files; cp $(LIBFILES) $(LIBDIR))
 -	(cd $(LIBDIR); chmod 444 $(LIBFILES))
 -	(cd $(LIBDIR); touch scores; chmod 644 scores)
-+	(cd $(STATEDIR); touch moriascores; chmod 644 moriascores; chown $(OWNER) moriascores; chgrp $(GROUP) moriascores)
++	(cd $(STATEDIR); touch moriascores; chmod 664 moriascores; chown $(OWNER) moriascores; chgrp $(GROUP) moriascores)
  	chown $(OWNER) $(BINDIR)/moria
  	chgrp $(GROUP) $(BINDIR)/moria
 -	(cd $(LIBDIR); chown $(OWNER) $(LIBFILES) scores)
