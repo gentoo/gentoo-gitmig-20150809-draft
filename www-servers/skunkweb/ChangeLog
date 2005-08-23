@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.7 2005/03/12 23:58:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.8 2005/08/23 13:58:53 satya Exp $
+
+  23 Aug 2005; Christian Andreetta <satya@gentoo.org>
+  skunkweb-3.4_beta5.ebuild, skunkweb-3.4_beta5-r1.ebuild,
+  skunkweb-3.4.0.ebuild, skunkweb-3.4.0-r1.ebuild:
+  enewuser Darwin and BSD fix (bug #103421)
 
   13 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   skunkweb-3.4.0-r1.ebuild:
