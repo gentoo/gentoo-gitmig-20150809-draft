@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 af8a5f3513b51e256b3c6b5b5e6754f1 metadata.xml 217
 MD5 667061b1b66468bffd04d5d63c23ee51 urwvn-fonts-2.0.ebuild 580
 MD5 a53f928b708b9643458f30bb19139890 ChangeLog 625
 MD5 a5a25439da2fa20c5aaedbc739806442 files/digest-urwvn-fonts-2.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC5bGKRy60XGEcJIRAn9lAJ4nSlHlhliDuFWKsriZl7xqYQBXLwCfYaHS
+W86T8I/sJSADl/qqD62KstQ=
+=9Mtp
+-----END PGP SIGNATURE-----
