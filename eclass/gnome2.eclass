@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.60 2005/08/17 16:49:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.61 2005/08/23 03:51:03 leonardop Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -158,11 +158,12 @@ gnome2_omf_fix() {
 	[ -f ${S}/omf.make ] \
 		&& omf_makefiles="${omf_makefiles} ${S}/omf.make"
 
+	ebegin "Fixing OMF Makefiles"
+	local retval=0
 	for omf in ${omf_makefiles}; do
-		omfbase=$(basename ${omf})
-		einfo "Fixing OMF Makefile: ${omf#${S}/}"
-		sed -i -e 's:scrollkeeper-update:true:' ${omf}
+		sed -i -e 's:scrollkeeper-update:true:' ${omf} || retval=$?
 	done
+	eend $retval
 
 }
 
