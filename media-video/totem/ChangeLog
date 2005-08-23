@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.65 2005/07/14 09:46:15 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.66 2005/08/23 22:34:19 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/totem-1.0.4-fbsd.patch, totem-1.0.4.ebuild:
+  Added patch for FreeBSD support.
 
 *totem-1.0.4 (14 Jul 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.4.ebuild,v 1.1 2005/07/14 09:46:16 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.4.ebuild,v 1.2 2005/08/23 22:34:19 flameeyes Exp $
 
 inherit gnome2 eutils
 
@@ -77,6 +77,8 @@ src_unpack() {
 	# use the omf_fix for scrollkeeper sandbox
 	# violations, see bug #48800 <obz@gentoo.org>
 	gnome2_omf_fix
+
+	epatch ${FILESDIR}/${P}-fbsd.patch
 }
 
 pkg_postinst() {
