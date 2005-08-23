@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mdidentd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/ChangeLog,v 1.3 2004/07/01 21:28:10 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/ChangeLog,v 1.4 2005/08/23 13:20:13 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> mdidentd-1.04a.ebuild:
+  Use -1 instead of /bin/false on enewuser call.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> mdidentd-1.04a.ebuild:
   change virtual/glibc to virtual/libc, add IUSE

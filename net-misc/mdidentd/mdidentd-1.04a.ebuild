@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04a.ebuild,v 1.6 2004/07/13 21:17:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04a.ebuild,v 1.7 2005/08/23 13:20:13 flameeyes Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/ezbounce-${PV}
 
 pkg_setup() {
 	enewgroup mdidentd
-	enewuser mdidentd -1 /bin/false /dev/null mdidentd
+	enewuser mdidentd -1 -1 /dev/null mdidentd
 }
 
 src_unpack() {

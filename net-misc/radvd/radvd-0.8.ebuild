@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.8.ebuild,v 1.1 2005/08/02 18:03:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.8.ebuild,v 1.2 2005/08/23 13:14:14 flameeyes Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 
 pkg_setup() {
 	enewgroup radvd
-	enewuser radvd /bin/false /dev/null radvd
+	enewuser radvd -1 -1 /dev/null radvd
 
 	# Force ownership of radvd user and group. fix #19647
 	[ -d "/var/run/radvd" ] && chown radvd:radvd /var/run/radvd

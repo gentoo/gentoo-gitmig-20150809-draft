@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.6 2005/07/13 14:15:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.7 2005/08/23 13:17:08 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -137,7 +137,7 @@ src_install () {
 	# non-root
 	#
 	enewgroup ser
-	enewuser  ser -1 /bin/false /dev/null ser
+	enewuser  ser -1 -1 /dev/null ser
 
 	chown -R root:ser ${D}/etc/ser
 	chmod 750 ${D}/etc/ser

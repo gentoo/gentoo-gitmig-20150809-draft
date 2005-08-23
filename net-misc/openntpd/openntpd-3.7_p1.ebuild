@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.5 2005/08/18 18:43:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.7_p1.ebuild,v 1.6 2005/08/23 13:19:12 flameeyes Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	enewgroup ntp 123
-	enewuser ntp 123 /bin/false /var/empty ntp
+	enewuser ntp 123 -1 /var/empty ntp
 }
 
 src_unpack() {
