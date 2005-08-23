@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/xprobe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.17 2005/08/02 18:29:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/ChangeLog,v 1.18 2005/08/23 00:54:51 hparker Exp $
+
+  23 Aug 2005; Homer Parker <hparker@gentoo.org> xprobe-0.3.ebuild:
+  Marked ~amd64.
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org> xprobe-0.2.2.ebuild:
   added ~amd64 keyword
