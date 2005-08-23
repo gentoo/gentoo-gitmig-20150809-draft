@@ -1,8 +1,18 @@
-MD5 9bd4371fd590796f8b8cc22d3efaae3b brltty-3.6.ebuild 790
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3b2d66a8f3995b74d281f4ca80a30b74 brltty-3.6.1-r1.ebuild 835
 MD5 b69eb608789e94959869c6fa6a409407 brltty-3.5.ebuild 669
-MD5 4f041c9a86216e3b6c510f13e74f1894 brltty-3.6.1-r1.ebuild 834
-MD5 b8795b6c8d920a93924635a94d265e32 ChangeLog 4064
 MD5 400cd2fad2e2bd56b1920c9cdd5d1420 metadata.xml 259
-MD5 af551ceff5cb2d450b638b0116e2898d files/digest-brltty-3.6.1-r1 65
-MD5 7d93e814d84d01d5a05daab69875e2f9 files/digest-brltty-3.5 62
+MD5 c743464ecf3d63b52ceb7e73d74d0705 ChangeLog 4158
+MD5 9bd4371fd590796f8b8cc22d3efaae3b brltty-3.6.ebuild 790
 MD5 b1706df140ca8876753283a3a222a3d5 files/digest-brltty-3.6 63
+MD5 7d93e814d84d01d5a05daab69875e2f9 files/digest-brltty-3.5 62
+MD5 af551ceff5cb2d450b638b0116e2898d files/digest-brltty-3.6.1-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDCoS4BXaUFmZvwyMRAu0QAKCtRLx+5gMIbH+1a69tOmDoCMJHTgCfVAl9
+NPiK0AWkk5Sybk68ckXykHQ=
+=MeuZ
+-----END PGP SIGNATURE-----
