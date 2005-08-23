@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2-r1.ebuild,v 1.4 2005/06/05 11:32:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.2.2-r1.ebuild,v 1.5 2005/08/23 20:36:15 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 MY_P="Atlas-${PV}"
 DESCRIPTION="Chart Program to use with Flightgear Flight Simulator"

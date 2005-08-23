@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.30.ebuild,v 1.2 2005/07/22 08:20:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.30.ebuild,v 1.3 2005/08/23 20:38:26 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Launch opengl games with custom graphic settings"
 HOMEPAGE="http://www.rillion.net/gamepick/index.html"

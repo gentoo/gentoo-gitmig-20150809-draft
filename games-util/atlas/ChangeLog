@@ -1,6 +1,9 @@
 # ChangeLog for games-util/atlas
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.7 2005/06/05 11:32:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.8 2005/08/23 20:36:15 wolf31o2 Exp $
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> atlas-0.2.2-r1.ebuild:
+  Add inherit eutils.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> atlas-0.2.2-r1.ebuild:
   Stable on ppc.
