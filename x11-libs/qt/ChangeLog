@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.242 2005/08/22 13:22:01 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.243 2005/08/23 23:12:58 greg_g Exp $
+
+  23 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> qt-4.0.1.ebuild:
+  Fix detection of gcc-4. Replace 'cp -a' for bug #103487.
 
   22 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> qt-4.0.1.ebuild:
   Fix bug #75181 in a more generic way, that does not make assumptions on the
