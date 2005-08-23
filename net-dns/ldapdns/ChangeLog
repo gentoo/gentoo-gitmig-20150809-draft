@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ldapdns
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.14 2005/07/31 11:15:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.15 2005/08/23 13:05:57 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> ldapdns-2.06.ebuild:
+  Use -1 instead of /bin/false on enewuser call.
 
   31 Jul 2005; David Holm <dholm@gentoo.org> ldapdns-2.06.ebuild:
   Added to ~ppc.

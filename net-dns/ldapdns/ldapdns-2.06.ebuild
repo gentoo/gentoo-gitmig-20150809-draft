@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.2 2005/07/31 11:15:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.3 2005/08/23 13:05:57 flameeyes Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	enewgroup nofiles
-	enewuser ldapdns -1 /bin/false /nonexistent nofiles
-	enewuser dnslog -1 /bin/false /nonexistent nofiles
+	enewuser ldapdns -1 -1 /nonexistent nofiles
+	enewuser dnslog -1 -1 /nonexistent nofiles
 }
 
 src_unpack() {

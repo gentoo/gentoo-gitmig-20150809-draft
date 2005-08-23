@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnrd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.6 2005/08/17 16:52:02 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.7 2005/08/23 13:07:11 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> dnrd-2.19.1.ebuild:
+  Use -1 instead of /bin/false on enewuser call.
 
   17 Aug 2005; Chris White <chriswhite@gentoo.org> dnrd-2.19.1.ebuild:
   Permissions fix for bug #102225.
