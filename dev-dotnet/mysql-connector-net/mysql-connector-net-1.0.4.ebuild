@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.2 2005/06/12 11:33:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mysql-connector-net/mysql-connector-net-1.0.4.ebuild,v 1.3 2005/08/23 19:54:55 ramereth Exp $
 
 inherit eutils multilib mono
 
@@ -45,7 +45,7 @@ src_install() {
 
 	if use doc; then
 		dodir /usr/share/doc/${PF}/samples
-		cp -a Samples/* ${D}/usr/share/doc/${PF}/samples/
+		cp -pPR Samples/* ${D}/usr/share/doc/${PF}/samples/
 	fi
 }
 
