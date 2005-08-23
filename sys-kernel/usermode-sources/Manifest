@@ -1,4 +1,16 @@
-MD5 08a336d2c9ac2365c0bd72e7e04c952d ChangeLog 20752
-MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d6c0fcb6a2420c8ae61c497be024ed47 usermode-sources-2.6.12-r2.ebuild 1001
 MD5 022e16f7f3153fc675535ae063775516 usermode-sources-2.6.12-r1.ebuild 886
+MD5 3a85e030543bb16321d1e80b02427753 ChangeLog 20950
+MD5 a76f13cb946fc2720c04b189616da2de metadata.xml 159
 MD5 ead6f3b52ff4aa4bf6c38cc2f8abe1e3 files/digest-usermode-sources-2.6.12-r1 211
+MD5 43a33a8da2581ad2cd22c793d81605c8 files/digest-usermode-sources-2.6.12-r2 213
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCzYgTOXg++0VvJQRAmZ9AJ9Ce1h4o4JPa/W25NYKE/7SsCpACACdESpK
+X3WwxA7JVTCXO9DSdj1CsDI=
+=Eg7D
+-----END PGP SIGNATURE-----
