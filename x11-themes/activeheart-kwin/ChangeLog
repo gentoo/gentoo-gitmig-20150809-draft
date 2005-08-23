@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart-kwin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.5 2005/02/05 02:14:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.6 2005/08/23 22:24:35 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  activeheart-kwin-1.1.ebuild:
+  To ~sparc
 
   05 Feb 2005; Sven Wegener <swegener@gentoo.org>
   activeheart-kwin-1.1.ebuild:
