@@ -1,6 +1,9 @@
 # ChangeLog for games-action/xblast
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/ChangeLog,v 1.8 2005/08/23 18:58:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/ChangeLog,v 1.9 2005/08/23 19:23:37 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> xblast-2.10.2.ebuild:
+  cp -dpR -> cp -pPR for bug #103487.
 
   23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> xblast-2.10.2.ebuild:
   cp -a -> cp -dpR for bug #103487.
