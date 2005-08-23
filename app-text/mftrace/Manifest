@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b098a3a0eff7378673690d1745670877 mftrace-1.0.34.ebuild 1229
 MD5 1719914f955572a1eb19ca904aa8fc34 mftrace-1.1.2.ebuild 1225
-MD5 c71b38024a94b6a12f552b51207a58fe mftrace-1.0.34.ebuild 1230
-MD5 a8f5492732bf6f0a58aae6a13f98789f ChangeLog 2971
 MD5 2ff0f713422507205e9611141006ae08 metadata.xml 183
-MD5 de1d30aed8d0bc3ad7de89005689d7fb files/digest-mftrace-1.0.34 65
+MD5 63ba80e210459a3239bba03aebbc6310 ChangeLog 3067
 MD5 b61de718872bea699323bbb544752a6d files/digest-mftrace-1.1.2 64
+MD5 de1d30aed8d0bc3ad7de89005689d7fb files/digest-mftrace-1.0.34 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDC4hNKRy60XGEcJIRAtN2AJwOZ6QAb8/IEsQ/BbKxST1GZnE/eQCgjIfs
+WNTQ7+dxOr60LvKsD3I2pwg=
+=g1vG
+-----END PGP SIGNATURE-----
