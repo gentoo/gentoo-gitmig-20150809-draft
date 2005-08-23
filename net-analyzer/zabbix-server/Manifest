@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 398d5b2459964351fd302178c99b8a69 zabbix-server-1.0.ebuild 3108
 MD5 5527376efd81520b8bcf4c92e00461fa ChangeLog 2816
 MD5 89646fde9d4a16939ec0599b1624d7d9 zabbix-server-1.1_alpha7.ebuild 2926
@@ -16,3 +19,10 @@ MD5 ee29fececd9e7e7b108b691b854020b0 files/1.0/conf.d/zabbix-suckerd 334
 MD5 982b22f8da53a2810028d9561177fdbb files/1.0/conf.d/zabbix-trapperd 337
 MD5 eecfecec3c84a8972e98068fbe981b50 files/1.1_alpha7/init.d/zabbix-server 534
 MD5 e4dd6d5b2b1a84b5b1f74ab450e2b50b files/1.1_alpha7/conf.d/zabbix-server 338
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC1tnj5H05b2HAEkRApX8AKClQMuP9wBfo6E3r7mokbQGTnn/pwCeI9Ul
+DJr6BworVe5SecJo2Ane+Do=
+=4bOw
+-----END PGP SIGNATURE-----
