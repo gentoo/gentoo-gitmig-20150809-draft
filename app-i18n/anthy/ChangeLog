@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.60 2005/08/08 08:40:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.61 2005/08/23 03:17:39 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> anthy-6700b.ebuild:
+  stable on ia64
 
   08 Aug 2005; Markus Rothe <corsair@gentoo.org> anthy-6700b.ebuild:
   Stable on ppc64
