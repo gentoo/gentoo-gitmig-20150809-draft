@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.9 2005/05/22 15:26:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.8.ebuild,v 1.10 2005/08/23 13:38:34 ka0ttic Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -21,8 +21,8 @@ RDEPEND="${DEPEND}
 	sys-apps/ucspi-tcp"
 
 pkg_setup() {
-	enewuser fnord -1 /bin/false /etc/fnord nofiles
-	enewuser fnordlog -1 /bin/false /etc/fnord nofiles
+	enewuser fnord -1 -1 /etc/fnord nofiles
+	enewuser fnordlog -1 -1 /etc/fnord nofiles
 }
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/fnord
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.10 2005/05/17 18:09:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.11 2005/08/23 13:38:34 ka0ttic Exp $
+
+  23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> fnord-1.8.ebuild,
+  fnord-1.9.ebuild:
+  Use -1 instead of /bin/false, bug #103421.
 
   17 May 2005; Michael Hanselmann <hansmi@gentoo.org> fnord-1.9.ebuild:
   Stable on ppc.
