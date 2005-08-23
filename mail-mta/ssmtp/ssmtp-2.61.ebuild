@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.12 2005/07/29 21:02:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.13 2005/08/23 19:37:49 ferdy Exp $
 
 inherit eutils
 
 DESCRIPTION="Extremely simple MTA to get mail off the system to a Mailhub"
 HOMEPAGE="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/"
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/s/ssmtp/${P/-/_}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/s/ssmtp/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

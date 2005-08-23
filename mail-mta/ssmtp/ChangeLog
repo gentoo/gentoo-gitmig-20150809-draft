@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.28 2005/07/29 21:02:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.29 2005/08/23 19:37:49 ferdy Exp $
+
+  23 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> ssmtp-2.61.ebuild,
+  ssmtp-2.61-r1.ebuild:
+  Use mirror://debian/ in SRC_URI
 
   29 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> ssmtp-2.61.ebuild:
   Stable on sh.
