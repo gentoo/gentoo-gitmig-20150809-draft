@@ -1,4 +1,0 @@
-#
-# This is the PAM configuration file for screen(1)
-#
-auth    required         pam_stack.so service=system-auth

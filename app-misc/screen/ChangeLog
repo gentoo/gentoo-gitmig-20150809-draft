@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.100 2005/08/23 03:28:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.101 2005/08/23 16:09:42 swegener Exp $
+
+  23 Aug 2005; Sven Wegener <swegener@gentoo.org>
+  -files/screen.pam.system-auth, -screen-4.0.2-r1.ebuild:
+  Removed old ebuild.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> screen-4.0.2-r4.ebuild:
   stable on ia64

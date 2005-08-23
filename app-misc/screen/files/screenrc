@@ -73,7 +73,7 @@
 
 # bufferfile:   The file to use for commands
 #               "readbuf" ('<') and  "writebuf" ('>'):
-bufferfile            $HOME/.screen_exchange
+  bufferfile            $HOME/.screen_exchange
 #
 # hardcopydir:  The directory which contains all hardcopies.
 # hardcopydir           ~/.hardcopy
