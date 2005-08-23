@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 162aaf694bd7d47fa65f675873a0acda ChangeLog 2889
+MD5 84d2773f410acd2a68d0ccf078290ead ChangeLog 2990
+MD5 36efe4888f751524bac28e261e377b9d mysqltool-0.95-r3.ebuild 3254
 MD5 93599d0dbb50482c6f91cddb9bde9448 mysqltool-0.95-r1.ebuild 2312
 MD5 014c5872ed9aa49f027e0771f9a157dd mysqltool-0.95-r2.ebuild 3250
-MD5 c939c0a7df64043a217e61d19b388635 mysqltool-0.95-r3.ebuild 3252
 MD5 8f29dbd83bfe415fe9b3dff311ce9c20 files/90_mysqltool.conf.m4 363
+MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r3 65
 MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r1 65
 MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r2 65
-MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCkzoBtG5z4I8BtQoRAvbVAJ0Ux3juyq8YcaQpUC3kJa0w5N5zcQCfVP53
-R/SUDd51IIRQy0UvH5iojnE=
-=+NGz
------END PGP SIGNATURE-----
