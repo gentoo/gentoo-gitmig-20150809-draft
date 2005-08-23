@@ -1,5 +1,5 @@
-MD5 9e1586625a9f414accf9275e466e9d80 ChangeLog 751
+MD5 ff50d15ea927f58d0336f17758f1fe95 ChangeLog 850
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 e8fae99e3cfd22d53651fc9dbd98daf7 dzip-2.9-r1.ebuild 973
+MD5 c763941d7e152e9083c673d40924c7f8 dzip-2.9-r1.ebuild 982
 MD5 af4ae84381bfa70668f6ae133ff1cd3c files/digest-dzip-2.9-r1 56
 MD5 899649420d32507461e9a9550b00f39e files/dzip-2.9-scrub-names.patch 1816
