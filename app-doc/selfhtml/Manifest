@@ -1,6 +1,4 @@
-MD5 030b0cc6318c2b68e8c93ca632f5f323 ChangeLog 863
+MD5 e73817db27f4523c3c8f04acd1f7f3bf ChangeLog 1007
 MD5 035613e4ea415232c9b9fea9783994ce metadata.xml 221
-MD5 a27b3f7d65fd663fe047dfc6757996a8 selfhtml-8.0-r1.ebuild 687
 MD5 a979b4247ce453a90a4b7b995897875c selfhtml-8.1.ebuild 639
-MD5 7806cf628ae7e19d57618c0fa53ab8fe files/digest-selfhtml-8.0-r1 124
 MD5 b0d2429e030ffd996bd09d0c2dea8c61 files/digest-selfhtml-8.1 60
