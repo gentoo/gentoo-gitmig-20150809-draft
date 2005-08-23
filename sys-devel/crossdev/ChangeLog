@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.22 2005/08/17 22:48:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.23 2005/08/23 23:49:34 vapier Exp $
+
+*crossdev-0.9.9-r1 (23 Aug 2005)
+
+  23 Aug 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
+  -crossdev-0.9.9.ebuild, +crossdev-0.9.9-r1.ebuild:
+  Touchup help output, add more error checking, clean more directories when
+  uninstalling, be a bit more user friendly with cmdline options, add untested
+  support for klibc, touchup internal syntax, and improve ABI faking out.
 
 *crossdev-0.9.9 (17 Aug 2005)
 

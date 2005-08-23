@@ -1,7 +1,9 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.32 2005/08/21 03:48:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.33 2005/08/23 23:49:34 vapier Exp $
+
+cd /
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -75,6 +77,7 @@ parse_target() {
 		alpha*)     TARCH=alpha;;
 		arm*)       TARCH=arm;;
 		hppa*)      TARCH=hppa;;
+		parisc)     TARCH=hppa;   CPRE="hppa";;
 		ia64*)      TARCH=ia64;;
 		i?86*)      TARCH=x86;;
 		x86)        TARCH=x86;    CPRE="i386";;
@@ -120,41 +123,39 @@ parse_target() {
 		      GVER="3.2.2"; BVER="2.14";
 		      STAGE=${STAGE_BINUTILS};;
 
-		#######################
-		### unknown targets ###
+		############
+		### help ###
 		help)
 			cat <<-EOF
 			Supported Architectures:
 			   alpha
-			   arm
-			   hppa
+			   arm / armeb
+			   hppa (parisc)
 			   ia64
-			   i386 (x86)
-			   i[456]86
+			   i386 / i486 / i586 / i686 (x86)
 			   m68k
-			   mips
-			   powerpc64 (ppc64)
-			   powerpc (ppc)
-			   sparc
-			   sparc64
-			   s390
-			   s390x
-			   sh / sh[1-5]
-			   sh64
+			   mips / mipsel / mips64 / mips64el
+			   powerpc (ppc) / powerpc64 (ppc64)
+			   sparc / sparc64
+			   s390 / s390x
+			   sh / sh[1-5] / sh64
 			   x86_64 (amd64)
 
 			Supported C Libraries:
 			   gnu (glibc)
-			   uclibc
+			   klibc
+			   uclibc [not all arches are ported]
 
 			Special Targets:
 			   avr
 			   msp430
-			   ps2 (alias for the following 3 targets)
-			   ee / iop / dvp (Playstation 2 targets)
+			   ee / iop / dvp (ps2) [Playstation 2 targets]
 			EOF
 			exit 0
 			;;
+
+		#######################
+		### unknown targets ###
 		*) usage 1;;
 	esac
 
@@ -194,14 +195,17 @@ uninstall() {
 
 	cd /var/db/pkg
 	for p in cross-${CTARGET}/* ; do
-		emerge -C =${p}
+		emerge -C =${p} || exit 1
 	done
 	for b in addr2line ar as c++filt ld nm objcopy objdump ranlib readelf size strings strip ; do
 		rm -f /usr/bin/${CTARGET}-${b} /usr/${CTARGET}/bin/${b}
 	done
 	rm -f /usr/bin/${CTARGET}-{gcc,{c,g}++}
-	[[ -d /usr/${CTARGET} ]] && rm -ri /usr/${CTARGET}
+	for d in /usr/${CTARGET} /usr/lib/gcc{,-lib}/${CTARGET} ; do
+		[[ -d ${d} ]] && rm -ri "${d}"
+	done
 	rm -f /etc/env.d/{binutils,gcc}/config-${CTARGET}
+	rmdir /var/db/pkg/cross-${CTARGET}
 
 	exit 0
 }
@@ -264,25 +268,31 @@ while [[ $# -gt 0 ]] ; do
 	--ex-gcc)       EX_GCC="yes";;
 	--ex-gdb)       EX_GDB="yes";;
 	-b|-p|-v)       UOPTS="${UOPTS} $1";;
+	-pv|-vp)        UOPTS="${UOPTS} -p -v";;
 	-h|--help)      usage;;
-	*)              eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
+	-*)             eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
+	*)              parse_target $1;;
 	esac
 	shift
 done
+
 [[ -z ${CTARGET} ]] && usage 1
-[[ ${CTARGET} == *-uclibc ]] && LPKG="uclibc"
 [[ ${STAGE} == "COW" ]] && STAGE=${STAGE_C_CPP}
+case ${CTARGET} in
+	*-uclibc) LPKG="uclibc";;
+	*-klibc)  LPKG="klibc";;
+esac
 
 #####################
 ### sanity checks ###
-if [[ -z $(portageq best_version / binutils-config) ]] ; then
+if ! binutils-config -v &> /dev/null ; then
 	eerror "Sorry, but your host system needs to have binutils-config"
 	eerror "in order to keep from screwing things up."
 	eerror "That means you must be running unstable versions of"
 	eerror "both binutils and binutils-config."
 	exit 1
 fi
-if [[ -z $(egrep 'inherit.*toolchain( |$)' /var/db/pkg/sys-devel/gcc-*/*.ebuild) ]] ; then
+if ! egrep -qs 'inherit.*toolchain( |$)' /var/db/pkg/sys-devel/gcc-*/*.ebuild ; then
 	eerror "Sorry, but your host system needs to have"
 	eerror "an unstable version of gcc in order to"
 	eerror "keep from screwing things up."
@@ -378,8 +388,8 @@ set_portage() {
 }
 
 mkdir -p /etc/portage
-[[ -z $(grep -s "^cross-${CTARGET}$" /etc/portage/categories) ]] \
-	&& echo cross-${CTARGET} >> /etc/portage/categories
+grep -qs "^cross-${CTARGET}$" /etc/portage/categories \
+	|| echo cross-${CTARGET} >> /etc/portage/categories
 mkdir -p "${PORTDIR_OVERLAY}"/cross-${CTARGET}
 cd /etc/portage
 touch package.{keywords,mask,use}
@@ -416,13 +426,13 @@ doemerge() {
 # we include the '-u' so that we don't re-emerge packages
 EOPTS="${UOPTS} -u --nodeps"
 
+# make sure multilib crap doesn't screw us over
+export ABI="pos" LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
+
 ex_fast || {
 
 doemerge ${BPKG}
 is_s1 || exit 0
-
-# make sure multilib crap doesn't screw us over
-export ABI="this-abi-var-sucks"
 
 USE="-boundschecking -fortran -gcj -objc nocxx -static" \
 	doemerge ${GPKG} ${GPKG}-stage1
