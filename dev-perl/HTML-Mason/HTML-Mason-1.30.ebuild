@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.30.ebuild,v 1.2 2005/08/14 21:50:55 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.30.ebuild,v 1.3 2005/08/23 14:36:22 swegener Exp $
 
 inherit perl-module
 
@@ -15,17 +15,17 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="apache2 modperl"
 SRC_TEST="do"
 
-DEPEND="${DEPEND}
+DEPEND="
 	!modperl? ( perl-core/CGI )
 	modperl? (
 		!apache2? (
 			=net-www/apache-1*
 			>=www-apache/libapreq-1.0-r2
-			<www-apache/mod_perl-2* )
+			<www-apache/mod_perl-2 )
 		apache2? (
 			>=net-www/apache-2
 			www-apache/libapreq2
-			>=www-apache/mod_perl-2* )
+			>=www-apache/mod_perl-2 )
 	)
 	>=dev-perl/Params-Validate-0.24-r2
 	dev-perl/module-build
@@ -37,7 +37,6 @@ DEPEND="${DEPEND}
 
 mydoc="CREDITS UPGRADE"
 myconf="--noprompts"
-
 
 perl-module_src_prep() {
 	# Note about new modperl use flag
