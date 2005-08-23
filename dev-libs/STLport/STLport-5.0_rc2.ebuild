@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0_rc2.ebuild,v 1.1 2005/06/04 04:15:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.0_rc2.ebuild,v 1.2 2005/08/23 18:00:29 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -45,7 +45,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/$(get_libdir)
-	cp -a build/lib/obj/*/*/libstlport*.so* "${D}"/usr/$(get_libdir)/ || die "dolib.so failed"
+	cp -pPR build/lib/obj/*/*/libstlport*.so* "${D}"/usr/$(get_libdir)/ || die "dolib.so failed"
 
 	dodir /usr/include
 	cp -R "${S}"/stlport "${D}"/usr/include
