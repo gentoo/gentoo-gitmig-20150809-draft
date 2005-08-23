@@ -1,4 +1,15 @@
-MD5 87a7a68ac83bc46f771574846d76b663 ChangeLog 428
-MD5 a271d6f4beaefdfc237885a836c13116 joystick-20050720.ebuild 654
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 81906644bf9cbed72bd3a4b7c0fb896e joystick-20050720.ebuild 762
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 726ec0f4239c175e4e5068a8aeced3e4 ChangeLog 620
 MD5 329c2c6c17d30f706c38fb2d53108816 files/digest-joystick-20050720 69
+MD5 4fa67a6834ab2028a7d57b149b14769e files/joystick-MCS-defines.patch 575
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCpWbgIKl8Uu19MoRAiEyAJ0YO1urzmq3e9y4O58CaFxUujQSKACePKEZ
+ee7gD/5f2o/xKWGGutyBIXU=
+=AmM7
+-----END PGP SIGNATURE-----
