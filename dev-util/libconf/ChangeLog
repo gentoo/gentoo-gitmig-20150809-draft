@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.27 2005/07/12 12:53:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.28 2005/08/23 16:52:06 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> libconf-0.39.21.ebuild:
+  stable on ia64
 
   12 Jul 2005; Simon Stelling <blubb@gentoo.org> libconf-0.39.21.ebuild:
   stable on amd64

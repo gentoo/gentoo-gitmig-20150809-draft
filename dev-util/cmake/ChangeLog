@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.18 2005/08/20 11:45:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.19 2005/08/23 16:45:06 agriffis Exp $
+
+  23 Aug 2005; Aron Griffis <agriffis@gentoo.org> cmake-2.0.6.ebuild:
+  stable on ia64
 
 *cmake-2.2.0 (20 Aug 2005)
 

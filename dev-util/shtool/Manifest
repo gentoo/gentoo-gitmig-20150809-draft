@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 791880e548bfc5f83c5c786e8ec8453f shtool-2.0.1-r1.ebuild 803
 MD5 2b2c847fc582680aaab5bdc79f802d67 shtool-2.0.1-r2.ebuild 815
-MD5 7a37df39fe5b5b1e980bb25c7acb1bf3 shtool-2.0.2.ebuild 717
-MD5 55c3a886908fb85fcb4730226301bfec ChangeLog 2843
 MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
-MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1-r1 63
-MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1-r2 63
-MD5 d68648661d4a5703763bc4d4d9a889e3 files/shtool-2.0.1-fix-insecure-tmp-creation.diff 509
+MD5 791880e548bfc5f83c5c786e8ec8453f shtool-2.0.1-r1.ebuild 803
+MD5 55c3a886908fb85fcb4730226301bfec ChangeLog 2843
+MD5 46b95da6b8ae03bf3829b59ca4ef6de4 shtool-2.0.2.ebuild 716
 MD5 d136e53521c22eb8b9f2987dfd19163d files/shtool-2.0.1-r2-fix-insecure-tmp-creation.diff 744
 MD5 2a38fab4d9ceb353af8397efeb3c5653 files/digest-shtool-2.0.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDATsnEZCkKN40op4RAk7fAJ9nmUxDCHd1O7K28YJYIOwq7a2xrgCfW8ht
-O71oYOnStoSKHG6GVBXVrjI=
-=U0cA
------END PGP SIGNATURE-----
+MD5 d68648661d4a5703763bc4d4d9a889e3 files/shtool-2.0.1-fix-insecure-tmp-creation.diff 509
+MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1-r1 63
+MD5 681bcf27698f4267818a267ff35134fa files/digest-shtool-2.0.1-r2 63

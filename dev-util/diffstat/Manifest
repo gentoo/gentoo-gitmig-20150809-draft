@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56122f37e35189189d93ce277d960894 diffstat-1.38.ebuild 774
-MD5 7fac28729f24aad314f57ce4ae7ba09b diffstat-1.39.ebuild 786
-MD5 c9ed538eabdc73b3c9c4c6e7ff1b9f72 ChangeLog 4633
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
+MD5 c9ed538eabdc73b3c9c4c6e7ff1b9f72 ChangeLog 4633
+MD5 56122f37e35189189d93ce277d960894 diffstat-1.38.ebuild 774
+MD5 24e223bae13873646e85116eb180fe4d diffstat-1.39.ebuild 785
 MD5 0136853f89d3a97dc4d54058465adaf7 diffstat-1.40.ebuild 791
-MD5 aaf2c4b7f099958647cad46682bb37eb files/diffstat-1.37-hard-locale.patch 578
-MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
 MD5 666ce000416b4abc08973a81cf0cf6ed files/digest-diffstat-1.39 61
 MD5 aa992e69db1a27154ec66a30ee026c3b files/digest-diffstat-1.40 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDA3dREZCkKN40op4RAty9AKCUfm4TIqTwhfd0vTr5mWWkjI9wUACgnUvc
-ap/0HHTBRC1sIyqOlF6tRrI=
-=3vUA
------END PGP SIGNATURE-----
+MD5 aaf2c4b7f099958647cad46682bb37eb files/diffstat-1.37-hard-locale.patch 578
+MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
