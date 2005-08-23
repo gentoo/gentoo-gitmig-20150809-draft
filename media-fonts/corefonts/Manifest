@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 257e5311f8e4943b82b9eadda15f66f8 corefonts-1-r2.ebuild 1224
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 d8175d454aeee743f1d82915f7c0dff8 corefonts-1.ebuild 1204
@@ -6,3 +9,10 @@ MD5 9eca73736d6acd56c960a91bd90c4a51 ChangeLog 2590
 MD5 8c75d66eb050c05f2fc1ae13fb722722 files/digest-corefonts-1-r1 624
 MD5 8c75d66eb050c05f2fc1ae13fb722722 files/digest-corefonts-1-r2 624
 MD5 8c75d66eb050c05f2fc1ae13fb722722 files/digest-corefonts-1 624
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCmmjgIKl8Uu19MoRAuzKAJ9i3O8OeiYclEBvrFweJjN6r/VbqwCfaoQc
+8PaQoST4RTAL8hAJzQBfiTU=
+=NdGv
+-----END PGP SIGNATURE-----
