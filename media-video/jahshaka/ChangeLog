@@ -1,6 +1,10 @@
 # ChangeLog for media-video/jahshaka
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.12 2005/08/10 16:27:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.13 2005/08/23 18:13:26 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  jahshaka-2.0_rc1.ebuild:
+  Don't use cp -a.
 
   10 Aug 2005; Markus Rothe <corsair@gentoo.org> jahshaka-2.0_rc1.ebuild:
   added ~ppc64

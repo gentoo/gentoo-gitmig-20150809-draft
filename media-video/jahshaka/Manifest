@@ -1,11 +1,21 @@
-MD5 5e653379020556da9ae61254ea03319f ChangeLog 1982
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f8daf16c1164a5cdc8755c22bc1deae jahshaka-1.9_alpha90-r1.ebuild 1993
+MD5 158c155f8894b957002b9924fb7e1844 ChangeLog 2084
 MD5 b5f6a8932505b64b1f9fee94a110eb24 jahshaka-1.9_alpha90.ebuild 2077
+MD5 4aa8ecd9db3af45d540c3fa4034fe1d0 jahshaka-2.0_rc1.ebuild 1673
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 eef6b3ccb44ef5f85735c094a2c8b2f0 jahshaka-2.0_rc1.ebuild 1680
 MD5 eccbf141ba80b57f8127d38e4fcda2ec files/FT_Open_Flags.patch 489
 MD5 d6a0064257b0ac77fa6c2db28ac89f90 files/configure 549
-MD5 d976b3529c773978dadcb54605be5f3c files/digest-jahshaka-1.9_alpha90 67
 MD5 d976b3529c773978dadcb54605be5f3c files/digest-jahshaka-1.9_alpha90-r1 67
-MD5 c3cb7840c08ef0ced53f6b8d58442449 files/ftgl.h.patch 793
 MD5 7ec7294a7819533a7d0988eec0afd776 files/digest-jahshaka-2.0_rc1 69
+MD5 d976b3529c773978dadcb54605be5f3c files/digest-jahshaka-1.9_alpha90 67
+MD5 c3cb7840c08ef0ced53f6b8d58442449 files/ftgl.h.patch 793
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC2dij5H05b2HAEkRAuEvAJ9vVqNrBCzJUAUIdPUh+Pmg8uE9awCgj5Yf
+0plhACfTe1zjejT2WM7a09o=
+=ApA3
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-2.0_rc1.ebuild,v 1.2 2005/08/10 16:27:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-2.0_rc1.ebuild,v 1.3 2005/08/23 18:13:26 flameeyes Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ DEPEND="virtual/x11
 RDEPEND=${DEPEND}
 
 RESTRICT="nostrip"
+
 
 S="${WORKDIR}/${PN}"
 
@@ -56,11 +57,11 @@ src_install() {
 	done
 
 	dodir /usr/lib/jahshaka
-	cp -a ${S}/source/OpenLibraries/lib/* ${D}/usr/lib/${PN}/
-	cp -a --parent $(find plugins -iname *.so) ${D}usr/share/${PN}/
-	cp -a --parent $(find plugins -iname *.fp) ${D}usr/share/${PN}/
+	cp -pPR ${S}/source/OpenLibraries/lib/* ${D}/usr/lib/${PN}/
+	cp -pPR $(find plugins -iname *.so) ${D}usr/share/${PN}/
+	cp -pPR $(find plugins -iname *.fp) ${D}usr/share/${PN}/
 
-	cp -a ${S}/database/JahDesktopDB.bak ${D}/usr/share/jahshaka/database/JahDesktopDB
+	cp -pPR ${S}/database/JahDesktopDB.bak ${D}/usr/share/jahshaka/database/JahDesktopDB
 	chmod 664 ${D}/usr/share/jahshaka/database/*
 
 	dodir /etc/env.d
