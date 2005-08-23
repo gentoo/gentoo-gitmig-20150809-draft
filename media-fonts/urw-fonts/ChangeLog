@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urw-fonts
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.15 2004/12/16 08:36:13 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.16 2005/08/23 21:41:51 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  urw-fonts-2.0-r1.ebuild, urw-fonts-2.1-r2.ebuild:
+  Added ~sparc and set HOMEPAGE
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> urw-fonts-2.1-r2.ebuild:
   Stable on ppc64
