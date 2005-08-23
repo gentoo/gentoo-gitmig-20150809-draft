@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 187c37f72dbd46497b706b3d1d034f7f ChangeLog 1425
 MD5 9aad2bd0768fdf20d008166305e30586 efont-unicode-0.4.1.ebuild 1449
-MD5 c3c6132779a89a4e10126ede274d843d efont-unicode-0.4.2.ebuild 921
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 917281c740effe94d62162986e216da6 files/digest-efont-unicode-0.4.1 78
+MD5 bf300bd1b8f7768b6670e4495ceb0bea efont-unicode-0.4.2.ebuild 919
+MD5 b30764f461107214918a12bc26459072 ChangeLog 1527
 MD5 5c097610d90a81ce4fc3751c4d044dc0 files/digest-efont-unicode-0.4.2 78
+MD5 917281c740effe94d62162986e216da6 files/digest-efont-unicode-0.4.1 78
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC1+oZj5H05b2HAEkRAhUMAJ4zAbroc0soQfw3DBVGqCvUfCMSRACfYhE0
-nBKIHYU2YN4CB1STSPvRI6g=
-=7oWC
+iD8DBQFDC5NbKRy60XGEcJIRAlL4AJ4wBg6IpNhAOB39QRR3e7hI9/GBGgCgma3W
+80RogKOdoO1hDXnZZaj3dmc=
+=Yq24
 -----END PGP SIGNATURE-----

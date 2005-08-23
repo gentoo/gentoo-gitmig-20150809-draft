@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.2.ebuild,v 1.6 2005/07/15 16:53:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/efont-unicode-0.4.2.ebuild,v 1.7 2005/08/23 21:21:12 gustavoz Exp $
 
 inherit font
 
@@ -15,7 +15,7 @@ SRC_URI="http://openlab.jp/efont/dist/unicode-bdf/${MY_P}.tar.bz2"
 # naga10 has free-noncomm license
 LICENSE="public-domain BAEKMUK X11 as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 DEPEND="virtual/x11"
 RDEPEND=""
