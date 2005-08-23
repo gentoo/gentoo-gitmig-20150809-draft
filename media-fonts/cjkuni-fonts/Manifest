@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28aa8733389c1b3d3b847e1615f97345 metadata.xml 412
 MD5 2ec6e53cf5a88c62a0265bac971edd77 cjkuni-fonts-0.0.20050501.ebuild 932
 MD5 ae94ea5fd770a9160916ca3a9eda5da3 ChangeLog 659
 MD5 7d3a1a610c556c02c96ed1c5065e56ec files/digest-cjkuni-fonts-0.0.20050501 169
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDCzaDKRy60XGEcJIRAhlTAJ0VZIT2QlBMNPYwQHgvy2tAjhZxWQCdEXBL
+X4klvZNYvkZUJZ168FgURic=
+=MQnj
+-----END PGP SIGNATURE-----
