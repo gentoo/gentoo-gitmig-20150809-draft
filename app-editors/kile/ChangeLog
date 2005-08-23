@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.58 2005/07/19 13:28:50 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.59 2005/08/23 22:00:46 greg_g Exp $
+
+  23 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> kile-1.8.1-r1.ebuild:
+  Stable on x86.
 
 *kile-1.8.1-r1 (19 Jul 2005)
 
