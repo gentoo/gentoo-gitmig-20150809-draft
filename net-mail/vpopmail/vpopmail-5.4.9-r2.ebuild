@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.5 2005/05/25 22:51:07 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.6 2005/08/23 13:34:12 ticho Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -47,7 +47,7 @@ vpopmail_set_homedir() {
 
 pkg_setup() {
 	enewgroup vpopmail 89
-	enewuser vpopmail 89 /bin/false ${VPOP_DEFAULT_HOME} vpopmail
+	enewuser vpopmail 89 -1 ${VPOP_DEFAULT_HOME} vpopmail
 	upgradewarning
 }
 

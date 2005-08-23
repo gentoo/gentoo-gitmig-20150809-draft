@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r2.ebuild,v 1.3 2005/05/23 18:26:08 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.1-r2.ebuild,v 1.4 2005/08/23 13:37:27 ticho Exp $
 
 inherit eutils
 
@@ -87,7 +87,7 @@ pkg_setup() {
 	epause 5
 
 	enewgroup popa3d
-	enewuser popa3d -1 /bin/false /nonexistent popa3d
+	enewuser popa3d -1 -1 /nonexistent popa3d
 }
 
 src_unpack() {

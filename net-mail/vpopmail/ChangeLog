@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.59 2005/06/21 21:27:41 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.60 2005/08/23 13:34:12 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> vpopmail-5.4.6-r1.ebuild,
+  vpopmail-5.4.9-r2.ebuild, vpopmail-5.4.10.ebuild:
+  Use -1 for shell argument to enewuser. Bug #103421.
 
 *vpopmail-5.4.10 (21 Jun 2005)
 

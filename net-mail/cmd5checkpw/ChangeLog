@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.30 2005/08/06 20:09:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.31 2005/08/23 13:40:42 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> cmd5checkpw-0.22-r1.ebuild,
+  cmd5checkpw-0.22-r2.ebuild, cmd5checkpw-0.22-r3.ebuild,
+  cmd5checkpw-0.30.ebuild:
+  Use -1 for shell argument to enewuser. Bug #103421.
 
 *cmd5checkpw-0.30 (06 Aug 2005)
 

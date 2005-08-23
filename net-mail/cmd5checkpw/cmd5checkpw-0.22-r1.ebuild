@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r1.ebuild,v 1.16 2005/05/16 09:55:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r1.ebuild,v 1.17 2005/08/23 13:40:42 ticho Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 douser() {
-	enewuser cmd5checkpw 212 /bin/false /dev/null bin
+	enewuser cmd5checkpw 212 -1 /dev/null bin
 }
 
 pkg_preinst() {

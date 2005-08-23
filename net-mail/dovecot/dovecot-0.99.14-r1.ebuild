@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.7 2005/06/17 23:17:55 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.8 2005/08/23 13:41:49 ticho Exp $
 
 IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
 inherit eutils
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 pkg_setup() {
 	# Add user and group for login process (same as for fedora/redhat)
 	enewgroup dovecot 97
-	enewuser dovecot 97 /bin/false /dev/null dovecot
+	enewuser dovecot 97 -1 /dev/null dovecot
 }
 
 src_compile() {

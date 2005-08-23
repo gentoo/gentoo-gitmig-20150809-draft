@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.27 2005/06/17 23:17:55 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.28 2005/08/23 13:41:49 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> dovecot-0.99.11-r1.ebuild,
+  dovecot-0.99.13.ebuild, dovecot-0.99.14.ebuild, dovecot-0.99.14-r1.ebuild:
+  Use -1 for shell argument to enewuser. Bug #103421.
 
   17 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org>
   dovecot-0.99.14-r1.ebuild:
