@@ -1,10 +1,6 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.19 2005/08/23 13:37:27 ticho Exp $
-
-  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> popa3d-0.6.4.1-r2.ebuild,
-  popa3d-1.0.ebuild:
-  Use -1 for shell argument to enewuser. Bug #103421.
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.20 2005/08/23 13:38:21 ticho Exp $
 
   23 Aug 2005; Andrej Kacian <ticho@gentoo.org> popa3d-0.6.4.1-r2.ebuild,
   popa3d-1.0.ebuild:
