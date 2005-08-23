@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.6.ebuild,v 1.1 2005/07/11 04:48:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.6.ebuild,v 1.2 2005/08/23 23:58:38 vapier Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://sources.redhat.com/automake/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="${PV:0:3}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ~ppc-macos s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
@@ -28,7 +28,6 @@ src_unpack() {
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
 		doc/automake.texi || die "sed failed"
 	epatch "${FILESDIR}"/${PN}-1.9.6-infopage-namechange.patch
-	gnuconfig_update
 	export WANT_AUTOCONF=2.5
 }
 
