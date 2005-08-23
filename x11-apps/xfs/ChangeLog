@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.5 2005/08/20 23:57:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.6 2005/08/23 17:19:58 spyderous Exp $
+
+  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; xfs-0.99.0-r1.ebuild:
+  (#103421) Don't feed enewuser a false login shell; it figures out a correct
+  one.
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -xfs-0.99.0.ebuild:
   Remove old versions.
