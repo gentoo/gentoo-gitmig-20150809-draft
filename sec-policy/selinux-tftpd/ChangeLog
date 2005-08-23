@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-tftpd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-tftpd/ChangeLog,v 1.1 2005/08/23 06:25:27 kaiowas Exp $
+
+*selinux-tftpd-20050701 (23 Aug 2005)
+
+  23 Aug 2005; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-tftpd-20050701.ebuild:
+  initial commit
+
