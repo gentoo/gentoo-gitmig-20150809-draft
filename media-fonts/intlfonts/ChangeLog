@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/intlfonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.5 2005/07/15 17:08:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.6 2005/08/23 14:31:53 gustavoz Exp $
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  intlfonts-1.2.1.ebuild:
+  Keyworded ~sparc
 
   15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> intlfonts-1.2.1.ebuild:
   Stable on amd64.
