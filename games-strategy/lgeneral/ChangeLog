@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.10 2005/06/15 19:12:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.11 2005/08/23 19:09:11 wolf31o2 Exp $
+
+  23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  lgeneral-1.2_beta2.ebuild:
+  cp -a -> cp -dpR for bug #103487.
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   lgeneral-1.1.1-r1.ebuild, lgeneral-1.2_beta2.ebuild:
