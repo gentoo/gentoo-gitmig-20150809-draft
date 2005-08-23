@@ -1,4 +1,14 @@
-MD5 a9ce1eaca8cdae646c62c160328d3e47 host-991529.ebuild 1375
-MD5 06eb945fb7701cbd597e3cdfea8401a8 ChangeLog 1949
-MD5 020e94cd5c2e398f06c7d2b062b25190 metadata.xml 240
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4efcb66ce112db465698fb1fde9bd50 ChangeLog 1950
 MD5 586f7c1bda4293414da89b60cc866e69 files/digest-host-991529 55
+MD5 a9ce1eaca8cdae646c62c160328d3e47 host-991529.ebuild 1375
+MD5 020e94cd5c2e398f06c7d2b062b25190 metadata.xml 240
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCz/zI1lqEGTUzyQRAl6RAJ9cM/KzdIi4UF9Na0mDwCK0Y5RjQQCdHj0l
+VhlZercKYA7uUmV1h5RyC/Y=
+=ZD/h
+-----END PGP SIGNATURE-----
