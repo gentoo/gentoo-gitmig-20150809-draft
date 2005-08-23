@@ -1,11 +1,21 @@
-MD5 8e583f8db4b0b6b484ffd75e8ab8196d ChangeLog 1299
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4481b85ece9e2a9b0382374f297c90a0 mserv-0.35.ebuild 2595
+MD5 128079fe9f2344d904be5d55f11f0c2e ChangeLog 1458
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 14114f5ea4f2a1580ce4d757cda92940 mserv-0.35.ebuild 2651
-MD5 d1973ea3781773cbbe8510ea648ddb19 files/digest-mserv-0.35 62
-MD5 d5465c51ab8fd155dab29a702c04897a files/mserv-0.35-acl 52
 MD5 85efb51a180ddf66f95a59ffbbb9f81a files/mserv-0.35-confd 230
-MD5 e4b81c74040c77c60a324f42646e960e files/mserv-0.35-config 1515
+MD5 d1973ea3781773cbbe8510ea648ddb19 files/digest-mserv-0.35 62
+MD5 bab25861d10f61d56534a40883052be3 files/mserv-0.35-paths.patch 2673
 MD5 324eccbee0054d56a6da344d0712b2cc files/mserv-0.35-initd 580
 MD5 80c9282eed058c3239f45586473cbf70 files/mserv-0.35-mservplay.patch 430
-MD5 bab25861d10f61d56534a40883052be3 files/mserv-0.35-paths.patch 2673
+MD5 d5465c51ab8fd155dab29a702c04897a files/mserv-0.35-acl 52
 MD5 a823115f64db37b88b25a3689b0f9e19 files/mserv-0.35-webacl 39
+MD5 e4b81c74040c77c60a324f42646e960e files/mserv-0.35-config 1515
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCx6wj5H05b2HAEkRApqAAJ48Z+ddnfAyo62zZcZTcy3emfe+aQCfZBOC
+BtmJArY5zNbP0q2zXDgtYVE=
+=9JdH
+-----END PGP SIGNATURE-----

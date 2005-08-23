@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.10 2005/07/25 13:40:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.11 2005/08/23 13:03:12 flameeyes Exp $
 
 inherit webapp-apache eutils
 
@@ -21,8 +21,8 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	 vorbis? ( media-sound/vorbis-tools )"
 
 pkg_setup() {
-	enewgroup mserv > /dev/null || die
-	enewuser mserv -1 /bin/false /dev/null mserv -G audio > /dev/null || die
+	enewgroup mserv
+	enewuser mserv -1 -1 /dev/null mserv -G audio
 }
 
 src_unpack() {
@@ -30,9 +30,9 @@ src_unpack() {
 	cd ${S}
 
 	# Adjust paths to match Gentoo
-	epatch ${FILESDIR}/${P}-paths.patch || die
+	epatch ${FILESDIR}/${P}-paths.patch
 	# Mservplay uses stricmp - should be strcasecmp
-	epatch ${FILESDIR}/${P}-mservplay.patch || die
+	epatch ${FILESDIR}/${P}-mservplay.patch
 }
 
 src_compile() {
