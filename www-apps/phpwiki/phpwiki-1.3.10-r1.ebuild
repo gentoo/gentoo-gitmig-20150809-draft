@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r1.ebuild,v 1.2 2005/08/22 21:52:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r1.ebuild,v 1.3 2005/08/23 19:38:19 rl03 Exp $
 
 inherit eutils webapp
 
@@ -25,7 +25,7 @@ src_unpack() {
 src_install() {
 	webapp_src_preinst
 
-	cp -a * ${D}/${MY_HTDOCSDIR}
+	cp -pPR * ${D}/${MY_HTDOCSDIR}
 	rm -rf ${D}/${MY_HTDOCSDIR}/{doc,schemas,README,INSTALL,UPGRADING}
 
 	dodoc README INSTALL UPGRADING doc/* schemas/*

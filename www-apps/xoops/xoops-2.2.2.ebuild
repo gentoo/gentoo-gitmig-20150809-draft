@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.2.ebuild,v 1.1 2005/08/16 19:35:37 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.2.ebuild,v 1.2 2005/08/23 19:39:54 rl03 Exp $
 
 inherit webapp
 
@@ -22,8 +22,8 @@ src_install() {
 	dohtml docs/INSTALL.html UPDATE.html
 	cp -R docs/images ${D}/usr/share/doc/${PF}/html
 
-	cp -a html/* "${D}/${MY_HTDOCSDIR}"
-	cp -a extras/* ${D}/${MY_HOSTROOTDIR}/${P}
+	cp -pPR html/* "${D}/${MY_HTDOCSDIR}"
+	cp -pPR extras/* ${D}/${MY_HOSTROOTDIR}/${P}
 	webapp_serverowned ${MY_HTDOCSDIR}/uploads
 	webapp_serverowned ${MY_HTDOCSDIR}/cache
 	webapp_serverowned ${MY_HTDOCSDIR}/templates_c

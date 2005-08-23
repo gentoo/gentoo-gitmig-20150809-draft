@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.2.4.ebuild,v 1.5 2005/07/05 22:25:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.2.4.ebuild,v 1.6 2005/08/23 19:38:19 rl03 Exp $
 
 inherit webapp
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/php
 src_install() {
 	webapp_src_preinst
 
-	cp -a *.php admin images lib locale pgsrc templates \
+	cp -pPR *.php admin images lib locale pgsrc templates \
 		 "${D}/${MY_HTDOCSDIR}"
 
 	dodoc DBLIB.txt CREDITS ChangeLog LICENSE README INSTALL.*
