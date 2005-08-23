@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c7cd0d2dd2a0f37060cd4ff41dc05313 fonttosfnt-0.99.0.ebuild 479
 MD5 a4d065a5f3911a2bbfba0fd35dc6b9d7 ChangeLog 485
 MD5 56f377aaed74f81f0df927c532649678 files/digest-fonttosfnt-0.99.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCnw0gIKl8Uu19MoRAp9YAJsF1o54cMG+qNZL8wrPSXKWF8iy5gCdFmUA
+i68v8ypzbyr1eoLoRkECeQs=
+=B0v3
+-----END PGP SIGNATURE-----

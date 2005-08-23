@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1aab7b9acee67b51ef973dff630a8856 editres-0.99.0.ebuild 662
 MD5 7c912a7468588dfefce7270b69d67453 ChangeLog 468
 MD5 cda4257e7c9bf835b56c06e033d7ed38 files/digest-editres-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDCnwrgIKl8Uu19MoRAv+TAJ0YNvJYxVLBbLzKyl8FEC8SYSh6XwCfU/d/
+2boSdWn5ZEHxZ4EcFA6ngso=
+=gtyy
+-----END PGP SIGNATURE-----
