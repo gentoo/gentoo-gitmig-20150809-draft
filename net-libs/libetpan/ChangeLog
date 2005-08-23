@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.9 2005/08/14 15:37:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.10 2005/08/23 15:19:47 ticho Exp $
+
+  23 Aug 2005; Andrej Kacian <ticho@gentoo.org> -libetpan-0.36.ebuild,
+  -libetpan-0.37.ebuild, libetpan-0.38.ebuild:
+  Stable on x86. Removed previous ebuilds.
 
   14 Aug 2005; Jason Wever <weeve@gentoo.org> libetpan-0.38.ebuild:
   Added ~sparc keyword, resolves bug #102313.
