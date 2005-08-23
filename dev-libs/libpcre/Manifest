@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 59046451dd9a28a2a59c373b6b7f12c3 libpcre-4.2-r1.ebuild 852
 MD5 e11933575b142a8990bda3881545b63e libpcre-4.5.ebuild 1106
 MD5 e6a7a5e86e3dbcfed3918bf935a3ae9c libpcre-6.1.ebuild 1298
 MD5 a588281f5693f0ab201655b0e19c75a7 libpcre-5.0.ebuild 1059
-MD5 65cb84c5c0cf6a09db1d397a7f168e07 libpcre-6.3.ebuild 1347
+MD5 4a01f76f0f08dfe8e07962a347d0cce3 libpcre-6.3.ebuild 1344
 MD5 47ad7fd446e1df9f7b55008a9aa8bbc1 libpcre-4.4.ebuild 1008
-MD5 802484492986f15691559628a3bb2ce1 ChangeLog 8265
+MD5 611237f83988cc004444009adfd0582e ChangeLog 8372
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
 MD5 785165d99d81b52418a5dc2d7a2708fa files/pcre-6.3-link.patch 1047
 MD5 17042ca451c3bcc9cefd3f3738b4c7f7 files/pcre-6.3-uclibc-tuple.patch 1606
@@ -19,3 +22,10 @@ MD5 4e0522aaf9e2d5a196830b897f2341d2 files/digest-libpcre-4.5 61
 MD5 6f60a57bf3e47726ed16127d65ae834c files/digest-libpcre-5.0 61
 MD5 0e8194a0bf3adfbe3e1c95ec64a1ebf1 files/digest-libpcre-6.1 61
 MD5 7aefa27b2326ddccbebd14a6c845b726 files/digest-libpcre-6.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC3vQViELBEf1JB0RAvBwAJ4w11fDpX5JL7b0IOalBlMAntgqrQCfZbjF
++myyCcEtU8LZcaP4T0AUSSY=
+=GQ4l
+-----END PGP SIGNATURE-----
