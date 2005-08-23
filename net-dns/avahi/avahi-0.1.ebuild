@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.6 2005/08/22 23:43:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.1.ebuild,v 1.7 2005/08/23 00:10:24 swegener Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://www.freedesktop.org/Software/Avahi"
@@ -29,8 +29,21 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
+	linux-info_pkg_setup
+
 	enewgroup avahi
 	enewuser avahi -1 -1 -1 avahi
+
+	if ! linux_chkconfig_present IP_MULTICAST
+	then
+		ewarn
+		ewarn "Your kernel doesn't seem to have IP_MULTICAST enabled,"
+		ewarn "which is needed for avahi to work correctly."
+		ewarn
+		ewarn "Continuing..."
+		ewarn
+		epause
+	fi
 }
 
 src_compile() {
