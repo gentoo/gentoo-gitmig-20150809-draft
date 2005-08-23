@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d2df2f33a850fb94725fb5f988f3caa ChangeLog 2070
-MD5 884fc7f62bb80bbf7e055574fcc33c65 tmake-1.11.ebuild 747
+MD5 bfcee54e6e4916a341f1288d4a0f39a1 tmake-2.12.ebuild 709
+MD5 31b5d55cd315e0c15cb22a7c027eff66 ChangeLog 2160
 MD5 c0bfddf4a07cfcfcb59a6ef98ebee436 tmake-1.8-r1.ebuild 758
-MD5 8c0c32580abd216d854012cf51a4340b tmake-2.12.ebuild 709
+MD5 884fc7f62bb80bbf7e055574fcc33c65 tmake-1.11.ebuild 747
 MD5 7780f6f1c837617503cefceb9b9fdf85 tmake-1.13.ebuild 750
-MD5 2ce5dd72992607f3cdb3552b5475915e files/digest-tmake-1.11 61
-MD5 b901e95b3a464c9233c1a75312b9a9ad files/digest-tmake-1.8-r1 60
 MD5 5a6fc142b66ebe576cb365e410933227 files/digest-tmake-1.13 61
 MD5 bf13ac0e7e203251b6cd1ecf3f0eba52 files/digest-tmake-2.12 62
+MD5 b901e95b3a464c9233c1a75312b9a9ad files/digest-tmake-1.8-r1 60
+MD5 2ce5dd72992607f3cdb3552b5475915e files/digest-tmake-1.11 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCvnj6mdTrptrqvGERAhqeAJwNfgIfhPnYG8YjbAWZIuI9OQk7LQCfaFXb
-LnLEIxgJW/YKrLaviWrpUYA=
-=7DmC
+iD8DBQFDC2WGj5H05b2HAEkRArWeAKCe59dPJOjFDQCAXTeYqYYY3zyNNgCePc56
+KKORgDDS9p5zIOmfwUZEjr8=
+=CNWq
 -----END PGP SIGNATURE-----

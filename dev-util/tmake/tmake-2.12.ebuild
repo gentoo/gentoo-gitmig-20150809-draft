@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-2.12.ebuild,v 1.1 2005/06/26 09:44:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-2.12.ebuild,v 1.2 2005/08/23 18:05:30 flameeyes Exp $
 
 DESCRIPTION="A Cross platform Makefile tool"
 SRC_URI="mirror://sourceforge/tmake/${P}.tar.bz2"
@@ -17,7 +17,7 @@ src_install () {
 	cd ${S}
 	dobin bin/tmake bin/progen
 	dodir /usr/lib/tmake
-	cp -af ${S}/lib/* ${D}/usr/lib/tmake
+	cp -pPRf ${S}/lib/* ${D}/usr/lib/tmake
 	dodoc CHANGES LICENSE README
 	dohtml -r doc/*
 	dodir /etc/env.d
