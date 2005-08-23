@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.6.2.ebuild,v 1.6 2005/07/15 17:20:16 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.6.2.ebuild,v 1.7 2005/08/23 15:44:21 agriffis Exp $
 
 inherit eutils distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.druid.net/pygresql/"
 LICENSE="as-is"
 DEPEND=">=dev-db/postgresql-7.3
 	dev-lang/python"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 SLOT="0"
 
