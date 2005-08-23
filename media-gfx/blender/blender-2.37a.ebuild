@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.37a.ebuild,v 1.2 2005/08/02 18:08:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.37a.ebuild,v 1.3 2005/08/23 21:09:44 lu_zero Exp $
 
 inherit flag-o-matic eutils python
 
@@ -37,7 +37,7 @@ src_unpack() {
 	cd ${S}/release/plugins
 	chmod 755 bmake
 	rm -fR include
-	cp -a ${S}/source/blender/blenpluginapi include
+	cp -pPR ${S}/source/blender/blenpluginapi include
 	cd ${S}
 	epatch ${FILESDIR}/${P}-dirs.patch
 	mkdir -p ${WORKDIR}/build/linux2/{extern,intern,source}

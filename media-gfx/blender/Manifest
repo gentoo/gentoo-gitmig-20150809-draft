@@ -4,8 +4,8 @@ MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
 MD5 8a390c3a50c2abbcfa3fbbb7b87a8c54 blender-2.36-r1.ebuild 3309
 MD5 36142769a0a67d234b09973eb7117367 blender-2.35.ebuild 2801
 MD5 1c05b0353b0755a5bd402b6c2e588d62 blender-2.37.ebuild 3344
-MD5 a06e40e200a670bfa3eb18e6c4aeb918 blender-2.37a.ebuild 3353
-MD5 dd03e68df5ad2273617f0bd5c32c657c ChangeLog 9309
+MD5 d269dfc27013c96f6b1c809428807429 blender-2.37a.ebuild 3355
+MD5 2bb27c991ab83f4935de880671463a8e ChangeLog 9395
 MD5 c2f4a5861dcc36216ddc1e7592141dd1 blender-2.34.ebuild 2800
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65

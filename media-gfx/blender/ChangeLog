@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.62 2005/08/02 18:08:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.63 2005/08/23 21:09:44 lu_zero Exp $
+
+  23 Aug 2005; Luca Barbato <lu_zero@gentoo.org> blender-2.37a.ebuild:
+  BSD support
 
   02 Aug 2005; Luca Barbato <lu_zero@gentoo.org> blender-2.37a.ebuild:
   Make sure blender can build, the newer scons are problematic
