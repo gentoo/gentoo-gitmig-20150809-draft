@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-0.01.ebuild,v 1.2 2005/08/23 20:35:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-0.01.ebuild,v 1.3 2005/08/23 23:02:55 herbs Exp $
 
 DESCRIPTION="A library handling connection to a MPD server."
 HOMEPAGE="http://www.qballcow.nl/libmpd/"
@@ -8,7 +8,7 @@ SRC_URI="http://download.qballcow.nl/programs/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0.01"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="virtual/libc
 		sys-devel/libtool"
