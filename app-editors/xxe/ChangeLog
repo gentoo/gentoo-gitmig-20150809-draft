@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.24 2005/07/21 04:35:52 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.25 2005/08/23 17:50:39 flameeyes Exp $
+
+  23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> xxe-2.11.ebuild:
+  Don't use cp -a.
 
 *xxe-2.11 (21 Jul 2005)
 
