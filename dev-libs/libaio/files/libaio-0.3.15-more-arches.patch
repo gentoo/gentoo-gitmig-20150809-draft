@@ -8,7 +8,7 @@
  #include <asm/unistd.h>
  #undef __syscall_return
  #ifndef __powerpc__
-@@ -19,25 +20,41 @@
+@@ -19,25 +20,50 @@
  #ifndef __NR_io_setup
  #ifdef __s390__
  #define __NR_io_setup		243
@@ -55,10 +55,19 @@
 +#ifdef __powerpc__
 +#define __NR_io_setup		227
 +#endif
++#ifdef __sparc__
++#define __NR_io_setup		268
++#define __NR_io_destroy	269
++#define __NR_io_submit		270
++#define __NR_io_cancel		271
++#define __NR_io_getevents	272
++#else
++/* only sparc doesnt have this order */
 +#define __NR_io_destroy __NR_io_setup + 1
 +#define __NR_io_getevents __NR_io_setup + 2
 +#define __NR_io_submit __NR_io_setup + 3
 +#define __NR_io_cancel __NR_io_setup + 4
++#endif
  #endif
  
  #define __NR_sys_io_setup          __NR_io_setup

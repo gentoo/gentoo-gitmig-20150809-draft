@@ -1,10 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.7 2005/08/24 02:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.8 2005/08/24 02:08:07 vapier Exp $
 
   24 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/libaio-0.3.15-more-arches.patch, libaio-0.3.15.ebuild:
-  Add support for alpha/arm/hppa/ia64/m68k/mips/ppc/s390/sh.
+  Add support for alpha/arm/hppa/ia64/m68k/mips/ppc/s390/sh/sparc.
 
   12 Jun 2004; Ian Leitch <port001@gentoo.org> libaio-0.3.15.ebuild,
   libaio-0.3.92.ebuild:
