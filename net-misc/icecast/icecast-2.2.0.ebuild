@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.2.0.ebuild,v 1.4 2005/02/26 21:56:58 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.2.0.ebuild,v 1.5 2005/08/24 16:25:14 flameeyes Exp $
 
 IUSE="doc yp"
 
@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PV}-gentoo.patch || die "Patch failed!"
+	epatch ${FILESDIR}/${PV}-gentoo.patch
 }
 
 src_compile() {
