@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.261 2005/08/18 09:40:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.262 2005/08/24 09:11:00 leonardop Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -169,7 +169,7 @@ kerberos - Adds kerberos support
 krb4 - Adds optional kerberos 4 compatibility support
 ladcca - Adds Linux Audio Developer's Configuration and Connection API support (LADCCA)
 lapack - adds support for the virtual/lapack numerical library
-lcms - Adds lcms support to media-gfx/imagemagick (Color management)
+lcms - Adds lcms support (color management engine)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 leim - Adds input methods support to Emacs
 lesstif - Use lesstif over openmotif in cases where a program supports both
