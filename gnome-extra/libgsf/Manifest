@@ -1,8 +1,18 @@
-MD5 d4fb0c3e638cec936e8d57aa9e1351fd ChangeLog 6663
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75b2f000e52372eba18230955714832b libgsf-1.10.0.ebuild 812
 MD5 53e90ae9a6d5a21041be148e48f8c819 libgsf-1.12.0.ebuild 814
-MD5 01ea05bbaf92ee6b4b7aaf880a6f1734 libgsf-1.12.1.ebuild 844
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 48ba00c01cd5336f9bb0c6e1050a8756 files/digest-libgsf-1.10.0 66
+MD5 87b65b1f698669703fdac7abc68e85c9 libgsf-1.12.1.ebuild 842
+MD5 a90c559d14fb74e83df8bc5a6be2ae47 ChangeLog 6757
 MD5 51a6736b0f95c3ff2576bc0c63ca7ffc files/digest-libgsf-1.12.0 66
 MD5 8900cebbec415c5f3b8ac5d397dfd832 files/digest-libgsf-1.12.1 66
+MD5 48ba00c01cd5336f9bb0c6e1050a8756 files/digest-libgsf-1.10.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDDH/PKRy60XGEcJIRAgYbAJ913U2qSxxefsZ1LZT8+UXQ+lgZOgCgp5gM
+BgWE+YsIAM1PW8W+c5J/pqw=
+=QmnE
+-----END PGP SIGNATURE-----
