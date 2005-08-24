@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.3 2005/08/23 15:23:24 fmccor Exp $
-
-inherit eutils flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.4 2005/08/24 11:36:11 cryos Exp $
 
 MY_PN="seti_boinc-client-cvs"
 MY_PV="2005-08-20"
@@ -24,7 +22,6 @@ DEPEND="~sci-misc/boinc-4.72.20050813"
 S=${WORKDIR}/seti_boinc
 
 src_compile() {
-	filter-flags "-ffast-math"
 	# The setiathome GUI doesn't work - so disable it for now...
 	econf BOINCDIR=${WORKDIR}/boinc_public \
 		--without-x --disable-gui \

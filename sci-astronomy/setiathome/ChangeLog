@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/setiathome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.7 2005/08/23 15:23:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/ChangeLog,v 1.8 2005/08/24 11:36:11 cryos Exp $
+
+  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> setiathome-4.18.ebuild:
+  Remove ffastmath restriction, seems to produce valid results with a good
+  speed boost, thanks to Tony Murray <tonymurray@fastmail.fm> for the tip.
 
   23 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
   setiathome-3.03-r1.ebuild, setiathome-3.03-r2.ebuild,
