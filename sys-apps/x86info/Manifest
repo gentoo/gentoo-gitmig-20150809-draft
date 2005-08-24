@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d5090cdf4c4046b43fc19a32fe832d16 x86info-1.12b.ebuild 1220
-MD5 e6f02d34470064750c94cd094e19dec1 x86info-1.13.ebuild 1220
+MD5 28879059969f8547055db13367423471 x86info-1.12b.ebuild 1222
+MD5 8b111ccd0ea1a8306caffb742b2ca4c7 x86info-1.13.ebuild 1221
 MD5 a68d777e600ed9705e039734cdd0c4aa ChangeLog 1177
-MD5 2314117f5dd2e812f0e8276bd04b0364 files/digest-x86info-1.13 60
-MD5 1759a81bcf65ea2266520c18b934df09 files/digest-x86info-1.12b 61
-MD5 8a96e3de09ecff97079a248d217c407f files/1.12b-pic.patch 594
 MD5 e622e47087f8556df73aae8e3c4dd896 files/x86info-modules.conf-rc 330
+MD5 1759a81bcf65ea2266520c18b934df09 files/digest-x86info-1.12b 61
+MD5 2314117f5dd2e812f0e8276bd04b0364 files/digest-x86info-1.13 60
+MD5 8a96e3de09ecff97079a248d217c407f files/1.12b-pic.patch 594
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCdo8kmOfEJZHYOKcRArfKAKDFpwE68pYxYrWQ5wxqgBuqy42MVgCgnm+p
-glGGZK4i9t8rivQy7uYi0kU=
-=RZrv
+iD8DBQFDC7+CgIKl8Uu19MoRAp5eAJ9OqGqWuochvzFQ8mRsVagJYfWjBQCcDbbe
+IXvVdR8mYvzqznTcJby667M=
+=SHJS
 -----END PGP SIGNATURE-----

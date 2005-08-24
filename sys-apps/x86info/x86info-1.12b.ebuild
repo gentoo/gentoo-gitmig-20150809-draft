@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.12b.ebuild,v 1.6 2004/10/13 23:36:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.12b.ebuild,v 1.7 2005/08/24 00:29:03 vapier Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	# now we all all the docs
 	dodoc TODO README ChangeLog
 	doman x86info.1
-	cp -a results ${D}/usr/share/doc/${PF}
+	cp -pPR results ${D}/usr/share/doc/${PF}
 	prepalldocs
 }
 
