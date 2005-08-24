@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.21 2005/08/02 18:10:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.22 2005/08/24 17:29:14 agriffis Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/fame/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ~ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="mmx sse"
 
 DEPEND=""
