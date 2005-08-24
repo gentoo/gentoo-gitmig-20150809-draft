@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libclxclient
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.6 2005/07/25 12:45:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.7 2005/08/24 16:01:23 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libclxclient-1.0.0.ebuild, libclxclient-1.0.1.ebuild:
+  epatch does not need die.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> libclxclient-1.0.1.ebuild:
   Added to ~ppc.

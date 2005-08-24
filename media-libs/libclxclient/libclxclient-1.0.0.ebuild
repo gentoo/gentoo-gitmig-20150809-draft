@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/libclxclient-1.0.0.ebuild,v 1.3 2004/11/17 22:47:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/libclxclient-1.0.0.ebuild,v 1.4 2005/08/24 16:01:23 flameeyes Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ DEPEND="virtual/libc
 	>=media-libs/libclthreads-1.0.0"
 
 src_compile() {
-	epatch "${FILESDIR}/${P}-makefile.patch" || die
+	epatch "${FILESDIR}/${P}-makefile.patch"
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.55 2005/07/16 18:48:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.56 2005/08/24 16:05:06 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> libvorbis-1.1.0.ebuild:
+  epatch does not need die.
 
   16 Jul 2005; Mark Loeser <halcy0n@gentoo.org> libvorbis-1.0.1-r2.ebuild,
   libvorbis-1.1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.17 2005/07/16 18:48:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.18 2005/08/24 16:05:06 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -24,9 +24,8 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-	if use aotuv; then
-		epatch  ${DISTDIR}/libvorbis-aotuv-b3.patch || die "aoTuV patch failed"
-	fi
+	use aotuv && epatch ${DISTDIR}/libvorbis-aotuv-b3.patch
+
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it does not handle -mno-ieee-fp very well.
 	sed -i -e "s:-mno-ieee-fp::g" configure
