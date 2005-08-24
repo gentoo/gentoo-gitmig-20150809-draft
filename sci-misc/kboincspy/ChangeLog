@@ -1,0 +1,11 @@
+# ChangeLog for sci-misc/kboincspy
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/kboincspy/ChangeLog,v 1.1 2005/08/24 21:42:49 cryos Exp $
+
+*kboincspy-0.9.0 (24 Aug 2005)
+
+  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> +metadata.xml,
+  +kboincspy-0.9.0.ebuild:
+  Initial import of ebuild, thanks to Marcelo Goes <vanquirius@gentoo.org> for
+  the original ebuild, closes bug 74315.
+
