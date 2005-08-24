@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.11 2005/08/23 23:04:15 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.12 2005/08/24 21:53:30 gustavoz Exp $
+
+  24 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> gmpc-0.12.0-r1.ebuild:
+  ~sparc wrt #103486
 
   23 Aug 2005; Herbie Hopkins <herbs@gentoo.org> gmpc-0.12.0-r1.ebuild:
   Marked ~amd64 wrt bug #103486.
