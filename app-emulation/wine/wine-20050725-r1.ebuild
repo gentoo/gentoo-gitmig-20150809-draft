@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050111-r1.ebuild,v 1.9 2005/08/23 01:13:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050725-r1.ebuild,v 1.1 2005/08/24 00:19:33 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
-DESCRIPTION="free implementation of Windows(tm) on Unix - CVS snapshot"
+DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.com/"
 SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* x86"
-IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc lcms"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses lcms" #doc
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -27,21 +27,44 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	glut? ( virtual/glut )
-	lcms? ( media-libs/lcms )"
+	lcms? ( media-libs/lcms )
+	amd64? (
+		>=app-emulation/emul-linux-x86-xlibs-2.1
+		>=app-emulation/emul-linux-x86-soundlibs-2.1
+		>=sys-kernel/linux-headers-2.6
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/bison
-	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
 	sys-devel/flex"
+#	doc? ( app-text/docbook-sgml-utils app-text/jadetex )
+
+pkg_setup() {
+	if use amd64 ; then
+		if ! has_m32 ; then
+			eerror "Your compiler seems to be unable to compile 32bit code."
+			eerror "Make sure you compile gcc with:"
+			echo
+			eerror "    USE=multilib FEATURES=-sandbox"
+			die "Cannot produce 32bit code"
+		fi
+		if has_multilib_profile ; then
+			export ABI=x86
+		else
+			append-flags -m32
+			append-ldflags -m32
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack Wine-${PV}.tar.gz
 	cd "${S}"
 
 	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
-	epatch "${FILESDIR}"/${P}-upstream-registry-fix.patch.bz2 #85387
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/20041019-no-stack.patch #66002
+	epatch "${FILESDIR}"/wine-20050725-gcc-32bit.patch
 	epatch "${FILESDIR}"/wine-cvs-winelauncher-temp.patch #101773
 }
 
@@ -68,16 +91,17 @@ src_compile() {
 	config_cache lcms header_lcms_h
 
 	strip-flags
-	use lcms && append-flags -I${ROOT}/usr/include/lcms
+	use lcms && append-flags -I"${ROOT}"/usr/include/lcms
 
-	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
-		export DB2PDF=true
-		export DB2PS=true
-	fi
+#	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
+#		export DB2PDF=true
+#		export DB2PS=true
+#	fi
 
 	#	$(use_enable amd64 win64)
 	# USE=debug is broken in this release
 	econf \
+		CC=$(tc-getCC) \
 		--sysconfdir=/etc/wine \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
@@ -88,10 +112,10 @@ src_compile() {
 
 	emake -j1 depend || die "depend"
 	emake all || die "all"
-	if use doc ; then
-		VARTEXFONTS=${T} \
-		emake -j1 -C documentation doc || die "docs"
-	fi
+#	if use doc ; then
+#		VARTEXFONTS=${T} \
+#		emake -j1 -C documentation doc || die "docs"
+#	fi
 }
 
 src_install() {
@@ -102,13 +126,15 @@ src_install() {
 		includedir="${D}"/usr/include/wine \
 		sysconfdir="${D}"/etc/wine \
 		mandir="${D}"/usr/share/man \
-		libdir="${D}"/usr/lib \
-		dlldir="${D}"/usr/lib/wine \
+		libdir="${D}"/usr/$(get_libdir) \
+		dlldir="${D}"/usr/$(get_libdir)/wine \
 		install || die
-	use doc && dodoc documentation/*.pdf
-
-	insinto /usr/share/wine
-	doins documentation/samples/config || die "doins config"
+#	use doc && dodoc documentation/*.pdf
 
 	dodoc ANNOUNCE AUTHORS BUGS ChangeLog DEVELOPERS-HINTS README
+}
+
+pkg_postinst() {
+	einfo "~/.wine/config is now deprecated.  For configuration either use"
+	einfo "winecfg or regedit HKCU\\Software\\Wine"
 }
