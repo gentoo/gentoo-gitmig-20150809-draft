@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.33 2005/08/21 17:31:38 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.34 2005/08/24 15:40:00 hparker Exp $
+
+  24 Aug 2005; Homer Parker <hparker@gentoo.org> ChangeLog:
+  Stable on amd64.
 
   21 Aug 2005; Renat Lumpau <rl03@gentoo.org> egroupware-1.0.0.009.ebuild:
   Housekeeping
