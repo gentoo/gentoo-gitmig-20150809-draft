@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/qingy-themes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.1 2005/08/16 13:15:00 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.2 2005/08/24 11:28:33 s4t4n Exp $
+
+  24 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> qingy-themes-20050816.ebuild:
+  Change chown line to root:0 instead of root:root, closing #103563.
+  Stable for x86.
 
 *qingy-themes-20050816 (16 Aug 2005)
 
