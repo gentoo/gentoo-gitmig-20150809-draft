@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.1.ebuild,v 1.1 2005/05/27 10:27:54 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.1.1.ebuild,v 1.2 2005/08/24 08:39:43 greg_g Exp $
 
 inherit eutils kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.wirlab.net/kphone/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="alsa debug jack"
 
 S=${WORKDIR}/${PN}
