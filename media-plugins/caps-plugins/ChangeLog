@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.12 2005/05/25 16:05:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.13 2005/08/24 16:07:06 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  caps-plugins-0.2.1-r1.ebuild:
+  epatch does not need die.
 
   25 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -caps-plugins-0.1.5.ebuild, -caps-plugins-0.1.10.ebuild,
