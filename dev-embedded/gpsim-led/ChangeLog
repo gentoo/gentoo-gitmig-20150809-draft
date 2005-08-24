@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim-led
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/ChangeLog,v 1.6 2005/05/06 09:49:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/ChangeLog,v 1.7 2005/08/24 13:58:10 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> gpsim-led-0.0.3.ebuild:
+  Remove cp -a in favour of cp -pPR.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> gpsim-led-0.0.3.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gpsim-logic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/ChangeLog,v 1.5 2005/05/06 09:50:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/ChangeLog,v 1.6 2005/08/24 13:57:16 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gpsim-logic-0.0.2.ebuild:
+  Remove cp -a in favour of cp -pPR.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> gpsim-logic-0.0.2.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

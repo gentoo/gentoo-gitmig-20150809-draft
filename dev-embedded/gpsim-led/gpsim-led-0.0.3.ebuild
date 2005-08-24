@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/gpsim-led-0.0.3.ebuild,v 1.8 2005/05/06 09:49:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-led/gpsim-led-0.0.3.ebuild,v 1.9 2005/08/24 13:58:10 flameeyes Exp $
 
 inherit eutils
 
@@ -28,6 +28,6 @@ src_unpack() {
 src_install() {
 	einstall || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
-	cp -ra ${S}/examples ${D}/usr/share/doc/${PF}
+	cp -pPR ${S}/examples ${D}/usr/share/doc/${PF}
 	find ${D}/usr/share/doc/${PF} -name 'Makefile*' -exec rm -f \{} \;
 }
