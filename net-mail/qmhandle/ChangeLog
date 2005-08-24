@@ -1,10 +1,13 @@
 # ChangeLog for net-mail/qmhandle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.13 2005/08/24 17:04:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmhandle/ChangeLog,v 1.14 2005/08/24 17:52:41 hansmi Exp $
+
+*qmhandle-1.2.0-r1 (24 Aug 2005)
 
   24 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +files/qmHandle-gentoo-svc.patch, +qmhandle-1.2.0-r1.ebuild,
   -qmhandle-1.1.1.ebuild:
-  Removed old version.
+  Fixed bug #82840, cleaned the ebuild a bit. Removed old version.
 
   18 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> ChangeLog:
   Stable on sparc.
