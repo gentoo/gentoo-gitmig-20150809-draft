@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.10.ebuild,v 1.1 2005/08/17 12:32:57 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.10.ebuild,v 1.2 2005/08/24 00:15:42 tomk Exp $
 
 MY_P=Smarty-${PV}
 DESCRIPTION="A template engine for PHP"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${MY_P}
 src_install() {
 	dodoc [A-Z]*
 	mkdir -p ${D}/usr/lib/php
-	cp -a libs ${D}/usr/lib/php/Smarty
+	cp -pPR libs ${D}/usr/lib/php/Smarty
 }
 
 pkg_postinst() {
