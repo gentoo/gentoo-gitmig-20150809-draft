@@ -1,0 +1,96 @@
+--- savegame.cpp.orig	2005-08-18 23:41:39.000000000 +0200
++++ savegame.cpp	2005-08-18 23:44:10.000000000 +0200
+@@ -45,8 +45,9 @@
+ 	loaded_save_info.OW_world = 0;
+ 	loaded_save_info.itembox_item = 0;
+ 	
+-	char Full_Save_Name[40];
+-	sprintf( Full_Save_Name, "%s/%d.sav", SAVE_DIR, Save_file );
++	char Full_Save_Name[255];
++	snprintf( Full_Save_Name, sizeof(Full_Save_Name) - 1, "%s/.smclone/%d.sav", getenv("HOME"), Save_file );
++
+ 
+ 	ifstream ifs( Full_Save_Name, ios::in );
+ 
+@@ -79,8 +80,9 @@
+ 
+ int cSavegame :: Save( unsigned int Save_file, Savegame Save_info )
+ {
+-	char Full_Save_Name[45];
+-	sprintf( Full_Save_Name, "%s/%d.sav", SAVE_DIR, Save_file );
++	char Full_Save_Name[255];
++	snprintf( Full_Save_Name, sizeof(Full_Save_Name) - 1, "%s/.smclone/%d.sav", getenv("HOME"), Save_file );
++
+ 
+ 	ifstream ifs( Full_Save_Name, ios::in );
+ 
+@@ -181,10 +183,13 @@
+ 	char buffer[10];
+ 	char desc_tmp[150];
+ 
+-	Full_Save_Name = SAVE_DIR "/.sav";
++	Full_Save_Name = "/.smclone/.sav";
++
+ 	
+ 	sprintf( buffer, "%d", Save_file );
+-	Full_Save_Name.insert( strlen( SAVE_DIR ) + 1, buffer );
++	Full_Save_Name.insert( strlen( "/.smclone/" ) + 1, buffer );
++	Full_Save_Name.insert( 0, getenv("HOME") );
++
+ 
+ 	if( !valid_file( Full_Save_Name ) )
+ 	{
+@@ -235,9 +240,9 @@
+ 
+ bool cSavegame :: is_valid( unsigned int Save_file )
+ {
+-	char savename[50];
++	char savename[255];
+ 
+-	sprintf( savename, "%s/%d.sav", SAVE_DIR, Save_file );
++	snprintf( savename, sizeof(savename) - 1, "%s/.smclone/%d.sav", getenv("HOME"), Save_file );
+ 
+ 	return valid_file( savename );
+ }
+--- preferences.cpp.orig	2005-08-19 07:47:31.000000000 +0200
++++ preferences.cpp	2005-08-19 07:53:39.000000000 +0200
+@@ -31,18 +31,22 @@
+ bool cPreferences :: Load( void )
+ {
+ 	Default();
++
++	char Full_Pref_Name[255];
++
++	snprintf(Full_Pref_Name, sizeof(Full_Pref_Name) - 1, "%s/.smclone/%s", getenv("HOME"), PREF_NAME );
+ 	
+-	if( !valid_file( PREF_NAME ) )
++	if( !valid_file( Full_Pref_Name ) )
+ 	{
+ 		printf( "No Preferences found\n" );
+ 		return 0;
+ 	}
+ 
+-	ifstream ifs( PREF_NAME, ios::in );
++	ifstream ifs( Full_Pref_Name, ios::in );
+ 	
+ 	if( !ifs )
+ 	{
+-		printf( "Couldn't open preferences file : %s\n", PREF_NAME );
++		printf( "Couldn't open preferences file : %s\n", Full_Pref_Name );
+ 		return 0;
+ 	}
+ 	else
+@@ -63,8 +67,12 @@
+ void cPreferences :: Save( void )
+ {
+ 	Update();
++	
++	char Full_Pref_Name[255];
++
++	snprintf(Full_Pref_Name, sizeof(Full_Pref_Name) - 1, "%s/.smclone/%s", getenv("HOME"), PREF_NAME );
+ 
+-	ofstream ofs( PREF_NAME, ios::out | ios::trunc );
++	ofstream ofs( Full_Pref_Name, ios::out | ios::trunc );
+ 
+ 	char row[300];
+ 

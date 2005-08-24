@@ -1,0 +1,41 @@
+--- configure.ac.orig	2005-08-19 00:03:15.000000000 +0200
++++ configure.ac	2005-08-19 00:05:27.000000000 +0200
+@@ -2,7 +2,7 @@
+ 
+ AC_INIT(src/main.cpp)
+ 
+-PACKAGE=smc
++PACKAGE=smclone
+ VERSION=0.96
+ 
+ AC_PREREQ(2.50)
+@@ -83,12 +83,12 @@
+ packagedocdir=doc/${PACKAGE}
+ 
+ AC_DEFINE_UNQUOTED(SAVE_DIR, "savegames", [Directory for savegames])
+-AC_DEFINE_UNQUOTED(LEVEL_DIR, "${packageprefix}/${packagedatadir}/levels/", [Directory for level files])
+-AC_DEFINE_UNQUOTED(OVERWORLD_DIR, "${packageprefix}/${packagedatadir}/world", [Directory for word data])
+-AC_DEFINE_UNQUOTED(PIXMAPS_DIR, "${packageprefix}/${packagedatadir}/pixmaps", [Directory for pixmap data])
+-AC_DEFINE_UNQUOTED(SOUNDS_DIR, "${packageprefix}/${packagedatadir}/sounds", [Directory for sound data])
+-AC_DEFINE_UNQUOTED(MUSIC_DIR, "${packageprefix}/${packagedatadir}/music", [Directory for music data])
+-AC_DEFINE_UNQUOTED(FONT_DIR, "${packageprefix}/${packagedatadir}/font", [Directory for font data])
++AC_DEFINE_UNQUOTED(LEVEL_DIR, "@GENTOO_DATADIR@/levels", [Directory for level files])
++AC_DEFINE_UNQUOTED(OVERWORLD_DIR, "@GENTOO_DATADIR@/world", [Directory for word data])
++AC_DEFINE_UNQUOTED(PIXMAPS_DIR, "@GENTOO_DATADIR@/pixmaps", [Directory for pixmap data])
++AC_DEFINE_UNQUOTED(SOUNDS_DIR, "@GENTOO_DATADIR@/sounds", [Directory for sound data])
++AC_DEFINE_UNQUOTED(MUSIC_DIR, "@GENTOO_DATADIR@/music", [Directory for music data])
++AC_DEFINE_UNQUOTED(FONT_DIR, "@GENTOO_DATADIR@/font", [Directory for font data])
+ 
+ 
+ AC_OUTPUT([Makefile src/Makefile data/Makefile docs/Makefile])
+--- src/preferences.cpp.orig	2005-08-19 07:38:52.000000000 +0200
++++ src/preferences.cpp	2005-08-19 07:39:19.000000000 +0200
+@@ -208,7 +208,7 @@
+ 	Lvleditor_automousehide = 0;
+ 	Backgroundimages_disabled = 0;
+ 
+-	level_dir = "data/levels";
++	level_dir = "@GENTOO_DATADIR@/levels";
+ }
+ 
+ void cPreferences :: Update( void )
