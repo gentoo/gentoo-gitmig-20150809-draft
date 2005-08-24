@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r2.ebuild,v 1.3 2005/08/23 14:06:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r2.ebuild,v 1.4 2005/08/24 08:54:52 cryos Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/dia/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86"
 IUSE="gnome png python static zlib"
 
 RDEPEND=">=x11-libs/gtk+-2
