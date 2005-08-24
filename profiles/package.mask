@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4337 2005/08/24 22:12:52 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4338 2005/08/24 22:57:47 greg_g Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,28 @@
 ##
 ##   End example
 ##
+
+# Gregorio Guidi <greg_g@gentoo.org> (25 Aug 2005)
+# KDE 3.5 prereleases.
+>=kde-base/arts-3.5_alpha
+>=kde-base/kde-3.5_alpha
+>=kde-base/kdeaccessibility-3.5_alpha
+>=kde-base/kdeaddons-3.5_alpha
+>=kde-base/kdeadmin-3.5_alpha
+>=kde-base/kdeartwork-3.5_alpha
+>=kde-base/kdebase-3.5_alpha
+>=kde-base/kdeedu-3.5_alpha
+>=kde-base/kdegames-3.5_alpha
+>=kde-base/kdegraphics-3.5_alpha
+>=kde-base/kdelibs-3.5_alpha
+>=kde-base/kdemultimedia-3.5_alpha
+>=kde-base/kdenetwork-3.5_alpha
+>=kde-base/kdepim-3.5_alpha
+>=kde-base/kdesdk-3.5_alpha
+>=kde-base/kdetoys-3.5_alpha
+>=kde-base/kdeutils-3.5_alpha
+>=kde-base/kdewebdev-3.5_alpha
+>=dev-util/kdevelop-3.3_alpha
 
 # Luis F. Araujo <araujo@gentoo.org> (24 Aug 2005)
 # This is a binary package version.
