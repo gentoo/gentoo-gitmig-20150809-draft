@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.116 2005/07/30 14:06:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.117 2005/08/24 23:34:46 greg_g Exp $
+
+*kdetoys-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdetoys-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease.
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdetoys-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team
