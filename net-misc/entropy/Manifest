@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 512857a326479cdbdaa95d4c5a7dc6c6 entropy-0.8.2.418.ebuild 1725
-MD5 f3b322751da0ad252e828695a14833a3 entropy-0.8.2.415.ebuild 1716
+MD5 c0be89d1a35dbc5fa19393dddc1fc91f entropy-0.8.2.418.ebuild 1717
+MD5 10f3534a9a473a2a056149936b7c6461 entropy-0.8.2.415.ebuild 1708
 MD5 f1d507cc6f96a1026a779b6e57012cda ChangeLog 744
 MD5 aa6b3f2bfb13e8b73685cb547ebb5809 files/entropy.rc 616
 MD5 5b5d42195d023961aff488df450727af files/entropy.conf.d 274
 MD5 3881e0923ce99231017d5c9dde6f543b files/digest-entropy-0.8.2.415 66
 MD5 a2c703df6b4ccde79bda3817adfefb2c files/digest-entropy-0.8.2.418 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyOcXgIKl8Uu19MoRAjDPAJ9K8qsrYaF60MEmCqtzcOHjrZFhXgCfQ3mV
-0dbyv2YbvWahHH1A3E45hcY=
-=aEoS
------END PGP SIGNATURE-----
