@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.28 2005/05/09 02:39:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.29 2005/08/24 20:53:46 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org> libraw1394-1.2.0.ebuild:
+  stable on ia64
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org> libraw1394-1.2.0.ebuild:
   add ~ia64
