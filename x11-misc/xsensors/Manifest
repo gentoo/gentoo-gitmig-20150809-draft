@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2d236821a92034d9c21068e1855f0453 ChangeLog 1434
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 2d4df2158df55f5278035b552cf535a4 xsensors-0.20.ebuild 583
-MD5 43babb8e789051c65f4757e69e175353 xsensors-0.46.ebuild 582
-MD5 8b376acbe615e36e20403c4774f143ff xsensors-0.47.ebuild 590
+MD5 30d8df7f88ae4ffcf23a12b8651b9ee6 ChangeLog 1575
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 517f39cc2816bd6673f28e954092c960 xsensors-0.46.ebuild 582
+MD5 cdc1dab640b50c9f0ddba3d1645aa5d7 xsensors-0.47.ebuild 589
 MD5 fcb6c1c144df09e70f1f715e0520b63a files/digest-xsensors-0.20 65
 MD5 464cf221aef6ab1e576c77a59778a694 files/digest-xsensors-0.46 65
 MD5 e46ca33955a44ab6e75bd1e306997a21 files/digest-xsensors-0.47 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCt+77l5AvwDPiUowRArQzAJwJBwuzT746vFLfky0X+UfGSFhzhACeKZE0
-vfDVqiBWDE0e1W6IjDYrEdY=
-=HoNw
+iD8DBQFDC8XUl5AvwDPiUowRAtS5AJ99XInZzCX/KPmSpqN9x16CatICPwCgnNLl
+cDwO838N1ci8zY/8TH6VHiY=
+=984u
 -----END PGP SIGNATURE-----

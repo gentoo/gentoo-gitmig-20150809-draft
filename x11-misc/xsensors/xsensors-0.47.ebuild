@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.47.ebuild,v 1.2 2005/06/17 09:41:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.47.ebuild,v 1.3 2005/08/24 00:56:29 smithj Exp $
 
 DESCRIPTION="A hardware health information viewer, interface to lm-sensors"
 HOMEPAGE="http://www.linuxhardware.org/xsensors"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1.2*
+DEPEND="=x11-libs/gtk+-2*
 	sys-apps/lm_sensors"
 
 src_install() {
