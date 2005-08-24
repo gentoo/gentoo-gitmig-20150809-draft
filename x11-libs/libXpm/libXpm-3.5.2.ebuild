@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.2.ebuild,v 1.4 2005/08/23 12:18:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.2.ebuild,v 1.5 2005/08/24 01:07:04 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org Xpm library"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 #IUSE="X gnome"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
