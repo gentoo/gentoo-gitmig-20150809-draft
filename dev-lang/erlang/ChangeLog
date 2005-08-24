@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.21 2005/07/18 20:21:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.22 2005/08/24 00:48:14 vapier Exp $
+
+*erlang-10.2.5 (24 Aug 2005)
+
+  24 Aug 2005; Mike Frysinger <vapier@gentoo.org> +erlang-10.2.5.ebuild:
+  Add a version which works with wings #97798.
 
   18 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/10.2.6-manpage-emacs-gentoo.patch, files/50erlang-gentoo.el,
