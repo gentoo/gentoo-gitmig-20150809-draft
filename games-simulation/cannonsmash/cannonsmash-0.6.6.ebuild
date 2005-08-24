@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.7 2005/05/13 02:06:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.8 2005/08/24 04:30:30 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 MY_OGG=danslatristesse2-48.ogg
 DESCRIPTION="3D tabletennis game"
@@ -27,8 +27,9 @@ S=${WORKDIR}/csmash-${PV}
 src_unpack() {
 	unpack csmash-${PV}.tar.gz
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-x-inc.patch
-	epatch "${FILESDIR}"/${P}-sizeof-cast.patch
+	epatch \
+		"${FILESDIR}"/${P}-x-inc.patch \
+		"${FILESDIR}"/${P}-sizeof-cast.patch
 	if use oggvorbis ; then
 		cp "${DISTDIR}"/${MY_OGG} "${S}"/ || die "cp failed"
 		sed -i \
