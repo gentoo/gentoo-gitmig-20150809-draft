@@ -1,25 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d3325f0fdbcb9cd7cb9fd7f46dca5b3 ChangeLog 2069
-MD5 4a93fd5a77ec4b9b954050a95867760c acerhk-0.5.18-r1.ebuild 1118
-MD5 6b0b1fbb598529ab7fa8294177e02272 acerhk-0.5.18.ebuild 1299
-MD5 132b1b8fc710908581b43f79a5b98e89 acerhk-0.5.20.ebuild 1115
 MD5 cf930f9562f6b7ffe69eb882fad7e95f acerhk-0.5.22-r1.ebuild 1161
+MD5 4a93fd5a77ec4b9b954050a95867760c acerhk-0.5.18-r1.ebuild 1118
+MD5 132b1b8fc710908581b43f79a5b98e89 acerhk-0.5.20.ebuild 1115
+MD5 bf40d72a47750541fecd847c4d9f45b1 ChangeLog 2189
+MD5 5cb0503040fe79660f0fbbc6773fd9d7 metadata.xml 259
+MD5 1aafb91997237a364e7b84e545514a67 acerhk-0.5.27.ebuild 1045
 MD5 3835e91587ea58ae85db2bc85f9a1b9d acerhk-0.5.22.ebuild 1114
-MD5 7329ff74633cb9478acf3ba9f535d52c files/acerhk-0.5.18-redef-wireless.patch 911
-MD5 11b7dc9cedaab60e4d7c9dcb87839704 files/acerhk-0.5.20-redef-wireless.patch 1115
-MD5 315f26e30f3b7a19dc1063ccc08f53a7 files/acerhk-0.5.22-redef-wireless.patch 1115
-MD5 ffca9b53bdd343a0206d4bed9290df38 files/digest-acerhk-0.5.18 65
+MD5 6b0b1fbb598529ab7fa8294177e02272 acerhk-0.5.18.ebuild 1299
 MD5 ffca9b53bdd343a0206d4bed9290df38 files/digest-acerhk-0.5.18-r1 65
+MD5 49d5e0a19fe283be3fe74ed93ff33df3 files/digest-acerhk-0.5.22-r1 65
+MD5 11b7dc9cedaab60e4d7c9dcb87839704 files/acerhk-0.5.20-redef-wireless.patch 1115
+MD5 ffca9b53bdd343a0206d4bed9290df38 files/digest-acerhk-0.5.18 65
 MD5 94afe625bcea834fda561d015a594608 files/digest-acerhk-0.5.20 65
 MD5 49d5e0a19fe283be3fe74ed93ff33df3 files/digest-acerhk-0.5.22 65
-MD5 49d5e0a19fe283be3fe74ed93ff33df3 files/digest-acerhk-0.5.22-r1 65
-MD5 5cb0503040fe79660f0fbbc6773fd9d7 metadata.xml 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/aMI1lqEGTUzyQRAkVrAJ47kJC6EdF2ENWPB46aetxxvC/8ygCfaqjB
-GawSuF92VHBObnT6L1WWD34=
-=3580
------END PGP SIGNATURE-----
+MD5 b31b2a3f6bae7988c8ddf1a19b5d5719 files/digest-acerhk-0.5.27 65
+MD5 315f26e30f3b7a19dc1063ccc08f53a7 files/acerhk-0.5.22-redef-wireless.patch 1115
+MD5 7329ff74633cb9478acf3ba9f535d52c files/acerhk-0.5.18-redef-wireless.patch 911
