@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.19 2005/07/07 16:22:58 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.20 2005/08/24 23:58:40 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org> rpc2-1.27.ebuild:
+  stable on ia64
 
   07 Jul 2005; Maurice van der Pot <griffon26@gentoo.org> rpc2-1.27.ebuild:
   Marked stable on x86

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7d241ccf7c8f5d4b8f1d2cf9fe3c13d gnutls-1.2.3.ebuild 2323
-MD5 6d75b04ea216f7cfb25dfcd9a72c9908 gnutls-1.2.6.ebuild 1976
-MD5 3207f14521a169740bf9803a98f728f8 gnutls-1.2.4.ebuild 2587
-MD5 64ddbf924429406b7a839af4ec16a931 gnutls-1.2.5.ebuild 1947
-MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 4afc7479357b55dc6feca54b9b3f3563 gnutls-1.2.3-r1.ebuild 2433
-MD5 08081d2e15793082b967a6f59be65f4f gnutls-1.0.17.ebuild 2420
-MD5 0141dbf41e5461d24ef5bc995e3f4848 gnutls-1.0.25.ebuild 2219
+MD5 e7d241ccf7c8f5d4b8f1d2cf9fe3c13d gnutls-1.2.3.ebuild 2323
+MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 e89eef2a841001f5819c7e45d11fa1cd ChangeLog 10932
+MD5 0141dbf41e5461d24ef5bc995e3f4848 gnutls-1.0.25.ebuild 2219
+MD5 2458e65da0866f26649f281a697a6e86 gnutls-1.2.4.ebuild 2586
+MD5 6d75b04ea216f7cfb25dfcd9a72c9908 gnutls-1.2.6.ebuild 1976
+MD5 64ddbf924429406b7a839af4ec16a931 gnutls-1.2.5.ebuild 1947
+MD5 08081d2e15793082b967a6f59be65f4f gnutls-1.0.17.ebuild 2420
+MD5 29d8c263065fa5908f9b6d9e5ea265b7 files/gnutls-1.2.3-gcc4.patch 417
+MD5 5deb0ddb33596df840a663273ddf9c2b files/digest-gnutls-1.2.3 66
 MD5 29d3e8994448eb3fe1d15c6720621b40 files/gnutls-1.0.17-extra.h.patch 479
 MD5 5deb0ddb33596df840a663273ddf9c2b files/digest-gnutls-1.2.3-r1 66
 MD5 26cd0c7e5a105e72808024e198a3ce35 files/digest-gnutls-1.2.6 66
-MD5 ee48c699bf5727fa6284864dc62d1c14 files/digest-gnutls-1.0.25 66
-MD5 0a6c7f63908a38a6e28d34a68accee2a files/digest-gnutls-1.2.4 66
-MD5 5deb0ddb33596df840a663273ddf9c2b files/digest-gnutls-1.2.3 66
-MD5 cfa78b7df28ec06ca09763bd8c908ebc files/digest-gnutls-1.0.17 67
 MD5 dcfcf7e6b927a12c18c6c4805bc07490 files/digest-gnutls-1.2.5 66
-MD5 29d8c263065fa5908f9b6d9e5ea265b7 files/gnutls-1.2.3-gcc4.patch 417
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDAXWMgIKl8Uu19MoRAoykAJ98RQhgHz0zNGRHKiyPZiftoA2PvQCfX7xk
-te79JHPrRcaWHqcQDk9cD5o=
-=LVaH
------END PGP SIGNATURE-----
+MD5 0a6c7f63908a38a6e28d34a68accee2a files/digest-gnutls-1.2.4 66
+MD5 ee48c699bf5727fa6284864dc62d1c14 files/digest-gnutls-1.0.25 66
+MD5 cfa78b7df28ec06ca09763bd8c908ebc files/digest-gnutls-1.0.17 67

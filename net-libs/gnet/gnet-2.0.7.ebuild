@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.7.ebuild,v 1.7 2005/06/06 10:58:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.7.ebuild,v 1.8 2005/08/24 23:50:48 agriffis Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ~ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc-macos ppc64 sparc x86"
 
 IUSE="debug doc static"
 
