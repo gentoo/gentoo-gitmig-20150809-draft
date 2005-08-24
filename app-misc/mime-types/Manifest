@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2bbbdc3f8cfb5f93fb232d7bd40c445e mime-types-3.ebuild 541
-MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
-MD5 a1c570d73d51d8ba85be624488836064 ChangeLog 3281
+MD5 f415585c6e122ce451db78fa8b99eeec mime-types-3.ebuild 543
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
+MD5 acbe0424e6a75aa9be5382188e9fd22b ChangeLog 3378
 MD5 215fe0afc74ecf02f4614b6be1122753 files/digest-mime-types-2 63
 MD5 c92d6d001f3ea5c1deb593b177666734 files/digest-mime-types-3 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDDF8SQlM6RnzZP+IRAiV+AJ0cZ7ZiNSId6jrY4ANTPaTvCcoPwACeJDK1
-CTJXgECXtkK0g4mDMw3SvW8=
-=6wnY
+iD8DBQFDDM0aKRy60XGEcJIRAmfeAKCeQaUa5df1P7ULfpya3LzD6QGvvgCdEe2G
+XnJiqGRAGz8dpR/FVQtHhAk=
+=BuPe
 -----END PGP SIGNATURE-----
