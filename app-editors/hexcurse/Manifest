@@ -1,5 +1,15 @@
-MD5 70ba8f7a9d2ea103a36cc0c0f9bc4688 ChangeLog 663
-MD5 c17b65a12598ea410870629db9b9cab1 hexcurse-1.55.ebuild 679
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 057103039f72dd99eb1631f428d22dd5 hexcurse-1.55.ebuild 706
 MD5 d516054daaa4513c52b473b66c6e762a metadata.xml 340
-MD5 840257c8cd7a545511437500924be4c5 files/1.55-gcc.patch 334
+MD5 70ba8f7a9d2ea103a36cc0c0f9bc4688 ChangeLog 663
 MD5 f2612b71c6e5c2d976c704ed7f1e51fb files/digest-hexcurse-1.55 65
+MD5 840257c8cd7a545511437500924be4c5 files/1.55-gcc.patch 334
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC7uGgIKl8Uu19MoRAqOHAJ92cEepk7HjJDNe7s157d/OnqFCIgCfeRA4
+KIctzHyG6pBEsKbzl9fczqM=
+=q6tu
+-----END PGP SIGNATURE-----
