@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.32 2005/07/31 18:39:17 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.33 2005/08/24 09:04:30 sekretarz Exp $
+
+  24 Aug 2005; <sekretarz@gentoo.org> firebird-1.5.1.ebuild,
+  firebird-1.5.2.ebuild:
+  Changed chown root:root to root:0 to be compliant with BSD and Darwin, bug
+  #103563
 
   31 Jul 2005; <sekretarz@gentoo.org> firebird-1.5.1.ebuild,
   firebird-1.5.2.ebuild:
