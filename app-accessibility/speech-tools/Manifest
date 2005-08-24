@@ -1,8 +1,18 @@
-MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 c1b479c95d2bc8e53a791e1464cee921 ChangeLog 4831
-MD5 0295d80cf519d408c45638daff6bacf9 speech-tools-1.2.3-r3.ebuild 3138
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ce2656bc0238a81964470d775fca8c6 ChangeLog 4995
+MD5 42cfd3e4a9b83ea4174c7dbc8ff328bf speech-tools-1.2.3-r3.ebuild 3137
 MD5 0c4616f2e0d01c7da55c3379843958ed speech-tools-1.2.3-r2.ebuild 3111
-MD5 19e3325adc92d921d82884fe58485055 files/speech-tools-gcc3.3.diff 25787
-MD5 dbb77def95ba86c97fb18472325f2e18 files/digest-speech-tools-1.2.3-r2 224
-MD5 a143fa8cb76f282bdd72ae3ad821f9c5 files/58speech-tools 34
+MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 dbb77def95ba86c97fb18472325f2e18 files/digest-speech-tools-1.2.3-r3 224
+MD5 19e3325adc92d921d82884fe58485055 files/speech-tools-gcc3.3.diff 25787
+MD5 a143fa8cb76f282bdd72ae3ad821f9c5 files/58speech-tools 34
+MD5 dbb77def95ba86c97fb18472325f2e18 files/digest-speech-tools-1.2.3-r2 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDCTGj5H05b2HAEkRAmm5AJ9/57GOcdhAQ2AyvCyKCK4ntmkpZgCeOJTA
+P+rCStKMweLODb/zIFEIWaM=
+=qXHS
+-----END PGP SIGNATURE-----

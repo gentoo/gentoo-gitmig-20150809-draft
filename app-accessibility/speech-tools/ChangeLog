@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.31 2005/08/23 02:41:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.32 2005/08/24 07:41:21 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  speech-tools-1.2.3-r3.ebuild:
+  Don't call chown with root:root. Call sed with -e to state the expression.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   speech-tools-1.2.3-r2.ebuild:
