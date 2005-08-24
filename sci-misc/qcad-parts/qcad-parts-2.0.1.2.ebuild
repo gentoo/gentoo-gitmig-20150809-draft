@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/qcad-parts-2.0.1.2.ebuild,v 1.1 2004/12/27 21:26:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/qcad-parts-2.0.1.2.ebuild,v 1.2 2005/08/24 12:03:18 cryos Exp $
 
 MY_PN="partlibrary"
 MY_PV="${PV}-1"
@@ -33,7 +33,7 @@ src_install() {
 	mv partli*/* .
 	rmdir partlib*
 	einfo "Adjusting permissions..."
-	chown -R root:root .
+	chown -R root:0 .
 	find . -type d -not -perm -005 | while read dir; do
 		echo "Fixing directory $dir"; chmod ugo+rx $dir; done
 	find . -type f -not -perm -004 | while read file; do

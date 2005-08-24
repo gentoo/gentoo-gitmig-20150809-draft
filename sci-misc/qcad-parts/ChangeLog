@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/qcad-parts
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/ChangeLog,v 1.2 2004/12/28 03:45:25 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad-parts/ChangeLog,v 1.3 2005/08/24 12:03:18 cryos Exp $
+
+  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  qcad-parts-2.0.1.2.ebuild:
+  Fixed the chown call to comply with bug 103563.
 
 *qcad-parts-2.0.1.2 (27 Dec 2004)
 
