@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.44 2005/08/23 02:11:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.45 2005/08/24 10:54:05 leonardop Exp $
+
+*dasher-3.2.16 (24 Aug 2005)
+
+  24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +dasher-3.2.16.ebuild:
+  New version.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> dasher-3.2.15.ebuild:
   stable on ia64
