@@ -7,13 +7,13 @@ MD5 efac081790d9ee84f111c7b864468925 less-385_p4.ebuild 1155
 MD5 147e4c10285042fad83d0c3592498e8c less-385.ebuild 800
 MD5 f7b5efd4e9960e9c06ea0ee233b7d2a8 ChangeLog 5362
 MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
-MD5 a4095ecfedd62ce5a648f0c5ff6f8d47 files/lesspipe.sh 2020
+MD5 f1ac245b13bf5bc789b71bab79dc740d files/lesspipe.sh 3788
 MD5 c9bb99cd4f916916f975c59d38c3d590 files/digest-less-385 60
 MD5 07e2862dc300b691cba6dfb12426b732 files/digest-less-385_p4 126
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBAhmgIKl8Uu19MoRAg/pAJ9THCAy7qjq2Vq8QtAMAw590YonPwCePZoH
-Vt6fmO/1xNIa9t07SwzYlfQ=
-=+mlJ
+iD8DBQFDDQUHgIKl8Uu19MoRAh/ZAJ48aL2qlarDec1cZ/qdmU1YoB+XfwCfXlw8
+eR0xW8mnnkORGiHWX9euaq4=
+=sojf
 -----END PGP SIGNATURE-----
