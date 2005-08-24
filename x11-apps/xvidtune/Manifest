@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2c070576cdbc05e8ee2cb1e946a077ef xvidtune-0.99.0.ebuild 636
 MD5 08b3383d1b46ba59ed14e8a439165ece ChangeLog 473
 MD5 f8d455fd33f271c8620e5fa4c127d1b7 files/digest-xvidtune-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8cbgIKl8Uu19MoRAv04AJ0VkN7dHI8l5txLuPBffxUzJi/s+ACeL/JD
+oIl8/E16sZkRMMkmzYMrFGA=
+=flUY
+-----END PGP SIGNATURE-----

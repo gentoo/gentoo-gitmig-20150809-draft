@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bc6e99285056dc999969ddf9bbacff34 xauth-0.99.0.ebuild 482
 MD5 75f86ce95a41aff8ac4acc65866fe642 ChangeLog 630
 MD5 90404d10addaf1b73adf8051cc3f7c77 files/digest-xauth-0.99.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8XUgIKl8Uu19MoRAtdhAJ90EemCerqL8NUN2wYfXiVltuTX2ACfbqYc
+n7xwwCY+LssSTyMFgr/LEEM=
+=TKiu
+-----END PGP SIGNATURE-----

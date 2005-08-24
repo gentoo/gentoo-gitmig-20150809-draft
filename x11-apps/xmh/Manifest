@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 04d43ba6781307ce60b09332da948297 ChangeLog 446
 MD5 42a34c98f1869f877e8666fac4ced6ea xmh-0.99.0.ebuild 600
 MD5 0953cac6dfffe62579c7df1d441fbe39 files/digest-xmh-0.99.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bSgIKl8Uu19MoRAlW4AKCEFbXDuXEpmwpNlb/UEqUYGo42EQCeIyna
+jOaeHDhruF2flxgJwlSi4Is=
+=X1su
+-----END PGP SIGNATURE-----

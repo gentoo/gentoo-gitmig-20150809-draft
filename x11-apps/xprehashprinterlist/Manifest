@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a66666446bc220f871967ac7fd87b631 xprehashprinterlist-0.99.0.ebuild 476
 MD5 123943af6610e47521ef518d13f54031 ChangeLog 530
 MD5 6edb69f80a012a4c1cf6c239760a20ae files/digest-xprehashprinterlist-0.99.0 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bugIKl8Uu19MoRAq2RAJ9Gg0SDVkYHQXO4whDX/rfFzo0YjQCbBwWD
+ay/0DOSvPKAaAc+U+melmg8=
+=dR0p
+-----END PGP SIGNATURE-----

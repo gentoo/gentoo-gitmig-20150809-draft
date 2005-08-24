@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 112761d714c1f52d36fd127cdb18dc52 xwininfo-0.99.0.ebuild 444
 MD5 012a503426b33755f2b935aa622ef49d ChangeLog 473
 MD5 e3ab74efab3779bf34cbd8f5cd4a0e09 files/digest-xwininfo-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8chgIKl8Uu19MoRArQ0AJ47MFUI+OPLG3Ij+4VqG+v9Y1o3SgCggIjd
+4ErZ1uF43Ag9netMcmLlU6Q=
+=tIDu
+-----END PGP SIGNATURE-----

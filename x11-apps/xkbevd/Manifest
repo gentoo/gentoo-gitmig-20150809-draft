@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aab494b7b28af38c8844153b2c18fb6d xkbevd-0.99.0.ebuild 425
 MD5 1e268d3917f4fe7740e15eaa38a1faac ChangeLog 463
 MD5 133e59551c15f4d6ec5d4607e92b1988 files/digest-xkbevd-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8afgIKl8Uu19MoRAjR1AJ9q2dwr49xCdg6WlyolObVoaiF5hwCfcllU
++LVWOFwTQfxBYoi+nW4F3EI=
+=j7I6
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 758d1fb7450037602889ecdb0adc09d3 xeyes-0.99.0.ebuild 469
 MD5 ad70293bb0519b4550fd154ffe56bf6c ChangeLog 456
 MD5 14717fe8a3d47edbbe362d416867aa8f files/digest-xeyes-0.99.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8Y5gIKl8Uu19MoRAnr9AJ9XTcHU1SQq9zMw1q1XmOXJMsOxUwCeO1Hh
+dhGzx+89wq2k9C8mNqkWgNU=
+=JanT
+-----END PGP SIGNATURE-----

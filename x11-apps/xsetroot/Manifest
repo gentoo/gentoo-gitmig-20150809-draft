@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66c8a3afde707b2c074fbcecfeedfd5c xsetroot-0.99.0.ebuild 444
 MD5 786b03b6da36f2d76f177f7a95d9f6f3 ChangeLog 473
 MD5 8da7c3ad691f5585df5d8ca2fb1fcc11 files/digest-xsetroot-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8cNgIKl8Uu19MoRAmu6AJ9cldY9o+cgkELxI0jl09vFNmgV9QCcDanO
+/xRdIfxCIFrcWsvLEKYnVwM=
+=cwr4
+-----END PGP SIGNATURE-----

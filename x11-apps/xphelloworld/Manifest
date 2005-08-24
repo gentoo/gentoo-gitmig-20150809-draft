@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 54c6bac480f4af874a795fd038cd1e80 xphelloworld-0.99.0.ebuild 624
 MD5 bdf4fa31ae8ca1d3a799b36f766aa9e2 ChangeLog 495
 MD5 2ef38d162364461c0fac144c4552c1fa files/digest-xphelloworld-0.99.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bYgIKl8Uu19MoRAg/eAJ94Lv/1P76xkHVExR8wtZkcYRVK0ACcCcyt
+bXAT+ipd3tqz1/fqEI++7GM=
+=iyQE
+-----END PGP SIGNATURE-----

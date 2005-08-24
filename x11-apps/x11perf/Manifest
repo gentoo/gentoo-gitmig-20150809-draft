@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 61cdb3b55bebd8b44a2ad223aac44465 x11perf-0.99.0.ebuild 441
 MD5 e33146a8248c1c88aae824ffeb27cf95 ChangeLog 468
 MD5 7470d5ddb9a2261b33c458864b337c4d files/digest-x11perf-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8d6gIKl8Uu19MoRArRDAJ9JFeSzkPtm01M1mBdAJL69nQoeOgCfdVfD
+ZTj2uiKO8OOjnIss/h9v5Qk=
+=SJBs
+-----END PGP SIGNATURE-----

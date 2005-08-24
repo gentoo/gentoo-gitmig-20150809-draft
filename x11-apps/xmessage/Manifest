@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0caa1284ed219e5e60a2b63024f1071f xmessage-0.99.0.ebuild 615
 MD5 3377e5b7e8c5f778d40d887681ede463 ChangeLog 473
 MD5 bbe5d3e9c7d6082c61837c07ac007176 files/digest-xmessage-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bMgIKl8Uu19MoRAjZuAJwOGTA09aZZC7Yo3MA19jh/N1tFNQCfQ/0d
+PT6hUcGbc72KGrt8ecbwBak=
+=7Nlr
+-----END PGP SIGNATURE-----

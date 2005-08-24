@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a525c0f53e55c969da0c8cd2bd9b47e xrdb-0.99.0.ebuild 432
 MD5 6ac955685da6bbed27675ba1b760f20a ChangeLog 451
 MD5 b81b40a21b0597218d918038fc191af5 files/digest-xrdb-0.99.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bzgIKl8Uu19MoRAq26AJ9AyHwX6Gmifv+OOCdMIIBml3Yl6gCdFIdq
+94IrX9hoTLRzyl7SaXT9lFA=
+=PD2D
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a0cff5c4d9b65dd56dc2b617c558645 xclock-0.99.0.ebuild 685
 MD5 1ee8698dd468bd4b2d140bb77107ad35 ChangeLog 463
 MD5 1a3cf8d56e130ea86fe79f9d716061e6 files/digest-xclock-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8XogIKl8Uu19MoRAv3nAJ4kt8GtwLgHN30dEKPPbpmmzCkAzgCfdiyA
+SgUKcms8byqIbDqEFt0vz/E=
+=t3yl
+-----END PGP SIGNATURE-----

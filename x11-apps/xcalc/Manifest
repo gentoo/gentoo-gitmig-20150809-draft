@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 030db90284f3ab8bb513b0161555d65a xcalc-0.99.0.ebuild 606
 MD5 952114e831831000c39bf480900511ad ChangeLog 456
 MD5 5fdfd0786b43e6b9df59995bb983cc24 files/digest-xcalc-0.99.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8XcgIKl8Uu19MoRAuV2AJ9IbKnqJ72emtSSgnnPZvKiqhmTxwCfW0kl
+Zm//CZE4KiiDzJjjP+ON0/4=
+=nJpK
+-----END PGP SIGNATURE-----

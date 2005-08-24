@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44559bc00adb2134e1aee2979de9db77 xstdcmap-0.99.0.ebuild 444
 MD5 31ae4b084b451627a1be54c134bd7bc3 ChangeLog 473
 MD5 a6a385eda0d63f9885a26d9ac215457e files/digest-xstdcmap-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8cTgIKl8Uu19MoRApjZAJ4x3NOnus+G6kJ3qZo4HFSfrjY1SgCfTPXB
+AfcsM3tMj5/4An9UdDbU/Hg=
+=NujP
+-----END PGP SIGNATURE-----

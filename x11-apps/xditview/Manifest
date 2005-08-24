@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 330a85f9c231844f09faed7cda24f4b0 xditview-0.99.0.ebuild 615
 MD5 2917a8fab24edbc5a628a332efd18856 ChangeLog 473
 MD5 047d7e4c68dc77479167d0d3887abb49 files/digest-xditview-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8YcgIKl8Uu19MoRAimtAJ9/bCR6gZSH8vauwRiOtyBr/kY15ACfdmgO
+RHzXCzpiMqiw7TDjepYmiOI=
+=ZnrX
+-----END PGP SIGNATURE-----

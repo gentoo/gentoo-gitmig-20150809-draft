@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 65463a7e898c468e0487584a6acc5459 ChangeLog 463
 MD5 82b6dd70285fcfe5d52bc8d1d2349d06 xcmsdb-0.99.0.ebuild 421
 MD5 85d589f110329dbad3b0ab39b6d57602 files/digest-xcmsdb-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8XvgIKl8Uu19MoRAjhNAJ4xjX2qLsJvWmAOc7yQKsK5U9ytmwCeIHKB
+rRZXXyiuaaXkz1+Rvhtb+nU=
+=rssj
+-----END PGP SIGNATURE-----

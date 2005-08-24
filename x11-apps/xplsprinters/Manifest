@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a232b7a63e5c1af43fcbd7bcffbbbcc7 xplsprinters-0.99.0.ebuild 479
 MD5 8027a05d54e960587382a0d800f2d123 ChangeLog 495
 MD5 a938937243f17fb5dd64ec94d0ba7d08 files/digest-xplsprinters-0.99.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bhgIKl8Uu19MoRAuuBAJ9ESSWP5o5hlaV+WwwpxizUOJVBQACggIL7
+3NZW8PoEUL7nEzS4JY9aLqQ=
+=FUaH
+-----END PGP SIGNATURE-----

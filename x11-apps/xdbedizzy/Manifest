@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bb5744893222936c88a38da414536c9b xdbedizzy-0.99.0.ebuild 648
 MD5 9351c8dd216226218b64fc1d40813269 ChangeLog 478
 MD5 737a46bfbdf25cef248f981510f7c927 files/digest-xdbedizzy-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8YTgIKl8Uu19MoRAty0AJ9M6nrc23F7nKqvmmb8OGRfuF3howCeJCcE
+/MZJs/dOHiqv3k2Q5z8nIGo=
+=4aEN
+-----END PGP SIGNATURE-----

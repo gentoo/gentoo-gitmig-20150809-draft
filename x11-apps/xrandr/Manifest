@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f6055dbdcc958c67d2ab20b9e5f8899 xrandr-0.99.0.ebuild 448
 MD5 b9c3f4d81b7a66df079d86bc74f54c9e ChangeLog 551
 MD5 e0622f28462eb3bc1735bd2cfd7659c5 files/digest-xrandr-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8b1gIKl8Uu19MoRAuHQAJ9StEaCMm1ffDNKG/YYzx4cLYW+oQCeNoUi
+6pDWM/pSmFXTgxcZrzePc/w=
+=Y0dB
+-----END PGP SIGNATURE-----

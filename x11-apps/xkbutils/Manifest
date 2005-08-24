@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45cca55e1a6be5ece7686e72948b55a3 ChangeLog 473
 MD5 f4a87c50abeacb24a4cef157dc69f9a3 xkbutils-0.99.0.ebuild 636
 MD5 d005ea700b22101a43beaafc75fabdbd files/digest-xkbutils-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8ajgIKl8Uu19MoRAheRAJsE1Cm8A9BZRV5q8n8AFsu5LrjYzgCfSmFM
+X7FVZigzOPWaq1yaHZ++GdI=
+=l1VJ
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 677ca438f64f506cf362edf71e3b78ed xgamma-0.99.0.ebuild 425
 MD5 0cbe8033071c60ac4da22cc99d6b455d ChangeLog 463
 MD5 01d9bc25b70676bdd469ce1a78c57212 files/digest-xgamma-0.99.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8Z7gIKl8Uu19MoRAvBlAJ9Zlt0a27z4kMSDAVY63DL4Lm6h3wCfQSAV
+j3Kv9TcxV+S7hKJ4zssDVnE=
+=yQmP
+-----END PGP SIGNATURE-----

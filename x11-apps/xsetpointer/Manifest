@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25133074da6740d18ca07278c5bcfc9a xsetpointer-0.99.0.ebuild 452
 MD5 090948596d48d5c25fd6a4697ba84ed0 ChangeLog 490
 MD5 d471f21b2394e3fa05cb7ff8754972ca files/digest-xsetpointer-0.99.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8cDgIKl8Uu19MoRAiiMAJ4kPVlnVH+KXxsyp5vLIYRAzcMuFACfZtoR
+xjV9HLxZbkOZkXW1NYPSQ48=
+=hSfz
+-----END PGP SIGNATURE-----

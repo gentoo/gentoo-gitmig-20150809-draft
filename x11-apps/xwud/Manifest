@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 99b2cb48badff2602dc1eaa0e7caf7f3 xwud-0.99.0.ebuild 415
 MD5 a1ecdb7e1fe0a3902146f2f4bdfca2a1 ChangeLog 451
 MD5 2752846ca08909739029bb4ce2a408b5 files/digest-xwud-0.99.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8cpgIKl8Uu19MoRAunkAJ9TOIf3o0cRGA6H6H7kcwJCOO3w0ACeNSGs
+ap4DtO5iUR7+BsDaAz5YqZs=
+=NrpZ
+-----END PGP SIGNATURE-----

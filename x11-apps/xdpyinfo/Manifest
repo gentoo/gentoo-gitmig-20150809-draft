@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 076a7ed65edaaf765a6b5d2997c48f31 xdpyinfo-0.99.0.ebuild 892
 MD5 b0013d8c1738a94a03a59b7044a10912 ChangeLog 769
 MD5 98f2babe4660c8a5112133b01b62edde files/xineramaproto.patch 610
 MD5 6453b4398f2dfe421e785ae76b8be63d files/digest-xdpyinfo-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8YsgIKl8Uu19MoRAlTEAKCDWybXtk9oExu85MRW/dn19DR6tACfY+He
+/wJs2mlc1/3Lk2UmtKzWh7M=
+=OExa
+-----END PGP SIGNATURE-----

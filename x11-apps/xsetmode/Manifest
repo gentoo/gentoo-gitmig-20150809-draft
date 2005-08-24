@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 27ad3882220b5242a266647dece29097 xsetmode-0.99.0.ebuild 443
 MD5 7bb94bcb8806dd513987f87acce50add ChangeLog 473
 MD5 847c5e7c2d0f16e3acc28cbdbf72a286 files/digest-xsetmode-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8cFgIKl8Uu19MoRAiSIAJsGreyhlOksdMbqrwhdZeFLHsDUXgCZAY3X
+6O3rCkhS3QzT6RZeHZn+P9g=
+=oB/e
+-----END PGP SIGNATURE-----

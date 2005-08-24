@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6002d285e564eda2121d24e97b67dca2 xbiff-0.99.0.ebuild 613
 MD5 fc6e594dcf29a3c17aaf148199eb22bb ChangeLog 456
 MD5 2f5ccc747384ae473b643a1c75b22799 files/digest-xbiff-0.99.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8XSgIKl8Uu19MoRApyXAJ4uDV7yts38225spxL+wWmFjBYa4ACfWZwA
+ZqbtBjC981p5ARFUSeRuOzw=
+=PjaY
+-----END PGP SIGNATURE-----

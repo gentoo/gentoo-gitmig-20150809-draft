@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 190a79eed00b83f8223c38ce53596ba8 xlsatoms-0.99.0.ebuild 444
 MD5 c3062d1a584061f26389f5b9b2fe8cc5 ChangeLog 473
 MD5 19e689b3c540170a3cddfe31cd824b2a files/digest-xlsatoms-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8azgIKl8Uu19MoRAjRuAJwNwNE9Kh/PF4injIktNc8/mvo0+gCfSC6w
+Wpt6E3g3GC+9qrj3IUz4+H0=
+=D+ru
+-----END PGP SIGNATURE-----

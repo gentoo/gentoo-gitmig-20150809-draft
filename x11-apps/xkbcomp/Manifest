@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f442cc824e37fc1a780b770b16208be3 xkbcomp-0.99.0-r1.ebuild 579
 MD5 7619d36e9923a8e8735d9a15e6368bf4 ChangeLog 947
 MD5 ac7b6aeddc4bf31acc3f0b13d6128ff8 files/digest-xkbcomp-0.99.0-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8aOgIKl8Uu19MoRAvQcAJ0VpJh0B3OZ7MFjnGKJmPg8mJDzyQCdHlVq
+v0XIcIOoanAhVO/4pYgK8/g=
+=mP68
+-----END PGP SIGNATURE-----

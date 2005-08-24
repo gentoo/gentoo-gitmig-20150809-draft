@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f6270cd0363ee775dfeab6c0028b924 xman-0.99.0.ebuild 539
 MD5 799ebd6089ced68f670ef00fc9259676 ChangeLog 451
 MD5 5f4be9e3e2a796548f2b7a589200f4de files/digest-xman-0.99.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8bEgIKl8Uu19MoRAjbIAJ9N5y4TpFgbjkrPrWo4odm+qosyzQCfQyd+
+ZvdO1LRAMJf7x27wp9MlX4k=
+=VPk6
+-----END PGP SIGNATURE-----
