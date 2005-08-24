@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0.ebuild,v 1.5 2005/08/07 13:36:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0.ebuild,v 1.6 2005/08/24 16:51:06 phosphan Exp $
 
 MY_PV="${PV/_r/r}"
 
@@ -47,7 +47,7 @@ src_install () {
 	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so
 	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so.${QWTVER/.*/}
 	use doc && (dodir /usr/share/doc/${PF}
-				cp -a examples ${D}/usr/share/doc/${PF}/
+				cp -pPR examples ${D}/usr/share/doc/${PF}/
 				dohtml doc/html/*)
 	mkdir -p ${D}/usr/include/qwt/
 	install include/* ${D}/usr/include/qwt/
