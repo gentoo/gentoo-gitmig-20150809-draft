@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.7 2005/08/13 13:20:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.7-r1.ebuild,v 1.8 2005/08/24 16:54:19 flameeyes Exp $
 
 IUSE="static"
 
@@ -53,10 +53,8 @@ src_install () {
 	# Remove the static lib
 	use static || rm ${D}/usr/X11R6/lib/libaudio.a
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/nas.conf.d nas
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/nas.init.d nas
+	newconfd ${FILESDIR}/nas.conf.d nas
+	newinitd ${FILESDIR}/nas.init.d nas
 }
 
 pkg_postinst() {
