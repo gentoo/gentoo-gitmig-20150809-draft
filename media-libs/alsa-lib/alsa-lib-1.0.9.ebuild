@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9.ebuild,v 1.7 2005/07/29 22:22:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9.ebuild,v 1.8 2005/08/24 19:22:45 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 # -sparc: http://bugtrack.alsa-project.org/alsa-bug/view.php?id=1268
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 -sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 -sparc x86"
 IUSE="doc jack"
 
 RDEPEND="virtual/alsa
