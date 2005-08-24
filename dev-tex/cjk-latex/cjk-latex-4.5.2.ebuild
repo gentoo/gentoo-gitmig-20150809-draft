@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.10 2005/05/17 10:50:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.11 2005/08/24 03:54:58 leonardop Exp $
 
 inherit latex-package elisp-common toolchain-funcs
 
@@ -88,8 +88,8 @@ src_install() {
 
 	cd ${S}
 	dodir ${TEXMF}/tex/latex/${PN}
-	cp -a texinput/* ${D}/${TEXMF}/tex/latex/${PN} || die
-	cp -a contrib/wadalab ${D}/${TEXMF}/tex/latex/${PN} || die
+	cp -pPR texinput/* ${D}/${TEXMF}/tex/latex/${PN} || die
+	cp -pPR contrib/wadalab ${D}/${TEXMF}/tex/latex/${PN} || die
 
 	if use emacs ; then
 		cd utils/lisp
@@ -105,7 +105,7 @@ src_install() {
 				|| die "newins failed"
 		done
 	done
-	cp -a texmf/fonts/* ${D}/${TEXMF}/fonts || die "cp failed"
+	cp -pPR texmf/fonts/* ${D}/${TEXMF}/fonts || die "cp failed"
 
 	dodoc ChangeLog README doc/*
 	docinto chinese; dodoc doc/chinese/*

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7091fdebe08f7c991976826dddca4d3b ChangeLog 986
-MD5 923bb5b9ade42765d5654fa39a829012 cjk-latex-4.5.2.ebuild 3052
+MD5 81109aa93a27ffe2a51a46a5056c5f3a ChangeLog 1128
+MD5 0b1757f06696b07b424df7937f325029 cjk-latex-4.5.2.ebuild 3060
 MD5 a43370bbb57cb967dbffe1a084475550 metadata.xml 181
 MD5 924e50a89b27cca250ad0b5375139318 files/digest-cjk-latex-4.5.2 196
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCicyrTM53OX+9xmMRAmATAJ4ob5cpixM49ceTXsQOJre2qLV71QCg0/Mf
-HcT3bcURY9nOmZ+wJ1IU3bI=
-=Qrb8
------END PGP SIGNATURE-----
