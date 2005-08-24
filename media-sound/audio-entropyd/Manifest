@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38f66e8390c35b421e796b4dd131812f ChangeLog 1678
 MD5 f8ce22ed4ed0a0587b71f1f851755b26 audio-entropyd-0.0.6.ebuild 885
 MD5 96e29d7bb8e68a4c9e642e3b4029f762 metadata.xml 325
 MD5 0585a52027bab216bab4009edb0dd4e4 files/digest-audio-entropyd-0.0.6 68
 MD5 9aa880982b3fef9a498774a02cfae068 files/audio-entropyd.init 769
 MD5 61b40957017928e7dee0914fea292ace files/audio-entropyd.conf 524
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDKO9j5H05b2HAEkRAkmHAJsEG/vwucx3eDnKutoY4B0foYWZBQCfZPjO
+XcV4olw12Pz0FujFaku1MmI=
+=Ej4i
+-----END PGP SIGNATURE-----
