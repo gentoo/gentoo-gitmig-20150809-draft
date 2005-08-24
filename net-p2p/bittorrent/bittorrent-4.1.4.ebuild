@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.1 2005/08/24 13:21:40 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.2 2005/08/24 14:55:41 sekretarz Exp $
 
 inherit distutils fdo-mime
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="X"
 
 RDEPEND="X? (
@@ -22,6 +22,7 @@ RDEPEND="X? (
 		>=dev-python/pygtk-2.4
 	)
 	>=dev-lang/python-2.3
+	>=dev-python/pycrypto-2.0
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
 	app-arch/gzip
@@ -39,7 +40,7 @@ src_install() {
 	fi
 	dohtml redirdonate.html
 	dodir etc
-	cp -a /etc/mailcap ${D}/etc/
+	cp -pPR /etc/mailcap ${D}/etc/
 
 	mv ${D}/usr/share/doc/${MY_P}/* ${D}/usr/share/doc/${P}/
 	rm -fr ${D}/usr/share/doc/${MY_P}

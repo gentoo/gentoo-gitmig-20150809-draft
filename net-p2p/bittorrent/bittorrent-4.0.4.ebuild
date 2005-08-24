@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.4.ebuild,v 1.1 2005/08/24 12:59:41 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.4.ebuild,v 1.2 2005/08/24 14:55:41 sekretarz Exp $
 
 inherit distutils
 
@@ -39,7 +39,7 @@ src_install() {
 	fi
 	dohtml redirdonate.html
 	dodir etc
-	cp -a /etc/mailcap ${D}/etc/
+	cp -pPR /etc/mailcap ${D}/etc/
 
 	# bug #86707
 	dodoc LICENSE.txt

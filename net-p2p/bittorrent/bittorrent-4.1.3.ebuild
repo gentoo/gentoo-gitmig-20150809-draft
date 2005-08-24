@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.3.ebuild,v 1.3 2005/08/16 04:51:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.3.ebuild,v 1.4 2005/08/24 14:55:41 sekretarz Exp $
 
 inherit distutils fdo-mime
 
@@ -39,7 +39,7 @@ src_install() {
 	fi
 	dohtml redirdonate.html
 	dodir etc
-	cp -a /etc/mailcap ${D}/etc/
+	cp -pPR /etc/mailcap ${D}/etc/
 
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
 
