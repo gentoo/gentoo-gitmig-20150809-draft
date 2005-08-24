@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.23 2005/07/12 16:54:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.24 2005/08/24 14:20:00 wolf31o2 Exp $
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r3.ebuild:
+  Added sys-libs/libkudzu-knoppix to list of possible kudzu* dependencies.
 
   12 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r3.ebuild:
   Added ia64.
