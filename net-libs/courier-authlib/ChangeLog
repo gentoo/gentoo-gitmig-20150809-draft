@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.38 2005/07/26 23:57:43 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.39 2005/08/24 08:37:13 uberlord Exp $
+
+*courier-authlib-0.57-r1 (24 Aug 2005)
+
+  24 Aug 2005; Roy Marples <uberlord@gentoo.org>
+  files/courier-authlib-initd, +courier-authlib-0.57-r1.ebuild:
+  Rev bump for new init script. Fixes #103104
 
 *courier-authlib-0.57 (26 Jul 2005)
 

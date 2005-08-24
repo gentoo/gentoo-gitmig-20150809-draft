@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/files/courier-authlib-initd,v 1.4 2005/02/05 02:55:32 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/files/courier-authlib-initd,v 1.5 2005/08/24 08:37:13 uberlord Exp $
 depend() {
 	need net
 	provide authdaemond
@@ -27,7 +27,7 @@ start() {
 	setauth
 	ebegin "Starting courier-authlib: ${AUTHDAEMOND}"
 	start-stop-daemon --quiet --start --pidfile "$pidfile" --exec \
-		/usr/bin/env -- - $logger -pid="$pidfile" -start "${AUTHLIB}/${AUTHDAEMOND}" 
+		/usr/bin/env $logger -- -pid="$pidfile" -start "${AUTHLIB}/${AUTHDAEMOND}" 
 	eend $?
 }
 
