@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.15 2005/06/30 03:34:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.16 2005/08/24 18:15:26 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> cronbase-0.3.2.ebuild:
+  Create cron user with cron group, without hardcoding the gid to work when
+  cron group exists already with a different gid.
 
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> cronbase-0.3.2.ebuild:
   Marked stable on mips.

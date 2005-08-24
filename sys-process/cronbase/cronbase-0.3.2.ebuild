@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2.ebuild,v 1.15 2005/06/30 03:34:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.2.ebuild,v 1.16 2005/08/24 18:15:26 flameeyes Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 
 pkg_setup() {
 	enewgroup cron 16
-	enewuser cron 16 -1 /var/spool/cron 16
+	enewuser cron 16 -1 /var/spool/cron cron
 }
 
 src_install() {
