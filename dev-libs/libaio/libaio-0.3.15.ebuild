@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.15.ebuild,v 1.9 2005/08/24 01:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.15.ebuild,v 1.10 2005/08/24 02:00:29 vapier Exp $
 
 inherit eutils
 
@@ -11,20 +11,26 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/people/andrea/libaio/${P}-2.5-2.
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~s390 ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~s390 ~sh ~x86"
 IUSE=""
 
 DEPEND=""
 
 S=${WORKDIR}/${P}-2.5-2
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-2.5-2-Makefile.patch
+	epatch "${FILESDIR}"/${P}-more-arches.patch
+}
+
 src_compile() {
-	epatch ${FILESDIR}/${P}-2.5-2-Makefile.patch
 	make || die
 }
 
 src_install() {
 	make \
-		prefix=${D}/usr \
+		prefix="${D}"/usr \
 		install || die
 }

@@ -1,0 +1,58 @@
+--- src/syscall.h
++++ src/syscall.h
+@@ -1,6 +1,7 @@
+ #ifndef AIO_SYSCALL
+ #define AIO_SYSCALL
+ 
++#include <errno.h>
+ #include <asm/unistd.h>
+ #undef __syscall_return
+ #ifndef __powerpc__
+@@ -19,25 +20,35 @@
+ #ifndef __NR_io_setup
+ #ifdef __s390__
+ #define __NR_io_setup		243
+-#define __NR_io_destroy		244
+-#define __NR_io_getevents	245
+-#define __NR_io_submit		246
+-#define __NR_io_cancel		247
+ #endif
+ #ifdef __i386__
+ #define __NR_io_setup		245
+-#define __NR_io_destroy		246
+-#define __NR_io_getevents	247
+-#define __NR_io_submit		248
+-#define __NR_io_cancel		249
+ #endif
+ #ifdef __x86_64__
+ #define __NR_io_setup		206
+-#define __NR_io_destroy 	207
+-#define __NR_io_getevents       208
+-#define __NR_io_submit  	209
+-#define __NR_io_cancel   	210
+ #endif
++#ifdef __alpha__
++#define __NR_io_setup		398
++#endif
++#ifdef __hppa__
++#define __NR_io_setup		215
++#endif
++#ifdef __sh__
++#define __NR_io_setup		245
++#endif
++#ifdef __arm__
++#define __NR_io_setup		0x900000+243
++#endif
++#ifdef __ia64__
++#define __NR_io_setup		1238
++#endif
++#ifdef __m68k__
++#define __NR_io_setup		241
++#endif
++#define __NR_io_destroy __NR_io_setup + 1
++#define __NR_io_getevents __NR_io_setup + 2
++#define __NR_io_submit __NR_io_setup + 3
++#define __NR_io_cancel __NR_io_setup + 4
+ #endif
+ 
+ #define __NR_sys_io_setup          __NR_io_setup
