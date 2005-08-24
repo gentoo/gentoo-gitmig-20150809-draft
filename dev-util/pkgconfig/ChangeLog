@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.35 2005/08/04 03:41:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.36 2005/08/24 00:06:17 leonardop Exp $
+
+  24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  pkgconfig-0.15.0.ebuild:
+  Inherit from eutils.
 
   03 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   pkgconfig-0.18.1-r1.ebuild:
