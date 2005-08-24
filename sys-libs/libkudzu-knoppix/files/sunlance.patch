@@ -1,0 +1,12 @@
+diff -Nura kudzu-1.1.36/sbus.c kudzu-1.1.36.sunlance/sbus.c
+--- kudzu-1.1.36/sbus.c	2003-03-24 19:39:14.000000000 -0300
++++ kudzu-1.1.36.sunlance/sbus.c	2005-06-25 15:10:03.000000000 -0300
+@@ -162,7 +162,7 @@
+ 		    	devClass = CLASS_NETWORK;
+ 		} else if (!strcmp(prop, "le")) {
+ 			type = "Sun Lance Ethernet";
+-			module = "ignore";
++			module = "sunlance";
+ 		    	devClass = CLASS_NETWORK;
+ 		} else if (!strcmp(prop, "qe")) {
+ 			prop = prom_getproperty("channel#", &len);

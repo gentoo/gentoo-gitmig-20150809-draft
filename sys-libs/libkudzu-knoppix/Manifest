@@ -1,0 +1,5 @@
+MD5 0587800d9f0c496148d0c9a33c69b330 libkudzu-knoppix-1.1.36.ebuild 1082
+MD5 5608c7ddeff69dd62294aeb63b91b8e8 ChangeLog 563
+MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
+MD5 7cf6227fd7e640efa2462086ed448521 files/sunlance.patch 479
+MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-libkudzu-knoppix-1.1.36 74

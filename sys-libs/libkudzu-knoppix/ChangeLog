@@ -1,0 +1,12 @@
+# ChangeLog for sys-libs/libkudzu-knoppix
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu-knoppix/ChangeLog,v 1.1 2005/08/24 14:13:47 wolf31o2 Exp $
+
+*libkudzu-knoppix-1.1.36 (24 Aug 2005)
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/sunlance.patch,
+  +metadata.xml, +libkudzu-knoppix-1.1.36.ebuild:
+  Initial commit. Since this is the same build as the initial part of
+  kudzu-knoppix, I have used the following KEYWORDS: ~alpha ~amd64 -mips ~ppc
+  ~ppc64 ~sparc ~x86.
+

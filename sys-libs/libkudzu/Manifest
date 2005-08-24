@@ -1,5 +1,5 @@
-MD5 3dde89a351bab1e41c64c58841c8bc99 libkudzu-1.1.62.ebuild 1069
+MD5 80f488f77f5b46aec6387423a7b2a2c4 libkudzu-1.1.62.ebuild 1097
+MD5 72cd9cf89f1078a9eb455de76e5f208d ChangeLog 913
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 68391318d3d32b2ec79aa677f23430c5 ChangeLog 798
 MD5 5a34775ded0d577c19911b83ea61884c files/digest-libkudzu-1.1.62 65
 MD5 f997880b4d33533af23ca07e2656bd31 files/sunlance.patch 470
