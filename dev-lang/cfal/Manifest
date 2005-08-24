@@ -1,3 +1,13 @@
-MD5 3c9efa6b2142472f208783d6ffa119a1 ChangeLog 477
-MD5 c68a99c16ecf5e86b4b3ee4ac0e093c7 cfal-1.2.0.4.ebuild 3867
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0d63e0ce869d7e1641fbe164cee1d86 ChangeLog 586
+MD5 b1d9ae567e4af9fa44124cf7016b31b6 cfal-1.2.0.4.ebuild 3863
 MD5 459fdd606a760e1b9bb6ea8c50d58b7c files/digest-cfal-1.2.0.4 144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDCWuj5H05b2HAEkRAs2NAJ9wsDJNg75PTAFJCBbOQRSmmd7YsQCcCK4B
+umXV10NHu3VShZTCDj/jrvs=
+=xFR6
+-----END PGP SIGNATURE-----
