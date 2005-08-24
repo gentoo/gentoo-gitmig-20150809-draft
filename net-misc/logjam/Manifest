@@ -4,8 +4,8 @@ MD5 8e3fea16320cbe5b30bbdfe0edb30489 logjam-4.3.2.ebuild 1035
 MD5 7102fb0d4e47599ec0b7b4de75a8b932 logjam-4.4.0-r1.ebuild 997
 MD5 a9dfc850af49c222fb98c4bb42275315 logjam-4.4.0.ebuild 1048
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 5d5242cb8138bc1454ce11144194e2da logjam-4.5.0.ebuild 1190
 MD5 d6ffc1fededbaab53a2ed599a58910b2 logjam-4.4.1.ebuild 1095
+MD5 d393d11e7c5a3b5d219a64ebc4bda39c logjam-4.5.0.ebuild 1185
 MD5 2903f2d3b78e59f9ed8b9f012c5e2210 files/digest-logjam-4.2.2 64
 MD5 94348f82d3a7b91d9988d1629c4bf2a8 files/digest-logjam-4.3.2 65
 MD5 30945ddb58c8f3eb3780fcf9e48dbda3 files/digest-logjam-4.4.0 65
