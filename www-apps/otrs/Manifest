@@ -1,9 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 bcc23a3d06010747faec13bf303c1922 otrs-2.0.2.ebuild 3339
 MD5 c5cf84cb3a905cd2faf194a8e56b478d otrs-2.0.1.ebuild 3339
 MD5 f9f6c65de81d80902585e29b3eaa8dbb otrs-1.3.2.ebuild 2791
-MD5 cd5f48a2fd91cefefe5f086e915d23c9 ChangeLog 2078
+MD5 eb03200bd6c4386645efea3e2d64fc31 ChangeLog 2187
 MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
 MD5 3f701ce10ed527c36c342e856a4e43de files/postinstall-en.txt 548
 MD5 342b501154e2bbb0e75b34f1b3c27dea files/reconfig-2 883
@@ -12,11 +13,12 @@ MD5 fed75d396b333655a8a8e83e64e27062 files/apache1.patch 529
 MD5 f47d2140cdd984fb31b2f468719d94e9 files/apache2.patch 902
 MD5 17263c3cbe7f693cfdfcceefb18f7970 files/digest-otrs-1.3.2 67
 MD5 927a878d2b9225852b7ad011412719ee files/digest-otrs-2.0.1 67
+MD5 9705000caf6fe24c98440c4e24211d1c files/digest-otrs-2.0.2 67
 MD5 342b501154e2bbb0e75b34f1b3c27dea files/reconfig 883
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC99YWEzitwsaoONoRAnrEAKClhKofTnu4Blj/GNRVNHpJUdJqmgCeIO2g
-3spZ89w7GFgchYvdeLrxQp0=
-=xQ8Y
+iD8DBQFDDNwwEzitwsaoONoRAoB1AJ4pEjV5c4ApZQ5l1VtD319KSRt6GQCgoi5m
+1QRBvcVdQD3ILoUWPdPxjlo=
+=d4Ac
 -----END PGP SIGNATURE-----
