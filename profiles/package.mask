@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4329 2005/08/23 23:15:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4330 2005/08/24 00:03:11 trapni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Parpart <trapni@gentoo.org> (23 Aug 2005)
+# masked for testing
+=www-apps/mediawiki-1.5.0_rc1
 
 # Luis Medinas <metalgod@gentoo.org> (23 Aug 2005)
 # Mask -alpha03 versions until i stablize that version
