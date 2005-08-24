@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a24e0e1feda1e92a27ed53636d9af2ad xineramaproto-1.1-r1.ebuild 544
 MD5 65f76504845da37b872d531b5d84610c ChangeLog 1279
 MD5 39fea3d2ca5c55d7d6b230db94b62d41 files/digest-xineramaproto-1.1-r1 69
-MD5 6b66a1f1bf5ec2f60a83b000deed7c0b xineramaproto-1.1-r1.ebuild 542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8n3gIKl8Uu19MoRAkwAAJwK/4l4oN7SwyxU2Y4uOVlpHQmC4ACfeLZk
+UAwGu8DoOZsgvfvvxLH461c=
+=wvoI
+-----END PGP SIGNATURE-----
