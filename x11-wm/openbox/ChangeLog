@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.99 2005/05/01 07:49:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.100 2005/08/24 14:33:11 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  openbox-3.3_rc1-r2.ebuild:
+  FreeBSD fixes: cp -a -> cp -pPR.
 
   01 May 2005; Guy Martin <gmsoft@gentoo.org> openbox-3.2-r2.ebuild:
   Stable on hppa.

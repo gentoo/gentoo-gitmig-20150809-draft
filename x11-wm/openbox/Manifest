@@ -1,15 +1,25 @@
-MD5 69179800d23147c3d9892c5e1cb39f66 ChangeLog 17401
-MD5 d87e96216b91be365fcbc08521298824 metadata.xml 251
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 55f73f3d58297cc27969d4dcad6a3731 ChangeLog 17523
+MD5 8fc6220800cdabdff66278338255b2d2 openbox-3.3_rc1-r1.ebuild 1732
 MD5 79cff5950461065f7c400f64e3ff2c92 openbox-3.2-r1.ebuild 1504
 MD5 d528025643913f576425b4af70ff1f9b openbox-3.2-r2.ebuild 1579
-MD5 8fc6220800cdabdff66278338255b2d2 openbox-3.3_rc1-r1.ebuild 1732
-MD5 1a01cbfff96c1ec351aea315a4ad1071 openbox-3.3_rc1-r2.ebuild 1732
-MD5 90beb2a0e34f8958dd4c1f3312856d09 files/digest-openbox-3.2-r1 134
-MD5 90beb2a0e34f8958dd4c1f3312856d09 files/digest-openbox-3.2-r2 134
-MD5 df0043ec05d0e257c30a0c1b7b28a78e files/openbox-2.3.1-epist.patch 318
-MD5 0b79bdcff70f29cdaf7980382b34dee4 files/openbox-2.3.1-nls-codeset.patch 306
-MD5 9cf0208bdd9705c3aa2ec4a2be62c138 files/openbox-3.2-makefile.patch 413
-MD5 056f24d600f8f7ad2c02642ecd41ebfa files/openbox-gcc.patch 276
-MD5 87a0450483a263221557f426bd7b0d60 files/openbox.desktop 192
+MD5 e798f2ca4ac6aea747d905d99447ed86 openbox-3.3_rc1-r2.ebuild 1734
+MD5 d87e96216b91be365fcbc08521298824 metadata.xml 251
 MD5 519483ed863bad15ab1a51dc3a9d8e07 files/digest-openbox-3.3_rc1-r1 138
+MD5 0b79bdcff70f29cdaf7980382b34dee4 files/openbox-2.3.1-nls-codeset.patch 306
 MD5 519483ed863bad15ab1a51dc3a9d8e07 files/digest-openbox-3.3_rc1-r2 138
+MD5 87a0450483a263221557f426bd7b0d60 files/openbox.desktop 192
+MD5 9cf0208bdd9705c3aa2ec4a2be62c138 files/openbox-3.2-makefile.patch 413
+MD5 90beb2a0e34f8958dd4c1f3312856d09 files/digest-openbox-3.2-r2 134
+MD5 90beb2a0e34f8958dd4c1f3312856d09 files/digest-openbox-3.2-r1 134
+MD5 056f24d600f8f7ad2c02642ecd41ebfa files/openbox-gcc.patch 276
+MD5 df0043ec05d0e257c30a0c1b7b28a78e files/openbox-2.3.1-epist.patch 318
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDIVBj5H05b2HAEkRAkkZAJoC0owgWFDbe3kyf4Uk2fS4dw9GIgCgh2sr
+xhJbfyBB5ip6SK+aT925HZk=
+=LIld
+-----END PGP SIGNATURE-----
