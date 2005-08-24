@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.2 2005/08/23 19:29:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.3 2005/08/24 20:16:00 rl03 Exp $
 
 inherit webapp eutils
 
@@ -166,7 +166,9 @@ src_compile() {
 		--with-web-group=${web}
 
 	# check for missing deps and ask to report if something is broken
-	make testdeps > ${T}/t
+	/usr/bin/perl ./sbin/rt-test-dependencies --verbose \
+		`use_with mysql` \
+		`use_with postgres pg` > ${T}/t
 	if grep -q "MISSING" ${T}/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn
