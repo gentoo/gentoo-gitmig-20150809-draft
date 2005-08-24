@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-0.9.6.ebuild,v 1.3 2005/08/01 11:15:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-0.9.6.ebuild,v 1.4 2005/08/24 23:12:20 vapier Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -9,7 +9,7 @@ SRC_URI="http://dev.gentoo.org/~kugelfang/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="doc bash-completion"
 
 DEPEND="sys-apps/sed
