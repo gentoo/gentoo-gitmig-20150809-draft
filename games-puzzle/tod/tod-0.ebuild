@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.1 2005/08/19 01:16:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.2 2005/08/24 03:36:01 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Tetanus On Drugs simulates playing a Tetris clone under the influence of hallucinogenic drugs"
 HOMEPAGE="http://www.pineight.com/tod/"
