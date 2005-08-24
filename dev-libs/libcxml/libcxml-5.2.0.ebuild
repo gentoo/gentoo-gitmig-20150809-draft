@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.8 2004/07/02 04:44:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.9 2005/08/24 09:06:34 taviso Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -33,7 +33,7 @@ src_unpack() {
 	dd ibs=`rpmoffset < ${i}` skip=1 if=$i 2>/dev/null \
 		| gzip -dc | cpio -idmu 2>/dev/null \
 		&& find usr -type d -print0 | xargs -0 chmod a+rx \
-		&& chown -R root:root usr
+		&& chown -R root:0 usr
 	eend ${?}
 	assert "Failed to extract ${At%.rpm}.tar.gz"
 
