@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1-r1.ebuild,v 1.2 2005/08/10 23:24:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.11.1-r1.ebuild,v 1.3 2005/08/24 00:33:34 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -224,7 +224,7 @@ pkg_postinst() {
 			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
 			echo
 
-			cp -a ${ROOT}/etc/pam.d/system-auth \
+			cp -pPR ${ROOT}/etc/pam.d/system-auth \
 				${ROOT}/etc/pam.d/system-auth.bak;
 			mv -f ${ROOT}/etc/pam.d/system-auth.new \
 				${ROOT}/etc/pam.d/system-auth

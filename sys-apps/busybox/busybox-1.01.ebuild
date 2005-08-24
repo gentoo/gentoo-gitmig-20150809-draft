@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.01.ebuild,v 1.1 2005/08/18 00:54:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.01.ebuild,v 1.2 2005/08/24 00:29:50 vapier Exp $
 
 inherit eutils
 
@@ -176,9 +176,9 @@ src_install() {
 		fi
 		make CROSS="${CROSS}" install || die
 		dodir /bin
-		cp -a _install/bin/* "${D}"/bin/
+		cp -pPR _install/bin/* "${D}"/bin/
 		dodir /sbin
-		cp -a _install/sbin/* "${D}"/sbin/
+		cp -pPR _install/sbin/* "${D}"/sbin/
 		cd "${D}"
 		local symlink
 		for symlink in {bin,sbin}/* ; do
