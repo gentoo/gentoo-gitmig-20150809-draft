@@ -1,16 +1,26 @@
-MD5 90a1138ce9224cec71afbb1d18e8e14b ChangeLog 3490
-MD5 3e5cb2e381b02c3f6e4ddeb35c3df735 logjam-4.2.2.ebuild 880
-MD5 8e3fea16320cbe5b30bbdfe0edb30489 logjam-4.3.2.ebuild 1035
-MD5 7102fb0d4e47599ec0b7b4de75a8b932 logjam-4.4.0-r1.ebuild 997
-MD5 a9dfc850af49c222fb98c4bb42275315 logjam-4.4.0.ebuild 1048
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 d6ffc1fededbaab53a2ed599a58910b2 logjam-4.4.1.ebuild 1095
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d393d11e7c5a3b5d219a64ebc4bda39c logjam-4.5.0.ebuild 1185
-MD5 2903f2d3b78e59f9ed8b9f012c5e2210 files/digest-logjam-4.2.2 64
+MD5 3e5cb2e381b02c3f6e4ddeb35c3df735 logjam-4.2.2.ebuild 880
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 a9dfc850af49c222fb98c4bb42275315 logjam-4.4.0.ebuild 1048
+MD5 8e3fea16320cbe5b30bbdfe0edb30489 logjam-4.3.2.ebuild 1035
+MD5 77406e0e01ae3b34b4858ad3f558de69 logjam-4.4.1.ebuild 1098
+MD5 9a001b0772dd390d70f2a4bce351a4a0 ChangeLog 3588
+MD5 7102fb0d4e47599ec0b7b4de75a8b932 logjam-4.4.0-r1.ebuild 997
+MD5 609d6dbe90884c13cd581d37a3eda8a2 files/digest-logjam-4.5.0 65
+MD5 4e80e5bbdb7934542435e47d0f65b3fd files/digest-logjam-4.4.1 65
+MD5 1a113c3728bec399a937fb09aec13464 files/logjam-4.4.0-offline-sync.patch 870
 MD5 94348f82d3a7b91d9988d1629c4bf2a8 files/digest-logjam-4.3.2 65
+MD5 68dac613ab0e68a698fcac1864aeae45 files/logjam-4.4.0-gcc3.4.patch 241
 MD5 30945ddb58c8f3eb3780fcf9e48dbda3 files/digest-logjam-4.4.0 65
 MD5 30945ddb58c8f3eb3780fcf9e48dbda3 files/digest-logjam-4.4.0-r1 65
-MD5 4e80e5bbdb7934542435e47d0f65b3fd files/digest-logjam-4.4.1 65
-MD5 68dac613ab0e68a698fcac1864aeae45 files/logjam-4.4.0-gcc3.4.patch 241
-MD5 1a113c3728bec399a937fb09aec13464 files/logjam-4.4.0-offline-sync.patch 870
-MD5 609d6dbe90884c13cd581d37a3eda8a2 files/digest-logjam-4.5.0 65
+MD5 2903f2d3b78e59f9ed8b9f012c5e2210 files/digest-logjam-4.2.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDDOY8KRy60XGEcJIRAjdAAJ9H++k4qmG6SpIDH2kkVKUxs0e/bQCdHfcO
+tcOCnH4hdUsJ2gLjQmtx5ho=
+=VtbK
+-----END PGP SIGNATURE-----
