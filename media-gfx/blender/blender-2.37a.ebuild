@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.37a.ebuild,v 1.3 2005/08/23 21:09:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.37a.ebuild,v 1.4 2005/08/24 00:35:45 halcy0n Exp $
 
 inherit flag-o-matic eutils python
 
@@ -112,9 +112,9 @@ src_install() {
 	doexe ${S}/release/plugins/texture/*.so
 	exeinto /usr/lib/${PN}/sequences
 	doexe ${S}/release/plugins/sequence/*.so
-	cp -a ${S}/release/{bpydata,plugins,scripts} ${D}/usr/lib/${PN}
+	cp -pPR ${S}/release/{bpydata,plugins,scripts} ${D}/usr/lib/${PN}
 	use nls && \
-	cp -a ${S}/bin/.blender/{.Blanguages,.bfont.ttf,locale} ${D}/usr/lib/${PN}
+	cp -pPR ${S}/bin/.blender/{.Blanguages,.bfont.ttf,locale} ${D}/usr/lib/${PN}
 	insinto /usr/share/pixmaps
 	doins ${FILESDIR}/${PN}.png
 	insinto /usr/share/applications
