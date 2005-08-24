@@ -1,0 +1,10 @@
+# ChangeLog for games-board/schafkopf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/schafkopf/ChangeLog,v 1.1 2005/08/24 06:18:07 mr_bones_ Exp $
+
+*schafkopf-0.6 (24 Aug 2005)
+
+  24 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +schafkopf-0.6.ebuild:
+  initial commit - ebuild submitted by Dominik Seichter via bug #77273
+
