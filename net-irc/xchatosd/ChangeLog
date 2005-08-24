@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchatosd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.17 2005/08/06 16:22:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.18 2005/08/24 23:49:25 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org> xchatosd-5.19.ebuild:
+  stable on ia64
 
   06 Aug 2005; Sven Wegener <swegener@gentoo.org> -xchatosd-5.18.ebuild:
   Removed old ebuild.

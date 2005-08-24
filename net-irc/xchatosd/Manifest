@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 72c5f148f6d387fe63ccb81cd64f96d2 xchatosd-5.19.ebuild 1175
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 5086d8d7191b477310b2ff4e0c61b181 ChangeLog 2420
 MD5 7c7bda25fddb101d0ca9ced34251e234 files/digest-xchatosd-5.19 64
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 b6ce816666c989c422adbd0bb0c15c01 xchatosd-5.19.ebuild 1176
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9OPeI1lqEGTUzyQRArUAAJ9/blYGKcWKd6m9cFlrga0E+eS0nQCfQ14h
-2tL9paF4+gF/71a84gGOG8E=
-=Qv5K
------END PGP SIGNATURE-----

@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5fc29f259bb2b347e5d03cbe3304b9ed xchat-2.4.4.ebuild 2216
+MD5 8ebf40ee60968abaf73442bfb9873e93 xchat-1.8.11-r1.ebuild 2267
+MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
+MD5 226dfd2adcaa59afe576e0e0c2ea4bfb xchat-2.4.1-r1.ebuild 2123
+MD5 cfd1d8cbf500840c741a99e8a85b6f51 xchat-2.4.3.ebuild 2264
 MD5 5ccd12c1b1a9ea848b699e18da9da148 ChangeLog 24973
+MD5 d02e695d17389cd55603845a81ae543d xchat-2.4.4-r1.ebuild 2266
+MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
+MD5 ee98eba7f1061680d8d0582a10d72cb7 files/xchat-dccserver-0.5.patch 11776
+MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
+MD5 4a066f82a7a8ab6fe970340332d70105 files/digest-xchat-2.4.1-r1 134
+MD5 323192908f52dfb3288ffc92c0efc091 files/2.4.4-plugin-fixes.patch 1351
+MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
 MD5 9d213a58f6822d1958b6a5a4ad07ec14 files/2.4.1-close-fds-on-exec.patch 1041
 MD5 e4f52004b3e7ca6598d403f2fa74dcd4 files/2.4.1-fe-text.patch 697
-MD5 323192908f52dfb3288ffc92c0efc091 files/2.4.4-plugin-fixes.patch 1351
-MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
-MD5 4a066f82a7a8ab6fe970340332d70105 files/digest-xchat-2.4.1-r1 134
-MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
 MD5 bbbd8d25d261dd3d115ca4fde8be8bce files/digest-xchat-2.4.4 65
 MD5 bbbd8d25d261dd3d115ca4fde8be8bce files/digest-xchat-2.4.4-r1 65
-MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
-MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
-MD5 ee98eba7f1061680d8d0582a10d72cb7 files/xchat-dccserver-0.5.patch 11776
-MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
-MD5 8ebf40ee60968abaf73442bfb9873e93 xchat-1.8.11-r1.ebuild 2267
-MD5 226dfd2adcaa59afe576e0e0c2ea4bfb xchat-2.4.1-r1.ebuild 2123
-MD5 019bde4d409e6898782d3e90cc80a0f5 xchat-2.4.3.ebuild 2265
-MD5 d02e695d17389cd55603845a81ae543d xchat-2.4.4-r1.ebuild 2266
-MD5 5fc29f259bb2b347e5d03cbe3304b9ed xchat-2.4.4.ebuild 2216
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3mGkI1lqEGTUzyQRAqN0AJ980Tlo20dfjXFcNdcdHRCZqVLUBgCgwS+l
-GUN0S/9hkanMVZRfEEApi5s=
-=mr4J
------END PGP SIGNATURE-----
+MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
