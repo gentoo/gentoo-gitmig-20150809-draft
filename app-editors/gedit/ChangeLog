@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.111 2005/08/23 22:07:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.112 2005/08/24 05:07:03 leonardop Exp $
+
+*gedit-2.11.92 (24 Aug 2005)
+
+  24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -gedit-2.11.91.ebuild, +gedit-2.11.92.ebuild:
+  New version.
 
   23 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   gedit-2.10.3-r1.ebuild:
