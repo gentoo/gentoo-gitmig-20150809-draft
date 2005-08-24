@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.75 2005/08/23 13:57:43 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.76 2005/08/24 21:13:56 dragonheart Exp $
+
+  24 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  files/1.0.0/asterisk.rc6.sec:
+  made init script "use mysql and postgresql" as per bug #101798. Thanks to
+  Chris Gaffney for the bug report
 
   23 Aug 2005; <stkn@gentoo.org> asterisk-1.0.5-r2.ebuild,
   asterisk-1.0.6-r1.ebuild, asterisk-1.0.7-r1.ebuild, asterisk-1.0.8.ebuild,
