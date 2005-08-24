@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.26 2005/04/30 20:02:21 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.27 2005/08/24 16:33:38 joem Exp $
+
+*logjam-4.5.0 (24 Aug 2005)
+
+  24 Aug 2005; Joe McCann <joem@gentoo.org> logjam-4.4.1.ebuild,
+  +logjam-4.5.0.ebuild:
+  New version with tag and sqlite support. Mark previous version x86 stable
 
   30 Apr 2005; John N. Laliberte <allanonjl@gentoo.org> logjam-4.3.2.ebuild:
   sed to fix gnome menu icon. Fixes bug #68092.
