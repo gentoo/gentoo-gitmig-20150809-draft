@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.10 2004/10/21 03:10:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/xmms-themes-0.0.3.ebuild,v 1.11 2005/08/24 07:52:09 flameeyes Exp $
 
 IUSE=""
 
@@ -135,7 +135,7 @@ src_compile() {
 
 src_install () {
 	dodir /usr/share/xmms/Skins
-	cp -dpR * ${D}/usr/share/xmms/Skins/
-	chown -R root:root ${D}/usr/share/xmms/Skins/
+	cp -pPR * ${D}/usr/share/xmms/Skins/
+	chown -R root:0 ${D}/usr/share/xmms/Skins/
 	chmod -R o-w ${D}/usr/share/xmms/Skins/
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xmms-themes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.14 2004/12/28 22:36:44 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.15 2005/08/24 07:52:09 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-themes-0.0.3.ebuild:
+  Fixed cp commandline and removed root:root chown.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

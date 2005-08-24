@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mplayer-skins
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.15 2004/06/28 22:44:37 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/ChangeLog,v 1.16 2005/08/24 07:53:44 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mplayer-skins-0.2-r4.ebuild:
+  Fixed cp commandline and removed root:root chown.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> mplayer-skins-0.2-r3.ebuild,
   mplayer-skins-0.2-r4.ebuild:
