@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/polarblog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/ChangeLog,v 1.10 2005/08/22 23:06:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/ChangeLog,v 1.11 2005/08/24 21:47:16 rl03 Exp $
+
+*polarblog-1.6.0 (24 Aug 2005)
+
+  24 Aug 2005; Renat Lumpau <rl03@gentoo.org> +polarblog-1.6.0.ebuild,
+  -polarblog-1.52.ebuild:
+  Version bump. Removed old version (1.52), which was actually 1.5.2, so the new
+  1.6.0 is the most recent version. Apologies for the apparent downgrade.
 
   22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
   Housekeeping

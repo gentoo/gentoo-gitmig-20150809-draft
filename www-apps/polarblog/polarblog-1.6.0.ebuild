@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.52.ebuild,v 1.2 2005/08/22 21:55:33 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.6.0.ebuild,v 1.1 2005/08/24 21:47:16 rl03 Exp $
 
 inherit webapp
 
-MY_PV=${PV/./}
+MY_PV=${PV//./}
 S=${WORKDIR}/PB_v${MY_PV}
 
 IUSE=""
