@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.7 2005/08/24 02:46:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.8 2005/08/24 04:29:22 mr_bones_ Exp $
+
+  24 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> -tmw-0.0.12.ebuild,
+  -tmw-0.0.13.ebuild, -tmw-0.0.14.ebuild:
+  clean old ebuilds
 
 *tmw-0.0.15 (24 Aug 2005)
 
