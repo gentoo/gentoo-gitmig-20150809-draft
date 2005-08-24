@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmcd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.14 2005/05/28 17:57:47 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/ChangeLog,v 1.15 2005/08/24 07:50:30 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> xmcd-3.3.2.ebuild:
+  Don't call chown with root:root.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -files/xmcd-3.2.1-gentoo.patch, -xmcd-3.2.1-r1.ebuild, xmcd-3.3.2.ebuild:
