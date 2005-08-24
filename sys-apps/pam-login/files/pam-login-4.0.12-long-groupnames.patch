@@ -1,0 +1,39 @@
+Remove arbitrary requirement on the length of groups.  Perhaps we 
+should turn this into a configure option and send upstream ?
+
+http://bugs.gentoo.org/3485
+
+--- libmisc/chkname.c
++++ libmisc/chkname.c
+@@ -59,8 +60,10 @@
+ 	 * Arbitrary limit for group names - max 16
+ 	 * characters (same as on HP-UX 10).
+ 	 */
++#if 0
+ 	if (strlen (name) > 16)
+ 		return 0;
++#endif
+ 
+ 	return good_name (name);
+ }
+--- man/groupadd.8
++++ man/groupadd.8
+@@ -46,6 +46,18 @@
+ .TP
+ \fB\-o\fR
+ Allow add group wit non\-unique GID.
++.SH RESTRICTIONS
++Currently, the shadow suite enforces the following restrictions on group 
++names:
++
++.nf
++\- must begin with a lower case letter or underscore
++\- can only contain lower case letters, underscores, and dashes
++\- regex for these requirements: [a\-z_][a\-z0\-9_\-]*
++.fi
++
++Normally shadow enforces a 16 character limit, but Gentoo adds patches to 
++remove it.
+ .SH "FILES"
+ .TP
+ \fI/etc/group\fR
