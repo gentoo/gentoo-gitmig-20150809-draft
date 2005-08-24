@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f7cf08042f73406626636505568b4e3c udhcp-0.9.9_pre20041216-r1.ebuild 957
 MD5 868c6076c59683693fcc427bdb75c9f4 udhcp-0.9.8-r3.ebuild 1166
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
@@ -6,3 +9,10 @@ MD5 64ee022cd292b97023d7abb6b5176905 files/digest-udhcp-0.9.9_pre20041216-r1 75
 MD5 841852ac59a61a1940dd9d509821f231 files/udhcp-gcc-3.4.patch 261
 MD5 f74f1f81c1fd4933d63b860dc070eec6 files/udhcp.rc 719
 MD5 83ca9ef49068eb2140999999f245f486 files/digest-udhcp-0.9.8-r3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC7n1gIKl8Uu19MoRAp/0AKCDuJbbvXSprmtdo8+T2szsKMQKkQCeJG/r
+KLFZa1KPHydWtTZvgKstHr0=
+=+d2a
+-----END PGP SIGNATURE-----
