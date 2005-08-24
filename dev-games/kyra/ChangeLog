@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/kyra
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.6 2005/01/01 18:00:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.7 2005/08/24 23:08:03 tester Exp $
+
+  24 Aug 2005; Olivier Crête <tester@gentoo.org> kyra-2.0.7.ebuild:
+  Marked ~amd64, thanks to Erik Musick and Jim Laflin for testing
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kyra-2.0.7.ebuild:
   fix typo in error checking; tidy
