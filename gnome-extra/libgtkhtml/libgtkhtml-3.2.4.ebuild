@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.4.ebuild,v 1.11 2005/04/08 16:50:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.2.4.ebuild,v 1.12 2005/08/24 01:24:16 vapier Exp $
 
 inherit gnome2 versionator eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${MY_MAJ_PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="x86 ppc sparc hppa alpha ia64 amd64 mips arm ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
