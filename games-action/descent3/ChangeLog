@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.10 2005/06/09 20:40:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.11 2005/08/24 14:52:23 wolf31o2 Exp $
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b.ebuild:
+  Changed descent3 in SRC_URI to PN variable.
 
   09 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   descent3-1.4.0b.ebuild:

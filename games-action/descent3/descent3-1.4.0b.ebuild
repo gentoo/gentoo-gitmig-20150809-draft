@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.10 2005/06/09 20:40:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.11 2005/08/24 14:52:23 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ IUSE="nocd videos"
 DESCRIPTION="Descent 3 - 3-Dimensional indoor/outdoor spaceship combat"
 HOMEPAGE="http://www.lokigames.com/products/descent3/"
 SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/${PN}/${PN}-1.4.0a-x86.run
-	ftp://ftp.planetmirror.com/pub/lokigames/updates/descent3/${P}-x86.run"
+	ftp://ftp.planetmirror.com/pub/lokigames/updates/${PN}/${P}-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
