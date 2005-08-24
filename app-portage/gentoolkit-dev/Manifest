@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 80a1db1873c5279ce53693f7ae390591 gentoolkit-dev-0.2.5.ebuild 725
-MD5 b8eb1fab2cc41af8be17347859fb6a28 gentoolkit-dev-0.2.4.ebuild 692
+MD5 fa0ab5e2737b71d8f95cebba8782e014 gentoolkit-dev-0.2.5.ebuild 713
+MD5 09e7c42c935b96bc546a0c81938a6b95 ChangeLog 4288
 MD5 5f551d730b5b9029b8ca6caa63bcea04 metadata.xml 282
-MD5 2cc5ccf32ce06e3302ff1dbe5c6308e4 ChangeLog 4124
-MD5 8dfc69f3db5845f352486aa7b37f62bf gentoolkit-dev-0.2.3.ebuild 907
-MD5 c9bf499d121b7b89095547dc8fbc5745 files/digest-gentoolkit-dev-0.2.3 71
 MD5 165734ade98f4d07a027f65c1d8f75b7 files/digest-gentoolkit-dev-0.2.5 71
-MD5 49f33a7dfc6471334612b14d726506e3 files/digest-gentoolkit-dev-0.2.4 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC1DXeBXaUFmZvwyMRAupNAJ9ePog1LZfLpdONnHt2HPNUF6VnJQCgqS6w
-/zDJP2gjFno3+eMHdFCQ628=
-=xD0j
+iD8DBQFDDPcVBXaUFmZvwyMRAgFeAJ44DlfVjRPB5Ibb1IfMmWY5wchGEgCfRVTD
+VzGH4kX6NUcLALvk+gD2BvY=
+=st3u
 -----END PGP SIGNATURE-----
