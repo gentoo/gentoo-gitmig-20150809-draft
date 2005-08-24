@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 20b78676a0c3a1250be3607b8c457725 kboincspy-0.9.0.ebuild 466
-MD5 361c9d2797db2d769c0d5ad287d7f9e9 ChangeLog 456
+MD5 3e1e7d215f91214aa5d641ceaec78e9f kboincspy-0.9.0.ebuild 473
+MD5 7a30c1babd6141e75c2ab0ce52cc3582 ChangeLog 551
 MD5 10e572c9f7332fc95779bc1ca0e6d788 metadata.xml 680
 MD5 0af919c74243294c1bdd9d47df54a1f1 files/digest-kboincspy-0.9.0 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDDOnkntT9W3vfTuoRAp3UAKC0GODePuY6RCZ0Fdb+6Z+kTjCIzwCfYYuU
-Ydy1Pujni97RH0cQf2o2Jwk=
-=OgxT
+iD8DBQFDDOomntT9W3vfTuoRAp7SAJ9Q9l6SNseYu4MERi6VvRx/TOfk2QCeMScA
+r86yQ+8rqpz5AoBIXc9e3cA=
+=Cana
 -----END PGP SIGNATURE-----
