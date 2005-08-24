@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.22_p1548.ebuild,v 1.1 2005/05/10 11:55:24 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.22_p1548.ebuild,v 1.2 2005/08/24 09:32:37 satya Exp $
 
 #==============================================================================
 inherit python eutils distutils
@@ -45,6 +45,6 @@ src_install() {
 	#extra docs: inits -----------------------------------------
 	init_dir=/usr/share/doc/${PN}/initscripts
 	insinto ${init_dir}
-	cp -a initscripts/* ${D}/${init_dir}
+	cp -pPR initscripts/* ${D}/${init_dir}
 }
 
