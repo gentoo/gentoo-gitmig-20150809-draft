@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/openmcl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.1 2005/03/11 16:51:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.2 2005/08/24 07:06:36 mkennedy Exp $
+
+  24 Aug 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  openmcl-0.14.2_p1.ebuild:
+  Use POSIX options for cp; Partially resolves Bug #103487.
 
 *openmcl-0.14.2_p1 (11 Mar 2005)
 
