@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-alsa
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alsa/ChangeLog,v 1.10 2005/06/17 20:48:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alsa/ChangeLog,v 1.11 2005/08/24 18:15:59 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  xmms-alsa-1.2.10-r2.ebuild:
+  stable on ia64
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   xmms-alsa-1.2.10-r2.ebuild:
