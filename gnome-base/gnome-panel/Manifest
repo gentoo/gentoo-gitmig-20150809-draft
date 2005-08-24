@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e396d648e215308e9b6f3b10c57ffd00 gnome-panel-2.10.0-r1.ebuild 1896
 MD5 4649f2b770ef152d0ebc8a8c67e33973 gnome-panel-2.11.91.ebuild 1867
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -12,3 +15,10 @@ MD5 30ed8bbd528d5b284c0b489cd8c52210 files/digest-gnome-panel-1.4.2-r2 70
 MD5 afd54e022092a94648da54cd0c646241 files/digest-gnome-panel-2.6.2 71
 MD5 a810fac56997cf9a6ee29adec5fb19cf files/digest-gnome-panel-2.10.0-r1 72
 MD5 9519d1c688ac6efb1156b207e75051a5 files/digest-gnome-panel-2.11.91 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8wQgIKl8Uu19MoRAtKOAJ9GQRpcE8H0oimeBFCWNTJ3HCojPgCeK3/3
+JNuy8Z3hfxGQrFtAGVtp0YU=
+=3znC
+-----END PGP SIGNATURE-----
