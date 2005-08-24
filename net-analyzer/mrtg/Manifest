@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 02b8d6c90ee1d15d2e5d5157cbb8574a ChangeLog 5370
 MD5 68c9f31189efe33ed1abae27bad06d29 mrtg-2.11.1.ebuild 1188
 MD5 17c12067590b47925e3c86bf37a4f62b mrtg-2.12.1.ebuild 1194
@@ -8,3 +11,10 @@ MD5 a8d246d324b90fd1e37cc912d4651372 files/mrtg.confd 512
 MD5 aff06f9e2832b17c9c558a58472a3091 files/mrtg.rc 1284
 MD5 892b30d2bab4ab965453b5bef89cfecb files/digest-mrtg-2.11.1 64
 MD5 26ac2190042c1cb4fec97a5370c0803d files/digest-mrtg-2.12.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDIIzj5H05b2HAEkRAk7EAJ4uEilLWUGdiYVOQ2yeM0/ridC9UACfR3vF
+x9u9Jk7TchNzwhydIDWT0+w=
+=wN/4
+-----END PGP SIGNATURE-----
