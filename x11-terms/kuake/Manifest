@@ -1,6 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 d74c561a72d91956d145f5fe6224e0d6 ChangeLog 2429
-MD5 d0b98c7cb31d3fa5bce730904af31344 kuake-0.3-r3.ebuild 739
+MD5 988aafdc1297c948e5b4478f6c01bff4 kuake-0.3-r3.ebuild 744
 MD5 dac3ffc42966b8cd6d6b41c4cfdaa3e6 files/kuake-0.3-alignment-fix.patch 2279
 MD5 bb7537995afee2aafa3a96a90da25305 files/digest-kuake-0.3-r3 61
 MD5 2bfbd56d91c468704f8c3fbed9d9b1c4 files/kuake-0.3-noarts-fix.patch 1056
