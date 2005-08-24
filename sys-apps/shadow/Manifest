@@ -1,19 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 840517568840af149e28404e84fa0445 shadow-4.0.7-r1.ebuild 6580
-MD5 2581b4daddefcf73a30d69ac42fdfd1a shadow-4.0.5-r3.ebuild 5614
-MD5 0d5c36f8f3aba41c16444ef5543141ec shadow-4.0.7-r4.ebuild 7185
+MD5 41c23ed0904ed9071c85d13aa76d0a42 shadow-4.0.7-r1.ebuild 6582
+MD5 69b75fc8b3df89e5da434f35f6db5e31 shadow-4.0.5-r3.ebuild 5616
+MD5 5946e4282004a450086ec4f043530cfb shadow-4.0.7-r4.ebuild 7187
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 febb7c4aee5c745df857e72907d88727 shadow-4.0.12.ebuild 7028
-MD5 d05731401a4ba818c6ece98914223b33 shadow-4.0.7-r3.ebuild 7051
-MD5 c1228dc68400586288618dadf4c27e6a shadow-4.0.7.ebuild 5580
-MD5 8ebdad16442d9a43713adffd95e9162b shadow-4.0.6-r1.ebuild 5619
-MD5 d9ec6b146a66930c1a7b4de28cdeae84 shadow-4.0.11.1-r2.ebuild 7213
-MD5 fad39eceb7fd04f2805c6acc16c59d57 shadow-4.0.5-r2.ebuild 5440
+MD5 4689e675338a28ed3c6fdda0de327970 shadow-4.0.12.ebuild 7030
+MD5 711f9b8bb5dde9d72417d26fa8f1f8b6 shadow-4.0.7-r3.ebuild 7054
+MD5 314bf4f7ce691287c74208fe9719f146 shadow-4.0.7.ebuild 5582
+MD5 a0d8e3f6fb0895bc2cc023898a48e81c shadow-4.0.6-r1.ebuild 5621
+MD5 75f60cacddf580b22250ec244749116c shadow-4.0.11.1-r2.ebuild 7215
+MD5 bbedc15fb467b91796456cd032199535 shadow-4.0.5-r2.ebuild 5443
 MD5 14251ed7e3cf0063e3d5cb3dd6c4a83e ChangeLog 22490
-MD5 db870979ea0f600d0bd8137520e2251a shadow-4.0.4.1-r4.ebuild 5961
-MD5 a71e46be63e0aa72da21ce938c3417bc shadow-4.0.11.1-r1.ebuild 7082
+MD5 dd33182f75e512eacdf6652e505359eb shadow-4.0.4.1-r4.ebuild 5963
+MD5 30c0eb4f3ffb1e531659cf9b69cffa14 shadow-4.0.11.1-r1.ebuild 7084
 MD5 e32464f2df5a85f4f6c67bc78e9a23d1 files/shadow-4.0.7-nscd-socket-path.patch 1081
 MD5 20fd2dc35b8671b91e120b90281b4cf3 files/shadow-4.0.5-hack-X-envvars.patch 521
 MD5 8bf11ce0e8ee683fe290462473871dab files/shadow-4.0.6-long-groupnames.patch 1625
@@ -78,10 +75,3 @@ MD5 8a59937d720a19824db6e4a8cd173a4b files/pam.d/passwd 172
 MD5 5bff4f2134b72dabc4afa5bb296e874d files/pam.d/other 142
 MD5 deed69f8fa52ca844f3669414bd5cf01 files/pam.d/system-auth 373
 MD5 a5721c39446539b751dceae4b054542b files/pam.d/shadow 171
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCn+agIKl8Uu19MoRAtlsAJ4m5mYP98PZ6zTRNlf4Mnd9FMTTTgCfTaXY
-/VzA4Yzwz38khwQZ5KGkf40=
-=CEcL
------END PGP SIGNATURE-----
