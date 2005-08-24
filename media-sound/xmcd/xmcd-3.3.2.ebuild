@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.12 2005/08/24 07:50:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.13 2005/08/24 16:18:30 flameeyes Exp $
 
 inherit eutils
 
@@ -10,7 +10,9 @@ SUPPLIB="cddb2supplib"
 DESCRIPTION="Xmcd is a full-featured CD Player and Ripper software package."
 HOMEPAGE="http://www.ibiblio.org/tkan/xmcd/"
 SRC_URI="http://www.ibiblio.org/tkan/download/${PN}/${PV}/src/${P}.tar.gz
-	 http://www.ibiblio.org/tkan/download/cddb2supp/${PV}/lib/linux-x86-libc6/${SUPPLIB}.tar.gz"
+	 x86? (
+	 	http://www.ibiblio.org/tkan/download/cddb2supp/${PV}/lib/linux-x86-libc6/${SUPPLIB}.tar.gz
+	 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,20 +28,10 @@ DEPEND="virtual/x11
 	vorbis? ( >=media-libs/libvorbis-1.0 )"
 
 src_unpack() {
-
-	ebegin "Unpacking ${P} source tarball"
-		unpack ${P}.tar.gz > /dev/null
-	eend 0
-
-	if use x86
-	then
-		ebegin "Unpacking Gracenote CDDB² support package"
-			unpack ${SUPPLIB}.tar.gz > /dev/null
-		eend 0
-	fi
+	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch || die
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
