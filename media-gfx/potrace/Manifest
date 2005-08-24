@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dad12e4a23218d9b25b0ff47ad17e4e2 potrace-1.7.ebuild 712
-MD5 f18d3cc26cd6b1073d82158fa6817a4b potrace-1.5.ebuild 713
+MD5 7159fea580fc38af22948bc44149513a potrace-1.7.ebuild 711
 MD5 edc0a4ca02de4f7c3958060db8486845 metadata.xml 294
-MD5 e5cfbfb37b67d6338229bbcd7c1dc648 potrace-1.6.ebuild 715
 MD5 ea65c6e33b4a12bf6a610a8af5698b67 ChangeLog 1418
-MD5 c632fe18fd9d018a7013014840430508 files/digest-potrace-1.6 63
+MD5 f18d3cc26cd6b1073d82158fa6817a4b potrace-1.5.ebuild 713
+MD5 e5cfbfb37b67d6338229bbcd7c1dc648 potrace-1.6.ebuild 715
 MD5 8a5b21b00cc946b2ea6919a9a7be6787 files/digest-potrace-1.5 63
 MD5 02756dbdd3a9961a862e688663fde8ca files/digest-potrace-1.7 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDC4iTKRy60XGEcJIRAmRoAJ0fT2qqhfiJvX3WmAyIwdbRYCX+LgCfQI0P
-xx8z0xaeEuAjqnQkW/RyywM=
-=rI/I
------END PGP SIGNATURE-----
+MD5 c632fe18fd9d018a7013014840430508 files/digest-potrace-1.6 63
