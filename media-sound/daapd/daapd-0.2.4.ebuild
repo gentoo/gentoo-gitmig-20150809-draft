@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.4.ebuild,v 1.1 2005/04/28 15:41:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.4.ebuild,v 1.2 2005/08/24 16:49:23 flameeyes Exp $
 
 
 inherit flag-o-matic eutils
@@ -42,16 +42,13 @@ src_compile() {
 src_install() {
 	dobin daapd
 
-	dodoc COPYING README* daapd-example.conf
+	dodoc README* daapd-example.conf
 	doman ${PN}.8
 
 	insinto /etc
 	newins daapd-example.conf daapd.conf
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/daapd.conf.d daapd || die
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/daapd.init.d daapd || die
+	newconfd ${FILESDIR}/daapd.conf.d daapd || die
+	newinitd ${FILESDIR}/daapd.init.d daapd || die
 }
 
