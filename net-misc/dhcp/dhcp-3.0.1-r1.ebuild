@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1-r1.ebuild,v 1.9 2005/07/28 14:15:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1-r1.ebuild,v 1.10 2005/08/24 00:07:58 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -95,7 +95,7 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup dhcp
-	enewuser dhcp -1 /bin/false /var/lib/dhcp dhcp
+	enewuser dhcp -1 -1 /var/lib/dhcp dhcp
 }
 
 pkg_postinst() {

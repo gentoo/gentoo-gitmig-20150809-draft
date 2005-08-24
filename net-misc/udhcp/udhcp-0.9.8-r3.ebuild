@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.12 2005/05/16 22:32:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.13 2005/08/24 00:05:22 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ PROVIDE="virtual/dhcpc"
 
 pkg_setup() {
 	enewgroup dhcp
-	enewuser dhcp -1 /bin/false /var/lib/dhcp dhcp
+	enewuser dhcp -1 -1 /var/lib/dhcp dhcp
 }
 
 src_unpack() {

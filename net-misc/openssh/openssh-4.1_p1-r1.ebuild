@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1-r1.ebuild,v 1.3 2005/08/05 03:45:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1-r1.ebuild,v 1.4 2005/08/24 00:07:24 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -141,7 +141,7 @@ src_install() {
 
 pkg_postinst() {
 	enewgroup sshd 22
-	enewuser sshd 22 /bin/false /var/empty sshd
+	enewuser sshd 22 -1 /var/empty sshd
 
 	ewarn "Remember to merge your config files in /etc/ssh/ and then"
 	ewarn "restart sshd: '/etc/init.d/sshd restart'."
