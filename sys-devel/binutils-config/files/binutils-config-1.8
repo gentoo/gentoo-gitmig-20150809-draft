@@ -1,11 +1,13 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.4 2005/06/24 21:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.5 2005/08/24 23:19:04 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
 #  TARGET-VER:		has a TARGET and VER variable
+
+cd /
 
 trap ":" INT QUIT TSTP
 
@@ -119,16 +121,17 @@ switch_profile() {
 	# Generate include symlinks
 	#
 	INCPATH=${LIBPATH}/include
-	cd "${ROOT}/${INCPATH}" || exit 1
-	if [[ ${TARGET} == ${HOST} ]] ; then
-		dstinc=${ROOT}/usr/include
-	else
-		dstinc=${ROOT}/usr/${TARGET}/include
+	if [[ -d ${ROOT}/${INCPATH} ]] ; then
+		if [[ ${TARGET} == ${HOST} ]] ; then
+			dstinc=${ROOT}/usr/include
+		else
+			dstinc=${ROOT}/usr/${TARGET}/include
+		fi
+		mkdir -p "${dstinc}"
+		for x in * ; do
+			ln -sf "${INCPATH}/${x}" "${dstinc}/${x}"
+		done
 	fi
-	mkdir -p "${dstinc}"
-	for x in * ; do
-		ln -sf "${INCPATH}/${x}" "${dstinc}/${x}"
-	done
 
 	#
 	# Make sure proper paths get updated
@@ -286,7 +289,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-v|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.4 2005/06/24 21:55:28 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.8,v 1.5 2005/08/24 23:19:04 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			echo "binutils-config-${cvsver%%,v *}"
 			exit 0
