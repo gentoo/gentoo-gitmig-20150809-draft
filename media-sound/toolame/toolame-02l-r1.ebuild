@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r1.ebuild,v 1.1 2005/06/19 20:47:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l-r1.ebuild,v 1.2 2005/08/24 16:15:19 flameeyes Exp $
 
 IUSE=""
 
@@ -18,8 +18,8 @@ DEPEND="virtual/libc
 	sys-devel/gcc"
 
 src_compile() {
-	epatch ${FILESDIR}/${P}-gentoo.diff || die
-	epatch ${FILESDIR}/${P}-uint.patch || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-uint.patch
 	emake || die
 }
 

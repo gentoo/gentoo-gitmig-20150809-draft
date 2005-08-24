@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.12 2005/08/07 13:39:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.13 2005/08/24 16:15:19 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> toolame-02l.ebuild,
+  toolame-02l-r1.ebuild:
+  epatch does not need die.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> toolame-02l.ebuild:
   Stable on ppc.
