@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.3.8.ebuild,v 1.5 2005/06/17 20:26:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.3.8.ebuild,v 1.6 2005/08/24 12:41:53 ticho Exp $
 
-inherit distutils
+inherit distutils eutils
 
 IUSE=""
 DESCRIPTION="A POP3 mail retriever with reliable Maildir and mbox delivery"
