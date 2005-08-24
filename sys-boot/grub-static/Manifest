@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dcd48367f6d71a7375334b19c0ab5736 metadata.xml 158
 MD5 db97cdaf0bb37dc5ca032583eff19c78 grub-static-0.93.20030118.ebuild 560
 MD5 659df1fc2176b6644cfadd39f91caec8 ChangeLog 601
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0ecf5f0bee59b2978382a9dbd544f9e6 files/digest-grub-static-0.93.20030118 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8C1gIKl8Uu19MoRAg3oAJ470xbzuPZyeOtYwQUc5d5MFXuwcACfTGci
+bpB+25jKnnYUZRxVasqZXK8=
+=t4fI
+-----END PGP SIGNATURE-----
