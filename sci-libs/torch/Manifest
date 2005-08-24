@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab172512457f80c602c11b65765fd905 ChangeLog 715
-MD5 b3c4e2abffde512a8f3700aee14bbb1a torch-3.ebuild 2047
+MD5 5e4d82d69eb2e32ee6f215dafee5e8d3 ChangeLog 826
+MD5 df42484b580a4939767f162536a65d29 torch-3.ebuild 2052
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 b783f0f266b5452761370caf0b78e7f3 files/digest-torch-3 117
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCf0fM2G5bA0cA/ScRAmGRAJ9YG2pMHC8bk98vllo48OCg4pTMpACfaWzn
-dxlUeVPmXrZ9SU//eyg18xU=
-=s0mX
------END PGP SIGNATURE-----
