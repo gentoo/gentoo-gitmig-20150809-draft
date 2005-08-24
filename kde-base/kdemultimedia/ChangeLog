@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.167 2005/07/29 11:53:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.168 2005/08/24 23:26:27 greg_g Exp $
+
+*kdemultimedia-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdemultimedia-3.5_alpha1-compile.patch,
+  +kdemultimedia-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease. aKode is not included anymore, it will be released
+  outside KDE as media-libs/akode.
 
   29 Jul 2005; Dan Armak <danarmak@gentoo.org> kdemultimedia-3.4.2.ebuild:
   Add explicit dep on musicbrainz in addition to tunepimp, since the juk

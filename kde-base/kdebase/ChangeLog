@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.214 2005/08/06 10:27:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.215 2005/08/24 23:09:16 greg_g Exp $
+
+*kdebase-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdebase-3.5-configure-openexr.patch,
+  +files/kdebase-3.5-startkde-gentoo.patch, +kdebase-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease. Add zeroconf support for ksysguardd.
 
 *kdebase-3.4.2-r1 (06 Aug 2005)
 

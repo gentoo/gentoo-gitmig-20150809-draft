@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.163 2005/07/30 14:11:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.164 2005/08/24 23:15:33 greg_g Exp $
+
+*kdenetwork-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdenetwork-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease. Add support for the Sametime protocol.
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdenetwork-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team

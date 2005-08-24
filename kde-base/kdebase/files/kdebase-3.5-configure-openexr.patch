@@ -1,0 +1,22 @@
+diff -Nur kdebase-3.4.90.orig/kioslave/thumbnail/configure.in.in kdebase-3.4.90/kioslave/thumbnail/configure.in.in
+--- kdebase-3.4.90.orig/kioslave/thumbnail/configure.in.in	2005-08-06 11:46:58.000000000 +0200
++++ kdebase-3.4.90/kioslave/thumbnail/configure.in.in	2005-08-21 12:39:44.000000000 +0200
+@@ -95,5 +95,17 @@
+   AC_SUBST(EXR_FLAGS)
+ ])
+ 
+-AC_FIND_LIBEXR
++AC_ARG_WITH(openexr,
++  [AS_HELP_STRING(--with-openexr,
++    [enable support for OpenEXR @<:@default=check@:>@])],
++  [], with_openexr=check)
++
++if test "x$with_openexr" != xno; then
++  AC_FIND_LIBEXR
++
++  if test "x$with_openexr" != xcheck && test -z "$LIB_EXR"; then
++    AC_MSG_FAILURE([--with-openexr was given, but test for OpenEXR failed])
++  fi
++fi
++
+ AM_CONDITIONAL(include_EXR_MODULES, test -n "$LIB_EXR")

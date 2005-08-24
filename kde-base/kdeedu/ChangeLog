@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.148 2005/08/19 19:50:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.149 2005/08/24 23:21:09 greg_g Exp $
+
+*kdeedu-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> +kdeedu-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   kdeedu-3.4.1-r1.ebuild:

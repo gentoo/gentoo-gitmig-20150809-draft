@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.124 2005/08/04 14:58:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.125 2005/08/24 23:18:55 greg_g Exp $
+
+*kdeutils-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdeutils-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease. x11-misc/superkaramba is now included in this package.
 
   04 Aug 2005; Joseph Jezak <josejx@gentoo.org> kdeutils-3.4.2.ebuild:
   Added pbbuttonsd dependency for bug #94731.

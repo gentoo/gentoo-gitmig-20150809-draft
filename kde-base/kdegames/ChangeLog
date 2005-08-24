@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.125 2005/07/30 14:09:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.126 2005/08/24 23:12:28 greg_g Exp $
+
+*kdegames-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdegames-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease.
 
   30 Jul 2005; Dan Armak <danarmak@gentoo.org> kdegames-3.4.2.ebuild:
   Removed ~mips keyword, because kdelibs-3.4.2 doesn't have it. The mips team

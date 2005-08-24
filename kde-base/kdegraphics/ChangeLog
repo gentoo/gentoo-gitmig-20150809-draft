@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.181 2005/08/08 20:13:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.182 2005/08/24 23:25:40 greg_g Exp $
+
+*kdegraphics-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdegraphics-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease. app-text/poppler replaces app-text/xpdf for pdf support.
 
   08 Aug 2005; Guy Martin <gmsoft@gentoo.org> kdegraphics-3.3.2-r3.ebuild,
   kdegraphics-3.4.1-r1.ebuild:

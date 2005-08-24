@@ -1,9 +1,14 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.176 2005/08/23 22:46:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.177 2005/08/24 23:06:11 greg_g Exp $
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> arts-3.4.1-r2.ebuild:
   stable on ia64
+
+*arts-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> +arts-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease.
 
   29 Jul 2005; Dan Armak <danarmak@gentoo.org> arts-3.4.2.ebuild:
   Apply the cpu overload patch in 3.4.2 too.

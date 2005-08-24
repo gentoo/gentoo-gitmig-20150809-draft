@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.94 2005/08/13 23:20:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.95 2005/08/24 23:16:25 greg_g Exp $
+
+*kdesdk-3.5_alpha1 (24 Aug 2005)
+
+  24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdesdk-3.5-configure-db.patch,
+  +files/kdesdk-3.5_alpha1-compile.patch, +kdesdk-3.5_alpha1.ebuild:
+  KDE 3.5 prerelease.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kdesdk-3.4.1.ebuild:
   Stable on ppc.

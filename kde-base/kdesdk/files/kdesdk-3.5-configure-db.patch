@@ -1,0 +1,39 @@
+diff -Nur kdesdk-3.4.90.orig/kbabel/kbabeldict/modules/dbsearchengine/configure.in.bot kdesdk-3.4.90/kbabel/kbabeldict/modules/dbsearchengine/configure.in.bot
+--- kdesdk-3.4.90.orig/kbabel/kbabeldict/modules/dbsearchengine/configure.in.bot	2005-08-06 11:41:07.000000000 +0200
++++ kdesdk-3.4.90/kbabel/kbabeldict/modules/dbsearchengine/configure.in.bot	2005-08-21 12:52:59.000000000 +0200
+@@ -1,6 +1,5 @@
+-case "$kde_cv_berk_database" in
+- NO)
++if test "x$with_berkeley_db" = xcheck && test -z "$LIB_DBIV"; then
+    echo ""
+    echo "Dictionary plugin \"Translation Database\" for KBabel will not be built! Please install Berkeley Database IV. See http://www.sleepycat.com for more information.)"
+-   echo "" ;;
+-esac
++   echo ""
++fi
+diff -Nur kdesdk-3.4.90.orig/kbabel/kbabeldict/modules/dbsearchengine/configure.in.in kdesdk-3.4.90/kbabel/kbabeldict/modules/dbsearchengine/configure.in.in
+--- kdesdk-3.4.90.orig/kbabel/kbabeldict/modules/dbsearchengine/configure.in.in	2005-08-06 11:41:07.000000000 +0200
++++ kdesdk-3.4.90/kbabel/kbabeldict/modules/dbsearchengine/configure.in.in	2005-08-21 12:52:59.000000000 +0200
+@@ -1,3 +1,10 @@
++AC_ARG_WITH(berkeley-db,
++  [AC_HELP_STRING(--with-berkeley-db,
++    [enable the dictionary plugin based on Berkeley DB IV @<:@default=check@:>@])],
++  [], with_berkeley_db=check)
++
++LIB_DBIV=""
++if test "x$with_berkeley_db" != xno; then
+ 
+ AC_MSG_CHECKING([for Berkeley Database IV])
+ 
+@@ -122,6 +129,11 @@
+ DBIV_INCLUDES="$ac_db_includes"
+ DBIV_NAME="$ac_db_name"
+ 
++if test "x$with_berkeley_db" != xcheck && test -z "$LIB_DBIV"; then
++  AC_MSG_ERROR([--with-berkeley-db was given, but test for Berkeley DB IV failed])
++fi
++fi
++
+ AC_SUBST(DBIV_INCLUDES)
+ AC_SUBST(DBIV_LDFLAGS)
+ AC_SUBST(DBIV_NAME)
