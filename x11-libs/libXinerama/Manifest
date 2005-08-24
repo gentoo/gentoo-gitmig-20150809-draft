@@ -1,4 +1,4 @@
-MD5 d80846862379cdcbde461617c71a7bca libXinerama-0.99.0.ebuild 646
+MD5 979a5ff18d86855392bcb05f97836ba9 libXinerama-0.99.0.ebuild 654
 MD5 565620c28a952d7ec3110a3a432aa0f9 ChangeLog 886
 MD5 f20d8695e8cdafabfcc6ec513365e4af files/digest-libXinerama-0.99.0 71
 MD5 7b413adee10a8c5ca413aba41677d69f files/xineramaproto.patch 452

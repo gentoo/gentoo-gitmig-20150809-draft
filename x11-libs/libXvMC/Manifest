@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 35bcd074aa078e746fa255531e165ed7 libXvMC-0.99.0.ebuild 585
 MD5 ed1c265d4145b4a112a7faa092594ee1 ChangeLog 557
+MD5 1b4fc101e021bb2dd2d0416aee0a28fc libXvMC-0.99.0.ebuild 597
 MD5 8e8c78b6b48345803b12bfed0b506bf0 files/digest-libXvMC-0.99.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCxdU2G5bA0cA/ScRAlK1AJ9oM7vaPlZsmQg+98of83W/gmEjjACfe5AL
-clJu4Jxn028wI7a47vrk5ww=
-=4nnp
------END PGP SIGNATURE-----
