@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.11.91.ebuild,v 1.1 2005/08/20 23:37:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.11.92.ebuild,v 1.1 2005/08/24 08:03:52 leonardop Exp $
 
-inherit gnome2 eutils
+inherit gnome2
 
 DESCRIPTION="The Gnome System Monitor"
 HOMEPAGE="http://www.gnome.org/"
@@ -20,10 +20,10 @@ RDEPEND=">=gnome-base/libgnome-2
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/gnome-vfs-2.6"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.9
 	>=app-text/scrollkeeper-0.3.11
-	>=dev-util/intltool-0.29
-	${RDEPEND}"
+	>=dev-util/intltool-0.28"
 
-DOCS="AUTHORS ChangeLog HACKING README NEWS TODO"
+DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 USE_DESTDIR="1"
