@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.2 2005/05/09 11:21:27 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.3 2005/08/24 16:28:34 phosphan Exp $
 
 inherit toolchain-funcs multilib
 
@@ -55,7 +55,7 @@ src_install() {
 	dodoc LICENSE
 	dodir /usr/share/doc/${PF}
 	insinto /usr/share/doc/${PF}
-	cp -a examples ${D}/usr/share/doc/${PF}
+	cp -pPR examples ${D}/usr/share/doc/${PF}
 	cd ${D}/usr/share/doc/${PF}
 	sed -i \
 		-e 's|^TORCHDIR.*|TORCHDIR := /usr/share/torch|' \

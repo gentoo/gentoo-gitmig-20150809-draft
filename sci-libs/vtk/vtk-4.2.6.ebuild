@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.4 2005/08/20 19:20:21 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.5 2005/08/24 16:20:18 phosphan Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -112,7 +112,7 @@ src_install() {
 	# install examples
 	if use examples; then
 		dodir /usr/share/${PN}
-		cp -a ${S}/Examples ${D}/usr/share/${PN}/examples
+		cp -pPR ${S}/Examples ${D}/usr/share/${PN}/examples
 
 		# fix example's permissions
 		find ${D}/usr/share/${PN}/examples -type d -exec chmod 0755 {} \;
@@ -121,7 +121,7 @@ src_install() {
 		# VTKData uses a hyphen instead of a dot
 		MY_PV_HYPHEN=`echo ${MY_PV} | sed -e "s/\./-/"`
 		dodir /usr/share/${PN}
-		cp -a ${WORKDIR}/VTKData-release-${MY_PV_HYPHEN} ${D}/usr/share/${PN}/data
+		cp -pPR ${WORKDIR}/VTKData-release-${MY_PV_HYPHEN} ${D}/usr/share/${PN}/data
 
 		# fix data's permissions
 		find ${D}/usr/share/${PN}/data -type d -exec chmod 0755 {} \;

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-5.2.ebuild,v 1.1 2004/12/28 21:45:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-5.2.ebuild,v 1.2 2005/08/24 16:27:00 phosphan Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel(R) Math Kernel Library"
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install () {
-	cp -a opt ${D}
+	cp -pPR opt ${D}
 	cd ${D}/opt/intel/mkl/
 	dodoc license.txt
 	dohtml -r mklnotes.htm mkllic.htm doc/*

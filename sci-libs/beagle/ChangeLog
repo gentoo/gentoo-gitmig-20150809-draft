@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/beagle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.4 2005/06/25 23:54:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.5 2005/08/24 16:30:29 phosphan Exp $
+
+  24 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> beagle-2.2.0.ebuild:
+  No longer using cp -a (bug #103487)
 
   25 Jun 2005; Olivier Fisette <ribosome@gentoo.org> -beagle-2.1.3.ebuild,
   beagle-2.2.0.ebuild:
