@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-1.0.1.ebuild,v 1.1 2005/06/02 23:31:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-1.0.1.ebuild,v 1.2 2005/08/24 11:35:47 ticho Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://imapfilter.hellug.gr/source/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc
