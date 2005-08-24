@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d4c9f96e5bcd2da8f027089685a58803 gal-2.2.5.ebuild 1285
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 b88f28f47890cb26f1837be5fa4217a1 gal-0.24.ebuild 2087
@@ -15,3 +18,10 @@ MD5 c6255084120bc27d90ae92dd62826c16 files/digest-gal-2.2.4 63
 MD5 a10092842b8cabef52b8995773852a22 files/digest-gal-2.4.1 63
 MD5 737e4a75668a5590e54e746295c5efd7 files/gal-2.1.12-gcc34.patch 483
 MD5 b2f242d8b7015030276291e22e03aa48 files/gal-0.24-sgml-1.patch 1363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8vmgIKl8Uu19MoRAl9gAJwLMb0evgmCAeZeaIeSfBmQnFIi5gCfenXe
+ZBjNssC2RKtl9QyhrOsOdCU=
+=ayD2
+-----END PGP SIGNATURE-----
