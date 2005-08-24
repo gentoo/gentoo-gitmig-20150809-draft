@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.13 2004/12/16 09:07:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.14 2005/08/24 18:20:42 agriffis Exp $
 
 MY_P=${P/_p/.p}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www1.tcnet.ne.jp/fmurata/linux/down/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc -sparc ~alpha amd64 ~ia64 ppc64"
+KEYWORDS="~alpha amd64 ia64 ~ppc ppc64 -sparc x86"
 IUSE="nls gtk2"
 
 DEPEND="virtual/alsa
