@@ -1,4 +1,14 @@
-MD5 017cdab283213123e983b8980043e132 ChangeLog 1059
-MD5 4b1223998c7528518010924f17f0d064 cmatrix-1.2a.ebuild 1308
-MD5 fbdf087e388b121cf1bdd8fd7f519177 files/digest-cmatrix-1.2a 63
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a1f817867e359623973b237c5bb387d cmatrix-1.2a.ebuild 1306
+MD5 1ef452c6ad8efb736055ffccc168587b ChangeLog 1151
 MD5 9bfecf967586ff4ee812fbff868b34b1 files/cmatrix-1.2a-gentoo.patch 3034
+MD5 fbdf087e388b121cf1bdd8fd7f519177 files/digest-cmatrix-1.2a 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDEGlViELBEf1JB0RAgMVAJ4p2s6Thdf8IM239BbLIEHFDhR/agCfZBPw
+RPgkOsUa/KizQ47cPU1NyG8=
+=qPmL
+-----END PGP SIGNATURE-----
