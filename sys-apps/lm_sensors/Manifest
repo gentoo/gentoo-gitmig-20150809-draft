@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 a05fd9d0abd721e9fe8070123edd4a30 lm_sensors-2.9.0.ebuild 4805
 MD5 fb6757c067b78987a0cf9589b0d42853 ChangeLog 14289
@@ -16,3 +19,10 @@ MD5 46b6afde1f6a202ceaf607af2d905cd0 files/lm_sensors-2.9.1-sensord-init.d 739
 MD5 2045929b325d2e459a6ab9236d2764eb files/lm_sensors-2.9.1-sensors-detect-gentoo.patch 5526
 MD5 669cd7ea438a54d3269ff5e9d06847b6 files/digest-lm_sensors-2.9.1-r1 68
 MD5 512e167e34ba06a004990fc298616a20 files/lm_sensors-2.9.1-pwmconfig.patch 1186
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDQkdmOfEJZHYOKcRAu9fAJ4g9EVjLV/hwjgARXwBFMYXa4tVmgCeI1BP
+gOmlJhZKPKhpVsrV8NMvZ1I=
+=BobJ
+-----END PGP SIGNATURE-----
