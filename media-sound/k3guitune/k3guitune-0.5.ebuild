@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.5.ebuild,v 1.1 2005/08/24 09:19:00 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.5.ebuild,v 1.2 2005/08/24 15:56:54 greg_g Exp $
 
 inherit kde eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# the test for jack always fails.
+	# jack support needs a version of bio2jack not released yet.
 	local myconf="$(use_enable alsa) $(use_enable arts)
 	              $(use_enable oss) --disable-jack"
 
