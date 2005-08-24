@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.9 2005/01/01 16:12:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.10 2005/08/24 03:49:48 leonardop Exp $
+
+  24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  dvipdfm-0.13.2c.ebuild:
+  Use 'cp -pPR' instead of 'cp -a' (bug #103487).
 
   05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> dvipdfm-0.13.2c.ebuild:
   Blocks teTeX-2 based TeX distributions

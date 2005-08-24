@@ -1,5 +1,5 @@
-MD5 5e8db1a27bcc0f2f4c640df53ec44671 ChangeLog 1018
-MD5 b0afa41302ab0d9f293b2b5cb6e71d59 dvipdfm-0.13.2c.ebuild 977
+MD5 2e41a2c22bb226749214a63b375d5e9e ChangeLog 1150
+MD5 e03cc12706fac25cd5724d81173edc15 dvipdfm-0.13.2c.ebuild 980
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 a3b34a0d8ba6d9dfaa3a2e47d093cacb files/README.Gentoo 506
 MD5 c9da516699511f1d81e73a197ca90c0f files/digest-dvipdfm-0.13.2c 67
