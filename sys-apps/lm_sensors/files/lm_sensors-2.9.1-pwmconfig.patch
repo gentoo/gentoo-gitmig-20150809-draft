@@ -1,0 +1,18 @@
+diff -urp lm_sensors-2.9.1/prog/pwm/pwmconfig /home/brix/projects/lm_sensors/lm_sensors2/prog/pwm/pwmconfig
+--- lm_sensors-2.9.1/prog/pwm/pwmconfig	2005-03-15 20:24:25.000000000 +0100
++++ /home/brix/projects/lm_sensors/lm_sensors2/prog/pwm/pwmconfig	2005-08-21 15:15:41.000000000 +0200
+@@ -465,9 +465,11 @@ function TestMinStop {
+ function SaveConfig {
+ 	echo
+ 	echo "Saving configuration to $FCCONFIG..."
+-	egrep -v '(INTERVAL|FCTEMPS|FCFANS|MAXTEMP|MINTEMP|MINSTART|MINSTOP)' $FCCONFIG >/tmp/fancontrol
+-	echo -e "INTERVAL=$INTERVAL\nFCTEMPS=$FCTEMPS\nFCFANS=$FCFANS\nMINTEMP=$MINTEMP\nMAXTEMP=$MAXTEMP\nMINSTART=$MINSTART\nMINSTOP=$MINSTOP" >>/tmp/fancontrol
+-	mv /tmp/fancontrol $FCCONFIG
++	tmpfile=`tempfile` || { echo "$0: Cannot create temporary file" >&2; exit 1;  }
++	trap " [ -f \"$tmpfile\" ] && /bin/rm -f -- \"$tmpfile\"" 0 1 2 3 13 15
++	egrep -v '(INTERVAL|FCTEMPS|FCFANS|MAXTEMP|MINTEMP|MINSTART|MINSTOP)' $FCCONFIG >$tmpfile
++	echo -e "INTERVAL=$INTERVAL\nFCTEMPS=$FCTEMPS\nFCFANS=$FCFANS\nMINTEMP=$MINTEMP\nMAXTEMP=$MAXTEMP\nMINSTART=$MINSTART\nMINSTOP=$MINSTOP" >>$tmpfile
++	mv $tmpfile $FCCONFIG
+ 	#check if file was written correctly
+ 	echo 'Configuration saved'
+ }
