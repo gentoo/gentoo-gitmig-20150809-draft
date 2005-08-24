@@ -11,3 +11,7 @@ ladcca
 dvd
 dvdr
 mpeg
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# For now, until we check it's status wrt build b0rkage and toolchain
+xine
