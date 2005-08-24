@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.198 2005/08/13 10:59:21 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.199 2005/08/24 10:09:01 satya Exp $
+
+  24 Aug 2005; Christian Andreetta <satya@gentoo.org>
+  samba-3.0.14a-r2.ebuild, samba-3.0.14a-r3.ebuild:
+  'cp -pPR' instead of 'cp -a' required by Darwin and BSD (bug #103487)
 
   13 Aug 2005; Christian Andreetta <satya@gentoo.org>
   +samba-3.0.14a-r3.ebuild:

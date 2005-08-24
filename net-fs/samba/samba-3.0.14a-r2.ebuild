@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.14 2005/08/09 14:33:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.15 2005/08/24 10:09:01 satya Exp $
 
 inherit eutils versionator
 
@@ -56,7 +56,7 @@ src_unpack() {
 	export EPATCH_SUFFIX="patch"
 	epatch ${PATCHDIR}/general
 	if use oav ; then
-		cp -a ${WORKDIR}/${PFVSCAN} ${S2}/examples/VFS
+		cp -pPR ${WORKDIR}/${PFVSCAN} ${S2}/examples/VFS
 		epatch ${PATCHDIR}/vscan
 	fi
 }
@@ -232,7 +232,7 @@ src_install() {
 	dodoc ${CONFDIR}/nsswitch.conf-wins
 	use winbind && dodoc ${CONFDIR}/nsswitch.conf-winbind
 
-	cp -a ${S2}/examples/* ${D}/usr/share/doc/${PF}/examples
+	cp -pPR ${S2}/examples/* ${D}/usr/share/doc/${PF}/examples
 
 	chmod -R 755 `find ${D}/usr/share/doc/${PF}/examples -type d`
 	chmod -R 644 `find ${D}/usr/share/doc/${PF}/examples ! -type d`
@@ -259,7 +259,7 @@ pkg_preinst() {
 		&& -r ${ROOT}/${PRIVATE_SRC}/secrets.tdb ]]; then
 		ebegin "Copying ${ROOT}/${PRIVATE_SRC}/* to ${ROOT}/${PRIVATE_DST}/"
 			mkdir -p ${IMAGE}/${PRIVATE_DST}
-			cp -af ${ROOT}/${PRIVATE_SRC}/* ${IMAGE}/${PRIVATE_DST}/
+			cp -pPRf ${ROOT}/${PRIVATE_SRC}/* ${IMAGE}/${PRIVATE_DST}/
 		eend $?
 	fi
 
