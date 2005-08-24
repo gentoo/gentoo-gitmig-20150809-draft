@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.12.ebuild,v 1.2 2005/08/24 00:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.12.ebuild,v 1.3 2005/08/24 11:33:19 azarah Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -54,6 +54,9 @@ src_unpack() {
 	# Make user/group names more flexible #3485 / #22920
 	epatch "${FILESDIR}"/${PN}-4.0.12-dots-in-usernames.patch
 	epatch "${FILESDIR}"/${PN}-4.0.12-long-groupnames.patch
+
+	# Fix compiling with gcc-2.95.x
+	epatch "${FILESDIR}"/${PN}-4.0.12-gcc2.patch
 
 	# Patch from upstream enables the new environment too early for PAM
 	epatch "${FILESDIR}"/${PN}-4.0.11.1-su-fix-environment.patch
