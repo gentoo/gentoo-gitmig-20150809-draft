@@ -1,6 +1,6 @@
-
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.15 2005/08/24 10:09:01 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r2.ebuild,v 1.16 2005/08/24 14:37:32 mr_bones_ Exp $
 
 inherit eutils versionator
 
