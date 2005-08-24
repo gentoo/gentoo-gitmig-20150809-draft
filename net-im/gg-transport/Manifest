@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 08b401661300ba630856f60dc9f37bfa gg-transport-2.2.1.ebuild 949
+MD5 d3165d88ae4df14046d799d97d08f078 ChangeLog 431
+MD5 1b2166e604744970799c1cc476d4e855 metadata.xml 375
+MD5 322741c40ca016d2712932de6f8d801c files/digest-gg-transport-2.2.1 78
+MD5 08e2ae03e285aa58e2b9a2aaf197ed7c files/jggtrans 370
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDQFS8zY1VwezZiERAlLZAJ9L8QSdvNGQnyJyp0v+40fN6ZOwpQCfRgJB
+Szl/uCnHrfk0zuhpeo/9trE=
+=SFX0
+-----END PGP SIGNATURE-----
