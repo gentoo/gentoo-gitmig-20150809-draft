@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ce7f0dd43c1c944037bba0aa87d46f4 xbitmaps-0.99.0.ebuild 416
 MD5 6f609e8a9e9042a9256c3eb653610652 ChangeLog 653
 MD5 53b4b7f963397046ff7ffba413f482dc files/digest-xbitmaps-0.99.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8nSgIKl8Uu19MoRAm2sAJkBQYv1QuGCSY1LLlQ3tgyqZ5flxQCZAZPl
+Yga91Ut+ie6N4hZ7RglqOeo=
+=kzFl
+-----END PGP SIGNATURE-----

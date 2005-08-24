@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a27cdda051f2b7cff82dc74a938dc64 makedepend-0.99.0.ebuild 444
 MD5 cbc18800061d282f84376fe7e5a4baa5 ChangeLog 681
 MD5 f42954314c60d8981f8cc77ddab74746 files/digest-makedepend-0.99.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8nOgIKl8Uu19MoRAiEQAKCBFNu+YdA78VwTemwupI02xkl2ugCdGdQE
+JOXEDN0y6dWfKxV+06jccpw=
+=Xlzg
+-----END PGP SIGNATURE-----
