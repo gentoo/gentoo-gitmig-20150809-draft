@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/hicolor-icon-theme-0.8.ebuild,v 1.3 2005/08/24 00:42:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/hicolor-icon-theme-0.8.ebuild,v 1.4 2005/08/24 13:32:08 gustavoz Exp $
 
 DESCRIPTION="Fallback theme for the freedesktop icon theme specification"
 HOMEPAGE="http://icon-theme.freedesktop.org/wiki/HicolorTheme"
@@ -8,7 +8,7 @@ SRC_URI="http://icon-theme.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
