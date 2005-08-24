@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 374f08b6c7d82aed06c15d27063226f9 ChangeLog 3423
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 b11506ecab438cd084e82cd0264f45ee bittorrent-stats-3.2.1b-r4.ebuild 1658
-MD5 de301c5049cbb5278faef64d8442fc9d ChangeLog 3296
-MD5 18e4d423bad1434f67f294f131f2e181 files/digest-bittorrent-stats-3.2.1b-r4 69
+MD5 2d69d13949c52ce79bd18d9a55c8def7 bittorrent-stats-3.2.1b-r4.ebuild 1663
 MD5 dfb7c0c50cc6abc6efd5cf380f4615a0 files/bittorrent-stats-3.2.1b.patch 26140
+MD5 18e4d423bad1434f67f294f131f2e181 files/digest-bittorrent-stats-3.2.1b-r4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDKWoZ/iYVBmujdURAoPfAJ9om5VZzzKB0p82vg7mRxsCa2i0egCfcdTz
+encdIjOfXD3cxBmH3lA5IA8=
+=2f35
+-----END PGP SIGNATURE-----

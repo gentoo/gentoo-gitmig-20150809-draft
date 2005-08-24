@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/bittorrent-stats-3.2.1b-r4.ebuild,v 1.6 2005/05/01 17:00:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/bittorrent-stats-3.2.1b-r4.ebuild,v 1.7 2005/08/24 14:46:52 sekretarz Exp $
 
 inherit distutils eutils
 
@@ -38,7 +38,7 @@ src_install() {
 		rm ${D}/usr/bin/*gui.py
 	fi
 	dodir etc
-	cp -a /etc/mailcap ${D}/etc/
+	cp -pPR /etc/mailcap ${D}/etc/
 
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
 
