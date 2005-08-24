@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e3fc5280ad5eaf2270bae46a4452011f ChangeLog 2247
-MD5 75e00cb0f80825926303400ea610f54a vorbisgain-0.36.ebuild 835
 MD5 c781e743204f5f20eb21ffc2132dd1f1 vorbisgain-0.34-r1.ebuild 818
+MD5 2abc4fb6e62322a9f2ed71584cbc6c16 ChangeLog 2346
+MD5 67eac50e92c29ad3a217e037ea51df5e vorbisgain-0.36.ebuild 834
 MD5 829a3a46bcfb3d31d37facb4e49c9899 files/digest-vorbisgain-0.34-r1 64
 MD5 1a3afeb25a4d18587b0a28b420030801 files/digest-vorbisgain-0.36 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDC5/xp5vW4rUFj5oRAmUTAKC3opbvsyMJ3KMvFq9dZs/qaFqpqQCfRs07
-1FwSkAjcORDIjgGJ1EUTQNw=
-=0/Zi
+iD8DBQFDDIIfKRy60XGEcJIRAjqOAJ98tx8CY2ONpkcPFWCvs8diUp9QhQCfQRnR
+eFcVxTG+kqs6PSIJYPBi1qs=
+=QKLu
 -----END PGP SIGNATURE-----
