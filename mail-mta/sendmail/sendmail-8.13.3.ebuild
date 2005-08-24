@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.3.ebuild,v 1.10 2005/06/17 20:51:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.3.ebuild,v 1.11 2005/08/24 08:16:52 lcars Exp $
 
 inherit eutils
 
@@ -129,7 +129,7 @@ src_install () {
 
 	newdoc cf/README README.cf
 	newdoc cf/cf/README README.install-cf
-	cp -a cf/* ${D}/usr/share/sendmail-cf
+	cp -pPR cf/* ${D}/usr/share/sendmail-cf
 	insinto /etc/mail
 	if use mbox
 	then

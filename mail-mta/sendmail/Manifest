@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a64ea83203b75855ea6fdb16f95b2a38 sendmail-8.13.3.ebuild 5992
-MD5 c77f180f8a2e154ffd41becf19407a59 sendmail-8.13.1-r1.ebuild 5962
-MD5 61cfa97f228f4e0839717271a73bd2aa sendmail-8.13.4-r1.ebuild 6287
-MD5 c149c7c40cebd04459082cbd1d3be506 sendmail-8.13.4.ebuild 5846
-MD5 41d5008bfd4aa4d68b82ee401aec9285 ChangeLog 13013
 MD5 6d7255cf075f705e7706d7f7c2fc4a53 metadata.xml 218
+MD5 9b4656341ce7f33d0bbe8befd2e1bede sendmail-8.13.1-r1.ebuild 5965
+MD5 e4c3a51c9f021de8b9ec26ec73c59da6 sendmail-8.13.3.ebuild 5993
+MD5 615c6258bab2b8a5728ec91293c8a1a8 sendmail-8.13.4.ebuild 5847
+MD5 ef6487d3a1283e49903a312338dda797 sendmail-8.13.4-r1.ebuild 6289
+MD5 bb3857ec691f3479c92f7267e25d22ad ChangeLog 13213
+MD5 0027be040b9dacdf253813fe2ddb8982 files/digest-sendmail-8.13.1-r1 68
+MD5 45c504b2c249bc5724f0029328d56b78 files/digest-sendmail-8.13.3 68
+MD5 470e80bc008f602eb5fcc165f9e3546b files/digest-sendmail-8.13.4 68
+MD5 61d4e49cceb149f6ff46cf6a1b598b88 files/mailer.conf 1306
+MD5 a66e50b3a5cf1d70054dccf17d7ec13f files/sendmail 605
+MD5 d7d99c72954d524b1d0eafbfe0e77afc files/sendmail-8.12.2-makemapman.patch 2088
+MD5 4b37f61de2fd8de372a4bd8ab6f92edf files/sendmail-8.12.2-smrsh-paths.patch 5625
+MD5 b412547381b852586d5d4d6ffcd80b4a files/sendmail-8.12.2-unix.patch 395
+MD5 95d58f15432e44c91f8018839f65327c files/sendmail-8.12.6-r1-gentoo.diff 1701
+MD5 7b2a2b2f8f608ddbd8b0c1b910ffb981 files/sendmail-delivered_hdr.patch 341
+MD5 875d3c33bfa16e73e5e75ecb1d1a9d2b files/sendmail-procmail.cf 39897
+MD5 40db5be0dc4aad98df023d3af8e8c132 files/sendmail-procmail.mc 357
 MD5 9cf5b1a30908c5f96f258b835f430865 files/sendmail.cf 39312
 MD5 1a9fedeb2f17b9a7de4f0f8da6c06d63 files/sendmail.mc 299
 MD5 9f4b4fca4930038c7a6dab0d0e80e5b6 files/site.config.m4 453
-MD5 d7d99c72954d524b1d0eafbfe0e77afc files/sendmail-8.12.2-makemapman.patch 2088
-MD5 b412547381b852586d5d4d6ffcd80b4a files/sendmail-8.12.2-unix.patch 395
-MD5 95d58f15432e44c91f8018839f65327c files/sendmail-8.12.6-r1-gentoo.diff 1701
-MD5 45c504b2c249bc5724f0029328d56b78 files/digest-sendmail-8.13.3 68
-MD5 470e80bc008f602eb5fcc165f9e3546b files/digest-sendmail-8.13.4 68
-MD5 875d3c33bfa16e73e5e75ecb1d1a9d2b files/sendmail-procmail.cf 39897
-MD5 40db5be0dc4aad98df023d3af8e8c132 files/sendmail-procmail.mc 357
-MD5 a66e50b3a5cf1d70054dccf17d7ec13f files/sendmail 605
-MD5 61d4e49cceb149f6ff46cf6a1b598b88 files/mailer.conf 1306
-MD5 0027be040b9dacdf253813fe2ddb8982 files/digest-sendmail-8.13.1-r1 68
 MD5 470e80bc008f602eb5fcc165f9e3546b files/digest-sendmail-8.13.4-r1 68
-MD5 7b2a2b2f8f608ddbd8b0c1b910ffb981 files/sendmail-delivered_hdr.patch 341
-MD5 4b37f61de2fd8de372a4bd8ab6f92edf files/sendmail-8.12.2-smrsh-paths.patch 5625
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCyVzQlM6RnzZP+IRAoNiAJ9dryanMe1d6fvId51hjwalJovqswCcCF1u
-DaPlDX50XZ63y5O5NaAt7sY=
-=wcW+
------END PGP SIGNATURE-----
