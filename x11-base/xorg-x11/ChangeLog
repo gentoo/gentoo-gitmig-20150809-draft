@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.444 2005/08/23 17:19:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.445 2005/08/24 23:56:42 joshuabaergen Exp $
+
+  24 Aug 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-6.8.99.15.ebuild:
+  Changed cp -a to cp -pPR for BSD compatibility.
 
   23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r1.ebuild, xorg-x11-6.8.2-r2.ebuild,
