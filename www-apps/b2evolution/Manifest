@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 13e3fc5e0c82eb2be396bc4706f57a51 b2evolution-0.9.0.12.ebuild 1332
-MD5 8d3164563466ec765321ab56c61538fe ChangeLog 981
+MD5 d72f245f33a3a247f5a2688271990838 ChangeLog 1158
 MD5 a87207b3b148a8e1057c02dad9d02af8 metadata.xml 247
-MD5 5a1f32b5f7da0414529e5b8ef583bb44 files/b2evolution-0.9.0.11.xmlrpc.patch 1157
+MD5 13e3fc5e0c82eb2be396bc4706f57a51 b2evolution-0.9.0.12.ebuild 1332
+MD5 b63af7f382c2447460348498c3ed17fe b2evolution-0.9.0.12-r1.ebuild 1508
 MD5 b1d08f2bc38239a6757449d0c54d3036 files/digest-b2evolution-0.9.0.12 81
 MD5 d584b5d4ec8d7378cbfcc77cde85306d files/postinstall-en.txt 340
+MD5 5a1f32b5f7da0414529e5b8ef583bb44 files/b2evolution-0.9.0.11.xmlrpc.patch 1157
+MD5 ad953d6f2d11692fe4efd3eeafb0ad0f files/digest-b2evolution-0.9.0.12-r1 144
 MD5 5a1f32b5f7da0414529e5b8ef583bb44 files/b2evolution-0.9.0.12-xmlrpc.patch 1157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCza7qTOXg++0VvJQRAhuQAJ9sp+S5tb5ycG4BvISX2dVVNsP52wCfQC22
-aDAH8VSdXS8Edjv0KQra+2A=
-=paDK
------END PGP SIGNATURE-----
