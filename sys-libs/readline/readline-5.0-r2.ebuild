@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.6 2005/08/06 02:57:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.7 2005/08/24 00:36:03 vapier Exp $
 
 inherit eutils multilib
 
@@ -73,7 +73,7 @@ src_install() {
 pkg_preinst() {
 	# Backwards compatibility #29865
 	if [[ -e ${ROOT}/$(get_libdir)/libreadline.so.4 ]] ; then
-		cp -a "${ROOT}"/$(get_libdir)/libreadline.so.4* "${D}"/$(get_libdir)/
+		cp -pPR "${ROOT}"/$(get_libdir)/libreadline.so.4* "${D}"/$(get_libdir)/
 		touch "${D}"/$(get_libdir)/libreadline.so.4*
 	fi
 }

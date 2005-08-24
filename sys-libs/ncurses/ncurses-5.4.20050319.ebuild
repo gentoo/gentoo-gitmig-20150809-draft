@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.20050319.ebuild,v 1.3 2005/05/10 01:01:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.20050319.ebuild,v 1.4 2005/08/24 00:35:41 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -140,12 +140,12 @@ src_install() {
 		cd "${D}"
 		rm -rf usr/share/man
 		cd usr/share/terminfo
-		cp -a l/linux n/nxterm v/vt100 "${T}"
+		cp -pPR l/linux n/nxterm v/vt100 "${T}"
 		rm -rf *
 		mkdir l x v
-		cp -a "${T}"/linux l
-		cp -a "${T}"/nxterm x/xterm
-		cp -a "${T}"/vt100 v
+		cp -pPR "${T}"/linux l
+		cp -pPR "${T}"/nxterm x/xterm
+		cp -pPR "${T}"/vt100 v
 	else
 		# Install xterm-debian terminfo entry to satisfy bug #18486
 		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir):${D}/$(get_libdir) \

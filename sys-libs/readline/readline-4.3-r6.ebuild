@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.11 2005/02/14 21:29:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r6.ebuild,v 1.12 2005/08/24 00:36:03 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -86,7 +86,7 @@ src_install() {
 	# Backwards compatibility #29865
 	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
 		[ "$(get_libdir)" != "lib" ] && dodir /lib
-		cp -a ${ROOT}/lib/libreadline.so.4.1 ${D}/lib/
+		cp -pPR ${ROOT}/lib/libreadline.so.4.1 ${D}/lib/
 		touch ${D}/lib/libreadline.so.4.1
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.25 2005/05/30 02:47:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.26 2005/08/24 00:35:41 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -139,12 +139,12 @@ src_install() {
 		cd ${D}
 		rm -rf usr/share/man
 		cd usr/share/terminfo
-		cp -a l/linux n/nxterm v/vt100 ${T}
+		cp -pPR l/linux n/nxterm v/vt100 ${T}
 		rm -rf *
 		mkdir l x v
-		cp -a ${T}/linux l
-		cp -a ${T}/nxterm x/xterm
-		cp -a ${T}/vt100 v
+		cp -pPR ${T}/linux l
+		cp -pPR ${T}/nxterm x/xterm
+		cp -pPR ${T}/vt100 v
 		# bash compilation requires static libncurses libraries, so
 		# this breaks the "build a new build image" system.  We now
 		# need to remove libncurses.a from the build image manually.
