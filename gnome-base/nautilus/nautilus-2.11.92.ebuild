@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.11.92.ebuild,v 1.1 2005/08/24 03:53:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.11.92.ebuild,v 1.2 2005/08/24 13:49:12 seemant Exp $
 
-inherit gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -77,3 +77,7 @@ pkg_setup() {
 	#WANT_AUTOMAKE=1.7 automake || die
 	#fi
 #}
+
+src_test() {
+	Xmake check || die
+}

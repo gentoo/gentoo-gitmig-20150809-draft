@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.11.92.ebuild,v 1.1 2005/08/24 01:33:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.11.92.ebuild,v 1.2 2005/08/24 13:47:32 seemant Exp $
 
-inherit gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="The Eazel Extentions Library"
 HOMEPAGE="http://www.gnome.org/"
@@ -37,4 +37,8 @@ USE_DESTDIR="1"
 
 pkg_setup() {
 	G2CONF="$(use_enable static)"
+}
+
+src_test() {
+	Xmake check || die
 }
