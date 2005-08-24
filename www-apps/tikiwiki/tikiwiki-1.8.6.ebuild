@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.5-r2.ebuild,v 1.3 2005/08/24 22:40:37 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.6.ebuild,v 1.1 2005/08/24 22:40:37 rl03 Exp $
 
-inherit eutils webapp
+inherit webapp
 
 DESCRIPTION="Full featured Web Content Management System using Php and Smarty Templates"
 HOMEPAGE="http://tikiwiki.org/"
@@ -10,16 +10,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 IUSE=""
-KEYWORDS="~amd64 ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/php
 	media-gfx/graphviz"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/xmlrpc2-${PV}.patch
-}
 
 src_install() {
 	webapp_src_preinst

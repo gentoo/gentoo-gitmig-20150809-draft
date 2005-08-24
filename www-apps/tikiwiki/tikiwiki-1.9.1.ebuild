@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.0-r1.ebuild,v 1.3 2005/08/23 19:32:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.1.ebuild,v 1.1 2005/08/24 22:40:37 rl03 Exp $
 
-inherit webapp eutils
+inherit webapp
 
 DESCRIPTION="Full featured Web Content Management System using Php and Smarty Templates"
 HOMEPAGE="http://tikiwiki.org/"
@@ -17,12 +17,6 @@ RDEPEND="virtual/php
 	postgres? ( dev-db/postgresql )
 	graphviz? ( media-gfx/graphviz )
 "
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/xmlrpc2-${PV}.patch
-}
-
 pkg_setup () {
 	webapp_pkg_setup
 	einfo "Make sure your PHP is compiled with mysql or postgres support"
@@ -34,7 +28,7 @@ src_install() {
 
 	local DIR
 	local DIRENTRY
-	local DIRS="backups db dump files img/wiki
+	local DIRS="backups db dump files img/trackers img/wiki
 		img/wiki_up modules/cache temp temp/cache
 		templates_c templates styles maps whelp mods
 		lib/Galaxia/processes"
