@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obpager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.3 2005/06/19 22:51:15 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.4 2005/08/24 00:48:14 smithj Exp $
+
+  24 Aug 2005; Jonathan Smith <smithj@gentoo.org> obpager-1.8.ebuild:
+  #100405: sedded #include <errno.h> into main.cc so it actually compiles
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org> obpager-1.8.ebuild:
   stable x86
