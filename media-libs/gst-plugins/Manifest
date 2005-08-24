@@ -1,5 +1,5 @@
 MD5 3e6a724afd82f75a69f551d4b976303b gst-plugins-0.8.3.ebuild 1869
-MD5 eaf7e7efd52b91f769114648167ea793 gst-plugins-0.8.8-r2.ebuild 2159
+MD5 be9049e2cf5453fb16bcad409f50a363 gst-plugins-0.8.8-r2.ebuild 2161
 MD5 d4dde2cb238164f6f0e2a4b64ae52daa gst-plugins-0.8.8-r1.ebuild 2037
 MD5 6721b10e24aaf1e7bad6eda7dc94dfab gst-plugins-0.8.9.ebuild 2044
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
@@ -7,7 +7,7 @@ MD5 258e3396c7280ce6c4c8f82c7305a1ab gst-plugins-0.8.9-r2.ebuild 2273
 MD5 f7cda973aab228bdbbf67f9867e287d4 gst-plugins-0.8.8.ebuild 1933
 MD5 b7b310f5074907a9a1125997c4eed19e gst-plugins-0.8.9-r1.ebuild 2163
 MD5 d8d8df9fa1d27db4e838fe5f88469c37 gst-plugins-0.8.7.ebuild 2013
-MD5 13a8bbb4451ef2fe4b21d47e3571a118 ChangeLog 15752
+MD5 fb2c185dc5f1641bbb606bae859f8289 ChangeLog 15853
 MD5 4d7330ab641498e301c9b0697bc9c8bf gst-plugins-0.8.1.ebuild 2253
 MD5 d7cacbfacbedd2429f72181c730b6ee8 gst-plugins-0.8.2.ebuild 1869
 MD5 c44faffd8ec5f29572f7ba991e74bb9b gst-plugins-0.8.10.ebuild 1944
