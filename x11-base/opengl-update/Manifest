@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 f733fc7c6cab9712236a0ac0dfc22744 ChangeLog 19507
 MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
 MD5 47e72283d661e1735ac1b23e65bebf74 opengl-update-2.2.1.ebuild 2661
-MD5 43b33f62a394a91e8c4afedea2444ea2 opengl-update-3.0.0.ebuild 753
+MD5 4fe0e5469fe479fc9ad75aaacd6a4e8d opengl-update-3.0.0.ebuild 729
 MD5 9ee8e7fcccc74e1ee7e79a75cbeeb4ee opengl-update-2.2.3.ebuild 2671
 MD5 9ca0096c67317e2644873df1fb3a2eca opengl-update-2.2.3-r1.ebuild 2583
 MD5 d6b4a7de2926d22a6b52f4d129ce3e7f files/digest-opengl-update-2.2.3-r1 116
@@ -20,7 +20,7 @@ MD5 600714175bf22abf40ed067b3dcb600d files/glxext.h-inttypes.patch 671
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDA7JTArHZZzCEUG0RAiXDAJ9redhVMnYGgSNWPdmxVlpOCIkX5QCdGv23
-IfyExljrMh5wykj4PRmoCq8=
-=103R
+iD8DBQFDDLbGArHZZzCEUG0RArV0AJ9rqzekCrRcb4QnPJY7QhNa8XbJPgCeKqkV
+euv3s7ut7v6LNy53yJOCGlc=
+=VKcF
 -----END PGP SIGNATURE-----
