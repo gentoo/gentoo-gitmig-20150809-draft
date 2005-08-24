@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.6 2005/08/23 13:34:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.7 2005/08/24 09:33:08 ferdy Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -185,7 +185,7 @@ src_install() {
 
 	einfo "Locking down vpopmail permissions"
 	# secure things more, i don't want the vpopmail user being able to write this stuff!
-	chown -R root:root ${D}${VPOP_HOME}/{bin,etc,include}
+	chown -R root:0 ${D}${VPOP_HOME}/{bin,etc,include}
 	chown root:vpopmail ${D}${VPOP_HOME}/bin/vchkpw
 	chmod 4711 ${D}${VPOP_HOME}/bin/vchkpw
 }

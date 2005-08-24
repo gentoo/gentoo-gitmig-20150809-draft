@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 37ae878a517b533517735465a5a3fe2a vpopmail-5.4.9-r2.ebuild 7828
-MD5 3f5471f53235d2bd5449629d942c0fff vpopmail-5.4.10.ebuild 7833
-MD5 eac7dd44901d659ced4d28714fad3743 vpopmail-5.4.6-r1.ebuild 7638
-MD5 d0bd9817d081a624f412944351b6aed2 ChangeLog 9913
+MD5 6c2f97b7d1bc24143fb775daf0ec27f5 vpopmail-5.4.9-r2.ebuild 7825
+MD5 99a7c3865421e69d06bb053a9940bee3 vpopmail-5.4.10.ebuild 7830
+MD5 2e61dc38b00dcafb76d248bbbb1c4b12 vpopmail-5.4.6-r1.ebuild 7636
+MD5 ed1e2d9c4678b62c6fce8c6bb87d9f05 ChangeLog 10098
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 8c6ca78a4c32c9a267dd9c3f7e9db5f1 files/vpopmail-Maildir-dotmaildir-fix.sh 1480
 MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
@@ -21,7 +21,7 @@ MD5 175cc82c17dfbb2ab785271ff71e8f5c files/digest-vpopmail-5.4.10 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCyXtQlM6RnzZP+IRAouOAKCfv+jBR5ecyGO2MYLSE4Wn3dAtZQCgrUbY
-l3upA9U/AGpwpWqIYA1F3mU=
-=45x+
+iD8DBQFDDD75ViELBEf1JB0RAs/YAJ9NhfYIbbr958J1MF6mP/1M2chgbACeKJHv
+fhvxn29rN0LKwSfhzaE1FSA=
+=R8tm
 -----END PGP SIGNATURE-----
