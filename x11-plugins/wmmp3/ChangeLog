@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmp3
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.5 2004/11/24 23:24:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.6 2005/08/24 07:54:42 s4t4n Exp $
+
+  24 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmmp3-0.12.ebuild:
+  Added patch to make safety checks on X includes and libraries, fixes
+  bug #103531.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmmp3-0.12.ebuild:
   Added ~sparc keyword.

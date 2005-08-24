@@ -1,4 +1,5 @@
-MD5 2a504dc58f78b65131cc053c88c2d944 ChangeLog 825
+MD5 b0b177902adb252c2b3bdfcb4e1626bd wmmp3-0.12.ebuild 1016
+MD5 8a7fdfd55bf71d4e7cdb1c0c20d96dc6 ChangeLog 983
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 3a639961b0c2bce204e2c7ff8dae9d07 wmmp3-0.12.ebuild 890
 MD5 632f433b2b4fca8b12da86ca825f44d6 files/digest-wmmp3-0.12 61
+MD5 15e66942968039ecdb324c4dee9f1e00 files/wmmp3-0.12-x_includes_n_libraries.patch 582
