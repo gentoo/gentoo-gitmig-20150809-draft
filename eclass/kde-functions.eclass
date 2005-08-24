@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.121 2005/08/08 10:38:10 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.122 2005/08/24 22:54:14 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -646,17 +646,9 @@ need-kde() {
 			need-automake 1.6
 			need-autoconf 2.5
 			;;
-		3.2*)
+		3*)	# a generic call for need-kde 3 - automake 1.7 works most often
 			need-autoconf 2.5
 			need-automake 1.7
-			;;
-		3.4*)
-			need-autoconf 2.5
-			need-automake 1.7
-			;;
-		3*)	# a generic call for need-kde 3 - automake 1.4 works most often
-			need-autoconf 2.5
-			need-automake 1.4
 			;;
 		5*)
 			need-autoconf 2.5
@@ -749,7 +741,9 @@ set-kdedir() {
 				3.2) export PREFIX="/usr/kde/3.2";;
 				3.3) export PREFIX="/usr/kde/3.3";;
 				3.4) export PREFIX="/usr/kde/3.4";;
+				3.5) export PREFIX="/usr/kde/3.5";;
 				5.0) export PREFIX="/usr/kde/cvs";;
+				*) die "failed to set PREFIX";;
 			esac
 		fi
 	fi
@@ -762,7 +756,7 @@ set-kdedir() {
 	else
 		if [ -z "$KDEBASE" ]; then
 			# find the latest kdelibs installed
-			for x in /usr/kde/{cvs,3.4,3.3,3.2,3.1,3.0,3} $PREFIX $KDE3LIBSDIR $KDELIBSDIR $KDE3DIR $KDEDIR /usr/kde/*; do
+			for x in /usr/kde/{cvs,3.5,3.4,3.3,3.2,3.1,3.0,3} $PREFIX $KDE3LIBSDIR $KDELIBSDIR $KDE3DIR $KDEDIR /usr/kde/*; do
 				if [ -f "${x}/include/kwin.h" ]; then
 					debug-print found
 					export KDEDIR="$x"
@@ -777,15 +771,12 @@ set-kdedir() {
 				3.2) export KDEDIR="/usr/kde/3.2";;
 				3.3) export KDEDIR="/usr/kde/3.3";;
 				3.4) export KDEDIR="/usr/kde/3.4";;
+				3.5) export KDEDIR="/usr/kde/3.5";;
 				5.0) export KDEDIR="/usr/kde/cvs";;
+				*) die "failed to set KDEDIR";;
 			esac
 		fi
 	fi
-
-
-	# check that we've set everything
-	[ -z "$PREFIX" ] && debug-print "$FUNCNAME: ERROR: could not set install prefix"
-	[ -z "$KDEDIR" ] && debug-print "$FUNCNAME: ERROR: couldn't set kdelibs location"
 
 	debug-print "$FUNCNAME: Will use the kdelibs installed in $KDEDIR, and install into $PREFIX."
 
@@ -830,6 +821,7 @@ qtver-from-kdever() {
 		3.2*)	ver=3.2;;
 		3.3*)	ver=3.3;;
 		3.4*)	ver=3.3;;
+		3.5*)	ver=3.3;;
 		3*)	ver=3.0.5;;
 		5)	ver=3.3;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
@@ -850,6 +842,7 @@ min-kde-ver() {
 		3.2*)			selected_version="3.2";;
 		3.3*)			selected_version="3.3";;
 		3.4*)			selected_version="3.4";;
+		3.5*)			selected_version="3.5";;
 		3*)			selected_version="3.0";;
 		5)			selected_version="5";;
 		*)			echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
