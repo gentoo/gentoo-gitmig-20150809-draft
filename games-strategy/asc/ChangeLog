@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/asc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.17 2005/08/24 04:17:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.18 2005/08/24 04:21:12 mr_bones_ Exp $
+
+  24 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> -asc-1.15.1.0.ebuild,
+  -asc-1.15.2.1.ebuild, -asc-1.15.3.0.ebuild, -asc-1.16.0.0.ebuild,
+  -asc-1.16.1.0.ebuild:
+  clean older ebuilds
 
   24 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> asc-1.16.2.0.ebuild:
   stable for x86
