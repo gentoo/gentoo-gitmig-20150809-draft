@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtester
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.13 2005/08/24 01:34:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.14 2005/08/24 15:35:38 gustavoz Exp $
+
+  24 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  memtester-4.0.3.ebuild:
+  Stable on sparc
 
 *memtester-4.0.5 (24 Aug 2005)
 

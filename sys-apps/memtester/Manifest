@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 4e731afb260c60b98be024b02aa1b08f memtester-4.0.5.ebuild 810
+MD5 947a86c2241e68409f5f90e5cea91669 memtester-4.0.3.ebuild 813
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c461722e09f300a9d64e5a0920179816 memtester-2.93.1.ebuild 604
-MD5 4e731afb260c60b98be024b02aa1b08f memtester-4.0.5.ebuild 810
-MD5 7f068783d2ad6e00da042539ac6aee82 memtester-4.0.3.ebuild 812
-MD5 1a759a2ff76e629082f8dca1913dedd2 ChangeLog 1353
+MD5 b62472c4c96824ff784d18e44d973a10 ChangeLog 1454
+MD5 94a91140b48fbb8000a55240eb77c284 files/digest-memtester-4.0.5 66
 MD5 7ced0f46ff9b510c6a49801830223c4b files/digest-memtester-2.93.1 68
 MD5 786cf4e53b2d7e835b564e54f2d80e42 files/digest-memtester-4.0.3 66
-MD5 94a91140b48fbb8000a55240eb77c284 files/digest-memtester-4.0.5 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDC87KgIKl8Uu19MoRAmbgAJ4jerW7Mo14p5SwwoU32W25qRGs1ACfYTqG
-tHrQ8u1gZeCWq0U73lUL9BU=
-=HtN1
+iD8DBQFDDJPvKRy60XGEcJIRAhxeAJ9FqMopDNfNbb1bdnCSSK4cz4GWfwCfWkjn
+RpV8dwzJh/qgk4IYNksHQ4M=
+=/l2N
 -----END PGP SIGNATURE-----
