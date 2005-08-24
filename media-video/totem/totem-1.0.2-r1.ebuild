@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.2-r1.ebuild,v 1.14 2005/07/07 05:20:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.2-r1.ebuild,v 1.15 2005/08/24 19:18:01 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -21,8 +21,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=gnome-base/libgnomeui-2.4
 	gnome? ( >=gnome-base/nautilus-2.10 )
 	lirc? ( app-misc/lirc )
-	!sparc? ( xine? ( >=media-libs/xine-lib-1
-		>=gnome-base/gconf-2 ) )
+	xine? ( >=media-libs/xine-lib-1
+		>=gnome-base/gconf-2 )
 	!xine? ( >=media-libs/gstreamer-0.8.9-r3
 		>=media-libs/gst-plugins-0.8.8
 		>=media-plugins/gst-plugins-gnomevfs-0.8.8
@@ -55,7 +55,6 @@ DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
 # gstreamer is default backend
 use xine || G2CONF="${G2CONF} --enable-gstreamer"
-use sparc && G2CONF="${G2CONF} --enable-gstreamer"
 
 # gtk only support broken
 #use gnome \

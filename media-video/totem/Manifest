@@ -1,8 +1,18 @@
-MD5 4b078104568262a002b041879093ac87 ChangeLog 9327
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f87fffe94bf0d33cce6087078649836 totem-1.0.4.ebuild 2689
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
-MD5 4bb4654f81871b8e07e00156b574abf8 totem-1.0.2-r1.ebuild 2790
-MD5 63ade05cc2a1ee56a05760905d3af9c9 totem-1.0.4.ebuild 2753
-MD5 7e5a2048d71f5bd98866aba5531f9012 files/digest-totem-1.0.2-r1 65
+MD5 65f366a3d4c31a67b0a30e46886d2354 ChangeLog 9471
+MD5 089f804ba17d80ad9dfa04b3974e533a totem-1.0.2-r1.ebuild 2729
 MD5 ac8a4cf594e065c2ddc00dc70c8d2170 files/digest-totem-1.0.4 65
-MD5 cccfa415897f1198d6cb702e258b85a9 files/totem-1.0.4-fbsd.patch 1190
 MD5 35a6d2e3ca24f11ad967a671a008b488 files/totem-1.0.2-xine_no_xxmc.patch 360
+MD5 7e5a2048d71f5bd98866aba5531f9012 files/digest-totem-1.0.2-r1 65
+MD5 cccfa415897f1198d6cb702e258b85a9 files/totem-1.0.4-fbsd.patch 1190
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDDMgGKRy60XGEcJIRAjY2AJ4hNRZ1xKXze48nmXwI1FBzS/eQ/ACghb1s
+q5TBu/279BwTKbyTLRAMx34=
+=a9Zm
+-----END PGP SIGNATURE-----
