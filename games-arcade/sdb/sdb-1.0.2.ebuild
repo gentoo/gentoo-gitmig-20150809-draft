@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.3 2005/06/11 13:38:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.4 2005/08/24 05:44:11 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://gcsociety.sp.cs.cmu.edu/~frenzy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl

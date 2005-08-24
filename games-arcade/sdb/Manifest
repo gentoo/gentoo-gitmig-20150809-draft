@@ -1,5 +1,5 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3d2ea694e2212f09a8f77c7e92e0bf38 ChangeLog 474
-MD5 0b3eaf1b366acb78328ae738a2d11916 sdb-1.0.2.ebuild 1284
+MD5 56ee864c149d0b516a832b897e10ebc1 ChangeLog 568
+MD5 cbd336b7195064a4e42f6c415c17b884 sdb-1.0.2.ebuild 1283
 MD5 5ddd476fed1752ad3e6e0b7d48dbafcf files/digest-sdb-1.0.2 63
 MD5 df064aed1221449e2f612a76395a3ece files/sdb-1.0.2-endian.patch 9118
