@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.91 2005/08/23 19:28:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.92 2005/08/24 13:24:08 wolf31o2 Exp $
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.5.2.8848-r6.ebuild,
+  vmware-workstation-5.0.0.13124-r1.ebuild:
+  root:root -> root:0 for bug #103563.
 
   23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r3.ebuild,

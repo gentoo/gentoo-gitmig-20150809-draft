@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r6.ebuild,v 1.5 2005/08/23 19:28:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r6.ebuild,v 1.6 2005/08/24 13:24:08 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -123,7 +123,7 @@ src_install() {
 	dosym ${dir}/bin/vmware /usr/bin/vmware
 
 	# this removes the user/group warnings
-	chown -R root:root ${D}
+	chown -R root:0 ${D}
 
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
