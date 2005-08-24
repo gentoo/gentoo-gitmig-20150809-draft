@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.11 2005/07/07 18:24:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.12 2005/08/24 15:59:53 flameeyes Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 
 	cd ${S}
 
-	epatch ${FILESDIR}/${PN}-dsp-handle-fix.patch || die "patching failed"
+	epatch ${FILESDIR}/${PN}-dsp-handle-fix.patch
 	emake -f Makefile_plain LDLIBS="${ldlibs}" CFLAGS="${cflags}" DEFS="${defs}" || die "make failed"
 }
 

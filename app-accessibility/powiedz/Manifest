@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7d4c09e19e1f6bfdb4010de1a15edc4d powiedz-1.0.ebuild 1226
-MD5 bd04bd6dcdba6c034324a2a44309764b ChangeLog 1114
+MD5 af5aa30361bc633ef0fdf4d8998000fe ChangeLog 1221
+MD5 a2303e8d31f03004a05a3cb5a3719622 powiedz-1.0.ebuild 1205
 MD5 9561bdfabc1befe49c8b99cc6bacae06 metadata.xml 246
-MD5 4526d1e4265ddf9722695c2191433c44 files/digest-powiedz-1.0 59
 MD5 9b506e78c6b39860f012c53dbfd10713 files/powiedz.desktop 183
+MD5 4526d1e4265ddf9722695c2191433c44 files/digest-powiedz-1.0 59
 MD5 d8c4b3e5bbece9797135eceff7b91715 files/powiedz-dsp-handle-fix.patch 427
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCzXOachej4aZK9/cRArVzAJ9dfv3te9fMTA0wNVf3a+xh0PFiTQCfXq7D
-E9TRMQ6S4fcWbYAjcORTEAE=
-=WuDS
+iD8DBQFDDJmcj5H05b2HAEkRApzMAJwPCU+k62+tkogRXK+IPInJSP369ACeK7n2
+eVrusq/EUvzLddZdPhoM3Ws=
+=2/Xp
 -----END PGP SIGNATURE-----
