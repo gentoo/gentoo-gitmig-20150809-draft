@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 36b52a78b1e8d7e4f4c2e1a663e4ba81 ChangeLog 5686
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 30dc09db31aebe77824b5bacc3a34c67 bittornado-0.3.10.ebuild 2067
@@ -10,3 +13,10 @@ MD5 709a3dae79ddb5cfc966cce563ed15d5 files/digest-bittornado-0.3.10 69
 MD5 c3329d42b780ea4163ec94d1336d610b files/digest-bittornado-0.3.12 69
 MD5 68ff80aa60200feb7a3c22a3ad17bbea files/digest-bittornado-0.3.8 68
 MD5 7779a7eaf51eb9f84da8a588050f53fa files/favicon.ico 1406
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDKroZ/iYVBmujdURAo9wAJ48hEmJWFCSuiWciTvI+D+UZ56q/gCgmmva
+4IbsLUWs4APFw+fiE15IEDw=
+=qNEU
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.39 2005/06/17 20:36:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.40 2005/08/24 15:09:22 sekretarz Exp $
+
+  24 Aug 2005; <sekretarz@gentoo.org> bittornado-0.3.8.ebuild,
+  bittornado-0.3.10.ebuild, bittornado-0.3.12.ebuild:
+  Using -pPR instead -a option in cp, bug #103487
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   bittornado-0.3.12.ebuild:
