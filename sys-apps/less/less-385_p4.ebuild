@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4.ebuild,v 1.3 2005/08/18 04:02:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4.ebuild,v 1.4 2005/08/24 23:49:25 vapier Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_PV=${PV/_p*}
 MY_P=${PN}-${MY_PV}
 PATCH_VER=${PV/_p/-cl}
 DESCRIPTION="Excellent text file viewer"
-HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://gna.org/forum/forum.php?forum_id=714"
+HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://gna.org/forum/forum.php?forum_id=715"
 SRC_URI="http://www.greenwoodsoftware.com/less/${MY_P}.tar.gz
 	http://download.gna.org/hpr/less/${MY_PV}/${PATCH_VER}/less-${PATCH_VER}.patch.bz2"
 
