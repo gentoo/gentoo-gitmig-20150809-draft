@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d11f263aee4e82f28de6255e33326d30 xmodmap-0.99.0.ebuild 416
+MD5 3d228bf3d94250f41e23cc8175cb97c9 xmodmap-0.99.0.ebuild 428
 MD5 0fc70feeee8e7e4f3acf54b68ff821a3 ChangeLog 557
 MD5 bb16baaacd281fc19e8e4623eb3b5f3c files/digest-xmodmap-0.99.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCxW/2G5bA0cA/ScRAocbAJ93lTn0eKKWoIOfa/Gw0Q5gkIn5+ACfYt1a
-iyCYRSFPFdk1F0wL/qCoMk8=
-=ywDS
------END PGP SIGNATURE-----
