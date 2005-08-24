@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.19 2005/06/13 22:45:28 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.20 2005/08/24 17:10:31 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org> xzgv-0.8-r1.ebuild:
+  stable on ia64
 
   13 Jun 2005; Jonathan Smith <smithj@gentoo.org> metadata.xml:
   taking over this package
