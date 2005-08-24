@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/fann
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.3 2005/01/04 11:37:55 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.4 2005/08/24 09:31:15 satya Exp $
+
+  24 Aug 2005; Christian Andreetta <satya@gentoo.org> fann-1.2.0.ebuild,
+  fann-1.2.0-r1.ebuild:
+  'cp -pPR' instead of 'cp -a' required by Darwin and BSD (bug #103487)
 
 *fann-1.2.0-r1 (04 Jan 2005)
 
