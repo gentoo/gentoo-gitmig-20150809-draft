@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-050314.1.ebuild,v 1.3 2005/05/01 17:15:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-050314.1.ebuild,v 1.4 2005/08/24 14:18:40 flameeyes Exp $
 
 inherit eutils webapp
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:"snort.alert":"snort".$dirsep."alert":g' snortsnarf.pl \
+	sed -i -e 's:"snort.alert":"snort".$dirsep."alert":g' snortsnarf.pl \
 		|| die "sed snortsnarf.pl failed"
 	epatch ${FILESDIR}/${PN}-021111.1-fix-array-refs.diff
 	epatch ${FILESDIR}/${PN}-021111.1-usage.patch
@@ -46,7 +46,7 @@ src_install() {
 	doins cgi/*
 
 	dodir /usr/lib/perl5/site_perl/$PERL_V/SnortSnarf
-	cp -a include/* ${D}/usr/lib/perl5/site_perl/$PERL_V
+	cp -pPR include/* ${D}/usr/lib/perl5/site_perl/$PERL_V
 
 	webapp_src_install
 }
