@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.21 2005/08/23 20:29:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.22 2005/08/24 16:43:03 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org> fontforge-20050502.ebuild:
+  stable on ia64
 
   23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   fontforge-20050502.ebuild:

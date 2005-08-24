@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9248ab94d30ffdfda2ebcb7a694280d5 fontforge-20050310.ebuild 1261
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 c281fdbf9035ba824121186ec2b16821 fontforge-20050502.ebuild 1270
 MD5 72c423bc68cd5085d66a5b653c008dbc fontforge-20050624.ebuild 1283
-MD5 f62facae59efde89fead214caf289cac ChangeLog 3438
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 badca660cd16979e45a128740e72c4e9 ChangeLog 3533
+MD5 9248ab94d30ffdfda2ebcb7a694280d5 fontforge-20050310.ebuild 1261
+MD5 16b68843ac2f2729cf22bf6139bd82fe fontforge-20050502.ebuild 1269
 MD5 632835539ac9bcbedc4695eb7bdc34c3 fontforge-20041231.ebuild 1298
-MD5 f8fa572061a50dba58afc848e19f773f files/digest-fontforge-20050310 73
-MD5 134c4b8ebaff766b1c675d67597995a1 files/digest-fontforge-20041231 73
 MD5 b5f7c338b5ca0ba3c431716b8a327583 files/digest-fontforge-20050624 73
+MD5 134c4b8ebaff766b1c675d67597995a1 files/digest-fontforge-20041231 73
 MD5 c2f2a20ada47b08aac3dd88ccf55864c files/digest-fontforge-20050502 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDC4dYKRy60XGEcJIRAnHXAKCwg+/9kcfqFX1vgUo3onEkojuUHACeKQxx
-7tcKDKY1R4UEUi1vdRiRuls=
-=CKRB
------END PGP SIGNATURE-----
+MD5 f8fa572061a50dba58afc848e19f773f files/digest-fontforge-20050310 73
