@@ -1,6 +1,16 @@
-MD5 35c29e5e09d685900e385da697e368ec ChangeLog 1202
-MD5 c461722e09f300a9d64e5a0920179816 memtester-2.93.1.ebuild 604
-MD5 2f2d849a530b8df63da1eb5d0800ab1e memtester-4.0.3.ebuild 802
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 c461722e09f300a9d64e5a0920179816 memtester-2.93.1.ebuild 604
+MD5 3302b01333811994aa0141f94ecd3649 memtester-4.0.3.ebuild 799
+MD5 35c29e5e09d685900e385da697e368ec ChangeLog 1202
 MD5 7ced0f46ff9b510c6a49801830223c4b files/digest-memtester-2.93.1 68
 MD5 786cf4e53b2d7e835b564e54f2d80e42 files/digest-memtester-4.0.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC830gIKl8Uu19MoRAnw3AJ4kihBRx4YPjM1x0iqK/rW6WUXIjgCfeYzA
+NGa9iolcRa/sPwm8EUycCPg=
+=AuXA
+-----END PGP SIGNATURE-----
