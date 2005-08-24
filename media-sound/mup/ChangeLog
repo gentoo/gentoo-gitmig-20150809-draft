@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.14 2005/07/25 13:51:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/ChangeLog,v 1.15 2005/08/24 07:48:41 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> mup-5.0.ebuild:
+  Just chown root if you need to make setuid a binary, the group can be
+  different.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> mup-5.0.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.0.ebuild,v 1.5 2005/07/25 13:51:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.0.ebuild,v 1.6 2005/08/24 07:48:41 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -75,7 +75,7 @@ pkg_postinst() {
 		einfo "requires that it can write to the console device. To allow"
 		einfo "this, make mupdisp setuid to root, like this:"
 		einfo
-		einfo "\tchown root:root /usr/bin/mupdisp"
+		einfo "\tchown root /usr/bin/mupdisp"
 		einfo "\tchmod u+s /usr/bin/mupdisp"
 	fi
 	if use X || use svga ; then
