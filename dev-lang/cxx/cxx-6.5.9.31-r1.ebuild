@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.9 2005/07/09 18:12:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31-r1.ebuild,v 1.10 2005/08/24 09:06:50 taviso Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -75,7 +75,7 @@ src_unpack() {
 	dd ibs=`rpmoffset < ${i}` skip=1 if=$i 2>/dev/null \
 		| gzip -dc | cpio -idmu 2>/dev/null \
 		&& find usr -type d -print0 | xargs -0 chmod a+rx \
-		&& chmod -R g-w usr && chown -R root:root usr
+		&& chmod -R g-w usr && chown -R root:0 usr
 	eend ${?}
 	assert "Failed to unpack ${cxx_rpm}"
 }
