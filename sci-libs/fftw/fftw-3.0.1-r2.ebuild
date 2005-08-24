@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.7 2005/08/11 23:47:40 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.0.1-r2.ebuild,v 1.8 2005/08/24 16:36:27 phosphan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd "${WORKDIR}"
 	use ppc-macos && epatch ${FILESDIR}/${PN}-ppc-macos.patch
 	mv ${P} ${P}-single
-	cp -a ${P}-single ${P}-double
+	cp -pPR ${P}-single ${P}-double
 }
 
 src_compile() {
