@@ -1,8 +1,18 @@
-MD5 02cc8a25e6f48756b9b510d83def4c89 xmmplayer-0.3.3.ebuild 761
-MD5 717f14a3cc062c4041b311c278364e7a xmmplayer-0.2.1.ebuild 762
-MD5 14a6971fecddcadcdfda1fd24b6d8b4c ChangeLog 1304
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c848b29139ad8d04805362dc45aea1c4 xmmplayer-0.3.1.ebuild 762
+MD5 b5b3a7c6b0c5d4ffde552d18e153216f xmmplayer-0.3.3.ebuild 766
 MD5 223dfdc3e10800dbb22bad28c928b52a metadata.xml 177
-MD5 7bd0c4a0449bd0dc41a7e73bacc8b24f files/digest-xmmplayer-0.2.1 67
+MD5 717f14a3cc062c4041b311c278364e7a xmmplayer-0.2.1.ebuild 762
+MD5 19bfb39f3010d9bfc3726f0c03087fdc ChangeLog 1441
 MD5 4ba76c0357172a99f660e0b12e45982c files/digest-xmmplayer-0.3.1 67
 MD5 557b61d3aa83aba0a057ae1279f1a1a8 files/digest-xmmplayer-0.3.3 67
+MD5 7bd0c4a0449bd0dc41a7e73bacc8b24f files/digest-xmmplayer-0.2.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDQEmmOfEJZHYOKcRAn1RAJ94/mv1IfAoT55y1ccQxLlsYRVnwQCgmkqV
+UOKX/8aM3oqMKuLufpqtT3w=
+=O0q/
+-----END PGP SIGNATURE-----
