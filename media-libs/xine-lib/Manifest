@@ -1,16 +1,26 @@
-MD5 963904335ddd3fd90c0d6b0f57623663 xine-lib-1.1.0.ebuild 7282
-MD5 548e10de9d321dcde2c462afee9530e5 xine-lib-1.1.0-r1.ebuild 6340
-MD5 d9c8313a7655ca801a2e893bf8fcfc72 xine-lib-1.0-r2.ebuild 7114
-MD5 6b5209f80c08295cc46aa8953f88945f xine-lib-1_rc6-r2.ebuild 5200
-MD5 0ee055a2a3b1dab3d1e359b36059f2ed xine-lib-1.0.1-r3.ebuild 7463
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5529b17488d439ea93b380bacdb0a7a7 metadata.xml 239
-MD5 31e9c61884e82a9f95e4da1db5642500 xine-lib-1.0.2.ebuild 7466
-MD5 b786aa8126e6ba71fd19ae15ee7552e0 ChangeLog 12034
+MD5 548e10de9d321dcde2c462afee9530e5 xine-lib-1.1.0-r1.ebuild 6340
+MD5 0ee055a2a3b1dab3d1e359b36059f2ed xine-lib-1.0.1-r3.ebuild 7463
+MD5 d9c8313a7655ca801a2e893bf8fcfc72 xine-lib-1.0-r2.ebuild 7114
 MD5 05ac5f3e87594fa2a81a1a810983c9cf xine-lib-1_rc8-r1.ebuild 5240
-MD5 b5cff6ac57a1f66ac90f95608a138717 files/digest-xine-lib-1.0.2 137
-MD5 33da8deb9637be23cd464aba9c5c4ac4 files/digest-xine-lib-1.1.0 137
-MD5 73353231a7958597249b14903d98aa3f files/digest-xine-lib-1.1.0-r1 137
-MD5 51e97df2f6ae538ab33a802eafb10457 files/digest-xine-lib-1_rc8-r1 138
+MD5 31e9c61884e82a9f95e4da1db5642500 xine-lib-1.0.2.ebuild 7466
+MD5 9cee3270c61e27679494690c8fc402ed xine-lib-1.1.0.ebuild 7280
+MD5 6b5209f80c08295cc46aa8953f88945f xine-lib-1_rc6-r2.ebuild 5200
+MD5 4d3cf0b8e8d336e89208afbdf66ed24c ChangeLog 12152
 MD5 9678227c043f04d5e8561cb6ba80d3e6 files/digest-xine-lib-1.0.1-r3 137
 MD5 44995c2f2dc4faa99ed2795e5e401719 files/digest-xine-lib-1.0-r2 134
+MD5 33da8deb9637be23cd464aba9c5c4ac4 files/digest-xine-lib-1.1.0 137
+MD5 b5cff6ac57a1f66ac90f95608a138717 files/digest-xine-lib-1.0.2 137
 MD5 57a9f924e9a78a68610f12a3f59435b3 files/digest-xine-lib-1_rc6-r2 139
+MD5 73353231a7958597249b14903d98aa3f files/digest-xine-lib-1.1.0-r1 137
+MD5 51e97df2f6ae538ab33a802eafb10457 files/digest-xine-lib-1_rc8-r1 138
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDDMvmKRy60XGEcJIRArF0AJ9EB3B1BUhURcywNBHMyzgFhRydVACfeAAA
+68IbRpNRJ9hif7/1WI3CwTY=
+=s63r
+-----END PGP SIGNATURE-----
