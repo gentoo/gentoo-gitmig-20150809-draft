@@ -2,19 +2,19 @@
 Hash: SHA1
 
 MD5 5cbb4339714eaa2fd6e5a1e3c8575b8f mime-types-1.0.ebuild 506
-MD5 e7450a9de8522f1e513e4ce9aa26352f mime-types-3.ebuild 542
+MD5 2bbbdc3f8cfb5f93fb232d7bd40c445e mime-types-3.ebuild 541
 MD5 4b35322240d49da9cc992df816c622d1 mime-types-1.0-r1.ebuild 534
 MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
-MD5 b9288bddc6fd74bf53b115d02fc15b3f ChangeLog 3069
+MD5 48ec302ac5edfdf8d89ff2cc480b56fa ChangeLog 3156
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 70a0a661efdf25f44423fcf623e6a511 files/digest-mime-types-1.0-r1 68
 MD5 215fe0afc74ecf02f4614b6be1122753 files/digest-mime-types-2 63
 MD5 c92d6d001f3ea5c1deb593b177666734 files/digest-mime-types-3 63
 MD5 0d15f9f712d0699eebc5e3309135eb51 files/digest-mime-types-1.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCpu3aQlM6RnzZP+IRApdgAJ4qvPUZBe2MrwMwMoOxNInmwFXolwCZAQF7
-990Bm127Zbr+lCkWns1Q+fU=
-=lIjU
+iD8DBQFDDF5SQlM6RnzZP+IRArjrAJ44TDrQH68Xfpk25BceTAouxGWtsgCgoiBG
+P1c40bMI3WeYnvPW8oImUcE=
+=jWRO
 -----END PGP SIGNATURE-----

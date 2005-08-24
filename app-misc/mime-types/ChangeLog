@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.25 2005/06/08 13:08:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.26 2005/08/24 11:47:06 ticho Exp $
+
+  24 Aug 2005; Andrej Kacian <ticho@gentoo.org> mime-types-3.ebuild:
+  Stable on x86.
 
 *mime-types-3 (08 Jun 2005)
 
