@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dc3a8fcabee1d2838a6e32ea8cb5bfad glurp-0.11.2.ebuild 682
 MD5 39ca3cc9726f35001924ecf3baea20d1 metadata.xml 219
 MD5 e1180c288ea49e235f3a3601e91233cb glurp-0.11.5.ebuild 681
@@ -10,3 +13,10 @@ MD5 e89720d903388dd91903baea27dd2aa3 files/digest-glurp-0.11.3 63
 MD5 ea7e81fd74d0a020a28c17bb293bb394 files/digest-glurp-0.11.5 64
 MD5 ac9e071393589dec888716d4cdb12d81 files/digest-glurp-0.11.2 63
 MD5 98ec2e88a5663f422daf8920ae34cebb files/digest-glurp-0.11.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDDO0kKRy60XGEcJIRAkEHAJ4o2cDndJP2izUBZ4x7XbCZgCwoOQCeIFD4
+jaSq48lglFDuCzAor/W320M=
+=QXW8
+-----END PGP SIGNATURE-----
