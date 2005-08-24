@@ -1,0 +1,20 @@
+--- desc.c
++++ desc.c
+@@ -767,7 +767,7 @@ struct tcb *tcp;
+ 					continue;
+ 				}
+ 				tprintf("{%p, %u, %hu, %hu, %d}",
+-					iocb.data, iocb.key,
++					iocb.aio_data, iocb.aio_key,
+ 					iocb.aio_lio_opcode,
+ 					iocb.aio_reqprio, iocb.aio_fildes);
+ 			}
+@@ -793,7 +793,7 @@ struct tcb *tcp;
+ #ifdef HAVE_LIBAIO_H
+ 		if (umove(tcp, tcp->u_arg[1], &iocb) == 0) {
+ 			tprintf("{%p, %u, %hu, %hu, %d}, ",
+-				iocb.data, iocb.key,
++				iocb.aio_data, iocb.aio_key,
+ 				iocb.aio_lio_opcode,
+ 				iocb.aio_reqprio, iocb.aio_fildes);
+ 		} else
