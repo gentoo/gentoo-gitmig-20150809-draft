@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.25b.ebuild,v 1.2 2005/07/05 21:43:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/rhapsody-0.25b.ebuild,v 1.3 2005/08/24 23:04:16 tester Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.0"
