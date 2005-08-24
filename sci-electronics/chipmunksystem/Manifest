@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af39e62e3c48a2dd18a19c2a321a4537 ChangeLog 1767
-MD5 f432ca728cc58aaa726ab93571797cef chipmunksystem-20031105-r2.ebuild 7186
+MD5 d9dfc069151e804895cc54fd30df6733 chipmunksystem-20031105-r2.ebuild 7196
+MD5 61a6f3be885a6d57b7d6dfa8719a8631 ChangeLog 1887
 MD5 1dcb0747dd1f7e019ea2f25fda22a47f metadata.xml 789
 MD5 cf5a2760cdc84d7675cd1d540a040eb5 files/digest-chipmunksystem-20031105-r2 616
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCF54f0K3RJaeXx6cRAkTsAKCZRud3dRX5kSPp4T8pSsYOfoGGKACgnwDB
-+ux3CtwhbOh3RukaEYgQRzk=
-=oycZ
------END PGP SIGNATURE-----

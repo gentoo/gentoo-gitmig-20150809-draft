@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20031105-r2.ebuild,v 1.2 2005/02/19 20:14:14 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/chipmunksystem/chipmunksystem-20031105-r2.ebuild,v 1.3 2005/08/24 07:58:50 phosphan Exp $
 
 inherit toolchain-funcs
 
@@ -118,20 +118,20 @@ src_install () {
 	dolib wolcomp/wolcomp.a
 
 	dodir /usr/share/${P}/lib
-	cp -a log/lib/* ${D}/usr/share/${P}/lib
-	cp -a view/lib/* ${D}/usr/share/${P}/lib
+	cp -pPR log/lib/* ${D}/usr/share/${P}/lib
+	cp -pPR view/lib/* ${D}/usr/share/${P}/lib
 	dodir /usr/share/${P}/until/designrules
-	cp -a until/designrules/* ${D}/usr/share/${P}/until/designrules
+	cp -pPR until/designrules/* ${D}/usr/share/${P}/until/designrules
 	cp until/V1.2/*.ff ${D}/usr/share/${P}/until
 	dodir /usr/share/${P}/netcmp
 	cp netcmp/*.ntk ${D}/usr/share/${P}/netcmp
 	dodir /usr/share/doc/${P}/html
-	cp -a webdoc/* ${D}/usr/share/doc/${P}/html
+	cp -pPR webdoc/* ${D}/usr/share/doc/${P}/html
 
 	#**** Example file taken out,
 	#     uncomment the line below if this is resolved
 	#     (refer to SRC_URI)
-	#cp -a example ${D}/usr/share/${P}
+	#cp -pPR example ${D}/usr/share/${P}
 
 	dodoc log/src/LNOTES util/sctomat/doc/scope_to_mat.ps
 	newdoc log/src/COPYING COPYING.log
