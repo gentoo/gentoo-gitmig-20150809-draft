@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+<email>araujo@gentoo.org</email>
+<name>Luis F. Araujo</name>
+</maintainer>
+<longdescription lang="en">
+Smalltalk/X (ST/X) is a complete implementation of the Smalltalk programming
+language and development environment, providing:
+- Object Oriented Programming Language.
+- Graphical Development Environment with Editors, Browsers.
+- Incremental Compiler and byte code interpreter.
+- Extensive Class Library with ready-to-use building blocks for Applications.
+The implementation of the language and the class library is consistent with
+the draft ANSI standard as well as the industry standard.
+</longdescription>
+</pkgmetadata>

@@ -1,3 +1,16 @@
-MD5 01147d0f336d2e026cff3fed94c0f22d ChangeLog 899
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5223d3f980c88ca9dc2b348fcad82cc2 ChangeLog 1057
 MD5 2c959b62e77edbefc67553253b23df99 smalltalkx-4.1.4.ebuild 1148
+MD5 6cd5c058014d6562ad79aff6b0903906 smalltalkx-5.2.6.ebuild 1450
+MD5 d21fe3dc29a72d5789b782c91df9c9c9 metadata.xml 783
 MD5 48faffcf1f2a85a05dc98d64b5453214 files/digest-smalltalkx-4.1.4 148
+MD5 a42c120be5e046d61d471545ca7152c8 files/digest-smalltalkx-5.2.6 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDF3DBQBy/eDH5uERAin4AKDeAkgznWbOB7xxOJ+hRLiG84JuDwCgqxvo
+E13eYjWQEX5rGy6zPrbsFw8=
+=xmxN
+-----END PGP SIGNATURE-----
