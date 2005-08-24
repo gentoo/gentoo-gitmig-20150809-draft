@@ -1,4 +1,4 @@
-You are almost done! 
+You are almost done!
 
 1. Restart your webserver and your database daemon.
 
