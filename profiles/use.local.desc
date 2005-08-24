@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1403 2005/08/23 23:55:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1404 2005/08/24 02:00:24 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -332,6 +332,7 @@ dev-util/kdevelop:subversion - Enable support for the subversion version control
 dev-util/monodevelop:boo - Enable support for the boo programming language
 dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+dev-util/strace:aio - Enable libaio support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
