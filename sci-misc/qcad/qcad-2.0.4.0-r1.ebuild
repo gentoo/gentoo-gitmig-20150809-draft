@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.6 2005/07/25 16:33:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.4.0-r1.ebuild,v 1.7 2005/08/24 16:49:01 phosphan Exp $
 
 inherit kde-functions eutils
 
@@ -78,13 +78,13 @@ src_install () {
 	chmod ugo+rx qcad
 	dobin qcad
 	dodir /usr/share/${P}
-	cp -a patterns examples fonts qm ${D}/usr/share/${P}
+	cp -pPR patterns examples fonts qm ${D}/usr/share/${P}
 	cd ..
 	dodoc README
 	if use doc; then
 		insinto /usr/share/doc/${PF}/
 		cd ${WORKDIR}
-		cp -a qcaddoc.adp cad ${D}usr/share/doc/${PF}
+		cp -pPR qcaddoc.adp cad ${D}usr/share/doc/${PF}
 	fi
 	make_desktop_entry ${PN} ${PN} ${PN} Office
 }
