@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/jugglemaster
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/ChangeLog,v 1.4 2004/09/02 08:40:19 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/ChangeLog,v 1.5 2005/08/24 04:45:48 mr_bones_ Exp $
+
+  24 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -jugglemaster-0.3.ebuild, jugglemaster-0.4.ebuild:
+  stable on x86; clean old version
 
 *jugglemaster-0.4 (02 Sep 2004)
 
