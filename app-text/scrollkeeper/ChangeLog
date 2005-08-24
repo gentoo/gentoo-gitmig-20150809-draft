@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.51 2005/08/23 22:43:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.52 2005/08/24 13:28:48 gustavoz Exp $
+
+  24 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  scrollkeeper-0.3.14-r1.ebuild:
+  Stable on sparc
 
   23 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   scrollkeeper-0.3.14-r1.ebuild:

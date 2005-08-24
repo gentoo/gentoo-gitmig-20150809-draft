@@ -1,9 +1,19 @@
-MD5 55dbab2150f8eb7cf3eb9e22c09a79f5 ChangeLog 7572
-MD5 50da2ea188fbcc09d9f995915da8af85 metadata.xml 183
-MD5 66f763d7579f8dbc9a3d8593c066183b scrollkeeper-0.3.14-r1.ebuild 2555
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6a5f16d1c02485adc69fffaa6d44bfe1 scrollkeeper-0.3.14.ebuild 2446
-MD5 06af22aa6855f6289846d84e78f17588 files/scrollkeeper-0.3.14-gentoo.patch 1268
+MD5 50da2ea188fbcc09d9f995915da8af85 metadata.xml 183
+MD5 bcfa4e4c1c625ee6d7e345e6768903d8 scrollkeeper-0.3.14-r1.ebuild 2553
+MD5 83986877fb41b8c5f6f541c6df536614 ChangeLog 7677
 MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14-r1 71
-MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14 71
+MD5 06af22aa6855f6289846d84e78f17588 files/scrollkeeper-0.3.14-gentoo.patch 1268
 MD5 865456e567efe5df6f1069f2d99b46ed files/scrollkeeper-logrotate 265
+MD5 ca681d7dde4a4d560fa091cf7b7e0d85 files/digest-scrollkeeper-0.3.14 71
 MD5 a1bbb6129b61f8b8c59a1fcedd8b2b3e files/scrollkeeper-0.3.14-gcc2_fix.patch 692
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDDHYyKRy60XGEcJIRAsphAJwNoyyW1rMKjfJtimUb77dBa69nFwCfRdBq
+ftBGIZId9Y7TI/DZT3zigac=
+=DhOf
+-----END PGP SIGNATURE-----
