@@ -5,18 +5,20 @@ MD5 c4b6df2d9376a4dd23b0b238718355ea gallery-2.0_rc1.ebuild 983
 MD5 1e9614219c46b57870e34fb62b8f3d35 gallery-1.5.ebuild 968
 MD5 b626cbd77364788a21d780de41d9120c gallery-1.4.4_p6.ebuild 1230
 MD5 19600ad33d05b9d19a4e2a19d2aef32c gallery-1.5.1_rc2.ebuild 990
-MD5 3ec7eeef42c5eaa715e4beef8f68b587 ChangeLog 7349
+MD5 d0961ca68d6acf240f22b149c98fbc20 gallery-2.0_rc2.ebuild 983
+MD5 212c6f26808ce4b2bf945650aea6f388 ChangeLog 7468
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 c7bf625c887376d86423defbf0716082 files/digest-gallery-1.5.1_rc2 70
 MD5 a8729b1e72b2703178d00a546bc8a925 files/digest-gallery-1.4.4_p6 70
 MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
 MD5 411fcddae2e05639e626051d31f019c7 files/digest-gallery-2.0_rc1 74
+MD5 86e13454ea6b25fc8bb1fb70dd296e01 files/digest-gallery-2.0_rc2 74
 MD5 d8aa1a55fbfe46c99088bb0c360794f2 files/postinstall-en2.txt 770
 MD5 3485f6f6f43d72b5c119d09d0db3f7ca files/digest-gallery-1.5 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDCLsKEzitwsaoONoRAibYAKCmVJ4c6isqOz0DW4ualIcOZVcuVgCgnirw
-qEOV7oJr8wK1j+83jMI749E=
-=BZfe
+iD8DBQFDDOx1EzitwsaoONoRAujLAKCV4UCo2/oc5J8kbnkg/LdnZoiImACgyJ2r
+IrR8kyL36BuRPvN6qmEK9/0=
+=XH80
 -----END PGP SIGNATURE-----
