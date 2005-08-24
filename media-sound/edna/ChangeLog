@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.19 2005/08/19 19:45:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.20 2005/08/24 16:32:35 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> edna-0.5-r4.ebuild:
+  Cleaned up dependency variables, use newinitd to install init.d file, don't
+  install COPYING.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> edna-0.5-r4.ebuild:
   Stable on hppa and ppc.
