@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r12.ebuild,v 1.6 2005/07/09 05:12:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r12.ebuild,v 1.7 2005/08/24 23:30:53 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc sparc x86"
 IUSE="activefilter atm dhcp ipv6 mppe-mppc pam radius"
 
 RDEPEND="virtual/libc
