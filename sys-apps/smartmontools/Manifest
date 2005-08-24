@@ -1,8 +1,16 @@
-MD5 726cbd30a5838dc5dd88d5f90ef60993 smartmontools-5.33.ebuild 894
-MD5 439d14fe651527fa0800b51e702a0539 smartmontools-5.30.ebuild 969
-MD5 5584a9626a1e8b20a62eb8b4f4222a72 ChangeLog 5291
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 79699d2f3e2d148b1d5498b00792cd33 files/smartd.confd 273
-MD5 17aee6cd24fc0842f02c255e128dafaf files/smartd.rc 806
-MD5 e7139ba9820a427c563c21362752bed3 files/digest-smartmontools-5.30 70
+MD5 f97c5819036070c8c1cdc53d9efe9457 smartmontools-5.33.ebuild 1005
+MD5 6de552e60aaf5fdb97b171c00d24537f ChangeLog 5421
 MD5 3a3bbcc1d33c8f4e7b8831ee0027dae8 files/digest-smartmontools-5.33 70
+MD5 17aee6cd24fc0842f02c255e128dafaf files/smartd.rc 806
+MD5 79699d2f3e2d148b1d5498b00792cd33 files/smartd.confd 273
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC+AygIKl8Uu19MoRArOvAJoC50G9Cyi67NROK6J4XDKGd+HpUACggBrk
+tAOiTMRXQ3DaarkdklUB/EE=
+=D+Lq
+-----END PGP SIGNATURE-----
