@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/polymer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.3 2005/08/23 15:26:34 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.4 2005/08/24 18:36:56 cryos Exp $
+
+*polymer-0.3.2 (24 Aug 2005)
+
+  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> +polymer-0.3.2.ebuild:
+  Version bump.
 
   23 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> polymer-0.3.1.ebuild:
   Port to qt3.eclass.

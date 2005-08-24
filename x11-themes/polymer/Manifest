@@ -1,4 +1,16 @@
-MD5 2f25ed577cbe195d965fe51b7b257f11 metadata.xml 487
-MD5 3f21f826d52e4964f1ae663ca24aecc1 ChangeLog 619
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89b03cb5049e9e16ea6c38b51be98977 polymer-0.3.2.ebuild 932
 MD5 9f87667b73fa90bab3d934e46dc1d3b3 polymer-0.3.1.ebuild 933
+MD5 961a9604832d44bff714940b1d79fb82 ChangeLog 741
+MD5 2f25ed577cbe195d965fe51b7b257f11 metadata.xml 487
 MD5 a3242f2f7d94bb20b2346eaaded3e631 files/digest-polymer-0.3.1 66
+MD5 3828d2f77c0b7aecbdda4339290ef267 files/digest-polymer-0.3.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDL5ontT9W3vfTuoRAguvAJ9Ejce1eUNvouL2X+TJUHQKMRJCLQCghVAv
+MAnK0U8Y99DCvdV1iZFamHE=
+=6mFz
+-----END PGP SIGNATURE-----
