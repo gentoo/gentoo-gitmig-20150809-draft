@@ -1,6 +1,16 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fb127860f9a9b5f0821f0c4927a34f96 kobodeluxe-0.4_pre8.ebuild 1753
-MD5 c3604da16840aeb1ecd94dcca4dcd143 kobodeluxe-0.4_pre10.ebuild 1821
-MD5 dfd9b1ed3f09577b6ede18f94dc90f1e ChangeLog 2835
-MD5 dbded3c4eab3fd5e1f7d8327e8633ead files/digest-kobodeluxe-0.4_pre8 70
+MD5 2492cccb3a22a3ed01b65a72e73cfb66 kobodeluxe-0.4_pre10.ebuild 1817
+MD5 a856e45d0f60dd1c91545b6cd9bd2e47 ChangeLog 2935
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 0b7b71a5722fbfd078b1b3c0e47019c3 files/digest-kobodeluxe-0.4_pre10 71
+MD5 dbded3c4eab3fd5e1f7d8327e8633ead files/digest-kobodeluxe-0.4_pre8 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDOgNntT9W3vfTuoRAtc2AKCqTW/Oj3pCk5MOyy/jvnqC0wP2YwCdE4i4
+1le9M53lvvCYGpVpjVE4x2E=
+=zAGD
+-----END PGP SIGNATURE-----
