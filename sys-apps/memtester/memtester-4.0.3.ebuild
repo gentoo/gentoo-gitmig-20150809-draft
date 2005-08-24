@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/memtester-4.0.3.ebuild,v 1.6 2005/08/24 01:30:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/memtester-4.0.3.ebuild,v 1.7 2005/08/24 01:33:47 vapier Exp $
 
 inherit fixheadtails toolchain-funcs
 
-DESCRIPTION="Memory testing utility"
-HOMEPAGE="http://www.qcc.sk.ca/~charlesc/software/memtester/"
-SRC_URI="http://www.qcc.sk.ca/~charlesc/software/memtester/${P}.tar.gz"
+DESCRIPTION="userspace utility for testing the memory subsystem for faults"
+HOMEPAGE="http://pyropus.ca/software/memtester/"
+SRC_URI="http://pyropus.ca/software/memtester/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
