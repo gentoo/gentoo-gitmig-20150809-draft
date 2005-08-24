@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6a26beb7d45a4d3c335db226d08c4329 mserv-0.35.ebuild 2556
 MD5 141e115247cb7e4f02e114676ea8f169 ChangeLog 1556
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
@@ -9,3 +12,10 @@ MD5 80c9282eed058c3239f45586473cbf70 files/mserv-0.35-mservplay.patch 430
 MD5 d5465c51ab8fd155dab29a702c04897a files/mserv-0.35-acl 52
 MD5 a823115f64db37b88b25a3689b0f9e19 files/mserv-0.35-webacl 39
 MD5 e4b81c74040c77c60a324f42646e960e files/mserv-0.35-config 1515
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDKXmj5H05b2HAEkRAlixAJ9bDtz3BIduJA0mIcGbIswdHGRNcwCgnGoR
+Sm4yVWIfuiDHW+kbkonkdCQ=
+=e3sW
+-----END PGP SIGNATURE-----

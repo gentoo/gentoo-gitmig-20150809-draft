@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.11 2005/08/23 13:03:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35.ebuild,v 1.12 2005/08/24 16:52:27 flameeyes Exp $
 
 inherit webapp-apache eutils
 
@@ -69,11 +69,8 @@ src_install() {
 	newins ${FILESDIR}/${P}-acl acl
 	fperms 0600 /etc/mserv/acl
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${P}-initd ${PN}
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${P}-confd ${PN}
+	newinitd ${FILESDIR}/${P}-initd ${PN}
+	newconfd ${FILESDIR}/${P}-confd ${PN}
 
 	# Log file
 	dodir /var/log
