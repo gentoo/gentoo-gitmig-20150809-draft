@@ -1,0 +1,63 @@
+Index: sbin/rc-daemon.sh
+===================================================================
+--- sbin/rc-daemon.sh	(revision 1421)
++++ sbin/rc-daemon.sh	(working copy)
+@@ -46,7 +46,7 @@
+ 			continue
+ 		fi
+ 		unset addvar
+-		case $1 in
++		case "$1" in
+ 			-S|--start)
+ 				stopping=false
+ 				;;
+@@ -62,6 +62,12 @@
+ 			-p|--pidfile)
+ 				addvar="pidfile"
+ 				;;
++			--pidfile=*)
++				pidfile="${1##--pidfile=}"
++				;;
++			--pid=*)
++				pidfile="${1##--pid=}"
++				;;
+ 			-s|--signal)
+ 				addvar="signal"
+ 				;;
+@@ -87,18 +93,6 @@
+ 
+ 	[[ -z ${cmd} ]] && cmd="${name}"
+ 
+-	# The env command launches daemons in a special environment
+-	# so we need to cater for this
+-	if [[ ${cmd} == "/usr/bin/env" ]]; then
+-		j="${#eargs[@]}"
+-		for (( i=0; i<j; i++ )); do
+-			if [[ ${eargs[i]:0:1} != "-" ]]; then
+-				cmd="${eargs[i]}"
+-				break
+-			fi
+-		done
+-	fi
+-
+ 	# We may want to launch the daemon with a custom command
+ 	# This is mainly useful for debugging with apps like valgrind, strace
+ 	local bash_service=$( bash_variable "${myservice}" )
+@@ -168,7 +162,7 @@
+ 	rc_try_kill_pid "${pid}" "${signal}" "${session}" && return 0
+ 
+ 	[[ ${RC_RETRY_KILL} == "yes" ]] \
+-	&& rc_try_kill_pid "${pid}" KILL "${session}" && return 0
++		&& rc_try_kill_pid "${pid}" KILL "${session}" && return 0
+ 
+ 	return 1 
+ }
+@@ -298,7 +292,7 @@
+ # how we are called
+ start-stop-daemon() {
+ 	local args=$( requote "$@" )
+-	local cmd pidfile pid stopping nothing=false signal=TERM
++	local cmd pidfile pid stopping signal nothing=false
+ 
+ 	rc_setup_daemon_vars
+ 
