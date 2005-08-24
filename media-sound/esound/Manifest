@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a786eb77ff1008f658365b9a68ae9d13 ChangeLog 6983
 MD5 7fec2214715bbc47190cd12a02c705e5 esound-0.2.35.ebuild 1382
 MD5 d20aab9b1ac6f6a7f3dfcd510df6b230 esound-0.2.36-r1.ebuild 1604
@@ -10,3 +13,10 @@ MD5 8d815255ab6890911dd9b2bd7904d363 files/digest-esound-0.2.36-r1 66
 MD5 e2bd989e15dcb9b15096d1a9cd29edf0 files/digest-esound-0.2.34 66
 MD5 b2f099ec9bcaa69a919e28a72c36d548 files/digest-esound-0.2.35 66
 MD5 949eca433956076ac441c57787eedcc0 files/esound-0.2.35-ppc-macos.patch 4422
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDKMdj5H05b2HAEkRAvzfAJ4ruLhMNz0ukQnhpx6VKoi68L2aNACgoXeH
+ga0OskyLHs+zRUwHIN2cidw=
+=OeZW
+-----END PGP SIGNATURE-----

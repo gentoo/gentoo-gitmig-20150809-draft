@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.1 2005/07/25 00:08:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.2 2005/08/24 16:40:33 flameeyes Exp $
 
 inherit libtool gnome.org eutils
 
@@ -48,14 +48,12 @@ src_install() {
 
 	[ -d "docs/html" ] && dohtml -r docs/html/*
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/esound.conf.d esound
+	newconfd ${FILESDIR}/esound.conf.d esound
 
-	exeinto /etc/init.d
 	extradepend=""
 	use tcpd && extradepend=" portmap"
 	use alsa && extradepend="$extradepend alsasound"
 	sed "s/@extradepend@/$extradepend/" <${FILESDIR}/esound.init.d >${T}/esound
-	doexe ${T}/esound
+	doinitd ${T}/esound
 
 }

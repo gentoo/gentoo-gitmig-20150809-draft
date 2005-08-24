@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.53 2005/08/07 14:53:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.54 2005/08/24 16:40:33 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  esound-0.2.36-r1.ebuild:
+  Use newconfd/doinitd.
 
   07 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> esound-0.2.34.ebuild:
   Setting LC_ALL=C before econf/make to avoid problems in the configure
