@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 fb11348cad39856a38a16f69a4d8ccac ChangeLog 2597
+MD5 6a1194d197310b7c78b96fefe218c348 rocksndiamonds-3.1.1.ebuild 2625
+MD5 3de51e1e7e5426b91b4d7c75ceb20597 ChangeLog 2794
 MD5 969bd9de8eeede0250ae898012d07044 rocksndiamonds-3.1.0.ebuild 2295
+MD5 c6c4112fb9e1975723b628b204dc8124 files/digest-rocksndiamonds-3.1.1 542
 MD5 c3a75fb03914146932611aebcb406266 files/digest-rocksndiamonds-3.1.0 476
