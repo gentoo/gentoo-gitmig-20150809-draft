@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audio-entropyd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.12 2004/08/14 13:37:22 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.13 2005/08/24 16:43:13 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  audio-entropyd-0.0.6.ebuild:
+  Use newconfd/newinitd.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> files/audio-entropyd.conf:
   Fixed CVS Header.

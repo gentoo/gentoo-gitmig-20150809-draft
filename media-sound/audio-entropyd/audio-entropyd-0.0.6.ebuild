@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-0.0.6.ebuild,v 1.11 2004/07/04 09:48:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-0.0.6.ebuild,v 1.12 2005/08/24 16:43:13 flameeyes Exp $
 
 DESCRIPTION="Audio-entropyd generates entropy-data for the /dev/random device."
 HOMEPAGE="http://www.vanheusden.com/aed/"
@@ -30,10 +30,6 @@ src_compile() {
 src_install() {
 	dosbin audio-entropyd
 
-	insinto /etc/init.d
-	insopts -m0755
-	newins ${FILESDIR}/${PN}.init ${PN}
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}.conf ${PN}
+	newinitd ${FILESDIR}/${PN}.init ${PN}
+	newconfd ${FILESDIR}/${PN}.conf ${PN}
 }

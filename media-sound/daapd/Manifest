@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9bfb45d675618dbf97db548f20b17a63 daapd-0.2.4.ebuild 1327
 MD5 a158216fe286fbf71afe186c37ee6524 daapd-0.2.3d-r1.ebuild 1317
+MD5 35a39c1ab0fc75ea6b0ca3f2cd9928ea ChangeLog 2864
+MD5 1f859a4217941b74628b3099f5eafed5 daapd-0.2.4.ebuild 1280
 MD5 f1a82bd9846fb2926d132d29851f16fa daapd-0.2.3d.ebuild 1313
-MD5 fa68ec06133b679760abedc8d7e94ee0 ChangeLog 2742
 MD5 5209c0057b32b7d92999700515bed3aa metadata.xml 440
-MD5 3beda326653c14c1fbd33c762af01e2e files/daapd.conf.d 673
-MD5 5a1dfee32f50af3462b68b3381a6aa8b files/daapd.init.d 1069
-MD5 c25c564a55bdc585c844929ca710971a files/digest-daapd-0.2.3d-r1 61
-MD5 0d6290b8eeee3b95f7aa5e2e1d3a8b2f files/digest-daapd-0.2.4 60
 MD5 f1be018e61557e7ca897f2f1078b13b4 files/daapd-0.2.3d-gentoo.patch 1569
-MD5 c25c564a55bdc585c844929ca710971a files/digest-daapd-0.2.3d 61
+MD5 5a1dfee32f50af3462b68b3381a6aa8b files/daapd.init.d 1069
+MD5 0d6290b8eeee3b95f7aa5e2e1d3a8b2f files/digest-daapd-0.2.4 60
+MD5 c25c564a55bdc585c844929ca710971a files/digest-daapd-0.2.3d-r1 61
+MD5 3beda326653c14c1fbd33c762af01e2e files/daapd.conf.d 673
 MD5 660b25ab66dc0cb5147d21b2db00b685 files/daapd-0.2.4-gentoo.patch 1564
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCcQQk06ebR+OMO78RApheAJ9A0hMwLjgVj0+XFKgp8AGyLUdoywCeJ6hr
-t4Zhy8HUZsIWmCe1sUg/8ZY=
-=SrdM
------END PGP SIGNATURE-----
+MD5 c25c564a55bdc585c844929ca710971a files/digest-daapd-0.2.3d 61

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.4.ebuild,v 1.3 2005/08/01 20:08:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.4.ebuild,v 1.4 2005/08/24 16:45:35 flameeyes Exp $
 
 inherit eutils
 
@@ -46,11 +46,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README TODO
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}.init.d gnump3d
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}.conf.d gnump3d
+	newinitd ${FILESDIR}/${PN}.init.d gnump3d
+	newconfd ${FILESDIR}/${PN}.conf.d gnump3d
 
 	dodir /etc/env.d
 	cat >${D}/etc/env.d/50gnump3d <<EOF
