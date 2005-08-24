@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 90ffe04a63adcbbe2f26aa373bba2851 gnome-icon-theme-2.11.91.ebuild 600
 MD5 2df64532e74135508b964e12d1c3f7b9 gnome-icon-theme-2.10.1.ebuild 745
@@ -6,3 +9,10 @@ MD5 1c774424ba0806e57967fd611977e2c2 gnome-icon-theme-2.10.0.ebuild 744
 MD5 db345a23a8cf3f3403943be932a68780 files/digest-gnome-icon-theme-2.11.91 78
 MD5 c9c1b85c1ecabbaaecc7ba5b6d3074e2 files/digest-gnome-icon-theme-2.10.0 77
 MD5 6decb2c1ce82613691218d8a8f1f8428 files/digest-gnome-icon-theme-2.10.1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8rkgIKl8Uu19MoRAsfMAKCAjXkZA+jmq51u1ecnso96ayV9NgCfVt6Y
+vfdzRpP68UvzgcVUeDEoIrg=
+=aoKC
+-----END PGP SIGNATURE-----
