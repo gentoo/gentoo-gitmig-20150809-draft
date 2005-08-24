@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.18 2005/07/12 16:52:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.19 2005/08/24 14:17:05 wolf31o2 Exp $
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> kudzu-0.99.99.ebuild,
+  kudzu-1.1.62.ebuild:
+  Added libkudzu-knoppix blocker.
 
   12 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> kudzu-0.99.99.ebuild,
   kudzu-1.1.62.ebuild:

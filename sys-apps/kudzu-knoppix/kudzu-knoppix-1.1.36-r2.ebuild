@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.7 2005/07/12 16:53:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36-r2.ebuild,v 1.8 2005/08/24 14:16:36 wolf31o2 Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 	)
 	sys-apps/pciutils
 	!sys-libs/libkudzu
+	!sys-libs/libkudzu-knoppix
 	!sys-apps/kudzu"
 
 src_unpack() {
