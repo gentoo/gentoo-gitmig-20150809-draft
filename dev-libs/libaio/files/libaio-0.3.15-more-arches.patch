@@ -8,7 +8,7 @@
  #include <asm/unistd.h>
  #undef __syscall_return
  #ifndef __powerpc__
-@@ -19,25 +20,35 @@
+@@ -19,25 +20,41 @@
  #ifndef __NR_io_setup
  #ifdef __s390__
  #define __NR_io_setup		243
@@ -48,6 +48,12 @@
 +#endif
 +#ifdef __m68k__
 +#define __NR_io_setup		241
++#endif
++#ifdef __mips__
++#define __NR_io_setup		4000+241
++#endif
++#ifdef __powerpc__
++#define __NR_io_setup		227
 +#endif
 +#define __NR_io_destroy __NR_io_setup + 1
 +#define __NR_io_getevents __NR_io_setup + 2
