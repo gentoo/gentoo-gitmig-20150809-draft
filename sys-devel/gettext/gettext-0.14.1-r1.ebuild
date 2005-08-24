@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1-r1.ebuild,v 1.2 2005/04/25 06:50:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1-r1.ebuild,v 1.3 2005/08/24 00:35:05 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -79,7 +79,7 @@ src_install() {
 		fi
 	else
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
-			cp -a ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
+			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
 			touch ${D}/usr/$(get_libdir)/libintl.so.2*
 		fi
 	fi

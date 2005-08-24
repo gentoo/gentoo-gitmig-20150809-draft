@@ -1,19 +1,29 @@
-MD5 1687e067e530ddbdf04d83d740e5e1c1 ChangeLog 11800
-MD5 0890c612ec51d74a5cefbb0ca3ab8ae7 gettext-0.12.1-r2.ebuild 2543
-MD5 d967d965a46639c1bac52e6695bb854e gettext-0.14.2.ebuild 3506
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 28c12ed959a8880782cce46ef69ecc30 gettext-0.14.1-r1.ebuild 2884
-MD5 428910309ea2773648d77a9d5c96bec4 gettext-0.14.4.ebuild 3575
-MD5 83b80576c27ac3a75d70802eb9c92790 files/digest-gettext-0.12.1-r2 67
-MD5 0e4a00cc30a91523c838cd17b5841399 files/digest-gettext-0.14.1-r1 67
-MD5 44ad3082200305087e6244f5a2665892 files/digest-gettext-0.14.2 67
-MD5 fada337fd753f2580b6849dc560498ff files/gettext-0.12.1-tempfile.patch 2226
-MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.12.1-without_java.patch 2743
+MD5 f46f927893861e2d082d7b836f597ef7 gettext-0.14.2.ebuild 3509
+MD5 0890c612ec51d74a5cefbb0ca3ab8ae7 gettext-0.12.1-r2.ebuild 2543
+MD5 1687e067e530ddbdf04d83d740e5e1c1 ChangeLog 11800
+MD5 ac4041bb4e436a9935d04cd63b40d425 gettext-0.14.1-r1.ebuild 2886
+MD5 430e22b4c52c95f6c61427e5ec6d9439 gettext-0.14.4.ebuild 3578
+MD5 095399be17e9cf19b7b02ffcd1fb95a5 files/gettext-0.14.1-tempfile.patch 2636
 MD5 3077319e6090fcd6262e2d8fd463441f files/gettext-0.14.1-lib-path-tests.patch 707
 MD5 2a60a632eb22d99acfa09d16828fe073 files/gettext-0.14.1-no-java-tests.patch 2885
-MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.14.1-without_java.patch 2743
+MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.12.1-without_java.patch 2743
 MD5 dfcc1d12d05c42f262de0dada08ed90d files/gettext-0.14.2-fix-race.patch 417
+MD5 bc7e7f683a64a5f805af77b1ed851b65 files/digest-gettext-0.14.4 67
+MD5 3b9aefbb552545fdf0836f56121c9ae5 files/gettext-0.14.1-without_java.patch 2743
+MD5 83b80576c27ac3a75d70802eb9c92790 files/digest-gettext-0.12.1-r2 67
+MD5 fada337fd753f2580b6849dc560498ff files/gettext-0.12.1-tempfile.patch 2226
 MD5 b56837fdd725fc00c173b57b951b90cc files/gettext-0.14.2-no-java-tests.patch 2524
 MD5 38756cea2e4f8e36c2e45b890f1a7463 files/50po-mode-gentoo.el 183
-MD5 bc7e7f683a64a5f805af77b1ed851b65 files/digest-gettext-0.14.4 67
-MD5 095399be17e9cf19b7b02ffcd1fb95a5 files/gettext-0.14.1-tempfile.patch 2636
+MD5 0e4a00cc30a91523c838cd17b5841399 files/digest-gettext-0.14.1-r1 67
+MD5 44ad3082200305087e6244f5a2665892 files/digest-gettext-0.14.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8DsgIKl8Uu19MoRAkCVAJ9yev3jwA0u0CNp1hKfpc+sMC53uQCgg3pM
+uJJzYd3a+JTqja9WnJ12Cx8=
+=7WhU
+-----END PGP SIGNATURE-----

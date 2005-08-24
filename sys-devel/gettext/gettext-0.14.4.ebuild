@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.13 2005/06/30 03:55:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.14 2005/08/24 00:35:05 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -89,7 +89,7 @@ src_install() {
 		fi
 	else
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.so.2 ] ; then
-			cp -a ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
+			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.so.2* ${D}/usr/$(get_libdir)/
 			touch ${D}/usr/$(get_libdir)/libintl.so.2*
 		fi
 	fi
