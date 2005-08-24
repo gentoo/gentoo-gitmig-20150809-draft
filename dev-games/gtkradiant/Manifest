@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec6a26503f657ae43a77ed59763afa3f gtkradiant-1.5.0_pre20041205.ebuild 1008
+MD5 f1130b9e4aa1a279e80ccdaea71c8a1d gtkradiant-1.5.0_pre20041205.ebuild 1010
 MD5 9c392282a19df0c12b6a15150c130f81 metadata.xml 538
-MD5 506c76f6bd63111064ddc7531ed91035 gtkradiant-1.5.0_pre20050626.ebuild 1014
+MD5 ed6aeb4e5884d8cb72305a557de98d23 gtkradiant-1.5.0_pre20050626.ebuild 1016
 MD5 ef0095f3b3186dcfe1db13c01801454e gtkradiant-1.3.12.ebuild 1312
 MD5 edf3fc969333a4551fb2cf5c5a9abf40 gtkradiant-1.4.0.ebuild 1644
 MD5 c318470bfae6a154d85a4b570c7b2ba5 ChangeLog 1365
@@ -20,7 +20,7 @@ MD5 00d19c37fed45188e1c911e2b5b4a588 files/digest-gtkradiant-1.5.0_pre20050626 8
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFC8ZwXgIKl8Uu19MoRAqpiAJY2tIBWPqKEk3WJ0exNLiwdu+lBAKCEG58x
-I6dqVU5uBRPORYmKvplfFQ==
-=lrE9
+iD8DBQFDC730gIKl8Uu19MoRAvvGAKCAEGMRc1uKabXsVDzaSGhr2E5j3gCcCU9z
+4yxzA0TwdkJ/AP0Omoxg0F4=
+=cCn9
 -----END PGP SIGNATURE-----
