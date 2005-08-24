@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.6 2005/07/02 08:33:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.7 2005/08/24 04:08:41 leonardop Exp $
+
+  24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -tex4ht-20040212.ebuild, tex4ht-20050406_p1623-r1.ebuild,
+  tex4ht-20050701_p1825.ebuild:
+  Modified calls to 'cp -a' as described on bug #103487.
 
 *tex4ht-20050701_p1825 (02 Jul 2005)
 

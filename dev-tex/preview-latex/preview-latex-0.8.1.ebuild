@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.8.1.ebuild,v 1.9 2005/03/11 14:09:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.8.1.ebuild,v 1.10 2005/08/24 04:05:09 leonardop Exp $
 
 inherit latex-package elisp-common
 
@@ -27,7 +27,7 @@ DEPEND="emacs? ( virtual/emacs
 
 src_unpack() {
 	unpack ${A}
-	cp -a ${P}/* ${T}
+	cp -pPR ${P}/* ${T}
 }
 
 src_compile() {
