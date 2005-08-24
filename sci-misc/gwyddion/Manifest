@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 211a51df6c31d84ea53b5a40819380cb gwyddion-1.12.ebuild 1008
+MD5 ef2d02ab0281811529af1852e5788962 ChangeLog 451
+MD5 8b540c5fcae8b4718136d43ae501f9fd metadata.xml 557
+MD5 022fb0f1d0f2d3b498c88934cc2622c4 files/digest-gwyddion-1.12 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDPT+ntT9W3vfTuoRAjrdAJ95pvANZEhqKQRK9VBFMKe3cx2M6QCdEPYz
+BvDWiCRAioDPlsqmlrtAdK8=
+=JGym
+-----END PGP SIGNATURE-----

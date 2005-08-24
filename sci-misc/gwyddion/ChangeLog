@@ -1,0 +1,11 @@
+# ChangeLog for sci-misc/gwyddion
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gwyddion/ChangeLog,v 1.1 2005/08/24 22:30:06 cryos Exp $
+
+*gwyddion-1.12 (24 Aug 2005)
+
+  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> +metadata.xml,
+  +gwyddion-1.12.ebuild:
+  Initial import of ebuild, thanks to Aaron Rubinstein <mrodenstein@web.de>
+  for the original ebuild, closes bug 54327.
+
