@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5bc522be161c3ff27f081cb7bff0ca9 ChangeLog 3057
-MD5 a36766a23959cee0651fcf16d2eecb8c files/digest-iftop-0.16 62
-MD5 c9d0a2ec49378a93c55b607f8bb88f91 files/iftoprc 1391
-MD5 76f84322581f13889278229fc9175b27 iftop-0.16.ebuild 641
 MD5 e9cd01f31fc31ef1849ad5b87358345a metadata.xml 218
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC695CI1lqEGTUzyQRAkUpAKC1cNiRzK4TXdRmZJnsZpALfBNgXACeIYzO
-DCxREYUbte3oiOG1jo+QyBk=
-=FiOe
------END PGP SIGNATURE-----
+MD5 f5bc522be161c3ff27f081cb7bff0ca9 ChangeLog 3057
+MD5 2dd35a771473d9aab66667bfdbcdb177 iftop-0.16.ebuild 640
+MD5 c9d0a2ec49378a93c55b607f8bb88f91 files/iftoprc 1391
+MD5 a36766a23959cee0651fcf16d2eecb8c files/digest-iftop-0.16 62
