@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.5 2005/06/02 00:40:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.6 2005/08/24 00:25:09 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -87,6 +87,12 @@ src_install() {
 
 	doinitd "${FILESDIR}"/nfs "${FILESDIR}"/nfsmount
 	newconfd "${FILESDIR}"/nfs.confd nfs
+
+	# uClibc doesn't provide rpcgen like glibc, so lets steal it from nfs-utils
+	if ! use elibc_glibc ; then
+		dobin tools/rpcgen/rpcgen || die "rpcgen"
+		newdoc tools/rpcgen/README README.rpcgen
+	fi
 }
 
 pkg_preinst() {
@@ -104,6 +110,6 @@ pkg_postinst() {
 	for f in "${ROOT}"/usr/lib/nfs/*; do
 		[[ -f ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
 		einfo "Copying default ${f##*/} from /usr/lib/nfs to /var/lib/nfs"
-		cp -a ${f} "${ROOT}"/var/lib/nfs/
+		cp -pPR ${f} "${ROOT}"/var/lib/nfs/
 	done
 }
