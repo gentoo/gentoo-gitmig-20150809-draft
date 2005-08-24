@@ -1,6 +1,4 @@
-MD5 14f1384f1597acac9e85cc8f180c4ed7 ChangeLog 1263
 MD5 c55c0e9f9b32a5fee70fbf4e5f611395 metadata.xml 299
-MD5 5b3299d3ad1c32bbf99e667e284a5ac2 mmucl-1.5.2.ebuild 1702
 MD5 37bb388673c3eb549b2b230d72721f74 mmucl-1.5.2-r1.ebuild 1772
-MD5 53208ee117dc046fb612441ba0ee3ece files/digest-mmucl-1.5.2 63
+MD5 14f1384f1597acac9e85cc8f180c4ed7 ChangeLog 1263
 MD5 53208ee117dc046fb612441ba0ee3ece files/digest-mmucl-1.5.2-r1 63
