@@ -1,11 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 979202ca0116f4c62015e7454a04b2a3 tmw-0.0.15.ebuild 1126
 MD5 a64ad430582c661980fb29fce557825b tmw-0.0.14.ebuild 1128
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9cf213728df3e972581610a45a78ea07 tmw-0.0.12.ebuild 1014
-MD5 fb6a8d9060e109215cf8709a786911d9 tmw-0.0.14.1.ebuild 1130
 MD5 3c4882835798dc845a1c834b413c10ed tmw-0.0.13.ebuild 1127
-MD5 ccf3fe7e7c52db1804c4285fa3719578 ChangeLog 975
-MD5 3413e54c956f8f6737a2e0752054959d files/digest-tmw-0.0.13 63
-MD5 00d0bec71b9ffb2db47247cc52b11ab8 files/digest-tmw-0.0.14.1 65
-MD5 28ec001a7bdc25f73730cb5e99d2298f files/digest-tmw-0.0.12 63
+MD5 9cf213728df3e972581610a45a78ea07 tmw-0.0.12.ebuild 1014
+MD5 8b29a64e269fb931d10b6b487c3bcce3 ChangeLog 1109
+MD5 fb6a8d9060e109215cf8709a786911d9 tmw-0.0.14.1.ebuild 1130
 MD5 6e873b44081c25fa618a3bd28d74f86c files/tmw-0.0.12-desktop.patch 757
 MD5 77c301fb13e72c51fafa865b4dd853c2 files/digest-tmw-0.0.14 63
+MD5 3413e54c956f8f6737a2e0752054959d files/digest-tmw-0.0.13 63
+MD5 df29b3d3528099449a0ab6239d1d474c files/digest-tmw-0.0.15 63
+MD5 28ec001a7bdc25f73730cb5e99d2298f files/digest-tmw-0.0.12 63
+MD5 00d0bec71b9ffb2db47247cc52b11ab8 files/digest-tmw-0.0.14.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC9/NgIKl8Uu19MoRAuqmAJ0UyhTffK7AdUUtgttOUBXDKVK6QACaAwsl
+b5zJDFJMllj9Gh4GXqNh8+Q=
+=uw5a
+-----END PGP SIGNATURE-----
