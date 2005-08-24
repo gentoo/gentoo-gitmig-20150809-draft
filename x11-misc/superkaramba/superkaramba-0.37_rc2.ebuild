@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.37_rc2.ebuild,v 1.2 2005/08/17 10:21:02 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.37_rc2.ebuild,v 1.3 2005/08/24 20:49:46 greg_g Exp $
 
 inherit kde
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc xmms"
 
 DEPEND="dev-lang/python
-	xmms? ( media-sound/xmms )"
+	xmms? ( media-sound/xmms )
+	!>=kde-base/kdeutils-3.5_alpha"
 
 S="${WORKDIR}/${PN}"
 

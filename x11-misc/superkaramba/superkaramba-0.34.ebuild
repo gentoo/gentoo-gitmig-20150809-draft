@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.34.ebuild,v 1.5 2005/07/07 12:45:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/superkaramba-0.34.ebuild,v 1.6 2005/08/24 20:49:46 greg_g Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="arts doc"
 
-DEPEND="dev-lang/python"
+DEPEND="dev-lang/python
+	!>=kde-base/kdeutils-3.5_alpha"
 
 need-kde 3.2
 
