@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1404 2005/08/24 02:00:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1405 2005/08/24 20:55:52 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -392,6 +392,7 @@ kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensaver
 kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdebase:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
+kde-base/kdebase:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdebase-kioslaves:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
@@ -406,6 +407,7 @@ kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.o
 kde-base/kdelibs:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdemultimedia:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 kde-base/kdenetwork:rdesktop - Enable remote desktop functionality
+kde-base/kdenetwork:sametime - Enable support for the Sametime protocol for instant messaging
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 kde-base/kdesdk-meta:subversion - Enable support for the subversion ioslave
 kde-base/kdesdk:subversion - Enable support for the subversion ioslave
