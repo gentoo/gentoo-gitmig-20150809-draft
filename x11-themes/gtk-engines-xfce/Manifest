@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6405932029d3ad21774f06774c9c1d2a gtk-engines-xfce-2.2.7-r1.ebuild 895
 MD5 1a485fd099494a423e0f4287746045f0 metadata.xml 176
 MD5 8811732ac31d9365ce51abc1be5f73eb gtk-engines-xfce-2.2.7.ebuild 739
@@ -6,3 +9,10 @@ MD5 d4822fad720eda36f42258e7b5c55b1d ChangeLog 4965
 MD5 cabd9581e9a63f94b86cf035624967fb files/digest-gtk-engines-xfce-2.2.7-r1 73
 MD5 d8d1b45b465f4fe1252e03b8c6f60835 files/digest-gtk-engines-xfce-2.2.5 74
 MD5 cabd9581e9a63f94b86cf035624967fb files/digest-gtk-engines-xfce-2.2.7 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8r2gIKl8Uu19MoRAoMLAJoDpRY7iPyq1gSnB6SeRTJcBDZN7QCeLAAu
+Lr4Viw3GbQSKoIxaD+j7ivQ=
+=1FYF
+-----END PGP SIGNATURE-----
