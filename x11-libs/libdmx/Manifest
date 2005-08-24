@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 caf099fc7dc39114748ecc7659de8711 ChangeLog 463
 MD5 628afa1382aba2eca1810bd2a44758d6 libdmx-0.99.0.ebuild 585
 MD5 2b04b4f78e84eca94cd37487792a36df files/digest-libdmx-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hwgIKl8Uu19MoRAisrAJ47u+lYepmIOYJSC4Jeto7Rbz/MVwCcCNoK
+a2TAE8omVCxSBgj2QLPl6xM=
+=rvVn
+-----END PGP SIGNATURE-----

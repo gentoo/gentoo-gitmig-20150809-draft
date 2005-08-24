@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c667f89dabce3ef769d56ef61d4f80d5 libXaw-0.99.0.ebuild 678
 MD5 ebbbfb408f76e53c69adcacfa9435d88 ChangeLog 637
 MD5 2be91ab2d559aca7d580b15b10b04adb files/digest-libXaw-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hdgIKl8Uu19MoRAmsTAJ9kjHG1ZFMydIFTalxPLalSrMyxXACePpvp
+ZYqHNyIIFmrbybVkzdnC+Wg=
+=NvqY
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f3e740b6c5f24b0975b91d21eea2c23 libXScrnSaver-0.99.0-r2.ebuild 655
 MD5 7dc5cd568740fe4d8daed25ada2d79a6 ChangeLog 1425
 MD5 841152652a5ed56abcce48b9f770fbe8 files/fix-libname.patch 1135
 MD5 c1c30f637c282a8d3e36ecf48b528673 files/digest-libXScrnSaver-0.99.0-r2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hfgIKl8Uu19MoRAlJZAJ0QBSfAT4BZf8JHaO5J8yTrvs6mcwCeIuqR
+esQSbUZQe8ke2j/UKS98RbM=
+=vx7F
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 55c1b565cdf18adfe0d54e87b9bfdad6 ChangeLog 652
 MD5 f5a69c832acc15c9333acb0edd6fdd67 libXdmcp-0.99.0.ebuild 547
 MD5 78a80fe5508b95469c0e21027a856397 files/digest-libXdmcp-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hcgIKl8Uu19MoRAllaAJ9rS4bwRqCI0dwoh6ZDiUIuLpx3jQCfY424
+8AWQVQvYyuu//w9dFwuAIFk=
+=KesA
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f55314817d5f87d7bebd001005f565d libdrm-1.0.3.ebuild 531
 MD5 f6a03fa12be30abe7115218c9a631027 ChangeLog 769
 MD5 c7b27a8c50ee4bf0b32bb5e7d63d0831 libdrm-1.0.1.ebuild 531
 MD5 5713bdf6704d9811bdbe277fc186952b files/digest-libdrm-1.0.1 64
 MD5 374029a0c9d0ee2cd86e576cf9491167 files/digest-libdrm-1.0.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8l9gIKl8Uu19MoRAis6AJ9GjCsnoJaYQ8BJObOAf1lV+CM7iACfWdtv
+0GksQmZUGO+8dGSORVK+Z3g=
+=v9XG
+-----END PGP SIGNATURE-----

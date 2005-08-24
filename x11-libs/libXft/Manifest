@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e1788f8c769a5d768a7645d08993e61 libXft-2.1.7.ebuild 537
 MD5 35e3fe6e6e8335f049f1b4c9ef7f3fd4 ChangeLog 732
 MD5 b2a12936ab993896b482ff37bf7f65ca files/digest-libXft-2.1.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hmgIKl8Uu19MoRAom7AJ0ZTx43H8QbgwUlneQwvyaRn53a7wCdFI6c
+0mcjh/XbXJBO7EyhlkJFOno=
+=Hjba
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5366b67332d067da33f8e5edfd607452 libXdamage-1.0.1.ebuild 587
 MD5 9e51e098c044021b20609b808a5b0993 ChangeLog 571
 MD5 5c0bb855c16bbc59150131477aaad975 files/digest-libXdamage-1.0.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8l7gIKl8Uu19MoRAguiAJ4ld9v8r3x0ZcdKGKhM+HnrfDzSOgCdH+Dl
+RtuTP2NmT2T3uGgAozTd+Gk=
+=5wL2
+-----END PGP SIGNATURE-----

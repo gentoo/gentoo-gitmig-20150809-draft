@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ec7425dc57b01c85b29db56e209517a8 ChangeLog 515
 MD5 d9f3bb2401ae1c3e27283e1f8cce9008 libXprintAppUtil-0.99.0.ebuild 596
 MD5 20379d37844dcd828e88b72b4e9797e7 files/digest-libXprintAppUtil-0.99.0 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hkgIKl8Uu19MoRAjMfAJsFILiXihb8+6eQx9FzfJFfXB/g5gCdFPx9
+COwL/3Fnis+vC4i/dYi0EeQ=
+=EbTz
+-----END PGP SIGNATURE-----

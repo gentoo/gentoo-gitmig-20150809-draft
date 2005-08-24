@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 065f8901baf4533fddd5a308659b90e5 liblbxutil-0.99.0.ebuild 544
 MD5 75b236ec098e105f91f23b894a9e6f9a ChangeLog 485
 MD5 7928bb0fa42e82f987473f6cb3570f51 files/digest-liblbxutil-0.99.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hxgIKl8Uu19MoRAjjJAJ9Ul5Z+Rkq4E2fm5uXr5YsqzbsSAgCfQ5Fl
+Xyl7M/xpUcBg1W05oL9LPNA=
+=5IeJ
+-----END PGP SIGNATURE-----

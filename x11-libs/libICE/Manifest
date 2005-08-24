@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eb2aaa7028adcfdafc7c088da0c1764a libICE-0.99.0.ebuild 592
 MD5 e0b3ba2ce4b2958e048d66f25b435474 ChangeLog 787
 MD5 c6c08f8cff7e7f91adf415a40eabd092 files/digest-libICE-0.99.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hagIKl8Uu19MoRAqcSAJ9Gm8++A99XEM+sLnR0i6fZ39b4XACfbUk4
+U2e0W00v6+dBy0ESWTuzHhI=
+=13C3
+-----END PGP SIGNATURE-----

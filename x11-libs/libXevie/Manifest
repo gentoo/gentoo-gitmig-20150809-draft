@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 08a7c7a216d738a541b25423fb1f6263 libXevie-0.99.0.ebuild 589
 MD5 f75a0b2f4b746c2f56c54b3a8672c7f7 ChangeLog 473
 MD5 715e3ba09d034cb03c5d416deb92853d files/digest-libXevie-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8l7gIKl8Uu19MoRAlN2AJ9rN8bw+4HQ3HxcTx0qnXGgdwiVLACfUu2s
+6yARj5yYwIrv0t1paOCzn2s=
+=xgee
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03958b8bf7188a1db9f8515a29d2f356 libXTrap-0.99.0.ebuild 613
 MD5 255a435a8abdbbdfa02715d43f9ebf91 ChangeLog 562
 MD5 e98fcdc048278691bf3024ce89cd51a2 files/digest-libXTrap-0.99.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hagIKl8Uu19MoRAtBtAJwJdvMCKWBueRfPyFpxQFqOvWJDGACffCzR
+MEPxaXYQsNnctYSTSJGzxHU=
+=OxWa
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 908c1622f7bd2ff6de8c4c7aae1df940 libXrandr-0.99.0.ebuild 631
 MD5 0ec6ef766fd4c81d59f61aa879c5c03d ChangeLog 660
 MD5 0ba2c555c1a4cbb3cc992db55645a112 files/digest-libXrandr-0.99.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hqgIKl8Uu19MoRApItAJ97Qc5/MgLZROrei8VwZmkNeh658ACcCTAe
+HVyOssrQNv6HmmYKWOTZDDE=
+=TCQe
+-----END PGP SIGNATURE-----

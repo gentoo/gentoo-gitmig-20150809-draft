@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d37a2d287af289fa5f8be56f92498181 libXxf86vm-0.99.0.ebuild 635
 MD5 a26502532ff665d9f8a2ee6c5bb5807a ChangeLog 668
 MD5 9e24eb03efeafb9808f69e329a8c1ee7 files/digest-libXxf86vm-0.99.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDC8hxgIKl8Uu19MoRApVrAJ4sWj5YqTmezEfUBoZwno9o+JudewCeORHB
+C3e+FHYI4OMUKrnZfQ76U4Y=
+=HeQj
+-----END PGP SIGNATURE-----
