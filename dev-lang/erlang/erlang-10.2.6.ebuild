@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.6.ebuild,v 1.3 2005/07/19 01:54:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.6.ebuild,v 1.4 2005/08/24 00:43:36 vapier Exp $
 
-inherit eutils toolchain-funcs flag-o-matic elisp-common
+inherit eutils multilib flag-o-matic elisp-common
 
 #erlang uses a really weird versioning scheme which caused quite a few problems already
 #Thus we do a slight modification converting all letters to digits to make it more sane (see e.g. #26420)
@@ -14,17 +14,20 @@ HOMEPAGE="http://www.erlang.org/"
 SRC_URI="http://www.erlang.org/download/${MY_P}.tar.gz
 	doc? ( http://erlang.org/download/otp_doc_man_${MY_PV}.tar.gz
 		http://erlang.org/download/otp_doc_html_${MY_PV}.tar.gz )"
+
 LICENSE="EPL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
-IUSE="X ssl emacs doc java odbc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="doc emacs java odbc ssl X"
 
-DEPEND=">=dev-lang/perl-5.6.1
+RDEPEND=">=dev-lang/perl-5.6.1
 	X? ( virtual/x11 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	emacs? ( virtual/emacs )
 	java? ( >=virtual/jdk-1.2 )
 	odbc? ( dev-db/unixODBC )"
+DEPEND="${RDEPEND}
+	dev-lang/tk"
 
 S=${WORKDIR}/${MY_P}
 
@@ -33,17 +36,17 @@ SITEFILE=50erlang-gentoo.el
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-export-TARGET.patch
-	epatch ${FILESDIR}/${PV}-manpage-emacs-gentoo.patch
+	epatch "${FILESDIR}"/${P}-export-TARGET.patch
+	epatch "${FILESDIR}"/${PV}-manpage-emacs-gentoo.patch
+	use odbc || sed -i 's: odbc : :' lib/Makefile
 }
 
 src_compile() {
-	[ "`gcc-fullversion`" == "3.3.2" ] && filter-mfpmath sse
-	[ "`gcc-fullversion`" == "3.3.3" ] && filter-mfpmath sse
-	addpredict /dev/pty # Bug #25366
-
-	# erlang configure botches the CHOST test
-	econf --enable-threads || die
+	use java || export JAVAC=false
+	econf \
+		--enable-threads \
+		$(use_with ssl) \
+		|| die
 	make || die
 
 	if use emacs ; then
@@ -54,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	ERL_LIBDIR="/usr/$(get_libdir)/erlang"
+	local ERL_LIBDIR=/usr/$(get_libdir)/erlang
 
 	make INSTALL_PREFIX="${D}" install || die
 	dodoc AUTHORS EPLICENCE README
@@ -73,10 +76,10 @@ src_install() {
 	grep -rle "${D}" "${D}"/${ERL_LIBDIR}/erts-* | xargs sed -i -e "s:${D}::g"
 
 	## Clean up the no longer needed files
-	rm ${D}/${ERL_LIBDIR}/Install
+	rm "${D}"/${ERL_LIBDIR}/Install
 
-	if use doc; then
-		for file in ${WORKDIR}/man/man*/*.[1-9]; do
+	if use doc ; then
+		for file in "${WORKDIR}"/man/man*/*.[1-9]; do
 			# Avoid namespace collisions
 			local newfile=${file}erl
 			cp $file $newfile
@@ -85,13 +88,13 @@ src_install() {
 			sed -i -e 's,\.SH See Also,\.SH SEE ALSO,g' $newfile
 			doman ${newfile}
 		done
-		dohtml -A README,erl,hrl,c,h,kwc,info -r ${WORKDIR}/doc ${WORKDIR}/lib ${WORKDIR}/erts-*
+		dohtml -A README,erl,hrl,c,h,kwc,info -r "${WORKDIR}"/doc "${WORKDIR}"/lib "${WORKDIR}"/erts-*
 	fi
 
 	if use emacs ; then
 		pushd "${S}"
 		elisp-install erlang lib/tools/emacs/*.{el,elc}
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 		popd
 	fi
 }
