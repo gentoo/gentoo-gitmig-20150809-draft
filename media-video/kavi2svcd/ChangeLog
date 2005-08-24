@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kavi2svcd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.9 2005/05/19 22:15:46 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.10 2005/08/24 16:22:52 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> kavi2svcd-0.8.4.ebuild:
+  Remove comments that doesn't apply anymore.
 
 *kavi2svcd-0.8.4 (19 May 2005)
 

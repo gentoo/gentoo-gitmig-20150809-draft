@@ -1,8 +1,18 @@
-MD5 237810895f89adec26131975777120f2 ChangeLog 1470
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b22cf939ef41980db18c11189c0d7c83 ChangeLog 1598
+MD5 98d6a9c9575a405507bf226aad3ed150 kavi2svcd-0.8.4.ebuild 807
 MD5 f38aa153e500250b5b7bd38b749a7ad1 kavi2svcd-0.8.2.ebuild 875
-MD5 7f5a892fbb0b3147bac59389e61cba1e kavi2svcd-0.8.4.ebuild 946
-MD5 802335f62c0bbb68a2e0745f7b2e126c files/0.8a-gcc3.patch 386
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 79f3b71170b916ad066d39d29114815c files/digest-kavi2svcd-0.8.2 68
-MD5 da1cf7fb7841887e0312a44fabb23506 files/kavi2svcd-0.8.2-configure-arts.patch 3567
 MD5 d9df9bf60f2c1c9762955ea50aae0c93 files/digest-kavi2svcd-0.8.4 70
+MD5 802335f62c0bbb68a2e0745f7b2e126c files/0.8a-gcc3.patch 386
+MD5 da1cf7fb7841887e0312a44fabb23506 files/kavi2svcd-0.8.2-configure-arts.patch 3567
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDJ73j5H05b2HAEkRAqd7AJ4mxU4w5MpTBIIfrnsuMBUVvRnmCQCfSzzI
+sf3lP7X6UfasTm4C8YJRYpE=
+=mnjl
+-----END PGP SIGNATURE-----
