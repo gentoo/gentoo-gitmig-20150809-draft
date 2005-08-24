@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/pfqueue-0.4.0.ebuild,v 1.2 2005/06/09 19:39:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/pfqueue-0.4.0.ebuild,v 1.3 2005/08/24 12:44:50 ticho Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,6 @@ IUSE=""
 DEPEND="virtual/libc
 		sys-devel/libtool
 		sys-libs/ncurses"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if [ $(gcc-major-version) = 4 ] ; then
