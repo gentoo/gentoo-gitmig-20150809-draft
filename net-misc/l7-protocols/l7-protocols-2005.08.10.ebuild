@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.08.10.ebuild,v 1.1 2005/08/14 02:50:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.08.10.ebuild,v 1.2 2005/08/24 14:08:53 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -41,7 +41,7 @@ src_install() {
 
 	dodir /usr/share/${PN}
 	cd testing
-	cp -a randprintable randchars test_speed match README *.sh ${D}/usr/share/${PN}
+	cp -pPR randprintable randchars test_speed match README *.sh ${D}/usr/share/${PN}
 	cd ${S}
 
 	dodoc README CHANGELOG HOWTO WANTED
@@ -54,5 +54,5 @@ src_install() {
 
 	make PREFIX=${D} install || die
 	rm ${D}/etc/${PN}/Makefile
-	chown -R root:root ${D}
+	chown -R root:0 ${D}
 }

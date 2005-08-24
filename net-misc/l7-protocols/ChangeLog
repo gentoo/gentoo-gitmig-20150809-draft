@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.15 2005/08/14 02:50:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.16 2005/08/24 14:08:53 flameeyes Exp $
+
+  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  l7-protocols-2005.08.10.ebuild:
+  FreeBSD fixes: cp -a -> cp -pPR; root:root -> root:0.
 
 *l7-protocols-2005.08.10 (14 Aug 2005)
 
