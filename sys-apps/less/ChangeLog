@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.41 2005/08/18 04:02:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.42 2005/08/24 23:50:33 vapier Exp $
+
+*less-385_p4-r1 (24 Aug 2005)
+
+  24 Aug 2005; Mike Frysinger <vapier@gentoo.org> +files/code2color.patch,
+  +less-385_p4-r1.ebuild:
+  Add support for more filetypes and colorize support #46587 by José Romildo
+  Malaquias.
 
   18 Aug 2005; Mike Frysinger <vapier@gentoo.org> less-382-r2.ebuild,
   less-385.ebuild, less-385_p4.ebuild:
