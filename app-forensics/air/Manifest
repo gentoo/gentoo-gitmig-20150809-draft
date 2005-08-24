@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54b325bcd715e9b14f98136e4ef898ae ChangeLog 2887
+MD5 ef52314f83a8979fd3a5bc56416ceaa6 air-1.2.7.ebuild 1587
 MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
-MD5 9875f13e627c8135260893f9d0284a9f ChangeLog 2706
-MD5 25baf6b4332bedabbe67dada4533e173 air-1.2.7.ebuild 1551
 MD5 122efd889cf876d7e2e22dc0453465d6 air-1.2.5-r1.ebuild 1657
 MD5 bfd76b7961c82552945d6ccffffd28dc files/air-1.2.5-r1-installfix.patch 9411
-MD5 b79d011ebc05acba20817235893211cd files/air-1.2.5-installfix.patch 6415
-MD5 119062acfec408661f896f96cd7c325c files/digest-air-1.2.5-r1 60
 MD5 e57a11971a8230ba7ec6c7efa082fd93 files/digest-air-1.2.7 60
+MD5 119062acfec408661f896f96cd7c325c files/digest-air-1.2.5-r1 60
+MD5 b79d011ebc05acba20817235893211cd files/air-1.2.5-installfix.patch 6415
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDH6oj5H05b2HAEkRAucUAKCIicV4Ph2/+MhjZ5hLFbPf0VY8sQCfZg0w
+J0HiIujM4BBT1V6fAwAVRp0=
+=Ernw
+-----END PGP SIGNATURE-----
