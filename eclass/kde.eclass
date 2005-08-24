@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.127 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.128 2005/08/24 22:52:59 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -60,11 +60,12 @@ kde_src_unpack() {
 		touch $UIFILES
 	fi
 
-	# Visiblity stuff is way broken! Just disable it when it's present
-	# until upstream finds a way to have it working right.
-	if grep KDE_ENABLE_HIDDEN_VISIBILITY configure.in &> /dev/null || ! [[ -f configure ]]; then
-		find ${S} -name configure.in.in | xargs sed -i -e 's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
-		rm -f configure
+	# Visiblity stuff is way broken before 3.4.2. Just disable it when it's present.
+	if [  "${PV}" = "3.4.1" ]; then
+		if grep KDE_ENABLE_HIDDEN_VISIBILITY configure.in &> /dev/null || ! [[ -f configure ]]; then
+			find ${S} -name configure.in.in | xargs sed -i -e 's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
+			rm -f configure
+		fi
 	fi
 }
 
