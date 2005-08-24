@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.10 2005/07/29 15:42:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.11 2005/08/24 23:09:00 tester Exp $
 
 inherit toolchain-funcs games
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/src/games/wump/wump.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="sys-apps/less"
