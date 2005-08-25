@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0.ebuild,v 1.7 2005/08/25 04:24:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0.ebuild,v 1.8 2005/08/25 12:12:03 swegener Exp $
 
 inherit eutils kde-functions
 
@@ -52,7 +52,7 @@ src_unpack() {
 	cd ${S}/plugins/qt-gui && \
 		epatch ${FILESDIR}/${PV}-no_stupid_koloboks.patch || \
 		ewarn "Fail to kill koloboks, forget it"
-	
+
 	if use crypt; then
 		cd ${S}
 		epatch ${FILESDIR}/1.3.0-gpgme3_hack.patch
