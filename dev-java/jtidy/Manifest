@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a897044a0c5fc28187e396b5ef3aca5 jtidy-0_pre20010801.ebuild 950
-MD5 fb8f2103532f0959130277ef69d46578 ChangeLog 1022
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 f06b89297c6e457df85d2d5a88ea9c97 ChangeLog 1192
+MD5 a6bae3b5ed753e00d2377fb9fae8daf0 jtidy-0_pre20010801.ebuild 1045
 MD5 641e41ae611ccfd2dc3d440622b4b344 files/digest-jtidy-0_pre20010801 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFChqLf06ebR+OMO78RAnjXAJ4/SZxc4eXqt2RW6WWjwKzDaWmxCQCgip6t
-8sXuKjk+VnHOGr4cSo1vsRo=
-=I8v+
------END PGP SIGNATURE-----
+MD5 848674570fa692120ea790a918b8ebbb files/jtidy-source-1.4.patch 316

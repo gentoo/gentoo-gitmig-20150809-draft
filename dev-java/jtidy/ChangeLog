@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jtidy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.6 2005/05/15 01:16:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.7 2005/08/25 03:12:02 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/jtidy-source-1.4.patch, jtidy-0_pre20010801.ebuild:
+  Add patch to allow compilation with java-1.5.  Add ~ia64
 
   15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jtidy-0_pre20010801.ebuild:
