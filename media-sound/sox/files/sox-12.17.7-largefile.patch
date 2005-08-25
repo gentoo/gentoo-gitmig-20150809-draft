@@ -1,0 +1,12 @@
+Index: sox-12.17.7/configure.in
+===================================================================
+--- sox-12.17.7.orig/configure.in
++++ sox-12.17.7/configure.in
+@@ -88,6 +88,7 @@ AC_C_BIGENDIAN
+ AC_C_CONST
+ AC_C_INLINE
+ AC_TYPE_SIZE_T
++AC_SYS_LARGEFILE
+ 
+ if test "$enable_old_rate" = yes
+ then
