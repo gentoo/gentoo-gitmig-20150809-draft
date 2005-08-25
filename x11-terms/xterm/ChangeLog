@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.97 2005/08/05 12:04:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.98 2005/08/25 15:36:39 cardoe Exp $
+
+  25 Aug 2005; Doug Goldstein <cardoe@gentoo.org> xterm-204.ebuild:
+  Added modular X depends as per discussion with seemant.
+  These work for me, but please CC me on any bug if there needs to be tweaks.
 
   05 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/xterm-no-toolbar-by-default.patch:
