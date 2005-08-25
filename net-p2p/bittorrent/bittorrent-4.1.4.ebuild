@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.2 2005/08/24 14:55:41 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.3 2005/08/25 13:53:22 sekretarz Exp $
 
-inherit distutils fdo-mime
+inherit distutils fdo-mime eutils
 
 MY_P="${P/bittorrent/BitTorrent}"
 #MY_P="${MY_P/}"
@@ -64,9 +64,8 @@ src_install() {
 
 	if use X ; then
 		cp ${D}/usr/share/pixmaps/${MY_P}/bittorrent.ico ${D}/usr/share/pixmaps/
-		dodir /usr/share/applications
-		insinto /usr/share/applications
-		doins ${FILESDIR}/btdownloadgui.desktop
+		make_desktop_entry "bittorrent" "BitTorrent" \
+			/usr/share/pixmaps/bittorrent.ico "Network" "/usr/bin/"
 	fi
 
 	insinto /etc/conf.d
