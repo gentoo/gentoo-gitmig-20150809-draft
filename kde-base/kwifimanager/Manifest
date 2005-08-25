@@ -2,6 +2,6 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5109ce5c783565c6d30395bcc9680549 ChangeLog 2273
 MD5 57e7e35f19d9e6b9da2a87718504b127 kwifimanager-3.4.2.ebuild 487
 MD5 be6641f0ea4623cf43ebc5e05038d5e3 kwifimanager-3.4.1.ebuild 555
-MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kwifimanager-3.4.2 70
+MD5 1277f401bade54acfa086cf013950252 files/digest-kwifimanager-3.4.2 296
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kwifimanager-3.4.1 218
 MD5 426360bf289efe11a499f1fa89bb2f4b files/wireless-extensions-api.diff 528

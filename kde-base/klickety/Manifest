@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 30ae2e7ee15eb568c0317984792567b8 ChangeLog 2164
-MD5 d52a11b8dd15b07e71dcc44f59d01f8a klickety-3.4.1.ebuild 668
-MD5 5a279a42c6b8fa3cd751fc7d5601137e klickety-3.4.2.ebuild 681
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 d52a11b8dd15b07e71dcc44f59d01f8a klickety-3.4.1.ebuild 668
+MD5 30ae2e7ee15eb568c0317984792567b8 ChangeLog 2164
+MD5 5a279a42c6b8fa3cd751fc7d5601137e klickety-3.4.2.ebuild 681
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klickety-3.4.2 288
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klickety-3.4.1 212
-MD5 b6a10ce36a18708dd9210e57751a7478 files/digest-klickety-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99FTKf2g/qXtneoRAhPeAJ964uZzPpsODdZxGIVmyqH6ckxxzQCgxZ3H
-814WU/yR41OHtuGicpZ5NjM=
-=LmpW
------END PGP SIGNATURE-----

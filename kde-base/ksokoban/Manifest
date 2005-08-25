@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 976a8d361928453f731aeace546ca282 ksokoban-3.4.2.ebuild 562
 MD5 b60ce55780d01936088585be7f010d57 ChangeLog 2190
 MD5 1ba6e4b8955f6531be68ac85460f4a76 ksokoban-3.4.1.ebuild 549
-MD5 976a8d361928453f731aeace546ca282 ksokoban-3.4.2.ebuild 562
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksokoban-3.4.1 212
-MD5 b6a10ce36a18708dd9210e57751a7478 files/digest-ksokoban-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99KyKf2g/qXtneoRAkXCAJ40bkaImf2ZeypPE6wtRFR/4SMJPACgoitR
-HyEns7nY+eSqpX93cxclGD4=
-=+rgt
------END PGP SIGNATURE-----
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksokoban-3.4.2 288

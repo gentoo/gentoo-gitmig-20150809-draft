@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 f115f59e19ffa459280e50059a1fac34 kscd-3.4.2.ebuild 801
 MD5 bbb5b4cb55ee9dc10b497bcc58749e48 ChangeLog 2049
 MD5 72c275ff2754709d9f0e881e9b56be4b kscd-3.4.1.ebuild 788
-MD5 f115f59e19ffa459280e50059a1fac34 kscd-3.4.2.ebuild 801
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 453075362e3201c7f44fea430afec5d5 files/digest-kscd-3.4.2 308
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kscd-3.4.1 227
-MD5 dfce952f93ee14ecafcfea645134aec2 files/digest-kscd-3.4.2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC98GrKf2g/qXtneoRAh3CAJ987TeIgtVNbMHHvh3dzNR/dB7tcwCfSAEf
-yBvEaOIF1lnk3Jn+2Uew3sg=
-=IbCH
------END PGP SIGNATURE-----

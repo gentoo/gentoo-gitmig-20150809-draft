@@ -2,5 +2,5 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 95482391ea927cfa302dd34a7bc74acd ChangeLog 1663
 MD5 0bfc5ae2f7e3bb5ddb20e0b42839dfc2 kmobile-3.4.1.ebuild 418
 MD5 e7b2221358d3558e1277bab295038faa kmobile-3.4.2.ebuild 421
-MD5 0ff2af5e4e7ab4d292ff00305302b6b2 files/digest-kmobile-3.4.2 67
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmobile-3.4.2 282
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmobile-3.4.1 208

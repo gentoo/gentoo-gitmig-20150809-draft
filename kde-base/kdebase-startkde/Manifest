@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
 MD5 c4ce24a7550eae625c27c02eb443644d ChangeLog 3499
 MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
-MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
-MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-startkde-3.4.1 212
-MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-kdebase-startkde-3.4.2 68
 MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1284
 MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1284
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99twKf2g/qXtneoRAm0zAJ9tD/G0/ghv9ga6vW0ISMX3P8ykKACfYp/K
-a4kuJWbl0iQhndUnynD0rkg=
-=JNxy
------END PGP SIGNATURE-----
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-startkde-3.4.2 287
+MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
+MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320

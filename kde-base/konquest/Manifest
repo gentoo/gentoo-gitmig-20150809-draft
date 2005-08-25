@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8df4c38972b3b4b1491f0ae612c98de6 ChangeLog 2164
-MD5 8a1f33094b2d436757e9b3f61f27c6b2 konquest-3.4.1.ebuild 541
-MD5 a70d650c93c978fe7aca90c2294b3e25 konquest-3.4.2.ebuild 554
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 a70d650c93c978fe7aca90c2294b3e25 konquest-3.4.2.ebuild 554
+MD5 8a1f33094b2d436757e9b3f61f27c6b2 konquest-3.4.1.ebuild 541
+MD5 8df4c38972b3b4b1491f0ae612c98de6 ChangeLog 2164
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-konquest-3.4.2 288
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-konquest-3.4.1 212
-MD5 b6a10ce36a18708dd9210e57751a7478 files/digest-konquest-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99IeKf2g/qXtneoRApB3AJwKpHqolzVL1mYaWr4Es2aZe3DNqgCguELc
-l98zyfA0GGf2+ndXT8gzEko=
-=xZuE
------END PGP SIGNATURE-----

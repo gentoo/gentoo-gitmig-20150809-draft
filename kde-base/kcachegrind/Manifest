@@ -2,5 +2,5 @@ MD5 b1f8b1b85874b9e323387dc5520ce5ce kcachegrind-3.4.2.ebuild 482
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1d90892061c0eeb42ea7e88e01fd355a kcachegrind-3.4.1.ebuild 435
 MD5 250ede375e1aaf4bd3817e1a08a65f19 ChangeLog 2176
-MD5 086313a32c0a92f42f8050236d4494ab files/digest-kcachegrind-3.4.2 66
+MD5 0a38813829924b012d8b632f47abb45d files/digest-kcachegrind-3.4.2 280
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kcachegrind-3.4.1 206

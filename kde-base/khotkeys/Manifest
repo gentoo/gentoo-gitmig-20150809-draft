@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d98b71f3c640aebc7d1be271a8b600e4 ChangeLog 2164
-MD5 51330a32c6197d220bb44ef01c8b94ec khotkeys-3.4.1.ebuild 384
-MD5 ad91b8c827dd306007ee8e6b48108feb khotkeys-3.4.2.ebuild 397
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 ad91b8c827dd306007ee8e6b48108feb khotkeys-3.4.2.ebuild 397
+MD5 51330a32c6197d220bb44ef01c8b94ec khotkeys-3.4.1.ebuild 384
+MD5 d98b71f3c640aebc7d1be271a8b600e4 ChangeLog 2164
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khotkeys-3.4.2 287
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khotkeys-3.4.1 212
-MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-khotkeys-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC97yZKf2g/qXtneoRAgwIAJ9sfxm4q+BPpJhLnIcgyibxrNozyQCdFKyO
-gOvch3Iv5asXKJgfN6VoUMc=
-=D3/v
------END PGP SIGNATURE-----

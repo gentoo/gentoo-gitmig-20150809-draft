@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e85458935de84ec6bb0d29e133ae8b34 ChangeLog 2261
-MD5 0353cc128a6f7f89acf7922fee8a9296 kbackgammon-3.4.1.ebuild 549
-MD5 283943169f14216890da50dc44565372 kbackgammon-3.4.2.ebuild 562
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 0353cc128a6f7f89acf7922fee8a9296 kbackgammon-3.4.1.ebuild 549
+MD5 e85458935de84ec6bb0d29e133ae8b34 ChangeLog 2261
+MD5 283943169f14216890da50dc44565372 kbackgammon-3.4.2.ebuild 562
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kbackgammon-3.4.1 212
-MD5 b6a10ce36a18708dd9210e57751a7478 files/digest-kbackgammon-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99I6Kf2g/qXtneoRAoKgAJ4yKsPQ88UYJ5hLORLAI2tRpgB3qgCgrBuN
-OLz1ta3G/RlbpMwzLWTP+gY=
-=Gbj/
------END PGP SIGNATURE-----
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kbackgammon-3.4.2 288

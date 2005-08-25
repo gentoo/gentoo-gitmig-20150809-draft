@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 f1749635853bb1e89d45b143f2f0d61f libkscan-3.4.2.ebuild 425
 MD5 b4a50fc29039def714c9c8f5ef0772ad ChangeLog 2033
 MD5 3361607b9ea88422125d5f899ab3d723 libkscan-3.4.1.ebuild 413
-MD5 f1749635853bb1e89d45b143f2f0d61f libkscan-3.4.2.ebuild 425
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-libkscan-3.4.1 221
-MD5 a603b1f40c870db682665f57f908df0e files/digest-libkscan-3.4.2 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9755Kf2g/qXtneoRAjOZAJ9+GYk3pGX5XZIyF9g6J/8QyBqlnwCdGRj8
-GZF2UsUv+AyDAYkXJkf90o8=
-=8LT9
------END PGP SIGNATURE-----
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-libkscan-3.4.2 300

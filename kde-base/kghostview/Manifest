@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2d4ddd19a78d4da91545fd617491716e ChangeLog 2403
-MD5 7bf336ee8e49a2aea158cb57735bdb9e kghostview-3.4.1.ebuild 520
-MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.2.ebuild 649
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kghostview-3.4.1 221
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kghostview-3.4.2 71
+MD5 7bf336ee8e49a2aea158cb57735bdb9e kghostview-3.4.1.ebuild 520
+MD5 2d4ddd19a78d4da91545fd617491716e ChangeLog 2403
+MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.2.ebuild 649
 MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9792Kf2g/qXtneoRAvcpAJ9tb72OdUOd6glcgE0qqajhXywDpgCeLiSc
-uRE08LH6Rgg4Wt28qEgspSo=
-=GKBS
------END PGP SIGNATURE-----
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kghostview-3.4.1 221
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kghostview-3.4.2 300

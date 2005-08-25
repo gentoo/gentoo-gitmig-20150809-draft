@@ -4,6 +4,6 @@ MD5 67f69a490c47381d82c77c9cde372ce5 kalyptus-3.3.2.ebuild 688
 MD5 0ee39aeccf35dcd265240cd4f12be93e kalyptus-3.4.1.ebuild 701
 MD5 d54c2057fccb4b09ae0b6d2dfc5299c8 kalyptus-3.4.2.ebuild 707
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kalyptus-3.4.1 221
-MD5 073201dc724b52ffb072f744e9aa9ca2 files/digest-kalyptus-3.4.2 71
+MD5 c0f3d1cce733c4ace5a5ae7e8e00c9c1 files/digest-kalyptus-3.4.2 300
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-kalyptus-3.3.2 71

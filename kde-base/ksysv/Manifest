@@ -2,5 +2,5 @@ MD5 a86018eb13aca0ca09136468a60e6448 ksysv-3.4.1.ebuild 400
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 9fe639d6f897e6e1c4b3338806c26764 ChangeLog 1375
 MD5 a057994732cc7634b5d4e7ae640fb70e ksysv-3.4.2.ebuild 403
-MD5 989e7ce04bdedd84132a4de27b408f93 files/digest-ksysv-3.4.2 68
+MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-ksysv-3.4.2 286
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-ksysv-3.4.1 211

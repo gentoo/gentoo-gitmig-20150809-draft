@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e1ca87500df2bee043c2e150ff6b4fd ChangeLog 2215
-MD5 81dd768912a60b59cde4322ff2f02db9 kdepasswd-3.4.1.ebuild 518
-MD5 44e32e90f31926671d2c21f593504750 kdepasswd-3.4.2.ebuild 531
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 81dd768912a60b59cde4322ff2f02db9 kdepasswd-3.4.1.ebuild 518
+MD5 0e1ca87500df2bee043c2e150ff6b4fd ChangeLog 2215
+MD5 44e32e90f31926671d2c21f593504750 kdepasswd-3.4.2.ebuild 531
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdepasswd-3.4.1 212
-MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-kdepasswd-3.4.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC99x0Kf2g/qXtneoRAuU5AJ9e++kF5GBJyiIM7MCI1krIjSFInACdHPho
-Ge/uZ08VWYtTnaV5J4Zaoa4=
-=6wJh
------END PGP SIGNATURE-----
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdepasswd-3.4.2 287

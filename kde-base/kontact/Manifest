@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 9dff7a48160f0e72f3b691d41cb5126b kontact-3.4.2.ebuild 1054
 MD5 74f9c0d8f14905d33a86f4504dd5ba02 ChangeLog 2274
 MD5 a22b16081decc9ed8e6039dd9392d13f kontact-3.4.1.ebuild 1039
-MD5 9dff7a48160f0e72f3b691d41cb5126b kontact-3.4.2.ebuild 1054
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-3.4.2 282
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-3.4.1 208
-MD5 0ff2af5e4e7ab4d292ff00305302b6b2 files/digest-kontact-3.4.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC98jxKf2g/qXtneoRAnpUAJ4p7+S4dx/nf6nUzmD3rcfqLXYz0gCgsKHM
-zOCa2wwcke06f9EZZ3GieeM=
-=NYAc
------END PGP SIGNATURE-----

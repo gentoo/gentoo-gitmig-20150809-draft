@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37d0646b153b1c61cbea8663c08625da ChangeLog 2421
 MD5 ce1f15c41a4b11e43a331d24b8ff0150 kdetoys-meta-3.4.1.ebuild 857
-MD5 ca231c20af0ae5484670b1782bb3ccd7 kdetoys-meta-3.4.2.ebuild 874
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.1 0
+MD5 37d0646b153b1c61cbea8663c08625da ChangeLog 2421
+MD5 ca231c20af0ae5484670b1782bb3ccd7 kdetoys-meta-3.4.2.ebuild 874
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.2 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC98zqKf2g/qXtneoRAr9mAKCzXIY2Q4WvITAFw4tQLCGMPAJEyACguxtJ
-kYk1O5d2Nd/WLp5EJGjmy3M=
-=9via
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdetoys-meta-3.4.1 0

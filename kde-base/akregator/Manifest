@@ -5,5 +5,5 @@ MD5 5423f5066bf8b71ffea6ddeaf65a05ed akregator-3.4.2.ebuild 666
 MD5 d5fe5d67d3a3933f65d4a783c2d78980 ChangeLog 2914
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-akregator-3.4.1 208
 MD5 b6a29865e7aefe8e3858bd65de651d3d files/kdepim-3.4.1-akregator-unread.patch 673
-MD5 0ff2af5e4e7ab4d292ff00305302b6b2 files/digest-akregator-3.4.2 67
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-akregator-3.4.2 282
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-akregator-3.4.1-r1 208

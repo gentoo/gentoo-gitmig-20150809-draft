@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 80938f50961fbcc1b4826b6ac7e2db77 ChangeLog 3548
-MD5 866ca4d8f807ee9c2e8ccec828160ef1 kopete-3.4.1-r1.ebuild 724
-MD5 4e684e15946f023c333345b687db259c kopete-3.4.1.ebuild 515
-MD5 994554c943ba088573fcf744404b14a4 kopete-3.4.2.ebuild 1009
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
-MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183
+MD5 4e684e15946f023c333345b687db259c kopete-3.4.1.ebuild 515
+MD5 866ca4d8f807ee9c2e8ccec828160ef1 kopete-3.4.1-r1.ebuild 724
+MD5 80938f50961fbcc1b4826b6ac7e2db77 ChangeLog 3548
+MD5 994554c943ba088573fcf744404b14a4 kopete-3.4.2.ebuild 1009
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kopete-3.4.1 218
 MD5 284887f9ed6a0a0b0efc3a0d88f11868 files/digest-kopete-3.4.1-r1 297
-MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kopete-3.4.2 70
+MD5 1277f401bade54acfa086cf013950252 files/digest-kopete-3.4.2 296
+MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
 MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC998uKf2g/qXtneoRAqEcAKCmvdM+7XOK1Wnld2jiGs+TXr4SmwCfZ065
-3fo24fb1CiarJ2i3adf4K28=
-=LWEY
------END PGP SIGNATURE-----
+MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183

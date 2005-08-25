@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6cf8362bd4d3e90121e45f7de9e0b72c ChangeLog 3309
-MD5 493fdf9a2dc94e56301161f38122b422 kpdf-3.4.1-r1.ebuild 627
-MD5 710200655b097652c4ea66ea6e5931db kpdf-3.4.1.ebuild 569
-MD5 da8c7b95896e393c3af5901801f76253 kpdf-3.4.2-r1.ebuild 698
-MD5 9d42c07d0672b69a347a437c76b5e024 kpdf-3.4.2.ebuild 578
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 710200655b097652c4ea66ea6e5931db kpdf-3.4.1.ebuild 569
+MD5 9d42c07d0672b69a347a437c76b5e024 kpdf-3.4.2.ebuild 578
+MD5 6cf8362bd4d3e90121e45f7de9e0b72c ChangeLog 3309
 MD5 26ec262357d5acdd4fbe2e83d488e692 kpdf-3.4.2-r2.ebuild 816
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2 71
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2-r1 71
-MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
-MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
-MD5 a603b1f40c870db682665f57f908df0e files/digest-kpdf-3.4.2-r2 71
+MD5 493fdf9a2dc94e56301161f38122b422 kpdf-3.4.1-r1.ebuild 627
+MD5 da8c7b95896e393c3af5901801f76253 kpdf-3.4.2-r1.ebuild 698
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpdf-3.4.2 300
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpdf-3.4.2-r1 300
 MD5 653bd55a1e87c51731d0b0512051774e files/kdegraphics-3.4.2-kpdf-contentcrash.patch 749
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC98AOKf2g/qXtneoRAubBAKClBqwTLaEtXbeo+JSadB/OUqJpOQCeNo85
-PLCmNQA/yVa4uwOC26GIUgU=
-=59VS
------END PGP SIGNATURE-----
+MD5 ec3b95efe9139f4259d6de213fe4b87b files/post-3.4.1-kdegraphics-4.diff 1827
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1-r1 221
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpdf-3.4.2-r2 300
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpdf-3.4.1 221
+MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
