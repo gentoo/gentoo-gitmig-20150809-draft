@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 0d5d8048bb11a2ef56d6abe80b05a130 ChangeLog 8835
+MD5 5cf43c3260cf9474c86f7cbb20044718 ChangeLog 8925
 MD5 af2d79a8d446aab76e12d9700f8e1934 bittorrent-4.1.3.ebuild 2163
 MD5 540fc1799da18a33f765f65f37325f98 bittorrent-4.1.4.ebuild 2273
 MD5 7ad8023d07bd4d1de7817aa65f37196e bittorrent-3.4.2-r2.ebuild 1926
-MD5 57c39cce998149ce8e6306c1501686e5 bittorrent-4.0.2.ebuild 1967
 MD5 32a2ddbcedfa081fc77a851759a7d6d2 bittorrent-4.0.4.ebuild 2037
+MD5 a51d47b02eb10872116f91483dd7b77c bittorrent-4.0.2.ebuild 1965
 MD5 21ec89d06de83ddcc4cf6d6616355190 files/bittorrent-4.1.0-fix-all.patch 2483
 MD5 a94d4e97cceef0143a1a5c8784b6f70c files/bttrack.conf 728
 MD5 8254615ee527cd608123c83de2616ede files/bttrack.rc 631
@@ -21,7 +21,7 @@ MD5 1f68732157a0742ec30e29327ad0baf1 files/digest-bittorrent-4.1.4 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDDKeyZ/iYVBmujdURAoPcAKDr2NDyuu7N6z3KZTT7tEoauitBTwCbB2rA
-DrUJWOJgSbssu1h8DI8APHA=
-=kx5d
+iD8DBQFDDadsZ/iYVBmujdURAjRIAJ9oRhXcSestclY42UC3Kp09U4pc2QCfdehP
+AWHsd/NdxRGxeTIq7gnskjs=
+=HoPs
 -----END PGP SIGNATURE-----
