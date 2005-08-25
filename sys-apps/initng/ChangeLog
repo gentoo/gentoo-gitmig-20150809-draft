@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/initng
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.17 2005/08/18 14:58:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.18 2005/08/25 23:20:25 vapier Exp $
+
+*initng-0.1.9 (25 Aug 2005)
+
+  25 Aug 2005; Mike Frysinger <vapier@gentoo.org> +initng-0.1.9.ebuild:
+  Version bump #103692 by Simon Strandman.
 
   18 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> initng-0.1.8.ebuild:
   Keyworded ~sparc
