@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e702909d7558427edeb579280c234561 ntlmaps-0.9.9-r1.ebuild 1352
-MD5 3299fc41dc2862f119e8dd3146ebc9c5 ntlmaps-0.9.9.5.ebuild 1414
-MD5 306b375e9b49709207fb4eb8fe633293 ChangeLog 2255
+MD5 1107917b2777317ae69729d83d308c7d ntlmaps-0.9.9-r1.ebuild 1351
 MD5 a65bb25d95d5de35ca0f2727b1e8e7c9 metadata.xml 489
-MD5 8986ad96cdc57db74518ce83fc0fbfee files/ntlmaps.init 725
+MD5 306b375e9b49709207fb4eb8fe633293 ChangeLog 2255
+MD5 3299fc41dc2862f119e8dd3146ebc9c5 ntlmaps-0.9.9.5.ebuild 1414
 MD5 89d940c1a5df0a265c10c920498f1a03 files/ntlmaps-0.9.9-gentoo.patch 1165
+MD5 8986ad96cdc57db74518ce83fc0fbfee files/ntlmaps.init 725
 MD5 f80ba6da97c9b6ecf9589fcbe791abf6 files/digest-ntlmaps-0.9.9.5 66
 MD5 2c97eb4d589e8a9f9e9968be5aa96daa files/ntlmaps-0.9.9.5-gentoo.patch 1183
 MD5 677c6c0d28b021c5c460dcd020ca6dce files/digest-ntlmaps-0.9.9-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCx6h8NSP4Vda7IdsRAvBjAJsHPDgeLd5x7bqDjwZUHLO+2m13JQCeNedE
-OROK/jpbHT1YSzJPcD2MbyM=
-=QpzV
------END PGP SIGNATURE-----

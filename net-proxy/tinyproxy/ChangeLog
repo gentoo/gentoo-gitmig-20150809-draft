@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.4 2005/06/04 15:30:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.5 2005/08/25 01:09:27 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> tinyproxy-1.6.3.ebuild:
+  stable on ia64
 
   04 Jun 2005; Alin Nastac <mrness@gentoo.org> -tinyproxy-1.6.2.ebuild:
   Remove obsolete version.

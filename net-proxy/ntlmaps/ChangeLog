@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ntlmaps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.3 2005/07/03 08:57:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.4 2005/08/25 01:05:35 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> ntlmaps-0.9.9-r1.ebuild:
+  stable on ia64
 
 *ntlmaps-0.9.9.5 (03 Jul 2005)
 *ntlmaps-0.9.9-r1 (03 Jul 2005)
