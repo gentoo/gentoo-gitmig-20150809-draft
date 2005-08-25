@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.46 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.47 2005/08/25 09:33:17 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -73,6 +73,9 @@ if [ "$KDEBASE" = "true" ]; then
 					# don't have prerelease tarballs handy
 		3.4.1)		XDELTA_BASE="stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
 				XDELTA_DELTA="stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta"
+				;;
+		3.4.2)		XDELTA_BASE="stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
+				XDELTA_DELTA="stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta stable/3.4.2/src/$KMNAME-3.4.1-3.4.2.tar.xdelta"
 				;;
 		*)		;;
 	esac
