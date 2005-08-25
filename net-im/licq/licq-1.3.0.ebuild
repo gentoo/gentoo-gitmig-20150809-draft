@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0.ebuild,v 1.6 2005/07/10 01:02:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0.ebuild,v 1.7 2005/08/25 04:24:02 agriffis Exp $
 
 inherit eutils kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-PRE}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="~alpha ~amd64 ia64 ppc ~sparc ~x86"
 IUSE="ssl socks5 qt kde ncurses crypt"
 
 # we can't have conditional dependencies so "use kde && inherit kde"
@@ -52,6 +52,11 @@ src_unpack() {
 	cd ${S}/plugins/qt-gui && \
 		epatch ${FILESDIR}/${PV}-no_stupid_koloboks.patch || \
 		ewarn "Fail to kill koloboks, forget it"
+	
+	if use crypt; then
+		cd ${S}
+		epatch ${FILESDIR}/1.3.0-gpgme3_hack.patch
+	fi
 }
 
 src_compile() {
@@ -61,7 +66,6 @@ src_compile() {
 	if use crypt
 	then
 		myconf="${myconf} --enable-gpgme"
-		epatch ${FILESDIR}/1.3.0-gpgme3_hack.patch
 	else
 		myconf="${myconf} --disable-gpgme"
 	fi
