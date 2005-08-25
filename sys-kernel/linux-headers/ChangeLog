@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.141 2005/08/25 13:26:19 gustavoz Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.142 2005/08/25 23:05:20 vapier Exp $
+
+  25 Aug 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/linux-headers-2.4-arm-cris-ELF_DATA.patch,
+  linux-headers-2.4.26-r1.ebuild:
+  Fix ELF_DATA defines for arm/cris.
 
   25 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   linux-headers-2.6.8.1-r4.ebuild:
