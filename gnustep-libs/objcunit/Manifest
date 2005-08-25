@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1116227eab988b6f76e3c2c028b59893 ChangeLog 383
 MD5 6d2fa3abd552e278cc463c81985a5d55 files/digest-objcunit-1.2 72
 MD5 104fec3c2462aa70acafcae393ee92a8 metadata.xml 453
 MD5 e31476b95c6ab1516bdc568f6619a406 objcunit-1.2.ebuild 931
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhYxI1lqEGTUzyQRAigEAJ9U0JAwSJ0jNtFvwafgfvSRQxaSzwCePZal
+dwGqqiZqOQaMa6/0XoNXIUU=
+=+Uc7
+-----END PGP SIGNATURE-----

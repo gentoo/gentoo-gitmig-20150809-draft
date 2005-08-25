@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ed91c57807bfe0b313ddcb0e7c893727 ChangeLog 817
 MD5 e94343ba069512236507fbc9d2e555b7 files/digest-imagekits-0.6 66
 MD5 928c75c0e4e4a783d39822df1a7b59a6 imagekits-0.6.ebuild 680
 MD5 5b0cd312b15525fffa44c03aae4f9f49 metadata.xml 2087
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhYxI1lqEGTUzyQRAlr4AJ9fn+6DC2N0FMEfTJxjVyu+yHOswwCfQV4a
+9Sn3jcTmdnbde7viP0IY6OQ=
+=ToLX
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8171c15fbd46da417ecd4aea5a5ac4e5 ChangeLog 1869
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-prefsmodule-1.1.1_pre20050110 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-prefsmodule-1.1.1_pre20050315 0
 MD5 0d5e4e2305b33e597335263b69e35791 metadata.xml 271
 MD5 25b5b5fd0474c9402294cbc30869d1f2 prefsmodule-1.1.1_pre20050110.ebuild 879
 MD5 2eb91df44ced0617772670f1f5f9ec04 prefsmodule-1.1.1_pre20050315.ebuild 879
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhYxI1lqEGTUzyQRAgzCAJ4i3MUKcTEU3BANu0veI4VZxZVBXACgnd94
+oIrexBfnThMSn0hJARJA2go=
+=3503
+-----END PGP SIGNATURE-----

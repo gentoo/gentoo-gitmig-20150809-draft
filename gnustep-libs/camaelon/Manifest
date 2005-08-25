@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2de043de37b371ce592b7fdcf973221e ChangeLog 1421
 MD5 6276a594204b69bbf0b63b6909faee81 camaelon-0.1-r1.ebuild 602
 MD5 b1096b917f64a9bd1101ec331fb3c449 camaelon-0.1.ebuild 600
@@ -5,3 +8,10 @@ MD5 25156bd158c00d75fff0bbe3b2e1c6f2 files/config-camaelon.sh 278
 MD5 ee1eb9dac9216738249c854e7e6bfd3b files/digest-camaelon-0.1 60
 MD5 ee1eb9dac9216738249c854e7e6bfd3b files/digest-camaelon-0.1-r1 60
 MD5 8fb26c3c7a8476fae488cee92d2764ea metadata.xml 328
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhYxI1lqEGTUzyQRAqMPAKChOnjMKljEoU3HnUuTTZzhQduuBgCZAZ2R
+55VKtt3PMLwnrlZqpSrHQME=
+=FmCY
+-----END PGP SIGNATURE-----

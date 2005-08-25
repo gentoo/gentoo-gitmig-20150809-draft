@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 627ed321f3d5b08fe57cbdaf45c16aed ChangeLog 4412
 MD5 8158b932411532721bfbe47dabb53384 files/digest-pantomime-1.2.0.20050606 77
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-pantomime-1.2.0_pre20050414 0
 MD5 e7c6a4ecebe301f312dc1f6c496ab97e metadata.xml 344
 MD5 cab0d7187c6fa0c011497ab12c273240 pantomime-1.2.0.20050606.ebuild 626
 MD5 00715645b0c2440e4d5ce3e1c97ae037 pantomime-1.2.0_pre20050414.ebuild 873
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhYxI1lqEGTUzyQRAiwZAJ9CTkyDCjolk6zQU0LEzkWT/9CCGgCfTUwd
+onrvqJd70pQughPJ053TR1Q=
+=q33C
+-----END PGP SIGNATURE-----

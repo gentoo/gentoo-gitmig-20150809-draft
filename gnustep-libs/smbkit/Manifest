@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3b002e096386399ddefbb63e3d9222b2 ChangeLog 1941
 MD5 cd0451b827f881dc372f37b6664dcdee files/digest-smbkit-0.0.1.20050521 73
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-smbkit-0.0.1_pre20050106 0
 MD5 aea9d4f697ff79da9ab1d1abf5a13926 metadata.xml 308
 MD5 4c733112638a912432bebbee002c4e35 smbkit-0.0.1.20050521.ebuild 564
 MD5 1d758e1c5aa1621b7890b4df517b395a smbkit-0.0.1_pre20050106.ebuild 845
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhYxI1lqEGTUzyQRAgFgAKDbzzm+XfneLZrSJiHUIzjAo0uxdACeKqSJ
+aQxcMALsZ6xbQiAZRai5srY=
+=0Y4S
+-----END PGP SIGNATURE-----
