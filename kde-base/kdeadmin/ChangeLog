@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.131 2005/08/24 23:11:01 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.132 2005/08/25 19:36:31 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> kdeadmin-3.4.1.ebuild:
+  stable on ia64
 
 *kdeadmin-3.5_alpha1 (24 Aug 2005)
 

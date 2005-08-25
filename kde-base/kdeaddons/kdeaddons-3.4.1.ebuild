@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.4.1.ebuild,v 1.6 2005/07/27 20:37:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.4.1.ebuild,v 1.7 2005/08/25 19:36:00 agriffis Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE addon modules: plugins for konqueror, noatun etc"
 
-KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86 hppa"
+KEYWORDS="~alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="arts sdl xmms berkdb"
 
 DEPEND="~kde-base/kdepim-${PV}
