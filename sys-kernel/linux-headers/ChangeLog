@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.140 2005/07/28 22:05:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.141 2005/08/25 13:26:19 gustavoz Exp $
+
+  25 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  linux-headers-2.6.8.1-r4.ebuild:
+  sparc non-multilib fix
 
   28 Jul 2005; <plasmaroo@gentoo.org> linux-headers-2.6.11-r2.ebuild:
   Fix #100080.
