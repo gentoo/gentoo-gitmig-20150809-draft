@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.75 2005/08/20 14:47:58 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.76 2005/08/25 23:51:45 flameeyes Exp $
+
+*gcalctool-5.5.42-r2 (25 Aug 2005)
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/gcalctool-5.5.42-malloc.patch, +gcalctool-5.5.42-r2.ebuild,
+  gcalctool-5.6.26.ebuild:
+  Added patch to build gcalctool on Gentoo/FreeBSD as per bug #103574. See
+  also gnome bug #314375. Fix already applied for next upstream version.
 
 *gcalctool-5.6.26 (20 Aug 2005)
 

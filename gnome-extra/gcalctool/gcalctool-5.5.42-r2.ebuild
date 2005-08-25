@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.6.26.ebuild,v 1.2 2005/08/25 23:51:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.5.42-r2.ebuild,v 1.1 2005/08/25 23:51:45 flameeyes Exp $
 
 inherit gnome2 eutils
 
@@ -23,33 +23,22 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
-USE_DESTDIR=1
+DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO MAINTAINERS"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	# blah, someone should make a patch to send upstream
-	gnome2_omf_fix 	help/C/Makefile.in \
-					help/de/Makefile.in \
-					help/es/Makefile.in \
-					help/fr/Makefile.in \
-					help/ja/Makefile.in \
-					help/it/Makefile.in \
-					help/ko/Makefile.in \
-					help/sv/Makefile.in \
-					help/zh_CN/Makefile.in \
-					help/zh_HK/Makefile.in \
-					help/zh_TW/Makefile.in
-	
-	epatch ${FILESDIR}/${PN}-5.5.42-malloc.patch
+	# fix for bug #95463
+	epatch ${FILESDIR}/${P}-hexdec-fix.patch
+	epatch ${FILESDIR}/${P}-malloc.patch
 }
 
 src_install() {
 
-	gnome2_src_install
+	gnome2_src_install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
 
 	# remove symlink that conflicts with <2.3 gnome-utils
 	rm -f ${D}/usr/bin/gnome-calculator
+
 }
+USE_DESTDIR="1"
