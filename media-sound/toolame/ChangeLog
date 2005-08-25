@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/toolame
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.13 2005/08/24 16:15:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/ChangeLog,v 1.14 2005/08/25 12:21:58 flameeyes Exp $
+
+*toolame-02l-r2 (25 Aug 2005)
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> +toolame-02l-r2.ebuild:
+  Add largefile support for glibc/uclibc. Fix ${CC} handling for cross-compile
+  sake.
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> toolame-02l.ebuild,
   toolame-02l-r1.ebuild:

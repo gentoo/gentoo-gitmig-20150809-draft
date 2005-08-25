@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e366912e9642490b17ff7bf4844ed58f ChangeLog 1619
+MD5 03d87115353b6e3b11240a5ad2dff0fd ChangeLog 1815
 MD5 e53f02956bc1bd05fbbf3afd336781cf toolame-02l.ebuild 660
+MD5 ef52f6b4eb180f3e8fb264b04dc2e3ca toolame-02l-r2.ebuild 934
 MD5 c6d157b936d85a2218795dcb6bf6e653 toolame-02l-r1.ebuild 700
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 4b1a1622289b050b59a5243fae23d193 files/toolame-02l-uint.patch 950
+MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l-r2 60
 MD5 03d22f398bef3ac46ba7c7a7910d2d80 files/toolame-02l-gentoo.diff 2153
 MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l 60
 MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l-r1 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDJ0zj5H05b2HAEkRAtagAKCSUQY3Z+U8uGdcX/flHn5GZ9tDigCdF0qE
-GCrr3/wud4UHnzMF/DezNjM=
-=O9mL
+iD8DBQFDDbgAj5H05b2HAEkRApWYAJ9kKou2C0lnSZbA+/BMWA+rYC9RBwCfaAw9
+HY1wpFg1Lers/miLsEWDCrc=
+=U8ql
 -----END PGP SIGNATURE-----
