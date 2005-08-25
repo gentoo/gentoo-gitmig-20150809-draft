@@ -3,7 +3,7 @@ MD5 42625ed029875b4d13c9af34f02aa7ed zope-2.7.5.ebuild 3334
 MD5 5416407eff85546578bb4e7c61f45d5e zope-2.6.4-r1.ebuild 5629
 MD5 7b10f9f85f1772dea3cac8f774d8d6ea zope-2.7.7.ebuild 3334
 MD5 03dd7525a3392e245889fba308edc438 zope-2.8.0.ebuild 3362
-MD5 f4fd9f744e7b207023729158bf2f9155 ChangeLog 12051
+MD5 8e1b37fa0f03aadc056193b8096d18f5 ChangeLog 12189
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 0a5e41adc4e26168061146ca2697ebf0 zope-2.7.2-r2.ebuild 3214
 MD5 e3ebbd463da7c5b7f7cacd4d79323c46 zope-2.7.6.ebuild 3335
@@ -22,3 +22,4 @@ MD5 e99b9fc903db808c1bbb5aa8b9d0b44f files/2.7.2/zope.initd 1169
 MD5 bce3b7d98963ff6f3e3d53557f3b4912 files/2.7.2/gid.patch 460
 MD5 c97d6dc27b456ae0fbfdf8ee5627ac1b files/2.7.4/i18n-1.0.0.patch 7630
 MD5 adfe59eaafb05edb1c4a445563b04c08 files/2.7.6/i18n-1.0.0.patch 7634
+MD5 adfe59eaafb05edb1c4a445563b04c08 files/2.7.7/i18n-1.0.0.patch 7634
