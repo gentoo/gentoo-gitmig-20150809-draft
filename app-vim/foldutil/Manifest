@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a492d9c0bbc2188e1378319aa594065 foldutil-2.0.ebuild 675
-MD5 811eca97fb63d2a755194da24fd93784 foldutil-1.7.ebuild 700
-MD5 43141c0be2a3726045bc352e89e40868 foldutil-1.6.ebuild 694
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 c48e82a75e79aed8a334d47e9802c9f8 ChangeLog 1165
-MD5 7e945f99ef486b2c6984a0399ba1004b files/digest-foldutil-1.6 63
+MD5 a68d42cb457b45557a7fd55b06bc3dac ChangeLog 1255
+MD5 43141c0be2a3726045bc352e89e40868 foldutil-1.6.ebuild 694
+MD5 811eca97fb63d2a755194da24fd93784 foldutil-1.7.ebuild 700
+MD5 e7ffd212644c6da4fd534e48c6dc0ff8 foldutil-2.0.ebuild 675
 MD5 bce2ad40cd4273b3a7facff51ce26562 files/digest-foldutil-1.7 63
 MD5 3a033ec2c547a04ed1cbe9859df410f5 files/digest-foldutil-2.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDC5OoLLFUmVNQ7rkRAilCAJ4nZpFKzjSpskHO4bfT880WyaxBMgCdHmMo
-7H/5kAmRPOfeIwfebQLCBWc=
-=/Cc7
------END PGP SIGNATURE-----
+MD5 7e945f99ef486b2c6984a0399ba1004b files/digest-foldutil-1.6 63
