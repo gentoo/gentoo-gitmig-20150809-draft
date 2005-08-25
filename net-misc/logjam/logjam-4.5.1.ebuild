@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.5.0.ebuild,v 1.2 2005/08/24 16:50:39 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.5.1.ebuild,v 1.1 2005/08/25 17:32:42 joem Exp $
 
 IUSE="gtk gtkhtml spell sqlite svg xmms"
 

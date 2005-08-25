@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.28 2005/08/24 21:27:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.29 2005/08/25 17:32:42 joem Exp $
+
+*logjam-4.5.1 (25 Aug 2005)
+
+  25 Aug 2005; Joe McCann <joem@gentoo.org> -logjam-4.5.0.ebuild,
+  +logjam-4.5.1.ebuild:
+  quick bugfix release
 
   24 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> logjam-4.4.1.ebuild:
   Stable on sparc
