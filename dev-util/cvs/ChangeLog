@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.92 2005/08/25 18:00:36 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.93 2005/08/25 18:08:07 hansmi Exp $
+
+  25 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> cvs-1.12.12-r2.ebuild:
+  Stable on ppc.
 
   25 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org> cvs-1.12.12-r2.ebuild:
   Stable on hppa. bug #103661
