@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.14 2005/07/09 19:44:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.15 2005/08/25 04:35:11 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -158,7 +158,7 @@ src_install() {
 pkg_postinst() {
 	einfo "This package now includes an initscript which loads and saves"
 	einfo "rules stored in /var/lib/iptables/rules-save"
-	use ipv6 >/dev/null && einfo "and /var/lib/ip6tables/rules-save"
+	use ipv6 && einfo "and /var/lib/ip6tables/rules-save"
 	einfo "This location can be changed in /etc/conf.d/iptables"
 	einfo
 	einfo "If you are using the iptables initsscript you should save your"
@@ -168,12 +168,12 @@ pkg_postinst() {
 	einfo "iptables."
 	einfo
 	ewarn "!!! ipforwarding is now not a part of the iptables initscripts."
-	einfo "Until a more permanent solution is implemented adding the following"
-	einfo "to /etc/conf.d/local.start will enable ipforwarding at bootup:"
-	einfo "  echo \"1\" > /proc/sys/net/ipv4/conf/all/forwarding"
-	if useq ipv6; then
+	einfo
+	einfo "To enable ipforwarding at bootup:"
+	einfo "/etc/sysctl.conf and set net.ipv4.ip_forward = 1"
+	if use ipv6 ; then
 		einfo "and/or"
-		einfo "  echo \"1\" > /proc/sys/net/ipv6/conf/all/forwarding"
+		einfo "  net.ipv6.ip_forward = 1"
 		einfo "for ipv6."
 	fi
 }

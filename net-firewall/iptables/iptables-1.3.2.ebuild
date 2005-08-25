@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.2.ebuild,v 1.7 2005/08/18 22:53:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.2.ebuild,v 1.8 2005/08/25 04:35:11 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -144,12 +144,12 @@ pkg_postinst() {
 	einfo "iptables."
 	einfo
 	ewarn "!!! ipforwarding is now not a part of the iptables initscripts."
-	einfo "Until a more permanent solution is implemented adding the following"
-	einfo "to /etc/conf.d/local.start will enable ipforwarding at bootup:"
-	einfo "  echo \"1\" > /proc/sys/net/ipv4/conf/all/forwarding"
+	einfo
+	einfo "To enable ipforwarding at bootup:"
+	einfo "/etc/sysctl.conf and set net.ipv4.ip_forward = 1"
 	if use ipv6 ; then
 		einfo "and/or"
-		einfo "  echo \"1\" > /proc/sys/net/ipv6/conf/all/forwarding"
+		einfo "  net.ipv6.ip_forward = 1"
 		einfo "for ipv6."
 	fi
 	echo
