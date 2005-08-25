@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e59c2b14cbaa8c4592bcc13f282b55bc ChangeLog 2799
-MD5 8925ed513772f255c910924a1c7afa22 mplayer-skins-0.2-r4.ebuild 2011
-MD5 8d206c5d01bd002a9a67d8195c68a937 mplayer-skins-0.2-r3.ebuild 1805
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 6390d8329454b75f8dddaaee2d609267 files/digest-mplayer-skins-0.2-r4 2283
+MD5 318fa892b85758f058408d3e8473815d ChangeLog 2897
+MD5 06164426a9d3ac6a169493b6f8265e79 mplayer-skins-0.2-r4.ebuild 2009
+MD5 8d206c5d01bd002a9a67d8195c68a937 mplayer-skins-0.2-r3.ebuild 1805
 MD5 514075c86456021ef09ed41be11e95c0 files/digest-mplayer-skins-0.2-r3 1688
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDCedj5H05b2HAEkRAlBzAJ9e3TtHV6uuIvO57KE1stgvQLr1DgCfbnv5
-q/4cdWKY35RpuBdFiFirl5U=
-=nG0k
------END PGP SIGNATURE-----
+MD5 6390d8329454b75f8dddaaee2d609267 files/digest-mplayer-skins-0.2-r4 2283
