@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.48 2005/07/03 02:51:40 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.49 2005/08/25 21:26:16 ranger Exp $
+
+  25 Aug 2005; Brent Baude <ranger@gentoo.org> rpm-4.2-r1.ebuild,
+  rpm-4.2.1.ebuild:
+  Marking rpm-4.2.ebuild, which was ppc64, -ppc64 because it does not compile.
+  Confirmed with dostrow as well. This is in bug #102305. Then marking
+  rpm-4.2-r1.ebuild as stable ppc64.
 
   03 Jul 2005; Hardave Riar <hardave@gentoo.org> rpm-4.2.1.ebuild:
   Stable on mips, dep for bug #91792.
