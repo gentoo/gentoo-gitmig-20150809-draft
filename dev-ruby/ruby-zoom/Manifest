@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c9fb537691191be87d5c1da097bce2c1 ChangeLog 407
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+MD5 64d4dd7080306d9104e536b9418f6448 ruby-zoom-0.2.0.ebuild 532
+MD5 6595604d7a3104802d5d4e5bdf4102ac files/digest-ruby-zoom-0.2.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFDDYqrehlBotwFZuQRArgoAJ9GZnoQ9VEkFjgZFCT43P+ZCZkNQgCfftWy
+lBZ28w3dTTPXrREuUqYndEk=
+=D9qK
+-----END PGP SIGNATURE-----

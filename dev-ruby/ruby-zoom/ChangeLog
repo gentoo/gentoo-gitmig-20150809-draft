@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-zoom
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.1 2005/08/25 09:07:42 citizen428 Exp $
+
+*ruby-zoom-0.2.0 (25 Aug 2005)
+
+  25 Aug 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +ruby-zoom-0.2.0.ebuild:
+  Initial import. Added because app-misc/alexandria depends on it.
+
