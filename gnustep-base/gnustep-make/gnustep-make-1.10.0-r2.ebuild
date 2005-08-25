@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.3 2005/04/15 04:38:36 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.4 2005/08/25 18:45:04 swegener Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ KEYWORDS="ppc x86 amd64 sparc ~alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
-IUSE="${IUSE} doc non-flattened layout-osx-like layout-from-conf-file"
+IUSE="debug doc layout-from-conf-file layout-osx-like non-flattened verbose"
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/make-3.75"
 RDEPEND="${DEPEND}
