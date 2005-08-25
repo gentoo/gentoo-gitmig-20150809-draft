@@ -1,0 +1,20 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN sysstat-5.0.5.orig/sar.c sysstat-5.0.5/sar.c
+--- sysstat-5.0.5.orig/sar.c	2005-08-12 23:49:53.000000000 -0400
++++ sysstat-5.0.5/sar.c	2005-08-12 23:53:04.000000000 -0400
+@@ -2209,6 +2209,7 @@
+ int sa_read(void *buffer, int size)
+ {
+    int n;
++   char *buf = (char *)buffer;
+ 
+    while (size) {
+ 
+@@ -2221,7 +2222,7 @@
+ 	 return 1;	/* EOF */
+ 
+       size -= n;
+-      (char *) buffer += n;
++      buf += n;
+    }
+ 
+    return 0;

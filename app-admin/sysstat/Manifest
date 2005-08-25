@@ -3,10 +3,11 @@ Hash: SHA1
 
 MD5 bc8b3b08597ce5c46814839f745cb74d sysstat-6.0.1.ebuild 1176
 MD5 675ff477bc1593491723b612471e4e54 sysstat-5.0.2.ebuild 961
-MD5 47ecb1d7fe6de86261fa88072b16b1eb ChangeLog 5254
+MD5 31f65d485d958417387d79c1fd4c5c3e ChangeLog 5364
 MD5 deedaad6f0bb73121405b44dcbdfa44c sysstat-5.0.5-r2.ebuild 1180
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 a899283ed4a4cc5a67bc138e2590144a files/crontab 519
+MD5 81554c40694987a45295653252dda469 files/sysstat-5.0.5-gcc4.diff 481
 MD5 fb5bff216a55ef8704f4946af00ed172 files/digest-sysstat-5.0.2 65
 MD5 73ba0e07b9338cd0d56ee3ebabd1ec79 files/digest-sysstat-6.0.1 65
 MD5 4eac2aae2f83cb52393c58896d9a5151 files/sysstat-6.0.1-gcc4.diff 5918
@@ -15,7 +16,7 @@ MD5 d63e5ccba8489c1875bb404a477ed9f0 files/digest-sysstat-5.0.5-r2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDVxbEZCkKN40op4RAiPvAJ970Lt0ODlm/1YPeu484K+auljQ+ACdHSHh
-5ZLCtMtZMsDA8DtovyS3gLc=
-=vUQ0
+iD8DBQFDDduCEZCkKN40op4RAktDAJ0b7TVDovG0pTSunqaeCh94x5EYuwCgodws
+vmwuI2cto7ld8/srshs5vhY=
+=/+nk
 -----END PGP SIGNATURE-----

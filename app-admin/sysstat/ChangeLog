@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.39 2005/08/25 05:50:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.40 2005/08/25 14:53:29 ka0ttic Exp $
+
+  25 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/sysstat-5.0.5-gcc4.diff:
+  Add missing gcc4 patch.
 
 *sysstat-5.0.5-r2 (25 Aug 2005)
 
