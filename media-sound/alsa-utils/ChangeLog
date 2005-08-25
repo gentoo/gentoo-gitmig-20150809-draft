@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.105 2005/08/25 00:08:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.106 2005/08/25 09:39:25 flameeyes Exp $
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-utils-1.0.10_rc1.ebuild:
+  alsa-utils configure checks for 1.0.9, but alsamixer uses 1.0.10-specific
+  code, bump dependency.
 
 *alsa-utils-1.0.10_rc1 (25 Aug 2005)
 
