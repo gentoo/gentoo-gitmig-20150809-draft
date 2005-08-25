@@ -1,10 +1,20 @@
-MD5 1cbcd3cac85800036a85a4f456c2ca19 giftcurs-0.6.2.ebuild 930
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 542b10fcad8b8e705ee971c69a38e7c7 giftcurs-0.6.2.ebuild 983
 MD5 4fde0f2fa2bd61d398049413fd02ccd9 giftcurs-0.6.1-r1.ebuild 983
 MD5 3fe57b2051d401b4e13499ed806afe2b giftcurs-0.5.5.ebuild 917
 MD5 0e1b9997f34bb38a9133309fcbca8db0 giftcurs-0.5.7.ebuild 895
-MD5 70aee07e61c59189da8b19bf5b2943e1 ChangeLog 3887
+MD5 59864a97fd7948430e4676f62d146fa8 ChangeLog 4047
 MD5 bae2132282fda88ad02b9ea336f144ce metadata.xml 347
 MD5 65d1c4165bbbd98ccf61599379fc0514 files/digest-giftcurs-0.5.5 66
 MD5 f44a2c30bba152c13caeb74787a75baf files/digest-giftcurs-0.5.7 66
 MD5 f642f424a729c298fd6fc01831b748f3 files/digest-giftcurs-0.6.2 66
 MD5 eb46efccd73d4b93e31728db3c43c4a1 files/digest-giftcurs-0.6.1-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDDgvFZ/iYVBmujdURAnmYAJ44jvjsKsiUOcrgzjUh4KzlrtAkCwCfZ0jm
+0sc83YHu2nxJ8mLvy9iD9PU=
+=bAss
+-----END PGP SIGNATURE-----
