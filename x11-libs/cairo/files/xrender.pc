@@ -1,9 +1,0 @@
-prefix=/usr/X11R6
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-
-Name: Xrender
-Description: Xrender
-Version: 1.0
-Cflags:
-Libs: -L${libdir} -lXrender
