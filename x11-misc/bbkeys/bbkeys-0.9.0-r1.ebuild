@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/bbkeys-0.9.0.ebuild,v 1.4 2005/06/17 21:03:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/bbkeys-0.9.0-r1.ebuild,v 1.1 2005/08/25 03:20:45 ka0ttic Exp $
 
 DESCRIPTION="Use keyboard shortcuts in the blackbox wm"
 HOMEPAGE="http://bbkeys.sourceforge.net"
@@ -13,17 +13,8 @@ IUSE=""
 
 DEPEND=">=x11-wm/blackbox-0.70.0"
 
-src_compile() {
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr || die "./configure failed"
-	emake || die
-}
-
 src_install () {
-	make \
-		prefix=${D}/usr \
-		install || die
-	rm -rf ${D}/usr/doc
+	make DESTDIR="${D}" install || die "make install failed"
+	rm -fr ${D}/usr/share/doc
 	dodoc AUTHORS BUGS ChangeLog NEWS README
 }

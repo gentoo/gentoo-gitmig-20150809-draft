@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbkeys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.19 2005/06/17 21:03:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.20 2005/08/25 03:20:45 ka0ttic Exp $
+
+*bbkeys-0.9.0-r1 (25 Aug 2005)
+
+  25 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> -bbkeys-0.8.5.ebuild,
+  -bbkeys-0.9.0.ebuild, +bbkeys-0.9.0-r1.ebuild:
+  Revision bump; fix man page path installation, bug #103271. Keeping stable.
+  Tidy old ebuilds.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> bbkeys-0.9.0.ebuild:
   Stable on ppc.

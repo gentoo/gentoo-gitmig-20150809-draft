@@ -1,8 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f04d302022a30f1a1655eb4d531fe69 bbkeys-0.9.0-r1.ebuild 611
 MD5 f2b162345ca81fe3f58a6e087468020b bbkeys-0.8.6.ebuild 694
+MD5 718e4990828feadc185a2359cb360058 ChangeLog 2619
 MD5 8d1b68c4cce30055f96e0936954ed21a metadata.xml 234
-MD5 e41c735b7c7af6fdea2f3ca3cd17a178 ChangeLog 2367
-MD5 140def80e362d817c7a3898a4004cbef bbkeys-0.9.0.ebuild 700
-MD5 e4fde85ccc4317b7f8b214a9d685e446 bbkeys-0.8.5.ebuild 686
-MD5 0f4b8c1fffaa769cb1dd53702ddfa8fc files/digest-bbkeys-0.9.0 64
-MD5 e1bbe339d874d657bca8b892070af274 files/digest-bbkeys-0.8.5 64
 MD5 bedaae3e116012e4c2697e97452da123 files/digest-bbkeys-0.8.6 64
+MD5 0f4b8c1fffaa769cb1dd53702ddfa8fc files/digest-bbkeys-0.9.0-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDTknEZCkKN40op4RAr/EAKC/KnKwZzdyl6K1rbWB1Hc6TQzNjwCghyKe
+29ZX9DmWTriSll3OhdEYffk=
+=60OJ
+-----END PGP SIGNATURE-----
