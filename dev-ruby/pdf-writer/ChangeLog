@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.1 2005/08/15 14:18:45 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.2 2005/08/25 12:53:02 citizen428 Exp $
+
+*pdf-writer-1.1.2 (25 Aug 2005)
+
+  25 Aug 2005; Michael Kohl <citizen428@gentoo.org>
+  +pdf-writer-1.1.2.ebuild:
+  Version bump.
 
 *pdf-writer-1.1.1 (15 Aug 2005)
 
