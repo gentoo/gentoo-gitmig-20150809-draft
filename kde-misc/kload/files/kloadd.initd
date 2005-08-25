@@ -1,7 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/files/kloadd.initd,v 1.1 2005/08/22 21:33:35 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/files/kloadd.initd,v 1.2 2005/08/25 22:03:29 sbriesen Exp $
+
+depend() {
+	use net
+}
 
 start() {
 	ebegin "Starting kloadd"
