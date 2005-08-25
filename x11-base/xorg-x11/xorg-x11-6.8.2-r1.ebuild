@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.25 2005/08/23 17:19:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.26 2005/08/25 01:01:24 joshuabaergen Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1144,7 +1144,7 @@ encode_xfsft_files() {
 	# Yet more Mandrake
 	ebegin "Encoding files for xfsft font server..."
 		dodir /usr/share/fonts/encodings
-		cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
+		cp -pPR ${WORKDIR}/usr/share/fonts/encodings/* \
 			${D}/usr/share/fonts/encodings
 
 		for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc; do
@@ -1162,7 +1162,7 @@ koi8_fonts_install() {
 		gunzip *.Z || eerror "gunzipping gemini-koi8 fonts failed"
 		gzip -9 *.pcf || eerror "gzipping gemini-koi8 fonts failed"
 		cd ${S}
-		cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts \
+		cp -pPR ${WORKDIR}/ukr ${D}/usr/share/fonts \
 			|| eerror "copying gemini-koi8 fonts failed"
 	eend 0
 }
