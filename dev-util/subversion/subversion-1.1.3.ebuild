@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.17 2005/07/30 01:07:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.18 2005/08/25 13:47:37 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -301,7 +301,13 @@ pkg_postinst() {
 	einfo "   2. restart xinetd.d: /etc/init.d/xinetd restart"
 	einfo
 	einfo " - svn over ssh:"
-	einfo "   1. create an svnserve wrapper in /usr/local/bin to set the umask you"
+	einfo "   1. Fix the repository permissions:"
+	einfo "        groupadd svnusers"
+	einfo "        chown -R root:svnusers /var/svn/repos/"
+	einfo "        chmod -R g-w /var/svn/repos"
+	einfo "        chmod -R g+rw /var/svn/repos/db"
+	einfo "        chmod -R g+rw /var/svn/repos/locks"
+	einfo "   2. create an svnserve wrapper in /usr/local/bin to set the umask you"
 	einfo "      want, for example:"
 	einfo "         #!/bin/bash"
 	einfo "         umask 002"
