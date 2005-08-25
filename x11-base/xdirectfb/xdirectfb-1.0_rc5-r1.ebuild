@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.4 2004/07/15 00:28:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.5 2005/08/25 00:06:53 joshuabaergen Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack () {
 
 	cd ${X}
 	cp xc-directfb.diff ${S}
-	cp -a programs/Xserver/hw/directfb ${S}/programs/Xserver/hw
+	cp -pPR programs/Xserver/hw/directfb ${S}/programs/Xserver/hw
 	cp ${X}/config/cf/* ${S}/config/cf
 	cp ${FILESDIR}/host.def ${S}/config/cf/
 
