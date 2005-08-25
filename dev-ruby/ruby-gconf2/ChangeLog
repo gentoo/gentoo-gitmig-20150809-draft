@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.23 2005/08/13 23:18:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.24 2005/08/25 20:09:00 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> ruby-gconf2-0.12.0.ebuild:
+  stable on ia64
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   ruby-gconf2-0.12.0.ebuild:
