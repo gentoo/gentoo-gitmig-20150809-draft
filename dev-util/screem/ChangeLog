@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/screem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.7 2005/06/25 00:43:04 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.8 2005/08/25 18:52:20 allanonjl Exp $
+
+*screem-0.14.3 (25 Aug 2005)
+
+  25 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +screem-0.14.3.ebuild:
+  fix #103725 and #103726, add missing gnome2_pkg_postinst, fix date headers
 
 *screem-0.14.1 (25 Jun 2005)
 
