@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2ad0a321a07ad9259864dcfdc29b99f5 lha-114i-r4.ebuild 1091
+MD5 6eab62e027b7cb0d4a0c6cc8275bac28 lha-114i-r4.ebuild 1096
 MD5 e0293e04e38f2dce108fdd9da4c3f0f6 ChangeLog 2725
 MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r4 59
 MD5 928b60b965833353acc7d99b063b9f29 files/lha-114i-malloc.patch 257
@@ -13,7 +13,7 @@ MD5 9c4e9404173fd5897d3736e33c909b81 files/lha-114i-lhext.diff 513
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCmhrgIKl8Uu19MoRAgYEAJ9mNwCGjdSg0qgivD1i4U04BHVjjQCdGv7K
-KUWHDOKEeHb5LpyKnjy3gOg=
-=5HLz
+iD8DBQFDDlOqgIKl8Uu19MoRAkw6AJ4rkWFkiPmwyCHBsmGCpQHnxDoR3gCggHO6
+uDVqET6+CywuoSSTrDszMbo=
+=zakb
 -----END PGP SIGNATURE-----
