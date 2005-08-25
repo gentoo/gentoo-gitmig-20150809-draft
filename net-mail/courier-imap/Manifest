@@ -2,10 +2,10 @@ MD5 0eb5c2c89ea48e6dc483009b9aa7306b courier-imap-3.0.7.ebuild 9233
 MD5 743d0a0a9527e3fa20762b8e0ffd734c courier-imap-4.0.1-r1.ebuild 10408
 MD5 7a300598c90e5723175ffeab3bce2b9a courier-imap-3.0.8.ebuild 9386
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
-MD5 aea309c759fc70720fc4b78fc212cfbf courier-imap-4.0.1-r2.ebuild 10512
+MD5 27070ef3796ccc68357550add13a668c courier-imap-4.0.1-r2.ebuild 10513
 MD5 d2628701ad7f82794ffa2e1473dcebb3 courier-imap-4.0.1.ebuild 10121
 MD5 0d0fc476a6b403d97340392e9a7a06ef courier-imap-4.0.4.ebuild 9920
-MD5 122b1e8ff3ca1a1009fba77e7033a595 ChangeLog 23855
+MD5 c7d4516e39f1fe7abc1a8b606c62d7b8 ChangeLog 23958
 MD5 9f46519bb9780f36b21727a008545b89 files/courier-pop3d.rc6 953
 MD5 046a2e2cb69e8ccbad347f09ae471d91 files/courier-imap-4.0.1-courier-pop3d-ssl.rc6 1223
 MD5 06c960b3b160106abff0c0d3e84105d0 files/courier-imap-4.0.1-disable-fam-configure.in.patch 654
