@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.68 2005/08/06 21:05:31 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.69 2005/08/25 10:39:17 flameeyes Exp $
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/flac-1.1.0-libtool.patch, -files/flac-1.1.0-m4.patch,
+  -flac-1.1.0.ebuild, -flac-1.1.0-r2.ebuild, -flac-1.1.2-r1.ebuild:
+  Removed 1.1.0 series and 1.1.2-r1 ebuild.
 
   06 Aug 2005; Kito <kito@gentoo.org> files/flac-1.1.2-gas.patch:
   change default as check to not drop an a.out and wait for stdin on Darwin
