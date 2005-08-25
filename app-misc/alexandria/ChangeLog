@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.12 2005/08/25 10:42:00 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.13 2005/08/25 10:47:37 citizen428 Exp $
+
+*alexandria-0.6.0 (25 Aug 2005)
+
+  25 Aug 2005; Michael Kohl <citizen428@gentoo.org>
+  +alexandria-0.6.0.ebuild:
+  Version bump. Removed ~amd64 keyword because of new dependency
+  (dev-ruby/ruby-zoom) that has no amd64 keyword.
 
   25 Aug 2005; Michael Kohl <citizen428@gentoo.org>
   -alexandria-0.4.0.ebuild, -alexandria-0.5.0.ebuild:
