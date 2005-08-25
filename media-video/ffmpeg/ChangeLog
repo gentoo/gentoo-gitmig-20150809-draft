@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.84 2005/06/12 22:12:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.85 2005/08/25 21:44:36 agriffis Exp $
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  ffmpeg-0.4.9_p20050226-r5.ebuild:
+  stable on ia64
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   ffmpeg-0.4.9_p20050226-r5.ebuild:
