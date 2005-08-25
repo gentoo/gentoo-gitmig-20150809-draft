@@ -1,5 +1,5 @@
-MD5 164e021dcd4b23d77b23d4cf524544ac gtk2-ssh-askpass-0.3.ebuild 751
+MD5 9325be249f117296d4d19e578a63687f gtk2-ssh-askpass-0.3.ebuild 753
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 39ae3b53e3ae29652b70e7ef57b6f3dc ChangeLog 1181
+MD5 efa226997b7c563c0b720540898ab286 ChangeLog 1282
 MD5 af95000e5cda99ca351864f8e03ed95c files/digest-gtk2-ssh-askpass-0.3 71
 MD5 0cbe43e4a20d50f8b1cbcbe522a242c0 files/99ssh_askpass 38
