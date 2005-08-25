@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.0.ebuild,v 1.1 2005/08/15 13:56:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.1.ebuild,v 1.1 2005/08/25 01:16:56 leonardop Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc"
-IUSE="doc hardened static"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+IUSE="debug doc hardened static"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
@@ -20,22 +20,22 @@ DEPEND=">=dev-util/pkgconfig-0.14
 
 RDEPEND="virtual/libc"
 
-src_unpack() {
 
-	unpack ${A}
-	cd ${S}
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
 	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
 
 	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
 		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
 	fi
-
 }
 
 src_compile() {
 	local myconf="--with-threads=posix $(use_enable static) \
-		$(use_enable doc gtk-doc)"
+		$(use_enable doc gtk-doc) $(use_enable debug)"
 
 	epunt_cxx
 
@@ -50,7 +50,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# Do not install charset.alias for ppc-macos since it already exists.
 	if use ppc-macos ; then
