@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.11.92.ebuild,v 1.1 2005/08/24 09:22:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.11.92.ebuild,v 1.2 2005/08/25 23:24:43 flameeyes Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
@@ -58,6 +58,13 @@ pkg_setup() {
 	# so should always be behind the use_enable options
 	# foser <foser@gentoo.org 19 Apr 2004
 	use gnutls && use ssl && G2CONF="${G2CONF} --disable-gnutls"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-fbsd.patch
 }
 
 src_install() {

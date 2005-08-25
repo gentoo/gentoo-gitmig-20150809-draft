@@ -1,0 +1,32 @@
+diff -ur gnome-vfs-2.10.1/libgnomevfs/gnome-vfs-resolve.c gnome-vfs-2.10.1-fbsd/libgnomevfs/gnome-vfs-resolve.c
+--- gnome-vfs-2.10.1/libgnomevfs/gnome-vfs-resolve.c	2004-12-03 14:08:20.000000000 +0100
++++ gnome-vfs-2.10.1-fbsd/libgnomevfs/gnome-vfs-resolve.c	2005-08-20 13:03:31.000000000 +0200
+@@ -172,8 +172,13 @@
+ 	   switch (error) {
+ 			 
+ 	   case EAI_NONAME: return GNOME_VFS_ERROR_HOST_NOT_FOUND;
+-	   case EAI_ADDRFAMILY:		
+-	   case EAI_NODATA: return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
++#ifdef EAI_ADDRFAMILY
++	   case EAI_ADDRFAMILY:
++#endif
++#ifdef EAI_NODATA
++	   case EAI_NODATA:
++#endif
++	   	return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
+ 	   case EAI_SYSTEM: return gnome_vfs_result_from_errno ();
+ 	   case EAI_FAIL:
+ 	   case EAI_AGAIN: return GNOME_VFS_ERROR_NAMESERVER;
+diff -ur gnome-vfs-2.10.1/modules/sftp-method.c gnome-vfs-2.10.1-fbsd/modules/sftp-method.c
+--- gnome-vfs-2.10.1/modules/sftp-method.c	2004-12-03 14:08:20.000000000 +0100
++++ gnome-vfs-2.10.1-fbsd/modules/sftp-method.c	2005-08-20
+@@ -1243,7 +1243,9 @@
+ 		if (io_status == G_IO_STATUS_NORMAL) {
+ 			buffer[len] = 0;
+ 			if (g_str_has_suffix (buffer, "password: ") ||
++			    g_str_has_suffix (buffer, "password:")  ||
+ 			    g_str_has_suffix (buffer, "Password: ") ||
++			    g_str_has_suffix (buffer, "Password:")  ||
+ 			    g_str_has_prefix (buffer, "Enter passphrase for key")) {
+ 				if (!done_auth && gnome_vfs_uri_get_password (uri) != NULL) {
+ 					password = g_strdup (gnome_vfs_uri_get_password (uri));

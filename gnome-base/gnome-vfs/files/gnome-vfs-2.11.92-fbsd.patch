@@ -1,0 +1,28 @@
+Index: gnome-vfs-2.11.92/libgnomevfs/gnome-vfs-resolve.c
+===================================================================
+--- gnome-vfs-2.11.92.orig/libgnomevfs/gnome-vfs-resolve.c
++++ gnome-vfs-2.11.92/libgnomevfs/gnome-vfs-resolve.c
+@@ -174,7 +174,10 @@ _gnome_vfs_result_from_gai_error (int er
+ #ifdef EAI_ADDRFAMILY
+ 	   case EAI_ADDRFAMILY:		
+ #endif
+-	   case EAI_NODATA: return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
++#ifdef EAI_NODATA
++	   case EAI_NODATA:
++#endif
++	   	return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
+ #ifdef EAI_SYSTEM
+ 	   case EAI_SYSTEM: return gnome_vfs_result_from_errno ();
+ #endif
+Index: gnome-vfs-2.11.92/modules/file-method.c
+===================================================================
+--- gnome-vfs-2.11.92.orig/modules/file-method.c
++++ gnome-vfs-2.11.92/modules/file-method.c
+@@ -51,6 +51,7 @@
+ #include <string.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #ifndef G_OS_WIN32		/* We don't want the ftruncate() in mingw's unistd.h */
+ #include <unistd.h>
+ #endif
