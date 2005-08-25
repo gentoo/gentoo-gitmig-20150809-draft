@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.38 2005/08/05 12:57:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.39 2005/08/25 05:50:30 ka0ttic Exp $
+
+*sysstat-5.0.5-r2 (25 Aug 2005)
+
+  25 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +files/crontab,
+  +metadata.xml, -sysstat-5.0.4.ebuild, -sysstat-5.0.5-r1.ebuild,
+  +sysstat-5.0.5-r2.ebuild, -sysstat-6.0.0.ebuild, sysstat-6.0.1.ebuild:
+  Revision bump; provide our own crontab that's not broken; make sure
+  SA_LIB_DIR gets passed to make otherwise sa{1,2,dc} will be installed to
+  /usr/local/lib. Keeping keywords. Tidy old ebuilds.
 
   05 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
   sysstat-5.0.5-r1.ebuild, sysstat-6.0.0.ebuild, sysstat-6.0.1.ebuild:

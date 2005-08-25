@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.3 2005/08/05 12:57:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-6.0.1.ebuild,v 1.4 2005/08/25 05:50:30 ka0ttic Exp $
 
 inherit eutils
 
@@ -19,8 +19,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
-	sed -i -e '1d;2i # Crontab sample for app-admin/sysstat' \
-		-e '2d;3d;s:PREFIX:/usr:' crontab.sample || die "sed crontab.sample failed"
 	epatch ${FILESDIR}/${P}-gcc4.diff
 }
 
@@ -38,7 +36,7 @@ src_compile() {
 
 src_install() {
 	keepdir /var/log/sa
-	dodoc crontab.sample
+	newdoc ${FILESDIR}/crontab crontab.example
 
 	make \
 		DESTDIR=${D} \
