@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.168 2005/08/24 23:26:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.169 2005/08/25 14:45:34 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  kdemultimedia-3.4.1-r1.ebuild:
+  stable on ia64
 
 *kdemultimedia-3.5_alpha1 (24 Aug 2005)
 
