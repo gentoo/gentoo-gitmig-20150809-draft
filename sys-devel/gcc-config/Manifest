@@ -7,7 +7,7 @@ MD5 cd10419eb3bb6bca89691a1d3679f324 gcc-config-1.3.12-r2.ebuild 1392
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 8ddb51e4d22a768b490aea079b28c334 gcc-config-1.3.11-r3.ebuild 1387
 MD5 e1e82310909ead9c8b474d56cb94ee8c gcc-config-1.3.10-r1.ebuild 1393
-MD5 c3f2535a7028dc981a7bbf4e5b0e2c24 ChangeLog 20368
+MD5 0c4ac926940a46292f4a7ac68bb84136 ChangeLog 20506
 MD5 4f38cac9c208dfd3f4e8b798a8108366 gcc-config-1.3.12.ebuild 1389
 MD5 d153788edf3039aa4f68ae41bf46bf0d files/gcc-config-1.3.11 15776
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.11-r4 0
@@ -19,12 +19,12 @@ MD5 e3203a5aa6df669ffa479aeeb7605029 files/wrapper-1.4.5.c 10671
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.10-r1 0
 MD5 1b19cf481e2777dff9722f36698c3b24 files/wrapper-1.4.7.c 9837
 MD5 72557949fda7b1226549291b8f171e15 files/wrapper-1.4.6.c 10568
-MD5 94f79c9743fc9a40b2203f90bbd42b88 files/gcc-config-1.3.12 16247
+MD5 3476857382b4719438ec3d1e5a3505b7 files/gcc-config-1.3.12 16621
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.12-r1 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBt2VgIKl8Uu19MoRAjXMAJ0eddNOGuZ+NLEbpLg6Z4HNhrY+kACfajJl
-KEObq1HasnqNYwsn3VM5dCg=
-=XrIU
+iD8DBQFDDk9HgIKl8Uu19MoRAmFKAJ9UObayH+ZIJowRdS5AVUj5xvw8YgCfQeE/
+zZf7ikt788ZldtW6vH1N3CA=
+=/ntP
 -----END PGP SIGNATURE-----
