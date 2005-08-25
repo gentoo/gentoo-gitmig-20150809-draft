@@ -1,5 +1,5 @@
-MD5 4444f7b3ef759ebd133dfeae4534199d ChangeLog 4521
-MD5 b1c195d75e4e27a70bb7f848a58c5461 gnome-keyring-0.4.3.ebuild 636
+MD5 639ab7402a6f681e6d15c891d1b7c3ba ChangeLog 4624
+MD5 d92c9b1aff8d10ab866299412674265d gnome-keyring-0.4.3.ebuild 635
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2ff05341bc16a5b6f78498b4e0f7a3b9 gnome-keyring-0.4.2.ebuild 587
 MD5 d5ff2eaffe54dd4b73af7bb2e7de0c55 files/digest-gnome-keyring-0.4.3 72
