@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.21 2005/08/14 10:05:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.22 2005/08/25 19:47:49 gustavoz Exp $
+
+  25 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> kmail-3.4.1-r1.ebuild:
+  Stable on sparc
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kmail-3.4.1-r1.ebuild:
   Stable on ppc.
