@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.4.1.ebuild,v 1.6 2005/08/23 02:43:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.4.1.ebuild,v 1.7 2005/08/25 03:30:51 ka0ttic Exp $
 
-inherit versionator
+inherit rpm versionator
 
 RPM_P="${PN}-$(replace_version_separator 3 '-')"
 MY_P="${RPM_P%-*}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Utility recursively searches through specified directories and removes files which have not been accessed in a specified period of time."
 HOMEPAGE="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/"
@@ -16,16 +17,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	app-arch/rpm2targz"
-
-S="${WORKDIR}/${MY_P}"
-
 src_unpack() {
-	cd "${WORKDIR}"
-	rpm2targz "${DISTDIR}/${RPM_P}.src.rpm" || die "rpm2targz failed"
-	tar zxf "${RPM_P}.src.tar.gz" || die
-	tar zxf "${MY_P}.tar.gz" || die
+	rpm_src_unpack
 
 	cd "${S}"
 	sed -i -e "s:..RPM_OPT_FLAGS.:${CFLAGS}:" \
