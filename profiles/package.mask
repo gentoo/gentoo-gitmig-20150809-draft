@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4341 2005/08/25 19:46:31 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4342 2005/08/25 20:09:43 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <mr_bones_@gentoo.org> (25 Aug 2005)
+# Security mask until dholm can deal with it #102631
+games-simulation/openttd
 
 # Diego Pettenò <flameeyes@gentoo.org> (25 Aug 2005)
 # Release Candidate
