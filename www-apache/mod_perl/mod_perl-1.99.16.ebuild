@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.99.16.ebuild,v 1.2 2005/05/24 14:30:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-1.99.16.ebuild,v 1.3 2005/08/25 09:12:25 mcummings Exp $
 
 inherit eutils
 
@@ -115,6 +115,6 @@ src_install() {
 
 	dodoc ${FILESDIR}/75_mod_perl.conf Changes \
 		INSTALL LICENSE README STATUS
-	cp -a docs ${D}/usr/share/doc/${PF}
-	cp -a todo ${D}/usr/share/doc/${PF}
+	cp -pPR docs ${D}/usr/share/doc/${PF}
+	cp -pPR todo ${D}/usr/share/doc/${PF}
 }

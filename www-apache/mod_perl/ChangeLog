@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.10 2005/08/08 10:27:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.11 2005/08/25 09:12:25 mcummings Exp $
+
+  25 Aug 2005; Michael Cummings <mcummings@gentoo.org>
+  mod_perl-1.99.11.ebuild, mod_perl-1.99.16.ebuild, mod_perl-2.0.1-r1.ebuild,
+  mod_perl-2.0.1-r2.ebuild:
+  Bug 103487, cp -a changed to cp -pPR
 
   08 Aug 2005; Michael Cummings <mcummings@gentoo.org>
   mod_perl-2.0.1-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.2 2005/08/08 09:35:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r1.ebuild,v 1.3 2005/08/25 09:12:25 mcummings Exp $
 
 inherit apache-module perl-module eutils
 DESCRIPTION="An embedded Perl interpreter for Apache2"
@@ -134,8 +134,8 @@ src_install() {
 
 	dodoc ${FILESDIR}/${PV}/75_mod_perl.conf Changes \
 		INSTALL LICENSE README STATUS
-	cp -a docs ${D}/usr/share/doc/${PF}
-	cp -a todo ${D}/usr/share/doc/${PF}
+	cp -pPR docs ${D}/usr/share/doc/${PF}
+	cp -pPR todo ${D}/usr/share/doc/${PF}
 	for FILE in `grep -lr portage ${D}/*|grep -v ".so"`; do
 		sed -i -e "s:${D}:/:g" ${FILE}
 	done
