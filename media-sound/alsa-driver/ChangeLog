@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.156 2005/08/25 07:03:05 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.157 2005/08/25 22:17:04 chriswhite Exp $
+
+  25 Aug 2005; Chris White <chriswhite@gentoo.org> alsa-driver-1.0.8.ebuild,
+  alsa-driver-1.0.9b.ebuild, alsa-driver-1.0.10_rc1.ebuild:
+  Converted to linux-info.eclass methods so as to stop warning message spam.
+  Only remove old kernel sound modules if they actually exist (prevents silly
+  directory not found warnings with find).
 
   24 Aug 2005; Chris White <chriswhite@gentoo.org>
   +files/alsa-driver-1.0.10_rc1-include.patch,
