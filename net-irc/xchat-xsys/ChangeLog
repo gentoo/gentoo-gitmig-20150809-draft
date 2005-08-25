@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.24 2005/07/21 14:41:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.25 2005/08/25 22:08:30 chainsaw Exp $
+
+*xchat-xsys-2.0.8 (25 Aug 2005)
+
+  25 Aug 2005; Tony Vroon <chainsaw@gentoo.org> xchat-xsys-2.0.7.ebuild,
+  +xchat-xsys-2.0.8.ebuild:
+  Version bump to 2.0.8; sparc support by gustavoz. 2.0.7 stable on x86.
 
   21 Jul 2005; Markus Rothe <corsair@gentoo.org> xchat-xsys-2.0.6-r1.ebuild:
   Stable on ppc64
