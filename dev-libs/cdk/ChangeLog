@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.20 2005/08/25 03:06:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.21 2005/08/25 04:00:15 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  cdk-4.9.10.20020430.ebuild, cdk-4.9.10.20020809.ebuild,
+  cdk-4.9.10.20020809-r1.ebuild, cdk-4.9.11.20031210.ebuild,
+  cdk-4.9.11.20031210-r1.ebuild, cdk-4.9.11.20031210-r2.ebuild:
+  inherit flag-o-matic for append-flags
 
 *cdk-4.9.11.20031210-r2 (25 Aug 2005)
 *cdk-4.9.10.20020809-r1 (25 Aug 2005)
