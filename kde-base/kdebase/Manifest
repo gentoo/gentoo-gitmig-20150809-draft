@@ -2,10 +2,10 @@ MD5 acf208f77b0607c97763d9f91cb8da35 kdebase-3.3.2-r3.ebuild 3751
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 cfe17ce5888fabac43aa7112e7df3a99 kdebase-3.5_alpha1.ebuild 4109
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
-MD5 51216e531fcdcd56030967855aa92a8c ChangeLog 37838
+MD5 a2afba4022d6f91bed4dd32d8a746915 ChangeLog 37933
 MD5 771fb9eceec5b0d9c5bae83af47b7882 kdebase-3.2.3-r3.ebuild 3476
 MD5 9ea970c24377c122bfd0d1024d1aed0e kdebase-3.3.2-r2.ebuild 3627
-MD5 b31eef04c6b22379e9f41b6ff16d5fc8 kdebase-3.4.1-r1.ebuild 3881
+MD5 1fbfd8b7469b2b7bba38a824d4d47e6a kdebase-3.4.1-r1.ebuild 3883
 MD5 23b40c617edadacd8cbd163054f3960d kdebase-3.4.2-r1.ebuild 4220
 MD5 d97f07ad36c0135703d7d85d89fe8785 kdebase-3.4.2.ebuild 4086
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r1 68
