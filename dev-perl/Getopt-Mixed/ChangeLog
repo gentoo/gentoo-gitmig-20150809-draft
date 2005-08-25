@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Getopt-Mixed
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.7 2005/06/14 18:58:53 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.8 2005/08/25 23:08:28 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Getopt-Mixed-1.008.ebuild:
+  add ~ia64
 
   14 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org>
   Getopt-Mixed-1.008.ebuild:

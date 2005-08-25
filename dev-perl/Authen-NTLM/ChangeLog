@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-NTLM
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/ChangeLog,v 1.8 2005/07/07 01:16:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-NTLM/ChangeLog,v 1.9 2005/08/25 22:25:45 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Authen-NTLM-1.02.ebuild:
+  add ~ia64
 
   07 Jul 2005; Michael Cummings <mcummings@gentoo.org>
   Authen-NTLM-1.02.ebuild:

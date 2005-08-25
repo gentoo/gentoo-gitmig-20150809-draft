@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MD5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.16 2005/05/24 15:46:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/ChangeLog,v 1.17 2005/08/25 23:26:23 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> MD5-2.03.ebuild:
+  add ~ia64
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org> MD5-2.03.ebuild:
   dev-perl/Digest-MD5 => perl-core/Digest-MD5

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Log-TraceMessages
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.9 2005/05/01 18:06:36 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.10 2005/08/25 23:25:38 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Log-TraceMessages-1.4.ebuild:
+  add ~ia64
 
   01 May 2005; Tom Martin <slarti@gentoo.org> Log-TraceMessages-1.4.ebuild:
   Stable on amd64.

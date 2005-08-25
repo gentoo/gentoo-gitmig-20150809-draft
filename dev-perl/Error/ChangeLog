@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.17 2005/04/29 23:17:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.18 2005/08/25 22:59:58 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Error-0.15-r2.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml:
   Metadata

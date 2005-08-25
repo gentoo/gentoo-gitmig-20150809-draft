@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.7 2005/04/21 18:54:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.8 2005/08/25 22:32:14 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Carp-Clan-5.3.ebuild:
+  add ~ia64
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> Carp-Clan-5.3.ebuild:
   Stable on ppc.

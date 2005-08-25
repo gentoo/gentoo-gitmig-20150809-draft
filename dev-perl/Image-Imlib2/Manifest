@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 545499c697f30f5f2bdc9a328593f59f ChangeLog 943
-MD5 9de7d1aaae5ee2a83bcb33319ed44fb7 Image-Imlib2-1.03.ebuild 567
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 545499c697f30f5f2bdc9a328593f59f ChangeLog 943
+MD5 6faf709da25c3b5881b51b65d37ab4a7 Image-Imlib2-1.03.ebuild 572
 MD5 6cef0dbd828f8b29a301e71669681740 files/digest-Image-Imlib2-1.03 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFDAHkstG5z4I8BtQoRAm+oAJ45rC6w4rJSLB62crfTK7zKvn698gCfQP0A
-DPNqgXqCEje1O5oiEc3z/OQ=
-=J6Xy
------END PGP SIGNATURE-----

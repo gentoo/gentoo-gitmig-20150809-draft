@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-ApacheFormat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/ChangeLog,v 1.3 2005/05/25 15:19:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/ChangeLog,v 1.4 2005/08/25 22:41:31 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Config-ApacheFormat-1.2.ebuild:
+  add ~ia64
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Config-ApacheFormat-1.2.ebuild:

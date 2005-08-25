@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ef76a125042b49fb0ae03e2766c3cef ChangeLog 2371
-MD5 f78f463f921d26328a21aef85f3fc76e Curses-1.06-r1.ebuild 745
-MD5 db30ee513016f259ff979ffc983fe3b1 Curses-1.06-r2.ebuild 750
-MD5 7ce9b69808533d20eee34e1c8ebf9e70 Curses-1.06.ebuild 522
 MD5 506fb323424af650cbf190ea6efd9f80 Curses-1.07.ebuild 873
 MD5 5929af5b16b49cf146afecf8fb632e19 Curses-1.08.ebuild 923
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7b823dfb97678dbbf158a74116e6eead Curses-1.12.ebuild 929
-MD5 15a6b690bc27de8f522622f0c025b910 files/Curses-1.06-p5.8-fixes.diff 1541
-MD5 18b5e538ab728b7900099e162bc50f58 files/Curses-1.07-p5.8-fixes.diff 1144
-MD5 2d2ba11f6bbe898e4fca0f072bc13ac4 files/Curses-1.08-p5.8-fixes.diff 1118
-MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06 62
-MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06-r1 62
-MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06-r2 62
-MD5 ee186e93868d3f61baa0f56d6c859c31 files/digest-Curses-1.07 59
-MD5 6447ec88564b6d52731d1530af710368 files/digest-Curses-1.08 60
+MD5 7ce9b69808533d20eee34e1c8ebf9e70 Curses-1.06.ebuild 522
+MD5 db30ee513016f259ff979ffc983fe3b1 Curses-1.06-r2.ebuild 750
+MD5 3ef76a125042b49fb0ae03e2766c3cef ChangeLog 2371
+MD5 7f39d43084847c27866512a8236e5bf4 Curses-1.12.ebuild 934
+MD5 f78f463f921d26328a21aef85f3fc76e Curses-1.06-r1.ebuild 745
 MD5 9ef4b48414c2145f5007be1447991411 files/digest-Curses-1.12 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFC3QM1tG5z4I8BtQoRAlqtAKCDtJCy2xX0lbvOiYlr5wNTZ22fzgCdGajI
-9CbgUJDATGx9mBoTLE86tYo=
-=38oc
------END PGP SIGNATURE-----
+MD5 15a6b690bc27de8f522622f0c025b910 files/Curses-1.06-p5.8-fixes.diff 1541
+MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06-r2 62
+MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06-r1 62
+MD5 2d2ba11f6bbe898e4fca0f072bc13ac4 files/Curses-1.08-p5.8-fixes.diff 1118
+MD5 ee186e93868d3f61baa0f56d6c859c31 files/digest-Curses-1.07 59
+MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06 62
+MD5 18b5e538ab728b7900099e162bc50f58 files/Curses-1.07-p5.8-fixes.diff 1144
+MD5 6447ec88564b6d52731d1530af710368 files/digest-Curses-1.08 60

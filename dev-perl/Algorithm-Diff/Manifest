@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf3134cafd9bb3aa552bab3b09a0edde Algorithm-Diff-1.15.ebuild 549
-MD5 54467aab58e030a32a27b4919b0fc7bd Algorithm-Diff-1.1901.ebuild 605
-MD5 5d0ffb8488bae5a194b188d814cf74bf ChangeLog 1649
-MD5 33ac2fe9720ec8231513df6e75fa1cba files/digest-Algorithm-Diff-1.15 70
-MD5 ed0baa7916288584636487833e692c4f files/digest-Algorithm-Diff-1.1901 69
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0FxaI1lqEGTUzyQRAnoyAJoChV+NHISzSsQQHxyADEEuM5HXTQCfeOsQ
-F0iis0jEMgsIQmsc1yuyO7w=
-=lOJi
------END PGP SIGNATURE-----
+MD5 5d0ffb8488bae5a194b188d814cf74bf ChangeLog 1649
+MD5 206cb3a5b31e30d0af1b8c7fd7b7f9d2 Algorithm-Diff-1.1901.ebuild 610
+MD5 cf3134cafd9bb3aa552bab3b09a0edde Algorithm-Diff-1.15.ebuild 549
+MD5 ed0baa7916288584636487833e692c4f files/digest-Algorithm-Diff-1.1901 69
+MD5 33ac2fe9720ec8231513df6e75fa1cba files/digest-Algorithm-Diff-1.15 70

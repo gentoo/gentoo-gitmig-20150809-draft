@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-GHTTP
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.17 2005/05/29 16:11:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.18 2005/08/25 23:14:39 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> HTTP-GHTTP-1.07-r1.ebuild:
+  add ~ia64
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> HTTP-GHTTP-1.07-r1.ebuild:
   Stable on ppc64

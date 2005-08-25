@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.14 2005/03/14 11:21:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.15 2005/08/25 23:17:35 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> IO-Tty-1.02-r1.ebuild:
+  add ~ia64
 
   14 Mar 2005; Michael Cummings <mcummings@gentoo.org> IO-Tty-0.04-r1.ebuild,
   IO-Tty-0.04.ebuild, IO-Tty-1.02-r1.ebuild, IO-Tty-1.02.ebuild:

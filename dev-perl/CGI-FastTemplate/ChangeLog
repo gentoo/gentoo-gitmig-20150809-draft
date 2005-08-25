@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI-FastTemplate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-FastTemplate/ChangeLog,v 1.8 2005/05/24 14:27:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-FastTemplate/ChangeLog,v 1.9 2005/08/25 22:31:12 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  CGI-FastTemplate-1.09.ebuild:
+  add ~ia64
 
   24 May 2005; Michael Cummings <mcummings@gentoo.org>
   CGI-FastTemplate-1.09.ebuild:

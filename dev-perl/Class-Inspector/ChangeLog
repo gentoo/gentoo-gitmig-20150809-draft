@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.16 2005/05/25 15:02:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.17 2005/08/25 22:36:54 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Class-Inspector-1.08.ebuild:
+  add ~ia64
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Class-Inspector-1.08.ebuild:

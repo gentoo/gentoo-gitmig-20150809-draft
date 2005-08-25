@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 06e6dd6056f97d7039bdf26b562bf913 ChangeLog 2269
-MD5 8dca0f1c7ef4a734a22ff350cd8880a3 Date-Leapyear-1.71.ebuild 595
+MD5 8cabf1b55fe0760dbb5397a0a34e6143 Date-Leapyear-1.71.ebuild 600
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 06e6dd6056f97d7039bdf26b562bf913 ChangeLog 2269
 MD5 109ca4de655ff3013cabe6cf9085a367 files/digest-Date-Leapyear-1.71 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJRttG5z4I8BtQoRAlZ6AJ40eIs016Fmm63cS/BAIUL5VNp9xACffoJ+
-8BGuc9XypF8gSjWmrWLGVVo=
-=FRb/
------END PGP SIGNATURE-----

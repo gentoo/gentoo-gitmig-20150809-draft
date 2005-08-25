@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/Config-ApacheFormat-1.2.ebuild,v 1.3 2005/05/25 15:19:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/Config-ApacheFormat-1.2.ebuild,v 1.4 2005/08/25 22:41:31 agriffis Exp $
 
 inherit perl-module
 MY_PV=${PV/0/}
@@ -14,7 +14,7 @@ HOMEPAGE="http://search.cpan.org/~samtregar/${MY_P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 SRC_TEST="do"
 

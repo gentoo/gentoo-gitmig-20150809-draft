@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 556414317e241cbb60d5a6ada5ed95cd ChangeLog 1548
-MD5 1e8b30de2f37cd27933da0c5db878436 LockFile-Simple-0.2.5-r1.ebuild 519
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 556414317e241cbb60d5a6ada5ed95cd ChangeLog 1548
+MD5 a138c986656fe87774fc32a9074f5b0c LockFile-Simple-0.2.5-r1.ebuild 524
 MD5 2264b35d0ec346a07749e96f5d152fd7 files/digest-LockFile-Simple-0.2.5-r1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcRNEtG5z4I8BtQoRAgKNAKCKzvOtd91wrOYA7WVS1nVZgfCJWgCfSDdt
-NfsHCNKSTtuboJVh4Qe3ZUU=
-=5jib
------END PGP SIGNATURE-----

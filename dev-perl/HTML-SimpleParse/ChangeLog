@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-SimpleParse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.12 2005/05/01 18:22:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-SimpleParse/ChangeLog,v 1.13 2005/08/25 23:10:57 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  HTML-SimpleParse-0.12.ebuild:
+  add ~ia64
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   HTML-SimpleParse-0.12.ebuild:

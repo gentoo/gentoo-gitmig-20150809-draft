@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-RIPEMD160
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.15 2005/04/25 10:54:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.16 2005/08/25 22:49:40 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Crypt-RIPEMD160-0.04.ebuild:
+  add ~ia64
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Crypt-RIPEMD160-0.03-r2.ebuild, -Crypt-RIPEMD160-0.03-r3.ebuild,

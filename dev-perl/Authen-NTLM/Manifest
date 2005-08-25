@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 cfb84a34a7bbaaf29edf3a62e91a0382 Authen-NTLM-1.02.ebuild 615
 MD5 6dc3a6efec088ac8e0a6ddaf817e02ba ChangeLog 1096
+MD5 a05919b75048898f17cd0d33a358be96 Authen-NTLM-1.02.ebuild 620
 MD5 99b4b687586e5a05ca3155c416160a34 files/digest-Authen-NTLM-1.02 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzIJ+tG5z4I8BtQoRAu1SAJ9JZZ3453IIh/ovxZIzajU7KOPMuACgjs4f
-TlrPWmhAK0kW81mhQpldUFg=
-=5RzU
------END PGP SIGNATURE-----

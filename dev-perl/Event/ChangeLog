@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.27 2005/07/03 12:41:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.28 2005/08/25 23:00:54 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Event-1.05.ebuild:
+  add ~ia64
 
   03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> Event-1.00.ebuild:
   Stable on alpha.

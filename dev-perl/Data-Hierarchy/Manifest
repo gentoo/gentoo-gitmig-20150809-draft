@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 27124de4691e59fecca964c084f6fb70 ChangeLog 1129
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0c486c607826c73bf0397c2940781e0d Data-Hierarchy-0.21.ebuild 586
+MD5 27124de4691e59fecca964c084f6fb70 ChangeLog 1129
+MD5 fe8a7e47fc9d8c4cc08b5d6dc92a348b Data-Hierarchy-0.21.ebuild 591
 MD5 c444360ae7e9a39f026d68003a5660fa files/digest-Data-Hierarchy-0.21 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCifcDKRy60XGEcJIRAiYSAKCZ87jDe14VXb+GJIh1Fnl/qdjZwACdEBhq
-ZNVDyGVtqWBSfbrYzNBW6wk=
-=kb/8
------END PGP SIGNATURE-----

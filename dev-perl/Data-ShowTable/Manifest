@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c2b553c77eecefb561639ba9bf7e7ab ChangeLog 1436
-MD5 bb2ee60b374da9dff8ffe1f3c05a53fc Data-ShowTable-3.3-r2.ebuild 612
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2c2b553c77eecefb561639ba9bf7e7ab ChangeLog 1436
+MD5 19fdf448ff609be1c18d817fbcaf8a4c Data-ShowTable-3.3-r2.ebuild 617
 MD5 6dcfd30961b3d2aed80d178dd010137e files/digest-Data-ShowTable-3.3-r2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbPA3tG5z4I8BtQoRAs3NAKCTiGYjTwklEYtycQpSpn3MaHWYDACghdic
-DIs+kPXzzxohYbh6livsQdw=
-=Iyda
------END PGP SIGNATURE-----

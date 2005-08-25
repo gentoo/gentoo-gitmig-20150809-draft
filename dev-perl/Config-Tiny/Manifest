@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92ead4162bb9cbb5214161192ea388d9 ChangeLog 1778
 MD5 19883a68080208fb344be9fdc8f9fbcd Config-Tiny-1.ebuild 589
-MD5 7964e9b05235a9c9e776b59ebf43235e Config-Tiny-2.01.ebuild 583
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 02d30c8b3c6727d7f67ff368b3a7ae99 Config-Tiny-2.01.ebuild 588
+MD5 92ead4162bb9cbb5214161192ea388d9 ChangeLog 1778
 MD5 75fd11ceb68441fd9a89bf8481d4d790 files/digest-Config-Tiny-1 64
 MD5 b420c127159664e2d97ea0628076ed80 files/digest-Config-Tiny-2.01 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJPJtG5z4I8BtQoRAn+5AJ9xEQVUgpTbMSsFLgShc7Msqtu7FQCffxG6
-2y1yb6x+Yfc9PUdN0klTGnE=
-=slE0
------END PGP SIGNATURE-----

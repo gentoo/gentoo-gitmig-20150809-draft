@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-BER
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.14 2005/04/24 22:13:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BER/ChangeLog,v 1.15 2005/08/25 22:44:17 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Convert-BER-1.3101.ebuild:
+  add ~ia64
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Convert-BER-1.31-r2.ebuild, -Convert-BER-1.31-r3.ebuild,

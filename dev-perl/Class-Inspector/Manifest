@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a0b9413c37ee2827f462859f3e0ccae ChangeLog 2084
 MD5 1b41d2dd0feb1dc9340057b3d513355e Class-Inspector-1.06.ebuild 565
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0d187c0082d7a55804a14017677fbe2f Class-Inspector-1.08.ebuild 564
+MD5 7a0b9413c37ee2827f462859f3e0ccae ChangeLog 2084
+MD5 3982beb445b2ae1c70e4431e6f6d90c0 Class-Inspector-1.08.ebuild 569
 MD5 34fa8661a6a80a7fb2af47a327162d3f files/digest-Class-Inspector-1.08 71
 MD5 97cd0626d4cf5abbebfd0cfaf64f97ac files/digest-Class-Inspector-1.06 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJOEtG5z4I8BtQoRAiapAJ9PzIHthARBUG9q1gVgGMWl9UhmQwCfdjrl
-cmHo2QPvS0wTpBc2Fy4+IC4=
-=rNHh
------END PGP SIGNATURE-----

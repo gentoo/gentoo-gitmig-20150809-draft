@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Leapyear
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.22 2005/05/25 15:06:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.23 2005/08/25 22:54:40 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Date-Leapyear-1.71.ebuild:
+  add ~ia64
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Date-Leapyear-1.71.ebuild:

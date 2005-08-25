@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a6bb5e6a0d6484106df78a201f0e90b2 Audio-CD-disc-cover-0.05.ebuild 806
-MD5 d47ef01d1383621c583238858f1ae753 ChangeLog 2030
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 899254970528085d356b0ac63e724b48 Audio-CD-disc-cover-0.05.ebuild 811
+MD5 d47ef01d1383621c583238858f1ae753 ChangeLog 2030
 MD5 777278e647e9cc32ed19ef7a1a820f4f files/digest-Audio-CD-disc-cover-0.05 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFC3hb/tG5z4I8BtQoRAjO8AJ98xMA0WlQbAf2TXTS1XEPmqCt2OQCfddfS
-QMeZ+yR8dw5e/VwfjJPli3M=
-=89kY
------END PGP SIGNATURE-----

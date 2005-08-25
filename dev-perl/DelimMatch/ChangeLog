@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DelimMatch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.18 2005/04/25 14:32:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.19 2005/08/25 22:55:49 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> DelimMatch-1.06.ebuild:
+  add ~ia64
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -DelimMatch-1.04-r1.ebuild, -DelimMatch-1.04.ebuild, DelimMatch-1.06.ebuild:

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d50599ff65b9de24e655ddf0b5fcda19 ChangeLog 1436
-MD5 a046b729c2e03e80ba98037d73fba089 Log-TraceMessages-1.4.ebuild 527
-MD5 34d085515aa9cb1ecda444e034728111 Log-TraceMessages-1.3.ebuild 516
+MD5 cca738bce40c564fdae4f54817910465 Log-TraceMessages-1.4.ebuild 532
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d50599ff65b9de24e655ddf0b5fcda19 ChangeLog 1436
+MD5 34d085515aa9cb1ecda444e034728111 Log-TraceMessages-1.3.ebuild 516
 MD5 ed5fe9d32985b5a7fb99df7635a7d4ef files/digest-Log-TraceMessages-1.3 71
 MD5 4b85bb179826b1504272304679426d16 files/digest-Log-TraceMessages-1.4 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdRrECHk4+ZoBpvsRAovtAJ4lYKgNR9v2bjqjqbwFKjWqyDXGOACfUt1A
-9ZmNdAdpxTRmwppiC3EQPSU=
-=D22c
------END PGP SIGNATURE-----

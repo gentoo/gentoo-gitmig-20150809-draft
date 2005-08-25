@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4c8df962b4857bbb5794e9436a45d15 ChangeLog 1901
+MD5 d8ff677522a3e5a3aeeed89b7af3ba72 Convert-UUlib-1.051.ebuild 551
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 ed53cb320b137616b9583eed8e9681c9 Convert-UUlib-1.051.ebuild 546
+MD5 c4c8df962b4857bbb5794e9436a45d15 ChangeLog 1901
 MD5 74c83e3b47b56019e7ec1c37cdec7537 files/digest-Convert-UUlib-1.051 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbMcEtG5z4I8BtQoRAqJLAJ40UTzGFNwR+qml1tsYfrAK+S/wsACgh0G9
-xPgMXW1mOvGZdiv/4oJRCTQ=
-=qJod
------END PGP SIGNATURE-----

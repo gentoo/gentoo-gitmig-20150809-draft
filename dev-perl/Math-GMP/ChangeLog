@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-GMP
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.13 2005/08/07 13:19:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-GMP/ChangeLog,v 1.14 2005/08/25 23:32:04 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Math-GMP-2.04.ebuild:
+  add ~ia64
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> Math-GMP-2.04.ebuild:
   Stable on ppc.

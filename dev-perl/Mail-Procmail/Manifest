@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8dbf01e7059e7a1c3b4edb451017d51a ChangeLog 2651
-MD5 ac8e2fe335ad5713e94a2dc5b918dab5 Mail-Procmail-1.08.ebuild 626
 MD5 b576f8fdb814a39b353335d927127cb3 Mail-Procmail-1.06.ebuild 631
+MD5 1895fe7a9563a33633657ec9c451e43d Mail-Procmail-1.08.ebuild 631
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 8dbf01e7059e7a1c3b4edb451017d51a ChangeLog 2651
 MD5 d0fbc5066e9fb5a5c733bb56ebbc15b6 files/digest-Mail-Procmail-1.08 69
 MD5 1884d7932f55066730119fdaf1f5e594 files/digest-Mail-Procmail-1.06 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClIThtG5z4I8BtQoRAoEpAKCPamUeoRup2RYW6od+j4Q7HLK4hwCePqUm
-ji1gnpT1mNwSME/joUaRVsE=
-=/ikb
------END PGP SIGNATURE-----
