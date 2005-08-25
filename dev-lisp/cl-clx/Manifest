@@ -1,7 +1,15 @@
-MD5 a2bf85846aade00b3844203b438da6d4 cl-clx-0.6.1.ebuild 988
-MD5 73ebda7f0858d8e77f389be96825e7ad cl-clx-0.7.0.ebuild 927
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 288135e37690bedcc1d596787cf11501 metadata.xml 666
-MD5 fa4132188ec94bc0d4d99db4c2db5640 ChangeLog 1244
-MD5 20655f83d3ddc3b5fe6d36512119f731 files/digest-cl-clx-0.7.0 61
-MD5 de0efad2dd952443ec5df21b3b4d8590 files/digest-cl-clx-0.6.1 61
+MD5 e643dd7a6fc27662d7eb962dd7618714 ChangeLog 1439
+MD5 9b078f4b1984bc0754dfd0e1050c83f5 cl-clx-0.7.1.ebuild 927
+MD5 b3bcdb78187a8d1176e61a82079dcd66 files/digest-cl-clx-0.7.1 61
 MD5 f28b823114c37c11f75c9d1d6e6a944c files/0.6.1-gentoo.patch 3860
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDUtnyiNZaEAZA+ARAl3aAJ9U96KTZ0XWl1/cTwooavgvAs/4SgCcCnkV
+mjS8ZVzvirM6ihM8u7T/Iao=
+=DADj
+-----END PGP SIGNATURE-----
