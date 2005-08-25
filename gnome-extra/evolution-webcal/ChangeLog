@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-webcal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.29 2005/08/23 07:18:39 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/ChangeLog,v 1.30 2005/08/25 23:38:47 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  evolution-webcal-2.2.1.ebuild:
+  stable on ia64
 
 *evolution-webcal-2.4.0 (23 Aug 2005)
 
