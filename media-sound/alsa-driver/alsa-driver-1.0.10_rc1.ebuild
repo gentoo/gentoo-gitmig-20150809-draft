@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc1.ebuild,v 1.1 2005/08/25 00:03:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc1.ebuild,v 1.2 2005/08/25 07:03:05 chriswhite Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -66,6 +66,7 @@ src_unpack() {
 		WANT_AUTOCONF=2.5 autoconf || die
 	fi
 
+	epatch ${FILESDIR}/${P}-include.patch
 	convert_to_m ${S}/Makefile
 }
 

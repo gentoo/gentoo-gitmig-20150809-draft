@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.155 2005/08/25 00:03:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.156 2005/08/25 07:03:05 chriswhite Exp $
+
+  24 Aug 2005; Chris White <chriswhite@gentoo.org>
+  +files/alsa-driver-1.0.10_rc1-include.patch,
+  alsa-driver-1.0.10_rc1.ebuild:
+  Make this actually compile.  Added upstream patch from alsa bug 0001356.
 
 *alsa-driver-1.0.10_rc1 (25 Aug 2005)
 
