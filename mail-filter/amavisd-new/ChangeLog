@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.57 2005/08/23 13:12:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.58 2005/08/25 12:34:33 ticho Exp $
+
+*amavisd-new-2.3.3 (25 Aug 2005)
+
+  25 Aug 2005; Andrej Kacian <ticho@gentoo.org> +amavisd-new-2.3.3.ebuild:
+  Version bump. Bug #103668. Also move user and group creation to pkg_preinst().
 
   23 Aug 2005; Andrej Kacian <ticho@gentoo.org> -amavisd-new-2.2.1.ebuild,
   -amavisd-new-2.2.1-r1.ebuild, amavisd-new-2.2.1-r2.ebuild,
