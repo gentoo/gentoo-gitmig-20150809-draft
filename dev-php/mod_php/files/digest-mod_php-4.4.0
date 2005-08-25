@@ -1,4 +1,4 @@
-MD5 0a52b85692ebbc299e6b1f6d9d206691 hardening-patch-4.4.0-0.3.2.patch.gz 33347
+MD5 e85b606fe48198bfcd785e5a5b1c9613 php-4.4.0.tar.bz2 4086074
 MD5 912ff94309b762563d0542db5187315f php-4.3.2-fopen-url-secure.patch 416
 MD5 fbb6b365f4c0263b1dfd498aef092a77 php-4.3.6-includepath.diff 285
-MD5 e85b606fe48198bfcd785e5a5b1c9613 php-4.4.0.tar.bz2 4086074
+MD5 0a52b85692ebbc299e6b1f6d9d206691 hardening-patch-4.4.0-0.3.2.patch.gz 33347

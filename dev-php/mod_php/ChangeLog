@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.262 2005/07/26 12:14:00 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.263 2005/08/25 12:31:35 stuart Exp $
+
+  25 Aug 2005; Stuart Herbert <stuart@gentoo.org> mod_php-4.4.0-r1.ebuild,
+  mod_php-4.4.0.ebuild:
+  Fix for incorrect SRC_URI_BASE in ebuilds; fixes bug 102965
 
   26 Jul 2005; Stuart Herbert <stuart@gentoo.org> mod_php-5.0.4.ebuild:
   Added ~ppc
