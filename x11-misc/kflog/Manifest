@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9fb9f9216c0ab7f27d9bb0882e01103f kflog-2.1.1.ebuild 1545
-MD5 8976947e52252befa0f2bcb2b4d54ce2 ChangeLog 1395
+MD5 023a6c2ee8796554cf53b0ed6a76ead4 ChangeLog 1535
 MD5 8dad4c602e8fc48cf21cf32d762b9af0 metadata.xml 231
+MD5 118251c0be693c2e398d6780f265d004 kflog-2.1.1-r1.ebuild 2235
+MD5 98254d123c609c4e7d9d142e43da91c9 files/digest-kflog-2.1.1-r1 64
 MD5 98254d123c609c4e7d9d142e43da91c9 files/digest-kflog-2.1.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDVGgl5AvwDPiUowRAl9oAKDAjVTUnwz/cQzSA0u0Axxg4nFzYQCglXmC
+b3pLuS+IBU4fqj5Do3YHqG8=
+=96Td
+-----END PGP SIGNATURE-----
