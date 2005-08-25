@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 22782139acaea723239b1ee1f8b9deb3 ChangeLog 6468
-MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8 70
-MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8-r1 70
-MD5 bf74434daf1ebd09156aad1d90c93675 files/pilot-link-0.11.8-java_compile_amd64.patch 579
-MD5 a90104dea453f1eed8b69ed821118caa files/pilot-link-0.11.8-java_fPIC_fix.patch 580
-MD5 90560348093b5a7b47849896f35b4d54 files/pilot-link-0.11.8-java_install_all.patch 562
-MD5 a664432d4308170abcc8201e3a1500bf files/pilot-link-0.11.8-java_install_amd64.patch 390
-MD5 73901859bb01a4c7aa0dbddf1d6e898a files/pilot-link-0.11.8-java_install_ppc.patch 560
-MD5 8af85e0db19094f257d7da03661fbeb6 files/pilot-link-0.11.8-m4.patch 117
-MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-MD5 afe7ff0fc77e5555913d8d3de59238bc pilot-link-0.11.8-r1.ebuild 2252
 MD5 963c9d14f1ededb062f4d5b76acdcfd9 pilot-link-0.11.8.ebuild 1893
+MD5 afe7ff0fc77e5555913d8d3de59238bc pilot-link-0.11.8-r1.ebuild 2252
+MD5 22782139acaea723239b1ee1f8b9deb3 ChangeLog 6468
+MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
+MD5 90560348093b5a7b47849896f35b4d54 files/pilot-link-0.11.8-java_install_all.patch 562
+MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8-r1 70
+MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8 70
+MD5 a664432d4308170abcc8201e3a1500bf files/pilot-link-0.11.8-java_install_amd64.patch 390
+MD5 a90104dea453f1eed8b69ed821118caa files/pilot-link-0.11.8-java_fPIC_fix.patch 580
+MD5 93ddce2c38bb25e99877e9f08414d740 files/pilot-link-0.11.8-m4.patch 123
+MD5 bf74434daf1ebd09156aad1d90c93675 files/pilot-link-0.11.8-java_compile_amd64.patch 579
+MD5 73901859bb01a4c7aa0dbddf1d6e898a files/pilot-link-0.11.8-java_install_ppc.patch 560
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCzmoAI1lqEGTUzyQRAka0AKCfeNrclcUam9PqRjgvumik48IKhQCg3N1s
-8jh1tXRrij2qWPOrutlSe14=
-=IHCc
+iD8DBQFDDk/GgIKl8Uu19MoRAqbsAJ4q1gqjjVMFn7YMp//4OcxhcLUSLACdEIjc
+gMZqCrCRR5f9PFPtNIek+bQ=
+=g/uH
 -----END PGP SIGNATURE-----
