@@ -1,6 +1,19 @@
-MD5 62e2a41bb337adf3dcf8ad0486ec4f39 ChangeLog 3813
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 5ed18939bed17d4ac7795180cb0109f2 vorbis-tools-1.0-r2.ebuild 894
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7dafe4751005831993aa78b7a9421267 vorbis-tools-1.0.1-r1.ebuild 1412
+MD5 65f023ab31fbb31646e8e6356019ddf7 ChangeLog 4093
 MD5 ae6205134201c5ca7380a9b6449e02d4 vorbis-tools-1.0.1.ebuild 1322
-MD5 59ac94a6db4621c0ebd90d8b8fe8d9c0 files/digest-vorbis-tools-1.0-r2 68
+MD5 5ed18939bed17d4ac7795180cb0109f2 vorbis-tools-1.0-r2.ebuild 894
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 bc135048b370b69a479ec79194774283 files/vorbis-tools-1.0.1-largefile.patch 458
 MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1 70
+MD5 59ac94a6db4621c0ebd90d8b8fe8d9c0 files/digest-vorbis-tools-1.0-r2 68
+MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDdA7j5H05b2HAEkRArNUAJwI8Lq9X4q5w+rv+bJr0PpNlUZ9dgCfeWgb
+wKqZN6f27DLhYfdne+b4jT4=
+=iNTs
+-----END PGP SIGNATURE-----

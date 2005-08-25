@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.30 2005/05/15 02:16:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.31 2005/08/25 14:05:08 flameeyes Exp $
+
+*vorbis-tools-1.0.1-r1 (25 Aug 2005)
+
+  25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/vorbis-tools-1.0.1-largefile.patch, +vorbis-tools-1.0.1-r1.ebuild:
+  Added patch to enable largefile support. Cleanup of econf call, dropped mips
+  keyword until speex is sorted.
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   vorbis-tools-1.0.1.ebuild:
