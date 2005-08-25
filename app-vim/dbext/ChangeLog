@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.8 2005/08/23 21:20:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.9 2005/08/25 16:54:59 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> dbext-2.20.ebuild:
+  stable on ia64
 
   23 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> dbext-2.20.ebuild:
   x86 sparc mips stable

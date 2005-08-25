@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4acc33791242b750e821d06c477bfb90 genutils-1.13.ebuild 632
-MD5 6f06de77c5bdfee8f8cb77c9659ca6e7 genutils-1.18.ebuild 588
-MD5 fb7eca24617a4408738003ba985605ec genutils-1.17.ebuild 641
+MD5 2ecf6a5b7df8954061941abf8b22cb9f genutils-1.18.ebuild 587
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 e2e66778e9922a7a83b40456a0c155d0 ChangeLog 1238
+MD5 4acc33791242b750e821d06c477bfb90 genutils-1.13.ebuild 632
+MD5 fb7eca24617a4408738003ba985605ec genutils-1.17.ebuild 641
+MD5 d123335b99d1800f15cbc47c3262bb0b files/digest-genutils-1.17 65
 MD5 883b03c7c789e94fa90d1050d4c40489 files/digest-genutils-1.18 65
 MD5 166d5bf44bb32933762370c22a4641dd files/digest-genutils-1.13 65
-MD5 d123335b99d1800f15cbc47c3262bb0b files/digest-genutils-1.17 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDC5OcLLFUmVNQ7rkRAisCAJ4sBFf42xm7PslSRYQBCHPZd5gHQwCfc+qQ
-u2d3r1d1kOwKfKjAp90wpG4=
-=m2wK
------END PGP SIGNATURE-----
