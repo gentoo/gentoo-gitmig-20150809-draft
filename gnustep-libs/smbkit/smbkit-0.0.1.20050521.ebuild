@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/smbkit-0.0.1.20050521.ebuild,v 1.2 2005/07/09 15:44:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/smbkit/smbkit-0.0.1.20050521.ebuild,v 1.3 2005/08/25 19:03:49 swegener Exp $
 
 inherit gnustep
 
@@ -12,7 +12,7 @@ KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-IUSE="${IUSE}"
+IUSE=""
 DEPEND="${GS_DEPEND}
 	net-fs/samba"
 RDEPEND="${GS_RDEPEND}

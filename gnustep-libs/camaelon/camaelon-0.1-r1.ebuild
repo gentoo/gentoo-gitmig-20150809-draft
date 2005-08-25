@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/camaelon-0.1-r1.ebuild,v 1.1 2004/11/12 03:57:54 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/camaelon-0.1-r1.ebuild,v 1.2 2005/08/25 19:03:48 swegener Exp $
 
 inherit gnustep
 
@@ -14,9 +14,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="${IUSE}"
+IUSE=""
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
 egnustep_install_domain "Local"
-

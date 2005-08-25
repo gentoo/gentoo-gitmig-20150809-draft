@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.1.1_pre20050312.ebuild,v 1.1 2005/03/24 05:38:11 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.1.1_pre20050312.ebuild,v 1.2 2005/08/25 19:03:48 swegener Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -29,7 +29,7 @@ RDEPEND="${GS_RDEPEND}
 	x11-libs/libPropList"
 need_apache2
 
-IUSE="${IUSE}"
+IUSE=""
 
 egnustep_install_domain "System"
 
@@ -80,4 +80,3 @@ pkg_postinst() {
 	gnustep_pkg_postinst
 	einfo "Edit /etc/conf.d/apache${APACHE_VERSION#1} and add \"-D GSWeb\" to APACHE${APACHE_VERSION#1}_OPTS"
 }
-
