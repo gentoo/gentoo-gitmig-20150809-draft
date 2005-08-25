@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r2.ebuild,v 1.2 2005/06/12 09:27:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r2.ebuild,v 1.3 2005/08/25 11:11:50 flameeyes Exp $
 
 inherit libtool eutils flag-o-matic
 
+PATCHLEVEL="1"
 DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 HOMEPAGE="http://flac.sourceforge.net/"
-SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/flac/${P}.tar.gz
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -24,18 +26,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	if use xmms ; then
-		epatch "${FILESDIR}"/${P}-xmms-config.patch
-	else
-		sed -i -e '/^@FLaC__HAS_XMMS_TRUE/d' src/Makefile.in || die
-		sed -i -e '/AM_PATH_XMMS/d' configure.in || die
-	fi
 
-	epatch "${FILESDIR}/${P}-m4.patch"
-	epatch "${FILESDIR}/${P}-libtool.patch"
-	epatch "${FILESDIR}/${P}-gas.patch"
-	epatch "${FILESDIR}/${P}-makefile.patch"
-	epatch "${FILESDIR}/${P}-noogg.patch"
+	# Apply all the patches but the largefile one (added later)
+	EPATCH_EXCLUDE="060_all_largefile.patch"
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches
+
+	# it needs XMMS m4 file
+	cp -R ${WORKDIR}/m4 ${S}
+
 	./autogen.sh || die "autogen failed"
 	libtoolize --copy --force
 	elibtoolize --reverse-deps
@@ -53,8 +51,8 @@ src_compile() {
 	# the man page ebuild requires docbook2man... yick!
 	sed -i -e 's:include man:include:g' Makefile
 
-	# emake seems to mess up the building of the xmms input plugin
-	make || die "make failed"
+	# parallel make seems to mess up the building of the xmms input plugin
+	emake -j1 || die "make failed"
 }
 
 src_install() {
