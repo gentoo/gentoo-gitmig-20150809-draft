@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.72 2005/08/25 12:39:03 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.73 2005/08/25 16:56:19 batlogg Exp $
+
+  25 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>;
+  +files/2.8.1/i18n-1.0.0.patch:
+  #103714 i18n patch was missing
 
   25 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>;
   +files/2.7.7/i18n-1.0.0.patch:
