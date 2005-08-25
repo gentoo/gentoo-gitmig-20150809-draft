@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 802dd61318ea5bf93c44eee1e861ca24 ChangeLog 3642
-MD5 4da0ca4266b73a113cab33b4dba8ef03 ekg-1.4-r1.ebuild 1109
 MD5 f43c4aa49c2172a1d4f64eef10bca1f5 ekg-1.5.ebuild 1224
-MD5 c51666e26f26b1a47a35fca7cfd60b4e ekg-1.6_rc1-r1.ebuild 1463
-MD5 3e3c676c4be1c5bcc141eb3cbfc801d9 ekg-1.6_rc1.ebuild 1367
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
-MD5 5e710bdd7ae75ffd45c54bd1041204bf ekg-1.6_rc3.ebuild 1487
+MD5 94f9dfb04cfa2209f67ab8780e3404c7 ekg-1.6_rc3.ebuild 1485
+MD5 182b1ff71644c1af94a6d262f04100d3 ChangeLog 3729
+MD5 4da0ca4266b73a113cab33b4dba8ef03 ekg-1.4-r1.ebuild 1109
+MD5 3e3c676c4be1c5bcc141eb3cbfc801d9 ekg-1.6_rc1.ebuild 1367
+MD5 c51666e26f26b1a47a35fca7cfd60b4e ekg-1.6_rc1-r1.ebuild 1463
 MD5 2bc5f13c9e2cc840a2f8f61fc3a51391 files/digest-ekg-1.4-r1 59
-MD5 fabb312576862c943792eed047bac7a8 files/digest-ekg-1.5 59
-MD5 811e95299fbf084137ceb9b517843924 files/digest-ekg-1.6_rc1 62
-MD5 811e95299fbf084137ceb9b517843924 files/digest-ekg-1.6_rc1-r1 62
 MD5 7e938e2282dbaf23d5789db2a53c1ddd files/ekg-1.6_rc1-fpic.patch 487
-MD5 73bffbc0a70d4856d52bc58a58fd5615 files/ekg-1.6_rc3-libgadu.patch 833
+MD5 811e95299fbf084137ceb9b517843924 files/digest-ekg-1.6_rc1 62
+MD5 fabb312576862c943792eed047bac7a8 files/digest-ekg-1.5 59
 MD5 5f85e8a786d72281d79bb0adacc7df71 files/digest-ekg-1.6_rc3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5Q83Z/iYVBmujdURAiPXAKC2zdD/jBg9vPgxyiXgb9q2R8EEfACggfXN
-5m0tKe0PkuzwrfgvFIF/j2w=
-=jxBH
------END PGP SIGNATURE-----
+MD5 73bffbc0a70d4856d52bc58a58fd5615 files/ekg-1.6_rc3-libgadu.patch 833
+MD5 811e95299fbf084137ceb9b517843924 files/digest-ekg-1.6_rc1-r1 62
