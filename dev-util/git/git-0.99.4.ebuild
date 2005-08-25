@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.4.ebuild,v 1.1 2005/08/13 10:34:07 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.4.ebuild,v 1.2 2005/08/25 09:56:33 r3pek Exp $
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
-SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2"
+SRC_URI="http://kernel.org/pub/software/scm/git/${PN}-core-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,6 +16,7 @@ DEPEND="dev-libs/openssl
 		net-misc/curl
 		!app-misc/git
 		doc? ( >=app-text/asciidoc-7.0.1 app-text/xmlto )"
+S="${WORKDIR}/${PN}-core-${PV}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,20 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.3.ebuild,v 1.1 2005/08/09 21:44:12 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.5.ebuild,v 1.1 2005/08/25 09:56:33 r3pek Exp $
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
-SRC_URI="http://kernel.org/pub/software/scm/git/${P}.tar.bz2"
+SRC_URI="http://kernel.org/pub/software/scm/git/${PN}-core-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE="mozsha1 ppcsha1"
+IUSE="mozsha1 ppcsha1 doc"
+S="${WORKDIR}/${PN}-core-${PV}"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
 		net-misc/curl
-		!app-misc/git"
+		!app-misc/git
+		doc? ( >=app-text/asciidoc-7.0.1 app-text/xmlto )"
 
 src_unpack() {
 	unpack ${A}
@@ -32,9 +34,18 @@ src_compile() {
 	fi
 
 	make prefix=/usr || die "make failed"
+
+	if use doc; then
+		cd ${S}/Documentation
+		make || die "make documentation failed"
+	fi
 }
 
 src_install() {
-	make dest=${D} prefix=/usr install || die "make install failed"
-	dodoc README
+	make DESTDIR=${D} prefix=/usr install || die "make install failed"
+	dodoc README COPYING
+
+	if use doc; then
+		doman Documentation/*.1 Documentation/*.7
+	fi
 }
