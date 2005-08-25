@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4340 2005/08/25 07:54:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4341 2005/08/25 19:46:31 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -207,6 +207,7 @@ sys-apps/pmount
 >=app-text/gnome-doc-utils-0.3
 >=dev-cpp/gnome-vfsmm-2.11
 >=dev-cpp/libgnomecanvasmm-2.11
+>=dev-cpp/libxmlpp-2.11
 >=www-client/epiphany-extensions-1.7
 >=gnome-extra/gconf-editor-2.11
 >=x11-themes/gnome-backgrounds-2.11
