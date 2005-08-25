@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.41 2005/08/22 23:05:59 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.42 2005/08/25 02:05:04 rl03 Exp $
+
+*phpwebsite-0.10.2_rc2 (25 Aug 2005)
+
+  25 Aug 2005; Renat Lumpau <rl03@gentoo.org> +phpwebsite-0.10.2_rc2.ebuild:
+  Version bump wrt security bug #102785.
 
   22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt:
   Housekeeping
