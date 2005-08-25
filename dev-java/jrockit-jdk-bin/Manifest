@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 44f00b9f278d0941a4820ce56f0fefe1 metadata.xml 554
 MD5 439da453c829b0686cc6932990c1fe8e jrockit-jdk-bin-1.4.2.05.ebuild 1809
-MD5 4c510c10cf7d6c41ec6fc8b55568ed6f ChangeLog 3133
-MD5 1190e277c8d73864211698817d161165 jrockit-jdk-bin-1.5.0.03.ebuild 1744
+MD5 87f6a3e082d041c90ad3ca85c83d905f ChangeLog 3236
+MD5 ce772ea3ad815d9521ecfee13d81bc53 jrockit-jdk-bin-1.5.0.03.ebuild 1743
 MD5 0bcb602c489408770b8689a3b7541b18 files/jrockit-jdk-bin-1.4.2.05 282
 MD5 b83bb4342a795e9aec196c175f96d863 files/digest-jrockit-jdk-bin-1.5.0.03 262
 MD5 d65eb1cd5fac1963ac29f72ec296ae96 files/jrockit-jdk-bin-1.5.0.03 292
 MD5 c62764af82c4e66398b687fbce370879 files/digest-jrockit-jdk-bin-1.4.2.05 165
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDAiryBXaUFmZvwyMRAjLRAJ9mpburh87cIxTSE9H8eDW/v6RfUQCglLnQ
-lm9VIBjHvwejzJ/EmEYpBGs=
-=CEcr
------END PGP SIGNATURE-----

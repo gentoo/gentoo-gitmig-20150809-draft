@@ -1,10 +1,13 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.30 2005/08/14 21:13:19 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.31 2005/08/25 01:38:41 agriffis Exp $
 
 # ant-core blocks lower versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2
 # Please unemerge ant-tasks when updating ant.
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> ant-core-1.6.5-r1.ebuild:
+  add ~ia64
 
   14 Aug 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   ant-core-1.6.5-r1.ebuild:
