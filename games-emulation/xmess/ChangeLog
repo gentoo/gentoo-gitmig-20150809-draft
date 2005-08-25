@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.35 2005/08/18 22:55:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.36 2005/08/25 23:33:12 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> xmess-0.99-r1.ebuild:
+  stable on ia64
 
 *xmess-0.99-r1 (18 Aug 2005)
 
