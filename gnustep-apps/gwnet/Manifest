@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 46e96ff251bd03e4190bb89d54300d48 ChangeLog 2321
 MD5 341828835de325e6f8e44726b9b5e9bf files/digest-gwnet-0.1.0.7.0 69
 MD5 0f2b6d5ad90e11612f0cbbf2a1e2e9dc files/digest-gwnet-0.1.0.7.1 69
 MD5 4e30c3b3b4147daca672e6b6db3fff49 gwnet-0.1.0.7.0.ebuild 722
 MD5 b0870fc70921a0f49167ce8f7e5680a4 gwnet-0.1.0.7.1.ebuild 732
 MD5 f2392691afe8da10b2b7110b933fd207 metadata.xml 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAmVEAJ9ZcZtvDUlU2JXRQfAFm4gBiZ0tzACgpVY2
+Tvm9dZ5FjwgUbGDV/EvNNdk=
+=a456
+-----END PGP SIGNATURE-----

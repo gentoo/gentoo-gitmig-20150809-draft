@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c016fe75b06ea8add1bce4594a274ca ChangeLog 1764
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-textedit-0.95_pre20050110 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-textedit-0.95_pre20050315 0
 MD5 9fdc13fe32ec98a734971d433dc53e02 metadata.xml 301
 MD5 aac38348c7d6069dfec1761a87ac2071 textedit-0.95_pre20050110.ebuild 838
 MD5 da795815d66f2e8cb0b4e089cca5252d textedit-0.95_pre20050315.ebuild 838
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAoPzAKDAfUJxOI7+kV77Aes1v6IKJCo/9ACgphsj
+uTsbSwzeEGGR2vcW6mUFZ5g=
+=HDSK
+-----END PGP SIGNATURE-----

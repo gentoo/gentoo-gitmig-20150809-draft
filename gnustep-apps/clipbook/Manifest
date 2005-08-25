@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7b8a8de9374fdc43788bc6de2bc196d3 ChangeLog 2062
 MD5 e03449ad1b6fdfe9313fddb5180322cb clipbook-0.6.0.7.0.ebuild 644
 MD5 552fea21b6b78e4e30510f6c9f7393c5 clipbook-0.6.0.7.1.ebuild 654
 MD5 341828835de325e6f8e44726b9b5e9bf files/digest-clipbook-0.6.0.7.0 69
 MD5 0f2b6d5ad90e11612f0cbbf2a1e2e9dc files/digest-clipbook-0.6.0.7.1 69
 MD5 1723f885d7a1b417a7395f11ff61dbff metadata.xml 324
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAiRuAJ0fTSs9Ch7QFfXJ+X0r8WcGfbcu1wCeJtfI
+Nw9KO9Iz/TbugBCzREUw7Zk=
+=XaHZ
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40bd20fe3e9f81103088f8ee4144c230 ChangeLog 351
 MD5 8508a85f5521178c49bfdca4f9715026 files/digest-price-0.5 63
 MD5 f1aaa57ac069bf0fb5a51efd99510516 metadata.xml 590
 MD5 02a095c5c45632f0251d09bef919160c price-0.5.ebuild 549
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAjBlAKCntQY+QupHguNA7YDoIIx66r+/qACgpDAZ
+WljrvtQQR5iRgm+ONBKSoxY=
+=9Gri
+-----END PGP SIGNATURE-----

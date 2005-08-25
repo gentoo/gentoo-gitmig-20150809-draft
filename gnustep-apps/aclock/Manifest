@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 26b0a1d456c03991fc5e2b7321d840d0 ChangeLog 1515
 MD5 3827333c7c1be08a261b5f4dffe5444e aclock-0.2.3.ebuild 496
 MD5 ce19fe0473570b56889ddc6eee767d7f files/config-aclock.sh 908
 MD5 4b11d604f2262348db37b259055e0178 files/digest-aclock-0.2.3 63
 MD5 d421688d8f3f6a5c33b0a960ba0e9e0a metadata.xml 409
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAlqDAKC9b6tJSvn4hEToeSl+q3P44sw7GwCg39bJ
+Mo1NncYM2Zd0/fIxwATc9Dw=
+=sNMj
+-----END PGP SIGNATURE-----

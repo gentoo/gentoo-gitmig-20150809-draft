@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 26606d845221c72b9893d5e270b84891 ChangeLog 2850
 MD5 b7a632c33d30c1e4b1126d4f4230a79d easydiff-0.3.1_pre20041203.ebuild 857
 MD5 aacc35f56f78011773a56d5d52d95f6d easydiff-0.3.1_pre20050106.ebuild 857
@@ -6,3 +9,10 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-easydiff-0.3.1_pre20041203 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-easydiff-0.3.1_pre20050106 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-easydiff-0.3.1_pre20050312 0
 MD5 e2bbe71216a3d5a6ee303cbd462acddf metadata.xml 267
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAmx2AJ9DwMfbirnyiusD5tGBU4qEP/xxLwCgoaMm
+f85oPGeuCNCqI8zEzw9/NcE=
+=bf85
+-----END PGP SIGNATURE-----

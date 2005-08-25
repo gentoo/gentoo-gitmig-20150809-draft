@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 590e42bc10e1db0c45242756a9fed878 ChangeLog 1814
 MD5 cd4414200232647c1f3402bbc6ec2e5d files/Preferences-nocreate-extra-dirs.patch 834
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-preferences-1.3.0_pre20050110 0
@@ -5,3 +8,10 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-preferences-1.3.0_pre20050315 
 MD5 205bf7503c7223e7915354f26ba3ecf3 metadata.xml 250
 MD5 e859b08755d15d8029e521b96955b394 preferences-1.3.0_pre20050110.ebuild 1029
 MD5 4d5ec7194a4d9d4e99ba2484298eb6eb preferences-1.3.0_pre20050315.ebuild 1029
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRArm/AJ4gObPA/b7X40+hiNFcQZYDM5xi0gCfS5W5
+oRLzmea4uPinna1vnQq3X6s=
+=0Lqk
+-----END PGP SIGNATURE-----

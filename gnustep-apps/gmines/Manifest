@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 24881417c874ff16d6a58bc7924ccf95 ChangeLog 886
 MD5 a1afa096024788b08b3d9753c780faa1 files/digest-gmines-0.1 53
 MD5 a1afa096024788b08b3d9753c780faa1 files/digest-gmines-0.1-r1 53
 MD5 d8e8777a62ec5e5866f3ae7b15d3bfe4 gmines-0.1-r1.ebuild 567
 MD5 c15ec89a234956d558559fbf737e9b5f gmines-0.1.ebuild 531
 MD5 7fba9271d2a85ce1378fc8c83e092ac7 metadata.xml 328
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDhSkI1lqEGTUzyQRAjygAKCDVs71f8+H89bpj5WJYZOVVsS4cwCgrEYN
+uCAk4eI6Q2p/Alkezwl51aE=
+=6ANR
+-----END PGP SIGNATURE-----
