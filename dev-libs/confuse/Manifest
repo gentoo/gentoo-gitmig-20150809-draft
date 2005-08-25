@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 89dddb08fdb521938437b1ee9615bf56 confuse-2.5.ebuild 1310
-MD5 6b84e903ee587ab75cfb9e71fd113381 ChangeLog 917
+MD5 8df29834cbc4db71d823b416edc62d1c ChangeLog 1007
+MD5 a57c19f546a8fade66a5ddbd7129a9af confuse-2.5.ebuild 1323
 MD5 e63af9d342810c6b32080c4d5c4a5456 files/confuse-2.5-maketest.patch 581
 MD5 52586bc716a63758a26e05b633a2bab0 files/digest-confuse-2.5 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC7m7LKRy60XGEcJIRAnN6AJ9WbpmRBmtb+KxStBZsrNwoakHirACgo2CX
-kqTF6jWU68rz0H6fS+PfFr4=
-=5rIq
+iD8DBQFDDTltBXaUFmZvwyMRArASAKDPtsMGH6zqaBLJUkdYE3fHMXIF/wCg1XAQ
+of73YEfAlo1cyIQGRkrN2t8=
+=+441
 -----END PGP SIGNATURE-----

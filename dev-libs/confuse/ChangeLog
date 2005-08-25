@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/confuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.6 2005/08/01 18:49:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.7 2005/08/25 03:22:07 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> confuse-2.5.ebuild:
+  add ~alpha ~ia64
 
   01 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> confuse-2.5.ebuild:
   ~sparc wrt #100058
