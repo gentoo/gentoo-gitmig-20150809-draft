@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.42 2005/08/25 02:05:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.43 2005/08/25 02:07:11 rl03 Exp $
+
+  25 Aug 2005; Renat Lumpau <rl03@gentoo.org>
+  -files/phpwebsite-0.10.1-xml-rpc.diff, -phpwebsite-0.10.1-r1.ebuild:
+  Cleaning old versions
 
 *phpwebsite-0.10.2_rc2 (25 Aug 2005)
 
