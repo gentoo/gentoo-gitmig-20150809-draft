@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.03.ebuild,v 1.4 2005/08/16 18:05:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.03.ebuild,v 1.5 2005/08/25 01:39:22 agriffis Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -18,7 +18,7 @@ SRC_URI="ia64? ( jrockit-25.2.0-jdk1.5.0_03-linux-ipf.bin )
 
 LICENSE="jrockit"
 SLOT="1.5"
-KEYWORDS="~ia64 ~x86 ~amd64"
+KEYWORDS="~amd64 ia64 ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
