@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/unieject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.9 2005/08/01 18:50:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.10 2005/08/25 03:23:44 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> unieject-3.ebuild:
+  add ~alpha ~ia64 #100058
 
   01 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> unieject-3.ebuild:
   ~sparc wrt #100058
