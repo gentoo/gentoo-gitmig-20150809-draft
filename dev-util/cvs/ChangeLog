@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.94 2005/08/25 19:43:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.95 2005/08/25 20:16:26 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org> cvs-1.12.12-r2.ebuild:
+  stable on ia64
 
   25 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> cvs-1.12.12-r2.ebuild:
   stable on alpha wrt bug #103661
