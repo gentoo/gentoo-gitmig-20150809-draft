@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/textedit-0.95_pre20050110.ebuild,v 1.1 2005/01/12 18:25:27 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/textedit-0.95_pre20050110.ebuild,v 1.2 2005/08/25 18:57:12 swegener Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/backbone"
@@ -21,9 +21,8 @@ KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="${IUSE}"
+IUSE=""
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
 egnustep_install_domain "System"
-

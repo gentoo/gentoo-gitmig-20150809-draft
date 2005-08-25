@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/viewpdf/viewpdf-0.9.ebuild,v 1.3 2004/11/12 03:57:34 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/viewpdf/viewpdf-0.9.ebuild,v 1.4 2005/08/25 18:57:12 swegener Exp $
 
 inherit gnustep
 
@@ -14,11 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 
-IUSE="${IUSE}"
+IUSE=""
 DEPEND="${GS_DEPEND}
 	gnustep-libs/pdfkit"
 RDEPEND="${GS_RDEPEND}
 	gnustep-libs/pdfkit"
 
 egnustep_install_domain "System"
-

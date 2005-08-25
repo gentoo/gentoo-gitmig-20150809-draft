@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.7.5_pre20041021.ebuild,v 1.4 2005/01/12 21:22:25 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.7.5_pre20041021.ebuild,v 1.5 2005/08/25 18:57:12 swegener Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="cvs.gna.org:/cvs/gsimageapps"
@@ -23,9 +23,8 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 SLOT="0"
 
-IUSE="${IUSE}"
+IUSE=""
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
 egnustep_install_domain "System"
-

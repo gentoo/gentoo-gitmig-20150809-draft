@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/addresses-0.4.6.ebuild,v 1.3 2004/11/12 03:49:45 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/addresses-0.4.6.ebuild,v 1.4 2005/08/25 18:57:12 swegener Exp $
 
 inherit gnustep
 
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-IUSE="${IUSE}"
+IUSE=""
 DEPEND="${GS_DEPEND}"
 RDEPEND="${GS_RDEPEND}"
 
@@ -28,4 +28,3 @@ src_unpack() {
 	fi
 	epatch ${FILESDIR}/address-user-root.patch
 }
-
