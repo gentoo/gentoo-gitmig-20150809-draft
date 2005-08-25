@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.2 2005/03/01 03:21:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.3 2005/08/25 18:22:11 swegener Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://tigcc.ticalc.org"
 
 SRC_URI="mirror://gentoo/${PF}.tar.bz2
 	mirror://gnu/gcc/releases/gcc-${BASE_GCC}/gcc-core-${BASE_GCC}.tar.bz2
-	mirror:/kernel/linux/devel/binutils/binutils-${BASE_BINUTILS}.tar.bz2
+	mirror://kernel/linux/devel/binutils/binutils-${BASE_BINUTILS}.tar.bz2
 	http://members.chello.at/gerhard.kofler/kevin/ti89prog/libfargo.zip
 	http://members.chello.at/gerhard.kofler/kevin/ti89prog/flashosa.zip"
 
