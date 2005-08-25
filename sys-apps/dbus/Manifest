@@ -1,17 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 021372c9a654c691ce292dfa64ff9ed0 ChangeLog 6852
+MD5 9a429396a36f90b15ba493201ac5090e ChangeLog 7022
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
 MD5 fedfd2a1281d8773038a8036a2a75ef8 dbus-0.23.2-r1.ebuild 3454
 MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
 MD5 bb8292b02298d653808cb0d0edd271da dbus-0.23.4.ebuild 3413
 MD5 f33c0c04340639e98aeaed265a7a6cd1 metadata.xml 307
-MD5 073406ee2d41b3483e8c4fe2089dbc8f dbus-0.36.ebuild 3600
+MD5 26ac585bd3ba757f2d4691f5c63d0766 dbus-0.36.1.ebuild 3612
 MD5 129780aacfd90191b7357bc6ae029bc2 dbus-0.23.4-r1.ebuild 3448
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
 MD5 6e8a551caef6f55569fa4724d3cf1fe0 files/dbus 663
-MD5 abf70259eb80412c32d00e7cfbf10641 files/digest-dbus-0.36 62
 MD5 768e500cfda89809161576ea2080a7aa files/dbus-0.23-dbus_session_connect.patch 1185
 MD5 f3ab25d85c77b7f859d4d2cefc787aef files/dbus-0.23-fd_set.patch 293
 MD5 403b7724a698be1509916991e87224a4 files/dbus-0.23-pyexecdir.patch 1131
@@ -24,10 +23,11 @@ MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2 64
 MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2-r1 64
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4 64
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
+MD5 69889aa5bbb90c7897265ab533f357fb files/digest-dbus-0.36.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDBhJBtvusYtCZMsRAnq/AJ40/+z3Jv4isNXEhqhnsbh3464IRgCfX1Sa
-lSYi6c7L50VURsZF/G0Ksdk=
-=mTt4
+iD8DBQFDDef4BtvusYtCZMsRAvIdAJ415HBWFe0D5ljkPYQtWGknW+FjCgCfY5YT
+RS2M1jmtGgGGBvcKUpY5sKw=
+=Z2Ig
 -----END PGP SIGNATURE-----

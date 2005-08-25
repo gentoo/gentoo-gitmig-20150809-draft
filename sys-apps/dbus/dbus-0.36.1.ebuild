@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.36.ebuild,v 1.2 2005/08/24 06:48:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.36.1.ebuild,v 1.1 2005/08/25 15:46:40 cardoe Exp $
 
 inherit eutils mono python multilib debug
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	virtual/x11 ) )
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.4
-		dev-python/pyrex )
+		>=dev-python/pyrex-0.9.3-r2 )
 	qt? ( =x11-libs/qt-3* )
 	mono? ( >=dev-lang/mono-0.95 )"
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen
 		app-text/xmlto )
-	doc? ( mono? ( >=dev-util/monodoc-1.0.4 ) )"
+	doc? ( mono? ( >=dev-util/monodoc-0.16 ) )"
 
 # needs gcj, we have no neat way of knowing if it was enabled
 # Can we just depend on the java virtual and use javac?

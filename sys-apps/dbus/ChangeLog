@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.48 2005/08/24 06:39:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.49 2005/08/25 15:46:40 cardoe Exp $
+
+*dbus-0.36.1 (25 Aug 2005)
+
+  25 Aug 2005; Doug Goldstein <cardoe@gentoo.org> -dbus-0.36.ebuild,
+  +dbus-0.36.1.ebuild:
+  rev bump. Should fix amd64 issues. bug #103601
 
 *dbus-0.36 (24 Aug 2005)
 
