@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r2.ebuild,v 1.1 2005/08/24 21:37:19 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.3.10-r2.ebuild,v 1.2 2005/08/25 18:25:19 hansmi Exp $
 
 inherit eutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://phpwiki.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz http://dev.gentoo.org/~stuart/patches/${PN}-xmlrpc.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/php
