@@ -9,7 +9,7 @@ else
 	export ABI="amd64"
 fi
 
-export CFLAGS_amd64
+#export CFLAGS_amd64
 export CFLAGS_x86
 
 # Make sure they updated to 2005.0 properly

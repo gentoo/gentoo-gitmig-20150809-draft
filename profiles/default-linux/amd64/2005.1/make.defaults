@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/make.defaults,v 1.1 2005/06/04 21:20:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/make.defaults,v 1.2 2005/08/25 21:58:27 vapier Exp $
 
 #removed because managers vote requires us to do so
 #("when we go nptl, we all go nptl")
@@ -14,8 +14,8 @@ FEATURES="sandbox autoconfig -multilib-pkg"
 MULTILIB_ABIS="x86 amd64"
 DEFAULT_ABI="amd64"
 
-CFLAGS_amd64="-m64"
-LDFLAGS_amd64="-m elf_x86_64"
+#CFLAGS_amd64="-m64"
+#LDFLAGS_amd64="-m elf_x86_64"
 CHOST_amd64="x86_64-pc-linux-gnu"
 CDEFINE_amd64="__x86_64__"
 LIBDIR_amd64="lib64"
