@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.11.91.ebuild,v 1.1 2005/08/18 00:24:40 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.11.92.ebuild,v 1.1 2005/08/25 05:54:57 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -12,11 +12,10 @@ SLOT="2"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa eds gstreamer static"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=media-libs/fontconfig-1
 	virtual/xft
+	virtual/x11
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libgnomeui-2.2
@@ -47,16 +46,18 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 
+MAKEOPTS="${MAKEOPTS} -j1"
+
 
 pkg_setup() {
-	G2CONF="--disable-schemas-install --enable-vfs-methods \
-		$(use_enable alsa) $(use_enable gstreamer) $(use_enable static) \
-		$(use_enable eds aboutme)"
+	G2CONF="--disable-schemas-install --disable-scrollkeeper \
+		--enable-vfs-methods $(use_enable alsa) $(use_enable gstreamer) \
+		$(use_enable static) $(use_enable eds aboutme)"
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	# See http://gcc.gnu.org/cgi-bin/gnatsweb.pl problem #9700 for
 	# what this is about.
@@ -75,9 +76,13 @@ src_unpack() {
 
 	# Remove unnecessary check for bleeding-edge version of Xft. Gentoo's
 	# xorg-x11 already includes the patch that this check tries to enforce.
-	epatch ${FILESDIR}/${P}-xft_check.patch
+	epatch ${FILESDIR}/${PN}-2.11.91-xft_check.patch
+
+	# Gentoo-specific support for xcursor themes. See bug #103638.
+	epatch ${FILESDIR}/${PN}-2.11-gentoo_xcursor.patch
+
+	# Avoid segfault after calling XcursorLibraryLoadImage
+	epatch ${FILESDIR}/${PN}-2.11-xcursor_fix.patch
 
 	autoconf || die "autoconf failed"
-
-	gnome2_omf_fix ${S}/help/Makefile.in
 }
