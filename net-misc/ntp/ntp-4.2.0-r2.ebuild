@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.24 2005/07/20 22:38:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0-r2.ebuild,v 1.25 2005/08/25 22:10:40 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -36,13 +36,14 @@ hax_bitkeeper() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	use alpha && epatch ${FILESDIR}/ntp-4.1.1b-syscall-libc.patch
+	use alpha && epatch "${FILESDIR}"/ntp-4.1.1b-syscall-libc.patch
 
-	epatch ${FILESDIR}/${PV}-ntpdate-quiet.patch
-	epatch ${FILESDIR}/${PV}-linux-config-phone.patch #13001
-	epatch ${FILESDIR}/${PV}-droproot.patch
+	epatch "${FILESDIR}"/${PV}-ntpdate-quiet.patch
+	epatch "${FILESDIR}"/${PV}-linux-config-phone.patch #13001
+	epatch "${FILESDIR}"/${PV}-droproot.patch
+	epatch "${FILESDIR}"/ntp-4.2.0-ntpd-using-wrong-group.patch #103719
 	sed -i "s:-Wpointer-arith::" configure.in
 
 	# needed in order to make files with right ver info #30220
@@ -90,7 +91,7 @@ src_install() {
 	dohtml -r html/*
 
 	insinto /usr/share/ntp
-	doins ${FILESDIR}/ntp.conf
+	doins "${FILESDIR}"/ntp.conf
 	rm -rf `find scripts/ \
 		-name '*.in' -o \
 		-name 'Makefile*' -o \
@@ -99,13 +100,13 @@ src_install() {
 	cp -r scripts/* ${D}/usr/share/ntp/
 	chmod -R go-w ${D}/usr/share/ntp
 
-	[ ! -e ${ROOT}/etc/ntp.conf ] && insinto /etc && doins ${FILESDIR}/ntp.conf
+	[ ! -e ${ROOT}/etc/ntp.conf ] && insinto /etc && doins "${FILESDIR}"/ntp.conf
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ntpd.rc ntpd
-	newexe ${FILESDIR}/ntp-client.rc ntp-client
+	newexe "${FILESDIR}"/ntpd.rc ntpd
+	newexe "${FILESDIR}"/ntp-client.rc ntp-client
 	insinto /etc/conf.d
-	newins ${FILESDIR}/ntpd.confd ntpd
-	newins ${FILESDIR}/ntp-client.confd ntp-client
+	newins "${FILESDIR}"/ntpd.confd ntpd
+	newins "${FILESDIR}"/ntp-client.confd ntp-client
 	use nodroproot && dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
 
 	dodir /var/lib/ntp

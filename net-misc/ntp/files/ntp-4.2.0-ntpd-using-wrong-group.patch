@@ -1,0 +1,14 @@
+http://bugs.gentoo.org/103719
+https://ntp.isc.org/bugs/show_bug.cgi?id=392
+
+--- ntpd/ntpd.c
++++ ntpd/ntpd.c
+@@ -881,7 +881,7 @@
+ 			} else {
+ getgroup:	
+ 				if ((gr = getgrnam(group)) != NULL) {
+-					sw_gid = pw->pw_gid;
++					sw_gid = gr->gr_gid;
+ 				} else {
+ 					errno = 0;
+ 					msyslog(LOG_ERR, "Cannot find group `%s'", group);
