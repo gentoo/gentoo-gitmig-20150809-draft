@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.85 2005/08/25 21:44:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.86 2005/08/26 16:00:51 seemant Exp $
+
+  26 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  ffmpeg-0.4.9_p20050226-r5.ebuild:
+  moved libdc1394 from media-plugins to media-libs
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   ffmpeg-0.4.9_p20050226-r5.ebuild:
