@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.8 2005/07/19 15:11:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.9 2005/08/26 12:33:57 flameeyes Exp $
 
 IUSE="doc"
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_install() {
 	dodir /opt/${P}
-	cp -a bin lib ${D}/opt/${P} || die
+	cp -pPR bin lib ${D}/opt/${P} || die
 
 	dodoc COPYRIGHT CHANGES LICENSE
 	dohtml readme.html Welcome.html
