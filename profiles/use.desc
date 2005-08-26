@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.262 2005/08/24 09:11:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.263 2005/08/26 20:58:11 r3pek Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -227,6 +227,7 @@ nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocd - Tells emerge to install all files required to run the application without a CD mounted
 nocxx - Disable support for C++ (DONT USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
+nsplugin - Builds plugins for Netscape compatible browsers
 ocaml - Adds support/bindings for the Ocaml language
 oci8 - Adds Oracle 8 Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
