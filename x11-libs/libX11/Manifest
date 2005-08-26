@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 976f082d1c8e9d2dc065bb1d2757fff8 libX11-0.99.0.ebuild 738
-MD5 2dc8f266907218f77188168a338b6403 ChangeLog 834
 MD5 fdf5e5162684993ff83632004d25dd62 libX11-0.99.0-r1.ebuild 793
-MD5 5791b507bbab4f14939c3af04f8ce577 files/digest-libX11-0.99.0-r1 67
-MD5 2876ad1900be50152298811f5a5ac5e4 files/fix-xkeysymdb-location.patch 486
+MD5 76217910e1ee18b2b83c6ddf065b838f ChangeLog 1018
+MD5 976f082d1c8e9d2dc065bb1d2757fff8 libX11-0.99.0.ebuild 738
 MD5 5791b507bbab4f14939c3af04f8ce577 files/digest-libX11-0.99.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC8hcgIKl8Uu19MoRAmOdAKCBSEFzwFK/milvC7I4sVHxkf1qJgCePbL/
-/Oa201ZhfJVCMhV9B4o0/nY=
-=67oP
------END PGP SIGNATURE-----
+MD5 80fe11bd492226931aa1cadbe260cf75 files/fix-xkeysymdb-location.patch 469
+MD5 5791b507bbab4f14939c3af04f8ce577 files/digest-libX11-0.99.0-r1 67
