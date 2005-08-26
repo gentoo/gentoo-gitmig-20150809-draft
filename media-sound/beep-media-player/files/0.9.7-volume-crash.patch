@@ -1,0 +1,14 @@
+diff -u bmp-0.9.7/beep/controlsocket.c bmp-0.9.7-mod/beep/controlsocket.c
+--- bmp-0.9.7/beep/controlsocket.c	2004-12-04 07:05:16.000000000 -0500
++++ bmp-0.9.7-mod/beep/controlsocket.c	2005-08-21 05:52:05.000000000 -0400
+@@ -364,7 +364,9 @@
+             break;
+         case CMD_GET_BALANCE:
+             input_get_volume(&v[0], &v[1]);
+-            if (v[0] > v[1])
++            if (v[0] < 0 || v[1] < 0)
++                b = 0;
++            else if (v[0] > v[1])
+                 b = -100 + ((v[1] * 100) / v[0]);
+             else if (v[1] > v[0])
+                 b = 100 - ((v[0] * 100) / v[1]);

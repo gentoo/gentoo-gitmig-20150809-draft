@@ -1,0 +1,22 @@
+--- bmp-0.9.7/libbeep/Makefile.am	2005-08-27 00:29:03.000000000 +0200
++++ bmp-0.9.7.az/libbeep/Makefile.am	2005-08-27 00:29:27.000000000 +0200
+@@ -6,7 +6,7 @@
+ lib_LTLIBRARIES = libbeep.la
+ 
+ libbeep_la_LDFLAGS = -export-dynamic -version-info $(LIBBEEP_MAJOR_VERSION):$(LIBBEEP_MINOR_VERSION):$(LIBBEEP_MICRO_VERSION)
+-libbeep_la_LIBADD = @GTK_LIBS@
++libbeep_la_LIBADD = @GTK_LIBS@ @GCONF_LIBS@ @GNOMEVFS_LIBS@
+ INCLUDES = @GTK_CFLAGS@ @GCONF_CFLAGS@ @GNOMEVFS_CFLAGS@ -I$(top_srcdir)/../intl -I$(top_srcdir)/..
+ 
+ if HAVE_GCONF
+--- bmp-0.9.7/libbeep/Makefile.in	2005-08-27 00:29:13.000000000 +0200
++++ bmp-0.9.7.az/libbeep/Makefile.in	2005-08-27 00:29:33.000000000 +0200
+@@ -301,7 +301,7 @@
+ beepincludedir = $(includedir)/bmp
+ lib_LTLIBRARIES = libbeep.la
+ libbeep_la_LDFLAGS = -export-dynamic -version-info $(LIBBEEP_MAJOR_VERSION):$(LIBBEEP_MINOR_VERSION):$(LIBBEEP_MICRO_VERSION)
+-libbeep_la_LIBADD = @GTK_LIBS@
++libbeep_la_LIBADD = @GTK_LIBS@ @GCONF_LIBS@ @GNOMEVFS_LIBS@
+ INCLUDES = @GTK_CFLAGS@ @GCONF_CFLAGS@ @GNOMEVFS_CFLAGS@ -I$(top_srcdir)/../intl -I$(top_srcdir)/..
+ @HAVE_GCONF_FALSE@CONF_SRC = configdb_rcfile.c
+ @HAVE_GCONF_TRUE@CONF_SRC = configdb_gconf.c

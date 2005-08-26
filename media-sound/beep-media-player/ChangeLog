@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.64 2005/08/24 19:46:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.65 2005/08/26 23:32:10 chainsaw Exp $
+
+*beep-media-player-0.9.7-r8 (26 Aug 2005)
+
+  26 Aug 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/0.9.7-link-gconf.patch, +files/0.9.7-volume-crash.patch,
+  +beep-media-player-0.9.7-r8.ebuild:
+  Revision bump, patch from Mike Lundy <novas007@gmx.net> closes bug #103825.
+  Linking fix from azarah. ipv6 patch is back.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   beep-media-player-0.9.7-r6.ebuild:
