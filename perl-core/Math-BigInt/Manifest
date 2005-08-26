@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a3b6fa4772b03105f480aa06a20d031 Math-BigInt-1.73.ebuild 603
-MD5 f3a8f7c20e12a96f00dd349c49fe4525 Math-BigInt-1.69.ebuild 587
+MD5 d15789e85e0135936f3b1cc6305bc9a9 Math-BigInt-1.73.ebuild 608
 MD5 61705195ceb28c886ecb4d0ed1429d64 Math-BigInt-1.70.ebuild 592
-MD5 048b0e002d7023156acf0942d32abefa ChangeLog 2204
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b461900d92f57d4e040ce12dfe67f876 files/digest-Math-BigInt-1.69 68
+MD5 d101f2975914b0f391058cf5452cf290 ChangeLog 2292
+MD5 f3a8f7c20e12a96f00dd349c49fe4525 Math-BigInt-1.69.ebuild 587
 MD5 d6a633b9a6acedb716053a67339c2a00 files/digest-Math-BigInt-1.70 68
 MD5 109b3f67b6c2ed044cbd5921a74aa244 files/digest-Math-BigInt-1.73 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCli4uI1lqEGTUzyQRAtJhAKCDFrdv4CwtN3XNa0bOQX49iHabMQCfVWpn
-5S7ggcf3JTw1AyseNYKEJA8=
-=mgy7
------END PGP SIGNATURE-----
+MD5 b461900d92f57d4e040ce12dfe67f876 files/digest-Math-BigInt-1.69 68

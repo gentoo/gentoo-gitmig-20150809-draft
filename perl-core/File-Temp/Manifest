@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c55d1de56b1860aa21c1779566cb518e ChangeLog 2012
-MD5 c25829b1dee99542d9dc807a830246de File-Temp-0.14.ebuild 568
-MD5 79bb7f550d543a5c8fb20531e8a7ce94 File-Temp-0.16.ebuild 558
-MD5 a7c29fdf7d2b55c5a7dc99ac85c73a68 files/digest-File-Temp-0.14 65
-MD5 222c236bc63a5223f6333ac0b8a23a74 files/digest-File-Temp-0.16 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0FbDI1lqEGTUzyQRAt1KAJ95Mh9uOXFT/KKNucdrfAhJlE1+rgCeIj3h
-2p5lUOpO8FK16mhfyuN/xfk=
-=kHyv
------END PGP SIGNATURE-----
+MD5 552b08d5c8520a037075f8899f722643 ChangeLog 2130
+MD5 49e7ba392873b3da1628eb9cf0a3d112 File-Temp-0.14.ebuild 573
+MD5 2b3beb962ac0a94bdbe3adeb5411fdb2 File-Temp-0.16.ebuild 564
+MD5 222c236bc63a5223f6333ac0b8a23a74 files/digest-File-Temp-0.16 65
+MD5 a7c29fdf7d2b55c5a7dc99ac85c73a68 files/digest-File-Temp-0.14 65
