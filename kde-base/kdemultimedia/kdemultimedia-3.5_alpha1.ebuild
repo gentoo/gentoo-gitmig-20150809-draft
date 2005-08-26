@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5_alpha1.ebuild,v 1.1 2005/08/24 23:26:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5_alpha1.ebuild,v 1.2 2005/08/26 10:32:13 greg_g Exp $
 
 inherit kde-dist
 
@@ -36,8 +36,13 @@ DEPEND="${DEPEND}
 src_unpack() {
 	kde_src_unpack
 
+	# See kde bug 111545.
+	epatch "${FILESDIR}/${P}-compile-kscd.patch"
+
 	# Applied upstream.
 	epatch "${FILESDIR}/${P}-compile.patch"
+
+	# For the patches above.
 	make -f admin/Makefile.common || die
 }
 

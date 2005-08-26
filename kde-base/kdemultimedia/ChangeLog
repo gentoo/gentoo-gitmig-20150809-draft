@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.169 2005/08/25 14:45:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.170 2005/08/26 10:32:13 greg_g Exp $
+
+  26 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdemultimedia-3.5_alpha1-compile-kscd.patch,
+  kdemultimedia-3.5_alpha1.ebuild:
+  Add patch to fix bug #103773.
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   kdemultimedia-3.4.1-r1.ebuild:
