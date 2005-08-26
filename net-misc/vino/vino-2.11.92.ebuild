@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.11.92.ebuild,v 1.1 2005/08/22 23:45:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.11.92.ebuild,v 1.2 2005/08/26 09:29:13 flameeyes Exp $
 
 inherit eutils gnome2
 
@@ -43,4 +43,6 @@ src_unpack() {
 
 	# Fix compilation if --without-libz is passed
 	epatch ${FILESDIR}/${PN}-2.11-zlib_fix.patch
+	# Fix compilation for Gentoo/FreeBSD
+	epatch ${FILESDIR}/${PN}-2.10.0-fbsd.patch
 }
