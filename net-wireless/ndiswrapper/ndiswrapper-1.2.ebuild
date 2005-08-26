@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.6 2005/08/12 15:07:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.2.ebuild,v 1.7 2005/08/26 06:10:53 cardoe Exp $
 
 inherit linux-mod eutils
 
@@ -70,7 +70,7 @@ pkg_postinst() {
 	einfo "They will be copied to the proper location."
 	einfo "Once done, please run 'update-modules'."
 	echo
-	einfo "check http://ndiswrapper.sf.net/phpwiki/index.php/List for drivers"
+	einfo "check http://ndiswrapper.sf.net/mediawiki/index.php/List for drivers"
 	I=$(lspci -n | egrep 'Class (0280|0200):' |  cut -d' ' -f4)
 	einfo "Look for the following on that page for your driver:"
 	einfo "Possible Hardware: ${I}"
