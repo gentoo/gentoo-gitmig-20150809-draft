@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.23 2005/08/11 20:34:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.24 2005/08/26 03:13:46 weeve Exp $
+
+  26 Aug 2005; Jason Wever <weeve@gentoo.org> icaclient-9.0.ebuild:
+  Added fix for bug #103706.
 
   11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   icaclient-8.0-r3.ebuild, icaclient-9.0.ebuild:

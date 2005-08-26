@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.3 2005/08/11 20:34:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.4 2005/08/26 03:13:46 weeve Exp $
 
 inherit multilib
 
@@ -16,6 +16,7 @@ RESTRICT="fetch"
 
 RDEPEND="virtual/libc
 	virtual/x11
+	>=x11-libs/openmotif-2.2.2
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 DEPEND="${RDEPEND}
 	>=app-arch/rpm-3.0.6"
