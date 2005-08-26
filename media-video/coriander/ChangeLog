@@ -1,0 +1,35 @@
+# ChangeLog for media-plugins/coriander
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.1 2005/08/26 16:13:03 seemant Exp $
+
+  26 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  +coriander-1.0.0_pre3.ebuild, +coriander-1.0.0.ebuild:
+  moved this from media-plugins to media-video, where it belongs. Same
+  question as libdc1394 applies here. Why media-plugins, for crying out loud?
+
+  26 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  coriander-1.0.0_pre3.ebuild, coriander-1.0.0.ebuild:
+  moved libdc1394 from media-plugins to media-libs
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> coriander-1.0.0.ebuild:
+  Stable on ppc64
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org> coriander-1.0.0.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72995
+
+*coriander-1.0.0 (10 Oct 2004); Pieter Van den Abeele <pvdabeel@gentoo.org>
+
+  10 Oct 2004; Stewart Allen <srallen@mweb.co.za> coriander-1.0.0.ebuild:
+  Coriander is a Linux graphical user interface (GUI) that let you control a 
+  Digital Camera through the IEEE1394 bus. Added ~x86 to KEYWORDS.
+  Changed ">=media-plugins/libdc1394-1.0.0" in DEPEND. 
+  Version Bump.
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
+
+*coriander-1.0.0_pre3 (09 Aug 2004)
+
+  09 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> coriander-1.0.0_pre3.ebuild:
+  provides v4l compatibility for Apple iSight under linux 
+
