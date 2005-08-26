@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7fb51836d1b60f77bdbb79967b9ecc9d ChangeLog 2655
 MD5 256d3146510632c675000e51d377a386 encfs-1.2.0.2.ebuild 812
+MD5 5f3816b88cf05f8d14d7ef7c23502e0c encfs-1.2.3.1.ebuild 855
+MD5 aaf5032b938805183fdce1bda3d62bf4 encfs-1.2.4.1.ebuild 857
 MD5 4f747bfcd64c10a0e43caa92fe4c4057 encfs-1.2.1.4.ebuild 729
 MD5 25894eafaa2ae185aa9938464d3924e0 encfs-1.2.2.2.ebuild 730
-MD5 5f3816b88cf05f8d14d7ef7c23502e0c encfs-1.2.3.1.ebuild 855
+MD5 6a7540606e2dfe91597e17489e32d6ed ChangeLog 2776
+MD5 e55a1d04d676263b4fdae30fc342714e metadata.xml 263
 MD5 81e18ccd7de5e43ed4337a4481769cef files/digest-encfs-1.2.0.2 62
 MD5 477bc32465e25fb7a946b7474b605d88 files/digest-encfs-1.2.1.4 62
 MD5 9d952973593e9367dc696d05b550e365 files/digest-encfs-1.2.2.2 62
 MD5 990341037eae8a2443a6dcb84c212293 files/digest-encfs-1.2.3.1 62
+MD5 a3dffb8a15e18a5b66becde032136fec files/digest-encfs-1.2.4.1 62
 MD5 a5b8e38426441a3bc11022890b4d1b8e files/encfs-1.2.0.2-gcc4.patch 1494
-MD5 e55a1d04d676263b4fdae30fc342714e metadata.xml 263
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6hw3I1lqEGTUzyQRAuq/AJ4zD6jUQrgHudsCTUinsfwf9my30wCg2UtL
-WskTdDiojsya6kFcwNkIG08=
-=51GY
------END PGP SIGNATURE-----
