@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b41167a280df0f8c45d209527f73e772 ChangeLog 5764
 MD5 089cc2587d1349019589012c2f065ba2 sun-jre-bin-1.4.2.08.ebuild 4842
-MD5 c6c49d8b9d4b0d59a8f3d3f9dcf84019 sun-jre-bin-1.4.2.08-r1.ebuild 5119
 MD5 6b5d5b0c63e1c672f0e72830608a2522 sun-jre-bin-1.5.0.04.ebuild 5250
-MD5 eeec784a51ebd507331fc9e9854f73f0 ChangeLog 5633
+MD5 8ddec7ecb821fada4a93380b3753e5a7 sun-jre-bin-1.4.2.08-r1.ebuild 5126
 MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
-MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08 75
-MD5 375f1fcc6d5fbf77a2202df4851b0033 files/digest-sun-jre-bin-1.5.0.04 149
-MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08-r1 75
-MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
 MD5 41e51040ed9b1b50fa87f9508a287442 files/sun-jre-bin-1.4.2.08 571
 MD5 0b5b2341968924443dee6ae25db868a2 files/sun-jre-bin-1.5.0.04 569
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5ld8/rLF9B432nYRAnd8AJ9GDD7TOODmOm5WF9Nj8o+CmH9vpwCbBil+
-FlMWgiOR5WX5L7I3/aamSPA=
-=ET5P
------END PGP SIGNATURE-----
+MD5 375f1fcc6d5fbf77a2202df4851b0033 files/digest-sun-jre-bin-1.5.0.04 149
+MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08 75
+MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
+MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08-r1 75

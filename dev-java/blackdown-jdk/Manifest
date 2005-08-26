@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 58558c386b9db9b4de4108eec31643bc blackdown-jdk-1.4.2.02.ebuild 4586
-MD5 b9518fa148151cde5bf1215f432d19af blackdown-jdk-1.3.1-r8.ebuild 2540
 MD5 423c2b9f7b4534c3ee8884f545559801 blackdown-jdk-1.4.1-r1.ebuild 4038
-MD5 99fe6a129409f24cbbb9e6aaef6c6b6a blackdown-jdk-1.3.1-r10.ebuild 2401
-MD5 da619777c84984ed59a1ce6b29d4aaf3 ChangeLog 15320
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 af88fd152f8ad4b36bcfe11b468de6f7 ChangeLog 15450
 MD5 222fa9a2b29e0b56ff75d5da8bff5f07 blackdown-jdk-1.4.2.01-r2.ebuild 4589
+MD5 99fe6a129409f24cbbb9e6aaef6c6b6a blackdown-jdk-1.3.1-r10.ebuild 2401
+MD5 b9518fa148151cde5bf1215f432d19af blackdown-jdk-1.3.1-r8.ebuild 2540
+MD5 16546143e56df88eaba4cc673a054c5e blackdown-jdk-1.4.2.02.ebuild 4595
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 4e91fa8beedb2d7c135e05318b097702 files/digest-blackdown-jdk-1.4.2.01-r2 153
+MD5 f150863fcc96f4ca2d2bdd75f1c0a1c5 files/digest-blackdown-jdk-1.3.1-r8 243
+MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
+MD5 729ed4be8a29fe7d7c3d946b8f14d8d4 files/digest-blackdown-jdk-1.3.1-r10 80
+MD5 b553ff878f45505a9285c3a9612c7584 files/blackdown-jdk-1.4.1 589
 MD5 c9852c72bb83b5f0d4b48f1dd3ca4459 files/blackdown-jdk-1.4.2.01 637
 MD5 edf4d6e89e3578c9afae61c6d1436d7f files/blackdown-jdk-1.4.2.02 632
 MD5 4180217fbbedc728995047569e9bd581 files/blackdown-jdk-1.3.1 594
-MD5 b553ff878f45505a9285c3a9612c7584 files/blackdown-jdk-1.4.1 589
-MD5 4e91fa8beedb2d7c135e05318b097702 files/digest-blackdown-jdk-1.4.2.01-r2 153
-MD5 729ed4be8a29fe7d7c3d946b8f14d8d4 files/digest-blackdown-jdk-1.3.1-r10 80
-MD5 f150863fcc96f4ca2d2bdd75f1c0a1c5 files/digest-blackdown-jdk-1.3.1-r8 243
-MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
 MD5 c36468f22832c3157f0fcda9b03b3bff files/digest-blackdown-jdk-1.4.2.02 153
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0nMv/rLF9B432nYRAttSAJ0U5bs/0ozgYHZpZh0l/2zMZml0SQCgovvT
-UF8NtgdvaL6WvCX/LFsydsU=
-=G3kW
------END PGP SIGNATURE-----

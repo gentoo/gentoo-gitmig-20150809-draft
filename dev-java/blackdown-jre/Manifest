@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d135006f528c94d929ce500cdabb376a blackdown-jre-1.3.1-r9.ebuild 1926
-MD5 3cad44871015f67576f2c56606b3f0ac blackdown-jre-1.4.2.02.ebuild 3574
-MD5 2aaf285d526e8019aebe356837897964 blackdown-jre-1.4.2.01-r1.ebuild 3577
-MD5 3433640f921e2e631419f8b7b4f80038 ChangeLog 10288
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d59e06efdd6668fd8c8b512cee3e0add blackdown-jre-1.4.1-r1.ebuild 2908
-MD5 7d186c2364cc118125d06076161306a8 files/digest-blackdown-jre-1.4.2.01-r1 151
-MD5 44d855f52a687d922d2230b27bccad0f files/digest-blackdown-jre-1.3.1-r9 79
-MD5 773e3dae29edd26397f43c1e1ab99dae files/digest-blackdown-jre-1.4.1-r1 248
-MD5 71bbb04601fe32e845c98fab7f732ae4 files/digest-blackdown-jre-1.4.2.02 151
-MD5 57462605c4cce61fe2ac166306c5b491 files/blackdown-jre-1.4.2.01 428
-MD5 d807d4748f853aab768ead08cffd5454 files/blackdown-jre-1.4.2.02 428
-MD5 3facc5cbb2965471e9b1986926221552 files/blackdown-jre-1.3.1 429
+MD5 e4a37045e917b08b452c15610d0ef3de ChangeLog 10418
+MD5 d135006f528c94d929ce500cdabb376a blackdown-jre-1.3.1-r9.ebuild 1926
+MD5 0eb402dec4914bbbbe20ed6bd0605698 blackdown-jre-1.4.2.02.ebuild 3581
+MD5 2aaf285d526e8019aebe356837897964 blackdown-jre-1.4.2.01-r1.ebuild 3577
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 271b1f89b9f0f70dd5154090978263b1 files/blackdown-jre-1.4.1 425
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3UpW/rLF9B432nYRAlTDAJ9MJ2aT3IsvCyWHbyVcnjofA+j3NwCgl2Aj
-zep6xFJqeAilPy6SyEWA9gg=
-=+M+M
------END PGP SIGNATURE-----
+MD5 71bbb04601fe32e845c98fab7f732ae4 files/digest-blackdown-jre-1.4.2.02 151
+MD5 7d186c2364cc118125d06076161306a8 files/digest-blackdown-jre-1.4.2.01-r1 151
+MD5 d807d4748f853aab768ead08cffd5454 files/blackdown-jre-1.4.2.02 428
+MD5 773e3dae29edd26397f43c1e1ab99dae files/digest-blackdown-jre-1.4.1-r1 248
+MD5 44d855f52a687d922d2230b27bccad0f files/digest-blackdown-jre-1.3.1-r9 79
+MD5 57462605c4cce61fe2ac166306c5b491 files/blackdown-jre-1.4.2.01 428
+MD5 3facc5cbb2965471e9b1986926221552 files/blackdown-jre-1.3.1 429
