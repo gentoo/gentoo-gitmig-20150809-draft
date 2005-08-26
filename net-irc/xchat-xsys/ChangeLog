@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.25 2005/08/25 22:08:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.26 2005/08/26 18:56:00 gustavoz Exp $
+
+  26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  xchat-xsys-2.0.8.ebuild:
+  Keyworded ~sparc
 
 *xchat-xsys-2.0.8 (25 Aug 2005)
 
