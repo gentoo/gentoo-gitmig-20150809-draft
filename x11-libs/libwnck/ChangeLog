@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.92 2005/08/25 17:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.93 2005/08/26 17:59:27 gustavoz Exp $
+
+  26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> libwnck-2.10.2.ebuild:
+  Stable on sparc
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> libwnck-2.10.2.ebuild:
   stable on ia64
