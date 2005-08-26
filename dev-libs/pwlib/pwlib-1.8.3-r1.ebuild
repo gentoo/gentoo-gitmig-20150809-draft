@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3-r1.ebuild,v 1.5 2005/08/15 19:43:02 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.3-r1.ebuild,v 1.6 2005/08/26 16:01:13 seemant Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-devel/bison-1.28
 	ieee1394? ( media-libs/libdv
 		sys-libs/libavc1394
 		sys-libs/libraw1394
-		media-plugins/libdc1394 )
+		media-libs/libdc1394 )
 	esd? ( media-sound/esound )"
 
 S=${WORKDIR}/${PN}
