@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.6b-r1.ebuild,v 1.1 2005/08/20 19:40:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.6b-r1.ebuild,v 1.2 2005/08/26 14:52:44 sekretarz Exp $
 
 inherit eutils libtool
 
@@ -27,7 +27,7 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 
 pkg_preinst() {
 	enewgroup gnunet || die "Problem adding gnunet group"
-	enewuser gnunet -1 /bin/false /dev/null gnunet || die "Problem adding gnunet user"
+	enewuser gnunet -1 -1 /dev/null gnunet || die "Problem adding gnunet user"
 }
 
 src_unpack() {
