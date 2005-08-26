@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.9 2005/08/16 21:28:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.10 2005/08/26 17:59:15 spock Exp $
+
+  26 Aug 2005; Michał Januszewski <spock@gentoo.org> -gimps-24.6.ebuild,
+  gimps-24.13.ebuild, gimps-24.14.ebuild:
+  Changed 'chown root:root' to 'chown root:0' (bug #103563). Removed old
+  ebuild. Marked 24.13 stable on x86.
 
 *gimps-24.14 (16 Aug 2005)
 
