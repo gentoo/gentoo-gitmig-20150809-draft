@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a04fdf8dd766fa78cf673f7388d65931 ChangeLog 25809
-MD5 afb0e5aa8f6410c088c2e177a17efe5d gtk+-1.2.10-r10.ebuild 1719
 MD5 88d6d5cc6a5a4f0e0426646667134046 gtk+-1.2.10-r11.ebuild 1831
-MD5 ca27b0fbeaefef6ba9f6885046c08e87 gtk+-2.6.8.ebuild 2846
 MD5 07e71f518bc78394ab678bdb2294dbc1 gtk+-2.8.0-r2.ebuild 3011
 MD5 3335c749f17d6e98890c50f25491e255 gtk+-2.8.2.ebuild 3368
 MD5 d9750f9180ebd11501fbbe1768786b73 gtk+-2.6.10.ebuild 2826
+MD5 afb0e5aa8f6410c088c2e177a17efe5d gtk+-1.2.10-r10.ebuild 1719
+MD5 a0db727c057738e4617d98ba617489e7 gtk+-2.6.8.ebuild 2845
 MD5 63f2497b7c323a98016561afb448384d gtk+-2.6.7.ebuild 2839
+MD5 0fd643eb0651d7119b3ab0d9c8355532 ChangeLog 25903
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
+MD5 435a16e306ba84bc7d8536a3369cf631 files/gtk+-2.8.0-dep_checks.patch 1690
+MD5 9140d07ec4cf965b2041cf5b7f128743 files/digest-gtk+-2.6.7 208
+MD5 71f1edf217fe1b660ed78cd89f9832b2 files/digest-gtk+-2.6.8 208
+MD5 cee94d5e2a8fd817ee69da2964876851 files/digest-gtk+-2.8.2 140
+MD5 5f35263753f0ad976c13f501247b8d51 files/gtk+-2.8.0-multilib.patch 2456
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
-MD5 71f1edf217fe1b660ed78cd89f9832b2 files/digest-gtk+-2.6.8 208
-MD5 fff5a03e20c5f0e1321a2a29fa38fca9 files/digest-gtk+-2.8.0-r2 140
-MD5 f56b08a8f40b528e72b6406ea337c51c files/digest-gtk+-2.6.10 212
-MD5 435a16e306ba84bc7d8536a3369cf631 files/gtk+-2.8.0-dep_checks.patch 1690
-MD5 287a783fae710028b7fda8fdef220425 files/gtk+-2.8.0-gdk_fix.patch 638
-MD5 5f35263753f0ad976c13f501247b8d51 files/gtk+-2.8.0-multilib.patch 2456
-MD5 cee94d5e2a8fd817ee69da2964876851 files/digest-gtk+-2.8.2 140
-MD5 9140d07ec4cf965b2041cf5b7f128743 files/digest-gtk+-2.6.7 208
+MD5 36d00cf3b4035e6cb9873ade9ed1a9ce files/gtkrc 627
 MD5 5e3ff7fa761495300d3f30c9207c13f8 files/gtk+-1.2-locale_fix.patch 419
 MD5 0ec83a4bf20f79d85eb2976b58c39465 files/gtk+-1.2.10-m4.patch 220
+MD5 fff5a03e20c5f0e1321a2a29fa38fca9 files/digest-gtk+-2.8.0-r2 140
+MD5 287a783fae710028b7fda8fdef220425 files/gtk+-2.8.0-gdk_fix.patch 638
+MD5 f56b08a8f40b528e72b6406ea337c51c files/digest-gtk+-2.6.10 212
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 MD5 0df92cf64a9324ef85fc72885a4285b1 files/gtk+-2.4.9-ppc64.patch 1732
-MD5 36d00cf3b4035e6cb9873ade9ed1a9ce files/gtkrc 627
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDg9nBtvusYtCZMsRAt2DAJ91BJZ2UULo9egGRelnXkpAgE5nnQCcDtKG
-uJJEErsIkf4eiNz0kR3LFew=
-=qjhZ
------END PGP SIGNATURE-----
