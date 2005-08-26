@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.16 2005/04/24 11:32:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.17 2005/08/26 19:10:16 r3pek Exp $
 
 inherit ccc eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
 
 LICENSE="ATT"
 SLOT="0"
-KEYWORDS="x86 sparc alpha arm s390 ia64 ppc"
+KEYWORDS="alpha ~amd64 arm ia64 ppc s390 sparc x86"
 IUSE="static nls"
 
 DEPEND="virtual/libc !app-shells/pdksh"
