@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.94.ebuild,v 1.7 2005/04/07 16:07:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.94.ebuild,v 1.8 2005/08/26 13:48:08 sekretarz Exp $
 
 S="${WORKDIR}/${P/./_}"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -36,7 +36,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/amsn/
-	cp -a ${S}/* ${D}/usr/share/amsn/
+	cp -pPR ${S}/* ${D}/usr/share/amsn/
 
 	# Remove all CVS extra stuff
 	# not here in this version
@@ -48,7 +48,7 @@ src_install() {
 		cp ${D}/usr/share/amsn/amsn.desktop ${D}/usr/share/applications
 		einfo "Installing GNOME Icons in /usr/share/pixmaps"
 		dodir /usr/share/pixmaps
-		cp -a ${S}/icons/32x32/* ${D}/usr/share/pixmaps/
+		cp -pPR ${S}/icons/32x32/* ${D}/usr/share/pixmaps/
 	fi
 
 
@@ -58,7 +58,7 @@ src_install() {
 		cp ${D}/usr/share/amsn/amsn.desktop ${D}/usr/share/applnk/Internet/
 		einfo "Installing KDE Icons in default theme"
 		dodir /usr/share/pixmaps
-		cp -a ${S}/icons/32x32/* ${D}/usr/share/pixmaps/
+		cp -pPR ${S}/icons/32x32/* ${D}/usr/share/pixmaps/
 	fi
 
 	if use imlib

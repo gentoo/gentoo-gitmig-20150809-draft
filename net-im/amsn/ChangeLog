@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.45 2005/04/07 16:07:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.46 2005/08/26 13:48:08 sekretarz Exp $
+
+  26 Aug 2005; <sekretarz@gentoo.org> amsn-0.94.ebuild:
+  Using -pPR instead -a option in cp, bug #103487
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> amsn-0.94.ebuild:
   stable on amd64
