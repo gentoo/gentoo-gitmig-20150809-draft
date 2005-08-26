@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.48 2005/08/24 17:36:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.49 2005/08/26 21:04:57 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> libgphoto2-2.1.6.ebuild:
+  stable on alpha ia64
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> libgphoto2-2.1.5.ebuild:
   stable on ia64
