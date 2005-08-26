@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/showconsole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.4 2005/08/23 06:47:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.5 2005/08/26 19:48:40 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> showconsole-1.07.ebuild:
+  add ~alpha ~ia64
 
   23 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
   showconsole-1.07.ebuild:

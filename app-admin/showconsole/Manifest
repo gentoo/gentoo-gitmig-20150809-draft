@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e6cb9281aaccdeb4164c7372b82693e ChangeLog 759
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 c443820bbcc06e0b4ea42f13553ccf04 showconsole-1.07.ebuild 1005
+MD5 52a4dbcb9595b7758c529b12ce2608f4 ChangeLog 852
+MD5 d1f46e2eb67ba6c4d176031a31126db9 showconsole-1.07.ebuild 1016
 MD5 34f6358be961e4385337135c2de859ef files/1.07-no-TIOCGDEV.patch 819
 MD5 a081c5c8650672deda68728c8437c846 files/digest-showconsole-1.07 149
 MD5 9e771682d403f6fa76f4496b6528af81 files/bootlogger.sh 657
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDCsaXArHZZzCEUG0RAhboAJ44yaHScHxK45lmt6YK8zO/y3DqpQCdEINK
-al0vngMthXdsMWFpQezb3p0=
-=ETzr
+iD8DBQFDD3IyBXaUFmZvwyMRAgzQAJ9rrnAdOi1OROfdrpgKVFah+1ZJzACghxgr
+Uer+JS6h0iFuEPKkxms6tyo=
+=f8vj
 -----END PGP SIGNATURE-----
