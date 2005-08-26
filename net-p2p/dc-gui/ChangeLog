@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.26 2005/05/06 14:51:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.27 2005/08/26 11:05:41 sekretarz Exp $
+
+  26 Aug 2005; <sekretarz@gentoo.org> dc-gui-0.80.ebuild:
+  Added curl USE flag, bug #103750
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> dc-gui-0.80.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
