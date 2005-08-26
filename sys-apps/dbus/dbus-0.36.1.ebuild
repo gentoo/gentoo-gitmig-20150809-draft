@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.36.1.ebuild,v 1.1 2005/08/25 15:46:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.36.1.ebuild,v 1.2 2005/08/26 05:41:37 cardoe Exp $
 
 inherit eutils mono python multilib debug
 
@@ -130,7 +130,7 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup messagebus || die "Problem adding messagebus group"
-	enewuser messagebus -1 /bin/false /dev/null messagebus || die "Problem adding messagebus user"
+	enewuser messagebus -1 "-1" /dev/null messagebus || die "Problem adding messagebus user"
 }
 
 pkg_postinst() {

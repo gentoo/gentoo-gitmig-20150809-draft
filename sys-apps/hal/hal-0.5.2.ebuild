@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.2.ebuild,v 1.1 2005/08/18 07:19:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.2.ebuild,v 1.2 2005/08/26 05:40:23 cardoe Exp $
 
 inherit eutils linux-info versionator flag-o-matic
 
@@ -117,7 +117,7 @@ pkg_postinst() {
 	enewgroup haldaemon || die "Problem adding haldaemon group"
 	# HAL drops priviledges by default now ...
 	# ... so we must make sure it can read disk/cdrom info (ie. be in ${HALDAEMON_GROUPS} groups)
-	enewuser haldaemon -1 /bin/false /dev/null ${HALDAEMON_GROUPS} || die "Problem adding haldaemon user"
+	enewuser haldaemon -1 "-1" /dev/null ${HALDAEMON_GROUPS} || die "Problem adding haldaemon user"
 
 	# Make sure that the haldaemon user is in the ${HALDAEMON_GROUPS}
 	# If users have a problem with this, let them file a bug
