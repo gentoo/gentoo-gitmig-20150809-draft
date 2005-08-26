@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2999e1069b1642d9a4d54cd07ebbea3b ChangeLog 2272
-MD5 fa303e73e349b9c125d053c768fccf74 files/digest-sweep-0.8.2-r1 63
-MD5 3eebc576fe853140f8aaf1ca03443223 files/digest-sweep-0.8.3 64
-MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.2-alsa.patch 383
-MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.3-alsa.patch 383
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 60c559ffa7cedbd9514b3b3e16dbfec7 sweep-0.8.3.ebuild 1184
 MD5 e57300a4fbbdd04c401fb4cb37fc1ab0 sweep-0.8.2-r1.ebuild 1314
-MD5 8c5f91add3fe1f9748be1becf0adbe1a sweep-0.8.3.ebuild 1185
+MD5 aa2d14fb7efc027ca3717b0dd0f2b4ae ChangeLog 2363
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.2-alsa.patch 383
+MD5 fa303e73e349b9c125d053c768fccf74 files/digest-sweep-0.8.2-r1 63
+MD5 b161c4813423e2a3c7a1b76b1a59527f files/sweep-0.8.3-alsa.patch 383
+MD5 3eebc576fe853140f8aaf1ca03443223 files/digest-sweep-0.8.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0CIFI1lqEGTUzyQRAg2OAJ4wu915DYKg58dCkqDrsQhEEuBFXgCgvgTM
-51f+MnOLtcZYGNwC5CfEJpA=
-=Ioyp
+iD8DBQFDD2ZyKRy60XGEcJIRAoQnAJ4wS7NdoSr48Zn5rJIHqKOY8D8kUQCeIGNK
+YOxo6IyJ95qbhCKFQ0C3z+s=
+=ftzT
 -----END PGP SIGNATURE-----
