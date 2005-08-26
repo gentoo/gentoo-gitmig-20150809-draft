@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/aqhbci
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci/ChangeLog,v 1.13 2005/07/12 21:53:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci/ChangeLog,v 1.14 2005/08/26 21:34:10 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> aqhbci-1.1.0.ebuild:
+  add ~ia64
 
 *aqhbci-1.1.0 (12 Jul 2005)
 
