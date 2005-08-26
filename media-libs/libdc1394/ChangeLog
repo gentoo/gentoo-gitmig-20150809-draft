@@ -1,0 +1,63 @@
+# ChangeLog for media-libs/libdc1394
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.1 2005/08/26 15:47:37 seemant Exp $
+
+  26 Aug 2005; Seemant Kulleen <seemant@gentoo.org> +files/nox11.patch,
+  +libdc1394-0.9.3.ebuild, +libdc1394-1.0.0.ebuild:
+  move to media-libs, where it belongs. Why was it ever put into
+  media-plugins, when it's a lib?
+
+  24 Aug 2005; Aron Griffis <agriffis@gentoo.org> libdc1394-1.0.0.ebuild:
+  stable on ia64
+
+  01 Aug 2005; Seemant Kulleen <seemant@gentoo.org> -libdc1394-0.9.1.ebuild,
+  -libdc1394-0.9.5.ebuild:
+  remove cruft ebuilds
+
+  17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libdc1394-1.0.0.ebuild:
+  Stable on sparc
+
+  08 May 2005; Aron Griffis <agriffis@gentoo.org> libdc1394-1.0.0.ebuild:
+  add ~ia64
+
+  06 May 2005; Luca Barbato <lu_zero@gentoo.org> libdc1394-0.9.3.ebuild:
+  Marked x86
+
+  27 Feb 2005; Simon Stelling <blubb@gentoo.org> libdc1394-1.0.0.ebuild:
+  stable on amd64
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> libdc1394-1.0.0.ebuild:
+  Stable on ppc64
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org> libdc1394-1.0.0.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72993
+
+  09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> libdc1394-1.0.0.ebuild:
+  ~alpha keyword.
+
+  05 Nov 2004; Travis Tilley <lv@gentoo.org> libdc1394-1.0.0.ebuild:
+  add missing ~amd64 keyword
+
+*libdc1394-1.0.0 (22 Oct 2004)
+
+  22 Oct 2004; Jason Wever <weeve@gentoo.org> libdc1394-1.0.0.ebuild:
+  Added ~sparc keyword.
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libdc1394-0.9.1.ebuild:
+  Removing libtool from RDEPEND.
+
+  26 May 2004; Danny van Dyk <kugelfang@gentoo.org> libdc1394-0.9.3.ebuild:
+  Marked ~amd64.
+
+*libdc1394-0.9.3 (02 Mar 2004)
+
+  02 Mar 2004; Hanno Boeck <hanno@gentoo.org> libdc1394-0.9.3.ebuild:
+  Version bump, resolves bug # 41792.
+
+*libdc1394-0.9.1 (11 Oct 2003)
+
+  11 Oct 2003; Hanno Boeck <hanno@gentoo.org> libdc1394-0.9.1.ebuild:
+  Ebuild submitted by Stephen Edwards <sed@flashmail.com>.
+
