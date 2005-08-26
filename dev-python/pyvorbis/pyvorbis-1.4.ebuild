@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.4.ebuild,v 1.1 2004/12/07 02:41:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/pyvorbis-1.4.ebuild,v 1.2 2005/08/26 03:43:22 agriffis Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.andrewchatham.com/pyogg/download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/python

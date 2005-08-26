@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4150cdbeecb241840819c7010a9d235e ChangeLog 2509
-MD5 c0232efc2454db724c029f44af37bf74 optik-1.4.1.ebuild 673
+MD5 ebfbf63371a01aaee27bbe7dd7a8a90c optik-1.5.ebuild 638
+MD5 c0e36d71bb8aaa99e5f4081471a0eba6 optik-1.4.ebuild 658
+MD5 6e0dcc9dd604e5d3a64cd198142c3390 optik-1.2.ebuild 616
 MD5 830eb339b0062ab3312858df63229a03 optik-1.3.ebuild 677
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 6e0dcc9dd604e5d3a64cd198142c3390 optik-1.2.ebuild 616
-MD5 961c56a70a879f08919e152b7dc0aa99 optik-1.5.ebuild 633
-MD5 c0e36d71bb8aaa99e5f4081471a0eba6 optik-1.4.ebuild 658
-MD5 0c72b3003a13ea3464fd47aaf05f0ec3 files/digest-optik-1.4 60
+MD5 4150cdbeecb241840819c7010a9d235e ChangeLog 2509
+MD5 c0232efc2454db724c029f44af37bf74 optik-1.4.1.ebuild 673
 MD5 b757aba98cf0cbbfe8121044ce96437a files/digest-optik-1.2 60
-MD5 bb68abf1eea4219f67c7c24b1505512e files/digest-optik-1.4.1 62
 MD5 90a11d2a7f6c3f50647b6d155648cf85 files/digest-optik-1.3 60
+MD5 0c72b3003a13ea3464fd47aaf05f0ec3 files/digest-optik-1.4 60
 MD5 a1483f9e10bc484a5e40cef019ac85dd files/digest-optik-1.5 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxx46Kf2g/qXtneoRArYQAJ9e043wfrwtGCg+GB0z/96ML9hF8QCgxWtL
-0d7/siJzsSF6wGsB/huPc1I=
-=Hhuu
------END PGP SIGNATURE-----
+MD5 bb68abf1eea4219f67c7c24b1505512e files/digest-optik-1.4.1 62

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/csv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.11 2004/12/30 21:22:18 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.12 2005/08/26 03:26:05 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> csv-1.0-r1.ebuild:
+  add ~ia64
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

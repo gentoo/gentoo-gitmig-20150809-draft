@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.14 2005/08/07 13:31:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.15 2005/08/26 03:27:40 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> happydoc-2.1.ebuild:
+  add ~ia64
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> happydoc-2.1.ebuild:
   Stable on ppc.

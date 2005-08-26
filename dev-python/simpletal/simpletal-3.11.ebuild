@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/simpletal-3.11.ebuild,v 1.1 2005/01/02 17:56:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/simpletal-3.11.ebuild,v 1.2 2005/08/26 03:46:53 agriffis Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.owlfish.com/software/simpleTAL/"
 DEPEND="virtual/python"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~alpha ~ia64 ~ppc ~sparc ~x86"
 
 S=${WORKDIR}/${MY_P}-${PV}
 

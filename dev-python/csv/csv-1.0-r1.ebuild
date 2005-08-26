@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/csv-1.0-r1.ebuild,v 1.8 2004/12/23 15:20:59 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/csv-1.0-r1.ebuild,v 1.9 2005/08/26 03:26:05 agriffis Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.object-craft.com.au/projects/csv/download/${P}.tar.gz"
 
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~ppc64"
+KEYWORDS="alpha ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 pkg_setup() {

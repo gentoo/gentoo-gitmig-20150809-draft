@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.17 2005/04/21 09:58:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.18 2005/08/26 03:44:04 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> pyxmms-2.02.ebuild:
+  add ~ia64
 
   21 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> -pyxmms-1.06.ebuild,
   -pyxmms-1.07.ebuild:

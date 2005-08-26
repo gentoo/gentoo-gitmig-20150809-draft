@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pmw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.18 2005/04/24 09:42:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.19 2005/08/26 03:34:01 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> pmw-1.2.ebuild:
+  add ~ia64
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> pmw-1.2.ebuild:
   stable on amd64

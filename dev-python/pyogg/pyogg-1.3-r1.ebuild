@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/pyogg-1.3-r1.ebuild,v 1.6 2005/04/21 19:00:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyogg/pyogg-1.3-r1.ebuild,v 1.7 2005/08/26 03:38:17 agriffis Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~kloeri/${P}-r1.tar.gz"
 IUSE=""
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha ~mips sparc hppa amd64 ppc64"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
 
 DEPEND="dev-lang/python
 	>=media-libs/libogg-1.0"

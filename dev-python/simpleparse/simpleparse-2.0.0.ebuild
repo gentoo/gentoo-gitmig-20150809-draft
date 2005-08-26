@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.0.0.ebuild,v 1.8 2005/04/24 10:04:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.0.0.ebuild,v 1.9 2005/08/26 03:46:13 agriffis Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ DEPEND="virtual/python
 	app-arch/unzip"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~ppc amd64"
+KEYWORDS="alpha amd64 ~ia64 ~ppc sparc x86"
 
 src_install() {
 	distutils_src_install --install-data=/usr/share/doc/${PF}

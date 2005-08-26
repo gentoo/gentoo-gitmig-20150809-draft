@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/optik
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.21 2005/07/02 23:07:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.22 2005/08/26 03:32:05 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> optik-1.5.ebuild:
+  add ~ia64
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> optik-1.5.ebuild:
   Stable on alpha.

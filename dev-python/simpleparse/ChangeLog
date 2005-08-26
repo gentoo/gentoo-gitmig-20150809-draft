@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simpleparse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.10 2005/04/24 10:04:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.11 2005/08/26 03:46:13 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> simpleparse-2.0.0.ebuild:
+  add ~ia64
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> simpleparse-2.0.0.ebuild:
   stable on amd64

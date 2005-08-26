@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.17 2005/07/13 09:11:36 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.18 2005/08/26 03:30:07 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> imaging-1.1.5.ebuild:
+  add ~ia64
 
   13 Jul 2005; Herbie Hopkins <herbs@gentoo.org> imaging-1.1.5.ebuild:
   Multilib fix.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/irman-python-0.1.ebuild,v 1.13 2005/04/24 09:24:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/irman-python-0.1.ebuild,v 1.14 2005/08/26 03:30:47 agriffis Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://bluweb.com/chouser/proj/irman-python/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha amd64"
+KEYWORDS="alpha amd64 ~ia64 sparc x86"
 
 DEPEND="media-libs/libirman"
 
