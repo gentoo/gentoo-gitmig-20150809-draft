@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/libmpcdec-1.2.ebuild,v 1.2 2005/08/23 22:19:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/libmpcdec-1.2.ebuild,v 1.3 2005/08/26 17:41:44 gustavoz Exp $
 
 DESCRIPTION="Musepack decoder library"
 HOMEPAGE="http://www.musepack.net"
@@ -8,7 +8,7 @@ SRC_URI="http://musepack.net/files/source/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="doc static"
 
 src_compile() {

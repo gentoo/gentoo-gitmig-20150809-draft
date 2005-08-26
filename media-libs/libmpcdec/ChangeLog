@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpcdec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/ChangeLog,v 1.2 2005/08/23 22:19:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/ChangeLog,v 1.3 2005/08/26 17:41:44 gustavoz Exp $
+
+  26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> libmpcdec-1.2.ebuild:
+  Stable on sparc
 
   23 Aug 2005; Tony Vroon <chainsaw@gentoo.org> libmpcdec-1.2.ebuild:
   Stable on x86.
