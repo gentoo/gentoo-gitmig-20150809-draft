@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.1.ebuild,v 1.1 2005/08/23 19:48:57 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.1.ebuild,v 1.2 2005/08/26 18:24:51 batlogg Exp $
 
 inherit eutils
 
@@ -73,7 +73,7 @@ src_install() {
 	 	einfo "import sys"
 		einfo "sys.setdefaultencoding('utf8')"
 		cd ${S}/lib/python/StructuredText/
-		epatch ${FILESDIR}/2.7.6/i18n-1.0.0.patch
+		epatch ${FILESDIR}/${PV}/i18n-1.0.0.patch
 		sleep 15
 		cd ${S}
 	fi
