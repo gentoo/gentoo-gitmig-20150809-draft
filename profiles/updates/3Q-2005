@@ -52,3 +52,4 @@ move x11-misc/xcursor-themes x11-themes/xcursor-themes
 move x11-proto/panoramixproto x11-proto/xineramaproto
 move sci-calculators/qalculate sci-calculators/qalculate-gtk
 move media-plugins/libdc1394 media-libs/libdc1394
+move media-plugins/coriander media-video/coriander
