@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.120 2005/08/21 17:57:58 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.121 2005/08/26 01:22:34 allanonjl Exp $
+
+*gnome-games-2.11.5 (26 Aug 2005)
+
+  26 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-games-2.11.4.ebuild, +gnome-games-2.11.5.ebuild:
+  new version, according to the bug response for howl, when 2.12 comes out,
+  the version with the howl patch will become head. ( so remove the patch then
+  )
 
 *gnome-games-2.11.4 (21 Aug 2005)
 
