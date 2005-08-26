@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.45 2005/08/01 23:33:32 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.46 2005/08/26 22:36:30 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  gdesklets-core-0.35.2-r1.ebuild:
+  add ~alpha ~ia64
 
   01 Aug 2005; Simon Stelling <blubb@gentoo.org>
   gdesklets-core-0.34.3.ebuild:

@@ -1,30 +1,40 @@
-MD5 66248fdce375bd90c09ad12b210d353f gdesklets-core-0.35-r1.ebuild 2282
-MD5 ed9ac71ca08a6726b37363090927b344 gdesklets-core-0.35.2-r1.ebuild 2414
-MD5 a0740066aed09e15019eb17ce383e541 gdesklets-core-0.35_rc1.ebuild 2060
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8a0b9310dac5018eb5ba6cb1d3c628c gdesklets-core-0.35.1.ebuild 2077
-MD5 120d0db4044c02b9a260350c1045ed35 gdesklets-core-0.26.2.ebuild 1872
-MD5 e339012b85e0b107e59eb1f9b97ff310 gdesklets-core-0.35.1-r1.ebuild 2284
 MD5 9a88e3777b00b5f3324d99e7b9afadb1 gdesklets-core-0.34.3-r1.ebuild 2389
-MD5 b60b8c0d1d2d5e1dcc1d0497f78a0cbc gdesklets-core-0.35.ebuild 2075
-MD5 419d0c09fe3f94ea2a8e9ba9d5901b42 ChangeLog 7925
-MD5 a98089d6b170082dad015493bddd2e7e gdesklets-core-0.33.1.ebuild 2434
+MD5 4705e343fef6901429f4e28aaa891f27 gdesklets-core-0.35.2-r1.ebuild 2426
+MD5 eca6c0fae552cb6b88412c77b87f3d14 gdesklets-core-0.35_rc1-r1.ebuild 2153
 MD5 7acaefbf35696571fb6c2981644e3b51 gdesklets-core-0.26.1.ebuild 1871
 MD5 a175a96fb7e85b152ade748dbd2360e0 metadata.xml 213
-MD5 eca6c0fae552cb6b88412c77b87f3d14 gdesklets-core-0.35_rc1-r1.ebuild 2153
+MD5 a98089d6b170082dad015493bddd2e7e gdesklets-core-0.33.1.ebuild 2434
+MD5 7fb230f59a573afeee91d1055877d4e9 ChangeLog 8029
+MD5 b60b8c0d1d2d5e1dcc1d0497f78a0cbc gdesklets-core-0.35.ebuild 2075
+MD5 120d0db4044c02b9a260350c1045ed35 gdesklets-core-0.26.2.ebuild 1872
 MD5 7de752dcb5d871ca8a6bd77e674ceccf gdesklets-core-0.32.ebuild 2050
-MD5 c4920c1829bd34f15ee1b85539dd3d4a files/digest-gdesklets-core-0.26.1 69
-MD5 26c6bbd356a7de3f57ffe9036275a5e5 files/digest-gdesklets-core-0.26.2 69
-MD5 312fdc938b56dedf0fab04efe6266cb1 files/digest-gdesklets-core-0.33.1 131
-MD5 ca60272587dbc0bfcdaa066753437811 files/digest-gdesklets-core-0.35.1 131
-MD5 ac3a171744ef9b36bed102088be244a9 files/digest-gdesklets-core-0.35_rc1 132
-MD5 66ab1d1c9445bb382edafdb15eee161d files/digest-gdesklets-core-0.35-r1 129
-MD5 ac3a171744ef9b36bed102088be244a9 files/digest-gdesklets-core-0.35_rc1-r1 132
-MD5 ac425079423c7c93f931c3f4df0dc598 files/digest-gdesklets-core-0.32 67
-MD5 66ab1d1c9445bb382edafdb15eee161d files/digest-gdesklets-core-0.35 129
-MD5 8293012469f5859ebfb450e81f87a165 files/digest-gdesklets-core-0.34.3-r1 131
+MD5 66248fdce375bd90c09ad12b210d353f gdesklets-core-0.35-r1.ebuild 2282
+MD5 a0740066aed09e15019eb17ce383e541 gdesklets-core-0.35_rc1.ebuild 2060
+MD5 e339012b85e0b107e59eb1f9b97ff310 gdesklets-core-0.35.1-r1.ebuild 2284
 MD5 ca60272587dbc0bfcdaa066753437811 files/digest-gdesklets-core-0.35.1-r1 131
+MD5 c4920c1829bd34f15ee1b85539dd3d4a files/digest-gdesklets-core-0.26.1 69
+MD5 ac3a171744ef9b36bed102088be244a9 files/digest-gdesklets-core-0.35_rc1-r1 132
+MD5 66ab1d1c9445bb382edafdb15eee161d files/digest-gdesklets-core-0.35 129
 MD5 1646a2250df551ca17b94641f23b0201 files/digest-gdesklets-core-0.35.2-r1 131
-MD5 b9861538d27ddcccf566148374dcd22a files/gdesklets-control-getid 745
-MD5 8e873c3bd94ee7756f3caf1c0f5b9398 files/dst-fix-0.34.3.patch 1269
 MD5 3407f6fa18c84e9c85b7f9321a158ad3 files/gdesklets-migration-tool 7343
+MD5 b9861538d27ddcccf566148374dcd22a files/gdesklets-control-getid 745
+MD5 ca60272587dbc0bfcdaa066753437811 files/digest-gdesklets-core-0.35.1 131
+MD5 8e873c3bd94ee7756f3caf1c0f5b9398 files/dst-fix-0.34.3.patch 1269
+MD5 ac425079423c7c93f931c3f4df0dc598 files/digest-gdesklets-core-0.32 67
+MD5 8293012469f5859ebfb450e81f87a165 files/digest-gdesklets-core-0.34.3-r1 131
+MD5 26c6bbd356a7de3f57ffe9036275a5e5 files/digest-gdesklets-core-0.26.2 69
+MD5 ac3a171744ef9b36bed102088be244a9 files/digest-gdesklets-core-0.35_rc1 132
 MD5 01751d3aa9192793a33c02d2126192c1 files/gdesklets-displays.desktop 230
+MD5 66ab1d1c9445bb382edafdb15eee161d files/digest-gdesklets-core-0.35-r1 129
+MD5 312fdc938b56dedf0fab04efe6266cb1 files/digest-gdesklets-core-0.33.1 131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD5l5BXaUFmZvwyMRAsfuAKC5p0P1JdjcncSu6MuyPeryOhZh4QCeLJCb
+MksAoMGn8ONs7EjYpRh0tC8=
+=gfWO
+-----END PGP SIGNATURE-----
