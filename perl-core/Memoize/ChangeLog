@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Memoize
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.2 2005/05/26 20:14:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.3 2005/08/26 03:10:45 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Memoize-1.01.ebuild:
+  add ia64
 
 *Memoize-1.01 (25 May 2005)
 
