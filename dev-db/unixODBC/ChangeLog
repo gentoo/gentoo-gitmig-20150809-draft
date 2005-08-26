@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.47 2005/08/19 19:29:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.48 2005/08/26 14:15:00 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> unixODBC-2.2.11-r1.ebuild:
+  add ~ia64
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   unixODBC-2.2.11-r1.ebuild:
