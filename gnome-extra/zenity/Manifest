@@ -1,11 +1,21 @@
-MD5 d774b802723e409cc331ed93c972eae0 zenity-2.8.2.ebuild 846
-MD5 138d722c66028fb2727ee948ff00a66f zenity-2.10.1.ebuild 712
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9afae9f5ceafc8617802ad851ce81d1d zenity-2.10.0.ebuild 705
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa94a6dbc5f300697ff28df1a7c8a427 zenity-2.11.91.ebuild 773
-MD5 cbfd14dd794b7dcebdd4aff8f8a8e1d6 ChangeLog 7084
-MD5 3e27eb4b3a24b48b37279038c357359a files/digest-zenity-2.11.91 67
-MD5 8781799994ebd921407eabff1e2f8c22 files/digest-zenity-2.8.2 65
+MD5 76d6b13dc35e2eda6cb161189cd52189 zenity-2.10.1.ebuild 711
+MD5 d774b802723e409cc331ed93c972eae0 zenity-2.8.2.ebuild 846
+MD5 9afae9f5ceafc8617802ad851ce81d1d zenity-2.10.0.ebuild 705
+MD5 df181a0387864b8a7badec72e5b2f1f7 ChangeLog 7179
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0308ff19f6b68370739997806d23f4ac files/zenity-2.6.3-utf8_fix.patch 569
 MD5 0d8795c3b63fac85b8415f3abf724e19 files/digest-zenity-2.10.0 66
 MD5 d83696e7f4a8132d4807496a5670d32d files/digest-zenity-2.10.1 66
+MD5 3e27eb4b3a24b48b37279038c357359a files/digest-zenity-2.11.91 67
+MD5 8781799994ebd921407eabff1e2f8c22 files/digest-zenity-2.8.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD2OkKRy60XGEcJIRAu9RAJ9gFUvEuj1wKKnW9YkQNVKo4HRw4QCgrP9Z
+YuC1mE+wKxaz9EfFrDZ/aQk=
+=HmVb
+-----END PGP SIGNATURE-----
