@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.3 2005/07/07 18:36:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.4 2005/08/26 17:56:13 spock Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -190,7 +190,7 @@ src_install() {
 		mv * "${D}/etc/bootsplash"
 	fi
 
-	chown -R root:root "${D}/${mypath}"
+	chown -R root:0 "${D}/${mypath}"
 	chmod -R o-w "${D}/${mypath}"
 }
 

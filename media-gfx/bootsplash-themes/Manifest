@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 99ba2cad15fd220b0ffb313ea0a6722a bootsplash-themes-20040821.ebuild 5894
-MD5 ffba8717253ed07fc9bac0df35cd7e33 bootsplash-themes-20040821-r1.ebuild 8175
-MD5 9b70b2be1935c13e72b7b7b545faf483 ChangeLog 1028
+MD5 c927949c89ee32096392855ee324914b bootsplash-themes-20040821-r1.ebuild 8172
+MD5 7b5753eeac492a254eec23f67bda3236 ChangeLog 1240
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
-MD5 35edc9d865e3400b0b27e019c73ccaf8 files/digest-bootsplash-themes-20040821 7564
 MD5 35edc9d865e3400b0b27e019c73ccaf8 files/digest-bootsplash-themes-20040821-r1 7564
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCzXYochej4aZK9/cRAhRKAJ0UnxVbpUkk1HHFny39GeZwzNtOpQCcDTS7
-5m/uH6+XG0Mv+cKRHUqdSew=
-=PkTY
+iD8DBQFDD1ffchej4aZK9/cRAlcTAJwMx0EzQxMWR2A75E9U4cjekpQg9ACbBVRY
+vST6R8oNgNBqAmKe0zcFJXI=
+=Uwcx
 -----END PGP SIGNATURE-----

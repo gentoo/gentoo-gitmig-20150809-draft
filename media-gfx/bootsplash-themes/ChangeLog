@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/bootsplash-themes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/ChangeLog,v 1.6 2005/07/07 18:36:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/ChangeLog,v 1.7 2005/08/26 17:56:13 spock Exp $
+
+  26 Aug 2005; Michał Januszewski <spock@gentoo.org>
+  -bootsplash-themes-20040821.ebuild, bootsplash-themes-20040821-r1.ebuild:
+  Changed 'chown root:root' to 'chown root:0' (bug #103563). Removed old ebuild.
 
   07 Jul 2005; Michał Januszewski <spock@gentoo.org>
   bootsplash-themes-20040821-r1.ebuild:
