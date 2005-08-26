@@ -1,14 +1,24 @@
-MD5 5de97ff6ea41e0e32d20f28a4b87405a glib-2.6.5.ebuild 1654
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6149a8c423dc189a3f2aaf8011a2d951 ChangeLog 17911
-MD5 5bc59f4a174bf905f387fc78ded9e67c glib-2.6.4.ebuild 1632
-MD5 7a4e3f2ba616f95f97cf461e75460f86 glib-1.2.10-r5.ebuild 1573
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 add184504c58a6f30106d58090ad645a glib-2.8.1.ebuild 1697
-MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
+MD5 5bc59f4a174bf905f387fc78ded9e67c glib-2.6.4.ebuild 1632
+MD5 c63d7199aca372646af8ebde7e171a98 ChangeLog 18003
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 dcd25ec8a0efdee247ad0f47ee030da4 glib-2.6.5.ebuild 1653
+MD5 7a4e3f2ba616f95f97cf461e75460f86 glib-1.2.10-r5.ebuild 1573
 MD5 0d475655c887a08ddbfccb827a1f46b5 files/digest-glib-2.6.4 64
-MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
+MD5 60c45aba2f0c1b47590e8193b533d7c7 files/digest-glib-2.6.5 64
 MD5 b66fda2207583238578ade2bd69e470b files/digest-glib-2.8.1 64
 MD5 1a4565b760afb02416ff0d674c89c83f files/glib-2-macos.patch 989
-MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
+MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
 MD5 6da4b81e0a2656f101965a505c7cb6d4 files/glib-1.2.10-m4.patch 225
+MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 7fec226893c96f1126810906e2fb3e5b files/glib-2.6.3-testglib-ssp.patch 344
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD1TOKRy60XGEcJIRAs6gAJoDUMmyFnZT8r/nvknbs63pc/eOOgCgqXCS
+gVcqbgxDU3xMexQ73C13zAI=
+=Wlib
+-----END PGP SIGNATURE-----
