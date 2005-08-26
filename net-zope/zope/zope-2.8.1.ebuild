@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.1.ebuild,v 1.2 2005/08/26 18:24:51 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.1.ebuild,v 1.3 2005/08/26 18:39:14 batlogg Exp $
 
 inherit eutils
 
@@ -72,8 +72,10 @@ src_install() {
 		einfo "create the file sitecustomize.py inside your site-packages"
 	 	einfo "import sys"
 		einfo "sys.setdefaultencoding('utf8')"
-		cd ${S}/lib/python/StructuredText/
-		epatch ${FILESDIR}/${PV}/i18n-1.0.0.patch
+		# stx i18n support borked. --batlogg@gentoo.org
+		ewarn "sorry, the Structured Text patch doesn't work yet for zope-2.8."
+		#cd ${S}/lib/python/StructuredText/
+		#epatch ${FILESDIR}/${PV}/i18n-1.0.0.patch
 		sleep 15
 		cd ${S}
 	fi

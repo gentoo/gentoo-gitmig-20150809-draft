@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.74 2005/08/26 18:24:51 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.75 2005/08/26 18:39:14 batlogg Exp $
+
+  26 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>; zope-2.8.1.ebuild:
+  disabled stx i18n patch
 
   26 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>; -files/2.7.2/gid.patch,
   -files/2.7.2/zope.initd, -zope-2.7.2-r2.ebuild, zope-2.8.1.ebuild:
