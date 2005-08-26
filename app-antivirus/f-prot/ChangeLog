@@ -1,6 +1,15 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.36 2005/08/15 00:50:46 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.37 2005/08/26 22:38:40 ticho Exp $
+
+*f-prot-4.6.0-r2 (26 Aug 2005)
+
+  26 Aug 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/check-updates.pl.diff, -f-prot-4.6.0.ebuild,
+  +f-prot-4.6.0-r2.ebuild:
+  Patch check-updates.pl script to set correct for placing updates in. Bug
+  #103847, reported by Michael Cramer <bigmichi1 at bigmichi1.dyndns.org>.
+  Remove faulty 4.6.0 ebuild.
 
 *f-prot-4.6.0-r1 (15 Aug 2005)
 

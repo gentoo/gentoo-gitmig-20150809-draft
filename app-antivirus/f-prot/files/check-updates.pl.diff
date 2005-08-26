@@ -1,0 +1,11 @@
+--- tools/check-updates.pl	2005-08-27 00:26:26.000000000 +0200
++++ tools/check-updates.pl.correct	2005-08-27 00:26:21.000000000 +0200
+@@ -55,7 +55,7 @@
+ if ( -e "/etc/f-prot.conf" && -l "/etc/f-prot.conf" ){ 
+ 	$signatureDirectory = readlink("/etc/f-prot.conf");
+ 	$signatureDirectory =~ s/(.+)\/.+/$1/; # throw away the last slash and everything after it
+-	$signatureDirectory =~ s/(.+\/).+/$1/; # throw away everything after the last slash 
++#	$signatureDirectory =~ s/(.+\/).+/$1/; # throw away everything after the last slash 
+ }
+ 
+ print "$signatureDirectory\n";

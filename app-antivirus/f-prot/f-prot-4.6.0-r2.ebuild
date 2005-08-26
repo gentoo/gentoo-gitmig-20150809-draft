@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.0.ebuild,v 1.1 2005/08/13 17:32:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.0-r2.ebuild,v 1.1 2005/08/26 22:38:40 ticho Exp $
+
+inherit eutils
 
 IUSE="emul-linux-x86"
 
@@ -22,8 +24,14 @@ SLOT="0"
 LICENSE="F-PROT"
 KEYWORDS="~x86 -ppc -sparc ~amd64"
 
-src_install ()
-{
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/check-updates.pl.diff || die "epatch failed"
+}
+
+src_install() {
 	cd ${S}
 
 	dobin ${FILESDIR}/f-prot.sh
@@ -32,11 +40,13 @@ src_install ()
 	dodir /opt/f-prot/tools /var/tmp/f-prot
 	keepdir /var/tmp/f-prot
 
-	insinto /etc
-	newins etc/f-prot.conf.default f-prot.conf
-
 	insinto /opt/f-prot
 	insopts -m 755
+
+	newins etc/f-prot.conf.default f-prot.conf
+	dodir /etc
+	dosym /opt/f-prot/f-prot.conf /etc/f-prot.conf
+
 	doins f-prot
 	insopts -m 644
 	doins *.DEF ENGLISH.TX0
