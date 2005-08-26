@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.24 2005/08/25 19:14:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.25 2005/08/26 17:57:56 gustavoz Exp $
+
+  26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-menus-2.10.2-r1.ebuild:
+  Stable on sparc
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   gnome-menus-2.10.2-r1.ebuild:
