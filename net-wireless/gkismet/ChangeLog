@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gkismet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.8 2005/07/12 08:09:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.9 2005/08/26 10:19:38 brix Exp $
+
+  26 Aug 2005; Henrik Brix Andersen <brix@gentoo.org> -gkismet-0.0.9.ebuild:
+  Pruned old version.
 
   12 Jul 2005; <brix@gentoo.org> gkismet-0.0.10.ebuild:
   Stable on x86.

@@ -1,6 +1,4 @@
 MD5 b25942d2ef3c74b179e43f6be525fb27 gkismet-0.0.10.ebuild 1162
-MD5 58bd5dc658138dd30755bb5c76093388 gkismet-0.0.9.ebuild 1159
-MD5 fee1d1e99b4b6f159fe777a4481e0e2b ChangeLog 1283
+MD5 7afaf34bc21dadeb71d4f9b2651c6c84 ChangeLog 1383
 MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
-MD5 379cc2eb1afbeecaa80417ae2fd10f93 files/digest-gkismet-0.0.9 65
 MD5 75b0bc4b902a6194df9a84af8f245275 files/digest-gkismet-0.0.10 66
