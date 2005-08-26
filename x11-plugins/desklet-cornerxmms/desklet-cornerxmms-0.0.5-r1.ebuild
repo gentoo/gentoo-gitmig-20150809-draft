@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/desklet-cornerxmms-0.0.5-r1.ebuild,v 1.7 2005/04/19 02:39:31 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/desklet-cornerxmms-0.0.5-r1.ebuild,v 1.8 2005/08/26 20:52:45 nixphoeni Exp $
 
 DESKLET_NAME="CornerXMMS"
 
@@ -43,7 +43,7 @@ src_install() {
 	dodoc ${DOCS}
 
 	# the desklets unpack preservers permissions of the archive
-	chown -R root:root ${D}${SYS_PATH}/Sensors/${DESKLET_NAME}
+	chown -R root:0 ${D}${SYS_PATH}/Sensors/${DESKLET_NAME}
 
 }
 

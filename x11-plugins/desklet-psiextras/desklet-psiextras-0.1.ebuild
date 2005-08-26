@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psiextras/desklet-psiextras-0.1.ebuild,v 1.4 2005/04/19 02:43:58 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psiextras/desklet-psiextras-0.1.ebuild,v 1.5 2005/08/26 20:42:10 nixphoeni Exp $
 
 DESKLET_NAME="desklet-psiextras"
 
@@ -56,7 +56,7 @@ src_install() {
 	cp *.png ${D}${SYS_PATH}/Displays/${DESKLET_NAME}/psi-battery-0.1/
 
 	# the desklets unpack preserves permissions of the archive
-	chown -R root:root ${D}${SYS_PATH}/Sensors/
+	chown -R root:0 ${D}${SYS_PATH}/Sensors/
 
 }
 

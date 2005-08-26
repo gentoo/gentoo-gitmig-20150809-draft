@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/desklet-psisensors-20040420.ebuild,v 1.7 2005/04/19 02:45:25 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/desklet-psisensors-20040420.ebuild,v 1.8 2005/08/26 20:40:23 nixphoeni Exp $
 
 MY_PN="PsiSensorPackage"
 MY_P=${MY_PN}-${PV}
@@ -51,7 +51,7 @@ src_install() {
 	done
 
 	# the desklets unpack preserves permissions of the archive
-	chown -R root:root ${D}${SYS_PATH}/Sensors
+	chown -R root:0 ${D}${SYS_PATH}/Sensors
 
 }
 

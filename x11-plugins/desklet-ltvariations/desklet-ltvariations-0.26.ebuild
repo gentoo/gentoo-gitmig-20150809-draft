@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.26.ebuild,v 1.3 2005/04/19 02:36:57 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ltvariations/desklet-ltvariations-0.26.ebuild,v 1.4 2005/08/26 20:47:20 nixphoeni Exp $
 
 DESKLET_NAME="LTVariations"
 
@@ -40,7 +40,7 @@ src_install() {
 	chmod 644 ${D}${SYS_PATH}/Displays/${DESKLET_NAME}/gfx/*.png
 
 	# the desklets unpack preservers permissions of the archive
-	chown -R root:root ${D}${SYS_PATH}/Sensors/
+	chown -R root:0 ${D}${SYS_PATH}/Sensors/
 
 }
 
