@@ -1,18 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2741cd5f30627769c6053052fdf4921d ChangeLog 609
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 99d00a17633bbfb2c97ebcd11dec6e9a pytraffic-1.2.1.ebuild 992
 MD5 73bd859b30938168ae0a99d709f8d917 pytraffic-2.0.ebuild 929
-MD5 435a1b2a65ae7fc35c83fbeb7397d829 files/1.2.1-gentoo-dirs.patch 1730
+MD5 0d99120993191bcc39436504c21fa281 pytraffic-2.5.ebuild 893
+MD5 99d00a17633bbfb2c97ebcd11dec6e9a pytraffic-1.2.1.ebuild 992
+MD5 6663f9a378fa28cdea335835fd980334 ChangeLog 819
+MD5 f2e093329e4a626fbfd1f4b5bca0bf98 files/2.5-gentoo-dirs.patch 2013
+MD5 1e3d3d52e6d4c7c501afd907d04a7f80 files/digest-pytraffic-2.5 66
 MD5 23d02af40cdc1e4ebd9234573e05b7c2 files/digest-pytraffic-1.2.1 67
-MD5 7be5b74960df3f7159e4914d8d10d3ba files/digest-pytraffic-2.0 65
 MD5 3a461a8258af9efb5d7772db7e2e8267 files/2.0-gentoo-dirs.patch 1735
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCqytDxtZcznfol0URAnjpAJ4rYcC5k+yI53WfcN+MUXHKqf8JSQCgt3lC
-Klx02qdFOT2jJd8FvuylV/4=
-=MU5n
------END PGP SIGNATURE-----
+MD5 7be5b74960df3f7159e4914d8d10d3ba files/digest-pytraffic-2.0 65
+MD5 435a1b2a65ae7fc35c83fbeb7397d829 files/1.2.1-gentoo-dirs.patch 1730

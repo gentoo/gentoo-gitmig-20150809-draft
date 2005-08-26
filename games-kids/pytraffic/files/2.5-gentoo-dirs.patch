@@ -1,0 +1,53 @@
+--- pytraffic-2.5-orig/setup.py	2005-07-30 12:09:08.000000000 +0300
++++ pytraffic-2.5/setup.py	2005-08-25 18:23:37.000000000 +0300
+@@ -48,7 +48,7 @@
+ # Furthermore both their location and content depend on <prefix>.
+ # Distutils should really have a 'configure' step.
+ if os.name=='posix':
+-    prefix='/usr/local'
++    prefix='/usr'
+     for arg_index in xrange(1,len(sys.argv)):
+         arg=sys.argv[arg_index]
+         if arg=='--prefix':
+@@ -72,8 +72,8 @@
+     options['build_ext']={'compiler' : 'mingw32'}
+ else:
+     options['install']={'prefix' : prefix,
+-                       'install_lib' : '$base/share/'+version.install_leaf,
+-                       'install_data' : '$base/share/'+version.install_leaf}
++                       'install_lib' : '$base/share/games/'+version.install_leaf,
++                       'install_data' : '$base/share/games/'+version.install_leaf}
+     options['build_ext']={'compiler' : 'unix'}
+ 
+ if py2exe_present:
+@@ -85,7 +85,7 @@
+ # We now construct the files pytraffic and pytraffic.desktop. We will
+ # remove them afterwards.
+ if os.name=='posix':
+-    main_command_contents=r"""exec python %s/share/%s/Main.py 
++    main_command_contents=r"""exec python %s/share/games/%s/Main.py 
+ """ % (prefix,version.install_leaf)
+ 
+     main_command_file=open("pytraffic","w")
+@@ -100,10 +100,10 @@
+ X-Desktop-File-Install-Version=0.2
+ Name=PyTraffic
+ Description=A Python version of the board game Rush Hour created by Binary Arts Coporation.
+-Exec=%s/bin/pytraffic
++Exec=%s/games/bin/pytraffic
+ Terminal=0
+ Type=Application
+-Icon=%s/share/%s/ICNS/carNred64x64.png
++Icon=%s/share/games/%s/ICNS/carNred64x64.png
+ """ % (prefix,prefix,version.install_leaf)
+ 
+     menu_entry_file=open("pytraffic.desktop","w")
+@@ -113,7 +113,7 @@
+ 
+ def main_command():
+     if os.name=='posix':
+-        return [(prefix+"/bin",['pytraffic'])]
++        return [(prefix+"/games/bin",['pytraffic'])]
+     else:
+         return [(".",["WinMain.pyw"])]
+ 
