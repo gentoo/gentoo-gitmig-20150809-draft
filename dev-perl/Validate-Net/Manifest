@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0514ec76df3ab2316e88848a4d20710b Validate-Net-0.5.ebuild 655
 MD5 4be68c0380e0081a02c311235a4a28ad ChangeLog 1297
 MD5 202cf8c01cc8b64ababe6b01fc17e8ee Validate-Net-0.4.ebuild 636
-MD5 2ec3e0ef1d31159d83e173c6feff6a4d Validate-Net-0.5.ebuild 650
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7f444cb92a7ff838d60784abf0a231d3 files/digest-Validate-Net-0.4 67
 MD5 03e58abbb0385cf050d4248f7a22847c files/digest-Validate-Net-0.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJbctG5z4I8BtQoRArCbAJ41mZTnTGCRa2/d8w6YDYM8XwrCNgCfdw7K
-ZSD9/Hi3gp6/27N1wk5ds+U=
-=RIWB
------END PGP SIGNATURE-----
+MD5 7f444cb92a7ff838d60784abf0a231d3 files/digest-Validate-Net-0.4 67

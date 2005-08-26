@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-perl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.18 2005/07/17 14:45:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.19 2005/08/26 03:07:45 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> gnome2-perl-1.021.ebuild:
+  add ~ia64
 
 *gnome2-perl-1.021 (17 Jul 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ISO
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.19 2005/05/25 15:05:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.20 2005/08/26 03:12:50 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Date-ISO-1.30.ebuild:
+  add ~ia64
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Date-ISO-1.30.ebuild:
   dev-perl/Test-Simple => perl-core/Test-Simple migration

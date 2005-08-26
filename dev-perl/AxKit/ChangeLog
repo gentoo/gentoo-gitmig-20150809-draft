@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AxKit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.39 2005/05/29 16:12:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.40 2005/08/26 02:58:21 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> AxKit-1.6.2.ebuild:
+  add ~ia64
 
   29 May 2005; Markus Rothe <corsair@gentoo.org> AxKit-1.6.2.ebuild:
   Stable on ppc64

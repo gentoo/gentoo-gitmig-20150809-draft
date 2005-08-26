@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/class-returnvalue
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/ChangeLog,v 1.9 2005/07/17 21:37:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/ChangeLog,v 1.10 2005/08/26 03:17:56 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  class-returnvalue-0.53.ebuild:
+  add ~ia64
 
 *class-returnvalue-0.53 (17 Jul 2005)
 

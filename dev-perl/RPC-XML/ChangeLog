@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.20 2005/05/30 15:25:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.21 2005/08/26 03:16:07 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> RPC-XML-0.58.ebuild:
+  add ~ia64
 
 *RPC-XML-0.58 (30 May 2005)
 
