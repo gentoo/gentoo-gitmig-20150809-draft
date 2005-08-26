@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37478fea4190146735820fcffa66744c font-cronyx-cyrillic-0.99.0.ebuild 685
+MD5 4636500e6a879f3a0ff1292f694d4c0b font-cronyx-cyrillic-0.99.0.ebuild 691
 MD5 ce5c04f0232a1b555699f26c1d9f1608 ChangeLog 879
 MD5 4778220f398698fa4532fbbbbb2da3a9 files/digest-font-cronyx-cyrillic-0.99.0 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCmYqgIKl8Uu19MoRAtKqAJ4xGn21VBIHCYkbRPkkty3kO1JRnQCfc/bb
-yB24XVdNB180Ror5TxMdDyM=
-=t7X+
------END PGP SIGNATURE-----
