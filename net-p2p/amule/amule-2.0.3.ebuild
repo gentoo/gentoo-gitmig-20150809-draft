@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3.ebuild,v 1.1 2005/07/10 15:02:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3.ebuild,v 1.2 2005/08/26 15:21:18 sekretarz Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -68,7 +68,7 @@ src_install() {
 	if use amuled || use remote; then
 		if ! id p2p >/dev/null; then
 		        enewgroup p2p
-			enewuser p2p -1 /bin/false /home/p2p p2p
+			enewuser p2p -1 -1 /home/p2p p2p
 		fi
 	fi
 
