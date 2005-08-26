@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ruby-libart-0.30.ebuild,v 1.6 2004/07/14 22:10:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ruby-libart-0.30.ebuild,v 1.7 2005/08/26 14:08:44 flameeyes Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/libart
 DESCRIPTION="Ruby libart bindings"
@@ -23,5 +23,5 @@ src_compile() {
 src_install() {
 	make site-install DESTDIR=${D}
 	dodoc [A-Z]*
-	cp -dr sample doc ${D}/usr/share/doc/${PF}
+	cp -pPR sample doc ${D}/usr/share/doc/${PF}
 }

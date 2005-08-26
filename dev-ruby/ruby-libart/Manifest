@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e89c9fd66c80e98427bd241698a16783 ChangeLog 1354
+MD5 85ed87c25e17bbf5d0dde2e0289bf0d8 ruby-libart-0.30.ebuild 740
+MD5 8711046a6333d31271176e60f6dbbc19 ruby-libart-0.34.ebuild 793
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 76e670c54aaa57bc40ec8f28c476afe6 ChangeLog 1207
-MD5 c0ac3aac18b02043056fb704666a690b ruby-libart-0.30.ebuild 738
-MD5 5703460669f4d04154bca624c64bdc6c ruby-libart-0.34.ebuild 788
-MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-libart-0.30 70
 MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-libart-0.34 71
+MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-libart-0.30 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDyKLj5H05b2HAEkRAvmtAJ4vjfuBxESmNK6FczDdcvRiYq8o8QCeOA19
+1qZuKtqrTlET7gGs5EuKZbY=
+=XAaI
+-----END PGP SIGNATURE-----
