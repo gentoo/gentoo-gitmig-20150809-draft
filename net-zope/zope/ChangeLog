@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.75 2005/08/26 18:39:14 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.76 2005/08/26 21:40:13 batlogg Exp $
+
+  26 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>; zope-2.7.7.ebuild:
+  marking stable on ppc and amd64
 
   26 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>; zope-2.8.1.ebuild:
   disabled stx i18n patch
