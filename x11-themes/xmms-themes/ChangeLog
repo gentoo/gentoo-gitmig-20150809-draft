@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xmms-themes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.15 2005/08/24 07:52:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.16 2005/08/26 14:17:37 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> xmms-themes-0.0.3.ebuild:
+  add ~ia64
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-themes-0.0.3.ebuild:
