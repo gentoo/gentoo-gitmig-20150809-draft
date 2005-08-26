@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.14 2005/04/24 03:28:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.15 2005/08/26 14:20:55 agriffis Exp $
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://twistedmatrix.com/users/tv/ldaptor/"
@@ -8,7 +8,7 @@ SRC_URI="http://twistedmatrix.com/users/tv/ldaptor/${PN}_${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 alpha ~sparc ppc"
+KEYWORDS="alpha ~ia64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-python/twisted-1.0.1-r1"

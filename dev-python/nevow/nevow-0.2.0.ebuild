@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.2.0.ebuild,v 1.2 2004/06/25 01:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.2.0.ebuild,v 1.3 2005/08/26 14:21:55 agriffis Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.divmod.org/users/release/divmod/Nevow-${MY_PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-python/twisted-1.3.0"

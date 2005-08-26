@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.48 2005/05/22 10:52:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.49 2005/08/26 14:19:35 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> twisted-1.3.0.ebuild:
+  add ~ia64
 
   22 May 2005; Simon Stelling <blubb@gentoo.org> twisted-2.0.0.ebuild:
   added ~amd64 keyword
