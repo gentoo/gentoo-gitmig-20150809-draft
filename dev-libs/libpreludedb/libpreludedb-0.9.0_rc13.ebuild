@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc10.ebuild,v 1.1 2005/08/03 03:53:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc13.ebuild,v 1.1 2005/08/26 21:53:53 vanquirius Exp $
 
 inherit versionator
 
@@ -15,7 +15,7 @@ KEYWORDS="~ppc ~sparc ~x86"
 IUSE="debug doc mysql postgres perl python"
 
 DEPEND="virtual/libc
-	>=dev-libs/libprelude-0.9.0_rc1
+	>=dev-libs/libprelude-0.9.0_rc14
 	doc? ( dev-util/gtk-doc )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
