@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.20 2005/07/28 14:06:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ash-1.6.ebuild,v 1.21 2005/08/26 16:12:33 agriffis Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-release-1-6/tar_files/src/bin.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha arm ~amd64"
+KEYWORDS="alpha ~amd64 arm ~ia64 ~mips ppc sparc x86"
 IUSE="static"
 
 DEPEND="sys-devel/pmake

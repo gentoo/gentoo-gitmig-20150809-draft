@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.16 2005/05/17 11:30:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.17 2005/08/26 16:12:33 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> ash-1.6.ebuild:
+  add ~ia64
 
   17 May 2005; Aaron Walker <ka0ttic@gentoo.org> +files/ash-1.6-gcc4.diff,
   ash-1.6.ebuild:

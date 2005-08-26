@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bashish
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.6 2005/01/01 15:57:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.7 2005/08/26 16:10:26 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> ChangeLog:
+  add ~ia64
 
 *bashish-1.9.23 (02 Aug 2004)
 
