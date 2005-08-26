@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec28ba4af3e04ff24a878d751ead422f ChangeLog 3874
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 12c821610bf4c843dc08b83a870782dd pygame-1.5.3.ebuild 830
-MD5 9a363118bb4e12fd718443bec704da06 pygame-1.5.5.ebuild 880
-MD5 1e6ea111c9e32afb259d75b6b136ff09 pygame-1.5.6.ebuild 888
 MD5 0c878f997edf727d1fc36fb4cf580575 pygame-1.6.ebuild 891
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 26d0c50dc92b5306c950bdf8d1924622 pygame-1.6.2.ebuild 896
-MD5 7e90dba754f1cb28b718216e8de5df56 pygame-1.7.1.ebuild 979
-MD5 bcc21545f0d3a09c4bf9beb344d39535 files/digest-pygame-1.5.3 64
-MD5 a0a1443e65c63b895d64a478953de7c7 files/digest-pygame-1.5.5 64
-MD5 cfc28c49f2b91b67623bee4ba4bdb54e files/digest-pygame-1.5.6 64
-MD5 45f0f41f844c4bb4e9dc4e5a786988ba files/digest-pygame-1.6 62
+MD5 ec819b25bb0cce3af00fc23e5a6ca1a0 ChangeLog 3961
+MD5 9a363118bb4e12fd718443bec704da06 pygame-1.5.5.ebuild 880
+MD5 20bae1e31604ababe3f777ce5d7f68e2 pygame-1.7.1.ebuild 988
+MD5 1e6ea111c9e32afb259d75b6b136ff09 pygame-1.5.6.ebuild 888
+MD5 12c821610bf4c843dc08b83a870782dd pygame-1.5.3.ebuild 830
 MD5 9f93b8b80ed5e7919c6e718c08c74b2b files/digest-pygame-1.6.2 66
+MD5 bcc21545f0d3a09c4bf9beb344d39535 files/digest-pygame-1.5.3 64
+MD5 45f0f41f844c4bb4e9dc4e5a786988ba files/digest-pygame-1.6 62
+MD5 a0a1443e65c63b895d64a478953de7c7 files/digest-pygame-1.5.5 64
 MD5 d1c30894515e75913caea764cf381ea3 files/digest-pygame-1.7.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDCLiaxtZcznfol0URAu2LAKCyCSpbWQ6LEu+rftRiedCcHCOXvwCgzdZJ
-gdst7NnkunBvfOnRb0wmuvQ=
-=dR7z
------END PGP SIGNATURE-----
+MD5 cfc28c49f2b91b67623bee4ba4bdb54e files/digest-pygame-1.5.6 64
