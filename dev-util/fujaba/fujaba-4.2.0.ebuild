@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.5 2005/07/16 18:36:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.6 2005/08/26 13:24:20 flameeyes Exp $
 
 MY_PV="${PV//./_}"
 MY_PNB="Fujaba_${PV:0:1}"
@@ -39,7 +39,7 @@ src_install() {
 	dodir /opt/${PN}
 	cd 'C_/Dokumente und Einstellungen/Lothar/Eigene Dateien/Deployment/Fujaba 4.2.0/' || die "failed to enter die"
 
-	cp -a . ${D}/opt/${PN} || die "failed too copy"
+	cp -pPR . ${D}/opt/${PN} || die "failed to copy"
 	chmod -R 755 ${D}/opt/${PN}/
 
 	echo "#!/bin/sh" > ${PN}

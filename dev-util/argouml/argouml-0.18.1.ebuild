@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.18.1.ebuild,v 1.1 2005/05/14 11:43:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.18.1.ebuild,v 1.2 2005/08/26 13:26:12 flameeyes Exp $
 
 inherit java-pkg
 
@@ -23,7 +23,7 @@ src_compile() { :; }
 
 src_install() {
 	dodir /opt/${PN}
-	cp -a . ${D}/opt/${PN}/lib/
+	cp -pPR . ${D}/opt/${PN}/lib/
 	chmod -R 755 ${D}/opt/${PN}
 	touch ${D}/opt/${PN}/lib/argouml.log
 	chmod a+w ${D}/opt/${PN}/lib/argouml.log

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/argouml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.12 2005/05/14 11:43:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.13 2005/08/26 13:26:12 flameeyes Exp $
+
+  26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> argouml-0.18.1.ebuild:
+  Fix cp -a usage for Gentoo/FreeBSD.
 
 *argouml-0.18.1 (14 May 2005)
 
