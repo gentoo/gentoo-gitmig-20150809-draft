@@ -1,5 +1,5 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 c4bcc28f2d7d633dab2ff1750b8ee7d7 alloy-0.5.2.ebuild 732
-MD5 651a4c3a91758cc59874ab258129c63d ChangeLog 3175
+MD5 c365c9ad51c1803c205cf1300c09347f alloy-0.5.2.ebuild 734
+MD5 c5f235b87fe3b82867329ec3a5d23c89 ChangeLog 3258
 MD5 a62d58aa021973a98b3978cf6a69c171 files/remove-extra-semicolon.patch 258
 MD5 dd9ace3c92e2dba5e2304d8b21e0a8eb files/digest-alloy-0.5.2 70
