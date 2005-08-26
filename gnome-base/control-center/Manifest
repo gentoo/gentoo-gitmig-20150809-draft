@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b0f1214c7aad7a7bf070fdb4d5317501 control-center-2.11.92.ebuild 2609
 MD5 5af1d1aad2b9b7fef198abb27b604c35 control-center-2.10.1-r1.ebuild 2036
 MD5 63d40166766fb5bc828bb2bad93e6422 control-center-2.10.0.ebuild 1905
@@ -18,3 +21,10 @@ MD5 f14d2fe3d15320580a2ab5715e6e2d94 files/control-center-2.10.1-pathfix.patch 6
 MD5 6d346011e61ca1c016c3c391881f9a4a files/control-center-2.11-gentoo_xcursor.patch 527
 MD5 2f0867c07305e05e49c57051e20dc068 files/digest-control-center-2.10.1-r1 75
 MD5 38949ed5d795344f78a96af44764f896 files/digest-control-center-1.4.0.5-r1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD2NtKRy60XGEcJIRAl28AJ9LQ67wepLS1qYePA7QIf1zDhW8YgCaAqlw
+vk+jCnjMwhgYyR9lcH2AM6c=
+=gdWn
+-----END PGP SIGNATURE-----
