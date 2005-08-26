@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.47 2005/08/18 01:21:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.48 2005/08/26 13:19:12 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  gnome-python-2.10.0.ebuild, gnome-python-2.11.3.ebuild:
+  add ~ia64
 
 *gnome-python-2.11.3 (18 Aug 2005)
 
