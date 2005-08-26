@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.44 2005/04/19 00:04:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.45 2005/08/26 10:44:41 flameeyes Exp $
+
+  26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> whois-4.7.2.ebuild:
+  Make whois install as gwhois while out of GNU userland. Also let the
+  makefile use the right CC compiler.
 
 *whois-4.7.2 (19 Apr 2005)
 
