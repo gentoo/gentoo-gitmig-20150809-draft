@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 70ac990d074b14d804f8261560437409 font-schumacher-misc-0.99.0.ebuild 776
 MD5 5ac04bdf13830244c41201f5f4e90fe6 ChangeLog 879
 MD5 354a4b5463dd735a3d46eeccacb72416 files/digest-font-schumacher-misc-0.99.0 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDpiDgIKl8Uu19MoRAkIQAJ9/2jX5O8LlRyTreUIc+/ibhP8h2wCfWkes
+NIQoElk2Yjh7TAatbm9VimM=
+=5S5K
+-----END PGP SIGNATURE-----

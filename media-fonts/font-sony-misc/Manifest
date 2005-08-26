@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a926422647f7a57d92a18cd8faacdac4 font-sony-misc-0.99.0.ebuild 679
 MD5 263ccc047bd5b191ae21b2969c3d7f29 ChangeLog 837
 MD5 338564f56aaa54c12740f0879e3aa2bc files/digest-font-sony-misc-0.99.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDpWVgIKl8Uu19MoRAoFWAJ43jO0alAEDUTamEUsJmVF0D1AAWgCfWX9k
+i4X73ub/4xDQvOvALanbaxw=
+=iFIY
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0048b6877aa8d1046591fe6a026646d3 font-daewoo-misc-0.99.0.ebuild 683
 MD5 593a499d2a56f4bf04552c295ac7be7a ChangeLog 851
 MD5 238a6b99a6ee3ac8a3c64d4c946f1954 files/digest-font-daewoo-misc-0.99.0 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDpWagIKl8Uu19MoRAmZEAJ4zCLSl7464sQU4SkbxXna3qwCAUQCfVl5d
+7DZXp+OOMxvAJoCO8dJNkU8=
+=5dnp
+-----END PGP SIGNATURE-----

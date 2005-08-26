@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3e13cb481e55434aea4fb5742919344a font-bh-75dpi-0.99.0.ebuild 762
 MD5 24c2b404410de8e02199b9258cc0fc29 ChangeLog 830
 MD5 6628c7fefa30f7a0e1928aff38ca9fbc files/digest-font-bh-75dpi-0.99.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDpg/gIKl8Uu19MoRAum1AJ9/CZkm88D56F245TMu8d7SM+4lfQCfbWHp
+JVMEC1O4/2AWUF4ZHwlebRE=
+=+IeQ
+-----END PGP SIGNATURE-----
