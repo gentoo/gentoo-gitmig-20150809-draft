@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.6.26.ebuild,v 1.2 2005/08/25 23:51:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.6.28.ebuild,v 1.1 2005/08/26 01:34:27 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 					help/zh_CN/Makefile.in \
 					help/zh_HK/Makefile.in \
 					help/zh_TW/Makefile.in
-	
+
 	epatch ${FILESDIR}/${PN}-5.5.42-malloc.patch
 }
 
