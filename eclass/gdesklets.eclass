@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.9 2005/07/30 18:15:36 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.10 2005/08/26 19:44:10 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -61,7 +61,7 @@ gdesklets_src_install() {
 					--nomsg ${D}${GDESKLETS_INST_DIR}/Sensors || \
 					die "Couldn't Install Sensor"
 
-			chown -R root:root ${D}${GDESKLETS_INST_DIR}/Sensors/${SENSOR_NAME}
+			chown -R root:0 ${D}${GDESKLETS_INST_DIR}/Sensors/${SENSOR_NAME}
 		done # for in ${SENSOR_NAME}
 	fi # if -n "${SENSOR_NAME}"
 
