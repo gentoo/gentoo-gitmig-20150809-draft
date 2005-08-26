@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8bd157caa9f1fba6dacf14bf06231d5 desklet-rssgrab-0.6.2.ebuild 1268
+MD5 1457714c55ceda294993531b912c0e12 desklet-rssgrab-0.6.2.ebuild 1268
 MD5 99874d9a5407bee9ddff183cb1a986a0 ChangeLog 809
 MD5 a175a96fb7e85b152ade748dbd2360e0 metadata.xml 213
 MD5 bfbd6d86fc536180c925b65ebd5ca53a files/digest-desklet-rssgrab-0.6.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBPiTkCHk4+ZoBpvsRAjFEAKDG5T/yum1bsKoqwKPFGULOdYDEJQCgqqUI
-lbfMWrE+55c+0CtMQfMQPJA=
-=rJ3P
------END PGP SIGNATURE-----
