@@ -1,11 +1,21 @@
-MD5 65a0d686188f0c4f963522e28b56f4f6 ChangeLog 3564
-MD5 e6d8afefe8f00f75d111dcf610487f8f gtkam-0.1.10-r1.ebuild 1302
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47a8a0d22420b57489469f1b9397c367 gtkam-0.1.11.ebuild 1335
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 26089c92ded216533a30193be0a9d847 gtkam-0.1.12.ebuild 1296
-MD5 9895bd6e825868f9d33ec407108e7d50 files/digest-gtkam-0.1.12 64
-MD5 a1c4a2f9990b3356ce169554c82dd2f6 files/digest-gtkam-0.1.10-r1 64
-MD5 d37596d611b2b5fe213cf911c5988211 files/digest-gtkam-0.1.11 64
-MD5 2cee4a75ae4dbbcd3345e16c18018ade files/gtkam-0.1.10-gtk24.patch 976
-MD5 6eb68b631f3f91c3af9151bbe912dbe8 files/gtkam-0.1.10-norpm.patch 398
+MD5 eb09e20c60f3b3ac237e8e91d6232157 ChangeLog 3653
+MD5 88536901a6b9652f77bad913bdafdc65 gtkam-0.1.12.ebuild 1310
+MD5 e6d8afefe8f00f75d111dcf610487f8f gtkam-0.1.10-r1.ebuild 1302
 MD5 6113479df45c8e3a3818213705b5bc5a files/gtkam-0.1.11-gtk24.patch 1563
+MD5 d37596d611b2b5fe213cf911c5988211 files/digest-gtkam-0.1.11 64
+MD5 9895bd6e825868f9d33ec407108e7d50 files/digest-gtkam-0.1.12 64
+MD5 6eb68b631f3f91c3af9151bbe912dbe8 files/gtkam-0.1.10-norpm.patch 398
+MD5 a1c4a2f9990b3356ce169554c82dd2f6 files/digest-gtkam-0.1.10-r1 64
+MD5 2cee4a75ae4dbbcd3345e16c18018ade files/gtkam-0.1.10-gtk24.patch 976
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD42tBXaUFmZvwyMRAsqhAJ41zVNlqM5ZJ9dCPRo1tInhZHsJSgCgsa0u
+Gl0HZnksAS0Y7Bi5mtgxOQc=
+=HdPw
+-----END PGP SIGNATURE-----
