@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.11 2005/06/19 18:43:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.12 2005/08/26 21:45:37 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> libexif-gtk-0.3.5.ebuild:
+  add ~ia64
 
 *libexif-gtk-0.3.5 (19 Jun 2005)
 
