@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ab8f81bdd99f2bbfdb9c9713f7a8689 ChangeLog 2545
-MD5 f73ed12aab13fe91d6deeea888195d8d sdl-image-1.2.4.ebuild 1179
+MD5 21820456d69fb77d1ba4d2b02eb7ad91 sdl-image-1.2.4.ebuild 1187
+MD5 9797c69977d96180a90dab9488a71531 ChangeLog 2634
 MD5 c6b27b36362b8e690e1078c786695e48 sdl-image-1.2.3-r1.ebuild 1189
-MD5 6417538d0ce012ecf2c3e651fcde420b files/digest-sdl-image-1.2.4 67
 MD5 6146c8f5ede33bd2c9aa9a25076eb6e9 files/digest-sdl-image-1.2.3-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB3t/uroRuSHgZdywRAhabAJ9x1bJEJfXhvlgZndpU3ueU9KLTKACgg8Xt
-0dEhdUltIExbxPmBajASO6E=
-=agvO
------END PGP SIGNATURE-----
+MD5 6417538d0ce012ecf2c3e651fcde420b files/digest-sdl-image-1.2.4 67
