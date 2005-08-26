@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.5 2005/07/19 00:04:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/resin-ee-2.1.14.ebuild,v 1.6 2005/08/26 13:36:18 flameeyes Exp $
 
 inherit java-pkg eutils
 
@@ -40,28 +40,16 @@ src_install() {
 	keepdir /var/log/${PN}/
 
 	# INIT SCRIPTS AND ENV
-
-	cp -a ${FILESDIR}/${PV}/resin.init ${S}/resin
-	insinto /etc/init.d
-	insopts -m0750
-	doins ${S}/resin
-
-	cp -a ${FILESDIR}/${PV}/resin.conf ${S}/resin
-	insinto /etc/conf.d
-	insopts -m0755
-	doins ${S}/resin
-
-	cp -a ${FILESDIR}/${PV}/21resin ${S}/21resin
-	insinto /etc/env.d
-	insopts -m0755
-	doins ${S}/21resin
+	newinitd ${FILESDIR}/${PV}/resin.init resin
+	newconfd ${FILESDIR}/${PV}/resin.conf resin
+	doenvd ${FILESDIR}/${PV}/21resin
 
 	dodir /opt/resin || die
 	dodoc LICENSE readme.txt
 
 	java-pkg_dojar lib/*.jar
 
-	cp -Rdp \
+	cp -Rp \
 		bin \
 		doc \
 		conf \

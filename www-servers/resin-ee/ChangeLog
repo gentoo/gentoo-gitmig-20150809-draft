@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin-ee
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/ChangeLog,v 1.3 2005/06/05 16:00:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/ChangeLog,v 1.4 2005/08/26 13:36:18 flameeyes Exp $
+
+  26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> resin-ee-2.1.14.ebuild:
+  Use right helper newinitd/newconfd/doenvd instead of using cp -a and doins.
+  Don't use cp -d.
 
   05 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org> resin-ee-2.1.9.ebuild,
   resin-ee-2.1.14.ebuild:
