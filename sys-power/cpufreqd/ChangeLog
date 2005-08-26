@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.9 2005/08/26 10:14:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.10 2005/08/26 12:06:06 brix Exp $
+
+*cpufreqd-2.0.0_beta4 (26 Aug 2005)
+
+  26 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/cpufreqd-2.0.0_beta4-init.d, +cpufreqd-2.0.0_beta4.ebuild:
+  New beta release, bug #103798.
 
   26 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
   -files/1.1.2-prefer-sysfs.patch, -files/cpufreqd-1.2.2-memleaks.patch,
