@@ -1,6 +1,4 @@
-MD5 8cfa75f6e53085c6b2f2a299fc7c511a coriander-1.0.0.ebuild 718
-MD5 57d013789d5ff5fe6edb073381636e13 coriander-1.0.0_pre3.ebuild 716
 MD5 8c508b7fe8782ef51c759979f02e6110 metadata.xml 254
 MD5 d66d0a447887e6bcc01fa1e711687752 ChangeLog 1555
+MD5 a16070483304ffc5d0cccff0d9f6874a coriander-1.0.0.ebuild 696
 MD5 c344d5253d439210e7f818d87596934c files/digest-coriander-1.0.0 67
-MD5 3ef71e548387cb21fa1e7d1750970bbd files/digest-coriander-1.0.0_pre3 72
