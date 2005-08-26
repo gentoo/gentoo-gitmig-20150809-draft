@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-jpeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.7 2005/08/03 19:32:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.8 2005/08/26 18:11:09 gustavoz Exp $
+
+  26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gst-plugins-jpeg-0.8.8.ebuild, gst-plugins-jpeg-0.8.10.ebuild:
+  Stable on sparc
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-jpeg-0.8.8.ebuild, gst-plugins-jpeg-0.8.9.ebuild,
