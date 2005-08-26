@@ -1,8 +1,20 @@
-MD5 6b12255efd4b12726c3426edf0b86628 ChangeLog 5452
-MD5 1bc94040ae985ed43cf336d4e8a854b6 emul-linux-x86-xlibs-1.2-r7.ebuild 2356
-MD5 ad51a611fffb16ad146d0e15b653fe64 emul-linux-x86-xlibs-2.1.ebuild 1199
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 544475b32f0e4eb0fc363ae20f97b813 ChangeLog 5667
 MD5 3d107142a3ec13f947ea538fdfe0f517 metadata.xml 290
+MD5 ad51a611fffb16ad146d0e15b653fe64 emul-linux-x86-xlibs-2.1.ebuild 1199
+MD5 18f8cd2aff37076230afc8093f15dd2b emul-linux-x86-xlibs-2.1-r1.ebuild 1142
+MD5 1bc94040ae985ed43cf336d4e8a854b6 emul-linux-x86-xlibs-1.2-r7.ebuild 2356
 MD5 5a7b89b29d4fbc9bc81caf9da1a9ba1d files/XI18N_OBJS 333
 MD5 7299ce6b3a61885dfca9c22ee8e4798d files/XLC_LOCALE 772
-MD5 67e4eda745af1451f8adbc4824048d3a files/digest-emul-linux-x86-xlibs-1.2-r7 78
 MD5 e253f7387ec47f79eb8b9c55d221a8de files/digest-emul-linux-x86-xlibs-2.1 78
+MD5 e253f7387ec47f79eb8b9c55d221a8de files/digest-emul-linux-x86-xlibs-2.1-r1 78
+MD5 67e4eda745af1451f8adbc4824048d3a files/digest-emul-linux-x86-xlibs-1.2-r7 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDD2vjArHZZzCEUG0RAu8TAJ9RqDV/8qM8sPqjF06eI/pFPXB1OQCfbUXE
+Jfe2dug+GDIYJhDyNsvUcRI=
+=3EKL
+-----END PGP SIGNATURE-----
