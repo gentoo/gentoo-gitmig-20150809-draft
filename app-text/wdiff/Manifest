@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 58818d95e94e6dcd6a34edd95d8bc907 wdiff-0.5-r2.ebuild 1091
+MD5 15802bbdec480835f4af8e9242f6b6de wdiff-0.5-r2.ebuild 1090
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 8b729dce46a98af74dd5c37e00eca1df ChangeLog 2400
+MD5 f79f6e911d47de88c9e488d02793496c ChangeLog 2489
 MD5 9857b4daaad6db84f5c7dd600a7e7b4c files/wdiff-0.5-segfault-fix.diff 487
 MD5 d6f2ef7713b8a0187fd684b0d8010347 files/digest-wdiff-0.5-r2 128
 MD5 c0daaa4f7a7f181a9900d082fe2f5a7a files/wdiff-0.5-avoid-wraps.diff 401
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5rZnBXaUFmZvwyMRAgnPAJ9QTd83729Ccd8kAZk7e1PAqfQktQCfd72C
-NDQx5C8YY+CrpBrK6n5eKMQ=
-=UZYj
------END PGP SIGNATURE-----
