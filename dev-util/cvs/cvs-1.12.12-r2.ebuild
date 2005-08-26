@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.8 2005/08/25 20:16:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.12.12-r2.ebuild,v 1.9 2005/08/26 07:57:50 robbat2 Exp $
 
 inherit eutils pam
 
@@ -62,7 +62,7 @@ src_install() {
 		ln -s cvs.html index.html
 	fi
 
-	newpamd ${FILESDIR}/cvs.pam-include cvs
+	newpamd ${FILESDIR}/cvs.pam-include-1.12.12 cvs
 }
 
 src_test() {
