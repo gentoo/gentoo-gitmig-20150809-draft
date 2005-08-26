@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b6c1f1769d9fd1508a5b3b54549648ab phpwebsite-0.10.2_rc2.ebuild 1442
 MD5 a8ded065c8b8a2809c46a466599455bf phpwebsite-0.10.2_rc1.ebuild 1441
+MD5 0198f1eea491551f438e103a1ac71962 ChangeLog 9040
 MD5 24a724cdfd1390bba450f4b7c1a9dfc5 metadata.xml 360
-MD5 8fd136daf7678acc97167765225929b1 ChangeLog 8924
-MD5 a4b3af7343382a36bf5051a637c1ee84 phpwebsite-0.10.2_rc2.ebuild 1445
-MD5 238d5c7341d91b9017d5dac84124884d files/digest-phpwebsite-0.10.2_rc1 71
 MD5 e5cab3ec158303e1d64a76d9eacd5cb6 files/postinstall-en.txt 4642
+MD5 238d5c7341d91b9017d5dac84124884d files/digest-phpwebsite-0.10.2_rc1 71
 MD5 57b645768c6c1c4f1f09c26085385b16 files/digest-phpwebsite-0.10.2_rc2 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD4V3EzitwsaoONoRArygAKDAZQ+xlnyAjrQ6iMkktyN/ZIAVXgCfXafW
+LbrJMRXXQoOWdkI8FgKNp4o=
+=ZMDl
+-----END PGP SIGNATURE-----
