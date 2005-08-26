@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.110 2005/08/22 22:20:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.111 2005/08/26 18:13:33 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> gal-0.24.ebuild:
+  add ~ia64
 
   22 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> gal-2.4.3.ebuild:
   Stable on ia64.
