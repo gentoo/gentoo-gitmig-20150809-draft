@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.10.0.ebuild,v 1.3 2005/08/25 23:59:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.10.0.ebuild,v 1.4 2005/08/26 18:40:01 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc sparc x86"
 IUSE="firefox"
 
 RDEPEND=">=gnome-base/orbit-2
