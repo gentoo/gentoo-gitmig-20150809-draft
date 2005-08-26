@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kradio
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.9 2005/05/27 14:03:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.10 2005/08/26 10:01:45 phosphan Exp $
+
+*kradio-1.0_beta3 (26 Aug 2005)
+
+  26 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> +kradio-1.0_beta3.ebuild:
+  Version bump - does no longer need unsermake, depends on arts if arts in USE
 
   27 May 2005; Patrick Kursawe <phosphan@gentoo.org> kradio-1.0_beta1.ebuild:
   Updating DEPEND/RDEPEND because of trouble with older unsermake versions
