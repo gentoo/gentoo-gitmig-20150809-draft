@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.6 2005/07/10 16:16:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.7 2005/08/26 13:45:03 flameeyes Exp $
 
 inherit eutils java-pkg
 
@@ -222,8 +222,8 @@ src_install() {
 
 pkg_postinst() {
 	#due to previous ebuild bloopers, make sure everything is correct
-	chown root:root /etc/init.d/${TOMCAT_NAME}
-	chown root:root /etc/conf.d/${TOMCAT_NAME}
+	chown root:0 /etc/init.d/${TOMCAT_NAME}
+	chown root:0 /etc/conf.d/${TOMCAT_NAME}
 
 	chmod -R 750 /etc/${TOMCAT_NAME}
 
