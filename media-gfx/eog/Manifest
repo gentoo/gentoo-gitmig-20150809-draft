@@ -1,15 +1,25 @@
-MD5 9f666ab55cf3a49721c52e65e9f03f7b eog-0.6-r4.ebuild 1199
-MD5 b1ffe2e30753132d8be89e9a65d12cb6 eog-2.10.2.ebuild 1194
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 1bf6d08a5440cf8352a6d550c5a27393 ChangeLog 10770
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa7f4f22e5eeb44b6d71c12d55fe372c eog-2.8.2.ebuild 1139
-MD5 7994c5691c3d25a50e273b4c8def1a9b eog-2.11.90.ebuild 1420
+MD5 9f666ab55cf3a49721c52e65e9f03f7b eog-0.6-r4.ebuild 1199
 MD5 bab0fb0bf11fa10e9e88d4a09fb5b24d eog-2.10.0.ebuild 1176
-MD5 56a52e0bf2f415e3ae03f5caaaee1301 files/eog-2.11.90-pkgconfig_macro.patch 655
-MD5 5f786f0751774fc1e127d27e4f0c31e9 files/digest-eog-0.6-r4 59
-MD5 f4785b67530bea551199881bc37d55d5 files/eog-0.6-version_locale_dirs.patch 828
-MD5 68b02bdc7db66408839c7f27124fe4e4 files/digest-eog-2.11.90 64
+MD5 7994c5691c3d25a50e273b4c8def1a9b eog-2.11.90.ebuild 1420
+MD5 e71f1fec633e9ff7910c5ca45ea249eb eog-2.10.2.ebuild 1193
+MD5 f539f0ba8684776335625b0391d1803a ChangeLog 10862
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ccb7573c48cc8ef504557fdcda5b2707 files/eog-2.8.0-jpeg_build.patch 1210
-MD5 bf37e4973ce6a51ab6722f47ae980223 files/digest-eog-2.10.2 63
+MD5 f4785b67530bea551199881bc37d55d5 files/eog-0.6-version_locale_dirs.patch 828
 MD5 479fdcdf774451d6e1cd04e63903a71f files/digest-eog-2.8.2 62
+MD5 56a52e0bf2f415e3ae03f5caaaee1301 files/eog-2.11.90-pkgconfig_macro.patch 655
+MD5 68b02bdc7db66408839c7f27124fe4e4 files/digest-eog-2.11.90 64
+MD5 5f786f0751774fc1e127d27e4f0c31e9 files/digest-eog-0.6-r4 59
 MD5 b328657b15163e06e96f9ff70d6c87e4 files/digest-eog-2.10.0 63
+MD5 bf37e4973ce6a51ab6722f47ae980223 files/digest-eog-2.10.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD2RwKRy60XGEcJIRAj3IAKCSqKX9OsgNH7yqX4SBCo82dH5hHACgoO3Z
+G0zcJEM5Mn+jOAp7jz04c7E=
+=P3n8
+-----END PGP SIGNATURE-----
