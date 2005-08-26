@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-icegradient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-icegradient/ChangeLog,v 1.8 2005/08/02 09:45:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-icegradient/ChangeLog,v 1.9 2005/08/26 13:50:28 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  gtk-engines-icegradient-0.0.5-r2.ebuild:
+  add ~ia64
 
 *gtk-engines-icegradient-0.0.5-r2 (02 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.15 2005/06/17 03:14:26 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/golden-xcursors/golden-xcursors-0.8.ebuild,v 1.16 2005/08/26 13:45:57 agriffis Exp $
 
 MY_P="5507-Golden-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -9,7 +9,7 @@ SRC_URI="http://www.kde-look.org/content/files/$MY_P.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64 mips ppc64"
+KEYWORDS="~alpha amd64 hppa ~ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""

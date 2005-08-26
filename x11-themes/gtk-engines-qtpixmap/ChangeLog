@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qtpixmap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/ChangeLog,v 1.1 2005/08/03 03:20:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/ChangeLog,v 1.2 2005/08/26 13:54:59 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  gtk-engines-qtpixmap-0.28-r1.ebuild:
+  add ~ia64
 
 *gtk-engines-qtpixmap-0.28-r1 (02 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r1.ebuild,v 1.1 2005/08/03 03:20:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r1.ebuild,v 1.2 2005/08/26 13:54:59 agriffis Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ MY_P="QtPixmap-${PV}"
 DESCRIPTION="A modified version of the original GTK pixmap engine which follows the KDE color scheme"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=7043"
 SRC_URI="http://www.cpdrummond.freeuk.com/${MY_P}.tar.gz"
-KEYWORDS="alpha ~amd64 ~mips ppc sparc x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~mips ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="gtk2"

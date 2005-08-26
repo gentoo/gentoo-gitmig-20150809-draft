@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/lush
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.7 2005/04/07 17:19:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.8 2005/08/26 13:58:50 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> lush-0.1.0-r1.ebuild:
+  add ~ia64
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> lush-0.1.0-r1.ebuild:
   stable on amd64

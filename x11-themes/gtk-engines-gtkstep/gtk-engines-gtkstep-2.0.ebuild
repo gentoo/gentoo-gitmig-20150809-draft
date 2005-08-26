@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-gtkstep/gtk-engines-gtkstep-2.0.ebuild,v 1.1 2005/08/04 04:02:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-gtkstep/gtk-engines-gtkstep-2.0.ebuild,v 1.2 2005/08/26 13:49:39 agriffis Exp $
 
 inherit gnuconfig
 
@@ -9,7 +9,7 @@ DESCRIPTION="GTK+1 GTKStep Theme Engine"
 HOMEPAGE="http://themes.freshmeat.net/projects/gtkstep_/"
 SRC_URI="http://download.freshmeat.net/themes/${MY_PN}_/${MY_PN}_-1.2.x.tar.gz"
 
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="1"
 IUSE=""

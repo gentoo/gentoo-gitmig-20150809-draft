@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm_icons
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_icons/ChangeLog,v 1.6 2004/06/24 23:26:13 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_icons/ChangeLog,v 1.7 2005/08/26 13:43:32 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> fvwm_icons-1.0.ebuild:
+  add ~ia64
 
   19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> fvwm_icons-1.0.ebuild:
   Marked stable on amd64.
