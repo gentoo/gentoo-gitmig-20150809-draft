@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.182 2005/08/26 07:51:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.183 2005/08/26 18:54:48 gustavoz Exp $
+
+  26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> gnome-2.10.2.ebuild:
+  Stable on sparc
 
   26 Aug 2005; Leonardo Boshell <leonardop@gentoo.org> gnome-2.10.2.ebuild:
   Stable on x86.
