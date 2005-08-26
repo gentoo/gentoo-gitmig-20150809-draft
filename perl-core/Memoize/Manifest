@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e8749acb5d9da96437139ecc722c400e Memoize-1.01.ebuild 527
-MD5 e0edd236255907e32d34e7a651e322fd ChangeLog 1775
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 17cd0caad7756a92569b4c2517abc9d8 ChangeLog 1858
+MD5 46080c5a53d7eda667745fb6b80936ab Memoize-1.01.ebuild 531
 MD5 568392e47cac61fb1d8d954d21d91b56 files/digest-Memoize-1.01 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCli5RI1lqEGTUzyQRAk63AJ9YXf3Yz5/fBI23Yba7hB9V5xOcgwCgoGsc
-tYUtHp/TcvE9u8E5M4S3zmo=
-=mrAh
------END PGP SIGNATURE-----
