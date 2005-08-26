@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9211a1b25a912e788c3c0e65f0736c0e gwenview-1.2.92.ebuild 640
-MD5 55011430049289daa6eb40c392b5fc0c gwenview-1.2.0.ebuild 639
-MD5 8f5b2ac340c74aa79197e0b2264c64e1 gwenview-1.0.1.ebuild 424
-MD5 0cf323650c633c40e91012c7f7cec174 ChangeLog 3828
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
+MD5 62e4ae6bd9345f73b7731ecd9bcd8c92 ChangeLog 4006
+MD5 55011430049289daa6eb40c392b5fc0c gwenview-1.2.0.ebuild 639
+MD5 4752c460b4419a84e0549d7865d782a2 gwenview-1.2.92.ebuild 776
+MD5 8f5b2ac340c74aa79197e0b2264c64e1 gwenview-1.0.1.ebuild 424
+MD5 8abb569096ada06d487bf9273a12a03f files/digest-gwenview-1.2.0 68
 MD5 3776fd2161c9e4097c556f5a643b2932 files/digest-gwenview-1.2.92 69
 MD5 ec9b547539178737eb9327ca97270c50 files/digest-gwenview-1.0.1 67
-MD5 8abb569096ada06d487bf9273a12a03f files/digest-gwenview-1.2.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDCwW+evY57Fted3ERAupBAKC266u5Pwybgjf2cDlbCeDtLF37VgCfaHIo
-lfOGnHW4S7fW2zZHx4hKNOI=
-=xq2j
------END PGP SIGNATURE-----
