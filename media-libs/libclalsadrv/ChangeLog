@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libclalsadrv
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/ChangeLog,v 1.6 2004/12/19 05:12:21 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/ChangeLog,v 1.7 2005/08/26 12:25:34 flameeyes Exp $
+
+  26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libclalsadrv-1.0.1.ebuild:
+  epatch doesn't need die.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libclalsadrv-1.0.1.ebuild:

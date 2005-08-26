@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-1.0.1.ebuild,v 1.7 2004/12/19 05:12:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/libclalsadrv-1.0.1.ebuild,v 1.8 2005/08/26 12:25:34 flameeyes Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
-	epatch "${FILESDIR}/${P}-makefile.patch" || die
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_compile() {
