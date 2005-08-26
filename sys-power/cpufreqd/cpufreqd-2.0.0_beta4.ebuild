@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_beta4.ebuild,v 1.1 2005/08/26 12:06:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_beta4.ebuild,v 1.2 2005/08/26 13:02:30 brix Exp $
 
 inherit flag-o-matic linux-info
 
@@ -38,6 +38,6 @@ pkg_postinst() {
 	einfo "Make sure you update your /etc/cpufreqd.conf file before starting"
 	einfo "${PN}. You can use 'etc-update' to accomplish this:"
 	einfo
-    einfo "  # etc-update"
+	einfo "  # etc-update"
 	einfo
 }
