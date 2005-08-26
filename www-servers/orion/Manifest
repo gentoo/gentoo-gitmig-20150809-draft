@@ -1,34 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 108ae22c31862453b1c9fcf6ae7ab0df orion-2.0.5.ebuild 3498
-MD5 c59ddc11464c031845b11c8bde5ae4ba ChangeLog 4700
+MD5 37b3ff00d2fa143765a6de2d0e9dd1aa ChangeLog 4970
+MD5 2b22a8309ad22a4695ae8f95e2e58239 orion-2.0.5.ebuild 3389
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 64d2f904818b8231a8e04afe11ec9116 files/digest-orion-2.0.5 60
-MD5 d07a4a710da503acad73a3ff6a33b53d files/2.0/stop_orion.sh 199
-MD5 e175ab77e3672e6af0b3440ecf17d1b0 files/2.0/orion.conf 1488
-MD5 8bc08ac3b94467c660311e05f5274235 files/2.0/orion.init 621
-MD5 d639d66431028cebb11ae1642722e64a files/2.0/start_orion.sh 327
-MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
-MD5 8e79ab4c81d11f32ad95f591e4bdcf86 files/2.0.1/stop_orion.sh 201
-MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.1/2.0.1-gentoo.patch 5301
-MD5 7601a324323ba4d391105924f7130ef5 files/2.0.1/orion.conf 1490
-MD5 4769c90a33df53412fe897b0e85d30ee files/2.0.1/orion.init 623
-MD5 381c1a5cf920e989d67d3dce11a4b18f files/2.0.1/start_orion.sh 329
-MD5 6371601ecd23c07b7e2ff7ade715ac62 files/2.0.2/stop_orion.sh 201
-MD5 9e9bda794856b8df9f83b685b8927e2f files/2.0.2/orion.conf 1490
-MD5 95371637dbe2fe9a6b90a338b1d2713f files/2.0.2/orion.init 623
 MD5 68df9354bacc148d8077dc4aadd5e296 files/2.0.2/start_orion.sh 329
+MD5 95371637dbe2fe9a6b90a338b1d2713f files/2.0.2/orion.init 623
+MD5 9e9bda794856b8df9f83b685b8927e2f files/2.0.2/orion.conf 1490
 MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.2/2.0.2-gentoo.patch 5301
-MD5 2a85e4707edaf93fac484f6d4776c907 files/2.0.5/stop_orion.sh 201
+MD5 6371601ecd23c07b7e2ff7ade715ac62 files/2.0.2/stop_orion.sh 201
+MD5 381c1a5cf920e989d67d3dce11a4b18f files/2.0.1/start_orion.sh 329
+MD5 4769c90a33df53412fe897b0e85d30ee files/2.0.1/orion.init 623
+MD5 7601a324323ba4d391105924f7130ef5 files/2.0.1/orion.conf 1490
+MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.1/2.0.1-gentoo.patch 5301
+MD5 8e79ab4c81d11f32ad95f591e4bdcf86 files/2.0.1/stop_orion.sh 201
+MD5 640aeac33bfeef4b73251c255a5cf0b5 files/2.0.5/start_orion.sh 329
+MD5 9395af08eda1e3bebe30f911f366a668 files/2.0.5/orion.init 625
 MD5 47d0ad15473027f371c1d02681a84e1e files/2.0.5/2.0.5-gentoo.patch 5287
 MD5 10a92f413fc87c341c409074bc3ce7d4 files/2.0.5/orion.conf 1490
-MD5 9395af08eda1e3bebe30f911f366a668 files/2.0.5/orion.init 625
-MD5 640aeac33bfeef4b73251c255a5cf0b5 files/2.0.5/start_orion.sh 329
+MD5 2a85e4707edaf93fac484f6d4776c907 files/2.0.5/stop_orion.sh 201
+MD5 d639d66431028cebb11ae1642722e64a files/2.0/start_orion.sh 327
+MD5 8bc08ac3b94467c660311e05f5274235 files/2.0/orion.init 621
+MD5 e175ab77e3672e6af0b3440ecf17d1b0 files/2.0/orion.conf 1488
+MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
+MD5 d07a4a710da503acad73a3ff6a33b53d files/2.0/stop_orion.sh 199
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3EJz/rLF9B432nYRAkK+AJ48wxuA/zncArKraBnYgJbF2qzy6ACeLnUj
-xZg9ICL0F124/yZjiy4O9kI=
-=hX32
+iD8DBQFDDx5aj5H05b2HAEkRAvdnAJ9enF4CZd+7h5/4OWH/+OBkOqLYTwCgjVGr
+LYzDfLNZVxL+LHxhsxXIHg8=
+=nGgL
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.6 2005/07/18 23:59:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.7 2005/08/26 13:50:48 flameeyes Exp $
 
 inherit eutils java-pkg
 
@@ -40,15 +40,8 @@ src_install() {
 	doins ${FILESDIR}/${PV}/start_orion.sh
 	doins ${FILESDIR}/${PV}/stop_orion.sh
 
-	cp -a ${FILESDIR}/${PV}/orion.init ${S}/orion
-	insinto /etc/init.d
-	insopts -m0750
-	doins ${S}/orion
-
-	cp -a ${FILESDIR}/${PV}/orion.conf ${S}/orion
-	insinto /etc/conf.d
-	insopts -m0750
-	doins ${S}/orion
+	newinitd ${FILESDIR}/${PV}/orion.init orion
+	newconfd ${FILESDIR}/${PV}/orion.conf orion
 
 	# CREATE DUMMY LOG & PERSISTENCE DIR
 	dodir /var/log/${PN}
@@ -60,14 +53,14 @@ src_install() {
 	# INSTALL EXTRA FILES
 	local dirs="applications default-web-app demo lib persistence autoupdate.properties"
 	for i in $dirs ; do
-		cp -a ${i} ${D}/opt/${PN}/
+		cp -pPR ${i} ${D}/opt/${PN}/
 	done
 
 	# INSTALL APP CONFIG
 	cd ${S}/config
 	local dirs="application.xml data-sources.xml database-schemas default-web-site.xml global-web-application.xml jms.xml mime.types principals.xml rmi.xml server.xml"
 	for i in $dirs ; do
-		cp -a ${i} ${D}/opt/${PN}/config
+		cp -pPR ${i} ${D}/opt/${PN}/config
 	done
 
 	# INSTALL JARS
@@ -88,7 +81,7 @@ pkg_preinst() {
 	enewuser orion -1 /bin/bash /opt/orion orion
 	chown -R orion:orion ${IMAGE}/opt/${PN}
 	chown -R orion:orion ${IMAGE}/var/log/${PN}
-	chown root:root ${IMAGE}/etc/conf.d/orion
+	chown root:0 ${IMAGE}/etc/conf.d/orion
 }
 
 pkg_postinst() {
