@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.3.ebuild,v 1.1 2005/08/26 11:38:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.3.ebuild,v 1.2 2005/08/26 12:01:51 sekretarz Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ MOZVER="1.7"
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
 SRC_URI="http://savannah.nongnu.org/download/mldonkey/${P}.tar.bz2
+	mirror://gentoo/mld_hash.patch.gz
 	mozilla? ( http://www.informatik.uni-oldenburg.de/~dyna/${PN}/${MOZVER}/mldonkey_protocol_handler-${MOZVER}.xpi )"
 
 LICENSE="GPL-2"
@@ -58,7 +59,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${P}.tar.bz2
+	unpack ${P}.tar.bz2 mld_hash.patch.gz
+	cd ${S}
+
+	epatch ${WORKDIR}/mld_hash.patch
 }
 
 src_compile() {
@@ -106,7 +110,7 @@ src_compile() {
 
 src_install() {
 	if !(use guionly); then
-		dobin mlnet ed2k_hash get_range copysources make_torrent subconv
+		dobin mlnet mld_hash get_range copysources make_torrent subconv
 		dobin ${FILESDIR}/mldonkey
 
 		insinto /etc/conf.d; newins ${FILESDIR}/mldonkey.confd mldonkey
