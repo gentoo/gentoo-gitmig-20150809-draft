@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.02.ebuild,v 1.3 2005/07/11 13:24:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.02.ebuild,v 1.4 2005/08/26 13:10:33 flameeyes Exp $
 
 inherit java versionator
 
@@ -86,10 +86,10 @@ src_install() {
 
 	dodir /opt/${P}
 
-	cp -a ${S}/{bin,jre,lib,man,include} ${D}/opt/${P} || die "failed to copy"
+	cp -pPR ${S}/{bin,jre,lib,man,include} ${D}/opt/${P} || die "failed to copy"
 
 	dodir /opt/${P}/share/java
-	cp -a ${S}/{demo,src.zip} ${D}/opt/${P}/share || die "failed to copy"
+	cp -pPR ${S}/{demo,src.zip} ${D}/opt/${P}/share || die "failed to copy"
 
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html

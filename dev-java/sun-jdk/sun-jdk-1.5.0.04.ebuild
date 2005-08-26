@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.04.ebuild,v 1.3 2005/07/13 14:03:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.04.ebuild,v 1.4 2005/08/26 13:13:39 flameeyes Exp $
 
 inherit java eutils
 
@@ -108,14 +108,14 @@ src_install() {
 	dodir /opt/${P}
 
 	for i in $dirs ; do
-		cp -a $i ${D}/opt/${P}/ || die "failed to copy"
+		cp -pPR $i ${D}/opt/${P}/ || die "failed to copy"
 	done
 	dodoc COPYRIGHT LICENSE README.html
 	dohtml README.html
 	dodir /opt/${P}/share/
-	cp -a demo src.zip ${D}/opt/${P}/share/
+	cp -pPR demo src.zip ${D}/opt/${P}/share/
 	if ( use x86 || use amd64 ); then
-		cp -a sample ${D}/opt/${P}/share/
+		cp -pPR sample ${D}/opt/${P}/share/
 	fi
 
 	if use jce ; then

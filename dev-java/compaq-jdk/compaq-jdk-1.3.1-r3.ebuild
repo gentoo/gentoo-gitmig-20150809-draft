@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.7 2005/07/19 15:10:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1-r3.ebuild,v 1.8 2005/08/26 13:18:05 flameeyes Exp $
 
 inherit java fixheadtails
 
@@ -32,14 +32,14 @@ src_unpack() {
 
 src_install() {
 	dodir /opt/${P}
-	cp -a bin include include-old jre lib ${D}/opt/${P} || die
+	cp -pPR bin include include-old jre lib ${D}/opt/${P} || die
 
 	dodoc COPYRIGHT README LICENSE
 	dohtml README.html
 	doman man/man1/*.1
 
 	dodir /opt/${P}/share
-	cp -a demo src.jar ${D}/opt/${P}/share || die
+	cp -pPR demo src.jar ${D}/opt/${P}/share || die
 
 	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }

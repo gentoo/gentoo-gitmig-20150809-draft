@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.118 2005/08/10 20:29:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.119 2005/08/26 13:13:39 flameeyes Exp $
+
+  26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  sun-jdk-1.4.2.09.ebuild, sun-jdk-1.5.0.04.ebuild:
+  Fix cp -a usage for Gentoo/FreeBSD.
 
 *sun-jdk-1.4.2.09 (10 Aug 2005)
 

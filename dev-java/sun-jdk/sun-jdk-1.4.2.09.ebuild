@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.09.ebuild,v 1.1 2005/08/10 20:29:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.09.ebuild,v 1.2 2005/08/26 13:13:39 flameeyes Exp $
 
 inherit java eutils
 
@@ -99,13 +99,13 @@ src_install() {
 	dodir /opt/${P}
 
 	for i in $dirs ; do
-		cp -dPR $i ${D}/opt/${P}/
+		cp -PR $i ${D}/opt/${P}/
 	done
 
 	dodoc COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt
 	dohtml README.html
 	dodir /opt/${P}/share/
-	cp -a demo src.zip ${D}/opt/${P}/share/
+	cp -pPR demo src.zip ${D}/opt/${P}/share/
 
 	if use jce ; then
 		# Using unlimited jce while still retaining the strong jce

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.25 2005/07/13 13:57:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.26 2005/08/26 13:04:32 flameeyes Exp $
 
 inherit java eutils
 
@@ -45,10 +45,10 @@ src_compile() { :; }
 src_install() {
 	# Copy all the files to the designated directory
 	mkdir -p ${D}opt/${P}
-	cp -dpR ${S}/{bin,jre,lib,include} ${D}opt/${P}/
+	cp -pR ${S}/{bin,jre,lib,include} ${D}opt/${P}/
 
 	mkdir -p ${D}/opt/${P}/share
-	cp -a ${S}/{demo,src.jar} ${D}opt/${P}/share/
+	cp -pPR ${S}/{demo,src.jar} ${D}opt/${P}/share/
 
 	# setting the ppc stuff
 	if use ppc; then

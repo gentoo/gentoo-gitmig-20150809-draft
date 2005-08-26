@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08-r1.ebuild,v 1.4 2005/07/26 15:25:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08-r1.ebuild,v 1.5 2005/08/26 13:02:18 flameeyes Exp $
 
 inherit java eutils
 
@@ -79,7 +79,7 @@ src_install() {
 	dodir /opt/${P}
 
 	for i in $dirs ; do
-		cp -a $i ${D}/opt/${P}/
+		cp -pPR $i ${D}/opt/${P}/
 	done
 
 	dodoc CHANGES COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt

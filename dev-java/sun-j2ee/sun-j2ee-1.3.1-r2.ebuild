@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r2.ebuild,v 1.7 2005/07/19 18:34:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/sun-j2ee-1.3.1-r2.ebuild,v 1.8 2005/08/26 13:20:07 flameeyes Exp $
 
 inherit java-pkg
 
@@ -28,7 +28,7 @@ src_install() {
 
 	dodir /opt/${P}
 	for i in $dirs ; do
-		cp -a $i ${D}/opt/${P}/
+		cp -pPR $i ${D}/opt/${P}/
 	done
 
 	dodir /etc/env.d/
