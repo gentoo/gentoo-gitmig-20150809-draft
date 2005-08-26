@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 83eea624e2b02c94aaf9b9d7579eeaf1 ChangeLog 1620
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1e7163694afebfcc505c6f0db0a1ed0a log-dispatch-2.10.ebuild 660
-MD5 2f4047b3b220cf4486cdc31ef20da490 log-dispatch-2.08.ebuild 644
 MD5 0c0a1b99a403b834f53c8be3422e7d4e log-dispatch-2.06.ebuild 651
+MD5 2f4047b3b220cf4486cdc31ef20da490 log-dispatch-2.08.ebuild 644
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 83eea624e2b02c94aaf9b9d7579eeaf1 ChangeLog 1620
+MD5 a73090da69fd8396823b24f35e6793f4 log-dispatch-2.10.ebuild 665
 MD5 8d42257d4956bde70679b231e0ed74ce files/digest-log-dispatch-2.06 68
-MD5 c879383537659d74f314eebc2452e349 files/digest-log-dispatch-2.10 68
 MD5 b6f7ef764c5b1a25215ca0fbde21a986 files/digest-log-dispatch-2.08 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCx971Kf2g/qXtneoRAh+mAJ9IDqB7QK0103RFqdWMDww5DHEbNwCgrs/1
-18VaVycf24ktMgq8rOrXtvw=
-=/y8u
------END PGP SIGNATURE-----
+MD5 c879383537659d74f314eebc2452e349 files/digest-log-dispatch-2.10 68

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c80b0cc7bf649eb86fc9072a34e77ce ChangeLog 1425
-MD5 44e31ac8a5e317ce8d7d37518a1bf001 Time-modules-2003.1126.ebuild 555
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 23ae9281a254c99fa4cee6b072653d51 Time-modules-2003.0211.ebuild 537
+MD5 d7bbf348dbcae7755f492fb5b12f14c2 Time-modules-2003.1126.ebuild 560
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2c80b0cc7bf649eb86fc9072a34e77ce ChangeLog 1425
 MD5 45575c55c1b22b398d2c1fbafd079c52 files/digest-Time-modules-2003.0211 73
 MD5 b5fae8b679cd933f192b4bafc3d8c572 files/digest-Time-modules-2003.1126 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdR5jCHk4+ZoBpvsRAuVzAKCMx7O2lq2wlZBoa195kPlPlaHougCdEMQe
-wnsQjgYlteTeM4ZYG2qgmjw=
-=SY4b
------END PGP SIGNATURE-----

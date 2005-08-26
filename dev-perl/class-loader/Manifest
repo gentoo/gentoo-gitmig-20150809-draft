@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 257015b5cb5323ee85cb1207e8a689a6 ChangeLog 1126
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 12f408dcec4d02abf2a2359f344e1837 class-loader-2.03.ebuild 600
+MD5 257015b5cb5323ee85cb1207e8a689a6 ChangeLog 1126
 MD5 d81d0c51fdf2416f5104c85410f85c53 class-loader-2.02.ebuild 592
-MD5 0f27f9d6b9954abc5e101125d4111962 class-loader-2.03.ebuild 595
 MD5 859767b3f04f935065b3ade00db58fb7 files/digest-class-loader-2.03 67
 MD5 1aacf4d1bc67618b17d549ad223c5d84 files/digest-class-loader-2.02 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2s4JtG5z4I8BtQoRAoC7AJ0SaKO57pEF475DayJ96T6yWyOIKwCfZ/0G
-wcnDS33Ko8VwwJw86jRX8ZA=
-=eTkp
------END PGP SIGNATURE-----

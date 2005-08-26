@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/string-crc32
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/ChangeLog,v 1.10 2005/04/29 19:38:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/ChangeLog,v 1.11 2005/08/26 01:19:55 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> string-crc32-1.2.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   string-crc32-1.2.ebuild:

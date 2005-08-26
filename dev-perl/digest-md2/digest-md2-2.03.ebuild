@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/digest-md2-2.03.ebuild,v 1.9 2005/04/29 17:02:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/digest-md2-2.03.ebuild,v 1.10 2005/08/26 00:55:44 agriffis Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ~mips"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ~ppc sparc x86"
 IUSE=""

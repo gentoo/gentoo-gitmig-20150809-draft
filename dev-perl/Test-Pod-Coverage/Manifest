@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b8d188092f1c63fc938959803b00dea ChangeLog 1404
-MD5 fa5ca312c449bf17c580e642cf8b4612 Test-Pod-Coverage-1.06.ebuild 596
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 6b8d188092f1c63fc938959803b00dea ChangeLog 1404
+MD5 c7c6d11fb8b937703cadeff70955b0fb Test-Pod-Coverage-1.06.ebuild 601
 MD5 36b9d1e64fe11969d2ec3c508ffaf717 files/digest-Test-Pod-Coverage-1.06 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJantG5z4I8BtQoRApRJAJ4p2Pcq4daxvM1V+7T/rvGdq5TNigCfZTss
-faTDY8vIF/+V+Ih3sac1xfE=
-=mFjL
------END PGP SIGNATURE-----

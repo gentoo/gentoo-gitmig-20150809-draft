@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8e79349b59d07213f80f96ed123c02d ChangeLog 945
-MD5 83bc47d0109831bf55a6dea9d9b749a0 Xmms-Perl-0.12.ebuild 715
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 41b65b4f8e2af8bb001870f26491a87b files/Xmms-Perl-0.12-MP3Info.diff 390
+MD5 a8e79349b59d07213f80f96ed123c02d ChangeLog 945
+MD5 f7047496e95c1dff995349fadea6ebb2 Xmms-Perl-0.12.ebuild 720
 MD5 30fdbaa228a4e17ff1d69fbafe6d62a1 files/digest-Xmms-Perl-0.12 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCclyytG5z4I8BtQoRAugtAJ9b4mSHurrceAUSgy0Zxxb98GCa9gCeJMkU
-j3mHsa/lCjd2er4WtU3Vqdk=
-=aYun
------END PGP SIGNATURE-----
+MD5 41b65b4f8e2af8bb001870f26491a87b files/Xmms-Perl-0.12-MP3Info.diff 390

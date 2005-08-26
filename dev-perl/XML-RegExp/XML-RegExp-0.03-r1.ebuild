@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/XML-RegExp-0.03-r1.ebuild,v 1.10 2005/05/18 08:47:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/XML-RegExp-0.03-r1.ebuild,v 1.11 2005/08/26 00:42:34 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cpan.org/modules/by-module/XML/XML-RegExp-0.03.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha ppc64"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"

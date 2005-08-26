@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.26 2005/08/13 23:10:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.27 2005/08/26 00:01:51 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Params-Validate-0.76.ebuild:
+  add ~ia64
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   Params-Validate-0.76.ebuild:

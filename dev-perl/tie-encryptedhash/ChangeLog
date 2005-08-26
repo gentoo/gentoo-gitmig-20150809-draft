@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/tie-encryptedhash
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.9 2005/04/22 12:52:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/ChangeLog,v 1.10 2005/08/26 01:22:35 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  tie-encryptedhash-1.21.ebuild:
+  add ~ia64
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   tie-encryptedhash-1.21.ebuild:

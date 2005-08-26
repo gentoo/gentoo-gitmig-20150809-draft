@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Telnet-Cisco
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/ChangeLog,v 1.6 2005/04/29 01:30:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/ChangeLog,v 1.7 2005/08/25 23:57:28 agriffis Exp $
+
+  25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Net-Telnet-Cisco-1.10.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Net-Telnet-Cisco-1.10.ebuild:

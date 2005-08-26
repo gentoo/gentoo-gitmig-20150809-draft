@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-NodeFilter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/ChangeLog,v 1.6 2005/04/29 16:01:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/ChangeLog,v 1.7 2005/08/26 00:41:20 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  XML-NodeFilter-0.01.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   XML-NodeFilter-0.01.ebuild:

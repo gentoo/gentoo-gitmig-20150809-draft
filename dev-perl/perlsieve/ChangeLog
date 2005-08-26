@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perlsieve
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlsieve/ChangeLog,v 1.8 2005/05/01 18:18:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlsieve/ChangeLog,v 1.9 2005/08/26 01:17:12 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> perlsieve-0.4.9b.ebuild:
+  add ~ia64
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   perlsieve-0.4.9b.ebuild:

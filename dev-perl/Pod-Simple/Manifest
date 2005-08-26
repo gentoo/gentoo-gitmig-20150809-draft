@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f30f138fe8f36fc0841ef0210c04347 ChangeLog 1312
-MD5 764cf3835299cb5f0e75c9b5593e3b7c Pod-Simple-3.02.ebuild 540
-MD5 8f2e9a80dcc2a78cfc79249ed7b14290 files/digest-Pod-Simple-3.02 67
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0FflI1lqEGTUzyQRAsHgAJ41ufqq33ZeZ6O/pcYmi5A0xMLqTgCff5Wd
-D/DrrWcQKbnFvNwx02bwJWs=
-=yET/
------END PGP SIGNATURE-----
+MD5 c40b812f071ce0dc04cd235fc9e857b3 Pod-Simple-3.02.ebuild 545
+MD5 8f30f138fe8f36fc0841ef0210c04347 ChangeLog 1312
+MD5 8f2e9a80dcc2a78cfc79249ed7b14290 files/digest-Pod-Simple-3.02 67

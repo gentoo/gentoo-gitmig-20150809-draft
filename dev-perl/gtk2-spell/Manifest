@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7fbe5c5f7e50cab51b57385f8faf898 ChangeLog 1327
-MD5 53093e84100463e00b7167e6bcad23e9 gtk2-spell-1.03.ebuild 786
+MD5 204b602f8cef5caf2024fc625aa8ff25 gtk2-spell-1.03.ebuild 791
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b7fbe5c5f7e50cab51b57385f8faf898 ChangeLog 1327
 MD5 310f16aa5a3a61290442c602579d06cd files/digest-gtk2-spell-1.03 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCiihJKRy60XGEcJIRAqpyAKCDnwkGfb5GZb0ly6TDcejIfc77+wCeOf+U
-IglQFsPHg5u73ObOXJDxlBk=
-=7slC
------END PGP SIGNATURE-----

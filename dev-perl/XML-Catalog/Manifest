@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f828b920678a2cd0c2ab591f4b1ea554 ChangeLog 1437
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1581ee8468df931089988cbe17930eb9 XML-Catalog-0.02-r2.ebuild 547
 MD5 11dcd14c8eb2c1930371c9995624ec83 XML-Catalog-0.02-r1.ebuild 543
-MD5 944cb698818eb26a20be32c245ef6eb4 XML-Catalog-0.02-r2.ebuild 542
-MD5 1e324da59947016392b9e8e102f20bcd files/digest-XML-Catalog-0.02-r1 66
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f828b920678a2cd0c2ab591f4b1ea554 ChangeLog 1437
 MD5 1e324da59947016392b9e8e102f20bcd files/digest-XML-Catalog-0.02-r2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2qIvtG5z4I8BtQoRAnxAAJ9/NeNwCgwN08aZSH5AtBmkaFABPgCeN5iC
-SmTOXe9/YJ3wZ2WWIdm5cis=
-=+SkY
------END PGP SIGNATURE-----
+MD5 1e324da59947016392b9e8e102f20bcd files/digest-XML-Catalog-0.02-r1 66

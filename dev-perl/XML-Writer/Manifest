@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c163afe89cd20bafe1fe43392a867779 XML-Writer-0.545.ebuild 513
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cf5bcb4bed6a149ee123dd42c40d67fb ChangeLog 3676
 MD5 fbf63d5a4371e51d9acc55cd01a0e78d XML-Writer-0.510.ebuild 498
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 4b92ea13195f96418d309c1659e0bd15 XML-Writer-0.545.ebuild 508
 MD5 a4e289f1222a94d7e8d781fa019c9a71 files/digest-XML-Writer-0.510 67
 MD5 4c86211df1e3e13fe68ceb2a888e5007 files/digest-XML-Writer-0.545 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkM7EtG5z4I8BtQoRAreyAKCFxWwqao+CPg6XdCZ5jQx5i2U0mQCeLISn
-5++cXqOg/sI+aOCdKw0A+tk=
-=h65a
------END PGP SIGNATURE-----

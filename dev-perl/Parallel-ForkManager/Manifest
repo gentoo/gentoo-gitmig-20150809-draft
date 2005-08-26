@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 857949e962a69ff73429b0d6de414087 ChangeLog 658
-MD5 a8c26c9d4a2f06c0adf7c932ebb9428e Parallel-ForkManager-0.7.5.ebuild 596
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 857949e962a69ff73429b0d6de414087 ChangeLog 658
+MD5 61d776e9af38ded7fc919ac20ab9618b Parallel-ForkManager-0.7.5.ebuild 601
 MD5 dccae2d917d5c9dfe11119586a3dba0b files/digest-Parallel-ForkManager-0.7.5 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcZG+tG5z4I8BtQoRAiueAJ4gg/i9S1a4afK2px/9SbNVbOzmRgCfT1Sh
-xeU4gxuD4dkjSACduszl0z8=
-=Exab
------END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unix-Syslog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.12 2005/04/29 15:44:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.13 2005/08/26 00:34:30 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Unix-Syslog-0.100-r1.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Unix-Syslog-0.100.ebuild, Unix-Syslog-0.100-r1.ebuild:

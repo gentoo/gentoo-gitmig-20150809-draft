@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDF-Create
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.11 2005/08/07 13:08:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.12 2005/08/26 00:00:25 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> PDF-Create-0.06.1b.ebuild:
+  add ~ia64
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   PDF-Create-0.01.ebuild:

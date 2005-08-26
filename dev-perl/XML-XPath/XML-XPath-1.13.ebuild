@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/XML-XPath-1.13.ebuild,v 1.12 2005/04/19 18:28:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/XML-XPath-1.13.ebuild,v 1.13 2005/08/26 00:47:42 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~msergeant/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha ~mips ppc64"
+KEYWORDS="alpha amd64 ~ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="${DEPEND}

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1bfb1fb157ad6e5138c83762e6c885f1 ChangeLog 1206
-MD5 a755eaea695c86aea7ee8b24b72cefd3 crypt-des-ede3-0.01.ebuild 630
+MD5 98ed31a853c2c1457aadc43ebf34cd90 crypt-des-ede3-0.01.ebuild 635
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1bfb1fb157ad6e5138c83762e6c885f1 ChangeLog 1206
 MD5 eec67ec184fc403d514e4b9188d65e1e files/digest-crypt-des-ede3-0.01 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcmgHtG5z4I8BtQoRAlmyAJ4kk4DnTHxzCvy6XMdJv0JJLOKB0wCcCj9p
-42Ykg8ewUkZx1yrf7DbCIzg=
-=6i1A
------END PGP SIGNATURE-----

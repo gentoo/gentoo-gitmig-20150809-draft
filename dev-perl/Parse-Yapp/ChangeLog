@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-Yapp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.15 2005/04/29 01:48:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.16 2005/08/26 00:02:30 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Parse-Yapp-1.05-r1.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Parse-Yapp-1.05.ebuild, Parse-Yapp-1.05-r1.ebuild:

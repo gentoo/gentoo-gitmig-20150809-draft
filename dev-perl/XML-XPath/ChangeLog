@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XPath
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.20 2005/04/19 18:28:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.21 2005/08/26 00:47:42 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> XML-XPath-1.13.ebuild:
+  add ~ia64
 
   19 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> XML-XPath-1.13.ebuild:
   Stable on ppc.

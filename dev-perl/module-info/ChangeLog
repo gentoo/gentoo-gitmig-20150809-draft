@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/module-info
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.21 2005/08/21 09:37:06 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.22 2005/08/26 01:14:05 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> module-info-0.28.ebuild:
+  add ~ia64
 
   21 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org>
   module-info-0.28.ebuild:

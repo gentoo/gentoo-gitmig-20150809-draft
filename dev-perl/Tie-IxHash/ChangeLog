@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.14 2005/04/29 15:17:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.15 2005/08/26 00:26:44 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Tie-IxHash-1.21.ebuild, Tie-IxHash-1.21-r1.ebuild:

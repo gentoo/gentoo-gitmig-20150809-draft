@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.13 2005/05/01 18:37:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.14 2005/08/26 01:15:55 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  ogg-vorbis-header-0.03.ebuild:
+  add ~ia64
 
   01 May 2005; Tom Martin <slarti@gentoo.org> ogg-vorbis-header-0.03.ebuild:
   Stable on amd64.

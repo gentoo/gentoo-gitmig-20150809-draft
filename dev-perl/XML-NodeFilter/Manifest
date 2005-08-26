@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2464b3092f9b55dcee4f24e19c4cf93b ChangeLog 817
-MD5 c3cf976cea0148f5bdaa3a2b85d70f39 XML-NodeFilter-0.01.ebuild 523
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b1bd7c078d3e127f0177e386c9924069 XML-NodeFilter-0.01.ebuild 528
+MD5 2464b3092f9b55dcee4f24e19c4cf93b ChangeLog 817
 MD5 a4c0808df32140c68ca202b97bddc0e8 files/digest-XML-NodeFilter-0.01 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCclpptG5z4I8BtQoRAjUwAJ0dEY0POOH3f4xd6PlRIv7Ie3prNwCfUbGv
-aosKrBgwVh9qgrDCldaRPGk=
-=VIqx
------END PGP SIGNATURE-----

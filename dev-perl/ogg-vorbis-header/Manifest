@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d606ad452dcc2e98790816ab4250d146 ogg-vorbis-header-0.03.ebuild 685
-MD5 76b81a99c77679c4d7e9738f2bf19027 ChangeLog 1687
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 e0592b3c3721b36616c27c767b0b0651 ogg-vorbis-header-0.03.ebuild 690
+MD5 76b81a99c77679c4d7e9738f2bf19027 ChangeLog 1687
 MD5 3d96e8771c5ceb1868cc169ad547006c ogg-vorbis-header-0.02.ebuild 673
 MD5 53ef8293adb4df3459ca51873e306e8f files/digest-ogg-vorbis-header-0.02 73
 MD5 2328763fd8413f5dd745317864bf9902 files/digest-ogg-vorbis-header-0.03 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdSHuCHk4+ZoBpvsRAs1ZAJ0SvVS5+pQpnbWXsPlRsEMrSa+rLACdFcK3
-BfjYa/4AVFu6gyImPoMkjt8=
-=vOU6
------END PGP SIGNATURE-----

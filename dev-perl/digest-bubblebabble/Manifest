@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae62220193be8f6e179bec7b0821102f ChangeLog 1151
-MD5 2ab9958087cad8b2301ec223cc84df12 digest-bubblebabble-0.01.ebuild 613
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 ae62220193be8f6e179bec7b0821102f ChangeLog 1151
+MD5 618991c46fc5bb9e4b8a95a127ff1255 digest-bubblebabble-0.01.ebuild 618
 MD5 04655211f4d9aafa493950f4ac3b635c files/digest-digest-bubblebabble-0.01 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcmimtG5z4I8BtQoRAlRkAJ46ZCVeJQ9q9VNoVY0T4k9hNnzRJACgiAht
-xvRK3sh4cYQ4kkSMpbAgEiM=
-=eCzV
------END PGP SIGNATURE-----

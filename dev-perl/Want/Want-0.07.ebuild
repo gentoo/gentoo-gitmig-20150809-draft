@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/Want-0.07.ebuild,v 1.4 2005/05/01 18:31:01 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/Want-0.07.ebuild,v 1.5 2005/08/26 00:35:15 agriffis Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/R/RO/ROBIN/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/~robin/${P}/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc ~alpha ~hppa"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"

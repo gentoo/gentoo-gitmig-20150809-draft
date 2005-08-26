@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b23a356e709d7255869bad58e88f358 ChangeLog 795
-MD5 7c789331f855df0475d6a19bee3492a6 Net-Telnet-Cisco-1.10.ebuild 609
+MD5 4e38661cb531bbbb085f58221a32fe50 Net-Telnet-Cisco-1.10.ebuild 614
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 7b23a356e709d7255869bad58e88f358 ChangeLog 795
 MD5 4f1a3e4ff930eb840df57793288ba6b9 files/digest-Net-Telnet-Cisco-1.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcY3KtG5z4I8BtQoRAk/UAJsF7vs5zpS+3LCmqj2i455ZbbwuuACfa1b0
-Js5EiSgVQf/XEf9lvsb1/ws=
-=XUBL
------END PGP SIGNATURE-----

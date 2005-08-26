@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 220527338a55b8e7a748208032ca0845 ChangeLog 1588
+MD5 b4af872fbf56c0b55cdfa0460ee9bf93 Period-1.20-r3.ebuild 499
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 c7f811121b1df0bab291c9be1ad90d0b Period-1.20-r3.ebuild 494
+MD5 220527338a55b8e7a748208032ca0845 ChangeLog 1588
 MD5 c736a399afd263a296db08e0b4ad0efe files/digest-Period-1.20-r3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbBi0tG5z4I8BtQoRAoKXAJ9Xarde4EyQGb1iJTTjoQheQaWjmwCfZpGm
-m24qZ7pbqajFNMxnecVqFCs=
-=PpzD
------END PGP SIGNATURE-----

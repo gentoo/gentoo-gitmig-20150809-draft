@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1bc12f878efcf4310d2a88e5d038998e ChangeLog 2464
-MD5 d4cb232f47a15f43d5e2536b9a369b9f extutils-pkgconfig-1.07.ebuild 590
+MD5 166a771113a15d42c7777554271c5d21 extutils-pkgconfig-1.07.ebuild 595
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1bc12f878efcf4310d2a88e5d038998e ChangeLog 2464
 MD5 4e1daf1288c0a8286f35bafb57aae939 files/digest-extutils-pkgconfig-1.07 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcTfjtG5z4I8BtQoRAgvrAKCD5NN76ZvcC+OnccB2656oO3diBQCfRfGU
-7BpB6DR17tEdQLqhBbYQBO0=
-=5kaU
------END PGP SIGNATURE-----

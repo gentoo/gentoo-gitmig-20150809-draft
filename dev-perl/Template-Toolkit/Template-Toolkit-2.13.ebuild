@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.13.ebuild,v 1.4 2005/03/09 18:51:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.13.ebuild,v 1.5 2005/08/26 00:18:30 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.template-toolkit.org"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~amd64 ppc ~sparc ~alpha"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
 
 DEPEND="${DEPEND}
 	>=dev-perl/AppConfig-1.52"

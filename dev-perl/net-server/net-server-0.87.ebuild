@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.87.ebuild,v 1.7 2005/04/29 17:46:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.87.ebuild,v 1.8 2005/08/26 01:14:44 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/B/BB/BBB/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~hppa ~mips ~ppc ~sparc ~amd64 ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"

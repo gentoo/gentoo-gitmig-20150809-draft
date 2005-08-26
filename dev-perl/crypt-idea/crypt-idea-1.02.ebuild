@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/crypt-idea-1.02.ebuild,v 1.13 2005/05/06 18:41:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/crypt-idea-1.02.ebuild,v 1.14 2005/08/26 00:53:27 agriffis Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ SRC_URI="mirror://cpan/authors/id/D/DP/DPARIS/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64 ~mips s390 ~ppc64"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 s390 sparc x86"
 IUSE=""

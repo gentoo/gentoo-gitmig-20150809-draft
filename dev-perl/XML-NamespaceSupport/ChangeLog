@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-NamespaceSupport
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.24 2005/05/29 15:59:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.25 2005/08/26 00:40:43 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  XML-NamespaceSupport-1.09.ebuild:
+  add ~ia64
 
   29 May 2005; Markus Rothe <corsair@gentoo.org>
   XML-NamespaceSupport-1.08.ebuild:

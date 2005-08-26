@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c82a66520dba1307224203680b47f42 ChangeLog 1079
-MD5 fd0e94e5287ea7c50c8e069209ac7e96 Unix-Syslog-0.100-r1.ebuild 545
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 9ec81438a62425b1d5b4eec9124139d4 Unix-Syslog-0.100-r1.ebuild 550
+MD5 9c82a66520dba1307224203680b47f42 ChangeLog 1079
 MD5 9e04cd00e0d93871fd4e6f75693af8ca files/digest-Unix-Syslog-0.100-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCclZmtG5z4I8BtQoRAiNaAJ0Z7MyMeY8Ja4U+T9w+Yo2TT3enHgCfdwot
-5rRIih5qfW6hr/ikDbchjhs=
-=h2Jv
------END PGP SIGNATURE-----

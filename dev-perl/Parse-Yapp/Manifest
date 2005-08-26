@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1cede1b0e65a9f582e0565a0640c5b2d ChangeLog 1302
-MD5 0afd7128317c96871e2bf60cd01cb40a Parse-Yapp-1.05-r1.ebuild 691
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1cede1b0e65a9f582e0565a0640c5b2d ChangeLog 1302
+MD5 29a38044ba2daef6082b7f842f87e5de Parse-Yapp-1.05-r1.ebuild 696
 MD5 b2c5740ed5271a57bb9f917d58a49a0c files/digest-Parse-Yapp-1.05-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcZIMtG5z4I8BtQoRAkiFAJ4h8AjzT9Mz9PRiTbrgwjxIFDAvCACeOfZ8
-5L0NrkYRv68t/Xmy0OolkKY=
-=jmwI
------END PGP SIGNATURE-----

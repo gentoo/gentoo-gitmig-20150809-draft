@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e97f917de14143be592ac3dbe8e77c11 ChangeLog 1700
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d07cd1f696fadd2f45efcf09a69a25a7 Net-Telnet-3.03-r1.ebuild 533
+MD5 e97f917de14143be592ac3dbe8e77c11 ChangeLog 1700
+MD5 bd567d7ddb9ea10c8a1e3599073cf25f Net-Telnet-3.03-r1.ebuild 538
 MD5 0c329e2965b5b46d9504f1484f5bf0d9 files/digest-Net-Telnet-3.03-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbBoztG5z4I8BtQoRAnWRAJ9U35vad+eq3cQPTpkPlRVdItZmQgCfZ/eF
-XSo6/bREJzzsbcNQ5K9ftuw=
-=ozTP
------END PGP SIGNATURE-----

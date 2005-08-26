@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Builder-Tester
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Builder-Tester/ChangeLog,v 1.17 2005/05/25 15:13:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Builder-Tester/ChangeLog,v 1.18 2005/08/26 00:20:22 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  Test-Builder-Tester-1.01.ebuild:
+  add ~ia64
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org>
   Test-Builder-Tester-1.01.ebuild:
