@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e0d47602ac2c79cbfe00673d898c34f gst-plugins-speex-0.8.8.ebuild 462
-MD5 098f74e6d6281381b5e4160653a708e0 gst-plugins-speex-0.8.10.ebuild 467
-MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 MD5 5952012114468dd78c4396391c2520e3 gst-plugins-speex-0.8.9.ebuild 466
-MD5 db4b301c77dc6ff81d4f67d67a7c4df6 ChangeLog 1318
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-speex-0.8.9 71
+MD5 b30a37bc3c078fead963f101471de0da gst-plugins-speex-0.8.10.ebuild 466
+MD5 8e0d47602ac2c79cbfe00673d898c34f gst-plugins-speex-0.8.8.ebuild 462
+MD5 5bbb7cddf4c77aca5e3b3f6b29080da2 ChangeLog 1426
+MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-speex-0.8.8 71
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-speex-0.8.9 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-speex-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC8RmBKRy60XGEcJIRAv60AJ9sveL78dYBmwMIafmXgZhs6x9PnQCgsUR4
-m8swWJwKRFkq3lLniCS5XeE=
-=kDN9
------END PGP SIGNATURE-----
