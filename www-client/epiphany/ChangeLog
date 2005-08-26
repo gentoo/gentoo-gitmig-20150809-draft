@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.32 2005/08/26 07:48:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.33 2005/08/26 18:05:56 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> epiphany-1.6.4.ebuild:
+  stable on ia64
 
   26 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   epiphany-1.6.4.ebuild:
