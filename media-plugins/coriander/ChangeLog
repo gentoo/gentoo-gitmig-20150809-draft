@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/coriander
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/coriander/ChangeLog,v 1.5 2005/01/25 19:52:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/coriander/ChangeLog,v 1.6 2005/08/26 16:01:30 seemant Exp $
+
+  26 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
+  coriander-1.0.0_pre3.ebuild, coriander-1.0.0.ebuild:
+  moved libdc1394 from media-plugins to media-libs
 
   25 Jan 2005; Markus Rothe <corsair@gentoo.org> coriander-1.0.0.ebuild:
   Stable on ppc64
