@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4e24da1b26ace355d8f46d33b9bebc8 alloy-0.5.2.ebuild 727
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 c4bcc28f2d7d633dab2ff1750b8ee7d7 alloy-0.5.2.ebuild 732
 MD5 651a4c3a91758cc59874ab258129c63d ChangeLog 3175
-MD5 dd9ace3c92e2dba5e2304d8b21e0a8eb files/digest-alloy-0.5.2 70
 MD5 a62d58aa021973a98b3978cf6a69c171 files/remove-extra-semicolon.patch 258
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC8RHmKRy60XGEcJIRAukgAKCmK2/6+cFZsPjWtmnixOEBFDg8zQCfSFdi
-4hSHd1NZIPmBOFjYhnHGCJg=
-=Md56
------END PGP SIGNATURE-----
+MD5 dd9ace3c92e2dba5e2304d8b21e0a8eb files/digest-alloy-0.5.2 70

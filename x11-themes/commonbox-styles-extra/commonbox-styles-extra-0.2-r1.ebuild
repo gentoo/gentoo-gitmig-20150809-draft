@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/commonbox-styles-extra-0.2-r1.ebuild,v 1.13 2005/05/28 03:05:27 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/commonbox-styles-extra-0.2-r1.ebuild,v 1.14 2005/08/26 13:36:37 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Extra styles pack for flux|black|open(box)."
@@ -10,7 +10,7 @@ HOMEPAGE="http://mkeadle.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha amd64 ~hppa ~ppc64 ~ppc-macos"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ~ppc-macos ~ppc64 sparc x86"
 
 DEPEND="media-gfx/xv
 		virtual/x11"

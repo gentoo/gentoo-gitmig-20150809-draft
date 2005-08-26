@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.21 2005/08/03 18:49:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.22 2005/08/26 13:30:22 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> alloy-0.5.2.ebuild:
+  add ~ia64
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> alloy-0.5.2.ebuild:
   Stable on sparc

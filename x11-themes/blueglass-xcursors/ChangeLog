@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/blueglass-xcursors
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.16 2005/06/17 03:10:57 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/blueglass-xcursors/ChangeLog,v 1.17 2005/08/26 13:35:51 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  blueglass-xcursors-0.4.ebuild:
+  add ~ia64
 
   17 Jun 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
   blueglass-xcursors-0.4.ebuild:

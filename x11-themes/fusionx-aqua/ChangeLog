@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fusionx-aqua
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/ChangeLog,v 1.7 2005/08/21 21:28:07 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/ChangeLog,v 1.8 2005/08/26 13:37:23 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> fusionx-aqua-1.1.ebuild:
+  add ~ia64
 
   21 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> fusionx-aqua-1.1.ebuild:
   Correct KDE dependency (#83058).
