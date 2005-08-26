@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.11.91.ebuild,v 1.1 2005/08/18 21:59:35 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.11.92.ebuild,v 1.1 2005/08/26 01:40:49 allanonjl Exp $
 
 inherit eutils gnome2
 
