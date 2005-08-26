@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f5ec25694b4a5ebe901445792a1da43 libprelude-0.9.0_rc11.ebuild 1435
 MD5 94362b0c65d11a02491b86d1696468cf libprelude-0.9.0_rc13.ebuild 1432
 MD5 5530b51e2aabfdddb68f05ba69c95171 libprelude-0.8.10-r1.ebuild 1099
-MD5 16090bf8d7129fd30e3048668dc73785 ChangeLog 5145
+MD5 f93f8094e2355e3084654515ebc6751e ChangeLog 5319
 MD5 58ac7b9f0648503cb1ef46d0e5c96a12 metadata.xml 224
-MD5 b56d69c69ce23d3ee4f0a04ce182a873 files/digest-libprelude-0.9.0_rc11 74
+MD5 e8f7b827490f9f1f58b77c1e0e6189ae libprelude-0.9.0_rc14.ebuild 1435
 MD5 5df4bf82d375985d71d502200ae1b602 files/digest-libprelude-0.9.0_rc13 74
+MD5 8d171bec8583beb64c11e138561b8e46 files/digest-libprelude-0.9.0_rc14 74
 MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBOhqEZCkKN40op4RAt0MAJ9rkLkYkZGWz1DSZVwHLoJ865zoSQCcC4D2
-k95xh32M1WJQuraih+Z19aY=
-=FVeh
------END PGP SIGNATURE-----
