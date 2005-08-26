@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.12 2005/07/12 21:41:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.13 2005/08/26 18:38:56 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> gwenhywfar-1.14.0.ebuild:
+  add ~ia46
 
 *gwenhywfar-1.14.0 (12 Jul 2005)
 
