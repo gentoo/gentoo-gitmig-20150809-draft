@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.20 2005/08/02 18:09:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.21 2005/08/26 17:00:32 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  ruby-gnomecanvas2-0.12.0.ebuild:
+  stable on ia64
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org>
   ruby-gnomecanvas2-0.12.0.ebuild:
