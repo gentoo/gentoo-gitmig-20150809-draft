@@ -1,6 +1,9 @@
-# ChangeLog for media-plugins/coriander
+# ChangeLog for media-video/coriander
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.1 2005/08/26 16:13:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.2 2005/08/26 16:14:33 seemant Exp $
+
+  26 Aug 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml:
+  add metadata
 
   26 Aug 2005; Seemant Kulleen <seemant@gentoo.org>
   +coriander-1.0.0_pre3.ebuild, +coriander-1.0.0.ebuild:
