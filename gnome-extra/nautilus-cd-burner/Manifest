@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 65178db898f58c60a2f65f4253d40e38 nautilus-cd-burner-2.10.0.ebuild 1136
 MD5 97755278870098f3a69e306b285b377b nautilus-cd-burner-2.10.2.ebuild 1393
 MD5 7ca22362da1956087ebe476ffdc5f644 nautilus-cd-burner-2.11.7.ebuild 1203
@@ -9,3 +12,10 @@ MD5 86395a29bcac00ddc56fd80e232bebb5 files/digest-nautilus-cd-burner-2.10.0 78
 MD5 fbad76c0bddc48265b9de05e9bbb6a7d files/digest-nautilus-cd-burner-2.10.1 78
 MD5 7f24e749f8188590151fc85deff46c20 files/digest-nautilus-cd-burner-2.10.2 78
 MD5 d0a58014889c73b5f241222290a06e28 files/digest-nautilus-cd-burner-2.11.7 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDD2G+KRy60XGEcJIRAp55AKCGoZ3ctw8dkbun9hCDTAlvTxtc6ACffVht
+kBD2ZDmr0uKU66wHFFZCx7Q=
+=fT2a
+-----END PGP SIGNATURE-----
