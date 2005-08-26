@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-tools/aqhbci-qt-tools-1.0.6_beta.ebuild,v 1.2 2005/07/25 17:47:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-qt-tools/aqhbci-qt-tools-1.0.6_beta.ebuild,v 1.3 2005/08/26 19:00:28 agriffis Exp $
 
 inherit eutils kde-functions
 need-qt 3
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
 SRC_URI="mirror://sourceforge/aqhbci/${P/_/}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug"
 DEPEND=">=net-libs/aqhbci-1.1.0
 	=x11-libs/qt-3*"
