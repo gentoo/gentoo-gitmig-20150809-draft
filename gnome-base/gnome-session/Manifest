@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c9b685052085b1c022785575a65aa502 gnome-session-2.8.1.ebuild 1580
-MD5 279aa2e6b64e5e4ba11b03e4997a37e3 gnome-session-2.11.91.ebuild 2015
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 682dde4727e212444f93c3ff2a5349e4 ChangeLog 15108
+MD5 ee1a544917f9b9824a08ab8b873b58d0 ChangeLog 15217
 MD5 4499ec98ae9a50f5de83b8ce43411a80 gnome-session-2.10.0.ebuild 1586
+MD5 c9b685052085b1c022785575a65aa502 gnome-session-2.8.1.ebuild 1580
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8023f0dd74e719eeb32219d59f912f95 gnome-session-2.10.0-r3.ebuild 2128
-MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.patch 1484
+MD5 8b4db6ad44f29688455569579d66235f gnome-session-2.11.91.ebuild 2025
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
-MD5 978c8881fbbaaaba52db38c0dddfb7be files/digest-gnome-session-2.11.91 135
+MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0 134
 MD5 20d1fd1924d8b4f8aed2a43547bd77db files/digest-gnome-session-2.8.1 133
+MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.patch 1484
 MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
 MD5 1472ffe4555c4aab66d8359a4031544d files/gnome-session-2.10.0-schema_defaults.patch 648
-MD5 b3685e6ab1ec8736038735270ae11fb5 files/gnome-session-2.10.0-no_smproxy.patch 2103
-MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0-r3 134
-MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0 134
 MD5 ef9c116121d03af45e5f6f00050da2d6 files/gnome-session-2.10.0-esd_switch.patch 1910
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCmN5BXaUFmZvwyMRAqMxAKDbDaCKKx95MQO7pszGSSQgOv5MAACgvG9E
-2sIrjjaZy12kEY16MMmY3Yg=
-=PRK6
------END PGP SIGNATURE-----
+MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0-r3 134
+MD5 b3685e6ab1ec8736038735270ae11fb5 files/gnome-session-2.10.0-no_smproxy.patch 2103
+MD5 978c8881fbbaaaba52db38c0dddfb7be files/digest-gnome-session-2.11.91 135
