@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/ChangeLog,v 1.13 2005/04/24 22:12:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/ChangeLog,v 1.14 2005/08/26 02:24:37 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Mon-0.11-r2.ebuild:
+  add ~ia64
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org> -Mon-0.11-r1.ebuild:
   cleaning

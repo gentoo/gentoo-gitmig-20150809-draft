@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 216eebb464530cfbd3aa882abf9a19fb ChangeLog 2269
-MD5 e5c0fd0d41f3013ff04d96ff27fe0390 Finance-Quote-1.08-r1.ebuild 661
-MD5 a5e2b2302198ccb1c2c9682eee5d1a86 Finance-Quote-1.08.ebuild 584
-MD5 62b4a2ad0eb4c559f6495a5b333ab1de files/Finance-Quote-1.08-tase.patch 772
-MD5 792a9010390ffc352513b6cb5ed77e36 files/digest-Finance-Quote-1.08 69
-MD5 792a9010390ffc352513b6cb5ed77e36 files/digest-Finance-Quote-1.08-r1 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0FvEI1lqEGTUzyQRAj6tAJ0a3r8EY854wFoydDzMQicjoiPLyQCaAgLj
-m0DXxcOcWdaCg/jE06KL3mU=
-=fX0+
------END PGP SIGNATURE-----
+MD5 216eebb464530cfbd3aa882abf9a19fb ChangeLog 2269
+MD5 a5e2b2302198ccb1c2c9682eee5d1a86 Finance-Quote-1.08.ebuild 584
+MD5 5412eaa7b7bad6d678e1faa357ddc923 Finance-Quote-1.08-r1.ebuild 666
+MD5 62b4a2ad0eb4c559f6495a5b333ab1de files/Finance-Quote-1.08-tase.patch 772
+MD5 792a9010390ffc352513b6cb5ed77e36 files/digest-Finance-Quote-1.08-r1 69
+MD5 792a9010390ffc352513b6cb5ed77e36 files/digest-Finance-Quote-1.08 69

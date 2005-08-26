@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/POE
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.35 2005/08/19 19:40:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.36 2005/08/26 02:28:34 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> POE-0.26.ebuild:
+  add ~ia64
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> POE-0.31.01.ebuild:
   Added to ~ppc.

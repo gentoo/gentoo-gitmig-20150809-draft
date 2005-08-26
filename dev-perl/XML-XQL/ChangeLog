@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XQL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/ChangeLog,v 1.15 2005/04/29 00:38:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/ChangeLog,v 1.16 2005/08/26 02:37:44 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> XML-XQL-0.68.ebuild:
+  add ~ia64
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org> -XML-XQL-0.67.ebuild,
   -XML-XQL-0.67-r1.ebuild, XML-XQL-0.68.ebuild:

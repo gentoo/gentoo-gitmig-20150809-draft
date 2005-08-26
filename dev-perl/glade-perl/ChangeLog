@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glade-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glade-perl/ChangeLog,v 1.7 2005/05/17 17:57:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glade-perl/ChangeLog,v 1.8 2005/08/26 02:40:49 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> glade-perl-0.61.ebuild:
+  add ~ia64
 
   17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   glade-perl-0.61.ebuild:

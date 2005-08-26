@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CORBA-ORBit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.9 2005/04/24 15:10:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.10 2005/08/26 02:12:07 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> CORBA-ORBit-0.4.7.ebuild:
+  add ~ia64
 
 *CORBA-ORBit-0.4.7 (24 Apr 2005)
 

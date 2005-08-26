@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-SAX-Writer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.10 2005/07/30 12:43:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.11 2005/08/26 02:35:15 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  XML-SAX-Writer-0.44-r1.ebuild:
+  add ~ia64
 
   30 Jul 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
   XML-SAX-Writer-0.44-r1.ebuild:

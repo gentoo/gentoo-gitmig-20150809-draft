@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.11 2005/04/25 17:18:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.12 2005/08/26 02:21:37 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Graph-0.63.ebuild:
+  add ~ia64
 
 *Graph-0.20.101 (25 Apr 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OpenCA-OpenSSL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.18 2005/06/17 20:43:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.19 2005/08/26 02:26:41 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
+  OpenCA-OpenSSL-0.9.91.ebuild:
+  add ~ia64
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   OpenCA-OpenSSL-0.9.91.ebuild:

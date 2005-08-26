@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XSLT
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/ChangeLog,v 1.20 2005/01/04 14:35:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XSLT/ChangeLog,v 1.21 2005/08/26 02:38:23 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> XML-XSLT-0.48.ebuild:
+  add ~ia64
 
   04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   XML-XSLT-0.40-r1.ebuild, XML-XSLT-0.40.ebuild, XML-XSLT-0.45.ebuild,

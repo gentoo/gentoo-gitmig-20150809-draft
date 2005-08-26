@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ICal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.24 2005/05/25 15:35:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.25 2005/08/26 02:16:35 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Date-ICal-1.72.ebuild:
+  add ~ia64
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> Date-ICal-1.72.ebuild:
   dev-perl/Time-Local => perl-core/Time-Local migration

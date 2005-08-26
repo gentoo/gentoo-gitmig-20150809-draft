@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 92769f036911c5258d32cc59304271c6 Convert-TNEF-0.17-r2.ebuild 567
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fbf7b93252cdf260f3d589f065f7827b ChangeLog 1230
-MD5 05551dde35c44ecc26fe54d138dff906 Convert-TNEF-0.17-r2.ebuild 562
 MD5 2742f1d062eab2ff843edd1dfb7d649e files/digest-Convert-TNEF-0.17-r2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbUMijUHll2nfF60RAiMoAKCCnkJt+BslhDJelptj/pvYyeegjQCeM6Dt
-kg4LlbQaldLpPNqKXhF6tdk=
-=R6jB
------END PGP SIGNATURE-----

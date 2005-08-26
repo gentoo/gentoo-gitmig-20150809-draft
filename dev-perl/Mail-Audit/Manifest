@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b19483be8ac321ee940007fc13de5b27 ChangeLog 1906
-MD5 7144f365f40e848a391e77bc60376865 Mail-Audit-2.1-r1.ebuild 591
-MD5 7cb159a06b0f23f03c2fcfcbd3710dfc files/digest-Mail-Audit-2.1-r1 65
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0Fy4I1lqEGTUzyQRAqpoAJ4yETaYpR95k68djzi7gEdNCjWs2gCeMKNn
-UgFoyaTi2oOzEtSuZaUeZbQ=
-=6Go/
------END PGP SIGNATURE-----
+MD5 b19483be8ac321ee940007fc13de5b27 ChangeLog 1906
+MD5 a3a5477a0416dc4e1e5afc2cc9f3a47f Mail-Audit-2.1-r1.ebuild 596
+MD5 7cb159a06b0f23f03c2fcfcbd3710dfc files/digest-Mail-Audit-2.1-r1 65

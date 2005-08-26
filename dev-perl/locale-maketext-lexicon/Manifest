@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5dd3c7e8c0554ead27c10f1dc582dbce locale-maketext-lexicon-0.46.ebuild 678
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 104d2c65ab9a5154408d3f14f9470965 ChangeLog 2887
 MD5 5c564f3c361c842b209a96f766e65ec4 locale-maketext-lexicon-0.35.ebuild 712
-MD5 ac9516b08d5104a70996095c4792bef4 locale-maketext-lexicon-0.46.ebuild 673
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 76ad1bd287b12ead7360a4c9f8d0358f files/digest-locale-maketext-lexicon-0.35 79
 MD5 69207883edbfda203c16bb3b8e5d8953 files/digest-locale-maketext-lexicon-0.46 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFClJxAtG5z4I8BtQoRAlrHAJwK4FWrshQZEFCj7J3/LL5JmfJ8DQCgg0qe
-Koew/dgZL8BGmQfJrQ6MEq0=
-=0H1w
------END PGP SIGNATURE-----
