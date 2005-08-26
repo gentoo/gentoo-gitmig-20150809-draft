@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/lutelwall
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.10 2005/08/25 18:59:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.11 2005/08/26 21:39:59 vanquirius Exp $
+
+  26 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> lutelwall-0.99.ebuild:
+  Stabilizing on Tomasz's request to push iptables version bug fix.
 
 *lutelwall-0.99 (25 Aug 2005)
 
