@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.16 2005/08/18 13:56:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.17 2005/08/26 19:14:51 eradicator Exp $
+
+*libdts-0.0.2-r3 (26 Aug 2005)
+
+  26 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -libdts-0.0.2-r1.ebuild, -libdts-0.0.2-r2.ebuild, +libdts-0.0.2-r3.ebuild:
+  Fix proper PIC usage for everyone but ppc.  See bug #98494.
 
   18 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/libdts-0.0.2-freebsd.patch, libdts-0.0.2-r2.ebuild:

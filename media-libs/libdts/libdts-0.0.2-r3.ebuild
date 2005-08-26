@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r1.ebuild,v 1.6 2005/07/09 01:30:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r3.ebuild,v 1.1 2005/08/26 19:14:51 eradicator Exp $
 
 inherit eutils
 
@@ -10,8 +10,9 @@ SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="oss debug"
+RESTRICT="test"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
@@ -21,7 +22,16 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-libtool.patch
+	if use ppc ; then
+		# For some reason, ppc isn't properly using -fPIC... this
+		# patch is broken, but makes it "work" on ppc.  If someone
+		# will get me access, I'll fix it... --eradicator
+		# Bug #98494
+		epatch ${FILESDIR}/${P}-libtool2.patch
+	else
+		epatch ${FILESDIR}/${P}-libtool.patch
+	fi
+	epatch ${FILESDIR}/${P}-freebsd.patch
 
 	cd ${S}
 
@@ -42,7 +52,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO doc/libdts.txt
+	dodoc AUTHORS ChangeLog NEWS README TODO doc/libdts.txt
 }
-
-src_test() { :; }
