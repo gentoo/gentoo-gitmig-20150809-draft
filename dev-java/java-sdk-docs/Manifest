@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e4e50846c6d6848873a440aad71359b3 ChangeLog 5337
 MD5 8bc5155a07d5f3f279e8fa009abb4ca4 java-sdk-docs-1.4.2.ebuild 876
 MD5 618c9d9a726fb108e5ccdb00a218918e java-sdk-docs-1.2.2.006.ebuild 963
@@ -10,3 +13,10 @@ MD5 b8ce8e1af0f32a08098988c3df744f7c files/digest-java-sdk-docs-1.5.0 64
 MD5 d6dd3e737a5469ac2717553c95bfc023 files/digest-java-sdk-docs-1.2.2.006 71
 MD5 6dc4baf5fd91548abdb10317d37bb4f2 files/digest-java-sdk-docs-1.3.1 66
 MD5 0645a1f4c374e0fb15f893bdd22bf9a2 files/digest-java-sdk-docs-1.4.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDDwzRj5H05b2HAEkRAsdxAJ9Ui6uF1aG+pc5MPBJnv3rU1682swCgkl7S
+WOU1J0ZbCxK5q37AUnlvOsI=
+=7oej
+-----END PGP SIGNATURE-----
