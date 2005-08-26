@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/hmmer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.6 2005/05/21 23:31:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.7 2005/08/26 19:24:54 r3pek Exp $
+
+  26 Aug 2005; Carlos Silva <r3pek@gentoo.org> hmmer-2.3.2-r1.ebuild:
+  Marked amd64
 
   21 May 2005; Jason Wever <weeve@gentoo.org> hmmer-2.3.2-r1.ebuild:
   Added ~sparc keyword.
