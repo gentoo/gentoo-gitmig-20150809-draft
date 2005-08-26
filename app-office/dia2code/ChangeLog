@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia2code
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.10 2005/01/01 15:31:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.11 2005/08/26 16:26:14 agriffis Exp $
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> dia2code-0.8.1.ebuild:
+  add ~ia64
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> dia2code-0.8.1.ebuild:
   Stable on sparc.
