@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.6.ebuild,v 1.5 2005/07/28 21:03:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.6.ebuild,v 1.6 2005/08/26 13:30:49 kanaka Exp $
 
 DESCRIPTION="Convert OpenOffice/KOffice to run independently on Linux, OSX, or Windows"
 HOMEPAGE="http://www.indeview.org/"
@@ -28,7 +28,7 @@ src_compile() {
 	sed -i -e 's/</\&lt;/g' IndeViewExport.mo.bas
 	sed -i -e 's/>/\&gt;/g' IndeViewExport.mo.bas
 	sed -i -e "s/'/\&apos;/g" IndeViewExport.mo.bas
-	sed -i -e 's/ö/o/g' IndeViewExport.mo.bas
+	sed -i -e 's/Ã¶/o/g' IndeViewExport.mo.bas
 
 	cat >> IndeViewExport.xba << _EOF_
 <?xml version="1.0" encoding="UTF-8"?>
@@ -53,7 +53,7 @@ src_install() {
 	dodoc LICENSE README AUTHORS
 
 	dodir /usr/share/IndeView
-	cp -a ${S}/../ROOT_DATA ${D}/usr/share/IndeView/
+	cp -pPR ${S}/../ROOT_DATA ${D}/usr/share/IndeView/
 
 	dodir /opt/OpenOffice.org/share/basic/Tools
 	insinto /opt/OpenOffice.org/share/basic/Tools
