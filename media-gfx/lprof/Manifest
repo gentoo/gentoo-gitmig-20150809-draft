@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 39d779773b5ff55322619839948f9364 lprof-1.09.ebuild 916
 MD5 e1de896582867337e11318e35d0cdca8 ChangeLog 828
-MD5 f8ffa95217ffc1f5fbb6869752faf418 lprof-1.09.ebuild 914
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 d761545bacdfb7a9e189c7c1186ecac6 files/digest-lprof-1.09 63
 MD5 c68c921dfc549a38258045190fedf541 files/lprof-1.09_fix-include.patch 290
 MD5 ccd27f9677836e20d828c165ad6d12b4 files/lprof-1.09_mrr_patch4.patch 12493
+MD5 d761545bacdfb7a9e189c7c1186ecac6 files/digest-lprof-1.09 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDEJmlevY57Fted3ERAn84AKCqD4LWo/wLpgXXve+vPTE1gETVYwCgsUlh
+YkLF7nYXKZn5HWzjy/6XJ4I=
+=Y39K
+-----END PGP SIGNATURE-----

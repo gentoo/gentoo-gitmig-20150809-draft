@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.09.ebuild,v 1.6 2005/07/27 13:20:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/lprof-1.09.ebuild,v 1.7 2005/08/27 16:49:13 lanius Exp $
 
 inherit eutils
 
@@ -30,5 +30,5 @@ src_install() {
 	exeinto /usr/bin
 	doexe {icc2it8,qtmeasurementtool,qtmonitorprofiler,qtprofilechecker,qtscannerprofiler}
 	dodir /usr/share/lprof
-	cp -ar ${S}/{pics,profiles,targets,template} ${D}/usr/share/lprof
+	cp -pPR ${S}/{pics,profiles,targets,template} ${D}/usr/share/lprof
 }
