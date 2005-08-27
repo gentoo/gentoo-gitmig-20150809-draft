@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/lzma
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.1 2005/08/27 14:00:59 radek Exp $
+
+*lzma-4.27 (27 Aug 2005)
+
+  27 Aug 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +lzma-4.27.ebuild:
+  intial version closed
+
