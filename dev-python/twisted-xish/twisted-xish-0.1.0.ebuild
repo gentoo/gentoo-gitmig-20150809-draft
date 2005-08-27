@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-xish/twisted-xish-0.1.0.ebuild,v 1.2 2005/04/22 16:17:38 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-xish/twisted-xish-0.1.0.ebuild,v 1.3 2005/08/27 23:12:03 humpback Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://tmrc.mit.edu/mirror/twisted/Xish/0.1/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 IUSE="doc"
 
 DEPEND=">=dev-python/twisted-2.0.0"
