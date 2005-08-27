@@ -13,7 +13,7 @@ MD5 8ad652a1c6c3b0b27963da2a8684dfc7 gcc-3.4.3-r1.ebuild 5429
 MD5 1a84ea5c09067bb7da6c8959f13e2154 gcc-3.3.5-r1.ebuild 3777
 MD5 be37a4f114120ff27f2ca4fc8ce4e900 gcc-3.4.4.ebuild 5005
 MD5 fff07645c7c223b6439724885486c32a gcc-3.4.4-r1.ebuild 5007
-MD5 b5774f75bb651dcfb7654cd186938c99 gcc-3.4.3.20050110-r2.ebuild 5191
+MD5 f3320fc6b7547238588e8d01266c7d1c gcc-3.4.3.20050110-r2.ebuild 5192
 MD5 c76df140331f7e3f907c329ee85d9477 gcc-3.2.2.ebuild 767
 MD5 43b2b50442e6156f9c18867730aea421 gcc-4.1.0_beta20050826.ebuild 1525
 MD5 71b180bed94dca00dddf253f7bd6508f gcc-3.2.3-r4.ebuild 19841
@@ -33,7 +33,7 @@ MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
 MD5 eed1bcc70ad9ade9892b82f8acd2aa9a files/digest-gcc-4.1.0_beta20050826 71
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
-MD5 7f5fa2200b2cf37fb9f59af9cfd3f845 files/digest-gcc-3.4.3.20050110-r2 616
+MD5 f0d6e8b1503f1745061639b642fb1911 files/digest-gcc-3.4.3.20050110-r2 616
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 4ecf0f5cb735c81ca4b61a9c6db74269 files/digest-gcc-2.95.3-r9 139
 MD5 e76a453a41518cf6a73123fe128c716f files/digest-gcc-3.4.3-r1 607
@@ -102,7 +102,7 @@ MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDD+5GgIKl8Uu19MoRAiVAAJwIBmmAni0cPndT0GMQpd9QehYAwgCfZIkE
-T3bivfq5GRE6R0bziLHmc3E=
-=ucIV
+iD8DBQFDD++TgIKl8Uu19MoRAr25AJ44qY/C9ZUcNPL2US8bYfFAZxUNbgCeP43F
+4H2VU90nuMpDj/n0l0TT2pU=
+=4tqa
 -----END PGP SIGNATURE-----
