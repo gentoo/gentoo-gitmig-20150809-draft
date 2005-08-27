@@ -1,0 +1,61 @@
+--- asterisk-addons/res_sqlite3/Makefile.orig	2005-08-04 23:27:22.000000000 +0200
++++ asterisk-addons/res_sqlite3/Makefile	2005-08-04 23:37:38.000000000 +0200
+@@ -1,44 +1,24 @@
+-ASTDIR=/usr/src/asterisk
+-ASTXS=$(ASTDIR)/contrib/scripts/astxs
+-ASTSQLITE=/var/lib/asterisk/sqlite
+-SQLITE2=/usr/local/bin/sqlite
+-SQLITE3=/usr/local/bin/sqlite3
+-SQLITEBASE=http://www.sqlite.org/
+-SQLITEFILE=sqlite-3.2.1
++SQLITEDIR=
++DESTDIR=
+ 
+-CFLAGS=-I$(SQLITEFILE) -I $(SQLITEFILE)/src
++ASTCFG=/usr/bin/asterisk-config
++ASTSQLITE=/var/lib/asterisk/sqlite
++ASTMODDIR=/usr/lib/asterisk/modules
+ 
+-all: .sqlite res_sqlite.so
++CFLAGS=-I$(SQLITEDIR) -I$(SQLITEDIR)/src
+ 
++all: res_sqlite.so
+ 
+ res_sqlite.so:
+-	ASTSRC=$(ASTDIR) $(ASTXS) "-append=CFLAGS:$(CFLAGS)" "-append=EXTOBJ:./$(SQLITEFILE)/.libs/libsqlite3.a" res_sqlite.c
+-
+-.sqlite:
+-	wget $(SQLITEBASE)/$(SQLITEFILE).tar.gz
+-	tar -zxvf $(SQLITEFILE).tar.gz
+-	cd $(SQLITEFILE) && test -f ./config.status || ./configure --enable-threadsafe
+-	cd $(SQLITEFILE) && make
+-	touch .sqlite
++	$(CC) $(shell $(ASTCFG) --cflags) $(CFLAGS) -fPIC -c -o res_sqlite.o res_sqlite.c
++	$(CC) $(shell $(ASTCFG) --solink) -o res_sqlite.so res_sqlite.o $(SQLITEDIR)/.libs/libsqlite3.a
+ 
+ clean:
+ 	/bin/rm -f *.o *.so *~
+ 
+-distclean: clean
+-	/bin/rm -fr .sqlite sqlite $(SQLITEFILE) $(SQLITEFILE).tar.gz
+-
+ install:
+-	$(ASTXS) -autoload -install res_sqlite.so
+-	/bin/mkdir -p $(ASTSQLITE)
+-	if [ ! -f  /etc/asterisk/res_sqlite.conf ] ; then /bin/cp res_sqlite.conf /etc/asterisk; fi
+-
+-sqlite_install: .sqlite
+-	cd sqlite && make install
+-	test -f /etc/ld.so.conf && ldconfig
+-
+-upgrade: $(SQLITE2) $(SQLITE3)
+-	@echo upgrading database files 
+-	@upgrade.sh $(ASTSQLITE) $(SQLITE2) $(SQLITE3)
+-
+-
+-
++	/bin/mkdir -p $(DESTDIR)$(ASTSQLITE)
++	/bin/mkdir -p $(DESTDIR)$(ASTMODDIR)
++	/bin/mkdir -p $(DESTDIR)/etc/asterisk
++	/bin/cp res_sqlite.so $(DESTDIR)$(ASTMODDIR)
++	/bin/cp res_sqlite.conf $(DESTDIR)/etc/asterisk

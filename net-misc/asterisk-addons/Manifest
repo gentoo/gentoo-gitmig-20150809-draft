@@ -1,0 +1,7 @@
+MD5 d2645797f0e8dba6b3d9ce97069449de asterisk-addons-1.2.0_beta1.ebuild 3289
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+MD5 b0cad4bcd307955165d180155132414f ChangeLog 640
+MD5 d9614f6289a7b8edda8045241187e138 files/asterisk-addons-1.2.0_beta1-gentoo-base.diff 1852
+MD5 00cfba5fc6217bd223624a267cd55a13 files/digest-asterisk-addons-1.2.0_beta1 144
+MD5 727a0a2296bb763d31542e624c6ca224 files/asterisk-addons-1.2.0_beta1-gentoo-ooh323c.diff 1282
+MD5 67d6be912d6a4cbc6250339885e778a0 files/asterisk-addons-1.2.0_beta1-gentoo-res_sqlite3.diff 1930

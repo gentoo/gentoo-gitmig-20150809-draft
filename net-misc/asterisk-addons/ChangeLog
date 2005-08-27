@@ -1,0 +1,14 @@
+# ChangeLog for net-misc/asterisk-addons
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.1 2005/08/27 18:19:39 stkn Exp $
+
+*asterisk-addons-1.2.0_beta1 (27 Aug 2005)
+
+  27 Aug 2005; <stkn@gentoo.org>
+  +files/asterisk-addons-1.2.0_beta1-gentoo-base.diff,
+  +files/asterisk-addons-1.2.0_beta1-gentoo-ooh323c.diff,
+  +files/asterisk-addons-1.2.0_beta1-gentoo-res_sqlite3.diff, +metadata.xml,
+  +asterisk-addons-1.2.0_beta1.ebuild:
+  Initial import. Asterisk-addons have been splitted out of the main asterisk
+  ebuild starting with 1.2.0_beta1.
+
