@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.13 2005/08/19 19:44:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.14 2005/08/27 02:12:46 ranger Exp $
+
+  27 Aug 2005; Brent Baude <ranger@gentoo.org> liferea-0.9.6.ebuild:
+  marking liferea-0.9.6 ~ppc64; referring to bug
+  http://bugs.gentoo.org/show_bug.cgi?id=102714
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> liferea-0.9.3.ebuild:
   Stable on ppc.
