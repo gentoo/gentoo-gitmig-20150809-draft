@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.4.1.ebuild,v 1.1 2005/07/25 20:26:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.4.1.ebuild,v 1.2 2005/08/27 09:36:44 greg_g Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)"
