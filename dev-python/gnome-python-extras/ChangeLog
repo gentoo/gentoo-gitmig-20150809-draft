@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.10 2005/08/16 14:51:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.11 2005/08/27 00:18:15 allanonjl Exp $
+
+*gnome-python-extras-2.11.4 (27 Aug 2005)
+
+  27 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +gnome-python-extras-2.11.4.ebuild:
+  new version, disable gda module because it relies on python 2.4 API.
+  Re-enable if its necessary for a specific package in portage, or when python
+  2.4 becomes stable
 
   16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-python-extras-2.10.2.ebuild:
