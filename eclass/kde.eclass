@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.128 2005/08/24 22:52:59 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.129 2005/08/27 09:35:18 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -144,12 +144,12 @@ kde_src_compile() {
 
 				# If we're not a kde-base ebuild, then set up the /usr directories properly
 				# Perhaps this could get changed later to use econf instead?
-				if [ $PREFIX = "/usr" ]; then
+				if [[ $PREFIX = "/usr" ]]; then
 					myconf="${myconf} --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib"
 				fi
 
 				# Use libsuffix instead of libdir to keep kde happy
-				if [ $(get_libdir) != "lib" ] ; then
+				if [[ $(get_libdir) != "lib" ]] ; then
 					myconf="${myconf} --enable-libsuffix=$(get_libdir | sed s/lib//)"
 				fi
 
@@ -158,7 +158,7 @@ kde_src_compile() {
 					|| die "died running ./configure, $FUNCNAME:configure"
 
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
-				if [ "${ARCH}" = "hppa" ]
+				if [[ "${ARCH}" = "hppa" ]]
 				then
 					einfo Fixating Makefiles
 					find ${S} -name Makefile | while read a; do sed -e s/-O2/-ffunction-sections/ -i "${a}" ; done
@@ -183,11 +183,11 @@ kde_src_compile() {
 kde_src_install() {
 
 	debug-print-function $FUNCNAME $*
-	[ -z "$1" ] && kde_src_install all
+	[[ -z "$1" ]] && kde_src_install all
 
 	cd ${S}
 
-	while [ "$1" ]; do
+	while [[ "$1" ]]; do
 
 		case $1 in
 			make)
