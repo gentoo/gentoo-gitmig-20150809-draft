@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.5 2005/07/22 00:05:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43.ebuild,v 1.6 2005/08/27 04:25:46 vapier Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
@@ -20,7 +20,8 @@ IUSE="opengl X joystick zlib dga debug"
 RDEPEND="zlib? ( sys-libs/zlib )
 	virtual/x11
 	media-libs/libpng
-	opengl? ( virtual/opengl )"
+	amd64? ( emul-linux-x86-xlibs )
+	opengl? ( virtual/opengl virtual/glu )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 

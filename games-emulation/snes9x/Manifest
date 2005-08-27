@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 c30d64cc29b742b593f6e92a69c1a4a7 snes9x-1.42-r1.ebuild 1813
-MD5 ee3a8880ef58936e33d6399e13881baf snes9x-1.43.ebuild 2356
+MD5 72cc36a1a49aa65e6dacde3e88227ce7 snes9x-1.43.ebuild 2401
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 c977cf96d7854e2acd2381e837a6b592 ChangeLog 3590
 MD5 60e338baf6468da1d0c1fece4884553c files/snes9x-gcc3.diff 979
@@ -15,9 +15,9 @@ MD5 82847f439abd1f8ae87876515e60ccdf files/1.41.1-system-zlib.patch 2004
 MD5 12216340a66b7cfccf1891ca058d9335 files/nojoy.patch 507
 MD5 29f4c8bf43e00e929c25d85ec4a06b70 files/digest-snes9x-1.42-r1 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC4Dg8gIKl8Uu19MoRAhf4AKCEK1rHnppaTMx5J58NsD5eU96d/QCfVPy7
-XmCD6HaO04xsvR/+rhMtgzM=
-=TrlJ
+iD8DBQFDD+tZgIKl8Uu19MoRAo1GAJ48GH5qsk/2LHSRVlJ+d2ZjI5rLiQCbB0WN
+ZfKqEYKdlBLDOp+wgw1SV4I=
+=/PzQ
 -----END PGP SIGNATURE-----
