@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.18.ebuild,v 1.1 2005/05/15 14:38:44 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.20-r1.ebuild,v 1.1 2005/08/27 13:47:43 radek Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="static"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="static doc"
 
 S=${WORKDIR}/${PN}_${PV}
 
@@ -31,9 +31,14 @@ src_compile() {
 }
 
 src_install() {
-	#dobin ${FILESDIR}/7z
 	dobin bin/7za || die "dobin"
 	dosym 7za /usr/bin/7z
 
-	dodoc ChangeLog README TODO DOCS/*.txt
+	doman man1/7z.1
+	doman man1/7za.1
+
+	if use doc; then
+		dodoc ChangeLog README TODO DOCS/*.txt
+		dohtml -r DOCS/MANUAL/*
+	fi
 }
