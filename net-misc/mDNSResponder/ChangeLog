@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.16 2005/08/25 00:12:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.17 2005/08/27 16:46:45 greg_g Exp $
+
+*mDNSResponder-107.1 (27 Aug 2005)
+
+  27 Aug 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/mDNSResponder-107.1-Makefiles.patch, +files/dnsextd.conf.d,
+  +files/dnsextd.init.d, +files/mDNSResponderPosix.conf,
+  +files/mDNSResponderPosix.conf.d, +files/mDNSResponderPosix.init.d,
+  files/mdnsd.init.d, +mDNSResponder-107.1.ebuild:
+  New version (#96966, #87845). Install the mDNSResponder deamon, the dnsextd
+  deamon and various auxiliary programs. Add support for the debug USE flag.
+  Thanks to Sandy McArthur <Sandy@McArthur.org>.
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> mDNSResponder-98.ebuild:
   stable on ia64
