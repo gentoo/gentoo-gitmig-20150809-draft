@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.12 2005/04/22 09:27:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.13 2005/08/27 12:34:43 ka0ttic Exp $
+
+  27 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> fcgi-2.4.0.ebuild:
+  Use econf instead of calling ./configure directly so config.{sub,guess} get
+  updated. Added ~mips.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> fcgi-2.4.0.ebuild:
   stable on amd64
