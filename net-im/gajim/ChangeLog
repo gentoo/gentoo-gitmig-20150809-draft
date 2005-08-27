@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.5 2005/08/24 21:50:17 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.6 2005/08/27 09:06:32 svyatogor Exp $
+
+*gajim-0.8-r1 (27 Aug 2005)
+
+  27 Aug 2005; Sergey Kuleshov <svyatogor@gentoo.org> +gajim-0.8-r1.ebuild:
+  New ebuild version wich supports dbus and srv USE flags. Also added ~ppc to
+  use flags, as it is reported to be ok by one of the users.
 
 *gajim-0.8 (24 Aug 2005)
 
