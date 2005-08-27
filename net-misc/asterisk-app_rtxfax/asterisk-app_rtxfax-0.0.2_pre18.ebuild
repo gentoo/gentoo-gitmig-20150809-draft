@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/asterisk-app_rtxfax-0.0.2_pre18.ebuild,v 1.2 2005/07/08 20:53:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/asterisk-app_rtxfax-0.0.2_pre18.ebuild,v 1.3 2005/08/27 20:23:57 stkn Exp $
 
 IUSE=""
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=media-libs/spandsp-0.0.2_pre18
-	>=net-misc/asterisk-1.0.5-r1"
+	>=net-misc/asterisk-1.0.5-r1
+	!>=net-misc/asterisk-1.1.0"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 

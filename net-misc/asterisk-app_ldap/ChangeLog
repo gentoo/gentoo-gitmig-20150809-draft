@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-app_ldap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.4 2005/07/01 22:07:24 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.5 2005/08/27 20:22:26 stkn Exp $
+
+  27 Aug 2005; <stkn@gentoo.org> asterisk-app_ldap-0.9.3.ebuild,
+  asterisk-app_ldap-0.9.5.ebuild:
+  Added blocker for >=1.1.0 (does not work with 1.2.0 at the moment)
 
 *asterisk-app_ldap-0.9.5 (02 Jul 2005)
 

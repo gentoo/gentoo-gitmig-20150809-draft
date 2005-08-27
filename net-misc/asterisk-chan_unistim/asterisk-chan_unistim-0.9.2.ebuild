@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_unistim/asterisk-chan_unistim-0.9.2.ebuild,v 1.2 2005/05/10 12:18:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_unistim/asterisk-chan_unistim-0.9.2.ebuild,v 1.3 2005/08/27 20:27:25 stkn Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
-DEPEND=">=net-misc/asterisk-1.0.5-r1"
+DEPEND=">=net-misc/asterisk-1.0.5-r1
+	!>=net-misc/asterisk-1.1.0"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
