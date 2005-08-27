@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1406 2005/08/26 20:58:11 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1407 2005/08/27 09:07:58 svyatogor Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -709,6 +709,7 @@ net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:silc - Enable SILC protocol support
+net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:amarok - Enables amarok support in kadu
 net-im/kadu:extraicons - Enables extra icon sets
