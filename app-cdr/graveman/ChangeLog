@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.20 2005/07/16 02:50:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.21 2005/08/27 17:56:14 corsair Exp $
+
+  27 Aug 2005; Markus Rothe <corsair@gentoo.org>
+  graveman-0.3.12_p4-r1.ebuild:
+  Stable on ppc64
 
   16 Jul 2005; Jason Wever <weeve@gentoo.org> graveman-0.3.12_p4-r1.ebuild:
   Added ~sparc keyword.
