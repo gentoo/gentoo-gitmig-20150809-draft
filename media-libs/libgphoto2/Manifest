@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 9bdc55dbb224488ada58de4d1d8fd2aa libgphoto2-2.1.4.ebuild 3872
-MD5 0fe300ec7921c508b3c5f89e98c5d051 libgphoto2-2.1.6.ebuild 4101
+MD5 5a113edd25557bbe920f57984a8869bb libgphoto2-2.1.6.ebuild 4100
 MD5 84b14458116bed8e0c301719b08005a5 libgphoto2-2.1.5.ebuild 4011
-MD5 1d5e9b7ca4eb9cdd9f6a15235f43d5b2 ChangeLog 7889
+MD5 25da64f2d486d9493944ba5f36ebd6cc ChangeLog 7893
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
 MD5 e396fe3bbcfd38d33ec78004f27db148 files/digest-libgphoto2-2.1.4 70
 MD5 c1ead5696ef5db4a488f3457529e0a6c files/digest-libgphoto2-2.1.5 69
@@ -20,7 +20,7 @@ MD5 3b33f744c18b1251ef1d6ce48978dd6b files/libgphoto2-2.1.4-gcc2_fixes.patch 168
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDEJhGBXaUFmZvwyMRAtcEAKCs8DtovtK0d6p//jYpFkKwaUcbIwCfZ7Ib
-ECt6LoJ5miHtePEwqoHbR8w=
-=bMjj
+iD8DBQFDEJh7BXaUFmZvwyMRAi9JAJ9tLZjUdiIz5UlOIh6O6lMnWipHZQCeLyO1
+5XmpNtJXWTLw3Vf1N54kiAk=
+=KO3N
 -----END PGP SIGNATURE-----
