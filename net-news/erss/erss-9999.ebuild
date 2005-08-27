@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/erss/erss-9999.ebuild,v 1.2 2005/04/11 03:40:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/erss/erss-9999.ebuild,v 1.3 2005/08/27 19:09:57 vapier Exp $
 
 ECVS_MODULE="misc/erss"
 inherit enlightenment
@@ -17,5 +17,5 @@ EDOCS="data/erssrc"
 
 src_unpack() {
 	enlightenment_src_unpack
-	sed -i 's:/local/:/:g' ${S}/data/erssrc
+	sed -i 's:/local/:/:g' "${S}"/data/erssrc
 }
