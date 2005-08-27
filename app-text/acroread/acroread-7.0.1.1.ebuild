@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.1.1.ebuild,v 1.2 2005/08/18 01:07:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.1.1.ebuild,v 1.3 2005/08/27 16:46:31 lanius Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -64,7 +64,7 @@ src_install() {
 	for i in ${DIRS}
 	do
 		if [ -d ${i} ] ; then
-			chown -R --dereference root:root ${i}
+			chown -R --dereference root:0 ${i}
 			mv ${i} ${D}${INSTALLDIR}
 		fi
 	done
