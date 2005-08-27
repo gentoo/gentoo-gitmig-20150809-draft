@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.40 2005/08/26 15:21:18 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.41 2005/08/27 17:17:55 sekretarz Exp $
+
+  27 Aug 2005; Karol Wojtaszek <sekretarz@gentoo.org> files/amuled.initd,
+  files/amuleweb.initd:
+  Fixed paths to config files, bug #98625
 
   26 Aug 2005; <sekretarz@gentoo.org> -amule-1.2.8.ebuild,
   -amule-2.0.0_rc5.ebuild, -amule-2.0.0_rc6.ebuild, -amule-2.0.0_rc7.ebuild,
