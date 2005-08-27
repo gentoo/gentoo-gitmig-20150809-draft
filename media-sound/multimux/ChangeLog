@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/multimux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.4 2005/07/25 13:41:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/multimux/ChangeLog,v 1.5 2005/08/27 21:35:18 pvdabeel Exp $
+
+  27 Aug 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> multimux-0.2.3.ebuild:
+  Ebuild submitted by Davy Van Nieuwenborgh. Version bump, new src_uri
 
   25 Jul 2005; David Holm <dholm@gentoo.org> multimux-0.1.ebuild:
   Added to ~ppc.
