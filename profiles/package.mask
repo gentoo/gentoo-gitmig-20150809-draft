@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4345 2005/08/26 00:15:46 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4346 2005/08/27 00:17:49 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -221,6 +221,7 @@ sys-apps/pmount
 >=x11-themes/gnome-backgrounds-2.11
 >=dev-python/pycairo-0.9.0
 >=dev-python/pygtk-2.7.4
+>=dev-python/gnome-python-extras-2.11.4
 # -- gnome mask end
 
 # <genstef@gentoo.org> (14 Aug 2005
