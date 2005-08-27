@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.91 2005/08/26 12:01:51 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.92 2005/08/27 15:12:48 sekretarz Exp $
+
+  27 Aug 2005; <sekretarz@gentoo.org> mldonkey-2.6.2.ebuild,
+  mldonkey-2.6.3.ebuild:
+  Fixed path to xpi file, bug #103891
 
   26 Aug 2005; <sekretarz@gentoo.org> mldonkey-2.6.2.ebuild,
   mldonkey-2.6.3.ebuild:

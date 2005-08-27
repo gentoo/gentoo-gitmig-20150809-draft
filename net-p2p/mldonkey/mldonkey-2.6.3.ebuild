@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.3.ebuild,v 1.2 2005/08/26 12:01:51 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.3.ebuild,v 1.3 2005/08/27 15:12:48 sekretarz Exp $
 
 inherit eutils
 
@@ -146,7 +146,7 @@ src_install() {
 
 	if use mozilla; then
 		insinto /usr/share/${PN}
-		doins ${DISTFILES}/mldonkey_protocol_handler-${MOZVER}.xpi
+		doins ${DISTDIR}/mldonkey_protocol_handler-${MOZVER}.xpi
 	fi;
 }
 
