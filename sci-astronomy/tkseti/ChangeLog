@@ -1,8 +1,8 @@
 # ChangeLog for sci-astronomy/tkseti
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/tkseti/ChangeLog,v 1.4 2005/08/24 12:56:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/tkseti/ChangeLog,v 1.5 2005/08/27 23:38:37 cryos Exp $
 
-  24 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> tkseti-3.06.ebuild:
+  24 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> tkseti-3.06.ebuild:
   Update HOMEPAGE and SRC_URI, fixes bug 81471.
 
   23 Aug 2005; Ferris McCormick <fmccor@gentoo.org> tkseti-3.06.ebuild:
