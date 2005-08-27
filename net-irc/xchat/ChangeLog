@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.168 2005/08/24 23:47:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.169 2005/08/27 17:02:02 swegener Exp $
+
+  27 Aug 2005; Sven Wegener <swegener@gentoo.org>
+  -files/2.4.1-fe-text.patch, -files/2.4.1-close-fds-on-exec.patch,
+  -xchat-2.4.1-r1.ebuild:
+  Remove old ebuild.
+
+*xchat-2.4.4-r2 (27 Aug 2005)
+
+  27 Aug 2005; Sven Wegener <swegener@gentoo.org> -xchat-2.4.4.ebuild,
+  -xchat-2.4.4-r1.ebuild, +xchat-2.4.4-r2.ebuild:
+  Pull in some perl scripting fixes from upstream CVS.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> xchat-2.4.3.ebuild:
   stable on ia64
