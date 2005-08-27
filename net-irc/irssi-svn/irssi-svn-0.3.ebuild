@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.12 2005/07/30 11:24:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.13 2005/08/27 17:21:50 swegener Exp $
 
 inherit subversion perl-module flag-o-matic
 
@@ -22,14 +22,13 @@ RDEPEND=">=dev-libs/glib-2.2.1
 	!net-irc/irssi
 	!net-irc/irssi-cvs"
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	www-client/lynx
 	>=sys-devel/autoconf-2.58"
 
 src_compile() {
 	# Irssi uses extern inlines and that needs at least -O
 	is-flag "-O*" || append-flags -O
-
-	export WANT_AUTOCONF=2.5
 
 	econf \
 		--with-proxy \
