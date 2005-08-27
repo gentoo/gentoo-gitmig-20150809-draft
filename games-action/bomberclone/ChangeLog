@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bomberclone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.16 2005/05/22 21:24:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.17 2005/08/27 17:28:41 corsair Exp $
+
+  27 Aug 2005; Markus Rothe <corsair@gentoo.org>
+  bomberclone-0.11.6.2.ebuild:
+  added ~ppc64
 
   22 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   bomberclone-0.11.6.2.ebuild:

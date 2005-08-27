@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 30ecf0ed6d150838568635296267e3ce ChangeLog 2375
 MD5 f35d631319e209d4c40f874b9c5d9481 bomberclone-0.11.5.ebuild 1108
-MD5 9967c4598bce25e7a0a8c37ad48302e4 bomberclone-0.11.6.2.ebuild 1196
+MD5 2c715d11a3f4e66c307ffc297d89968b bomberclone-0.11.6.2.ebuild 1201
 MD5 95299b2ebdaf9d348ef78acb2634ce33 bomberclone-0.11.6.ebuild 1108
-MD5 44217f9f6757a3d032464eea51f46996 ChangeLog 2281
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 51a2bb87c52fc616cd280c511b1e1501 files/digest-bomberclone-0.11.5 72
 MD5 2c07ddf30e9ac806e68d592fb20ec2a5 files/digest-bomberclone-0.11.6 72
 MD5 a2e7f79d1bc6b86d7c48e712d469eba9 files/digest-bomberclone-0.11.6.2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCkPiH06ebR+OMO78RAnIHAJ9/RiDGYpekkkHRA2JUOTQyLQ0pqQCggWXm
-y+FzI1jrDHVSGHlarYm8Ct4=
-=ML2b
------END PGP SIGNATURE-----
