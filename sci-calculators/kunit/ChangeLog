@@ -1,8 +1,8 @@
 # ChangeLog for sci-calculators/kunit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kunit/ChangeLog,v 1.4 2005/08/23 15:11:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/kunit/ChangeLog,v 1.5 2005/08/27 23:43:45 cryos Exp $
 
-  23 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> kunit-0.5.ebuild:
+  23 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> kunit-0.5.ebuild:
   Add .desktop entry for kunit, closes bug 101577.
 
   07 Jul 2005; George Shapovalov <george@gentoo.org> kunit-0.5.ebuild:
