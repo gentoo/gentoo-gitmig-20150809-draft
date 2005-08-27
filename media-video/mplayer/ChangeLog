@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.318 2005/08/25 20:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.319 2005/08/27 01:57:48 lu_zero Exp $
+
+*mplayer-1.0_pre7-r1 (27 Aug 2005)
+
+  27 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  +mplayer-1.0_pre7-r1.ebuild:
+  Hotfix release for a recently discovered buffer overflow, bug #103555
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> mplayer-1.0_pre7.ebuild:
   stable on ia64
