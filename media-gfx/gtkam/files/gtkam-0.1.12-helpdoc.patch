@@ -1,0 +1,20 @@
+--- gtkam-0.1.12/help/C/gtkam.xml	2004-04-27 12:38:53.000000000 +0200
++++ gtkam-0.1.12.new/help/C/gtkam.xml	2004-09-05 16:48:23.920881000 +0200
+@@ -183,7 +183,7 @@
+     		then press <keycap>Return</keycap>:</para>
+     		<para> 
+ 			<command>gtkam</command> 
+-			<!--FIXME comand line --switches -->
++			<!--FIXME comand line switches -->
+     		</para> 
+     		</listitem>
+     	</varlistentry>
+@@ -203,7 +203,7 @@
+ 		fileref="figures/gtkam_start_window.png" format="PNG"/> 
+ 	    </imageobject>
+ 	    <textobject> 
+-	      <phrase>The &app; main window. On the left is the camera tree. The file list is on the right.
++	      <phrase>The &app; main window. On the left is the camera tree. The file list is on the right.</phrase>
+ 	    </textobject> 
+ 	  </mediaobject> 
+ 	</screenshot> 
