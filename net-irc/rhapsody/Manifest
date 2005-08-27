@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 89e67ae6382a9bd3cc8596b6b604ef19 ChangeLog 801
+MD5 45d533c9dbd4bc0cd2c9f46d2702f241 ChangeLog 925
+MD5 3a2b468779604a1a628024050d312e27 files/digest-rhapsody-0.25b 63
+MD5 151e1d318392d5b6e0e4430c6c6c5493 files/digest-rhapsody-0.26b 63
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 0f3345922570734ce2dd9264ebf8241c rhapsody-0.25b.ebuild 827
-MD5 3a2b468779604a1a628024050d312e27 files/digest-rhapsody-0.25b 63
+MD5 ce080146e62e0b0e11f0ea48c96daad0 rhapsody-0.26b.ebuild 830
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDQCGmOfEJZHYOKcRAtSYAKDDuUyfpbVNnSn8f9FoO5L7e4dPJACgxvmI
-D/NSl3LAHA1yajxKDqH8kwM=
-=uIND
+iD8DBQFDD83NI1lqEGTUzyQRAqARAKCHu9B1i9ZYb+/a/PVq/yDrA79N1gCeMp84
+ukYzXtexUJsWp1UeaCdlTok=
+=NiY0
 -----END PGP SIGNATURE-----

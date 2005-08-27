@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/rhapsody
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.4 2005/08/24 23:04:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.5 2005/08/27 02:19:42 swegener Exp $
+
+*rhapsody-0.26b (27 Aug 2005)
+
+  27 Aug 2005; Sven Wegener <swegener@gentoo.org> +rhapsody-0.26b.ebuild:
+  Version bump.
 
   24 Aug 2005; Olivier Crête <tester@gentoo.org> rhapsody-0.25b.ebuild:
   Marked ~amd64, thanks to Jim Laflin for testing
