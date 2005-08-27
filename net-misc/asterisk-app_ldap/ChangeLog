@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-app_ldap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.7 2005/08/27 20:52:34 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.8 2005/08/27 21:07:49 stkn Exp $
+
+  27 Aug 2005; <stkn@gentoo.org> -asterisk-app_ldap-0.9.3.ebuild:
+  Removing old version.
 
   27 Aug 2005; <stkn@gentoo.org> asterisk-app_ldap-0.9.5.ebuild:
   Stable on x86.
