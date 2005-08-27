@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0_beta1.ebuild,v 1.1 2005/08/27 18:01:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0_beta1.ebuild,v 1.2 2005/08/27 23:31:39 stkn Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -58,7 +58,7 @@ zconfig_disable() {
 		# match a little more than ${1} so we can use zconfig_disable
 		# to disable all echo cancellers in zconfig.h w/o calling it several times
 		sed -i -e "s:^[ \t]*#define[ \t]\+\(${1}[a-zA-Z0-9_-]*\).*:#undef \1:" \
-			${S}/zconfig.h || die "QA error: No substitution performed"
+			${S}/zconfig.h
 	fi
 
 	return $?
@@ -68,7 +68,7 @@ zconfig_enable() {
 	if grep -q "${1}" ${S}/zconfig.h; then
 		sed -i  -e "s:^/\*[ \t]*#define[ \t]\+\(${1}\).*:#define \1:" \
 			-e "s:^[ \t]*#undef[ \t]\+\(${1}\).*:#define \1:" \
-			${S}/zconfig.h || die "QA error: No substitution performed"
+			${S}/zconfig.h
 	fi
 
 	return $?
@@ -139,7 +139,6 @@ pkg_setup() {
 		ewarn "Look at the messages above, resolve the problem (or disable the use-flag) and try again"
 		echo
 
-		# no alcohol or drugs involved here
 		if [[ $result -lt 3 ]]; then
 			eerror "[$result Error(s)] Zaptel is not happy :("
 		else
@@ -164,7 +163,7 @@ src_unpack() {
 		# fix Makefile to not create device nodes for
 		# devfs enabled 2.6 kernels
 		sed -i -e 's:grep -q udevd:grep -q \"udevd\\|devfsd\":' \
-			Makefile || die "QA error: No substitution performed"
+			Makefile
 	fi
 
 	# try to apply bristuff patch

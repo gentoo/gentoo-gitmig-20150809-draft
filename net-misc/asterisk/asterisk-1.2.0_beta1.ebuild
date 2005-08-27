@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.1 2005/08/27 18:10:38 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.2 2005/08/27 23:33:45 stkn Exp $
 
 inherit eutils
 
@@ -94,7 +94,7 @@ src_unpack() {
 		if ! use hardened; then
 			einfo "Enabling mmx optimization"
 			sed -i -e "s:^#\(K6OPT[\t ]\+= -DK6OPT\):\1:" \
-				Makefile || die "QA error: No substitution performed"
+				Makefile
 		else
 			ewarn "Hardened use-flag is set, not enabling mmx optimization for codec_gsm!"
 		fi
@@ -103,7 +103,7 @@ src_unpack() {
 	if ! use debug; then
 		einfo "Disabling debugging"
 		sed -i -e "s:^\(DEBUG=\):#\1:" \
-			Makefile || die "QA error: No substitution performed"
+			Makefile
 	fi
 
 	#
