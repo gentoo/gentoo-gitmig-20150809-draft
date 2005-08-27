@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-starterbar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.17 2005/07/07 01:35:22 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.18 2005/08/27 20:53:30 nixphoeni Exp $
+
+  27 Aug 2005; Joe Sapp <nixphoeni@gentoo.org>
+  -desklet-starterbar-0.31.3.ebuild:
+  Removed 0.31.3 since it's obsoleted by -r1
 
 *desklet-starterbar-0.31.3-r1 (07 Jul 2005)
 
