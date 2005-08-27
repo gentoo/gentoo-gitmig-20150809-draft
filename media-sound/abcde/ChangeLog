@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/abcde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.19 2005/05/05 23:16:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.20 2005/08/27 20:35:31 rphillips Exp $
+
+*abcde-2.3.0 (27 Aug 2005)
+
+  27 Aug 2005; <rphillips@gentoo.org> +abcde-2.3.0.ebuild:
+  Version bump.  Also changed the ebuild from patched to use SED.
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> abcde-2.1.9.ebuild,
   abcde-2.1.15.ebuild, abcde-2.1.19.ebuild, abcde-2.2.0.ebuild:
