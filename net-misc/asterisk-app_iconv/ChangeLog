@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk-app_iconv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_iconv/ChangeLog,v 1.4 2005/06/17 19:46:10 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_iconv/ChangeLog,v 1.5 2005/08/27 20:58:57 stkn Exp $
+
+*asterisk-app_iconv-0.9.1 (27 Aug 2005)
+
+  27 Aug 2005; <stkn@gentoo.org> +files/app_iconv-0.9.1-astcfg.diff,
+  +asterisk-app_iconv-0.9.1.ebuild:
+  Version bump.
 
 *asterisk-app_iconv-0.9 (17 Jun 2005)
 
