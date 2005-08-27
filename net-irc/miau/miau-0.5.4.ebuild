@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/miau-0.5.4.ebuild,v 1.2 2005/07/08 06:54:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/miau-0.5.4.ebuild,v 1.3 2005/08/27 02:30:21 swegener Exp $
 
 DESCRIPTION="Persistent IRC bouncer with multi-client support - a fork of muh"
 HOMEPAGE="http://miau.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="debug ipv6"
 
 DEPEND=""
