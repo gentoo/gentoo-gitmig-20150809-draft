@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.41 2005/08/17 00:49:35 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.42 2005/08/27 16:02:00 sekretarz Exp $
+
+  27 Aug 2005; Karol Wojtaszek <sekretarz@gentoo.org> curl-7.14.0.ebuild:
+  Added libidn support, thanks Marcin Kryczek <aye@gentoo.pl> in bug #103745
 
   17 Aug 2005; Malcolm Lashley <malc@gentoo.org> curl-7.13.2.ebuild:
   Stable on amd64
