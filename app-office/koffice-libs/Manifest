@@ -2,8 +2,5 @@ MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 0abae8011e300cc606f284bf57ad7fd1 koffice-libs-1.4.1.ebuild 1185
 MD5 97ee79c6f7253123dcde9778920b519d ChangeLog 1830
 MD5 55f12d79d5cefe0f41b485310ece9042 koffice-libs-1.3.5.ebuild 1012
-MD5 5c04cf47db2e7314755652f8ef1f8c04 koffice-libs-1.4.0-r1.ebuild 1296
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-koffice-libs-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-koffice-libs-1.4.1 68
-MD5 91f33849abb334a913f8ac16f9f916aa files/digest-koffice-libs-1.4.0-r1 68
-MD5 95d7ff522779f61b34aafbb037afe033 files/koffice-1.4.0-save.patch 709

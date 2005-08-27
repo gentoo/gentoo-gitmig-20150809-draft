@@ -1,6 +1,4 @@
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 c9a2518dd628146a68dac7615eebabac krita-1.4.0.ebuild 954
 MD5 c9e4bd0f8f287ad8deb8353ce901f964 krita-1.4.1.ebuild 954
 MD5 a65bc55883072e3a6cabb723184bc0a3 ChangeLog 1305
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-krita-1.4.1 68
-MD5 91f33849abb334a913f8ac16f9f916aa files/digest-krita-1.4.0 68
