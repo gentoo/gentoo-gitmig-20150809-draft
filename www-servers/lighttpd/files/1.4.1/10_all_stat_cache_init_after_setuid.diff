@@ -1,0 +1,53 @@
+Index: src/server.c
+===================================================================
+--- src/server.c	(revision 625)
++++ src/server.c	(working copy)
+@@ -160,9 +160,6 @@
+ 	srv->fdwaitqueue = calloc(1, sizeof(*srv->fdwaitqueue));
+ 	assert(srv->fdwaitqueue);
+ 	
+-	srv->stat_cache = stat_cache_init();
+-	assert(srv->stat_cache);
+-	
+ 	srv->srvconf.modules = array_init();
+ 	
+ 	/* use syslog */
+@@ -243,8 +240,10 @@
+ 	joblist_free(srv, srv->joblist);
+ 	fdwaitqueue_free(srv, srv->fdwaitqueue);
+ 	
+-	stat_cache_free(srv->stat_cache);
+-	
++	if (srv->stat_cache) {
++		stat_cache_free(srv->stat_cache);
++	}
++
+ 	array_free(srv->srvconf.modules);
+ 	array_free(srv->split_vals);
+ 	
+@@ -720,13 +719,24 @@
+ 	
+ 	/* setup periodic timer (1 second) */
+ 	if (setitimer(ITIMER_REAL, &interval, NULL)) {
+-		log_error_write(srv, __FILE__, __LINE__, "setting timer failed");
++		log_error_write(srv, __FILE__, __LINE__, "s", "setting timer failed");
+ 		return -1;
+ 	}
+ 	
+ 	getitimer(ITIMER_REAL, &interval);
+ #endif
+ 
++	/* might fail if user is using fam (not gamin) and famd isn't running */
++	if (NULL == (srv->stat_cache = stat_cache_init())) {
++#if defined(HAVE_FAM_H) && !defined(HAVE_FAMNOEXISTS)
++		log_error_write(srv, __FILE__, __LINE__, "s",
++			"FAMOpen2() failed.  Is famd running?");
++		return -1;
++#else
++		SEGFAULT();
++#endif
++	}
++
+ #ifdef HAVE_FAM_H
+ 	/* setup FAM */
+ 	srv->stat_cache->fam_fcce_ndx = -1;

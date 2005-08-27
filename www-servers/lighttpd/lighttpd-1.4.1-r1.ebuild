@@ -1,13 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.1.ebuild,v 1.2 2005/08/23 01:21:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.1-r1.ebuild,v 1.1 2005/08/27 12:36:13 ka0ttic Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils
 
-# bug #97661 - tests try to load modules from /usr/lib/lighttpd.
-# Needless to say, this will fail because either
-#   a) they don't exist since this is a first install, or
-#   b) they do exist, but they are from the previously installed version
 RESTRICT="test"
 
 DESCRIPTION="Lightweight high-performance web server"
@@ -17,29 +13,33 @@ SRC_URI="http://www.lighttpd.net/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="doc fam gdbm ipv6 ldap lua mysql php ssl webdav xattr"
+IUSE="doc fam gdbm ipv6 ldap lua mysql pcre php ssl test webdav xattr"
 
 RDEPEND="app-arch/bzip2
-		>=sys-libs/zlib-1.1
-		>=dev-libs/libpcre-3.1
-		fam?      ( app-admin/gamin )
-		gdbm?     ( sys-libs/gdbm )
-		ldap?     ( >=net-nds/openldap-2.1.26 )
-		lua?      ( dev-lang/lua )
-		mysql?    ( >=dev-db/mysql-4.0.0 )
-		php?      (
-			>=dev-php/php-cgi-4.3.0
-			!net-www/spawn-fcgi
-		)
-		ssl?    ( >=dev-libs/openssl-0.9.7 )
-		webdav? (
-			dev-libs/libxml2
-			>=dev-db/sqlite-3
-		)
-		xattr?  ( sys-apps/attr )"
+	>=sys-libs/zlib-1.1
+	fam?      ( virtual/fam )
+	gdbm?     ( sys-libs/gdbm )
+	ldap?     ( >=net-nds/openldap-2.1.26 )
+	lua?      ( dev-lang/lua )
+	mysql?    ( >=dev-db/mysql-4.0.0 )
+	pcre?     ( >=dev-libs/libpcre-3.1 )
+	php?      (
+		>=dev-php/php-cgi-4.3.0
+		!net-www/spawn-fcgi
+	)
+	ssl?    ( >=dev-libs/openssl-0.9.7 )
+	webdav? (
+		dev-libs/libxml2
+		>=dev-db/sqlite-3
+	)
+	xattr?  ( sys-apps/attr )"
 
 DEPEND="${RDEPEND}
-	doc? ( dev-python/docutils )"
+	doc?  ( dev-python/docutils )
+	test? (
+		perl-core/Test-Harness
+		dev-libs/fcgi
+	)"
 
 # update certain parts of lighttpd.conf based on conditionals
 update_config() {
@@ -54,33 +54,47 @@ update_config() {
 		dosed 's|#\(.*stat-cache.*$\)|\1|' ${config}
 }
 
+pkg_setup() {
+	if ! use pcre ; then
+		ewarn "It is highly recommended that you build ${PN}"
+		ewarn "with perl regular expressions support via USE=pcre."
+		ewarn "Otherwise you lose support for some core options and"
+		ewarn "features such as conditionals."
+		epause 5
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-#    EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
+	EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
+
+	einfo "Regenerating autoconf/automake files"
+	libtoolize --copy --force || die "libtoolize failed"
+	aclocal || die "aclocal failed"
+	autoheader || die "autoheader failed"
+	automake --add-missing --copy || die "automake failed"
+	autoconf || die "autoconf failed"
 
 	# dev-python/docutils installs rst2html.py not rst2html
 	sed -i -e 's|\(rst2html\)|\1.py|g' doc/Makefile.in || \
 		die "sed doc/Makefile.in failed"
+
+	sed -i -e 's|^\(.*UNUSED(regex).*\)$||' src/mod_dirlisting.c || \
+		die "sed src/mod_dirlisting.c failed"
 }
 
 src_compile() {
-#    einfo "Regenerating autoconf/automake files"
-#    libtoolize --copy --force || die "libtoolize failed"
-#    aclocal || die "aclocal failed"
-#    autoheader || die "autoheader failed"
-#    automake --add-missing --copy || die "automake failed"
-#    autoconf || die "autoconf failed"
-
 	econf --libdir=/usr/$(get_libdir)/${PN} \
 		--enable-lfs \
 		$(use_enable ipv6) \
-		$(use_with fam gamin) \
+		$(use_with fam) \
 		$(use_with gdbm) \
 		$(use_with lua) \
 		$(use_with ldap) \
 		$(use_with mysql) \
+		$(use_with pcre) \
 		$(use_with ssl openssl) \
 		$(use_with webdav webdav-props) \
 		$(use_with xattr attr) \
@@ -126,13 +140,13 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins ${FILESDIR}/lighttpd.logrotate lighttpd || die
 
-	keepdir /var/log/lighttpd /var/www/localhost/htdocs
+	keepdir /var/l{ib,og}/lighttpd /var/www/localhost/htdocs
 }
 
 pkg_preinst() {
 	enewgroup lighttpd
 	enewuser lighttpd -1 -1 /var/www/localhost/htdocs lighttpd
-	fowners lighttpd:lighttpd /var/log/lighttpd
+	fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
 }
 
 pkg_postinst () {
@@ -145,7 +159,7 @@ pkg_postinst () {
 	fi
 
 	if [[ -f ${ROOT}etc/lighttpd.conf ]] ; then
-		ewarn "As of lighttpd-1.4.0-r1, Gentoo has a customized configuration,"
+		ewarn "As of lighttpd-1.4.1, Gentoo has a customized configuration,"
 		ewarn "which is now located in /etc/lighttpd.  Please migrate your"
 		ewarn "existing configuration."
 		ebeep 3

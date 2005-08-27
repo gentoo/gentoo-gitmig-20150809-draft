@@ -1,0 +1,39 @@
+--- branches/lighttpd-merge-1.4.x/src/mod_staticfile.c	(revision 624)
++++ branches/lighttpd-merge-1.4.x/src/mod_staticfile.c	(revision 625)
+@@ -166,12 +166,12 @@
+ 	for (s = con->request.http_range, error = 0;
+ 	     !error && *s && NULL != (minus = strchr(s, '-')); ) {
+ 		char *err;
+-		long la, le;
++		off_t la, le;
+ 		
+ 		if (s == minus) {
+ 			/* -<stop> */
+ 			
+-			le = strtol(s, &err, 10);
++			le = strtoll(s, &err, 10);
+ 			
+ 			if (le == 0) {
+ 				/* RFC 2616 - 14.35.1 */
+@@ -197,7 +197,7 @@
+ 		} else if (*(minus+1) == '\0' || *(minus+1) == ',') {
+ 			/* <start>- */
+ 			
+-			la = strtol(s, &err, 10);
++			la = strtoll(s, &err, 10);
+ 			
+ 			if (err == minus) {
+ 				/* ok */
+@@ -224,10 +224,10 @@
+ 		} else {
+ 			/* <start>-<stop> */
+ 			
+-			la = strtol(s, &err, 10);
++			la = strtoll(s, &err, 10);
+ 			
+ 			if (err == minus) {
+-				le = strtol(minus+1, &err, 10);
++				le = strtoll(minus+1, &err, 10);
+ 				
+ 				/* RFC 2616 - 14.35.1 */
+ 				if (la > le) {

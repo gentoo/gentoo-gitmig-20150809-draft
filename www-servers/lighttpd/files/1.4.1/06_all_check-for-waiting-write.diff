@@ -1,0 +1,67 @@
+--- branches/lighttpd-merge-1.4.x/src/connections.c	(revision 620)
++++ branches/lighttpd-merge-1.4.x/src/connections.c	(revision 621)
+@@ -213,7 +213,7 @@
+ 		
+ #ifdef USE_OPENSSL
+ 		if (srv_sock->is_ssl) {
+-			int r;
++			int r, ssl_err;
+ 			
+ 			switch ((r = SSL_get_error(con->ssl, len))) {
+ 			case SSL_ERROR_WANT_READ:
+@@ -237,8 +237,15 @@
+ 				
+ 				/* fall thourgh */
+ 			default:
+-				log_error_write(srv, __FILE__, __LINE__, "sds", "SSL:", 
+-						r, ERR_error_string(ERR_get_error(), NULL));
++				ssl_err = ERR_get_error();
++				switch(ssl_err) {
++				case SSL_F_SSL23_GET_CLIENT_HELLO:
++					/* a unencrypted HTTP request on a HTTPS socket. Do a redirect to the right location */
++				default:
++					log_error_write(srv, __FILE__, __LINE__, "sds", "SSL:", 
++							r, ERR_error_string(ERR_get_error(), NULL));
++					break;
++				}
+ 				break;
+ 			}
+ 		} else {
+--- branches/lighttpd-merge-1.4.x/src/mod_compress.c	(revision 620)
++++ branches/lighttpd-merge-1.4.x/src/mod_compress.c	(revision 621)
+@@ -357,7 +357,7 @@
+ 			
+ 			if (-1 == mkdir(p->b->ptr, 0700)) {
+ 				if (errno != EEXIST) {
+-					log_error_write(srv, __FILE__, __LINE__, "ssss", "creating cache-directory", p->b->ptr, "failed", strerror(errno));
++					log_error_write(srv, __FILE__, __LINE__, "sbss", "creating cache-directory", p->b, "failed", strerror(errno));
+ 					
+ 					return -1;
+ 				}
+--- branches/lighttpd-merge-1.4.x/src/network_openssl.c	(revision 620)
++++ branches/lighttpd-merge-1.4.x/src/network_openssl.c	(revision 621)
+@@ -123,6 +123,7 @@
+ 			size_t toSend;
+ 			stat_cache_entry *sce = NULL;
+ 			int ifd;
++			int write_wait = 0;
+ 			
+ 			if (HANDLER_ERROR == stat_cache_get_entry(srv, con, c->data.file.name, &sce)) {
+ 				log_error_write(srv, __FILE__, __LINE__, "sb",
+@@ -162,6 +163,7 @@
+ 				if ((r = SSL_write(con->ssl, s, toSend)) <= 0) {
+ 					switch ((ssl_r = SSL_get_error(con->ssl, r))) {
+ 					case SSL_ERROR_WANT_WRITE:
++						write_wait = 1;
+ 						break;
+ 					case SSL_ERROR_SYSCALL:
+ 						switch(errno) {
+@@ -196,7 +198,7 @@
+ 				if (c->offset == c->data.file.length) {
+ 					chunk_finished = 1;
+ 				}
+-			} while(!chunk_finished);
++			} while(!chunk_finished && !write_wait);
+ 			
+ 			break;
+ 		}

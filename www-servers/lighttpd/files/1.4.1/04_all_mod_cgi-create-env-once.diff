@@ -1,0 +1,11 @@
+--- branches/lighttpd-merge-1.4.x/src/mod_cgi.c	(revision 618)
++++ branches/lighttpd-merge-1.4.x/src/mod_cgi.c	(revision 619)
+@@ -1064,6 +1064,8 @@
+ 				buffer_reset(con->physical.path);
+ 				return HANDLER_FINISHED;
+ 			}
++			/* one handler is enough for the request */
++			break;
+ 		}
+ 	}
+ 	

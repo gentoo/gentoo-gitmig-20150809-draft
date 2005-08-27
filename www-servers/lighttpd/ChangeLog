@@ -1,6 +1,27 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.36 2005/08/23 01:21:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.37 2005/08/27 12:36:13 ka0ttic Exp $
+
+*lighttpd-1.4.1-r1 (27 Aug 2005)
+
+  27 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/1.4.1/01_all_any-fam.diff, +files/1.4.1/03_all_mod_cgi-wait.diff,
+  +files/1.4.1/07_all_fix-dst_addr_buf-leak.diff,
+  +files/1.4.1/02_all_optional_pcre.diff,
+  +files/1.4.1/04_all_mod_cgi-create-env-once.diff,
+  +files/1.4.1/05_all_fix_array_merging.diff,
+  +files/1.4.1/06_all_check-for-waiting-write.diff,
+  +files/1.4.1/08_all_doc-updates.diff,
+  +files/1.4.1/09_all_lfs-range-requests.diff,
+  +files/1.4.1/10_all_stat_cache_init_after_setuid.diff,
+  files/conf/lighttpd.conf, files/conf/mime-types.conf,
+  +files/conf/mod_cgi.conf, files/conf/mod_fastcgi.conf,
+  -lighttpd-1.4.1.ebuild, +lighttpd-1.4.1-r1.ebuild:
+  Revision bump; added a sleu of upstream patches to fix various bugs. Added a
+  patch to make pcre support optional (although it's highly recommended). FAM
+  support now falls back to fam if gamin is unavailable, so we're now able to
+  use virtual/fam (fixes bug #103643). Also fixes several problems with the
+  custom gentoo configuration.
 
   23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> lighttpd-1.4.1.ebuild:
   Don't use check-kernel.eclass.
