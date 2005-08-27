@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.14 2005/02/08 11:46:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.15 2005/08/27 09:23:11 grobian Exp $
+
+  27 Aug 2005; Fabian Groffen <grobian@gentoo.org> pgf-0.65.ebuild:
+  Marking ~ppc-macos (bug #81542)
 
 *pgf-0.65 (08 Feb 2005)
 
