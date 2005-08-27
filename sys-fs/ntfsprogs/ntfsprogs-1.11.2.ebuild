@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.11.2.ebuild,v 1.1 2005/08/16 03:38:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.11.2.ebuild,v 1.2 2005/08/27 03:15:05 vapier Exp $
 
 DESCRIPTION="User tools for NTFS filesystems"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
@@ -29,6 +29,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "Install failed"
+	dosym mkntfs /usr/sbin/mkfs.ntfs
 	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO.* \
 		doc/attribute_definitions doc/*.txt doc/tunable_settings
 }
