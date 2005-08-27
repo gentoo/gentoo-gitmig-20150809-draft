@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.44 2005/08/26 05:40:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.45 2005/08/27 04:09:31 cardoe Exp $
+
+*hal-0.5.4 (27 Aug 2005)
+
+  27 Aug 2005; Doug Goldstein <cardoe@gentoo.org> -files/hal-udev-63.patch,
+  -hal-0.5.2.ebuild, +hal-0.5.4.ebuild:
+  rev bump to 0.5.4, yay for the Gnome herd and mobile herd for new features
 
   26 Aug 2005; Doug Goldstein <cardoe@gentoo.org> hal-0.5.2.ebuild:
   -m Fixing bug #103421

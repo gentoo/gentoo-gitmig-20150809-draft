@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4296971e8f0736d08ffb0f86579e58c5 ChangeLog 6319
-MD5 76cfae7b036648e82e1b083758f1955d hal-0.5.2.ebuild 4107
+MD5 807c59a56766cbb0e4f774caf8375b48 ChangeLog 6539
 MD5 3305724319ca1a9b454eb5dc7565ba13 hal-0.4.8.ebuild 3375
+MD5 83a27ea966965b0a8f5c2339adbdda60 hal-0.5.4.ebuild 4069
 MD5 2cf5b3c9219c87b1d9aee01f4f5f19bb hal-0.4.5-r2.ebuild 3118
 MD5 1a146b79d18a689bbc8a96b81f74c7f6 hal-0.4.7-r2.ebuild 3455
 MD5 a60767d83157413d549c69b98fac962c metadata.xml 303
@@ -11,10 +11,9 @@ MD5 40a7b45f127bfdcacaa142660ad8b5f9 files/0.5-hald.rc 537
 MD5 2bbbb519c89110dfec96cf63cf541afc files/digest-hal-0.4.8 62
 MD5 e3ecbfe57c0833d32f0ea57a0de58aee files/hal-0.4.8-fix_dvdram.patch 465
 MD5 25cb64ec27a48a80126b6de5ff6c3340 files/hal-0.5.1-old_storage_policy.patch 856
-MD5 59350c54dd02ac43fb991dfc0390d488 files/hal-udev-63.patch 11451
+MD5 27cab5d91e93d8b692246d0ce4110122 files/digest-hal-0.5.4 62
 MD5 ada3b2801b82813b4f10fd6f6caf9d6f files/digest-hal-0.4.5-r2 62
 MD5 7ee3fd5b5ee117f14633350e5b335c2f files/hal-unmount.dev 397
-MD5 edc428d4dcf7103d2fc8dfeb961e2f43 files/digest-hal-0.5.2 62
 MD5 3031a9fe74f43859c313d5f3076e68cd files/digest-hal-0.4.7-r2 62
 MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
 MD5 b0e12a62ce698e1eb2a32139498330cd files/hal-0.4.5-gentoo_gphoto2_usermap.patch 817
@@ -28,7 +27,7 @@ MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDqtoBtvusYtCZMsRAlinAJ4g/CU2rouEx+6s9buy8E1IiF0WZACcCdm3
-qX3ZviAdjWHoADfHM13us+Y=
-=jgJ3
+iD8DBQFDD+eNBtvusYtCZMsRAvy+AKCGKp0px3RX1CC5wkA/Wg33rNL/VQCghiNL
+bJnDo62aTwOu7GDtGp13DdA=
+=o1Nh
 -----END PGP SIGNATURE-----

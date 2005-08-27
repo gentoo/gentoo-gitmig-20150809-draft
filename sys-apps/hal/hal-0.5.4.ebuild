@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.2.ebuild,v 1.2 2005/08/26 05:40:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.1 2005/08/27 04:09:31 cardoe Exp $
 
 inherit eutils linux-info versionator flag-o-matic
 
@@ -62,7 +62,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/hal-udev-63.patch
 	# remove pamconsole option
 	use pam_console || epatch ${FILESDIR}/${PN}-0.5.1-old_storage_policy.patch
 }
