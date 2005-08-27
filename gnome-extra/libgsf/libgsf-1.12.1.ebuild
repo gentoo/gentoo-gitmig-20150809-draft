@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.12.1.ebuild,v 1.5 2005/08/25 23:55:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.12.1.ebuild,v 1.6 2005/08/27 17:45:11 gmsoft Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE="bzip2 doc gnome static"
 
 RDEPEND=">=dev-libs/libxml2-2.4.16
