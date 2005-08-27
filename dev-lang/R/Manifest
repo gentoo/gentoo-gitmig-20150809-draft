@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 fc5ae27d8f8ad03adc952dc27fe62c8b R-2.1.0-r1.ebuild 2659
+MD5 9b4c4b063d297ed6042cbb3b07cb5823 ChangeLog 8911
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 5f83edc66f7f251ae3093586392a2560 R-2.1.1.ebuild 2657
-MD5 40b1ac283475ec6cfaf08cf907731142 ChangeLog 8917
-MD5 1be6338417fd08a609cb02164398a26b files/digest-R-2.1.1 61
-MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
-MD5 44015fe4137f1326769e89f2c2c2eda7 files/R-logo.png 4867
 MD5 35b08f0bf56b91051f76faa75d70eb9f files/digest-R-2.1.0-r1 61
+MD5 44015fe4137f1326769e89f2c2c2eda7 files/R-logo.png 4867
+MD5 15ce6e575cf7a5844aa8deecb504e7be files/R.desktop 425
+MD5 1be6338417fd08a609cb02164398a26b files/digest-R-2.1.1 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDCklMKRy60XGEcJIRAghSAJ9UWh39zZaCBdP7nyg+fz0G+sS3MQCcDbHJ
-r2MugRPZ9MjuwEnLS4pdOC4=
-=8Dq7
+iD8DBQFDEPvQntT9W3vfTuoRAmcIAJ97p6CylWPJ/79dUbZAtuPI9GqA1gCeMD6y
+q7wULwLDlQofFFimGR71s4k=
+=RrRR
 -----END PGP SIGNATURE-----

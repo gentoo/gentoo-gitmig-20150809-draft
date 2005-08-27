@@ -1,11 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.58 2005/08/22 21:53:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.59 2005/08/27 23:48:19 cryos Exp $
 
   22 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> R-2.1.1.ebuild:
   Stable on sparc
 
-  22 Aug 2005; Marcus D. Hanwell <marcus@gentoo.org> -R-2.0.1.ebuild,
+  22 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> -R-2.0.1.ebuild,
   R-2.1.1.ebuild:
   Removed old version. Stable on amd64 and x86.
 
@@ -25,10 +25,10 @@
   13 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> R-2.1.0-r1.ebuild:
   Stable on sparc
 
-  12 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> -R-1.9.0-r1.ebuild:
+  12 Jun 2005; Marcus D. Hanwell <cryos@gentoo.org> -R-1.9.0-r1.ebuild:
   Removing old version. Closes bug 91512.
 
-  11 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> R-2.1.0-r1.ebuild:
+  11 Jun 2005; Marcus D. Hanwell <cryos@gentoo.org> R-2.1.0-r1.ebuild:
   Stable on amd64 and x86.
 
   07 Jun 2005; Patrick Kursawe <phosphan@gentoo.org> R-2.0.1.ebuild,
