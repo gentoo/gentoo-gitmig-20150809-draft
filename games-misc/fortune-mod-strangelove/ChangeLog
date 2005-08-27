@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-strangelove
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-strangelove/ChangeLog,v 1.2 2005/07/31 14:40:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-strangelove/ChangeLog,v 1.3 2005/08/27 18:09:00 corsair Exp $
+
+  27 Aug 2005; Markus Rothe <corsair@gentoo.org>
+  fortune-mod-strangelove-20041203.ebuild:
+  Stable on ppc64
 
   31 Jul 2005; Markus Rothe <corsair@gentoo.org>
   fortune-mod-strangelove-20041203.ebuild:
