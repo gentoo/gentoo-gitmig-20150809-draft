@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.2 2005/07/07 11:45:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.1.ebuild,v 1.3 2005/08/27 20:44:46 rphillips Exp $
 
 inherit perl-module
 
@@ -50,29 +50,3 @@ src_install() {
 	dodoc README Changelog TODO UPGRADE VERSION
 }
 
-pkg_postinst()
-{
-	einfo ""
-	einfo "Note permit you to use many backend driver for storage"
-	einfo "Here, you can defined which you want install my USE flag"
-	einfo "Driver available :"
-	einfo "	binary		Always installed, default mode, store data in binary mode"
-	einfo "	mysql		Allow to store your note in a mysql db"
-	einfo "	dbm		Allow to store your note in a dbm db"
-	einfo "	text		Use a serializer to store data"
-	einfo "	general		Store your note in a plain-text file (Very usefull)"
-	einfo ""
-	einfo "So if you want to use a driver that is not in your USE flag"
-	einfo "You can specify one (or many) like that :"
-	einfo "	USE=\"-mysql general\" emerge note"
-	einfo "or (better way)"
-	einfo "	echo \"app-misc/note	-mysql general\" >> /etc/portage/package.use"
-	einfo ""
-	einfo "A default config file is available is /etc/noterc"
-	einfo "Modify it to specify which backend you want to use and many other things"
-	einfo "You can also have a per user noterc in ~/.noterc"
-	einfo ""
-	einfo "Have a look on /usr/share/note"
-	einfo "There are many informations about mysql (if you use the USE flag mysql) backend and a stresstest script"
-	einfo ""
-}
