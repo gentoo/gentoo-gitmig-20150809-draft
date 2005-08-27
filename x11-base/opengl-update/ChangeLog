@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.104 2005/08/17 21:54:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.105 2005/08/27 04:36:11 matsuu Exp $
+
+  27 Aug 2005; MATSUU Takuto <matsuu@gentoo.org>
+  opengl-update-2.2.3-r1.ebuild:
+  Added ~sh to KEYWORDS.
 
 *opengl-update-2.2.3-r1 (17 Aug 2005)
 
