@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-crossfade/bmp-crossfade-0.3.8-r3.ebuild,v 1.2 2005/06/10 09:11:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-crossfade/bmp-crossfade-0.3.8-r3.ebuild,v 1.3 2005/08/27 17:49:19 corsair Exp $
 
 IUSE=""
 inherit eutils
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.eisenlohr.org/xmms-crossfade/index.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~x86"
 
 DEPEND="media-sound/beep-media-player
 	media-libs/libsamplerate"
