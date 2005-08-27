@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.10_rc1.ebuild,v 1.2 2005/08/25 09:39:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.10_rc1.ebuild,v 1.3 2005/08/27 09:13:52 flameeyes Exp $
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -54,7 +54,7 @@ src_install() {
 	newconfd ${FILESDIR}/alsasound.confd alsasound
 	insinto /etc/modules.d
 	newins ${FILESDIR}/alsa-modules.conf-rc alsa
-	newinitd ${FILESDIR}/alsasound
+	doinitd ${FILESDIR}/alsasound
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.106 2005/08/25 09:39:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.107 2005/08/27 09:13:52 flameeyes Exp $
+
+  27 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-utils-1.0.9a-r1.ebuild, alsa-utils-1.0.10_rc1.ebuild:
+  Was doinitd, not newinitd. Closes bug #103885.
 
   25 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   alsa-utils-1.0.10_rc1.ebuild:
