@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.71 2005/08/23 16:07:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.72 2005/08/27 23:56:21 cryos Exp $
+
+  27 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  libsigc++-2.0.15.ebuild:
+  Stable on amd64.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> libsigc++-2.0.15.ebuild:
   stable on ia64
@@ -56,7 +60,7 @@
 
 *libsigc++-2.0.12 (26 May 2005)
 
-  26 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  26 May 2005; Marcus D. Hanwell <cryos@gentoo.org>
   +libsigc++-2.0.12.ebuild:
   Version bump.
 
