@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 11d0f67b5304cc88f6e66d2aa5441f5b binutils-config-1.8-r4.ebuild 577
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 efaca3f93c7f97a98402711502625ac1 ChangeLog 2960
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r4 0
+MD5 fe25e68c56d33822a393dad2099a6425 binutils-config-1.8-r5.ebuild 577
+MD5 dd789e541f40e4f34b7ea83258e6ec8a ChangeLog 3195
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
-MD5 c194d3b07b95cdde77e7b02c98509b98 files/binutils-config-1.8 9574
+MD5 0094469d5d87417a29410741a4d1c64a files/binutils-config-1.8 9600
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.8-r5 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDQCfgIKl8Uu19MoRArlwAKCAdxdli2hkAEQk89vrWL7ng4bZmwCeMYN2
-MM4rvLebO+53xjUiU5OAf8o=
-=gpa9
+iD8DBQFDD/tlgIKl8Uu19MoRAvSiAJ9HC87MAo5pGmmoZrwpehvbws4w3gCeNL1u
+428Vd4Op2/47j+0/v4NbPwI=
+=sQkl
 -----END PGP SIGNATURE-----
