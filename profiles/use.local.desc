@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1407 2005/08/27 09:07:58 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1408 2005/08/27 15:56:33 sekretarz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -778,6 +778,7 @@ net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail applica
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/bridge-utils:sysfs - Enable use of the sysfs filesystem (Linux-2.6+) via libsysfs
 net-misc/curl:ares - Enabled c-ares dns support
+net-misc/curl:idn - Enable libidn support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
