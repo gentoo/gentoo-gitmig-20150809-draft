@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17.ebuild,v 1.2 2005/05/04 01:02:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17.ebuild,v 1.3 2005/08/28 16:03:56 metalgod Exp $
 
 DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/openmotif

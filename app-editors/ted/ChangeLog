@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.20 2005/03/31 09:01:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.21 2005/08/28 16:03:56 metalgod Exp $
+
+  28 Aug 2005; Luis Medinas <metalgod@gentoo.org> ted-2.17.ebuild:
+  Added ~amd64 keywords. Closes bug #103872.
 
 *ted-2.17 (31 Mar 2005)
 
