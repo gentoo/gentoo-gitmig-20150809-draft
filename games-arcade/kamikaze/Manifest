@@ -1,4 +1,6 @@
 MD5 8c984be41dd98a0744c034a15a3985e9 kamikaze-0.1.0.ebuild 474
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 9395cbc4ac3e2660b43366e498360396 ChangeLog 999
+MD5 f788392ced66c86f08bfcb69d00847b8 kamikaze-0.2.1.ebuild 474
+MD5 ff48f09e976acd253af3999c119c58b9 ChangeLog 1127
+MD5 571ff19dd7e256676fdb30bc6f8dda42 files/digest-kamikaze-0.2.1 67
 MD5 2a89ed5f7d862f3da877ff2c678a7372 files/digest-kamikaze-0.1.0 67
