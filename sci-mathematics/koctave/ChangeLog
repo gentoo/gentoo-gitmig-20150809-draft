@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/koctave
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.8 2005/08/20 16:50:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.9 2005/08/28 01:02:03 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> koctave-0.65-r1.ebuild:
+  Stable on amd64.
 
   20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> -koctave-0.65.ebuild,
   koctave-0.65-r1.ebuild:
@@ -13,7 +16,7 @@
   +koctave-0.65-r1.ebuild:
   Workaround for bug #43843. Adds documentation.
 
-  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> koctave-0.65.ebuild:
+  31 May 2005; Marcus D. Hanwell <cryos@gentoo.org> koctave-0.65.ebuild:
   Update homepage and download locations.
 
   24 Apr 2005; Jason Wever <weeve@gentoo.org> koctave-0.65.ebuild:
