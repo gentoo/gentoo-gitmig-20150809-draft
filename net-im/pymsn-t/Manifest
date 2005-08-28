@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 46274fb6f256fc0c0945b8dae15e9043 pymsn-t-0.9.5.ebuild 2016
 MD5 d56c241f2174db06b33bf9c0ad35d00d ChangeLog 1146
 MD5 08d64f26d0872c7dfe0f37e7ea6a83c3 metadata.xml 301
 MD5 bb6822e06ee573f7897518abba0db917 files/pymsn-t-0.9.5-arguments.patch 263
 MD5 d06863dd9cbeea1d2bd016de6b27742c files/digest-pymsn-t-0.9.5 63
 MD5 a0581c27b7e350c2d92b331ea1b3a4f2 files/pymsn-t.initd 420
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDEeLI8zY1VwezZiERAuvsAKCRvZP6slbBXsgDCRBnz9zBvV/pTQCgmzuC
+YGPXlL3mX3uIoeeaR80+t4s=
+=/Vso
+-----END PGP SIGNATURE-----

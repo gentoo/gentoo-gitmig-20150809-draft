@@ -7,14 +7,14 @@ depend() {
 
 start() {
 	ebegin "Starting MSN Jabber Transport"
-	cd /var/run/pymsn-t
-	start-stop-daemon --start --quiet --background --chuid pymsn-t:jabber \
-		--exec /usr/lib/pymsn-t/pymsn-t -- /etc/pymsn-t.xml
+	cd /var/run/jabber
+	start-stop-daemon --start --quiet --background --chuid jabber:jabber \
+		--exec /usr/lib/PATH/site-packages/PyMSNt -- /etc/jabber/pymsn-t.xml
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping MSN Jabber Transport"
-	start-stop-daemon --stop --quiet --pidfile /var/run/pymsn-t/PyMSNt.pid
+	start-stop-daemon --stop --quiet --pidfile /var/run/jabber/pymsn-t.pid
 	eend $?
 }
