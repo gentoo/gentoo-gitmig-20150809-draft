@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/minit-0.9.1.ebuild,v 1.2 2005/04/16 07:48:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/minit-0.9.1.ebuild,v 1.3 2005/08/28 06:04:12 vapier Exp $
 
 inherit eutils
 
@@ -11,15 +11,14 @@ SRC_URI="http://www.fefe.de/minit/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="diet"
+IUSE=""
 
-DEPEND="diet? ( dev-libs/dietlibc )"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-destdir.patch
-	use diet || sed -i -e '/^DIET=diet/d' Makefile
 }
 
 src_install() {
