@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/superkaramba
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.31 2005/08/24 20:49:46 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.32 2005/08/28 13:59:44 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  superkaramba-0.36.ebuild:
+  Stable on amd64.
 
   24 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> superkaramba-0.34.ebuild,
   superkaramba-0.36.ebuild, superkaramba-0.37_rc2.ebuild:
