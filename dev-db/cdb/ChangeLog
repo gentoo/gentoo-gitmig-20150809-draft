@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.15 2005/05/30 18:16:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.16 2005/08/28 20:04:53 grobian Exp $
+
+  28 Aug 2005; Fabian Groffen <grobian@gentoo.org> cdb-0.75.ebuild:
+  Marking ~ppc-macos (bug #87701)
 
   30 May 2005; Sven Wegener <swegener@gentoo.org> cdb-0.75.ebuild:
   Moved from gcc.eclass to toolchain-funcs.eclass, bug #92745.
