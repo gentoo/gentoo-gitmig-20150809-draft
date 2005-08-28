@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8ed894e9fd89926b92e8db1267f1924 xtrans-0.99.0.ebuild 414
-MD5 236d73c55d870fe7e99d5aad21483fa4 ChangeLog 638
+MD5 e0e17c07029828bdf92a9deafe0e4d7c xtrans-0.99.0.ebuild 418
+MD5 1d93a7de82444b5d5a37ca99f34034c0 ChangeLog 722
 MD5 4177228fdfbdefa3589e93b9a7bab094 files/digest-xtrans-0.99.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC8j5gIKl8Uu19MoRAsgeAKCDN7uslB4AUcQLylyyLIppNaBwrACdEHc5
-oCVSzzgcnm9fJMOE++i2ipM=
-=Y8es
------END PGP SIGNATURE-----
