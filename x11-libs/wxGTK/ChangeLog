@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.85 2005/07/12 18:39:03 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.86 2005/08/28 20:45:58 pythonhead Exp $
+
+  28 Aug 2005; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.6.1.ebuild:
+  Marked x86 stable
 
 *wxGTK-2.6.1 (12 Jul 2005)
 
