@@ -5,6 +5,7 @@ app-arch/zip
 app-arch/unzip
 app-editors/nano
 app-editors/vim-core
+>=app-portage/esearch-0.7.1
 app-shells/bash
 app-shells/zsh
 dev-lang/perl
@@ -13,6 +14,7 @@ dev-libs/libprelude
 dev-libs/libxml2
 dev-perl/XML-Parser
 dev-util/intltool
+dev-util/guile
 media-libs/a52dec
 net-misc/curl
 sys-apps/diffutils
@@ -32,6 +34,5 @@ x11-libs/gtk+
 ##
 # end collision-protect
 ##
-
 
 app-arch/cpio
