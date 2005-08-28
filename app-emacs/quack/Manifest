@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 5b291e135ab6676c151775a477dc3e7a quack-0.22.ebuild 512
 MD5 aa0cfbdc6608357ba7d6c3f03a9c0733 ChangeLog 766
@@ -5,3 +8,10 @@ MD5 b8536b2c0f911e00a43375be912e9cb9 quack-0.25.ebuild 520
 MD5 54194b373b240bd8d070555411f11c90 files/digest-quack-0.22 61
 MD5 96d1e0f5ac58b7c05d2c11a5553e0ffb files/70quack-gentoo.el 95
 MD5 eb7dd8f7ea4fed93c9e6476fdad1d244 files/digest-quack-0.25 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESL0mOfEJZHYOKcRApf7AJ4/H1BlG5YwRwMvZJ5bVfySRtc1MgCdHyfO
+yZwfOORopvHKO3tka6kkNQo=
+=VM8X
+-----END PGP SIGNATURE-----

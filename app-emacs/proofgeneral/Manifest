@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 71ecc80445470ecbd2923f9dac6000ad ChangeLog 1260
 MD5 a36a54b7db92006846606d91975be649 proofgeneral-3.5.ebuild 1330
 MD5 017179d14d4659a20c38a23b00fe9671 files/digest-proofgeneral-3.5 69
 MD5 f34aad0948ece9597b5e6b389350117b files/50proofgeneral-gentoo.el 150
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDER+ymOfEJZHYOKcRAg4fAKDbOcCsrezWaME8THLiBV+L3j3BzgCgrOz/
+OU7/wWsSkWb2cio3H8iSWJw=
+=bpIy
+-----END PGP SIGNATURE-----

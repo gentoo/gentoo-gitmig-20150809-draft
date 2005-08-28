@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 982f2b98b9068f931a20ac5d8d05cc92 thinks-1.8.ebuild 465
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 dfd9ff652f5ec0e519e79abad0b7b10c ChangeLog 670
 MD5 2e5a2d1518ea0692b25101232c7a8e2a files/50thinks-gentoo.el 892
 MD5 bf61bc16c49cebad402f845daa41fc6e files/digest-thinks-1.8 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESDzmOfEJZHYOKcRArcaAJ0ZXaNLeJ54q9N51KMn2rS8o2fsqACeOvAo
+9iV4kQi/6J/EvXMqa05G4mU=
+=3Jek
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0437ba14ce9fbeca5dce6be40d7059e2 tnt-2.4.ebuild 907
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 5cac594f268ea4232fbc99be53f8c1cd ChangeLog 512
 MD5 d0bb0cd820a0bb288ab5ceba239948ff files/digest-tnt-2.4 58
 MD5 1fd8755935fade67ea292ce943d28663 files/50tnt-gentoo.el 122
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESEpmOfEJZHYOKcRAs/nAJ9H2SSChV0K+hsmS+zMXyE4woNK8gCfU7O8
+Fre/GhPrAmZ4ZDUoRH9lIc8=
+=p6kn
+-----END PGP SIGNATURE-----

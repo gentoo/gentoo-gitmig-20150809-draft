@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6a3ea3e0b67388f1acfc2e09553e8318 metadata.xml 593
 MD5 b484009dd7a97bb5203bae8d0115feaa w3mnav-0.5-r1.ebuild 731
 MD5 1216ba9983ae508e1d7eb29df815e207 ChangeLog 1152
 MD5 dde575842b08b6d622a34cccc0f08df0 files/90w3mnav-gentoo.el 97
 MD5 2fa9019e34366d1458cda201d879719d files/digest-w3mnav-0.5-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESLPmOfEJZHYOKcRAp5YAKDqF8TV3CgrsMtpN6Y9hCfVu8ss8QCfQsSz
+ZBN4aoBOOLIIUzgoUXriksY=
+=cZwe
+-----END PGP SIGNATURE-----

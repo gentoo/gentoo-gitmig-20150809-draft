@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 4dd69dcfd2c798debfa5d510776f76dd ChangeLog 814
 MD5 7dee62ca4ba0753315736d646f2a7645 ognus-0.24.ebuild 1267
@@ -7,3 +10,10 @@ MD5 8f5262b073e5d141d14b5a865a44613b files/70ognus-gentoo.el 99
 MD5 c4150c324a99c05e05cf669c8c13d9d7 files/digest-ognus-0.24 63
 MD5 bda356133acc0d315529cea4c706c99f files/digest-ognus-0.17 63
 MD5 ea9207ffb1da5a43bfc2f5d459fef593 files/digest-ognus-0.18 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDER8cmOfEJZHYOKcRAuHbAJ9XS/N2lmrvwqGl4+uyeVGWMcSTLgCfXYCN
+N8JsBwghbb7HMBWjTU/FhdE=
+=pluM
+-----END PGP SIGNATURE-----

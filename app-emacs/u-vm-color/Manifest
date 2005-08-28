@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 8a3ae841582fa1e25cbfdedc9a42ca09 ChangeLog 742
 MD5 b7e5890244fb65ca86f9c83ac1768bd7 u-vm-color-1.7.ebuild 859
 MD5 22684baccdfbb94c6cb130c19f259c30 files/digest-u-vm-color-1.7 65
 MD5 df2b6c20c5c34459521f7bb52171b539 files/50u-vm-color-gentoo.el 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESFvmOfEJZHYOKcRArWIAJ0ZybheIfRSLl3NWzBcbE7Nd7SI8wCfc+Ys
+we3aKaWj7Z1cTPDoy2E3U8Q=
+=JDxh
+-----END PGP SIGNATURE-----

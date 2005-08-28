@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 9602f8e96b7a294ac41827116b0c2dab qwerty-1.1.ebuild 627
 MD5 4e16ce31fc8742f9c3da5dc97d8251a1 ChangeLog 786
 MD5 ce79aaaf41f503d9454e3a8f7ebe21aa files/digest-qwerty-1.1 60
 MD5 3ca4153bc5e379f4452e099128ab01c5 files/50qwerty-gentoo.el 176
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDER/6mOfEJZHYOKcRAjsHAJ9eZBacmgixLboOfCBZR3OLSEK9qwCcD3EA
+G9qavCRVOPVIiX1g8HP/7ag=
+=U9+5
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 6bce1a64477d075dcfb85e01077ca9bb vhdl-mode-3.33.2.ebuild 886
 MD5 296df5b1169c8bc9f12258b05a61f6dd ChangeLog 1055
@@ -5,3 +8,10 @@ MD5 61ad8bfc04d54af5eff3d3e1cf8c2ecd vhdl-mode-3.33.3.ebuild 885
 MD5 792ddd890b1e4550ece823eb320ddbc3 files/digest-vhdl-mode-3.33.2 68
 MD5 a660a1a260fe78bf0674e003faac9cb7 files/50vhdl-mode-gentoo.el 147
 MD5 0882d788740b79aa0162faac839122c7 files/digest-vhdl-mode-3.33.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESHsmOfEJZHYOKcRAsv/AJ0WinC0SpEteDZThUXmTmeJjQQMMgCfWnTQ
+RDUIMz8JLdnMIAenncrPuow=
+=3pRj
+-----END PGP SIGNATURE-----

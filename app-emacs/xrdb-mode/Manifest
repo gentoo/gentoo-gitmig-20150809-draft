@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 47eac7a3b1c9b0db14aed3577285501a ChangeLog 612
 MD5 74d3417aa8ef33f977f7276f376419de xrdb-mode-2.31.ebuild 693
 MD5 2f6bc90ec678754b47d558cb3b3c6b90 files/digest-xrdb-mode-2.31 64
 MD5 ccb153bdc46e5a6cf54e9428d7210a28 files/70xrdb-mode-gentoo.el 401
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESIWmOfEJZHYOKcRAjIhAJ47o6GEGLnCtXGvc+/oyONcG/vHZACfdbJ/
+kgwXr+Eh4Ojhs2JZU6utUbI=
+=lshH
+-----END PGP SIGNATURE-----

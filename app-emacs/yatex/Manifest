@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73b8438632d3ec40a9f16e142f48b43a metadata.xml 646
 MD5 96f61fe5fe7fa4239f1021b102ca04b6 ChangeLog 1929
 MD5 1c2d4a11f6fc5c3d35141316c7ce5c04 yatex-1.72.ebuild 1211
@@ -9,3 +12,10 @@ MD5 479e2442aa22766f98554501598374d5 files/yatex-1.71-yatexhlp-gentoo.diff 499
 MD5 cea9c48d2281fc63126df7a0dbb1c43b files/digest-yatex-1.71 61
 MD5 920ec551a0bac37b6e5b1142af2df6d0 files/yatex-1.71-gentoo.diff 2634
 MD5 920ec551a0bac37b6e5b1142af2df6d0 files/yatex-1.72-gentoo.diff 2634
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDESJrmOfEJZHYOKcRAv+2AKC9xPt3AKXXhY91W/uGaJEancxEWQCgnn9g
+YvOwZ76n/uHl9AlTpwf7vxg=
+=Hk+k
+-----END PGP SIGNATURE-----
