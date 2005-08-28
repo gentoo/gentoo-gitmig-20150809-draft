@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/le
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.6 2005/06/05 11:31:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.7 2005/08/28 17:07:53 metalgod Exp $
+
+  28 Aug 2005; Luis Medinas <metalgod@gentoo.org> le-1.9.2.ebuild:
+  Added ~amd64 keywords. Closes bug #103755.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> le-1.9.2.ebuild:
   Stable on ppc.
