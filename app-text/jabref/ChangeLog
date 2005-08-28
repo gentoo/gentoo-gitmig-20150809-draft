@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.32 2005/06/11 13:55:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.33 2005/08/28 01:31:25 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> jabref-1.7.1-r1.ebuild:
+  Stable on amd64.
 
 *jabref-1.8_beta (11 Jun 2005)
 
