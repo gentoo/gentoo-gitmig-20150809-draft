@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/slidentd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.13 2005/03/03 18:33:41 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.14 2005/08/28 06:26:45 vapier Exp $
+
+  28 Aug 2005; Mike Frysinger <vapier@gentoo.org> -slidentd-0.0.15.ebuild,
+  slidentd-1.0.0.ebuild:
+  Punt dietlibc cruft.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> slidentd-0.0.15.ebuild:
   Dependency update: sys-apps/daemontools -> sys-process/daemontools.
