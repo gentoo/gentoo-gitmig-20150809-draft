@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/dash
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.27 2005/08/19 19:24:18 hansmi Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.28 2005/08/28 05:58:14 vapier Exp $
+
+  28 Aug 2005; Mike Frysinger <vapier@gentoo.org> dash-0.5.2.4.ebuild,
+  dash-0.5.2.6.ebuild, dash-0.5.2.7.ebuild:
+  Punt USE=diet.
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> dash-0.5.2.6.ebuild:
   Stable on ppc.

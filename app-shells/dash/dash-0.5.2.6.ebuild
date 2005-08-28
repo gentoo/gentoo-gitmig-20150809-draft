@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.6.ebuild,v 1.3 2005/08/19 19:24:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.6.ebuild,v 1.4 2005/08/28 05:58:14 vapier Exp $
 
 inherit eutils versionator flag-o-matic toolchain-funcs
 
@@ -13,13 +13,12 @@ HOMEPAGE="http://ftp.debian.org/debian/pool/main/d/dash/"
 SRC_URI="mirror://debian/pool/main/d/dash/${MY_P2}.orig.tar.gz \
 	mirror://debian/pool/main/d/dash/${DEB_P}.diff.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="diet static"
+IUSE="static"
 
-RDEPEND="diet? ( dev-libs/dietlibc )
-	!diet? ( virtual/libc )"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/yacc"
@@ -35,10 +34,8 @@ src_unpack() {
 src_compile() {
 	use static && append-ldflags -static
 
-	CC="$(tc-getCC)"
-	use diet && CC="diet ${CC}"
-
-	econf CC="${CC}" || die "econf failed"
+	export CC="$(tc-getCC)"
+	econf || die "econf failed"
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
