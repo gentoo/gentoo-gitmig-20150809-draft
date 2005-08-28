@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cweb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.9 2005/05/04 17:58:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/ChangeLog,v 1.10 2005/08/28 17:50:55 metalgod Exp $
+
+  28 Aug 2005; Luis Medinas <metalgod@gentoo.org> cweb-3.64.ebuild:
+  Added ~amd64 keywords. Closes bug #103778.
 
   04 May 2005; David Holm <dholm@gentoo.org> cweb-3.64.ebuild:
   Added to ~ppc.
