@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.0.ebuild,v 1.1 2005/08/05 20:25:22 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.100.0.ebuild,v 1.2 2005/08/28 04:23:57 kito Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -41,10 +41,11 @@ src_unpack() {
 
 	# compile and install jackstart, see #92895, #94887
 	if use caps ; then
-		epatch ${FILESDIR}/${P}-jackstart.patch
+		epatch ${FILESDIR}/${PN}-0.99.0-jackstart.patch
 	fi
 
 	epatch ${FILESDIR}/${PN}-transport.patch
+	epatch ${FILESDIR}/${P}-coreaudio.patch
 }
 
 src_compile() {

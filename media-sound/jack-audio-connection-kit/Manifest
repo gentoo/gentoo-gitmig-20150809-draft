@@ -1,5 +1,5 @@
 MD5 12ba9bdc06c4aa396ac90a7ebb9400e7 ChangeLog 12096
-MD5 f25c57ed475289ae1a1de2b2b7f5b5de jack-audio-connection-kit-0.100.0.ebuild 2899
+MD5 de43c85f549fb9f68102ff44ba2d3476 jack-audio-connection-kit-0.100.0.ebuild 2948
 MD5 0d56eae2a04a15dbe5e7ca024a87a097 jack-audio-connection-kit-0.80.0.ebuild 1771
 MD5 4ee3c27feb88ab9f33c934e0262fbc45 jack-audio-connection-kit-0.98.1-r1.ebuild 2116
 MD5 e908ec8467eb0ced024bbb594cabebaa jack-audio-connection-kit-0.99.0-r1.ebuild 2404
@@ -17,3 +17,4 @@ MD5 b5dc5c728b1bdc6c5ebf5e54dc3ca246 files/jack-audio-connection-kit-0.98.1-conf
 MD5 cb8756e396d8d311dbcd4440fd483fc9 files/jack-audio-connection-kit-0.99.0-jackstart.patch 515
 MD5 0ad8a4c606e807460bce497d044044ef files/jack-audio-connection-kit-doc-option.patch 1103
 MD5 8e9c72734364a9d7e4a6d781e13beec8 files/jack-audio-connection-kit-transport.patch 309
+MD5 d41d8cd98f00b204e9800998ecf8427e files/jack-audio-connection-kit-0.100.0-coreaudio.patch 0
