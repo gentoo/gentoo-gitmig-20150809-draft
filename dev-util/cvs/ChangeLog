@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.96 2005/08/26 07:57:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.97 2005/08/28 00:08:33 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> cvs-1.12.12-r2.ebuild:
+  Stable on amd64, bug 103661.
 
   26 Aug 2005; Robin H. Johnson <robbat2@gentoo.org>
   +files/cvs.pam-include-1.12.12, cvs-1.12.12-r2.ebuild:
