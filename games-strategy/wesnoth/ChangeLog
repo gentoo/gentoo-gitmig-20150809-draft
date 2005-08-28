@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.59 2005/08/20 02:07:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.60 2005/08/28 13:54:01 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> wesnoth-0.9.5.ebuild:
+  Stable on amd64, closes bug 103542.
 
   20 Aug 2005; Jason Wever <weeve@gentoo.org> wesnoth-0.9.5.ebuild:
   Stable on SPARC.
