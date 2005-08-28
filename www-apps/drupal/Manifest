@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 32c504666cfbf4b5945eff5786ca636f ChangeLog 1613
-MD5 848a155311c1ec257784baf656d4f0b8 drupal-4.5.2.ebuild 30653
-MD5 f339293d241227bd0e737862a102341f drupal-4.6.2.ebuild 3756
+MD5 e4f9cbc61147e254fac7a43c679cc943 drupal-4.5.2.ebuild 30641
+MD5 e82b6e40e3e223403bb373c04d346d72 drupal-4.6.2.ebuild 3757
 MD5 57ac487dc3baa53dc38afabe1f689999 files/4.6.0/engines 12
 MD5 044a234820dd9d17176aeecb72317f97 files/4.6.0/language 81
 MD5 3ddf6c4a30991fd5618b3f0e88e1b6de files/4.6.0/modules 1455
@@ -15,7 +15,7 @@ MD5 31a7762b97d644514268dab18f853a27 metadata.xml 274
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCzZ6I1lqEGTUzyQRAj2WAKDUPJUwWk1cBVl0qoEPBzGM5ZMl7gCgzhWi
-l+wHgemaw4UMmkwgYkoxQow=
-=q8ZU
+iD8DBQFDEhmoI1lqEGTUzyQRAuTDAJ971ugt049XNCEQ3tG4q2qJRHHukwCfQVpN
+LLr3frJ/CpetWJkN7RpcFLA=
+=z3OA
 -----END PGP SIGNATURE-----

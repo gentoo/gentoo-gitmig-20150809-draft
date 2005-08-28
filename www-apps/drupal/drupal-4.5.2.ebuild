@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.9 2005/08/04 09:08:24 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.10 2005/08/28 20:07:42 swegener Exp $
 
 inherit webapp eutils
 
@@ -16,7 +16,6 @@ KEYWORDS="~x86 ~alpha ~amd64"
 DEPEND="virtual/php"
 
 src_unpack() {
-	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 
 	if ! use minimal ; then
