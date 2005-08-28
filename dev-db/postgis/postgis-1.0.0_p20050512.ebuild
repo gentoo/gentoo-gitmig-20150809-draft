@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.0.0_p20050512.ebuild,v 1.1 2005/05/24 21:18:52 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.0.0_p20050512.ebuild,v 1.2 2005/08/28 20:05:09 swegener Exp $
 
 DESCRIPTION="Geographic Objects for PostgreSQL"
 HOMEPAGE="http://postgis.refractions.net"
@@ -26,7 +26,6 @@ src_compile(){
 	use ppc && CFLAGS="-pipe -fsigned-char"
 	myconf="${myconf} --enable-autoconf --with-maxbackends=1024"
 
-	cd ${S}
 	if use doc; then
 		local xslv=$(best_version app-text/docbook-xsl-stylesheets |\
 			cut -d'/' -f2 | sed s/"docbook-"//)
@@ -58,8 +57,6 @@ src_compile(){
 }
 
 src_install(){
-	into /usr
-	cd ${S}
 	einstall || die "Error: einstall failed"
 	dodir /usr/share/postgresql /usr/share/postgresql/contrib/
 	mv ${D}/usr/share/*.sql ${D}/usr/share/postgresql/contrib/

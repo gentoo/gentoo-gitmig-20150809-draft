@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14bf62145982fe2ad7a09d1d1675362f ChangeLog 2093
 MD5 e02da1081e84b4266aff297f0e422688 files/digest-postgis-0.7.5-r2 135
 MD5 45fbdc11a7887af6cbdb23256ede1cbf files/digest-postgis-1.0.0_p20050512 76
@@ -6,3 +9,10 @@ MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 8557793e4877948f4c89f36a7d74db81 postgis-0.7.5-r2.ebuild 1822
 MD5 77268390221b16c76a842a5316186254 postgis-1.0.0_p20050512.ebuild 2375
 MD5 92a41ea65d8613f1af45507e21c742b1 postgis-1.0.1_p20050805.ebuild 2576
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDEhkOI1lqEGTUzyQRAqehAKDMkaIQ8oGBRCTgfL1fxOy9G0TolwCgldCX
+V+ehWKdSvfxYuntwOaCeyQI=
+=qoaH
+-----END PGP SIGNATURE-----

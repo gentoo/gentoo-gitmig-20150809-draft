@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.0.1_p20050805.ebuild,v 1.1 2005/08/27 22:28:27 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.0.1_p20050805.ebuild,v 1.2 2005/08/28 20:05:09 swegener Exp $
 
 DESCRIPTION="Geographic Objects for PostgreSQL"
 HOMEPAGE="http://postgis.refractions.net"
@@ -12,14 +12,14 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc geos proj"
 
-DEPEND=">=dev-db/postgresql-8.0.0 \
-	geos? (sci-libs/geos) \
-	proj? (sci-libs/proj) \
-	doc? (app-text/docbook-xsl-stylesheets) \
-	sys-devel/autoconf "
-RDEPEND=">=dev-db/postgresql-8.0.0 \
-	geos? (sci-libs/geos) \
-	proj? (sci-libs/proj)"
+DEPEND=">=dev-db/postgresql-8.0.0
+	geos? ( sci-libs/geos )
+	proj? ( sci-libs/proj )
+	doc? ( app-text/docbook-xsl-stylesheets )
+	sys-devel/autoconf"
+RDEPEND=">=dev-db/postgresql-8.0.0
+	geos? ( sci-libs/geos )
+	proj? ( sci-libs/proj )"
 
 src_compile(){
 	local myconf
@@ -28,7 +28,6 @@ src_compile(){
 
 	myconf="${myconf} --enable-autoconf --with-maxbackends=1024"
 
-	cd ${S}
 	if use doc; then
 		local xslv="$(portageq match / app-text/docbook-xsl-stylesheets |\
 			cut -d'/' -f2 | sed s/"docbook-"//)"
@@ -65,8 +64,6 @@ src_compile(){
 }
 
 src_install(){
-	into /usr
-	cd ${S}
 	dodir /usr/libexec /usr/share/postgresql /usr/share/postgresql/contrib/
 	einstall || die "Error: einstall failed"
 	mv ${D}/usr/share/*.sql ${D}/usr/share/postgresql/contrib/
