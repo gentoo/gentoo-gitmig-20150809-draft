@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/evieext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.4 2005/08/20 22:44:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.5 2005/08/28 14:30:54 matsuu Exp $
+
+  28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> evieext-1.0.ebuild:
+  Marked ~sh.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> evieext-1.0.ebuild:
   Marked ~ppc

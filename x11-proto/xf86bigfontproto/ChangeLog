@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86bigfontproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.4 2005/08/20 22:52:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.5 2005/08/28 14:30:35 matsuu Exp $
+
+  28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org>
+  xf86bigfontproto-1.1.ebuild:
+  Added ~sh to KEYWORDS.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
   xf86bigfontproto-1.1.ebuild:
