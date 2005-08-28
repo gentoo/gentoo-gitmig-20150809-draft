@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/prom-wl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.2 2005/01/01 13:56:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prom-wl/ChangeLog,v 1.3 2005/08/28 02:20:50 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> prom-wl-2.7.0.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
 *prom-wl-2.7.0 (22 Oct 2004)
 

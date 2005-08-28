@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vhdl-mode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.5 2005/06/05 11:42:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.6 2005/08/28 02:30:55 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> vhdl-mode-3.33.3.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   vhdl-mode-3.33.2.ebuild:

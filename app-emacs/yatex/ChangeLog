@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.13 2005/01/01 14:07:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.14 2005/08/28 02:33:01 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> yatex-1.72.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> yatex-1.72.ebuild:
   Stable on sparc.

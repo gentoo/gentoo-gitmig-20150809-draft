@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/u-vm-color
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.6 2005/05/01 16:47:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.7 2005/08/28 02:28:49 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> u-vm-color-1.7.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> u-vm-color-1.7.ebuild:
   Stable on ppc.

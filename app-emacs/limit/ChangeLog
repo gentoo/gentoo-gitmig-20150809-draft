@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/limit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.14 2005/01/01 13:52:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.15 2005/08/28 02:17:55 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org>
+  limit-1.14.9_pre20041001.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org>
   limit-1.14.9_pre20041001.ebuild:

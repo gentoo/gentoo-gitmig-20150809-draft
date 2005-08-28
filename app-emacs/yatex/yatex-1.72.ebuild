@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.72.ebuild,v 1.8 2005/01/01 14:07:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.72.ebuild,v 1.9 2005/08/28 02:33:01 tester Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="YaTeX: Yet Another TeX mode for Emacs"
 HOMEPAGE="http://www.yatex.org/"
 SRC_URI="http://www.yatex.org/${P/-/}.tar.gz"
 
-KEYWORDS="x86 alpha sparc ppc ~ppc-macos"
+KEYWORDS="alpha ~amd64 ppc ~ppc-macos sparc x86"
 SLOT="0"
 LICENSE="as-is"
 

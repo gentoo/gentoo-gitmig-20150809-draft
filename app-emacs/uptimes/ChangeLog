@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/uptimes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/ChangeLog,v 1.9 2005/04/24 11:07:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uptimes/ChangeLog,v 1.10 2005/08/28 02:30:18 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> uptimes-2.3.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> uptimes-2.3.ebuild:
   Stable on ppc.

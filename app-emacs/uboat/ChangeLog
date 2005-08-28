@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/uboat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.6 2005/04/24 11:06:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.7 2005/08/28 02:29:28 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> uboat-1.2.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> uboat-1.2.ebuild:
   Stable on ppc.

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/quack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.5 2005/06/04 19:12:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.6 2005/08/28 02:35:19 tester Exp $
+
+  28 Aug 2005; Olivier Crête <tester@gentoo.org> quack-0.25.ebuild:
+  Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
 
   04 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org> quack-0.25.ebuild:
   Added ~ppc keyword.

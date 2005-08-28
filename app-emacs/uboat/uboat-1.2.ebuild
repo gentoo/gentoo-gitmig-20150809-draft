@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/uboat-1.2.ebuild,v 1.8 2005/04/24 11:06:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/uboat-1.2.ebuild,v 1.9 2005/08/28 02:29:28 tester Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.splode.com/pub/users/friedman/emacs-lisp/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND="virtual/emacs"
 
