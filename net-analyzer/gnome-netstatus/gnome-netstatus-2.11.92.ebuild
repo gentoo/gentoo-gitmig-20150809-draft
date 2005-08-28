@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.11.90.ebuild,v 1.1 2005/08/22 01:01:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.11.92.ebuild,v 1.1 2005/08/28 22:44:24 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -20,10 +20,14 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
-	>=dev-util/pkgconfig-0.9"
+	>=dev-util/pkgconfig-0.9
+	app-text/gnome-doc-utils"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
 
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-scrollkeeper"
+}
 
 src_unpack() {
 	unpack "${A}"
