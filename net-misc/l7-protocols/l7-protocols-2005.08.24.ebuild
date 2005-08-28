@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.06.04.ebuild,v 1.3 2005/06/25 08:29:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.08.24.ebuild,v 1.1 2005/08/28 03:18:17 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 S=${WORKDIR}/${MY_P}
 
 RDEPEND="net-misc/l7-filter"
@@ -30,18 +30,18 @@ src_compile() {
 # NOTE Testing mechanism is currently broken:
 #  stack smashing attack in function main()
 
-#src_test() {
-#	cd testing
-#	find ${S} -name \*.pat -print -exec ./test_match.sh {} \; \
-#		-exec ./timeit.sh {} \; || die "failed tests"
-#	einfo "patterns past testing"
-#}
+src_test() {
+	cd testing
+	find ${S} -name \*.pat -print -exec ./test_match.sh {} \; \
+		-exec ./timeit.sh {} \; || die "failed tests"
+	einfo "patterns past testing"
+}
 
 src_install() {
 
 	dodir /usr/share/${PN}
 	cd testing
-	cp -a randprintable randchars test_speed match README *.sh ${D}/usr/share/${PN}
+	cp -pPR randprintable randchars test_speed match README *.sh ${D}/usr/share/${PN}
 	cd ${S}
 
 	dodoc README CHANGELOG HOWTO WANTED
@@ -54,5 +54,5 @@ src_install() {
 
 	make PREFIX=${D} install || die
 	rm ${D}/etc/${PN}/Makefile
-	chown -R root:root ${D}
+	chown -R root:0 ${D}
 }
