@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xineramaproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.6 2005/08/21 19:53:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.7 2005/08/28 14:53:27 matsuu Exp $
+
+  28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org>
+  xineramaproto-1.1-r1.ebuild:
+  Marked ~sh
 
   20 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xineramaproto-1.1.ebuild:
