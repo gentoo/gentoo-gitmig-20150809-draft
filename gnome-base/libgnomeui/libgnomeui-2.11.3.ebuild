@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.11.2.ebuild,v 1.1 2005/08/16 22:21:59 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.11.3.ebuild,v 1.1 2005/08/28 16:00:45 allanonjl Exp $
 
 inherit eutils gnome2
 
