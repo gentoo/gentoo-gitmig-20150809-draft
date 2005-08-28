@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.35 2005/08/23 15:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.36 2005/08/28 12:40:08 gmsoft Exp $
+
+  28 Aug 2005; Guy Martin <gmsoft@gentoo.org> jikes-1.22-r1.ebuild:
+  Stable on hppa.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> jikes-1.22-r1.ebuild:
   stable on ia64
