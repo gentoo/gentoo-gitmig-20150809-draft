@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.37.ebuild,v 1.6 2005/06/11 01:19:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.37.ebuild,v 1.7 2005/08/28 06:03:14 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls static diet"
+IUSE="nls static"
 
-RDEPEND="diet? ( dev-libs/dietlibc )"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
@@ -48,8 +48,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use diet && myconf="${myconf} --with-diet-libc"
 	econf \
 		--bindir=/bin \
 		--sbindir=/sbin \
@@ -58,7 +56,6 @@ src_compile() {
 		$(use_enable !static dynamic-e2fsck) \
 		--without-included-gettext \
 		$(use_enable nls) \
-		${myconf} \
 		|| die
 	if ! use elibc_uclibc && grep -qs 'USE_INCLUDED_LIBINTL.*yes' config.{log,status} ; then
 		eerror "INTL sanity check failed, aborting build."

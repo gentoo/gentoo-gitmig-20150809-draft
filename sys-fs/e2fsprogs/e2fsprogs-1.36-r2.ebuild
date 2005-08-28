@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.36-r2.ebuild,v 1.2 2005/03/22 17:22:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.36-r2.ebuild,v 1.3 2005/08/28 06:03:14 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,9 +11,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls static diet"
+IUSE="nls static"
 
-RDEPEND="diet? ( dev-libs/dietlibc )"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
@@ -46,8 +46,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use diet && myconf="${myconf} --with-diet-libc"
 	econf \
 		--bindir=/bin \
 		--sbindir=/sbin \
@@ -55,7 +53,7 @@ src_compile() {
 		--with-ldopts="${LDFLAGS}" \
 		$(use_enable !static dynamic-e2fsck) \
 		$(use_enable nls) \
-		${myconf} || die
+		|| die
 	# Parallel make sometimes fails
 	emake -j1 || die
 }

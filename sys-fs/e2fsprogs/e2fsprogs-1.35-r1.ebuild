@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.17 2005/02/06 22:48:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.18 2005/08/28 06:03:14 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
@@ -11,10 +11,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls static diet"
+IUSE="nls static"
 
-RDEPEND="!diet? ( virtual/libc )
-	diet? ( dev-libs/dietlibc )"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
@@ -55,7 +54,6 @@ src_compile() {
 	use static \
 		&& myconf="${myconf} --with-ldopts=-static" \
 		|| myconf="${myconf} --enable-dynamic-e2fsck --enable-elf-shlibs"
-	use diet && myconf="${myconf} --with-diet-libc"
 	econf \
 		$(use_enable nls) \
 		${myconf} || die
