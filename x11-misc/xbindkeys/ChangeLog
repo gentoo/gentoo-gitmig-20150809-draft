@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.21 2005/08/04 08:15:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.22 2005/08/28 12:56:38 grobian Exp $
+
+  28 Aug 2005; Fabian Groffen <grobian@gentoo.org> xbindkeys-1.7.2.ebuild:
+  Marking ~ppc-macos (bug #83240)
 
   04 Aug 2005; Markus Rothe <corsair@gentoo.org> xbindkeys-1.7.2.ebuild:
   Added ~ppc64
