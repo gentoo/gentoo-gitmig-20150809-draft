@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.0-r1.ebuild,v 1.2 2005/08/24 01:06:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.0-r1.ebuild,v 1.3 2005/08/28 15:13:25 matsuu Exp $
 
 # FIXME: Add USE flags
 
@@ -12,7 +12,7 @@ inherit x-modular
 PATCHES="${FILESDIR}/fix-xkeysymdb-location.patch"
 
 DESCRIPTION="X.Org X11 library"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="ipv6"
 RDEPEND="x11-libs/xtrans
 	x11-libs/libXau
