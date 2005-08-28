@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.15 2005/08/25 01:04:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.16 2005/08/28 15:04:57 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> dante-1.1.15-r2.ebuild:
+  Stable on amd64.
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> dante-1.1.15-r2.ebuild:
   stable on ia64
