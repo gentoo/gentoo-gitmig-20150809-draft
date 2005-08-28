@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.95.7.ebuild,v 1.1 2005/06/13 13:44:15 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.95.7.ebuild,v 1.2 2005/08/28 06:22:40 redhatter Exp $
 
 NAME=Coccinella
 S="${WORKDIR}/${NAME}-${PV}Src"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/coccinella/${NAME}-${PV}Src.tar.gz"
 HOMEPAGE="http://hem.fyristorg.com/matben"
 LICENSE="GPL-2"
 DEPEND="dev-lang/tk"
-KEYWORDS="~x86"
+KEYWORDS="~mips ~x86"
 IUSE=""
 SLOT="0"
 
