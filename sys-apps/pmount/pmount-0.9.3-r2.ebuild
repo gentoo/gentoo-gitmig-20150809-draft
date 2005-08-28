@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.3-r1.ebuild,v 1.2 2005/08/25 22:05:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.3-r2.ebuild,v 1.1 2005/08/28 15:36:56 cardoe Exp $
 
 inherit eutils
 
@@ -41,13 +41,13 @@ src_install () {
 
 	# Must be run SETUID
 	exeinto /usr/bin
-	exeopts -m 4770
+	exeopts -m 4710
 	doexe pmount pumount
 	fowners root:plugdev /usr/bin/pmount
 	fowners root:plugdev /usr/bin/pumount
 
 	dodoc AUTHORS CHANGES TODO
-	doman pmount.1 pumount.1
+	doman pmount.1 pumount.1 pmount-hal.1
 
 	insinto /etc
 	doins pmount.allow
