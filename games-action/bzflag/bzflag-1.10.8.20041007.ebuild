@@ -1,7 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.8.20041007.ebuild,v 1.5 2005/01/27 13:16:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.8.20041007.ebuild,v 1.6 2005/08/28 21:20:49 vapier Exp $
 
+GAMES_USE_SDL="nojoystick"
 inherit flag-o-matic games
 
 DESCRIPTION="OpenGL accelerated 3d tank combat simulator game"
