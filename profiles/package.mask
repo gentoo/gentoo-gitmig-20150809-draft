@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4347 2005/08/27 17:54:18 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4348 2005/08/28 00:39:40 nakano Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Masatomo Nakano <nakano@gentoo.org> (28 Aug 2005)
+# masked for testing
+>=dev-db/postgresql-8.1_beta1
+>=dev-db/libpq-8.1_beta1
 
 # Stefan Knoblich <stkn@gentoo.org> (27 August 2005)
 # Asterisk-1.2.0_beta and related ebuilds, still work-in-progress.
