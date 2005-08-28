@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.78 2005/08/27 23:33:45 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.79 2005/08/28 21:50:47 stkn Exp $
+
+  28 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-1.2.0_beta1.ebuild:
+  Added a workaround for the missing version information (thanks to DBoone on
+  IRC for pointing this out). Make all would do a clean run because of a
+  left-over .cleancount file in the tarball, killing the .version file. We
+  simply remove .cleancount now if it does exist.
 
   28 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-1.2.0_beta1.ebuild:

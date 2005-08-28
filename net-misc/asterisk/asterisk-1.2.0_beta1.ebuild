@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.2 2005/08/27 23:33:45 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.3 2005/08/28 21:50:47 stkn Exp $
 
 inherit eutils
 
@@ -113,6 +113,10 @@ src_unpack() {
 		einfo "Patching asterisk for uclibc..."
 		epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-uclibc-dns.diff
 	fi
+
+	# remove this file, it's a leftover and asterisk's makefile
+	# will kill the .version file which is needed for the version number
+	[[ -f .cleancount ]] && rm -f .cleancount
 
 	#
 	# BRI patches
