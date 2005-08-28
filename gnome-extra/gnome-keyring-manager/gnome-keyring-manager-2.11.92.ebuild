@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.11.1.ebuild,v 1.3 2005/08/18 11:42:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.11.92.ebuild,v 1.1 2005/08/28 22:33:19 allanonjl Exp $
 
 inherit gnome2
 
@@ -16,7 +16,8 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/gnome-keyring-0.3.2
-	>=gnome-base/gconf-2"
+	>=gnome-base/gconf-2
+	app-text/gnome-doc-utils"
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.8
