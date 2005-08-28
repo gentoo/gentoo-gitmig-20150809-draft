@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-find
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.4 2005/07/25 11:24:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.5 2005/08/28 17:11:56 metalgod Exp $
+
+  28 Aug 2005; Luis Medinas <metalgod@gentoo.org> bmp-find-0.5.2.ebuild:
+  Added ~amd64 keywords. Closes bug #103754.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> bmp-find-0.5.2.ebuild:
   Added to ~ppc.
