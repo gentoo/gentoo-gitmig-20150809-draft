@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp-freetype
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.19 2005/06/17 20:19:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.20 2005/08/28 01:11:36 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  gimp-freetype-0.6.ebuild:
+  Stable on amd64, closes bug 103788.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   gimp-freetype-0.6.ebuild:
@@ -14,7 +18,7 @@
   gimp-freetype-0.5.ebuild:
   Stable on ppc.
 
-  31 May 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  31 May 2005; Marcus D. Hanwell <cryos@gentoo.org>
   gimp-freetype-0.5.ebuild:
   Stable on amd64.
 
