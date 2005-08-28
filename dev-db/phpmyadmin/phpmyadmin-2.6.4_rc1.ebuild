@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.2_rc1.ebuild,v 1.6 2005/04/09 11:13:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.4_rc1.ebuild,v 1.1 2005/08/28 23:33:09 rl03 Exp $
 
 inherit eutils webapp
 
-MY_PV=${PV/_p/-pl}
-MY_PV=${MY_PV/_rc/-rc}
-MY_P=phpMyAdmin-${MY_PV}
+MY_P=phpMyAdmin-${PV/_rc/-rc}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="alpha ppc hppa sparc x86 amd64 ~mips"
+KEYWORDS="~alpha ~ppc ~hppa ~sparc ~x86 ~amd64 ~mips"
 IUSE=""
 DEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
 	virtual/httpd-php
@@ -26,19 +24,13 @@ src_unpack() {
 
 	# Remove .cvs* files and CVS directories
 	find ${S} -name .cvs\* -or \( -type d -name CVS -prune \) | xargs rm -rf
-
-	sed -e "s:\${MY_SQLSCRIPTSDIR}:${MY_SQLSCRIPTSDIR}:" \
-		-e "s:\${PVR}:${PVR}:" \
-		${FILESDIR}/postinstall-en.txt > ${WORKDIR}/postinstall-en.txt
 }
 
 src_compile() {
 	einfo "Setting random user/password details for the controluser"
 
 	local pmapass="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
-	mv config.inc.php ${T}/config.inc.php
-	sed -e "s/@pmapass@/${pmapass}/g" \
-		${T}/config.inc.php > config.inc.php
+	sed -e "s/@pmapass@/${pmapass}/g" -i config.inc.php
 	sed -e "s/@pmapass@/${pmapass}/g" \
 		${FILESDIR}/mysql-setup.sql.in-2.5.6 > ${T}/mysql-setup.sql
 }
@@ -46,7 +38,7 @@ src_compile() {
 src_install() {
 	webapp_src_preinst
 
-	local docs="ANNOUNCE.txt CREDITS Documentation.txt RELEASE-DATE-${PV} TODO ChangeLog LICENSE README"
+	local docs="CREDITS ChangeLog Documentation.txt INSTALL README RELEASE-DATE-2.6.4-rc1 TODO"
 
 	# install the SQL scripts available to us
 	#
@@ -55,34 +47,24 @@ src_install() {
 
 	webapp_sqlscript mysql ${T}/mysql-setup.sql
 
-	# handle documentation files
-	#
-	# NOTE that doc files go into /usr/share/doc as normal; they do NOT
-	# get installed per vhost!
-
 	dodoc ${docs}
-	for doc in ${docs} INSTALL; do
-		rm -f ${doc}
-	done
+	dohtml Documentation.html
 
 	# Copy the app's main files
 
 	einfo "Installing main files"
 	cp -r . ${D}${MY_HTDOCSDIR}
-
-	# Identify the configuration files that this app uses
+	for doc in ${docs} LICENSE; do
+		rm -f ${D}/${MY_HTDOCSDIR}/${doc}
+	done
 
 	webapp_configfile ${MY_HTDOCSDIR}/config.inc.php
-
-	# there are no files which need to be owned by the web server
-
-	# add the post-installation instructions
-
-	webapp_postinst_txt en ${WORKDIR}/postinstall-en.txt
-
-	# all done
-	#
-	# now we let the eclass strut its stuff ;-)
-
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_hook_script ${FILESDIR}/reconfig
 	webapp_src_install
+
+	fperms 0640 ${MY_HTDOCSDIR}/config.inc.php
+	fowners root:apache ${MY_HTDOCSDIR}/config.inc.php
+	# bug #88831, make sure the create script is world-readable.
+	fperms 0600 ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
 }
