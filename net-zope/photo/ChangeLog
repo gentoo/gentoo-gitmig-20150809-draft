@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/photo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.9 2005/05/08 04:58:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.10 2005/08/28 13:10:34 radek Exp $
+
+*photo-1.2.4 (28 Aug 2005)
+
+  28 Aug 2005; Radoslaw Stachowiak <radek@gentoo.org> +photo-1.2.4.ebuild:
+  version bump,old url non working.
 
   07 May 2005; Steve Arnold <nerdboy@gentoo.org> photo-1.2.3.ebuild:
   keyworded for sparc (decided it was better not to bump)
