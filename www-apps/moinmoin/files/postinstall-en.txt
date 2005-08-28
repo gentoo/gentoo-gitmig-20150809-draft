@@ -1,7 +1,10 @@
+Now please read the installation manual at
+http://moinmoin.wikiwikiweb.de/HelpOnInstalling
 
-You are almost done!
+MoinMoin can work with a variety of webservers. Simple Apache instructions
+are given below:
 
-1. ExecCGI needs to be enabled in your Moinmoin directory. You con do this by
+1. ExecCGI needs to be enabled in your Moinmoin directory. You can do this by
 simply
 # echo "Options ExecCGI" > ${MY_INSTALLDIR}/.htaccess
 # echo "AddHandler cgi-script .cgi" >> ${MY_INSTALLDIR}/.htaccess
@@ -16,6 +19,4 @@ in httpd.conf, and change "AllowOverride None" to "AllowOverride All".
 
 4. Restart Apache
 
-5. Go to http://YOURHOST/mymoin
-
-Enjoy!
+5. Go to http://${VHOST_HOSTNAME}/mymoin
