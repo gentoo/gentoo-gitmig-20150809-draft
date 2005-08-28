@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
-MD5 c121957ae160cd392ef11e6bde5dac3b libvserver-0.1.ebuild 504
+MD5 e0bb17de497965802ff459e4cdf938b9 libvserver-0.1.ebuild 504
 MD5 5336d9a0a9136cf7a3588cd4315fd4bf libvserver-0.2.ebuild 640
-MD5 4886e8f0b9c8333bcfe0df8f6692c25c ChangeLog 617
-MD5 b850285ec30a470ae57ff0f21011045a libvserver-0.2.1.ebuild 660
+MD5 9e159cf9e9dbe8c9978edf14334de35b libvserver-0.2.1.ebuild 506
+MD5 9aa194326af1d1d8b8330e253aad550d ChangeLog 735
 MD5 8c9ce1ad7d85796b5a21d4c7ace62395 files/digest-libvserver-0.1 67
-MD5 6fbbf1072fb1b448fb3bed4c4ff8156b files/digest-libvserver-0.2.1 69
 MD5 0cef644a8bfd4934c99fae8ef70da01b files/digest-libvserver-0.2 67
+MD5 6fbbf1072fb1b448fb3bed4c4ff8156b files/digest-libvserver-0.2.1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC6nqlmPFBzbX68WERAuqAAJ9KsB1/mjcbURNvpBefhlxjXW992wCeM/Y7
-fWQMnWZ53hhZb/BlcUqdEYE=
-=g1GB
+iD8DBQFDEVaigIKl8Uu19MoRAvypAJ0fwlzOCGKy+y0jg0+ziZId8QQWfgCfYXkF
+1QQ4WtOg7OGNzvyd6z6xGSw=
+=glhU
 -----END PGP SIGNATURE-----
