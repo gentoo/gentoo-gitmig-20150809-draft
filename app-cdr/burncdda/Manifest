@@ -1,4 +1,6 @@
-MD5 7ad4225a0af35f1b2dfbf3e48a125276 ChangeLog 1523
+MD5 790ec87126d8c9d16615ca649cf99935 ChangeLog 1676
 MD5 041e5578fc5d01a545c8ad32ac6d1803 burncdda-1.1.2.ebuild 794
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 d3c01ec919578eebb272820ddf1ec791 burncdda-1.3.8.ebuild 818
 MD5 4bad93941940c78bd2d3e8ec67247827 files/digest-burncdda-1.1.2 65
+MD5 cd63f93d755d9238f3a555676846e455 files/digest-burncdda-1.3.8 65
