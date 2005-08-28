@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.1.2.ebuild,v 1.14 2005/01/01 12:08:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.1.2.ebuild,v 1.15 2005/08/28 17:17:00 metalgod Exp $
 
 DESCRIPTION="Console app for copying burning audio cds"
 SLOT="0"
@@ -8,7 +8,7 @@ SRC_URI="http://freshmeat.net/redir/burncdda/20268/url_tgz/${P}.tar.gz"
 LICENSE="GPL-2"
 HOMEPAGE="http://freshmeat.net/projects/burncdda/"
 IUSE=""
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 DEPEND="dev-util/dialog
 	app-cdr/cdrdao
