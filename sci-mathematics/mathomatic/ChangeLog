@@ -1,10 +1,14 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.6 2005/07/26 22:54:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.7 2005/08/28 00:58:11 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  -mathomatic-12.3.1.ebuild, mathomatic-12.4.5.ebuild:
+  Stable on amd64 and x86. Remove old version.
 
 *mathomatic-12.4.5 (26 Jul 2005)
 
-  26 Jul 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  26 Jul 2005; Marcus D. Hanwell <cryos@gentoo.org>
   mathomatic-12.3.1.ebuild, +mathomatic-12.4.5.ebuild:
   Version bump, and mark previous version stable.
 

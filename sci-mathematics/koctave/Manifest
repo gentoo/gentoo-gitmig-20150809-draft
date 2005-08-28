@@ -1,5 +1,5 @@
-MD5 4754a8cfe2f81f449ec269da45f96854 koctave-0.65-r1.ebuild 811
-MD5 23856efc56430e68a0f5664190a64db6 ChangeLog 2024
+MD5 183af58d7ee9453f10df87f08b912476 koctave-0.65-r1.ebuild 807
+MD5 caecd7666a4fbd1f979a9b75a6279130 ChangeLog 2116
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4f0ca821e35f031a4ca215f4640e10d4 files/koctave-0.65-arts-configure.patch 3569
 MD5 9b94d969cb9913fb64624694df0523f4 files/digest-koctave-0.65-r1 140
