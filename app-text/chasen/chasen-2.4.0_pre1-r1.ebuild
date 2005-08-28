@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0_pre1-r1.ebuild,v 1.2 2005/03/05 08:55:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.4.0_pre1-r1.ebuild,v 1.3 2005/08/28 19:36:56 blubb Exp $
 
-inherit perl-module flag-o-matic
+inherit perl-module
 
 MY_P="${P/_pre/-preview}"
 S="${WORKDIR}/${MY_P}"
@@ -31,8 +31,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Unconditional use of -fPIC (#55238)
-	append-flags -fPIC
 	econf || die
 	emake || die
 	if use perl ; then

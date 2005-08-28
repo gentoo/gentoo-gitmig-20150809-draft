@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.19 2005/05/06 14:47:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.20 2005/08/28 19:36:56 blubb Exp $
+
+  28 Aug 2005; Simon Stelling <blubb@gentoo.org> chasen-2.3.3-r3.ebuild,
+  chasen-2.4.0_pre1.ebuild, chasen-2.4.0_pre1-r1.ebuild:
+  removing append-flags -fPIC, not needed anymore
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   chasen-2.3.3-r3.ebuild:
