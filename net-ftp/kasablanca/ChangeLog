@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/kasablanca
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.13 2005/07/28 21:08:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.14 2005/08/28 15:40:42 cryos Exp $
+
+  28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kasablanca-0.4.0.2.ebuild:
+  Stable on amd64.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> kasablanca-0.4.0.1.ebuild:
   Fix qt dep per bug #100235
