@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 063bca8b1e4137952fc8780e8a2009e5 fnord-1.9.ebuild 1013
-MD5 bf093837b37c656e66b3284b2c701bf4 fnord-1.8.ebuild 1031
-MD5 687889ed1381dd8473190329b9dd60a1 ChangeLog 3439
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
+MD5 68b2aaf5623b6c6cf1c039991c4cbc60 fnord-1.9.ebuild 907
+MD5 bc50192be06ae62178524bffd257ac8d fnord-1.8.ebuild 925
+MD5 975fb17b84e1e9692370dd471a38e47d ChangeLog 3544
 MD5 1d9ee0b855c06d76df64dc86afba9a7d files/digest-fnord-1.8 61
-MD5 877e5b40e7ec509a900652d0861fde6c files/digest-fnord-1.9 61
 MD5 75acbce97597457068fb8121940fe60b files/fnord-1.8-gentoo.diff 3085
 MD5 90a1130421471ca792b334582f788751 files/fnord-1.9-gentoo.diff 3096
+MD5 877e5b40e7ec509a900652d0861fde6c files/digest-fnord-1.9 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCybzEZCkKN40op4RAvr9AKCeOnQphoExSSS9zhlK1deG0Kk62QCgnFKx
-BtYLOVIGaDqcw9hZd3zXSHc=
-=wYXh
+iD8DBQFDEVcAgIKl8Uu19MoRAtxMAJ9WFziQEUuSmjYau5/iqyuasJYvCwCfQQ2e
+8bVT4id7u1SmxA5G9u+q4YU=
+=AcBE
 -----END PGP SIGNATURE-----
