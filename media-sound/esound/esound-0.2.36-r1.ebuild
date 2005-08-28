@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.5 2005/08/26 17:48:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.6 2005/08/28 14:46:58 grobian Exp $
 
 inherit libtool gnome.org eutils
 
@@ -25,7 +25,9 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-0.2.32-amd64.patch
-	use ppc-macos && epatch ${FILESDIR}/${PN}-0.2.35-ppc-macos.patch
+	# please note, this is a conditional, version specific patch!!!
+	# when bumping avoid bugs like #103969
+	use ppc-macos && epatch ${FILESDIR}/${P}-ppc-macos.patch
 }
 
 src_compile() {
