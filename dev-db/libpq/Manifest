@@ -2,8 +2,9 @@ MD5 c58c7338f16a3a63b2b12e953c4259f6 libpq-8.0.3-r1.ebuild 3102
 MD5 769c87b4c1e3ea2a25e870842d1d7e65 libpq-8.0.1.ebuild 3078
 MD5 14c58edbdd7fe2caeb86a0f75e66ec9c libpq-7.4.8.ebuild 3076
 MD5 a5427bfda03fec59dd3dcf31a817fb89 libpq-7.3.10-r1.ebuild 3099
+MD5 fe7f1041428075b2ddb64e8f93af9295 libpq-8.1_beta1.ebuild 3116
 MD5 49c0f22f5b5c6b1b6782f329788e99c7 libpq-8.0.3.ebuild 3075
-MD5 0e3bb971e476d9cbc6fafe7cf695d3a4 ChangeLog 3426
+MD5 42f869c736fd5681e90bdb814f9a9609 ChangeLog 3590
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 bfbeebd8a98efcebbac0c44cd812a263 libpq-8.0.1-r1.ebuild 3098
 MD5 404a87b078bcabb34329906402970e76 libpq-7.4.8-r1.ebuild 3098
@@ -14,9 +15,11 @@ MD5 0540e6c42fdd652b981e236ea835c524 files/digest-libpq-8.0.1 75
 MD5 b8a68c8f7fbe4116f7d39a520a3da8c9 files/digest-libpq-8.0.3 75
 MD5 07e1154edfd02b73a7772384ce2238b2 files/libpq-7.3.10-gentoo.patch 2072
 MD5 a29e8334813c549e8d3d7bcc2e364a66 files/libpq-8.0.1-gentoo.patch 2306
+MD5 a6cace443603870b09e1543fe5e0cb3f files/digest-libpq-8.1_beta1 78
 MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10-r1 76
 MD5 0540e6c42fdd652b981e236ea835c524 files/digest-libpq-8.0.1-r1 75
 MD5 b8a68c8f7fbe4116f7d39a520a3da8c9 files/digest-libpq-8.0.3-r1 75
 MD5 91bb6f54ae3772de8b4b98ef69b79f95 files/libpq-8.0.3-gentoo.patch 2306
 MD5 f7905db93301407b9caf37581e270d1f files/digest-libpq-7.3.10 76
+MD5 a7353f59d06787b8deb596bc184d89ff files/libpq-8.1_beta1-gentoo.patch 2342
 MD5 5256293555f24dec0d84734c19784174 files/libpq-7.4.8-gentoo.patch 2599
