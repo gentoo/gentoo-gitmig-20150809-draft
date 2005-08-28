@@ -1,0 +1,11 @@
+# ChangeLog for net-im/jabber-base
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/ChangeLog,v 1.1 2005/08/28 16:08:53 humpback Exp $
+
+*jabber-base-0.00 (28 Aug 2005)
+
+  28 Aug 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +jabber-base-0.00.ebuild:
+  Initial import of base package for jabber related ebuilds (daemons and
+  transports). This will set the user's and directorys used.
+
