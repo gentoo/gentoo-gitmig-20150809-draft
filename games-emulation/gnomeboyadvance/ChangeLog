@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gnomeboyadvance
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.5 2005/05/01 18:11:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/ChangeLog,v 1.6 2005/08/28 05:01:01 mr_bones_ Exp $
+
+  28 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  gnomeboyadvance-0.1.ebuild:
+  fix HOMEPAGE (bug #103905)
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   gnomeboyadvance-0.1.ebuild:

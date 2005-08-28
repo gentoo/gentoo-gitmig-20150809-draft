@@ -1,19 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.6 2005/05/01 18:11:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.7 2005/08/28 05:01:01 mr_bones_ Exp $
 
 inherit games
 
-S=${WORKDIR}/gnomeBoyAdvance-0.1
 
 DESCRIPTION="A GNOME Python frontend to VisualBoyAdvance"
-HOMEPAGE="http://www.socialistsoftware.com/gnomeboyadvance.php"
-SRC_URI="http://www.socialistsoftware.com/${P}.tar.bz2"
+HOMEPAGE="http://developer.berlios.de/projects/gnomeboyadvance/"
+SRC_URI="http://download.berlios.de/gnomeboyadvance/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
 SLOT="0"
+KEYWORDS="ppc x86"
 IUSE=""
+RESTRICT="nomirror"
 
 RDEPEND=">=dev-lang/python-2.2
 	 >=dev-python/gnome-python-1.99
@@ -22,19 +22,22 @@ RDEPEND=">=dev-lang/python-2.2
 
 DEPEND=">=sys-apps/sed-4"
 
+S=${WORKDIR}/gnomeBoyAdvance-0.1
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e 's:/usr/share/:/usr/share/games/:' \
-			gnomeboyadvance || die "sed gnomeboyadvance failed"
+			gnomeboyadvance \
+			|| die "sed gnomeboyadvance failed"
 }
 
 src_install() {
-	dogamesbin gnomeboyadvance
-	insinto ${GAMES_DATADIR}/gnomeboyadvance
-	doins gnomeBoyAdvance.png gnomeboyadvance.glade
+	dogamesbin gnomeboyadvance || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}"/gnomeboyadvance
+	doins gnomeBoyAdvance.png gnomeboyadvance.glade || die "doins failed"
 	dodoc README CHANGES TODO
 	prepgamesdirs
 }
