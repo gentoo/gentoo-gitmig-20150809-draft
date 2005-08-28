@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.11 2005/07/03 09:11:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.12 2005/08/28 13:12:54 ka0ttic Exp $
+
+  28 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> memcached-1.1.12.ebuild:
+  Added ~mips.
 
   03 Jul 2005; Konstantin Arkhipov <voxus@gentoo.org> memcached-1.1.12.ebuild:
   Stable on amd64.
