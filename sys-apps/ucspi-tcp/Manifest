@@ -1,24 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 66ed278686866a3187b68d81fe47fa24 metadata.xml 592
+MD5 9d637c1a379235830aec1c3c7e1a40b7 ChangeLog 5278
+MD5 23303b1e53f4d80fd4a5a2ad649ce593 ucspi-tcp-0.88-r11.ebuild 2427
 MD5 76034b124658a585b29a772acbf2b798 ucspi-tcp-0.88-r9.ebuild 2246
-MD5 fe1236e5d8b3b8a53a55cf7db78cd384 ChangeLog 5033
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 38badb1189a3476d5066e21ab764aef1 ucspi-tcp-0.88-r10.ebuild 2341
 MD5 f28315c57485584788c9824481bc7603 ucspi-tcp-0.88-r8.ebuild 2148
-MD5 eeca4c38b2ce87ccb59e44f241b3c736 files/digest-ucspi-tcp-0.88-r10 350
-MD5 b36e99b422384451ac68b3a9b31b7ed6 files/0.88-head-1.patch 1403
-MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r8 350
 MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r9 350
-MD5 72b6cd8b1b829a6a6939255fdc0b76a3 files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch 462
-MD5 fb41d7c55db5124d7488a923e4223576 files/0.88-bigendian.patch 478
 MD5 64eb2b26c9c0e5d6b4042fd36b74dbb8 files/tcprules-Makefile 168
+MD5 b36e99b422384451ac68b3a9b31b7ed6 files/0.88-head-1.patch 1403
+MD5 fb41d7c55db5124d7488a923e4223576 files/0.88-bigendian.patch 478
 MD5 0479a09fdd4ce855d35e36563cab4743 files/0.88-errno.patch 239
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCEJ5bPpIsIjIzwiwRAlO4AKDoBIX1wNWHrroW/6n7/s5qcfRhPgCgw4XA
-k+0kQBsbZ5mJZI4zQaouciM=
-=a2x+
------END PGP SIGNATURE-----
+MD5 eeca4c38b2ce87ccb59e44f241b3c736 files/digest-ucspi-tcp-0.88-r11 350
+MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r8 350
+MD5 a52d1d668b5486fde8f138eaab047e70 files/0.88-limits.patch 12356
+MD5 eeca4c38b2ce87ccb59e44f241b3c736 files/digest-ucspi-tcp-0.88-r10 350
+MD5 72b6cd8b1b829a6a6939255fdc0b76a3 files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch 462
