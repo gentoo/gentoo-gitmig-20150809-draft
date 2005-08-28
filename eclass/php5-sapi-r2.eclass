@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.36 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.37 2005/08/28 17:23:48 azarah Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -558,7 +558,7 @@ php5-sapi-r2_src_install() {
 	rm -rf ${D}/usr/lib/php/build
 	dodir /usr/share/php
 
-	for x in ${D}/usr/lib/php ; do
+	for x in ${D}/usr/lib/php/* ; do
 		if [ "`basename $x`" != 'extensions' ]; then
 			mv $x ${D}/usr/share/php
 		fi
