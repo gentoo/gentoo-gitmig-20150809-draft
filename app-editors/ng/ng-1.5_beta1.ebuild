@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.8 2005/07/08 17:52:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.9 2005/08/28 16:59:16 metalgod Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://tt.sakura.ne.jp/~amura/archives/ng/${MY_P}.tar.gz"
 
 LICENSE="Emacs"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="canna"
 
 RDEPEND="virtual/libc
