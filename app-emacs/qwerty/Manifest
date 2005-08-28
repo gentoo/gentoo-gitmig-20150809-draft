@@ -1,5 +1,5 @@
-MD5 c0ec14845310fd6800fd24db11c4a0bb qwerty-1.1.ebuild 618
-MD5 418b8b1aeedb639857f1d2123c368923 ChangeLog 643
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 9602f8e96b7a294ac41827116b0c2dab qwerty-1.1.ebuild 627
+MD5 4e16ce31fc8742f9c3da5dc97d8251a1 ChangeLog 786
 MD5 ce79aaaf41f503d9454e3a8f7ebe21aa files/digest-qwerty-1.1 60
 MD5 3ca4153bc5e379f4452e099128ab01c5 files/50qwerty-gentoo.el 176
