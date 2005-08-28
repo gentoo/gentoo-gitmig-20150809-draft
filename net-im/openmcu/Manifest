@@ -1,18 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 75165c82963456c476e0337b3505c94b ChangeLog 759
-MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
 MD5 de1471f5180885805fc21c03eb333ba2 openmcu-1.1.7.ebuild 1519
-MD5 31922fffa7bd4da01e4bffc8c0011092 files/openmcu-1.1.7-log-config.diff 675
-MD5 48d2727ed476eea13c2bcd912dbdf6e2 files/digest-openmcu-1.1.7 64
-MD5 ef7336b1aa6937a42353f7f35305b097 files/openmcu.rc6 573
+MD5 be947a2a3b048b07a7a89495a18f5202 openmcu-2.1.0.ebuild 1671
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+MD5 3f86955d900a7444e6751f2e602c3da4 ChangeLog 1024
+MD5 fe98f7771a85f59d1855fb27e50f034b files/openmcu.ini 398
 MD5 6a20d03e56c855c629254598b2552d52 files/openmcu-1.1.7-include.diff 284
-MD5 d78d21f5cdba6ee605c8771858e5d0f8 files/openmcu.confd 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPLL6LLFUmVNQ7rkRAsa3AKCHMOHMj4ROXtMoVexM9O3B7iQtGwCdHl9/
-a35HkdM4fTPDbjOkjaqtQAQ=
-=2mbd
------END PGP SIGNATURE-----
+MD5 48d2727ed476eea13c2bcd912dbdf6e2 files/digest-openmcu-1.1.7 64
+MD5 4b8a650df25d7f44808fe45944c528e3 files/digest-openmcu-2.1.0 69
+MD5 32c11d5ff6e5a7292a9bc7a959f40efe files/openmcu.confd 265
+MD5 820c80db585316a71990ac141b00b66c files/openmcu-2.1.0-gentoo.diff 1830
+MD5 3c432a1a21fb30060916bde127c9bdf0 files/openmcu.rc6 642
+MD5 31922fffa7bd4da01e4bffc8c0011092 files/openmcu-1.1.7-log-config.diff 675
