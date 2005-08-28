@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/opendx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.15 2005/08/20 07:56:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/ChangeLog,v 1.16 2005/08/28 14:05:12 blubb Exp $
+
+  28 Aug 2005; Simon Stelling <blubb@gentoo.org> ChangeLog:
+  added ~amd64 keyword
 
   20 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   opendx-4.3.2-r1.ebuild:
