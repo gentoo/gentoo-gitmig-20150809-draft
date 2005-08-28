@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.9.0.ebuild,v 1.1 2005/08/20 11:45:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ogmrip-0.9.0.ebuild,v 1.2 2005/08/28 04:28:24 metalgod Exp $
 
 inherit gnome2 eutils
 
@@ -52,5 +52,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/ogmrip-0.9.0-lang.patch
+	epatch ${FILESDIR}/${P}-lang.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }

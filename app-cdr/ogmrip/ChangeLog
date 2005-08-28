@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/ogmrip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ChangeLog,v 1.4 2005/08/20 11:45:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/ogmrip/ChangeLog,v 1.5 2005/08/28 04:28:24 metalgod Exp $
+
+  28 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/ogmrip-0.9.0-gcc4.patch, ogmrip-0.9.0.ebuild:
+  Added gcc-4.0.x patch thanks to Ian Kumlien <pomac@vapor.com> and Olivier
+  Rolland <billl@users.sf.net>. Closes bug #103299.
 
 *ogmrip-0.9.0 (20 Aug 2005)
 
