@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.7.6.ebuild,v 1.1 2005/08/18 02:36:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.7.7.ebuild,v 1.1 2005/08/28 23:31:27 allanonjl Exp $
 
 inherit versionator gnome2
 
@@ -19,9 +19,9 @@ IUSE="static"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=gnome-base/gail-0.13
+RDEPEND=">=gnome-base/gail-1.1
 	>=x11-libs/gtk+-2.2
-	>=gnome-base/libgnomeui-1.112.1
+	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnomeprint-2.8
 	>=gnome-base/libgnomeprintui-2.2.1
 	>=gnome-base/libglade-2
