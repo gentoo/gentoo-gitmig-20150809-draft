@@ -3,6 +3,9 @@
 # wxwindows needs wxGTK which in turn needs gtk+
 wxwindows
 
+# readline collides with the Apple system install
+readline
+
 # guile depends on readline
 guile
 
