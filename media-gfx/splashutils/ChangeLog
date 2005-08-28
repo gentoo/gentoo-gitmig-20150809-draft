@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.41 2005/08/21 19:52:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.42 2005/08/28 19:33:33 spock Exp $
+
+*splashutils-1.1.9.9-r1 (28 Aug 2005)
+
+  28 Aug 2005; Michał Januszewski <spock@gentoo.org>
+  +files/splashutils-1.1.9.9-external-klibc.patch,
+  splashutils-1.1.9.8.ebuild, +splashutils-1.1.9.9-r1.ebuild:
+  Updated the splashutils ebuild to build against external klibc. Credits for
+  the patch go to Martin Schlemmer <azarah (at) gentoo (dot) org> (bug
+  #103855). Marked 1.1.9.8 stable on x86.
 
 *splashutils-1.1.9.9 (21 Aug 2005)
 
