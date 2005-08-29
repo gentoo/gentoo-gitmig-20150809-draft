@@ -1,12 +1,22 @@
-MD5 ef4f17e3fca3dc314f73d99e88fa9de9 ChangeLog 7684
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6e7d79a7385f1722c083fcfb4fe61660 gnome-spell-0.5.ebuild 1082
-MD5 bfeca3d516b310b832a88742066da020 gnome-spell-1.0.6.ebuild 1275
 MD5 c4c9a0a1cb931a6c1ca3bf7fc93a2e51 gnome-spell-1.0.5-r2.ebuild 1021
+MD5 b3c9458aa1f24395b38f2916a228f951 ChangeLog 7784
+MD5 9bda58d961d254994978fb0d1ee03582 gnome-spell-1.0.6.ebuild 1273
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 c9d55e535778f7a2386f5bba1c2cfcf7 files/digest-gnome-spell-0.5 68
 MD5 60b79a4908f65bef8d5bc1765fb61c4a files/digest-gnome-spell-1.0.6 70
-MD5 959c92eeb724ca5380e81f09805df109 files/digest-gnome-spell-1.0.5-r2 70
-MD5 a2f04eb1ad051e0c06e703901869afca files/gnome-spell-1.0.5-enchant.patch 18757
-MD5 b0296719b38481284f42227002eeb1a4 files/gnome-spell-1.0.5-gtk24.patch 13886
-MD5 62828aa3cfc3de6aaa8604520ee943d8 files/gnome-spell-1.0.6-enchant.patch 16509
 MD5 312bf5d650d4960f7f2077f477892dc7 files/gnome-spell-1.0.6-combo.patch 12895
+MD5 b0296719b38481284f42227002eeb1a4 files/gnome-spell-1.0.5-gtk24.patch 13886
+MD5 a2f04eb1ad051e0c06e703901869afca files/gnome-spell-1.0.5-enchant.patch 18757
+MD5 959c92eeb724ca5380e81f09805df109 files/digest-gnome-spell-1.0.5-r2 70
+MD5 c9d55e535778f7a2386f5bba1c2cfcf7 files/digest-gnome-spell-0.5 68
+MD5 62828aa3cfc3de6aaa8604520ee943d8 files/gnome-spell-1.0.6-enchant.patch 16509
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDE0PVKRy60XGEcJIRAixZAKCBh6PDy75BkAWc8AbK/G16gdCLtwCgqvTZ
+Cs0WHV1ELQfaKfobvbUWdzY=
+=Urmj
+-----END PGP SIGNATURE-----
