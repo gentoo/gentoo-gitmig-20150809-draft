@@ -1,6 +1,13 @@
 # ChangeLog for net-im/silc-plugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.15 2005/08/21 22:23:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.16 2005/08/29 15:02:32 ticho Exp $
+
+*silc-plugin-1.0.1-r4 (29 Aug 2005)
+
+  29 Aug 2005; Andrej Kacian <ticho@gentoo.org>
+  +silc-plugin-1.0.1-r4.ebuild:
+  Only change term_type to term_charset if installed irssi is >=0.8.10. Bug
+  #104046 by Daniel Link <stagger at gmx.net>.
 
   21 Aug 2005; Andrej Kacian <ticho@gentoo.org> silc-plugin-1.0.1-r3.ebuild:
   Depend on glib-1.2.
