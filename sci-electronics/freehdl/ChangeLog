@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/freehdl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.3 2005/01/05 10:00:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.4 2005/08/29 12:05:36 phosphan Exp $
+
+*freehdl-20050510 (29 Aug 2005)
+
+  29 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> +freehdl-20050510.ebuild:
+  Version bump. Uses flex instead of bringing a patch with flex results. Marked
+  as -* until bug #104122 has been fixed.
 
   05 Jan 2005; Patrick Kursawe <phosphan@gentoo.org> freehdl-20040113.ebuild:
   Adding guile to dependencies (bug #75809)
