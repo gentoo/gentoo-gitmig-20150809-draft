@@ -10,10 +10,3 @@ diff -NurdB evolution-data-server-1.3.7/camel/Makefile.am evolution-data-server-
  # NOTE: This needs to be cleaned up, it shouldn't link with all this crap,
  # because it might be setuid.
  camel_lock_helper_1_2_LDADD =			\
-@@ -331,4 +333,4 @@
- 	ChangeLog.pre-1-4			\
- 	README
- 
--DISTCLEANFILES = $(pkgconfig_DATA)
-\ No newline at end of file
-+DISTCLEANFILES = $(pkgconfig_DATA)
