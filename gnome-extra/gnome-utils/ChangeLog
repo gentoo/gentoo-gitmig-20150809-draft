@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.98 2005/08/25 23:54:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.99 2005/08/29 00:20:44 allanonjl Exp $
+
+*gnome-utils-2.11.92 (29 Aug 2005)
+
+  29 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +gnome-utils-2.11.92.ebuild:
+  new version, remove gdict patch since it has been applied upstream, see
+  gnome bug 163277
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   gnome-utils-2.10.1-r1.ebuild:
