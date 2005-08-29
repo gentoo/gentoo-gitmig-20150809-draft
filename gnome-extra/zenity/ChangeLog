@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.69 2005/08/28 12:46:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.70 2005/08/29 21:17:04 gmsoft Exp $
+
+  29 Aug 2005; Guy Martin <gmsoft@gentoo.org> zenity-2.10.1.ebuild:
+  Stable on hppa.
 
   28 Aug 2005; Simon Stelling <blubb@gentoo.org> zenity-2.10.1.ebuild:
   stable on amd64
