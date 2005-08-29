@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.22-r2.ebuild,v 1.22 2005/07/26 17:14:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.22-r2.ebuild,v 1.23 2005/08/29 12:55:19 vivo Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -269,7 +269,7 @@ pkg_config() {
 
 pkg_preinst() {
 	enewgroup mysql 60 || die "problem adding group mysql"
-	enewuser mysql 60 /bin/false /var/lib/mysql mysql || die "problem adding user mysql"
+	enewuser mysql 60 -1 /var/lib/mysql mysql || die "problem adding user mysql"
 }
 
 pkg_postinst() {

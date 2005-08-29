@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.4 2005/08/18 00:47:43 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.5 2005/08/29 12:55:19 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -281,7 +281,7 @@ src_install() {
 	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
 
 	enewgroup mysql 60 || die "problem adding group mysql"
-	enewuser mysql 60 /bin/false /dev/null mysql \
+	enewuser mysql 60 -1 /dev/null mysql \
 	|| die "problem adding user mysql"
 
 	diropts "-m0750"
