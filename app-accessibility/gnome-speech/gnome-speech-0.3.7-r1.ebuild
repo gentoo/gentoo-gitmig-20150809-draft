@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.7-r1.ebuild,v 1.1 2005/07/26 00:15:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.7-r1.ebuild,v 1.2 2005/08/29 04:05:01 leonardop Exp $
 
 inherit java-pkg gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="freetts static"
 
 RDEPEND="app-accessibility/festival
@@ -31,6 +31,7 @@ DEPEND=">=gnome-base/libbonobo-1.97
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
 
 src_unpack() {
 	unpack ${A}
