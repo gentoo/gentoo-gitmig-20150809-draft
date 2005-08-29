@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.12 2005/02/09 19:42:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.13 2005/08/29 20:57:20 kugelfang Exp $
+
+  29 Aug 2005; Danny van Dyk <kugelfang@gentoo.org> libelf-0.8.4.ebuild,
+  libelf-0.8.5.ebuild:
+  Fixed multilib-strict BUG #104171.
 
 *libelf-0.8.5 (09 Feb 2005)
 
