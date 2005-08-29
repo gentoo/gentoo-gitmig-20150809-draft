@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epstool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.14 2005/07/27 12:01:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.15 2005/08/29 08:21:14 phosphan Exp $
+
+  29 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> epstool-3.08.ebuild:
+  3.08 stable for x86
 
 *epstool-3.08 (27 Jul 2005)
 
