@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.12 2005/08/28 17:26:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.13 2005/08/29 10:09:07 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -78,7 +78,7 @@ autotools_get_subdirs() {
 eaclocal() {
 	local aclocal_opts
 
-	[[ -n ${M4DIR} ]] && aclocal_opts="-I \"${M4DIR}\""
+	[[ -n ${M4DIR} ]] && aclocal_opts="-I ${M4DIR}"
 	
 	[[ -f aclocal.m4 && -n $(grep -e 'generated.*by aclocal' aclocal.m4) ]] && \
 		autotools_run_tool aclocal "$@" ${aclocal_opts}
