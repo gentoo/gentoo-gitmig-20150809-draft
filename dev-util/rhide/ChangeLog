@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/rhide
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.14 2004/07/02 05:12:58 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.15 2005/08/29 02:46:40 azarah Exp $
+
+*rhide-1.5.20050823 (29 Aug 2005)
+
+  29 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/rhide-1.5.20050823-amd64-support.patch, +rhide-1.5.20050823.ebuild:
+  Update snapshot and do a few needed cleanups.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rhide-1.5-r1.ebuild,
   rhide-1.5.ebuild:
