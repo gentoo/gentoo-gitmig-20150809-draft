@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.182 2005/08/25 14:00:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.183 2005/08/29 15:48:42 dsd Exp $
+
+*gentoo-sources-2.6.13 (29 Aug 2005)
+
+  29 Aug 2005; Daniel Drake <dsd@gentoo.org>
+  -gentoo-sources-2.6.12-r4.ebuild, -gentoo-sources-2.6.12-r6.ebuild,
+  -gentoo-sources-2.6.12-r7.ebuild, -gentoo-sources-2.6.12-r8.ebuild,
+  +gentoo-sources-2.6.13.ebuild:
+  2.6.13 initial release, includes squashfs 2.2
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   gentoo-sources-2.6.12-r9.ebuild:
