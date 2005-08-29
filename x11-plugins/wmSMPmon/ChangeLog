@@ -1,6 +1,6 @@
 # ChangeLog for x11-plugins/wmSMPmon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/ChangeLog,v 1.8 2005/04/08 07:24:51 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/ChangeLog,v 1.9 2005/08/29 08:31:00 s4t4n Exp $
 
   08 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmSMPmon-2.2.ebuild:
   Wiped out older version...
@@ -15,7 +15,7 @@
   metadata.xml:
   Assigned to desktop-dock herd.
 
-  *wmSMPmon-2.3 (11 Aug 2004)
+*wmSMPmon-2.3 (11 Aug 2004)
 
   11 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmSMPmon-2.3.ebuild:
   Version bump.
