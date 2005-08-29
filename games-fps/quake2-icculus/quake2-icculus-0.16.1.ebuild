@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.5 2005/05/29 22:51:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.6 2005/08/29 23:03:33 vapier Exp $
 
 inherit eutils games
 
@@ -34,16 +34,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile
 	epatch "${FILESDIR}"/${P}-amd64.patch # make sure this is still needed in future versions
-	epatch "${FILESDIR}"/0.16-Makefile-gentoo-opts.patch
-	epatch "${FILESDIR}"/0.16-gentoo-path.patch
-	cat << EOF > src/linux/gentoo-paths.h
-#define GENTOO_DATADIR "${GAMES_DATADIR}/quake2-data"
-#ifdef QMAX
-#define GENTOO_LIBDIR "${GAMES_LIBDIR}/${PN}-qmax"
-#else
-#define GENTOO_LIBDIR "${GAMES_LIBDIR}/${PN}"
-#endif
-EOF
+	epatch "${FILESDIR}"/${P}-gentoo-path.patch
 
 	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
 	ln -s $(which echo) "${T}"/more
@@ -80,8 +71,12 @@ yesno() {
 src_compile() {
 	# xatrix fails to build
 	# rogue fails to build
+	local libsuffix
 	for BUILD_QMAX in YES NO ; do
 		use noqmax && [[ ${BUILD_QMAX} == "YES" ]] && continue
+		[[ ${BUILD_QMAX} == "YES" ]] \
+			&& libsuffix=-qmax \
+			|| libsuffix=
 		make clean || die "cleaning failed"
 		emake -j1 build_release \
 			BUILD_SDLQUAKE2=$(yesno sdl) \
@@ -100,7 +95,9 @@ src_compile() {
 			HAVE_IPV6=$(yesno ipv6) \
 			BUILD_ARTS=$(yesno arts) \
 			SDLDIR=/usr/lib \
-			OPTCFLAGS="${CFLAGS}" \
+			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2-data" \
+			DEFAULT_LIBDIR="${GAMES_LIBDIR}/${PN}${libsuffix}" \
+			OPT_CFLAGS="${CFLAGS}" \
 			|| die "make failed"
 		# now we save the build dir ... except for the object files ...
 		rm release*/*/*.o
