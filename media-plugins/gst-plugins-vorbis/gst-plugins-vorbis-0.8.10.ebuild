@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/gst-plugins-vorbis-0.8.10.ebuild,v 1.4 2005/08/26 20:16:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/gst-plugins-vorbis-0.8.10.ebuild,v 1.5 2005/08/29 21:52:10 gmsoft Exp $
 
 inherit eutils gst-plugins
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libvorbis-1"
