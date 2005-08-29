@@ -1,9 +1,0 @@
-Fix aclocal warnings:
-/usr/share/aclocal/pkg.m4:5: warning: underquoted definition of PKG_CHECK_MODULES
---- pkgconfig-0.15.0/pkg.m4
-+++ pkgconfig-0.15.0/pkg.m4
-@@ -4,3 +4,3 @@
- dnl also defines GSTUFF_PKG_ERRORS on error
--AC_DEFUN(PKG_CHECK_MODULES, [
-+AC_DEFUN([PKG_CHECK_MODULES], [
-   succeeded=no

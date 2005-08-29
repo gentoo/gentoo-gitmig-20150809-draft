@@ -1,21 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e85f0e0bce2d326cc3ce663ba9b5b6a3 pkgconfig-0.18.1-r1.ebuild 1157
-MD5 f6b21e50525d7dbde3b625c09dffcb40 pkgconfig-0.15.0.ebuild 841
-MD5 5ccc90cb05a7c03b3e4f28a4fc1c1064 pkgconfig-0.17.2-r1.ebuild 853
-MD5 0bcebabad7f84bd0f5bbffa19e9a680e ChangeLog 4406
+MD5 95a3f297520cb504686f62b5e94f3b10 ChangeLog 4538
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 2f1cf813265bfc9d0ad424adfb42e68d pkgconfig-0.19.ebuild 877
+MD5 5ccc90cb05a7c03b3e4f28a4fc1c1064 pkgconfig-0.17.2-r1.ebuild 853
+MD5 e85f0e0bce2d326cc3ce663ba9b5b6a3 pkgconfig-0.18.1-r1.ebuild 1157
+MD5 c5219c9571cf5aafc3aef2dcd973a658 files/digest-pkgconfig-0.19 68
 MD5 bdbcd3d1ac04770d48111cc96734d0c7 files/digest-pkgconfig-0.17.2-r1 69
-MD5 3d89019ad5123335a09ba5c223f7045b files/digest-pkgconfig-0.18.1-r1 69
-MD5 1f586e236ceace0e7d0a14bffad6964a files/pkg-config-0.18.1-checks.patch 1169
-MD5 488ceb4d90374d8efcb7f13d9ae6aaa6 files/digest-pkgconfig-0.15.0 68
-MD5 9226b9f59a714f3ee771a2b2eaaaf98d files/pkgconfig-0.15.0-m4.patch 301
 MD5 45c7356402deab91048e08244f98ce09 files/pkg-config-0.18.1-pc_path.patch 585
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDEQI/ntT9W3vfTuoRAjqXAJ42vH9p9qWPFs2SpgXJWHbmJd81bACePndq
-a3ipzXZyZKPAEYWCToi4EqI=
-=JV7Y
------END PGP SIGNATURE-----
+MD5 1f586e236ceace0e7d0a14bffad6964a files/pkg-config-0.18.1-checks.patch 1169
+MD5 3d89019ad5123335a09ba5c223f7045b files/digest-pkgconfig-0.18.1-r1 69
