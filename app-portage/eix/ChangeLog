@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.38 2005/08/27 22:32:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.39 2005/08/29 19:52:46 hollow Exp $
+
+  29 Aug 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/0.3.0-datatype-mix.patch, eix-0.3.0.ebuild:
+  fix bug 104083
 
 *eix-0.3.0 (27 Aug 2005)
 
