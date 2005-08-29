@@ -1,5 +1,15 @@
-MD5 1b3e1d5a025d75b801b4c934617748f8 ChangeLog 863
-MD5 2e0f685b69156d6cf8d174530fcbaf28 bigeye-0.3.ebuild 951
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8ef98b2cb770190cd10cdb71595ccf30 bigeye-0.3.ebuild 957
+MD5 6053008af5bdbe918538be52201e6c9b ChangeLog 931
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 8ef1b063fc9655f3f06781a2eeaa785d files/0.3-gcc3.patch 525
 MD5 dcc42b28916e9e2c9b9d9aff3b156684 files/digest-bigeye-0.3 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDE13qomPajV0RnrERAkJPAKCBrcKJtEbVpyvhR/Kzus2qjcBPqQCghNwM
+vyFq9jRGp0SohU3pZZN57Ag=
+=xRB0
+-----END PGP SIGNATURE-----

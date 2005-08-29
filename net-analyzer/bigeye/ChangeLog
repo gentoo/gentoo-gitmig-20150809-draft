@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bigeye
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.7 2005/07/19 12:52:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.8 2005/08/29 19:11:19 dang Exp $
+
+  29 Aug 2005; <dang@gentoo.org> bigeye-0.3.ebuild:
+  Marked ~amd64
 
   19 Jul 2005; David Holm <dholm@gentoo.org> bigeye-0.3.ebuild:
   Added to ~ppc.
