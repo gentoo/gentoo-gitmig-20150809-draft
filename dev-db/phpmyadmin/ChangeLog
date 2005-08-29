@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.114 2005/08/28 23:33:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.115 2005/08/29 16:59:42 rl03 Exp $
+
+  29 Aug 2005; Renat Lumpau <rl03@gentoo.org> phpmyadmin-2.6.4_rc1.ebuild:
+  x86 stable wrt security bug #104124
 
 *phpmyadmin-2.6.4_rc1 (28 Aug 2005)
 
