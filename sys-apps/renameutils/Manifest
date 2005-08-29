@@ -1,3 +1,13 @@
-MD5 45dd405a5e69adc70b42b69b3304363d ChangeLog 460
-MD5 3069cef5e4d252cf6e196879c3d2eac5 renameutils-0.6.0.ebuild 699
-MD5 c1343b4747e27ed1136ab3e6cba70938 files/digest-renameutils-0.6.0 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f393232e2e0d2a16370a734a926324eb renameutils-0.8.1.ebuild 700
+MD5 0f638769cee15d7c66aa76d998c20d06 ChangeLog 611
+MD5 d6985c761b4c70398be49000fd773fb5 files/digest-renameutils-0.8.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDE5g9gIKl8Uu19MoRAsjnAJ928UZD7sA0gubTH8PnVTZ1t6DGbQCfXUu/
+5dYnb/tX1RPs04bS4jhfiO8=
+=Qmvv
+-----END PGP SIGNATURE-----
