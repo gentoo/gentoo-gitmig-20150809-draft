@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.22 2005/08/13 23:28:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.23 2005/08/29 16:03:13 j4rg0n Exp $
+
+  29 Aug 2005; Lina Pezzella <j4rg0n@gentoo.org> cutg-147-r1.ebuild:
+  Stable ppc-macos
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> cutg-147-r1.ebuild:
   Stable on ppc.
