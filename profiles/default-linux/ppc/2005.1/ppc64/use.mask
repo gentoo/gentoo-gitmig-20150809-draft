@@ -17,7 +17,6 @@ pda
 prelude
 ruby
 svga
-scanner
 firebird
 mzscheme
 chasen
