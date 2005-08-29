@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.58.ebuild,v 1.1 2005/08/21 19:11:51 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.58.ebuild,v 1.2 2005/08/29 10:50:37 taviso Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,14 +10,14 @@ SRC_URI="http://the.earth.li/~sgtatham/putty/${PV}/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~alpha ~ppc ~sparc ~amd64"
 IUSE="doc gtk ipv6"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* virtual/x11 )"
 DEPEND="${RDEPEND} dev-lang/perl"
 
 src_compile() {
-	use gtk || local targets="puttygen plink pscp psftp"
+	use gtk || local ptargets="puttygen plink pscp psftp"
 	cd ${S}/unix
 
 	append-flags '-I.././' '-I../charset/' '-I../unix/'
@@ -25,7 +25,7 @@ src_compile() {
 	use ipv6 || append-flags '-DNO_IPV6'
 	use gtk  && append-flags '`gtk-config --cflags`'
 
-	emake -f Makefile.gtk ${targets:-all} CC="$(tc-getCC)" \
+	emake -f Makefile.gtk ${ptargets:-all} CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}"
 }
 
