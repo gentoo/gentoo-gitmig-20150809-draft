@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.11.91.ebuild,v 1.1 2005/08/21 23:34:39 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.11.92.ebuild,v 1.1 2005/08/29 00:03:12 allanonjl Exp $
 
 inherit gnome2
 
@@ -24,11 +24,4 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="$(use_enable accessibility all-themes)"
-}
-
-src_install() {
-	gnome2_src_install
-
-	# Remove theme provided by gtk-engines
-	rm ${D}/usr/share/themes/Clearlooks/gtk-2.0/gtkrc
 }
