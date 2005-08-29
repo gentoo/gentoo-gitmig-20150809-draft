@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r15.ebuild,v 1.1 2005/07/29 12:35:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r15.ebuild,v 1.2 2005/08/29 05:55:39 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic linux-info
 
@@ -214,9 +214,9 @@ pkg_postinst() {
 	fi
 	#create *-secrets files if not exists
 	[ -f "${ROOT}/etc/ppp/pap-secrets" ] || \
-		cp -a "${ROOT}/etc/ppp/pap-secrets.example" "${ROOT}/etc/ppp/pap-secrets"
+		cp -pP "${ROOT}/etc/ppp/pap-secrets.example" "${ROOT}/etc/ppp/pap-secrets"
 	[ -f "${ROOT}/etc/ppp/chap-secrets" ] || \
-		cp -a "${ROOT}/etc/ppp/chap-secrets.example" "${ROOT}/etc/ppp/chap-secrets"
+		cp -pP "${ROOT}/etc/ppp/chap-secrets.example" "${ROOT}/etc/ppp/chap-secrets"
 
 	ewarn "To enable kernel-pppoe read html/pppoe.html in the doc-directory."
 	ewarn "Note: the library name has changed from pppoe.so to rp-pppoe.so."

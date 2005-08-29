@@ -28,7 +28,7 @@ if [ "$USEPEERDNS" ]; then
 		} > $REALRESOLVCONF.tmp
 
 		# backup the old configuration and install the new one
-		cp -a $REALRESOLVCONF $REALRESOLVCONF.pppd-backup
+		cp -dpP $REALRESOLVCONF $REALRESOLVCONF.pppd-backup
 		mv $REALRESOLVCONF.tmp $REALRESOLVCONF
 
 		# correct permissions

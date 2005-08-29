@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.120 2005/08/24 23:30:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.121 2005/08/29 05:55:39 mrness Exp $
+
+  29 Aug 2005; Alin Nastac <mrness@gentoo.org> files/ip-up,
+  ppp-2.4.2-r12.ebuild, ppp-2.4.2-r15.ebuild, -ppp-2.4.3-r6.ebuild,
+  ppp-2.4.3-r8.ebuild:
+  Fix cp -a usage for Gentoo BSD (#103487) and remove old test version.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> ppp-2.4.2-r12.ebuild:
   stable on ia64
