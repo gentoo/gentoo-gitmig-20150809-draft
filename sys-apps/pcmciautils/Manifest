@@ -1,4 +1,6 @@
+MD5 6249d7d502898bc76d3a7e0a8558936a pcmciautils-008.ebuild 2085
 MD5 9c74271019e4120031c3b2c9d27a5e38 pcmciautils-007.ebuild 2085
-MD5 818d9a6566bcdda918e0180d0333b323 ChangeLog 1058
+MD5 6390e85a397a87c5bd6c65fd996b1c62 ChangeLog 1188
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 807939d55ad5fb4a2ec533a1d40ecd62 files/digest-pcmciautils-007 67
+MD5 e7d980571f7d04762696f9e9da068383 files/digest-pcmciautils-008 67
