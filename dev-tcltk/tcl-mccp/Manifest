@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3096d0f6e3d95f273e641f741ccd45f7 tcl-mccp-0.6.ebuild 518
 MD5 d3690ecf043aeff017b3fbc6dfdfd9b1 ChangeLog 527
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
 MD5 1a88dae55f24afca5999b72be2a94d44 files/digest-tcl-mccp-0.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDE2bxomPajV0RnrERAoyCAJ9VIf8pMqyWn/QVz9h6w4DvwM/czQCdHELR
+k7ERS1ETnUDeO+SdiYBtdDc=
+=WxJ9
+-----END PGP SIGNATURE-----
