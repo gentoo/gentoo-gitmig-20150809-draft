@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4-r1.ebuild,v 1.1 2005/04/11 08:52:04 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/wmxmms-0.1.4-r1.ebuild,v 1.2 2005/08/29 08:39:24 s4t4n Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.dockapps.com/download.php/id/252/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 DEPEND="virtual/x11
 	media-sound/xmms"
