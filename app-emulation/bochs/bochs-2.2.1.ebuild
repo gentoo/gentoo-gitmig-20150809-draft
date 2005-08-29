@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1.ebuild,v 1.3 2005/08/23 12:22:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1.ebuild,v 1.4 2005/08/29 10:25:35 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -35,7 +35,7 @@ src_unpack() {
 			die "sed Makefile.in failed"
 
 # Make it use the correct path to gtk-2
-	sed -i -e "s/opt/gnome:/usr:" configure
+	sed -i -e "s:/opt/gnome:/usr:" configure
 }
 
 src_compile() {

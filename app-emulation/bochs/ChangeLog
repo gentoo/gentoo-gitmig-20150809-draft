@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.44 2005/08/23 12:22:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.45 2005/08/29 10:25:35 lu_zero Exp $
+
+  29 Aug 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.2.1.ebuild:
+  Fix a typo, thanks to Karl-Johan Karlsson
+  <creideiki+gentoo-bugzilla@lysator.liu.se> for pointing out
 
   23 Aug 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.2.1.ebuild:
   Minor update, thanks to Davide B. <windowsuninstall@alproject.org> for
