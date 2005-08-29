@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.14 2005/08/29 22:44:39 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.15 2005/08/29 23:01:36 dju Exp $
+
+  29 Aug 2005; Julien Allanos <dju@gentoo.org> clearsilver-0.9.7.ebuild,
+  -clearsilver-0.9.14.ebuild, clearsilver-0.9.14-r1.ebuild:
+  Removed 0.9.14. Marked 0.9.14-r1 stable for x86.
+  Removed RESTRICT="no mirror" for 0.9.7 and 0.9.14-r1.
 
 *clearsilver-0.10.1 (29 Aug 2005)
 

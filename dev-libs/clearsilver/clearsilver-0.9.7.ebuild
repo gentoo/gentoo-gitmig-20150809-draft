@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.11 2005/08/02 02:09:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.12 2005/08/29 23:01:36 dju Exp $
 
 inherit eutils
 
@@ -10,18 +10,8 @@ SRC_URI="http://www.clearsilver.net/downloads/${P}.tar.gz"
 
 LICENSE="CS-1.0"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~sparc ppc x86"
 IUSE="apache2 java perl python ruby zlib"
-
-# Important:
-#
-# We don't redistribute clearsilver - we just provide a way to install it
-# By doing this, I believe we are compliant with the license without any
-# further actions
-#
-# stuart@gentoo.org, 25th April 2004
-
-RESTRICT="nomirror"
 
 DEPEND="apache2? ( >=net-www/apache-2 )
 	java? ( virtual/jdk )
