@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.3 2005/08/08 17:14:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ibm-acpi-0.11-r1.ebuild,v 1.4 2005/08/29 16:12:07 brix Exp $
 
-inherit linux-mod
+inherit eutils linux-mod
 
 DESCRIPTION="IBM ThinkPad ACPI extras"
 
@@ -34,6 +34,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-device_add.patch
 
 	convert_to_m ${S}/Makefile
 }
