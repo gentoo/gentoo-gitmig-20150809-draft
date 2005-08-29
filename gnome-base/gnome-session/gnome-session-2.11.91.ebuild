@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.11.91.ebuild,v 1.3 2005/08/26 11:58:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.11.91.ebuild,v 1.4 2005/08/29 02:52:40 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/gentoo-splash.png"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="esd ipv6"
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
@@ -27,15 +27,18 @@ DEPEND="${RDEPEND}
 	!gnome-base/gnome-core"
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
-G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable esd)"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
 USE_DESTDIR="1"
+
+
+pkg_setup() {
+	G2CONF="$(use_enable ipv6) $(use_enable esd)"
+}
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	cd ${S}
+	cd "${S}"
 
 	# Patch for logout dialog and automatic session save now reverted. See bug
 	# #95745. Patch to set the Gentoo splash by default in the gconf key
@@ -52,13 +55,9 @@ src_unpack() {
 
 	export WANT_AUTOMAKE=1.7
 	cp aclocal.m4 old_macros.m4
-	einfo "Running aclocal"
 	aclocal -I . || die "aclocal failed"
-	einfo "Running autoconf"
 	autoconf || die "autoconf failed"
-	einfo "Running automake"
 	automake || die "automake failed"
-	einfo "Running libtoolize"
 	libtoolize --copy --force
 }
 
