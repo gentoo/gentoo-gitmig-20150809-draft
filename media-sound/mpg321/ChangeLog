@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.30 2005/04/15 03:33:17 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.31 2005/08/29 09:48:18 flameeyes Exp $
+
+*mpg321-0.2.10-r3 (29 Aug 2005)
+
+  29 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/mpg321-0.1.5-ao.diff, +files/mpg321-0.2.10-useragent.patch,
+  +mpg321-0.2.10-r3.ebuild:
+  Added patch to provide UserAgent while requesting a stream via HTTP. Patch
+  by Frank Ruell, in FreeBSD PR 84898.
 
   15 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
   mpg321-0.2.10-r1.ebuild, mpg321-0.2.10-r2.ebuild:
