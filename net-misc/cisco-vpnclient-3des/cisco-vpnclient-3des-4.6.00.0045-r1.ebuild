@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.00.0045-r1.ebuild,v 1.3 2005/04/14 12:45:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.00.0045-r1.ebuild,v 1.4 2005/08/29 17:43:41 wolf31o2 Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-info
 
 MY_PV=${PV}-k9
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -67,7 +67,7 @@ src_install() {
 	dosym /opt/cisco-vpnclient/bin/vpnclient /usr/bin/vpnclient
 
 	insinto /lib/modules/${KV}/CiscoVPN
-	if kernel-mod_is_2_6_kernel; then
+	if kernel_is 2 6; then
 		doins cisco_ipsec.ko
 	else
 		doins cisco_ipsec

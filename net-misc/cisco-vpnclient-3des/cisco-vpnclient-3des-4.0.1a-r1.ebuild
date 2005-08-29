@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.9 2005/02/08 22:22:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.10 2005/08/29 17:43:41 wolf31o2 Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-info
 
 MY_PV=${PV/a/.A-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -34,7 +34,7 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if kernel-mod_is_2_6_kernel; then
+	if kernel_is 2 6; then
 		epatch ${FILESDIR}/${PV}-linux26-gentoo.patch
 	fi
 
