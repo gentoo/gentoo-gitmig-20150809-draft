@@ -1,0 +1,5 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/dev/make.defaults,v 1.1 2005/08/29 22:06:30 wolf31o2 Exp $
+
+USE="crypt ipv6 ncurses nls pam readline ssl tcpd zlib"
