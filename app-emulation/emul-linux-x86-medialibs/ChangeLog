@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/emul-linux-x86-medialibs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.1 2005/08/29 23:54:05 dang Exp $
+
+*emul-linux-x86-medialibs-1.0 (29 Aug 2005)
+
+  29 Aug 2005; <dang@gentoo.org> +metadata.xml,
+  +emul-linux-x86-medialibs-1.0.ebuild:
+  Added for mplayer-bin to allow movies that require binary-only codecs to
+  be played on amd64
+
