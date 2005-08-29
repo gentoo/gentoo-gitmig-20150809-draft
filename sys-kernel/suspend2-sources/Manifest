@@ -1,5 +1,5 @@
-MD5 3b8186c291d468c63040fb9ed8995167 suspend2-sources-2.6.12-r6.ebuild 2158
-MD5 fdcf271ff1a6fae4d5d530d82253d94a ChangeLog 1856
+MD5 6a6afac09e206eb57664c020b521b29b suspend2-sources-2.6.12-r6.ebuild 2157
+MD5 806afecdfd57acfe2c4c68cffcc7af5e ChangeLog 1965
 MD5 e40cb3df546efa5003fe3778c5a50854 metadata.xml 275
 MD5 320c41493bbe3f054a0a90d92c98e67f files/linux-2.6.12-try_to_freeze.patch 3190
 MD5 787fbef2c88ac718b5cca330dc6451ef files/linux-2.6.12-skge-pm_message_t.patch 814
