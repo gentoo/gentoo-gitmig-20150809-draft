@@ -1,0 +1,11 @@
+# ChangeLog for media-video/mplayer-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.1 2005/08/29 23:58:34 dang Exp $
+
+*mplayer-bin-1.0_pre7 (29 Aug 2005)
+
+  29 Aug 2005; <dang@gentoo.org> +metadata.xml,
+  +mplayer-bin-1.0_pre7.ebuild:
+  Add mplayer-bin to allow movies that require binary-only codecs to be played
+  on amd64
+
