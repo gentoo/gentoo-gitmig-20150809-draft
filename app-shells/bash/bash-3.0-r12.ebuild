@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r12.ebuild,v 1.4 2005/08/06 21:36:11 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r12.ebuild,v 1.5 2005/08/29 23:35:58 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -52,7 +52,9 @@ src_unpack() {
 	# Fix network tests on Darwin #79124
 	epatch "${FILESDIR}"/${P}-darwin-conn.patch
 	# A bunch of fixes from fedora
-	epatch "${FILESDIR}"/${P}-{afs,crash,jobs,manpage,pwd,read-e-segfault,ulimit}.patch
+	for i in afs crash jobs manpage pwd read-e-segfault ulimit ; do
+		epatch "${FILESDIR}"/${P}-${i}.patch
+	done
 	# Fix read-builtin and the -u pipe option #87093
 	epatch "${FILESDIR}"/${P}-read-builtin-pipe.patch
 	# Don't barf on handled signals in scripts
@@ -61,6 +63,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-pgrp-pipe-fix.patch
 	# Make sure static linking always works #100138
 	epatch "${FILESDIR}"/${P}-force-static-linking.patch
+	# Fix parallel builds #87247
+	epatch "${FILESDIR}"/${P}-parallel.patch
 	# Log bash commands to syslog #91327
 	if use bashlogger ; then
 		echo
@@ -89,9 +93,6 @@ src_unpack() {
 	echo '#define PGRP_PIPE 1' >> config-bot.h
 
 	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
-
-	# Fix parallel builds #87247
-	epatch ${FILESDIR}/${P}-parallel.patch
 }
 
 src_compile() {
