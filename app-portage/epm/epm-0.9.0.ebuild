@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/epm-0.8.9.ebuild,v 1.1 2005/08/15 20:56:13 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/epm-0.9.0.ebuild,v 1.1 2005/08/29 13:52:20 kanaka Exp $
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
 HOMEPAGE="http://www.gentoo.org/~agriffis/epm/"
