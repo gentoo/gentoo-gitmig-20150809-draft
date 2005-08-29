@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.1 2005/08/29 23:28:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.2 2005/08/29 23:55:05 vanquirius Exp $
 
 inherit eutils
 
@@ -30,6 +30,5 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-#	einstall || die "einstall failed"
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
