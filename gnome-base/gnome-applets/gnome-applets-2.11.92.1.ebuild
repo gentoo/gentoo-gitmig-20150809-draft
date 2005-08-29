@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.11.92.1.ebuild,v 1.1 2005/08/29 07:29:15 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.11.92.1.ebuild,v 1.2 2005/08/29 22:21:30 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc apm acpi ipv6 gstreamer"
 
 RDEPEND=">=x11-libs/gtk+-2.5
@@ -40,11 +40,13 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable gstreamer) --disable-scrollkeeper --enable-flags"
-
 MAKEOPTS="${MAKEOPTS} -j1"
 
 USE_DESTDIR="1"
+
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable ipv6) $(use_enable gstreamer) --disable-scrollkeeper --enable-flags"
+}
 
 src_install() {
 
