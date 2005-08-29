@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
-  <email>dju@gentoo.org</email>
-</maintainer>
+<maintainer><email>dju@gentoo.org</email></maintainer>
+<maintainer><email>blong@fiction.net</email></maintainer>
 </pkgmetadata>
