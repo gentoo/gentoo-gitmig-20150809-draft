@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-app_ldap
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.9 2005/08/27 21:42:10 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/ChangeLog,v 1.10 2005/08/29 00:45:34 stkn Exp $
+
+*asterisk-app_ldap-0.9.9_p2 (29 Aug 2005)
+
+  29 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
+  -asterisk-app_ldap-0.9.9.ebuild, +asterisk-app_ldap-0.9.9_p2.ebuild:
+  0.9.9 has a memleak, the new version has that fixed. Removing
+  the broken version.
 
   27 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
   files/app_ldap-0.9.9-astcfg.diff:

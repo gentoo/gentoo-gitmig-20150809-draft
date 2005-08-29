@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/asterisk-app_ldap-0.9.9.ebuild,v 1.1 2005/08/27 20:51:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_ldap/asterisk-app_ldap-0.9.9_p2.ebuild,v 1.1 2005/08/29 00:45:34 stkn Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_PN="app_ldap"
 
 DESCRIPTION="Asterisk application plugin to do lookups in a LDAP directory"
 HOMEPAGE="http://www.mezzo.net/asterisk/"
-SRC_URI="http://www.mezzo.net/asterisk/${MY_PN}-${PV}.tgz"
+SRC_URI="http://www.mezzo.net/asterisk/${MY_PN}-${PV/_p/.}.tgz"
 
 IUSE=""
 
@@ -32,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1 clean all || die "emake failed"
 }
 
 src_install() {
