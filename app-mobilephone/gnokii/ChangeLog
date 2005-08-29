@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.16 2005/08/28 17:53:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.17 2005/08/29 06:23:33 mrness Exp $
+
+*gnokii-0.6.7-r2 (29 Aug 2005)
+
+  29 Aug 2005; Alin Nastac <mrness@gentoo.org> +gnokii-0.6.7-r2.ebuild:
+  Fix lib path for smsd database modules (#104050).
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> gnokii-0.6.7-r1.ebuild:
   Marked Stable on AMD64.
