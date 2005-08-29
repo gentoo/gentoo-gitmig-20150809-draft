@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.05-r1.ebuild,v 1.1 2005/07/21 18:09:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.05-r1.ebuild,v 1.2 2005/08/29 06:03:08 mrness Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="x86? ( http://www.linuxant.com/drivers/hsf/full/archive/${P}full/${P}fu
 	doc? ( http://www.linuxant.com/drivers/hsf/full/archive/${P}full/${MY_DOC} )"
 
 LICENSE="Conexant"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 ~amd64"
 IUSE="doc"
 SLOT="0"
 
