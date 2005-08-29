@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.246 2005/08/29 10:08:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.247 2005/08/29 10:13:05 flameeyes Exp $
+
+  29 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-lib-1_rc6-r2.ebuild, xine-lib-1.1.0-r2.ebuild:
+  Removed 1_rc6-r2 ebuild now that sparc has a better stable.
 
 *xine-lib-1.1.0-r2 (29 Aug 2005)
 
