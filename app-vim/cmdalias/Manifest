@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a028b7394b36458a301aa342ee8d0be ChangeLog 867
 MD5 e0f1bc5b1b4e71433b37f0cfbfc509eb cmdalias-1.0.ebuild 583
 MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
 MD5 e35a4b64a35186d97aefbcc35fe8097d files/digest-cmdalias-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDE1ks5mJXAu5GbtIRAouEAKCB0mv4Wtpvs73Yz+gSv6TDrdYG3wCfU3/G
+BPgvvJG8nIa2V916tyuxDpA=
+=+fCE
+-----END PGP SIGNATURE-----
