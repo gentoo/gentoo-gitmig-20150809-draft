@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r1.ebuild,v 1.2 2005/08/18 19:12:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r2.ebuild,v 1.1 2005/08/29 10:08:29 flameeyes Exp $
 
-inherit eutils flag-o-matic toolchain-funcs libtool
+inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
 # This should normally be empty string, unless a release has a suffix.
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="12"
+PATCHLEVEL="13"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -50,9 +50,9 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 
 DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
-	>=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.59
 	dev-util/pkgconfig
+    >=sys-devel/automake-1.7
+    >=sys-devel/autoconf-2.59
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
@@ -61,7 +61,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
 
 	elibtoolize
 
@@ -69,12 +69,7 @@ src_unpack() {
 	# autotools
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.7
-	aclocal -I m4 || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake -afc || die "automake failed"
-	autoconf || die "autoconf failed"
-
-	libtoolize --copy --force || die "libtoolize failed"
+	M4DIR="m4" eautoreconf
 }
 
 # check for the X11 path for a given library
@@ -87,25 +82,10 @@ get_x11_dir() {
 }
 
 src_compile() {
-	#filter dangerous compile CFLAGS
-	strip-flags
-
 	#prevent quicktime crashing
 	append-flags -frename-registers -ffunction-sections
 
 	[[ $(tc-arch) == "x86" ]] && has_pic && append-flags -UHAVE_MMX
-
-	if [[ "$(gcc-major-version)" -eq "3" && "$(gcc-minor-version)" -ge "4" ]] || [[ "$(gcc-major-version)" -ge "4" ]]; then
-		# bugs 49509 and 55202
-		append-flags -fno-web -funit-at-a-time
-		filter-flags -fno-unit-at-a-time #55202
-	fi
-
-	# fix build errors with sse2 #49482
-	if [[ $(tc-arch) = "x86" && $(gcc-major-version) -ge 3 ]]; then
-		append-flags -mno-sse2 $(test_flag -mno-sse3)
-		filter-mfpmath sse
-	fi
 
 	local myconf
 
@@ -191,6 +171,7 @@ src_compile() {
 		$(use_enable esd) \
 		$(use_enable vcd) --without-internal-vcdlibs \
 		--disable-polypaudio \
+		--disable-optimizations \
 		${myconf} \
 		--disable-dependency-tracking || die "econf failed"
 

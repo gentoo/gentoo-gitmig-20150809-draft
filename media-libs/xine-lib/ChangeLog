@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.245 2005/08/24 22:51:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.246 2005/08/29 10:08:29 flameeyes Exp $
+
+*xine-lib-1.1.0-r2 (29 Aug 2005)
+
+  29 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-lib-1.1.0-r1.ebuild, +xine-lib-1.1.0-r2.ebuild:
+  Added patch to avoid adding extra cflags if user doesn't provide them.
+  Removed cflags filtering, as now it should be less picky with them (and most
+  of them was related to rc versions). Removed -r1 as that seemed to crash
+  pretty badly with some DVDs. With this version it should be possible to have
+  useful backtraces, too.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> xine-lib-1.1.0.ebuild:
   stable on ia64
