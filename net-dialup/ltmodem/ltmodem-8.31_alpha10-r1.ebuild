@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r1.ebuild,v 1.3 2005/03/26 14:41:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r1.ebuild,v 1.4 2005/08/29 21:59:06 mrness Exp $
 
 inherit linux-mod
 
@@ -112,12 +112,20 @@ pkg_postinst() {
 		einfo "Use /dev/ttyLTM0 to access modem"
 	fi
 
-	einfo
+	echo
 	ewarn "Remember, in order to access the modem,"
 	ewarn "you have to be in the 'dialout' group."
 	ewarn "Also, if your dialing application use locking mechanism (e.g wvdial),"
 	ewarn "you should have write access to /var/lock directory."
-	einfo
+
+	if linux_chkconfig_present SMP ; then
+		echo
+		ewarn "Please note that Linux support for SMP (symmetric multi processor)"
+		ewarn "is reported to be incompatible with this driver!"
+		ewarn "In case it doesn't work, you should try first to disable CONFIG_SMP in your kernel."
+	fi
+
+	echo
 	einfo "If you have problems, read this doc:"
 	einfo "/usr/share/doc/${PF}/html/post-install.html"
 }
