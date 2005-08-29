@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1414 2005/08/29 14:38:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1415 2005/08/29 23:58:55 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -447,6 +447,7 @@ mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
 mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
 mail-filter/dspam:exim - Build with delivery options for exim
 mail-filter/dspam:large-domain - Builds for large domain rather than for domain scale
+mail-filter/dspam:logrotate - Install support files for logrotate
 mail-filter/dspam:maildrop - Build with delivery options for maildrop
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
