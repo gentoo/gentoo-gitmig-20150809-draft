@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r3.ebuild,v 1.1 2005/08/20 20:55:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r3.ebuild,v 1.2 2005/08/29 23:26:50 ribosome Exp $
 
 inherit eutils elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/maxima/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="cmucl clisp gcl sbcl tetex emacs auctex"
 
 DEPEND="tetex? ( virtual/tetex )
@@ -18,10 +18,12 @@ DEPEND="tetex? ( virtual/tetex )
 	auctex? ( app-emacs/auctex )
 	>=sys-apps/texinfo-4.3
 	x86? ( !clisp?  ( !sbcl? ( !gcl? ( !cmucl? ( dev-lisp/cmucl ) ) ) ) )
+	amd64? ( !gcl? ( dev-lisp/sbcl ) )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
 	x86? ( cmucl? ( >=dev-lisp/cmucl-19a ) )
 	x86? ( gcl?   ( >=dev-lisp/gcl-2.6.7 ) )
-	x86? ( sbcl?  ( >=dev-lisp/sbcl-0.8.14 ) )"
+	x86? ( sbcl?  ( >=dev-lisp/sbcl-0.8.14 ) )
+	amd64? ( gcl? ( >=dev-lisp/gcl-2.6.7 ) )"
 RDEPEND=">=dev-lang/tk-8.3.3
 	 >=media-gfx/gnuplot-4.0-r1"
 
@@ -56,7 +58,8 @@ src_compile() {
 			myconf="${myconf} --enable-sbcl"
 		fi
 	else
-		myconf="${myconf} --enable-cmucl"
+		use x86 && myconf="${myconf} --enable-cmucl"
+		use amd64 && myconf="${myconf} --enable-sbcl"
 	fi
 
 	./configure --prefix=/usr ${myconf} || die

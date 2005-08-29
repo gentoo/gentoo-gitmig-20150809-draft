@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.8 2005/08/20 20:55:56 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.9 2005/08/29 23:26:50 ribosome Exp $
+
+  29 Aug 2005; Olivier Fisette <ribosome@gentoo.org> maxima-5.9.1-r3.ebuild:
+  Readded ~amd64 support, thanks to a patch by Matthew Kennedy
+  <mkennedy@gentoo.org>. Partially fixes bug #98763.
 
 *maxima-5.9.1-r3 (20 Aug 2005)
 
