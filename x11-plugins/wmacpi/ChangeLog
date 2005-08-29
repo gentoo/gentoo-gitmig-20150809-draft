@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmacpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.16 2005/01/25 09:32:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpi/ChangeLog,v 1.17 2005/08/29 08:01:23 s4t4n Exp $
+
+  29 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmacpi-2.1_rc1.ebuild:
+  Stable for x86.
 
 *wmacpi-2.1_rc1 (25 Jan 2005)
 
