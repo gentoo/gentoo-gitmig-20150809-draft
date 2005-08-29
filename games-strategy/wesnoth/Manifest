@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 719ea412b7fca1450af74952035f60bb wesnoth-0.9.5.ebuild 1300
-MD5 f9e43f87ccb899434b58e28b0562bc46 wesnoth-0.9.4.ebuild 1304
-MD5 f0b28e007cbce22826fd9dabef676262 ChangeLog 8221
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f9e43f87ccb899434b58e28b0562bc46 wesnoth-0.9.4.ebuild 1304
+MD5 8db58a8f70a15e32d9e253b21466fb7d wesnoth-0.9.6.ebuild 1304
+MD5 719ea412b7fca1450af74952035f60bb wesnoth-0.9.5.ebuild 1300
+MD5 ce59820c66b2fcf3734de1eebb8e42aa ChangeLog 8351
 MD5 ea2efbb3f381d538283b68d4f21120a6 files/digest-wesnoth-0.9.4 67
+MD5 ed05bdc0d65c5396b06d15c667e260fc files/digest-wesnoth-0.9.6 67
 MD5 71dbed5b6d7ecb9c9c7750acb349f400 files/digest-wesnoth-0.9.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDEcIQntT9W3vfTuoRApWMAJ44U3mjflKfdYLqpci9lweZtPbltwCgsbzH
-axlF0DHd9TKODO+dfoEDmTI=
-=OSO1
------END PGP SIGNATURE-----
