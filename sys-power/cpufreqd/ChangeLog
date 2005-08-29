@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.11 2005/08/28 14:05:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.12 2005/08/29 20:20:18 brix Exp $
+
+*cpufreqd-2.0.0_beta4-r1 (29 Aug 2005)
+
+  29 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/cpufreqd-2.0.0-beta4-cpu_interval_inconsistency.diff,
+  +cpufreqd-2.0.0_beta4-r1.ebuild:
+  Added patch from upstream to fix cpu/cpu_interval confusion as noted in bug
+  #103798.
 
   28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> cpufreqd-1.2.3.ebuild:
   Stable on amd64.
