@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.44 2005/08/07 16:50:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.45 2005/08/29 12:43:52 cryos Exp $
+
+*kmplayer-0.9.0c (29 Aug 2005)
+
+  29 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  -kmplayer-0.9.0_rc1.ebuild, -kmplayer-0.9.0.ebuild,
+  +kmplayer-0.9.0c.ebuild:
+  Version bump and added mplayer local USE flag, closing bug 103919. Clean up.
 
 *kmplayer-0.9.0b (07 Aug 2005)
 
