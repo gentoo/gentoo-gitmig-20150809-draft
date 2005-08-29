@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.99-r1.ebuild,v 1.2 2005/08/25 21:58:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.99-r1.ebuild,v 1.3 2005/08/29 23:53:18 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -107,7 +107,7 @@ src_unpack() {
 		x86|ia64|amd64)
 			append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce
 			use amd64 || append-flags -ffast-math #54270
-			[[ $(gcc-major-version) -eq 3 ]] \
+			[[ $(gcc-major-version) -ge 3 ]] \
 				&& append-flags -falign-functions=2 -falign-jumps=2 -falign-loops=2 \
 				|| append-flags -malign-functions=2 -malign-jumps=2 -malign-loops=2
 			;;
