@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.5-r1.ebuild,v 1.1 2005/03/29 13:51:30 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.5-r1.ebuild,v 1.2 2005/08/29 08:16:23 s4t4n Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://people.easter-eggs.org/~valos/wmdrawer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~sparc ~ppc"
 
 DEPEND="virtual/x11
 	gtk2? (	>=x11-libs/gtk+-2 )
