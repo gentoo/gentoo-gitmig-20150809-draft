@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.45 2005/08/29 12:43:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.46 2005/08/29 14:19:41 carlo Exp $
+
+  29 Aug 2005; Carsten Lohrke <carlo@gentoo.org> kmplayer-0.9.0c.ebuild:
+  reverted mplayer use flag, #103919
 
 *kmplayer-0.9.0c (29 Aug 2005)
 
