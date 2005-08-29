@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f3e426e83704b0d8909c371f8c2913e9 diald-1.0-r1.ebuild 1567
 MD5 f2e4610cab052f223677ca59a8b088b5 ChangeLog 717
 MD5 3609884142a6835c4c2e032d8d0664eb metadata.xml 323
@@ -7,3 +10,10 @@ MD5 0c082c51f45b19f083013649003444f6 files/diald-init 718
 MD5 7249a39cdcf0e96f3886a162f5ef5fb0 files/diald.conf 997
 MD5 24b297f6cfd14147c48759fbadb36e6d files/digest-diald-1.0-r1 61
 MD5 e60fcccdbfaa9afadd4f9f9d9982af4f files/diald.filter 4647
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDEp9nNSP4Vda7IdsRApztAJoCgbWf/5U2E5Zp+HCRNZMI3sJtLgCdGphO
+FNE2q8Jqyiz9AtH+O1ov/qo=
+=mrs/
+-----END PGP SIGNATURE-----
