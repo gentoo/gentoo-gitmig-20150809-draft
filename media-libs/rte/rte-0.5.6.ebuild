@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.2.ebuild,v 1.2 2005/08/29 23:28:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.1 2005/08/29 23:28:04 vanquirius Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://zapping.sourceforge.net/"
 
 DEPEND="esd? ( media-sound/esound )
 	alsa? ( media-libs/alsa-lib )
-	divx4linux? ( ~media-libs/divx4linux-20020418 )"
+	divx4linux? ( media-libs/divx4linux )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,8 +20,7 @@ KEYWORDS="~x86 -sparc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/config.patch
+	epatch ${FILESDIR}/${P}-config.patch
 }
 
 src_compile() {
@@ -30,6 +29,7 @@ src_compile() {
 }
 
 src_install () {
-	einstall || die "einstall failed"
+	make DESTDIR=${D} install || die
+#	einstall || die "einstall failed"
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/rte
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.12 2004/08/28 11:57:46 mholzer Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/ChangeLog,v 1.13 2005/08/29 23:28:04 vanquirius Exp $
+
+*rte-0.5.6 (29 Aug 2005)
+
+  29 Aug 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/rte-0.5.6-config.patch, +rte-0.5.6.ebuild:
+  Version bump.
 
 *rte-0.5.2 (28 Aug 2004)
 
