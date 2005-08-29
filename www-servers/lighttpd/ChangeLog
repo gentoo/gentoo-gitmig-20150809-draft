@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.37 2005/08/27 12:36:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.38 2005/08/29 15:51:18 ka0ttic Exp $
+
+*lighttpd-1.4.2 (29 Aug 2005)
+
+  29 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +lighttpd-1.4.2.ebuild:
+  Version bump; new USE flags: bzip2, fastcgi, minimal, memcache, and rrdtool.
+  Upstream accepted my patches to fix the tests (writing to /tmp and using a
+  hardcoded module dir in /usr) so tests now work and RESTRICT=test has been
+  removed (bug #97661).
 
 *lighttpd-1.4.1-r1 (27 Aug 2005)
 
