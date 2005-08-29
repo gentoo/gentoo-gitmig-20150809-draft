@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/vamos
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.1 2005/07/04 07:32:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.2 2005/08/29 20:42:55 mr_bones_ Exp $
+
+  29 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> vamos-0.5.4.ebuild:
+  stable for x86
 
 *vamos-0.5.4 (04 Jul 2005)
 

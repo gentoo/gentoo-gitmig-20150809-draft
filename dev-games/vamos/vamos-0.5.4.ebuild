@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.4.ebuild,v 1.1 2005/07/04 07:32:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.4.ebuild,v 1.2 2005/08/29 20:42:55 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/vamos/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/plib
@@ -23,12 +23,13 @@ DEPEND="media-libs/plib
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc.patch
-	epatch "${FILESDIR}"/${P}-datadir.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc.patch \
+		"${FILESDIR}"/${P}-datadir.patch
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install"
+	make DESTDIR="${D}" install || die "make install"
 	dobin caelum/.libs/caelum || die "caelum"
 	newdoc caelum/README README.caelum
 	dodoc AUTHORS ChangeLog NEWS README TODO
