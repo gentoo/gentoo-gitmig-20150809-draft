@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.6 2005/08/28 14:46:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r1.ebuild,v 1.7 2005/08/29 20:01:23 gmsoft Exp $
 
 inherit libtool gnome.org eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE="alsa debug ipv6 static tcpd"
 
 # esound comes with arts support, but it hasn't been tested yet, feel free to
