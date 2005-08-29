@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.28 2005/05/06 22:26:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.29 2005/08/29 17:20:47 gustavoz Exp $
+
+  29 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> netcat-110-r8.ebuild:
+  Stable on sparc
 
 *netcat-110-r8 (06 May 2005)
 
