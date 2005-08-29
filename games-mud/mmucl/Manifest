@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e05be597c3b0daa57fde18221f53634c mmucl-1.5.2-r1.ebuild 1775
+MD5 751ab8cdb93d14e3c6f14a9d64cf4779 ChangeLog 1332
 MD5 c55c0e9f9b32a5fee70fbf4e5f611395 metadata.xml 299
-MD5 37bb388673c3eb549b2b230d72721f74 mmucl-1.5.2-r1.ebuild 1772
-MD5 14f1384f1597acac9e85cc8f180c4ed7 ChangeLog 1263
 MD5 53208ee117dc046fb612441ba0ee3ece files/digest-mmucl-1.5.2-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDE2c1omPajV0RnrERAuAnAJkBu4i7nAlBTpWiY2Vep71PbWZ5rACeMjWp
+JRVPuHiO6KUMSElrpc1J1ik=
+=3c+3
+-----END PGP SIGNATURE-----
