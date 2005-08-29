@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.41 2005/08/16 12:33:44 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.42 2005/08/29 20:02:10 brix Exp $
+
+*ipw2200-1.0.6-r1 (29 Aug 2005)
+
+  29 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ipw2200-1.0.6-hwcrypt-wpa-fix4.patch,
+  +files/ipw2200-1.0.6-suspend2.patch, +ipw2200-1.0.6-r1.ebuild:
+  Add fix for WPA when using hwcrypto. Allow compiling against
+  sys-kernel/suspend2-sources-2.6.13.
 
   16 Aug 2005; Henrik Brix Andersen <brix@gentoo.org> ipw2200-1.0.6.ebuild:
   Stable on x86.
