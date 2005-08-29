@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.10 2005/08/23 03:07:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.2.ebuild,v 1.11 2005/08/29 18:11:08 j4rg0n Exp $
 
 inherit eutils
 
@@ -26,7 +26,11 @@ src_unpack() {
 	sed -i.orig -e "s:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= ${CFLAGS}:" \
 		-e "s:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= ${CXXFLAGS}:" \
 		tmake/lib/linux-g++/tmake.conf
-	use ppc-macos && epatch ${FILESDIR}/bsd-configure.patch
+	if use userland_Darwin; then
+		epatch ${FILESDIR}/bsd-configure.patch
+		[[ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]] &&  sed -i -e 's:-D__FreeBSD__:-D__FreeBSD__=5:' \
+		tmake/lib/macosx-c++/tmake.conf
+	fi
 }
 
 src_compile() {
