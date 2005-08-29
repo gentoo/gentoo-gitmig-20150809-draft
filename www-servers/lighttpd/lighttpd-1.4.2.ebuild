@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.2.ebuild,v 1.1 2005/08/29 15:51:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.2.ebuild,v 1.2 2005/08/29 17:21:40 ka0ttic Exp $
 
 inherit eutils
 
@@ -105,6 +105,10 @@ src_unpack() {
 	# dev-python/docutils installs rst2html.py not rst2html
 	sed -i -e 's|\(rst2html\)|\1.py|g' doc/Makefile.in || \
 		die "sed doc/Makefile.in failed"
+
+	# fix a missed /tmp path so that all the tests pass
+	sed -i -e 's|"\(/tmp\)|"@SRCDIR@\1|' tests/lighttpd.conf || \
+		die "sed tests/lighttpd.conf"
 }
 
 src_compile() {
