@@ -1,4 +1,14 @@
-MD5 d49ade2beb83602891e11b53a9fca894 ChangeLog 709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 394e3a5c953a8417d564d64be4552b2c tcl-gtk-0.08.ebuild 584
+MD5 ac36c79da66be1a1a59e376a32b643a0 ChangeLog 775
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
-MD5 21bd030fd9712a9721d09c373c95a7e0 tcl-gtk-0.08.ebuild 582
 MD5 cca46034238171c80635514040fe7dad files/digest-tcl-gtk-0.08 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDE2XxomPajV0RnrERAjuSAJ9Jb+4uVZ2mW4f9SG+iIp0x0B5ZbQCcDuh5
+l9oowTgm/Fcom4hXnmiV2b8=
+=dgiC
+-----END PGP SIGNATURE-----
