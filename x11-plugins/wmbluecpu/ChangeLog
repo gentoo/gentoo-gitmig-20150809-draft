@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbluecpu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/ChangeLog,v 1.7 2005/05/16 10:07:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/ChangeLog,v 1.8 2005/08/29 08:08:20 s4t4n Exp $
+
+  29 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmbluecpu-0.6.ebuild:
+  Stable for x86.
 
 *wmbluecpu-0.6 (16 May 2005)
 
