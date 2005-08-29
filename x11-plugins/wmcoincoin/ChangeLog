@@ -1,12 +1,19 @@
 # ChangeLog for x11-plugins/wmcoincoin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.11 2005/06/25 13:29:51 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.12 2005/08/29 08:14:20 s4t4n Exp $
+
+  29 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmcoincoin-2.5.0g.ebuild,
+  Stable for x86.
+  -wmcoincoin-2.5.0f.ebuild:
+  Wiped out older unstable version.
 
 *wmcoincoin-2.5.0g (25 Jun 2005)
 
-  25 Jun 2005; <pyrania@gentoo.org> wmcoincoin-2.5.0f.ebuild,
+  25 Jun 2005; <pyrania@gentoo.org> wmcoincoin-2.5.0g.ebuild,
   +wmcoincoin-2.5.0g.ebuild:
   Version bump and fixed dependecy issues with imlib2.
+
+*wmcoincoin-2.5.0f (11 Apr 2005)
 
   11 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmcoincoin-2.5.0f.ebuild:
   Version bump, closes #88383.
