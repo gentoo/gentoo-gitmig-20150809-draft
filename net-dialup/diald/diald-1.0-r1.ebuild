@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.7 2004/07/14 22:40:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.8 2005/08/29 05:35:48 mrness Exp $
 
 # You need SLIP in your kernel to run diald.
 
@@ -53,8 +53,8 @@ src_install() {
 
 	dodoc BUGS CHANGES LICENSE NOTES README* \
 		THANKS TODO TODO.budget doc/diald-faq.txt
-	docinto setup ; cp -a setup/* ${D}/usr/share/doc/${PF}/setup
-	docinto contrib ; cp -a contrib/* ${D}/usr/share/doc/${PF}/contrib
+	docinto setup ; cp -pPR setup/* ${D}/usr/share/doc/${PF}/setup
+	docinto contrib ; cp -pPR contrib/* ${D}/usr/share/doc/${PF}/contrib
 	prepalldocs
 
 	insinto /etc/diald ; doins ${FILESDIR}/{diald.conf,diald.filter}

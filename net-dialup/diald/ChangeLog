@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/diald
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.6 2004/06/24 22:25:28 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/ChangeLog,v 1.7 2005/08/29 05:35:48 mrness Exp $
+
+  29 Aug 2005; Alin Nastac <mrness@gentoo.org> diald-1.0-r1.ebuild:
+  Fix cp -a usage for Gentoo BSD (#103487).
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/rp-l2tp-0.4.ebuild,v 1.4 2005/04/07 16:04:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/rp-l2tp-0.4.ebuild,v 1.5 2005/08/29 05:39:11 mrness Exp $
 
 inherit eutils
 
@@ -14,9 +14,10 @@ SLOT="0"
 IUSE=""
 
 src_unpack() {
-	unpack ${A} || die "failed to unpack sources"
-	cd ${S} || die "source dir not found"
-	epatch ${FILESDIR}/${P}-gentoo.diff || die "failed to apply patch"
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -29,7 +30,7 @@ src_install() {
 
 	dodoc README
 	newdoc l2tp.conf rp-l2tpd.conf
-	cp -a libevent/Doc ${D}/usr/share/doc/${PF}/libevent
+	cp -pPR libevent/Doc ${D}/usr/share/doc/${PF}/libevent
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/rp-l2tpd-init rp-l2tpd
