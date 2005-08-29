@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_beta4-r1.ebuild,v 1.1 2005/08/29 20:20:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_beta4-r1.ebuild,v 1.2 2005/08/29 21:30:44 swegener Exp $
 
 inherit eutils linux-info
 
@@ -45,6 +45,6 @@ pkg_postinst() {
 	einfo "Make sure you update your /etc/cpufreqd.conf file before starting"
 	einfo "${PN}. You can use 'etc-update' to accomplish this:"
 	einfo
-    einfo "  # etc-update"
+	einfo "  # etc-update"
 	einfo
 }
