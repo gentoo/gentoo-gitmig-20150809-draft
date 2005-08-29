@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.18.ebuild,v 1.3 2005/08/19 06:00:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.18.ebuild,v 1.4 2005/08/29 03:28:47 mr_bones_ Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="cross-platform multimedia library"
 HOMEPAGE="http://alleg.sourceforge.net/"
