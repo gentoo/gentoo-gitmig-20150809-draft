@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.00.00.ebuild,v 1.2 2005/07/01 09:56:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.00.00.ebuild,v 1.3 2005/08/29 19:07:02 xmerlin Exp $
 
 inherit linux-mod
 
@@ -14,8 +14,10 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-#DEPEND=">=virtual/linux-sources-2.6.12"
-DEPEND=">=sys-kernel/vanilla-sources-2.6.12_rc1"
+DEPEND="|| (
+		>=sys-kernel/vanilla-sources-2.6.12
+		>=sys-kernel/gentoo-sources-2.6.12
+	)"
 RDEPEND=""
 
 S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN}"
