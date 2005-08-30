@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.5 2005/08/30 19:29:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.6 2005/08/30 19:32:44 wolf31o2 Exp $
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-ded-3339.ebuild, ut2004-ded-3355.ebuild:
+  Marking 3355 stable on x86 and amd64 and removing old version.
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-ded-3355.ebuild:
