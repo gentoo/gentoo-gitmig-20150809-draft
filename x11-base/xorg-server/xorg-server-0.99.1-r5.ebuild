@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r5.ebuild,v 1.2 2005/08/23 01:04:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r5.ebuild,v 1.3 2005/08/30 13:15:35 herbs Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
 SNAPSHOT="yes"
 
-inherit flag-o-matic x-modular
+inherit flag-o-matic x-modular multilib
 
 OPENGL_DIR="xorg-x11"
 
@@ -89,7 +89,7 @@ pkg_setup() {
 		--enable-xevie
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
-		--with-xkb-path=/usr/lib/X11/xkb
+		--with-xkb-path=/usr/$(get_libdir)/X11/xkb
 		--disable-static"
 #		$(use_enable xprint)
 
