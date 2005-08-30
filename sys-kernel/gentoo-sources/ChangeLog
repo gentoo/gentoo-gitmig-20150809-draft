@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.184 2005/08/30 00:51:35 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.185 2005/08/30 15:09:56 cryos Exp $
+
+  30 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  gentoo-sources-2.6.13.ebuild:
+  Marked ~amd64, closes bug 104256.
 
 *gentoo-sources-2.6.12-r10 (30 Aug 2005)
 
@@ -200,7 +204,7 @@
   (only if you use fbsplash) to avoid potential problems. Speakup is missing
   from this release but will return soon.
 
-  14 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org>
+  14 Jun 2005; Marcus D. Hanwell <cryos@gentoo.org>
   gentoo-sources-2.6.11-r11.ebuild:
   Stable on amd64.
 
