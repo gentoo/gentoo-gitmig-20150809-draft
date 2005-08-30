@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.247 2005/08/29 10:13:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.248 2005/08/30 09:44:35 flameeyes Exp $
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.0-r2.ebuild:
+  On x86 we need to force a few more flags. Added a workaround section for it
+  and a warning about the unusable debug information caused by
+  -fomit-frame-pointer.
 
   29 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   -xine-lib-1_rc6-r2.ebuild, xine-lib-1.1.0-r2.ebuild:

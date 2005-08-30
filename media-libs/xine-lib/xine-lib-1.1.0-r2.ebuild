@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r2.ebuild,v 1.2 2005/08/29 10:13:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r2.ebuild,v 1.3 2005/08/30 09:44:35 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -85,7 +85,17 @@ src_compile() {
 	#prevent quicktime crashing
 	append-flags -frename-registers -ffunction-sections
 
-	[[ $(tc-arch) == "x86" ]] && has_pic && append-flags -UHAVE_MMX
+	# Specific workarounds for too-few-registers arch...
+	if [[ $(tc-arch) == "x86" ]]; then
+		has_pic && append-flags -UHAVE_MMX
+
+		append-flags -mno-sse -fomit-frame-pointer
+		ewarn ""
+		ewarn "Debug information will be almost useless as the frame pointer is omitted."
+		ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
+		ewarn "difficult to fix. Please have that in mind."
+		ewarn ""
+	fi
 
 	local myconf
 
