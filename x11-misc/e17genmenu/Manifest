@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 a2c90168f34c24831bf89ebe319b16b6 e17genmenu-2.0.2.ebuild 504
-MD5 f0e05bddaebdd3e8de04f6fdf4eeeb4e ChangeLog 657
-MD5 79ef9ce6fd55e9ab0acf15777c2ced87 files/digest-e17genmenu-2.0.2 68
+MD5 20e9bfd7730511480c0ca511f5b9ea66 e17genmenu-3.0.3.ebuild 504
+MD5 42d713576c2655c6308f3c4e3da45e99 ChangeLog 783
+MD5 a082cbf7c4388d9283dc785f1ef5eddb files/digest-e17genmenu-3.0.3 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC6r5+gIKl8Uu19MoRAmb9AJ9zu/R6K6EtiikGads+TohjKAGtIQCfUQ1k
-MtFEejYaiHrUH9QOukcB300=
-=Xlu6
+iD8DBQFDE6P3gIKl8Uu19MoRAisNAJ92QvwyfQo2ESxGbIzPj4oyxBr+CACfThUa
+DLXzFJvjo555tOCu1qjt70g=
+=DIOD
 -----END PGP SIGNATURE-----
