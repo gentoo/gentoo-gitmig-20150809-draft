@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/zapping
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/ChangeLog,v 1.10 2004/11/30 22:09:42 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/ChangeLog,v 1.11 2005/08/30 00:06:13 vanquirius Exp $
+
+  30 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> zapping-0.7.ebuild:
+  Add missing esound dependency and fix scrollkeeper violations for bug 98968.
+  Thanks to Adam Chodorowski <adam@chodorowski.com>.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> zapping-0.7.ebuild:
   Fixed invalid atoms in *DEPEND.
