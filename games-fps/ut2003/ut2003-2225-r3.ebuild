@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.3 2005/06/27 22:33:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.4 2005/08/30 19:51:10 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2003.com/"
-SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
-	ftp://david.hedbor.org/ut2k3/updates/${PN}lnx_2107to${PV}.sh.bin
-	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
+SRC_URI="http://download.factoryunreal.com/mirror/UT2003CrashFix.zip
+	ftp://ftp.infogrames.net/misc/ut2003/ut2003lnx_patch2225.tar.tar"
 
 LICENSE="ut2003"
 SLOT="0"
@@ -36,7 +35,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself ${DISTDIR}/${PN}lnx_2107to${PV}.sh.bin \
+	unpack ut2003lnx_patch${PV}.tar.tar \
 		|| die "unpacking patch"
 	unzip ${DISTDIR}/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
@@ -120,9 +119,7 @@ src_install() {
 	games_make_wrapper ut2003 ./ut2003 ${dir}
 
 	# this brings our install up to the newest version
-	cd ${S}
-	loki_patch --verify patch.dat || die "verifying patch"
-	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
+	cp -r ${S}/ut2003-lnx-2225/* ${Ddir} || die
 
 	# Here we apply DrSiN's crash patch
 	cp ${S}/CrashFix/System/crashfix.u ${Ddir}/System
