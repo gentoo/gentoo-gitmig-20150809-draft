@@ -1,6 +1,14 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.7 2005/08/04 21:37:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.8 2005/08/30 19:40:24 dang Exp $
+
+*evince-0.4.0 (30 Aug 2005)
+
+  30 Aug 2005; <dang@gentoo.org> +files/evince-0.4.0-t1lib_is_t1.patch,
+  +evince-0.4.0.ebuild:
+  Add evince 0.4.0. Two things are missing from this ebuild: the nautilus
+  plugin (was cauing -fPIC errors), and djvu support (still waiting on a
+  revbump for that). Will revbump when those are fixed.
 
   04 Aug 2005; <dang@gentoo.org> evince-0.3.2.ebuild:
   Remove djvu support until new version of djvu is released. bug #101108
