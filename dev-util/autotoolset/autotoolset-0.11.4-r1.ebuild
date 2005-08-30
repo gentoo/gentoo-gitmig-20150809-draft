@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/autotoolset-0.11.4-r1.ebuild,v 1.1 2005/07/18 01:45:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/autotoolset-0.11.4-r1.ebuild,v 1.2 2005/08/30 01:19:29 robbat2 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc
