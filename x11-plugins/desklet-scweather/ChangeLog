@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-scweather
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-scweather/ChangeLog,v 1.5 2005/06/29 19:29:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-scweather/ChangeLog,v 1.6 2005/08/30 14:40:20 nixphoeni Exp $
+
+*desklet-scweather-0.4 (30 Aug 2005)
+
+  30 Aug 2005; Joe Sapp <nixphoeni@gentoo.org>
+  +desklet-scweather-0.4.ebuild:
+  Version bump
 
   29 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   desklet-scweather-0.3.ebuild:
