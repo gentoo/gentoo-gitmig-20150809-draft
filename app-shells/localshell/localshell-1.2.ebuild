@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.2.ebuild,v 1.1 2005/07/18 21:24:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.2.ebuild,v 1.2 2005/08/30 01:06:52 robbat2 Exp $
 
 DESCRIPTION="Localshell allows per-user/group local control of shell execution."
 HOMEPAGE="http://research.iat.sfu.ca/custom-software/localshell/"
 SRC_URI="${HOMEPAGE}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 DEPEND="virtual/libc"
 #RDEPEND=""
