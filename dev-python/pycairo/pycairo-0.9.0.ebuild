@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-0.9.0.ebuild,v 1.1 2005/08/26 00:04:54 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-0.9.0.ebuild,v 1.2 2005/08/30 01:17:08 dang Exp $
 
 #inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://cairographics.org/pycairo"
 SRC_URI="http://cairographics.org/snapshots/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk numeric svg"
 
 DEPEND=">=virtual/python-2.2
