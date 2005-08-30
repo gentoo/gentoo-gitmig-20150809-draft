@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.2 2005/08/30 19:30:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.3 2005/08/30 19:34:46 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://3dgamers/battlefield1942/${PN/-/_}-1.6-rc2.run
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RESTRICT="mirror strip"
 

@@ -1,6 +1,11 @@
 # ChangeLog for games-server/bf1942-lnxded
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/ChangeLog,v 1.6 2005/08/30 19:30:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/ChangeLog,v 1.7 2005/08/30 19:34:46 wolf31o2 Exp $
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -bf1942-lnxded-1.5.ebuild, -bf1942-lnxded-1.6_rc2.ebuild,
+  bf1942-lnxded-1.61.ebuild:
+  Marking 1.61 stable on x86 and removing old versions.
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   bf1942-lnxded-1.61.ebuild:
