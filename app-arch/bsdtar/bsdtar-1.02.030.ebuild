@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.030.ebuild,v 1.2 2005/08/30 11:41:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.030.ebuild,v 1.3 2005/08/30 18:12:30 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-osx.patch
+	epatch ${FILESDIR}/${PN}-1.02.027-osx.patch
 }
 
 src_compile() {
