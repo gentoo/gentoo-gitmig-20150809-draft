@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.7 2005/08/28 21:51:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.8 2005/08/30 11:41:06 flameeyes Exp $
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> bsdtar-1.02.030.ebuild:
+  Re-added osx patch as it's still needed, I trusted upstream on that but
+  direct test shown it's not as it was told.
 
 *bsdtar-1.02.030 (28 Aug 2005)
 
