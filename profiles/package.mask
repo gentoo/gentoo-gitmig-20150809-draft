@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4356 2005/08/30 06:42:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4357 2005/08/30 19:00:17 ciaranm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,10 +24,6 @@
 # Benedikt Boehm <hollow@gentoo.org> (30 Aug 2005)
 # Masked for testing
 =sys-kernel/vserver-sources-2.1.0_pre5
-
-# Ciaran McCreesh <ciaranm@gentoo.org> (30 Aug 2005)
-# Needs afs and selinux testing before unmasking.
-=sys-apps/findutils-4.2.23
 
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
