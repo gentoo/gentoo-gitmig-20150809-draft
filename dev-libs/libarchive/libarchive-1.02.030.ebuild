@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.02.030.ebuild,v 1.1 2005/08/28 21:50:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.02.030.ebuild,v 1.2 2005/08/30 11:33:22 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Library to create and read several different archive formats."
 HOMEPAGE="http://people.freebsd.org/~kientzle/libarchive/"
@@ -29,14 +29,15 @@ src_unpack() {
 
 	touch NEWS README AUTHORS ChangeLog COPYING
 
-	libtoolize --copy --force || die "libtoolize failed"
-	autoreconf -i || die "autoreconf failed"
+	eautoreconf
 }
 
 src_install() {
 	make DESTDIR="${D}" install
 
-	dodir /$(get_libdir)
-	mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
-	gen_usr_ldscript libarchive.so
+	if ! use userland_Darwin; then
+		dodir /$(get_libdir)
+		mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
+		gen_usr_ldscript libarchive.so
+	fi
 }

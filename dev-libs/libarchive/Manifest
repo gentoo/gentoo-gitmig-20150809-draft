@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 35aaf53e74eb9e13e583694104b9f939 ChangeLog 1226
-MD5 e7fff4664c3a69f9c3040ff223df8b78 libarchive-1.02.030.ebuild 1081
+MD5 4496f01b2678e2483f85558fb9b5dbf9 ChangeLog 1404
+MD5 31fe9497efdea701865c9c961e9aa4d9 libarchive-1.02.030.ebuild 1047
 MD5 6530e11ad3afae081d8c1cd12c6fdd39 libarchive-1.02.027.ebuild 691
 MD5 45386ed25b5c1a63e390e4fb028833f0 libarchive-1.02.027-r1.ebuild 1146
 MD5 985eb3e6f7fb60fd3651ba1cae41c609 metadata.xml 464
@@ -14,7 +14,7 @@ MD5 7050cbd8598ed396d741592975d848ce files/digest-libarchive-1.02.027-r1 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDEjHTj5H05b2HAEkRAh8sAKCF/z+KsgsBjB+O6z5OtNob/pTTAwCfRzF5
-iJgtKt1r9EHmPgsejHBujj4=
-=QF2v
+iD8DBQFDFEQdj5H05b2HAEkRAnaeAJ9q5JzcrG8687XtAouzAyYHaIdr2ACfeynD
+bdUBNFxr225wybBT1gxvwnc=
+=xSfl
 -----END PGP SIGNATURE-----

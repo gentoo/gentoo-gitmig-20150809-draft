@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.6 2005/08/28 21:50:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.7 2005/08/30 11:33:22 flameeyes Exp $
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libarchive-1.02.030.ebuild:
+  Use eautoreconf, so that it returns to work on OSX. Don't mangle .so
+  libraries on Darwin.
 
 *libarchive-1.02.030 (28 Aug 2005)
 
