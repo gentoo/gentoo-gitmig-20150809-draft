@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/freehdl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.4 2005/08/29 12:05:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.5 2005/08/30 12:44:04 phosphan Exp $
+
+  30 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +files/freehdl-20050510-memory.patch, freehdl-20050510.ebuild:
+  Fixed #104122 with a little patch. Marking ~arch for x86 and ppc.
 
 *freehdl-20050510 (29 Aug 2005)
 

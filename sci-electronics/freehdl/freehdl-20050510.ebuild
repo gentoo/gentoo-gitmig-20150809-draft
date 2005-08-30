@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/freehdl-20050510.ebuild,v 1.1 2005/08/29 12:05:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/freehdl-20050510.ebuild,v 1.2 2005/08/30 12:44:04 phosphan Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ DEPEND="sys-devel/flex
 RDEPEND=">=dev-util/guile-1.2"
 SLOT="0"
 IUSE=""
-KEYWORDS="-x86 -ppc -*"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
 	if [ $(gcc-major-version) -le 3 -a $(gcc-minor-version) -le 4 ] \
@@ -23,6 +23,7 @@ src_unpack() {
 	fi
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-memory.patch
 	touch vaul/lexer.ll # rebuild the lexer, see bug #103157
 }
 
