@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.77 2005/04/04 09:40:28 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.78 2005/08/30 10:13:56 avenj Exp $
+
+
+*dnsmasq-2.23 (30 Aug 2005)
+
+  30 Aug 2005; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.23.ebuild :
+  Version bump; various bugfixes for DHCP, experimental DBus support, 
+  gcc4 fixes, etc; see http://thekelleys.org.uk/dnsmasq/CHANGELOG
 
   04 Apr 2005; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.22.ebuild :
   Stable on x86.
