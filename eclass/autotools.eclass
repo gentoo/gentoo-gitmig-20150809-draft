@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.14 2005/08/30 09:31:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.15 2005/08/30 11:29:17 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -54,10 +54,10 @@ autotools_check_macro() {
 # Internal function to get additional subdirs to configure
 autotools_get_subdirs() {
 	local subdirs_scan_out
-	
+
 	subdirs_scan_out=$(autotools_check_macro "AC_CONFIG_SUBDIRS")
 	[[ -n ${subdirs_scan_out} ]] || return 0
-	
+
 	echo "${subdirs_scan_out}" | gawk \
 	'($0 !~ /^[[:space:]]*(#|dnl)/) {
 		if (match($0, "AC_CONFIG_SUBDIRS\\(\\[?([^\\])]*)", res)) {
@@ -79,7 +79,7 @@ eaclocal() {
 	local aclocal_opts
 
 	[[ -n ${M4DIR} ]] && aclocal_opts="-I ${M4DIR}"
-	
+
 	[[ -f aclocal.m4 && -n $(grep -e 'generated.*by aclocal' aclocal.m4) ]] && \
 		autotools_run_tool aclocal "$@" ${aclocal_opts}
 }
@@ -87,8 +87,9 @@ eaclocal() {
 _elibtoolize() {
 	# Check if we should run libtoolize
 	[[ -n $(autotools_check_macro "AC_PROG_LIBTOOL") ]] || return 0
-	autotools_run_tool libtoolize "$@"
-	
+	use userland_Darwin && LIBTOOLIZE="glibtoolize"
+	autotools_run_tool ${LIBTOOLIZE:-libtoolize} "$@"
+
 	# Need to rerun aclocal
 	eaclocal
 }
