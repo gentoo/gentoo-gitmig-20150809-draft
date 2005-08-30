@@ -1,11 +1,21 @@
-MD5 4e4dd6d19e84de604e215ad4acce8ad8 ChangeLog 2955
-MD5 6f6efeb6086e235a1e2d90154257404b p0f-2.0.3.ebuild 923
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 96d5bba7d9820536e271754ecd470720 ChangeLog 3053
 MD5 a6504b2ab3f5f778d46643a087162f71 metadata.xml 250
-MD5 11e7943bc6ddf504e29b346c4c1334d1 p0f-2.0.5.ebuild 1142
+MD5 6f6efeb6086e235a1e2d90154257404b p0f-2.0.3.ebuild 923
 MD5 6e436e74ea29aff070f41f575e03f05d p0f-2.0.5-r1.ebuild 1362
+MD5 c9e7e918a45db4e991e2402ce109de68 p0f-2.0.5.ebuild 1141
 MD5 d68117a6108bcd2769ac8128cec37896 files/digest-p0f-2.0.3 58
 MD5 393eeebe57dc144d2d5c60ccb33f96e6 files/digest-p0f-2.0.5 58
-MD5 0c97d34501b34ec11763fde7fc38dac9 files/p0f.initd 1270
 MD5 393eeebe57dc144d2d5c60ccb33f96e6 files/digest-p0f-2.0.5-r1 58
 MD5 366dc57024aeed06f2707e568a629dce files/p0f.confd 68
+MD5 0c97d34501b34ec11763fde7fc38dac9 files/p0f.initd 1270
 MD5 a326fd4ccb89a5551f5c7f81c427fdb7 files/p0f.initd2 1327
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFHwVwUpWvClEHQoRArtUAJ9unXUFo5vZ8fv5/m8R714zM3/s5wCfd5cp
+R43ms301S4tQVCpI0TUkSNI=
+=V3HZ
+-----END PGP SIGNATURE-----
