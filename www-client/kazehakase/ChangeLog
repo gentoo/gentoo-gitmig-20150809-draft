@@ -1,6 +1,11 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.15 2005/08/18 18:49:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.16 2005/08/30 13:17:12 nakano Exp $
+
+*kazehakase-0.3.0 (29 Aug 2005)
+
+  29 Aug 2005; Masatomo Nakano <nakano@gentoo.org> +kazehakase-0.3.0.ebuild:
+  Version bump.
 
   18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   kazehakase-0.2.7.ebuild:
