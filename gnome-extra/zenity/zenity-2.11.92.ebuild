@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.11.91.ebuild,v 1.1 2005/08/21 19:37:56 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.11.92.ebuild,v 1.1 2005/08/30 05:26:53 leonardop Exp $
 
 inherit gnome2
 
-DESCRIPTION="commandline dialog tool for gnome"
+DESCRIPTION="Tool to display dialogs from the commandline and shell scripts"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
@@ -15,8 +15,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomecanvas-2
-	>=dev-libs/glib-2.7.3
-	dev-libs/popt"
+	>=dev-libs/glib-2.7.3"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
