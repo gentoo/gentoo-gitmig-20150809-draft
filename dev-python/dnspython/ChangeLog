@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.16 2005/08/26 03:26:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.17 2005/08/30 17:03:57 gustavoz Exp $
+
+  30 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  dnspython-1.3.3.ebuild:
+  Stable on sparc
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> dnspython-1.3.4.ebuild:
   add ~ia64
