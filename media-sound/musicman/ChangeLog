@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/musicman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.12 2005/08/04 16:42:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.13 2005/08/30 14:13:39 flameeyes Exp $
+
+*musicman-0.15 (30 Aug 2005)
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> +musicman-0.15.ebuild:
+  Updated to latest upstream version.
 
 *musicman-0.14 (04 Aug 2005)
 
