@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c89a3c75dac7f5e85826693c2d72dbd0 ChangeLog 22196
-MD5 fff1a8181bbfa0f4e7dca93103f6faf0 coreutils-5.2.1-r2.ebuild 4195
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 fff1a8181bbfa0f4e7dca93103f6faf0 coreutils-5.2.1-r2.ebuild 4195
+MD5 1e59c359e3913223b175b4e9523a828b coreutils-5.2.1-r7.ebuild 4591
+MD5 d14f73952894a4ce443a9eacdcb98c35 ChangeLog 22417
 MD5 4f3bf0e70d7d8559235fec22a00609a6 coreutils-5.2.1-r6.ebuild 4598
+MD5 2013f63b3ad1b727a9b0b2b5a393994c files/DIR_COLORS 4147
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
 MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149
-MD5 562be8875293fa477947cff0cc46d37e files/DIR_COLORS 4073
+MD5 c82065025499ef6aec62f772aa8637cf files/digest-coreutils-5.2.1-r7 148
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDBIhjj5H05b2HAEkRAmarAJwJ5AjQy4B5Ps99RKZjVYJcUuWBkACfZir3
-pK+F9tJhEnrC6LXeiu0nBAk=
-=9BMn
+iD8DBQFDE6jagIKl8Uu19MoRAsZ1AJ98f3fGvP0JfVmkXX1wYhnmRQQs4ACeNwLM
+A1O/KlKc2AsOMsX0omZF8Gc=
+=0ig6
 -----END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.137 2005/08/18 13:08:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.138 2005/08/30 00:31:05 vapier Exp $
+
+*coreutils-5.2.1-r7 (30 Aug 2005)
+
+  30 Aug 2005; Mike Frysinger <vapier@gentoo.org> files/DIR_COLORS,
+  +coreutils-5.2.1-r7.ebuild:
+  Fix memleak in chmod #87490 and update DIR_COLORS with stuff from Fedora and
+  #104087.
 
   18 Aug 2005; Mike Frysinger <vapier@gentoo.org> coreutils-5.2.1-r6.ebuild:
   Merge support for using coreutils on non-GNU systems by Diego Pettenò
