@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5d7f99a87f6104680ffb2baede0edfe4 glibmm-2.7.2.ebuild 1194
 MD5 ffca51981b88015d0fa177f262eed07d glibmm-2.6.1.ebuild 1166
 MD5 8ce03c33ee4c7715e5f4be86dbe27553 glibmm-2.4.7-r1.ebuild 1054
 MD5 99d38f342fc31bd084bdb61bf3603ae1 glibmm-2.4.4.ebuild 538
-MD5 be56001f51e0642d5b1b366badfcd6b9 ChangeLog 5284
+MD5 5d7f99a87f6104680ffb2baede0edfe4 glibmm-2.7.3.ebuild 1194
+MD5 7ca0f07caff37bfb5076b5dbf25e1caa ChangeLog 5401
 MD5 57fc113c79155fc9e1e055642befa01e metadata.xml 255
 MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
 MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
 MD5 df31c402a8203f95b628cad41a9bafa0 files/digest-glibmm-2.6.1 66
 MD5 4ef808d945f493b59e156f88466a0d24 files/digest-glibmm-2.7.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDEPfpntT9W3vfTuoRAr9CAJ4x4s32X+K/eyAi7Mm0Hnvzql+YNgCfUdb6
-0w/eUm+FX4xNQoXtwEmAqu0=
-=Mt3O
------END PGP SIGNATURE-----
+MD5 146e5f55c62b1978ce11b6dabe13aa34 files/digest-glibmm-2.7.3 66
