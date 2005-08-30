@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.44 2005/08/16 12:59:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.45 2005/08/30 23:47:16 ferdy Exp $
+
+  30 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> sandbox-1.2.12.ebuild:
+  stable on alpha wrt bug #101433
 
   16 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> sandbox-1.2.12.ebuild:
   Stable on sparc wrt #101433
