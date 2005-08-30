@@ -3,8 +3,6 @@
 #
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
-#
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.12 2005/08/30 00:31:05 vapier Exp $
 
 # COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 # pipes. 'all' adds color characters to all output. 'none' shuts colorization
