@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.16.ebuild,v 1.2 2005/08/22 07:26:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.16-r2.ebuild,v 1.1 2005/08/30 08:00:38 phosphan Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="usb gphoto2 ipv6 v4l"
 
@@ -16,11 +16,12 @@ DEPEND=">=media-libs/jpeg-6b
 	gphoto2? ( media-libs/libgphoto2 )
 	v4l? ( sys-kernel/linux-headers )"
 
-BROTHERMFCDRIVER="sane-backends-1.0.15-brothermfc.patch"
+BROTHERMFCDRIVER="sane-${PV}-brother-driver.diff"
 
 SRC_URI="ftp://ftp.sane-project.org/pub/sane/${P}/${P}.tar.gz
-	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz"
-	#usb? ( mirror://gentoo/${BROTHERMFCDRIVER}.bz2 )"
+	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz
+	usb? ( mirror://gentoo/${BROTHERMFCDRIVER}.bz2
+		http://dev.gentoo.org/~phosphan/${BROTHERMFCDRIVER}.bz2 )"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
 KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64 ~alpha ~ia64"
@@ -61,15 +62,11 @@ src_unpack() {
 		einfo "instead of building all of them."
 	fi
 	unpack ${A}
-	#if use usb; then
-	#	unpack ${BROTHERMFCDRIVER}.bz2
-	#fi
-	#cp ${FILESDIR}/linux_sg3_err.h ${S}/sanei
+	if use usb; then
+		unpack ${BROTHERMFCDRIVER}.bz2
+	fi
 
 	cd ${S}
-
-	#epatch ${FILESDIR}/canoscan-focus.patch
-	#epatch ${WORKDIR}/gt68xx-71.patch
 
 	#only generate the .ps and not the fonts
 	sed -i -e 's:$(DVIPS) sane.dvi -o sane.ps:$(DVIPS) sane.dvi -M1 -o sane.ps:' \
@@ -79,19 +76,24 @@ src_unpack() {
 		|| die "function_name fix failed"
 
 	if use usb; then
-		#epatch ${WORKDIR}/${BROTHERMFCDRIVER}
+		epatch ${WORKDIR}/${BROTHERMFCDRIVER}
+		sed -e 's/bh canon/bh brother canon/' -i configure || \
+			die "could not add 'brother' to backend list"
 		epatch ${FILESDIR}/libusbscanner-device-r1.patch
 		:
 	fi
+	epatch ${FILESDIR}/lide25.patch
 }
 
 src_compile() {
+	filter-flags -ffast-math
 	SANEI_JPEG="sanei_jpeg.o" SANEI_JPEG_LO="sanei_jpeg.lo" \
 	BACKENDS="${SANE_BACKENDS}" \
 	econf \
 		$(use_enable usb libusb) \
 		$(use_with gphoto2) \
 		$(use_enable ipv6) \
+		--with-group=scanner \
 		${myconf} || die "econf failed"
 
 	emake || die
@@ -105,7 +107,7 @@ src_compile() {
 
 src_install () {
 	einstall docdir=${D}/usr/share/doc/${PF}
-
+	touch ${D}/var/lib/lock/sane/.keep # don't use keepdir, it changes the permissions
 	if use usb; then
 		cd tools/hotplug
 		insinto /etc/hotplug/usb
