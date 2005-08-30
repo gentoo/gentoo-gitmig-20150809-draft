@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.11.2.ebuild,v 1.1 2005/08/19 22:44:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.11.3.ebuild,v 1.1 2005/08/30 03:40:00 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -17,8 +17,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 RDEPEND="virtual/x11
 	>=x11-libs/pango-1.2
-	>=x11-libs/gtk+-2.2
+	>=x11-libs/gtk+-2.6
 	>=gnome-base/gconf-2
+	>=dev-libs/glib-2.6
 	>=x11-libs/startup-notification-0.7
 	!x11-misc/expocity"
 
@@ -37,8 +38,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	# Fix the logout shortcut problems, by moving the keybindings
 	# into here, from control-center, fixes bug #52034
