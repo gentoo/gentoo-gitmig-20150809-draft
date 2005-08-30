@@ -1,4 +1,6 @@
-MD5 ffae320272558a4e976ecdede57448c7 ChangeLog 444
+MD5 4e06f1b68952cc1fc9e0289b00328697 desklet-ftb-0.3.1.ebuild 716
 MD5 b4786ab8d495aaf452715c85b80458d4 desklet-ftb-0.3.ebuild 647
+MD5 b139c44d1b9e08d17a8f8fac711b25cb ChangeLog 663
 MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
 MD5 7ed9f5fd620ca68d346945cb7dc73a43 files/digest-desklet-ftb-0.3 58
+MD5 0d77fafa69e204722d6a0003f6de6a2e files/digest-desklet-ftb-0.3.1 60
