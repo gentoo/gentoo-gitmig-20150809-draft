@@ -1,14 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.4 2004/07/03 02:22:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-de/ut2003-bonuspack-de-1.ebuild,v 1.5 2005/08/30 19:23:12 wolf31o2 Exp $
 
 inherit games
 
 MY_P="debonus.ut2mod.zip"
 DESCRIPTION="Digital Extremes Bonus Pack for UT2003"
 HOMEPAGE="http://www.unrealtournament2003.com/"
-SRC_URI="mirror://3dgamers/pub/3dgamers5/games/unrealtourn2/Missions/${MY_P}
-	mirror://3dgamers/pub/3dgamers/games/unrealtourn2/Missions/${MY_P}
+SRC_URI="mirror://3dgamers/unrealtourn2/Missions/${MY_P}
 	http://www.unixforces.net/downloads/${MY_P}"
 
 LICENSE="ut2003"

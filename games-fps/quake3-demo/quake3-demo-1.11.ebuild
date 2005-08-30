@@ -1,14 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.9 2004/11/17 18:58:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.10 2005/08/30 19:24:05 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Quake III Arena - Demo version"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake3-arena/"
 SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3ademo-${PV}-6.x86.gz.sh
-	mirror://3dgamers/pub/3dgamers3/games/quake3arena/linuxq3ademo-${PV}-6.x86.gz.sh
-	mirror://3dgamers/pub/3dgamers/games/quake3arena/linuxq3ademo-${PV}-6.x86.gz.sh
+	mirror://3dgamers/quake3arena/linuxq3ademo-${PV}-6.x86.gz.sh
 	ftp://ftp.bluesnews.com/idstuff/quake3/linux/linuxq3ademo-${PV}-6.x86.gz.sh"
 
 LICENSE="Q3AEULA"

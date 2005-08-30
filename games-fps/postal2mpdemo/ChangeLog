@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/postal2mpdemo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/ChangeLog,v 1.7 2005/01/27 04:31:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/ChangeLog,v 1.8 2005/08/30 19:15:34 wolf31o2 Exp $
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  postal2mpdemo-1407.ebuild:
+  Changed to match new 3dgamers mirrors structure in thirdpartymirrors.
 
   26 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   postal2mpdemo-1407.ebuild:

@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.5 2005/06/09 17:26:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.6 2005/08/30 19:26:39 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_P="armyops${PV}-linux.run"
 DESCRIPTION="America's Army: Special Forces - military simulations by the U.S. Army to provide civilians with insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
-SRC_URI="mirror://3dgamers/pub/3dgamers/games/${PN/-/}/${MY_P}
+SRC_URI="mirror://3dgamers/${PN/-/}/${MY_P}
 	dedicated? (
 		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
 		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"

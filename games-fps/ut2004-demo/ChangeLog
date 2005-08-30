@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.30 2004/11/17 19:01:37 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.31 2005/08/30 19:14:45 wolf31o2 Exp $
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3334.ebuild:
+  Changed to match new 3dgamers mirrors structure in thirdpartymirrors.
 
   17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3334.ebuild:

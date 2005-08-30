@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.7 2004/09/29 03:10:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.8 2005/08/30 19:19:08 wolf31o2 Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ IUSE=""
 DESCRIPTION="Tribes 2 - Team Combat on an Epic Scale"
 HOMEPAGE="http://www.lokigames.com/products/tribes2/"
 SRC_URI="http://www.libsdl.org/projects/${PN}/release/${P}-cdrom-x86.run
-	mirror://3dgamers/pub/3dgamers/games/${PN}/${P}-cdrom-x86.run"
+	mirror://3dgamers/${PN}/${P}-cdrom-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
