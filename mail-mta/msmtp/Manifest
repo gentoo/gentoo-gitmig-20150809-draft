@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 b2e1abde2600ce461cf3a7b7e46b0a1b msmtp-1.4.4.ebuild 1642
-MD5 0e4a627de402411bafa65b43400bb573 ChangeLog 7383
-MD5 d3d8db2bc3cbc59500fb927d49a220e9 msmtp-1.4.2.ebuild 1642
+MD5 7764f3ea086fe86c8bbf0bca317babd4 ChangeLog 7479
+MD5 ffd21255f9a43e7046556a8abb964f59 msmtp-1.4.2.ebuild 1640
 MD5 404078b247e91c7fc1a8b31e27d2499f msmtp-1.4.1.ebuild 1588
 MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
 MD5 5c397704ff67b621ff79fc18fd846e0b msmtp-1.4.0.ebuild 1577
@@ -17,7 +17,7 @@ MD5 25a1f06b39d5ecd451afeccad46678c6 files/mailer.conf 279
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCOOQCHk4+ZoBpvsRAnLrAJ9Pr4VK1VSfkTCVGH/UboICYoX0NQCfdeQr
-k8AsIhz1l2cGiAI2ensw+RQ=
-=dgA6
+iD8DBQFDFG5uCHk4+ZoBpvsRAofsAKC0G8hxaJ4EbDcvBCwkSmy/+Dan3wCfQzjR
+9M3eUSXpPkdOBLqxYqArhMI=
+=ax8k
 -----END PGP SIGNATURE-----
