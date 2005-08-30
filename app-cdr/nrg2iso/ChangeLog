@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/nrg2iso
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.13 2005/08/28 22:52:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nrg2iso/ChangeLog,v 1.14 2005/08/30 15:23:31 gustavoz Exp $
+
+  30 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> nrg2iso-0.4-r1.ebuild:
+  Stable on sparc
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> nrg2iso-0.4-r1.ebuild:
   Marked Stable on AMD64 and x86. Closes bug #98666.
