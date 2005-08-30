@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e0120097d42b6c4ba2cc6657f5b955bc docbook-sgml-dtd-4.4.ebuild 1044
 MD5 df10d774d11dd2ee3b4e9513394c9b43 docbook-sgml-dtd-3.1-r3.ebuild 1035
 MD5 fbac69716792fe6b4f005417fadef698 docbook-sgml-dtd-4.3-r2.ebuild 1040
@@ -21,3 +24,10 @@ MD5 83e29168ed88c8e03ba803fe3614b8d0 files/docbook-sgml-dtd-4.4-catalog.diff 247
 MD5 a8f3419d176358d518b9d9dc859a3fcc files/docbook-sgml-dtd-3.1-catalog.diff 2125
 MD5 f0e1ab2a23242f2e31d14386fb7c5dd8 files/docbook-sgml-dtd-4.0-catalog.diff 2096
 MD5 1544092e22e27efd4d049827dbc8f446 files/digest-docbook-sgml-dtd-4.4 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFGMnKRy60XGEcJIRAsDgAJ9EQummVHaizWwBXjKEN6uBAw0wwQCbBYwS
+X7Xnb+nypxCkP2iRvH4MWc4=
+=Sjwt
+-----END PGP SIGNATURE-----
