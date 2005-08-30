@@ -8,6 +8,7 @@ app-editors/vim-core
 >=app-portage/esearch-0.7.1
 app-shells/bash
 app-shells/zsh
+dev-db/sqlite
 dev-lang/perl
 dev-lang/python
 dev-libs/libxml2
