@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.208.ebuild,v 1.3 2005/08/30 06:05:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.208-r2.ebuild,v 1.1 2005/08/30 06:05:36 hollow Exp $
 
 inherit eutils
 
 DESCRIPTION="Linux-VServer admin utilities"
-SRC_URI="http://www.13thfloor.at/~ensc/util-vserver/files/alpha/${P}.tar.bz2"
 HOMEPAGE="http://www.nongnu.org/util-vserver/"
+SRC_URI="http://www.13thfloor.at/~ensc/util-vserver/files/alpha/${P}.tar.bz2 \
+	http://dev.gentoo.org/~hollow/vserver/${PN}/${P}-gentoo.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="glibc crypt"
 DEPEND="!glibc? ( >=dev-libs/dietlibc-0.27 )
@@ -19,6 +20,13 @@ DEPEND="!glibc? ( >=dev-libs/dietlibc-0.27 )
 		net-misc/vconfig
 		crypt? ( dev-libs/beecrypt )
 		net-firewall/iptables"
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S} || die
+
+	epatch ${WORKDIR}/patches/*.patch
+}
 
 src_compile() {
 	local myconf="--localstatedir=/var --with-initrddir=/etc/init.d"
@@ -43,13 +51,11 @@ src_install() {
 	rm -f ${D}/etc/init.d/*
 
 	# and install gentoo'ized ones:
-	exeinto /etc/init.d/
-	newexe ${FILESDIR}/vservers.initd vservers
-	newexe ${FILESDIR}/vprocunhide vprocunhide
+	doinitd ${WORKDIR}/init.d/{vservers,vprocunhide}
+	doconfd ${WORKDIR}/conf.d/vservers
 
-	# install conf.d files
-	insinto /etc/conf.d
-	newins ${FILESDIR}/vservers.confd vservers
+	# install vserver build script for gentoo guests
+	dosbin ${WORKDIR}/tools/vserver-new
 
 	dodoc README ChangeLog NEWS AUTHORS INSTALL THANKS util-vserver.spec
 }

@@ -1,33 +1,35 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.205-r1.ebuild,v 1.5 2005/08/28 06:14:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.205-r1.ebuild,v 1.6 2005/08/30 06:05:36 hollow Exp $
 
 inherit eutils
 
 DESCRIPTION="Linux-VServer admin utilities"
-HOMEPAGE="http://www.nongnu.org/util-vserver/"
 SRC_URI="http://www.13thfloor.at/~ensc/util-vserver/files/alpha/${P}.tar.bz2"
+HOMEPAGE="http://www.nongnu.org/util-vserver/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
 
-DEPEND="sys-apps/iproute2
+IUSE="glibc"
+DEPEND="!glibc? ( >=dev-libs/dietlibc-0.26-r1 )
+	glibc? ( sys-libs/glibc )
+	sys-apps/iproute2
 	net-misc/vconfig
 	net-firewall/iptables"
 
 src_compile() {
-	econf \
-		--localstatedir=/var \
-		--with-initrddir=/etc/init.d \
-		--disable-dietlibc \
-		|| die "econf failed"
+	local myconf="--localstatedir=/var --with-initrddir=/etc/init.d"
+
+	use glibc && myconf="${myconf} --disable-dietlibc"
+
+	econf ${myconf} || die "econf failed"
 	emake || die "compile failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	emake DESTDIR=${D} install || die "install failed"
 
 	# keep dirs
 	keepdir /var/run/vservers
