@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.1.ebuild,v 1.1 2005/08/30 03:42:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.1.ebuild,v 1.2 2005/08/30 16:22:08 dang Exp $
 
 inherit eutils
 
@@ -33,8 +33,6 @@ src_unpack(){
 }
 
 src_compile() {
-	use qt || myconf="--disable-poppler-qt"
-
 	econf $(use_enable qt poppler-qt) || die
 	emake || die
 }
