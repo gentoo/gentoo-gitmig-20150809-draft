@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16cd71a883f169312e4c2823ec8b86c5 ChangeLog 3042
+MD5 e9ec901be880124d07f77a73707b0c1c tree-1.5.0.ebuild 785
+MD5 fd733e18bf9312abdb65a24512c144d3 ChangeLog 3160
 MD5 27c80a8d690d932f131215d791821fcd metadata.xml 253
-MD5 8300eb5ae0f977a7162977218443635e tree-1.5.0.ebuild 724
 MD5 a28602d0f51c1e2a383cc6ff64fdbcbf files/digest-tree-1.5.0 58
+MD5 3cbb0e1e6d1d87c0151a750998e1adb3 files/tree.bashcomp 1023
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+PftEZCkKN40op4RAr/eAJ0SCJfSOWr7CzxeyJa2zkQc7KK3gACfYxz3
-EGC50plRmevx63x5MLGtGe0=
-=/6hr
+iD8DBQFDFGpREZCkKN40op4RAm2EAJ9r0r4vC1+OewqLqmPrzE9YtUYzWACfUvLx
+/Tio//NXKsAVLxNRTx6ZAlY=
+=KOWf
 -----END PGP SIGNATURE-----
