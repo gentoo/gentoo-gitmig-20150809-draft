@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.16.ebuild,v 1.1 2005/01/08 21:40:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpctl/tpctl-4.16.ebuild,v 1.2 2005/08/30 01:18:17 robbat2 Exp $
 
 MY_P=${PN}_${PV}
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="tpctlir"
 
