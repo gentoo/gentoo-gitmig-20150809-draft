@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.11.1.ebuild,v 1.1 2005/08/20 00:09:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.11.92.ebuild,v 1.1 2005/08/30 05:07:59 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -32,8 +32,8 @@ RDEPEND=">=gnome-base/orbit-2
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/intltool
-	dev-util/pkgconfig"
+	>=dev-util/intltool-0.28
+	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
@@ -49,7 +49,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
+
 	epatch ${FILESDIR}/${PN}-2.6.4-makedepfix.patch
 }
