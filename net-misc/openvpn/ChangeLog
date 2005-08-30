@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.39 2005/08/24 22:59:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.40 2005/08/30 12:57:51 gustavoz Exp $
+
+  30 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> openvpn-2.0.1.ebuild:
+  Stable on sparc wrt #102871
 
   24 Aug 2005; Olivier Crête <tester@gentoo.org> openvpn-2.0.1.ebuild:
   Stable on x86 per security bug #102871
