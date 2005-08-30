@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.57 2005/08/08 07:23:22 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.58 2005/08/30 10:51:24 slarti Exp $
+
+  29 Aug 2005; Tom Martin <slarti@gentoo.org> dspam-3.4.9.ebuild:
+  Added in a conditional dependency with (another) local logrotate USE flag.
+  Resolves bug #97447.
 
 *dspam-3.4.9 (08 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.9.ebuild,v 1.1 2005/08/08 07:23:22 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.9.ebuild,v 1.2 2005/08/30 10:51:25 slarti Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite sqlite3 large-domain virtual-users"
+IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite sqlite3 large-domain logrotate virtual-users"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 		maildrop? ( >=mail-filter/maildrop-1.5.3 )
@@ -22,7 +22,7 @@ DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		>=sys-libs/db-4.0
 		"
 RDEPEND="sys-process/cronbase
-		app-admin/logrotate"
+		logrotate? ( app-admin/logrotate )"
 KEYWORDS="~x86 ~ppc ~alpha"
 SLOT="0"
 
