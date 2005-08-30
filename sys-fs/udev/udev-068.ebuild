@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-068.ebuild,v 1.1 2005/08/18 17:44:09 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-068.ebuild,v 1.2 2005/08/30 19:11:56 gregkh Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="static selinux"
 
 DEPEND="sys-apps/hotplug-base"
@@ -192,6 +192,15 @@ pkg_postinst() {
 	ewarn "      want to write some very cool and power udev rules, please "
 	ewarn "      read the RELEASE-NOTES file for details on what has changed"
 	ewarn "      with this feature, and how to change your rules to work properly."
+	ewarn
+	ewarn "Note: If you are upgrading from a version of udev prior to 063"
+	ewarn "      and you use the devfs-style names for your block devices"
+	ewarn "      or use devfs-style names in /etc/inittab or /etc/securetty or"
+	ewarn "      your GRUB or LILO kernel boot command line, you need to"
+	ewarn "      change them back to LSB compliant names, as the devfs names are"
+	ewarn "      now gone.  If you wish to use some persistent names for your"
+	ewarn "      block devices, look at the symlinks in /dev/disk/ for the names"
+	ewarn "      you can use."
 
 	einfo
 	einfo "For more information on udev on Gentoo, writing udev rules, and"
