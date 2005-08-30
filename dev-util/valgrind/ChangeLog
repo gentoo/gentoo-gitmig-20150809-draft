@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.52 2005/08/04 22:31:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.53 2005/08/30 20:01:54 griffon26 Exp $
+
+*valgrind-3.0.1 (30 Aug 2005)
+
+  30 Aug 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +valgrind-3.0.1.ebuild:
+  Added version 3.0.1 of valgrind. This one is built without PIE as it seems to
+  cause trouble from time to time. This should fix bug #102157 reported by Dizzy
+  <dizzy@roedu.net>.
 
   04 Aug 2005; Herbie Hopkins <herbs@gentoo.org> valgrind-3.0.0.ebuild:
   Marked ~amd64 wrt bug #101386.
