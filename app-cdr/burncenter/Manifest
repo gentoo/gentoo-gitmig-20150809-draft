@@ -1,5 +1,18 @@
-MD5 9736923d8e03d5d106e0703ee2971e6a ChangeLog 1005
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d255502e0a8236d7bd0aa2244d37aa91 ChangeLog 1200
 MD5 95afb2bfa67ee1bd431b1e190f303673 burncenter-3.0.ebuild 931
 MD5 3b16f547c575617ae7147da92e24701b burncenter-3.1.ebuild 965
+MD5 20d46f3ccbc5ef0871f81e32a8d30e18 burncenter-3.2.1.ebuild 938
+MD5 d176a98f70ef5b6e1191720a56cc4a42 metadata.xml 663
 MD5 58bd86450180b4425104bb6d655aeab6 files/digest-burncenter-3.0 65
 MD5 c8ff06ba67123e3a7e5ae226441b0917 files/digest-burncenter-3.1 65
+MD5 7b8bd83d9dbb0aea4138631201841d1b files/digest-burncenter-3.2.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFOGowUpWvClEHQoRAq1lAJ4kOnWLn3cDS7AB+J8k8Y3iuTV0MACaAsOA
+Il5bKUh7ofpEO6CmhNmzJlg=
+=v9fA
+-----END PGP SIGNATURE-----
