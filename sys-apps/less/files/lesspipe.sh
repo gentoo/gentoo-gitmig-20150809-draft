@@ -55,8 +55,8 @@ lesspipe() {
 		fi
 		;;
 	*.dvi)      dvi2tty "$1" ;;
-	*.ps|*.pdf) ps2ascii "$1" || pstotext "$1" ;;
-	*.doc)      antiword "$1" ;;
+	*.ps|*.pdf) ps2ascii "$1" || pstotext "$1" || pdftotext "$1" ;;
+	*.doc)      antiword "$1" || catdoc "$1" ;;
 	*.rtf)      unrtf --nopict --text "$1" ;;
 
 	### URLs ###
@@ -78,19 +78,21 @@ lesspipe() {
 	*.zip)        unzip -l "$1" ;;
 	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
 	*.cpi|*.cpio) cpio -itv < "$1" ;;
-	*.rar)        unrar l -- "$1" ;;
 	*.ace)        unace l -- "$1" ;;
 	*.arj)        unarj l -- "$1" ;;
 	*.cab)        cabextract -l -- "$1" ;;
-	*.lzh)        lha v "$1" ;;
+	*.lha|*.lzh)  lha v "$1" ;;
 	*.zoo)        zoo -list "$1" ;;
 	*.7z)         7z l -- "$1" ;;
 	*.a)          ar tv "$1" ;;
 	*.so)         readelf -h -d -s -- "$1" ;;
-	*.deb)
+
+	*.rar|.r[0-9][0-9])  unrar l -- "$1" ;;
+
+	*.deb|*.udeb)
 		if type -p dpkg > /dev/null ; then
-			dpkg -I "$1"
-			dpkg -c "$1"
+			dpkg --info "$1"
+			dpkg --contents "$1"
 		else
 			ar tv "$1"
 			ar p "$1" data.tar.gz | tar tzvvf -
@@ -151,7 +153,9 @@ lesspipe() {
 	esac
 }
 
-if [[ -d $1 ]] ; then
+if [[ -z $1 ]] ; then
+	echo "Usage: lesspipe.sh <file>"
+elif [[ -d $1 ]] ; then
 	ls -alF -- "$1"
 else
 	recur=0
