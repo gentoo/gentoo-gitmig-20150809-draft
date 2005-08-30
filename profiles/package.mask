@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4354 2005/08/30 01:01:31 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4355 2005/08/30 01:46:46 ciaranm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ciaran McCreesh <ciaranm@gentoo.org> (30 Aug 2005)
+# Needs afs and selinux testing before unmasking.
+=sys-apps/findutils-4.2.23
 
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
