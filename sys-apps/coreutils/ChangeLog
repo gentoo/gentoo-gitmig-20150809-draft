@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.139 2005/08/30 04:32:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.140 2005/08/30 10:48:50 flameeyes Exp $
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> coreutils-5.3.0.ebuild:
+  Remove charset.alias if it's present, only libiconv should install it.
 
 *coreutils-5.3.0 (30 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.3.0.ebuild,v 1.1 2005/08/30 04:32:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.3.0.ebuild,v 1.2 2005/08/30 10:48:50 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -106,6 +106,7 @@ src_test() {
 
 src_install() {
 	make install DESTDIR="${D}" || die
+	rm -f "${D}"/usr/lib/charset.alias
 
 	# remove files provided by other packages
 	rm "${D}"/bin/{kill,uptime} # procps
