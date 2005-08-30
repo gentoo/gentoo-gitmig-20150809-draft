@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.7.ebuild,v 1.5 2005/08/30 01:07:17 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.9.6.ebuild,v 1.1 2005/08/30 01:07:17 vanquirius Exp $
 
 inherit gnome2
 
@@ -23,7 +23,8 @@ DEPEND=">=gnome-base/libgnomeui-2.0
 	>=media-libs/rte-0.5.2
 	>=media-sound/esound-0.2.34
 	app-text/scrollkeeper
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	>=media-libs/zvbi-0.2.9"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
@@ -36,21 +37,14 @@ src_compile() {
 		`use_enable pam` \
 		`use_with X x` || die "econf failed"
 
-	sed -i -e "s:\(INCLUDES = \$(COMMON_INCLUDES)\):\1 -I/usr/include/libglade-1.0 -I/usr/include/gdk-pixbuf-1.0:" \
-		src/Makefile || die
 	emake || die "emake failed"
 }
 
-src_install() {
-	einstall \
-		PACKAGE_LIB_DIR=${D}/usr/lib/zapping \
-		PACKAGE_PIXMAPS_DIR=${D}/usr/share/pixmaps/zapping \
-		PLUGIN_DEFAULT_DIR=${D}/usr/lib/zapping/plugins
-
+pkg_preinst() {
 	rm ${D}/usr/bin/zapzilla
 	dosym /usr/bin/zapping /usr/bin/zapzilla
 	# thx to Andreas Kotowicz <koto@mynetix.de> for mailing me this fix:
 	rm ${D}/usr/bin/zapping_setup_fb
 	dobin zapping_setup_fb/zapping_setup_fb
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README README.plugins THANKS TODO
 }
