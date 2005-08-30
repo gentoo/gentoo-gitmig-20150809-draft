@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.13 2005/08/29 10:09:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.14 2005/08/30 09:31:16 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -112,7 +112,8 @@ eautoconf() {
 
 eautomake() {
 	[[ -f Makefile.am ]] || return 0
-	autotools_run_tool automake --add-missing --force-missing --copy "$@"
+	# --force-missing seems not to be recognized by some flavours of automake
+	autotools_run_tool automake --add-missing --copy "$@"
 }
 
 # This function mimes the behavior of autoreconf, but uses the different
