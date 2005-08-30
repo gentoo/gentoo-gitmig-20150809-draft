@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.23.ebuild,v 1.1 2005/08/30 01:48:51 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.23.ebuild,v 1.2 2005/08/30 18:59:56 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,10 +14,9 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls build afs selinux static"
+IUSE="nls build selinux static"
 
-RDEPEND="afs? ( >=net-fs/openafs-1.3.85 )
-	selinux? ( sys-libs/libselinux )"
+RDEPEND="selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -34,10 +33,6 @@ src_unpack() {
 }
 
 src_compile() {
-	if use afs ; then
-		append-flags -DAFS
-		append-ldflags -lpam
-	fi
 	export CPPFLAGS="${CXXFLAGS}"
 	use static && append-ldflags -static
 
