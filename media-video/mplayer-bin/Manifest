@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aae2c8a4d77b543d70d5a9f00f4ca4e6 mplayer-bin-1.0_pre7.ebuild 701
-MD5 b9d0dcd36994bedff69123a266ffca13 ChangeLog 530
+MD5 95ce0ef6b4a0923780fbfcc499439cb4 mplayer-bin-1.0_pre7.ebuild 745
+MD5 3b148e7d4c57d873eb292336df02950a ChangeLog 631
 MD5 d138fbd38b04f78fe9b3766051723a5b metadata.xml 218
 MD5 6016bcda0338c21a0c9b9aa7910dcffc files/digest-mplayer-bin-1.0_pre7 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDFMeAomPajV0RnrERAm5ZAJ0UxoXaBQklEJna0txOUtnV9PXNCQCePqyt
-WWOumnNRtx21JAkZPo+M/rQ=
-=GECY
+iD8DBQFDFNazomPajV0RnrERAjKJAJ9zbbUhXVeNHRQ+S7BxfNkWw6x6wACcDtpE
+z/JW3aWGU5Nny+oP9q+es1U=
+=0Yfm
 -----END PGP SIGNATURE-----
