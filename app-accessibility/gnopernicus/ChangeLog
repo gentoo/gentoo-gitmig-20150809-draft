@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.64 2005/08/23 02:19:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.65 2005/08/30 11:42:27 leonardop Exp $
+
+*gnopernicus-0.11.5 (30 Aug 2005)
+
+  30 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/gnopernicus-0.11.5-i18n_macros.patch, -gnopernicus-0.11.4.ebuild,
+  +gnopernicus-0.11.5.ebuild:
+  New version. Added patch to fix some broken gettext macro calls.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> gnopernicus-0.10.9.ebuild:
   stable on ia64

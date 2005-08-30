@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.11.4.ebuild,v 1.1 2005/08/17 14:46:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.11.5.ebuild,v 1.1 2005/08/30 11:42:27 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
-DESCRIPTION="Software tools for blind and visually impaired in Gnome 2"
+DESCRIPTION="Software tools for blind and visually impaired"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
 
 LICENSE="LGPL-2"
@@ -37,6 +37,14 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable ipv6) $(use_enable brltty) $(use_enable static) \
-		--with-default-fonts-path=${D}/usr/share/fonts/Type1"
+	G2CONF="$(use_enable ipv6) $(use_enable brltty) $(use_enable static)"
+#		--with-default-fonts-path=${D}/usr/share/fonts/Type1"
+}
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
+	# Fix some gettext macros that break compilation
+	epatch ${FILESDIR}/${P}-i18n_macros.patch
 }
