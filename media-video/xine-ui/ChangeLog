@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.90 2005/08/24 19:42:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.91 2005/08/30 14:50:18 flameeyes Exp $
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> -xine-ui-0.99.2.ebuild:
+  Remove 0.99.2 as sparc marked a newer version stable.
 
   24 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   xine-ui-0.99.3-r1.ebuild:
