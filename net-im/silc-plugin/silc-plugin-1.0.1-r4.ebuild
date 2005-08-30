@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.1 2005/08/29 15:02:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.2 2005/08/30 13:24:31 ticho Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 	echo
 	einfo "Preparing silc-client\n"
 	cd ${S_SILC}
-	if has_version ">=net-irc/irssi-0.8.10" ; then
+	if has_version ">=net-irc/irssi-0.8.10_rc1" ; then
 		sed -i -e "s:\"term_type\":\"term_charset\":" \
 			irssi/src/silc/core/silc-servers.c
 		sed -i -e "s:\"term_type\":\"term_charset\":" \
