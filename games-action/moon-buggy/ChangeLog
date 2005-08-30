@@ -1,6 +1,9 @@
 # ChangeLog for games-action/moon-buggy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.14 2005/08/29 07:10:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.15 2005/08/30 14:36:57 metalgod Exp $
+
+  30 Aug 2005; Luis Medinas <metalgod@gentoo.org> moon-buggy-1.0.ebuild:
+  Marked Stable on AMD64.
 
   29 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
   moon-buggy-1.0.ebuild:
