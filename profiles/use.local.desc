@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1417 2005/08/30 02:29:15 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1418 2005/08/30 06:02:18 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -953,6 +953,7 @@ sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/torque:scp - Use SCP instead of RCP for copying files between machines.
+sys-cluster/util-vserver:diet - Use dietlibc
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/distcc:crosscompile - Change distcc-config to create shell script not links for proper invokation on cross compile setups
