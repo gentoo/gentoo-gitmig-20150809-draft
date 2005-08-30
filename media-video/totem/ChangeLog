@@ -1,6 +1,14 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.70 2005/08/29 20:57:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.71 2005/08/30 02:31:45 allanonjl Exp $
+
+*totem-1.1.5 (30 Aug 2005)
+
+  30 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/totem-1.1.5-idl.patch, +files/totem-1.1.5-nsi.patch,
+  +totem-1.1.5.ebuild:
+  new version, apply patch to fix paths for idl directories, and another patch
+  to fix includes in the mozilla plugin cpp file for finding the headers.
 
   29 Aug 2005; Guy Martin <gmsoft@gentoo.org> totem-1.0.4.ebuild:
   Stable on hppa.
