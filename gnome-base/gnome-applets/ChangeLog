@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.126 2005/08/29 22:21:29 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.127 2005/08/30 15:45:21 leonardop Exp $
+
+*gnome-applets-2.11.93 (30 Aug 2005)
+
+  30 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -gnome-applets-2.11.92.1.ebuild, +gnome-applets-2.11.93.ebuild:
+  New version. Dropped 'doc' and 'gstreamer' flags as they serve no purpose.
+  Disable battstat applet if the USE flags 'apm' and 'acpi' are disabled.
 
   29 Aug 2005; John N. Laliberte <allanonjl@gentoo.org>
   gnome-applets-2.11.92.1.ebuild:
