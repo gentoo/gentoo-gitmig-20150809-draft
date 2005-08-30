@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21.ebuild,v 1.1 2005/08/13 10:27:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21.ebuild,v 1.2 2005/08/30 03:45:51 leonardop Exp $
 
 inherit sgml-catalog
 
 DESCRIPTION="A toolset for processing LinuxDoc DTD SGML files"
 HOMEPAGE="http://packages.qa.debian.org/l/linuxdoc-tools.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/l/${PN}/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="KenMacLeod SGMLUG"
 SLOT="0"
