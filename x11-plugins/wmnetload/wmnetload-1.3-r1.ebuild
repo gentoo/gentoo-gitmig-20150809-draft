@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.3-r1.ebuild,v 1.6 2004/11/24 23:36:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.3-r1.ebuild,v 1.7 2005/08/30 18:39:39 gustavoz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://truffula.com/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ppc64 ~sparc"
+KEYWORDS="x86 amd64 ppc ppc64 sparc"
 
 DEPEND="virtual/x11
 	>=x11-libs/libdockapp-0.5.0"
