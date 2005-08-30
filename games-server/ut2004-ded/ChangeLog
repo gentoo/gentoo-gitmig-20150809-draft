@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.4 2005/05/16 18:10:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.5 2005/08/30 19:29:06 wolf31o2 Exp $
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-ded-3355.ebuild:
+  Changed to match new 3dgamers mirrors structure in thirdpartymirrors.
 
 *ut2004-ded-3355 (16 May 2005)
 

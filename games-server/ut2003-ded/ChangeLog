@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2003-ded
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.6 2004/11/17 19:03:27 wolf31o2 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.7 2005/08/30 19:28:14 wolf31o2 Exp $
+
+  30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-ded-2225-r2.ebuild:
+  Changed to match new 3dgamers mirrors structure in thirdpartymirrors.
 
   17 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-ded-2225-r2.ebuild:
