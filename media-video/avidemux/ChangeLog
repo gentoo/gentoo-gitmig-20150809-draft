@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.89 2005/08/22 12:04:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.90 2005/08/30 14:30:56 flameeyes Exp $
+
+  30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/2.0.38_rc2-fix-faad.patch, -avidemux-2.0.38.ebuild,
+  -avidemux-2.0.38-r1.ebuild, -avidemux-2.0.40.ebuild,
+  -avidemux-2.0.40-r1.ebuild:
+  Removed extra versions, leaving 2.1 pre, 2.0.24 (stable) and 2.0.42 (target
+  stable?).
 
 *avidemux-2.1_pre1 (22 Aug 2005)
 
