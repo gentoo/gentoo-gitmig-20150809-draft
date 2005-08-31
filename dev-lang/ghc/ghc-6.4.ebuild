@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.8 2005/08/17 14:41:32 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.9 2005/08/31 17:41:05 gustavoz Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -95,9 +95,8 @@ pkg_setup() {
 src_unpack() {
 	base_src_unpack
 
-	if use ppc64; then
-		epatch ${FILESDIR}/ghc-6.4-powerpc.patch
-	fi
+	# This patch is needed for both ppc & ppc64
+	epatch ${FILESDIR}/ghc-6.4-powerpc.patch
 
 	# hardened-gcc needs to be disabled, because the
 	# mangler doesn't accept its output; yes, the 6.2 version
