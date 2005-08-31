@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.15 2005/08/30 11:29:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.16 2005/08/31 01:44:02 azarah Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -17,6 +17,16 @@ inherit eutils gnuconfig
 #	sys-devel/libtool"
 #
 # Ebuilds should rather depend on the proper version of the tool.
+
+# Variables:
+#
+#   AT_M4DIR - Additional director(y|ies) aclocal should include
+#   AT_GNUCONF_UPDATE - Should gnuconfig_update() be run (normally handled by
+#                  econf()) [yes|no]
+
+# XXX: M4DIR should be depreciated
+AT_M4DIR=${AT_M4DIR:-${M4DIR}}
+AT_GNUCONF_UPDATE="no"
 
 # Internal function to run an autotools' tool
 autotools_run_tool() {
@@ -78,7 +88,27 @@ autotools_get_subdirs() {
 eaclocal() {
 	local aclocal_opts
 
-	[[ -n ${M4DIR} ]] && aclocal_opts="-I ${M4DIR}"
+	# XXX: M4DIR should be depreciated
+	AT_M4DIR=${AT_M4DIR:-${M4DIR}}
+
+	if [[ -n ${AT_M4DIR} ]] ; then
+		for x in ${AT_M4DIR} ; do
+			case "${x}" in
+			"-I")
+				# We handle it below
+				;;
+			"-I"*)
+				# Invalid syntax, but maybe we should help out ...
+				ewarn "eaclocal: Proper syntax is (note the space after '-I'): aclocal -I <dir>"
+				aclocal_opts="${aclocal_opts} -I ${x}"
+				;;
+			*)
+				[[ ! -d ${x} ]] && ewarn "eaclocal: '${x}' does not exist"
+				aclocal_opts="${aclocal_opts} -I ${x}"
+				;;
+			esac
+		done
+	fi
 
 	[[ -f aclocal.m4 && -n $(grep -e 'generated.*by aclocal' aclocal.m4) ]] && \
 		autotools_run_tool aclocal "$@" ${aclocal_opts}
@@ -119,7 +149,7 @@ eautomake() {
 
 # This function mimes the behavior of autoreconf, but uses the different
 # eauto* functions to run the tools. It doesn't accept parameters, but
-# the directory with include files can be specified with M4DIR variable.
+# the directory with include files can be specified with AT_M4DIR variable.
 #
 # Note: doesn't run autopoint right now, but runs gnuconfig_update.
 eautoreconf() {
@@ -139,5 +169,7 @@ eautoreconf() {
 	eautoconf
 	eautoheader
 	eautomake
-	gnuconfig_update
+
+	# Normally run by econf()
+	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
 }
