@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3info
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.13 2005/08/13 13:06:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.14 2005/08/31 12:11:06 grobian Exp $
+
+  31 Aug 2005; Fabian Groffen <grobian@gentoo.org> mp3info-0.8.4-r2.ebuild:
+  Marking ~ppc-macos (bug #104325)
 
 *mp3info-0.8.4-r2 (13 Aug 2005)
 
