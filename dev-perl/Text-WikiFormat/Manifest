@@ -1,4 +1,14 @@
-MD5 690d03420dfae28c3f4a3a8843c41cc0 ChangeLog 484
-MD5 023e0b06b7ca2770013104a1a9c68385 Text-WikiFormat-0.76.ebuild 528
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a5c2e2ae20a3ba71180c2942c3483085 Text-WikiFormat-0.76.ebuild 592
+MD5 d01c82fda3b5f3f327f62f3caceff924 ChangeLog 605
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b90175fbfd65d50e8cbb1b71bc2488d7 files/digest-Text-WikiFormat-0.76 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFdyaEzitwsaoONoRAr2/AJ9a8k58ZCn4xHhKQCwjwLMLmxJTPwCgqZiI
++4InLcmSq+PZdVWbQA32ryo=
+=2Joc
+-----END PGP SIGNATURE-----
