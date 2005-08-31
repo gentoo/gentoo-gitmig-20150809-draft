@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/gst-plugins-raw1394-0.8.10.ebuild,v 1.4 2005/08/30 19:50:46 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/gst-plugins-raw1394-0.8.10.ebuild,v 1.5 2005/08/31 22:21:48 herbs Exp $
 
 inherit gst-plugins
 
-KEYWORDS="x86 ~ppc ~amd64 sparc"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 DESCRIPTION="GStreamer plugin to capture firewire video"
 

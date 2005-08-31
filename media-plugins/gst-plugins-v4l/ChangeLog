@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.8 2005/08/30 20:02:17 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.9 2005/08/31 22:24:06 herbs Exp $
+
+  31 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
+  gst-plugins-v4l-0.8.10.ebuild:
+  Stable on amd64.
 
   30 Aug 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   gst-plugins-v4l-0.8.10.ebuild:
