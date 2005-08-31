@@ -1,11 +1,11 @@
 # ChangeLog for app-text/html2text
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.21 2005/08/31 11:37:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/ChangeLog,v 1.22 2005/08/31 11:38:39 grobian Exp $
 
   31 Aug 2005; Fabian Groffen <grobian@gentoo.org>
   +files/html2text-1.3.2-darwin.patch, html2text-1.3.2.ebuild:
   Made patch "1.3.2_to_1.3.2a.diff" be applied on gcc 3.3 and up (especially
-  4.0.0 on ppc-macos)
+  4.0.0 on ppc-macos) (bug #104324)
   Added a patch that allows compilation on ppc-macos, thanks to Thomas Kjosmoen
   <gentoo at kjosmoen (dot) com>
   Marking ~ppc-macos
