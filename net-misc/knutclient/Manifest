@@ -1,4 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dcd346b3b0b07de7ede806cb3c418d94 knutclient-0.8.5.ebuild 620
+MD5 963eb3632e2db810486c32a850a5ad32 knutclient-0.8.6.ebuild 635
+MD5 561ec8edfcd0855eb2e0b81914fd5501 ChangeLog 1602
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 eee721c882a7d44a5e43d24ce2149265 ChangeLog 1311
-MD5 f2a52fbb4c52486afed46e8647c2e1b6 knutclient-0.8.5.ebuild 528
 MD5 aecc8da463fd7a070c24c5441ebb5e5c files/digest-knutclient-0.8.5 69
+MD5 e4d5c361a955a869636e3e5e42a72a3a files/digest-knutclient-0.8.6 69
+MD5 8e2ff7d646fbe3bf5bd42a98079b5a6e files/knutclient-0.8.5-arts-configure.patch 3569
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFfZLntT9W3vfTuoRAsBeAKC1pDchbGWwGFe7TXuE8GPaDfZh3ACgsp6V
+Ye0leU1udGIAXJONh7o5FSM=
+=wqli
+-----END PGP SIGNATURE-----

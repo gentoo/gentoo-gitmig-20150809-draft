@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/knutclient
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.11 2004/12/30 17:28:02 carlo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.12 2005/08/31 18:25:48 cryos Exp $
+
+*knutclient-0.8.6 (31 Aug 2005)
+
+  31 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/knutclient-0.8.5-arts-configure.patch, knutclient-0.8.5.ebuild,
+  +knutclient-0.8.6.ebuild:
+  Marked ~amd64 and patched configure so that is does not need arts, closes
+  bug 104084. Version bump.
 
   30 Dec 2004; Carsten Lohrke <carlo@gentoo.org> knutclient-0.8.5.ebuild:
   stable on x86
