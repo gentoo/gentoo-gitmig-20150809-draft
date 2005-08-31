@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 aac86bf5e50eb9cef83a6f6800c560af metadata.xml 253
-MD5 d2d37c623ace593ff7b74701033ef226 ChangeLog 760
-MD5 66b7359b7e476f59ea31f031dd7c87b3 pmount-0.9.3-r2.ebuild 1479
-MD5 840c7e69303d19acc8e0a62976a4c135 files/digest-pmount-0.9.3-r2 63
+MD5 a534197ff7a861a2d447dc14dabd616d ChangeLog 957
+MD5 f9dbbc944a43d13a9d372187e5b38dea pmount-0.9.3-r3.ebuild 1468
+MD5 840c7e69303d19acc8e0a62976a4c135 files/digest-pmount-0.9.3-r3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDEdoxBtvusYtCZMsRAj1eAJkBnbUDCyMoEoY3Hhdu/zrGmq0W5gCfVhtA
-mbId4m1CAaBDHC79ioRgc88=
-=du8F
+iD8DBQFDFVVCBtvusYtCZMsRAnVGAJ9mC40f2FupyvBjTSiqsUvRFLtjNwCfZ3Nn
+Q9CYHXJDuzWYr6H+eDFnvIQ=
+=rRAx
 -----END PGP SIGNATURE-----

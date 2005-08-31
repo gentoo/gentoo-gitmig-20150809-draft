@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.3-r2.ebuild,v 1.1 2005/08/28 15:36:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.3-r3.ebuild,v 1.1 2005/08/31 06:58:55 cardoe Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Policy based mounter that gives the ability to mount removable devices as a user"
 SRC_URI="http://www.piware.de/projects/${P}.tar.gz"
@@ -30,6 +30,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -e 's:/sbin/cryptsetup:/bin/cryptsetup:' -i policy.h
+
+	append-ldflags "-Wl,-z,now"
 }
 
 src_install () {
@@ -37,14 +39,12 @@ src_install () {
 	dodir /media
 
 	# HAL informed mounter, used by Gnome/KDE
-	dobin pmount-hal
+	#dobin pmount-hal
 
 	# Must be run SETUID
 	exeinto /usr/bin
-	exeopts -m 4710
-	doexe pmount pumount
-	fowners root:plugdev /usr/bin/pmount
-	fowners root:plugdev /usr/bin/pumount
+	exeopts -m 4710 -g plugdev
+	doexe pmount pumount pmount-hal
 
 	dodoc AUTHORS CHANGES TODO
 	doman pmount.1 pumount.1 pmount-hal.1
