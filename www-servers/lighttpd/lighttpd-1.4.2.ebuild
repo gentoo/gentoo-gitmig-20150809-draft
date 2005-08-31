@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.2.ebuild,v 1.2 2005/08/29 17:21:40 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.2.ebuild,v 1.3 2005/08/31 14:34:46 lu_zero Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-libs/zlib-1.1
 	gdbm?     ( sys-libs/gdbm )
 	ldap?     ( >=net-nds/openldap-2.1.26 )
 	lua?      ( dev-lang/lua )
-	!ppc? ( memcache? ( dev-libs/libmemcache ) )
+	memcache? ( dev-libs/libmemcache )
 	mysql?    ( >=dev-db/mysql-4.0.0 )
 	pcre?     ( >=dev-libs/libpcre-3.1 )
 	php?      (
