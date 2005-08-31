@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r1.ebuild,v 1.1 2005/08/27 20:21:20 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r1.ebuild,v 1.2 2005/08/31 18:19:35 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -108,7 +108,7 @@ src_compile() {
 	# Also apparently the included apr has a libtool that doesn't like -L flags.
 	# So not specifying it at all when not building apache modules and only
 	# specify it for internal parts otherwise.
-	( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
+	( emake external-all && emake LT_LDFLAGS="-L${D}/usr/$(get_libdir)" local-all ) || die "make of subversion failed"
 
 	if use python; then
 		# Building fails without the apache apr-util as includes are wrong.
@@ -142,29 +142,29 @@ src_compile() {
 
 src_install () {
 	python_version
-	PYTHON_DIR=/usr/lib/python${PYVER}
+	PYTHON_DIR=/usr/$(get_libdir)/python${PYVER}
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
 
 #	This might not be necessary with the new install
-#	if [[ -e ${D}/usr/lib/apache2 ]]; then
-#		if [ "${APACHE2_MODULESDIR}" != "/usr/lib/apache2/modules" ]; then
+#	if [[ -e ${D}/usr/$(get_libdir)/apache2 ]]; then
+#		if [ "${APACHE2_MODULESDIR}" != "/usr/$(get_libdir)/apache2/modules" ]; then
 #			mkdir -p ${D}/`dirname ${APACHE2_MODULESDIR}`
-#			mv ${D}/usr/lib/apache2/modules ${D}/${APACHE2_MODULESDIR}
-#			rmdir ${D}/usr/lib/apache2 2>/dev/null
+#			mv ${D}/usr/$(get_libdir)/apache2/modules ${D}/${APACHE2_MODULESDIR}
+#			rmdir ${D}/usr/$(get_libdir)/apache2 2>/dev/null
 #		fi
 #	fi
 
 
 	dobin svn-config
 	if use python; then
-		make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/lib" || die "Installation of subversion python bindings failed"
+		make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/$(get_libdir)" || die "Installation of subversion python bindings failed"
 
 		# move python bindings
 		mkdir -p ${D}${PYTHON_DIR}/site-packages
-		mv ${D}/usr/lib/svn-python/svn ${D}${PYTHON_DIR}/site-packages
-		mv ${D}/usr/lib/svn-python/libsvn ${D}${PYTHON_DIR}/site-packages
-		rmdir ${D}/usr/lib/svn-python
+		mv ${D}/usr/$(get_libdir)/svn-python/svn ${D}${PYTHON_DIR}/site-packages
+		mv ${D}/usr/$(get_libdir)/svn-python/libsvn ${D}${PYTHON_DIR}/site-packages
+		rmdir ${D}/usr/$(get_libdir)/svn-python
 	fi
 	if use perl; then
 		make DESTDIR=${D} install-swig-pl || die "Perl library building failed"

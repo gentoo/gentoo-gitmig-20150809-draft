@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.170 2005/08/27 20:21:20 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.171 2005/08/31 18:19:35 pauldv Exp $
+
+  31 Aug 2005; Paul de Vrieze <pauldv@gentoo.org> subversion-1.2.3.ebuild,
+  subversion-1.2.3-r1.ebuild:
+  Fix the ebuild to use `get_libdir` instead of lib. Thanks to seemant in bug 
+  #104154
 
 *subversion-1.2.3-r1 (27 Aug 2005)
 *subversion-1.2.3 (27 Aug 2005)
