@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.2.0.ebuild,v 1.3 2005/05/26 01:00:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.2.0.ebuild,v 1.4 2005/08/31 20:26:39 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="clone of the classic DOS game, 'Scorched Earth'"
 HOMEPAGE="http://xscorch.org"
 SRC_URI="http://xscorch.org./releases/${P}.tar.gz
+	http://xscorch.org/releases/${P}-stack-smash.patch.gz
 	http://xscorch.org./releases/${P}-64bit.patch.gz"
 
 LICENSE="GPL-2"
@@ -21,7 +22,9 @@ DEPEND="gtk? ( =x11-libs/gtk+-1* )
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
-	epatch "${DISTDIR}/${P}-64bit.patch.gz"
+	epatch \
+		"${DISTDIR}/${P}-64bit.patch.gz" \
+		"${DISTDIR}/${P}-stack-smash.patch.gz"
 }
 
 src_compile() {
