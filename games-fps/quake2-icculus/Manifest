@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dd678649c88314ba496e0aa6c1c906af quake2-icculus-0.16.1.ebuild 4361
+MD5 ac386da7e5670672b618be191de332ef quake2-icculus-0.16.1.ebuild 4362
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 55cea7ea481f28e6cd568947af611878 ChangeLog 3047
 MD5 799bccbb58711b8831aeaeaa3142b965 files/digest-quake2-icculus-0.16.1 250
@@ -13,7 +13,7 @@ MD5 4b84093c6bccf958d3ca1b865c3f9402 files/quake2.xpm 1234
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDE5RVgIKl8Uu19MoRAnQxAJ9MlEc6mCuL073aJcV0/0e+fLIauACeOXYP
-0IVzLPcSi7TbttqLbX7Ex34=
-=b2jq
+iD8DBQFDFSfrgIKl8Uu19MoRAtaeAJ4xyfT4d//A0xMaug5qbxZXwm2AQACfQ0sO
+EhVPXAYyJ+/EXoFAt6+0bcI=
+=Z11g
 -----END PGP SIGNATURE-----
