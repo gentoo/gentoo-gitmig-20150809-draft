@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 285c637e4501c4a6756e5d0ec2d7a198 gst-plugins-lame-0.8.9.ebuild 349
 MD5 d0986d85d80b28b79ab84cd10e0358e9 gst-plugins-lame-0.8.10.ebuild 345
 MD5 4786be9390658c86a9d045bb839ba288 ChangeLog 3408
@@ -6,3 +9,10 @@ MD5 4a0ae14ca3289c3cde58b02d85a8d3a2 gst-plugins-lame-0.8.8.ebuild 344
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-lame-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-lame-0.8.9 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-lame-0.8.10 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDFiwg2G5bA0cA/ScRAnMdAJ483YrhPKB0X8x3vFq/m2Yd4frb3ACg6iyv
+RPFf8XpsVhFCfofJ0KiRLbI=
+=opyh
+-----END PGP SIGNATURE-----
