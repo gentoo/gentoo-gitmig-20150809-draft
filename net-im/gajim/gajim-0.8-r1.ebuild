@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.8-r1.ebuild,v 1.2 2005/08/28 18:34:17 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.8-r1.ebuild,v 1.3 2005/08/31 18:37:47 swegener Exp $
 
 inherit virtualx multilib eutils
 
@@ -21,10 +21,11 @@ DEPEND=">=dev-python/pygtk-2.4.0
 	srv? ( >=dev-python/dnspython-1.3.3 )"
 
 src_unpack() {
-	if ! `built_with_use pygtk gnome`; then
-		einfo "Gajim requires galde python modules.";
-		einfo "Please rebuild pygtk with USE=\"gnome\".";
-		die "python glade modules missing";
+	if ! built_with_use dev-python/pygtk gnome
+	then
+		einfo "Gajim requires galde python modules."
+		einfo "Please rebuild pygtk with USE=\"gnome\"."
+		die "python glade modules missing"
 	fi
 	unpack ${A}
 	cd ${S}
