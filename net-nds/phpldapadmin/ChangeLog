@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/phpldapadmin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.17 2005/08/31 17:02:45 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.18 2005/08/31 22:49:56 rl03 Exp $
+
+  31 Aug 2005; Renat Lumpau <rl03@gentoo.org> -phpldapadmin-0.9.5.ebuild,
+  -phpldapadmin-0.9.6.ebuild, -phpldapadmin-0.9.6c.ebuild,
+  -phpldapadmin-0.9.7_alpha4.ebuild:
+  Removing vulnerable versions
 
   31 Aug 2005; Renat Lumpau <rl03@gentoo.org>
   phpldapadmin-0.9.7_alpha6.ebuild:
