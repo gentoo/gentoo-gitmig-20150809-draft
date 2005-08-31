@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.3 2005/08/30 21:59:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.4 2005/08/31 18:01:15 dang Exp $
+
+*mplayer-bin-1.0_pre7-r1 (31 Aug 2005)
+
+  31 Aug 2005; <dang@gentoo.org> +mplayer-bin-1.0_pre7-r1.ebuild:
+  Revbump to add new features.  These include:
+  	 mmx2/sse2/3dnow/3dnowext, bidi, cpudetection, dts, dv, dvb, and xinerama
+
 
   30 Aug 2005; <dang@gentoo.org> mplayer-bin-1.0_pre7.ebuild:
   Add missing gtklibs dep Bug #104306
