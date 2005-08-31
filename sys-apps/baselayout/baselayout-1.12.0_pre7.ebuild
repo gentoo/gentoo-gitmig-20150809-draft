@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre6-r3.ebuild,v 1.1 2005/08/24 09:53:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre7.ebuild,v 1.1 2005/08/31 17:16:56 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -32,12 +32,6 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Fix wireless checking and dhcpcd required version
-	epatch "${FILESDIR}/${PN}-${PV}-1420.patch"
-
-	# Fix rc-daemon.sh signal handling, bug #103182
-	epatch "${FILESDIR}/${PN}-${PV}-rc-daemon.patch"
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
