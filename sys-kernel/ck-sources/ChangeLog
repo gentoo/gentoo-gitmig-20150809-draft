@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.113 2005/08/20 19:07:48 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.114 2005/08/31 16:52:34 marineam Exp $
+
+*ck-sources-2.6.13_p1 (31 Aug 2005)
+
+  31 Aug 2005; Michael Marineau <marineam@gentoo.org>
+  +ck-sources-2.6.13_p1.ebuild:
+  New kernel/ck version. Closes bug #104213
+  Added ck-plus use flag which will apply the experimental patches in the
+  ck+ patch. Currently these are sched-staircase12_tweak and 
+  vm-swap-prefetch.patch.
 
 *ck-sources-2.6.12_p6 (20 Aug 2005)
 
