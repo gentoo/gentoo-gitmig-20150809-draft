@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.51 2005/08/21 13:26:23 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.52 2005/08/31 12:59:21 humpback Exp $
+
+*pure-ftpd-1.0.20-r2 (31 Aug 2005)
+
+  31 Aug 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/pure-ftpd-1.0.20-pam.patch, +pure-ftpd-1.0.20-r2.ebuild:
+  Added ftpbase compatible version that helps close bug #102479
 
   21 Aug 2005; Gustavo Felisberto <humpback@gentoo.org>;
   files/pure-ftpd.conf_d:
