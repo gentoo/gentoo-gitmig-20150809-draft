@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.7_alpha6.ebuild,v 1.1 2005/08/31 16:28:39 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.7_alpha6.ebuild,v 1.2 2005/08/31 17:02:45 rl03 Exp $
 
 inherit eutils webapp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://phpldapadmin.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
