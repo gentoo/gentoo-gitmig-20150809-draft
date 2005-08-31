@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-PHPUnit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHPUnit/ChangeLog,v 1.9 2005/05/19 14:45:43 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHPUnit/ChangeLog,v 1.10 2005/08/31 07:59:20 sebastian Exp $
+
+*PEAR-PHPUnit-1.3.0 (31 Aug 2005)
+
+  31 Aug 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-PHPUnit-1.2.2.ebuild, PEAR-PHPUnit-1.2.3.ebuild,
+  +PEAR-PHPUnit-1.3.0.ebuild:
+  Version bump.
 
 *PEAR-PHPUnit-1.2.3 (19 May 2005)
 
