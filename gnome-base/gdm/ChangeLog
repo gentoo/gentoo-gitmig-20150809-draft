@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.113 2005/08/29 21:08:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.114 2005/08/31 22:29:46 herbs Exp $
+
+  31 Aug 2005; Herbie Hopkins <herbs@gentoo.org> gdm-2.8.0.1-r1.ebuild:
+  Stable on amd64.
 
   29 Aug 2005; Guy Martin <gmsoft@gentoo.org> gdm-2.8.0.1-r1.ebuild:
   Stable on hppa.

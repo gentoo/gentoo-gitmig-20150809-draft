@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1-r1.ebuild,v 1.6 2005/08/29 21:08:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.1-r1.ebuild,v 1.7 2005/08/31 22:29:46 herbs Exp $
 
 inherit eutils pam versionator gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://yippi.hypermall.com/gdm/index.shtml"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE="ipv6 pam selinux static tcpd xinerama"
 
 # Name of the tarball with gentoo specific files
