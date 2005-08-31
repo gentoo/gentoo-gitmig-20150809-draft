@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.16 2005/08/31 01:44:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.17 2005/08/31 01:54:15 azarah Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -20,66 +20,55 @@ inherit eutils gnuconfig
 
 # Variables:
 #
-#   AT_M4DIR - Additional director(y|ies) aclocal should include
+#   AT_M4DIR          - Additional director(y|ies) aclocal should search
 #   AT_GNUCONF_UPDATE - Should gnuconfig_update() be run (normally handled by
-#                  econf()) [yes|no]
+#                       econf()) [yes|no]
+
+# Functions:
+#
+#   eautoreconf()  - Should do a full autoreconf - normally what most people
+#                    will be interested in.  Also should handle additional
+#                    directories specified by AC_CONFIG_SUBDIRS.
+#   eaclocal()     - Runs aclocal.  Respects AT_M4DIR for additional directories
+#                    to search for macro's.
+#   _elibtoolize() - Runs libtoolize.  Note the '_' prefix .. to not collide
+#                    with elibtoolize() from libtool.eclass
+#   eautoconf      - Runs autoconf.
+#   eautoheader    - Runs autoheader.
+#   eautomake      - Runs automake
+#
 
 # XXX: M4DIR should be depreciated
 AT_M4DIR=${AT_M4DIR:-${M4DIR}}
 AT_GNUCONF_UPDATE="no"
 
-# Internal function to run an autotools' tool
-autotools_run_tool() {
-	local STDERR_TARGET="${T}/$$.out"
-	local PATCH_TARGET="${T}/$$.patch"
-	local ris
 
-	echo "***** $1 *****" > ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}
-	echo >> ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}
+# This function mimes the behavior of autoreconf, but uses the different
+# eauto* functions to run the tools. It doesn't accept parameters, but
+# the directory with include files can be specified with AT_M4DIR variable.
+#
+# Note: doesn't run autopoint right now, but runs gnuconfig_update.
+eautoreconf() {
+	local pwd=$(pwd) x
 
-	ebegin "Running $1"
-	$@ >> ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/} 2>&1
-	ris=$?
-	eend ${ris}
+	# Take care of subdirs
+	for x in $(autotools_get_subdirs); do
+		if [[ -d ${x} ]] ; then
+			cd "${x}"
+			eautoreconf
+			cd "${pwd}"
+		fi
+	done
 
-	if [[ ${ris} != 0 ]]; then
-		echo
-		eerror "Failed Running $1 !"
-		eerror
-		eerror "Include in your bugreport the contents of:"
-		eerror
-		eerror "  ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}"
-		echo
-		die "Failed Running $1 !"
-	fi
+	eaclocal
+	_elibtoolize --copy --force
+	eautoconf
+	eautoheader
+	eautomake
+
+	# Normally run by econf()
+	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
 }
-
-# Internal function to check for support
-autotools_check_macro() {
-	[[ -f configure.ac || -f configure.in ]] && \
-		autoconf --trace=$1 2>/dev/null
-	return 0
-}
-
-# Internal function to get additional subdirs to configure
-autotools_get_subdirs() {
-	local subdirs_scan_out
-
-	subdirs_scan_out=$(autotools_check_macro "AC_CONFIG_SUBDIRS")
-	[[ -n ${subdirs_scan_out} ]] || return 0
-
-	echo "${subdirs_scan_out}" | gawk \
-	'($0 !~ /^[[:space:]]*(#|dnl)/) {
-		if (match($0, "AC_CONFIG_SUBDIRS\\(\\[?([^\\])]*)", res)) {
-			split(res[1], DIRS, /[\])]/)
-			print DIRS[1]
-		}
-	}' | uniq
-
-	return 0
-}
-
-
 
 # These functions runs the autotools using autotools_run_tool with the
 # specified parametes. The name of the tool run is the same of the function
@@ -147,29 +136,56 @@ eautomake() {
 	autotools_run_tool automake --add-missing --copy "$@"
 }
 
-# This function mimes the behavior of autoreconf, but uses the different
-# eauto* functions to run the tools. It doesn't accept parameters, but
-# the directory with include files can be specified with AT_M4DIR variable.
-#
-# Note: doesn't run autopoint right now, but runs gnuconfig_update.
-eautoreconf() {
-	local pwd=$(pwd) x
 
-	# Take care of subdirs
-	for x in $(autotools_get_subdirs); do
-		if [[ -d ${x} ]] ; then
-			cd "${x}"
-			eautoreconf
-			cd "${pwd}"
-		fi
-	done
 
-	eaclocal
-	_elibtoolize --copy --force
-	eautoconf
-	eautoheader
-	eautomake
+# Internal function to run an autotools' tool
+autotools_run_tool() {
+	local STDERR_TARGET="${T}/$$.out"
+	local PATCH_TARGET="${T}/$$.patch"
+	local ris
 
-	# Normally run by econf()
-	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
+	echo "***** $1 *****" > ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}
+	echo >> ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}
+
+	ebegin "Running $1"
+	$@ >> ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/} 2>&1
+	ris=$?
+	eend ${ris}
+
+	if [[ ${ris} != 0 ]]; then
+		echo
+		eerror "Failed Running $1 !"
+		eerror
+		eerror "Include in your bugreport the contents of:"
+		eerror
+		eerror "  ${STDERR_TARGET%/*}/$1-${STDERR_TARGET##*/}"
+		echo
+		die "Failed Running $1 !"
+	fi
 }
+
+# Internal function to check for support
+autotools_check_macro() {
+	[[ -f configure.ac || -f configure.in ]] && \
+		autoconf --trace=$1 2>/dev/null
+	return 0
+}
+
+# Internal function to get additional subdirs to configure
+autotools_get_subdirs() {
+	local subdirs_scan_out
+
+	subdirs_scan_out=$(autotools_check_macro "AC_CONFIG_SUBDIRS")
+	[[ -n ${subdirs_scan_out} ]] || return 0
+
+	echo "${subdirs_scan_out}" | gawk \
+	'($0 !~ /^[[:space:]]*(#|dnl)/) {
+		if (match($0, "AC_CONFIG_SUBDIRS\\(\\[?([^\\])]*)", res)) {
+			split(res[1], DIRS, /[\])]/)
+			print DIRS[1]
+		}
+	}' | uniq
+
+	return 0
+}
+
