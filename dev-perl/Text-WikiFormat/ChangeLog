@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-WikiFormat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.3 2005/08/31 16:36:18 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.4 2005/08/31 17:53:33 dang Exp $
+
+  31 Aug 2005; <dang@gentoo.org> Text-WikiFormat-0.76.ebuild:
+  Marked ~amd64
 
   31 Aug 2005; Renat Lumpau <rl03@gentoo.org> Text-WikiFormat-0.76.ebuild:
   Added missing dependencies wrt bug #104312.
