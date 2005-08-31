@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52.ebuild,v 1.7 2005/08/18 18:40:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.52.ebuild,v 1.8 2005/08/31 23:31:13 vapier Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Unzipper for pkzip-compressed files"
 HOMEPAGE="ftp://ftp.info-zip.org/pub/infozip/UnZip.html"
@@ -18,6 +18,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	append-lfs-flags #104315
 	sed -i \
 		-e "s:-O3:${CFLAGS}:" \
 		-e "s:CC=gcc :CC=$(tc-getCC) :" \
