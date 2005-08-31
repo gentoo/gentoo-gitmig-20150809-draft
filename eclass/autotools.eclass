@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.17 2005/08/31 01:54:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.18 2005/08/31 20:17:43 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -106,7 +106,7 @@ eaclocal() {
 _elibtoolize() {
 	# Check if we should run libtoolize
 	[[ -n $(autotools_check_macro "AC_PROG_LIBTOOL") ]] || return 0
-	use userland_Darwin && LIBTOOLIZE="glibtoolize"
+	[[ "${USERLAND}" == "Darwin" ]] && LIBTOOLIZE="glibtoolize"
 	autotools_run_tool ${LIBTOOLIZE:-libtoolize} "$@"
 
 	# Need to rerun aclocal
