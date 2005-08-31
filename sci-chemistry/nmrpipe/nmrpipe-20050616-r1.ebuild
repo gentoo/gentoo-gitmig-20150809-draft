@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050616.ebuild,v 1.1 2005/07/22 16:57:30 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050616-r1.ebuild,v 1.1 2005/08/31 00:40:57 ribosome Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
@@ -71,12 +71,12 @@ src_unpack() {
 	# to the archive files, ...
 	for i in ${PN}.linux9.tar.Z xview_fonts.tar.Z xview.linux9.tar.Z \
 		dyn.tar.Z mfr.tar.Z pdbH.tar.Z valpha.tar acme.tar.Z; do
-		ln -s "${DISTDIR}/${i}" "${i}"
+		ln -s "${DISTDIR}"/${i} ${i}
 	done
 	# ... copy the installation scripts ...
-	cp ${DISTDIR}/{binval.com,install.com} .
+	cp "${DISTDIR}"/{binval.com,install.com} .
 	# ... and make the installation scripts executable.
-	chmod +x "binval.com" "install.com"
+	chmod +x binval.com install.com
 }
 
 src_compile() {
@@ -84,30 +84,33 @@ src_compile() {
 	DISPLAY="" ./install.com "${S}" || die
 	# Remove the symlinks for the archives and the installation scripts.
 	for i in ${A}; do
-		rm "${i}"
+		rm ${i}
 	done
 	# Remove some of the bundled applications and libraries; they are
 	# provided by Gentoo instead.
-	rm -r "xview" "XView" nmrbin.linux9/{0.0,lib,*timestamp,xv,gnuplot*,rasmol*}
+	rm -r xview XView nmrbin.linux9/{0.0,lib,*timestamp,xv,gnuplot*,rasmol*}
 	# Remove the initialisation script generated during the installation.
 	# It contains incorrect hardcoded paths; only the "nmrInit.com" script
 	# should be used.
-	rm "com/nmrInit.linux9.com"
+	rm com/nmrInit.linux9.com
 	# Make the precompiled Linux binaries executable.
 	chmod +x nmrbin.linux9/*
 	# Set the correct path to NMRPipe in the auxiliary scripts.
-	cd "${S}/com"
+	cd com
 	for i in *; do
-		sed -e "s%/u/delaglio%${NMRBASE}%" -i "${i}" || die
+		sed -e "s%/u/delaglio%${NMRBASE}%" -i ${i} || die
 	done
+	# Remove installation log files.
+	cd "${S}"
+	rm *.log
 }
 
 src_install() {
-	newenvd "${FILESDIR}/${P}-env" "40${PN}"
-	insinto "/opt/${PN}"
-	insopts "-m0755"
+	newenvd "${FILESDIR}"/${P}-env 40${PN}
+	insinto /opt/${PN}
+	insopts -m0755
 	doins -r *
-	dosym "/opt/${PN}/nmrbin.linux9" "/opt/${PN}/bin"
+	dosym /opt/${PN}/nmrbin.linux9 /opt/${PN}/bin
 }
 
 pkg_postinst() {
