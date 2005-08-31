@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28c8ac1e026448022feef8eee123efd1 gnome-menus-2.11.92.ebuild 967
 MD5 5bd8e91a516d00cac5696eab16296c3a ChangeLog 3560
 MD5 a19124c0b99fc69776cade7dbfa22235 gnome-menus-2.10.1.ebuild 654
@@ -7,3 +10,10 @@ MD5 1a51e652f467b181dcbb71a42db7b5bf files/gnome-menus-2.10.2-legacy_dirs.patch 
 MD5 cf307e62e21ed7239afb4ef30b6c6891 files/digest-gnome-menus-2.10.2-r1 71
 MD5 c7f0885937a8822cbf1ed58488814d33 files/digest-gnome-menus-2.10.1 71
 MD5 353880dc3da0b693cd21c318f6914000 files/digest-gnome-menus-2.11.92 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDFich2G5bA0cA/ScRAmB6AJ9U+QP20KkL3ZJ+H4SB7kgl9JysWACfVbj2
+zFFORc0YJdKFeZGTNQ97E64=
+=VlrZ
+-----END PGP SIGNATURE-----
