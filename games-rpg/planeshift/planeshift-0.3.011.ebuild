@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.010.ebuild,v 1.3 2005/06/08 18:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.1 2005/08/31 19:34:16 malverian Exp $
 
 inherit eutils games debug
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 Planeshift )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="${IUSE}"
 
 RDEPEND="net-misc/curl
-	=dev-games/crystalspace-0.99_pre*
-	=dev-games/cel-0.99_pre*"
+	>=dev-games/crystalspace-0.99_pre*
+	>=dev-games/cel-0.99_pre*"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -73,7 +73,7 @@ src_install() {
 	chgrp -R games "${D}/${PLANESHIFT_PREFIX}"
 	chmod -R g+rw "${D}/${PLANESHIFT_PREFIX}"
 
-	# Make sure new files are still :games
+	# Make sure new files stay in games group
 	find "${D}/${PLANESHIFT_PREFIX}" -type d -exec chmod g+sx {} \;
 }
 

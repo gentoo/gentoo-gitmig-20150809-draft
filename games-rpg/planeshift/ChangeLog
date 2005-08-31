@@ -1,6 +1,15 @@
 # ChangeLog for games-rpg/planeshift
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.8 2005/05/22 20:02:43 malverian Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.9 2005/08/31 19:34:16 malverian Exp $
+
+*planeshift-0.3.011 (31 Aug 2005)
+
+  31 Aug 2005; Philip Walls <malverian@gentoo.org>
+  -files/planeshift-0.2.010-fix-cast.diff, files/planeshift,
+  files/planeshift-setup, files/planeshift-updater,
+  -planeshift-0.2.010-r1.ebuild, -planeshift-0.3.010.ebuild,
+  +planeshift-0.3.011.ebuild:
+  Version bump
 
   22 May 2005; Philip Walls <malverian@gentoo.org> files/planeshift
   files/planeshift-updater +files/planeshift-setup:
