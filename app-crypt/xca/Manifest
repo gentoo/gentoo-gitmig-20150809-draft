@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 70c636102794129bbd3e3a9ae6926c81 ChangeLog 1198
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 42111437dde14914e16fad146298ccb1 xca-0.5.1.ebuild 1107
@@ -5,3 +8,10 @@ MD5 a863ab8517d47d6115278df5657a8e6e files/Rules.mak-prefix.patch 317
 MD5 824dd090495b970cdbbe37ae02a2aade files/digest-xca-0.5.1 61
 MD5 8bdc8f5dfc26313d6d167f947ce7bd8c files/xca-0.5.1-qt.diff 466
 MD5 ab7ebbe2a038dc3100f6f4af0923946c files/configure-db.patch 471
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFQvPwUpWvClEHQoRAvVUAJ9KgaedHE/MSLsL9Dvz0WMG8wyW0gCfS8Kw
+gS/R+nHh68zB8WkbhtgUNGE=
+=mcrA
+-----END PGP SIGNATURE-----
