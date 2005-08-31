@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ba9dc302551cf2ea6270569757128d0e karbon-1.4.1.ebuild 1176
 MD5 6cc2c56ca76aba01844f5b14e584b35d ChangeLog 1531
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 951dfb5ac028d5d4efa041ce58e0de87 karbon-1.3.5.ebuild 1234
 MD5 12d141df83ce3d5769387e780ee073f7 files/digest-karbon-1.3.5 211
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-karbon-1.4.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFfpTntT9W3vfTuoRAqwNAJ9LDgZ7jZHpFF1yARK3NB9IjIYRcgCeO0DT
++5V7vhGSzNaqMd5CfwdAVMA=
+=FOpL
+-----END PGP SIGNATURE-----
