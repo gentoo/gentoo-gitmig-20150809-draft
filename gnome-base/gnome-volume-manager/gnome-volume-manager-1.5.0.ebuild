@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.0.ebuild,v 1.1 2005/08/31 07:30:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.0.ebuild,v 1.2 2005/08/31 08:59:21 leonardop Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="Daemon that enforces volume-related policies"
 HOMEPAGE="http://www.gnome.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://primates.ximian.com/~fejj/gvm//${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="doc crypt"
 
 RDEPEND=">=x11-libs/gtk+-2.6
@@ -26,8 +26,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27.2"
 
 DOCS="AUTHORS ChangeLog README HACKING NEWS TODO"
-
 USE_DESTDIR="1"
+
 
 pkg_setup() {
 	G2CONF="pmount_hal_path=/usr/bin/pmount-hal \
