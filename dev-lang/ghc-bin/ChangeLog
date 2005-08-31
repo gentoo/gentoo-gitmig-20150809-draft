@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.28 2005/08/17 10:25:02 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.29 2005/08/31 01:35:18 gustavoz Exp $
+
+  31 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ghc-bin-6.2.2-r1.ebuild:
+  Built package for ppc to fix #70617 and #98984
 
   17 Aug 2005; Andres Loeh <loeh@gentoo.org> -ghc-bin-6.0.ebuild,
   -ghc-bin-6.2.ebuild, -ghc-bin-6.2.1.ebuild, -ghc-bin-6.2.2.ebuild,
