@@ -1,8 +1,18 @@
-MD5 c95b48867085ebfa89ebe1cef63369ba putty-0.58.ebuild 1556
-MD5 4a383beb375f4954b2af0c9d53acfc22 putty-0.57.ebuild 1820
-MD5 6af0d0104abaceca6cfc9df8873ec457 ChangeLog 3652
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 036764e843cd2df98eb8e4da9bd0aa09 ChangeLog 3750
 MD5 a95f430323d2b9413a9ae45efb4d616c metadata.xml 549
+MD5 4a383beb375f4954b2af0c9d53acfc22 putty-0.57.ebuild 1820
+MD5 c0cf0f925d37c3bca8896e4d1a23a609 putty-0.58.ebuild 1557
 MD5 3a07269379d199e6363fbe0250c5899a files/digest-putty-0.57 63
-MD5 7c38293f57fa00b6d687477113f0625b files/digest-putty-0.58 63
 MD5 4f674a5fd23877ac6d76c6d9baa33041 files/putty-ut_time.patch 824
 MD5 85355228c88a7a925e751df0f058f0ea files/putty.desktop 207
+MD5 7c38293f57fa00b6d687477113f0625b files/digest-putty-0.58 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFQigwUpWvClEHQoRAniMAJ0UgkYZJXUQQdgqL9m2CqrK2ZSjxwCfdoDq
+CPLcW/rvUYyZGR9DKTP8gWo=
+=Z/gp
+-----END PGP SIGNATURE-----
