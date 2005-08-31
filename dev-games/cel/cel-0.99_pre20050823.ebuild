@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-0.99_pre20050518.ebuild,v 1.4 2005/07/09 16:01:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-0.99_pre20050823.ebuild,v 1.1 2005/08/31 19:32:00 malverian Exp $
 
 inherit eutils debug
 
