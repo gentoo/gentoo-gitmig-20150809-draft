@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.111 2005/08/29 17:28:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.112 2005/08/31 18:41:50 cryos Exp $
+
+  31 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> koffice-1.4.1.ebuild:
+  Stable on amd64.
 
   29 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> koffice-1.4.1.ebuild:
   Stable on sparc
