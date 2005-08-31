@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1b0fb0f37f33874e3931bd17b0be7fb ChangeLog 1666
 MD5 88f9ed44d5f60c45fbd236eb508e145a files/digest-tnftp-20050103 66
 MD5 c47c7d09c1049b0107373b61ceb71ed1 files/digest-tnftp-20050610 66
@@ -6,3 +9,10 @@ MD5 1f7353efef0082c74884b4a97c1191ba metadata.xml 298
 MD5 df6964c76178c5fcfc898f72988abb8c tnftp-20050103.ebuild 1499
 MD5 c682ad961280dafea629c5a4eb3efd80 tnftp-20050610.ebuild 1015
 MD5 ddc74a65555c7892f65210b7e92c65ff tnftp-20050625.ebuild 1014
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDFf4dI1lqEGTUzyQRAgMkAJ9yADOndV5R++JrXmj8vRiuoIdf3QCgqZMH
+3+dghPKUTcAjw1/9h07HePU=
+=Ai1D
+-----END PGP SIGNATURE-----
