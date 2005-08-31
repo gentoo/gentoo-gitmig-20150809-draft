@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2ab885539b92a798d812d1f7316abde8 gail-1.8.3.ebuild 708
 MD5 6f59d9f4d3f81f9dcfc1afa1270a6530 gail-1.8.5.ebuild 732
 MD5 853e82e86bc3aa14811998d519b863c0 gail-1.8.4.ebuild 705
@@ -6,3 +9,10 @@ MD5 fa390c5d79274a7d4e1e4bc3e945058f metadata.xml 714
 MD5 163336ce7298b831b827993e985c33aa files/digest-gail-1.8.3 63
 MD5 6879c3a5683682c41708b230927f69b2 files/digest-gail-1.8.4 63
 MD5 562d367f9ad2501733d08ee5f8a0e684 files/digest-gail-1.8.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDFiOD2G5bA0cA/ScRAsg8AKCJT9a9pd8gum08Hz5H2J5rgi37uQCg6U7t
+FijZNmYauAfnLQm0Vc47/bw=
+=AmYq
+-----END PGP SIGNATURE-----
