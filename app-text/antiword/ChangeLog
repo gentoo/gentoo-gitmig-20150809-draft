@@ -1,6 +1,10 @@
 # ChangeLog for app-text/antiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.23 2005/03/11 13:25:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.24 2005/08/31 10:20:10 grobian Exp $
+
+  31 Aug 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/antiword-0.36.1-ppc-macos.diff, antiword-0.36.1.ebuild:
+  Marking ~ppc-macos (bug #104314)
 
   11 Mar 2005; Seemant Kulleen <seemant@gentoo.org> antiword-0.36.1.ebuild:
   stable on x86 at the request of throw_away_2002@yahoo.com and Tor Klingberg
