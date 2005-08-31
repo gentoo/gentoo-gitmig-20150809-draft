@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.4 2005/08/29 12:18:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.5 2005/08/31 18:42:21 swegener Exp $
 
 inherit eutils
 
@@ -67,12 +67,12 @@ pkg_setup() {
 
 	# check if zaptel and libpri have been built with bri enabled
 #	if use bri; then
-#		if ! built_with_use zaptel bri; then
+#		if ! built_with_use net-misc/zaptel bri; then
 #			eerror "Re-emerge zaptel with bri use-flag enabled!"
 #			die "Zaptel without bri support detected"
 #		fi
 #
-#		if ! built_with_use libpri bri; then
+#		if ! built_with_use net-libs/libpri bri; then
 #			eerror "Re-emerge libpri with bri use-flag enabled!"
 #			die "Libpri without bri support detected"
 #		fi
