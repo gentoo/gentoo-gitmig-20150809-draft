@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/burncenter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/ChangeLog,v 1.10 2005/08/30 21:48:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncenter/ChangeLog,v 1.11 2005/08/31 14:18:04 metalgod Exp $
+
+  31 Aug 2005; Luis Medinas <metalgod@gentoo.org> burncenter-3.2.1.ebuild:
+  Fixing Keywords from the last commit
 
 *burncenter-3.2.1 (30 Aug 2005)
 
