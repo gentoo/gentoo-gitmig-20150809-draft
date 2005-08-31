@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.11 2005/06/06 22:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.12 2005/08/31 13:42:31 gustavoz Exp $
+
+  31 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> sg3_utils-1.11.ebuild:
+  Stable on sparc
 
 *sg3_utils-1.15 (06 Jun 2005)
 
