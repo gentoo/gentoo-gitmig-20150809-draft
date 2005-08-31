@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-2.5.0.ebuild,v 1.1 2005/04/03 15:23:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-2.5.0.ebuild,v 1.2 2005/08/31 21:33:40 kugelfang Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="amd64? ( acml-64bit-${MY_PV}.tgz )
 RESTRICT="fetch nostrip"
 IUSE=""
 LICENSE="ACML"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 RDEPEND="virtual/libc
 	sci-libs/blas-config
