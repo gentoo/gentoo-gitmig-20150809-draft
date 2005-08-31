@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r1.ebuild,v 1.4 2005/08/31 11:20:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.1 2005/08/31 11:20:27 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,14 +16,7 @@ SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
-IUSE="bzip2 caps curl ecc idea ldap nls readline selinux smartcard usb zlib X"
-
-#static not working yet
-#!static? (
-#			ldap? ( net-nds/openldap )
-#			bzip2? ( app-arch/bzip2 )
-#			zlib? ( sys-libs/zlib )
-#		)
+IUSE="bzip2 caps curl ecc idea ldap nls readline selinux smartcard static usb zlib X"
 
 COMMON_DEPEND="
 	ldap? ( net-nds/openldap )
@@ -37,8 +30,10 @@ COMMON_DEPEND="
 	smartcard? ( dev-libs/libusb )
 	usb? ( dev-libs/libusb )"
 
-RDEPEND="${COMMON_DEPEND}
-	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
+RDEPEND="!static? (
+		${COMMON_DEPEND}
+		X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
+	)
 	selinux? ( sec-policy/selinux-gnupg )"
 
 DEPEND="${COMMON_DEPEND}
@@ -46,8 +41,12 @@ DEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	# Please read http://www.gnupg.org/why-not-idea.html
+
+	# Jari's patch to boost iterated key setup by factor of 128
+	# EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/gnupg-1.4.1.diff	
+
 	if use idea; then
+		ewarn "Please read http://www.gnupg.org/why-not-idea.html"
 		mv ${WORKDIR}/idea.c ${S}/cipher/idea.c || \
 			ewarn "failed to insert IDEA module"
 	fi
@@ -66,13 +65,13 @@ src_unpack() {
 	# maketest fix
 	epatch ${FILESDIR}/${P}-selftest.patch
 
-	# Fix PIC definitions
 	cd ${S}
+	# keyserver fix
+	epatch ${FILESDIR}/${P}-keyserver.patch
+
+	# Fix PIC definitions
 	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c
 	sed -i -e 's:if PIC:ifdef __PIC__:' mpi/sparc32v8/mpih-mul{1,2}.S
-
-	# Fix ldap helper
-	epatch ${FILESDIR}/${P}-keyserver.patch
 }
 
 src_compile() {
@@ -84,7 +83,7 @@ src_compile() {
 	fi
 
 	# 'USE=static' support was requested in #29299
-	# use static && append-ldflags -static
+	use static &&append-ldflags -static
 
 	# Still needed?
 	# Bug #6387, --enable-m-guard causes bus error on sparcs
@@ -112,6 +111,7 @@ src_compile() {
 		$(use_with caps capabilities) \
 		$(use_with readline) \
 		$(use_with usb libusb /usr) \
+		$(use_enable static) \
 		$(use_enable X photo-viewers) \
 		--enable-static-rnd=linux \
 		--libexecdir=/usr/libexec \
