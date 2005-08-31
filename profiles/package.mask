@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4358 2005/08/30 22:40:02 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4359 2005/08/31 07:23:38 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,10 +24,6 @@
 # Christian Parpart <trapni@gentoo.org> (30 Aug 2005)
 # Masked for testing
 =www-apps/mediawiki-1.5.0_rc4
-
-# Benedikt Boehm <hollow@gentoo.org> (30 Aug 2005)
-# Masked for testing
-=sys-kernel/vserver-sources-2.1.0_pre5
 
 # Brandon Low <lostlogic@lostlogicx.com> (29 Aug 2005)
 # Masked because it needs java 1.5
