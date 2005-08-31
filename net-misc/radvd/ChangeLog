@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.16 2005/08/23 13:14:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.17 2005/08/31 13:28:08 brix Exp $
+
+*radvd-0.8-r1 (31 Aug 2005)
+
+  31 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/radvd-0.8-conf.d, +files/radvd-0.8-init.d, +metadata.xml,
+  +radvd-0.8-r1.ebuild:
+  Cleaned up ebuild, taking ownership.
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> radvd-0.8.ebuild:
   Use -1 instead of /bin/false on enewuser call.
