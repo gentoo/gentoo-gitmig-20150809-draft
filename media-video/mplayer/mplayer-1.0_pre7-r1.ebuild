@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.6 2005/08/30 17:51:46 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.7 2005/08/31 13:15:49 lu_zero Exp $
 
-inherit eutils flag-o-matic kernel-mod
+inherit eutils flag-o-matic
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl cpudetection
@@ -85,50 +85,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-
-# ecpu_check
-# Usage:
-#
-# ecpu_check array_of_cpu_flags
-#
-# array_of_cpu_flags - An array of cpu flags to check against USE flags
-#
-# Checks user USE related cpu flags against /proc/cpuinfo.  If user enables a
-# cpu flag that is not supported in their processor flags, it will warn the
-# user if CROSSCOMPILE is not set to 1 ( because cross compile users are
-# obviously using different cpu flags than their own cpu ).  Examples:
-#
-# CPU_FLAGS=(mmx mmx2 sse sse2)
-# ecpu_check CPU_FLAGS
-# Chris White <chriswhite@gentoo.org> (03 Feb 2005)
-
-ecpu_check() {
-	# Think about changing below to: if [ "${CROSSCOMPILE}" -ne 1 -a -e "/proc/cpuinfo" ]
-	# and dropping the else if you do not plan on adding anything to that
-	# empty block ....
-	# PS: also try to add some quoting, and consider rather using ${foo} than $foo ...
-	if [ "${CROSSCOMPILE}" != "1" -a -e "/proc/cpuinfo" ]
-	then
-		CPU_FLAGS=${1}
-		USER_CPU=`grep "flags" /proc/cpuinfo`
-
-		for flags in `seq 1 ${#CPU_FLAGS[@]}`
-		do
-			if has ${CPU_FLAGS[${flags} - 1]} ${USER_CPU} && ! has ${CPU_FLAGS[${flags} - 1]} ${USE}
-			then
-				ewarn "Your system is ${CPU_FLAGS[${flags} - 1]} capable but you don't have it enabled!"
-				ewarn "You might be cross compiling (in this case set CROSSCOMPILE to 1 to disable this warning."
-			fi
-
-			if ! has ${CPU_FLAGS[${flags} - 1]} ${USER_CPU}  && has ${CPU_FLAGS[${flags} -1]} ${USE}
-			then
-				ewarn "You have ${CPU_FLAGS[${flags} - 1]} support enabled but your processor doesn't"
-				ewarn "Seem to support it!  You might be cross compiling or do not have /proc filesystem"
-				ewarn "enabled.  If either is the case, set CROSSCOMPILE to 1 to disable this warning."
-			fi
-		done
-	fi
-}
 
 pkg_setup() {
 	if use real && use x86; then
@@ -240,14 +196,6 @@ src_compile() {
 		# sending blank LINGUAS, make it default to en
 		einfo "No LINGUAS given, defaulting to English"
 		export LINGUAS="en ${LINGUAS}"
-	fi
-
-
-	# check cpu flags
-	if use x86 && use !cpudetection
-	then
-		CPU_FLAGS=(3dnow 3dnowext mmx sse sse2 mmxext)
-		ecpu_check CPU_FLAGS
 	fi
 
 	if use custom-cflags ; then
