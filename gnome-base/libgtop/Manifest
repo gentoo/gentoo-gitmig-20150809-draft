@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2137911b9c561793f11d0438e84ed30 libgtop-2.10.2.ebuild 640
 MD5 6cb186574bc79b0bc3a1672a9a164049 libgtop-2.10.1.ebuild 735
 MD5 35305c2a06a3ba1c3effbe90109f88ce libgtop-1.0.13-r2.ebuild 1505
@@ -14,3 +17,10 @@ MD5 01e1743af5e23d9fa6430e0a92c57861 files/libgtop.info.diff 449
 MD5 51a8192dea5d51a0ba39cb2753af8b84 files/libgtop-1.0.13-guile-compile.patch 1146
 MD5 06320038fe8840bedb3b08496982320f files/libgtop-2.10.0-siglist.patch 3316
 MD5 15330eddda755f3d7e434c1a2f45199a files/digest-libgtop-1.0.13-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDFi+w2G5bA0cA/ScRArdeAJ4p6f7J2QgRfeT2dFbjiv7l1TheygCfUgGl
+EgY4cQfeCOZ+JCMa2Dw0VU0=
+=2KGJ
+-----END PGP SIGNATURE-----
