@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.8.ebuild,v 1.2 2005/07/02 18:15:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.8.ebuild,v 1.3 2005/08/31 22:23:11 vapier Exp $
 
 inherit eutils
 
@@ -29,7 +29,9 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use build && myconf="${myconf} --disable-wrapping-as-root"
-	use ncurses || myconf="${myconf} $(use_with slang)"
+	use ncurses \
+		&& myconf="--without-slang" \
+		|| myconf="${myconf} $(use_with slang)"
 
 	econf \
 		--bindir=/bin \
