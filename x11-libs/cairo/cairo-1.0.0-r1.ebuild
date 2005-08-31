@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.0.ebuild,v 1.1 2005/08/25 10:42:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.0-r1.ebuild,v 1.1 2005/08/31 07:57:02 leonardop Exp $
 
 inherit eutils
 
@@ -33,9 +33,22 @@ DEPEND="${RDEPEND}
 		~app-text/docbook-xml-dtd-4.2 )"
 
 
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
+	# Fix segmentation fault when compiling with -fomit-frame-pointer.
+	# See bug #104265.
+	epatch ${FILESDIR}/${P}-omit_frame_pointer_fix.patch
+}
+
 src_compile() {
-	local myconf="$(use_enable X xlib) $(use_with X x) $(use_enable png) \
-		$(use_enable static) $(use_enable doc gtk-doc) $(use_enable glitz)"
+	local myconf="$(use_enable X xlib) \
+		$(use_with X x)           \
+		$(use_enable png)         \
+		$(use_enable static)      \
+		$(use_enable doc gtk-doc) \
+		$(use_enable glitz)"
 
 	econf $myconf || die "./configure failed"
 	emake || die "Compilation failed"

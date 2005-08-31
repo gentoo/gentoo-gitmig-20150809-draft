@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.43 2005/08/25 10:42:04 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.44 2005/08/31 07:57:02 leonardop Exp $
+
+*cairo-1.0.0-r1 (31 Aug 2005)
+
+  31 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/cairo-1.0.0-omit_frame_pointer_fix.patch, -cairo-1.0.0.ebuild,
+  +cairo-1.0.0-r1.ebuild:
+  Added patch from upstream CVS repository that fixes a segmentation fault
+  when -fomit-frame-pointer is in CFLAGS (bug #104265).
 
 *cairo-1.0.0 (25 Aug 2005)
 
