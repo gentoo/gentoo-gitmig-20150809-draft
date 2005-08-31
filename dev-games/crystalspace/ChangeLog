@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.15 2005/05/24 13:23:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.16 2005/08/31 19:30:35 malverian Exp $
+
+*crystalspace-0.99_pre20050823 (31 Aug 2005)
+
+  31 Aug 2005; Philip Walls <malverian@gentoo.org> -crystalspace-0.98.4.20050224.ebuild,
+  -crystalspace-0.99_pre20050518.ebuild,
+  +crystalspace-0.99_pre20050823.ebuild:
+  Prerelease version bump for planeshift
 
   24 May 2005; David Holm <dholm@gentoo.org>
   crystalspace-0.99_pre20050518.ebuild:
