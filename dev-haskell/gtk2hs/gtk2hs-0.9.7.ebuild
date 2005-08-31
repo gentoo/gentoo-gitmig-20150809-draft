@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.4 2005/06/24 05:52:51 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.7.ebuild,v 1.5 2005/08/31 10:08:00 dcoutts Exp $
 
 inherit base check-reqs ghc-package
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/ghc-5.04
 				 >=x11-libs/gtksourceview-0.6
 				 >=gnome-base/gconf-2 )
 		mozilla? ( >=www-client/mozilla-1.4 )
-		doc? ( >=dev-haskell/haddock-0.6 )"
+		doc? ( =dev-haskell/haddock-0.6* )"
 
 pkg_setup() {
 	# need this much memory (in MBytes) (does *not* check swap)
