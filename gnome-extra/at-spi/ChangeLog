@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.95 2005/08/31 04:32:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.96 2005/08/31 12:11:44 seemant Exp $
+
+  31 Aug 2005; Seemant Kulleen <seemant@gentoo.org> at-spi-1.6.5.ebuild:
+  fix to make src_test execute the make checks in a virtual X session
 
 *at-spi-1.6.5 (31 Aug 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.6.5.ebuild,v 1.1 2005/08/31 04:32:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.6.5.ebuild,v 1.2 2005/08/31 12:11:44 seemant Exp $
 
-inherit gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="The Gnome Accessibility Toolkit"
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
@@ -29,4 +29,8 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="$(use_enable static)"
+}
+
+src_test() {
+	Xmake check || die
 }
