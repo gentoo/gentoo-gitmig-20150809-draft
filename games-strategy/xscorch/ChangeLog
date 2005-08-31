@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/xscorch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/ChangeLog,v 1.9 2005/08/31 20:26:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/ChangeLog,v 1.10 2005/08/31 20:29:58 mr_bones_ Exp $
+
+*xscorch-0.2.0-r1 (31 Aug 2005)
+
+  31 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -xscorch-0.1.15.ebuild, -xscorch-0.2.0.ebuild, +xscorch-0.2.0-r1.ebuild:
+  rev bump to force out the latest patch; tidy old ebuilds
 
   31 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> xscorch-0.2.0.ebuild:
   upstream patch reported by Heinz Striebeck via bug #104402
