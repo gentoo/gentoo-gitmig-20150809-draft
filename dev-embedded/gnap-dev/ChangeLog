@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gnap-dev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnap-dev/ChangeLog,v 1.6 2005/08/10 11:25:00 koon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnap-dev/ChangeLog,v 1.7 2005/08/31 10:16:44 koon Exp $
+
+*gnap-dev-1.8.1 (31 Aug 2005)
+
+  31 Aug 2005; Thierry Carrez <koon@gentoo.org> +gnap-dev-1.8.1.ebuild:
+  New version 1.8.1, fix for bug #102985
 
 *gnap-dev-1.8 (10 Aug 2005)
 
