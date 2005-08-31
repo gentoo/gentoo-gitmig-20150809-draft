@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.10.0.ebuild,v 1.2 2005/05/08 00:39:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.10.0.ebuild,v 1.3 2005/08/31 19:12:05 malverian Exp $
 
 MY_P=${P/cal3d/cal3d-full}
 DESCRIPTION="skeletal based character animation library"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/cal3d/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=""
