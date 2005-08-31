@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.142 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.143 2005/08/31 14:39:04 brix Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -57,7 +57,7 @@
 
 inherit toolchain-funcs versionator multilib
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
-	pkg_preinst pkg_postinst pkg_prerm
+	pkg_preinst pkg_postinst
 
 # Added by Daniel Ostrow <dostrow@gentoo.org>
 # This is an ugly hack to get around an issue with a 32-bit userland on ppc64.
@@ -949,21 +949,4 @@ kernel-2_pkg_postinst() {
 kernel-2_pkg_setup() {
 	[[ ${ETYPE} == headers ]] && setup_headers
 	[[ ${ETYPE} == sources ]] && echo ">>> Preparing to unpack ..."
-}
-
-kernel-2_pkg_prerm() {
-	local KV_DIR=${ROOT}/usr/src/linux-${KV_FULL}
-
-	if [[ ${ETYPE} == sources ]]; then
-		# if we have a config for it then we should act on it.
-		if [[ -f ${KV_DIR}/.config ]]; then
-			gzip -c ${KV_DIR}/.config > ${KV_DIR}.config.gz
-		fi
-
-		# have kbuild clean up for us.
-		if [[ -f ${KV_DIR}/include/linux/version.h ]]; then
-			ARCH=$(tc-arch-kernel)
-			make -C ${KV_DIR} mrproper
-		fi
-	fi
 }
