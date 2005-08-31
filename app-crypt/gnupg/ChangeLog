@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.128 2005/08/31 11:20:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.129 2005/08/31 21:02:15 dragonheart Exp $
+
+  31 Aug 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/gnupg-1.4.2-jari.patch, gnupg-1.4.2-r2.ebuild:
+  jari patch added as per bug #104059. Thanks for the explaination Venkat
+  Manakkal
 
 *gnupg-1.4.2-r2 (31 Aug 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.1 2005/08/31 11:20:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.2 2005/08/31 21:02:15 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Jari's patch to boost iterated key setup by factor of 128
-	# EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/gnupg-1.4.1.diff	
+	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${P}-jari.patch
 
 	if use idea; then
 		ewarn "Please read http://www.gnupg.org/why-not-idea.html"

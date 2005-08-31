@@ -1,0 +1,11 @@
+--- gnupg-1.4.1/g10/passphrase.c.old	Tue Feb 15 13:02:31 2005
++++ gnupg-1.4.1/g10/passphrase.c	Wed Mar 16 17:35:20 2005
+@@ -1331,7 +1331,7 @@
+ 	    if( create && !pass ) {
+ 		randomize_buffer(s2k->salt, 8, 1);
+ 		if( s2k->mode == 3 )
+-		    s2k->count = 96; /* 65536 iterations */
++		    s2k->count = 208; /* 8388608 byte count */
+ 	    }
+ 
+ 	    if( s2k->mode == 3 ) {
