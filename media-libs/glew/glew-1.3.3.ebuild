@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.3.ebuild,v 1.5 2005/08/30 21:55:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.3.3.ebuild,v 1.6 2005/08/31 01:49:23 gustavoz Exp $
 
 DESCRIPTION="The OpenGL Extension Wrangler Library"
 HOMEPAGE="http://glew.sourceforge.net/"
@@ -10,7 +10,7 @@ LICENSE="BSD GLX SGI-B GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 RDEPEND="virtual/opengl
 	virtual/x11
