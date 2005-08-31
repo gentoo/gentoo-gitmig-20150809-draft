@@ -1,8 +1,18 @@
-MD5 46ba9094b27258897d66f8d919ace249 ChangeLog 10596
-MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8b5d64ae737ad2de1d49c7b12e273c2c ChangeLog 10695
 MD5 a02d854ef1a6286be97b553e056e89d1 at-spi-1.6.3.ebuild 791
-MD5 962adb18277c3e8d98a424554e50d532 at-spi-1.6.4.ebuild 788
+MD5 46f84533bc16ff13dd51d6c72b642673 at-spi-1.6.4.ebuild 789
+MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 86ca4ef4b5edf8aa2ee2643854342ef6 at-spi-1.6.5.ebuild 847
 MD5 365985ef25775753dab336fc7ad8dc04 files/digest-at-spi-1.6.3 65
 MD5 8746d394d6122dd05e7ee86223621db7 files/digest-at-spi-1.6.4 65
 MD5 acc355e89818302fa7eaf4319ea4e01e files/digest-at-spi-1.6.5 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFcztwUpWvClEHQoRAgFAAJ9f0dvsMonjDLbROES8noY51rlNkQCffZhO
+VCwGc31cE3OUBH68aqH2pfA=
+=z/Db
+-----END PGP SIGNATURE-----
