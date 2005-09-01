@@ -1,6 +1,35 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.69 2005/08/07 12:47:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.70 2005/09/01 18:40:49 mkennedy Exp $
+
+*sbcl-0.9.4 (01 Sep 2005)
+
+  01 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/0.8.21/README.Gentoo, -files/0.8.21/sbcl.sh, -files/0.9.0/sbcl.sh,
+  -files/0.8.21/customize-target-features.lisp-prefix,
+  -files/0.8.21/sbcl-gentoo.patch, -files/0.9.0/sbcl-gentoo.patch,
+  -files/0.8.21/customize-target-features.lisp-suffix,
+  -files/0.8.21/sbcl-no-tests-gentoo.patch, -files/0.9.0/sbclrc,
+  -files/0.8.21/install-clc.lisp, -files/0.8.21/sbclrc,
+  -files/0.9.1/README.Gentoo, -files/0.9.0/README.Gentoo,
+  -files/0.9.1/customize-target-features.lisp-prefix,
+  -files/0.9.0/customize-target-features.lisp-prefix,
+  -files/0.9.0/customize-target-features.lisp-suffix,
+  -files/0.9.0/install-clc.lisp,
+  -files/0.9.1/customize-target-features.lisp-suffix,
+  -files/0.9.1/install-clc.lisp, -files/0.9.1/sbcl.sh,
+  -files/0.9.1/sbcl-gentoo.patch, -files/0.9.1/sbclrc,
+  +files/0.9.4/README.Gentoo,
+  +files/0.9.4/customize-target-features.lisp-prefix,
+  +files/0.9.4/customize-target-features.lisp-suffix,
+  +files/0.9.4/install-clc.lisp, +files/0.9.4/sbcl.sh,
+  +files/0.9.4/sbcl-gentoo.patch, +files/0.9.4/sbclrc,
+  -sbcl-0.8.21-r1.ebuild, -sbcl-0.9.0.ebuild, -sbcl-0.9.1.ebuild,
+  -sbcl-0.9.1-r1.ebuild, sbcl-0.9.3.ebuild, +sbcl-0.9.4.ebuild:
+  New upstream version; Resolves Bug #103899; Keywording stable amd64, sparc
+  and x86 for =dev-lisp/sbcl-0.9.3; Resolves Bug #103902; Remove older
+  ebuilds: <=dev-lisp/sbcl-0.9.1; Remove ppc keywords from
+  >=dev-lisp/sbcl-0.9.3 (see Bug #99456).
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> sbcl-0.9.2.ebuild:
   Stable on ppc.

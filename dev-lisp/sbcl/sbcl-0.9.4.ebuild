@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.21-r1.ebuild,v 1.3 2005/07/14 22:49:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.4.ebuild,v 1.1 2005/09/01 18:40:50 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
 BV_X86=0.8.1
 BV_PPC=0.8.15
-BV_SPARC=0.7.13
+BV_SPARC=0.8.15
 BV_MIPS=0.7.10
 BV_AMD64=0.8.19
 
@@ -23,13 +23,12 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc ~sparc ~mips ~amd64"
-IUSE="doc hardened ldb nosource threads unicode"
+KEYWORDS="~x86 -ppc ~sparc ~mips ~amd64"
+IUSE="hardened ldb nosource threads unicode"
 
 DEPEND="=dev-lisp/common-lisp-controller-4*
 	>=dev-lisp/cl-asdf-1.84
-	sys-apps/texinfo
-	doc? ( virtual/tetex )"
+	sys-apps/texinfo"
 
 PROVIDE="virtual/commonlisp"
 
@@ -46,10 +45,13 @@ must use gcc-config to select a profile with non-hardened features
 EOF
 		die
 	fi
+
+	# FIXME Maybe something should be done in the case where a user requests
+	# threads on a non-NPTL system
 }
 
 src_unpack() {
-	mkdir -p ${MY_WORK} && cp --verbose ${FILESDIR}/${PV}/* ${MY_WORK}
+	mkdir -p ${MY_WORK} && cp ${FILESDIR}/${PV}/* ${MY_WORK}
 	sed -i "s,/usr/lib,/usr/$(get_libdir),g" ${MY_WORK}/*
 
 	if use x86; then
@@ -60,8 +62,7 @@ src_unpack() {
 		mv ${PN}-${BV_PPC}-powerpc-linux ppc-binary
 	elif use sparc; then
 		unpack ${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2
-		echo mv ${PN}-${BV_SPARC} sparc-binary || die
-		mv ${PN}-${BV_SPARC} sparc-binary || die
+		mv ${PN}-${BV_SPARC}-sparc-linux sparc-binary || die
 	elif use mips; then
 		unpack ${PN}-${BV_MIPS}-mips-linux-binary.tar.gz
 		mv ${PN}-${BV_MIPS}-mips-linux mips-binary
@@ -71,20 +72,21 @@ src_unpack() {
 	fi
 
 	unpack ${P}-source.tar.bz2
-	epatch ${MY_WORK}/sbcl-gentoo.patch
-	epatch ${MY_WORK}/sbcl-no-tests-gentoo.patch
+	epatch ${MY_WORK}/sbcl-gentoo.patch || die
+	sed -i "s,/lib,/$(get_libdir),g" ${S}/install.sh
 
 	cp ${MY_WORK}/customize-target-features.lisp-prefix \
 		${S}/customize-target-features.lisp
-	use x86 && use threads \
-		&& echo '(enable :sb-thread)' \
-		>>${S}/customize-target-features.lisp
+	if use x86 || use amd64; then
+		use threads && echo '(enable :sb-thread)' \
+			>>${S}/customize-target-features.lisp
+	fi
 	use ldb \
 		&& echo '(enable :sb-ldb)' \
 		>>${S}/customize-target-features.lisp
-	use x86 \
-		&& echo '(enable :sb-futex)' \
-		>>${S}/customize-target-features.lisp
+#	use x86 \
+#		&& echo '(enable :sb-futex)' \
+#		>>${S}/customize-target-features.lisp
 	echo '(disable :sb-test)' >>${S}/customize-target-features.lisp
 	! use unicode \
 		&& echo '(disable :sb-unicode)' \
@@ -111,16 +113,15 @@ src_compile() {
 		bindir=../x86-64-binary
 	fi
 
-	PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
+	LANG=C PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
 		./make.sh 'sbcl
 			--sysinit /dev/null
 			--userinit /dev/null
-			--no-debugger
+			--disable-debugger
 			--core ${bindir}/output/sbcl.core' \
 				|| die
 	cd ${S}/doc/manual
-	make info
-	use doc && make ps pdf
+	LANG=C make info html || die
 }
 
 src_install() {
@@ -147,7 +148,6 @@ src_install() {
 	dohtml doc/html/*
 
 	doinfo ${S}/doc/manual/*.info
-	use doc && dodoc ${S}/doc/manual/*.{pdf,ps}
 
 	keepdir /usr/$(get_libdir)/common-lisp/sbcl
 
@@ -161,11 +161,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	standard-impl-postinst sbcl
+	LANG=C standard-impl-postinst sbcl
 }
 
 pkg_postrm() {
-	standard-impl-postrm sbcl /usr/bin/sbcl
+	LANG=C standard-impl-postrm sbcl /usr/bin/sbcl
 	if [ ! -x /usr/bin/sbcl ]; then
 		rm -rf /usr/$(get_libdir)/sbcl/ || die
 	fi
