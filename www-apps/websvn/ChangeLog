@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.5 2005/08/16 10:12:19 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.6 2005/09/01 15:09:30 gustavoz Exp $
+
+  01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> websvn-1.61.ebuild,
+  websvn-1.61-r1.ebuild:
+  Keyworded ~sparc wrt #104326
 
 *websvn-1.61-r1 (16 Aug 2005)
 
