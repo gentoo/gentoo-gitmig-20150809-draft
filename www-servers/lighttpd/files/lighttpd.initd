@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.4 2005/08/22 16:01:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.5 2005/09/01 14:22:35 ka0ttic Exp $
 
 opts="depend checkconfig start stop"
 
@@ -10,7 +10,7 @@ LIGHTTPD_PID="/var/run/lighttpd.pid"
 
 depend() {
 	need net
-	use mysql logger spawn-fcgi ldap
+	use mysql logger spawn-fcgi ldap famd
 	after sshd
 }
 
@@ -36,8 +36,7 @@ start() {
 stop() {
 	local rv=0
 	ebegin "Stopping lighttpd"
-	if start-stop-daemon --stop --quiet --pidfile ${LIGHTTPD_PID} \
-		--exec /usr/sbin/lighttpd ; then
+	if start-stop-daemon --stop --quiet --pidfile ${LIGHTTPD_PID} ; then
 		rm -f /var/run/lighttpd.pid
 	else
 		rv=1

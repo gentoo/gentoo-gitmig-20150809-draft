@@ -1,6 +1,24 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.40 2005/08/31 14:34:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.41 2005/09/01 14:22:35 ka0ttic Exp $
+
+*lighttpd-1.4.3 (01 Sep 2005)
+
+  01 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/1.4.1/01_all_any-fam.diff,
+  -files/1.4.1/04_all_mod_cgi-create-env-once.diff,
+  -files/1.4.1/02_all_optional_pcre.diff,
+  -files/1.4.1/05_all_fix_array_merging.diff,
+  -files/1.4.1/03_all_mod_cgi-wait.diff,
+  -files/1.4.1/06_all_check-for-waiting-write.diff,
+  -files/1.4.1/07_all_fix-dst_addr_buf-leak.diff,
+  -files/1.4.1/08_all_doc-updates.diff,
+  -files/1.4.1/09_all_lfs-range-requests.diff,
+  -files/1.4.1/10_all_stat_cache_init_after_setuid.diff,
+  files/conf/lighttpd.conf, files/lighttpd.initd, lighttpd-1.3.16.ebuild,
+  -lighttpd-1.4.1-r1.ebuild, -lighttpd-1.4.2.ebuild, +lighttpd-1.4.3.ebuild:
+  Version bump; fixed some init script bugs. 1.3.16 stable on x86,mips. Tidy
+  old ebuilds/patches.
 
   31 Aug 2005; Luca Barbato <lu_zero@gentoo.org> lighttpd-1.4.2.ebuild:
   memcache support on ppc tested
