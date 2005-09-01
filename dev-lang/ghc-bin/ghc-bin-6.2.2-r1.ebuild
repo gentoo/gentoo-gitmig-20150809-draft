@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2-r1.ebuild,v 1.4 2005/08/31 01:35:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2-r1.ebuild,v 1.5 2005/09/01 14:51:26 gustavoz Exp $
 
 IUSE="" # use the non-binary version if you want to have more choice
 
@@ -12,7 +12,7 @@ SRC_URI="x86? (  mirror://gentoo/${P}-r1-x86.tbz2 )
 HOMEPAGE="http://www.haskell.org/ghc/"
 
 LICENSE="as-is"
-KEYWORDS="x86 -amd64 ~ppc ~sparc -alpha"
+KEYWORDS="x86 -amd64 ~ppc sparc -alpha"
 SLOT="0"
 
 RESTRICT="nostrip" # already stripped
