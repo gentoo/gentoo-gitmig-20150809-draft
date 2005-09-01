@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.8 2005/09/01 16:44:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.9 2005/09/01 18:05:36 mkennedy Exp $
+
+  01 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> cedet-1.0_pre3.ebuild:
+  Keywording ~ppc-macos; Resolves Bug #103168.
 
 *cedet-1.0_pre3 (01 Sep 2005)
 
