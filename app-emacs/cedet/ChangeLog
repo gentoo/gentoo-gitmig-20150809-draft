@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.7 2005/04/24 10:59:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.8 2005/09/01 16:44:29 mkennedy Exp $
+
+*cedet-1.0_pre3 (01 Sep 2005)
+
+  01 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> +cedet-1.0_pre3.ebuild:
+  New upstream version; Partially resolves Bug #103168.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   cedet-1.0_beta3.ebuild:
