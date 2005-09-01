@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.86-r1.ebuild,v 1.6 2005/09/01 18:30:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.86-r1.ebuild,v 1.7 2005/09/01 18:37:01 mkennedy Exp $
 
 DEB_PV=1
 
@@ -27,6 +27,6 @@ src_install() {
 	insinto /usr/share/common-lisp/source/asdf
 	doins asdf.lisp wild-modules.lisp asdf-install.lisp
 	dodoc LICENSE README
-	insinto /usr/share/doc/${P}/examples
+	insinto /usr/share/doc/${PF}/examples
 	doins test/*
 }

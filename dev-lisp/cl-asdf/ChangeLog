@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-asdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.22 2005/09/01 18:30:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/ChangeLog,v 1.23 2005/09/01 18:37:01 mkennedy Exp $
+
+  01 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-asdf-1.86-r1.ebuild:
+  Correct documentation install path; Resolves Bug #99387.
 
   01 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-asdf-1.86-r1.ebuild:
   Keywording stable amd64, sparc.
