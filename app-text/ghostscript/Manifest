@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dfbd590b3ee2ebff333ebd1fc6d52140 ChangeLog 17463
 MD5 6807c3b6025d5b09e8eb6349769162d1 files/digest-ghostscript-7.05.6-r2 212
 MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r10 212
@@ -36,3 +39,10 @@ MD5 e5c681abcdd4309829734a5f91ab007b ghostscript-7.07.1-r7.ebuild 4288
 MD5 0adb31bdf1827f38952f2f0dd249e926 ghostscript-7.07.1-r8.ebuild 5491
 MD5 61b871a749bafeda4ced9f8c378bab41 ghostscript-7.07.1-r9.ebuild 5875
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDF1QqI1lqEGTUzyQRAuxvAJ9rXPgfs5s7KDVOIHlWDOe89gVd3QCeMDYA
+kZAoR/1hC7EbGt7P96j+zRg=
+=H0IF
+-----END PGP SIGNATURE-----
