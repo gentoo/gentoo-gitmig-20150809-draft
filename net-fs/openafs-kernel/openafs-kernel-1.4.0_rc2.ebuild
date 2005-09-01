@@ -1,31 +1,27 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.2.13.ebuild,v 1.6 2005/09/01 23:51:34 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.0_rc2.ebuild,v 1.1 2005/09/01 23:51:34 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
 PATCHVER=0.2a
 MY_PN=${PN/-kernel}
-MY_P=${MY_PN}-${PV}
+MY_PV=${PV/_/-}
+MY_P=${MY_PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The OpenAFS distributed file system kernel module"
 HOMEPAGE="http://www.openafs.org/"
-SRC_URI="http://openafs.org/dl/${MY_PN}/${PV}/${MY_P}-src.tar.bz2
+SRC_URI="http://openafs.org/dl/${MY_PN}/candidate/${MY_PV}/${MY_P}-src.tar.bz2
 	mirror://gentoo/${MY_PN}-gentoo-${PATCHVER}.tar.bz2
 	http://dev.gentoo.org/~stefaan/distfiles/${MY_PN}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ia64"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)
 
 pkg_setup() {
-	if kernel_is gt 2 4; then
-		eerror "openafs-1.2 does not support kernels newer than Linux 2.4."
-		einfo "Please try the openafs-1.4 series"
-		die "Kernel is too new!"
-	fi
 	linux-mod_pkg_setup
 }
 
