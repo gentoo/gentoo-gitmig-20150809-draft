@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1421 2005/08/31 23:53:51 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1422 2005/09/01 08:31:09 satya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -685,10 +685,13 @@ net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/netatalk:cracklib - Support for cracklib strong password checking
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
-net-fs/samba:libclamav - Enable clamav as virus scanner
-net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
-net-fs/samba:quotas - Add support for user quotas
-net-fs/samba:winbind - Add support for the winbind auth daemon
+net-fs/samba:automount - Enables automount support
+net-fs/samba:async - Enables asynchronous input/output
+net-fs/samba:libclamav - Enables clamav libraries, without needing to use the daemon
+net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
+net-fs/samba:quotas - Enables support for user quotas
+net-fs/samba:syslog - Enables support for syslog
+net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
 net-ftp/proftpd:authfile - Enable support for auth-file module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
