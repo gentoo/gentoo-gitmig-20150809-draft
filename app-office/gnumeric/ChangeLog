@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.109 2005/09/01 17:28:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.110 2005/09/01 17:50:19 hansmi Exp $
+
+  01 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gnumeric-1.4.3-r2.ebuild:
+  Stable on ppc and hppa.
 
   01 Sep 2005; Luis Medinas <metalgod@gentoo.org> gnumeric-1.4.3-r2.ebuild:
   Marked Stable on AMD64. Fixes bug #104010.
