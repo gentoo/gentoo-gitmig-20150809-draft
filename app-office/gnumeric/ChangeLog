@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.107 2005/09/01 14:48:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.108 2005/09/01 16:16:43 port001 Exp $
+
+  01 Sep 2005; Ian Leitch <port001@gentoo.org> ChangeLog:
+  Stable on x86, bug #104010
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnumeric-1.4.3-r2.ebuild:
