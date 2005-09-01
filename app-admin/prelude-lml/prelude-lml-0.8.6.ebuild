@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.8.6.ebuild,v 1.8 2005/01/01 11:18:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.8.6.ebuild,v 1.9 2005/09/01 23:30:10 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="doc debug"
 DEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!app-admin/prelude-lml-cvs
-	dev-libs/libprelude
+	<dev-libs/libprelude-0.9.0_rc1
 	dev-libs/libpcre
 	doc? ( dev-util/gtk-doc )"
 
@@ -43,4 +43,10 @@ src_install() {
 	into /usr/share/prelude/ruleset
 	mv ${D}/etc/prelude-lml/ruleset ${D}/usr/share/prelude/ruleset/lml
 	dosym /usr/share/prelude/ruleset/lml /etc/prelude-lml/ruleset
+}
+
+pkg_postinst() {
+	einfo "If you want to use unstable prelude, consider using unstable"
+	einfo "app-admin/prelude-lml to avoid undesired downgrades of"
+	einfo "dev-libs/libprelude."
 }

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.17 2005/07/29 02:27:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.18 2005/09/01 23:30:10 vanquirius Exp $
+
+  01 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  prelude-lml-0.8.6.ebuild:
+  Depend on <dev-libs/libprelude-0.9.0_rc1. Fixes bug 104503. Thanks to Eric
+  Ireland <Artanin@gmail.com>.
 
   29 Jul 2005; Marcelo Goes <vanquirius@gentoo.org>
   -prelude-lml-0.9.0_rc4.ebuild:
