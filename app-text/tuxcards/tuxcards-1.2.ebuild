@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.11 2005/08/02 18:42:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.12 2005/09/01 13:56:22 gustavoz Exp $
 
 inherit kde-functions
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tifskom.de/tux/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 DEPEND="${DEPEND}
 		=x11-libs/qt-3*
