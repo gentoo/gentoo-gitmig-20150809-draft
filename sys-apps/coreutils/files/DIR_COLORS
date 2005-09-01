@@ -4,17 +4,6 @@
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
 
-# COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
-# pipes. 'all' adds color characters to all output. 'none' shuts colorization
-# off.
-COLOR tty
-
-# Extra command line options for ls go here.
-# Basically these ones are:
-#  -F = show '/' for dirs, '*' for executables, etc.
-#  -T 0 = don't trust tab spacing when formatting ls output.
-OPTIONS -F -T 0
-
 # Below, there should be one TERM entry for each termtype that is colorizable
 TERM ansi
 TERM color-xterm
@@ -31,6 +20,7 @@ TERM con80x50
 TERM con80x60
 TERM cons25
 TERM console
+TERM cygwin
 TERM dtterm
 TERM Eterm
 TERM gnome
@@ -40,11 +30,13 @@ TERM kterm
 TERM linux
 TERM linux-c
 TERM mach-color
+TERM putty
 TERM rxvt
 TERM rxvt-cygwin
 TERM rxvt-cygwin-native
 TERM rxvt-unicode
 TERM screen
+TERM screen-bce
 TERM screen-w
 TERM screen.linux
 TERM vt100
@@ -52,9 +44,6 @@ TERM xterm
 TERM xterm-256color
 TERM xterm-color
 TERM xterm-debian
-
-# EIGHTBIT, followed by '1' for on, '0' for off. (8-bit output)
-EIGHTBIT 1
 
 # Below are the color init strings for the basic file types. A color init
 # string consists of one or more of the following numeric codes:
