@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.30 2005/09/01 14:37:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.31 2005/09/01 19:20:34 truedfx Exp $
+
+*librep-0.17-r2 (01 Sep 2005)
+
+  01 Sep 2005; Harald van Dĳk <truedfx@gentoo.org> +librep-0.17-r2.ebuild:
+  get rid of old bundled libtool
+  fix warning about unquoted AM_PATH_REP
+  some general cleanups
 
   01 Sep 2005; Danny van Dyk <kugelfang@gentoo.org> librep-0.17-r1.ebuild:
   Fixed multilib-strict Bug #102933.
