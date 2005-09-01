@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r14.ebuild,v 1.3 2005/07/07 11:42:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r14.ebuild,v 1.4 2005/09/01 20:44:37 sbriesen Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,6 @@ RDEPEND=">=sys-fs/e2fsprogs-1.19
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	slang? ( >=sys-libs/slang-1.4.9-r1 )
 	samba? ( >=net-fs/samba-3.0.0 )
-	unicode? ( >=sys-libs/slang-1.4.9-r1 )
 	X? ( virtual/x11 )
 	x86? ( 7zip? ( >=app-arch/p7zip-4.16 ) )
 	ppc? ( 7zip? ( >=app-arch/p7zip-4.16 ) )
@@ -58,7 +57,7 @@ src_unpack() {
 	# Fix building with gcc4.
 	epatch ${FILESDIR}/${P}-gcc4.patch
 
-	if use unicode && use slang; then
+	if use slang && use unicode; then
 		epatch ${FILESDIR}/${P}-utf8.patch.bz2
 	fi
 }
