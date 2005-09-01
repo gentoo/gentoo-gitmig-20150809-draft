@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.4 2005/08/20 22:14:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.5 2005/09/01 15:14:03 matsuu Exp $
+
+  01 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> font-util-0.99.0.ebuild:
+  Added ~sh
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> font-util-0.99.0.ebuild:
   Marked ~ppc
