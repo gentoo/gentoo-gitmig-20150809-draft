@@ -1,6 +1,6 @@
-# ChangeLog for net-analyzer/netidscover
+# ChangeLog for net-analyzer/netdiscover
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.1 2005/09/01 12:39:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdiscover/ChangeLog,v 1.2 2005/09/01 16:54:05 swegener Exp $
 
 *netdiscover-0.3_beta5 (01 Sep 2005)
 
