@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c234725b2314bcef8993b0fc9bf7271 gawk-3.1.5.ebuild 3128
-MD5 17723bdf5835706a667cc3036cdf600b gawk-3.1.4-r4.ebuild 3860
-MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
-MD5 94e786a1a35879c4200bd7683c923b19 ChangeLog 9637
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
+MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
+MD5 7c234725b2314bcef8993b0fc9bf7271 gawk-3.1.5.ebuild 3128
+MD5 94e786a1a35879c4200bd7683c923b19 ChangeLog 9637
+MD5 17723bdf5835706a667cc3036cdf600b gawk-3.1.4-r4.ebuild 3860
 MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
-MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
-MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
-MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3-r2 63
+MD5 214193d03d4c328a4ba33aadc008d301 files/digest-gawk-3.1.5 63
 MD5 e01879d30ddf2eb060f2ba2fa745a922 files/digest-gawk-3.1.4-r4 132
-MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
-MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
+MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
 MD5 89145324fea9791b0caa1b09f5cee0cb files/gawk-3.1.5-core.patch 643
-MD5 e9d4cc762031e2ebdff4376c67e70a62 files/digest-gawk-3.1.5 132
 MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
+MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
+MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
+MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
+MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3-r2 63
+MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
 MD5 f3561ccd6d2c2893dc5685743786dcb7 files/filefuncs/Makefile 973
 MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFwLFKRy60XGEcJIRAqANAJ4t/+5suGzFvZ56nmdnu0jQanb+3ACfcJA5
-bS4uRzgKyxH1fkmRxIcFTdQ=
-=/EEE
------END PGP SIGNATURE-----
