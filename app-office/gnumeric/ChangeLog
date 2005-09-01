@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.105 2005/08/27 17:46:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.106 2005/09/01 10:50:46 leonardop Exp $
+
+*gnumeric-1.4.3-r2 (01 Sep 2005)
+
+  01 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/gnumeric-1.4.3-pcre_int_overflow.patch, +gnumeric-1.4.3-r2.ebuild:
+  Added patch for a potential integer overflow in pcre (bug #104010). Modified
+  pkg_setup() to avoid having pkgconfig as a run-time dependency.
 
   27 Aug 2005; Guy Martin <gmsoft@gentoo.org> gnumeric-1.4.3-r1.ebuild:
   Stable on hppa.
