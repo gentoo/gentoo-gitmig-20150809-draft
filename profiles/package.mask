@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4367 2005/09/01 08:31:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4368 2005/09/01 11:30:11 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -589,28 +589,6 @@ dev-util/pida
 # bugs with the actual package to https://bugzilla.icculus.org or via email
 # to icculus@icculus.org
 =games-fps/ut2004-3355-r2
-
-# Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
-# To be removed. Bundled with x11-libs/gtk+.
-x11-themes/gtk-engines-pixbuf
-
-# Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
-# To be removed. Unmaintained and/or without a valid homepage/SRC_URI.
-<x11-themes/gtk-engines-smooth-0.6.0.1-r1
-<x11-themes/geramik-0.27-r1
-x11-themes/gtk-engines-eazel
-x11-themes/gtk-engines-magicchicken
-
-# Leonardo Boshell <leonardop@gentoo.org> (01 Aug 2005)
-# To be removed. These are provided by x11-themes/gtk-engines.
->=x11-themes/gtk-engines-thinice-2
->=x11-themes/gtk-engines-lighthouseblue-0.7
-x11-themes/gtk-engines-crux
-x11-themes/gtk-engines-metal
-x11-themes/gtk-engines-notif
-x11-themes/gtk-engines-pixmap
-x11-themes/gtk-engines-raleigh
-x11-themes/gtk-engines-redmond95
 
 # Renat Lumpau <rl03@gentoo.org> (01 Aug 2005)
 # Installs into /usr/local, ebuild should not have been committed
