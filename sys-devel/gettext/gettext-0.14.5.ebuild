@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.1 2005/09/01 06:50:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.2 2005/09/01 07:40:32 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -76,13 +76,12 @@ src_install() {
 		rm -f "${D}"/usr/include/libintl.h
 		rm -f "${D}"/usr/$(get_libdir)/libintl.*
 	fi
-	rm -f "${D}"/usr/share/locale/locale.alias
+	rm -f "${D}"/usr/share/locale/locale.alias "${D}"/usr/lib/charset.alias
 
 	# older gettext's sometimes installed libintl ...
 	# need to keep the linked version or the system
 	# could die (things like sed link against it :/)
 	if use ppc-macos; then
-		rm -f "${D}"/usr/lib/charset.alias
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.2.dylib ] ; then
 			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
 			touch "${D}"/usr/$(get_libdir)/libintl.2.dylib

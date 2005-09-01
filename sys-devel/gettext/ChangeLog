@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.95 2005/09/01 06:50:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.96 2005/09/01 07:40:32 flameeyes Exp $
+
+  01 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> gettext-0.14.5.ebuild:
+  Remove charset.alias always, not just in ppc-macos case.
 
 *gettext-0.14.5 (01 Sep 2005)
 
