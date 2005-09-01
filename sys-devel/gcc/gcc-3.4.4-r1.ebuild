@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4-r1.ebuild,v 1.2 2005/08/28 20:03:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.4-r1.ebuild,v 1.3 2005/09/01 01:51:15 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.6"
@@ -40,7 +40,7 @@ inherit toolchain eutils
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
 # Stuff to test before adding ~arch
-KEYWORDS="-* ~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~sparc ~x86"
+KEYWORDS="-* ~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 sh ~sparc ~x86"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
