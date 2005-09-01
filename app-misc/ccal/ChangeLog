@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ccal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ChangeLog,v 1.5 2005/06/05 11:48:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ccal/ChangeLog,v 1.6 2005/09/01 03:28:37 metalgod Exp $
+
+  01 Sep 2005; Luis Medinas <metalgod@gentoo.org> ccal-0.6.ebuild:
+  Added ~amd64 keywords.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> ccal-0.6.ebuild:
   Stable on ppc.

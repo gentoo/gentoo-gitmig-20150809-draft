@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f2ffa1d96f919dc2085d0a29fe8ea083 ChangeLog 717
+MD5 475400776c3c7d7013926c5205c66eb8 ccal-0.6.ebuild 714
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 bb984fef438cf1e9d9e9712b9f1c0cc3 ccal-0.6.ebuild 705
-MD5 2757a5f3d40acbdd3d958fa2fb6c5833 ChangeLog 622
-MD5 f83bdf8f256e9d2a0ae8a09629933cd0 files/instructions.htm 4658
 MD5 f82010293d51e087b79314187706ed9a files/digest-ccal-0.6 59
+MD5 f83bdf8f256e9d2a0ae8a09629933cd0 files/instructions.htm 4658
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFoLewUpWvClEHQoRAoLcAJwPcC2psCBNitHAvhP4TxweIjJ2YQCffP5r
+f/ewNvM/82IfNdqxAZ5NSEM=
+=kYir
+-----END PGP SIGNATURE-----
