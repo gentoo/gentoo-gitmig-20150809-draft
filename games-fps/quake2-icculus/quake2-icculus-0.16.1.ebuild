@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.7 2005/08/31 03:45:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.8 2005/09/01 02:34:38 vapier Exp $
 
 inherit eutils games
 
@@ -15,13 +15,14 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
-IUSE="arts svga sdl aalib dedicated opengl noqmax rogue xatrix ipv6 joystick X"
+IUSE="aalib alsa arts dedicated ipv6 joystick noqmax opengl rogue sdl svga X xatrix"
 
 RDEPEND="opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	sdl? ( media-libs/libsdl )
 	aalib? ( media-libs/aalib )
 	X? ( virtual/x11 )
+	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )"
 DEPEND="${RDEPEND}
 	rogue? ( app-arch/sharutils )
@@ -94,6 +95,7 @@ src_compile() {
 			BUILD_QMAX=${BUILD_QMAX} \
 			HAVE_IPV6=$(yesno ipv6) \
 			BUILD_ARTS=$(yesno arts) \
+			BUILD_ALSA=$(yesno alsa) \
 			SDLDIR=/usr/lib \
 			DEFAULT_BASEDIR="${GAMES_DATADIR}/quake2-data" \
 			DEFAULT_LIBDIR="${GAMES_LIBDIR}/${PN}${libsuffix}" \
