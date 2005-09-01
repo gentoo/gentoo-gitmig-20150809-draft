@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.1.5.ebuild,v 1.1 2005/08/30 02:31:45 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.1.5.ebuild,v 1.2 2005/09/01 22:46:14 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=gnome-base/libgnomeui-2.4
 	>=x11-themes/gnome-icon-theme-2.10
 	app-text/iso-codes
+	media-libs/musicbrainz
 	gnome? ( >=gnome-base/nautilus-2.10 )
 	lirc? ( app-misc/lirc )
 	xine? ( >=media-libs/xine-lib-1
