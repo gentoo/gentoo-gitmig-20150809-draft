@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.9 2005/08/14 15:45:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.7.ebuild,v 1.10 2005/09/01 17:05:41 josejx Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -135,6 +135,8 @@ src_configure() {
 	use elibc_uclibc || replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
 	filter-flags -malign-double
+	# Fixes bug #97645
+	use ppc && filter-flags -mpowerpc-gpopt
 
 	export LC_ALL="C"
 	local myconf=""
