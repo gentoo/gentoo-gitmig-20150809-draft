@@ -1,5 +1,19 @@
---- patch-2.5.9.orig/pch.c
-+++ patch-2.5.9/pch.c
+         From: Paul Eggert
+      Subject: Re: patch2.5.9 fails on some dos generated patches
+         Date: Thu, 05 May 2005 17:46:30 -0700
+   User-agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.4 (gnu/linux)
+
+This should fix your problem:
+
+2003-07-02  Paul Eggert  <address@hidden>
+
+        * pch.c (intuit_diff_type): If a unified-diff header line contains
+        trailing CR, strip CR from each body line.  This corrects a bug
+        introduced in the 2003-05-18 patch.  Bug reported by Andreas
+        Gruenbacher.
+
+--- pch.c
++++ pch.c
 @@ -366,10 +366,16 @@
  	if (!stars_last_line && strnEQ(s, "*** ", 4))
  	    name[OLD] = fetchname (s+4, strippath, &p_timestamp[OLD]);
