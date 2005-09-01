@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wanpipe
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wanpipe/ChangeLog,v 1.1 2005/08/31 23:57:04 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wanpipe/ChangeLog,v 1.2 2005/09/01 00:00:33 stkn Exp $
+
+  01 Sep 2005; Stefan Knoblich <stkn@gentoo.org> wanpipe-2.3.2_p4.ebuild:
+  Removed duplicate LICENSE.
 
 *wanpipe-2.3.2_p4 (31 Aug 2005)
 

@@ -1,5 +1,5 @@
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 3cbb956c199f57eab082e3b052d0dfbf ChangeLog 667
-MD5 0a60f5435896afd34bbd02e9a6d1ef1c wanpipe-2.3.2_p4.ebuild 5431
+MD5 f4cf2763aff8f199af0672237d167c84 ChangeLog 771
+MD5 6d1a67d9fc07e4a3a8e737c814b2e195 wanpipe-2.3.2_p4.ebuild 5419
 MD5 a2e004ccfe869825d025a43d1262dd1d files/wanpipe-2.3.2_p4-gcc34.diff 239
 MD5 1c8be1e0d344dc6c31cc15fb7c5c4ae0 files/digest-wanpipe-2.3.2_p4 65

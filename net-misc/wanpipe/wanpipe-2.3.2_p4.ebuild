@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wanpipe/wanpipe-2.3.2_p4.ebuild,v 1.1 2005/08/31 23:57:04 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wanpipe/wanpipe-2.3.2_p4.ebuild,v 1.2 2005/09/01 00:00:33 stkn Exp $
 
 inherit eutils toolchain-funcs linux-mod
 
@@ -8,11 +8,9 @@ DESCRIPTION="Driver for Sangoma WAN cards"
 HOMEPAGE="http://www.sangoma.com/"
 SRC_URI="ftp://ftp.sangoma.com/linux/current_wanpipe/${P//_p/-}.tgz"
 
-LICENSE=""
+LICENSE="WANPIPE"
 SLOT="0"
 KEYWORDS="~x86"
-
-LICENSE="WANPIPE"
 
 IUSE="adsl"
 
