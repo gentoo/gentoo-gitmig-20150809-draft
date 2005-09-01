@@ -1,21 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.31 2005/05/07 09:39:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.32 2005/09/01 05:54:19 vapier Exp $
 
   07 May 2005; Mike Frysinger <vapier@gentoo.org> patch-2.5.9-r1.ebuild:
   Install as gpatch on non-GNU systems #91560.
-
-  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> patch-2.5.9-r1.ebuild:
-  stable on ia64
-
-  17 Feb 2005; Luca Barbato <lu_zero@gentoo.org> patch-2.5.9-r1.ebuild:
-  Marked ppc
-
-  01 Feb 2005; Danny van Dyk <kugelfang@gentoo.org> patch-2.5.9-r1.ebuild:
-  Removed amd64-hardened workaround, as it isn't necessary anymore.
-
-  20 Jan 2005; Marcus Hanwell <cryos@gentoo.org> patch-2.5.9-r1.ebuild:
-  Marked stable for amd64.
 
 *patch-2.5.9-r1 (16 Nov 2004)
 
