@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.199 2005/08/24 10:09:01 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.200 2005/09/01 08:12:36 satya Exp $
+
+*samba-3.0.20 (01 Sep 2005)
+
+  01 Sep 2005; Christian Andreetta <satya@gentoo.org> +files/README.gentoo,
+  +samba-3.0.20.ebuild:
+  version bump (bug #103164). Non-linux compatibility (bug #101675)
 
   24 Aug 2005; Christian Andreetta <satya@gentoo.org>
   samba-3.0.14a-r2.ebuild, samba-3.0.14a-r3.ebuild:
