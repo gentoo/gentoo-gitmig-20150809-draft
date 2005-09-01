@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.12 2005/07/17 10:03:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.13 2005/09/01 05:12:26 vapier Exp $
+
+*irrlicht-0.12.0 (01 Sep 2005)
+
+  01 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/irrlicht-0.12.0-64bit.patch, +files/irrlicht-0.12.0-opengl.patch,
+  +irrlicht-0.12.0.ebuild:
+  Version bump #103748 by Guido.
 
 *irrlicht-0.11.0 (17 Jul 2005)
 

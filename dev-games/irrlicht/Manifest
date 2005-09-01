@@ -5,18 +5,22 @@ MD5 b0fc6ca5b139ee250e55224ef04f4e64 irrlicht-0.11.0.ebuild 1698
 MD5 ad41838cd74c70f9c72295bda4662786 metadata.xml 790
 MD5 283af2669b7fb7a7b672f112fc509734 irrlicht-0.7.1.ebuild 1441
 MD5 af0ddfac8a4fb8f838e150be97330291 irrlicht-0.10.0.ebuild 1692
-MD5 9301e86d3a7583c1449e266c1f2b17ec ChangeLog 1967
+MD5 741cf512ac19ccb995e8964ac23dbd9c irrlicht-0.12.0.ebuild 2069
+MD5 447d48bd8ce7e6ed9baf18d2067356a1 ChangeLog 2185
+MD5 e03898aad8550858f91a0b78c888c3f8 files/irrlicht-0.12.0-64bit.patch 10232
 MD5 3d0c46bd872601ae474803a089531688 files/0.7.1-opengl.patch 189
 MD5 a802b6daa10af3a510febd31ec1b2dc1 files/digest-irrlicht-0.7.1 127
+MD5 482fcd4ab66e17c76273ec131a05920a files/irrlicht-0.12.0-opengl.patch 655
 MD5 312164f80e743bb92907e37a76d96670 files/digest-irrlicht-0.10.0 66
 MD5 5429bde56275c9f5201369a080f03f57 files/0.7.1-system-libs.patch 617
+MD5 0ad2514a81760732b181856cf7eab90e files/digest-irrlicht-0.12.0 66
 MD5 33d681a58fa24489d6bdf9f48346ed08 files/0.7.1-jpeg.patch 536
 MD5 9e43009bf90ea86626836ef35b62aec5 files/irrlicht-0.10.0-opengl.patch 648
 MD5 1088412668e0f0efbb237c7bc74a4ebc files/digest-irrlicht-0.11.0 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDFnqDgIKl8Uu19MoRAu2VAJ0Yx12WX1w1vs+YzCwCqdyqYsu+ygCZAa7Z
-L6xDvov6Y2AXPunEq9EOcWU=
-=QgG9
+iD8DBQFDFo3YgIKl8Uu19MoRApr4AJ4jVmwmJp5tK+1cdUVm/6IzObNbbwCfXkYE
+tzFx7s3CK47g7juCdtG3CzM=
+=BpjZ
 -----END PGP SIGNATURE-----
