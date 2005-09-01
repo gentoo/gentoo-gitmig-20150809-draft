@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 afbe3fbbbbd2558251393499e2180888 ChangeLog 2343
 MD5 a497bf31d6576e0f37a9b2dacfadedb0 cfv-1.18.1.ebuild 640
 MD5 b74768433b41735497a6e99aaf7afe85 files/digest-cfv-1.18.1 61
 MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDF0f3I1lqEGTUzyQRAqPjAKCsEOhI41WikMdDBahzVAzChToMGwCfZRV+
+WWgeJtrfMtEl+WtyDN7FURg=
+=/JDg
+-----END PGP SIGNATURE-----
