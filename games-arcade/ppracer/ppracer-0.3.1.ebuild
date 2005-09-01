@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.3 2005/05/01 18:15:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.4 2005/09/01 16:17:21 dang Exp $
 
 inherit flag-o-matic gnuconfig games
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/ppracer/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="X"
 
 DEPEND="virtual/opengl
