@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.194 2005/08/09 22:40:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.195 2005/09/01 05:56:35 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -174,6 +174,8 @@ epatch() {
 	local PATCH_SUFFIX=""
 	local SINGLE_PATCH="no"
 	local x=""
+
+	unset P4CONFIG P4PORT P4USER # keep perforce at bay #56402
 
 	if [ "$#" -gt 1 ]
 	then
