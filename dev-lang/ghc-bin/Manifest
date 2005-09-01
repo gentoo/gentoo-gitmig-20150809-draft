@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e5e3b68f1863c338a231811b31c00f1 ghc-bin-6.4.ebuild 1137
 MD5 cedfbec21f987358c6e37846bed8a870 ghc-bin-6.2.2-r1.ebuild 1034
 MD5 87f638e52cf614305933dde23f040a8c ghc-bin-5.04.3.ebuild 1500
@@ -7,3 +10,10 @@ MD5 a82ba08a8abb4ae38bcc8d467c665e7b files/10ghc 40
 MD5 2b726390b70f784de758ee02184ef450 files/digest-ghc-bin-5.04.3 171
 MD5 aeec673d67613d60a91b5d8d3a11b184 files/digest-ghc-bin-6.2.2-r1 218
 MD5 3919aa4d517b8bc37bc59b8e7dc4a334 files/digest-ghc-bin-6.4 356
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDFxWJKRy60XGEcJIRAm0WAJ4/3UNesrTAajwkC25mlCuJ+kwt+gCglu9A
+9vt3eV1GwVdbCpu7ay4YZgo=
+=SI9j
+-----END PGP SIGNATURE-----
