@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4368 2005/09/01 11:30:11 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4369 2005/09/01 11:55:46 xmerlin Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+
+# Christian Zoffoli <xmerlin@gentoo.org> (1 Sep 2005)
+# Masked as this version has a bug
+=sys-cluster/drbd-0.7.12
 
 # Stuart Herbert <stuart@gentoo.org> (1 Sep 2005)
 # Masked until all packages from the overlay are in
@@ -692,7 +697,15 @@ media-sound/ipodder
 
 # Markus Nigbur <pYrania@gentoo.org> (01 Jul 2005)
 # Masked due to a pretty big bug with crosscompile support.
+<<<<<<< package.mask
 =sys-devel/distcc-2.18.3-r8
+
+# Colin Kingsley <tercel@gentoo.org> (30 Jun 2005)
+# Major revisions. Masked for testing.
+>app-portage/mirrorselect-1.0.3
+=======
+=sys-devel/distcc-2.18.3-r8
+>>>>>>> 1.4189
 
 # Aaron Walker <ka0ttic@gentoo.org> (30 Jun 2005)
 # Masked due to constant security bugs.
