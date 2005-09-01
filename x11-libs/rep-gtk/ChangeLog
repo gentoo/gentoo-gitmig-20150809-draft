@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.44 2005/09/01 14:48:49 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.45 2005/09/01 19:33:55 truedfx Exp $
+
+*rep-gtk-0.18-r3 (01 Sep 2005)
+
+  01 Sep 2005; Harald van Dĳk <truedfx@gentoo.org> +rep-gtk-0.18-r3.ebuild:
+  ebuild cleanup, force librep update (new revision to keep changes out of
+  stable)
 
   01 Sep 2005; Danny van Dyk <kugelfang@gentoo.org> rep-gtk-0.18-r2.ebuild:
   Fixed multilib-strict Bug #102935.
