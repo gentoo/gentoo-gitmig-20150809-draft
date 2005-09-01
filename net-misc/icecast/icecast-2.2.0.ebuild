@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.2.0.ebuild,v 1.5 2005/08/24 16:25:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.2.0.ebuild,v 1.6 2005/09/01 23:56:55 flameeyes Exp $
 
-IUSE="doc yp"
+IUSE="yp"
 
 inherit eutils
 
@@ -39,10 +39,10 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist
-	use doc && dohtml -A chm,hhc,hhp doc/*
+	dohtml -A chm,hhc,hhp doc/*
+	doman ${S}/debian/icecast2.1
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d.icecast icecast
+	newinitd ${FILESDIR}/init.d.icecast icecast
 
 	fperms 600 /etc/icecast2/icecast.xml
 

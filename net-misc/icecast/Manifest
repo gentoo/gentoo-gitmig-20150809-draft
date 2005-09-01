@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 122115f6d532fe13d5ad53e5e097bd30 ChangeLog 7033
-MD5 12dcb7de496e004f4cecb4f76648e4ce icecast-2.2.0.ebuild 1156
+MD5 20d5786603be2710b8e75bc3409ee7fe ChangeLog 7231
+MD5 2c2b3c9ebae24f5549c6bf6b7b71a3db icecast-2.2.0.ebuild 1152
 MD5 f0d6c4a492be7ed7ef6f3ee6a49cb2e0 icecast-2.1.0.ebuild 1068
 MD5 f21d4be19306962df91c96bc5cfd7f8c icecast-2.0.2.ebuild 1113
 MD5 5eff8bd7d69f53898b122ef0ce6d4019 icecast-2.0.1-r1.ebuild 1047
@@ -17,7 +17,7 @@ MD5 294ad1abe0a9f4abc496f53e158695be files/init.d.icecast 357
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDJ+Fj5H05b2HAEkRAl1cAKCYFasPZNChDBymS91m5qDETMzKIACePCdx
-Hxtr1JKGyzrHKceMBeF050Y=
-=c7EO
+iD8DBQFDF5Vgj5H05b2HAEkRAj3gAKCixm6u96rfj8nJ+ARgWFH8M5rV/QCeOmsB
+VH0J4pZMYsGgXOQpKI3NhWM=
+=7BoR
 -----END PGP SIGNATURE-----
