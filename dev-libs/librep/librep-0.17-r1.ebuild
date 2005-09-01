@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.4 2005/08/22 18:35:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.5 2005/09/01 14:37:14 kugelfang Exp $
 
 IUSE="readline"
 
-inherit libtool toolchain-funcs
+inherit libtool toolchain-funcs multilib
 
 DESCRIPTION="Shared library implementing a Lisp dialect"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -24,11 +24,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	elibtoolize
 
-	local myconf
-
-	use readline \
-		&& myconf='--with-readline' \
-		|| myconf='--without-readline'
+	local myconf="$(use_with readline)"
 	use ppc && myconf="${myconf} --with-stack-direction=1"
 	LC_ALL=""
 	LINGUAS=""
@@ -36,7 +32,7 @@ src_compile() {
 	export LC_ALL LINGUAS LANG
 
 	CC=$(tc-getCC) econf \
-		--libexecdir=/usr/lib \
+		--libexecdir=/usr/$(get_libdir) \
 		--without-gmp \
 		--without-ffi \
 		${myconf} || die "configure failure"
