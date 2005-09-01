@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/webcdwriter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.5 2005/08/16 10:28:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.6 2005/09/01 04:26:02 metalgod Exp $
+
+*webcdwriter-2.7.2 (01 Sep 2005)
+
+  01 Sep 2005; Luis Medinas <metalgod@gentoo.org> +webcdwriter-2.7.2.ebuild:
+  Version Bump. Added ~amd64 keyword.
 
   16 Aug 2005; Lars Weiler <pylon@gentoo.org> -webcdwriter-2.6.8.ebuild:
   Clean out old versions.
