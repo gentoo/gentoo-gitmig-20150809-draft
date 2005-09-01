@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.9 2005/01/01 11:18:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.10.ebuild,v 1.10 2005/09/01 23:14:22 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="ssl doc mysql postgres debug"
 RDEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!app-admin/prelude-manager-cvs
-	dev-libs/libprelude
+	<dev-libs/libprelude-0.9.0_rc1
 	ssl? ( dev-libs/openssl )
 	doc? ( dev-util/gtk-doc )
 	mysql? ( dev-db/mysql )
@@ -52,4 +52,10 @@ src_install() {
 	insinto /etc/conf.d
 	insopts -m 644
 	newins ${FILESDIR}/gentoo.conf prelude-manager
+}
+
+pkg_postinst() {
+	einfo "If you want to use unstable prelude, consider using unstable"
+	einfo "app-admin/prelude-manager to avoid undesired downgrades of"
+	einfo "dev-libs/libprelude."
 }
