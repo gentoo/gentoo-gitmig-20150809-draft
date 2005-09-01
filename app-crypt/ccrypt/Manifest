@@ -1,4 +1,14 @@
-MD5 c8a412864b8986820d3dffe4304b73cf ChangeLog 593
-MD5 ec4fb3404013f73edc46a66c6168dc67 ccrypt-1.7.ebuild 683
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 14ab8c60c0625c47f83eceeb85523717 ccrypt-1.7.ebuild 684
+MD5 756f76da7875032ecb087fbfd53effb8 ChangeLog 656
 MD5 59af1ba132e999b7d1c7b6d42ed4b1e7 metadata.xml 248
 MD5 bda761df87b02dfdba73a468a2c7b33c files/digest-ccrypt-1.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDFyrNomPajV0RnrERAo9lAKCENwulvYFIwNUkA+nxm8O9MvG10gCdG0+Q
+8AOleLPS/tjCPGYH7cRsu6c=
+=BXQ4
+-----END PGP SIGNATURE-----
