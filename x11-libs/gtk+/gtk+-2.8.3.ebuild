@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.2.ebuild,v 1.1 2005/08/25 18:34:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.3.ebuild,v 1.1 2005/09/01 10:29:28 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -12,10 +12,9 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc tiff jpeg static"
+IUSE="debug doc tiff jpeg static"
 
-RDEPEND="|| (
-		(
+RDEPEND="|| ( (
 		x11-libs/libXrender
 		x11-libs/libX11
 		x11-libs/libXi
@@ -24,12 +23,11 @@ RDEPEND="|| (
 		x11-libs/libXinerama
 		x11-libs/libXcursor
 		x11-libs/libXrandr
-		x11-libs/libXfixes
-		)
+		x11-libs/libXfixes )
 		virtual/x11 )
 	>=dev-libs/glib-2.7.1
-	>=dev-libs/atk-1.0.1
 	>=x11-libs/pango-1.9
+	>=dev-libs/atk-1.0.1
 	>=x11-libs/cairo-0.9.2
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
@@ -41,12 +39,16 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	sys-devel/autoconf
 	>=sys-devel/automake-1.7.9
-	|| ( ( x11-proto/xextproto
+
+	|| ( (
+		x11-proto/xextproto
 		x11-proto/xproto
 		x11-proto/inputproto
 		x11-proto/xineramaproto )
-	virtual/x11 )
-	doc? ( >=dev-util/gtk-doc-1.4
+		virtual/x11 )
+
+	doc? (
+		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2 )"
 
 pkg_setup() {
@@ -58,8 +60,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
@@ -86,15 +88,15 @@ src_unpack() {
 
 src_compile() {
 
-	# bug 8762, that's a festival bug
-	# most likely bug 8375, but no longer necessary
-#	replace-flags "-O3" "-O2"
+	# bug #8375
+	# replace-flags "-O3" "-O2"
 
 	econf \
 		`use_enable doc gtk-doc` \
 		`use_with jpeg libjpeg` \
 		`use_with tiff libtiff` \
 		`use_enable static` \
+		`use_enable debug` \
 		--with-libpng \
 		--with-gdktarget=x11 \
 		--with-xinput \
@@ -110,11 +112,11 @@ src_install() {
 
 	dodir ${GTK2_CONFDIR}
 
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "Installation failed"
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
-	echo "GDK_USE_XFT=1" >${D}/etc/env.d/50gtk2
+	echo "GDK_USE_XFT=1" > ${D}/etc/env.d/50gtk2
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
@@ -122,7 +124,7 @@ src_install() {
 
 pkg_postinst() {
 
-	gtk-query-immodules-2.0 >	/${GTK2_CONFDIR}/gtk.immodules
-	gdk-pixbuf-query-loaders >	/${GTK2_CONFDIR}/gdk-pixbuf.loaders
+	gtk-query-immodules-2.0  > /${GTK2_CONFDIR}/gtk.immodules
+	gdk-pixbuf-query-loaders > /${GTK2_CONFDIR}/gdk-pixbuf.loaders
 
 }
