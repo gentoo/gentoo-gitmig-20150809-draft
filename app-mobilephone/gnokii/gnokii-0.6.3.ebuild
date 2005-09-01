@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.3.ebuild,v 1.1 2005/05/14 12:28:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.3.ebuild,v 1.2 2005/09/01 17:01:52 mrness Exp $
 
 inherit eutils
 
-DESCRIPTION="a client that plugs into your handphone"
+DESCRIPTION="user space driver and tools for use with mobile phones"
 HOMEPAGE="http://www.gnokii.org/"
 SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
 

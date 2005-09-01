@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a437f3d937903645c584c509966068a2 gnokii-0.6.3.ebuild 2024
-MD5 5232bbe2a3b4db1e3575826fe85bf356 gnokii-0.6.7-r2.ebuild 2314
-MD5 6297b9134b1b7b2e556a4b93633c03bd gnokii-0.6.7-r1.ebuild 2308
-MD5 aaecd7518e307465c7f24b07ef61c4e5 gnokii-0.6.4.ebuild 2162
-MD5 0573afc8b9178498f87eae98889270d1 gnokii-0.6.6.ebuild 2215
-MD5 70968f65dbeaa2b874c555567800045d ChangeLog 6507
+MD5 91616754805a1556f5d46d710bc2cbc6 gnokii-0.6.3.ebuild 2039
+MD5 438e4d861c9041a0b860bf4791a20693 gnokii-0.6.7-r2.ebuild 2329
+MD5 ea3fc86d66247a712087c6333db78141 gnokii-0.6.7-r1.ebuild 2321
+MD5 3781f7f5ce18fe7026f26def07cc4e63 gnokii-0.6.4.ebuild 2177
+MD5 d66670e10887602f0710acdd5696340b gnokii-0.6.6.ebuild 2231
+MD5 b3d09da844b83fa5ad790486b1dcbe5f ChangeLog 6811
 MD5 01ec5e34cbf064fdf9a0862d481b01d9 metadata.xml 467
+MD5 a5cc607c2f643558b7824f3d4edce0d2 gnokii-0.6.8.ebuild 2326
+MD5 face706c6d0985abc88c5ad34f39d3ee files/gnokii-0.6.8-smsd-glib2.patch 779
 MD5 c4cdcbc35ff57082908ea21d7aa1f9a3 files/digest-gnokii-0.6.7-r1 66
 MD5 c4cdcbc35ff57082908ea21d7aa1f9a3 files/digest-gnokii-0.6.7-r2 66
 MD5 a94c289dfef59e2ddbf2fd186d180f5f files/gnokii-0.6.3-nounix98pty.patch 2258
@@ -18,11 +20,12 @@ MD5 135df3cf24c3041ccb20a5896482ed59 files/gnokii.desktop 260
 MD5 a5368c4063484bca17cb363705d3caa2 files/digest-gnokii-0.6.3 66
 MD5 e99ea660638e47400dc8320ea630d0b8 files/digest-gnokii-0.6.4 66
 MD5 607109baacf9af7181a48be37dfa4b2d files/digest-gnokii-0.6.6 66
+MD5 95cfd5d1812300781f2310dc007ed33e files/digest-gnokii-0.6.8 66
 MD5 2f2f572bc05f2ee40468130dcdd7e946 files/gnokii-bindir.patch 461
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDEqqVNSP4Vda7IdsRAvMrAJ9VFUU+r452NjvRR48Po3pkcTGZjQCbB0g3
-mIL2H2/rlJAQOVzIuTF8Ww0=
-=N65B
+iD8DBQFDFzTSNSP4Vda7IdsRAhwXAKCF4zIn+prEVFNW7hq93SMpqwzRaACfT0Kd
+2w0v4HfH5sqnczGCHiBB1qY=
+=GusO
 -----END PGP SIGNATURE-----
