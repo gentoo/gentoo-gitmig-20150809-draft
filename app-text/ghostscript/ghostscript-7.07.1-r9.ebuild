@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r9.ebuild,v 1.3 2005/09/01 17:20:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r9.ebuild,v 1.4 2005/09/01 19:18:33 swegener Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -67,7 +67,7 @@ src_unpack() {
 
 	# add fontconfig support (this patch is broken)
 	# epatch ${FILESDIR}/gs7.07.1-fontconfig-rh.patch.2.bz2
-	
+
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
 	epatch ${FILESDIR}/ghostscript-7.05.6.man.patch
 
