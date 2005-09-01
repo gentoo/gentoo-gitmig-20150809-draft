@@ -1,10 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.2 2005/08/16 23:03:32 truedfx Exp $
-
-inherit eutils gnuconfig
-
-IUSE="gnome esd nls audiofile"
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.3 2005/09/01 17:56:16 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3.20040120
 if [[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]; then
@@ -13,18 +9,20 @@ else
 	sawfishsnapshot=false
 fi
 
+inherit eutils gnuconfig
+
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 if $sawfishsnapshot; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	S=${WORKDIR}/${PN}
 else
 	SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
-	S=${WORKDIR}/${P}
 fi
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE="gnome esd nls audiofile"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=x11-libs/rep-gtk-0.17
@@ -33,16 +31,18 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	audiofile? ( >=media-libs/audiofile-0.2.3 )
 	esd? ( >=media-sound/esound-0.2.23 )
 	nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}"
 
-# cvs snapshots require automake/autoconf
 if $sawfishsnapshot; then
-	DEPEND="${DEPEND} sys-devel/automake sys-devel/autoconf"
+	DEPEND="${DEPEND}
+		sys-devel/automake
+		sys-devel/autoconf"
+	S="${WORKDIR}/${PN}"
 fi
 
 src_unpack() {
-	unpack ${A} || die "unpack failed"
-	cd ${S} || die "cd failed"
-
+	unpack ${A}
+	cd "${S}"
 	# This is for alpha, but there's no reason to restrict it
 	gnuconfig_update
 }
@@ -100,12 +100,12 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog DOC FAQ NEWS README THANKS TODO OPTIONS
 
 	# Add to Gnome CC's Window Manager list
 	if use gnome; then
 		insinto /usr/share/gnome/wm-properties
-		doins ${S}/Sawfish.desktop
+		doins "${S}/Sawfish.desktop"
 	fi
 }
