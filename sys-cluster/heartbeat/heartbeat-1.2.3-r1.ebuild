@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3-r1.ebuild,v 1.2 2005/08/01 13:34:25 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.3-r1.ebuild,v 1.3 2005/09/01 23:07:25 xmerlin Exp $
 
 inherit flag-o-matic
 
@@ -61,6 +61,8 @@ src_install() {
 
 	keepdir /etc/ha.d/conf
 
+	dosym /usr/sbin/ldirectord /etc/ha.d/resource.d/ldirectord || die
+
 	# if ! USE="ldirectord" then don't install it
 	if ! use ldirectord ; then
 		rm ${D}/etc/init.d/ldirectord
@@ -69,6 +71,7 @@ src_install() {
 		rm ${D}/usr/man/man8/ldirectord.8
 		rm ${D}/usr/sbin/ldirectord
 		rm ${D}/usr/sbin/supervise-ldirectord-config
+		rm ${D}/etc/ha.d/resource.d/ldirectord
 	fi
 
 	exeinto /etc/init.d
