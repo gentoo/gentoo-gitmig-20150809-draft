@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.24 2005/06/30 12:33:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.25 2005/09/01 15:33:28 uberlord Exp $
+
+*ifplugd-0.28-r1 (01 Sep 2005)
+
+  01 Sep 2005; Roy Marples <uberlord@gentoo.org> -files/ifplugd,
+  files/ifplugd.action, +files/ifplugd.conf, +files/ifplugd.init,
+  metadata.xml, -ifplugd-0.13-r1.ebuild, -ifplugd-0.25.ebuild,
+  -ifplugd-0.27.ebuild, ifplugd-0.28.ebuild, +ifplugd-0.28-r1.ebuild:
+  New init script, new configuration options,
+  better integration with baselayout-1.12.0, initng support
+  fixes bugs #42804, #48482 and hopefully #75214
+  
+  Punted older versions
 
   30 Jun 2005; Joseph Jezak <josejx@gentoo.org> ifplugd-0.28.ebuild:
   Marked ppc stable.

@@ -1,0 +1,118 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.init,v 1.1 2005/09/01 15:33:28 uberlord Exp $
+
+#NB: Config is in /etc/conf.d/ifplugd
+
+depend()
+{
+	use pcmcia
+}
+
+opts="stop start status"
+
+get_start_interfaces() {
+	if [[ -n ${INTERFACES} ]]; then
+		echo "${INTERFACES}"
+		return
+	fi
+
+	INTERFACES=" $(sed -ne 's/^[ \t]*\(.*\):.*/\1/p' /proc/net/dev | xargs) "
+	local exclude iface
+	if [[ -f /proc/net/wireless && ${WIRELESS_INTERFACES} == "no" ]]; then
+		exclude=$(sed -ne 's/^[ \t]*\(.*\):.*/\1/p' /proc/net/wireless | xargs)
+	fi
+	exclude=" lo ${exclude} "
+	for iface in ${exclude}; do
+		INTERFACES="${INTERFACES// ${iface} / }"
+	done
+	echo "${INTERFACES}"
+}
+
+get_running_interfaces() {
+	( cd /var/run; ls ifplugd.*.pid | sed -n -e 's/^ifplugd.\(.*\).pid$/\1/p' )
+}
+
+# Check if an option is set for a given interface.
+# $1 is interface, $2 is option name, $3 is preset
+is_set() {
+	[[ $(get_opt "$@") == "yes" ]]
+}
+
+# Expand an option value for a given interface.
+# $1 is interface, $2 is option name, $3 is preset
+get_opt() {
+	local iface="$1" option="$2" preset="$3"
+	eval preset=\"\${${option}:=${preset}}\"
+	eval echo \"\${${option}_${iface}:=${preset}}\"
+}
+
+# Handle starting for all interfaces
+start() {
+	local iface oneworked=false
+
+	einfo "Starting ifplugd: "
+	eindent
+	
+	for iface in $(get_start_interfaces); do
+		ebegin "${iface}"
+		local args=
+		
+		is_set "${iface}" AUTO yes || args="${args}a"
+		is_set "${iface}" BEEP yes || args="${args}b"
+		is_set "${iface}" IGNORE_FAIL yes && args="${iargs}f"
+		is_set "${iface}" IGNORE_FAIL_POSITIVE no && args="${iargs}F"
+		is_set "${iface}" IGNORE_RETVAL yes && args="${iargs}I"
+		is_set "${iface}" SHUTDOWN yes || args="${iargs}q"
+		is_set "${iface}" WAIT_ON_FORK yes && args="${iargs}w"
+		is_set "${iface}" MONITOR no && args="${iargs}M"
+
+		[[ -n ${args} ]] && args="-${args}"
+
+		args="${args} -t$(get_opt ${iface} POLL_TIME 1)"
+		args="${args} -u$(get_opt ${iface} DELAY_UP 0)"
+		args="${args} -d$(get_opt ${iface} DELAY_DOWN 5)"
+		args="${args} -m$(get_opt ${iface} API_MODE auto)"
+		args="${args} $(get_opt ${iface} ARGS '')"
+
+		start-stop-daemon --start --exec /usr/sbin/ifplugd \
+			--pidfile "/var/run/ifplugd.${iface}.pid" \
+			-- --iface="${iface}" ${args}
+		local r="$?"
+		if is_set "${iface}" WAIT_ON_FORK yes ; then
+			[[ ${r} -le 2 ]]
+		else
+			[[ ${r} == "0" ]]
+		fi
+		eend $? && oneworked=true
+	done
+
+	${oneworked}
+}
+
+stop() {
+	local iface allstopped=true
+	
+	einfo "Stopping ifplugd: "
+	eindent
+
+	for iface in $(get_running_interfaces); do
+		ebegin "${iface}"
+		start-stop-daemon --stop --exec /usr/sbin/ifplugd \
+			--pidfile "/var/run/ifplugd.${iface}.pid"
+		eend $? || allstopped=false
+	done
+
+	${allstopped}
+}
+
+status() {
+	local iface
+
+	for iface in $(get_running_interfaces); do
+		einfo "$(/usr/sbin/ifplugstatus ${iface})"
+	done
+}
+
+# vim:ts=4

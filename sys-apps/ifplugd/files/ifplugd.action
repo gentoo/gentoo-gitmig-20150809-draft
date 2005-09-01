@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.action,v 1.4 2004/07/15 00:43:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.action,v 1.5 2005/09/01 15:33:28 uberlord Exp $
 #
 # Gentoo-specific ifplugd.action
 #
@@ -9,20 +9,48 @@
 # up or down.
 #
 
+if grep -q initng /proc/1/cmdline 
+then
+    EXEC="ngc"
+    INITNG="yes"
+else
+    EXEC="/etc/init.d/net.$1"
+    INITNG="no"
+fi
+
 case "$2" in
-	up)
-		state=start
-		;;
-	down)
-		state=stop
-		;;
-	*)
-		echo "$0: wrong arguments"
-		echo "Call with <interface> <up|down>"
-		exit 1
-		;;
+    up)
+	if [ "${INITNG}" = "yes" ]
+	then
+	    ARGS="-u net/$1"
+	else
+	    ARGS="--quiet start"
+	fi
+	;;
+    down)
+	if [ "${INITNG}" = "yes" ]
+	then
+	    ARGS="-d net/$1"
+	else
+	    ARGS="--quiet stop"
+	fi
+	;;
+    *)
+	echo "$0: wrong arguments" >&2
+	echo "Call with <interface> <up|down>" >&2
+	exit 1
+	;;
 esac
 
-[ -x /etc/init.d/net.$1 ] && /etc/init.d/net.$1 --quiet $state
+export IN_BACKGROUND=true
 
-exit 0
+if [ -x "${EXEC}" ]
+then
+    ${EXEC} ${ARGS}
+    exit 0
+else
+    logger -t ifplugd.action "Error: Couldn't configure $1, no ${EXEC} !"
+    exit 1
+fi
+
+# vim: set ts=4
