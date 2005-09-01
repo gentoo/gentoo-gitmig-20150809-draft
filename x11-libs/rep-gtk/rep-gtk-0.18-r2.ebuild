@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r2.ebuild,v 1.4 2005/08/22 18:37:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r2.ebuild,v 1.5 2005/09/01 14:48:49 kugelfang Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 IUSE="gnome"
 
@@ -46,6 +46,7 @@ src_compile() {
 	CC=$(tc-getCC) econf \
 		--with-libglade \
 		--with-gdk-pixbuf \
+		--libdir=/usr/$(get_libdir) \
 		$(use_with gnome) || die
 	emake host_type=${CHOST} || die
 }
@@ -53,7 +54,7 @@ src_compile() {
 src_install() {
 	make install \
 		host_type=${CHOST} \
-		installdir=${D}/usr/lib/rep/${CHOST} || die
+		installdir=${D}/usr/$(get_libdir)/rep/${CHOST} || die
 
 	cd ${S}
 	dodoc AUTHORS BUGS COPYING ChangeLog HACKING \
