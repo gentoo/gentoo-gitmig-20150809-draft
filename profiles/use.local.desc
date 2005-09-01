@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1422 2005/09/01 08:31:09 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1423 2005/09/01 19:48:00 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -13,8 +13,8 @@ app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/gnome-speech:freetts - Adds support for the freetts speech driver
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/apg:cracklib - Support for cracklib strong password checking
-app-admin/conky:seti - include seti monitoring capabilities if the correct config is edited ~/.conkyrc
 app-admin/conky:metar - enable weather monitoring using the dev-libs/mdsplib library
+app-admin/conky:seti - include seti monitoring capabilities if the correct config is edited ~/.conkyrc
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing seperate IRIX passwords
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
@@ -129,8 +129,8 @@ app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa
 app-pda/multisync:kdepim - Adds support for KDEPIM sync.
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
-app-shells/scsh:scsh - Use a non-FHS directory layout.
 app-shells/scsh-install-lib:scsh - Use a non-FHS directory layout.
+app-shells/scsh:scsh - Use a non-FHS directory layout.
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/acroread:noplugin - Do not install the acroread browser plugin
 app-text/crm114:mew - Add support for using the mewdecode mime decoder.
@@ -263,10 +263,10 @@ dev-libs/wx-xmingw:shared - Enable shared libs
 dev-lisp/abcl-cvs:jpty - Enable PTY support
 dev-lisp/abcl-cvs:libabcl - Enable ^C handler (from JNI)
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
+dev-lisp/cl-tbnl:standalone - use TBNL without a front-end (ie. no Apache dependency)
 dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
 dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
 dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
-dev-lisp/cl-tbnl:standalone - use TBNL without a front-end (ie. no Apache dependency)
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl-cvs:dlopen - build a GCL which uses dlopen for linking
@@ -328,8 +328,8 @@ dev-util/kdevelop:perforce - Enable support for the perforce version control sys
 dev-util/kdevelop:sql - Enable support for the sql language
 dev-util/kdevelop:subversion - Enable support for the subversion version control system
 dev-util/monodevelop:boo - Enable support for the boo programming language
-dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/strace:aio - Enable libaio support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
 games-action/d2x:cdinstall - Enables copying files from the CD
@@ -389,10 +389,10 @@ kde-base/kbugbuster:kcal - Add support for kcal (calendar) format
 kde-base/kcontrol:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensavers
 kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
+kde-base/kdebase-kioslaves:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdebase:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdebase:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
-kde-base/kdebase-kioslaves:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
@@ -461,9 +461,9 @@ mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain na
 mail-mta/exim:exiscan - Patch providing support for content scanning backward-compatibility
 mail-mta/exim:exiscan-acl - Patch providing support for content scanning
 mail-mta/exim:lmtp - Adds support for lmtp
-mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
+mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
-mail-mta/exim:spf - Adds support for Sendr Policy Framework
+mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
 mail-mta/qmail:logmail - Enable logging all E-Mails via ~alias/.qmail-log
 mail-mta/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
@@ -609,6 +609,13 @@ media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
 media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:sse2 - Enables sse2 support
+media-video/vdr:aio - use "all in one" patch with much additional features
+media-video/vdr:bigpatch - enable almost all additional features flying around on the net (including aio)
+media-video/vdr:jumpplay - enables automatic jumping over cut marks while watching a recording
+media-video/vdr:lnbsharing - enable support for two or more dvb cards sharing the cable to the lnb
+media-video/vdr:rcu - enable support for a special type of remote control unit
+media-video/vdr:sourcecaps - adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
+media-video/vdr:vfat - allow vdr to store its recordings on vfat filesystems
 media-video/vlc:cdda - Enables libcdda cd audio playback support
 media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
 media-video/vlc:cdio - Enables libcdio support for cd interaction
@@ -621,13 +628,6 @@ media-video/vlc:mod - Enables Mod demux support
 media-video/vlc:screen - Enables screen capture support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
-media-video/vdr:aio - use "all in one" patch with much additional features
-media-video/vdr:bigpatch - enable almost all additional features flying around on the net (including aio)
-media-video/vdr:jumpplay - enables automatic jumping over cut marks while watching a recording
-media-video/vdr:lnbsharing - enable support for two or more dvb cards sharing the cable to the lnb
-media-video/vdr:rcu - enable support for a special type of remote control unit
-media-video/vdr:sourcecaps - adds the ability to define capabilities of dvb-cards (e.g. card1 can receive Sat @28.2E)
-media-video/vdr:vfat - allow vdr to store its recordings on vfat filesystems
 media-video/winki:css - Enables ripping of encrypted dvds
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/bwm-ng:csv - enable csv output
@@ -685,8 +685,8 @@ net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/netatalk:cracklib - Support for cracklib strong password checking
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
-net-fs/samba:automount - Enables automount support
 net-fs/samba:async - Enables asynchronous input/output
+net-fs/samba:automount - Enables automount support
 net-fs/samba:libclamav - Enables clamav libraries, without needing to use the daemon
 net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Enables support for user quotas
@@ -770,6 +770,7 @@ net-mail/uw-imap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vimap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
 net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/asterisk:bri - Enable ISDN BRI support (bristuff)
 net-misc/asterisk:h323 - Build the H.323 channel driver bundled with Asterisk
@@ -783,7 +784,6 @@ net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
 net-misc/asterisk:vmdbmysql - Enable mysql db support in voicemail application
 net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail application
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
-net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
 net-misc/bridge-utils:sysfs - Enable use of the sysfs filesystem (Linux-2.6+) via libsysfs
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:idn - Enable libidn support
@@ -815,8 +815,8 @@ net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remot
 net-misc/sitecopy:sftp - Enables use of sftp for secure ftp transfers.
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  This system allows users to collaborate on websites using a web based interface.  See the ebuild for an FAQ page.  Enables neon as well to handle webdav support.
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
-net-misc/vnc:server - Build VNC client
 net-misc/tightvnc:server - Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.
+net-misc/vnc:server - Build VNC client
 net-misc/wanpipe:adsl - Build with adsl support
 net-misc/yate:fax - Build fax plugin
 net-misc/yate:gsm - Build gsm codec plugin
@@ -834,8 +834,8 @@ net-misc/zaptel:ecsteve2 - Use the STEVE2 echo canceller
 net-misc/zaptel:florz - Enable florz enhancement patches for ISDN BRI
 net-misc/zaptel:rtc - Use the realtime clock on x86 and amd64 systems instead of kernel timers
 net-misc/zaptel:watchdog - Enable the watchdog to monitor unresponsive and misbehaving interfaces
-net-misc/zaptel:zapras - Enable PPP support for Remote-Access-Service
 net-misc/zaptel:zapnet - Enable SyncPPP, CiscoHDLC and Frame-Relay support
+net-misc/zaptel:zapras - Enable PPP support for Remote-Access-Service
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
@@ -890,11 +890,11 @@ sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-libs/acml:sse2 - Enables sse2 support
 sci-libs/fftw:sse2 - Enables sse2 support
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
-sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
-sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:geos - Adds support for geometry engine
 sci-libs/gdal:grass - Adds support for the grasslib GIS library
+sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:jasper - Adds support for JPEG 2000
+sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
 sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
@@ -976,8 +976,8 @@ sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more 
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/ntfsprogs:fuse - Build a FUSE module
 sys-fs/quota:rpc - Enable quota interaction via RPC
-sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/ck-sources:ck-plus - Add some experimental ck patches
+sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
 sys-kernel/genkernel:ibm - Install IBM pSeries config as default instead of G5 config.
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
@@ -1082,6 +1082,7 @@ x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
+x11-base/xorg-server:glx - Enable OpenGL extension for X
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
 x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
 x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
@@ -1090,7 +1091,6 @@ x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 a
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
-x11-base/xorg-server:glx - Enable OpenGL extension for X
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
@@ -1111,8 +1111,8 @@ x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/synaptics:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
-x11-misc/xscreensaver:new-login - Enables users to create new logins even if the X screen is locked by someone else
 x11-misc/xscreensaver:insecure-savers - Installs some screensaver modules as setuid root to enable cooler effects
+x11-misc/xscreensaver:new-login - Enables users to create new logins even if the X screen is locked by someone else
 x11-plugins/wmhdplop:gkrellm - Enable build of gkrellm module
 x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts, useful on SMP machines
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
