@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.1.ebuild,v 1.4 2005/06/23 00:54:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.1.ebuild,v 1.5 2005/09/01 03:18:31 vapier Exp $
 
 inherit eutils games
 
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-configure.patch"
+	epatch "${FILESDIR}"/${PV}-configure.patch
+	epatch "${FILESDIR}"/${P}-64bit.patch
 }
 
 src_compile() {
