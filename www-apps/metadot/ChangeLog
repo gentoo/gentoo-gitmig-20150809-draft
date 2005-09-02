@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/metadot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.13 2005/09/02 11:19:51 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/ChangeLog,v 1.14 2005/09/02 11:20:54 rl03 Exp $
+
+  02 Sep 2005; Renat Lumpau <rl03@gentoo.org> metadot-6.1.6.ebuild:
+  Fix 6.1.6
 
   02 Sep 2005; Renat Lumpau <rl03@gentoo.org> metadot-6.4_p3.ebuild:
   Add missing dev-perl/DateManip dependency wrt bug #104403.
