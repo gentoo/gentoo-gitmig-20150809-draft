@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.2 2005/08/29 08:08:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/wmbluecpu-0.6.ebuild,v 1.3 2005/09/02 19:26:14 hansmi Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://litestep.boo.pl/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="ppc ~sparc x86"
 
 DEPEND="virtual/x11"
 
