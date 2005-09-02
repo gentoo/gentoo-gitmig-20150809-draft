@@ -1,0 +1,8 @@
+# ChangeLog for app-i18n/man-pages-nl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.1 2005/09/02 04:26:29 vapier Exp $
+
+*man-pages-nl-0.13.3 (01 Sep 2005)
+
+  01 Sep 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
