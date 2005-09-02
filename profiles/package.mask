@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4371 2005/09/02 05:11:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4372 2005/09/02 06:06:51 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (2 Sep 2005)
+# masked until the libol bug is fixed:
+=app-admin/syslog-ng-1.6.8-r1
 
 # Matthias Schwarzott <zzam@gentoo.org> (2 Sep 2005)
 # Masked until all packages depending on it are aware of the
