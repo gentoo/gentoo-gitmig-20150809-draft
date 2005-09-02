@@ -1,7 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8765eadc109621403818e55047f933d4 baselayout-1.12.0_pre7.ebuild 18714
 MD5 fa4cb2988ff12c235c4bfb0b185376b3 baselayout-1.12.0_pre8.ebuild 18745
 MD5 63063133efc82df82db512614030ba19 baselayout-1.9.4-r6.ebuild 16993
 MD5 3d736b28ab78424e033c1ca3a4956cbf baselayout-1.11.13-r1.ebuild 18610
@@ -17,7 +16,6 @@ MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r4 70
 MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 cac88e2e2f73778a4a4e79447d857c64 files/baselayout-1.11.12-swapon-quiet.patch 899
 MD5 f971d810119eb7f33deba5e540cab2e1 files/baselayout-1.11.12-is-net-fs.patch 903
-MD5 6d5643e0857fc0f32f026e33d453c0c8 files/digest-baselayout-1.12.0_pre7 75
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
 MD5 e76b5eb42575a2c72397f4691f8e7826 files/baselayout-1.11.12-volume-order-etc-update.patch 628
 MD5 0f24c65f92bca9e5131d6ebd4ad6cfa0 files/digest-baselayout-1.12.0_pre8 75
@@ -47,7 +45,7 @@ MD5 6d5643e0857fc0f32f026e33d453c0c8 files/digest-baselayout-1.12.0_pre7-r1 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGCwS1ZcsMnZjRyIRAjACAJ4uWbWlP8UUkE6c/mTWzgiizyn8DwCfYrT/
-Taw0SWrn37uqjkKU1A/WwFU=
-=yZGx
+iD8DBQFDGCyy1ZcsMnZjRyIRAiHBAJ4pqPX44qXc5C13iPzNLfInb6lTWACfQzdJ
+ZJy06jhK4meR+MbrhlLYFoc=
+=gcQ1
 -----END PGP SIGNATURE-----
