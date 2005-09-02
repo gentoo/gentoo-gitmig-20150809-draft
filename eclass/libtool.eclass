@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.52 2005/09/02 10:02:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.53 2005/09/02 21:12:09 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -22,6 +22,7 @@ ELIBTOOL_VERSION="2.0.2"
 
 ELT_PATCH_DIR="${PORTDIR}/eclass/ELT-patches"
 ELT_APPLIED_PATCHES=
+ELT_LTMAIN_SH=
 
 #
 # Returns all the directories containing ltmain.sh
@@ -66,7 +67,11 @@ ELT_walk_patches() {
 	local y=
 	local ret=1
 	local patch_dir=
-	local version=$(eval $(grep -e '^[[:space:]]*VERSION=' $1); \
+	local version=
+	local ltmain_sh=$1
+	
+	[[ $1 == *"/configure" ]] && ltmain_sh=${ELT_LTMAIN_SH}
+	version=$(eval $(grep -e '^[[:space:]]*VERSION=' "${ltmain_sh}"); \
 					echo "${VERSION}")
 
 	if [[ -n $2 ]] ; then
@@ -118,7 +123,8 @@ elibtoolize() {
 	local do_only_patches="no"
 	local deptoremove=
 	local my_dirlist=
-	local elt_patches="portage relink max_cmd_len sed test tmp"
+	local elt_patches="portage relink max_cmd_len sed test tmp \
+	                   uclibc-conf uclibc-ltconf"
 	local start_dir="${PWD}"
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
@@ -176,6 +182,7 @@ elibtoolize() {
 	for x in ${my_dirlist} ; do
 		local tmp=$(echo "${x}" | sed -e "s|${WORKDIR}||")
 		export ELT_APPLIED_PATCHES=
+		export ELT_LTMAIN_SH="${x}/ltmain.sh"
 
 		[[ -f ${x}/.elibtoolized ]] && continue
 
@@ -201,6 +208,24 @@ elibtoolize() {
 					# Do not apply if $max_cmd_len is not used ...
 					if [[ -n $(grep 'max_cmd_len' "${x}/ltmain.sh") ]] ; then
 						ELT_walk_patches "${x}/ltmain.sh" "${y}"
+						ret=$?
+					fi
+					;;
+				"uclibc-conf")
+					if [[ -e ${x}/configure ]] && \
+					   grep 'Transform linux' "${x}/configure" > /dev/null ; then
+						ELT_walk_patches "${x}/configure" "${y}"
+						ret=$?
+					# ltmain.sh and co might be in a subdirectory ...
+					elif [[ ! -e ${x}/configure && -e ${x}/../configure ]] && \
+					   grep 'Transform linux' "${x}/../configure" > /dev/null ; then
+						ELT_walk_patches "${x}/../configure" "${y}"
+						ret=$?
+					fi
+					;;
+				"uclibc-ltconf")
+					if [[ -e ${x}/ltconfig ]] ; then
+						ELT_walk_patches "${x}/ltconfig" "${y}"
 						ret=$?
 					fi
 					;;
@@ -246,6 +271,10 @@ elibtoolize() {
 							ELT_APPLIED_PATCHES="portage"
 						fi
 						;;
+					"uclibc-"*)
+						[[ ${CHOST} == *"-uclibc" ]] && \
+							ewarn "  uClibc patch set '${y}' failed to apply!"
+						;;
 				esac
 			fi
 		done
@@ -281,46 +310,11 @@ elibtoolize() {
 	done
 
 	cd "${start_dir}"
-
-	uclibctoolize
 }
 
 uclibctoolize() {
-	[[ -n ${NO_UCLIBCTOOLIZE} ]] && return 0
-
-	local errmsg=""
-	[[ ${CTARGET:-${CHOST}} == *-uclibc ]] \
-		&& errmsg="PLEASE CHECK" \
-		|| errmsg="Already patched"
-	local targets=""
-	local x
-
-	if [[ -z $* ]] ; then
-		targets=$(find ${S} -name configure -o -name ltconfig)
-	fi
-
-	einfo "Applying uClibc/libtool patches ..."
-	for x in ${targets} ; do
-		[[ ! -s ${x} ]] && continue
-		case ${x##*/} in
-		configure)
-			if grep 'Transform linux' "${x}" > /dev/null ; then
-				ebegin " Fixing \${S}${x/${S}}"
-				patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/configure.patch" > /dev/null
-				eend $? "${errmsg} ${x}"
-			fi
-			;;
-
-		ltconfig)
-			local ver=$(grep '^VERSION=' ${x})
-			ver=${ver/VERSION=}
-			[[ ${ver:0:3} == "1.4" ]] && ver="1.3"   # 1.4 and 1.3 are compat
-			ebegin " Fixing \${S}${x/${S}}"
-			patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/ltconfig-${ver:0:3}.patch" > /dev/null
-			eend $? "${errmsg} ${x}"
-			;;
-		esac
-	done
+	ewarn "uclibctoolize() is depreciated, please just use libtoolize()!"
+	elibtoolize
 }
 
 darwintoolize() {

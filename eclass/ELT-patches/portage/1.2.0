@@ -1,0 +1,13 @@
+# Dummy patch, not needed by libtool-1.2
+
+--- ltmain.sh	2005-09-02 21:42:18.000000000 +0200
++++ ltmain.sh	2005-09-02 21:42:34.000000000 +0200
+@@ -29,7 +29,7 @@
+ 
+ # Constants.
+ PROGRAM=ltmain.sh
+-PACKAGE=libtool
++PACKAGE=libtool
+ VERSION=1.2
+ 
+ default_mode=
