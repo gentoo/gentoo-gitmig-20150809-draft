@@ -53,3 +53,11 @@ move x11-proto/panoramixproto x11-proto/xineramaproto
 move sci-calculators/qalculate sci-calculators/qalculate-gtk
 move media-plugins/libdc1394 media-libs/libdc1394
 move media-plugins/coriander media-video/coriander
+move app-i18n/manpages-cs app-i18n/man-pages-cs
+move app-i18n/manpages-de app-i18n/man-pages-de
+move app-i18n/manpages-es app-i18n/man-pages-es
+move app-i18n/manpages-fr app-i18n/man-pages-fr
+move app-i18n/manpages-it app-i18n/man-pages-it
+move app-i18n/manpages-ja app-i18n/man-pages-ja
+move app-i18n/manpages-pl app-i18n/man-pages-pl
+move app-i18n/manpages-ru app-i18n/man-pages-ru
