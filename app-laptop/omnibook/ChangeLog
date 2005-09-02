@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/omnibook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.8 2005/06/12 16:28:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.9 2005/09/02 07:36:09 s4t4n Exp $
+
+*omnibook-20050217-r2 (02 Sep 2005)
+
+  02 Sep 2005; Michele Noberasco <s4t4n@gentoo.org>
+  +files/omnibook-toshiba-m30x.patch, +omnibook-20050217-r2.ebuild:
+  Revision bump, with patch to add support for Toshiba Satellite
+  M30X series...
 
 *omnibook-20050217-r1 (12 Jun 2005)
 
