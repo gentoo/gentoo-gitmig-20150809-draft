@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wakeonlan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.8 2005/05/15 01:08:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.9 2005/09/02 23:24:36 vanquirius Exp $
+
+*wakeonlan-0.41 (02 Sep 2005)
+
+  02 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> +wakeonlan-0.41.ebuild:
+  Version bump. Fixes bug 104571. Thanks to wiktorw@people.pl.
 
   15 May 2005; Jan Brinkmann <luckyduck@gentoo.org> wakeonlan-0.40.ebuild:
   stable on amd64
