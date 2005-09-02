@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.24 2005/05/07 19:53:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.25 2005/09/02 12:48:05 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> fxruby-1.0.25.ebuild,
+  fxruby-1.0.28-r1.ebuild, fxruby-1.0.29.ebuild, fxruby-1.2.2.ebuild,
+  fxruby-1.2.4.ebuild:
+  Don't use -d option with cp.
 
 *fxruby-1.2.6 (07 May 2005)
 

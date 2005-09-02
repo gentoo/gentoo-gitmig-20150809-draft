@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.25.ebuild,v 1.6 2005/02/24 22:55:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.25.ebuild,v 1.7 2005/09/02 12:48:05 flameeyes Exp $
 
 MY_P=FXRuby-${PV}
 DESCRIPTION="Ruby language binding to the FOX GUI toolkit"
@@ -24,6 +24,6 @@ src_install() {
 	ruby install.rb install || die
 
 	dodoc ANNOUNCE ChangeLog README*
-	cp -dr examples ${D}/usr/share/doc/${PF}
+	cp -r examples ${D}/usr/share/doc/${PF}
 	dohtml -r doc/*
 }

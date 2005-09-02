@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.2.ebuild,v 1.7 2005/05/04 12:03:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.2.ebuild,v 1.8 2005/09/02 12:48:05 flameeyes Exp $
 
 inherit ruby
 
@@ -30,6 +30,6 @@ src_install() {
 	ruby install.rb install || die
 
 	dodoc ANNOUNCE ChangeLog README*
-	cp -dr examples ${D}/usr/share/doc/${PF}
+	cp -r examples ${D}/usr/share/doc/${PF}
 	dohtml -r doc/*
 }
