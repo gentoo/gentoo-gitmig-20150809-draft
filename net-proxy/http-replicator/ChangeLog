@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.5 2005/06/07 21:35:26 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.6 2005/09/02 18:07:00 griffon26 Exp $
+
+  02 Sep 2005; Maurice van der Pot <griffon26@gentoo.org>
+  http-replicator-3.0.ebuild:
+  Changed back HTTP_PROXY to http_proxy. That part of bug #95321 was actually
+  invalid. Thanks to Tom Poplawski <poplawtm@earthlink.net> for noticing.
 
   07 Jun 2005; Maurice van der Pot <griffon26@gentoo.org>
   files/http-replicator-3.0-repcacheman-0.21,
