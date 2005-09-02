@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/yaala
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.9 2005/01/01 11:37:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.10 2005/09/02 12:22:45 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> yaala-0.4.2.ebuild,
+  yaala-0.6.3.ebuild, yaala-0.7.2.ebuild:
+  Don't use -d option with cp.
 
   22 Nov 2004; Sven Wegener <swegener@gentoo.org> yaala-0.4.2.ebuild,
   yaala-0.6.3.ebuild:
