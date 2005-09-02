@@ -1,9 +1,18 @@
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 ef0775b87776a4ceb9c9eeb39d3a33ac ChangeLog 1426
-MD5 85a5244eb18f2b0c3b26f984d1be9dcc irc-server-2.10.3_p7.ebuild 3270
-MD5 0b29cee574f31c31d582e0da4b7c4e1b irc-server-2.10.3_p3.ebuild 3262
-MD5 9cf7fef6a4fd391acb5afcfca3eafafa files/ircd.rc 476
-MD5 bd546d99fc8df46459b15f3b0efc5d3b files/2.10.3_p7-gentoo.patch 521
-MD5 04e939ae7f9a5e836ed87d73fab65d98 files/digest-irc-server-2.10.3_p7 60
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 726af43dc5bea80777797a7e608571e4 ChangeLog 1704
+MD5 d8e0fcddf6464c4c642ba71a17a38a63 files/2.10.3_p3-gentoo.patch 475
 MD5 11c6c72ebc4796aa655378f37a51cfa6 files/digest-irc-server-2.10.3_p3 60
-MD5 684a6ea4f6ae110ac662766916e8cb50 files/2.10.3_p3-gentoo.patch 521
+MD5 1a0f39bf6f7f28f39ae4100a87ab5214 files/digest-irc-server-2.11.1_p1 60
+MD5 673a6626002a9bbdfc068c055f6a1adb files/ircd.rc 476
+MD5 b5b8033ea9f6fd0085c6537bffe0792e irc-server-2.10.3_p3.ebuild 2541
+MD5 7855e995cde3c8ebeace1a8679415286 irc-server-2.11.1_p1.ebuild 2514
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGGuPI1lqEGTUzyQRApJcAJ9AIHBs1T9PEBJVmQd9gCC1BsUfRwCguETi
+hWaHOW6gAP8Mg8YMByFZ9ks=
+=xonv
+-----END PGP SIGNATURE-----

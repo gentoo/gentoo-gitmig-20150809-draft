@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/irc-server
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.9 2005/04/24 13:12:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.10 2005/09/02 15:10:50 swegener Exp $
+
+*irc-server-2.11.1_p1 (02 Sep 2005)
+
+  02 Sep 2005; Sven Wegener <swegener@gentoo.org>
+  -files/2.10.3_p7-gentoo.patch, files/2.10.3_p3-gentoo.patch,
+  files/ircd.rc, irc-server-2.10.3_p3.ebuild, -irc-server-2.10.3_p7.ebuild,
+  +irc-server-2.11.1_p1.ebuild:
+  Version bump.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   irc-server-2.10.3_p3.ebuild:

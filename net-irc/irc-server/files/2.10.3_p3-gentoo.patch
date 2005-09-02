@@ -9,4 +9,3 @@ diff -ur irc2.10.3p3.orig/contrib/tkserv/tkserv.c irc2.10.3p3/contrib/tkserv/tks
      }
  
      retv = retv < 0 ? 0 : retv;    /* errors do not allow authorization */
-Only in irc2.10.3p3/contrib/tkserv: tkserv.c~

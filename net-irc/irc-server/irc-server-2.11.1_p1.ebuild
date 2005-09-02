@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.10 2005/09/02 15:10:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.11.1_p1.ebuild,v 1.1 2005/09/02 15:10:50 swegener Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -33,7 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch "${FILESDIR}"/2.10.3_p3-gentoo.patch
 }
 
 src_compile () {
@@ -56,7 +56,6 @@ src_compile () {
 	econf \
 		--sysconfdir=/etc/ircd \
 		--localstatedir=/var/run/ircd \
-		--logdir=/var/log \
 		--mandir='${prefix}/share/man' \
 		$(use_with zlib) \
 		$(use_with ipv6 ip6) \
@@ -70,10 +69,10 @@ src_install() {
 	cd $(support/config.guess)
 
 	make \
-		prefix="${D}"/usr \
-		ircd_conf_dir="${D}"/etc/ircd \
-		ircd_var_dir="${D}"/var/run/ircd \
-		ircd_log_dir="${D}"/var/log \
+		prefix=${D}/usr \
+		ircd_conf_dir=${D}/etc/ircd \
+		ircd_var_dir=${D}/var/run/ircd \
+		ircd_log_dir=${D}/var/log \
 		install-server \
 		install-tkserv \
 		|| die "make install failed"
