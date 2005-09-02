@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libsigsegv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.16 2005/06/14 22:32:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.17 2005/09/02 08:10:39 grobian Exp $
+
+  02 Sep 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/libsigsegv-2.2-ppc-macos.patch, libsigsegv-2.2.ebuild:
+  Removing ppc-macos hack for configure/econf, ppc-macos should just use econf
+  to get the right prefixes etc.  Adding a patch that disables Darwin5 testing
+  in configure as it hangs for Darwin8.  (We only support Darwin7 and Darwin8)
 
   14 Jun 2005; <mkennedy@gentoo.org> libsigsegv-2.2.ebuild:
   Keywording ~sparc.
