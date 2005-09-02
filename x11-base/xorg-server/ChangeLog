@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.36 2005/09/02 01:56:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.37 2005/09/02 15:05:10 joshuabaergen Exp $
+
+  02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/0.99.1-r5-check-for-glproto.patch,
+  +files/0.99.1-r6-check-for-glproto.patch:
+  Apparently this patch has a package revision-based name.
 
   02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/make-fbcompose-endian-safe.patch, -xorg-server-0.99.1-r5.ebuild,
