@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomecanvas
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.73 2005/08/31 21:47:49 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.74 2005/09/02 19:46:48 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libgnomecanvas-2.10.2.ebuild:
+  Stable on ppc.
 
   31 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
   libgnomecanvas-2.10.2.ebuild:
