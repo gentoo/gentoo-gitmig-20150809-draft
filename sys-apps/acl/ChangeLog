@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/acl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.41 2005/03/10 05:27:08 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.42 2005/09/02 22:52:53 vapier Exp $
+
+*acl-2.2.31 (02 Sep 2005)
+
+  02 Sep 2005; Mike Frysinger <vapier@gentoo.org> +acl-2.2.31.ebuild:
+  Version bump.
 
   10 Mar 2005; Mike Frysinger <vapier@gentoo.org>
   +files/acl-2.2.27-nls.patch, acl-2.2.27.ebuild:
