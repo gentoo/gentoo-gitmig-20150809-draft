@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 57d0ba003d5efb1573d17bbfcabf9ef6 man-pages-ro-0.2.ebuild 665
 MD5 8858abdc5fdee853c8cec534983a28fd ChangeLog 316
 MD5 f7ce0461706f85e750cd67d396a02a46 files/digest-man-pages-ro-0.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDF9SqgIKl8Uu19MoRAsReAJoDTlSkXVw97rTiCehi5Csa22qkSwCfVgzo
+vobpTFY0DG2hMO+FMTYTgNw=
+=Bxr2
+-----END PGP SIGNATURE-----

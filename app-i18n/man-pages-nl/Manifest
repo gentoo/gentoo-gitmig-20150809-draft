@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2ca46e97f19d1bf3fcd050ad8eecf86c ChangeLog 346
 MD5 3ce267cf164c06896365f4f603a73836 man-pages-nl-0.13.3.ebuild 696
 MD5 69425980a4e477ff225cb7a6fd8f2a18 files/digest-man-pages-nl-0.13.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDF9SXgIKl8Uu19MoRAr4eAJwIEp7r9/5ZAECpNE9p1XqhXHkYbgCfRFOP
+4RcLreP+z9bUn5Xrjf4WGbI=
+=cf3M
+-----END PGP SIGNATURE-----

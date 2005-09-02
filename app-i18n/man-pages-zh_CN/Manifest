@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 386078d614fc1fd56e264b7b2f5429b9 man-pages-zh_CN-1.5.ebuild 747
 MD5 e693a2b14879c1a7e8b4df823b101a5d ChangeLog 352
 MD5 d7a2d3f63d098d0b52274d5baa9f381e files/digest-man-pages-zh_CN-1.5 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDF9S1gIKl8Uu19MoRAp0kAJwITloX8eIcy5JqhDuOY4qEum/PowCfREut
+Lll4TBXMw+aIQbUfpYpARvo=
+=GNtE
+-----END PGP SIGNATURE-----
