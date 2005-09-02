@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.49 2005/09/02 09:58:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.50 2005/09/02 10:03:03 ka0ttic Exp $
+
+  02 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/rkhunter-1.2.3-fix-insecure-tmp-creation.diff:
+  Missed an old patch when tidying.
 
 *rkhunter-1.2.7-r1 (02 Sep 2005)
 
