@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 953d2de89777a424f0ae3895eb140069 man-pages-pl-20040401.ebuild 1033
 MD5 2a9a6cfb4ec44ce7bfbf03b07e330872 ChangeLog 486
 MD5 481f16ee68bb449b88b59b4c8df96861 files/digest-man-pages-pl-20040401 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDF9VOgIKl8Uu19MoRAiSVAJ0fQUcWMv1+DWaIhSm1r0IXwuQ3jACePA0P
+xObjkE3UmwZvBLS93xXV40c=
+=JX4u
+-----END PGP SIGNATURE-----
