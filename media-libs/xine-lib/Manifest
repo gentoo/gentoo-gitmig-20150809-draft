@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14fe20fbed1bf461e95cc808cc03bb12 xine-lib-1.1.0-r2.ebuild 6009
-MD5 62bf57d51524f488827371d4395ca2d0 xine-lib-1.1.0.ebuild 7279
-MD5 a72adaa5de5e87da022835479a8c3ae3 ChangeLog 13402
 MD5 31e9c61884e82a9f95e4da1db5642500 xine-lib-1.0.2.ebuild 7466
-MD5 d9c8313a7655ca801a2e893bf8fcfc72 xine-lib-1.0-r2.ebuild 7114
-MD5 0ee055a2a3b1dab3d1e359b36059f2ed xine-lib-1.0.1-r3.ebuild 7463
+MD5 62bf57d51524f488827371d4395ca2d0 xine-lib-1.1.0.ebuild 7279
 MD5 05ac5f3e87594fa2a81a1a810983c9cf xine-lib-1_rc8-r1.ebuild 5240
+MD5 d9c8313a7655ca801a2e893bf8fcfc72 xine-lib-1.0-r2.ebuild 7114
+MD5 282c88538776ea4a7c2cc438ad6dc41d xine-lib-1.1.0-r2.ebuild 6059
+MD5 0ee055a2a3b1dab3d1e359b36059f2ed xine-lib-1.0.1-r3.ebuild 7463
+MD5 7c6f7d71d68c79e4366f1a65b2ef6ca8 ChangeLog 13546
 MD5 5529b17488d439ea93b380bacdb0a7a7 metadata.xml 239
-MD5 82a083eb7333107ca44f32653d54cb4c files/digest-xine-lib-1.1.0-r2 138
-MD5 b5cff6ac57a1f66ac90f95608a138717 files/digest-xine-lib-1.0.2 137
-MD5 44995c2f2dc4faa99ed2795e5e401719 files/digest-xine-lib-1.0-r2 134
-MD5 51e97df2f6ae538ab33a802eafb10457 files/digest-xine-lib-1_rc8-r1 138
 MD5 9678227c043f04d5e8561cb6ba80d3e6 files/digest-xine-lib-1.0.1-r3 137
+MD5 82a083eb7333107ca44f32653d54cb4c files/digest-xine-lib-1.1.0-r2 138
+MD5 51e97df2f6ae538ab33a802eafb10457 files/digest-xine-lib-1_rc8-r1 138
+MD5 44995c2f2dc4faa99ed2795e5e401719 files/digest-xine-lib-1.0-r2 134
+MD5 b5cff6ac57a1f66ac90f95608a138717 files/digest-xine-lib-1.0.2 137
 MD5 33da8deb9637be23cd464aba9c5c4ac4 files/digest-xine-lib-1.1.0 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGIaHj5H05b2HAEkRAnAFAJ9VFmrDIf8Fo09Qluj9+YWDmNfiDACeOKMF
-xHFyIje3LC2o0iz4s2L3nSI=
-=s9pf
------END PGP SIGNATURE-----
