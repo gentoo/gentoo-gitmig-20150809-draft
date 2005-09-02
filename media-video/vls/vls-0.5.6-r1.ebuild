@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r1.ebuild,v 1.5 2005/01/29 00:27:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r1.ebuild,v 1.6 2005/09/02 21:41:34 zzam Exp $
 
 IUSE="debug dvd dvb"
 
@@ -23,7 +23,11 @@ src_compile() {
 
 	use dvd || myconf="${myconf} --disable-dvd"
 
-	use dvb && myconf="${myconf} --enable-dvb"
+	if use dvb; then
+		export CCFLAGS="-I/usr/include/libdvb"
+		export CPPFLAGS="${CPPFLAGS} -I/usr/include/libdvb"
+		myconf="${myconf} --enable-dvb --with-libdvb=/usr/lib/"
+	fi
 
 	econf ${myconf} || die "econf failed"
 
