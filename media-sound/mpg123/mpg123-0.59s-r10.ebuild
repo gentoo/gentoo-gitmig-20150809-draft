@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r10.ebuild,v 1.1 2005/08/13 12:41:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r10.ebuild,v 1.2 2005/09/02 12:55:47 flameeyes Exp $
 
 inherit eutils
 
@@ -66,17 +66,17 @@ src_compile() {
 			use esd && styles="${styles} -ppc64-esd"
 			use oss && styles="${styles} -ppc64"
 
-			[ -z "${styles}" ] && styles="-ppc64"
+			[[ -z "${styles}" ]] && styles="-ppc64"
 			;;
 		ppc)
 			if use ppc-macos; then
-				[ -z "${styles}" ] && styles="macos"
+				[[ -z "${styles}" ]] && styles="macos"
 				atype=""
 			else
 				use esd && styles="${styles} -ppc-esd"
 				use oss && styles="${styles} -ppc"
 
-				[ -z "${styles}" ] && styles="-ppc"
+				[[ -z "${styles}" ]] && styles="-ppc"
 			fi
 			;;
 		x86)
@@ -88,7 +88,7 @@ src_compile() {
 			# use alsa && styles="${styles} -alsa"
 			# use alsa && use 3dnow && styles="${styles} -3dnow-alsa"
 
-			[ -z "${styles}" ] && styles="-generic"
+			[[ -z "${styles}" ]] && styles="-generic"
 			;;
 		sparc*)
 			use esd && styles="${styles} -sparc-esd"
@@ -99,19 +99,19 @@ src_compile() {
 			use oss && styles="${styles} -x86_64"
 			# use alsa && styles="${styles} -x86_64-alsa"
 
-			[ -z "${styles}" ] && styles="-x86_64"
+			[[ -z "${styles}" ]] && styles="-x86_64"
 			;;
 		alpha)
 			use esd && styles="${styles} -alpha-esd"
 			use oss && styles="${styles} -alpha"
 			# use alsa && styles="${styles} -alpha-alsa"
 
-			[ -z "${styles}" ] && styles="-generic"
+			[[ -z "${styles}" ]] && styles="-generic"
 			;;
 		mips|hppa|ia64)
 			# use alsa && styles="${styles} -mips-alsa"
 
-			[ -z "${styles}" ] && styles="-generic"
+			[[ -z "${styles}" ]] && styles="-generic"
 			;;
 		*)
 			eerror "No support has been added for your architecture."
@@ -123,18 +123,14 @@ src_compile() {
 	do
 		make clean ${atype}${style} CFLAGS="${CFLAGS}" || die
 		mv mpg123 gentoo-bin/mpg123${style}
-		[ -L "gentoo-bin/mpg123" ] && rm gentoo-bin/mpg123
+		[[ -L "gentoo-bin/mpg123" ]] && rm gentoo-bin/mpg123
 		ln -s mpg123${style} gentoo-bin/mpg123
 	done
 }
 
 src_install() {
 	dodir /usr
-	if use ppc-macos; then
-		cp -R gentoo-bin ${D}/usr/bin
-	else
-		cp -dR gentoo-bin ${D}/usr/bin
-	fi
+	cp -R gentoo-bin ${D}/usr/bin
 	doman mpg123.1
-	dodoc BENCHMARKING BUGS CHANGES COPYING JUKEBOX README* TODO
+	dodoc BENCHMARKING BUGS CHANGES JUKEBOX README* TODO
 }

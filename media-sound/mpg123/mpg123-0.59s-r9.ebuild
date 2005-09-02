@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r9.ebuild,v 1.9 2005/06/27 03:27:55 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r9.ebuild,v 1.10 2005/09/02 12:55:47 flameeyes Exp $
 
 inherit eutils
 
@@ -127,11 +127,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr
-	if use ppc-macos; then
-		cp -R gentoo-bin ${D}/usr/bin
-	else
-		cp -dR gentoo-bin ${D}/usr/bin
-	fi
+	cp -R gentoo-bin ${D}/usr/bin
 	doman mpg123.1
 	dodoc BENCHMARKING BUGS CHANGES COPYING JUKEBOX README* TODO
 }

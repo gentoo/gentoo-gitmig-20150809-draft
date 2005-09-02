@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.89 2005/08/13 12:41:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.90 2005/09/02 12:55:47 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> mpg123-0.59s-r8.ebuild,
+  mpg123-0.59s-r9.ebuild, mpg123-0.59s-r10.ebuild:
+  Cleanup of latest ebuild (double brackets tests, don't install COPYING).
+  Avoid cp -d on others.
 
 *mpg123-0.59s-r10 (13 Aug 2005)
 
