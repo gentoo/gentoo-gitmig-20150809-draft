@@ -128,3 +128,30 @@ diff -Naur omnibook-2005-02-17/lcd.c omnibook-2005-02-17-new/lcd.c
  		pmode = S_IFREG | S_IWUSR | S_IRUGO;
  		if (omnibook_userset)
  			pmode = pmode | S_IWUGO;
+diff -Naur omnibook-2005-02-17/onetouch.c omnibook-2005-02-17-new/onetouch.c
+--- omnibook-2005-02-17/onetouch.c	2005-02-17 14:27:32.000000000 +0100
++++ omnibook-2005-02-17-new/onetouch.c	2005-09-02 15:53:30.000000000 +0200
+@@ -109,6 +109,7 @@
+ 	case AMILOD:
+ 	case TSP10:
+ 	case TSM35X:
++	case TSM30X:
+ 		if (! omnibook_onetouch_enabled) {
+ 			if (omnibook_onetouch_on())
+ 				return -EIO;
+@@ -138,6 +139,7 @@
+ 	case AMILOD:
+ 	case TSP10:
+ 	case TSM35X:
++	case TSM30X:
+ 		if (omnibook_onetouch_enabled) {
+ 			if (omnibook_onetouch_off()) {
+ 				return -EIO;
+@@ -199,6 +201,7 @@
+ 	case AMILOD:
+ 	case TSP10:
+ 	case TSM35X:
++	case TSM30X:
+ 		pmode = S_IFREG | S_IWUSR | S_IRUGO;
+ 		if (omnibook_userset)
+ 			pmode = pmode | S_IWUGO;
