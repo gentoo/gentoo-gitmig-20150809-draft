@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbpager
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.14 2005/07/11 22:59:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.15 2005/09/02 03:32:22 metalgod Exp $
+
+  02 Sep 2005; Luis Medinas <metalgod@gentoo.org> bbpager-0.3.1.ebuild:
+  Added ~amd64 keywords. Closes bug #104209.
 
   11 Jul 2005; Sven Wegener <swegener@gentoo.org> -files/bbpager-gcc3.patch,
   -bbpager-0.3.0-r1.ebuild, -bbpager-0.3.0-r2.ebuild,

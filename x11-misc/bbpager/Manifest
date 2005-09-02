@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4a51e6d65a2dcf5fedf1299b992eacc ChangeLog 2252
-MD5 21f889c87f001052cd289ec0b4dd8ef0 bbpager-0.3.1.ebuild 575
-MD5 7a8e55363db2908c606782f8d548dbac files/digest-bbpager-0.3.1 64
+MD5 4532bb111828874ab6a92d71ee1a53fd ChangeLog 2370
+MD5 102ee49fb71d317ff5b625a7cfb0bcfe bbpager-0.3.1.ebuild 582
 MD5 6355a1b505e4732f2cda8c6574fce5c3 metadata.xml 242
+MD5 7a8e55363db2908c606782f8d548dbac files/digest-bbpager-0.3.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC0vnSI1lqEGTUzyQRAvIRAKC3dkQ017R86NOiRJIFW/7BILcpGwCdGKE6
-WGq8ghYmjVWVFxgdnQH3MlI=
-=EhKy
+iD8DBQFDF9WVwUpWvClEHQoRAr+SAJ9BO10YlHXMPBHv/P9qXKQkisx4GwCeJZG4
+L80h34nyoEIqCW2pGvrz4CE=
+=4nLy
 -----END PGP SIGNATURE-----
