@@ -1,0 +1,13 @@
+# ChangeLog for app-i18n/man-pages-ru
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.1 2005/09/02 04:28:58 vapier Exp $
+
+*man-pages-ru-0.98 (02 Sep 2005)
+
+  02 Sep 2005; Mike Frysinger <vapier@gentoo.org>:
+  Version bump by EdiG #98513.
+
+*man-pages-ru-0.7 (02 Nov 2002)
+
+  02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> man-pages-ru-0.7.ebuild :
+  Initial version, submitted by R.a E <raer@mail.ru>.
