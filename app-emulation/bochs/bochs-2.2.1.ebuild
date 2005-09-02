@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1.ebuild,v 1.4 2005/08/29 10:25:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.2.1.ebuild,v 1.5 2005/09/02 12:15:41 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -17,7 +17,7 @@ IUSE="debugger gtk2 readline sdl wxwindows"
 RDEPEND="virtual/libc
 	virtual/x11
 	sdl? ( media-libs/libsdl )
-	wxwindows? ( >=x11-libs/wxGTK-2.4 )
+	wxwindows? ( >=x11-libs/wxGTK-2.6 )
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
@@ -39,6 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export WX_GTK_VER=2.6
+
 	use wxwindows && \
 	if ! use gtk2 ; then
 		need-wxwidgets gtk
