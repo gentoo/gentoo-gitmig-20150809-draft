@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.97 2005/08/24 16:08:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.98 2005/09/02 14:12:18 leonardop Exp $
+
+*evolution-2.3.8-r1 (02 Sep 2005)
+
+  02 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/evolution-2.3.8-gentoo.patch, -evolution-2.3.7-r1.ebuild,
+  -evolution-2.3.8.ebuild, +evolution-2.3.8-r1.ebuild:
+  Added patch to work-around a segmentation fault (bug #104587).
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> evolution-2.2.3-r3.ebuild:
   stable on ia64

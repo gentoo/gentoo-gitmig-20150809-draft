@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.3.7-r1.ebuild,v 1.1 2005/08/21 04:14:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.3.8-r1.ebuild,v 1.1 2005/09/02 14:12:18 leonardop Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -153,6 +153,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3.7-configure_plugins.patch
 	# Fix for linking problems, #85013 and #92682
 	epatch ${FILESDIR}/${PN}-2.2.3-linking-fix.patch
+	# Possible work-around for a start-up segfault (bug #104587).
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	autoconf || die "autoconf failed"
 	automake || die "automake failed"
