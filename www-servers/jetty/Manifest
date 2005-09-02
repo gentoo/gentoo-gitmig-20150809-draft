@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 04ffea4539d81bfd940b8f476b57246d ChangeLog 1354
-MD5 c06bb0261951f980b4c2609682d49972 files/4.2.19/21jetty 52
-MD5 a381ae9ba82a2b10ea75e22acfafeedc files/4.2.19/jetty 948
-MD5 0ab3a07453141d8fab987dcd1f0cfd9e files/4.2.19/jetty.conf 41
-MD5 caf753222734bd35add3089fea047e1a files/4.2.19/jetty.init 1112
-MD5 0395650cdf6ad11208dcddb344d31e7b files/digest-jetty-4.2.19 70
-MD5 820311bccd9ba3f3c3b7f49ca65d9231 jetty-4.2.19.ebuild 2668
+MD5 4b903ed5d5af454c876b8f8078ba7316 ChangeLog 1459
+MD5 12b83acafbf8df7c19d3578723d74088 jetty-4.2.19.ebuild 2668
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 0395650cdf6ad11208dcddb344d31e7b files/digest-jetty-4.2.19 70
+MD5 0ab3a07453141d8fab987dcd1f0cfd9e files/4.2.19/jetty.conf 41
+MD5 a381ae9ba82a2b10ea75e22acfafeedc files/4.2.19/jetty 948
+MD5 caf753222734bd35add3089fea047e1a files/4.2.19/jetty.init 1112
+MD5 c06bb0261951f980b4c2609682d49972 files/4.2.19/21jetty 52
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0A8/I1lqEGTUzyQRArLkAKDYt1fv9DfCE8oQu8eJuXHu2CD3oACfTdEs
-XiAeb3bYtSXWL/Ul+4rjZWg=
-=2yL4
+iD8DBQFDGDdij5H05b2HAEkRAtYpAJ9mWZYuv23+qnuhYWXY9R93UWpbGgCfXT3L
+fY//ruUvcj+rHcQNLVF42Ao=
+=rkXK
 -----END PGP SIGNATURE-----
