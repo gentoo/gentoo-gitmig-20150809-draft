@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pfqueue
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.25 2005/09/01 00:25:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.26 2005/09/02 01:36:37 josejx Exp $
+
+  02 Sep 2005; Joseph Jezak <josejx@gentoo.org> pfqueue-0.4.2.ebuild:
+  Marked ppc stable for bug #101865.
 
   01 Sep 2005; Andrej Kacian <ticho@gentoo.org> -pfqueue-0.3.6.ebuild,
   -pfqueue-0.3.7.ebuild, -pfqueue-0.4.0.ebuild, -pfqueue-0.4.1.ebuild:
