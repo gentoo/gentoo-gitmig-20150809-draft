@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d49e6e01275cff271e0d71eff515da82 libburn-0.2.ebuild 729
+MD5 77f8c68f545a0c1c286911d4cba4c33c ChangeLog 322
+MD5 24a4134cb56ce0f714d49dfd76071948 metadata.xml 386
+MD5 df62f2c66c15e54ec5daf35fe35383d3 files/digest-libburn-0.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDGMmEwUpWvClEHQoRAgC+AJ9Fd0RCahLE17c57HuO3cljYREB/ACggmE5
+PwiuaMe5kdb9gKNujbDIk+0=
+=kNsH
+-----END PGP SIGNATURE-----
