@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.80 2005/08/29 12:18:54 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.81 2005/09/02 18:37:01 stkn Exp $
+
+  02 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  asterisk-1.2.0_beta1.ebuild:
+  Changed /bin/false to -1 for Gentoo/*BSD (bug #103421).
 
   29 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-1.2.0_beta1.ebuild:

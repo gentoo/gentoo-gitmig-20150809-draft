@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.5 2005/08/31 18:42:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.0_beta1.ebuild,v 1.6 2005/09/02 18:37:01 stkn Exp $
 
 inherit eutils
 
@@ -236,7 +236,7 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup asterisk
-	enewuser asterisk -1 /bin/false /var/lib/asterisk asterisk
+	enewuser asterisk -1 -1 /var/lib/asterisk asterisk
 }
 
 pkg_postinst() {
