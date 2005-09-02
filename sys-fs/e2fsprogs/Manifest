@@ -5,9 +5,9 @@ MD5 fa9189b7073d4c93726ab05bfa396db4 e2fsprogs-1.37-r1.ebuild 3297
 MD5 85f36b5553a8d70e2fea0709edbc74f1 e2fsprogs-1.35-r1.ebuild 3271
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0577d34f83fb9b4c593ed88ff96edf02 e2fsprogs-1.36.ebuild 3294
-MD5 27ea5a2bd1db17929c848a0cc57c1f8a e2fsprogs-1.38.ebuild 3245
+MD5 38097186330f8a335c49e02df5be12c1 e2fsprogs-1.38.ebuild 3458
 MD5 7110400b8107690e0f1ec51538148f9b e2fsprogs-1.36-r2.ebuild 2519
-MD5 974f29e4df4e78976ed7bb465fba9c47 ChangeLog 12852
+MD5 3163f6728a8915d9844642f666668bc3 ChangeLog 12978
 MD5 1204b9ef213580d5e95cc699846fcdc4 e2fsprogs-1.37.ebuild 2978
 MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
 MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36-r2 67
@@ -24,7 +24,7 @@ MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDEVO5gIKl8Uu19MoRAgPNAJsGEjmwxegA4aJmR8kj8k3AUH96YQCfcOse
-yS49MZJdRM/+mbbDB6M0n2M=
-=kxyn
+iD8DBQFDF93VgIKl8Uu19MoRAkSMAJ0SZOoED8jpC0hc0kjArR0yfqZEOgCdHPB6
+BFReqdjHJVp90qwDwNaWtUY=
+=CrHN
 -----END PGP SIGNATURE-----
