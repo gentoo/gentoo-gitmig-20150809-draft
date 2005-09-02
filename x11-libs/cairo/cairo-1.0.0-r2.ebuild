@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.0-r1.ebuild,v 1.1 2005/08/31 07:57:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.0-r2.ebuild,v 1.1 2005/09/02 15:58:45 leonardop Exp $
 
 inherit eutils
 
@@ -29,7 +29,8 @@ RDEPEND="media-libs/fontconfig
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	doc? ( >=dev-util/gtk-doc-1.3
+	doc? (
+		>=dev-util/gtk-doc-1.3
 		~app-text/docbook-xml-dtd-4.2 )"
 
 
@@ -40,6 +41,14 @@ src_unpack() {
 	# Fix segmentation fault when compiling with -fomit-frame-pointer.
 	# See bug #104265.
 	epatch ${FILESDIR}/${P}-omit_frame_pointer_fix.patch
+
+	# Upstream patch to correctly handle displays which don't match the local
+	# endianness. https://bugs.freedesktop.org/show_bug.cgi?id=4321
+	epatch ${FILESDIR}/${P}-display_endianness.patch
+
+	# Fix some tests that were failing on amd64.
+	# https://bugs.freedesktop.org/show_bug.cgi?id=4245
+	epatch ${FILESDIR}/${P}-tests.patch
 }
 
 src_compile() {
