@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.7 2004/07/05 15:58:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.8 2005/09/02 21:37:45 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A streaming video server"
 HOMEPAGE="http://cserv.sourceforge.net/"
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND=">=media-libs/jpeg-6b-r2
-	>=media-libs/imlib-1.9.13-r2
+RDEPEND=">=media-libs/jpeg-6b-r2
+	>=media-libs/imlib-1.9.13-r2"
+
+DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
@@ -22,14 +24,12 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.5-errno.patch
 	cd libltdl
-	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	eautoconf
 }
 
 src_install() {
 	make install DESTDIR=${D} || die
-
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO javascript.txt
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/camserv.init camserv
+	newinitd ${FILESDIR}/camserv.init camserv
 }

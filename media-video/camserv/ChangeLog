@@ -1,6 +1,11 @@
 # ChangeLog for media-video/camserv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.15 2004/11/25 22:02:35 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.16 2005/09/02 21:37:45 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  camserv-0.5.1-r2.ebuild:
+  Fix dependencies: autoconf is not a runtime dep. Use eautoconf from
+  autotools eclass. Use newinitd.
 
   26 Nov 2004; Chris White <chriswhite@gentoo.org> -camserv-0.5.0.ebuild:
   Old ebuild cleanup.
