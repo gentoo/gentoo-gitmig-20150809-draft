@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 42bcce752630e2cc18a46b1cfeab7d86 ChangeLog 747
 MD5 bca093b5262c91c7bf636abf9b790f06 bmp-themes-0.0.3.ebuild 4062
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3be0e4bd86df46089c2b6dff8b607221 files/digest-bmp-themes-0.0.3 5569
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGE0Qj5H05b2HAEkRAtu5AJ9dmf8l2FikWLdX/IQ4l+5oG85J4ACghuRs
+P2TV982gW1nb9GRaEWsTUFY=
+=GuT0
+-----END PGP SIGNATURE-----
