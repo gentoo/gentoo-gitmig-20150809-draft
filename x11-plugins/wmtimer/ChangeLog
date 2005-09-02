@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.15 2005/08/29 08:33:44 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.16 2005/09/02 19:19:33 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> wmtimer-2.9.2.ebuild:
+  Stable on ppc.
 
   29 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmtimer-2.9.2.ebuild:
   stable for x86.
