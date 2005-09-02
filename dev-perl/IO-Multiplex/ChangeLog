@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.9 2005/08/25 23:16:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.10 2005/09/02 20:00:36 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  IO-Multiplex-1.08.ebuild:
+  Stable on ppc.
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> IO-Multiplex-1.08.ebuild:
   add ~ia64
