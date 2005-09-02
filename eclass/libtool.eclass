@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.51 2005/09/02 09:35:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.52 2005/09/02 10:02:50 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -177,6 +177,8 @@ elibtoolize() {
 		local tmp=$(echo "${x}" | sed -e "s|${WORKDIR}||")
 		export ELT_APPLIED_PATCHES=
 
+		[[ -f ${x}/.elibtoolized ]] && continue
+
 		cd ${x}
 		einfo "Running elibtoolize in: $(echo "/${tmp}" | sed -e 's|//|/|g; s|^/||')"
 
@@ -246,37 +248,37 @@ elibtoolize() {
 						;;
 				esac
 			fi
-
-			if [[ -z ${ELT_APPLIED_PATCHES} ]] ; then
-				if [[ ${do_portage} == "no" && \
-				      ${do_reversedeps} == "no" && \
-					  ${do_only_patches} == "no" && \
-				      ${deptoremove} == "" ]]
-				then
-					ewarn "Cannot apply any patches, please file a bug about this"
-					break
-
-					# Sometimes ltmain.sh is in a subdirectory ...
-					if [[ ! -f ${x}/configure.in && ! -f ${x}/configure.ac ]] ; then
-						if [[ -f ${x}/../configure.in || -f ${x}/../configure.ac ]] ; then
-							cd "${x}"/../
-						fi
-					fi
-
-					if type -p libtoolize &> /dev/null ; then
-						ewarn "Cannot apply any patches, running libtoolize..."
-						libtoolize --copy --force
-					fi
-					cd "${x}"
-					break
-				fi
-			fi
 		done
-	done
 
-	if [[ -f libtool ]] ; then
-		rm -f libtool
-	fi
+		if [[ -z ${ELT_APPLIED_PATCHES} ]] ; then
+			if [[ ${do_portage} == "no" && \
+				  ${do_reversedeps} == "no" && \
+				  ${do_only_patches} == "no" && \
+				  ${deptoremove} == "" ]]
+			then
+				ewarn "Cannot apply any patches, please file a bug about this"
+				break
+
+				# Sometimes ltmain.sh is in a subdirectory ...
+				if [[ ! -f ${x}/configure.in && ! -f ${x}/configure.ac ]] ; then
+					if [[ -f ${x}/../configure.in || -f ${x}/../configure.ac ]] ; then
+						cd "${x}"/../
+					fi
+				fi
+
+				if type -p libtoolize &> /dev/null ; then
+					ewarn "Cannot apply any patches, running libtoolize..."
+					libtoolize --copy --force
+				fi
+				cd "${x}"
+				break
+			fi
+		fi
+
+		[[ -f ${x}/libtool ]] && rm -f "${x}/libtool"
+
+		touch "${x}/.elibtoolized"
+	done
 
 	cd "${start_dir}"
 
