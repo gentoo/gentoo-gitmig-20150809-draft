@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.10 2005/08/30 16:22:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.11 2005/09/02 00:16:17 dang Exp $
+
+  02 Sep 2005; <dang@gentoo.org> poppler-0.4.1.ebuild:
+  Add missing automake-1.9 dep
 
   30 Aug 2005; <dang@gentoo.org> poppler-0.4.1.ebuild:
   Remove useless myconf line

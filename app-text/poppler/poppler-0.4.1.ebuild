@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.1.ebuild,v 1.2 2005/08/30 16:22:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.1.ebuild,v 1.3 2005/09/02 00:16:17 dang Exp $
 
 inherit eutils
 
@@ -15,13 +15,16 @@ IUSE="gtk qt"
 
 # cairo is in packages.mask
 
-DEPEND=">=media-libs/freetype-2.0.5
+RDEPEND=">=media-libs/freetype-2.0.5
 	>=media-libs/t1lib-1.3
 	media-libs/fontconfig
 	virtual/ghostscript
 	dev-util/pkgconfig
 	gtk? ( =x11-libs/gtk+-2* )
 	qt? ( =x11-libs/qt-3* )"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.9.6"
 
 src_unpack(){
 	unpack ${A}
