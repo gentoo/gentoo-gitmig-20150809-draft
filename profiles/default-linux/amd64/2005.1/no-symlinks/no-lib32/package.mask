@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/no-lib32/package.mask,v 1.5 2005/07/09 00:36:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-symlinks/no-lib32/package.mask,v 1.6 2005/09/02 17:00:28 flameeyes Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -52,3 +52,4 @@
 <app-admin/usermin-1.130-r1
 <net-misc/hylafax-4.2.1-r1
 <app-i18n/canna-3.7_p2
+media-sound/bossogg
