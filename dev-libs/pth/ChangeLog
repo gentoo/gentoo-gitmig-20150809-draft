@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.30 2005/07/31 14:54:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.31 2005/09/02 21:52:56 vanquirius Exp $
+
+*pth-2.0.4 (02 Sep 2005)
+
+  02 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> +pth-2.0.4.ebuild:
+  Version bump. m4 patch in upstream.
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> pth-2.0.3.ebuild:
   Added ~mips for bug 79171.
