@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b41167a280df0f8c45d209527f73e772 ChangeLog 5764
+MD5 562fc6469b492c04abdc4f1993d61810 ChangeLog 5870
 MD5 089cc2587d1349019589012c2f065ba2 sun-jre-bin-1.4.2.08.ebuild 4842
-MD5 6b5d5b0c63e1c672f0e72830608a2522 sun-jre-bin-1.5.0.04.ebuild 5250
+MD5 50e2b4e387d1f7b8239303eb2c7433ec sun-jre-bin-1.5.0.04.ebuild 5253
 MD5 8ddec7ecb821fada4a93380b3753e5a7 sun-jre-bin-1.4.2.08-r1.ebuild 5126
 MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
 MD5 41e51040ed9b1b50fa87f9508a287442 files/sun-jre-bin-1.4.2.08 571
@@ -15,7 +15,7 @@ MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08-r1 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDxL5j5H05b2HAEkRAlJRAJ9hE75cmcn5k6r9wJ6/A4JjTGUarQCeIaWR
-oIMN8mn+X9l4gOEbehBdqHQ=
-=rhpq
+iD8DBQFDGERoj5H05b2HAEkRAiaMAJ9puviBiRlEVpV/navBm4gtsFyokwCfbnFw
+vgm3uIuDPfQJGYjv5Vl81AQ=
+=nXki
 -----END PGP SIGNATURE-----
