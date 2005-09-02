@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.167 2005/08/25 23:24:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.168 2005/09/02 21:13:55 dang Exp $
+
+  02 Sep 2005; <dang@gentoo.org>
+  +files/gnome-vfs-2.10.1-samba-close_fn.patch,
+  +files/gnome-vfs-2.11.92-samba-close_fn.patch, gnome-vfs-2.10.1-r2.ebuild,
+  gnome-vfs-2.11.92.ebuild:
+  Add autoconf check for new libsmbclient API.  bug #104531
 
 *gnome-vfs-2.10.1-r2 (25 Aug 2005)
 
