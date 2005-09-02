@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e692612bdefb0568301e7494cf75a977 gst-plugins-mpeg2dec-0.8.9.ebuild 437
-MD5 93ca571df658001c86e24270da81dd95 gst-plugins-mpeg2dec-0.8.10.ebuild 432
-MD5 20b3195a6d661bb931e623ed1860c527 gst-plugins-mpeg2dec-0.8.8.ebuild 430
-MD5 4659784b247ec32e21a5ba8016c7c2d8 ChangeLog 3044
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-mpeg2dec-0.8.8 71
+MD5 e692612bdefb0568301e7494cf75a977 gst-plugins-mpeg2dec-0.8.9.ebuild 437
+MD5 b869bfe068c2cd65d0595a2b44213660 ChangeLog 3155
+MD5 20b3195a6d661bb931e623ed1860c527 gst-plugins-mpeg2dec-0.8.8.ebuild 430
+MD5 ac1e962f091a19701963bcb0d121a33d gst-plugins-mpeg2dec-0.8.10.ebuild 432
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-mpeg2dec-0.8.9 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-mpeg2dec-0.8.8 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-mpeg2dec-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFizW2G5bA0cA/ScRAhonAJ9vSlfZMkBkyNN57q59wRwdYd4U7gCgm/mq
-Pqef+8qRD3wTutA0Y6uf6bY=
-=IgYX
------END PGP SIGNATURE-----

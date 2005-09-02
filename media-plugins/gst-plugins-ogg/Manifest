@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5563a5c964eed71672dacad667fd9e8d gst-plugins-ogg-0.8.10.ebuild 417
+MD5 a015ad5bb238903e0d978e29927f6342 gst-plugins-ogg-0.8.10.ebuild 417
 MD5 92fe7711b44092b73cc2b2bf44f47d3b gst-plugins-ogg-0.8.9.ebuild 423
-MD5 618d3e138c9120a20ede1a9cfe2a76d2 ChangeLog 5218
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 c64b45647c6760fadc098389ca325dea gst-plugins-ogg-0.8.8.ebuild 413
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 495cc5aa1baf8580e57a457fb0759114 ChangeLog 5324
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-ogg-0.8.10 72
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-ogg-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-ogg-0.8.9 71
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-ogg-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFi1F2G5bA0cA/ScRAmTcAKCZTaxW/WzXeMddQrtvfK/lS66tsACfRmR9
-0L4ovpO/ccf07dfnh6Cy6bw=
-=BatF
------END PGP SIGNATURE-----
