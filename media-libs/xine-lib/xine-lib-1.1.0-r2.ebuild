@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r2.ebuild,v 1.3 2005/08/30 09:44:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r2.ebuild,v 1.4 2005/09/02 17:05:48 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -64,12 +64,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
 
 	elibtoolize
-
-	# Makefile.ams and configure.ac get patched, so we need to rerun
-	# autotools
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.7
-	M4DIR="m4" eautoreconf
+	AT_M4DIR="m4" eautoreconf
 }
 
 # check for the X11 path for a given library
@@ -90,6 +85,8 @@ src_compile() {
 		has_pic && append-flags -UHAVE_MMX
 
 		append-flags -mno-sse -fomit-frame-pointer
+		is-flag -O? || append-flags -O2
+
 		ewarn ""
 		ewarn "Debug information will be almost useless as the frame pointer is omitted."
 		ewarn "This makes debugging harder, so crashes that has no fixed behavior are"
@@ -134,7 +131,7 @@ src_compile() {
 
 			[[ -z ${xvmcdir} ]] && die "Unable to find libXvMC.so."
 
-			myconf="${myconf} --with-xvmc-path=${xvmcdir} --with-xxmc-path=${xvmcdir}"
+			myconf="${myconf} ${xvmcconf} --with-xvmc-path=${xvmcdir} --with-xxmc-path=${xvmcdir}"
 		fi
 	fi
 
