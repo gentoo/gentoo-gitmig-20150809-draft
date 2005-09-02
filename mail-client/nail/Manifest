@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2fad864bc3e74a544b723c6bbe1147d5 ChangeLog 5701
 MD5 5515dcfdfb95a79a1e9f10e035736382 nail-11.25-r1.ebuild 1435
+MD5 ec0f983fbc493b328db9ec214d5482ac nail-11.25-r3.ebuild 1884
+MD5 2de56a6015ba8ebe890f85d8c448d96f ChangeLog 5878
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 fa7385c4874a7b9e865a5f411f2318a5 nail-11.25-r2.ebuild 1881
 MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r1 63
+MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r3 63
 MD5 40398648c9e2e41662ae61caea846c57 files/nail-nosocket.patch 473
-MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDF7lscsIHjyDViGQRAl96AKDihu60dN+kRb0v1Hhm+pSC/EJCGACdGGtB
-sgzLlZrz2Cl2N4KnsjzjRew=
-=WVKC
+iD8DBQFDGENHViELBEf1JB0RAuVaAJ9eA81GX8qVwfIRjBleZJq2vs5T9ACfTFBM
+Z6nIaezEzZdjDpET6JlpzWE=
+=PUEZ
 -----END PGP SIGNATURE-----

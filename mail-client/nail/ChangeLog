@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.40 2005/09/02 02:31:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.41 2005/09/02 12:18:51 ferdy Exp $
+
+*nail-11.25-r3 (02 Sep 2005)
+
+  02 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> -nail-11.25-r2.ebuild,
+  +nail-11.25-r3.ebuild:
+  bump with a fix for bug #104491. Remove -r2
 
   02 Sep 2005; Joseph Jezak <josejx@gentoo.org> nail-11.25-r1.ebuild:
   Marked ppc stable for bug #103291.
