@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r3.ebuild,v 1.1 2005/08/03 16:54:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r4.ebuild,v 1.1 2005/09/02 09:15:45 voxus Exp $
 
 inherit eutils libtool
 
@@ -174,8 +174,8 @@ src_install() {
 	rm -f ${D}/usr/bin/{dig,host,nslookup}
 
 	ebegin "Creating named group and user"
-	enewgroup named
-	enewuser named -1 /bin/false /etc/bind named
+	enewgroup named 40
+	enewuser named 40 -1 /etc/bind named
 	eend ${?}
 }
 

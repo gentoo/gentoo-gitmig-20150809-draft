@@ -1,7 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.82 2005/08/03 16:54:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.83 2005/09/02 09:15:45 voxus Exp $
 
+*bind-9.2.5-r6 (02 Sep 2005)
+*bind-9.3.1-r4 (02 Sep 2005)
+
+  02 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> +bind-9.2.5-r6.ebuild,
+  +bind-9.3.1-r4.ebuild, -bind-9.2.5-r5.ebuild, -bind-9.3.1-r3.ebuild:
+  Fixed enewuser wrt bug #103421.
 
 *bind-9.2.5-r5 (03 Aug 2005)
 *bind-9.3.1-r3 (03 Aug 2005)
