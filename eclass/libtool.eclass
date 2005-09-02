@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.50 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.51 2005/09/02 09:35:17 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -167,16 +167,18 @@ elibtoolize() {
 	done
 
 	if use ppc-macos ; then
-		glibtoolize --copy --force
+		local opts
+		[[ -f Makefile.am ]] && opts="--automake"
+		glibtoolize --copy --force ${opts}
 		darwintoolize
 	fi
 
 	for x in ${my_dirlist} ; do
-		local tmp=$(echo "${x}" | sed -e "s|${S}||")
+		local tmp=$(echo "${x}" | sed -e "s|${WORKDIR}||")
 		export ELT_APPLIED_PATCHES=
 
 		cd ${x}
-		einfo "Patching \${S}$(echo "/${tmp}/ltmain.sh" | sed -e 's|//|/|g') ..."
+		einfo "Running elibtoolize in: $(echo "/${tmp}" | sed -e 's|//|/|g; s|^/||')"
 
 		for y in ${elt_patches} ; do
 			local ret=0
@@ -226,8 +228,9 @@ elibtoolize() {
 							fi
 						else
 							if [[ -n $(grep 'We do not want portage' "${x}/ltmain.sh") ]] ; then
-								ewarn "  Portage patch seems to be already applied."
-								ewarn "  Please verify that it is not needed."
+							#	ewarn "  Portage patch seems to be already applied."
+							#	ewarn "  Please verify that it is not needed."
+								:
 							else
 							    local version=$( \
 									eval $(grep -e '^[[:space:]]*VERSION=' "${x}/ltmain.sh"); \
