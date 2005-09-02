@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg-mmx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.17 2005/08/23 18:06:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/ChangeLog,v 1.18 2005/09/02 17:24:10 sbriesen Exp $
+
+  02 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  jpeg-mmx-0.1.6-r1.ebuild:
+  filter -fforce-addr because it breaks compile
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   jpeg-mmx-0.1.6-r1.ebuild:
