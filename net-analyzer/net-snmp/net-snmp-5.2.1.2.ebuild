@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2.ebuild,v 1.10 2005/08/07 09:12:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2.ebuild,v 1.11 2005/09/02 12:34:09 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -59,11 +59,14 @@ src_unpack() {
 	# bugs 68467 and 68254
 	sed -i -e 's;embed_perl="yes",;embed_perl=$enableval,;' configure.in \
 		|| die "sed configure.in failed"
+	# Insecure run-path - bug 103776
+	sed -i -e 's/\(@(cd perl ; $(MAKE)\)\() ; \\\)/\1 LD_RUN_PATH=\2/g' \
+		Makefile.in || die "sed Makefile.in failed"
 	# fix access violation in make check
-	sed -i 's/\(snmpd.*\)-Lf/\1-l/' testing/eval_tools.sh || \
+	sed -i -e 's/\(snmpd.*\)-Lf/\1-l/' testing/eval_tools.sh || \
 		die "sed eval_tools.sh failed"
 	# fix path in fixproc
-	sed -i 's|\(database_file =.*\)/local\(.*\)$|\1\2|' local/fixproc || \
+	sed -i -e 's|\(database_file =.*\)/local\(.*\)$|\1\2|' local/fixproc || \
 		die "sed fixproc failed"
 
 	ht_fix_all
