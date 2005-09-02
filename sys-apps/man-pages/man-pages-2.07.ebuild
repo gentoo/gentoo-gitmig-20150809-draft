@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.07.ebuild,v 1.4 2005/09/02 04:30:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.07.ebuild,v 1.5 2005/09/02 22:58:06 vapier Exp $
 
 inherit eutils
 
@@ -11,10 +11,11 @@ SRC_URI="mirror://kernel/linux/docs/manpages/${P}.tar.bz2"
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE=""
+IUSE="nls"
 
 RDEPEND="sys-apps/man"
-PDEPEND="linguas_cs? ( app-i18n/man-pages-cs )
+PDEPEND="nls? (
+	linguas_cs? ( app-i18n/man-pages-cs )
 	linguas_da? ( app-i18n/man-pages-da )
 	linguas_de? ( app-i18n/man-pages-de )
 	linguas_es? ( app-i18n/man-pages-es )
@@ -25,7 +26,8 @@ PDEPEND="linguas_cs? ( app-i18n/man-pages-cs )
 	linguas_pl? ( app-i18n/man-pages-pl )
 	linguas_ro? ( app-i18n/man-pages-ro )
 	linguas_ru? ( app-i18n/man-pages-ru )
-	linguas_zh_CN? ( app-i18n/man-pages-zh_CN )"
+	linguas_zh_CN? ( app-i18n/man-pages-zh_CN )
+	)"
 
 src_unpack() {
 	unpack ${A}
