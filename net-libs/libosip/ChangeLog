@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.19 2005/07/15 19:12:51 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.20 2005/09/02 16:05:36 dang Exp $
+
+  02 Sep 2005; <dang@gentoo.org> libosip-2.2.1.ebuild:
+  Marked ~amd64
 
   15 Jul 2005; Stefan Knoblich <stkn@gentoo.org> libosip-2.2.1.ebuild:
   Removing threads USE flag and enabling threads support by default, breaks
