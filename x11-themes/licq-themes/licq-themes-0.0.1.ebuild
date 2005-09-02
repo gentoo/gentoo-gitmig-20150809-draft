@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/licq-themes/licq-themes-0.0.1.ebuild,v 1.13 2005/08/26 13:57:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/licq-themes/licq-themes-0.0.1.ebuild,v 1.14 2005/09/02 12:59:14 flameeyes Exp $
 
 DESCRIPTION="Collection of licq themes"
 HOMEPAGE="http://www.licq.org"
@@ -100,5 +100,5 @@ src_compile() {
 
 src_install () {
 	dodir /usr/share/licq/qt-gui/
-	cp -dpR * ${D}/usr/share/licq/qt-gui/
+	cp -pR * ${D}/usr/share/licq/qt-gui/
 }

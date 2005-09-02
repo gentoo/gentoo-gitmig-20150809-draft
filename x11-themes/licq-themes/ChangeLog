@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/licq-themes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/licq-themes/ChangeLog,v 1.9 2005/08/26 13:57:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/licq-themes/ChangeLog,v 1.10 2005/09/02 12:59:14 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  licq-themes-0.0.1.ebuild:
+  Don't use -d option with cp.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> licq-themes-0.0.1.ebuild:
   add ~ia64

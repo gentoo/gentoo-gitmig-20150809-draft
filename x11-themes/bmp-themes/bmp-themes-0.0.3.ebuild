@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmp-themes/bmp-themes-0.0.3.ebuild,v 1.3 2005/07/11 18:35:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmp-themes/bmp-themes-0.0.3.ebuild,v 1.4 2005/09/02 13:00:37 flameeyes Exp $
 
 DESCRIPTION="Collection of XMMS themes for Beep Media Player"
 HOMEPAGE="http://www.xmms.org"
@@ -136,6 +136,6 @@ src_compile() {
 
 src_install () {
 	dodir /usr/share/bmp/Skins
-	cp -dpR * ${D}/usr/share/bmp/Skins/
+	cp -pR * ${D}/usr/share/bmp/Skins/
 	chmod -R o-w ${D}/usr/share/bmp/Skins/
 }
