@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.86 2005/08/26 16:01:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.87 2005/09/02 22:47:08 stkn Exp $
+
+  03 Sep 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.6.3-r3.ebuild:
+  Added missing eutils eclass to inherit line.
 
   26 Aug 2005; Seemant Kulleen <seemant@gentoo.org> pwlib-1.6.6-r2.ebuild,
   pwlib-1.8.3-r1.ebuild, pwlib-1.8.4.ebuild:
