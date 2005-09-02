@@ -49,7 +49,7 @@ diff -Naur qt-x11-free-3.3.4.orig/mkspecs/darwin-g++/qmake.conf qt-x11-free-3.3.
 -QMAKE_INCDIR		= /usr/local/include
 -QMAKE_LIBDIR		=
 +QMAKE_INCDIR		= /usr/include
-+QMAKE_LIBDIR		= /usr/lib
++QMAKE_LIBDIR		= /usr/qt/3/lib
  QMAKE_INCDIR_X11	= /usr/X11R6/include
  QMAKE_LIBDIR_X11	= /usr/X11R6/lib
  QMAKE_INCDIR_QT		= $(QTDIR)/include
