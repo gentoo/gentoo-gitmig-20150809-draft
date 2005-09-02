@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.8 2005/02/14 07:42:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ecletex/ecletex-0.0.3.ebuild,v 1.9 2005/09/02 12:49:59 flameeyes Exp $
 
 inherit eclipse-ext
 
@@ -60,7 +60,7 @@ src_compile() {
 		die "Failed to copy build products"
 
 	for x in codeassist dictionary icons templates ; do
-		cp -dpR $x ${stagedir}/ || die "Failed to copy directory $x"
+		cp -pR $x ${stagedir}/ || die "Failed to copy directory $x"
 	done
 
 }
