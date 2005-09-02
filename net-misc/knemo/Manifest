@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e7f9cc630cc90dfb7a2984b92b0ef362 knemo-0.3.1-r1.ebuild 837
-MD5 1391aa7f08f2f82d7b32ee77d6c05024 ChangeLog 2086
+MD5 fb8178fd61a4affc8f030106d9a44551 ChangeLog 2185
+MD5 4ebb1879e426b275794590ee4b3edbb5 knemo-0.3.1-r1.ebuild 835
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 880f6fce3873cebf4cb5bd3070ab5967 files/digest-knemo-0.3.1-r1 64
 MD5 e6a9a9aef0881e30022bd77be5ac5d90 files/knemo-0.3.1-linkquality.patch 463
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC/gnmj5H05b2HAEkRAvruAJ470YoZosCItn0kxBxmfQQp8Ah7bACgmXwj
-Yh0gJ+W/JeaFu3sHKGtLwl0=
-=GCkb
+iD8DBQFDF9QdwUpWvClEHQoRAjk8AKCGT0ZGVLuNk5/qIywlWroXg27a+wCfVcJj
+lGw7p52kds0qofLSys9RN0E=
+=mQeu
 -----END PGP SIGNATURE-----
