@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.7 2005/08/27 18:51:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r1.ebuild,v 1.8 2005/09/02 19:28:32 hansmi Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="FDL-1.1 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
