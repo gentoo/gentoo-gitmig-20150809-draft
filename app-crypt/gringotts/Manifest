@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ac842aa9b1a2ba8f6a417fdaa4502e6 ChangeLog 3419
-MD5 78817d2bc78fdbac1838e44f4701a407 gringotts-1.2.8-r1.ebuild 1444
-MD5 6ca5eaeaa32c291c598b1640fa4b8e08 gringotts-1.2.8.ebuild 1032
 MD5 aca7535e091e24a4fb74038919e3e2a0 metadata.xml 550
-MD5 238aeb98d1470931a9e60395575595d4 files/digest-gringotts-1.2.8 68
+MD5 79e0e99ab4e4a91c070e76e7610f4c6f ChangeLog 3518
+MD5 2d66fd33a9c03332c26ecaba0727f78e gringotts-1.2.8-r1.ebuild 1441
+MD5 6ca5eaeaa32c291c598b1640fa4b8e08 gringotts-1.2.8.ebuild 1032
 MD5 238aeb98d1470931a9e60395575595d4 files/digest-gringotts-1.2.8-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFQsjwUpWvClEHQoRAjSRAJ9K10lmw0emomwILy4eLuzcvGdZJwCfaxT0
-Lgg9k820/eBin73m+gd5AWM=
-=+a+b
------END PGP SIGNATURE-----
+MD5 238aeb98d1470931a9e60395575595d4 files/digest-gringotts-1.2.8 68

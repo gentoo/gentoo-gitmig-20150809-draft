@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.23 2005/08/31 00:45:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.24 2005/09/02 19:17:13 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gringotts-1.2.8-r1.ebuild:
+  Stable on ppc.
 
   31 Aug 2005; Luis Medinas <metalgod@gentoo.org> gringotts-1.2.8-r1.ebuild:
   Marked Stable on AMD64.
