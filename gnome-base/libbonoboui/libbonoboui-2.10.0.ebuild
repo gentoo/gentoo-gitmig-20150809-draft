@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.10.0.ebuild,v 1.6 2005/08/31 21:34:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.10.0.ebuild,v 1.7 2005/09/02 19:45:48 hansmi Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="doc static"
 
 RDEPEND=">=gnome-base/libgnomecanvas-1.116
