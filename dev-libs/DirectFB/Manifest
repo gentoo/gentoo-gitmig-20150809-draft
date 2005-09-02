@@ -2,14 +2,15 @@
 Hash: SHA1
 
 MD5 b798773c0060701f402cec4cddc05f5d metadata.xml 754
-MD5 11d456494e71ce088b95f8a1340581fb DirectFB-0.9.22.ebuild 4133
-MD5 12b64e8434fbbed993ce695cc55c2d5e ChangeLog 7426
+MD5 e91c5a57b150b16a26ed178bf020c9d6 DirectFB-0.9.22.ebuild 4178
+MD5 b2ade4dfff293e045e924f8bb104ca17 ChangeLog 7606
+MD5 c4d29f6e0f6e36e8e07b97fefe0a33cb files/DirectFB-0.9.22-i830-detect.patch 347
 MD5 51cf3c6f205c566235b00a488947f835 files/0.9.21-simd-amd64.patch 6156
 MD5 2a322a95caff6a561082846ca8f0d700 files/digest-DirectFB-0.9.22 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDB+gAgIKl8Uu19MoRAlrAAJ4nTzUZadF4Qb+8l0lrLfGU/SV28ACfYDZt
-WuS0ld0udXbfWS9O7JcGQtg=
-=1ahg
+iD8DBQFDF5qEgIKl8Uu19MoRAnSEAJ9OfuaSab5539Hm8qmphWSc9xC1IQCfZmGF
+3Q5KbgZio97CSxQyPNWtzMo=
+=Q0tX
 -----END PGP SIGNATURE-----

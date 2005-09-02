@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.5 2005/08/21 02:32:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.6 2005/09/02 00:18:45 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -45,12 +45,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Make sure i830 is detected
-	# force disable wm97xx #36924
-	sed -i \
-		-e 's:^//::' \
-		-e 's:wm97xx_ts=yes:wm97xx_ts=no:' \
-		configure \
-		|| die "sed configure failed"
+	epatch "${FILESDIR}"/${P}-i830-detect.patch
 
 	# This patch enables simd optimisations for amd64. Since mmx and sse are
 	# masked USE flags on amd64 due to their enabling x86 specific asm more
@@ -60,6 +55,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# force disable wm97xx #36924
+	export ac_cv_header_linux_wm97xx_h=no
+	# force disable of sis315 #77391
+	export ac_cv_header_linux_sisfb_h=no
+
 	local vidcards card input inputdrivers
 	for card in ${VIDEO_CARDS} ; do
 		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
