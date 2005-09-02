@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/danpei
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/danpei/ChangeLog,v 1.4 2005/08/10 12:46:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/danpei/ChangeLog,v 1.5 2005/09/02 19:24:11 ticho Exp $
+
+  02 Sep 2005; Andrej Kacian <ticho@gentoo.org> danpei-2.9.6.ebuild:
+  Stable on x86.
 
   10 Aug 2005; Luis Medinas <metalgod@gentoo.org> ChangeLog:
   Marked ~amd64.
