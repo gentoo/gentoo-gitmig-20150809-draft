@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db326ade3dea6937f69bc7d9a0bc9ed1 gst-plugins-vorbis-0.8.9.ebuild 439
-MD5 0f6c299e3729540376c1be7222986305 gst-plugins-vorbis-0.8.10.ebuild 433
-MD5 e3710c8136806f4406b0256e2d308853 gst-plugins-vorbis-0.8.8.ebuild 429
-MD5 c77cdac1f9a3d16250034f568e667571 ChangeLog 6801
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-vorbis-0.8.8 71
+MD5 c168f2e93ea8c0b8972a11f44b7b61af ChangeLog 6910
+MD5 db326ade3dea6937f69bc7d9a0bc9ed1 gst-plugins-vorbis-0.8.9.ebuild 439
+MD5 e3710c8136806f4406b0256e2d308853 gst-plugins-vorbis-0.8.8.ebuild 429
+MD5 c771ba6977411730d61104dbcb8d0156 gst-plugins-vorbis-0.8.10.ebuild 433
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-vorbis-0.8.9 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-vorbis-0.8.8 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-vorbis-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFi5W2G5bA0cA/ScRAsf/AKC7tv5qhwVfnJxt0k1pYn6eDtfThACggW2u
-Rg65xqqGh8RwR34o8rytGws=
-=ooaR
------END PGP SIGNATURE-----
