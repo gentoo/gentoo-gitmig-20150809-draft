@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.03.ebuild,v 1.5 2005/08/25 01:39:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.03.ebuild,v 1.6 2005/09/02 12:28:09 flameeyes Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -50,7 +50,7 @@ src_install() {
 	dodir /opt/${P}
 
 	for i in ${dirs} ; do
-		cp -dR $i ${D}/opt/${P}/ || die
+		cp -R $i ${D}/opt/${P}/ || die
 	done
 
 	newdoc README.TXT README

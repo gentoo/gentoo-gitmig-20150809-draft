@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.11 2005/07/13 14:07:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.12 2005/09/02 12:26:21 flameeyes Exp $
 
 inherit java
 
@@ -34,7 +34,7 @@ src_compile() {
 src_install() {
 	# Copy all the files to the designated directory
 	dodir /opt/${P}
-	cp -dpR ${S}/jre/* ${D}/opt/${P}/
+	cp -pR ${S}/jre/* ${D}/opt/${P}/
 
 	dohtml -a html,htm,HTML -r docs
 	dodoc ${S}/docs/COPYRIGHT

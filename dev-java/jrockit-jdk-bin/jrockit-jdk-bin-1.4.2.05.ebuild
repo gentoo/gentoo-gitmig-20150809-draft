@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.4 2005/07/19 14:22:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.05.ebuild,v 1.5 2005/09/02 12:28:09 flameeyes Exp $
 
 IUSE=""
 
@@ -55,7 +55,7 @@ src_install() {
 	dodir /opt/${P}
 
 	for i in ${dirs} ; do
-		cp -dR $i ${D}/opt/${P}/ || die
+		cp -R $i ${D}/opt/${P}/ || die
 	done
 
 	newdoc README.TXT README

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.5 2005/04/22 08:42:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.6 2005/09/02 12:25:02 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  maven-bin-1.0_rc3.ebuild, maven-bin-1.0_rc4.ebuild, maven-bin-1.0.ebuild:
+  Don't use -d option with cp.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> maven-bin-1.0_rc3.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.0_rc3.ebuild,v 1.4 2005/04/22 08:42:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.0_rc3.ebuild,v 1.5 2005/09/02 12:25:02 flameeyes Exp $
 
 DESCRIPTION="Project Management and Comprehension Tool for Java"
 SRC_URI="mirror://apache/maven/binaries/${PN/-bin}-${PV/_/-}.tar.gz"
@@ -23,5 +23,5 @@ src_install() {
 	doexe ${S}/bin/maven
 	insinto /etc/env.d
 	doins ${FILESDIR}/25maven
-	cp -Rdp * ${D}/usr/share/maven
+	cp -Rp * ${D}/usr/share/maven
 }

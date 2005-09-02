@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.14 2005/08/25 01:39:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.15 2005/09/02 12:28:09 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  jrockit-jdk-bin-1.4.2.05.ebuild, jrockit-jdk-bin-1.5.0.03.ebuild:
+  Don't use -d option with cp.
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   jrockit-jdk-bin-1.5.0.03.ebuild:
