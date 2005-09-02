@@ -1,0 +1,13 @@
+# ChangeLog for app-i18n/man-pages-it
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.1 2005/09/02 04:28:38 vapier Exp $
+
+  15 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  fix broken package.
+
+*man-pages-it-0.3.4 (17 Jun 2004)
+
+  17 Jun 2004; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +man-pages-it-0.3.4.ebuild:
+  First commit, ebuild provided by Ilya Cassina <ilya.cassina@epfl.ch>
+
