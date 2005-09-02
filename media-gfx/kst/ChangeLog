@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kst
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.8 2005/08/20 17:49:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.9 2005/09/02 19:43:41 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> kst-1.1.0.ebuild:
+  Stable on ppc.
 
   20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> -kst-0.94.ebuild,
   kst-0.97.ebuild, -kst-0.99.ebuild, -kst-1.0.0.ebuild, kst-1.1.0.ebuild:

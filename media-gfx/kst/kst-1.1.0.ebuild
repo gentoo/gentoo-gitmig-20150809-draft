@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.1.0.ebuild,v 1.2 2005/08/20 17:49:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-1.1.0.ebuild,v 1.3 2005/09/02 19:43:41 hansmi Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://omega.astro.utoronto.ca/kst/"
 #SRC_URI="http://omega.astro.utoronto.ca/kst/${P}.tar.gz"
 SRC_URI="http://mirrors.isc.org/pub/kde/stable/apps/KDE3.x/scientific/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ppc ~sparc x86"
 LICENSE="GPL-2"
 
 SLOT="0"
