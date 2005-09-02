@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.5 2005/09/02 13:03:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.6 2005/09/02 19:38:54 dang Exp $
+
+*mplayer-bin-1.0_pre7-r2 (02 Sep 2005)
+
+  02 Sep 2005; <dang@gentoo.org> -mplayer-bin-1.0_pre7.ebuild,
+  +mplayer-bin-1.0_pre7-r2.ebuild:
+  Include fix for bug #103555; Fix quoting on scripts, so mplayer-bin can play
+  files with spaces; move linked win32codecs dir to /opt/mplayer-bin/lib/win32
+  and symlink that to the correct location
 
   02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   mplayer-bin-1.0_pre7-r1.ebuild:
