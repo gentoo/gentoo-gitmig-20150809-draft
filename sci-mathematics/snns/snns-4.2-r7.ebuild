@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.3 2005/08/24 16:42:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.4 2005/09/02 20:24:13 hansmi Exp $
 
 inherit eutils python
 
@@ -18,7 +18,7 @@ SRC_URI="http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.tar.gz
 			  http://download.berlios.de/snns-dev/${MYPYTHONPATCH}.gz )"
 
 LICENSE="SNNS-${PV}"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc x86"
 SLOT="0"
 IUSE="X doc python"
 
