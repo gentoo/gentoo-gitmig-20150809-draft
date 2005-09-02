@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d46cfa56d2ab2700158e70fd89c024d9 libbonobo-2.10.1.ebuild 839
-MD5 77194b47c0f0cf45acd3b6d9f1f15d96 libbonobo-2.10.0.ebuild 812
-MD5 2736bdbceb44da62b991e0ef5a02dded ChangeLog 9413
-MD5 e339ed6c826b56d0194203cd6be6dda8 libbonobo-2.8.1.ebuild 727
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 275ee576e1bf6385f018024a23e18b87 files/digest-libbonobo-2.10.0 70
-MD5 3ad462f33613644f13f10e0cfebb321a files/digest-libbonobo-2.10.1 70
+MD5 cfe8be5fb9f3b4cbf9f62a5e82a92ebf ChangeLog 9513
+MD5 d46cfa56d2ab2700158e70fd89c024d9 libbonobo-2.10.1.ebuild 839
+MD5 e339ed6c826b56d0194203cd6be6dda8 libbonobo-2.8.1.ebuild 727
+MD5 d7da895816de90a5b4389a790ebd9f6a libbonobo-2.10.0.ebuild 812
 MD5 7a23ad7bd11927f25af8ae42f705e470 files/digest-libbonobo-2.8.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFidt2G5bA0cA/ScRAgfvAJ4sUj6anVVuRl9ZwhpMQJaxQxi5BACfbglc
-XmkHedbZgGev6vQS+/szZSk=
-=yuD/
------END PGP SIGNATURE-----
+MD5 3ad462f33613644f13f10e0cfebb321a files/digest-libbonobo-2.10.1 70
+MD5 275ee576e1bf6385f018024a23e18b87 files/digest-libbonobo-2.10.0 70
