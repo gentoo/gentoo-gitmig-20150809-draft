@@ -1,60 +1,12 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.15 2005/05/26 22:50:39 kugelfang Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.16 2005/09/02 23:30:47 kugelfang Exp $
 
-*ifc-8.1.026 (27 May 2005)
+*ifc-9.0.026 (02 Sep 2005)
+*ifc-9.0.021 (02 Sep 2005)
 
-  27 May 2005; Danny van Dyk <kugelfang@gentoo.org> metadata.xml,
-  +ifc-8.1.026.ebuild, +ifc-8.1.027.ebuild:
-  Taking over maintainership. Added ifc-8.1.02{6,7} for testing purpose. (still
-  package.mask'ed)
+  02 Sep 2005; Danny van Dyk <kugelfang@gentoo.org> +files/9.0/05ifc,
+  -ifc-7.0.064.ebuild, +ifc-9.0.021.ebuild, +ifc-9.0.026.ebuild:
+  Added ifc-9.0.021 (public) and ifc-9.0.026 (only available via
+  premier.intel.com). Removed obsolete version 7.0.064.
 
-  21 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; :
-  Fix ChangeLog entry by root.
-
-*ifc-7.1.008 (09 Feb 2004)
-
-  09 Feb 2004; Jared Hudson <jhhudso@gentoo.org> ifc-6.0.ebuild,
-  ifc-7.0.064-r1.ebuild, ifc-7.0.064.ebuild, ifc-7.1.008.ebuild, metadata.xml:
-  Version bump and fixed copyright headers in other ebuilds. New ebuild credit
-  goes to Derek Dolney <dolney@astro.upenn.edu> under bug id #29483
-
-  24 Sep 2003; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064-r1.ebuild :
-  Changed rpm_unpack call to properly unpack all RPMs, fixes bug
-  29484
-
-  20 Sep 2003; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064-r1.ebuild :
-  Now uses rpm.eclass - bug 23180. Thanks Georgi.
-
-  12 Jun 2003; <msterret@gentoo.org> ifc-7.0.064-r1.ebuild:
-  fix Header
-
-*ifc-7.0.064-r1 (29 Mar 2003)
-
-  29 March 2003; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064-r1.ebuild :
-
-  Fixes a bug in the primary ifc executable.
-
-  19 March 2003; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064.ebuild :
-
-  Removed if statement to check for preexisting installs prior
-  to displaying ewarn about old packages needing to be recompiled.
-  All users ought to read the warning regardless of whether
-  they've installed it in the past or not.
-
-*ifc-7.0.064 (9 Dec 2002)
-
-  9 Dec 2002; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064.ebuild :
-
-  Latest IFC, ebuild submitted by Daniel Jaeggi (daniel@jaeggi.co.uk)
-
-*ifc-6.0 (13 May 2002)
-  
-  13 May 2002; William McArthur <sandymac@gentoo.org> ifc-6.0.ebuild :
-
-  Made some changes to Remco's work to better fit with icc-6.0. Both packages
-  are very similar and can use some of the same files.
-
-  10 May 2002; Remco van den Bosch <bosch@muon.xs4all.nl> ifc-6.0.ebuild :
-  
-  Tweaked icc ebuild to install ifc.
