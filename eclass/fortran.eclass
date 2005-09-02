@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.10 2005/09/02 21:40:26 kugelfang Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
@@ -59,8 +59,8 @@ need_fortran() {
 				;;
 			ifc)
 				case ${ARCH} in
-					x86|ia64)
-						if [ -x "$(which if2 2> /dev/null)" ]; then
+					x86|ia64|amd64)
+						if [ -x "$(which ifc 2> /dev/null)" ]; then
 							AVAILABLE="${AVAILABLE} ifc"
 						fi
 						;;
@@ -104,12 +104,16 @@ need_fortran() {
 				FC="${F77}"						# F77 overwrites FC
 			fi
 			if [ -n "${FC}" -a -n "${F2C}" ]; then
-				ewarn "Using ${FC} and f2c is impossible. Disabling f2c !"
+				ewarn "Using ${FC} and f2c is impossible. Disabling F2C !"
 				F2C=""							# Disabling f2c
 				MY_FORTRAN="$(basename ${FC})"	# set MY_FORTRAN to filename of
 												# the Fortran Compiler
-			elif [ -n "${F2C}" ]; then
-				MY_FORTRAN="$(basename ${F2C})"
+			else
+				if [ -n "${F2C}" ]; then
+					MY_FORTRAN="$(basename ${F2C})"
+				else
+					MY_FORTRAN="$(basename ${F77})"
+				fi
 			fi
 		fi
 
