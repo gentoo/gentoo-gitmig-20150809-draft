@@ -1,0 +1,27 @@
+# ChangeLog for app-i18n/man-pages-de
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.1 2005/09/02 04:28:32 vapier Exp $
+
+  10 Aug 2004; <solar@gentoo.org> manpages-de-0.4.ebuild:
+  fixed security problem with ebuild
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  manpages-de-0.4.ebuild:
+  QA - IUSE fix
+
+  05 Apr 2004; Guy Martin <gmsoft@gentoo.org> manpages-de-0.4.ebuild:
+  Marked stable on hppa.
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> manpages-de-0.4.ebuild:
+  Don't assign default to S; header fix
+
+*manpages-de-0.4 (25 July 2002)
+
+  27 Jan 2003; Seemant Kulleen <seemant@gentoo.org> manpages-de-0.4.ebuild :
+
+  tweak to supress sandbox violation, and also use ${P} in the SRC_URI.
+
+  25 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, manpages-de-0.4.ebuild, files/digest-manpages-de-0.4 :
+
+  Initial version in Portage now..
+
