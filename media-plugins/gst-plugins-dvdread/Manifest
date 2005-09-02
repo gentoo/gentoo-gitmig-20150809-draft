@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7309f557d7e353bcbf11dd98b94d04ca gst-plugins-dvdread-0.8.9.ebuild 371
-MD5 ef6453b96a88171e02d0afd27802c7c4 gst-plugins-dvdread-0.8.10.ebuild 367
-MD5 93f66722ba669d4e18dd8e624ac087bc gst-plugins-dvdread-0.8.8.ebuild 364
-MD5 8a24be1a4ec4e565a1a9c0d323801c73 ChangeLog 2733
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+MD5 b965336236e906b7613fc22fac862709 ChangeLog 2843
+MD5 93f66722ba669d4e18dd8e624ac087bc gst-plugins-dvdread-0.8.8.ebuild 364
+MD5 a89c72bf4eae7401fa09c086a08ca3e2 gst-plugins-dvdread-0.8.10.ebuild 367
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-dvdread-0.8.8 71
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-dvdread-0.8.9 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-dvdread-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFipI2G5bA0cA/ScRAl4uAKDlroUMgfTjQmSE6f7KSYEa/ZQ65QCgs5Qw
-0WU97t3aKfAnR586BLGPAzQ=
-=LCB+
------END PGP SIGNATURE-----

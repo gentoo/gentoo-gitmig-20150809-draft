@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da279ce843bc714ff297bf49951bbc05 gst-plugins-cdparanoia-0.8.9.ebuild 385
 MD5 63abda992324c167ccc754a5a6a911f6 gst-plugins-cdparanoia-0.8.8.ebuild 376
-MD5 0505c08fff1b45093327f1f69a596d42 ChangeLog 5041
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 8853efab40a685d39a8b9385aef2bca2 gst-plugins-cdparanoia-0.8.10.ebuild 379
+MD5 da279ce843bc714ff297bf49951bbc05 gst-plugins-cdparanoia-0.8.9.ebuild 385
+MD5 1ac5eed36d7d747e826ba770892162c0 ChangeLog 5154
+MD5 4a43f9911f685e98a3bea7f7cc513ede gst-plugins-cdparanoia-0.8.10.ebuild 379
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-cdparanoia-0.8.8 71
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-cdparanoia-0.8.9 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-cdparanoia-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFinD2G5bA0cA/ScRAk8JAJwJxaeMlL0xyzhB4EdZFXqsU0TrywCfWGKe
-lLU4DhAZ6Pk6aF5N/WMCeVY=
-=B2eh
------END PGP SIGNATURE-----
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-cdparanoia-0.8.9 71
