@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c8581039c9e9db5d9432116859719f8 dia-0.94-r2.ebuild 1653
-MD5 a2e230eb1d422d8da320507fb3de7838 dia-0.94-r1.ebuild 1479
-MD5 2bafb89389726687bbeec95b198524a9 ChangeLog 7505
 MD5 858a96d79b7c8b479edd95aedcf0c0c6 metadata.xml 589
-MD5 159070f80a109b691f1a945755bf2b7c files/dia-0.94-gcc4.patch 934
+MD5 51be2fa6ed95afd1ff1bbd93f224805e dia-0.94-r2.ebuild 1650
+MD5 d50da76636e5938150dbe8a37c3b96d5 ChangeLog 7598
+MD5 a2e230eb1d422d8da320507fb3de7838 dia-0.94-r1.ebuild 1479
+MD5 364d452e7bd501c01910f613c066608e files/dia-0.94-help.patch 2766
 MD5 5825798492b196ec96d3757e9e1d0de8 files/dia-0.94-no_font_cache.patch 473
 MD5 c6257d6dad2b46a83757991db3f3e6c5 files/digest-dia-0.94-r1 62
-MD5 c6257d6dad2b46a83757991db3f3e6c5 files/digest-dia-0.94-r2 62
-MD5 364d452e7bd501c01910f613c066608e files/dia-0.94-help.patch 2766
-MD5 275b4e09a76a808202872cae5ac90f7c files/0.94-disable_python_gtk_import.patch 313
 MD5 bf246d9c1eae9246fd3026d76077d7c3 files/dia-0.94-db2man.patch 901
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDEPqJntT9W3vfTuoRAov2AKCUlFh9+TfhbtPPBDTy+647JnHP3gCdEflD
-wQn9D+24u0w6cmpYWfLSTM4=
-=PJfp
------END PGP SIGNATURE-----
+MD5 c6257d6dad2b46a83757991db3f3e6c5 files/digest-dia-0.94-r2 62
+MD5 159070f80a109b691f1a945755bf2b7c files/dia-0.94-gcc4.patch 934
+MD5 275b4e09a76a808202872cae5ac90f7c files/0.94-disable_python_gtk_import.patch 313

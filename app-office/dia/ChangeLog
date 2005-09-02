@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.59 2005/08/27 23:42:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.60 2005/09/02 19:24:46 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> dia-0.94-r2.ebuild:
+  Stable on ppc.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> dia-0.94-r2.ebuild:
   add ~ia64
