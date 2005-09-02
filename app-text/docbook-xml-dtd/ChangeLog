@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.35 2005/08/30 13:46:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.36 2005/09/02 19:26:11 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  docbook-xml-dtd-4.4.ebuild:
+  Stable on ppc.
 
   30 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   docbook-xml-dtd-4.4.ebuild:
