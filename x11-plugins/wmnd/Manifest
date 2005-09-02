@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77f765b16a0e8bc125c439ea28eae45e wmnd-0.4.11.ebuild 756
-MD5 2fc3b3f25b5c74bdd79b80c5b08595fd wmnd-0.4.11-r1.ebuild 883
-MD5 a521b46024d52ff2bf3c606ea25b84bc ChangeLog 3763
 MD5 35b06c646b51979b2022449f31d7a7ee metadata.xml 448
+MD5 bc25dddda316487ebc7b3c860067d999 ChangeLog 3856
+MD5 77f765b16a0e8bc125c439ea28eae45e wmnd-0.4.11.ebuild 756
+MD5 3cc293e609bc49a822c544154ef30b6d wmnd-0.4.11-r1.ebuild 880
 MD5 8a1fa932715cb4c1c287aabf20d0d276 files/digest-wmnd-0.4.11-r1 63
 MD5 8a1fa932715cb4c1c287aabf20d0d276 files/digest-wmnd-0.4.11 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFJ/TKRy60XGEcJIRAi4bAJ4y/Dv8MWC3h/6I9CDL/BjAsbxQyQCfSwQD
-3VuQDhTHGpx/B+CAKIOHwnk=
-=lMRO
------END PGP SIGNATURE-----
