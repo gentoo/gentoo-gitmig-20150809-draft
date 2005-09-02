@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r5.ebuild,v 1.3 2005/08/30 13:15:35 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r6.ebuild,v 1.1 2005/09/02 01:56:42 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -19,7 +19,8 @@ CVS_UPDATE_DATE="20050822-1"
 
 PATCHES="${WORKDIR}/${P}-update-to-CVS-HEAD-${CVS_UPDATE_DATE}.patch
 	${FILESDIR}/${PVR}-check-for-glproto.patch
-	${FILESDIR}/fix-xnest.patch"
+	${FILESDIR}/fix-xnest.patch
+	${FILESDIR}/make-fbcompose-endian-safe.patch"
 
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2

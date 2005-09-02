@@ -1,6 +1,20 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.35 2005/08/30 13:15:35 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.36 2005/09/02 01:56:42 joshuabaergen Exp $
+
+  02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/make-fbcompose-endian-safe.patch, -xorg-server-0.99.1-r5.ebuild,
+  +xorg-server-0.99.1-r6.ebuild:
+  Makes certain draw code endian-safe. Should fix things for big-endian
+  arches. Thanks to Stanislaw Skowronek and geoman in bug #104318.
+
+*xorg-server-0.99.1-r6 (02 Sep 2005)
+
+  02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/make-fbcompose-endian-safe.patch, -xorg-server-0.99.1-r5.ebuild,
+  +xorg-server-0.99.1-r6.ebuild:
+  Added fix to make colour calculations endian safe.  Thanks to Stanislaw
+  Skowronek for the patch and geoman for the heads-up.  Fixes bug #104318.
 
   30 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
   xorg-server-0.99.1-r5.ebuild:
