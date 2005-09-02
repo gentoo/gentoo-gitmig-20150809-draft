@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r1.ebuild,v 1.1 2005/09/01 15:33:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r1.ebuild,v 1.2 2005/09/02 06:46:40 uberlord Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_install() {
 
 	insinto /etc/conf.d ; newins "${FILESDIR}/${PN}.conf" "${PN}" || die
 	exeinto /etc/init.d ; newexe "${FILESDIR}/${PN}.init" "${PN}" || die
-	insinto /usr/sbin ; newexe "${FILESDIR}/${PN}.action" "${PN}.action"
+	exeinto /usr/sbin ; newexe "${FILESDIR}/${PN}.action" "${PN}.action"
 
 	cd "${S}/doc"
 	dodoc README SUPPORTED_DRIVERS
