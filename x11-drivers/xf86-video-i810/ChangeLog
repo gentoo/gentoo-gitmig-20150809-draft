@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.5 2005/08/23 01:15:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.6 2005/09/02 21:33:56 joshuabaergen Exp $
+
+*xf86-video-i810-1.4.0-r3 (02 Sep 2005)
+
+  02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/1.4.0-i810-unresolved-symbols.patch,
+  -xf86-video-i810-1.4.0-r2.ebuild, +xf86-video-i810-1.4.0-r3.ebuild:
+  Sent a new snapshot to the mirrors bringing this driver in sync with CVS.  This
+  snapshot includes both prior patches.  Also added the x11-libs/XvMC dep as
+  XvMC support has been added as required for the time being.
 
   23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xf86-video-i810-1.4.0.ebuild, -xf86-video-i810-1.4.0-r1.ebuild:
