@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8d845b447cc74ae08671d3c4338a355f ChangeLog 1894
 MD5 0a5a0f84c1ea9c9e5c6efc8289deefff ruby-panel-applet-0.30.ebuild 786
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 5973b4bbc97125915ab5703165ec69f2 ruby-panel-applet-0.34.ebuild 832
 MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-panel-applet-0.30 70
 MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-panel-applet-0.34 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGEfdj5H05b2HAEkRAvy1AJ0SYW5nyxM7FFF8mmo6/jcY6UmXeACgmpU6
+yp8Ou0KL3tgq3AVLCvep2N4=
+=xFPS
+-----END PGP SIGNATURE-----
