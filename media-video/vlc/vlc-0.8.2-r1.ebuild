@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.2 2005/07/13 10:25:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.3 2005/09/02 18:23:08 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -10,9 +10,9 @@
 # Missing USE-flags due to needed testing
 # media-video/vlc:dirac - Enables experimental dirac codec
 
-inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib
+inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools
 
-PATCHLEVEL="6"
+PATCHLEVEL="7"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
@@ -113,11 +113,9 @@ src_unpack() {
 	# We only have glide v3 in portage
 	cd ${S}
 
-	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}"
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 
-	aclocal -I m4 || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	AT_M4DIR="m4" eautoreconf
 
 	sed -i -e \
 		"s:/usr/include/glide:/usr/include/glide3:;s:glide2x:glide3:" \
@@ -128,13 +126,6 @@ src_unpack() {
 }
 
 src_compile () {
-	# Avoid timestamp skews with autotools
-	touch configure.ac
-	touch aclocal.m4
-	touch configure
-	touch config.h.in
-	find . -name Makefile.in | xargs touch
-
 	# reason why:
 	# skins2 interface is horribly broken for some reason.
 	# Therefore it's being disabled for the standard wxwindows
