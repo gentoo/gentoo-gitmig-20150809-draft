@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.73 2005/09/01 22:46:14 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.74 2005/09/02 19:38:30 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> totem-1.0.4.ebuild:
+  Stable on ppc.
 
   01 Sep 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> totem-1.1.5.ebuild:
   add musicbrainz dep
