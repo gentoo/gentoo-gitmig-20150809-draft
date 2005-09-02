@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4.ebuild,v 1.2 2005/07/29 22:38:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4.ebuild,v 1.3 2005/09/02 11:35:53 xmerlin Exp $
 
 inherit gnuconfig eutils
 
@@ -47,7 +47,7 @@ src_unpack() {
 	for i in intl/Makefile.in po/Makefile.in.in; do
 		sed 's/^mkinstalldirs =.*/mkinstalldirs = mkdir -p /g' -i ${i}
 	done
-	sed 's/chown partimag.root/chown partimag:root/g' -i Makefile.am
+	sed 's/chown partimag.root/chown partimag:0/g' -i Makefile.am
 	gnuconfig_update
 	automake
 	aclocal
@@ -64,7 +64,7 @@ src_compile() {
 		${myconf} \
 		--infodir=/usr/share/doc/${PF} || die "econf failed"
 	cp Makefile Makefile.orig
-	sed -e "s/partimag\.root/root:root/g" Makefile.orig > Makefile
+	sed -e "s/partimag\.root/root:0/g" Makefile.orig > Makefile
 	emake || die
 }
 
@@ -119,9 +119,9 @@ pkg_config() {
 		fi
 		einfo "Setting permissions"
 		chmod 600 ${privkey} || die "Failed!"
-		chown partimag:root ${privkey} || die "Failed!"
+		chown partimag:0 ${privkey} || die "Failed!"
 		chmod 644 ${cert} ${csr} || die "Failed!"
-		chown root:root ${cert} ${csr} || die "Failed!"
+		chown root:0 ${cert} ${csr} || die "Failed!"
 		einfo "Done"
 	else
 		einfo "SSL is disabled, not building certificates"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r2.ebuild,v 1.6 2005/07/29 22:38:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r2.ebuild,v 1.7 2005/09/02 11:35:53 xmerlin Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -120,11 +120,11 @@ partimagesslperms() {
 	local ret=0
 	chmod 600 ${privkey} 2>/dev/null
 	ret=$((${ret}+$?))
-	chown partimag:root ${privkey} 2>/dev/null
+	chown partimag:0 ${privkey} 2>/dev/null
 	ret=$((${ret}+$?))
 	chmod 644 ${cert} ${csr} 2>/dev/null
 	ret=$((${ret}+$?))
-	chown root:root ${cert} ${csr} 2>/dev/null
+	chown root:0 ${cert} ${csr} 2>/dev/null
 	ret=$((${ret}+$?))
 	return $ret
 }
