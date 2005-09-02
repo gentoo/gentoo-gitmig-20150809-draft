@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.42 2005/08/13 23:44:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.43 2005/09/02 14:35:22 wolf31o2 Exp $
+
+*openal-20050504-r2 (02 Sep 2005)
+
+  02 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/openal-20050504-alsa_dmix.patch, +openal-20050504-r2.ebuild:
+  Added a new revision with dmix patch to resolve bug #104487. Changing
+  KEYWORDS from arch to ~arch on all stable architectures.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   openal-20050504-r1.ebuild:
