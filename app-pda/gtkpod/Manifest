@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 11b2fd04329a06cc388b042fdd7b6cdf gtkpod-0.94.0.ebuild 791
 MD5 50b72dc36a1b67c4f473a91cbf985f30 metadata.xml 214
+MD5 91bb37107d81d600228e3ad6b22cb409 ChangeLog 4434
 MD5 df3130812d0ab7ba85bb6d96ef42ba56 gtkpod-0.88.2.ebuild 766
-MD5 3a4edccff599d454f53c7a4a47fee891 ChangeLog 4340
-MD5 b10c15a5f314240bea1f0bf582d75578 gtkpod-0.94.0.ebuild 792
 MD5 5805b9d3cd6839ea6c644a3a5d28b81e files/digest-gtkpod-0.94.0 65
 MD5 480eda685201cdd976991ba8dd75ad43 files/digest-gtkpod-0.88.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDDPeLmOfEJZHYOKcRAl97AJoD4QJPaHSS9uJ1/ESqRyxhct1EnACg5SN4
-6PC+OJmKhb396YNA5gaCDbI=
-=4u4u
------END PGP SIGNATURE-----
