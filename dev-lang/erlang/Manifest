@@ -6,9 +6,9 @@ MD5 aea374917adc11a2d42b0b9d1bba3598 metadata.xml 402
 MD5 92087ace1ec7f4f5fafb31419db5fafa erlang-9c-r3.ebuild 1822
 MD5 952017d9165b65d7786b75dbf44a10e2 erlang-9c-r1.ebuild 1686
 MD5 888709019e83eac37f3e95c7739de933 erlang-9c.ebuild 1505
-MD5 d7cdf624afa6283870ef4ac99082b829 erlang-10.2.5.ebuild 2948
+MD5 e2e78fe8cfdbf3a4fdc027ff957880ce erlang-10.2.5.ebuild 2947
 MD5 dc1d9134a5f6e8146cc4ca6c5e130f0a erlang-10.2.0.ebuild 2372
-MD5 7f3adc9702a49e66fa502a258c1d4b17 erlang-10.2.6.ebuild 2939
+MD5 f710894b1b9115ed6aa49b7abf22e22f erlang-10.2.6.ebuild 2938
 MD5 fc7120b6156f918298555819040e24c1 ChangeLog 4209
 MD5 4df8bcb2597f95b5d00f898f0dbc9e96 erlang-9c-r2.ebuild 1808
 MD5 b1f610dc1caa7c176d7da4919bcabba9 files/erlang-10.2.6-export-TARGET.patch 242
@@ -27,7 +27,7 @@ MD5 28397dc6ef4a633a8084ce44fbb1c6f3 files/50erlang-gentoo.el 140
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDC8QFgIKl8Uu19MoRAlL8AJ9MqziFD69cD3PUZNPfWuxv6BDhtgCfbzPp
-6+hHp72Xjv0RyD4P4qE6TQs=
-=UYDH
+iD8DBQFDGNL3gIKl8Uu19MoRAmjHAJ4+D9xvLU4w8cfdFhOPrct4GE4ZywCeMsPp
+ebvanUdHMnjKu1Xh2C3a+38=
+=pnQ/
 -----END PGP SIGNATURE-----
