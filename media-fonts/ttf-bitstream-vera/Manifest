@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9c197e9b6d71b9e8570489c3ea8384a ttf-bitstream-vera-1.10-r2.ebuild 917
-MD5 d393563261df07034ba2156a40899ab3 ttf-bitstream-vera-1.10-r3.ebuild 538
-MD5 b4c5396bde83d50c83870870f888b2f0 ChangeLog 2129
 MD5 ae53b17794c309c40f6b45f8f37259c0 metadata.xml 286
+MD5 1bd6d7da7c00b33ec929ceea8c508254 ttf-bitstream-vera-1.10-r3.ebuild 535
+MD5 e0c5092f95cc89fe932ee851761ac5f8 ChangeLog 2236
+MD5 e9c197e9b6d71b9e8570489c3ea8384a ttf-bitstream-vera-1.10-r2.ebuild 917
 MD5 b3b71688c1c8be372f8e519910114e01 files/digest-ttf-bitstream-vera-1.10-r2 76
 MD5 b3b71688c1c8be372f8e519910114e01 files/digest-ttf-bitstream-vera-1.10-r3 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDE0IvKRy60XGEcJIRAqWpAKCfRx5eBIQ0T8jCvLK3A/lnZ8kcfgCeIej2
-Ef+H2HsMsCRLPxBs6qJaueY=
-=g7Yv
------END PGP SIGNATURE-----
