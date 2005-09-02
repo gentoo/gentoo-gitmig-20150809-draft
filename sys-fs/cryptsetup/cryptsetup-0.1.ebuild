@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1.ebuild,v 1.10 2005/07/13 15:26:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1.ebuild,v 1.11 2005/09/02 14:05:53 swegener Exp $
 
 inherit kernel-mod
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://www.saout.de/misc/dm-crypt/"
-SRC_URI="http://www.saout.de/misc/dm-crypt/${PN}-${PV}.tar.bz2"
+SRC_URI="http://www.saout.de/misc/dm-crypt/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 pkg_setup() {
 	if ! kernel-mod_configoption_present DM_CRYPT ; then
 		ewarn "dm-crypt is not enabled in /usr/src/linux/.config"
-		ewarn "please see $HOMEPAGE"
+		ewarn "please see ${HOMEPAGE}"
 		ewarn "for details on how to enable dm-crypt for your kernel"
 	fi
 }
