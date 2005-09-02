@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zwiki
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.23 2005/08/28 12:55:47 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zwiki/ChangeLog,v 1.24 2005/09/02 17:25:34 radek Exp $
+
+*zwiki-0.45 (02 Sep 2005)
+
+  02 Sep 2005; Radoslaw Stachowiak <radek@gentoo.org> +zwiki-0.45.ebuild:
+  version bump
 
 *zwiki-0.44 (28 Aug 2005)
 
