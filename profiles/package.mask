@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4370 2005/09/01 12:22:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4371 2005/09/02 05:11:10 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# Matthias Schwarzott <zzam@gentoo.org> (2 Sep 2005)
+# Masked until all packages depending on it are aware of the
+# position of the header files
+=media-libs/libdvb-0.5.5.1-r1
 
 # Christian Zoffoli <xmerlin@gentoo.org> (1 Sep 2005)
 # Masked as this version has a bug
