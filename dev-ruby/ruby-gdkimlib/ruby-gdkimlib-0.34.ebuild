@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ruby-gdkimlib-0.34.ebuild,v 1.10 2004/07/14 22:04:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ruby-gdkimlib-0.34.ebuild,v 1.11 2005/09/02 12:41:17 flameeyes Exp $
 
 inherit ruby
 
@@ -27,5 +27,5 @@ src_compile() {
 src_install() {
 	make site-install DESTDIR=${D} || die "make site-install failed"
 	dodoc [A-Z]*
-	cp -dr sample ${D}/usr/share/doc/${PF}
+	cp -r sample ${D}/usr/share/doc/${PF}
 }

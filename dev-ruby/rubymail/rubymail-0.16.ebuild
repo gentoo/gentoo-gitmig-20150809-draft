@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.16.ebuild,v 1.10 2005/03/14 11:45:42 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-0.16.ebuild,v 1.11 2005/09/02 12:31:13 flameeyes Exp $
 
 inherit ruby
 
@@ -24,5 +24,5 @@ src_install() {
 	ruby install.rb install || die
 	dodoc NEWS NOTES README THANKS TODO
 	dohtml -r doc/*
-	cp -dr guide ${D}/usr/share/doc/${PF}
+	cp -r guide ${D}/usr/share/doc/${PF}
 }

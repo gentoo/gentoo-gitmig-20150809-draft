@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnome
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.15 2004/07/01 11:02:52 usata Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.16 2005/09/02 12:32:21 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> ruby-gnome-0.30.ebuild,
+  ruby-gnome-0.34.ebuild:
+  Don't use -d option with cp.
 
   01 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-gnome-0.30.ebuild,
   ruby-gnome-0.34.ebuild:

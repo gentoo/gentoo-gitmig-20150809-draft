@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-libglade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.16 2005/05/01 18:09:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.17 2005/09/02 12:35:30 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ruby-libglade-0.27.ebuild, ruby-libglade-0.29.ebuild,
+  ruby-libglade-0.30.ebuild, ruby-libglade-0.34.ebuild:
+  Don't use -d option with cp.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   ruby-libglade-0.34.ebuild:

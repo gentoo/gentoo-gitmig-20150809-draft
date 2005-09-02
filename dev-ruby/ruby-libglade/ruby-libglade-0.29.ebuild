@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.29.ebuild,v 1.10 2004/07/14 22:11:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.29.ebuild,v 1.11 2005/09/02 12:35:30 flameeyes Exp $
 
 S=${WORKDIR}/ruby-gnome-all-${PV}/libglade
 DESCRIPTION="Ruby libglade bindings"
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	make site-install DESTDIR=${D}
 	dodoc [A-Z]*
-	cp -dr sample ${D}/usr/share/doc/${PF}
+	cp -r sample ${D}/usr/share/doc/${PF}
 }

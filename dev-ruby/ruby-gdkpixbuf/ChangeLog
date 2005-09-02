@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.16 2005/05/01 18:08:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf/ChangeLog,v 1.17 2005/09/02 12:33:31 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ruby-gdkpixbuf-0.30.ebuild, ruby-gdkpixbuf-0.34.ebuild:
+  Don't use -d option with cp.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   ruby-gdkpixbuf-0.34.ebuild:
