@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.45 2005/08/25 20:18:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.46 2005/09/02 19:38:48 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> gob-2.0.12.ebuild:
+  Stable on ppc.
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> gob-2.0.12.ebuild:
   stable on ia64
