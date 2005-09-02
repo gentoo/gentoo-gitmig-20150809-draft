@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8154c8b45c580b9aa1b7009aae9eea72 gawk-3.1.4-r4.ebuild 3862
+MD5 d6ee09b2386920be3e6297addeb71234 gawk-3.1.4-r4.ebuild 3859
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
+MD5 e82ad5eef80f8970d2b86a4ecdb9c688 ChangeLog 9732
 MD5 96320c1d57c8782d8b459bf68f17769a gawk-3.1.5.ebuild 3128
-MD5 a4cc8bb1f8116aed6f1c2d53ce8149ad ChangeLog 9640
-MD5 89145324fea9791b0caa1b09f5cee0cb files/gawk-3.1.5-core.patch 643
-MD5 214193d03d4c328a4ba33aadc008d301 files/digest-gawk-3.1.5 63
-MD5 e01879d30ddf2eb060f2ba2fa745a922 files/digest-gawk-3.1.4-r4 132
+MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
 MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
-MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
-MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
-MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
+MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
 MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3-r2 63
 MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
+MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
 MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
-MD5 3cca4692ffa1c396bff698d02f1a41e0 files/gawk-3.1.4-disable-DFA.patch 1837
-MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
+MD5 214193d03d4c328a4ba33aadc008d301 files/digest-gawk-3.1.5 63
+MD5 89145324fea9791b0caa1b09f5cee0cb files/gawk-3.1.5-core.patch 643
+MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
+MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
+MD5 e01879d30ddf2eb060f2ba2fa745a922 files/digest-gawk-3.1.4-r4 132
 MD5 f3561ccd6d2c2893dc5685743786dcb7 files/filefuncs/Makefile 973
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDGE8dKRy60XGEcJIRAlF7AKCQtIgC1CKR3IBJQBQ4EXbIcVnrQQCeKOyX
-eLt/LNbOzbc6PkS9o9TP8xQ=
-=Cc+L
------END PGP SIGNATURE-----
+MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.55 2005/08/22 22:20:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.56 2005/09/02 19:31:29 hansmi Exp $
+
+  02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  pciutils-2.1.11-r5.ebuild:
+  Stable on ppc.
 
   22 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/pciutils-2.1.11-bsd.patch, pciutils-2.1.11-r5.ebuild:
