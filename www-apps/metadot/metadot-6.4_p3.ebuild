@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p3.ebuild,v 1.1 2005/08/22 20:25:29 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.4_p3.ebuild,v 1.2 2005/09/02 11:19:51 rl03 Exp $
 
 inherit webapp
 MY_P="${PN}${PV/_p/r}"
@@ -19,13 +19,13 @@ RDEPEND=">=dev-db/mysql-3.23
 	>=net-www/apache-1.3.6
 	>=dev-lang/perl-5.6
 	>=www-apache/mod_perl-1.21
+	dev-perl/libwww-perl
 	dev-perl/DBI
 	>=dev-perl/DBD-mysql-2.1027
 	dev-perl/Apache-DBI
 	>=dev-perl/AppConfig-1.55
 	>=perl-core/ExtUtils-MakeMaker-6.05
 	>=dev-perl/XML-RSS-1.02
-	>=perl-core/Storable-2.07
 	dev-perl/perl-ldap
 	>=dev-perl/Log-Agent-0.304
 	dev-perl/Mail-POP3Client
@@ -47,6 +47,7 @@ RDEPEND=">=dev-db/mysql-3.23
 	>=dev-perl/XML-Simple-2.08
 	dev-perl/XML-Dumper
 	dev-perl/Archive-Zip
+	dev-perl/DateManip
 	dev-perl/Text-CSV_XS
 "
 
