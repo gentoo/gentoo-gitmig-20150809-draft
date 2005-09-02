@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d9e23035862ed0d6ff4ff861eea5746 bakery-2.3.15.ebuild 854
+MD5 f0496e6fea8e6c4d15da5d3ddb4760c7 metadata.xml 697
+MD5 c199cda44f1a415b86cfb14ab713d64b ChangeLog 412
+MD5 190fb0122aa33b579510399e5c267d74 files/digest-bakery-2.3.15 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDGJXkwUpWvClEHQoRAkqKAJ0Sxk7EIwORERgcG3Pk8FoMiEZMxwCeNJ4m
+1Zi1UIjkMlhn6hEQUVwJSDc=
+=mQY/
+-----END PGP SIGNATURE-----
