@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.5.ebuild,v 1.4 2005/08/24 23:45:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.5.ebuild,v 1.5 2005/09/02 17:49:07 grobian Exp $
+
+inherit eutils
 
 MY_P=ScrollZ-${PV}
 
@@ -10,13 +12,19 @@ HOMEPAGE="http://www.scrollz.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc x86"
+KEYWORDS="amd64 ia64 ~ppc ~ppc-macos x86"
 IUSE="ipv6 socks5 ssl"
 
 DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 S="${WORKDIR}"/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	# Darwin/OSX has GCC4 and needs this
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 
 src_compile() {
 	econf \
