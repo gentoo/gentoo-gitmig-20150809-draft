@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre7-r1.ebuild,v 1.1 2005/08/31 18:01:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/mplayer-bin-1.0_pre7-r1.ebuild,v 1.2 2005/09/02 13:03:39 flameeyes Exp $
 
 DESCRIPTION="Pre-build mplayer binary for amd64 systems"
 HOMEPAGE="http://www.gentoo.org/"
@@ -21,6 +21,6 @@ RDEPEND=">=app-emulation/emul-linux-x86-baselibs-2.0
 S=${WORKDIR}
 
 src_install() {
-	cp -avf ${WORKDIR}/* ${D}/
+	cp -pPRvf ${WORKDIR}/* ${D}/
 	dosym /opt/mplayer-bin/bin/mplayer-bin /opt/mplayer-bin/bin/gmplayer-bin
 }

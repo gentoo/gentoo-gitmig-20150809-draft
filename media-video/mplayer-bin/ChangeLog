@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.4 2005/08/31 18:01:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-bin/ChangeLog,v 1.5 2005/09/02 13:03:39 flameeyes Exp $
+
+  02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mplayer-bin-1.0_pre7-r1.ebuild:
+  Don't use -a option with cp.
 
 *mplayer-bin-1.0_pre7-r1 (31 Aug 2005)
 
