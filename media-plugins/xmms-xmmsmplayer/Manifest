@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa5ae842cb77098aecd2e3b4be00e50d ChangeLog 1543
+MD5 48f8c4d88f611c81f8638fbee9f5b2dd ChangeLog 1690
+MD5 53d848d791bab4a28da28266cf8c189d xmms-xmmsmplayer-0.5.ebuild 910
+MD5 784a27d1e1a1c9d81b28c14e95ec8359 xmms-xmmsmplayer-0.5-r1.ebuild 931
 MD5 223dfdc3e10800dbb22bad28c928b52a metadata.xml 177
-MD5 7935e417a6d15524843e979f9acd0c33 xmms-xmmsmplayer-0.5.ebuild 916
-MD5 e22d0155dded5e148cd4e4949ce29751 xmms-xmmsmplayer-0.5-r1.ebuild 940
-MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5 67
 MD5 4e43eabdfe813855a2c9b5d4e182c65b files/exts-filter.patch 7597
 MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeHeeArHZZzCEUG0RAgWXAJ9OPMRLFYQw5USA+m/ahWakM5UNtACeNnUl
-smLJ+fz0emxBe4so9BOJU0c=
-=CKte
------END PGP SIGNATURE-----
+MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5 67
