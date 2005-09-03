@@ -1,6 +1,16 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.9 2005/06/12 04:48:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.10 2005/09/03 00:41:27 vanquirius Exp $
+
+*ots-0.4.2 (03 Sep 2005)
+
+  03 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  ots-0.4.1.ebuild, +ots-0.4.2.ebuild:
+  Removing doc USE flag and forcing --disable-gtk-doc, since this is clearly
+  broken. This fixes bug 97448, thanks to Matthew C. Tedder
+  <teddemc@yahoo.com>. Bumping version for bug 94893. Thanks to stephan
+  <stephan-01@gmx.de>, Amit Kotlovski <krallkrall@gmail.com> and others. Also,
+  I am making myself maintainer of this package.
 
   12 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> ots-0.4.1.ebuild:
   fix typo in HOMEPAGE (bug #95715); tidy
