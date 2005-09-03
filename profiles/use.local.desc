@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1424 2005/09/03 20:02:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1425 2005/09/03 20:17:56 sbriesen Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -656,6 +656,11 @@ net-analyzer/snort:inline - Enable snort-inline for accepting packets from iptab
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
+net-dialup/capi4k-utils:fax - installs capi-fax demo programs
+net-dialup/capi4k-utils:pcmcia - installs capi-pcmcia framework
+net-dialup/capi4k-utils:pppd - installs pppdcapiplugin modules
+net-dialup/capi4k-utils:tcpd - installs rcapid (remote capi daemon)
+net-dialup/capi4k-utils:usb - installs capi-usb framework
 net-dialup/freeradius:edirectory - Enables Novell eDirectory integration
 net-dialup/freeradius:frascend - Enables Ascend binary mode
 net-dialup/freeradius:frnothreads - Disables thread support
