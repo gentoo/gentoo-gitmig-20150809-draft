@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r12.ebuild,v 1.5 2005/08/29 23:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r12.ebuild,v 1.6 2005/09/03 19:49:58 sbriesen Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -127,7 +127,7 @@ src_compile() {
 		${myconf} || die
 	# Make sure we always link statically with ncurses
 	sed -i "/^TERMCAP_LIB/s:-lncurses:-Wl,-Bstatic -lncurses -Wl,-Bdynamic:" Makefile || die "sed failed"
-	emake || die "make failed"
+	emake -j1 || die "make failed"  # see bug 102426
 }
 
 src_install() {
