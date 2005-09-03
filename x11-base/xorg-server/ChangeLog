@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.38 2005/09/03 20:06:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.39 2005/09/03 21:49:00 eradicator Exp $
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xorg-server-0.99.1-r7.ebuild:
+  Changed opengl-update envocation to use eselect instead.
 
   03 Sep 2005; Doug Goldstein <cardoe@gentoo.org>
   +xorg-server-0.99.1-r7.ebuild, -xorg-server-0.99.1-r6.ebuild:

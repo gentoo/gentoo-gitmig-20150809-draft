@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r7.ebuild,v 1.1 2005/09/03 20:06:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r7.ebuild,v 1.2 2005/09/03 21:49:00 eradicator Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -41,7 +41,7 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXi
 	media-libs/freetype
 	>=media-libs/mesa-6
-	>=x11-base/opengl-update-2.2.3"
+	app-admin/eselect-opengl"
 DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/renderproto
@@ -139,6 +139,5 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
-		${ROOT}/usr/sbin/opengl-update --use-old ${OPENGL_DIR}
+		eselect opengl set --use-old ${OPENGL_DIR}
 }
