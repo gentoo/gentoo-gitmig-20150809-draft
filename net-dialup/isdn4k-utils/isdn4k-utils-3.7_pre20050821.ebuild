@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.7_pre20050821.ebuild,v 1.2 2005/09/03 21:58:23 swegener Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
