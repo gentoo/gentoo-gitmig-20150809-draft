@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kload
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.2 2005/08/25 22:03:29 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.3 2005/09/03 22:00:59 lu_zero Exp $
+
+  03 Sep 2005; Luca Barbato <lu_zero@gentoo.org> kload-0.9.4.ebuild:
+  Marked ~ppc
 
   25 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org> files/kloadd.initd:
   adding depend() to init-script

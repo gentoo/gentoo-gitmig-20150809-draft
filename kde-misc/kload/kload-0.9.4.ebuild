@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/kload-0.9.4.ebuild,v 1.1 2005/08/22 21:33:35 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/kload-0.9.4.ebuild,v 1.2 2005/09/03 22:00:59 lu_zero Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.richard-schneider.de/uwe/kde/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="minimal"
 
 DEPEND="!minimal? ( >=kde-base/kdelibs-3 )"
