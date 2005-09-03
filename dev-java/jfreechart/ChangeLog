@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.8 2005/07/12 19:49:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.9 2005/09/03 22:46:02 betelgeuse Exp $
+
+*jfreechart-1.0.0_rc1 (03 Sep 2005)
+
+  03 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  jfreechart-0.9.21.ebuild, +jfreechart-1.0.0_rc1.ebuild:
+  Version bump. Needed to adjust the dependencies of the old ebuild
+  because the new jcommon version is not binary compatible.
 
   12 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jfreechart-0.9.21.ebuild:
   Dep/Style fixes
