@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/synopsis
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.4 2005/05/07 19:32:50 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.5 2005/09/03 14:14:03 dragonheart Exp $
+
+*synopsis-0.8 (03 Sep 2005)
+
+  03 Sep 2005; Daniel Black <dragonheart@gentoo.org> +synopsis-0.8.ebuild:
+  version bump
 
   07 May 2005; David Holm <dholm@gentoo.org> synopsis-0.6.ebuild:
   Added to ~ppc.

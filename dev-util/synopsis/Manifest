@@ -1,3 +1,15 @@
-MD5 0e0d3e244c3c714ca7b4b456cf3e74ec ChangeLog 520
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 527e392f2c5907ac373b61940cc1c64f ChangeLog 646
 MD5 6664c2ed63eb0b4d95ccf742cb933f18 synopsis-0.6.ebuild 675
+MD5 bfa82877d587852942f6f77a19ee56fb synopsis-0.8.ebuild 694
 MD5 c553a3e556d160cc1c530ea6fe99a8fb files/digest-synopsis-0.6 66
+MD5 213a0bd997fde1ae28523b8fb89f9fd1 files/digest-synopsis-0.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGa/EmdTrptrqvGERAnaEAJ99TLr0ZnMAwh0VqBu7mkHHDsaW8ACeLu7b
+GuKnsaVPJHWHwbM0oHCI2e4=
+=vdqg
+-----END PGP SIGNATURE-----
