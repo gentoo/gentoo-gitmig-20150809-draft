@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.28 2005/09/02 19:23:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.29 2005/09/03 19:00:16 corsair Exp $
+
+  03 Sep 2005; Markus Rothe <corsair@gentoo.org> muttprint-0.72d.ebuild:
+  Stable on ppc64
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   muttprint-0.72d.ebuild:
