@@ -1,13 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/resmgr-1.0.ebuild,v 1.2 2004/10/31 02:05:18 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/resmgr/resmgr-1.0.ebuild,v 1.3 2005/09/03 19:29:25 blubb Exp $
+
+inherit multilib
 
 DESCRIPTION="Resource manager that will provide unprivileged users access to device files"
 HOMEPAGE="http://rechner.lst.de/~okir/resmgr/"
 SRC_URI="ftp://ftp.lst.de/pub/people/okir/resmgr/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="sys-apps/hotplug
 	sys-libs/pam"
@@ -19,8 +21,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dosym $(basename ${D}/lib/libresmgr.so.*) /lib/libresmgr.so
+	make LIBDIR="${D}/$(get_libdir)" PAMDIR="${D}/$(get_libdir)" DESTDIR="${D}" install || die
+	dosym $(basename ${D}/$(get_libdir)/libresmgr.so.*) /$(get_libdir)/libresmgr.so
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/resmgrd.rc" resmgrd
 	insinto /etc/conf.d
