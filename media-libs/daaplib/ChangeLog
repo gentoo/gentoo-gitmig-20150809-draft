@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/daaplib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.10 2005/01/20 14:29:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.11 2005/09/03 23:39:17 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> daaplib-0.1.1a.ebuild:
+  Don't install COPYING  file.
 
   20 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> daaplib-0.1.1a.ebuild:
   Stable on sparc
