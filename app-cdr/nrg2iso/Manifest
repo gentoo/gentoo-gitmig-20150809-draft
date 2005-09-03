@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 243afa0efacbaaf9d7ec621f90a88648 nrg2iso-0.1.ebuild 672
-MD5 e650d860771200bfffdc348e9ff15cbf nrg2iso-0.4-r1.ebuild 680
-MD5 f890515c18ef24f14ac6890e3368e0a8 ChangeLog 1835
 MD5 31223f79b4b658bf08f9e298a0fd9516 metadata.xml 534
-MD5 77b18cdbb3edf82609d713940ddf7507 files/digest-nrg2iso-0.1 54
+MD5 fd2785cf285704f3d17eb8c8b7aed139 ChangeLog 1928
+MD5 243afa0efacbaaf9d7ec621f90a88648 nrg2iso-0.1.ebuild 672
+MD5 aa60487543367d00ce3f5e49457ffa7f nrg2iso-0.4-r1.ebuild 677
 MD5 0c5c964d812711a66fe191bc1dbf6ebb files/digest-nrg2iso-0.4-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFHoPKRy60XGEcJIRAo/3AKCsKT2CiZyxyeh0EsYm5rA6x4fQOwCgtU9E
-4jPqALNx8CTib0foZvlVRAU=
-=bodD
------END PGP SIGNATURE-----
+MD5 77b18cdbb3edf82609d713940ddf7507 files/digest-nrg2iso-0.1 54
