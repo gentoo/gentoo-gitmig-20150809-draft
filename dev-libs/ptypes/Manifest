@@ -1,9 +1,21 @@
-MD5 ac03e6d9b9f926fc49b995a2a4557f22 ChangeLog 1135
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9f73b2fccb89f35290cc7500a494c648 ChangeLog 1256
 MD5 bb0bbc3d574069f70ec586072502e988 ptypes-1.7.4.ebuild 666
 MD5 b36507eb2a1c3a681be11a13ea8a31b0 ptypes-1.7.5.ebuild 666
 MD5 2443ddcdf9b16c45c90fd188a8f70258 ptypes-1.8.2.ebuild 666
 MD5 4f920ee2f212973e73328c2f0e3b69a2 ptypes-1.8.3.ebuild 673
+MD5 0c3015681ab9252360f14918803fcb91 ptypes-2.0.2.ebuild 674
 MD5 ac9727774e731871409c39efb5e7f80d files/digest-ptypes-1.7.4 64
 MD5 670a2069b108b32c7e54625f736a1f1f files/digest-ptypes-1.7.5 64
 MD5 ce4a0ef80b3ed572bff4164344c8027f files/digest-ptypes-1.8.2 64
 MD5 62f3c4901e0097d72f5fa982b6c0598b files/digest-ptypes-1.8.3 64
+MD5 bc7d4f96d79bc592a9f45f6970274586 files/digest-ptypes-2.0.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGbMTmdTrptrqvGERAsD7AJ4m3oue3k0BL9WIyPeDt5zq/23e4QCdExq+
+xgnpM3iLj3gzXOhpRvb/WcU=
+=rBOd
+-----END PGP SIGNATURE-----
