@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/tvision
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.8 2005/04/24 12:54:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.9 2005/09/03 07:54:19 dragonheart Exp $
+
+  03 Sep 2005; Daniel Black <dragonheart@gentoo.org> -tvision-2.0.2.ebuild,
+  tvision-2.0.3.ebuild:
+  compile fix with -fpermissive as per bug #97000 thanks to Ksero. remove
+  2.0.2 version
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> tvision-2.0.1.ebuild:
   Stable on ppc.

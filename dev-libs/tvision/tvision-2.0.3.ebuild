@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.0.3.ebuild,v 1.3 2005/01/11 19:21:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.0.3.ebuild,v 1.4 2005/09/03 07:54:19 dragonheart Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Text User Interface that implements the well known CUA widgets"
 HOMEPAGE="http://tvision.sourceforge.net/"
@@ -14,6 +16,7 @@ IUSE=""
 S=${WORKDIR}/${PN}
 
 src_compile() {
+	append-cflags -fpermissive
 	./configure \
 		--prefix=/usr \
 		--fhs \
