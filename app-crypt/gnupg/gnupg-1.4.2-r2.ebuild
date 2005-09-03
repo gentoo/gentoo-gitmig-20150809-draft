@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.2 2005/08/31 21:02:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.2-r2.ebuild,v 1.3 2005/09/03 11:15:26 dragonheart Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic linux-info
 
 ECCVER=0.1.6
 ECCVER_GNUPG=1.4.0
@@ -127,7 +127,11 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	# caps support makes life easier
-	use caps || fperms u+s,go-r /usr/bin/gpg
+	if ! use caps && kernel_is lt 2 6 9
+	then
+		ewarn "installing gpg suid for memory space protection"
+		fperms u+s,go-r /usr/bin/gpg
+	fi
 
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
@@ -169,7 +173,8 @@ src_test() {
 }
 
 pkg_postinst() {
-	if ! use caps; then
+	if ! use caps && kernel_is lt 2 6 9
+	then
 		einfo "gpg is installed suid root to make use of protected memory space"
 		einfo "This is needed in order to have a secure place to store your"
 		einfo "passphrases, etc. at runtime but may make some sysadmins nervous."

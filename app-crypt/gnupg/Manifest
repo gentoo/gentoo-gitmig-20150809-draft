@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 83679e04da772721130866b531ea0da2 gnupg-1.9.18.ebuild 3211
-MD5 0bedf7570556909f0d5fc50d04de91b3 ChangeLog 21434
+MD5 87fdacc9d65d942c90aa4ee5ad8064e1 ChangeLog 21639
 MD5 1acf1bfff7899ec20b139fbba785e69c gnupg-1.4.2-r1.ebuild 6250
-MD5 896521bec32a5589de756e83ecf4481d gnupg-1.4.2-r2.ebuild 6295
+MD5 1b511c3c1694cd55e2f9687ecef65493 gnupg-1.4.2-r2.ebuild 6422
 MD5 921f00a83ce6b1d77190396b4456f05f gnupg-1.2.6.ebuild 3800
 MD5 b507ee36c7487372de42cc9dab034370 metadata.xml 481
 MD5 fb2459cc632ade0377625d0768292e92 gnupg-1.4.1.ebuild 6195
@@ -23,7 +23,7 @@ MD5 552b43a0705ea006efa282b7d5645143 files/gnupg-1.4.2-selftest.patch 1358
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDFhr1mdTrptrqvGERAmqXAJ4n3Hii9k+bNs0SjoGbl8P7QHgYNQCbBj54
-BXN/lIRqIDntJuMKnYuICgc=
-=6axk
+iD8DBQFDGYXlmdTrptrqvGERAqmjAJ4ugeWfKZrIgNRbCJSA1RqruI/7yQCdHgMw
+4hZePB7PTm349HwVNOHbXe0=
+=YxX7
 -----END PGP SIGNATURE-----
