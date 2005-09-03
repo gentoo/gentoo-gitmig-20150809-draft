@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-demo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.12 2005/08/30 19:16:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.13 2005/09/03 22:02:20 eradicator Exp $
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  doom3-demo-1.1.1286.ebuild:
+  Removed reference to emul-linux-x86-nvidia.
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   doom3-demo-1.1.1286.ebuild:

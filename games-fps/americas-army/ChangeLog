@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.33 2005/08/30 19:26:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.34 2005/09/03 22:01:30 eradicator Exp $
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  americas-army-230.ebuild:
+  Removed reference to emul-linux-x86-nvidia.
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   americas-army-230.ebuild:
