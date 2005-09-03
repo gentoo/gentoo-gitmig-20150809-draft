@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.7 2005/04/18 16:23:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.8 2005/09/03 23:28:58 flameeyes Exp $
 
 inherit nsplugins
 
@@ -26,5 +26,5 @@ src_compile() {
 
 src_install() {
 	einstall prefix=${D}/usr/lib/${PLUGINS_DIR%plugins} || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog README
 }
