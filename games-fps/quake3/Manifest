@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bd0664b4c1e7be657aa47ad95a0d2692 ChangeLog 3604
 MD5 0a25a9c85ee385ef578cb770a957756d metadata.xml 954
 MD5 6998e767baa6aec89e89a9e2694833ee quake3-1.31.ebuild 2133
@@ -7,3 +10,10 @@ MD5 ac0eeb5bcea4995d27e0c6575b8f4dbb files/digest-quake3-1.32b-r3 76
 MD5 ccfdb942c238488a3626c63a53574485 files/q3ded.conf.d 305
 MD5 398efeaa7e416ad1a58e334d37b5ac26 files/q3ded.rc 817
 MD5 2d4f86497a3ba63bc01677f8c306cea5 files/quake3.png 2170
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGh2sArHZZzCEUG0RApZ+AJ95U1vmT2lP3q34/U6ZwrC72SfW3ACfYZ8x
+guO62E2AagZbmdHsNx6IPC8=
+=qHe8
+-----END PGP SIGNATURE-----

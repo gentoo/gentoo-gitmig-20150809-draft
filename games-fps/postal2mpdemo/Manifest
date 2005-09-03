@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 deecb965330ff8f589c462e3579b5d66 ChangeLog 1309
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 b7bf33fa74159849b8947746c80ad5a1 postal2mpdemo-1407.ebuild 1364
 MD5 16614a6420d9f7a31b526c22c1b1315a files/digest-postal2mpdemo-1407 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGh3VArHZZzCEUG0RAnpEAJ9IohLBtL1SUr1rwhlsqHepeBf/mQCfTeWa
+WnfN6+CQyUCklAjhXaSPSi4=
+=LERp
+-----END PGP SIGNATURE-----
