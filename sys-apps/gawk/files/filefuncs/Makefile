@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/Makefile,v 1.6 2005/05/14 17:56:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/Makefile,v 1.7 2005/09/03 20:31:42 vapier Exp $
 
 CC ?= gcc
 LD = $(CC)
@@ -16,6 +16,21 @@ TARGET = filefuncs
 TARGET_LIB = $(TARGET).so.$(MAJORVER).$(MINORVER)
 
 LIBDIR = lib
+
+# Gentoo specific cruft, you like it dont ya idiot
+ifdef D
+DESTDIR = $(D)
+endif
+ifdef S
+AWKINCDIR = $(S)
+endif
+
+DOIT = yes
+ifeq ($(USERLAND),Darwin)
+DOIT = no
+endif
+
+ifeq ($(DOIT),yes)
 
 all: $(TARGET_LIB)
 
@@ -34,3 +49,9 @@ install: $(TARGET_LIB)
 clean:
 	rm -f $(TARGET)
 	rm -f *.o *~ core
+
+else
+
+all install clean:
+
+endif

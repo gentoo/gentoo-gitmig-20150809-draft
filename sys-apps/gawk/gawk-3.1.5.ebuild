@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5.ebuild,v 1.3 2005/09/02 05:11:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5.ebuild,v 1.4 2005/09/03 20:31:42 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-core.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${PN}-3.1.3-getpgrp_void.patch #fedora
 	# support for dec compiler.
 	[[ $(tc-getCC) == "ccc" ]] && epatch "${FILESDIR}"/${PN}-3.1.2-dec-alpha-compiler.diff
@@ -41,20 +42,13 @@ src_compile() {
 	emake || die "emake failed"
 
 	cd "${SFFS}"
-	emake AWKINCDIR="${S}" CC=$(tc-getCC) || die "filefuncs emake failed"
+	emake CC=$(tc-getCC) || die "filefuncs emake failed"
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
-	if ! use userland_Darwin ; then
-		cd "${SFFS}"
-		make \
-			DESTDIR="${D}" \
-			AWKINCDIR="${S}" \
-			LIBDIR="$(get_libdir)" \
-			install \
-			|| die "filefuncs install failed"
-	fi
+	cd "${SFFS}"
+	make LIBDIR="$(get_libdir)" install || die "filefuncs install failed"
 
 	dodir /usr/bin
 	# In some rare cases, (p)gawk gets installed as (p)gawk- and not
