@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r3.ebuild,v 1.4 2005/08/20 19:57:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.1.1-r3.ebuild,v 1.5 2005/09/03 22:37:26 eradicator Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -27,7 +27,7 @@ RDEPEND="dev-libs/expat
 	x11-libs/libXxf86vm
 	x11-libs/libXi
 	x11-libs/libXmu
-	>=x11-base/opengl-update-2.2.2
+	app-admin/eselect-opengl
 	motif? ( virtual/motif )"
 DEPEND="${RDEPEND}
 	x11-misc/makedepend
@@ -193,6 +193,5 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
-		${ROOT}/usr/sbin/opengl-update --use-old ${OPENGL_DIR}
+		eselect opengl --use-old ${OPENGL_DIR}
 }
