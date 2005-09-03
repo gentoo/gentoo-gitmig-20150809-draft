@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa7dd9edf7132593c88a1048df3c0772 ChangeLog 2050
-MD5 bf8eb879762215e6378d83e993cf32ed metadata.xml 1491
-MD5 0a8c47b3b41eeb048bd0861d9215214e tap-plugins-0.1.ebuild 750
-MD5 747c63c7b89fcb2c503c916bcbed4eaf tap-plugins-0.4.0.ebuild 726
-MD5 e60c96d25efb1d33d817b8690b94c48b tap-plugins-0.5.0.ebuild 776
-MD5 fea3e7725f36b903f11d09f1ac41092d tap-plugins-0.6.0.ebuild 776
-MD5 a4fc7033e3154c14f6f3ecf6146ac022 tap-plugins-0.7.0.ebuild 763
-MD5 ab68b5e8ea4bda476819d7800b8c195c files/digest-tap-plugins-0.4.0 69
+MD5 caab45e478f72449ff7ab22a9e423222 ChangeLog 2333
+MD5 fa1c4a277420a21bc5b0e7201605044e tap-plugins-0.5.0.ebuild 769
+MD5 f7f6a6078a97194b8c60797688e99f28 tap-plugins-0.1.ebuild 743
+MD5 d64fe3ce67a374150dd639e965f8886a tap-plugins-0.6.0.ebuild 767
+MD5 d7629f64be4346062b3da405b5dff980 tap-plugins-0.4.0.ebuild 719
+MD5 3646fc8fa11ae907af973f3ee256620b metadata.xml 1433
+MD5 237cab48f9b70f9301a6fcd5b607789b tap-plugins-0.7.0.ebuild 754
 MD5 c49a868a2247997b3a2a12032065d823 files/digest-tap-plugins-0.1 61
-MD5 06ce18f6f3b4ff1bf40fc1efc4b230ba files/digest-tap-plugins-0.5.0 69
-MD5 07232c915e3d4d505af528f80756ea2f files/digest-tap-plugins-0.6.0 68
 MD5 fc6a03d048dd9752a86e37cf5d969324 files/digest-tap-plugins-0.7.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxRD/ArHZZzCEUG0RAgLJAJ95t6lq57jsEBl3FWVjAgXRsbPdYACfWvMt
-Uxb3Yt95BiluF5W27EfxUpc=
-=C+fr
------END PGP SIGNATURE-----
+MD5 07232c915e3d4d505af528f80756ea2f files/digest-tap-plugins-0.6.0 68
+MD5 ab68b5e8ea4bda476819d7800b8c195c files/digest-tap-plugins-0.4.0 69
+MD5 06ce18f6f3b4ff1bf40fc1efc4b230ba files/digest-tap-plugins-0.5.0 69
