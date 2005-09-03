@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.30.ebuild,v 1.1 2005/09/02 23:01:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.30.ebuild,v 1.2 2005/09/03 19:16:08 robbat2 Exp $
 
 inherit eutils
 
@@ -46,6 +46,8 @@ src_compile() {
 
 src_install() {
 	make DIST_ROOT="${D}" install || die
+	einfo "Making symlinks"
 	dosym /sbin/xfsrestore /usr/bin/xfsrestore
 	dosym /sbin/xfsdump /usr/bin/xfsdump
+	dosym /sbin/xfsdq /usr/bin/xfsdq
 }
