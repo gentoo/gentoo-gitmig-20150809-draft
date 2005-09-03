@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.12 2005/08/02 05:28:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.13 2005/09/03 07:35:02 dragonheart Exp $
+
+*lft-2.5 (03 Sep 2005)
+
+  03 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/lft-2.5-installpath.patch, +lft-2.5.ebuild:
+  version bump
 
   02 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> lft-2.31.ebuild:
   amd64 stable. Closes bug 100959. Thanks to Andrew D Kirch
