@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68ced409f61940c6cef9a4841e1affde ChangeLog 1222
-MD5 65d33224e2157c3e9a1142c87f5d80f4 convmv-1.08.ebuild 659
+MD5 28fd7d90946c421233c8951c7f85f0b0 convmv-1.08.ebuild 658
 MD5 b5272451fe6c08bef4dd8feef9c335c8 metadata.xml 227
+MD5 df3b7a9a92cab455e472abe89817e509 ChangeLog 1314
 MD5 c3b436140f13f6064aa9c7bfe58690d7 convmv-1.05.ebuild 659
-MD5 95e339ae41691713383980adeb87b41f files/digest-convmv-1.08 62
 MD5 bd4b326af450c5197ad6fabffda85ddf files/digest-convmv-1.05 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFZpvCHk4+ZoBpvsRAvjSAJ9j65D5NuuF9SwaOcEq5/iz21l17wCfUpch
-5Xqm1qUtnQ5EmGTBFA27Jmg=
-=2rYi
------END PGP SIGNATURE-----
+MD5 95e339ae41691713383980adeb87b41f files/digest-convmv-1.08 62

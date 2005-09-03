@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convmv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.12 2005/08/31 11:54:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.13 2005/09/03 21:07:13 hansmi Exp $
+
+  03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> convmv-1.08.ebuild:
+  Stable on ppc.
 
   31 Aug 2005; Tom Martin <slarti@gentoo.org> convmv-1.08.ebuild:
   Stable on amd64, ia64, sparc.
