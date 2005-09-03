@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdockapp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.22 2005/09/02 19:29:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.23 2005/09/03 21:10:45 corsair Exp $
+
+  03 Sep 2005; Markus Rothe <corsair@gentoo.org> libdockapp-0.6.0.ebuild:
+  Stable on ppc64
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   libdockapp-0.6.0.ebuild:
