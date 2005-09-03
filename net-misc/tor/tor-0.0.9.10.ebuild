@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.9.10.ebuild,v 1.5 2005/07/20 21:03:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.9.10.ebuild,v 1.6 2005/09/03 12:07:58 humpback Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_install() {
 		doc/{control-spec.txt,rend-spec.txt,tor-doc.css,tor-doc.html,tor-spec.txt}
 
 	enewgroup tor
-	enewuser tor -1 /bin/false /var/lib/tor tor
+	enewuser tor -1 -1 /var/lib/tor tor
 	dodir /var/lib/tor
 	dodir /var/log/tor
 	fperms 750 /var/lib/tor /var/log/tor
