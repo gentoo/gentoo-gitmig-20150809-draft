@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.4.ebuild,v 1.1 2005/08/11 09:01:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.4.ebuild,v 1.2 2005/09/03 19:48:43 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
@@ -66,7 +66,7 @@ src_compile() {
 		--sysconfdir=/etc/quagga \
 		--enable-exampledir=/etc/quagga/samples \
 		--localstatedir=/var/run/quagga \
-		--libdir=/usr/lib/quagga \
+		--libdir=/usr/$(get_libdir)/quagga \
 		${myconf} \
 		|| die "configure failed"
 	emake || die "make failed"
@@ -77,7 +77,7 @@ src_install() {
 		localstatedir=${D}/var/run/quagga \
 		sysconfdir=${D}/etc/quagga \
 		exampledir=${D}/etc/quagga/samples \
-		libdir=${D}/usr/lib/quagga || die "make install failed"
+		libdir=${D}/usr/$(get_libdir)/quagga || die "make install failed"
 
 	keepdir /var/run/quagga || die
 
