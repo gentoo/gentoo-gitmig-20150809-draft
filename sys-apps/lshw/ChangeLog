@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.22 2005/07/22 04:17:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.23 2005/09/03 15:44:01 ferdy Exp $
+
+  03 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> lshw-02.05.01b.ebuild:
+  marked ~alpha, wrt bug #104130
 
 *lshw-02.05.01b (22 Jul 2005)
 
