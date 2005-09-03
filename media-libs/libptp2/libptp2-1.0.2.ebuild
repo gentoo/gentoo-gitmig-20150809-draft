@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/libptp2-1.0.2.ebuild,v 1.1 2005/06/16 14:13:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/libptp2-1.0.2.ebuild,v 1.2 2005/09/03 23:04:46 dragonheart Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/libptp/"
 SRC_URI="mirror://sourceforge/libptp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~x86"
+KEYWORDS="~ppc ~ppc64 x86"
 IUSE=""
 RDEPEND=">=dev-libs/libusb-0.1.8"
 DEPEND="${RDEPEND}
@@ -19,6 +19,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-libusbversion.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-parallel.patch
 }
 
 src_test() {
