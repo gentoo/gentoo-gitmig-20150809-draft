@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/flashcard
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flashcard/ChangeLog,v 1.1 2005/09/03 09:00:24 mkennedy Exp $
+
+*flashcard-2.3.1 (03 Sep 2005)
+
+  03 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50flashcard-gentoo.el, +metadata.xml, +flashcard-2.3.1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy.
+
