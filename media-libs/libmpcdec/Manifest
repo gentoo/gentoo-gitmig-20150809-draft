@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e45f8148ab1d63c6bd9583693bd967a8 libmpcdec-1.2.ebuild 722
-MD5 0b6a128a8de756216d0202b66747143e ChangeLog 593
+MD5 fa2afa734f24ab085a842c67bfbaec87 ChangeLog 713
+MD5 1119248b1d7523ce0dcae7c1b9c46563 libmpcdec-1.2.ebuild 707
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 053548eec867c5a6ec1b992a41425cb0 files/digest-libmpcdec-1.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDD1R3KRy60XGEcJIRAnpWAKCc9GH5ibsGrox16GrkJRPafhaS5wCfS4Hl
-N4j0GccOhlzqP+2fDTpUsIc=
-=DlHM
------END PGP SIGNATURE-----
