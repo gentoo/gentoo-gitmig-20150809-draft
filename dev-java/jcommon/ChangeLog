@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.9 2005/08/18 18:49:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.10 2005/09/03 21:38:23 betelgeuse Exp $
+
+*jcommon-1.0.0_rc1 (03 Sep 2005)
+
+  03 Sep 2005; Petteri Räty <betelgeuse@gentoo.org> jcommon-0.9.7.ebuild,
+  jcommon-0.9.7-r1.ebuild, +jcommon-1.0.0_rc1.ebuild:
+  Version bump and removed the installation of the LGPL license 
+  file from all versions.
 
   18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   jcommon-0.9.7-r1.ebuild:
