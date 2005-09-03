@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9-r1.ebuild,v 1.5 2005/06/12 12:10:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.0.9-r1.ebuild,v 1.6 2005/09/03 03:03:33 vanquirius Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A file manager that implements the popular two-pane design based on gtk+-2"
 HOMEPAGE="http://emelfm2.org/"
@@ -23,9 +23,10 @@ src_unpack() {
 src_compile() {
 	local myconf
 
+	# bug 68986
+	export CC="$(tc-getCC) ${CFLAGS}"
 	use nls && myconf="-DENABLE_NLS"
 	emake PREFIX=/usr \
-		CC="gcc ${CFLAGS}" \
 		NLS=${myconf} || die "emake failed"
 }
 
