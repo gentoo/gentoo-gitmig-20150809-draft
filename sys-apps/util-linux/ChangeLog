@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.105 2005/08/18 02:02:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.106 2005/09/03 02:24:24 vapier Exp $
+
+  03 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12q-more-fake-checks.patch,
+  util-linux-2.12q-r1.ebuild:
+  Add some fixes for -f handling.
 
   18 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.12q-dont-umask.patch, util-linux-2.12q-r1.ebuild:

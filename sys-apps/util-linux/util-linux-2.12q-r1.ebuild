@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.4 2005/08/18 02:02:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.5 2005/09/03 02:24:24 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -50,6 +50,9 @@ src_unpack() {
 
 	# Fix rare failures with -j4 or higher
 	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch
+
+	# Fix -f usage with -a and in general
+	epatch ${FILESDIR}/${PN}-2.12q-more-fake-checks.patch
 
 	# Fix unreadable df output when using devfs ... this check is kind of 
 	# a hack, but whatever, the output isnt critical at all :P
