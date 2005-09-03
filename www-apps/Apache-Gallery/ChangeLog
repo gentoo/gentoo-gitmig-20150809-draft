@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.12 2005/08/08 21:54:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.13 2005/09/03 18:19:02 weeve Exp $
+
+  03 Sep 2005; Jason Wever <weeve@gentoo.org> Apache-Gallery-0.9.1.ebuild:
+  Added ~sparc keyword as it was inadvertently dropped in the version bump.
 
   08 Aug 2005; Renat Lumpau <rl03@gentoo.org> Apache-Gallery-0.9.1.ebuild:
   Fixed libapreq2 dependency wrt bug #101329.
