@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-20030601.ebuild,v 1.1 2005/07/02 21:20:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-20030601.ebuild,v 1.2 2005/09/03 23:31:58 flameeyes Exp $
 
 inherit eutils
 
@@ -54,7 +54,7 @@ src_install() {
 
 	doman pam_krb5.5 pam_krb5.8
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README README.heimdal TODO
+	dodoc AUTHORS ChangeLog NEWS README README.heimdal TODO
 
 	docinto pam.d
 	dodoc pam.d/*

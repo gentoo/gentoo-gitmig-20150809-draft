@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.2 2005/07/26 11:25:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.3 2005/09/03 23:31:58 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  pam_krb5-20030601.ebuild, pam_krb5-20030601-r1.ebuild:
+  Don't install COPYING and INSTALL files.
 
   26 Jul 2005; Seemant Kulleen <seemant@gentoo.org>
   pam_krb5-20030601-r1.ebuild:

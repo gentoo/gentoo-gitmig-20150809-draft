@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2e858374dbeb60b8cfeaa1a8e339fc0b pam_krb5-20030601-r1.ebuild 1374
 MD5 f4459d0da4053e8f4dc48c85d16d4e1f ChangeLog 2737
 MD5 bf1ebfa57954b1cb1fd32a5f171f8a71 pam_krb5-1.0-r1.ebuild 871
@@ -11,3 +14,10 @@ MD5 607c031de2b5895628efb020f8d63b95 files/pam_krb5-20030601-defaultrealm.patch 
 MD5 9e9b7dfbf4b5e17ef690ed51d576b944 files/pam_krb5-1.0-errno_h.patch 680
 MD5 d4efdcb4a1be749ff6dde010e9dd9dc4 files/digest-pam_krb5-1.0 63
 MD5 9d71d4c20b07cdd282e489cb8cd045d8 files/pam_krb5-1.0-gentoo.diff 695
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGjJ9j5H05b2HAEkRArkPAJ9JeTBaeBUuNOWRvAVEGle3NvsXXwCaA41+
+CdT4G0MEvGSDY7FfJ0fhikY=
+=Q0Rq
+-----END PGP SIGNATURE-----
