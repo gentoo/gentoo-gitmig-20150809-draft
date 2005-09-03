@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xiron
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xiron/ChangeLog,v 1.4 2005/04/19 09:09:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xiron/ChangeLog,v 1.5 2005/09/03 23:15:30 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xiron-0.1.1.ebuild:
+  Don't install COPYING and INSTALL files.
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.

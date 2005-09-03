@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.1.ebuild,v 1.9 2005/07/20 22:40:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.1.ebuild,v 1.10 2005/09/03 23:17:53 flameeyes Exp $
 
 IUSE="nls"
 
@@ -42,5 +42,5 @@ src_compile() {
 src_install() {
 
 	einstall || die
-	dodoc ABOUT-NLS AUTHORS COPYING INSTALL NEWS README
+	dodoc ABOUT-NLS AUTHORS NEWS README
 }

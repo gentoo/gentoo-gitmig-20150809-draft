@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xiron/xiron-0.1.1.ebuild,v 1.3 2004/10/03 21:38:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xiron/xiron-0.1.1.ebuild,v 1.4 2005/09/03 23:15:30 flameeyes Exp $
 
 DESCRIPTION="xiron is a rapid development framework to build multimedia frontends for the xine media playing library"
 HOMEPAGE="http://xiron.sourceforge.net/"
@@ -33,5 +33,5 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
