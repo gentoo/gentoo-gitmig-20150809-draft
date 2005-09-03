@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100-r1.ebuild,v 1.5 2005/03/03 15:00:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.150.ebuild,v 1.1 2005/09/03 23:22:35 eradicator Exp $
 
 IUSE="ssl"
 
-inherit eutils
+inherit eutils pam
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
@@ -12,13 +12,15 @@ SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="dev-lang/perl
-	sys-process/lsof
-	>=sys-apps/sed-4
-	dev-perl/Authen-PAM
-	ssl? ( dev-perl/Net-SSLeay )"
+DEPEND="dev-lang/perl"
+
+RDEPEND="${DEPEND}
+	 sys-process/lsof
+	 dev-perl/Authen-PAM
+	 virtual/pam
+	 ssl? ( dev-perl/Net-SSLeay )"
 
 src_unpack() {
 	unpack ${A}
@@ -26,30 +28,25 @@ src_unpack() {
 	cd ${S}
 
 	# Point to the correct mysql location
-	sed -i "s:/usr/local/mysql:/usr:g" mysql/config
-
-	# Bug #46273... missing config for gentoo
-	cp quota/generic-linux-lib.pl quota/gentoo-linux-lib.p
+	sed -i -e "s:/usr/local/mysql:/usr:g" mysql/config
 
 	epatch ${FILESDIR}/${PN}-1.080-safestop.patch
-	epatch ${FILESDIR}/${PN}-1.100-setup-nocheck.patch
+	epatch ${FILESDIR}/${PN}-1.150-setup-nocheck.patch
 }
 
 src_install() {
 	# Change /usr/local/bin/perl references
-	find . -type f | xargs sed -i 's:^#!.*/usr/local/bin/perl:#!/usr/bin/perl:'
+	find . -type f | xargs sed -i -e 's:^#!.*/usr/local/bin/perl:#!/usr/bin/perl:'
 
 	dodir /usr/libexec/usermin
-	cp -a * ${D}/usr/libexec/usermin
+	cp -pR * ${D}/usr/libexec/usermin
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init.d.usermin usermin
+	newinitd ${FILESDIR}/init.d.usermin usermin
 
-	insinto /etc/pam.d
-	newins ${FILESDIR}/${PN}.pam ${PN}
+	newpamd ${FILESDIR}/${PN}.pam-include ${PN}
 
 	# Fix ownership
-	chown -R root:root ${D}
+	chown -R root:0 ${D}
 
 	dodir /etc/usermin
 	dodir /var/log/usermin
@@ -70,12 +67,12 @@ src_install() {
 	nouninstall=1
 	noperlpath=1
 	tempdir="${T}"
-	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath tempdir
+	export config_dir var_dir perl autoos port login crypt host ssl atboot nostart nochown autothird nouninstall noperlpath tempdir
 	${D}/usr/libexec/usermin/setup.sh > ${T}/usermin-setup.out 2>&1 || die "Failed to create initial usermin configuration."
 
 	# Fixup the config files to use their real locations
-	sed -i 's:^pidfile=.*$:pidfile=${ROOT}/var/run/usermin.pid:' ${D}/etc/usermin/miniserv.conf
-	find ${D}/etc/usermin -type f -exec sed -i "s:${D}:${ROOT}:g" {} \;
+	sed -i -e 's:^pidfile=.*$:pidfile=${ROOT}/var/run/usermin.pid:' ${D}/etc/usermin/miniserv.conf
+	find ${D}/etc/usermin -type f | xargs sed -i -e "s:${D}:${ROOT}:g"
 
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/usermin
@@ -83,8 +80,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local crypt=$(grep "^root:" ${ROOT}/etc/shadow | cut -f 2 -d :)
-	dosed "s/root:XXX/root:${crypt}/" /etc/usermin/miniserv.users
 	einfo "To make usermin start at boot time, run: 'rc-update add usermin default'."
 	einfo "Point your web browser to http://localhost:20000 to use usermin."
 }

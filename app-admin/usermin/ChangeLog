@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.69 2005/08/21 09:34:03 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.70 2005/09/03 23:22:35 eradicator Exp $
+
+*usermin-1.150 (03 Sep 2005)
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/usermin-1.150-setup-nocheck.patch, -usermin-1.100-r1.ebuild,
+  +usermin-1.150.ebuild:
+  Version bump.
 
   21 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org>
   usermin-1.130-r1.ebuild:
