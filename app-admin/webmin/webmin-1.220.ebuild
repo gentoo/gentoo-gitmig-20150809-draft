@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.200-r1.ebuild,v 1.3 2005/07/13 20:56:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.220.ebuild,v 1.1 2005/09/03 23:32:33 eradicator Exp $
 
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
 inherit eutils pam
 
-VM_V="2.50"
+VM_V="2.601"
 
 DESCRIPTION="Webmin, a web-based system administration interface"
 HOMEPAGE="http://www.webmin.com/"
@@ -32,11 +32,8 @@ src_unpack() {
 
 	cd ${S}
 
-	# in webmin-minimal webalizer and apache2 are not present
+	# in webmin-minimal apache2 are not present
 	if ! use webmin-minimal ; then
-		# Bug #47020
-		epatch ${FILESDIR}/${PN}-1.130-webalizer.patch
-
 		# Bug #50810, #51943
 		if use apache2; then
 			epatch ${FILESDIR}/${PN}-1.140-apache2.patch
@@ -49,7 +46,7 @@ src_unpack() {
 		tar -xf ${T}/vs.tar
 
 		# Don't create ${HOME}/cgi-bin on new accounts
-		epatch ${FILESDIR}/virtual-server-2.31-nocgibin.patch
+		epatch ${FILESDIR}/virtual-server-2.60-nocgibin.patch
 
 		# Check if a newly added IP is already active
 		epatch ${FILESDIR}/virtual-server-2.31-checkip.patch
@@ -65,6 +62,9 @@ src_unpack() {
 }
 
 src_install() {
+	# Bug #97212
+	addpredict /var/lib/rpm
+
 	rm -f mount/freebsd-mounts*
 	rm -f mount/openbsd-mounts*
 	rm -f mount/macos-mounts*
@@ -118,6 +118,9 @@ src_install() {
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
 	keepdir /var/log/webmin/
+
+	rm -rf ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1
+	rm -f ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1.tar.gz
 }
 
 pkg_postinst() {
@@ -127,7 +130,8 @@ pkg_postinst() {
 	sed -i -e "s/root:XXX/root:${crypt}/" /etc/webmin/miniserv.users
 
 	einfo "To make webmin start at boot time, run: 'rc-update add webmin default'."
-	einfo "Point your web browser to http://localhost:10000 to use webmin."
+	use ssl && einfo "Point your web browser to https://localhost:10000 to use webmin."
+	use ssl || einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
 
 pkg_prerm() {
