@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.19.0.ebuild,v 1.4 2005/09/02 23:11:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.19.0.ebuild,v 1.5 2005/09/03 23:23:59 flameeyes Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -31,5 +31,5 @@ src_compile(){
 
 src_install(){
 	einstall DESTDIR=${D} || die "einstall failed"
-	dodoc AUTHORS ChangeLog COPYING* README* NEWS
+	dodoc AUTHORS ChangeLog README* NEWS
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tcvp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/ChangeLog,v 1.7 2005/05/28 07:48:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/ChangeLog,v 1.8 2005/09/03 23:19:41 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> tcvp-0.2.0.ebuild:
+  Don't install COPYING file.
 
   27 May 2005; Luca Barbato <lu_zero@gentoo.org> ChangeLog:
   oggvorbis -> vorbis useflag change

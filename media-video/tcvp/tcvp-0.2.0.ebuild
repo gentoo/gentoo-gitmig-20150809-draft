@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.9 2005/05/31 15:18:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.10 2005/09/03 23:19:41 flameeyes Exp $
 
 DESCRIPTION="A modular player and encoder/transcoder for music and video."
 HOMEPAGE="http://tcvp.sourceforge.net/"
@@ -50,5 +50,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING
+	dodoc AUTHORS ChangeLog
 }

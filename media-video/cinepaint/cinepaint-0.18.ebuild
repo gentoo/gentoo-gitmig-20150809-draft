@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.18.ebuild,v 1.3 2005/03/13 20:34:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.18.ebuild,v 1.4 2005/09/03 23:23:59 flameeyes Exp $
 
 DESCRIPTION="motion picture editing tool used for painting and retouching of movies"
 SRC_URI="mirror://sourceforge/cinepaint/${P}.tar.gz"
@@ -24,5 +24,5 @@ src_compile(){
 
 src_install(){
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING* README* NEWS
+	dodoc AUTHORS ChangeLog README* NEWS
 }

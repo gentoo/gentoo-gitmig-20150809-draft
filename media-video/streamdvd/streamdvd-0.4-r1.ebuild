@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.8 2005/01/23 03:26:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.9 2005/09/03 23:15:40 flameeyes Exp $
 
 DESCRIPTION="fast tool to backup Video DVDs 'on the fly'"
 HOMEPAGE="http://www.badabum.de/streamdvd.html"
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	dobin streamdvd streamanalyze
 	newbin lsdvd lsdvd-streamdvd  # patched lsdvd, rename to avoid conflict with media-video/lsdvd
-	dodoc COPYING README
+	dodoc README
 	newdoc contrib/lsdvd/AUTHORS AUTHORS.lsdvd
 	newdoc contrib/lsdvd/README README.lsdvd
 	newdoc contrib/StreamAnalyze/README README.streamanalyze

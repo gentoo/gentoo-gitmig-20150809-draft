@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/mpglen-0.1.ebuild,v 1.3 2005/07/28 10:43:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpglen/mpglen-0.1.ebuild,v 1.4 2005/09/03 23:18:53 flameeyes Exp $
 
 IUSE=""
 
@@ -24,5 +24,5 @@ src_compile () {
 src_install () {
 	cd ${MY_S} || die
 	dobin ${PN} || die
-	dodoc AUTHORS COPYING Changelog README || die
+	dodoc AUTHORS Changelog README || die
 }

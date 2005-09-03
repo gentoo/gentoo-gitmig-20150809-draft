@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.9 2005/07/28 12:03:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/w3cam/w3cam-0.7.2.ebuild,v 1.10 2005/09/03 23:19:20 flameeyes Exp $
 
 #
 # You can set the default device that vidcat and w3camd use by setting
@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
 	dobin vidcat w3camd/w3camd
 	doman vidcat.1
-	dodoc COPYING.txt ChangeLog.txt FAQ.txt README SAMPLES TODO.txt \
+	dodoc ChangeLog.txt FAQ.txt README SAMPLES TODO.txt \
 	    index.html w3cam.css w3cam.cgi w3cam.cgi.scf
 	docinto samples
 	dodoc samples/*

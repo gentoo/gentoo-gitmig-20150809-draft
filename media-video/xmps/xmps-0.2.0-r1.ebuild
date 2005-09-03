@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r1.ebuild,v 1.13 2004/06/25 00:53:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0-r1.ebuild,v 1.14 2005/09/03 23:25:04 flameeyes Exp $
 
 IUSE="nls gnome"
 
@@ -42,6 +42,6 @@ src_install () {
 
 	einstall || die
 
-	dodoc AUTHORS ChangeLog COPYING NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 }
