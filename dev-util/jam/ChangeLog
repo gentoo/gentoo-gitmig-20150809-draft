@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/jam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.15 2005/08/27 13:08:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.16 2005/09/03 08:31:26 chriswhite Exp $
+
+  03 Sep 2005; Chris White <chriswhite@gentoo.org>
+  +files/jam-2.5-dependency.patch, jam-2.5-r2.ebuild:
+  Fixed bug #103893.  Thanks to Chris Dragan for the patch.
 
   27 Aug 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
   Re-re fixing ChangeLog.
