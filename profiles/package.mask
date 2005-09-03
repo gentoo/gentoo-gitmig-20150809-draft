@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4377 2005/09/03 15:31:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4378 2005/09/03 21:37:22 voxus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Konstantin Arkhipov <voxus@gentoo.org> (03 Sep 2005)
+# Waiting for php-5
+dev-php/onphp
 
 # Christian Zoffoli <xmerlin@gentoo.org> (1 Sep 2005)
 # Masked as this version has a bug
