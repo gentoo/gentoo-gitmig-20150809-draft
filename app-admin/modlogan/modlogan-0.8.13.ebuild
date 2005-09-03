@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.11 2005/07/06 21:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.8.13.ebuild,v 1.12 2005/09/03 19:51:07 blubb Exp $
+
+inherit multilib
 
 MY_FILESDIR="${FILESDIR}/${PV}"
 THEMES_VERSION="0.0.7"
@@ -43,7 +45,7 @@ src_compile() {
 	econf \
 		--enable-plugins \
 		--sysconfdir=/etc \
-		--libdir=/usr/lib/modlogan \
+		--libdir=/usr/$(get_libdir)/modlogan \
 		--disable-check-dynamic \
 		${myconf} || die
 

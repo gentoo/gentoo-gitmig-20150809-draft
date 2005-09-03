@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.27 2005/05/08 21:54:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.28 2005/09/03 19:51:07 blubb Exp $
+
+  03 Sep 2005; Simon Stelling <blubb@gentoo.org> modlogan-0.8.13.ebuild:
+  made modlogan multilib-strict aware
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org> modlogan-0.8.13.ebuild:
   stable on ia64

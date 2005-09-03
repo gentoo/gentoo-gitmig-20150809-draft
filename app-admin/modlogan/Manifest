@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ae858ab055c5b0f426654e29e86301d modlogan-0.8.13.ebuild 2578
-MD5 4be9093e862d813f6f4bb614910e87f5 ChangeLog 4180
+MD5 8b0ae640858f22e59f3ac75dd81fb867 ChangeLog 4289
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 6704cc6c8e2e454f41f18c47772422e9 modlogan-0.8.13.ebuild 2603
 MD5 9be382a2d0a56eec829a69bfc7fc2a42 files/digest-modlogan-0.8.13 140
 MD5 c95a2f59d42ca578ae23355f467743ba files/0.8.13/modlogan.conf 189
 MD5 cd845b930a3a89ad0e76c33a95ba385d files/0.8.13/sample.conf 2913
 MD5 ebdfbd95c53173652997f659bb11a04a files/0.8.13/sample.def.conf 11436
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzEvVBXaUFmZvwyMRAhPSAKDEZ8qfW8M2fOXqkbjdS/7Z2ZldlgCg2bQD
-YmtJEFZk0fcFIDqCCpbev5I=
-=25Js
------END PGP SIGNATURE-----
