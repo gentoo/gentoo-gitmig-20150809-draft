@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.7 2005/08/22 17:46:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.8 2005/09/03 20:59:54 cardoe Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -96,7 +96,7 @@ x-modular_reconf_source() {
 		if [ -f "${S}/configure.ac" ]
 		then
 			einfo "Running autoreconf..."
-			autoreconf -v --install
+			autoreconf -v --force --install
 		fi
 	fi
 
