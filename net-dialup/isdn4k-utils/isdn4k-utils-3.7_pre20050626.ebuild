@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.7_pre20050626.ebuild,v 1.2 2005/07/02 09:34:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.7_pre20050626.ebuild,v 1.3 2005/09/03 20:41:21 sbriesen Exp $
 
 inherit eutils linux-info multilib gnuconfig
 
@@ -11,7 +11,7 @@ DESCRIPTION="ISDN4Linux Utils"
 SRC_URI="ftp://ftp.isdn4linux.de/pub/isdn4linux/CVS-Snapshots/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.isdn4linux.de/"
 
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc x86"
 LICENSE="GPL-2"
 IUSE="X unicode ipppd isdnlog eurofile"
 #IUSE="X unicode ipppd isdnlog eurofile mysql postgres oracle"
