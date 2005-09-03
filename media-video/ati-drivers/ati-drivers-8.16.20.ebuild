@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20.ebuild,v 1.5 2005/08/23 21:22:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20.ebuild,v 1.6 2005/09/03 22:29:45 eradicator Exp $
 
 IUSE="opengl"
 
@@ -15,7 +15,7 @@ LICENSE="ATI"
 KEYWORDS="-*" #~amd64 ~x86"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
-	 >=x11-base/opengl-update-2.1_pre1"
+	 app-admin/eselect-opengl"
 
 DEPEND=">=virtual/linux-sources-2.4
 	${RDEPEND}"
@@ -221,12 +221,7 @@ src_install-libs() {
 
 
 pkg_postinst() {
-# Ebuild shouldn't do this automatically, just tell the user to do it,
-# otherwise it messes up livecd/gamecd stuff ...  (drobbins, 1 May 2003)
-#	if [ "${ROOT}" = "/" ]
-#	then
-#		/usr/sbin/opengl-update ati
-#	fi
+	/usr/bin/eselect opengl set --use-old ati
 
 	echo
 	einfo "To switch to ATI OpenGL, run \"opengl-update ati\""
@@ -242,6 +237,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	opengl-update --use-old xorg-x11
+	/usr/bin/eselect opengl set --use-old xorg-x11
 }
 
