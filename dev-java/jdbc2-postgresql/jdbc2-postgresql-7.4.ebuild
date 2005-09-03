@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/jdbc2-postgresql-7.4.ebuild,v 1.5 2005/07/20 15:27:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/jdbc2-postgresql-7.4.ebuild,v 1.6 2005/09/03 21:08:20 hansmi Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ S=${WORKDIR}
 DESCRIPTION="JDBC Driver for PostgreSQL"
 SRC_URI="http://jdbc.postgresql.org/download/${At}"
 HOMEPAGE="http://jdbc.postgresql.org/"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 IUSE=""
 LICENSE="POSTGRESQL"
 SLOT="6"
