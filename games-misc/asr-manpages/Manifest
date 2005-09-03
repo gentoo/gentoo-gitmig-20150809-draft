@@ -1,4 +1,14 @@
-MD5 65f38fc1e2918e8ab5895c6a3086bc0a asr-manpages-1.3_rc5.ebuild 757
-MD5 3f544cf2e9e4dc545f43ef66be3da853 ChangeLog 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5e306b0b2d60dd62c7bbf3717907aac6 asr-manpages-1.3_rc5.ebuild 805
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 3f544cf2e9e4dc545f43ef66be3da853 ChangeLog 1086
 MD5 672c2ded6b405f2cff899b53d8848a47 files/digest-asr-manpages-1.3_rc5 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGVPsgIKl8Uu19MoRAu/mAJ971rP0b7XkjdNPoKplVkLDi43IfACfTG4k
+MD7aZNVr4wZ2FOj3ZsRSsNk=
+=bBdS
+-----END PGP SIGNATURE-----
