@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 caab45e478f72449ff7ab22a9e423222 ChangeLog 2333
 MD5 fa1c4a277420a21bc5b0e7201605044e tap-plugins-0.5.0.ebuild 769
 MD5 f7f6a6078a97194b8c60797688e99f28 tap-plugins-0.1.ebuild 743
@@ -10,3 +13,10 @@ MD5 fc6a03d048dd9752a86e37cf5d969324 files/digest-tap-plugins-0.7.0 68
 MD5 07232c915e3d4d505af528f80756ea2f files/digest-tap-plugins-0.6.0 68
 MD5 ab68b5e8ea4bda476819d7800b8c195c files/digest-tap-plugins-0.4.0 69
 MD5 06ce18f6f3b4ff1bf40fc1efc4b230ba files/digest-tap-plugins-0.5.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGjYEj5H05b2HAEkRAj20AJ98J9bP9J4Kwm62X49xt3JGwIKltgCgoU19
+JwKpXXw1rQKdvjiTtolG5NA=
+=G2ta
+-----END PGP SIGNATURE-----
