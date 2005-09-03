@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/mm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.23 2004/12/29 22:39:25 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.24 2005/09/03 12:07:46 dragonheart Exp $
+
+*mm-1.4.0 (03 Sep 2005)
+
+  03 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/mm-1.1.3-shtool.patch, -mm-1.1.3-r1.ebuild, mm-1.3.0.ebuild,
+  +mm-1.4.0.ebuild:
+  version bump. old version cleanout. 1.3.0 stable x86
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
