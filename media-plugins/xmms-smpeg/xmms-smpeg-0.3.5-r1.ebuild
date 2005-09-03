@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/xmms-smpeg-0.3.5-r1.ebuild,v 1.6 2004/08/11 03:13:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-smpeg/xmms-smpeg-0.3.5-r1.ebuild,v 1.7 2005/09/03 23:14:24 flameeyes Exp $
 
 IUSE="sdl"
 
@@ -37,5 +37,5 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING README TODO ChangeLog
+	dodoc AUTHORS README TODO ChangeLog
 }

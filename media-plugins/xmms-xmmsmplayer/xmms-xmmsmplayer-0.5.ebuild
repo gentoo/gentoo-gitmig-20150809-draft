@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsmplayer/xmms-xmmsmplayer-0.5.ebuild,v 1.7 2005/03/28 16:59:09 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsmplayer/xmms-xmmsmplayer-0.5.ebuild,v 1.8 2005/09/03 23:13:45 flameeyes Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ DEPEND="media-sound/xmms
 
 src_install() {
 	make DESTDIR="${D}" libdir=`xmms-config --input-plugin-dir` install || die
-	dodoc AUTHORS COPYING README
+	dodoc AUTHORS README
 }
 
 pkg_postinst() {
