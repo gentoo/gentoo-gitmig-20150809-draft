@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c61149908d6a510c7c2f407b05175b1 xiron-0.1.1.ebuild 856
 MD5 a9f14f2bcc972922e6c9940e7cbc0a87 ChangeLog 768
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 6fbc44ae5130435f224c3cce9433ec0b files/digest-xiron-0.1.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGi6ij5H05b2HAEkRAnyWAJ4lGvF0AQ8lEoYwn/Fd3pPapl2LeACcDZCU
+uJaHb6p9t4ilN8AQ3jVPAdg=
+=5AYu
+-----END PGP SIGNATURE-----
