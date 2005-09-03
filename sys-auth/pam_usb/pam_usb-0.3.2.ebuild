@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.3.2.ebuild,v 1.1 2005/07/02 15:18:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.3.2.ebuild,v 1.2 2005/09/03 23:29:59 flameeyes Exp $
 
 inherit eutils pam
 
@@ -27,5 +27,5 @@ src_install() {
 	dodir /etc/hotplug.d /etc/pam.d /etc/pam_usb
 
 	einstall DESTDIR=${D} PAM_MODULES="${D}/$(getpam_mod_dir)" || die "einstall failed"
-	dodoc AUTHORS COPYING Changelog README
+	dodoc AUTHORS Changelog README
 }

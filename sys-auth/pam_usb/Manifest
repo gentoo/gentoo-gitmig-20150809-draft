@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d2eda159fdf45c2152ac25008e76741c ChangeLog 2021
+MD5 b52995926ab7bb8e84806e5076fe6d41 pam_usb-0.3.1.ebuild 896
+MD5 d955d1e7900aaf5ddf359afe8960c9e6 ChangeLog 2151
+MD5 cbe0eeccea498ba46df4595084ac8c36 pam_usb-0.3.2.ebuild 906
 MD5 a40465c4eaab0ab75d9bea883b413c2f metadata.xml 414
-MD5 ac03b459072c43a1e1c0f91448fb570c pam_usb-0.3.1.ebuild 904
-MD5 2d7634dd7bfb77e9c99b0b0d0079e8fb pam_usb-0.3.2.ebuild 914
-MD5 ffdbf6f86aace60aeab938e75bd10c0a files/digest-pam_usb-0.3.1 64
 MD5 ce9b8a2131a8e569f927f3b539e7d059 files/digest-pam_usb-0.3.2 64
+MD5 ffdbf6f86aace60aeab938e75bd10c0a files/digest-pam_usb-0.3.1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCxrBMj5H05b2HAEkRAjXeAKCajMs6GcTUQWhQ8h7EJz/4bGQ84wCfWdm3
-qwRRd3EmiXk3t13T27KeisM=
-=knDq
+iD8DBQFDGjIHj5H05b2HAEkRAnJEAKCEpHocbefyyYgbwH88lVtzb7dv4gCghQKE
+I+K2HegKlTQuDcDKP7HsyD8=
+=ogie
 -----END PGP SIGNATURE-----
