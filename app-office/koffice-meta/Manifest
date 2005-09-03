@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 946f02a3e480647d69ac73f8132ad3dc koffice-meta-1.4.1.ebuild 1140
 MD5 b4042651574f73021ff281333f665144 koffice-meta-1.3.5.ebuild 1091
-MD5 deacbca1342d8176f7c63a4d1f9b120d ChangeLog 2084
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.3.5 0
+MD5 c404cc99b3645fc3f7f380b4659b9ddd ChangeLog 2186
+MD5 24218c32b28f78c09ebf4d31ca993d03 koffice-meta-1.4.1.ebuild 1140
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.4.1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFfysntT9W3vfTuoRAt9iAKCsqJTAjJYBCYZ6b0zwNMa8fPsjXACfeqs3
-YlR1ReUnEM+5ZtFgFtWnuv0=
-=d1Vx
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-koffice-meta-1.3.5 0
