@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.3 2005/07/17 07:27:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.4 2005/09/03 22:46:31 eradicator Exp $
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  celestia-1.3.2.ebuild:
+  Changed note to reference eselect instead of opengl-update.
 
   17 Jul 2005; Mike Frysinger <vapier@gentoo.org> celestia-1.3.2.ebuild:
   Change glut to use virtual/glut #93449, clean up the ebuild a bit, and if
