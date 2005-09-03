@@ -1,7 +1,17 @@
-MD5 261678f19d5a8837d91c6f15681191fc crypto++-5.2-r1.ebuild 1284
-MD5 f8404cdc347d98baa9511203a46ffa24 crypto++-5.2.1.ebuild 1438
-MD5 9299eea7b2edbcf5621f61c9c137c87e ChangeLog 2657
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 00586e7e08896c77b498199d78d60cdc ChangeLog 2800
 MD5 41bb16591c5d6df1b1ac6da78a6062e8 metadata.xml 224
-MD5 39a40ab01dfb17bb27e3f00bb247ab69 files/digest-crypto++-5.2.1 61
-MD5 cf9187d21296c23c480b1086284f5093 files/digest-crypto++-5.2-r1 58
+MD5 6351b0b29bf54ab13599133e0a2ee613 crypto++-5.2.1.ebuild 1466
+MD5 261678f19d5a8837d91c6f15681191fc crypto++-5.2-r1.ebuild 1284
 MD5 04a9a9a0aab549dfb7ec96bfe3b82cd6 files/crypto++-5.1-amd64.diff 3070
+MD5 cf9187d21296c23c480b1086284f5093 files/digest-crypto++-5.2-r1 58
+MD5 39a40ab01dfb17bb27e3f00bb247ab69 files/digest-crypto++-5.2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGY6lmdTrptrqvGERAhRkAJ0S76ZApBSj5Av+ePTUPdyKR4pdGwCfV3ot
+tz0OOwYL5GeJqVw6LsFVNj4=
+=0V+R
+-----END PGP SIGNATURE-----

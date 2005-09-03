@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.7 2005/08/17 00:38:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.8 2005/09/03 11:52:46 dragonheart Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,8 +22,11 @@ src_compile() {
 	replace-flags -O3 -O2
 	filter-flags -fomit-frame-pointer
 	filter-flags -msse2
-
-	emake -f GNUmakefile CXXFLAGS="-mno-sse2 ${CXXFLAGS}" || die
+	if use x86 || use amd64
+	then
+		append-flags -mno-sse2
+	fi
+	emake -f GNUmakefile || die
 }
 
 
