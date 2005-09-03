@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.28 2005/07/11 05:44:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.29 2005/09/03 17:16:19 g2boojum Exp $
+
+*docutils-0.3.9 (03 Sep 2005)
+
+  03 Sep 2005; Grant Goodyear <g2boojum@gentoo.org> +docutils-0.3.9.ebuild:
+  Version bump (bug # 95875), with new glep tarball.  Dropped "docutils-" prefix
+  for tools other than "docutils-glep.py", following the guidelines in the
+  docutils "distributing.html" file (bug #96856).  Thanks to Felix Wiemann, 
+  Fabian Neumann, and liquidx for contributions.  This latest ebuild lacks
+  proper PIL handling at the moment; if you're a distutils person please fix.
 
   11 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/50docutils-gentoo.el, docutils-0.3.7.ebuild:
