@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/xine-vcdx-1_rc1-r1.ebuild,v 1.4 2005/02/02 21:50:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/xine-vcdx-1_rc1-r1.ebuild,v 1.5 2005/09/03 23:49:19 flameeyes Exp $
 
 inherit eutils
 
@@ -38,5 +38,5 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }

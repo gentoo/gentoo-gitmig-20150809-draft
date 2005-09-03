@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xine-vcdx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/ChangeLog,v 1.7 2005/02/02 21:50:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/ChangeLog,v 1.8 2005/09/03 23:49:19 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xine-vcdx-1_rc0.ebuild,
+  xine-vcdx-1_rc1.ebuild, xine-vcdx-1_rc1-r1.ebuild:
+  Don't install COPYING, INSTALL and ABOUT-NLS files.
 
   02 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> xine-vcdx-1_rc1-r1.ebuild:
   changed vcdimager dependency, fixed #53913
