@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20-r1.ebuild,v 1.1 2005/09/02 08:12:41 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20-r1.ebuild,v 1.2 2005/09/03 12:00:29 satya Exp $
 
 inherit eutils versionator
 
@@ -10,7 +10,7 @@ IUSE="acl async automount cups doc kerberos ldap mysql pam postgres python quota
 RESTRICT="test"
 
 VSCAN_VER=0.3.6
-PATCH_VER=0.3.6
+PATCH_VER=0.3.7
 MY_P=${PN}-${PV/_/}
 MY_PP=${PN}-$(get_major_version)-gentoo-${PATCH_VER}
 S2=${WORKDIR}/${MY_P}
