@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.11 2005/07/15 10:53:47 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.1.ebuild,v 1.12 2005/09/03 22:44:33 eradicator Exp $
 
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
 SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
@@ -38,8 +38,8 @@ src_compile() {
 	if [ $? != 0 ]; then
 		echo
 		eerror "If configure fails with 'Cannot find proper gtkgl version'"
-		eerror "try to 'opengl-update' and then re-emerging =gtkglarea-1.2.3*."
-		eerror "# opengl-update <GL implementation>"
+		eerror "try to 'eselect opengl' and then re-emerge =gtkglarea-1.2.3*."
+		eerror "# eselect opengl set <GL implementation>"
 		eerror "# emerge =gtkglarea-1.2.3*"
 		echo
 		die "configure failed."
