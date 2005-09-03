@@ -1,13 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93f316232113f2d570c6bfb39398a2c0 ChangeLog 412
+MD5 e544c54701060e9d90f3f9007ed1f174 ChangeLog 572
 MD5 4e040937cc1596f0bd72d57549b53f93 tentakel-2.1.3.ebuild 480
+MD5 928276cbbf609054eadf1cae0a5cb708 tentakel-2.2.ebuild 582
 MD5 34b749350c3e779c371c56f6fa2f0771 files/digest-tentakel-2.1.3 62
+MD5 a5ef02ae0fdc0cd7e7842357eca677fd files/digest-tentakel-2.2 60
+MD5 6ec4ed2ff5814d366387be5dcaa72435 files/tentakel-2.2-manpath.patch 402
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBiS30I1lqEGTUzyQRAnx8AJ9rvU74/gJWWdtN4MeGYH7c62CQagCgx5yL
-vNf3c276AyGv49eYsP7pYrQ=
-=Fquf
+iD8DBQFDGaqUmdTrptrqvGERAmd8AKCNk9wG+x2G07iUiCAT99duICEO2gCeJDfI
+ut4qGFDYMIQHspofSrdtrGs=
+=OM1i
 -----END PGP SIGNATURE-----
