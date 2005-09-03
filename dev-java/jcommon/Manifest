@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d536e21d4d83da56b569d711bd7900ed jcommon-0.9.7.ebuild 977
 MD5 401bf176a0de4c373fcb1d855652acee jcommon-0.9.7-r1.ebuild 992
 MD5 0092a22378937e40013ff9ff6e0d24a7 jcommon-1.0.0_rc1.ebuild 1256
@@ -6,3 +9,10 @@ MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 8eaa092f9e56aa5c625aad517d4b9887 files/digest-jcommon-0.9.7 65
 MD5 9042920c2f79fdc6fdb4a2409fc6d057 files/digest-jcommon-1.0.0_rc1 70
 MD5 8eaa092f9e56aa5c625aad517d4b9887 files/digest-jcommon-0.9.7-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGhhlQiJ/wx066S4RAlpDAKClZmlXihsuB9Vlu+M8qKptTXgyywCfZ/6E
+t/v46BRayb4TtcjG3rcoSxA=
+=OPab
+-----END PGP SIGNATURE-----
