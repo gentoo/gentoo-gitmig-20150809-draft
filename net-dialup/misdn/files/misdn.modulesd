@@ -1,12 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/files/misdn.modulesd,v 1.2 2005/05/16 08:53:37 genstef Exp $
-
 # Options for the mISDN card drivers
 #
 # There's currently no documentation available. You should check
 # the comments in the source code for available parameters and
 # the possible values.
+#
+# Important notice: FAX is not (yet) possible with mISDN, even
+# with the Sedlbauer Speedfax+, but voice and PPP works.
 #
 options avmfritz protocol=2
 options hfcpci   protocol=2
@@ -15,15 +14,29 @@ options hfcmulti protocol=2
 options sedlfax  protocol=2
 options w6692pci protocol=2
 
+# mISDN device
+install mISDN_dev \
+[ -c /dev/mISDN ] || \
+( /bin/mknod -m 660 /dev/mISDN c 46 0 && \
+  /bin/chown root:dialout /dev/mISDN )
+remove mISDN_dev \
+[ -c /dev/mISDN ] && /bin/rm -f /dev/mISDN
+alias char-major-46 mISDN_dev
+alias /dev/mISDN    mISDN_dev
+
 # mISDN framework
 install mISDN \
-/sbin/modprobe mISDN_core && \
-/sbin/modprobe mISDN_l1   && \
-/sbin/modprobe mISDN_l2   && \
-/sbin/modprobe l3udss1    && \
-/sbin/modprobe mISDN_capi && \
-/sbin/modprobe mISDN_x25dte
+/sbin/modprobe mISDN_core   && \
+/sbin/modprobe mISDN_l1     && \
+/sbin/modprobe mISDN_l2     && \
+/sbin/modprobe l3udss1      && \
+/sbin/modprobe mISDN_capi   && \
+/sbin/modprobe mISDN_x25dte && \
+/sbin/modprobe mISDN_dsp    && \
+/sbin/modprobe mISDN_dtmf
 remove mISDN \
+/sbin/modprobe -r mISDN_dtmf   && \
+/sbin/modprobe -r mISDN_dsp    && \
 /sbin/modprobe -r mISDN_x25dte && \
 /sbin/modprobe -r mISDN_capi   && \
 /sbin/modprobe -r l3udss1      && \
@@ -63,20 +76,7 @@ remove avmfritz \
 /sbin/modprobe -r --ignore-remove avmfritz && \
 /sbin/modprobe -r mISDN
 
-# Sedlbauer Speedfax+
-# Important: For the sedlbauer speed fax+ to work properly
-# you have to download the firmware 'ISAR.BIN' onto the card.
-install sedlfax \
-/sbin/modprobe mISDN && \
-/sbin/modprobe faxl3 && \
-/sbin/modprobe --ignore-install sedlfax && \
-/usr/sbin/avmcapictrl load /lib/firmware/ISAR.BIN
-remove sedlfax \
-/sbin/modprobe -r --ignore-remove sedlfax && \
-/sbin/modprobe -r faxl3 && \
-/sbin/modprobe -r mISDN
-
-# Winbond W6692 PCI 
+# Winbond W6692 PCI
 install w6692pci \
 /sbin/modprobe mISDN && \
 /sbin/modprobe --ignore-install w6692pci
@@ -84,3 +84,22 @@ remove w6692pci \
 /sbin/modprobe -r --ignore-remove w6692pci && \
 /sbin/modprobe -r mISDN
 
+# Sedlbauer Speedfax+
+# Important: For the sedlbauer speed fax+ to work properly
+# you have to download the firmware 'ISAR.BIN' onto the card.
+install sedlfax \
+/sbin/modprobe mISDN && \
+/sbin/modprobe faxl3 && \
+/sbin/modprobe --ignore-install sedlfax
+remove sedlfax \
+/sbin/modprobe -r --ignore-remove sedlfax && \
+/sbin/modprobe -r faxl3 && \
+/sbin/modprobe -r mISDN
+
+# Winbond W6692 PCI
+install w6692pci \
+/sbin/modprobe mISDN && \
+/sbin/modprobe --ignore-install w6692pci
+remove w6692pci \
+/sbin/modprobe -r --ignore-remove w6692pci && \
+/sbin/modprobe -r mISDN
