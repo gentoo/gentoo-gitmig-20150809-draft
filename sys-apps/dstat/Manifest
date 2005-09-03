@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f873fcc2e9db1faa13ec53ccbb6ef4d7 ChangeLog 1917
-MD5 625fd3be79237ee98c8fa6d018d5f6ca dstat-0.6.0.ebuild 1057
-MD5 848b9935dac0ed2a49a059a7a870bb19 files/digest-dstat-0.6.0 63
+MD5 6b4c30e333863a2fafe21e7414a8ee53 dstat-0.6.0.ebuild 1052
+MD5 e3bad1548680c0208df8aabf9d35c241 ChangeLog 1992
 MD5 ffa68eb3467e3f5612b56c42288a9fb6 metadata.xml 876
+MD5 848b9935dac0ed2a49a059a7a870bb19 files/digest-dstat-0.6.0 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCzVuCI1lqEGTUzyQRAtMwAJ4wdokhrZbXt0ltvqjjMm5N84n+/QCeJbEw
-VWGfpW5Dz2vtGheBVSWHVhw=
-=yDhO
+iD8DBQFDGcqRomPajV0RnrERAqiZAJ4l0v1bDsm/XP6RMRvnSp/FqPaNAACdG/Xk
+ZfRk2twAX7BPrpp7vDFimsc=
+=8IUb
 -----END PGP SIGNATURE-----
