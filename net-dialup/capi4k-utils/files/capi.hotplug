@@ -1,28 +1,30 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.9 2005/07/20 18:47:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.10 2005/09/03 20:25:17 sbriesen Exp $
 
 . /etc/conf.d/capi
 
-[ "$CAPI_HOTPLUG_USB" = "yes" ] || exit 0
+[ "${CAPI_HOTPLUG_USB}" = "yes" ] || exit 0
 
 # possible firmware locations (list and order taken from 'capiinit')
 FWDIRS=(/lib/firmware/isdn /lib/firmware /usr/share/isdn /usr/lib/isdn /lib/isdn)
 
 # Syslog output
 syslog() {  # <msg>
-	/usr/bin/logger -t "capi-usb" "$1"
+	/usr/bin/logger -t "capi-usb" "$@"
 }
 
 # OK beep
 beep_ok() {
-	[ "$CAPI_HOTPLUG_BEEP" = "yes" ] && echo -en "\033[10;1200]\a\033[10;262]" > /dev/console
+	[ "${CAPI_HOTPLUG_BEEP}" = "yes" ] && \
+	echo -en "\033[10;1200]\a\033[10;262]" > /dev/console
 }
 
 # Error beep
 beep_error() {
-	[ "$CAPI_HOTPLUG_BEEP" = "yes" ] && echo -en "\033[10;300]\a\033[10;262]" > /dev/console
+	[ "${CAPI_HOTPLUG_BEEP}" = "yes" ] && \
+	echo -en "\033[10;300]\a\033[10;262]" > /dev/console
 }
 
 # Driver lookup
@@ -134,12 +136,12 @@ case "${VENDID}" in
 		exit 1;;
 esac
 
-if [ "$DRIVER" = "hfcsusb" -a "$CAPI_HOTPLUG_MISDN" != "yes" ]; then
+if [ "${DRIVER}" = "hfcsusb" -a "${CAPI_HOTPLUG_MISDN}" != "yes" ]; then
 	syslog "ignore mISDN card: ${DRIVER} (${VENDID})"
 	exit 0
 fi
 
-case "$ACTION" in
+case "${ACTION}" in
 	add)
 		# loading capi
 		if ! ( [ -f /proc/capi/capi20 ] || /sbin/modprobe -sq capi ); then
@@ -155,24 +157,24 @@ case "$ACTION" in
 	
 		# loading firmware	
 		if [ -n "${LOADER}" -a -n "${FIRMWARE}" ]; then
-			CNT=0  # wait for udev
-			while [ ! -e /dev/capi20 -a $CNT -lt 20 ]; do
-				sleep 0.5; : $((CNT++))
+			CNT=0  # wait for udev (max 10s)
+			while [ ! -c /dev/capi20 -a ${CNT} -lt 40 ]; do
+				sleep 0.25; : $((CNT++))
 			done
 			FW=$(findfw "${FIRMWARE}")
 			if [ -n "${FW}" ]; then
-				if ! $LOADER $DRIVER $USBDEV $FW; then
+				if ! ${LOADER} ${DRIVER} ${USBDEV} ${FW}; then
 					syslog "could not load firmware!"
 					beep_error; exit 1
 				fi
 			else
-				syslog "firmware ${FIRMWARE} not found in ${FWDIRS[0]}"
+				syslog "firmware '${FIRMWARE}' not found in ${FWDIRS[0]}"
 				beep_error; exit 1
 			fi
 		fi
 
 		# loading capidrv (should be loaded *after* card driver)
-		if ! ( [ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" != "yes" ] \
+		if ! ( [ -f /proc/capi/capidrv -o "${CAPI_LOAD_CAPIDRV}" != "yes" ] \
 			|| /sbin/modprobe -sq capidrv ); then
 			syslog "could not load CAPIDRV!"
 		fi
