@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fcad693f26bfe9f806e243f96604dbc9 putty-0.58.ebuild 1556
-MD5 4a383beb375f4954b2af0c9d53acfc22 putty-0.57.ebuild 1820
-MD5 e7c89f4453eaa6462d4308a8fcd8a920 ChangeLog 3842
 MD5 a95f430323d2b9413a9ae45efb4d616c metadata.xml 549
-MD5 3a07269379d199e6363fbe0250c5899a files/digest-putty-0.57 63
-MD5 7c38293f57fa00b6d687477113f0625b files/digest-putty-0.58 63
+MD5 08563956cc394f669f1e0bfd616adb86 ChangeLog 3931
+MD5 6f3060100a4bca1dafd8c9de29ef70f1 putty-0.58.ebuild 1553
+MD5 4a383beb375f4954b2af0c9d53acfc22 putty-0.57.ebuild 1820
 MD5 4f674a5fd23877ac6d76c6d9baa33041 files/putty-ut_time.patch 824
+MD5 3a07269379d199e6363fbe0250c5899a files/digest-putty-0.57 63
 MD5 85355228c88a7a925e751df0f058f0ea files/putty.desktop 207
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFyGAKRy60XGEcJIRAkg2AJ4y4crAst6keIP0ZLzUspacGqIKugCfYS/c
-gMRefzlvXCfay5daQhf9zxQ=
-=sEV3
------END PGP SIGNATURE-----
+MD5 7c38293f57fa00b6d687477113f0625b files/digest-putty-0.58 63
