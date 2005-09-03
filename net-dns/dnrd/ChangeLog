@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnrd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.7 2005/08/23 13:07:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.8 2005/09/03 08:27:55 chriswhite Exp $
+
+*dnrd-2.20 (02 Sep 2005)
+
+  02 Sep 2005; Chris White <chriswhite@gentoo.org> files/dnrd,
+  -dnrd-2.19.1.ebuild, +dnrd-2.20.ebuild:
+  Removed obsolete 2.19.1 version in favor of 2.20 version from bug #104150.
+  Modified files/dnrd since --uid dnrd is default now.
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> dnrd-2.19.1.ebuild:
   Use -1 instead of /bin/false on enewuser call.

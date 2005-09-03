@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.19.1.ebuild,v 1.3 2005/08/23 13:07:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.ebuild,v 1.1 2005/09/03 08:27:55 chriswhite Exp $
 
 inherit gnuconfig eutils
 
@@ -30,6 +30,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
+	keepdir /etc/dnrd
 	doinitd ${FILESDIR}/dnrd
 	newconfd ${FILESDIR}/dnrd.conf dnrd
 }
