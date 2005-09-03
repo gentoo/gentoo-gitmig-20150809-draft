@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3807231bab57cba0bf161d9ed94c70bb ChangeLog 1726
+MD5 754214ee74cdb97326928dab8ed2a97f ChangeLog 1918
+MD5 9c3f9b42cca89c6dcf8f0c5489a4be6b libelf-0.8.6.ebuild 880
 MD5 87e3858e722eabc0386dca03cedea5cb libelf-0.8.4.ebuild 829
 MD5 3c531369f6247a82777175eb59e31f16 libelf-0.8.5.ebuild 835
 MD5 7c572d8791269c8d8839f205454e4c7a files/digest-libelf-0.8.5 64
 MD5 0a685835376d6711c4efc28a1ca0eadb files/digest-libelf-0.8.4 64
+MD5 e0664d71c4d7f7230c2cf94269a67372 files/digest-libelf-0.8.6 64
+MD5 3c0f3c3f7a83bccbf1ad988e5d35ae48 files/libelf-0.8.6-parallelmakefix.patch 434
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDE3fo5mJXAu5GbtIRAhvWAJ4gleWBy9vOZWoHueYGePsjrnPQyQCfdWq6
-b64w0z0Iqaqbr9Qz2+k+OMc=
-=6CNO
+iD8DBQFDGWqwmdTrptrqvGERAmVxAJ9VTEQFvR9SSG1RLCvBnfBOG84MYQCdEU9w
+d5gXw6H3e7GZLyaKyVc2bj4=
+=s7Kf
 -----END PGP SIGNATURE-----
