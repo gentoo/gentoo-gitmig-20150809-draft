@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c95cb34df96d26f3a7521ed18ad33561 ChangeLog 1370
 MD5 2d6fdef0c212ddff8fcf3da3fd49738c w3cam-0.7.2.ebuild 1385
 MD5 284a70da1011bec7eafebb5d5e4b0fb5 metadata.xml 247
 MD5 78d3e407e8601f67e1646356420ec594 files/digest-w3cam-0.7.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGi+Ij5H05b2HAEkRArn1AJ49NGSwdG1MMIv0ueZoyLF1jNNo0wCfVj/D
+0EdHH60x5Iz4socGm4Bl6g0=
+=Gbe2
+-----END PGP SIGNATURE-----

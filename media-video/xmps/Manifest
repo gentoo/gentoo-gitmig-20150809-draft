@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2b55f1f69b089cd8b0aceecdbe6e10f2 ChangeLog 1682
 MD5 65d501eb04f67348063c27b48e7a9fea xmps-0.2.0-r1.ebuild 980
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
@@ -7,3 +10,10 @@ MD5 f78b95ebeddd946ba1f7f1447e6560ca files/digest-xmps-0.2.0-r3 62
 MD5 f78b95ebeddd946ba1f7f1447e6560ca files/digest-xmps-0.2.0-r1 62
 MD5 66c622a0dcace048c0f920687025d405 files/xmps-0.2.0_motion_comp.c.gentoo.diff 746
 MD5 f78b95ebeddd946ba1f7f1447e6560ca files/digest-xmps-0.2.0-r2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGjDfj5H05b2HAEkRArVSAKCVwNenUVLxakN2XV299hKpci7swwCfTPCf
+yBp0FGNJ6P+70VLJWNg4b5U=
+=hwAY
+-----END PGP SIGNATURE-----
