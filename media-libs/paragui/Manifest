@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 bd44bed9fd2160b018b48c7bea6e1ee0 ChangeLog 2729
 MD5 1bd266a3ed034d07f67f0b52ee5105e3 paragui-1.0.4.ebuild 696
 MD5 4445345d7ad9e9cabdb1345047e07f61 paragui-1.1.7.ebuild 812
-MD5 ce6c649e0dbd1c617659391981ce266b paragui-1.1.8.ebuild 822
-MD5 d4fb1059e01837f80dd46e4aa5dc6d34 ChangeLog 2571
+MD5 16b18552180f5dd564b73f4a86915449 paragui-1.1.8.ebuild 917
 MD5 9534d30864250e81bfaa47900c5c7061 files/digest-paragui-1.0.4 66
 MD5 86d14fd1c5e607d6ad92be49ee5ec2be files/digest-paragui-1.1.7 66
 MD5 592b7c9ace3a853054e50036992653c3 files/digest-paragui-1.1.8 66
+MD5 2d8694d2a1bd2020763d9fbb18624810 files/paragui-1.1.8-header.patch 297
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCObno06ebR+OMO78RAtMdAJ96T6ygQLDpBeCDnNqJc8aCwEErawCfb3Y6
-ApKQuTrCzVvMtrtwLZ4olbo=
-=t7fO
+iD8DBQFDGe40FdQwWVoAgN4RAtxzAKDW3So0bI64DjE6z/7DLlzoAl5wmACgxqOM
+/C+eJIE202jBWu0AeLa/UPU=
+=VvCF
 -----END PGP SIGNATURE-----
