@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f04d571353fef4bd245785711c4ca9b9 jdbc2-postgresql-7.4.ebuild 589
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 a3d2684e4b837a560ef3263a5972dc5b ChangeLog 2298
 MD5 7c0fd811037b04a8781ee0fa85b55c0e jdbc2-postgresql-7.3.ebuild 576
-MD5 af78bb50e411c2c68717215ff38bac97 jdbc2-postgresql-7.4.ebuild 592
-MD5 ad471c9f024d43af88666ae8bf776fad ChangeLog 2197
 MD5 97025d204bd6ed6c78530c5131b95b23 files/digest-jdbc2-postgresql-7.3 58
 MD5 8f46467bc39bf8bade1e2b26c05ede02 files/digest-jdbc2-postgresql-7.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC3m1/KRy60XGEcJIRAmW7AKCszZVjawYWQERc+lx2+usC1SzgAACgk7ar
-jWR821AqiRG+ih7eiM285XA=
-=iqur
------END PGP SIGNATURE-----
