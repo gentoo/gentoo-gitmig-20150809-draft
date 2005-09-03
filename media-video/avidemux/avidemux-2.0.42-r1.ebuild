@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42.ebuild,v 1.4 2005/08/08 13:12:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42-r1.ebuild,v 1.1 2005/09/03 10:21:21 flameeyes Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
 MY_P=${P/_/}
-PATCHLEVEL="10"
+PATCHLEVEL="11"
 
 DESCRIPTION="Great Video editing/encoding tool"
 HOMEPAGE="http://fixounet.free.fr/avidemux/"
