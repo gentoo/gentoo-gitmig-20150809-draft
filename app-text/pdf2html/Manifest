@@ -1,5 +1,15 @@
-MD5 25f0d6d079f88a5356ca7dc5a57f4a13 ChangeLog 909
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 621501aadf44f4a2dd48ece0b95b8989 ChangeLog 1009
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 722e868323e412db08a6567fe29d082a pdf2html-1.4.ebuild 1001
+MD5 5909f2d3baa4916f0829f884a0d17b30 pdf2html-1.4.ebuild 1012
 MD5 ba84b2f461163b40ecbeee73d9202a5b files/digest-pdf2html-1.4 60
 MD5 4ad2f1e70c01cc1a86a6843736efc867 files/pdf2html-1.4-gentoo.patch 2277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDGbuJwUpWvClEHQoRAousAJ4sEgIRfF5RuFUaEnql2lCa7fR63ACeOyrL
+qxxcal/B3bQq5qTKfdgKXbY=
+=Vh7L
+-----END PGP SIGNATURE-----
