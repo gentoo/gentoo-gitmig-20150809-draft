@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 579c075908892ad3ceccb99ef1046b59 ChangeLog 7949
 MD5 452343afd389061325a60fabc2505374 xorg-server-0.99.1-r7.ebuild 3788
 MD5 bef863b379ee69c1339b0e01e4d51284 files/0.99.1-r6-check-for-glproto.patch 859
 MD5 09038114af03ae42879f9729972ce96e files/digest-xorg-server-0.99.1-r7 241
 MD5 1fa8d5da48c29537eeca2a0b63fd31a2 files/fix-xnest.patch 682
 MD5 55216957eaf15355f76c7499c9127760 files/make-fbcompose-endian-safe.patch 803
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGg5bBtvusYtCZMsRAhHCAJ9mByQz234LaDB3C2giJ0K3ZFYvcACeOd9g
+AjPdHyzc0stkKhfIPArc0LI=
+=ihL2
+-----END PGP SIGNATURE-----
