@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.11 2005/03/13 01:51:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.12 2005/09/03 23:24:23 flameeyes Exp $
 
 DESCRIPTION="A DVD to DIVX convertor frontend"
 HOMEPAGE="http://drip.sourceforge.net/"
@@ -106,7 +106,7 @@ src_install() {
 	# Remove liba52.so.* as ac52dec provides this
 	rm ${D}/usr/lib/liba52*
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	# Custom script for drip to get the *real* dvd device
 	# It is a bit rough around the edges, but hopefully will do the trick.

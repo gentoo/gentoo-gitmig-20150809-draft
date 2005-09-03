@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 010e3af41c23caaa416e3ec0281baa24 ChangeLog 1440
+MD5 c6a49b95418f6fbfb209472df9b87d78 ChangeLog 1588
+MD5 881f82ae28da1a20803ce33ea3096293 bcast-2000c-r2.ebuild 911
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 329b8b03f99225a66761228936147494 bcast-2000c-r2.ebuild 932
+MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r1-gentoo.diff 702
+MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-gentoo.diff 702
+MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r2-gentoo.diff 702
 MD5 8f05c272ff57d86407e97b1748c023c1 files/bcast-2000c-gcc3-gentoo.patch 21620
 MD5 a8d235df0046b1032d27e9bdaf5a59b3 files/digest-bcast-2000c-r2 68
-MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r1-gentoo.diff 702
-MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r2-gentoo.diff 702
-MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-gentoo.diff 702
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMSPKf2g/qXtneoRAlQEAKCYnfh2sJMyPXskZ0VrjThy+FdbbACfYMHN
-+LKc1BMuWMDbNCP4Lki8gIg=
-=HdGT
------END PGP SIGNATURE-----

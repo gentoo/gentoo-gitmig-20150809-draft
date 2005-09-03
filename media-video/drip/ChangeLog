@@ -1,6 +1,10 @@
 # ChangeLog for media-video/drip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.21 2005/07/28 10:30:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.22 2005/09/03 23:24:23 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> drip-0.8.1-r5.ebuild,
+  drip-0.9.0.ebuild:
+  Don't install COPYING, INSTALL and ABOUT-NLS files.
 
   28 Jul 2005; David Holm <dholm@gentoo.org> drip-0.9.0.ebuild:
   Added to ~ppc.
