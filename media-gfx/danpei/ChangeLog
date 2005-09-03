@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/danpei
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/danpei/ChangeLog,v 1.5 2005/09/02 19:24:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/danpei/ChangeLog,v 1.6 2005/09/03 16:40:07 ticho Exp $
+
+*danpei-2.9.7 (03 Sep 2005)
+
+  03 Sep 2005; Andrej Kacian <ticho@gentoo.org> +danpei-2.9.7.ebuild:
+  Version bump.
 
   02 Sep 2005; Andrej Kacian <ticho@gentoo.org> danpei-2.9.6.ebuild:
   Stable on x86.
