@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.8 2005/09/03 03:03:33 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.9 2005/09/03 19:49:38 vanquirius Exp $
+
+  03 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> -emelfm2-0.0.9.ebuild:
+  Remove old ebuild. Also fixes bug 80343.
 
   03 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> emelfm2-0.0.9-r1.ebuild:
   Use tc-getCC. Fixes bug 68986. Thanks to SpanKY <vapier@gentoo.org>.
