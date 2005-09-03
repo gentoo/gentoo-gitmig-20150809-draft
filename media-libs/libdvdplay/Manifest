@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f11680fd11289d8f785cc041170e649 ChangeLog 1676
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 9c527621dd372a0f2eaff9c443056534 libdvdplay-1.0.1.ebuild 702
 MD5 92b328345d42044aeaece6fdc8205fcd files/digest-libdvdplay-1.0.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGi1Uj5H05b2HAEkRAr3sAJ92otv5HvE791na+1Z+fcj4rg/UIwCeJfNj
+0UoQbpnXjah1ujlEoJAj1sw=
+=54Al
+-----END PGP SIGNATURE-----
