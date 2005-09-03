@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1425 2005/09/03 20:17:56 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1426 2005/09/03 20:45:13 sbriesen Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -669,6 +669,8 @@ net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
 net-dialup/isdn4k-utils:eurofile - Support for EUROFILE Transfer Protocol
 net-dialup/isdn4k-utils:ipppd - Build the (ISDN) PPP daemon for synchronous PPP for ISDN connections
 net-dialup/isdn4k-utils:isdnlog - Installs the isdn log system
+net-dialup/isdn4k-utils:pcmcia - installs isdn-pcmcia framework
+net-dialup/isdn4k-utils:usb - installs isdn-usb framework
 net-dialup/ivcall:softfax - Enables soft fax support
 net-dialup/ppp:activefilter - Enables activefilter support
 net-dialup/ppp:atm - Enables support for pppoatm
