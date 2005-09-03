@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/upx-1.25.ebuild,v 1.2 2005/01/01 12:01:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/upx-1.25.ebuild,v 1.3 2005/09/03 13:14:39 matsuu Exp $
 
 S=${WORKDIR}/${P}-linux
 DESCRIPTION="Ultimate Packer for eXecutables"
@@ -9,7 +9,7 @@ SRC_URI="http://upx.sourceforge.net/download/${P}-linux.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~s390"
+KEYWORDS="x86 ~s390"
 IUSE=""
 RESTRICT="nostrip"
 
