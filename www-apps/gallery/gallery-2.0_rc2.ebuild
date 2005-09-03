@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.0_rc2.ebuild,v 1.1 2005/08/24 21:53:47 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.0_rc2.ebuild,v 1.2 2005/09/03 15:17:16 rl03 Exp $
 
 inherit webapp
 
@@ -12,12 +12,13 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-full.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="gd imagemagick netpbm mysql postgres"
+IUSE="ffmpeg gd imagemagick netpbm mysql postgres"
 
 RDEPEND="virtual/httpd-php
 	>=media-gfx/jhead-1.6
 	app-arch/unzip
 	media-libs/jpeg
+	ffmpeg? ( media-video/ffmpeg )
 	gd? ( >=media-libs/gd-2 )
 	netpbm? ( >=media-libs/netpbm-9.12 )
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
