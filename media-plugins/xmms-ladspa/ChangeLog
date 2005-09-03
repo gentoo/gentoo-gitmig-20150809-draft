@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-ladspa
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.12 2004/12/28 16:49:12 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.13 2005/09/03 23:53:39 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-ladspa-0.6.ebuild,
+  xmms-ladspa-0.7.ebuild, xmms-ladspa-1.0.ebuild:
+  Don't install COPYING file.
 
   28 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-ladspa-1.0.ebuild:

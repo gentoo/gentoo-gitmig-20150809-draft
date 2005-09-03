@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/xmms-ladspa-1.0.ebuild,v 1.2 2004/12/28 16:49:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/xmms-ladspa-1.0.ebuild,v 1.3 2005/09/03 23:53:39 flameeyes Exp $
 
 IUSE=""
 
@@ -22,5 +22,5 @@ DEPEND="media-libs/ladspa-sdk
 src_install() {
 	exeinto $(xmms-config --effect-plugin-dir)
 	doexe ${S}/ladspa.so || die
-	dodoc COPYING PLUGINS README || die
+	dodoc PLUGINS README || die
 }
