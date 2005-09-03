@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.45 2005/07/27 04:19:25 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.46 2005/09/03 19:40:40 tercel Exp $
+
+  03 Sep 2005; <colin@gentoo.org> mirrorselect-1.1.6.ebuild:
+  bump version 1.1.6 to stable on x86
 
 *mirrorselect-1.1.6 (27 Jul 2005)
 
