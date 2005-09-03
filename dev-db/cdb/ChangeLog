@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/cdb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.16 2005/08/28 20:04:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.17 2005/09/03 01:02:57 chriswhite Exp $
+
+  03 Sep 2005; Chris White <chriswhite@gentoo.org> cdb-0.75.ebuild:
+  Ok first off, I made uinit32.h actually get installed. If it's not, cdb.h
+  cries about not having it. Also, I installed cdb.a and symlinked it to
+  libcdb.a, as there's programs that check for cdb.a and will break if it's
+  not there. Symlink so -lcdb doesn't break as well.
 
   28 Aug 2005; Fabian Groffen <grobian@gentoo.org> cdb-0.75.ebuild:
   Marking ~ppc-macos (bug #87701)

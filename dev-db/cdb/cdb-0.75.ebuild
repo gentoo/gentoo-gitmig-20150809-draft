@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.22 2005/08/28 20:04:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.23 2005/09/03 01:02:57 chriswhite Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,9 +38,19 @@ src_compile() {
 src_install() {
 	dobin cdbdump cdbget cdbmake cdbmake-12 cdbmake-sv cdbstats cdbtest || \
 		die "dobin failed"
-	newlib.a cdb.a libcdb.a || die "newlib.a failed"
+
+	# ok so.. first off, some automakes fail at not finding
+	# cdb.a, so install that
+	dolib cdb.a
+
+	# then do this pretty little symlinking to solve the somewhat
+	# cosmetic library issue at hand
+	dosym /usr/$(get_libdir)/cdb.a /usr/$(get_libdir)/libcdb.a || die "newlib.a failed"
+
+	# uint32.h needs installation too, otherwise compiles depending
+	# on it will fail
 	insinto /usr/include
-	doins cdb.h || die "doins failed"
+	doins cdb.h uint32.h || die "doins failed"
 
 	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION || \
 		die "dodoc failed"
