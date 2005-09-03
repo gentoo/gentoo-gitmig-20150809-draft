@@ -35,4 +35,7 @@ x11-libs/gtk+
 # end collision-protect
 ##
 
+# Cpio is provided by Apple on 10.3. The Gentoo binary is installed to a separate location
+# so the package does not cause a collision. Nonetheless, cpio is part of System, and we don't
+# want it pulled in for users of this profile
 app-arch/cpio
