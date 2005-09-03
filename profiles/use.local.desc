@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1423 2005/09/01 19:48:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1424 2005/09/03 20:02:48 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1083,6 +1083,7 @@ x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
 x11-base/xorg-server:glx - Enable OpenGL extension for X
+x11-base/xorg-server:nvidia - Enable binary Nvidia driver support
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
 x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
 x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
