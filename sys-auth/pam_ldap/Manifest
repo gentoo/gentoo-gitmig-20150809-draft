@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8d79b755dad3224b3299639b1b29f92e pam_ldap-161.ebuild 787
 MD5 19484f8cae5c130b09e5c5dcbeed92c4 pam_ldap-178-r1.ebuild 1138
 MD5 bb30ee3ecc04f56295c52355c62c9b9e pam_ldap-167.ebuild 870
@@ -21,3 +24,10 @@ MD5 58a43c49c9c6fac27d940fccdbfd5cf3 files/digest-pam_ldap-164 64
 MD5 e7be3daad202a50aecd0d3888bf5c46e files/digest-pam_ldap-161 64
 MD5 593769a88e934c0a00456d35cce22316 files/digest-pam_ldap-171 64
 MD5 f6a188644f736d46d200c045eff82bea files/digest-pam_ldap-156 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGjKOj5H05b2HAEkRAtm/AJ9Fax+KzdQjq87uObrwcLwQEG6kzgCfT8WV
+Z8HpL1+ML4iJ6913wAgcdtk=
+=U4YZ
+-----END PGP SIGNATURE-----

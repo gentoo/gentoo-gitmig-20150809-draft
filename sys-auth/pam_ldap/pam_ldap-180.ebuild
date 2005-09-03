@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-180.ebuild,v 1.6 2005/08/28 12:11:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-180.ebuild,v 1.7 2005/09/03 23:32:15 flameeyes Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	doexe pam_ldap.so
 
 	dodoc pam.conf ldap.conf ldapns.schema chsh chfn certutil
-	dodoc ChangeLog COPYING.* CVSVersionInfo.txt README AUTHORS ns-pwd-policy.schema
+	dodoc ChangeLog CVSVersionInfo.txt README AUTHORS ns-pwd-policy.schema
 	docinto pam.d
 	dodoc pam.d/*
 }
