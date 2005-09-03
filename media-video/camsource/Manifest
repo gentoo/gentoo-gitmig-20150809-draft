@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e70e49f60d377846db37a195691c910 camsource-0.5.1.ebuild 873
 MD5 bc2a5a511eb4dc60ec0ec612ad5d6cee ChangeLog 1914
 MD5 44a0f1af09515ff1330dcda3d5c9f166 camsource-0.7.0.ebuild 755
@@ -7,3 +10,10 @@ MD5 0555dd5d68747acc49fb1b15c7868ffc files/gcc34.patch 181
 MD5 8630e4637bf5d94b5908cf1b41e6dc31 files/digest-camsource-0.5.1 67
 MD5 3ae193dc0b1b9dad7855eaeae74cec78 files/digest-camsource-0.7.0 67
 MD5 3ae193dc0b1b9dad7855eaeae74cec78 files/digest-camsource-0.7.0-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGjEBj5H05b2HAEkRAgkSAJ9xKOSda5joRwOrSIGFbWCCU2NdNQCghzSb
+xZyuWusg/FXFZYmLjY/VzJ8=
+=boXy
+-----END PGP SIGNATURE-----

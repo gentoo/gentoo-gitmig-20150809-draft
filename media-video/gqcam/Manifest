@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e6d40b8596dfc6f8ea1dbf4fbf3e48d gqcam-0.9.ebuild 804
 MD5 1f9c38fb40eaec786a1d8c7afaeff66b ChangeLog 1011
 MD5 284a70da1011bec7eafebb5d5e4b0fb5 metadata.xml 247
 MD5 b8c1e451d3454ca158a17c74b58031c8 files/digest-gqcam-0.9 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGjEYj5H05b2HAEkRAgGVAKCjNiRUGpC2cV1qSO1Hw9T/FgVW4QCeIbXc
+TJQB4soupqb8OdzdnazZ9os=
+=20Pd
+-----END PGP SIGNATURE-----
