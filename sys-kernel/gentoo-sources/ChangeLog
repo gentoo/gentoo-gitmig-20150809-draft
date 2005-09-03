@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.187 2005/09/02 13:56:44 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.188 2005/09/03 19:09:57 metalgod Exp $
+
+  03 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  gentoo-sources-2.6.12-r10.ebuild:
+  Marked Stable on AMD64.
 
   02 Sep 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.12-r10.ebuild:
