@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.22 2005/08/24 00:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.23 2005/09/03 21:43:41 hansmi Exp $
+
+  03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> erlang-10.2.5.ebuild:
+  Stable on ppc.
 
 *erlang-10.2.5 (24 Aug 2005)
 
