@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.10 2005/08/28 14:48:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.11 2005/09/03 22:51:03 eradicator Exp $
+
+  03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org> glproto-1.4.ebuild,
+  glproto-1.4-r1.ebuild:
+  Use eselect instead of opengl-update.
 
   28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> glproto-1.4-r1.ebuild:
   Marked ~sh

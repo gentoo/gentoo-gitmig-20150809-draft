@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.8 2005/08/22 23:33:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.ebuild,v 1.9 2005/09/03 22:51:03 eradicator Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -16,7 +16,7 @@ DESCRIPTION="X.Org GL protocol headers"
 #SLOT="0"
 KEYWORDS="~arm ~ppc ~s390 ~sparc ~x86"
 #IUSE="X gnome"
-DEPEND=">=x11-base/opengl-update-2.2.2"
+DEPEND="app-admin/eselect-opengl"
 #RDEPEND=""
 
 src_install() {
@@ -50,6 +50,5 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		local opengl_implem="$(${ROOT}/usr/sbin/opengl-update --get-implementation)"
-		${ROOT}/usr/sbin/opengl-update --use-old ${OPENGL_DIR}
+		eselect opengl set --use-old ${OPENGL_DIR}
 }
