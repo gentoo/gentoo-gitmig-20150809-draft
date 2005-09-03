@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r6.ebuild,v 1.1 2005/09/02 01:56:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r7.ebuild,v 1.1 2005/09/03 20:06:04 cardoe Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -28,7 +28,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 #IUSE="dri ipv6 minimal xprint"
-IUSE="dri ipv6 minimal"
+IUSE="dri ipv6 minimal nvidia"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -83,6 +83,7 @@ pkg_setup() {
 		$(use_enable !minimal xvfb)
 		$(use_enable !minimal xnest)
 		$(use_enable dri)
+		$(use_enable nvidia xcsecurity)
 		--disable-xprint
 		--with-mesa-source=${WORKDIR}/${MESA_P}
 		--enable-xorg
