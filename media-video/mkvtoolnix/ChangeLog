@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.37 2005/09/02 08:25:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.38 2005/09/03 10:24:13 flameeyes Exp $
+
+*mkvtoolnix-1.5.5 (03 Sep 2005)
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +mkvtoolnix-1.5.5.ebuild:
+  Added mkvtoolnix 1.5.5 as per bug #104687. This time it fixes bug #91328 so
+  re-added ~amd64 marking.
 
 *mkvtoolnix-1.5.0 (02 Sep 2005)
 
