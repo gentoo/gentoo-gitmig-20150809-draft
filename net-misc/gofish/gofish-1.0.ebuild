@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-0.29.ebuild,v 1.8 2005/09/03 01:36:16 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-1.0.ebuild,v 1.1 2005/09/03 01:36:16 vanquirius Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ IUSE=""
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND=""
+
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	enewgroup gopher 30
