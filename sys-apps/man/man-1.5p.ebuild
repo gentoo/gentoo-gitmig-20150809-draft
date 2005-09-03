@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5p.ebuild,v 1.4 2005/03/14 23:46:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5p.ebuild,v 1.5 2005/09/03 22:20:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -20,6 +20,11 @@ RDEPEND="sys-process/cronbase
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${PN}-${NV}"
+
+pkg_setup() {
+	enewgroup man 15
+	enewuser man 13 -1 /usr/share/man man
+}
 
 src_unpack() {
 	unpack ${A}
