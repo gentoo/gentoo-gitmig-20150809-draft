@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-fc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.9 2004/09/02 23:31:30 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/ChangeLog,v 1.10 2005/09/03 23:50:47 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-fc-0.5.3.ebuild,
+  xmms-fc-0.5.4.ebuild:
+  Don't install COPYING and INSTALL files.
 
   02 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-fc-0.5.4.ebuild:
   Stable amd64, sparc, x86.

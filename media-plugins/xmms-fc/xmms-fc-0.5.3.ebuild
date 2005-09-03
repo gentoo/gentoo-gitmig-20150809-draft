@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/xmms-fc-0.5.3.ebuild,v 1.9 2004/07/06 23:54:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-fc/xmms-fc-0.5.3.ebuild,v 1.10 2005/09/03 23:50:47 flameeyes Exp $
 
 inherit eutils
 
@@ -24,5 +24,5 @@ src_unpack() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc COPYING ChangeLog INSTALL README
+	dodoc ChangeLog README
 }

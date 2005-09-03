@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.31 2005/05/04 22:11:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.32 2005/09/03 23:52:25 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-arts-0.7.1-r1.ebuild, xmms-arts-0.7.1-r2.ebuild:
+  Don't install COPYING and INSTALL files.
 
 *xmms-arts-0.7.1-r2 (04 May 2005)
 
