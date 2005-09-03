@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.39 2005/08/29 19:52:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.40 2005/09/03 12:29:59 hollow Exp $
+
+*eix-0.3.0-r1 (03 Sep 2005)
+
+  03 Sep 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/0.3.0-dbmatchcriteria-fix.patch, -eix-0.2.1.ebuild,
+  eix-0.2.6.ebuild, -eix-0.3.0_beta.ebuild, eix-0.3.0.ebuild,
+  +eix-0.3.0-r1.ebuild:
+  add a nice patch to minimize search time even more
+  0.2.6 to stable + clean-up
 
   29 Aug 2005; Benedikt Boehm <hollow@gentoo.org>
   +files/0.3.0-datatype-mix.patch, eix-0.3.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.3.0_beta.ebuild,v 1.1 2005/08/16 08:08:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.3.0-r1.ebuild,v 1.1 2005/09/03 12:29:59 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -15,9 +15,18 @@ IUSE=""
 
 DEPEND="sys-apps/portage"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/0.3.0-if-else-fi.patch
+	epatch ${FILESDIR}/0.3.0-datatype-mix.patch
+	epatch ${FILESDIR}/0.3.0-dbmatchcriteria-fix.patch
+}
+
 src_compile() {
-	econf || die "configure failed"
-	emake || die "emake failed"
+	econf
+	emake || die "make failed"
 }
 
 src_install() {

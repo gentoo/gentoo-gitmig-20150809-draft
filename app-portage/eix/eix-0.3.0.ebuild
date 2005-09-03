@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.3.0.ebuild,v 1.2 2005/08/29 19:52:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.3.0.ebuild,v 1.3 2005/09/03 12:29:59 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -19,13 +19,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/0.3.0-if-else-fi.patch || die "if-else-fi patch failed"
-	epatch ${FILESDIR}/0.3.0-datatype-mix.patch || die "datatype patch failed"
+	epatch ${FILESDIR}/0.3.0-if-else-fi.patch
+	epatch ${FILESDIR}/0.3.0-datatype-mix.patch
 }
 
 src_compile() {
-	econf || die "configure failed"
-	emake || die "emake failed"
+	econf
+	emake || die "make failed"
 }
 
 src_install() {
