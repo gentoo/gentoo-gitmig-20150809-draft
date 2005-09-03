@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ogg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.50 2005/09/02 20:19:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.51 2005/09/03 20:49:42 corsair Exp $
+
+  03 Sep 2005; Markus Rothe <corsair@gentoo.org>
+  gst-plugins-ogg-0.8.10.ebuild:
+  Stable on ppc64
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   gst-plugins-ogg-0.8.10.ebuild:
