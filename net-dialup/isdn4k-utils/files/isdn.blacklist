@@ -1,20 +1,20 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.blacklist,v 1.1 2005/03/29 08:40:14 mrness Exp $
+# /etc/hotplug/blacklist.d/isdn
 
-# ISDN modules are load from /etc/init.d/{isdn,hisax}
-#auerswald
-#divas
-#act2000
-#hfc_usb
+# handled by /etc/init.d/hisax
 hisax
 hisax_fcpcipnp
 hisax_st5481
+
+# handled by hotplug. But it's disabled by default, because mISDN
+# also offers a CAPI 'hfcsusb' module which should be preferred.
+hfc_usb
+
+# temporarily disabled, because we need an init-script first
+#auerswald
+#divas
+#act2000
 #hysdn
 #icn
 #pcbit
 #sc
 #tpam
-
-# 2004-12-19 Stefan Briesenick <sbriesen@gmx.de>
-# some modules temporarily disabled, because we need an init-script first

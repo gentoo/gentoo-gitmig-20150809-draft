@@ -1,7 +1,3 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/options.ippp0,v 1.1 2005/03/29 08:40:14 mrness Exp $
-
 # Example config for a personal ISP dialin
 # see "man ipppd" for explanation of all possible options
 

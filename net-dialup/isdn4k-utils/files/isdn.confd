@@ -1,9 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.confd,v 1.2 2005/07/01 22:34:02 sbriesen Exp $
+# configuraton file for /etc/init.d/isdn
 
-# if you have CAPI based cards connected to I4L via CAPIDRV.
+# if you have CAPI based cards connected to I4L via 'capidrv'
 DEPEND_ON_CAPI="yes"
+
+# How many ISDN channels should be used. On UDEV this limit
+# will be used to create the device nodes in /dev.
+# chan = cards * 2 (max = 64)
+ISDN_MAX_CHANNELS=16
+
+# MODE/GROUP when creating ISDN devices
+ISDNDEV_MODE="660"
+ISDNDEV_GROUP="dialout"
 
 # Location where isdnctrl will save its configuration
 ISDNCTRL_CONFIG="/var/lib/isdn/isdnctrl.conf"
@@ -11,3 +18,4 @@ ISDNCTRL_CONFIG="/var/lib/isdn/isdnctrl.conf"
 # Location where iprofd will save the modem-register settings
 # comment out if you don't want to use iprofd
 IPROFD_SETTINGS="/var/lib/isdn/modem-register.dat"
+

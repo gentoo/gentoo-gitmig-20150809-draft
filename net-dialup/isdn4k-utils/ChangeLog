@@ -1,6 +1,20 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.44 2005/09/03 20:41:21 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.45 2005/09/03 20:56:26 sbriesen Exp $
+
+*isdn4k-utils-3.7_pre20050821 (03 Sep 2005)
+
+  03 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/ipppd-pcap-0.9.3.patch, +files/config-3.7_pre20050821,
+  files/auerswald.usermap, files/hisax.conf, files/hisax.initd,
+  files/hisax.usermap, files/ioptions, files/isdn.blacklist,
+  files/isdn.confd, files/isdn.initd, +files/isdn.pcmcia,
+  +files/isdn.pcmcia.conf, files/isdnlog.confd, files/isdnlog.initd,
+  files/isdnlog.logrotated, files/options.ippp0,
+  +isdn4k-utils-3.7_pre20050821.ebuild:
+  adding lots of USE flags, checking kernel options, reworked init-scripts,
+  added pcmcia support for kernels < 2.6.13 (new pcmcia support will follow
+  soon), fixed pcap-0.9.3 issue (see bug 99190).
 
   03 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org> metadata.xml,
   -isdn4k-utils-3.7_pre20050329.ebuild, isdn4k-utils-3.7_pre20050626.ebuild:
