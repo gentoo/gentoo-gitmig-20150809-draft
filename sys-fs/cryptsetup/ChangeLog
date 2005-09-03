@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.16 2005/08/08 11:27:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.17 2005/09/03 05:01:57 dragonheart Exp $
+
+  03 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  cryptsetup-0.1-r1.ebuild, cryptsetup-0.1-r2.ebuild:
+  dependancy fixes
 
   08 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> cryptsetup-0.1-r2.ebuild:
   Added ~mips for bug 89528.

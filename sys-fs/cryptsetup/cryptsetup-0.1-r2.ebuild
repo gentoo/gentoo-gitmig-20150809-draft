@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r2.ebuild,v 1.6 2005/09/02 14:05:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r2.ebuild,v 1.7 2005/09/03 05:01:57 dragonheart Exp $
 
 inherit linux-info multilib eutils
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=sys-fs/device-mapper-1.00.07-r1
-	>=dev-libs/libgcrypt-1.1.42
+RDEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	!sys-fs/cryptsetup-luks"
+DEPEND="dev-libs/popt
+	>=dev-libs/libgcrypt-1.1.42
+	dev-libs/libgpg-error"
 
 dm-crypt_check() {
 	ebegin "Checking for dm-crypt support"
