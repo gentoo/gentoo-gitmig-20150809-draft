@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.1 2005/08/28 22:10:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.2 2005/09/03 07:45:50 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -101,6 +101,7 @@ src_compile() {
 
 	econf \
 		--disable-dependency-tracking \
+		--disable-rpath \
 		--enable-events \
 		--enable-cdrom \
 		--enable-threads \
