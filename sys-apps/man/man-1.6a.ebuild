@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6a.ebuild,v 1.1 2005/08/22 23:40:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6a.ebuild,v 1.2 2005/09/03 22:14:22 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -45,8 +45,6 @@ src_unpack() {
 		-e "/^LDFLAGS = -s/s:=.*:=${LDFLAGS}:" \
 		src/Makefile.in \
 		|| die "failed to edit default LDLFAGS"
-
-cp -a ${S}{,.orig}
 }
 
 src_compile() {
