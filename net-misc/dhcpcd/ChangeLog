@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.61 2005/08/31 13:12:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.62 2005/09/03 15:24:52 hansmi Exp $
+
+  03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> dhcpcd-2.0.0.ebuild:
+  Stable on ppc.
 
   31 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> dhcpcd-2.0.0.ebuild:
   Stable on sparc
