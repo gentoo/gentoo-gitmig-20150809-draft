@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 343b3b9d662c9cccd2897c264c885f85 ChangeLog 2534
 MD5 c6baf7eed2c09db9a4249b4874eb1570 xmms-smpeg-0.3.5-r1.ebuild 912
 MD5 223dfdc3e10800dbb22bad28c928b52a metadata.xml 177
 MD5 5f6cfd9cd6f65d5b008e052ac9064362 files/xmms-smpeg-0.3.5-gcc.patch 1402
 MD5 6677495257ebc5b3458ad247d518127f files/digest-xmms-smpeg-0.3.5-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGi5fj5H05b2HAEkRArf+AJ9pqnU02LqITvZ0rVBlj+ZUQ1rplgCeKMl4
+Eg5Cs5CQ8goYBq6yvKNz39s=
+=N0vz
+-----END PGP SIGNATURE-----
