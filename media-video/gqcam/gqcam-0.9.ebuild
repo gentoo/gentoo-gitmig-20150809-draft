@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/gqcam-0.9.ebuild,v 1.14 2005/04/24 02:53:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/gqcam-0.9.ebuild,v 1.15 2005/09/03 23:26:00 flameeyes Exp $
 
 DESCRIPTION="A V4L-compatible frame grabber - works with many webcams."
 SRC_URI="http://cse.unl.edu/~cluening/gqcam/download/${P}.tar.gz"
@@ -30,5 +30,5 @@ src_compile() {
 src_install () {
 	dobin gqcam
 
-	dodoc CHANGES COPYING INSTALL README README.threads
+	dodoc CHANGES README README.threads
 }

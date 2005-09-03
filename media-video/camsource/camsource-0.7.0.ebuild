@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0.ebuild,v 1.7 2005/07/09 18:59:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0.ebuild,v 1.8 2005/09/03 23:25:37 flameeyes Exp $
 
 DESCRIPTION="Camsource grabs images from a video4linux webcam device."
 
@@ -23,7 +23,7 @@ src_compile() {
 src_install() {
 
 	einstall
-	dodoc AUTHORS COPYING INSTALL README NEWS
+	dodoc AUTHORS README NEWS
 }
 
 pkg_postinst() {

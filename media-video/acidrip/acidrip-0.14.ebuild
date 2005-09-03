@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.14.ebuild,v 1.2 2005/08/14 16:15:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.14.ebuild,v 1.3 2005/09/03 23:27:11 flameeyes Exp $
 
 inherit perl-module
 
@@ -33,6 +33,5 @@ src_compile() {
 src_install() {
 	perl-module_src_install
 	#dobin acidrip
-	dodoc INSTALL CHANGELOG COPYING TODO
-	dohtml INSTALL.html
+	dodoc CHANGELOG TODO
 }

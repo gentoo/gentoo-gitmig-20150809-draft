@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0-r1.ebuild,v 1.11 2005/08/16 13:23:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camsource/camsource-0.7.0-r1.ebuild,v 1.12 2005/09/03 23:25:37 flameeyes Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 
 	einstall
-	dodoc AUTHORS COPYING INSTALL README NEWS
+	dodoc AUTHORS README NEWS
 }
 
 pkg_postinst() {

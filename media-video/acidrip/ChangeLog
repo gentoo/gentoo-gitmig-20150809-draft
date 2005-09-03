@@ -1,6 +1,9 @@
 # ChangeLog for media-video/acidrip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.17 2005/08/14 16:15:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.18 2005/09/03 23:27:11 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> acidrip-0.14.ebuild:
+  Don't install COPYING and INSTALL files.
 
   14 Aug 2005; Carsten Lohrke <carlo@gentoo.org> acidrip-0.14.ebuild:
   Fixed homepage url.

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gqcam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.9 2005/04/24 02:53:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.10 2005/09/03 23:26:00 flameeyes Exp $
+
+  03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> gqcam-0.9.ebuild:
+  Don't install COPYING and INSTALL files.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> gqcam-0.9.ebuild:
   Stable on ppc.
