@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.4 2005/08/20 22:55:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.5 2005/09/03 14:46:36 joshuabaergen Exp $
+
+*xf86-video-ati-6.5.6-r2 (03 Sep 2005)
+
+  03 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/detect-dga-cpio-etc-per-platform.patch,
+  -xf86-video-ati-6.5.6.ebuild, -xf86-video-ati-6.5.6-r1.ebuild,
+  +xf86-video-ati-6.5.6-r2.ebuild:
+  New CVS snapshot of driver which includes previous patch. Old versions
+  removed.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
   xf86-video-ati-6.5.6.ebuild, xf86-video-ati-6.5.6-r1.ebuild:
