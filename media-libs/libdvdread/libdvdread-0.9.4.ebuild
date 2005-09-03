@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.4.ebuild,v 1.19 2005/07/09 01:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.4.ebuild,v 1.20 2005/09/03 23:11:57 flameeyes Exp $
 
 inherit gnuconfig
 
@@ -29,5 +29,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

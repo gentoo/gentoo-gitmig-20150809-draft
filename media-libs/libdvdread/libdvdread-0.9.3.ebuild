@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.3.ebuild,v 1.12 2005/01/28 20:34:22 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.3.ebuild,v 1.13 2005/09/03 23:11:57 flameeyes Exp $
 
 DESCRIPTION="Provides a simple foundation for reading DVD-Video images."
 SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/libdvdread-${PV}.tar.gz"
@@ -23,5 +23,5 @@ src_install() {
 
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

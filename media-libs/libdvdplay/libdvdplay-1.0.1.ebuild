@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.15 2005/05/22 19:07:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.16 2005/09/03 23:09:50 flameeyes Exp $
 
 IUSE=""
 
@@ -22,5 +22,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
