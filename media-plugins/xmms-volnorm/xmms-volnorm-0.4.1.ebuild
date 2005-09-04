@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1.ebuild,v 1.7 2005/03/14 00:07:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1.ebuild,v 1.8 2005/09/04 09:54:17 flameeyes Exp $
 
 IUSE=""
 
@@ -29,5 +29,5 @@ src_install() {
 		libdir=${D}/usr/lib/xmms/Plugins || die
 
 	# Don't know if this is useful, but let's try it anyway
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS INSTALL README RELEASE TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README RELEASE TODO
 }

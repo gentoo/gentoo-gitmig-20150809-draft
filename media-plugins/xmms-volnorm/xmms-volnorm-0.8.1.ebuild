@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.8.1.ebuild,v 1.2 2005/03/14 00:07:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.8.1.ebuild,v 1.3 2005/09/04 09:54:17 flameeyes Exp $
 
 IUSE=""
 
@@ -35,5 +35,5 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS INSTALL README RELEASE TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README RELEASE TODO
 }

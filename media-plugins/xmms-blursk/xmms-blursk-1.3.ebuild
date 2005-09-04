@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/xmms-blursk-1.3.ebuild,v 1.10 2004/10/04 23:20:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-blursk/xmms-blursk-1.3.ebuild,v 1.11 2005/09/04 10:02:36 flameeyes Exp $
 
 IUSE=""
 
@@ -27,5 +27,5 @@ src_unpack() {
 src_install () {
 	make DESTDIR=${D} install || die "install failed"
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL README NEWS
+	dodoc AUTHORS ChangeLog README NEWS
 }

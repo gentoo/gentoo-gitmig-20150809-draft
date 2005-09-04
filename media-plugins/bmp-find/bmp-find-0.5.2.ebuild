@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/bmp-find-0.5.2.ebuild,v 1.5 2005/08/28 17:11:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/bmp-find-0.5.2.ebuild,v 1.6 2005/09/04 10:02:51 flameeyes Exp $
 
 IUSE=""
 
@@ -26,5 +26,5 @@ src_install() {
 		PLUGIN_INSTALL_DIR=${plugin_install_dir} \
 		REMOTE_INSTALL_DIR=${D}usr/bin install || die "install failed"
 
-	dodoc BUGS COPYING INSTALL README TODO VERSION
+	dodoc BUGS README TODO VERSION
 }

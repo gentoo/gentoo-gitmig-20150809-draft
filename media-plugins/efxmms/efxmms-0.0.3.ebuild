@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/efxmms-0.0.3.ebuild,v 1.13 2005/08/07 13:04:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/efxmms/efxmms-0.0.3.ebuild,v 1.14 2005/09/04 09:59:45 flameeyes Exp $
 
 IUSE=""
 
@@ -27,5 +27,5 @@ src_unpack() {
 src_install() {
 	einstall \
 		libdir=${D}`xmms-config --effect-plugin-dir` || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README  README.EFX TODO
+	dodoc AUTHORS ChangeLog NEWS README README.EFX TODO
 }

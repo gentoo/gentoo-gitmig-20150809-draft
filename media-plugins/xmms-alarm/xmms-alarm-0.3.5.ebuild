@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/xmms-alarm-0.3.5.ebuild,v 1.3 2004/06/24 23:36:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/xmms-alarm-0.3.5.ebuild,v 1.4 2005/09/04 09:55:27 flameeyes Exp $
 
 DESCRIPTION="An alarm plugin for XMMS"
 HOMEPAGE="http://www.snika.uklinux.net/index.php?show=xmms-alarm"
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-	dodoc AUTHORS COPYING ChangeLog INSTALL README NEWS
+	dodoc AUTHORS ChangeLog README NEWS
 }

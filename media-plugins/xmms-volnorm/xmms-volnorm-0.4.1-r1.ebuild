@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1-r1.ebuild,v 1.13 2005/03/14 00:07:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-volnorm/xmms-volnorm-0.4.1-r1.ebuild,v 1.14 2005/09/04 09:54:17 flameeyes Exp $
 
 inherit gnuconfig eutils
 
@@ -29,5 +29,5 @@ src_install() {
 	einstall \
 		libdir=${D}/usr/lib/xmms/Effect || die
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS INSTALL README RELEASE TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README RELEASE TODO
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-find
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.5 2005/08/28 17:11:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-find/ChangeLog,v 1.6 2005/09/04 10:02:51 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> bmp-find-0.5.2.ebuild:
+  Don't install COPYING and INSTALL files.
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> bmp-find-0.5.2.ebuild:
   Added ~amd64 keywords. Closes bug #103754.
