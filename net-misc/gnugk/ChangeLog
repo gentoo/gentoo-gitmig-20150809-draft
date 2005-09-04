@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gnugk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/ChangeLog,v 1.8 2005/07/30 00:53:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/ChangeLog,v 1.9 2005/09/04 22:23:51 stkn Exp $
+
+*gnugk-2.2.3_p2 (05 Sep 2005)
+
+  05 Sep 2005; Stefan Knoblich <stkn@gentoo.org> +gnugk-2.2.3_p2.ebuild:
+  Version bump.
 
   30 Jul 2005; <stkn@gentoo.org> -files/gnugk-2.0.6-gentoo.diff,
   -gnugk-2.0.6.ebuild:
