@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1.ebuild,v 1.1 2005/01/18 20:26:39 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1.ebuild,v 1.2 2005/09/04 10:41:26 flameeyes Exp $
 
 inherit eutils
 
@@ -28,6 +28,6 @@ src_unpack() {
 src_install() {
 	dobin wavsplit wavren
 	doman wavsplit.1 wavren.1
-	dodoc BUGS CHANGES COPYING CREDITS README README.wavren
+	dodoc BUGS CHANGES CREDITS README README.wavren
 }
 

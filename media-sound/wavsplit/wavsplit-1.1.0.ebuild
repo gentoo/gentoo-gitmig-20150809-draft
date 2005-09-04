@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.1.0.ebuild,v 1.3 2005/01/18 20:26:39 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.1.0.ebuild,v 1.4 2005/09/04 10:41:26 flameeyes Exp $
 
 DESCRIPTION="WavSplit is a simple command line tool to split WAV files"
 HOMEPAGE="http://sourceforge.net/projects/wavsplit/"
@@ -20,6 +20,6 @@ src_compile() {
 src_install() {
 	dobin wavsplit wavren
 	doman wavsplit.1 wavren.1
-	dodoc BUGS CHANGES COPYING CREDITS README README.wavren
+	dodoc BUGS CHANGES CREDITS README README.wavren
 }
 
