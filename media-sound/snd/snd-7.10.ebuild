@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.10.ebuild,v 1.2 2005/04/08 17:34:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.10.ebuild,v 1.3 2005/09/04 10:59:06 flameeyes Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
@@ -66,7 +66,7 @@ src_compile() {
 src_install () {
 	dobin snd
 
-	dodoc COPYING *.Snd *.scm *.rb *.png *.html
+	dodoc *.Snd *.scm *.rb *.png *.html
 
 	cd tutorial
 	dohtml *

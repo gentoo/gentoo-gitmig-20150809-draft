@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/saydate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/ChangeLog,v 1.9 2005/07/25 19:10:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/ChangeLog,v 1.10 2005/09/04 11:04:22 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> saydate-0.3.0.ebuild:
+  Don't install COPYING file.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> saydate-0.3.0.ebuild:
   Added to ~ppc.

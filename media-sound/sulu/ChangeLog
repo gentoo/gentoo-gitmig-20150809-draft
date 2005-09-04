@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sulu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/ChangeLog,v 1.8 2005/08/23 17:23:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/ChangeLog,v 1.9 2005/09/04 10:58:28 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> sulu-0.15.ebuild:
+  Don't install COPYING file.
 
   23 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> sulu-0.15.ebuild:
   Don't use cp -a.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.13 2005/07/25 19:10:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.14 2005/09/04 11:04:22 flameeyes Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A Linux shell program that talks the date and system uptime."
@@ -29,6 +29,6 @@ src_install () {
 	sed -i "s:/dev/audio:/dev/dsp:" ${S}/saydate
 	sed -i "s:/dev/audio:/dev/dsp:" ${S}/au2raw
 	sed -i "s:/dev/audio:/dev/dsp:" ${S}/DESIGN
-	dodoc README TODO HISTORY DESIGN COPYING
+	dodoc README TODO HISTORY DESIGN
 	dobin saydate au2raw
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903.ebuild,v 1.4 2005/08/07 13:02:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/supercollider/supercollider-20040903.ebuild,v 1.5 2005/09/04 10:53:45 flameeyes Exp $
 
 IUSE="emacs"
 
@@ -73,7 +73,7 @@ src_install() {
 	# Documentation
 	mv linux/README linux/README-linux
 	mv linux/scel/README linux/scel/README-scel
-	dodoc COPYING linux/README-linux linux/scel/README-scel
+	dodoc linux/README-linux linux/scel/README-scel
 
 	# Our documentation
 	sed -e "s:@DOCBASE@:/usr/share/doc/${PF}:" < ${FILESDIR}/README-gentoo.txt | gzip > ${D}/usr/share/doc/${PF}/README-gentoo.txt.gz

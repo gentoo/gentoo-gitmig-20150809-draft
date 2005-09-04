@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.29.ebuild,v 1.6 2005/01/15 23:01:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.29.ebuild,v 1.7 2005/09/04 11:02:56 flameeyes Exp $
 
 IUSE="oggvorbis"
 
@@ -19,5 +19,5 @@ KEYWORDS="x86 ~ppc amd64 sparc"
 
 src_install () {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS *README BUGS CDDB_HOWTO COPYING ChangeLog FAQ NEWS OTHERS TODO
+	dodoc AUTHORS *README BUGS CDDB_HOWTO ChangeLog FAQ NEWS OTHERS TODO
 }

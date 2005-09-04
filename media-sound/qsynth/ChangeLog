@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.11 2005/07/28 14:44:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.12 2005/09/04 10:57:43 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> qsynth-0.1.0.ebuild,
+  qsynth-0.2.1.ebuild, qsynth-0.2.2.ebuild, qsynth-0.2.3.ebuild:
+  Don't install COPYING file.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> qsynth-0.1.0.ebuild,
   qsynth-0.2.1.ebuild, qsynth-0.2.2.ebuild, qsynth-0.2.3.ebuild:

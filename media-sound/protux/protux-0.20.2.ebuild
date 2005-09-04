@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.2.ebuild,v 1.6 2005/07/07 04:44:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.2.ebuild,v 1.7 2005/09/04 10:58:09 flameeyes Exp $
 
 inherit eutils kde-functions
 
@@ -37,5 +37,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS ChangeLog README
 }
