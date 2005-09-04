@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.2.5.ebuild,v 1.5 2004/06/25 00:51:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/tuxzap-programs-0.2.5.ebuild,v 1.6 2005/09/04 11:15:44 zzam Exp $
 
 IUSE="gtk"
 
@@ -15,7 +15,10 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4
-	>=media-tv/linuxtv-dvb-1.0.0_pre2
+	|| (
+		>=sys-kernel/linux-headers-2.6.11-r2
+		media-tv/linuxtv-dvb
+	)
 	>=media-libs/libdvb-0.2.1
 	dev-libs/cdk
 	gtk? ( =x11-libs/gtk+-1.2* )"
