@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.93 2005/09/03 20:28:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.94 2005/09/04 15:27:59 leonardop Exp $
+
+*libgnomeui-2.11.4 (04 Sep 2005)
+
+  04 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -libgnomeui-2.11.3.ebuild, +libgnomeui-2.11.4.ebuild:
+  New version.
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> libgnomeui-2.10.1.ebuild:
   Stable on ppc64

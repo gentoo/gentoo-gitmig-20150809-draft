@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.11.3.ebuild,v 1.2 2005/08/30 12:52:08 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.11.4.ebuild,v 1.1 2005/09/04 15:27:59 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -12,16 +12,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc jpeg static"
 
-RDEPEND=">=x11-libs/gtk+-2.6
-	>=x11-libs/pango-1.1.2
-	>=dev-libs/popt-1.5
-	>=gnome-base/gconf-2
-	>=gnome-base/libgnome-2
+RDEPEND=">=gnome-base/libgnome-2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libbonoboui-2
-	>=gnome-base/libglade-2
+	>=gnome-base/gconf-2
+	>=x11-libs/pango-1.1.2
+	>=x11-libs/gtk+-2.6
 	>=gnome-base/gnome-vfs-2.7.3
+	>=gnome-base/libglade-2
 	>=gnome-base/gnome-keyring-0.4
+	>=dev-libs/popt-1.5
 	jpeg? ( media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
@@ -40,8 +40,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	# cleanliness is ... (#68698)
 	epatch ${FILESDIR}/${PN}-2.8.0-ditch_ancient_pics.patch
