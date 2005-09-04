@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/xmms-infinity-0.5.8.ebuild,v 1.2 2004/09/03 08:12:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/xmms-infinity-0.5.8.ebuild,v 1.3 2005/09/04 10:15:21 flameeyes Exp $
 
 IUSE=""
 
@@ -23,5 +23,5 @@ DEPEND="media-libs/libsdl
 src_install () {
 	make DESTDIR="${D}" install || die "install failed"
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog README
 }

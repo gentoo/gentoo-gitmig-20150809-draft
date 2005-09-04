@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-infinity
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/ChangeLog,v 1.12 2004/09/03 08:12:12 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/ChangeLog,v 1.13 2005/09/04 10:15:21 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-infinity-0.2.ebuild, xmms-infinity-0.5.8.ebuild:
+  Don't install COPYING and INSTALL files.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-infinity-0.5.8.ebuild:
