@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.55 2005/09/04 18:40:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.56 2005/09/04 20:23:42 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -121,16 +121,13 @@ elibtoolize() {
 	local do_portage="no"
 	local do_reversedeps="no"
 	local do_only_patches="no"
+	local do_uclibc="yes"
 	local deptoremove=
 	local my_dirlist=
-	local elt_patches="portage relink max_cmd_len sed test tmp \
-	                   uclibc-conf uclibc-ltconf"
+	local elt_patches="portage relink max_cmd_len sed test tmp"
 	local start_dir="${PWD}"
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
-
-	[[ ${CHOST} == *"-freebsd"* ]] && \
-		elt_patches="${elt_patches} fbsd-conf"
 
 	for x in "$@" ; do
 		case "${x}" in
@@ -167,13 +164,19 @@ elibtoolize() {
 				fi
 				;;
 			"--no-uclibc")
-				NO_UCLIBCTOOLIZE=1
+				do_uclibc="no"
 				;;
 			*)
 				eerror "Invalid elibtoolize option: $x"
 				die "elibtoolize called with $x ??"
 		esac
 	done
+
+	[[ ${do_uclibc} == "yes" ]] && \
+		elt_patches="${elt_patches} uclibc-conf uclibc-ltconf"
+
+	[[ ${CHOST} == *"-freebsd"* ]] && \
+		elt_patches="${elt_patches} fbsd-conf"
 
 	if use ppc-macos ; then
 		local opts
