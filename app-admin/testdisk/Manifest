@@ -1,8 +1,18 @@
-MD5 3bc5ba74a99c392471cca86eb9e48992 ChangeLog 1961
-MD5 e18eb10540dc80dac5f436b82cd48528 metadata.xml 398
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 714010cc9aa6a24f60ac815ae714dccd ChangeLog 2221
 MD5 369c60dd9fa5ca9e59fcafa701b78038 testdisk-5.2.ebuild 886
-MD5 11066fb1f2ec7765b6901b4c516d0f21 testdisk-5.7.ebuild 1018
-MD5 fd5d2716e87ec07b3ed10ad791c03fd1 testdisk-5.6.ebuild 869
+MD5 a471395a4e1843afd61d1f4d40aba325 testdisk-5.9.ebuild 1150
+MD5 e18eb10540dc80dac5f436b82cd48528 metadata.xml 398
+MD5 8a20706de4506c16a11cf363e05a0016 testdisk-5.7.ebuild 1093
 MD5 c20ec4c0b429ad420cd79fa49b334e24 files/digest-testdisk-5.2 64
+MD5 c590941db124e10085899f3724557022 files/digest-testdisk-5.9 68
 MD5 38ac24202d2e5ac3b576956cca428e4e files/digest-testdisk-5.7 64
-MD5 4f353df18ee5ea31402682ab6df29f39 files/digest-testdisk-5.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGmSZmdTrptrqvGERAl+aAJ9m7kRX+waF4c9XyKfzAmkPiMTYtgCcDcKd
+hG4NkzgSQWnGrWCU+a/NvPQ=
+=VtqZ
+-----END PGP SIGNATURE-----
