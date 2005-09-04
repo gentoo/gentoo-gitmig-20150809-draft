@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.7 2005/08/23 17:15:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r3.ebuild,v 1.8 2005/09/04 12:40:22 flameeyes Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 	dosym /usr/$(get_libdir)/libid3-3.8.so.3 /usr/$(get_libdir)/libid3-3.8.so.0.0.0
 	dosym /usr/$(get_libdir)/libid3-3.8.so.0.0.0 /usr/$(get_libdir)/libid3-3.8.so.0
 
-	dodoc AUTHORS ChangeLog HISTORY INSTALL README THANKS TODO
+	dodoc AUTHORS ChangeLog HISTORY README THANKS TODO
 
 	# some example programs to be placed in docs dir.
 	if use doc; then
