@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.9 2005/09/03 21:07:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.10 2005/09/04 15:15:37 swegener Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -45,7 +45,7 @@ if [[ "${PN/#font}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
 fi
 
 # If we're a driver package
-if [[ "${PN/#xf86-video}" != "${PN}" || "${PN/#xf86-input}" != "${PN}" ]]; 
+if [[ "${PN/#xf86-video}" != "${PN}" || "${PN/#xf86-input}" != "${PN}" ]]
 then
 	# Don't build static driver modules
 	DRIVER_OPTIONS="--disable-static"

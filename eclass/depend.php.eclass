@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.1 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.2 2005/09/04 15:15:37 swegener Exp $
 #
 # ========================================================================
 #
@@ -118,7 +118,7 @@ need_php_by_category()
 # Portage
 #
 # $1 ... a list of SAPI USE flags (eg cli, cgi, apache2)
-# 
+#
 # returns if any one of the listed SAPIs has been installed
 # dies if none of the listed SAPIs has been installed
 
@@ -157,7 +157,7 @@ require_php_sapi_from() {
 # Portage
 #
 # $1 ... a list of USE flags
-# 
+#
 # returns if all of the listed USE flags are set
 # dies if any of the listed USE flags are not set
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.53 2005/09/02 21:12:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.54 2005/09/04 15:15:37 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -69,7 +69,7 @@ ELT_walk_patches() {
 	local patch_dir=
 	local version=
 	local ltmain_sh=$1
-	
+
 	[[ $1 == *"/configure" ]] && ltmain_sh=${ELT_LTMAIN_SH}
 	version=$(eval $(grep -e '^[[:space:]]*VERSION=' "${ltmain_sh}"); \
 					echo "${VERSION}")
