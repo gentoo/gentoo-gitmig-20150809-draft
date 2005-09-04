@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.1.ebuild,v 1.9 2005/01/19 15:44:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.1.ebuild,v 1.10 2005/09/04 10:53:13 flameeyes Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_install () {
-	dodoc CHANGES COPYING FAQ INSTALL README* TODO
+	dodoc CHANGES FAQ README* TODO
 
 	into /usr
 	dobin src/ripperX plugins/ripperX_plugin-8hz-mp3 \

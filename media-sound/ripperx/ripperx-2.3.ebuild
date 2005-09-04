@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.14 2005/03/21 20:01:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.15 2005/09/04 10:53:13 flameeyes Exp $
 
 inherit eutils
 
@@ -28,12 +28,6 @@ src_unpack () {
 	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
-src_compile () {
-	econf || die "configure failed"
-	emake || die "make failed"
-}
-
-
 src_install () {
 	cd ${S}/src
 	into /usr
@@ -46,5 +40,5 @@ src_install () {
 	ripperX_plugin-l3enc ripperX_plugin-lame ripperX_plugin-mp3enc \
 	ripperX_plugin-oggenc ripperX_plugin-xingmp3enc ripperX_plugin_tester
 
-	dodoc README AUTHORS COPYING BUGS CHANGES FAQ TODO
+	dodoc README AUTHORS BUGS CHANGES FAQ TODO
 }
