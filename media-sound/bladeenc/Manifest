@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 84a55895b0e8fac923b2bad30542d9d8 ChangeLog 1892
 MD5 5e987e5bf573456e8866c150a8b1ad0a bladeenc-0.94.2-r1.ebuild 630
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b582b66a647571df5d3507528f8548cf files/bladeenc-0.94.2-secfix.diff 394
 MD5 a1cd123ae2cdc12d1c72ecb7d52df91d files/digest-bladeenc-0.94.2-r1 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGtUcj5H05b2HAEkRAvkTAKCjCyrA3FwFcWihkpTYKeT7YpYgSQCeNx/s
+fxKG3XEo/QhH9KslXImpuzQ=
+=5DOX
+-----END PGP SIGNATURE-----
