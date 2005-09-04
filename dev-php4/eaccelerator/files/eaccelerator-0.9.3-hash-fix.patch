@@ -1,0 +1,24 @@
+diff -Nur eaccelerator-0.9.3.orig/eaccelerator.c eaccelerator-0.9.3/eaccelerator.c
+--- eaccelerator-0.9.3.orig/eaccelerator.c	2005-05-11 10:19:10.000000000 +0200
++++ eaccelerator-0.9.3/eaccelerator.c	2005-08-01 15:00:29.243230160 +0200
+@@ -120,6 +120,10 @@
+ static dtor_func_t properties_info_dtor = NULL;
+ #endif
+ 
++#if HARDENING_PATCH_HASH_PROTECT
++extern unsigned int zend_hash_canary;
++#endif
++
+ /* saved original functions */
+ static zend_op_array *(*mm_saved_zend_compile_file)(zend_file_handle *file_handle, int type TSRMLS_DC);
+ 
+@@ -1930,6 +1934,9 @@
+   target->persistent  = 0;
+   target->pListHead   = NULL;
+   target->pListTail   = NULL;
++#if HARDENING_PATCH_HASH_PROTECT
++  target->canary = zend_hash_canary;
++#endif
+ 
+   p = source->pListHead;
+   prev_p = NULL;
