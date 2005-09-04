@@ -1,0 +1,34 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20050822.ebuild,v 1.1 2005/09/04 10:02:45 stuart Exp $
+
+DESCRIPTION="HTML documentation for PHP"
+HOMEPAGE="http://www.php.net/download-docs.php"
+SRC_URI="http://dev.gentoo.org/~stuart/php/${PN}-${PVR}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+IUSE=""
+
+DEPEND=""
+
+S=${WORKDIR}/html
+
+src_install() {
+	# the whole structure is too much to do with a simple dohtml *
+
+	for x in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do
+		dohtml function.$x*
+		rm function.$x*
+	done
+
+	# what's left will fit into a single dohtml *
+	dohtml *
+}
+
+pkg_postinst() {
+	einfo "Creating symlink to PHP manual at /usr/share/php-docs"
+	[[ -e /usr/share/php-docs ]] && rm -f /usr/share/php-docs
+	ln -s /usr/share/doc/php-docs-${PVR}/html /usr/share/php-docs
+}
