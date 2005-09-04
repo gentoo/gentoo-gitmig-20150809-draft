@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.57 2005/09/04 20:35:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.58 2005/09/04 20:45:57 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -221,13 +221,13 @@ elibtoolize() {
 					fi
 					;;
 				"uclibc-conf")
-					if [[ -e ${x}/configure ]] && \
-					   grep 'Transform linux' "${x}/configure" > /dev/null ; then
+					if [[ -e ${x}/configure && \
+					      -n $(grep 'Transform linux' "${x}/configure") ]] ; then
 						ELT_walk_patches "${x}/configure" "${y}"
 						ret=$?
 					# ltmain.sh and co might be in a subdirectory ...
-					elif [[ ! -e ${x}/configure && -e ${x}/../configure ]] && \
-					   grep 'Transform linux' "${x}/../configure" > /dev/null ; then
+					elif [[ ! -e ${x}/configure && -e ${x}/../configure && \
+					        -n $(grep 'Transform linux' "${x}/../configure") ]] ; then
 						ELT_walk_patches "${x}/../configure" "${y}"
 						ret=$?
 					fi
@@ -239,13 +239,13 @@ elibtoolize() {
 					fi
 					;;
 				"fbsd-conf")
-					if [[ -e ${x}/configure ]] && \
-					   grep 'version_type=freebsd-' "${x}/configure" > /dev/null ; then
+					if [[ -e ${x}/configure && \
+					      -n $(grep 'version_type=freebsd-' "${x}/configure") ]] ; then
 						ELT_walk_patches "${x}/configure" "${y}"
 						ret=$?
 					# ltmain.sh and co might be in a subdirectory ...
-					elif [[ ! -e ${x}/configure && -e ${x}/../configure ]] && \
-					   grep 'version_type=freebsd-' "${x}/../configure" > /dev/null ; then
+					elif [[ ! -e ${x}/configure && -e ${x}/../configure && \
+					        -n $(grep 'version_type=freebsd-' "${x}/../configure") ]] ; then
 						ELT_walk_patches "${x}/../configure" "${y}"
 						ret=$?
 					fi
