@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.2 2005/05/29 00:57:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.3 2005/09/04 12:25:40 matsuu Exp $
 
 inherit eutils
 
@@ -9,14 +9,14 @@ HOMEPAGE="http://www.speech.kth.se/snack/"
 SRC_URI="http://www.speech.kth.se/~kare/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
-IUSE="alsa ogg python threads"
+IUSE="alsa python threads vorbis"
 
 DEPEND=">dev-lang/tcl-8.4.3
 	>dev-lang/tk-8.4.3
 	alsa? ( media-libs/alsa-lib )
-	ogg? ( media-libs/libogg media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	python? ( virtual/python )"
 
 S="${WORKDIR}/${PN}${PV}"
@@ -27,9 +27,9 @@ src_compile() {
 	use alsa && myconf="${myconf} --enable-alsa"
 	use threads && myconf="${myconf} --enable-threads"
 
-	if use ogg; then
-		myconf="${myconf} --with-ogg-include=/usr/include"
-		myconf="${myconf} --with-ogg-lib=/usr/$(get_libdir)"
+	if use vorbis ; then
+		myconf="${myconf} --with-ogg-include=${ROOT}/usr/include"
+		myconf="${myconf} --with-ogg-lib=${ROOT}/usr/$(get_libdir)"
 	fi
 
 	cd ${S}/unix

@@ -1,8 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.8 2005/03/05 08:49:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.9 2005/09/04 12:25:40 matsuu Exp $
 
-IUSE="alsa oggvorbis"
+inherit eutils
+IUSE="alsa vorbis"
 
 DESCRIPTION="The Snack Sound Toolkit (Tcl)"
 HOMEPAGE="http://www.speech.kth.se/snack/"
@@ -14,7 +15,7 @@ SLOT="0"
 
 DEPEND=">dev-lang/tcl-8.4.3
 	>dev-lang/tk-8.4.3
-	oggvorbis? ( media-libs/libogg )"
+	vorbis? ( media-libs/libvorbis )"
 
 S=${WORKDIR}/${PN}${PV}/unix
 
@@ -23,7 +24,10 @@ src_compile() {
 
 	use alsa && myconf="${myconf} --enable-alsa"
 
-	use oggvorbis && myconf="${myconf} --enable-ogg"
+	if use vorbis ; then
+		myconf="${myconf} --with-ogg-include=${ROOT}/usr/include"
+		myconf="${myconf} --with-ogg-lib=${ROOT}/usr/$(get_libdir)"
+	fi
 
 	econf ${myconf} || die "configure failed"
 
