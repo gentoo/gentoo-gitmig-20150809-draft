@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 16b6955e8577d2fe7376847823ec1cad ChangeLog 1549
 MD5 41949b9d653e781c83055df3932f0d85 audiocompress-1.3.ebuild 942
 MD5 3c0e0cbbdaa5e485dcbf5293877a71e2 audiocompress-1.5.ebuild 962
@@ -7,3 +10,10 @@ MD5 14e76a619191ebae564b85c528b32d2e files/digest-audiocompress-1.5 68
 MD5 45241faef0fdd3134f481dd0e30f8079 files/digest-audiocompress-1.3 68
 MD5 f49cd4e9e5f178e7206b47bb03a4a841 files/audiocompress-1.5.1-gentoo.patch 983
 MD5 f47385522df4cea0523c5179f10cad25 files/digest-audiocompress-1.5.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGs/5j5H05b2HAEkRAmESAJ9H72ARYyfi2SIV0sR75r9/rXg+bwCgmG4V
+pCcXJHjv0JMi0I/g8soG430=
+=e44X
+-----END PGP SIGNATURE-----

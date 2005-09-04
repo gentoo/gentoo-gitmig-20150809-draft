@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b572dc8982cc013536cd6eb069d2968c ChangeLog 826
 MD5 d98dd831ab80044579eaad92aee85a25 playspc_gtk-0.2.7.3.ebuild 793
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 54cd9fad9da8d2241c19462667906387 files/digest-playspc_gtk-0.2.7.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGs13j5H05b2HAEkRAgnxAJ9mKYqNaBKzL5uFauW3mujJo9hSzACgo0mr
+o5Rf3uxPsBmgDvc2h9ks5gk=
+=V7H0
+-----END PGP SIGNATURE-----

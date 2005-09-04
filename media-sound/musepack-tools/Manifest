@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c6772fd586092e9a311f2b643eafbf3f musepack-tools-1.15u.ebuild 1506
 MD5 c6851e379402a0001080e9507c4f24b0 ChangeLog 4858
 MD5 2c6f59eed8f1893c3be3699b0d7e19e9 musepack-tools-1.15t.ebuild 1427
@@ -16,3 +19,10 @@ MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15t-gcc4.patch 288
 MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15v-gcc4.patch 288
 MD5 b81fa7225bc172daee43e316eba11fa0 files/digest-musepack-tools-1.15s-r2 68
 MD5 d81d9df24aeee0d861392505d4941067 files/digest-musepack-tools-1.15t 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGs8Gj5H05b2HAEkRAn7FAJ9f+ts93cNU6GznlPNxl9JIy6S0kACgkySO
+mQfciiZn9hAHcuKTgehvLE8=
+=wnmg
+-----END PGP SIGNATURE-----
