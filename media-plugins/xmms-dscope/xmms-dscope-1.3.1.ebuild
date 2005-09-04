@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/xmms-dscope-1.3.1.ebuild,v 1.13 2004/11/27 20:17:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dscope/xmms-dscope-1.3.1.ebuild,v 1.14 2005/09/04 09:55:57 flameeyes Exp $
 
 inherit eutils
 
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc README COPYING Changes
+	dodoc README Changes
 }

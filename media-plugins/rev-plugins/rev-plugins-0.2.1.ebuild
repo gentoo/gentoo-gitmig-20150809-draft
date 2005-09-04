@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/rev-plugins-0.2.1.ebuild,v 1.7 2004/09/01 17:37:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/rev-plugins-0.2.1.ebuild,v 1.8 2005/09/04 09:59:25 flameeyes Exp $
 #
 MY_P=${P/rev/REV}
 
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS COPYING README ${S}/ams/*
+	dodoc AUTHORS README ${S}/ams/*
 	insinto /usr/lib/ladspa
 	insopts -m0755
 	doins *.so
