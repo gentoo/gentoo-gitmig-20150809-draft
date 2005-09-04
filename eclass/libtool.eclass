@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.56 2005/09/04 20:23:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.57 2005/09/04 20:35:42 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -43,19 +43,20 @@ ELT_find_ltmain_sh() {
 #
 ELT_try_and_apply_patch() {
 	local ret=0
-	local patch="$2"
+	local file=$1
+	local patch=$2
 
 	# We only support patchlevel of 0 - why worry if its static patches?
-	if patch -p0 --dry-run $1 < ${patch} &> ${T}/elibtool.log ; then
+	if patch -p0 --dry-run "${file}" < "${patch}" &> "${T}/elibtool.log" ; then
 		einfo "  Applying $(basename "$(dirname "${patch}")")-${patch##*/}.patch ..."
-		patch -p0 $1 < ${patch} &>${T}/elibtool.log
+		patch -p0 "${file}" < "${patch}" &> "${T}/elibtool.log"
 		ret=$?
 		export ELT_APPLIED_PATCHES="${ELT_APPLIED_PATCHES} ${patch##*/}"
 	else
 		ret=1
 	fi
 
-	return ${ret}
+	return "${ret}"
 }
 
 #
@@ -66,24 +67,27 @@ ELT_walk_patches() {
 	local x=
 	local y=
 	local ret=1
+	local file=$1
+	local patch_set=$2
 	local patch_dir=
+	local rem_int_dep=$3
 	local version=
 	local ltmain_sh=$1
 
-	[[ $1 == *"/configure" ]] && ltmain_sh=${ELT_LTMAIN_SH}
+	[[ ${file} == *"/configure" ]] && ltmain_sh=${ELT_LTMAIN_SH}
 	version=$(eval $(grep -e '^[[:space:]]*VERSION=' "${ltmain_sh}"); \
 					echo "${VERSION}")
 
-	if [[ -n $2 ]] ; then
-		if [[ -d ${ELT_PATCH_DIR}/$2 ]] ; then
-			patch_dir="${ELT_PATCH_DIR}/$2"
+	if [[ -n ${patch_set} ]] ; then
+		if [[ -d ${ELT_PATCH_DIR}/${patch_set} ]] ; then
+			patch_dir="${ELT_PATCH_DIR}/${patch_set}"
 		else
-			return ${ret}
+			return "${ret}"
 		fi
 
 		if [[ -z ${version} ]] ; then
-			eerror "Could not get VERSION for ${1##*/}!"
-			die "Could not get VERSION for ${1##*/}!"
+			eerror "Could not get VERSION for ${file##*/}!"
+			die "Could not get VERSION for ${file##*/}!"
 		fi
 
 		# Go through the patches in reverse order (large to small)
@@ -95,16 +99,16 @@ ELT_walk_patches() {
 				# If libtool version smaller than patch version, skip patch.
 				[[ ${ltver} -lt ${ptver} ]] && continue
 				# For --remove-internal-dep ...
-				if [[ -n $3 ]] ; then
+				if [[ -n ${rem_int_dep} ]] ; then
 					# For replace @REM_INT_DEP@ with what was passed
 					# to --remove-internal-dep
-					sed -e "s|@REM_INT_DEP@|$3|g" ${x} > \
-						${T}/$$.rem_int_deps.patch
+					sed -e "s|@REM_INT_DEP@|${rem_int_dep}|g" ${x} > \
+						"${T}/$$.rem_int_deps.patch"
 
 					x="${T}/$$.rem_int_deps.patch"
 				fi
 
-				if ELT_try_and_apply_patch "$1" "${x}" ; then
+				if ELT_try_and_apply_patch "${file}" "${x}" ; then
 					ret=0
 					break
 				fi
@@ -112,7 +116,7 @@ ELT_walk_patches() {
 		done
 	fi
 
-	return ${ret}
+	return "${ret}"
 }
 
 elibtoolize() {
@@ -125,9 +129,9 @@ elibtoolize() {
 	local deptoremove=
 	local my_dirlist=
 	local elt_patches="portage relink max_cmd_len sed test tmp"
-	local start_dir="${PWD}"
+	local start_dir=${PWD}
 
-	my_dirlist="$(ELT_find_ltmain_sh)"
+	my_dirlist=$(ELT_find_ltmain_sh)
 
 	for x in "$@" ; do
 		case "${x}" in
@@ -149,16 +153,15 @@ elibtoolize() {
 			"^--remove-internal-dep="*)
 				# We will replace @REM_INT_DEP@ with what is needed
 				# in ELT_walk_patches() ...
-				deptoremove="$(echo "${x}" | sed -e 's|--remove-internal-dep=||')"
+				deptoremove=$(echo "${x}" | sed -e 's|--remove-internal-dep=||')
 
 				# Add the patch for this ...
-				[ -n "${deptoremove}" ] && elt_patches="${elt_patches} rem-int-dep"
+				[[ -n ${deptoremove} ]] && elt_patches="${elt_patches} rem-int-dep"
 				;;
 			"--shallow")
 				# Only patch the ltmain.sh in ${S}
-				if [ -f "${S}/ltmain.sh" ]
-				then
-					my_dirlist="${S}"
+				if [[ -f ${S}/ltmain.sh ]] ; then
+					my_dirlist=${S}
 				else
 					my_dirlist=
 				fi
@@ -167,8 +170,8 @@ elibtoolize() {
 				do_uclibc="no"
 				;;
 			*)
-				eerror "Invalid elibtoolize option: $x"
-				die "elibtoolize called with $x ??"
+				eerror "Invalid elibtoolize option: ${x}"
+				die "elibtoolize called with ${x} ??"
 		esac
 	done
 
@@ -375,7 +378,7 @@ VER_major() {
 	[[ -z $1 ]] && return 1
 
 	local VER=$@
-	echo ${VER%%[^[:digit:]]*}
+	echo "${VER%%[^[:digit:]]*}"
 }
 
 # char *VER_minor(string)
@@ -387,7 +390,7 @@ VER_minor() {
 
 	local VER=$@
 	VER=${VER#*.}
-	echo ${VER%%[^[:digit:]]*}
+	echo "${VER%%[^[:digit:]]*}"
 }
 
 # char *VER_micro(string)
@@ -399,7 +402,7 @@ VER_micro() {
 
 	local VER=$@
 	VER=${VER#*.*.}
-	echo ${VER%%[^[:digit:]]*}
+	echo "${VER%%[^[:digit:]]*}"
 }
 
 # int VER_to_int(string)
