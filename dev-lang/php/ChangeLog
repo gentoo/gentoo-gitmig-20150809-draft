@@ -1,0 +1,7 @@
+# ChangeLog for dev-lang/php
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.34 2005/09/04 16:58:08 stuart Exp $
+
+  05 Sep 2005; <stuart@gentoo.org> ChangeLog:
+  Initial version; replaces older dev-php/* packages
+
