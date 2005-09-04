@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 082aaa412815983f8036cfd427892443 streamtuner-python-0.1.2.ebuild 766
 MD5 28e0417bac94d32712edfe3c44ce0a38 ChangeLog 1628
 MD5 b4a492a9c77a3df48b5bbcdc47a1f750 streamtuner-python-0.1.0.ebuild 657
@@ -5,3 +8,10 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 951449f1ac39d6797561853f13e0bb0e files/digest-streamtuner-python-0.1.0 76
 MD5 89caed73d02f617144b00c1cee83a1eb files/digest-streamtuner-python-0.1.2 76
 MD5 560d4730e30a40e198e204eabdb76249 files/0.1.2-configure.patch 625
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGsvDj5H05b2HAEkRAm30AJ9B4SM1s/D1ApMPpt/G/W9jpqtKbgCdGUDc
+HObYzqwinVda6nEnNfQEeho=
+=3mvT
+-----END PGP SIGNATURE-----

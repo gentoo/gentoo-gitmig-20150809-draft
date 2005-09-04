@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 66cfc1ca9a52315927bad0d1a2cb4b40 ChangeLog 2137
 MD5 804324234f0c4b04578e56d6d0bf29e6 xmms-iris-0.12.ebuild 841
 MD5 a0ade178ad0fd52328dd9d137d872bf1 xmms-iris-0.11.ebuild 839
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 735a96a26b1298a28cac69a31351facf files/digest-xmms-iris-0.12 61
 MD5 067025435661205f5722a2ad5b133f1c files/digest-xmms-iris-0.11 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGsyKj5H05b2HAEkRAviXAJ4iQP9GP+k/LnZmAbasW2uNkzrJdgCeJubd
+a7uIe0Jntkz3dM84c9EoS3k=
+=Obki
+-----END PGP SIGNATURE-----
