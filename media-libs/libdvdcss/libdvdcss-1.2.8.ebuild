@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.22 2005/02/28 21:18:26 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.8.ebuild,v 1.23 2005/09/04 12:37:17 flameeyes Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	use doc && dohtml doc/html/*
 
 	##

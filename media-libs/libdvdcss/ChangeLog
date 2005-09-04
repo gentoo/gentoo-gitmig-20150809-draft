@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.42 2005/08/01 20:16:36 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.43 2005/09/04 12:37:17 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libdvdcss-0.0.3.3.ebuild, libdvdcss-1.1.1-r2.ebuild,
+  libdvdcss-1.2.8.ebuild, libdvdcss-1.2.9.ebuild:
+  Don't install COPYING and INSTALL files. Use autotools eclass to re-create
+  autotools support.
 
   01 Aug 2005; Chris White <chriswhite@gentoo.org> libdvdcss-1.2.9.ebuild:
   Added einfo line before autotools rebuild so people don't think their system
