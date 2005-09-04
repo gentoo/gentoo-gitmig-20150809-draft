@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1429 2005/09/04 05:42:54 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1430 2005/09/04 11:05:09 stuart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -235,6 +235,16 @@ dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
+dev-lang/php:cgi - Enable CGI SAPI
+dev-lang/php:cli - Enable CLI SAPI
+dev-lang/php:discard-path -
+dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
+dev-lang/php:fastbuild - Build PHP quicker (experimental)
+dev-lang/php:java-external - Use the external java extension rather than the bundled one
+dev-lang/php:overload - Enable the overload extension
+dev-lang/php:pdo-external - Use the external pecl-pdo extension rather than the bundled one
+dev-lang/php:pear - Enable PEAR support
+dev-lang/php:zip - Enable ZIP file support
 dev-lang/python:ucs2 - Enable byte size 2 unicode
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
