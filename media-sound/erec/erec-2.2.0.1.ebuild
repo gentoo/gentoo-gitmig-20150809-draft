@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.7 2005/07/25 12:30:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.8 2005/09/04 10:36:59 flameeyes Exp $
 
 DESCRIPTION="A shared audio recording server"
 HOMEPAGE="http://bisqwit.iki.fi/source/erec.html"
@@ -41,6 +41,6 @@ src_compile() {
 
 src_install() {
 	dobin erec
-	dodoc README COPYING
+	dodoc README
 	dohtml README.html
 }

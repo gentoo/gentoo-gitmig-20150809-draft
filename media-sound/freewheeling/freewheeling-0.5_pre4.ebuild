@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.2 2005/07/15 09:02:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.3 2005/09/04 10:46:01 flameeyes Exp $
 
 IUSE="fluidsynth"
 MY_P="fweelin-0.5pre4"
@@ -35,5 +35,5 @@ src_compile() {
 src_install() {
 	cd ${WORKDIR}/${MY_P} && \
 	einstall || die
-	dodoc COPYING README TODO EVOLUTION THANKS TUNING NEWS AUTHORS
+	dodoc README TODO EVOLUTION THANKS TUNING NEWS AUTHORS
 }

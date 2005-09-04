@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15t.ebuild,v 1.5 2005/03/19 14:06:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15t.ebuild,v 1.6 2005/09/04 10:39:42 flameeyes Exp $
 
 IUSE="static 16bit"
 
@@ -54,5 +54,5 @@ src_compile() {
 
 src_install() {
 	dobin mppenc mppdec replaygain
-	dodoc COPYING* README doc/ChangeLog doc/MANUAL.TXT doc/NEWS doc/SV7.txt doc/TODO*
+	dodoc README doc/ChangeLog doc/MANUAL.TXT doc/NEWS doc/SV7.txt doc/TODO*
 }

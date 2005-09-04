@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecamegapedal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.13 2005/07/28 20:57:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.14 2005/09/04 10:33:28 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ecamegapedal-0.4.2.ebuild, ecamegapedal-0.4.3.ebuild:
+  Don't install COPYING file.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> ecamegapedal-0.4.2.ebuild,
   ecamegapedal-0.4.3.ebuild:

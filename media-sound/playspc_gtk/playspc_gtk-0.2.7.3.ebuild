@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/playspc_gtk-0.2.7.3.ebuild,v 1.7 2004/07/12 22:59:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playspc_gtk/playspc_gtk-0.2.7.3.ebuild,v 1.8 2005/09/04 10:33:04 flameeyes Exp $
 
 IUSE=""
 
@@ -26,7 +26,7 @@ src_install() {
 	exeinto /usr/bin
 	dolib.so libopenspc/libopenspc.so
 	doexe playspc_gtk spccore
-	dodoc CHANGELOG COPYING TODO README
+	dodoc CHANGELOG TODO README
 }
 
 

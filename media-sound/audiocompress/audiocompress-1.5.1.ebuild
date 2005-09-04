@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.1.ebuild,v 1.5 2005/01/13 22:11:45 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.1.ebuild,v 1.6 2005/09/04 10:43:45 flameeyes Exp $
 
 IUSE="xmms"
 
@@ -46,5 +46,5 @@ src_install() {
 		exeinto "$(xmms-config --effect-plugin-dir)" || die
 		doexe libcompress.so || die
 	fi
-	dodoc COPYING ChangeLog README TODO
+	dodoc ChangeLog README TODO
 }
