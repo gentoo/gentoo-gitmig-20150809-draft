@@ -1,4 +1,15 @@
-MD5 d69cd84e6c42d186e3ea11426ed4ddcb ChangeLog 689
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ecc498b8f2fa01025433ba881c3bff2e ChangeLog 883
 MD5 59aae5dcb06a68bd02cec60c627dbe53 metadata.xml 253
-MD5 27d652120631ae65a31df4eaf67b22a2 qdvdauthor-0.0.9.ebuild 2147
+MD5 c49cafa5baf1d161ec92186f6b7e6519 qdvdauthor-0.0.9.ebuild 2267
 MD5 6d09c05eb5f5caa3cd56c0a70a2fc21d files/digest-qdvdauthor-0.0.9 68
+MD5 cce352b8695bcf9ae6b0d8f5afcbfadd files/qdvdauthor-0.0.9-nointeractive.patch 632
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGu7OmdTrptrqvGERAqTiAJ4zz7BlBOQ3w2f8hvWdbcEyiClC0gCeK5CB
+s/BCPTP0FPDf0wNXSLBPI8U=
+=Rpym
+-----END PGP SIGNATURE-----
