@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-1.2.5.ebuild,v 1.3 2005/09/04 05:24:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-1.3.3.ebuild,v 1.1 2005/09/04 05:24:25 dragonheart Exp $
 
-inherit eutils
+inherit gnome2
 
 MY_PN="${PN}1.2"
-MY_P="${MY_PN}-${PV}a"
+MY_P="${MY_PN}-${PV}"
 S=${WORKDIR}/${MY_P}
 
 
@@ -16,7 +16,7 @@ SRC_URI="http://people.debian.org/~kov/gksu/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="nls"
+IUSE="${IUSE} nls"
 
 DEPEND=">=dev-util/gtk-doc-1.2-r1
 	nls? ( >=sys-devel/gettext-0.14.1 )
@@ -25,11 +25,5 @@ DEPEND=">=dev-util/gtk-doc-1.2-r1
 RDEPEND="${DEPEND}
 	app-admin/sudo"
 
-src_compile() {
-	econf $(use_enable nls) || die
-	emake || die
-}
-
-src_install() {
-	make DESTDIR=${D} install || die
-}
+USEDESTDIR="1"
+G2CONF="$(use_enable nls)"
