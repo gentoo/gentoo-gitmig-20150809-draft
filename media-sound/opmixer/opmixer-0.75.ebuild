@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.16 2005/03/13 20:15:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.17 2005/09/04 11:03:37 flameeyes Exp $
 
 inherit eutils
 
@@ -40,5 +40,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
