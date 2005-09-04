@@ -1,4 +1,14 @@
-MD5 28c6b5f47ac5b4408e569eea68022fc9 ChangeLog 838
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6105b2ad5eef88868f090fddf0a05b60 ChangeLog 971
+MD5 101c65da92810a496366bff929238ded smurf-0.52.6.ebuild 1103
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 1e8d759635738391dfd7ea32f2714aae smurf-0.52.6.ebuild 1125
 MD5 6527f6c7c5c59ff229c6b263702a136a files/digest-smurf-0.52.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGtKyj5H05b2HAEkRArveAJ0d1R/zo+hbkiauCh7I+HzijvQBWgCcDtDq
+rvN4EoySUYrwAgbDEF9+02o=
+=lfT0
+-----END PGP SIGNATURE-----

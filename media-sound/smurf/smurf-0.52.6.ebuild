@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/smurf-0.52.6.ebuild,v 1.8 2005/07/25 19:11:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/smurf-0.52.6.ebuild,v 1.9 2005/09/04 10:55:22 flameeyes Exp $
 
 DESCRIPTION="The Smurf Sound Font Editor"
 HOMEPAGE="http://smurf.sourceforge.net/"
@@ -33,5 +33,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README
+	dodoc AUTHORS ChangeLog HACKING NEWS README
 }
