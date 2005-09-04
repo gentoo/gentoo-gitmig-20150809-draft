@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.11.92.ebuild,v 1.1 2005/08/24 06:21:40 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.11.92.ebuild,v 1.2 2005/09/04 00:07:28 allanonjl Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc eds static"
 
-RDEPEND=">=gnome-base/gnome-desktop-2.9.91
+RDEPEND=">=gnome-base/gnome-desktop-2.11.92
 	>=x11-libs/gtk+-2.7.1
 	>=gnome-base/libglade-2.5
 	>=gnome-base/libgnome-2.1.1
