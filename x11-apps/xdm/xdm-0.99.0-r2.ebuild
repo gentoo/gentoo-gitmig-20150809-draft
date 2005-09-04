@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-0.99.0-r1.ebuild,v 1.5 2005/09/04 08:32:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-0.99.0-r2.ebuild,v 1.1 2005/09/04 18:17:23 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
 
-inherit x-modular
+inherit x-modular pam
 
 DESCRIPTION="X.Org xdm application"
 KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sh ~sparc ~x86"
@@ -30,6 +30,5 @@ src_install() {
 	exeinto /etc/X11/xdm
 	doexe ${FILESDIR}/Xsession
 	newinitd ${FILESDIR}/xdm.start xdm
-	insinto /etc/pam.d
-	newins ${FILESDIR}/xdm.pamd xdm
+	newpamd ${FILESDIR}/xdm.pamd xdm
 }
