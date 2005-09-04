@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.27 2005/09/03 15:17:16 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.28 2005/09/04 22:34:36 weeve Exp $
+
+  04 Sep 2005; Jason Wever <weeve@gentoo.org> gallery-1.5_p1.ebuild:
+  Stable on SPARC wrt security bug #104722.
 
   03 Sep 2005; Renat Lumpau <rl03@gentoo.org> gallery-2.0_rc2.ebuild:
   Added ffmpeg support to gallery2
