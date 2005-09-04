@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 337c6ad7222842a7b5552898a2f58943 ChangeLog 1065
-MD5 8701bf076c08a0b51249fd0bf4ddeb01 files/digest-libXcursor-1.1.3-r1 69
+MD5 83e1c65f1fe73dbb4c9d2bb29a095b1a libXcursor-1.1.3-r1.ebuild 846
+MD5 6b26f82275d747bad0a21d594061246e ChangeLog 1152
 MD5 c52c14e65991d908a0869502dd0b8a02 files/make-icondir-configurable.patch 2180
-MD5 7b6f06c9b274568a42fede71d77a9ef8 libXcursor-1.1.3-r1.ebuild 842
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDEhg2I1lqEGTUzyQRAjvKAJ9voYaO7D1N1nNtAE28a2+h1HFdXgCfTcFF
-A6isydS8xR08GGlh6xPdxo0=
-=zUd9
------END PGP SIGNATURE-----
+MD5 8701bf076c08a0b51249fd0bf4ddeb01 files/digest-libXcursor-1.1.3-r1 69
