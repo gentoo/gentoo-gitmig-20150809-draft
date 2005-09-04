@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lkcp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.6 2005/08/23 21:19:11 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.7 2005/09/04 19:40:36 r3pek Exp $
+
+*lkcp-0.5.3-r1 (04 Sep 2005)
+
+  04 Sep 2005; Carlos Silva <r3pek@gentoo.org> -lkcp-0.5.3.ebuild,
+  +lkcp-0.5.3-r1.ebuild:
+  Added the doc use flag and fixed some dodoc errors while installing. Thx to
+  Matteo Spreafico for the ebuild. Closes bug #104039
 
 *lkcp-0.5.3 (23 Aug 2005)
 
