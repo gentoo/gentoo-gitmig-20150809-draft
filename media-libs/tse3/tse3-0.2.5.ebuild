@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.5.ebuild,v 1.5 2004/06/24 23:24:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.5.ebuild,v 1.6 2005/09/04 12:18:09 flameeyes Exp $
 
 DESCRIPTION="TSE3 Sequencer library"
 HOMEPAGE="http://TSE3.sourceforge.net/"
@@ -31,5 +31,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS TODO Version
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO Version
 }

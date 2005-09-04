@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.16 2005/08/07 13:29:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.17 2005/09/04 12:18:09 flameeyes Exp $
 
 inherit eutils
 
@@ -41,5 +41,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS TODO Version
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO Version
 }
