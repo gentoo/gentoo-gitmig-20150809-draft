@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3-r1.ebuild,v 1.9 2005/07/10 21:12:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/avi-xmms-1.2.3-r1.ebuild,v 1.10 2005/09/04 10:05:56 flameeyes Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="A xmms plugin for AVI/DivX movies"
 SRC_URI="http://www.xmms.org/files/plugins/avi-xmms/${P}.tar.gz"
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# various C++ language fixes
-	patch -p1 <${FILESDIR}/avi-xmms-1.2.3-gcc3-gentoo.patch || die
+	epatch ${FILESDIR}/avi-xmms-1.2.3-gcc3-gentoo.patch
 }
 
 src_compile() {
@@ -33,5 +33,5 @@ src_compile() {
 
 src_install () {
 	make libdir=/usr/lib/xmms/Input DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
