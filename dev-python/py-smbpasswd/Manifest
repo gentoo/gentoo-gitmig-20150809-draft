@@ -1,4 +1,14 @@
-MD5 60753c0993d6e3bd107755c994978e99 ChangeLog 675
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1884f9777d3e9145a91be91680e6a896 ChangeLog 781
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 4048db5f93c871d72a0447cd5698ef4f py-smbpasswd-1.0.ebuild 569
+MD5 fcbf77cc90713d221dc06e61f29cd9e8 py-smbpasswd-1.0.ebuild 581
 MD5 5d1586d01a35977df500eb0ffced7385 files/digest-py-smbpasswd-1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGzu3ArHZZzCEUG0RAjdwAJ0UBi3bjF7R42igNv635eQOXud6qACfen9C
+Vu2VDq6g7ih44OqOI5MD2wU=
+=Lsjf
+-----END PGP SIGNATURE-----
