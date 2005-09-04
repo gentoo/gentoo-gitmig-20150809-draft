@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e0f6bac6273028b86b8193e983b978fd t-prot-2.0.1.ebuild 921
-MD5 3813ebdb1a089bc92647af812713736a ChangeLog 2039
+MD5 20d88f7bee6f9fe532365b240d70df36 t-prot-2.0.1.ebuild 930
+MD5 a3d739ab4868f8d8f83021ca22ea6d9f ChangeLog 2116
 MD5 9ea1ad3baad4b37210fd82afadf6fc78 metadata.xml 560
 MD5 cf6272e0c7cdabe0c56cfe9636b8afb9 files/digest-t-prot-2.0.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+c5pV3J2n04EauwRAix5AKDSGVq3URg80mdjv/QiZpxRDy1blACgjyI9
-yfKcnVEwCn1GEfrMrKk968I=
-=6Mcd
+iD8DBQFDGtk+CHk4+ZoBpvsRAnfzAKCNiWIJ7LbV11aLgg15kM+dewzivgCcDuYp
+zQ3mbiMHlBcZEhrd8WlWWAw=
+=jdvB
 -----END PGP SIGNATURE-----
