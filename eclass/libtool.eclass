@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.54 2005/09/04 15:15:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.55 2005/09/04 18:40:48 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -129,6 +129,9 @@ elibtoolize() {
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
 
+	[[ ${CHOST} == *"-freebsd"* ]] && \
+		elt_patches="${elt_patches} fbsd-conf"
+
 	for x in "$@" ; do
 		case "${x}" in
 			"--portage")
@@ -229,6 +232,18 @@ elibtoolize() {
 						ret=$?
 					fi
 					;;
+				"fbsd-conf")
+					if [[ -e ${x}/configure ]] && \
+					   grep 'version_type=freebsd-' "${x}/configure" > /dev/null ; then
+						ELT_walk_patches "${x}/configure" "${y}"
+						ret=$?
+					# ltmain.sh and co might be in a subdirectory ...
+					elif [[ ! -e ${x}/configure && -e ${x}/../configure ]] && \
+					   grep 'version_type=freebsd-' "${x}/../configure" > /dev/null ; then
+						ELT_walk_patches "${x}/../configure" "${y}"
+						ret=$?
+					fi
+					;;
 				*)
 					ELT_walk_patches "${x}/ltmain.sh" "${y}"
 					ret=$?
@@ -274,6 +289,11 @@ elibtoolize() {
 					"uclibc-"*)
 						[[ ${CHOST} == *"-uclibc" ]] && \
 							ewarn "  uClibc patch set '${y}' failed to apply!"
+						;;
+					"fbsd-"*)
+						[[ ${CHOST} == *"-freebsd"* ]] && \
+							eerror "  FreeBSD patch set '${y}' failed to apply!"
+							die "FreeBSD patch set '${y}' failed to apply!"
 						;;
 				esac
 			fi
