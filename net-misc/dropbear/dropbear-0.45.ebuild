@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.7 2005/08/13 23:16:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.8 2005/09/04 06:18:38 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc sh sparc x86"
 IUSE="minimal multicall pam static zlib"
 
 RDEPEND="zlib? ( sys-libs/zlib )
@@ -27,9 +27,14 @@ set_options() {
 	use static && makeopts="${makeopts} STATIC=1"
 }
 
+pkg_setup() {
+	enewgroup sshd 22
+	enewuser sshd 22 -1 /var/empty sshd
+}
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}"/dropbear-0.45-urandom.patch
 }
 
