@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-libvisual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-libvisual/ChangeLog,v 1.4 2005/08/23 22:25:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-libvisual/ChangeLog,v 1.5 2005/09/04 11:11:28 blubb Exp $
+
+  04 Sep 2005; Simon Stelling <blubb@gentoo.org> bmp-libvisual-0.2.0.ebuild:
+  stable on amd64
 
   23 Aug 2005; Tony Vroon <chainsaw@gentoo.org> bmp-libvisual-0.1.0.ebuild,
   bmp-libvisual-0.2.0.ebuild:
