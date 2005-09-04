@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.3.ebuild,v 1.2 2005/08/23 00:54:51 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.3.ebuild,v 1.3 2005/09/04 14:44:13 dragonheart Exp $
 
 MY_P="${PN}2-${PV}"
 DESCRIPTION="Active OS fingerprinting tool - this is Xprobe2"
@@ -17,5 +17,5 @@ S="${WORKDIR}/${MY_P}"
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS CREDITS COPYING CHANGELOG TODO README docs/*
+	dodoc AUTHORS CREDITS CHANGELOG TODO README docs/*
 }

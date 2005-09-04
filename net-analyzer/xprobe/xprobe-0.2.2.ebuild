@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.2.ebuild,v 1.6 2005/08/02 18:29:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xprobe/xprobe-0.2.2.ebuild,v 1.7 2005/09/04 14:44:13 dragonheart Exp $
 
 # This is new xprobe, so called xprobe2, due to xprobe1 being obsoleted.
 # xprobe 2 has different approach to operating system fingerprinting.
@@ -22,7 +22,7 @@ S="${WORKDIR}/${PN}2-${PV}"
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS CREDITS COPYING
+	dodoc AUTHORS CREDITS
 	dodoc CHANGELOG TODO README
 	dodoc docs/*
 }
