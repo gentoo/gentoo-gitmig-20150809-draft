@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.25.ebuild,v 1.1 2005/09/04 01:51:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/edb-1.25.ebuild,v 1.2 2005/09/04 03:02:14 swegener Exp $
 
-inherit eutils elisp
+inherit elisp
 
 DESCRIPTION="EDB, The Emacs Database"
 HOMEPAGE="http://www.glug.org/people/ttn/software/edb/"
@@ -16,11 +16,9 @@ DEPEND="virtual/emacs"
 
 SITEFILE="50edb-gentoo.el"
 
-S=${WORKDIR}/${P}
-
 src_compile() {
 	econf || die
-	make || die					# parallelism not supported
+	emake -j1 || die
 }
 
 src_install() {
