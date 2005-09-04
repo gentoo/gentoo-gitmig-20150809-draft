@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.41 2005/09/03 15:15:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.42 2005/09/04 12:04:42 ka0ttic Exp $
+
+  04 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> eix-0.3.0-r1.ebuild:
+  Added ~mips.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> eix-0.2.6.ebuild:
   Stable on ppc.
