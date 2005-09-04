@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f182fb1997d59437e700e7b52b2d59d id3v2-0.1.11.ebuild 903
 MD5 14ad56752191811118209755ca0ff980 ChangeLog 2571
 MD5 d7f030b6dddc326540deaf5734ae6681 id3v2-0.1.10.ebuild 1011
@@ -11,3 +14,10 @@ MD5 0c2b40f0a45bf5c1c8ff2b2953bef0c8 files/id3v2-0.1.11-alpha.patch 655
 MD5 d83139c5005dc921def0cf8550f53526 files/id3v2-0.1.10-noinline.patch 491
 MD5 faa1968a6beab48f51e58bfc2cb66bf2 files/digest-id3v2-0.1.10 63
 MD5 f9825612d1693530b1873e998cd9aaa4 files/digest-id3v2-0.1.11 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGs3cj5H05b2HAEkRAuzWAKCD4jInkJlsD7gXrKLylFq8TlVXNACfcrgB
+pL+4kjsnfziWxyNrLDaUFs4=
+=35Jb
+-----END PGP SIGNATURE-----

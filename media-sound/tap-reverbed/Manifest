@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c8c7455ec541dac6555c63a8c886d379 ChangeLog 661
 MD5 44ea0f080c53247d222a09eb81e00f32 tap-reverbed-0.ebuild 1237
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 4ea2e1624e5bb8b7a5ca946164c4e2ef files/digest-tap-reverbed-0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGs2gj5H05b2HAEkRAoUeAJsEDdgUOTw4bZvd7W0hcctYacLl+QCfY28I
+U1brb5FdP3B8IfExWtDvRFI=
+=TezO
+-----END PGP SIGNATURE-----
