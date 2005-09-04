@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.5.ebuild,v 1.9 2005/06/18 16:42:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.5.ebuild,v 1.10 2005/09/04 12:23:41 cryos Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc-macos sparc x86"
 IUSE="maildir ncurses static doc pcre cap"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
@@ -49,7 +49,7 @@ src_compile() {
 
 	econf \
 		--bindir=/bin \
-		--libdir=/usr/lib \
+		--libdir=/usr/$(get_libdir) \
 		--enable-etcdir=/etc/zsh \
 		--enable-zshenv=/etc/zsh/zshenv \
 		--enable-zlogin=/etc/zsh/zlogin \
@@ -99,7 +99,7 @@ src_test() {
 src_install() {
 	einstall \
 		bindir=${D}/bin \
-		libdir=${D}/usr/lib \
+		libdir=${D}/usr/$(get_libdir) \
 		fndir=${D}/usr/share/zsh/${PV%_*}/functions \
 		sitefndir=${D}/usr/share/zsh/site-functions \
 		install.bin install.man install.modules \
