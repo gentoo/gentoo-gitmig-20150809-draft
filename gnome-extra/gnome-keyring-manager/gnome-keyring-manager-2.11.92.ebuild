@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.11.92.ebuild,v 1.2 2005/08/29 01:21:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-keyring-manager/gnome-keyring-manager-2.11.92.ebuild,v 1.3 2005/09/04 15:02:19 leonardop Exp $
 
 inherit gnome2
 
@@ -22,18 +22,12 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.8
 	>=dev-util/intltool-0.28
 	>=dev-util/pkgconfig-0.9
-	app-text/gnome-doc-utils"
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 USE_DESTDIR="1"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable static)"
-}
-
-src_unpack() {
-	unpack ${A}
-
-	gnome2_omf_fix ${S}/docs/Makefile.in
+	G2CONF="$(use_enable static) --disable-scrollkeeper"
 }
