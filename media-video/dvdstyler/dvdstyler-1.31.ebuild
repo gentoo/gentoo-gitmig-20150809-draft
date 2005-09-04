@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.4 2005/06/07 19:20:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.5 2005/09/04 02:03:41 dragonheart Exp $
 
 inherit eutils
 
@@ -33,28 +33,18 @@ RDEPEND="virtual/x11
 	sys-libs/zlib
 	app-cdr/dvd+rw-tools
 	virtual/cdrtools"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gcc
-	sys-devel/automake
 	>=sys-apps/sed-4"
 
 #	sys-devel/autoconf"
 #PDEPEND= kde? and gnome
 
-src_compile() {
-	# Propergate automake patch
-	autoconf
-	automake
-
-	econf || die "Failed to configure"
-	emake || die "Failed to make"
-}
-
-
 src_install() {
 	emake DESTDIR=${D} install || die "failed to install"
-	mv ${D}usr/share/docs ${D}usr/share/doc
+	rm ${D}usr/share/doc/${PN}/COPYING ${D}usr/share/doc/${PN}/INSTALL
 	mv ${D}usr/share/doc/${PN} ${D}usr/share/doc/${PF}
 
 	make_desktop_entry dvdstyler DVDStyler dvdstyler.png Application

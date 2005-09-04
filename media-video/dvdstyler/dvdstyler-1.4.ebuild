@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.40.ebuild,v 1.3 2005/06/08 08:28:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.4.ebuild,v 1.1 2005/09/04 02:03:41 dragonheart Exp $
 
 inherit eutils
 
-MY_P=DVDStyler-${PV/0/}
+MY_P=DVDStyler-${PV}
 
 DESCRIPTION="DVD filesystem Builder"
 HOMEPAGE="http://dvdstyler.sourceforge.net"
@@ -37,19 +37,9 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-	# Propagate automake patch
-	autoconf
-	automake
-
-	econf || die "Failed to configure"
-	emake || die "Failed to make"
-}
-
-
 src_install() {
 	make DESTDIR=${D} install || die "failed to install"
-	mv ${D}usr/share/docs ${D}usr/share/doc
+	rm ${D}usr/share/doc/${PN}/COPYING ${D}usr/share/doc/${PN}/INSTALL
 	mv ${D}usr/share/doc/${PN} ${D}usr/share/doc/${PF}
 
 	make_desktop_entry dvdstyler DVDStyler dvdstyler.png Application
