@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f76a2701ed8bf335791ce79c4e07cb86 ChangeLog 925
 MD5 5b761d9226128cf4145865afb263e564 gradio-1.0.1.ebuild 673
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 19e9fb238c3e6fb321cc0580dfb8e15c files/digest-gradio-1.0.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGtQoj5H05b2HAEkRAudCAJ4mXvkLyLFZDjFtM8V2c+TP8AfoCQCfVbGL
+NEqsiwiNm8CQSRPkzW46XTo=
+=1Vk5
+-----END PGP SIGNATURE-----

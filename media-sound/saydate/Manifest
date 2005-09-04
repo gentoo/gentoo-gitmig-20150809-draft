@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 256e2ef6c0211acbd7b98bf5da491251 ChangeLog 1060
 MD5 d7b97cc999ea18e4ee3cde66ba689b5e saydate-0.3.0.ebuild 958
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 c4baaa6336b4a210aca4200e1a51afad files/digest-saydate-0.3.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGtTOj5H05b2HAEkRAp7MAJ969jbXlIy8QHvyq8q2uye4dyWVIwCgj4P0
+aH2jPBwfRAgpDsRqTfuG770=
+=tK7m
+-----END PGP SIGNATURE-----
