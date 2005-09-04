@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.104 2005/08/07 06:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.105 2005/09/04 06:27:36 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -138,7 +138,7 @@ EOF
 games_pkg_setup() {
 	enewgroup "${GAMES_GROUP}" 35
 	[[ ${GAMES_USER} != "root" ]] \
-		&& enewuser "${GAMES_USER}" 35 /bin/false /usr/games "${GAMES_GROUP}"
+		&& enewuser "${GAMES_USER}" 35 -1 /usr/games "${GAMES_GROUP}"
 	[[ ${GAMES_USER_DED} != "root" ]] \
 		&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 
