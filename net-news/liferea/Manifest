@@ -6,11 +6,9 @@ MD5 9245e9b948b5835643bccc15d92520a8 liferea-0.9.7a.ebuild 1648
 MD5 ff24e0c0f046c7c96a50f0bcc39e5e28 liferea-0.9.6.ebuild 757
 MD5 c10756261b814d4100664099a531ec08 liferea-0.9.3.ebuild 746
 MD5 9d15342caa6fd5c98c66bf3e54575ec8 liferea-0.9.5.ebuild 754
-MD5 f3b00c1dbcb3fd6d27b889bac7659100 liferea-0.9.2.ebuild 748
-MD5 b90b83c8ff3da8c6ba4cfb65c0bd2969 ChangeLog 6418
+MD5 eb106c4d04a3c3955bed267b44b190d7 ChangeLog 6530
 MD5 17fcd57ee01a46b7951c709fb6763c52 metadata.xml 255
 MD5 e79d04e2dcb1066bf83edf55b9b1e9f7 files/digest-liferea-0.9.7a 67
-MD5 947e9af5a6757cab51326a30803e3fab files/digest-liferea-0.9.2 66
 MD5 89a8546ee1cbe401cbbd5c8441eecea4 files/digest-liferea-0.9.3 66
 MD5 321c3cad9efc8895e374795b3d816062 files/digest-liferea-0.9.4 66
 MD5 734099ebdef506d5bef9b2d24fa02f51 files/digest-liferea-0.9.5 66
@@ -18,7 +16,7 @@ MD5 ca0f3d49b323b6401d4b75e56fb151fe files/digest-liferea-0.9.6 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGvQzehlBotwFZuQRAr91AJ9MAplwEYscU8meo4IJGPkV0eWMOgCfZHGk
-RmqxzRku83lOFy54CRC/xCI=
-=db00
+iD8DBQFDGvaLehlBotwFZuQRApcQAJwJvRfwtQJ31po9auCedHfLHHiTjQCfYeXC
+Bi7m+EMqyQyxfqkzQkmt/E4=
+=lYwG
 -----END PGP SIGNATURE-----
