@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce9f075927559a23b751e48dc1793c83 ChangeLog 3012
 MD5 e14b7feb02fb25f73e97c668fe52f024 ripperx-2.6.1.ebuild 1146
 MD5 82ed07e65b0c7eaa143184f76e0c3d32 ripperx-2.6.4.ebuild 1115
@@ -9,3 +12,10 @@ MD5 89f653a43ad3b4ec7559ff31bcbe361e files/ripperx-2.6.1-gcc34.patch 1886
 MD5 d9b642d70de10a941fc7db96fa760734 files/ripperx-2.3-gcc34.patch 1601
 MD5 b15842d5d282af9b7f9da313c9a6a1f4 files/ripperx-2.6.4-wrapper 515
 MD5 e7b366801eb77e3f9ce37e94c38f3921 files/digest-ripperx-2.3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGtIxj5H05b2HAEkRAl1rAJ0a+qhkc5PZshbqDN/AJdJjokqRiACePnmF
+JLmY/kX6DWnvlMWKSG+nACE=
+=jIVv
+-----END PGP SIGNATURE-----
