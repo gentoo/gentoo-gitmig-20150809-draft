@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1-r1.ebuild,v 1.6 2005/05/03 19:45:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1-r1.ebuild,v 1.7 2005/09/04 00:06:30 flameeyes Exp $
 
 IUSE=""
 
@@ -40,5 +40,5 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR=${D} libdir=`xmms-config --input-plugin-dir` install || die
-	dodoc AUTHORS COPYING NEWS README
+	dodoc AUTHORS NEWS README
 }
