@@ -1,4 +1,6 @@
-MD5 fc9466b332d2ac974440400f6ebbc6d7 ChangeLog 457
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 5c097fdbd6f5bddf41e08eb078e28ff0 transcend-0.3.ebuild 1273
 MD5 a8bf3103fbaf860d6c49efbc359d4f3b transcend-0.2.ebuild 1333
+MD5 763728262c768a9257ff6d384c820857 ChangeLog 587
+MD5 87d8b99a6ac1e0121cf90143601d8aa0 files/digest-transcend-0.3 77
 MD5 bc06eaad665cd403a40c948ab56bb7c1 files/digest-transcend-0.2 83
