@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksuui
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksuui/ChangeLog,v 1.4 2005/07/16 08:35:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksuui/ChangeLog,v 1.5 2005/09/04 05:22:05 dragonheart Exp $
+
+  04 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  -libgksuui-1.0.3.ebuild, libgksuui-1.0.6.ebuild:
+  cleanout and QA fixes. Hopefully fixes bug #92707
 
 *libgksuui-1.0.6 (16 Jul 2005)
 
