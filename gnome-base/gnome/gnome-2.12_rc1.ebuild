@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.12_rc1.ebuild,v 1.1 2005/09/04 00:45:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.12_rc1.ebuild,v 1.2 2005/09/04 14:20:51 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -16,14 +16,12 @@ IUSE="accessibility cdr dvdr hal"
 
 S=${WORKDIR}
 
-# Work in progress. Please check out the missing dependencies; once you commit
-# new ebuilds that satisfy any of them, uncomment the relevant lines.
 RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.8.1
 	>=x11-libs/gtk+-2.8.2
 	>=dev-libs/atk-1.10.1
-	>=x11-libs/pango-1.10.0
+	>=x11-libs/pango-1.10
 
 	>=dev-libs/libxml2-2.6.20
 	>=dev-libs/libxslt-1.1.14
@@ -57,7 +55,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/control-center-2.11.92
 
 	>=gnome-base/eel-2.11.92
-	>=gnome-base/nautilus-2.11.91
+	>=gnome-base/nautilus-2.11.92
 
 	>=media-libs/gstreamer-0.8.10
 	>=media-libs/gst-plugins-0.8.10
@@ -68,18 +66,18 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-gfx/eog-2.11.92
 
 	>=www-client/epiphany-1.7.5
-	>=app-arch/file-roller-2.11.91
+	>=app-arch/file-roller-2.11.92
 	>=gnome-extra/gcalctool-5.6.28
 
 	>=gnome-extra/gconf-editor-2.11.92
 	>=gnome-base/gdm-2.8.0.3
 	>=app-editors/gedit-2.11.92
 
-	>=app-text/evince-0.4.0
+	>=app-text/evince-0.3.4
 
 	>=gnome-base/gnome-desktop-2.11.92
 	>=gnome-base/gnome-session-2.11.91
-	>=gnome-base/gnome-applets-2.11.93
+	>=gnome-base/gnome-applets-2.11.92.1
 	>=gnome-base/gnome-panel-2.11.92
 	>=gnome-base/gnome-menus-2.11.92
 	>=x11-themes/gnome-icon-theme-2.11.92
@@ -119,13 +117,12 @@ RDEPEND="!gnome-base/gnome-core
 	cdr? ( >=gnome-extra/nautilus-cd-burner-2.11.7 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.11.7 )
 
-	hal? ( >=gnome-base/gnome-volume-manager-1.3.2 )"
+	hal? ( >=gnome-base/gnome-volume-manager-1.3.2 )
 
-RDEPEND="${RDEPEND}
 	>=gnome-extra/libgtkhtml-3.7.7
 	>=mail-client/evolution-2.3.8
 	>=gnome-extra/evolution-data-server-1.3.8
-	>=gnome-extra/evolution-webcal-2.4.0
+	>=gnome-extra/evolution-webcal-2.4
 	>=gnome-extra/evolution-exchange-2.3.8
 
 	>=net-misc/vino-2.11.92
@@ -137,11 +134,11 @@ RDEPEND="${RDEPEND}
 		>=gnome-extra/libgail-gnome-1.1.1
 		>=gnome-base/gail-1.8.4
 		>=gnome-extra/at-spi-1.6.4
-		>=app-accessibility/dasher-3.2.17
+		>=app-accessibility/dasher-3.2.16
 		>=app-accessibility/gnome-mag-0.12.1
 		>=app-accessibility/gnome-speech-0.3.7
 		>=app-accessibility/gok-1.0.5
-		>=app-accessibility/gnopernicus-0.11.5 )"
+		>=app-accessibility/gnopernicus-0.11.4 )"
 
 # Development tools
 #   scrollkeeper
