@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.16 2005/08/13 02:55:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.17 2005/09/04 14:56:32 blubb Exp $
+
+  04 Sep 2005; Simon Stelling <blubb@gentoo.org> emboss-3.0.0.ebuild:
+  added ~amd64 keyword
 
   13 Aug 2005; Olivier Fisette <ribosome@gentoo.org> emboss-3.0.0.ebuild,
   emboss-2.10.0.ebuild:
