@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/knetscan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.12 2005/08/07 13:02:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.13 2005/09/04 22:51:19 vanquirius Exp $
+
+  04 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/knetscan-1.0-desktop.diff, knetscan-1.0.ebuild:
+  Patching up so that knetscan shows in the Internet menu and not in lost and
+  found. Fixes bug 104835. Thanks to <pinihadad@optonline.net>.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> knetscan-1.0.ebuild:
   Stable on ppc.
