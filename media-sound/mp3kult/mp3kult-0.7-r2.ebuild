@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/mp3kult-0.7-r2.ebuild,v 1.1 2005/07/11 20:22:07 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3kult/mp3kult-0.7-r2.ebuild,v 1.2 2005/09/04 10:38:22 flameeyes Exp $
 
 IUSE=""
 
@@ -35,7 +35,7 @@ src_compile() {
 	addwrite "${QTDIR}/etc/settings"
 
 	# things that should access the real homedir
-	[ -d "$REALHOME/.ccache" ] && ln -sf "$REALHOME/.ccache" "$HOME/"
+	[[ -d "$REALHOME/.ccache" ]] && ln -sf "$REALHOME/.ccache" "$HOME/"
 
 	export LDFLAGS="-lssl"
 	econf || die
@@ -44,5 +44,5 @@ src_compile() {
 
 src_install () {
 	einstall || die
-	dodoc ABOUT-NLS AUTHORS COPYING INSTALL MANUAL NEWS README
+	dodoc AUTHORS MANUAL NEWS README
 }
