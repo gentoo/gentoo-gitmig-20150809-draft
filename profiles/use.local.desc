@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1427 2005/09/03 20:51:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1428 2005/09/04 03:01:00 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -20,7 +20,8 @@ app-admin/diradm:irixpasswd - Support for storing seperate IRIX passwords
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
-app-admin/testdisk:reiserfs - include reiserfs capabilities
+app-admin/testdisk:reiserfs - include reiserfs reading ability
+app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/torsmo:seti - include seti monitoring capabilities if the correct config is edited ~/.torsmorc
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-arch/pdv:nomotif - Disable motif frontend.
