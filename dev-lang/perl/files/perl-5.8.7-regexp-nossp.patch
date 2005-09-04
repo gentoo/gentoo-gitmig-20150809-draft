@@ -4,8 +4,8 @@
  esac
  
      : Can we perhaps use $ansi2knr here
-+    [[ $file == regcomp ]] && export ccflags="${ccflags} -fno-stack-protector"
-+    [[ $file == regexec ]] && export ccflags="${ccflags} -fno-stack-protector"
++    [ "x$file" = xregcomp ] && export ccflags="${ccflags} -fno-stack-protector"
++    [ "x$file" = xregexec ] && export ccflags="${ccflags} -fno-stack-protector"
      echo "$cc -c -DPERL_CORE $ccflags $optimize $warn"
      eval "$also "'"$cc -DPERL_CORE -c $ccflags $optimize $warn"'
  

@@ -4,14 +4,14 @@ Hash: SHA1
 MD5 d9dff60a26106a24dd9d315f82f0719d perl-5.8.7.ebuild 19097
 MD5 933d62fc4adab220ae0707bf6ba26f25 perl-5.8.6-r5.ebuild 17611
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9b04ba31756cb58e6d757ce1ea09c0ed ChangeLog 42168
+MD5 2e2c376f0953048ce02aa8081c7ebbb5 ChangeLog 42313
 MD5 ce442db939c59218a16be167f793b817 files/perl-uclibc.patch 573
 MD5 01af75daf3d222a668059e90d78a1f9d files/perl-nonblock.patch 400
 MD5 2bd41aec5e22962224dc9376e27bdde3 files/CAN-2005-0448-rmtree.patch 7629
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r5 64
 MD5 26a1e7c48c7f68f39db4262500f6a1d8 files/perl-5.8.7-tempfiles.patch 1007
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-picdl.patch 250
-MD5 ec653227d62631d790aed48ee7ccf3dd files/perl-5.8.7-regexp-nossp.patch 458
+MD5 528fa2521c530d5a47df32b663e629af files/perl-5.8.7-regexp-nossp.patch 460
 MD5 f98759a75347e0b54190850b8295c2cb files/perl-tempfiles.patch 2023
 MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-noksh.patch 611
 MD5 c5cc36940b2488a37c3dc2287f6e672c files/perl-5.8.6-tempfiles.patch 2115
@@ -29,7 +29,7 @@ MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-perldoc-emptydirs.patch 489
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGqC/jUHll2nfF60RAjKaAKDK4OrFj9Ga2tWA0SCM/s/W9Wo9pQCeKshV
-GtdlobQ083Flx5kG/iTYqjo=
-=ZLgu
+iD8DBQFDGu18jUHll2nfF60RAhLbAJ94DOoI36sC9ondFAfazvveZxEg9ACgsyoN
+QrmZBJZ7XA1TNI1vheI91DM=
+=lRi5
 -----END PGP SIGNATURE-----
