@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.7 2005/08/23 13:13:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.8 2005/09/04 13:03:12 ticho Exp $
+
+*postgrey-1.21-r1 (04 Sep 2005)
+
+  04 Sep 2005; Andrej Kacian <ticho@gentoo.org> files/postgrey.conf,
+  +files/postgrey.conf.new, files/postgrey.rc, +files/postgrey.rc.new,
+  +postgrey-1.21-r1.ebuild:
+  Add support for UNIX socket listening. Patch provided by Arnaud Launay <asl
+  at launay.org>, in bug #100733.
 
   23 Aug 2005; Andrej Kacian <ticho@gentoo.org> postgrey-1.21.ebuild:
   Use -1 for shell argument to enewuser. Bug #103421.

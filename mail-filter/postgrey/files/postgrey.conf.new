@@ -1,7 +1,3 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.conf,v 1.2 2005/09/04 13:03:12 ticho Exp $
-
 # Config file for /etc/init.d/postgrey
 
 # LISTEN TYPE
@@ -11,7 +7,7 @@ POSTGREY_TYPE="inet"
 
 # HOST
 #  What IP should postgrey bind to?
-#  Leave unchanged unless you know what are you doing.
+#  Leave unchanged unless you know what you are doing.
 #  (ignored if POSTGREY_TYPE is set to 'unix')
 POSTGREY_HOST="127.0.0.1"
 
@@ -22,6 +18,7 @@ POSTGREY_PORT="10030"
 
 # SOCKET
 #  Unix socket to listen on, if POSTGREY_TYPE is set to 'unix'.
+#  Leave unchanged unless you know what you are doing.
 #  (ignored if POSTGREY_TYPE is set to 'inet')
 POSTGREY_SOCKET="/var/spool/postfix/private/postgrey"
 

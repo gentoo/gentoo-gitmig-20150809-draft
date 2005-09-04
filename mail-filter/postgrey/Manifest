@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3b4063c8e7db588b82423e6790a3d383 ChangeLog 1220
+MD5 6da6e31065de530737b4f8645634658a postgrey-1.21-r1.ebuild 2114
+MD5 672ab0695d3fe555cb48575c60457b6a ChangeLog 1534
 MD5 97640b63104544cebd37ca40384a056b metadata.xml 304
 MD5 e55ff6309759aeea439124bf583fbda5 postgrey-1.21.ebuild 1925
-MD5 5370c321ee9c00814bce5054c6eabaa2 files/postgrey.rc 1113
+MD5 2197c50ab163af184389dbf781d6bc21 files/digest-postgrey-1.21-r1 64
+MD5 cd123dd9bc6ac57d7065d594fb43aa0a files/postgrey.rc 1903
 MD5 2197c50ab163af184389dbf781d6bc21 files/digest-postgrey-1.21 64
-MD5 0a8923ebd6b1d2679cb9b1bf046da061 files/postgrey.conf 1625
+MD5 00bcf1759cf327ce9641a803ec928e28 files/postgrey.rc.new 1907
+MD5 6dfb29bdf769bd95b3da9611e89e9e67 files/postgrey.conf.new 1882
+MD5 be9aa0c5ab50b82e7eb5c465e78abfb6 files/postgrey.conf 2057
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCyEiQlM6RnzZP+IRAuc5AJ0ZqKb7RB6rGSe3XFH40VL6V8dN/wCfRKCC
-E/TDVfkraDGr4gFwEYMfBD8=
-=/eBB
+iD8DBQFDGvCrQlM6RnzZP+IRAuMcAJ9CVPyhWdi1CJhZsCHRFlLXV0LOpQCeO8tQ
+/5HhH9TNOlRy1AoA69K+RWs=
+=kvwz
 -----END PGP SIGNATURE-----
