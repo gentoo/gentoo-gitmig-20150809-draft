@@ -1,6 +1,6 @@
-# Copyright 2004-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.19 2005/08/02 23:26:14 vericgar Exp $
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.20 2005/09/04 10:54:53 stuart Exp $
 
 ######
 ## Apache Common Variables
@@ -63,7 +63,7 @@ APACHE1_MODULES_CONFDIR="${APACHE1_CONFDIR}/modules.d"
 APACHE2_MODULES_CONFDIR="${APACHE2_CONFDIR}/modules.d"
 
 ####
-## APACHE1_VHOSTDIR, APACHE2_VHOSTDIR
+## APACHE1_MODULES_VHOSTDIR, APACHE2_MODULES_VHOSTDIR
 ##
 ## Paths where virtual host configuration files are kept
 ####
@@ -91,14 +91,55 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 APACHE1_DEPEND="=net-www/apache-1*"
 APACHE2_DEPEND=">=net-www/apache-2.0.54-r10"
 
-
 ####
 ## APACHE_DEPEND
 ##
 ## Dependency magic based on useflags to use the right DEPEND
 ####
 
-APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
+NEED_APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
+WANT_APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( apache? ( ${APACHE1_DEPEND} ) )"
+
+####
+# uses_apache1()
+#
+# sets up all of the environment variables required by an apache1 module
+####
+
+uses_apache1() {
+	APACHE_VERSION='1'
+	APXS="$APXS1"
+	USE_APACHE2=
+	APACHECTL="${APACHECTL1}"
+	APACHE_BASEDIR="${APACHE1_BASEDIR}"
+	APACHE_CONFDIR="${APACHE1_CONFDIR}"
+	APACHE_MODULES_CONFDIR="${APACHE1_MODULES_CONFDIR}"
+	APACHE_VHOSTSDIR="${APACHE1_VHOSTSDIR}"
+	APACHE_MODULESDIR="${APACHE1_MODULESDIR}"
+}
+
+####
+# uses_apache2()
+#
+# sets up all of the environment variables required by an apache2 module
+####
+
+uses_apache2() {
+	APACHE_VERSION='2'
+	USE_APACHE2=2
+	APXS="$APXS2"
+	APACHECTL="${APACHECTL2}"
+	APACHE_BASEDIR="${APACHE2_BASEDIR}"
+	APACHE_CONFDIR="${APACHE2_CONFDIR}"
+	APACHE_MODULES_CONFDIR="${APACHE2_MODULES_CONFDIR}"
+	APACHE_VHOSTSDIR="${APACHE2_VHOSTSDIR}"
+	APACHE_MODULESDIR="${APACHE2_MODULESDIR}"
+}
+
+doesnt_use_apache() {
+	APACHE_VERSION='0'
+	USE_APACHE=
+}
 
 ####
 ## need_apache1
@@ -143,27 +184,26 @@ need_apache() {
 	debug-print-function need_apache
 
 	IUSE="${IUSE} apache2"
-	DEPEND="${DEPEND} ${APACHE_DEPEND}"
-	RDEPEND="${RDEPEND} ${APACHE_DEPEND}"
+	DEPEND="${DEPEND} ${NEED_APACHE_DEPEND}"
+	RDEPEND="${RDEPEND} ${NEED_APACHE_DEPEND}"
 	if useq apache2; then
-		APACHE_VERSION='2'
-		USE_APACHE2=2
-		APXS="$APXS2"
-		APACHECTL="${APACHECTL2}"
-		APACHE_BASEDIR="${APACHE2_BASEDIR}"
-		APACHE_CONFDIR="${APACHE2_CONFDIR}"
-		APACHE_MODULES_CONFDIR="${APACHE2_MODULES_CONFDIR}"
-		APACHE_VHOSTSDIR="${APACHE2_VHOSTSDIR}"
-		APACHE_MODULESDIR="${APACHE2_MODULESDIR}"
+		uses_apache2
 	else
-		APACHE_VERSION='1'
-		APXS="$APXS1"
-		USE_APACHE2=
-		APACHECTL="${APACHECTL1}"
-		APACHE_BASEDIR="${APACHE1_BASEDIR}"
-		APACHE_CONFDIR="${APACHE1_CONFDIR}"
-		APACHE_MODULES_CONFDIR="${APACHE1_MODULES_CONFDIR}"
-		APACHE_VHOSTSDIR="${APACHE1_VHOSTSDIR}"
-		APACHE_MODULESDIR="${APACHE1_MODULESDIR}"
+		uses_apache1
+	fi
+}
+
+want_apache() {
+	debug-print-function want_apache
+
+	IUSE="${IUSE} apache apache2"
+	DEPEND="${DEPEND} ${WANT_APACHE_DEPEND}"
+	RDEPEND="${DEPEND} ${WANT_APACHE_DEPEND}"
+	if useq apache2 ; then
+		uses_apache2
+	elif useq apache ; then
+		uses_apache1
+	else
+		doesnt_use_apache
 	fi
 }

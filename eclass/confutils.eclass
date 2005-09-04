@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.17 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.18 2005/09/04 10:54:53 stuart Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -12,7 +12,9 @@
 #
 # ========================================================================
 
-IUSE="sharedext"
+if [[ ${EBUILD_SUPPORTS_SHAREDEXT} == 1 ]]; then
+	IUSE="sharedext"
+fi
 
 # ========================================================================
 
@@ -28,11 +30,58 @@ IUSE="sharedext"
 # this eclass first
 
 confutils_init () {
-	if useq sharedext ; then
+	if [[ ${EBUILD_SUPPORTS_SHAREDEXT} == 1 ]] && useq sharedext ; then
 		shared="=shared"
 	else
 		shared=
 	fi
+}
+
+# ========================================================================
+# confutils_require_any ()
+#
+# Use this function to ensure one or more of the specified USE flags have
+# been enabled
+#
+# $1    - message to output everytime a flag is found
+# $2    - message to output everytime a flag is not found
+# $3 .. - flags to check
+#
+
+confutils_require_any() {
+	success_msg="$1"
+	shift
+	fail_msg="$1"
+	shift
+
+	required_flags="$@"
+	success=0
+
+	while [[ -n $1 ]]; do
+		if useq $1 ; then
+			einfo "$success_msg $1"
+			success=1
+		else
+			ewarn "$fail_msg $1"
+		fi
+		shift
+	done
+
+	# did we find what we are looking for?
+	if [[ $success == 1 ]]; then
+		return
+	fi
+
+	# if we get here, then none of the required USE flags are switched on
+
+	echo
+	eerror "You *must* enable one or more of the following USE flags:"
+	eerror "  $required_flags"
+	eerror
+	eerror "You can do this by enabling these flags in /etc/portage/package.use:"
+	eerror "    =$CATEGORY/$PN-$PVR $required_flags"
+	eerror
+	die "Missing USE flags"
 }
 
 # ========================================================================
@@ -377,5 +426,63 @@ confutils_warn_about_missing_deps ()
 		ewarn "fail to compile."
 		ewarn
 		sleep 5
+	fi
+}
+
+# ========================================================================
+# enable_extension_enable_built_with ()
+#
+# This function is like use_enable(), except that it knows about
+# enabling modules as shared libraries, and it supports passing
+# additional data with the switch
+#
+# $1    - pkg name
+# $2	- USE flag
+# $3	- extension name
+# $4	- additional setting for configure
+# $5	- alternative message
+
+enable_extension_enable_built_with () {
+	local msg=$3
+	[[ -n $5 ]] && msg="$5"
+
+	local param
+	[[ -n $4 ]] && msg="=$4"
+
+	if built_with_use $1 $2 ; then
+		my_conf="${my_conf} --enable-$3${param}"
+		einfo "  Enabling $msg"
+	else
+		my_conf="${my_conf} --disable-$3"
+		einfo "  Disabling $msg"
+	fi
+}
+
+# ========================================================================
+# enable_extension_with_built_with ()
+#
+# This function is like use_enable(), except that it knows about
+# enabling modules as shared libraries, and it supports passing
+# additional data with the switch
+#
+# $1    - pkg name
+# $2	- USE flag
+# $3	- extension name
+# $4	- additional setting for configure
+# $5	- alternative message
+
+enable_extension_with_built_with () {
+	local msg=$3
+	[[ -n $5 ]] && msg="$5"
+
+	local param
+	[[ -n $4 ]] && param="=$4"
+
+	if built_with_use $1 $2 ; then
+		my_conf="${my_conf} --with-$3${param}"
+		einfo "  Enabling $msg"
+	else
+		my_conf="${my_conf} --disable-$3"
+		einfo "  Disabling $msg"
 	fi
 }
