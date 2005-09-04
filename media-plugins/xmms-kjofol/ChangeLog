@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-kjofol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/ChangeLog,v 1.9 2005/08/07 13:03:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/ChangeLog,v 1.10 2005/09/04 10:26:52 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-kjofol-0.95.ebuild:
+  Don't install COPYING file.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   xmms-kjofol-0.95.ebuild:

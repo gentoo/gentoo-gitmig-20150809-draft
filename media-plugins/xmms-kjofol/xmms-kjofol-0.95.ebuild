@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.12 2005/08/07 13:03:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.13 2005/09/04 10:26:52 flameeyes Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_install() {
 	dobin kj
 	dodir /usr/share/xmms/kjofol
 	cp *.zip ${D}usr/share/xmms/kjofol
-	dodoc readme.txt COPYING
+	dodoc readme.txt
 }
 
 pkg_postinst() {

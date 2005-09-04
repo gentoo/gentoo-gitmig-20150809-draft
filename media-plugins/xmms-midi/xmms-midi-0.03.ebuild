@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.16 2005/08/07 13:05:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.17 2005/09/04 10:26:14 flameeyes Exp $
 
 IUSE=""
 
@@ -27,7 +27,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} libdir=`xmms-config --input-plugin-dir` install || die
-	dodoc AUTHORS COPYING NEWS README
+	dodoc AUTHORS NEWS README
 }
 
 pkg_postinst() {
