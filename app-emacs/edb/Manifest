@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18f6fb5aed64f53af84f84bf20e00ec0 edb-1.25.ebuild 837
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 fc446cff35b6eab13707d007be440bb5 ChangeLog 416
+MD5 12292630e6c831a9d6d6e1127d06a93f files/digest-edb-1.25 60
+MD5 12928636ce1a0d1f9211f311945a1f15 files/50edb-gentoo.el 95
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGlOPyiNZaEAZA+ARAu4XAJ4vJJ/XGzOz/aLwDzf0sr5FkvTfyACfWnX0
+B6ksKlKPH91LqlzQaG+7qgM=
+=fqxx
+-----END PGP SIGNATURE-----

@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/edb
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/edb/ChangeLog,v 1.1 2005/09/04 01:51:43 mkennedy Exp $
+
+*edb-1.25 (04 Sep 2005)
+
+  04 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> +files/50edb-gentoo.el,
+  +metadata.xml, +edb-1.25.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
