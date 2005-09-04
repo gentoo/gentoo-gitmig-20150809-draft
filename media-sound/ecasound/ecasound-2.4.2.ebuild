@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.2.ebuild,v 1.1 2005/08/10 20:54:34 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.4.2.ebuild,v 1.2 2005/09/04 10:37:58 flameeyes Exp $
 
 IUSE="alsa arts audiofile debug jack libsamplerate mikmod ncurses oggvorbis oss pic python ruby sndfile"
 
@@ -95,7 +95,7 @@ src_install () {
 		cd ..
 	fi
 
-	dodoc INSTALL FAQ BUGS COPYING NEWS README TODO
+	dodoc FAQ BUGS NEWS README TODO
 	dohtml `find Documentation -name "*.html"`
 	dodoc Documentation/edi-list.txt
 }

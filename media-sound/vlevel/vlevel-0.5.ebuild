@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5.ebuild,v 1.8 2005/07/25 19:19:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5.ebuild,v 1.9 2005/09/04 10:39:00 flameeyes Exp $
 
 IUSE=""
 
@@ -28,7 +28,7 @@ src_install() {
 
 	einstall PREFIX="${D}/usr/bin/" LADSPA_PREFIX="${D}/usr/$(get_libdir)/ladspa/" || die
 
-	dodoc COPYING INSTALL README TODO docs/notes.txt docs/technical.txt || die
+	dodoc README TODO docs/notes.txt docs/technical.txt || die
 
 	dodir "/usr/share/doc/${P}/examples" || die
 	cp utils/* "${D}/usr/share/doc/${P}/examples/" || die

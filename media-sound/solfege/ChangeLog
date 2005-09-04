@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/solfege
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.10 2004/12/19 06:45:07 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.11 2005/09/04 10:47:10 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> solfege-2.0.5.ebuild,
+  solfege-2.0.6.ebuild:
+  Don't install COPYING and INSTALL files.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   solfege-2.0.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.11.ebuild,v 1.4 2005/04/01 21:12:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.11.ebuild,v 1.5 2005/09/04 10:34:44 flameeyes Exp $
 
 IUSE=""
 
@@ -35,5 +35,5 @@ src_compile() {
 src_install() {
 	dobin id3v2
 	doman id3v2.1
-	dodoc COPYING INSTALL README
+	dodoc README
 }

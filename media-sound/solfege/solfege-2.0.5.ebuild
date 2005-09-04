@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.5.ebuild,v 1.5 2004/11/19 22:55:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.5.ebuild,v 1.6 2005/09/04 10:47:10 flameeyes Exp $
 
 IUSE="gtkhtml gnome oss"
 
@@ -71,6 +71,6 @@ src_install() {
 #	make DESTDIR=${D} install || die "Installation failed."
 	einstall || die "Installation failed."
 	rm -f ${D}usr/bin/${PN}${PV}
-	dodoc AUTHORS changelog COPYING FAQ INSTALL README TODO
+	dodoc AUTHORS changelog FAQ README TODO
 }
 

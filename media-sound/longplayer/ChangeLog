@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/longplayer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/ChangeLog,v 1.8 2004/09/14 16:38:37 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/ChangeLog,v 1.9 2005/09/04 10:42:31 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  longplayer-0.99.2.ebuild, longplayer-0.99.3.ebuild:
+  Don't install COPYING and INSTALL files.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   longplayer-0.99.3.ebuild:
