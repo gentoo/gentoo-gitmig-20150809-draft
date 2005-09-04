@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.2.4.ebuild,v 1.6 2004/07/01 07:52:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.2.4.ebuild,v 1.7 2005/09/04 11:02:21 flameeyes Exp $
 
 IUSE=""
 
@@ -15,12 +15,7 @@ KEYWORDS="x86"
 DEPEND=">=x11-libs/gtk+-2.0
 	virtual/libc"
 
-src_compile() {
-	econf || die "configure failed"
-	emake || die
-}
-
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING REAME NEWS
+	dodoc AUTHORS REAME NEWS
 }
