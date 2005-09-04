@@ -1,19 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.3 2005/09/01 17:56:16 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.4 2005/09/04 13:31:53 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3.20040120
-if [[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]; then
-	sawfishsnapshot=true
-else
-	sawfishsnapshot=false
-fi
+[[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
+(( snapshot = !$? ))
 
 inherit eutils gnuconfig
 
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
-if $sawfishsnapshot; then
+if (( snapshot )); then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 else
 	SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
@@ -33,7 +30,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	nls? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}"
 
-if $sawfishsnapshot; then
+if (( snapshot )); then
 	DEPEND="${DEPEND}
 		sys-devel/automake
 		sys-devel/autoconf"
@@ -54,7 +51,7 @@ src_compile() {
 	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
 
 	# If this is a snapshot then we need to create the autoconf stuff
-	if $sawfishsnapshot; then
+	if (( snapshot )); then
 		aclocal || die "aclocal failed"
 		autoconf || die "autoconf failed"
 	fi
@@ -102,10 +99,4 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog DOC FAQ NEWS README THANKS TODO OPTIONS
-
-	# Add to Gnome CC's Window Manager list
-	if use gnome; then
-		insinto /usr/share/gnome/wm-properties
-		doins "${S}/Sawfish.desktop"
-	fi
 }
