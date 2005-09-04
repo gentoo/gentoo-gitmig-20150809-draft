@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef2988ad708c30c3ad85d6d0400f2164 ChangeLog 1695
 MD5 d0e209eda595330bde03d065d31461cd xmms-dspectral-1.2.1.ebuild 968
 MD5 57318a7141783ed74f76720522302faf xmms-dspectral-1.2.ebuild 939
@@ -6,3 +9,10 @@ MD5 93c9a3ef8e20a698da81b9df5d6cd15e files/digest-xmms-dspectral-1.2.1 67
 MD5 165bef5a4a02af4b850331ee9f8623ea files/dspectral-v1.2.1-destdir.patch 539
 MD5 af0e88bb6fcfe3f2bcc2735d8cb75db1 files/digest-xmms-dspectral-1.2 64
 MD5 f16b8fdaca5d4ed44f56c5a992b661c8 files/dspectral-1.2-destdir.patch 491
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGsuWj5H05b2HAEkRAtDKAKCfNek2S6Jt/WZE0uv0KL0Wg6XMcQCfeSwo
+gRwwJi5NW/OVjrQMrWxAjAA=
+=2fvt
+-----END PGP SIGNATURE-----
