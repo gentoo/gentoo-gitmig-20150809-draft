@@ -1,0 +1,35 @@
+diff -ruN php-5.0.0RC3.orig/ext/soap/soap.c php-5.0.0RC3/ext/soap/soap.c
+--- php-5.0.0RC3.orig/ext/soap/soap.c	2004-06-22 19:35:59.801348936 +0300
++++ php-5.0.0RC3/ext/soap/soap.c	2004-06-29 13:39:00.506820928 +0300
+@@ -1341,16 +1341,21 @@
+ 		soap_obj = NULL;
+ #if HAVE_PHP_SESSION
+ 		/* If persistent then set soap_obj from from the previous created session (if available) */
++		char soapname[32+sizeof("_bogus_session_name")]; //Now we use  max 32 chars from class name, must be overwriten with dynamic allocation with exact length!!
+ 		if (service->soap_class.persistance == SOAP_PERSISTENCE_SESSION) {
+ 			zval **tmp_soap;
+ 
++			bzero(soapname,32+sizeof("_bogus_session_name"));
++                        strncpy(soapname,service->soap_class.ce->name,32);
++                        strcat(soapname,"_bogus_session_name");
++
+ 			if (PS(session_status) != php_session_active &&
+ 			    PS(session_status) != php_session_disabled) {
+ 				php_session_start(TSRMLS_C);
+ 			}
+ 
+ 			/* Find the soap object and assign */
+-			if (zend_hash_find(Z_ARRVAL_P(PS(http_session_vars)), "_bogus_session_name", sizeof("_bogus_session_name"), (void **) &tmp_soap) == SUCCESS &&
++			if (zend_hash_find(Z_ARRVAL_P(PS(http_session_vars)), soapname, sizeof(soapname), (void **) &tmp_soap) == SUCCESS &&
+ 			    Z_TYPE_PP(tmp_soap) == IS_OBJECT &&
+ 			    Z_OBJCE_PP(tmp_soap) == service->soap_class.ce) {
+ 				soap_obj = *tmp_soap;
+@@ -1432,7 +1437,7 @@
+ 			/* If session then update session hash with new object */
+ 			if (service->soap_class.persistance == SOAP_PERSISTENCE_SESSION) {
+ 				zval **tmp_soap_pp;
+-				if (zend_hash_update(Z_ARRVAL_P(PS(http_session_vars)), "_bogus_session_name", sizeof("_bogus_session_name"), &tmp_soap, sizeof(zval *), (void **)&tmp_soap_pp) == SUCCESS) {
++				if (zend_hash_update(Z_ARRVAL_P(PS(http_session_vars)), soapname, sizeof(soapname), &tmp_soap, sizeof(zval *), (void **)&tmp_soap_pp) == SUCCESS) {
+ 					soap_obj = *tmp_soap_pp;
+ 				}
+ 			} else {
