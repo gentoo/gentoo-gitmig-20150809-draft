@@ -1,4 +1,16 @@
-MD5 da6cae843e5696aa243a4e90c7ea5356 ChangeLog 498
-MD5 c7339df59a38ba2a7d6dacbf32e74898 metadata.xml 372
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c9f211bb19df38a34ad7e51f6405e7f1 pista-0.62b.ebuild 783
+MD5 fd1e9481713b66c6ce29fed6e376806a ChangeLog 662
+MD5 c7339df59a38ba2a7d6dacbf32e74898 metadata.xml 372
+MD5 bac8cca9b96a6d7dd9d473bef15901bb pista-0.70.ebuild 794
 MD5 a085065c020599b7c2459901c83a6f67 files/digest-pista-0.62b 62
+MD5 681bfe4ed8bad50ece34389958f5b160 files/digest-pista-0.70 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGqpmmdTrptrqvGERAsKaAKCenVH7MXP5uOfcW5PA7VBQ+EJcrgCeKbnR
+gihMaUSuekkcTulRZuUffks=
+=KEZl
+-----END PGP SIGNATURE-----
