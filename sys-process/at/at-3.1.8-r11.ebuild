@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.1 2005/03/03 17:40:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.2 2005/09/04 07:28:29 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,6 +18,11 @@ DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.51"
 RDEPEND="virtual/libc
 	virtual/mta"
+
+pkg_setup() {
+	enewgroup at 25
+	enewuser at 25 -1 /var/spool/cron/atjobs at
+}
 
 src_unpack() {
 	unpack ${A}
