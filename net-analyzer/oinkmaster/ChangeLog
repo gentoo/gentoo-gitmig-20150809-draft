@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/oinkmaster
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.10 2005/07/19 15:32:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.11 2005/09/04 03:22:41 dragonheart Exp $
+
+  04 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/0.9-oinkmaster.conf.patch, -oinkmaster-0.9.ebuild,
+  -oinkmaster-1.0.ebuild, oinkmaster-1.1.ebuild, oinkmaster-1.2.ebuild:
+  url fix - bug #91953 thanks to Jonathan Halcrow. old versions removed.
+  stopped installing LICENSE and INSTALL files
 
   19 Jul 2005; David Holm <dholm@gentoo.org> oinkmaster-1.2.ebuild:
   Added to ~ppc.

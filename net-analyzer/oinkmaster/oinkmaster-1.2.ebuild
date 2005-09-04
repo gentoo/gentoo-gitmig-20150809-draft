@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-1.2.ebuild,v 1.2 2005/07/19 15:32:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-1.2.ebuild,v 1.3 2005/09/04 03:22:41 dragonheart Exp $
 
 inherit eutils
 
@@ -25,8 +25,7 @@ src_install() {
 		contrib/makesidex.pl contrib/addmsg.pl
 	use X && dobin contrib/oinkgui.pl
 
-	dodoc FAQ UPGRADING README README.win32 README.gui LICENSE INSTALL \
-		contrib/README.contrib
+	dodoc FAQ UPGRADING README README.win32 README.gui contrib/README.contrib
 	doman oinkmaster.1
 
 	insinto /etc
