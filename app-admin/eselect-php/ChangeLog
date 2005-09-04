@@ -1,0 +1,7 @@
+# ChangeLog for app-admin/eselect-php
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.1 2005/09/04 09:47:51 stuart Exp $
+
+  4 Sept 2005; <stuart@gentoo.org> ChangeLog:
+  Initial import
+
