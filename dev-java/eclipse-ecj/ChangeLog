@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.1 2005/08/24 21:39:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.2 2005/09/04 18:40:27 karltk Exp $
+
+*eclipse-ecj-3.1-r2 (04 Sep 2005)
+
+  04 Sep 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +eclipse-ecj-3.1-r2.ebuild:
+  Added updates from Joshua. Also forgot to mention that this stuff is
+  inspired by the of work Scott Carr <scarr@progbits.com> over at #80526.
 
 *eclipse-ecj-3.1 (24 Aug 2005)
 

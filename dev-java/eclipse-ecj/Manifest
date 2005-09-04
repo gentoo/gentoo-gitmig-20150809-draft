@@ -1,4 +1,6 @@
+MD5 59b429c57768530be5d1089acdb2a796 eclipse-ecj-3.1-r2.ebuild 971
 MD5 4c9a2107412441cf7a64141c9b4a9b19 eclipse-ecj-3.1.ebuild 706
-MD5 373665cdab1d32c06431c4e057738023 ChangeLog 650
+MD5 3d4be3c1802436ea01ba25f41171ef1d ChangeLog 918
 MD5 d8e6062d33f3f505c0ed609104623567 metadata.xml 475
 MD5 8ee9e012d802d00bfc325052848db7f8 files/digest-eclipse-ecj-3.1 75
+MD5 161703424f42912915dc4eb9f4c4428b files/digest-eclipse-ecj-3.1-r2 78
