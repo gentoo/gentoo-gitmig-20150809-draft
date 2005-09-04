@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.20 2005/08/20 09:45:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.21 2005/09/04 14:02:42 blubb Exp $
+
+  04 Sep 2005; Simon Stelling <blubb@gentoo.org>
+  +files/yafray-0.0.8-64bit.patch, +files/yafray-0.0.8-multilib.patch,
+  yafray-0.0.8.ebuild:
+  fixed evil ptr->int cast and made it multilib-strict aware
 
   15 Aug 2005; Luca Barbato <lu_zero@gentoo.org> ChangeLog:
   New version, thanks to Joshua Leach <leachj@cae.wisc.edu> for the ebuild

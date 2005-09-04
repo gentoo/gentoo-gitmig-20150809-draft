@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.8.ebuild,v 1.1 2005/08/20 09:45:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.8.ebuild,v 1.2 2005/09/04 14:02:42 blubb Exp $
 
-inherit eutils python
+inherit eutils python multilib
 
 DESCRIPTION="Yet Another Free Raytracer"
 HOMEPAGE="http://www.yafray.org/"
@@ -27,6 +27,10 @@ src_unpack() {
 	cd ${S}
 	libtoolize --copy --force
 	epatch ${FILESDIR}/${P}-scons.patch
+	epatch ${FILESDIR}/${P}-64bit.patch
+	if [[ $(get_libdir) == "lib64" ]] ; then
+		epatch ${FILESDIR}/${P}-multilib.patch
+	fi
 	# Dirty hack for a dirty buildsystem.
 	sed -i -e "s:-O3:${CXXFLAGS} -fsigned-char:g" *-settings.py
 }
