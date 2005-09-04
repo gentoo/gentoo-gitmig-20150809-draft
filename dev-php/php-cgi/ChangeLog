@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.94 2005/07/24 05:30:08 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.95 2005/09/04 17:32:07 stuart Exp $
+
+  04 Sep 2005; Stuart Herbert <stuart@gentoo.org> -php-cgi-5.0.4.ebuild,
+  -php-cgi-5.1.0_beta.ebuild:
+  Removed obsolete version
 
   24 Jul 2005; Hardave Riar <hardave@gentoo.org> php-cgi-4.4.0.ebuild:
   Stable on mips, bug #97655.
