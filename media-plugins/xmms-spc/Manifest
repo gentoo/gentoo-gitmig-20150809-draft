@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8369401d1ec50381a074128d7ae47c22 ChangeLog 1775
+MD5 612188ac7abe873a3eb1877a8cafbcd8 ChangeLog 1886
+MD5 7e92931e6562c3dbb2fbc49e564b1410 xmms-spc-0.2.1-r1.ebuild 992
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 2bd58f92e66eed7304df13fd7e566386 xmms-spc-0.2.1-r1.ebuild 1001
 MD5 2398436193eb0bbad90b6062d8d09980 files/digest-xmms-spc-0.2.1-r1 66
-MD5 73f665e685e8e66c587a7ec694f1b05f files/xmms-spc-0.2.1-r1.patch 2905
 MD5 2244fa5e3f55c79a7b9d51e42ce24e8e files/xmms-spc-0.2.1-amd64.patch 408
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd9UFArHZZzCEUG0RApdGAJ4hruooATgOXlnqJNui5yEhdZOgIACeOXhr
-uD/wCXt/04o0PXrLmzbVVcc=
-=TvcH
------END PGP SIGNATURE-----
+MD5 73f665e685e8e66c587a7ec694f1b05f files/xmms-spc-0.2.1-r1.patch 2905
