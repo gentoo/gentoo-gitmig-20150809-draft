@@ -1,6 +1,14 @@
-MD5 9399ab3945e6ac09e623f8988bef8e74 ChangeLog 1933
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7ea3664b45c5ea25f8de25b77f7a7303 metadata.xml 2822
-MD5 b9f33fe2c6f40adb88671e00cf57afec evidence-0.9.8.20050220.ebuild 1939
 MD5 7ced1c86f5fa7c7c3e72eac8674e8d04 evidence-9999.ebuild 1929
-MD5 863b40df93562f322f5d10e1b54a5cde files/digest-evidence-0.9.8.20050220 77
+MD5 9399ab3945e6ac09e623f8988bef8e74 ChangeLog 1933
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-evidence-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGoSTgIKl8Uu19MoRAoXYAJ49nOz+7DnW+4ASYTul7Uv9ClIXegCfRYTA
+hsszX09OWUpjp74SoWvazcA=
+=7v4g
+-----END PGP SIGNATURE-----
