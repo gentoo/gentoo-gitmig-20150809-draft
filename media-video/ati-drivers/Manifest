@@ -1,26 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c88c67da46d96b117c86d62b13a0ba9f ChangeLog 19368
-MD5 52eb46bf05ae869c683b8c008241fa1e ati-drivers-8.14.13-r4.ebuild 7449
 MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
+MD5 eceaeaa90d5b81e7375437c11d32eeb4 ati-drivers-8.14.13-r2.ebuild 6609
+MD5 52eb46bf05ae869c683b8c008241fa1e ati-drivers-8.14.13-r4.ebuild 7449
 MD5 051d5addf50f621a98f81c5727c6b77c ati-drivers-8.16.20.ebuild 6181
+MD5 7f2243d4f2c74bbe758d92c8aa958c44 ChangeLog 19486
 MD5 119a53869af9554d3f190f7bed3aa1f3 ati-drivers-8.14.13-r3.ebuild 7611
-MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
-MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r4 157
-MD5 32c54a887820a2712b641217c3b54272 files/8.8.25-smp.patch 376
-MD5 0a9c95a134ef4f317240c54f62e9480e files/p1.patch 1120
-MD5 9ae27a9d7736cb6ce30b41ff384004d8 files/fglrx-2.6.12-inter_module_get.patch 1265
 MD5 0850638c4f5ac2466c793df428fc5d84 files/fglrx-2.6.12-pci_name.patch 2807
-MD5 f1b11573ad27da023fce7d7a67a37861 files/8.8.25-via-amd64.patch 1198
+MD5 32c54a887820a2712b641217c3b54272 files/8.8.25-smp.patch 376
+MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r4 157
 MD5 275238baa6d2db2b96bc8b98275a7928 files/fglrx-8.14.13-alt-2.6.12-agp.patch 2586
+MD5 f1b11573ad27da023fce7d7a67a37861 files/8.8.25-via-amd64.patch 1198
 MD5 73907ca81a7435350b4529ddaa7305d5 files/ioctl32.patch 368
-MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r3 157
+MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r2 157
+MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 MD5 ac17fe94be90be4ac158d26cd759884f files/digest-ati-drivers-8.16.20 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGiQMArHZZzCEUG0RAiAjAJ9JRxlihflO+nAf1YYMjxERNlI7aQCfcM8O
-itAI4dFDDpppl4vg1UipIDc=
-=N9Ht
------END PGP SIGNATURE-----
+MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r3 157
+MD5 9ae27a9d7736cb6ce30b41ff384004d8 files/fglrx-2.6.12-inter_module_get.patch 1265
+MD5 0a9c95a134ef4f317240c54f62e9480e files/p1.patch 1120
