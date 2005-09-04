@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/xmms-jess-2.9.1.ebuild,v 1.12 2004/10/07 03:18:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jess/xmms-jess-2.9.1.ebuild,v 1.13 2005/09/04 10:29:49 flameeyes Exp $
 
 IUSE=""
 
@@ -30,5 +30,5 @@ src_install () {
 
 	make DESTDIR="${D}" install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL README NEWS
+	dodoc AUTHORS ChangeLog README NEWS
 }

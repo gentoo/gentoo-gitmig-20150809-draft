@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/xmms-status-plugin-1.0.ebuild,v 1.8 2005/08/07 13:36:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/xmms-status-plugin-1.0.ebuild,v 1.9 2005/09/04 10:28:24 flameeyes Exp $
 
 IUSE="nls"
 
@@ -32,5 +32,5 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }

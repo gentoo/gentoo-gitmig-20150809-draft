@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/xmms-infopipe-1.3.ebuild,v 1.16 2005/07/21 14:12:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/xmms-infopipe-1.3.ebuild,v 1.17 2005/09/04 10:29:35 flameeyes Exp $
 
 IUSE=""
 
@@ -30,5 +30,5 @@ EOF
 src_install () {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-sid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.14 2005/04/07 14:36:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/ChangeLog,v 1.15 2005/09/04 10:31:05 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-sid-0.7.3.ebuild,
+  xmms-sid-0.7.4.ebuild, xmms-sid-0.8.0_beta8.ebuild,
+  xmms-sid-0.8.0_beta10.ebuild:
+  Don't install COPYING and INSTALL files.
 
   07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xmms-sid-0.8.0_beta10.ebuild:

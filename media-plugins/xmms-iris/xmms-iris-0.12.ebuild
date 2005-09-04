@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.12.ebuild,v 1.1 2005/03/29 08:51:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.12.ebuild,v 1.2 2005/09/04 10:29:07 flameeyes Exp $
 
 IUSE=""
 
@@ -31,5 +31,5 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO NEWS
+	dodoc AUTHORS ChangeLog README TODO NEWS
 }

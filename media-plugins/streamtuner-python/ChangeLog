@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-python
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/ChangeLog,v 1.9 2004/09/22 17:58:58 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/ChangeLog,v 1.10 2005/09/04 10:25:48 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  streamtuner-python-0.1.0.ebuild, streamtuner-python-0.1.2.ebuild:
+  Don't install COPYING and INSTALL files.
 
   22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-python-0.1.2.ebuild:

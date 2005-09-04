@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-local
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.13 2005/05/28 18:55:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.14 2005/09/04 10:27:59 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  streamtuner-local-0.4.0.ebuild:
+  Don't install COPYING and INSTALL files.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -streamtuner-local-0.2.1.ebuild, streamtuner-local-0.4.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-xiph
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-xiph/ChangeLog,v 1.8 2004/12/19 05:24:50 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-xiph/ChangeLog,v 1.9 2005/09/04 10:31:21 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  streamtuner-xiph-0.1.0.ebuild:
+  Don't install COPYING and INSTALL files.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-xiph-0.1.0.ebuild:
