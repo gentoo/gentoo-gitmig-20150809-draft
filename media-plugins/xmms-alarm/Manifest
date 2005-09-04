@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b99fe96f5cd208e3487291cf2cfbd754 xmms-alarm-0.3.5.ebuild 779
 MD5 cf5c067d0f026507978c1cca6a420c8f ChangeLog 2040
 MD5 b3a05832f19492fb8c45a8ab310016f2 xmms-alarm-0.3.6.ebuild 784
@@ -6,3 +9,10 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 2ba5b840605f2ac80eb924e3fef876c9 files/digest-xmms-alarm-0.3.3 68
 MD5 5c525b0a8f0bc98b8e0cdb0ada2b2f9a files/digest-xmms-alarm-0.3.5 68
 MD5 3cfce7c85732ac39e169d62b5a1a0215 files/digest-xmms-alarm-0.3.6 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGsSmj5H05b2HAEkRAgLZAKCMrqPMHdo6GXGeeNPnpgryQmVyKgCaAwl5
+ioc5NxgZHp+mddFHMqtDGj0=
+=AMc9
+-----END PGP SIGNATURE-----

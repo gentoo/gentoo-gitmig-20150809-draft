@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 97fae2e7bfa7c8f06402421ffec19b15 ChangeLog 1290
 MD5 f61288c5c7678112b0bb989b5fdde98d efxmms-0.0.3.ebuild 836
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 1589423e955785252d93bdcbd63619a3 files/digest-efxmms-0.0.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDGsWpj5H05b2HAEkRApw5AJ99BuVkGTQzPy7T1NzUm+O9l+zuBwCfUZRD
+FS8n1lLkQ6KntEJhTs+SaY0=
+=yIGb
+-----END PGP SIGNATURE-----
