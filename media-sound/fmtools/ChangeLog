@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fmtools
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.5 2005/03/29 02:11:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.6 2005/09/04 22:41:07 weeve Exp $
+
+  04 Sep 2005; Jason Wever <weeve@gentoo.org> fmtools-1.0.ebuild:
+  Changed -sparc keyword to ~sparc wrt bug #104809.
 
 *fmtools-1.0 (29 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/fmtools-1.0.ebuild,v 1.1 2005/03/29 02:11:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/fmtools-1.0.ebuild,v 1.2 2005/09/04 22:41:07 weeve Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.stanford.edu/~blp/fmtools/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 -ppc -sparc -alpha"
+KEYWORDS="-alpha ~amd64 -ppc ~sparc ~x86"
 
 DEPEND="virtual/libc"
 
