@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.6 2005/08/23 13:50:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.7 2005/09/04 02:14:27 soulse Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -70,7 +70,11 @@ src_unpack() {
 	fi
 
 	einfo "Regenerating autoconf/automake files"
-	autoreconf -f -i || die "autoreconf failed"
+	aclocal -I m4
+	autoheader
+	automake --add-missing --copy
+	autoconf
+	libtoolize --copy --force
 }
 
 src_compile() {
