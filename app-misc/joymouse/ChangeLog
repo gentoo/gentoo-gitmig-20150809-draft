@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/joymouse
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/ChangeLog,v 1.7 2005/07/21 17:20:35 dholm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/ChangeLog,v 1.8 2005/09/04 19:57:20 vapier Exp $
+
+*joymouse-0.4 (04 Sep 2005)
+
+  04 Sep 2005; Mike Frysinger <vapier@gentoo.org> -joymouse-0.3.ebuild,
+  +joymouse-0.4.ebuild:
+  Version bump.
 
   21 Jul 2005; David Holm <dholm@gentoo.org> joymouse-0.3.ebuild:
   Added to ~ppc.

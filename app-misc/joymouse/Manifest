@@ -1,4 +1,14 @@
-MD5 d0762032e8a02e8dabe554c4c5d36bbb ChangeLog 712
-MD5 ca9ccfd7f31ec462045373d25d1d8bf9 joymouse-0.3.ebuild 709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 8676e831bfae8a8fd4b5343065a3b32b files/digest-joymouse-0.3 64
+MD5 ef9582ee26782b62c706d16b667867d8 joymouse-0.4.ebuild 713
+MD5 e387605666e2d694a272ef750ef0d827 ChangeLog 855
+MD5 b0c2e1d682a10b7328a2e228df1b3ce5 files/digest-joymouse-0.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDG1HZgIKl8Uu19MoRApDnAJ9jwCutDaPKmYeKdUqU7Rn6jjjWcwCfTtCs
+ue3QmC0nf9gDZ1ya/NyQ800=
+=JCI6
+-----END PGP SIGNATURE-----
