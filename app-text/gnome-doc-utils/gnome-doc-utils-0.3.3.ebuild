@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.3.2.ebuild,v 1.1 2005/08/18 21:52:23 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.3.3.ebuild,v 1.1 2005/09/04 15:58:42 leonardop Exp $
 
 inherit python gnome2
 
@@ -18,14 +18,15 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/intltool"
+	>=dev-util/intltool-0.28
+	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
 USE_DESTDIR="1"
 
+
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-scrollkeeper"
+	G2CONF="--disable-scrollkeeper"
 }
 
 pkg_postinst() {
