@@ -4,8 +4,9 @@ Hash: SHA1
 MD5 fa4cb2988ff12c235c4bfb0b185376b3 baselayout-1.12.0_pre8.ebuild 18745
 MD5 63063133efc82df82db512614030ba19 baselayout-1.9.4-r6.ebuild 16993
 MD5 3d736b28ab78424e033c1ca3a4956cbf baselayout-1.11.13-r1.ebuild 18610
+MD5 2cc57e0e74e24f5e52e85cbdf10d3068 baselayout-1.12.0_pre8-r2.ebuild 18865
 MD5 4a13988749a413722a984974cc59d001 baselayout-1.12.0_pre8-r1.ebuild 18817
-MD5 9d6c57bc8b0798e771faba2cbe3c96b0 ChangeLog 62439
+MD5 3369923cc7c91fc9519e1bbb6f40cb71 ChangeLog 62704
 MD5 10e1b8881d42750dd6e8e7cf343ea999 baselayout-1.12.0_pre7-r1.ebuild 18852
 MD5 ff608e6800fc96bfde6ae7fa09c37b56 baselayout-1.11.13.ebuild 18604
 MD5 451f8ce496238c2fd0fa9fa2852ad16c baselayout-1.9.4-r7.ebuild 17999
@@ -17,6 +18,7 @@ MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r4 70
 MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 cac88e2e2f73778a4a4e79447d857c64 files/baselayout-1.11.12-swapon-quiet.patch 899
 MD5 f971d810119eb7f33deba5e540cab2e1 files/baselayout-1.11.12-is-net-fs.patch 903
+MD5 0f24c65f92bca9e5131d6ebd4ad6cfa0 files/digest-baselayout-1.12.0_pre8-r2 75
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
 MD5 e76b5eb42575a2c72397f4691f8e7826 files/baselayout-1.11.12-volume-order-etc-update.patch 628
 MD5 0f24c65f92bca9e5131d6ebd4ad6cfa0 files/digest-baselayout-1.12.0_pre8-r1 75
@@ -33,6 +35,7 @@ MD5 67882892030fed7383fe01d89f9539bd files/baselayout-1.11.12-runscript-boot.pat
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13 70
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r1 70
+MD5 caf4f58ffd12206e0cdf22834afceb4f files/baselayout-1.12.0_pre8-usr-remount-ro.patch 502
 MD5 ee24c3f2b233c4b4bb286e3fa8c833ed files/baselayout-1.11.12-exec-dev.patch 545
 MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-1.12.0_pre8-whitelist-fixes.patch 1236
 MD5 df9f21385df40467a0bff0b3d1e5285f files/baselayout-1.11.10-selinux-udev.patch 413
@@ -48,7 +51,7 @@ MD5 6d5643e0857fc0f32f026e33d453c0c8 files/digest-baselayout-1.12.0_pre7-r1 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGNqL1ZcsMnZjRyIRAo7/AJ0fXWgu26aXsHMN686QaGbfMXOrzACeKSVe
-/JWl7O7Yhl4k57YSIzTwqUk=
-=xFQM
+iD8DBQFDGyz21ZcsMnZjRyIRAqWiAJ0d2IRYuKUk9HfS/iS/QpRsMrWawgCfVPD5
+REdPIByh398l93G2zOQn10w=
+=YSR5
 -----END PGP SIGNATURE-----
