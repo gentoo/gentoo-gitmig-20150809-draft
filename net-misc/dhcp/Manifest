@@ -2,9 +2,10 @@
 Hash: SHA1
 
 MD5 d8087c6a781a978ccc4c5bc0e9b2fde0 dhcp-3.0.1-r1.ebuild 3992
-MD5 9959ef147ab31186d39109efb9ca0cae dhcp-3.0.2.ebuild 4097
-MD5 6b02fbca23d47791aeda119fd4444f39 ChangeLog 9262
+MD5 fd2864f5391129944f46c46c99fd1560 dhcp-3.0.2.ebuild 4135
+MD5 37786c0783706bbb8e94e9202b425d63 ChangeLog 9427
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
+MD5 d0f61288e81ce020573f3f6965af8489 files/dhcp-3.0.2-gmake.patch 1872
 MD5 8a19dd005c33231e02c03659f0c658df files/dhcrelay.rc6 626
 MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1-r1 128
 MD5 6c69efa2b41915ec59e53bb065ac3d0c files/dhcrelay.conf 502
@@ -14,7 +15,7 @@ MD5 b060506f226297b90435f270b7345496 files/digest-dhcp-3.0.2 128
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGjngj5H05b2HAEkRAnk8AJ4rpnnMj+NeOXJ1/jNCAmC7jIQaFQCgj1IH
-9kstvTiNY6WxuHmgUeXbgh4=
-=2Di4
+iD8DBQFDGwdYj5H05b2HAEkRAnJjAJ9xf3x5o3NrYfs2DV5W+zuEC+6YXgCeINSG
+LzNetumuyPQPYu7gnzPMSJ0=
+=Vijj
 -----END PGP SIGNATURE-----

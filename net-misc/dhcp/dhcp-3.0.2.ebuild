@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.2.ebuild,v 1.4 2005/09/04 00:03:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.2.ebuild,v 1.5 2005/09/04 14:39:53 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,6 +37,8 @@ src_unpack() {
 
 	# FreeBSD doesn't like -Werror that is forced on
 	sed -i -e 's:-Werror::' Makefile.conf
+
+	epatch ${FILESDIR}/${P}-gmake.patch
 }
 
 src_compile() {
