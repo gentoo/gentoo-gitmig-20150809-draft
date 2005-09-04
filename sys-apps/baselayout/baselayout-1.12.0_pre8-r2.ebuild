@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre8-r2.ebuild,v 1.1 2005/09/04 17:19:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre8-r2.ebuild,v 1.2 2005/09/04 19:38:59 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -123,10 +123,16 @@ EOF
 # aren't listed in CONTENTS, unfortunately.
 unkdir() {
 	einfo "Running unkdir to workaround bug 9849"
-	find ${D} -depth -type d -exec rmdir {} \; 2>/dev/null
+	find "${D}" -depth -type d -exec rmdir {} \; 2>/dev/null
 	if [[ $? == 127 ]]; then
 		ewarn "Problem running unkdir: find command not found"
 	fi
+}
+
+# Same as kdir above, but for symlinks #103618
+ksym() {
+	echo "ln -s '$1' '${ROOT}/$2' &> /dev/null || ewarn '  unable to symlink $2 to $1' " \
+		>> "${D}"/usr/share/baselayout/mklinks.sh
 }
 
 src_install() {
@@ -234,14 +240,14 @@ src_install() {
 	# Ugly compatibility with stupid ebuilds and old profiles symlinks
 	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
 		rm -r "${D}"/{lib,usr/lib,usr/local/lib} &> /dev/null
-		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
-		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/lib
-		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/local/lib
+		ksym $(get_abi_LIBDIR ${DEFAULT_ABI}) /lib
+		ksym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/lib
+		ksym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/local/lib
 	fi
 
 	# FHS compatibility symlinks stuff
-	dosym /var/tmp /usr/tmp
-	dosym share/man /usr/local/man
+	ksym /var/tmp /usr/tmp
+	ksym share/man /usr/local/man
 
 	#
 	# Setup files in /etc
@@ -415,7 +421,8 @@ pkg_postinst() {
 	einfo "Creating directories and .keep files."
 	einfo "Some of these might fail if they're read-only mounted"
 	einfo "filesystems, for example /dev or /proc.  That's okay!"
-	source ${ROOT}/usr/share/baselayout/mkdirs.sh
+	source "${ROOT}"/usr/share/baselayout/mkdirs.sh
+	source "${ROOT}"/usr/share/baselayout/mklinks.sh
 
 	# This could be done in src_install, which would have the benefit of
 	# (1) devices.tar.bz2 would show up in CONTENTS
