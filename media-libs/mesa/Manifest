@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a746b3cd1db5c2de7f00f07c42b441bd ChangeLog 8021
-MD5 77958aedbc6913b8ac9d8de6ab273712 mesa-6.3.2.ebuild 5495
+MD5 e037b68acdf953d388ff2c67900d042d mesa-6.3.2.ebuild 5497
+MD5 642ab2de03321eba456d5c2e2fc1f538 ChangeLog 8101
 MD5 f6317bf167576aaa2a1fe582dd8dfc76 mesa-6.3.1.1-r3.ebuild 5822
-MD5 a9b60dbab413bb1645804918f13b7378 files/mesa-add-dri-asm-files.patch 21517
-MD5 ceae0782c8844ebdc68ede6b4d8969d9 files/makedepend-location.patch 375
-MD5 cdc08801bd33dadb19c29e4c91863c73 files/change-default-dri-driver-dir.patch 412
-MD5 2685b3ea6cabdd4da8929cfca0a03573 files/digest-mesa-6.3.1.1-r3 223
 MD5 bd015b299e16dfdc191313c06776eb96 files/digest-mesa-6.3.2 67
+MD5 a9b60dbab413bb1645804918f13b7378 files/mesa-add-dri-asm-files.patch 21517
+MD5 cdc08801bd33dadb19c29e4c91863c73 files/change-default-dri-driver-dir.patch 412
 MD5 3621c4e6ce01ff309d49348222756a64 files/dont-install-gles-headers.patch 479
+MD5 ceae0782c8844ebdc68ede6b4d8969d9 files/makedepend-location.patch 375
+MD5 2685b3ea6cabdd4da8929cfca0a03573 files/digest-mesa-6.3.1.1-r3 223
 MD5 f0ebdc72043e76ad7eddc4ad91349927 files/lib/libGL.la 763
 MD5 9abdd26694e6f1d7bd93193f900acc6c files/lib/libGLU.la 752
 MD5 0883c9996cac1056781bdcd2aab60e66 files/lib/libOSMesa.la 765
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGiWyArHZZzCEUG0RAjjyAJ9OyBST996ay0/0hpdu+rCKT4hWBQCdH8Kl
-akxBDxfyUHgUBgUzE0hGpgU=
-=0xAL
------END PGP SIGNATURE-----

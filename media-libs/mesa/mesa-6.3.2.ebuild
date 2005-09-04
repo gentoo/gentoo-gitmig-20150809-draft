@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.4 2005/09/03 22:37:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.5 2005/09/04 00:32:04 lu_zero Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mesa3d/${MY_SRC_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="motif"
 
 RDEPEND="dev-libs/expat
