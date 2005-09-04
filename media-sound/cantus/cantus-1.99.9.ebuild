@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.9 2005/07/25 12:07:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.10 2005/09/04 10:45:09 flameeyes Exp $
 
 IUSE="oggvorbis"
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/${PN}-2-${PV}"
 src_install() {
 	einstall || die
 	rm -rf ${D}/usr/doc
-	dodoc TODO README NEWS INSTALL ChangeLog COPYING AUTHORS ABOUT-NLS
+	dodoc TODO README NEWS ChangeLog AUTHORS
 	insinto /usr/share/pixmaps
 	doins ${FILESDIR}/cantus.png
 

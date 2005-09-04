@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cantus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.12 2005/07/25 12:07:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.13 2005/09/04 10:45:09 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> cantus-1.99.9.ebuild:
+  Don't install COPYING, INSTALL and ABOUT-NLS files.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> cantus-1.99.9.ebuild:
   Added to ~ppc.
