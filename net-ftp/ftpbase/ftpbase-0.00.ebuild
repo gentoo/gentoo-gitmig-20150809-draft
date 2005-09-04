@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.9 2005/08/23 13:26:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.10 2005/09/04 06:06:41 vapier Exp $
 
 inherit eutils pam
 
 DESCRIPTION="FTP layout package"
-SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +18,7 @@ DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	!<net-ftp/pure-ftpd-1.0.20-r2
 	!<net-ftp/vsftpd-2.0.3-r1"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 check_collision() {
 	[[ ! -e ${1} ]] && return 0
@@ -53,13 +53,13 @@ pkg_setup() {
 	fi
 
 	eend 0
-}
 
-src_install() {
 	# Add our default ftp user
 	enewgroup ftp 21
 	enewuser ftp 21 -1 /home/ftp ftp
+}
 
+src_install() {
 	# The ftpusers file is a list of people who are NOT allowed
 	# to use the ftp service.
 	insinto /etc
