@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.30 2005/07/27 20:10:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.31 2005/09/04 12:25:57 flameeyes Exp $
+
+  04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libsamplerate-0.1.1-r1.ebuild, libsamplerate-0.1.2.ebuild:
+  Don't install INSTALL file.
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> libsamplerate-0.1.2.ebuild:
   Stable on hppa.
