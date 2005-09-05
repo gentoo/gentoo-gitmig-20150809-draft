@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 35839186d094d8471116f9a3c675a04c gnbd-headers-1.00.00.ebuild 786
-MD5 3c685468bce21a9cb5c2b4f2a05f399a ChangeLog 402
+MD5 762cb1cefd4040e889d8d313eade8de6 gnbd-headers-1.00.00.ebuild 784
+MD5 aa81ef8e0c1ebd84735c7fb0df835c30 ChangeLog 507
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gnbd-headers-1.00.00 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDG7P6gMUyd/cdjWsRAj0DAJ9YaWbfF8RsiWYMqw0/orcZ1RixOQCfZeQZ
-Qi3wxH29iHPFZjv5QlXzwFM=
-=NcPX
+iD8DBQFDG7usgMUyd/cdjWsRAiLEAJ0ZavoPBR8TBUJneh0yV9yy5oYmAwCeIYI9
+TD6NHWDrDB7wFxWmw0cA8OE=
+=e4Nl
 -----END PGP SIGNATURE-----
