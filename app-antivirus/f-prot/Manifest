@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 886e2c224cbc555a71f3a3510b12c29f f-prot-4.5.4-r1.ebuild 1877
-MD5 84082bf24b21de874305c8d1ece7a27e f-prot-4.6.0-r1.ebuild 1898
-MD5 3dd5524625c0dafe189ae459c35da446 ChangeLog 9380
+MD5 f413b43db5249d7e6cdbacd211c1a619 f-prot-4.6.1.ebuild 2016
+MD5 8a5b91475af80a3d2ca5ab614d8dc194 ChangeLog 9616
 MD5 d7b2830c3a0f616e8598aafd9c6092db metadata.xml 262
-MD5 20150e043f914ef7c9b7b95f607731cc f-prot-4.6.0-r2.ebuild 2019
-MD5 f3be9aa98602afac91eca0dceca62edd files/digest-f-prot-4.5.4-r1 70
-MD5 c0075e0b3eeeaf1ebb478a49c4b9d7f9 files/digest-f-prot-4.6.0-r1 70
+MD5 efbf917bdb0a7f2e082a62d58f758a30 f-prot-4.6.0-r2.ebuild 2018
+MD5 eec871175f91e8ee9ed6bf9f541a2934 files/digest-f-prot-4.6.1 70
 MD5 c0075e0b3eeeaf1ebb478a49c4b9d7f9 files/digest-f-prot-4.6.0-r2 70
 MD5 98949d262752c6e02ac3e64f8c13aa59 files/check-updates.pl.diff 568
 MD5 c07e3b0148a64826500324924b3d71f8 files/f-prot.sh 122
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDD5q4QlM6RnzZP+IRAt9eAKCCk3dKtiH/BYT7j/0KEMSv6EQHJACfZkJu
-mM2ZdeNKN/ACK7xIlzmdfm0=
-=XkkM
+iD8DBQFDHIV2QlM6RnzZP+IRAt73AJ0TwPSakL5qFu1xA3LZIPVqJiXUBwCfZiQ3
+FPfw9eGyssjyzPtNy+gTu1M=
+=LWiU
 -----END PGP SIGNATURE-----
