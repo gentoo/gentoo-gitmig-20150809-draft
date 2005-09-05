@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.28 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.29 2005/09/05 16:52:57 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -32,7 +32,7 @@ MY_P=gst-plugins-${PV}
 # gstreamer 0.6
 my_gst_plugins="dxr3 oss qcam v4l v4l2 vcd vga cdrom xvideo a52dec aalib aalibtest alsa arts artstest artsc audiofile avifile cdparanoia dvdread dvdnav esd esdtest flac ffmpeg gnome_vfs gsm hermes http jack jpeg ladspa lame lcs libdv libfame libfametest libpng mad mikmod libmikmodtest mjpegtools mpeg2dec openquicktime raw1394 rtp sdl sdltest shout shout2 shout2test sidplay smoothwave snapshot swfdec tarkin vorbis vorbistest xmms libmmx atomic tests examples"
 # gstreamer 0.8
-my_gst_plugins="${my_gst_plugins} divx faad gdk_pixbuf ogg sndfile x pango speex xvid mpeg2enc mplex musicbrainz nas librfb libcaca ivorbis faac theora kio osx_audio osx_video sunaudio artsc dts libvisual dirac libmng opengl gst_v4l gst_v4l2 libmms musepack directfb polyp cairo spc wavpack cdio amrnb"
+my_gst_plugins="${my_gst_plugins} divx faad gdk_pixbuf ogg sndfile x pango speex xvid mpeg2enc mplex musicbrainz nas librfb libcaca ivorbis faac theora kio osx_audio osx_video sunaudio artsc dts libvisual dirac libmng opengl gst_v4l gst_v4l2 libmms musepack directfb polyp cairo spc wavpack cdio amrnb x264 raw1394"
 
 # Extract the plugin to build from the ebuild name
 # May be set by an ebuild and contain more than one indentifier, space seperated
@@ -133,6 +133,15 @@ gst-plugins_src_unpack() {
 	local makefiles
 
 	unpack ${A}
+	
+	# apply patch to fix broken configure in 0.8.11
+	cd ${S}
+	if [ ${PV} == "0.8.11" ]; then
+		epatch ${FILESDIR}/../../../media-libs/gst-plugins/files/gst-plugins-0.8.11-conffix.patch
+		./autogen.sh
+		elibtoolize
+	fi	
+
 
 	# Link with the syswide installed interfaces if needed
 	gst-plugins_find_plugin_dir
