@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r8.ebuild,v 1.3 2005/07/30 23:01:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r8.ebuild,v 1.4 2005/09/05 15:41:09 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -81,7 +81,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D%/}" install
 
-	insinto /usr/share/doc/${PN}
+	insinto /usr/share/doc/${PF}
 	doins "${S}/survey.txt"
 
 	exeinto /usr/bin

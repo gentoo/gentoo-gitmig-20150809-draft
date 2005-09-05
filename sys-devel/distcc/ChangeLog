@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.150 2005/07/30 23:01:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.151 2005/09/05 15:41:09 lisa Exp $
+
+  05 Sep 2005; Lisa Seelye <lisa@gentoo.org> distcc-2.16-r3.ebuild,
+  distcc-2.18.3-r8.ebuild:
+  Change PN to PF for bug #99386.
 
   30 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> distcc-2.18.3-r7.ebuild:
   Stable on sh.
