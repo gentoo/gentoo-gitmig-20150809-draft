@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.77 2005/08/24 23:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.78 2005/09/05 18:43:37 corsair Exp $
+
+  05 Sep 2005; Markus Rothe <corsair@gentoo.org> gnutls-1.2.4.ebuild:
+  Stable on ppc64
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> gnutls-1.2.4.ebuild:
   stable on ia64
