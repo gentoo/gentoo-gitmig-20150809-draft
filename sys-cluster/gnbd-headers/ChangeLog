@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/gnbd-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/ChangeLog,v 1.2 2005/09/05 03:26:19 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/ChangeLog,v 1.3 2005/09/05 04:04:57 xmerlin Exp $
+
+  05 Sep 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  gnbd-headers-1.00.00.ebuild:
+  last minute fixes.
 
   05 Sep 2005; Christian Zoffoli <xmerlin@gentoo.org>
   gnbd-headers-1.00.00.ebuild:
