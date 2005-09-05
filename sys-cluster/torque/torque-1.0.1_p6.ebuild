@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1_p6.ebuild,v 1.3 2005/06/10 21:29:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.0.1_p6.ebuild,v 1.4 2005/09/05 13:21:54 tantive Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://supercluster.org/downloads/torque/${MY_P}.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="X tcltk"
 
 DEPEND="sys-apps/ed
