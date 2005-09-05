@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e47e5087256e64bb697f50f76c2bb130 ChangeLog 1236
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 b7382ab821ff14998f13d85bffc92962 magma-plugins-1.00.00.ebuild 968
+MD5 7d6a3ae38a0eedd5ed2162c0dcf4379f ChangeLog 1344
+MD5 f7670c00789c36940298feb22b5577fb magma-plugins-1.00.00.ebuild 995
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-magma-plugins-1.00.00 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDHLpI5mJXAu5GbtIRAj0TAJwOrmgLKoMCbQakzL/y8vr4hyY3IgCfdOJK
-/Fp/dKueCqr6VNH19fDdSWc=
-=ez95
+iD8DBQFDHL/9gMUyd/cdjWsRAnXnAJ42BMQqM/mN0j2BabK+rxBAHoMPJACeMxq6
+s4Evar3w+15R/tz7tesixAo=
+=DQXB
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.00.00.ebuild,v 1.3 2005/09/05 21:31:25 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.00.00.ebuild,v 1.4 2005/09/05 21:54:14 xmerlin Exp $
 
 
 CLUSTER_VERSION="1.00.00"
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 #IUSE="nogulm"
 IUSE=""
 
-DEPEND=">=sys-cluster/dlm-1.00.00
+DEPEND=">=sys-cluster/magma-1.00.00
+	>=sys-cluster/dlm-1.00.00
 	>=sys-cluster/cman-1.00.00
 	"
 
