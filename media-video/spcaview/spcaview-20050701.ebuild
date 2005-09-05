@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/spcaview-20050701.ebuild,v 1.1 2005/09/05 19:25:29 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/spcaview-20050701.ebuild,v 1.2 2005/09/05 19:35:04 kingtaco Exp $
 
 inherit eutils
 
@@ -22,4 +22,5 @@ src_compile() {
 src_install() {
 	dodir usr/bin
 	make BIN=${D}/usr/bin install || die
+	dodoc README Changelog
 }
