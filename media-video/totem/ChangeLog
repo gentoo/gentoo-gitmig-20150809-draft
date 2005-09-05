@@ -1,6 +1,11 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.76 2005/09/05 00:43:14 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.77 2005/09/05 20:16:43 zaheerm Exp $
+
+*totem-1.2.0 (05 Sep 2005)
+
+  05 Sep 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> +totem-1.2.0.ebuild:
+  version bump
 
   05 Sep 2005; John N. Laliberte <allanonjl@gentoo.org> totem-1.1.5.ebuild:
   fix mozilla/firefox dep, thanks to TGL for fix, fixes #104764
