@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.00.00-r1.ebuild,v 1.2 2005/09/05 19:54:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.00.00-r1.ebuild,v 1.3 2005/09/05 21:47:41 kugelfang Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/cluster-${CLUSTER_VERSION
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-cluster/gfs-headers-1.00.00
