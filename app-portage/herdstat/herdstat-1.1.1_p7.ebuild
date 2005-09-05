@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p5.ebuild,v 1.1 2005/08/10 23:18:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p7.ebuild,v 1.1 2005/09/05 12:29:49 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
@@ -28,11 +28,6 @@ src_compile() {
 	if use doc ; then
 		cd doc ; make html || die "failed to build html"
 	fi
-}
-
-src_test() {
-	cd tests
-	make all check || die "make check failed"
 }
 
 src_install() {
