@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.58 2005/09/04 20:45:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.59 2005/09/05 22:23:10 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -60,6 +60,20 @@ ELT_try_and_apply_patch() {
 }
 
 #
+# Get string version of ltmain.sh or ltconfig (passed as $1)
+#
+ELT_libtool_version() {
+	local ltmain_sh=$1
+	local version=
+
+	version=$(eval $(grep -e '^[[:space:]]*VERSION=' "${ltmain_sh}"); \
+	                 echo "${VERSION}")
+	[[ -z ${version} ]] && version="0"
+
+	echo "${version}"
+}
+
+#
 # Run through the patches in $2 and see if any
 # apply to $1 ...
 #
@@ -75,8 +89,7 @@ ELT_walk_patches() {
 	local ltmain_sh=$1
 
 	[[ ${file} == *"/configure" ]] && ltmain_sh=${ELT_LTMAIN_SH}
-	version=$(eval $(grep -e '^[[:space:]]*VERSION=' "${ltmain_sh}"); \
-					echo "${VERSION}")
+	version=$(ELT_libtool_version "${ltmain_sh}")
 
 	if [[ -n ${patch_set} ]] ; then
 		if [[ -d ${ELT_PATCH_DIR}/${patch_set} ]] ; then
@@ -85,7 +98,7 @@ ELT_walk_patches() {
 			return "${ret}"
 		fi
 
-		if [[ -z ${version} ]] ; then
+		if [[ ${version} == "0" ]] ; then
 			eerror "Could not get VERSION for ${file##*/}!"
 			die "Could not get VERSION for ${file##*/}!"
 		fi
@@ -259,8 +272,11 @@ elibtoolize() {
 			if [[ ${ret} -ne 0 ]] ; then
 				case ${y} in
 					"relink")
+						local version=$(ELT_libtool_version "${x}/ltmain.sh")
 						# Critical patch, but could be applied ...
-						if [[ -z $(grep 'inst_prefix_dir' "${x}/ltmain.sh") ]] ; then
+						# FIXME:  Still need a patch for ltmain.sh > 1.4.0
+						if [[ -z $(grep 'inst_prefix_dir' "${x}/ltmain.sh") && \
+						      $(VER_to_int "${version}") -ge $(VER_to_int "1.4.0") ]] ; then
 							ewarn "  Could not apply relink.patch!"
 						fi
 						;;
