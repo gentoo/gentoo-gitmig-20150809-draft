@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5e8dc5622489be6cbb6746c683a26e48 ChangeLog 621
+MD5 4e5fe892ddfd29856e78aae6083ed33a gfs-headers-1.00.00.ebuild 902
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 d35cadfc5758c61dc3756821b4f46c1d gfs-headers-1.00.00.ebuild 893
-MD5 7dc48040048797ab05f6524f3501d562 ChangeLog 519
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gfs-headers-1.00.00 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDG8cKgMUyd/cdjWsRArAsAJ9fRCLIunyU1LfQpimNj/UE26Xu9ACfTWSN
-Ep8BOaidbt9d8zLZRfJnOV0=
-=Bokq
------END PGP SIGNATURE-----
