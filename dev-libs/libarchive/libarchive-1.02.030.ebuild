@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.02.030.ebuild,v 1.2 2005/08/30 11:33:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.02.030.ebuild,v 1.3 2005/09/05 13:44:21 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils libtool autotools
 
 DESCRIPTION="Library to create and read several different archive formats."
 HOMEPAGE="http://people.freebsd.org/~kientzle/libarchive/"
@@ -30,6 +30,7 @@ src_unpack() {
 	touch NEWS README AUTHORS ChangeLog COPYING
 
 	eautoreconf
+	elibtoolize
 }
 
 src_install() {
