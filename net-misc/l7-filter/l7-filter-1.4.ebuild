@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.5 2005/08/20 04:37:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.6 2005/09/05 22:16:50 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -13,7 +13,9 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
-SLOT="${KV}"
+#break repoman
+#SLOT="${KV}"
+SLOT="0"
 S=${WORKDIR}/${MY_P}
 RDEPEND="net-misc/l7-protocols"
 
@@ -78,7 +80,7 @@ src_unpack() {
 
 	#patch the copied kernel source
 	cd ${S}/kernel
-	epatch ${S}/${PATCH}
+	EPATCH_OPTS="-F 3" epatch ${S}/${PATCH}
 
 	# bug #102813
 	if kernel_is ge 2 6 11
