@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.00.00.ebuild,v 1.5 2005/08/18 17:31:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.00.00-r1.ebuild,v 1.1 2005/09/05 02:15:28 xmerlin Exp $
 
 inherit eutils linux-mod
 
 CLUSTER_VERSION="1.00.00"
-DESCRIPTION="GFS Network Block Devices kernel module"
+DESCRIPTION="General-purpose Distributed Lock Manager kernel module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/cluster-${CLUSTER_VERSION}.tar.gz"
 
@@ -18,7 +18,7 @@ DEPEND="|| (
 		>=sys-kernel/vanilla-sources-2.6.12
 		>=sys-kernel/gentoo-sources-2.6.12
 	)
-	>=sys-cluster/cman-kernel-1.00.00"
+	>=sys-cluster/cman-headers-1.00.00"
 
 RDEPEND=""
 
@@ -41,6 +41,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	rm -f ${D}/usr/include/cluster/*
 }
 
 
