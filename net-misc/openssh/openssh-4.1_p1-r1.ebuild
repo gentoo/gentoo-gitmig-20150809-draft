@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1-r1.ebuild,v 1.5 2005/09/05 20:16:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1-r1.ebuild,v 1.6 2005/09/05 22:09:36 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic ccc pam
 PARCH=${P/_/}
 
 SFTPLOG_PATCH_VER="1.2"
-X509_PATCH="${PARCH}+x509-5.1.diff.gz"
+X509_PATCH="${PARCH}+x509-5.2.diff.gz"
 SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 SECURID_PATCH="${PARCH}+SecurID_v1.3.1.patch"
 LDAP_PATCH="${PARCH/-/-lpk-}-0.3.6.patch"
@@ -19,7 +19,7 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
-	X509? ( http://roumenpetrov.info/openssh/x509-5.1/${X509_PATCH} )
+	X509? ( http://roumenpetrov.info/openssh/x509-5.2/${X509_PATCH} )
 	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )
 	smartcard? ( http://www.omniti.com/~jesus/projects/${SECURID_PATCH} )"
 

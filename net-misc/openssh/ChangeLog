@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.127 2005/09/05 20:16:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.128 2005/09/05 22:09:36 vapier Exp $
+
+  05 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-3.9_p1-fix_suid.patch,
+  -files/openssh-3.9_p1-fix_suid.patch.bz2,
+  +files/openssh-3.9_p1-fix_suid-x509.patch, openssh-3.8.1_p1-r1.ebuild,
+  openssh-3.9_p1-r3.ebuild, openssh-4.0_p1-r2.ebuild,
+  openssh-4.1_p1-r1.ebuild:
+  Update the x509 patches.
 
   05 Sep 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.1_p1-r1.ebuild:
   Re-enable smartcard support.

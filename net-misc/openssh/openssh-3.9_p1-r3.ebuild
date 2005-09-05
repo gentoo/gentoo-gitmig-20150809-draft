@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.5 2005/09/05 20:10:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r3.ebuild,v 1.6 2005/09/05 22:09:36 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic ccc pam
 PARCH=${P/_/}
 
 SFTPLOG_PATCH_VER="1.2"
-X509_PATCH="${PARCH}+x509h.diff.gz"
+X509_PATCH="${PARCH}+x509-5.2.diff.gz"
 SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
 LDAP_PATCH="${PARCH/-/-lpk-}-0.3.6.patch"
 HPN_PATCH="${PARCH}-hpn11.diff"
@@ -18,7 +18,7 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
-	X509? ( http://roumenpetrov.info/openssh/x509h/${X509_PATCH} )
+	X509? ( http://roumenpetrov.info/openssh/x509-5.2/${X509_PATCH} )
 	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )"
 
 LICENSE="as-is"
@@ -48,7 +48,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-pamfix.patch.bz2
 	#epatch "${FILESDIR}"/${P}-largekey.patch.bz2
-	epatch "${FILESDIR}"/${P}-fix_suid.patch.bz2
+	use X509 || epatch "${FILESDIR}"/${P}-fix_suid.patch
 	epatch "${FILESDIR}"/${P}-infoleak.patch #59361
 	epatch "${FILESDIR}"/${P}-terminal_restore.patch.bz2
 	epatch "${FILESDIR}"/${P}-configure-openct.patch #78730
@@ -58,7 +58,7 @@ src_unpack() {
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
 	use skey && epatch ${FILESDIR}/${P}-skey.patch.bz2
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
-	use X509 && epatch ${DISTDIR}/${X509_PATCH}
+	use X509 && epatch ${DISTDIR}/${X509_PATCH} && epatch "${FILESDIR}"/${P}-fix_suid-x509.patch
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch.bz2
 	if use ldap ; then
