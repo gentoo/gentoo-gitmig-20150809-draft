@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.11 2005/08/22 18:30:04 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.12 2005/09/05 19:40:52 araujo Exp $
+
+*gnu-smalltalk-2.1.12 (05 Sep 2005)
+
+  05 Sep 2005; Luis F. Araujo <araujo@gentoo.org>
+  +gnu-smalltalk-2.1.12.ebuild:
+  Added new version of GST. Many bugs fixed in the package and the ebuild.
+  (proper amd64 support now, recreate an image with the right kernel path).
 
   22 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
   gnu-smalltalk-2.1.11.ebuild:
