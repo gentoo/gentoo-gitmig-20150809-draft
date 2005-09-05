@@ -1,4 +1,4 @@
-###MY_VER_RANGE [4.1,)
+###MY_VER_RANGE [4.1,4.1.13-r1)
 diff -Nurp mysql/strings/longlong2str-x86.s mysql-fixed/strings/longlong2str-x86.s
 --- mysql/strings/longlong2str-x86.s	2005-05-13 12:32:11.000000000 +0100
 +++ mysql-fixed/strings/longlong2str-x86.s	2005-05-25 01:19:32.000000000 +0100

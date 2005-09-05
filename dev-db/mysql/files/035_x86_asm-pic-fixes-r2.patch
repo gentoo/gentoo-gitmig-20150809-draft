@@ -1,4 +1,4 @@
-###MY_VER_RANGE [4.1.13-r1,)
+###MY_VER_RANGE [4.1.13-r1,4.1.13-r1] [5.0.9_beta-r2,5.0.9_beta-r2]
 diff -aur mysql.orig/strings/longlong2str-x86.s mysql.notextrel/strings/longlong2str-x86.s
 --- mysql.orig/strings/longlong2str-x86.s	2005-07-26 17:52:18.000000000 +0200
 +++ mysql.notextrel/strings/longlong2str-x86.s	2005-07-26 19:29:23.000000000 +0200

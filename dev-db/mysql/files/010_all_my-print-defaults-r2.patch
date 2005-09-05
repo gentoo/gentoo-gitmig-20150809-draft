@@ -1,4 +1,4 @@
-###MY_VER_RANGE  [5.0.6_beta)
+###MY_VER_RANGE  [5.0.6_beta,)
 --- mysql.old/mysys/default.c	2005-05-22 02:35:25.000000000 +0200
 +++ mysql/mysys/default.c	2005-05-22 02:36:17.000000000 +0200
 @@ -823,19 +823,19 @@

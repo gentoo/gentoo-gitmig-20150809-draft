@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.9_beta-r2.ebuild,v 1.5 2005/08/29 12:55:19 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.1 2005/09/05 22:12:13 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -15,18 +15,17 @@ S="${WORKDIR}/${PN}"
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
-SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz"
+SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
+	mirror://gentoo/mysql-extras-20050904.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~sparc ~ia64 ~ppc ~ppc64"
-
-IUSE="debug doc minimal perl readline selinux ssl static tcpd big-tables"
+IUSE="big-tables berkdb debug doc minimal perl readline selinux ssl static"
 RESTRICT="primaryuri"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	bdb? ( sys-apps/ed )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
 	>=sys-libs/zlib-1.2.3
@@ -40,6 +39,10 @@ PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
 if version_is_at_least "4.1.3" ; then
 	IUSE="${IUSE} cluster utf8 geometry extraengine"
 fi
+
+shopt -s extglob
+export LC_ALL="C"
+unset LC_COLLATE
 
 mysql_upgrade_error() {
 	mysql_get_datadir
@@ -96,6 +99,7 @@ mysql_get_datadir() {
 }
 
 pkg_setup() {
+
 	mysql_get_datadir
 	if ! useq minimal && version_is_at_least "4.1.4"; then
 		if has_version "<=dev-db/mysql-4.1.4" \
@@ -109,7 +113,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if use static && use ssl; then
+	if useq static && useq ssl; then
 		local msg="MySQL does not support building statically with SSL support"
 		eerror "${msg}"
 		die "${msg}"
@@ -127,11 +131,14 @@ src_unpack() {
 
 	mv "${WORKDIR}/${NEWP}" "${S}"
 	cd "${S}"
+	rm -rf "${S}/zlib"
+	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
 
-	epatch "${FILESDIR}/010_all_my-print-defaults-r2.patch"
-	epatch "${FILESDIR}/035_x86_asm-pic-fixes-r1.patch"
-	epatch "${FILESDIR}/701_all_test-myisam-geometry.patch"
-	epatch "${FILESDIR}/703_all_test-rpl_rotate_logs.patch"
+	epatch "${WORKDIR}/mysql-extras/010_all_my-print-defaults-r2.patch" || die
+	epatch "${WORKDIR}/mysql-extras/035_x86_asm-pic-fixes-r7.patch" || die
+	#epatch "${WORKDIR}/mysql-extras/040_all_tcpd-vars-fix-r1.patch" || die
+	epatch "${WORKDIR}/mysql-extras/703_all_test-rpl_rotate_logs.patch" || die
+	epatch "${WORKDIR}/mysql-extras/705_all_view_geometry.patch" || die
 
 	find . -name Makefile -o -name Makefile.in -o -name configure -exec rm {} \;
 	aclocal && autoheader \
@@ -140,9 +147,11 @@ src_unpack() {
 		|| die "failed reconfigure step 02"
 	automake --force --add-missing && autoconf \
 		|| die "failed reconfigure step 03"
-	pushd innobase && aclocal && autoheader && autoconf && automake \
-		|| die "failed innobase reconfigure"
-	popd
+	if ! version_is_at_least "5.1_alpha" ; then
+		pushd innobase && aclocal && autoheader && autoconf && automake \
+			|| die "failed innobase reconfigure"
+		popd
+	fi
 	pushd bdb/dist && sh s_all \
 		|| die "failed bdb reconfigure"
 	popd
@@ -165,7 +174,8 @@ src_compile() {
 		myconf="${myconf} --enable-shared --enable-static"
 	fi
 
-	myconf="${myconf} `use_with tcpd libwrap`"
+	#myconf="${myconf} `use_with tcpd libwrap`"
+	myconf="${myconf} --without-libwrap"
 
 	if useq ssl ; then
 		# --with-vio is not needed anymore, it's on by default and
@@ -206,12 +216,15 @@ src_compile() {
 			myconf="${myconf} --with-${i}"
 		done
 
-		# this one break things at least in mysql [5.0,5.0.6_beta]
-		#if version_is_at_least "4.1.3" && use utf8; then
-		#	myconf="${myconf} --with-charset=utf8 --with-collation=utf8_general_ci"
-		#else
-		#	myconf="${myconf} --with-charset=latin1 --with-collation=latin1_swedish_ci"
-		#fi
+		if ! version_is_at_least "5.0_alpha" ; then
+			if version_is_at_least "4.1_alpha" && useq utf8; then
+				myconf="${myconf} --with-charset=utf8"
+				myconf="${myconf} --with-collation=utf8_general_ci"
+			else
+				myconf="${myconf} --with-charset=latin1"
+				myconf="${myconf} --with-collation=latin1_swedish_ci"
+			fi
+		fi
 
 		# lots of chars
 		myconf="${myconf} --with-extra-charsets=all"
@@ -223,7 +236,7 @@ src_compile() {
 		then
 			myconf="${myconf} --without-berkeley-db"
 		else
-			use berkdb \
+			useq berkdb \
 				&& myconf="${myconf} --with-berkeley-db=./bdb" \
 				|| myconf="${myconf} --without-berkeley-db"
 		fi
@@ -245,7 +258,7 @@ src_compile() {
 	# documentation
 	myconf="${myconf} `use_with doc docs`"
 
-	if version_is_at_least "4.1.3" && use extraengine; then
+	if version_is_at_least "4.1.3" && useq extraengine; then
 		# http://dev.mysql.com/doc/mysql/en/archive-storage-engine.html
 		myconf="${myconf} --with-archive-storage-engine"
 		# http://dev.mysql.com/doc/mysql/en/csv-storage-engine.html
@@ -269,7 +282,9 @@ src_compile() {
 
 	#the compiler flags are as per their "official" spec ;)
 	#CFLAGS="${CFLAGS/-O?/} -O3" \
-	export CXXFLAGS="${CXXFLAGS} -fno-implicit-templates -felide-constructors -fno-exceptions -fno-rtti"
+	export CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-exceptions -fno-rtti"
+	version_is_at_least "5.0_alpha" \
+	&& export CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
 
 	econf \
 		--libexecdir=/usr/sbin \
@@ -340,7 +355,7 @@ src_install() {
 	rm -f ${D}/usr/share/mysql/my-*.cnf # Put them elsewhere
 
 	# All of these (ab)use Perl.
-	if ! use perl; then
+	if ! useq perl; then
 		rm -f ${D}/usr/bin/{mysqlhotcopy,mysql_find_rows,mysql_convert_table_format,mysqld_multi,mysqlaccess,mysql_fix_extensions,mysqldumpslow,mysql_zap,mysql_explain_log,mysql_tableinfo,mysql_setpermission}
 		rm -f ${D}/usr/bin/mysqlhotcopy
 		rm -rf ${D}/usr/share/mysql/sql-bench
@@ -361,8 +376,8 @@ src_install() {
 
 	newins "${FILESDIR}/my.cnf-4.1" my.cnf
 
-	if version_is_at_least "4.1.3" && ! use utf8; then
-		sed --in-place "s/utf8/latin1/" \
+	if version_is_at_least "4.1.3" && ! useq utf8; then
+		sed --in-place -e "s/utf8/latin1/" \
 			${D}/etc/mysql/my.cnf
 	fi
 

@@ -1,4 +1,4 @@
-###MY_VER_RANGE [4.1.3_alpha,)
+###MY_VER_RANGE [4.1.3_alpha,4.1.14_alpha20050808)
 
 # MySQL Bugs: #11083: myisam.test fail w/ --without-geometry
 
