@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.32 2005/08/20 21:37:12 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.33 2005/09/05 19:52:38 ticho Exp $
+
+  05 Sep 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.14-r1.ebuild,
+  gmime-2.1.15-r1.ebuild, gmime-2.1.16.ebuild:
+  Use emake -j1 instead of setting MAKEOPTS.
+
+  21 Aug 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.16.ebuild:
+  Removed mono support (bug #103208, comment #4).
 
 *gmime-2.1.16 (20 Aug 2005)
 

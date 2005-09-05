@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.15-r1.ebuild,v 1.2 2005/06/29 00:06:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.15-r1.ebuild,v 1.3 2005/09/05 19:52:38 ticho Exp $
 
 inherit gnome2 eutils mono
 
@@ -44,7 +44,7 @@ src_compile() {
 	    `use_enable ipv6` \
 	    `use_enable mono` \
 	    `use_enable doc gtk-doc` || die "configure failed"
-	MAKEOPTS="-j1" MONO_PATH=${S} emake || die
+	MONO_PATH=${S} emake -j1 || die
 }
 
 src_install() {
