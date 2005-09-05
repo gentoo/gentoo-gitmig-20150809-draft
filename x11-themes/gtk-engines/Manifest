@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 494cf28d7e4ead9b70574215a6656f57 gtk-engines-2.6.3-r1.ebuild 734
 MD5 cf92565a1621824a65e71a05132ec644 gtk-engines-2.6.5.ebuild 716
 MD5 5f4c71fdf2cbd88c5c2588a105ddc8e6 gtk-engines-2.6.4-r2.ebuild 720
@@ -9,3 +12,10 @@ MD5 cd6c6ed17e724aa3ae5aea4dd904477e files/gtk-engines-2.6.3-fix_clearlooks_path
 MD5 a544bee199fe05aa866462a7633f45ec files/digest-gtk-engines-2.6.3-r1 70
 MD5 c35ea0b6f5a0ba8d0c5fbb599fd0e23e files/digest-gtk-engines-2.6.4-r2 70
 MD5 c05083a16f957fda1c27e0b0cfc91005 files/digest-gtk-engines-0.12 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHJHTKRy60XGEcJIRAhydAKCJ2PLOir4q+Ghx8LDl4SNunXvIzgCcC5gW
+dGXqRr44MhxbsebI+2KFZGw=
+=8GsN
+-----END PGP SIGNATURE-----
