@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.5.2.ebuild,v 1.2 2005/09/01 19:20:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.5.2.ebuild,v 1.3 2005/09/05 21:41:17 halcy0n Exp $
 
 inherit flag-o-matic eutils games
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-custom.mk.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {

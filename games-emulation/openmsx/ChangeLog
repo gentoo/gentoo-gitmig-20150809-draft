@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.14 2005/09/01 19:20:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.15 2005/09/05 21:41:17 halcy0n Exp $
+
+  05 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/openmsx-0.5.2-gcc4.patch, openmsx-0.5.2.ebuild:
+  Adding upstream patch to fix compilation with GCC4.  Some slight changes were
+  made to the upstream patch, since it broken compilation with gcc-3.3.
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> openmsx-0.5.1.ebuild,
   openmsx-0.5.2.ebuild:
