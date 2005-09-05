@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.1 2005/08/27 04:09:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.4.ebuild,v 1.2 2005/09/05 20:03:09 cardoe Exp $
 
-inherit eutils linux-info versionator flag-o-matic
+inherit eutils linux-info
 
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
@@ -13,10 +13,6 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
 IUSE="debug pcmcia doc pam_console"
 
-
-### We don't technically "need" pam, but without pam_console, stuff 
-### doesn't work (particularly NetworkManager).
-### dep on a specific util-linux version for managed mount patches #70873
 RDEPEND=">=dev-libs/glib-2.6
 	>=sys-apps/dbus-0.33
 	dev-libs/expat
@@ -35,8 +31,6 @@ DEPEND="${RDEPEND}
 ## HAL Daemon drops privledges so we need group access to read disks
 HALDAEMON_GROUPS="haldaemon,disk,cdrom,cdrw,floppy"
 
-# We need to run at least a 2.6.10 kernel, this is a
-# way to ensure that to some extent
 pkg_setup() {
 
 	linux-info_pkg_setup
@@ -49,7 +43,7 @@ pkg_setup() {
 			die "pam without pam_console detected"
 	fi
 
-	if [ -d ${D}/etc/hal/device.d ]; then
+	if [ -d ${ROOT}/etc/hal/device.d ]; then
 		eerror "HAL 0.5.x will not run with the HAL 0.4.x series of"
 		eerror "/etc/hal/device.d/ so please remove this directory"
 		eerror "with rm -rf /etc/hal/device.d/ and then re-emerge."
@@ -67,27 +61,20 @@ src_unpack() {
 }
 
 src_compile() {
-
-	local myconf
-
-	# NOTE: fstab-sync dies at an assert() and is deprecated upstream.
-	# As such, no need to support it.  
 	econf \
-		`use_enable debug verbose-mode` \
-		`use_enable pcmcia pcmcia-support` \
+		$(use_enable debug verbose-mode) \
+		$(use_enable pcmcia pcmcia-support) \
 		--enable-sysfs-carrier \
 		--enable-hotplug-map \
-		`use_enable doc docbook-docs` \
-		`use_enable doc doxygen-docs` \
+		$(use_enable doc docbook-docs) \
+		$(use_enable doc doxygen-docs) \
 		--with-pid-file=/var/run/hald.pid \
 		|| die "configure failed"
 
 	emake || die "make failed"
-
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	# We install this in a seperate package to avoid gnome-python dep
@@ -101,15 +88,9 @@ src_install() {
 	# Script to unmount devices if they are yanked out (from upstream)
 	exeinto /etc/dev.d/default
 	doexe ${FILESDIR}/hal-unmount.dev
-
-
 }
 
 pkg_postinst() {
-	##
-	## The old hal ran as root.  This was *very* bad because of all the user IO that HAL does.
-	## The new hal runs as 'haldaemon', but haldaemon needs to be in the appropriate groups to work.
-	## Below is a hack to make this transition (upgrade from previous versions) smooth.
 	## We need to add the user/groups *after* package compilation/installation, so that we
 	## don't change the user without the package being installed.
 	##
