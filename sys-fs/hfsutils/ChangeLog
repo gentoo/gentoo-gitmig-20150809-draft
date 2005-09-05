@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/hfsutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.8 2005/08/02 17:57:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/ChangeLog,v 1.9 2005/09/05 18:50:18 corsair Exp $
+
+  05 Sep 2005; Markus Rothe <corsair@gentoo.org> hfsutils-3.2.6-r4.ebuild:
+  Stable on ppc64
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org> hfsutils-3.2.6-r4.ebuild:
   stable on amd64
