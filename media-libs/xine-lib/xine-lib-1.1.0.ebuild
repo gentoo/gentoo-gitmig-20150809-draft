@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.9 2005/08/24 22:51:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.10 2005/09/05 07:35:36 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -62,8 +62,6 @@ src_unpack() {
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
 
-	elibtoolize
-
 	# Makefile.ams and configure.ac get patched, so we need to rerun
 	# autotools
 	export WANT_AUTOCONF=2.5
@@ -74,6 +72,8 @@ src_unpack() {
 	autoconf || die "autoconf failed"
 
 	libtoolize --copy --force || die "libtoolize failed"
+
+	elibtoolize
 }
 
 src_compile() {
