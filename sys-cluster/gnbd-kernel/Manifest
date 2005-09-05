@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 31a48f314e59d9e98139bac1009b61a9 ChangeLog 1244
+MD5 9c2bfe6070e8cc80d922bc207d274d10 ChangeLog 1355
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 daa02c34b72ef2b588781dbb2c1c313a gnbd-kernel-1.00.00-r1.ebuild 1105
+MD5 a365e75e3ad7a682507a454fe0193577 gnbd-kernel-1.00.00-r1.ebuild 1115
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gnbd-kernel-1.00.00-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDG7OXgMUyd/cdjWsRAv7iAJ92Zq03FFjD2sP1Er98xpAOJjOwsACfbCyS
-zPjuQOTlITulp2LNJHqdV7c=
-=K53S
+iD8DBQFDG7aEgMUyd/cdjWsRAqIvAJ48o2FgyIzyRWKZUI+Z6yKwetotcQCdHYP7
+Blv9AzKN4XJK7UdvenlLi3w=
+=wzTn
 -----END PGP SIGNATURE-----

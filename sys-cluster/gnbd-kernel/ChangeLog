@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/gnbd-kernel
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/ChangeLog,v 1.7 2005/09/05 02:53:02 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/ChangeLog,v 1.8 2005/09/05 03:04:58 xmerlin Exp $
+
+  05 Sep 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  gnbd-kernel-1.00.00-r1.ebuild:
+  fixed file deletion.
 
 *gnbd-kernel-1.00.00-r1 (05 Sep 2005)
 
