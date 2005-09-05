@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.10 2005/08/14 15:42:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.11 2005/09/05 14:40:43 herbs Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -54,7 +54,7 @@
 
 IUSE="berkdb debug gdbm ithreads"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -210,6 +210,11 @@ src_compile() {
 	[ -n "${ABI}" ] && myconf="${myconf} -Dusrinc=$(get_ml_incdir)"
 
 	[[ ${ELIBC} == "FreeBSD" ]] && myconf="${myconf} -Dlibc=/usr/lib/libc.a"
+
+	if [[ $(get_libdir) != "lib" ]] ; then
+		myconf="${myconf} -Dlibpth='/usr/local/$(get_libdir) /$(get_libdir) \
+		/usr/$(get_libdir)'"
+	fi
 
 	sh Configure -des \
 		-Darchname="${myarch}" \
