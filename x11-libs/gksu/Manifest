@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1a935b7d017aacf3d5cb3148256fb263 ChangeLog 1684
 MD5 9aff3f21f0a0568adcb8d91eaf828369 gksu-1.0.5.ebuild 989
 MD5 363e5bcee4130fa5326fc21959bea6a4 gksu-1.0.7.ebuild 1016
-MD5 f84c4419718f522eb1ae37aa894ac49c metadata.xml 367
-MD5 b34948536df96bbae79460237577b0b1 ChangeLog 1572
 MD5 4c222abbe72973bbcb98bfb535e67a68 gksu-1.2.4.ebuild 779
-MD5 ffcf53828f05aa8882d303e6631d0bd7 gksu-1.3.4.ebuild 764
+MD5 f84c4419718f522eb1ae37aa894ac49c metadata.xml 367
+MD5 5bdf6342f7a7d3c0900c78261f4b65b1 gksu-1.3.4.ebuild 768
 MD5 82ff981c48203760743e27ed03e46f0d files/digest-gksu-1.0.5 62
 MD5 5e9e0b3e6e9bca1115c9b13d0dd75725 files/digest-gksu-1.0.7 62
 MD5 c141a444b412179b7b2c67d6a1402616 files/digest-gksu-1.2.4 62
 MD5 ecdf4541d8e081331e36ed5ae441b779 files/digest-gksu-1.3.4 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGoy+mdTrptrqvGERAn3DAJsGrub83Y2NqENj2M57BX/6U+56xwCfYoGl
-RT6qis+Ewnc3Wut6Ty5NpQo=
-=a0rX
------END PGP SIGNATURE-----
