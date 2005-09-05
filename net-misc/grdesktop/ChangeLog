@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.16 2005/03/19 18:14:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.17 2005/09/05 14:39:38 leonardop Exp $
+
+  05 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  grdesktop-0.23.ebuild:
+  Stable on x86.
 
   19 Mar 2005; Jason Wever <weeve@gentoo.org> grdesktop-0.22-r1.ebuild:
   Stable on sparc wrt security bug #85881.
