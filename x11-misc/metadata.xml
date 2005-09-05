@@ -20,5 +20,9 @@
 	<longdescription lang="vi">
 		Nhóm x11-misc chứa các ứng dụng X11 không thuộc vào nơi nào khác.
 	</longdescription>
+	<longdescription lang="sk">
+		Kategória x11-misc obsahuje rôzne aplikácie pre X11, ktoré nie sú
+		zaradené do iných kategórií.
+	</longdescription>
 </catmetadata>
 
