@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-WhiteHole
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-WhiteHole/ChangeLog,v 1.7 2005/04/24 21:01:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-WhiteHole/ChangeLog,v 1.8 2005/09/05 14:19:08 ranger Exp $
+
+  05 Sep 2005; Brent Baude <ranger@gentoo.org> Class-WhiteHole-0.04.ebuild:
+  Marking ~ppc64 to suport keywording in Bug 101114
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Class-WhiteHole-0.04.ebuild:
