@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.5 2005/09/04 02:03:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.6 2005/09/05 22:29:16 dragonheart Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dvdstyler/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64"
 IUSE="gnome"
 S=${WORKDIR}/${MY_P}
 
