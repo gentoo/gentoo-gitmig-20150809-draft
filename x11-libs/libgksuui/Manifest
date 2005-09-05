@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0e21342aeeaa1487eea28727d287ea64 ChangeLog 983
 MD5 0f5c80bb2a814cd8d65c3b43efba9ed0 libgksuui-1.0.6.ebuild 717
 MD5 f84c4419718f522eb1ae37aa894ac49c metadata.xml 367
 MD5 401d51f91128a0b171d6bb28e3bb661e files/digest-libgksuui-1.0.6 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHOJ/wUpWvClEHQoRAtctAKCHgCQ/4y+e/spvP3djt3Xn3OmiFgCfS6xb
+luw2FOo5lb3/KXKg2jD6E84=
+=IN/S
+-----END PGP SIGNATURE-----
