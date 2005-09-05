@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 4cb2a60ea25f484d6761e3deda17111a ChangeLog 625
+MD5 7cd38b8e5710f2014148d055b0390714 cman-headers-1.00.00.ebuild 832
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 bc792dffb2a262f31bd593c5c60d190f cman-headers-1.00.00.ebuild 823
-MD5 ef427dbeba4e3bdeb8e696225613e89f ChangeLog 522
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-cman-headers-1.00.00 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDG7tugMUyd/cdjWsRAiPuAJ9RcfadK0TNtiZOQ1hXmW4m2yZoVwCeK1UI
-wH2d7RDe8LZuxOfhGdCgmNQ=
-=Dww5
+iD8DBQFDHK0/5mJXAu5GbtIRAjldAJ9Yta7by2Z5g67dqps7iFnJhh4Z2QCfQh0R
+MS3WddYe5d7oNSBWZuwvCzQ=
+=reni
 -----END PGP SIGNATURE-----
