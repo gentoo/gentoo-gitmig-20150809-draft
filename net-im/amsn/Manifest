@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0e256a8d05feddb125d5bf560873bea8 metadata.xml 228
 MD5 2485d392f74c842beeddcbc22eb8a2bd ChangeLog 5358
 MD5 40914b17355e2296f084e0c103cd3ffb amsn-0.94.ebuild 2436
 MD5 70919744c42f27e436339d14c678f731 files/amsn.desktop 273
 MD5 34cdd985d3d7a0cf5f84a79cca1c728f files/digest-amsn-0.94 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHH+dmOfEJZHYOKcRAqIpAJ0XbJnaf87MRefDSy8sCF++E0ED5wCeI3qa
+vjufA++5UN9wZrUwiB9Rvmg=
+=CTt7
+-----END PGP SIGNATURE-----
