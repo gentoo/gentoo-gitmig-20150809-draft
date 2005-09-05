@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.123 2005/09/03 20:43:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.124 2005/09/05 17:14:44 zaheerm Exp $
+
+*gst-plugins-0.8.11 (05 Sep 2005)
+
+  05 Sep 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-0.8.11-conffix.patch, +gst-plugins-0.8.11.ebuild:
+  version bump
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> gst-plugins-0.8.10.ebuild:
   Stable on ppc64
