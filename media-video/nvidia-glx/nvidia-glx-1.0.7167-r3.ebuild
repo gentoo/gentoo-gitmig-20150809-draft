@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.2 2005/08/24 00:34:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r3.ebuild,v 1.3 2005/09/05 23:11:43 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -23,11 +23,12 @@ KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11
-	app-admin/eselect-opengl
-	~media-video/nvidia-kernel-${PV}
-	!app-emulation/emul-linux-x86-nvidia"
+RDEPEND="|| ( virtual/x11 >=x11-base/xorg-server-0.99.1-r7 )
+	 || ( virtual/x11 x11-proto/xproto )
+	 || ( virtual/x11 media-libs/mesa )
+	 app-admin/eselect-opengl
+	 ~media-video/nvidia-kernel-${PV}
+	 !app-emulation/emul-linux-x86-nvidia"
 
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
@@ -67,11 +68,11 @@ src_unpack() {
 	# Patchs go below here, add breif description
 	cd ${S}
 	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${NV_PATCH_PREFIX//7167/6629}-makefile.patch
+	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
 	# Use the correct defines to make gtkglext build work
-	epatch ${NV_PATCH_PREFIX//7167/6629}-defines.patch
+	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
-	epatch ${NV_PATCH_PREFIX//7167/6629}-glheader.patch
+	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
 
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
 	# 16 July 2004, opengl-update is now supplying glext.h for system wide
@@ -123,6 +124,9 @@ src_install-libs() {
 	fi
 
 	local NV_ROOT="/usr/${inslibdir}/opengl/nvidia"
+	local NO_TLS_ROOT="${NV_ROOT}/no-tls"
+	local TLS_ROOT="${NV_ROOT}/tls"
+	local X11_LIB_DIR="/usr/${inslibdir}/xorg"
 
 	# The GLX libraries
 	exeinto ${NV_ROOT}/lib
@@ -133,14 +137,12 @@ src_install-libs() {
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so.1
 
-	local NO_TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/no-tls"
 	dodir ${NO_TLS_ROOT}
 	exeinto ${NO_TLS_ROOT}
 	doexe usr/${pkglibdir}/libnvidia-tls.so.${PV}
 	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so
 	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so.1
 
-	local TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/tls"
 	dodir ${TLS_ROOT}
 	exeinto ${TLS_ROOT}
 	doexe usr/${pkglibdir}/tls/libnvidia-tls.so.${PV}
@@ -169,14 +171,6 @@ src_install-libs() {
 	    -e "s:\${libdir}:${inslibdir}:" \
 	    ${FILESDIR}/libGL.la-r2 > ${D}/${NV_ROOT}/lib/libGL.la
 
-	# The X module
-	# Since we moved away from libs in /usr/X11R6 need to check this
-	if has_version ">=x11-base/xorg-x11-6.8.0-r4" ; then
-		local X11_LIB_DIR="/usr/$(get_libdir)"
-	else
-		local X11_LIB_DIR="/usr/X11R6/$(get_libdir)"
-	fi
-
 	exeinto ${X11_LIB_DIR}/modules/drivers
 	[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ]] && \
 		doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
@@ -200,6 +194,26 @@ src_install-libs() {
 }
 
 pkg_preinst() {
+	if ! has_version x11-base/xorg-server ; then
+		for dir in lib lib32 lib64 ; do
+			if [[ -d ${D}/usr/${dir}/xorg ]] ; then
+				mv ${D}/usr/${dir}/xorg/* ${D}/usr/${dir}
+				rmdir ${D}/usr/${dir}/xorg
+			fi
+		done
+	fi
+
+	# The X module
+	# Since we moved away from libs in /usr/X11R6 need to check this
+	if has_version "<x11-base/xorg-x11-6.8.0-r4" || \
+	   has_version "x11-base/xfree86" ; then
+		mkdir -p ${D}/usr/X11R6
+		for dir in lib lib32 lib64 ; do
+			[[ -d ${D}/usr/${dir} ]] && mv ${D}/usr/${dir} ${D}/usr/X11R6
+		done
+	fi
+
+
 	# Clean the dinamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
 	if [[ -d ${ROOT}/usr/lib/opengl/nvidia ]] ; then
@@ -213,7 +227,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#switch to the nvidia implementation
-	/usr/bin/eselect opengl set nvidia
+	eselect opengl set --use-old nvidia
 
 	echo
 	einfo "To use the Nvidia GLX, run \"eselect opengl set nvidia\""
@@ -258,5 +272,5 @@ want_tls() {
 }
 
 pkg_postrm() {
-	/usr/bin/eselect opengl set --use-old xorg-x11
+	eselect opengl set --use-old xorg-x11
 }
