@@ -1,17 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7200af245ba7911cb5eb1fc5bb8bd10 websvn-1.61.ebuild 1320
-MD5 c918af88cc35ab7230b40f2aa423b3f7 websvn-1.61-r1.ebuild 1390
-MD5 5b1777d975b6a72a02e7aa23cef50e64 ChangeLog 1163
+MD5 2cb25e4130b40585eaf200897460746b websvn-1.61-r2.ebuild 1421
+MD5 8847a98e93017fd1724236f45c0f1eb4 ChangeLog 1429
+MD5 079c9b575ef8818374a7299069ef3200 websvn-1.61-r1.ebuild 1378
 MD5 7999d6b6542ca3e8b7f9fb693fbbd016 metadata.xml 323
-MD5 6b1f00eaf678b8581924b0611c017839 files/digest-websvn-1.61-r1 61
+MD5 65009af89b673d7f57d7ce7290d652fa websvn-1.61.ebuild 1308
+MD5 0d0713dd2a344f83db7c81936914b4e6 files/websvn-1.61-r2.patch 442
 MD5 e63dfafda87c3bf459f7d580e0a33b9d files/websvn-1.61-r1.patch 4908
+MD5 6b1f00eaf678b8581924b0611c017839 files/digest-websvn-1.61-r1 61
+MD5 6b1f00eaf678b8581924b0611c017839 files/digest-websvn-1.61-r2 61
 MD5 6b1f00eaf678b8581924b0611c017839 files/digest-websvn-1.61 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDFxnFKRy60XGEcJIRAnFxAJ47nTlsXVfvSUfjJtfVYcPYLEVsoACfTCzc
-xIcAbRHdP0GpoTAAEknkzeU=
-=bicF
------END PGP SIGNATURE-----

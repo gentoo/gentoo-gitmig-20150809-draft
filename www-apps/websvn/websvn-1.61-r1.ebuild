@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-1.61-r1.ebuild,v 1.2 2005/09/01 15:09:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-1.61-r1.ebuild,v 1.3 2005/09/05 10:19:43 uberlord Exp $
 
 inherit eutils webapp
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 IUSE="enscript"
 KEYWORDS="~x86 ~amd64 ~sparc"
 
-RDEPEND=">=dev-php/mod_php-4.1.0
+RDEPEND="virtual/php
 	sys-apps/sed
 	enscript? ( >=app-text/enscript-1.6.0 )"
 DEPEND="sys-apps/findutils"

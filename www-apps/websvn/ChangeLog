@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.6 2005/09/01 15:09:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.7 2005/09/05 10:19:43 uberlord Exp $
+
+*websvn-1.61-r2 (05 Sep 2005)
+
+  05 Sep 2005; Roy Marples <uberlord@gentoo.org>
+  +files/websvn-1.61-r2.patch, websvn-1.61.ebuild, websvn-1.61-r1.ebuild,
+  +websvn-1.61-r2.ebuild:
+  Fixed Compare with previous wrt #104712
+  DEPEND on virtual/php instead of mod_php
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> websvn-1.61.ebuild,
   websvn-1.61-r1.ebuild:
