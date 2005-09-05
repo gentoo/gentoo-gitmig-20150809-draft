@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.4.1.ebuild,v 1.2 2005/04/30 10:21:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.4.1.ebuild,v 1.3 2005/09/05 17:32:46 weeve Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.nevow.org/releases/${PV}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.6 2005/08/26 14:21:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.7 2005/09/05 17:32:46 weeve Exp $
+
+  05 Sep 2005; Jason Wever <weeve@gentoo.org> nevow-0.4.1.ebuild:
+  Added ~sparc keyword.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> nevow-0.2.0.ebuild:
   add ~ia64
