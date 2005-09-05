@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 ae6633fabc9e95d912748121d5f53229 ChangeLog 1155
-MD5 afba253b294c318486b0af62c032bc4c cman-kernel-1.00.00-r1.ebuild 1096
+MD5 25e3e28aea5425a27cedaf4c6d84db73 ChangeLog 1155
+MD5 153d842cfe767aa096dbf6ea7a46999c cman-kernel-1.00.00-r1.ebuild 1098
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-cman-kernel-1.00.00-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDG68zgMUyd/cdjWsRAnr4AJ9exPCt3mV1Touls6YkrYo1Dqoj+ACcCh9J
+OTn0FuvoVcCzYcNAgFd/mRI=
+=v9AT
+-----END PGP SIGNATURE-----
