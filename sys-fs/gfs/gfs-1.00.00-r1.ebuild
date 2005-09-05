@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.00.00-r1.ebuild,v 1.1 2005/09/05 03:35:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.00.00-r1.ebuild,v 1.2 2005/09/05 19:54:46 xmerlin Exp $
 
 inherit linux-mod
 
@@ -21,11 +21,11 @@ DEPEND=">=sys-cluster/gfs-headers-1.00.00
 	"
 
 RDEPEND="sys-fs/e2fsprogs
-	>=sys-cluster/ccs-1.00.00
-	>=sys-cluster/cman-1.00.00
+	>=sys-cluster/ccs-1.00.00-r1
+	>=sys-cluster/cman-1.00.00-r1
 	>=sys-cluster/magma-1.00.00
 	>=sys-cluster/magma-plugins-1.00.00
-	>=sys-cluster/fence-1.00.00
+	>=sys-cluster/fence-1.00.00-r1
 	"
 
 S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN}"

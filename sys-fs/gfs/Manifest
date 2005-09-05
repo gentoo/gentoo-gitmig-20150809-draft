@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b2b0a456c391b281511d6c6fdd48ee23 ChangeLog 1968
+MD5 163ff2b7daddb69cd8ab6e59d899db58 ChangeLog 2062
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 7acb66d9f65afe63fa0ccfa7380c4d9d gfs-1.00.00-r1.ebuild 1032
+MD5 bda43198682e2d9d3e8bf9cdc54efa1b gfs-1.00.00-r1.ebuild 1041
 MD5 9ef03ae8f41068bd322723b0db416f58 files/gfs.rc 4401
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gfs-1.00.00-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDG73ggMUyd/cdjWsRAqatAJwI15rzbB5IMmugdrFkEmCWHnLR9ACglA8R
-fsy+mVX4q71T0iybyoi7fFY=
-=i4u1
+iD8DBQFDHKNhgMUyd/cdjWsRAkuYAJ9avLuMZtiCGsCtIfKa7yCNzZKJWACgkmgN
+Rn+J+Y+IowXWhvh+S+lt16s=
+=yURv
 -----END PGP SIGNATURE-----
