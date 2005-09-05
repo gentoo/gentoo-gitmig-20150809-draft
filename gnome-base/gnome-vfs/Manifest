@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9b77764e6b4431b358ace1ba41c30c45 ChangeLog 20377
 MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
-MD5 cd9d76dffa670f71199e71b15498b227 gnome-vfs-2.10.0-r2.ebuild 2065
+MD5 5132b08cb3537e4dafe6ba71089bd860 gnome-vfs-2.10.0-r2.ebuild 2045
 MD5 8de92aeb8fbf8f17c8bd810f4650d995 gnome-vfs-2.11.92.ebuild 1995
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 727db72c01bae43bd15e0127bb8b1ac4 gnome-vfs-2.10.1-r1.ebuild 2069
-MD5 d911c7df303c96fa782def7e34d25c02 gnome-vfs-2.10.1-r2.ebuild 2265
+MD5 e740b2b206f06210cd28a78774c08440 gnome-vfs-2.10.1-r1.ebuild 2049
+MD5 797c3f2f37f7affb981d0d312d1ef77a gnome-vfs-2.10.1-r2.ebuild 2245
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r4 68
 MD5 2bebfc7d172b325dc37efef679cbf545 files/digest-gnome-vfs-2.10.0-r2 70
 MD5 d20a2ead9fd45768a182fe24423b0842 files/digest-gnome-vfs-2.10.1-r1 70
@@ -25,10 +22,3 @@ MD5 071edd844b13f596a2f7d986b4512521 files/1.0/gnome-vfs-1.0.5-fix-segfault.patc
 MD5 2ae3110a6e6fb30cfa593e4210535dc2 files/1.0/gnome-vfs-1.0.5-gcc3.4.patch 837
 MD5 7320d4ac9d4f99766075061daa53ea63 files/1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892
 MD5 25d42b1a4cf935fbedd3465bc4a8dd7c files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHK0pBtvusYtCZMsRArQrAJ93JhpvpJDgSEBgYVVYPD7xG8x+5wCfW/GQ
-ao7VoU9opw1UvCDYUSFDLes=
-=vYCA
------END PGP SIGNATURE-----

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 08a264f6b60a7be3c83bbfd490fe54ac ChangeLog 4516
-MD5 bc7bad0f25634532bcb9ad91a6775022 gnome-volume-manager-1.2.2.ebuild 1045
-MD5 475e26d4d0dd7864b602d896023d10d7 gnome-volume-manager-1.2.1.ebuild 1029
+MD5 7c8f84863b43dd57ddc45ee742d7e8c8 gnome-volume-manager-1.2.2.ebuild 1023
+MD5 72c1bae8ef38e67c06baafe764e34065 gnome-volume-manager-1.2.1.ebuild 1008
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e686074972da9266f00210b851924735 gnome-volume-manager-1.5.0.ebuild 1606
 MD5 16d8909214e29b02eb989b948601461c files/digest-gnome-volume-manager-1.2.2 79
 MD5 8204147a3c0e44731e1baef264383fc1 files/digest-gnome-volume-manager-1.5.0 173
 MD5 fcd04d3a6284a16bdffaddaf7311cfe8 files/digest-gnome-volume-manager-1.2.1 79
 MD5 a037ca860b7fc7519f2e19ab5c1c0c82 files/gvm-use-pmount-if-available-nochangelog.patch 1741
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHKvYBtvusYtCZMsRAix6AKCBadW+iYTxNOq2zL3IeAPSJxkLYwCcDenY
-sVZ4p0aYjMPN7rLk3H8hxaU=
-=izK0
------END PGP SIGNATURE-----
