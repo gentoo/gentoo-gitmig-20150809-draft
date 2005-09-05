@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.10.1-r1.ebuild,v 1.8 2005/08/25 23:54:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.10.1-r1.ebuild,v 1.9 2005/09/05 21:19:34 cardoe Exp $
 
 inherit eutils gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/gconf-1.2.1
 	sys-fs/e2fsprogs
 	dev-libs/popt
-	hal? ( >=sys-apps/hal-0.4 )"
+	hal? ( =sys-apps/hal-0.4* )"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
