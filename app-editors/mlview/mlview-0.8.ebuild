@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8.ebuild,v 1.3 2005/08/18 18:36:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.8.ebuild,v 1.4 2005/09/05 20:52:51 cardoe Exp $
 
 inherit eutils gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.11
 	>=gnome-base/gconf-2.6.2
 	>=gnome-base/eel-2.6.2
 	>=x11-libs/gtksourceview-1
-	dbus? ( >=sys-apps/dbus-0.22 )
+	dbus? ( =sys-apps/dbus-0.23* )
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.33
