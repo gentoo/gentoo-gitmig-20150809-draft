@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.185 2005/09/03 22:00:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.186 2005/09/05 00:25:46 leonardop Exp $
+
+*gtk+-2.8.3-r1 (04 Sep 2005)
+
+  04 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/gtk+-2.8.3-misc_fixes.patch, -gtk+-2.8.3.ebuild,
+  +gtk+-2.8.3-r1.ebuild:
+  Avoid passing --disable-debug. Added patch with various bug fixes from
+  upstream CVS repository.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> gtk+-2.6.8.ebuild:
   Stable on ppc.

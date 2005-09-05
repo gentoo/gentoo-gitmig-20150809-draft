@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.3.ebuild,v 1.1 2005/09/01 10:29:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.3-r1.ebuild,v 1.1 2005/09/05 00:25:46 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -62,6 +62,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# Patches from upstream CVS repository for GNOME bugs #310270,
+	# #314980 and #315135.
+	epatch ${FILESDIR}/${P}-misc_fixes.patch
+
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
@@ -87,25 +91,25 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf="$(use_enable doc gtk-doc) \
+		$(use_with jpeg libjpeg) \
+		$(use_with tiff libtiff) \
+		$(use_enable static) \
+		--with-libpng \
+		--with-gdktarget=x11 \
+		--with-xinput"
+
+	# Passing --disable-debug is not recommended for production use
+	use debug && myconf="${myconf} --enable-debug=yes"
 
 	# bug #8375
 	# replace-flags "-O3" "-O2"
 
-	econf \
-		`use_enable doc gtk-doc` \
-		`use_with jpeg libjpeg` \
-		`use_with tiff libtiff` \
-		`use_enable static` \
-		`use_enable debug` \
-		--with-libpng \
-		--with-gdktarget=x11 \
-		--with-xinput \
-		|| die "./configure failed to run"
+	econf $myconf || die "./configure failed to run"
 
 	# gtk+ isn't multithread friendly due to some obscure code generation bug
 	# was an issue with 2.0.6, but no longer an issue
 	emake || die "gtk+ failed to compile"
-
 }
 
 src_install() {
