@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.151 2005/09/04 11:49:15 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.152 2005/09/05 14:46:38 herbs Exp $
+
+  05 Sep 2005; Herbie Hopkins <herbs@gentoo.org> perl-5.8.7.ebuild:
+  More multilib fixes thanks to Christophe Saout, bug 104509.
 
   04 Sep 2005; Elfyn McBratney <beu@gentoo.org>
   files/perl-5.8.7-regexp-nossp.patch:
