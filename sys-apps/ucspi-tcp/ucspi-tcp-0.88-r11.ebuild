@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r11.ebuild,v 1.1 2005/08/28 12:40:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r11.ebuild,v 1.2 2005/09/05 20:29:56 hansmi Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Collection of tools for managing UNIX services"
 HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
@@ -49,6 +49,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-head-1.patch
 	epatch ${FILESDIR}/${PV}-rblsmtpd-ignore-on-RELAYCLIENT.patch
 	epatch ${FILESDIR}/${PV}-limits.patch
+
+	# AMD64 is broken, bug 104436
+	use amd64 && filter-flags -O?
 
 	tc-export CC
 	echo "${CC} ${CFLAGS}" > conf-cc

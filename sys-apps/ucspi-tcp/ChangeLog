@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.34 2005/08/28 12:40:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.35 2005/09/05 20:29:56 hansmi Exp $
+
+  05 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ucspi-tcp-0.88-r11.ebuild:
+  Fixed AMD64 brokenness, bug 104436.
 
 *ucspi-tcp-0.88-r11 (28 Aug 2005)
 
