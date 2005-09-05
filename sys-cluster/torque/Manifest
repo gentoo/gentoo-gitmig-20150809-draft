@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f5db7991fecbb7e58833b6e4f8b30ee torque-1.0.1_p6.ebuild 1908
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
 MD5 72956cfb24805eaeee0df78dde48b8a3 torque-1.2.0_p5.ebuild 4518
@@ -9,3 +12,10 @@ MD5 eceaf7e310f5464403b6180dbbf9a892 files/torque-1.2.0_p5-destdir-fixes.patch 4
 MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5 379
 MD5 271d60925bb60edca8249e8bc0657fa8 files/torque-1.2.0_p5-setuid-safety.patch 823
 MD5 49d4d243a6dd96ba20531b240a7a32b6 files/digest-torque-1.0.1_p6 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHEb+KtJO8LeSoosRAh/tAKCPzzkGRN1h1hNSS/pOfhlqZDHoGwCgj0k5
+5A6TvpxfBBmRQ8Dn1OXAUjQ=
+=evfn
+-----END PGP SIGNATURE-----
