@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-EN-Inflect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.6 2005/08/25 23:22:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.7 2005/09/05 14:30:48 ranger Exp $
+
+  05 Sep 2005; Brent Baude <ranger@gentoo.org>
+  Lingua-EN-Inflect-1.88.ebuild:
+  marking Lingua-EN-Inflect-1.88 ~ppc64 in support of Bug 101114
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   Lingua-EN-Inflect-1.88.ebuild:
