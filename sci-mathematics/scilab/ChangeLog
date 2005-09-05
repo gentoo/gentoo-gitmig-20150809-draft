@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.9 2005/06/26 02:32:12 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.10 2005/09/05 07:47:23 pbienst Exp $
+
+*scilab-3.1.1-r1 (05 Sep 2005)
+
+  05 Sep 2005; Peter Bienstman <pbienst@gentoo.org> +scilab-3.1.1-r1.ebuild:
+  Convert to new lapack infrastructure.
 
   26 Jun 2005; Olivier Fisette <ribosome@gentoo.org>
   -files/scilab-3.0-initialization.patch, -scilab-3.0.ebuild,

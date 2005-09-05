@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37c2af0587f62b036e1eaddfbc8c9268 ChangeLog 5231
-MD5 f8e77491ef5140fe63fbe21ca1964377 files/digest-scilab-2.7-r3 135
-MD5 bbe608fb3f1804163b4b8af882c8dcbb files/digest-scilab-3.1.1 70
-MD5 814dd511c89a14982a5d6c60b09c1709 files/scilab-2.7-configure.patch 1702
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 693bb0bca5adf98abe428a3ca435d095 scilab-2.7-r3.ebuild 4028
 MD5 d0d35035f63b012c250b165d95ac0a8d scilab-3.1.1.ebuild 5789
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCvqHQI1lqEGTUzyQRAl+WAKC16ZnQHPyWzI7mQGinRpdpbz6UigCff30M
-Zkdulb3x5Wy9HLPoO1m8o/0=
-=y7EY
------END PGP SIGNATURE-----
+MD5 5aa57ad3a0e03f54dd59bdef0a5f2f1e scilab-3.1.1-r1.ebuild 5918
+MD5 385fca326565ce204e8a81d228761ab4 ChangeLog 5381
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 bbe608fb3f1804163b4b8af882c8dcbb files/digest-scilab-3.1.1-r1 70
+MD5 814dd511c89a14982a5d6c60b09c1709 files/scilab-2.7-configure.patch 1702
+MD5 f8e77491ef5140fe63fbe21ca1964377 files/digest-scilab-2.7-r3 135
+MD5 bbe608fb3f1804163b4b8af882c8dcbb files/digest-scilab-3.1.1 70
