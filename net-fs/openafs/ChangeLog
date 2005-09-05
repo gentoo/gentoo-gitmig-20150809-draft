@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.51 2005/09/02 16:50:36 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.52 2005/09/05 07:50:10 stefaan Exp $
+
+*openafs-1.4.0_rc3 (05 Sep 2005)
+
+  05 Sep 2005; Stefaan De Roeck <stefaan.deroeck@gentoo.org>
+  +openafs-1.4.0_rc3.ebuild:
+  Version bump to 1.4.0_rc3
 
 *openafs-1.4.0_rc2-r1 (02 Sep 2005)
 *openafs-1.2.13-r2 (02 Sep 2005)
