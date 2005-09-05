@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-thinice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.18 2005/08/02 13:02:56 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.19 2005/09/05 16:00:35 leonardop Exp $
+
+  05 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gtk-engines-thinice-1.0.4-r1.ebuild:
+  Stable on x86.
 
 *gtk-engines-thinice-1.0.4-r1 (02 Aug 2005)
 
