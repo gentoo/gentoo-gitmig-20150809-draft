@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 44bf9adfd16a773396ef987ace35fec8 gfs-headers-1.00.00.ebuild 853
+MD5 623b9743700aad3ee8da719a1cf1a0be ChangeLog 413
+MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gfs-headers-1.00.00 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDG7xRgMUyd/cdjWsRAl6iAJ9PU6IT0ThyO+hs2RaxCDWWWKgbkwCeI2Ed
+BIjdfE82gTdnfBntW7nM/8Q=
+=BZLI
+-----END PGP SIGNATURE-----

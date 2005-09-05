@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/gnbd-headers-1.00.00.ebuild,v 1.1 2005/09/05 02:54:39 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/gnbd-headers-1.00.00.ebuild,v 1.2 2005/09/05 03:26:19 xmerlin Exp $
 
 CLUSTER_VERSION="1.00.00"
 DESCRIPTION="GFS Network Block Devices headers"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-cluster/gnbd-kernel-1.00.00-r1"
+DEPEND="!<=sys-cluster/gnbd-kernel-1.00.00"
 RDEPEND=""
 
 S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN}"

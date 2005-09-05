@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/cman-headers-1.00.00.ebuild,v 1.1 2005/09/05 02:31:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/cman-headers-1.00.00.ebuild,v 1.2 2005/09/05 03:25:23 xmerlin Exp $
 
 CLUSTER_VERSION="1.00.00"
 DESCRIPTION="CMAN cluster headers"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 
 IUSE=""
-DEPEND=">=sys-cluster/cman-kernel-1.00.00-r1"
+DEPEND="!<=sys-cluster/cman-kernel-1.00.00"
 RDEPEND=""
 
 S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN/headers/kernel}"
