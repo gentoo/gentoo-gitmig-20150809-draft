@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20050618.ebuild,v 1.2 2005/07/18 01:08:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20050618.ebuild,v 1.3 2005/09/05 04:19:49 j4rg0n Exp $
 
 inherit eutils vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: Gentoo Ebuild, Eclass, GLEP, ChangeLog and Portage
 Files syntax highlighting, filetype and indent settings"
 HOMEPAGE="http://developer.berlios.de/projects/gentoo-syntax"
 LICENSE="vim"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86 ~ppc-macos"
 SRC_URI="http://dev.gentoo.org/~ka0ttic/${PN}/${P}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2"
 
