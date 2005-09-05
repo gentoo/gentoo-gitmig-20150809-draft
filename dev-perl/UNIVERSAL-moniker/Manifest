@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88236b4129b4fb35d3c52fa50c3e60bb ChangeLog 1127
-MD5 722c475fc9584be7da3acf7dd6aba8da UNIVERSAL-moniker-0.08.ebuild 603
+MD5 5d55c4826cae27f7b95c5de7ac323f4e ChangeLog 1270
+MD5 ccb45d452bb607b23c96a99deee065ba UNIVERSAL-moniker-0.08.ebuild 607
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 a032694141da2e74a30fad4e366fa8ff files/digest-UNIVERSAL-moniker-0.08 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCclYOtG5z4I8BtQoRAso6AJ9P+tSxdTGCR8O3KmcCXUJhFSVXsQCbBXOZ
-VEYwZMnTKh0w+5xmoE0+7Hk=
-=IYNf
------END PGP SIGNATURE-----
