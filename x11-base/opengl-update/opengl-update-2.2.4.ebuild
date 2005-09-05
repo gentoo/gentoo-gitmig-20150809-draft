@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.3.ebuild,v 1.2 2005/08/13 07:42:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.2.4.ebuild,v 1.1 2005/09/05 19:43:04 eradicator Exp $
 
-inherit multilib toolchain-funcs eutils
+inherit multilib
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,15 +11,15 @@ HOMEPAGE="http://www.gentoo.org/"
 # http://oss.sgi.com/projects/ogl-sample/ABI/glext.h
 # http://oss.sgi.com/projects/ogl-sample/ABI/glxext.h
 
-GLEXT="27"
-GLXEXT="10"
+GLEXT="29"
+GLXEXT="11"
 
 SRC_URI="http://dev.gentoo.org/~eradicator/opengl/glext.h-${GLEXT}.bz2
 	 http://dev.gentoo.org/~eradicator/opengl/glxext.h-${GLXEXT}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 RESTRICT="multilib-pkg-force"
 
@@ -33,9 +33,6 @@ src_unpack() {
 
 	mv glext.h-${GLEXT} glext.h
 	mv glxext.h-${GLXEXT} glxext.h
-
-	# Bugs #81199, #81472
-	epatch ${FILESDIR}/glxext.h-inttypes.patch
 }
 
 pkg_preinst() {

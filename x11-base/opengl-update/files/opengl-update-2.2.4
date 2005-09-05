@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.3,v 1.1 2005/08/12 22:33:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.4,v 1.1 2005/09/05 19:43:04 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -232,7 +232,7 @@ set-new-implementation() {
 				done
 			popd &> /dev/null
 
-			if [[ -e "${PREFIX}/${LIBDIR}/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls" ]]; then
+			if [[ -e "${PREFIX}/${LIBDIR}/opengl/${GL_LOCAL}/lib/tls" ]]; then
 				mkdir -p ${DST_PREFIX}/${LIBDIR}/tls
 				pushd ${DST_PREFIX}/${LIBDIR}/tls &> /dev/null
 					# First remove old symlinks
@@ -299,6 +299,7 @@ set-new-implementation() {
 							[[ -f "${file}" || ( -L "${file}" && ! -e "${file}" ) ]] && rm -f ${file}
 							ln -s ${PREFIX}/${LIBDIR}/opengl/${GL_IMPLEM}/include/${file}
 						fi
+						continue
 					fi
 
 					if [[ -e ${PREFIX}/${LIBDIR}/opengl/global/include/${file} ]]; then
