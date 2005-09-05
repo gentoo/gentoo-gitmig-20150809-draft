@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.10.0-r2.ebuild,v 1.10 2005/07/11 23:48:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.10.0-r2.ebuild,v 1.11 2005/09/05 20:37:19 cardoe Exp $
 
 inherit gnome2 eutils
 
@@ -32,7 +32,8 @@ RDEPEND=">=dev-libs/glib-2.6
 	samba? ( >=net-fs/samba-3
 		!gnome-extra/gnome-vfs-extras )
 	hal? ( >=sys-apps/hal-0.4
-		>=sys-apps/dbus-0.22 )
+		<sys-apps/hal-0.5
+		=sys-apps/dbus-0.23* )
 	howl? ( >=net-misc/howl-0.9.6-r1 )"
 
 # ssl/gnutls USE deps : if both are enabled choose openssl
