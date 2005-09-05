@@ -1,0 +1,8 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/x86/minimal/make.defaults,v 1.1 2005/09/05 20:31:39 phreak Exp $
+
+GRP_STAGE23_USE="-berkdb -crypt -gdbm -nls -pam -perl -python"
+USE="-berkdb -crypt -gdbm -gpm -nls -pam -perl -python"
+
+FEATURES="nodoc noinfo noman"
