@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.46 2005/08/02 02:19:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.47 2005/09/05 11:43:37 flameeyes Exp $
+
+  05 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> lcms-1.14-r1.ebuild:
+  Run elibtoolize after autoreconf is ran.
 
 *lcms-1.14-r1 (02 Aug 2005)
 *lcms-1.13-r2 (02 Aug 2005)
