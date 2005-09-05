@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.114 2005/08/31 16:52:34 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.115 2005/09/05 22:25:37 marineam Exp $
+
+*ck-sources-2.6.13_p2 (05 Sep 2005)
+
+  05 Sep 2005; Michael Marineau <marineam@gentoo.org>
+  +ck-sources-2.6.13_p2.ebuild:
+  Version bump to ck2, for ck-server users ck2 == ck1 so don't bother with the
+  upgrade if you are already using ck-server 2.6.13-ck1. For other users ck2
+  is just ck1+ with a updated swap-prefetch patch. No ck-plus for this version.
 
 *ck-sources-2.6.13_p1 (31 Aug 2005)
 
