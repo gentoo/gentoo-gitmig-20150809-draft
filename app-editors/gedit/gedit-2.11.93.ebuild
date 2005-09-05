@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.11.92.ebuild,v 1.1 2005/08/24 05:07:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.11.93.ebuild,v 1.1 2005/09/05 02:01:50 leonardop Exp $
 
 inherit gnome2
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31"
 
 DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README THANKS TODO"
-
 USE_DESTDIR="1"
 
 
