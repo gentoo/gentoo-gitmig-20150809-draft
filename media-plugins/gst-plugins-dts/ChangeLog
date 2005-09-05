@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-dts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.3 2005/08/01 16:46:09 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.4 2005/09/05 17:35:08 zaheerm Exp $
+
+*gst-plugins-dts-0.8.11 (05 Sep 2005)
+
+  05 Sep 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +gst-plugins-dts-0.8.11.ebuild:
+  version bump
 
   01 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
   gst-plugins-dts-0.8.10.ebuild:
