@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.55 2005/08/30 14:33:52 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.56 2005/09/05 18:39:21 corsair Exp $
+
+  05 Sep 2005; Markus Rothe <corsair@gentoo.org> msmtp-1.4.2.ebuild:
+  Stable on ppc64
 
   30 Aug 2005; Tom Martin <slarti@gentoo.org> msmtp-1.4.2.ebuild:
   Stable amd64, sparc, ia64.
