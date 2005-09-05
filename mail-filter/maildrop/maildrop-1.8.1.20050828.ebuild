@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1.20050828.ebuild,v 1.1 2005/09/05 14:39:20 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1.20050828.ebuild,v 1.2 2005/09/05 15:01:48 ferdy Exp $
 
 inherit eutils gnuconfig
 
@@ -20,13 +20,19 @@ IUSE="mysql ldap gdbm berkdb debug postgres"
 PROVIDE="virtual/mda"
 
 DEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	!gdbm? ( berkdb? ( >=sys-libs/db-3 ) )
+	!gdbm? ( berkdb? (
+				>=sys-libs/db-3
+				~sys-devel/autoconf-2.59
+			)
+	)
 	mysql? ( net-libs/courier-authlib )
 	postgres? ( net-libs/courier-authlib )
 	ldap? ( net-libs/courier-authlib )
 	!mail-mta/courier"
 
 RDEPEND="${DEPEND}
+	virtual/fam
+	dev-libs/libpcre
 	dev-lang/perl"
 
 src_unpack() {
@@ -44,7 +50,7 @@ src_unpack() {
 	else
 		if use berkdb ; then
 			epatch ${FILESDIR}/maildrop-1.8.0-db4.patch
-			export WANT_AUTOCONF="2.5"
+			export WANT_AUTOCONF="2.59"
 			gnuconfig_update
 			libtoolize --copy --force
 			ebegin "Recreating configure."
