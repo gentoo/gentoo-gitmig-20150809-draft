@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.41 2005/08/07 16:53:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.42 2005/09/05 11:17:44 ferdy Exp $
+
+  05 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> lincvs-1.4.3.ebuild:
+  marked ~alpha wrt bug #99981
 
 *lincvs-1.4.3 (07 Aug 2005)
 
