@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.28 2005/08/23 22:49:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.29 2005/09/05 00:34:31 halcy0n Exp $
+
+*xerces-c-2.7.0 (05 Sep 2005)
+
+  05 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +xerces-c-2.7.0.ebuild:
+  Bump to newest version
 
   23 Aug 2005; Mark Loeser <halcy0n@gentoo.org> xerces-c-2.6.0.ebuild,
   xerces-c-2.6.0-r1.ebuild:
