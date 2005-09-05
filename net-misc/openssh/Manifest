@@ -4,15 +4,15 @@ Hash: SHA1
 MD5 ff0dccf17d2b2b58a8a52554860be9a6 metadata.xml 1430
 MD5 e138bf4c91e1cf9befc9023f5222e52d openssh-3.9_p1-r3.ebuild 4911
 MD5 76220c10eb51cb6d50806c7304225881 openssh-3.9_p1-r2.ebuild 4937
-MD5 6865138cc702e011744d1612a95f2338 openssh-4.1_p1-r1.ebuild 5163
+MD5 919265693ab835f2c7b99a21e44cd4cd openssh-4.1_p1-r1.ebuild 5160
 MD5 9f6835990c96f3a4890368bc10a9a9b9 openssh-3.8.1_p1-r1.ebuild 4482
 MD5 caa2375c925e19a6b12d03c050d23659 openssh-4.0_p1-r2.ebuild 5200
-MD5 626dab51b9feddfbee515973d45fda99 ChangeLog 21432
+MD5 f4fba83d863250c575fc101387045286 ChangeLog 21540
 MD5 0d2120ac28128f68efe07d1da49a39cd files/digest-openssh-3.9_p1-r3 277
 MD5 2b66f75047edfac5d5e6cdbffa35383e files/sshd.pam_include 205
 MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8_p1-resolv_functions.patch.bz2 315
 MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8_p1-kerberos.patch.bz2 465
-MD5 e655dc94e12d1f00104bc8254ac00361 files/digest-openssh-4.1_p1-r1 281
+MD5 9643b30009e2c13fa1f4e51b149d732b files/digest-openssh-4.1_p1-r1 360
 MD5 7205b89215b9dc72e3958c662065b529 files/openssh-3.9_p1-largekey.patch.bz2 1262
 MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
 MD5 87593c73e26e1a3825fcb51f2270b694 files/openssh-3.9_p1-chroot.patch 3027
@@ -45,7 +45,7 @@ MD5 f5e33d1831f95c821a08893bcf3e3f5f files/openssh-4.0_p1-sftplogging-1.2-gentoo
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHKZVgIKl8Uu19MoRAkX8AJ9hUvwkHAxZsk874w3DFGJyeFlg9ACfSLh9
-AXZPBRObENFp+s58rlvMwcE=
-=wZYg
+iD8DBQFDHKe9gIKl8Uu19MoRAo/UAJ9X4KeYZPuY1BHK2T6TKnRkv9YKZgCeK0yk
+d4dCLcykY3kDqPyw5pT2MPA=
+=4zjX
 -----END PGP SIGNATURE-----
