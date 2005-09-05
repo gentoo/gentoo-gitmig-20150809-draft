@@ -40,6 +40,7 @@ x11-libs/gtk+
 # These packages depend on packages that would violate collision-protect
 app-vim/phpdocs
 app-vim/gentoo-syntax
+app-vim/taglist
 
 # Cpio is provided by Apple on 10.4. The Gentoo binary is installed to a separate location
 # so the package does not cause a collision. Nonetheless, cpio is part of System, and we don't
