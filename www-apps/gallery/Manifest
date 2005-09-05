@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4b6df2d9376a4dd23b0b238718355ea gallery-2.0_rc1.ebuild 983
-MD5 7ce5a80546a565a228721fe5474e30fd gallery-1.5.1_rc3.ebuild 990
-MD5 b626cbd77364788a21d780de41d9120c gallery-1.4.4_p6.ebuild 1230
-MD5 6f6254b7d851fcf66cf1f2fcb24e551d gallery-1.5_p1.ebuild 983
-MD5 e424ffa8ed9dd98325fbb1f89572dd79 gallery-2.0_rc2.ebuild 1022
-MD5 ebfca38853f001ea5b2ff55fdd4bccd5 ChangeLog 8242
+MD5 4496532fd4c3930f8b7be26c7ba89a07 gallery-1.5_p1.ebuild 983
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 b5b25ae1ec1197b04501dba4bcb91536 files/digest-gallery-1.5.1_rc3 70
-MD5 a8729b1e72b2703178d00a546bc8a925 files/digest-gallery-1.4.4_p6 70
-MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
-MD5 411fcddae2e05639e626051d31f019c7 files/digest-gallery-2.0_rc1 74
-MD5 86e13454ea6b25fc8bb1fb70dd296e01 files/digest-gallery-2.0_rc2 74
-MD5 d8aa1a55fbfe46c99088bb0c360794f2 files/postinstall-en2.txt 770
+MD5 93a2edef8fc5259e89c6365e0f9cb54d ChangeLog 8348
+MD5 7ce5a80546a565a228721fe5474e30fd gallery-1.5.1_rc3.ebuild 990
+MD5 e424ffa8ed9dd98325fbb1f89572dd79 gallery-2.0_rc2.ebuild 1022
+MD5 b626cbd77364788a21d780de41d9120c gallery-1.4.4_p6.ebuild 1230
+MD5 c4b6df2d9376a4dd23b0b238718355ea gallery-2.0_rc1.ebuild 983
 MD5 60f82816cecf216b054f0e889324bcde files/digest-gallery-1.5_p1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDG66lEzitwsaoONoRAjv0AKCG8FlzeMOaPcXI9txqzRj2bBmJzACgxuxa
-srwEUB527elQUvoe8bY5LIo=
-=x/5z
------END PGP SIGNATURE-----
+MD5 b5b25ae1ec1197b04501dba4bcb91536 files/digest-gallery-1.5.1_rc3 70
+MD5 d8aa1a55fbfe46c99088bb0c360794f2 files/postinstall-en2.txt 770
+MD5 86e13454ea6b25fc8bb1fb70dd296e01 files/digest-gallery-2.0_rc2 74
+MD5 411fcddae2e05639e626051d31f019c7 files/digest-gallery-2.0_rc1 74
+MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
+MD5 a8729b1e72b2703178d00a546bc8a925 files/digest-gallery-1.4.4_p6 70

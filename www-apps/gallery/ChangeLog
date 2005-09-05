@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.30 2005/09/05 02:34:06 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.31 2005/09/05 20:07:01 hansmi Exp $
+
+  05 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> gallery-1.5_p1.ebuild:
+  Stable on hppa and ppc.
 
   05 Sep 2005; Renat Lumpau <rl03@gentoo.org> gallery-1.5_p1.ebuild:
   Stable on x86 wrt security bug #104722.
