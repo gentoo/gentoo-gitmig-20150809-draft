@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ccs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.17 2005/08/17 10:44:13 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ChangeLog,v 1.18 2005/09/05 21:43:49 kugelfang Exp $
+
+  05 Sep 2005; Danny van Dyk <kugelfang@gentoo.org> ccs-1.00.00-r1.ebuild:
+  Marked ~amd64.
 
 *ccs-1.00.00-r1 (17 Aug 2005)
 
