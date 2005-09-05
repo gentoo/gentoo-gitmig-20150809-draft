@@ -5,6 +5,7 @@ app-arch/zip
 app-arch/unzip
 app-editors/nano
 app-editors/vim-core
+app-editors/vim
 >=app-portage/esearch-0.7.1
 app-shells/bash
 app-shells/zsh
@@ -35,6 +36,10 @@ x11-libs/gtk+
 ##
 # end collision-protect
 ##
+
+# These packages depend on packages that would violate collision-protect
+app-vim/phpdocs
+app-vim/gentoo-syntax
 
 # Cpio is provided by Apple on 10.4. The Gentoo binary is installed to a separate location
 # so the package does not cause a collision. Nonetheless, cpio is part of System, and we don't
