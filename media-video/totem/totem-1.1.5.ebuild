@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.1.5.ebuild,v 1.2 2005/09/01 22:46:14 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.1.5.ebuild,v 1.3 2005/09/05 00:43:14 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -46,8 +46,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 			>=media-plugins/gst-plugins-mpeg2dec-0.8.10 )
 		win32codecs? ( >=media-plugins/gst-plugins-pitfdll-0.8.1 )
 		)
-	mozilla? ( >=www-client/mozilla-1.7.3 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
+	!firefox? ( mozilla? ( >=www-client/mozilla-1.7.3 ) )
 
 	!gnome-extra/nautilus-media"
 
