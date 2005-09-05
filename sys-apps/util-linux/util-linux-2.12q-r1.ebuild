@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.5 2005/09/03 02:24:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r1.ebuild,v 1.6 2005/09/05 04:48:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -53,6 +53,9 @@ src_unpack() {
 
 	# Fix -f usage with -a and in general
 	epatch ${FILESDIR}/${PN}-2.12q-more-fake-checks.patch
+
+	# Fix mtab updates with `mount --move /foo /bar`
+	epatch ${FILESDIR}/${PN}-2.12q-update-mtab-when-moving.patch
 
 	# Fix unreadable df output when using devfs ... this check is kind of 
 	# a hack, but whatever, the output isnt critical at all :P

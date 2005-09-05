@@ -1,0 +1,33 @@
+Running `mount --move /foo /bar` would leave the old /foo entry in /etc/mtab 
+and create a new /bar entry with wrong info.
+
+http://bugs.gentoo.org/104697
+
+--- mount/mount.c
++++ mount/mount.c
+@@ -665,6 +665,25 @@
+ 		else {
+ 			mntFILE *mfp;
+ 
++			/* when moving a mount point, we have to make sure the mtab
++			 * gets updated properly.  We get info about the old mount
++			 * point, copy it to the new mount point, and then delete
++			 * the old mount point. */
++			if (flags & MS_MOVE) {
++				const char *olddir = mnt.mnt_fsname;
++				struct mntentchn *oldmc = oldmc = getmntfile(olddir);
++				if (oldmc != NULL) {
++					mnt.mnt_fsname = strdup(oldmc->m.mnt_fsname);
++					mnt.mnt_type = oldmc->m.mnt_type;
++					mnt.mnt_opts = oldmc->m.mnt_opts;
++					mnt.mnt_freq = oldmc->m.mnt_freq;
++					mnt.mnt_passno = oldmc->m.mnt_passno;
++				}
++				update_mtab(olddir, NULL);
++				if (oldmc != NULL)
++					my_free(olddir);
++			}
++
+ 			lock_mtab();
+ 			mfp = my_setmntent(MOUNTED, "a+");
+ 			if (mfp == NULL || mfp->mntent_fp == NULL) {
