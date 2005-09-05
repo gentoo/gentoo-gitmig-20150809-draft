@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.2 2005/08/23 23:13:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.3 2005/09/05 20:30:38 eradicator Exp $
+
+*eselect-opengl-1.0.2 (05 Sep 2005)
+
+  05 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +eselect-opengl-1.0.2.ebuild:
+  Version bump to fix symlinking to tls libs and --impl-headers. Plus much
+  cleanup of the module thanks to kugs.
 
 *eselect-opengl-1.0.1 (23 Aug 2005)
 
