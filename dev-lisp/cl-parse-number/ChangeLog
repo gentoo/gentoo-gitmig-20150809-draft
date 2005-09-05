@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-parse-number
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-parse-number/ChangeLog,v 1.7 2005/05/24 18:48:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-parse-number/ChangeLog,v 1.8 2005/09/05 05:07:29 ndimiduk Exp $
+
+  05 Sep 2005; Nick Dimiduk <ndimiduk@gentoo.org>
+  cl-parse-number-1.0-r1.ebuild:
+  keyword ~ppc-macos
 
   24 May 2005; <mkennedy@gentoo.org> cl-parse-number-1.0-r1.ebuild:
   Keywording ~sparc
