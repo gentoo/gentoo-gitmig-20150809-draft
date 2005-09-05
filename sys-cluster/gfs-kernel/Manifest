@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6a8f6ae5184770064bd11602f24a175 ChangeLog 1400
 MD5 94a430555c5c7f638491df8748ec698d gfs-kernel-1.00.00-r1.ebuild 1181
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-gfs-kernel-1.00.00-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHLJ45mJXAu5GbtIRAgykAJwKsvxbpua16NbeDV7dM3Mnl/Mm9QCfSjFy
+47QGYGSfP2Gbq4SYM0yTd20=
+=Q9/Y
+-----END PGP SIGNATURE-----
