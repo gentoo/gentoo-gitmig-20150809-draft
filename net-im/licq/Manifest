@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7adc6310a4dbd42bad26caa80683d4ec metadata.xml 249
 MD5 57c210d6dbd0e62134450d102b068f1e ChangeLog 10038
 MD5 f30c97a120a37f90edd8abdf612cd52a licq-1.2.7.ebuild 3368
@@ -26,3 +29,10 @@ MD5 d6d219fd6946088cdcaa8a708cc209d2 files/digest-licq-1.3.0-r5 226
 MD5 d6d219fd6946088cdcaa8a708cc209d2 files/digest-licq-1.3.0-r6 226
 MD5 519f2e13db3610087c70ccc1884c29d4 files/digest-licq-1.3.0-r7 307
 MD5 8ccd59c054d03443f0561e01d406d0a8 files/digest-licq-1.3.0-r8 388
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHII2mOfEJZHYOKcRAnbuAJ9c01mhZDQwAYo5+LcAuLnAIPddswCffWAv
+XNvB2VlwhKuTbeEUHQNMIrs=
+=awEo
+-----END PGP SIGNATURE-----
