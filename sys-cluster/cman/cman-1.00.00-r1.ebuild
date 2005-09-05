@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.00.00-r1.ebuild,v 1.1 2005/09/05 02:36:00 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.00.00-r1.ebuild,v 1.2 2005/09/05 19:57:33 xmerlin Exp $
 
 CLUSTER_VERSION="1.00.00"
 DESCRIPTION="general-purpose symmetric cluster manager"
@@ -12,8 +12,8 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-cluster/ccs-${CLUSTER_VERSION}
-	>=sys-cluster/cman-headers-${CLUSTER_VERSION}"
+DEPEND=">=sys-cluster/ccs-1.00.00
+	>=sys-cluster/cman-headers-1.00.00"
 
 RDEPEND="virtual/libc"
 

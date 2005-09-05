@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.16 2005/09/05 02:36:00 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.17 2005/09/05 19:57:33 xmerlin Exp $
+
+  05 Sep 2005; Christian Zoffoli <xmerlin@gentoo.org> cman-1.00.00-r1.ebuild:
+  fixed dep.
 
 *cman-1.00.00-r1 (05 Sep 2005)
 
