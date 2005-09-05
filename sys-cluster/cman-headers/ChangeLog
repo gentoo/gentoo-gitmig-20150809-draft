@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/cman-headers
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/ChangeLog,v 1.1 2005/09/05 02:31:36 xmerlin Exp $
+
+*cman-headers-1.00.00 (05 Sep 2005)
+
+  05 Sep 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  +cman-headers-1.00.00.ebuild:
+  cman-kernel splitted in cman-headers and cman-kernel.
+
