@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.7_pre20050821.ebuild,v 1.2 2005/09/03 21:58:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.1 2005/09/05 22:07:17 sbriesen Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -16,8 +16,8 @@ HOMEPAGE="http://www.isdn4linux.de/"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
-IUSE="X unicode activefilter ipppd isdnlog eurofile usb pcmcia"
-#IUSE="X unicode activefilter ipppd isdnlog eurofile mysql postgres oracle"
+IUSE="X unicode activefilter mschap ipppd isdnlog eurofile usb pcmcia"
+# TODO: mysql postgres oracle radius
 SLOT="0"
 
 # mysql? ( dev-db/mysql )
@@ -31,6 +31,7 @@ DEPEND="virtual/linux-sources
 	dev-lang/tcl
 	X? ( virtual/x11 )
 	eurofile? ( net-ftp/ftpbase )
+	ipppd? ( mschap? ( dev-libs/openssl ) )
 	ipppd? ( activefilter? ( >=virtual/libpcap-0.9.3 ) )"
 
 RDEPEND="${DEPEND}
@@ -48,7 +49,7 @@ pkg_setup() {
 		use activefilter && CONFIG_CHECK="${CONFIG_CHECK} IPPP_FILTER"
 	fi
 	use eurofile && CONFIG_CHECK="${CONFIG_CHECK} X25 ISDN_X25"
-	linux-info_pkg_setup
+	# linux-info_pkg_setup  -> disabled until I have a better solution
 
 	# Get country code from I4L_CC variable
 	# default country: DE (Germany)
@@ -117,6 +118,8 @@ src_unpack() {
 	if use ipppd; then
 		use activefilter || \
 		sed -i -e "s:^\(CONFIG_IPPP_FILTER=.*\)$:# \1:g" .config
+		use mschap || \
+		sed -i -e "s:^\(CONFIG_IPPPD_MSCHAP=.*\)$:# \1:g" .config
 	else
 		sed -i -e "s:^\(CONFIG_IPPPD=.*\)$:# \1:g" \
 			-e "s:^\(CONFIG_IPPPSTATS=.*\)$:# \1:g" .config
@@ -149,6 +152,9 @@ src_unpack() {
 	# Fixing /usr/lib to /usr/$(get_libdir} (for multilib-strict)
 	sed -i -e "s:/usr/lib:/usr/$(get_libdir):g" isdnctrl/Makefile.in
 
+	# Fixing location of openssl-headers
+	sed -i -e "s:<ssl/:<openssl/:g" ipppd/chap_ms.c
+
 	# disable creation of /dev nodes
 	sed -i -e "s:\(sh scripts/makedev.sh\):echo \1:g" Makefile
 	sed -i -e "s:^\([[:space:]]*\)\(.*mknod.*capi20.*\)\$:\1# \2:g" \
@@ -167,15 +173,19 @@ src_unpack() {
 			iconv -f cp850 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
 		done
 	fi
-}
 
-src_compile() {
+	# run autoconf
 	gnuconfig_update
-	for i in eicon; do
+	einfo "Running autoconf"
+	for i in icn imon loop divertctrl eicon hisax ipppd pcbit \
+		isdnctrl iprofd	act2000 eurofile ipppstats isdnlog; do
 		cd $i && autoconf || \
 			die "autoconf failed in dir $i"
 		cd ..
 	done
+}
+
+src_compile() {
 	emake -j1 MYCFLAGS="${CFLAGS}" subconfig || die "make subconfig failed"
 	emake -j1 MYCFLAGS="${CFLAGS}" || die "make failed"
 }

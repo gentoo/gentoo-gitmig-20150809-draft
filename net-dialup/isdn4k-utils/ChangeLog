@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.45 2005/09/03 20:56:26 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.46 2005/09/05 22:07:17 sbriesen Exp $
+
+*isdn4k-utils-3.8_pre20050821 (05 Sep 2005)
+
+  05 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  -files/config-3.7_pre20050821, +files/config-3.8_pre20050821,
+  -isdn4k-utils-3.7_pre20050821.ebuild,
+  +isdn4k-utils-3.8_pre20050821.ebuild:
+  renamed ebuild to correct version, fixing activefilter issue, adding mschap
+  support for ipppd, disabled kernel-config checks for the time being (needs
+  rework). see bug 99190.
 
 *isdn4k-utils-3.7_pre20050821 (03 Sep 2005)
 
