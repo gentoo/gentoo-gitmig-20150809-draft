@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.3.4.ebuild,v 1.1 2005/09/04 05:56:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.3.4.ebuild,v 1.2 2005/09/05 23:33:09 metalgod Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nongnu.org/gksu/"
 SRC_URI="http://people.debian.org/~kov/gksu/gksu/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="${IUSE} nls"
 
 RDEPEND=">=x11-libs/libgksu-1.3.3
