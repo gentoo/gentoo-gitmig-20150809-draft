@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.6.ebuild,v 1.1 2005/08/28 19:45:58 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.8.6.ebuild,v 1.2 2005/09/05 16:44:23 zaheerm Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,6 +24,14 @@ S=${WORKDIR}/${MY_P}
 DEPEND=">=media-libs/gstreamer-0.8.10
 	dev-util/pkgconfig"
 
+src_unpack() {
+        unpack ${A}
+	cd ${S}
+
+        # bug 103529
+        epatch ${FILESDIR}/${PN}-0.8.5-gmake.patch
+	./autogen.sh
+}
 src_compile() {
 
 	# Restrictions taken from the mplayer ebuild

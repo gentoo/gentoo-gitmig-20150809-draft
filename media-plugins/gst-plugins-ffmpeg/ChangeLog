@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.35 2005/08/28 19:45:58 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.36 2005/09/05 16:44:23 zaheerm Exp $
+
+  05 Sep 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-ffmpeg-0.8.5-gmake.patch,
+  gst-plugins-ffmpeg-0.8.5.ebuild, gst-plugins-ffmpeg-0.8.6.ebuild:
+  add patch so make is replaced by autotool specified make, fixes bug
 
 *gst-plugins-ffmpeg-0.8.6 (28 Aug 2005)
 
