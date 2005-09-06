@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 177f04d7f9b9d0fdb6098ea18ba57eb6 tmsnc-0.2.4.ebuild 1113
+MD5 36f66a009fb5b92f99a38268b1aeef78 ChangeLog 377
+MD5 5c9b94cb2db83edb8f198bc23fdbcffa metadata.xml 576
+MD5 fb5cdbfe31d6f8753f77a5d0868b5ff4 files/digest-tmsnc-0.2.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHPbxwUpWvClEHQoRAvXMAJ9y3sCawkmG3qx6dZpWhxnlBWaHZQCeJ9LG
+ZrDIy0o5ueysgP7xGt5UFAs=
+=n1y5
+-----END PGP SIGNATURE-----
