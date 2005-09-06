@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a5fa3d26bdf7fc67b4d372a6c4c7ba03 scheme48-1.3.ebuild 1477
+MD5 3ced4838ea1f70eee5d0d0f0e14b18b1 metadata.xml 532
+MD5 62abba4ea4abfc67bf8a42af61e8af60 ChangeLog 389
+MD5 2581231c4cfe40f47b763109ff22dd73 files/digest-scheme48-1.3 62
+MD5 75e4b8751b0c3e96501efc5218e39523 files/50scheme48-gentoo.el 198
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHg5JBQBy/eDH5uERAvXpAJ9XYlI5l7KRaYMllAhiQvgxqf1CjACfTSSr
+uEcd8N40DEgvssMbWlX9U10=
+=uRZt
+-----END PGP SIGNATURE-----
