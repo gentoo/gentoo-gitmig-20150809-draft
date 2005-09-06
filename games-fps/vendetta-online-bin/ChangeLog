@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/vendetta-online-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.1 2004/12/01 06:26:27 warpzero Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.2 2005/09/06 21:04:43 herbs Exp $
+
+  06 Sep 2005; Herbie Hopkins <herbs@gentoo.org>
+  vendetta-online-bin-1.ebuild:
+  Fix amd64 depend.
 
 *vendetta-online-bin-1 (30 Nov 2004)
 
