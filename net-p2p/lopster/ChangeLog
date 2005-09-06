@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.19 2005/05/30 22:02:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.20 2005/09/06 22:08:22 sekretarz Exp $
+
+*lopster-1.2.2-r2 (07 Sep 2005)
+
+  07 Sep 2005; <sekretarz@gentoo.org> lopster-1.2.2.ebuild,
+  lopster-1.2.2-r1.ebuild, +lopster-1.2.2-r2.ebuild:
+  Added some bugfixes from cvs. Provided by Lars (Polynomial-C)
+  <polynomial-C@gmx.de>, bug #93667. Using vorbis instead of oggvorbis, bug
+  #94254
 
   30 May 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   lopster-1.2.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.2-r1.ebuild,v 1.3 2005/09/06 22:08:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.2-r2.ebuild,v 1.1 2005/09/06 22:08:22 sekretarz Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ IUSE="nls vorbis zlib flac"
 
 DESCRIPTION="A Napster Client using GTK"
 HOMEPAGE="http://lopster.sourceforge.net"
-SRC_URI="mirror://sourceforge/lopster/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/lopster/${P}.tar.gz
+	mirror://gentoo/${P}-bugfixes-3.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -25,8 +26,8 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-bugfixes-1.patch
 	cd ${S}
+	epatch ${DISTDIR}/${P}-bugfixes-3.patch.bz2
 	export WANT_AUTOCONF=2.5
 	./autogen.sh
 }
