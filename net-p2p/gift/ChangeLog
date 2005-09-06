@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.55 2004/11/28 22:16:29 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.56 2005/09/06 21:12:59 sekretarz Exp $
+
+  06 Sep 2005; Karol Wojtaszek <sekretarz@gentoo.org> gift-0.11.7-r1.ebuild,
+  gift-0.11.8.1.ebuild:
+  Using vorbis USE flag instead of oggvorbis, bug #94254
 
 *gift-0.11.8.1 (28 Nov 2004)
 
