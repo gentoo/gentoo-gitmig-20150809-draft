@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.2 2005/07/28 18:46:10 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.3 2005/09/06 23:01:18 herbs Exp $
 
 inherit rpm eutils
 
@@ -14,11 +14,13 @@ SRC_URI="http://public.yahoo.com/~mmk/rh9.${MY_P}.i386.rpm"
 
 RDEPEND="virtual/x11
 	media-libs/gdk-pixbuf
-	dev-libs/openssl"
+	dev-libs/openssl
+	amd64? ( app-emulation/emul-linux-x86-xlibs 
+			>=app-emulation/emul-linux-x86-gtklibs-2.2 )"
 
 SLOT="0"
 LICENSE="yahoo"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 src_install () {
 	cd ${S}/opt/ymessenger/bin
@@ -32,10 +34,10 @@ src_install () {
 	sed -e 's:Icon=.*:Icon=yahoo:' -i ymessenger.desktop
 	domenu ymessenger.desktop
 
-	into /opt/ymessenger
-	dolib ${S}/opt/ymessenger/lib/libgtkhtml.so.0
+	exeinto /opt/ymessenger/lib
+	doexe ${S}/opt/ymessenger/lib/libgtkhtml.so.0
 
-	echo >${T}/ymessenger.gentoo <<EOF
+	cat >${T}/ymessenger.gentoo <<EOF
 #!/bin/sh
 LD_LIBRARY_PATH=/opt/ymessenger/lib:\$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
