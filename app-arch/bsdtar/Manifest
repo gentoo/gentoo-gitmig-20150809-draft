@@ -1,7 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1305c3eeea0332d6b65566a0621d5a7c bsdtar-1.02.027-r1.ebuild 1112
-MD5 8a77b3ef78adb52434b7645766209a6a ChangeLog 1644
+MD5 b0befd4fa4fa59f09d76dea93a0f7a16 ChangeLog 1907
+MD5 7717dba1c2a051f4655c23347471acce bsdtar-1.02.031.ebuild 1150
 MD5 237fafd1cf6bf6b5047443e93f74007c bsdtar-1.02.030.ebuild 1120
 MD5 afec809b169074e5d5b0803e4f8f5ec8 metadata.xml 428
 MD5 23a5ba81fd708274f460d74e61f6f10d files/bsdtar-1.02.027-osx.patch 475
+MD5 fcf87dfc943292314d8eb1287c40bd90 files/bsdtar-1.02.031-wchar.patch 2376
 MD5 7cf5fd7cad3a8974a71ce2e1622824c5 files/digest-bsdtar-1.02.027-r1 67
 MD5 2a8e4734601d558f6ce4f0df1a3a7033 files/digest-bsdtar-1.02.030 67
+MD5 d02bfada963e54e1598f87a597222f0b files/digest-bsdtar-1.02.031 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHVcQj5H05b2HAEkRAlRlAKCS3FGez7hYb+sKx0NWwH7+G59mcACfeJMm
+Y6PCLJNJ1fSJqOU79sQwT0w=
+=XhYg
+-----END PGP SIGNATURE-----

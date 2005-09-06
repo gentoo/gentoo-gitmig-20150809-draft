@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.9 2005/08/30 18:12:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.10 2005/09/06 08:44:27 flameeyes Exp $
+
+*bsdtar-1.02.031 (06 Sep 2005)
+
+  06 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/bsdtar-1.02.031-wchar.patch, +bsdtar-1.02.031.ebuild:
+  Updated bsdtar, unrestricted the libarchive dependency. Added patch to
+  compile clean with latest libarchive.
 
   30 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> bsdtar-1.02.030.ebuild:
   Don't use ${P} for osx patch.
