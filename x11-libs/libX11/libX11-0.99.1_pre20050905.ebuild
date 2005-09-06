@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.1_pre20050905.ebuild,v 1.1 2005/09/06 15:44:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.1_pre20050905.ebuild,v 1.2 2005/09/06 19:43:15 joshuabaergen Exp $
 
 inherit versionator
 
@@ -9,7 +9,7 @@ inherit versionator
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
 
-# Fix ${S} for pre builds
+# Fix ${S} in x-modular for pre builds
 MY_P="${PN}-$(get_version_component_range 1-3)"
 S="${WORKDIR}/${MY_P}"
 
@@ -28,6 +28,9 @@ DEPEND="${RDEPEND}
 	x11-proto/xcmiscproto
 	x11-proto/kbproto
 	x11-proto/inputproto"
+
+# Snapshots don't reside on fdo servers
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 CONFIGURE_OPTIONS="$(use_enable ipv6)"
 # xorg really doesn't like xlocale disabled.
