@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.24 2005/09/05 22:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.25 2005/09/06 01:38:55 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -47,7 +47,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-resolv_functions.patch.bz2
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
-	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
 	use skey && epatch ${FILESDIR}/${P}-skey.patch.bz2
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch.bz2
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}

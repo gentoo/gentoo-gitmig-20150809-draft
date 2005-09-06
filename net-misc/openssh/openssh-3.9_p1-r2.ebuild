@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r2.ebuild,v 1.12 2005/08/24 00:07:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r2.ebuild,v 1.13 2005/09/06 01:38:55 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -55,7 +55,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-kerberos-detection.patch #80811
 
 	use sftplogging && epatch ${FILESDIR}/${P}-sftplogging-1.2-gentoo.patch.bz2
-	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
 	use skey && epatch ${FILESDIR}/${P}-skey.patch.bz2
 	use chroot && epatch ${FILESDIR}/${P}-chroot.patch
 	use X509 && epatch ${DISTDIR}/${X509_PATCH}
