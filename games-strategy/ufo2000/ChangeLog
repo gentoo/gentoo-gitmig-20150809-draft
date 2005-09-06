@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo2000
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.11 2005/06/15 19:13:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.12 2005/09/06 13:01:15 wolf31o2 Exp $
+
+  06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ufo2000-0.6.627.ebuild:
+  oggvorbis -> vorbis for bug #94254.
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ufo2000-0.6.627.ebuild:
