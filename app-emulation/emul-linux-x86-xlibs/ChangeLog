@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.31 2005/08/26 19:21:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.32 2005/09/06 12:46:34 herbs Exp $
+
+  06 Sep 2005; Herbie Hopkins <herbs@gentoo.org> -files/XI18N_OBJS,
+  -files/XLC_LOCALE, metadata.xml, -emul-linux-x86-xlibs-1.2-r7.ebuild:
+  Remove old version.
 
 *emul-linux-x86-xlibs-2.1-r1 (26 Aug 2005)
 
