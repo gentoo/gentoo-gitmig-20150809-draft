@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.20 2005/09/03 15:26:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.21 2005/09/06 02:54:18 weeve Exp $
+
+  06 Sep 2005; Jason Wever <weeve@gentoo.org> ntfsprogs-1.11.2.ebuild:
+  Added ~sparc keyword.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   ntfsprogs-1.11.1-r1.ebuild:
