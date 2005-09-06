@@ -1,7 +1,17 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e587f38ea58ac3870f852e251bd842f ChangeLog 2992
 MD5 a1fa28cb3e9c23be6e4cb66b85a80b01 blobwars-1.02.ebuild 1905
-MD5 634d080d4b76e50556cf8736a36c057f blobwars-1.04.ebuild 2014
-MD5 f944799285fa7541df9df313e729d82c ChangeLog 2891
+MD5 2dbe09f8234056bfb55e4b35079f05c5 blobwars-1.04.ebuild 2012
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d23a2ed12360de25a971070b165b2e0a files/1.04-be_pak.diff 851
 MD5 f8302f347e2844cfb0b66e3beb5c9fea files/digest-blobwars-1.02 68
 MD5 6ab7a0fe4be4749ea69a082960be996e files/digest-blobwars-1.04 68
-MD5 d23a2ed12360de25a971070b165b2e0a files/1.04-be_pak.diff 851
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHizbwUpWvClEHQoRAn0WAJ0TE/THyPuw+w4Ooyz5GXv5blL28ACeKrCA
+ad7P3N00GpSYdgIwQ8V+H2Q=
+=v1zg
+-----END PGP SIGNATURE-----
