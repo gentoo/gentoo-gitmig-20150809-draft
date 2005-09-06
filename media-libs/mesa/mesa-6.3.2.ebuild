@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.6 2005/09/06 01:13:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2.ebuild,v 1.7 2005/09/06 18:56:37 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -193,5 +193,5 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		eselect opengl --use-old ${OPENGL_DIR}
+		eselect opengl set --use-old ${OPENGL_DIR}
 }
