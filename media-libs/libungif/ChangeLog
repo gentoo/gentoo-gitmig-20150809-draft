@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libungif
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.30 2005/07/12 05:10:46 geoman Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.31 2005/09/06 22:46:17 vapier Exp $
+
+  06 Sep 2005; Mike Frysinger <vapier@gentoo.org> libungif-4.1.3.ebuild,
+  libungif-4.1.3-r1.ebuild:
+  Add missing giflib blocker.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org> libungif-4.1.3.ebuild:
   stable on mips
