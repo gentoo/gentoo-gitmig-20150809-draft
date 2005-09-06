@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.82 2005/08/29 20:05:01 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.83 2005/09/06 14:56:16 brix Exp $
+
+*ipw2100-1.1.2-r3 (06 Sep 2005)
+
+  06 Sep 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ipw2100-1.1.2-header_data-fix.patch,
+  +files/ipw2100-1.1.2-pci_link-fix.patch,
+  +files/ipw2100-1.1.2-wext-crash.patch, +ipw2100-1.1.2-r3.ebuild:
+  Apply bugfixes from upstream, bail out if no ieee80211 kernel module is found.
 
 *ipw2100-1.1.2-r2 (29 Aug 2005)
 

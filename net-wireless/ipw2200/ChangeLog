@@ -1,6 +1,20 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.43 2005/09/02 17:34:44 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.44 2005/09/06 14:58:35 brix Exp $
+
+*ipw2200-1.0.6-r3 (06 Sep 2005)
+
+  06 Sep 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ipw2200-1.0.6-a_txpow.patch, files/ipw2200-1.0.6-broadcast.patch,
+  +files/ipw2200-1.0.6-channel_change_fw_err.patch,
+  +files/ipw2200-1.0.6-dup-without-retry.patch,
+  +files/ipw2200-1.0.6-ibss-wep.patch, +files/ipw2200-1.0.6-init_scan.patch,
+  +files/ipw2200-1.0.6-irq_override.patch,
+  +files/ipw2200-1.0.6-monitor_wep_fix.patch,
+  +files/ipw2200-1.0.6-open_frag.patch,
+  +files/ipw2200-1.0.6-pci_link-fix.patch,
+  +files/ipw2200-1.0.6-reset-mode-fix.patch, +ipw2200-1.0.6-r3.ebuild:
+  Apply bugfixes from upstream, bail out if no ieee80211 kernel module is found.
 
 *ipw2200-1.0.6-r2 (02 Sep 2005)
 

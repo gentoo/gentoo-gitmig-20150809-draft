@@ -1,6 +1,6 @@
 diff -urp ipw2200-1.0.6/ipw2200.c ipw2200-1.0.6-broadcast/ipw2200.c
 --- ipw2200-1.0.6/ipw2200.c	2005-07-13 21:00:28.000000000 +0200
-+++ ipw2200-1.0.6-broadcast/ipw2200.c	2005-09-02 19:15:03.000000000 +0200
++++ ipw2200-1.0.6-broadcast/ipw2200.c	2005-09-02 19:39:01.000000000 +0200
 @@ -7669,7 +7669,8 @@ static inline int is_network_packet(stru
  			return 0;
  
