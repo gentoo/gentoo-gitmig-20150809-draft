@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.38 2005/09/06 06:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.39 2005/09/06 16:20:51 flameeyes Exp $
+
+  06 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/jpeg-6b-freebsd.patch, jpeg-6b-r5.ebuild:
+  Remove FreeBSD patch, some other change made it pointless.
 
   06 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   files/jpeg-6b-gentoo.patch, jpeg-6b-r5.ebuild:

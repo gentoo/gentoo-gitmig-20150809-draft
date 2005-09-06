@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r5.ebuild,v 1.6 2005/09/06 06:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r5.ebuild,v 1.7 2005/09/06 16:20:51 flameeyes Exp $
 
 inherit flag-o-matic libtool eutils toolchain-funcs
 
@@ -21,9 +21,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# make shared libraries work on G/FBSD. Need to be before the sed
-	epatch "${FILESDIR}"/${P}-freebsd.patch
 
 	# allow /etc/make.conf's HOST setting to apply
 	sed -i 's/ltconfig.*/& $CHOST/' configure

@@ -1,18 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 b571faff5e2b4ac29cf574de274c9ab5 ChangeLog 5237
+MD5 ba5272e072532ba855f7b375c97f2c3e jpeg-6b-r5.ebuild 1489
 MD5 3637cbaea842b04f1aa4693a1f68e286 metadata.xml 224
 MD5 1199e263b7d91d0dcb0eefaae57acd4a jpeg-6b-r4.ebuild 1920
-MD5 8bb0265d9fcb807f80504b2615efc1a5 jpeg-6b-r5.ebuild 1595
-MD5 dc857a4d929f3de8e91a64f3e5c9cc51 ChangeLog 5068
-MD5 5db275bc0a1f7084ba8855a3210e32b2 files/jpeg-6b-gentoo.patch 1132
-MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r5 63
 MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r4 63
-MD5 9a51d910e2d420741b9261e0ab1b8f47 files/jpeg-6b-freebsd.patch 410
+MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r5 63
+MD5 5db275bc0a1f7084ba8855a3210e32b2 files/jpeg-6b-gentoo.patch 1132
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHTKzgIKl8Uu19MoRAtJRAJ4qLOb20UGYSNfVTlA0cqg7vpPINACggAyx
-uTn8MDbdjV3PcRaQuh/RNvU=
-=shdG
+iD8DBQFDHcISj5H05b2HAEkRAtumAJ4j6j4ABXwmGp8Xq9NGKUVLmUqDzgCfe2CP
+aau1jC/GQPbOSASbnbcKWe0=
+=cf2Y
 -----END PGP SIGNATURE-----
