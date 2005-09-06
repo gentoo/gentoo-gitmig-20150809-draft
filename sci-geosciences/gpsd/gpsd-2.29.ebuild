@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.26.ebuild,v 1.3 2005/09/06 06:18:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.29.ebuild,v 1.1 2005/09/06 06:18:25 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86 ~ppc ~amd64 ~ppc64 ~sparc ~arm"
 IUSE="X usb dbus"
 
 DEPEND="X? ( virtual/motif
-		virtual/x11 )
+		virtual/x11
+	)
 	usb? ( sys-apps/hotplug )
 	dbus? ( =sys-apps/dbus-0.23.4* )
 	dev-lang/python
@@ -26,9 +27,6 @@ DEPEND="X? ( virtual/motif
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# remove patches for >=2.27
-	epatch ${FILESDIR}/${P}-python.patch
-	epatch ${FILESDIR}/${P}-dbus.patch
 	elibtoolize
 }
 
@@ -76,12 +74,8 @@ pkg_postinst() {
 	einfo "USB_SERIAL_PL2303). Straight serial devices should always work,"
 	einfo "even without hotplug support."
 	ewarn
-	ewarn "The current gpsd may not start correctly except when run manually"
-	ewarn "via sudo with wheel permissions (or directly as root using the"
-	ewarn "supplied init script).  Depending on system configuration, hotplug"
-	ewarn "doesn't always get the right device permissions (we're working on"
-	ewarn "it). If your client connection shows no data when gpsd is started"
-	ewarn "via the normal hotplug action, then kill the existing gpsd process"
+	ewarn "If your client connection shows no data when gpsd is started via"
+	ewarn "the normal hotplug action, then kill the existing gpsd process"
 	ewarn "and try starting it directly via something like:"
 	ewarn "sudo /usr/sbin/gpsd -p /dev/ttyUSB0"
 	ewarn "or whatever your device is. This will verify whether your device"

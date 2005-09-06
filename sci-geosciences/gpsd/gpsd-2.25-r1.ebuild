@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.25.ebuild,v 1.3 2005/08/08 01:14:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.25-r1.ebuild,v 1.1 2005/09/06 06:18:25 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -18,7 +18,7 @@ DEPEND="X? ( virtual/motif
 		virtual/x11
 	)
 	usb? ( sys-apps/hotplug )
-	dbus? ( >=sys-apps/dbus-0.23.4 )
+	dbus? ( =sys-apps/dbus-0.23.4* )
 	dev-lang/python
 	app-text/xmlto
 	virtual/libc
@@ -27,8 +27,9 @@ DEPEND="X? ( virtual/motif
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# remove patch for >=2.26
+	# remove patch for >=2.27
 	epatch ${FILESDIR}/${P}-y-format.patch
+	epatch ${FILESDIR}/${P}-SiRF.patch
 	elibtoolize
 }
 
