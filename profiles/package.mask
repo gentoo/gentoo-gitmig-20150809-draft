@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4386 2005/09/06 13:25:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4387 2005/09/06 13:44:03 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -904,11 +904,6 @@ x11-libs/fox-wrapper
 x11-misc/shutterbug
 x11-misc/pathfinder
 sci-calculators/calculator
-
-# Henrik Brix Andersen <brix@gentoo.org (07 May 2005)
-# sys-power/speedfreq is deprecated in favor of sys-power/cpufreqd due
-# to unresolved bugs and lack of upstream activity.
-sys-power/speedfreq
 
 # Sven Wegener <swegener@gentoo.org> (05 May 2005)
 # Development versions, without this mask users will not get the upstream
