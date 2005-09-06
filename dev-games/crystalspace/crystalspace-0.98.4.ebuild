@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.10 2005/02/28 17:31:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.11 2005/09/06 13:02:47 wolf31o2 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="3ds mikmod mng oggvorbis openal truetype"
+IUSE="3ds mikmod mng vorbis openal truetype"
 
 RDEPEND="sys-libs/zlib
 	>=media-libs/libpng-1.2.1
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/zlib
 	3ds? ( media-libs/lib3ds )
 	truetype? ( >=media-libs/freetype-2.0 )
 	openal? ( media-libs/openal )
-	oggvorbis? (
+	vorbis? (
 		>=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
 	dev-games/ode

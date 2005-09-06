@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.16 2005/08/31 19:30:35 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.17 2005/09/06 13:02:47 wolf31o2 Exp $
+
+  06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  crystalspace-0.98.4.ebuild, crystalspace-0.99_pre20050823.ebuild:
+  oggvorbis -> vorbis for bug #94254.
 
 *crystalspace-0.99_pre20050823 (31 Aug 2005)
 
