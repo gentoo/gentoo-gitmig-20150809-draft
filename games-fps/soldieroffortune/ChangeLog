@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/soldieroffortune
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.9 2005/05/04 13:07:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.10 2005/09/06 17:39:49 wolf31o2 Exp $
+
+  06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  soldieroffortune-1.06a.ebuild:
+  Updated to use lokigames mirrors.
 
   04 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> -files/sof,
   soldieroffortune-1.06a.ebuild:

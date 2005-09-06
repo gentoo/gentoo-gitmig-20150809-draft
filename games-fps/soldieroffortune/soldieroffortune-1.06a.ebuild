@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.10 2005/05/04 13:07:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.11 2005/09/06 17:39:49 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="First-person shooter based on the mercenary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
-SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/sof/sof-${PV}-cdrom-x86.run
-	ftp://snuffleupagus.animearchive.org/loki/updates/sof/sof-${PV}-cdrom-x86.run"
+SRC_URI="mirror://lokigames/sof/sof-${PV}-cdrom-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
