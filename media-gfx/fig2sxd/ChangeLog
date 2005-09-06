@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/fig2sxd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/ChangeLog,v 1.1 2005/09/06 16:40:35 phosphan Exp $
+
+*fig2sxd-0.13 (06 Sep 2005)
+
+  06 Sep 2005; Patrick Kursawe <phosphan@gentoo.org> +fig2sxd-0.13.ebuild:
+  Initial import, ebuild mainly by Markus Dittrich (see bug #101727)
+
