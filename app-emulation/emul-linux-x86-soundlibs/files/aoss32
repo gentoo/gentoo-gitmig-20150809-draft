@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# A simple script to facilitate the use of the OSS compatibility library.
-# Usage:
-#	aoss <command> <command options and arguments>
-
-LD_PRELOAD=libaoss.so exec "$@"

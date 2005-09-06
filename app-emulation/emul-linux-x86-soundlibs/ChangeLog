@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.9 2005/09/06 12:42:15 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.10 2005/09/06 22:08:49 herbs Exp $
+
+*emul-linux-x86-soundlibs-2.2 (06 Sep 2005)
+
+  06 Sep 2005; Herbie Hopkins <herbs@gentoo.org> -files/aoss32,
+  +emul-linux-x86-soundlibs-2.2.ebuild:
+  New release, updating library version and hopefully fixing bugs 104939 and
+  77031.
 
   06 Sep 2005; Herbie Hopkins <herbs@gentoo.org> metadata.xml,
   -emul-linux-x86-soundlibs-1.0-r1.ebuild,
