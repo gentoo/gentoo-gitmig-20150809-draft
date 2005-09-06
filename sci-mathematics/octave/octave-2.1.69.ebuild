@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.6 2005/08/21 04:15:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.7 2005/09/06 00:12:26 kugelfang Exp $
 
 inherit flag-o-matic
 
@@ -24,6 +24,7 @@ DEPEND="virtual/libc
 	tetex? ( virtual/tetex )
 	x86? ( ifc? ( dev-lang/ifc ) )
 	blas? ( virtual/blas )
+	mpi? ( sys-cluster/lam-mpi )
 	!=app-text/texi2html-1.70"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
@@ -51,9 +52,14 @@ src_compile() {
 	# Danny van Dyk 2004/08/26
 	use zlib && LDFLAGS="${LDFLAGS} -lz"
 
+	if use mpi; then
+		myconf="${myconf} --with-mpi=lammpi++"
+	else
+		myconf="${myconf} --without-mpi"
+	fi
+
 	econf \
 		$(use_with hdf5) \
-		$(use_with mpi) \
 		$(use_enable readline) \
 		${myconf} \
 		LDFLAGS="${LDFLAGS}" || die "econf failed"
