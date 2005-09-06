@@ -1,0 +1,4 @@
+# /etc/conf.d/dcron
+
+# Options to pass to dcron at startup
+DCRON_OPTS=""
