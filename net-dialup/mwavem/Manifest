@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bbac9b0b8ca1b786071b894014acfe58 mwavem-2.0.ebuild 1713
-MD5 de15ea2c5ca804cc712a43ab8c084d3b ChangeLog 1597
+MD5 910dc3c84aeca8453baa770145d28dd5 mwavem-2.0.ebuild 1693
+MD5 9db04a0aa5f68f30256c710c0908597c ChangeLog 1708
 MD5 62bd2d669ff76fcf6145dd0f91deafa9 metadata.xml 379
 MD5 6a2110cacb03948288203ca53d4c9535 files/mwave.devfs 150
 MD5 3763c7ee83d898c35fb878ead9398918 files/digest-mwavem-2.0 63
@@ -11,7 +11,7 @@ MD5 8ceb387439cc272ebcfbf455eef22ec1 files/mwave.modules 30
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYSp1jiC39V7gKu0RAl/eAKCwFWi6UhR/5umb8hsxVWWLUesxnACghveB
-WUWAd3ZC0VrAhDEemkZCjz0=
-=eGV/
+iD8DBQFDHcEDNSP4Vda7IdsRAhksAJ4j+BSsOooHRiPC7TirUu+SnvccqgCdEZ0X
+qf9kTGiaNZbWnD7mk/9xFFI=
+=Bg74
 -----END PGP SIGNATURE-----

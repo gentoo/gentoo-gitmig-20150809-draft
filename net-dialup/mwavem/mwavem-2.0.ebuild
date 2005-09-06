@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.2 2005/02/07 21:29:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.3 2005/09/06 16:16:37 mrness Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="X"
 
-DEPEND="virtual/libc
-	X? ( virtual/x11 )"
+DEPEND="virtual/libc"
 
 src_compile() {
 	#Disable installing stuff outside sandbox
