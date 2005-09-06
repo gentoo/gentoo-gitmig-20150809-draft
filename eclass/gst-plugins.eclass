@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.29 2005/09/05 16:52:57 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.30 2005/09/06 12:49:35 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -14,7 +14,7 @@
 # Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer
 # or the gstreamer team.
 
-inherit eutils
+inherit eutils libtool autotools
 
 
 ###
@@ -138,7 +138,8 @@ gst-plugins_src_unpack() {
 	cd ${S}
 	if [ ${PV} == "0.8.11" ]; then
 		epatch ${FILESDIR}/../../../media-libs/gst-plugins/files/gst-plugins-0.8.11-conffix.patch
-		./autogen.sh
+		AT_M4DIR="-I m4 -I common/m4"
+		eautoreconf
 		elibtoolize
 	fi	
 
