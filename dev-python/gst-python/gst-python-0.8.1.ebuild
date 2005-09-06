@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.8.1.ebuild,v 1.2 2005/03/16 10:33:03 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.8.1.ebuild,v 1.3 2005/09/06 10:10:00 zaheerm Exp $
 
 inherit python
 
@@ -35,7 +35,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 	docinto examples
-	cp -a examples/* ${D}usr/share/doc/${PF}/examples
+	cp -pPR examples/* ${D}usr/share/doc/${PF}/examples
 	prepalldocs
 }
 
