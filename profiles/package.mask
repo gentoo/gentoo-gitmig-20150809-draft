@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4383 2005/09/05 14:33:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4384 2005/09/06 12:45:44 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -188,14 +188,6 @@ net-dns/avahi
 # Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
 # Toxine needs to be verified with upstream for a few issues.
 media-video/toxine
-
-# Doug Goldstein <cardoe@gentoo.org> (18 August 2005)
-# Masking 0.5.x of HAL & 0.3x of DBUS since they break API
-# Added here for Gnome purposes, pmount deps on this stuff
->=sys-apps/hal-0.5
->=sys-apps/dbus-0.30
->=gnome-extra/hal-device-manager-0.5
-sys-apps/pmount 
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (17 August 2005)
 # Masking libsvg-cairo because its for cairo-0.9.2 mainly
