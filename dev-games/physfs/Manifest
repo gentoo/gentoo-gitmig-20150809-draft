@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 5a2f387fc02c8c50c4ab056616f6234d metadata.xml 1342
-MD5 63bf364c556f4dad11caf8b62987b4b7 physfs-1.1.0.ebuild 592
+MD5 683af33a869aa37dc1e80397506fc5d1 physfs-1.1.0.ebuild 558
 MD5 2583101b1b9eaafb5c9e4dda80486145 physfs-1.0.0.ebuild 603
 MD5 fb036bee40bb984a33069bbe68523ddb ChangeLog 1844
 MD5 907082a3459127daa55584e0459bbd65 physfs-1.0.1.ebuild 587
@@ -12,7 +12,7 @@ MD5 86c1e53d0c5c0bf514c839078b18c987 files/digest-physfs-1.0.0 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDFnVDgIKl8Uu19MoRAqulAJ0ZGh8vmefhE7siExbLzNR5M10AfQCeOsBZ
-D8fjy26rt+7fen8Y447/mTM=
-=8MHf
+iD8DBQFDHhhWgIKl8Uu19MoRAq2/AJ9pZgxhemEET/4b9/u7tkKROH6SuACePdxu
+iRUmlAH9i69emrsOmFSD6HY=
+=1Pg1
 -----END PGP SIGNATURE-----
