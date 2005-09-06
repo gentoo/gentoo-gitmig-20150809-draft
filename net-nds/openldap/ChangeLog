@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.132 2005/09/06 02:47:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.133 2005/09/06 16:35:09 corsair Exp $
+
+  06 Sep 2005; Markus Rothe <corsair@gentoo.org> openldap-2.2.28.ebuild:
+  Stable on ppc64
 
   06 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> openldap-2.2.28.ebuild:
   Get rid of message complaining that /etc/openldap/slapd.conf might not exist.
