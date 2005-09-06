@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.63.ebuild,v 1.1 2005/09/04 10:13:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.63.ebuild,v 1.2 2005/09/06 09:57:23 swegener Exp $
 
 inherit gnuconfig
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="odbc mssql"
 
 DEPEND="virtual/libc
-		odbc? (dev-db/unixODBC)"
+		odbc? ( dev-db/unixODBC )"
 
 src_unpack() {
 	unpack ${A}
