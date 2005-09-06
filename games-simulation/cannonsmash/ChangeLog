@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/cannonsmash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.11 2005/05/13 02:06:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.12 2005/09/06 13:00:18 wolf31o2 Exp $
+
+  06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  cannonsmash-0.6.6.ebuild:
+  oggvorbis -> vorbis for bug #94254.
 
   13 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/cannonsmash-0.6.6-sizeof-cast.patch,

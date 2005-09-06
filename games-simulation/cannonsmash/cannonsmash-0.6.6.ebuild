@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.8 2005/08/24 04:30:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.9 2005/09/06 13:00:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -8,12 +8,12 @@ MY_OGG=danslatristesse2-48.ogg
 DESCRIPTION="3D tabletennis game"
 HOMEPAGE="http://cannonsmash.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cannonsmash/csmash-${PV}.tar.gz
-	oggvorbis? ( http://nan.p.utmc.or.jp/${MY_OGG} )"
+	vorbis? ( http://nan.p.utmc.or.jp/${MY_OGG} )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="oggvorbis nls"
+IUSE="vorbis nls"
 
 DEPEND="virtual/x11
 	virtual/opengl
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-x-inc.patch \
 		"${FILESDIR}"/${P}-sizeof-cast.patch
-	if use oggvorbis ; then
+	if use vorbis ; then
 		cp "${DISTDIR}"/${MY_OGG} "${S}"/ || die "cp failed"
 		sed -i \
 			-e "s:${MY_OGG}:${GAMES_DATADIR}/csmash/${MY_OGG}:" ttinc.h \
@@ -50,7 +50,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	if use oggvorbis ; then
+	if use vorbis ; then
 		insinto "${GAMES_DATADIR}"/csmash
 		doins ${MY_OGG}
 	fi
