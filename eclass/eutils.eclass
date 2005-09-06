@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.195 2005/09/01 05:56:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.196 2005/09/06 01:59:22 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -933,23 +933,19 @@ newicon() {
 
 # for internal use only (unpack_pdv and unpack_makeself)
 find_unpackable_file() {
-	local src="$1"
-	if [ -z "${src}" ]
-	then
-		src="${DISTDIR}/${A}"
+	local src=$1
+	if [[ -z ${src} ]] ; then
+		src=${DISTDIR}/${A}
 	else
-		if [ -e "${DISTDIR}/${src}" ]
-		then
-			src="${DISTDIR}/${src}"
-		elif [ -e "${PWD}/${src}" ]
-		then
-			src="${PWD}/${src}"
-		elif [ -e "${src}" ]
-		then
-			src="${src}"
+		if [[ -e ${DISTDIR}/${src} ]] ; then
+			src=${DISTDIR}/${src}
+		elif [[ -e ${PWD}/${src} ]] ; then
+			src=${PWD}/${src}
+		elif [[ -e ${src} ]] ; then
+			src=${src}
 		fi
 	fi
-	[ ! -e "${src}" ] && die "Could not find requested archive ${src}"
+	[[ ! -e ${src} ]] && return 1
 	echo "${src}"
 }
 
@@ -974,10 +970,11 @@ find_unpackable_file() {
 #   lseek(3, -4, SEEK_END)                  = 2981250
 #   thus we would pass in the value of '4' as the second parameter.
 unpack_pdv() {
-	local src="`find_unpackable_file $1`"
-	local sizeoff_t="$2"
+	local src=$(find_unpackable_file $1)
+	local sizeoff_t=$2
 
-	[ -z "${sizeoff_t}" ] && die "No idea what off_t size was used for this pdv :("
+	[[ -z ${src} ]] && die "Could not locate source for '$1'"
+	[[ -z ${sizeoff_t} ]] && die "No idea what off_t size was used for this pdv :("
 
 	local shrtsrc="`basename ${src}`"
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
@@ -1053,11 +1050,13 @@ unpack_pdv() {
 # - If the offset is not specified then we will attempt to extract
 #   the proper offset from the script itself.
 unpack_makeself() {
-	local src="$(find_unpackable_file "$1")"
-	local skip="$2"
-	local exe="$3"
+	local src=$(find_unpackable_file "$1")
+	local skip=$2
+	local exe=$3
 
-	local shrtsrc="$(basename "${src}")"
+	[[ -z ${src} ]] && die "Could not locate source for '$1'"
+
+	local shrtsrc=$(basename "${src}")
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
 	if [ -z "${skip}" ]
 	then
