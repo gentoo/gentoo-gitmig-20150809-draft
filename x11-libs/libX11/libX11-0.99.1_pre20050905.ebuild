@@ -1,11 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.1.ebuild,v 1.1 2005/09/05 05:05:22 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.1_pre20050905.ebuild,v 1.1 2005/09/06 15:44:47 joshuabaergen Exp $
+
+inherit versionator
 
 # FIXME: Add USE flags
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
+
+# Fix ${S} for pre builds
+MY_P="${PN}-$(get_version_component_range 1-3)"
+S="${WORKDIR}/${MY_P}"
 
 inherit x-modular
 
