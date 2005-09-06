@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1436 2005/09/05 21:28:25 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1437 2005/09/06 00:47:25 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -750,6 +750,7 @@ net-im/kadu:pheaders - Enables precompiled headers in kadu
 net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
 net-im/psi:extras - Enables extra non official patches
+net-im/tmsnc:talkfilters - Enables Talkfilters support on tmsnc
 net-irc/atheme:largenet - Enable support/tweaks for large networks
 net-irc/bitchx:cdrom - Enables CD-ROM support
 net-irc/srvx:bahamut - Choose bahamut protocol over p10 protocol
