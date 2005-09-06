@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.143 2005/09/03 15:27:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.144 2005/09/06 00:52:04 eradicator Exp $
+
+  06 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  linux-headers-2.6.11-r2.ebuild:
+  Added to ~sparc.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   linux-headers-2.6.11-r2.ebuild:
