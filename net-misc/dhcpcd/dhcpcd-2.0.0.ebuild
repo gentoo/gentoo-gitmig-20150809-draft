@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.0.ebuild,v 1.11 2005/09/03 20:59:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.0.ebuild,v 1.12 2005/09/06 16:29:15 uberlord Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,8 +16,16 @@ IUSE="build debug static"
 DEPEND=""
 PROVIDE="virtual/dhcpc"
 
+pkg_setup() {
+	if use debug ; then
+		ewarn "WARNING: dhcpcd will provide good debugging output with the"
+		ewarn "debug USE flag enabled but will not actually configure the"
+		ewarn "interface or setup /etc/resolv.conf"
+	fi
+}
+
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 	cd "${S}"
 
 	# Fix compiling on gcc2
