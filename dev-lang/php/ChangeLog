@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.35 2005/09/04 22:21:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.36 2005/09/06 14:54:15 sebastian Exp $
+
+*php-5.0.5 (06 Sep 2005)
+
+  06 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> +php-5.0.5.ebuild:
+  Version bump.
 
   04 Sep 2005; Stuart Herbert <stuart@gentoo.org>
   +files/5.1.0/php5-imap-symlink.diff, +files/5.1.0/php5-iodbc-config.diff,
