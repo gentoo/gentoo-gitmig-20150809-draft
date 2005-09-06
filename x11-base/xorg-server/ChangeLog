@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.39 2005/09/03 21:49:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.40 2005/09/06 18:59:18 spyderous Exp $
+
+  06 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1-r7.ebuild:
+  Make --enable-xcsecurity always on, remove nvidia USE.
 
   03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xorg-server-0.99.1-r7.ebuild:
