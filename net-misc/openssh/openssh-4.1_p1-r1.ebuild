@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1-r1.ebuild,v 1.6 2005/09/05 22:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.1_p1-r1.ebuild,v 1.7 2005/09/06 01:39:23 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -60,7 +60,7 @@ src_unpack() {
 	use smartcard && epatch ${FILESDIR}/openssh-3.9_p1-opensc.patch.bz2
 	if ! use X509 ; then
 		if [[ -n ${SECURID_PATCH} ]] && use smartcard ; then
-			epatch ${DISTDIR}/${SECURID_PATCH}
+			epatch ${DISTDIR}/${SECURID_PATCH} ${FILESDIR}/openssh-securid-1.3.1-updates.patch
 			use ldap && epatch ${FILESDIR}/openssh-4.0_p1-smartcard-ldap-happy.patch
 		fi
 		if use sftplogging ; then
