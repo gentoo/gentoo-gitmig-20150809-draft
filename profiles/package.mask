@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4392 2005/09/06 18:31:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4393 2005/09/06 21:36:17 herbs Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Herbie Hopkins <herbs@gentoo.org> (6 Sep 2005)
+# Masked for testing
+=app-emulation/emul-linux-x86-baselibs-2.2
+=app-emulation/emul-linux-x86-gtklibs-2.2
+=app-emulation/emul-linux-x86-soundlibs-2.2
+=app-emulation/emul-linux-x86-medialibs-1.1-r1
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Sep 2005)
 # KDE 3.5_alpha1 (and later) split ebuilds.
