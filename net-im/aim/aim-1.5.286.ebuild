@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim/aim-1.5.286.ebuild,v 1.3 2004/06/24 22:48:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim/aim-1.5.286.ebuild,v 1.4 2005/09/06 00:16:20 spyderous Exp $
 
 IUSE=""
 DESCRIPTION="AOL's Instant Messenger client"
@@ -26,7 +26,7 @@ src_install() {
 	# Initial install
 	dodir /opt/${PN}
 	cd ${S}/usr
-	cp -dR * ${D}/opt/${PN}/
+	cp -pPR * ${D}/opt/${PN}/
 
 	# Set up paths for env
 	echo "LDPATH=/opt/${PN}/lib" > ${T}/99aim
