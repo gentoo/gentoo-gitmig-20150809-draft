@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28.ebuild,v 1.2 2005/09/05 08:19:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28.ebuild,v 1.3 2005/09/06 02:47:11 robbat2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -74,7 +74,10 @@ openldap_upgrade_warning() {
 
 pkg_setup() {
 	# grab lines
-	openldap_datadirs="$(awk '{if($1 == "directory") print $2 }' /etc/openldap/slapd.conf)"
+	openldap_datadirs=""
+	if [ -f ${ROOT}/etc/openldap/slapd.conf ]; then
+		openldap_datadirs="$(awk '{if($1 == "directory") print $2 }' ${ROOT}/etc/openldap/slapd.conf)"
+	fi
 	datafiles=""
 	for d in $openldap_datadirs; do
 		datafiles="${datafiles} $(ls $d/*db*} 2>/dev/null)"
