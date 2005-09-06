@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.11 2005/09/06 15:58:42 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.12 2005/09/06 19:36:27 joshuabaergen Exp $
+
+*xdm-0.99.1_pre20050905-r1 (06 Sep 2005)
+
+  06 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xdm-0.99.1_pre20050905-r1.ebuild:
+  Fixed snapshot SRC_URI and removed installation of xdm init script (now in
+  x11-apps/xinit).  Added resultant xinit dep.
 
 *xdm-0.99.1_pre20050905 (06 Sep 2005)
 
