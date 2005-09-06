@@ -1,8 +1,9 @@
 MD5 7245abe6326ff3cc840e5092c1b60890 rrdtool-1.0.49.ebuild 2729
 MD5 177f6939c1ba72adbbd42b99ea93121f rrdtool-1.0.50.ebuild 2753
 MD5 fef8045c2bacc8cea9464b5814d2c1b3 rrdtool-1.2.10.ebuild 2736
+MD5 77bed9d6fbeca3617e3b98cb2b53f8c2 rrdtool-1.2.11-r1.ebuild 3009
 MD5 5237327ba17008615f4ee3498d1e12aa rrdtool-1.2.9.ebuild 2734
-MD5 16644d0888812ab120711c9e5e5937cd ChangeLog 12349
+MD5 90a4298bcbb3c880a322ad59c23c7fa8 ChangeLog 12510
 MD5 19c7cf9496d4c88a2f2badad0034669f rrdtool-1.2.6-r1.ebuild 2757
 MD5 108d7118044d58ce07544af00277028b rrdtool-1.2.6.ebuild 2815
 MD5 1a739170238a1fae241a8a0df21462e9 metadata.xml 241
@@ -13,4 +14,5 @@ MD5 f16d0d8d5db1ed4ece7a3221c9fb8266 files/digest-rrdtool-1.2.10 67
 MD5 1b866549cddb9e5a73a64be509395166 files/digest-rrdtool-1.2.11 67
 MD5 7ee6d2e6d1bc0c21aaea586600840694 files/digest-rrdtool-1.2.6 65
 MD5 ddcbf31c065a424ce3ad6595d1b5ea8d files/digest-rrdtool-1.2.9 65
+MD5 1b866549cddb9e5a73a64be509395166 files/digest-rrdtool-1.2.11-r1 67
 MD5 7ee6d2e6d1bc0c21aaea586600840694 files/digest-rrdtool-1.2.6-r1 65
