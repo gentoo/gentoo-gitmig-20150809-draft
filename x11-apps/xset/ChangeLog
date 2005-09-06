@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xset
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.3 2005/09/05 05:15:20 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.4 2005/09/06 16:06:56 joshuabaergen Exp $
+
+*xset-0.99.1_pre20050905 (06 Sep 2005)
+
+  06 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xset-0.99.1_pre20050905.ebuild, -xset-0.99.1.ebuild:
+  Fixed version in anticipation of upstream release.
 
 *xset-0.99.1 (05 Sep 2005)
 
