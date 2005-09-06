@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.2.0.ebuild,v 1.2 2005/08/12 10:27:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-1.2.0.ebuild,v 1.3 2005/09/06 00:14:48 spyderous Exp $
 
 inherit kernel-mod eutils
 
@@ -62,7 +62,7 @@ src_install() {
 	# this is LARGE (~5mb)
 	if use docs; then
 		docdir="/usr/share/doc/${PF}/"
-		cp -ra ${S}/doc ${D}${docdir}
+		cp -pPR ${S}/doc ${D}${docdir}
 		rm -rf ${D}${docdir}/man
 	fi
 }
