@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1439 2005/09/06 12:29:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1440 2005/09/06 20:06:49 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -559,6 +559,7 @@ media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/moc:musepack - Support for musepack (mpc) files
+media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
 media-sound/mpd-svn:ao - Use libao for sound playback
 media-sound/mpd-svn:icecast - Enable support for Icecast2
 media-sound/mpd-svn:musepack - Enable support for musepack files
