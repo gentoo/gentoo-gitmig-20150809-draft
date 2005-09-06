@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.189 2005/09/06 04:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.190 2005/09/06 05:14:22 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -125,7 +125,7 @@ if [[ ${ETYPE} == "gcc-library" ]] ; then
 	IUSE="nls build"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="altivec bootstrap build doc fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc static vanilla"
+	IUSE="altivec bootstrap build fortran gcj gtk hardened ip28 multilib multislot n32 n64 nls nocxx objc static vanilla"
 	[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 	[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 	[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
@@ -1214,11 +1214,9 @@ gcc_do_make() {
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
 
 	if ! use build && ! is_crosscompile ; then
-		if use doc && type -p doxygen > /dev/null ; then
-			if ! use nocxx ; then
-				cd "${CTARGET}"/libstdc++-v3
-				make doxygen-man || die "failed to make docs"
-			fi
+		if ! use nocxx && type -p doxygen > /dev/null ; then
+			cd "${CTARGET}"/libstdc++-v3
+			make doxygen-man || ewarn "failed to make docs"
 		fi
 	fi
 
