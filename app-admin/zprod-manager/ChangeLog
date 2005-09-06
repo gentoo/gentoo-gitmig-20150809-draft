@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zprod-manager
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.15 2005/04/18 16:47:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.16 2005/09/06 02:36:40 weeve Exp $
+
+  06 Sep 2005; Jason Wever <weeve@gentoo.org> zprod-manager-0.3.ebuild:
+  Stable on SPARC.
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   zprod-manager-0.3.ebuild:
