@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3.ebuild,v 1.2 2005/09/01 18:05:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3.ebuild,v 1.3 2005/09/06 05:30:54 mkennedy Exp $
 
 inherit elisp
 
@@ -27,25 +27,37 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/emacs/site-lisp/cedet
-	tar --create --verbose \
-		--exclude=Makefile \
-		--exclude=\*texi \
-		--exclude=\*info\* \
-		--exclude=README \
-		--exclude=INSTALL \
-		--exclude=\*NEWS \
-		--exclude=ChangeLog \
-		--exclude=\*~ \
-		. | tar --extract --directory ${D}/usr/share/emacs/site-lisp/cedet/
-	dodoc INSTALL
-	doinfo `find . -type f -name \*.info\*`
-	# The following finds documentation in sub-directories and flattens
-	# the path names for dodoc
-	mkdir docs || true
-	find . -type f \( -name ChangeLog -o -name README -o -name AUTHORS -o -name \*NEWS \) -print \
-		| sed -e 's,^./\(.*\)/\(.*\),cp \0 docs/\2.\1,g' \
-		| sh -x
-	dodoc docs/*
+	find ${S} -type f -print \
+		| while read target; do
+			local directory=`dirname $target` file=`basename $target`
+			local sub_directory=`basename $directory`
+			case $file in
+				*~ | Makefile | *.texi | *-script | PRERELEASE_CHECKLIST | Project.ede)
+					rm -f $file
+					;;
+				ChangeLog | README | AUTHORS | *NEWS | INSTALL)
+					docinto $sub_directory
+					dodoc $target
+					;;
+				*.png)
+					insinto /usr/share/doc/${PF}/$sub_directory
+					doins $target
+					;;
+				IMPLICIT_TARGETS)
+					;;
+				*.el | *.elc)
+					insinto /usr/share/emacs/site-lisp/cedet/$sub_directory
+					doins $target
+					;;
+				*.info*)
+					doinfo $target
+					;;
+				*)
+					insinto /usr/share/emacs/site-lisp/cedet/$sub_directory
+					doins $target
+					echo $target >>${S}/IMPLICIT_TARGETS
+					;;
+			esac
+		done
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 }
