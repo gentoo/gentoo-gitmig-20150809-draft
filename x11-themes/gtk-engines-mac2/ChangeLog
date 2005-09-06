@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-mac2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mac2/ChangeLog,v 1.10 2005/09/05 15:18:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mac2/ChangeLog,v 1.11 2005/09/06 13:34:10 gustavoz Exp $
+
+  06 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gtk-engines-mac2-1.0.3-r2.ebuild:
+  Stable on sparc
 
   05 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
   gtk-engines-mac2-1.0.3-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10-r2.ebuild,v 1.3 2005/09/05 15:21:40 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10-r2.ebuild,v 1.4 2005/09/06 13:33:21 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="GTK+1 Mist Theme Engine"
 HOMEPAGE="http://primates.ximian.com/~dave/mist/"
 SRC_URI="http://primates.ximian.com/~dave/mist/${MY_P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="1"
 IUSE="static"
