@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.6 2005/06/15 18:39:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5.ebuild,v 1.7 2005/09/06 12:57:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc x86"
-IUSE="debug 3dfx fbcon opengl sdl svga X ncurses oggvorbis zlib ipv6 xv dga xmms alsa oss"
+IUSE="debug 3dfx fbcon opengl sdl svga X ncurses vorbis zlib ipv6 xv dga xmms alsa oss"
 RESTRICT="nouserpriv"
 
 RDEPEND="3dfx? ( media-libs/glide-v3 )
@@ -20,7 +20,7 @@ RDEPEND="3dfx? ( media-libs/glide-v3 )
 	svga? ( media-libs/svgalib )
 	X? ( virtual/x11 )
 	ncurses? ( sys-libs/ncurses )
-	oggvorbis? ( media-libs/libogg media-libs/libvorbis )
+	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	zlib? ( sys-libs/zlib )
 	xv? ( virtual/x11 )
 	dga? ( virtual/x11 )
@@ -73,7 +73,7 @@ src_compile() {
 	addpredict ${GAMES_LIBDIR}
 	egamesconf \
 		`use_enable ncurses curses` \
-		`use_enable oggvorbis vorbis` \
+		`use_enable vorbis` \
 		`use_enable zlib` \
 		`use_with ipv6` \
 		`use_with fbcon fbdev` \
