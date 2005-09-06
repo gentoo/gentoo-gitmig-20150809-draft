@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.8 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.9 2005/09/06 04:20:02 vapier Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -20,8 +20,7 @@ EXPORT_FUNCTIONS pkg_postinst
 
 SLOT="0"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4.0.5"
+DEPEND=">=sys-apps/sed-4.0.5"
 
 RDEPEND="!virtual/cron
 	virtual/mta
@@ -44,12 +43,12 @@ docrondir() {
 	# defaults
 	local perms="-m0750 -o root -g cron" dir="/var/spool/cron/crontabs"
 
-	if [[ -n "$1" ]] ; then
+	if [[ -n $1 ]] ; then
 		case "$1" in
 			*/*)
-				dir="$1"
+				dir=$1
 				shift
-				[[ -n "$1" ]] && perms="$@"
+				[[ -n $1 ]] && perms="$@"
 				;;
 			*)
 				perms="$@"
@@ -76,15 +75,15 @@ docrondir() {
 docron() {
 	local cron="cron" perms="-m 0750 -o root -g wheel"
 
-	if [[ -n "$1" ]] ; then
+	if [[ -n $1 ]] ; then
 		case "$1" in
 			-*)
 				perms="$@"
 				;;
 			 *)
-				cron="$1"
+				cron=$1
 				shift
-				[[ -n "$1" ]] && perms="$@"
+				[[ -n $1 ]] && perms="$@"
 				;;
 		esac
 	fi
@@ -106,15 +105,15 @@ docron() {
 docrontab() {
 	local crontab="crontab" perms="-m 4750 -o root -g cron"
 
-	if [[ -n "$1" ]] ; then
+	if [[ -n $1 ]] ; then
 		case "$1" in
 			-*)
 				perms="$@"
 				;;
 			 *)
-				crontab="$1"
+				crontab=$1
 				shift
-				[[ -n "$1" ]] && perms="$@"
+				[[ -n $1 ]] && perms="$@"
 				;;
 		esac
 	fi
