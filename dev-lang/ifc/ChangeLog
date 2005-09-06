@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.16 2005/09/02 23:30:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.17 2005/09/06 22:26:54 kugelfang Exp $
+
+  06 Sep 2005; Danny van Dyk <kugelfang@gentoo.org> ifc-9.0.021.ebuild:
+  Fixed a typo (Bug #104941). Thanks to Martin Mokrejs for spotting this.
 
 *ifc-9.0.026 (02 Sep 2005)
 *ifc-9.0.021 (02 Sep 2005)
