@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.122 2005/08/24 22:54:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.123 2005/09/06 23:26:26 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -327,6 +327,7 @@ kde-base/kdeutils kde-base/kregexpeditor
 kde-base/kdeutils kde-base/ksim
 kde-base/kdeutils kde-base/ktimer
 kde-base/kdeutils kde-base/kwalletmanager
+kde-base/kdeutils kde-base/superkaramba
 kde-base/kdewebdev kde-base/kfilereplace
 kde-base/kdewebdev kde-base/kimagemapeditor
 kde-base/kdewebdev kde-base/klinkstatus
