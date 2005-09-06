@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pureadmin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.6 2004/09/17 23:12:48 humpback Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.7 2005/09/06 22:39:09 humpback Exp $
+
+*pureadmin-0.2.2 (06 Sep 2005)
+
+  06 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +pureadmin-0.2.2.ebuild:
+  Bump and small cosmetic. Closes 2 or 3 bugs in portage.
 
 *pureadmin-0.1.11 (18 Sep 2004)
 
