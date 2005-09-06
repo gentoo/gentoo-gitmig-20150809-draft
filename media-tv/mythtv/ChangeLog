@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.76 2005/08/12 07:22:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.77 2005/09/06 15:02:07 cardoe Exp $
+
+  06 Sep 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.18.1-r1.ebuild,
+  mythtv-0.18.1-r2.ebuild:
+  oggvorbis USE to vorbis USE, bug #94254
 
   12 Aug 2005; Doug Goldstein <cardoe@gentoo.org>
   +files/mythtv-0.18.1-cc-on-mute.patch, mythtv-0.18.1-r2.ebuild:

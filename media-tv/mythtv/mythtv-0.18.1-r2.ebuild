@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.9 2005/08/12 07:22:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1-r2.ebuild,v 1.10 2005/09/06 15:02:07 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa altivec arts debug dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome"
+IUSE="alsa altivec arts debug dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia vorbis opengl oss unichrome"
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -25,7 +25,7 @@ DEPEND=">=media-libs/freetype-2.0
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
 			sys-libs/libavc1394
@@ -103,7 +103,7 @@ src_compile() {
 		$(use_enable dvb dvb-eit)
 		--dvb-path=/usr/include
 		$(use_enable opengl opengl-vsync)
-		$(use_enable oggvorbis vorbis)
+		$(use_enable vorbis vorbis)
 		$(use_enable nvidia xvmc)
 		--enable-xv
 		$(use_enable ieee1394 firewire)
