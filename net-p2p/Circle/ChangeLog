@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/Circle
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.11 2004/11/30 22:29:23 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.12 2005/09/06 21:49:32 sekretarz Exp $
+
+  06 Sep 2005; <sekretarz@gentoo.org> Circle-0.40e.ebuild,
+  Circle-0.41c.ebuild:
+  Using vorbis USE flag instead of oggvorbis, bug #94254
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> Circle-0.40e.ebuild,
   Circle-0.41c.ebuild:
