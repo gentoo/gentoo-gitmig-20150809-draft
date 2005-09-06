@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f6bd6ba62b87a9243e354a63dcd681b6 emul-linux-x86-sdl-2.1.ebuild 594
 MD5 da3380f1ed57973b7493a59f346189e5 ChangeLog 1643
 MD5 ef1a1d0bbdb241725417e87002ec4d16 metadata.xml 223
 MD5 59e5d6e467e5d053b7e5538878235a7b files/digest-emul-linux-x86-sdl-2.1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHY3R2G5bA0cA/ScRArEpAJ0Y/mEUBdBLfPJT9rNpHui3sVNC0ACg8ivj
+gCFMc8rmVzmLg2dABTk7XiY=
+=ODex
+-----END PGP SIGNATURE-----

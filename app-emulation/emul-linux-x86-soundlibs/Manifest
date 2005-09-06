@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4e23c0ff8ead11e334f55e23921919a6 emul-linux-x86-soundlibs-2.1.ebuild 592
 MD5 0a03e6be60d7a6a6f7b26c70bd32c2ff ChangeLog 1599
 MD5 5e8c61d551dad88488a66992865ba737 metadata.xml 290
 MD5 54c1f485ee555f7acd1768c9c338d10e files/aoss32 176
 MD5 4a59f5babd1b5e1dc20ce85bff838157 files/digest-emul-linux-x86-soundlibs-2.1 81
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHY692G5bA0cA/ScRAl2eAKDMZJLZLqB54Nrf3Xp+eSCyjHKh+gCgmbfR
+o7IFiM4Twj6AqmKR2BeGvgg=
+=xWp1
+-----END PGP SIGNATURE-----
