@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.3.ebuild,v 1.2 2005/08/01 16:47:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.3.ebuild,v 1.3 2005/09/06 09:59:58 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -25,8 +25,8 @@ DEPEND=">=dev-libs/glib-2.6.0
 	>=media-plugins/gst-plugins-vorbis-0.8.8
 	>=media-plugins/gst-plugins-ogg-0.8.8
 	dts? ( >=media-plugins/gst-plugins-dts-0.8.8 )
-	>=sys-apps/dbus-0.22
-	>=sys-apps/hal-0.4.0
+	=sys-apps/dbus-0.23*
+	=sys-apps/hal-0.4*
 	>=media-libs/libdvdread-0.9.4"
 
 pkg_setup() {
