@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.8 2005/03/25 14:34:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.9 2005/09/06 17:37:24 wolf31o2 Exp $
 
 inherit eutils games
 
 IUSE="3dfx videos"
 DESCRIPTION="Heavy Gear II - 3D first-person Mechanized Assault"
 HOMEPAGE="http://www.activision.com/games/heavygearii/"
-SRC_URI="ftp://ftp.planetmirror.com/pub/lokigames/updates/hg2/hg2-${PV}-cdrom-x86.run
-	ftp://snuffleupagus.animearchive.org/loki/updates/hg2/hg2-${PV}-cdrom-x86.run"
+SRC_URI="mirror://lokigames/hg2/hg2-${PV}-cdrom-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
