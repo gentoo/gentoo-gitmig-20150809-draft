@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4394 2005/09/06 21:39:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4395 2005/09/06 21:42:26 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1224,10 +1224,6 @@ sci-calculators/calculator
 # it's not tested. If you want it, please unmask.
 >=net-nntp/leafnode-2.0.0_alpha0
 
-# Mike Frysinger <vapier@gentoo.org> (04 May 2005)
-# need upstream release to fix security issue #91421
-<=dev-libs/libtomcrypt-1.02
-
 # Elfyn McBratney <beu@gentoo.org> (03 May 2005)
 # New package, needs testing, might break.
 www-apps/interchange
@@ -1459,10 +1455,6 @@ dev-lisp/cl-imho
 # several compilation problems using current gcc's,
 # for example #73367
 dev-lang/nhc98
-
-# <vapier@gentoo.org> (16 Jan 2005)
-# dropbear-0.44 doesnt seem to want to let people login #78295
-=net-misc/dropbear-0.44
 
 # <plasmaroo@gentoo.org> (16 Jan 2005)
 # Live CVS build, masking to keep the bunny rabbits happy.
