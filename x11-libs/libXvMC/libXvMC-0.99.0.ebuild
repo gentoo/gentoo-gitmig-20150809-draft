@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/libXvMC-0.99.0.ebuild,v 1.4 2005/08/24 01:11:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/libXvMC-0.99.0.ebuild,v 1.5 2005/09/06 01:52:16 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -15,7 +15,8 @@ DESCRIPTION="X.Org XvMC library"
 KEYWORDS="~amd64 ~arm ~s390 ~sparc ~x86"
 #IUSE="X gnome"
 RDEPEND="x11-libs/libX11
-	x11-libs/libXext"
+	x11-libs/libXext
+	x11-libs/libXv"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/videoproto"
