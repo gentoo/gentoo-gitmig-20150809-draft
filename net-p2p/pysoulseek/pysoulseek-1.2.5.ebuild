@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.5.ebuild,v 1.11 2005/05/19 01:57:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.5.ebuild,v 1.12 2005/09/06 22:17:56 sekretarz Exp $
 
 inherit eutils distutils
 
-IUSE="oggvorbis"
+IUSE="vorbis"
 MY_PN="${PN/soulseek/slsk}"
 MY_PV="${PV/_/}"
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ppc sparc hppa amd64"
 
 DEPEND=">=dev-lang/python-2.1
 	=dev-python/wxpython-2.4*
-	oggvorbis? ( dev-python/pyvorbis dev-python/pyogg )"
+	vorbis? ( dev-python/pyvorbis dev-python/pyogg )"
 
 S="${WORKDIR}/${MY_P}"
 

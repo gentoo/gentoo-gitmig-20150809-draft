@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.49 2005/06/17 21:23:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.50 2005/09/06 22:17:56 sekretarz Exp $
+
+  07 Sep 2005; <sekretarz@gentoo.org> pysoulseek-1.2.5.ebuild,
+  pysoulseek-1.2.6.ebuild, pysoulseek-1.2.7b.ebuild:
+  Using vorbis USE flag instead of oggvorbis, bug #94254
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   pysoulseek-1.2.6.ebuild:
