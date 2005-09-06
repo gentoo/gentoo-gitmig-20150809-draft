@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.85 2005/07/05 17:33:21 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.86 2005/09/06 22:12:02 gustavoz Exp $
+
+*sparc-sources-2.4.31-r1 (06 Sep 2005)
+
+  06 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  +sparc-sources-2.4.31-r1.ebuild:
+  New rev with netfilter patch #75668 and bzero_noasi (gcc 3.4 build) fix
 
   05 Jul 2005; Christian Birchinger <joker@gentoo.org>
   sparc-sources-2.4.31.ebuild:
