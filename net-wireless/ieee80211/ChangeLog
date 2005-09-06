@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.7 2005/09/02 17:43:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.8 2005/09/06 14:53:17 brix Exp $
+
+*ieee80211-1.0.3-r2 (06 Sep 2005)
+
+  06 Sep 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/ieee80211-1.0.3-keep_restricted_bit.patch,
+  +files/ieee80211-1.0.3-open_frag.patch, +ieee80211-1.0.3-r2.ebuild:
+  Apply bugfixes from upstream, bail out if incompatible ieee80211.h found in
+  kernel sources (bug #97397).
 
   02 Sep 2005; Henrik Brix Andersen <brix@gentoo.org>
   files/ieee80211-1.0.3-broadcast.patch:
