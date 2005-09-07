@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 48dce339070ddcae0ee9c996db26d3c9 bitdefender-console-7.0.1-r1.ebuild 1882
+MD5 d58122647e26e25944966cfc0cf60e5f bitdefender-console-7.0.1-r1.ebuild 1856
 MD5 e6c6f7094dd574f818fc15fe3adb5a5a bitdefender-console-7.0.1.ebuild 1711
-MD5 7be9657c296de89d151ae174fa791025 ChangeLog 1635
+MD5 244887b03dbb42a8827e45c20d949454 ChangeLog 1782
 MD5 b799e6d40bbe29a415e5c3f80faca25a metadata.xml 376
 MD5 3956e0264dc3f7ec9cddc5cd82cdbb90 files/digest-bitdefender-console-7.0.1-r1 104
 MD5 3956e0264dc3f7ec9cddc5cd82cdbb90 files/digest-bitdefender-console-7.0.1 104
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHKLtQlM6RnzZP+IRAp6vAJ96IlhL564MbowLo7OTyEKPH5SRIwCdFdsc
-vDt2bUTynjxwfMIgNPZyVTM=
-=UWoN
+iD8DBQFDH1eo2G5bA0cA/ScRArf0AKDN9a72Wy79JnsvG2bc5bE7d6Yy4QCg5Lwa
+PnsisOYoHpfuR+CFhjTdWFk=
+=JO0L
 -----END PGP SIGNATURE-----
