@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.0-r1.ebuild,v 1.2 2005/04/21 14:19:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.1.2.ebuild,v 1.1 2005/09/07 00:28:24 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tresys.com/Downloads/selinux-tools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="X debug selinux"
 
 DEPEND="sys-devel/bison
@@ -33,23 +33,15 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# fix for bug #88248
-	sed -i -e '/capability\.h/d' ${S}/libapol/cond.c
-
 	# fix the Makefile to listen to portage CFLAGS
 	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/g" ${S}/Makefile
+	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/" ${S}/libsefs/sqlite/Makefile
 
 	# enable debug if requested
 	useq debug && sed -i -e '/^DEBUG/s/0/1/' ${S}/Makefile
 
-	# generate the file contexts from the template
-	sed -e 's:SEUSER_BINDIR:/usr/bin:' \
-		-e 's:SEUSER_INSTALL_LIBDIR:/usr/share/setools:' \
-		< ${S}/policy/seuser_template.fc > ${S}/policy/seuser.fc
-
 	# dont chcon or install -Z
 	sed -i -e '/object_r/d' ${S}/secmds/Makefile
-	sed -i -e '/object_r/d' ${S}/seuser/Makefile
 	sed -i -e 's,-Z system_u:object_r:etc_t,,g' ${S}/seaudit/Makefile
 
 	# dont do findcon, replcon, searchcon, or indexcon if USE=-selinux
@@ -60,12 +52,6 @@ src_unpack() {
 			-e '/^SE_CMDS/s/searchcon//' \
 			-e '/^SE_CMDS/s/indexcon//' ${S}/secmds/Makefile
 	fi
-
-	# adjust policy settings in seuser.conf
-	echo "policy_dir         ${POLICYDIR}" > ${S}/seuser/seuser.conf
-	echo "policy.conf        ${POLICYDIR}/policy.conf" >> ${S}/seuser/seuser.conf
-	echo "file_contexts_file ${POLICYDIR}/file_contexts/file_contexts" >> ${S}/seuser/seuser.conf
-	echo "user_file          ${POLICYDIR}/users" >> ${S}/seuser/seuser.conf
 }
 
 src_compile() {
@@ -93,30 +79,7 @@ src_install() {
 
 	if useq X; then
 		# graphical tools
-		make DESTDIR=${D} install-apol install-sepcut install-seaudit install-sediffx \
+		make DESTDIR=${D} install-apol install-seaudit install-sediffx \
 			|| die "Graphical tool install failed."
-	fi
-
-	if useq selinux; then
-		if useq X; then
-			make DESTDIR=${D} install-seuserx \
-				|| die "seuserx install failed."
-		else
-			make DESTDIR=${D} install-seuser \
-				|| die "seuser install failed."
-		fi
-
-		insinto ${POLICYDIR}/domains/program
-		doins ${S}/policy/seuser.te
-		insinto ${POLICYDIR}/file_contexts/program
-		doins ${S}/policy/seuser.fc
-	fi
-}
-
-pkg_postinst() {
-	if useq selinux; then
-		einfo "A policy for the seuser program has been installed into"
-		einfo "${POLICYDIR}.  Please reload your policy and relabel"
-		einfo "setools:  rlpkg setools"
 	fi
 }
