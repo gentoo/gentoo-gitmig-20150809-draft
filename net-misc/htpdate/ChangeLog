@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.6 2005/07/30 18:02:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.7 2005/09/07 10:16:11 pyrania Exp $
+
+*htpdate-0.8.7 (07 Sep 2005)
+
+  07 Sep 2005; Markus Nigbur <pyrania@gentoo.org> +htpdate-0.8.7.ebuild:
+  Version bump.
 
   30 Jul 2005; Sven Wegener <swegener@gentoo.org> htpdate-0.8.2.ebuild:
   Modified to apply patches in src_unpack()
