@@ -1,5 +1,5 @@
-MD5 8f3d47637e66cfa233a849ae4e486449 ChangeLog 1342
-MD5 af423beb28ba07904738e3a6805a907a lilo-config-3.5_alpha1.ebuild 421
+MD5 4695bee453c9728535a73556dd335b3c ChangeLog 1503
+MD5 bbe001cfcb1bf5ac3b5de3abdbcf738c lilo-config-3.5_alpha1.ebuild 427
 MD5 47e94399befac124bb5e2f4dace129eb lilo-config-3.4.1.ebuild 431
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-lilo-config-3.4.1 211
