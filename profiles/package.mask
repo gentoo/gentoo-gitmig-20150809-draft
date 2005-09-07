@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4404 2005/09/07 19:19:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4405 2005/09/07 21:25:55 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -323,10 +323,6 @@
 # Fernando J. Pereda <ferdy@gentoo.org> (5 Sep 2005)
 # This is a development version. Keep it masked
 >=mail-filter/maildrop-1.8.1.20050828
-
-# Petteri Räty <betelgeuse@gentoo.org (4 Sep 2005)
-# Masked until tested by someone who knows how to use this
-=app-text/jasperreports-1.0.1
 
 # Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
 # Beta code
