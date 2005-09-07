@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.27 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.28 2005/09/07 10:40:28 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -27,19 +27,15 @@ base_src_unpack() {
 		patch)
 			debug-print-section patch
 			cd ${S}
-			patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+			epatch ${FILESDIR}/${P}-gentoo.diff
 			;;
 		autopatch)
 			debug-print-section autopatch
 			debug-print "$FUNCNAME: autopatch: PATCHES=$PATCHES, PATCHES1=$PATCHES1"
 			cd ${S}
-			for x in $PATCHES; do
+			for x in $PATCHES $PATCHES1; do
 				debug-print "$FUNCNAME: autopatch: patching from ${x}"
-				patch -p0 < ${x}
-			done
-			for x in $PATCHES1; do
-				debug-print "$FUNCNAME: autopatch: patching -p1 from ${x}"
-				patch -p1 < ${x}
+				epatch ${x}
 			done
 			;;
 	        all)
