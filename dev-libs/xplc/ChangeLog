@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xplc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.18 2005/06/17 20:41:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.19 2005/09/07 19:58:38 mrness Exp $
+
+*xplc-0.3.12 (07 Sep 2005)
+
+  07 Sep 2005; Alin Nastac <mrness@gentoo.org> +xplc-0.3.12.ebuild:
+  Version bump.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xplc-0.3.11.ebuild:
   Stable on ppc.
