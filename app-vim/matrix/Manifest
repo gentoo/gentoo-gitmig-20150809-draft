@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b28ea79a5818d6bd21ee09ec4ac32a2 ChangeLog 522
-MD5 b115422c74f8cbf699e3903094d5b6c6 matrix-1.04.ebuild 534
+MD5 7b964e144113cad5da5e8106176c4911 matrix-1.04.ebuild 529
 MD5 8996b0f13d84dba6e52e31937d52a13c metadata.xml 406
+MD5 8a5b44d86b0649b3693cb81e8b923caa ChangeLog 617
 MD5 7b3a4ce0ae870550e8272ac2825f3774 files/digest-matrix-1.04 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDE1mi5mJXAu5GbtIRAqxJAJ9jy++zSmosnD7RFiFXGUhst7XptACfX863
-Vs5oOx6vTnDEkn6RsDSaoOM=
-=bzdP
------END PGP SIGNATURE-----
