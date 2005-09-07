@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aabfb250ed189099738cec53696be886 ebnf-syntax-1.1-r1.ebuild 716
+MD5 a339987e9baa10965a6afc53deaf8e43 ChangeLog 1077
 MD5 465cf24b44f23188e787fc72aefc66ae ebnf-syntax-1.1.ebuild 558
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 f58c678200b71313a0804b7eac4b400c ChangeLog 982
-MD5 6744c70a96df23c4c2832555a2a60d27 files/digest-ebnf-syntax-1.1-r1 65
+MD5 2c5772e59c8afa17b761b4cd05a88569 ebnf-syntax-1.1-r1.ebuild 715
 MD5 6744c70a96df23c4c2832555a2a60d27 files/digest-ebnf-syntax-1.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHktcLLFUmVNQ7rkRAka1AJ9Te3ZzzGjnPnHwlOEHwo/BVjuZZwCfQbQt
-7iOfAtJz0ubQk31YRok6wvQ=
-=wsxC
------END PGP SIGNATURE-----
+MD5 6744c70a96df23c4c2832555a2a60d27 files/digest-ebnf-syntax-1.1-r1 65

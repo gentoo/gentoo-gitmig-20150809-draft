@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f86a4c888d00535824097c2b1b0ac6e3 xsl-syntax-0.3.11-r1.ebuild 698
-MD5 c97a4f1d12389c9d5739056141d02c9f xsl-syntax-0.3.11.ebuild 524
+MD5 27b88daf51f178129c733ef8946296cf ChangeLog 2208
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 b042dda89121352a66ac3042cb41c2a3 ChangeLog 2109
-MD5 f9e305c080f3b180db1bd1b594d99d5f files/digest-xsl-syntax-0.3.11-r1 68
+MD5 c97a4f1d12389c9d5739056141d02c9f xsl-syntax-0.3.11.ebuild 524
+MD5 16eae39ecda82dd87734bcb550cf6d57 xsl-syntax-0.3.11-r1.ebuild 697
 MD5 f9e305c080f3b180db1bd1b594d99d5f files/digest-xsl-syntax-0.3.11 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHkwpLLFUmVNQ7rkRArjeAKCd/mQZ+liYdc6Sz0Zod4P1DbDY3wCfeeWH
-4Gzma47LV+jaN+zjhKgZRpY=
-=gpD9
------END PGP SIGNATURE-----
+MD5 f9e305c080f3b180db1bd1b594d99d5f files/digest-xsl-syntax-0.3.11-r1 68
