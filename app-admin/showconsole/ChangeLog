@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/showconsole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.5 2005/08/26 19:48:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.6 2005/09/07 01:20:53 josejx Exp $
+
+  07 Sep 2005; Joseph Jezak <josejx@gentoo.org> showconsole-1.07.ebuild:
+  Marked ppc stable for bug #10537.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> showconsole-1.07.ebuild:
   add ~alpha ~ia64
