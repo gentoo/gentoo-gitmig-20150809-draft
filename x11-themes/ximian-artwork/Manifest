@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b832fc7c297d41320e50f2208e49b5b ChangeLog 3794
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 790667f9af7e90c46f0bed74ab0c2f74 ximian-artwork-0.2.29.0.6.3.ebuild 2004
-MD5 271c9e8753da43de12d7aced139e9347 ximian-artwork-0.2.32.1.ebuild 1972
+MD5 c25340c60a84058ed20c5ffce4715b10 ChangeLog 3903
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 84970ce36f1fe781232f3b86c8ef7a2b ximian-artwork-0.2.32.1.ebuild 1973
+MD5 4f09d13cbbc85be041773d463dd83fc3 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
+MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
 MD5 f3b6233f881db50604d1cceebc2c2b40 files/digest-ximian-artwork-0.2.29.0.6.3 88
 MD5 658478d0857190dcb5b10e815bf0c704 files/digest-ximian-artwork-0.2.32.1 80
 MD5 481c98be012989222f01734d8c6e43e4 files/ximian-artwork-0.2.26-corruption_fix.patch 716
-MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
-MD5 4f09d13cbbc85be041773d463dd83fc3 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
 MD5 97a527cd1be3926af01ecbff0cc1311d files/ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDAq5tl5AvwDPiUowRAkp2AJ4mjqVNllL19Nhlju5I+lhJhwEStQCg1GGH
-n5pTc9Ir//SmOeGwfTY2Rd4=
-=R/pP
------END PGP SIGNATURE-----
