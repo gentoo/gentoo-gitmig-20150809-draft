@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gtkskan
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/ChangeLog,v 1.7 2004/07/01 22:41:03 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gtkskan/ChangeLog,v 1.8 2005/09/07 03:12:20 vanquirius Exp $
+
+  07 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/gtkskan-0.2-gcc34.diff, gtkskan-0.2.ebuild:
+  Add patch to allow compilation with gcc-3.4. Remove gnome-core from DEPEND.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gtkskan-0.2.ebuild:
   virtual/glibc -> virtual/libc
