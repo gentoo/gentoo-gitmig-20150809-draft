@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4400 2005/09/07 09:13:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4401 2005/09/07 13:14:07 solar Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1329,25 +1329,14 @@ media-video/qce-ga
 #Gnome-2.10.1 mask
 >=gnome-base/gnome-light-2.10.1
 
-# solar <solar@gentoo> (01 Mar 2005)
-# security masked by request of bug #79720
-x11-misc/xfontselector
-app-admin/qtsvc
-
-# Paul de Vrieze <pauldv@gentoo.org> (27 Feb 2005)
-# This whole module should be deleted. It overlaps subversion
+# Paul de Vrieze <pauldv@gentoo.org> (27 Feb 2005) This whole module 
+# should be deleted. It overlaps subversion
 www-apache/mod_dav_svn
 
 # Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
 # Tihs package is conflict with postgresql at the moment
 # and waiting on implementing virtual/postgresql.
 dev-db/pgcluster
-
-# <solar@gentoo> (18 Feb 2005)
-# All version below 1.3.17 have exploitable format string problems. The 
-# bidwatcher package lacks a maintainer and metadata and will most 
-# likely be punted from the tree. Bug #82460 (CAN-2005-0158)
-<=net-misc/bidwatcher-1.3.16
 
 # Matthew Kennedy <mkennedy@gentoo.org> (17 Feb 2005)
 # moving to bese-2004@common-lisp.net/arnesi--dev--1.2 patch scheme
@@ -1451,12 +1440,6 @@ media-video/cinelerra
 # <ribosome@gentoo.org> (09 Jan 2005)
 # Beta release
 =sci-biology/vienna-rna-1.5_beta
-
-# <solar@gentoo> (07 Jan 2005)
-# Masked for security reasons. Requested by <koon@gentoo>. Upstream 
-# appears to be dead / not responding to emails. So this package is 
-# now marked as removal pending. See bug #74703 for more details.
-net-p2p/napshare
 
 # <chriswhite@gentoo.org> (30 Dec 2004)
 # Junkie being masked per security bug #74696
