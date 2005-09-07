@@ -1,16 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.9 2005/08/30 00:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.10 2005/09/07 04:44:48 vapier Exp $
 
-inherit enlightenment
+inherit enlightenment toolchain-funcs
 
 MY_P=${P/_/-}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib2.html"
 
-IUSE="X gif jpeg mmx mp3 png tiff"
+IUSE="X bzip2 gif jpeg mmx mp3 png tiff zlib"
 
 DEPEND="=media-libs/freetype-2*
+	bzip2? ( app-arch/bzip2 )
+	zlib? ( sys-libs/zlib )
 	gif? ( >=media-libs/giflib-4.1.0 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( media-libs/jpeg )
@@ -20,15 +22,21 @@ DEPEND="=media-libs/freetype-2*
 
 src_compile() {
 	local mymmx=""
-	if [[ ${ARCH} == "amd64" ]] ; then
+	if [[ $(tc-ARCH) == "amd64" ]] ; then
 		mymmx="--enable-amd64 --disable-mmx"
 	else
-		mymmx=$(use_enable mmx)
+		mymmx="--disable-amd64 $(use_enable mmx)"
 	fi
 
 	export MY_ECONF="
-		${mymmx} \
 		$(use_with X x) \
+		$(use_with jpeg) \
+		$(use_with png) \
+		$(use_with tiff) \
+		$(use_with zlib) \
+		$(use_with bzip2) \
+		$(use_with mp3 id3) \
+		${mymmx} \
 	"
 	enlightenment_src_compile
 }
