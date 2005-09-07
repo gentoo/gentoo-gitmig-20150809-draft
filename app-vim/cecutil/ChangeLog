@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cecutil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.15 2005/09/07 02:03:20 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.16 2005/09/07 21:28:54 agriffis Exp $
+
+  07 Sep 2005; Aron Griffis <agriffis@gentoo.org> cecutil-7.ebuild:
+  Mark 7 stable on ia64
 
   07 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> cecutil-7.ebuild:
   x86 sparc mips stable
