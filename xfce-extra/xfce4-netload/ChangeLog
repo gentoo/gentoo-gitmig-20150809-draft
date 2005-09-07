@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-netload
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.26 2005/08/23 22:36:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.27 2005/09/07 18:37:56 bcowan Exp $
+
+  07 Sep 2005; Brad Cowan <bcowan@gentoo.org> xfce4-netload-0.3.2.ebuild:
+  Stable on x86.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   xfce4-netload-0.3.2.ebuild:
