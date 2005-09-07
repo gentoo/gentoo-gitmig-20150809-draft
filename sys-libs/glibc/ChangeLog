@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.384 2005/09/06 18:34:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.385 2005/09/07 20:13:08 eradicator Exp $
+
+  07 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.5-r1.ebuild:
+  Forcing -j1.  Found -j3 making problems on my u2 =(...
 
   06 Sep 2005; Markus Rothe <corsair@gentoo.org> glibc-2.3.5-r1.ebuild:
   Stable on ppc64
