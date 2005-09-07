@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23ae9497b1fee914dfa215bc5376ae87 ChangeLog 848
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 c937b9607b0498358dbf04f2a738dccd nologin-20050522.ebuild 1060
 MD5 c9bacebe6f756f54335279165ee674e0 files/digest-nologin-20050522 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHm71wUpWvClEHQoRAkjJAJ9ta2PAfZ4c0kXh7sCQTJ4bboa+0ACePghs
+GVrVOSUh9Z8vnY1HtzzLNtk=
+=Id59
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3da9e2b08eecaa6605502013231580d ChangeLog 1307
 MD5 0babaf5a98cc96b26b047d0afabf6f0d gwcc-0.9.6-r2.ebuild 785
 MD5 94718b6e40edb4895b95787a76c9460e gwcc-0.9.8.ebuild 874
@@ -5,3 +8,10 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 642ba942e51a533f7b9eb3c2d787db00 files/digest-gwcc-0.9.6-r2 62
 MD5 5d42524481892b1081c9d59cd3deb11d files/digest-gwcc-0.9.8 62
 MD5 4b669a805d0c1e672c3089f387d18f39 files/gwcc-0.9.8-errno.patch 346
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHm82wUpWvClEHQoRAgBcAJ9RtJ1sg+M9e8s3A3BR1OJLU3bTkACePVEE
++dy8mgeDV09TaDg8b0NNUtU=
+=fEqz
+-----END PGP SIGNATURE-----
