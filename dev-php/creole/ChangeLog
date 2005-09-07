@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/creole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/creole/ChangeLog,v 1.4 2005/04/18 07:22:01 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/creole/ChangeLog,v 1.5 2005/09/07 05:37:31 sebastian Exp $
+
+  07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  creole-1.0.2.ebuild:
+  Changed RDEPEND from dev-php/php-5 to dev-lang/php-5.
 
 *creole-1.0.2 (18 Apr 2005)
 
