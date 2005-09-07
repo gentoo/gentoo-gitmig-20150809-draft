@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5_alpha1.ebuild,v 1.1 2005/09/07 11:23:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5_alpha1.ebuild,v 1.2 2005/09/07 14:33:48 mr_bones_ Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=kioslave
@@ -36,12 +36,12 @@ src_compile() {
 
 	DO_NOT_COMPILE="libkcddb kscd" kde-meta_src_compile myconf configure
 	cd $S/libkcddb && make configbase.h cdinfodialogbase.h
-	
+
 	# Library deps seems not to be built as they should :/
 	cd $S/kscd/libwm/audio && make libworkmanaudio.la && \
 	cd $S/kscd/libwm && make libworkman.la && \
 	cd $S/kscd && make libkcompactdisc.la || \
 		die "failed to make prerequisite libraries."
-	
+
 	DO_NOT_COMPILE="libkcddb kscd" kde-meta_src_compile make
 }
