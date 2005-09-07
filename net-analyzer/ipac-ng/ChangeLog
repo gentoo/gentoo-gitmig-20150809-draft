@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipac-ng
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.17 2005/07/29 23:49:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.18 2005/09/07 15:06:52 strerror Exp $
+
+  07 Sep 2005; Benjamin Smee <strerror@gentoo.org> ipac-ng-1.31-r1.ebuild:
+  Fixed typo relating to cron
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org> ipac-ng-1.31.ebuild:
   removed die from epatch || die.
