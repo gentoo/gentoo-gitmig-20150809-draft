@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/nologin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.4 2005/07/28 01:06:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.5 2005/09/07 01:26:49 josejx Exp $
+
+  07 Sep 2005; Joseph Jezak <josejx@gentoo.org> nologin-20050522.ebuild:
+  Marked ppc stable for bug #104955.
 
   28 Jul 2005; Aaron Walker <ka0ttic@gentoo.org> nologin-20050522.ebuild:
   Added ~mips.
