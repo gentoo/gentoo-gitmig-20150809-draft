@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17c3d2b2db25b58c3fca9ec9aeef7014 ChangeLog 598
-MD5 ada6c583b64daa42675f505137e13e32 ranpwd-1.1.ebuild 683
+MD5 95bc19a70a486754b6749e9e16844a2a ChangeLog 694
 MD5 343ab9ff256ebcfbe3849cb14a554de5 metadata.xml 402
+MD5 9e0de848ef3f7f13fabef09135e78a30 ranpwd-1.1.ebuild 692
 MD5 6f3a2d17842220454b0514d8ebd2e27a files/digest-ranpwd-1.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHkD5csIHjyDViGQRAvj5AKCZLOUTIJSsKGOoi3MTOEw22fRFqACeKZCo
-qWicoGqLvdWiGOUa0d2HqYc=
-=onr3
------END PGP SIGNATURE-----
