@@ -1,7 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.1 2005/06/04 21:20:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.2 2005/09/07 16:11:38 herbs Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
+app-arch/rar
 app-benchmarks/cpuburn
 app-emulation/cedaga
 app-emulation/crossover-office-bin
@@ -14,6 +15,7 @@ app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
 app-emulation/emul-linux-x86-glibc
 app-emulation/emul-linux-x86-gtklibs
+app-emulation/emul-linux-x86-medialibs
 app-emulation/emul-linux-x86-nvidia
 app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
@@ -41,13 +43,16 @@ games-fps/vendetta-online-bin
 games-rpg/nwn
 games-rpg/nwn-cep
 games-server/nwn-ded
+media-libs/win32codecs
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/teamspeak2-client-bin
 media-sound/teamspeak2-server-bin
 media-sound/ventrilo-server-bin
+media-video/mplayer-bin
 media-video/realplayer
 net-im/skype
+net-im/ymessenger
 net-www/netscape-flash
 sys-boot/grub
 www-client/opera
