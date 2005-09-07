@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008-r1.ebuild,v 1.9 2005/09/07 20:15:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008-r1.ebuild,v 1.10 2005/09/07 21:28:48 swegener Exp $
 
 inherit perl-module kde eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 src_compile() {
 	addwrite $QTDIR/etc/settings
 	perl-module_src_prep
-	
+
 	emake
 }
 
