@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.11.92.ebuild,v 1.1 2005/08/28 17:23:21 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.12.0.ebuild,v 1.1 2005/09/07 16:15:37 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -37,7 +37,8 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
 
 
 pkg_setup() {
-	G2CONF="$(use_with jpeg libjpeg) $(use_with jpeg libexif) \
+	G2CONF="$(use_with jpeg libjpeg) \
+		$(use_with jpeg libexif) \
 		$(use_with lcms cms)"
 }
 
@@ -50,9 +51,5 @@ src_unpack() {
 
 	autoconf || die "autoconf failed"
 
-	local makefiles=""
-	for f in `find help -name Makefile.in`; do
-		makefiles="${makefiles} ${f}"
-	done
-	gnome2_omf_fix $makefiles
+	gnome2_omf_fix help/*/Makefile.in
 }
