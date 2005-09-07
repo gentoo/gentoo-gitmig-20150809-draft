@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.14 2005/09/07 00:39:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.15 2005/09/07 23:22:47 joshuabaergen Exp $
+
+*xinit-0.99.1_pre20050905-r2 (07 Sep 2005)
+
+  07 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/xserver.pamd, -xinit-0.99.1_pre20050905-r1.ebuild,
+  +xinit-0.99.1_pre20050905-r2.ebuild:
+  Added /etc/pam.d/xserver from xorg-x11.
 
   07 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xinit-0.99.1_pre20050905-r1.ebuild:
