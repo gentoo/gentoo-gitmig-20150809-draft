@@ -1,5 +1,6 @@
 ##
-# These packages will, or depend on packages that will overwrite collision-protected files 
+# These packages will, or depend on packages that will overwrite
+# collision-protected files 
 ##
 app-arch/zip
 app-arch/unzip
@@ -42,7 +43,8 @@ app-vim/phpdocs
 app-vim/gentoo-syntax
 app-vim/taglist
 
-# Cpio is provided by Apple on 10.4. The Gentoo binary is installed to a separate location
-# so the package does not cause a collision. Nonetheless, cpio is part of System, and we don't
-# want it pulled in for users of this profile.
+# Cpio is provided by Apple on 10.4.  The Gentoo binary is installed to
+# a separate location so the package does not cause a collision.
+# Nonetheless, cpio is part of System, and we don't want it pulled in
+# for users of this profile.
 app-arch/cpio
