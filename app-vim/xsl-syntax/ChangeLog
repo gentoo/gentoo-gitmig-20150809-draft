@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/xsl-syntax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/ChangeLog,v 1.9 2005/09/07 16:05:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/ChangeLog,v 1.10 2005/09/07 21:35:26 agriffis Exp $
+
+  07 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  xsl-syntax-0.3.11-r1.ebuild:
+  Mark 0.3.11-r1 stable on ia64
 
   07 Sep 2005; Markus Rothe <corsair@gentoo.org>
   xsl-syntax-0.3.11-r1.ebuild:
