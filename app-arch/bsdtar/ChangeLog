@@ -1,6 +1,16 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.10 2005/09/06 08:44:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.11 2005/09/07 09:34:27 flameeyes Exp $
+
+*bsdtar-1.02.032 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/bsdtar-1.02.031-wchar.patch, -bsdtar-1.02.031.ebuild,
+  +bsdtar-1.02.032.ebuild:
+  Updated to latest upstream version, dropped wchar patch as new libarchive
+  fixes it definitively (changed dependency to avoid problems; also now just
+  RDEPEND on it if not built static, and not on zlib/bzip2 as they are
+  dependencies of libarchive itself).
 
 *bsdtar-1.02.031 (06 Sep 2005)
 
