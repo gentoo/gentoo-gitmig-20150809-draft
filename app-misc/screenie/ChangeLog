@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.1 2005/09/07 08:16:39 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.2 2005/09/07 12:48:12 slarti Exp $
+
+  07 Sep 2005; Tom Martin <slarti@gentoo.org> screenie-1.19.0.ebuild:
+  Marked ~amd64, ~sparc, ~ia64.
 
 *screenie-1.19.0 (07 Sep 2005)
 

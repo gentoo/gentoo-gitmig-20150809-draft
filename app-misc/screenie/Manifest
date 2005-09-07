@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d11b0a4318507d33c056df8b0cd5fb1c ChangeLog 452
-MD5 10ce9be4cf7ce8307ec89cf13d02c917 files/digest-screenie-1.19.0 65
+MD5 c5e339a644a80b9fb7c250894a5b8a07 screenie-1.19.0.ebuild 764
+MD5 bd11620216ae1fcec122844be7d61517 ChangeLog 551
 MD5 d9b97d293206635927075fbc034b1f78 metadata.xml 713
-MD5 4a91674979a3c992173c2731992660ff screenie-1.19.0.ebuild 748
+MD5 10ce9be4cf7ce8307ec89cf13d02c917 files/digest-screenie-1.19.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHrRDI1lqEGTUzyQRAjUgAJ9hNGLBPcCZUxnFg0KKnEmK5v9IXgCgpXov
-8ZcCXN73sHScdktxzDuoIPY=
-=Y9hF
+iD8DBQFDHuGkCHk4+ZoBpvsRAnDcAKDH4br74TmcgB6U2mXYAs/wKavJGACfQ02C
+IgKBkGfVR7Hgy6/vaiMqyWo=
+=fhtK
 -----END PGP SIGNATURE-----
