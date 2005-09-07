@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ebnf-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ChangeLog,v 1.8 2005/09/07 16:04:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ChangeLog,v 1.9 2005/09/07 21:31:27 agriffis Exp $
+
+  07 Sep 2005; Aron Griffis <agriffis@gentoo.org> ebnf-syntax-1.1-r1.ebuild:
+  Mark 1.1-r1 stable on ia64
 
   07 Sep 2005; Markus Rothe <corsair@gentoo.org> ebnf-syntax-1.1-r1.ebuild:
   Stable on ppc64
