@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.9 2005/09/06 08:44:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.10 2005/09/07 09:32:08 flameeyes Exp $
+
+*libarchive-1.02.032 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -libarchive-1.02.031.ebuild, +libarchive-1.02.032.ebuild:
+  Updated libarchive with new upstream version. Fixes the problem I had to
+  patch in bsdtar yesterday.
 
 *libarchive-1.02.031 (06 Sep 2005)
 
