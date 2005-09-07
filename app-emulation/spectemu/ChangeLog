@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.13 2005/04/24 02:38:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.14 2005/09/07 19:44:14 voxus Exp $
+
+  07 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> spectemu-0.99.3.ebuild:
+  Added ~amd64 keyword.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> spectemu-0.9.4.ebuild:
   Stable on ppc.
