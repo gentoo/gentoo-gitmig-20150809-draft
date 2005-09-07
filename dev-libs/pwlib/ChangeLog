@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.88 2005/09/06 13:42:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.89 2005/09/07 20:48:49 stkn Exp $
+
+  07 Sep 2005; Stefan Knoblich <stkn@gentoo.org> +files/pwlib-1.8.4-gcc4.diff,
+  -files/pwlib-gcc4.gz, pwlib-1.8.4.ebuild:
+  Ungzipped and renamed gcc4 patch (origin unknown -> .diff).
 
   06 Sep 2005; Hanno Boeck <hanno@gentoo.org> +files/pwlib-gcc4.gz,
   pwlib-1.8.4.ebuild:

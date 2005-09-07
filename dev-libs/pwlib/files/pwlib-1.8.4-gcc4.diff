@@ -1,0 +1,46 @@
+diff -Naur pwlib-1.8.4/include/ptlib/pprocess.h pwlib-1.8.4-gcc4/include/ptlib/pprocess.h
+--- pwlib-1.8.4/include/ptlib/pprocess.h	2004-06-30 14:17:04.000000000 +0200
++++ pwlib-1.8.4-gcc4/include/ptlib/pprocess.h	2005-09-06 15:06:16.032949750 +0200
+@@ -249,6 +249,7 @@
+ #include <ptlib/syncpoint.h>
+ #include <ptlib/pfactory.h>
+ 
++class PHouseKeepingThread;
+ 
+ /**Create a process.
+    This macro is used to create the components necessary for a user PWLib
+@@ -752,10 +753,10 @@
+ 
+     PArgList arguments;
+     // The list of arguments
+-
++  public:
+     PTimerList timers;
+     // List of active timers in system
+-
++  private:
+     PTime programStartTime;
+     // time at which process was intantiated, i.e. started
+ 
+diff -Naur pwlib-1.8.4/include/ptlib/timer.h pwlib-1.8.4-gcc4/include/ptlib/timer.h
+--- pwlib-1.8.4/include/ptlib/timer.h	2003-09-17 11:01:00.000000000 +0200
++++ pwlib-1.8.4-gcc4/include/ptlib/timer.h	2005-09-06 15:06:16.036950000 +0200
+@@ -123,6 +123,7 @@
+ #endif
+ 
+ class PThread;
++class PTimerList;
+ 
+ #include <ptlib/notifier.h>
+ 
+diff -Naur pwlib-1.8.4/include/ptlib/unix/ptlib/pprocess.h pwlib-1.8.4-gcc4/include/ptlib/unix/ptlib/pprocess.h
+--- pwlib-1.8.4/include/ptlib/unix/ptlib/pprocess.h	2004-05-23 23:11:39.000000000 +0200
++++ pwlib-1.8.4-gcc4/include/ptlib/unix/ptlib/pprocess.h	2005-09-06 15:06:16.036950000 +0200
+@@ -171,6 +171,7 @@
+     PDICTIONARY(ThreadDict, POrdinalKey, PThread);
+     ThreadDict activeThreads;
+     PMutex     threadMutex;
++  public:
+     int        timerChangePipe[2];
+     PHouseKeepingThread * housekeepingThread;
+ 

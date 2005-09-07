@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.4.ebuild,v 1.6 2005/09/06 13:42:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.4.ebuild,v 1.7 2005/09/07 20:48:49 stkn Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -31,7 +31,7 @@ DEPEND=">=sys-devel/bison-1.28
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/pwlib-gcc4.gz
+	epatch ${FILESDIR}/pwlib-1.8.4-gcc4.diff
 
 	cd ${S}/make
 
