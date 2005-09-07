@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4399 2005/09/07 01:48:06 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4400 2005/09/07 09:13:21 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -45,10 +45,6 @@
 >=kde-base/atlantikdesigner-3.5_alpha1
 >=kde-base/certmanager-3.5_alpha1
 >=kde-base/cervisia-3.5_alpha1
->=kde-base/dcopc-3.5_alpha1
->=kde-base/dcopjava-3.5_alpha1
->=kde-base/dcopperl-3.5_alpha1
->=kde-base/dcoppython-3.5_alpha1
 >=kde-base/dcoprss-3.5_alpha1
 >=kde-base/drkonqi-3.5_alpha1
 >=kde-base/eyesapplet-3.5_alpha1
@@ -58,7 +54,6 @@
 >=kde-base/kaddressbook-3.5_alpha1
 >=kde-base/kaddressbook-plugins-3.5_alpha1
 >=kde-base/kalarm-3.5_alpha1
->=kde-base/kalyptus-3.5_alpha1
 >=kde-base/kalzium-3.5_alpha1
 >=kde-base/kamera-3.5_alpha1
 >=kde-base/kandy-3.5_alpha1
@@ -110,14 +105,12 @@
 >=kde-base/kdebase-kioslaves-3.5_alpha1
 >=kde-base/kdebase-meta-3.5_alpha1
 >=kde-base/kdebase-startkde-3.5_alpha1
->=kde-base/kdebindings-meta-3.5_alpha1
 >=kde-base/kdebugdialog-3.5_alpha1
 >=kde-base/kdeedu-applnk-3.5_alpha1
 >=kde-base/kdeedu-meta-3.5_alpha1
 >=kde-base/kdegames-meta-3.5_alpha1
 >=kde-base/kdegraphics-kfile-plugins-3.5_alpha1
 >=kde-base/kdegraphics-meta-3.5_alpha1
->=kde-base/kdejava-3.5_alpha1
 >=kde-base/kdelirc-3.5_alpha1
 >=kde-base/kdemultimedia-arts-3.5_alpha1
 >=kde-base/kdemultimedia-kappfinder-data-3.5_alpha1
@@ -174,7 +167,6 @@
 >=kde-base/kitchensync-3.5_alpha1
 >=kde-base/kiten-3.5_alpha1
 >=kde-base/kjots-3.5_alpha1
->=kde-base/kjsembed-3.5_alpha1
 >=kde-base/kjumpingcube-3.5_alpha1
 >=kde-base/klaptopdaemon-3.5_alpha1
 >=kde-base/klatin-3.5_alpha1
@@ -224,7 +216,6 @@
 >=kde-base/kopete-3.5_alpha1
 >=kde-base/korganizer-3.5_alpha1
 >=kde-base/korn-3.5_alpha1
->=kde-base/korundum-3.5_alpha1
 >=kde-base/kpackage-3.5_alpha1
 >=kde-base/kpager-3.5_alpha1
 >=kde-base/kpat-3.5_alpha1
@@ -319,15 +310,11 @@
 >=kde-base/noatun-3.5_alpha1
 >=kde-base/noatun-plugins-3.5_alpha1
 >=kde-base/nsplugins-3.5_alpha1
->=kde-base/qtjava-3.5_alpha1
->=kde-base/qtruby-3.5_alpha1
->=kde-base/qtsharp-3.5_alpha1
 >=kde-base/quanta-3.5_alpha1
 >=kde-base/renamedlg-audio-3.5_alpha1
 >=kde-base/renamedlg-images-3.5_alpha1
 >=kde-base/secpolicy-3.5_alpha1
 >=kde-base/superkaramba-3.5_alpha1
->=kde-base/smoke-3.5_alpha1
 >=kde-base/umbrello-3.5_alpha1
 >=kde-base/vimpart-3.5_alpha1
 >=kde-base/xparts-3.5_alpha1
