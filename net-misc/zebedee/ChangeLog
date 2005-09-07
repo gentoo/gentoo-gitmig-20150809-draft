@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.10 2005/04/01 16:26:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.11 2005/09/07 16:05:59 vanquirius Exp $
+
+*zebedee-2.5.3 (07 Sep 2005)
+*zebedee-2.4.1-r1 (07 Sep 2005)
+
+  07 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> -zebedee-2.4.1.ebuild,
+  +zebedee-2.4.1-r1.ebuild, +zebedee-2.5.3.ebuild:
+  Version bump for bug 105115. Thanks to Bill Kenworthy <billk@iinet.net.au>.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> zebedee-2.5.2.ebuild:
   stable on ia64
