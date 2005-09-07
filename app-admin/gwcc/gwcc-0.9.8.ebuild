@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.8.ebuild,v 1.1 2005/05/01 23:47:29 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.8.ebuild,v 1.2 2005/09/07 03:43:40 metalgod Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gwcc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"

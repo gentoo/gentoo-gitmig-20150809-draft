@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.25 2005/09/07 03:34:55 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.26 2005/09/07 03:38:40 metalgod Exp $
+
+  07 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  prelude-manager-0.9.0_rc8.ebuild:
+  Added ~amd64 keyword.
 
   07 Sep 2005; Luis Medinas <metalgod@gentoo.org>
   prelude-manager-0.8.10.ebuild:

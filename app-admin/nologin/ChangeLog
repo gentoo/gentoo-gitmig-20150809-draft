@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/nologin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.5 2005/09/07 01:26:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/nologin/ChangeLog,v 1.6 2005/09/07 03:42:38 metalgod Exp $
+
+  07 Sep 2005; Luis Medinas <metalgod@gentoo.org> nologin-20050522.ebuild:
+  Added ~amd64 keyword.
 
   07 Sep 2005; Joseph Jezak <josejx@gentoo.org> nologin-20050522.ebuild:
   Marked ppc stable for bug #104955.
