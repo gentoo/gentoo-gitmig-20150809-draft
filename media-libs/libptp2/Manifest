@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 e86029be98ffb5cf58b696df52bc6b6b ChangeLog 1432
 MD5 df0c4e3c054f1496afede819ee11f992 libptp2-1.0.1.ebuild 984
-MD5 6b86ef014f0501a3b961d1ef9d16994c ChangeLog 1346
-MD5 6c8e3d9e846fd7830358d2e772e7d30d libptp2-1.0.2.ebuild 1039
+MD5 e40f01a8b3e23fa221000a76324bf849 libptp2-1.0.2.ebuild 1034
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 20edc79b41d07fe8e2db6a2448c7e2cf files/digest-libptp2-1.0.1 65
 MD5 a6f70bf32535c44ad3f82a74e5232021 files/digest-libptp2-1.0.2 65
-MD5 1ceef90a5e44b56ab54b1e8634695d6c files/libptp2-1.0.2-libusbversion.patch 495
 MD5 8138ffc75e460e62c0818880936a84af files/libptp2-1.0.1-libusbversion.patch 470
+MD5 1ceef90a5e44b56ab54b1e8634695d6c files/libptp2-1.0.2-libusbversion.patch 495
 MD5 040d61e7bc729957412db55415d36f0c files/libptp2-1.0.2-parallel.patch 2797
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGiwdmdTrptrqvGERAuGiAJ9CrXHc5rQQ3nmw2qglvTIF0eTuDACaAlAP
-/XFSwIAyXDqvwERuhvxzQ7k=
-=tsM+
------END PGP SIGNATURE-----

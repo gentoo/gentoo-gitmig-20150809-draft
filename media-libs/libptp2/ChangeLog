@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libptp2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.7 2005/09/03 23:04:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.8 2005/09/07 19:24:23 corsair Exp $
+
+  07 Sep 2005; Markus Rothe <corsair@gentoo.org> libptp2-1.0.2.ebuild:
+  Stable on ppc64
 
   03 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   +files/libptp2-1.0.2-parallel.patch, libptp2-1.0.2.ebuild:
