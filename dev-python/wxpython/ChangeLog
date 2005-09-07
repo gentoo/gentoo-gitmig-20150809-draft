@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.25 2005/07/12 18:48:03 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.26 2005/09/07 19:16:34 blubb Exp $
+
+  07 Sep 2005; Simon Stelling <blubb@gentoo.org> wxpython-2.4.2.4.ebuild,
+  wxpython-2.4.2.4-r2.ebuild, wxpython-2.6.0.0-r1.ebuild,
+  wxpython-2.6.1.0.ebuild:
+  make multilib-strict aware; bug 103535
 
 *wxpython-2.6.1.0 (12 Jul 2005)
 

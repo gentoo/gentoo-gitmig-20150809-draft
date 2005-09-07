@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4.ebuild,v 1.10 2005/01/26 03:24:40 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4.ebuild,v 1.11 2005/09/07 19:16:34 blubb Exp $
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets multilib
 
 MY_P="${P/wxpython-/wxPythonSrc-}"
 S="${WORKDIR}/${MY_P}/wxPython"
@@ -81,5 +81,6 @@ src_install() {
 
 	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
-	python setup.py ${mypyconf} install --prefix=/usr --root=${D} || die
+	python setup.py ${mypyconf} install --prefix=/usr \
+	--install-lib=/usr/$(get_libdir)/ --root=${D} || die
 }

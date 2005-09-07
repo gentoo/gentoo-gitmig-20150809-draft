@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r2.ebuild,v 1.7 2005/06/17 20:28:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r2.ebuild,v 1.8 2005/09/07 19:16:34 blubb Exp $
 
-inherit eutils wxwidgets python
+inherit eutils wxwidgets python multilib
 
 MY_P="${P/wxpython-/wxPythonSrc-}"
 S="${WORKDIR}/${MY_P}/wxPython"
@@ -69,7 +69,7 @@ src_install() {
 	local mypyconf
 	local dest
 	local wx_name
-	local site_pkgs=/usr/lib/python${PYVER}/site-packages
+	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
 
 	use opengl \
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
@@ -79,7 +79,8 @@ src_install() {
 		|| mypyconf="${mypyconf} WXPORT=gtk"
 	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
-	python setup.py ${mypyconf} install --prefix=/usr --root=${D} || die
+	python setup.py ${mypyconf} install --prefix=/usr \
+	--install-lib=/usr/$(get_libdir)/ --root=${D} || die
 
 	# This can all be removed when 2.4.3 is released:
 	# Future: Make sure we don't clobber existing wxversion.py or wx.pth
@@ -123,7 +124,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	python_version
-	site_pkgs=/usr/lib/python${PYVER}/site-packages
+	site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
 	cd ${site_pkgs}
 	#If 2.4 is removed, set 2.6 as default version:
 	for wxver in "wx-2.6-gtk2-unicode" "wx-2.6-gtk2-ansi" "wx-2.6-gtk"

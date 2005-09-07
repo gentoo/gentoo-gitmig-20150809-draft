@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.0.0-r1.ebuild,v 1.1 2005/05/11 20:08:38 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.0.0-r1.ebuild,v 1.2 2005/09/07 19:16:34 blubb Exp $
 
-inherit python wxwidgets eutils
+inherit python wxwidgets eutils multilib
 
 MY_P="${P/wxpython-/wxPython-src-}"
 DESCRIPTION="A blending of the wxWindows C++ class library with Python"
@@ -79,7 +79,7 @@ src_compile() {
 src_install() {
 	python_version
 	local mypyconf
-	local site_pkgs=/usr/lib/python${PYVER}/site-packages
+	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
 	dodir ${site_pkgs}
 
 	if ! use gtk2; then
