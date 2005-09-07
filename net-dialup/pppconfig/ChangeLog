@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/pppconfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.14 2005/08/14 18:23:19 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppconfig/ChangeLog,v 1.15 2005/09/07 18:57:39 mrness Exp $
+
+*pppconfig-2.3.11-r2 (07 Sep 2005)
+
+  07 Sep 2005; Alin Nastac <mrness@gentoo.org> -pppconfig-2.3.11-r1.ebuild,
+  +pppconfig-2.3.11-r2.ebuild:
+  Move the locale messages selection code to src_install because global
+  variables defined in one function (e.g. src_unpack) became unusable in
+  subsequent functions (e.g. src_compile). See bug #95402, comment #9.
 
   14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
   pppconfig-2.3.11-r1.ebuild:
