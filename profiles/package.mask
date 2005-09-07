@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4398 2005/09/06 23:18:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4399 2005/09/07 01:48:06 bcowan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1413,10 +1413,6 @@ media-video/spca50x
 #Gustavo Felisberto <humpback@gentoo.org> (4 Feb 2005)
 #Masked for user testing
 net-im/mercury-bin
-
-# Brad Cowan <bcowan@gentoo.org> (04 Feb 2005)
-# masking until upstream fixes .so problem
-=dev-libs/dbh-1.0.21
 
 # Matthew Kennedy <mkennedy@gentoo.org> (2 Feb 2005)
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
