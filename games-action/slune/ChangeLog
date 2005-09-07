@@ -1,6 +1,11 @@
 # ChangeLog for games-action/slune
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.10 2005/05/16 22:09:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/ChangeLog,v 1.11 2005/09/07 04:48:30 mr_bones_ Exp $
+
+*slune-1.0.9 (06 Sep 2005)
+
+  06 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> +slune-1.0.9.ebuild:
+  version bump (bug #104946)
 
   16 May 2005; Michael Sterrett <mr_bones_@gentoo.org> slune-1.0.7.ebuild:
   stablize
