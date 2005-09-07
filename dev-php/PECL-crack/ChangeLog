@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PECL-crack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-crack/ChangeLog,v 1.3 2005/07/11 18:27:02 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-crack/ChangeLog,v 1.4 2005/09/07 05:29:33 sebastian Exp $
+
+  07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PECL-crack-0.2.ebuild:
+  Marked ~amd64 per bug 99551.
 
   11 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org>
   -PECL-crack-0.1.ebuild, PECL-crack-0.2.ebuild:
