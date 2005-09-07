@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.3 2005/09/06 23:01:18 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.4 2005/09/07 08:11:53 swegener Exp $
 
 inherit rpm eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://public.yahoo.com/~mmk/rh9.${MY_P}.i386.rpm"
 RDEPEND="virtual/x11
 	media-libs/gdk-pixbuf
 	dev-libs/openssl
-	amd64? ( app-emulation/emul-linux-x86-xlibs 
+	amd64? ( app-emulation/emul-linux-x86-xlibs
 			>=app-emulation/emul-linux-x86-gtklibs-2.2 )"
 
 SLOT="0"
