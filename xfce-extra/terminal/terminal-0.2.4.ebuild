@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.4.ebuild,v 1.3 2005/09/07 18:18:51 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.4.ebuild,v 1.4 2005/09/07 19:45:01 swegener Exp $
 
 DESCRIPTION="Terminal with close ties to xfce"
 HOMEPAGE="http://www.os-cillation.com/"
@@ -10,7 +10,7 @@ IUSE="dbus"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=xfce-extra/exo-0.3.0_pre1
-	dbus? ( =sys-apps/dbus )
+	dbus? ( sys-apps/dbus )
 	>=x11-libs/vte-0.11.11
 	>=xfce-base/libxfce4mcs-4.2.0"
 
