@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.11.3.ebuild,v 1.1 2005/08/30 03:40:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.12.0.ebuild,v 1.1 2005/09/07 00:21:03 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -16,8 +16,8 @@ IUSE="static xinerama"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 RDEPEND="virtual/x11
-	>=x11-libs/pango-1.2
 	>=x11-libs/gtk+-2.6
+	>=x11-libs/pango-1.2
 	>=gnome-base/gconf-2
 	>=dev-libs/glib-2.6
 	>=x11-libs/startup-notification-0.7
@@ -34,7 +34,9 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
 
 pkg_setup() {
 	# Compositor is too unreliable
-	G2CONF="$(use_enable xinerama) $(use_enable static) --disable-compositor"
+	G2CONF="$(use_enable xinerama) \
+		$(use_enable static) \
+		--disable-compositor"
 }
 
 src_unpack() {
