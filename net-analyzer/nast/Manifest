@@ -1,4 +1,14 @@
-MD5 a135ea334050126924c3ea1f7f834608 ChangeLog 711
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 df38be8ec5de3eb09320d9e7942ff4a3 ChangeLog 808
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 b014b0c9c921a2d3444b3f0ecc561480 nast-0.2.0.ebuild 715
+MD5 2f8c63e12d59fab0dde9b66990ffcc18 nast-0.2.0.ebuild 725
 MD5 3caeb124c059b304993c9f79e9192344 files/digest-nast-0.2.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHmvqwUpWvClEHQoRAnzuAJ9qx4f2BzlnWFj3lrQtySK5taLc9gCfS0qa
+ii56L4iPUho6C/DjNuxSSGM=
+=own0
+-----END PGP SIGNATURE-----
