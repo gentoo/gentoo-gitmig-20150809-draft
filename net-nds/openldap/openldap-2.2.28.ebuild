@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28.ebuild,v 1.4 2005/09/06 16:35:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28.ebuild,v 1.5 2005/09/07 07:18:37 robbat2 Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -108,7 +108,8 @@ pkg_setup() {
 		eerror ""
 		eerror "This install will not proceed until your old data directory"
 		eerror "is at least moved out of the way."
-		exit 1
+		#exit 1
+		die "Warning direct upgrade unsafe!"
 	fi
 	openldap_upgrade_warning
 	if built_with_use dev-lang/perl minimal ; then
