@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1065d51cca8366e6907b5862183a554a ChangeLog 2217
 MD5 f5bf5f2c417188c977b8054868e8f968 kmenuedit-3.4.1.ebuild 393
 MD5 2f97fd5de5ce7b842802c603629a98ac kmenuedit-3.5_alpha1.ebuild 373
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kmenuedit-3.4.1 212
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-kmenuedit-3.5_alpha1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtfZj5H05b2HAEkRAnB1AJ9Jp4T7KBzLywyrqRFdIXaYJ6VPnACffRzm
+rcrobuphoEX0zPie8OK8U+c=
+=wehL
+-----END PGP SIGNATURE-----

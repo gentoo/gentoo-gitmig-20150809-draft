@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ed5e868bdcd1bb970fcdae14c827693 kbattleship-3.4.2.ebuild 558
 MD5 05d1c588cb4ace602914e8d78ea3ba8f ChangeLog 2394
 MD5 6464e69434d69b538c8394f61ecceb02 kbattleship-3.4.1.ebuild 545
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kbattleship-3.4.2 288
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kbattleship-3.4.1 212
 MD5 6bcd92642a069f9cd68ca412a0c3665c files/digest-kbattleship-3.5_alpha1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsdWj5H05b2HAEkRAsY6AJ40gtzjKebLMPoEYj/XhjOSAlgWCgCZAZ3B
+Yq3RK7BBspMvZFdY/oCPwKg=
+=V+v8
+-----END PGP SIGNATURE-----

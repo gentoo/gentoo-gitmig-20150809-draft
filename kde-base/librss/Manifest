@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff1361b12adab49be61575cbfce22599 librss-3.5_alpha1.ebuild 367
 MD5 8ebd6098d51873daf4666bc23409b4fb ChangeLog 2048
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 0b17180510b3583692b7a5a64dc2eb85 librss-3.4.1.ebuild 387
 MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-librss-3.5_alpha1 71
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-librss-3.4.1 218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHutcj5H05b2HAEkRAuomAJ44dHTHtIVD7UYPqSh9nPTpjIVSbwCdGOrh
+F1IpwCAtv/+3AJug1F826f0=
+=ssmc
+-----END PGP SIGNATURE-----

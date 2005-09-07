@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1002ef42f65dce34e596ca12d8d766da akregator-3.5_alpha1.ebuild 647
 MD5 a95ef484dfcc546853d046a83850553a akregator-3.4.1-r1.ebuild 787
 MD5 d71963bf43ec1787db11e284a538ae0e ChangeLog 3071
@@ -9,3 +12,10 @@ MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-akregator-3.4.1-r1 208
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-akregator-3.5_alpha1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-akregator-3.4.1 208
 MD5 b6a29865e7aefe8e3858bd65de651d3d files/kdepim-3.4.1-akregator-unread.patch 673
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsHIj5H05b2HAEkRAvhHAKCRpz7QPNfKUEnTBvGWxVdWulLBlwCfVSJQ
+RFv0B/8Trw3YvZQ3tWcShlM=
+=4I24
+-----END PGP SIGNATURE-----

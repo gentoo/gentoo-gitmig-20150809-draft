@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cde2a8632997b8aa57fef0e2d0e77e85 kommander-3.5_alpha1.ebuild 392
 MD5 d7ed5766cdc1be112c8f526f7876745f kommander-3.4.1.ebuild 402
 MD5 6b442481d2e02d5576de840386524da8 ChangeLog 3076
@@ -7,3 +10,10 @@ MD5 64933746cbdc378bd6d40e0b56eac91f files/post-3.4-kdewebdev-2.diff 2703
 MD5 3229676bd5ed59490dc5b70766f14d4e files/digest-kommander-3.5_alpha1 70
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kommander-3.4.1 215
 MD5 aa19f6252c3ee8966919f391f9ccd717 files/digest-kommander-3.4.2 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHttkj5H05b2HAEkRAiTcAKCRbkFWUrrgeNaoimkJxT2zElYypgCfW37z
+zeX0jfgAxZ4f/cChi0p/kms=
+=n/oR
+-----END PGP SIGNATURE-----

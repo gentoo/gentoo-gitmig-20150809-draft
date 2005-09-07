@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ed7b715fce1569d120bcc3e0a75684b3 knotes-3.4.1.ebuild 802
 MD5 ec327658df59f890c77304ef6887a2fa ChangeLog 2153
 MD5 582ba447b812fb2b7fa35d0eb735e303 knotes-3.5_alpha1.ebuild 797
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-knotes-3.4.1 208
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-knotes-3.5_alpha1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtqYj5H05b2HAEkRAoRFAJ9KcwBxxD9kExQJGlXpvAbliZ9vBgCff4c5
+ZnqDGuUVQ2GMNIFRAeplrt4=
+=kWNT
+-----END PGP SIGNATURE-----

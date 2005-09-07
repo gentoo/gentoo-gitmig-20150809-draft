@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6e530b0ab85fc98cb2c4d1348e8ec49f ChangeLog 2278
 MD5 be903c0bf1f70dd069c4057bc9c67666 kcalc-3.4.2.ebuild 385
 MD5 722f7da1a34f324fa6737408b239b797 kcalc-3.5_alpha1.ebuild 387
@@ -6,3 +9,10 @@ MD5 4f951674a5ce6584753cb2b966ec4c62 kcalc-3.4.1.ebuild 372
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kcalc-3.4.1 212
 MD5 aa852c5670b437cbfc2af5900a234661 files/digest-kcalc-3.5_alpha1 69
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kcalc-3.4.2 288
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsh8j5H05b2HAEkRAptjAJ4wmdkjCg61ys9u4pYU6G7Shzda/gCePpm5
+/JzBUKnrNQCV81TGZ7ToD58=
+=EXlG
+-----END PGP SIGNATURE-----

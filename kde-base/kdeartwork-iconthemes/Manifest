@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a2306021fb2c086a2cd9a8d232a8931 ChangeLog 2672
 MD5 1840d34611b1a1fb5c124793b92730cc kdeartwork-iconthemes-3.5_alpha1.ebuild 425
 MD5 ceca23e226349a196bb13bb517b44830 kdeartwork-iconthemes-3.4.2.ebuild 448
@@ -6,3 +9,10 @@ MD5 49c82deba802d55d2811f10d0438d9b1 kdeartwork-iconthemes-3.4.1.ebuild 435
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-iconthemes-3.4.2 298
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-iconthemes-3.4.1 220
 MD5 5234e1c4183e1fcf2920020eeff6965a files/digest-kdeartwork-iconthemes-3.5_alpha1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsr0j5H05b2HAEkRAtHjAJ4mpIAr/V/8bUU9dzFUDyZZ8RHBBwCaAwXF
+NiAf3k4GiRcPJzCd/sI9Gh0=
+=NdlU
+-----END PGP SIGNATURE-----

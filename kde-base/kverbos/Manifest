@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9998e879c2c3618d6919a9c5d9419732 ChangeLog 2299
 MD5 2d33a3c81f71cb26e0e946434e96e7f9 kverbos-3.5_alpha1.ebuild 388
 MD5 5172f60512e8eb056250faea3d34f0de kverbos-3.4.2.ebuild 411
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kverbos-3.4.1 208
 MD5 2183f1f3cb76d620970c208e56787241 files/digest-kverbos-3.5_alpha1 68
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kverbos-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHubYj5H05b2HAEkRAmQwAJwIk/IRtd9JLOQKtx6PE/koiAw4ggCfUvhk
+fDCWLNu+dbL/k3aERO39pS8=
+=T4oY
+-----END PGP SIGNATURE-----

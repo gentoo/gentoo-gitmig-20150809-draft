@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4d94e55f9b1e509871db61b93dc2eedf ChangeLog 2437
 MD5 fbd795b1457acd01df61b0fb627aeebb kpersonalizer-3.5_alpha1.ebuild 391
 MD5 8813ba5f121b35e19fe79572207ef851 kpersonalizer-3.4.1.ebuild 401
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpersonalizer-3.4.2 287
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-kpersonalizer-3.5_alpha1 69
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpersonalizer-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHt6Kj5H05b2HAEkRApcvAJ4mPG6N3NrPle4HUmJkiVhIUBKhwACfejAr
+afi57XUM1emQqPIeT2bBoTQ=
+=bSJm
+-----END PGP SIGNATURE-----

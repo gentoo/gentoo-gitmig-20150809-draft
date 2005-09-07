@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e1b7bc8b8f596aa3b2da3dc9e2045627 ksim-3.4.2.ebuild 530
 MD5 96881568a021be672caa9d2e894c8075 ChangeLog 2433
 MD5 5b77b9bf0a913ec870c7b924b788f4c8 ksim-3.4.1.ebuild 430
@@ -7,3 +10,10 @@ MD5 aa852c5670b437cbfc2af5900a234661 files/digest-ksim-3.5_alpha1 69
 MD5 062bb93297f13fe72d1e78a55a449788 files/digest-ksim-3.4.2 288
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-ksim-3.4.1 212
 MD5 8716488f71c42fb9ee3fbd1b310fc91e files/configure-fix-kdeutils-snmp.patch 1445
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHuGcj5H05b2HAEkRAn+lAJ9XGQEU0CPu8c81wEhvhQ4hqQpDFgCfXHty
+ljJEulNGDZTHHxHpWKAfXDI=
+=cFPp
+-----END PGP SIGNATURE-----

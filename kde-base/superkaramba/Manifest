@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0977ecd549ca9149f9d15a7626bb35a6 ChangeLog 395
 MD5 1d65342521986cfba7a16f4adb5fca2a superkaramba-3.5_alpha1.ebuild 455
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 aa852c5670b437cbfc2af5900a234661 files/digest-superkaramba-3.5_alpha1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHu50j5H05b2HAEkRAhQoAJ9jKbBAZ2wwK0ib+k5N/UkwlwFYOACeK6re
+xMXqj/X709IOMPZ5cppc1jo=
+=OkPa
+-----END PGP SIGNATURE-----

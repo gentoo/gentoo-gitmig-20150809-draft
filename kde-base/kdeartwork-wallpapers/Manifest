@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 933822a6e69a34a670f6fc65b94aee86 ChangeLog 2355
 MD5 dc6c9883107fb4be2845156af554d9bb kdeartwork-wallpapers-3.5_alpha1.ebuild 425
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 fb3c91b08d434086e1683be052aecfe1 kdeartwork-wallpapers-3.4.1.ebuild 445
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-wallpapers-3.4.1 220
 MD5 5234e1c4183e1fcf2920020eeff6965a files/digest-kdeartwork-wallpapers-3.5_alpha1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsvrj5H05b2HAEkRAtb0AJ0f0bF1FeFVD90TB9Ip4IxLZLB4WQCgpbLU
+xVzA4ybbQ1wUYMw0FCBYRU8=
+=/Kj0
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 83fd0fefa72e06b7b885ab3784a94ed4 ChangeLog 2010
 MD5 87af347b0200ad1a88886ac391a1d6bf kode-3.4.1.ebuild 384
 MD5 aeda780c3ee5e40ec61cd33c024e72b4 kode-3.5_alpha1.ebuild 364
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kode-3.4.1 208
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-kode-3.5_alpha1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtrAj5H05b2HAEkRAmmmAJ9Xt3pL8d7q/2n1k5E6GpPzz4QLEACcCedk
+OzKNXP1x4LmR89Pb45jr7wI=
+=DoS4
+-----END PGP SIGNATURE-----

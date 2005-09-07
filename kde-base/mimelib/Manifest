@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f1d1bb4ba66868e3ccc3d5bbfe3daec2 ChangeLog 2299
 MD5 2739af1ccf73445db9a3428c766a36c5 mimelib-3.4.1.ebuild 378
 MD5 bdd76a878edd7eccc02e833687af7d6f mimelib-3.5_alpha1.ebuild 368
@@ -6,3 +9,10 @@ MD5 f7a734d81f1980048efc5de59b324af5 mimelib-3.4.2.ebuild 391
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-mimelib-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-mimelib-3.4.2 282
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-mimelib-3.5_alpha1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHuwAj5H05b2HAEkRArjpAJwLl3+pUwBC1WKPUydhbe39fZVohACdHGSX
+w/PkKP54E27n0ZHYAbX9IWU=
+=d2AL
+-----END PGP SIGNATURE-----

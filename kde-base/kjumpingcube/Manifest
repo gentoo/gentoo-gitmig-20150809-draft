@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab746a29763e566c9cb829647cddb154 kjumpingcube-3.4.2.ebuild 572
 MD5 50ba7f73d61b5e6d8e286fb3d3a5c82d ChangeLog 2415
 MD5 9e0ae6551c05809b51f2e7dec7cdafdc kjumpingcube-3.5_alpha1.ebuild 549
@@ -6,3 +9,10 @@ MD5 73bbdcb6a9357fbcc65f6d010c1a7f6b kjumpingcube-3.4.1.ebuild 559
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kjumpingcube-3.4.2 288
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kjumpingcube-3.4.1 212
 MD5 6bcd92642a069f9cd68ca412a0c3665c files/digest-kjumpingcube-3.5_alpha1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtVJj5H05b2HAEkRAsctAJ9ZsvZwxtziU85afdM7y2VuZAhl0gCfUoHJ
+xH8sGba0rj5yJTJ4w/EgXW0=
+=2lFc
+-----END PGP SIGNATURE-----

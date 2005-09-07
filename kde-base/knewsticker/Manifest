@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 badb67da0f112ac5d4e9330c51fcfcc6 knewsticker-3.5_alpha1.ebuild 530
 MD5 6a59b1d324628e6904efac51d3190416 ChangeLog 2393
 MD5 4a534134239b16e110819ccbe10be0e6 knewsticker-3.4.2.ebuild 555
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-knewsticker-3.5_alpha1 71
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-knewsticker-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-knewsticker-3.4.2 296
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtocj5H05b2HAEkRAnJxAJ9Iu+wvFbBYtg75K6eLUHvMvfAY4ACfQJAr
+qIzJfBWQt2VT8Bf+9Vh7D5Q=
+=+iwJ
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aff423ab20d183b5d44306d34efd2912 kdeadmin-kfile-plugins-3.4.2.ebuild 459
 MD5 a87f2f68e7202b81ac090fd00817640a ChangeLog 2532
 MD5 836fd8da4fc03aea96cd78a40dcb770d kdeadmin-kfile-plugins-3.5_alpha1.ebuild 436
@@ -6,3 +9,10 @@ MD5 bd839173c1c9088442431d2111193dd0 kdeadmin-kfile-plugins-3.4.1.ebuild 446
 MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-kdeadmin-kfile-plugins-3.4.2 286
 MD5 713a5942a98adf02c6242a5532d64fd9 files/digest-kdeadmin-kfile-plugins-3.5_alpha1 69
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kdeadmin-kfile-plugins-3.4.1 211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsp4j5H05b2HAEkRAjPsAJ0ULtOi4e/YypU3TA0jLBkmB4TqAACfT4UF
+fTYNw8TgVkwTWdhhqvEyppA=
+=BxpZ
+-----END PGP SIGNATURE-----

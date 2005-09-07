@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 825223b2de80b73770c5a833aaa8ad8f ChangeLog 2160
 MD5 cb99362d3c68d245e5d165ec8f94e88c kpilot-3.5_alpha1.ebuild 1173
 MD5 9e5c5c72645fab49c126a5482586917c kpilot-3.4.1.ebuild 1269
@@ -7,3 +10,10 @@ MD5 2943bf542accb5d027810434e6cebe1d files/digest-kpilot-3.5_alpha1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kpilot-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kpilot-3.4.2 282
 MD5 0324965cf9c67cc4750d7a14cec3ef1f files/kdepim-3.4.1-kpilot-fix.patch 4635
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHt7cj5H05b2HAEkRAr1IAJ9749QH5hPi7MJiQUrp+yVCtqCeJwCeLkPK
+wQJKue3/odnnlfw5zuhlMaU=
+=bLVn
+-----END PGP SIGNATURE-----

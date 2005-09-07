@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 094807d2ee11aca2fbaa4dacc4873410 ChangeLog 2168
 MD5 06e20e7e1113debb71a062b6debf5737 kdebugdialog-3.5_alpha1.ebuild 422
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 199c91b58b20cfef267932307022fe05 kdebugdialog-3.4.1.ebuild 442
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebugdialog-3.4.1 212
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-kdebugdialog-3.5_alpha1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsyWj5H05b2HAEkRAptFAJ4vbvHEZrtmTFg8nsuDr9bX0HNN4gCdF1Nj
+Fjadmyrm7OmkG2igJf+wWa0=
+=EwOt
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 56fc4fa97ef5aa825fdd59de38f06abc ChangeLog 2374
 MD5 7400bd6ee61c9f82030c064a68a5983c kblackbox-3.5_alpha1.ebuild 524
 MD5 552519c74646e7521c5d90ce1d8bb6f0 kblackbox-3.4.1.ebuild 534
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kblackbox-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kblackbox-3.4.2 288
 MD5 6bcd92642a069f9cd68ca412a0c3665c files/digest-kblackbox-3.5_alpha1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHseAj5H05b2HAEkRAr5LAJ9wMim1AmBntoIP5DEODnz4+suWHACaAmQd
+tA07DTvdbNdzM2KpLLACxSI=
+=Dyq0
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 27f5c0298c7066ea961cc91dca392b87 ChangeLog 2255
 MD5 d9724f1a4edbbece5bfe88b5a57a37c8 kmoon-3.5_alpha1.ebuild 372
 MD5 d28639bb2adf6ef1962a01badc8ddf97 kmoon-3.4.1.ebuild 382
@@ -6,3 +9,10 @@ MD5 ba862c567ee76fcf8c0cf25e23731df5 kmoon-3.4.2.ebuild 395
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kmoon-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kmoon-3.4.2 282
 MD5 db23f81be024e32a09dc0929b2358b34 files/digest-kmoon-3.5_alpha1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtj4j5H05b2HAEkRAj0HAJwLrMt6bW4IBZ0go23P1aVJLmYqMQCaA03Q
+eMtv2F3cWKUokv3a5p6LyxU=
+=5N8+
+-----END PGP SIGNATURE-----

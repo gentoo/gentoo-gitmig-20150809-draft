@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fddde10ea4f7b83e6fdff207ea393b21 ChangeLog 2321
 MD5 4dedcc4fed51647a43272d0049888a63 khangman-3.4.1.ebuild 561
 MD5 56915c7505d1c89b0282b4709a158168 khangman-3.5_alpha1.ebuild 551
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-khangman-3.4.1 208
 MD5 2183f1f3cb76d620970c208e56787241 files/digest-khangman-3.5_alpha1 68
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-khangman-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHtNQj5H05b2HAEkRAtWLAKCE2HH2B/lYNzM3rf6/eiNeDpkpNQCgk/7Y
+q/GD4CElabA82qahSenljxE=
+=P3Oq
+-----END PGP SIGNATURE-----

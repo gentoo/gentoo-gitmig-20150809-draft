@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cf7201096ae6f3d479c0fdfe7d3fc13f ChangeLog 2279
 MD5 ab3f67607a62b7a339e8ae8687e00227 kdeartwork-sounds-3.4.1.ebuild 440
 MD5 5920881791f47a0dc52d81359048369d kdeartwork-sounds-3.5_alpha1.ebuild 420
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-sounds-3.4.1 220
 MD5 5234e1c4183e1fcf2920020eeff6965a files/digest-kdeartwork-sounds-3.5_alpha1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsuaj5H05b2HAEkRAhGLAJ44i2bVzpMEhkjYDluBTljztNJDvQCgj6cK
+MqI9camnIUEdItVfMNpBlZQ=
+=5HIK
+-----END PGP SIGNATURE-----

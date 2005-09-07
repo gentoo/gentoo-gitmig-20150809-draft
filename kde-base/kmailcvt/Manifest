@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f0baf1c86fb69b0d536dda7661228bd kmailcvt-3.5_alpha1.ebuild 373
 MD5 cbb08f3c1be7932fd2839c3cc1c0e583 ChangeLog 2436
 MD5 cef98d58639182ee17a50ebbdc116f34 kmailcvt-3.4.1.ebuild 384
@@ -7,3 +10,10 @@ MD5 5b0dda9287797546fcf34f2ca390d165 files/fix-kmailcvt-compilation.diff 5790
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-kmailcvt-3.5_alpha1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmailcvt-3.4.1-r1 208
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmailcvt-3.4.1 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHteGj5H05b2HAEkRAub5AKCP60BC9qqTdWT+RgWLTdDcHhlIzACfc0l6
+lwxRAXQmRjbjblzfCY8X1L0=
+=07d3
+-----END PGP SIGNATURE-----

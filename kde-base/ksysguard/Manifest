@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5a9e6f9e2f88301e5740e7e9d1638c6 ksysguard-3.5_alpha1.ebuild 516
 MD5 926ca68494bbd2486fff7a710214d411 ChangeLog 3210
 MD5 9fe1b72a5365ccbc9e7b788ddbc4f6b7 ksysguard-3.4.1.ebuild 446
@@ -9,3 +12,10 @@ MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksysguard-3.4.1-r1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ksysguard-3.4.2 287
 MD5 430a0cdfc39b2da16bcf5cd41b65b1d6 files/kdebase-3.4.1-configure.patch 1248
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-ksysguard-3.5_alpha1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHuQNj5H05b2HAEkRAr8GAKCd2I2jw6o5I0RZOfVsg9e/x/D7hwCdECfe
+F0a4Qdt6RDEtu0icELEz7Ik=
+=cJy/
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1cc57aaaaa318a26eb4e5be39478b037 ChangeLog 3036
 MD5 8284d599d20f0383033231206708527e kvoctrain-3.4.1.ebuild 403
 MD5 c20b4bde17a51e31ddaf8048f9c5c905 kvoctrain-3.5_alpha1.ebuild 392
@@ -11,3 +14,10 @@ MD5 0e82c5810df3b04370188ba13cc50203 files/post-3.4.2-kdeedu.diff 1876
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kvoctrain-3.4.1-r1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kvoctrain-3.4.2-r1 282
 MD5 2183f1f3cb76d620970c208e56787241 files/digest-kvoctrain-3.5_alpha1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHudVj5H05b2HAEkRAl9+AKCkABV/9m/hteYmCB/1071mOORb6QCgm0Zo
+DxgvsDl4n+0e+AQKrnTwgNM=
+=pCLq
+-----END PGP SIGNATURE-----

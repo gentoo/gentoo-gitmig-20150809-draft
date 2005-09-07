@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1d88d589046307c6285332a9088bf690 ChangeLog 2255
 MD5 0bc52ac239c767df1cb31104857e620e karm-3.5_alpha1.ebuild 730
 MD5 2dcd6979729830efb5ef1c19c9d0783d karm-3.4.2.ebuild 753
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-karm-3.4.2 282
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-karm-3.4.1 208
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-karm-3.5_alpha1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsYFj5H05b2HAEkRAunpAJkBM9mneJp8MBsmTKG/uAHeiP+fNACfVWPx
+ERoKcjRsTi5vU1gCn+uf8OY=
+=elMf
+-----END PGP SIGNATURE-----

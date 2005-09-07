@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f37eb5898a3eb2aa993f49b3f51f6496 ksystraycmd-3.4.1.ebuild 439
 MD5 2f474cd85d78265d01b2780d3938ba59 ChangeLog 2149
 MD5 bec700ee83acffa7716fe60a34a8651a ksystraycmd-3.5_alpha1.ebuild 419
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-ksystraycmd-3.5_alpha1 69
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksystraycmd-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHuQ3j5H05b2HAEkRAjOeAJ0ewHRLY9ubg56hi0dOp2Hv6TKLFQCdGgsH
+4MRtFYoD0dQV2ijzwTJe0mk=
+=OMMX
+-----END PGP SIGNATURE-----

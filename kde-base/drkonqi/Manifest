@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73e313ed8df7520144b16016c13ed008 ChangeLog 2307
 MD5 bcb2513d724bb43b15ee1c393ab10394 drkonqi-3.5_alpha1.ebuild 416
 MD5 a9cb3e7a732e6a24bf550867143e6e81 drkonqi-3.4.1.ebuild 426
@@ -6,3 +9,10 @@ MD5 57aea957248a3568b5398dae0afec235 drkonqi-3.4.2.ebuild 439
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-drkonqi-3.4.2 287
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-drkonqi-3.5_alpha1 69
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-drkonqi-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHsOnj5H05b2HAEkRApqeAKCHcjKxYmgtkAUTp1BGva7S8qZYfgCfZ51u
+SStpqYLvnbtp/yVpbMq7Bkg=
+=wQ0k
+-----END PGP SIGNATURE-----
