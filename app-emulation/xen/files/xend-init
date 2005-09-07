@@ -1,0 +1,42 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xend-init,v 1.1 2005/09/07 18:18:59 chrb Exp $
+
+opts="start stop status restart"
+
+depend() {
+	need net
+	before xendomain
+}
+
+await_daemons_up() {
+	for ((i=0; i<5; i++)); do
+		sleep 1
+		xend status && return 0
+	done
+	return 1
+}
+
+start() {
+	ebegin "Starting Xen control daemon"
+	xend start
+	xend status || await_daemons_up
+	eend $?
+}
+
+stop() {
+	if [ "$(xm list | wc -l)" -gt 2 ]; then
+		ebegin "  Stopping all domain"
+		xm shutdown --all --halt --wait >/dev/null
+		eend $?
+	fi
+
+	ebegin "Stopping Xen control daemon"
+	xend stop
+	eend $?
+}
+
+status() {
+	xend status
+}

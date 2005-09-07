@@ -1,0 +1,52 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xendomains-init,v 1.1 2005/09/07 18:18:59 chrb Exp $
+
+opts="start stop status restart"
+
+depend() {
+	need xend
+}
+
+get_domname() {
+	sed -ne 's/^[ \t]*name[ \t]*=[ \t]*"\([^"]*\)"/\1/p' $1
+}
+
+is_running() {
+	[ -n "`xm list | grep "^${1} "`" ]
+}
+
+start() {
+	einfo "Starting ${AUTODIR} auto Xen domains"
+	# Create all domains with config files in AUTODIR.
+	for dom in $(ls ${AUTODIR}/* 2>/dev/null); do
+		name=$(get_domname ${dom})
+		if ! is_running ${name} ; then
+			ebegin "  Starting domain ${name}"
+			xm create --quiet --defconfig ${dom}
+			eend $?
+		else
+			einfo "  Not Starting domain ${name} - allready running"
+		fi
+	done
+}
+
+stop() {
+	einfo "Shutting down ${AUTODIR} Xen domains"
+	# Stop all domains with config files in AUTODIR.
+	for dom in $(ls ${AUTODIR}/* 2>/dev/null); do
+		name=$(get_domname ${dom})
+		if is_running ${name} ; then
+			ebegin "  Stopping domain ${name}"
+			xm shutdown --halt --wait ${name} >/dev/null
+			eend $?
+		else
+			einfo "  Not Stopping domain ${name} - not running"
+		fi
+	done
+}
+
+status() {
+	xm list
+}

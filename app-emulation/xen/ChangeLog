@@ -1,0 +1,12 @@
+# ChangeLog for app-emulation/xen
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.1 2005/09/07 18:18:59 chrb Exp $
+
+*xen-3.0.0_pre20050906 (07 Sep 2005)
+*xen-2.0.7 (07 Sep 2005)
+
+  07 Sep 2005; Chris Bainbridge <chrb@gentoo.org> +files/xend-conf,
+  +files/xend-init, +files/xendomains-conf, +files/xendomains-init,
+  +metadata.xml, +xen-2.0.7.ebuild, +xen-3.0.0_pre20050906.ebuild:
+  New package. Thanks to the many who contributed in bug #70161.
+
