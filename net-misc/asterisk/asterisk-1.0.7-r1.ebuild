@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.17 2005/08/23 13:57:43 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.18 2005/09/07 23:35:53 stkn Exp $
 
 inherit eutils perl-module
 
@@ -192,6 +192,10 @@ src_unpack() {
 	#
 	# other patches
 	#
+
+	# fix lpc10 Makefile, remove the
+	# CFLAGS+=-march=$(shell uname -m) part
+	epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-lpc10flags.diff
 
 	# asterisk-config
 	epatch ${FILESDIR}/1.0.0/${PN}-1.0.5-astcfg-0.0.2.diff
