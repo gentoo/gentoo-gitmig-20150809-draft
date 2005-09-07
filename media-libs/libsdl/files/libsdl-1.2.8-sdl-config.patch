@@ -9,7 +9,7 @@ Makes ABI / cross-compiling easier on the soul.
        ;;
  @ENABLE_SHARED_TRUE@    --libs)
 -@ENABLE_SHARED_TRUE@      libdirs="-L@libdir@ @SDL_RLD_FLAGS@"
-+@ENABLE_SHARED_TRUE@      if test x"@libdir@" != x"/usr/lib" ; then
++@ENABLE_SHARED_TRUE@      if test x"${prefix}" != x"/usr" ; then
 +@ENABLE_SHARED_TRUE@          libdirs="-L@libdir@ @SDL_RLD_FLAGS@"
 +@ENABLE_SHARED_TRUE@      else
 +@ENABLE_SHARED_TRUE@          libdirs=""
