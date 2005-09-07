@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.12 2005/07/28 21:16:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.13 2005/09/07 13:43:30 flameeyes Exp $
+
+*umbrello-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +umbrello-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
 *umbrello-3.4.2 (28 Jul 2005)
 

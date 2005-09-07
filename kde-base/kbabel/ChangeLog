@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.13 2005/07/29 11:48:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.14 2005/09/07 10:54:33 flameeyes Exp $
+
+*kbabel-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +kbabel-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
   29 Jul 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/configure-fix-kdesdk-db-3.4.patch, kbabel-3.4.2.ebuild:

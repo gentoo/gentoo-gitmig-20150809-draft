@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.12 2005/08/08 21:59:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.13 2005/09/07 11:01:32 flameeyes Exp $
+
+*kcharselect-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +kcharselect-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
   08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   kcharselect-3.4.1.ebuild:

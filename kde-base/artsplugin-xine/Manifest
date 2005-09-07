@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 53ec000e8ef1c529405629416caa4960 artsplugin-xine-3.5_alpha1.ebuild 601
+MD5 321e0477695191c5dba95968c10d711a ChangeLog 2316
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 30afc4c18e2a02aab291752bf03c1b35 artsplugin-xine-3.4.1.ebuild 629
-MD5 321e0477695191c5dba95968c10d711a ChangeLog 2316
+MD5 4084bf1456b3b8809bda2e919b1df867 files/digest-artsplugin-xine-3.5_alpha1 74
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-xine-3.4.1 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDDh32KRy60XGEcJIRAqrmAJ9Iw3489CICBve5rlTvvwdYY1/1ZQCfR/C/
-jYn5A4V/gNmu56H9dlz66VA=
-=gnEg
------END PGP SIGNATURE-----

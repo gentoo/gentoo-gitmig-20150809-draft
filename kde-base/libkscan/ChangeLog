@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libkscan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.14 2005/09/05 04:56:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.15 2005/09/07 13:27:35 flameeyes Exp $
+
+*libkscan-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +libkscan-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
   05 Sep 2005; Markus Rothe <corsair@gentoo.org> libkscan-3.4.1.ebuild,
   libkscan-3.4.2.ebuild:

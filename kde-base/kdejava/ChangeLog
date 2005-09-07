@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.13 2005/07/09 19:56:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.14 2005/09/07 11:20:21 flameeyes Exp $
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Added 3.5_alpha1 split ebuild.
 
   09 Jul 2005; Jason Wever <weeve@gentoo.org> kdejava-3.4.1.ebuild:
   Added ~sparc keyword.

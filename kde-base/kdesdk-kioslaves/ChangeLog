@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.12 2005/07/28 21:16:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.13 2005/09/07 11:30:10 flameeyes Exp $
+
+*kdesdk-kioslaves-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +kdesdk-kioslaves-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
 *kdesdk-kioslaves-3.4.2 (28 Jul 2005)
 

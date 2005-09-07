@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.18 2005/08/08 20:37:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.19 2005/09/07 10:42:41 flameeyes Exp $
+
+*juk-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +juk-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
   08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> juk-3.4.2.ebuild:
   ~alpha keyword.

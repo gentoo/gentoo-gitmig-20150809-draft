@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.16 2005/08/08 20:09:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.17 2005/09/07 11:47:43 flameeyes Exp $
+
+*khelpcenter-3.5_alpha1 (07 Sep 2005)
+
+  07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +khelpcenter-3.5_alpha1.ebuild:
+  Added 3.5_alpha1 split ebuild.
 
   08 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   khelpcenter-3.4.2.ebuild:
