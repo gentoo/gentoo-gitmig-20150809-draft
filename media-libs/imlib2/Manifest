@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 4795c0cb40349fb84538fe52668f893c imlib2-1.2.0-r2.ebuild 1149
 MD5 af00a1d98fecac5d7e58d817c90ffe27 imlib2-9999.ebuild 966
 MD5 0c36280f1141c2ab86d0bd09ceec038a metadata.xml 2284
-MD5 f1bc1213d78582917418f710244ee654 imlib2-1.2.1.004.ebuild 1030
+MD5 e68c73c340a2db933bdaa907fc074c49 imlib2-1.2.1.004.ebuild 1065
 MD5 79da67e250cc153a8a523e4bc2209843 imlib2-1.2.0.007-r2.ebuild 1203
-MD5 48f5b3c292c95823c018c027606d2fd9 ChangeLog 4969
+MD5 a1bc2216b767a1ce4a9860a002eaa20b ChangeLog 5071
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-imlib2-9999 0
 MD5 00966d224a91444676648c49ecc1eaf4 files/digest-imlib2-1.2.0-r2 64
 MD5 3a2a6d558d381a6e8355a223b8b0f842 files/imlib2-1.2.0.007-x-typo.patch 298
@@ -18,7 +18,7 @@ MD5 1d4f605193247283ce4fac45d2a10c58 files/digest-imlib2-1.2.0.007-r2 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDE6xcgIKl8Uu19MoRAlk3AJ9dD/FpFX1muXQCFzY8PjEU6+ejhwCePU17
-gU97CAz+ir01NHs2VzfMfMA=
-=gdCu
+iD8DBQFDHmPzgIKl8Uu19MoRAmonAJ93Z4RBeNgJCitB1Ij/2dZuxbrCXgCeLBkW
+roWXA8Hn/ergpm3IzeVqCKk=
+=3XA0
 -----END PGP SIGNATURE-----
