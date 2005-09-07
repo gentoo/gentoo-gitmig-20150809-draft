@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.11.5.ebuild,v 1.1 2005/08/26 01:22:35 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.10.1-r1.ebuild,v 1.1 2005/09/07 19:54:53 leonardop Exp $
 
-inherit gnome2 eutils flag-o-matic
+inherit eutils flag-o-matic gnome2
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -30,15 +30,19 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
-pkg_setup() {
 
-	G2CONF="${G2CONF} `use_enable howl` --disable-setgid"
+pkg_setup() {
+	G2CONF="$(use_enable howl) --disable-setgid"
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.11.4-nohowl.patch
+	unpack "${A}"
+	cd "${S}"
+
+	# Fix compilation if esound is not installed (bug #104952).
+	epatch ${FILESDIR}/${P}-no_esd.patch
+
+	epatch ${FILESDIR}/${PN}-2.9.6-nohowl.patch
 
 	autoconf || die "autoconf failed"
 }
