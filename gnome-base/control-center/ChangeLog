@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.131 2005/09/03 20:18:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.132 2005/09/07 02:05:04 leonardop Exp $
+
+*control-center-2.12.0 (07 Sep 2005)
+
+  07 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -files/control-center-2.11.91-xft_check.patch,
+  -control-center-2.11.92.ebuild, +control-center-2.12.0.ebuild:
+  New version.
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org>
   control-center-2.10.2.ebuild:

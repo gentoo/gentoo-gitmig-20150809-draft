@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.11.92.ebuild,v 1.1 2005/08/25 05:54:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.0.ebuild,v 1.1 2005/09/07 02:05:04 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -34,14 +34,16 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=gnome-base/orbit-2
 	eds? ( >=gnome-extra/evolution-data-server-1.3 )
 	!arm? ( alsa? ( >=media-libs/alsa-lib-0.9 ) )
-	gstreamer? ( >=media-libs/gst-plugins-0.8 )
+	gstreamer? ( =media-libs/gst-plugins-0.8* )
 	!gnome-extra/fontilus
 	!gnome-extra/themus
 	!gnome-extra/acme"
 
 DEPEND="${RDEPEND}
+	app-text/scrollkeeper
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.28"
+	>=dev-util/intltool-0.28
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
@@ -50,9 +52,13 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 
 pkg_setup() {
-	G2CONF="--disable-schemas-install --disable-scrollkeeper \
-		--enable-vfs-methods $(use_enable alsa) $(use_enable gstreamer) \
-		$(use_enable static) $(use_enable eds aboutme)"
+	G2CONF="--disable-schemas-install \
+		--disable-scrollkeeper  \
+		--enable-vfs-methods    \
+		$(use_enable alsa)      \
+		$(use_enable gstreamer) \
+		$(use_enable static)    \
+		$(use_enable eds aboutme)"
 }
 
 src_unpack() {
@@ -74,15 +80,9 @@ src_unpack() {
 	# gnome-theme-installer.  bug #84977
 	epatch ${FILESDIR}/${PN}-2.10.1-pathfix.patch
 
-	# Remove unnecessary check for bleeding-edge version of Xft. Gentoo's
-	# xorg-x11 already includes the patch that this check tries to enforce.
-	epatch ${FILESDIR}/${PN}-2.11.91-xft_check.patch
-
 	# Gentoo-specific support for xcursor themes. See bug #103638.
 	epatch ${FILESDIR}/${PN}-2.11-gentoo_xcursor.patch
 
 	# Avoid segfault after calling XcursorLibraryLoadImage
 	epatch ${FILESDIR}/${PN}-2.11-xcursor_fix.patch
-
-	autoconf || die "autoconf failed"
 }
