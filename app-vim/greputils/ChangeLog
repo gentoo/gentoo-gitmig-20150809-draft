@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/greputils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.8 2005/08/10 15:32:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.9 2005/09/07 02:06:14 ciaranm Exp $
+
+  07 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> greputils-2.8.ebuild:
+  x86 sparc mips stable
 
 *greputils-2.8 (10 Aug 2005)
 

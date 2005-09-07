@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/ebnf-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ChangeLog,v 1.6 2005/08/10 21:19:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ChangeLog,v 1.7 2005/09/07 02:05:37 ciaranm Exp $
+
+  07 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  ebnf-syntax-1.1-r1.ebuild:
+  x86 sparc mips stable
 
 *ebnf-syntax-1.1-r1 (10 Aug 2005)
 
