@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
+MD5 1cf62d57ddad6fccd0b9037fcdb87991 ChangeLog 343
+MD5 18808ee571af05afb79609323668f1fb express-9999.ebuild 412
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-express-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHmJwgIKl8Uu19MoRAgTTAJ9jRfzjDFZgHzc2zfAwcGRj6gjTFACfZ0M1
+RVihEb/vJzPduWktvGRzBbg=
+=kKjp
+-----END PGP SIGNATURE-----
