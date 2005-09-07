@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3203a2f57669142b6eb99b7490d3a14b zoomwin-19.ebuild 908
 MD5 375eeae3a26858926674f15e2a238399 zoomwin-16.ebuild 881
 MD5 33da23a918bb997f329a593684170458 zoomwin-17.ebuild 881
@@ -8,3 +11,10 @@ MD5 bc4cf4c5a6f8660c3a47497860b3c750 files/digest-zoomwin-21 61
 MD5 0ae57cd60901f771546c0214a0427a7b files/digest-zoomwin-19 61
 MD5 6747c0dd76fc64bdf172638ec10aeb2e files/digest-zoomwin-16 61
 MD5 7d43c85bd87525e1b9a9d1085e789c0a files/digest-zoomwin-17 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDHkxgLLFUmVNQ7rkRAhZgAJ44lGRQ5EBtFAe5/92AlzVhN9DJjACgzN4z
+EQUmjW7ukPjZCMmNqsIntas=
+=mkhW
+-----END PGP SIGNATURE-----
