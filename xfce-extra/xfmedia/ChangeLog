@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfmedia
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.6 2005/08/14 19:41:20 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/ChangeLog,v 1.7 2005/09/07 18:43:18 bcowan Exp $
+
+  07 Sep 2005; Brad Cowan <bcowan@gentoo.org> xfmedia-0.8.0.ebuild:
+  Add dbus dep.
 
 *xfmedia-0.8.0 (14 Aug 2005)
 
