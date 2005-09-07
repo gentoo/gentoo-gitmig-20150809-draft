@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc.new,v 1.1 2005/09/04 13:03:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc.new,v 1.2 2005/09/07 21:24:04 ticho Exp $
 
 conf="/etc/conf.d/postgrey"
 
 depend() {
 	need net
-	use postfix
+	before postfix
 	provide postfix_greylist
 }
 

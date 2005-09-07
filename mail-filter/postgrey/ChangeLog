@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.8 2005/09/04 13:03:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.9 2005/09/07 21:24:04 ticho Exp $
+
+  07 Sep 2005; Andrej Kacian <ticho@gentoo.org> files/postgrey.rc,
+  files/postgrey.rc.new:
+  Do not 'use postfix', rather 'before postfix' to avoid circular iuse
+  dependency in initscripts.
 
 *postgrey-1.21-r1 (04 Sep 2005)
 
