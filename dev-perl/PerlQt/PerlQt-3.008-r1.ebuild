@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008-r1.ebuild,v 1.8 2005/08/07 13:05:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008-r1.ebuild,v 1.9 2005/09/07 20:15:55 blubb Exp $
 
-inherit perl-module kde
+inherit perl-module kde eutils
 
 #install pqtsh to this directory
 myinst="${myinst} INSTBINDIR=${D}/usr/bin"
@@ -29,11 +29,14 @@ src_unpack() {
 	cp Makefile.PL.in Makefile.PL.in.orig
 	perl -pi -e "s#WriteMakefile\(#WriteMakefile\(\n'PREFIX' => '${D}/usr',#" Makefile.PL.in
 	cd ${S}
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
 	addwrite $QTDIR/etc/settings
 	perl-module_src_prep
+	
+	emake
 }
 
 src_install() {
