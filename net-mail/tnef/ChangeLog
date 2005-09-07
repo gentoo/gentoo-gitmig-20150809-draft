@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tnef
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.19 2005/09/02 23:19:47 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.20 2005/09/07 14:16:33 gustavoz Exp $
+
+  07 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> tnef-1.3.3.ebuild:
+  Stable on sparc
 
   02 Sep 2005; Andrej Kacian <ticho@gentoo.org> tnef-1.3.3.ebuild:
   Stable on x86.
