@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.1.1.ebuild,v 1.1 2005/05/20 02:44:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.1.1.ebuild,v 1.2 2005/09/07 21:25:53 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
-SRC_URI="http://www.tresys.com/Downloads/selinux-tools/${P}.tar.bz2"
+SRC_URI="http://www.tresys.com/files/setools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
