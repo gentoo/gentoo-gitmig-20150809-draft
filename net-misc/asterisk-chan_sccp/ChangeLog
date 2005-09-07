@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-chan_sccp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.8 2005/09/02 20:17:18 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.9 2005/09/07 23:51:33 stkn Exp $
+
+*asterisk-chan_sccp-0.0.20050906 (08 Sep 2005)
+
+  08 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  +asterisk-chan_sccp-0.0.20050906.ebuild:
+  Version bump. Fixes two potential crashes and a one-way audio problem with
+  older cisco phones.
 
   02 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
   asterisk-chan_sccp-0.0.20050807.ebuild:
