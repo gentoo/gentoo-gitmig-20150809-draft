@@ -1,0 +1,13 @@
+# ChangeLog for sys-kernel/xen-sources
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.1 2005/09/07 18:22:34 chrb Exp $
+
+*xen-sources-2.6.12.5 (07 Sep 2005)
+*xen-sources-2.6.11.10 (07 Sep 2005)
+
+  07 Sep 2005; Chris Bainbridge <chrb@gentoo.org>
+  +xen-sources-2.6.11.10.ebuild~, +xen-sources-2.6.12.5.ebuild~,
+  +metadata.xml, +xen-sources-2.6.11.10.ebuild,
+  +xen-sources-2.6.12.5.ebuild:
+  New package. Thanks to the many who contributed in bug #70161.
+
