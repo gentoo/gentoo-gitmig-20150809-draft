@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bddaf3403259004b7359a1b7e30a1e70 propel-generator-1.1.0.ebuild 568
-MD5 7985cc68c539476d18b86727cb8ae885 ChangeLog 645
+MD5 500ef7eab819e7d29809de78774f7ff5 propel-generator-1.1.0.ebuild 569
+MD5 f37248337d04a6576e03740af859ef11 ChangeLog 792
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 6c5080e34c844e849cf06eff0eb79a35 files/digest-propel-generator-1.1.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCY374aGfFFLhbXWkRAoA3AJ91kU0Nwv7IHMD7ogIjwm+lVspUTQCfdfRp
-sq6dDIUTL2mVyY9Fh4QmEJg=
-=Zgxf
------END PGP SIGNATURE-----
