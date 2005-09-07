@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.172 2005/09/06 16:00:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.173 2005/09/07 19:48:52 gustavoz Exp $
+
+  07 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  subversion-1.2.3.ebuild:
+  Stable on sparc
 
   06 Sep 2005; Markus Rothe <corsair@gentoo.org> subversion-1.2.3.ebuild:
   Stable on ppc64
