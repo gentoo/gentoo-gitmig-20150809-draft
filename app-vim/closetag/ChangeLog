@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/closetag
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.11 2005/09/07 02:03:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/closetag/ChangeLog,v 1.12 2005/09/07 21:29:45 agriffis Exp $
+
+  07 Sep 2005; Aron Griffis <agriffis@gentoo.org> closetag-0.9.1.ebuild:
+  Mark 0.9.1 stable on ia64
 
   07 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> closetag-0.9.1.ebuild:
   x86 sparc mips stable
