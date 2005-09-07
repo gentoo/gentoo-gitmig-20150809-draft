@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.11 2005/08/26 21:53:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.12 2005/09/07 03:37:29 metalgod Exp $
+
+  07 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  libpreludedb-0.9.0_rc13.ebuild:
+  Added ~amd64 keyword.
 
 *libpreludedb-0.9.0_rc13 (26 Aug 2005)
 
