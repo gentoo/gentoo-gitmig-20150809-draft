@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fig2sxd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/ChangeLog,v 1.1 2005/09/06 16:40:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/ChangeLog,v 1.2 2005/09/07 01:07:00 ribosome Exp $
+
+  07 Sep 2005; Olivier Fisette <ribosome@gentoo.org> fig2sxd-0.13.ebuild:
+  Use proper quoting for Portage paths variable substitutions and die when
+  documentation installation fails.
 
 *fig2sxd-0.13 (06 Sep 2005)
 

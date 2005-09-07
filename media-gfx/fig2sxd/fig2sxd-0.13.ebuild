@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/fig2sxd-0.13.ebuild,v 1.1 2005/09/06 16:40:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/fig2sxd-0.13.ebuild,v 1.2 2005/09/07 01:07:00 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/${P}.orig"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${PN}_${PV}-1.diff
+	epatch "${WORKDIR}"/${PN}_${PV}-1.diff
 }
 
 src_compile() {
@@ -33,5 +33,5 @@ src_compile() {
 src_install() {
 	dobin ${PN} || die
 	doman ${PN}.1 || die
-	dodoc debian/changelog
+	dodoc debian/changelog || die
 }
