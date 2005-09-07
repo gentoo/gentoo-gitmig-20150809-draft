@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
+MD5 dcb4b6c6bf27895360eb14377182fd9b retina-9999.ebuild 366
+MD5 26748ce8c5530242a7d680ffa5a9ba8d ChangeLog 346
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-retina-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHmIAgIKl8Uu19MoRAoO5AJ9u0cemedt5dgJrXqjt0zhYgUkCSACfb22p
+toOwsHhg2STviD+lMg+lwBs=
+=Pk+c
+-----END PGP SIGNATURE-----
