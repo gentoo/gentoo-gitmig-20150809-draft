@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.18 2005/09/05 22:29:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.19 2005/09/07 09:46:28 dragonheart Exp $
+
+  07 Sep 2005; Daniel Black <dragonheart@gentoo.org> -dvdstyler-1.31.ebuild:
+  removed 1.31 as per bug #104872 to remove version problem. ~amd64 still has
+  issues according to Jim in bug #104872
 
   05 Sep 2005; Daniel Black <dragonheart@gentoo.org> dvdstyler-1.31.ebuild:
   drop x86 keyword to avoid downgrade - bug #104872

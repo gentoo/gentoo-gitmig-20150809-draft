@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76f18eb7884bc94f1c51ac845f89cc01 ChangeLog 3552
+MD5 7b8272e7ae37d5a3a3ff29fb0ca281cc ChangeLog 3749
 MD5 59aae5dcb06a68bd02cec60c627dbe53 metadata.xml 253
-MD5 54ad95832829c4f0f5a9357be1480e5d dvdstyler-1.31.ebuild 1221
 MD5 859a0ef4388d57c8e34226660719468f dvdstyler-1.4.ebuild 1148
 MD5 0a61283275c4c6e267cc98a00f00f8cc files/digest-dvdstyler-1.4 65
-MD5 adc5cb34c08a386902e03988e795ae18 files/digest-dvdstyler-1.31 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHMbJmdTrptrqvGERAhCrAJ4vuF0CoGJVZeaKErbh6WTOk+pNqgCfWIu5
-/SVe5uCq19Z5eXAoT5j1YtQ=
-=BNaQ
+iD8DBQFDHrcKmdTrptrqvGERAsS7AJ92O9styqfz/GetUEwtOj3Mquyc/QCeP89I
+knQC5TcWxujLwsXSPZtPURQ=
+=m9eO
 -----END PGP SIGNATURE-----
