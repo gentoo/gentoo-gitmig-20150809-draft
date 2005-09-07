@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.9 2005/08/19 19:43:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.10 2005/09/07 15:55:54 agriffis Exp $
+
+*mercurial-0.6c (07 Sep 2005)
+
+  07 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  -mercurial-0.6b_p20050727.ebuild, mercurial-0.6b_p20050807.ebuild,
+  +mercurial-0.6c.ebuild:
+  Bump to 0.6c (from 0.6b_p20050807). Mark 0.6b_p20050807 stable on
+  alpha/amd64/ia64/x86. Remove 0.6b_p20050727
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> mercurial-0.6b.ebuild:
   Stable on ppc.
