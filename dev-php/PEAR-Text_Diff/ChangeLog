@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Text_Diff
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Diff/ChangeLog,v 1.1 2005/09/07 05:24:35 sebastian Exp $
+
+*PEAR-Text_Diff-0.1.1 (07 Sep 2005)
+
+  07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Text_Diff-0.1.1.ebuild:
+  Initial ebuild, closes bug 103611.
+

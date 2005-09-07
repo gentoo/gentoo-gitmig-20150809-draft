@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 adc0775724f9dbb5e94f0fccdc862bf3 PEAR-Text_Diff-0.1.1.ebuild 415
 MD5 1c8f14cb38a5ba1620d7068f72cc2af9 ChangeLog 399
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 ac01993e8dbcebeaf6c40083ec8e09c7 files/digest-PEAR-Text_Diff-0.1.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHnnNaGfFFLhbXWkRAtlwAJ97mdcJ1nbWYd4+780DTTM7rskOXQCbBfSm
+A18a0FosJkj/elV+HqJ1aWA=
+=hTY2
+-----END PGP SIGNATURE-----
