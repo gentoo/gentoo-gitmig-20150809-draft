@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/screenie
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.1 2005/09/07 08:16:39 chriswhite Exp $
+
+*screenie-1.19.0 (07 Sep 2005)
+
+  07 Sep 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +screenie-1.19.0.ebuild:
+  Initial import into the tree. This closes bug #104782. Thanks to Henry
+  Bucklow for providing the draft ebuild.
+
