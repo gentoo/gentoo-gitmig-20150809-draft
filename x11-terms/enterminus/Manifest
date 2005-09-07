@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
+MD5 0df4e698d21f00c7103dc509c92da9df ChangeLog 358
+MD5 78dccdbee8faa12c9984bf7ac4a114b8 enterminus-9999.ebuild 394
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enterminus-9999 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDHmRFgIKl8Uu19MoRAmeuAJwI42XngvElG58yqrZT51R/PXSyYwCbBPCh
+uJSRpMAKVtSowX350y+XJC0=
+=Uerv
+-----END PGP SIGNATURE-----
