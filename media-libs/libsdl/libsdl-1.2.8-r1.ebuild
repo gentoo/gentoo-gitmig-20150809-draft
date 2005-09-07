@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.19 2005/08/04 03:59:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.20 2005/09/07 23:19:40 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-gcc2.patch #75392
 	epatch "${FILESDIR}"/${P}-sdl-config.patch
 	epatch "${FILESDIR}"/${P}-no-cxx.patch
+	epatch "${FILESDIR}"/libsdl-1.2.9-dlvsym-check.patch #105160
 
 	# This patch breaks compiling >-O0 on gcc4 ; bug #87809
 	[ "`gcc-major-version`" -lt "4" ] && epatch "${FILESDIR}"/${P}-gcc2.patch.bz2 #86481
