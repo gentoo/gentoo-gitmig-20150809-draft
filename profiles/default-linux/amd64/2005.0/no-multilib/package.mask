@@ -1,7 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.19 2005/09/07 16:11:38 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.20 2005/09/07 21:25:08 herbs Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
+app-antivirus/bitdefender-console
 app-arch/rar
 app-benchmarks/cpuburn
 app-cdr/cdrecord-prodvd
@@ -32,6 +33,7 @@ app-emulation/winex-cvs
 app-emulation/winex-transgaming
 app-text/acroread
 games-emulation/nestra
+games-emulation/snes9x
 games-emulation/zsnes
 games-fps/americas-army
 games-fps/doom3-demo
@@ -55,11 +57,10 @@ media-video/realplayer
 net-im/skype
 net-im/ymessenger
 net-www/netscape-flash
+sci-biology/foldingathome
 sys-boot/grub
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
-sci-biology/foldingathome
-games-emulation/snes9x
 
 -<media-video/nvidia-glx-1.0.6629-r3
