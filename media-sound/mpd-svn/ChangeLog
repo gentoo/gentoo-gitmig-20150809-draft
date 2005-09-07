@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.17 2005/08/23 15:39:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.18 2005/09/07 21:15:57 ticho Exp $
+
+*mpd-svn-20050907 (07 Sep 2005)
+
+  07 Sep 2005; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20050907.ebuild:
+  Snapshot update. Depend on libmpcdec instead of libmusepack for MPC support.
+  Added oss USE flag. Fixed the use_depend call for mpd-id3tag. Made relevant
+  USE flags also turn on/off appropriate tests (configure switches). Change
+  default db_file, so it doesn't reference user's home directory, since that
+  is set to /dev/null. Suggestions by jat from FreeNode's #mpd channel.
 
 *mpd-svn-20050823 (23 Aug 2005)
 
