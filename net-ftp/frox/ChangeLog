@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/frox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.8 2005/08/23 22:03:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.9 2005/09/07 09:40:08 dragonheart Exp $
+
+*frox-0.7.18-r1 (07 Sep 2005)
+
+  07 Sep 2005; Daniel Black <dragonheart@gentoo.org> files/frox.rc,
+  +frox-0.7.18-r1.ebuild:
+  fixed initscript - thanks ian@g.o bug #105121. revision bump to install 
+  fixed initscript. also stops installing COPYING information. QA fixes too
 
   23 Aug 2005; Daniel Black <dragonheart@gentoo.org> frox-0.7.18.ebuild:
   removing /bin/false from enewuser - bug #103421
