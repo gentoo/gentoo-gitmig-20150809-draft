@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-industrial/gtk-engines-industrial-0.2.36.ebuild,v 1.5 2005/09/05 15:14:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-industrial/gtk-engines-industrial-0.2.36.ebuild,v 1.6 2005/09/07 13:39:05 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://art.gnome.org/download/themes/gtk_engines/672/${MY_PN}_${PV}-2.t
 LICENSE="GPL-2"
 SLOT="1"
 
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="static"
 
 DEPEND="=x11-libs/gtk+-1.2*"
