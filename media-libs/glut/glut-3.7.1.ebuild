@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.23 2005/07/17 06:00:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.24 2005/09/07 16:17:56 spyderous Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.opengl.org/resources/libraries/"
 SRC_URI="mirror://sourceforge/mesa3d/MesaLib-${MESA_VER}.tar.bz2
 	mirror://sourceforge/mesa3d/MesaDemos-${MESA_VER}.tar.bz2"
 
-LICENSE="|| ( X11 GPL-2 )"
+LICENSE="glut"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
