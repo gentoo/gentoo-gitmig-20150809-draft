@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.6 2005/08/28 14:31:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.7 2005/09/08 21:00:35 spyderous Exp $
+
+*libXfont-0.99.0-r1 (08 Sep 2005)
+
+  08 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +libXfont-0.99.0-r1.ebuild:
+  Force --enable-type1 on to clear up problems with undefined
+  Type1RegisterFontFileFunctions.
 
   28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> libXfont-0.99.0.ebuild:
   Marked ~sh
