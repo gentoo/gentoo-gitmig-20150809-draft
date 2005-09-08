@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.10.ebuild,v 1.4 2005/02/08 19:03:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-albert/cl-albert-0.4.10.ebuild,v 1.5 2005/09/08 21:55:09 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://albert.sourceforge.net/"
 SRC_URI="mirror://sourceforge/albert/${P/cl-/}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~amd64 ~sparc ~x86 ~ppc"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	app-text/docbook-dsssl-stylesheets
@@ -21,7 +21,7 @@ S=${WORKDIR}/${P/cl-/}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-gentoo.patch || die
+	find ${S} -type f -print0 | xargs -0 sed -i 's,simple-base-string,simple-string,i' || die
 }
 
 src_compile() {

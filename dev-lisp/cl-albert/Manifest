@@ -1,11 +1,14 @@
-MD5 ffaf471d1f2b4c729cadce2ac7dc55b6 ChangeLog 1192
-MD5 3b482923e3e73a910dc71c12bd1aaf44 cl-albert-0.4.10.ebuild 1373
-MD5 45d592fa280c60900fbdc47e67f28db0 cl-albert-0.4.6.ebuild 1428
-MD5 62dc4902da351d528f965d4ddb0f0cf8 cl-albert-0.4.9-r1.ebuild 1300
-MD5 2e79825462f1e30c53817e39d4bc5ed4 cl-albert-0.4.9.ebuild 1438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6c804083fd668a283f01d0b295110a8d ChangeLog 1447
+MD5 a9eac61d7441711c19ea98ef931250e8 cl-albert-0.4.10.ebuild 1439
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 ddb91a4a7f8f57539411e4fe09ef39c7 files/0.4.10-gentoo.patch 5240
 MD5 ecab3ccdbc3efd550f9619840c8c59f8 files/digest-cl-albert-0.4.10 65
-MD5 fbac34ce452adfd67123995fa87d2008 files/digest-cl-albert-0.4.6 64
-MD5 2a0b0dafe8f134e90e37bd72e5a1a137 files/digest-cl-albert-0.4.9 64
-MD5 2a0b0dafe8f134e90e37bd72e5a1a137 files/digest-cl-albert-0.4.9-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDILNpyiNZaEAZA+ARAgVJAJ9QKZxwJ1aSfSHW5u2KTpdS4FGYoQCfa/N9
+XcJOuwQphSjRsBkZyq6KXgs=
+=cVhn
+-----END PGP SIGNATURE-----
