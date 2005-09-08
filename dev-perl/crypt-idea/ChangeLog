@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-idea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.11 2005/08/26 00:53:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.12 2005/09/08 19:36:09 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org> crypt-idea-1.02.ebuild:
+  Mark 1.02 stable on alpha
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> crypt-idea-1.02.ebuild:
   add ~ia64
