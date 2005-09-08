@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r1.ebuild,v 1.4 2005/05/23 19:19:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r1.ebuild,v 1.5 2005/09/08 13:01:50 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,10 +13,8 @@ SLOT="0"
 KEYWORDS="x86 -ppc ~alpha ~amd64 ~ia64"
 IUSE="doc"
 
-DEPEND="sys-apps/sed
-		virtual/libc
-		virtual/linux-sources"
-RDEPEND="virtual/libc"
+DEPEND="sys-apps/sed"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}

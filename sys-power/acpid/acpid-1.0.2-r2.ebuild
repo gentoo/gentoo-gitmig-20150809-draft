@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.2-r2.ebuild,v 1.1 2005/03/15 19:15:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.2-r2.ebuild,v 1.2 2005/09/08 13:01:50 brix Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ IUSE=""
 
 # We need the patched kernel with latest ACPI code, or else it will
 # be broken.  Hopefully it will be merge into release kernel soon.
-DEPEND="virtual/libc
-	virtual/linux-sources"
+DEPEND="virtual/libc"
 
 src_compile() {
 	# Fix bug # 22238 (default.sh broken)

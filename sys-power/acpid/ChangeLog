@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.11 2005/08/23 20:54:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.12 2005/09/08 13:01:50 brix Exp $
+
+  08 Sep 2005; Henrik Brix Andersen <brix@gentoo.org> acpid-1.0.2-r2.ebuild,
+  acpid-1.0.4-r1.ebuild, acpid-1.0.4-r2.ebuild:
+  Fixed dependencies, bug #105224.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> acpid-1.0.4-r2.ebuild:
   stable on ia64
