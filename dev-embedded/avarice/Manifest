@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+MD5 84b543123cf3be82512355c7b2ed0f63 avarice-2.3.ebuild 636
+MD5 2aa7c1c04dd85bb7e9d9f682476c6c57 ChangeLog 347
+MD5 72c5f9db1d79b0ee80bc3a52619f87e5 files/digest-avarice-2.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDH5pjgIKl8Uu19MoRAoTCAJ9S+lLs2yHpe4c6ab4dgXyCdQt0xACfanJe
+5A5ohF1V73aeJ4ChtP1tmPk=
+=7r5o
+-----END PGP SIGNATURE-----
