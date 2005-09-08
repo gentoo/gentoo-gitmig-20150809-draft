@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.39 2005/09/06 16:37:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.40 2005/09/08 15:43:49 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  gtk-engines-2.6.4-r2.ebuild:
+  Mark 2.6.4-r2 stable on ia64
 
   06 Sep 2005; Markus Rothe <corsair@gentoo.org>
   gtk-engines-2.6.4-r2.ebuild:
