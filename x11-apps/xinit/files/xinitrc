@@ -3,7 +3,7 @@
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
-xinitdir=/usr/lib/X11/xinit
+xinitdir=/etc/X11
 sysresources=$xinitdir/Xresources
 sysmodmap=$xinitdir/Xmodmap
 
