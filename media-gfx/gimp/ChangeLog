@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.127 2005/09/03 20:34:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.128 2005/09/08 13:47:48 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org> gimp-2.2.8-r1.ebuild:
+  Mark 2.2.8-r1 stable on ia64
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> gimp-2.2.8-r1.ebuild:
   Stable on ppc64
