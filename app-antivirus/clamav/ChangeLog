@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.103 2005/08/28 00:33:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.104 2005/09/08 19:07:26 ticho Exp $
+
+  08 Sep 2005; Andrej Kacian <ticho@gentoo.org> clamav-0.86.2.ebuild:
+  Removed call to pwconv. Pointed out by Tobias Hahn <tobhahn at web.de>, bug
+  #105278.
 
   23 Aug 2005; Andrej Kacian <ticho@gentoo.org> clamav-0.86.2.ebuild:
   Use -1 for shell argument to enewuser. Bug #103421.
