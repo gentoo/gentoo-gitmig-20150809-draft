@@ -3,17 +3,17 @@ Hash: SHA1
 
 MD5 3637cbaea842b04f1aa4693a1f68e286 metadata.xml 224
 MD5 1199e263b7d91d0dcb0eefaae57acd4a jpeg-6b-r4.ebuild 1920
-MD5 80dc3c17a59dc43baabd15ce6b4fa31c jpeg-6b-r6.ebuild 1252
+MD5 5c29a2b59ed1c9fde599a2b4eb2b377d jpeg-6b-r6.ebuild 1252
 MD5 ba5272e072532ba855f7b375c97f2c3e jpeg-6b-r5.ebuild 1489
 MD5 6a9f70a6660245adccc94236dbc0287b ChangeLog 5459
 MD5 5db275bc0a1f7084ba8855a3210e32b2 files/jpeg-6b-gentoo.patch 1132
 MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r5 63
-MD5 ad877b696ca2483d5eeb26e6b13e8f16 files/digest-jpeg-6b-r6 134
+MD5 9e52ec21fae158c6f518a65221203d2e files/digest-jpeg-6b-r6 134
 MD5 232dd13c6edffa89c6ccd5f911bbac64 files/digest-jpeg-6b-r4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHhqugIKl8Uu19MoRAohEAJ9xhNbbQGxtAWqG1Pfsjhw8a+B2BwCggrm0
-gT3y7XJsZd6Fo7aSIqY3ZxI=
-=sDXJ
+iD8DBQFDIM/vgIKl8Uu19MoRAmN+AJ9yVKAfzrpd0VQEL7L5HSLcewT8RgCeKoDY
+iab/1gkpRge0l8rEQu4EYgM=
+=o8DF
 -----END PGP SIGNATURE-----
