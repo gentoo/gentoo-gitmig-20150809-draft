@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/experience/experience-3.03.ebuild,v 1.3 2005/08/05 17:15:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/experience/experience-3.03.ebuild,v 1.4 2005/09/08 18:50:59 leonardop Exp $
 
 DESCRIPTION="GTK+2 themes which copy and improve the look of XP Luna"
 HOMEPAGE="http://art.gnome.org/themes/gtk2/1058"
 SRC_URI="http://art.gnome.org/download/themes/gtk2/1058/GTK2-EXperience.tar.gz"
 
-KEYWORDS="~ppc ~x86 ~sparc"
+KEYWORDS="~ppc ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
