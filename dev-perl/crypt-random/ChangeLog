@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-random
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/ChangeLog,v 1.11 2005/06/01 08:36:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/ChangeLog,v 1.12 2005/09/08 22:08:34 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org> crypt-random-1.25.ebuild:
+  Mark 1.25 stable on alpha
 
   01 Jun 2005; Guy Martin <gmsoft@gentoo.org> crypt-random-1.25.ebuild:
   Stable on hppa.
