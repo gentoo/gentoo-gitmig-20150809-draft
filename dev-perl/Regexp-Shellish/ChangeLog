@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Regexp-Shellish
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.6 2005/08/26 00:07:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.7 2005/09/08 19:08:20 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  Regexp-Shellish-0.93.ebuild:
+  Mark 0.93 stable on alpha
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   Regexp-Shellish-0.93.ebuild:
