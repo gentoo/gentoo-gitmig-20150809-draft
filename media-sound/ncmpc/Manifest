@@ -1,8 +1,18 @@
-MD5 2f6f51d425abe6e29365416439161a71 ChangeLog 1320
-MD5 d0d7a22ea15c7bc5927bf6f24149d4f8 metadata.xml 218
-MD5 c1a2abea06fef22c4a68d1fac60ff044 ncmpc-0.10.1.ebuild 660
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 abd1f5cc57a910abc63bdc337bbc3b91 ncmpc-0.11.1.ebuild 715
+MD5 16281be420ee225507153e63e9318f62 ncmpc-0.11.1-r1.ebuild 1128
 MD5 cf38d881dcdcc6e98cf3bdf2a48e6060 ncmpc-0.11.0.ebuild 659
-MD5 06bb7af48d1524a2f18b8c08d40c7ab4 ncmpc-0.11.1.ebuild 718
-MD5 981af082baec0896a3afa3f9c79df043 files/digest-ncmpc-0.10.1 64
+MD5 c952430782042e71bf0492e837edc0cc ChangeLog 1487
+MD5 d0d7a22ea15c7bc5927bf6f24149d4f8 metadata.xml 218
 MD5 15d947021147e010e4721bd8acb0cbd2 files/digest-ncmpc-0.11.0 64
 MD5 f618389275480629891a25befac11a7f files/digest-ncmpc-0.11.1 64
+MD5 f618389275480629891a25befac11a7f files/digest-ncmpc-0.11.1-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIErV/rLF9B432nYRAmDgAKCcsb+Z2/l+bU4kB9aEhK6qmytvgACfdmus
+CWAC3+q1Ez256fb/sS97J2E=
+=Bsu4
+-----END PGP SIGNATURE-----
