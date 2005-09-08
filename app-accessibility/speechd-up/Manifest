@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 09b1f814383bde099cf1e5eee8aa981e speechd-up-0.3_pre20041029.ebuild 824
 MD5 c317af0e61f2256804a486f227f73f61 ChangeLog 1456
 MD5 e206f7cd655afe2644bb78cc9d15bd7f metadata.xml 166
 MD5 f79e693d2592f8b2d2656e1cbed07415 files/digest-speechd-up-0.3_pre20041029 79
 MD5 abed5ea303064114398358f1a2a8d396 files/speechd-up.rc 563
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIIh6V3J2n04EauwRAsAOAJ9jv6RQiye145OA8Khi5GLF86ojywCgq0Rx
+sCr3jtUDIRDrkGGQQGdMvdQ=
+=7FVM
+-----END PGP SIGNATURE-----
