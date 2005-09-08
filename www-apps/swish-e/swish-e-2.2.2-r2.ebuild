@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.2.2-r1.ebuild,v 1.5 2005/09/08 13:09:32 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.2.2-r2.ebuild,v 1.1 2005/09/08 13:09:32 beu Exp $
 
 inherit perl-module
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.swish-e.org/Download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
-IUSE="perl"
+KEYWORDS="~ppc ~x86"
+IUSE="doc perl"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	dev-libs/libxml2
@@ -29,8 +29,12 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/swish-e || die
+	dobin src/swish-e || die "dobin failed"
 	dodoc INSTALL README
+	if use doc; then
+		mkdir -p "${D}"/usr/share/doc/${PF}
+		cp -r html conf "${D}"/usr/share/doc/${PF} || die "cp failed"
+	fi
 	use perl && cd perl \
 		&& perl-module_src_install
 }
