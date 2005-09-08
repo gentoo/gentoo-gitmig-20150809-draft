@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.64 2005/09/06 16:29:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.65 2005/09/08 16:51:06 ka0ttic Exp $
+
+  08 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> dhcpcd-2.0.0.ebuild:
+  Stable on mips.
 
   06 Sep 2005; Roy Marples <uberlord@gentoo.org> dhcpcd-2.0.0.ebuild:
   Warn that the debug USE flag enables good debug output but does
