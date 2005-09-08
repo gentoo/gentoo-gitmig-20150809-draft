@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/gtk-engines-experience-0.9.8.ebuild,v 1.1 2005/08/07 11:47:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/gtk-engines-experience-0.9.8.ebuild,v 1.2 2005/09/08 18:11:09 leonardop Exp $
 
 MY_PN="experience"
 MY_P="${MY_PN}-${PV}"
@@ -8,7 +8,7 @@ DESCRIPTION="GTK+2 Experience Theme Engine"
 HOMEPAGE="http://benjamin.sipsolutions.net/Projects/eXperience"
 SRC_URI="http://benjamin.sipsolutions.net/${MY_PN}/${MY_P}.tar.bz2"
 
-KEYWORDS="~ppc ~x86 ~sparc"
+KEYWORDS="~ppc ~sparc x86"
 IUSE="static"
 LICENSE="GPL-2"
 SLOT="2"
