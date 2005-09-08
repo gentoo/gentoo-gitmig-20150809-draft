@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.8 2005/09/03 17:47:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.9 2005/09/08 22:38:53 swegener Exp $
+
+*avahi-0.4 (08 Sep 2005)
+
+  08 Sep 2005; Sven Wegener <swegener@gentoo.org> -files/0.2-anydbm.patch,
+  -avahi-0.2.ebuild, -avahi-0.3.ebuild, +avahi-0.4.ebuild:
+  Version bump.
 
 *avahi-0.3 (03 Sep 2005)
 
