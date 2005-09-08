@@ -1,0 +1,13 @@
+# ChangeLog for games-strategy/netherearth
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/ChangeLog,v 1.1 2005/09/08 18:27:06 ticho Exp $
+
+*netherearth-0.52 (08 Sep 2005)
+
+  08 Sep 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/netherearth-0.52-gentoo-paths.patch,
+  +files/netherearth-0.52-linux.patch, +files/Makefile, +metadata.xml,
+  +netherearth-0.52.ebuild:
+  Initial import. Based on ebuild by Alexandru Toma <flash3001 at yahoo.com>,
+  bug #48062.
+
