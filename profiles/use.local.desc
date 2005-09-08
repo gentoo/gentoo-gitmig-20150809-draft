@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1442 2005/09/08 19:39:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1443 2005/09/08 23:05:53 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -547,6 +547,7 @@ media-radio/xastir:ax25 - Enable ax25 support
 media-radio/xastir:festival - Enable festival support
 media-radio/xastir:shape - Enable shapelib support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
+media-sound/amarok:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/audacity:libsamplerate - Build with libsamplerate support
