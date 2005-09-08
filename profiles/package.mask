@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4407 2005/09/08 01:14:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4408 2005/09/08 01:20:04 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1389,10 +1389,6 @@ net-im/mercury-bin
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
 # be broken out of it
 dev-lisp/cl-imho
-
-# Robin H. Johnson <robbat2@gentoo.org> (02 Feb 2005)
-# broken... doesn't even query the LDAP server
-=sys-auth/nss_ldap-233
 
 # Paul de Vrieze <pauldv@gentoo.org> (02 Feb 2005)
 # Masked for testing dependend packages
