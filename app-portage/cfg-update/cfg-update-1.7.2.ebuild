@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/cfg-update-1.7.1.ebuild,v 1.3 2005/08/17 16:57:13 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/cfg-update-1.7.2.ebuild,v 1.1 2005/09/08 06:12:02 truedfx Exp $
 
 DESCRIPTION="Easy to use GUI & CLI alternative for etc-update with safe auto-updating"
 HOMEPAGE="http://people.zeelandnet.nl/xentric/"
