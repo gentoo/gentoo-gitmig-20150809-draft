@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 d6101a2a012d77aa2f69b93ba4493f82 ChangeLog 848
-MD5 3712d83793c74bd12be7c2a17bae473b metadata.xml 222
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 6116667e1d4424a86e629ae89e86afae xmms-repeatit-0.0.4.ebuild 782
 MD5 4ebee699cd1fc279064c4e7d32517f5a files/digest-xmms-repeatit-0.0.4 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBdK+dArHZZzCEUG0RAifFAJ9B0pc8hIwKLQ7KkYjuaoF/QtAbawCeJb9N
-DAHg4hmDeHN0OMQsExAASR4=
-=XqN5
+iD8DBQFDIMapV3J2n04EauwRArmXAJ9d7xWJb2wJGNqv8aTB2D27cKvpTQCfUGc9
+O7Fiy5VtvHkVTAHfTWVhixo=
+=6/vB
 -----END PGP SIGNATURE-----
