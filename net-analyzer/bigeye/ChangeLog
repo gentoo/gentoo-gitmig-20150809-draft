@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bigeye
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.8 2005/08/29 19:11:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.9 2005/09/08 18:49:53 vanquirius Exp $
+
+*bigeye-0.3-r1 (08 Sep 2005)
+
+  08 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> +bigeye-0.3-r1.ebuild:
+  Use my new patch to fix compilation warnings in gcc-3.4.
 
   29 Aug 2005; <dang@gentoo.org> bigeye-0.3.ebuild:
   Marked ~amd64
