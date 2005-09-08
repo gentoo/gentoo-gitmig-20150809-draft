@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/acid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.10 2005/03/29 12:05:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.11 2005/09/08 23:16:04 vanquirius Exp $
+
+  08 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  acid-0.9.6_beta23.ebuild:
+  Update dependency on virtual/http-php, see bug 102825. Thanks to Jakub Moc
+  <jakub@gentoo.org> for his kind patch. TODO: test with php-5.
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> acid-0.9.6_beta23.ebuild:
   added ~amd64 to KEYWORDS, fixes #73861

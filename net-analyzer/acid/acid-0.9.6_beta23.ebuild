@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.12 2005/07/09 18:41:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.13 2005/09/08 23:16:04 vanquirius Exp $
 
-inherit webapp versionator eutils
+inherit webapp versionator eutils depend.php
 
 MY_P=${P/_beta/b}
 S=${WORKDIR}/${PN}
@@ -14,29 +14,21 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="apache2"
 
-# Note: jpgraph is an unstable package
+# TODO: check for php-5 support
 RDEPEND="apache2? ( >=net-www/apache-2 )
 	!apache2? ( =net-www/apache-1* )
 	>=dev-php/adodb-4.0.5
 	>=dev-php/jpgraph-1.12.2
 	media-libs/gd
-	=dev-php/mod_php-4*"
+	=virtual/httpd-php-4*"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
 	webapp_pkg_setup
 
-	built_with_use dev-php/mod_php gd || \
-		die "dev-php/mod_php must be built with USE=gd"
-
-	# If mod_php used is >= 5.0.0, it has to have session useflag enabled.
-	local ver_modphp=$(best_version dev-php/mod_php)
-	ver_modphp="${ver_modphp/dev-php\/mod_php-/}"
-	if [[ $(get_major_version ${ver_modphp}) -ge 5 ]] ; then
-		built_with_use dev-php/mod_php session || \
-			die "dev-php/mod_php must be built with USE=session"
-	fi
+	need_php4
+	require_php_with_use gd session
 }
 
 src_unpack() {
@@ -60,9 +52,7 @@ src_install () {
 pkg_postinst() {
 	webapp_pkg_postinst
 
-	einfo
 	einfo "Note: ACID is installed as a webapp."
 	einfo "The ACID database is an extension of the SNORT database."
 	einfo "To setup the ACID database look in the README"
-	einfo
 }
