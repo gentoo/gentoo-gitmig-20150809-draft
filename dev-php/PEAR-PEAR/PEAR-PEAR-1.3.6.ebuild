@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6.ebuild,v 1.1 2005/09/04 17:41:37 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.6.ebuild,v 1.2 2005/09/08 05:58:53 sebastian Exp $
 
 inherit depend.php
 
 ARCHIVE_TAR="1.3.1"
 CONSOLE_GETOPT="1.2"
 PEAR="1.3.6"
-XML_RPC="1.4.0"
+XML_RPC="1.4.1"
 
 [ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR=/tmp/pear/cache
 
@@ -33,9 +33,9 @@ DEPEND="dev-lang/php
 		!dev-php/mod_php
 		!<=dev-php/PEAR-PEAR-1.3.5-r1"
 
-PDEPEND=">=dev-php/PEAR-Archive_Tar-1.3.1
-		>=dev-php/PEAR-Console_Getopt-1.2
-		>=dev-php/PEAR-XML_RPC-1.4.0"
+PDEPEND=">=dev-php/PEAR-Archive_Tar-1.3.1-r1
+		>=dev-php/PEAR-Console_Getopt-1.2-r1
+		>=dev-php/PEAR-XML_RPC-1.4.1"
 
 pkg_setup() {
 	# we call this here, to ensure that the eclass picks the right
