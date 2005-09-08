@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4411 2005/09/08 10:25:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4412 2005/09/08 11:08:23 citizen428 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Kohl <citizen428@gentoo.org> (7 Sep 2005)
+# Masked because >=sys-apps/dbus-0.30 got masked again
+=net-news/liferea-0.9.7b
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (7 Sep 2005)
 # HAL-Device-Manager needs the matching version
