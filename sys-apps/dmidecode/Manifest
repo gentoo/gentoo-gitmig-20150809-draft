@@ -1,6 +1,16 @@
-MD5 d93e8ca86c2ed5575b5d65d2c25d352c ChangeLog 941
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ddc52f93d86a9187048aae6dbf0f0c90 dmidecode-2.5.ebuild 945
 MD5 1ba5683061b1b3e849b3267cfd0307c5 dmidecode-2.6.ebuild 930
-MD5 726d1af1a9d1b6f95db131bcb57db2aa files/digest-dmidecode-2.5 65
+MD5 f2d7857ba189ff36e67ca2acb7624cd0 dmidecode-2.7.ebuild 863
+MD5 259e9d31829447ff7f3b9206c013bb68 ChangeLog 1087
 MD5 fa7a11967392113ce7db9fbeec2d8587 files/digest-dmidecode-2.6 65
+MD5 473f450c6b4ddbb037acbaf0ffc64962 files/digest-dmidecode-2.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIMmNgIKl8Uu19MoRAtAtAJ4hb19NALeHujpLfNo7xTtDc/HPAACdGelc
+6nbB9G1oe01CJP1j6VulvEk=
+=S4yS
+-----END PGP SIGNATURE-----
