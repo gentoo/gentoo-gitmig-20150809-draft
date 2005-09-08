@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.1 2005/08/28 19:33:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.2 2005/09/08 12:40:45 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -96,8 +96,13 @@ src_unpack() {
 		spl_conf yes CONFIG_FBSPLASH
 	fi
 
-	# This should make splashutils compile on systems with hardened GCC.
-	sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+	if built_with_use gcc vanilla ; then
+		ewarn "Your GCC was built with the 'vanilla' flag set. If you can't compile"
+		ewarn "splashutils, you're on your own, as this configuration is not supported."
+	else
+		# This should make splashutils compile on systems with hardened GCC.
+		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+	fi
 
 	mkdir ${S}/kernel
 

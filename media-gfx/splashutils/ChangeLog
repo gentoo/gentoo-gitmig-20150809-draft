@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.44 2005/09/02 19:42:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.45 2005/09/08 12:40:45 spock Exp $
+
+  08 Sep 2005; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.1.9.9-r1.ebuild:
+  Added a fix for bug #104251 -- try to support gcc built with the 'vanilla' 
+  USE flag.
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   splashutils-1.1.9.8.ebuild:
