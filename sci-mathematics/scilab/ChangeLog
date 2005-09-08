@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.11 2005/09/07 11:13:01 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.12 2005/09/08 16:14:17 pbienst Exp $
+
+  08 Sep 2005; Peter Bienstman <pbienst@gentoo.org> scilab-3.1.1-r1.ebuild:
+  Fix bug #105034.
 
   07 Sep 2005; Peter Bienstman <pbienst@gentoo.org> scilab-3.1.1-r1.ebuild:
   Change order of lapack and blas libraries.
