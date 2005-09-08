@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.4 2005/08/25 23:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.5 2005/09/08 18:47:37 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org> IPC-Run-0.78.ebuild:
+  Mark 0.78 stable on alpha
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> IPC-Run-0.78.ebuild:
   add ~ia64
