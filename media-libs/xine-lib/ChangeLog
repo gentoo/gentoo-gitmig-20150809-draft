@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.255 2005/09/05 19:08:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.256 2005/09/08 15:44:19 flameeyes Exp $
+
+*xine-lib-1.1.0-r4 (08 Sep 2005)
+
+  08 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.0-r4.ebuild:
+  Added new revision with ffmpeg useflag to enable external ffmpeg as it was
+  done for 1.0.1. Dropped ~hppa and ~arm keywords as they don't have the
+  latest ffmpeg version that is needed.
 
   05 Sep 2005; Olivier Crête <tester@gentoo.org> xine-lib-1.1.0-r3.ebuild:
   Added strip-flags -momit-leaf-frame-pointer, see bug #104189
