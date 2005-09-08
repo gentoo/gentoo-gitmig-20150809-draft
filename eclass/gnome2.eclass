@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.61 2005/08/23 03:51:03 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.62 2005/09/08 17:19:22 leonardop Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -132,7 +132,9 @@ gnome2_icon_cache_update() {
 	local retval=0
 	for dir in \
 	$(find ${ROOT}/usr/share/icons -maxdepth 1 -mindepth 1 -type d); do
-		$updater -qf $dir || retval=$?
+		if [ -f "${dir}/index.theme" ]; then
+			$updater -qf $dir || retval=$?
+		fi
 	done
 
 	eend $retval
