@@ -1,4 +1,6 @@
-MD5 2e5c34bb1b8d8a3a8a9ae8f82654dd5e ChangeLog 1136
+MD5 22dd50ba1da76ea9ccbfe73221f7e9ad PEAR-HTTP-1.3.4-r1.ebuild 387
 MD5 ddb975be5c6dea9995ba3120db2ebd88 PEAR-HTTP-1.3.4.ebuild 396
+MD5 f3973757f9c46897d0a3b08d295816ff ChangeLog 1282
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 12cad635af74bb9aff52ea1dbaf9ea6a files/digest-PEAR-HTTP-1.3.4 57
+MD5 12cad635af74bb9aff52ea1dbaf9ea6a files/digest-PEAR-HTTP-1.3.4-r1 57

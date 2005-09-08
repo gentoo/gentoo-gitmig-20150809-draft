@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_Select_Common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.13 2005/03/08 16:58:18 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.14 2005/09/08 07:41:30 sebastian Exp $
+
+*PEAR-HTML_Select_Common-1.1-r2 (08 Sep 2005)
+
+  08 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +PEAR-HTML_Select_Common-1.1-r2.ebuild:
+  Use new PEAR eclass.
 
   08 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   -PEAR-HTML_Select_Common-1.1.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTML_Table_Matrix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.1 2005/07/21 06:12:10 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table_Matrix/ChangeLog,v 1.2 2005/09/08 07:42:52 sebastian Exp $
+
+*PEAR-HTML_Table_Matrix-1.0.7-r1 (08 Sep 2005)
+
+  08 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +PEAR-HTML_Table_Matrix-1.0.7-r1.ebuild:
+  Use new PEAR eclass.
 
 *PEAR-HTML_Table_Matrix-1.0.7 (21 Jul 2005)
 

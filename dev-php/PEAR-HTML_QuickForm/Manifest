@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac2c7b2c2ef09ac0bfbe48e3ae3e5d5f PEAR-HTML_QuickForm-3.2.1-r1.ebuild 650
-MD5 b7288839eb6a09d967988f7773bfd709 PEAR-HTML_QuickForm-3.2.1.ebuild 482
-MD5 d37cf79fa11d290dd46539feadc8a608 ChangeLog 2404
+MD5 83e759361644f947e97cfd63360750e3 PEAR-HTML_QuickForm-3.2.3-r1.ebuild 676
+MD5 482391600a58d590a90494098710cad3 ChangeLog 2666
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 0b56a9b2624d4b83542e2e673cce1bcf PEAR-HTML_QuickForm-3.2.3.ebuild 647
-MD5 3450c9b406903409d3a2b57997c7e436 files/digest-PEAR-HTML_QuickForm-3.2.1-r1 68
-MD5 3450c9b406903409d3a2b57997c7e436 files/digest-PEAR-HTML_QuickForm-3.2.1 68
+MD5 f1c455c96a51b32efcd8650ad7e2e222 files/digest-PEAR-HTML_QuickForm-3.2.3-r1 68
 MD5 f1c455c96a51b32efcd8650ad7e2e222 files/digest-PEAR-HTML_QuickForm-3.2.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLdkfaGfFFLhbXWkRAu+xAJ4uCn23EMxirT6t7jSx8eqvUiZJCgCfX6le
-npo1siChkhvvcr5Cxc2blAY=
-=vpJR
------END PGP SIGNATURE-----
