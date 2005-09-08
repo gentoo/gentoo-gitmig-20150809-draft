@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1441 2005/09/08 14:28:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1442 2005/09/08 19:39:35 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -562,6 +562,7 @@ media-sound/moc:musepack - Support for musepack (mpc) files
 media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
 media-sound/mpd-svn:ao - Use libao for sound playback
 media-sound/mpd-svn:icecast - Enable support for Icecast2
+media-sound/mpd-svn:mpd-mad - Use libmad and libid3tag shipped by MPD
 media-sound/mpd-svn:musepack - Enable support for musepack files
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
