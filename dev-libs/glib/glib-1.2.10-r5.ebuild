@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.43 2005/07/16 21:16:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.44 2005/09/08 01:13:32 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -25,8 +25,7 @@ src_unpack() {
 	# Allow glib to build with gcc-3.4.x #47047
 	epatch "${FILESDIR}"/${P}-gcc34-fix.patch
 
-	uclibctoolize
-	use ppc-macos && darwintoolize
+	elibtoolize
 	use ppc64 && use hardened && replace-flags -O[2-3] -O1
 	use elibc_FreeBSD || append-ldflags -ldl
 }
