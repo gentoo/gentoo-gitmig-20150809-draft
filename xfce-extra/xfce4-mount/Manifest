@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6393487349defbbc7c61ca01dbf96e04 ChangeLog 547
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 d33e58dceb3c2e41ece0f07cd7811a0b xfce4-mount-0.3.ebuild 378
 MD5 5d471bd57683d0fe5f8613ee71b2d5ad files/digest-xfce4-mount-0.3 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDIElzwUpWvClEHQoRAoJ9AJ9jNJTnH0pUeSVPb3KlU44xX6V9VgCfUcxi
+foHVXZPkMdhVy1N3TysluHs=
+=/p//
+-----END PGP SIGNATURE-----

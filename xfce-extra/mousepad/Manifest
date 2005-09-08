@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae2607d2433457d15fe51b361899cbbf ChangeLog 638
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 07a67e7a018692f59d678b454b489852 mousepad-0.2.1.ebuild 458
 MD5 b93e15b34616d57ca7e9d52eaeec0921 mousepad-0.2.2.ebuild 458
 MD5 0112cc25411dd44eb52d85b488d59583 files/digest-mousepad-0.2.1 66
 MD5 b05f378444d8465ea9b68aa6528f3f78 files/digest-mousepad-0.2.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDIEkawUpWvClEHQoRAnF3AJ9Zm9Cx5OONGp5tW/AZy5jMaJ+4SwCfd1CL
+02ihJx80r7s6TofU+M53G0Y=
+=L6AM
+-----END PGP SIGNATURE-----
