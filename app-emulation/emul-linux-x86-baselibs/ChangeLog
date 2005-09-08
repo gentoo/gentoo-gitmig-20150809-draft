@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.36 2005/09/06 22:01:35 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.37 2005/09/08 00:01:45 herbs Exp $
+
+*emul-linux-x86-baselibs-2.3 (07 Sep 2005)
+
+  07 Sep 2005; Herbie Hopkins <herbs@gentoo.org>
+  -emul-linux-x86-baselibs-2.2.ebuild, +emul-linux-x86-baselibs-2.3.ebuild:
+  Renamed 2.2 release to 2.3 to avoid conflict with the old buggy 2.2 release,
+  bug 105169. My appologies to everyone that had to install this twice.
 
   06 Sep 2005; Herbie Hopkins <herbs@gentoo.org> metadata.xml,
   +emul-linux-x86-baselibs-2.2.ebuild:
