@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4416 2005/09/08 16:22:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4417 2005/09/08 16:25:30 ferringb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -670,7 +670,7 @@ media-video/toxine
 >=dev-python/gnome-python-extras-2.11.4
 # -- gnome mask end
 
-# <genstef@gentoo.org> (14 Aug 2005
+# <genstef@gentoo.org> (14 Aug 2005)
 # Does not play nice together with wpa_supplicant
 # http://bugs.gentoo.org/102104
 =net-wireless/madwifi-driver-0.1_pre20050809
@@ -679,7 +679,13 @@ media-video/toxine
 # Marius Mauch <genone@gentoo.org> (11 Aug 2005)
 # yes, this is a new portage, but not with the long awaited new dep resolver
 # needs a lot of testing
->=sys-apps/portage-2.1.0_alpha
+# >=sys-apps/portage-2.1.0_alpha
+#
+# Brian Harring <ferringb@gentoo.org> (08 Sep 2005)
+# masking due to to tar.gz unpack being screwwy; temporary
+# leaving 2.1 masking above in place since it should be restored when 
+# removing this masking
+>=sys-apps/portage-2.0.52
 
 # Donnie Berkholz <spyderous@gentoo.org> (07 Aug 2005)
 # Modularized X, upstream release candidates
