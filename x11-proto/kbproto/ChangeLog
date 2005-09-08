@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/kbproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.5 2005/08/28 15:18:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.6 2005/09/08 04:08:26 spyderous Exp $
+
+*kbproto-1.0-r1 (08 Sep 2005)
+
+  08 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/add-xkbbindirectory.patch, +kbproto-1.0-r1.ebuild:
+  Update to fix XkbBinDirectory undefined problem in xorg-server CVS as of
+  Sept. 1.
 
   28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> kbproto-1.0.ebuild:
   Marked ~sh

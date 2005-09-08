@@ -1,3 +1,6 @@
+MD5 9a046cc07e9d7a856bd3391411e6213b ChangeLog 956
 MD5 6fbb03eb2aec8c44e4cfaeb543543f8d kbproto-1.0.ebuild 527
-MD5 aa21944ddf259a097c0ddc8ffbd0856b ChangeLog 720
+MD5 7870887687aa1ff3eba063a7a7a040ac kbproto-1.0-r1.ebuild 581
 MD5 d587838cec435aa66a49af0c3512a5a4 files/digest-kbproto-1.0 63
+MD5 d587838cec435aa66a49af0c3512a5a4 files/digest-kbproto-1.0-r1 63
+MD5 e36388005d4b51d4b344f2f02335ec40 files/add-xkbbindirectory.patch 587
