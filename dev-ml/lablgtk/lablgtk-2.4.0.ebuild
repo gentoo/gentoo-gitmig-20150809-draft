@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.12 2005/08/02 18:00:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.4.0.ebuild,v 1.13 2005/09/08 20:20:23 sekretarz Exp $
 
 inherit eutils
 
@@ -54,6 +54,8 @@ src_compile() {
 	myconf="$myconf $(use_with gnome panel)"
 
 	myconf="$myconf $(use_with opengl gl)"
+
+	export PKG_CONFIG_PATH=/$(get_libdir)/pkgconfig
 
 	econf $myconf || die "configure failed"
 	make all opt || die "make failed"
