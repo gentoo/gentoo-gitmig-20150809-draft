@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fdc0fcfb3248f110208f21f468753346 libXcomposite-0.2.0.ebuild 605
-MD5 2b9bc18396728320d656d58376360e4a ChangeLog 591
+MD5 1fb35b505f4f66bf69243b10a3221b43 libXcomposite-0.2.0.ebuild 612
+MD5 ef33ec3325d63454a2f859c8f48175fe ChangeLog 685
 MD5 28f34303582cefb87fb9d208e406244a files/digest-libXcomposite-0.2.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC7dO2G5bA0cA/ScRAt2lAKDb3bPM0JZyGfvNhcHD/8XadGYr+gCgmfsj
-moyUfE28y9K/XuaSHtc1aqo=
-=50h9
------END PGP SIGNATURE-----
