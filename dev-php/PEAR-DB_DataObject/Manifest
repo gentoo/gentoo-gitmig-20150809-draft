@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df108134488529cb6b25a46d4219e1ec PEAR-DB_DataObject-1.7.15-r1.ebuild 527
 MD5 d9c3b2b74c832d63bf12c69f924b6403 PEAR-DB_DataObject-1.7.15.ebuild 521
 MD5 5b1db677d90f910def8e492cb51c0971 ChangeLog 564
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 02be76c48127bba7df68e37071c41091 files/digest-PEAR-DB_DataObject-1.7.15 68
 MD5 02be76c48127bba7df68e37071c41091 files/digest-PEAR-DB_DataObject-1.7.15-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDH+ofaGfFFLhbXWkRAmk8AJ9ZScEOdpknFw6X1Oh+PcXbcc5obQCfd/nx
+kEUqsLWt7iqNCL/385xM8ns=
+=Nv1F
+-----END PGP SIGNATURE-----
