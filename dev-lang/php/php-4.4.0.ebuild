@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.0.ebuild,v 1.1 2005/09/04 16:58:08 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.0.ebuild,v 1.2 2005/09/08 20:47:34 stuart Exp $
 
 IUSE="${IUSE} cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~ppc ~x86"
@@ -267,17 +267,6 @@ src_install() {
 
 pkg_postinst()
 {
-	# Create the symlinks with eselect
-	if useq cli ; then
-		eselect php set php4
-		eselect php-devel set php4
-	fi
-
-	if useq cgi ; then
-		eselect php-cgi set php4
-		eselect php-devel set php4
-	fi
-
 	# Output some general info to the user
 	if useq apache || useq apache2 ; then
 		APACHE1_MOD_DEFINE="PHP4"

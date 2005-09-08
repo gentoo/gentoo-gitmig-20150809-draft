@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.37 2005/09/07 20:04:12 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.38 2005/09/08 20:47:34 stuart Exp $
+
+*php-4.4.0 (08 Sep 2005)
+
+  08 Sep 2005; Stuart Herbert <stuart@gentoo.org>
+  +files/4.4.0/php4-hphp-acinclude.patch,
+  +files/5.0.0/php5-hphp-acinclude.patch, php-4.4.0.ebuild, php-5.0.4.ebuild,
+  php-5.0.5.ebuild:
+  Hardened-PHP fix from the overlay
+  Slight change to symlink creation behaviour
 
   07 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> php-5.0.4.ebuild,
   php-5.0.5.ebuild:
