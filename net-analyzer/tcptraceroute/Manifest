@@ -2,7 +2,7 @@ MD5 67aa1dedec566f44b68f324f7f127396 tcptraceroute-1.5_beta6.ebuild 924
 MD5 b34e582c48c20f697720f0a18ff00feb tcptraceroute-1.4-r3.ebuild 1010
 MD5 58b046e7e2f751e3030e4e9af64aa034 tcptraceroute-1.5_beta5.ebuild 1012
 MD5 4dfeee160f5f30f7c45c9e89798d00c5 ChangeLog 3356
-MD5 b11a70e1b7569dd6b3fa230a0e889d04 metadata.xml 227
+MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 2868a09f7c4911e6274c13519349cd51 files/tcptraceroute-1.4-gentoo.patch 1116
 MD5 08795adf41e7d24d33a369f072f3c0c3 files/digest-tcptraceroute-1.5_beta5 74
 MD5 291e5266f1fd92f4a0de340bb25d85bb files/digest-tcptraceroute-1.5_beta6 74

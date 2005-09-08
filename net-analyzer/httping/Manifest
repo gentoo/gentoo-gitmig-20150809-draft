@@ -3,7 +3,7 @@ MD5 cd0cd619350d3bff96b5bdc1dc27e594 httping-1.0.4.ebuild 807
 MD5 0eb374a414c75d55ede2c59da6d369cf httping-1.0.1.ebuild 799
 MD5 2f2fdf2db7a8a8614975c40332bafc43 httping-0.0.94-r1.ebuild 741
 MD5 4e09d706edd82e7c872b9c289e9e6bba ChangeLog 2048
-MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 ae2b0648bc9a639b7129d5297c8ad680 files/digest-httping-0.0.95 61
 MD5 13c81336e88f4d24d12adb47c9195811 files/digest-httping-1.0.1 60
 MD5 41294b5dc0391f0afde3ceb72f595a2e files/digest-httping-1.0.4 60

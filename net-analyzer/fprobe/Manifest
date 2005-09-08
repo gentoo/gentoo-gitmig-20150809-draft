@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d39e0219db99a828d41f6463fcf456a4 fprobe-1.1.ebuild 825
 MD5 49cbf5bf25e06217a3872500b57f9b95 ChangeLog 1350
-MD5 b11a70e1b7569dd6b3fa230a0e889d04 metadata.xml 227
+MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 f77937e9d06f1c910fad6b35dc359ece files/digest-fprobe-1.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDE3U+omPajV0RnrERAqbrAJ9m+ehFS8OU2LozGqVx+i9Bx+9PmQCbBUTz
-eU8N2qs520QU1wJWyEkIoYY=
-=hDKe
------END PGP SIGNATURE-----
