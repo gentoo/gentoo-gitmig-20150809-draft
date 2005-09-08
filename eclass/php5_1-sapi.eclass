@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.2 2005/09/04 15:15:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.3 2005/09/08 20:32:49 stuart Exp $
 #
 # ########################################################################
 #
@@ -178,6 +178,9 @@ php5_1-sapi_check_awkward_uses() {
 	# Hardened-PHP doesn't work well with Apache; needs further investigation
 	confutils_use_conflict "hardenedphp" "apache" "apache2"
 
+	# Hardened-PHP doesn't work with fastbuild enabled
+	confutils_use_conflict "hardenedphp" "fastbuild"
+
 	# IMAP support
 	php_check_imap
 
@@ -288,6 +291,13 @@ php5_1-sapi_src_unpack() {
 
 	# fastbuild support
 	use fastbuild && epatch ${FILESDIR}/5.1.0/fastbuild.patch
+
+	# run aclocal if hardenedphp is enabled, else rebuilding the configure dies
+	if use hardenedphp && [ -n "${HARDENEDPHP_PATCH}" ] ; then
+		einfo "Running aclocal for hardenedphp"
+		WANT_AUTOMAKE=1.6 aclocal || die "Unable to run aclocal successfully"
+		libtoolize --copy --force || die "Unable to run libtoolize successfully"
+	fi
 
 	# rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
@@ -483,7 +493,7 @@ php5_1-sapi_src_compile() {
 	else
 		enable_extension_enable		"sqlite-utf8"	"nls"		0
 	fi
-
+	
 	# Zend-GOTO-VM support
 	if useq vm-goto ; then
 		my_conf="${my_conf} --with-zend-vm=GOTO"
@@ -581,11 +591,60 @@ php5_1-sapi_install_ini() {
 }
 
 php5_1-sapi_pkg_postinst() {
+	# Create the symlinks for php-cli
+	if useq cli ; then
+		if test -h "/usr/bin/php"; then
+			ewarn "/usr/bin/php is a symlink."
+			ewarn "The PHP packages will not update that symlink,"
+			ewarn "please check it and do so yourself if you need"
+			ewarn "to, using eselect."
+			ewarn "For example with the command:"
+			ewarn "eselect php set php5"
+			ewarn "to symlink to /usr/lib/php5/bin/php."
+			ewarn
+		else
+			eselect php set php5
+		fi
+	fi
+
+	# Create the symlinks for php-cgi
+	if useq cgi ; then
+		if test -h "/usr/bin/php-cgi"; then
+			ewarn "/usr/bin/php-cgi is a symlink."
+			ewarn "The PHP packages will not update that symlink,"
+			ewarn "please check it and do so yourself if you need"
+			ewarn "to, using eselect."
+			ewarn "For example with the command:"
+			ewarn "eselect php-cgi set php5"
+			ewarn "to symlink to /usr/lib/php5/bin/php-cgi."
+			ewarn
+		else
+			eselect php-cgi set php5
+		fi
+	fi
+
+	# Create the symlinks for php-devel
+	if test -h "/usr/bin/phpize" || test -h "/usr/bin/php-config" ; then
+		ewarn "/usr/bin/phpize and/or /usr/bin/php-config are symlinks."
+		ewarn "The PHP packages will not update these symlinks,"
+		ewarn "please check them and do so yourself if you need"
+		ewarn "to, using eselect."
+		ewarn "For example with the command:"
+		ewarn "eselect php-devel set php5"
+		ewarn "to symlink to /usr/lib/php5/bin/phpize and"
+		ewarn "/usr/lib/php5/bin/php-config."
+		ewarn
+	else
+		eselect php-devel set php5
+	fi
+
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php5/phpdbg) you may need to recompile them now."
+	ewarn
 
 	if useq curl; then
 		ewarn "Please be aware that CURL can allow the bypass of open_basedir restrictions."
 		ewarn "This can be a security risk!"
+		ewarn
 	fi
 }

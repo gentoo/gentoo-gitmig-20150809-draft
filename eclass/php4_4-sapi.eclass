@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.1 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.2 2005/09/08 20:32:49 stuart Exp $
 #
 # ########################################################################
 #
@@ -126,7 +126,8 @@ PHP_INI_FILE="php.ini"
 # the patch for different versions of PHP
 
 case "${PV}" in
-	4.4.0) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.1.patch.gz" ;;
+	4.3.11) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.2.patch.gz" ;;
+	4.4.0) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.2.patch.gz" ;;
 esac
 
 [ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/${HARDENEDPHP_PATCH} )"
@@ -182,6 +183,9 @@ php4_4-sapi_check_awkward_uses() {
 
 	# Hardened-PHP doesn't work well with Apache; needs further investigation
 	confutils_use_conflict "hardenedphp" "apache" "apache2"
+
+	# Hardened-PHP doesn't work with fastbuild enabled
+	confutils_use_conflict "hardenedphp" "fastbuild"
 
 	# IMAP support
 	php_check_imap
@@ -279,6 +283,15 @@ php4_4-sapi_src_unpack() {
 
 	# fastbuild support
 	use fastbuild && epatch ${FILESDIR}/4.4.0/fastbuild.patch
+
+	# run aclocal if hardenedphp is enabled, else rebuilding the configure dies
+	if use hardenedphp && [ -n "${HARDENEDPHP_PATCH}" ] ; then
+		# patch to support libtool 1.5
+		epatch ${FILESDIR}/4.4.0/php4-hphp-acinclude.patch
+		einfo "Running aclocal for hardenedphp"
+		WANT_AUTOMAKE=1.6 aclocal || die "Unable to run aclocal successfully"
+		libtoolize --copy --force || die "Unable to run libtoolize successfully"
+	fi
 
 	# rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
@@ -551,11 +564,60 @@ php4_4-sapi_install_ini() {
 }
 
 php4_4-sapi_pkg_postinst() {
+	# Create the symlinks for php-cli
+	if useq cli ; then
+		if test -h "/usr/bin/php"; then
+			ewarn "/usr/bin/php is a symlink."
+			ewarn "The PHP packages will not update that symlink,"
+			ewarn "please check it and do so yourself if you need"
+			ewarn "to, using eselect."
+			ewarn "For example with the command:"
+			ewarn "eselect php set php4"
+			ewarn "to symlink to /usr/lib/php4/bin/php."
+			ewarn
+		else
+			eselect php set php4
+		fi
+	fi
+
+	# Create the symlinks for php-cgi
+	if useq cgi ; then
+		if test -h "/usr/bin/php-cgi"; then
+			ewarn "/usr/bin/php-cgi is a symlink."
+			ewarn "The PHP packages will not update that symlink,"
+			ewarn "please check it and do so yourself if you need"
+			ewarn "to, using eselect."
+			ewarn "For example with the command:"
+			ewarn "eselect php-cgi set php4"
+			ewarn "to symlink to /usr/lib/php4/bin/php-cgi."
+			ewarn
+		else
+			eselect php-cgi set php4
+		fi
+	fi
+
+	# Create the symlinks for php-devel
+	if test -h "/usr/bin/phpize" || test -h "/usr/bin/php-config" ; then
+		ewarn "/usr/bin/phpize and/or /usr/bin/php-config are symlinks."
+		ewarn "The PHP packages will not update these symlinks,"
+		ewarn "please check them and do so yourself if you need"
+		ewarn "to, using eselect."
+		ewarn "For example with the command:"
+		ewarn "eselect php-devel set php4"
+		ewarn "to symlink to /usr/lib/php4/bin/phpize and"
+		ewarn "/usr/lib/php4/bin/php-config."
+		ewarn
+	else
+		eselect php-devel set php4
+	fi
+
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php4/phpdbg) you may need to recompile them now."
+	ewarn
 
 	if useq curl; then
 		ewarn "Please be aware that CURL can allow the bypass of open_basedir restrictions."
 		ewarn "This can be a security risk!"
+		ewarn
 	fi
 }
