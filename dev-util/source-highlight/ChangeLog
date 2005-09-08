@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.17 2005/08/18 18:36:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.18 2005/09/08 17:07:20 ka0ttic Exp $
+
+*source-highlight-2.1.2 (08 Sep 2005)
+
+  08 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/source-highlight-2.0-boost_regex_error.diff,
+  -files/source-highlight-2.1.1-boost_regex_error.diff,
+  -source-highlight-2.0.ebuild, -source-highlight-2.1.1.ebuild,
+  +source-highlight-2.1.2.ebuild:
+  Version bump; removed previous 2.x versions and related patches.
 
   18 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/source-highlight-2.0-boost_regex_error.diff,

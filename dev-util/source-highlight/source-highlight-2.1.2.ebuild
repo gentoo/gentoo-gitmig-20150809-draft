@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.1.1.ebuild,v 1.3 2005/08/22 16:35:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-2.1.2.ebuild,v 1.1 2005/09/08 17:07:20 ka0ttic Exp $
 
-inherit bash-completion versionator eutils
+inherit bash-completion eutils
 
 DESCRIPTION="Generate highlighted source code as an (x)html document"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
@@ -13,15 +13,7 @@ KEYWORDS="~amd64 ~mips ~ppc ~x86"
 SLOT="0"
 IUSE="doc"
 
-DEPEND="virtual/libc
-	dev-libs/boost"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	has_version '>=dev-libs/boost-1.33.0' && \
-		epatch ${FILESDIR}/${P}-boost_regex_error.diff
-}
+DEPEND="dev-libs/boost"
 
 src_compile() {
 	local myconf
