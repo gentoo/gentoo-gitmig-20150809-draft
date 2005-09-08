@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>apache</herd>
-<longdescription>
-The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
-</longdescription>
+  <maintainer>
+    <email>beu@gentoo.org</email>
+    <name>Elfyn McBratney</name>
+  </maintainer>
+  <longdescription>
+    Visitors is a very fast web log analyzer for Linux, Windows, and other
+    Unix-like operating systems. It takes as input a web server log file, and
+    outputs statistics in form of different types of reports.
+  </longdescription>
 </pkgmetadata>
