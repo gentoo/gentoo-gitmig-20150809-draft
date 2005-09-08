@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4415 2005/09/08 15:38:37 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4416 2005/09/08 16:22:06 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1240,11 +1240,6 @@ x11-plugins/desklet-wireless
 #x11-plugins/desklet-psidisplays
 #x11-plugins/desklet-psisensors
 
-# Luca Barbato <lu_zero@gentoo.org> (22 May 2005)
-# Special version, masked since doesn't work standard systems.
-=media-video/ati-drivers-8.13*
-=media-video/ati-drivers-extra-8.13*
-
 # Peter Johanson <latexer@gentoo.org> (19 May 2005)
 # Masking the new monodevelop and it's couple new deps.
 =dev-util/monodevelop-0.7*
@@ -1376,10 +1371,6 @@ dev-lang/gpc
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
 =net-dns/dnsmasq-2.21
-
-# Luca Barbato <lu_zero@gentoo.org> (22 March 2005)
-# Experimental ebuild
-#=media-video/mplayer-1.0_pre6-r2
 
 # Rob Holland <tigger@gentoo.org> (21 March 2005)
 # marked due to bad code #84659
@@ -1538,10 +1529,6 @@ app-portage/ebuilder
 # Bug #70529 indicates problems with configuration file reading
 >=dev-libs/log4c-1.0.11
 
-# <lu_zero@gentoo.org> (02 Dec 2004)
-# Masking since this version is broken
-=media-gfx/blender-2.35
-
 # <nakano@gentoo.org> (28 Nov 2004)
 # bincima-1.3* are beta versions for testing purposes, 
 # probably very unstable.
@@ -1695,10 +1682,6 @@ games-fps/aaut
 # mask slib-3.1.1 until gnucash can get a fix for it
 =dev-libs/slib-3.1.1
 
-# <lu_zero@gentoo.org> (17 Feb 2004)
-# gcloop support, to be tested a bit
-=sys-apps/util-linux-2.12-r5
-
 # <absinthe@gentoo.org> (17 Feb 2004)
 # major API changes; not compatible with anything yet
 >=dev-libs/libmal-0.40
@@ -1733,10 +1716,6 @@ net-misc/zebra
 # impossible, see bug 65937 for more information/discussion
 >=dev-java/sun-jdk-1.4.99
 >=dev-java/java-sdk-docs-1.4.99
-
-# <lu_zero@gentoo.org> (06 Jan 2004)
-# Has memory leak issue
-=media-video/ati-drivers-3.7.0
 
 # <taviso@gentoo.org> (06 Jan 2004)
 # alpha branch of gnupg.
