@@ -1,22 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 96dd0b81a6708f56c2dc1d0bde680275 ChangeLog 5579
-MD5 76b8229f7c86ee4d0ca02ba811423309 htdig-3.1.6-r4.ebuild 1768
 MD5 8cb339dee96857223e1b7bbb8cd08963 htdig-3.1.6-r7.ebuild 1893
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 da72b57b598652565fb771e623f6399f htdig-3.2.0_beta6.ebuild 1485
+MD5 04715b052242cb67d1a8ade0e2c5d0e8 ChangeLog 5677
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 8863dac1d260decb47f31d1a3fe422e2 files/CONFIG.in 2012
-MD5 10558a7c02e5ea20fdfe325e6186fc9d files/digest-htdig-3.1.6-r4 64
-MD5 10558a7c02e5ea20fdfe325e6186fc9d files/digest-htdig-3.1.6-r7 64
-MD5 d44854e0008c7b69a927940fe3f373d9 files/htdig-3.1.6-unescaped-output.diff 640
 MD5 8c097ca125d2c633f4a320d10a1cab61 files/htdig-3.2.0-fpic.patch 668
+MD5 d44854e0008c7b69a927940fe3f373d9 files/htdig-3.1.6-unescaped-output.diff 640
 MD5 6a2501fb2eb3dab0941d282339e42151 files/digest-htdig-3.2.0_beta6 66
+MD5 10558a7c02e5ea20fdfe325e6186fc9d files/digest-htdig-3.1.6-r7 64
 MD5 255a55537e852e6110bfa5924185c6c0 files/reconfig 186
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC7hx45mJXAu5GbtIRAsA2AJ4/qjUp7k3uqggpux5S16cDe3e7dQCfVkt3
-BAAgKydVQEvHczS1vOd/SNw=
-=fUBD
+iD8DBQFDH4LJEzitwsaoONoRAiwQAJ4yITyatd6N3VmqBxaYx2vXICYZsQCeLWCE
+XpmbR7wf7R9duqIcxg6PnL0=
+=CnyY
 -----END PGP SIGNATURE-----
