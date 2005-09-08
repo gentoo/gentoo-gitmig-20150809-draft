@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d8673dd8359e3392af9e4958fceaca8f libopendaap-0.3.0.ebuild 769
 MD5 1cf1314f21ff8964c9c84852c0c62731 ChangeLog 1435
 MD5 7656177575e00de56441444e837e339e libopendaap-0.2.3.ebuild 760
-MD5 d8673dd8359e3392af9e4958fceaca8f libopendaap-0.3.0.ebuild 769
-MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 86148ed6cd259ca05147ab24675e5df3 files/digest-libopendaap-0.2.3 70
 MD5 fb7b43fda414c12b64540db818f4c497 files/digest-libopendaap-0.3.0 70
 MD5 fb066ffc6e3189f97e3b7b934d1604ed files/libopendaap-0.2.3-types.h 704
 MD5 5d449c7e532679f6cb0aca9271b5c4c0 files/libopendaap-0.3.0-types.h 610
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIMZkV3J2n04EauwRAo1bAKCAmrjBYyi+Oe6F7ACNd9iThk18cQCeMmi2
+gda1iXiqQXZkq0GWddGzCcU=
+=L3/1
+-----END PGP SIGNATURE-----
