@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_RPC
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/ChangeLog,v 1.26 2005/09/07 05:13:51 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/ChangeLog,v 1.27 2005/09/08 05:56:51 sebastian Exp $
+
+  08 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-XML_RPC-1.4.1.ebuild:
+  Use new PEAR eclass.
 
 *PEAR-XML_RPC-1.4.1 (07 Sep 2005)
 
