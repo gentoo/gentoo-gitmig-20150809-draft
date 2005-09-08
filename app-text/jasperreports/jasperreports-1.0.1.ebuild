@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-1.0.1.ebuild,v 1.1 2005/09/04 19:39:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-1.0.1.ebuild,v 1.2 2005/09/08 06:55:45 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jasperreports.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~x86"
 IUSE="jikes doc"
 
 COMMONDEP="
@@ -33,7 +33,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4
 	${COMMONDEP}"
 
-src_unpacka() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 
