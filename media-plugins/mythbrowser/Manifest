@@ -1,4 +1,14 @@
-MD5 b7f2114438acc2f52886a05a69829d45 ChangeLog 2228
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c08f5e903f9114866d813bda5a46fbfd mythbrowser-0.18.1.ebuild 717
+MD5 fbaab078aba3f2dbf78d25c64b9f1c6f ChangeLog 2324
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 a3729c184493ab14f2a6577d6cff615b mythbrowser-0.18.1.ebuild 701
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythbrowser-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDICKT2G5bA0cA/ScRAjq/AJ4rYDVLG4IdEQ1UAmZccIjznoEN7ACfZxJM
+HDMcc3ppoxDFB2c4bi3uyJw=
+=3JKB
+-----END PGP SIGNATURE-----
