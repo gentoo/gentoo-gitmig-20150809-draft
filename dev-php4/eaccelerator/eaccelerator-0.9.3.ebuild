@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.2 2005/09/05 06:29:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.3 2005/09/08 12:54:05 swegener Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="eaccelerator"
@@ -90,7 +90,7 @@ src_install() {
 
 pkg_postinst() {
 	# you only need to restart the webserver if you're using mod_php
-	if built_with_use ${PHP_PKG} apache || built_with_use ${PHP_PKG} apache2 ; then
+	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
 		einfo "You need to restart your webserver to activate eAccelerator."
 		einfo
 	fi
