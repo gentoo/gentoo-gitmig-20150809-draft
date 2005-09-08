@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.17 2005/08/25 22:28:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.18 2005/09/08 16:51:39 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org> BerkeleyDB-0.26.ebuild:
+  Mark 0.26 stable on alpha
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> BerkeleyDB-0.26.ebuild:
   add ~ia64
