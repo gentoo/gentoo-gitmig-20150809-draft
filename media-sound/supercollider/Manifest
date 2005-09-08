@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2df44c2bba1e789592a320a6ff44a430 supercollider-20040903.ebuild 2944
-MD5 b80a156e52e76ded5b6cad6c417adbd9 ChangeLog 917
+MD5 c05f88a3a90311bb78bdc16214262da7 ChangeLog 1030
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 5daa80aaab6e106e55ce8a95ec5db554 supercollider-20040903.ebuild 2934
 MD5 e0d010a09ea7addae1972ed480078139 files/README-gentoo.txt 3246
 MD5 deeb275f5394571af029926b052791a1 files/digest-supercollider-20040903 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtJRj5H05b2HAEkRAjjbAJsES14HxcGNfyogd3Erd3LjK8CTEQCfdDkw
-PTxy5odHcd3U4NUh2UrKbik=
-=Fsk3
------END PGP SIGNATURE-----
