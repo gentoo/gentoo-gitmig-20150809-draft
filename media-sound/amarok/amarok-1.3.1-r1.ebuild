@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.1.ebuild,v 1.1 2005/09/06 21:40:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.1-r1.ebuild,v 1.1 2005/09/08 16:38:19 flameeyes Exp $
 
 inherit kde eutils
 
@@ -38,23 +38,26 @@ RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8.6 )
 	             vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.6
 	                       >=media-plugins/gst-plugins-vorbis-0.8.6 )
-	             flac? ( >=media-plugins/gst-plugins-flac-0.8.6 ) )"
+	             flac? ( >=media-plugins/gst-plugins-flac-0.8.6 )
+				 >=media-plugins/gst-plugins-oss-0.8.6 )"
 
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
 need-kde 3.3
 
+PATCHES="${FILESDIR}/${P}-gst-onlyoss.patch"
+
 pkg_setup() {
 	if use arts && ! use xine && ! use gstreamer; then
 		ewarn "aRts support is deprecated, if you have problems please consider"
-		ewarn "enabling support for Xine or GStreamer"
+		ewarn "enabling support for Xine (preferred) or GStreamer"
 		ewarn "(emerge amarok again with USE=\"xine\" or USE=\"gstreamer\")."
 		ebeep 2
 	fi
 
 	if ! use arts && ! use xine && ! use gstreamer; then
-		eerror "amaroK needs either aRts (deprecated), Xine or GStreamer to work,"
+		eerror "amaroK needs either aRts (deprecated), Xine (preferred) or GStreamer to work,"
 		eerror "please try again with USE=\"arts\", USE=\"xine\" or USE=\"gstreamer\"."
 		die
 	fi
@@ -91,3 +94,12 @@ src_install() {
 	mv ${D}${KDEDIR}/share/applications/kde/amarok.desktop \
 		${D}/usr/share/applications/kde/amarok.desktop || die
 }
+
+pkg_postinst() {
+	if use gstreamer; then
+		einfo "From version 1.3.1, amaroK doesn't support anymore alsa output with"
+		einfo "gstreamer engine."
+		einfo "If you want to use alsa output, consider moving to xine engine instead."
+	fi
+}
+
