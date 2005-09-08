@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.61.ebuild,v 1.5 2005/05/09 18:13:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.61.ebuild,v 1.6 2005/09/08 22:21:12 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/~rmcfarla/${P}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc ~alpha"
+KEYWORDS="alpha ~ppc sparc x86"
 IUSE=""
 
 DEPEND="${DEPEND}
