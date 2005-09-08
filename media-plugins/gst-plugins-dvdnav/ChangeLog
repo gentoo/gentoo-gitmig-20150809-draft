@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dvdnav
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdnav/ChangeLog,v 1.1 2005/09/08 08:34:56 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdnav/ChangeLog,v 1.2 2005/09/08 13:24:55 herbs Exp $
+
+  08 Sep 2005; Herbie Hopkins <herbs@gentoo.org>
+  gst-plugins-dvdnav-0.8.11.ebuild:
+  Marked ~amd64.
 
 *gst-plugins-dvdnav-0.8.11 (08 Sep 2005)
 
