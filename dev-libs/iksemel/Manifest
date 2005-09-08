@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 601f49cc43af44f0492ae6c88061dfa9 iksemel-1.2.ebuild 756
 MD5 001faee9ae5442771fb1be963369ab35 ChangeLog 600
 MD5 b19e9299350afa56d319623102bbe0c1 files/digest-iksemel-1.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIMTcV3J2n04EauwRApBnAJ0fJAFTRJuu/Wt1kSRAf0m6Qe9SjgCgzrTt
+CgNLDnI0n7Yc9UN7zGzfQEQ=
+=Uvbj
+-----END PGP SIGNATURE-----
