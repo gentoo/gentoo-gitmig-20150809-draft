@@ -1,0 +1,96 @@
+diff -aur monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GladeSharp2Project.xpt.xml monodevelop-0.7/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GladeSharp2Project.xpt.xml
+--- monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GladeSharp2Project.xpt.xml	2005-02-19 19:50:39.000000000 -0500
++++ monodevelop-0.7/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GladeSharp2Project.xpt.xml	2005-08-29 09:19:06.000000000 -0400
+@@ -27,12 +27,12 @@
+ 			<Options/>
+ 			
+ 			<References>
+-				<Reference type="Gac" refto="gtk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="gdk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glib-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glade-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="pango-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glade-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+ 			</References>
+ 			
+ 			<Resources>
+diff -aur monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GnomeSharp2Project.xpt.xml monodevelop-0.7/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GnomeSharp2Project.xpt.xml
+--- monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GnomeSharp2Project.xpt.xml	2005-02-19 19:50:39.000000000 -0500
++++ monodevelop-0.7/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GnomeSharp2Project.xpt.xml	2005-08-29 09:19:06.000000000 -0400
+@@ -27,12 +27,12 @@
+ 			<Options/>
+ 			
+ 			<References>
+-				<Reference type="Gac" refto="gnome-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="gtk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="gdk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glib-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glade-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="pango-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gnome-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+ 			</References>
+ 
+ 			<Files>
+diff -aur monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GtkSharp2Project.xpt.xml monodevelop-0.7/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GtkSharp2Project.xpt.xml
+--- monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GtkSharp2Project.xpt.xml	2005-02-19 19:50:39.000000000 -0500
++++ monodevelop-0.7/Core/src/AddIns/BackendBindings/CSharpBinding/templates/GtkSharp2Project.xpt.xml	2005-08-29 09:19:06.000000000 -0400
+@@ -27,11 +27,11 @@
+ 			<Options/>
+ 			
+ 			<References>
+-				<Reference type="Gac" refto="gtk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="gdk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glib-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glade-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="pango-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+ 			</References>
+ 		
+ 			<Files>
+diff -aur monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/VBNetBinding/templates/VBGtkSharp2Project.xpt.xml monodevelop-0.7/Core/src/AddIns/BackendBindings/VBNetBinding/templates/VBGtkSharp2Project.xpt.xml
+--- monodevelop-0.7-orig/Core/src/AddIns/BackendBindings/VBNetBinding/templates/VBGtkSharp2Project.xpt.xml	2005-05-13 19:13:05.000000000 -0400
++++ monodevelop-0.7/Core/src/AddIns/BackendBindings/VBNetBinding/templates/VBGtkSharp2Project.xpt.xml	2005-08-29 09:19:21.000000000 -0400
+@@ -27,11 +27,11 @@
+ 			<Options/>
+ 			
+ 			<References>
+-				<Reference type="Gac" refto="gtk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="gdk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glib-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="glade-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+-				<Reference type="Gac" refto="pango-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+ 			</References>
+ 		
+ 			<Files>
+diff -aur monodevelop-0.7-orig/Extras/BooBinding/templates/BooGtkSharpProject.xpt.xml monodevelop-0.7/Extras/BooBinding/templates/BooGtkSharpProject.xpt.xml
+--- monodevelop-0.7-orig/Extras/BooBinding/templates/BooGtkSharpProject.xpt.xml	2005-04-25 21:27:10.000000000 -0400
++++ monodevelop-0.7/Extras/BooBinding/templates/BooGtkSharpProject.xpt.xml	2005-08-29 09:17:25.000000000 -0400
+@@ -23,7 +23,7 @@
+ 		
+ 		<Project name = "${ProjectName}" directory = ".">
+ 			<References>
+-				<Reference type="Gac" refto="gtk-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
++				<Reference type="Gac" refto="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+ 			</References>
+ 			<Files>
+ 				<File name="Main.boo"><![CDATA[// project created on ${Date} at ${Time}

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.33 2005/08/17 02:46:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.34 2005/09/08 20:32:52 latexer Exp $
+
+*monodevelop-0.7-r1 (08 Sep 2005)
+
+  08 Sep 2005; Peter Johanson <latexer@gentoo.org>
+  +files/monodevelop-0.7-boo-0.6.0-compat.diff,
+  +files/monodevelop-0.7-gtksharp-update.diff, +monodevelop-0.7-r1.ebuild:
+  Revision bump with boo and gtk-sharp fixes.
 
   17 Aug 2005; Peter Johanson <latexer@gentoo.org>
   -monodevelop-0.5.1-r3.ebuild, -monodevelop-0.6.ebuild:
