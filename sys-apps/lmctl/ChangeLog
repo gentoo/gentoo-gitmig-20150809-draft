@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lmctl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctl/ChangeLog,v 1.4 2005/02/08 16:43:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctl/ChangeLog,v 1.5 2005/09/08 13:39:56 s4t4n Exp $
+
+*lmctl-0.3.2-r3 (08 Sep 2005)
+
+  08 Sep 2005; Michele Noberasco <s4t4n@gentoo.org> +lmctl-0.3.2-r3.ebuild,
+  +0.3.2-cordless-optical-4-notebooks.diff:
+  Revision bump, with patch that adds support for Logitech Cordless Optical
+  Mouse for Notebooks. Fixed Homepage URL.
 
   08 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> lmctl-0.3.2-r2.ebuild:
   added ~amd64 to KEYWORDS. fixes #81189
