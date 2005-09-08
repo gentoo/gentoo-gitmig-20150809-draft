@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6c0b02ebd5da12249bf3053de93782b2 braa-0.8.ebuild 563
 MD5 b2b24d30df8e8a75966f54c8ec4d292e ChangeLog 897
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 ef175c4afbfced9ee759a46a35c6a1db files/digest-braa-0.8 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIMsJV3J2n04EauwRAm+hAJ95T10NALyNkyaiIAiioUZLQK9jSACfdhWB
+5I+Dn2iAM5/wUUtaR/U+uoE=
+=sdau
+-----END PGP SIGNATURE-----

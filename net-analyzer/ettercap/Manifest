@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7908168b78926215299ac14cf2ffc592 ettercap-0.7.3.ebuild 1559
 MD5 89172d248d57cbab671d09b6a021c607 ChangeLog 5997
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 fb19d64e65aa26fde0e7fe78ef8147c5 files/digest-ettercap-0.7.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIMuRV3J2n04EauwRAgwAAJ9+33S9ktvgAHegJ3cO8qt+ZsoYVACeI5CY
+xqeOxI9Opka/g7dWkt8Wd2o=
+=k6RC
+-----END PGP SIGNATURE-----
