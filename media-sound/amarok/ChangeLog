@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.70 2005/09/08 16:38:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.71 2005/09/08 23:06:39 flameeyes Exp $
+
+  08 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.1-r1.ebuild:
+  Don't force using gst-plugins-oss, let the uesrs select what they want.
+  Close #105298. The sed for libpq-fe is no more needed. Make musicbrainz
+  optional with musicbrainz useflag. Close #105298.
 
 *amarok-1.3.1-r1 (08 Sep 2005)
 

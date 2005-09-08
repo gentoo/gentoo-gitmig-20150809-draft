@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.1-r1.ebuild,v 1.1 2005/09/08 16:38:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.1-r1.ebuild,v 1.2 2005/09/08 23:06:39 flameeyes Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
-IUSE="arts flac gstreamer kde mp3 mysql noamazon opengl postgres xine xmms visualization vorbis"
+IUSE="arts flac gstreamer kde mp3 mysql noamazon opengl postgres xine xmms
+visualization vorbis musicbrainz"
 # kde: enables compilation of the konqueror sidebar plugin
 
 S=${WORKDIR}/${MY_P}
@@ -25,7 +26,7 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	 xine? ( >=media-libs/xine-lib-1_rc4 )
 	 gstreamer? ( >=media-libs/gstreamer-0.8.8
 	              >=media-libs/gst-plugins-0.8.6 )
-	 >=media-libs/tunepimp-0.3.0
+	 musicbrainz? ( >=media-libs/tunepimp-0.3.0 )
 	 >=media-libs/taglib-1.4
 	 mysql? ( >=dev-db/mysql-4.0.16 )
 	 postgres? ( dev-db/postgresql )
@@ -38,8 +39,7 @@ RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8.6 )
 	             vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.6
 	                       >=media-plugins/gst-plugins-vorbis-0.8.6 )
-	             flac? ( >=media-plugins/gst-plugins-flac-0.8.6 )
-				 >=media-plugins/gst-plugins-oss-0.8.6 )"
+	             flac? ( >=media-plugins/gst-plugins-flac-0.8.6 ) )"
 
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0"
@@ -64,11 +64,6 @@ pkg_setup() {
 
 	# check whether kdelibs was compiled with arts support
 	kde_pkg_setup
-}
-
-src_unpack() {
-	kde_src_unpack
-	sed -i -e "s:postgresql/pgsql/libpq-fe.h:libpq-fe.h:" amarok/src/collectiondb.cpp
 }
 
 src_compile() {
