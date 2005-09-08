@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.4.ebuild,v 1.1 2005/09/06 20:56:46 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.5.4.ebuild,v 1.2 2005/09/08 00:07:28 swegener Exp $
 
 inherit libtool eutils
 
@@ -12,13 +12,13 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 # Disabled tests because they dont work (tester@g.o)
-RESTRICT=test
+RESTRICT="test"
 DEPEND="virtual/libc
 	>=sys-devel/libtool-1.4.1
 	>=dev-libs/glib-1.2.10
 	nls? ( sys-devel/gettext )
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
-	zlib? (sys-libs/zlib )
+	zlib? ( sys-libs/zlib )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 src_compile() {
