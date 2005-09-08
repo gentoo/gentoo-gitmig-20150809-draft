@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 094c31ae9f25e4bf660b45a3f3931235 ChangeLog 1142
-MD5 038fa21c56209d7833b357ef74ce1486 glew-1.3.3.ebuild 917
+MD5 436aa20115eb10f7f241ae3fef9b48d4 ChangeLog 1281
+MD5 d3fa0d84ba7a8aca3317080a4e895bcf glew-1.3.3.ebuild 1014
 MD5 1114056da482209c3a0672f9b2c163a4 metadata.xml 225
 MD5 d1b3573a4d45551973bf2131a3537a41 files/digest-glew-1.3.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFDGgMd/NoSW7FuNV8RAqPVAKCFBp9pgFBe57ibx08Ga8/fQnJyWACfX19y
-Q6uokjKoaHSpiDluAhhAvhw=
-=eV6O
------END PGP SIGNATURE-----
+MD5 f5ffff1cf39720762bd6cb9f3ed3ee24 files/glew-1.3.3-multilib.patch 2593
