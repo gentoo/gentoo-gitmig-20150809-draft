@@ -3,6 +3,7 @@ MD5 eccf7065578fd1850586d204d1037294 openldap-2.2.27.ebuild 12433
 MD5 570c1e6ab54dcb7231e23c733356095a openldap-2.1.30-r5.ebuild 7637
 MD5 5bd89548fb8de6b4f0fdca12617e4e0c openldap-2.2.24.ebuild 9516
 MD5 7147b6711fd08405e22461185a531b7e openldap-2.1.27.ebuild 7058
+MD5 53c7a12068dafab672603af10d9c95f3 openldap-2.2.28-r1.ebuild 13026
 MD5 652065b4b1af04d11846fcdab7807ff8 openldap-2.1.30-r2.ebuild 7491
 MD5 8ca33d2e9e42040d47ae4119384c34fe openldap-2.2.26-r2.ebuild 11641
 MD5 47247dbac20cbf48c08404fca5b51b7f openldap-2.2.26.ebuild 9741
@@ -16,7 +17,7 @@ MD5 231a7a229c627e9ce2bdccb29c1a55e9 openldap-2.2.14.ebuild 7255
 MD5 89c1b232c5c53b96513eaf580cc4f5c2 openldap-2.1.30.ebuild 7368
 MD5 c11fbc4ba7824ae4f171eee66dc52e85 openldap-2.1.26.ebuild 7096
 MD5 d03b4b8965dada31e3357108cce8e0a2 openldap-2.1.30-r1.ebuild 7382
-MD5 3318ce99cd4aa613d62877c05a177a6f ChangeLog 24401
+MD5 ba25b0e5a16111dedc0d0fa8c19fd2eb ChangeLog 24642
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 7901f04890caac3b418942143b60b284 openldap-2.1.27-r1.ebuild 7452
 MD5 b230f9445ab2e9b4ae10beb130d329db openldap-2.2.26-r1.ebuild 10639
@@ -36,6 +37,7 @@ MD5 fa0a0dfbb9f3984fb2907c020e02ec73 files/digest-openldap-2.2.23-r1 65
 MD5 f1e72154e299a0b90a1157c7ed171daf files/digest-openldap-2.2.26-r1 130
 MD5 f1e72154e299a0b90a1157c7ed171daf files/digest-openldap-2.2.26-r2 130
 MD5 919632051f7ddeeed29b011f163d17f0 files/digest-openldap-2.2.27-r1 130
+MD5 a8e7c88a9f6b88fb9b88d4e66fae5d92 files/digest-openldap-2.2.28-r1 130
 MD5 95a998755d69f0f30cb64b9cb8eeab15 files/openldap-2.2.14-perlthreadsfix.patch 614
 MD5 ca2c43219df88502aafeab9db9eda4d5 files/openldap-2.1.27-perlthreadsfix.patch 967
 MD5 30ef1dc504563809f990b72ffe2be6c0 files/digest-openldap-2.1.26 65
@@ -50,6 +52,7 @@ MD5 919632051f7ddeeed29b011f163d17f0 files/digest-openldap-2.2.27 130
 MD5 a8e7c88a9f6b88fb9b88d4e66fae5d92 files/digest-openldap-2.2.28 130
 MD5 b10517f0e7be829d47bb8096d86fb519 files/openldap-2.1.27-db40.patch 718
 MD5 2e6d3f7cf49a1d85468befdff2bfc1d8 files/openldap-2.1.30-ximian_connector.patch 6435
+MD5 f940f4e9ac544ed0a0f28b87df5cd2c8 files/openldap-2.2.28-ximian_connector.patch 5669
 MD5 1a7084c17a74e59db33578c0833e4099 files/2.0/slapd 584
 MD5 50257f7d6b63c8e9778b6407c7d2dddb files/2.0/slapd.conf 277
 MD5 d68ba97d9f54b8455c1e2d93c352d24a files/2.0/slurpd 495
