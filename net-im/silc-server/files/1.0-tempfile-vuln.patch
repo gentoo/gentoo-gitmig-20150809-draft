@@ -1,0 +1,17 @@
+--- apps/silcd/silcd.c.orig	2004-02-27 15:29:51.000000000 +0000
++++ apps/silcd/silcd.c	2005-06-20 13:49:34.511237224 +0100
+@@ -260,11 +260,13 @@
+ SILC_TASK_CALLBACK(dump_stats)
+ {
+   FILE *fdd;
++  int fdes;
+   char filename[256];
+ 
+   memset(filename, 0, sizeof(filename));
+   snprintf(filename, sizeof(filename) - 1, "/tmp/silcd.%d.stats", getpid());
+-  fdd = fopen(filename, "w+");
++  fdes = open (filename, O_CREAT|O_EXCL|O_WRONLY, S_IRUSR|S_IWUSR);
++  fdd = fdopen(fdes, "w");
+   if (!fdd)
+     return;
+ 

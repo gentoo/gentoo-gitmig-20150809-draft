@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.0.ebuild,v 1.2 2005/08/10 21:40:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.0-r1.ebuild,v 1.1 2005/09/08 13:31:27 swegener Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Server for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/server/sources/${P}.tar.bz2"
@@ -24,9 +24,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PV}-banlist-fix.patch
 	epatch "${FILESDIR}"/${PV}-fPIC.patch
+	epatch "${FILESDIR}"/${PV}-tempfile-vuln.patch
 
-	autoreconf || die "autoreconf failed"
-	libtoolize --copy --force || die "libtoolize failed"
+	eautoreconf
 }
 
 src_compile() {
