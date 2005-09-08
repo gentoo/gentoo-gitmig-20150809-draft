@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.1 2005/09/08 18:27:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.2 2005/09/08 19:03:24 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -60,13 +60,13 @@ src_unpack() {
 }
 
 src_install() {
-	dogamesbin nether_earth
+	dogamesbin nether_earth || die "dogamesbin failed"
 
 	cd "${data}"
 
 	# Install all game data
 	insinto "${DATA_DIR}"
-	doins -r maps models sound textures
+	doins -r maps models sound textures || die "doins failed"
 
 	dodoc readme.txt
 

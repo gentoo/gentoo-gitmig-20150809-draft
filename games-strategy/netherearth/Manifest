@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1fadcc9d6d7199fb831fa536881ac105 ChangeLog 543
 MD5 9dfa6fe4146063c9a1a5496fbc503f26 metadata.xml 507
-MD5 573b3ee4a8d79aab0639e5a235536aa1 netherearth-0.52.ebuild 2010
-MD5 743a943130080746a237aaca99a32f1d files/Makefile 1003
+MD5 1fadcc9d6d7199fb831fa536881ac105 ChangeLog 543
+MD5 e1a494e21aa4600f95df907513bc121f netherearth-0.52.ebuild 2063
 MD5 20198e78dc33ad3838798bfc53120260 files/netherearth-0.52-linux.patch 1255
-MD5 eaafb11314df445e9792778c9741d7e1 files/netherearth-0.52-gentoo-paths.patch 4356
 MD5 a617f2b3f264865654c4c847ff7eb11c files/digest-netherearth-0.52 118
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIIKWQlM6RnzZP+IRAq4VAKDD+sR074bYocS0hg4lovjA8c7owACdFnnt
-LDggnvca5kjvfXqxtGN4p14=
-=utG9
------END PGP SIGNATURE-----
+MD5 743a943130080746a237aaca99a32f1d files/Makefile 1003
+MD5 eaafb11314df445e9792778c9741d7e1 files/netherearth-0.52-gentoo-paths.patch 4356
