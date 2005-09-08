@@ -1,5 +1,15 @@
-MD5 7483de11e9fdb320c39ecd78418c7974 capiisdnmon-0.42-r1.ebuild 933
-MD5 de340e15c70bbeb793bd261748e48a4e ChangeLog 688
-MD5 7a29ec1d2a322b4000a4576ab44f94ee metadata.xml 252
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3b5ab26fcce5782b78ac635461065ca capiisdnmon-0.42-r1.ebuild 933
+MD5 3a75b96d72db83706b5f2779ab702de6 ChangeLog 807
+MD5 c8cf0d31d953401f2f89982d770a0c98 metadata.xml 253
 MD5 b8b732a1363522e6bc85adc6cda09066 files/capiisdnmon-0.42-capiv3.patch 776
 MD5 324b3abc4eb33f3854006ea47554c115 files/digest-capiisdnmon-0.42-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDH9BrNSP4Vda7IdsRAig+AJ45fgpai4a3ncS1WCfcx4jSrTZoYQCcDQeb
+X3C9sfMN9NV5+enh+/qE/ck=
+=D3Rg
+-----END PGP SIGNATURE-----
