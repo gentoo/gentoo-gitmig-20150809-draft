@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.25 2005/08/21 09:52:29 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.26 2005/09/08 17:06:27 agriffis Exp $
+
+  08 Sep 2005; Aron Griffis <agriffis@gentoo.org> Crypt-SSLeay-0.51.ebuild:
+  Mark 0.51 stable on alpha
 
   21 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org>
   Crypt-SSLeay-0.51.ebuild:
