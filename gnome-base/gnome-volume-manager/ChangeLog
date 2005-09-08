@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-volume-manager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.35 2005/09/07 13:11:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.36 2005/09/08 02:05:13 cardoe Exp $
+
+*gnome-volume-manager-1.5.1 (08 Sep 2005)
+
+  08 Sep 2005; Doug Goldstein <cardoe@gentoo.org>
+  +files/gnome-volume-manager-1.5.1-use-pmount-2.patch,
+  -files/gvm-use-pmount-if-available-nochangelog.patch,
+  -gnome-volume-manager-1.5.0.ebuild, +gnome-volume-manager-1.5.1.ebuild:
+  rev bump to 1.5.1. Use azarah's patch for g-v-m's pmount usage since it's
+  better
 
   07 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-volume-manager-1.2.2.ebuild:

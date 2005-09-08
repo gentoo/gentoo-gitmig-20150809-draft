@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.0.ebuild,v 1.2 2005/08/31 08:59:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.1.ebuild,v 1.1 2005/09/08 02:05:13 cardoe Exp $
 
 inherit eutils gnome2
 
@@ -30,9 +30,7 @@ USE_DESTDIR="1"
 
 
 pkg_setup() {
-	G2CONF="pmount_hal_path=/usr/bin/pmount-hal \
-		umount_path=/usr/bin/pumount \
-		--with-eject-command=/usr/bin/eject"
+	G2CONF="--with-eject-command=/usr/bin/eject"
 }
 
 src_unpack() {
@@ -43,7 +41,7 @@ src_unpack() {
 	epatch ${DISTDIR}/gnome-volume-manager-1.3.3-reconnect_dbus.patch.bz2
 	# Doesn't apply to current cvs.  Must look at leater.
 	#epatch ${FILESDIR}/gnome-volume-manager-1.3.3-pmount_crypt.patch
-	epatch ${FILESDIR}/gvm-use-pmount-if-available-nochangelog.patch
+	epatch ${FILESDIR}/gnome-volume-manager-1.5.1-use-pmount-2.patch
 }
 
 pkg_postinst() {
