@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/subterfugue-0.2.1a.ebuild,v 1.1 2005/03/05 00:32:03 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/subterfugue-0.2.1a.ebuild,v 1.2 2005/09/08 15:20:26 blubb Exp $
 
 inherit distutils eutils
 
@@ -9,7 +9,7 @@ IUSE="gtk"
 DESCRIPTION="strace meets expect"
 SRC_URI="mirror://sourceforge/subterfugue/${P}.tgz"
 HOMEPAGE="http://www.subterfugue.org/"
-KEYWORDS="x86 amd64 -ppc"
+KEYWORDS="-amd64 -ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
