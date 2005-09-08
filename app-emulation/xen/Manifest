@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 625c815b939fd0fdcd0d12f651f1a414 ChangeLog 537
 MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
-MD5 47fae8b2b4578e6e44f73da16de526af xen-2.0.7.ebuild 2690
+MD5 127f02804f9b2029eff0f18830d17661 xen-2.0.7.ebuild 2696
 MD5 6bdec80c76754e7f3a07642ac527bcd0 xen-3.0.0_pre20050906.ebuild 2608
-MD5 6eaea330ed78459069eb5ba608e654dd files/digest-xen-2.0.7 63
-MD5 1d06bd45f1c44612f4ab57e8d7c303ac files/digest-xen-3.0.0_pre20050906 75
 MD5 16d372298e94a8eef72c1943b1ed5561 files/xend-conf 347
 MD5 8fdc16ee0ddc5db42c85e4a3b7484135 files/xend-init 746
 MD5 9f441f0eaec0c4a04af82df233dadbe0 files/xendomains-conf 22
 MD5 5caa93c9ec5394b7ae89a3bb0c038d6b files/xendomains-init 1221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDIBpagMUyd/cdjWsRAlowAJ9Qz0qILkJfpaC90tkN2wZsQarV/wCeIkud
-ngv1dFTcy6blEM9dlxaD7pY=
-=/FzP
------END PGP SIGNATURE-----
+MD5 1d06bd45f1c44612f4ab57e8d7c303ac files/digest-xen-3.0.0_pre20050906 75
+MD5 6eaea330ed78459069eb5ba608e654dd files/digest-xen-2.0.7 63

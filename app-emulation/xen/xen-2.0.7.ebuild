@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-2.0.7.ebuild,v 1.1 2005/09/07 18:18:59 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-2.0.7.ebuild,v 1.2 2005/09/08 23:01:22 chrb Exp $
 
 inherit mount-boot
 
@@ -74,10 +74,10 @@ src_install() {
 
 	# we need to do whatever mkbuildtree would've done for each platform
 	# linux-2.6: copy public include files, and xenstored.h
-	mkdir linux-2.6-xen-sparse/include/asm-xen/xen-public
+	mkdir linux-2.6.11-xen-sparse/include/asm-xen/xen-public
 	# include files for kernel
 	rm xen/include/public/COPYING
-	cp -dpPR xen/include/public/* linux-2.6-xen-sparse/include/asm-xen/xen-public
+	cp -dpPR xen/include/public/* linux-2.6.11-xen-sparse/include/asm-xen/xen-public
 	# fixme: insert code for other sparse trees here
 
 	# install xen kernel sparse trees
