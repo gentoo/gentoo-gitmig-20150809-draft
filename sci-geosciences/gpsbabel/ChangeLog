@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/gpsbabel
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.1 2005/09/08 02:49:42 ribosome Exp $
+
+*gpsbabel-1.2.7 (08 Sep 2005)
+
+  08 Sep 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gpsbabel-1.2.7.ebuild:
+  Initial import. Thanks to Gérald Fenoy <djayweb@djayux.net> for his work.
+
