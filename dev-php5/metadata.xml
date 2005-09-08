@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The dev-php5 category contains libraries, utilities and PECL
+		packages only for version 5 of the PHP programming language.
+	</longdescription>
+</catmetadata>
