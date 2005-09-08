@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.21 2005/08/28 13:24:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.22 2005/09/08 13:32:06 blubb Exp $
 
 # UNKNOWN - SECTION
 
@@ -19,10 +19,6 @@ kdexdeltas
 # 2005/03/18 - Danny van Dyk <kugelfang@gentoo.org>
 # net-libs/openslp doesn't pass make check. Security BUG #85347.
 slp
-
-# 2005/02/22 - Olivier Fisette <ribosome@gentoo.org>
-# EMBOSS is not available on amd64.
-emboss
 
 # 2005/01/12 - Benjamin Schindler <config@gentoo.org>
 # Optional mono support will never work until we have a stable mono compiler
