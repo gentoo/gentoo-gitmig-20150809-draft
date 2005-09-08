@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 36c7b34a19074118dd40fa565a8af338 experience-3.03.ebuild 1040
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 6c6f658be448028f4f2a75dd333fda34 ChangeLog 748
 MD5 5aaa2ff2d5997a585fc6499563162f8a files/digest-experience-3.03 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDIMwEp5vW4rUFj5oRAkJfAKCrFWp6cCnDS09qS9iesnaPUV3xMQCbBHRb
+nTWSMJKkj7uWMfrcF5svgNs=
+=R1SK
+-----END PGP SIGNATURE-----
