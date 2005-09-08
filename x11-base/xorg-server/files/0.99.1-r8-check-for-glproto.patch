@@ -1,0 +1,23 @@
+diff -urN xorg-server-0.99.1.orig/configure.ac xorg-server-0.99.1/configure.ac
+--- xorg-server-0.99.1.orig/configure.ac	2005-09-02 20:27:55.000000000 -0700
++++ xorg-server-0.99.1/configure.ac	2005-09-07 16:19:00.000000000 -0700
+@@ -344,6 +344,9 @@
+ 	PKG_CHECK_MODULES([LIBDRM], [libdrm])
+ 	AC_SUBST(DRIPROTO_CFLAGS)
+ 	AC_SUBST(LIBDRM_CFLAGS)
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ fi
+ 
+ AM_CONDITIONAL(XINERAMA, [test "x$XINERAMA" = xyes])
+@@ -526,6 +529,9 @@
+ 	DMX_INCLUDES="$XEXT_INC $RENDER_INC $XTRAP_INC $RECORD_INC"
+ 	XDMX_LIBS="$FB_LIB $MI_LIB $XEXT_LIB $RENDER_LIB $XTRAP_LIB $RECORD_LIB $XI_LIB $XKB_LIB $XKB_STUB_LIB $MIEXT_DAMAGE_LIB $OS_LIB $MIEXT_SHADOW_LIB"
+ 	AC_SUBST([XDMX_LIBS])
++	if test "$GLX" = yes; then
++		PKG_CHECK_MODULES([GL],[glproto])
++	fi
+ 
+ dnl USB sources in DMX require <linux/input.h>
+ 	AC_CHECK_HEADER([linux/input.h], HAVE_LINUX_INPUT_H="yes",
