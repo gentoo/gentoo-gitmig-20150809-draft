@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.10.1.ebuild,v 1.1 2005/08/22 06:45:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.10.1.ebuild,v 1.2 2005/09/08 17:51:52 seemant Exp $
 
-inherit gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="User Interface part of libbonobo"
 HOMEPAGE="http://www.gnome.org/"
@@ -31,4 +31,8 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="$(use_enable static)"
+}
+
+src_test() {
+	Xmake check || die
 }

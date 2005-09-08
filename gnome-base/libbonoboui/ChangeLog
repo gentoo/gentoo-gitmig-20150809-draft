@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.95 2005/09/08 13:28:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.96 2005/09/08 17:51:52 seemant Exp $
+
+  08 Sep 2005; Seemant Kulleen <seemant@gentoo.org>
+  libbonoboui-2.10.1.ebuild, libbonoboui-2.10.1-r1.ebuild:
+  fix src_test() to actually succeed
 
 *libbonoboui-2.10.1-r1 (08 Sep 2005)
 
