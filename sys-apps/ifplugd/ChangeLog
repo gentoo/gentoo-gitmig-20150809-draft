@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.26 2005/09/02 06:46:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.27 2005/09/08 14:37:32 uberlord Exp $
+
+*ifplugd-0.28-r2 (08 Sep 2005)
+
+  08 Sep 2005; Roy Marples <uberlord@gentoo.org> files/ifplugd.init,
+  -ifplugd-0.26-r1.ebuild, -ifplugd-0.28-r1.ebuild, +ifplugd-0.28-r2.ebuild:
+  New init script so we don't stop ifplugd processes launched by other
+  scripts and we don't start ifplugd on an interface where it is already
+  running.
+
+  Punted older ebuilds.
 
   02 Sep 2005; Roy Marples <uberlord@gentoo.org> ifplugd-0.28-r1.ebuild:
   Install ifplugd.action to /usr/sbin and not /etc/init.d

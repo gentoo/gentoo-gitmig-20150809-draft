@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.init,v 1.1 2005/09/01 15:33:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.init,v 1.2 2005/09/08 14:37:32 uberlord Exp $
 
 #NB: Config is in /etc/conf.d/ifplugd
 
@@ -23,6 +23,16 @@ get_start_interfaces() {
 	if [[ -f /proc/net/wireless && ${WIRELESS_INTERFACES} == "no" ]]; then
 		exclude=$(sed -ne 's/^[ \t]*\(.*\):.*/\1/p' /proc/net/wireless | xargs)
 	fi
+	
+	# Exclude ifplugd started by other scripts - like net.xxx
+	if [[ -d "${svcdir}/daemons" ]]; then
+		exclude="${exclude} $(
+			grep "\"/var/run/ifplugd.*.pid\"" "${svcdir}"/daemons/* 2>/dev/null \
+			| grep -v "${svcdir}/daemons/ifplugd:" \
+			| sed -n -e 's/.*ifplugd\.\(.*\)\.pid.*/\1/p'
+		)"
+	fi
+	
 	exclude=" lo ${exclude} "
 	for iface in ${exclude}; do
 		INTERFACES="${INTERFACES// ${iface} / }"
@@ -31,7 +41,23 @@ get_start_interfaces() {
 }
 
 get_running_interfaces() {
-	( cd /var/run; ls ifplugd.*.pid | sed -n -e 's/^ifplugd.\(.*\).pid$/\1/p' )
+	local exclude="" INTERFACES=$(
+		cd /var/run
+		ls ifplugd.*.pid 2>/dev/null | sed -n -e 's/^ifplugd.\(.*\).pid$/\1/p' | xargs
+	)
+	if [[ -d "${svcdir}/daemons" ]]; then
+		local exclude=$(
+			grep "\"/var/run/ifplugd.*.pid\"" "${svcdir}"/daemons/* 2>/dev/null \
+			| grep -v "${svcdir}/daemons/ifplugd:" \
+			| sed -n -e 's/.*ifplugd\.\(.*\)\.pid.*/\1/p'
+		)
+	fi
+
+	INTERFACES=" ${INTERFACES} "
+	for iface in ${exclude}; do
+		INTERFACES=${INTERFACES// ${iface} / }
+	done
+	echo "${INTERFACES}"
 }
 
 # Check if an option is set for a given interface.
@@ -57,14 +83,24 @@ start() {
 	
 	for iface in $(get_start_interfaces); do
 		ebegin "${iface}"
-		local args=
+		local args="" pidfile="/var/run/ifplugd.${iface}.pid"
+
+		if [[ -e ${pidfile} ]] ; then
+			if is_daemon_running /usr/sbin/ifplugd "${pidfile}" ; then
+				eindent
+				einfo "ifplugd is already running on ${iface}"
+				eend 0
+				eoutdent
+				oneworked=true
+				continue
+			fi
+		fi
 		
 		is_set "${iface}" AUTO yes || args="${args}a"
 		is_set "${iface}" BEEP yes || args="${args}b"
 		is_set "${iface}" IGNORE_FAIL yes && args="${iargs}f"
 		is_set "${iface}" IGNORE_FAIL_POSITIVE no && args="${iargs}F"
 		is_set "${iface}" IGNORE_RETVAL yes && args="${iargs}I"
-		is_set "${iface}" SHUTDOWN yes || args="${iargs}q"
 		is_set "${iface}" WAIT_ON_FORK yes && args="${iargs}w"
 		is_set "${iface}" MONITOR no && args="${iargs}M"
 
@@ -100,7 +136,7 @@ stop() {
 	for iface in $(get_running_interfaces); do
 		ebegin "${iface}"
 		start-stop-daemon --stop --exec /usr/sbin/ifplugd \
-			--pidfile "/var/run/ifplugd.${iface}.pid"
+			--pidfile "/var/run/ifplugd.${iface}.pid" --signal SIGQUIT
 		eend $? || allstopped=false
 	done
 
@@ -109,6 +145,8 @@ stop() {
 
 status() {
 	local iface
+
+	service_started "${myservice}" || return 0
 
 	for iface in $(get_running_interfaces); do
 		einfo "$(/usr/sbin/ifplugstatus ${iface})"
