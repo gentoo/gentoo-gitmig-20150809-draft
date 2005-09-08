@@ -5,9 +5,9 @@ MD5 8ce24fba839d95893bc90162203cbcc3 gtk-gnutella-0.95.3.ebuild 2226
 MD5 7501dfee4eca51d7affba43b576a6156 gtk-gnutella-0.95.ebuild 2177
 MD5 cb48051df9336ec980daefd330832201 gtk-gnutella-0.95-r1.ebuild 2276
 MD5 ebfcbcbd629e41daf43f4812e1c0bf01 gtk-gnutella-0.93.3.ebuild 2171
-MD5 98ef7567f88b11e8b5fed873a6cf2704 gtk-gnutella-0.95.4.ebuild 1389
+MD5 bf0b9bd0fbbcced3cbd1845f872cb542 gtk-gnutella-0.95.4.ebuild 1386
 MD5 b486d3d458370de2c684111c83bce927 gtk-gnutella-0.94.ebuild 2162
-MD5 f52d21db91dad4ce40855c0f1d563ead ChangeLog 8413
+MD5 db35177ddd3c1b85982b70d9de71c85e ChangeLog 8517
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95-r1 71
 MD5 ae9bb9e16331554a4cb95a17526ae2e5 files/0.95-gtk2.6.patch 1475
@@ -20,7 +20,7 @@ MD5 1edaa8e1c79da47114bd08eeec6f50c3 files/gtk-gnutella.desktop 186
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDHwplZ/iYVBmujdURAsCYAKDqpDQwHuYbqiN9xKBq+FrzmWyAJgCfe+Ai
-2cvJ65K5HdefiQfcXY5tqC4=
-=d/4y
+iD8DBQFDICpv3og80iZgVQgRAnhSAJ0aWQFcvgCoKRP9Z93nl1f8hBMrIwCgrwbK
+/LwtQPSd32qnpZcI3OO7uRw=
+=0+FY
 -----END PGP SIGNATURE-----
