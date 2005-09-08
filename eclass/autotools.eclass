@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.20 2005/09/04 15:15:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.21 2005/09/08 15:04:47 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -68,6 +68,8 @@ eautoreconf() {
 
 	# Normally run by econf()
 	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
+
+	return 0
 }
 
 # These functions runs the autotools using autotools_run_tool with the
