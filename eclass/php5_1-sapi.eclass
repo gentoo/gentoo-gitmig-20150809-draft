@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.3 2005/09/08 20:32:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.4 2005/09/09 13:09:28 swegener Exp $
 #
 # ########################################################################
 #
@@ -493,7 +493,7 @@ php5_1-sapi_src_compile() {
 	else
 		enable_extension_enable		"sqlite-utf8"	"nls"		0
 	fi
-	
+
 	# Zend-GOTO-VM support
 	if useq vm-goto ; then
 		my_conf="${my_conf} --with-zend-vm=GOTO"

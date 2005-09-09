@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.30 2005/09/06 12:49:35 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.31 2005/09/09 13:09:28 swegener Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -133,7 +133,7 @@ gst-plugins_src_unpack() {
 	local makefiles
 
 	unpack ${A}
-	
+
 	# apply patch to fix broken configure in 0.8.11
 	cd ${S}
 	if [ ${PV} == "0.8.11" ]; then
@@ -141,8 +141,7 @@ gst-plugins_src_unpack() {
 		AT_M4DIR="-I m4 -I common/m4"
 		eautoreconf
 		elibtoolize
-	fi	
-
+	fi
 
 	# Link with the syswide installed interfaces if needed
 	gst-plugins_find_plugin_dir
