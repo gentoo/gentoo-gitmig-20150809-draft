@@ -1,5 +1,5 @@
-MD5 5ca73b324cac00ffebb638024e3b1db1 ChangeLog 714
-MD5 d3ff00bd9d8a99dfa8f42dc39b2ff290 jasmin-1.2.ebuild 515
 MD5 45b9a14f5d0fbec2f78984e399901e63 metadata.xml 462
+MD5 29ce01280fbade725c335748a6229dd4 jasmin-1.2.ebuild 514
+MD5 3d259c0baf9a92b2a817d49f810c3cef ChangeLog 811
 MD5 b1a0c3bf95345025a2dcc787a8ecd6e1 files/50jasmin-gentoo.el 97
 MD5 92b56083bb34856878d6cca33f84fa0a files/digest-jasmin-1.2 60

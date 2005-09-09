@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/alt-font-menu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.7 2005/07/16 19:28:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.8 2005/09/09 15:57:03 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> alt-font-menu-0.4.ebuild:
+  Mark 0.4 stable on alpha
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> alt-font-menu-0.4.ebuild:
   Mistakenly keyworded ppc instead of ~ppc.
