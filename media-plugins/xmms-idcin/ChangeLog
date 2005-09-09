@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-idcin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.9 2004/10/07 03:17:24 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.10 2005/09/09 12:02:08 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-idcin-0.5.ebuild:
+  Don't install INSTALL file.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-idcin-0.5.ebuild:
