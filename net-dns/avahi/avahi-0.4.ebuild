@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.4.ebuild,v 1.1 2005/09/08 22:38:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.4.ebuild,v 1.2 2005/09/09 13:52:44 swegener Exp $
 
 inherit eutils qt3
 
@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
+	export PKG_CONFIG_PATH="${QTDIR}/lib/pkgconfig"
+
 	enewgroup avahi
 	enewuser avahi -1 -1 -1 avahi
 }
