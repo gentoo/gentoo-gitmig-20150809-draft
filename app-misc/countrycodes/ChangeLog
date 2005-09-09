@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.15 2005/04/21 19:09:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.16 2005/09/09 17:32:45 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> countrycodes-1.0.5.ebuild:
+  Mark 1.0.5 stable on alpha
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> countrycodes-1.0.5.ebuild:
   stable on amd64
