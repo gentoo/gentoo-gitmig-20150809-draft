@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/stripes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/stripes/ChangeLog,v 1.5 2005/08/28 02:25:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/stripes/ChangeLog,v 1.6 2005/09/09 16:09:08 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> stripes-0.2.ebuild:
+  Mark 0.2 stable on alpha
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> stripes-0.2.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
