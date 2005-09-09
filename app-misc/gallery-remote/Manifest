@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 8d901509915f147e995103c3d14f05bd gallery-remote-1.4.1.ebuild 1799
-MD5 b19ad9875a9d56ea7451634d0c771fef ChangeLog 1057
+MD5 5c515d9736cba6f18d26a1f420ec67bc ChangeLog 1060
 MD5 794d84e96c85c480965fda1c9319b24f metadata.xml 256
 MD5 f5d267b39b6a2e2caa6d4aa03d3b5d46 gallery-remote-1.4.1-r1.ebuild 1953
 MD5 df0456549df4f97a4b46faf9b0c155c3 files/digest-gallery-remote-1.4.1-r1 85
@@ -11,7 +11,7 @@ MD5 0ecf06ec29fc94fb87eff8f73989989b files/1.4.1.patch 1125
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIU9I/rLF9B432nYRAmvMAKCFz8WRPvpoMJYiFKLbnUZrc44CrgCfbB8F
-WkMAU8XD4ekk4eq1p7S+Xao=
-=XRAw
+iD8DBQFDIVCX/rLF9B432nYRAtQOAJ9nPIkxh2G85hjh6BRSGSBasSo8HACfYUHZ
+UM+oZU+tfcchVxjGkDu4X+U=
+=pydM
 -----END PGP SIGNATURE-----
