@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.9 2005/04/24 10:50:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.10 2005/09/09 15:23:35 fmccor Exp $
+
+  09 Sep 2005; Ferris McCormick <fmccor@gentoo.org>
+  ruby-opengl-0.32d.ebuild:
+  Stable on sparc.  Runs with no problems.
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> ruby-opengl-0.32c.ebuild,
   ruby-opengl-0.32d.ebuild:
