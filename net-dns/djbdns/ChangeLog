@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.64 2005/08/07 13:26:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.65 2005/09/09 09:51:46 flameeyes Exp $
+
+*djbdns-1.05-r16 (09 Sep 2005)
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +djbdns-1.05-r16.ebuild:
+  Updated ipv6 patch to test23.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   djbdns-1.05-r14.ebuild:
