@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.6.1.ebuild,v 1.2 2005/06/08 15:22:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.6.1.ebuild,v 1.3 2005/09/09 13:16:12 flameeyes Exp $
 
 inherit eutils
 
@@ -19,5 +19,5 @@ DEPEND="dev-libs/libxml2
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc ChangeLog INSTALL README NEWS
+	dodoc ChangeLog README NEWS
 }

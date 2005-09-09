@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa28f4443943d36b60a39a2da98774b6 ChangeLog 1943
 MD5 f88c3726b15dbc09ac8c717926f8088d wavbreaker-0.5.ebuild 729
 MD5 653b74b757742b5896c54eec3ab7432d wavbreaker-0.6.1.ebuild 640
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 380ba426e2f4b94a3bfd979a0d5f464f files/digest-wavbreaker-0.5 65
 MD5 0f7681a3b39a9d551e83a1a758a0d0cb files/digest-wavbreaker-0.6.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIYs0j5H05b2HAEkRAjwBAJwKUPjd04DqZli33NbKlUYp7VNLQACgnGaQ
+ExgTY/lQrQZisxo00X2zCBw=
+=QkAc
+-----END PGP SIGNATURE-----

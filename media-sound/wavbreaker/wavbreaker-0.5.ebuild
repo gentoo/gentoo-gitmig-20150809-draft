@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.5.ebuild,v 1.2 2005/06/05 20:10:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.5.ebuild,v 1.3 2005/09/09 13:16:12 flameeyes Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/libxml2
 	>=x11-libs/gtk+-2.0
 	virtual/libc"
 
-DOCS="ChangeLog COPYING INSTALL README NEWS"
+DOCS="ChangeLog README NEWS"
 
 src_install() {
 	make DESTDIR=${D} install
