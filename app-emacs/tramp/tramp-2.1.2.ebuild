@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.2.ebuild,v 1.7 2005/05/06 18:17:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.2.ebuild,v 1.8 2005/09/09 16:11:41 agriffis Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/tramp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc sparc ~x86"
 IUSE=""
 
 # this is needed; elisp.eclass redefines src_compile() from portage default
