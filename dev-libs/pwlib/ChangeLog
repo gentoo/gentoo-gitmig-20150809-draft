@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.89 2005/09/07 20:48:49 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.90 2005/09/09 17:34:30 stkn Exp $
+
+  09 Sep 2005; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.4.ebuild:
+  Changed ebuild to fix #105057, pwlib no longer builds plugins that have their
+  flags disabled. New libdc1394 API is currently unsupported, changed DEPENDS to
+  block >=libdc1394-2.0.0_pre0 (to avoid possible loops during updating) and
+  depend on <1.9.9.
 
   07 Sep 2005; Stefan Knoblich <stkn@gentoo.org> +files/pwlib-1.8.4-gcc4.diff,
   -files/pwlib-gcc4.gz, pwlib-1.8.4.ebuild:

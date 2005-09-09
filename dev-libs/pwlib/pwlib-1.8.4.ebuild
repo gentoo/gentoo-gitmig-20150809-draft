@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.4.ebuild,v 1.7 2005/09/07 20:48:49 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.8.4.ebuild,v 1.8 2005/09/09 17:34:30 stkn Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -25,29 +25,30 @@ DEPEND=">=sys-devel/bison-1.28
 	ieee1394? ( media-libs/libdv
 		sys-libs/libavc1394
 		sys-libs/libraw1394
-		media-libs/libdc1394 )
+		<media-libs/libdc1394-1.9.9
+		!>=media-libs/libdc1394-2.0.0_pre0 )
 	esd? ( media-sound/esound )"
 
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/pwlib-1.8.4-gcc4.diff
-
-	cd ${S}/make
+	cd ${S}
 
 	# filter out -O3 and -mcpu embedded compiler flags
 	sed -i \
 		-e "s:-mcpu=\$(CPUTYPE)::" \
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
-		unix.mak
+		make/unix.mak
 
 	# newer esound package doesn't install libesd.a anymore,
 	# use dynamic library instead (fixes #100432)
 	epatch ${FILESDIR}/pwlib-1.6.3-dyn-esd.patch
+
+	# gcc-4 patch
+	epatch ${FILESDIR}/pwlib-1.8.4-gcc4.diff
 }
 
 src_compile() {
-	local plugins
 	local myconf
 
 	# may cause ICE (bug #70638)
@@ -64,21 +65,17 @@ src_compile() {
 	#use ipv6 \
 	#	&& myconf="${myconf} --enable-ipv6" \
 	#	|| myconf="${myconf} --disable-ipv6"
-	myconf="${myconf} --enable-ipv6"
 
-	# plugins, oss and v4l are default
-	plugins="oss v4l"
+	# enable default plugins and force ipv6 support
+	myconf="--enable-ipv6 --enable-oss --enable-v4l"
 
 	use ieee1394 \
-		&& plugins="${plugins} avc dc"
+		&& myconf="${myconf} --enable-avc --enable-dc" \
+		|| myconf="${myconf} --disable-avc --disable-dc"
 
+	# --disable-alsa breaks configure
 	use alsa \
-		&& plugins="${plugins} alsa"
-
-	if use v4l2; then
-		myconf="${myconf} --enable-v4l2"
-		plugins="${plugins} v4l2"
-	fi
+		&& myconf="${myconf} --enable-alsa"
 
 	if use esd; then
 		# fixes bug #45059
@@ -90,12 +87,11 @@ src_compile() {
 			${S}/make/unix.mak
 	fi
 
-	# merge plugin options (safe way if default = "")
-	plugins="$(echo ${plugins} | sed -e "y: :,:")"
-
-	econf ${myconf} \
+	econf \
 		--enable-plugins \
-		--with-plugins=${plugins} || die "configure failed"
+		$(use_enable v4l2) \
+		$(use_enable sdl) \
+		${myconf} || die "configure failed"
 
 	# Horrible hack to strip out -L/usr/lib to allow upgrades
 	# problem is it adds -L/usr/lib before -L${S} when SSL is
