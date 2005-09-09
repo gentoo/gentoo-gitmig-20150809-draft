@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 78aeb8d0aa64242ec0b0fd2c1393cc5c ChangeLog 2432
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 c97a4f1d12389c9d5739056141d02c9f xsl-syntax-0.3.11.ebuild 524
 MD5 8ca110005cb6721f03a20c9f3e640cde xsl-syntax-0.3.11-r1.ebuild 696
 MD5 f9e305c080f3b180db1bd1b594d99d5f files/digest-xsl-syntax-0.3.11 68
 MD5 f9e305c080f3b180db1bd1b594d99d5f files/digest-xsl-syntax-0.3.11-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDIdXmwUpWvClEHQoRAqElAKCFssvqfa2QSn4dbLDbz0adFgz3dACcDb3B
+oDGGdAfOl0kQ8IMgePgvD/s=
+=0lOJ
+-----END PGP SIGNATURE-----
