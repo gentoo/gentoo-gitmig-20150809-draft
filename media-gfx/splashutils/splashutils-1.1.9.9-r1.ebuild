@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.2 2005/09/08 12:40:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.3 2005/09/09 11:33:50 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -8,7 +8,7 @@ MISCSPLASH="miscsplashutils-0.1.3"
 GENTOOSPLASH="splashutils-gentoo-0.1.13"
 V_JPEG="6b"
 V_PNG="1.2.8"
-V_ZLIB="1.2.1"
+V_ZLIB="1.2.3"
 V_FT="2.1.9"
 
 IUSE="hardened png truetype kdgraphics"
@@ -116,12 +116,11 @@ src_compile() {
 	spl_conf_use truetype CONFIG_TTF_KERNEL
 	spl_conf_use kdgraphics CONFIG_SILENT_KD_GRAPHICS
 	sed -i -e "s/^CFLAGS[ \t]*=.*/CFLAGS = ${CFLAGS}/" Makefile
-		LIBCSRC="libs/klibc-${V_KLIBC}/klibc" \
-		|| die "failed to build splashutils"
 
 	cd ${SM}
 	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
 	cd ${S}
+	export ZLIBSRC="libs/zlib-${V_ZLIB}"
 	emake -j1 LIB=$(get_libdir) || die "failed to build splashutils"
 }
 
