@@ -1,5 +1,5 @@
-MD5 6e1b953c0e7e5578c308ab1445719d51 ChangeLog 628
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 d875e1ebfdaed133a166aefc7758ee3f rfcview-0.5.ebuild 510
+MD5 1e4dcf50ee5c03e1d3d2bb1f5e2b4784 ChangeLog 726
+MD5 53344ff8d5cc16ad775e67d2d669ebc4 rfcview-0.5.ebuild 509
 MD5 3c76ef8f74b9e8b919c65767aeac25dc files/50rfcview-gentoo.el 230
 MD5 5607de5ee69c24311a94a90879c1779c files/digest-rfcview-0.5 61

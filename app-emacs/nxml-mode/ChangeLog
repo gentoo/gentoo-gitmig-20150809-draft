@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/nxml-mode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.13 2005/09/02 19:19:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.14 2005/09/09 16:03:18 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> nxml-mode-20041004.ebuild:
+  Mark 20041004 stable on alpha
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   nxml-mode-20041004.ebuild:
