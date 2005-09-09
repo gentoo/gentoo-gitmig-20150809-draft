@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.24 2005/05/28 15:27:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.25 2005/09/09 13:19:09 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  rezound-0.12.0_beta.ebuild:
+  Don't install INSTALL and ABOUT-NLS files.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   -rezound-0.11.1_beta.ebuild:
