@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.9 2005/09/07 18:18:51 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.10 2005/09/09 14:13:26 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> terminal-0.2.2-r1.ebuild:
+  Mark 0.2.2-r1 stable on ia64
 
   07 Sep 2005; Brad Cowan <bcowan@gentoo.org> terminal-0.2.4.ebuild:
   Add dbus as conditional dep.
