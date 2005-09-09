@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.0.ebuild,v 1.3 2005/09/09 13:14:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.0.ebuild,v 1.4 2005/09/09 14:40:10 swegener Exp $
 
-IUSE="${IUSE} cgi cli discard-path force-cgi-redirect"
+IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~ppc ~sparc ~x86"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
@@ -25,8 +25,8 @@ want_apache
 
 DESCRIPTION="The PHP language runtime engine"
 
-DEPEND="${DEPEND} app-admin/eselect-php"
-RDEPEND="${RDEPEND} app-admin/eselect-php"
+DEPEND="app-admin/eselect-php"
+RDEPEND="app-admin/eselect-php"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
