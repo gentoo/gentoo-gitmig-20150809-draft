@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.3.3.ebuild,v 1.1 2005/09/04 15:58:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.4.1.ebuild,v 1.1 2005/09/09 02:37:50 allanonjl Exp $
 
 inherit python gnome2
 
