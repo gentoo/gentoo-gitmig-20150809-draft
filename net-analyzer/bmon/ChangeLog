@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.19 2005/09/09 02:00:57 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.20 2005/09/09 21:10:20 vanquirius Exp $
+
+  09 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/bmon-2.1.0-gcc4.diff, bmon-2.1.0-r1.ebuild:
+  Add gcc4 patch for bug 105343. Thanks to Anatoly Kamchatnov <rev@male.ru>
+  for reporting.
 
 *bmon-2.1.0-r1 (09 Sep 2005)
 
