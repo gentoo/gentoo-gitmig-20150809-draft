@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.11.92.ebuild,v 1.1 2005/08/28 15:39:55 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.12.0.ebuild,v 1.1 2005/09/09 01:01:55 allanonjl Exp $
 
 inherit gnome2
 
