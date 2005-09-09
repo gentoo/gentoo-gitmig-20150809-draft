@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/freebirth
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/ChangeLog,v 1.8 2004/12/19 05:39:01 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/ChangeLog,v 1.9 2005/09/09 13:07:04 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> freebirth-0.3.2.ebuild:
+  Don't install INSTALL file.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   freebirth-0.3.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2.ebuild,v 1.9 2004/12/19 05:39:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/freebirth-0.3.2.ebuild,v 1.10 2005/09/09 13:07:04 flameeyes Exp $
 
 IUSE=""
 
@@ -34,5 +34,5 @@ src_install() {
 	insinto /usr/lib/${PN}/raw
 	doins raw/*.raw
 
-	dodoc CHANGES INSTALL NEXT_VERSION README
+	dodoc CHANGES NEXT_VERSION README
 }
