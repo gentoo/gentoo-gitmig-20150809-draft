@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.38 2005/09/08 20:47:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.39 2005/09/09 13:14:28 weeve Exp $
+
+  09 Sep 2005; Jason Wever <weeve@gentoo.org> php-4.4.0.ebuild,
+  php-5.0.4.ebuild:
+  Added ~sparc keyword to help fix the broken dependencies of
+  dev-php/PEAR-Date-1.4.3-r1.
 
 *php-4.4.0 (08 Sep 2005)
 
