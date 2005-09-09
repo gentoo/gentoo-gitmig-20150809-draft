@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/smac
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.1 2005/09/09 01:56:57 wolf31o2 Exp $
+
+*smac-6.0a (09 Sep 2005)
+
+  09 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +smac-6.0a.ebuild:
+  Initial import. Ebuild by <anakin.skyw@gmx.de> and submitted to bug #98687.
+  Closing bug #98687 and bug #31395.
+
