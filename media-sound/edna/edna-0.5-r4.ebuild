@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.10 2005/09/09 04:59:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.11 2005/09/09 22:06:23 nerdboy Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 pkg_postinst() {
 	ewarn
 	einfo "Edit edna.conf to taste before starting (multiple source"
-	einfo "directories are allowed).  Test ednad from a shell prompt"
+	einfo "directories are allowed).  Test edna from a shell prompt"
 	einfo "until you have it configured properly, then add edna to"
 	einfo "the default runlevel when you're ready.  Add the USE flag"
 	einfo "oggvorbis if you want edna to serve ogg files."
