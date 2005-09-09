@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 bd7f8b57a30282892ad4cfafffa99b1c metadata.xml 360
-MD5 8e269ebb98b62d437d599ee7c6b0e531 ChangeLog 676
-MD5 216f9bada2a1b74eae4dc823b93e462b stripes-0.2.ebuild 546
+MD5 ab2f41ed9b869db333ab66b7122d979c ChangeLog 776
+MD5 ecbdb1ca0a2a1c16dc47f93d112b7354 stripes-0.2.ebuild 547
 MD5 f8003e24d43f39bbf5752b540878909b files/50stripes-gentoo.el 98
 MD5 6f4a5e959146aae40a9e25885cb53300 files/digest-stripes-0.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDESCmmOfEJZHYOKcRAqyIAKC5LY23yLNNJZ8xVJXKevsxS0d8XQCbBrbi
-P2PVLROHrzMAYjpOpXyYIIg=
-=WvyP
------END PGP SIGNATURE-----
