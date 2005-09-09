@@ -1,11 +1,11 @@
 #!/sbin/runscript
 #
-# Startup script for the edna audio server 
+# Startup script for the edna mp3 mini server 
 #
-# description: edna is a mini mp3/ogg webserver
+# description: edna is a mini mp3 webserver
 # processname: python
 # pidfile: /var/run/ednad.pid
-# config: /etc/edna/edna.conf
+# config:
 
 export PYTHONPATH=/usr/lib/edna
 EDNA=/usr/bin/edna
@@ -13,22 +13,18 @@ EDNACONF=/etc/edna/edna.conf
 PIDFILE=/var/run/edna.pid
 
 depend() {
-        use net
-	need local
+        need local
 }
 
 start() {
-    ebegin "Starting edna mp3 server"
-    start-stop-daemon --quiet --pidfile $PIDFILE
-    $EDNA --daemon $EDNACONF
-    eend $? "Failed to start edna"
+    ebegin "Starting ednad mp3 server"
+    start-stop-daemon -m -b --start --quiet --pidfile $PIDFILE \
+    --exec $EDNA -- $EDNACONF
+    eend $?
 }
 
 stop() {
-    ebegin "Stopping edna mp3 server"
-    start-stop-daemon --stop -o --quiet --pidfile $PIDFILE
-    local ret=$?
-    eend ${ret} "Failed to stop edna"
-    rm -f $PIDFILE
-    return ${ret}
+    ebegin "Stopping ednad"
+    start-stop-daemon -o --quiet --stop --pidfile $PIDFILE
+    eend $?
 }
