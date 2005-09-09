@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.9 2005/01/11 13:02:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.10 2005/09/09 11:15:52 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -36,5 +36,5 @@ src_unpack() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO docs/libfaac.pdf
+	dodoc AUTHORS ChangeLog NEWS README TODO docs/libfaac.pdf
 }
