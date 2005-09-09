@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-0.9.ebuild,v 1.1 2005/09/04 16:46:04 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-pgsql/pecl-pdo-pgsql-0.9.ebuild,v 1.2 2005/09/09 12:57:44 weeve Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="PDO_PGSQL"
@@ -13,7 +13,7 @@ IUSE=""
 DESCRIPTION="PHP Data Objects (PDO) Driver For PostgreSQL Server"
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 DEPEND="${DEPEND}
 		dev-php5/pecl-pdo
 		dev-db/postgresql"

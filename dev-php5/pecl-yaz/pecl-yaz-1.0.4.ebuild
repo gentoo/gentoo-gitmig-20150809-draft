@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/pecl-yaz-1.0.4.ebuild,v 1.1 2005/09/04 16:50:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaz/pecl-yaz-1.0.4.ebuild,v 1.2 2005/09/09 13:03:51 weeve Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="yaz"
@@ -12,7 +12,7 @@ inherit php-ext-pecl-r1
 DESCRIPTION="This extension implements a Z39.50 client for PHP using the YAZ toolkit."
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="${DEPEND}

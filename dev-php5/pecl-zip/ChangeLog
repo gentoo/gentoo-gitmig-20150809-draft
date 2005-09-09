@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.1 2005/09/04 16:51:20 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.2 2005/09/09 13:04:45 weeve Exp $
+
+  09 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-zip-1.0.ebuild:
+  Added ~sparc keyword to help fix the broken dependencies of
+  dev-php/PEAR-Date-1.4.3-r1.
 
   18 Aug 2005; <stuart@gentoo.org> ChangeLog:
   Initial version; replaces older dev-php/* packages
