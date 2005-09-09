@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.48 2005/09/08 12:09:03 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.49 2005/09/09 23:01:50 josejx Exp $
+
+  09 Sep 2005; Joseph Jezak <josejx@gentoo.org> gtk-gnutella-0.95.4.ebuild:
+  Marked ppc stable for bug #105147.
 
   08 Sep 2005; Jose Luis Rivero <yoswink@gentoo.org> ChangeLog:
   Marked stable on alpha wrt bug #105147
