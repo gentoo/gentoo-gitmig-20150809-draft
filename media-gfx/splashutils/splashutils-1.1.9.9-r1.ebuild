@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.4 2005/09/09 13:11:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.9-r1.ebuild,v 1.5 2005/09/09 23:52:10 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -10,6 +10,11 @@ V_JPEG="6b"
 V_PNG="1.2.8"
 V_ZLIB="1.2.3"
 V_FT="2.1.9"
+
+ZLIBSRC="libs/zlib-${V_ZLIB}"
+LPNGSRC="libs/libpng-${V_PNG}"
+JPEGSRC="libs/jpeg-${V_JPEG}"
+FT2SRC="libs/freetype-${V_FT}"
 
 IUSE="hardened png truetype kdgraphics"
 
@@ -120,7 +125,7 @@ src_compile() {
 	cd ${SM}
 	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
 	cd ${S}
-	export ZLIBSRC="libs/zlib-${V_ZLIB}"
+	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
 	emake -j1 LIB=$(get_libdir) || die "failed to build splashutils"
 }
 
@@ -128,6 +133,7 @@ src_install() {
 	cd ${SM}
 	make DESTDIR=${D} install || die
 
+	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
 	cd ${S}
 	make DESTDIR=${D} install || die
 
