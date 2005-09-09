@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.1.ebuild,v 1.3 2005/08/11 02:03:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.1.ebuild,v 1.4 2005/09/09 04:48:54 josejx Exp $
 
 inherit eutils linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="acpi"
+IUSE="acpi debug"
 
 DEPEND="virtual/libc
 	>=sys-apps/baselayout-1.8.6.12-r1"
@@ -34,7 +34,8 @@ src_compile() {
 		laptop=powerbook
 	fi
 
-	econf laptop=$laptop || die "Sorry, failed to configure pbbuttonsd"
+	econf laptop=$laptop \
+		$(use_enable debug) || die "Sorry, failed to configure pbbuttonsd"
 	emake || die "Sorry, failed to compile pbbuttonsd"
 }
 
@@ -60,4 +61,6 @@ pkg_postinst() {
 	einfo "try setting replace_pmud=yes in /etc/pbbuttonsd.conf and"
 	einfo "disabling PMUD"
 	fi
+r
+r
 }
