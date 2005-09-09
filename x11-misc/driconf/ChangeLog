@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/driconf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.1 2005/09/09 03:03:31 joshuabaergen Exp $
+
+*driconf-0.2.7 (09 Sep 2005)
+
+  09 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org> +metadata.xml,
+  +driconf-0.2.7.ebuild:
+  Initial import.  Thanks to James Le Cuirot and Christoph Brill (egore) for the
+  ebuild.  Bug #70267 .
+
