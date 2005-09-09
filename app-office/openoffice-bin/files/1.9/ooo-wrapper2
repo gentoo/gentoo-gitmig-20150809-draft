@@ -31,7 +31,7 @@ my $DebugRH = $ENV{OOO_RH_DEBUG};
 my $VendorName = 'Gentoo';
 # Define system installation directory
 # Autoconf totally sucks for @libdir@ type substitution
-my $SystemInstallDir = '/opt/OpenOffice.org';
+my $SystemInstallDir = '/usr/lib/openoffice';
 # Suffix for parallel installable versioning
 my $BinSuffix = '2';
 # ooo-build version
