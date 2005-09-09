@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-shell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.18 2005/05/28 00:31:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/ChangeLog,v 1.19 2005/09/09 12:27:56 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-shell-0.99.3-r3.ebuild:
+  Don't install INSTALL file. Remove dependency on sed. Fix sed command to be
+  standard.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xmms-shell-0.99.3-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r3.ebuild,v 1.8 2005/05/28 00:31:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r3.ebuild,v 1.9 2005/09/09 12:27:56 flameeyes Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ RESTRICT="primaryuri"
 RDEPEND=">=media-sound/xmms-1.2.7
 	readline? ( >=sys-libs/readline-4.1 )"
 DEPEND="${RDEPEND}
-	sys-apps/sed
 	sys-devel/automake
 	sys-devel/autoconf"
 
@@ -43,7 +42,7 @@ src_unpack() {
 	autoconf
 
 	# Fix compilation in gcc3.3
-	sed -i.orig ${S}/src/getline.cc -e 's/<string>/<string.h>/'
+	sed -i -e 's/<string>/<string.h>/' ${S}/src/getline.cc
 }
 
 src_compile() {
@@ -56,6 +55,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "Install failed."
-	dodoc AUTHORS ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog README
 }
 
