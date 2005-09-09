@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4423 2005/09/09 02:58:35 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4424 2005/09/09 15:01:10 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -851,10 +851,6 @@ x11-proto/xproxymanagementprotocol
 x11-themes/gentoo-xcursors
 x11-themes/xcursor-themes
 
-# Matthias Schwarzott <zzam@gentoo.org> (07 Aug 2005)
-# Masked because it depends on masked vdr ebuild
-=media-plugins/vdr-femon-0.9.1
-
 # Rob Cakebread <pythonhead@gentoo.org> (04 Aug 2005)
 # Needs testing, in particular svn, cvs and darcs control
 dev-util/pida
@@ -918,10 +914,6 @@ net-misc/powerd
 =gnustep-base/gnustep-back-art-0.10.0
 =gnustep-base/gnustep-back-xlib-0.10.0
 =gnustep-base/gnustep-env-0.1.7
-
-# Matthias Schwarzott <zzam@gentoo.org> (23 Jul 2005)
-# Masked for testing until ebuild is ready for general use.
-=media-video/vdr-1.3.27
 
 # <ka0ttic@gentoo.org> (21 Jul 2005)
 # Masked for testing.
