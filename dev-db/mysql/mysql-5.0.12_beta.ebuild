@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.2 2005/09/08 14:57:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.3 2005/09/09 11:42:28 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -39,10 +39,6 @@ PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
 if version_is_at_least "4.1.3" ; then
 	IUSE="${IUSE} cluster utf8 geometry extraengine"
 fi
-
-shopt -s extglob
-export LC_ALL="C"
-unset LC_COLLATE
 
 mysql_upgrade_error() {
 	mysql_get_datadir
@@ -109,7 +105,13 @@ pkg_setup() {
 			die
 		fi
 	fi
+
 	mysql_upgrade_warning
+
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 -1 /dev/null mysql \
+	|| die "problem adding user mysql"
+
 }
 
 src_unpack() {
@@ -148,11 +150,15 @@ src_unpack() {
 		|| die "failed reconfigure step 02"
 	automake --force --add-missing && autoconf \
 		|| die "failed reconfigure step 03"
-	if ! version_is_at_least "5.1_alpha" ; then
-		pushd innobase && aclocal && autoheader && autoconf && automake \
-			|| die "failed innobase reconfigure"
-		popd
+
+	if version_is_at_least "5.1_alpha" ; then
+		pushd storage/innobase || die "failed chdir"
+	else
+		pushd innobase || die "failed chroot"
 	fi
+	aclocal && autoheader && autoconf && automake
+	popd
+
 	pushd bdb/dist && sh s_all \
 		|| die "failed bdb reconfigure"
 	popd
@@ -306,30 +312,32 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-src_install() {
+src_test() {
+	cd ${S}
+	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	make check || die "make check failed"
+	if ! useq minimal; then
+		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
+		local retstatus
+		addpredict /this-dir-does-not-exist/t9.MYI
 
-	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
+		version_is_at_least "5.0.6_beta" \
+		&& make test-force \
+		|| make test
+		retstatus=$?
 
-	enewgroup mysql 60 || die "problem adding group mysql"
-	enewuser mysql 60 -1 /dev/null mysql \
-	|| die "problem adding user mysql"
-
-	diropts "-m0750"
-	if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
-		dodir "${DATADIR}"
-		keepdir "${DATADIR}"
-		chown -R mysql:mysql "${D}/${DATADIR}"
+		# to be sure ;)
+		pkill -9 -f "${S}/ndb" 2>/dev/null
+		pkill -9 -f "${S}/sql" 2>/dev/null
+		[[ $retstatus -eq 0 ]] || die "make test failed"
+	else
+		einfo "Skipping server tests due to minimal build."
 	fi
+}
 
-	dodir /var/log/mysql
-
-	diropts "-m0755"
-	dodir /var/run/mysqld
-
-	keepdir /var/run/mysqld /var/log/mysql
-	chown -R mysql:mysql \
-		${D}/var/run/mysqld \
-		${D}/var/log/mysql
+src_install() {
+	mysql_get_datadir
+	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
 
 	# move client libs, install a couple of missing headers
 	local lib=$(get_libdir)
@@ -388,6 +396,26 @@ src_install() {
 		newexe "${FILESDIR}/mysql-4.0.24-r2.rc6" mysql
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/logrotate.mysql" mysql
+
+		#empty dirs...
+		diropts "-m0750"
+		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
+	        dodir "${DATADIR}"
+	        keepdir "${DATADIR}"
+	        chown -R mysql:mysql "${D}/${DATADIR}"
+		fi
+
+		dodir "/var/log/mysql"
+		touch ${D}/var/log/mysql/mysql.{log,err}
+		chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
+
+		diropts "-m0755"
+		dodir "/var/run/mysqld"
+
+		keepdir "/var/run/mysqld" "${D}/var/log/mysql"
+		chown -R mysql:mysql \
+	        "${D}/var/run/mysqld" \
+	        "${D}/var/log/mysql"
 	fi
 
 	# docs
@@ -401,27 +429,30 @@ src_install() {
 	fi
 }
 
-src_test() {
-	cd ${S}
-	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-	make check || die "make check failed"
+pkg_preinst() {
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 -1 /dev/null mysql \
+	|| die "problem adding user mysql"
+}
+
+pkg_postinst() {
+	mysql_get_datadir
+
 	if ! useq minimal; then
-		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
-		local retstatus
-		addpredict /this-dir-does-not-exist/t9.MYI
-
-		version_is_at_least "5.0.6_beta" \
-		&& make test-force \
-		|| make test
-		retstatus=$?
-
-		# to be sure ;)
-		pkill -9 -f "${S}/ndb" 2>/dev/null
-		pkill -9 -f "${S}/sql" 2>/dev/null
-		[[ $retstatus -eq 0 ]] || die "make test failed"
-	else
-		einfo "Skipping server tests due to minimal build."
+		# your friendly public service announcement...
+		einfo
+		einfo "You might want to run:"
+		einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
+		einfo "if this is a new install."
+		einfo
+		if [[ "${PREVIOUS_DATADIR}" == "yes" ]] ; then
+			ewarn "Previous datadir found, it's YOUR job to change"
+			ewarn "ownership and have care of it"
+		fi
 	fi
+
+	mysql_upgrade_warning
+	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 }
 
 pkg_config() {
@@ -522,37 +553,4 @@ pkg_config() {
 	kill $( cat ${ROOT}/var/run/mysqld/mysqld.pid )
 	rm  "${sqltmp}"
 	einfo "done"
-}
-
-pkg_postinst() {
-	mysql_get_datadir
-
-	if ! useq minimal; then
-		#empty dirs...
-		[[ "${PREVIOUS_DATADIR}" != "yes" ]] \
-		&& [ -d "${ROOT}/${DATADIR}" ] || install -d -m0750 -o mysql -g mysql ${ROOT}/var/lib/mysql
-		[ -d "${ROOT}/var/run/mysqld" ] || install -d -m0755 -o mysql -g mysql ${ROOT}/var/run/mysqld
-		[ -d "${ROOT}/var/log/mysql" ] || install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
-
-		# secure the logfiles... does this bother anybody?
-		touch ${ROOT}/var/log/mysql/mysql.{log,err}
-		chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
-		chmod 0660 ${ROOT}/var/log/mysql/mysql*
-		# secure some directories
-		chmod 0750 ${ROOT}/var/log/mysql ${ROOT}/${DATADIR}
-
-		# your friendly public service announcement...
-		einfo
-		einfo "You might want to run:"
-		einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
-		einfo "if this is a new install."
-		einfo
-		if [[ "${PREVIOUS_DATADIR}" == "yes" ]] ; then
-			ewarn "Previous datadir found, it's YOUR job to change"
-			ewarn "ownership and have care of it"
-		fi
-	fi
-
-	mysql_upgrade_warning
-	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 }

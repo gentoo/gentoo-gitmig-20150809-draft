@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.228 2005/09/08 14:57:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.229 2005/09/09 11:42:28 vivo Exp $
+
+  09 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.26.ebuild,
+  mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:
+  - Added "MYSQL_STRAIGHT_UPGRADE" to MySQL 4.1 ebuilds, this permit to upgrade
+  plainly from 4.0 series. A similar patch for 5.0 will follow.
+  - Uniformation of mysql-4.1 ebuild to the 5.1 series one, now diff -Naur of the
+  two should be smaller
+  - fix for Bug #103975 dev-db/mysql shouldn't use enewuser and enewgroup in
+  src_install() The bug was introduced when fixing bug #95320.
+  - also mysql-4.1 now downloads mysql-extras-*.tar.bz2 from gentoo mirrors.
 
 *mysql-4.0.26 (08 Sep 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.15 2005/07/27 00:22:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.16 2005/09/09 11:42:28 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -63,7 +63,7 @@ src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
 
 	local myconf
-	# The following fix is due to a bug with bdb on sparc's. See: 
+	# The following fix is due to a bug with bdb on sparc's. See:
 	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 	# same for alpha (see http://www.mysql.com/doc/en/BDB_portability.html)
 	# thanks to peter@icebear.net for noticing this.

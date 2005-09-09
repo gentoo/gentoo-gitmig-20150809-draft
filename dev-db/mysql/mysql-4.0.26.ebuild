@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.1 2005/09/08 14:57:22 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.2 2005/09/09 11:42:28 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -37,6 +37,17 @@ RDEPEND="${DEPEND}
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( dev-perl/DBD-mysql )"
 
+mysql_upgrade_warning() {
+	ewarn
+	ewarn "If you're upgrading from MySQL-3.x to 4.0, or 4.0.x to 4.1.x, you"
+	ewarn "must recompile the other packages on your system that link with"
+	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
+	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
+	ewarn "app-portage/gentoolkit."
+	ewarn
+	epause 5
+}
+
 mysql_get_datadir() {
 	DATADIR=""
 	if [ -f '/etc/mysql/my.cnf' ] ; then
@@ -53,20 +64,14 @@ mysql_get_datadir() {
 	export DATADIR
 }
 
-mysql_upgrade_warning() {
-	ewarn
-	ewarn "If you're upgrading from MySQL-3.x to 4.0, or 4.0.x to 4.1.x, you"
-	ewarn "must recompile the other packages on your system that link with"
-	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
-	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
-	ewarn "app-portage/gentoolkit."
-	ewarn
-	epause 5
-}
-
 pkg_setup() {
 	mysql_upgrade_warning
 	mysql_get_datadir
+
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 -1 /dev/null mysql \
+	|| die "problem adding user mysql"
+
 }
 
 src_unpack() {
@@ -222,23 +227,32 @@ src_compile() {
 	emake || die "compile problem"
 }
 
+src_test() {
+	cd ${S}
+	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	make check || die "make check failed"
+	if ! useq minimal; then
+		local retstatus
+		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
+		addpredict /this-dir-does-not-exist/t9.MYI
+		make test
+		retstatus=$?
+
+		# to be sure ;)
+		pkill -9 -f ${S}/ndb/src/kernel/ndbd 2>/dev/null
+		pkill -9 -f ${S}/ndb/src/mgmsrv/ndb_mgmd 2>/dev/null
+		pkill -9 -f ${S}/ndb/src/mgmclient/ndb_mgm 2>/dev/null
+		pkill -9 -f ${S}/sql/mysqld 2>/dev/null
+		[[ $retstatus == 0 ]] || die "make test failed"
+
+	else
+		einfo "Skipping server tests due to minimal build."
+	fi
+}
+
 src_install() {
+	mysql_get_datadir
 	make install DESTDIR="${D}" benchdir_root="/usr/share/mysql" || die
-
-	enewgroup mysql 60 || die "problem adding group mysql"
-	enewuser mysql 60 -1 /dev/null mysql \
-	|| die "problem adding user mysql"
-
-	diropts "-m0750"
-	dodir "${DATADIR}" /var/log/mysql
-
-	diropts "-m0755"
-	dodir /var/run/mysqld
-
-	keepdir "${DATADIR}" /var/run/mysqld /var/log/mysql
-	chown -R mysql:mysql ${D}/${DATADIR} \
-		${D}/var/run/mysqld \
-		${D}/var/log/mysql
 
 	# move client libs, install a couple of missing headers
 	local lib=$(get_libdir)
@@ -291,6 +305,26 @@ src_install() {
 		newexe "${FILESDIR}/mysql-4.0.24-r2.rc6" mysql
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/logrotate.mysql" mysql
+
+		#empty dirs...
+		diropts "-m0750"
+		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
+	        dodir "${DATADIR}"
+	        keepdir "${DATADIR}"
+	        chown -R mysql:mysql "${D}/${DATADIR}"
+		fi
+
+		dodir "/var/log/mysql"
+		touch ${D}/var/log/mysql/mysql.{log,err}
+		chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
+
+		diropts "-m0755"
+		dodir "/var/run/mysqld"
+
+		keepdir "/var/run/mysqld" "${D}/var/log/mysql"
+		chown -R mysql:mysql \
+	        "${D}/var/run/mysqld" \
+	        "${D}/var/log/mysql"
 	fi
 
 	# docs
@@ -305,27 +339,26 @@ src_install() {
 
 }
 
-src_test() {
-	cd ${S}
-	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-	make check || die "make check failed"
+pkg_preinst() {
+	enewgroup mysql 60 || die "problem adding group mysql"
+	enewuser mysql 60 -1 /dev/null mysql \
+	|| die "problem adding user mysql"
+}
+
+pkg_postinst() {
+	mysql_get_datadir
+
 	if ! useq minimal; then
-		local retstatus
-		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
-		addpredict /this-dir-does-not-exist/t9.MYI
-		make test
-		retstatus=$?
-
-		# to be sure ;)
-		pkill -9 -f ${S}/ndb/src/kernel/ndbd 2>/dev/null
-		pkill -9 -f ${S}/ndb/src/mgmsrv/ndb_mgmd 2>/dev/null
-		pkill -9 -f ${S}/ndb/src/mgmclient/ndb_mgm 2>/dev/null
-		pkill -9 -f ${S}/sql/mysqld 2>/dev/null
-		[[ $retstatus == 0 ]] || die "make test failed"
-
-	else
-		einfo "Skipping server tests due to minimal build."
+		# your friendly public service announcement...
+		einfo
+		einfo "You might want to run:"
+		einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
+		einfo "if this is a new install."
+		einfo
 	fi
+
+	mysql_upgrade_warning
+	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 }
 
 pkg_config() {
@@ -404,32 +437,4 @@ pkg_config() {
 	[[ $retstatus == 0 ]] || die "Failed to communicate with MySQL server"
 
 	einfo "done"
-}
-
-pkg_postinst() {
-	mysql_get_datadir
-
-	if ! useq minimal; then
-		#empty dirs...
-		[ -d "${ROOT}/${DATADIR}" ] || install -d -m0750 -o mysql -g mysql ${ROOT}/var/lib/mysql
-		[ -d "${ROOT}/var/run/mysqld" ] || install -d -m0755 -o mysql -g mysql ${ROOT}/var/run/mysqld
-		[ -d "${ROOT}/var/log/mysql" ] || install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
-
-		# secure the logfiles... does this bother anybody?
-		touch ${ROOT}/var/log/mysql/mysql.{log,err}
-		chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
-		chmod 0660 ${ROOT}/var/log/mysql/mysql*
-		# secure some directories
-		chmod 0750 ${ROOT}/var/log/mysql ${ROOT}/${DATADIR}
-
-		# your friendly public service announcement...
-		einfo
-		einfo "You might want to run:"
-		einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
-		einfo "if this is a new install."
-		einfo
-	fi
-
-	mysql_upgrade_warning
-	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 }
