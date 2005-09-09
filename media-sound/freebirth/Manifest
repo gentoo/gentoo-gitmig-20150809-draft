@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e9ce465190cb0fb52bace20e61efda6 freebirth-0.3.2.ebuild 823
 MD5 f2d360e16470ed79161ff7a7873ec4dc ChangeLog 1019
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 a90a6b74ba5285b9775589995af079fc files/freebirth-0.3.2-gentoo.patch 433
 MD5 54ab60ea448a7b59b936c3edb81674c9 files/digest-freebirth-0.3.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIYkQj5H05b2HAEkRAgBCAJ4nqaJTgs/mHuhXUwEZDaebaNS7EgCeJhdZ
+WG7TLcF+SKAMi8zj+O8VHpg=
+=/cfT
+-----END PGP SIGNATURE-----
