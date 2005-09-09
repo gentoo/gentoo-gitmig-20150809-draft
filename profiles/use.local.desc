@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1444 2005/09/09 02:10:04 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1445 2005/09/09 13:06:38 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -20,8 +20,8 @@ app-admin/diradm:irixpasswd - Support for storing seperate IRIX passwords
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
-app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
+app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/torsmo:seti - include seti monitoring capabilities if the correct config is edited ~/.torsmorc
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-arch/pdv:nomotif - Disable motif frontend.
@@ -559,8 +559,8 @@ media-sound/gnusound:libsamplerate - Build gnusound with support for converting 
 media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
-media-sound/moc:musepack - Support for musepack (mpc) files
 media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
+media-sound/moc:musepack - Support for musepack (mpc) files
 media-sound/mpd-svn:ao - Use libao for sound playback
 media-sound/mpd-svn:icecast - Enable support for Icecast2
 media-sound/mpd-svn:mpd-mad - Use libmad and libid3tag shipped by MPD
@@ -568,10 +568,10 @@ media-sound/mpd-svn:musepack - Enable support for musepack files
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/ncmpc:clock-screen - Enable clock screen
-media-sound/ncmpc:mouse - Enable curses getmouse support
-media-sound/ncmpc:search-screen - Enable search screen (EXPERIMENTAL)
 media-sound/ncmpc:key-screen - Enable key editor screen
+media-sound/ncmpc:mouse - Enable curses getmouse support
 media-sound/ncmpc:raw-mode - raw terminal mode
+media-sound/ncmpc:search-screen - Enable search screen (EXPERIMENTAL)
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), usefull for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/timidity++:ao - Use libao for sound playback
