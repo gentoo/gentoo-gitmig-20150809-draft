@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.21 2005/04/24 10:42:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.22 2005/09/09 13:47:24 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> paxtest-0.9.6.ebuild:
+  Mark 0.9.6 stable on alpha
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> paxtest-0.9.6.ebuild:
   Stable on ppc.
