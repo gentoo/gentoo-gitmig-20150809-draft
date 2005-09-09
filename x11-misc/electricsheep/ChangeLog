@@ -1,13 +1,13 @@
 # ChangeLog for x11-misc/electricsheep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.27 2005/09/08 23:58:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.28 2005/09/09 00:00:47 dragonheart Exp $
 
 *electricsheep-2.6.3-r1 (08 Sep 2005)
 
   08 Sep 2005; Daniel Black <dragonheart@gentoo.org> -files/nice.patch,
   -electricsheep-2.5.ebuild, -electricsheep-2.6.2.ebuild,
   -electricsheep-2.6.3.ebuild, +electricsheep-2.6.3-r1.ebuild:
-  path fix as per bug #105311 thanks to Ed Catmur. x86 stable on 2.3 and
+  path fix as per bug #105311 thanks to Ed Catmur. x86 stable on 2.6.3 and
   removed old versions
 
 *electricsheep-2.6.3 (20 Aug 2005)
