@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.5 2005/08/20 23:02:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.6 2005/09/09 08:10:47 spyderous Exp $
+
+  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
 
   20 Aug 2005; Luca Barbato <lu_zero@gentoo.org> libXft-2.1.7.ebuild:
   Marked ~ppc
