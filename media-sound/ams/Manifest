@@ -1,10 +1,20 @@
-MD5 c0061a028bc0be036a52b03404289be6 ams-1.7.2.ebuild 911
-MD5 5d867b840872439654339529e1ea907e ams-1.8.7.ebuild 943
-MD5 df2404c72173525e4575450d37c4dada ams-1.8.2.ebuild 910
-MD5 ac5c7b366aaf076cff07565e36edfaa5 ams-1.8.4.ebuild 915
-MD5 09c7006c74e07f7afa08f85afd7e9af0 ChangeLog 2008
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 775fb3a5936c490c2976a2bc4438ca57 ams-1.8.7.ebuild 931
+MD5 6fa2edb43f952a129ada848bf6acf197 ams-1.8.4.ebuild 903
+MD5 f2d90b78fcfdc8a240ac0a5a44b9f372 ChangeLog 2183
+MD5 6ce0ab4ba50f0bc6668f2ecb57abad4f ams-1.7.2.ebuild 900
+MD5 01cccb4066c2ddb25f88afc78f4e7388 ams-1.8.2.ebuild 898
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 285e9f3b72f69416d97b9ecd61434974 files/digest-ams-1.7.2 62
 MD5 c19ec89f0bf4237ed67c3479875b09e0 files/digest-ams-1.8.2 62
-MD5 a10be76630a8184335a83449a12a5de0 files/digest-ams-1.8.4 62
+MD5 285e9f3b72f69416d97b9ecd61434974 files/digest-ams-1.7.2 62
 MD5 82fd7a5edb679f417fe2e20571a23b79 files/digest-ams-1.8.7 62
+MD5 a10be76630a8184335a83449a12a5de0 files/digest-ams-1.8.4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIYrHj5H05b2HAEkRAiZ6AJ4qZduzZuOgvKImu6WAkXGrPT5NZgCbBPAj
+3mtVPGKp+3Naee5zYuimfWM=
+=KqHt
+-----END PGP SIGNATURE-----
