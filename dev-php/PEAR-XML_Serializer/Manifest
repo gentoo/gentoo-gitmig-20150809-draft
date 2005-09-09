@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8fda2f0f09a04c6237b238a5e51a37bc PEAR-XML_Serializer-0.15.0.ebuild 511
 MD5 cc4d3e8f443f059cd4b0ce3932e667d0 ChangeLog 1650
 MD5 8934a51381f0fc05220100eb85ae7037 PEAR-XML_Serializer-0.15.0-r1.ebuild 470
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 9099056c198c11d76f73995d2114a674 files/digest-PEAR-XML_Serializer-0.15.0-r1 69
 MD5 9099056c198c11d76f73995d2114a674 files/digest-PEAR-XML_Serializer-0.15.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIZrVaGfFFLhbXWkRAvecAJ4ut2XBFtAsxLNdpxpEfnJh3uRhZwCfemwb
+I7f+sZUJL3zAev7Zchob1h0=
+=xG4R
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab14d0aaf06d443f408b4307ba1b706b PEAR-PhpDocumentor-1.3.0_rc3-r1.ebuild 427
 MD5 8b1e682b8a6b40153f85b5ead488439c PEAR-PhpDocumentor-1.2.3.ebuild 425
 MD5 437838d87c820af7b8599e0c1405bc5c PEAR-PhpDocumentor-1.3.0_rc3.ebuild 434
@@ -6,3 +9,10 @@ MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 7536fefe11615d250f572cc8e9ba2834 files/digest-PEAR-PhpDocumentor-1.2.3 69
 MD5 9bb1bf8f50fd8264985669f08a332d5b files/digest-PEAR-PhpDocumentor-1.3.0_rc3-r1 72
 MD5 9bb1bf8f50fd8264985669f08a332d5b files/digest-PEAR-PhpDocumentor-1.3.0_rc3 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIZrUaGfFFLhbXWkRAsrAAJ9UUduLQ4s3bOnXFV09xnHifVleKACfVykA
+U/c2qJCBbBFUh6XFQC+zXo0=
+=ntVh
+-----END PGP SIGNATURE-----

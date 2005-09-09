@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 68afb82b16b45f500e8c4449b2d964ed PEAR-Net_SMTP-1.2.6-r1.ebuild 417
 MD5 d64d7b8b152c52280ff6f80554fdfcc9 PEAR-Net_SMTP-1.2.6.ebuild 439
 MD5 657520255efca97af8ca8ebdff6c518d ChangeLog 1544
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 de160184bdb56ca436889fc57ba7ba72 files/digest-PEAR-Net_SMTP-1.2.6 61
 MD5 de160184bdb56ca436889fc57ba7ba72 files/digest-PEAR-Net_SMTP-1.2.6-r1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIZrUaGfFFLhbXWkRAqUQAJ9gymluMwbUebVYyEB5pOfk44mYRQCeIF99
+cmeritrr8o//yjBWEYH7rZE=
+=kFZr
+-----END PGP SIGNATURE-----
