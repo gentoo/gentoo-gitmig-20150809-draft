@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/isdn-firmware
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.5 2005/07/01 15:20:12 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.6 2005/09/09 22:29:09 sbriesen Exp $
+
+  09 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  isdn-firmware-2005.3.21.3.ebuild:
+  stable on x86 and amd64.
 
 *isdn-firmware-2005.3.21.3 (01 Jul 2005)
 
