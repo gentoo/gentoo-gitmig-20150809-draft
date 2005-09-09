@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.19 2005/09/07 13:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.20 2005/09/09 23:00:49 carlo Exp $
+
+  09 Sep 2005; Carsten Lohrke <carlo@gentoo.org>
+  kdegraphics-meta-3.5_alpha1.ebuild:
+  slot 3.4 -> 3.5
 
 *kdegraphics-meta-3.5_alpha1 (07 Sep 2005)
 

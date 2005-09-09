@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.16 2005/09/07 13:51:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.17 2005/09/09 23:00:49 carlo Exp $
+
+  09 Sep 2005; Carsten Lohrke <carlo@gentoo.org>
+  kdenetwork-meta-3.5_alpha1.ebuild:
+  slot 3.4 -> 3.5
 
 *kdenetwork-meta-3.5_alpha1 (07 Sep 2005)
 
