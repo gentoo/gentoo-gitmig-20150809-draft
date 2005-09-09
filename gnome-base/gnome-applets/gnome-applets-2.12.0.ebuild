@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.11.93.ebuild,v 1.1 2005/08/30 15:45:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.0.ebuild,v 1.1 2005/09/09 02:19:17 allanonjl Exp $
 
 inherit gnome2
 
