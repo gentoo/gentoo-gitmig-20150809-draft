@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.2 2005/09/07 19:52:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.3 2005/09/09 12:46:43 weeve Exp $
+
+  09 Sep 2005; Jason Wever <weeve@gentoo.org> eselect-php-0.96.ebuild:
+  Added ~sparc keyword to help fix the broken dependencies of
+  dev-php/PEAR-Date-1.4.3-r1.
 
   06 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> eselect-php-0.96.ebuild:
   Added ~amd64 keyword. 
