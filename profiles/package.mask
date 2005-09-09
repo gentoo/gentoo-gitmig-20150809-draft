@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4421 2005/09/09 00:00:52 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4422 2005/09/09 02:49:11 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -636,6 +636,8 @@ x11-apps/xdbedizzy
 x11-apps/xditview
 x11-apps/xdm
 x11-apps/xdpyinfo
+# xdriinfo was added by Joshua Baergen <joshuabaergen@gentoo.org> (08 Sept 2005)
+x11-apps/xdriinfo
 x11-apps/xedit
 x11-apps/xev
 x11-apps/xeyes
