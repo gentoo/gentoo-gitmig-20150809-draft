@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/dazuko
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.1 2005/09/09 20:42:37 wschlich Exp $
+
+*dazuko-2.1.0 (09 Sep 2005)
+
+  09 Sep 2005; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +dazuko-2.1.0.ebuild:
+  initial import
+
