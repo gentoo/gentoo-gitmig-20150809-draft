@@ -1,4 +1,5 @@
-MD5 347467376b8496c89a17d4b89a475848 ChangeLog 8491
+MD5 87dd2f61a084149c78b1dc515051faf0 ChangeLog 8578
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 13447c0668e6e61ce31da5ef702db959 xorg-server-0.99.1-r7.ebuild 3677
 MD5 d81a457d34d0bb17e72a685f8f197b60 xorg-server-0.99.1-r8.ebuild 3607
 MD5 bef863b379ee69c1339b0e01e4d51284 files/0.99.1-r6-check-for-glproto.patch 859
