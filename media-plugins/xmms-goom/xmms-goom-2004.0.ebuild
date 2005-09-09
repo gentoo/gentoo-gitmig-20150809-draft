@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-2004.0.ebuild,v 1.1 2005/05/28 23:12:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-2004.0.ebuild,v 1.2 2005/09/09 12:23:25 flameeyes Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc INSTALL README AUTHORS NEWS KNOWNBUGS ChangeLog
+	dodoc README AUTHORS NEWS KNOWNBUGS ChangeLog
 }
 
 pkg_postinst() {

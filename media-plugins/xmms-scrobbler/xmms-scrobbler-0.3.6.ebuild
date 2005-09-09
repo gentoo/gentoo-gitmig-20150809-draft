@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/xmms-scrobbler-0.3.6.ebuild,v 1.2 2005/03/11 22:50:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/xmms-scrobbler-0.3.6.ebuild,v 1.3 2005/09/09 12:19:33 flameeyes Exp $
 
 IUSE=""
 
@@ -18,5 +18,5 @@ DEPEND="media-sound/xmms
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }

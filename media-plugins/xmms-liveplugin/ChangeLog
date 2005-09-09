@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-liveplugin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.7 2004/09/14 07:07:03 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.8 2005/09/09 12:20:29 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-liveplugin-0.2.5.ebuild:
+  Don't install INSTALL file.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-liveplugin-0.2.5.ebuild:

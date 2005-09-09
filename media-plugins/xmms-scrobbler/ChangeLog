@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-scrobbler
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.19 2005/03/11 22:50:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.20 2005/09/09 12:19:33 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-scrobbler-0.3.6.ebuild, xmms-scrobbler-0.3.7.ebuild:
+  Don't install INSTALL file.
 
 *xmms-scrobbler-0.3.7 (11 Mar 2005)
 

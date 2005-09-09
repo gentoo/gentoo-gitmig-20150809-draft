@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-goom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.13 2005/08/07 13:29:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.14 2005/09/09 12:23:25 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-goom-1.99.4.ebuild, xmms-goom-2004.0.ebuild:
+  Don't install INSTALL file.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   xmms-goom-1.99.4.ebuild:
