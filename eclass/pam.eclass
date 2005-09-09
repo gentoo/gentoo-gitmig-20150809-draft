@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Diego Pettenò <flameeyes@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.8 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.9 2005/09/09 10:31:35 flameeyes Exp $
 #
 # This eclass contains functions to install pamd configuration files and
 # pam modules.
@@ -20,6 +20,7 @@ dopamd() {
 
 	INSDESTTREE=/etc/pam.d \
 	doins "$@" || die "failed to install $@"
+	cleanpamd "$@"
 }
 
 # newpamd <old name> <new name>
@@ -34,6 +35,7 @@ newpamd() {
 
 	INSDESTTREE=/etc/pam.d \
 	newins "$1" "$2" || die "failed to install $1 as $2"
+	cleanpamd $2
 }
 
 # dopamsecurity <section> <file> [more files]
@@ -140,6 +142,20 @@ pamd_mimic_system() {
 		hasq $1 ${authlevels} || die "unknown level type"
 
 		echo -e "$1${mimic}" >> ${pamdfile}
+
+		shift
+	done
+}
+
+# cleanpamd <pamd file>
+#
+# Cleans a pam.d file from modules that might not be present on the system
+# where it's going to be installed
+cleanpamd() {
+	while [[ -n $1 ]]; do
+		if ! has_version sys-libs/pam; then
+			sed -i -e '/pam_shells\|pam_console/s:^:#:' ${D}/etc/pam.d/$1
+		fi
 
 		shift
 	done
