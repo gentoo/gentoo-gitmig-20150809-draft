@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-2.0.2.ebuild,v 1.4 2005/05/07 19:13:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-2.0.2.ebuild,v 1.5 2005/09/09 12:30:25 flameeyes Exp $
 
 IUSE="bmp xmms"
 
@@ -52,7 +52,7 @@ src_install () {
 		exeinto "`beep-config --general-plugin-dir`"
 		doexe build/libbmpimms*.so || die
 	fi
-	dodoc INSTALL README
+	dodoc README
 }
 
 src_test() { :; }

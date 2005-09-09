@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-imms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/ChangeLog,v 1.32 2005/09/01 18:23:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/ChangeLog,v 1.33 2005/09/09 12:30:25 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xmms-imms-2.0.2.ebuild,
+  xmms-imms-2.0.3.ebuild, xmms-imms-2.1.1.ebuild:
+  Don't install INSTALL file.
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   xmms-imms-2.0.3.ebuild:
