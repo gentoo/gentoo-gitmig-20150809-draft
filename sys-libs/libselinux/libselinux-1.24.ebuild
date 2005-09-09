@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.24.ebuild,v 1.1 2005/06/25 23:31:22 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.24.ebuild,v 1.2 2005/09/09 02:56:27 pebenito Exp $
 
 IUSE=""
 
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="x86 ppc sparc amd64 mips"
+#KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
 
 DEPEND="virtual/libc"
 
