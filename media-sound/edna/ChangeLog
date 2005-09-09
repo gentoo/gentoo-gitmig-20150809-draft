@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.21 2005/09/09 04:51:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.22 2005/09/09 04:59:09 nerdboy Exp $
 
 *edna-0.5-r5 (09 Sep 2005)
 
@@ -8,7 +8,7 @@
   +files/edna-0.5-pep-0263.patch, files/edna.gentoo, -edna-0.5-r3.ebuild,
   +edna-0.5-r5.ebuild:
   fixed some new baselayout and python issues; init script and pep0263 patch
-  amd64 needed a stable bump
+  amd64 needed a stable bump, Lance's bug (Bug #103346)got an einfo message.
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> edna-0.5-r4.ebuild:
   Cleaned up dependency variables, use newinitd to install init.d file, don't

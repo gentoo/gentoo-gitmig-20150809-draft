@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.9 2005/09/09 04:51:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.10 2005/09/09 04:59:09 nerdboy Exp $
 
 inherit eutils
 
@@ -48,6 +48,7 @@ pkg_postinst() {
 	einfo "the default runlevel when you're ready.  Add the USE flag"
 	einfo "oggvorbis if you want edna to serve ogg files."
 	einfo
-	einfo "See edna.conf and the html docs for more info."
+	einfo "See edna.conf and the html docs for more info, and set"
+	einfo "PYTHONPATH=/usr/lib/edna to run from a shell prompt."
 	ewarn
 }
