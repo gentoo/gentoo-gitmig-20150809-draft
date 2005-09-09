@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.70 2005/09/01 18:40:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.71 2005/09/09 20:49:22 mkennedy Exp $
+
+  09 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/0.9.2/README.Gentoo,
+  -files/0.9.2/customize-target-features.lisp-suffix, -files/0.9.2/sbcl.sh,
+  -files/0.9.2/customize-target-features.lisp-prefix,
+  -files/0.9.2/install-clc.lisp, -files/0.9.2/sbcl-gentoo.patch,
+  -files/0.9.2/sbclrc, -sbcl-0.9.2.ebuild, sbcl-0.9.4.ebuild:
+  Keywording stable x86; Keywording stable ppc (anything older than
+  dev-lisp/sbcl-0.9.4 is incompatible with many in dev-lisp/cl-*); Resolves
+  Bug #99456 (build failure on PPC for >dev-lisp/sbcl-0.9.1 and
+  <dev-lisp/sbcl-0.9.4); Removed old ebuilds.
 
 *sbcl-0.9.4 (01 Sep 2005)
 
