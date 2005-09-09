@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-xfree86-type1
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-xfree86-type1/ChangeLog,v 1.4 2005/08/14 23:55:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-xfree86-type1/ChangeLog,v 1.5 2005/09/09 06:55:22 spyderous Exp $
+
+  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
 
   14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   font-xfree86-type1-0.99.0.ebuild:
