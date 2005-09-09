@@ -1,0 +1,37 @@
+diff --exclude='*~' -Naur braa-0.8.orig/Makefile braa-0.8/Makefile
+--- braa-0.8.orig/Makefile	2005-09-08 23:02:28.000000000 -0300
++++ braa-0.8/Makefile	2005-09-08 23:23:24.000000000 -0300
+@@ -4,8 +4,6 @@
+ ###################################################################
+ 
+ # Linux, FreeBSD, OpenBSD
+-CFLAGS = 
+-LDFLAGS = 
+ 
+ # Solaris / SPARC
+ # CFLAGS = -DSOLARIS_SPARC
+@@ -24,9 +22,9 @@
+ LIBS = 
+ 
+ all: ${OBJECTS}
+-	cc $(OBJECTS) -o $(OUT) $(LDFLAGS) $(LIBS)
++	$(CC) $(OBJECTS) -o $(OUT) $(LDFLAGS) $(LIBS)
+ 	strip $(OUT)
+ 
+ clean:
+ 	rm -rf $(OBJECTS) $(OUT)
+-	
+\ No newline at end of file
++	
+diff --exclude='*~' -Naur braa-0.8.orig/queries.c braa-0.8/queries.c
+--- braa-0.8.orig/queries.c	2005-09-08 23:02:28.000000000 -0300
++++ braa-0.8/queries.c	2005-09-08 23:11:44.000000000 -0300
+@@ -43,7 +43,7 @@
+ 		 * nxqry;
+ 	struct query_hostrange * hr, * prev;
+ 	u_int32_t hostrange_start, hostrange_end;
+-	u_int16_t port = 161;
++	u_int32_t port = 161;
+ 	struct in_addr ina;
+ 		 
+ 	assert(string = strdup(string));

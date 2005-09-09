@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/braa
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.7 2005/04/12 02:32:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.8 2005/09/09 02:31:27 vanquirius Exp $
+
+*braa-0.8-r1 (09 Sep 2005)
+
+  09 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/braa-0.8-gentoo.diff, +braa-0.8-r1.ebuild:
+  Add patch to deal with hardcoded CFLAGS, LDFLAGS and cc in the Makefile and
+  change port from u_int16_t to u_int32_t so that comparison in
+  bapp_rangesplit_query() is not always false in queries.c.
 
   12 Apr 2005; Jason Wever <weeve@gentoo.org> braa-0.8.ebuild:
   Added ~sparc keyword.
