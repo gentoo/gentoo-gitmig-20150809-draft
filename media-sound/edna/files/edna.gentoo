@@ -13,18 +13,22 @@ EDNACONF=/etc/edna/edna.conf
 PIDFILE=/var/run/edna.pid
 
 depend() {
-        need local
+        use net
+	need local
 }
 
 start() {
-    ebegin "Starting ednad mp3 server"
-    start-stop-daemon -m -b --start --quiet --pidfile $PIDFILE \
-    --exec $EDNA -- $EDNACONF
-    eend $?
+    ebegin "Starting edna mp3 server"
+    start-stop-daemon --quiet --pidfile $PIDFILE
+    $EDNA --daemon $EDNACONF
+    eend $? "Failed to start edna"
 }
 
 stop() {
-    ebegin "Stopping ednad"
-    start-stop-daemon -o --quiet --stop --pidfile $PIDFILE
-    eend $?
+    ebegin "Stopping edna mp3 server"
+    start-stop-daemon --stop -o --quiet --pidfile $PIDFILE
+    local ret=$?
+    eend ${ret} "Failed to stop edna"
+    rm -f $PIDFILE
+    return ${ret}
 }

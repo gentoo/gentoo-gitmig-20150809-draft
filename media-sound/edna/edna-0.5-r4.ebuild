@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.8 2005/08/24 16:32:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.9 2005/09/09 04:51:11 nerdboy Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/edna/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 
 DEPEND="dev-lang/python
 	oggvorbis? ( dev-python/pyogg

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r3.ebuild,v 1.13 2005/07/09 19:17:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r5.ebuild,v 1.1 2005/09/09 04:51:11 nerdboy Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="oggvorbis"
 
 DESCRIPTION="Greg Stein's python streaming audio server for desktop or LAN use"
 HOMEPAGE="http://edna.sourceforge.net/"
@@ -13,16 +13,23 @@ SRC_URI="mirror://sourceforge/edna/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa amd64"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND="dev-lang/python"
+DEPEND="dev-lang/python
+	oggvorbis? ( dev-python/pyogg
+		dev-python/pyvorbis )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if has_version '>=dev-lang/python-2.3' ; then
+		epatch ${FILESDIR}/${P}-pep-0263.patch || die "epatch failed"
+	fi
+}
 
 src_install() {
-
 	einfo "Installing in daemon mode"
-	insinto /etc/init.d
-	insopts -m 755
-	newins ${FILESDIR}/edna.gentoo edna
+	newinitd ${FILESDIR}/edna.gentoo edna
 
 	dodir /usr/bin /usr/$(get_libdir)/edna /usr/$(get_libdir)/edna/templates
 	exeinto /usr/bin ; newexe edna.py edna
@@ -37,7 +44,7 @@ src_install() {
 	doins edna.conf
 	dosym /usr/$(get_libdir)/edna/templates /etc/edna/templates
 
-	dodoc COPYING README ChangeLog
+	dodoc README ChangeLog
 	dohtml -r www/*
 }
 
@@ -46,7 +53,8 @@ pkg_postinst() {
 	einfo "Edit edna.conf to taste before starting (multiple source"
 	einfo "directories are allowed).  Test ednad from a shell prompt"
 	einfo "until you have it configured properly, then add edna to"
-	einfo "the default runlevel when you're ready."
+	einfo "the default runlevel when you're ready.  Add the USE flag"
+	einfo "oggvorbis if you want edna to serve ogg files."
 	einfo
 	einfo "See edna.conf and the html docs for more info."
 	ewarn
