@@ -1,6 +1,6 @@
 MD5 d0db8216be973fcd54b9b0f277e2e4fb opendchub-0.7.14-r2.ebuild 1214
 MD5 a5942fa3484181c64d32acf09304274d ChangeLog 1566
-MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 e4fcbf6d8443605a548547abee4903e5 files/opendchub_setup.sh 556
 MD5 75859d782548bffdb8575c89649978e3 files/opendchub-gentoo.patch 873
 MD5 40e7b33d3472314c1bcef0324417b327 files/0.7.14-overflow.patch 556
