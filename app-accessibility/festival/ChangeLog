@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.32 2005/08/24 23:13:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.33 2005/09/09 13:58:07 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> festival-1.4.3-r3.ebuild:
+  Mark 1.4.3-r3 stable on alpha
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> festival-1.4.3-r4.ebuild:
   add ~alpha ~ia64 #100083
