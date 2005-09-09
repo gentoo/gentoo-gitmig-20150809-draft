@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f0f463b3c5492626aa26cdd0bb8010a1 Circle-0.41c.ebuild 1455
 MD5 4d0b022bff8e062765a53298c7620119 Circle-0.40e.ebuild 1504
 MD5 5852e7e306b14c8e70b6cf73fe4586a6 ChangeLog 1481
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 4e5e46839be7bbaa380fa35e730d4ca8 files/digest-Circle-0.40e 64
 MD5 323983236384b9a59399b1ce8c22427a files/digest-Circle-0.41c 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDINDDV3J2n04EauwRAhPSAJwLTlujFAhNUoxceHIIABw+kWd1wgCgxAlo
+l/TbqG4fO6867TcqtMiNlTE=
+=JH7k
+-----END PGP SIGNATURE-----

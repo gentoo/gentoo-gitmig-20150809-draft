@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d0db8216be973fcd54b9b0f277e2e4fb opendchub-0.7.14-r2.ebuild 1214
 MD5 a5942fa3484181c64d32acf09304274d ChangeLog 1566
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
@@ -6,3 +9,10 @@ MD5 75859d782548bffdb8575c89649978e3 files/opendchub-gentoo.patch 873
 MD5 40e7b33d3472314c1bcef0324417b327 files/0.7.14-overflow.patch 556
 MD5 a2d8a9229bd7080e20a266ce68778903 files/digest-opendchub-0.7.14-r2 68
 MD5 796b8b6feea2a657348eb4ee6b9d102e files/0.7.14-telnet.patch 540
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDINJOV3J2n04EauwRAkQYAJ9pFAvPg8/+7dODO7AnvJCkz0cXTQCg26mM
+BeaMZYUZP1WMFQLcBF+3wYw=
+=K7gT
+-----END PGP SIGNATURE-----

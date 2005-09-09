@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cfedd81ee9b7c66c3800f857725f08ce ghostwhitecrab-0.9.2.ebuild 2108
 MD5 0c9d7e9659a3e99e9489fd0cb5899980 ChangeLog 687
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
@@ -5,3 +8,10 @@ MD5 ec2f88dea0091fe57d8a841d6fa9edbb ghostwhitecrab-0.9.1.ebuild 2106
 MD5 0d3ad4300c554fadb5508ce8b8bb8dd4 files/digest-ghostwhitecrab-0.9.1 62
 MD5 a9e738d59f14eec1811b20f18bff7668 files/digest-ghostwhitecrab-0.9.2 62
 MD5 c03b01a8867a131e348d42fbeffde6f5 files/gwc.init 522
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDINFoV3J2n04EauwRAjpzAJ9+iGb0IYXMZzby/q6EWAefPhjG6QCgl0eH
+MgrfTTeD1fIXQ1JC+iNG8TU=
+=rU+7
+-----END PGP SIGNATURE-----
