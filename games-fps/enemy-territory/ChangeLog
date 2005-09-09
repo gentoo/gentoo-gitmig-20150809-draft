@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.25 2005/08/30 19:27:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.26 2005/09/09 02:00:56 wolf31o2 Exp $
+
+  09 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.60.ebuild:
+  Rearrange text in pkg_postinst (cosmetic).
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   enemy-territory-2.60.ebuild:
