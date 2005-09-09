@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.31 2005/09/03 18:55:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.32 2005/09/09 15:07:17 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> bzip2-1.0.3-r5.ebuild:
+  Mark 1.0.3-r5 stable on alpha
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> bzip2-1.0.3-r5.ebuild:
   Stable on ppc64
