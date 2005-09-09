@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.26 2005/07/22 21:27:35 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.27 2005/09/09 19:34:23 ranger Exp $
+
+  09 Sep 2005; Brent Baude <ranger@gentoo.org> portaudio-18.1-r3.ebuild:
+  Marking portaudio-18.1-r3 ~ppc64 in support of bug 104254
 
   22 Jul 2005; Kito <kito@gentoo.org> +files/portaudio-18.1-Makefile.macos,
   portaudio-18.1-r3.ebuild:
