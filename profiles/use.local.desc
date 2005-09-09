@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1443 2005/09/08 23:05:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1444 2005/09/09 02:10:04 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -857,6 +857,7 @@ net-misc/wanpipe:adsl - Build with adsl support
 net-misc/yate:fax - Build fax plugin
 net-misc/yate:gsm - Build gsm codec plugin
 net-misc/yate:h323 - Build H.323 Channel plugin
+net-misc/yate:ilbc - Build ILBC codec plugin
 net-misc/yate:ortp - Build oRTP Channel plugin
 net-misc/yate:zaptel - Build zaptel Channel plugin
 net-misc/zaptel:bri - Enable ISDN BRI support (bristuff)
