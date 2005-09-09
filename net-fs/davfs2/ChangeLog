@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.15 2005/08/21 09:49:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.16 2005/09/09 19:22:01 genstef Exp $
+
+  09 Sep 2005; Stefan Schweizer <genstef@gentoo.org> davfs2-0.2.4-r1.ebuild:
+  Adding \!CODA_OLD_API check thanks to Hans-Christian Armingeon
+  <mog.johnny@gmx.net>, Maurice van der Pot <griffon26@gentoo.org> and
+  Hans-Christian Armingeon <mog.johnny@gmx.net> in bug 100847
 
   21 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
   -files/davfs2.nokernelsrc.patch, files/include-compiler.patch,
