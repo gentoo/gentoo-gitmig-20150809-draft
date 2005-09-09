@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.11.92.ebuild,v 1.2 2005/08/29 22:26:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.12.0.ebuild,v 1.1 2005/09/09 02:30:52 allanonjl Exp $
 
 inherit gnome2
 
