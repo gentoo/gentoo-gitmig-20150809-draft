@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/resourceproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.5 2005/08/28 14:53:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.6 2005/09/09 17:32:23 spyderous Exp $
+
+  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
 
   28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> resourceproto-1.0.ebuild:
   Marked ~sh
