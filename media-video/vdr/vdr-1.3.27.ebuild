@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.5 2005/08/21 21:37:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.6 2005/09/09 16:51:16 zzam Exp $
 
 inherit eutils
 
@@ -155,6 +155,7 @@ src_install() {
 	keepdir ${CONF_DIR}
 	keepdir ${CONF_DIR}/plugins
 	keepdir ${VDR_HOME}
+	keepdir ${VDR_HOME}/video
 
 	insinto ${CONF_DIR}
 	insopts -m0644 -ovdr -gvdr
