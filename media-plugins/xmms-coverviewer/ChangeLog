@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-coverviewer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/ChangeLog,v 1.13 2004/09/14 07:04:11 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/ChangeLog,v 1.14 2005/09/09 12:25:34 flameeyes Exp $
+
+  09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmms-coverviewer-0.1.10.ebuild, xmms-coverviewer-0.11.ebuild:
+  Don't install INSTALL file. Cleanup of unneeded src_compile() functions.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-coverviewer-0.11.ebuild:

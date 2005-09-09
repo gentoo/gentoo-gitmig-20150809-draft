@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 77bd9abd73441bc4c0570e5a8d656bcd ChangeLog 2397
 MD5 46e2518b1c34459be546153c8528a6c2 xmms-coverviewer-0.1.10.ebuild 906
 MD5 029b97883d0e90b9569e1f15946acee9 xmms-coverviewer-0.11.ebuild 732
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 2578187511f9ba76fb276e1ce010dbce files/digest-xmms-coverviewer-0.11 74
 MD5 777dab5669510575db53359a5954c778 files/digest-xmms-coverviewer-0.1.10 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIX9Uj5H05b2HAEkRApIlAJ0ehtTw1Wj7FYfwg+j/yDMgyXsiGQCfWLxV
+ODvaIvuehYGOnZq3jKrV0G8=
+=dbWC
+-----END PGP SIGNATURE-----
