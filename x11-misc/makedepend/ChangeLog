@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/makedepend
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/makedepend/ChangeLog,v 1.5 2005/08/28 14:48:45 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/makedepend/ChangeLog,v 1.6 2005/09/09 14:41:29 spyderous Exp $
+
+  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
 
   28 Aug 2005; MATSUU Takuto <matsuu@gentoo.org> makedepend-0.99.0.ebuild:
   Marked ~sh
