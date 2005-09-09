@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.61 2005/09/02 19:21:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.62 2005/09/09 17:36:23 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> gentoo-0.11.55.ebuild:
+  Mark 0.11.55 stable on alpha
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> gentoo-0.11.55.ebuild:
   Stable on ppc.
