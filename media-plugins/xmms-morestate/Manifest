@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3fdc5e1e90bbfad62d9f0264909ca8c5 ChangeLog 1299
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3acff9799d91a36aa1eaf12eedfa1767 xmms-morestate-1.2.ebuild 750
 MD5 54950263964f0968677422bd0155c99d files/digest-xmms-morestate-1.2 69
 MD5 d4c21d00cce659fde6fe62daf31fcf85 files/xmms-morestate-1.2-Makefile.patch 1044
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIX6Ij5H05b2HAEkRAqotAJ9pQ3VHu9fr5N58jDz1i6ivhNvMYwCfVk8h
+rAPKr09/xhFD15/lw2xQGQo=
+=E2VV
+-----END PGP SIGNATURE-----

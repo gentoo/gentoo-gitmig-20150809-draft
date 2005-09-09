@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dcbe82e01d64c6bb2cd947ffa34fe73f ChangeLog 1101
 MD5 c7bdbd5ff71445c46a28fda80ab562fe xmms-liveplugin-0.2.5.ebuild 634
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 7cc6b459100c289900b7f6871c0e8ca0 files/digest-xmms-liveplugin-0.2.5 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIX4kj5H05b2HAEkRApWmAJ4wcFm0jCKi2r+N2haRudcZnWtsgQCdGzoP
+dgKITuoVzBal2bXhIeDuoLU=
+=vbWv
+-----END PGP SIGNATURE-----
