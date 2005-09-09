@@ -1,6 +1,10 @@
 # ChangeLog for media-video/thoggen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.4 2005/09/06 21:56:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/ChangeLog,v 1.5 2005/09/09 04:04:55 josejx Exp $
+
+  09 Sep 2005; Joseph Jezak <josejx@gentoo.org> thoggen-0.3.ebuild,
+  thoggen-0.4.ebuild:
+  Marked ~ppc for bug #105206.
 
 *thoggen-0.4 (06 Sep 2005)
 

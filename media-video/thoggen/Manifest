@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d96e70cca3030d90d14d0f52040f495f thoggen-0.3.ebuild 1330
+MD5 1dfe55416936d4c8426641df5f1446d1 ChangeLog 864
+MD5 d911edb12f8c882b2f169b4e09a2dc6b thoggen-0.4.ebuild 1245
 MD5 d9885b371cf444e9a26ef0f8a0418d9b metadata.xml 219
-MD5 a07e74f6155aa34c7a41ef2a5c8e7a42 ChangeLog 741
-MD5 976779d27bf4a32067b2bcf9c9950cd8 thoggen-0.4.ebuild 1239
-MD5 db202d22d4b7d54cd9a6789312803f07 files/digest-thoggen-0.3 63
+MD5 43099fc021488b80d94b660c6d15318e thoggen-0.3.ebuild 1334
 MD5 214c2419992cfee26543fedc1e4711ea files/thoggen-0.3-new-dbus-hal.patch 13464
+MD5 db202d22d4b7d54cd9a6789312803f07 files/digest-thoggen-0.3 63
 MD5 3a84e2ada235ed3faf87addeab62a248 files/digest-thoggen-0.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHhEGr2QksT29OyARAgq2AKCTi/e1y8jHlc3XwB7P8RyT31brRgCdGVNe
-76Y1aAyfqfa18PK+/N1gAg0=
-=1pCC
------END PGP SIGNATURE-----
