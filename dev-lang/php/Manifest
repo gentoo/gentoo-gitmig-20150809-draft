@@ -23,13 +23,13 @@ MD5 43c95e9c27a1e40cf1fbb3408fd4a894 files/digest-php-4.4.0 144
 MD5 11e54e6a5fade48c67bab392af4e33c7 files/digest-php-5.0.4 143
 MD5 ef5a57ba8c9e35be8cb39c8ed1bc5235 files/digest-php-5.0.5 143
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 2d07eebd30af3626a0da103e0eaa0f63 php-4.4.0.ebuild 7327
-MD5 8d594592bd976909b7b626d52f31b2ad php-5.0.4.ebuild 4287
-MD5 bacf7a52e3873cca67dc0e4aedee8c86 php-5.0.5.ebuild 4275
+MD5 2487b2739ed3ee84437b1ca34407c893 php-4.4.0.ebuild 7348
+MD5 fda1bae1965fec9be04093e7028e5094 php-5.0.4.ebuild 4308
+MD5 9a011bbcc7625fccae9844fb4a882615 php-5.0.5.ebuild 4296
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIZ7fI1lqEGTUzyQRAv9dAJ9HjrHOWLXkYqM16NehBdiht8nOYgCgpX2f
-cfemWlYddNFO11qXARTuCFY=
-=1Yo+
+iD8DBQFDIcZ0I1lqEGTUzyQRAg/4AKCaB/Nu1sWAr2jXq8cUnNCBEFgpSwCgjbkw
+P0yepHN2hiSzvdAVpcW+c8g=
+=J19v
 -----END PGP SIGNATURE-----
