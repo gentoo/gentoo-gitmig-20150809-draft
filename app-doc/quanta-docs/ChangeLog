@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/quanta-docs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.22 2005/08/23 03:09:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/quanta-docs/ChangeLog,v 1.23 2005/09/09 15:37:23 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  quanta-docs-20041123.ebuild:
+  Mark 20041123 stable on alpha
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   quanta-docs-20041123.ebuild:
