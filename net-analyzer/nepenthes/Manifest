@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc2476e992e7c4210c018ecd2f3603f2 metadata.xml 381
+MD5 01b4875d75bfe246ad16d3c8fde97f23 ChangeLog 428
+MD5 5c937dbc7f597effd30fdba0983e668d nepenthes-0.1.1.ebuild 1947
+MD5 1f59aae5e0641b494e1ce286b9f2a341 files/digest-nepenthes-0.1.1 68
+MD5 9f779f5117afae2b26f1e4fbff55ff4b files/nepenthes.confd 123
+MD5 1c20696c1b6d548688b9a9db60ad74c8 files/nepenthes.initd 538
+MD5 a8d80c4c2501a34c72e31e2a5315c014 files/magic.patch 694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFDIdP6GSBEIeh4AEYRAqErAJ9bUy0K1kvbdH6T6k9Py8k5c3AIPgCfUtnp
+qOoljsZ/gx42xwvRXhrThe4=
+=hBIJ
+-----END PGP SIGNATURE-----

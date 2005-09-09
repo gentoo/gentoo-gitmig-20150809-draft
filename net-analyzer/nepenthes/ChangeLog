@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/nepenthes
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.1 2005/09/09 20:27:25 kaiowas Exp $
+
+*nepenthes-0.1.1 (09 Sep 2005)
+
+  09 Sep 2005; petre rodan <kaiowas@gentoo.org> +files/magic.patch,
+  +files/nepenthes.confd, +files/nepenthes.initd, +metadata.xml,
+  +nepenthes-0.1.1.ebuild:
+  initial commit
+
