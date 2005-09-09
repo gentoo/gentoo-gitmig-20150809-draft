@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/zd1211
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.2 2005/05/15 19:33:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.3 2005/09/09 22:03:44 anarchy Exp $
+
+*zd1211-20050822 (09 Sep 2005)
+
+  09 Sep 2005; Jory A. Pratt <anarchy@gentoo.org> +zd1211-20050822.ebuild:
+  revision bump, code cleanup G-220 supported in release
 
   15 May 2005; Joseph Jezak <josejx@gentoo.org> zd1211-20050315.ebuild:
   Marked ~ppc for bug #92475.
