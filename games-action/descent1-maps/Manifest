@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dbc92d0621dcc9b693b05dea520bb0af descent1-maps-1.0.ebuild 728
 MD5 942a2e2ec45c71be01c5005364701779 ChangeLog 377
-MD5 28249cd7aa79bdfb7bf723a25d38205a metadata.xml 246
+MD5 f7f768eb1ea258c26523100d99fc1f3f metadata.xml 265
 MD5 9f31e00c2eaa7bc81aee308cafd24a70 files/digest-descent1-maps-1.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDINRgV3J2n04EauwRAuyXAJ4zcKly2uRx8Re84kWf0RB8G1un5gCeP2zx
-wIIQYJVF7SByBT78u+NYqf0=
-=csSK
------END PGP SIGNATURE-----
