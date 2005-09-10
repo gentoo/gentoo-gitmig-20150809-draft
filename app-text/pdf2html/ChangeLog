@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdf2html
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.9 2005/09/03 14:06:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.10 2005/09/10 06:02:29 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> pdf2html-1.4.ebuild:
+  Mark 1.4 stable on alpha
 
   03 Sep 2005; Luis Medinas <metalgod@gentoo.org> pdf2html-1.4.ebuild:
   Added ~amd64 keywords.
