@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.3.ebuild,v 1.15 2005/01/16 22:50:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-0.1.3.ebuild,v 1.16 2005/09/10 13:10:36 flameeyes Exp $
 
 DESCRIPTION="Library for DVD navigation tools."
 HOMEPAGE="http://sourceforge.net/projects/dvd/"
@@ -13,22 +13,9 @@ IUSE=""
 
 DEPEND="media-libs/libdvdread"
 
-src_unpack() {
-
-	unpack ${A}
-	cd ${S}/src
-
-}
-
-src_compile() {
-
-	econf || die "./configure failed"
-	emake || die
-}
-
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING INSTALL NEWS README
+	dodoc AUTHORS NEWS README
 }
 
 pkg_postinst() {
