@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.8 2005/05/25 15:23:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.9 2005/09/10 08:55:57 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> mytop-1.4.ebuild:
+  Mark 1.4 stable on alpha
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> mytop-1.4.ebuild:
   dev-perl/Time-HiRes => perl-core/Time-HiRes migration
