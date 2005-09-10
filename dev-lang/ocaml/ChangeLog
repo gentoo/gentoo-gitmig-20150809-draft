@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.63 2005/07/25 23:42:30 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.64 2005/09/10 11:14:32 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> ocaml-3.08.3.ebuild:
+  Mark 3.08.3 stable on alpha
 
   26 Jul 2005; Matthieu Sozeau <mattam@gentoo.org> ocaml-3.08.3.ebuild:
   Added gcc4 patch, thanks to Peter Hjalmarsson <xake@telia.com> (fixes bug
