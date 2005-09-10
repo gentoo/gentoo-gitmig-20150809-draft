@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.1 2005/08/17 08:26:18 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.2 2005/09/10 21:55:00 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -73,7 +73,11 @@ src_unpack() {
 
 	# CARIO 0.9.2 API Patch
 	if has_version '>=x11-libs/cairo-0.9.2' ; then
-		epatch ${FILESDIR}/swt-cairo-0.9.2.patch
+		if [[ ${ARCH} == 'amd64' ]] ; then
+			epatch ${FILESDIR}/swt-cairo-0.9.2-amd64.patch
+		else
+			epatch ${FILESDIR}/swt-cairo-0.9.2.patch
+		fi
 	fi
 
 	# Replace the build.xml to allow compilation without Eclipse tasks

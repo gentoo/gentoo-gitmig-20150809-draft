@@ -1,21 +1,16 @@
-==================================================================
-RCS file: /home/eclipse/org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo.c,v
-retrieving revision 1.4
-retrieving revision 1.5
-diff -u -r1.4 -r1.5
---- org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo.c	2005/07/11 21:28:17	1.4
-+++ org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo.c	2005/08/15 20:22:55	1.5
+--- cairo.c.orig	2005-08-11 15:44:50.000000000 +0000
++++ cairo.c	2005-09-10 21:45:59.747679632 +0000
 @@ -254,6 +254,62 @@
  }
  #endif
  
 +#ifndef NO_cairo_1font_1options_1create
-+JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1font_1options_1create)
++JNIEXPORT jlong JNICALL Cairo_NATIVE(cairo_1font_1options_1create)
 +	(JNIEnv *env, jclass that)
 +{
-+	jint rc = 0;
++	jlong rc = 0;
 +	Cairo_NATIVE_ENTER(env, that, cairo_1font_1options_1create_FUNC);
-+	rc = (jint)cairo_font_options_create();
++	rc = (jlong)cairo_font_options_create();
 +	Cairo_NATIVE_EXIT(env, that, cairo_1font_1options_1create_FUNC);
 +	return rc;
 +}
@@ -32,12 +27,12 @@ diff -u -r1.4 -r1.5
 +#endif
 +
 +#ifndef NO_cairo_1font_1options_1get_1antialias
-+JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1font_1options_1get_1antialias)
-+	(JNIEnv *env, jclass that, jint arg0)
++JNIEXPORT jlong JNICALL Cairo_NATIVE(cairo_1font_1options_1get_1antialias)
++	(JNIEnv *env, jclass that, jlong arg0)
 +{
-+	jint rc = 0;
++	jlong rc = 0;
 +	Cairo_NATIVE_ENTER(env, that, cairo_1font_1options_1get_1antialias_FUNC);
-+	rc = (jint)cairo_font_options_get_antialias((cairo_font_options_t *)arg0);
++	rc = (jlong)cairo_font_options_get_antialias((cairo_font_options_t *)arg0);
 +	Cairo_NATIVE_EXIT(env, that, cairo_1font_1options_1get_1antialias_FUNC);
 +	return rc;
 +}
@@ -45,21 +40,21 @@ diff -u -r1.4 -r1.5
 +
 +#ifndef NO_cairo_1font_1options_1set_1antialias
 +JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1font_1options_1set_1antialias)
-+	(JNIEnv *env, jclass that, jint arg0, jint arg1)
++	(JNIEnv *env, jclass that, jlong arg0, jlong arg1)
 +{
 +	Cairo_NATIVE_ENTER(env, that, cairo_1font_1options_1set_1antialias_FUNC);
-+	cairo_font_options_set_antialias((cairo_font_options_t *)arg0, arg1);
++	cairo_font_options_set_antialias((cairo_font_options_t *)arg0, (cairo_antialias_t)arg1);
 +	Cairo_NATIVE_EXIT(env, that, cairo_1font_1options_1set_1antialias_FUNC);
 +}
 +#endif
 +
 +#ifndef NO_cairo_1get_1antialias
-+JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1get_1antialias)
-+	(JNIEnv *env, jclass that, jint arg0)
++JNIEXPORT jlong JNICALL Cairo_NATIVE(cairo_1get_1antialias)
++	(JNIEnv *env, jclass that, jlong arg0)
 +{
-+	jint rc = 0;
++	jlong rc = 0;
 +	Cairo_NATIVE_ENTER(env, that, cairo_1get_1antialias_FUNC);
-+	rc = (jint)cairo_get_antialias((cairo_t *)arg0);
++	rc = (jlong)cairo_get_antialias((cairo_t *)arg0);
 +	Cairo_NATIVE_EXIT(env, that, cairo_1get_1antialias_FUNC);
 +	return rc;
 +}
@@ -67,65 +62,48 @@ diff -u -r1.4 -r1.5
 +
  #ifndef NO_cairo_1get_1current_1point
  JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1get_1current_1point)
- 	(JNIEnv *env, jclass that, jint arg0, jdoubleArray arg1, jdoubleArray arg2)
-@@ -309,6 +365,16 @@
- }
- #endif
- 
-+#ifndef NO_cairo_1get_1font_1options
-+JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1get_1font_1options)
-+	(JNIEnv *env, jclass that, jint arg0, jint arg1)
-+{
-+	Cairo_NATIVE_ENTER(env, that, cairo_1get_1font_1options_FUNC);
-+	cairo_get_font_options((cairo_t *)arg0, (cairo_font_options_t *)arg1);
-+	Cairo_NATIVE_EXIT(env, that, cairo_1get_1font_1options_FUNC);
-+}
-+#endif
-+
- #ifndef NO_cairo_1get_1line_1cap
- JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1get_1line_1cap)
- 	(JNIEnv *env, jclass that, jint arg0)
-@@ -972,12 +1038,14 @@
+ 	(JNIEnv *env, jclass that, jlong arg0, jdoubleArray arg1, jdoubleArray arg2)
+@@ -972,12 +1028,14 @@
  #endif
  
  #ifndef NO_cairo_1reference
 -JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1reference)
-+JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1reference)
- 	(JNIEnv *env, jclass that, jint arg0)
++JNIEXPORT jlong JNICALL Cairo_NATIVE(cairo_1reference)
+ 	(JNIEnv *env, jclass that, jlong arg0)
  {
-+	jint rc = 0;
++	jlong rc = 0;
  	Cairo_NATIVE_ENTER(env, that, cairo_1reference_FUNC);
 -	cairo_reference((cairo_t *)arg0);
-+	rc = (jint)cairo_reference((cairo_t *)arg0);
++	rc = (jlong)cairo_reference((cairo_t *)arg0);
  	Cairo_NATIVE_EXIT(env, that, cairo_1reference_FUNC);
 +	return rc;
  }
  #endif
  
-@@ -1075,6 +1143,16 @@
+@@ -1075,6 +1133,16 @@
  }
  #endif
  
 +#ifndef NO_cairo_1set_1antialias
 +JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1set_1antialias)
-+	(JNIEnv *env, jclass that, jint arg0, jint arg1)
++	(JNIEnv *env, jclass that, jlong arg0, jlong arg1)
 +{
 +	Cairo_NATIVE_ENTER(env, that, cairo_1set_1antialias_FUNC);
-+	cairo_set_antialias((cairo_t *)arg0, arg1);
++	cairo_set_antialias((cairo_t *)arg0, (cairo_antialias_t)arg1);
 +	Cairo_NATIVE_EXIT(env, that, cairo_1set_1antialias_FUNC);
 +}
 +#endif
 +
  #ifndef NO_cairo_1set_1dash
  JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1set_1dash)
- 	(JNIEnv *env, jclass that, jint arg0, jdoubleArray arg1, jint arg2, jdouble arg3)
-@@ -1123,6 +1201,16 @@
+ 	(JNIEnv *env, jclass that, jlong arg0, jdoubleArray arg1, jint arg2, jdouble arg3)
+@@ -1123,6 +1191,16 @@
  }
  #endif
  
 +#ifndef NO_cairo_1set_1font_1options
 +JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1set_1font_1options)
-+	(JNIEnv *env, jclass that, jint arg0, jint arg1)
++	(JNIEnv *env, jclass that, jlong arg0, jlong arg1)
 +{
 +	Cairo_NATIVE_ENTER(env, that, cairo_1set_1font_1options_FUNC);
 +	cairo_set_font_options((cairo_t *)arg0, (cairo_font_options_t *)arg1);
@@ -135,14 +113,31 @@ diff -u -r1.4 -r1.5
 +
  #ifndef NO_cairo_1set_1font_1size
  JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1set_1font_1size)
- 	(JNIEnv *env, jclass that, jint arg0, jdouble arg1)
+ 	(JNIEnv *env, jclass that, jlong arg0, jdouble arg1)
+@@ -1133,6 +1211,16 @@
+ }
+ #endif
+ 
++#ifndef NO_cairo_1get_1font_1options
++JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1get_1font_1options)
++	(JNIEnv *env, jclass that, jlong arg0, jlong arg1)
++{
++	Cairo_NATIVE_ENTER(env, that, cairo_1get_1font_1options_FUNC);
++	cairo_get_font_options((cairo_t *)arg0, (cairo_font_options_t *)arg1);
++	Cairo_NATIVE_EXIT(env, that, cairo_1get_1font_1options_FUNC);
++}
++#endif
++
+ #ifndef NO_cairo_1set_1line_1cap
+ JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1set_1line_1cap)
+ 	(JNIEnv *env, jclass that, jlong arg0, jint arg1)
 @@ -1371,14 +1459,12 @@
  #endif
  
  #ifndef NO_cairo_1surface_1finish
 -JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1surface_1finish)
 +JNIEXPORT void JNICALL Cairo_NATIVE(cairo_1surface_1finish)
- 	(JNIEnv *env, jclass that, jint arg0)
+ 	(JNIEnv *env, jclass that, jlong arg0)
  {
 -	jint rc = 0;
  	Cairo_NATIVE_ENTER(env, that, cairo_1surface_1finish_FUNC);
@@ -156,14 +151,14 @@ diff -u -r1.4 -r1.5
 @@ -1526,11 +1612,11 @@
  
  #ifndef NO_cairo_1xlib_1surface_1create_1for_1bitmap
- JNIEXPORT jint JNICALL Cairo_NATIVE(cairo_1xlib_1surface_1create_1for_1bitmap)
--	(JNIEnv *env, jclass that, jint arg0, jint arg1, jint arg2, jint arg3)
-+	(JNIEnv *env, jclass that, jint arg0, jint arg1, jint arg2, jint arg3, jint arg4)
+ JNIEXPORT jlong JNICALL Cairo_NATIVE(cairo_1xlib_1surface_1create_1for_1bitmap)
+-	(JNIEnv *env, jclass that, jlong arg0, jlong arg1, jint arg2, jint arg3)
++	(JNIEnv *env, jclass that, jlong arg0, jlong arg1, jlong arg2, jint arg3, jint arg4)
  {
- 	jint rc = 0;
+ 	jlong rc = 0;
  	Cairo_NATIVE_ENTER(env, that, cairo_1xlib_1surface_1create_1for_1bitmap_FUNC);
--	rc = (jint)cairo_xlib_surface_create_for_bitmap((Display *)arg0, (Pixmap)arg1, arg2, arg3);
-+	rc = (jint)cairo_xlib_surface_create_for_bitmap((Display *)arg0, (Pixmap)arg1, (Screen *)arg2, arg3, arg4);
+-	rc = (jlong)cairo_xlib_surface_create_for_bitmap((Display *)arg0, (Pixmap)arg1, arg2, arg3);
++	rc = (jlong)cairo_xlib_surface_create_for_bitmap((Display *)arg0, (Pixmap)arg1, (Screen *)arg2, arg3, arg4);
  	Cairo_NATIVE_EXIT(env, that, cairo_1xlib_1surface_1create_1for_1bitmap_FUNC);
  	return rc;
  }
