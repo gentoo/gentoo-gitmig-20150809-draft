@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 636e0640f1950ce404b76d94436a6340 php-gtk-1.0.2.ebuild 1093
+MD5 32db3e53650fb65f0bcdebcf37a1759d ChangeLog 371
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 104e4a1d719126cf73c9bdb45796f91e files/digest-php-gtk-1.0.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIwv/aGfFFLhbXWkRAojLAJ0fCklnrJfyJA8v/pe+fxOfkluFfwCfXCuC
+R/CIW9DYo0y6YK40R1rOC9U=
+=65cg
+-----END PGP SIGNATURE-----

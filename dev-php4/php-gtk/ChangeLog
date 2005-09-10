@@ -1,0 +1,10 @@
+# ChangeLog for dev-php4/php-gtk
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-gtk/ChangeLog,v 1.1 2005/09/10 16:37:00 sebastian Exp $
+
+*php-gtk-1.0.2 (10 Sep 2005)
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +php-gtk-1.0.2.ebuild:
+  New package for PHP-GTK (PHP 4).
+
