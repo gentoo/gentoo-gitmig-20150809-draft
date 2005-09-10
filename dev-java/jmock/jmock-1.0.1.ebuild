@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.0.1.ebuild,v 1.4 2005/07/15 22:44:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-1.0.1.ebuild,v 1.5 2005/09/10 16:15:47 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -14,7 +14,7 @@ IUSE="doc examples jikes"
 
 RDEPEND=">=virtual/jre-1.4
 	${RDEPEND}
-	>=dev-java/cglib-2"
+	=dev-java/cglib-2.0*"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
 	dev-java/ant-core"
