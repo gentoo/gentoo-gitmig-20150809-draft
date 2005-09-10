@@ -1,15 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6e.ebuild,v 1.2 2005/06/21 20:31:50 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6g.ebuild,v 1.1 2005/09/10 19:56:27 ramereth Exp $
 
 inherit eutils webapp
 
 DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
+# patches (none needed for new 0.8.6g)
+#UPSTREAM_PATCHES=""
 SRC_URI="http://www.cacti.net/downloads/${P}.tar.gz"
+#for i in $UPSTREAM_PATCHES ; do
+#	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV}/${i}"
+#done
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="snmp"
 
 DEPEND=""
@@ -21,15 +26,23 @@ RDEPEND="net-www/apache
 	net-analyzer/rrdtool
 	dev-db/mysql
 	virtual/cron
-	dev-php/php
-	dev-php/mod_php"
+	virtual/php
+	virtual/httpd-php"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	# patches (none needed for new 0.8.6g)
+	#for i in ${UPSTREAM_PATCHES} ; do
+	#	EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}
+	#done ;
+}
 
 pkg_setup() {
 	webapp_pkg_setup
-	built_with_use dev-php/php mysql || \
-		die "dev-php/php must be compiled with USE=mysql"
-	built_with_use dev-php/mod_php mysql || \
-		die "dev-php/mod_php must be compiled with USE=mysql"
+	built_with_use virtual/php mysql || \
+		die "php cli sapi must be compiled with USE=mysql"
+	built_with_use virtual/httpd-php mysql || \
+		die "php apache/cgi sapi must be compiled with USE=mysql"
 }
 
 src_compile() {
