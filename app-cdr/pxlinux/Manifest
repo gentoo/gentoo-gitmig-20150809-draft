@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d3079f0cd1577cc68eb23822216f8375 pxlinux-0.0.4.ebuild 879
 MD5 475813df93edaa0f60952f5859709eea metadata.xml 227
-MD5 3e9193aad13ddf69a584c7d663259444 ChangeLog 559
+MD5 1928e72067f1dfd2513d7b4d1be59a0b ChangeLog 546
+MD5 3c7f59b2a5424648c58a5031ad054c23 pxlinux-0.0.4-r1.ebuild 882
 MD5 562b03849efd6282947c8bcbc84462b4 files/pxlinux-0.0.4-cleanups.patch 6865
-MD5 0fbc53819973f8448e03eac0668707df files/digest-pxlinux-0.0.4 65
+MD5 0fbc53819973f8448e03eac0668707df files/digest-pxlinux-0.0.4-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDInADgIKl8Uu19MoRAlTrAKCD8YUc+LOqL6CpzpQHh0/+FSxDlQCaAwj5
-4nK8GxPbgt2YSYKYeGSgj5U=
-=BPrQ
+iD8DBQFDIox4gIKl8Uu19MoRAqGqAJ49XNDdmhKc9RWhCafVwmjdVPgdpQCfQe0S
+Lm2Y6AZb94WFeIdtWq0rFmw=
+=Qyxr
 -----END PGP SIGNATURE-----
