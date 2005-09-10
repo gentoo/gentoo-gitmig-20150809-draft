@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.48 2005/07/11 15:15:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.49 2005/09/10 19:00:48 genstef Exp $
+
+*slmodem-2.9.11_pre20050816 (10 Sep 2005)
+
+  10 Sep 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/slmodem-2.9.11.modules, +files/slmodem-class-simple-to-class.diff,
+  +files/slmodem-remove-URB_ASYNC_UNLINK.patch,
+  +slmodem-2.9.11_pre20050816.ebuild:
+  Version bump including 2.6.13 and 2.6.13-mm compatibility fix
 
   11 Jul 2005; Stefan Schweizer <genstef@gentoo.org> files/slmodem-2.9.init,
   slmodem-2.9.9d.ebuild:
