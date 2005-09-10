@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f6c50008f60bd19306528637a95dd11 sonic-rainbow-0.6.2.1.ebuild 1046
 MD5 542f83e34737df2aca45ced5147fe2a0 ChangeLog 1393
 MD5 f399e72a43280b895126b41ccbe3b93e sonic-rainbow-0.6.2.2.ebuild 1048
@@ -7,3 +10,10 @@ MD5 fd1e90f4e252f2a39841cdaa684f0259 files/digest-sonic-rainbow-0.6.2.1 78
 MD5 6d1750dd1771dd596280da180b0fd848 files/sonic-rainbow-0.5.1-Makefile.patch 1658
 MD5 7334b845e08f1b8b3f624e9de521cb24 files/digest-sonic-rainbow-0.6.2.2 78
 MD5 da28b7b6f4f8d602c5918175b35600a7 files/digest-sonic-rainbow-0.5.1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIv+zj5H05b2HAEkRAhkfAJ91O5G3KA8YJ0lw2yS64mjwcKwORQCeMhfI
+JMbkMrl8tbQYqwGdvGvcxRw=
+=PSsR
+-----END PGP SIGNATURE-----

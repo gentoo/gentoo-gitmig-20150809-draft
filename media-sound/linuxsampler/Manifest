@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0dfbacd532963f9b8232ede9e67a3a51 ChangeLog 1168
 MD5 190a5ec8f9b515dec4614356e4c4e9be linuxsampler-0.3.3.ebuild 842
 MD5 4582c8b2de32522ebb5f202edbaca9df linuxsampler-0.3.1.ebuild 863
@@ -6,3 +9,10 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 f19df7afadd03508e29a934891935c17 files/digest-linuxsampler-0.3.3 71
 MD5 36b57a6a6d9ff8583dc3af371354dedb files/digest-linuxsampler-0.3.2 71
 MD5 82837a2c0c98e7edc0c15f8d2ba502c3 files/digest-linuxsampler-0.3.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIwHIj5H05b2HAEkRAhnPAJ93T5RARiO1H7voY9//ayQDUmuwZQCePx4v
+yl/VwYT8tb8w8jdbxsbqZaY=
+=rmy1
+-----END PGP SIGNATURE-----

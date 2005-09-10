@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 665c40292df80db15daa43a21867e813 mcdp-0.3j.ebuild 727
 MD5 1e2c625943f1ad16dfd10ea24aa72aef ChangeLog 1422
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 1159831fecf7d200807f7dc82bfa5bb1 files/mcdp-0.3j-dietlibc-fix.patch 365
 MD5 65c764f79941bf06a15e474906cc1458 files/digest-mcdp-0.3j 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIwEzj5H05b2HAEkRAsOeAJ0eMlYMAhBdGghELIiTdgtKJQFLAQCeMy4l
+jwcBL78Jezv/884Jx+uMat8=
+=zcGF
+-----END PGP SIGNATURE-----

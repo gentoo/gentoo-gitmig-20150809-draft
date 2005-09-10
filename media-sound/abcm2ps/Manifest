@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c35679def3ccd395a5e4d3815c4e670 ChangeLog 1245
 MD5 b6ddd4bc5a0c345cc8bfc6649c996f33 abcm2ps-3.7.21.ebuild 646
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 e87cb37ec163051062c84d1e8b22abed files/digest-abcm2ps-3.7.21 66
 MD5 e6fc956d54d9ca52bc305031ffe395b4 files/abcm2ps-3.7.21-destdir.patch 562
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIwFHj5H05b2HAEkRAkKNAKCTg34B0Rs/ZMP2I7kZNLYLkOEPYACfVO8A
+r5uxgk0PEWi72koXEK7T+FA=
+=XewT
+-----END PGP SIGNATURE-----
