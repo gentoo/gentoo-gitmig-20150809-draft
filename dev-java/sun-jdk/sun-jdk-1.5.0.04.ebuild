@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.04.ebuild,v 1.4 2005/08/26 13:13:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.04.ebuild,v 1.5 2005/09/10 18:18:02 axxo Exp $
 
 inherit java eutils
 
@@ -205,7 +205,7 @@ pkg_postinst() {
 		ewarn "make sure the grsec ACL contains those entries also"
 		ewarn "because enabling it will override the chpax setting"
 		ewarn "on the physical files - help for PaX and grsecurity"
-		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
+		ewarn "can be given by #gentoo-hardened + hardened@gentoo.org"
 	fi
 
 	echo
