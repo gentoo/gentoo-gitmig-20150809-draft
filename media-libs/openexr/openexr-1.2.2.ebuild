@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2.ebuild,v 1.13 2005/08/24 17:43:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2.ebuild,v 1.14 2005/09/10 13:04:08 flameeyes Exp $
 
 MY_P=OpenEXR-${PV}
 S=${WORKDIR}/${MY_P}
@@ -33,6 +33,6 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
 
-	dodoc AUTHORS README INSTALL ChangeLog NEWS
+	dodoc AUTHORS README ChangeLog NEWS
 	use doc && dohtml -r "${S}"/doc/*
 }

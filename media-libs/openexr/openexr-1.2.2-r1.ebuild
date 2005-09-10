@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r1.ebuild,v 1.2 2005/07/25 19:26:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.2.2-r1.ebuild,v 1.3 2005/09/10 13:04:08 flameeyes Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS Changelog README* INSTALL ChangeLog LICENSE NEWS
+	dodoc AUTHORS Changelog README* ChangeLog LICENSE NEWS
 	if use examples && [ "${P}" != "${PF}" ] ; then
 		mv ${D}/usr/share/doc/${P}/examples ${D}/usr/share/doc/${PF}/examples
 	fi
