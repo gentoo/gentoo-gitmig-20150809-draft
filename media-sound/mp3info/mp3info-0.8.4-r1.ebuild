@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.19 2004/12/17 21:32:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.4-r1.ebuild,v 1.20 2005/09/10 15:53:21 flameeyes Exp $
 
 inherit eutils
 
@@ -35,6 +35,6 @@ src_install() {
 	dobin mp3info
 	use gtk && dobin gmp3info
 
-	dodoc ChangeLog INSTALL LICENSE README
+	dodoc ChangeLog README
 	doman mp3info.1
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3info
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.14 2005/08/31 12:11:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/ChangeLog,v 1.15 2005/09/10 15:53:21 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mp3info-0.8.4-r1.ebuild, mp3info-0.8.4-r2.ebuild:
+  Don't install INSTALL and LICENSE files.
 
   31 Aug 2005; Fabian Groffen <grobian@gentoo.org> mp3info-0.8.4-r2.ebuild:
   Marking ~ppc-macos (bug #104325)
