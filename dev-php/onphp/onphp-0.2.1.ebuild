@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/onphp-0.2.0-r1.ebuild,v 1.1 2005/09/04 13:06:11 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/onphp/onphp-0.2.1.ebuild,v 1.1 2005/09/10 22:52:18 voxus Exp $
 
 DESCRIPTION="onPHP is the GPL'ed multi-purpose object-oriented PHP framework."
 HOMEPAGE="http://onphp.shadanakar.org/"
