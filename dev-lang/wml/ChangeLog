@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/wml
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.18 2005/05/04 12:59:00 herbs Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.19 2005/09/10 06:51:30 vapier Exp $
+
+*wml-2.0.9-r1 (10 Sep 2005)
+
+  10 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wml-2.0.9-autotools-update.patch, +wml-2.0.9-r1.ebuild:
+  Use system libpcre instead of bundled one #105138.
 
   04 May 2005; Herbie Hopkins <herbs@gentoo.org> wml-2.0.9.ebuild:
   Fixed bug #90401
