@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.29 2005/09/03 17:16:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.30 2005/09/10 23:27:54 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> docutils-0.3.5.ebuild:
+  Mark 0.3.5 stable on alpha
 
 *docutils-0.3.9 (03 Sep 2005)
 
