@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.161 2005/09/09 18:37:46 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.162 2005/09/10 06:04:13 matsuu Exp $
+
+  10 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> python-2.3.5-r2.ebuild:
+  Stable on sh.
 
   09 Sep 2005; Josh Grebe <squash@gentoo.org> python-2.3.5-r2.ebuild:
   Sparc stable bump for bug #104009
