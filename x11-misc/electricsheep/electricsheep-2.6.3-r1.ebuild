@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.3-r1.ebuild,v 1.1 2005/09/08 23:58:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.3-r1.ebuild,v 1.2 2005/09/10 22:40:29 dragonheart Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -36,6 +36,14 @@ RDEPEND="virtual/x11
 	media-libs/libsdl
 	virtual/libc
 	sys-libs/zlib"
+
+src_unpack() {
+	unpack ${A}
+	# Detect PIC requirement from direct from compiler instead of
+	# macro PIC.
+	sed -i -e 's/def PIC/def __PIC__/' ${S}/mpeg2dec/src/cpu_accel.c
+	epatch ${FILESDIR}/${P}-cflagsfix.patch
+}
 
 # Also detects and ties in sys-libs/slang, media-libs/aalib media-libs/svgalib and nas
 # if they exist on the user machine although these aren't deps.
