@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xdirectfb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.23 2005/08/25 00:06:53 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.24 2005/09/10 06:17:32 joshuabaergen Exp $
+
+*xdirectfb-1.0_rc5-r2 (10 Sep 2005)
+
+  10 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xdirectfb-1.0_rc5-r2.ebuild:
+  Revision bump.  Sync to CVS as of today and build against xorg-6.8.2 
+  instead of xfree86.  Fixes bug #76167.
 
   25 Aug 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   xdirectfb-1.0_rc5-r1.ebuild:
