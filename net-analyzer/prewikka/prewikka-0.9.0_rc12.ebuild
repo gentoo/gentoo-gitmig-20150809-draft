@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.0_rc9.ebuild,v 1.2 2005/08/07 23:12:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.0_rc12.ebuild,v 1.1 2005/09/10 02:35:51 vanquirius Exp $
 
 inherit versionator distutils
 
