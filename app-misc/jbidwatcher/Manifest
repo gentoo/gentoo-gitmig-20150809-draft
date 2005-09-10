@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 bfecafc0a7b1fe53dcafb30caa41b75b jbidwatcher-0.9.8.ebuild 1456
 MD5 1ad956dceb43c8e3683600af056217c1 jbidwatcher-0.9.7.1.ebuild 1169
-MD5 2392b0826bdd42c6ec77ac8450b3a7e9 ChangeLog 2364
+MD5 00d441c235009a9e6afeb008b41d4649 ChangeLog 2584
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 87ab883daca9c7942dec30618af87190 jbidwatcher-0.9.7.ebuild 1167
+MD5 e4a099a9465fab9439db2f10b38539f8 files/jbidwatcher-0.9.8-build_xml.patch 2328
+MD5 9e35f6ed9dd9312fafd1fd5d2161a3cf files/jbidwatcher-0.9.8-javadoc.patch 1232
 MD5 451a7f7f02d3d485fdc7b6b735f3ec46 files/digest-jbidwatcher-0.9.7 69
+MD5 d0fdaf1156e8b181b282c9cd2dd4ad95 files/digest-jbidwatcher-0.9.8 69
 MD5 af1ad3b07a94f624e49bad21318031b8 files/digest-jbidwatcher-0.9.7.1 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3kBp/rLF9B432nYRAneHAJ9eV/YESyk0/L088sR6a5Dcn4ZxDACfWfjY
-oCQMH5aCJOpKgB5up0f2NkI=
-=n73A
+iD8DBQFDIv8D/rLF9B432nYRAq5FAJwJFJkUvi480ykdbseI3N2kB92PJACfa/aL
+iP9F4bMnoYzc366/P0IUNN4=
+=O7Lq
 -----END PGP SIGNATURE-----
