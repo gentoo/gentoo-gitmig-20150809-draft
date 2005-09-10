@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-dbx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.1 2005/09/04 16:23:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.2 2005/09/10 06:10:14 weeve Exp $
+
+  10 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-dbx-1.1.0.ebuild:
+  Added ~sparc keyword.
 
   18 Aug 2005; <stuart@gentoo.org> ChangeLog:
   Initial version; replaces older dev-php/* packages

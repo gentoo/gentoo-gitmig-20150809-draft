@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 34e4d2b5833c1e595c9ed1029469c739 ChangeLog 315
-MD5 ed2047d765f8569bef894def860bc3be files/digest-pecl-imagick-0.9.11 62
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 d5d5c27c525bc0c751db0aee4b62c129 pecl-imagick-0.9.11.ebuild 803
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDH4CAI1lqEGTUzyQRAgdQAJ4isOZx7rOmsWIzwZLjR152Zfh0bwCg2VPG
-JHZZIskObCSoEqRtjxRYLs4=
-=EYHn
------END PGP SIGNATURE-----
+MD5 655601fefb71c4be70a1827da4473eab pecl-imagick-0.9.11.ebuild 810
+MD5 ed2047d765f8569bef894def860bc3be files/digest-pecl-imagick-0.9.11 62
