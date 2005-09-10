@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.13 2005/05/10 15:34:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.2.ebuild,v 1.14 2005/09/10 15:54:02 flameeyes Exp $
 
 IUSE="nls gnome oggvorbis debug alsa"
 
@@ -90,6 +90,6 @@ src_install () {
 		      /usr/share/pixmaps/glame-logo.jpg
 	fi
 
-	dodoc ABOUT-NLS AUTHORS BUGS CREDITS ChangeLog MAINTAINERS \
+	dodoc AUTHORS BUGS CREDITS ChangeLog MAINTAINERS \
 		NEWS README TODO
 }
