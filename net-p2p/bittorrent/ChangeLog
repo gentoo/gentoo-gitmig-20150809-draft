@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.59 2005/09/02 20:25:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.60 2005/09/10 16:09:11 sekretarz Exp $
+
+  10 Sep 2005; Karol Wojtaszek <sekretarz@gentoo.org> +files/bttrack.rc-4.1,
+  bittorrent-4.1.4.ebuild:
+  Fixed init script and mime entry to match new naming scheme, bug #105143
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   bittorrent-4.0.2.ebuild:

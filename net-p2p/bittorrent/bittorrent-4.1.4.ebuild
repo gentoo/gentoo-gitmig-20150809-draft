@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.4 2005/08/27 20:04:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.5 2005/09/10 16:09:11 sekretarz Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -36,7 +36,7 @@ PYTHON_MODNAME="BitTorrent"
 src_install() {
 	distutils_src_install
 	if ! use X; then
-		rm ${D}/usr/bin/*gui.py
+		rm ${D}/usr/bin/bittorrent
 	fi
 	dohtml redirdonate.html
 	dodir etc
@@ -45,7 +45,7 @@ src_install() {
 	mv ${D}/usr/share/doc/${MY_P}/* ${D}/usr/share/doc/${P}/
 	rm -fr ${D}/usr/share/doc/${MY_P}
 
-	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
+	MAILCAP_STRING="application/x-bittorrent; /usr/bin/bittorrent '%s'; test=test -n \"\$DISPLAY\""
 
 	if use X; then
 		if [ -n "`grep 'application/x-bittorrent' ${D}/etc/mailcap`" ]; then
@@ -72,12 +72,12 @@ src_install() {
 	newins ${FILESDIR}/bttrack.conf bttrack
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/bttrack.rc bttrack
+	newexe ${FILESDIR}/bttrack.rc-4.1 bttrack
 }
 
 pkg_postinst() {
-	einfo "BitTorrent has changed to the BitTorrent Open Source License"
-	einfo ">> http://www.bittorrent.com/license/"
+	einfo "Remember that BitTorrent has changed file naming scheme"
+	einfo "To run BitTorrent just execute /usr/bin/bittorrent"
 	distutils_pkg_postinst
 	fdo-mime_desktop_database_update
 }
