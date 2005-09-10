@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.29 2005/08/20 18:13:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.30 2005/09/10 16:37:32 axxo Exp $
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -283,9 +283,11 @@ java-pkg_jar-from()
 		fi
 		_record-jar ${pkg} ${x}
 		if [ -z "${jar}" ] ; then
-			ln -sf ${x} $(basename ${x})
+			[[ -f $(basename ${x}) ]]  && rm $(basename ${x})
+			ln -snf ${x} $(basename ${x})
 		elif [ "$(basename ${x})" == "${jar}" ] ; then
-			ln -sf ${x} ${destjar}
+			[[ -f ${destjar} ]]  && rm ${destjar}
+			ln -snf ${x} ${destjar}
 			return 0
 		fi
 	done
