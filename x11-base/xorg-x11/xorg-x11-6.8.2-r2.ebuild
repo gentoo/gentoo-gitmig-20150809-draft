@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.54 2005/08/25 01:01:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.55 2005/09/10 21:19:41 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -82,6 +82,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
+	sys-apps/groff
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-2.1.8
 	>=media-libs/fontconfig-2.1-r1
