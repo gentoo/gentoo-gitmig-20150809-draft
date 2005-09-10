@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.35 2005/05/19 14:10:08 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.36 2005/09/10 18:00:48 grobian Exp $
+
+  10 Sep 2005; Fabian Groffen <grobian@gentoo.org> joe-3.2.ebuild:
+  Marking ~ppc-macos
 
   19 May 2005; Yuta SATOH <nigoro@gentoo.org> joe-3.2.ebuild:
   add ~ppc64
