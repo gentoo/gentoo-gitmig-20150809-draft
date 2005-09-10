@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.146 2005/09/04 00:07:28 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.147 2005/09/10 02:43:30 allanonjl Exp $
+
+*gnome-panel-2.12.0 (10 Sep 2005)
+
+  10 Sep 2005; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-panel-2.11.92.ebuild, +gnome-panel-2.12.0.ebuild:
+  2.12 release vbump
 
   04 Sep 2005; John N. Laliberte <allanonjl@gentoo.org>
   gnome-panel-2.11.92.ebuild:
