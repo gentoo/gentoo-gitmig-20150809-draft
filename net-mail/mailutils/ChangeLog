@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.19 2005/05/27 13:07:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.20 2005/09/10 22:52:10 ferdy Exp $
+
+*mailutils-0.6-r2 (10 Sep 2005)
+
+  10 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/mailutils-0.6-imap4d-format-string.patch, +mailutils-0.6-r2.ebuild:
+  Applied security patch wrt bug #105458. Stable on x86
 
   27 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
   +files/mailutils-SQLinjection.patch, +files/mailutils-getline.diff,
