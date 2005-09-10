@@ -1,5 +1,5 @@
-MD5 a132206ac093a113cd76af2d0047a4da lapack-atlas-3.6.0.ebuild 5025
-MD5 e464a61e0eea079d40ab948f0628472a ChangeLog 2775
+MD5 9ff2bd4bad912135b4ba71ae651c16bd lapack-atlas-3.6.0.ebuild 5051
+MD5 979908b8ccc8d959226745f8995d9a8c ChangeLog 2892
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 13d26350d75e6993f1b3ec48ca97f14e files/war 545
 MD5 b3d716baf0a71dd55ce358d086e4069b files/digest-lapack-atlas-3.6.0 335
