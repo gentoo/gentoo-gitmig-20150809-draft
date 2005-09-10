@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.1 2005/09/10 19:00:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.2 2005/09/10 19:05:42 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://linmodems.technion.ac.il/packages/smartlink/snapshots/${P/_pre/-
 	http://linmodems.technion.ac.il/packages/smartlink/ungrab-winmodem.tar.gz"
 LICENSE="Smart-Link"
 SLOT="0"
-KEYWORDS="x86 -*"
+KEYWORDS="~x86 -*"
 IUSE="alsa usb"
 
 RDEPEND="virtual/libc
