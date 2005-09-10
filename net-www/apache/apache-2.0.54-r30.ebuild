@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.1 2005/09/10 19:58:24 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.2 2005/09/10 20:30:07 vericgar Exp $
 
 inherit eutils gnuconfig
 
@@ -322,7 +322,7 @@ pkg_postinst() {
 	done
 	[ -n "${list}" ] && einfo "You should delete these old symlinks: ${list}"
 
-	if has_version '<net-www/apache-2.0.54-r10' && has_version '>=net-www/apache-2.0.0' ; then
+	if has_version '<net-www/apache-2.0.54-r30' && has_version '>=net-www/apache-2.0.0' ; then
 		einfo "Configuration locations have changed, you will need to migrate"
 		einfo "your configuration from /etc/apache2/conf/apache2.conf and"
 		einfo "/etc/apache2/conf/commonapache2.conf to /etc/apache2/httpd.conf."

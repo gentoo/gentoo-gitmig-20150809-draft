@@ -1,6 +1,16 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.404 2005/09/10 19:58:24 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.405 2005/09/10 20:30:07 vericgar Exp $
+
+  10 Sep 2005; Michael Stewart <vericgar@gentoo.org> -apache-2.0.50.ebuild,
+  -apache-2.0.51.ebuild, -apache-2.0.51-r1.ebuild, -apache-2.0.52.ebuild,
+  -apache-2.0.52-r1.ebuild, -apache-2.0.52-r2.ebuild,
+  -apache-2.0.54-r7.ebuild, -apache-2.0.54-r8.ebuild,
+  -apache-2.0.54-r10.ebuild, -apache-2.0.54-r11.ebuild,
+  -apache-2.0.54-r12.ebuild, -apache-2.0.54-r13.ebuild,
+  -apache-2.0.54-r14.ebuild:
+  Removing old versions and revisions. Note that new-style for apache is now
+  -r30 and above.
 
 *apache-2.0.54-r30 (10 Sep 2005)
 
