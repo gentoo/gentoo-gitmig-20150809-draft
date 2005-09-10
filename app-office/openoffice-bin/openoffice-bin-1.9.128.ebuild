@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.128.ebuild,v 1.2 2005/09/10 08:09:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.128.ebuild,v 1.3 2005/09/10 08:30:30 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -134,8 +134,12 @@ src_install () {
 
 	# Change user install dir
 	sed -i -e s/.openoffice.org${PV}/.ooo-2.0-pre/g ${D}${INSTDIR}/program/bootstraprc || die
+
 	# Fixing some icon dir permissions
 	chmod +r -R ${D}/usr/share/icons/ || die
+
+	# Non-java weirdness see bug #99366
+	use java || rm -f ${D}${INSTDIR}/program/javaldx
 }
 
 pkg_postinst() {
