@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.26 2005/08/26 13:15:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.27 2005/09/10 16:07:19 axxo Exp $
+
+*batik-1.6 (10 Sep 2005)
+
+  10 Sep 2005; Thomas Matthijs <axxo@gentoo.org>
+  +files/batik-1.6-jikes.patch, +batik-1.6.ebuild:
+  Version bump, thanks too Josh Nichols in 101844
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> batik-1.5.1-r4.ebuild:
   Fix cp -a usage for Gentoo/FreeBSD.
