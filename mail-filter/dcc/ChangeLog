@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.13 2005/03/21 17:46:11 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.14 2005/09/10 09:54:13 tomk Exp $
+
+*dcc-1.3.16 (10 Sep 2005)
+
+  10 Sep 2005; Tom Knight <tomk@gentoo.org> +dcc-1.3.16.ebuild:
+  Version bumped to 1.3.6, fixes security vulnerability, bug #105217
 
 *dcc-1.2.74 (21 Mar 2005)
 
