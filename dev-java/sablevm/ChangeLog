@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sablevm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.16 2005/05/15 03:22:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/ChangeLog,v 1.17 2005/09/10 17:44:46 axxo Exp $
+
+  10 Sep 2005; Thomas Matthijs <axxo@gentoo.org> sablevm-1.1.10.ebuild,
+  sablevm-1.11.3.ebuild:
+  update license #99070
 
   15 May 2005; Jason Wever <weeve@gentoo.org> sablevm-1.11.3.ebuild:
   Added ~sparc keyword.
