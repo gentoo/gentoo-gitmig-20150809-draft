@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.9 2005/05/25 18:27:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.10 2005/09/10 14:32:04 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> dvgrab-1.7.ebuild,
+  dvgrab-1.8.ebuild:
+  Don't install INSTALL file.
 
 *dvgrab-1.8 (25 May 2005)
 

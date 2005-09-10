@@ -1,6 +1,11 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.94 2005/09/05 18:36:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.95 2005/09/10 14:32:54 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> xine-ui-0.99.3.ebuild,
+  xine-ui-0.99.3-r1.ebuild, xine-ui-0.99.4-r1.ebuild,
+  xine-ui-0.99.4-r2.ebuild:
+  Don't install INSTALL file.
 
   05 Sep 2005; Markus Rothe <corsair@gentoo.org> xine-ui-0.99.3-r1.ebuild:
   Stable on ppc64
