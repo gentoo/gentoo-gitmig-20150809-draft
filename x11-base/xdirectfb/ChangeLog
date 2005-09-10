@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xdirectfb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.24 2005/09/10 06:17:32 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/ChangeLog,v 1.25 2005/09/10 06:19:49 joshuabaergen Exp $
+
+  10 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xdirectfb-1.0_rc5-r2.ebuild:
+  Fix x86 keyword.
 
 *xdirectfb-1.0_rc5-r2 (10 Sep 2005)
 
