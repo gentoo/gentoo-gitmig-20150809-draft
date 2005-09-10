@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimbuddy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.7 2005/09/07 21:33:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimbuddy/ChangeLog,v 1.8 2005/09/10 06:59:32 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> vimbuddy-0.9.1-r1.ebuild:
+  Mark 0.9.1-r1 stable on alpha
 
   07 Sep 2005; Aron Griffis <agriffis@gentoo.org> vimbuddy-0.9.1-r1.ebuild:
   Mark 0.9.1-r1 stable on ia64
