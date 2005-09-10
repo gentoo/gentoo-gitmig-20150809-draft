@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.17 2005/09/01 03:50:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.18 2005/09/10 12:05:08 tigger Exp $
+
+  10 Sep 2005; Rob Holland <tigger@gentoo.org>
+  +files/svk-1.01-nognupgtest.patch, +files/svk-1.02-nognupgtest.patch:
+  Add missing patches so that USE="-crypt" works. Fixes #104383. Thanks to
+  <terry@triplett.org>
 
   01 Sep 2005; Jason Wever <weeve@gentoo.org> svk-1.02.ebuild:
   Added ~sparc keyword.
