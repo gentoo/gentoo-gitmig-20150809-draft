@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c907dd7ab5bd1d1e04a2e21a496d5b16 ChangeLog 1368
 MD5 ca4775ba00b233f1b0be3623b448661f oxine-0.2.ebuild 999
 MD5 a65173b46e297dec5ecf34340af08b4e oxine-0.1.ebuild 842
@@ -6,3 +9,10 @@ MD5 f9b749ab60b5a8684925d6a457352b92 files/digest-oxine-0.1 61
 MD5 e668a8d14c492a155a090b1d1723ea74 files/oxine-0.2-xtst.patch 406
 MD5 a8f4b0ba961236d5de5b57a6271cc333 files/digest-oxine-0.2 61
 MD5 9ab0e63d2e2f9d4695a1771a4def9e97 files/oxine-0.2-gcc34.patch 252
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIujHj5H05b2HAEkRAtVJAJ9IN3EM0iAZHRzbFVuhMGdAOjDruwCeJnNn
+uCanYvqq5UXRd3/6Fx5bEIU=
+=0bKU
+-----END PGP SIGNATURE-----
