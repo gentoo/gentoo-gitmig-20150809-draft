@@ -1,4 +1,4 @@
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 29cc4062da913b524dff999b345ab5f6 ChangeLog 307
-MD5 215833f0e22a34532a14e37ae7b4b153 pecl-apc-3.0.8.ebuild 2192
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 48736d2b429b4a1dbc28c82f56356b5f pecl-apc-3.0.8.ebuild 2199
 MD5 66795850fe4fb57f021182ccdd3e3203 files/digest-pecl-apc-3.0.8 57

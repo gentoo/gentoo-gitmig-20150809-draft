@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-ps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-ps/ChangeLog,v 1.1 2005/09/04 15:48:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-ps/ChangeLog,v 1.2 2005/09/10 06:08:48 weeve Exp $
+
+  10 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-ps-1.3.1.ebuild:
+  Added ~sparc keyword.
 
   18 Aug 2005; <stuart@gentoo.org> ChangeLog:
   Initial version; replaces older dev-php/* packages
