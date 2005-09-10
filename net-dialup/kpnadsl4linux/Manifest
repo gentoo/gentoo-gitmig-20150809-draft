@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71549b063a81a02ac95bdbf5807a2acd kpnadsl4linux-1.10-r1.ebuild 1079
-MD5 0b1cd6170bb4a2d7809fd57182bee294 ChangeLog 1413
+MD5 5dce61ae9733263f0398fcd0d60ddfb2 ChangeLog 1505
+MD5 ec00e4d86a6c9742afadf1c41e07f5fc kpnadsl4linux-1.10-r1.ebuild 1077
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 e21c0a3288ade4ae0a5452727a1ea265 files/kpnadsl4linux-config 3773
 MD5 fb725a50fd6d798e8df9f7f885504292 files/digest-kpnadsl4linux-1.10-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYQXpjiC39V7gKu0RAtTCAKCOFSGivdJnEYXwml/31m5AUu/+wgCfbJ90
-oAbLffmnUYGo7zP2pIb0fL8=
-=xpPT
------END PGP SIGNATURE-----
+MD5 e21c0a3288ade4ae0a5452727a1ea265 files/kpnadsl4linux-config 3773
