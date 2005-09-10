@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.121 2005/08/29 05:55:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.122 2005/09/10 03:32:52 tgall Exp $
+
+  09 Sep 2005; Tom Gall <tgall@gentoo.org> ppp-2.4.2-r12.ebuild,
+  ppp-2.4.2-r15.ebuild:
+  stable on ppc64 (r12) ~ppc64 (r15)
 
   29 Aug 2005; Alin Nastac <mrness@gentoo.org> files/ip-up,
   ppp-2.4.2-r12.ebuild, ppp-2.4.2-r15.ebuild, -ppp-2.4.3-r6.ebuild,
@@ -208,7 +212,7 @@
   31 Oct 2004; Daniel Black <dragonheart@gentoo.org> ppp-2.4.2-r7.ebuild:
   x86 stable
 
-  30 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> ppp-2.4.2-r7.ebuild:
+  30 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> ppp-2.4.2-r7.ebuild:
   Stable on alpha, bug 69152.
 
   30 Oct 2004; Jason Wever <weeve@gentoo.org> ppp-2.4.2-r7.ebuild:
