@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2-r3.ebuild,v 1.2 2005/07/09 15:46:06 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2-r3.ebuild,v 1.3 2005/09/10 15:00:01 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -16,6 +16,7 @@ KEYWORDS="x86 amd64 ppc sparc ppc64"
 IUSE="doc source"
 
 DEPEND="virtual/libc
+	!<dev-java/ant-1.5.4-r2
 	!<dev-java/ant-tasks-${PV}
 	source? ( app-arch/zip )
 	>=virtual/jdk-1.4"
