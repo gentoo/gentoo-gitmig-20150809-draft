@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050906.ebuild,v 1.2 2005/09/10 00:48:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050906.ebuild,v 1.3 2005/09/10 09:53:02 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -16,8 +16,7 @@ SRC_URI="mirror://sourceforge/ffmpeg/${MY_P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-# ~alpha need to test aac useflag
-# ~ia64 ~arm ~mips ~hppa
+# ~arm ~mips ~hppa
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss test theora threads truetype v4l xvid dts network zlib sdl"
 
@@ -62,7 +61,7 @@ src_unpack() {
 	# epatch ${FILESDIR}/${PN}-libdir-pic.patch
 	# epatch ${FILESDIR}/${PN}-a52.patch
 	# epatch ${FILESDIR}/${PN}-missing_links.patch
-	# To make sure the ffserver test will work 
+	# To make sure the ffserver test will work
 	sed -i -e "s:-e debug=off::" tests/server-regression.sh
 	cd ${S}
 	cp -R ${S_BASE} ${S_STATIC}
@@ -134,7 +133,7 @@ src_install() {
 	done
 
 	cd ${S_SHARED}
-	dodoc ChangeLog README INSTALL
+	dodoc ChangeLog README
 	dodoc doc/*
 
 	cd ${S_STATIC}/libavcodec/libpostproc
@@ -154,7 +153,6 @@ src_install() {
 
 # Never die for now...
 src_test() {
-
 	for d in ${S_STATIC} ${S_SHARED}; do
 		cd ${d}
 		make test || ewarn "Some test failed"
