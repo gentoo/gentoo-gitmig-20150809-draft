@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/net-sftp-0.08.ebuild,v 1.5 2005/04/29 18:43:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/net-sftp-0.08.ebuild,v 1.6 2005/09/10 22:22:41 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/D/DR/DROLSKY/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha"
+KEYWORDS="alpha ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-perl/net-ssh-perl-1.25"
