@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.22 2005/04/22 23:28:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.23 2005/09/10 06:13:55 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.dewn.com/rfc/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ppc ppc64 ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ~mips ppc ppc-macos ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
