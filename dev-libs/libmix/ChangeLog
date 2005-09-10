@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.4 2005/04/15 01:45:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.5 2005/09/10 03:12:29 tgall Exp $
+
+  09 Sep 2005; Tom Gall <tgall@gentoo.org> libmix-2.05.ebuild:
+  stable on ppc64
 
   14 Apr 2005; Tom Gall <tgall@gentoo.org> libmix-2.05.ebuild:
   added ~ppc64, dep for bug#89110
