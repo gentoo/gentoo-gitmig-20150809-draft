@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.36.1.ebuild,v 1.2 2005/08/26 05:41:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.36.2.ebuild,v 1.1 2005/09/10 06:42:54 cardoe Exp $
 
 inherit eutils mono python multilib debug
 
