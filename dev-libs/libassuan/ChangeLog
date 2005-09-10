@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.16 2005/08/06 02:26:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.17 2005/09/10 11:38:37 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> libassuan-0.6.9.ebuild:
+  Mark 0.6.9 stable on alpha
 
 *libassuan-0.6.10 (06 Aug 2005)
 
