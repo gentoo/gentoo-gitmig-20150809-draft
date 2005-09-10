@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.40 2005/09/05 15:23:50 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.41 2005/09/10 22:42:16 ferdy Exp $
+
+*maildrop-1.8.1-r2 (10 Sep 2005)
+
+  10 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/maildrop-1.8.1-disable-fam.patch, -maildrop-1.8.1-r1.ebuild,
+  +maildrop-1.8.1-r2.ebuild, maildrop-1.8.1.20050828.ebuild:
+  fix 1.8.1 and development versions adding fam use flag. Remove -r1 in favour
+  of -r2
 
   05 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
   maildrop-1.8.1-r1.ebuild:

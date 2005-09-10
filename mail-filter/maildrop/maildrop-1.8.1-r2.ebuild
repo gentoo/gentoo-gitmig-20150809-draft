@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1-r1.ebuild,v 1.4 2005/09/05 15:23:50 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1-r2.ebuild,v 1.1 2005/09/10 22:42:16 ferdy Exp $
 
 inherit eutils gnuconfig
 
 DESCRIPTION="Mail delivery agent/filter"
-[ -z "${PV/?.?/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-[ -z "${PV/?.?.?/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-[ -z "${SRC_URI}" ] && SRC_URI="http://www.courier-mta.org/beta/courier/${P%%_pre}.tar.bz2"
+[[ -z ${PV/?.?} ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+[[ -z ${PV/?.?.?} ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+[[ -z ${SRC_URI} ]] && SRC_URI="http://www.courier-mta.org/beta/${PN}/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/maildrop/"
 S="${WORKDIR}/${P%%_pre}"
 
@@ -15,16 +15,23 @@ SLOT="0"
 LICENSE="GPL-2"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="mysql ldap gdbm berkdb debug postgres"
+IUSE="berkdb debug fam gdbm ldap mysql postgres"
 
 PROVIDE="virtual/mda"
 
-DEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	!gdbm? ( berkdb? ( >=sys-libs/db-3 ) )
-	mysql? ( net-libs/courier-authlib )
+DEPEND="!mail-mta/courier
+	gdbm?     ( >=sys-libs/gdbm-1.8.0 )
+	mysql?    ( net-libs/courier-authlib )
 	postgres? ( net-libs/courier-authlib )
-	ldap? ( net-libs/courier-authlib )
-	!mail-mta/courier"
+	ldap?     ( net-libs/courier-authlib )
+	fam?      ( virtual/fam )
+	!fam?     ( ~sys-devel/autoconf-2.59 )
+	!gdbm? (
+		berkdb? (
+			>=sys-libs/db-3
+			~sys-devel/autoconf
+		)
+	)"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl"
@@ -39,25 +46,27 @@ src_unpack() {
 	# Be nice with uclibc also
 	use elibc_uclibc && sed -i -e 's~linux-gnu\*~& | linux-uclibc~' config.sub
 
+	# Prefer gdbm over berkdb
 	if use gdbm ; then
 		use berkdb && einfo "Both gdbm and berkdb selected. Using gdbm."
-	else
-		if use berkdb ; then
-			epatch ${FILESDIR}/maildrop-1.8.0-db4.patch
-			export WANT_AUTOCONF="2.5"
-			gnuconfig_update
-			libtoolize --copy --force
-			ebegin "Recreating configure."
-				autoconf || die "recreate configure failed."
-			eend $?
+	elif use berkdb ; then
+			epatch ${FILESDIR}/${PN}-1.8.0-db4.patch
 			cd ${S}/bdbobj
 			libtoolize --copy --force
-			ebegin "Recreating configure in bdbobj."
-				autoconf || die "recreate configure failed."
-			eend $?
-		else
-			einfo "Building without database support"
-		fi
+			WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (bdbobj)"
+	fi
+
+	if ! use fam ; then
+		epatch ${FILESDIR}/${P}-disable-fam.patch
+		cd ${S}/maildir
+		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (maildir)"
+	fi
+
+	# Only recreate configure if needed
+	if ! use fam || { ! use gdbm && use berkdb ; } ; then
+		gnuconfig_update
+		libtoolize --copy --force
+		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (topdir)"
 	fi
 }
 
@@ -77,6 +86,8 @@ src_compile() {
 	fi
 
 	econf \
+		$(use_enable fam) \
+		--disable-dependency-tracker \
 		--with-devel \
 		--disable-tempdir \
 		--enable-syslog=1 \
