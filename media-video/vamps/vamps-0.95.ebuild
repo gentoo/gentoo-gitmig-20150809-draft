@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.95.ebuild,v 1.7 2005/05/25 14:03:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.95.ebuild,v 1.8 2005/09/10 15:31:48 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,7 +30,7 @@ src_compile() {
 
 src_install() {
 	dobin vamps lsdvd-vamps vamps-play_title dvdgm.pl
-	dodoc INSTALL README
+	dodoc README
 	insinto /usr/share/vamps
 	doins ct-dvd.xml dvdgm.cfg palette.yuv penguin.jpg silence.mp2
 }

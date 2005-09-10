@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.3 2005/07/28 10:34:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.4 2005/09/10 15:34:32 flameeyes Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -82,6 +82,6 @@ src_compile() {
 src_install() {
 	make OPTFLAGS="${CFLAGS}" install || die
 
-	dodoc AUTHORS BUGS Changelog INSTALL README TODO
+	dodoc AUTHORS BUGS Changelog README TODO
 	dodoc doc/*.html doc/*.txt doc/libisomedia_license doc/SGGen
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.97.ebuild,v 1.2 2005/04/22 14:51:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.97.ebuild,v 1.3 2005/09/10 15:31:48 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,5 +27,4 @@ src_compile() {
 
 src_install() {
 	dobin vamps play_cell
-	dodoc INSTALL
 }

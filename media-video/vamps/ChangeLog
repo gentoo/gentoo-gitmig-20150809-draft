@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vamps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.6 2005/05/25 14:03:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/ChangeLog,v 1.7 2005/09/10 15:31:48 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> vamps-0.95.ebuild,
+  vamps-0.97.ebuild:
+  Don't install INSTALL file.
 
   25 May 2005; Michael Cummings <mcummings@gentoo.org> vamps-0.95.ebuild:
   dev-perl/Getopt-Long => perl-core/Getopt-Long migration

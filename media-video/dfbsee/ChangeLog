@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dfbsee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.3 2005/03/11 15:53:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.4 2005/09/10 15:37:46 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> dfbsee-0.7.4.ebuild:
+  Don't install INSTALL file.
 
   11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> dfbsee-0.7.4.ebuild:
   corrected path for S to fix #76211.also appended some ldflags to get rid of a

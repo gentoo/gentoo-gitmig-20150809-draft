@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0_pre1.ebuild,v 1.4 2005/04/21 19:02:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0_pre1.ebuild,v 1.5 2005/09/10 15:41:29 flameeyes Exp $
 
 MY_P="${P/_/}"
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog INSTALL README* TODO
+	dodoc AUTHORS ChangeLog README* TODO
 
 	dosym /usr/lib/win32 /usr/share/emovix/codecs
 }
