@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.405 2005/09/10 20:30:07 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.406 2005/09/10 22:32:08 vericgar Exp $
+
+*apache-1.3.33-r11 (10 Sep 2005)
+*apache-1.3.33-r6 (10 Sep 2005)
+
+  10 Sep 2005; Michael Stewart <vericgar@gentoo.org>
+  +apache-1.3.33-r6.ebuild, +apache-1.3.33-r11.ebuild:
+  Security bump to address CAN-2005-2700. Fixes bug 104807
 
   10 Sep 2005; Michael Stewart <vericgar@gentoo.org> -apache-2.0.50.ebuild,
   -apache-2.0.51.ebuild, -apache-2.0.51-r1.ebuild, -apache-2.0.52.ebuild,
