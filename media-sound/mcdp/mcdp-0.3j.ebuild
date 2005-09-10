@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.14 2005/08/29 01:55:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.15 2005/09/10 15:51:53 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,5 +30,5 @@ src_install() {
 	doman mcdp.1 || die
 
 	cd doc
-	dodoc CHANGES INSTALL README THANKS profile.sh
+	dodoc CHANGES README THANKS profile.sh
 }

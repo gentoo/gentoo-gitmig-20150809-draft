@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-0.3.1.ebuild,v 1.3 2005/07/11 16:56:14 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-0.3.1.ebuild,v 1.4 2005/09/10 15:54:21 flameeyes Exp $
 
 inherit eutils
 
@@ -27,5 +27,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "einstall failed"
-	dodoc AUTHORS ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog README
 }

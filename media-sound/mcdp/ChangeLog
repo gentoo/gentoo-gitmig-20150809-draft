@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.12 2005/08/28 06:08:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.13 2005/09/10 15:51:53 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> mcdp-0.3j.ebuild:
+  Don't install INSTALL file.
 
   28 Aug 2005; Mike Frysinger <vapier@gentoo.org> mcdp-0.3j.ebuild:
   Punt USE=diet.

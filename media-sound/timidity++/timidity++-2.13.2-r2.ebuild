@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.5 2005/09/09 19:37:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r2.ebuild,v 1.6 2005/09/10 15:45:37 flameeyes Exp $
 
 IUSE="oss nas esd motif X gtk gtk2 vorbis tcltk slang alsa arts jack portaudio emacs ao speex flac ncurses"
 
@@ -105,7 +105,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	dodoc AUTHORS ChangeLog* INSTALL*
+	dodoc AUTHORS ChangeLog*
 	dodoc NEWS README* ${FILESDIR}/timidity.cfg
 
 	newconfd ${FILESDIR}/conf.d.timidity timidity

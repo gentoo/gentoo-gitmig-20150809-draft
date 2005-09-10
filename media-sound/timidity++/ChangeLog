@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.52 2005/09/09 19:37:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.53 2005/09/10 15:45:37 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  timidity++-2.13.2.ebuild, timidity++-2.13.2-r2.ebuild:
+  Don't install INSTALL file.
 
   09 Sep 2005; Brent Baude <ranger@gentoo.org> timidity++-2.13.2-r2.ebuild:
   Marking timidity++-2.13.2-r2 ~ppc in support of bug 104254

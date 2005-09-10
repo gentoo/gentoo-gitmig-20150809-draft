@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonic-rainbow
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.8 2004/09/15 17:30:11 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.9 2005/09/10 15:45:29 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  sonic-rainbow-0.5.1.ebuild, sonic-rainbow-0.6.2.1.ebuild,
+  sonic-rainbow-0.6.2.2.ebuild:
+  Don't install INSTALL file.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sonic-rainbow-0.6.2.2.ebuild:

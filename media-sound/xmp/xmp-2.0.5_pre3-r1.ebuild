@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3-r1.ebuild,v 1.6 2004/11/23 04:06:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3-r1.ebuild,v 1.7 2005/09/10 15:50:36 flameeyes Exp $
 
 IUSE="xmms arts esd nas X oss"
 
@@ -71,5 +71,5 @@ src_compile() {
 
 src_install () {
 	make DEST_DIR=${D} MAN_DIR=${D}/usr/share/man/man1 install || die
-	dodoc INSTALL README
+	dodoc README
 }

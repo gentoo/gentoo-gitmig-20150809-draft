@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-3.7.21.ebuild,v 1.2 2005/03/17 08:18:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-3.7.21.ebuild,v 1.3 2005/09/10 15:52:13 flameeyes Exp $
 
 IUSE=""
 
@@ -24,5 +24,5 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc README abc-draft.txt Changes INSTALL
+	dodoc README abc-draft.txt Changes
 }
