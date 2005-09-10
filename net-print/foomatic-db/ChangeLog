@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.35 2005/09/10 13:00:46 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.36 2005/09/10 17:18:19 joshuabaergen Exp $
+
+  10 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/fix-sandbox-20050910.patch, foomatic-db-20050910.ebuild:
+  Fixed sandbox violation (bug #105503).
 
 *foomatic-db-20050910 (10 Sep 2005)
 
