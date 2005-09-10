@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.20 2005/09/10 22:52:10 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.21 2005/09/10 22:54:03 ferdy Exp $
+
+  10 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -mailutils-0.6-r1.ebuild:
+  remove vulnerable version. forgot to do it earlier
 
 *mailutils-0.6-r2 (10 Sep 2005)
 
