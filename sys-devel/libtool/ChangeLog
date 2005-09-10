@@ -1,10 +1,10 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.83 2005/09/10 13:35:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.84 2005/09/10 13:43:19 azarah Exp $
 
   10 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
   files/1.5.10/libtool-1.5.10-portage.patch:
-  Fix typo in portage patch
+  Fix typo in portage patch, bug #105054.
 
 *libtool-1.5.20 (02 Sep 2005)
 
