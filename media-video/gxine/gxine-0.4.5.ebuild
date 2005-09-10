@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.5.ebuild,v 1.7 2005/08/17 03:13:27 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.4.5.ebuild,v 1.8 2005/09/10 14:05:49 flameeyes Exp $
 
 inherit eutils nsplugins fdo-mime
 
@@ -51,7 +51,7 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins pixmaps/gxine-logo.png gxine.png
