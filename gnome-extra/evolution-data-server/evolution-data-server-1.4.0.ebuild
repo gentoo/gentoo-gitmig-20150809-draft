@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.0.ebuild,v 1.1 2005/09/05 18:29:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.0.ebuild,v 1.2 2005/09/10 15:44:21 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -55,6 +55,35 @@ pkg_setup() {
 
 	use ldap && G2CONF="${G2CONF} $(use_with static static-ldap)"
 
+	if use krb4 && ! built_with_use virtual/krb5 krb4; then
+		ewarn
+		ewarn "In order to add kerberos 4 support, you have to emerge"
+		ewarn "virtual/krb5 with the 'krb4' USE flag enabled as well."
+		ewarn
+		ewarn "Skipping for now."
+		ewarn
+		G2CONF="${G2CONF} --without-krb4"
+	else
+		G2CONF="${G2CONF} $(use_with krb4 krb4 /usr)"
+	fi
+}
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
+	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
+	# upstream gcc4 fix
+	epatch ${FILESDIR}/${PN}-1.2.3-gcc4.patch
+
+	# Resolve symbols at execution time for setgid binaries
+	epatch ${FILESDIR}/${PN}-no_lazy_bindings.patch
+
+	export WANT_AUTOMAKE=1.7
+	automake || die "automake failed"
+}
+
+src_compile() {
 	# Use NSS/NSPR only if 'ssl' is enabled. They can be used from
 	# mozilla/firefox if the relevant USE flags are enabled. 'firefox' take
 	# precedence over 'mozilla'.
@@ -86,35 +115,6 @@ pkg_setup() {
 			--without-nss-libs --without-nss-includes"
 	fi
 
-	if use krb4 && ! built_with_use virtual/krb5 krb4; then
-		ewarn
-		ewarn "In order to add kerberos 4 support, you have to emerge"
-		ewarn "virtual/krb5 with the 'krb4' USE flag enabled as well."
-		ewarn
-		ewarn "Skipping for now."
-		ewarn
-		G2CONF="${G2CONF} --without-krb4"
-	else
-		G2CONF="${G2CONF} $(use_with krb4 krb4 /usr)"
-	fi
-}
-
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo_etc_services.patch
-	# upstream gcc4 fix
-	epatch ${FILESDIR}/${PN}-1.2.3-gcc4.patch
-
-	# Resolve symbols at execution time for setgid binaries
-	epatch ${FILESDIR}/${PN}-no_lazy_bindings.patch
-
-	export WANT_AUTOMAKE=1.7
-	automake || die "automake failed"
-}
-
-src_compile() {
 	cd "${S}/libdb/dist"
 	./s_config || die
 
