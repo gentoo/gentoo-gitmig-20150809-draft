@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.7 2005/08/24 00:36:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r2.ebuild,v 1.8 2005/09/10 17:07:07 kito Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/readline/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 
 # We must be certain that we have a bash that is linked
@@ -57,12 +57,15 @@ src_install() {
 	# directory, since readline's configure automatically sets libdir for you.
 	make DESTDIR="${D}" install || die
 	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
-	chmod a+rx "${D}"/$(get_libdir)/*.so*
 
-	# Bug #4411
-	gen_usr_ldscript libreadline.so
-	gen_usr_ldscript libhistory.so
+	if ! use userland_Darwin ; then
+		mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
+		chmod a+rx "${D}"/$(get_libdir)/*.so*
+
+		# Bug #4411
+		gen_usr_ldscript libreadline.so
+		gen_usr_ldscript libhistory.so
+	fi
 
 	dodoc CHANGELOG CHANGES README USAGE NEWS
 	docinto ps
