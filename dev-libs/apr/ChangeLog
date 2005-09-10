@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.32 2005/09/10 11:20:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.33 2005/09/10 19:03:43 vericgar Exp $
+
+  10 Sep 2005; Michael Stewart <vericgar@gentoo.org> apr-0.9.6-r3.ebuild:
+  Stable on x86
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> apr-0.9.5.ebuild:
   Mark 0.9.5 stable on alpha
