@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/selinux-gnupg-20050813.ebuild,v 1.1 2005/08/20 17:23:19 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/selinux-gnupg-20050823.ebuild,v 1.1 2005/09/10 08:14:49 kaiowas Exp $
 
 inherit selinux-policy
 
