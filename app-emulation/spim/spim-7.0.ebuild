@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.11 2005/08/16 19:22:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.12 2005/09/10 22:00:52 compnerd Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ IUSE="X"
 
 RDEPEND="X? ( virtual/x11 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+		>=sys-apps/sed-4
+		x11-base/xorg-x11"
 
 src_unpack() {
 	unpack ${A}
