@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.13 2005/09/01 03:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.14 2005/09/10 10:25:11 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> physfs-1.0.1.ebuild:
+  Mark 1.0.1 stable on alpha
 
 *physfs-1.1.0 (01 Sep 2005)
 
