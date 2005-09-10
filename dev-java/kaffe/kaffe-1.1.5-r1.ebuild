@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.5-r1.ebuild,v 1.2 2005/09/10 17:38:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.5-r1.ebuild,v 1.3 2005/09/10 18:41:56 betelgeuse Exp $
 
 inherit eutils java flag-o-matic
 
@@ -27,9 +27,9 @@ DEPEND="
 		>=dev-libs/glib-2.0
 		>=x11-libs/gtk+-2.0
 		>=media-libs/libart_lgpl-2.0 )
-	esd?( >=media-sound/esound-0.2.1 )
-	alsa?( >=media-libs/alsa-lib-1.0.1 )
-	gmp?( >=dev-libs/gmp-3.1 )"
+	esd? ( >=media-sound/esound-0.2.1 )
+	alsa? ( >=media-libs/alsa-lib-1.0.1 )
+	gmp? ( >=dev-libs/gmp-3.1 )"
 RDEPEND=${DEPEND}
 LICENSE="GPL-2"
 SLOT="0"
