@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 432495c7a4dd8b3d7367d26f0eb0a46a ChangeLog 1189
+MD5 404d3adfbd49de2f45eda347f7aadaeb ChangeLog 1301
+MD5 ba5be41d678d80118fe08636814478e0 xmp-2.0.5_pre3-r1.ebuild 1675
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 bad7fc3d37f6bf90a19edcddad4d36b9 xmp-2.0.5_pre3-r1.ebuild 1684
 MD5 b7454b9cfe32ed0950a6eb72dcac8b33 files/digest-xmp-2.0.5_pre3-r1 66
 MD5 1e1fab05a4835611a5e25aa1e6a4898a files/xmp-2.0.5_pre3-gcc3.3.diff 2658
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBorcgArHZZzCEUG0RAoHPAJ0XzLgMr7YQeGo/gZdbUGUkNeVPVgCeJMxl
-u+GD2zj3O+IInp9e8uqqKLk=
-=CuAI
------END PGP SIGNATURE-----
