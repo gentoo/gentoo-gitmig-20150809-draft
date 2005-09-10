@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.36 2005/09/09 05:12:16 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.37 2005/09/10 13:22:54 wolf31o2 Exp $
+
+  10 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  nagios-plugins-1.4.1.ebuild:
+  Changed epatch line to match renamed patch. Sorry if I am stepping on
+  anyone's toes but this one keeps biting me and I don't have easy access to a
+  web browser at the moment.
 
 *nagios-plugins-1.4.1 (09 Sep 2005)
 
