@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-primes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-primes/ChangeLog,v 1.6 2005/04/22 12:49:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-primes/ChangeLog,v 1.7 2005/09/10 12:27:41 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> crypt-primes-0.50.ebuild:
+  Mark 0.50 stable on alpha
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> crypt-primes-0.50.ebuild:
   stable on amd64
