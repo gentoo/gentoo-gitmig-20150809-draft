@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5.ebuild,v 1.3 2005/09/10 14:46:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5.ebuild,v 1.4 2005/09/10 16:01:53 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -75,7 +75,7 @@ src_compile() {
 	use noxerces || p="${p},xerces-2"
 
 	use javamail && p="${p},sun-javamail-bin,sun-jaf-bin"
-	
+
 	CLASSPATH="." ant -Dant.install=${ANT_HOME} -lib $(java-pkg_getjars ${p}) || die "build failed"
 }
 
