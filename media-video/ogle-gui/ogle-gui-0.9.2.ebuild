@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.11 2005/09/03 23:17:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.12 2005/09/10 14:23:13 flameeyes Exp $
 
 inherit libtool
 
@@ -43,14 +43,13 @@ src_compile() {
 	use gtk2 && myconf="--enable-gtk2"
 
 	econf \
-		`use_enable nls` \
+		$(use_enable nls) \
 		${myconf} || die
 	emake || die
 
 }
 
 src_install() {
-
 	einstall || die
-	dodoc ABOUT-NLS AUTHORS NEWS README
+	dodoc ABOUT-NLS NEWS README
 }
