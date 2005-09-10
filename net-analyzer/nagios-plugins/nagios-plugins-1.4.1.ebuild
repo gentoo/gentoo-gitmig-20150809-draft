@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.3 2005/09/10 13:22:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.4 2005/09/10 18:24:13 ramereth Exp $
 
 inherit eutils
 
@@ -44,12 +44,24 @@ pkg_setup() {
 	enewuser nagios -1 /bin/bash /dev/null nagios
 }
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	if ! use radius; then
-		epatch ${FILESDIR}/nagios-plugins-noradius.patch
+		EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/${P}-noradius.patch
 	fi
+	if ! use radius; then
+		export WANT_AUTOCONF=2.58
+		export WANT_AUTMAKE=1.8
+		cd ${S}
+		aclocal -I m4 || die "Failed to run aclocal"
+		autoconf || die "Failed to run autoconf"
+		automake || die "Failed to run automake"
+	fi
+}
 
-	./configure \
+src_compile() {
+
+	econf \
 		$(use_with mysql) \
 		$(use_with postgres) \
 		$(use_with ssl openssl) \
@@ -59,12 +71,12 @@ src_compile() {
 		--with-nagios-user=nagios \
 		--sysconfdir=/etc/nagios \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+		--mandir=/usr/share/man || die "econf failed"
 
 	# fix problem with additional -
 	sed -i -e 's:/bin/ps -axwo:/bin/ps axwo:g' config.h || die "sed failed"
 
-	make || die "make failed"
+	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.37 2005/09/10 13:22:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.38 2005/09/10 18:24:13 ramereth Exp $
+
+  10 Sep 2005; Lance Albertson <ramereth@gentoo.org>
+  +files/nagios-plugins-1.4.1-noradius.patch, nagios-plugins-1.4.1.ebuild:
+  * Fix noradius patch to actually patch configure.in instead of the configure
+  script (makes it more portable) This should fix bug #105459
 
   10 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   nagios-plugins-1.4.1.ebuild:
