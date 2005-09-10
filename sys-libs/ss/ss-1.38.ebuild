@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.13 2005/09/08 17:05:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.14 2005/09/10 05:50:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/e2fsprogs-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.37-sed-locale.patch
+	epatch "${FILESDIR}"/${PN}-1.38-locale.patch
 	epatch "${FILESDIR}"/${PN}-1.37-makefile.patch
 	export LDCONFIG=/bin/true
 	export CC=$(tc-getCC)

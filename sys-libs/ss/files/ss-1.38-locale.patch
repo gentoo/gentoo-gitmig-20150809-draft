@@ -1,0 +1,14 @@
+Fix issues with non-C locales (like ee)
+
+http://bugs.gentoo.org/104116
+
+--- lib/ss/mk_cmds.sh.in
++++ lib/ss/mk_cmds.sh.in
+@@ -2,6 +2,7 @@
+ #
+ #
+ 
++export LC_ALL=C
+ DIR="${DIR-@datadir@/ss}"
+ SS_DIR="@SS_DIR@"
+ AWK=@AWK@
