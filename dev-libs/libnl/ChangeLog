@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libnl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.1 2005/09/10 19:57:24 vanquirius Exp $
+
+*libnl-0.5.0 (10 Sep 2005)
+
+  10 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/libnl-0.5.0-include.diff, +metadata.xml, +libnl-0.5.0.ebuild:
+  Initial commit, separating this package from net-analyzer/bmon.
+
