@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a042c343928749e445e00ec095876a3 ChangeLog 1013
 MD5 a2ad921f453a52a276512c80ddd08a8b emovix-0.9.0_pre1.ebuild 861
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 d165d11d02d880d3cd0dc77679e325b0 files/digest-emovix-0.9.0_pre1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIv7Dj5H05b2HAEkRAo/qAKCDWFqWhrUZqWyJFlx/jtZiYwLXfgCfXgF5
+pCGI6sWmz9/3T2joL+I5YzU=
+=D9lz
+-----END PGP SIGNATURE-----

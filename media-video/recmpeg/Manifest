@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b277064523f5489b49ee27ec74737c13 ChangeLog 834
 MD5 d0dbcd5d7cfd35d5d7392f1e2833f3f1 recmpeg-1.0.5.ebuild 822
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 b8fd974d42d5f9451db54b08e9685eeb files/digest-recmpeg-1.0.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDIv8Sj5H05b2HAEkRAjyrAKCFgC3jsZWXxvcTy90f2DBTbdTwWQCdEH6q
+NHVFpzGqjwlSIwayF3fb60U=
+=O4Fg
+-----END PGP SIGNATURE-----
