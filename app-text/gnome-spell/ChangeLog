@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.63 2005/09/07 21:25:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.64 2005/09/10 05:50:57 agriffis Exp $
+
+  09 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnome-spell-1.0.6.ebuild:
+  Mark 1.0.6 stable on alpha
 
   07 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnome-spell-1.0.6.ebuild:
   Mark 1.0.6 stable on ia64
