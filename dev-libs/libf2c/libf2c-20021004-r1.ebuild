@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004-r1.ebuild,v 1.12 2005/05/15 20:41:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004-r1.ebuild,v 1.13 2005/09/10 11:42:52 agriffis Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.netlib.org/f2c/${PN}.zip"
 
 LICENSE="libf2c"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ppc64 sparc ~alpha"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
