@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.19 2005/08/10 19:59:32 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.20 2005/09/10 22:13:45 chrb Exp $
+
+*zodb-3.5.0 (10 Sep 2005)
+
+  10 Sep 2005; Chris Bainbridge <chrb@gentoo.org> +zodb-3.5.0.ebuild:
+  Version bump to 3.5.0, which corresponds to the ZODB in Zope 3.1. ZODB 3.5
+  cannot be used with Zope 2.7 or earlier. Removed some cruft from the ebuild,
+  corrected SLOTS.
 
 *zodb-3.4.1 (10 Aug 2005)
 
