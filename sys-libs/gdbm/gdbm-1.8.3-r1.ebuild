@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.14 2005/04/16 16:55:16 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.15 2005/09/10 14:55:53 grobian Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -15,11 +15,20 @@ IUSE="berkdb"
 
 DEPEND="berkdb? ( sys-libs/db )"
 
+pkg_setup() {
+	# On OSX there is no user/group bin, see bug #96743
+	if use ppc-macos;
+	then
+		enewgroup bin
+		enewuser bin -1 -1 -1 bin
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	append-flags -fomit-frame-pointer
-	uclibctoolize
+	elibtoolize
 }
 
 src_compile() {
