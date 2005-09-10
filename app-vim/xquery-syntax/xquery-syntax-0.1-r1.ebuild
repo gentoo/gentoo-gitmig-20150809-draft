@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xquery-syntax/xquery-syntax-0.1-r1.ebuild,v 1.5 2005/09/07 21:34:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xquery-syntax/xquery-syntax-0.1-r1.ebuild,v 1.6 2005/09/10 07:02:15 agriffis Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: XQuery syntax highlighting"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=803"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ia64 mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ia64 mips ~ppc ppc64 sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\

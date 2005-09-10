@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/xquery-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xquery-syntax/ChangeLog,v 1.10 2005/09/07 21:34:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xquery-syntax/ChangeLog,v 1.11 2005/09/10 07:02:15 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  xquery-syntax-0.1-r1.ebuild:
+  Mark 0.1-r1 stable on alpha
 
   07 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   xquery-syntax-0.1-r1.ebuild:
