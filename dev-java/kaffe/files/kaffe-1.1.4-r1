@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/files/kaffe-1.1.4_p20041220,v 1.2 2005/09/10 16:48:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/files/kaffe-1.1.4-r1,v 1.1 2005/09/10 16:48:52 betelgeuse Exp $
 
 VERSION="Kaffe @PV@"
 JAVA_HOME=/opt/@P@

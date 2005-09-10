@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.32 2005/05/18 15:46:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.33 2005/09/10 16:48:52 betelgeuse Exp $
+
+*kaffe-1.1.5-r1 (10 Sep 2005)
+*kaffe-1.1.4-r1 (10 Sep 2005)
+
+  10 Sep 2005; Petteri Räty <betelgeuse@gentoo.org> +files/kaffe-1.1.4-r1,
+  -files/30kaffe, files/kaffe-1.1.4_p20041220, files/kaffe-1.1.5,
+  metadata.xml, kaffe-1.1.4.ebuild, +kaffe-1.1.4-r1.ebuild,
+  kaffe-1.1.4_p20041220.ebuild, +kaffe-1.1.5-r1.ebuild:
+  Added missing dependencies to all the ebuilds. 
+  Fixed the env file with a new revision for the 
+  latest stable and unstable version. 1.1.4-r1 will be
+  marked stable shortly after being a while in unstable.
+  1.1.5-r1 also has new gtk and gmp use flags. Fixes bug #103978.
 
   18 May 2005; Thomas Matthijs <axxo@gentoo.org> kaffe-1.1.4.ebuild,
   kaffe-1.1.4_p20041220.ebuild, kaffe-1.1.5.ebuild:
