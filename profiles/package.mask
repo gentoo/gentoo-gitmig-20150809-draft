@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4427 2005/09/10 00:36:58 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4428 2005/09/10 14:36:13 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -47,7 +47,11 @@ x11-misc/driconf
 >=gnome-extra/hal-device-manager-0.5
 
 # Doug Goldstein <cardoe@gentoo.org> (7 Sep 2005)
-# PEBCAK
+# Remasking because the Gnome herd is too lazy to look
+# into bugs that are over 4 months old with regards to
+# hal and dbus. Patches provided and everything.
+# When I volunteered to fix it and handle any issues..
+# I received the stock "wait for foser" response.
 >=sys-apps/dbus-0.30
 >=sys-apps/hal-0.5
 
