@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.43 2005/09/01 03:21:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.44 2005/09/10 09:22:54 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> tora-1.3.16-r1.ebuild:
+  Mark 1.3.16-r1 stable on alpha
 
 *tora-1.3.18 (01 Sep 2005)
 
