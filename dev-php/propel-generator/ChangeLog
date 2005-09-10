@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/propel-generator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-generator/ChangeLog,v 1.4 2005/09/07 05:38:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-generator/ChangeLog,v 1.5 2005/09/10 11:04:12 sebastian Exp $
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-generator-1.1.0.ebuild:
+  Fix (R)DEPEND, KEYWORDS.
 
   07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
   propel-generator-1.1.0.ebuild:

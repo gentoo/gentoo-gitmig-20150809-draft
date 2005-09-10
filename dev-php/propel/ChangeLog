@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/propel
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel/ChangeLog,v 1.3 2005/04/18 09:33:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel/ChangeLog,v 1.4 2005/09/10 11:04:12 sebastian Exp $
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-1.1.0.ebuild:
+  Fix KEYWORDS.
 
   18 Apr 2005; Sebastian Bergmann <sebastian@gentoo.org>
   -propel-1.0.0.ebuild:

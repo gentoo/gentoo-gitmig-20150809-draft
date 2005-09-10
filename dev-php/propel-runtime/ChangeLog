@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/propel-runtime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/ChangeLog,v 1.5 2005/09/07 05:39:40 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/ChangeLog,v 1.6 2005/09/10 11:04:12 sebastian Exp $
+
+  10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  propel-runtime-1.1.0.ebuild:
+  Fix (R)DEPEND, KEYWORDS.
 
   07 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org>
   propel-runtime-1.1.0.ebuild:
