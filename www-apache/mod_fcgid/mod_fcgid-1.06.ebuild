@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-1.06.ebuild,v 1.1 2005/07/10 03:38:43 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-1.06.ebuild,v 1.2 2005/09/10 20:50:35 vericgar Exp $
 
 DESCRIPTION="mod_fcgid is a binary-compatible alternative to mod_fastcgi
 with better process management"
@@ -14,11 +14,11 @@ HOMEPAGE="http://fastcgi.coremail.cn/"
 SRC_URI="http://fastcgi.coremail.cn/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 # For now, I only support the 'stable' layout for apache
-DEPEND="<=net-www/apache-2.0.54-r10
-	!>net-www/apache-2.0.54-r10
+DEPEND="<=net-www/apache-2.0.54-r30
+	!>net-www/apache-2.0.54-r30
 	!=net-www/apache-1*"
-RDEPEND="<=net-www/apache-2.0.54-r10
-	!>net-www/apache-2.0.54-r10
+RDEPEND="<=net-www/apache-2.0.54-r30
+	!>net-www/apache-2.0.54-r30
 	!=net-www/apache-1*"
 
 src_unpack() {
