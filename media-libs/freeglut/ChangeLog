@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.21 2005/08/24 23:26:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.22 2005/09/10 15:48:12 grobian Exp $
+
+  10 Sep 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/freeglut-2.4.0-macos.patch, freeglut-2.4.0.ebuild:
+  Adding a patch to allow compilation on OSX.
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> freeglut-2.2.0.ebuild:
   stable on ia64
