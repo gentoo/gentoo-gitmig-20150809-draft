@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/monetdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.1 2005/08/07 13:23:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.2 2005/09/10 15:28:11 grobian Exp $
+
+  10 Sep 2005; Fabian Groffen <grobian@gentoo.org> monetdb-4.8.2.ebuild:
+  Stable on x86
 
 *monetdb-4.8.2 (06 Aug 2005)
 

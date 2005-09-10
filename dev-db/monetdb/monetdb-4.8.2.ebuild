@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.8.2.ebuild,v 1.2 2005/08/23 14:33:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.8.2.ebuild,v 1.3 2005/09/10 15:28:11 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/monetdb/MonetDB-${PV}.tar.gz
 		ppc-macos? ( mirror://gentoo/monetdb-pathfinder-bison-sources-0.8.2.tar.bz2 )"
 LICENSE="MonetDBPL-1.1 PathfinderPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc-macos"
+KEYWORDS="~ppc-macos x86"
 IUSE="java readline"
 
 DEPEND="virtual/libc
