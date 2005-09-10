@@ -1,6 +1,16 @@
-MD5 95211796a30feb6176d89abb8f2fa7a2 ChangeLog 564
-MD5 26cc4a97e8ff2186f47c574adda19135 guichan-0.3.0.ebuild 1008
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 099acc6cd5519fe13796ce656cfb2f67 guichan-0.4.0.ebuild 919
+MD5 f62738b9b8babf2027f12a534a5e1410 guichan-0.4.0.ebuild 1048
+MD5 26cc4a97e8ff2186f47c574adda19135 guichan-0.3.0.ebuild 1008
+MD5 debb9f1df4bfe204bf6acc3c54a24de7 ChangeLog 709
 MD5 3c0547b27978413eda59c736896bb8c4 files/digest-guichan-0.3.0 70
 MD5 7923e36e198280399a16ff5828d7051e files/digest-guichan-0.4.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDInDDgIKl8Uu19MoRAlPGAJ48/whptcuWABpZK5N8hNWKI4+wbgCfROcG
+L1kZJUGJn5bN0BLzrlnZzQA=
+=QOsP
+-----END PGP SIGNATURE-----
