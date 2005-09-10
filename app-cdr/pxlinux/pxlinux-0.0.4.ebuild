@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/pxlinux/pxlinux-0.0.4.ebuild,v 1.2 2005/06/07 09:33:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/pxlinux/pxlinux-0.0.4.ebuild,v 1.3 2005/09/10 05:32:25 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="PlexTools-like app for Plextor drives in linux"
 HOMEPAGE="http://www-user.tu-chemnitz.de/~noe/Plextor/"
@@ -18,6 +20,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-cleanups.patch
 	rm -f Makefile
 }
 
