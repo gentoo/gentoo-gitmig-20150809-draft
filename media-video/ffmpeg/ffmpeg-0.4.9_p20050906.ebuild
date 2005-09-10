@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050906.ebuild,v 1.1 2005/09/08 14:27:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050906.ebuild,v 1.2 2005/09/10 00:48:24 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -98,7 +98,7 @@ src_compile() {
 		$(use_enable ieee1394 dv1394) $(use_enable ieee1394 dc1394) \
 		$(use_enable threads pthreads) \
 		$(use_enable xvid) \
-		$(use_enable ogg) \
+		$(use_enable ogg libogg) \
 		$(use_enable vorbis) \
 		$(use_enable theora) \
 		$(use_enable dts) \
