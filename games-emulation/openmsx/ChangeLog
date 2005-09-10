@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.15 2005/09/05 21:41:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.16 2005/09/10 20:36:27 chainsaw Exp $
+
+  10 Sep 2005; Tony Vroon <chainsaw@gentoo.org> openmsx-0.5.2.ebuild:
+  Marked 0.5.2 stable on amd64 and x86.
 
   05 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/openmsx-0.5.2-gcc4.patch, openmsx-0.5.2.ebuild:
