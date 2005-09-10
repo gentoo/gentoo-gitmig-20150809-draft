@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas/ChangeLog,v 1.4 2005/05/18 12:56:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas/ChangeLog,v 1.5 2005/09/10 08:47:21 pbienst Exp $
+
+  10 Sep 2005; Peter Bienstman <pbienst@gentoo.org> blas-19980702.ebuild,
+  blas-19980702-r1.ebuild, blas-19980702-r2.ebuild:
+  Check if Fortan compiler present (#88350).
 
   18 May 2005; Markus Rothe <corsair@gentoo.org> blas-19980702-r2.ebuild:
   Stable on ppc64
