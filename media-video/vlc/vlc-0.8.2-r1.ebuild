@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.3 2005/09/02 18:23:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.4 2005/09/10 15:39:25 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -225,7 +225,7 @@ src_compile () {
 src_install() {
 	make DESTDIR="${D}" plugindir="/usr/$(get_libdir)/${PLUGINS_DIR}" install || die "Installation failed!"
 
-	dodoc ABOUT-NLS AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
+	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
 	rm -r ${D}/usr/share/vlc/vlc*.png ${D}/usr/share/vlc/vlc*.xpm ${D}/usr/share/vlc/vlc*.ico \

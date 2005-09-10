@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.15 2005/07/13 10:41:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.16 2005/09/10 15:39:25 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -200,7 +200,7 @@ src_compile () {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed!"
 
-	dodoc ABOUT-NLS AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
+	dodoc AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
 		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
 	rm -r ${D}/usr/share/vlc/vlc*.png ${D}/usr/share/vlc/vlc*.xpm ${D}/usr/share/vlc/vlc*.ico \
