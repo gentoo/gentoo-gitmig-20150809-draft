@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.21 2005/09/10 02:08:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.22 2005/09/10 20:03:11 vanquirius Exp $
+
+  10 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -files/libnl-0.5.0-include.diff, bmon-2.1.0-r1.ebuild:
+  Broke off libnl from bmon, it is now provided by dev-libs/libnl. Dropped all
+  keywords except x86 because of this, opening a new bug to get things
+  keyworded properly again.
 
   10 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> bmon-2.1.0-r1.ebuild:
   Add dbi USE flag, which DEPENDs on dev-db/libdbi and activates support for
