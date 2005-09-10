@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.1 2005/05/09 18:50:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.2 2005/09/10 15:38:09 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -28,6 +28,8 @@ src_unpack() {
 	epatch ${FILESDIR}/ogle-configure-alsa-fix.patch
 	epatch ${FILESDIR}/ogle-gcc34-fix.patch
 	epatch ${FILESDIR}/ogle-gcc4-fix.patch
+
+	elibtoolize
 }
 
 src_compile() {
@@ -35,8 +37,6 @@ src_compile() {
 	# of ogle and ogle-gui from your system and merge ogle-gui using your
 	# new version of ogle... Changes in this package can break ogle-gui
 	# very very easily -- blocke
-
-	elibtoolize
 
 	# configure needs access to the updated CFLAGS
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml -I/usr/include/libxml2"
@@ -57,5 +57,5 @@ src_install() {
 	cd ${D}usr/bin/
 	mv ./ifo_dump ./ifo_dump_ogle
 
-	dodoc AUTHORS ChangeLog HISTORY INSTALL NEWS README TODO doc/liba52.txt
+	dodoc AUTHORS ChangeLog HISTORY NEWS README TODO doc/liba52.txt
 }

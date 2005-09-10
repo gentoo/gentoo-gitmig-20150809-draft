@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.11 2005/01/23 13:48:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.12 2005/09/10 15:38:09 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -64,6 +64,6 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog HISTORY NEWS README TODO
 	dodoc doc/liba52.txt
 }
