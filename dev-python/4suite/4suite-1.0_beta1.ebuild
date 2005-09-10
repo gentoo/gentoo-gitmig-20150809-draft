@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_beta1.ebuild,v 1.2 2005/08/26 03:22:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_beta1.ebuild,v 1.3 2005/09/10 23:22:46 agriffis Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/python-2.3
 
 IUSE="doc"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 LICENSE="Apache-1.1"
 
 PYTHON_MODNAME="Ft"

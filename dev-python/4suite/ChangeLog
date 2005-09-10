@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.16 2005/08/26 03:22:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.17 2005/09/10 23:22:46 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> 4suite-1.0_beta1.ebuild:
+  Mark 1.0_beta1 stable on alpha
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> 4suite-1.0_beta1.ebuild:
   add ~ia64
