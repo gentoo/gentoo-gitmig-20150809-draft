@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5.ebuild,v 1.2 2005/07/09 14:10:07 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5.ebuild,v 1.3 2005/09/10 14:46:58 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -75,33 +75,16 @@ src_compile() {
 	use noxerces || p="${p},xerces-2"
 
 	use javamail && p="${p},sun-javamail-bin,sun-jaf-bin"
-
-	libs=$(java-pkg_getjars ${p})
-	CLASSPATH="." ./build.sh -Ddist.dir=${D}/usr/share/ant-core -lib ${libs} || die "build failed"
+	
+	CLASSPATH="." ant -Dant.install=${ANT_HOME} -lib $(java-pkg_getjars ${p}) || die "build failed"
 }
 
 src_install() {
-
-	local jars="junit vaj weblogic apache-resolver netrexx  nodeps \
-		starteam xslp stylebook icontract jmf swing jai trax"
-
-	use noantlr || jars="${jars} antlr"
-	use nobcel || jars="${jars} apache-bcel"
-	use nobsf || jars="${jars} apache-bsf"
-	use nocommonslogging || jars="${jars} commons-logging"
-	use nocommonsnet || jars="${jars} commons-net"
-	use nojdepend || jars="${jars} jdepend"
-	use nojsch || jars="${jars} jsch"
-	use nolog4j || jars="${jars} apache-log4j"
-	use nooro || jars="${jars} apache-oro"
-	use noregexp || jars="${jars} apache-regexp"
-	use noxalan || jars="${jars} xalan1"
-	use javamail && jars="${jars} javamail"
-
 	dodir /usr/share/ant-core/lib
-	for jar in ${jars}; do
-		java-pkg_dojar build/lib/ant-${jar}.jar
-		dosym /usr/share/${PN}/lib/ant-${jar}.jar /usr/share/ant-core/lib/
+	for jar in build/lib/ant-*.jar; do
+		[[ "$(basename ${jar})" == "ant-launcher.jar" ]] && continue
+		java-pkg_dojar ${jar}
+		dosym /usr/share/${PN}/lib/$(basename ${jar}) /usr/share/ant-core/lib/
 	done
 }
 
