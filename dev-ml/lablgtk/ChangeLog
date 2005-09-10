@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.37 2005/09/08 20:20:23 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.38 2005/09/10 22:13:42 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> lablgtk-2.4.0.ebuild:
+  Mark 2.4.0 stable on alpha
 
   08 Sep 2005; Karol Wojtaszek <sekretarz@gentoo.org> lablgtk-2.4.0.ebuild:
   Fixed configure problem on amd64 caused by wrong PKG_CONFIG_PATH variable,
