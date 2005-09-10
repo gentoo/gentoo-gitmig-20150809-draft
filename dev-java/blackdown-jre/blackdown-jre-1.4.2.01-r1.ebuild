@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.6 2005/07/19 18:45:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.7 2005/09/10 18:07:59 axxo Exp $
 
 inherit java versionator
 
@@ -120,6 +120,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	java_pkg_postinst
 	if ! use browserplugin && use mozilla; then
 		ewarn
 		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"

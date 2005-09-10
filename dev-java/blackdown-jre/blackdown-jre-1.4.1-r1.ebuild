@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.11 2005/07/19 18:45:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.12 2005/09/10 18:07:59 axxo Exp $
 
 inherit java toolchain-funcs
 
@@ -90,6 +90,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	java_pkg_postinst
+
 	if use browserplugin || use mozilla; then
 		echo
 		einfo "mozilla plugin NOT installed"
