@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.30 2005/08/23 16:03:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.31 2005/09/10 11:49:21 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> libksba-0.9.11.ebuild:
+  Mark 0.9.11 stable on alpha
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> libksba-0.9.11.ebuild:
   stable on ia64
