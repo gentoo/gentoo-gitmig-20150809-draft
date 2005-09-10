@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.12 2005/07/20 12:05:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.13 2005/09/10 10:22:24 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> xbase-2.0.0.ebuild:
+  Mark 2.0.0 stable on alpha
 
   20 Jul 2005; Markus Rothe <corsair@gentoo.org> xbase-2.0.0.ebuild:
   Stable on ppc64
