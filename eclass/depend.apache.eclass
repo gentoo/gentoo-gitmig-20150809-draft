@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.20 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.21 2005/09/10 20:21:51 vericgar Exp $
 
 ######
 ## Apache Common Variables
@@ -63,7 +63,7 @@ APACHE1_MODULES_CONFDIR="${APACHE1_CONFDIR}/modules.d"
 APACHE2_MODULES_CONFDIR="${APACHE2_CONFDIR}/modules.d"
 
 ####
-## APACHE1_MODULES_VHOSTDIR, APACHE2_MODULES_VHOSTDIR
+## APACHE1_VHOSTDIR, APACHE2_VHOSTDIR
 ##
 ## Paths where virtual host configuration files are kept
 ####
@@ -82,14 +82,14 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 ## APACHE1_DEPEND, APACHE2_DEPEND
 ##
 ## Dependencies for apache 1.x and apache 2.x
-##  - apache2 must be at least version 2.0.52-r3, this is lowest version
+##  - apache2 must be at least version 2.0.54-r30, this is lowest version
 ##    containing our new overall changes -- trapni (Jan 21 2005)
-##  - apache1 must be at least version 1.3.33-r1, but how to
+##  - apache1 must be at least version 1.3.33-r10, but how to
 ##    define the DEPEND here? (FIXME) -- trapni (Jan 21 2005)
 ##     - currently not possible - bug #4315 -- vericgar (Jan 21 2005)
 ####
 APACHE1_DEPEND="=net-www/apache-1*"
-APACHE2_DEPEND=">=net-www/apache-2.0.54-r10"
+APACHE2_DEPEND=">=net-www/apache-2.0.54-r30"
 
 ####
 ## APACHE_DEPEND
