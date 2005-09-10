@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.7 2005/09/10 08:29:11 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.8 2005/09/10 12:11:53 pbienst Exp $
+
+  10 Sep 2005; Peter Bienstman <pbienst@gentoo.org> blas-atlas-3.6.0.ebuild,
+  blas-atlas-3.7.10.ebuild:
+  Add missing header files (fixes #51323).
 
   10 Sep 2005; Peter Bienstman <pbienst@gentoo.org> +files/unbuffered.patch,
   blas-atlas-3.6.0.ebuild, blas-atlas-3.7.10.ebuild:

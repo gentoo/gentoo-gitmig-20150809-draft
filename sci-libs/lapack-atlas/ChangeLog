@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.4 2005/09/10 08:34:15 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.5 2005/09/10 12:14:55 pbienst Exp $
+
+  10 Sep 2005; Peter Bienstman <pbienst@gentoo.org>
+  lapack-atlas-3.6.0.ebuild:
+  Add extra header files (#51323).
 
   10 Sep 2005; Peter Bienstman <pbienst@gentoo.org> +files/unbuffered.patch,
   lapack-atlas-3.6.0.ebuild:
