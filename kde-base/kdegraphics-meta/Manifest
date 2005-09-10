@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c49d1c5ad8d49092bf5868837ecc6c18 ChangeLog 3364
-MD5 e48f4b69312b0f48d0a9c4a6ddec841a kdegraphics-meta-3.5_alpha1.ebuild 1445
-MD5 c81c0db835a8df4c2ae3e2895b02f1e3 kdegraphics-meta-3.4.1.ebuild 1455
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 efda0d2b44d73c186d04915802b61d8b kdegraphics-meta-3.4.2.ebuild 1480
+MD5 f36d41b173c4932a3b6904e384dccf7c ChangeLog 3466
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.5_alpha1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.4.2 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdegraphics-meta-3.5_alpha1 0
+MD5 c81c0db835a8df4c2ae3e2895b02f1e3 kdegraphics-meta-3.4.1.ebuild 1455
+MD5 efda0d2b44d73c186d04915802b61d8b kdegraphics-meta-3.4.2.ebuild 1480
+MD5 6a24423a7e2b4714d14f8e6623cbfd34 kdegraphics-meta-3.5_alpha1.ebuild 1441
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHvASj5H05b2HAEkRAhVEAJ9Ve7cOx2ZBDTBCJfVbTkg/Ln+02gCfVU+2
-W52aM7RVj5hbjqzo7Zea7mE=
-=bmU8
+iD8DBQFDIik6I1lqEGTUzyQRAnNZAJ46mKDWh+pJajkimvutD3pE7H7SjwCdFdII
+Ay8CwTFAM2nlM3oWhPlJV5U=
+=rOf0
 -----END PGP SIGNATURE-----
