@@ -39,10 +39,10 @@
 +		  fi
 +		  # We do not want portage's build root ($S) present.
 +		  my_little_ninja_foo_2=`echo $deplib |$EGREP -e "$S"`
-+		  if test -n "$my_little_ninja_foo_2" && test "$S"; then
-+		    mynewdependency_lib=""
 +		  # We do not want portage's install root ($D) present.
 +		  my_little_ninja_foo_3=`echo $deplib |$EGREP -e "$D"`
++		  if test -n "$my_little_ninja_foo_2" && test "$S"; then
++		    mynewdependency_lib=""
 +		  elif test -n "$my_little_ninja_foo_3" && test "$D"; then
 +		    eval mynewdependency_lib=`echo "$deplib" |sed -e "s:$D:/:g" -e 's:/\+:/:g'`
 +		  else
