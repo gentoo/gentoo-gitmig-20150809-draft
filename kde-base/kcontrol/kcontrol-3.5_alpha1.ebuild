@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5_alpha1.ebuild,v 1.1 2005/09/07 11:04:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5_alpha1.ebuild,v 1.2 2005/09/10 16:00:12 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -24,7 +24,9 @@ $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 $(deprange $PV $MAXKDEVER kde-base/kdesu)
 $(deprange $PV $MAXKDEVER kde-base/khelpcenter)
-$(deprange $PV $MAXKDEVER kde-base/khotkeys)"
+$(deprange $PV $MAXKDEVER kde-base/khotkeys)
+$(deprange $PV $MAXKDEVER kde-base/libkonq)
+$(deprange $PV $MAXKDEVER kde-base/kicker)"
 
 # kdm/configure.in.in is needed for KDE_CONFDIR, can be removed for beta1
 # kioslave/thumbnail/configure.in.in is needed for HAVE_LIBART, can be removed

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.23 2005/09/07 11:04:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.24 2005/09/10 16:00:12 flameeyes Exp $
+
+  10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  kcontrol-3.5_alpha1.ebuild:
+  Add explicit dependency on libkonq and kicker.
 
 *kcontrol-3.5_alpha1 (07 Sep 2005)
 
