@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.27 2005/09/02 19:33:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.28 2005/09/10 11:28:01 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> bglibs-1.019-r1.ebuild:
+  Mark 1.019-r1 stable on alpha
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   bglibs-1.019-r1.ebuild:
