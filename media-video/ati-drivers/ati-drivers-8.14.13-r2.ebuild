@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r2.ebuild,v 1.5 2005/09/04 23:15:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r2.ebuild,v 1.6 2005/09/10 13:13:10 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -15,7 +15,8 @@ LICENSE="ATI"
 KEYWORDS="-* amd64 x86"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
-	 >=x11-base/opengl-update-2.1_pre1"
+	 >=x11-base/opengl-update-2.1_pre1
+	 || ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) =sys-devel/gcc-3.3* )"
 
 DEPEND=">=virtual/linux-sources-2.4
 	${RDEPEND}"
