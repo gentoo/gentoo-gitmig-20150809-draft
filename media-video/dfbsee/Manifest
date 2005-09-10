@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78bf981098d84a36a2690a5e3caf0f73 ChangeLog 1547
+MD5 107c7469dac9e6c9537b697b66ed96e1 ChangeLog 1652
+MD5 bb2f53d0a9bba256c993638f96e46562 dfbsee-0.7.4.ebuild 791
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 a72cdee7f558941ee34da3f44d3faa30 dfbsee-0.7.4.ebuild 799
 MD5 3f38d255bd61645e0aba8a013bb4a35a files/digest-dfbsee-0.7.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMb8H06ebR+OMO78RAvMdAJ9yYwqLnKDjrDuPK0ZeaocPhbak1wCcDaZj
-Z7Tto6E36bzL2BC5Q8sYTyg=
-=5j6p
------END PGP SIGNATURE-----
