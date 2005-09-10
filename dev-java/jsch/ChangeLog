@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.28 2005/07/09 16:05:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.29 2005/09/10 17:39:10 axxo Exp $
+
+*jsch-0.1.21 (10 Sep 2005)
+
+  10 Sep 2005; Thomas Matthijs <axxo@gentoo.org> jsch-0.1.18.ebuild,
+  +jsch-0.1.21.ebuild:
+  version bump + examples use, thanks too Carsten Frewert #99323
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> -jsch-0.1.15.ebuild,
   -jsch-0.1.16.ebuild, -jsch-0.1.17.ebuild, jsch-0.1.18.ebuild:

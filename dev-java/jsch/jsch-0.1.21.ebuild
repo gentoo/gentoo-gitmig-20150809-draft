@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.12 2005/09/10 17:39:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.21.ebuild,v 1.1 2005/09/10 17:39:10 axxo Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jcraft.com/jsch/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="jcraft"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc jikes source examples"
 
 RDEPEND=">=virtual/jdk-1.4
@@ -37,7 +37,7 @@ src_install() {
 	java-pkg_newjar dist/lib/jsch*.jar jsch.jar
 	use doc && java-pkg_dohtml -r javadoc/*
 	use source && java-pkg_dosrc src/*
-	if use examples; then
+		if use examples; then
 		dodir /usr/share/doc/${PF}/examples/
 		cp -r examples/* ${D}/usr/share/doc/${PF}/examples/ || die
 	fi
