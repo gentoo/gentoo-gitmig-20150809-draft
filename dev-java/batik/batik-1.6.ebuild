@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6.ebuild,v 1.1 2005/09/10 16:07:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6.ebuild,v 1.2 2005/09/10 16:24:02 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -15,6 +15,7 @@ IUSE="doc jikes"
 
 RDEPEND=">=virtual/jre-1.3
 	=dev-java/rhino-1.5*
+	=dev-java/xerces-2.6*
 	dev-java/xml-commons"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
@@ -30,6 +31,7 @@ src_unpack() {
 
 	cd ${S}/lib && rm -f *.jar
 	java-pkg_jar-from rhino-1.5
+	java-pkg_jar-from xerces-2
 	java-pkg_jar-from xml-commons
 }
 
