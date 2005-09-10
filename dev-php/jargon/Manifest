@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76680f2da94663e56a49e911cbdc0869 jargon-1.0.2.ebuild 505
-MD5 d6c0d389fe1d37c96ccb94913d47b602 ChangeLog 900
+MD5 14bcc194eec4342dd641462af60534e7 jargon-1.0.2.ebuild 498
+MD5 469393d334aae76d55c5293d1ef26056 ChangeLog 1008
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 2ed6083d456c57b56841599d54fccbbc files/digest-jargon-1.0.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHnz+aGfFFLhbXWkRAstXAJ4nj0ZawfaqmGyZyK9C2bC8x5hi6ACghD3l
-4VUEO0shhLCgVZsfWUFfowQ=
-=QRr5
------END PGP SIGNATURE-----
