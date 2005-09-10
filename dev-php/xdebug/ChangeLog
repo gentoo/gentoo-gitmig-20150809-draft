@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xdebug
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.24 2005/06/17 20:54:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.25 2005/09/10 23:16:51 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> xdebug-1.3.2.ebuild:
+  Mark 1.3.2 stable on alpha
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> xdebug-1.3.2.ebuild:
   Stable on ppc.
