@@ -1,0 +1,186 @@
+diff --exclude='*~' -Naur outguess.orig/arc.c outguess/arc.c
+--- outguess.orig/arc.c	2005-09-10 19:51:29.000000000 -0300
++++ outguess/arc.c	2005-09-10 20:09:29.000000000 -0300
+@@ -111,7 +111,7 @@
+ 
+   /* Bah, we want bcrypt */
+   MD5Init(&ctx);
+-  MD5Update(&ctx, type, strlen(type));
++  MD5Update(&ctx, (u_char *)type, strlen(type));
+   MD5Update(&ctx, key, keylen);
+   MD5Final(digest, &ctx);
+ 
+diff --exclude='*~' -Naur outguess.orig/histogram.c outguess/histogram.c
+--- outguess.orig/histogram.c	2005-09-10 19:51:29.000000000 -0300
++++ outguess/histogram.c	2005-09-10 20:20:16.000000000 -0300
+@@ -96,8 +96,8 @@
+ 	if ((res = fread(data, sizeof(char), bytes, fin)) != bytes)
+ 		err(1, "fread(2): %d", res);
+ 
+-	histogram_simple(data, bits);
+-	histogram_runlen(data, bits);
++	histogram_simple((u_char *)data, bits);
++	histogram_runlen((u_char *)data, bits);
+ 
+ 	exit(0);
+ }
+diff --exclude='*~' -Naur outguess.orig/jpg.c outguess/jpg.c
+--- outguess.orig/jpg.c	2005-09-10 19:51:29.000000000 -0300
++++ outguess/jpg.c	2005-09-10 20:16:10.000000000 -0300
+@@ -110,9 +110,9 @@
+ {
+ 	int i;
+ 	char *data = bitmap->data;
+-	char *pbits = bitmap->bitmap;
+-	char *plock = bitmap->locked;
+-	char *pmetalock = bitmap->metalock;
++	char *pbits = (char *)bitmap->bitmap;
++	char *plock = (char *)bitmap->locked;
++	char *pmetalock = (char *)bitmap->metalock;
+ 
+ 	for (i = off - 1; i >= 0; i--) {
+ 		if (TEST_BIT(plock, i))
+@@ -317,7 +317,7 @@
+ 				fprintf(stderr, "steg_use_bit: realloc()\n");
+ 				exit(1);
+ 			}
+-			tbitmap.data = buf;
++			tbitmap.data = (char *)buf;
+ 		}
+ 		break;
+ 	default:
+@@ -767,7 +767,7 @@
+ {
+   my_dest_ptr dest = (my_dest_ptr) cinfo->dest;
+ 
+-  dest->pub.next_output_byte = dummy_buf;
++  dest->pub.next_output_byte = (u_char *)dummy_buf;
+   dest->pub.free_in_buffer = BUFSIZE;
+ }
+ 
+@@ -776,7 +776,7 @@
+ {
+   my_dest_ptr dest = (my_dest_ptr) cinfo->dest;
+ 
+-  dest->pub.next_output_byte = dummy_buf;
++  dest->pub.next_output_byte = (u_char *)dummy_buf;
+   dest->pub.free_in_buffer = BUFSIZE;
+ 
+   return TRUE;
+diff --exclude='*~' -Naur outguess.orig/missing/md5.c outguess/missing/md5.c
+--- outguess.orig/missing/md5.c	2005-09-10 19:51:29.000000000 -0300
++++ outguess/missing/md5.c	2005-09-10 20:22:48.000000000 -0300
+@@ -28,6 +28,7 @@
+ #endif
+ 
+ #include "md5.h"
++#include <string.h>
+ 
+ /* Little-endian byte-swapping routines.  Note that these do not
+    depend on the size of datatypes such as uint32, nor do they require
+diff --exclude='*~' -Naur outguess.orig/outguess.c outguess/outguess.c
+--- outguess.orig/outguess.c	2005-09-10 19:51:29.000000000 -0300
++++ outguess/outguess.c	2005-09-10 20:07:32.000000000 -0300
+@@ -357,13 +357,13 @@
+ 
+ 
+ 	datalen = 4;
+-	encode_data(NULL, &datalen, NULL, flags);
++	encode_data(NULL, (int *)&datalen, NULL, flags);
+ 	tmpbuf = checkedmalloc(datalen);
+ 
+ 	for (i = 0; i < datalen; i++)
+ 		tmpbuf[i] = steg_retrbyte(bitmap, 8, iter);
+ 
+-	buf = decode_data (tmpbuf, &datalen, as, flags);
++	buf = decode_data (tmpbuf, (int *)&datalen, as, flags);
+ 
+ 	if (datalen != 4) {
+ 		fprintf (stderr, "Steg retrieve: wrong data len: %d\n",
+@@ -398,7 +398,7 @@
+ 	}
+ 
+ 	*len = origlen;
+-	return buf;
++	return (char *)buf;
+ }
+ 
+ int
+@@ -677,10 +677,10 @@
+ 	iterator_init(&iter, bitmap, key, klen); 
+ 
+ 	/* Encode the data for us */
+-	mmap_file(filename, &data, &datalen);
++	mmap_file((char *)filename, &data, (int *)&datalen);
+ 	steg_data = datalen * 8;
+ 	enclen = datalen;
+-	encdata = encode_data(data, &enclen, &tas, cfg->flags);
++	encdata = encode_data(data, (int *)&enclen, &tas, cfg->flags);
+ 	if (cfg->flags & STEG_ERROR) {
+ 		fprintf(stderr, "Encoded '%s' with ECC: %d bits, %d bytes\n",
+ 			filename, enclen * 8, enclen);
+@@ -746,7 +746,7 @@
+ #endif /* HAVE_MMAP */
+ 	close(fd);
+ 
+-	*data = p;
++	*data = (u_char *)p;
+ 	*size = fs.st_size;
+ }
+ 
+@@ -872,10 +872,10 @@
+ 			mark = 1; /* Mark bytes we modified with 255 */
+ 			break;
+ 		case 'd':
+-			data = optarg;
++			data = (u_char *)optarg;
+ 			break;
+ 		case 'D':
+-			data2 = optarg;
++			data2 = (u_char *)optarg;
+ 			break;
+ 		case 'e':
+ 			doerror = 1;
+@@ -979,7 +979,7 @@
+ 					(float)100*bitmap.maxcorrect/bitmap.bits);
+ 		}
+ 
+-		do_embed(&bitmap, data, key, strlen(key), &cfg1, &cumres);
++		do_embed(&bitmap, data, (u_char *)key, strlen(key), &cfg1, &cumres);
+ 
+ 		if (key2 && data2) {
+ 			char derivekey[128];
+@@ -1002,7 +1002,7 @@
+ 					derivekey[strlen(key2)] = '\0';
+ 
+ 				j = do_embed(&bitmap, data2,
+-					     derivekey, strlen(derivekey),
++					     (u_char *)derivekey, strlen(derivekey),
+ 					     &cfg2, &tmpres);
+ 			}
+       
+@@ -1021,7 +1021,7 @@
+ 			int n;
+ 			u_char cbit;
+ 			u_char *pbits = bitmap.bitmap;
+-			u_char *data = bitmap.data;
++			u_char *data = (u_char *)bitmap.data;
+ 			u_char *plocked = bitmap.locked;
+     
+ 			memset(steg_offset, 0, sizeof(steg_offset));
+@@ -1088,12 +1088,12 @@
+ 		dsth->write(fout, image);
+ 	} else {
+ 		/* Initialize random data stream */
+-		arc4_initkey(&as,  "Encryption", key, strlen(key));
++		arc4_initkey(&as,  "Encryption", (u_char *)key, strlen(key));
+ 		tas = as;
+ 	  
+-		iterator_init(&iter, &bitmap, key, strlen(key)); 
++		iterator_init(&iter, &bitmap, (u_char *)key, strlen(key)); 
+ 
+-		encdata = steg_retrieve(&datalen, &bitmap, &iter, &as,
++		encdata = (u_char *)steg_retrieve(&datalen, &bitmap, &iter, &as,
+ 					cfg1.flags);
+ 
+ 		data = decode_data(encdata, &datalen, &tas, cfg1.flags);
