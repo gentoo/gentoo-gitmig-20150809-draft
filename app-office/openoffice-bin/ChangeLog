@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.87 2005/09/09 19:54:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.88 2005/09/10 08:09:21 suka Exp $
+
+  10 Sep 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-1.9.128.ebuild:
+  Work around some icon dir weirdness for bug #99366
 
 *openoffice-bin-1.9.128 (09 Sep 2005)
 
