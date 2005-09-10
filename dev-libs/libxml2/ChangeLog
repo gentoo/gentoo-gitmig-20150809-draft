@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.135 2005/09/07 21:47:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.136 2005/09/10 20:47:13 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> libxml2-2.6.20-r2.ebuild:
+  Mark 2.6.20-r2 stable on alpha
 
   07 Sep 2005; Aron Griffis <agriffis@gentoo.org> libxml2-2.6.20-r2.ebuild:
   Mark 2.6.20-r2 stable on ia64
