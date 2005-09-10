@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/dhcpd-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dhcpd-syntax/ChangeLog,v 1.5 2005/07/29 13:33:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dhcpd-syntax/ChangeLog,v 1.6 2005/09/10 06:39:07 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  dhcpd-syntax-20030825.ebuild:
+  Mark 20030825 stable on alpha
 
   29 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
   dhcpd-syntax-20030825.ebuild:
