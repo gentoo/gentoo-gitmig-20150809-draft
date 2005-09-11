@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 677f2ff3ed6ec775266bf63bf1f2987d libgnome-java-2.10.1.ebuild 2725
-MD5 85a788daa4a3e3841cbe95effe465998 libgnome-java-2.8.3.1.ebuild 3066
-MD5 652e5ce1a6002ce29696ce952d31d037 ChangeLog 2529
+MD5 acbe31cfb56cfba1a61ab0197a594370 libgnome-java-2.8.3.1.ebuild 3062
+MD5 e136fd27a7c2f7ffbd5f2d0f11954c99 ChangeLog 2647
 MD5 de0a216d1797f18db9dc83e5aedee360 metadata.xml 1002
 MD5 6ab1ec4f4e7665d6f1e73d04e5ffea0d files/libgnome-java-2.10.0_fix-install-dir.patch 409
 MD5 efea40cf1a5eb3c48001cde4ead5c123 files/digest-libgnome-java-2.8.3.1 74
@@ -11,9 +11,9 @@ MD5 b5f8aad83ed35026438574e04a3122ac files/libgnome-java-2.8.2_gentoo-PN-SLOT.pa
 MD5 d8bbcf350e68bf0a42c37ecbef32c8dd files/libgnome-java-2.8.3.1_gentoo-PN-SLOT.patch 508
 MD5 55fb422ad6119794ac0805432ebdc410 files/digest-libgnome-java-2.10.1 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3OCi/rLF9B432nYRArFeAKCel13JW2u1JLL4TQ5s/Rt2LOToCgCfViAd
-aTdiFCm9kMAW3H9uSrX4COs=
-=pVku
+iD8DBQFDJBRL/rLF9B432nYRAjJSAJ0biwzkdnrLsi4u92sTLEjR+SyJBwCePMfu
+0TTsHDPxdCbMTVSfR5vyb+U=
+=PJM6
 -----END PGP SIGNATURE-----
