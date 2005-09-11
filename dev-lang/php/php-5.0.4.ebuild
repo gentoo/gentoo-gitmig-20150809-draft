@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.4.ebuild,v 1.6 2005/09/09 17:29:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.4.ebuild,v 1.7 2005/09/11 18:57:09 hollow Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~sparc ~x86"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
