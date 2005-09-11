@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/phpgnucacheii
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/ChangeLog,v 1.5 2005/08/24 15:06:59 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/ChangeLog,v 1.6 2005/09/11 14:02:32 rl03 Exp $
+
+  11 Sep 2005; Renat Lumpau <rl03@gentoo.org> phpgnucacheii-2.1.1.ebuild:
+  Fixed php dep wrt bug #102850.
 
   24 Aug 2005; <sekretarz@gentoo.org> metadata.xml:
   Removed squinky86@gentoo.org from metadata

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/phpgnucacheii-2.1.1.ebuild,v 1.4 2005/08/24 15:03:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/phpgnucacheii-2.1.1.ebuild,v 1.5 2005/09/11 14:02:32 rl03 Exp $
 
 inherit webapp
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 S=${WORKDIR}/${PN}
 
 RDEPEND=">=net-www/apache-1.3.24-r1
-	>=dev-php/mod_php-4.3
+	virtual/httpd-php
 	>=dev-db/mysql-4"
 
 pkg_preinst() {
