@@ -12,6 +12,7 @@ hdf
 icc
 icc-pgo
 ifc
+ip28
 lm_sensors
 real
 svga
