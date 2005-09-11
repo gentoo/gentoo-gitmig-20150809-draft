@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.24.ebuild,v 1.3 2005/08/10 18:10:17 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.24.ebuild,v 1.4 2005/09/11 10:24:04 chriswhite Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 		X? ( dev-lang/tk )
 	)
 	perl? ( >=dev-lang/perl-5.6.1 )
-	php? ( >=dev-php/php-4.0.0 )"
+	php? ( virtual/php )"
 
 S=${WORKDIR}/SWIG-${PV}
 

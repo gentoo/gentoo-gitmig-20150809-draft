@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.51 2005/08/10 18:10:17 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.52 2005/09/11 10:24:04 chriswhite Exp $
+
+*swig-1.3.25 (11 Sep 2005)
+
+  11 Sep 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  swig-1.3.24.ebuild, +swig-1.3.25.ebuild:
+  dev-php/php -> virtual/php. Fixes bug #102364. Taking over as maintainer.
+  Did a version bump to fix bug #104762. Tested with some of the tutorials at
+  the swig site.
 
   10 Aug 2005; Kito <kito@gentoo.org> swig-1.3.24.ebuild:
   ~ppc-macos keyword.
