@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.8.1.ebuild,v 1.8 2005/09/03 13:56:51 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.8.1.ebuild,v 1.9 2005/09/11 12:35:36 gmsoft Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/theme.php"
 
 LICENSE="LGPL-2.1 GPL-2 DSL"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ppc sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6
