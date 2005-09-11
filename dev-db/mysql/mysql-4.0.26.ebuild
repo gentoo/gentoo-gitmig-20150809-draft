@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.2 2005/09/09 11:42:28 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.3 2005/09/11 16:30:54 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -386,13 +386,13 @@ pkg_config() {
 	einfo "permissions on it..."
 
 	einfo "Insert a password for the mysql 'root' user"
-	ewarn "the password will be visible on the screen"
+	ewarn "bug: avoid [\"'\\_%] characters in the password"
 
-	echo -n "    >" && read -r pwd1
-	einfo "Repeat the password"
-	echo -n "    >" && read -r pwd2
+	read -rsp "    >" pwd1 ; echo
+	einfo "Check the password"
+	read -rsp "    >" pwd2 ; echo
 
-	if ((  "x$pwd1" != "x$pwd2" )) ; then
+	if [[  "x$pwd1" != "x$pwd2" ]] ; then
 		die "Passwords are not the same"
 	fi
 

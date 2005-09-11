@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.230 2005/09/10 08:52:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.231 2005/09/11 16:30:54 vivo Exp $
+
+  11 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
+  mysql-4.0.26.ebuild, mysql-4.1.13-r1.ebuild, mysql-4.1.14.ebuild,
+  mysql-5.0.12_beta.ebuild:
+  Hidding passwords when requested in pkg_config().
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> mysql-4.0.25-r2.ebuild:
   Mark 4.0.25-r2 stable on alpha
