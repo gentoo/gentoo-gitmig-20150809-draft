@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.37 2005/09/11 21:56:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.38 2005/09/11 22:10:30 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -301,6 +301,14 @@ src_unpack() {
 
 src_compile() {
 	emake it man || die
+
+	# Collision with ucspi-tcp (bug 105454)
+	# Note for collisions: qmail generates *.0 files from the man pages, but
+	# those aren't used in this ebuild, so we can ignore them.
+	rm -f tcp-environ.5
+
+	# Collision with mutt (bug 105454)
+	mv mbox.5 qmail-mbox.5
 }
 
 src_install() {
