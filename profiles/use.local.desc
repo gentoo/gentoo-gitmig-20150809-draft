@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1447 2005/09/10 13:03:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1448 2005/09/11 03:07:18 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -932,6 +932,7 @@ sci-libs/acml:sse2 - Enables sse2 support
 sci-libs/fftw:sse2 - Enables sse2 support
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
+sci-libs/gdal:gml - Enables support for xerces-c API
 sci-libs/gdal:grass - Adds support for the grasslib GIS library
 sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:jasper - Adds support for JPEG 2000
