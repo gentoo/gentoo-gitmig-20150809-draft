@@ -1,0 +1,10 @@
+# ChangeLog for sys-boot/sgibootcd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/sgibootcd/ChangeLog,v 1.1 2005/09/11 21:46:06 kumba Exp $
+
+*sgibootcd-0.12 (12 Sep 2005)
+
+  12 Sep 2005; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
+  +sgibootcd-0.12.ebuild:
+  Initial import of sgibootcd for creating burnable CD images for SGI LiveCDs.
+
