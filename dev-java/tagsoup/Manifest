@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 949176a8927fe2ca8e339cdf812c1419 tagsoup-0.10.2.ebuild 1168
 MD5 fd3475ad5d75f2e570f687895b337f12 ChangeLog 1194
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 e5ace201a33ef7217b14c883e651c546 files/digest-tagsoup-0.10.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDI3Sb/rLF9B432nYRAiXaAJ9oQGlrOfjuFGKY7OtRjbo/Jdbt1wCfYLjN
+HXdM+5gUoYWQhAdOHn0Pxbk=
+=JVCs
+-----END PGP SIGNATURE-----
