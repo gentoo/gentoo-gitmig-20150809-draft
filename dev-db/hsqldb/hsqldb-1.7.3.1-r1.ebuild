@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r1.ebuild,v 1.3 2005/09/11 12:13:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r1.ebuild,v 1.4 2005/09/11 12:15:42 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 	einfo "Preparing configuration files..."
 	mkdir conf
 	HSQLDB_JAR=/usr/share/hsqldb/lib/hsqldb.jar
-	sed -e 's/^JAVA_EXECUTABLE=.*$/JAVA_EXECUTABLE=$(which java 2>/dev/null)/g' \
+	sed -e 's:^JAVA_EXECUTABLE=.*$:JAVA_EXECUTABLE=$(which java 2>/dev/null):g' \
 		-e "s/^HSQLDB_JAR_PATH=.*$/HSQLDB_JAR_PATH=${HSQLDB_JAR//\//\\/}/g" \
 		-e "s/^SERVER_HOME=.*$/SERVER_HOME=\/var\/lib\/hsqldb/g" \
 		-e "s/^HSQLDB_OWNER=.*$/HSQLDB_OWNER=hsqldb/g" \
