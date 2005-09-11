@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 075c0ee8607e367351ad9d85b89529bf ChangeLog 20635
 MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
 MD5 5132b08cb3537e4dafe6ba71089bd860 gnome-vfs-2.10.0-r2.ebuild 2045
-MD5 add4f3b29e20ac450173a691c3a4107f gnome-vfs-2.12.0.ebuild 2152
+MD5 12aaa80bdaf82850cfa6baa521051d31 gnome-vfs-2.12.0.ebuild 2170
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e740b2b206f06210cd28a78774c08440 gnome-vfs-2.10.1-r1.ebuild 2049
 MD5 797c3f2f37f7affb981d0d312d1ef77a gnome-vfs-2.10.1-r2.ebuild 2245
@@ -28,7 +28,7 @@ MD5 25d42b1a4cf935fbedd3465bc4a8dd7c files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDI3d+BtvusYtCZMsRAs1vAKCGolQAJRd10Ai4gOBjKcetasAqAACcDfCI
-Z/kn+4EuRxxXqygzLaZSLDY=
-=mLPK
+iD8DBQFDI5jPBtvusYtCZMsRAseSAJ0WlTJ9qtiMLHV7l8KB6TVBeCnQTwCfRkjN
+Iz8E9Bxez7F2tkSz07CWtzQ=
+=8l6p
 -----END PGP SIGNATURE-----
