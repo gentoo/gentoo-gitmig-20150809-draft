@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.2 2005/09/11 02:37:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.3 2005/09/11 14:09:40 cretin Exp $
 
 inherit gnome2 eutils
 
@@ -15,7 +15,7 @@ IUSE="doc gnutls hal howl ipv6 samba ssl static"
 RDEPEND=">=gnome-base/libbonobo-2.3.1
 	>=gnome-base/gconf-1.2
 	>=dev-libs/glib-2.6
-	>=gnome-base/orbit-2.9
+	>=gnome-base/orbit-2.12.4
 	>=dev-libs/libxml2-2.6
 	app-arch/bzip2
 	virtual/fam
