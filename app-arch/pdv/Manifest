@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f0d738824574bb974c2e2f498002b2e ChangeLog 1015
 MD5 090b9bbcdafe60f821e963d2884f13ee files/digest-pdv-1.5.1 60
 MD5 090b9bbcdafe60f821e963d2884f13ee files/digest-pdv-1.5.1-r1 60
@@ -6,3 +9,10 @@ MD5 34c1a74136e9d702d3645eff4ad1cf1d files/pdv-1.5.1-opt.patch 696
 MD5 7b95bbb283b41f502719e1655fa5f41b files/pdv-1.5.1-x-config.patch 529
 MD5 706f3549a87e55c679393ba7453287c4 pdv-1.5.1-r1.ebuild 1323
 MD5 f7f51579b36c961562c86d1b34eedf03 pdv-1.5.1.ebuild 806
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJDlSI1lqEGTUzyQRAnChAJ9iFh4UgVZTJteswt45rzdOXefVQQCdF3WP
+kyPRXuiwzmt0yBBEjIxQyWk=
+=wXEI
+-----END PGP SIGNATURE-----
