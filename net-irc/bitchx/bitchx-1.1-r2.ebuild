@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r2.ebuild,v 1.5 2005/05/22 15:58:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r2.ebuild,v 1.6 2005/09/11 14:01:00 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -62,7 +62,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-sound"
 
 	use !amd64 && use gtk && use gnome\
-	    && myconf="${myconf} --with-gtk" \
+		&& myconf="${myconf} --with-gtk" \
 		|| myconf="${myconf} --without-gtk"
 
 

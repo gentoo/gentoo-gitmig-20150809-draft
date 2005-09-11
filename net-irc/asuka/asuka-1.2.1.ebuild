@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.2.1.ebuild,v 1.1 2005/04/10 12:31:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.2.1.ebuild,v 1.2 2005/09/11 14:01:00 swegener Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc"
 
 src_compile() {
 	econf \
-	 	--with-symlink=asuka-ircd \
+		--with-symlink=asuka-ircd \
 		--with-dpath=/etc/asuka \
 		--with-cpath=/etc/asuka/ircd.conf \
 		--with-lpath=/var/log/asuka/asuka.log \

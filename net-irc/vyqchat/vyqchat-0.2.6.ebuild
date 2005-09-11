@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.6.ebuild,v 1.3 2005/07/07 04:53:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.6.ebuild,v 1.4 2005/09/11 14:01:00 swegener Exp $
 
 DESCRIPTION="QT based Vypress Chat clone for X."
 HOMEPAGE="http://linux.bydg.org/~yogin/"
@@ -30,7 +30,7 @@ src_compile() {
 		--with-x \
 		--with-Qt-dir=/usr/qt/3 \
 		$(use_with arts) \
-		 || die "econf failed"
+		|| die "econf failed"
 	make || die "make failed"
 }
 

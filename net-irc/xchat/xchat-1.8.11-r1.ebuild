@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11-r1.ebuild,v 1.8 2005/01/01 07:38:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11-r1.ebuild,v 1.9 2005/09/11 14:01:00 swegener Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_compile() {
 	if ! use perl; then
 		use gnome \
 			&& myopts="${myopts} --enable-gnome --enable-panel" \
-			   CFLAGS="${CFLAGS} -I/usr/include/orbit-1.0" \
+				CFLAGS="${CFLAGS} -I/usr/include/orbit-1.0" \
 			|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt --disable-gdk-pixbuf"
 	else
 		myopts="${myopts} --disable-gnome"
@@ -79,7 +79,7 @@ src_compile() {
 
 	use python \
 		&& myflags="`python-config`" \
-	 	&& myopts="${myopts} --enable-python"
+		&& myopts="${myopts} --enable-python"
 
 
 	econf ${myopts} || die

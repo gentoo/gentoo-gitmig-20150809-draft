@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.11 2005/08/24 23:44:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.12 2005/09/11 14:01:00 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,7 @@ HELP_V="20050315"
 DESCRIPTION="Epic4 IRC Client"
 HOMEPAGE="http://epicsol.org/"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
-	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-${HELP_V}.tar.gz"
+	ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-${HELP_V}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
