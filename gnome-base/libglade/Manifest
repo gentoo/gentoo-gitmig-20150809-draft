@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1cd67af9809f307bc4c5bde037cbe82f libglade-2.5.0.ebuild 1356
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 156d7db3ae40a5bd6d1bf61475eab5d3 libglade-2.5.1.ebuild 1359
 MD5 3551ef1b8064f8d022287e6b8162c3e6 libglade-0.17-r6.ebuild 1515
-MD5 bbb7a613512712033a491d0c755f9dbc ChangeLog 9817
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 1dbfe2d22dea060043f6d2d5fa8d747c ChangeLog 9920
+MD5 42cffb54e0936f82187175bc98a7710f libglade-2.5.1.ebuild 1361
 MD5 225998fcdfb3607e5908dfb6178d849b files/digest-libglade-2.5.0 67
-MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
 MD5 ff81ecaaaec02a4578b6c4ee3234f2c2 files/digest-libglade-2.5.1 67
 MD5 f9bf50cb0d304288f8fe07db3385bdeb files/Makefile.in.am-2.4.2-xmlcatalog.patch 1331
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC8xGgIKl8Uu19MoRAp0BAJ4w8USCjk72kjBV1Dga9xh3dHHp+gCeJrt3
-jmrzYzPBlMqYmioHQbZR1hM=
-=WNS4
------END PGP SIGNATURE-----
+MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
