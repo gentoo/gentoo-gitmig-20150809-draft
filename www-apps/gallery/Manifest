@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c4b6df2d9376a4dd23b0b238718355ea gallery-2.0_rc1.ebuild 983
 MD5 7ce5a80546a565a228721fe5474e30fd gallery-1.5.1_rc3.ebuild 990
 MD5 4d5507b46a55c4d8ed0d5bcbec9acbcf gallery-1.5_p1.ebuild 981
@@ -10,3 +13,10 @@ MD5 411fcddae2e05639e626051d31f019c7 files/digest-gallery-2.0_rc1 74
 MD5 86e13454ea6b25fc8bb1fb70dd296e01 files/digest-gallery-2.0_rc2 74
 MD5 d8aa1a55fbfe46c99088bb0c360794f2 files/postinstall-en2.txt 770
 MD5 60f82816cecf216b054f0e889324bcde files/digest-gallery-1.5_p1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDJDf3EzitwsaoONoRAraeAJ4+xYZDBAGQqKmxa9fXKrA6PbSxjACgywC/
+qrEfyPEWMLsri61eaQsFvNg=
+=RGvv
+-----END PGP SIGNATURE-----
