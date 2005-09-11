@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.24.ebuild,v 1.1 2005/09/10 22:30:23 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.24.ebuild,v 1.2 2005/09/11 06:57:11 corsair Exp $
 
 MY_P=${P}-1.3.33
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.modssl.org/source/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="=net-www/apache-1.3.33*

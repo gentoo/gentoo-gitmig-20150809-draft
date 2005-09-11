@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.407 2005/09/10 22:44:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.408 2005/09/11 06:59:47 corsair Exp $
+
+  11 Sep 2005; Markus Rothe <corsair@gentoo.org> apache-1.3.33-r6.ebuild,
+  apache-2.0.54-r15.ebuild:
+  Stable on ppc64
 
 *apache-2.0.54-r15 (10 Sep 2005)
 
