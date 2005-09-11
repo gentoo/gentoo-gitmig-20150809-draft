@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.5 2005/09/10 12:14:55 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.6 2005/09/11 04:07:55 nerdboy Exp $
+
+  11 Sep 2005; Steve Arnold <nerdboy@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  stable bump (sparc and x86) required for other sc-libs (besides, that
+  configure bug doesn't really count, and the other one is *old*...)
 
   10 Sep 2005; Peter Bienstman <pbienst@gentoo.org>
   lapack-atlas-3.6.0.ebuild:
