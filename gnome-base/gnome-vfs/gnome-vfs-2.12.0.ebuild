@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.11.92.ebuild,v 1.3 2005/09/02 21:13:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.1 2005/09/11 00:14:06 cardoe Exp $
 
 inherit gnome2 eutils
 
@@ -34,7 +34,8 @@ RDEPEND=">=gnome-base/libbonobo-2.3.1
 			!gnome-extra/gnome-vfs-sftp ) )
 	hal? (
 		>=sys-apps/hal-0.5
-		>=sys-apps/dbus-0.32 )
+		>=sys-apps/dbus-0.32
+		sys-apps/pmount )
 	howl? ( >=net-misc/howl-0.9.6-r1 )"
 
 # ssl/gnutls USE deps : if both are enabled choose openssl
@@ -53,6 +54,10 @@ pkg_setup() {
 	G2CONF="$(use_enable ssl openssl) $(use_enable gnutls) \
 		$(use_enable static) $(use_enable samba) $(use_enable ipv6) \
 		$(use_enable hal) $(use_enable howl) --disable-schemas-install"
+
+	use hal && G2CONF="${G2CONF} --with-hal-mount=/usr/bin/pmount \
+	--with-hal-umount=/usr/bin/pumount \
+	--with-hal-eject=/usr/bin/eject"
 
 	# this works because of the order of conifgure parsing
 	# so should always be behind the use_enable options
