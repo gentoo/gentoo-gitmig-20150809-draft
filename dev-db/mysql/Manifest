@@ -6,7 +6,7 @@ MD5 d168c71df57729ea0eeadab3c6a59f43 mysql-4.0.22.ebuild 8768
 MD5 c28056421db550a09a548ad1dff517f5 mysql-4.0.22-r2.ebuild 9613
 MD5 0cfd7831f2d57b93e252c0f3d9c25276 mysql-3.23.58-r1.ebuild 7063
 MD5 240fc6da2d2c2d7dd224b147db251f80 mysql-4.0.24.ebuild 9827
-MD5 109fc4f819125bf5a3e69072a24e26e9 ChangeLog 40674
+MD5 4566494368c5e381c645c603784302d6 ChangeLog 40681
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 5ab197f8ea8f7de43f00dbc8891ee4c2 mysql-4.0.25-r2.ebuild 13766
 MD5 a755fb5a3ed724046a4f83fafd819c77 files/mysql-test-myisam-geometry.patch 1217
