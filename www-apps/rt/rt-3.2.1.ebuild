@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.7 2005/08/24 20:16:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.2.1.ebuild,v 1.8 2005/09/11 17:49:54 rl03 Exp $
 
 inherit webapp eutils
 
@@ -97,9 +97,9 @@ src_unpack() {
 
 src_compile() {
 	# capture the list of files from configure to patch later on
-	files=`./configure --prefix=${D}/usr \
+	files=$(./configure --prefix=${D}/usr \
 		--with-web-user=apache \
-		--with-web-group=apache | grep creating | cut -d':' -f2 | cut -d' ' -f3`
+		--with-web-group=apache | grep creating | cut -d':' -f2 | cut -d' ' -f3)
 	# ./configure doesn't accept locations, so patch these files directly
 	sed -i "s|/usr/etc|${MY_HOSTROOTDIR}/rt-config|
 			s|/usr/man|/usr/share/man|
@@ -114,8 +114,8 @@ src_compile() {
 
 	# check for missing deps and ask to report if something is broken
 	/usr/bin/perl ./sbin/rt-test-dependencies --verbose \
-		`use_with mysql` \
-		`use_with postgres pg` > ${T}/t
+		$(use_with mysql) \
+		$(use_with postgres pg) > ${T}/t
 	if grep -q "MISSING" ${T}/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn

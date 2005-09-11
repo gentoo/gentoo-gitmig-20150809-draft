@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.3 2005/08/24 20:16:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.4 2005/09/11 17:49:54 rl03 Exp $
 
 inherit webapp eutils
 
@@ -95,7 +95,7 @@ add_user_rt() {
 	if [[ ${euser} == $(egetent passwd "${euser}" | cut -d: -f1) ]] ; then
 		# check uid
 		rt_uid=$(egetent passwd "${euser}" | cut -d: -f3)
-		if `expr ${rt_uid} '<' 1000 > /dev/null`; then
+		if $(expr ${rt_uid} '<' 1000 > /dev/null); then
 			ewarn "uid of user rt is less than 1000. suexec2 will not work."
 			ewarn "If you want to use FastCGI, please delete the user 'rt'"
 			ewarn "from your system and re-emerge www-apps/rt"
@@ -167,8 +167,8 @@ src_compile() {
 
 	# check for missing deps and ask to report if something is broken
 	/usr/bin/perl ./sbin/rt-test-dependencies --verbose \
-		`use_with mysql` \
-		`use_with postgres pg` > ${T}/t
+		$(use_with mysql) \
+		$(use_with postgres pg) > ${T}/t
 	if grep -q "MISSING" ${T}/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn
