@@ -168,8 +168,8 @@ RCS file: /home/eclipse/org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo_stats
 retrieving revision 1.6
 retrieving revision 1.7
 diff -u -r1.6 -r1.7
---- org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo_stats.c	2005/07/11 21:28:17	1.6
-+++ org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo_stats.c	2005/08/15 20:22:55	1.7
+--- cairo_stats.c	2005/07/11 21:28:17	1.6
++++ cairo_stats.c	2005/08/15 20:22:55	1.7
 @@ -24,8 +24,8 @@
  
  #ifdef NATIVE_STATS
@@ -217,8 +217,8 @@ RCS file: /home/eclipse/org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo_stats
 retrieving revision 1.6
 retrieving revision 1.7
 diff -u -r1.6 -r1.7
---- org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo_stats.h	2005/07/11 21:28:17	1.6
-+++ org.eclipse.swt/Eclipse SWT PI/cairo/library/cairo_stats.h	2005/08/15 20:22:55	1.7
+--- cairo_stats.h	2005/07/11 21:28:17	1.6
++++ cairo_stats.h	2005/08/15 20:22:55	1.7
 @@ -50,10 +50,16 @@
  	cairo_1fill_1preserve_FUNC,
  	cairo_1font_1extents_FUNC,
