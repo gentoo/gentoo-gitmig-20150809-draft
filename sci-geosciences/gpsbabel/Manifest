@@ -1,4 +1,14 @@
-MD5 3978ea3eead5c62b4975d06be04e0e43 gpsbabel-1.2.7.ebuild 1957
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8eff5a7740d4c847ed33742db00881ce ChangeLog 426
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 05edf04caf450a9db74d6d98fedc0269 files/digest-gpsbabel-1.2.7 67
+MD5 cb3147a9c94715deb40450889756e61d gpsbabel-1.2.7.ebuild 1918
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJDPPI1lqEGTUzyQRAkJ1AKDcB4P9+63BmyUTIXLK1p3WIzFJJwCgyBwG
+5BfjMQF8yg89ulmTD4s+Rpw=
+=TkeM
+-----END PGP SIGNATURE-----
