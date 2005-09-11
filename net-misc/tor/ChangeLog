@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.50 2005/09/06 22:06:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.51 2005/09/11 23:14:16 humpback Exp $
+
+*tor-0.1.0.14-r1 (11 Sep 2005)
+
+  11 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>; files/tor.initd,
+  -tor-0.1.0.14.ebuild, +tor-0.1.0.14-r1.ebuild:
+  I was having some strange issues with sending signal 2 to tor. And we do not
+  need a SIGINT, a SIGTERM is fine.
 
   06 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
   -files/torrc.sample.patch-00, -tor-0.0.9.10.ebuild:
