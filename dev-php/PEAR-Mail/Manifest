@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92bb36d77c56cb9e73a0d37c8f7b1a24 PEAR-Mail-1.1.6-r1.ebuild 412
-MD5 e57eeeaa5f1529988b95c2c2a23d8ba5 PEAR-Mail-1.1.4.ebuild 446
-MD5 d66beedfc1674121dffde40ce65133e8 PEAR-Mail-1.1.6.ebuild 457
 MD5 481c1fa1cd4045e40ff39218192e4d5c ChangeLog 1773
+MD5 e57eeeaa5f1529988b95c2c2a23d8ba5 PEAR-Mail-1.1.4.ebuild 446
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 d66beedfc1674121dffde40ce65133e8 PEAR-Mail-1.1.6.ebuild 457
+MD5 e05b1ff8e0898d39bd96e92f14e483e8 PEAR-Mail-1.1.6-r1.ebuild 419
 MD5 195e282fe659ef03e3a563c9e6a41f52 files/digest-PEAR-Mail-1.1.4 58
 MD5 cbeb194bbd13e2f75261f77a7a83be39 files/digest-PEAR-Mail-1.1.6 58
 MD5 cbeb194bbd13e2f75261f77a7a83be39 files/digest-PEAR-Mail-1.1.6-r1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIZrVaGfFFLhbXWkRAqs2AJ4yXjM61KIN20nAmB5FBKjj8zCgqwCcCW4i
-H79b7BqXu6ci4cUsAeUGMaY=
-=5dna
------END PGP SIGNATURE-----
