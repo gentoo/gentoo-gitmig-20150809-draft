@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.36 2005/04/21 14:23:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.37 2005/09/11 15:06:34 agriffis Exp $
+
+  11 Sep 2005; Aron Griffis <agriffis@gentoo.org> zope-config-0.1-r1.ebuild,
+  zope-config-0.5.ebuild:
+  Mark 0.5 stable on alpha.  Add HOMEPAGE to zope-config-0.1-r1 to make repoman
+  happy
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> zope-config-0.5.ebuild:
   stable on amd64
