@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/astyle
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.13 2005/05/19 17:52:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.14 2005/09/11 01:49:29 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> astyle-1.15.3-r1.ebuild:
+  Mark 1.15.3-r1 stable on alpha
 
   19 May 2005; <dang@gentoo.org> astyle-1.15.3-r1.ebuild:
   Added ~amd64
