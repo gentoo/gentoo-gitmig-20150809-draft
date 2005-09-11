@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.11 2005/09/03 15:40:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.12 2005/09/11 18:14:32 agriffis Exp $
+
+  11 Sep 2005; Aron Griffis <agriffis@gentoo.org> kexi-1.4.1.ebuild:
+  Mark 1.4.1 stable on alpha
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> kexi-1.4.1.ebuild:
   Stable on ppc.
