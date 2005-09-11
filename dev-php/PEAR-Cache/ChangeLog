@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Cache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.23 2005/09/08 07:31:25 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.24 2005/09/11 03:31:50 weeve Exp $
+
+  11 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Cache-1.5.4-r1.ebuild:
+  Added ~sparc keyword.
 
 *PEAR-Cache-1.5.4-r1 (08 Sep 2005)
 
