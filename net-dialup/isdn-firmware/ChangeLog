@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn-firmware
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.8 2005/09/11 19:41:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.9 2005/09/11 19:50:23 sbriesen Exp $
+
+  11 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  isdn-firmware-2005.3.21.3.ebuild:
+  removed all archs other than x86, amd64 and ppc for the time being. needs
+  testing first.
 
   11 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
   isdn-firmware-2005.3.21.3.ebuild:

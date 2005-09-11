@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/isdn-firmware-2005.3.21.3.ebuild,v 1.4 2005/09/11 19:41:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/isdn-firmware-2005.3.21.3.ebuild,v 1.5 2005/09/11 19:50:23 sbriesen Exp $
 
 inherit rpm versionator
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.suse.com/pub/suse/i386/9.3/suse/i586/${MY_P}.i586.rpm"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 S="${WORKDIR}/lib/firmware/isdn"
