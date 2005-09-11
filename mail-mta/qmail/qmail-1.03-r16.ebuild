@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.36 2005/08/23 13:35:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.37 2005/09/11 21:56:37 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -304,7 +304,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einfo "Setting up directory hierarchy ..."
 
 	diropts -m 755 -o root -g qmail
@@ -356,7 +355,7 @@ src_install() {
 
 	# use the correct maildirmake
 	# the courier-imap one has some extensions that are nicer
-	[ -e /usr/bin/maildirmake ] && \
+	[[ -e /usr/bin/maildirmake ]] && \
 		MAILDIRMAKE="/usr/bin/maildirmake" || \
 		MAILDIRMAKE="${D}/var/qmail/bin/maildirmake"
 
@@ -464,7 +463,7 @@ src_install() {
 rootmailfixup() {
 	# so you can check mail as root easily
 	local TMPCMD="ln -sf /var/qmail/alias/.maildir/ ${ROOT}/root/.maildir"
-	if [ -d "${ROOT}/root/.maildir" ] && [ ! -L "${ROOT}/root/.maildir" ] ; then
+	if [[ -d "${ROOT}/root/.maildir" && ! -L "${ROOT}/root/.maildir" ]] ; then
 		einfo "Previously the qmail ebuilds created /root/.maildir/ but not"
 		einfo "every mail was delivered there. If the directory does not"
 		einfo "contain any mail, please delete it and run:"
@@ -483,7 +482,7 @@ buildtcprules() {
 		src=${ROOT}${TCPRULES_DIR}/${f}
 		cdb=${ROOT}${TCPRULES_DIR}/${f}.cdb
 		tmp=${ROOT}${TCPRULES_DIR}/.${f}.tmp
-		cat ${src} 2>/dev/null | tcprules ${cdb} ${tmp} < ${src}
+		[[ -e ${src} ]] && tcprules ${cdb} ${tmp} < ${src}
 	done
 }
 
@@ -546,13 +545,13 @@ pkg_preinst() {
 			old="/etc/tcp.${proto}${ext}"
 			new="${TCPRULES_DIR}/tcp.qmail-${proto}${ext}"
 			fail=0
-			if [ -f "$old" -a ! -f "$new" ]; then
+			if [[ -f "$old" && ! -f "$new" ]]; then
 				einfo "Moving $old to $new"
 				cp $old $new || fail=1
 			else
 				fail=1
 			fi
-			if [ "${fail}" = 1 -a -f ${old} ]; then
+			if [[ "${fail}" = 1 && -f ${old} ]]; then
 				eerror "Error moving $old to $new, be sure to check the"
 				eerror "configuration! You may have already moved the files,"
 				eerror "in which case you can delete $old"
@@ -577,9 +576,9 @@ pkg_config() {
 	# avoid some weird locale problems
 	export LC_ALL="C"
 
-	if [ ${ROOT} = "/" ] ; then
-		if [ ! -f ${ROOT}var/qmail/control/me ] ; then
-			export qhost=`hostname --fqdn`
+	if [[ ${ROOT} = / ]] ; then
+		if [[ ! -f ${ROOT}var/qmail/control/me ]] ; then
+			export qhost=$(hostname --fqdn)
 			${ROOT}var/qmail/bin/config-fast $qhost
 		fi
 	else
@@ -587,7 +586,7 @@ pkg_config() {
 	fi
 
 	einfo "Accepting relaying by default from all ips configured on this machine."
-	LOCALIPS=`/sbin/ifconfig | grep inet | cut -d' ' -f 12 -s | cut -b 6-20`
+	LOCALIPS=$(/sbin/ifconfig | grep inet | cut -d' ' -f 12 -s | cut -b 6-20)
 	TCPSTRING=":allow,RELAYCLIENT=\"\",RBLSMTPD=\"\""
 	for ip in $LOCALIPS; do
 		myline="${ip}${TCPSTRING}"
