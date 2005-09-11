@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8c540f327f6d6a76db823fad790ccdc7 ids-0.82.ebuild 1420
 MD5 67ee22e6c3af912fc3794e397a0dfa58 ids-0.83_beta2-r1.ebuild 887
-MD5 9f79e2879f4f2fd9dade27907cddf364 ChangeLog 1773
+MD5 76a461a8cbcf87e61d0dc56c17412ac2 ChangeLog 1872
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 f3c2e1e60ba2b89234c3aa7931cbaf50 files/digest-ids-0.83_beta2-r1 62
 MD5 d82018294820900e72eddf227d213fc7 files/postinstall-en.txt 131
-MD5 2fafb5c9f461a7bd803bad263cad0228 files/digest-ids-0.82 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0chEEzitwsaoONoRAmyFAJ9tK7Wh/gPtNRTVGcvq5OsiBdwfeQCdG0us
-fJM7CcpRO1Smn88Sijmzx/Q=
-=P6Gd
------END PGP SIGNATURE-----
