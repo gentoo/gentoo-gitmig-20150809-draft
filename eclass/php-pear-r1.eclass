@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.3 2005/09/08 17:01:02 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.4 2005/09/11 16:39:10 hollow Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -18,7 +18,7 @@ EXPORT_FUNCTIONS src_install
 
 # We must depend on the base package as we need it to do
 # install tasks (it provides the pear binary).
-DEPEND="${DEPEND} dev-lang/php"
+DEPEND="${DEPEND} dev-lang/php >=dev-php/PEAR-PEAR-1.3.6"
 RDEPEND="${RDEPEND} ${DEPEND}"
 
 fix_PEAR_PV() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.2 2005/09/04 15:15:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.3 2005/09/11 16:39:10 hollow Exp $
 #
 # ========================================================================
 #
@@ -118,11 +118,12 @@ need_php_by_category()
 # Portage
 #
 # $1 ... a list of SAPI USE flags (eg cli, cgi, apache2)
-#
+# 
 # returns if any one of the listed SAPIs has been installed
 # dies if none of the listed SAPIs has been installed
 
-require_php_sapi_from() {
+require_php_sapi_from()
+{
 	has_php
 
 	local has_sapi=0
@@ -157,11 +158,12 @@ require_php_sapi_from() {
 # Portage
 #
 # $1 ... a list of USE flags
-#
+# 
 # returns if all of the listed USE flags are set
 # dies if any of the listed USE flags are not set
 
-require_php_with_use() {
+require_php_with_use()
+{
 	has_php
 
 	local missing_use=
@@ -189,13 +191,14 @@ require_php_with_use() {
 	die "Re-install ${PHP_PKG}"
 }
 
-# call this function from your src_compile & src_install methods
-# if you need to know where the PHP binaries are installed
+# call this function from your pkg_setup, src_compile & src_install methods
+# if you need to know where the PHP binaries are installed and their data
 
 has_php()
 {
 	# if PHP_PKG is set, then we have remembered our PHP settings
 	# from last time
+
 	if [[ -n ${PHP_PKG} ]]; then
 		return
 	fi
@@ -223,11 +226,26 @@ has_php()
 # these functions return 0 if the condition is satisfied, or 1 otherwise
 # ========================================================================
 
+# check if our PHP was compiled with ZTS (Zend Thread Safety)
+
 has_zts()
 {
 	has_php
 
 	if built_with_use =${PHP_PKG} apache2 threads ; then
+		return 0
+	fi
+
+	return 1
+}
+
+# check if our PHP was built with Hardened-PHP active
+
+has_hardenedphp()
+{
+	has_php
+
+	if built_with_use =${PHP_PKG} hardenedphp ; then
 		return 0
 	fi
 
@@ -240,6 +258,8 @@ has_zts()
 # These functions die() if PHP was built without the required USE flag(s)
 # ========================================================================
 
+# require a PHP built with PDO support for PHP5
+
 require_pdo()
 {
 	has_php
@@ -248,7 +268,8 @@ require_pdo()
 
 	if [[ ${PHP_VERSION} == 4 ]] ; then
 		eerror
-		eerror "This package requires PDO. PDO is only available for PHP 5."
+		eerror "This package requires PDO."
+		eerror "PDO is only available for PHP 5."
 		eerror "Please install dev-lang/php-5*"
 		eerror
 		die "PHP 5 not installed"
@@ -266,13 +287,13 @@ require_pdo()
 		return
 	fi
 
-	# it suffices that pecl-pdo was installed to have PDO support
+	# ok, as last resort, it suffices that pecl-pdo was installed to have PDO support
 
 	if has_version dev-php5/pecl-pdo ; then
 		return
 	fi
 
-	# if we get here, then we have no PDO support :(
+	# if we get here, then we have no PDO support
 
 	eerror
 	eerror "No PDO extension for PHP found."
@@ -284,17 +305,18 @@ require_pdo()
 	eerror "the 'pdo' or the 'pdo-external' USE flags"
 	eerror "turned on."
 	eerror
-	die "No PDO extension found for PHP"
+	die "No PDO extension found for PHP 5"
 }
 
 # determines which installed PHP version has the CLI sapi
 # useful for PEAR eclass, or anything which needs to run PHP
-# scripts
+# scripts depending on the cli sapi
 
 require_php_cli()
 {
 	# if PHP_PKG is set, then we have remembered our PHP settings
 	# from last time
+
 	if [[ -n ${PHP_PKG} ]]; then
 		return
 	fi
@@ -320,6 +342,45 @@ require_php_cli()
 
 	# if we get here, then PHP_VERSION tells us which version of PHP we
 	# want to use
+
+	uses_php${PHP_VERSION}
+}
+
+# determines which installed PHP version has the CGI sapi
+# useful for anything which needs to run PHP scripts
+# depending on the cgi sapi
+
+require_php_cgi()
+{
+	# if PHP_PKG is set, then we have remembered our PHP settings
+	# from last time
+
+	if [[ -n ${PHP_PKG} ]]; then
+		return
+	fi
+
+	# detect which PHP version installed
+	if has_version '=dev-lang/php-5*' ; then
+		pkg="`best_version '=dev-lang/php-5*'`"
+		if built_with_use =${pkg} cgi ; then
+			PHP_VERSION=5
+		fi
+	elif has_version '=dev-lang/php-4*' ; then
+		pkg="`best_version '=dev-lang/php-4*'`"
+		if built_with_use =${pkg} cgi ; then
+			PHP_VERSION=4
+		fi
+	else
+		die "Unable to find an installed dev-lang/php package"
+	fi
+
+	if [[ -z ${PHP_VERSION} ]]; then
+		die "No PHP CGI installed"
+	fi
+
+	# if we get here, then PHP_VERSION tells us which version of PHP we
+	# want to use
+
 	uses_php${PHP_VERSION}
 }
 
@@ -329,19 +390,22 @@ require_sqlite()
 {
 	has_php
 
-	# has our PHP been built w/ sqlite?
+	# has our PHP been built with sqlite?
+
 	if built_with_use =${PHP_PKG} sqlite ; then
 		return
 	fi
 
-	# do we have pecl-sqlite installed for PHP4?
+	# do we have pecl-sqlite installed for PHP 4?
+
 	if [[ ${PHP_VERSION} == 4 ]] ; then
 		if has_version dev-php4/pecl-sqlite ; then
 			return
 		fi
 	fi
 
-	# if we get here, then we don't have any php/sqlite support installed
+	# if we get here, then we don't have any sqlite support for PHP installed
+
 	eerror
 	eerror "No sqlite extension for PHP found."
 	eerror "Please install an sqlite extension for PHP,"
@@ -349,4 +413,32 @@ require_sqlite()
 	eerror "'sqlite' USE flag when emerging dev-lang/php."
 	eerror
 	die "No sqlite extension for PHP found"
+}
+
+require_gd()
+{
+	has_php
+
+	# do we have the internal GD support installed?
+
+	if built_with_use =${PHP_PKG} gd ; then
+		return
+	fi
+
+	# ok, maybe GD was built using the external support?
+
+	if built_with_use =${PHP_PKG} gd-external ; then
+		return
+	fi
+
+	# if we get here, then we have no GD support
+
+	eerror
+	eerror "No GD support for PHP found."
+	eerror "Please install the GD support for PHP,"
+	eerror "you must install dev-lang/php with either"
+	eerror "the 'gd' or the 'gd-external' USE flags"
+	eerror "turned on."
+	eerror
+	die "No GD support found for PHP"
 }
