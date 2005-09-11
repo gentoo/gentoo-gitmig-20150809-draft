@@ -1,6 +1,10 @@
 # ChangeLog for net-www/spawn-fcgi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/ChangeLog,v 1.7 2005/04/19 12:32:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/ChangeLog,v 1.8 2005/09/11 13:41:03 rl03 Exp $
+
+  11 Sep 2005; Renat Lumpau <rl03@gentoo.org> spawn-fcgi-1.1.0.ebuild,
+  spawn-fcgi-1.2.0.ebuild:
+  Fixed php dependency wrt bug #102857.
 
   19 Apr 2005; Simon Stelling <blubb@gentoo.org> spawn-fcgi-1.2.0.ebuild:
   added ~amd64
