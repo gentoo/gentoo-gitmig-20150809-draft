@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.163 2005/09/10 08:04:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.164 2005/09/11 10:24:38 blubb Exp $
+
+  11 Sep 2005; Simon Stelling <blubb@gentoo.org> python-2.3.5-r2.ebuild:
+  stable wrt bug 104009
 
   10 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   python-2.3.5-r2.ebuild:
