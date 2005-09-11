@@ -4,10 +4,6 @@
 
 <herd>java</herd>
 
-<maintainer>
-	<email>axxo@gentoo.org</email>
-</maintainer>
-
 <longdescription>
 
 Jimi is a class library for managing images. Its primary function is image I/O. 
