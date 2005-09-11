@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ffbfe9f8f548673073619ab9a6513b75 ChangeLog 25435
 MD5 323192908f52dfb3288ffc92c0efc091 files/2.4.4-plugin-fixes.patch 1351
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
@@ -10,13 +7,6 @@ MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
 MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
 MD5 ee98eba7f1061680d8d0582a10d72cb7 files/xchat-dccserver-0.5.patch 11776
 MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
-MD5 8ebf40ee60968abaf73442bfb9873e93 xchat-1.8.11-r1.ebuild 2267
+MD5 4634f562e01b219d3bcfb0ae6acb8397 xchat-1.8.11-r1.ebuild 2264
 MD5 f70fee92ab2e258ea7be208d0ddfa4b6 xchat-2.4.3.ebuild 2266
 MD5 c591165fd310fdeac6d0176bfe68d777 xchat-2.4.4-r2.ebuild 2452
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDEJykI1lqEGTUzyQRAtlPAKDIzqQsv1Q6La3vo+WWdUdxInfQ+wCaAw4Z
-YIkaYFLzXrfAlW2frH0duMk=
-=SGB/
------END PGP SIGNATURE-----
