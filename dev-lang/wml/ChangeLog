@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.19 2005/09/10 06:51:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.20 2005/09/11 14:10:21 hansmi Exp $
+
+  11 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> wml-2.0.9-r1.ebuild:
+  Stable on ppc.
 
 *wml-2.0.9-r1 (10 Sep 2005)
 
