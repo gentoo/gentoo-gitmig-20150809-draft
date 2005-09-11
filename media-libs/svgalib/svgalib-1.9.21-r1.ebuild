@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.11 2005/08/23 18:09:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21-r1.ebuild,v 1.1 2005/09/11 19:42:17 dsd Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -108,11 +108,11 @@ src_install() {
 	doins src/keyboard/vgakeyboard.h
 
 	if best_version '>=sys-fs/udev-045' ; then
-		dodir /etc/udev/rules.d
-		newins "${FILESDIR}"/svgalib.udev.rules.d 30-svgalib
+		insinto /etc/udev/rules.d
+		newins "${FILESDIR}"/svgalib.udev.rules.d 30-svgalib.rules
 	elif best_version sys-fs/udev ; then
 		insinto /etc/udev/permissions.d
-		newins "${FILESDIR}"/svgalib.udev.perms.d 30-svgalib
+		newins "${FILESDIR}"/svgalib.udev.perms.d 30-svgalib.permissions
 	elif best_version sys-fs/devfsd ; then
 		insinto /etc/devfs.d
 		newins "${FILESDIR}"/svgalib.devfs svgalib
