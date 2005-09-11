@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.10 2005/08/11 02:06:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.11 2005/09/11 04:14:51 nerdboy Exp $
+
+  11 Sep 2005; Steve Arnold <nerdboy@gentoo.org> grass-5.4.0.ebuild,
+  grass-6.0.0-r2.ebuild:
+  stable bump for sparc and x86
 
   11 Aug 2005; Steve Arnold <nerdboy@gentoo.org>
   files/digest-grass-6.0.0-r2, Manifest:
