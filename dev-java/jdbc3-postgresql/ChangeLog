@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc3-postgresql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.8 2005/04/12 20:03:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.9 2005/09/11 10:40:05 axxo Exp $
+
+*jdbc3-postgresql-8.0_p312 (11 Sep 2005)
+
+  11 Sep 2005; Thomas Matthijs <axxo@gentoo.org>
+  +jdbc3-postgresql-8.0_p312.ebuild:
+  version bump
 
 *jdbc3-postgresql-8.0_p311 (12 Apr 2005)
 
