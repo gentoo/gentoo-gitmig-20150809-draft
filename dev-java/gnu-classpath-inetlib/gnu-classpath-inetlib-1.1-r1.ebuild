@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1.ebuild,v 1.3 2005/07/18 13:01:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.1-r1.ebuild,v 1.1 2005/09/11 15:42:05 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="Network extensions library for GNU classpath and classpathx"
 HOMEPAGE="http://www.gnu.org/software/classpath/"
 SRC_URI="ftp://ftp.gnu.org/gnu/classpath/inetlib-${PV}.tar.gz"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="1.1"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.3
@@ -53,5 +53,5 @@ src_install() {
 	rm -rf ${D}/usr/share/java
 	java-pkg_dojar inetlib.jar
 	use doc && java-pkg_dohtml -r docs/*
-	dodoc AUTHORS COPYING NEWS README
+	dodoc AUTHORS NEWS README
 }
