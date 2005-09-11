@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r11.ebuild,v 1.10 2005/04/06 23:06:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r11.ebuild,v 1.11 2005/09/11 14:02:53 swegener Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ src_install() {
 	cd ${D}/usr/share/locale
 	for x in *.
 	do
-	  rm -rf ${x}
+		rm -rf ${x}
 	done
 	rm -rf ${D}/usr/lib
 
