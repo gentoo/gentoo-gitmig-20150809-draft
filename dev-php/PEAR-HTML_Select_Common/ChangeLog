@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Select_Common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.14 2005/09/08 07:41:30 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.15 2005/09/11 16:25:04 weeve Exp $
+
+  11 Sep 2005; Jason Wever <weeve@gentoo.org>
+  PEAR-HTML_Select_Common-1.1-r2.ebuild:
+  Added ~sparc keyword.
 
 *PEAR-HTML_Select_Common-1.1-r2 (08 Sep 2005)
 

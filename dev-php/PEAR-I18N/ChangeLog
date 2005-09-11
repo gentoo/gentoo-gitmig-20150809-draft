@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-I18N
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.15 2005/09/10 23:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18N/ChangeLog,v 1.16 2005/09/11 16:24:40 weeve Exp $
+
+  11 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-I18N-0.8.6-r2.ebuild:
+  Added ~sparc keyword.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> PEAR-I18N-0.8.6-r1.ebuild:
   Mark 0.8.6-r1 stable on alpha
