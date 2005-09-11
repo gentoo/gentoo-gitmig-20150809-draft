@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.55 2005/09/05 01:00:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.56 2005/09/11 03:27:41 dang Exp $
+
+*gtksourceview-1.4.1 (11 Sep 2005)
+
+  11 Sep 2005; <dang@gentoo.org> -gtksourceview-1.3.93.ebuild,
+  +gtksourceview-1.4.1.ebuild:
+  Bump to 1.4.1 for Gnome 2.12.0
 
 *gtksourceview-1.3.93 (05 Sep 2005)
 
