@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.71 2005/09/08 23:06:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.72 2005/09/11 12:12:17 flameeyes Exp $
+
+*amarok-1.3.1-r2 (11 Sep 2005)
+
+  11 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/amarok-1.3.1-gst-alsaagain.patch, +amarok-1.3.1-r2.ebuild:
+  Added patch to re-add support for alsasink with gstreamer engine. Thanks to
+  Mark Kretschmann for submitting it.
 
   08 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> amarok-1.3.1-r1.ebuild:
   Don't force using gst-plugins-oss, let the uesrs select what they want.
