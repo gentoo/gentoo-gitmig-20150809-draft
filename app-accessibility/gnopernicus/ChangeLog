@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.65 2005/08/30 11:42:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.66 2005/09/11 03:13:05 dang Exp $
+
+*gnopernicus-0.11.6 (11 Sep 2005)
+
+  11 Sep 2005; <dang@gentoo.org> +gnopernicus-0.11.6.ebuild:
+  Revbump to 0.11.6 for Gnome 2.12.0
 
 *gnopernicus-0.11.5 (30 Aug 2005)
 
