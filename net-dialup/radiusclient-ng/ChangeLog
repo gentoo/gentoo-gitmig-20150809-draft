@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/radiusclient-ng
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.4 2005/08/03 16:37:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.5 2005/09/11 23:37:13 metalgod Exp $
+
+  12 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  radiusclient-ng-0.5.1.ebuild:
+  Added ~amd64 keyword.
 
 *radiusclient-ng-0.5.1 (03 Aug 2005)
 
