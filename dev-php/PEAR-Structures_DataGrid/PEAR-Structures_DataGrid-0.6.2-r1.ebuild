@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_DataGrid/PEAR-Structures_DataGrid-0.6.2-r1.ebuild,v 1.2 2005/09/09 14:21:31 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_DataGrid/PEAR-Structures_DataGrid-0.6.2-r1.ebuild,v 1.3 2005/09/11 04:16:59 weeve Exp $
 
 inherit php-pear-r1
 
@@ -9,7 +9,7 @@ and sorting purposes."
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE=""
 RDEPEND="${RDEPEND}
 	>=dev-php/PEAR-HTML_Table-1.5
