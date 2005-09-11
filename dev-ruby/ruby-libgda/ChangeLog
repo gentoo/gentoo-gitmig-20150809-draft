@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libgda
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ChangeLog,v 1.5 2005/06/26 15:42:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ChangeLog,v 1.6 2005/09/11 00:54:22 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> ruby-libgda-0.12.0.ebuild:
+  Mark 0.12.0 stable on alpha
 
   26 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-libgda-0.10.1.ebuild,
   ruby-libgda-0.12.0.ebuild:
