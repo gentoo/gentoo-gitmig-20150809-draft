@@ -1,3 +1,15 @@
-MD5 8e45a60ec61de5a4bfdfc0d4ea1cfbf3 ChangeLog 1055
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5b1db32abbb3a4a842e477d5763a8da3 ChangeLog 1178
 MD5 f9278ba48106c49230dac5db86dc76c8 lzop-1.01.ebuild 723
+MD5 b89e1bfc9632132522dc08707ac91e88 lzop-1.02_rc1.ebuild 1039
 MD5 bd07097faaf9d81684623469c234bc87 files/digest-lzop-1.01 61
+MD5 d10c32260178e0fe7dd33256377193a8 files/digest-lzop-1.02_rc1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJAcymdTrptrqvGERAgUIAJ44YZ8GPX0/l9xkL6A1SrW4T8NV4gCbBNhJ
+XjD6KBgdPTbVdRNvfsLZTdg=
+=yfJg
+-----END PGP SIGNATURE-----
