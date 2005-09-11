@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.38 2005/08/04 09:39:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.39 2005/09/11 19:54:40 vanquirius Exp $
+
+  11 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/libpcap-0.9.3-whitespace.diff, libpcap-0.9.3.ebuild:
+  Adding patch to remove whitespace in pcap.h to avoid non-portable whitespace
+  warnings in programs that include it.
 
   04 Aug 2005; Daniel Black <dragonheart@gentoo.org>
   libpcap-0.8.3-r1.ebuild, libpcap-0.9.3.ebuild:

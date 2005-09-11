@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.3.ebuild,v 1.2 2005/08/04 09:39:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.3.ebuild,v 1.3 2005/09/11 19:54:40 vanquirius Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -20,8 +20,8 @@ DEPEND="virtual/libc
 PROVIDE="virtual/libpcap"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A}; cd ${S}
+	epatch ${FILESDIR}/${P}-whitespace.diff
 	epatch ${FILESDIR}/${PN}-0.8.1-fPIC.patch
 }
 
