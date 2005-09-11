@@ -1,8 +1,18 @@
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9a39296098d0e1eae3e620f4541c1c56 ChangeLog 7115
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e4aa9d6ef39937d97a1324819c0ccc1d gconf-editor-2.8.2.ebuild 687
+MD5 2bff53343f5d7957c8a7703615dd35b9 gconf-editor-2.12.0.ebuild 722
+MD5 c8e3dcb89a39340b478fa74564e4c7db ChangeLog 7265
 MD5 fb8d85327d58a8f5df3fefd141869725 gconf-editor-2.10.0.ebuild 711
-MD5 17f3ccd9df7b46ad01d9843c35f442ac gconf-editor-2.11.92.ebuild 728
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
-MD5 d0458e4c5f3de6f516a7f5cf080be4f8 files/digest-gconf-editor-2.11.92 73
+MD5 0447e714b91ff808a549c4f667aedeb8 files/digest-gconf-editor-2.12.0 72
 MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJLaxomPajV0RnrERAnGJAKCAha+HSmT++jhwFyr2v8PAo6OkyACfcN10
+VzT0asibDzqgy15hIDSss0k=
+=uFG9
+-----END PGP SIGNATURE-----

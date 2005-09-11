@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.11.92.ebuild,v 1.1 2005/08/24 21:59:16 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.12.0.ebuild,v 1.1 2005/09/11 22:58:31 dang Exp $
 
 inherit gnome2
 
