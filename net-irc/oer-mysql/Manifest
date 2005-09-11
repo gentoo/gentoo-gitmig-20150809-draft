@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 65ac586f7a99a873076af7f7b5a127b0 ChangeLog 1267
 MD5 8e47665b13a96c5d6a0b7bff3fe82c27 files/digest-oer-mysql-1.0.43 68
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 4d234ca4ccf4368724dbec01df620f89 oer-mysql-1.0.43.ebuild 1390
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJDixI1lqEGTUzyQRApANAJ4pRHLMz4tVqFDfgYshWUYAQC64/wCdE+uW
+g6IDj65BkHjCyLJJ/o0XUUE=
+=iIHj
+-----END PGP SIGNATURE-----

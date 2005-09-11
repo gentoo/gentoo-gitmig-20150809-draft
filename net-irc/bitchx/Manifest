@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b4f02b199b81e2c523fe135ba0fe149d ChangeLog 8475
 MD5 53d6a87681d7f552e3667db93e58179a bitchx-1.1-r1.ebuild 3434
 MD5 399c7e05821ea1e80ae38756b1fb6c28 bitchx-1.1-r2.ebuild 3622
@@ -10,3 +13,10 @@ MD5 9958cd92ed63cd29972e5c3465ab83aa files/digest-bitchx-1.1-r1 73
 MD5 9958cd92ed63cd29972e5c3465ab83aa files/digest-bitchx-1.1-r2 73
 MD5 cec20e4fc802c01abdd729d89447b3c7 files/fPIC.patch 16020
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJDixI1lqEGTUzyQRAvj/AJ444X/db5wc2QslLWT8GCzquMJElQCeO4Ce
+S+t8zwk7a5dijSaTjaOSsxs=
+=LLXQ
+-----END PGP SIGNATURE-----

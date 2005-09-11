@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d0e0b07777b10ccd6f789133c6ef4bff ChangeLog 1559
 MD5 26be75128cee034d9b8356e30f45e32e files/digest-vyqchat-0.1.1 65
 MD5 0287c53dce94dacfc511965ed235b5a7 files/digest-vyqchat-0.2.3 65
@@ -7,3 +10,10 @@ MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 98bb528328cc04720a57e6b1f893417e vyqchat-0.1.1.ebuild 729
 MD5 eb03c125030e89375beee7a0f036b78c vyqchat-0.2.3.ebuild 834
 MD5 d5058045a967ef0d5ab13b51963c90ad vyqchat-0.2.6.ebuild 952
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJDixI1lqEGTUzyQRAu//AKCn5ZiiJRonUdauQTHBTE7H0b0MZwCfW/nb
+LlFspsFCy4disbupBUY6Tbk=
+=rYB2
+-----END PGP SIGNATURE-----
