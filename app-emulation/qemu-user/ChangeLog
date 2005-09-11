@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.3 2005/08/06 14:15:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.4 2005/09/11 02:24:02 lu_zero Exp $
+
+*qemu-user-0.7.2 (11 Sep 2005)
+
+  11 Sep 2005; Luca Barbato <lu_zero@gentoo.org> +qemu-user-0.7.2.ebuild:
+  New release
 
   06 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/qemu-ppc-dirty-hack.patch, qemu-user-0.7.1.ebuild:
