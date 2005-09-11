@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cproto
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.9 2005/04/24 12:47:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.10 2005/09/11 23:13:10 metalgod Exp $
+
+  12 Sep 2005; Luis Medinas <metalgod@gentoo.org> cproto-4.6-r1.ebuild:
+  Added ~amd64 keyword. Closes bug #105390.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cproto-4.6-r1.ebuild:
   Stable on ppc.
