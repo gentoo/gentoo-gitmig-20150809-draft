@@ -1,10 +1,19 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.33 2005/09/10 15:01:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.34 2005/09/11 11:26:42 axxo Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+*ant-core-1.6.5-r2 (11 Sep 2005)
+*ant-core-1.6.2-r5 (11 Sep 2005)
+
+  11 Sep 2005; Thomas Matthijs <axxo@gentoo.org> files/1.6.2-ant,
+  files/1.6.5-ant, -ant-core-1.6.2-r3.ebuild, -ant-core-1.6.2-r4.ebuild,
+  +ant-core-1.6.2-r5.ebuild, -ant-core-1.6.5-r1.ebuild,
+  +ant-core-1.6.5-r2.ebuild:
+  Fix wrapper script (again)
 
   10 Sep 2005; Thomas Matthijs <axxo@gentoo.org> ant-core-1.5.4-r2.ebuild,
   ant-core-1.6.2-r3.ebuild, ant-core-1.6.2-r4.ebuild,
