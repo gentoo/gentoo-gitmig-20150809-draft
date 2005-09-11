@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 663ab14f296083f5677ba82ef9657660 gtk-engines-thinice-1.0.4-r1.ebuild 815
+MD5 e5cdeb297e256165c73f6ff88ff4b454 ChangeLog 2709
+MD5 84b286d5d20e2a5c89bb34c8239c400d gtk-engines-thinice-1.0.4-r1.ebuild 815
 MD5 871ac3ebbca3a32f0bfb8303bdfaff3f gtk-engines-thinice-1.0.4.ebuild 666
-MD5 19c80d23336734d667f46d86ee6e26dc ChangeLog 2596
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 9acf1e5fba0b9931c07ec771adc9a3fd files/digest-gtk-engines-thinice-1.0.4 75
 MD5 9acf1e5fba0b9931c07ec771adc9a3fd files/digest-gtk-engines-thinice-1.0.4-r1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHKsKKRy60XGEcJIRAvm+AJ9DXd1ZETIonsQ9z9Qg7Em8QkJB5QCgrf5G
-h6kthqTznLxeXwY1GRbc5cc=
-=vG4V
------END PGP SIGNATURE-----

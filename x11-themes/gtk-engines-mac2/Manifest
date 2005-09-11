@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b15f174351e58d082c906e9193783592 ChangeLog 1580
 MD5 c1510afb071ce7a8565de5ea4e392074 gtk-engines-mac2-1.0.3-r1.ebuild 655
-MD5 4ddef7b79d068d10b2909d0d4d66154b gtk-engines-mac2-1.0.3-r2.ebuild 807
-MD5 cd1d6453e7177cfa6cdc5bd7b207775b ChangeLog 1470
+MD5 7135af27782f3d973849a1b3fc6dda49 gtk-engines-mac2-1.0.3-r2.ebuild 807
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 12440e8c058b704cc489dc76e9ec68d3 files/digest-gtk-engines-mac2-1.0.3-r1 62
 MD5 12440e8c058b704cc489dc76e9ec68d3 files/digest-gtk-engines-mac2-1.0.3-r2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHZrrKRy60XGEcJIRAvzqAKCH7QS21ppw9I4TPTbfRdSmMYJx9ACggOUt
-4xjxezBZCbUErcHNzdKRFeI=
-=ININ
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5cd7d2e72c7d5a32b72e3dd96e226a20 ChangeLog 1673
 MD5 6b4ca3ebcdf99c6bc53fbefb7df5a1c6 gtk-engines-icegradient-0.0.5-r1.ebuild 714
-MD5 cef338a3acf940179845d44b681fcd88 gtk-engines-icegradient-0.0.5-r2.ebuild 865
-MD5 6d569bf6c3a8f2a0a6509bce2fb776af ChangeLog 1556
+MD5 72088ff1212c9da7d3474899957ad95d gtk-engines-icegradient-0.0.5-r2.ebuild 865
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f8c5aa3220b25a10fb228862564b2891 files/digest-gtk-engines-icegradient-0.0.5-r1 86
 MD5 f8c5aa3220b25a10fb228862564b2891 files/digest-gtk-engines-icegradient-0.0.5-r2 86
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHZskKRy60XGEcJIRAoD0AJ49Pb3ncFhGCVtOwbIdMBe+LtO9qACeLOfA
-7DX/ULs0yXrhREXPXnFn96Y=
-=fB9m
------END PGP SIGNATURE-----

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 51ee5b7929aa82a4b7879e6c7f0ae80f gtk-engines-mist-0.10-r2.ebuild 1191
+MD5 ef9a7d91578f12ea7b28c631be9d9763 ChangeLog 2556
 MD5 93e2812893672da677777a9c8c47bec5 gtk-engines-mist-0.10-r1.ebuild 1155
-MD5 62ab2c5e7a81ecefb89260e33ea30eb3 ChangeLog 2447
+MD5 35a281af460aba7172c62d61eca1bb8d gtk-engines-mist-0.10-r2.ebuild 1191
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 b9ed2e12a503c82d8b2038e2756ea9e3 files/gtk-engines-mist-0.10-autoconf.patch 2344
 MD5 397a6027ae11d4dd7a919470a0d3b1bb files/digest-gtk-engines-mist-0.10-r1 72
 MD5 397a6027ae11d4dd7a919470a0d3b1bb files/digest-gtk-engines-mist-0.10-r2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHZq6KRy60XGEcJIRAjA3AJ9TWK21WGw8GzO9JQ70gQGQrHpo1ACeOgN/
-OT7JaJTxbo6BhfuGijbvlaE=
-=6fHy
------END PGP SIGNATURE-----
+MD5 b9ed2e12a503c82d8b2038e2756ea9e3 files/gtk-engines-mist-0.10-autoconf.patch 2344
