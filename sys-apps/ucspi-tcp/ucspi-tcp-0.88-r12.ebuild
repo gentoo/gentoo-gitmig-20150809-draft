@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r12.ebuild,v 1.1 2005/09/09 11:19:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r12.ebuild,v 1.2 2005/09/11 22:44:19 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,6 +37,9 @@ src_unpack() {
 		epatch ${WORKDIR}/ucspi-tcp-0.88-ipv6.${IPV6_PATCH}
 		# Fixes bug 18892
 		epatch ${FILESDIR}/${PV}-bigendian.patch
+	else
+		# This is already present in ipv6 patch
+		epatch ${FILESDIR}/${PV}-errno.patch
 	fi
 	if use ssl; then
 		# this is a merged thingy. Thanks to Stephen Olesen <slepp.netmonks.ca>
