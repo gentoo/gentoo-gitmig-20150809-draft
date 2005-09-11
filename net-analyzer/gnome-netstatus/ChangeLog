@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.48 2005/09/10 02:22:41 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.49 2005/09/11 10:58:50 gmsoft Exp $
+
+  11 Sep 2005; Guy Martin <gmsoft@gentoo.org>
+  gnome-netstatus-2.10.0-r1.ebuild:
+  Stable on hppa.
 
 *gnome-netstatus-2.12.0 (10 Sep 2005)
 
