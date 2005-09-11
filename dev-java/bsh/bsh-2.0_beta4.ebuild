@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.4 2005/07/09 16:00:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4.ebuild,v 1.5 2005/09/11 11:45:27 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -68,8 +68,7 @@ src_install() {
 
 	use doc && java-pkg_dohtml -r ${S}/javadoc/*
 
-	insinto /usr/share/icons/hicolor/scalable/apps
-	doins ${DISTDIR}/beanshell-icon.png beanshell.png
+	newicon ${DISTDIR}/beanshell-icon.png beanshell.png
 
 	make_desktop_entry bsh-console "BeanShell Prompt" beanshell
 }
