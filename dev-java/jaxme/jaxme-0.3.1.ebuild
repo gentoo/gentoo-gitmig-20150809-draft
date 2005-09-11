@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1.ebuild,v 1.2 2005/07/01 09:51:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1.ebuild,v 1.3 2005/09/11 22:09:05 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -18,10 +18,11 @@ IUSE="doc source"
 RDEPEND=">=virtual/jre-1.4
 	dev-db/hsqldb
 	=dev-java/xerces-2*
+	dev-java/junit
+	>=dev-java/log4j-1.2.8
 	dev-java/xmldb"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	dev-java/junit
 	${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
