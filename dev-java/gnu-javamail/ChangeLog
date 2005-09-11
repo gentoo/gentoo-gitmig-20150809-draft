@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.10 2005/01/09 12:13:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.11 2005/09/11 15:41:22 betelgeuse Exp $
+
+  11 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  gnu-javamail-20040331.ebuild:
+  Adjusted ebuild because gnu-classpath-inetlib is now slotted.
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org>
   gnu-javamail-20040331.ebuild:
