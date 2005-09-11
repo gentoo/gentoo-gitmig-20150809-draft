@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.3 2005/09/11 16:30:54 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.4 2005/09/11 18:08:44 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -61,6 +61,19 @@ mysql_get_datadir() {
 		einfo "Using default DATADIR"
 	fi
 	einfo "MySQL DATADIR is ${DATADIR}"
+
+	if [ -z "${PREVIOUS_DATADIR}" ] ; then
+		if [ -a "${DATADIR}" ] ; then
+			ewarn "Previous datadir found, it's YOUR job to change"
+			ewarn "ownership and have care of it"
+			PREVIOUS_DATADIR="yes"
+			export PREVIOUS_DATADIR
+		else
+			PREVIOUS_DATADIR="no"
+			export PREVIOUS_DATADIR
+		fi
+	fi
+
 	export DATADIR
 }
 
