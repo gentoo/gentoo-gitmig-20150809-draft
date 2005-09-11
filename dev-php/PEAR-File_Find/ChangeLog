@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-File_Find
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Find/ChangeLog,v 1.8 2005/09/08 07:38:44 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Find/ChangeLog,v 1.9 2005/09/11 04:49:14 weeve Exp $
+
+  11 Sep 2005; Jason Wever <weeve@gentoo.org>
+  PEAR-File_Find-0.2.0-r1.ebuild:
+  Added ~sparc keyword.
 
 *PEAR-File_Find-0.2.0-r1 (08 Sep 2005)
 
