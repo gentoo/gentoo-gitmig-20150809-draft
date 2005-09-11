@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.72 2005/09/08 13:18:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.73 2005/09/11 02:05:16 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> intltool-0.34.1.ebuild:
+  Mark 0.34.1 stable on alpha
 
   08 Sep 2005; Aron Griffis <agriffis@gentoo.org> intltool-0.34.1.ebuild:
   Mark 0.34.1 stable on ia64
