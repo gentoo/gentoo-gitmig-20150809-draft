@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.8-r1.ebuild,v 1.9 2005/08/11 01:17:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.8-r1.ebuild,v 1.10 2005/09/11 07:25:14 grobian Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	use ipv6 && epatch ${DISTDIR}/${IPV6_P}.diff.gz
 	epatch ${DISTDIR}/ncftp-${PV}_editcmd.patch
+	epatch ${FILESDIR}/${P}-macos.patch
 }
 
 src_install() {
