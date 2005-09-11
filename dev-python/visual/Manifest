@@ -1,4 +1,14 @@
-MD5 623c647ed39314b5935ce22be7b3e24d ChangeLog 413
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4c134cf76fb56f1537a9e92019bde6c0 visual-3.2.1.ebuild 1753
+MD5 abdc4542d3cbb0948c0b82ea3fc5729f ChangeLog 540
 MD5 dc0b1d0f6421b62d34ca91dd8ac2d52d metadata.xml 255
-MD5 bd0aa68241e08ff8c58ec98736e8fdc4 visual-3.2.1.ebuild 1753
 MD5 6d6e6100c2055b0082f7ddbee8f2d1e2 files/digest-visual-3.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJL8Sl5AvwDPiUowRApYzAJ9TSqR5iX3taGaa+FnAKuo6sAuDeACgo+eA
+dO/tP1fmqPH+u4NSN6fJNaM=
+=bKie
+-----END PGP SIGNATURE-----

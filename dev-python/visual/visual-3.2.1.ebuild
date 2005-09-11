@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.7 2005/07/13 23:54:23 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-3.2.1.ebuild,v 1.8 2005/09/11 23:34:26 smithj Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ LICENSE="visual"
 DEPEND=">=dev-lang/python-2.3
 		virtual/opengl
 		=x11-libs/gtk+-1.2*
-		>=x11-libs/gtkglarea-1.2
+		=x11-libs/gtkglarea-1.2*
 		dev-util/pkgconfig
 		>=dev-libs/boost-1.31
 		numeric? ( dev-python/numeric )
