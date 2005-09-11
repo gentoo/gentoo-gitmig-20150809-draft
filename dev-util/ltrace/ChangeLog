@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.23 2005/06/17 21:20:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.24 2005/09/11 02:09:48 agriffis Exp $
+
+  10 Sep 2005; Aron Griffis <agriffis@gentoo.org> ltrace-0.3.36.ebuild:
+  Mark 0.3.36 stable on alpha
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> ltrace-0.3.36.ebuild:
   Stable on ppc.
