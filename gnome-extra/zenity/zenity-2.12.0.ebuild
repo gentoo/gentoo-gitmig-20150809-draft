@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.11.92.ebuild,v 1.1 2005/08/30 05:26:53 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.12.0.ebuild,v 1.1 2005/09/11 23:18:24 steev Exp $
 
 inherit gnome2
 
