@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.11.7.ebuild,v 1.1 2005/08/24 06:56:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.12.0.ebuild,v 1.1 2005/09/11 02:53:26 allanonjl Exp $
 
 inherit gnome2
 
