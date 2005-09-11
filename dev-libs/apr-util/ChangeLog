@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.26 2005/09/10 20:37:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.27 2005/09/11 06:27:54 corsair Exp $
+
+  11 Sep 2005; Markus Rothe <corsair@gentoo.org> apr-util-0.9.6-r2.ebuild:
+  Stable on ppc64
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> apr-util-0.9.6-r2.ebuild:
   Mark 0.9.6-r2 stable on alpha
