@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.9 2005/08/04 00:05:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.10 2005/09/11 04:21:43 nerdboy Exp $
+
+*gdal-1.3.0 (11 Sep 2005)
+
+  11 Sep 2005; Steve Arnold <nerdboy@gentoo.org> gdal-1.2.5-r1.ebuild,
+  gdal-1.2.6-r3.ebuild, +gdal-1.3.0.ebuild:
+  added new version and local use flag for xerces (bugs #102859 and #104937)
+  plus stable bump for sparc and x86.
 
 *gdal-1.2.6-r3 (04 Aug 2005)
 
