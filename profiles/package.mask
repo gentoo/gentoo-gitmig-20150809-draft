@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4431 2005/09/11 15:24:03 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4432 2005/09/11 18:11:48 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Aaron Walker <ka0ttic@gentoo.org> (11 Sep 2005)
+# Testing release
+=app-portage/herdstat-1.1.2_alpha1
 
 # Marcelo Goes <vanquirius@gentoo.org> (10 Sep 2005)
 # Masking for removal
