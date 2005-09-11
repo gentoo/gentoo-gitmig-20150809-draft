@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-mist
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/ChangeLog,v 1.15 2005/09/06 13:33:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/ChangeLog,v 1.16 2005/09/11 18:22:40 killerfox Exp $
+
+  11 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  gtk-engines-mist-0.10-r2.ebuild:
+  Stable on hppa.
 
   06 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-mist-0.10-r2.ebuild:
