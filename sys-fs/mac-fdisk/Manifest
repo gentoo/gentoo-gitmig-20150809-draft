@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d48fdf39596cc3333da4e84f46a912c8 ChangeLog 2678
-MD5 bec943d764f3b651fe374ef5ad134dbb mac-fdisk-0.1-r2.ebuild 1381
-MD5 12821ee13bfd9749e8888cf06fe66013 mac-fdisk-0.1-r3.ebuild 1111
-MD5 18861b1d50b0130cd407f467dd00d351 mac-fdisk-0.1-r4.ebuild 1158
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
-MD5 1e4edeb8702972aefac52a5b367e9af7 files/digest-mac-fdisk-0.1-r2 137
+MD5 bec943d764f3b651fe374ef5ad134dbb mac-fdisk-0.1-r2.ebuild 1381
+MD5 f05e96cc90f3813bc8781843a5a9327b ChangeLog 2785
+MD5 12821ee13bfd9749e8888cf06fe66013 mac-fdisk-0.1-r3.ebuild 1111
+MD5 7da6136097a9326236459cbaf957cfd0 mac-fdisk-0.1-r4.ebuild 1164
 MD5 0d93e85327577ef34c67c6b98380a4ed files/digest-mac-fdisk-0.1-r3 137
-MD5 0d93e85327577ef34c67c6b98380a4ed files/digest-mac-fdisk-0.1-r4 137
-MD5 2879da41dfb904a48517290e372885fa files/largerthan2gb.patch 345
-MD5 0ea575013202e57b17c15883efd4bfea files/mac-fdisk-0.1-r3-ppc64.patch 16623
 MD5 30a3c81f6200c4ce07ef243b12a48ed4 files/mac-fdisk-ppc.patch 3383
-MD5 70dc7bfd1ffda2901ffdf59b6ebacc58 files/mac-fdisk-ppc64-1.patch 14817
+MD5 0d93e85327577ef34c67c6b98380a4ed files/digest-mac-fdisk-0.1-r4 137
+MD5 0ea575013202e57b17c15883efd4bfea files/mac-fdisk-0.1-r3-ppc64.patch 16623
 MD5 d5ac7220533aeb36ef5ba7128dd2e29d files/mac-fdisk-ppc64.patch 3412
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFDEdtc/NoSW7FuNV8RArlMAKCYqIEXVNobf6DwgVPON9cFfOcFgQCfSVqh
-ysD499iBCexajCCaBzpcQSM=
-=otrT
------END PGP SIGNATURE-----
+MD5 2879da41dfb904a48517290e372885fa files/largerthan2gb.patch 345
+MD5 1e4edeb8702972aefac52a5b367e9af7 files/digest-mac-fdisk-0.1-r2 137
+MD5 70dc7bfd1ffda2901ffdf59b6ebacc58 files/mac-fdisk-ppc64-1.patch 14817

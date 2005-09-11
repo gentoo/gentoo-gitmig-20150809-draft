@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mac-fdisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.11 2005/08/28 01:15:44 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.12 2005/09/11 02:10:13 tester Exp $
+
+  11 Sep 2005; Olivier Crête <tester@gentoo.org> mac-fdisk-0.1-r4.ebuild:
+  Marked ~x86 per bug #103144
 
   28 Aug 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   mac-fdisk-0.1-r2.ebuild, mac-fdisk-0.1-r3.ebuild, mac-fdisk-0.1-r4.ebuild,
