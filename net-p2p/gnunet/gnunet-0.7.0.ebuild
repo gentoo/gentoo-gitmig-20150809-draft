@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0.ebuild,v 1.1 2005/09/06 21:05:03 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0.ebuild,v 1.2 2005/09/12 07:52:17 mkay Exp $
 
 inherit eutils libtool
 
@@ -44,8 +44,9 @@ src_compile() {
 		fi
 	fi
 
+	use mysql && myconf="${myconf} --with-mysql=/usr"
+
 	econf \
-		$(use_with mysql) \
 		$(use_with sqlite) \
 		$(use_enable nls) \
 		$(use_enable ncurses) \
