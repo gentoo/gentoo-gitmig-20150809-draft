@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.3 2005/07/07 05:01:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.7.0-r1.ebuild,v 1.4 2005/09/12 17:31:55 mkay Exp $
 
 inherit eutils kde-functions
 
@@ -24,6 +24,7 @@ src_unpack() {
 	if ! use kde; then
 		epatch ${FILESDIR}/${PV}-nokde.patch
 	fi
+	epatch ${FILESDIR}/${P}-errno.patch
 }
 
 src_compile() {
