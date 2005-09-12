@@ -1,6 +1,4 @@
 MD5 cab9c37bb5bd045c074726a05fa4b4c6 ChangeLog 6828
-MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
-MD5 327dd5f0344b5c60f89765e6a5ddfa92 gnome-speech-0.3.7.ebuild 2339
 MD5 82a81a4ff2d1ca3c5e91dce1be1d46e2 gnome-speech-0.3.7-r1.ebuild 1976
+MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 af77b6880a5acc931bde949ff8ac6a50 files/digest-gnome-speech-0.3.7-r1 71
-MD5 af77b6880a5acc931bde949ff8ac6a50 files/digest-gnome-speech-0.3.7 71
