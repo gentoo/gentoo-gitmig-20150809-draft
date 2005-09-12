@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.18 2005/05/30 02:45:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.19 2005/09/12 14:22:46 azarah Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -47,6 +47,9 @@ src_install() {
 	keepdir /etc/devfs.d
 	insinto /etc
 	doins ${FILESDIR}/devfsd.conf
+
+	insinto /lib/rcscripts/addons
+	doins "${FILESDIR}"/devfs-{start,stop}.sh
 }
 
 pkg_postinst() {
