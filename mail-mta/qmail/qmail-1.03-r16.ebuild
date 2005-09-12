@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.38 2005/09/11 22:10:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.39 2005/09/12 21:49:52 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -260,26 +260,34 @@ src_unpack() {
 	# Fixes bug 101532
 	epatch ${FILESDIR}/${PVR}/qmail-remote-auth-log-fix.patch
 
+	# Collision with mutt (bug 105454)
+	mv -f ${S}/mbox.5 ${S}/qmail-mbox.5
+
+	# Fix files
+	epatch ${FILESDIR}/${PVR}/fix-manpages.patch
+
 	# See bug #90631
 	if use logmail; then
 		EPATCH_SINGLE_MSG='Enabling logging of all mails via ~alias/.qmail-log' \
 		epatch ${FILESDIR}/${PVR}/qmail-logmail.patch
 	fi
 
-	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
+	MY_CFLAGS="${CFLAGS}"
 	if use ssl; then
 		einfo "Enabling SSL/TLS functionality"
-		echo -n ' -DTLS ' >>${S}/conf-cc
+		MY_CFLAGS="${MY_CFLAGS} -DTLS"
 
 		# from bug #31426
 		if ! use notlsbeforeauth; then
 			einfo "Enabling STARTTLS before SMTP AUTH"
-			echo -n '-DTLS_BEFORE_AUTH ' >>${S}/conf-cc
+			MY_CFLAGS="${MY_CFLAGS} -DTLS_BEFORE_AUTH"
 		else
 			einfo "Disabling STARTTLS before SMTP AUTH"
 		fi
 
 	fi
+
+	echo -n "$(tc-getCC) ${MY_CFLAGS}" > ${S}/conf-cc
 
 	# fix bug #33818
 	if use noauthcram; then
@@ -301,14 +309,6 @@ src_unpack() {
 
 src_compile() {
 	emake it man || die
-
-	# Collision with ucspi-tcp (bug 105454)
-	# Note for collisions: qmail generates *.0 files from the man pages, but
-	# those aren't used in this ebuild, so we can ignore them.
-	rm -f tcp-environ.5
-
-	# Collision with mutt (bug 105454)
-	mv mbox.5 qmail-mbox.5
 }
 
 src_install() {
