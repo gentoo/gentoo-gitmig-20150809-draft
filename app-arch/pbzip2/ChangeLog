@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.7 2005/08/30 19:39:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.8 2005/09/12 14:21:02 wolf31o2 Exp $
+
+  12 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> -pbzip2-0.9.1.ebuild:
+  Cleaning out older versions.
 
 *pbzip2-0.9.4 (30 Aug 2005)
 
