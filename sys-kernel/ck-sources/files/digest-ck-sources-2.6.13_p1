@@ -1,6 +1,0 @@
-MD5 560f5fadf59f172973e67939868a4cae linux-2.6.13.tar.bz2 38372729
-MD5 ac43582ec7a1280eee78eabb9c416662 genpatches-2.6.13-1.base.tar.bz2 16013
-MD5 3ba7062e23a5c7b7317bd50e0f001f35 patch-2.6.13-ck1-server.bz2 21357
-MD5 ad98bab28acb512bc7cfdd92dbdc7027 patch-2.6.13-ck1.bz2 21376
-MD5 0f8c2699384e84a972c366aa4b93b9d1 sched-staircase12_tweak.patch 1003
-MD5 cea9536392a0bc5bdc164a1c622a9d29 vm-swap-prefetch.patch 9677
