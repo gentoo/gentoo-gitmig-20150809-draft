@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a979c89fca90f44ff3bcb255a6d07e31 gtk-engines-notif2-1.0.ebuild 752
-MD5 87873fe345216079037cfbcb97eae1ad ChangeLog 1593
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 90c03cc3bcda9578c3efe01f55a91df2 gtk-engines-notif2-1.0-r1.ebuild 904
+MD5 5d85960b295db02fa5789a3bba5dabf0 ChangeLog 1699
+MD5 f0ea464a1eaf2c4fe4d42a7dcbc1db52 gtk-engines-notif2-1.0-r1.ebuild 901
+MD5 a979c89fca90f44ff3bcb255a6d07e31 gtk-engines-notif2-1.0.ebuild 752
 MD5 75f60267e32e89d77e6fea38ca784364 files/digest-gtk-engines-notif2-1.0-r1 63
 MD5 75f60267e32e89d77e6fea38ca784364 files/digest-gtk-engines-notif2-1.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHZqIKRy60XGEcJIRAsSGAKCsb0UCOfHDuNXrtwSumrt6xhz2sQCfeHCG
-im8QUgps8bMnJpR6NF6Go5w=
-=zKE2
------END PGP SIGNATURE-----

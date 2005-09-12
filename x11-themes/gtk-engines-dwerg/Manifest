@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee5e504a2db4538b4ffa20912892cd64 gtk-engines-dwerg-0.6.ebuild 775
-MD5 4c2814317cdfc704ad287a26bbcd6ae3 gtk-engines-dwerg-0.8.ebuild 807
-MD5 803c4a063fe3e58a6bdcbc35ed3c8c09 ChangeLog 1524
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 3b74a906728f7e2bce341544377fa50a files/digest-gtk-engines-dwerg-0.6 69
+MD5 6416e8b5e9fcedd7bee0d4f9d258ef7a ChangeLog 1626
+MD5 3b8df3e6d18c787fae4024a45a7073a2 gtk-engines-dwerg-0.8.ebuild 804
+MD5 ee5e504a2db4538b4ffa20912892cd64 gtk-engines-dwerg-0.6.ebuild 775
 MD5 1a16bdea9dd766369b8e44941eca12e4 files/digest-gtk-engines-dwerg-0.8 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHJMeKRy60XGEcJIRAq9xAJ481WElOZp2FJAvFH7hYhcJaCdIfACeNqT4
-/53FHEEqWzq92fE0QOzRWm0=
-=f3Te
------END PGP SIGNATURE-----
+MD5 3b74a906728f7e2bce341544377fa50a files/digest-gtk-engines-dwerg-0.6 69
