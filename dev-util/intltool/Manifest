@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 6c1d6751e088c9c064168fb6cf982b06 intltool-0.33.ebuild 645
 MD5 1c8b1471d210a657ce7265a0187bae4f intltool-0.34.1.ebuild 675
@@ -8,3 +11,10 @@ MD5 795eb1575afa6905cbf7452c64b99776 files/digest-intltool-0.31.2 68
 MD5 a9e19fedcde4312553c60a810b75ef2c files/digest-intltool-0.33 66
 MD5 931fbb30f2cb6bb014a0407ffecb13cb files/digest-intltool-0.34.1 68
 MD5 1928cb7c9113dac8b9c09d32e03d95f3 files/digest-intltool-0.32.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJO9IgIKl8Uu19MoRAihjAJ4y1pBIeiXNw7Ha8wUWMggyM8FBCACfSTDO
+Vy/6oYqEmzM1fpMgjei/tak=
+=PiyJ
+-----END PGP SIGNATURE-----
