@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.143 2005/08/31 14:39:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.144 2005/09/12 09:20:28 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -505,7 +505,7 @@ install_sources() {
 	for doc in ${UNIPATCH_DOCS}; do	[[ -f ${doc} ]] && docs="${docs} ${doc}"; done
 	if [[ -f ${S}/patches.txt ]]; then docs="${docs} ${S}/patches.txt"; fi
 	use doc && ! use arm && ! use s390 && install_manpages
-	dodoc ${docs}
+	use doc && [[ -n ${docs} ]] && dodoc ${docs}
 
 	mv ${WORKDIR}/linux* ${D}/usr/src
 }
@@ -774,6 +774,16 @@ unipatch() {
 		done
 	done
 
+	# This is a quick, and kind of nasty hack to deal with UNIPATCH_DOCS which
+	# sit in KPATCH_DIR's. This is handled properly in the unipatch rewrite,
+	# which is why I'm not taking too much time over this.
+	local tmp
+	for i in ${UNIPATCH_DOCS}; do
+		tmp="${tmp} ${i//*\/}"
+		cp -f ${i} ${T}/
+	done
+	UNIPATCH_DOCS="${tmp}"
+	
 	# clean up  KPATCH_DIR's - fixes bug #53610
 	for x in ${KPATCH_DIR}; do rm -Rf ${x}; done
 
