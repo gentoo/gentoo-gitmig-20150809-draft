@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.8 2005/06/15 19:01:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.9 2005/09/12 03:08:49 halcy0n Exp $
+
+  12 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/pingus-0.6.0-gcc.patch, -files/pingus-0.6.0-gcc3.patch,
+  -files/pingus-0.6.0-gcc34.patch, pingus-0.6.0-r1.ebuild:
+  Combine all the gcc patches together, and add in a small fix for gcc4.
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   pingus-0.6.0-r1.ebuild:

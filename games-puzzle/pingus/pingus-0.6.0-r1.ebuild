@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.13 2005/06/15 19:01:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.14 2005/09/12 03:08:49 halcy0n Exp $
 
 inherit eutils flag-o-matic games
 
@@ -20,8 +20,7 @@ DEPEND=">=media-libs/hermes-1.3.2-r2
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc3.patch #28281
-	epatch "${FILESDIR}"/${P}-gcc34.patch #63773
+	epatch "${FILESDIR}"/${P}-gcc.patch #28281 #63773
 	autoconf || die "failed to update configure file in order to respect CFLAGS/LDFLAGS"
 }
 

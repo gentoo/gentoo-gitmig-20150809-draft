@@ -1,7 +1,22 @@
+Make sure we type the cast properly.
+
+http://bugs.gentoo.org/show_bug.cgi?id=63773
+
 Pingus uses assert() but never includes assert.h, boo !
 
 http://bugs.gentoo.org/show_bug.cgi?id=28281
 
+--- pingus-0.6.0/src/story_screen.cxx
++++ pingus-0.6.0/src/story_screen.cxx
+@@ -142,7 +142,7 @@
+ 
+   if (!page_displayed_completly)
+     {
+-      unsigned int len = static_cast<unsigned int>(20.0f * time_passed);
++      size_t len = static_cast<size_t>(20.0f * time_passed);
+       display_text = current_page.text.substr(0, Math::min(current_page.text.length(), len));
+ 
+       if (current_page.text.length() < len)
 --- pingus-0.6.0/src/blitter.cxx
 +++ pingus-0.6.0/src/blitter.cxx
 @@ -17,6 +17,7 @@
@@ -103,3 +118,15 @@ http://bugs.gentoo.org/show_bug.cgi?id=28281
  #include <vector>
 +#include <iostream>
  
+diff -ur pingus-0.6.0-orig/src/worldmap/sprite_drawable.hxx pingus-0.6.0/src/worldmap/sprite_drawable.hxx
+--- pingus-0.6.0-orig/src/worldmap/sprite_drawable.hxx	2005-09-11 21:46:11.000000000 -0400
++++ pingus-0.6.0/src/worldmap/sprite_drawable.hxx	2005-09-11 21:49:46.000000000 -0400
+@@ -46,7 +46,7 @@
+ 
+ private:
+   SpriteDrawable (const SpriteDrawable&);
+-  SpriteDrawable operator= (const SpriteDrawable&);
++  SpriteDrawable& operator= (const SpriteDrawable&);
+ };
+ 
+ } // namespace WorldMapNS
