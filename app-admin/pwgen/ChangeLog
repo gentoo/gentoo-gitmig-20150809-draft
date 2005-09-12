@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.29 2005/09/12 14:33:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.30 2005/09/12 14:41:32 wolf31o2 Exp $
+
+  12 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> pwgen-2.04.ebuild:
+  Marked stable on x86 and closing bug #105690.
 
   12 Sep 2005; <dang@gentoo.org> pwgen-2.04.ebuild:
   Marked stable on amd64
