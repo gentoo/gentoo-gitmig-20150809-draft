@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.1_alpha2.ebuild,v 1.3 2005/08/24 21:32:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.1_alpha2.ebuild,v 1.4 2005/09/12 13:38:10 swegener Exp $
 
 inherit eutils
 
@@ -16,13 +16,8 @@ KEYWORDS="~x86 ~amd64"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack "${A}"
-}
-
 src_install() {
-	cd ${S}
-	make install DESTDIR="${D}"
+	make install DESTDIR="${D}" || die "make install failed"
 	dodoc README TODO
 }
 
