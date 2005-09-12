@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.173 2005/09/07 19:48:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.174 2005/09/12 11:45:48 pauldv Exp $
+
+  12 Sep 2005; Paul de Vrieze <pauldv@gentoo.org> subversion-1.2.3.ebuild,
+  subversion-1.2.3-r1:
+  Restrict the neon dependency
 
   07 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   subversion-1.2.3.ebuild:
