@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.20 2005/09/06 22:08:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.21 2005/09/12 18:45:59 mkay Exp $
+
+  12 Sep 2005; <mkay@gentoo.org> lopster-1.2.2.ebuild,
+  lopster-1.2.2-r1.ebuild  lopster-1.2.2-r2.ebuild:
+  Removing redundant --with-zlib configure flag (bug #105684)
 
 *lopster-1.2.2-r2 (07 Sep 2005)
 
