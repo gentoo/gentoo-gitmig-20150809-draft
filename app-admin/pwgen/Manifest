@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 e1388df1ddc7e88c16fb94cf858e81ce pwgen-2.03-r1.ebuild 859
-MD5 c70517230912316c4de593f5510d8b5e pwgen-2.04.ebuild 816
-MD5 015112419e1d350ef2431b43e5fc38a0 ChangeLog 3463
+MD5 1ce52f1da12f9fece26af3ea733aa1db pwgen-2.04.ebuild 814
+MD5 c3401043822cfb2d62dcdb43ab96c63e ChangeLog 3540
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 f06c2b960c060913430b8afc9ba69260 files/digest-pwgen-2.04 61
 MD5 0d13dbfb5224aed1f2ddc3922a04d8e5 files/pwgen.rc 497
@@ -12,7 +12,7 @@ MD5 617fae2e424b533bb7978c5958b43bbd files/pwgen-2.03-addl_pw_chars.patch 430
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJZDtViELBEf1JB0RAg9xAJ9xKid+RP18FieR5rQn7N7p1Y+rzgCfS/hH
-SnU3GHbZSwCAnXggADceeFk=
-=e+AQ
+iD8DBQFDJZJlomPajV0RnrERAvoCAJ0Xknt4jixJA6X4Rdo1dmO7CjMd4ACeLNbc
+SlclyzSfOOeVKSyAX0azxG8=
+=n5wp
 -----END PGP SIGNATURE-----

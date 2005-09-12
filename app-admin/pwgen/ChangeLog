@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.28 2005/09/12 14:29:29 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.29 2005/09/12 14:33:53 dang Exp $
+
+  12 Sep 2005; <dang@gentoo.org> pwgen-2.04.ebuild:
+  Marked stable on amd64
 
   12 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> pwgen-2.04.ebuild:
   stable on alpha wrt bug #105690
