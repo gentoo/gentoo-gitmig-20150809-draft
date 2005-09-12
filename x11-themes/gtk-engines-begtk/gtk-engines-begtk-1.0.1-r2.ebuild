@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/gtk-engines-begtk-1.0.1-r2.ebuild,v 1.5 2005/09/11 18:19:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/gtk-engines-begtk-1.0.1-r2.ebuild,v 1.6 2005/09/12 23:06:58 hansmi Exp $
 
 DESCRIPTION="GTK+1 BeGTK Theme Engine"
 SRC_URI="mirror://debian/pool/main/b/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://themes.freshmeat.net/projects/gtkbe/"
 
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc sparc x86"
 IUSE="static"
 SLOT="1"
 LICENSE="GPL-2"
