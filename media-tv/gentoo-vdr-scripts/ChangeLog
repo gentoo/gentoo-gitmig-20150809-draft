@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.7 2005/09/12 12:00:30 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.8 2005/09/12 12:25:08 zzam Exp $
+
+  12 Sep 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +files/gentoo-vdr-scripts-0.1_alpha4-video-parameter.diff,
+  gentoo-vdr-scripts-0.1_alpha4.ebuild:
+  Added bugfix to avoid strange message at startup.
 
 *gentoo-vdr-scripts-0.1_alpha4 (12 Sep 2005)
 

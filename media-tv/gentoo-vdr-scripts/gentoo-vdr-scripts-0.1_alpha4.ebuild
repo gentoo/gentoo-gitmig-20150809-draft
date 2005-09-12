@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.1_alpha4.ebuild,v 1.1 2005/09/12 12:00:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.1_alpha4.ebuild,v 1.2 2005/09/12 12:25:08 zzam Exp $
 
 inherit eutils
 
@@ -18,6 +18,9 @@ S=${WORKDIR}/${PN}-${PV}
 
 src_unpack() {
 	unpack "${A}"
+
+	cd ${S}
+	epatch "${FILESDIR}/${P}-video-parameter.diff"
 }
 
 src_install() {

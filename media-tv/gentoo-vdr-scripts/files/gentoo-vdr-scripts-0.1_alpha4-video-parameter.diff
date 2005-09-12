@@ -1,0 +1,35 @@
+Index: ChangeLog
+===================================================================
+--- ChangeLog	(Revision 18)
++++ ChangeLog	(Arbeitskopie)
+@@ -1,5 +1,8 @@
+ # ChangeLog for gentoo-vdr-scripts
+ 
++  12 Sep 2005; Matthias Schwarzott <zzam@gentoo.org> ChangeLog:
++  Bugfixed parameter handling.
++
+ *gentoo-vdr-scripts-0.1_alpha4 (12 Sep 2005)
+ 
+   11 Sep 2005; Matthias Schwarzott <zzam@gentoo.org> ChangeLog:
+Index: usr/lib/vdr/rcscript/pre-start-30-parameter.sh
+===================================================================
+--- usr/lib/vdr/rcscript/pre-start-30-parameter.sh	(Revision 18)
++++ usr/lib/vdr/rcscript/pre-start-30-parameter.sh	(Arbeitskopie)
+@@ -6,7 +6,7 @@
+ 	[[ -n "${DEVICE}" ]] && for i in ${DEVICE}; do add_param "--device=${i}"; done
+ 	[[ -n "${EPGFILE}" ]] && add_param "--epgfile=${EPGFILE}"
+ 	[[ -n "${LOG}" ]] && add_param "--log=${LOG}"
+-	[[ -n "${VIDEO}" ]] && VIDEO="/var/vdr/video"
++	[[ -z "${VIDEO}" ]] && VIDEO="/var/vdr/video"
+ 	if [[ ! -d "${VIDEO}" ]]; then
+ 		mkdir -p "${VIDEO}"
+ 		chown vdr:vdr "${VIDEO}"
+@@ -31,7 +31,7 @@
+ 		esac
+ 	fi
+ 
+-	if [[ -n "${CAP_VFAT_RUNTIME_PARAM}" ]] && [[ -n "${VFAT_FILENAMES}" ]]; then
++	if [[ -n "${CAP_VFAT_RUNTIME_PARAM}" ]] && [[ "${VFAT_FILENAMES}" == "yes" ]]; then
+ 		add_param "--vfat"
+ 	fi
+ }
