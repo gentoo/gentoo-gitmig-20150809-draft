@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.32 2005/07/24 14:12:49 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.33 2005/09/12 09:30:21 r3pek Exp $
+
+*uclinux-sources-2.6.13_p0 (12 Sep 2005)
+
+  12 Sep 2005; Carlos Silva <r3pek@gentoo.org>
+  -uclinux-sources-2.4.29_p0.ebuild, -uclinux-sources-2.6.11_p0.ebuild,
+  -uclinux-sources-2.6.12_p0.ebuild, +uclinux-sources-2.6.13_p0.ebuild:
+  Removing old stuff. Added version 2.6.13
 
 *uclinux-sources-2.6.12_p0 (24 Jul 2005)
 *uclinux-sources-2.4.31_p0 (24 Jul 2005)
