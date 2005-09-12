@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.3 2005/09/08 13:50:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.4 2005/09/12 15:43:41 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	mirror://gentoo/${P}-svn-fixes.patch.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc ~x86"
 IUSE="X"
 
 DEPEND=">=sys-libs/libraw1394-0.9.0
