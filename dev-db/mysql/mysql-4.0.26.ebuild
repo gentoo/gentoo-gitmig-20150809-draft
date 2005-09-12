@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.4 2005/09/11 18:08:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.5 2005/09/12 14:58:15 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -51,10 +51,13 @@ mysql_upgrade_warning() {
 mysql_get_datadir() {
 	DATADIR=""
 	if [ -f '/etc/mysql/my.cnf' ] ; then
-		#DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
 		#DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
 		#DATADIR=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
 		DATADIR=`my_print_defaults mysqld 2>/dev/null | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
+		if [ -z "${DATADIR}" ]; then
+			DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
+			einfo "Using default DATADIR"
+		fi
 	fi
 	if [ -z "${DATADIR}" ]; then
 		DATADIR="/var/lib/mysql/"

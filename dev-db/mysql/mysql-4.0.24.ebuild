@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24.ebuild,v 1.16 2005/08/29 12:55:19 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24.ebuild,v 1.17 2005/09/12 14:58:15 vivo Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -16,7 +16,8 @@ S=${WORKDIR}/${NEWP}
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
-SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
+SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz
+	mirror://gentoo/mysql-extras-20050908.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -77,20 +78,17 @@ src_unpack() {
 	fi
 	unpack ${A} || die
 
+	local MY_PATCH_SOURCE="${WORKDIR}/mysql-extras"
 	#zap startup script messages
-	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0.23-install-db-sh.diff || die
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0.23-install-db-sh.diff" || die
 	#zap binary distribution stuff
-	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0.18-mysqld-safe-sh.diff || die
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0.18-mysqld-safe-sh.diff" || die
 	#required for qmail-mysql
-	EPATCH_OPTS="-p0 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0-nisam.h.diff || die
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0-nisam.h.diff" || die
 	#for correct hardcoded sysconf directory
-	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0-my-print-defaults.diff || die
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0-my-print-defaults.diff" || die
 	# NPTL support
-	EPATCH_OPTS="-p1 -d ${S}" \
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0.18-gentoo-nptl.diff" || die
 	epatch ${FILESDIR}/${PN}-4.0.18-gentoo-nptl.diff || die
 	# Merged upstream as of 4.0.24
 	# bad tmpfiles in mysqlaccess, see bug 77805
@@ -103,12 +101,11 @@ src_unpack() {
 	# attempt to get libmysqlclient_r linked against ssl if USE="ssl" enabled
 	# i would really prefer to fix this at the Makefile.am level, but can't
 	# get the software to autoreconf as distributed - too many missing files
-	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0.21-thrssl.patch || die
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0.21-thrssl.patch" || die
+
 
 	if use tcpd; then
-		EPATCH_OPTS="-p1 -d ${S}" \
-		epatch ${FILESDIR}/${PN}-4.0.14-r1-tcpd-vars-fix.diff || die
+		epatch "${MY_PATCH_SOURCE}/${PN}-4.0.14-r1-tcpd-vars-fix.diff" || die
 	fi
 
 	for d in ${S} ${S}/innobase; do
