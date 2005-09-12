@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/visitors
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.5 2005/09/08 01:18:47 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.6 2005/09/12 23:02:45 hansmi Exp $
+
+  12 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> visitors-0.5.ebuild:
+  Stable on ppc.
 
   08 Sep 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml,
   visitors-0.5.ebuild:
