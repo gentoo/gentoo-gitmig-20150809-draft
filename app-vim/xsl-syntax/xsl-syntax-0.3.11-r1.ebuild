@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/xsl-syntax-0.3.11-r1.ebuild,v 1.6 2005/09/10 07:03:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl-syntax/xsl-syntax-0.3.11-r1.ebuild,v 1.7 2005/09/12 22:38:49 hansmi Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Syntax for XSLT (with HTML and others)"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=257"
 LICENSE="vim"
-KEYWORDS="alpha amd64 ia64 mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 VIM_PLUGIN_HELPURI="http://www.vim.org/scripts/script.php?script_id=257"
 
