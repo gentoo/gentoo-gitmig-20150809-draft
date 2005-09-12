@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/SVN-Mirror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.16 2005/09/01 03:49:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.17 2005/09/12 23:30:15 trapni Exp $
+
+*SVN-Mirror-0.66 (12 Sep 2005)
+
+  12 Sep 2005; Christian Parpart <trapni@gentoo.org> SVN-Mirror-0.66.ebuild:
+  version bump
+
+  12 Sep 2005; Christian Parpart <trapni@gentoo.org> SVN-Mirror-0.65.ebuild:
+  added to ~amd64
 
   01 Sep 2005; Jason Wever <weeve@gentoo.org> SVN-Mirror-0.65.ebuild:
   Added ~sparc keyword back into ebuild as it was dropped against keyword policy.
