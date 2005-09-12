@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4433 2005/09/12 09:37:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4434 2005/09/12 17:36:41 kloeri Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Bryan Østergaard <kloeri@gentoo.org> (12 Sep 2005)
+# Masked for security reasons, bug 103524
+dev-python/py2play
+games-action/slune
 
 # Aaron Walker <ka0ttic@gentoo.org> (11 Sep 2005)
 # Testing release
