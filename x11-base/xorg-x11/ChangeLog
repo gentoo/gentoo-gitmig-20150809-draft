@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.450 2005/09/12 18:40:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.451 2005/09/12 18:48:17 spyderous Exp $
 
   12 Sep 2005; Seemant Kulleen <seemant@gentoo.org>
   -xorg-x11-6.8.2-r1.ebuild, -xorg-x11-6.8.2-r2.ebuild:
@@ -10,7 +10,7 @@
 
   12 Sep 2005; Seemant Kulleen <seemant@gentoo.org>
   +xorg-x11-6.8.2-r3.ebuild:
-  Fix for bug #10568 -- buffer overflow in pixmap memory allocation. Also,
+  Fix for bug #105688 -- buffer overflow in pixmap memory allocation. Also,
   fixed xdm initscript (bug #104657).
 
   10 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
