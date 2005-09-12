@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.14 2005/07/10 21:20:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.45.3.ebuild,v 1.15 2005/09/12 08:46:20 ticho Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/mm${PV%.*.*}/src
 DESCRIPTION="Metamail (with Debian patches) - Generic MIME package"
 HOMEPAGE="ftp://thumper.bellcore.com/pub/nsb/"
 SRC_URI="ftp://thumper.bellcore.com/pub/nsb/mm${PV%.*.*}.tar.Z
-	http://ftp.debian.org/debian/pool/main/m/metamail/metamail_${MY_PV}.diff.gz"
+	mirror://debian/pool/main/m/metamail/metamail_${MY_PV}.diff.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-4.0.11.ebuild,v 1.1 2005/09/06 00:16:27 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-4.0.11.ebuild,v 1.2 2005/09/12 08:43:07 ticho Exp $
 
 inherit distutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Powerful IMAP/Maildir synchronization and reader support"
-SRC_URI="http://ftp.debian.org/debian/pool/main/o/offlineimap/${P/-/_}.tar.gz"
+SRC_URI="mirror://debian/pool/main/o/offlineimap/${P/-/_}.tar.gz"
 HOMEPAGE="http://gopher.quux.org:70/devel/offlineimap"
 LICENSE="GPL-2"
 IUSE=""
