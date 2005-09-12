@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qtella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.24 2005/07/07 05:01:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.25 2005/09/12 18:42:05 mkay Exp $
+
+  12 Sep 2005; <mkay@gentoo.org> qtella-0.7.0.ebuild, 
+  qtella-0.7.0-r1.ebuild::
+  Fix compilation fails coused by lack of #include. (bug #72666)
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> qtella-0.6.4.ebuild,
   qtella-0.6.5.ebuild, qtella-0.7.0.ebuild, qtella-0.7.0-r1.ebuild:
