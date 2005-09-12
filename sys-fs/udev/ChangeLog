@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.137 2005/09/08 17:39:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.138 2005/09/12 14:34:02 azarah Exp $
+
+*udev-068-r1 (12 Sep 2005)
+
+  12 Sep 2005; Martin Schlemmer <azarah@gentoo.org> +files/udev-start.sh,
+  +files/udev-stop.sh, udev-068.ebuild, +udev-068-r1.ebuild:
+  Add rcscript addons.
 
   08 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> udev-068.ebuild:
   Stable on mips.
