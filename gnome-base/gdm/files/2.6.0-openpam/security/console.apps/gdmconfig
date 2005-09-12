@@ -1,5 +1,0 @@
-USER=root
-PROGRAM=/usr/bin/gdmconfig
-SESSION=false
-FALLBACK=true
-
