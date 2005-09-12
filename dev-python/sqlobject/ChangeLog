@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.5 2005/08/01 18:31:03 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.6 2005/09/12 01:38:57 metalgod Exp $
+
+  12 Sep 2005; Luis Medinas <metalgod@gentoo.org> sqlobject-0.6.1-r1.ebuild:
+  Added ~amd64 keyword. Closes bug #103201
 
   01 Aug 2005; Rob Cakebread <pythonhead@gentoo.org> sqlobject-0.6.ebuild,
   sqlobject-0.6.1.ebuild, sqlobject-0.6.1-r1.ebuild:
