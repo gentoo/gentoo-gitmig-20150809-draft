@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.16 2005/09/12 21:14:49 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.17 2005/09/12 21:18:05 stkn Exp $
+
+  12 Sep 2005; Stefan Knoblich <stkn@gentoo.org> -ser-0.8.9.ebuild,
+  -ser-0.8.10.ebuild, -ser-0.8.11.ebuild, -ser-0.8.14.ebuild:
+  Removed old versions.
 
   12 Sep 2005; Stefan Knoblich <stkn@gentoo.org> ser-0.9.0.ebuild:
   Splitted DEPEND into RDEPEND / DEPEND and stable on x86.
