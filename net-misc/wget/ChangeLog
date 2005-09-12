@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.72 2005/07/28 14:44:01 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.73 2005/09/12 21:32:01 seemant Exp $
+
+  12 Sep 2005; Seemant Kulleen <seemant@gentoo.org> +files/wgetrc-ipv6,
+  -wget-1.9.1-r3.ebuild, wget-1.10.ebuild:
+  add a note about preferring ipv6 in the wgetrc file, closing bug #102209
 
   28 Jul 2005; Kito <kito@gentoo.org> wget-1.9.1-r5.ebuild:
   stable on ppc-macos.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.10.ebuild,v 1.4 2005/07/28 14:21:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.10.ebuild,v 1.5 2005/09/12 21:32:01 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -51,6 +51,13 @@ src_install() {
 	fi
 
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog MACHINES MAILING-LIST NEWS README TODO
+	dodoc AUTHORS ChangeLog MAILING-LIST NEWS README TODO
 	dodoc doc/sample.wgetrc
+
+	if use ipv6 ; then
+		ebegin "Adding a note about ipv6 in the config file"
+		cat ${FILESDIR}/wgetrc-ipv6 >> ${D}/etc/wget/wgetrc
+		eend $?
+	fi
+
 }
