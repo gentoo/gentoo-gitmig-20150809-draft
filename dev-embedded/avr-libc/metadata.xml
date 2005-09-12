@@ -9,6 +9,11 @@
 		<name>Daniel Black</name>
 	</maintainer>
 
+	<maintainer>
+		<email>brix@gentoo.org</email>
+		<name>Henrik Brix Andersen</name>
+	</maintainer>
+
 	<longdescription>
 		This package is part of the avr- binutils, -gcc, -lib toolchain for the Atmel microcontrollers.
 		These ebuilds have been created and submitted by Scott L. Price (dflytech.com).
