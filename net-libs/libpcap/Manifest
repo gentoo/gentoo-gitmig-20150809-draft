@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8bbbb1f4b1a15238b9b152c2c1071770 ChangeLog 5913
 MD5 2f0cfe611a39b442ed7e9f3427f3c2c8 libpcap-0.8.3-r1.ebuild 1477
-MD5 ffef433534867f1c013c27f7379d6814 libpcap-0.9.3.ebuild 1524
-MD5 d94c7d1b50e991a8169f6d5fbcb6c6c9 ChangeLog 5790
 MD5 50057505c6cef15415ae8f8ca7378d82 metadata.xml 261
+MD5 6133ca20bd2e4dd9147c4bdb4183ecf0 libpcap-0.9.3.ebuild 1524
 MD5 aa690ff148a4b4bbb5a59276fbb583a8 files/digest-libpcap-0.8.3-r1 65
-MD5 daf575fe650740e0e4013da7b86f2b50 files/libpcap-0.9.3-whitespace.diff 679
-MD5 be632c8eb1c0f14e48313ceb1bc3917d files/digest-libpcap-0.9.3 65
 MD5 29710cca211a266690d649eff1ffe287 files/libpcap-0.8.1-fPIC.patch 298
+MD5 be632c8eb1c0f14e48313ceb1bc3917d files/digest-libpcap-0.9.3 65
+MD5 daf575fe650740e0e4013da7b86f2b50 files/libpcap-0.9.3-whitespace.diff 679
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJgRTmdTrptrqvGERApKdAKCZ3Zc3svaerboQIKP0bds8PoaVNgCfWAod
+p5kLTh0QX8veFP+YqDZ3ZY4=
+=seQZ
+-----END PGP SIGNATURE-----
