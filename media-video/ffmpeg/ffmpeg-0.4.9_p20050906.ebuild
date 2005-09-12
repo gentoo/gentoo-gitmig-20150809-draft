@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050906.ebuild,v 1.4 2005/09/12 10:27:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050906.ebuild,v 1.5 2005/09/12 13:07:31 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # ~alpha need to test aac useflag
 # ~ia64 ~arm ~mips ~hppa
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss test theora threads truetype v4l xvid dts network zlib sdl"
 
 DEPEND="imlib? ( media-libs/imlib2 )
@@ -49,7 +49,7 @@ src_unpack() {
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
 
 	# Fix building with gcc4
-	# epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-osx.patch
 
 	#ffmpeg doesn'g use libtool, so the condition for PIC code
 	#is __PIC__, not PIC.
