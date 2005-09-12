@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.42 2005/09/09 07:15:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.43 2005/09/12 22:40:27 spyderous Exp $
+
+  12 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1-r8.ebuild:
+  Add some deps so we get a server that actually runs after emerging it. In
+  specific: media-fonts/font-misc-misc media-fonts/font-cursor-misc
+  x11-misc/xbitmaps x11-misc/xkbdata x11-apps/iceauth x11-apps/rgb
+  x11-apps/xauth x11-apps/xinit.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.

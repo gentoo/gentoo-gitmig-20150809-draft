@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r8.ebuild,v 1.1 2005/09/08 04:10:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r8.ebuild,v 1.2 2005/09/12 22:40:27 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -39,6 +39,14 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXi
 	media-libs/freetype
 	>=media-libs/mesa-6
+	media-fonts/font-misc-misc
+	media-fonts/font-cursor-misc
+	x11-misc/xbitmaps
+	x11-misc/xkbdata
+	x11-apps/iceauth
+	x11-apps/rgb
+	x11-apps/xauth
+	x11-apps/xinit
 	app-admin/eselect-opengl"
 DEPEND="${RDEPEND}
 	x11-proto/randrproto
