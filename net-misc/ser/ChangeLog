@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.17 2005/09/12 21:18:05 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.18 2005/09/12 21:30:33 stkn Exp $
+
+*ser-0.9.4 (12 Sep 2005)
+
+  12 Sep 2005; Stefan Knoblich <stkn@gentoo.org> +ser-0.9.4.ebuild:
+  Version bump.
 
   12 Sep 2005; Stefan Knoblich <stkn@gentoo.org> -ser-0.8.9.ebuild,
   -ser-0.8.10.ebuild, -ser-0.8.11.ebuild, -ser-0.8.14.ebuild:
