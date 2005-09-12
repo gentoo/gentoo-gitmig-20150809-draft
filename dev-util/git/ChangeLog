@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.19 2005/09/08 21:58:31 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.20 2005/09/12 10:49:54 r3pek Exp $
+
+  12 Sep 2005; Carlos Silva <r3pek@gentoo.org> git-0.7.ebuild,
+  git-0.99.6.ebuild:
+  Fixed homepage. Closes bug #105648
 
 *git-0.99.6 (08 Sep 2005)
 
