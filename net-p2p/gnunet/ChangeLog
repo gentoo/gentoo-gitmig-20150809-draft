@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.35 2005/09/06 21:05:03 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.36 2005/09/12 18:38:58 mkay Exp $
 
 *gnunet-0.7.0 (06 Sep 2005)
+
+  12 Sep 2005; <mkay@gentoo.org> gnunet-0.7.0.ebuild:
+  Fixed compilation problem with mysql support (bug #105545)
 
   06 Sep 2005; Karol Wojtaszek <sekretarz@gentoo.org> +gnunet-0.7.0.ebuild:
   Version bump, thanks Glenn L. McGrath <bug1@iinet.net.au> in bug #104103
