@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.32 2005/09/12 16:57:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.33 2005/09/12 17:23:15 gustavoz Exp $
+
+  12 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> pwgen-2.04.ebuild:
+  Stable on sparc wrt #105690
 
   12 Sep 2005; Fabian Groffen <grobian@gentoo.org> pwgen-2.04.ebuild:
   Marked stable on ppc-macos (bug #105690)
