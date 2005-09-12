@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.14 2005/09/03 15:36:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.15 2005/09/12 14:03:25 agriffis Exp $
+
+  12 Sep 2005; Aron Griffis <agriffis@gentoo.org> kpresenter-1.4.1.ebuild:
+  Mark 1.4.1 stable on alpha
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   kpresenter-1.4.1.ebuild:
