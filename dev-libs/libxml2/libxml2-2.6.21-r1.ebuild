@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.21.ebuild,v 1.1 2005/09/06 19:59:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.21-r1.ebuild,v 1.1 2005/09/12 05:45:25 leonardop Exp $
 
 inherit libtool gnome.org flag-o-matic eutils
 
@@ -33,8 +33,9 @@ src_compile() {
 	# The meaning of the 'debug' USE flag does not apply to the --with-debug
 	# switch (enabling the libxml2 debug module). See bug #100898.
 
+	# --with-mem-debug causes unusual segmentation faults (bug #105120).
+
 	local myconf="--with-zlib \
-		$(use_with debug mem-debug)  \
 		$(use_with debug run-debug)  \
 		$(use_with python)           \
 		$(use_with readline)         \
