@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.91 2005/09/12 15:49:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.92 2005/09/12 20:03:09 stkn Exp $
+
+*pwlib-1.8.7 (12 Sep 2005)
+
+  12 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/pwlib-1.8.7-instplugins.diff, +pwlib-1.8.7.ebuild:
+  Version bump, finally removed /usr/share/pwlib/{lib,lib32,lib64,include}
+  symlinks and other little cleanups.
 
   12 Sep 2005; Aron Griffis <agriffis@gentoo.org> pwlib-1.8.4.ebuild:
   Mark 1.8.4 stable on alpha
