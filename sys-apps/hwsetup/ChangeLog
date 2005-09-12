@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.24 2005/08/24 14:20:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.25 2005/09/12 14:28:02 wolf31o2 Exp $
+
+  12 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r3.ebuild:
+  Explicitly added items to RDEPEND, rather than having RDEPEND=DEPEND.
 
   24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> hwsetup-1.0-r3.ebuild:
   Added sys-libs/libkudzu-knoppix to list of possible kudzu* dependencies.

@@ -1,5 +1,5 @@
-MD5 394932a32bd65a170dffb42f877ddafd hwsetup-1.0-r3.ebuild 940
-MD5 dfb35ddf3aca360d6a66ffc2ba138575 ChangeLog 3357
+MD5 ec5847892757d50ea68b083d7c72630a hwsetup-1.0-r3.ebuild 1023
+MD5 c87bd931fd7f569e20a88f3235851097 ChangeLog 3507
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 70141575b96009e82605b4f86fbe8758 files/digest-hwsetup-1.0-r3 64
 MD5 7f857bf4e30d36be2ac0f59e316dfa66 files/hwsetup-1.0-fastprobe.patch 3715
