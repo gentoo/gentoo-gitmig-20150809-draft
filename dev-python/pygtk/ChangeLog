@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.88 2005/08/26 00:38:10 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.89 2005/09/12 00:59:29 allanonjl Exp $
+
+*pygtk-2.8.0 (12 Sep 2005)
+
+  12 Sep 2005; John N. Laliberte <allanonjl@gentoo.org> -pygtk-2.7.4.ebuild,
+  +pygtk-2.8.0.ebuild:
+  2.12 release vbump, fix where gtk-docs get installed #105511, thanks to Ed
+  Catmur.
 
 *pygtk-2.7.4 (26 Aug 2005)
 

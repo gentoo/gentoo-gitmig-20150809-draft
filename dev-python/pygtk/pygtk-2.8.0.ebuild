@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.7.4.ebuild,v 1.1 2005/08/26 00:38:10 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.0.ebuild,v 1.1 2005/09/12 00:59:29 allanonjl Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -59,8 +59,9 @@ src_install() {
 		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth-2.0
 
 	if use doc; then
-		cd ${S}/../pygtk2reference
-		dohtml -r *
+		cd ${S}/../
+		dodir /usr/share/gtk-doc/html
+		cp -pPR pygtk2reference	${D}/usr/share/gtk-doc/html/
 	fi
 }
 
