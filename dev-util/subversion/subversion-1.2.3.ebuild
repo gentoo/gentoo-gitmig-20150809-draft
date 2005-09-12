@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3.ebuild,v 1.6 2005/09/10 20:47:26 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3.ebuild,v 1.7 2005/09/12 11:41:21 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic perl-module
 
@@ -20,7 +20,7 @@ RDEPEND="apache2? ( >=net-www/apache-2.0.48 !>=net-www/apache-2.0.54-r30 )
 	!dev-libs/apr
 	python? ( =dev-lang/swig-1.3.21 >=dev-lang/python-2.0 )
 	perl? ( =dev-lang/swig-1.3.21 >=dev-lang/perl-5.8 )
-	!nowebdav? ( >=net-misc/neon-0.24.7 )
+	!nowebdav? ( ~net-misc/neon-0.24.7 )
 	berkdb? ( =sys-libs/db-4* )
 	zlib? ( sys-libs/zlib )
 	java? ( virtual/jdk )
