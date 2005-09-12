@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.20 2005/09/11 14:10:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.21 2005/09/12 04:09:56 weeve Exp $
+
+  12 Sep 2005; Jason Wever <weeve@gentoo.org> wml-2.0.9-r1.ebuild:
+  Stable on SPARC wrt security bug #105138.
 
   11 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> wml-2.0.9-r1.ebuild:
   Stable on ppc.
