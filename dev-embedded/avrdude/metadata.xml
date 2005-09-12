@@ -8,4 +8,9 @@
 		<email>dragonheart@gentoo.org</email>
 		<name>Daniel Black</name>
 	</maintainer>
+
+	<maintainer>
+		<email>brix@gentoo.org</email>
+		<name>Henrik Brix Andersen</name>
+	</maintainer>
 </pkgmetadata>
