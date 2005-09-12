@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.12 2005/09/05 22:24:20 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.13 2005/09/12 21:44:16 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -54,11 +54,10 @@ DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.18
 	x11-misc/util-macros"
 
-RDEPEND="${RDEPEND}"
-# Shouldn't be necessary once we're in a standard location
+RDEPEND="${RDEPEND}
+	!<x11-base/xorg-x11-7"
+# Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
-# FIXME: Uncomment once it's in portage
-#	!x11-base/xorg-x11"
 
 x-modular_unpack_source() {
 	unpack ${A}
