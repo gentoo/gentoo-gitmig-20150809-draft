@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.6 2005/09/12 15:49:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.7 2005/09/12 16:13:08 seemant Exp $
+
+  12 Sep 2005; Seemant Kulleen <seemant@gentoo.org> +files/nox11-2.patch,
+  -libdc1394-0.9.3.ebuild, libdc1394-1.0.0.ebuild:
+  fix the nox11 patch to work with 2.0.0 series.  Closes bug #105675 by tigger
 
   12 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   libdc1394-1.0.0.ebuild, libdc1394-2.0.0_pre4.ebuild:
