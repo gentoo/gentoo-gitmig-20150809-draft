@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.409 2005/09/11 14:05:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.410 2005/09/12 03:39:37 weeve Exp $
+
+  12 Sep 2005; Jason Wever <weeve@gentoo.org> apache-1.3.33-r6.ebuild,
+  apache-2.0.54-r15.ebuild:
+  Marked stable on SPARC wrt security bug #104807.
 
   11 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   apache-1.3.33-r6.ebuild, apache-2.0.54-r15.ebuild:

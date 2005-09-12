@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.82 2005/09/11 14:02:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.83 2005/09/12 03:40:36 weeve Exp $
+
+  12 Sep 2005; Jason Wever <weeve@gentoo.org> mod_ssl-2.8.24.ebuild:
+  Marked stable on SPARC wrt security bug #104807.
 
   11 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> mod_ssl-2.8.24.ebuild:
   Stable on hppa and ppc.
