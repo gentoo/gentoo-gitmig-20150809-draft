@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r6.ebuild,v 1.2 2005/08/23 19:57:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r6.ebuild,v 1.3 2005/09/12 23:49:38 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="X gtk opengl debug"
+IUSE="X gtk opengl debug mmx"
 
 DEPEND=">=media-libs/libsdl-1.2.0
 	opengl? ( virtual/opengl virtual/glu )
@@ -37,19 +37,15 @@ src_unpack() {
 }
 
 src_compile() {
-	export CC="$(tc-getCC)"
-	export CXX="$(tc-getCXX)"
-	export RANLIB="$(tc-getRANLIB)"
-	export AR="$(tc-getAR)"
+	tc-export CC CXX RANLIB AR
 
-	# --enable-mmx causes test apps to crash on startup #470
-	#	$(use_enable mmx) \
 	econf \
 		$(use_enable debug) \
 		$(use_enable debug assertions) \
 		$(use_enable gtk gtk-player) \
 		$(use_with X x) \
 		$(use_enable opengl opengl-player) \
+		$(use_enable mmx) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
