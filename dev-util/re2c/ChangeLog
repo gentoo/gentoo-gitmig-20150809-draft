@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.12 2005/09/09 12:50:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.13 2005/09/12 00:49:14 lisa Exp $
+
+*re2c-0.9.10 (11 Sep 2005)
+
+  11 Sep 2005; Lisa Seelye <lisa@gentoo.org> re2c-0.9.9.ebuild,
+  +re2c-0.9.10.ebuild:
+  Version bump and bump 0.9.9 to stable on x86. Other arches should test.
+  Resolves bug #104991
 
   09 Sep 2005; Jason Wever <weeve@gentoo.org> re2c-0.9.9.ebuild:
   Added ~sparc keyword to help fix the broken dependencies of
