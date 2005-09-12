@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.27 2005/09/12 14:16:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.28 2005/09/12 14:29:29 ferdy Exp $
+
+  12 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> pwgen-2.04.ebuild:
+  stable on alpha wrt bug #105690
 
   05 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> -pwgen-2.01.ebuild,
   pwgen-2.03-r1.ebuild, pwgen-2.04.ebuild:
