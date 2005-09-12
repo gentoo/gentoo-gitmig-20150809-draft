@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.41 2005/09/11 17:35:20 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.42 2005/09/12 22:48:54 hansmi Exp $
+
+  12 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gtk-engines-2.6.4-r2.ebuild:
+  Stable on ppc.
 
   11 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org>
   gtk-engines-2.6.4-r2.ebuild:
