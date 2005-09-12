@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.37 2005/08/26 09:29:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.38 2005/09/12 00:06:00 dang Exp $
+
+*vino-2.12.0 (12 Sep 2005)
+
+  12 Sep 2005; <dang@gentoo.org> -vino-2.11.92.ebuild, +vino-2.12.0.ebuild:
+  Bump to 2.12.0
 
 *vino-2.10.0-r1 (26 Aug 2005)
 
