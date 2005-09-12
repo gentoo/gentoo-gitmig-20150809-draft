@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.10 2005/08/22 00:32:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.11 2005/09/12 16:54:51 allanonjl Exp $
+
+*epiphany-extensions-1.8.0 (12 Sep 2005)
+
+  12 Sep 2005; <allanon@gentoo.org>
+  -files/epiphany-extensions-1.7.4-fix_includes.patch,
+  +files/epiphany-extensions-1.8.0-fix-includes.patch,
+  -epiphany-extensions-1.7.4-r1.ebuild, +epiphany-extensions-1.8.0.ebuild:
+  update glib/gtk deps, add auto-scroller extension, add another part to the
+  includes patch for the auto-scroller extension. 2.12 release vbump.
 
 *epiphany-extensions-1.7.4-r1 (22 Aug 2005)
 

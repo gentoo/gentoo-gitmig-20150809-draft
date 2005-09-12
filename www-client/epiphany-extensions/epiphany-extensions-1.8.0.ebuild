@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.7.4-r1.ebuild,v 1.1 2005/08/22 00:32:01 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.8.0.ebuild,v 1.1 2005/09/12 16:54:51 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="dbus debug firefox pcre python static"
 
-RDEPEND=">=www-client/epiphany-1.7.3
+RDEPEND=">=www-client/epiphany-1.8.0
 	>=dev-libs/libxml2-2.6
-	>=dev-libs/glib-2.6
-	>=x11-libs/gtk+-2.6
+	>=dev-libs/glib-2.8
+	>=x11-libs/gtk+-2.8
 	>=gnome-base/libglade-2
 	app-text/opensp
 	!firefox? ( >=www-client/mozilla-1.7.3 )
@@ -35,7 +35,8 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 pkg_setup() {
 	G2CONF="$(use_enable static)"
 
-	local extensions="actions bookmarks-tray certificates dashboard \
+	local extensions="actions auto-scroller bookmarks-tray certificates \
+		dashboard \
 		error-viewer extensions-manager-ui gestures page-info sample \
 		sample-mozilla select-stylesheet sidebar smart-bookmarks     \
 		tab-groups tab-states tabsmenu"
@@ -75,5 +76,5 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-fix_includes.patch
+	epatch ${FILESDIR}/${P}-fix-includes.patch
 }
