@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/bnr2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/ChangeLog,v 1.4 2005/07/07 16:12:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/bnr2/ChangeLog,v 1.5 2005/09/12 14:01:30 swegener Exp $
+
+*bnr2-0.14.7 (12 Sep 2005)
+
+  12 Sep 2005; Sven Wegener <swegener@gentoo.org> +bnr2-0.14.7.ebuild:
+  Version bump, bug #105660.
 
   07 Jul 2005; Sven Wegener <swegener@gentoo.org> -bnr2-0.12.7.ebuild,
   -bnr2-0.13.3.ebuild, bnr2-0.14.6.ebuild:
