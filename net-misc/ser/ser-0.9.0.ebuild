@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.7 2005/08/23 13:17:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.0.ebuild,v 1.8 2005/09/12 21:14:49 stkn Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,10 +21,9 @@ SRC_URI="ftp://ftp.berlios.de/pub/ser/${PV}/src/${P}_src.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc x86"
 
-DEPEND=">=sys-devel/bison-1.35
-	>=sys-devel/flex-2.5.4a
+RDEPEND="
 	mysql? ( >=dev-db/mysql-3.23.52 )
 	radius? ( >=net-dialup/radiusclient-ng-0.5.0 )
 	postgres? ( dev-db/postgresql )
@@ -33,6 +32,10 @@ DEPEND=">=sys-devel/bison-1.35
 		net-nds/openldap
 		ssl? ( dev-libs/openssl )
 	)"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/bison-1.35
+	>=sys-devel/flex-2.5.4a"
 
 src_unpack() {
 	local modules extmodules MY_A
