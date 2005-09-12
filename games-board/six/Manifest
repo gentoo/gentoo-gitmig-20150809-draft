@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 3feeaa8d72dc81ed6083c30b6c1b018d six-0.5.2.ebuild 453
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3308dd62b17ee99ebe93fa0de3b43cc0 ChangeLog 1075
-MD5 94ddb54708e8f8abf8973c3229c504b8 six-0.5.2.ebuild 450
+MD5 d0f25c63dcf3f11434571d092a71a16b ChangeLog 1183
 MD5 4f7b868d920c9419475cb8e3208b9cd4 files/digest-six-0.5.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJPnLgIKl8Uu19MoRAkNFAJ4/6R5Fev/mfDMYhbmRMl3+HeDmmQCeI32C
-7+xW+BR5AMOqow5502BXAxQ=
-=+qKb
------END PGP SIGNATURE-----
