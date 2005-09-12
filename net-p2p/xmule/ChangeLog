@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.58 2005/09/12 18:38:16 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.59 2005/09/12 18:59:12 mkay Exp $
+
+*xmule-1.10.1 (12 Sep 2005)
+
+  12 Sep 2005; <mkay@gentoo.org> +xmule-1.10.1.ebuild:
+  Version bump to 1.10.1
 
   12 Sep 2005; <mkay@gentoo.org> ChangeLog:
   All xmule's version, which are currently in tree depend on wxGTK-2.4*.
