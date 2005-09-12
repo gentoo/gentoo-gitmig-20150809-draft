@@ -1,6 +1,15 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.46 2005/09/10 14:05:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.47 2005/09/12 08:50:29 flameeyes Exp $
+
+*gxine-0.4.8 (12 Sep 2005)
+
+  12 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/gxine-0.4.4-secfix.patch, -files/gxine-0.4.6-literals.patch,
+  -files/gxine-0.4.6-mkstemp.patch, -gxine-0.4.1-r1.ebuild,
+  -gxine-0.4.6.ebuild, +gxine-0.4.8.ebuild:
+  Update to latest upstream (0.4.8), and dropped the patches applied upstream.
+  Removed 0.4.6 an d0.4.1-r1 (now that sparc has a newer stable).
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> gxine-0.4.1-r1.ebuild,
   gxine-0.4.5.ebuild, gxine-0.4.6.ebuild:
