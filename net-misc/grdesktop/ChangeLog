@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.18 2005/09/10 19:55:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.19 2005/09/12 17:38:27 gustavoz Exp $
+
+  12 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> grdesktop-0.23.ebuild:
+  Stable on sparc
 
   10 Sep 2005; <dang@gentoo.org> grdesktop-0.23.ebuild:
   Marked stable on amd64
