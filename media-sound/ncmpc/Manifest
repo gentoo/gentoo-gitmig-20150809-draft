@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c13547d0676300ec1f2fcde2d2a4a87 ncmpc-0.11.1.ebuild 718
-MD5 576c08935133b2ba6776aa049ac8c0cb ChangeLog 1585
-MD5 cf38d881dcdcc6e98cf3bdf2a48e6060 ncmpc-0.11.0.ebuild 659
 MD5 16281be420ee225507153e63e9318f62 ncmpc-0.11.1-r1.ebuild 1128
 MD5 d0d7a22ea15c7bc5927bf6f24149d4f8 metadata.xml 218
-MD5 15d947021147e010e4721bd8acb0cbd2 files/digest-ncmpc-0.11.0 64
+MD5 bf9ceac5002248010c25b41bd2e9715e ChangeLog 1676
+MD5 cf38d881dcdcc6e98cf3bdf2a48e6060 ncmpc-0.11.0.ebuild 659
+MD5 6778e9c294a67065bd0a8130a6690b58 ncmpc-0.11.1.ebuild 715
 MD5 f618389275480629891a25befac11a7f files/digest-ncmpc-0.11.1-r1 64
+MD5 15d947021147e010e4721bd8acb0cbd2 files/digest-ncmpc-0.11.0 64
 MD5 f618389275480629891a25befac11a7f files/digest-ncmpc-0.11.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDJb+8KRy60XGEcJIRAlSlAJ9CYoyPyj2/zcrlgNOwbwOmT+5yrgCeJZg+
-+gwl30VjXdsbqr2VZCiYamo=
-=rB4X
------END PGP SIGNATURE-----
