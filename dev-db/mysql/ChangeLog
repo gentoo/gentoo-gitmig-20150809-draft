@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.235 2005/09/12 14:58:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.236 2005/09/12 16:05:45 vivo Exp $
+
+  12 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
+  mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:
+  Temporary bug fix for bug #105534, disabling some test of the suite
 
   12 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.22-r2.ebuild,
   mysql-4.0.24.ebuild, mysql-4.0.25-r2.ebuild, mysql-4.0.26.ebuild,
