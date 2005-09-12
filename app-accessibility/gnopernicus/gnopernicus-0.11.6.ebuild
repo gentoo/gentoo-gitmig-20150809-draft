@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.11.6.ebuild,v 1.1 2005/09/11 03:13:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.11.6.ebuild,v 1.2 2005/09/12 02:29:50 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -37,7 +37,8 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable ipv6) $(use_enable brltty) $(use_enable static)"
-#		--with-default-fonts-path=${D}/usr/share/fonts/Type1"
+	G2CONF="$(use_enable ipv6) \
+		$(use_enable brltty) \
+		$(use_enable static)"
 }
 
