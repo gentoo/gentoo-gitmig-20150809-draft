@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.7 2005/08/31 10:22:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.8 2005/09/12 22:10:21 dragonheart Exp $
+
+*conky-1.3.1 (12 Sep 2005)
+
+  12 Sep 2005; Daniel Black <dragonheart@gentoo.org> conky-1.3.0.ebuild,
+  +conky-1.3.1.ebuild:
+  version bump thanks to Brenden Matthews bug #105643. x86 stable on 1.3.0
 
 *conky-1.3.0 (31 Aug 2005)
 

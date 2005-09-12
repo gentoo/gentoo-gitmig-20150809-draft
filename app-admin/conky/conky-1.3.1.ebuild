@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.0.ebuild,v 1.2 2005/09/12 22:10:21 dragonheart Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.1.ebuild,v 1.1 2005/09/12 22:10:21 dragonheart Exp $
 
 DESCRIPTION="Conky is an advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sf.net"
@@ -10,7 +8,7 @@ SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="truetype seti X"
 
 DEPEND_COMMON="
