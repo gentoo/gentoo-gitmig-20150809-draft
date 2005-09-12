@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.7.6.ebuild,v 1.1 2005/09/01 14:48:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.0.ebuild,v 1.1 2005/09/12 16:47:44 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -12,9 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="dbus doc firefox python"
 
-RDEPEND=">=dev-libs/glib-2.7
-	>=x11-libs/pango-1.8
-	>=x11-libs/gtk+-2.6.3
+RDEPEND=">=dev-libs/glib-2.8
+	>=x11-libs/gtk+-2.8.3
 	>=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.7
 	>=gnome-base/libglade-2.3.1
@@ -33,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.7
 	dbus? ( >=sys-apps/dbus-0.22 )
 	python? (
 		>=dev-lang/python-2.3
-		>=dev-python/pygtk-2.7
+		>=dev-python/pygtk-2.7.1
 		>=dev-python/gnome-python-2.6 )
 	x11-themes/gnome-icon-theme"
 # pygtk dependency needs to be >= 2.7
