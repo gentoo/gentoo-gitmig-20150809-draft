@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.10 2005/09/10 14:32:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.11 2005/09/12 22:07:53 hansmi Exp $
+
+  12 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> dvgrab-1.8.ebuild:
+  Added to ~ppc (Tested by Victor Barba in bug 104239).
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> dvgrab-1.7.ebuild,
   dvgrab-1.8.ebuild:
