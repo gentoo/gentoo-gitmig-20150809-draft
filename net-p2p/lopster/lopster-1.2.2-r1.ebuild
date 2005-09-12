@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.2-r1.ebuild,v 1.3 2005/09/06 22:08:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.2.2-r1.ebuild,v 1.4 2005/09/12 18:07:46 mkay Exp $
 
 inherit eutils
 
@@ -34,7 +34,6 @@ src_unpack() {
 src_compile() {
 	econf \
 		--with-pthread \
-		--with-zlib \
 		`use_enable nls` \
 		`use_with zlib` \
 		`use_with flac` \
