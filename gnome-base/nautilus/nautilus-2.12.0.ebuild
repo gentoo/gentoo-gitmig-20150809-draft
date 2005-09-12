@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.11.92.ebuild,v 1.2 2005/08/24 13:49:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.0.ebuild,v 1.1 2005/09/12 02:11:38 dang Exp $
 
 inherit gnome2 virtualx
 
@@ -15,7 +15,7 @@ IUSE="static"
 
 RDEPEND=">=media-libs/libart_lgpl-2.3.10
 	>=gnome-base/libbonobo-2.1
-	>=gnome-base/eel-2.11.92
+	>=gnome-base/eel-2.12
 	>=media-sound/esound-0.2.27
 	>=dev-libs/glib-2.6
 	>=gnome-base/gnome-desktop-2.9.91
@@ -63,19 +63,19 @@ pkg_setup() {
 #src_unpack() {
 #	unpack "${A}"
 #	cd "${S}"
-
-	# FIXME:Port this for 2.12 final
-	# use gstreamer for audio preview (patch by <foser@gentoo.org>)
-	#use gstreamer && epatch ${FILESDIR}/${P}-icon_view_gst.patch
-
-	# -- Component architecture has changed in 2.9 -- libgnomeprint patches
-	# no longer apply.
-
-	#if use gstreamer; then
-	#WANT_AUTOCONF=2.5 autoheader || die
-	#WANT_AUTOCONF=2.5 autoconf || die
-	#WANT_AUTOMAKE=1.7 automake || die
-	#fi
+#
+#	# FIXME:Port this for 2.12 final
+#	# use gstreamer for audio preview (patch by <foser@gentoo.org>)
+#	use gstreamer && epatch ${FILESDIR}/${P}-icon_view_gst.patch
+#
+#	# -- Component architecture has changed in 2.9 -- libgnomeprint patches
+#	# no longer apply.
+#
+#	if use gstreamer; then
+#	WANT_AUTOCONF=2.5 autoheader || die
+#	WANT_AUTOCONF=2.5 autoconf || die
+#	WANT_AUTOMAKE=1.7 automake || die
+#	fi
 #}
 
 src_test() {
