@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.58 2005/07/29 18:45:27 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.59 2005/09/12 20:11:10 stkn Exp $
+
+*gnomemeeting-1.2.2 (12 Sep 2005)
+
+  12 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/gnomemeeting-1.2.2-dbus.diff, +gnomemeeting-1.2.2.ebuild:
+  Version bump and cleanups.
 
   29 Jul 2005; <stkn@gentoo.org> gnomemeeting-1.2.1.ebuild,
   gnomemeeting-1.2.0.ebuild:
