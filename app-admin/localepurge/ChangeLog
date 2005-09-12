@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.9 2005/06/13 12:11:46 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.10 2005/09/12 18:13:06 grobian Exp $
+
+  12 Sep 2005; Fabian Groffen <grobian@gentoo.org>
+  localepurge-0.2-r2.ebuild:
+  Marking ~ppc-macos (bug #105667)
 
 *localepurge-0.2-r2 (13 Jun 2005)
 
