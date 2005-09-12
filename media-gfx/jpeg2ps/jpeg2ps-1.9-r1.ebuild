@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.1 2005/08/01 01:30:14 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.2 2005/09/12 21:18:38 josejx Exp $
 
 DESCRIPTION="Converts JPEG images to Postscript using a wrapper"
 HOMEPAGE="http://www.pdflib.com/products/more/jpeg2ps.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.pdflib.com/products/more/jpeg2ps/${P}.tar.gz"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"
