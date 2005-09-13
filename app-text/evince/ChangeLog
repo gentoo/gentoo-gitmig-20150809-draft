@@ -1,6 +1,12 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.9 2005/09/13 15:01:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.10 2005/09/13 18:51:39 dang Exp $
+
+*evince-0.4.0-r2 (13 Sep 2005)
+
+  13 Sep 2005; <dang@gentoo.org> +evince-0.4.0-r2.ebuild:
+  Add 'nautilus' use flag that enables the nautilus properties page for
+  filetypes supported by evince
 
 *evince-0.4.0-r1 (13 Sep 2005)
 
