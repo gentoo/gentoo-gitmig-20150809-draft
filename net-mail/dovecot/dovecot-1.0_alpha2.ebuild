@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_alpha2.ebuild,v 1.1 2005/09/13 16:51:17 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_alpha2.ebuild,v 1.2 2005/09/13 21:42:06 wschlich Exp $
 
-IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
+IUSE="debug ipv6 ldap maildir mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
 inherit eutils
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
@@ -67,12 +67,24 @@ src_compile() {
 	#! use gnutls && ! use ssl && myconf="${myconf} --without-ssl"
 	useq vpopmail || myconf="${myconf} --without-vpopmail"
 
-	econf ${myconf} || die "configure failed"
+	./configure \
+		--prefix=/usr \
+		--host=${CHOST} \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--datadir=/usr/share \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		${myconf} || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install () {
 	einstall || die "make install failed"
+
+	# rc script
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/dovecot.init dovecot
 
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....
@@ -115,24 +127,20 @@ src_install () {
 	# Documentation
 	rm -rf ${D}/usr/share/doc/dovecot
 	dodoc AUTHORS COPYING* NEWS README TODO dovecot-example.conf
-	dodoc doc/*.txt doc/*.conf doc/*.cnf
-
-	# per default dovecot wants it ssl cert called dovecot.pem
-	# fix this in mkcert.sh, which we use to generate the ssl certs
-	sed -i -e 's/imapd.pem/dovecot.pem/g' doc/mkcert.sh
-	dodoc doc/mkcert.sh
-
-	# rc script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/dovecot.init dovecot
+	dodoc doc/*.txt doc/*.conf doc/*.cnf doc/mkcert.sh
 
 	# Create SSL certificates
 	if useq ssl || useq gnutls; then
 		dodir /etc/ssl/certs
 		dodir /etc/ssl/private
 		# Let's not make a new certificate if we already have one
-		[ -e /etc/ssl/certs/dovecot.pem -a -e /etc/ssl/private/dovecot.pem ] \
-			|| SSLDIR=${D}/etc/ssl sh doc/mkcert.sh
+		if ! [[ -e /etc/ssl/certs/dovecot.pem && \
+			-e /etc/ssl/private/dovecot.pem ]]; then
+			einfo "Generating X.509 certificate for SSL"
+			pushd doc >/dev/null && \
+				SSLDIR=${D}/etc/ssl sh mkcert.sh && \
+				popd >/dev/null
+		fi
 	fi
 
 	dodir /var/run/dovecot
