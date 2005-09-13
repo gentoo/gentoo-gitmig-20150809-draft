@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4434 2005/09/12 17:36:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4435 2005/09/13 16:04:42 swegener Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -71,6 +71,7 @@ x11-misc/driconf
 # I received the stock "wait for foser" response.
 >=sys-apps/dbus-0.30
 >=sys-apps/hal-0.5
+sys-apps/pmount
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Sep 2005)
 # KDE 3.5_alpha1 (and later) split ebuilds.
