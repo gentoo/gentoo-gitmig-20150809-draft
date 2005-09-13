@@ -1,6 +1,21 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.81 2005/07/21 21:02:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.82 2005/09/13 09:11:25 dragonheart Exp $
+
+*shorewall-2.4.4 (13 Sep 2005)
+*shorewall-2.4.2 (13 Sep 2005)
+*shorewall-2.2.6 (13 Sep 2005)
+*shorewall-2.0.17 (13 Sep 2005)
+
+  13 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  -shorewall-2.0.7.ebuild, -shorewall-2.0.13.ebuild,
+  +shorewall-2.0.17.ebuild, -shorewall-2.2.0_rc5.ebuild,
+  -shorewall-2.2.0.ebuild, -shorewall-2.2.3.ebuild, -shorewall-2.2.4.ebuild,
+  -shorewall-2.2.5.ebuild, +shorewall-2.2.6.ebuild, -shorewall-2.4.0.ebuild,
+  +shorewall-2.4.2.ebuild, +shorewall-2.4.4.ebuild:
+  GLSA 200507-20 was not corrected properly. Fixes are included in 2.0.17,
+  2.2.6 and 2.4.2. 2.4.4 is just a version bump. Removed most vulnerable
+  versions (except 2.4.1 awaiting arch testing)
 
   21 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> shorewall-2.4.1.ebuild:
   Stable on alpha, bug 99398.

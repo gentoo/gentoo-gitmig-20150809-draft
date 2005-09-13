@@ -1,33 +1,28 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.2.0_rc5.ebuild,v 1.3 2005/07/18 12:55:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.2.6.ebuild,v 1.1 2005/09/13 09:11:25 dragonheart Exp $
 
-inherit versionator
-
-MY_P="${PN}-$(replace_version_separator 3 '-' ${PV/rc/RC})"
-MY_P_DOCS="${MY_P/${PN}/${PN}-docs-html}"
+MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
 DESCRIPTION="Full state iptables firewall"
 HOMEPAGE="http://www.shorewall.net/"
-SRC_URI="http://shorewall.net/pub/${PN}/2.2-Beta/${MY_P}/${MY_P}.tgz
-	doc? ( http://shorewall.net/pub/${PN}/2.2-Beta/${MY_P}/${MY_P_DOCS}.tgz )"
+SRC_URI="http://shorewall.net/pub/${PN}/2.2/${P}/${P}.tgz
+	doc? ( http://shorewall.net/pub/${PN}/2.2/${P}/${MY_P_DOCS}.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/libc
 	>=net-firewall/iptables-1.2.4
 	sys-apps/iproute2"
 
-S="${WORKDIR}/${MY_P}"
-
 src_install() {
 	keepdir /var/lib/shorewall
 
 	PREFIX="${D}" ./install.sh || die "install.sh failed"
-	newinitd ${FILESDIR}/shorewall shorewall || die "newinitd failed"
+	doinitd ${FILESDIR}/shorewall || die "doinitd failed"
 
 	dodoc COPYING INSTALL changelog.txt releasenotes.txt
 	if use doc; then

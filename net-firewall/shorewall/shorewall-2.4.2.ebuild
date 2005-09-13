@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.2.0.ebuild,v 1.2 2005/07/18 12:55:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.4.2.ebuild,v 1.1 2005/09/13 09:11:25 dragonheart Exp $
 
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
 DESCRIPTION="Full state iptables firewall"
 HOMEPAGE="http://www.shorewall.net/"
-SRC_URI="http://shorewall.net/pub/${PN}/2.2/${P}/${P}.tgz
-	doc? ( http://shorewall.net/pub/${PN}/2.2/${P}/${MY_P_DOCS}.tgz )"
+SRC_URI="http://shorewall.net/pub/${PN}/2.4/${P}/${P}.tgz
+	doc? ( http://shorewall.net/pub/${PN}/2.4/${P}/${MY_P_DOCS}.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/libc
@@ -33,8 +33,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-
+	einfo
 	if use doc ; then
 		einfo "Documentation is available at /usr/share/doc/${PF}/html"
 	else
@@ -44,23 +43,7 @@ pkg_postinst() {
 	einfo "Do not blindly start shorewall, edit the files in /etc/shorewall first"
 	einfo "At the very least, you must change 'STARTUP_ENABLED' in shorewall.conf"
 	einfo
-	einfo "Information on upgrading is available at:"
-	einfo "  http://www.shorewall.net/errata.htm#Upgrade"
-	einfo
-	einfo "If you have just upgraded from shorewall-2.0.1 mark the following issues:"
-	einfo
-	einfo "1. Extension Scripts -- In order for extension scripts to work properly"
-	einfo "   with the new iptables-save/restore integration, some change may be"
-	einfo "   required to your extension scripts if they are executing commands"
-	einfo "   other than iptables."
-	einfo
-	einfo "2. Dynamic Zone support -- If you don't need to use the 'shorewall add'"
-	einfo "   and 'shorewall delete' commands, you should set DYNAMIC_ZONES=No"
-	einfo "   in /etc/shorewall/shorewall.conf"
-	einfo
-	einfo "See the shorewall documentation for more details."
-	einfo
 	einfo "If you intend to use the 2.6 IPSEC Support, you must retrieve the"
 	einfo "kernel patches from http://shorewall.net/pub/shorewall/contrib/IPSEC/"
-	echo
+	einfo
 }
