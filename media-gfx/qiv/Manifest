@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03cf89034edbf0c9785d58d88395dcfc ChangeLog 1858
-MD5 94328d8f5876abf1b939df3dc0b22c14 metadata.xml 223
-MD5 2fa2f734aa7d5270c35bb46b190216ce qiv-1.7-r3.ebuild 612
-MD5 2489fe5468e4c62c4f138884e05df89e qiv-1.9.ebuild 625
-MD5 97b5c11fc7ef5fc991b15cc20c3cf2c6 qiv-1.9_pre10.ebuild 642
 MD5 bda79ca65b5f47c4f7323c21def0d605 qiv-2.0.ebuild 749
+MD5 97b5c11fc7ef5fc991b15cc20c3cf2c6 qiv-1.9_pre10.ebuild 642
+MD5 94328d8f5876abf1b939df3dc0b22c14 metadata.xml 223
+MD5 9ac1a05327b6910b3a12cfa35669f0df ChangeLog 1950
+MD5 7566d60aff071101c76389eac6ef6390 qiv-1.9.ebuild 622
+MD5 2fa2f734aa7d5270c35bb46b190216ce qiv-1.7-r3.ebuild 612
 MD5 98b8d5ed7bf4340676a2aa8e16906c81 files/digest-qiv-1.7-r3 59
 MD5 28ceb350e2f9981483bf5dd1408e8f47 files/digest-qiv-1.9 59
 MD5 5699ee267d58090636ca8299ff3f9c78 files/digest-qiv-1.9_pre10 62
 MD5 c05ba881e54da3f1b35e28258d497037 files/digest-qiv-2.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFC6T5WFdQwWVoAgN4RAj3hAJ9lNBCv/zYQyCLsTanHOj+ZltByRgCfca2P
-WAoUMYnV4Otk+BH9AlKvYxU=
-=9sLL
------END PGP SIGNATURE-----
