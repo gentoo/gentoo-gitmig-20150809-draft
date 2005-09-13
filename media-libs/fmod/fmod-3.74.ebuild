@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.74.ebuild,v 1.3 2004/12/19 05:10:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.74.ebuild,v 1.4 2005/09/13 15:16:40 blubb Exp $
 
 MY_P="fmodapi${PV/.}linux"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.fmod.org/files/${MY_P}.tar.gz"
 
 LICENSE="fmod"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 DEPEND="virtual/libc"

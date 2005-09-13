@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fmod
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.18 2004/12/19 05:10:46 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.19 2005/09/13 15:16:40 blubb Exp $
+
+  13 Sep 2005; Simon Stelling <blubb@gentoo.org> fmod-3.73.ebuild,
+  fmod-3.74.ebuild:
+  remove the amd64 keyword wrt bug 91481
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> fmod-3.74.ebuild:
   Stable amd64, x86.
