@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.8.0.ebuild,v 1.1 2005/09/12 16:54:51 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-1.8.0.ebuild,v 1.2 2005/09/13 21:14:47 dang Exp $
 
 inherit eutils gnome2
 
@@ -55,7 +55,7 @@ pkg_setup() {
 	use pcre && extensions="${extensions} greasemonkey"
 	# adblock causes segmentation faults. See bug #100618.
 
-	use python && extensions="${extensions} python-console sample-python"
+	use python && extensions="${extensions} python-console sample-python favicon"
 
 	local list_exts=""
 	for ext in $extensions; do
