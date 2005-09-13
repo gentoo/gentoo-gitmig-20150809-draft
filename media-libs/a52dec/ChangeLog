@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.40 2005/08/11 14:36:58 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.41 2005/09/13 17:54:52 agriffis Exp $
+
+  13 Sep 2005; Aron Griffis <agriffis@gentoo.org> a52dec-0.7.4-r5.ebuild:
+  Mark 0.7.4-r5 stable on alpha
 
   11 Aug 2005; Stefan Briesenick <sbriesen@gentoo.org>
   files/a52dec-0.7.4-freebsd.patch:
