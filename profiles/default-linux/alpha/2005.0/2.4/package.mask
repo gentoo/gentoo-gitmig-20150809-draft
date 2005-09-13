@@ -1,0 +1,4 @@
+## Fernando J. Pereda <ferdy@gentoo.org>
+# sys-apps/busybox-1.01 doesn't build on alpha
+# wrt bug #105786
+~sys-apps/busybox-1.01
