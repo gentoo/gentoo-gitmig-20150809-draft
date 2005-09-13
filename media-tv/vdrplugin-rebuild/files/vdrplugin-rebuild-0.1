@@ -14,7 +14,7 @@ if [[ `id -u` != 0 ]]; then
 	exit 1
 fi
 
-R_VERSION="0.5"
+R_VERSION="0.1"
 R_MODULES="${ROOT}/var/lib/vdrplugin-rebuild/vdrplugindb"
 R_PORTAGEQ="`which portageq 2>/dev/null`"
 if [[ -z ${R_PORTAGEQ} ]]; then
