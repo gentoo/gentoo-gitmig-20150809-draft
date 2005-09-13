@@ -1,5 +1,5 @@
-MD5 8f7d8fcc93a9700d9626e04a73a1b8a2 xzgv-0.8-r1.ebuild 1407
+MD5 17bdb42d8f6ab9d25bb7c695c41c93bd xzgv-0.8-r1.ebuild 1406
 MD5 ba9c20ee3f3568176dc0dd45b3cab35b metadata.xml 218
-MD5 999900d781370097f0ef9c1c418fc6de ChangeLog 2292
+MD5 5a8988520a14c904681fa2c9ca73e3bc ChangeLog 2393
 MD5 df76e36ea08fa4317c30d7879eec9f93 files/digest-xzgv-0.8-r1 60
 MD5 9495e82307945c08599a0bd9ffc2f4f6 files/xzgv-0.8-integer-overflow-fix.diff 6374
