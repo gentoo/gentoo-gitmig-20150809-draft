@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eaeb30fd042e7d8d70da77dd5a3df380 ChangeLog 2163
 MD5 61676cdb802637dcb545271a6548592c gnewspost-0.6.ebuild 1093
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 3506642e9faf221b0d2d3e9a3713479f files/digest-gnewspost-0.6 65
 MD5 6607318912624e017104b28f8525b9cc files/session.c-fix_errno.patch.gz 590
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDJ0FnwUpWvClEHQoRAmczAJ0eTq1ikUJ80TM4rdk7Q0uBHkLlEACeK/YY
+oIv8VfGnDHii+wtfhQ0LgOo=
+=HHGA
+-----END PGP SIGNATURE-----
