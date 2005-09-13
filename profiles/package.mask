@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4436 2005/09/13 17:31:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4437 2005/09/13 18:22:09 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -72,6 +72,8 @@ x11-misc/driconf
 >=sys-apps/dbus-0.30
 >=sys-apps/hal-0.5
 sys-apps/pmount
+# masked because of pmount mask, please remove this when pmount is unmasked
+>=sys-apps/ivman-0.6
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Sep 2005)
 # KDE 3.5_alpha1 (and later) split ebuilds.
