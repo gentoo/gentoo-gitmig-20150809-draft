@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.3.ebuild,v 1.3 2005/08/11 09:24:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.3.ebuild,v 1.4 2005/09/13 18:29:55 mrness Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi"
 
 RDEPEND="sys-apps/iproute2
-	sys-libs/libcap
+	>=sys-libs/libcap-1.10-r5
 	snmp? ( net-analyzer/net-snmp )
 	pam? ( sys-libs/pam )"
 DEPEND="${RDEPEND}

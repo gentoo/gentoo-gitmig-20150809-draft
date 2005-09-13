@@ -2,7 +2,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.18 2005/09/03 19:48:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.19 2005/09/13 18:29:55 mrness Exp $
+
+  13 Sep 2005; Alin Nastac <mrness@gentoo.org> quagga-0.98.2.ebuild,
+  quagga-0.98.3.ebuild, quagga-0.98.4.ebuild:
+  Replace sys-libs/libcap with >=sys-libs/libcap-1.10-r5 in RDEPEND (#95147).
 
   03 Sep 2005; Simon Stelling <blubb@gentoo.org> quagga-0.98.4.ebuild:
   made quagga multilib-strict aware
