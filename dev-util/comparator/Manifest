@@ -1,6 +1,16 @@
-MD5 10747b208a6a1b8192ff289a154c0783 ChangeLog 1026
-MD5 5d66ebba77e4880bba0c5494d113ca43 comparator-2.2.ebuild 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4f338e14232e1a17f07adb6b0b6d70cc comparator-2.3.ebuild 1115
+MD5 dbd442ddb144bfffc2decff36d14a37b comparator-2.2.ebuild 790
+MD5 d1e49afd96cea43cd4c4831dd5efdb41 ChangeLog 1098
 MD5 c368d0a75a60c71727b554ddfa2fe344 metadata.xml 376
 MD5 6656b7abd2421064676a3e1f38d4635c files/digest-comparator-2.2 67
 MD5 b8289d0c8abe6fa6e9ca9a257cf8c014 files/digest-comparator-2.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJ0lpomPajV0RnrERAn+gAJ91LCUhZFFTuUC//nBxOUa+KR2uFwCeL/Ny
+cq/KJutreP4H/8TMGU+SJAo=
+=zgge
+-----END PGP SIGNATURE-----
