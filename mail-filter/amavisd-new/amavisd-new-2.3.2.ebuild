@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.2.ebuild,v 1.8 2005/08/23 13:12:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.2.ebuild,v 1.9 2005/09/13 15:46:36 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 ~sparc x86"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4
