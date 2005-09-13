@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.13 2005/02/06 00:41:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.1_p4.ebuild,v 1.14 2005/09/13 21:05:13 dang Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_PV="${PV%_p*}"
 MY_P="${PN}_${MY_PV}"
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
 	dodir /usr/sbin
 
-	make DESTDIR=${D} PREFIX=/usr install || die "install failed"
+	make DESTDIR=${D} PREFIX=/usr LIBDIR=/usr/$(get_libdir) install || die "install failed"
 
 	dodir /etc/apm/{event.d,suspend.d,resume.d,other.d,scripts.d}
 	exeinto /etc/apm ; doexe debian/apmd_proxy
