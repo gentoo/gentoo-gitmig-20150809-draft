@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.9a-r1.ebuild,v 1.3 2005/08/27 09:13:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.9a-r1.ebuild,v 1.4 2005/09/13 09:50:51 flameeyes Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
-
-inherit flag-o-matic
 
 LICENSE="GPL-2"
 SLOT="0.9"
