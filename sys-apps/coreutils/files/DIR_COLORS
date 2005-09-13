@@ -7,7 +7,6 @@
 # Below, there should be one TERM entry for each termtype that is colorizable
 TERM ansi
 TERM color-xterm
-TERM color_xterm
 TERM con132x25
 TERM con132x30
 TERM con132x43
@@ -24,7 +23,6 @@ TERM cygwin
 TERM dtterm
 TERM Eterm
 TERM gnome
-TERM kon
 TERM konsole
 TERM kterm
 TERM linux
