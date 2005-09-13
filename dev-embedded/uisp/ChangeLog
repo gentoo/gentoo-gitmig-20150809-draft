@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/uisp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.11 2005/06/28 19:56:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/ChangeLog,v 1.12 2005/09/13 15:15:52 gustavoz Exp $
+
+  13 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  uisp-20050207-r1.ebuild:
+  Stable on x86
 
 *uisp-20050207-r1 (28 Jun 2005)
 
