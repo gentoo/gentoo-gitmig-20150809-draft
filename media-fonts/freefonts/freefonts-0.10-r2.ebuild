@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.16 2005/08/23 00:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.17 2005/09/13 15:59:54 agriffis Exp $
 
 DESCRIPTION="A Collection of Free Type1 Fonts"
 HOMEPAGE="http://www.gimp.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gimp/fonts/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm ppc ppc64 s390 sparc x86"
 IUSE="X"
 
 S=${WORKDIR}/freefont
