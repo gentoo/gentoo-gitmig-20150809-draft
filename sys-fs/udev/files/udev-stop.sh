@@ -3,8 +3,8 @@
 
 main() {
 	if [[ -e /dev/.devfsd || ! -e /dev/.udev || ! -z ${CDBOOT} || \
-			${RC_DEVICE_TARBALL} != "yes" ]] || \
-			! touch /lib/udev-state/devices.tar.bz2 2>/dev/null
+	   ${RC_DEVICE_TARBALL} != "yes" ]] || \
+	   ! touch /lib/udev-state/devices.tar.bz2 2>/dev/null
 	then
 		return 0
 	fi
@@ -16,8 +16,7 @@ main() {
 	devices_totar=$(mktemp /tmp/devices.totar.XXXXXX)
 	device_tarball=$(mktemp /tmp/devices-XXXXXX)
 	
-	if [[ -z ${devices_udev} || -z ${devices_real} || \
-		  -z ${device_tarball} ]]; then
+	if [[ -z ${devices_udev} || -z ${devices_real} || -z ${device_tarball} ]] ; then
 		eend 1 "Could not create temporary files!"
 	else
 		cd /dev
@@ -51,12 +50,13 @@ main() {
 		if [[ -s ${devices_totar} ]]; then
 			try tar --one-file-system -jcpf "${device_tarball}" -T "${devices_totar}"
 			try mv -f "${device_tarball}" /lib/udev-state/devices.tar.bz2
-			try rm -f "${devices_udev}" "${devices_real}"
 		else
 			rm -f /lib/udev-state/devices.tar.bz2
 		fi
 		eend 0
 	fi
+
+	rm -f "${devices_udev}" "${devices_real}" "${devices_totar}" "${device_tarball}"
 }
 
 main
