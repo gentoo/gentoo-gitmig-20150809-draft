@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.2 2005/09/12 21:18:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/jpeg2ps-1.9-r1.ebuild,v 1.3 2005/09/13 16:34:51 halcy0n Exp $
+
+inherit eutils
 
 DESCRIPTION="Converts JPEG images to Postscript using a wrapper"
 HOMEPAGE="http://www.pdflib.com/products/more/jpeg2ps.html"
@@ -13,6 +15,13 @@ IUSE=""
 
 DEPEND="sys-apps/sed"
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+
+	#bug 105561
+	epatch "${FILESDIR}"/${P}-include.diff
+}
 
 src_compile() {
 	local pagesize=""

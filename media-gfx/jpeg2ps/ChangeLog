@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/jpeg2ps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/ChangeLog,v 1.8 2005/09/12 21:18:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/ChangeLog,v 1.9 2005/09/13 16:34:51 halcy0n Exp $
+
+  13 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/jpeg2ps-1.9-include.diff, jpeg2ps-1.9-r1.ebuild:
+  Added patch to get rid of warnings with gcc4.  Thanks to Marcelo Goes
+  <vanquirius@gentoo.org>; bug #105561
 
   12 Sep 2005; Joseph Jezak <josejx@gentoo.org> jpeg2ps-1.9-r1.ebuild:
   Marked ~ppc for bug #105561.
