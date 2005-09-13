@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5777617bd79c348a01652f3c0ca238aa kxsldbg-3.5_alpha1.ebuild 545
 MD5 7bc85cec2c7161193457583bec29e337 ChangeLog 2315
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 46f25f71f8156d517d63c96e6cc118c7 kxsldbg-3.4.1.ebuild 566
+MD5 96066d966fa3c97c6f1af56a5c37d6c6 kxsldbg-3.4.1.ebuild 565
 MD5 e951879abebc3cb3931132db3f1c508a files/digest-kxsldbg-3.4.1 215
 MD5 3229676bd5ed59490dc5b70766f14d4e files/digest-kxsldbg-3.5_alpha1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHujOj5H05b2HAEkRAid1AJ47y2DDYY3lEljfsp0TEN/Btho+WQCfXPIh
-0abqckaJ5ED7+vr+Obhb8vI=
-=jmTk
------END PGP SIGNATURE-----
