@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.83 2005/09/11 15:58:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.84 2005/09/13 18:31:20 stkn Exp $
+
+  13 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.8-ptr64fix.diff, asterisk-1.0.5-r2.ebuild,
+  asterisk-1.0.6-r1.ebuild, asterisk-1.0.7-r1.ebuild, asterisk-1.0.8.ebuild,
+  asterisk-1.0.9.ebuild, asterisk-1.0.9-r1.ebuild:
+  Fix segfault on amd64 caused by wrong data-type in pointer arithmetic
+  (#105762), thanks to Joseph for reporting this.
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   asterisk-1.2.0_beta1.ebuild:
