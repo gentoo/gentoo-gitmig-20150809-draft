@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.122 2005/09/10 03:32:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.123 2005/09/13 18:36:42 mrness Exp $
+
+  13 Sep 2005; Alin Nastac <mrness@gentoo.org> ppp-2.4.2-r15.ebuild:
+  Stable on x86.
 
   09 Sep 2005; Tom Gall <tgall@gentoo.org> ppp-2.4.2-r12.ebuild,
   ppp-2.4.2-r15.ebuild:
