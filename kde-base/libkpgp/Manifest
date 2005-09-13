@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8310b49f6e65bace99b59ea6e6e1cf69 libkpgp-3.4.1.ebuild 408
-MD5 3f96439c22156f11ca2d2338bd39c84a ChangeLog 2173
-MD5 8e6e84c4b3f5c56b329cab9461c763d7 libkpgp-3.5_alpha1.ebuild 388
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 8e6e84c4b3f5c56b329cab9461c763d7 libkpgp-3.5_alpha1.ebuild 388
+MD5 3f96439c22156f11ca2d2338bd39c84a ChangeLog 2173
+MD5 6b4168cf72122d91085b5324455fadd6 libkpgp-3.4.1.ebuild 407
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpgp-3.4.1 208
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-libkpgp-3.5_alpha1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHupnj5H05b2HAEkRAoEaAJ9rhWWP1Zv0cYfzwyVXPtBlgACpRwCdGVlk
-wWVlQfTz6/bjuR3W/szn/0w=
-=DKuR
------END PGP SIGNATURE-----
