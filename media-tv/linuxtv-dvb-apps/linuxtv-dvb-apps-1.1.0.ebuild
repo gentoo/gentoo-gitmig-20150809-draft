@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.2 2005/07/05 19:41:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0.ebuild,v 1.3 2005/09/13 11:05:05 zzam Exp $
 
-DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
+DESCRIPTION="small utils for DVB to scan, zap, view signal strength, ..."
 HOMEPAGE="http://www.linuxtv.org/wiki/index.php/LinuxTV_dvb-apps"
 SRC_URI="http://www.linuxtv.org/download/dvb/${P}.tar.bz2"
 
