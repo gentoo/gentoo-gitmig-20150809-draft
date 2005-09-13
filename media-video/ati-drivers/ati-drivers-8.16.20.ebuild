@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20.ebuild,v 1.7 2005/09/10 13:13:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20.ebuild,v 1.8 2005/09/13 22:20:37 herbs Exp $
 
 IUSE="opengl"
 
@@ -150,14 +150,25 @@ src_install() {
 	fi &> /dev/null
 
 	#apps
-	insinto /etc/env.d
-	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe usr/X11R6/bin/*
 
 	#ati custom stuff
 	insinto /usr
 	doins -r ${WORKDIR}/usr/include
+
+	#env.d entry
+	cp ${FILESDIR}/09ati ${T}/
+
+	#Work around hardcoded path in 32bit libGL.so on amd64, bug 101539
+	if has_multilib_profile && [ $(get_abi_LIBDIR x86) = "lib32" ] ; then
+		cat >>${T}/09ati <<EOF
+
+LIBGL_DRIVERS_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"
+EOF
+	fi
+
+	doenvd ${T}/09ati
 }
 
 src_install-libs() {
