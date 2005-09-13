@@ -16,7 +16,8 @@ main() {
 	devices_totar=$(mktemp /tmp/devices.totar.XXXXXX)
 	device_tarball=$(mktemp /tmp/devices-XXXXXX)
 	
-	if [[ -z ${devices_udev} || -z ${devices_real} || -z ${device_tarball} ]] ; then
+	if [[ -z ${devices_udev} || -z ${devices_real} || \
+	      -z ${devices_totar} || -z ${device_tarball} ]] ; then
 		eend 1 "Could not create temporary files!"
 	else
 		cd /dev
