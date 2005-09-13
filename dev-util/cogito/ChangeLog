@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.16 2005/08/26 22:33:04 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.17 2005/09/13 20:50:26 r3pek Exp $
+
+*cogito-0.14.1 (13 Sep 2005)
+
+  13 Sep 2005; Carlos Silva <r3pek@gentoo.org> +cogito-0.14.1.ebuild:
+  Version bump
 
   26 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org> cogito-0.13.ebuild:
   marked ~alpha wrt bug #101907
