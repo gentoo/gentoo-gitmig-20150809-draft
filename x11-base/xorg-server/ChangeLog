@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.43 2005/09/12 22:40:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.44 2005/09/13 01:02:51 joshuabaergen Exp $
+
+*xorg-server-0.99.1-r9 (13 Sep 2005)
+
+  13 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/0.99.1-r9_CAN-2005-2495.patch,
+  +files/0.99.1-r9-check-for-glproto.patch, +xorg-server-0.99.1-r9.ebuild:
+  Bump to include security fix from bug #105688.
 
   12 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r8.ebuild:
