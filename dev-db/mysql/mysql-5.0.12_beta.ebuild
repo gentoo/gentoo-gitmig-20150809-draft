@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.6 2005/09/12 16:05:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.7 2005/09/13 00:03:35 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -114,29 +114,6 @@ pkg_setup() {
 	enewgroup mysql 60 || die "problem adding group mysql"
 	enewuser mysql 60 -1 /dev/null mysql \
 	|| die "problem adding user mysql"
-
-	# Temporary workaround for bug in test suite, a correct solution
-	# should work inside the include files to enable/disable the tests
-	# for the current configuration
-
-	if ! useq extraengine ; then
-		einfo "disabling unneded extraengine tests"
-		local disable_test="archive bdb blackhole federated view"
-		for i in $disable_test ; do
-			mv "${S}/mysql-test/t/${i}.test" "${S}/mysql-test/t/${i}.disabled" \
-			&> /dev/null
-		done
-	fi
-
-
-	if ! useq berkdb ; then
-		einfo "disabling unneded berkdb tests"
-		local disable_test="auto_increment bdb-alter-table-1 bdb-alter-table-2 bdb-crash bdb-deadlock bdb bdb_cache binlog ctype_sjis ctype_utf8 heap_auto_increment index_merge_bdb multi_update mysqldump ps_1general ps_6bdb rowid_order_bdb"
-		for i in $disable_test ; do
-			mv "${S}/mysql-test/t/${i}.test" "${S}/mysql-test/t/${i}.disabled" \
-			&> /dev/null
-		done
-	fi
 }
 
 src_unpack() {
@@ -187,6 +164,30 @@ src_unpack() {
 	pushd bdb/dist && sh s_all \
 		|| die "failed bdb reconfigure"
 	popd
+
+	# Temporary workaround for bug in test suite, a correct solution
+	# should work inside the include files to enable/disable the tests
+	# for the current configuration
+
+	if ! useq extraengine ; then
+		einfo "disabling unneded extraengine tests"
+		local disable_test="archive bdb blackhole federated view"
+		for i in $disable_test ; do
+			mv "${S}/mysql-test/t/${i}.test" "${S}/mysql-test/t/${i}.disabled" \
+			&> /dev/null
+		done
+	fi
+
+
+	if ! useq berkdb ; then
+		einfo "disabling unneded berkdb tests"
+		local disable_test="auto_increment bdb-alter-table-1 bdb-alter-table-2 bdb-crash bdb-deadlock bdb bdb_cache binlog ctype_sjis ctype_utf8 heap_auto_increment index_merge_bdb multi_update mysqldump ps_1general ps_6bdb rowid_order_bdb"
+		for i in $disable_test ; do
+			mv "${S}/mysql-test/t/${i}.test" "${S}/mysql-test/t/${i}.disabled" \
+			&> /dev/null
+		done
+	fi
+
 }
 
 src_compile() {
