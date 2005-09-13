@@ -1,4 +1,0 @@
-## Fernando J. Pereda <ferdy@gentoo.org>
-# cannot mark stable because of gnomemm stuff
-# wrt bug #92494
-app-cdr/cdrdao
