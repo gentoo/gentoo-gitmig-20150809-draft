@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.55 2005/08/05 20:45:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.56 2005/09/13 23:43:57 vapier Exp $
+
+  13 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/slocate-2.7-really-long-paths.patch, slocate-2.7-r8.ebuild:
+  Patch from Fedora to fix #104378.
 
   05 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org> files/updatedb.conf:
   Exclude /root/.ccache, bug #90344
