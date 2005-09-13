@@ -2,14 +2,17 @@
 Hash: SHA1
 
 MD5 105e48927920d0a38ce78b201f10b5ba ati-drivers-8.14.13-r3.ebuild 7659
+MD5 b6f094c1c5d5b686866cbe72cd810d8b ati-drivers-8.16.20-r1.ebuild 6498
+MD5 b349644e1bbe997832e57e9e2bddb72e ati-drivers-8.14.13-r5.ebuild 7763
 MD5 b0e07b107756bc3303e04b578b67d9a1 ati-drivers-8.14.13-r2.ebuild 6687
-MD5 68dd160d7cfb5b89a52b0f266ac70552 ati-drivers-8.16.20.ebuild 6495
-MD5 dac14a37469832f92c8ebc01b6041d2d ati-drivers-8.14.13-r4.ebuild 7763
-MD5 3e17bddce39f88c2f8ac054ed4b2c66d ChangeLog 19848
+MD5 142444f733b464a3c075fac4415aef50 ati-drivers-8.16.20.ebuild 6227
+MD5 a37cb5612ebeb94a8e4fa889c88c7c9e ati-drivers-8.14.13-r4.ebuild 7495
+MD5 8ae30c722759861e47d3361ff2a7b865 ChangeLog 19930
 MD5 c306bb93866a4dd8913899229dd20726 metadata.xml 227
 MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 MD5 73907ca81a7435350b4529ddaa7305d5 files/ioctl32.patch 368
 MD5 f1b11573ad27da023fce7d7a67a37861 files/8.8.25-via-amd64.patch 1198
+MD5 ac17fe94be90be4ac158d26cd759884f files/digest-ati-drivers-8.16.20-r1 158
 MD5 32c54a887820a2712b641217c3b54272 files/8.8.25-smp.patch 376
 MD5 0850638c4f5ac2466c793df428fc5d84 files/fglrx-2.6.12-pci_name.patch 2807
 MD5 ac17fe94be90be4ac158d26cd759884f files/digest-ati-drivers-8.16.20 158
@@ -19,10 +22,11 @@ MD5 9ae27a9d7736cb6ce30b41ff384004d8 files/fglrx-2.6.12-inter_module_get.patch 1
 MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r2 157
 MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r3 157
 MD5 82c5244e2e3822f5e73ff38138dc23c1 files/digest-ati-drivers-8.14.13-r4 157
+MD5 b9868c358d04b898fac7ee197572857d files/digest-ati-drivers-8.14.13-r5 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJ1DD2G5bA0cA/ScRAvSsAJ9tHkZfFQksY+s+gnjC7X4rGAPrcwCfQyS+
-sOv3l5TcbP/sa9+wA74McBk=
-=2eQ7
+iD8DBQFDJ1cD2G5bA0cA/ScRAkdeAJ45MXp5CGXTRRTWCVvDnvaWuU1TEwCgxRh5
+wwCTEfesnQH1nN99VGiOywk=
+=mGau
 -----END PGP SIGNATURE-----

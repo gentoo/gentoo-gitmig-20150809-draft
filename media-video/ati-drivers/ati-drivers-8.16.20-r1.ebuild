@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r4.ebuild,v 1.4 2005/09/13 22:47:19 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20-r1.ebuild,v 1.1 2005/09/13 22:47:19 herbs Exp $
 
-IUSE="opengl dlloader"
+IUSE="opengl"
 
 inherit eutils rpm multilib linux-info linux-mod toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="x86? ( http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm )
 	 amd64? ( http://www2.ati.com/drivers/linux/64bit/fglrx64_6_8_0-${PV}-1.x86_64.rpm )"
 
 LICENSE="ATI"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-*" #~amd64 ~x86"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
 	 app-admin/eselect-opengl
@@ -70,16 +70,10 @@ src_unpack() {
 
 	#epatch ${FILESDIR}/fglrx-3.9.0-allocation.patch
 
-	if kernel_is 2 6
-	then
-		epatch ${FILESDIR}/fglrx-2.6.12-pci_name.patch
-		epatch ${FILESDIR}/fglrx-2.6.12-inter_module_get.patch
-		epatch ${FILESDIR}/fglrx-8.14.13-alt-2.6.12-agp.patch
-	fi
-	epatch ${FILESDIR}/8.8.25-via-amd64.patch
-	epatch ${FILESDIR}/8.8.25-smp.patch
+#	if kernel_is 2 6
+#	then
+#	fi
 	epatch ${FILESDIR}/ioctl32.patch
-	epatch ${FILESDIR}/p1.patch
 
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
@@ -156,14 +150,25 @@ src_install() {
 	fi &> /dev/null
 
 	#apps
-	insinto /etc/env.d
-	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe usr/X11R6/bin/*
 
 	#ati custom stuff
 	insinto /usr
 	doins -r ${WORKDIR}/usr/include
+
+	#env.d entry
+	cp ${FILESDIR}/09ati ${T}/
+
+	#Work around hardcoded path in 32bit libGL.so on amd64, bug 101539
+	if has_multilib_profile && [ $(get_abi_LIBDIR x86) = "lib32" ] ; then
+		cat >>${T}/09ati <<EOF
+
+LIBGL_DRIVERS_PATH="/usr/lib32/modules/dri/:/usr/$(get_libdir)/modules/dri"
+EOF
+	fi
+
+	doenvd ${T}/09ati
 }
 
 src_install-libs() {
@@ -210,35 +215,15 @@ src_install-libs() {
 	local X11_LIB_DIR="${X11_DIR}${inslibdir}"
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
-	if use !dlloader ; then
-		doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/drivers/fglrx_drv.o
-	else
-		einfo "Adapting fglrx_drv to dlloader..."
-		gcc -shared -o ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/drivers/fglrx_drv.so \
-					   ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/drivers/fglrx_drv.o \
-					   -Xlinker -L/usr/lib/modules -Xlinker -R/usr/lib/modules \
-					   -Xlinker -L/usr/lib/modules/linux -Xlinker -R/usr/lib/modules/linux \
-					   -Xlinker -L/usr/lib/modules/extensions -Xlinker -R/usr/lib/modules/extensions \
-					   -lfbdevhw -lglx -lfglrxdrm -ldrm -lxaa -lramdac -ldri -lfb -lint10 -lvgahw -li2c -lddc -lvbe
-		doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/drivers/fglrx_drv.so
-	fi
+	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/drivers/fglrx_drv.o
 
 	exeinto ${X11_LIB_DIR}/modules/dri
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so
 	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/dri/atiogl_a_dri.so
 
 	exeinto ${X11_LIB_DIR}/modules/linux
-	if use !dlloader ; then
-		doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
-	else
-		einfo "Adapting libfglrxdrm to dlloader..."
-		ar x ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
-		gcc -shared -o ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.so \
-			module.o FireGLdrm.o
-		rm module.o FireGLdrm.o
-		doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.so
-	fi
-	cp -a ${WORKDIR}/usr/X11R6/${pkglibdir}/libfglrx_gamma.* \
+	doexe ${WORKDIR}/usr/X11R6/${pkglibdir}/modules/linux/libfglrxdrm.a
+	cp -pPR ${WORKDIR}/usr/X11R6/${pkglibdir}/libfglrx_gamma.* \
 			${D}/${X11_LIB_DIR}
 	#Not the best place
 	insinto ${X11_DIR}/include/X11/extensions
