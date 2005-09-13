@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0-r1.ebuild,v 1.11 2005/07/06 22:50:52 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0-r1.ebuild,v 1.12 2005/09/13 20:26:48 agriffis Exp $
 
 inherit flag-o-matic eutils
 replace-flags "-fprefetch-loop-arrays" " "
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.openquicktime.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc ~alpha amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="media-sound/lame
