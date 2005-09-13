@@ -1,7 +1,17 @@
-MD5 3c8fdee5568b021c8d5542eee3282686 newspost-2.1.1-r1.ebuild 1062
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 91761e343c623a88b10f75976a573ff4 ChangeLog 3179
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 16f2291a587a155944e156342f9a0045 ChangeLog 3034
-MD5 3223e437ce882fcca5aed4880eb7acb5 newspost-2.0-r1.ebuild 1025
-MD5 b215709cb527d3080506432abfb71147 files/digest-newspost-2.1.1-r1 65
+MD5 8f502654659bd18f0dde470d93ea9ba7 newspost-2.0-r1.ebuild 1026
+MD5 d4a88e879922665dd8452e950cbc0181 newspost-2.1.1-r1.ebuild 1063
 MD5 e72758703815a9480ba6c7b081011d30 files/CAN-2005-0101.patch 284
 MD5 46899efb4a2b656aa05aa4d86f5792ba files/digest-newspost-2.0-r1 63
+MD5 b215709cb527d3080506432abfb71147 files/digest-newspost-2.1.1-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDJ0EDwUpWvClEHQoRAmlNAJ0XGOmBarUKeXbqRuQDs6r7362wGwCfXRsX
+jqNfX/uIsi2vfQGyhlDAJFg=
+=laDk
+-----END PGP SIGNATURE-----
