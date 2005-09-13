@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.7.ebuild,v 1.8 2005/08/24 23:50:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.7.ebuild,v 1.9 2005/09/13 02:32:44 dang Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A simple network library."
 HOMEPAGE="http://www.gnetlibrary.org/"
@@ -22,3 +22,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README* TODO"
 
 G2CONF="${G2CONF} $(use_enable static)"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix integer size mismatches on 64-bit arches
+	epatch ${FILESDIR}/${P}-amd64-fixes.patch
+}
