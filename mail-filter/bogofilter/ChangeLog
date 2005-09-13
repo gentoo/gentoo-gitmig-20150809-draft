@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.38 2005/07/12 09:11:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.39 2005/09/13 15:49:29 agriffis Exp $
+
+  13 Sep 2005; Aron Griffis <agriffis@gentoo.org> bogofilter-0.92.8.ebuild:
+  Mark 0.92.8 stable on alpha
 
 *bogofilter-0.95.2 (12 Jul 2005)
 
