@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/wmCalClock-1.25-r1.ebuild,v 1.13 2005/07/09 15:55:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/wmCalClock-1.25-r1.ebuild,v 1.14 2005/09/13 10:01:22 s4t4n Exp $
 
 IUSE=""
 
@@ -16,12 +16,22 @@ KEYWORDS="x86 sparc alpha amd64 ~mips ppc ppc64"
 
 S=${WORKDIR}/${P}/Src
 
-src_compile ()
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+
+	# remove unneeded SYSTEM variable from Makefile, fixing bug #105730
+	cd ${S}
+	sed -i -e "s:\$(SYSTEM)::" Makefile
+}
+
+src_compile()
 {
 	emake CFLAGS="${CFLAGS}" || die "Compilation failed"
 }
 
-src_install ()
+src_install()
 {
 	dobin ${PN}
 	doman ${PN}.1

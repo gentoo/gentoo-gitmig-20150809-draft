@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmCalClock
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.10 2004/09/01 02:19:42 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmCalClock/ChangeLog,v 1.11 2005/09/13 10:01:22 s4t4n Exp $
+
+  13 Sep 2005; Michele Noberasco <s4t4n@gentoo.org> wmCalClock-1.25-r1.ebuild:
+  Added some magic sed to remove unneeded SYSTEM variable from Makefile,
+  fixing bug #105730.
 
   31 Aug 2004; Tom Gall <tgall@gentoo.org> wmCalClock-1.25-r1.ebuild:
   stable on ppc64, bug #61761
