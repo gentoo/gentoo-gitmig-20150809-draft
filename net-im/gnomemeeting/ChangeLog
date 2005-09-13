@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.59 2005/09/12 20:11:10 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.60 2005/09/13 20:00:05 dang Exp $
+
+  13 Sep 2005; <dang@gentoo.org> files/gnomemeeting-1.2.2-dbus.diff,
+  gnomemeeting-1.2.2.ebuild:
+  Patch gnomemeeting 1.2.2 to use the new dbus used by gnome 2.12
 
 *gnomemeeting-1.2.2 (12 Sep 2005)
 
