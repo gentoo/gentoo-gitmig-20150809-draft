@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmnote
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.6 2005/04/24 03:11:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.7 2005/09/13 19:55:47 agriffis Exp $
+
+  13 Sep 2005; Aron Griffis <agriffis@gentoo.org> libmnote-0.5.6.ebuild:
+  Mark 0.5.6 stable on alpha
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libmnote-0.5.6.ebuild:
   Stable on ppc.

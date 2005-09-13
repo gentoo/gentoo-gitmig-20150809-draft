@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/libmnote-0.5.6.ebuild,v 1.9 2005/04/24 03:11:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/libmnote-0.5.6.ebuild,v 1.10 2005/09/13 19:55:47 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://libexif.sf.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="alpha ppc ~sparc x86"
 
 DEPEND="dev-util/pkgconfig
 	>=media-libs/libexif-0.5.9"
