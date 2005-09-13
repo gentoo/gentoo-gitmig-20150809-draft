@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r1.ebuild,v 1.1 2005/09/13 01:10:46 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r1.ebuild,v 1.2 2005/09/13 03:26:11 joshuabaergen Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -36,7 +36,7 @@ IUSE="3dfx bitmap-fonts cjk debug doc font-server insecure-drivers ipv6 minimal
 	nls nocxx opengl pam sdk static truetype-fonts type1-fonts uclibc xprint xv"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
-FILES_VER="0.1"
+FILES_VER="0.1.1"
 PATCH_VER="0.1.3"
 XCUR_VER="0.3.1"
 XFSFT_ENC_VER="0.1"
