@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.4 2005/09/11 16:39:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.5 2005/09/13 16:07:50 sebastian Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -45,4 +45,6 @@ php-pear-r1_src_install() {
 	cd ${S}
 	mv ${WORKDIR}/package.xml ${S}
 	pear install --nodeps --installroot=${D} ${S}/package.xml || die "Unable to install PEAR package"
+	rm ${D}/usr/share/php/.filemap
+	rm ${D}/usr/share/php/.lock
 }
