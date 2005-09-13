@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.8.ebuild,v 1.7 2005/07/01 15:01:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.8.ebuild,v 1.8 2005/09/13 22:18:59 dang Exp $
 
 DESCRIPTION="Unit testing framework for c++"
 SRC_URI="http://www.uwyn.com/download/qtunit/${P}.tar.bz2"
@@ -10,7 +10,7 @@ SLOT="0"
 IUSE=""
 
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 DEPEND="=x11-libs/qt-3*"
 

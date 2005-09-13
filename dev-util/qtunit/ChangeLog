@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qtunit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.16 2005/07/01 15:01:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/ChangeLog,v 1.17 2005/09/13 22:18:59 dang Exp $
+
+  13 Sep 2005; <dang@gentoo.org> qtunit-0.9.8.ebuild:
+  Marked ~amd64
 
   01 Jul 2005; Caleb Tennis <caleb@gentoo.org> qtunit-0.9.8.ebuild:
   Fix qmake dir per bug #97535

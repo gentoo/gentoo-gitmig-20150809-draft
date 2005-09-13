@@ -1,4 +1,14 @@
-MD5 c489ed3abef1f7da7835122842569665 qtunit-0.9.8.ebuild 1845
-MD5 30d3bd0a9d85856472487719a747444d ChangeLog 2218
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0010048e4ece14ec4384838b2a0e3785 qtunit-0.9.8.ebuild 1851
+MD5 b217ec54d7abb4bbbab817093d488add ChangeLog 2288
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3f79b8e5e392324d04d02d18d9776afd files/digest-qtunit-0.9.8 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJ1BjomPajV0RnrERAgV4AJsGSfh3BUXlrAKkwdxBgMbprza7oQCePkxM
+XxSFmXArSqXNfebrO+5ZgVk=
+=5KFa
+-----END PGP SIGNATURE-----
