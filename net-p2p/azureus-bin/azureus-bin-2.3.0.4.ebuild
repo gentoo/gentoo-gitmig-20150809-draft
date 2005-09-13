@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.4.ebuild,v 1.2 2005/07/21 08:43:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.4.ebuild,v 1.3 2005/09/13 22:42:45 mkay Exp $
 
 inherit eutils java-pkg
 
@@ -126,5 +126,9 @@ pkg_postinst() {
 	ewarn "If you are upgrading, and the menu in azurues has entries like"
 	ewarn "\"!MainWindow.menu.transfers!\" then you have a stray MessageBundle.properties file,"
 	ewarn "and you may safely delete ~/.Azureus/MessagesBundle.properties"
+	echo
+	einfo "It's recommended to use sun-java in version 1.5 or later."
+	einfo "If you'll notice any problems running azureus and you've"
+	einfo "got older java, try to upgrade it"
 	echo
 }
