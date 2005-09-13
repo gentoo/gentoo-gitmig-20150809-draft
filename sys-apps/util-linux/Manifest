@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 af4d9067188d2b9be9ff65f0a2482a1f util-linux-2.12i-r1.ebuild 3846
-MD5 89e5a363944a7f11b89567579426d84c ChangeLog 18562
+MD5 0b33f0ea7ff6a0de1ed36443ab1636c6 ChangeLog 18575
 MD5 3539732064102ec9896b7ae3b90e8e99 util-linux-2.12p-r1.ebuild 4396
 MD5 d6ba8b2f510bf2b52c0ddc096a1bc720 util-linux-2.12q-r2.ebuild 5127
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -39,7 +39,7 @@ MD5 d20405e12353610b3ef8fbc2e1d57f2a files/crypto-loop.initd 1625
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJt1L1ZcsMnZjRyIRAumtAKCqELcrvv++2ZdfNXOMmhNswn8zBwCgosG5
-mwCix4gW2itrNE91/U8ISCE=
-=AM67
+iD8DBQFDJt351ZcsMnZjRyIRAjyDAJ9WikfX3Z+6oLhtmzAsFZSQ9hu7SwCdFitp
+0QdO2/72E8NSwGZj27Zw8VU=
+=bbms
 -----END PGP SIGNATURE-----
