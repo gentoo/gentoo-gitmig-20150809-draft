@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.83 2005/09/13 13:35:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.84 2005/09/13 14:04:46 dragonheart Exp $
+
+  13 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  -shorewall-2.0.17.ebuild, -shorewall-2.2.6.ebuild:
+  removed 2.0.17 and 2.2.6 - no major upgrade transition plans mentioned in
+  the comprehensive shorewall documentation. Thanks Gustavo for convincing me
 
   13 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   shorewall-2.4.2.ebuild:
