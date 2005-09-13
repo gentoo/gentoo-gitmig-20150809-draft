@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 57bc1ba91336dd8842272fa11a13aef9 ChangeLog 2010
-MD5 1e5b8ed08a8e188a36d515d2d5742121 ksig-3.4.1.ebuild 398
 MD5 6b156f9629e959376569d918e129bf8a ksig-3.5_alpha1.ebuild 378
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f7c6609b2333ccd23784fc7dd847030e files/digest-ksig-3.5_alpha1 70
+MD5 e6d7454a4debaf4b3b3649d8b855e92d ksig-3.4.1.ebuild 397
+MD5 57bc1ba91336dd8842272fa11a13aef9 ChangeLog 2010
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-ksig-3.4.1 215
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHuFzj5H05b2HAEkRApNtAJ0XTYVbnIwKZ+7NYWxFtR2bLVmRjwCfYeW7
-uhk09RDho1YAs3NbqrmrAtQ=
-=lq+p
------END PGP SIGNATURE-----
+MD5 f7c6609b2333ccd23784fc7dd847030e files/digest-ksig-3.5_alpha1 70
