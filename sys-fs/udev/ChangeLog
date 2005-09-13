@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.139 2005/09/12 14:35:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.140 2005/09/13 17:41:16 gregkh Exp $
+
+*udev-069 (13 Sep 2005)
+
+  13 Sep 2005; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-069.ebuild:
+  069 udev release.  Lots of tiny bug fixes all over the place.
 
 *udev-068-r1 (12 Sep 2005)
 
