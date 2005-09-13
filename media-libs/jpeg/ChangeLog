@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.40 2005/09/06 22:38:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.41 2005/09/13 19:43:18 agriffis Exp $
+
+  13 Sep 2005; Aron Griffis <agriffis@gentoo.org> jpeg-6b-r5.ebuild:
+  Mark 6b-r5 stable on alpha
 
 *jpeg-6b-r6 (06 Sep 2005)
 
