@@ -1,6 +1,18 @@
-MD5 06a437bc4be85740b969b502c475cbf9 ChangeLog 723
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f075f8d8838505c699089b31fcf3cc7e ChangeLog 883
 MD5 f2499ed6dda0fcb78e21db8506a3cbdb cl-ironclad-0.7.1.ebuild 738
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 18e78806bc792ef1f1d0ef6aaa2ff66f cl-ironclad-0.8.ebuild 757
+MD5 31afabd3b352961692b6f995602c1f76 cl-ironclad-0.9.ebuild 756
 MD5 51cb707e62deb185cf0ead63b32ddf49 files/digest-cl-ironclad-0.7.1 66
 MD5 abe70514e5fbc21196c7b1a0014d2074 files/digest-cl-ironclad-0.8 64
+MD5 9355692d6d4ef17fe7aad31c27879fd7 files/digest-cl-ironclad-0.9 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDJvDMyiNZaEAZA+ARAttWAJ9NuLc4WQCDYUs2PA13TGq8Xt9/3QCfcuZv
+TMRiQGfpgObQOujG4aOrUBY=
+=/oG6
+-----END PGP SIGNATURE-----
