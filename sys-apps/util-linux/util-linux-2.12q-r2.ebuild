@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r2.ebuild,v 1.1 2005/09/13 14:04:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r2.ebuild,v 1.2 2005/09/13 23:56:28 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -39,8 +39,10 @@ src_unpack() {
 
 	# Old crypt support
 	if use old-crypt ; then
-		cd ${OLD_CRYPT_P}
-		epatch ${WORKDIR}/util-linux-${OLD_CRYPT_VER}-cryptoapi-losetup.patch
+		cd "${OLD_CRYPT_P}"
+		ewarn "You should update your system as USE=old-crypt"
+		ewarn "support will be dropped in future versions."
+		epatch "${WORKDIR}"/util-linux-${OLD_CRYPT_VER}-cryptoapi-losetup.patch
 	fi
 
 	cd "${S}"
@@ -49,50 +51,53 @@ src_unpack() {
 	use crypt && epatch "${WORKDIR}"/loop-AES-v${LOOP_AES_VER}/${P}.diff
 
 	# Fix rare failures with -j4 or higher
-	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch
+	epatch "${FILESDIR}"/${PN}-2.11z-parallel-make.patch
 
 	# Fix -f usage with -a and in general
-	epatch ${FILESDIR}/${PN}-2.12q-more-fake-checks-v2.patch
+	epatch "${FILESDIR}"/${PN}-2.12q-more-fake-checks-v2.patch
 
-	# Fix mtab updates with `mount --move /foo /bar`
-	epatch ${FILESDIR}/${PN}-2.12q-update-mtab-when-moving.patch
+	# Fix mtab updates with `mount --move /foo /bar` #104697
+	epatch "${FILESDIR}"/${PN}-2.12q-update-mtab-when-moving.patch
+
+	# Disable the -r option for non-root users #105805
+	epatch "${FILESDIR}"/${PN}-2.12-only-root-can-remount.patch
 
 	# Fix unreadable df output when using devfs ... this check is kind of 
 	# a hack, but whatever, the output isnt critical at all :P
-	[[ -e /dev/.devfsd ]] && epatch ${FILESDIR}/no-symlink-resolve.patch
+	[[ -e /dev/.devfsd ]] && epatch "${FILESDIR}"/no-symlink-resolve.patch
 
 	# Add the O option to agetty to display DNS domainname in the issue
 	# file, thanks to Marius Mauch <genone@genone.de>, bug #22275.
 	#
 	# NOTE:  Removing this will break future baselayout, so PLEASE
 	#        consult with me before doing so.
-	#
-	# <azarah@gentoo.org> (17 Jul 2003)
-	epatch ${FILESDIR}/${PN}-2.11z-agetty-domainname-option.patch
+	epatch "${FILESDIR}"/${PN}-2.11z-agetty-domainname-option.patch
 
 	# Fix french translation typo #75693
-	epatch ${FILESDIR}/${P}-i18n-update.patch
+	epatch "${FILESDIR}"/${P}-i18n-update.patch
 
 	# Add NFS4 support (kernel 2.5/2.6)
-	epatch ${FILESDIR}/${PN}-2.12i-nfsv4.patch
+	epatch "${FILESDIR}"/${PN}-2.12i-nfsv4.patch
 
 	# ignore managed/kudzu options #70873
-	epatch ${FILESDIR}/${PN}-2.12i-ignore-managed.patch
+	epatch "${FILESDIR}"/${PN}-2.12i-ignore-managed.patch
 
 	# Allow util-linux to be built with -fPIC
-	epatch ${FILESDIR}/${PN}-2.12i-pic.patch
+	# XXX: this needs to be punted as the error is in the
+	#      syscall macro which is part of linux-headers
+	epatch "${FILESDIR}"/${PN}-2.12i-pic.patch
 
 	# swapon gets confused by symlinks in /dev #69162
-	epatch ${FILESDIR}/${PN}-2.12p-swapon-check-symlinks.patch
+	epatch "${FILESDIR}"/${PN}-2.12p-swapon-check-symlinks.patch
 
 	# fix simple buffer overflow (from Debian)
-	epatch ${FILESDIR}/${PN}-2.12q-debian-10cfdisk.patch
+	epatch "${FILESDIR}"/${PN}-2.12q-debian-10cfdisk.patch
 
 	# don't build fdisk on m68k
-	epatch ${FILESDIR}/${PN}-2.12q-no-m68k-fdisk.patch
+	epatch "${FILESDIR}"/${PN}-2.12q-no-m68k-fdisk.patch
 
 	# don't force umask to 022 #93671
-	epatch ${FILESDIR}/${PN}-2.12q-dont-umask.patch
+	epatch "${FILESDIR}"/${PN}-2.12q-dont-umask.patch
 
 	# Enable random features
 	local mconfigs="MCONFIG"
@@ -123,7 +128,7 @@ src_compile() {
 	emake CFLAGS="${CFLAGS}" || die "make partx failed"
 
 	if use old-crypt ; then
-		cd ${OLD_CRYPT_P}
+		cd "${OLD_CRYPT_P}"
 		econf || die "old configure failed"
 		emake -C lib || die "old lib failed"
 		emake -C mount losetup mount || die "old make failed"
@@ -147,7 +152,7 @@ src_install() {
 	dodoc example.files/*
 
 	if use old-crypt ; then
-		cd ${OLD_CRYPT_P}/mount
+		cd "${OLD_CRYPT_P}"/mount
 		into /
 		newsbin mount mount-old-crypt || die
 		newsbin losetup losetup-old-crypt || die

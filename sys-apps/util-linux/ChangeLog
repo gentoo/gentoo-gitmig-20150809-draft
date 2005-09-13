@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.109 2005/09/13 14:09:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.110 2005/09/13 23:56:28 vapier Exp $
+
+  13 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12-only-root-can-remount.patch,
+  util-linux-2.12i-r1.ebuild, util-linux-2.12q-r2.ebuild:
+  Fix small security issue with umount and remount #105805.
 
 *util-linux-2.12q-r2 (13 Sep 2005)
 

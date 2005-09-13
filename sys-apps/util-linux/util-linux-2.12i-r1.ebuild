@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.16 2005/08/16 22:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.17 2005/09/13 23:56:28 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -41,6 +41,9 @@ src_unpack() {
 
 	# Fix rare failures with -j4 or higher
 	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch
+
+	# Disable the -r option for non-root users #105805
+	epatch "${FILESDIR}"/${PN}-2.12-only-root-can-remount.patch
 
 	# Fix unreadable df output
 	[[ -e /dev/.devfsd ]] && epatch ${FILESDIR}/no-symlink-resolve.patch
