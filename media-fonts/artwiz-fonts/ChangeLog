@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/artwiz-fonts
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.8 2004/11/01 17:39:16 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/ChangeLog,v 1.9 2005/09/13 15:57:32 agriffis Exp $
+
+  13 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  artwiz-fonts-2.4-r1.ebuild:
+  Mark 2.4-r1 stable on alpha
 
   01 Nov 2004; Markus Rothe <corsair@gentoo.org>
 
