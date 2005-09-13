@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.23 2005/09/10 19:04:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.24 2005/09/13 17:02:48 agriffis Exp $
+
+  13 Sep 2005; Aron Griffis <agriffis@gentoo.org> jhead-2.2.ebuild:
+  Mark 2.2 stable on alpha
 
 *jhead-2.4 (10 Sep 2005)
 
