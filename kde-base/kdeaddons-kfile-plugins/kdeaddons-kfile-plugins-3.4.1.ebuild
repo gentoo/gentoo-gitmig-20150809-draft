@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/kdeaddons-kfile-plugins-3.4.1.ebuild,v 1.9 2005/08/08 21:11:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/kdeaddons-kfile-plugins-3.4.1.ebuild,v 1.10 2005/09/13 07:48:34 agriffis Exp $
 KMNAME=kdeaddons
 KMNOMODULE=true
 KMEXTRA="kfile-plugins/"
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kdeaddons kfile plugins"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="ssl? ( dev-libs/openssl )"
 
