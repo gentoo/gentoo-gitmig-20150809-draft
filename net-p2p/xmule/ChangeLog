@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.59 2005/09/12 18:59:12 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.60 2005/09/13 19:31:09 mkay Exp $
+
+  13 Sep 2005; <mkay@gentoo.org> xmule-1.10.0.ebuild:
+  Marking 1.10.0 stable at x86. Older versions will be removed soon if there'll
+  be no bugs with that one
 
 *xmule-1.10.1 (12 Sep 2005)
 

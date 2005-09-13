@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.10.0.ebuild,v 1.5 2005/09/12 15:18:48 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.10.0.ebuild,v 1.6 2005/09/13 19:31:09 mkay Exp $
 
 inherit wxwidgets eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2 ZLIB GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 IUSE="nls gtk2 debug"
 
