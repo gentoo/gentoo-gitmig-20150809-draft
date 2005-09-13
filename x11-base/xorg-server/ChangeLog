@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.44 2005/09/13 01:02:51 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.45 2005/09/13 01:05:21 joshuabaergen Exp $
+
+  13 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/0.99.1-r6-check-for-glproto.patch,
+  -files/0.99.1-r8-check-for-glproto.patch, -files/fix-xnest.patch,
+  -files/make-fbcompose-endian-safe.patch, -xorg-server-0.99.1-r7.ebuild,
+  -xorg-server-0.99.1-r8.ebuild:
+  Remove old versions and patches.
 
 *xorg-server-0.99.1-r9 (13 Sep 2005)
 
