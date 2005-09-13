@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.2.ebuild,v 1.11 2005/09/04 12:25:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.2.ebuild,v 1.12 2005/09/13 20:17:49 agriffis Exp $
 
 DESCRIPTION="Secret Rabbit Code (aka libsamplerate) is a Sample Rate Converter for audio"
 HOMEPAGE="http://www.mega-nerd.com/SRC/"
 SRC_URI="http://www.mega-nerd.com/SRC/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~mips ppc ~ppc-macos ppc64 ~sparc ~x86 hppa"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ~ppc-macos ppc64 ~sparc ~x86"
 IUSE="sndfile static"
 RDEPEND=">=sci-libs/fftw-3.0.1
 	sndfile? ( >=media-libs/libsndfile-1.0.2 )"
