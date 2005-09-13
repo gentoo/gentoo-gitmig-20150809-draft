@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.91 2005/09/05 12:08:57 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.92 2005/09/13 01:16:04 dang Exp $
+
+  13 Sep 2005; <dang@gentoo.org> +files/xpdf-3.01-pdftoppm.patch,
+  xpdf-3.01.ebuild:
+  Add patch to make pdftoppm install in non-X builds. Bug #102077
 
   05 Sep 2005; Daniel Drake <dsd@gentoo.org> ChangeLog:
   Fix Manifest

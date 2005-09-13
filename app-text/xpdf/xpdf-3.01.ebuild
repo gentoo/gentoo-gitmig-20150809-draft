@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01.ebuild,v 1.1 2005/09/05 04:32:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01.ebuild,v 1.2 2005/09/13 01:16:04 dang Exp $
 
 inherit eutils
 
@@ -54,6 +54,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-3.00-gcc41.patch
 	epatch ${FILESDIR}/${PN}-3.00-64bit.patch
 	epatch ${FILESDIR}/${PN}-3.01-crash.patch
+	epatch ${FILESDIR}/${PN}-3.01-pdftoppm.patch
 	autoconf
 }
 
