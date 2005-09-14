@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.93 2005/09/06 04:18:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.94 2005/09/14 21:22:31 mkay Exp $
+
+*mldonkey-2.6.4-r1 (14 Sep 2005)
+
+  14 Sep 2005; <mkay@gentoo.org> +mldonkey-2.6.4-r1.ebuild:
+  Clean a mess in USE flags  - closing bug #103239 (thanks everyone, who takes 
+  part in discussion). Also droping 'oldgtk' flag and support for old gui, 
+  since it's not maintaned anymore.
 
 *mldonkey-2.6.4 (06 Sep 2005)
 
