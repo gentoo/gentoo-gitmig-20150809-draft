@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/xsu-0.2.3.ebuild,v 1.13 2005/01/01 11:36:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/xsu-0.2.3.ebuild,v 1.14 2005/09/14 10:17:59 obz Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Interface for 'su - username -c command' in GNOME."
 HOMEPAGE="http://xsu.freax.eu.org/"
@@ -22,7 +24,7 @@ src_compile() {
 		--prefix=/usr \
 		--man-base=/usr/share/man \
 		--doc-path=/usr/share/doc || die
-	make CC="gcc ${CFLAGS}" || die
+	make CC="$(tc-getCC) ${CFLAGS}" || die
 }
 
 src_install() {
