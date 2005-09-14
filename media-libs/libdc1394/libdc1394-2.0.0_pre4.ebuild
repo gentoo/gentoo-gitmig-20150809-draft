@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.4 2005/09/12 15:43:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.0.0_pre4.ebuild,v 1.5 2005/09/14 11:41:48 seemant Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${DISTDIR}/${P}-svn-fixes.patch.bz2
 
 	if ! use X; then
-		epatch ${FILESDIR}/nox11.patch
+		epatch ${FILESDIR}/nox11-2.patch
 	fi
 
 }
