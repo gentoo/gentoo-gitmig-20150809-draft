@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.4.0.ebuild,v 1.1 2005/09/06 05:13:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.4.0.ebuild,v 1.2 2005/09/14 01:44:59 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt dbus debug doc firefox gstreamer ipv6 kerberos krb4 ldap mono mozilla nntp pda profile spell ssl static"
+IUSE="crypt dbus debug doc gstreamer ipv6 kerberos krb4 ldap mono mozilla nntp pda profile spell ssl static"
 
 # Pango dependency required to avoid font rendering problems
 RDEPEND=">=x11-themes/gnome-icon-theme-1.2
@@ -40,11 +40,10 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	spell? ( >=app-text/gnome-spell-1.0.5 )
 	crypt? ( >=app-crypt/gnupg-1.2.2 )
 	ssl? (
-		mozilla? ( !firefox? ( >=www-client/mozilla-1.7.3 ) )
-		firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
-		!mozilla? ( !firefox? (
+		mozilla? ( >=www-client/mozilla-1.7.3 )
+		!mozilla? (
 			>=dev-libs/nspr-4.4.1
-			>=dev-libs/nss-3.9.2 ) ) )
+			>=dev-libs/nss-3.9.2 ) )
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )
@@ -53,6 +52,11 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 		=media-libs/gst-plugins-0.8* )
 	dbus? ( sys-apps/dbus )
 	mono? ( >=dev-lang/mono-1 )"
+
+	# For firefox, once it's fixed
+#		mozilla? ( !firefox? ( >=www-client/mozilla-1.7.3 ) )
+#		firefox? ( >=www-client/mozilla-firefox-1.0.6-r6 )
+#		!mozilla? ( !firefox? (
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
@@ -146,12 +150,13 @@ src_compile() {
 	# mozilla/firefox if the relevant USE flags are enabled. 'firefox' take
 	# precedence over 'mozilla'.
 	if use ssl ; then
-		if use firefox; then
-			NSS_LIB=$(pkg-config --variable=libdir firefox-nss)
-			NSS_INC=$(pkg-config --variable=includedir firefox-nss)/nss
-			NSPR_LIB=$(pkg-config --variable=libdir firefox-nspr)
-			NSPR_INC=$(pkg-config --variable=includedir firefox-nspr)/nspr
-		elif use mozilla; then
+#		if use firefox; then
+#			NSS_LIB=$(pkg-config --variable=libdir firefox-nss)
+#			NSS_INC=$(pkg-config --variable=includedir firefox-nss)/nss
+#			NSPR_LIB=$(pkg-config --variable=libdir firefox-nspr)
+#			NSPR_INC=$(pkg-config --variable=includedir firefox-nspr)/nspr
+#		elif use mozilla; then
+		if use mozilla; then
 			NSS_LIB=$(pkg-config --variable=libdir mozilla-nss)
 			NSS_INC=$(pkg-config --variable=includedir mozilla-nss)/nss
 			NSPR_LIB=$(pkg-config --variable=libdir mozilla-nspr)
