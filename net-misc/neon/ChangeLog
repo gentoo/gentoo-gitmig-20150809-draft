@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.51 2005/09/10 08:08:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.52 2005/09/14 23:46:13 ka0ttic Exp $
+
+  14 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> neon-0.24.7.ebuild:
+  0.24.7 stable on mips.
 
 *neon-0.25.3 (10 Sep 2005)
 
