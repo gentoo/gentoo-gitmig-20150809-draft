@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e05151b27c805588d03e1fce98b4b182 mantisbt-1.0.0_rc1.ebuild 897
-MD5 a1cc88222678518522ed09bbff9ca952 ChangeLog 1668
+MD5 6ce1a5afa10c30a0f884d736ffcea1a3 mantisbt-1.0.0_rc2.ebuild 897
+MD5 d15ed5514ac496e71ffd67f104793eb2 ChangeLog 1823
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 686ec1ebfc90a3c0c20836b50cc54934 mantisbt-0.18.3.ebuild 1030
-MD5 513519a15cada43083926d562bf423df files/digest-mantisbt-1.0.0_rc1 68
+MD5 aaabd486081a3b2aeb22bddd759bb22d files/digest-mantisbt-1.0.0_rc2 68
 MD5 35d6b6f4cf6611c8b6232b0c83c67f52 files/postinstall-en.txt 680
 MD5 4553a6ae29bae20c13ffa21fdb20281b files/digest-mantisbt-0.18.3 67
 MD5 97c947f30d07a6405194bed5981ceceb files/postinstall-en-1.0.0.txt 488
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDJDbJEzitwsaoONoRAl8WAJ936ilWN+XgWLnhoWWIWb57PyMUMwCZAQdX
-uGEfGqRzX1tznshsTiKqAQE=
-=iRNl
+iD8DBQFDJ/29EzitwsaoONoRAs/TAKDFnmfBK81q2YGihm8NMp9hJy60oACgtKkj
+bnaM/UP9VDsfg3yOfBQg2vw=
+=JMSO
 -----END PGP SIGNATURE-----
