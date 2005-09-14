@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5-r1.ebuild,v 1.4 2005/08/11 09:24:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5-r1.ebuild,v 1.5 2005/09/14 11:11:08 mrness Exp $
 
 inherit eutils
 
@@ -99,14 +99,12 @@ src_install() {
 
 	keepdir /var/run/quagga || die
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/init/zebra zebra || die
-	newexe ${FILESDIR}/init/ripd ripd || die
-	newexe ${FILESDIR}/init/ospfd ospfd || die
-	newexe ${FILESDIR}/init/bgpd bgpd || die
-
-	use ipv6 && ( newexe ${FILESDIR}/init/ripngd ripngd )
-	use ipv6 && ( newexe ${FILESDIR}/init/ospf6d ospf6d )
+	local i MY_SERVICES_LIST="zebra ripd ospfd bgpd"
+	use ipv6 && MY_SERVICES_LIST="${MY_SERVICES_LIST} ripngd ospf6d"
+	for i in ${MY_SERVICES_LIST} ; do
+		newinitd ${FILESDIR}/${i}.init ${i} || die "failed to install ${i} init.d script"
+	done
+	newconfd ${FILESDIR}/zebra.conf zebra || die "failed to install zebra conf.d script"
 }
 
 pkg_postinst() {

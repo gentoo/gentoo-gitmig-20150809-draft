@@ -1,24 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 06a8e729cd2831e4dae30e0cbc2cb62a quagga-0.98.3.ebuild 4883
-MD5 e21bef9561207a5f68cd2de52ceff170 quagga-0.98.2.ebuild 4490
-MD5 dc9ceb74e15f8919c136137070c2ff80 ChangeLog 7805
-MD5 29639d7cea43800136e803866afa5bdf quagga-0.98.4.ebuild 4260
+MD5 c0a941e08060816c4c7068cd4023602c quagga-0.98.3.ebuild 4861
+MD5 d30997e32c750bff03590ab79f7276ff quagga-0.98.2.ebuild 4468
+MD5 c4bcfc277e856924ed9ba4cead328cba ChangeLog 8277
+MD5 c5d35e84e9953411d425350619e46b15 quagga-0.98.4.ebuild 4238
 MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
-MD5 bf40271e4eafd69744cc6b8143733f88 quagga-0.96.5-r1.ebuild 3838
+MD5 7b34e71571fb66352e5e6713fe6840a2 quagga-0.96.5-r1.ebuild 3861
+MD5 cc109a746273bc0d6aee9d758e7524ab files/bgpd.init 900
+MD5 44547b687343ebfed7524cebc5626067 files/ospf6d.init 919
 MD5 1a1df9fb95d48001187e1f56dc4ff5e5 files/digest-quagga-0.98.2 66
 MD5 ab93cbbeeed343892eea7f9b79217a8b files/digest-quagga-0.98.3 66
 MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
+MD5 39b8cb21b55de53af38c94c2f5d85917 files/ripd.init 900
+MD5 120ab1b53975ec86e78266f31e935ab6 files/ripngd.init 920
 MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5-r1 142
 MD5 18c1046db57ea850aabd385058522cc4 files/quagga.env 25
 MD5 0b834e6f9fd5d40f3018fb7e4ba04faa files/quagga.pam 1145
-MD5 cf38f951a51b3343a1314e600b3c5fe3 files/init/bgpd 900
-MD5 c10d85e098c8405567e6df707740ab85 files/init/ripd 900
-MD5 613ed2b9254132bf0d1dc40e530a5c6f files/init/ospfd 910
-MD5 21fee005d4bdb76ca10d09b8221aaf47 files/init/zebra 1161
-MD5 716ae5425e752e4c835c2883d905cac4 files/init/ospf6d 919
-MD5 615273280dd507a7b9705d200b68b8ec files/init/ripngd 920
+MD5 89b0cf4e70172bfcd195b2869cae28da files/ospfd.init 910
+MD5 c38e884372406e9e59616e436cd26388 files/zebra.conf 371
+MD5 2c1c5b782f96a74b48ccc496ad7a3865 files/zebra.init 1168
 MD5 7da4097332468741416e156a2e5d35e4 files/patches-0.98.2/amir-connected-route.patch 6336
 MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch 14570
 MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.2/ht-20040304-classless-bgp.patch 1581
@@ -28,7 +29,7 @@ MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.3/ht-20040304-classless-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDJxrENSP4Vda7IdsRAoEiAJ9aHiWT7BBl3PK8EyhI9Z24LGd1WQCcCjg0
-jz4ygCBUJhuQTMj9qTshw1g=
-=Z9jd
+iD8DBQFDKAVkNSP4Vda7IdsRAhXPAJ92dT40836Pr+s0x8EV30gLLpBiAwCfR+SV
+ANB85ToVTVAmKFMBbVxmdiw=
+=hC/h
 -----END PGP SIGNATURE-----
