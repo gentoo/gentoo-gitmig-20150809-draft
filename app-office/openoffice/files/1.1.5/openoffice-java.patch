@@ -1,0 +1,36 @@
+diff -urN oo_1.1_src.orig/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOAddInCreateIterator.java oo_1.1_src/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOAddInCreateIterator.java
+--- oo_1.1_src.orig/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOAddInCreateIterator.java	2004-02-10 01:00:11.000000000 +0100
++++ oo_1.1_src/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOAddInCreateIterator.java	2004-02-09 11:19:53.000000000 +0100
+@@ -200,7 +200,7 @@
+         index--;
+     }
+     
+-    public org.openide.WizardDescriptor$Panel current() {
++    public org.openide.WizardDescriptor.Panel current() {
+         return panels[index];
+     }
+     
+diff -urN oo_1.1_src.orig/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOIDLWizardIterator.java oo_1.1_src/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOIDLWizardIterator.java
+--- oo_1.1_src.orig/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOIDLWizardIterator.java	2004-02-10 01:00:48.000000000 +0100
++++ oo_1.1_src/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOIDLWizardIterator.java	2004-02-09 11:20:15.000000000 +0100
+@@ -207,7 +207,7 @@
+    index--;
+   }
+ 
+-  public org.openide.WizardDescriptor$Panel current()
++  public org.openide.WizardDescriptor.Panel current()
+    {
+      return panels[index];
+    }
+diff -urN oo_1.1_src.orig/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOServiceCreateIterator.java oo_1.1_src/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOServiceCreateIterator.java
+--- oo_1.1_src.orig/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOServiceCreateIterator.java	2004-02-10 01:01:29.000000000 +0100
++++ oo_1.1_src/odk/source/OOSupport/org/netbeans/modules/openoffice/wizard/OOServiceCreateIterator.java	2004-02-09 11:20:35.000000000 +0100
+@@ -214,7 +214,7 @@
+         index--;
+     }
+     
+-    public org.openide.WizardDescriptor$Panel current() {
++    public org.openide.WizardDescriptor.Panel current() {
+         return panels[index];
+     }
+     

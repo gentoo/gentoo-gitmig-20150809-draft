@@ -1,0 +1,24 @@
+--- oo_1.1_src/vcl/source/glyphs/gcach_ftyp.cxx.ft217	2004-01-08 03:36:33.000000000 -0500
++++ oo_1.1_src/vcl/source/glyphs/gcach_ftyp.cxx	2004-01-08 11:02:21.000000000 -0500
+@@ -77,7 +77,8 @@
+ #include <osl/file.hxx>
+ #include <osl/thread.hxx>
+ 
+-#include "freetype/freetype.h"
++#include <ft2build.h>
++#include FT_FREETYPE_H
+ #include "freetype/ftglyph.h"
+ #include "freetype/ftoutln.h"
+ #include "freetype/tttables.h"
+--- oo_1.1_src/vcl/source/glyphs/gcach_layout.cxx.217	2004-01-08 03:36:46.000000000 -0500
++++ oo_1.1_src/vcl/source/glyphs/gcach_layout.cxx	2004-01-08 11:03:04.000000000 -0500
+@@ -68,7 +68,8 @@
+ #endif
+ 
+ #ifndef _SV_GCACHFTYP_HXX
+-#include <freetype/freetype.h>
++#include <ft2build.h>
++#include FT_FREETYPE_H
+ #include <gcach_ftyp.hxx>
+ #endif
+ 
