@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzma
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.1 2005/08/27 14:00:59 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.2 2005/09/14 16:55:51 grobian Exp $
+
+  14 Sep 2005; Fabian Groffen <grobian@gentoo.org> lzma-4.27.ebuild:
+  Marking ~ppc-macos (bug #105844)
 
 *lzma-4.27 (27 Aug 2005)
 
