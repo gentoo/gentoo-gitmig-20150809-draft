@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.2.ebuild,v 1.1 2005/09/14 10:53:16 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.1.2.ebuild,v 1.2 2005/09/14 13:46:54 kaiowas Exp $
 
 inherit eutils
 
@@ -30,7 +30,6 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 
 	sed -i 's|var/log/nepenthes.log|/var/log/nepenthes/nepenthes.log|' "${S}/nepenthes-core/src/Nepenthes.cpp"
-	sed -i 's|var/log/hexdumps/|/var/lib/nepenthes/hexdumps/|' "${S}/nepenthes-core/src/Utilities.cpp"
 }
 
 src_compile() {
@@ -45,7 +44,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	for i in ${D}/etc/nepenthes/*; do
-		sed -i 's|"var/binaries|"/var/lib/nepenthes/binaries|;s|"var/log|"/var/log/nepenthes|;s|"lib/nepenthes|"/usr/lib/nepenthes|;s|"etc|"/etc|' $i
+		sed -i 's|"var/binaries|"/var/lib/nepenthes/binaries|;s|"var/hexdumps|"/var/lib/nepenthes/hexdumps|;s|"var/log|"/var/log/nepenthes|;s|"lib/nepenthes|"/usr/lib/nepenthes|;s|"etc|"/etc|' $i
 	done
 
 	rm ${D}/usr/bin/nepenthes

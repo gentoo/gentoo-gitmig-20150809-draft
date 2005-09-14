@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 121e52302b508d741d68a51265135609 metadata.xml 387
-MD5 01b4875d75bfe246ad16d3c8fde97f23 ChangeLog 428
+MD5 23d1c961a078cc0b2be409b957490a3a ChangeLog 517
 MD5 5c937dbc7f597effd30fdba0983e668d nepenthes-0.1.1.ebuild 1947
-MD5 0e81d5ffe6aebea31b1e005a05225242 nepenthes-0.1.2.ebuild 1855
+MD5 c40f13ca3d1b386950410d60c26d8363 nepenthes-0.1.2.ebuild 1801
 MD5 1f59aae5e0641b494e1ce286b9f2a341 files/digest-nepenthes-0.1.1 68
 MD5 9f779f5117afae2b26f1e4fbff55ff4b files/nepenthes.confd 123
 MD5 1c20696c1b6d548688b9a9db60ad74c8 files/nepenthes.initd 538
@@ -13,7 +13,7 @@ MD5 efe8deb0307daa08f8956fe1f29a61bd files/digest-nepenthes-0.1.2 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFDKCLDGSBEIeh4AEYRAh3SAJ9mjuKiti7ILFlSNI8ML92L7z/W5gCfSavh
-2zFWg9IwOmR8J6B0vOqfRhc=
-=yQrz
+iD8DBQFDKFGyGSBEIeh4AEYRAqSoAJ4nIYVRK7S0Dw7y4+jhkbALJRyiOwCgjdxS
+4eAEZBzYs7Ga27iinjBg0Eo=
+=vXPP
 -----END PGP SIGNATURE-----
