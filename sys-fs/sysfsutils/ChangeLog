@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.30 2005/08/29 18:15:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.31 2005/09/14 21:12:42 ranger Exp $
+
+  14 Sep 2005; Brent Baude <ranger@gentoo.org> sysfsutils-1.3.0.ebuild:
+  Marking sysfsutils-1.3.0 stable for ppc64 for livecd fixes
 
   29 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   sysfsutils-1.2.0-r2.ebuild:
