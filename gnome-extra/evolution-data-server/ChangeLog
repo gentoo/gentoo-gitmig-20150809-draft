@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.60 2005/09/10 15:44:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.61 2005/09/14 01:50:29 dang Exp $
+
+  14 Sep 2005; <dang@gentoo.org> evolution-data-server-1.4.0.ebuild:
+  Remove firefox flag for now, as evo can't be built against it yet and have
+  working ssl
 
   10 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
   evolution-data-server-1.4.0.ebuild:
