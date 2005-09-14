@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.83 2005/09/06 16:09:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.84 2005/09/14 12:29:22 stefaan Exp $
+
+*heimdal-0.7-r1 (14 Sep 2005)
+
+  14 Sep 2005; Stefaan De Roeck <stefaan@gentoo.org> +heimdal-0.7-r1.ebuild:
+  Fix compilation with multiple berkdb-versions installed (#100723), don't
+  build with kerberos4 support when not in use flags (#100884)
 
   06 Sep 2005; Brent Baude <ranger@gentoo.org> heimdal-0.6.5.ebuild:
   Marking heimdal-0.6.5 as ~ppc64 to support Bug 104943
