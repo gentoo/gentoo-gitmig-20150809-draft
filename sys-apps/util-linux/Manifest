@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 40353e338343ed2b6a8f23259c881e49 util-linux-2.12q.ebuild 4785
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5497e9050dc8cde95a0e015edcd59c81 util-linux-2.12i-r1.ebuild 3960
-MD5 7b72b4f6e03a9ff3f8b22d19ab70146e util-linux-2.12q-r2.ebuild 5462
-MD5 8b1e95795afacd2efcb617ab782897b8 ChangeLog 18798
+MD5 5f6bfcc9cec96a297071615eadca2dbc util-linux-2.12q-r2.ebuild 5579
+MD5 7ec017e092d564a2362a94271d03642d ChangeLog 19022
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 28b1a8ed38823851eafadacef8ce11ec files/util-linux-2.12q-no-m68k-fdisk.patch 239
@@ -35,10 +35,11 @@ MD5 d927611f34139a40f1fc9f4162c61f8a files/util-linux-2.12-kernel-2.6.patch 2964
 MD5 0b95e856fd2f375270cf2ec4eaa69c8a files/crypto-loop.confd 505
 MD5 b360252f16d707f668b605d7a2abb791 files/util-linux-2.12q-dont-umask.patch 439
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
+MD5 8a13c61b447c1533df4b919cf2646fea files/util-linux-2.12q-umount-dont-write-mtab-with-remount.patch 467
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJ2c9gIKl8Uu19MoRAp9FAJ9VJF3v1D6PR3o2z2pbJZ54gy58cwCeNy46
-p4Tsjisbpa8ACCyrDjb0rAs=
-=muRA
+iD8DBQFDJ5ZhgIKl8Uu19MoRAqcnAKCELR5+KqJao2LihGGCfdmCglOflQCfSErF
+UISx1CegpX9La5rUhixyNWM=
+=DZdM
 -----END PGP SIGNATURE-----

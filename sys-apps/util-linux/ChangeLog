@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.110 2005/09/13 23:56:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.111 2005/09/14 03:17:38 vapier Exp $
+
+  14 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.12q-umount-dont-write-mtab-with-remount.patch,
+  util-linux-2.12q-r2.ebuild:
+  Fix by Derick Swanepoel to have umount respect -n when using -r #98675.
 
   13 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.12-only-root-can-remount.patch,
