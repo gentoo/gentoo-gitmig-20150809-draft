@@ -21,3 +21,6 @@ imlib
 
 # wxwindows needs wxGTK which in turn needs gtk+
 wxwindows
+
+# see GCC man-page (-static): "This option will not work on Mac OS X..."
+static
