@@ -1,22 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e1f22e85c39ab4fedc30925f9f7f6e4b ChangeLog 6988
-MD5 ce9e98d8b029c69ffcdb77ac96ea5b0d ardour-0.9_beta29.ebuild 1461
-MD5 3c7ba68a6ee6a4618ac9e7da55b5644b ardour-0.9_beta26.ebuild 1322
 MD5 e09cf0f70ce311c8ef94602940a6cf6c ardour-0.9_beta27.ebuild 1319
+MD5 ce9e98d8b029c69ffcdb77ac96ea5b0d ardour-0.9_beta29.ebuild 1461
+MD5 15714ab8d191ab41b3a21e8f47042aaf ardour-0.9_beta30.ebuild 2065
+MD5 3c7ba68a6ee6a4618ac9e7da55b5644b ardour-0.9_beta26.ebuild 1322
 MD5 ddf2c2a467b0beccb346c708ae0ddca9 ardour-0.9_beta28.ebuild 1319
+MD5 e58a6f87a18a304380f63eafbc4597d9 ChangeLog 7145
 MD5 28188f1657f0547a15f682ed3626a397 metadata.xml 330
-MD5 e016dfbfc8e85547954395c455b04e61 files/ardour-gcc34.patch 9562
 MD5 11e862600d9c027d453d23dc2bf8763d files/ardour.aclocal.patch 8594
-MD5 67a6ee0e7176f783a48484445f39bf59 files/digest-ardour-0.9_beta29 70
 MD5 48a13a274bad04654ff331fda4c340f3 files/digest-ardour-0.9_beta26 70
 MD5 1bbc3488d83eb95237f944313185a05b files/digest-ardour-0.9_beta27 70
 MD5 0e89f38a43bd80ecd39e3547552a9956 files/digest-ardour-0.9_beta28 70
+MD5 67a6ee0e7176f783a48484445f39bf59 files/digest-ardour-0.9_beta29 70
+MD5 674b91595af44849fde8356f9b4fba70 files/digest-ardour-0.9_beta30 70
+MD5 e016dfbfc8e85547954395c455b04e61 files/ardour-gcc34.patch 9562
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCa2XR+uC/ViVka/0RAgLDAKCJClTX6DPXJreaqn7nST/jlCi33QCgmYix
-RBadgfLqgpUQGqnq30nsd/w=
-=AS62
+iD8DBQFDJ4YnT+MN7JbqCpMRAiGdAJ0aI8JqKymnAAbxI0RuA5RDjtUkBwCePk/K
+s0p5eyyNKZIDafFfpno/hJk=
+=Rc+R
 -----END PGP SIGNATURE-----
