@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.39 2005/09/12 16:47:44 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.40 2005/09/14 14:57:43 foser Exp $
+
+  14 Sep 2005; Marinus Schraal <foser@gentoo.org> epiphany-1.8.0.ebuild :
+  Remove libgnomeprint dep because it caused trouble with portage -D option
 
 *epiphany-1.8.0 (12 Sep 2005)
 

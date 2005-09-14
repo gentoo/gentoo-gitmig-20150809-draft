@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.0.ebuild,v 1.1 2005/09/12 16:47:44 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.0.ebuild,v 1.2 2005/09/14 14:57:43 foser Exp $
 
 inherit eutils gnome2
 
@@ -12,6 +12,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="dbus doc firefox python"
 
+# Note that there is no libgnomeprint dep, while it is 
+# specified in configure.in . This could in some rare
+# situations break portage dep resolution.
+#
+# Marinus <foser@gentoo.org> 14-9-2005
+
 RDEPEND=">=dev-libs/glib-2.8
 	>=x11-libs/gtk+-2.8.3
 	>=dev-libs/libxml2-2.6.12
@@ -21,7 +27,6 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/gnome-desktop-2.9.91
 	>=x11-libs/startup-notification-0.5
-	>=gnome-base/libgnomeprint-2.4
 	>=gnome-base/libgnomeprintui-2.4
 	>=gnome-base/libbonobo-2
 	>=gnome-base/orbit-2
