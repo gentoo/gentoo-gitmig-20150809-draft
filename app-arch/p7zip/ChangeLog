@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.24 2005/08/27 13:47:43 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.25 2005/09/14 17:28:41 grobian Exp $
+
+  14 Sep 2005; Fabian Groffen <grobian@gentoo.org> p7zip-4.20-r1.ebuild:
+  Marking ~ppc-macos (bug #105853)
 
 *p7zip-4.20-r1 (27 Aug 2005)
 
