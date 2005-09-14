@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-4.12.ebuild,v 1.5 2005/09/01 18:34:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-4.15.ebuild,v 1.1 2005/09/14 23:26:47 mkennedy Exp $
 
 inherit eutils
 
+DEB_PV=sarge2
+
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/common-lisp-controller/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://gentoo/${PN}_${PV}${DEB_PV}.tar.gz"
 
 LICENSE="LLGPL-2.1"
 SLOT="0"
@@ -14,26 +16,23 @@ KEYWORDS="x86 sparc ppc ~mips ~ppc-macos amd64"
 IUSE=""
 
 DEPEND="app-admin/realpath
-	>=dev-lisp/cl-asdf-1.84"
+	>=dev-lisp/cl-asdf-1.84
+	dev-lang/perl"
 
-# No logger required anymore
-#	!ppc-macos? ( virtual/logger )"
-
-# Nothing requires defsystem anymore
-#	>=cl-defsystem3-3.3i-r3
-
-S=${WORKDIR}/clc
+S=${WORKDIR}/${PN}-${PV}${DEB_PV}
 
 src_unpack() {
 	unpack ${A}
-	# remove
-	epatch ${FILESDIR}/${PV}-user-clc-systems-gentoo.patch || die
+	cd ${S}/man
+	ln -s clc-{,un}register-user-package.1
+	for i in unregister-common-lisp-implementation {,un}register-common-lisp-source; do
+		ln -s register-common-lisp-implementation.8 ${i}.8
+	done
 }
 
 src_install() {
-	# user package support not in v4
-#	dobin clc-register-user-package
-#	dobin clc-unregister-user-package
+	dobin clc-register-user-package
+	dobin clc-unregister-user-package
 	dosbin register-common-lisp-implementation
 	dosbin register-common-lisp-source
 	dosbin unregister-common-lisp-implementation
@@ -41,28 +40,14 @@ src_install() {
 	insinto /usr/share/common-lisp/source/common-lisp-controller
 	doins common-lisp-controller.lisp
 	doins post-sysdef-install.lisp
-
-#	doman man/clc-register-user-package.1
-	doman man/register-common-lisp-implementation.8
-
-#	dosym /usr/share/man/man1/clc-register-user-package.1.gz \
-#		/usr/share/man/man1/clc-unregister-user-package.1.gz
-	dosym /usr/share/man/man8/register-common-lisp-implementation.8.gz \
-		/usr/share/man/man8/unregister-common-lisp-implementation.8.gz
-	dosym /usr/share/man/man8/register-common-lisp-implementation.8.gz \
-		/usr/share/man/man8/register-common-lisp-source.8.gz
-	dosym /usr/share/man/man8/register-common-lisp-implementation.8.gz \
-		/usr/share/man/man8/unregister-common-lisp-source.8.gz
-
+	doman man/*.[18]
 	insinto /etc
 	doins ${FILESDIR}/${PV}/lisp-config.lisp
-
 	dodoc ${FILESDIR}/README.Gentoo
 	dodoc DESIGN.txt
 }
 
 pkg_postinst() {
-
 	test -d /var/cache/common-lisp-controller \
 		|| mkdir /var/cache/common-lisp-controller
 	chmod 1777 /var/cache/common-lisp-controller
