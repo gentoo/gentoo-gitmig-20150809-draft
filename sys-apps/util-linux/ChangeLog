@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.114 2005/09/14 13:35:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.115 2005/09/14 13:45:56 azarah Exp $
+
+*util-linux-2.12q-r3 (14 Sep 2005)
+
+  14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/util-linux-2.12q-use-update_mtab-for-fake.patch,
+  +util-linux-2.12q-r3.ebuild:
+  Fix 'mount -f' adding dups in mtab.  Bump rev for security fix to umount
+  (bug #105805).
 
   14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
   files/util-linux-2.12q-update_mtab-fixes.patch:
