@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.34 2005/08/24 16:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.35 2005/09/14 07:25:33 agriffis Exp $
+
+  14 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnump3d-2.9.3.ebuild:
+  Mark 2.9.3 stable on alpha
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> gnump3d-2.9.4.ebuild:
   Use newconfd/newinitd.
