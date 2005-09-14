@@ -1,7 +1,18 @@
-MD5 4ce086aa3e1cb14fa19367735f800469 kbedic-4.0.ebuild 810
-MD5 68b2a1693db1ce4f57ff295525c98328 ChangeLog 2086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da46a6dd58f89f43bb2d1d0089ed4ecd ChangeLog 2267
+MD5 c3cc8f32782f1408d3aa2490725274b9 kbedic-4.0.ebuild 895
 MD5 2f4ed555da56ae2056e929aba043fde3 metadata.xml 345
-MD5 fc90d2bd7719168f5821f02e64af3a6f files/kbedic-3.1-location.diff 1189
+MD5 dc706f56c46025d45cdf6918bde9fd7e files/kbedic-3.1-gcc3.diff 4009
 MD5 0dabffe05e0bc4a604d72cd1ef91a574 files/kbedic.desktop 361
 MD5 1b395c5dbddbb7f8c6d2db891b80c3cd files/digest-kbedic-4.0 63
-MD5 dc706f56c46025d45cdf6918bde9fd7e files/kbedic-3.1-gcc3.diff 4009
+MD5 fc90d2bd7719168f5821f02e64af3a6f files/kbedic-3.1-location.diff 1189
+MD5 73888d6dadf76b634977e91bd24d8b0f files/ppc-gfxopt.patch 288
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKHaWcsIHjyDViGQRAnAAAJ45lsycD5+h1eIubtpywAlTmFxpwACgzPFK
+4bs2TsB78NFvBwe3rbuFmOI=
+=lpVI
+-----END PGP SIGNATURE-----

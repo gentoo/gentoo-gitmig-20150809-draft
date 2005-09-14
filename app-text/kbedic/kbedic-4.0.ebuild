@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.10 2005/07/07 04:29:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.11 2005/09/14 19:13:59 josejx Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="English <-> Bulgarian Dictionary"
 HOMEPAGE="http://kbedic.sourceforge.net"
@@ -10,11 +10,18 @@ SRC_URI="mirror://sourceforge/kbedic/$P.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc"
 IUSE="kde"
 
 DEPEND="=x11-libs/qt-3*
 	kde? ( >=kde-base/kdelibs-3 )"
+
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/ppc-gfxopt.patch
+}
 
 src_compile() {
 	set-qtdir 3

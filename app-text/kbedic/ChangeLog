@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbedic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.18 2005/07/07 04:29:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.19 2005/09/14 19:13:59 josejx Exp $
+
+  14 Sep 2005; Joseph Jezak <josejx@gentoo.org>
+  +files/ppc-gfxopt.patch, kbedic-4.0.ebuild:
+  Marked ppc and added patch for -mpowerpc-gfxopt fix. Thanks bambam. (Bug
+  #99198)
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> kbedic-4.0.ebuild:
   Fix qt dep
