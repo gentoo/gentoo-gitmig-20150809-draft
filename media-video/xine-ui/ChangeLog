@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.97 2005/09/14 09:30:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.98 2005/09/14 11:06:00 flameeyes Exp $
+
+*xine-ui-0.99.4-r3 (14 Sep 2005)
+
+  14 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -xine-ui-0.99.4-r1.ebuild, -xine-ui-0.99.4-r2.ebuild,
+  +xine-ui-0.99.4-r3.ebuild:
+  Added patch to disable xinerama (and xinerama useflag), removed old versions.
 
   14 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xine-ui-0.99.4-r2.ebuild:
