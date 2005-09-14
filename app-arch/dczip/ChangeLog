@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dczip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.5 2005/01/01 11:43:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.6 2005/09/14 15:48:03 grobian Exp $
+
+  14 Sep 2005; Fabian Groffen <grobian@gentoo.org> dczip-2.05.ebuild:
+  Marking ~ppc-macos (bug #105843)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dczip-2.05.ebuild:
   Masked dczip-2.05.ebuild stable for ppc
