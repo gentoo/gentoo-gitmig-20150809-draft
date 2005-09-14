@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.01.ebuild,v 1.2 2005/08/24 00:29:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.01.ebuild,v 1.3 2005/09/14 00:08:09 vapier Exp $
 
 inherit eutils
 
@@ -59,6 +59,7 @@ src_unpack() {
 	# patches for 1.00 go here.
 	epatch "${FILESDIR}"/1.00/busybox-read-timeout.patch
 	epatch "${FILESDIR}"/1.00/readlink-follow.patch
+	epatch "${FILESDIR}"/1.00/more-insmod-arches.patch
 	epatch "${FILESDIR}"/1.00/bash-tests.patch
 	epatch "${FILESDIR}"/1.00/standalone.patch
 	epatch "${FILESDIR}"/1.00/nice.patch
