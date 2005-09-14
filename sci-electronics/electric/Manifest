@@ -1,5 +1,8 @@
-MD5 41440c279f5b5f86d2cbb7136948cbdc electric-7.00.ebuild 1008
-MD5 010000a9cc8049e1f2a72f29f48c2df5 ChangeLog 3002
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 65be440c1d6511e8812cd4daf935805b electric-7.00.ebuild 1014
+MD5 4d9825d4a03f679a6128e6ea1ab1b034 ChangeLog 3073
 MD5 05879f157295d3c898136422a0b79009 electric-6.08-r1.ebuild 954
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 67fe7d0e0440fec38e812682bd6fb218 files/digest-electric-7.00 66
@@ -9,3 +12,10 @@ MD5 0bcd09959370bd09c26909326c5cc8f1 files/6.08-fix-sandbox-r1.patch 940
 MD5 08ac6be372fdf34293ebc04a592c6063 files/digest-electric-6.08-r1 66
 MD5 bff298428c1a56897e68ea9cd3ae68d4 files/7.00-fix-sandbox.patch 460
 MD5 aaf0ac9ca614a144e057e71e2056dace files/6.08-qt.patch 1373
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKHqGomPajV0RnrERAqlPAJ0ZPqS56wPcC2feImRsqApHVLcUOwCfTIIq
+NWLK8D+sZPUHKFthUJvWJI8=
+=Hn3d
+-----END PGP SIGNATURE-----
