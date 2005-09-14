@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r2.ebuild,v 1.4 2005/09/14 00:05:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r2.ebuild,v 1.5 2005/09/14 09:30:34 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -15,15 +15,38 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X nls lirc aalib libcaca readline curl ncurses"
 
-DEPEND="media-libs/libpng
+RDEPEND="media-libs/libpng
 	>=media-libs/xine-lib-1.0
 	lirc? ( app-misc/lirc )
-	X? ( virtual/x11 )
 	aalib? ( media-libs/aalib )
 	libcaca? ( media-libs/libcaca )
 	curl? ( >=net-misc/curl-7.10.2 )
-	ncurses? ( sys-libs/ncurses )"
-RDEPEND="nls? ( sys-devel/gettext )"
+	ncurses? ( sys-libs/ncurses )
+	X? ( || ( (
+			x11-libs/libX11
+			x11-libs/libXrender
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXext
+			x11-libs/libXxf86vm
+			x11-libs/libXv
+			x11-libs/libXinerama
+			x11-libs/libXtst
+			x11-libs/libXft )
+		virtual/x11 )
+		)"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	X? ( || ( (
+			x11-base/xorg-server
+			x11-libs/libX11
+			x11-libs/libXt
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/xineramaproto )
+		virtual/x11 )
+		)"
 
 src_unpack() {
 	unpack ${A}
