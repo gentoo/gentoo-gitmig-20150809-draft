@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.3.ebuild,v 1.1 2005/09/01 14:22:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.3.ebuild,v 1.2 2005/09/14 19:37:00 ka0ttic Exp $
 
-inherit eutils
+inherit eutils depend.php
 
 DESCRIPTION="Lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
@@ -23,7 +23,7 @@ RDEPEND=">=sys-libs/zlib-1.1
 	mysql?    ( >=dev-db/mysql-4.0.0 )
 	pcre?     ( >=dev-libs/libpcre-3.1 )
 	php?      (
-		>=dev-php/php-cgi-4.3.0
+		virtual/httpd-php
 		!net-www/spawn-fcgi
 	)
 	rrdtool? ( net-analyzer/rrdtool )
@@ -87,6 +87,8 @@ pkg_setup() {
 		ewarn "and mod_ssi."
 		ebeep 5
 	fi
+
+	use php && require_php_with_use cgi
 }
 
 src_unpack() {
