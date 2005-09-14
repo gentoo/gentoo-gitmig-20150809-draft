@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.11.0.ebuild,v 1.1 2005/08/16 23:06:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.12.0.ebuild,v 1.1 2005/09/14 02:59:26 leonardop Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ SLOT="2.2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cups doc static"
 
-RDEPEND=">=dev-libs/glib-1.3.10
+RDEPEND=">=dev-libs/glib-2
 	>=media-libs/libart_lgpl-2.3.7
 	>=x11-libs/pango-1.5
 	>=dev-libs/libxml2-2.4.23
@@ -20,14 +20,18 @@ RDEPEND=">=dev-libs/glib-1.3.10
 	>=media-libs/freetype-2.0.5
 	sys-libs/zlib
 	dev-libs/popt
-	cups? ( >=net-print/cups-1.1.20
+	cups? (
+		>=net-print/cups-1.1.20
 		>=net-print/libgnomecups-0.2 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.28
 	>=dev-util/pkgconfig-0.9
-	doc? ( ~app-text/docbook-xml-dtd-4.1.2
+	sys-devel/flex
+	sys-devel/bison
+	doc? (
+		~app-text/docbook-xml-dtd-4.1.2
 		>=dev-util/gtk-doc-0.9 )"
 
 DOCS="AUTHORS ChangeLog* NEWS README"
