@@ -3,25 +3,18 @@ Hash: SHA1
 
 MD5 52069416ee02cc54163f313df19ecba8 evince-0.4.0.ebuild 1587
 MD5 e4d15a65822c1ff8fd89a3a2568a371f evince-0.4.0-r1.ebuild 1657
-MD5 21eb73a36d506073e6684498ebfb34b6 evince-0.3.1.ebuild 1524
 MD5 c2ee0c3f5a3fc7a294b8d0b9f86fa735 evince-0.4.0-r2.ebuild 1734
-MD5 32dbef5be9cb61b94664be3d955d6687 ChangeLog 1871
+MD5 451275d11be47f8ca8c018ff7f9ccf8b ChangeLog 2095
 MD5 80e3213c196ad3e4d107694f8064aad3 metadata.xml 220
-MD5 8045fd83007414f43da18ac9a3e705da evince-0.3.2.ebuild 1384
-MD5 cb282319216c1397d7e84b39d6cc0e6f files/evince-0.3.1-t1lib_is_t1.patch 1175
 MD5 755b327b4928ab9492b7c2aab72ef52d files/evince-0.4.0-t1lib_is_t1.patch 976
 MD5 185784a35b672ed49ea8afb3aba25e30 files/evince-0.4.0-display-menu.patch 471
-MD5 cb282319216c1397d7e84b39d6cc0e6f files/evince-0.3.2-t1lib_is_t1.patch 1175
-MD5 5657db834dcf44bba4220ca2eff0373d files/digest-evince-0.3.1 65
-MD5 12dbf8f19f265cd6fd91fb3450e8c0ed files/digest-evince-0.3.2 65
 MD5 a8bcc7dab66f7a60936b49f43bc4e9a9 files/digest-evince-0.4.0 65
-MD5 09fa043eb4188cd63be7d39f0661ef8b files/evince-0.3.1-64bit.patch 492
 MD5 a8bcc7dab66f7a60936b49f43bc4e9a9 files/digest-evince-0.4.0-r1 65
 MD5 a8bcc7dab66f7a60936b49f43bc4e9a9 files/digest-evince-0.4.0-r2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJx/ZomPajV0RnrERArogAJ0b1SNLhX4H18cmEb6oafQpT4kA4QCeNBhB
-Kq9Mc4/kfDqdhA3TB2KZu1Q=
-=KZO2
+iD8DBQFDKHI+omPajV0RnrERAsV1AJ0b5rhbXEx11kDv7Nh2Yw0RV5eaPwCaAjwq
+p9EOdxpmXRGwWYxOF8wGckE=
+=jLCf
 -----END PGP SIGNATURE-----
