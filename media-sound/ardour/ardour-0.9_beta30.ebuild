@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta30.ebuild,v 1.1 2005/09/14 02:07:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta30.ebuild,v 1.2 2005/09/14 02:21:46 eldad Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="nls debug sse"
+IUSE="nls debug sse altivec"
 
 # From beta30 release notes:
 #  plugin latency compensation now working correctly (we believe)
@@ -35,30 +35,45 @@ RDEPEND="dev-util/pkgconfig
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/libsamplerate-0.0.14
 	>=dev-libs/libxml2-2.5.7
-	>=media-libs/libart_lgpl-2.3.16
-	>=dev-util/scons-0.96.1"
+	>=media-libs/libart_lgpl-2.3.16"
 
 DEPEND="${RDEPEND}
+	sys-devel/autoconf
+	sys-devel/automake
+	dev-util/pkgconfig
+	>=dev-util/scons-0.96.1
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${P/_/}"
 
 src_compile() {
+	# bug 99664
+	cd ${S}/libs/gtkmm
+	chmod a+x autogen.sh && ./autogen.sh || die "autogen failed"
+	econf || die "configure failed"
+
 	# Required for scons to "see" intermediate install location
 	mkdir -p ${D}
-	DBUG=no ; if useq debug ; then DBUG=yes ; fi
-	ENABLE_SSE=0 ; if useq sse ; then ENABLE_SSE=1 ; fi
 
-	scons DEBUG=${DBUG} USE_SSE_EVERYWHERE=${ENABLE_SSE} DESTDIR=${D} PREFIX=/usr KSI=0 -j2
+	use altivec && ALTIVEC=1 || ALTIVEC=0
+	use debug && ARDOUR_DEBUG=1 || ARDOUR_DEBUG=0
+	use nls && NLS=1 || NLS=0
+	use sse && SSE=1 || SSE=0
+
+	cd ${S}
+	scons \
+		ALTIVEC=${ALTIVEC} \
+		DEBUG=${ARDOUR_DEBUG} \
+		DESTDIR=${D} \
+		NLS=${NLS} \
+		PREFIX=/usr \
+		USE_SSE_EVERYWHERE=${SSE} \
+		KSI=0 \
+		-j2
 }
 
 src_install() {
 	scons install || die "make install failed"
-
-	# Workaround for xorg bug concerning lucida fonts. bug 73056. (2004 Dec 3 eldad)
-	# This workaround is no longer required as of ardour-0.9_beta29
-	# as it is already implemented in ardour_ui.rc
-	#sed -e 's/lucida[^-]*-/helvetica-/' -i ${D}/etc/ardour/ardour_ui.rc
 
 	dodoc DOCUMENTATION/*
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.45 2005/09/14 02:07:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.46 2005/09/14 02:21:46 eldad Exp $
+
+  14 Sep 2005; Eldad Zack <eldad@gentoo.org> ardour-0.9_beta30.ebuild:
+  Updated to kito's suggestions, added altivec useflag. bug #105726
 
 *ardour-0.9_beta30 (14 Sep 2005)
 
