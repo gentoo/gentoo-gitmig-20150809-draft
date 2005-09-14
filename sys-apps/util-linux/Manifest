@@ -2,11 +2,11 @@
 Hash: SHA1
 
 MD5 5497e9050dc8cde95a0e015edcd59c81 util-linux-2.12i-r1.ebuild 3960
-MD5 4ec337ef027b8e0f3c8ec6ad906821c0 ChangeLog 19263
+MD5 526225599dc07676b3820c84c7bb87b9 ChangeLog 19439
 MD5 42a00cdd523f8facea7f10a9f4df86a1 util-linux-2.12q-r2.ebuild 5692
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 40353e338343ed2b6a8f23259c881e49 util-linux-2.12q.ebuild 4785
-MD5 e8c2796a3427138ca8a09a69db357a1f files/util-linux-2.12q-update-mtab-when-moving.patch 1031
+MD5 3708f6eda344a2aa0a4d85d49f69dcee files/util-linux-2.12q-update-mtab-when-moving.patch 1036
 MD5 9d4c2454a6506ec913d901830ab06a22 files/util-linux-2.12-only-root-can-remount.patch 294
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
@@ -40,7 +40,7 @@ MD5 d20405e12353610b3ef8fbc2e1d57f2a files/crypto-loop.initd 1625
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJ+ih1ZcsMnZjRyIRAsy3AJ0WMToOWLTN8otX1+Mwby5jW8DKrQCgjXOw
-5CHUa8VLiZCzZDT6Jtc3roQ=
-=JeNN
+iD8DBQFDJ+qL1ZcsMnZjRyIRAjdJAKCS8ZuOu/0cS+1KKsAH0Zhv9fwRbwCguMYk
++G+gKy9qUTIrlQQkMZS+nuw=
+=lelx
 -----END PGP SIGNATURE-----

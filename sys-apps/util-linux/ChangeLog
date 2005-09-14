@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.112 2005/09/14 09:07:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.113 2005/09/14 09:15:35 azarah Exp $
+
+  14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/util-linux-2.12q-update-mtab-when-moving.patch:
+  Use xstrdup() instead of strdup() to catch out of memory issues.
 
   14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/util-linux-2.12q-update_mtab-fixes.patch,

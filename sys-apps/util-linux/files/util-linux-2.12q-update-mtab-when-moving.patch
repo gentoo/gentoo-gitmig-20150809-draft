@@ -3,8 +3,8 @@ and create a new /bar entry with wrong info.
 
 http://bugs.gentoo.org/104697
 
---- mount/mount.c
-+++ mount/mount.c
+--- 1/mount/mount.c
++++ 2/mount/mount.c
 @@ -665,6 +665,25 @@
  		else {
  			mntFILE *mfp;
@@ -17,7 +17,7 @@ http://bugs.gentoo.org/104697
 +				const char *olddir = mnt.mnt_fsname;
 +				struct mntentchn *oldmc = oldmc = getmntfile(olddir);
 +				if (oldmc != NULL) {
-+					mnt.mnt_fsname = strdup(oldmc->m.mnt_fsname);
++					mnt.mnt_fsname = xstrdup(oldmc->m.mnt_fsname);
 +					mnt.mnt_type = oldmc->m.mnt_type;
 +					mnt.mnt_opts = oldmc->m.mnt_opts;
 +					mnt.mnt_freq = oldmc->m.mnt_freq;
