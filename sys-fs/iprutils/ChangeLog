@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.7 2005/08/25 15:44:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.8 2005/09/14 21:14:18 ranger Exp $
+
+  14 Sep 2005; Brent Baude <ranger@gentoo.org> iprutils-2.0.15.3-r1.ebuild:
+  marking iprutils-2.0.15.3-r1 stable for ppc64
 
   25 Aug 2005; Brent Baude <ranger@gentoo.org> iprutils-2.0.15.3-r1.ebuild:
   Adding a dependancy for hotplug to iprutils-2.0.15.3-r1 so that the
