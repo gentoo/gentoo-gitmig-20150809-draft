@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r2.ebuild,v 1.3 2005/09/10 14:32:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r2.ebuild,v 1.4 2005/09/14 00:05:18 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 PATCHLEVEL="7"
 DESCRIPTION="Xine movie player"
@@ -30,14 +30,7 @@ src_unpack() {
 	cd ${S}
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
-
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.7
-	aclocal -I m4 || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake -afc || die "automake failed"
-	autoconf || die "autoconf failed"
-	libtoolize --copy --force
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
