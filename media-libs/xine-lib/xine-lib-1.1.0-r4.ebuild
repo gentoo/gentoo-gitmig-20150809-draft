@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r4.ebuild,v 1.2 2005/09/11 18:20:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r4.ebuild,v 1.3 2005/09/14 09:28:10 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -24,7 +24,17 @@ samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts ffmpeg"
 RESTRICT="nostrip"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
-	X? ( virtual/x11 )
+	X? ( || ( (
+			x11-libs/libXext
+			x11-libs/libX11 )
+		virtual/x11 ) )
+	xv? ( || ( x11-libs/libXv virtual/x11 ) )
+	xvmc? (
+		|| ( x11-libs/libXvMC virtual/x11 )
+		nvidia? ( media-video/nvidia-glx )
+		cle266? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
+		i8x0? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) ) )
+	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
@@ -50,6 +60,16 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
+	X? ( || ( (
+			x11-base/xorg-server
+			x11-libs/libXt
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/videoproto
+			x11-proto/xf86vidmodeproto )
+		virtual/x11 )
+		)
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
 	v4l? ( sys-kernel/linux-headers )
 	dev-util/pkgconfig
 	>=sys-devel/automake-1.7
@@ -72,6 +92,8 @@ src_unpack() {
 get_x11_dir() {
 	if [[ -f "${ROOT}/usr/$(get_libdir)/$1" ]]; then
 		echo "${ROOT}/usr/$(get_libdir)"
+	elif [[ -f "${ROOT}/usr/$(get_libdir)/xorg/$1" ]]; then
+		echo "${ROOT}/usr/$(get_libdir)/xorg"
 	elif [[ -f "${ROOT}/usr/X11R6/$(get_libdir)/$1" ]]; then
 		echo "${ROOT}/usr/X11R6/$(get_libdir)"
 	fi
