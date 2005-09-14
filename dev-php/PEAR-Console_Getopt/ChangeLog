@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Console_Getopt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getopt/ChangeLog,v 1.12 2005/09/10 02:36:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getopt/ChangeLog,v 1.13 2005/09/14 15:33:38 josejx Exp $
+
+  14 Sep 2005; Joseph Jezak <josejx@gentoo.org>
+  PEAR-Console_Getopt-1.2-r1.ebuild:
+  Marked ~ppc for bug #105673.
 
   10 Sep 2005; Jason Wever <weeve@gentoo.org>
   PEAR-Console_Getopt-1.2-r1.ebuild:

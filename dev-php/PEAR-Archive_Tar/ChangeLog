@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Archive_Tar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.19 2005/09/12 16:15:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/ChangeLog,v 1.20 2005/09/14 15:30:42 josejx Exp $
+
+  14 Sep 2005; Joseph Jezak <josejx@gentoo.org>
+  PEAR-Archive_Tar-1.3.1-r1.ebuild:
+  Marked ~ppc for bug #105673.
 
   12 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   PEAR-Archive_Tar-1.3.1.ebuild:
