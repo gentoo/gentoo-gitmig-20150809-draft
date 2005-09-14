@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.87 2005/08/18 22:27:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.88 2005/09/14 04:44:00 vapier Exp $
+
+  14 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/file-4.15-libtool.patch, file-4.15.ebuild:
+  Fix building with people who set LD_LIBRARY_PATH to retarded values #99593.
 
 *file-4.15 (18 Aug 2005)
 

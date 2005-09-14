@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.15.ebuild,v 1.2 2005/08/19 16:08:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.15.ebuild,v 1.3 2005/09/14 04:44:00 vapier Exp $
 
 inherit distutils libtool
 
@@ -20,7 +20,8 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 
-	uclibctoolize
+	epatch "${FILESDIR}"/${P}-libtool.patch #99593
+	elibtoolize
 
 	# make sure python links against the current libmagic #54401
 	sed -i "/library_dirs/s:'\.\./src':'../src/.libs':" python/setup.py
