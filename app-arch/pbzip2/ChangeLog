@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.8 2005/09/12 14:21:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.9 2005/09/14 17:50:15 grobian Exp $
+
+  14 Sep 2005; Fabian Groffen <grobian@gentoo.org> pbzip2-0.9.4.ebuild:
+  Marking ~ppc-macos (bug #105854)
 
   12 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> -pbzip2-0.9.1.ebuild:
   Cleaning out older versions.
