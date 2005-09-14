@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r2.ebuild,v 1.3 2005/09/14 03:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r2.ebuild,v 1.4 2005/09/14 09:07:25 azarah Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -64,6 +64,9 @@ src_unpack() {
 
 	# Respect -n with -r and umount #98675
 	epatch "${FILESDIR}"/${PN}-2.12q-umount-dont-write-mtab-with-remount.patch
+
+	# A few fixes to beat update_mtab() into submission.
+	epatch "${FILESDIR}"/${PN}-2.12q-update_mtab-fixes.patch
 
 	# Fix unreadable df output when using devfs ... this check is kind of 
 	# a hack, but whatever, the output isnt critical at all :P

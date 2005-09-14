@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.111 2005/09/14 03:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.112 2005/09/14 09:07:25 azarah Exp $
+
+  14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/util-linux-2.12q-update_mtab-fixes.patch,
+  util-linux-2.12q-r2.ebuild:
+  Fix various issues with update_mtab(), causing 'mount -f' to not update mtab
+  as expected, bug #105641.
 
   14 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.12q-umount-dont-write-mtab-with-remount.patch,
