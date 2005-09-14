@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.15 2005/09/11 10:29:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.16 2005/09/14 17:09:05 grobian Exp $
+
+  14 Sep 2005; Fabian Groffen <grobian@gentoo.org> lzop-1.02_rc1.ebuild:
+  Marking ~ppc-macos (bug #105845)
 
 *lzop-1.02_rc1 (11 Sep 2005)
 
