@@ -9,7 +9,7 @@ MD5 97ce907f092ad3c6917d9b0c4ccdc419 files/dcron-2.9-EDITOR.patch 634
 MD5 a82da32a58b097ea2ccd1b7a4aed72f3 files/dcron-2.9-ldflags.patch 590
 MD5 518d22de1cdd927de6c55ffb6a82bc46 files/crontab 823
 MD5 11c412642c8bf7caa068dfca3172802c files/dcron-2.9-pidfile.patch 437
-MD5 130e0a9c682f5241c8b67ddebf65e78b files/dcron.init 578
+MD5 25313097a72f3b106e2607d8b8d1b40a files/dcron.init 571
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r4 55
 MD5 1de333010665696629a381be64dad25a files/dcron-2.9-Makefile.patch 629
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r2 55
@@ -20,7 +20,7 @@ MD5 932978359b7a3b3a2d29a96827ceca83 files/dcron-2.7-Makefile-gentoo.diff 534
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDHR6ngIKl8Uu19MoRAl+xAJ9cBaL+Lt6hJnsKbrXsKcyrnkmttgCfc5wB
-CftclL3EOc/5eEPSvFzxYwM=
-=qaAQ
+iD8DBQFDJ1bJgIKl8Uu19MoRAjuzAJ9dOEd2UC1MGaTG7pMzJi1MBbyuWACeI69d
+YUusDGa/BufYb1ilEjuST5g=
+=DqkC
 -----END PGP SIGNATURE-----
