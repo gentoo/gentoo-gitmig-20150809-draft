@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.17 2005/05/04 15:52:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.18 2005/09/14 07:13:49 agriffis Exp $
+
+  14 Sep 2005; Aron Griffis <agriffis@gentoo.org> darkice-0.14.ebuild:
+  Mark 0.14 stable on alpha
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> darkice-0.15.ebuild:
   introduced support for the jack useflag. fixes #90995
