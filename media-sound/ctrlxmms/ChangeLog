@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ctrlxmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ctrlxmms/ChangeLog,v 1.8 2005/05/01 18:13:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ctrlxmms/ChangeLog,v 1.9 2005/09/14 07:11:09 agriffis Exp $
+
+  14 Sep 2005; Aron Griffis <agriffis@gentoo.org> ctrlxmms-1.1.ebuild:
+  Mark 1.1 stable on alpha
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> ctrlxmms-1.1.ebuild:
   Stable on ppc.

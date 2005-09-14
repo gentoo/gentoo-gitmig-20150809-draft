@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dc4accfed015da3f0ada456a980e7ab7 darkice-0.14.ebuild 1345
-MD5 a6fa2a58462e830a1944700fc5794839 darkice-0.15.ebuild 1418
-MD5 5012606fb5915ba960a090186fa2330d ChangeLog 2401
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 dc687438c29f2bf61a02265c3c1632ce files/digest-darkice-0.14 64
+MD5 80349cc787ccc35a47e0380b13c4231a ChangeLog 2500
+MD5 a6fa2a58462e830a1944700fc5794839 darkice-0.15.ebuild 1418
+MD5 3679435a9951ee44cb6d90890754745a darkice-0.14.ebuild 1343
 MD5 90f40fff234ed9f0943b2afd28765961 files/digest-darkice-0.15 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCeO/A06ebR+OMO78RAqjRAJ4t4rRfUnqDYXXTF+5NzWlnMI+vvwCeL/H8
-pHHg+ro/IQTjsIFU7J0mFG4=
-=aUZR
------END PGP SIGNATURE-----
+MD5 dc687438c29f2bf61a02265c3c1632ce files/digest-darkice-0.14 64
