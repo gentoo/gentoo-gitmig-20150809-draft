@@ -1,6 +1,6 @@
-diff -u -ruN logrotate-3.7.1.orig/logrotate.8 logrotate-3.7.1/logrotate.8
+diff --exclude-from=/home/dang/.diffrc -u -ruN logrotate-3.7.1.orig/logrotate.8 logrotate-3.7.1/logrotate.8
 --- logrotate-3.7.1.orig/logrotate.8	2003-08-07 07:13:14.000000000 -0400
-+++ logrotate-3.7.1/logrotate.8	2005-05-24 12:13:09.000000000 -0400
++++ logrotate-3.7.1/logrotate.8	2005-09-14 15:00:46.000000000 -0400
 @@ -3,7 +3,8 @@
  .SH NAME
  logrotate \- rotates, compresses, and mails system logs
@@ -61,8 +61,9 @@ diff -u -ruN logrotate-3.7.1.orig/logrotate.8 logrotate-3.7.1/logrotate.8
 +\fB-s\fR, \fB-\-state <statefile>\fR
  Tells \fBlogrotate\fR to use an alternate state file.  This is useful
 -if logrotate is being run as a different user for various sets of
+-log files.  The default state file is \fI/var/lib/logrotate/status\fR.
 +if \fBlogrotate\fR is being run as a different user for various sets of
- log files.  The default state file is \fI/var/lib/logrotate/status\fR.
++log files.  The default state file is \fI/var/lib/logrotate.status\fR.
  
  .TP
  \fB-\-usage\fR
@@ -341,7 +342,7 @@ diff -u -ruN logrotate-3.7.1.orig/logrotate.8 logrotate-3.7.1/logrotate.8
  option.
  
  .TP
-@@ -377,18 +386,20 @@
+@@ -377,34 +386,40 @@
  .TP
  \fBtabooext\fR [+] \fIlist\fR
  The current taboo extension list is changed (see the \fBinclude\fR directive
@@ -367,7 +368,12 @@ diff -u -ruN logrotate-3.7.1.orig/logrotate.8 logrotate-3.7.1/logrotate.8
  
  .SH FILES
  .PD 0
-@@ -400,11 +411,15 @@
+ .TP 27
+-\fI/var/lib/logrotate/status\fR
++\fI/var/lib/logrotate.status\fR
+ Default state file.
+ .TP 27
+ \fI/etc/logrotate.conf\fR
  Configuration options.
  
  .SH SEE ALSO
