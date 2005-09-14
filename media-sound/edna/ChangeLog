@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.23 2005/09/09 22:04:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.24 2005/09/14 07:21:16 agriffis Exp $
+
+  14 Sep 2005; Aron Griffis <agriffis@gentoo.org> edna-0.5-r4.ebuild:
+  Mark 0.5-r4 stable on alpha
 
   09 Sep 2005; Steve Arnold <nerdboy@gentoo.org> files/edna.gentoo:
   reverting init script change (seems to be a baselayout _pre issue)
