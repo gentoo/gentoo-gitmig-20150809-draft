@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.28 2005/08/01 14:13:28 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.29 2005/09/14 22:46:51 ka0ttic Exp $
+
+  14 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> libglademm-2.2.0.ebuild:
+  2.2.0 stable on x86 for bug 104650.
 
   01 Aug 2005; Herbie Hopkins <herbs@gentoo.org> libglademm-2.2.0.ebuild:
   Masked on amd64 due to compilation failure, bug 93804.
