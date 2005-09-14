@@ -1,8 +1,18 @@
-MD5 703a83a987e6230ad17ef73c30b60a7e ChangeLog 4089
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c9981117b14b00652d4c7c0c8d67cbfc ChangeLog 4192
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 e1388df1ddc7e88c16fb94cf858e81ce pwgen-2.03-r1.ebuild 859
-MD5 11875d4de1f792874ac30ee46fb136ef pwgen-2.04.ebuild 812
+MD5 bd3278a3da40d1b3cf73e2b22e6578ee pwgen-2.04.ebuild 812
 MD5 d4c95e5c5360c31261a443a3441add43 files/digest-pwgen-2.03-r1 61
 MD5 f06c2b960c060913430b8afc9ba69260 files/digest-pwgen-2.04 61
 MD5 617fae2e424b533bb7978c5958b43bbd files/pwgen-2.03-addl_pw_chars.patch 430
 MD5 0d13dbfb5224aed1f2ddc3922a04d8e5 files/pwgen.rc 497
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKLSMEZCkKN40op4RAlToAKCNnuBtOZlGtpAfNqg6Vh2ocgRNqgCfQfzf
+qLvM901AZcy1Fb4Kd5wcOOY=
+=gDSb
+-----END PGP SIGNATURE-----
