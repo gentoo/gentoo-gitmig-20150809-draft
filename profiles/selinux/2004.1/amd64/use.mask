@@ -1,10 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/use.mask,v 1.5 2005/05/08 23:37:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/use.mask,v 1.6 2005/09/14 09:15:43 flameeyes Exp $
 
 #unknowns
 afs
 drac
+
+-nvidia
 
 # WON'T BUILD - SECTION
 

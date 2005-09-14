@@ -1,8 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.5 2005/05/14 20:39:54 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.6 2005/09/14 09:15:43 flameeyes Exp $
 
 #unknowns
 afs
 drac
+
+-nvidia
 
 # WON'T BUILD - SECTION
 

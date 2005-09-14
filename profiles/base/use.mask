@@ -3,3 +3,7 @@ divx4linux
 vis
 mmxext
 selinux
+
+# nVidia XvMC requires nvidia-glx
+nvidia
+

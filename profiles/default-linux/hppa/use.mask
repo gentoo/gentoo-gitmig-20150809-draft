@@ -102,7 +102,6 @@ i8x0
 icc
 icc-pgo
 nocardbus
-nvidia
 pcmcia
 pda
 svga

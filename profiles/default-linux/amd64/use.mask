@@ -1,11 +1,17 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.22 2005/09/08 13:32:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.23 2005/09/14 09:15:42 flameeyes Exp $
 
 # UNKNOWN - SECTION
 
 afs
 drac
+
+# UNMASK - SECTION
+
+# 2005/09/14 - Diego Pettenò <flameeyes@gentoo.org>
+# nVidia XvMC support works on amd64
+-nvidia
 
 # WON'T WORK - SECTION
 
