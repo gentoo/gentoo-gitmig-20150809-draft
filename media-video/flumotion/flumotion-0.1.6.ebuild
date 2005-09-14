@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.1.6.ebuild,v 1.2 2005/05/10 15:25:28 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.1.6.ebuild,v 1.3 2005/09/14 19:18:27 zaheerm Exp $
 
 inherit eutils
 
@@ -75,7 +75,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! enewgroup flumotion || ! enewuser flumotion -1 /bin/false /usr/share/flumotion flumotion,audio,video,sys; then
+	if ! enewgroup flumotion || ! enewuser flumotion -1 -1 /usr/share/flumotion flumotion,audio,video,sys; then
 		die "Unable to add flumotion user and flumotion group."
 	fi
 
