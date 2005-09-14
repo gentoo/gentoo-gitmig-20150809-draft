@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pymsn-t
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.3 2005/08/28 16:13:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.4 2005/09/14 21:59:42 humpback Exp $
+
+*pymsn-t-0.9.5-r1 (14 Sep 2005)
+
+  14 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  -pymsn-t-0.9.5.ebuild, +pymsn-t-0.9.5-r1.ebuild:
+  Fixing path in config file, credits to Albert Holm for spoting this one in
+  #105998
 
 *pymsn-t-0.9.5 (28 Aug 2005)
 

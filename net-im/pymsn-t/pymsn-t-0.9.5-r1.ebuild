@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.9.5.ebuild,v 1.1 2005/08/28 16:13:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.9.5-r1.ebuild,v 1.1 2005/09/14 21:59:42 humpback Exp $
 
 inherit eutils python
 
@@ -45,9 +45,9 @@ src_install()
 	exeinto /usr/lib/python${PYVER}/site-packages/
 	doexe PyMSNt
 	sed -i \
-		-e "s/.*<spooldir>.*/<spooldir>\/var\/spool\/jabber\/${PN}<\/spooldir>/"                                \
-		-e "s/.*<pid>.*/<pid>\/var\/run\/jabber\/pymsn-t.pid<\/pid>/"                                    \
-		-e "s/.*<debugLog>.*/<debugLog>\/var\/log\/jabber\/${PN}-debug.log<\/debugLog>/"       \
+		-e "s/.*<spooldir>.*/<spooldir>\/var\/spool\/jabber\/<\/spooldir>/"\
+		-e "s/.*<pid>.*/<pid>\/var\/run\/jabber\/pymsn-t.pid<\/pid>/"\
+		-e "s/.*<debugLog>.*/<debugLog>\/var\/log\/jabber\/${PN}-debug.log<\/debugLog>/"\
 			config-example.xml
 	insinto /etc/jabber
 	newins config-example.xml pymsn-t.xml
