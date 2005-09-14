@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.113 2005/09/14 09:15:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.114 2005/09/14 13:35:08 azarah Exp $
+
+  14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/util-linux-2.12q-update_mtab-fixes.patch:
+  Do not leak memory.
 
   14 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
   files/util-linux-2.12q-update-mtab-when-moving.patch:

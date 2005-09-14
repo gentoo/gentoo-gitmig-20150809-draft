@@ -13,19 +13,22 @@ This fixes a few issues with update_mtab():
   mtab.
 - If mtab is empty, absent->prev should be set to mc0, and not mc0->prev, as
   it will be NULL.
+- Memory leak if we have to abort before mc0 and co are freed.
 
-Patch by Martin Schlemmer <azarah@gentoo.za.org>
+Patch by Martin Schlemmer <azarah@gentoo.org>
 
 
---- util-linux-2.12q/mount/fstab.c	2005-09-14 08:22:34.000000000 +0200
-+++ util-linux-2.12q.az/mount/fstab.c	2005-09-14 10:37:54.000000000 +0200
-@@ -604,15 +604,30 @@ update_mtab (const char *dir, struct my_
+--- util-linux-2.12q/mount/fstab.c	2005-09-14 15:30:10.000000000 +0200
++++ util-linux-2.12q.az/mount/fstab.c	2005-09-14 15:31:48.000000000 +0200
+@@ -604,15 +604,32 @@ update_mtab (const char *dir, struct my_
  				free(mc);
  			}
  		} else {
 -			/* A remount */
 -			mc->m.mnt_opts = instead->mnt_opts;
-+			/* A remount.  Need to alloc memory, else we might
++			/* A remount. */
++			my_free(mc->m.mnt_opts);
++			/* Need to alloc memory, else we might
 +			 * run into issues if both we and the caller frees
 +			 * mnt_opts ... */
 +			mc->m.mnt_opts = xstrdup(instead->mnt_opts);
@@ -54,3 +57,12 @@ Patch by Martin Schlemmer <azarah@gentoo.za.org>
  		mc0->prev = absent;
  		if (mc0->nxt == NULL)
  			mc0->nxt = absent;
+@@ -624,6 +641,8 @@ update_mtab (const char *dir, struct my_
+ 		int errsv = errno;
+ 		error (_("cannot open %s (%s) - mtab not updated"),
+ 		       MOUNTED_TEMP, strerror (errsv));
++		/* Do not leak memory */
++		discard_mntentchn(mc0);
+ 		goto leave;
+ 	}
+ 
