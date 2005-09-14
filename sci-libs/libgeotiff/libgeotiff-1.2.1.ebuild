@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.1.ebuild,v 1.4 2005/07/10 20:33:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.1.ebuild,v 1.5 2005/09/14 01:59:18 nerdboy Exp $
 
 inherit eutils
 
@@ -18,16 +18,16 @@ DEPEND="virtual/libc
 	sci-libs/proj"
 
 src_compile() {
-	econf || die
-	emake -j1 || die
+	econf || die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	dobin bin/{listgeo,geotifcp,makegeo} || die
-	insinto usr/include
+	dobin bin/{listgeo,geotifcp,makegeo} || die "dobin failed"
 	dolib.a libgeotiff.a
 	dolib.so libgeotiff.so.${PV}
-	dosym libgeotiff.so.${PV} usr/lib/libgeotiff.so
+	dosym libgeotiff.so.${PV} usr/$(get_libdir)/libgeotiff.so || die "dosym failed"
+	insinto usr/include
 	doins libxtiff/*.h
 	doins *.h
 	doins *.inc
