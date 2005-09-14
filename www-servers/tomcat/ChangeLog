@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.36 2005/08/26 13:45:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.37 2005/09/14 19:11:37 humpback Exp $
+
+*tomcat-5.0.28-r5 (14 Sep 2005)
+
+  14 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/5.0.28/log4j.properties, files/5.0.28/tomcat.conf,
+  +tomcat-5.0.28-r5.ebuild:
+  Added a proper log4j properties file, changed the ebuild to install the
+  log4j file. This is all related to bugs #103925 and #88002
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   tomcat-5.0.28-r4.ebuild:
