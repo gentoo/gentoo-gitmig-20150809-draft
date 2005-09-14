@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.4.1-r2.ebuild,v 1.1 2005/09/09 14:03:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery-remote/gallery-remote-1.4.1-r3.ebuild,v 1.1 2005/09/14 21:43:57 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -47,13 +47,9 @@ src_install() {
 	cp jpegtran/jpegtran.preinstalled ${D}/usr/share/gallery-remote/jpegtran/jpegtran.properties
 	cp -r img ${D}/usr/share/gallery-remote/
 
-	# temp hack
-	cd ${D}/usr/share/gallery-remote/lib/
-	java-pkg_jar-from metadata-extractor metadata-extractor.jar	metadata-extractor-2.1.jar
-	cd ${S}
 
 	echo "#!/bin/bash" > gallery-remote
 	echo "cd /usr/share/gallery-remote/" >> gallery-remote
-	echo "java -jar lib/GalleryRemote.jar"  >> gallery-remote
+	echo "java -cp \$(java-config -p ${PN},metadata-extractor):img/ com.gallery.GalleryRemote.GalleryRemote \${@} "  >> gallery-remote
 	dobin gallery-remote
 }
