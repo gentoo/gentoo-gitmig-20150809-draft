@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.99 2005/09/12 03:40:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.100 2005/09/14 04:15:40 vapier Exp $
+
+  14 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  ncurses-5.4.20050827.ebuild:
+  New ncurses seems to be slightly incompatible ...
 
 *ncurses-5.4.20050827 (12 Sep 2005)
 
