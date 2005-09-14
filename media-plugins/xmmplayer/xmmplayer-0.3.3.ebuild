@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/xmmplayer-0.3.3.ebuild,v 1.6 2005/09/03 23:13:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/xmmplayer-0.3.3.ebuild,v 1.7 2005/09/14 05:26:33 agriffis Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://thegraveyard.org/files/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
 
 DEPEND="media-sound/xmms
 	media-video/mplayer"
