@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/dcd-0.95.ebuild,v 1.13 2005/07/25 12:17:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dcd/dcd-0.95.ebuild,v 1.14 2005/09/14 07:15:06 agriffis Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~alpha amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86"
 
 src_unpack() {
 
