@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.13 2005/03/30 09:20:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.14 2005/09/14 15:21:04 metalgod Exp $
 
 inherit eutils
 
@@ -9,7 +9,6 @@ DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
 HOMEPAGE="http://www.xcdroast.org/"
 SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 	mirror://gentoo/${P}_new_configure.tar.gz"
-RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc amd64"
