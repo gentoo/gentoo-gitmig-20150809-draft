@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.40 2005/09/11 18:57:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.41 2005/09/14 15:37:22 josejx Exp $
+
+  14 Sep 2005; Joseph Jezak <josejx@gentoo.org> php-4.4.0.ebuild,
+  php-5.0.5.ebuild:
+  Marked ~ppc for bug #105673.
 
 *php-4.3.11 (11 Sep 2005)
 
