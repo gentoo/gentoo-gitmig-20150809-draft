@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 93dfec00a1c850005ee09e4117a97062 xmms-shn-2.4.0.ebuild 721
-MD5 65e3b966c32f483b9e6406a5009880f2 ChangeLog 1852
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 af96ff75455ba15fc10a6e0100304b95 ChangeLog 1954
+MD5 1d0da49523017d178a966fc209d75e57 xmms-shn-2.4.0.ebuild 719
 MD5 eed18907f947d3f9ef06a896bec2e242 files/digest-xmms-shn-2.4.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCowyq06ebR+OMO78RAuHmAKCWihcdEHgjuBHb0wRuUoLbdi0opACfaox5
-77KAigJbwwqKK6shvMbZbUs=
-=16yU
------END PGP SIGNATURE-----
