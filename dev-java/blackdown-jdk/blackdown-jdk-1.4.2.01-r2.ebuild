@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.01-r2.ebuild,v 1.9 2005/07/11 13:24:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.01-r2.ebuild,v 1.10 2005/09/14 15:57:06 axxo Exp $
 
 inherit java versionator
 
@@ -148,7 +148,7 @@ pkg_postinst() {
 		ewarn "make sure the grsec ACL contains those entries also"
 		ewarn "because enabling it will override the chpax setting"
 		ewarn "on the physical files - help for PaX and grsecurity"
-		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
+		ewarn "can be given by #gentoo-hardened + hardened@gentoo.org"
 	fi
 	if ! use browserplugin && use mozilla; then
 		ewarn
