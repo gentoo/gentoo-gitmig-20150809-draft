@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.12.0.ebuild,v 1.1 2005/09/14 03:28:08 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.12.0.ebuild,v 1.2 2005/09/14 18:09:16 allanonjl Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -163,5 +163,8 @@ pkg_postinst() {
 	einfo
 	einfo "And please ensure you add it to the default runlevel using:"
 	einfo "'rc-update add famd default'"
-
+	einfo
+	einfo "Add yourself to the plugdev group if you want"
+	einfo "automounting to work."
+	einfo
 }
