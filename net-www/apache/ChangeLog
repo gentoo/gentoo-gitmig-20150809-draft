@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.410 2005/09/12 03:39:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.411 2005/09/15 01:11:21 vericgar Exp $
+
+  15 Sep 2005; Michael Stewart <vericgar@gentoo.org>
+  apache-2.0.54-r30.ebuild:
+  Added error checking for ldap USE-flag. Fixes bug #105972.
 
   12 Sep 2005; Jason Wever <weeve@gentoo.org> apache-1.3.33-r6.ebuild,
   apache-2.0.54-r15.ebuild:

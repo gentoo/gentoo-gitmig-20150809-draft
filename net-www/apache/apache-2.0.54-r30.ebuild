@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.2 2005/09/10 20:30:07 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r30.ebuild,v 1.3 2005/09/15 01:11:22 vericgar Exp $
 
 inherit eutils gnuconfig
 
@@ -36,6 +36,14 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/httpd-${PV}"
 
 big_fat_warnings() {
+
+	if use ldap && ! built_with_use 'dev-libs/apr-util' ldap; then
+		eerror "dev-libs/apr-util is missing LDAP support. For apache to have"
+		eerror "ldap support, apr-util must be built with the ldap USE-flag"
+		eerror "enabled."
+		die "ldap USE-flag enabled while not supported in apr-util"
+	fi
+
 	if use mpm-peruser; then
 		ewarn " -BIG- -FAT- -WARNING-"
 		ewarn ""
