@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.9 2005/07/18 16:05:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.10 2005/09/15 19:59:03 agriffis Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://bard.sytes.net/takcd/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc sparc x86"
 
 RDEPEND="virtual/libc"
 
