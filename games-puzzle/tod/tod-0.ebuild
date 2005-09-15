@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.2 2005/08/24 03:36:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.3 2005/09/15 20:32:40 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="media-libs/allegro"
+RDEPEND="media-libs/allegro"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}
 
@@ -23,16 +25,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	sed -i \
 		-e "s:idltd\.dat:${GAMES_DATADIR}/${PN}/idltd.dat:" \
-		rec.c || die
-}
-
-src_compile() {
-	emake -f makefile || die "make failed"
+		rec.c || die "sed failed"
 }
 
 src_install() {
-	newgamesbin tod-debug.exe tod || die
+	newgamesbin tod-debug.exe tod || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins idltd.dat || die
+	doins idltd.dat || die "doins failed"
 	dodoc readme.txt
+	prepgamesdirs
 }
