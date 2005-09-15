@@ -1,5 +1,5 @@
 MD5 e9cd01f31fc31ef1849ad5b87358345a metadata.xml 218
-MD5 626c21521912fbf9caf7ebaed63d4f7c ChangeLog 3147
-MD5 a8445b68cccfbd78f4a29df10d16de82 iftop-0.16.ebuild 640
+MD5 76cb1fae21592cbfe7c430c2907c4909 ChangeLog 3245
+MD5 d51fcbaff757ab3ebeb598242a21b404 iftop-0.16.ebuild 639
 MD5 c9d0a2ec49378a93c55b607f8bb88f91 files/iftoprc 1391
 MD5 a36766a23959cee0651fcf16d2eecb8c files/digest-iftop-0.16 62
