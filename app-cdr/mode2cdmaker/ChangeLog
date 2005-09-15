@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/mode2cdmaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mode2cdmaker/ChangeLog,v 1.1 2005/04/05 12:15:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mode2cdmaker/ChangeLog,v 1.2 2005/09/15 20:40:18 mr_bones_ Exp $
+
+  15 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  mode2cdmaker-1.5.1.ebuild:
+  needs app-arch/unzip; tidy
 
 *mode2cdmaker-1.5.1 (05 Apr 2005)
 
