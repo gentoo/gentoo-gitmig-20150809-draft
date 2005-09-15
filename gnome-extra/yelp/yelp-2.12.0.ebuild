@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.12.0.ebuild,v 1.1 2005/09/11 23:55:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.12.0.ebuild,v 1.2 2005/09/15 23:41:03 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -24,6 +24,7 @@ RDEPEND=">=gnome-base/orbit-2
 	>=gnome-base/libgnomeui-1.103
 	>=dev-libs/libxml2-2.6.5
 	>=dev-libs/libxslt-1.1.4
+	>=gnome-base/orbit-2.12.4
 	!firefox? ( >=www-client/mozilla-1.7.3 )
 	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	dev-libs/popt
