@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2_pre20050913.ebuild,v 1.1 2005/09/14 23:31:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2_pre20050913.ebuild,v 1.2 2005/09/15 16:43:56 halcy0n Exp $
 
 PATCH_VER="1.0"
 PATCH_GCC_VER="4.0.2"
@@ -13,6 +13,10 @@ HTB_VER="1.00"
 HTB_GCC_VER="4.0.1"
 
 ETYPE="gcc-compiler"
+
+# whether we should split out specs files for multiple {PIE,SSP}-by-default
+# and vanilla configurations.
+SPLIT_SPECS=${SPLIT_SPECS-true}
 
 inherit toolchain
 
@@ -50,6 +54,12 @@ DEPEND="${RDEPEND}
 
 PDEPEND="sys-devel/gcc-config
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) ) ) ) )"
+
+src_unpack() {
+	gcc_src_unpack
+
+	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
+}
 
 pkg_postinst() {
 	toolchain_pkg_postinst

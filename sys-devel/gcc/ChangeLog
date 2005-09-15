@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.453 2005/09/14 23:31:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.454 2005/09/15 16:43:55 halcy0n Exp $
+
+  15 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
+  gcc-4.0.2_pre20050913.ebuild:
+  Enable split spec files.
 
 *gcc-4.0.2_pre20050913 (14 Sep 2005)
 
