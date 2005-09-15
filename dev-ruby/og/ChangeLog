@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/og
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.1 2005/08/16 16:23:09 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/og/ChangeLog,v 1.2 2005/09/15 22:40:02 citizen428 Exp $
+
+*og-0.23.0 (15 Sep 2005)
+
+  15 Sep 2005; Michael Kohl <citizen428@gentoo.org> +og-0.23.0.ebuild:
+  Version bump.
 
 *og-0.22.0 (16 Aug 2005)
 
