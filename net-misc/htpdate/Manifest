@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fed5195d1cab64285f73190ab040bb39 ChangeLog 1258
-MD5 7e7f1250f29ed80ef34da12ddfb2a69c htpdate-0.8.7.ebuild 729
-MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
+MD5 8594992587acf56cdd4e18958c50759c htpdate-0.8.7.ebuild 734
 MD5 f30454af8956145e3493e48d2cca064f htpdate-0.8.2.ebuild 768
+MD5 fed5195d1cab64285f73190ab040bb39 ChangeLog 1258
+MD5 ff2b63df63e17d0b2714390e4c9ff1e1 metadata.xml 256
+MD5 ec81f587e402abf72a7e9e7f7f35e31b files/ppc.patch 474
 MD5 86ea7c47156ba3ab7bd460ad939b1d57 files/digest-htpdate-0.8.2 64
 MD5 04f4c6fdd660e39f608b45bb648846db files/digest-htpdate-0.8.7 64
-MD5 ec81f587e402abf72a7e9e7f7f35e31b files/ppc.patch 474
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHr4II7fK2cqeyXkRAp0NAKDx+qlZcdAQ6rjl2q+xph6vfuaXUgCbBLDi
-C6SzNOs/3cx/mz4pZqLeCwY=
-=irmx
------END PGP SIGNATURE-----
