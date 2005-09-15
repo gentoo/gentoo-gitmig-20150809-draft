@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.73 2005/09/15 11:00:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.74 2005/09/15 15:43:20 dang Exp $
+
+  15 Sep 2005; <dang@gentoo.org> mozilla-firefox-1.0.6-r7.ebuild:
+  Bump for bug #105396
 
 *mozilla-firefox-1.0.6-r7 (15 Sep 2005)
 
