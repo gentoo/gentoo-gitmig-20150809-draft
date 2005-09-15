@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-sqlite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/ChangeLog,v 1.2 2005/09/09 12:53:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/ChangeLog,v 1.3 2005/09/15 20:00:35 trapni Exp $
+
+  15 Sep 2005; Christian Parpart <trapni@gentoo.org>
+  pecl-sqlite-1.0.3.ebuild:
+  adding to ~amd64
 
   09 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-sqlite-1.0.3.ebuild:
   Added ~sparc keyword to help fix the broken dependencies of
