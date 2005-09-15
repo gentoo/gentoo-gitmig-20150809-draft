@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e09bf41aab56a00d08e1c3a4087be6f ChangeLog 2345
 MD5 4ed46634876c5d32f9fcb4367173ffd7 golden-xcursors-0.8.ebuild 1920
 MD5 93f02cf17e28c71ad2a43ecc2399b56f metadata.xml 279
 MD5 da9a3c012a411e68efa6f38d131c5f7e files/digest-golden-xcursors-0.8 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKe5ij5H05b2HAEkRAmgaAKCVNIGHHMcGNIowtmsrBTgmp+0RJwCgl1nU
+JU0KthQK7Q+0a9povipxEwU=
+=nd1R
+-----END PGP SIGNATURE-----
