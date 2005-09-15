@@ -1,26 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.7c.ebuild,v 1.3 2005/08/17 05:30:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.1 2005/09/15 05:53:56 cardoe Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="ivtv driver for Hauppauge PVR PCI cards"
-HOMEPAGE="http://ivtv.writeme.ch"
+HOMEPAGE="http://www.ivtvdriver.org"
 
-MY_P="${P/_/-}"
 FW_VER="pvr_1.18.21.22168_inf.zip"
 
-SRC_URI="http://www.ivtv.tv/releases/ivtv-0.3/${MY_P}.tgz
+SRC_URI="http://dl.ivtvdriver.org/${PN}/${P}.tar.gz
 	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER}"
 
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-*"
-# THIS EBUILD IS FOR DEVELOPMENT PURPOSES ONLY. IT IS UNSUPPORTED
+KEYWORDS="~x86"
 
 IUSE=""
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${P}"
 
 BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"
@@ -37,26 +35,19 @@ pkg_setup() {
 		saa7127(extra:${S}/driver)
 		cx25840(extra:${S}/driver)"
 	linux_chkconfig_present FB && MODULE_NAMES="${MODULE_NAMES}"
-
-	einfo "Unsupported development ebuild"
 }
 
 src_unpack() {
-	unpack ${MY_P}.tgz
+	unpack ${P}.tar.gz
 
 	sed -e "s:^VERS26=.*:VERS26=${KV_MAJOR}.${KV_MINOR}:g" \
 		-i ${S}/driver/Makefile || die "sed failed"
-
-	sed -e "s:^KERNVER = .*:KERNVER = ${KV_FULL}:g" \
-		-i ${S}/driver/Makefile2.* || die "sed failed"
 
 	# This powerpc patch patches the source of the driver to disable DMA on ppc,
 	# instead PIO is used. Also, it force enables -fsigned-char and does not
 	# build some modules that contain x86 asm.
 
-	use ppc && epatch ${FILESDIR}/ppc-odw.patch
-
-	convert_to_m ${S}/driver/Makefile2.6
+	use ppc && epatch ${FILESDIR}/ppc-odw.patch || die "ppc patch failed"
 }
 
 src_compile() {
@@ -64,7 +55,7 @@ src_compile() {
 	linux-mod_src_compile || die "failed to build driver "
 
 	cd ${S}/utils
-	make KERNELDIR=${KV_OUT_DIR} ||  die "failed to build utils "
+	emake ||  die "failed to build utils "
 }
 
 src_install() {
@@ -83,33 +74,19 @@ src_install() {
 
 	cd ${S}/utils
 	#should work... no idea why its not
-	#make KERNELDIR=${KERNEL_DIR} DESTDIR=${D} INSTALLDIR=/usr/bin install-sane || die "failed to install"
-	newbin fwapi ivtv-fwapi
-	newbin radio ivtv-radio
-	dobin ivtvctl
+	make KERNELDIR=${KERNEL_DIR} DESTDIR=${D} INSTALLDIR=/usr/bin install || die "failed to install"
 
 	cd ${S}/driver
 	linux-mod_src_install || die "failed to install modules"
+
+	# Add the aliases
+	insinto /etc/modules.d
+	newins ${FILESDIR}/ivtv ivtv
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	einfo "You now have a driver for the Hauppauge PVR PCI cards."
-	echo
-	einfo "In general, the following instructions suffice to conclude the"
-	einfo "installation. For more detailed instructions, please refer to the"
-	einfo "ivtv wiki listed as the home page of this ebuild."
-	echo
-	einfo "1) Ignore the above commands, only add 'ivtv' to /etc/modules.autoload.d/kernel-2.X"
-	echo
-	einfo "2) Also add a files called 'ivtv' to /etc/modules.d which contains"
-	einfo "   the two lines:"
-	einfo "     alias char-major-81 videodev"
-	einfo "     alias char-major-81-0 ivtv"
-	echo
-	einfo "3) Then perform a 'update-modules'."
-	echo
 	# The MCE versions of the PVR cards come without remote control because (I
 	# assume) a remote control is included in Windows Media Center Edition. It
 	# is probably a good idea to just say that if your package comes with a

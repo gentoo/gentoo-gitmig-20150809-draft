@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.30 2005/08/13 19:46:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.31 2005/09/15 05:53:56 cardoe Exp $
+
+*ivtv-0.3.8 (15 Sep 2005)
+
+  15 Sep 2005; Doug Goldstein <cardoe@gentoo.org> +files/ivtv,
+  -ivtv-0.3.7c.ebuild, +ivtv-0.3.8.ebuild:
+  Rev bump and rewrite to work with new Makefile standard. waiting on ppc
+  patch from pvdabeel
 
 *ivtv-0.3.7c (13 Aug 2005)
 
