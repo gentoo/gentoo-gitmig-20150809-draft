@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.84 2005/09/13 18:31:20 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.85 2005/09/15 02:40:34 stkn Exp $
+
+  15 Sep 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.5-r2.ebuild,
+  asterisk-1.0.6-r1.ebuild, asterisk-1.0.7-r1.ebuild, asterisk-1.0.8.ebuild,
+  asterisk-1.0.9.ebuild, asterisk-1.0.9-r1.ebuild:
+  Fixed SRC_URI.
 
   13 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/1.0.0/asterisk-1.0.8-ptr64fix.diff, asterisk-1.0.5-r2.ebuild,
