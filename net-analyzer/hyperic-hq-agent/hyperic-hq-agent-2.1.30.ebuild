@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.1.30.ebuild,v 1.1 2005/09/09 09:11:35 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/hyperic-hq-agent-2.1.30.ebuild,v 1.2 2005/09/15 00:28:40 mattm Exp $
 
 inherit eutils
 
 DESCRIPTION="Agent for HQ Monitoring Software by Hyperic LLC"
 HOMEPAGE="http://www.hyperic.com/"
 SRC_URI="x86? (
-http://dl.hyperic.net/2.1/hyperic-hq-installer-${PV}-x86-linux.tgz ) amd64? (
-http://dl.hyperic.net/2.1/hyperic-hq-installer-${PV}-amd64-linux.tgz )"
+http://dl.hyperic.net/2.1/hyperic-hq-agent-${PV}-x86-linux.tgz ) amd64? (
+http://dl.hyperic.net/2.1/hyperic-hq-agent-${PV}-amd64-linux.tgz )"
 
 LICENSE="hyperic"
 SLOT="0"
