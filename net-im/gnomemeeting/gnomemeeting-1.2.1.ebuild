@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.1.ebuild,v 1.5 2005/07/29 18:45:27 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.1.ebuild,v 1.6 2005/09/15 01:18:50 stkn Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 IUSE="ipv6 sdl ssl howl gnome"
 
-RDEPEND=">=dev-libs/pwlib-1.8.4
-	>=net-libs/openh323-1.15.3
+RDEPEND="~dev-libs/pwlib-1.8.4
+	~net-libs/openh323-1.15.3
 	>=net-nds/openldap-2.0.0
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/glib-2.0.0
