@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bison
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.41 2005/03/04 21:47:59 kito Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.42 2005/09/15 04:26:00 vapier Exp $
+
+  15 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bison-2.0-token-name-translate.patch, bison-2.0.ebuild:
+  Fix from upstream for segfault in error reporting #106014 by postmodern.
 
   04 Mar 2005; Kito <kito@gentoo.org> bison-1.875d.ebuild:
   ~ppc-macos keyword. closes Bug 65957

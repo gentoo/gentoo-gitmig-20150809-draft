@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.0.ebuild,v 1.2 2005/03/09 02:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.0.ebuild,v 1.3 2005/09/15 04:26:00 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic eutils gnuconfig
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.32-extfix.patch
+	epatch "${FILESDIR}"/${P}-token-name-translate.patch #106014
 }
 
 src_compile() {
