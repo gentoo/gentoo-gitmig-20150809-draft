@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.61 2005/09/15 01:18:50 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.62 2005/09/15 01:25:09 stkn Exp $
+
+  15 Sep 2005; Stefan Knoblich <stkn@gentoo.org> gnomemeeting-1.2.1.ebuild,
+  gnomemeeting-1.2.2.ebuild:
+  Fix DEPENDS, add dev-perl/XML-Parser, (#81077).
 
   15 Sep 2005; Stefan Knoblich <stkn@gentoo.org> gnomemeeting-1.2.1.ebuild:
   Fix DEPENDS, gnomemeeting-1.2.1 only works w/ pwlib-1.8.4 and openh323-1.15.3

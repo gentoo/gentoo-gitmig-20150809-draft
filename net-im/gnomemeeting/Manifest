@@ -4,10 +4,10 @@ MD5 5e442d151db50f960aa0ed3ef72c081a gnomemeeting-1.00.ebuild 2043
 MD5 eed4f567de688fc863665054fba871e6 metadata.xml 722
 MD5 a90d873b38a939fba966f9b04e58ac42 gnomemeeting-0.98.0.ebuild 1687
 MD5 698cb54471981882511cf00e76533a54 gnomemeeting-0.98.5.ebuild 1855
-MD5 14c5bd79a3d99a7b704065f9a60f7acf ChangeLog 10367
-MD5 a4f0e7f6fe2ff8b13081d644af930735 gnomemeeting-1.2.2.ebuild 2925
+MD5 6b1c4f456e6d2f5d6902f21dd1428077 ChangeLog 10523
+MD5 4a22b08d5bda79ed889cc36d84c08985 gnomemeeting-1.2.2.ebuild 2946
 MD5 9adb1bf9d688e8be734b36bc0e54c110 gnomemeeting-1.0.2.ebuild 2286
-MD5 db8dba72a1a0c8dfa1b8d568c7defe61 gnomemeeting-1.2.1.ebuild 2996
+MD5 8e1067ff0a8d5b7977612bb3f58fb4b1 gnomemeeting-1.2.1.ebuild 3017
 MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2 71
 MD5 683dfd499a4dd803dd3cb8797a4d0efe files/gnomemeeting-1.2.1-configure.patch 669
 MD5 e154855fe35cc7fdcf276eaa2e4f2e4c files/gnomemeeting-1.2.2-dbus.diff 2007

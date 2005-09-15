@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.1.ebuild,v 1.6 2005/09/15 01:18:50 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.1.ebuild,v 1.7 2005/09/15 01:25:09 stkn Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.20
 	dev-lang/perl
+	dev-perl/XML-Parser
 	gnome? ( app-text/scrollkeeper )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
