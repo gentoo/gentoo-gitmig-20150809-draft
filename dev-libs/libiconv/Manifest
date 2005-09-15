@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 48038728f0be7d2e0116ee8a8bda31a1 ChangeLog 2800
+MD5 9628d270f951516f6dacedf9394d85de ChangeLog 2923
 MD5 b896bcee65b7519f24c1ae1cb2652704 libiconv-1.10.ebuild 1819
 MD5 abfe510c3ac1a78cb231d3bcbb38f532 libiconv-1.9.2-r3.ebuild 1318
-MD5 f90c6b5ccd48096b82a7842c5994583b metadata.xml 469
+MD5 c9d8d5d37487d29e41f03ef9dc5dc198 metadata.xml 378
 MD5 0f60d7695c7c3a779ae0635797f6eead files/digest-libiconv-1.10 66
 MD5 c48abf520f6345ca1cb28be835796db8 files/libiconv-1.10-link.patch 910
 MD5 97aebb7d7ded50f07b44c23768d25928 files/libiconv-1.9.2-RPATH-fix.patch 1906
@@ -12,7 +12,7 @@ MD5 ba26148d2aed650a790b129b9907ae59 files/digest-libiconv-1.9.2-r3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDG0UYj5H05b2HAEkRAtZ+AJ9fWZDIR7DmiBs7Dh6QcFbXLz1JhgCfV0ld
-t4zOypdObDgsIX5zPnof1KY=
-=PSCq
+iD8DBQFDKYouj5H05b2HAEkRAvAPAJ9BALbYQ3PpJ9ecMgWWNiNxqxuV+wCgpoWq
+U2X+BaoLvI5/Oh+En8v5KBE=
+=oYfh
 -----END PGP SIGNATURE-----
