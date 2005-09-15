@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 56122f37e35189189d93ce277d960894 diffstat-1.38.ebuild 774
-MD5 fec2e0c910482a245b19ec5115690fbc diffstat-1.39.ebuild 785
-MD5 c8dfd8996c2e3a64c43cdbf4e78050cb ChangeLog 4835
+MD5 b346e6521258724bacf55462d1e3b709 ChangeLog 4926
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
-MD5 1c180958957439ae244b1f296b793f39 diffstat-1.40.ebuild 788
+MD5 fec2e0c910482a245b19ec5115690fbc diffstat-1.39.ebuild 785
+MD5 84df6cbe2bf0b59c1fd82aac213af883 diffstat-1.40.ebuild 786
+MD5 56122f37e35189189d93ce277d960894 diffstat-1.38.ebuild 774
 MD5 aaf2c4b7f099958647cad46682bb37eb files/diffstat-1.37-hard-locale.patch 578
-MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
 MD5 666ce000416b4abc08973a81cf0cf6ed files/digest-diffstat-1.39 61
 MD5 aa992e69db1a27154ec66a30ee026c3b files/digest-diffstat-1.40 61
+MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKJ2jEZCkKN40op4RAiyKAKCxReNORX5rfozTLUBp4jVOe0VTTACgpnrU
-XiWII13izKmwOkmTn1/0R9w=
-=P6HV
+iD8DBQFDKPRscsIHjyDViGQRAmnKAJ91h2mzYaFFlD0DqmMBceidlU9hHACg2l59
+iU3raKrnOlbt3I0lrdbdEKU=
+=54on
 -----END PGP SIGNATURE-----
