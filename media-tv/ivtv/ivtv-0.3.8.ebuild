@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.1 2005/09/15 05:53:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.2 2005/09/15 06:34:40 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -47,7 +47,7 @@ src_unpack() {
 	# instead PIO is used. Also, it force enables -fsigned-char and does not
 	# build some modules that contain x86 asm.
 
-	use ppc && epatch ${FILESDIR}/ppc-odw.patch || die "ppc patch failed"
+	use ppc && epatch ${FILESDIR}/ppc-odw.patch
 }
 
 src_compile() {
@@ -107,9 +107,14 @@ pkg_postinst() {
 	echo
 
 	# Similar checks are performed by the make install in the drivers directory.
+	BADMODS="msp3400 tda9887 tuner tveeprom saa7115 saa7127"
 
-	if [ -f "${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/msp3400.ko" ] ; then
-		ewarn "You have the msp3400 module that comes with the kernel. It isn't compatible"
-		ewarn "with ivtv. You need to back it up to somewhere else, then run 'update-modules'"
-	fi
+	for MODNAME in ${BADMODS}; do
+		if [ -f "${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/${MODNAME}.ko" ] ; then
+			ewarn "You have the ${MODNAME} module that comes with the kernel. It isn't compatible"
+			ewarn "with ivtv. You need to back it up to somewhere else, then run 'update-modules'"
+			ewarn "The file to remove is ${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/${MODNAME}.ko"
+			echo
+		fi
+	done
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.31 2005/09/15 05:53:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.32 2005/09/15 06:34:40 cardoe Exp $
+
+  15 Sep 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.3.8.ebuild:
+  Detect more modules that need to go to make everything happy
 
 *ivtv-0.3.8 (15 Sep 2005)
 
