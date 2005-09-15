@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.4.ebuild,v 1.1 2005/09/13 18:23:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.4.ebuild,v 1.2 2005/09/15 21:54:31 genstef Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_install() {
 	# execute...
 	# The group here is intended to be the one needed to use pmount, but Ivman
 	# will still work as long as the group in IvmConfigBase.xml is correct.
-	enewuser ivman -1 /bin/false /dev/null plugdev || die "Problem adding ivman user"
+	enewuser ivman -1 -1 /dev/null plugdev || die "Problem adding ivman user"
 }
 
 pkg_postinst() {
