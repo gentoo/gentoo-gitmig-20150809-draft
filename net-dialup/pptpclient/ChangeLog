@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.27 2005/09/10 03:33:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.28 2005/09/15 22:22:43 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  pptpclient-1.5.0-r2.ebuild:
+  Mark 1.5.0-r2 stable on alpha
 
   09 Sep 2005; Tom Gall <tgall@gentoo.org> pptpclient-1.5.0-r2.ebuild:
   stable on ppc64 bug #89139
