@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.36 2005/09/14 21:09:19 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.37 2005/09/15 17:25:18 hansmi Exp $
+
+  15 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  egroupware-1.0.0.009_p2.ebuild:
+  Stable on ppc.
 
 *egroupware-1.0.0.009_p2 (14 Sep 2005)
 
