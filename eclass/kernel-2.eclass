@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.144 2005/09/12 09:20:28 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.145 2005/09/15 00:11:13 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -305,9 +305,9 @@ unpack_2_4() {
 	cd "${S}"
 	# this file is required for other things to build properly,
 	# so we autogenerate it
-	make mrproper ${xmakeopts} || die "make mrproper failed"
-	make symlinks ${xmakeopts} || die "make symlinks failed"
-	make include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
+	make -s mrproper ${xmakeopts} || die "make mrproper failed"
+	make -s symlinks ${xmakeopts} || die "make symlinks failed"
+	make -s include/linux/version.h ${xmakeopts} || die "make include/linux/version.h failed"
 	echo ">>> version.h compiled successfully."
 }
 
@@ -502,10 +502,13 @@ install_sources() {
 			> "${S}"/patches.txt
 	fi
 
-	for doc in ${UNIPATCH_DOCS}; do	[[ -f ${doc} ]] && docs="${docs} ${doc}"; done
-	if [[ -f ${S}/patches.txt ]]; then docs="${docs} ${S}/patches.txt"; fi
-	use doc && ! use arm && ! use s390 && install_manpages
-	use doc && [[ -n ${docs} ]] && dodoc ${docs}
+	if use doc ; then
+		install_manpages
+
+		for doc in ${UNIPATCH_DOCS}; do	[[ -f ${doc} ]] && docs="${docs} ${doc}"; done
+		if [[ -f ${S}/patches.txt ]]; then docs="${docs} ${S}/patches.txt"; fi
+		[[ -n ${docs} ]] && dodoc ${docs}
+	fi
 
 	mv ${WORKDIR}/linux* ${D}/usr/src
 }
@@ -830,7 +833,7 @@ detect_arch() {
 
 	ARCH_URI=""
 	ARCH_PATCH=""
-	ALL_ARCH="X86 PPC PPC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD S390 SH"
+	ALL_ARCH="ALPHA AMD64 ARM HPPA IA64 M68K MIPS PPC PPC64 S390 SH SPARC X86"
 
 	for LOOP_ARCH in ${ALL_ARCH}; do
 		COMPAT_URI="${LOOP_ARCH}_URI"
@@ -938,7 +941,7 @@ kernel-2_src_compile() {
 	cd "${S}"
 	[[ ${ETYPE} == headers ]] && compile_headers
 	[[ ${ETYPE} == sources ]] && \
-		use doc && ! use arm && ! use s390 && compile_manpages
+		use doc && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
