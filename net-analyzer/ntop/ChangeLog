@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.39 2005/08/24 14:13:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.40 2005/09/15 11:47:42 r3pek Exp $
+
+  15 Sep 2005; Carlos Silva <r3pek@gentoo.org> ntop-3.0.ebuild:
+  Marking ntop-3.0 ~x86 since it have some memory leak problems
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> ntop-3.1.ebuild:
   FreeBSD fix: root:root -> root:0.
