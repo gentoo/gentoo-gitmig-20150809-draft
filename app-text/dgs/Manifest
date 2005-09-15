@@ -1,12 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 433329241f1258a842610f26d8ed556c ChangeLog 288
 MD5 7b5683715db05c7f9c9e80140ae3f1ce dgs-1234.ebuild 933
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-dgs-1234 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKPrdgIKl8Uu19MoRAk3eAJ9xzL7mg+txxtnvUE1MIV9Ct/haNACgghDZ
-hsjcdOX/GE7Md5fAcycU+go=
-=gvod
+iD8DBQFDKc11I1lqEGTUzyQRAheZAJ0dgrft/jQZRNIcgu/zjrHdxtN2wQCgn6V0
+TaxMGpfwHYvpgA6kwO5v/Kk=
+=KCVg
 -----END PGP SIGNATURE-----

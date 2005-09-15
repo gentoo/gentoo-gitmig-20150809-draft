@@ -1,0 +1,7 @@
+# ChangeLog for app-text/dgs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/ChangeLog,v 1.21 2005/09/15 19:36:57 swegener Exp $
+
+  15 Sep 2005; Sven Wegener <swegener@gentoo.org> ChangeLog:
+  Added missing ChangeLog
+
