@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/screem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.8 2005/08/25 18:52:20 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/ChangeLog,v 1.9 2005/09/15 21:04:19 allanonjl Exp $
+
+  15 Sep 2005; John N. Laliberte <allanonjl@gentoo.org>
+  screem-0.14.1.ebuild, screem-0.14.3.ebuild:
+  remove gdk-pixbuf, provided by gtk2 now, fixes #99965
 
 *screem-0.14.3 (25 Aug 2005)
 

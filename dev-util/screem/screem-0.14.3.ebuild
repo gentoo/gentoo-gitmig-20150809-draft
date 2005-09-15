@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.14.3.ebuild,v 1.1 2005/08/25 18:52:20 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/screem/screem-0.14.3.ebuild,v 1.2 2005/09/15 21:04:19 allanonjl Exp $
 
 inherit gnome2
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2.5.6
 	>=gnome-base/libglade-2.3
 	>=gnome-base/gconf-2.2
 	>=gnome-base/gnome-vfs-2.8.3
-	media-libs/gdk-pixbuf
 	>=gnome-base/libgnome-2.2
 	>=gnome-base/libgnomeui-2.6
 	=gnome-extra/libgtkhtml-2*
