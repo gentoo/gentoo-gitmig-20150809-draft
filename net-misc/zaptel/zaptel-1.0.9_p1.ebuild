@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.9_p1.ebuild,v 1.2 2005/08/18 17:55:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.9_p1.ebuild,v 1.3 2005/09/15 02:38:26 stkn Exp $
 
 IUSE="devfs26 bri florz rtc"
 
@@ -13,7 +13,7 @@ MY_PV="${PV/_p/.}"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
 HOMEPAGE="http://www.asterisk.org"
-SRC_URI="ftp://ftp.asterisk.org/pub/telephony/zaptel/zaptel-${MY_PV}.tar.gz
+SRC_URI="ftp://ftp.digium.com/pub/telephony/zaptel/old/zaptel-${MY_PV}.tar.gz
 	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )
 	 florz? ( http://zaphfc.florz.dyndns.org/zaphfc_${FLORZ_VERSION}.diff.gz )"
 
