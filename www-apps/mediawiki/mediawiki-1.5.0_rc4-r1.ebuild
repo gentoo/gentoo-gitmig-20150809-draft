@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.5.0_rc4-r1.ebuild,v 1.1 2005/09/15 21:01:57 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.5.0_rc4-r1.ebuild,v 1.2 2005/09/15 22:47:38 mr_bones_ Exp $
 
 inherit webapp depend.php
 
@@ -29,8 +29,11 @@ RDEPEND="
 "
 
 need_php4_httpd
-require_php_with_use pcre
-require_gd
+
+pkg_setup() {
+	require_php_with_use pcre
+	require_gd
+}
 
 src_compile() {
 	if use math; then
