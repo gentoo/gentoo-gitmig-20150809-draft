@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.84 2005/09/14 12:29:22 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.85 2005/09/15 21:16:29 stefaan Exp $
+
+*heimdal-0.7.1 (15 Sep 2005)
+
+  15 Sep 2005; Stefaan De Roeck <stefaan@gentoo.org> +heimdal-0.7.1.ebuild:
+  version bump to 0.7.1, excluding a patch for an issue fixed upstream
 
 *heimdal-0.7-r1 (14 Sep 2005)
 
