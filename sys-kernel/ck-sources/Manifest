@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d1385acbcb537bc0fdb4690ae9461a1 ck-sources-2.6.13_p3.ebuild 1528
-MD5 74240df8e884645c7522992ce54ee94b ChangeLog 26505
+MD5 39989acbda62e22ef5bc6f58ba51e80a ck-sources-2.6.13_p4.ebuild 1528
+MD5 316828ea3ca1577f5aadbce7eee75115 ChangeLog 26692
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
-MD5 e04e152b62fad64696624144573cd28a files/digest-ck-sources-2.6.13_p3 278
+MD5 fa5cb2732ca10b79b919e36a21780910 files/digest-ck-sources-2.6.13_p4 278
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDJQCEiP+LossGzjARAsNIAKDMrGaSFfm6IbM0RE1y7fBszP9ddwCgmjFs
-xvIw+BNGqjIpvPZPJ9yS/PA=
-=A1UA
+iD8DBQFDKdoXiP+LossGzjARAtMXAJ4/ZvicB+UIQjuhZd2oHCqM13gptQCgga3V
+rGc1i3wufefOpiiE5MGyAA8=
+=0w/O
 -----END PGP SIGNATURE-----
