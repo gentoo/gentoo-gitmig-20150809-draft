@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.25 2005/09/01 14:52:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.26 2005/09/15 10:39:17 kosmikus Exp $
+
+  15 Sep 2005; Andres Loeh <kosmikus@gentoo.org> haddock-0.6-r2.ebuild,
+  haddock-0.6-r3.ebuild, haddock-0.7.ebuild:
+  Fail with an informative error message when haddock is merged before ghc due
+  to a portage bug.
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> haddock-0.6-r3.ebuild:
   Stable on sparc
