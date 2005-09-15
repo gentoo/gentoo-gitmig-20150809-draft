@@ -1,4 +1,4 @@
-MD5 4b72da1c35da60f6f1de415ade111ee5 gnu-netcat-0.7.1.ebuild 799
-MD5 96bb39566de080f9dda4556cb7d0d588 ChangeLog 974
 MD5 41fd70e4bb6db4ef064f15731b5aa78a metadata.xml 227
+MD5 926be0e3517128cb7742f1b52591c2b9 ChangeLog 1077
+MD5 fadd7eb959340f30891ed6fbe44d9ab4 gnu-netcat-0.7.1.ebuild 797
 MD5 18c72f77c7d5016cb4425084707f36ff files/digest-gnu-netcat-0.7.1 65
