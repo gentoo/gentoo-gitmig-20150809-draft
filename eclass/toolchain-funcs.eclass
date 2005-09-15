@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.42 2005/08/02 13:26:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.43 2005/09/15 00:13:10 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -8,7 +8,6 @@
 # about the toolchain (libc/compiler/binutils/etc...)
 
 inherit multilib
-
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -52,11 +51,14 @@ tc-getGCJ() { tc-getPROG GCJ gcj "$@"; }
 
 # Returns the name of the C compiler for build
 tc-getBUILD_CC() {
-	if [[ -n ${CC_FOR_BUILD} ]] ; then
-		export BUILD_CC=${CC_FOR_BUILD}
-		echo "${CC_FOR_BUILD}"
-		return 0
-	fi
+	local v
+	for v in CC_FOR_BUILD BUILD_CC HOSTCC ; do
+		if [[ -n ${!v} ]] ; then
+			export BUILD_CC=${!v}
+			echo "${!v}"
+			return 0
+		fi
+	done
 
 	local search=
 	if [[ -n ${CBUILD} ]] ; then
@@ -80,10 +82,7 @@ tc-export() {
 
 # A simple way to see if we're using a cross-compiler ...
 tc-is-cross-compiler() {
-	if [[ -n ${CBUILD} ]] ; then
-		return $([[ ${CBUILD} != ${CHOST} ]])
-	fi
-	return 1
+	return $([[ ${CBUILD:-${CHOST}} != ${CHOST} ]])
 }
 
 
@@ -212,4 +211,3 @@ gcc-specs-ssp() {
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fno-stack-protector:} != ${directive} ]])
 }
-
