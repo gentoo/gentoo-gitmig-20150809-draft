@@ -7,13 +7,13 @@ MD5 1b5dfd233a54a22de87bcb47627a7265 ivtv-0.2.0_rc3-r4.ebuild 3964
 MD5 71007461e2e10f367a6a8f7a0b0d7d6a metadata.xml 465
 MD5 28b327ad3b268ad20a14a516c72e9908 ivtv-0.2.0_rc3-r5.ebuild 3964
 MD5 5f97e4d78b855eae89899058a0fa855e files/digest-ivtv-0.3.8 132
-MD5 d1e2b26c51bdb67983cf3194153edb7b files/ivtv 63
+MD5 98a1ec166f665108688586fd5b36c05d files/ivtv 89
 MD5 994d47620b6a826a5d2cf84b3cb1bc5c files/digest-ivtv-0.2.0_rc3-r4 134
 MD5 5458ad51769cecb853e0afb00ab63930 files/digest-ivtv-0.2.0_rc3-r5 134
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKQyPBtvusYtCZMsRAkHRAJ0VagupLbEX88zjFYOmF2UhMs1TuQCbBp6t
-n3jFsFIxPM23LOBuAupEdo4=
-=goiu
+iD8DBQFDKQ8VBtvusYtCZMsRAlisAJ4+F9h04DbYg4m9QCbcYbemnXuY5wCeOyI6
+64vGkr/sz4DCNf5Q/oKsr1A=
+=OcGX
 -----END PGP SIGNATURE-----
