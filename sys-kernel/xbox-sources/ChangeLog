@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.33 2005/09/01 20:04:39 gimli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.34 2005/09/15 16:48:12 gimli Exp $
+
+  15 Sep 2005; <gimli@gentoo.org> ChangeLog:
+  Remove old versions.
 
 *xbox-sources-2.4.31 (01 Sep 2005)
 
