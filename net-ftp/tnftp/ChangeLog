@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.14 2005/09/01 13:51:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.15 2005/09/15 23:23:18 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> tnftp-20050625.ebuild:
+  Mark 20050625 stable on alpha
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> tnftp-20050625.ebuild:
   Stable on sparc
