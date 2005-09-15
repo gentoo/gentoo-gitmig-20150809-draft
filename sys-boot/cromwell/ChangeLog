@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/cromwell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/ChangeLog,v 1.4 2005/08/10 20:39:31 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/ChangeLog,v 1.5 2005/09/15 21:13:07 gimli Exp $
+
+*cromwell-2.40-r1 (15 Sep 2005)
+
+  15 Sep 2005; <gimli@gentoo.org> +files/cromwell-2.40-gcc-3.4.patch,
+  -cromwell-2.31.ebuild, +cromwell-2.40-r1.ebuild:
+  Remove old version.
+  Fix gcc 3.4 compile.
 
 *cromwell-2.40 (10 Aug 2005)
 
