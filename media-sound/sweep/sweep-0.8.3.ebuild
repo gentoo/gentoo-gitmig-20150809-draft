@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.3.ebuild,v 1.6 2005/08/26 18:58:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.3.ebuild,v 1.7 2005/09/15 19:57:18 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.metadecks.org/software/sweep/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="alsa nls vorbis"
 
 DEPEND="dev-libs/tdb
