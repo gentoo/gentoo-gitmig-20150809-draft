@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.8.ebuild,v 1.2 2005/09/05 14:54:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.8.ebuild,v 1.3 2005/09/15 22:03:57 dang Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -106,7 +106,7 @@ src_install() {
 pkg_preinst() {
 
 	enewgroup haldaemon || die "Problem adding haldaemon group"
-	enewuser haldaemon -1 /bin/false /dev/null haldaemon || die "Problem adding haldaemon user"
+	enewuser haldaemon -1 "-1" /dev/null haldaemon || die "Problem adding haldaemon user"
 
 }
 

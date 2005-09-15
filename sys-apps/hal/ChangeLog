@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.48 2005/09/07 18:32:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.49 2005/09/15 22:03:57 dang Exp $
+
+  15 Sep 2005; <dang@gentoo.org> hal-0.4.8.ebuild:
+  Make hal not pass /bin/false as a shell to ecommit. Bug #103421
 
   07 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org> hal-0.5.4.ebuild:
   Added to ~sparc.
