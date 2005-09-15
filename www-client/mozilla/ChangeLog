@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.65 2005/09/15 12:08:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.66 2005/09/15 17:37:01 hansmi Exp $
+
+  15 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mozilla-1.7.11-r3.ebuild:
+  Stable on ppc.
 
 *mozilla-1.7.11-r3 (15 Sep 2005)
 
