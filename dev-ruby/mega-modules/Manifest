@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9070a4a19721c5e34f972215ab6150e3 mega-modules-0.3.1.ebuild 527
 MD5 058b572360a8ef3d09b943e491a3b819 ChangeLog 412
 MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
 MD5 c3cb76c9d54ac39bc9800f1c054ac705 files/digest-mega-modules-0.3.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKfXSehlBotwFZuQRAtENAJ4zY2NFsoP5S4g3uW6sAn6BcpGA7ACfe1+O
+3ivbhix5U33n12YvOD6muY4=
+=jI0V
+-----END PGP SIGNATURE-----

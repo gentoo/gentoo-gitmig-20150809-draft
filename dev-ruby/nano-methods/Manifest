@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 266de7c31820b827e6d4bf494b344ee6 ChangeLog 412
 MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
 MD5 6491c42fdaacf05230f1db05b218fcae nano-methods-0.8.2.ebuild 517
 MD5 bd2f678c20c0d65a5c34d8c061556044 files/digest-nano-methods-0.8.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKfTNehlBotwFZuQRAouDAJ4hCFYkWEECK+OqDUU1oq5wUoXu7gCfd6nk
+W9yTLEaD22lfE++bkTLo8PQ=
+=DrtM
+-----END PGP SIGNATURE-----
