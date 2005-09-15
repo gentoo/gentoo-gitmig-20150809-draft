@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-3.0.3.ebuild,v 1.3 2005/07/09 18:15:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-3.0.3.ebuild,v 1.4 2005/09/15 16:59:12 citizen428 Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/2898/${MY_P}.gem"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 USE_RUBY="any"
