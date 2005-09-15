@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.60 2005/08/27 23:31:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.61 2005/09/15 02:29:49 stkn Exp $
+
+*zaptel-1.0.9_p2 (15 Sep 2005)
+
+  15 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/zaptel-1.0.9_p2-gentoo.diff, +zaptel-1.0.9_p2.ebuild:
+  Version bump, new upstream release fixes issues with linux-2.6.13, tor2 on
+  64bit systems and problems with dual-span cards.
 
   28 Aug 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.2.0_beta1.ebuild:
   Small cleanup.
