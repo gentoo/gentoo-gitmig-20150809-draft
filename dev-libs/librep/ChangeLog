@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.32 2005/09/02 19:34:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.33 2005/09/15 12:48:24 truedfx Exp $
+
+  15 Sep 2005; Harald van Dĳk <truedfx@gentoo.org>
+  +files/rep_file_fdopen.patch, librep-0.17-r1.ebuild,
+  librep-0.17-r2.ebuild:
+  Export rep_file_fdopen, bug #105273
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> librep-0.17-r1.ebuild:
   Stable on ppc.

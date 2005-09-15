@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.1 2005/09/01 19:20:34 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.2 2005/09/15 12:48:24 truedfx Exp $
 
-inherit libtool toolchain-funcs multilib
+inherit eutils libtool toolchain-funcs multilib
 
 DESCRIPTION="Shared library implementing a Lisp dialect"
 HOMEPAGE="http://librep.sourceforge.net/"
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/rep_file_fdopen.patch"
 	sed -i -e '7s/AM_PATH_REP/[&]/' rep.m4 || die "sed failed"
 	elibtoolize || die "elibtoolize failed"
 }

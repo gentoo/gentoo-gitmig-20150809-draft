@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.6 2005/09/02 19:34:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r1.ebuild,v 1.7 2005/09/15 12:48:24 truedfx Exp $
 
 IUSE="readline"
 
-inherit libtool toolchain-funcs multilib
+inherit eutils libtool toolchain-funcs multilib
 
 DESCRIPTION="Shared library implementing a Lisp dialect"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -20,6 +20,12 @@ RDEPEND=">=sys-libs/gdbm-1.8.0
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	>=sys-devel/automake-1.6.1-r5"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/rep_file_fdopen.patch"
+}
 
 src_compile() {
 	elibtoolize
