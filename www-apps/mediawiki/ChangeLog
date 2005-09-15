@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.28 2005/08/30 22:40:16 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.29 2005/09/15 21:01:57 trapni Exp $
+
+*mediawiki-1.5.0_rc4-r1 (15 Sep 2005)
+*mediawiki-1.4.9-r1 (15 Sep 2005)
+
+  15 Sep 2005; Christian Parpart <trapni@gentoo.org>
+  +mediawiki-1.4.9-r1.ebuild, +mediawiki-1.5.0_rc4-r1.ebuild:
+  fixing ghostscript depend and solved some more depend-on-useflag issues on
+  mediawiki 1.5
 
 *mediawiki-1.5.0_rc4 (30 Aug 2005)
 *mediawiki-1.4.9 (30 Aug 2005)
