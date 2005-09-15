@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2440fb43629f09b85c050b3557459b05 dbus-0.23.4-r1.ebuild 3440
 MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
 MD5 bb8292b02298d653808cb0d0edd271da dbus-0.23.4.ebuild 3413
@@ -21,3 +24,10 @@ MD5 c66dfd4b07508de75f541b24035b74af files/dbus-0.23.2-python_api.patch 571
 MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2-r1 64
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
 MD5 f3ab25d85c77b7f859d4d2cefc787aef files/dbus-0.23-fd_set.patch 293
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKfB3omPajV0RnrERAonIAJ0Zr4oFdRfp1trHyrs/NhcZ7cn1kACfXtky
+Gpdkj9JbcZRCSHSIngBODuY=
+=PlXP
+-----END PGP SIGNATURE-----
