@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/gdeskcal-skins-0.0.1.ebuild,v 1.2 2005/07/01 04:41:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdeskcal-skins/gdeskcal-skins-0.0.1.ebuild,v 1.3 2005/09/15 22:00:06 flameeyes Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of gdeskcal skins"
@@ -37,8 +37,8 @@ DEPEND="x11-misc/gdeskcal"
 
 src_install() {
 	dodir /usr/share/gdeskcal/skins
-	cp -dR * ${D}/usr/share/gdeskcal/skins
-	chown -R root:root ${D}/usr/share/gdeskcal/skins
+	cp -R * ${D}/usr/share/gdeskcal/skins
+	chown -R root:0 ${D}/usr/share/gdeskcal/skins
 	chmod -R o-w ${D}/usr/share/gdeskcal/skins
 	chmod -R a+rX ${D}/usr/share/gdeskcal/skins
 }
