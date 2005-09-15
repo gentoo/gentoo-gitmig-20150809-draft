@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1.ebuild,v 1.9 2005/05/16 00:51:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1.ebuild,v 1.10 2005/09/15 21:50:31 agriffis Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/netcat/netcat-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~arm ~hppa ~amd64 ppc-macos"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ppc ppc-macos sparc x86"
 IUSE="nls debug"
 
 DEPEND="virtual/libc"
