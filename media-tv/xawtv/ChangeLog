@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.26 2005/08/24 20:13:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.27 2005/09/15 20:10:18 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> xawtv-3.94-r1.ebuild:
+  Mark 3.94-r1 stable on alpha
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> xawtv-3.94-r1.ebuild:
   stable on ia64
