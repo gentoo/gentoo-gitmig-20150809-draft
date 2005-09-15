@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.3 2005/09/15 07:41:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.4 2005/09/15 19:38:42 swegener Exp $
 
 inherit eutils linux-mod
 
@@ -22,7 +22,6 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 IUSE=""
-S="${WORKDIR}/${P}"
 
 BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"

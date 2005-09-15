@@ -2,18 +2,18 @@
 Hash: SHA1
 
 MD5 af1fc7868e71b09cf449e5da8a9662d5 ChangeLog 5217
-MD5 59443db2175efdf7f71b3949829d81bb ivtv-0.3.8.ebuild 4449
-MD5 1b5dfd233a54a22de87bcb47627a7265 ivtv-0.2.0_rc3-r4.ebuild 3964
-MD5 71007461e2e10f367a6a8f7a0b0d7d6a metadata.xml 465
-MD5 28b327ad3b268ad20a14a516c72e9908 ivtv-0.2.0_rc3-r5.ebuild 3964
-MD5 956acbfe3a222cc4b612da479232d670 files/digest-ivtv-0.3.8 191
-MD5 98a1ec166f665108688586fd5b36c05d files/ivtv 89
 MD5 994d47620b6a826a5d2cf84b3cb1bc5c files/digest-ivtv-0.2.0_rc3-r4 134
 MD5 5458ad51769cecb853e0afb00ab63930 files/digest-ivtv-0.2.0_rc3-r5 134
+MD5 956acbfe3a222cc4b612da479232d670 files/digest-ivtv-0.3.8 191
+MD5 98a1ec166f665108688586fd5b36c05d files/ivtv 89
+MD5 1b5dfd233a54a22de87bcb47627a7265 ivtv-0.2.0_rc3-r4.ebuild 3964
+MD5 28b327ad3b268ad20a14a516c72e9908 ivtv-0.2.0_rc3-r5.ebuild 3964
+MD5 27b6a71e408f027e6bddf91eac648aa2 ivtv-0.3.8.ebuild 4431
+MD5 71007461e2e10f367a6a8f7a0b0d7d6a metadata.xml 465
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKSXKBtvusYtCZMsRAocsAJ9PtbNdJ/QpDUZiWJDtJ0ydCcXtYACdHO8n
-Qt2naTu4ZvoOuctcoji9LB0=
-=+ESO
+iD8DBQFDKc3aI1lqEGTUzyQRAo6KAJ0SnXOVHg3+xqANScjpWAE38PyB6ACgusIU
+vhMQep5goZcOQzAhrxee4TM=
+=+W50
 -----END PGP SIGNATURE-----
