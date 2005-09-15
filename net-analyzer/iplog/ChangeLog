@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iplog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.14 2005/04/25 02:19:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/ChangeLog,v 1.15 2005/09/15 21:53:56 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> iplog-2.2.3-r2.ebuild:
+  Mark 2.2.3-r2 stable on alpha
 
   24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> -iplog-2.2.3-r1.ebuild,
   -iplog-2.2.3.ebuild:
