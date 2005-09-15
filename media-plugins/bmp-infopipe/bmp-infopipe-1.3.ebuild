@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/bmp-infopipe-1.3.ebuild,v 1.8 2005/09/04 09:56:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/bmp-infopipe-1.3.ebuild,v 1.9 2005/09/15 11:33:47 agriffis Exp $
 
 inherit eutils
 IUSE=""
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.beastwithin.org/users/wwwwolf/code/xmms/infopipe.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 x86"
 
 DEPEND="media-sound/beep-media-player"
 
