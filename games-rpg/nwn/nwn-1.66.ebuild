@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.1 2005/09/13 15:33:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66.ebuild,v 1.2 2005/09/15 21:49:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -13,19 +13,21 @@ DESCRIPTION="Neverwinter Nights"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.tar.gz
 	linguas_fr? ( ${PATCH_URL_BASE}French${PACKAGE_NAME} ${DIALOG_URL_BASE}/french/NWNFrench${PV}dialog.zip ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwfrench129.tar.gz )
-	linguas_de? ( ${PATCH_URL_BASE}German${PACKAGE_NAME} ${DIALOG_URL_BASE}/german/NWNGerman${PV}dialog.zip http://xfer06.fileplanet.com/%5E389272944/082003/nwgerman129.tar.gz )
 	linguas_it? ( ${PATCH_URL_BASE}Italian${PACKAGE_NAME} ${DIALOG_URL_BASE}/italian/NWNItalian${PV}dialog.zip http://nwdownloads.bioware.com/neverwinternights/linux/129/nwitalian129.tar.gz )
 	linguas_es? ( ${PATCH_URL_BASE}Spanish${PACKAGE_NAME} ${DIALOG_URL_BASE}/spanish/NWNSpanish${PV}dialog.zip http://nwdownloads.bioware.com/neverwinternights/linux/129/nwspanish129.tar.gz )
 	!linguas_de? ( !linguas_fr? ( !linguas_es? ( !linguas_it? (
 		${PATCH_URL_BASE}English${PACKAGE_NAME} ${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
 	) ) ) )
 	nowin? ( http://bsd.mikulas.com/nwresources129.tar.gz
-		http://163.22.12.40/FreeBSD/distfiles/nwresources129.tar.gz
-		ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources129.tar.gz )"
+	http://163.22.12.40/FreeBSD/distfiles/nwresources129.tar.gz
+	ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources129.tar.gz )"
+# This is commented because FilePlanet sucks and I can't find another mirror,
+# so I can't even grab this file.
+#	linguas_de? ( ${PATCH_URL_BASE}German${PACKAGE_NAME} ${DIALOG_URL_BASE}/german/NWNGerman${PV}dialog.zip http://xfer06.fileplanet.com/%5E389272944/082003/nwgerman129.tar.gz )"
 
 LICENSE="NWN-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nowin" # nocd"
 RESTRICT="nostrip nomirror"
 
@@ -44,7 +46,11 @@ pkg_setup() {
 #		disk2.zip \
 #		disk3.zip \
 #		disk4.zip
-#	einfo "To download nwgerman129.tar.gz you need a gamespy account"
+	if use linguas_de
+	then
+		einfo "To download nwgerman129.tar.gz you need a gamespy account"
+		einfo "This means German support is unavailable at this time."
+	fi
 	games_pkg_setup
 }
 
