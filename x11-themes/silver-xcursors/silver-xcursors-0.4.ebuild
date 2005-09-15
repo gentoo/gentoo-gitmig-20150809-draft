@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/silver-xcursors-0.4.ebuild,v 1.16 2005/08/26 14:14:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/silver-xcursors-0.4.ebuild,v 1.17 2005/09/15 21:56:23 flameeyes Exp $
 
 MY_P="5533-Silver-XCursors-3D-${PV}"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -23,7 +23,7 @@ src_install() {
 	einfo "X11 implementation is ${X11_IMPLEM}."
 
 	dodir /usr/share/cursors/${X11_IMPLEM}/Silver/cursors/
-	cp -d  ${WORKDIR}/${MY_P:5}/Silver/cursors/* ${D}/usr/share/cursors/${X11_IMPLEM}/Silver/cursors/ || die
+	cp -R  ${WORKDIR}/${MY_P:5}/Silver/cursors ${D}/usr/share/cursors/${X11_IMPLEM}/Silver/ || die
 	dodoc ${WORKDIR}/${MY_P:5}/README
 }
 
