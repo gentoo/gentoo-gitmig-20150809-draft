@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1450 2005/09/13 18:51:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1451 2005/09/15 16:27:26 vanquirius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -680,6 +680,7 @@ net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some 
 net-analyzer/net-snmp:rpm - Enable the rpm snmp probing
 net-analyzer/net-snmp:smux - Enable the smux MIBS module
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
+net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-analyzer/snort:inline - Enable snort-inline for accepting packets from iptables, via libipq, rather than libpcap.
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
