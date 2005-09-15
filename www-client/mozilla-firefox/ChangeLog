@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.72 2005/09/15 04:01:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.73 2005/09/15 11:00:46 azarah Exp $
+
+*mozilla-firefox-1.0.6-r7 (15 Sep 2005)
+
+  15 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mozilla-firefox-1.0.6-GLSA105396.patch,
+  +mozilla-firefox-1.0.6-r7.ebuild:
+  Fix buffer overflow, bug #105396.
 
   15 Sep 2005; Joseph Jezak <josejx@gentoo.org>
   mozilla-firefox-1.0.6-r5.ebuild:
