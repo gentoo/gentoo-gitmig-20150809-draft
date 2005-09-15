@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.8 2005/05/01 17:17:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.9 2005/09/15 18:03:27 agriffis Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://quark.nerdnest.org/${P}.tar.gz"
 HOMEPAGE="http://quark.nerdnest.org/"
 SLOT="0"
 
-KEYWORDS="x86 ppc ~alpha sparc amd64"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 LICENSE="GPL-2"
 
