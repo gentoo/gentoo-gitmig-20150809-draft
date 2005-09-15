@@ -1,16 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.2 2005/09/15 06:34:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.3 2005/09/15 07:41:40 cardoe Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="ivtv driver for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
 
-FW_VER="pvr_1.18.21.22168_inf.zip"
+#FW_VER="pvr_1.18.21.22168_inf.zip" ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER}
+FW_VER_150="mce_cd_v27a.zip"
+FW_VER="pvr48wdm_1.8.22037.exe"
+#Switched to recommended firmware by driver
 
 SRC_URI="http://dl.ivtvdriver.org/${PN}/${P}.tar.gz
-	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER}"
+	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/win9x-2k-xp_mpeg_wdm_drv/${FW_VER}
+	http://hauppauge.lightpath.net/software/mce/${FW_VER_150}"
 
 RESTRICT="nomirror"
 SLOT="0"
@@ -22,7 +26,7 @@ S="${WORKDIR}/${P}"
 
 BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"
-CONFIG_CHECK="I2C_ALGOBIT VIDEO_DEV"
+CONFIG_CHECK="I2C_ALGOBIT VIDEO_DEV I2C_CHARDEV I2C"
 
 DEPEND="app-arch/unzip"
 
@@ -33,12 +37,16 @@ pkg_setup() {
 		saa7115(extra:${S}/driver)
 		tveeprom(extra:${S}/driver)
 		saa7127(extra:${S}/driver)
-		cx25840(extra:${S}/driver)"
+		cx25840(extra:${S}/driver)
+		tuner(extra:${S}/driver)
+		wm8775(extra:${S}/driver)
+		tda9887(extra:${S}/driver)"
 	linux_chkconfig_present FB && MODULE_NAMES="${MODULE_NAMES}"
 }
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	unpack ${FW_VER_150}
 
 	sed -e "s:^VERS26=.*:VERS26=${KV_MAJOR}.${KV_MINOR}:g" \
 		-i ${S}/driver/Makefile || die "sed failed"
@@ -62,8 +70,12 @@ src_install() {
 	cd ${S}/utils
 	dodir /lib/modules
 	./ivtvfwextract.pl ${DISTDIR}/${FW_VER} \
-		${D}/lib/modules/ivtv-fw-enc.bin \
+		${D}/lib/modules/ivtv-fw-enc-250-350.bin \
 		${D}/lib/modules/ivtv-fw-dec.bin
+
+	insinto /lib/modules
+	newins ${WORKDIR}/WinTV-PVR-150500MCE_2_0_30_23074_WHQL/HcwFalcn.rom HcwFalcn.rom
+	newins ${WORKDIR}/WinTV-PVR-150500MCE_2_0_30_23074_WHQL/HcwMakoA.ROM HcwMakoA.ROM
 
 	cd ${S}
 	dodoc README doc/*
@@ -103,11 +115,8 @@ pkg_postinst() {
 	# einfo "To use vbi, you'll need a few other things, check README.vbi in the docs dir"
 	# echo
 
-	einfo "The ptune* scripts have moved to media-tv/ivtv-ptune, emerge that to use those scripts"
-	echo
-
 	# Similar checks are performed by the make install in the drivers directory.
-	BADMODS="msp3400 tda9887 tuner tveeprom saa7115 saa7127"
+	BADMODS="msp3400 tda9887 tuner tveeprom saa7115 saa7127 cx25840 wm8775"
 
 	for MODNAME in ${BADMODS}; do
 		if [ -f "${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/${MODNAME}.ko" ] ; then
@@ -117,4 +126,15 @@ pkg_postinst() {
 			echo
 		fi
 	done
+
+	echo
+	ewarn
+	ewarn
+	ewarn "PVR-250/350 users need to run the following command to setup the firmware:"
+	ewarn "ln -sf /lib/modules/ivtv-fw-enc-250-350.bin /lib/modules/ivtv-fw-enc.bin"
+	ewarn
+	ewarn "PVR-150/500 users need to run the following command to setup the firmware:"
+	ewarn "ln -sf /lib/modules/HcwFalcn.rom /lib/modules/ivtv/fw-enc.bin"
+	ewarn
+	echo
 }

@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.32 2005/09/15 06:34:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.33 2005/09/15 07:41:40 cardoe Exp $
+
+  15 Sep 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.3.8.ebuild:
+  Updated firmware to include 150/500 firmware. Switched to recommended
+  250/350 firmware
+
+  15 Sep 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.3.8.ebuild:
+  We need to include the ivtv tuner module over the in-kernel module since
+  there's changes. Several other modules too
 
   15 Sep 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.3.8.ebuild:
   Detect more modules that need to go to make everything happy
