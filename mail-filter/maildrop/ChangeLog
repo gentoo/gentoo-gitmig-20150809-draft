@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.41 2005/09/10 22:42:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.42 2005/09/15 10:59:49 ferdy Exp $
+
+  15 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  maildrop-1.8.1-r2.ebuild, maildrop-1.8.1.20050828.ebuild:
+  Fix DEPEND atoms
 
 *maildrop-1.8.1-r2 (10 Sep 2005)
 
