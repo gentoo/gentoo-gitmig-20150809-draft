@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.17 2005/09/15 21:54:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.18 2005/09/15 21:55:39 genstef Exp $
 
   15 Sep 2005; Stefan Schweizer <genstef@gentoo.org> ivman-0.6.4.ebuild:
-  Fix enewuser /bin fals shell, bug 103421
+  Fix enewuser /bin/false shell, bug 103421
 
 *ivman-0.6.4 (13 Sep 2005)
 
