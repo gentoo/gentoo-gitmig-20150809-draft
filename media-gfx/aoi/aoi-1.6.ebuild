@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.6.ebuild,v 1.9 2004/07/30 20:53:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.6.ebuild,v 1.10 2005/09/15 20:11:19 halcy0n Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://aoi.sourceforge.net/index"
 KEYWORDS="~x86 ~sparc ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.2
 	dev-java/jmf-bin
 	dev-java/ant"
