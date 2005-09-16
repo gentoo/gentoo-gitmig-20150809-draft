@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/phex-2.0.0.76.ebuild,v 1.3 2004/08/23 03:07:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/phex-2.0.0.76.ebuild,v 1.4 2005/09/16 19:02:46 axxo Exp $
 
 DESCRIPTION="java gnutella file-sharing application"
 HOMEPAGE="http://phex.sourceforge.net/"
@@ -9,6 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.4
 	virtual/x11"
 S=${WORKDIR}/${P/-/_}
