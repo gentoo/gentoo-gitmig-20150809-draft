@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/eclipse-pydev-bin-0.8.0.ebuild,v 1.4 2005/05/05 16:06:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-pydev-bin/eclipse-pydev-bin-0.8.0.ebuild,v 1.5 2005/09/16 19:01:44 axxo Exp $
 
 inherit eclipse-ext
 
@@ -14,6 +14,7 @@ LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND=">=dev-util/eclipse-sdk-3.0
+	app-arch/unzip
 	dev-lang/python"
 
 S=${WORKDIR}
