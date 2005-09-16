@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 eee3a2716d9506256eba11f270d533b2 sim-0.9.3-r1.ebuild 1269
 MD5 e7acb4308b9e3d75322240c05562b5d5 sim-0.9.3-r3.ebuild 1206
 MD5 c4eb5670c6e35c0ecff85a4a513909d1 sim-0.8.3.ebuild 1256
@@ -17,3 +20,10 @@ MD5 4c1d988282342c2a0b08daf2e8823333 files/sim-0.9.2-configure.in.patch 631
 MD5 b4b10f2dfda34070eb8630e9ff5f2b27 files/sim-0.9.1-configure.in.patch 631
 MD5 d339c32dde1b02b447f028c1c4a351f0 files/sim-0.9.1-head.patch 1318
 MD5 0f0af3c4d6d9ba7bba0e22fa6a5278b9 files/sim-0.8.3-nostl.diff 863
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK1RaLLFUmVNQ7rkRAl4nAJ48HxcUudXkrTC8tSrlV2ZrZ3D56QCfZITK
+IbKJOehTTsiYLFNndAPN4Tc=
+=KT/3
+-----END PGP SIGNATURE-----

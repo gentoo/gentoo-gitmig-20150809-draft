@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 397450b312e01a7cd6f2a282a859756c universalkopete-0.1.ebuild 702
 MD5 777dd6192cc0e6ca0bc051ab9f92a54a metadata.xml 221
 MD5 e5b9a2709d9d4ff59b8a92912c1179d8 ChangeLog 1064
 MD5 c084d724beaae042e949b1fafddbc305 files/digest-universalkopete-0.1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK1R+LLFUmVNQ7rkRAoffAJ9lKLxUHbE3mnFjaawFNy41IOHSFwCfQfAL
+M3t8C6vXXHsUyFrDeH1vfaE=
+=+ZGE
+-----END PGP SIGNATURE-----
