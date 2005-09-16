@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cab6efc72140e48af2e7bf3d603c6780 ChangeLog 2032
-MD5 6b36114042766b590a929750635602fe metadata.xml 640
 MD5 42aae5c5168b66954313eb83f4fbbe13 giblib-1.2.4.ebuild 820
+MD5 6b36114042766b590a929750635602fe metadata.xml 640
+MD5 656cf67ed46a6f6572aa659b6f0cbb47 ChangeLog 2144
 MD5 6ddf4a6071a44007ba8be97ab21ebfd4 files/digest-giblib-1.2.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB4o1broRuSHgZdywRAif/AJ9m/7oPjs2IlGzX76yVdugI/ME9iwCeIRRk
-Hqy750+POe/nxJKbIuQokA0=
-=P+Ih
------END PGP SIGNATURE-----
