@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.25 2005/09/07 20:13:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.26 2005/09/16 02:03:57 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -218,19 +218,26 @@ toolchain-glibc_src_unpack() {
 
 toolchain-glibc_src_compile() {
 	# Set gconvdir to /usr/$(get_libdir)/gconv on archs with multiple ABIs
+	local MAKEFLAGS=""
 	has_multilib_profile && MAKEFLAGS="gconvdir=$(alt_usrlibdir)/gconv"
+
+	echo
+	for v in ABI CBUILD CHOST CTARGET CBUILD_OPT CTARGET_OPT CC CFLAGS ; do
+		einfo " $(printf '%15s' ${v}:)   ${!v}"
+	done
+	echo
 
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
 		einfo "Building GLIBC with linuxthreads..."
-		make PARALLELMFLAGS="-j1" ${MAKEFLAGS} || die
+		make PARALLELMFLAGS="${MAKEOPTS} -j1" ${MAKEFLAGS} || die
 	fi
 	if want_nptl ; then
 		# ... and then do the optional nptl build
 		unset LD_ASSUME_KERNEL || :
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
-		make PARALLELMFLAGS="-j1" ${MAKEFLAGS} || die
+		make PARALLELMFLAGS="${MAKEOPTS} -j1" ${MAKEFLAGS} || die
 	fi
 }
 
@@ -593,7 +600,7 @@ alt_prefix() {
 
 alt_libdir() {
 	if is_crosscompile ; then
-		echo /usr/${CTARGET}/lib
+		echo /usr/${CTARGET}/$(get_libdir)
 	else
 		echo /$(get_libdir)
 	fi
@@ -601,7 +608,7 @@ alt_libdir() {
 
 alt_usrlibdir() {
 	if is_crosscompile ; then
-		echo /usr/${CTARGET}/lib
+		echo /usr/${CTARGET}/$(get_libdir)
 	else
 		echo /usr/$(get_libdir)
 	fi
@@ -951,33 +958,10 @@ fix_lib64_symlinks() {
 }
 
 use_multilib() {
-	case $(tc-arch) in
-		sparc)
-			case ${CHOST} in
-				sparc64*)
-					is_crosscompile || has_multilib_profile || use multilib
-					;;
-				*)
-					false
-					;;
-			esac
-		;;
-		mips)
-			case ${CHOST} in
-				mips64*)
-					is_crosscompile || has_multilib_profile || use multilib
-					;;
-				*)
-					false
-					;;
-			esac
-		;;
-		amd64|ppc64)
-			is_crosscompile || has_multilib_profile || use multilib
-		;;
-		*)
-			false
-		;;
+	case ${CTARGET} in
+		sparc64*|mips64*|amd64|ppc64)
+			is_crosscompile || has_multilib_profile || use multilib ;;
+		*)  false ;;
 	esac
 }
 
@@ -990,13 +974,13 @@ crosscompile_setup() {
 
 		case ${CTARGET} in
 			x86_64*)
-				export CFLAGS_x86="${CFLAGS_x86--m32}"
-				export CHOST_x86="i686-pc-linux-gnu"
+				export CFLAGS_x86=${CFLAGS_x86--m32}
+				export CHOST_x86=${CTARGET/x86_64/i686}
 				export CDEFINE_x86="__i386__"
 				export LIBDIR_x86="lib"
 
-				export CFLAGS_amd64="${CFLAGS_amd64--m64}"
-				export CHOST_amd64="x86_64-pc-linux-gnu"
+				export CFLAGS_amd64=${CFLAGS_amd64--m64}
+				export CHOST_amd64=${CTARGET}
 				export CDEFINE_amd64="__x86_64__"
 				export LIBDIR_amd64="lib64"
 
@@ -1004,18 +988,18 @@ crosscompile_setup() {
 				export DEFAULT_ABI="amd64"
 			;;
 			mips64*)
-				export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
-				export CHOST_o32="mips-unknown-linux-gnu"
+				export CFLAGS_o32=${CFLAGS_o32--mabi=32}
+				export CHOST_o32=${CTARGET/mips64/mips}
 				export CDEFINE_o32="_ABIO32"
 				export LIBDIR_o32="lib"
 
-				export CFLAGS_n32="${CFLAGS_n32--mabi=n32}"
-				export CHOST_n32="mips64-unknown-linux-gnu"
+				export CFLAGS_n32=${CFLAGS_n32--mabi=n32}
+				export CHOST_n32=${CTARGET}
 				export CDEFINE_n32="_ABIN32"
 				export LIBDIR_n32="lib32"
 
-				export CFLAGS_n64="${CFLAGS_n64--mabi=64}"
-				export CHOST_n64="mips64-unknown-linux-gnu"
+				export CFLAGS_n64=${CFLAGS_n64--mabi=64}
+				export CHOST_n64=${CTARGET}
 				export CDEFINE_n64="_ABI64"
 				export LIBDIR_n64="lib64"
 
@@ -1023,13 +1007,13 @@ crosscompile_setup() {
 				export DEFAULT_ABI="n32"
 			;;
 			powerpc64*)
-				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
-				export CHOST_ppc="powerpc-unknown-linux-gnu"
+				export CFLAGS_ppc=${CFLAGS_ppc--m32}
+				export CHOST_ppc=${CTARGET/powerpc64/powerpc}
 				export CDEFINE_ppc="!__powerpc64__"
 				export LIBDIR_ppc="lib"
 
-				export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
-				export CHOST_ppc64="powerpc64-unknown-linux-gnu"
+				export CFLAGS_ppc64=${CFLAGS_ppc64--m64}
+				export CHOST_ppc64=${CTARGET}
 				export CDEFINE_ppc64="__powerpc64__"
 				export LIBDIR_ppc64="lib64"
 
@@ -1037,13 +1021,13 @@ crosscompile_setup() {
 				export DEFAULT_ABI="ppc64"
 			;;
 			sparc64*)
-				export CFLAGS_sparc32="${CFLAGS_sparc--m32}"
-				export CHOST_sparc32="sparc-unknown-linux-gnu"
+				export CFLAGS_sparc32=${CFLAGS_sparc--m32}
+				export CHOST_sparc32=${CTARGET/sparc64/sparc}
 				export CDEFINE_sparc32="!__arch64__"
 				export LIBDIR_sparc32="lib"
 
-				export CFLAGS_sparc64="${CFLAGS_sparc64--m64}"
-				export CHOST_sparc64="sparc64-unknown-linux-gnu"
+				export CFLAGS_sparc64=${CFLAGS_sparc64--m64}
+				export CHOST_sparc64=${CTARGET}
 				export CDEFINE_sparc64="__arch64__"
 				export LIBDIR_sparc64="lib64"
 
