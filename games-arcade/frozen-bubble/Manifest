@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9270c771d017773c05f10c650e98dd46 frozen-bubble-1.0.0-r5.ebuild 2807
 MD5 ed81470e0a1698d713b04ecb69d5a9e0 metadata.xml 449
 MD5 1e24a2baa78a3eb50c6416a88003dcdf ChangeLog 5587
@@ -6,3 +9,10 @@ MD5 5c883c8dd838b13190b3115a7649333d files/frozen-bubble-1.0.0-sdl-perl-2.patch 
 MD5 411c7217cb8bf93cdedbb0ef0640ed2f files/frozen-bubble-1.0.0-makefile.patch 1053
 MD5 c30d59b06b6112e4d3ca9ba2117c3202 files/1.0.0-no-chainreaction.patch 357
 MD5 9a77f057ee51c039f467c20fa822159d files/digest-frozen-bubble-1.0.0-r5 228
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK0IgLLFUmVNQ7rkRAt7+AJ9J/J3xfXP2Wi1Zjw+Q18PQVb4SYACfbXoM
+93w01yYkAqOMaDrcs8rhEQ4=
+=1pad
+-----END PGP SIGNATURE-----
