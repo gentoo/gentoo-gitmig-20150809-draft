@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/bozohttpd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.3 2004/08/27 12:05:47 s4t4n Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.4 2005/09/16 07:06:28 s4t4n Exp $
+
+*bozohttpd-20050410 (15 Sep 2005)
+
+  15 Sep 2005; Michele Noberasco <s4t4n@gentoo.org> bozohttpd-20050410.ebuild:
+  Version bump.
+  bozohttpd-20040823.ebuild:
+  Stable for x86.
+  bozohttpd-20040218.ebuild:
+  Wiped out older version.
+  metadata.xml:
+  Assigned to www-servers herd.
 
 *bozohttpd-20040823 (27 Aug 2004)
 
@@ -8,7 +19,7 @@
   Version bump.
   bozohttpd-20040218.ebuild:
   Changed files/bozohhtpd-20040218.* to bozohhtpd.*
-  Update ebuild to reflect this change.
+  Updated ebuild to reflect this change.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
   files/bozohttpd-20040218.initscript, bozohttpd-20040218.ebuild:

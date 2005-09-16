@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040823.ebuild,v 1.1 2004/08/27 12:05:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/bozohttpd-20040823.ebuild,v 1.2 2005/09/16 07:06:28 s4t4n Exp $
 
 inherit eutils
 
 DESCRIPTION="bozohttpd is a small and secure http server"
 HOMEPAGE="http://www.eterna.com.au/bozohttpd/"
 SRC_URI="http://www.eterna.com.au/bozohttpd/${P}.tar.bz2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
