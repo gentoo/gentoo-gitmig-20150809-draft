@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.7 2005/05/12 12:13:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.8 2005/09/16 03:00:32 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="3dfx S3TC nls opengl"
 
-DEPEND="!games-fps/unreal-tournament"
+DEPEND="!games-fps/unreal-tournament
+	app-arch/unzip"
 RDEPEND="virtual/x11
 	opengl? ( virtual/opengl )"
 
@@ -33,55 +34,55 @@ src_unpack() {
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN/-goty/}
 	local Ddir=${D}/${dir}
-	dodir ${dir}
+	dodir "${dir}"
 
 	###########
 	### PRE ###
 	# System
 	if use 3dfx ; then
-		tar -zxf Glide.ini.tar.gz -C ${Ddir} || die "install Glide ini"
+		tar -zxf Glide.ini.tar.gz -C "${Ddir}" || die "install Glide ini"
 	else
-		tar -zxf OpenGL.ini.tar.gz -C ${Ddir} || die "install OpenGL ini"
+		tar -zxf OpenGL.ini.tar.gz -C "${Ddir}" || die "install OpenGL ini"
 	fi
-	tar -zxf data.tar.gz -C ${Ddir} || die "extract System data"
+	tar -zxf data.tar.gz -C "${Ddir}" || die "extract System data"
 
 	# the most important things, ucc & ut :)
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe bin/x86/{ucc,ut} || die "install ucc/ut"
-	dosed "s:\`FindPath \$0\`:${dir}:" ${dir}/ucc
+	dosed "s:\`FindPath \$0\`:${dir}:" "${dir}"/ucc
 
 	# export some symlinks so ppl can run
-	dodir ${GAMES_BINDIR}
-	dosym ${dir}/ucc ${GAMES_BINDIR}/ucc
-	dosym ${dir}/ut ${GAMES_BINDIR}/ut
+	dodir "${GAMES_BINDIR}"
+	dosym "${dir}"/ucc "${GAMES_BINDIR}"/ucc
+	dosym "${dir}"/ut "${GAMES_BINDIR}"/ut
 	### PRE ###
 	###########
 
 	###########
 	### CD1 ###
 	# Help, Logs, Music, Sounds, Textures, Web
-	cp -rf "${CDROM_ROOT}"/{Help,Logs,Music,Textures,Web} ${Ddir}/ || die "copy Help, Logs, Music, Textures, Web CD1"
-	dodir ${dir}/Sounds
+	cp -rf "${CDROM_ROOT}"/{Help,Logs,Music,Textures,Web} "${Ddir}"/ || die "copy Help, Logs, Music, Textures, Web CD1"
+	dodir "${dir}"/Sounds
 	if use nls ; then
-		cp -rf "${CDROM_ROOT}"/Sounds/* ${Ddir}/Sounds/ || die "copy Sounds CD1"
+		cp -rf "${CDROM_ROOT}"/Sounds/* "${Ddir}"/Sounds/ || die "copy Sounds CD1"
 	else
-		cp -rf "${CDROM_ROOT}"/Sounds/*.uax ${Ddir}/Sounds/ || die "copy Sounds CD1"
+		cp -rf "${CDROM_ROOT}"/Sounds/*.uax "${Ddir}"/Sounds/ || die "copy Sounds CD1"
 	fi
 
 	# System
-	dodir ${dir}/System
+	dodir "${dir}"/System
 	if use nls ; then
-		cp "${CDROM_ROOT}"/System/*.{est,frt,itt,int,u} ${Ddir}/System/ || die "copy System data CD1"
+		cp "${CDROM_ROOT}"/System/*.{est,frt,itt,int,u} "${Ddir}"/System/ || die "copy System data CD1"
 	else
-		cp "${CDROM_ROOT}"/System/*.{int,u} ${Ddir}/System/ || die "copy System data CD1"
+		cp "${CDROM_ROOT}"/System/*.{int,u} "${Ddir}"/System/ || die "copy System data CD1"
 	fi
 
 	# now we uncompress the maps
 	einfo "Uncompressing CD1 Maps ... this may take some time"
-	dodir ${dir}/Maps
-	cd ${Ddir}
+	dodir "${dir}"/Maps
+	cd "${Ddir}"
 	export HOME=${T}
-	export UT_DATA_PATH=${Ddir}/System
+	export UT_DATA_PATH="${Ddir}"/System
 	for f in `find "${CDROM_ROOT}"/Maps/ -name '*.uz' -printf '%f '` ; do
 		./ucc decompress "${CDROM_ROOT}"/Maps/${f} -nohomedir || die "uncompressing map CD1 ${f}"
 		mv System/${f:0:${#f}-3} Maps/ || die "copy map CD1 ${f}"
@@ -95,24 +96,24 @@ src_install() {
 	###########
 	### CD2 ###
 	# Help, Sounds
-	cp -rf "${CDROM_ROOT}"/{Help,Sounds} ${Ddir}/ || die "copy Help, Sounds CD2"
+	cp -rf "${CDROM_ROOT}"/{Help,Sounds} "${Ddir}"/ || die "copy Help, Sounds CD2"
 
 	# S3TC Textures
 	if use S3TC ; then
-		cp -rf "${CDROM_ROOT}"/Textures ${Ddir}/ || die "copy S3TC Textures CD2"
+		cp -rf "${CDROM_ROOT}"/Textures "${Ddir}"/ || die "copy S3TC Textures CD2"
 	else
-		cp -rf "${CDROM_ROOT}"/Textures/{JezzTex,Jezztex2,SnowDog,chaostex{,2}}.utx ${Ddir}/Textures/ || die "copy Textures CD2"
+		cp -rf "${CDROM_ROOT}"/Textures/{JezzTex,Jezztex2,SnowDog,chaostex{,2}}.utx "${Ddir}"/Textures/ || die "copy Textures CD2"
 	fi
 
 	# System
-	cp -rf "${CDROM_ROOT}"/System/*.{u,int} ${Ddir}/System/ || die "copy System CD2"
+	cp -rf "${CDROM_ROOT}"/System/*.{u,int} "${Ddir}"/System/ || die "copy System CD2"
 
 	# now we uncompress the maps
 	einfo "Uncompressing CD2 Maps ... this may take some time"
-	dodir ${dir}/Maps
-	cd ${Ddir}
+	dodir "${dir}"/Maps
+	cd "${Ddir}"
 	export HOME=${T}
-	export UT_DATA_PATH=${Ddir}/System
+	export UT_DATA_PATH="${Ddir}"/System
 	for f in `find "${CDROM_ROOT}"/maps/ -name '*.uz' -printf '%f '` ; do
 		./ucc decompress "${CDROM_ROOT}"/maps/${f} -nohomedir || die "uncompressing map CD2 ${f}"
 		mv System/${f:0:${#f}-3} Maps/ || die "copy map CD2 ${f}"
@@ -122,32 +123,32 @@ src_install() {
 
 	###########
 	### END ###
-	cd ${S}
+	cd "${S}"
 
 	# Textures
-	tar -zxf Credits.tar.gz -C ${Ddir} || die "extract credits texture"
+	tar -zxf Credits.tar.gz -C "${Ddir}" || die "extract credits texture"
 	# NetGamesUSA.com
-	tar -zxf NetGamesUSA.com.tar.gz -C ${Ddir}/ || die "extract NetGamesUSA.com"
+	tar -zxf NetGamesUSA.com.tar.gz -C "${Ddir}"/ || die "extract NetGamesUSA.com"
 
 	# Patch UT-GOTY
 	cd setup.data
-	cp patch.dat{,.orig}
-	sed -e 's:sh uz-maps.sh:echo:' patch.dat.orig > patch.dat
-	./bin/Linux/x86/loki_patch patch.dat ${Ddir} || die "failed to patch"
-	cd ${S}
+	cp patch.dat{,.orig} || die "cp failed"
+	sed -e 's:sh uz-maps.sh:echo:' patch.dat.orig > patch.dat || die "sed failed"
+	./bin/Linux/x86/loki_patch patch.dat "${Ddir}" || die "failed to patch"
+	cd "${S}"
 
 	# now we install the IpDrv.so patch
-	insinto ${dir}/System
+	insinto "${dir}"/System
 	doins IpDrv.so || die "install IpDrv.so patch"
 
 	# install a few random files
-	insinto ${dir}
+	insinto "${dir}"
 	doins README icon.{bmp,xpm} || die "installing random files"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
-	find ${Ddir} -exec touch '{}' \;
+	find "${Ddir}" -exec touch '{}' \;
 	### END ###
 	###########
 
