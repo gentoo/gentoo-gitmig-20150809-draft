@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-systray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.24 2005/09/11 11:31:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.25 2005/09/16 01:02:10 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  xchat-systray-2.4.5-r2.ebuild:
+  Mark 2.4.5-r2 stable on alpha
 
   11 Sep 2005; Guy Martin <gmsoft@gentoo.org> xchat-systray-2.4.5-r2.ebuild:
   Stable on hppa.
