@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-cpma
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.9 2005/06/14 20:47:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.10 2005/09/16 22:13:38 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *quake3-cpma-1.32 (14 Jun 2005)
 
@@ -40,17 +43,15 @@
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added -ppc to keywords
 
-  20 Jul 2002: Jose Alberto Su·rez LÛpez <bass@gentoo.org> quake3-cpma-0.99x-r2.ebuild:
+  20 Jul 2002: Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> quake3-cpma-0.99x-r2.ebuild:
   Really fixed perms.
   
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> quake3-cpma-0.99x-r2.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> quake3-cpma-0.99x-r2.ebuild :
   Added KEYWORDS.
-# Maintaniner: JosÈ Alberto Su·rez LÛpez <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/ChangeLog,v 1.9 2005/06/14 20:47:07 wolf31o2 Exp $
 
 *quake3-cpma (25 Jun 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> quake3-cpma-0.99x.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> quake3-cpma-0.99x.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   25 Jun 2002; J.Alberto S.L. <bass@gentoo.org> quake3-cpma-0.99x.ebuild:
