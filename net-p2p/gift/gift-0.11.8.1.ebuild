@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1.ebuild,v 1.2 2005/09/06 21:12:59 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1.ebuild,v 1.3 2005/09/16 23:32:20 mkay Exp $
 
 inherit eutils libtool
 
@@ -44,8 +44,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "First, you need to run gift-setup with your normal"
-	einfo "user account to create the giFT configuration files."
+	einfo "Configure gift in /usr/share/giFT/ or run gift-setup"
+	einfo "as normal user and make:"
+	einfo 'cp -R $HOME/.giFT/* /usr/share/giFT/'
+	einfo "chown -R p2p:root /usr/share/giFT/*"
+	einfo "(be carefull while specyfing directories in gift-setup;"
+	einfo "keep in mind that giFT will run as process of user "
+	einfo 'specified in /etc/conf.d/gift with his $HOME directory)'
 	echo
 	einfo "Also, if you will be using the giFT init script, you"
 	einfo "will need to create /usr/share/giFT/giftd.conf"
