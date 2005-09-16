@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.6.0-r1.ebuild,v 1.1 2005/05/31 03:55:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.6.0-r1.ebuild,v 1.2 2005/09/16 06:26:20 nerdboy Exp $
 
 inherit eutils
 
@@ -9,10 +9,11 @@ HOMEPAGE="http://rapidsvn.tigris.org/"
 SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE="doc gtk2"
 
-DEPEND=">=dev-util/subversion-1.0.0
+DEPEND="~net-misc/neon-0.24.7
+	>=dev-util/subversion-1.0.0
 	>=x11-libs/wxGTK-2.4.2-r2
 	doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen app-text/docbook-xsl-stylesheets )"
 
@@ -51,6 +52,7 @@ src_compile() {
 
 	econf	--with-svn-lib=/usr/lib \
 		--with-svn-include=/usr/include \
+		--with-neon-config=/usr/bin/neon-config \
 		${myconf} || die "./configure failed"
 	emake  || die
 }
