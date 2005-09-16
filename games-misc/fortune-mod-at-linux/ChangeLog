@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-at-linux
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.8 2005/08/27 17:57:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.9 2005/09/16 22:14:54 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   27 Aug 2005; Markus Rothe <corsair@gentoo.org>
   fortune-mod-at-linux-20030120.ebuild:
@@ -30,6 +33,6 @@
 
   08 Oct 2004; Michael Hanselmann <hansmi@gentoo.org>
   +fortune-mod-at-linux-20030120.ebuild:
-  Initial import. Thanks to René Nussbaumer <gentoo@killerfox.hansmi.ch> for
+  Initial import. Thanks to RenÃ© Nussbaumer <gentoo@killerfox.hansmi.ch> for
   providing the ebuild.
 
