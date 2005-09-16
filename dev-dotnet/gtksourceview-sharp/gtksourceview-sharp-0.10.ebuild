@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.10.ebuild,v 1.3 2005/06/12 20:31:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.10.ebuild,v 1.4 2005/09/16 07:04:25 latexer Exp $
 
 inherit mono multilib
 
@@ -19,8 +19,8 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 DEPEND=">=dev-lang/mono-1.0
-		>=dev-dotnet/gtk-sharp-1.9.5
-		>=dev-dotnet/gnome-sharp-1.9.5
+		>=dev-dotnet/gtk-sharp-2.3.90
+		>=dev-dotnet/gnome-sharp-2.3.90
 		>=x11-libs/gtksourceview-1.2.0"
 
 
