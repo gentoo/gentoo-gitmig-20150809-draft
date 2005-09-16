@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030.ebuild,v 1.4 2005/09/16 11:38:20 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20041030-r1.ebuild,v 1.1 2005/09/16 22:56:53 rl03 Exp $
 
 inherit webapp eutils depend.apache
 
