@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.15 2005/08/22 22:50:36 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.16 2005/09/16 11:38:20 rl03 Exp $
+
+  16 Sep 2005; Renat Lumpau <rl03@gentoo.org> +files/exec_command.patch,
+  files/postinstall-en.txt, twiki-20041030.ebuild:
+  Security fixes for bug #106149.
 
   22 Aug 2005; Renat Lumpau <rl03@gentoo.org> files/postinstall-en.txt,
   files/reconfig, twiki-20041030.ebuild:

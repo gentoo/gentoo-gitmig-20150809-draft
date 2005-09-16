@@ -16,5 +16,7 @@ You are almost done!
    http://twiki.org/cgi-bin/view/TWiki/TWikiInstallationGuide
    particularly if you wish to set up email preferences or I18N.
 
-5. Visit http://${VHOST_HOSTNAME}/twiki, or
+5. Read ${MY_INSTALLDIR}/README.robustness for important security info.
+
+6. Visit http://${VHOST_HOSTNAME}/twiki, or
    http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/bin/view
