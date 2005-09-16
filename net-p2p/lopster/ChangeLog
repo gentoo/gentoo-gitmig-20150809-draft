@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/lopster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.21 2005/09/12 18:45:59 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/ChangeLog,v 1.22 2005/09/16 04:28:14 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> lopster-1.2.2.ebuild:
+  Mark 1.2.2 stable on alpha
 
   12 Sep 2005; <mkay@gentoo.org> lopster-1.2.2.ebuild,
   lopster-1.2.2-r1.ebuild  lopster-1.2.2-r2.ebuild:
