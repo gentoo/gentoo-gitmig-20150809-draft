@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kover
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.21 2005/03/31 20:28:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.22 2005/09/16 20:28:43 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   31 Mar 2005; <blubb@gentoo.org> kover-2.9.5.ebuild:
   stable on amd64
@@ -14,7 +17,7 @@
   01 Jan 2005; Daniel Black <dragonheart@gentoo.org> -kover-2.8.7.ebuild,
   kover-2.9.5.ebuild, +kover-2.9.6.ebuild:
   version bump as per bug #76091. Marked kover-2.9.5 x86 stable. Removed old
-  version. Version bump notification thanks to Miguel Revilla Rodríguez
+  version. Version bump notification thanks to Miguel Revilla RodrÃ­guez
   <yo@miguelrevilla.com>
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> kover-2.9.3.ebuild:
