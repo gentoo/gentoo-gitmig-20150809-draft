@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.130 2005/09/16 18:34:54 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.131 2005/09/16 23:52:22 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -222,26 +222,26 @@ slot_rebuild() {
 	for i in ${*} ; do
 		local temp="$(ls -1d ${VDB_PATH}/${i}*)"
 		for j in ${temp} ; do
-			if [ $(cat $(grep -o /.*/lib.*\.la ${j}/CONTENTS) | grep -co "${KDE_PREFIX}") = 0 ] ; then
+			if [[ $(cat $(grep -o /.*/lib.*\.la ${j}/CONTENTS) | grep -co "${KDE_PREFIX}") = 0 ]] ; then
 				REBUILD_LIST="${REBUILD_LIST} =${j/${VDB_PATH}\//}"
 			fi
 		done
 	done
 
-	if [ -n "${REBUILD_LIST}" ] ; then
+	if [[ -n "${REBUILD_LIST}" ]] ; then
 		local temp=""
 		cd ${VDB_PATH}
 		for i in ${REBUILD_LIST} ; do
 			i="$(echo ${i%-*} | cut -d= -f2)"
 			temp="${temp} $(find .  -iname "DEPEND" -exec grep -H ${i} '{}' \; | cut -f2-3 -d/ | grep -v ${CATEGORY}/${PN})"
 		done
-		temp="$(echo ${temp} | fmt -w 1 | sort -u | fmt -w 10000)"
+		temp="$(echo ${temp} | fmt -w 1 | sort -u)"
 		for i in ${temp} ; do
 			REBUILD_LIST="${REBUILD_LIST} =${i}"
 		done
 	fi
 
-	if [ -n "${REBUILD_LIST}" ] ; then
+	if [[ -n "${REBUILD_LIST}" ]] ; then
 		einfo "Please run \"emerge --oneshot ${REBUILD_LIST}\" before continuing.\n"
 	else
 		einfo "Done :), continuing...\n"
