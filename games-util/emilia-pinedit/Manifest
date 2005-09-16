@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e3af4246fc9358007623093e7cefa99 emilia-pinedit-0.3.1.ebuild 1253
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 12c40c3b72201d121f166b1792e4f65a ChangeLog 926
 MD5 60a658534e2d09a438b77cf44b08bbd4 files/0.3.1-assert.patch 525
 MD5 37689c5b51074f36c8cc6af759d2ade5 files/digest-emilia-pinedit-0.3.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK0YoLLFUmVNQ7rkRAk9iAJ97a0JjggJ9OWbxD299dFkQBu7IXwCfUqpC
+FtYys6plQ+od4ZspgEk4VYE=
+=UT3i
+-----END PGP SIGNATURE-----
