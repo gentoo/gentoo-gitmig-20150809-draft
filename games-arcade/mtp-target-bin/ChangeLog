@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/mtp-target-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.8 2005/08/23 19:21:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mtp-target-bin/ChangeLog,v 1.9 2005/09/16 22:07:38 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   23 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   mtp-target-bin-1.2.0.ebuild:
@@ -18,7 +21,7 @@
 
   12 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   +mtp-target-bin-1.2.0.ebuild:
-  Version bump #57727 by Kåre Baastrup.
+  Version bump #57727 by KÃ¥re Baastrup.
 
   25 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -mtp-target-bin-1.0.4.ebuild:

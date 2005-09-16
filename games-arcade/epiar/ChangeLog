@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/epiar
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.6 2004/06/24 22:04:42 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.7 2005/09/16 22:06:09 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> epiar-0.5.ebuild:
   Fix depends; tidy
@@ -17,4 +20,4 @@
 *epiar-0.5 (28 Mar 2004)
 
   28 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Martti Rannanj‰rvi #39091.
+  Initial import.  Ebuild submitted by Martti Rannanj√§rvi #39091.

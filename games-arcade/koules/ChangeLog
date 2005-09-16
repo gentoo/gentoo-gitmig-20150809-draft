@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/koules
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.6 2005/08/11 23:57:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.7 2005/09/16 22:07:09 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   11 Aug 2005; Olivier Crête <tester@gentoo.org> koules-1.4-r1.ebuild:
   Marked ~amd64, closes bug #102165, thanks to meetra for testing
@@ -19,4 +22,4 @@
 *koules-1.4 (12 Jul 2003)
 
   12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Fran�ois MASSON <tereutes@fr.st> #20194.
+  Initial import.  Ebuild submitted by François MASSON <tereutes@fr.st> #20194.
