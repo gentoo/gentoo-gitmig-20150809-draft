@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/kpogre
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.15 2005/06/22 21:31:52 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.16 2005/09/16 21:44:34 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   22 Jun 2005; Jose Luis Rivero <yoswink@gentoo.org> kpogre-1.3.5.ebuild:
   Keyworded ~alpha
@@ -37,7 +40,7 @@
 *kpogre-0.99 (22 Aug 2004)
 
   22 Aug 2004; Masatomo Nakano <nakano@gentoo.org> +kpogre-0.99.ebuild:
-  Version bump. Ebuild submitted by Diego Petteno“ <dgp85@users.sourceforge.net>
+  Version bump. Ebuild submitted by Diego Petten√≤ <dgp85@users.sourceforge.net>
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> kpogre-0.97.ebuild:
   Typo in DESCRIPTION: grafical -> graphical. Bug 59717.
