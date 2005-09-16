@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-config
 # Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-config/ChangeLog,v 1.4 2005/09/11 04:06:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-config/ChangeLog,v 1.5 2005/09/16 07:29:14 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  lapack-config-1.0.1.ebuild:
+  Mark 1.0.1 stable on alpha
 
   11 Sep 2005; Steve Arnold <nerdboy@gentoo.org> lapack-config-1.0.1.ebuild:
   stable bump for sparc
