@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.15 2005/07/28 04:35:58 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.16 2005/09/16 21:42:07 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   28 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> rman-3.1.ebuild:
   Stable ppc-macos. No other changes
@@ -26,7 +29,7 @@
 
   25 Sep 2003; Martin Holzer <mholzer@gentoo.org> rman-3.1.ebuild,
   files/rman-3.1-gentoo.diff:
-  Version bumped. Submitted by José Romildo Malaquias <romildo@uber.com.br> in
+  Version bumped. Submitted by JosÃ© Romildo Malaquias <romildo@uber.com.br> in
   #23225.
 
   17 Jul 2003; Lars Weiler <pylon@gentoo.org> rman-3.0.9.ebuild:

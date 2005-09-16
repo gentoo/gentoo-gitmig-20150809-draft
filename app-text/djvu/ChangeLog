@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.23 2005/07/21 15:32:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.24 2005/09/16 21:39:02 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   21 Jul 2005; Caleb Tennis <caleb@gentoo.org> djvu-3.5.12.ebuild,
   djvu-3.5.14.ebuild, djvu-3.5.14-r1.ebuild:
@@ -75,4 +78,4 @@
   Updated to mirror://sourceforge in SRC_URI.
 
   02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> djvu-3.5.7.ebuild: 
-  Initial import. Ebuild submitted by Christian V. J. Brüssow <cvjb@epost.de>.  
+  Initial import. Ebuild submitted by Christian V. J. BrÃ¼ssow <cvjb@epost.de>.  

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.15 2005/03/04 11:21:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.16 2005/09/16 21:41:27 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   04 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> lout-3.30.ebuild:
   Marked ~amd64.
@@ -46,7 +49,7 @@
   11 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, lout-3.25.ebuild, 
   files/digest-lout-3.25-r1, files/lout-3.25-r1-makefile-gentoo.patch :
 
-  Initial cvs commit. Ebuild contributed by Christian V. J. Brüssow <cvjb@epost.de>.
+  Initial cvs commit. Ebuild contributed by Christian V. J. BrÃ¼ssow <cvjb@epost.de>.
   Thanks for the contribution.
 
   Authors comments:

@@ -1,11 +1,14 @@
 # ChangeLog for app-text/dbacl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.10 2005/08/24 00:14:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/ChangeLog,v 1.11 2005/09/16 21:38:24 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *dbacl-1.11 (24 Aug 2005)
 
   24 Aug 2005; Mike Frysinger <vapier@gentoo.org> +dbacl-1.11.ebuild:
-  Version bump #103426 by Dennis Nienhüser.
+  Version bump #103426 by Dennis NienhÃ¼ser.
 
 *dbacl-1.9 (05 Apr 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/talkfilters
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.15 2005/07/31 01:57:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.16 2005/09/16 21:43:03 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   31 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
   talkfilters-2.3.4-r1.ebuild:
@@ -52,4 +55,4 @@
 *talkfilters-2.1 (18 Oct 2003)
 
   18 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Björn Lindström <bkhl@privat.utfors.se> #15937.
+  Initial import.  Ebuild submitted by BjÃ¶rn LindstrÃ¶m <bkhl@privat.utfors.se> #15937.

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/barcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.10 2005/04/24 11:33:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.11 2005/09/16 21:37:53 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> barcode-0.98.ebuild:
   Stable on ppc.
@@ -23,4 +26,4 @@
   Sed Makefile.in to be FHS happy and fix info dir entries #32076.
 
   23 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Miguel Revilla Rodríguez <yo@miguelrevilla.com>.
+  Initial import.  Ebuild submitted by Miguel Revilla RodrÃ­guez <yo@miguelrevilla.com>.

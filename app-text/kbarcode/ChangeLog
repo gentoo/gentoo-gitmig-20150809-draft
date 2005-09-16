@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbarcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.31 2005/08/23 22:07:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.32 2005/09/16 21:40:47 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> kbarcode-1.8.1.ebuild:
   Marked ppc stable for bug #99215.
@@ -133,5 +136,5 @@
 *kbarcode-1.2.0 (30 Apr 2003)
 
   30 Apr 2003; Caleb Tennis <caleb@gentoo.org> : kbarcode-1.2.0.ebuild
-  Initial import.  Ebuild submitted by Miguel Revilla Rodríguez 
+  Initial import.  Ebuild submitted by Miguel Revilla RodrÃ­guez 
   <yo@miguelrevilla.com> with minor use flag modification by Caleb.

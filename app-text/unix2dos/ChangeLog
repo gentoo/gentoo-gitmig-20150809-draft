@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unix2dos
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.16 2005/05/16 05:48:59 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/ChangeLog,v 1.17 2005/09/16 21:43:29 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   16 May 2005; Aaron Walker <ka0ttic@gentoo.org> unix2dos-2.2.ebuild:
   Use toolchain-funcs.eclass instead of gcc.eclass.
@@ -41,4 +44,4 @@
   set ppc in keywords
 
   01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by José Fonseca <j_r_fonseca@yahoo.co.uk>.
+  Initial import.  Ebuild submitted by JosÃ© Fonseca <j_r_fonseca@yahoo.co.uk>.

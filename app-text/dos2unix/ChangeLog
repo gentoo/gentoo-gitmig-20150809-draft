@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.13 2005/01/01 16:11:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.14 2005/09/16 21:39:39 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Add metadata (shell-tools)
@@ -32,4 +35,4 @@
   Added "sparc" keyword.
 
   01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by José Fonseca <j_r_fonseca@yahoo.co.uk>.
+  Initial import.  Ebuild submitted by JosÃ© Fonseca <j_r_fonseca@yahoo.co.uk>.
