@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
 MD5 66c93635a08f0b4b4f39f838c5284486 ChangeLog 2036
 MD5 b9becd01c58c546a6714b68e5e72fc95 gpg-agent-1.9.16.ebuild 2093
 MD5 ff93508de1ff781c60ff6c8eb7cdc2a9 gpg-agent-1.9.18.ebuild 1932
 MD5 7247c8f0379977f0a3dd13568bf283c7 files/digest-gpg-agent-1.9.18 66
 MD5 8c4a537dc8228a95208b0e227c93ed7d files/digest-gpg-agent-1.9.16 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKyxHLLFUmVNQ7rkRArzBAKDPzgm9uPOaDLzu9hqOK6TWeYTxOQCfU/D9
+nmB2yQpWMuGNX5nFsiVskEE=
+=NfsU
+-----END PGP SIGNATURE-----
