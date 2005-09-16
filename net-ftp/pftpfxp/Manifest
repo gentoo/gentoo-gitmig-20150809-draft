@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 52b127a14e34629b36992f743e5c5897 pftpfxp-0.11.4.6-r1.ebuild 1368
 MD5 f6cd2d33dcdbc01eb11a9ca67baed0be pftpfxp-0.11.4.6.ebuild 1260
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
@@ -6,3 +9,10 @@ MD5 e5a814afb2d03338d5f2e0c69fb75f69 files/0.11.4.6-gcc3.4.fix 505
 MD5 5c7f9305285e6c7efdbc232f737d533e files/digest-pftpfxp-0.11.4.6 68
 MD5 5c7f9305285e6c7efdbc232f737d533e files/digest-pftpfxp-0.11.4.6-r1 68
 MD5 fd3271b459d87ed5fce0e0fd47f72cff files/pftpfxp-v0.11.4mew6-pret.patch 3559
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK1PQLLFUmVNQ7rkRAvtVAJ9bcnJUDSW2n66cZswdRsqQtPTpPwCg1Nzn
+wOjOwOlB1jWZ2pogXVJUoYA=
+=ziPe
+-----END PGP SIGNATURE-----
