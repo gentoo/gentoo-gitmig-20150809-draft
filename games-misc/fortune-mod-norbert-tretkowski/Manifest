@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4f7212e20ede68df3d6ed0cafca0c8cb fortune-mod-norbert-tretkowski-20030120.ebuild 694
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
 MD5 a5f26540c3b902ec47ae984447e0c39d ChangeLog 1126
 MD5 6e4fe98448ce5dae312dc19b2c420385 files/digest-fortune-mod-norbert-tretkowski-20030120 90
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK0STLLFUmVNQ7rkRAh/tAJ0RS3gC8l5Cky3STFZ9TkMuqWdC4ACggtSv
+ZtF2MITSm7DqHuiwU8oGfw4=
+=pT/R
+-----END PGP SIGNATURE-----
