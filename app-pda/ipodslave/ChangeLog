@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/ipodslave
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.5 2005/08/23 21:12:07 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ipodslave/ChangeLog,v 1.6 2005/09/16 21:36:42 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   23 Aug 2005; Malcolm Lashley <malc@gentoo.org> ipodslave-0.6.2.ebuild:
   ~amd64 - closes bug #100600
@@ -15,6 +18,6 @@
 
   20 Dec 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
   +files/ipodslave-0.6.2-udev.patch, +ipodslave-0.6.2.ebuild:
-  New ebuild, thanks to Jonas Bähr and Ortwin Glueck for ebuild and udev
+  New ebuild, thanks to Jonas BÃ¤hr and Ortwin Glueck for ebuild and udev
   patch. Closes bug #60368.
 
