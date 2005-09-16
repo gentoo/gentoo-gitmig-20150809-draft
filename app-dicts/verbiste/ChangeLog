@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.12 2005/07/31 20:58:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.13 2005/09/16 21:10:40 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   31 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   verbiste-0.1.11.ebuild:
@@ -44,5 +47,5 @@
 
   27 Jun 2004; Olivier Crete <tester@gentoo.org> +metadata.xml, 
   +verbiste-0.1.9.ebuild:
-  Initial import based on ebuild submitted by José Romildo Malaquias 
+  Initial import based on ebuild submitted by JosÃ© Romildo Malaquias 
   <romildo@uber.com.br> in bug #47465 
