@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.57 2005/09/16 23:32:20 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.58 2005/09/16 23:37:45 mkay Exp $
+
+  16 Sep 2005; <mkay@gentoo.org> gift-0.11.6.ebuild:
+  just change date in header to make repoman happy;>
 
   16 Sep 2005; <mkay@gentoo.org> files/gift.confd, files/gift.initd,
   gift-0.11.8.1.ebuild:
