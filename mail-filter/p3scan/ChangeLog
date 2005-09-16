@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/p3scan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.3 2005/07/22 15:05:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.4 2005/09/16 17:08:32 ticho Exp $
+
+*p3scan-2.2 (16 Sep 2005)
+
+  16 Sep 2005; Andrej Kacian <ticho@gentoo.org> +p3scan-2.2.ebuild:
+  Version bump.
 
   22 Jul 2005; Andrej Kacian <ticho@gentoo.org> p3scan-2.1.ebuild:
   Stable on x86.
