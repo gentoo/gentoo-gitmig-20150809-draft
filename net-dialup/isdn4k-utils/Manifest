@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5eeb7174364e6bddb64a87d746660f78 isdn4k-utils-3.6_pre20041219-r1.ebuild 7145
 MD5 feee5c40e3619fe18a532086f1c13929 isdn4k-utils-3.7_pre20050626.ebuild 9401
 MD5 2b2caeb3cde723ef0fdf8a758e741757 isdn4k-utils-3.8_pre20050821.ebuild 10832
@@ -39,3 +42,10 @@ MD5 ae970ec0c32e13878655a581742629b8 files/3.6_pre20041219/options.ippp0 685
 MD5 673179cfabf5a9839cfbf81bc2eeb34e files/3.6_pre20041219/hisax.conf 1341
 MD5 f26cdb4ad4237c11b371a7dcb2d89d17 files/3.6_pre20041219/isdnlog.confd 415
 MD5 cd0fb0c848a80ea2f686b351f73b96b0 files/3.6_pre20041219/config 2693
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK1LZLLFUmVNQ7rkRAs8SAKC23x/Qwgn0ArbZUaH9tnD+hwvHBgCfeqm+
+g4cXXVgOwo2q0iAcyJ2qEF0=
+=6vYX
+-----END PGP SIGNATURE-----
