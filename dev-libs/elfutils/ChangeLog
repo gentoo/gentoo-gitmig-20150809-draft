@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.67 2005/07/24 13:05:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.68 2005/09/16 21:55:48 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   24 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
   -files/elfutils-0.108-robustify3.patch, elfutils-0.108-r1.ebuild:
@@ -119,7 +122,7 @@
   Version bump.
 
   25 Nov 2004; Daniel Black <dragonheart@gentoo.org> elfutils-0.94-r1.ebuild:
-  fixed test routine as per bug #72347. Thanks to Sébastien DIAZ
+  fixed test routine as per bug #72347. Thanks to SÃ©bastien DIAZ
   <sebastien.diaz@alliancemedia.fr>
 
   02 Aug 2004; <solar@gentoo.org> elfutils-0.94-r1.ebuild:

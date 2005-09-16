@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.30 2005/09/11 18:35:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.31 2005/09/16 21:57:25 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   11 Sep 2005; Steve Arnold <nerdboy@gentoo.org> xerces-c-2.6.0.ebuild,
   xerces-c-2.6.0-r1.ebuild:
@@ -43,7 +46,7 @@
 *xerces-c-2.5.0 (15 Aug 2004)
 
   15 Aug 2004; Mike Frysinger <vapier@gentoo.org> +xerces-c-2.5.0.ebuild:
-  Version bump #59977 by Diego Pettenò.
+  Version bump #59977 by Diego PettenÃ².
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xerces-c-2.3.0-r6.ebuild, xerces-c-2.4.0-r1.ebuild, xerces-c-2.4.0.ebuild:
