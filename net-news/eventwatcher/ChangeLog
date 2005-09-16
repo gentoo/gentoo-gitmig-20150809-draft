@@ -1,6 +1,9 @@
 # ChangeLog for net-news/eventwatcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.13 2005/08/21 21:18:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/ChangeLog,v 1.14 2005/09/16 23:33:08 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   21 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> eventwatcher-0.4.1.ebuild:
   Correct KDE dependency (#83058).
@@ -42,5 +45,5 @@
 
   13 Mar 2004; Dominik Stadler <centic@gentoo.org> eventwatcher-0.2.1.ebuild,
   metadata.xml:
-  New ebuild, thanks to Diego Pettenò <dgp85@users.sourceforge.net>, Bug 39480
+  New ebuild, thanks to Diego PettenÃ² <dgp85@users.sourceforge.net>, Bug 39480
 
