@@ -1,3 +1,13 @@
-MD5 9ce6890488732bab6b1cd41416ff41c3 ChangeLog 896
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67d2a578e2761b5e8a4cded0dd3e3bd2 posh-0.3.18.ebuild 496
+MD5 1b9a71a107522e1fe381513705dbfe03 ChangeLog 1010
 MD5 71f451268203baaa34bfee0de6f331bc files/digest-posh-0.3.18 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKztFLLFUmVNQ7rkRAiGKAKCM3CTAyt9IdM3HY3KPFqhisrPEtACgmj2e
+sSv+Hf6wYhMNdhFD1g0XHQA=
+=ap/w
+-----END PGP SIGNATURE-----
