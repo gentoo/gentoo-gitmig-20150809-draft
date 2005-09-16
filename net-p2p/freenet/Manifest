@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa2c8e296a3f63718894482d42edc68c freenet-0.5.2.1-r8.ebuild 4562
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 6664cb20226f201e1464556c7c2ea777 ChangeLog 8011
@@ -5,3 +8,10 @@ MD5 4ae956431fc61a4f535d971c2e908478 files/start-freenet.sh 330
 MD5 3a391b52e5e7740c7bdafcba7a9ee4d3 files/digest-freenet-0.5.2.1-r8 68
 MD5 f504649c326b9388901c0bf381a3c48e files/rc.freenet5 2249
 MD5 169efe0f216ade927538fab48315ecc7 files/conf.freenet 323
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK1cJLLFUmVNQ7rkRAmIVAJ4sN+qa15Ga4TswuxOIAmFu5fGF1wCcCXLJ
+I1VjGO23WS+WBISKZqjQZuE=
+=Rc3R
+-----END PGP SIGNATURE-----
