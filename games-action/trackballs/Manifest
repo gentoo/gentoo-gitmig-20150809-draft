@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da6c4ec29f89a969f609f1aa31dda6c5 trackballs-1.0.0.ebuild 1382
 MD5 1e2d784b544fe54409e2cc863b0d55f4 trackballs-1.0.0-r1.ebuild 1386
-MD5 8a385b5b7b1cd0aebf422e3bf0e69812 ChangeLog 1703
+MD5 da6c4ec29f89a969f609f1aa31dda6c5 trackballs-1.0.0.ebuild 1382
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 2939bebea6e5e9b276cc695a5bec6949 ChangeLog 1817
+MD5 0b573a1444721dee7dc128fb20c380e4 files/digest-trackballs-1.0.0 142
 MD5 9ec7bc9f5765e2ae6726f9ccb75d9443 files/1.0.0-drift.patch 292
 MD5 0b573a1444721dee7dc128fb20c380e4 files/digest-trackballs-1.0.0-r1 142
-MD5 0b573a1444721dee7dc128fb20c380e4 files/digest-trackballs-1.0.0 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeqgtI1lqEGTUzyQRAuYmAKDR5e+7PIPot0IZmSsij6Ddf9QJowCgx1Ma
-qOP/Lb15PqOnnJOcSSr/LtA=
-=6UYE
------END PGP SIGNATURE-----

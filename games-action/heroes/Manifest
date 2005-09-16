@@ -1,5 +1,5 @@
-MD5 6b1e58e4b9bafd70c5959739856f8094 ChangeLog 2374
 MD5 69ab0855154cfa3fc4869850e1ec470b heroes-0.21-r1.ebuild 1545
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 629b186fe097d16cc43e4748d648acf0 files/digest-heroes-0.21-r1 286
+MD5 a18bb54d411ba99608ca64537d03f290 ChangeLog 2493
 MD5 ba75ef912d119247f215f75fea97ce45 files/0.21-cvs-segfault-fix.patch 575
+MD5 629b186fe097d16cc43e4748d648acf0 files/digest-heroes-0.21-r1 286
