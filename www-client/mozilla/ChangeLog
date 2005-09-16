@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.67 2005/09/16 06:02:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.68 2005/09/16 17:55:38 metalgod Exp $
+
+  16 Sep 2005; Luis Medinas <metalgod@gentoo.org> mozilla-1.7.11-r3.ebuild:
+  Marked Stable on amd64. Fixes bug #105396.
 
   16 Sep 2005; Mark Loeser <halcy0n@gentoo.org> mozilla-1.7.11-r3.ebuild:
   Stable on x86.
