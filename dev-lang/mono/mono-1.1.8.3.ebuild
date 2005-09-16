@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.8.3.ebuild,v 1.1 2005/08/04 18:31:13 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.8.3.ebuild,v 1.2 2005/09/16 05:23:18 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -63,6 +63,11 @@ src_unpack() {
 
 src_compile() {
 	strip-flags
+	if use amd64
+	then
+		replace-flags O2 O1
+	fi
+
 	local myconf="--with-preview=yes"
 
 	# Force __thread on amd64. See bug #83770
