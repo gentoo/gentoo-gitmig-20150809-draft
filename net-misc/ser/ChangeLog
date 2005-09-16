@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ser
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.18 2005/09/12 21:30:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.19 2005/09/16 14:21:56 stkn Exp $
+
+  16 Sep 2005; Stefan Knoblich <stkn@gentoo.org> ser-0.9.0.ebuild,
+  ser-0.9.4.ebuild:
+  Fixed default location of configuration file in ser executable
+  by adding a trailing / in src_compile (#106184).
 
 *ser-0.9.4 (12 Sep 2005)
 
