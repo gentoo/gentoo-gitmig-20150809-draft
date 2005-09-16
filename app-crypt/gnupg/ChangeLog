@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.130 2005/09/03 11:15:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.131 2005/09/16 20:31:49 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   03 Sep 2005; Daniel Black <dragonheart@gentoo.org> gnupg-1.4.2-r2.ebuild:
   Check kernel version so that users with post 2.6.9 kernels don't get suid
@@ -29,7 +32,7 @@
   smartcard fix with bug #95938 and bug #67656. Version bump as per bug
   #97710. Slot change as per bug #74630. Thanks to Felix Kurth, Stian 
   Skjelstad, Rouslan Solomakhin, Michael Helmling, Chris White, Benjamin Smee,
-  Diego Pettenò, David Somers and whoever else I
+  Diego PettenÃ², David Somers and whoever else I
   missed.
 
 *gnupg-1.4.2-r1 (05 Aug 2005)

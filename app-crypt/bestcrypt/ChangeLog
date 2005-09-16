@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.34 2005/08/07 11:27:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.35 2005/09/16 20:29:29 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *bestcrypt-1.5_p11 (07 Aug 2005)
 
@@ -16,7 +19,7 @@
   21 Jun 2005; Daniel Black <dragonheart@gentoo.org>
   +bestcrypt-1.6_p1-r1.ebuild:
   Test fix for serpent asm compile problems thanks to author: Michael
-  Østergaard Pedersen
+  Ã˜stergaard Pedersen
 
   20 Jun 2005; Daniel Black <dragonheart@gentoo.org>
   bestcrypt-1.6_p1.ebuild:

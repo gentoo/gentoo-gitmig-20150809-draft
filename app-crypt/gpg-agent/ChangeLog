@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpg-agent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.11 2005/08/06 05:34:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/ChangeLog,v 1.12 2005/09/16 20:33:04 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *gpg-agent-1.9.18 (06 Aug 2005)
 
@@ -46,6 +49,6 @@
 
   02 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +gpg-agent-1.9.14.ebuild:
-  Initial version from bug #70811. Ebuild initially by Diego Pettenò
+  Initial version from bug #70811. Ebuild initially by Diego PettenÃ²
   <dgp85@users.sourceforge.net>
 
