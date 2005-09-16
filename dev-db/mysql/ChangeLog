@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.236 2005/09/12 16:05:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.237 2005/09/16 08:34:02 vivo Exp $
+
+  16 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
+  mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:
+  disabled also "csv" test when extraengine not set
+  thanks to Marvin Vek, bug #105534, #c6
 
   12 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
   mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:

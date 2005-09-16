@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.7 2005/09/13 00:03:35 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.8 2005/09/16 08:34:02 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -171,7 +171,7 @@ src_unpack() {
 
 	if ! useq extraengine ; then
 		einfo "disabling unneded extraengine tests"
-		local disable_test="archive bdb blackhole federated view"
+		local disable_test="archive bdb blackhole federated view csv"
 		for i in $disable_test ; do
 			mv "${S}/mysql-test/t/${i}.test" "${S}/mysql-test/t/${i}.disabled" \
 			&> /dev/null
