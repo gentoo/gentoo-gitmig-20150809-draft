@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lsh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.4 2005/05/01 17:24:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/ChangeLog,v 1.5 2005/09/16 23:30:19 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> lsh-2.0.1.ebuild:
   Stable on ppc.
@@ -13,7 +16,7 @@
 *lsh-2.0 (06 Feb 2005)
 
   06 Feb 2005; Mike Frysinger <vapier@gentoo.org> +lsh-2.0.ebuild:
-  Version bump #80317 by Jonas Bofj‰ll.
+  Version bump #80317 by Jonas Bofj√§ll.
 
   22 Nov 2004; Mike Frysinger <vapier@gentoo.org>
   +files/1.4.3-configure.patch, +files/1.4.3-gcc34.patch, +files/lsh.confd,

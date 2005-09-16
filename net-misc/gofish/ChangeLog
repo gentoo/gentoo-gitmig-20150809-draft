@@ -1,13 +1,16 @@
 # ChangeLog for net-misc/gofish
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.8 2005/09/03 01:36:16 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.9 2005/09/16 23:27:28 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *gofish-1.0 (03 Sep 2005)
 
   03 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> gofish-0.29.ebuild,
   +gofish-1.0.ebuild:
   Fix enewuser for bug 103421. Version bump for bug 89593, thanks to Emil
-  Sköldberg <emil@math.su.se>.
+  SkÃ¶ldberg <emil@math.su.se>.
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org> gofish-0.29.ebuild:
   added ~amd64

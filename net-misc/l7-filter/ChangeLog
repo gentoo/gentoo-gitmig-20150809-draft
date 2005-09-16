@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.17 2005/09/05 22:16:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.18 2005/09/16 23:28:42 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   05 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   -l7-filter-0.9.1-r1.ebuild, -l7-filter-1.2.ebuild, l7-filter-1.4.ebuild:
@@ -25,7 +28,7 @@
 
   05 Jun 2005; Daniel Black <dragonheart@gentoo.org> l7-filter-1.2.ebuild,
   +l7-filter-1.4.ebuild:
-  Version bump as per bug #95024. Thanks Jes˙s GarcÌa Crespo. x86 stable
+  Version bump as per bug #95024. Thanks Jes√∫s Garc√≠a Crespo. x86 stable
   on 1.2 also
 
   24 Apr 2005; Daniel Black <dragonheart@gentoo.org> -l7-filter-1.0.ebuild,
@@ -36,7 +39,7 @@
 
   21 Apr 2005; Daniel Black <dragonheart@gentoo.org> +l7-filter-1.2.ebuild:
   Version bump - versions -1.0 and 1.1 have kernel memory leaks as per bug
-  #89500. Thanks to Arne St‰cker <arnestaecker@web.de>
+  #89500. Thanks to Arne St√§cker <arnestaecker@web.de>
 
   23 Mar 2005; Daniel Black <dragonheart@gentoo.org> l7-filter-1.1.ebuild:
   Small doco fix instructing to emerge iptables with extensions USE flag. Thanks
@@ -45,7 +48,7 @@
 *l7-filter-1.1 (22 Mar 2005)
 
   22 Mar 2005; Daniel Black <dragonheart@gentoo.org> +l7-filter-1.1.ebuild:
-  Version bump thanks to Arne St‰cker <arnestaecker@web.de> in bug #85314.
+  Version bump thanks to Arne St√§cker <arnestaecker@web.de> in bug #85314.
   Version bump also solves bug #85058.
 
   12 Mar 2005; Daniel Black <dragonheart@gentoo.org> -l7-filter-0.9.1.ebuild:

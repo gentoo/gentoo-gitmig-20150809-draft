@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.24 2005/08/26 03:13:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.25 2005/09/16 23:28:12 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   26 Aug 2005; Jason Wever <weeve@gentoo.org> icaclient-9.0.ebuild:
   Added fix for bug #103706.
@@ -90,5 +93,5 @@
   Added KEYWORDS.
 
   08 Jun 2002; Donny Davies <woodchip@gentoo.org> :
-  New port submitted bu Frédéric Mangeant <frederic.mangeant@free.fr>.
+  New port submitted bu FrÃ©dÃ©ric Mangeant <frederic.mangeant@free.fr>.
   Bug #2440.
