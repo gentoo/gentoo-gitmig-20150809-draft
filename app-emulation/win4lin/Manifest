@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fc76a185ae1f1240d8ddd81ae75c18a9 win4lin-4.0.16.ebuild 2387
 MD5 5c92b9109cd3d356b76e886cd4bfee01 win4lin-5.0.8.ebuild 2772
 MD5 344bc225e4710350aad781667211dafc win4lin-5.1.ebuild 2772
@@ -21,3 +24,10 @@ MD5 6e0fd7f874abc97d2186d2c99527d488 files/digest-win4lin-4.0.16 142
 MD5 5fec029d8463ba33430ac0d42b4fc687 files/win4lin.initd.new 456
 MD5 f55a22f0e3747c4673f80d53803502f2 files/digest-win4lin-4.0.12 142
 MD5 64806537e817b95e25bb98a6e1b67379 files/win4lin.initd 1677
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKzdiLLFUmVNQ7rkRApHGAKC32T3nw5KLygWPHsFMSfNhCkckqgCeK1xT
+63Au5S7h387YQ2rkMlblHI8=
+=wAqr
+-----END PGP SIGNATURE-----

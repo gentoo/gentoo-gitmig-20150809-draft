@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 158993c65efc17dd6e4dfdab752d3e63 winex-3000.ebuild 1328
 MD5 1e55ce53ba813a296c6b649f5210f2a7 ChangeLog 5622
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-winex-3000 0
 MD5 63a46a2b78be05243179e46f7c1c4d40 files/81winex 78
 MD5 68d70a8e7d43268ac2675e7d15915b05 files/winex 97
 MD5 190b622ae744fb68561764ce1b2d9f1d files/winex-20030328.patch 287
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKzf1LLFUmVNQ7rkRAiPMAJ4rKn8rFmW1yQmfouW6FkBXh7eKswCgi1Hn
+15VDa6QZxFnriO/vrcM9tPg=
+=yTaN
+-----END PGP SIGNATURE-----
