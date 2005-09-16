@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pslib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.6 2005/09/14 15:58:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.7 2005/09/16 21:55:53 metalgod Exp $
+
+  16 Sep 2005; Luis Medinas <metalgod@gentoo.org> pslib-0.2.6.ebuild:
+  Added a missing dependency. Fixes bug #105467.
 
   14 Sep 2005; Joseph Jezak <josejx@gentoo.org> pslib-0.2.4.ebuild,
   pslib-0.2.6.ebuild:
