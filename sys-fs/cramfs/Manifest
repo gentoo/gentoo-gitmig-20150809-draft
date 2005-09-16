@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 16e79703178e6bffb940837de9632d3d cramfs-1.1.ebuild 628
-MD5 76fc31e27d6821f0dc2a3086a8c3e8fe ChangeLog 1057
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 0b7e445963c9b5b3f5e0105acc539ba0 ChangeLog 1155
+MD5 95aca1dbfc5d881c39bfdaf9bcb7934a cramfs-1.1.ebuild 628
 MD5 7dcf4ce13ed2da3461188ad05e5276a1 files/digest-cramfs-1.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFC+32+3og80iZgVQgRAgVxAJ0fyD5W3JZ+qP4PmgZlI2ASykcK3wCggT0F
-oPFYnni0CwSByQ7SRzgip9I=
-=ntQG
------END PGP SIGNATURE-----
