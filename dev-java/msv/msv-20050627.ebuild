@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627.ebuild,v 1.2 2005/07/01 09:51:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627.ebuild,v 1.3 2005/09/16 19:35:31 humpback Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${PN}.${PV}.zip"
 
 LICENSE="BSD Apache-1.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.4

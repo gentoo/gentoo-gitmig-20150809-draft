@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmldb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.3 2005/09/11 19:48:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.4 2005/09/16 19:29:40 humpback Exp $
+
+  16 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  xmldb-20011111.ebuild:
+  Keyword ~amd64 bug #105520
 
   11 Sep 2005; Petteri Räty <betelgeuse@gentoo.org> xmldb-20011111.ebuild:
   Added missing dependencies. Fixes bug #105623. 
