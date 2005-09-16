@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.21 2005/03/11 12:47:00 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.22 2005/09/16 09:36:14 xmerlin Exp $
+
+  16 Sep 2005; Christian Zoffoli <xmerlin@gentoo.org> ipvsadm-1.21-r1.ebuild:
+  added some little updates to fix compilation problems on newer 2.4 kernels.
+  Fixed bug #106003.
 
   11 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org> ipvsadm-1.24.ebuild:
   Added to ~amd64
