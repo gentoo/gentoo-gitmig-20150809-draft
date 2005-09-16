@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.4 2005/06/10 13:08:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wolfgl/wolfgl-0.93-r1.ebuild,v 1.5 2005/09/16 01:22:23 mr_bones_ Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/wolfgl"
 #ECVS_MODULE="wolfgl"
@@ -15,33 +15,36 @@ SRC_URI="mirror://gentoo/${P}.tbz2
 #	mirror://sourceforge/wolfgl/wolfglx-wl6-${PV}.zip
 #	mirror://sourceforge/wolfgl/wolfglx-sod-${PV}.zip
 
-KEYWORDS="~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/x11"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc.patch
-	epatch ${FILESDIR}/${PV}-sample-rate.patch
-	epatch ${FILESDIR}/${PV}-sprite.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gcc.patch \
+		"${FILESDIR}"/${PV}-sample-rate.patch \
+		"${FILESDIR}"/${PV}-sprite.patch
 }
 
 src_compile() {
-	make CFLAGS="${CFLAGS}" DATADIR=${GAMES_DATADIR}/${PN} || die
+	emake -j1 CFLAGS="${CFLAGS}" DATADIR="${GAMES_DATADIR}"/${PN} \
+		|| die "emake failed"
 }
 
 src_install() {
-	newgamesbin linux/SDM/wolfgl wolfgl-sdm
-	newgamesbin linux/SOD/wolfgl wolfgl-sod
-	newgamesbin linux/WL1/wolfgl wolfgl-wl1
-	newgamesbin linux/WL6/wolfgl wolfgl-wl6
-	insinto ${GAMES_DATADIR}/${PN}
-	doins ${WORKDIR}/*.{sdm,wl1}
+	newgamesbin linux/SDM/wolfgl wolfgl-sdm || die
+	newgamesbin linux/SOD/wolfgl wolfgl-sod || die
+	newgamesbin linux/WL1/wolfgl wolfgl-wl1 || die
+	newgamesbin linux/WL6/wolfgl wolfgl-wl6 || die
+	insinto "${GAMES_DATADIR}"/${PN}
+	doins "${WORKDIR}"/*.{sdm,wl1} || die
 	prepgamesdirs
 }
 

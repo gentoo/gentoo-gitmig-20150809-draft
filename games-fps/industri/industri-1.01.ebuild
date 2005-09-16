@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.8 2005/06/13 00:39:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.9 2005/09/16 01:17:11 mr_bones_ Exp $
 
-inherit games toolchain-funcs
+inherit toolchain-funcs games
 
 DESCRIPTION="Quake/Tenebrae based, single player game"
 HOMEPAGE="http://industri.sourceforge.net/"
@@ -14,10 +14,12 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/x11
 	media-libs/libpng
 	sys-libs/zlib"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/industri_BIN
 
@@ -26,7 +28,7 @@ src_unpack() {
 
 	cd "${S}"/linux
 	mv Makefile.i386linux Makefile
-	sed -i "s:-mpentiumpro.*:${CFLAGS} \\\\:" Makefile
+	sed -i -e "s:-mpentiumpro.*:${CFLAGS} \\\\:" Makefile || die "sed failed"
 
 	# Remove duplicated typedefs #71841
 	cd "${S}"
@@ -34,14 +36,15 @@ src_unpack() {
 		if echo '#include <GL/gl.h>' | $(tc-getCC) -E - 2>/dev/null | grep -sq ${typ} ; then
 			sed -i \
 				-e "/^typedef.*${typ}/d" \
-				glquake.h
+				glquake.h \
+				|| die "sed failed"
 		fi
 	done
 }
 
 src_compile() {
-	cd linux
-	emake MASTER_DIR=${GAMES_DATADIR}/quake-data build_release || die
+	emake -C linux MASTER_DIR="${GAMES_DATADIR}"/quake-data build_release \
+		|| die "emake failed"
 }
 
 src_install() {
@@ -52,7 +55,7 @@ src_install() {
 	dodoc linux/README
 	cd "${WORKDIR}"/industri
 	dodoc *.txt && rm *.txt
-	insinto ${GAMES_DATADIR}/quake-data/industri
+	insinto "${GAMES_DATADIR}"/quake-data/industri
 	doins *
 	prepgamesdirs
 }
