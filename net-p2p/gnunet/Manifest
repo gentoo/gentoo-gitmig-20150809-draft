@@ -1,10 +1,7 @@
-MD5 da39db75439d30b8ce28116195945ea3 ChangeLog 5789
-MD5 4f9226f4408ff37f868a8367513e9c56 gnunet-0.5.4-r1.ebuild 1260
-MD5 3d78de0ed5d6b9f64a9f638fe2b94e66 gnunet-0.6.2b.ebuild 1611
-MD5 3f1cee68cfeffdb201bb272c3cce4d58 gnunet-0.6.6b-r1.ebuild 2498
-MD5 54bf4182ef80c96144126d4872202b60 gnunet-0.6.6b.ebuild 2391
-MD5 f335c9b6b1c1374b35d481101e0d76f4 gnunet-0.7.0.ebuild 2361
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79357a38c5d2b160df2d75893de6fcf2 ChangeLog 5900
 MD5 12b0bdd38d4a838fcc6d4e8b970870f5 files/digest-gnunet-0.5.4-r1 65
 MD5 d4a748c8e3536c6691b63794f7c17639 files/digest-gnunet-0.6.2b 66
 MD5 3f90482aa89d1669318f7ec7de1943a3 files/digest-gnunet-0.6.6b 67
@@ -15,3 +12,16 @@ MD5 6ac0938893978d5f2bc22bf808bc0fe3 files/gnunet-0.6.6b 794
 MD5 a38f2ed0178c5ebc09e4f5fc2c3baddd files/gnunet-0.6.6b-autotools.patch 2065
 MD5 7e0bb86547b0ad5e7744374d32c124f8 files/gnunet-download-manager.scm 13338
 MD5 53aa63a0ddf902a57c6ac427560b9664 files/gnunet-ipv6-gentoo.patch 1891
+MD5 4f9226f4408ff37f868a8367513e9c56 gnunet-0.5.4-r1.ebuild 1260
+MD5 3d78de0ed5d6b9f64a9f638fe2b94e66 gnunet-0.6.2b.ebuild 1611
+MD5 3f1cee68cfeffdb201bb272c3cce4d58 gnunet-0.6.6b-r1.ebuild 2498
+MD5 54bf4182ef80c96144126d4872202b60 gnunet-0.6.6b.ebuild 2391
+MD5 f335c9b6b1c1374b35d481101e0d76f4 gnunet-0.7.0.ebuild 2361
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKsXWI1lqEGTUzyQRAgphAJ9/W/VZP+N66Fv8q+QR9eiOSlhr0wCfeIp/
+gWRyZ+TpVxbVfpk1WZD0XD8=
+=NK2W
+-----END PGP SIGNATURE-----
