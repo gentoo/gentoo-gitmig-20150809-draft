@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4447 2005/09/16 06:31:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4448 2005/09/16 07:18:18 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -509,17 +509,17 @@ media-video/toxine
 
 # Peter Johanson <latexer@gentoo.org> (18 May 2005)
 # Masking the new beta *-sharp-2.{3,5} releases
-=dev-dotnet/art-sharp-2*
-=dev-dotnet/gconf-sharp-2*
-=dev-dotnet/gda-sharp-2*
-=dev-dotnet/glade-sharp-2*
-=dev-dotnet/gnomedb-sharp-2*
-=dev-dotnet/gnome-sharp-2*
-=dev-dotnet/gnomevfs-sharp-2*
-=dev-dotnet/gtkhtml-sharp-2*
-=dev-dotnet/gtk-sharp-2*
-=dev-dotnet/rsvg-sharp-2*
-=dev-dotnet/vte-sharp-2*
+=dev-dotnet/art-sharp-2.5*
+=dev-dotnet/gconf-sharp-2.5*
+=dev-dotnet/gda-sharp-2.5*
+=dev-dotnet/glade-sharp-2.5*
+=dev-dotnet/gnomedb-sharp-2.5*
+=dev-dotnet/gnome-sharp-2.5*
+=dev-dotnet/gnomevfs-sharp-2.5*
+=dev-dotnet/gtkhtml-sharp-2.5*
+=dev-dotnet/gtk-sharp-2.5*
+=dev-dotnet/rsvg-sharp-2.5*
+=dev-dotnet/vte-sharp-2.5*
 
 # Jory A. Pratt <anarchy@gentoo.org> (15 Aug 2005)
 # Mozilla rpath inclusion. For testing purposes only.
@@ -1162,12 +1162,6 @@ x11-plugins/desklet-wireless
 #x11-plugins/desklet-psidisplays
 #x11-plugins/desklet-psisensors
 
-# Peter Johanson <latexer@gentoo.org> (19 May 2005)
-# Masking the new monodevelop and it's couple new deps.
-=dev-util/monodevelop-0.7*
-=dev-dotnet/gecko-sharp-0.10*
-=dev-dotnet/gtksourceview-sharp-0.10*
-
 # Danny van Dyk <kugelfang@gentoo.org> (14 May 2005)
 # Masked for testing with eclectic. Subject to major changes.
 =sci-libs/blas-atlas-3.7.10
@@ -1275,10 +1269,6 @@ dev-lang/gpc
 # <axxo@gentoo.org> (03 Apr 2005)
 # broken
 =dev-java/antlr-2.7.5
-
-# Peter Johanson <latexer@gentoo.org> (02 Apr 2005)
-# Masking the new muine until gtk-sharp-1.9* and friends are out of package.mask
-=media-sound/muine-0.8*
 
 # Andreas Proschofsky <suka@gentoo.org> (30 Mar 2005)
 # Pre-Release, use on your own risk
