@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/monetdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.2 2005/09/10 15:28:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/ChangeLog,v 1.3 2005/09/16 22:08:49 grobian Exp $
+
+*monetdb-4.8.2-r1 (16 Sep 2005)
+
+  16 Sep 2005; Fabian Groffen <grobian@gentoo.org> +monetdb-4.8.2-r1.ebuild:
+  Addding a first revision that removes files that have nothing to do with
+  MonetDB or even clash with other packages (such as /usr/bin/epsffit) before
+  installing.
 
   10 Sep 2005; Fabian Groffen <grobian@gentoo.org> monetdb-4.8.2.ebuild:
   Stable on x86
