@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.24 2005/08/19 03:32:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.25 2005/09/16 10:59:15 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org> most-4.9.5.ebuild:
+  Mark 4.9.5 stable on alpha
 
   19 Aug 2005; Luis Medinas <metalgod@gentoo.org> most-4.9.5.ebuild:
   Marked Stable on AMD64.
