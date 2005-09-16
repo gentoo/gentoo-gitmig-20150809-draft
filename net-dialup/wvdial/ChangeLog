@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.26 2005/09/15 20:08:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.27 2005/09/16 23:18:30 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *wvdial-1.54.0-r1 (15 Sep 2005)
 
@@ -50,7 +53,7 @@
 
   12 Sep 2003; Seemant Kulleen <seemant@gentoo.org> wvdial-1.53-r1.ebuild:
   added postinst blurb that users MUST be in BOTH the dialout and uucp groups to
-  use wvdial. Thanks to: Björn Michaelsen <bmichaelsen@t-email.de> in bug #27506
+  use wvdial. Thanks to: BjÃ¶rn Michaelsen <bmichaelsen@t-email.de> in bug #27506
 
   21 Aug 2003; Will Woods <wwoods@gentoo.org> wvdial-1.53-r1.ebuild:
   Marked stable for alpha

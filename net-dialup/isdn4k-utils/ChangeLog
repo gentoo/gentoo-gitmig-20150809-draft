@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.46 2005/09/05 22:07:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.47 2005/09/16 23:17:57 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *isdn4k-utils-3.8_pre20050821 (05 Sep 2005)
 
@@ -270,7 +273,7 @@
 *isdn4k-utils-3.2_p1-r2 (16 Dec 2002)
 
   16 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: new rev. Incorporated many
-  improvements from bug 9578. Thank you Johannes Ballé for your many fixes.
+  improvements from bug 9578. Thank you Johannes BallÃ© for your many fixes.
 
 *isdn4k-utils-3.2_p1-r1 (16 Dec 2002)
 
