@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ren
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.12 2005/01/02 23:49:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ChangeLog,v 1.13 2005/09/16 11:05:32 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org> ren-1.0.ebuild:
+  Mark 1.0 stable on alpha
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
