@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.8-r1.ebuild,v 1.9 2005/09/11 10:40:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.8-r1.ebuild,v 1.10 2005/09/16 13:28:44 allanonjl Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="aalib altivec debug doc gtkhtml gimpprint hardened jpeg lcms mmx mng png
-python scanner smp sse svg tiff wmf"
+python smp sse svg tiff wmf"
 
 #	X? ( virtual/x11 )"
 RDEPEND="virtual/x11
@@ -45,12 +45,7 @@ RDEPEND="virtual/x11
 	aalib?	( media-libs/aalib )
 	python?	( >=dev-lang/python-2.2
 		>=dev-python/pygtk-2 )
-	lcms? ( media-libs/lcms )
-
-	scanner? ( media-gfx/xsane
-		media-gfx/sane-backends
-		media-gfx/sane-frontends
-		)"
+	lcms? ( media-libs/lcms )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
@@ -166,11 +161,6 @@ src_install() {
 
 	# Create the gimp-remote link, see bug #36648
 	dosym gimp-remote-2.2 /usr/bin/gimp-remote
-
-	# if use scanner, create the symlink see bug #93018
-	if use scanner; then
-		dosym /usr/bin/xscanimage /usr/lib/gimp/2.0/plug-ins/
-	fi
 }
 
 pkg_postinst() {
