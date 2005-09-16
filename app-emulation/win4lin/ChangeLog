@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.22 2005/08/15 16:51:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.23 2005/09/16 21:20:47 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   15 Aug 2005; <plasmaroo@gentoo.org> win4lin-4.0.12.ebuild,
   win4lin-4.0.16.ebuild, win4lin-4.0.20.ebuild, win4lin-4.0.22.ebuild,
@@ -46,24 +49,24 @@
 
 *win4lin-5.0.8 (25 Oct 2003)
   
-  18 Mar 2004; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org> win4lin-5.0.8.ebuild:
+  18 Mar 2004; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org> win4lin-5.0.8.ebuild:
   Stable in x86   
 
-  25 Oct 2003; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org> win4lin-5.0.8.ebuild:
+  25 Oct 2003; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org> win4lin-5.0.8.ebuild:
   New Version
 
 *win4lin-5.0.4 (17 Aug 2003)
 
- 17 Aug 2003; J.Alberto Su·rez L. <bass@gentoo.org> win4lin-5.0.4.ebuild:
+ 17 Aug 2003; J.Alberto Su√°rez L. <bass@gentoo.org> win4lin-5.0.4.ebuild:
  New version.
  This version has beta support to glibc-2.3.2.
 
 *win4lin-5.0.1 (03 Jun 2003)
 
- 19 Jun 2003; J.Alberto Su·rez L. <bass@gentoo.org> win4lin-5.0.1.ebuild:
+ 19 Jun 2003; J.Alberto Su√°rez L. <bass@gentoo.org> win4lin-5.0.1.ebuild:
  Marked as stable.
 
- 03 Jun 2003; J.Alberto Su·rez L. <bass@gentoo.org> win4lin-5.0.1.ebuild:
+ 03 Jun 2003; J.Alberto Su√°rez L. <bass@gentoo.org> win4lin-5.0.1.ebuild:
  New version and new evaluation code.
 
 *win4lin-4.0.22 (08 Jun 2003)
@@ -73,12 +76,12 @@
 
 *win4lin-4.0.20 (13 Apr 2003)
 
- 13 Apr	2003; J.Alberto Su·rez L. <bass@gentoo.org> win4lin-4.0.20.ebuild:
+ 13 Apr	2003; J.Alberto Su√°rez L. <bass@gentoo.org> win4lin-4.0.20.ebuild:
  new version
 
 *win4lin-4.0.16 (02 Mar 2003)
 
- 02 Mar 2003; J.Alberto Su·rez L. <bass@gentoo.org> win4lin-4.0.16.ebuild:
+ 02 Mar 2003; J.Alberto Su√°rez L. <bass@gentoo.org> win4lin-4.0.16.ebuild:
  New version
 
 *win4lin-4.0.12 (10 Jan 2002)
@@ -86,7 +89,7 @@
   28 Feb 2002; Alastair Tse <liquidx@gentoo.org> win4lin-4.0.12.ebuild:
   Updated IUSE field
 
-  10 Jan 2002; J.Alberto Su·rez L. <bass@gentoo.org> win4lin-4.0.12.ebuild:
+  10 Jan 2002; J.Alberto Su√°rez L. <bass@gentoo.org> win4lin-4.0.12.ebuild:
   The next-generation :)
   -Added evaluation-license
   -The rpm is auto-fetched

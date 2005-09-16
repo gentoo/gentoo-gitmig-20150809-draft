@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.104 2005/09/02 00:49:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.105 2005/09/16 21:22:07 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *wine-20050830 (02 Sep 2005)
 
@@ -117,13 +120,13 @@
 *wine-20041019-r3 (01 Nov 2004)
 
   01 Nov 2004; Mike Frysinger <vapier@gentoo.org> +wine-20041019-r3.ebuild:
-  More clean ups and fixed with a ton of input from Vincent Béron.
+  More clean ups and fixed with a ton of input from Vincent BÃ©ron.
 
 *wine-20041019-r2 (30 Oct 2004)
 
   30 Oct 2004; Mike Frysinger <vapier@gentoo.org> -wine-20041019-r1.ebuild,
   +wine-20041019-r2.ebuild:
-  Version bump to fix #69554 / #69543 / others and enhancements by Vincent Béron.
+  Version bump to fix #69554 / #69543 / others and enhancements by Vincent BÃ©ron.
 
   27 Oct 2004; Mike Frysinger <vapier@gentoo.org>
   +files/20041019-no-stack.patch, wine-20041019-r1.ebuild,
@@ -442,7 +445,7 @@
   05 Sep 2002; phoen][x <phoenix@gentoo.org> wine-20020804.ebuild :
 
   Bumped to new version. 
-  Thanks to José Fonseca <j_r_fonseca@yahoo.co.uk> for the contribution.
+  Thanks to JosÃ© Fonseca <j_r_fonseca@yahoo.co.uk> for the contribution.
   This closes bug 7312.
 
 *wine-20020710-r2 (31 Aug 2002)
