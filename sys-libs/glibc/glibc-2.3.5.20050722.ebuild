@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.13 2005/09/16 05:03:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.14 2005/09/16 05:51:57 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -921,7 +921,7 @@ glibc_do_configure() {
 	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
 	mkdir -p ${GBUILDDIR}
 	cd ${GBUILDDIR}
-	einfo "Configuring GLIBC for $1 with: ${myconf}"
+	einfo "Configuring GLIBC for $1 with: ${myconf// /\n\t\t}"
 	${S}/configure ${myconf} || die "failed to configure glibc"
 }
 
@@ -1208,20 +1208,22 @@ src_unpack() {
 src_compile() {
 	crosscompile_setup
 
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ] ; then
-		OABI="${ABI}"
-		for ABI in $(get_install_abis); do
-			export ABI
-			einfo "Compiling ${ABI} glibc"
-			src_compile
-		done
-		ABI="${OABI}"
-		unset OABI
-		return 0
+	if [[ -z ${OABI} ]] && has_multilib_profile ; then
+		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
+		local MLTEST=$(type dyn_unpack)
+		if [[ ${MLTEST/set_abi} == "${MLTEST}" ]] ; then
+			OABI=${ABI}
+			einfo "Building multilib glibc for ABIs: $(get_install_abis)"
+			for ABI in $(get_install_abis) ; do
+				export ABI=${ABI}
+				src_compile
+			done
+			ABI=${OABI}
+			unset OABI
+			return 0
+		fi
+		unset MLTEST
 	fi
-	unset MLTEST
 
 	ABI=${ABI:-default}
 	toolchain-glibc_src_compile
@@ -1230,20 +1232,23 @@ src_compile() {
 src_test() {
 	crosscompile_setup
 
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ] ; then
-		OABI="${ABI}"
-		for ABI in $(get_install_abis); do
-			export ABI
-			einfo "Testing ${ABI} glibc"
-			src_test
-		done
-		ABI="${OABI}"
-		unset OABI
-		return 0
+	if [[ -z ${OABI} ]] && has_multilib_profile ; then
+		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
+		local MLTEST=$(type dyn_unpack)
+		if [[ ${MLTEST/set_abi} == "${MLTEST}" ]] ; then
+			OABI=${ABI}
+			einfo "Testing multilib glibc for ABIs: $(get_install_abis)"
+			for ABI in $(get_install_abis) ; do
+				export ABI
+				einfo "   Testing ${ABI} glibc"
+				src_test
+			done
+			ABI=${OABI}
+			unset OABI
+			return 0
+		fi
+		unset MLTEST
 	fi
-	unset MLTEST
 
 	ABI=${ABI:-default}
 	toolchain-glibc_src_test
@@ -1252,20 +1257,22 @@ src_test() {
 src_install() {
 	crosscompile_setup
 
-	# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
-	local MLTEST=$(type dyn_unpack)
-	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ] ; then
-		OABI="${ABI}"
-		for ABI in $(get_install_abis); do
-			export ABI
-			einfo "Installing ${ABI} glibc"
-			src_install
-		done
-		ABI="${OABI}"
-		unset OABI
-		return 0
+	if [[ -z ${OABI} ]] && has_multilib_profile ; then
+		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
+		local MLTEST=$(type dyn_unpack)
+		if [[ ${MLTEST/set_abi} == "${MLTEST}" ]] ; then
+			OABI=${ABI}
+			einfo "Installing multilib glibc for ABIs: $(get_install_abis)"
+			for ABI in $(get_install_abis) ; do
+				export ABI
+				src_install
+			done
+			ABI=${OABI}
+			unset OABI
+			return 0
+		fi
+		unset MLTEST
 	fi
-	unset MLTEST
 
 	ABI=${ABI:-default}
 
