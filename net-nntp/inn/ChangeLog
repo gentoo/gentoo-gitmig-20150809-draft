@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.3 2005/01/23 22:18:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.4 2005/09/16 23:33:39 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   23 Jan 2005; Sven Wegener <swegener@gentoo.org> inn-2.4.1.ebuild:
   Disable Tcl code because it is broken, bug #69240.
@@ -61,7 +64,7 @@
 *inn-2.3.5 (17 Apr 2003)
 
   17 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, inn-2.3.5.ebuild:
-  Version bumped. Ebuild submitted by Stefan Förster <gentoo@stefan-foerster.de>
+  Version bumped. Ebuild submitted by Stefan FÃ¶rster <gentoo@stefan-foerster.de>
   in #14601.
 
 *inn-2.3.3 (13 Jun 2002)
