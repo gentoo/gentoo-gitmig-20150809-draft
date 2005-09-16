@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.4 2005/08/25 00:52:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.5 2005/09/16 04:15:40 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> rawdog-1.12.ebuild:
+  Mark 1.12 stable on alpha
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> rawdog-1.12.ebuild:
   stable on ia64
