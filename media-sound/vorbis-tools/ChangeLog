@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/vorbis-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.31 2005/08/25 14:05:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.32 2005/09/16 01:30:12 lostlogic Exp $
+
+*vorbis-tools-1.1.1 (16 Sep 2005)
+
+  16 Sep 2005; Brandon Low <lostlogic@gentoo.org>
+  +vorbis-tools-1.1.1.ebuild:
+  Bump up to the latest release, new SRC_URI, drop a patch that doesn't appear
+  to be relevant any more (LARGEFILE) is that needed?
 
 *vorbis-tools-1.0.1-r1 (25 Aug 2005)
 
