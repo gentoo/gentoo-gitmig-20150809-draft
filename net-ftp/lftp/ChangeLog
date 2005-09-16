@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.86 2005/07/10 22:26:07 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.87 2005/09/16 23:21:38 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   10 Jul 2005; Lina Pezzella <j4rg0n@gentoo.org> lftp-3.2.1.ebuild:
   Testing ppc-macos. Bug #96691. Submitted on behalf of Fabian Groffen.
@@ -79,7 +82,7 @@
   19 Dec 2004; Daniel Black <dragonheart@gentoo.org> +lftp-3.0.12-r1.ebuild,
   +files/lftp-3.0.12.patch, -lftp-3.0.12.ebuild:
   Patch added to prevent segfault. Thanks to Jeffrey Litvin <litvin.j@neu.edu>
-  for the patch reference and Thomas Jäger <tjjr@tj.no> for Bug #74815
+  for the patch reference and Thomas JÃ¤ger <tjjr@tj.no> for Bug #74815
 
 *lftp-3.0.12 (07 Dec 2004)
 
@@ -144,7 +147,7 @@
   Memory leak fixed - thanks to Luke Macken in bug #61335. OSX fix thanks to
   Miguel Sousa Filipe in bug #61349
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.6.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lftp-3.0.6.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> lftp-3.0.7.ebuild:
@@ -178,7 +181,7 @@
   Version bump thanks to #gentoo.pl Team - sekretarz <sekretarz@dukato.net> in
   bug #53720
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.3.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lftp-3.0.3.ebuild:
   Stable on alpha.
 
 *lftp-3.0.5 (04 Jun 2004)

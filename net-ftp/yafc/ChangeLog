@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/yafc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.13 2005/02/04 19:55:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.14 2005/09/16 23:22:35 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   04 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> yafc-1.1.ebuild:
   stable on amd64
@@ -12,7 +15,7 @@
 *yafc-1.1 (19 Jun 2004)
 
   19 Jun 2004; Mike Frysinger <vapier@gentoo.org> +yafc-1.1.ebuild:
-  Version bump #53168 by Mikael Wärlander.
+  Version bump #53168 by Mikael WÃ¤rlander.
 
   05 Jan 2004; Jon Portnoy <avenj@gentoo.org> :
   AMD64 keywords.
