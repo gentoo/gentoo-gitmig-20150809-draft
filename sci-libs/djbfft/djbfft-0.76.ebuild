@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76.ebuild,v 1.4 2005/04/19 20:01:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76.ebuild,v 1.5 2005/09/16 07:27:37 agriffis Exp $
 
 IUSE="static"
 
@@ -12,7 +12,7 @@ SRC_URI="http://cr.yp.to/djbfft/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc x86 ~alpha ppc64"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 
 src_test() {
 	:
