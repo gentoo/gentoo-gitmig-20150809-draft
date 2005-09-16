@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c9b93b7ef50cf2d03a57c4b0f97fade1 pikdev-0.7.1.ebuild 1611
 MD5 0d0b1445231da579676a6dd9bc678d5c pikdev-0.7.1-r1.ebuild 1332
 MD5 616c89ace0e86b8a52074d3395ef5875 pikdev-0.7.1-r2.ebuild 1373
@@ -10,3 +13,10 @@ MD5 204ebe37bf2d6ed5c9b02713d12f6a2d files/digest-pikdev-0.6.6a 65
 MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1-r2 65
 MD5 7efd0e0b7109cda86c1168e939828309 files/digest-pikdev-0.7.1 65
 MD5 4e5416bdf6b9be1c94bfe354a72415ca files/pikdev-0.7.1-fix.diff 1616
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKz1gLLFUmVNQ7rkRAs/vAKCIS5KtDZNg66Tzb52fVEUFMXklywCguyuy
+FPhRuOTDG2a+KkWKqYWlSok=
+=WiPR
+-----END PGP SIGNATURE-----

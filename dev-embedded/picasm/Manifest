@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8de0ce5aa3d62e67eee977e30540eb8 picasm-1.12c.ebuild 829
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
 MD5 a47fcd227d1c04eb0ce76b41660edc15 ChangeLog 816
 MD5 0487a156bb5d4f9c6ea4485752b95d7b files/digest-picasm-1.12c 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKz01LLFUmVNQ7rkRAkCrAJ4+r/MYoX0l8XdAfS8EOtFXDmRJkACfbe6r
+ezwNUSWcKgt6ImVE1MnmjkA=
+=cV2N
+-----END PGP SIGNATURE-----
