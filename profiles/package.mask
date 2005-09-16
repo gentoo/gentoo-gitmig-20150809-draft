@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4450 2005/09/16 14:37:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4451 2005/09/16 23:02:21 cryos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Marcus D. Hanwell <cryos@gentoo.org> (17 Sep 2005)
+# Beta version testing
+=media-gfx/digikam-0.8.0_beta1
+=media-plugins/digikamimageplugins-0.8.0_beta1
 
 # Dan Armak <danarmak@gentoo.org> (16 Sep 2005)
 # Temp mask to keep ~arch tree building, bug #106167
