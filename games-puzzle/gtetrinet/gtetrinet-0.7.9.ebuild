@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.9.ebuild,v 1.1 2005/06/03 14:10:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.9.ebuild,v 1.2 2005/09/16 01:13:05 vapier Exp $
 
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls ipv6"
 
 RDEPEND="dev-libs/libxml2
@@ -21,40 +21,33 @@ RDEPEND="dev-libs/libxml2
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	return 0
+	cd "${S}"
 	sed -i \
-		-e "s:\$(datadir)/pixmaps:/usr/share/pixmaps:" \
-		-e "/DISABLE_DEPRECATED/d" \
-		{.,icons,src}/Makefile.in \
-		|| die "sed Makefile.in failed"
+		-e "/^pkgdatadir =/s:=.*:= ${GAMES_DATADIR}/${PN}:" \
+		src/Makefile.in themes/*/Makefile.in || die "sed themes"
+	sed -i \
+		-e '/^LDADD/s:$: @ESD_LIBS@:' \
+		-e '/^gamesdir/s:=.*:=@bindir@:' \
+		src/Makefile.in || die "sed bindir"
 }
 
 src_compile() {
-	egamesconf \
+	econf \
 		$(use_enable ipv6) \
-		--sysconfdir=/etc \
+		--bindir="${GAMES_BINDIR}" \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	USE_DESTDIR=1
-	gnome2_src_install
+	USE_DESTDIR=1 gnome2_src_install
 	dodoc AUTHORS ChangeLog NEWS README TODO
-
-	# move some stuff around
-	cd ${D}/${GAMES_PREFIX}
-	mkdir bin && mv games/gtetrinet bin/
-	rm -rf games && cd ${D}/${GAMES_DATADIR} && mv applications locale ../
-	use nls || rm -rf ../locale
-	mv ${WORKDIR}/gentoo ${D}/${GAMES_DATADIR}/${PN}/themes/
+	mv "${WORKDIR}"/gentoo "${D}/${GAMES_DATADIR}"/${PN}/themes/
 	prepgamesdirs
 }
 
