@@ -1,6 +1,9 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.46 2005/07/28 20:58:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.47 2005/09/16 23:24:23 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> sim-0.9.3-r2.ebuild:
   fix qt per bug #100235
@@ -133,7 +136,7 @@
   17 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> sim-0.8.2-r1.ebuild :
   Added all outstanding patches compiled by Marcel Meckel 
   from http://sourceforge.net/mailarchive/forum.php?thread_id=2559093&forum_id=10461.
-  Thanks to Mårten Woxberg <marwo264@student.liu.se> for letting me know about the patches.
+  Thanks to MÃ¥rten Woxberg <marwo264@student.liu.se> for letting me know about the patches.
 
 *sim-0.8.2 (20 May 2003)
 
