@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.15 2005/08/23 13:43:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.16 2005/09/16 11:12:07 ka0ttic Exp $
+
+  16 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/flow-tools-0.67-fix-a-zillion-warnings.diff,
+  files/flow-tools-0.68-fix-a-zillion-warnings.diff:
+  Update gcc4 warnings patch as it was causing bug #106063.
 
   23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> flow-tools-0.67.ebuild,
   flow-tools-0.68.ebuild, flow-tools-0.68-r1.ebuild:

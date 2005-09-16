@@ -1,18 +1,3 @@
-diff -urN flow-tools-0.67.orig/lib/ftchash.c flow-tools-0.67/lib/ftchash.c
---- flow-tools-0.67.orig/lib/ftchash.c	2005-01-27 02:45:08.860520536 -0500
-+++ flow-tools-0.67/lib/ftchash.c	2005-01-27 02:45:23.927230048 -0500
-@@ -324,9 +324,10 @@
-     /* more entries in this chunk *? */ 
-     if  ((char*)ftch->traverse_rec <
-       (char*)ftch->traverse_chunk->base+ftch->traverse_chunk->next) {
-+      char *p = (char *)ftch->traverse_rec;
- 
-       ret = ftch->traverse_rec;
--      (char*)ftch->traverse_rec += ftch->d_size;
-+      p += ftch->d_size;
-       return ret;
- 
-     } else {
 diff -urN flow-tools-0.67.orig/lib/ftfil.c flow-tools-0.67/lib/ftfil.c
 --- flow-tools-0.67.orig/lib/ftfil.c	2005-01-27 02:45:08.870519016 -0500
 +++ flow-tools-0.67/lib/ftfil.c	2005-01-27 02:45:23.933229136 -0500
