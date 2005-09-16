@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.102 2005/09/16 21:35:03 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.103 2005/09/16 22:20:56 spb Exp $
+
+  16 Sep 2005; Stephen Bennett <spb@gentoo.org> screen-4.0.2-r4.ebuild:
+  Added selinux policy to RDEPEND
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
