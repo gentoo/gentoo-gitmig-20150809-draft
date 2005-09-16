@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.26 2005/08/26 23:28:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.27 2005/09/16 19:50:42 cryos Exp $
+
+*digikam-0.7.4 (16 Sep 2005)
+
+  16 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> -digikam-0.7.ebuild,
+  +digikam-0.7.4.ebuild:
+  Version bump, I added in support for separately downloading the docs. Closes
+  bug 98425, thanks to Carsten Lohrke <carlo@gentoo.org> for the slot rebuild
+  function.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> digikam-0.7.3.ebuild:
   add ~alpha ~ia64
