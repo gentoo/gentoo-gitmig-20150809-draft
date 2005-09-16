@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.7 2005/05/07 08:28:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.8 2005/09/16 00:17:48 vapier Exp $
 
 ECVS_MODULE="evidence"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/evidence"
@@ -65,7 +65,7 @@ src_install() {
 	# Fixup broken symlinks
 	dosym efm /usr/share/evidence/icons/default
 	dosym efm /usr/share/evidence/themes/default
-	chown -R root:root ${D}/usr/share/evidence
+	chown -R root:0 ${D}/usr/share/evidence
 
 	dodoc docs/*
 }
