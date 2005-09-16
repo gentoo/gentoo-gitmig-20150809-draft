@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-sqlite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/ChangeLog,v 1.4 2005/09/16 03:23:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/ChangeLog,v 1.5 2005/09/16 23:04:43 trapni Exp $
+
+  16 Sep 2005; Christian Parpart <trapni@gentoo.org>
+  pecl-sqlite-1.0.3.ebuild:
+  added to ~amd64
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
   pecl-sqlite-1.0.3.ebuild:
