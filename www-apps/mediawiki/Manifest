@@ -1,4 +1,4 @@
-MD5 f8617732338321f979d76be8138a7e9e ChangeLog 5413
+MD5 98e00ad9d012b8d7b7c4ee1cf032d3f4 ChangeLog 5630
 MD5 1ecb081f1c270870be038f4bf733f298 mediawiki-1.3.13.ebuild 2899
 MD5 4fdadbc34a0bae3bc044cc7e4a6f259c mediawiki-1.4.7.ebuild 2788
 MD5 4ce25f8911fa68ab85e31b0953266511 metadata.xml 226
@@ -6,9 +6,10 @@ MD5 4a5dbf7502c5e1c63b49ca91f378d5d4 mediawiki-1.4.8.ebuild 2788
 MD5 974728a7a5ca221f73700bf7aa2356af mediawiki-1.3.14.ebuild 2899
 MD5 aad0574c17a7b7fe55b6386582073021 mediawiki-1.5.0_rc2.ebuild 2913
 MD5 c5c75d463f4267ce9b1f328e2e2f3fba mediawiki-1.5.0_rc3.ebuild 2913
-MD5 f8ccf56c5aaf7fa93b1bbfc2f59ff802 mediawiki-1.3.15.ebuild 2899
 MD5 3219b106dec605bb1d275a0dc4ec1e3c mediawiki-1.4.9.ebuild 2788
 MD5 21c484751b38dc6723904c4924630a9c mediawiki-1.5.0_rc4.ebuild 2913
+MD5 f8ccf56c5aaf7fa93b1bbfc2f59ff802 mediawiki-1.3.15.ebuild 2899
+MD5 25fe3c4d0ee38dc4d7b7a5a7f25725c0 mediawiki-1.3.15-r1.ebuild 2900
 MD5 387803dfbebedc5a239cb73beb1c6901 mediawiki-1.4.9-r1.ebuild 2790
 MD5 32073bea1969aa6ccaf6aeb80765ede3 mediawiki-1.5.0_rc4-r1.ebuild 2936
 MD5 7ec90d807694699cb90d9a56ec2ff67b files/postinstall-1.4-en.txt 1843
@@ -24,3 +25,4 @@ MD5 fa7f17c613d569b12a8fc159c200119f files/digest-mediawiki-1.4.9 68
 MD5 27d8115205843202a079bb0aebfefea7 files/digest-mediawiki-1.5.0_rc4 69
 MD5 27d8115205843202a079bb0aebfefea7 files/digest-mediawiki-1.5.0_rc4-r1 69
 MD5 fa7f17c613d569b12a8fc159c200119f files/digest-mediawiki-1.4.9-r1 68
+MD5 7258757309ee4bf1c48769dcbfba8737 files/digest-mediawiki-1.3.15-r1 69
