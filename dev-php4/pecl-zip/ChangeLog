@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.2 2005/09/09 12:52:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.3 2005/09/16 21:47:45 trapni Exp $
+
+  16 Sep 2005; Christian Parpart <trapni@gentoo.org> pecl-zip-1.0.ebuild:
+  added to ~amd64
 
   09 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-zip-1.0.ebuild:
   Added ~sparc keyword to help fix the broken dependencies of
