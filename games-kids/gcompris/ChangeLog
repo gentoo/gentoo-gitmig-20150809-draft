@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.16 2005/06/07 02:25:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.17 2005/09/16 22:14:21 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   07 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org>
   gcompris-6.5.3.ebuild:
@@ -77,5 +80,5 @@
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gcompris-1.1.0.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
-  31 Jul 2002; J. Alberto Su·rez L. <bass@gentoo.org> gcompris-1.1.0.ebuild :
+  31 Jul 2002; J. Alberto Su√°rez L. <bass@gentoo.org> gcompris-1.1.0.ebuild :
   First relase.
