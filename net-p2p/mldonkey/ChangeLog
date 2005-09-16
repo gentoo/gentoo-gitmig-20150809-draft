@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.94 2005/09/14 21:22:31 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.95 2005/09/16 23:36:36 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *mldonkey-2.6.4-r1 (14 Sep 2005)
 
@@ -432,6 +435,6 @@
   
   move to net-p2p
 
-  16 jun 2002; J. Alberto Su·rez L. <bass@gentoo.org> mldonkey-1.16.ebuild : 
+  16 jun 2002; J. Alberto Su√°rez L. <bass@gentoo.org> mldonkey-1.16.ebuild : 
   
   First relase

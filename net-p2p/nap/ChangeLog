@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.13 2004/07/04 17:35:53 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.14 2005/09/16 23:37:26 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   04 Jul 2004; Jon Hood <squinky86@gentoo.org> nap-1.5.3.ebuild:
   stable on x86
@@ -27,7 +30,7 @@
 *nap-1.5.1 (15 Dec 2002)
 
   16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> nap-1.5.1.ebuild:
-  set to stable  Closes bug #17630 by Håkon A. Hjortland 
+  set to stable  Closes bug #17630 by HÃ¥kon A. Hjortland 
   <hahjortland@tande.com> 
 
   16 Mar 2003; Mark Guertin <gerk@gentoo.org> nap-1.5.1.ebuild:

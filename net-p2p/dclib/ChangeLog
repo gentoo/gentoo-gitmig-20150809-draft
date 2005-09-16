@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.66 2005/09/16 04:24:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.67 2005/09/16 23:35:06 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> dclib-0.3.7.ebuild:
   Mark 0.3.7 stable on alpha
@@ -57,7 +60,7 @@
 
   29 Jan 2005; Jon Hood <squinky86@gentoo.org>
   +files/dclib-0.3.5-gcc2.patch, dclib-0.3.3-r1.ebuild, +dclib-0.3.5.ebuild:
-  Stable x86 and unstable version bumps, #77489. Thanks Robert Führicht.
+  Stable x86 and unstable version bumps, #77489. Thanks Robert FÃ¼hricht.
 
 *dclib-0.3.3-r1 (13 Dec 2004)
 

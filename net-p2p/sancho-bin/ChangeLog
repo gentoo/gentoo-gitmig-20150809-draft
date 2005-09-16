@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/sancho-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.24 2005/08/11 00:55:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.25 2005/09/16 23:38:55 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   11 Aug 2005; Luis Medinas <metalgod@gentoo.org>
   sancho-bin-0.9.4.19.ebuild:
@@ -102,7 +105,7 @@
 
   15 Jun 2004; Jon Hood <squinky86@gentoo.org> sancho-bin-0.9.4.3.ebuild,
   +sancho-bin-0.9.4.5.ebuild:
-  version bumps for stable and unstable x86; thanks to José Romildo Malaquias
+  version bumps for stable and unstable x86; thanks to JosÃ© Romildo Malaquias
   <romildo@uber.com.br> for the update (#53046)
 
 *sancho-bin-0.9.4.3 (01 May 2004)
