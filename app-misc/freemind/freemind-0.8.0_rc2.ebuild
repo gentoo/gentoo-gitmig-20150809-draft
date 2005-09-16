@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0_rc2.ebuild,v 1.4 2005/07/17 11:23:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0_rc2.ebuild,v 1.5 2005/09/16 03:03:28 mr_bones_ Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
-	jikes? ( dev-java/jikes )"
+	jikes? ( dev-java/jikes )
+	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 RESTRICT="nomirror"
 
