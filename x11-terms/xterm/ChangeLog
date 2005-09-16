@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.102 2005/09/16 20:17:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.103 2005/09/16 21:04:32 ferdy Exp $
+
+  16 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> xterm-204.ebuild:
+  stable on alpha, wrt bug #101333
 
   16 Sep 2005; Mark Loeser <halcy0n@gentoo.org> xterm-204.ebuild:
   Stable on x86.
