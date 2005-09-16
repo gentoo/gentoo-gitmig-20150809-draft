@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.14 2005/09/15 23:21:44 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.15 2005/09/16 10:59:15 rl03 Exp $
+
+  16 Sep 2005; Renat Lumpau <rl03@gentoo.org> mantisbt-0.19.2.ebuild:
+  Fixed ${S}
 
   15 Sep 2005; Renat Lumpau <rl03@gentoo.org> -mantisbt-0.18.3.ebuild:
   Removing vulnerable version wrt security bug #103308.

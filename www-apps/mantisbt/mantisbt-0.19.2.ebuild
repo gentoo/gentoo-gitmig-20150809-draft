@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-0.19.2.ebuild,v 1.2 2005/09/15 17:25:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-0.19.2.ebuild,v 1.3 2005/09/16 10:59:15 rl03 Exp $
 
 inherit webapp eutils
+
+S=${WORKDIR}/mantis-${PV}
 
 IUSE=""
 
@@ -28,8 +30,7 @@ src_unpack() {
 
 src_install() {
 	webapp_src_preinst
-	dohtml doc/*.{html,css}
-	dodoc doc/{CREDITS,CUSTOMIZATION,ChangeLog,LICENSE,README,TROUBLESHOOTING,UPGRADING}
+	dodoc doc/{CREDITS,CUSTOMIZATION,ChangeLog,LICENSE,README,UPGRADING}
 
 	cp -R *.php admin core css graphs images lang ${D}/${MY_HTDOCSDIR}
 	cp config_inc.php.sample ${D}/${MY_HTDOCSDIR}/config_inc.php
