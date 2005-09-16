@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/petrify
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/ChangeLog,v 1.3 2005/08/23 20:46:29 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/ChangeLog,v 1.4 2005/09/16 15:04:00 ribosome Exp $
+
+  16 Sep 2005; Olivier Fisette <ribosome@gentoo.org> petrify-4.2.ebuild:
+  Corrected HOMEPAGE and SRC_URI. Fixes bug #106108.
 
   23 Aug 2005; Chris Bainbridge <chrb@gentoo.org> petrify-4.2.ebuild:
   cp -a bad. #103487

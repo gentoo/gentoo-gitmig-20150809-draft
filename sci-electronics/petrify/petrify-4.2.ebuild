@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/petrify-4.2.ebuild,v 1.3 2005/08/23 20:46:29 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/petrify-4.2.ebuild,v 1.4 2005/09/16 15:04:00 ribosome Exp $
 
 DESCRIPTION="Synthesize Petri nets into asynchronous circuits"
-HOMEPAGE="http://www.lsi.upc.es/~jordic/petrify/"
-SRC_URI="http://www.lsi.upc.es/~jordic/petrify/distrib/petrify-4.2-linux.tgz"
+HOMEPAGE="http://www.lsi.upc.edu/~jordicf/petrify/"
+SRC_URI="http://www.lsi.upc.edu/~jordicf/petrify/distrib/petrify-4.2-linux.tgz"
 LICENSE="petrify"
 KEYWORDS="~x86"
 RESTRICT="nostrip"
