@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.95 2005/09/09 11:14:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.96 2005/09/16 14:40:10 spock Exp $
+
+  16 Sep 2005; Michał Januszewski <spock@gentoo.org> nmap-3.83.ebuild:
+  Marked 3.83 stable on x86.
 
 *nmap-3.90 (09 Sep 2005)
 

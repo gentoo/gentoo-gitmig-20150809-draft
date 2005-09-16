@@ -3,16 +3,16 @@ Hash: SHA1
 
 MD5 3a6a3ea737426953d422c346923e2c51 nmap-3.90.ebuild 954
 MD5 985e539e3a84bc688ad0a2fe8069ab33 nmap-3.81.ebuild 940
-MD5 689c4eb2b732d88b622283a3ad937547 ChangeLog 11884
+MD5 a8a37756b150eeda72363d35e0fb874b ChangeLog 11986
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
-MD5 c078e6fcef5b00d7ac1578535dc18618 nmap-3.83.ebuild 1034
+MD5 2da3ace9bda36e379ea9216e19d21684 nmap-3.83.ebuild 1033
 MD5 a9321c7613a34f902b2bcf53af008bc3 files/digest-nmap-3.81 63
 MD5 90ee137382c6272e7524f0c4648c45f4 files/digest-nmap-3.83 68
 MD5 5dcee02c4729204bc26ce3c1652b977f files/digest-nmap-3.90 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIXYHchej4aZK9/cRAnSXAJ4+hmID/YFoiMXEbBbv6rYeiynJUgCZAc+m
-BhQz8nBEKI8rwjMlYE0o970=
-=U/Hr
+iD8DBQFDKtlwchej4aZK9/cRAjQEAJ9gXxZ/Bi+OSjJiGRbGlqoUdoIVjwCeOzaD
+q8eAxeDWckHibh3N/zQVsTM=
+=Ehyb
 -----END PGP SIGNATURE-----
