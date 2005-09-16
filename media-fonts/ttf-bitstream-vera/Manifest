@@ -1,6 +1,16 @@
-MD5 1043a7588fc04d8469176c0d0e44e834 ttf-bitstream-vera-1.10-r3.ebuild 534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9c197e9b6d71b9e8570489c3ea8384a ttf-bitstream-vera-1.10-r2.ebuild 917
+MD5 836e36077543f19e7a0a433c3bcf6e5b ttf-bitstream-vera-1.10-r3.ebuild 529
+MD5 a73179ef15be656b7eba772772c3b854 ChangeLog 2447
 MD5 ae53b17794c309c40f6b45f8f37259c0 metadata.xml 286
-MD5 08366763da4f2372029eaa79e9115ae8 ChangeLog 2357
 MD5 b3b71688c1c8be372f8e519910114e01 files/digest-ttf-bitstream-vera-1.10-r2 76
 MD5 b3b71688c1c8be372f8e519910114e01 files/digest-ttf-bitstream-vera-1.10-r3 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKvPVomPajV0RnrERAr+sAJ9MzQlESexjwxBY+K+1eu3GAkc85wCeIzG1
+ZZ22OBksTCW/9Tk0rgZGiJU=
+=w2M7
+-----END PGP SIGNATURE-----
