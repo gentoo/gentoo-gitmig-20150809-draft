@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.25 2005/09/01 03:18:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.26 2005/09/16 22:11:06 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   01 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   +files/scummvm-0.7.1-64bit.patch, scummvm-0.7.1.ebuild:
@@ -68,7 +71,7 @@
 
   01 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/0.6.0-gcc34.patch,
   scummvm-0.6.0.ebuild:
-  Add gcc-3.4 patch #49304 by Robert Führicht.
+  Add gcc-3.4 patch #49304 by Robert FÃ¼hricht.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> scummvm-0.6.0.ebuild:
   Added ~sparc keyword.
@@ -138,10 +141,10 @@
   23 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
   Changed SRC_URI to use mirror: and updated LICENSE
 
-  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> scummvm-0.2.0.ebuild :
+  17 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> scummvm-0.2.0.ebuild :
   Added KEYWORDS, SLOT.
 
-  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> scummvm-0.2.0-r1.ebuild :
+  17 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> scummvm-0.2.0-r1.ebuild :
   Added KEYWORDS, SLOT.
 
   17 Jun 2002; Ryan Phillips <rphillips@gentoo.org> scummvm-0.2.0-r1.ebuild :
