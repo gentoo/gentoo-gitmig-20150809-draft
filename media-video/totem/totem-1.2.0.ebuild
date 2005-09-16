@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0.ebuild,v 1.2 2005/09/08 08:41:04 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.2.0.ebuild,v 1.3 2005/09/16 20:09:16 dang Exp $
 
 inherit gnome2 eutils multilib
 
@@ -99,6 +99,8 @@ src_unpack() {
 	epatch ${FILESDIR}/totem-1.1.5-idl.patch
 	# fix nsIDOMWindow.h include ( AllanonJL )
 	epatch ${FILESDIR}/totem-1.1.5-nsi.patch
+	# fix for italian translation
+	epatch ${FILESDIR}/totem-1.2.0-lang_it_fix.patch
 
 	einfo "Regenerating autotools files..."
 	export WANT_AUTOMAKE=1.9.5

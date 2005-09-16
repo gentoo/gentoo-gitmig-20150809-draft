@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.78 2005/09/15 21:12:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.79 2005/09/16 20:09:16 dang Exp $
+
+  16 Sep 2005; <dang@gentoo.org> +files/totem-1.2.0-lang_it_fix.patch,
+  totem-1.2.0.ebuild:
+  Fix Italian translation formatting issue.  Bug #106070
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> totem-1.0.4.ebuild:
   Mark 1.0.4 stable on alpha
