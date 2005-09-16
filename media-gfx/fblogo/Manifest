@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 db6675f16bf52b097ef45de12e84ec5b fblogo-0.5.2.ebuild 850
 MD5 03225bd91ca883f7e644761c1f0454da fblogo-0.5.0.ebuild 908
 MD5 0841997a32affdaa52b77e7bf9c16da5 fblogo-0.5.1.ebuild 848
@@ -6,3 +9,10 @@ MD5 2054eaeb0e7d9d2bfdbbfe814c2a0a11 ChangeLog 1347
 MD5 fbbc497efbdd04b155f6e06a8c653af5 files/digest-fblogo-0.5.1 63
 MD5 a915d708e190c7434a9da8a7444bd36e files/digest-fblogo-0.5.0 63
 MD5 e1b73d49ff7a5901ff2183d6c17f6ea4 files/digest-fblogo-0.5.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK0c6LLFUmVNQ7rkRAnd6AJ9ZC11wl4OD+68Hi0D8bnZGX/kQPQCfdMX5
+6GgGR/ed0JMdcSre74qS8P0=
+=CeiE
+-----END PGP SIGNATURE-----
