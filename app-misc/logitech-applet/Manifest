@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 63cf21184e14073ed34bba227a6dec99 logitech-applet-0.4_pre1.ebuild 708
 MD5 d11ad4b39fa439e887f9ea957edca937 metadata.xml 339
 MD5 f2cc458fff0cdd7b6d3acb30ac30443c ChangeLog 533
 MD5 c2f74101a06866a427bbdfbb90ff1067 files/digest-logitech-applet-0.4_pre1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKzntLLFUmVNQ7rkRAoHxAKCs6rQ/iVGOiM2c37QPy+eZJUOfzQCgnKRo
+e9UeW/bkSocbCvRm81t1C9A=
+=OkGZ
+-----END PGP SIGNATURE-----
