@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.7 2005/06/04 02:35:28 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.8 2005/09/16 02:03:55 allanonjl Exp $
 
 DESCRIPTION="DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance into a single, seamless environment."
 HOMEPAGE="http://www.fabforce.net/dbdesigner4/"
@@ -27,7 +27,7 @@ pkg_setup() {
 
 src_install() {
 	dodir ${INSTALLDIR}
-	cp -a ${S}/* ${D}/${INSTALLDIR}
+	cp -pPR ${S}/* ${D}/${INSTALLDIR}
 
 	cd ${D}/${INSTALLDIR}/Linuxlib
 	ln -s bplrtl.so.6.9.0 bplrtl.so.6.9

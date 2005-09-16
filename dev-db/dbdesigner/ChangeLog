@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/dbdesigner
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.7 2005/06/04 02:35:28 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/ChangeLog,v 1.8 2005/09/16 02:03:55 allanonjl Exp $
+
+  16 Sep 2005; John N. Laliberte <allanonjl@gentoo.org>
+  dbdesigner-4.0.5.4.ebuild:
+  cp -a -> cp -pPR
 
   04 Jun 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml:
   change maintainer to myself.
