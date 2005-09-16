@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/configure-thinkpad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.6 2005/01/08 21:41:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.7 2005/09/16 21:26:45 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *configure-thinkpad-0.8 (08 Jan 2005)
 
@@ -25,5 +28,5 @@
   26 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>;
   configure-thinkpad-0.1-r3.ebuild:
   Initial import. Credits to Andrea Cerrito <cerrito@centromultimediale.it> and
-  António Meireles <datashark@gentoo.org> (dev in zombie mode) in bug 34495.
+  AntÃ³nio Meireles <datashark@gentoo.org> (dev in zombie mode) in bug 34495.
 
