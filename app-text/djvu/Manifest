@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 214930004dd850e115ab479b188d43be djvu-3.5.14-r1.ebuild 1575
 MD5 9755fe91fba4e4fd0fcc505b688975ad djvu-3.5.12.ebuild 1044
 MD5 986cb703c5675d7e0fd2df81fdb6bb64 djvu-3.5.14.ebuild 1108
@@ -7,3 +10,10 @@ MD5 376a63d9cbc58a7737d37680734f0ee0 files/digest-djvu-3.5.12 69
 MD5 0da6de34d8db09192d2c881416108427 files/gentoo-acdesktop.m4 2491
 MD5 4a5cc41ce600d15a29fd720f279aaaf1 files/digest-djvu-3.5.14 69
 MD5 4a5cc41ce600d15a29fd720f279aaaf1 files/digest-djvu-3.5.14-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKzunLLFUmVNQ7rkRAkTgAKCZ+UYcobjVcIkqqgpW2wprh//2fgCfej9A
+2fAl46ckSBe/Uu8Cc1XO0iQ=
+=WfVK
+-----END PGP SIGNATURE-----

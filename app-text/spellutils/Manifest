@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fe2efa4970da718724b8872356ccddce spellutils-0.7.ebuild 692
 MD5 e6abe28c7ca4a4732151189f00055e8d ChangeLog 1091
 MD5 b8989677cb4295ab8aa783234feae3ac files/digest-spellutils-0.7 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKzx+LLFUmVNQ7rkRAm4BAJ4n0bX2hiuIHA8JBLOlyX/HxeifCgCfXXoT
+oOV1TFaYLIpOrSjg6CErn/k=
+=6HF5
+-----END PGP SIGNATURE-----
