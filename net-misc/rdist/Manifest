@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b07d477917b9d41a8b328f22f447a548 rdist-6.1.5-r1.ebuild 1106
 MD5 e3e85d9161f6143fcc7ae4485eef71eb rdist-6.1.5.ebuild 824
 MD5 b1479377e40b1f476c0b9eafe874cc06 ChangeLog 966
 MD5 6e25273408e9c88374cac7f55459c18e files/digest-rdist-6.1.5 63
 MD5 6e25273408e9c88374cac7f55459c18e files/digest-rdist-6.1.5-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK1XqLLFUmVNQ7rkRAsXqAJwP2wd4Tsc+5CsBmbL3cJsmCpyJZQCfW2zr
+x9qb6EFSb4a4NfFTrFQshMY=
+=aSsF
+-----END PGP SIGNATURE-----
