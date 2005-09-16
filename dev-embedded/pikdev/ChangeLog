@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.22 2005/05/01 23:11:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.23 2005/09/16 21:46:20 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *pikdev-0.7.1-r2 (01 May 2005)
 
@@ -37,7 +40,7 @@
   ~x86 keyworded due to bug #57472
 
   18 Jul 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.6.6a.ebuild:
-  removed Dependancy overlap. Fixes bug #54809. Thanks to Diego Pettenò
+  removed Dependancy overlap. Fixes bug #54809. Thanks to Diego PettenÃ²
   <dgp85@users.sourceforge.net>
 
 *pikdev-0.6.6a (18 Jul 2004)

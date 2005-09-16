@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.10 2005/08/07 13:27:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.11 2005/09/16 21:46:55 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> tigcc-0.95-r2.ebuild:
   Stable on ppc.
@@ -11,7 +14,7 @@
 *tigcc-0.96_beta2 (28 Feb 2005)
 
   28 Feb 2005; Daniel Black <dragonheart@gentoo.org> +tigcc-0.96_beta2.ebuild:
-  Version bump as per bug #82335. Many thanks to Robert Führicht
+  Version bump as per bug #82335. Many thanks to Robert FÃ¼hricht
   <the_master_of_disaster@gmx.at>
 
   17 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> tigcc-0.95-r2.ebuild,
@@ -22,7 +25,7 @@
 
   04 Dec 2004; Daniel Black <dragonheart@gentoo.org> tigcc-0.95-r2.ebuild,
   -tigcc-0.95_beta19-r1.ebuild, +tigcc-0.95_p3.ebuild:
-  version bump as per bug #73169. Thanks Robert Führicht
+  version bump as per bug #73169. Thanks Robert FÃ¼hricht
   <the_master_of_disaster@gmx.at> for the notification.
 
 *tigcc-0.95-r2 (01 Nov 2004)
@@ -41,6 +44,6 @@
 
   25 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +tigcc-0.95_beta19-r1.ebuild, +files/a68k-fix.patch:
-  Initial import as per bug #51162. Ebuild by Robert Führicht
+  Initial import as per bug #51162. Ebuild by Robert FÃ¼hricht
   <the_master_of_disaster@gmx.at>
 
