@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10_rc3.ebuild,v 1.12 2005/07/20 05:37:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10-r4.ebuild,v 1.1 2005/09/16 18:15:34 mrness Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils pam toolchain-funcs
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
 S_PL=${PV##*.}
 S_PL=${S_PL/_rc/-RC}
 S_PP=${PN}-${S_PV}.STABLE${S_PL}
-PATCH_VERSION="20050510"
+PATCH_VERSION="20050916"
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -20,11 +20,10 @@ S=${WORKDIR}/${S_PP}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 mips"
-IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit follow-xff"
 
-RDEPEND="virtual/libc
-	pam? ( >=sys-libs/pam-0.75 )
+RDEPEND="pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-2.1.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6m )
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )
@@ -44,6 +43,7 @@ src_unpack() {
 	# Do bulk patching from squids bug fix list as well as our patches
 	use customlog || rm ${WORKDIR}/patch/9*customlog*
 	use zero-penalty-hit || rm ${WORKDIR}/patch/9*ToS_Hit*
+	use follow-xff || rm ${WORKDIR}/patch/9*follow_xff*
 	EPATCH_SUFFIX="patch"
 	epatch ${WORKDIR}/patch
 
@@ -55,12 +55,11 @@ src_unpack() {
 	sed -i -e 's:_LDFLAGS[ ]*=:_LDFLAGS = -Wl,-z,now:' \
 		helpers/basic_auth/*/Makefile.in
 
-	if ! use debug ;	then
-		mv configure.in configure.in.orig
-		sed -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in.orig > configure.in
-		export WANT_AUTOCONF=2.1
-		autoconf || die "autoconf failed"
+	if ! use debug ; then
+		sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
 	fi
+	export WANT_AUTOCONF=2.1
+	autoconf || die "autoconf failed"
 }
 
 src_compile() {
@@ -111,7 +110,6 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc/squid \
 		--libexecdir=/usr/lib/squid \
-		\
 		--enable-auth="basic,digest,ntlm" \
 		--enable-removal-policies="lru,heap" \
 		--enable-digest-auth-helpers="password" \
@@ -131,17 +129,16 @@ src_compile() {
 		--enable-htcp \
 		--enable-carp \
 		--enable-poll \
+		`use_enable follow-xff follow-x-forwarded-for` \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 		#--enable-icmp
 
-	mv include/autoconf.h include/autoconf.h.orig
-	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
-		include/autoconf.h.orig > include/autoconf.h
+	sed -i -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
+		include/autoconf.h
 
 #	if [ "${ARCH}" = "hppa" ]
 #	then
-#		mv include/autoconf.h include/autoconf.h.orig
-#		sed -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
+#		sed -i -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
 #			include/autoconf.h.orig > include/autoconf.h
 #	fi
 
@@ -163,8 +160,7 @@ src_install() {
 	chmod 4750 ${D}/usr/lib/squid/pam_auth
 
 	#some clean ups
-	rm -rf ${D}/var
-	mv ${D}/usr/bin/Run* ${D}/usr/lib/squid
+	rm -f ${D}/usr/bin/Run*
 
 	#simply switch this symlink to choose the desired language..
 	dosym /usr/lib/squid/errors/English /etc/squid/errors
@@ -178,12 +174,9 @@ src_install() {
 	doman helpers/basic_auth/LDAP/*.8
 	dodoc helpers/basic_auth/SASL/squid_sasl_auth*
 
-	insinto /etc/pam.d
-	newins ${FILESDIR}/squid.pam squid
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/squid.initd squid
-	insinto /etc/conf.d
-	newins ${FILESDIR}/squid.confd squid
+	newpamd "${FILESDIR}/squid.pam-include" squid
+	newinitd "${FILESDIR}/squid.initd" squid
+	newconfd "${FILESDIR}/squid.confd" squid
 	if use logrotate; then
 		insinto /etc/logrotate.d
 		newins ${FILESDIR}/squid-logrotate squid
@@ -192,6 +185,7 @@ src_install() {
 		newexe ${FILESDIR}/squid.cron squid.cron
 	fi
 
+	rm -rf ${D}/var
 	diropts -m0755 -o squid -g squid
 	dodir /var/cache/squid /var/log/squid
 }
@@ -205,5 +199,10 @@ pkg_postinst() {
 	echo
 	ewarn "Squid authentication helpers have been installed suid root"
 	ewarn "This allows shadow based authentication, see bug #52977 for more"
+	echo
+	einfo "For winbind authentication to work with squid you should change the"
+	einfo "/var/cache/samba/winbindd_privileged group to the same one you use"
+	einfo "in the cache_effective_group option on your squid.conf:"
+	einfo "    chgrp squid /var/cache/samba/winbindd_privileged"
 	echo
 }
