@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-pdo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/ChangeLog,v 1.3 2005/09/09 13:02:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/ChangeLog,v 1.4 2005/09/16 23:23:37 trapni Exp $
+
+  16 Sep 2005; Christian Parpart <trapni@gentoo.org> pecl-pdo-0.9.ebuild:
+  added to ~amd64
 
   09 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-pdo-0.9.ebuild:
   Added ~sparc keyword to help fix the broken dependencies of

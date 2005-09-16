@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-pdo-sqlite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/ChangeLog,v 1.3 2005/09/09 13:01:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/ChangeLog,v 1.4 2005/09/16 23:19:44 trapni Exp $
+
+  16 Sep 2005; Christian Parpart <trapni@gentoo.org>
+  pecl-pdo-sqlite-0.9.ebuild:
+  added to ~amd64
 
   09 Sep 2005; Jason Wever <weeve@gentoo.org> pecl-pdo-sqlite-0.9.ebuild:
   Added ~sparc keyword to help fix the broken dependencies of
