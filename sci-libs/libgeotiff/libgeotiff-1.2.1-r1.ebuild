@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.1-r1.ebuild,v 1.4 2005/09/14 01:59:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.1-r1.ebuild,v 1.5 2005/09/16 07:34:08 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/geotiff/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~hppa ~mips ~alpha ~amd64 ppc ~ppc64"
+KEYWORDS="alpha ~amd64 ~hppa ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
