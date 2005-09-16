@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ba1d65c0e8e424c0b9bc13edfac89b0 eclipse-pydev-bin-0.8.0.ebuild 945
 MD5 ff8a8214d8ab20195d874d6450540f35 ChangeLog 668
 MD5 60d954c3da0456bb9c03416b3907b6cd metadata.xml 763
 MD5 6d86162ec19124b5cb9299cf7559cd63 files/digest-eclipse-pydev-bin-0.8.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKxa5/rLF9B432nYRAndDAKDA1TmO5Yl0QYcBc4dsNVlLj22USQCgxYru
+fP3LYps773iBL5e9mpERpE4=
+=UUWT
+-----END PGP SIGNATURE-----

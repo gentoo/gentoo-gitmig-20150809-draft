@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4bf0d2748e54d1ec65f7e3ed53d14b3e eclipse-cdt-bin-1.2.0.ebuild 1310
 MD5 3c76f4fb337934ebea19ed784fdc160d ChangeLog 1452
 MD5 6064045d00044779d8c06479a9b3aa19 metadata.xml 1258
 MD5 b97d63439e39b29d46d7a1abdaa67dac files/digest-eclipse-cdt-bin-1.2.0 146
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKxaK/rLF9B432nYRAjHXAKDPxIlpa72Hpqd20HkLIr++AngtGwCgzwKy
+8l7sDY8f1w34E1Skek2xY08=
+=zAsi
+-----END PGP SIGNATURE-----
