@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.41 2005/08/10 11:26:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.42 2005/09/16 22:25:23 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   10 Aug 2005; Aaron Walker <ka0ttic@gentoo.org>
   mailx-8.1.2.20040524-r1.ebuild:
@@ -32,7 +35,7 @@
 
   02 Mar 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mailx-8.1.2.20040524-r1.ebuild:
-  Fix mail.help path. wrt #83787. Reported by: Toralf F�rster
+  Fix mail.help path. wrt #83787. Reported by: Toralf Förster
   <toralf.foerster@gmx.de>
 
   04 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
@@ -87,7 +90,7 @@
   09 Oct 2004; Tom Gall <tgall@gentoo.org> mailx-8.1.2.20021129-r4.ebuild:
   stable on ppc64, bug #63123
 
-  19 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org>
+  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r4.ebuild:
   Stable on alpha.
 
@@ -108,7 +111,7 @@
   +mailx-8.1.2.20021129-r4.ebuild:
   Provide virtual/mailx. Closes #63123.
 
-  22 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r3.ebuild:
   Stable on alpha.
 
@@ -158,7 +161,7 @@
   +mailx-8.1.2.20021129-r3.ebuild:
   Apply 64-bit compatibility patch on all architectures instead of just ia64
 
-  04 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r2.ebuild:
   Stable on alpha.
 

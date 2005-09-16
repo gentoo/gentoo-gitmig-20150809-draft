@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.14 2005/06/05 11:51:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.15 2005/09/16 22:26:07 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> nmh-1.1.ebuild:
   Stable on ppc.
@@ -27,7 +30,7 @@
   +files/nmh-1.1-configure-vitest.patch, +files/nmh-1.1-inc-login.patch,
   +files/nmh-1.1-install.patch, +files/nmh-1.1-m_getfld.patch,
   +nmh-1.1.ebuild:
-  Version bump. Thanks to Jonathan Kraut, Claes Nästén, Aaron Peterson,  
+  Version bump. Thanks to Jonathan Kraut, Claes NÃ¤stÃ©n, Aaron Peterson,  
   Sam Yates have contributed in bug #22173.
 
   27 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> nmh-1.0.4-r3.ebuild:
