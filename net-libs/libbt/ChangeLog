@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libbt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.8 2005/05/29 22:13:16 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.9 2005/09/16 23:26:36 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *libbt-1.04 (30 May 2005)
 
@@ -31,4 +34,4 @@
 
   10 Apr 2004; Jon Hood <squinky86@gentoo.org> libbt-1.01.ebuild:
   Initial ebuild for libbt.
-  Thanks to José Romildo Malaquias for this ebuild
+  Thanks to JosÃ© Romildo Malaquias for this ebuild
