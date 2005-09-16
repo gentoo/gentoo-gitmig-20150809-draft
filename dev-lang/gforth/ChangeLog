@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gforth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.14 2005/05/01 17:15:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.15 2005/09/16 21:53:10 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> gforth-0.6.2.ebuild:
   Stable on ppc.
@@ -54,7 +57,7 @@
   files/50gforth-gentoo.el, files/gforth.el-gentoo.patch:
   minor version bump, ebuild clean up, support for emacs USE flag
 
-*gforth-0.5.0.ebuild (04 ñÎ× 2003)
+*gforth-0.5.0.ebuild (04 Jan 2003)
 
   04 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, gforth-0.5.0.ebuild, files/digest-gforth-0.5.0 :
   initial release (#11677)
