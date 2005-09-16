@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.79 2005/09/16 20:09:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.80 2005/09/16 20:42:57 dang Exp $
+
+  16 Sep 2005; <dang@gentoo.org> totem-1.2.0.ebuild:
+  mozilla/firefox browser plugin depends on dbus. Bug #106162
 
   16 Sep 2005; <dang@gentoo.org> +files/totem-1.2.0-lang_it_fix.patch,
   totem-1.2.0.ebuild:
