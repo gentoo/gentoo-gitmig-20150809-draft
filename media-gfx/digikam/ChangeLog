@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.27 2005/09/16 19:50:42 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.28 2005/09/16 23:08:49 cryos Exp $
+
+*digikam-0.8.0_beta1 (16 Sep 2005)
+
+  16 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +digikam-0.8.0_beta1.ebuild:
+  Added beta version to p.mask for testing, bug 106175.
 
 *digikam-0.7.4 (16 Sep 2005)
 
