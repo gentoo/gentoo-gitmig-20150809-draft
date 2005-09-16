@@ -1,0 +1,9 @@
+# ChangeLog for dev-embedded/tavrasm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tavrasm/ChangeLog,v 1.1 2005/09/16 12:33:08 hansmi Exp $
+
+*tavrasm-1.22 (16 Sep 2005)
+
+  16 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> +metadata.xml,
+  +tavrasm-1.22.ebuild:
+  Initial import, ebuild written by myself.
