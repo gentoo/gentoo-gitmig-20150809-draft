@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 00560a17b701222dcb9ac926faca6ec5 avi-xmms-1.2.3-r1.ebuild 884
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 63f54aa11e6b087fd61823221e8ce4ba ChangeLog 2672
@@ -5,3 +8,10 @@ MD5 45d9826cd0bff3508cfef1f1b30cb0a6 avi-xmms-1.2.3.ebuild 723
 MD5 1353d8be29f9685e51f62d3b06ad4fe2 files/digest-avi-xmms-1.2.3 66
 MD5 12ef286167d623ec80c2adbe84ced3c8 files/avi-xmms-1.2.3-gcc3-gentoo.patch 18455
 MD5 1353d8be29f9685e51f62d3b06ad4fe2 files/digest-avi-xmms-1.2.3-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK07ILLFUmVNQ7rkRAvkgAJ9HHq6cDCr3FvA9aBmwOWcUBnAYYwCePjmD
+JZ+fAfvFFaa+MVs072ublpI=
+=IelY
+-----END PGP SIGNATURE-----

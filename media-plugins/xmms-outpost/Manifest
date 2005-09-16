@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 702128d54f84866c3a2528abccf58d73 xmms-outpost-0.15.ebuild 855
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 c896e308ea8124b551427557bd5d7898 ChangeLog 1295
 MD5 cece0840a904e47897cb04150a800d48 files/xmms-outpost-0.15-Makefile.patch 1376
 MD5 9280bff3620c411f7c5adfe2e6a0ec8e files/digest-xmms-outpost-0.15 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK09rLLFUmVNQ7rkRApU0AJ44UDe1BB7BxoXtx6kFCaW6Et+BaQCeOkyt
+/R9lI3NwjIsfhoFNB7zKbZI=
+=NuzT
+-----END PGP SIGNATURE-----
