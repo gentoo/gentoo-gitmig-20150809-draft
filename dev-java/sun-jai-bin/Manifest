@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d8b6a16a6c7c52bbf654642519c9fcb9 sun-jai-bin-1.1.2.01-r1.ebuild 1126
 MD5 a311dab1d0175be760884687928e3fe3 ChangeLog 2455
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 ae1dceadf570ee0f12c1122ed3d9c4b5 files/digest-sun-jai-bin-1.1.2.01-r1 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDKx19QiJ/wx066S4RAgpgAJwKONI9cB+oYSiL+Hjz/Qfdzi/KrwCfT8gK
+SFF5YW1Ha0if1jCiH0aLsmU=
+=Pc8d
+-----END PGP SIGNATURE-----
