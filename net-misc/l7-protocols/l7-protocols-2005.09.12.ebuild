@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.08.24.ebuild,v 1.1 2005/08/28 03:18:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2005.09.12.ebuild,v 1.1 2005/09/16 22:51:08 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -29,13 +29,12 @@ src_compile() {
 
 # NOTE Testing mechanism is currently broken:
 #  stack smashing attack in function main()
-
-src_test() {
-	cd testing
-	find ${S} -name \*.pat -print -exec ./test_match.sh {} \; \
-		-exec ./timeit.sh {} \; || die "failed tests"
-	einfo "patterns past testing"
-}
+#src_test() {
+#	cd testing
+#	find ${S} -name \*.pat -print -exec ./test_match.sh {} \; \
+#		-exec ./timeit.sh {} \; || die "failed tests"
+#	einfo "patterns past testing"
+#}
 
 src_install() {
 
