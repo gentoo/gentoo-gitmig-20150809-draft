@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.78 2005/08/14 13:39:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.79 2005/09/16 21:02:56 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *gpgme-1.0.3 (14 Aug 2005)
 
@@ -116,7 +119,7 @@
 
   03 Oct 2004; Daniel Black <dragonheart@gentoo.org> gpgme-1.0.0-r1.ebuild,
   gpgme-1.0.0.ebuild:
-  Fixed as per bug #66190. Thank to Tóth Csaba <tsabi-gentoo@tsabi.hu>
+  Fixed as per bug #66190. Thank to TÃ³th Csaba <tsabi-gentoo@tsabi.hu>
 
 *gpgme-1.0.0-r1 (03 Oct 2004)
 
@@ -125,10 +128,10 @@
   +gpgme-1.0.0.ebuild:
   version bump. 1.0.0 without smime support and 1.0.0-r1 with smime support
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpgme-0.9.0-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gpgme-0.9.0-r1.ebuild:
   Stable on alpha, requested in bug 64485.
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpgme-0.3.14-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gpgme-0.3.14-r1.ebuild:
   Stable on alpha, requested in bug 64485.
 
   23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpgme-0.3.14-r1.ebuild,
