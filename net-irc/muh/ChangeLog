@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/muh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.8 2004/08/08 00:09:38 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/ChangeLog,v 1.9 2005/09/16 23:25:35 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> muh-2.1_rc1.ebuild,
   muh-2.2_beta1.ebuild:
@@ -9,10 +12,10 @@
 *muh-2.2_beta1 (23 Jun 2004)
 
   23 Jun 2004; Sven Wegener <swegener@gentoo.org> +muh-2.2_beta1.ebuild:
-  Version bump. Thanks to Hinrik Örn Sigurðsson <flanders@simnet.is> in bug
+  Version bump. Thanks to Hinrik Ã–rn SigurÃ°sson <flanders@simnet.is> in bug
   #54703. Added support for the ipv6 USE flag.
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> muh-2.1_rc1.ebuild:
+  05 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> muh-2.1_rc1.ebuild:
   Stable on alpha.
 
   29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> muh-2.1_rc1.ebuild:
@@ -22,7 +25,7 @@
   Marked stable on x86
 
   02 Oct 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> muh-2.1_rc1.ebuild:
-  added a notice about the config file -- suggested by Ævar Arnfjörð Bjarmason
+  added a notice about the config file -- suggested by Ã†var ArnfjÃ¶rÃ° Bjarmason
   <avar@simnet.is>, see bug #30035
 
 *muh-2.1_rc1 (30 Sep 2003)
