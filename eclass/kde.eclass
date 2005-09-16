@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.129 2005/08/27 09:35:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.130 2005/09/16 18:34:54 cryos Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -209,6 +209,45 @@ kde_src_install() {
 	shift
 	done
 
+}
+
+# slot rebuild function, thanks to Carsten Lohrke in bug 98425.
+slot_rebuild() {
+	local VDB_PATH="$(portageq vdb_path)"
+	local KDE_PREFIX="$(kde-config --prefix)"
+	local REBUILD_LIST=""
+
+	echo
+	einfo "Scan for possible needed slot related rebuilds.\n"
+	for i in ${*} ; do
+		local temp="$(ls -1d ${VDB_PATH}/${i}*)"
+		for j in ${temp} ; do
+			if [ $(cat $(grep -o /.*/lib.*\.la ${j}/CONTENTS) | grep -co "${KDE_PREFIX}") = 0 ] ; then
+				REBUILD_LIST="${REBUILD_LIST} =${j/${VDB_PATH}\//}"
+			fi
+		done
+	done
+
+	if [ -n "${REBUILD_LIST}" ] ; then
+		local temp=""
+		cd ${VDB_PATH}
+		for i in ${REBUILD_LIST} ; do
+			i="$(echo ${i%-*} | cut -d= -f2)"
+			temp="${temp} $(find .  -iname "DEPEND" -exec grep -H ${i} '{}' \; | cut -f2-3 -d/ | grep -v ${CATEGORY}/${PN})"
+		done
+		temp="$(echo ${temp} | fmt -w 1 | sort -u | fmt -w 10000)"
+		for i in ${temp} ; do
+			REBUILD_LIST="${REBUILD_LIST} =${i}"
+		done
+	fi
+
+	if [ -n "${REBUILD_LIST}" ] ; then
+		einfo "Please run \"emerge --oneshot ${REBUILD_LIST}\" before continuing.\n"
+	else
+		einfo "Done :), continuing...\n"
+		return 1
+	fi
+	echo
 }
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install
