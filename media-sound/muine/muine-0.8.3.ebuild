@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.5 2005/08/16 23:48:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.6 2005/09/16 06:26:25 latexer Exp $
 
 inherit gnome2 mono eutils multilib
 
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 
 RDEPEND=">=dev-lang/mono-0.96
-	>=dev-dotnet/gtk-sharp-1.9.2
-	>=dev-dotnet/gnome-sharp-1.9.2
-	>=dev-dotnet/gnomevfs-sharp-1.9.2
-	>=dev-dotnet/glade-sharp-1.9.2
-	>=dev-dotnet/gconf-sharp-1.9.2
+	>=dev-dotnet/gtk-sharp-2.3.90
+	>=dev-dotnet/gnome-sharp-2.3.90
+	>=dev-dotnet/gnomevfs-sharp-2.3.90
+	>=dev-dotnet/glade-sharp-2.3.90
+	>=dev-dotnet/gconf-sharp-2.3.90
 	xine? ( >=media-libs/xine-lib-1_rc4 )
 	!xine? (
 		>=media-libs/gstreamer-0.8.9-r3

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.21 2005/08/16 23:48:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.22 2005/09/16 06:26:25 latexer Exp $
+
+  16 Sep 2005; Peter Johanson <latexer@gentoo.org> muine-0.8.3.ebuild:
+  Change *-sharp deps to better reflect versions in portage.
 
   16 Aug 2005; Peter Johanson <latexer@gentoo.org>
   +files/muine-0.8.3-gtk-sharp-2.x.90-compat.diff, -muine-0.8.2.ebuild,
