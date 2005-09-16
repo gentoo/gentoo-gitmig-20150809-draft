@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/nxml-mode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.14 2005/09/09 16:03:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.15 2005/09/16 21:11:56 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> nxml-mode-20041004.ebuild:
   Mark 20041004 stable on alpha
@@ -35,7 +38,7 @@
   02 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   -files/20031031-info-gentoo.patch, +files/nxml-mode-info-gentoo.patch,
   nxml-mode-20031031.ebuild, +nxml-mode-20040910.ebuild:
-  Version bumped. W3C XML Schema patch was added by Lénaïc Huard
+  Version bumped. W3C XML Schema patch was added by LÃ©naÃ¯c Huard
   <lhuard@ifrance.com>, closing bug #65836.
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> nxml-mode-20031031.ebuild:
