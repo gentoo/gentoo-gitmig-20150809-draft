@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.29 2005/09/03 21:52:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.30 2005/09/16 03:16:35 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> putty-0.58.ebuild:
+  Mark 0.58 stable on alpha
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> putty-0.58.ebuild:
   Stable on ppc.
