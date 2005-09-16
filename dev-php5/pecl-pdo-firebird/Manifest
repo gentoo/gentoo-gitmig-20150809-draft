@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66f5d26978b143f6abe14001ae011a4a ChangeLog 628
+MD5 40d9b63ed9ec34ca6642b5bcbba307cc ChangeLog 732
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 04938a81db27c21882a408bf7cfde67d pecl-pdo-firebird-0.2.ebuild 1057
+MD5 3ee71589d842a89986902ca092af4a5e pecl-pdo-firebird-0.2.ebuild 1064
 MD5 4a58f4edd1173f8f6332e928708f1137 files/digest-pecl-pdo-firebird-0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKEqucsIHjyDViGQRAnVaAJ9NJpKtQeTyJLf4Vlha99hpXdtf9wCfZgZg
-sJ9AaD0lfEpXewpCSX5HRVo=
-=O7kL
------END PGP SIGNATURE-----
