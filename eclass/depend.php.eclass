@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.3 2005/09/11 16:39:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.4 2005/09/16 20:25:21 trapni Exp $
 #
 # ========================================================================
 #
@@ -14,6 +14,7 @@
 
 inherit eutils
 
+# PHP4-only depend functions
 need_php4_cli()
 {
 	DEPEND="${DEPEND} =virtual/php-4*"
@@ -54,6 +55,7 @@ uses_php4()
 	einfo
 }
 
+# PHP5-only depend functions
 need_php5_cli()
 {
 	DEPEND="${DEPEND} =virtual/php-5*"
@@ -92,6 +94,19 @@ uses_php5()
 	einfo
 	einfo "Using ${PHP_PKG}"
 	einfo
+}
+
+# general PHP depend functions
+need_php_cli()
+{
+	DEPEND="${DEPEND} virtual/php"
+	RDEPEND="${RDEPEND} virtual/php"
+}
+
+need_php_httpd()
+{
+	DEPEND="${DEPEND} virtual/httpd-php"
+	RDEPEND="${RDEPEND} virtual/httpd-php"
 }
 
 need_php()
