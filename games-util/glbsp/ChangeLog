@@ -1,6 +1,9 @@
 # ChangeLog for games-util/glbsp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.4 2005/05/13 07:00:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.5 2005/09/16 22:24:19 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *glbsp-2.10 (13 May 2005)
 
@@ -16,4 +19,4 @@
 *glbsp-2.05 (20 Jul 2004)
 
   20 Jul 2004; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Hinrik Örn Sigurðsson #53793.
+  Initial import.  Ebuild submitted by Hinrik Ã–rn SigurÃ°sson #53793.
