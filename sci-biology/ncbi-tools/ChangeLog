@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.21 2005/08/19 19:11:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.22 2005/09/16 07:19:58 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  ncbi-tools-20050429.ebuild:
+  Mark 20050429 stable on alpha
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   ncbi-tools-20050429.ebuild:
