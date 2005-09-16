@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.60 2005/08/04 19:18:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.61 2005/09/16 23:12:35 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   04 Aug 2005; Fabian Groffen <grobian@gentoo.org> libnasl-2.2.4.ebuild:
   Marking ~ppc-macos
@@ -92,7 +95,7 @@
 *libnasl-2.3.0 (12 Jan 2005)
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org> +libnasl-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger Hoffst‰tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffst√§tte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

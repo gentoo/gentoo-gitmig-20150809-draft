@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsnarf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.19 2005/08/24 14:18:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.20 2005/09/16 23:17:01 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   snortsnarf-050314.1.ebuild:
@@ -17,7 +20,7 @@
   24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
   snortsnarf-050314.1.ebuild:
   Marking x86 stable since this fixes a bug that has come up twice. See bug
-  90234. Thanks to Toralf F�rster <toralf.foerster@gmx.de> for reporting.
+  90234. Thanks to Toralf Förster <toralf.foerster@gmx.de> for reporting.
 
   19 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
   snortsnarf-021111.1-r4.ebuild:

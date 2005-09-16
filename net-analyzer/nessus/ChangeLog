@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.63 2005/07/24 03:31:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.64 2005/09/16 23:14:08 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *nessus-2.2.5 (24 Jul 2005)
 
@@ -71,7 +74,7 @@
 *nessus-2.3.0 (12 Jan 2005)
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org> +nessus-2.3.0.ebuild:
-  Version bump as per bug #73780. Thanks to Holger Hoffst‰tte <holger@wizards.de>
+  Version bump as per bug #73780. Thanks to Holger Hoffst√§tte <holger@wizards.de>
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
