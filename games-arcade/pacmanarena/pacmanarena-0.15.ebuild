@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.9 2005/09/11 02:52:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.10 2005/09/16 01:11:23 mr_bones_ Exp $
 
 inherit games
 
@@ -14,11 +14,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 x86"
 IUSE="vorbis"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	virtual/opengl
 	>=media-libs/sdl-mixer-1.2.4
 	>=media-libs/sdl-net-1.2.4
 	vorbis? ( media-libs/libvorbis )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/pacman
 
