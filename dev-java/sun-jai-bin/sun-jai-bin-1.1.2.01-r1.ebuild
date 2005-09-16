@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01.ebuild,v 1.4 2005/09/16 18:41:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01-r1.ebuild,v 1.1 2005/09/16 19:29:27 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -19,6 +19,11 @@ S=${WORKDIR}/jai-${PV//./_}/
 
 pkg_nofetch() {
 	einfo "Please download ${SRC_URI} from ${HOMEPAGE} and place it in ${DISTDIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+	rm ${S}/LICENSE-jai.txt
 }
 
 src_compile() { :; }
