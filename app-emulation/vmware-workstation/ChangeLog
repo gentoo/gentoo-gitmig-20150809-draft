@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.93 2005/08/29 14:50:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.94 2005/09/16 19:07:23 wolf31o2 Exp $
+
+*vmware-workstation-5.0.0.13124-r2 (16 Sep 2005)
+*vmware-workstation-4.5.2.8848-r7 (16 Sep 2005)
+*vmware-workstation-3.2.1.2242-r4 (16 Sep 2005)
+
+  16 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-3.2.1.2242-r3.ebuild,
+  +vmware-workstation-3.2.1.2242-r4.ebuild,
+  -vmware-workstation-4.5.2.8848-r6.ebuild,
+  +vmware-workstation-4.5.2.8848-r7.ebuild,
+  -vmware-workstation-5.0.0.13124-r1.ebuild,
+  +vmware-workstation-5.0.0.13124-r2.ebuild:
+  Updated vmware ebuilds to now require users be in the vmware group. Also,
+  added better udev handling. Closing bug #104480 and #106170.
 
   29 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r3.ebuild,

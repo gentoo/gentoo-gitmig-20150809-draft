@@ -1,78 +1,90 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r1.ebuild,v 1.5 2005/08/29 14:50:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r4.ebuild,v 1.1 2005/09/16 19:07:24 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
-# to download VMWare. The agreeing to a licence is part of the configure step
+# to download VM Ware.  The agreeing to a licence is part of the configure step
 # which the user must run manually.
 
-inherit eutils
+inherit toolchain-funcs eutils
 
 S=${WORKDIR}/vmware-distrib
 ANY_ANY="vmware-any-any-update93"
-NP="VMware-workstation-5.0.0-13124"
+NP="VMware-workstation-3.2.1-2242"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
-	http://download3.vmware.com/software/wkst/${NP}.tar.gz
-	http://download.vmware.com/htdocs/software/wkst/${NP}.tar.gz
-	http://www.vmware.com/download1/software/wkst/${NP}.tar.gz
-	ftp://download1.vmware.com/pub/software/wkst/${NP}.tar.gz
-	http://vmware-chil.www.conxion.com/software/wkst/${NP}.tar.gz
-	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
-	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
-	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
+SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
+	http://www.vmware.com/download1/software/${NP}.tar.gz
+	ftp://download1.vmware.com/pub/software/${NP}.tar.gz
+	http://vmware-chil.www.conxion.com/software/${NP}.tar.gz
+	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
+	http://vmware.wespe.de/software/${NP}.tar.gz
+	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
-IUSE=""
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* x86"
+IUSE=""
 RESTRICT="nostrip"
 
-DEPEND="${RDEPEND} virtual/os-headers"
-# vmware-workstation should not use virtual/libc as this is a 
-# precompiled binary package thats linked to glibc.
+DEPEND=">=dev-lang/perl-5
+	virtual/os-headers"
+
 RDEPEND="sys-libs/glibc
-	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	virtual/x11
-	>=dev-lang/perl-5
-	sys-apps/pciutils"
+	media-libs/gdk-pixbuf"
 
 dir=/opt/vmware
 Ddir=${D}/${dir}
+VMWARE_GROUP=${VMWARE_GROUP:-vmware}
+
+pkg_setup() {
+	# This is due to both bugs #104480 and #106170
+	enewgroup "${VMWARE_GROUP}"
+}
 
 src_unpack() {
+	check_KV
 	unpack ${NP}.tar.gz
-	cd ${S}
-	# patch the config to not install desktop/icon files
-	epatch ${FILESDIR}/${P}-config.patch
-	unpack ${ANY_ANY}.tar.gz
-	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
-	cd ${S}/${ANY_ANY}
-	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
-	# vmware any93 still doesn't patch the vmware binary
-	#./update vmware ../lib/bin/vmware || die
-	#./update bridge ../bin/vmnet-bridge || die
-	#./update vmx ../lib/bin/vmware-vmx || die
-	#./update vmxdebug ../lib/bin-debug/vmware-vmx || die
+	if [ "${KV:0:3}" == "2.6" ] || [ "${KV:0:3}" == "2.5" ] ; then
+		unpack ${ANY_ANY}.tar.gz
+		mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+	fi
+}
+
+src_compile() {
+	has_version '<sys-libs/glibc-2.3.2' \
+		&& GLIBC_232=0 \
+		|| GLIBC_232=1
+
+	if [ ${GLIBC_232} -eq 1 ] ; then
+		$(tc-getCC) -W -Wall -shared -o vmware-glibc-2.3.2-compat.so \
+			${FILESDIR}/${PV}/vmware-glibc-2.3.2-compat.c \
+			|| die "could not make module"
+	else
+		return 0
+	fi
 }
 
 src_install() {
+	# lets make gcc happy regardless of what version we're using
+	epatch ${FILESDIR}/${PV}/vmware-config.pl-gcc-generalized.patch
+
 	dodir ${dir}/bin
 	cp -pPR bin/* ${Ddir}/bin
 
-	dodir ${dir}/lib
-	cp -dr lib/* ${Ddir}/lib
-
+	dodir ${Ddir}/lib
+	cp -pPR lib/* ${Ddir}/lib
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
 	rm -rf ${Ddir}/lib/modules/binary
-	# We also don't need to keep the icons around
-	rm -rf ${Ddir}/lib/share/icons
+	# We also remove libgdk_pixbuf stuff, to resolve bug #81344.
+	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2
 	# We set vmware-vmx and vmware-ping suid
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
@@ -86,10 +98,10 @@ src_install() {
 	doman ${S}/man/man1/vmware.1.gz || die "doman"
 
 	# vmware service loader
-	newinitd ${FILESDIR}/vmware.rc vmware || die "newinitd"
+	newinitd ${FILESDIR}/${PV}/vmware vmware || die "newinitd"
 
 	# vmware enviroment
-	doenvd ${FILESDIR}/90vmware || die "doenvd"
+	doenvd ${FILESDIR}/${PV}/90vmware || die "doenvd"
 
 	dodir /etc/vmware/
 	cp -pPR etc/* ${D}/etc/vmware/
@@ -102,26 +114,35 @@ src_install() {
 	dodir /etc/vmware/init.d/rc4.d
 	dodir /etc/vmware/init.d/rc5.d
 	dodir /etc/vmware/init.d/rc6.d
-	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware || die
+	cp -pPR installer/services.sh ${D}/etc/vmware/init.d/vmware
+	dosed 's/mknod -m 600/mknod -m 660/' /etc/vmware/init.d/vmware || die
+	dosed '/c 119 "$vHubNr"/ a\
+		chown root:vmware /dev/vmnet*\
+		' /etc/vmware/init.d/vmware || die
 
 	# This is to fix a problem where if someone merges vmware and then
 	# before configuring vmware they upgrade or re-merge the vmware
 	# package which would rmdir the /etc/vmware/init.d/rc?.d directories.
 	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
 
+	# A simple icon I made
 	insinto ${dir}/lib/icon
-	doins ${S}/lib/share/icons/48x48/apps/${PN}.png || die
-	doicon ${S}/lib/share/icons/48x48/apps/${PN}.png || die
-	insinto /usr/share/mime/packages
-	doins ${FILESDIR}/vmware.xml
+	doins ${DISTDIR}/vmware.png || die
+	doicon ${DISTDIR}/vmware.png || die
 
-	make_desktop_entry vmware "VMWare Workstation" ${PN}.png
-
-	dodir /usr/bin
-	dosym ${dir}/bin/vmware /usr/bin/vmware
+	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
 	# this removes the user/group warnings
-	chown -R root:0 ${D}
+	chown -R root:0 ${D} || die
+
+	# this makes the vmware-vmx executable only executable by vmware group
+	fowners root:vmware ${dir}/lib/bin{,-debug}/vmware-vmx || die
+	fperms 750 ${dir}/lib/bin{,-debug}/vmware-vmx || die
+
+	# this adds udev rules for vmmon*
+	dodir /etc/udev/rules.d
+	echo 'KERNEL=="vmmon*", GROUP="vmware" MODE=660' > \
+		${D}/etc/udev/rules.d/60-vmware.rules || die
 
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
@@ -133,6 +154,19 @@ src_install() {
 	echo "answer RUN_CONFIGURATOR no" >> ${locations}
 	echo "answer INITDIR /etc/vmware/init.d" >> ${locations}
 	echo "answer INITSCRIPTSDIR /etc/vmware/init.d" >> ${locations}
+
+	if [ ${GLIBC_232} -eq 1 ] ; then
+		dolib.so vmware-glibc-2.3.2-compat.so
+		cd ${D}/opt/vmware/lib/bin
+		mv vmware-ui{,.bin}
+		mv vmware-mks{,.bin}
+		echo '#!/bin/sh' > vmware-ui
+		echo 'LD_PRELOAD=vmware-glibc-2.3.2-compat.so exec "$0.bin" "$@"' >> vmware-ui
+		chmod a+x vmware-ui
+		cp vmware-{ui,mks}
+	else
+		return 0
+	fi
 }
 
 pkg_preinst() {
@@ -168,14 +202,7 @@ pkg_preinst() {
 	done
 }
 
-pkg_config() {
-	einfo "Running /opt/vmware/bin/vmware-config.pl"
-	${dir}/bin/vmware-config.pl
-}
-
 pkg_postinst() {
-	update-mime-database /usr/share/mime
-
 	# This is to fix the problem where the not_configured file doesn't get
 	# removed when the configuration is run. This doesn't remove the file
 	# It just tells the vmware-config.pl script it can delete it.
@@ -193,15 +220,17 @@ pkg_postinst() {
 	einfo "For VMware Add-Ons just visit"
 	einfo "http://www.vmware.com/download/downloadaddons.html"
 	einfo
-	einfo "After configuring, type 'vmware' to launch"
-	einfo
 	einfo "Also note that when you reboot you should run:"
 	einfo "/etc/init.d/vmware start"
 	einfo "before trying to run vmware.  Or you could just add"
 	einfo "it to the default run level:"
 	einfo "rc-update add vmware default"
 	echo
-	#ewarn "For users of glibc-2.3.x, vmware-nat support is *still* broken on 2.6.x"
+	ewarn "Remember, in order to run vmware, you have to"
+	ewarn "be in the '${VMWARE_GROUP}' group."
+	echo
+	ewarn "VMWare allows for the potential of overwriting files as root.  Only"
+	ewarn "give VMWare access to trusted individuals."
 }
 
 pkg_postrm() {
