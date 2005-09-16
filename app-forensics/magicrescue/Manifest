@@ -1,4 +1,14 @@
-MD5 743281b6e0e38a7a2855cd9ab17d68b3 ChangeLog 590
-MD5 07494bccad1752dbb42e74649afe13c6 magicrescue-1.1.4.ebuild 759
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 105847dd9829f12cc71df98401454278 metadata.xml 846
-MD5 d4dd9dcad4dd90429113ac6544057531 files/digest-magicrescue-1.1.4 68
+MD5 23a93ac82ed8ab1cea040ed9f8b24de8 ChangeLog 953
+MD5 3ccc253488a04a02cc1da00ae9e904e5 magicrescue-1.1.4-r1.ebuild 783
+MD5 d4dd9dcad4dd90429113ac6544057531 files/digest-magicrescue-1.1.4-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDK0XmmdTrptrqvGERAouRAJ0ceJ0dTjr35sIHPJSPd4XNfMI/NACfY00E
+Yy1S1pe4+8weUO0llK+aulM=
+=543n
+-----END PGP SIGNATURE-----
