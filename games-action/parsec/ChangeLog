@@ -1,6 +1,9 @@
 # ChangeLog for games-action/parsec
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.5 2004/06/24 21:57:57 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.6 2005/09/16 22:04:08 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> parsec-0197.ebuild:
   Added IUSE.
@@ -11,4 +14,4 @@
 *parsec-0197 (12 Jul 2003)
 
   12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Henrik Schöpel <Spock2000@gmx.de> #21760.
+  Initial import.  Ebuild submitted by Henrik SchÃ¶pel <Spock2000@gmx.de> #21760.
