@@ -1,6 +1,10 @@
 # ChangeLog for games-board/scid
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.9 2004/07/01 11:11:50 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.10 2005/09/16 01:14:05 mr_bones_ Exp $
+
+  16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> scid-3.5.ebuild,
+  scid-3.6.1.ebuild:
+  needs app-arch/unzip
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> scid-3.5.ebuild,
   scid-3.6.1.ebuild:

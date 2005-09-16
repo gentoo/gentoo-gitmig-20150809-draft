@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.5.ebuild,v 1.4 2004/07/01 11:11:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.5.ebuild,v 1.5 2005/09/16 01:14:05 mr_bones_ Exp $
 
 inherit games
 
@@ -12,17 +12,18 @@ SRC_URI="mirror://sourceforge/scid/${P}.tar.gz
 	mirror://sourceforge/scid/spelling.zip
 	mirror://sourceforge/scid/scidlet40k.zip"
 
-KEYWORDS="x86 alpha ppc sparc amd64"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	virtual/x11
+DEPEND="virtual/x11
 	>=dev-lang/tk-8.3
 	>=sys-libs/zlib-1.1.3"
 RDEPEND="${DEPEND}
 	>=dev-lang/python-2.1"
+DEPEND="${DEPEND}
+	app-arch/unzip"
 
 src_compile() {
 	./configure \
