@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.3 2005/09/16 02:03:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r2.ebuild,v 1.4 2005/09/16 05:03:17 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -170,7 +170,7 @@ get_glibc_src_uri() {
 }
 
 SRC_URI=$(get_glibc_src_uri)
-S="${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}"
+S=${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}
 
 ### EXPORTED FUNCTIONS ###
 toolchain-glibc_src_unpack() {
@@ -265,7 +265,7 @@ toolchain-glibc_src_compile() {
 	fi
 	if want_nptl ; then
 		# ... and then do the optional nptl build
-		unset LD_ASSUME_KERNEL || :
+		unset LD_ASSUME_KERNEL
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
 		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
@@ -279,12 +279,12 @@ toolchain-glibc_src_test() {
 
 	# do the linuxthreads build unless we're using nptlonly
 	if want_linuxthreads ; then
-		cd ${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-linuxthreads
 		einfo "Checking GLIBC with linuxthreads..."
 		make check || die "linuxthreads glibc did not pass make check"
 	fi
 	if want_nptl ; then
-		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
 		unset LD_ASSUME_KERNEL || :
 		einfo "Checking GLIBC with NPTL..."
 		make check || die "nptl glibc did not pass make check"
@@ -326,16 +326,16 @@ toolchain-glibc_src_install() {
 	unset LANGUAGE LANG LC_ALL
 
 	if want_linuxthreads ; then
-		cd ${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
-		einfo "Installing GLIBC with linuxthreads..."
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-linuxthreads
+		einfo "Installing GLIBC ${ABI} with linuxthreads ..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-			install_root=${D} \
+			install_root="${D}" \
 			install || die
 	else # nptlonly
-		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
-		einfo "Installing GLIBC with NPTL..."
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
+		einfo "Installing GLIBC ${ABI} with NPTL ..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
-			install_root=${D} \
+			install_root="${D}" \
 			install || die
 	fi
 
@@ -345,7 +345,7 @@ toolchain-glibc_src_install() {
 		# crosscompile.
 		if [[ $(get_libdir) != "lib" && -d ${D}$(alt_prefix)/lib ]] ; then
 			dodir $(alt_libdir)
-			mv ${D}$(alt_prefix)/lib/* ${D}$(alt_libdir)
+			mv "${D}"$(alt_prefix)/lib/* "${D}"$(alt_libdir)
 		fi
 
 		# punt all the junk not needed by a cross-compiler
@@ -354,58 +354,58 @@ toolchain-glibc_src_install() {
 
 	if want_linuxthreads && want_nptl ; then
 		einfo "Installing NPTL to $(alt_libdir)/tls/..."
-		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
-		mkdir -p ${D}$(alt_libdir)/tls/
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
+		mkdir -p "${D}"$(alt_libdir)/tls/
 
-		libcsofile=$(basename ${D}$(alt_libdir)/libc-*.so)
-		cp -a libc.so ${D}$(alt_libdir)/tls/${libcsofile} || die
+		libcsofile=$(basename "${D}"$(alt_libdir)/libc-*.so)
+		cp -a libc.so "${D}"$(alt_libdir)/tls/${libcsofile} || die
 		dosym ${libcsofile} $(alt_libdir)/tls/$(ls libc.so.*)
 
-		libmsofile=$(basename ${D}$(alt_libdir)/libm-*.so)
+		libmsofile=$(basename "${D}"$(alt_libdir)/libm-*.so)
 		pushd math > /dev/null
-		cp -a libm.so ${D}$(alt_libdir)/tls/${libmsofile} || die
+		cp -a libm.so "${D}"$(alt_libdir)/tls/${libmsofile} || die
 		dosym ${libmsofile} $(alt_libdir)/tls/$(ls libm.so.*)
 		popd > /dev/null
 
-		librtsofile=$(basename ${D}$(alt_libdir)/librt-*.so)
+		librtsofile=$(basename "${D}"$(alt_libdir)/librt-*.so)
 		pushd rt > /dev/null
-		cp -a librt.so ${D}$(alt_libdir)/tls/${librtsofile} || die
+		cp -a librt.so "${D}"$(alt_libdir)/tls/${librtsofile} || die
 		dosym ${librtsofile} $(alt_libdir)/tls/$(ls librt.so.*)
 		popd > /dev/null
 
-		libthreaddbsofile=$(basename ${D}$(alt_libdir)/libthread_db-*.so)
+		libthreaddbsofile=$(basename "${D}"$(alt_libdir)/libthread_db-*.so)
 		pushd nptl_db > /dev/null
-		cp -a libthread_db.so ${D}$(alt_libdir)/tls/${libthreaddbsofile} || die
+		cp -a libthread_db.so "${D}"$(alt_libdir)/tls/${libthreaddbsofile} || die
 		dosym ${libthreaddbsofile} $(alt_libdir)/tls/$(ls libthread_db.so.*)
 		popd > /dev/null
 
 		libpthreadsofile=libpthread-${GLIBC_RELEASE_VER}.so
-		cp -a nptl/libpthread.so ${D}$(alt_libdir)/tls/${libpthreadsofile} || die
+		cp -a nptl/libpthread.so "${D}"$(alt_libdir)/tls/${libpthreadsofile} || die
 		dosym ${libpthreadsofile} $(alt_libdir)/tls/libpthread.so.0
 
 		# and now for the static libs
-		mkdir -p ${D}$(alt_usrlibdir)/nptl
+		mkdir -p "${D}"$(alt_usrlibdir)/nptl
 		cp -a libc.a nptl/libpthread.a nptl/libpthread_nonshared.a rt/librt.a \
-			${D}$(alt_usrlibdir)/nptl
+			"${D}"$(alt_usrlibdir)/nptl
 
 		# linker script crap
 		for lib in libc libpthread; do
 			sed -e "s:$(alt_libdir)/${lib}.so:$(alt_libdir)/tls/${lib}.so:g" \
 			    -e "s:$(alt_usrlibdir)/${lib}_nonshared.a:$(alt_usrlibdir)/nptl/${lib}_nonshared.a:g" \
-			          ${D}$(alt_usrlibdir)/${lib}.so \
-				> ${D}$(alt_usrlibdir)/nptl/${lib}.so
+			          "${D}"$(alt_usrlibdir)/${lib}.so \
+				> "${D}"$(alt_usrlibdir)/nptl/${lib}.so
 
-			chmod 755 ${D}$(alt_usrlibdir)/nptl/${lib}.so
+			chmod 755 "${D}"$(alt_usrlibdir)/nptl/${lib}.so
 		done
 
 		dosym ../librt.so $(alt_usrlibdir)/nptl/librt.so
 
 		# last but not least... headers.
-		mkdir -p ${D}/nptl ${D}$(alt_headers)/nptl
-		make install_root=${D}/nptl install-headers PARALLELMFLAGS="${MAKEOPTS} -j1"
-		pushd ${D}/nptl/$(alt_headers) > /dev/null
-		for i in `find . -type f`; do
-			if ! [ -f ${D}$(alt_headers)/$i ] \
+		mkdir -p "${D}"/nptl "${D}"$(alt_headers)/nptl
+		make install_root="${D}"/nptl install-headers PARALLELMFLAGS="${MAKEOPTS} -j1"
+		pushd "${D}"/nptl/$(alt_headers) > /dev/null
+		for i in $(find . -type f) ; do
+			if ! [[ -f ${D}$(alt_headers)/$i ]] \
 			   || ! cmp -s $i ${D}$(alt_headers)/$i; then
 				mkdir -p ${D}$(alt_headers)/nptl/`dirname $i`
 				cp -a $i ${D}$(alt_headers)/nptl/$i
@@ -463,7 +463,7 @@ toolchain-glibc_src_install() {
 	else
 		MYMAINBUILDDIR=build-${ABI}-${CTARGET}-nptl
 	fi
-	cd ${WORKDIR}/${MYMAINBUILDDIR}
+	cd "${WORKDIR}"/${MYMAINBUILDDIR}
 	if ! use build ; then
 		if ! has noinfo ${FEATURES} && [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 			einfo "Installing info pages..."
@@ -479,7 +479,7 @@ toolchain-glibc_src_install() {
 			einfo "Installing man pages..."
 
 			# Install linuxthreads man pages even if nptl is enabled
-			cd ${WORKDIR}/man
+			cd "${WORKDIR}"/man
 			doman *.3thr
 		fi
 
@@ -646,7 +646,7 @@ setup_flags() {
 	strip-unsupported-flags
 	filter-flags -m32 -m64 -mabi=*
 
-	has_multilib_profile && CTARGET_OPT="$(get_abi_CHOST)"
+	has_multilib_profile && CTARGET_OPT=$(get_abi_CHOST)
 
 	case $(tc-arch) in
 		ppc)
@@ -859,7 +859,7 @@ want_omitfp() {
 
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
-	cd ${WORKDIR}/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
+	cd "${WORKDIR}"/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
 	make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 		install_root=${D} localedata/install-locales || die
 }
@@ -955,7 +955,7 @@ glibc_do_configure() {
 
 	export CC="$(tc-getCC ${CTARGET})"
 
-	GBUILDDIR="${WORKDIR}/build-${ABI}-${CTARGET}-$1"
+	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
 	mkdir -p ${GBUILDDIR}
 	cd ${GBUILDDIR}
 	einfo "Configuring GLIBC for $1 with: ${myconf}"
@@ -1302,40 +1302,42 @@ src_install() {
 
 	# Handle stupid lib32 BS
 	unset OLD_LIBDIR
-	if [[ $(tc-arch) == "amd64" && ${ABI} == "x86" && $(get_libdir) != "lib" ]] && ! is_crosscompile; then
-		OLD_LIBDIR="$(get_libdir)"
-		LIBDIR_x86="lib"
-	fi
+	if ! is_crosscompile ; then
+		if [[ $(tc-arch) == "amd64" && ${ABI} == "x86" && $(get_libdir) != "lib" ]] ; then
+			OLD_LIBDIR=$(get_libdir)
+			LIBDIR_x86="lib"
+		fi
 
-	if [[ $(tc-arch) == "ppc64" && ${ABI} == "ppc" && $(get_libdir) != "lib" ]] && ! is_crosscompile; then
-		OLD_LIBDIR="$(get_libdir)"
-		LIBDIR_ppc="lib"
+		if [[ $(tc-arch) == "ppc64" && ${ABI} == "ppc" && $(get_libdir) != "lib" ]] ; then
+			OLD_LIBDIR=$(get_libdir)
+			LIBDIR_ppc="lib"
+		fi
 	fi
 
 	toolchain-glibc_src_install
 
 	# Handle stupid lib32 BS on amd64 and ppc64
 	if [[ -n ${OLD_LIBDIR} ]] ; then
-		cd ${S}
-		[[ $(tc-arch) == "amd64" ]] && LIBDIR_x86="${OLD_LIBDIR}"
-		[[ $(tc-arch) == "ppc64" ]] && LIBDIR_ppc="${OLD_LIBDIR}"
+		cd "${S}"
+		[[ $(tc-arch) == "amd64" ]] && LIBDIR_x86=${OLD_LIBDIR}
+		[[ $(tc-arch) == "ppc64" ]] && LIBDIR_ppc=${OLD_LIBDIR}
 		unset OLD_LIBDIR
 
-		mv ${D}/lib ${D}/$(get_libdir)
-		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+		mv "${D}"/lib "${D}"/$(get_libdir)
+		mv "${D}"/usr/lib "${D}"/usr/$(get_libdir)
 		dodir /lib
 		dodir /usr/lib
-		mv ${D}/usr/$(get_libdir)/locale ${D}/usr/lib
+		mv "${D}"/usr/$(get_libdir)/locale "${D}"/usr/lib
 		[[ $(tc-arch) == "amd64" ]] && dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
 		[[ $(tc-arch) == "ppc64" ]] && dosym ../$(get_libdir)/ld.so.1 /lib/ld.so.1
 
-		for f in ${D}/usr/$(get_libdir)/*.so; do
-			local basef=$(basename ${f})
-			if [ -L ${f} ] ; then
-				local target=$(readlink ${f})
+		for f in "${D}"/usr/$(get_libdir)/*.so; do
+			local basef=$(basename "${f}")
+			if [[ -L ${f} ]] ; then
+				local target=$(readlink "${f}")
 				target=${target/\/lib\//\/$(get_libdir)\/}
-				rm ${f}
-				dosym ${target} /usr/$(get_libdir)/${basef}
+				rm "${f}"
+				dosym "${target}" /usr/$(get_libdir)/"${basef}"
 			fi
 		done
 
