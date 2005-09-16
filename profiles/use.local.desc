@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1451 2005/09/15 16:27:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1452 2005/09/16 17:34:13 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -43,6 +43,7 @@ app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musepack - Enable support for musepack files
 app-cdr/ogmrip:subp - Subtitle ripping preliminary support
 app-cdr/pxlinux:gnuplot - enable gnuplot support
+app-cdr/serpentine:muine - Enable Muine support
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gpgme:smime - Add smime support
