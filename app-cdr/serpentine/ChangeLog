@@ -1,0 +1,9 @@
+# ChangeLog for app-cdr/serpentine
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.1 2005/09/16 17:50:50 metalgod Exp $
+
+*serpentine-0.6.2 (16 Sep 2005)
+
+  16 Sep 2005; Luis Medinas <metalgod@gentoo.org> +serpentine-0.6.2.ebuild:
+  New package. Thanks to all people involved in bug #90837.
+
