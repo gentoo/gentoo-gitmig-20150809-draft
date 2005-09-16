@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 99fd7006b8d4771155c2b81731e2c459 ciphire-mail-1.0.0.ebuild 3533
+MD5 57953cbac985471d7798a218b59d6481 ciphire-mail-1.1.015.ebuild 4536
 MD5 0b4cc3cd51315e0263f4ffaea1519de3 ciphire-mail-1.1.009.ebuild 4418
-MD5 6e9d900b046704a700a96ab3e7dfc1b3 ChangeLog 740
+MD5 c8185e9c0bf8d6f4563056c08102b55b ChangeLog 877
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
 MD5 bc3695b7104bb878d3e496ad4f7d6e10 files/digest-ciphire-mail-1.1.009 147
 MD5 3ba822caed60cb1af266084b7298fe80 files/digest-ciphire-mail-1.0.0 83
+MD5 fe76f274577e0471d8abeeed5b301ac9 files/digest-ciphire-mail-1.1.015 147
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDH3MP1ZcsMnZjRyIRApxvAJ0YLTb3QV6sq6EQ0HXFkiCuM2gtnwCgp3F1
-coyJ0jshsghkRyl9W9+jPRE=
-=eQg0
+iD8DBQFDKo7x1ZcsMnZjRyIRAkk9AJ9tHkM1JgNKH07PguBRDYpHH0KWBACcDjgZ
+2vTJs1ujwq4G5RwcgQG06Po=
+=6bJi
 -----END PGP SIGNATURE-----
