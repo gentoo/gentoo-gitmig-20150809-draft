@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/galculator
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.7 2005/08/24 00:30:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/ChangeLog,v 1.8 2005/09/16 07:22:16 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org> galculator-1.2.5.ebuild:
+  Mark 1.2.5 stable on alpha
 
   24 Aug 2005; Leonardo Boshell <leonardop@gentoo.org>
   galculator-1.2.5.ebuild:
