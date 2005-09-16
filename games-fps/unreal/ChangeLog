@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/unreal
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.6 2004/06/24 22:47:49 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.7 2005/09/16 02:52:39 mr_bones_ Exp $
+
+  16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> unreal-226.ebuild:
+  needs app-arch/unzip; tidy
 
   27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> unreal-226.ebuild:
   add missing opengl to IUSE

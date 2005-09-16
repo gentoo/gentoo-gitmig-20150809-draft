@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.10 2004/06/24 22:47:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.11 2005/09/16 02:52:39 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE="X opengl"
 
-DEPEND="sys-libs/lib-compat"
+DEPEND="sys-libs/lib-compat
+	app-arch/unzip"
 RDEPEND="X? ( virtual/x11 )
 	opengl? ( virtual/opengl )"
 
@@ -38,19 +39,19 @@ src_unpack() {
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/unreal
-	dodir ${dir}
+	dodir "${dir}"
 
-	tar -zxf ut/data.tar.gz -C ${D}/${dir}
-	tar -zxf ut/OpenGL.ini.tar.gz -C ${D}/${dir}
-	tar -zxf System.tar.gz -C ${D}/${dir}
-	insinto ${dir}/System
+	tar -zxf ut/data.tar.gz -C "${D}/${dir}"
+	tar -zxf ut/OpenGL.ini.tar.gz -C "${D}/${dir}"
+	tar -zxf System.tar.gz -C "${D}/${dir}"
+	insinto "${dir}"/System
 	doins ut/IpDrv.so
 
-	cp -rf ${CDROM_ROOT}/{Maps,Music,Sounds} ${D}/${dir}/
-	for f in ${D}/${dir}/Maps/Dm*.unr ; do
+	cp -rf "${CDROM_ROOT}"/{Maps,Music,Sounds} "${D}/${dir}/"
+	for f in "${D}/${dir}"/Maps/Dm*.unr ; do
 		mv ${f} ${f/Dm/DM-}
 	done
-	dosym Maps ${dir}/maps
+	dosym Maps "${dir}"/maps
 
 	if has_version '<games-fps/unreal-tournament-451' \
 		|| has_version '<games-fps/unreal-tournament-goty-451' ; then
@@ -58,22 +59,22 @@ src_install() {
 	else
 		cdrom_load_next_cd
 	fi
-	insinto ${dir}/Textures
-	doins ${CDROM_ROOT}/Textures/*.utx
-	insinto ${dir}/Sounds
-	doins ${CDROM_ROOT}/Sounds/*.uax
-	insinto ${dir}/System
-	doins ${CDROM_ROOT}/System/*.u
-	insinto ${dir}/Music
-	doins ${CDROM_ROOT}/Music/*.umx
+	insinto "${dir}"/Textures
+	doins "${CDROM_ROOT}"/Textures/*.utx
+	insinto "${dir}"/Sounds
+	doins "${CDROM_ROOT}"/Sounds/*.uax
+	insinto "${dir}"/System
+	doins "${CDROM_ROOT}"/System/*.u
+	insinto "${dir}"/Music
+	doins "${CDROM_ROOT}"/Music/*.umx
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins icon.* README*
 
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe bin/x86/unreal
 
-	games_make_wrapper unreal ./unreal ${dir}
+	games_make_wrapper unreal ./unreal "${dir}"
 
 	prepgamesdirs
 }
