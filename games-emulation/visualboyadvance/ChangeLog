@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.21 2005/06/15 18:37:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.22 2005/09/16 22:10:14 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   visualboyadvance-1.7.2.ebuild, visualboyadvance-1.7.2-r1.ebuild:
@@ -70,7 +73,7 @@
 *visualboyadvance-1.7.1 (22 Feb 2004)
 
   22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
-  Version bump #40154 by Diego Pettenò.
+  Version bump #40154 by Diego PettenÃ².
 
 *visualboyadvance-1.7 (01 Jan 2004)
 
