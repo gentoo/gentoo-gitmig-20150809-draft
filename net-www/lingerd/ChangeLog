@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lingerd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/ChangeLog,v 1.9 2005/08/25 01:11:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lingerd/ChangeLog,v 1.10 2005/09/16 05:07:00 agriffis Exp $
+
+  15 Sep 2005; Aron Griffis <agriffis@gentoo.org> lingerd-0.94.ebuild:
+  Mark 0.94 stable on alpha
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> lingerd-0.94.ebuild:
   stable on ia64
