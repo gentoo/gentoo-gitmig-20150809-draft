@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fblogo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.8 2005/07/22 18:23:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.9 2005/09/16 22:28:24 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   22 Jul 2005; David Holm <dholm@gentoo.org> fblogo-0.5.2.ebuild:
   Added to ~ppc.
@@ -31,6 +34,6 @@
 *fblogo-0.5.0 (17 Aug 2003)
 
   17 Aug 2003; Troy Dack <tad@gentoo.org> fblogo-0.5.0.ebuild:
-  Initial import. Thanks to Jesús Pérez (h0m3r) <jesus.pr@worldonline.es> for
+  Initial import. Thanks to JesÃºs PÃ©rez (h0m3r) <jesus.pr@worldonline.es> for
   the .ebuild (Bug #19450)
 
