@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-es
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.1 2005/09/02 04:29:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.2 2005/09/16 21:24:10 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   03 Aug 2005; Rene Nussbaumer <killerfox@gentoo.org>
   manpages-es-1.55.ebuild:
@@ -38,6 +41,6 @@
 
 *manpages-es-1.28 (18 Mar 2003)
 
-  10 Jan 2003; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org>
+  10 Jan 2003; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org>
   Initial ebuild by Javier Lopez <iborg1013@terra.org> 
  
