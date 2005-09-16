@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.6 2005/08/08 10:25:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.7 2005/09/16 09:45:43 phosphan Exp $
+
+  16 Sep 2005; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.6.ebuild,
+  chemtool-1.6.7.ebuild:
+  No longer relying on KDEDIR variable because of bug #105955 and getting rid of that
+  ugly bogus_kde hack I did before.
 
 *chemtool-1.6.7 (08 Aug 2005)
 
