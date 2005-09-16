@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.13 2005/09/12 00:49:14 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.14 2005/09/16 21:50:40 trapni Exp $
+
+  16 Sep 2005; Christian Parpart <trapni@gentoo.org> re2c-0.9.9.ebuild:
+  added to ~amd64
 
 *re2c-0.9.10 (11 Sep 2005)
 
