@@ -1,10 +1,13 @@
 # ChangeLog for app-misc/logitech-applet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.1 2005/04/12 15:30:41 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.2 2005/09/16 21:31:34 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *logitech-applet-0.4_pre1 (12 Apr 2005)
 
   12 Apr 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
   +logitech-applet-0.4_pre1.ebuild:
-  Initial import thanks to Martti Rannanj‰rvi in bug #44813
+  Initial import thanks to Martti Rannanj√§rvi in bug #44813
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.27 2005/08/31 19:20:28 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.28 2005/09/16 21:27:18 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *abook-0.5.4 (31 Aug 2005)
 
@@ -95,6 +98,6 @@
   08 Aug 2002; Michael Cummings <mcummings@gentoo.org> abook-0.4.17.ebuild :
 
   Initial checkin. Abook is a curses based address book, primarily for use
-  by mutt. Original ebuild submitted by Sascha Hüdepohl, bug 6004 in
+  by mutt. Original ebuild submitted by Sascha HÃ¼depohl, bug 6004 in
   bugzilla.
 

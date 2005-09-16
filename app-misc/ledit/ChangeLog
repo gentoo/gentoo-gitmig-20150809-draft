@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ledit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.5 2005/01/12 14:55:05 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.6 2005/09/16 21:28:24 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   12 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> ledit-1.11.ebuild:
   Marked stable on amd64, bug #75587
@@ -12,6 +15,6 @@
 
   08 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> ledit-1.11.ebuild,
   metadata.xml:
-  Initial import (bug #22371), ebuild proposed by Stéphane Gimenez 
+  Initial import (bug #22371), ebuild proposed by StÃ©phane Gimenez 
   <sgimenez@ens-lyon.fr>. Herded under (lang-)ml.
 

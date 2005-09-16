@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rio500
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/ChangeLog,v 1.10 2005/01/01 15:21:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/ChangeLog,v 1.11 2005/09/16 21:34:14 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> rio500-0.7-r1.ebuild,
   rio500-0.7-r2.ebuild:
@@ -10,7 +13,7 @@
 
   24 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> rio500-0.7-r2.ebuild:
   Removed /usr/include/getopt.h from the installed files as it is part of glibc.
-  This bug was signalled by Aurélien Gouny <aurelien@gouny.org> on gentoo-user
+  This bug was signalled by AurÃ©lien Gouny <aurelien@gouny.org> on gentoo-user
 
 *rio500-0.7-r1 (12 Apr 2002)
 

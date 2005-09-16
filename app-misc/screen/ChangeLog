@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.101 2005/08/23 16:09:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.102 2005/09/16 21:35:03 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   23 Aug 2005; Sven Wegener <swegener@gentoo.org>
   -files/screen.pam.system-auth, -screen-4.0.2-r1.ebuild:
@@ -79,7 +82,7 @@
 
   13 May 2005; Mike Frysinger <vapier@gentoo.org> +screen-4.0.2-r2.ebuild:
   Import FreeBSD fixes and redo uClibc fixes to be more generic #92370 by
-  Diego Pettenò.
+  Diego PettenÃ².
 
   31 Dec 2004; Sven Wegener <swegener@gentoo.org> files/screenrc:
   Do not use xterm's alternative window buffer by default, it breaks

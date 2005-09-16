@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.27 2005/08/04 08:08:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.28 2005/09/16 21:31:10 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   04 Aug 2005; Simon Stelling <blubb@gentoo.org> linux-logo-4.12.ebuild:
   stable on amd64
@@ -137,6 +140,6 @@
   Now installs into the live filesystem, instead of into ${D}. Thanks to
   theim@umd.umich.edu (Todd Heim) in bug #5511.
 
-  04 Jun 2002; J.Alberto Su·rez L. <bass@gentoo.org> linux_logo-4.02.ebuild:
+  04 Jun 2002; J.Alberto Su√°rez L. <bass@gentoo.org> linux_logo-4.02.ebuild:
 
   First relase. Ebuild submitted by Harri Hautakangas <harri@hautakangas.com>.
