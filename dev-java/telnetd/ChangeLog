@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/telnetd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.8 2005/05/19 21:51:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/telnetd/ChangeLog,v 1.9 2005/09/16 21:50:56 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   19 May 2005; Jan Brinkmann <luckyduck@gentoo.org> telnetd-1.0-r1.ebuild:
   stable on amd64, ppc and x86
@@ -35,5 +38,5 @@
   16 Aug 2004; Chris Aniszczyk <zx@gentoo.org> +metadata.xml,
   +telnetd-1.0.ebuild:
   Initial Import. Closes #59117
-  Thanks to Dag Viggo Lokøen <dag.viggo@lokoen.org> for the initial ebuild.
+  Thanks to Dag Viggo LokÃ¸en <dag.viggo@lokoen.org> for the initial ebuild.
 

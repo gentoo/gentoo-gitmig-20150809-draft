@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.17 2005/05/26 09:53:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.18 2005/09/16 21:48:50 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   26 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jmx-1.2.1.ebuild:
   stable on ppc, introduced support for the examples and the source useflag
@@ -19,7 +22,7 @@
 
   20 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   +files/build.xml-jdk1.5.patch, jmx-1.2.1.ebuild:
-  Patch to allow compilation with JDK 1.5, by Petteri Räty
+  Patch to allow compilation with JDK 1.5, by Petteri RÃ¤ty
   <petteri.raty@welho.com>. Fixes #74888.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> jmx-1.2.1.ebuild:

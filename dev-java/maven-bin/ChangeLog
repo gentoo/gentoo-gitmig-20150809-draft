@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/maven-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.6 2005/09/02 12:25:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.7 2005/09/16 21:50:10 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   maven-bin-1.0_rc3.ebuild, maven-bin-1.0_rc4.ebuild, maven-bin-1.0.ebuild:
@@ -87,7 +90,7 @@
   17 Mar 2003; Dylan Carlson <absinthe@gentoo.org> maven-1.0_beta8.ebuild, files/25maven:
   Initial import.
   
-  Thanks to St�phane Mor <stephanemor@yahoo.fr> in bug # 15669 for the
+  Thanks to Stéphane Mor <stephanemor@yahoo.fr> in bug # 15669 for the
   submission.
   
   Maven is a Java project management and project comprehension tool. Maven is
