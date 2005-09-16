@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.1 2005/09/16 06:12:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.2 2005/09/16 06:25:12 robbat2 Exp $
+
+  16 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
+  Add metadata.
 
 *vblade-6 (16 Sep 2005)
 
