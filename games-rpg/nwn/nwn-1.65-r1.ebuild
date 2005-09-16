@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65-r1.ebuild,v 1.2 2005/01/30 04:22:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65-r1.ebuild,v 1.3 2005/09/16 02:49:44 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 UPDATEVER=${PV//.}
 PATCH_URL_BASE=http://content.bioware.com/neverwinternights/linux/${UPDATEVER}/linuxclientupdate1xxto${UPDATEVER}
@@ -30,6 +30,8 @@ RDEPEND="virtual/x11
 	virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/nwn"
 

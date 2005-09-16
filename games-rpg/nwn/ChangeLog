@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.22 2005/09/15 21:49:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.23 2005/09/16 02:49:44 mr_bones_ Exp $
+
+  16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> nwn-1.65-r1.ebuild,
+  nwn-1.66.ebuild:
+  needs app-arch/unzip
 
   15 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.66.ebuild:
   Fixing digest and disabling German support for the time being.
