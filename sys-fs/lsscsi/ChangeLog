@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.5 2004/12/31 00:46:44 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.6 2005/09/16 11:31:33 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org> lsscsi-0.14.ebuild:
+  Mark 0.14 stable on alpha
 
   31 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> lsscsi-0.14.ebuild:
   ~alpha keyword.
