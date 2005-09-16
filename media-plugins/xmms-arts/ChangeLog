@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.32 2005/09/03 23:52:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.33 2005/09/16 23:01:36 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-arts-0.7.1-r1.ebuild, xmms-arts-0.7.1-r2.ebuild:
@@ -88,7 +91,7 @@
   Version bump, kinda. This is a new package by harvardk of the xmms development
   group. Seems that the old plugin is abandoned by its upstream authors.
   This package seems to be a stand-in replacement. This
-  ebuild submitted by: Javier L�pez <iborg1013@terra.es> in bug #28226
+  ebuild submitted by: Javier López <iborg1013@terra.es> in bug #28226
 
 *xmms-arts-0.4-r6 (25 Oct 2002)
 

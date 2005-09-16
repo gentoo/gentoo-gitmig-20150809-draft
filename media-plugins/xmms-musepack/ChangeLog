@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.33 2005/05/28 19:53:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.34 2005/09/16 23:02:42 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xmms-musepack-1.1.2.ebuild:
@@ -68,7 +71,7 @@
 
   05 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +xmms-musepack-1.1_alpha7.ebuild:
-  Ebuild for new xmms-musepack plugin submitted by Sebastian Dröge
+  Ebuild for new xmms-musepack plugin submitted by Sebastian DrÃ¶ge
   <sebastian.droege@gmx.de> in bug #56410.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/avi-xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/ChangeLog,v 1.10 2005/09/04 10:05:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/avi-xmms/ChangeLog,v 1.11 2005/09/16 23:00:26 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   04 Sep 2005; Diego Petten√≤ <flameeyes@gentoo.org> avi-xmms-1.2.3.ebuild,
   avi-xmms-1.2.3-r1.ebuild:
@@ -44,7 +47,7 @@
   23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> avi-xmms-1.2.3.ebuild
   files/digest-avi-xmms-1.2.3 :
 
-  Courtesy of Olle H‰lln‰s <olle@xmms.org>, a new version of avi-xmms has
+  Courtesy of Olle H√§lln√§s <olle@xmms.org>, a new version of avi-xmms has
   come out, which has avifile statically compiled, so that the system's
   avifile version is independent of this.
 
