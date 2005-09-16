@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.5 2005/09/12 01:28:44 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.6 2005/09/16 07:26:02 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org> cfitsio-2.510.ebuild:
+  Mark 2.510 stable on alpha
 
   12 Sep 2005; Luis Medinas <metalgod@gentoo.org> cfitsio-2.510.ebuild:
   Marked Stable on AMD64.
