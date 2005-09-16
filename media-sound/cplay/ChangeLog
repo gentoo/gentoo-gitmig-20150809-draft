@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.14 2004/12/19 05:38:28 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.15 2005/09/16 23:05:16 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> cplay-1.49.ebuild:
   Stable sparc.
@@ -51,7 +54,7 @@
 
 *cplay-1.45 (12 Dec 2002)
 
-  11 Sep 2002; Väinö Järvelä <vaino.jarvela@pp.inet.fi> cplay-1.45.ebuild, Changelog :
+  11 Sep 2002; VÃ¤inÃ¶ JÃ¤rvelÃ¤ <vaino.jarvela@pp.inet.fi> cplay-1.45.ebuild, Changelog :
 
   Initial release of cplay, which is curses based audio frontend that uses
   external programs for playing files. Supported players are:

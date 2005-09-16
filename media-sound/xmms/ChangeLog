@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.187 2005/09/15 20:03:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.188 2005/09/16 23:07:42 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> xmms-1.2.10-r15.ebuild:
   Mark 1.2.10-r15 stable on alpha
@@ -671,7 +674,7 @@
 
   27 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r17.ebuild :
   Remove the xmms-1.2.7-link-libstdc++.patch on request from XMMS developer
-  Olle H‰lln‰s <olle@xmms.org>.  Sorry about taking so long, but I forgot.
+  Olle H√§lln√§s <olle@xmms.org>.  Sorry about taking so long, but I forgot.
 
 *xmms-1.2.7-r17 (26 Dec 2002)
 

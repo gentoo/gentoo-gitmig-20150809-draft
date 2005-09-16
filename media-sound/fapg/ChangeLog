@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fapg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.9 2005/08/07 13:23:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.10 2005/09/16 23:05:41 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> fapg-0.30.ebuild:
   Stable on ppc.
@@ -31,5 +34,5 @@
 *fapg-0.22 (09 Aug 2004)
 
   09 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> fapg-0.22.ebuild :
-  Initial import.  Ebuild submitted by Dennis Nienhüser <fragfred@gmx.de>.
+  Initial import.  Ebuild submitted by Dennis NienhÃ¼ser <fragfred@gmx.de>.
   Closes bug #37842.
