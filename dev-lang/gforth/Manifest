@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0fe4c936193818429bc5c5043f9c3f82 ChangeLog 2431
 MD5 549130fb571addced3185d1cc35e0fbf gforth-0.6.2.ebuild 1372
 MD5 74edc6d12c9a8d2858070dc09e2c264c files/50gforth-gentoo.el 200
 MD5 288a9f927bbcb355499af2795baa6248 files/digest-gforth-0.6.2 65
 MD5 eaf0babab3dec9a6b74e876829e1a68a files/gforth.el-gentoo.patch 1518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDKz74LLFUmVNQ7rkRApSKAJ49FAPZZx5Kqgp2nW9yMYZgr7P3AgCgvMAQ
+uY2RDIIXOkKEVO9GwZ6tin8=
+=fT9s
+-----END PGP SIGNATURE-----
