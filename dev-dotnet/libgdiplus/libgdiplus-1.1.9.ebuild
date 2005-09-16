@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.7.ebuild,v 1.6 2005/09/16 05:10:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.ebuild,v 1.1 2005/09/16 05:10:57 latexer Exp $
 
 inherit libtool eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}-${PV:0:3}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="tiff gif jpeg png"
 
@@ -20,19 +20,15 @@ DEPEND="sys-devel/libtool
 		sys-devel/automake
 		sys-devel/autoconf
 		virtual/x11
-		=x11-libs/cairo-0.3.0*
 		tiff? ( media-libs/tiff )
 		gif? ( >=media-libs/giflib-4.1.3 )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )"
 
-RDEPEND=">=dev-lang/mono-${PV}"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.1.4-included-cairo-fix.diff || die
-	epatch ${FILESDIR}/${PN}-1.1.4-giflib.diff || die
+	epatch ${FILESDIR}/${PN}-1.1.8-giflib.diff
 	libtoolize --copy --force || die "libtoolize failed"
 	autoheader || die "autoheader failed"
 	aclocal || die "aclocal failed"
@@ -41,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--with-cairo=installed"
+	local myconf="--with-cairo=included --disable-glitz"
 	use tiff ||  myconf="--without-libtiff ${myconf}"
 	use gif ||  myconf="--without-libgif ${myconf}"
 	use jpeg ||  myconf="--without-libjpeg ${myconf}"
@@ -54,7 +50,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
-
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog NEWS README
 }

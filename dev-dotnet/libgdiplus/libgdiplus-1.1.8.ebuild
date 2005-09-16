@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.8.ebuild,v 1.1 2005/06/21 23:54:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.8.ebuild,v 1.2 2005/09/16 05:10:57 latexer Exp $
 
 inherit libtool eutils
 
@@ -21,11 +21,9 @@ DEPEND="sys-devel/libtool
 		sys-devel/autoconf
 		virtual/x11
 		tiff? ( media-libs/tiff )
-		gif? ( media-libs/giflib )
+		gif? ( >=media-libs/giflib-4.1.3 )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )"
-
-RDEPEND=">=dev-lang/mono-${PV}"
 
 src_unpack() {
 	unpack ${A}
