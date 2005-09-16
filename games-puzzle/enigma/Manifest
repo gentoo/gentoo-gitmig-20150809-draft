@@ -1,7 +1,17 @@
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 94867664a774a4f2614502c763875949 enigma-0.92.ebuild 1463
-MD5 d271689d32cdc5728790011a3ff7399e ChangeLog 3986
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 11acf423847c619ef6788270061728a9 ChangeLog 4099
 MD5 9a83f99d9e12ec1d19a7a3a8c9964da6 files/enigma-0.81-gcc34.patch 7377
+MD5 fc1e961593260690cc1e5ebeb824d836 files/digest-enigma-0.92 65
 MD5 bebed419a4c41cffce2a7428f989b809 files/enigma-0.80-beta.patch 403
 MD5 43e970bb89bb24c634b411cf29b5cb7f files/0.70-gcc3.patch 258
-MD5 fc1e961593260690cc1e5ebeb824d836 files/digest-enigma-0.92 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK0UeLLFUmVNQ7rkRAiaXAJ9OOwmqyx/SdSgOlVrJnrsSX1eATQCghbkH
+NPZ1DvQR8sJWoayu0kffavo=
+=+t6G
+-----END PGP SIGNATURE-----

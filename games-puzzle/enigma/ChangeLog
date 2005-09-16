@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.22 2005/08/11 00:11:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.23 2005/09/16 22:19:10 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   11 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> -enigma-0.81.ebuild,
   -enigma-0.91.ebuild:
@@ -92,16 +95,16 @@
 
 *enigma-0.40a (21 Jun 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> enigma-0.40a.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> enigma-0.40a.ebuild :
   Added KEYWORDS.
 
-  21 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> enigma-0.40a.ebuild:
+  21 Jun 2002; J.Alberto SuÃ¡rez L. <bass@gentoo.org> enigma-0.40a.ebuild:
 
   Bumped version of Larry Cow,fixed problems with gcc3.
 
 *enigma-0.39a (28 Apr 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> enigma-0.39a.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> enigma-0.39a.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   28 Apr 2002; Ryan Phillips <rphillips@gentoo.org> enigma-0.39a.ebuild :
