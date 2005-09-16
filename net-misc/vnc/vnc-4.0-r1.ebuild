@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.12 2005/08/25 00:42:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.13 2005/09/16 03:24:50 agriffis Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="server"
 
 DEPEND="sys-libs/zlib
