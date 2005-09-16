@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.25 2005/07/09 22:57:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.26 2005/09/16 21:12:33 ciaranm Exp $
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *uae-0.8.24 (09 Jul 2005)
 
@@ -59,7 +62,7 @@
 
   11 Feb 2004; David Holm <dholm@gentoo.org> uae-0.8.23_pre20040129.ebuild:
   Added SDL configure flags as suggested by Jonathan Heaney and compilation fix
-  suggested by Lars Schünzel.
+  suggested by Lars SchÃ¼nzel.
 
 *uae-0.8.23_pre20040129 (09 Feb 2004)
 
