@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_usb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.2 2005/09/03 23:29:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.3 2005/09/16 11:16:21 agriffis Exp $
+
+  16 Sep 2005; Aron Griffis <agriffis@gentoo.org> pam_usb-0.3.2.ebuild:
+  Mark 0.3.2 stable on alpha
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> pam_usb-0.3.1.ebuild,
   pam_usb-0.3.2.ebuild:
