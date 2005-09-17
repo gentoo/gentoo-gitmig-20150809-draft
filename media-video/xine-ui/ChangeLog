@@ -1,6 +1,6 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.98 2005/09/14 11:06:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.99 2005/09/17 19:52:52 flameeyes Exp $
 
 *xine-ui-0.99.4-r3 (14 Sep 2005)
 
@@ -178,7 +178,7 @@
   stable (ish) on ppc64, bug #55076
 
   15 Jul 2004; Chris White <chriswhite@gentoo.org> :
-  Version bump to 0.99.2.  Added Diego Petten's updated CFLAGS preserve patch.
+  Version bump to 0.99.2.  Added Diego Pettenò's updated CFLAGS preserve patch.
 
   15 Jul 2004; Chris White <chriswhite@gentoo.org> metadata.xml:
   Changing herd to media-video.  Added myself as mantainer.
