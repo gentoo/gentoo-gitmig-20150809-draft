@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.2 2005/05/21 10:47:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.3 2005/09/17 22:27:17 vanquirius Exp $
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://fuse-emulator.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/fuse-emulator/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="xml2 png zlib X gtk gtk2 sdl svga fbcon gnome libdsk"
 
 # This build is heavily use dependent. USE="svga" will build the svga
@@ -34,7 +34,7 @@ DEPEND="dev-lang/perl
 		)
 	)
 	gnome? ( =dev-libs/glib-1* )
-	libdsk? ( app-emulation/libdsk
+	libdsk? ( >=app-emulation/libdsk-1.1.5
 		app-emulation/lib765 )"
 
 src_compile() {
@@ -61,6 +61,6 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS README THANKS hacking/*.txt
 }
