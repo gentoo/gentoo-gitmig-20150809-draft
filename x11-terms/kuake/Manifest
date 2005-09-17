@@ -1,7 +1,17 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 d74c561a72d91956d145f5fe6224e0d6 ChangeLog 2429
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 988aafdc1297c948e5b4478f6c01bff4 kuake-0.3-r3.ebuild 744
-MD5 dac3ffc42966b8cd6d6b41c4cfdaa3e6 files/kuake-0.3-alignment-fix.patch 2279
-MD5 bb7537995afee2aafa3a96a90da25305 files/digest-kuake-0.3-r3 61
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 61d64cf9d6f77c8377024151eacc2e63 ChangeLog 2541
 MD5 2bfbd56d91c468704f8c3fbed9d9b1c4 files/kuake-0.3-noarts-fix.patch 1056
 MD5 145a7a56478a6076a413f0387f69a655 files/kuake-0.3-dropdown-fix.patch 523
+MD5 bb7537995afee2aafa3a96a90da25305 files/digest-kuake-0.3-r3 61
+MD5 dac3ffc42966b8cd6d6b41c4cfdaa3e6 files/kuake-0.3-alignment-fix.patch 2279
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2lRLLFUmVNQ7rkRAlq/AJ9hi3A+lI4Px3d2nM0v8S86S564eACglPn3
+kDUIvi32Vq6J3C86jBrtIME=
+=PsF4
+-----END PGP SIGNATURE-----
