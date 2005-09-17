@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.7.ebuild,v 1.7 2005/09/17 15:48:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.7.ebuild,v 1.8 2005/09/17 15:49:00 swegener Exp $
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
@@ -44,7 +44,7 @@ src_install() {
 	doins rbotconf/* || die "doins failed"
 
 	dodoc AUTHORS ChangeLog INSTALL REQUIREMENTS TODO
-	ude doc && dohtml -r doc/*
+	use doc && dohtml -r doc/*
 }
 
 pkg_postinst() {
