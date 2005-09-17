@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.52 2005/08/29 21:07:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.53 2005/09/17 11:03:33 kloeri Exp $
 
   29 Aug 2005; Guy Martin <gmsoft@gentoo.org> libgail-gnome-1.1.1.ebuild:
   Stable on hppa.
@@ -73,7 +73,7 @@
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> libgail-gnome-1.1.0.ebuild:
   Stable on hppa.
 
-  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   libgail-gnome-1.1.0.ebuild:
   Stable on alpha.
 
@@ -110,7 +110,7 @@
   05 Aug 2004; Guy Martin <gmsoft@gentoo.org> libgail-gnome-1.0.4.ebuild:
   Stable on hppa.
 
-  04 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   libgail-gnome-1.0.4.ebuild:
   Stable on alpha.
 
