@@ -1,6 +1,4 @@
 MD5 9a669a6ee7340dc3bc431eaf97ad71d8 kzenexplorer-0.6.ebuild 563
-MD5 e6c1fdcd8bb00e8c1a9155201a128a78 kzenexplorer-0.6_rc1.ebuild 566
-MD5 6a2f79f5836ccd97b90b5622cfb2cf78 ChangeLog 777
+MD5 8ed3d3f5b783ff2ee43016da7dd15cc6 ChangeLog 884
 MD5 36e01e1ff9f8e46f1839e5902ce056cb metadata.xml 540
 MD5 fee18d7e81f0aeed65b03656e9421079 files/digest-kzenexplorer-0.6 69
-MD5 0f25745222a80d2b706615d9e279ea0e files/digest-kzenexplorer-0.6_rc1 73

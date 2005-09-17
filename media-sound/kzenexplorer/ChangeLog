@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kzenexplorer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/ChangeLog,v 1.4 2005/07/06 02:29:48 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/ChangeLog,v 1.5 2005/09/17 21:19:51 vanquirius Exp $
+
+  17 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -kzenexplorer-0.6_rc1.ebuild:
+  Remove old version.
 
 *kzenexplorer-0.6 (06 Jul 2005)
 
