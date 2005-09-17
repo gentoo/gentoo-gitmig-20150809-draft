@@ -1,6 +1,6 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.31 2005/09/17 11:11:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.32 2005/09/17 19:51:46 flameeyes Exp $
 
   29 Aug 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre18.ebuild:
   Fix typo in DESCRIPTION, update HOMEPAGE, use mirror://gentoo for utf-8 patch.
@@ -117,7 +117,7 @@
   The utf8 patch was adjusted to work with this version by the lovely Marcelo
   Goes <vanquirius@gentoo.org> in the same bug.  Additionally, the patch for
   pre15 was moved onto the mirrors.  And finally, FlameEyes and iFlame (Diego
-  Petteno <dgp85@users.sourceforge.net>) submitted massive ebuild cleanups in
+  Pettenò <dgp85@users.sourceforge.net>) submitted massive ebuild cleanups in
   bug #86596.  Not only are use_{enable,with} liberally employed, bug gpm
   autodetection is disabled as well.  Oh, the final thing is links will now
   install a links binary (and for a while, a links2 symlink).  Thanks to
