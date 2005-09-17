@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 678c7f2d6311607047dd60653302760e ChangeLog 1051
 MD5 35bb7e3a68db054caf5d40758704e0a6 activeheart-kwin-1.1.ebuild 593
 MD5 2834f1cb97eea873f19ab95ccad6bc6d metadata.xml 216
 MD5 6385b9c4fc970c1a5622004c3fbfd749 files/digest-activeheart-kwin-1.1 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLG/Hj5H05b2HAEkRAs6cAJ0fBFgWLckpeVZIUJVnQLS15d6GkwCfXHqj
++cujH9+oUHxisD6r098XAhA=
+=GZ6d
+-----END PGP SIGNATURE-----
