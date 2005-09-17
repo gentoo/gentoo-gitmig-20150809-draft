@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-config
 # Copyright 2004-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-config/ChangeLog,v 1.5 2005/09/16 07:29:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-config/ChangeLog,v 1.6 2005/09/17 21:54:29 hansmi Exp $
+
+  17 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  lapack-config-1.0.1.ebuild:
+  Stable on ppc.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   lapack-config-1.0.1.ebuild:
