@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4459 2005/09/17 22:48:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4460 2005/09/17 23:47:38 leonardop Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -601,6 +601,7 @@ media-video/toxine
 >=dev-python/pygtk-2.7.4
 >=dev-python/gnome-python-extras-2.11.4
 >=net-im/gnomemeeting-1.2.2
+>=gnome-extra/gnome-games-extra-data-2.11
 # C++ bindings
 >=dev-cpp/glibmm-2.7
 >=dev-cpp/gtkmm-2.7
