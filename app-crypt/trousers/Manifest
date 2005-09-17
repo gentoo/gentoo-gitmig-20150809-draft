@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8d3a2e60b8719b95d84df81cdd6a820e trousers-0.2.3.ebuild 2543
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
 MD5 6028a85d7ff8329b44f4c3e789ce4e0c ChangeLog 1965
@@ -9,3 +12,10 @@ MD5 1973b3178958981f8002711e433d4a39 files/digest-trousers-0.2.1 67
 MD5 9c23455efed7516635345b411ff20496 files/trousers-0.2.3-ldadd.patch 1280
 MD5 4b7644dcacf663d68866ec1580d4de57 files/trousers-0.2.1-nouseradd.patch 988
 MD5 4b7644dcacf663d68866ec1580d4de57 files/trousers-0.2.3-nouseradd.patch 988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDLByemdTrptrqvGERAqRfAJ4ik3CuCvgbdirJSeQUCjqbzXjN4QCfWa+Y
+ajtzrxyIqIUA4PFQILfbKIs=
+=sGAI
+-----END PGP SIGNATURE-----

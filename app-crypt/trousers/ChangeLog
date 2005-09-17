@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.7 2005/08/23 21:46:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.8 2005/09/17 13:39:17 dragonheart Exp $
+
+*trousers-0.2.3 (17 Sep 2005)
+
+  17 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/trousers-0.2.0-nouseradd.patch, +files/trousers-0.2.3-ldadd.patch,
+  +files/trousers-0.2.3-nouseradd.patch, -trousers-0.1.11-r1.ebuild,
+  -trousers-0.2.0.ebuild, +trousers-0.2.3.ebuild:
+  version bump. remove old versions - inspiried by bug #105799 thanks to Felix
+  Dorner
 
   23 Aug 2005; Daniel Black <dragonheart@gentoo.org>
   trousers-0.1.11-r1.ebuild, trousers-0.2.0.ebuild, trousers-0.2.1.ebuild:

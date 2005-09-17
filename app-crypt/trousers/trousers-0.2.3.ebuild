@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.1.11-r1.ebuild,v 1.3 2005/08/23 21:46:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.2.3.ebuild,v 1.1 2005/09/17 13:39:17 dragonheart Exp $
 
-inherit eutils linux-info
+inherit eutils linux-info autotools
 
 DESCRIPTION="An open-source TCG Software Stack (TSS) v1.1 implementation"
 HOMEPAGE="http://trousers.sf.net"
@@ -14,8 +14,6 @@ IUSE="doc"
 
 RDEPEND="virtual/libc
 	>=dev-libs/glib-2
-	dev-libs/atk
-	x11-libs/pango
 	>=x11-libs/gtk+-2
 	>=dev-libs/openssl-0.9.7"
 
@@ -30,6 +28,7 @@ pkg_setup() {
 	kernel_is ge 2 6 12 && tpm_kernel_version="yes"
 	linux_chkconfig_present TCG_TPM && tpm_kernel_present="yes"
 	has_version app-crypt/tpm-module && tpm_module="yes"
+	has_version app-crypt/tpm-emulator && tpm_module="yes"
 	if [ -n "${tpm_kernel_present}" ] ; then
 		einfo "Good, you seem to have in-kernel TPM support."
 	elif [ -n "${tpm_module}" ] ; then
@@ -62,13 +61,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e 's:@localstatedir@/tpm:@localstatedir@/lib/tpm:' \
-		"${S}/dist/tcsd.conf.in"
+	cd ${S}/dist
+	epatch ${FILESDIR}/${P}-nouseradd.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-ldadd.patch
+	eautoreconf
 }
 
 src_install() {
 	keepdir /var/lib/tpm
-	make DESTDIR=${D} install || die
+	make "DESTDIR=${D}" install || die
 	dodoc AUTHORS ChangeLog NICETOHAVES README TODO
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
@@ -76,6 +78,4 @@ src_install() {
 	fi
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
-	into /etc/udev/rules.d/
-	echo 'KERNEL="tpm*", OWNER="tss", GROUP="tss", MODE="0600"' > ${D}/etc/udev/rules.d/30-tpm.rules
 }
