@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.24 2005/04/24 06:18:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.25 2005/09/17 11:53:55 kloeri Exp $
 
   24 Apr 2005; Markus Rothe <corsair@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on ppc64
@@ -22,7 +22,7 @@
   15 Mar 2005; Hardave Riar <hardave@gentoo.org> xli-1.17.0-r1.ebuild:
   Keyworded ~mips, bug #76234.
 
-  01 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> xli-1.17.0-r1.ebuild:
+  01 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on alpha.
 
   28 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> xli-1.17.0-r1.ebuild:
@@ -42,7 +42,7 @@
   28 Feb 2005; Tavis Ormandy <taviso@gentoo.org> +xli-1.17.0-r1.ebuild:
   new snapshot with security fixes.
 
-  05 Feb 2005; Bryan Ãstergaard <kloeri@gentoo.org> xli-1.17.0.ebuild:
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xli-1.17.0.ebuild:
   ~alpha keyworded, bug 76234.
 
   03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> xli-1.17.0.ebuild:

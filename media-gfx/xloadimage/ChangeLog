@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.19 2005/08/25 18:13:29 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.20 2005/09/17 11:54:43 kloeri Exp $
 
 *xloadimage-4.1-r2 (25 Aug 2005)
 
@@ -8,7 +8,7 @@
   pyrania forgot to add a changelog entry for 4.1-r3, so this is coppied from
   the cvs log: Fixed b0rked endif. See bug #84072.
 
-  01 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  01 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   xloadimage-4.1-r2.ebuild:
   Stable on alpha.
 
