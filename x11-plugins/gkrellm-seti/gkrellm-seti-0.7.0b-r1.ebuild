@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-seti/gkrellm-seti-0.7.0b-r1.ebuild,v 1.7 2004/08/15 06:30:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-seti/gkrellm-seti-0.7.0b-r1.ebuild,v 1.8 2005/09/17 10:08:31 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="=app-admin/gkrellm-2.1*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~alpha"
+KEYWORDS="alpha sparc x86"
 
 src_unpack() {
 	unpack ${A}
