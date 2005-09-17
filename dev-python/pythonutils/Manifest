@@ -3,12 +3,14 @@ Hash: SHA1
 
 MD5 f3b536c3be851ba1bf964daf48c011d7 pythonutils-0.2.0.ebuild 734
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 1ed2866c0c40f6c7d70d66f3a6a9f758 ChangeLog 365
+MD5 35f9060c839cd682ac445fe2c89f2bd4 ChangeLog 521
+MD5 5cc9c672b260891002f7c4e5f024131d pythonutils-0.2.2.ebuild 734
 MD5 30e5d743b45d15cee2eed77e8762690b files/digest-pythonutils-0.2.0 82
+MD5 2fa01d26a34c5e18786aeff254cba72a files/digest-pythonutils-0.2.2 82
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGes5DAg8Nbq0d9kRAtxbAJwJRE+c+klsOqUcTV5IYrrcKI1TdgCfRtrE
-yn6VMSS4nZP3vq3Tm9tKRHE=
-=4dIc
+iD8DBQFDK2CjDAg8Nbq0d9kRAkCxAJ9VWopjsWuvVX64k84mAFOVMEhMKACfWfL4
+NRSW/mJvR/LwaKX680HBfR8=
+=z8cI
 -----END PGP SIGNATURE-----
