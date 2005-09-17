@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b75614f954c7353c9e75e011ee1adb59 glib-1.2.10-r5.ebuild 1536
 MD5 5bc59f4a174bf905f387fc78ded9e67c glib-2.6.4.ebuild 1632
 MD5 e19f2f426fdecf8788d79e0a54c4905a glib-2.6.5.ebuild 1646
@@ -12,3 +15,10 @@ MD5 6da4b81e0a2656f101965a505c7cb6d4 files/glib-1.2.10-m4.patch 225
 MD5 1a4565b760afb02416ff0d674c89c83f files/glib-2-macos.patch 989
 MD5 7fec226893c96f1126810906e2fb3e5b files/glib-2.6.3-testglib-ssp.patch 344
 MD5 b66fda2207583238578ade2bd69e470b files/digest-glib-2.8.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLHhsKf2g/qXtneoRAtQrAJ4yadhr9SCmhtGI8lV+suMdtFgonwCbBv3T
+WdfhTJ275kNYo6tDoFHXy/U=
+=DU9G
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a14bf6d5cc101c31d97280ad9c48785e cyrus-sasl-2.1.18-r2.ebuild 5431
 MD5 54f2bd76be47e4beec9b53b237d0e44f cyrus-sasl-2.1.19-r1.ebuild 7161
 MD5 62922ef59be6add5b73bc4f12b9041ea cyrus-sasl-2.1.20-r1.ebuild 8558
@@ -49,3 +52,10 @@ MD5 a1b5b72d1285487654685fc497aa81b5 files/saslauthd.pam-include 160
 MD5 c38995773eff23cf7f05b23fe7fba6d3 files/saslauthd.rc6 525
 MD5 fc0d11e115e65597419803dad9727aa8 files/saslauthd2.conf 752
 MD5 5d79108b7b67bd3af315e3142023fef5 files/saslauthd2.rc6 527
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLHfSKf2g/qXtneoRAoDzAKCgPxVydCqvhiGWnkkGoREhLRWIHwCfTd/l
+vyn5cKinvJ1QPjDM6mHSD7c=
+=/6Ah
+-----END PGP SIGNATURE-----
