@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/kpogre
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.16 2005/09/16 21:44:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.17 2005/09/17 19:25:58 flameeyes Exp $
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
@@ -58,6 +58,6 @@
 
   26 Apr 2004; Masatomo Nakano <nakano@gentoo.org>
   +files/kpogre-0.97-gentoo.patch, +kpogre-0.97.ebuild:
-  Initial import. Submitted by Diego Petteno <dgp85@users.sourceforge.net>.
+  Initial import. Submitted by Diego Pettenò <dgp85@users.sourceforge.net>.
   #48023
 
