@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/imwheel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.16 2005/06/19 20:19:25 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/ChangeLog,v 1.17 2005/09/17 02:02:11 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  imwheel-1.0.0_pre12.ebuild:
+  Mark 1.0.0_pre12 stable on alpha
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org>
   -imwheel-1.0.0_pre2.ebuild:
