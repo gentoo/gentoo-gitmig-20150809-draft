@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.30 2005/05/21 23:01:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.31 2005/09/17 00:55:26 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *ratpoison-1.4.0_beta4 (21 May 2005)
 
@@ -72,7 +75,7 @@
 *ratpoison-1.3.0_beta3 (14 Oct 2003)
 
   14 Oct 2003; Jason Wever <weeve@gentoo.org> ratpoison-1.3.0_beta3.ebuild:
-  Version bump, thanks to Björn Lindström <bkhl@elektrubadur.se> for the ebuild.
+  Version bump, thanks to BjÃ¶rn LindstrÃ¶m <bkhl@elektrubadur.se> for the ebuild.
   Closes bug #31133.
 
   02 Jul 2003; Jason Wever <weeve@gentoo.org> metadata.xml:

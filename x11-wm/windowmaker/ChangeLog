@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.57 2005/07/12 04:21:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.58 2005/09/17 00:56:33 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
   windowmaker-0.91.0-r1.ebuild:
@@ -347,11 +350,11 @@
  Version bump.  Removed Taiwanese translations installation.
 
 *windowmaker-0.80.0-r3 (10 May 2002)
-  10 May 2002; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org> windowmaker-0.80.0-r3.ebuild :
+  10 May 2002; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org> windowmaker-0.80.0-r3.ebuild :
   added a comment about the libxpm.
 
 *windowmaker-0.80.0-r3 (8 May 2002)
-  8 May 2002; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org> windowmaker-0.80.0-r3.ebuild :
+  8 May 2002; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org> windowmaker-0.80.0-r3.ebuild :
   fix a error in the url of the WindowMaker-extra.
 
 *windowmaker-0.80.0-r3 (18 Apr 2002)
