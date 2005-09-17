@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 2faee46ed2b4a6478586be419c845172 ChangeLog 1571
-MD5 d1ede9dc096fa5b565620e2c01f02653 frox-0.7.18.ebuild 1788
+MD5 8f14cdbe16532380c2411b386ba5bdcf ChangeLog 1800
 MD5 4ed8b45b788394d07de8ee0d6d4ec015 frox-0.7.18-r1.ebuild 1821
-MD5 b4bef74e030a66fdc8146dded33be009 files/frox.rc 1076
-MD5 4fc077cd1a556548e43d1bbc6176c1fb files/digest-frox-0.7.18 64
+MD5 3dd0a6b913a28b30847dd560654f0e6d frox-0.7.18-r2.ebuild 1821
+MD5 8b112b625077001f33ae23eb28602115 files/frox.rc 1078
 MD5 e80a76dccec13cd8104fe980f63395fd files/config-0.7.18.patch 1953
 MD5 4fc077cd1a556548e43d1bbc6176c1fb files/digest-frox-0.7.18-r1 64
+MD5 4fc077cd1a556548e43d1bbc6176c1fb files/digest-frox-0.7.18-r2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDHrWOmdTrptrqvGERAqGoAJ9r9DWNl22ePENCrbk0BSbzcrklfwCcCSPB
-6wZTqKa7WuEzBflklvSoiTM=
-=/eX2
+iD8DBQFDLB4AmdTrptrqvGERAgmlAKCdjc6di/ZhnzSEBPemLLhb+7f75wCgiQDu
+FM758KCFYOUkhqPf1cCkWtg=
+=//36
 -----END PGP SIGNATURE-----

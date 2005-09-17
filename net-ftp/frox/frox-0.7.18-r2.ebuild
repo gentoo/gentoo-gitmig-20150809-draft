@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18.ebuild,v 1.6 2005/08/23 22:03:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r2.ebuild,v 1.1 2005/09/17 13:45:12 dragonheart Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_compile() {
 		--localstatedir=/var/run \
 		--sysconfdir=/etc \
 		--enable-http-cache --enable-local-cache \
-		`use_enable clamav virus-scan` || die "bad ./configure"
+		$(use_enable clamav virus-scan) || die "bad ./configure"
 
 	emake || die "compile problem"
 }
@@ -46,7 +46,8 @@ src_install() {
 	fperms 700 /var/spool/frox
 	fowners ftpproxy:ftpproxy /var/run/frox /var/spool/frox /var/log/frox
 
-	dodoc BUGS COPYING README \
+	# INSTALL has useful filewall rules
+	dodoc BUGS README \
 		doc/CREDITS doc/ChangeLog doc/FAQ doc/INSTALL \
 		doc/INTERNALS doc/README.transdata doc/RELEASE \
 		doc/SECURITY doc/TODO

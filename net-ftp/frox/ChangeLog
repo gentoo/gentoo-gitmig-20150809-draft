@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/frox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.9 2005/09/07 09:40:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.10 2005/09/17 13:45:12 dragonheart Exp $
+
+*frox-0.7.18-r2 (17 Sep 2005)
+
+  17 Sep 2005; Daniel Black <dragonheart@gentoo.org>  frox-0.7.18-r2.ebuild files/digest-frox-0.7.18-r2
+  Forgot ! when checking for missing config file in initscript. Bug #106267 thanks to M9841
 
 *frox-0.7.18-r1 (07 Sep 2005)
 
