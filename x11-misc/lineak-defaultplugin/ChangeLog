@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lineak-defaultplugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.4 2005/06/19 20:32:32 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-defaultplugin/ChangeLog,v 1.5 2005/09/17 00:49:32 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   19 Jun 2005; Jonathan Smith <smithj@gentoo.org>
   lineak-defaultplugin-0.8.3.ebuild:
@@ -14,7 +17,7 @@
 
   12 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
   +lineak-defaultplugin-0.8.3.ebuild:
-  Version bump thanks to Alexander Brüning <ab277@gmx.de> in bug 84964
+  Version bump thanks to Alexander BrÃ¼ning <ab277@gmx.de> in bug 84964
 
 *lineak-defaultplugin-0.8.2 (29 Nov 2004)
 

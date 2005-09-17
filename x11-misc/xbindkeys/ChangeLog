@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.22 2005/08/28 12:56:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.23 2005/09/17 00:51:54 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   28 Aug 2005; Fabian Groffen <grobian@gentoo.org> xbindkeys-1.7.2.ebuild:
   Marking ~ppc-macos (bug #83240)
@@ -76,7 +79,7 @@
   09 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, xbindkeys-1.5.5.ebuild,
   files/digest-xbindkeys-1.5.5 :
 
-  Initial cvs commit. Ebuild contributed by Niklas Höglund < niklas.hoglund@telia.com>.
+  Initial cvs commit. Ebuild contributed by Niklas HÃ¶glund < niklas.hoglund@telia.com>.
   Thanks for the contribution.
 
   Added initial ChangeLog which should be updated whenever the package is

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.19 2005/06/22 14:05:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.20 2005/09/17 00:51:03 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   22 Jun 2005; Ferris McCormick <fmccor@gentoo.org> lineakd-0.8.3.ebuild:
   Remove ~sparc keyword (See Bug 89801).  Version 0.8.3 assumes headers
@@ -18,7 +21,7 @@
 *lineakd-0.8.3 (12 Mar 2005)
 
   12 Mar 2005; Stefan Schweizer <genstef@gentoo.org> +lineakd-0.8.3.ebuild:
-  Version bump thanks to Alexander Brüning <ab277@gmx.de> in bug 84964
+  Version bump thanks to Alexander BrÃ¼ning <ab277@gmx.de> in bug 84964
 
   27 Feb 2005; Ferris McCormick <fmccor@gentoo.org> lineakd-0.8.2.ebuild:
   Add ~sparc keyword at user request (Bug 83497); builds and seems to run.
@@ -61,7 +64,7 @@
 *lineakd-0.6.1 (15 Sep 2003)
 
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> lineakd-0.6.1.ebuild:
-  Version bump, thanks to: Bel Zébute <tecknojunky@tecknojunky.com> in bug #26661
+  Version bump, thanks to: Bel ZÃ©bute <tecknojunky@tecknojunky.com> in bug #26661
 
 *lineakd-0.6_alpha2 (08 Apr 2003)
 
