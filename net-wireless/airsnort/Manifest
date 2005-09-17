@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ac041fe764a2ec1f431f9d29ddb5894 airsnort-0.2.1b.ebuild 993
 MD5 2ff368b499390d239a9362892c6ce2d0 airsnort-0.2.1a.ebuild 993
 MD5 004539729623ea8adb4eb886e0bdafa4 airsnort-0.2.2.ebuild 952
@@ -14,3 +17,10 @@ MD5 9e0aa93fde949159ffce2087c2213340 files/digest-airsnort-0.2.4a 66
 MD5 98513862bd23ec431346bd50defae6ef files/digest-airsnort-0.2.7c 67
 MD5 1bc238a549427889b4471862e4629d15 files/digest-airsnort-0.2.1a 66
 MD5 93e1935fa8e88bd2ae7251e419782d41 files/digest-airsnort-0.2.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2F5LLFUmVNQ7rkRArh5AKCQM3BouJkgojgiSPoZaXcg6LDHmACeOcbv
+viIZ+eWoWgqwKaanDykTfjM=
+=5085
+-----END PGP SIGNATURE-----
