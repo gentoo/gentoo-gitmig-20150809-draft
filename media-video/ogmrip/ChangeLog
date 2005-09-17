@@ -1,0 +1,36 @@
+# ChangeLog for app-cdr/ogmrip
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.1 2005/09/17 15:11:09 metalgod Exp $
+
+  17 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/ogmrip-0.9.0-gcc4.patch, +files/ogmrip-0.9.0-lang.patch,
+  +metadata.xml, +ogmrip-0.6.2.ebuild, +ogmrip-0.8.2.ebuild,
+  +ogmrip-0.9.0.ebuild:
+  Moved from app-cdr/ogmrip to media-video/ogmrip.
+
+  28 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/ogmrip-0.9.0-gcc4.patch, ogmrip-0.9.0.ebuild:
+  Added gcc-4.0.x patch thanks to Ian Kumlien <pomac@vapor.com> and Olivier
+  Rolland <billl@users.sf.net>. Closes bug #103299.
+
+*ogmrip-0.9.0 (20 Aug 2005)
+
+  20 Aug 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/ogmrip-0.9.0-lang.patch, +ogmrip-0.9.0.ebuild:
+  Version Bump. Closes bug #97337 thanks to Olivier Rolland <billl@users.sf.net>.
+
+*ogmrip-0.8.2 (10 Jun 2005)
+
+  10 Jun 2005; Lars Weiler <pylon@gentoo.org> +ogmrip-0.8.2.ebuild:
+  Version bump.  Thanks to the contributors in bug #83900.
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> ogmrip-0.6.2.ebuild:
+  added ~amd64 to KEYWORDS, fixes #87204
+
+*ogmrip-0.6.2 (08 Jan 2005)
+
+  08 Jan 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +ogmrip-0.6.2.ebuild:
+  Initial commit.
+  Thanks to Olivier Rolland in bug #72041.
+
