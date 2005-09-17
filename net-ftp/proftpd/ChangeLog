@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.103 2005/07/31 13:44:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.104 2005/09/17 12:08:26 kloeri Exp $
 
   31 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   proftpd-1.2.10-r7.ebuild:
@@ -100,7 +100,7 @@
   30 Nov 2004; Guy Martin <gmsoft@gentoo.org> proftpd-1.2.10-r1.ebuild:
   Stable on hppa.
 
-  30 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  30 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   proftpd-1.2.10-r1.ebuild:
   Stable on alpha, bug 67648.
 
@@ -128,7 +128,7 @@
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
 
-  01 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> proftpd-1.2.10.ebuild:
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> proftpd-1.2.10.ebuild:
   Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> proftpd-1.2.10.ebuild,
