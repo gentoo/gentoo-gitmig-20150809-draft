@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.10 2005/08/11 01:51:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.11 2005/09/17 00:47:33 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   11 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> monkeyd-0.9.1.ebuild:
   Added ~mips.
@@ -55,7 +58,7 @@
 *monkeyd-0.8.4 (20 Jun 2004)
 
   20 Jun 2004; Mike Frysinger <vapier@gentoo.org> +monkeyd-0.8.4.ebuild:
-  Version bump #54461 by Marc-Éric Dupuis.
+  Version bump #54461 by Marc-Ã‰ric Dupuis.
 
   19 Jun 2004; David Holm <dholm@gentoo.org> monkeyd-0.8.3.ebuild:
   Added to ~ppc.
