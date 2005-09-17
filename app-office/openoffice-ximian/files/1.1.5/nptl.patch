@@ -1,0 +1,11 @@
+--- tools/source/solar/solar.c.orig
++++ tools/source/solar/solar.c
+@@ -577,7 +577,7 @@
+ 
+   {
+ 	char* p = NULL;
+-	InfoMemoryAccess( p );
++	/*InfoMemoryAccess( p );*/
+ 	p = (char*)&p;
+ 	InfoMemoryAccess( p );
+ 	InfoMemoryTypeAccess( t_short );
