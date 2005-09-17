@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.89 2005/09/17 00:27:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.90 2005/09/17 08:13:17 vapier Exp $
+
+  17 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/file-4.15-empty-mime-buffer.patch, file-4.15.ebuild:
+  Add a check for empty buffers #106152.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
