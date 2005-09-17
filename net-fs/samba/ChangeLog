@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.203 2005/09/17 11:06:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.204 2005/09/17 19:23:01 flameeyes Exp $
 
   03 Sep 2005; Christian Andreetta <satya@gentoo.org> -samba-3.0.20.ebuild,
   samba-3.0.20-r1.ebuild:
@@ -128,7 +128,7 @@
 
   19 May 2005; Christian Andreetta <satya@gentoo.org> files/samba.pam:
   pam 'include' directive, instead of Redhat's pam_stack for better standard
-  adeherence (*BSD requirement: Diego Petteno' <flameeyes@gentoo.org>)
+  adeherence (*BSD requirement: Diego Pettenò <flameeyes@gentoo.org>)
 
   29 Apr 2005; Seemant Kulleen <seemant@gentoo.org> samba-3.0.14a-r1.ebuild:
   the smbspool symlink is now fixed, thanks again to: Chris Smith
