@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.37 2005/09/16 05:10:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.38 2005/09/17 07:16:19 latexer Exp $
+
+  17 Sep 2005; Peter Johanson <latexer@gentoo.org> libgdiplus-1.1.9.ebuild:
+  Fix for bug #106157.
 
 *libgdiplus-1.1.9 (16 Sep 2005)
 

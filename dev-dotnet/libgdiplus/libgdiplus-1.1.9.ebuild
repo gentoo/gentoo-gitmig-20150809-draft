@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.ebuild,v 1.1 2005/09/16 05:10:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.ebuild,v 1.2 2005/09/17 07:16:19 latexer Exp $
 
-inherit libtool eutils
+inherit libtool eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Library for using System.Drawing with Mono"
 
@@ -37,6 +37,13 @@ src_unpack() {
 }
 
 src_compile() {
+	if [ "$(gcc-major-version)" -gt "3" ] || \
+		( [ "$(gcc-major-version)" == "3" ] && \
+			[ "$(gcc-minor-version)" -gt "3" ] )
+	then
+		replace-flags -O3 -O2
+	fi
+
 	local myconf="--with-cairo=included --disable-glitz"
 	use tiff ||  myconf="--without-libtiff ${myconf}"
 	use gif ||  myconf="--without-libgif ${myconf}"
