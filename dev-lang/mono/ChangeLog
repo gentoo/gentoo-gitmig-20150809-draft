@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.57 2005/09/16 05:23:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.58 2005/09/17 07:13:50 latexer Exp $
+
+  17 Sep 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.8.3.ebuild,
+  mono-1.1.9.ebuild:
+  Fix replace-flags usage.
 
   16 Sep 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.8.3.ebuild:
   Add flag fix for amd64. See bug #96719.
