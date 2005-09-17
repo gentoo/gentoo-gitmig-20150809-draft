@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.14 2005/04/24 12:43:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.15 2005/09/17 07:47:38 ferringb Exp $
+
+*bsdiff-4.3 (17 Sep 2005)
+
+  17 Sep 2005: Brian Harring <ferringb@gentoo.org>: +bsdiff-4.3.ebuild
+  -bsdiff-4.1.ebuild.
+  Version bump, something of a maintenance release it seems. 
+  Changes between 4.2 and 4.3 come down to using libbz2 rather then piping to
+  bzip2.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> bsdiff-4.2.ebuild:
   Stable on ppc.
