@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.27 2005/04/08 14:44:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.28 2005/09/17 17:02:25 caleb Exp $
+
+*kde-env-3-r4 (17 Sep 2005)
+
+  17 Sep 2005; Caleb Tennis <caleb@gentoo.org> +kde-env-3-r4.ebuild:
+  Remove KDE_MALLOC line
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> kde-env-3-r3.ebuild:
   Stable on ppc64
