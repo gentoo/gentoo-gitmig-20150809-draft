@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bec87e1dd1ba53ddfd63a1c5b4eab1fd xnap-2.5-r3.ebuild 730
 MD5 769d6917ed327426a19a722ba350d94e xnap-2.5-r2.ebuild 730
 MD5 8944be3837c7f0cf6ef87a15eae95427 ChangeLog 817
-MD5 e9d687372b2fe95682284e376adac0d0 metadata.xml 610
+MD5 2365e5db3709b4aad80b218769a50913 metadata.xml 592
 MD5 84c0761e0ff5f7a4c8b02516e7dc5304 files/digest-xnap-2.5-r2 60
 MD5 7086e83294aeeb006106dc51bc4251b6 files/digest-xnap-2.5-r3 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLDTE/rLF9B432nYRAoJoAJ9chnpCAkovu0bZlwy1g/o4QtK1YgCgsTV0
+FtTpF7jJBPMLM55a9+0A/Mk=
+=tmnD
+-----END PGP SIGNATURE-----
