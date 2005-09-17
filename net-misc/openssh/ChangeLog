@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.130 2005/09/17 12:19:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.131 2005/09/17 19:36:00 flameeyes Exp $
 
 *openssh-4.2_p1 (06 Sep 2005)
 
@@ -56,13 +56,13 @@
   22 May 2005; Mike Frysinger <vapier@gentoo.org> openssh-4.0_p1-r1.ebuild:
   Add support for RSA SecurID tokens #92233 by Antti Mäkelä.
 
-  20 May 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  20 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   openssh-3.9_p1-r2.ebuild, openssh-4.0_p1.ebuild, openssh-4.0_p1-r1.ebuild:
   Inherit pam eclass for newpamd.
 
 *openssh-4.0_p1-r1 (29 Apr 2005)
 
-  29 Apr 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  29 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/sshd.pam_include, +openssh-4.0_p1-r1.ebuild:
   Added a new revision depending on virtual/pam (>=pam-0.78) and uses the
   include syntax instead of pam_stack.so.
