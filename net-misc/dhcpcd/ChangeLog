@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.66 2005/09/16 02:56:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.67 2005/09/17 01:22:40 uberlord Exp $
+
+  17 Sep 2005; Roy Marples <uberlord@gentoo.org>
+  -files/dhcpcd-1.3.22_p4-gcc2.patch,
+  -files/dhcpcd-1.3.22_p4-gentoo-config.patch,
+  -files/dhcpcd-1.3.22_p4-man.patch,
+  -files/dhcpcd-1.3.22_p4-no-iface-down.diff,
+  -files/dhcpcd-1.3.22_p4-optionFQDN.patch,
+  -files/dhcpcd-1.3.22_p4-routemetric.patch,
+  -files/dhcpcd-1.3.22_p4-security.patch, -dhcpcd-1.3.22_p4-r11.ebuild,
+  -dhcpcd-1.3.22_p4-r12.ebuild:
+  Punted old versions - no more -z "release lease but keep cache" option :)
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> dhcpcd-2.0.0.ebuild:
   Mark 2.0.0 stable on alpha
