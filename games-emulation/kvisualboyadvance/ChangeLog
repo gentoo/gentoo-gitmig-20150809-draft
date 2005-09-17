@@ -1,6 +1,6 @@
 # ChangeLog for games-emulation/kvisualboyadvance
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kvisualboyadvance/ChangeLog,v 1.6 2004/11/11 01:46:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kvisualboyadvance/ChangeLog,v 1.7 2005/09/17 19:50:29 flameeyes Exp $
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org>
   kvisualboyadvance-0.3.1.ebuild:
@@ -21,5 +21,5 @@
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   kvisualboyadvance-0.3.1.ebuild, metadata.xml:
-  initial commit; ebuild submitted by Diego Petteno via bug #40155
+  initial commit; ebuild submitted by Diego Pettenò via bug #40155
 
