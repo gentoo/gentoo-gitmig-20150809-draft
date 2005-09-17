@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MMagic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.26 2005/08/25 23:03:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.27 2005/09/17 00:39:19 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> File-MMagic-1.22.ebuild:
+  Mark 1.22 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> File-MMagic-1.22.ebuild:
   add ~ia64
