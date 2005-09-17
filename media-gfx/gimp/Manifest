@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2649b2a2f35aa2549ab4d81e750ea2d2 gimp-1.2.5.ebuild 3279
 MD5 39d4983eff8a926fd6bc0b8bc122ee3f gimp-2.2.6-r1.ebuild 4307
 MD5 6c474025ec511bc178b8ccff74a54c1b gimp-2.2.8-r1.ebuild 4427
@@ -10,3 +13,10 @@ MD5 ff17b80bceb6bd818e20556c23647b0f files/gimp-2.2.8-configure-fix.patch 2423
 MD5 9d903731e90f07c2492aab4bd55f0e62 files/gimp-2.2.8-restart-marker.patch 611
 MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLC/mKf2g/qXtneoRAtQWAJ9BUGbOYLor2yglDodkA0jobrLd0QCgqU7T
+Mtng9B4ATL4NmkxkZl2ecWc=
+=7aP1
+-----END PGP SIGNATURE-----
