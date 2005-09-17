@@ -1,10 +1,20 @@
-MD5 94b4e5f90569e534c0b63fcd4ec34b89 ChangeLog 1103
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e776420acc6d9ab0f7fedca33e647b73 ChangeLog 1360
 MD5 f6ae03147b33c97f5bb09d5de8690601 metadata.xml 227
-MD5 e9e0fe8f55d0b1473e3b88a15cdfca18 ogmrip-0.6.2.ebuild 1766
-MD5 3b0e56fe697e3f3ea90c291a02fa9c40 ogmrip-0.8.2.ebuild 1855
-MD5 69c1a7d5b3166fc4f20646c9f10ead3a ogmrip-0.9.0.ebuild 1965
+MD5 7a59f2d062b22745c800381e382c118b ogmrip-0.6.2.ebuild 1770
+MD5 2dc95dfe1db0913608eb8b4b100b5957 ogmrip-0.8.2.ebuild 1859
+MD5 d5df55549fb701989c1c159b2c7696d8 ogmrip-0.9.0.ebuild 1969
 MD5 aa7f34882cf21f05139524a800cb1ccb files/digest-ogmrip-0.6.2 64
 MD5 605be9978689669c27e4a0d5fbcd57d9 files/digest-ogmrip-0.8.2 64
 MD5 d3c45dfbfd5046c58d6a1e774471e280 files/ogmrip-0.9.0-lang.patch 450
 MD5 0b8ceac327eb68f927a2fbb841bfb53a files/ogmrip-0.9.0-gcc4.patch 5279
 MD5 87e11fb2b44c544d59834a678e353021 files/digest-ogmrip-0.9.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDLEBAwUpWvClEHQoRAri1AJ9hxfgtrwjoqXy/jqEOIK7UBzONowCfXqjP
+fDz1SThzhOSzeiapN4jrI+w=
+=d23P
+-----END PGP SIGNATURE-----
