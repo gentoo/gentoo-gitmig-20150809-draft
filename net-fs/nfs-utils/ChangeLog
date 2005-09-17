@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.69 2005/03/23 04:12:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.70 2005/09/17 11:05:07 kloeri Exp $
 
   23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org> files/nfsmount:
   Corrected init script to use 'svc_stop; svc_start' and not 'stop; start'.
@@ -40,7 +40,7 @@
   07 Dec 2004; Hardave Riar <hardave@gentoo.org> nfs-utils-1.0.6-r6.ebuild:
   Stable on mips, bug #72113
 
-  07 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  07 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r6.ebuild:
   Stable on alpha, bug 72113.
 
@@ -61,7 +61,7 @@
   05 Dec 2004; Jason Wever <weeve@gentoo.org> nfs-utils-1.0.6-r5.ebuild:
   Stable on sparc wrt security bug #72113.
 
-  05 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r5.ebuild:
   Stable on alpha, bug 72113.
 
@@ -83,7 +83,7 @@
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> nfs-utils-1.0.6-r4.ebuild:
   Marked stable on mips.
 
-  01 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   nfs-utils-1.0.6-r4.ebuild:
   Stable on alpha.
 
