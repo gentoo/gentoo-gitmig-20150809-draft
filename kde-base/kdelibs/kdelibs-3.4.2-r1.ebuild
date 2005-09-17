@@ -1,20 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5_alpha1.ebuild,v 1.3 2005/09/17 16:49:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.2-r1.ebuild,v 1.1 2005/09/17 16:49:42 caleb Exp $
 
 inherit kde flag-o-matic eutils multilib
-set-kdedir 3.5
-
-MY_PV=3.4.90
-S=${WORKDIR}/${PN}-${MY_PV}
+set-kdedir 3.4
 
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http://www.kde.org/"
-#SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
-SRC_URI="mirror://kde/unstable/${PV/_/-}/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-SLOT="3.5"
+SLOT="3.4"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 
@@ -52,8 +48,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	kde_src_unpack
 
-	# Fix crashes. Applied upstream.
-	epatch "${FILESDIR}/${P}-crash.patch"
+	# Gmail fix (kde bug 104352). Applied for 3.4.3.
+	epatch "${FILESDIR}/kdelibs-3.4.2-gmail-fix.patch"
+
+	# Configure patch. Applied for 3.5.
+	epatch "${FILESDIR}/kdelibs-3.4.1-configure.patch"
+
+	# for the configure patch
+	make -f admin/Makefile.common || die
 }
 
 src_compile() {
@@ -92,6 +94,9 @@ src_install() {
 		make DESTDIR="${D}" install-apidox || die
 	fi
 
+	# needed to fix lib64 issues on amd64, see bug #45669
+	use amd64 && ln -s ${KDEDIR}/lib ${D}/${KDEDIR}/lib64
+
 	# Needed to create lib -> lib64 symlink for amd64 2005.0 profile
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${KDEDIR}/lib
@@ -106,7 +111,7 @@ src_install() {
 			libdirs="${libdirs}:${PREFIX}/${libdir}"
 		done
 
-		cat <<EOF > ${D}/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
+		cat <<EOF > ${D}/etc/env.d/46kdepaths-${SLOT} # number goes down with version upgrade
 PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${libdirs:1}
@@ -114,17 +119,4 @@ CONFIG_PROTECT="${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown"
 EOF
 	fi
 
-}
-
-pkg_postinst() {
-	if use zeroconf; then
-		echo
-		einfo "To make zeroconf support available in KDE"
-		einfo "make sure that the 'mdnsd' daemon is running."
-		einfo "Make sure also that multicast dns lookups are"
-		einfo "enabled by editing the 'hosts:' line in"
-		einfo "/etc/nsswitch.conf to include 'mdns', e.g.:"
-		einfo "hosts: files mdns dns"
-		echo
-	fi
 }

@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.271 2005/09/17 14:51:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.272 2005/09/17 16:49:42 caleb Exp $
+
+*kdelibs-3.4.2-r1 (17 Sep 2005)
+
+  17 Sep 2005; Caleb Tennis <caleb@gentoo.org> +kdelibs-3.4.2-r1.ebuild,
+  kdelibs-3.5_alpha1.ebuild:
+  I'm promoting the change over to --disable-fast-malloc. Since we provide a
+  good glibc, this fast-malloc really isn't needed. Also, I have experienced
+  lots of spurious crashes with KDE applications with glibc-2.3.4.20041108 and
+  higher (with multithreaded applications), and using glibc's malloc instead
+  of KDE's implementation fixed it.
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> kdelibs-3.4.1-r1.ebuild:
   Mark 3.4.1-r1 stable on alpha
