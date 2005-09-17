@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.30 2005/07/17 15:46:10 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.31 2005/09/17 02:01:47 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> idesk-0.5.6.ebuild:
+  Mark 0.5.6 stable on alpha
 
 *idesk-0.7.3-r1 (17 Jul 2005)
 
