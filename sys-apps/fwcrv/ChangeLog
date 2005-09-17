@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/fwcrv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/ChangeLog,v 1.1 2005/01/09 10:22:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwcrv/ChangeLog,v 1.2 2005/09/17 00:27:51 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *fwcrv-0.1.0 (09 Jan 2005)
 
   09 Jan 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +fwcrv-0.1.0.ebuild:
-  Inital submission. Ebuild submitted by Holger Hoffst‰tte <holger@wizards.de>.
+  Inital submission. Ebuild submitted by Holger Hoffst√§tte <holger@wizards.de>.
 

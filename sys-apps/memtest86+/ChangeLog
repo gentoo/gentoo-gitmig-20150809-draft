@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.27 2005/08/03 22:12:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.28 2005/09/17 00:32:12 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *memtest86+-1.60 (03 Aug 2005)
 
@@ -111,7 +114,7 @@
 *memtest86+-1.11 (26 Feb 2004)
 
   26 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.11.ebuild:
-  Version bump, closes bug #42023. Thanks to Frank Dörfler and James Slater for
+  Version bump, closes bug #42023. Thanks to Frank DÃ¶rfler and James Slater for
   their work on the updated ebuild.
 
   18 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.0.ebuild:
@@ -127,6 +130,6 @@
 
   01 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.0.ebuild,
   metadata.xml:
-  Initial commit, closes bug #38828, thanks to Frank Dörfler for the original
+  Initial commit, closes bug #38828, thanks to Frank DÃ¶rfler for the original
   ebuild.
 

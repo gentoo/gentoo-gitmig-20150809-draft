@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.56 2005/06/30 03:47:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.57 2005/09/17 00:34:47 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> texinfo-4.8.ebuild:
   Marked stable on mips.
@@ -10,7 +13,7 @@
 
   13 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/texinfo-4.8-freebsd.patch, texinfo-4.8.ebuild:
-  Add a FreeBSD compatibility patch by Diego Pettenò #92434.
+  Add a FreeBSD compatibility patch by Diego PettenÃ² #92434.
 
   25 Apr 2005; Mike Frysinger <vapier@gentoo.org> texinfo-4.8.ebuild:
   Add a workaround for broken dependencies until it can be fixed properly in

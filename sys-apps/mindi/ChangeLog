@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.19 2005/05/06 10:35:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.20 2005/09/17 00:32:43 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> mindi-0.85.ebuild,
   mindi-0.86.ebuild:
@@ -73,7 +76,7 @@
 *mindi-0.80 (14 Jan 2003)
 
   14 Jan 2003; Brandon Low <lostlogic@gentoo.org> mindi-0.80.ebuild:
-  Update thanks to François-Xavier LAMARE <flx-linuxnews@ifrance.com>
+  Update thanks to FranÃ§ois-Xavier LAMARE <flx-linuxnews@ifrance.com>
 
 *mindi-0.67 (22 Oct 2002)
 

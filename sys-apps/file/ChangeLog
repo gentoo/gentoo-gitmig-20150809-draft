@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.88 2005/09/14 04:44:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.89 2005/09/17 00:27:23 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   14 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   +files/file-4.15-libtool.patch, file-4.15.ebuild:
@@ -9,7 +12,7 @@
 *file-4.15 (18 Aug 2005)
 
   18 Aug 2005; Mike Frysinger <vapier@gentoo.org> +file-4.15.ebuild:
-  Version bump to fix up #101298 by PIERRE Benoît / #101639 by Preston 
+  Version bump to fix up #101298 by PIERRE BenoÃ®t / #101639 by Preston 
   Crow / #102520 by Daniel Drake.
 
   24 Jul 2005; Martin Schlemmer <azarah@gentoo.org>
@@ -139,7 +142,7 @@
   uclibc patches thanks to Peter S. Mazinger <ps.m@gmx.net>. Missing build use
   flag on 4.08.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> file-4.09.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> file-4.09.ebuild:
   Stable on alpha.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> file-4.09.ebuild:
@@ -302,7 +305,7 @@
 
   08 Feb 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
-  Added a patch for mips that changes the file output so that´s work with libtool
+  Added a patch for mips that changes the file output so that's work with libtool
 
   25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
   Update version.

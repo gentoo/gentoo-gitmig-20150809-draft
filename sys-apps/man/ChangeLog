@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.75 2005/09/03 22:20:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.76 2005/09/17 00:31:13 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   03 Sep 2005; Mike Frysinger <vapier@gentoo.org> man-1.5p.ebuild,
   man-1.6-r1.ebuild, man-1.6a.ebuild:
@@ -74,7 +77,7 @@
 
   03 Oct 2004; Mike Frysinger <vapier@gentoo.org>
   +files/man-1.5m-locale-order.patch, +man-1.5m-r2.ebuild:
-  Add patch to fix locale support #37778 by Magnus Lind / Antti M‰kel‰.
+  Add patch to fix locale support #37778 by Magnus Lind / Antti M√§kel√§.
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> man-1.5m-r1.ebuild:
   Marked stable on mips.
@@ -104,7 +107,7 @@
   15 Jun 2004; <solar@gentoo.org> man-1.5l-r6.ebuild, man-1.5m-r1.ebuild:
   fixed up nls usage for uclibc
 
-  11 Jun 2004; Bryan ÿstergaard <kloeri@gentoo.org> man-1.5m-r1.ebuild:
+  11 Jun 2004; Bryan √òstergaard <kloeri@gentoo.org> man-1.5m-r1.ebuild:
   Stable on alpha.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> man-1.5m-r1.ebuild:
@@ -118,7 +121,7 @@
   03 May 2004; Mike Frysinger <vapier@gentoo.org> :
   Install cronjob as makewhatis instead of makewhatis.cron #40506 by Peter Simons.
 
-  01 May 2004; Bryan ÿstergaard <kloeri@gentoo.org> +man-1.5m-r1.ebuild:
+  01 May 2004; Bryan √òstergaard <kloeri@gentoo.org> +man-1.5m-r1.ebuild:
   Add posix sections to MANSECT, bug #47806.
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> man-1.5m.ebuild:

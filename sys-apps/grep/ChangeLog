@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.52 2005/09/16 08:02:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.53 2005/09/17 00:29:20 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> grep-2.5.1-r8.ebuild:
   Mark 2.5.1-r8 stable on alpha
@@ -19,7 +22,7 @@
 
   13 Jun 2005; Mike Frysinger <vapier@gentoo.org>
   +files/grep-2.5.1-libintl.patch, grep-2.5.1-r8.ebuild:
-  Add a patch by Diego Pettenò to fix BSD support #92586.
+  Add a patch by Diego PettenÃ² to fix BSD support #92586.
 
 *grep-2.5.1-r8 (12 Jun 2005)
 

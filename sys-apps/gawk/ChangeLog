@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.63 2005/09/16 08:01:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.64 2005/09/17 00:28:27 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> gawk-3.1.4-r4.ebuild:
   Mark 3.1.4-r4 stable on alpha
@@ -32,7 +35,7 @@
   06 May 2005; Mike Frysinger <vapier@gentoo.org>
   files/filefuncs/filefuncs.c, gawk-3.1.4-r4.ebuild:
   Add switch capabilities #91182 by Ekatalog and BSD support #90847 by Diego
-  Pettenò.
+  PettenÃ².
 
 *gawk-3.1.4-r4 (19 Feb 2005)
 

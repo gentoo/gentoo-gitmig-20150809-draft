@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.19 2005/07/23 21:30:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.20 2005/09/17 00:26:19 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   23 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> ethtool-2.ebuild:
   Stable on sh.
@@ -24,7 +27,7 @@
 *ethtool-3 (11 Feb 2005)
 
   11 Feb 2005; Mike Frysinger <vapier@gentoo.org> +ethtool-3.ebuild:
-  Version bump and magically fix #55941 by Milus János in the process.
+  Version bump and magically fix #55941 by Milus JÃ¡nos in the process.
 
 *ethtool-2 (29 Sep 2004)
 
