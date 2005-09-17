@@ -11,6 +11,15 @@ Fix make dependencies so `make -j` works
  		$(LDEXE) $(LDFLAGS) -o $(PL) $(PLOBJ) -L../lib/$(ARCH) -lpl $(LNLIBS)
  
  $(STARTUPPATH):	$(PLINIT) $(PLSRC) $(PL)
+@@ -177,7 +177,7 @@
+ 		$(AR) r $@ $(OBJ) $(RCOBJ) $(XOBJ)
+ 		$(RANLIB) $@
+ 
+-$(RUNTIMEDIR)/$(SHAREDV):	$(RUNTIMEDIR) $(OBJ) $(RCOBJ) $(XOBJ)
++$(RUNTIMEDIR)/$(SHAREDV):	dirs $(OBJ) $(RCOBJ) $(XOBJ)
+ 		$(CC) -shared $(COFLAGS) -o $@ $(SONAMEOPT) \
+ 			$(OBJ) $(RCOBJ) $(XOBJ) $(LIBS)
+ 
 @@ -188,7 +188,7 @@
  rc-lib:
  		@(cd rc && $(MAKE) COFLAGS="$(COFLAGS)")
@@ -33,3 +42,12 @@ Fix make dependencies so `make -j` works
  pl-wam.o:	pl-alloc.c pl-index.c pl-fli.c
  
  $(srcdir)/pl-funct.ih:	$(srcdir)/ATOMS
+@@ -262,7 +258,7 @@
+ frame.o:
+ 		ar x `$(CC) -print-libgcc-file-name` $@
+ 
+-plld:		$(srcdir)/plld.c
++plld:		$(srcdir)/plld.c parms.h
+ 		$(CC) -I. -I$(srcdir) $(CFLAGS) -o $@ $(srcdir)/plld.c
+ 
+ tags:		$(srcdir)/TAGS
