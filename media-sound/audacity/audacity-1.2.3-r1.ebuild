@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.2 2005/05/15 20:03:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.3 2005/09/17 19:45:35 halcy0n Exp $
 
 inherit wxwidgets eutils
 
@@ -18,8 +18,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 # amd64: causes xfce pannel to crash...
-# Bad x86 assembly: #73248
-KEYWORDS="~amd64 ~ppc ~sparc -x86 ~ppc64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc64"
 
 DEPEND="=x11-libs/wxGTK-2.4*
 	>=app-arch/zip-2.3
@@ -34,6 +33,11 @@ DEPEND="=x11-libs/wxGTK-2.4*
 	encode? ( >=media-sound/lame-3.92 )"
 
 WX_GTK_VER="2.4"
+
+src_unpack() {
+	unpack "${A}"
+	epatch "${FILESDIR}"/${P}-x86.patch #bug #73248
+}
 
 src_compile() {
 	if ! use gtk2; then

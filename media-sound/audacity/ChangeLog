@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.34 2005/05/15 20:03:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.35 2005/09/17 19:45:35 halcy0n Exp $
+
+  17 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/audacity-1.2.3-x86.patch, audacity-1.2.3-r1.ebuild:
+  Thanks to basic <basic AT mozdev DOT org> for the patch to fix compilation on
+  x86.  Marking ~x86 for testing. bug #73248
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org> audacity-1.2.1.ebuild,
   audacity-1.2.2.ebuild, audacity-1.2.3.ebuild, audacity-1.2.3-r1.ebuild:
