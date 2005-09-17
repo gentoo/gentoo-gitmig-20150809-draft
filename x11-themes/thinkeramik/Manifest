@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac11f5dc2beea3b30d591868b6fd7358 thinkeramik-3.2.1.ebuild 532
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 deb6682c0a2ef3fbb7943df58bb14388 ChangeLog 3711
 MD5 d025e2ca12d8b1dc6930de25670e12c7 files/digest-thinkeramik-3.2.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2mWLLFUmVNQ7rkRAiIAAJ4sMBNjqJuilW2McUnnDd6Ytq03/QCfSb92
+g3kl5JCR44raQt4uZ700YRI=
+=lP0M
+-----END PGP SIGNATURE-----
