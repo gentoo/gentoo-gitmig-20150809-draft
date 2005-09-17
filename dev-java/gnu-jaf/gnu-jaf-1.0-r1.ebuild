@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0.ebuild,v 1.5 2005/06/27 02:59:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r1.ebuild,v 1.1 2005/09/17 20:36:13 betelgeuse Exp $
 
 inherit java-pkg
 
