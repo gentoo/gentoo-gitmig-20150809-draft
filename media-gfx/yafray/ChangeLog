@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.21 2005/09/04 14:02:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.22 2005/09/17 03:11:36 vanquirius Exp $
+
+  17 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -files/yafray-gcc34-fix.gz, yafray-0.0.6.ebuild:
+  Move patch to mirrors. See bug 106150.
 
   04 Sep 2005; Simon Stelling <blubb@gentoo.org>
   +files/yafray-0.0.8-64bit.patch, +files/yafray-0.0.8-multilib.patch,
