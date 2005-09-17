@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1.ebuild,v 1.6 2005/02/05 11:16:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1.ebuild,v 1.7 2005/09/17 10:11:43 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.nongnu.org/materm/${P}.tar.gz"
 IUSE="cjk debug jpeg png"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc ~alpha hppa ~mips"
+KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 
 RDEPEND="virtual/x11
 	jpeg? ( media-libs/jpeg )
