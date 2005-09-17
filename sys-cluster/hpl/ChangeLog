@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/hpl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.6 2005/09/01 11:59:18 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.7 2005/09/17 00:35:25 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *hpl-1.0-r2 (01 Sep 2005)
 
@@ -23,4 +26,4 @@
 *hpl-1.0 (26 Mar 2004)
 
   26 Mar 2004; Michael Imhof <tantive@gentoo.org> hpl-1.0.ebuild:
-  Initial release. Made with the help of Kristian Jerpetjøn <unsolo@sysrq.no>.
+  Initial release. Made with the help of Kristian JerpetjÃ¸n <unsolo@sysrq.no>.
