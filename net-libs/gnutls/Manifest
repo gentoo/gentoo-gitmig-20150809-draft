@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 08081d2e15793082b967a6f59be65f4f gnutls-1.0.17.ebuild 2420
 MD5 0141dbf41e5461d24ef5bc995e3f4848 gnutls-1.0.25.ebuild 2219
 MD5 4afc7479357b55dc6feca54b9b3f3563 gnutls-1.2.3-r1.ebuild 2433
@@ -16,3 +19,10 @@ MD5 dcfcf7e6b927a12c18c6c4805bc07490 files/digest-gnutls-1.2.5 66
 MD5 26cd0c7e5a105e72808024e198a3ce35 files/digest-gnutls-1.2.6 66
 MD5 29d3e8994448eb3fe1d15c6720621b40 files/gnutls-1.0.17-extra.h.patch 479
 MD5 29d8c263065fa5908f9b6d9e5ea265b7 files/gnutls-1.2.3-gcc4.patch 417
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLAfAKf2g/qXtneoRAoU2AJ4ujWvP9sO0oHtEtrIlNuAQ4XO6ywCgvtYa
+EM4QQ5Ecggic/mugmR/i7VU=
+=myKG
+-----END PGP SIGNATURE-----
