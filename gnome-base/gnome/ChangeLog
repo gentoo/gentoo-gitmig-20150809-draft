@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.189 2005/09/14 18:09:16 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.190 2005/09/17 12:10:25 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnome-2.10.2.ebuild,
+  gnome-2.12.0.ebuild:
+  Mark 2.12.0 2.10.2 ~ia64
 
   14 Sep 2005; John N. Laliberte <allanonjl@gentoo.org> gnome-2.12.0.ebuild:
   add information about adding yourself to plugdev in postinst
