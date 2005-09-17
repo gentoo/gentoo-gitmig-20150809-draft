@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.21 2005/09/06 02:54:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.22 2005/09/17 00:39:59 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   06 Sep 2005; Jason Wever <weeve@gentoo.org> ntfsprogs-1.11.2.ebuild:
   Added ~sparc keyword.
@@ -22,12 +25,12 @@
 
   29 Jul 2005; Mike Frysinger <vapier@gentoo.org>
   +files/ntfsprogs-1.11.1-utf8.patch, +ntfsprogs-1.11.1-r1.ebuild:
-  Add patch from upstream to fix UTF8 support #100633 by Petteri Räty.
+  Add patch from upstream to fix UTF8 support #100633 by Petteri RÃ¤ty.
 
 *ntfsprogs-1.11.1 (22 Jul 2005)
 
   22 Jul 2005; Mike Frysinger <vapier@gentoo.org> +ntfsprogs-1.11.1.ebuild:
-  Version bump #99770 by Petteri Räty.
+  Version bump #99770 by Petteri RÃ¤ty.
 
 *ntfsprogs-1.9.4 (04 Nov 2004)
 

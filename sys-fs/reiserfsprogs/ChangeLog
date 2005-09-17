@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.36 2005/04/09 13:18:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.37 2005/09/17 00:42:25 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org>
   reiserfsprogs-3.6.19.ebuild:
@@ -55,7 +58,7 @@
 
   21 Aug 2004; Mike Frysinger <vapier@gentoo.org>
   +reiserfsprogs-3.6.18.ebuild:
-  Version bump #60317 by Jérémie Delente.
+  Version bump #60317 by JÃ©rÃ©mie Delente.
 
   30 Jun 2004; Guy Martin <gmsoft@gentoo.org> reiserfsprogs-3.6.17.ebuild:
   Marked stable on hppa.
@@ -63,7 +66,7 @@
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org> reiserfsprogs-3.6.17.ebuild:
   stable on x86, alpha, amd64 and ia64
 
-  17 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  17 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   reiserfsprogs-3.6.17.ebuild:
   Add ~alpha.
 

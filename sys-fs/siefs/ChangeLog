@@ -1,12 +1,15 @@
 # ChangeLog for sys-fs/siefs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.4 2005/04/13 18:42:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.5 2005/09/17 00:43:19 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *siefs-0.5 (13 Apr 2005)
 
   13 Apr 2005; Stefan Schweizer <genstef@gentoo.org> -siefs-0.4.ebuild,
   +siefs-0.5.ebuild:
-  Version bump thanks to Robert Führicht <the_master_of_disaster@gmx.at> in
+  Version bump thanks to Robert FÃ¼hricht <the_master_of_disaster@gmx.at> in
   bug 88873 and pylon for testing, removing old ebuild
 
   25 Mar 2005; <blubb@gentoo.org> siefs-0.4.ebuild:
@@ -20,5 +23,5 @@
   16 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +siefs-0.4.ebuild:
   Initial version thanks to Pawel Maczewski <dziubiak@civ.pl> and Robert
-  Führicht <the_master_of_disaster@gmx.at>, closes bug 38276
+  FÃ¼hricht <the_master_of_disaster@gmx.at>, closes bug 38276
 

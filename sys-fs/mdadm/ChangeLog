@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.15 2005/09/16 11:36:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.16 2005/09/17 00:39:05 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> mdadm-1.12.0.ebuild:
   Mark 1.12.0 stable on alpha
@@ -31,11 +34,11 @@
   Version bump #98286 by Daniel Webert.
 
   10 Jun 2005; Mike Frysinger <vapier@gentoo.org> files/raid-start.sh:
-  Tweak device node creation to handle subpaths #95593 by Milan Holz‰pfel.
+  Tweak device node creation to handle subpaths #95593 by Milan Holz√§pfel.
 
   10 Jun 2005; Mike Frysinger <vapier@gentoo.org> +files/raid-stop.sh,
   mdadm-1.9.0-r1.ebuild, mdadm-1.11.0.ebuild:
-  Add a raid-stop script by Milan Holz‰pfel #95594.
+  Add a raid-stop script by Milan Holz√§pfel #95594.
 
 *mdadm-1.11.0 (11 Apr 2005)
 
@@ -72,7 +75,7 @@
   05 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/mdadm.rc,
   +mdadm-1.8.1.ebuild:
   Version bump #71675 by Neil Bothwick. Make sure nroff isnt run #73389 by
-  Gustaf Bjˆrklund. Add init.d script #57321 by Remy Blank.
+  Gustaf Bj√∂rklund. Add init.d script #57321 by Remy Blank.
 
   25 Nov 2004; Guy Martin <gmsoft@gentoo.org> mdadm-1.7.0.ebuild:
   Stable on hppa.
