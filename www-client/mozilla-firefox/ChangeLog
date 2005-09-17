@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.77 2005/09/16 19:55:41 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.78 2005/09/17 01:08:33 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-1.0.6-r7.ebuild:
+  Mark 1.0.6-r7 stable on ia64
 
   16 Sep 2005; Jose Luis Rivero <yoswink@gentoo.org>
   mozilla-firefox-1.0.6-r7.ebuild:
