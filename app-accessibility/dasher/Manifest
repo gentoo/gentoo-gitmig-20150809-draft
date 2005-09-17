@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 266e95dffa745c00a8fa6f0d5c4ba811 dasher-3.2.15.ebuild 1512
 MD5 645aac23c66d08fa6064bdb7c95c76ef metadata.xml 420
 MD5 b36aedb6555c20ac2d20f53dbeb30989 dasher-3.2.16.ebuild 1738
@@ -10,3 +13,10 @@ MD5 5b4b3e17b421919e17bc182404ffa36c files/digest-dasher-3.2.15 67
 MD5 8f98c5422486b58fc0d6850e20582140 files/digest-dasher-3.2.16 67
 MD5 9fcdb2723451b2020f4736773717c62b files/digest-dasher-3.2.17 67
 MD5 ec3cb701a9f3f224e16cc88cb09f810b files/digest-dasher-3.2.18 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDK/IgKf2g/qXtneoRAtTGAJ9GO4UY6S5SLBHBIqV8iyp7PNIm+wCgvFEW
+Y9c4eoqdEDNIUUj8/p69nGI=
+=h+f0
+-----END PGP SIGNATURE-----

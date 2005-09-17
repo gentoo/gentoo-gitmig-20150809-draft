@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 82a81a4ff2d1ca3c5e91dce1be1d46e2 gnome-speech-0.3.7-r1.ebuild 1976
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 b93458a3eac1714deacfdaf8c4790c79 ChangeLog 6798
 MD5 af77b6880a5acc931bde949ff8ac6a50 files/digest-gnome-speech-0.3.7-r1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDK/LQKf2g/qXtneoRAm3JAJ0Vy9QiMeeKa+1kRw7ySe1nqGFWNgCeOdg6
+JN46Ew39M1BkT908L/imZRk=
+=YeRZ
+-----END PGP SIGNATURE-----
