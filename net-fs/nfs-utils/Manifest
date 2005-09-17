@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9cee4adcef8a47ea4ee35090f7f89b0a metadata.xml 225
 MD5 a5785bca6bda4d00aabdc28e36802df1 nfs-utils-1.0.6-r6.ebuild 2926
 MD5 297d2da334fb6df5e747f61b989ef7ca nfs-utils-1.0.7-r1.ebuild 3272
@@ -12,3 +15,10 @@ MD5 df57bdbe3dfddd40cda65b04509d5957 files/nfs-utils-1.0.6-usn36.patch.gz 5596
 MD5 77b7b275efe6533d3aaf065c89f804ef files/nfs-utils-1.0.7-gcc4.patch 553
 MD5 1892989b0c12f8b6c533a8c6adfb90ff files/nfs.confd 577
 MD5 1f3e6130e4a60767a213d34ff3131ae4 files/nfsmount 1171
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDK/h3Kf2g/qXtneoRApwHAKC9F3kkbZw4PQ5C7zsEEpbpFWJvGwCgpsXb
+Rk4hbITsvH9GR051Hs2j7tg=
+=DWoO
+-----END PGP SIGNATURE-----
