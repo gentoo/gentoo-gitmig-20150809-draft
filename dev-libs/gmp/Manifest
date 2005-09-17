@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 18f4971f6a844a391daab4f169e2c0ae gmp-4.1.4.ebuild 1862
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 7a61a1c0f0f995b4dc06ff8768f5dfcb gmp-4.1.4-r1.ebuild 1715
-MD5 18f4971f6a844a391daab4f169e2c0ae gmp-4.1.4.ebuild 1862
-MD5 bc5274edb31454af0ddfe2f3a0c97ec0 ChangeLog 7153
+MD5 feca3a4a98e623083c9ae14428aa8f43 ChangeLog 7148
+MD5 1dbc1772df649dae89ad8e00042c5b46 files/amd64.patch 1166
 MD5 8c7f521cf77fb56ab019223cf92a6bca files/digest-gmp-4.1.4 62
+MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
 MD5 d70b080c2f0efd82a800ba8a1af7b305 files/ppc64-gmp-acinclude.patch 474
 MD5 8c7f521cf77fb56ab019223cf92a6bca files/digest-gmp-4.1.4-r1 62
-MD5 1dbc1772df649dae89ad8e00042c5b46 files/amd64.patch 1166
-MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK5H6gIKl8Uu19MoRAs8dAJ42oSK/f8+FddBJh0LIp7DNj9U4lQCff6+0
-1uVvOQtfeAxfWVQuqLDI6Tg=
-=G1fU
------END PGP SIGNATURE-----
