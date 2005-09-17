@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcpuload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.17 2005/02/05 16:37:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcpuload/ChangeLog,v 1.18 2005/09/17 10:10:07 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> wmcpuload-1.0.1.ebuild:
+  Mark 1.0.1 stable on alpha
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> wmcpuload-1.0.1.ebuild:
   ~alpha keyword, bug 78658.
