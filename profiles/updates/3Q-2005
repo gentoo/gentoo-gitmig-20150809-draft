@@ -63,3 +63,4 @@ move app-i18n/manpages-pl app-i18n/man-pages-pl
 move app-i18n/manpages-ru app-i18n/man-pages-ru
 move net-misc/asterisk-res_bonjour net-misc/asterisk-res_bondia
 move dev-java/jai-bin dev-java/sun-jai-bin
+move dev-java/jimi dev-java/sun-jimi
