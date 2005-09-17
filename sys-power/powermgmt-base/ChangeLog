@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.4 2005/07/11 14:31:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.5 2005/09/17 00:45:09 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   11 Jul 2005; Simon Stelling <blubb@gentoo.org> powermgmt-base-1.21.ebuild:
   added ~amd64 keyword
@@ -19,5 +22,5 @@
 
   29 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +powermgmt-base-1.21.ebuild:
-  New ebuild thanks to Dennis Nienhüser <fragfred@gmx.de> in bug 76516
+  New ebuild thanks to Dennis NienhÃ¼ser <fragfred@gmx.de> in bug 76516
 
