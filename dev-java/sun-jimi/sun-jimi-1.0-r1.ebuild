@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/sun-jimi-1.0.ebuild,v 1.3 2005/07/11 21:01:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/sun-jimi-1.0-r1.ebuild,v 1.1 2005/09/17 10:13:48 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,6 +14,9 @@ IUSE="doc"
 DEPEND=">=virtual/jdk-1.3
 		app-arch/unzip"
 RDEPEND=">=virtual/jre-1.3"
+
+# The license seems to permit distributing the binaries so we would be able to 
+# remove this by providing sun-jimi-bin
 RESTRICT="fetch"
 
 S=${WORKDIR}/Jimi
@@ -40,6 +43,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar src/${PN}.jar
 
-	dodoc Readme License
+	dodoc Readme
 	use doc && java-pkg_dohtml -r docs/*
 }
