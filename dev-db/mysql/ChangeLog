@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.237 2005/09/16 08:34:02 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.238 2005/09/17 10:57:11 kloeri Exp $
 
   16 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
   mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:
@@ -477,7 +477,7 @@
   02 Nov 2004; Markus Rothe <corsair@gentoo.org> mysql-4.0.22.ebuild:
   Marked ppc64; bug #69668
 
-  02 Nov 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> mysql-4.0.22.ebuild:
+  02 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.22.ebuild:
   Stable on alpha, bug 69668.
 
   02 Nov 2004; Lars Weiler <pylon@gentoo.org> mysql-4.0.22.ebuild:
@@ -519,7 +519,7 @@
   18 Oct 2004; Tom Gall <tgall@gentoo.org> mysql-4.0.21.ebuild:
   stable on ppc64, bug #67062
 
-  18 Oct 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
+  18 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
   Stable on alpha, bug 67062.
 
   18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.21.ebuild:
@@ -559,7 +559,7 @@
   mysql-4.0.20-r1.ebuild:
   Stable on x86. Bug #60744.
 
-  25 Aug 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> mysql-3.23.58-r1.ebuild,
+  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-3.23.58-r1.ebuild,
   mysql-4.0.20-r1.ebuild:
   Stable on alpha, bug 60744.
 
@@ -587,7 +587,7 @@
   16 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.20.ebuild:
   Stable on sparc and hppa
 
-  14 Jul 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> mysql-4.0.20.ebuild:
+  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.20.ebuild:
   Stable on alpha.
 
   10 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.20.ebuild:
@@ -648,7 +648,7 @@
   14 Apr 2004; Jason Wever <weeve@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on sparc wrt bug #46242.
 
-  14 Apr 2004; Bryan ÃÂstergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
+  14 Apr 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on Alpha.
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> mysql-4.0.18-r1.ebuild:
