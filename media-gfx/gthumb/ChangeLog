@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.48 2005/08/24 16:56:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.49 2005/09/17 00:37:21 agriffis Exp $
+
+*gthumb-2.6.7 (17 Sep 2005)
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> gthumb-2.6.5.ebuild,
+  +gthumb-2.6.7.ebuild:
+  Bump to 2.6.7 (from 2.6.5).  Mark 2.6.5 stable on amd64
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> gthumb-2.6.5.ebuild:
   stable on ia64
