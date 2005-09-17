@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.25 2005/06/30 04:37:16 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.26 2005/09/17 02:03:00 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> pypanel-2.3.ebuild:
+  Mark 2.3 stable on alpha
 
 *pypanel-2.4 (30 Jun 2005)
 
