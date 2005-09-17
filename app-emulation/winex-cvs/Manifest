@@ -1,4 +1,14 @@
-MD5 4074ce5fe16676a7e751d99cda6f869b ChangeLog 5686
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 831f7b86c316347f987a1cef640c3e6a winex-cvs-3000.ebuild 1332
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
-MD5 50b98e9587bc2e652709dc8957b141da winex-cvs-3000.ebuild 1337
+MD5 7e88e0625e7b92d38eb1d3d6d139ab31 ChangeLog 5805
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-winex-cvs-3000 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2pTLLFUmVNQ7rkRAsHwAJ9SilIUrZ8tjVfumi8vhmj8i2V2VQCgpNn+
+sJZTr+FgWqiYoxNGBhA45K4=
+=xIHE
+-----END PGP SIGNATURE-----
