@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4458 2005/09/17 22:08:29 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4459 2005/09/17 22:48:42 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1668,9 +1668,6 @@ dev-db/mergeant
 # libwmfun completes compiling but doesn't appear to support PLDrawString
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
-
-#untested, author mentions an error
-media-libs/id3lib-docs
 
 # broken (achim)
 app-text/sgml2x
