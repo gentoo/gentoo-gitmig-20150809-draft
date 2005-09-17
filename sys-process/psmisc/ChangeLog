@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.14 2005/09/16 11:56:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.15 2005/09/17 00:46:26 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> psmisc-21.6.ebuild:
   Mark 21.6 stable on alpha
@@ -66,7 +69,7 @@
   01 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   -files/psmisc-21.4-no-nls-selinux.patch, files/psmisc-21.4-no-nls.patch,
   files/psmisc-21.4-selinux.diff.bz2, psmisc-21.4.ebuild:
-  Clean up the patches #76230 by Milus János.
+  Clean up the patches #76230 by Milus JÃ¡nos.
 
   07 Dec 2004; Mike Frysinger <vapier@gentoo.org> psmisc-21.4.ebuild:
   Remove C++ requirement #73632.
@@ -92,7 +95,7 @@
   files/psmisc-21.2-no-nls.patch, files/psmisc-21.4-no-nls.patch:
   added patch to allow the disabling of nls for psmisc
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> psmisc-21.4.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> psmisc-21.4.ebuild:
   Stable on alpha.
 
   27 Apr 2004; Michael McCabe <randy@gentoo.org> psmisc-21.4.ebuild:
