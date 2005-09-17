@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 9de583fa64169fdefb15dcfc3f6ad294 ssmtp-2.60.7-r1.ebuild 2851
 MD5 095a09f1d05ecea6c3b97959f6b7a316 ssmtp-2.60.9.ebuild 3124
@@ -12,3 +15,10 @@ MD5 bcf2e5652cff099f6a6fd410a127c900 files/mailer.conf 349
 MD5 f466deeaec0316507961656f37af7000 files/ssmtp-2.60.4-md5.patch 1509
 MD5 5208fda9912caf3afd94108e6276167e files/ssmtp-2.60.7-logfile.patch 1256
 MD5 93225fbc5fd7b8e5500c7b1c85b63fdf files/starttls.diff 4277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLC+IKf2g/qXtneoRAt+SAKCGqongOUQK6k/u/5eReocCvIQN9wCeKCaW
+mCMqfDNCAICNdePRp5Fmz0w=
+=OrZF
+-----END PGP SIGNATURE-----
