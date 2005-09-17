@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/globespan-adsl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.15 2005/09/17 01:00:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.16 2005/09/17 08:30:57 mrness Exp $
+
+*globespan-adsl-0.11_beta1 (17 Sep 2005)
+
+  17 Sep 2005; Alin Nastac <mrness@gentoo.org>
+  +globespan-adsl-0.11_beta1.ebuild:
+  Version bump (#101428).
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   globespan-adsl-0.10.ebuild:
