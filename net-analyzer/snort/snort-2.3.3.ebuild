@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3.ebuild,v 1.4 2005/08/23 13:50:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3.ebuild,v 1.5 2005/09/17 04:11:28 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	prelude? ( >=dev-libs/libprelude-0.8 )
+	prelude? ( <dev-libs/libprelude-0.9.0_rc1 )
 	odbc? ( dev-db/unixODBC )
 	inline? (
 				~net-libs/libnet-1.0.2a
@@ -37,11 +37,11 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	gnuconfig_update
 
 	if use flexresp || use inline ; then
-		epatch ${FILESDIR}/2.3.0-libnet-1.0.patch
+		epatch "${FILESDIR}/2.3.0-libnet-1.0.patch"
 	fi
 
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" \
@@ -54,18 +54,21 @@ src_unpack() {
 	fi
 
 	if use sguil ; then
-		cd ${S}/src/preprocessors
-		epatch ${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_portscan_sguil.patch
-		epatch ${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_stream4_sguil.patch
-		cd ${S}
+		cd "${S}/src/preprocessors"
+		epatch "${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_portscan_sguil.patch"
+		epatch "${WORKDIR}/sguil-0.5.3/sensor/snort_mods/2_1/spp_stream4_sguil.patch"
+		cd "${S}"
 	fi
 
 	if use snortsam ; then
 		cd ..
 		einfo "Applying snortsam patch"
-		./patchsnort.sh ${S} || die "snortsam patch failed"
-		cd ${S}
+		./patchsnort.sh "${S}" || die "snortsam patch failed"
+		cd "${S}"
 	fi
+
+	# bug 105852
+	epatch "${FILESDIR}/${P}-log.c.diff"
 
 	einfo "Regenerating autoconf/automake files"
 	autoreconf -f -i || die "autoreconf failed"
@@ -103,7 +106,7 @@ src_install() {
 
 	keepdir /var/log/snort/
 
-	dodoc COPYING LICENSE doc/*
+	dodoc LICENSE doc/*
 	docinto schemas ; dodoc schemas/*
 
 	insinto /etc/snort
@@ -113,11 +116,11 @@ src_install() {
 
 	use prelude && doins etc/prelude-classification.config
 
-	newinitd ${FILESDIR}/snort.rc6 snort
-	newconfd ${FILESDIR}/snort.confd snort
+	newinitd "${FILESDIR}/snort.rc6" snort
+	newconfd "${FILESDIR}/snort.confd" snort
 
-	chown snort:snort ${D}/var/log/snort
-	chmod 0770 ${D}/var/log/snort
+	chown snort:snort "${D}/var/log/snort"
+	chmod 0770 "${D}/var/log/snort"
 }
 
 pkg_postinst() {

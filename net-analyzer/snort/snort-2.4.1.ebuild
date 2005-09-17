@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.0.ebuild,v 1.7 2005/09/04 02:14:27 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.1.ebuild,v 1.1 2005/09/17 04:11:28 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -42,11 +42,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	gnuconfig_update
 
 	if use flexresp || use inline ; then
-		epatch ${WORKDIR}/2.4.0-libnet-1.0.patch
+		epatch "${WORKDIR}/2.4.0-libnet-1.0.patch"
 	fi
 
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
@@ -58,15 +58,15 @@ src_unpack() {
 	fi
 
 	if use sguil ; then
-		epatch ${WORKDIR}/2.4.0-spp_portscan_sguil.patch
-		epatch ${WORKDIR}/2.4.0-spp_stream4_sguil.patch
+		epatch "${WORKDIR}/2.4.0-spp_portscan_sguil.patch"
+		epatch "${WORKDIR}/2.4.0-spp_stream4_sguil.patch"
 	fi
 
 	if use snortsam ; then
 		cd ..
 		einfo "Applying snortsam patch"
-		./patchsnort.sh ${S} || die "snortsam patch failed"
-		cd ${S}
+		./patchsnort.sh "${S}" || die "snortsam patch failed"
+		cd "${S}"
 	fi
 
 	einfo "Regenerating autoconf/automake files"
@@ -104,7 +104,7 @@ src_install() {
 
 	keepdir /var/log/snort/
 
-	dodoc COPYING LICENSE doc/*
+	dodoc LICENSE doc/*
 	docinto schemas ; dodoc schemas/*
 
 	insinto /etc/snort
@@ -114,15 +114,15 @@ src_install() {
 
 	# use prelude && doins etc/prelude-classification.config
 
-	newinitd ${FILESDIR}/snort.rc6 snort
-	newconfd ${FILESDIR}/snort.confd snort
+	newinitd "${FILESDIR}/snort.rc6" snort
+	newconfd "${FILESDIR}/snort.confd" snort
 
-	chown snort:snort ${D}/var/log/snort
-	chmod 0770 ${D}/var/log/snort
+	chown snort:snort "${D}/var/log/snort"
+	chmod 0770 "${D}/var/log/snort"
 
 	# install community rules
-	mkdir ${D}/etc/snort/rules
-	mv ${WORKDIR}/rules/* ${D}/etc/snort/rules/
+	mkdir "${D}/etc/snort/rules"
+	mv "${WORKDIR}/rules/*" "${D}/etc/snort/rules/"
 }
 
 pkg_postinst() {
