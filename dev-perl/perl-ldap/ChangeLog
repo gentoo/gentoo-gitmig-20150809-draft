@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.31 2005/09/08 21:37:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.32 2005/09/17 15:33:09 cryos Exp $
+
+  17 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> perl-ldap-0.33.ebuild:
+  Stable on amd64.
 
   08 Sep 2005; Aron Griffis <agriffis@gentoo.org> perl-ldap-0.33.ebuild:
   Mark 0.33 stable on alpha
