@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.17 2005/08/26 14:14:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sawfish-themes/sawfish-themes-0.0.1-r3.ebuild,v 1.18 2005/09/17 02:12:21 agriffis Exp $
 
 DESCRIPTION="Some nice themes for Sawfish"
 HOMEPAGE="http://themes.freshmeat.net/"
@@ -60,7 +60,7 @@ SRC_URI="${THEME_URI}/absolutedarkness/absolutedarkness-0.30.tar.gz
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~ia64 ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="=x11-wm/sawfish-1*"
