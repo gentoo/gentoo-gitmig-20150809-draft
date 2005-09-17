@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.34 2005/09/04 12:40:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.35 2005/09/17 22:38:45 flameeyes Exp $
+
+*id3lib-3.8.3-r4 (17 Sep 2005)
+
+  17 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/id3lib-3.8.3-autoconf259.patch,
+  +files/id3lib-3.8.3-doxyinput.patch, +id3lib-3.8.3-r4.ebuild:
+  Examples are now installed with examples useflag. The doc useflag builds and
+  installs API (doxygen) documentation that supercedes id3lib-docs package.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> id3lib-3.8.3-r3.ebuild:
   Don't install INSTALL file.
