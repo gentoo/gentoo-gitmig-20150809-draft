@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.13 2005/02/05 16:43:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemload/ChangeLog,v 1.14 2005/09/17 10:10:30 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> wmmemload-0.1.6.ebuild:
+  Mark 0.1.6 stable on alpha
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> wmmemload-0.1.6.ebuild:
   ~alpha keyword, bug 78659.
