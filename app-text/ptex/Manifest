@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d2fd604b88f163116f23670ca84b1815 metadata.xml 531
 MD5 6159b18f18d59387df77cb2813192347 ptex-3.1.4-r2.ebuild 3526
 MD5 3f169da4e4346adecedf12050b56a97e ptex-3.1.5.ebuild 3535
@@ -19,3 +22,10 @@ MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
 MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLDV/Kf2g/qXtneoRAsWDAKCDvlTMR/hmq7vpmRhM3aW8bpkLcQCeI52k
+S7HOoiNS3h2cU7CWcqw5PWA=
+=8N5l
+-----END PGP SIGNATURE-----

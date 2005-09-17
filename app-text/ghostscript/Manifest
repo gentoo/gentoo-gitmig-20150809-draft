@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef2f2a5b720a11cdbf3514c1fdfe5d80 ghostscript-7.05.6-r2.ebuild 2939
 MD5 e5c681abcdd4309829734a5f91ab007b ghostscript-7.07.1-r7.ebuild 4288
 MD5 0adb31bdf1827f38952f2f0dd249e926 ghostscript-7.07.1-r8.ebuild 5491
@@ -36,3 +39,10 @@ MD5 b2ca914ffcff3e5296d6b5acc7fac182 files/gs7.07.1-ps2ps.patch 244
 MD5 1d5618d793799f7247d624ced0dea493 files/gs7.07.1-tempfile.patch 3123
 MD5 b7ca313a24a8adf4c527c0a097354f60 files/digest-ghostscript-7.07.1-r10 212
 MD5 5b476654e84a9748e3d56d86f264b277 files/ghostscript-7.07.1-64bit-cmyk.patch 1777
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLDUuKf2g/qXtneoRAnjrAJ0UrongjEd6HrYQvIx8smJdg/r+wACgorx6
+LJlGU/CQUR+8oXWUovNseIA=
+=SmCq
+-----END PGP SIGNATURE-----

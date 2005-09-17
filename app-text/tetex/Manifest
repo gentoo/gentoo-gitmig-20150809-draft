@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 8f27cd5e7c06b0c37851607799f69316 tetex-1.0.7-r13.ebuild 4770
 MD5 ebb5312ccec7bb8f4d6dba5dfe889c42 tetex-2.0.2-r5.ebuild 1158
@@ -22,3 +25,10 @@ MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
 MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0-r3 202
 MD5 0e727f58dac2997f22e90f51b2d79da3 files/tetex-3.0-kpathsea-pic.patch 1590
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLDWsKf2g/qXtneoRAn3PAJ9tYHCst6GhtTZYt/QYfND6/qKv2gCeIGH+
+5EVvTCBwnKeVj+TOzYboISg=
+=47f4
+-----END PGP SIGNATURE-----
