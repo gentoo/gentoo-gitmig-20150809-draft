@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2x
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.13 2005/09/09 02:02:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.14 2005/09/17 02:04:14 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> x2x-1.27-r1.ebuild:
+  Mark 1.27-r1 stable on alpha
 
   08 Sep 2005; Tom Gall <tgall@gentoo.org> x2x-1.27-r1.ebuild:
   stable on ppc Bug #105307
