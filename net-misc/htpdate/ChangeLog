@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.8 2005/09/15 18:08:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.9 2005/09/17 13:57:51 dertobi123 Exp $
+
+  17 Sep 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  htpdate-0.8.7.ebuild:
+  Added ~hppa Keyword
 
   15 Sep 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   htpdate-0.8.2.ebuild, htpdate-0.8.7.ebuild:
