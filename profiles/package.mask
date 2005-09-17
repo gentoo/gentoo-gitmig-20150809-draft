@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4452 2005/09/16 23:31:47 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4453 2005/09/17 10:17:16 lcars Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andrea Barisani <lcars@gentoo.org> (17 Sep 2005)
+# Waiting for mailer-config stuff
+>=mail-mta/sendmail-8.13.4-r1
 
 # Marcus D. Hanwell <cryos@gentoo.org> (17 Sep 2005)
 # Beta version testing
@@ -1055,10 +1059,6 @@ dev-db/xmysqladmin
 # pending removal
 app-office/gnofin
 gnome-extra/gnobog
-
-# Andrea Barisani <lcars@gentoo.org> (23 Jun 2005)
-# Masked for testing
-=mail-mta/sendmail-8.13.4-r1
 
 # Aaron Walker <ka0ttic@gentoo.org> (20 Jun 2005)
 # testing releases/cvs snaps
