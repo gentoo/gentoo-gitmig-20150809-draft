@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.145 2005/07/23 11:53:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.146 2005/09/17 17:48:30 caleb Exp $
+
+*ruby-1.8.3_pre2 (17 Sep 2005)
+
+  17 Sep 2005; Caleb Tennis <caleb@gentoo.org> +ruby-1.8.3_pre2.ebuild:
+  Version bump
 
   23 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> ruby-1.8.2-r2.ebuild:
   Stable on sh.
