@@ -1,21 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/autotoolset-0.11.4-r1.ebuild,v 1.2 2005/08/30 01:19:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autotoolset/autotoolset-0.11.4-r1.ebuild,v 1.3 2005/09/17 22:54:32 vapier Exp $
 
-inherit eutils
+inherit eutils fixheadtails
 
 DESCRIPTION="colection of small tools to simplify project development with autotools"
 HOMEPAGE="http://autotoolset.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-		 mirror://gentoo/${P}-misc-pending-upstream-fixes.gz"
+	mirror://gentoo/${P}-misc-pending-upstream-fixes.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	sys-devel/autoconf
+DEPEND="sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/libtool
 	app-arch/sharutils
@@ -24,12 +23,10 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${P}.tar.bz2
+	cd "${S}"
 	# http://sourceforge.net/tracker/index.php?func=detail&aid=1107954&group_id=75790&atid=545068
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${DISTDIR}/${P}-misc-pending-upstream-fixes.gz
-}
-
-src_test() {
-	emake check || die "test failed"
+	epatch "${DISTDIR}"/${P}-misc-pending-upstream-fixes.gz
+	ht_fix_file src/gpl/gpl.sh
 }
 
 src_install() {
