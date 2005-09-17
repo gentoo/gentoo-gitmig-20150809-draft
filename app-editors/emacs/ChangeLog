@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.72 2005/08/23 03:12:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.73 2005/09/17 15:14:42 kloeri Exp $
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> emacs-21.4-r1.ebuild:
   stable on ia64
@@ -68,7 +68,7 @@
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> emacs-21.4.ebuild:
   stable on ia64 #79686
 
-  10 Feb 2005; Bryan ?stergaard <kloeri@gentoo.org> emacs-21.4.ebuild:
+  10 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> emacs-21.4.ebuild:
   Stable on alpha, bug 79686.
 
   09 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> emacs-21.4.ebuild:
@@ -119,7 +119,7 @@
   Added Carbon Emacs (aqua USE flag). See bug #64362.
   Also added multi-tty patch.
 
-  19 Oct 2004; Bryan ?stergaard <kloeri@gentoo.org> emacs-21.3-r4.ebuild:
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> emacs-21.3-r4.ebuild:
   ~alpha keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> emacs-21.3-r3.ebuild:
