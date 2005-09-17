@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b0921da33fa1a9737b4a05a75fb07ff6 vym-1.5.0.ebuild 1338
 MD5 71da003bb2109fed15aff6635287c6a6 metadata.xml 222
 MD5 a8db31a703280308e68ff238ef517c6b ChangeLog 850
 MD5 8fce434ffdaec3d9f4f995d4d8f11240 files/digest-vym-1.5.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2jBLLFUmVNQ7rkRAgm/AJ0f+L02mTY7tHdRcCfXuoovcun52QCdGGFr
+MYDacfvSeoS3/zg8YmrWtXM=
+=/meR
+-----END PGP SIGNATURE-----
