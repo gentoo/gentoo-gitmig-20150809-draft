@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.12.0.ebuild,v 1.2 2005/09/12 05:54:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.12.0.ebuild,v 1.3 2005/09/17 14:44:07 agriffis Exp $
 
 inherit virtualx gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static"
 
 RDEPEND=">=media-libs/libart_lgpl-2.3.8
