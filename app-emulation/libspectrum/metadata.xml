@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
-	</maintainer>
+<herd>no-herd</herd>
+<maintainer>
+    <email>vanquirius@gentoo.org</email>
+    <name>Marcelo Goes</name>
+</maintainer>
+<longdescription>
+libspectrum is a library designed to make the input and output of some ZX
+Spectrum emulator files slightly easier. It is intended to be usable on Unix
+variants, Win32 and Mac OS X. Currently, it is mainly (only?) used by Fuse,
+but other Spectrum emulator and utility authors are encouraged to use it.
+</longdescription>
 </pkgmetadata>
