@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2defeec291ade354e5d323a92d5da1ff AppConfig-1.56-r1.ebuild 654
 MD5 f0b8b4d01383f10baaab5443a3ebd68d AppConfig-1.56-r2.ebuild 1135
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
@@ -7,3 +10,10 @@ MD5 7d66af0eceb608490f6fbc44a1c8407e files/blocksep.patch 3053
 MD5 66b0a09e217cd60ed3092e9836c749f3 files/blockwhitespace.patch 479
 MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r1 65
 MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLHk6Kf2g/qXtneoRAiwDAJ0XR99IgcTQdl4NBmM7tfRBN76x1gCgwkTD
+xP/WVsqHtwUTYb9h/YC+bHQ=
+=NQpy
+-----END PGP SIGNATURE-----
