@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.50 2005/09/17 00:49:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.51 2005/09/17 01:29:07 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> xosd-2.2.10.ebuild:
+  Mark 2.2.10 stable on alpha
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
