@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.11 2005/09/11 15:41:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.12 2005/09/17 20:37:03 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.3
-	dev-java/gnu-activation
+	=dev-java/gnu-jaf-1.0-r1
 	=dev-java/gnu-classpath-inetlib-1.0*"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
@@ -24,7 +24,7 @@ src_compile() {
 	# TODO: Add jikes back	
 	# TODO: Useflag this
 	econf \
-		--with-activation-jar=/usr/share/gnu-activation/lib \
+		--with-activation-jar=/usr/share/gnu-jaf-1/lib \
 		--with-inetlib-jar=/usr/share/gnu-classpath-inetlib-1.0/lib \
 		--enable-smtp \
 		--enable-imap \
@@ -33,7 +33,7 @@ src_compile() {
 		--enable-mbox \
 		--enable-maildir \
 		|| die
-	einfo "Configure finished. Compiling... Please wait."
+	echo "Configure finished. Compiling... Please wait."
 	emake || die
 	if use doc; then
 		emake javadoc || die
