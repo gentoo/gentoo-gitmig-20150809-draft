@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.19 2005/05/06 00:10:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.20 2005/09/17 00:20:22 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> airsnort-0.2.3c.ebuild,
   airsnort-0.2.4a.ebuild:
@@ -23,7 +26,7 @@
   +airsnort-0.2.7c.ebuild:
   Version Bump thanks to Torne Wuff <torne-gentoozilla@wolfpuppy.org.uk>,
   Fridtjof Busse <gentoo@fbunet.de>, Romain GAILLEGUE <romain@biscotte.net>,
-  Michael Farnbach <michael@myricanet.com>, Jürgen Hötzel
+  Michael Farnbach <michael@myricanet.com>, JÃ¼rgen HÃ¶tzel
   <gentoo@hoetzel.info> and Martin Gramatke <xmit@gmx.de> in bug 50877
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> airsnort-0.2.4a.ebuild:
