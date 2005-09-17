@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd0b355eb26c0915dea409062a9d8fc3 raidtools-1.00.3-r4.ebuild 1760
 MD5 1bf4cc61cf76ff5cb930966443ea4c89 raidtools-1.00.3-r6.ebuild 1696
 MD5 e5925e14a9189114c4aac437b92ed49a raidtools-1.00.3-r5.ebuild 1689
@@ -16,3 +19,10 @@ MD5 54b6277ec8d8f24e23ece051ea2e8680 files/digest-raidtools-1.00.3-r6 68
 MD5 1ed9388ea5a0f44ceea181fc7ffa2552 files/raidtools-1.00.3-s390x.patch 1515
 MD5 eb64a68bf1a0328f152b2d5251432d2c files/raid-start.sh 1522
 MD5 435ff32ca3b1b4451c986fe8f68fa819 files/raidtools-1.00.3-2.6.Headers.patch 1511
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2Y3LLFUmVNQ7rkRAjWvAKCvZMk2NHxhTyWyjwr8DTEAeumxTwCggtBR
+DTxHBQno6FTEvHjaUBEaSsA=
+=zoeA
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 37433245868392f73714818e958fe608 mdadm-2.1.ebuild 1160
 MD5 087b416e7f17ebbe4f6eb4c96d2519a2 mdadm-1.9.0-r1.ebuild 1235
 MD5 df12771ceeb641ef4fbbadbf745573b6 mdadm-1.11.0.ebuild 1188
@@ -12,3 +15,10 @@ MD5 2f8e7421a23b99428a0f7ed81360532b files/digest-mdadm-1.12.0 64
 MD5 77fed3360e9b6bdfd0721b77c495b750 files/mdadm.rc 849
 MD5 10269af15b3bfdd348686bd88249fe2a files/digest-mdadm-2.1 62
 MD5 b29646ea704acba09b98ff59f87ebff3 files/raid-start.sh 1518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2XqLLFUmVNQ7rkRAsd2AKC/UW87UEEgg3dhqZa/r/pYG2VLFQCdF5G8
+6a00ugez96EeghO2fMq7unk=
+=WwFq
+-----END PGP SIGNATURE-----
