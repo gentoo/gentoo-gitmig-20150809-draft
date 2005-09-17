@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7-r1.ebuild,v 1.3 2005/04/30 09:32:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7-r1.ebuild,v 1.4 2005/09/17 02:10:11 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/epplets-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~alpha"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
