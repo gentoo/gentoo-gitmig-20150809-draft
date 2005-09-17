@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.6 2005/09/17 13:37:10 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.7 2005/09/17 13:45:33 mkay Exp $
+
+  17 Sep 2005; <mkay@gentoo.org> -libgmail-0.0.8.ebuild,
+  -libgmail-0.0.8-r1.ebuild:
+  Removing old versions, since they doesn't work anymore
 
 *libgmail-0.1.1 (17 Sep 2005)
 
