@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.4 2005/04/05 19:26:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.5 2005/09/17 00:19:34 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *foo2zjs-20050319 (05 Apr 2005)
 
@@ -23,6 +26,6 @@
   20 Nov 2004; Stefan Schweizer <genstef@gentoo.org>
   +files/foo2zjs-Makefile.patch, +files/hp-printer-udev.patch,
   +foo2zjs-20041030.ebuild:
-  Adding foo2zjs, thanks to Robert Führicht <the_master_of_disaster@gmx.at> in
+  Adding foo2zjs, thanks to Robert FÃ¼hricht <the_master_of_disaster@gmx.at> in
   bug 65156
 
