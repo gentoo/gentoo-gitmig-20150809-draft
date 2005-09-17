@@ -1,17 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.7 2005/09/17 09:17:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.5.ebuild,v 1.1 2005/09/17 09:17:35 dragonheart Exp $
 
 inherit linux-info eutils
 
 MY_P=netfilter-layer7-v${PV}
 DESCRIPTION="Kernel modules for layer 7 iptables filtering"
 HOMEPAGE="http://l7-filter.sourceforge.net"
-SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
-	mirror://sourceforge/l7-filter/additional_patch_for_2.6.13.diff"
+SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 #break repoman
 #SLOT="${KV}"
@@ -19,29 +18,36 @@ SLOT="0"
 S=${WORKDIR}/${MY_P}
 RDEPEND="net-misc/l7-protocols"
 
-which_patch() {
 
-	if kernel_is 2 4
+which_patch() {
+	if kernel_is ge 2 6 13
 	then
-		PATCH=kernel-${KV_MAJOR}.${KV_MINOR}-layer7-${PV}.patch
+		PATCH=kernel-2.6.13-layer7-${PV}.patch
+	elif kernel_is ge 2 6 11
+	then
+		PATCH=for_older_kernels/kernel-2.6.11-2.6.12-layer7-1.4.patch
 	elif kernel_is ge 2 6 9
 	then
-		if kernel_is ge 2 6 11
-		then
-			PATCH=kernel-2.6.11-layer7-${PV}.patch
-		else
-			PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-1.2.patch
-		fi
-	else
+		PATCH=for_older_kernels/kernel-2.6.9-2.6.10-layer7-1.2.patch
+	elif kernel_is 2 6
+	then
 		# 2.6.0-2.6.8.1
 		PATCH=for_older_kernels/kernel-2.6.0-2.6.8.1-layer7-0.9.2.patch
+	elif kernel_is 2 4
+	then
+		PATCH=kernel-2.4-layer7-${PV}.patch
+	else
+		die "No L7-filter patch for Kernel version ${KV_FULL} - sorry not supported"
 	fi
+}
 
+pkg_setup() {
+	pkg_postinst
 }
 
 src_unpack() {
 
-	pkg_postinst
+	which_patch
 
 	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ]
 	then
@@ -51,17 +57,15 @@ src_unpack() {
 
 	unpack ${MY_P}.tar.gz
 
+	[ ! -f "${S}/${PATCH}" ] && \
+		die "patch ${PATCH} not found. Please enter a bug at bugs.gentoo.org"
+
+
 	cd ${S}
 
 	mkdir  kernel
 	mkdir  kernel/Documentation
 
-	which_patch
-
-	if [ ! -f ${PATCH} ];
-	then
-		die "Patch ${PATCH} fpr Kernel version ${KV_FULL} not supported"
-	fi
 
 	# create needed directories
 	mkdir -p ${S}/kernel/net/ipv4/netfilter/regexp/
@@ -83,13 +87,7 @@ src_unpack() {
 
 	#patch the copied kernel source
 	cd ${S}/kernel
-	EPATCH_OPTS="-F 3" epatch ${S}/${PATCH}
-
-	# bug #102813
-	if kernel_is ge 2 6 11
-	then
-		epatch ${DISTDIR}/additional_patch_for_2.6.13.diff
-	fi
+	EPATCH_OPTS="-F 3" epatch "${S}/${PATCH}"
 }
 
 src_compile() {
@@ -97,14 +95,14 @@ src_compile() {
 }
 
 src_install() {
-	insinto ${KV_DIR}
+	insinto "${KV_DIR}"
 	doins -r kernel/*
 	dodoc CHANGELOG README
 }
 
 
 pkg_postinst() {
-	ewarn "This may not work with all kernels."
+	ewarn "This may not work with all kernels. If it does not work please enter a bug at bugs.gentoo.org"
 	ewarn "This only patches the current kernel source code. (${KV_DIR})"
 	ewarn "Its up to you to recompile the kernel with the l7 options"
 	ewarn
@@ -116,11 +114,6 @@ pkg_prerm() {
 	then
 		einfo 'attempting to unpatch l7-patch from kernel'
 		which_patch
-		if kernel_is ge 2 6 11
-		then
-			patch -F 3 -d ${ROOT}/usr/src/linux -R -p1 \
-				< ${DISTDIR}/additional_patch_for_2.6.13.diff
-		fi
 		cd ${T}
 		unpack ${MY_P}.tar.gz
 		EPATCH_SINGLE_MSG="removing previous patch" \
