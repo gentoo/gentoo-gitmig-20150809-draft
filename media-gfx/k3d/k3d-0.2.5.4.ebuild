@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.7 2005/01/13 07:53:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.2.5.4.ebuild,v 1.8 2005/09/17 01:19:39 vanquirius Exp $
 
 inherit python eutils
 
@@ -8,7 +8,8 @@ IUSE="truetype doc python ruby"
 
 DESCRIPTION="K-3D is a free 3D modeling, animation, and rendering system."
 HOMEPAGE="http://k3d.sourceforge.net"
-SRC_URI="mirror://sourceforge/k3d/${P}-src.tar.bz2"
+SRC_URI="mirror://sourceforge/k3d/${P}-src.tar.bz2
+	mirror://gentoo/${P}-gentoo.patch.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -27,19 +28,15 @@ DEPEND="virtual/x11
 	ruby? ( virtual/ruby )"
 
 src_unpack() {
-
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch.tar.bz2
+	unpack ${A}; cd ${S}
+	epatch "${WORKDIR}/${P}-gentoo.patch"
 
 	# fix python compilation
 	python_version
 	sed -i -e "s:python2.2:python${PYVER}:g" configure
-
 }
 
 src_compile() {
-
 	local myconf="--with-plib --without-graphviz"
 
 	use truetype \
@@ -59,14 +56,10 @@ src_compile() {
 		|| myconf="${myconf} --without-ruby"
 
 	econf ${myconf} || die
-
 	emake "CXXFLAGS=${CXXFLAGS}" || die
-
 }
 
 src_install() {
-
 	einstall || die
-	dodoc AUTHORS INSTALL NEWS README TODO
-
+	dodoc AUTHORS NEWS README TODO
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.13 2005/09/16 22:29:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.14 2005/09/17 01:19:39 vanquirius Exp $
+
+  17 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -files/k3d-0.2.5.4-gentoo.patch.tar.bz2, k3d-0.2.5.4.ebuild:
+  Move patch to mirrors, do not dodoc INSTALL. See bug 106150.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
