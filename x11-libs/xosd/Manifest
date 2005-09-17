@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10956efe64cdc5b4c856238685592839 xosd-2.2.8-r1.ebuild 1033
 MD5 556c8fc6e7bca931c6883bb62128d8fb xosd-2.2.14.ebuild 1554
 MD5 3f2b043bcd5292c5f5834acdbb62d0a4 xosd-2.2.10.ebuild 1038
@@ -10,3 +13,10 @@ MD5 5cc83e3e259529faf0fd390e9d8b7d04 files/xosd-2.2.14-m4.patch 242
 MD5 06e494585c2baa22f89b8916515a7741 files/digest-xosd-2.2.8-r1 63
 MD5 c06ab555d3db962ce6e7d8bfe88940b9 files/digest-xosd-2.2.10 64
 MD5 7a327614154b7eb25a641f0ad4bdec90 files/xosd-2.2.14-bmp-fixes.patch 11472
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2gwLLFUmVNQ7rkRAj5cAKCOyQys3FVR/P0NpT7xLu5i2gnlwACfTTcq
+ySh6UNsKtLWKp7fXCxlXadI=
+=ca0g
+-----END PGP SIGNATURE-----
