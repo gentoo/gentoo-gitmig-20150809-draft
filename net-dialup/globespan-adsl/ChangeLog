@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/globespan-adsl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.14 2005/06/15 21:12:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.15 2005/09/17 01:00:26 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  globespan-adsl-0.10.ebuild:
+  Converted to UTF-8, fixed encoding screwups
 
   15 Jun 2005; Alin Nastac <mrness@gentoo.org> -globespan-adsl-0.9.ebuild:
   Remove old version.
