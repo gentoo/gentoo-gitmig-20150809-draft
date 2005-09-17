@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/kylixlibs3-borqt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/ChangeLog,v 1.7 2005/07/28 21:10:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/ChangeLog,v 1.8 2005/09/17 00:48:10 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> kylixlibs3-borqt-3.0.ebuild,
   kylixlibs3-borqt-3.0-r1.ebuild:
@@ -18,5 +21,5 @@
 
 *kylixlibs3-borqt-3.0 (04 Mar 2003)
 
- 04 Mar 2003; J.Alberto Su·rez L. <bass@gentoo.org> kylixlibs3-borqt-3.0-2.ebuild:
+ 04 Mar 2003; J.Alberto Su√°rez L. <bass@gentoo.org> kylixlibs3-borqt-3.0-2.ebuild:
  First relase
