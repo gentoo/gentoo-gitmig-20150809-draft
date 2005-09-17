@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 880faa9afd65b6b5f67c7c49c24bdd9e serpentine-0.6.2.ebuild 893
-MD5 cd5c37cb439c1d6f79fdf285f53b3662 metadata.xml 410
-MD5 d71cedbdf53da31c154eb4745d5d1766 serpentine-0.6.3.ebuild 891
 MD5 6cdf3b343cda9958c8037de75856bb78 ChangeLog 506
 MD5 ba3595c0c78eac551e3d54ba661b288d files/digest-serpentine-0.6.2 68
 MD5 babc4d372dac3c87f5bbfe91bb92f8ba files/digest-serpentine-0.6.3 68
+MD5 cd5c37cb439c1d6f79fdf285f53b3662 metadata.xml 410
+MD5 880faa9afd65b6b5f67c7c49c24bdd9e serpentine-0.6.2.ebuild 893
+MD5 64d7b49fff9f536124d84894d60bd17e serpentine-0.6.3.ebuild 893
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLDr3wUpWvClEHQoRAtqRAJwMNwwaT5CFT1GgRgOiDNMuavGvrQCfYNXt
-orl3dClKNI9KSTHDtBHFDoc=
-=w2+b
+iD8DBQFDLENUI1lqEGTUzyQRAtWmAKCHM27+Cxhu3gCKak5a/fCYvr2BMgCdHuVO
+Jjs8wU0dAKMaCYCMcm7HWk8=
+=Uev6
 -----END PGP SIGNATURE-----
