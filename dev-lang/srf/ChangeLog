@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/srf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/ChangeLog,v 1.1 2005/09/17 13:36:32 araujo Exp $
+
+*srf-1.0 (17 Sep 2005)
+
+  17 Sep 2005; Luis F. Araujo <araujo@gentoo.org> +metadata.xml,
+  +srf-1.0.ebuild:
+  Added new package Srf. Initial import by Adrian Fruehwirth (bug #104032).
+
