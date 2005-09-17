@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/amsn-skins
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.8 2005/08/14 18:53:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.9 2005/09/17 10:12:30 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  amsn-skins-20040223.ebuild:
+  Mark 20040223 stable on alpha
 
   14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
   amsn-skins-20040223.ebuild:
