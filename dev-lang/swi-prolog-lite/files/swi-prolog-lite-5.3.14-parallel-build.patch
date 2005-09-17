@@ -1,0 +1,35 @@
+Fix make dependencies so `make -j` works
+
+--- src/Makefile.in
++++ src/Makefile.in
+@@ -161,7 +161,7 @@
+ 		@echo "****************"
+ 
+ 
+-$(PL):		$(RUNTIME) $(PLOBJ)
++$(PL):		$(RUNTIME) $(PLOBJ) $(RUNTIMEDIR)/$(SHARED)
+ 		$(LDEXE) $(LDFLAGS) -o $(PL) $(PLOBJ) -L../lib/$(ARCH) -lpl $(LNLIBS)
+ 
+ $(STARTUPPATH):	$(PLINIT) $(PLSRC) $(PL)
+@@ -188,7 +188,7 @@
+ rc-lib:
+ 		@(cd rc && $(MAKE) COFLAGS="$(COFLAGS)")
+ 
+-../library/INDEX.pl:	../library ../library/[a-z]*.pl
++../library/INDEX.pl:	../library ../library/[a-z]*.pl $(DEVPL) $(STARTUPPATH)
+ 		$(DEVPL) -x $(STARTUPPATH) \
+ 			-f none -F none \
+ 			-g make_library_index\(\'../library\'\) \
+@@ -243,11 +243,7 @@
+ 		@echo "#define C_LDFLAGS    \"$(LDFLAGS)\""    >> $@%
+ 		@if cmp -s $@% $@; then rm $@%; else mv $@% $@; fi
+ 
+-pl-main.o:	parms.h
+-pl-setup.o:	parms.h
+-pl-wic.o:	parms.h
+-pl-funct.o:	$(srcdir)/pl-funct.ih
+-pl-atom.o:	$(srcdir)/pl-funct.ih
++$(OBJ): headers parms.h $(srcdir)/pl-funct.ih
+ pl-wam.o:	pl-alloc.c pl-index.c pl-fli.c
+ 
+ $(srcdir)/pl-funct.ih:	$(srcdir)/ATOMS

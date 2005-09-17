@@ -1,5 +1,7 @@
---- src/Makefile.in	2002-11-01 19:27:25.000000000 -0500
-+++ src/Makefile.in.old	2002-11-01 19:26:49.000000000 -0500
+Add support for installing with `make install DESTDIR=/blah`
+
+--- src/Makefile.in
++++ src/Makefile.in
 @@ -37,7 +37,8 @@
  
  PL=@PL@@RT@

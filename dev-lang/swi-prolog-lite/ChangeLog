@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/swi-prolog-lite
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.16 2005/04/01 02:41:29 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.17 2005/09/17 03:00:23 vapier Exp $
+
+*swi-prolog-lite-5.3.14 (01 Dec 2004)
+
+  16 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/swi-prolog-lite-5.2.11-parallel-build.patch,
+  +files/swi-prolog-lite-5.3.14-parallel-build.patch, files/destdir.patch,
+  swi-prolog-lite-5.2.11.ebuild, swi-prolog-lite-5.3.14.ebuild:
+  Clean up ebuilds to not suck anymore.
 
   01 Apr 2005; Joseph Jezak <josejx@gentoo.org>
   swi-prolog-lite-5.0.10.ebuild, swi-prolog-lite-5.2.11.ebuild:
