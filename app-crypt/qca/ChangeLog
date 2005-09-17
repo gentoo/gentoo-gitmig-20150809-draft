@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.22 2005/07/29 22:56:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.23 2005/09/17 19:48:19 flameeyes Exp $
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org> -qca-1.0.ebuild,
   -qca-1.0-r1.ebuild, qca-1.0-r2.ebuild:
@@ -12,7 +12,7 @@
 
   09 Jul 2005; Gustavo Felisberto <humpback@gentoo.org>;
   +files/qca-1.0-fbsd.patch, qca-1.0-r2.ebuild:
-  Patch to solve problems on bsd. Thaks to Diego Petteno in bug #93817.
+  Patch to solve problems on bsd. Thaks to Diego Pettenò in bug #93817.
 
   02 Jul 2005; Hardave Riar <hardave@gentoo.org> qca-1.0-r2.ebuild:
   Stable on mips
