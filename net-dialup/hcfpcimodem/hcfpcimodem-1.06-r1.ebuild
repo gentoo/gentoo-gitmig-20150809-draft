@@ -1,17 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.05-r1.ebuild,v 1.2 2005/04/14 21:04:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.06-r1.ebuild,v 1.1 2005/09/17 09:11:11 mrness Exp $
 
-inherit eutils
+inherit eutils linux-info
+
+#The document is the same as in hsfmodem, even if it has a different URL
+MY_DOC="100498D_RM_HxF_Released.pdf"
 
 DESCRIPTION="Linuxant's modem driver for Connexant HCF chipset"
 HOMEPAGE="http://www.linuxant.com/drivers/hcf/index.php"
-SRC_URI="http://www.linuxant.com/drivers/hcf/full/archive/${P}full/${P}full.tar.gz"
+SRC_URI="http://www.linuxant.com/drivers/hcf/full/archive/${P}full/${P}full.tar.gz
+	doc? ( http://www.linuxant.com/drivers/hcf/full/archive/${P}full/${MY_DOC} )"
 
 LICENSE="Conexant"
 SLOT="0"
-KEYWORDS="-* x86"
-IUSE=""
+KEYWORDS="-* ~x86"
+IUSE="doc"
 
 DEPEND="virtual/libc
 	dev-lang/perl
@@ -44,8 +48,9 @@ pkg_setup () {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-nvminstall.patch
+	if kernel_is ge 2 6 13 ; then
+		epatch ${FILESDIR}/${P}-simple_class.patch
+	fi
 }
 
 src_compile() {
@@ -63,6 +68,8 @@ pkg_preinst() {
 
 src_install () {
 	make PREFIX=${D}/usr/ ROOT=${D} install || die
+
+	use doc && dodoc "${DISTDIR}/${MY_DOC}"
 }
 
 pkg_postinst() {
