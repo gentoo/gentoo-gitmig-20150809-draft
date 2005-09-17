@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.2-r2.ebuild,v 1.7 2005/05/01 07:49:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.2-r2.ebuild,v 1.8 2005/09/17 10:25:09 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://icculus.org/openbox/releases/${P/_/-}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="x86 ppc sparc ~alpha hppa amd64"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE="nls startup-notification"
 
 RDEPEND="virtual/xft
