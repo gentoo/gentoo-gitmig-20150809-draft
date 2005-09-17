@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.177 2005/09/17 14:00:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.178 2005/09/17 20:24:36 kloeri Exp $
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> subversion-1.2.3.ebuild:
   Mark 1.2.3 stable on ia64
@@ -220,7 +220,7 @@
   +files/subversion-1.1.2-perl.patch, +subversion-1.1.2.ebuild:
   A new upstream version
 
-  19 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
+  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   subversion-1.1.1-r3.ebuild:
   Stable on alpha.
 
@@ -348,7 +348,7 @@
   01 Oct 2004; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.1.0.ebuild:
   New upstream version
 
-  27 Sep 2004; Bryan ÃÂstergaard,,, <kloeri@gentoo.org>
+  27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   subversion-1.0.8.ebuild:
   Stable on alpha, bug 65085.
 
@@ -416,7 +416,7 @@
   23 Jul 2004; Guy Martin <gmsoft@gentoo.org> subversion-1.0.6.ebuild:
   Marked stable on hppa.
 
-  23 Jul 2004; Bryan ÃÂstergaard,,, <kloeri@gentoo.org>
+  23 Jul 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   subversion-1.0.6.ebuild:
   Stable on alpha, see bug #57747.
 
@@ -440,7 +440,7 @@
   11 Jun 2004; Guy Martin <gmsoft@gentoo.org> subversion-1.0.4-r1.ebuild:
   Marked stable on hppa.
 
-  11 Jun 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   subversion-1.0.4-r1.ebuild:
   Stable on alpha, bug #53555.
 
@@ -468,7 +468,7 @@
   set amd64 to stable on 1.0.3. Add a new upstream version in 1.0.4 and 
   make it even more hard to merge subversion with autoconf-2.58
 
-  24 May 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> subversion-1.0.3.ebuild:
+  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> subversion-1.0.3.ebuild:
   Keyworded ~alpha, requested in bug #51550.
 
 *subversion-1.0.3 (20 May 2004)
