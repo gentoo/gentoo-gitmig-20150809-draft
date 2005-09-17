@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/mrxvt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.28 2005/06/17 20:27:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.29 2005/09/17 11:35:55 kloeri Exp $
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> mrxvt-0.4.1.ebuild:
   Stable on ppc.
@@ -55,7 +55,7 @@
   Fixed bug #81574. Thanks to Jimmy Zhou <jmzhou13@hotmail.com> for providing
   a pointer and patch.
 
-  13 Feb 2005; Bryan ?stergaard <kloeri@gentoo.org> mrxvt-0.3.12.ebuild:
+  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> mrxvt-0.3.12.ebuild:
   Stable on alpha.
 
 *mrxvt-0.3.13 (10 Feb 2005)
