@@ -1,6 +1,6 @@
 # ChangeLog for perl-core/DB_File
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.4 2005/06/30 16:41:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/DB_File/ChangeLog,v 1.5 2005/09/17 11:20:09 kloeri Exp $
 
 *DB_File-1.811-r1 (30 Jun 2005)
 
@@ -29,7 +29,7 @@
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> DB_File-1.811.ebuild:
   stable on mips
 
-  25 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> DB_File-1.811.ebuild:
+  25 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> DB_File-1.811.ebuild:
   Stable on alpha, bug 85185.
 
   17 Mar 2005; Joseph Jezak <josejx@gentoo.org> DB_File-1.811.ebuild:
