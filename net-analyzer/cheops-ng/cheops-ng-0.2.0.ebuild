@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/cheops-ng-0.2.0.ebuild,v 1.2 2005/05/14 15:13:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cheops-ng/cheops-ng-0.2.0.ebuild,v 1.3 2005/09/17 21:23:44 vanquirius Exp $
 
 inherit eutils
 
@@ -42,5 +42,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING README NEWS ReleaseNotes doc/*.txt
+	dodoc AUTHORS README NEWS ReleaseNotes doc/*.txt
 }
