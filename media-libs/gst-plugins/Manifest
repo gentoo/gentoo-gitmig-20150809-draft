@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0a83670ea1633b7b5583e81e33c8a94d gst-plugins-0.8.10.ebuild 1936
 MD5 da1b0d389782eafdd7a0dfbac3c5c853 gst-plugins-0.8.2.ebuild 1866
 MD5 8a0d2b56949d504c95170d79d2510cf9 gst-plugins-0.8.8-r2.ebuild 2159
@@ -18,3 +21,10 @@ MD5 5f3b15884236441972571887125d0a48 files/gst-plugins-0.8.9-riffmedia-isompeg4.
 MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-0.8.11 72
 MD5 a619f8fe6364e211b5c12d36fa4c60dc files/gst-plugins-0.8.11-conffix.patch 845
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLATJKf2g/qXtneoRAimdAJ9hKa/wpGI60tAWl3Hca3re7aN6EgCfTm1U
+mxWPd7GsHmpDICKncK/82mw=
+=5Cou
+-----END PGP SIGNATURE-----
