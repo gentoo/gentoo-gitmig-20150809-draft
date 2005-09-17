@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.64 2005/09/10 11:14:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.65 2005/09/17 00:35:27 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> ocaml-3.08.3.ebuild:
+  Mark 3.08.3 stable on ia64
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> ocaml-3.08.3.ebuild:
   Mark 3.08.3 stable on alpha
@@ -270,4 +273,3 @@
   This builds a runtime environment and native compiler for ocaml.
  
   Submitted by Sean Mitchell.
-
