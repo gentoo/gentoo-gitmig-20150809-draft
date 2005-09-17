@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 26c12e7c15c05a1eade57ec432ef2f04 lsof-4.75.ebuild 1510
 MD5 56fd77f94ff54562944e0d96d9b574b4 lsof-4.73.ebuild 1298
 MD5 f8467d75a813d4a46088ecb7f1f766d0 lsof-4.74.ebuild 1530
@@ -9,3 +12,10 @@ MD5 64d819b92ce48c125f86e88739d58638 files/digest-lsof-4.75 61
 MD5 4e7f0c29cf300421b494446e6aa0c8a4 files/digest-lsof-4.74 62
 MD5 8a26fd08042572a5821e4f5fa51ac5ff files/4.73-answer-config.patch 1755
 MD5 8038fed690d1ba6a3c711954b75e39b5 files/digest-lsof-4.76 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2duLLFUmVNQ7rkRAovqAJ4uRtpxfMFmcPocgqe3rnVG8ZcznwCff/KC
+kbtQXNik31idyBSzsU5aOjY=
+=WHAm
+-----END PGP SIGNATURE-----
