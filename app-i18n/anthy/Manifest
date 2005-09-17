@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f84e7f9f4b8b96ed0821e82b077bc3b anthy-5900-r1.ebuild 1670
 MD5 0389e81fa88a17f779ffe69139efee20 anthy-5900.ebuild 1527
 MD5 d0d31097791c0ce1baffba05fca560e1 anthy-6300.ebuild 1673
@@ -12,3 +15,10 @@ MD5 5f13ff8fdbc22d40da3964a5a7639f6d files/digest-anthy-5900-r1 63
 MD5 a6f330e602aa73d0914d688b3c360e85 files/digest-anthy-6300 63
 MD5 ee78cbe5cf3d6069f710772fbf415e14 files/digest-anthy-6300d 64
 MD5 eecee82ed1c729dee6226842542ca4c5 files/digest-anthy-6700b 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLDNrKf2g/qXtneoRAjeMAKChQE2G2G0Hb8jmTT2TMiImnFeBGQCfW5EH
+QoPdfLKN8NUw0NXwNjy8M50=
+=fBuD
+-----END PGP SIGNATURE-----
