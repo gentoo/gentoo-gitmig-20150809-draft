@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.80 2005/09/05 14:40:43 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.81 2005/09/17 11:30:00 kloeri Exp $
 
   05 Sep 2005; Herbie Hopkins <herbs@gentoo.org> libperl-5.8.7.ebuild:
   More multilib fixes thanks to Christophe Saout, bug 104509.
@@ -51,7 +51,7 @@
   libperl-5.8.6-r1.ebuild:
   Stable on ppc.
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org>
   libperl-5.8.6-r1.ebuild:
   Stable on alpha.
 
@@ -119,7 +119,7 @@
   06 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> libperl-5.8.5.ebuild:
   Stable on sparc wrt #66360
 
-  05 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> libperl-5.8.5.ebuild:
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libperl-5.8.5.ebuild:
   Stable on alpha, bug 66360.
 
   05 Dec 2004; Markus Rothe <corsair@gentoo.org> libperl-5.8.5.ebuild:
@@ -176,7 +176,7 @@
   libperl-5.8.4-r1.ebuild, libperl-5.8.4.ebuild, libperl-5.8.5.ebuild:
   Removed reference to old patch
 
-  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> libperl-5.8.4.ebuild:
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libperl-5.8.4.ebuild:
   Stable on alpha.
 
 *libperl-5.8.5 (06 Aug 2004)
