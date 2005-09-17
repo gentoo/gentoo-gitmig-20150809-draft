@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.38 2005/09/11 22:44:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.39 2005/09/17 11:24:13 kloeri Exp $
 
   11 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   ucspi-tcp-0.88-r12.ebuild:
@@ -61,7 +61,7 @@
   ucspi-tcp-0.88-r7.ebuild, ucspi-tcp-0.88-r8.ebuild:
   virtual/glibc -> virtual/libc
 
-  11 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> ucspi-tcp-0.88-r8.ebuild:
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ucspi-tcp-0.88-r8.ebuild:
   Stable on alpha.
 
   09 Apr 2004; Joshua Kinard <kumba@gentoo.org> ucspi-tcp-0.88-r8.ebuild:
