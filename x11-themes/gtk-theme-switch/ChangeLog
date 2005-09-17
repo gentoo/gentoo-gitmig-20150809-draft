@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-theme-switch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.23 2005/08/02 19:52:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.24 2005/09/17 00:54:28 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   02 Aug 2005; Markus Rothe <corsair@gentoo.org>
   gtk-theme-switch-2.0.0_rc2-r2.ebuild:
@@ -38,7 +41,7 @@
   gtk-theme-switch-2.0.0_rc2-r1.ebuild:
   Stable on sparc
 
-  09 Jul 2004; Bryan ÿstergaard <kloeri@gentoo.org>
+  09 Jul 2004; Bryan √òstergaard <kloeri@gentoo.org>
   gtk-theme-switch-2.0.0_rc2-r1.ebuild:
   Stable on alpha.
 
@@ -100,7 +103,7 @@
 
 *gtk-theme-switch-1.0.1 (06 may 2002)
 
-  11 Jun 2002; J. Alberto Su·rez L. <bass@gentoo.org> gtk-theme-switch-1.0.1.ebuild:
+  11 Jun 2002; J. Alberto Su√°rez L. <bass@gentoo.org> gtk-theme-switch-1.0.1.ebuild:
 
   added doc
 
@@ -108,8 +111,8 @@
 
   Fixed GTK+ Dependency
 
-  06 may 2002 ; JosÈ Alberto Su·rez LÛpez <bass@gentoo.org> ChangeLog :
+  06 may 2002 ; Jos√© Alberto Su√°rez L√≥pez <bass@gentoo.org> ChangeLog :
 	First Relase 
 
-  31 May 2002; J. Alberto Su·rez L. <bass@gentoo.org> gtk-theme-switch :
+  31 May 2002; J. Alberto Su√°rez L. <bass@gentoo.org> gtk-theme-switch :
   	Fisex problem with gtk.
