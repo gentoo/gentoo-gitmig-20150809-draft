@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.37 2005/08/26 13:35:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.38 2005/09/17 10:12:55 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> baghira-0.6e-r1.ebuild:
+  Mark 0.6e-r1 stable on alpha
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> baghira-0.6e-r1.ebuild:
   add ~ia64
