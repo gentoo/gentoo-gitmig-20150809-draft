@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.3.0-r1.ebuild,v 1.4 2005/09/13 13:44:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.3.0-r1.ebuild,v 1.5 2005/09/17 19:04:44 blubb Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/eix/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/portage"
