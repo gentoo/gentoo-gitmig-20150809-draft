@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1452 2005/09/16 17:34:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1453 2005/09/17 16:32:05 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -41,7 +41,6 @@ app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musepack - Enable support for musepack files
-app-cdr/ogmrip:subp - Subtitle ripping preliminary support
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
@@ -630,6 +629,7 @@ media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/nvidia-glx:dlloader - Enable dynamic module loader instead of ELF loader.  Installs nvidia_drv.so instead of nvidia_drv.o.
+media-video/ogmrip:subp - Subtitle ripping preliminary support
 media-video/totem:firefox - Enables compilation using firefox headers
 media-video/transcode:fame - Enables libfame support
 media-video/transcode:lzo - Enables LZO compression support
