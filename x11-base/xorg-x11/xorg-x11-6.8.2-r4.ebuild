@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r3.ebuild,v 1.1 2005/09/12 14:15:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r4.ebuild,v 1.1 2005/09/17 06:15:12 joshuabaergen Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -38,7 +38,7 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.8"
-PATCH_VER="0.1.10.1"
+PATCH_VER="0.1.10.2"
 XCUR_VER="0.3.1"
 XFSFT_ENC_VER="0.1"
 
@@ -47,7 +47,7 @@ S=${WORKDIR}/xc
 HOMEPAGE="http://xorg.freedesktop.org/"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="http://dev.gentoo.org/~seemant/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
+X_PATCHES="http://dev.gentoo.org/~joshuabaergen/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
 GENTOO_FILES="http://dev.gentoo.org/~seemant/distfiles/${P}-files-${FILES_VER}.tar.bz2
