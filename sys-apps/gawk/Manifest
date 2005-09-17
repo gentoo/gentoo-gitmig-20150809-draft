@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7df28c1cb48e4a9203e077a8ccbf4666 gawk-3.1.4-r4.ebuild 3859
 MD5 1eda1e23e6e26fc2a1e30a15fa9b8028 gawk-3.1.5.ebuild 3053
 MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
@@ -17,3 +20,10 @@ MD5 e01879d30ddf2eb060f2ba2fa745a922 files/digest-gawk-3.1.4-r4 132
 MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
 MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
 MD5 7b48ab999f661a00e70da4eb9ede8376 files/filefuncs/Makefile 1192
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2NfLLFUmVNQ7rkRAtxuAJ9mL4Lhj7/bFQDBrQ4nxiElkg7W5wCdG4CL
+C5c8K8wIi67HMeeEUEyHLUU=
+=Mqo5
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4fb46540a7a805964281d781d5f0e264 mindi-0.85.ebuild 1216
 MD5 8274689e97bfa4036fd060385cc5ea1f mindi-1.11.ebuild 1844
 MD5 b5e3b488f3cafd186b096b7cd6a8e062 mindi-1.03.ebuild 1849
@@ -13,3 +16,10 @@ MD5 ee1e232f194b4562844a4eac0f91ab49 files/mindi-0.86-security.patch 7683
 MD5 fd82ae181560d7bf2024411068a01567 files/digest-mindi-1.11 60
 MD5 07d70f05ae5cd1b6dff05569a349803c files/digest-mindi-0.85 59
 MD5 8a29bf61bb5419e5f158300cff4c1c5e files/digest-mindi-1.10 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2ReLLFUmVNQ7rkRAm2nAKCENLkcrJhu2MUSXxLqQbHfKM+pdACfQM0s
+lhOKaEdYc/FV05GDJFjNMwM=
+=CwT3
+-----END PGP SIGNATURE-----
