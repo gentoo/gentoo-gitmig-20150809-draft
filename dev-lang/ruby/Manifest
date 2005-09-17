@@ -1,9 +1,10 @@
 MD5 5c6eba6633365e3d738ba6e3a3b6b5b1 ruby-1.8.3_pre1.ebuild 3653
 MD5 a63962eec3291eb3762c7462570b39bc ruby-1.6.8-r12.ebuild 1937
 MD5 d2234d03c37129677ed7c35c38be1bcd ruby-1.8.2-r2.ebuild 3813
+MD5 84100272e19b41c08c66967855fe35b0 ruby-1.8.3_pre2.ebuild 3658
 MD5 67de00f5d7b9ced2530317f945d0ebc9 ruby-1.8.2.ebuild 3446
 MD5 3f3ef53019f559def811f446ba1b0f04 ruby-1.8.2-r1.ebuild 3753
-MD5 f82db73c499754b72142c5b429e32f59 ChangeLog 21557
+MD5 9c5a03af86dfe915fc6c5a39770d3d1f ChangeLog 21676
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
 MD5 5d27b5dca2842607d0dd0469612a2224 files/ruby-1.8.2-soap.diff 596
@@ -17,4 +18,5 @@ MD5 be89d4c412387337e14a1d141b90b125 files/oniguruma-2.3.1-gentoo.patch 593
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r1 125
 MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r2 125
 MD5 2b7f4a180b9678de56681a4d5c254c48 files/digest-ruby-1.8.3_pre1 134
+MD5 4baf2438ffbb4a0bf0358ccc345b1c58 files/digest-ruby-1.8.3_pre2 134
 MD5 a061fe32b8e0538c203bccebcd2ad8ac files/ruby-1.6.8-20040728-20041024.diff 3094

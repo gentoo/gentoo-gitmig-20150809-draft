@@ -1,7 +1,10 @@
-MD5 b5d55bafdd5343cf10f8b6270b9cef02 php-4.4.0.ebuild 7348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5cd036f5e99d22f116eb4a6f26924e3f php-4.4.0.ebuild 7353
 MD5 b8d498e1357d68abc8bcc8370592b68d php-5.0.5.ebuild 4299
 MD5 d3c798c1aa53e3d4ad3a26947d06d469 php-4.3.11.ebuild 7342
-MD5 3f31ad6233ab85abadbf2fbe11896c52 ChangeLog 1958
+MD5 230567a896d84b6fe528e7cd298eb753 ChangeLog 2115
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 9b67352b327fece0ee76cd9814b8deeb php-5.0.4.ebuild 4302
 MD5 43c95e9c27a1e40cf1fbb3408fd4a894 files/digest-php-4.4.0 144
@@ -25,3 +28,10 @@ MD5 389638f1d46b6c41cd4d87b471572f4b files/4.4.0/apache-1.3/70_mod_php.conf 484
 MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0/apache-2.0/70_mod_php.conf 485
 MD5 96ed6efe383833dbb880fef3b6c562bb files/5.1.0/apache-1.3/70_mod_php5.conf 524
 MD5 21bc6cc85150b5a5385f213d45efbe67 files/5.1.0/apache-2.0/70_mod_php5.conf 525
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDLFY6ntT9W3vfTuoRAoH7AJ95GG9Z3hZk8acQ4sefDuAy7oioVgCeK7jb
+APpmHmGISFxJSVV5Y74bq2w=
+=z87U
+-----END PGP SIGNATURE-----
