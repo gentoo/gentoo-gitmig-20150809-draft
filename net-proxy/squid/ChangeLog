@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.39 2005/09/17 13:56:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.40 2005/09/17 18:13:33 hansmi Exp $
+
+  17 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  squid-2.5.10-r4.ebuild:
+  Stable on hppa and ppc.
 
   17 Sep 2005; Luis Medinas <metalgod@gentoo.org> squid-2.5.10-r4.ebuild:
   Marked Stable on amd64. Fixes bug #106104.
