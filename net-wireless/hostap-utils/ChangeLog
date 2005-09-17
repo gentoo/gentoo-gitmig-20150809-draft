@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostap-utils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.26 2005/07/13 10:12:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.27 2005/09/17 09:58:21 blubb Exp $
+
+  17 Sep 2005; Simon Stelling <blubb@gentoo.org> hostap-utils-0.4.0.ebuild:
+  added ~amd64 keyword
 
   13 Jul 2005; <brix@gentoo.org> -hostap-utils-0.2.4.ebuild,
   -hostap-utils-0.2.6.ebuild:

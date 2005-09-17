@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.40 2005/08/22 20:35:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.41 2005/09/17 09:58:40 blubb Exp $
+
+  17 Sep 2005; Simon Stelling <blubb@gentoo.org> hostapd-0.4.4-r1.ebuild:
+  added ~amd64 keyword
 
 *hostapd-0.4.4-r1 (22 Aug 2005)
 
