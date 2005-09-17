@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.32 2005/07/22 19:20:19 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.33 2005/09/17 15:09:52 kloeri Exp $
 
   22 Jul 2005; Damien Krotkine <dams@gentoo.org> ChangeLog:
   corrected malformed ChangeLog
@@ -26,7 +26,7 @@
   29 Dec 2004; Daniel Goller <morfic@gentoo.org> fam-2.7.0-r2.ebuild:
   adding the long missing libtoolize --copy --force where it belongs
 
-  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> fam-2.7.0-r2.ebuild:
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> fam-2.7.0-r2.ebuild:
   Stable on alpha.
 
   21 Nov 2004; Mike Frysinger <vapier@gentoo.org> fam-2.7.0-r1.ebuild,
