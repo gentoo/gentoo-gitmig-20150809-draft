@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.78 2005/09/17 01:08:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.79 2005/09/17 08:21:53 killerfox Exp $
+
+  17 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  mozilla-firefox-1.0.6-r7.ebuild:
+  Stable on hppa. bug #105396
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-1.0.6-r7.ebuild:
