@@ -1,5 +1,5 @@
---- patches/OOO_1_1_4/apply.orig	2004-12-02 00:07:00.659646960 +0100
-+++ patches/OOO_1_1_4/apply	2004-12-02 00:07:18.119992584 +0100
+--- patches/OOO_1_1_5/apply.orig	2004-12-02 00:07:00.659646960 +0100
++++ patches/OOO_1_1_5/apply	2004-12-02 00:07:18.119992584 +0100
 @@ -33,9 +33,10 @@
  PLD  : PLDOnly, LinuxCommon, FilePickers, KDECommon, GlobalDesktopFiles, NonArkCommon, NoRpath
  KDE  : LinuxCommon, FilePickers, KDEOnly, NoRpath
@@ -14,8 +14,6 @@
  
  # somewhat odder:
  Win32 : VCLPlug, Common, ODKFixes, VBABits, Win32Only, NoRpath
---- patches/OOO_1_1_5/apply 
-+++ patches/OOO_1_1_5/apply.new 
 @@ -1306,11 +1306,6 @@
  
  ########################################################
