@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.93 2005/09/15 20:55:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.94 2005/09/17 23:26:11 lu_zero Exp $
+
+  17 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  ffmpeg-0.4.9_p20050906.ebuild:
+  ~alpha temporary dropped
+
+  17 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  ffmpeg-0.4.9_p20050906.ebuild:
+  Dep fix for xvid, thanks to Staffan Palmroos <spalmroos@gmail.com>
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   ffmpeg-0.4.9_p20050226-r5.ebuild:
@@ -8,7 +16,7 @@
 
   15 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
   ffmpeg-0.4.9_p20050226-r5.ebuild:
-  ieee1394 issues fixed the stable ebuild.
+  ieee1394 issues, fixed the stable ebuild.
 
   12 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/ffmpeg-0.4.9_p20050906-osx.patch, ffmpeg-0.4.9_p20050906.ebuild:
