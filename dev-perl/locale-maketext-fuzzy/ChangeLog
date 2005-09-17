@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/locale-maketext-fuzzy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.9 2005/08/26 01:12:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-fuzzy/ChangeLog,v 1.10 2005/09/17 00:50:25 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
+  locale-maketext-fuzzy-0.02.ebuild:
+  Mark 0.02 stable on ia64
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   locale-maketext-fuzzy-0.02.ebuild:
