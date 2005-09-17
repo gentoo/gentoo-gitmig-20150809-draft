@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.25 2005/05/08 14:42:27 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.26 2005/09/17 10:24:18 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> ion2-20040729.ebuild:
+  Mark 20040729 stable on alpha
 
   08 May 2005; Herbie Hopkins <herbs@gentoo.org> ion2-20040729.ebuild:
   Stable on amd64.
