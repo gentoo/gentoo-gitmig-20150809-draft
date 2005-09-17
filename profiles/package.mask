@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4453 2005/09/17 10:17:16 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4454 2005/09/17 20:40:41 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1689,9 +1689,6 @@ media-libs/id3lib-docs
 
 # broken (achim)
 app-text/sgml2x
-
-# broken
->=media-video/mpeg2-movie-1.5
 
 # <sekretarz@gentoo.org> (30 Jul 2005)
 # several major bugs reported by upstream, more info on inkscape.org 
