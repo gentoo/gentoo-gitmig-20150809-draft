@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r1.ebuild,v 1.2 2005/09/13 03:26:11 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r2.ebuild,v 1.1 2005/09/17 16:07:13 joshuabaergen Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -37,7 +37,7 @@ IUSE="3dfx bitmap-fonts cjk debug doc font-server insecure-drivers ipv6 minimal
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.1.1"
-PATCH_VER="0.1.3"
+PATCH_VER="0.1.4"
 XCUR_VER="0.3.1"
 XFSFT_ENC_VER="0.1"
 
@@ -47,7 +47,7 @@ HOMEPAGE="http://xorg.freedesktop.org/"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~cyfred/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~joshuabaergen/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
 GENTOO_FILES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2
