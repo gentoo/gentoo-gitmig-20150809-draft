@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.10 2005/08/23 15:19:47 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.11 2005/09/17 13:08:50 ticho Exp $
+
+*libetpan-0.39 (17 Sep 2005)
+
+  17 Sep 2005; Andrej Kacian <ticho@gentoo.org> +libetpan-0.39.ebuild:
+  Version bump. Added sasl and gnutls USE flags.
 
   23 Aug 2005; Andrej Kacian <ticho@gentoo.org> -libetpan-0.36.ebuild,
   -libetpan-0.37.ebuild, libetpan-0.38.ebuild:
