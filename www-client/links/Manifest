@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23210c68197b9588f90f4f89cefa2ded links-2.1_pre15.ebuild 3164
 MD5 dd6e87b411cc10196c74e589c75e2af7 links-2.1_pre17-r1.ebuild 3508
 MD5 82cf55f144e0f9e258fd08a572852147 metadata.xml 498
@@ -7,3 +10,10 @@ MD5 9573f2a9cbff0c7dc9b33b4efe22971c files/digest-links-2.1_pre15 139
 MD5 f2c353a99f6cbaaa4af971adf5c95c0d files/digest-links-2.1_pre17-r1 139
 MD5 4ecf3369d346051658758f76dbd89eb5 files/digest-links-2.1_pre18 139
 MD5 5b8b5b21da5582f7c332b2a2d6afafcd files/links-2.1pre18-no-javascript-fix.patch 575
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDK/oFKf2g/qXtneoRAug0AKCfjya/SbYCp6L2+CiDnQ25zzGK4gCfQNUx
+UPn562ki4DR1+rpffzV/3C4=
+=NCAk
+-----END PGP SIGNATURE-----
