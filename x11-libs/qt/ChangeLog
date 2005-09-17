@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.244 2005/09/02 23:16:08 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.245 2005/09/17 01:27:43 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> qt-3.3.4-r3.ebuild:
+  Mark 3.3.4-r3 stable on alpha
 
   02 Sep 2005; <gongloo@gentoo.org> files/qt-3.3.4-macos.patch:
   Fix for Mac OS X library install names. Libraries now reference each other
