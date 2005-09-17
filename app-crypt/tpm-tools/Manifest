@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 681db268fdac01e14893b5cf43fdca66 tpm-tools-1.0.0.ebuild 1257
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
-MD5 d32b11c653fdd20cb62a7cc87a10a310 ChangeLog 389
-MD5 5026ce216838dfc282373d4c323210ec files/digest-tpm-tools-1.0.0 66
+MD5 80a451ed422dc9c603dee4cfd5c9e3c6 ChangeLog 589
+MD5 ce00b740236eb00506803a11a62a83bf tpm-tools-1.1.0.ebuild 1203
+MD5 5782fe9901a3650c816e0f3fe45d3b33 files/digest-tpm-tools-1.1.0 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCtW9AmdTrptrqvGERAgKzAJ9r0pVWCEFzXoDb1tn6z0eEWzmtxwCggCH5
-rViFVgyK/9GdoSoVJm8s91A=
-=N0t6
+iD8DBQFDLBvNmdTrptrqvGERAgX0AJ9Zqyu/hsa6QQeG2HUKQc1akH3qewCfab5Y
+edBa/5TB6z4m8IqN+mK51q4=
+=wGc6
 -----END PGP SIGNATURE-----

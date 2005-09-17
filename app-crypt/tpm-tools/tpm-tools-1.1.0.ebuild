@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.0.0.ebuild,v 1.1 2005/06/19 13:12:08 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.1.0.ebuild,v 1.1 2005/09/17 13:35:48 dragonheart Exp $
 
-inherit gnuconfig
+inherit autotools
 
 DESCRIPTION="TrouSerS' support tools for the Trusted Platform Modules"
 HOMEPAGE="http://trousers.sf.net"
@@ -18,16 +18,15 @@ RDEPEND="virtual/libc
 # TODO: add optionnal opencryptoki support
 
 DEPEND="${RDEPEND}
-		sys-devel/automake
-		sys-devel/autoconf"
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	# workaround econf "updating config.sub" sandbox violation
-	# (bug #96242 for instance):	
-	touch config.sub
+	## (bug #96242 for instance):	
+	#touch config.sub
 
 	# no translation so far -> no need to gettextize it 
 	# (makes compilation a bit simpler...):
@@ -35,7 +34,7 @@ src_unpack() {
 	sed -i '/\<po\>/d' Makefile.am
 	sed -i -e '/AM_GNU_GETTEXT/d' -e '\:po/Makefile.in:d' configure.in
 
-	./bootstrap.sh || die "bootstrap.sh failed"
+	eautoconf
 }
 
 src_compile() {
