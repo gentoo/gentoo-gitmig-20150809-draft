@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e97949cd70518cd2be35695196861320 transcode-0.6.14-r2.ebuild 4201
 MD5 bac77dfc414a424cc5e55cae60f33830 transcode-1.0.0.ebuild 4053
 MD5 4cd360f0996043f88e251c1f0bd5bf22 ChangeLog 20891
@@ -20,3 +23,10 @@ MD5 90f42fff1c2a0b4be8df0b015ac2b309 files/transcode-0.6.12-r2-gcc34.patch 2963
 MD5 8fde4803c96e026f6caa94fa0e42687f files/digest-transcode-0.6.12-r2 69
 MD5 8fde4803c96e026f6caa94fa0e42687f files/digest-transcode-0.6.12-r1 69
 MD5 2cb7b1a00a0529a8256fc0104b5f2a09 files/transcode-gcc34.patch 460
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLHTSj5H05b2HAEkRAt/qAJ48EVhA2+2dkajMgS07pUriXQ55PwCePDyQ
+41C98pOLcSr2h2VB/z5fyTU=
+=Q2UD
+-----END PGP SIGNATURE-----
