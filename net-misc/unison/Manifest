@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
 MD5 53bf2c5e8536959706dc6456df858b00 unison-2.12.0.ebuild 1637
 MD5 a4757ad39d6014ba1a3db3e3d6292457 unison-2.13.0.ebuild 1927
@@ -8,3 +11,10 @@ MD5 76c33afd24bb34b9dbe90989e3235e36 files/digest-unison-2.13.0 204
 MD5 29b28492666138199820e9df8fcc6a47 files/digest-unison-2.9.1-r1 64
 MD5 5abcf068ada1ab9eedbe3dfa16ad15fb files/ocaml-3.08-extnames.patch 748
 MD5 402b704e5c7c71a69fd6400c395834ec files/unison-2.12.0-gtk2-bug.patch 490
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLAoPKf2g/qXtneoRAmClAJ4sf3h8ShHLPiRNTXN68QpwLfLztACghUvr
+7w740uxt5YC8ksWJmlry5+Q=
+=uiGy
+-----END PGP SIGNATURE-----

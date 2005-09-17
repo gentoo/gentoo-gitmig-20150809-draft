@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14651eef0c7d6d035b9da57740df36c8 metadata.xml 398
 MD5 3ede58a8ec0fa5d893a5237f56a1cb29 ytalk-3.1.1.ebuild 739
 MD5 421a6224e3f7b070a1dbd23fbe8afa9b ytalk-3.2.0.ebuild 702
@@ -6,3 +9,10 @@ MD5 c3d262477db95bc0cdc00ee6ed6d6b64 ChangeLog 2091
 MD5 d7c085876eec894758505ef4ad2d36e1 files/digest-ytalk-3.1.1 62
 MD5 0cf57e06f61a019c5005a6a678d8fe19 files/digest-ytalk-3.2.0 63
 MD5 4647f10da55ce9d3acc70ea7ec0161ec files/digest-ytalk-3.3.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLAo+Kf2g/qXtneoRAmKfAKCUd0aVscSORarVJrp8FXa1KyIAgACgs+3r
+QWOmHqUV4WL8F/NsywWqkcA=
+=uis0
+-----END PGP SIGNATURE-----
