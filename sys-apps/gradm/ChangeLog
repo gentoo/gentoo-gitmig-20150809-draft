@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.58 2005/09/16 10:49:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.59 2005/09/17 15:05:20 swegener Exp $
+
+  17 Sep 2005; Sven Wegener <swegener@gentoo.org>
+  +files/2.1.6.200506131347-non-lazy-bindings.patch,
+  gradm-2.1.5.200504081812.ebuild, gradm-2.1.6.200506131347.ebuild:
+  Changed the chpax dependency to a || dependency with paxctl. Modified to
+  use non-lazy bindings for gradm_pam. Added support for the pam USE flag.
+  Pass custom CFLAGS in a nicer way.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   gradm-2.1.6.200506131347.ebuild:
