@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
 MD5 4c8053c87e31c8209998ba49c07d60a5 sane-backends-1.0.13-r3.ebuild 1717
 MD5 e73a3bf54c049342701898a62ea3b301 sane-backends-1.0.15-r1.ebuild 2674
@@ -20,3 +23,10 @@ MD5 f49c8e2b591496e87e91ae243d9864d0 files/sane-backend-1.0.15-gt68xx-update67.p
 MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r1 151
 MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r2 151
 MD5 0bc1f6b8682b5585c8e87a325f983ade files/lide25.patch 5565
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLAOvKf2g/qXtneoRAry6AKCB46WoG3OivWFpFRFgBbKHMNfG8gCeINUa
+4ZimAq+/eTrAjslaE8JW3bU=
+=MtJI
+-----END PGP SIGNATURE-----
