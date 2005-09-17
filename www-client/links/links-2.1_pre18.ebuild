@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre18.ebuild,v 1.3 2005/08/29 15:09:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre18.ebuild,v 1.4 2005/09/17 21:48:59 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -62,15 +62,15 @@ pkg_setup (){
 }
 
 src_unpack (){
-	unpack ${A}; cd ${S}
+	unpack ${A}; cd "${S}"
 
 	if use unicode ; then
-		epatch ${WORKDIR}/${MY_P}-utf8.diff
+		epatch "${WORKDIR}/${MY_P}-utf8.diff"
 		export LANG=C
-		cd ${S}/intl && ./gen-intl && cd .. || die "gen-intl filed"
+		cd "${S}/intl" && ./gen-intl && cd .. || die "gen-intl filed"
 	fi
 
-	epatch ${FILESDIR}/links-2.1pre18-no-javascript-fix.patch
+	epatch "${FILESDIR}/links-2.1pre18-no-javascript-fix.patch"
 }
 
 src_compile (){
@@ -121,7 +121,7 @@ src_install (){
 	# Only install links icon if X driver was compiled in ...
 	use X && doicon graphics/links.xpm
 
-	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README SITES TODO
 	dohtml doc/links_cal/*
 
 	# Install a compatibility symlink links2:
