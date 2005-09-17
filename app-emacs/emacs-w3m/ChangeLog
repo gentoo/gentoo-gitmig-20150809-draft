@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.36 2005/08/03 18:52:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.37 2005/09/17 15:15:42 kloeri Exp $
 
   03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> emacs-w3m-1.4.4.ebuild:
   Stable on alpha.
@@ -106,7 +106,7 @@
   files/emacs-w3m-1.3.80-gentoo.diff:
   Version bumped. Don't assign default to S. Removed old ebuilds.
 
-  19 Apr 2004; Bryan ?stergaard <kloeri@gentoo.org> emacs-w3m-1.3.85.ebuild:
+  19 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> emacs-w3m-1.3.85.ebuild:
   Added ~alpha.
 
 *emacs-w3m-1.3.85 (28 Feb 2004)
