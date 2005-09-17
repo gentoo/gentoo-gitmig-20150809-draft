@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-0.5.0.ebuild,v 1.1 2005/09/10 19:57:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-0.5.0.ebuild,v 1.2 2005/09/17 21:08:40 vanquirius Exp $
 
 inherit eutils
 
@@ -14,9 +14,9 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-include.diff
+	epatch "${FILESDIR}/${P}-include.diff"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
