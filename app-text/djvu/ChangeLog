@@ -1,6 +1,6 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.24 2005/09/16 21:39:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.25 2005/09/17 19:49:16 flameeyes Exp $
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
@@ -19,7 +19,7 @@
 
   09 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +files/gentoo-acdesktop.m4,
   +djvu-3.5.14-r1.ebuild:
-  Added several USE flags requested on bug #83311. Thanks to Diego Petteno
+  Added several USE flags requested on bug #83311. Thanks to Diego Pettenò
   <dgp85@users.sourceforge.net> for the patch.
 
   16 Oct 2004; Jason Wever <weeve@gentoo.org> djvu-3.5.14.ebuild:
