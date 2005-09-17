@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.15 2005/07/09 14:51:27 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.16 2005/09/17 02:03:50 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> wdm-1.26-r1.ebuild:
+  Mark 1.26-r1 stable on alpha
 
   09 Jul 2005; Jonathan Smith <smithj@gentoo.org> files/wdm-include:
   removed references to pam_console for #98456
