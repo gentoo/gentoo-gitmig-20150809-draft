@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-ShareLite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.15 2005/08/25 23:19:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.16 2005/09/17 00:40:46 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> IPC-ShareLite-0.09.ebuild:
+  Mark 0.09 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> IPC-ShareLite-0.09.ebuild:
   add ~ia64
