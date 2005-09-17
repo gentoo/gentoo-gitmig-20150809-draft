@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/activeheart
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.5 2005/08/03 18:48:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.6 2005/09/17 19:32:38 flameeyes Exp $
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   activeheart-1.2.1.ebuild:
@@ -21,4 +21,4 @@
   19 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
   +activeheart-1.2.1.ebuild:
   Initial revision, closing bug #47065.
-  Thanks to Diego Petteno <dgp85@users.sourceforge.net>.
+  Thanks to Diego Pettenò <dgp85@users.sourceforge.net>.

@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/activeheart-kwin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.6 2005/08/23 22:24:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.7 2005/09/17 19:34:01 flameeyes Exp $
 
   23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   activeheart-kwin-1.1.ebuild:
@@ -26,4 +26,4 @@
   19 Aug 2004; Konstantin Arkhipov <voxus@gentoo.org>
   +activeheart-kwin-1.1.ebuild:
   Initial revision, closing bug #47065.
-  Thanks to Diego Petteno <dgp85@users.sourceforge.net>.
+  Thanks to Diego Pettenò <dgp85@users.sourceforge.net>.
