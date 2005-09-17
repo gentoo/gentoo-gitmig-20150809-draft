@@ -1,14 +1,17 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.455 2005/09/17 06:15:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.456 2005/09/17 06:19:52 joshuabaergen Exp $
+
+  17 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org> ChangeLog:
+  Fixed credits for patch and such.
 
 *xorg-x11-6.8.2-r4 (17 Sep 2005)
 
   17 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -xorg-x11-6.8.2-r3.ebuild, +xorg-x11-6.8.2-r4.ebuild:
   Fixed previous security update as it did not match upstream's patch.  Much
-  thanks to Alexander Brüning for providing and testing the new patch.  Closes
-  bug #105859.
+  thanks to Alexander Brüning for providing and testing the new patch and
+  Peter Hyman for spotting the source of the problem.  Closes bug #105859.
 
   13 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-x11-6.8.99.15-r1.ebuild:
