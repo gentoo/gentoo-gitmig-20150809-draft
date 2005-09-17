@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14.ebuild,v 1.2 2005/08/26 17:59:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14.ebuild,v 1.3 2005/09/17 16:22:18 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -14,7 +14,7 @@ DEPEND=">=sys-apps/baselayout-1.8.0
 	>=sys-libs/glibc-2.1"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* x86 ~amd64"
 
 S="${WORKDIR}"
 I="/opt/gimps"
@@ -40,9 +40,10 @@ pkg_postinst () {
 	einfo "background at boot. Have a look at /etc/conf.d/gimps and check some"
 	einfo "configuration options."
 	einfo
-	einfo "If you don't want to use the init script to start gimps, remember"
-	einfo "to cd into the directory where the data files are to be stored first, eg.:"
-	einfo "   cd /var/lib/gimps && ${I}/mprime"
+	einfo "If you don't want to use the init script to start gimps, remember to"
+	einfo "pass it an additional command line parameter specifying where the data"
+	einfo "files are to be stored, eg.:"
+	einfo "   ${I}/mprime -w/var/lib/gimps"
 	echo
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.10 2005/08/26 17:59:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.11 2005/09/17 16:22:18 spock Exp $
+
+  17 Sep 2005; Michał Januszewski <spock@gentoo.org> gimps-24.14.ebuild:
+  Changed the info messages about starting gimps manually (bug #106039).
+  Marked 24.14 stable on x86.
 
   26 Aug 2005; Michał Januszewski <spock@gentoo.org> -gimps-24.6.ebuild,
   gimps-24.13.ebuild, gimps-24.14.ebuild:
