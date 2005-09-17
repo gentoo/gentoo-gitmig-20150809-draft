@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5c0c422d050f5191b66a7c4ed928835a man-1.6-r1.ebuild 2983
-MD5 816a0222228cedf51e8bc39acb32fa89 man-1.5p.ebuild 2648
 MD5 9206115cdc98fb8e0d7cbd518ad9476b man-1.6a.ebuild 2897
-MD5 bbbd12048d1505f7dbc23418f8f014fa ChangeLog 10997
-MD5 80f2a25fb0b5692f39a1990527a93271 files/man-1.5m-groff-1.18.patch 923
-MD5 90c01e3cfecc4bc92266780a9be71429 files/digest-man-1.6-r1 59
-MD5 14e1c7533927dfb89900ee788666b342 files/man-1.5p-defmanpath-symlinks.patch 663
-MD5 331c925e304b56d63aa2c97dcc8e08fc files/man-1.6-cross-compile.patch 1744
-MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
-MD5 148b7ee661e1e9384930fbd508dd5027 files/man-1.5p-parallel-make.patch 437
-MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
-MD5 1c3d9a443043b133adbe277b50105123 files/digest-man-1.6a 60
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 b6674d1b4f41296a27e390a6980450f7 ChangeLog 11112
+MD5 816a0222228cedf51e8bc39acb32fa89 man-1.5p.ebuild 2648
 MD5 bc796c3f2d1f9becb3d0bedc1b6dc051 files/man-1.6-parallel-make.patch 1033
-MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
+MD5 331c925e304b56d63aa2c97dcc8e08fc files/man-1.6-cross-compile.patch 1744
+MD5 1c3d9a443043b133adbe277b50105123 files/digest-man-1.6a 60
+MD5 90c01e3cfecc4bc92266780a9be71429 files/digest-man-1.6-r1 59
+MD5 148b7ee661e1e9384930fbd508dd5027 files/man-1.5p-parallel-make.patch 437
 MD5 ecb128fe6db790f05629a8b2eca4c4fa files/man-1.6-message-order.patch 833
+MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
+MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
 MD5 7b94b85c02df3b66046e3d01827cd173 files/man-1.6a-parallel-make.patch 657
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHLjCgIKl8Uu19MoRAp3WAJwIPKs8SmVwaa+KYjr0qI4aevK1FQCdFcYx
-vYV029hvym0q+2I261C1gys=
-=pA3G
------END PGP SIGNATURE-----
+MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
+MD5 14e1c7533927dfb89900ee788666b342 files/man-1.5p-defmanpath-symlinks.patch 663
+MD5 80f2a25fb0b5692f39a1990527a93271 files/man-1.5m-groff-1.18.patch 923

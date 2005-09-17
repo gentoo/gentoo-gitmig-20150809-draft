@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86563d1b856e4666e9862c161b72c0ee mindi-1.10.ebuild 1849
-MD5 b5e3b488f3cafd186b096b7cd6a8e062 mindi-1.03.ebuild 1849
 MD5 4fb46540a7a805964281d781d5f0e264 mindi-0.85.ebuild 1216
 MD5 8274689e97bfa4036fd060385cc5ea1f mindi-1.11.ebuild 1844
-MD5 e1ab942d62bd9547300670143ba93dfb ChangeLog 2866
-MD5 5f07d7fd9cce91c8327e107e1bc7053c metadata.xml 441
-MD5 23e323bb771ee5438043d9855c1b6971 mindi-1.04.ebuild 1844
+MD5 b5e3b488f3cafd186b096b7cd6a8e062 mindi-1.03.ebuild 1849
+MD5 86563d1b856e4666e9862c161b72c0ee mindi-1.10.ebuild 1849
 MD5 06272711593cc37d3bc05ae9f36c3eb7 mindi-0.86.ebuild 1358
-MD5 07d70f05ae5cd1b6dff05569a349803c files/digest-mindi-0.85 59
-MD5 1816016d2e374827fd0d6fb41fb9361c files/digest-mindi-0.86 59
-MD5 a5b7000ca1c0b7c87e463f30963c0e48 files/digest-mindi-1.03 60
+MD5 23e323bb771ee5438043d9855c1b6971 mindi-1.04.ebuild 1844
+MD5 5f07d7fd9cce91c8327e107e1bc7053c metadata.xml 441
+MD5 f5eb07f448c9e499daf56098b6ce8c44 ChangeLog 2976
 MD5 101bf89d7e394be6e50d2a42e756c594 files/digest-mindi-1.04 60
-MD5 8a29bf61bb5419e5f158300cff4c1c5e files/digest-mindi-1.10 60
-MD5 fd82ae181560d7bf2024411068a01567 files/digest-mindi-1.11 60
+MD5 a5b7000ca1c0b7c87e463f30963c0e48 files/digest-mindi-1.03 60
+MD5 1816016d2e374827fd0d6fb41fb9361c files/digest-mindi-0.86 59
 MD5 ee1e232f194b4562844a4eac0f91ab49 files/mindi-0.86-security.patch 7683
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe0iCI1lqEGTUzyQRAqNxAKCIi5hAdrrzp0GGzifWViMNt4hNNACggAX4
-DCzSBPRndfgwKnSkYrkgglA=
-=tMoy
------END PGP SIGNATURE-----
+MD5 fd82ae181560d7bf2024411068a01567 files/digest-mindi-1.11 60
+MD5 07d70f05ae5cd1b6dff05569a349803c files/digest-mindi-0.85 59
+MD5 8a29bf61bb5419e5f158300cff4c1c5e files/digest-mindi-1.10 60
