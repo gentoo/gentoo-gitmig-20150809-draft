@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29cee4788f670e07a114fd2158fc8125 hcfusbmodem-1.05.ebuild 763
 MD5 ebc35641f7d0128e5bcc0fb0225a7300 hcfusbmodem-1.06.ebuild 763
-MD5 addf72511501deb1fbdb0cef4aaf8741 ChangeLog 1818
+MD5 0adb9c42c948b504f34c91d5d72de719 ChangeLog 2126
+MD5 c09ae1bd5eee588acb316f2e99ffc5d9 hcfusbmodem-1.06-r1.ebuild 989
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 b79164cb72d3158caa12b91d8449f9ae files/digest-hcfusbmodem-1.05 79
+MD5 2ea75e584ddedfbb0c19b75beadad4d7 files/digest-hcfusbmodem-1.06-r1 79
+MD5 3e9febdb259b7acf520e55bdba23ee3f files/hcfusbmodem-1.06-simple_class.patch 5208
+MD5 c1d8ec1dd9eeb532a9fcda19dc2f4191 files/hcfusbmodem-1.06-USB_byteorder.patch 1983
 MD5 2ea75e584ddedfbb0c19b75beadad4d7 files/digest-hcfusbmodem-1.06 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCu5qTjiC39V7gKu0RAgxKAJ4pxfscgIICodi0BeaFmVFt7CxobgCeLq6W
-Mkw67R4TfjV7YjCvcvpWiTk=
-=Wgvn
+iD8DBQFDK+AJNSP4Vda7IdsRAkCfAKCPOJXz3C6UA20OCA0yLZki5o5/twCeNjEY
+3Ro5+frSMitLuAkuzZ7FuPc=
+=clg0
 -----END PGP SIGNATURE-----
