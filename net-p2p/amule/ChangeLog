@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.43 2005/09/16 23:34:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.44 2005/09/17 22:26:45 mkay Exp $
+
+  17 Sep 2005; <mkay@gentoo.org> amule-2.0.3.ebuild:
+  Fixing symlinks made to files in live system (sandbox violation)
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
