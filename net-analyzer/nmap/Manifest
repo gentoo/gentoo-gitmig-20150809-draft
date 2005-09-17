@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 02b22b2857aba87133e2c756f634d8d2 nmap-3.81.ebuild 943
 MD5 682c844b3a725e3441e6f1ac53ad4aa2 nmap-3.83.ebuild 1033
 MD5 b0916d4858fdc6819d8b4fd3733f986a nmap-3.90.ebuild 959
-MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 2acb253b4611180a085712da0ac581a2 nmap-3.93.ebuild 959
-MD5 4f608df56eaf15d993e8f4977f3d8c6c ChangeLog 12222
-MD5 5a7f498a284c3404568251a4e4d6ecfa files/digest-nmap-3.93 63
-MD5 5dcee02c4729204bc26ce3c1652b977f files/digest-nmap-3.90 63
+MD5 f5f7070b0446ae65bbeb0e6aec844cb8 ChangeLog 12216
 MD5 a9321c7613a34f902b2bcf53af008bc3 files/digest-nmap-3.81 63
 MD5 90ee137382c6272e7524f0c4648c45f4 files/digest-nmap-3.83 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK9NWgIKl8Uu19MoRAgGLAJ4+B9vPQ07jiI2m0/SXa66+kQ9nNwCcC8cJ
-HNrWkArS7123UdPDtGpPyZw=
-=+B1P
------END PGP SIGNATURE-----
+MD5 5dcee02c4729204bc26ce3c1652b977f files/digest-nmap-3.90 63
+MD5 5a7f498a284c3404568251a4e4d6ecfa files/digest-nmap-3.93 63
