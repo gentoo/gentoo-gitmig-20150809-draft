@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.17 2005/09/03 21:13:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.18 2005/09/17 00:53:11 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> wmtimer-2.9.2.ebuild:
   Stable on ppc64
@@ -14,7 +17,7 @@
 *wmtimer-2.9.2 (14 March 2004)
 
   14 Mar 2004; Michele Noberasco <s4t4n@gentoo.org> wmtimer-2.9.2.ebuild:
-  Version bump. Closes #84982, reported by André-Sebastian Liebe.
+  Version bump. Closes #84982, reported by AndrÃ©-Sebastian Liebe.
   wmtimer-2.4.ebuild:
   Updated copyright headers.
 
