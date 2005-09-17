@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52d9cde59e3d8f236843ae9ddcf8d933 gkrellshoot-0.4.1.ebuild 772
-MD5 cc993fd4202c209eabcf314c62c3e617 gkrellshoot-0.4.3.ebuild 803
-MD5 9f19b4658993b8c2ff470b5c34957ac1 ChangeLog 2239
+MD5 b0f86d28973675a3d7a88e93782f1023 ChangeLog 2345
 MD5 a4938b72df3a15af2f29b59bdb567aa4 gkrellshoot-0.3.2.ebuild 792
+MD5 2119377f02c2abc59a4ed5227fd5c0da gkrellshoot-0.4.1.ebuild 771
+MD5 cc993fd4202c209eabcf314c62c3e617 gkrellshoot-0.4.3.ebuild 803
+MD5 f23fea3e8df4c393b9d16c4ccfbcf244 files/digest-gkrellshoot-0.4.3 68
 MD5 1b94315da93e6a9ea08d07f726fccc58 files/digest-gkrellshoot-0.3.2 68
 MD5 2ddc84839a8d815f0163cd6cf58992f4 files/digest-gkrellshoot-0.4.1 68
-MD5 f23fea3e8df4c393b9d16c4ccfbcf244 files/digest-gkrellshoot-0.4.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCerjsI1lqEGTUzyQRAhKJAJ9BO2v/vGakXEEHMc03rWEfbZjLuwCeNh7m
-OZqc44fjtimlhf209T1qeZo=
-=Xqn3
------END PGP SIGNATURE-----
