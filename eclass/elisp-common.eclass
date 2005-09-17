@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.13 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.14 2005/09/17 01:02:40 ciaranm Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -74,7 +74,7 @@ EOF
 
 elisp-comp() {
 # Copyright 1995 Free Software Foundation, Inc.
-# François Pinard <pinard@iro.umontreal.ca>, 1995.
+# FranÃ§ois Pinard <pinard@iro.umontreal.ca>, 1995.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
