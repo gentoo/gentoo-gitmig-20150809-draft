@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a2a9fdc7d010a7c04c96cb3b7c05f06b metadata.xml 158
 MD5 0cfd7831f2d57b93e252c0f3d9c25276 mysql-3.23.58-r1.ebuild 7063
 MD5 92fc2eaf2ef09d494ee45b25e57c6087 mysql-4.0.22-r2.ebuild 9569
@@ -50,3 +53,10 @@ MD5 c6ff193b0612040bab879d2085b6edea files/mysql-4.0.24-manual.texi.patch 603
 MD5 76446c512e91b2f8e9e69a0379178e5c files/mysql-4.0.25-r2-asm-pic-fixes.patch 7295
 MD5 66b1e90f93ae0adc106e7b62a2c4043b files/mysql-4.1.9-thrssl.patch 905
 MD5 a755fb5a3ed724046a4f83fafd819c77 files/mysql-test-myisam-geometry.patch 1217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDK/acKf2g/qXtneoRAsyoAJ90y4M3wO0DQhJC9atEm9O3OZjasQCfa4bg
+8+So7U/aRydRYTYFR/DVuxk=
+=vX7m
+-----END PGP SIGNATURE-----
