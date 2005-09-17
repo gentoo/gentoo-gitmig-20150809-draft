@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 276ca202b6c1471af85d43ce0eb6b94f zaptel-1.0.7-r1.ebuild 6517
 MD5 42f062a13ffcf3c15e50b910ca4f2443 zaptel-1.0.3.ebuild 3512
 MD5 05517ce3f7bdb892f419c01c24442bba zaptel-1.0.7.ebuild 6089
@@ -44,3 +47,10 @@ MD5 f46e4409c0bb701f8a6214e793de72a2 files/digest-zaptel-1.0.8 212
 MD5 69d0c3831715ccac6422b13a99fc6557 files/digest-zaptel-1.0.9_p2 214
 MD5 6fec683d2df451d8094093511d1138db files/zaptel.devfsd 204
 MD5 d40a84eeea5866a3afbac2603e970e7b files/zaptel-1.0.4-experimental-devfs26.diff 5982
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDK2svLLFUmVNQ7rkRAhLeAKDQdeUKgbUlUEhejGkFEoX5yGAOpQCg1iVM
+cRpa85ujrLm/SHciOCtvPyo=
+=0oUJ
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.62 2005/09/15 02:38:26 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.63 2005/09/17 01:01:47 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  zaptel-1.2.0_beta1.ebuild:
+  Converted to UTF-8, fixed encoding screwups
 
   15 Sep 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.3.ebuild,
   zaptel-1.0.4.ebuild, zaptel-1.0.4-r1.ebuild, zaptel-1.0.6.ebuild,

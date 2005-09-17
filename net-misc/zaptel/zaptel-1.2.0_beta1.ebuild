@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0_beta1.ebuild,v 1.2 2005/08/27 23:31:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.0_beta1.ebuild,v 1.3 2005/09/17 01:01:47 ciaranm Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -142,7 +142,7 @@ pkg_setup() {
 		if [[ $result -lt 3 ]]; then
 			eerror "[$result Error(s)] Zaptel is not happy :("
 		else
-			eerror "[$result Error(s)] You're making zaptel cry :´("
+			eerror "[$result Error(s)] You're making zaptel cry :'("
 		fi
 		die "[$result] Precondition(s) not met"
 	fi
