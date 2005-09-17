@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.45 2005/09/13 01:05:21 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.46 2005/09/17 19:44:00 flameeyes Exp $
 
   13 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -files/0.99.1-r6-check-for-glproto.patch,
@@ -117,7 +117,7 @@
 
   17 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/xorg-server-fbmmx-local.patch, xorg-server-0.99.1-r3.ebuild:
-  (fd.o #4073) Fix compilation failures at fbmmx.c. Patch from Diego Pettenó
+  (fd.o #4073) Fix compilation failures at fbmmx.c. Patch from Diego Pettenò
   <flameeyes@gentoo.org>.
 
   16 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
