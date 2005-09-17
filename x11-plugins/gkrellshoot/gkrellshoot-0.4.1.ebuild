@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.1.ebuild,v 1.18 2005/05/06 00:22:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.1.ebuild,v 1.19 2005/09/17 10:08:55 agriffis Exp $
 
 S=${WORKDIR}/${P/s/S}
 DESCRIPTION="GKrellm2 plugin to take screen shots and lock screen"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/gkrellshoot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 sparc ~alpha amd64 ppc"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-2*
