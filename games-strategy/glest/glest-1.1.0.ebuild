@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.1.0.ebuild,v 1.1 2005/08/20 02:06:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.1.0.ebuild,v 1.2 2005/09/17 20:03:52 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -53,21 +53,34 @@ src_compile() {
 
 src_install() {
 	dogamesbin "${FILESDIR}"/glest || die "couldn't install launcher"
-	dosed "s:GENTOO_DATADIR:${GAMES_DATADIR}:" "${GAMES_BINDIR}"/glest
+	sed -i \
+		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}:" \
+		"${D}${GAMES_BINDIR}"/glest \
+		|| die "sed failed"
 
 	exeinto "${GAMES_DATADIR}"/${PN}/lib
 	doexe glest || die "doexe failed"
 
+	insinto "${GAMES_DATADIR}"/${PN}/config
+	doins glest.ini || die "config copy failed"
+
 	cd "${WORKDIR}"/glest_game
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r techs data maps tilesets || die "data copy failed"
-	insinto "${GAMES_DATADIR}"/${PN}/config
-	doins glest.ini || die "config copy failed"
 	dodoc readme.txt
 
-	use linguas_de && cp "${DISTDIR}"/german.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/
-	use linguas_ru && cp "${DISTDIR}"/russian.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/
-	use linguas_dk && cp "${DISTDIR}"/dansk.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/
+	if use linguas_de ; then
+		cp "${DISTDIR}"/german.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
+			|| die "cp failed"
+	fi
+	if use linguas_ru ; then
+		cp "${DISTDIR}"/russian.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
+			|| die "cp failed"
+	fi
+	if use linguas_dk ; then
+		cp "${DISTDIR}"/dansk.lng "${D}/${GAMES_DATADIR}"/${PN}/data/lang/ \
+			|| die "cp failed"
+	fi
 
 	make_desktop_entry glest Glest
 
