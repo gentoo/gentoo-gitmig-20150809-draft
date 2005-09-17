@@ -1,14 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-20040331.ebuild,v 1.12 2005/09/17 20:37:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0.ebuild,v 1.1 2005/09/17 22:05:45 betelgeuse Exp $
 
 inherit java-pkg
 
+MY_PN="mail"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="GNU implementation of the Javamail API"
 HOMEPAGE="http://www.gnu.org/software/classpathx/javamail/"
-SRC_URI="http://www.gentoo.org/~karltk/java/distfiles/javamail-${PV}-gentoo.tar.bz2"
+SRC_URI="mirror://gnu/classpathx/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~x86"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.3
@@ -18,14 +20,17 @@ DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	jikes? ( >=dev-java/jikes-1.19 )"
 
-S=${WORKDIR}/javamail-${PV}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
+	local activation=$(dirname $(java-pkg_getjar gnu-jaf-1 activation.jar))
+	local inetlib=$(dirname $(java-pkg_getjar gnu-classpath-inetlib-1.0 inetlib.jar))
+
 	# TODO: Add jikes back	
 	# TODO: Useflag this
 	econf \
-		--with-activation-jar=/usr/share/gnu-jaf-1/lib \
-		--with-inetlib-jar=/usr/share/gnu-classpath-inetlib-1.0/lib \
+		--with-activation-jar=${activation} \
+		--with-inetlib-jar=${inetlib} \
 		--enable-smtp \
 		--enable-imap \
 		--enable-pop3 \
@@ -33,8 +38,11 @@ src_compile() {
 		--enable-mbox \
 		--enable-maildir \
 		|| die
+
 	echo "Configure finished. Compiling... Please wait."
+
 	emake || die
+
 	if use doc; then
 		emake javadoc || die
 	fi

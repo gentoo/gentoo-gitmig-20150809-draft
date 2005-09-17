@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.12 2005/09/17 20:37:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.13 2005/09/17 22:05:45 betelgeuse Exp $
+
+*gnu-javamail-1.0 (17 Sep 2005)
+
+  17 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +gnu-javamail-1.0.ebuild, -gnu-javamail-20040331.ebuild:
+  Version bump. Fixes bug #105318. Thanks to Josh Nichols
+  <nichoj@alum.rpi.edu>. Removed the old version because the date makes it
+  newer than 1.0.
 
   17 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
   gnu-javamail-20040331.ebuild:
