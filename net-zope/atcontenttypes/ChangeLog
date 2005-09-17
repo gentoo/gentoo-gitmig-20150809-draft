@@ -1,10 +1,13 @@
 # ChangeLog for net-zope/atcontenttypes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/atcontenttypes/ChangeLog,v 1.1 2005/03/26 02:11:34 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/atcontenttypes/ChangeLog,v 1.2 2005/09/17 00:22:38 ciaranm Exp $
+
+  17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
 
 *atcontenttypes-0.2.0 (26 Mar 2005)
 
   26 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
   +atcontenttypes-0.2.0.ebuild:
-  initial release based on Kai Schlüter work (#85755).
+  initial release based on Kai SchlÃ¼ter work (#85755).
 
