@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.2 2005/09/10 19:05:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.3 2005/09/17 11:45:03 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -140,7 +140,7 @@ pkg_postinst() {
 
 	einfo "You need to be in the uucp AND dialout group to make calls as a user."
 	einfo
-	einfo "If you have problems like:"
+	einfo "If you see the following in dmesg:"
 	echo slamr: device 10b9:5457 is grabbed by driver serial
 	einfo "you need to modprobe ungrab-winmodem before slamr"
 }
