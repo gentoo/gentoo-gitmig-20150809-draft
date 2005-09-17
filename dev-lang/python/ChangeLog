@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.166 2005/09/14 23:22:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.167 2005/09/17 10:54:52 kloeri Exp $
 
   14 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> python-2.3.5-r2.ebuild:
   2.3.5-r2 stable on mips for security bug #104009.
@@ -171,7 +171,7 @@
   Patches and version bumps for security bug# 80592 Python bug# PSF-2005-001 xmlrpc
   vulnerability. Removed obsolete versions.
 
-  06 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> python-2.4.ebuild:
+  06 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.4.ebuild:
   Fix broken Manifest.
 
   05 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> python-2.4.ebuild:
@@ -243,7 +243,7 @@
   Made python-2.1 stable on ppc as there are still some ebuilds which require
   this version.
 
-  03 Jul 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> python-2.3.3-r1.ebuild:
   Stable on alpha.
 
   03 Jul 2004; Grant Goodyear <g2boojum@gentoo.org> python-2.3.4.ebuild:
@@ -276,7 +276,7 @@
 
 *python-2.3.4 (04 Jun 2004)
 
-  04 Jun 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> +python-2.3.4.ebuild:
+  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +python-2.3.4.ebuild:
   Bump version.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> python-2.3.3-r1.ebuild:
@@ -330,7 +330,7 @@
   Removing portage version check again as it's preventing new installations.
   Bug #43036
 
-  25 Feb 2004; Bryan ÃÂstergaard,,, <kloeri@gentoo.org> python-2.3.3.ebuild:
+  25 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> python-2.3.3.ebuild:
   Reinstating portage version check as people keep upgrading python without
   upgrading portage.
 
