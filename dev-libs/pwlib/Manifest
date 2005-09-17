@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e7e31f6f265883cdf48d812f42a9f856 metadata.xml 235
 MD5 7b71ebcce6d852f0dc6738ee8b77ea49 pwlib-1.5.0-r1.ebuild 2403
 MD5 4690d9e7395046ed1c573e68a47bd053 pwlib-1.5.0.ebuild 2304
@@ -23,3 +26,10 @@ MD5 94fe183a68413eaeb8242cd30532d963 files/pwlib-1.6.3-dyn-esd.patch 366
 MD5 6aa40def4f33c78a2c05f91aeda058c1 files/pwlib-1.8.4-gcc4.diff 1574
 MD5 a874e4383164981b3881c8f636ec842b files/digest-pwlib-1.8.7 64
 MD5 cd832010589d81cab25d2523d62a3401 files/pwlib-1.8.7-instplugins.diff 1044
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLDEGKf2g/qXtneoRAnzXAJ4jbtEaPK5YxCfuETF/+nZ0ofArFwCdEh4U
+uOTO9ROsdE7AKj2HfyItqjw=
+=czqr
+-----END PGP SIGNATURE-----
