@@ -1,6 +1,20 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.20 2005/04/20 10:01:30 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.21 2005/09/17 18:18:39 truedfx Exp $
+
+*xosview-1.8.2-r1 (17 Sep 2005)
+
+  17 Sep 2005; Harald van Dĳk <truedfx@gentoo.org>
+  +files/xosview-resdir.patch, +xosview-1.8.2-r1.ebuild:
+  Correct checks for resource dirs, and work without /usr/X11R6
+
+  17 Sep 2005; Harald van Dĳk <truedfx@gentoo.org>
+  xosview-1.8.2.ebuild:
+  Install XOsview resource file in correct location (bug #106173)
+
+  17 Sep 2005; Harald van Dĳk <truedfx@gentoo.org>
+  -files/xosview-1.8.1-kernel-2.5+.diff, -xosview-1.8.1.ebuild:
+  Removing old version
 
   20 Apr 2005; Harald van Dĳk <truedfx@gentoo.org>
   +files/xosview-emptyxpaths.patch, xosview-1.8.2.ebuild:

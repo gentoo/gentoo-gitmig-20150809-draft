@@ -1,8 +1,18 @@
-MD5 7157c576afa36d303d0ba0736f4645be ChangeLog 3948
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 65396460360334904c2690196b0e6d6e ChangeLog 4438
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 26335e66a65db22f72ce4657bf7b79d2 xosview-1.8.1.ebuild 995
-MD5 5b1d41ccdef822a8eb7858b6af71d044 xosview-1.8.2.ebuild 1216
-MD5 eddb6473d81018249d098b1d013fd044 files/digest-xosview-1.8.1 65
+MD5 946ad621f834996cb4b66d070945bda9 xosview-1.8.2.ebuild 1230
+MD5 ce0988447ecb9e78eb2d8590d4902cd7 xosview-1.8.2-r1.ebuild 847
 MD5 efaaa39f5b7d26d1feffe219417ed633 files/digest-xosview-1.8.2 65
-MD5 faeccca9ef506e145c54e58b72a5b3af files/xosview-1.8.1-kernel-2.5+.diff 4609
 MD5 e5d743e89fadcc4cc2facb642650e018 files/xosview-emptyxpaths.patch 1861
+MD5 647297fad7639dbf11950956b41194eb files/xosview-resdir.patch 1566
+MD5 efaaa39f5b7d26d1feffe219417ed633 files/digest-xosview-1.8.2-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLF4BwnQyISwouHwRApmbAKC+99IP/xioDvuKZBgsXwwMvcuK2gCfRj8q
+jpX99o4rihT5c1fRu5uCZFs=
+=GGy7
+-----END PGP SIGNATURE-----

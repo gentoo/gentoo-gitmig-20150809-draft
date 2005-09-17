@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.9 2005/04/20 10:01:30 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.10 2005/09/17 18:18:39 truedfx Exp $
 
 inherit eutils gnuconfig
 
@@ -17,8 +17,8 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/xosview-emptyxpaths.patch
+	cd "${S}"
+	epatch "${FILESDIR}/xosview-emptyxpaths.patch"
 }
 
 src_compile() {
@@ -38,7 +38,7 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin
 	doexe xosview
-	insinto /usr/lib/X11
+	insinto /etc/X11/app-defaults
 	cp Xdefaults XOsview
 	doins XOsview
 	into /usr
