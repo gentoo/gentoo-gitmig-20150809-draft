@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.13 2005/08/25 22:57:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.14 2005/09/17 00:38:43 agriffis Exp $
+
+  17 Sep 2005; Aron Griffis <agriffis@gentoo.org> Devel-Symdump-2.03.ebuild:
+  Mark 2.03 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Devel-Symdump-2.03.ebuild:
   add ~ia64
