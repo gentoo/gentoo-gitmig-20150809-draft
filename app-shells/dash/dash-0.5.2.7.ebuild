@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.7.ebuild,v 1.3 2005/09/14 21:11:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.7.ebuild,v 1.4 2005/09/17 21:17:56 hansmi Exp $
 
 inherit eutils versionator flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/d/dash/${MY_P2}.orig.tar.gz \
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE="static"
 
 RDEPEND=""
