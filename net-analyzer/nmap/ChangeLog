@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.98 2005/09/17 03:27:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.99 2005/09/17 12:03:08 kloeri Exp $
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> nmap-3.83.ebuild:
   Mark 3.83 stable on ia64
@@ -130,7 +130,7 @@
   Version bump. Dropped the statistics patch as it does not apply to 3.70 and
   doesn't seem to be maintained upstream.
 
-  22 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> nmap-3.55.ebuild:
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> nmap-3.55.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> nmap-3.55.ebuild:
@@ -160,7 +160,7 @@
   nmap-3.50.ebuild:
   Clean up and trim old ebuild
 
-  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> nmap-3.50-r1.ebuild:
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> nmap-3.50-r1.ebuild:
   Stable on alpha.
 
   14 Feb 2004; Michal Januszewski <spock@gentoo.org> nmap-3.50-r1.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.55 2005/07/24 03:31:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.56 2005/09/17 12:01:52 kloeri Exp $
 
 *nessus-plugins-2.2.5 (24 Jul 2005)
 
@@ -20,7 +20,7 @@
   02 Jun 2005; Joseph Jezak <josejx@gentoo.org> nessus-plugins-2.2.4.ebuild:
   Marked ppc stable.
 
-  22 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  22 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-plugins-2.2.4.ebuild:
   Stable on alpha.
 
@@ -46,7 +46,7 @@
   nessus-plugins-2.2.4.ebuild:
   Removing ebuild clutter, marking 2.2.4 x86 stable.
 
-  31 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   nessus-plugins-2.2.0.ebuild:
   Stable on alpha.
 
@@ -100,7 +100,7 @@
   28 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-plugins-2.1.1.ebuild:
   x86 stable
 
-  13 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   nessus-plugins-2.0.12.ebuild:
   Stable on alpha, bug 58014.
 
@@ -151,7 +151,7 @@
   nessus-plugins-2.0.10a.ebuild:
   marked x86 stable
 
-  05 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   nessus-plugins-2.0.10a.ebuild:
   Stable on alpha.
 
