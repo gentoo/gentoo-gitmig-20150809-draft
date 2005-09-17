@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e1db23dbad27e8b2bfd76a3710cb415e ChangeLog 2691
+MD5 ab374dbfd487eaf6e7b6b5f98b3b0579 ChangeLog 2818
 MD5 dbdd3b9510c60b4d23469fc0ff2a9861 files/digest-ne-1.39 60
-MD5 7d8916bc76b0663d2b685100e0199a41 files/digest-ne-1.40 60
+MD5 551f6a9bfad8b11dbe2c4d20c1800b62 files/digest-ne-1.41 60
 MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
 MD5 d3a49b5b34f3ea1e7bcb29f1cb20cad2 ne-1.39.ebuild 1073
-MD5 aba1fe955df522f91a9bc7073f4d0986 ne-1.40.ebuild 887
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDD9rKI1lqEGTUzyQRAgWSAJsGdEzy/y4qs91RENK2YPyuftoIiQCfW0Hh
-xFl522yHoXYnMv/YDIF+6Sk=
-=KeSu
------END PGP SIGNATURE-----
+MD5 b55ffd0658b5648b1dd5021f77138717 ne-1.41.ebuild 887

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.40.ebuild,v 1.1 2005/08/27 03:15:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.41.ebuild,v 1.1 2005/09/17 22:48:35 swegener Exp $
 
 inherit toolchain-funcs
 
