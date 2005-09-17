@@ -66,3 +66,4 @@ move dev-java/jai-bin dev-java/sun-jai-bin
 move dev-java/jimi dev-java/sun-jimi
 slotmove dev-java/gnu-activation 0 1
 move dev-java/gnu-activation dev-java/gnu-jaf
+slotmove =dev-java/gnu-javamail-20040331 0 1
