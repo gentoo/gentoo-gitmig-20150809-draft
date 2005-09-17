@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/Unix-Syslog-0.100-r1.ebuild,v 1.11 2005/08/26 00:34:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/Unix-Syslog-0.100-r1.ebuild,v 1.12 2005/09/17 00:46:34 agriffis Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Unix/MHARNISCH/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
