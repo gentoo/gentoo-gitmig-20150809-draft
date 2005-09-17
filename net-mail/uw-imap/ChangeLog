@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.71 2005/06/27 07:41:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.72 2005/09/17 12:17:32 kloeri Exp $
 
   27 Jun 2005; Markus Rothe <corsair@gentoo.org> uw-imap-2004c-r3.ebuild:
   Stable on ppc64
@@ -63,7 +63,7 @@
   01 Feb 2005; Olivier CrĂŞte <tester@gentoo.org> :
   Stable on x86 per security bug #79874
 
-  30 Jan 2005; Bryan Ăstergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:
+  30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:
   Stable on alpha, bug 79874.
 
 *uw-imap-2004c-r1 (01 Feb 2005)
@@ -107,7 +107,7 @@
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> uw-imap-2004a.ebuild:
   Stable on amd64.
 
-  05 Dec 2004; Bryan Ăstergaard <kloeri@gentoo.org> uw-imap-2004a.ebuild:
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004a.ebuild:
   Stable on alpha, bug 72323.
 
   24 Nov 2004; Christian Birchinger <joker@gentoo.org> uw-imap-2004a.ebuild:
@@ -121,7 +121,7 @@
   Removed mbox USE flag from 2002e-r4 and 2004a, as it is not used at all.
   Inherit flag-o-matic.
 
-  31 Oct 2004; Bryan Ăstergaard <kloeri@gentoo.org>
+  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   uw-imap-2002e-r4.ebuild:
   Stable on alpha.
 

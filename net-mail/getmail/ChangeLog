@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.88 2005/08/13 23:26:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.89 2005/09/17 12:13:31 kloeri Exp $
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> getmail-4.3.11.ebuild:
   Stable on ppc.
@@ -152,7 +152,7 @@
   -getmail-4.2.2.ebuild, -getmail-4.2.3.ebuild, -getmail-4.2.4.ebuild:
   Removed old ebuilds.
 
-  22 Jan 2005; Bryan Ăstergaard <kloeri@gentoo.org> getmail-4.2.5.ebuild:
+  22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> getmail-4.2.5.ebuild:
   Stable on alpha.
 
   21 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> getmail-4.2.5.ebuild:
@@ -232,7 +232,7 @@
   21 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> getmail-4.2.0.ebuild:
   Marked stable on amd64.
 
-  20 Sep 2004; Bryan ĂÂstergaard,,, <kloeri@gentoo.org> getmail-4.2.0.ebuild:
+  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> getmail-4.2.0.ebuild:
   Stable on alpha, bug 64643.
 
   20 Sep 2004; Andrej Kacian <ticho@gentoo.org> getmail-4.2.0.ebuild:
@@ -318,7 +318,7 @@
   Version bump bug #47741. Thanks to tove <bugs-at-veller-dot-net>, Daniel 
   Webert <daniel_webert-at-web-dot-de>.
 
-  07 Jun 2004; Bryan ĂÂstergaard <kloeri@gentoo.org> getmail-3.2.1.ebuild:
+  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> getmail-3.2.1.ebuild:
   Stable on alpha.
 
   08 Nov 2003; Brad House <brad_mssw@gentoo.org> getmail-3.2.1.ebuild:

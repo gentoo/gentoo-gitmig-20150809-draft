@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.28 2005/07/29 20:58:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.29 2005/09/17 12:14:27 kloeri Exp $
 
   29 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> mailwrapper-0.2.1.ebuild:
   Stable on sh.
@@ -56,7 +56,7 @@
   25 Apr 2004; Joshua Kinard <kumba@gentoo.org> mailwrapper-0.1.ebuild:
   Marked stable on mips.
 
-  23 Apr 2004; Bryan Ăstergaard <kloeri@gentoo.org> mailwrapper-0.1.ebuild:
+  23 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> mailwrapper-0.1.ebuild:
   Stable on alpha.
 
   23 Apr 2004; Travis Tilley <lv@gentoo.org> mailwrapper-0.1.ebuild:
