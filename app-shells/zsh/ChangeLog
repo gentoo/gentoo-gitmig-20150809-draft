@@ -1,6 +1,6 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.89 2005/09/04 12:23:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.90 2005/09/17 15:23:09 kloeri Exp $
 
   04 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> zsh-4.2.5.ebuild:
   Small multilib fix, closes bug 104669. Stable on amd64.
@@ -37,7 +37,7 @@
   -files/_portage-20040730, -zsh-4.2.0-r1.ebuild, -zsh-4.2.1-r1.ebuild:
   Removed old versions.
 
-  31 Mar 2005; Bryan ?stergaard <kloeri@gentoo.org> zsh-4.2.4.ebuild:
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> zsh-4.2.4.ebuild:
   Stable on alpha.
 
   31 Mar 2005; <blubb@gentoo.org> zsh-4.2.4.ebuild:
@@ -52,7 +52,7 @@
   28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> zsh-4.2.4.ebuild:
   Stable on x86 and ppc.
 
-  27 Mar 2005; Bryan ?stergaard <kloeri@gentoo.org> zsh-4.2.3.ebuild:
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> zsh-4.2.3.ebuild:
   Stable on alpha.
 
   22 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
