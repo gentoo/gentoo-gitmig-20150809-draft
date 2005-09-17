@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.60 2005/09/17 02:22:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.61 2005/09/17 19:24:40 flameeyes Exp $
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> vsftpd-2.0.3-r1.ebuild:
   Mark 2.0.3-r1 stable on alpha
@@ -58,7 +58,7 @@
   xinetd USE flag added to make support of it optional - fixes #75892
   USERID removed from xinetd files - fixes #78764
   init.d script now does a "killall vsftpd" when stopping - fixes #81819
-  cleaner ebuild - fixes #84733 thanks to Diego Petteno <flameeyes@gentoo.org>
+  cleaner ebuild - fixes #84733 thanks to Diego Pettenò <flameeyes@gentoo.org>
 
 *vsftpd-2.0.2 (13 Mar 2005)
 
