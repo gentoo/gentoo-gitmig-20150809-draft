@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r2.ebuild,v 1.3 2005/09/18 11:14:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r2.ebuild,v 1.4 2005/09/18 13:27:07 swegener Exp $
 
 inherit eutils pam
 
@@ -20,7 +20,7 @@ DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	sys-devel/bison
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
-	ldap? ( dev-lang/perl ) 
+	ldap? ( dev-lang/perl )
 	${DEPEND}"
 
 S=${WORKDIR}/${P/_/}
