@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.194 2005/09/17 17:26:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.195 2005/09/18 16:56:54 dsd Exp $
+
+*gentoo-sources-2.6.13-r2 (18 Sep 2005)
+
+  18 Sep 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.13-r2.ebuild:
+  Update to 2.6.13.2. Fix a speakup-related gameport problem. Fix the evil
+  AMD64 SMP crash issues, plus a couple more fixes.
 
   17 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-sources-2.6.13-r1.ebuild:
