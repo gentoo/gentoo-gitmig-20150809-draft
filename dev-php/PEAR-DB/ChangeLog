@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.38 2005/09/11 03:29:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.39 2005/09/18 19:53:01 cryos Exp $
+
+  18 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> PEAR-DB-1.7.6-r1.ebuild:
+  Marked ~amd64.
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-DB-1.7.6-r1.ebuild:
   Added ~sparc keyword.
