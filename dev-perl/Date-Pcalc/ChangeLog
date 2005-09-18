@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Pcalc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.4 2005/04/25 13:45:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.5 2005/09/18 23:14:36 metalgod Exp $
+
+  19 Sep 2005; Luis Medinas <metalgod@gentoo.org> Date-Pcalc-1.2.ebuild:
+  Added ~amd64 keyword. Closes bug #106373.
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> Date-Pcalc-1.2.ebuild:
   Cleaning
