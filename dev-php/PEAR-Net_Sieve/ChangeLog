@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.27 2005/09/08 07:58:50 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.28 2005/09/18 23:19:43 weeve Exp $
+
+  18 Sep 2005; Jason Wever <weeve@gentoo.org>
+  PEAR-Net_Sieve-1.1.1-r1.ebuild:
+  Added ~sparc keyword.
 
 *PEAR-Net_Sieve-1.1.1-r1 (08 Sep 2005)
 
