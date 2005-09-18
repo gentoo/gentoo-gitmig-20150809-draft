@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-0.40-r1.ebuild,v 1.7 2005/09/15 23:21:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-0.40-r1.ebuild,v 1.8 2005/09/18 21:02:10 vapier Exp $
 
 DESCRIPTION="port of the OpenBSD TFTP server"
 HOMEPAGE="http://www.kernel.org/pub/software/network/tftp/"
@@ -9,12 +9,21 @@ SRC_URI="mirror://kernel/software/network/tftp/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc s390 sparc x86"
-IUSE=""
+IUSE="readline selinux tcpd"
 
-DEPEND="!virtual/tftp"
+DEPEND="readline? ( sys-libs/readline )
+	tcpd? ( sys-apps/tcp-wrappers )
+	selinux? ( sec-policy/selinux-tftpd )
+	!virtual/tftp"
 PROVIDE="virtual/tftp"
-RDEPEND="${DEPEND}
-	sys-apps/tcp-wrappers"
+
+src_compile() {
+	econf \
+		$(use_with tcpd tcpwrappers) \
+		$(use_with readline) \
+		|| die
+	emake || die
+}
 
 src_install() {
 	make INSTALLROOT="${D}" install || die

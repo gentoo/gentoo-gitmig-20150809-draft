@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.9 2005/09/15 23:21:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.10 2005/09/18 21:02:10 vapier Exp $
+
+  18 Sep 2005; Mike Frysinger <vapier@gentoo.org> tftp-hpa-0.40-r1.ebuild:
+  Add support for USE=selinux #106354 by petre rodan and USE=tcpd/readline
+  #102867 by Francisco Javier.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> tftp-hpa-0.40-r1.ebuild:
   Mark 0.40-r1 stable on alpha

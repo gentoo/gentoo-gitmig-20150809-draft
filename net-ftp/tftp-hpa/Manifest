@@ -1,7 +1,15 @@
-MD5 b58f40f6e55b78c2378a541a93fce64c tftp-hpa-0.40-r1.ebuild 829
-MD5 cd149a8177b642fc44a9686a4718d8cf ChangeLog 3903
-MD5 6beaaff025cc211c3776bf3c633e4c1f tftp-hpa-0.34-r1.ebuild 766
-MD5 0deba94161c48e49f0e2ee02afde4940 files/in.tftpd.rc6 443
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b942a8eed3507099acec26ffd91bd07 tftp-hpa-0.40-r1.ebuild 1019
+MD5 689d10c6858e5427e738cb373ef30296 ChangeLog 4084
 MD5 9e0867241bab97104a2d82fb8035725b files/in.tftpd.confd 145
-MD5 2f7c453cd0fde112ffac93387966fad3 files/digest-tftp-hpa-0.34-r1 65
+MD5 0deba94161c48e49f0e2ee02afde4940 files/in.tftpd.rc6 443
 MD5 64b89cea2b9b468a4c4068b0ec5382a4 files/digest-tftp-hpa-0.40-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLdX1gIKl8Uu19MoRAvG8AJ44YOrfkAT912V5q92vylK7G4vgYACeLyrF
+PqhC5GGhSuAwB/B8RTa9dI0=
+=0uM0
+-----END PGP SIGNATURE-----
