@@ -1,4 +1,4 @@
-Ripped from Fedora
+Ripped from Fedora [merged upstream]
 
 More recent kernels actually want to umount using the mount point and
 not the device name (this makes more sense, you can have the same
@@ -6,9 +6,8 @@ device mounted in many places).
 
 This is a minor changes to do just that.
 
-diff --exclude=debian -Nur eject-2.0.13deb/eject.c eject-2.0.13deb.cw/eject.c
---- eject-2.0.13deb/eject.c	2004-04-17 12:25:10.000000000 -0700
-+++ eject-2.0.13deb.cw/eject.c	2004-04-17 12:26:55.000000000 -0700
+--- eject-2.0.13deb/eject.c
++++ eject-2.0.13deb/eject.c
 @@ -718,8 +718,8 @@
  			status = regexec(&preg, s1, 0, 0, 0);
  			if (status == 0) {

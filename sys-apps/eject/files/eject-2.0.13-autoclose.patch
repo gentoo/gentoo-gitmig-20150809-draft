@@ -1,4 +1,4 @@
-Ripped from Fedora
+Ripped from Fedora [has been merged upstream]
 
 --- eject.c	Tue Jul  3 00:17:41 2001
 +++ eject.c	Tue Feb  5 05:50:58 2002
