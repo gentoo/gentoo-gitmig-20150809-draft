@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-1.0_beta1-r1.ebuild,v 1.1 2005/09/18 11:45:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-1.0_beta1-r1.ebuild,v 1.2 2005/09/18 15:22:38 hansmi Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 
 	# This patch, written by Luca Scamoni, is from
 	# http://sourceforge.net/tracker/index.php?func=detail&aid=1122365&group_id=3805&atid=103805
-	epatch "${FILESDIR}/utils.c.diff"
+	epatch "${FILESDIR}/util.c.diff"
 
 	# Fix timestamp skews
 	touch aclocal.m4 configure `find . -name Makefile.in`
