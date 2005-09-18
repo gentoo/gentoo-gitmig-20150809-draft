@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.4 2005/09/11 02:46:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.5 2005/09/18 17:02:55 josejx Exp $
+
+  18 Sep 2005; Joseph Jezak <josejx@gentoo.org>
+  PEAR-Benchmark-1.2.2-r1.ebuild:
+  Marked ~ppc to fix broken php deps.
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org>
   PEAR-Benchmark-1.2.2-r1.ebuild:
