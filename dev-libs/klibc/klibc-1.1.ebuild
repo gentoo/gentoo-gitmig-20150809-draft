@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.1.ebuild,v 1.1 2005/09/02 14:38:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.1.ebuild,v 1.2 2005/09/18 06:40:04 kumba Exp $
 
 inherit eutils linux-mod
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/libs/klibc/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/libs/klibc/Stable/${P}.tar.bz2
 	ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 LGPL-2 )"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~mips"
 IUSE=""
 RESTRICT="nostrip"
 
@@ -96,6 +96,10 @@ src_unpack() {
 	cat > "${S}/70klibc" <<-EOF
 		PRELINK_PATH_MASK="/usr/lib/klibc"
 	EOF
+
+	# klibc detects mips64 systems as having 64bit userland
+	# Force them to 32bit userlands instead
+	epatch ${FILESDIR}/${P}-mips32.patch
 }
 
 src_compile() {
