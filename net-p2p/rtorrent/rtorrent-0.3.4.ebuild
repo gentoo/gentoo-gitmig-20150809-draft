@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.3.3.ebuild,v 1.2 2005/09/18 10:32:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.3.4.ebuild,v 1.1 2005/09/18 10:32:52 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-DEPEND=">=net-libs/libtorrent-0.7.3
+DEPEND=">=net-libs/libtorrent-0.7.4
 	>=dev-libs/libsigc++-2.0
 	>=net-misc/curl-7.12
 	sys-libs/ncurses"
