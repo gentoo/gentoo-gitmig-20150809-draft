@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.21 2005/09/10 20:21:51 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.22 2005/09/18 05:01:46 vericgar Exp $
+
+inherit multilib
 
 ######
 ## Apache Common Variables
@@ -42,8 +44,8 @@ APACHECTL2="/usr/sbin/apache2ctl"
 ##
 ## Paths to the server root directories
 ####
-APACHE1_BASEDIR="/usr/lib/apache"
-APACHE2_BASEDIR="/usr/lib/apache2"
+APACHE1_BASEDIR="/usr/$(get_libdir)/apache"
+APACHE2_BASEDIR="/usr/$(get_libdir)/apache2"
 
 ####
 ## APACHE1_CONFDIR, APACHE2_CONFDIR
