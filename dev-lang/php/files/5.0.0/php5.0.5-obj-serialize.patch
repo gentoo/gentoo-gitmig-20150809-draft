@@ -18,8 +18,8 @@
  {
  	zval *val;
  	TSRMLS_FETCH();
---- ./ext/standard/php_incomplete_class.h.bug34435	2005-06-29 10:29:08.000000000 +0100
-+++ ./ext/standard/php_incomplete_class.h	2005-09-09 13:00:31.000000000 +0100
+--- ext/standard/php_incomplete_class.h	2005-06-29 10:29:08.000000000 +0100
++++ ext/standard/php_incomplete_class.h	2005-09-09 13:00:31.000000000 +0100
 @@ -42,7 +42,7 @@
  
  #define PHP_CLASS_ATTRIBUTES											\
