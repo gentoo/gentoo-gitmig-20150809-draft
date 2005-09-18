@@ -7,6 +7,7 @@ depend() {
 }
 
 start() {
+	result=0
 	ebegin "Starting mldonkey"
 	if [ ! -d ${BASEDIR}/${SUBDIR} ]
 	then
@@ -18,30 +19,27 @@ start() {
 			if [ ! -d ${BASEDIR} ]
                 	then
                         	eerror "Directory ${BASEDIR} could not be created!"
-                        	return 1
+                        	result=$(( ${result} + 1 ))
 			fi
                 fi
 		su ${USER} -c "mkdir ${BASEDIR}/${SUBDIR}" 
 		if [ ! -d ${BASEDIR}/${SUBDIR} ]
 		then
 			eerror "Directory ${BASEDIR}/${SUBDIR} could not be created!"
-			return 1
+			result=$(( ${result} + 1 ))
 		fi
 		einfo "...ok!"
 	fi
 	cd ${BASEDIR}/${SUBDIR}/
 	env HOME=${BASEDIR} start-stop-daemon --quiet --start -c ${USER}  \
-		-x /usr/bin/mlnet &>${LOG} &
+		--nicelevel ${NICE} -x /usr/bin/mlnet &>${LOG} &
 	sleep 5
 	if ! pgrep -u ${USER} mlnet >/dev/null
 	then
 		eerror "MLDonkey could not be started! Check logfile: ${LOG}"
+		result=$(( ${result} + 1 ))
 	fi
-	for i in `pgrep -u ${USER} mlnet`
-	do
-		renice ${NICE} -p $i > /dev/null
-	done
-	eend $?
+	eend $result
 }
 
 stop() {
