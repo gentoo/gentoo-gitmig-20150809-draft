@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.196 2005/09/06 01:59:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.197 2005/09/18 17:33:44 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -9,7 +9,7 @@
 #
 # NB:  If you add anything, please comment it!
 
-inherit multilib
+inherit multilib portability
 
 DEPEND="!bootstrap? ( sys-devel/patch )"
 # sys-apps/shadow is needed for useradd, etc, bug #94745.
@@ -479,13 +479,7 @@ enewuser() {
 		euid="next"
 	fi
 	if [[ ${euid} == "next" ]] ; then
-		local pwrange
-		if [[ ${USERLAND} == "BSD" ]] ; then
-			pwrange=$(jot 898 101)
-		else
-			pwrange=$(seq 101 999)
-		fi
-		for euid in ${pwrange} ; do
+		for euid in $(seq 101 999) ; do
 			[[ -z $(egetent passwd ${euid}) ]] && break
 		done
 	fi
@@ -679,7 +673,7 @@ enewgroup() {
 		# If we need the next available
 		case ${egid} in
 		  *[!0-9]*) # Non numeric
-			for egid in `jot 898 101`; do
+			for egid in $(seq 101 999); do
 				[ -z "`egetent group ${egid}`" ] && break
 			done
 		esac
@@ -688,7 +682,7 @@ enewgroup() {
 	elif [[ "${USERLAND}" == "BSD" ]] ; then
 		case ${egid} in
 			*[!0-9]*) # Non numeric
-				for egid in `jot 898 101`; do
+				for egid in $(seq 101 999); do
 					[ -z "`egetent group ${egid}`" ] && break
 				done
 		esac
