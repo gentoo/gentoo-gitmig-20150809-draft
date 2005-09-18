@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.36 2005/09/17 00:35:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.37 2005/09/18 00:12:14 vericgar Exp $
+
+*apr-0.9.6-r4 (17 Sep 2005)
+
+  17 Sep 2005; Michael Stewart <vericgar@gentoo.org> +apr-0.9.6-r4.ebuild:
+  Added support for using /dev/urandom instead of /dev/random if the urandom
+  USE-flag is set. Fixes bug 102587
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> apr-0.9.6-r3.ebuild:
   Mark 0.9.6-r3 stable on ia64
