@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.53 2005/09/16 21:54:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.54 2005/09/18 06:09:15 chriswhite Exp $
+
+  18 Sep 2005; Chris White <chriswhite@gentoo.org> swig-1.3.21.ebuild:
+  Added doc USE flag for html developer docs.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
