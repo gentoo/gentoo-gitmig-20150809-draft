@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.27 2004/12/28 22:08:41 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.28 2005/09/18 15:14:25 dertobi123 Exp $
+
+  18 Sep 2005; Tobias Scherbaum <dertobi123@gentoo.org> x2vnc-1.6.1.ebuild:
+  Added ~ppc Keyword
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
