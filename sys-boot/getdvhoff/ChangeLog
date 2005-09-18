@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/getdvhoff
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/ChangeLog,v 1.1 2005/09/11 21:46:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/ChangeLog,v 1.2 2005/09/18 07:53:49 kumba Exp $
+
+*getdvhoff-0.12-r1 (18 Sep 2005)
+
+  18 Sep 2005; Joshua Kinard <kumba@gentoo.org> +getdvhoff-0.12-r1.ebuild:
+  Modify getdvhoff's ebuild to statically link against klibc, resulting in an
+  ~8.8kb binary. Keep 0.12 around as stable until we bump klibc to stable.
 
 *getdvhoff-0.12 (12 Sep 2005)
 
