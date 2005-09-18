@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.009_p2.ebuild,v 1.6 2005/09/18 11:57:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.009_p2.ebuild,v 1.7 2005/09/18 15:48:44 rl03 Exp $
 
-inherit webapp depend.php
+inherit webapp #depend.php
 
 MY_P=eGroupWare-${PV/_p2}-2
 S=${WORKDIR}/${PN}
@@ -24,10 +24,12 @@ RDEPEND="virtual/php
 pkg_setup () {
 	webapp_pkg_setup
 
-	require_php_with_use imap
+#	require_php_with_use imap
+	einfo "Your PHP needs to be compiled with IMAP support"
 
 	if useq ldap; then
-		require_php_with_use ldap
+#		require_php_with_use ldap
+		einfo "Your PHP needs to be compiled with LDAP support"
 	fi
 
 	einfo "Please make sure that your PHP is compiled with MySQL|PostgreSQL support"
