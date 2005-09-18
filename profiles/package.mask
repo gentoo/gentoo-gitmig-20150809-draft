@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4463 2005/09/18 16:55:10 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4464 2005/09/18 22:51:36 mkay Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Marcin Kryczek <mkay@gentoo.org> (19 Sep 2005)
+# This ebuild depends on crypto++, which is not
+# tested on all needed arch
+=net-p2p/amule-2.0.3-r1
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (18 Sep 2005)
 # Waiting for Gnome 2.12 Unmask
