@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12b04c4ad9e641612df16d7e636f30af ChangeLog 723
+MD5 6979ad6bc6cd92b1fa325de39804d7e1 ChangeLog 819
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 65966231a5975c1bdb03f0ac85798ab4 mod_macro-1.1.6.ebuild 599
+MD5 fce9b7363c3dd3409b2ba80228f1004f mod_macro-1.1.6.ebuild 598
 MD5 0ba9a3263ad0e0ecbcac4efed4b559a7 mod_macro-1.1.2.ebuild 596
 MD5 4918617c4f03104f952d357b14e714e8 files/27_mod_macro.conf 767
-MD5 3104e9dd0ee867b2c24d4aa8ecc56e10 files/digest-mod_macro-1.1.2 67
 MD5 4521ab073b529e9671ba2c848b039fd0 files/digest-mod_macro-1.1.6 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJWQUmPFBzbX68WERAhm+AJsEQhOPu4OO37toACDvTGasBSZXhACfag6J
-VfeKXgobuYzEMFxZ6WpWvc0=
-=V/lC
------END PGP SIGNATURE-----
+MD5 3104e9dd0ee867b2c24d4aa8ecc56e10 files/digest-mod_macro-1.1.2 67
