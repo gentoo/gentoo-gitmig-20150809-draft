@@ -1,6 +1,17 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.95 2005/09/04 17:32:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.96 2005/09/18 21:01:44 hollow Exp $
+
+*php-cgi-4.4.0-r2 (18 Sep 2005)
+*php-cgi-4.3.11-r2 (18 Sep 2005)
+
+  18 Sep 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/php4.3.11-imap-symlink.diff, +files/php4.4.0-imap-symlink.diff,
+  +files/php4.3.11-pcre-security.patch, +files/php4.4.0-pcre-security.patch,
+  +php-cgi-4.3.11-r2.ebuild, +php-cgi-4.4.0-r2.ebuild:
+  Fix security issue in PHP 4.3.11 and 4.4.0, bug #102373, Fix sandbox issue
+  in PHP 4.3.11 and 4.4.0, bug #105351
+  'fastcgi' USE flag added to PHP 4.4.0.
 
   04 Sep 2005; Stuart Herbert <stuart@gentoo.org> -php-cgi-5.0.4.ebuild,
   -php-cgi-5.1.0_beta.ebuild:

@@ -1,6 +1,17 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.264 2005/09/04 17:37:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.265 2005/09/18 20:59:30 hollow Exp $
+
+*mod_php-4.4.0-r3 (18 Sep 2005)
+*mod_php-4.4.0-r2 (18 Sep 2005)
+
+  18 Sep 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/php4.3.11-pcre-security.patch, +files/php4.4.0-imap-symlink.diff,
+  +files/php4.3.11-imap-symlink.diff, +files/php4.4.0-pcre-security.patch,
+  +mod_php-4.3.11-r1.ebuild, +mod_php-4.4.0-r2.ebuild,
+  +mod_php-4.4.0-r3.ebuild:
+  Fix security issue in PHP 4.3.11 and 4.4.0, bug #102373, Fix sandbox issue
+  in PHP 4.3.11 and 4.4.0, bug #105351
 
   04 Sep 2005; Stuart Herbert <stuart@gentoo.org> -mod_php-5.0.4.ebuild,
   -mod_php-5.1.0_beta-r2.ebuild:
