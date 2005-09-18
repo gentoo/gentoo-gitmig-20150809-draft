@@ -17,7 +17,7 @@ MD5 22ed61ab0175cd83985a90e5d2b3b8b2 files/4.4.0/php4-iodbc-config.diff 511
 MD5 f2ab14c7be0482a4f25fc438fa6f5399 files/4.4.0/php4-with-iodbc.diff 443
 MD5 a7036ee38aa3b37256c0a6fe2afdbbe2 files/4.4.0/php4-libtool-1.5.patch 613
 MD5 02fd240bd329ec692eff685882ecabfb files/4.4.0/php4.3.11-pcre-security.patch 2299
-MD5 cc5e4e23e86076b3ec41cd185e337c40 files/4.4.0/php4.4.0-pcre-security.patch 2370
+MD5 5ce08c660d520114b3542b3b369b04e1 files/4.4.0/php4.4.0-pcre-security.patch 2115
 MD5 7d198bde60f94cc8cea5ad9479901e21 files/5.0.0/php5-imap-symlink.diff 620
 MD5 110af7b300bcbbfb821fbb58f7923d8b files/5.0.0/php5-iodbc-config.diff 511
 MD5 7530065b6851a15b1c9d8b0ee5fb0a98 files/5.0.0/php5-libtool-1.5.patch 613
@@ -36,7 +36,7 @@ MD5 21bc6cc85150b5a5385f213d45efbe67 files/5.1.0/apache-2.0/70_mod_php5.conf 525
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLWpHmPFBzbX68WERAksbAJ4iL636GYvoZwr6mYEfnbLUT8XdywCfT2Zk
-VXeviFZd29BOzAXgmmLClcU=
-=IdCp
+iD8DBQFDLZfFmPFBzbX68WERAkQCAJ4sQ1cS+phk+B2nlM25u/NakgbfVQCbBbgC
+YrXhtmo8irKsOWZaPxo6djQ=
+=yNRW
 -----END PGP SIGNATURE-----
