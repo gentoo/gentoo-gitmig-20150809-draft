@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_bw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/ChangeLog,v 1.4 2005/08/10 17:18:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bw/ChangeLog,v 1.5 2005/09/18 19:45:36 vericgar Exp $
+
+  18 Sep 2005; Michael Stewart <vericgar@gentoo.org> mod_bw-0.6.ebuild:
+  Stable on x86
 
   10 Aug 2005; Luis Medinas <metalgod@gentoo.org> mod_bw-0.6.ebuild:
   Added ~amd64.
