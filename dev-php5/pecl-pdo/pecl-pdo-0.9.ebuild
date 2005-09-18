@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-0.9.ebuild,v 1.3 2005/09/16 23:23:37 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo/pecl-pdo-0.9.ebuild,v 1.4 2005/09/18 14:35:02 hollow Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="PDO"
@@ -14,7 +14,6 @@ DESCRIPTION="Core PHP Data Objects (PDO)"
 SLOT="0"
 LICENSE="PHP"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-DEPEND="${DEPEND}"
 PDEPEND="${PDEPEND}
 		firebird? ( dev-php5/pecl-pdo-firebird )
 		mssql? ( dev-php5/pecl-pdo-dblib )
