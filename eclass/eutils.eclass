@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.197 2005/09/18 17:33:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.198 2005/09/18 22:02:59 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -494,11 +494,16 @@ enewuser() {
 			die "${eshell} does not exist"
 		fi
 	else
-		case ${USERLAND} in
-			Darwin) eshell="/usr/bin/false";;
-			BSD)    eshell="/usr/sbin/nologin";;
-			*)      eshell="/bin/false";;
-		esac
+		for shell in /sbin/nologin /usr/sbin/nologin /bin/false /usr/bin/false /dev/null; do
+			[[ -x ${ROOT}${shell} ]] && break;
+		done
+
+		if [[ ${shell} == "/dev/null" ]]; then
+			eerror "Unable to identify the shell to use"
+			die "Unable to identify the shell to use"
+		fi
+
+		eshell=${shell}
 	fi
 	einfo " - Shell: ${eshell}"
 	opts="${opts} -s ${eshell}"
