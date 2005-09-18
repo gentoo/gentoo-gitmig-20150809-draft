@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.45 2005/09/18 11:46:17 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.46 2005/09/18 11:51:01 mkay Exp $
+
+  18 Sep 2005; <mkay@gentoo.org> files/amuleweb.initd:
+  Command-line parameters for amuleweb have changed. Fixing init.d script.
+  This also close bug #105642
 
   18 Sep 2005; <mkay@gentoo.org> amule-2.0.1.ebuild:
   Older version has the same problem with symlinks outside sandbox. Fixed
