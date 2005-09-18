@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3.ebuild,v 1.5 2005/09/16 23:04:43 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-sqlite/pecl-sqlite-1.0.3.ebuild,v 1.6 2005/09/18 13:49:07 hollow Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_INI="yes"
@@ -8,8 +8,6 @@ PHP_EXT_PECL_PKG="SQLite"
 PHP_EXT_NAME="sqlite"
 
 inherit php-ext-pecl-r1
-
-DEPEND="${DEPEND}"
 
 IUSE=""
 DESCRIPTION="PHP bindings for the SQLite database engine"
