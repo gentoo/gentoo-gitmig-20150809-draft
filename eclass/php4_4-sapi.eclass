@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.2 2005/09/08 20:32:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.3 2005/09/18 12:57:22 hollow Exp $
 #
 # ########################################################################
 #
@@ -39,7 +39,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug doc empress empress-bcs esoob exif fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java java-external jpeg kerberos ldap libedit mcal mcve memlimit mhash ming msql mssql mysql ncurses nls oci8 odbc oracle7 overload ovrimos pcntl pcre pear pfpro png posix postgres readline recode sapdb sasl session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tiff tokenizer truetype wddx xml xml2 xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb crypt ctype curl curlwrappers db2 dba dbase dbmaker dbx debug doc empress empress-bcs esoob exif fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external jpeg kerberos ldap libedit mcal mcve memlimit mhash ming msql mssql mysql ncurses nls oci8 odbc oracle7 overload ovrimos pcntl pcre pear pfpro png posix postgres readline recode sapdb sasl session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tiff tokenizer truetype wddx xml xml2 xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -58,7 +58,7 @@ DEPEND="${DEPEND}
 	gmp? ( dev-libs/gmp )
 	imap? ( virtual/imap-c-client )
 	iodbc? ( dev-db/libiodbc )
-	!alpha? ( !amd64? ( java? ( =virtual/jdk-1.4* dev-java/java-config ) ) )
+	java-internal? ( =virtual/jdk-1.4* dev-java/java-config !dev-php4/php-java-bridge )
 	jpeg? ( >=media-libs/jpeg-6b )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
@@ -76,6 +76,7 @@ DEPEND="${DEPEND}
 	postgres? ( >=dev-db/postgresql-7.1 )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
+	sasl? ( dev-libs/cyrus-sasl )
 	sharedmem? ( dev-libs/mm )
 	snmp? ( >=net-analyzer/net-snmp-5.2 )
 	spell? ( >=app-text/aspell-0.60 )
@@ -86,7 +87,8 @@ DEPEND="${DEPEND}
 	wddx? ( dev-libs/expat )
 	xpm? ( virtual/x11 )
 	xml? ( dev-libs/expat )
-	xml2? ( dev-libs/libxml2 )
+	xml2? ( dev-libs/libxml2 xsl? ( dev-libs/libxslt ) )
+	xmlrpc? ( dev-libs/expat )
 	xsl? ( app-text/sablotron dev-libs/expat )
 	zlib? ( sys-libs/zlib )
 	virtual/mta"
@@ -126,8 +128,8 @@ PHP_INI_FILE="php.ini"
 # the patch for different versions of PHP
 
 case "${PV}" in
-	4.3.11) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.2.patch.gz" ;;
-	4.4.0) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.2.patch.gz" ;;
+	4.3.11) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.3.patch.gz" ;;
+	4.4.0) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.3.patch.gz" ;;
 esac
 
 [ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/${HARDENEDPHP_PATCH} )"
@@ -158,7 +160,6 @@ php4_4-sapi_check_awkward_uses() {
 	# A variety of extensions need DBA
 	confutils_use_depend_all "berkdb"	"dba"
 	confutils_use_depend_all "cdb"		"dba"
-	confutils_use_depend_all "dbm"		"dba"
 	confutils_use_depend_all "flatfile"	"dba"
 	confutils_use_depend_all "gdbm"		"dba"
 	confutils_use_depend_all "inifile"	"dba"
@@ -181,12 +182,6 @@ php4_4-sapi_check_awkward_uses() {
 	confutils_use_depend_any "xpm"  "gd" "gd-external"
 	confutils_use_depend_all "png"  "zlib"
 
-	# Hardened-PHP doesn't work well with Apache; needs further investigation
-	confutils_use_conflict "hardenedphp" "apache" "apache2"
-
-	# Hardened-PHP doesn't work with fastbuild enabled
-	confutils_use_conflict "hardenedphp" "fastbuild"
-
 	# IMAP support
 	php_check_imap
 
@@ -194,7 +189,7 @@ php4_4-sapi_check_awkward_uses() {
 	php_check_java
 
 	# Java-external support
-	confutils_use_conflict "java-external" "java"
+	confutils_use_conflict "java-external" "java-internal"
 	confutils_use_depend_all "java-external" "session"
 
 	# Mail support
@@ -248,25 +243,23 @@ php4_4-sapi_pkg_setup() {
 }
 
 php4_4-sapi_src_unpack() {
-	if [ "${PHP_PACKAGE}" == 1 ]; then
+	if [ "${PHP_PACKAGE}" == 1 ] ; then
 		unpack ${A}
 	fi
 
-	cd ${PHP_S}
+	cd ${S}
 
 	# Patch PHP to show Gentoo as the server platform
-	sed -i "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" configure
+	sed -e "s/PHP_UNAME=\`uname -a | xargs\`/PHP_UNAME=\`uname -s -n -r -v | xargs\`/g" -i configure.in
+
 	# Patch for PostgreSQL support
-	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
+	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4
 
 	# stop php from activating the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
 		sed -i.orig -e 's,-i -a -n php,-i -n php,g' ${i}
 		sed -i.orig -e 's,-i -A -n php,-i -n php,g' ${i}
 	done
-
-	# hardenedphp support
-	use hardenedphp && [ -n "${HARDENEDPHP_PATCH}" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
 
 	# imap support
 	use imap && epatch ${FILESDIR}/4.4.0/php4-imap-symlink.diff
@@ -275,30 +268,33 @@ php4_4-sapi_src_unpack() {
 	use iodbc && epatch ${FILESDIR}/4.4.0/php4-iodbc-config.diff
 	use iodbc && epatch ${FILESDIR}/4.4.0/php4-with-iodbc.diff
 
-	# fix configure scripts to recognize uClibc
-	uclibctoolize
-
-	# Just in case ;-)
-	chmod 755 configure
+	# hardenedphp support
+	if use hardenedphp ; then
+		if [ -n "${HARDENEDPHP_PATCH}" ] ; then
+			epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
+		else
+			ewarn "There is no Hardened-PHP available for this PHP release yet!"
+		fi
+	fi
 
 	# fastbuild support
 	use fastbuild && epatch ${FILESDIR}/4.4.0/fastbuild.patch
 
-	# run aclocal if hardenedphp is enabled, else rebuilding the configure dies
-	if use hardenedphp && [ -n "${HARDENEDPHP_PATCH}" ] ; then
-		# patch to support libtool 1.5
-		epatch ${FILESDIR}/4.4.0/php4-hphp-acinclude.patch
-		einfo "Running aclocal for hardenedphp"
-		WANT_AUTOMAKE=1.6 aclocal || die "Unable to run aclocal successfully"
-		libtoolize --copy --force || die "Unable to run libtoolize successfully"
-	fi
+	# fix configure scripts to recognize uClibc, now done with elibtoolize,
+	# and patch PHP to support libtool 1.5
+	epatch ${FILESDIR}/4.4.0/php4-libtool-1.5.patch
+	einfo "Running aclocal"
+	WANT_AUTOMAKE=1.9 aclocal --force || die "Unable to run aclocal successfully"
+	elibtoolize
+	einfo "Running libtoolize"
+	libtoolize --copy --force || die "Unable to run libtoolize successfully"
 
 	# rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
-	WANT_AUTOCONF=2.5 autoconf -W no-cross || die "Unable to regenerate configure script"
+	WANT_AUTOCONF=2.5 autoreconf --force -W no-cross || die "Unable to regenerate configure script"
 
-	# fix DBA support
-	sed -e 's!for LIB in dbm c gdbm!for LIB in dbm c gdbm gdbm_compat!' -i configure
+	# Just in case ;-)
+	chmod 755 configure
 }
 
 set_php_ini_dir() {
@@ -310,7 +306,7 @@ php4_4-sapi_src_compile() {
 	destdir=/usr/$(get_libdir)/php4
 	set_php_ini_dir
 
-	cd ${PHP_S}
+	cd ${S}
 	confutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR} --without-pear"
@@ -382,7 +378,6 @@ php4_4-sapi_src_compile() {
 	if useq dba ; then
 		enable_extension_with "cdb"			"cdb"		1
 		enable_extension_with "db4"			"berkdb"	1
-		enable_extension_with "dbm"			"dbm"		1
 		enable_extension_with "flatfile"	"flatfile"	1
 		enable_extension_with "gdbm"		"gdbm"		1
 		enable_extension_with "inifile"		"inifile"	1
@@ -413,8 +408,8 @@ php4_4-sapi_src_compile() {
 	fi
 
 	# Java support
-	if useq java ; then
-		enable_extension_with	"java"			"java"			0 "`java-config --jdk-home`"
+	if useq java-internal ; then
+		enable_extension_with	"java"			"java-internal"		0 "`java-config --jdk-home`"
 	fi
 
 	# IMAP support
@@ -513,7 +508,7 @@ php4_4-sapi_src_compile() {
 php4_4-sapi_src_install() {
 	destdir=/usr/$(get_libdir)/php4
 
-	cd ${PHP_S}
+	cd ${S}
 	addpredict /usr/share/snmp/mibs/.index
 
 	PHP_INSTALLTARGETS="install-build install-headers install-programs"

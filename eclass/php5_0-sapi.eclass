@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.2 2005/09/08 20:32:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.3 2005/09/18 12:57:22 hollow Exp $
 #
 # ########################################################################
 #
@@ -39,7 +39,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external jpeg kerberos ldap libedit mcve memlimit mhash ming msql mssql mysql mysqli ncurses nls oci8 odbc oracle7 ovrimos pcntl pcre pdo-external pear pfpro png posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xml2 xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external jpeg kerberos ldap libedit mcve memlimit mhash ming msql mssql mysql mysqli ncurses nls oci8 odbc oracle7 ovrimos pcntl pcre pdo-external pear pfpro png posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xml2 xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -76,6 +76,7 @@ DEPEND="${DEPEND}
 	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
+	sasl? ( dev-libs/cyrus-sasl )
 	sharedmem? ( dev-libs/mm )
 	simplexml? ( >=dev-libs/libxml2-2.6.8 )
 	snmp? ( >=net-analyzer/net-snmp-5.2 )
@@ -88,6 +89,7 @@ DEPEND="${DEPEND}
 	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 )
 	wddx? ( dev-libs/expat )
 	xml2? ( >=dev-libs/libxml2-2.6.8 )
+	xmlrpc? ( >=dev-libs/libxml2-2.6.8 )
 	xpm? ( virtual/x11 )
 	xsl? ( dev-libs/libxslt )
 	zlib? ( sys-libs/zlib )
@@ -126,7 +128,7 @@ PHP_INI_FILE="php.ini"
 
 case "${PV}" in
 	5.0.4) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.1.patch.gz" ;;
-	5.0.5) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.2.patch.gz" ;;
+	5.0.5) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.3.patch.gz" ;;
 esac
 
 [ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/${HARDENEDPHP_PATCH} )"
@@ -157,7 +159,6 @@ php5_0-sapi_check_awkward_uses() {
 	# A variety of extensions need DBA
 	confutils_use_depend_all "berkdb"	"dba"
 	confutils_use_depend_all "cdb"		"dba"
-	confutils_use_depend_all "dbm"		"dba"
 	confutils_use_depend_all "flatfile"	"dba"
 	confutils_use_depend_all "gdbm"		"dba"
 	confutils_use_depend_all "inifile"	"dba"
@@ -174,9 +175,6 @@ php5_0-sapi_check_awkward_uses() {
 	confutils_use_depend_any "tiff" "gd" "gd-external"
 	confutils_use_depend_any "xpm"  "gd" "gd-external"
 	confutils_use_depend_all "png"  "zlib"
-
-	# Hardened-PHP doesn't work well with Apache; needs further investigation
-	confutils_use_conflict "hardenedphp" "apache" "apache2"
 
 	# IMAP support
 	php_check_imap
@@ -211,8 +209,8 @@ php5_0-sapi_check_awkward_uses() {
 	# PEAR support
 	confutils_use_depend_all "pear"			"cli" "pcre" "xml2"
 
-	# QDBM doesn't play nicely with GDBM or DBM
-	confutils_use_conflict "qdbm" "gdbm" "dbm"
+	# QDBM doesn't play nicely with GDBM
+	confutils_use_conflict "qdbm" "gdbm"
 
 	# Readline and libedit do the same thing; you can't have both
 	confutils_use_conflict "readline" "libedit"
@@ -238,16 +236,17 @@ php5_0-sapi_pkg_setup() {
 }
 
 php5_0-sapi_src_unpack() {
-	if [ "${PHP_PACKAGE}" == 1 ]; then
+	if [ "${PHP_PACKAGE}" == 1 ] ; then
 		unpack ${A}
 	fi
 
-	cd ${PHP_S}
+	cd ${S}
 
 	# Patch PHP to show Gentoo as the server platform
-	sed -i "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" configure
+	sed -e "s/PHP_UNAME=\`uname -a | xargs\`/PHP_UNAME=\`uname -s -n -r -v | xargs\`/g" -i configure.in
+
 	# Patch for PostgreSQL support
-	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i configure
+	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4
 
 	# Patch for session persistence bug
 	epatch ${FILESDIR}/5.1.0/php5_soap_persistence_session.diff
@@ -258,9 +257,6 @@ php5_0-sapi_src_unpack() {
 		sed -i.orig -e 's,-i -A -n php5,-i -n php5,g' ${i}
 	done
 
-	# hardenedphp support
-	use hardenedphp && [ -n "${HARDENEDPHP_PATCH}" ] && epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
-
 	# imap support
 	use imap && epatch ${FILESDIR}/5.0.0/php5-imap-symlink.diff
 
@@ -268,32 +264,35 @@ php5_0-sapi_src_unpack() {
 	use iodbc && epatch ${FILESDIR}/5.0.0/php5-iodbc-config.diff
 	use iodbc && epatch ${FILESDIR}/5.1.0/php5-with-iodbc.diff
 
-	# fix configure scripts to recognize uClibc
-	uclibctoolize
-
-	# Just in case ;-)
-	chmod 755 configure
+	# hardenedphp support
+	if use hardenedphp ; then
+		if [ -n "${HARDENEDPHP_PATCH}" ] ; then
+			epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
+		else
+			ewarn "There is no Hardened-PHP available for this PHP release yet!"
+		fi
+	fi
 
 	# fix problems compiling with apache2
 	if useq apache2 && ! useq threads ; then
 		epatch ${FILESDIR}/5.1.0/php5-prefork.patch || die "Unable to patch for prefork support"
 	fi
 
-	# run aclocal if hardenedphp is enabled, else rebuilding the configure dies
-	if use hardenedphp && [ -n "${HARDENEDPHP_PATCH}" ] ; then
-		# patch to support libtool 1.5
-		epatch ${FILESDIR}/5.0.0/php5-hphp-acinclude.patch
-		einfo "Running aclocal for hardenedphp"
-		WANT_AUTOMAKE=1.6 aclocal || die "Unable to run aclocal successfully"
-		libtoolize --copy --force || die "Unable to run libtoolize successfully"
-	fi
+	# fix configure scripts to recognize uClibc, now done with elibtoolize,
+	# and patch PHP to support libtool 1.5
+	epatch ${FILESDIR}/5.0.0/php5-libtool-1.5.patch
+	einfo "Running aclocal"
+	WANT_AUTOMAKE=1.9 aclocal --force || die "Unable to run aclocal successfully"
+	elibtoolize
+	einfo "Running libtoolize"
+	libtoolize --copy --force || die "Unable to run libtoolize successfully"
 
 	# rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
-	WANT_AUTOCONF=2.5 autoconf -W no-cross || die "Unable to regenerate configure script"
+	WANT_AUTOCONF=2.5 autoreconf --force -W no-cross || die "Unable to regenerate configure script"
 
-	# fix DBA support
-	sed -e 's!for LIB in dbm c gdbm!for LIB in dbm c gdbm gdbm_compat!' -i configure
+	# Just in case ;-)
+	chmod 755 configure
 }
 
 set_php_ini_dir() {
@@ -305,7 +304,7 @@ php5_0-sapi_src_compile() {
 	destdir=/usr/$(get_libdir)/php5
 	set_php_ini_dir
 
-	cd ${PHP_S}
+	cd ${S}
 	confutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR} --without-pear"
@@ -381,7 +380,6 @@ php5_0-sapi_src_compile() {
 	if useq dba ; then
 		enable_extension_with "cdb"			"cdb"		1
 		enable_extension_with "db4"			"berkdb"	1
-		enable_extension_with "dbm"			"dbm"		1
 		enable_extension_with "flatfile"	"flatfile"	1
 		enable_extension_with "gdbm"		"gdbm"		1
 		enable_extension_with "inifile"		"inifile"	1
@@ -500,7 +498,7 @@ php5_0-sapi_src_compile() {
 php5_0-sapi_src_install() {
 	destdir=/usr/$(get_libdir)/php5
 
-	cd ${PHP_S}
+	cd ${S}
 	addpredict /usr/share/snmp/mibs/.index
 
 	PHP_INSTALLTARGETS="install-build install-headers install-programs"
