@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.4 2005/09/18 19:20:09 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.5 2005/09/18 20:53:16 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050918"
+GENTOO_PATCHSTAMP="20050918-02"
 GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
