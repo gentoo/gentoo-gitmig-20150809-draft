@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.1 2005/09/18 05:01:04 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.2 2005/09/18 06:24:37 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -380,7 +380,7 @@ try_mpm() {
 		die "mpm to try not specified!"
 	fi
 
-	if [ -n "${mpm}" ]; then
+	if [ "x${mpm}" != "x" -a "x${mpm}" != "x${nmpm}" ]; then
 		mpm_die ${nmpm} ${mpm}
 	fi
 
