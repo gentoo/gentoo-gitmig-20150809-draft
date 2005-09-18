@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.15 2005/09/16 22:20:56 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r4.ebuild,v 1.16 2005/09/18 23:12:46 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/screen/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="debug nethack pam"
+IUSE="debug nethack pam selinux"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	pam? ( virtual/pam )
