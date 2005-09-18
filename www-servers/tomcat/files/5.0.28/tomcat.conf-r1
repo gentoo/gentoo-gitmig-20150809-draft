@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.0.28/tomcat.conf,v 1.4 2005/09/18 14:10:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.0.28/tomcat.conf-r1,v 1.1 2005/09/18 14:10:44 humpback Exp $
 
 # JVM Runtime
 # Using the default setting, it will determine your JVM from the system-vm
@@ -50,7 +50,7 @@ TOMCAT_STOP="stop"
 
 # (Optional) Java runtime options used when the "start", "stop", or "run" 
 # commands are executed.
-#CATALINA_OPTS="-Dlog4j.configuration=file:/etc/tomcat-5/log4j.properties"
+CATALINA_OPTS="-Dlog4j.configuration=file:/etc/tomcat-5/log4j.properties"
 
 # Java Platform Debugger Architecture (JPDA)
 # http://java.sun.com/products/jpda/

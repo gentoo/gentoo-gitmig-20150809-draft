@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r5.ebuild,v 1.1 2005/09/14 19:11:37 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r5.ebuild,v 1.2 2005/09/18 14:10:44 humpback Exp $
 
 inherit eutils java-pkg
 
@@ -127,9 +127,8 @@ src_install() {
 
 	# init.d, env.d, conf.d
 	newinitd ${FILESDIR}/${PV}/tomcat.init ${TOMCAT_NAME}
-	newconfd ${FILESDIR}/${PV}/tomcat.conf ${TOMCAT_NAME}
+	newconfd ${FILESDIR}/${PV}/tomcat.conf-r1 ${TOMCAT_NAME}
 	newenvd ${FILESDIR}/${PV}/${PN}.env 21${PN}
-	cp ${FILESDIR}/${PV}/log4j.properties ${D}/etc/tomcat-5/
 
 	if use jikes; then
 		sed -e "\cCATALINA_OPTScaCATALINA_OPTS=\"-Dbuild.compiler.emacs=true\"" \
@@ -216,6 +215,9 @@ src_install() {
 	dosym /var/log/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/logs
 	dosym /var/tmp/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/temp
 	dosym /var/run/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/work
+
+	cp ${FILESDIR}/${PV}/log4j.properties ${D}/etc/${TOMCAT_NAME}/
+	chown tomcat:tomcat ${D}/etc/${TOMCAT_NAME}/log4j.properties
 
 	use doc && dodoc ${S}/jakarta-tomcat-5/{LICENSE,RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/default/tomcat-users.xml
