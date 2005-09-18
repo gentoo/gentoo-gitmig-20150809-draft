@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.78 2005/09/17 11:15:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.79 2005/09/18 12:22:29 blubb Exp $
+
+  18 Sep 2005; Simon Stelling <blubb@gentoo.org> zope-2.8.1.ebuild:
+  make zope multilib-strict aware; bug 106234
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> zope-2.7.7.ebuild:
   Mark 2.7.7 stable on alpha

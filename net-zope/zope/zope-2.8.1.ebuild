@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.1.ebuild,v 1.3 2005/08/26 18:39:14 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.8.1.ebuild,v 1.4 2005/09/18 12:22:29 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
@@ -23,7 +23,7 @@ virtual/libc
 S="${WORKDIR}/Zope-${PV}-final"
 ZUID=zope
 ZGID=zope
-ZS_DIR=${ROOT%/}/usr/lib
+ZS_DIR=${ROOT%/}/usr/$(get_libdir)
 ZSERVDIR=${ZS_DIR}/${P}
 
 # Narrow the scope of ownership/permissions.
@@ -94,7 +94,7 @@ pkg_postinst() {
 	# create the zope user and group for backward compatibility
 	enewgroup ${ZGID} 261
 	usermod -g ${ZGID} ${ZUID} 2>&1 >/dev/null || \
-	enewuser ${ZUID} 261 -1 /var/lib/zope  ${ZGID}
+	enewuser ${ZUID} 261 -1 /var/$(get_libdir)/zope  ${ZGID}
 
 	einfo "Be warned that you need at least one zope instance to run zope."
 	einfo "Please emerge zope-config for futher instance management."
