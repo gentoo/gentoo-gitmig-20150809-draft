@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1454 2005/09/18 00:11:48 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1455 2005/09/18 12:52:31 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -242,6 +242,7 @@ dev-lang/php:discard-path - Switch on common security setting for CGI SAPI
 dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:fastbuild - Build PHP quicker (experimental)
 dev-lang/php:java-external - Use the external java extension rather than the bundled one
+dev-lang/php:java-internal - Use the bundled java extension in PHP4
 dev-lang/php:overload - Enable the overload extension
 dev-lang/php:pdo-external - Use the external pecl-pdo extension rather than the bundled one
 dev-lang/php:pear - Enable PEAR support
