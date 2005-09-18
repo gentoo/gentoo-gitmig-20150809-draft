@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_throttle
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.13 2005/03/01 01:13:02 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_throttle/ChangeLog,v 1.14 2005/09/18 19:26:25 vericgar Exp $
+
+  18 Sep 2005; Michael Stewart <vericgar@gentoo.org>
+  mod_throttle-3.1.2-r2.ebuild:
+  Stable on x86
 
   01 Mar 2005; Elfyn McBratney <beu@gentoo.org>
   mod_throttle-3.1.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40-r1.ebuild,v 1.3 2005/06/23 01:25:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.40-r1.ebuild,v 1.4 2005/09/18 19:29:57 vericgar Exp $
 
 inherit apache-module
 
@@ -11,7 +11,7 @@ IUSE="mysql postgres"
 
 DESCRIPTION="Module for turning Apache into an MP3 or Ogg streaming server"
 HOMEPAGE="http://software.tangent.org/"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~ppc ~sparc x86"
 
 SRC_URI="http://download.tangent.org/${P}.tar.gz"
 
