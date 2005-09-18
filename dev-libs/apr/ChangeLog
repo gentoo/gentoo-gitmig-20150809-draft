@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.37 2005/09/18 00:12:14 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.38 2005/09/18 00:25:23 vericgar Exp $
+
+  18 Sep 2005; Michael Stewart <vericgar@gentoo.org> -apr-0.9.5.ebuild,
+  -apr-0.9.5-r1.ebuild, -apr-0.9.5-r2.ebuild, -apr-0.9.5-r3.ebuild,
+  -apr-0.9.6.ebuild, -apr-0.9.6-r1.ebuild, -apr-0.9.6-r2.ebuild:
+  Removing old revisions that use broken LFS-support
 
 *apr-0.9.6-r4 (17 Sep 2005)
 
