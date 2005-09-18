@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.6 2005/08/17 12:41:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.7 2005/09/18 14:45:45 caleb Exp $
+
+*kuroo-0.70.1 (18 Sep 2005)
+
+  18 Sep 2005; Caleb Tennis <caleb@gentoo.org> +kuroo-0.70.1.ebuild:
+  Version bump from bug #105413
 
   17 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> kuroo-0.60.0.ebuild:
   Add dependency on kdiff3 (#102809).
