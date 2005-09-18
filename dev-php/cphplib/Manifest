@@ -1,6 +1,6 @@
 MD5 28ac9254a61375323debe511e421bab6 ChangeLog 394
 MD5 c9bba941988ccf29bbeb0087f3dd2ca7 cphplib-0.46.ebuild 656
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 72f4330dd1b0220cd2a33f15fb4743af cphplib-0.48.ebuild 626
+MD5 13337302e78f19a540ab8e8b95fbb6e8 cphplib-0.48.ebuild 723
 MD5 90b56afc911d979dfb647bcabd9de1cb files/digest-cphplib-0.46 64
 MD5 bc963514fb5a783fef4c0f7a6cb2b654 files/digest-cphplib-0.48 64
