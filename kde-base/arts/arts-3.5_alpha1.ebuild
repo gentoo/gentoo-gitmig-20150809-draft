@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5_alpha1.ebuild,v 1.1 2005/08/24 23:06:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5_alpha1.ebuild,v 1.2 2005/09/18 14:16:38 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -26,7 +26,7 @@ RDEPEND="$(qt_min_version 3.3)
 	vorbis? ( media-libs/libogg
 	          media-libs/libvorbis )
 	esd? ( media-sound/esound )
-	jack? ( media-sound/jack-audio-connection-kit )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.90 )
 	mp3? ( media-libs/libmad )
 	nas? ( media-libs/nas )
 	media-libs/audiofile"

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.178 2005/09/11 09:30:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.179 2005/09/18 14:16:38 caleb Exp $
+
+  18 Sep 2005; Caleb Tennis <caleb@gentoo.org> arts-3.4.1-r2.ebuild,
+  arts-3.4.2.ebuild, arts-3.5_alpha1.ebuild:
+  Change jack dep to >= 0.90
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> arts-3.4.1-r2.ebuild:
   Mark 3.4.1-r2 stable on alpha
