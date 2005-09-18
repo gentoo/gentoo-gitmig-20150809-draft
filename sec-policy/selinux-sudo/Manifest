@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8e7b15bc22d789f0438b177e60fafff7 ChangeLog 467
 MD5 984492d821335133834cc25b57a501f4 metadata.xml 506
 MD5 2aa9feff527dd836453ca7ef844fe794 selinux-sudo-20050716.ebuild 457
 MD5 514f988aedb70f111710ed92bbf31a7f files/digest-selinux-sudo-20050716 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFDLTJEGSBEIeh4AEYRAkMaAJ49WN8y/dCggoJfNRALO5IWqcwVrACcCUhN
+htGdRteMhsvG3AmfH2RvuBI=
+=s4HR
+-----END PGP SIGNATURE-----
