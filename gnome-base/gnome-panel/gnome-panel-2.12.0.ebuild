@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.0.ebuild,v 1.1 2005/09/10 02:43:30 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.0.ebuild,v 1.2 2005/09/18 17:24:30 compnerd Exp $
 
 inherit gnome2
 
@@ -30,6 +30,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.11.92
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
+	app-text/gnome-doc-utils
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.31
 	doc? ( >=dev-util/gtk-doc-1 )"
