@@ -1,5 +1,17 @@
-MD5 90729eba40e3e2d3851ebc58ac917740 ChangeLog 1527
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 42444899d7ddac8ff7086f8b5a03dde4 ChangeLog 1718
 MD5 14e783c77a769fc6900b0534ae89ab4a selflinux-0.10.0.ebuild 590
 MD5 1dd06c283cc1b753b0706fb0c83a2967 selflinux-0.8.1.ebuild 583
+MD5 02a3cb2972483c79115484f715e443c9 selflinux-0.12.1.ebuild 590
 MD5 0eb2161e23d196a29fc03d5e63711f8f files/digest-selflinux-0.10.0 74
+MD5 a26cea879a12d3f8bf3e530c055cb86a files/digest-selflinux-0.12.1 74
 MD5 6507e4cfd14625025ba87db50f97ba2b files/digest-selflinux-0.8.1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLX6UFdQwWVoAgN4RAvFmAKDQM0mhMwJLOh7ArcuH+jeTh5m+fwCg8xMw
+3tXJgGJYSN6Mbb6J9r7lUTk=
+=N8O9
+-----END PGP SIGNATURE-----
