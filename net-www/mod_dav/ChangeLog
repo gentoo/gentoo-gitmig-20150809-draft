@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_dav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.19 2005/01/08 21:18:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.20 2005/09/18 20:03:37 vericgar Exp $
+
+  18 Sep 2005; Michael Stewart <vericgar@gentoo.org>
+  mod_dav-1.0.3-r3.ebuild:
+  Stable on x86
 
 *mod_dav-1.0.3-r3 (08 Jan 2005)
 
