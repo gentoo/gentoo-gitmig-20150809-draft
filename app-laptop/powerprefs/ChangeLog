@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/powerprefs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.14 2005/07/19 18:23:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/powerprefs/ChangeLog,v 1.15 2005/09/18 20:22:26 josejx Exp $
+
+  18 Sep 2005; Joseph Jezak <josejx@gentoo.org> -powerprefs-0.4.6.ebuild,
+  -powerprefs-0.4.9.ebuild, powerprefs-0.5.0.ebuild:
+  Marked ppc stable and removed old versions.
 
 *powerprefs-0.5.0 (19 Jul 2005)
 
