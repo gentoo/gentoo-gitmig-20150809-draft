@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2_pre20050913.ebuild,v 1.2 2005/09/15 16:43:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2_pre20050917.ebuild,v 1.1 2005/09/18 21:49:26 halcy0n Exp $
 
 PATCH_VER="1.0"
 PATCH_GCC_VER="4.0.2"
