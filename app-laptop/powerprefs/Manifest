@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 399f4c46989a562c6f2ec4263bd48420 ChangeLog 2946
 MD5 05337edead9e187882c135c87b81f08c powerprefs-0.5.0.ebuild 831
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
 MD5 4f1c848b224719494da68e25b2d5e1fd files/digest-powerprefs-0.5.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLeH7csIHjyDViGQRAq6JAKCMmJZzm9uKP6pIPCqe9VnY+gXxvACfWr99
+DTMcvXLqeINP5ItvDNb43hk=
+=1R52
+-----END PGP SIGNATURE-----
