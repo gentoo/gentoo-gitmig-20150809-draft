@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 565f5d4296870313099305a298cffc43 chrony-1.20.ebuild 1192
 MD5 984f0954ec16c0c10aca58c0329dd971 chrony-1.20-r1.ebuild 1312
 MD5 25e4a0383f6d77b8790b4aaa5030b502 ChangeLog 2658
@@ -16,10 +13,3 @@ MD5 19fc6632603680a145092ca56fe9aaa1 files/chrony-1.20-sys_linux.c-gentoo.diff 7
 MD5 fa94342edcd12320e3fc947c7921c771 files/chrony-1.19-chrony.conf.example-gentoo.diff 1592
 MD5 530b19caa6b14e1501530401f8cdc986 files/digest-chrony-1.20-r1 63
 MD5 b778857b5d802a10ec3e9ffd6ba9d226 files/chrony-1.20-conf.c-gentoo.diff 342
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLb8BV3J2n04EauwRAqmHAKDAasEgouYTgK2Uhv1BVYN9PSnOtACgtajm
-60XhTCI0HVK9prqXKjKURNY=
-=16tD
------END PGP SIGNATURE-----
