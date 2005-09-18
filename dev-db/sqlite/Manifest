@@ -5,12 +5,14 @@ MD5 78d3fa35ae4558e4a5add1fd47fd814f sqlite-2.8.15.ebuild 969
 MD5 fdbecebdb331496cd81f02ea4487e430 sqlite-2.8.13.ebuild 843
 MD5 5728db55b834e1885152fab05967a911 sqlite-3.2.2.ebuild 1549
 MD5 76aef8e782bcbab0759260cd5159cdf4 sqlite-3.2.1-r1.ebuild 1688
+MD5 de557146732e05493733347295d79981 sqlite-3.2.6.ebuild 1545
 MD5 2328b34bef313c5f4be5e780f9932dc3 sqlite-3.2.1-r3.ebuild 1574
 MD5 8cda692208b4f43344d30e5bfa2ee396 sqlite-2.8.16.ebuild 1402
-MD5 cd0b1955e7c0d006f58fd5a6f9b19033 ChangeLog 12760
+MD5 8c0515be4f41227b55bc6caaa65af2bd ChangeLog 12878
 MD5 99bf2a671c91f7499255003439d5eac0 sqlite-2.8.14.ebuild 862
 MD5 0e0f757acbd942baa4988144e75eccb2 sqlite-3.2.1-r2.ebuild 1759
 MD5 c9c200833c7c14eb4d750bb00455199e files/digest-sqlite-2.8.14 65
+MD5 d7d4311f336ef63902d978b37e8b7f2b files/digest-sqlite-3.2.6 65
 MD5 0473fa5a1fcc0a84af76122d016070e7 files/sqlite-3.2.1-tcl-fix.patch 915
 MD5 c35f34620d18893001720951f8ea0c73 files/digest-sqlite-2.8.13 65
 MD5 0d34d07da7dfa3914ef22ae7ed096e6a files/digest-sqlite-3.2.5 65
