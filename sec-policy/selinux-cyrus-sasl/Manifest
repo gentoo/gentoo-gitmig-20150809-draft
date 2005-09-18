@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ea267edab49b705a9bf78df520325cb ChangeLog 604
 MD5 fe0e5490a8062491c5c9e96cb16becda metadata.xml 512
 MD5 c0f3fbf9a061fb7957307da5d87cbb32 selinux-cyrus-sasl-20050918.ebuild 414
 MD5 637924f46dd19d5b9e07e754465e9f28 files/digest-selinux-cyrus-sasl-20050918 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFDLS5+GSBEIeh4AEYRAsFBAJ9l98whDKs6Ol1CqX2WAEZuGjrOuwCgglYS
+kJdUpWTVehgiBqaNP9QHL+M=
+=Xu4p
+-----END PGP SIGNATURE-----
