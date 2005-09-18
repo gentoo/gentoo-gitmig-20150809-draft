@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.31 2005/09/09 04:48:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.32 2005/09/18 20:13:26 josejx Exp $
+
+  18 Sep 2005; Joseph Jezak <josejx@gentoo.org> -pbbuttonsd-0.6.10.ebuild,
+  -pbbuttonsd-0.7.0.ebuild, pbbuttonsd-0.7.1.ebuild:
+  Marked 0.7.1 stable and removed old versions.
 
   09 Sep 2005; Joseph Jezak <josejx@gentoo.org> pbbuttonsd-0.6.6.ebuild,
   pbbuttonsd-0.7.1.ebuild:
