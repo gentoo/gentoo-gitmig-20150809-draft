@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.41 2005/09/09 15:22:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.42 2005/09/18 04:17:16 obz Exp $
+
+  18 Sep 2005; Mike Gardiner <obz@gentoo.org>
+  +files/seahorse-0.7.9-gedit-2.12.patch, seahorse-0.7.9.ebuild:
+  Added a patch to allow seahorse-0.7.9 to compile with gedit-2.12. See bug
+  #106144 for the report. I've pushed the patch upstream, so this should be
+  fixed in the next release.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> seahorse-0.6.3-r1.ebuild:
   Mark 0.6.3-r1 stable on alpha

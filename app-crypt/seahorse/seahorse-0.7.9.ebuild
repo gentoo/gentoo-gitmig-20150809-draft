@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.2 2005/07/29 23:13:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.3 2005/09/18 04:17:16 obz Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -36,6 +36,18 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="ldap"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	# Apply patch to allow seahorse-0.7.9 to compile with
+	# gedit-2.12. See bug #106133, <obz@gentoo.org>
+	epatch ${FILESDIR}/${P}-gedit-2.12.patch
+	# Re-configure
+	eautoconf
+
+}
 
 src_compile() {
 	# autoconf
