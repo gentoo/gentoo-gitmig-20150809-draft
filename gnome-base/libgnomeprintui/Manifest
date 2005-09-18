@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb1d2c32a03a846ceab7e1adee242923 ChangeLog 11799
+MD5 d8c48d07883d1fc8aa38d99a3083f1e3 ChangeLog 11955
 MD5 55ce130d96634515615624d321abbf24 libgnomeprintui-1.116.0.ebuild 787
 MD5 c3dedeef410227717835b730ac22264f libgnomeprintui-2.10.0.1.ebuild 729
-MD5 f0819023c8aec07d4e484a3b08db098c libgnomeprintui-2.10.2.ebuild 730
-MD5 9a73778442743370c4bd83a770b0dc4b libgnomeprintui-2.12.0.ebuild 789
+MD5 d06f8ee843c37d4e2baf53afad513149 libgnomeprintui-2.10.2.ebuild 725
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9a73778442743370c4bd83a770b0dc4b libgnomeprintui-2.12.0.ebuild 789
 MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
 MD5 5aadfef02e83d41c0d594d1b54c166a0 files/digest-libgnomeprintui-2.10.0.1 77
 MD5 10f031e0e10c3a162607bf3903f1c89c files/digest-libgnomeprintui-2.10.2 75
 MD5 b30bae2b823d4ee19321153ba486b513 files/digest-libgnomeprintui-2.12.0 75
 MD5 f007d30bd0ba486b3d83d47cd460b4c9 files/libgnomeprintui-1-syntax_fix.patch 603
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKB5VBtvusYtCZMsRAsc1AJsFLywRHBe4/ce8AXBUqG2xB9Aq5ACePrCg
-8gs+9QCpzmQmKBj9+pRlirM=
-=FqR4
------END PGP SIGNATURE-----
