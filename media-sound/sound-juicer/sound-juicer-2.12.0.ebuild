@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.12.0.ebuild,v 1.1 2005/09/11 02:59:21 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.12.0.ebuild,v 1.2 2005/09/18 18:21:14 compnerd Exp $
 
 inherit gnome2
 
@@ -31,6 +31,7 @@ RDEPEND=">=dev-libs/glib-2
 	flac? ( =media-plugins/gst-plugins-flac-0.8* )"
 
 DEPEND="${RDEPEND}
+	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.28
 	>=app-text/scrollkeeper-0.3.5
 	>=dev-util/pkgconfig-0.9"

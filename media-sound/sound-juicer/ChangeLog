@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.55 2005/09/15 19:50:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.56 2005/09/18 18:21:14 compnerd Exp $
+
+  19 Sep 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  sound-juicer-2.12.0.ebuild:
+  Adding dep on gnome-doc-utils; Resolves Bug#103322
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   sound-juicer-2.10.1.ebuild:
