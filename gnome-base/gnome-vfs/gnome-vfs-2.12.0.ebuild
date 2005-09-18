@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.3 2005/09/11 14:09:40 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.4 2005/09/18 04:45:38 obz Exp $
 
 inherit gnome2 eutils
 
@@ -72,6 +72,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.11.92-fbsd.patch
 	# Fix for API breakage in samba 3.0.20 (#104531)
 	epatch ${FILESDIR}/${PN}-2.11.92-samba-close_fn.patch
+	# Allow the Trash on afs filesystems (#106118)
+	epatch ${FILESDIR}/${P}-afs.patch
 
 	autoconf || die "autoconf failed"
 }
