@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.0.ebuild,v 1.1 2005/09/09 02:19:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.0.ebuild,v 1.2 2005/09/18 17:13:30 compnerd Exp $
 
 inherit gnome2
 
@@ -37,7 +37,8 @@ RDEPEND=">=x11-libs/gtk+-2.5
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
-	>=app-text/scrollkeeper-0.1.4"
+	>=app-text/scrollkeeper-0.1.4
+	  app-text/gnome-doc-utils"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 USE_DESTDIR="1"
