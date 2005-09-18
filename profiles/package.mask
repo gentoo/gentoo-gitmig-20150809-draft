@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4462 2005/09/18 09:26:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4463 2005/09/18 16:55:10 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (18 Sep 2005)
+# Waiting for Gnome 2.12 Unmask
+>=gnome-extra/nautilus-open-terminal-0.4
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
