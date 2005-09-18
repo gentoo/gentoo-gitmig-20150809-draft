@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5.ebuild,v 1.6 2005/09/14 15:37:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5-r1.ebuild,v 1.1 2005/09/18 13:21:54 hollow Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -13,10 +13,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 PROVIDE="virtual/php virtual/httpd-php"
 
+# php package settings
 SLOT="5"
-PHPSAPI_ALLOWED="cli cgi apache apache2"
 MY_PHP_P="php-${PV}"
-PHP_S="${WORKDIR}/${MY_PHP_P}"
 PHP_PACKAGE=1
 
 inherit eutils php5_0-sapi apache-module
@@ -55,6 +54,24 @@ pkg_setup() {
 	fi
 
 	php5_0-sapi_pkg_setup
+}
+
+src_unpack() {
+	# custom src_unpack, used only for PHP ebuilds that need additional patches
+	# normally the eclass src_unpack is used
+	if [ "${PHP_PACKAGE}" == 1 ] ; then
+		unpack ${A}
+	fi
+
+	cd ${S}
+
+	# fix a object serialization bug, bug #105374
+	epatch ${FILESDIR}/5.0.0/php5.0.5-obj-serialize.patch
+
+	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
+	PHP_PACKAGE=0
+	php5_0-sapi_src_unpack
+	PHP_PACKAGE=1
 }
 
 php_determine_sapis() {

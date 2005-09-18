@@ -1,6 +1,31 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.46 2005/09/17 18:31:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.47 2005/09/18 13:21:54 hollow Exp $
+
+*php-5.0.5-r1 (18 Sep 2005)
+*php-5.0.4-r1 (18 Sep 2005)
+*php-4.4.0-r1 (18 Sep 2005)
+*php-4.3.11-r1 (18 Sep 2005)
+
+  18 Sep 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/4.4.0/php4-libtool-1.5.patch, +files/5.0.0/php5-libtool-1.5.patch,
+  +files/4.4.0/php4.3.11-pcre-security.patch,
+  +files/4.4.0/php4.4.0-pcre-security.patch,
+  +files/5.0.0/php5.0.4-pcre-security.patch,
+  +files/5.0.0/php5.0.4-xmlrcp-ccode.diff,
+  +files/5.0.0/php5.0.5-obj-serialize.patch, files/4.4.0/fastbuild.patch,
+  -files/5.0.0/php5-hphp-acinclude.patch,
+  -files/4.4.0/php4-hphp-acinclude.patch, -php-4.3.11.ebuild,
+  +php-4.3.11-r1.ebuild, -php-4.4.0.ebuild, +php-4.4.0-r1.ebuild,
+  -php-5.0.4.ebuild, +php-5.0.4-r1.ebuild, -php-5.0.5.ebuild,
+  +php-5.0.5-r1.ebuild:
+  Fix security issue in bundled PCRE lib for PHP 4.3.11, 4.4.0 and 5.0.4, bug #102373.
+  Fix object serialization bug in PHP 5.0.5, bug #105374.
+  Fix Hardened-PHP support for all PHP releases.
+  Various compilation fixes for all PHP releases.
+  Various dependency fixes for all PHP releases.
+  Deleted 'dbm' USE flag from all PHP ebuilds, it's not supported upstream.
+  Changed 'java' USE flag to 'java-internal' USE flag for PHP4.
 
   17 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> php-5.0.4.ebuild:
   Fixed up the remaining deps, tested here and looks good. Marking ~amd64, bug

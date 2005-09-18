@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11.ebuild,v 1.1 2005/09/11 18:57:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.3.11-r1.ebuild,v 1.1 2005/09/18 13:21:54 hollow Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~sparc ~x86"
@@ -13,10 +13,9 @@ KEYWORDS="~sparc ~x86"
 
 PROVIDE="virtual/php virtual/httpd-php"
 
+# php package settings
 SLOT="4"
-PHPSAPI_ALLOWED="cli cgi apache apache2"
 MY_PHP_P="php-${PV}"
-PHP_S="${WORKDIR}/${MY_PHP_P}"
 PHP_PACKAGE=1
 
 inherit eutils php4_4-sapi apache-module
@@ -27,6 +26,9 @@ DESCRIPTION="The PHP language runtime engine"
 
 DEPEND="${DEPEND} app-admin/eselect-php"
 RDEPEND="${RDEPEND} app-admin/eselect-php"
+
+# fixed PCRE library for security issues, bug #102373
+SRC_URI="${SRC_URI} http://dl.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
@@ -66,6 +68,28 @@ pkg_setup() {
 	fi
 
 	php4_4-sapi_pkg_setup
+}
+
+src_unpack() {
+	# custom src_unpack, used only for PHP ebuilds that need additional patches
+	# normally the eclass src_unpack is used
+	if [ "${PHP_PACKAGE}" == 1 ] ; then
+		unpack ${A}
+	fi
+
+	cd ${S}
+
+	# patch to fix PCRE library security issues, bug #102373
+	epatch ${FILESDIR}/4.4.0/php4.3.11-pcre-security.patch
+
+	# sobstitute the bundled PCRE library with a fixed version for bug #102373
+	einfo "Updating bundled PCRE library"
+	rm -rf ${S}/ext/pcre/pcrelib && mv -f ${WORKDIR}/pcrelib-new ${S}/ext/pcre/pcrelib || die "Unable to update the bundled PCRE library"
+
+	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
+	PHP_PACKAGE=0
+	php4_4-sapi_src_unpack
+	PHP_PACKAGE=1
 }
 
 php_determine_sapis() {

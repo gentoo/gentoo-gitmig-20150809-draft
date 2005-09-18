@@ -1,6 +1,6 @@
-diff -u --recursive php-4.4.0/aclocal.m4 php-4.4.0-cgi/aclocal.m4
---- php-4.4.0/aclocal.m4	2005-07-11 11:07:27.000000000 +0100
-+++ php-4.4.0-cgi/aclocal.m4	2005-09-01 08:03:20.000000000 +0100
+diff -u --recursive php-4.4.0/acinclude.m4 php-4.4.0-cgi/acinclude.m4
+--- php-4.4.0/acinclude.m4	2005-09-14 22:39:22.000000000 +0200
++++ php-4.4.0-cgi/acinclude.m4	2005-09-14 22:39:54.000000000 +0200
 @@ -84,7 +84,7 @@
  dnl
  dnl which array to append to?
