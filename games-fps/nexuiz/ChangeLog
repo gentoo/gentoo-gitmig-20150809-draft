@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/nexuiz
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.1 2005/09/18 03:26:32 mr_bones_ Exp $
+
+*nexuiz-1.2.1 (18 Sep 2005)
+
+  18 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +nexuiz-1.2.1.ebuild:
+  initial commit - ebuild submitted by fabien Zouaoui via bug #94764
+
