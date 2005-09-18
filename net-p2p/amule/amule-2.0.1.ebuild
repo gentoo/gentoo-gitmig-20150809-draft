@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.1.ebuild,v 1.4 2005/08/26 15:21:18 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.1.ebuild,v 1.5 2005/09/18 11:46:17 mkay Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -22,7 +22,8 @@ DEPEND=">=x11-libs/wxGTK-2.6.0
 	nls? ( sys-devel/gettext )
 	remote? ( >=media-libs/libpng-1.2.8 )
 	stats? ( >=media-libs/gd-2.0.32 )
-	!net-p2p/xmule"
+	!net-p2p/xmule
+	sys-apps/sed"
 
 pkg_setup() {
 	export WX_GTK_VER="2.6"
@@ -33,6 +34,12 @@ pkg_setup() {
 	else
 		need-wxwidgets gtk2
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -r "s:\\$\\(LN_S\\) (.*):\$\(LN_S\) ${D}/\1:g" docs/man/Makefile.in
 }
 
 src_compile() {

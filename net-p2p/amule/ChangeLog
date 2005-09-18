@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.44 2005/09/17 22:26:45 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.45 2005/09/18 11:46:17 mkay Exp $
+
+  18 Sep 2005; <mkay@gentoo.org> amule-2.0.1.ebuild:
+  Older version has the same problem with symlinks outside sandbox. Fixed
 
   17 Sep 2005; <mkay@gentoo.org> amule-2.0.3.ebuild:
   Fixing symlinks made to files in live system (sandbox violation)
