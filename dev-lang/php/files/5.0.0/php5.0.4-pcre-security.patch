@@ -11,13 +11,6 @@
  dnl Define where extension directories are located in the configure context
 --- ext/pcre/config.m4	2003/06/28 04:30:51	1.32
 +++ ext/pcre/config.m4	2005/08/22 16:55:56	1.32.2.2
-@@ -1,5 +1,5 @@
- dnl
--dnl $Id: php5.0.4-pcre-security.patch,v 1.1 2005/09/18 13:21:54 hollow Exp $
-+dnl $Id: php5.0.4-pcre-security.patch,v 1.1 2005/09/18 13:21:54 hollow Exp $
- dnl
-
- dnl By default we'll compile and link against the bundled PCRE library
 @@ -13,7 +13,7 @@ PHP_ARG_WITH(pcre-regex,for PCRE support
 
  if test "$PHP_PCRE_REGEX" != "no"; then
