@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.29 2005/09/18 00:20:11 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.30 2005/09/18 03:59:53 weeve Exp $
+
+  18 Sep 2005; Jason Wever <weeve@gentoo.org> apr-util-0.9.6-r2.ebuild:
+  Marked stable on SPARC wrt bug #105516.
 
   18 Sep 2005; Michael Stewart <vericgar@gentoo.org> -apr-util-0.9.5.ebuild,
   -apr-util-0.9.5-r1.ebuild, -apr-util-0.9.6.ebuild,
