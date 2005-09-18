@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r2.ebuild,v 1.2 2005/07/08 03:01:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r2.ebuild,v 1.3 2005/09/18 11:14:13 taviso Exp $
 
 inherit eutils pam
 
@@ -12,14 +12,16 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 LICENSE="Sudo"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="pam skey offensive ldap"
+IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
 	sys-devel/bison
 	virtual/mta"
-RDEPEND="${DEPEND} ldap? ( dev-lang/perl )"
+RDEPEND="selinux? ( sec-policy/selinux-sudo )
+	ldap? ( dev-lang/perl ) 
+	${DEPEND}"
 
 S=${WORKDIR}/${P/_/}
 
