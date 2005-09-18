@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4461 2005/09/18 06:51:05 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4462 2005/09/18 09:26:04 twp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tom Payne <twp@gentoo.org> (18 Sep 2005)
+# Causes problems with several packages. See bug # 99243 and bug # 102301.
+=dev-util/scons-0.96.90
 
 # Andrea Barisani <lcars@gentoo.org> (17 Sep 2005)
 # Waiting for mailer-config stuff
