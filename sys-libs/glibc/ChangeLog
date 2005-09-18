@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.386 2005/09/16 10:18:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.387 2005/09/18 16:21:57 hansmi Exp $
+
+  18 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> glibc-2.3.5-r1.ebuild:
+  Added to ~ppc.
 
   16 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   glibc-2.3.4.20041102-r1.ebuild, glibc-2.3.4.20041102-r2.ebuild,
