@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/skencil
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.16 2005/06/22 16:40:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.17 2005/09/18 07:07:12 chriswhite Exp $
+
+*skencil-0.6.17 (18 Sep 2005)
+
+  18 Sep 2005; Chris White <chriswhite@gentoo.org> +skencil-0.6.17.ebuild:
+  Version bump for bug #103217 by spyderous. This adds a USE flag support
+  check, as well as making the nls DEPEND/RDEPEND Gentoo/BSD friendly for when
+  they want to mark it.
 
   22 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> skencil-0.6.16.ebuild:
   Stable on sparc
