@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-spamassassin/selinux-spamassassin-20050813.ebuild,v 1.1 2005/08/20 17:36:52 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-spamassassin/selinux-spamassassin-20050813.ebuild,v 1.2 2005/09/18 10:35:33 kaiowas Exp $
 
 inherit selinux-policy
 
@@ -12,5 +12,5 @@ RDEPEND=">=sec-policy/selinux-base-policy-20050618"
 
 DESCRIPTION="SELinux policy for SpamAssassin"
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~mips"
+KEYWORDS="amd64 mips ppc sparc x86"
 
