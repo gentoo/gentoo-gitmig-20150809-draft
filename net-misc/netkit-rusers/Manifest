@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a038dc91c27f0188d155a422b6ffda5 ChangeLog 334
 MD5 b803ff607562c4f4147ecc614e9de897 netkit-rusers-0.17.ebuild 825
 MD5 a62858e8c9d87aaaaa3356a1c94ef18d metadata.xml 170
 MD5 20c458d0f64b02611926ee788d048e07 files/digest-netkit-rusers-0.17 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLcA1V3J2n04EauwRAmViAKCvFYwgS09z86YS+XjS6g0UwAVhaACfbZw7
+vMkv8Se/vvxrgNUXMpfVmVw=
+=Yb/p
+-----END PGP SIGNATURE-----
