@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69.ebuild,v 1.9 2005/08/24 23:25:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69.ebuild,v 1.10 2005/09/19 19:30:30 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,19 +11,16 @@ SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc-macos ~s390 sparc x86"
-IUSE="gtk gtk2 ipv6"
+IUSE="gtk ipv6"
 
 DEPEND="dev-util/pkgconfig"
 RDEPEND=">=sys-libs/ncurses-5.2
-	gtk? (
-			!gtk2? ( =x11-libs/gtk+-1.2* )
-			gtk2? ( >=x11-libs/gtk+-2 )
-		)"
+	gtk? ( >=x11-libs/gtk+-2 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-ac-res_mkquery.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-ac-res_mkquery.patch"
 }
 
 src_compile() {
@@ -40,7 +37,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} \
-		$(use_enable gtk2) \
+		$(use_enable gtk gtk2) \
 		$(use_enable ipv6) \
 		|| die "econf failed"
 
@@ -49,12 +46,12 @@ src_compile() {
 
 src_install() {
 	# this binary is universal. ie: it does both console and gtk.
-	make DESTDIR=${D} sbindir=/usr/bin install || die "make install failed"
+	make DESTDIR="${D}" sbindir=/usr/bin install || die "make install failed"
 
 	insinto /usr/share/${PN} ; doins img/mtr_icon.xpm
 
 	fowners root:wheel /usr/bin/mtr
 	fperms 4710 /usr/bin/mtr
 
-	dodoc AUTHORS COPYING ChangeLog FORMATS NEWS README SECURITY TODO
+	dodoc AUTHORS ChangeLog FORMATS NEWS README SECURITY TODO
 }
