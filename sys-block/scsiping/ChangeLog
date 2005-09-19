@@ -1,0 +1,12 @@
+# ChangeLog for sys-block/scsiping
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiping/ChangeLog,v 1.1 2005/09/19 22:02:15 robbat2 Exp $
+
+*scsiping-0.0.1 (19 Sep 2005)
+
+  19 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +scsiping-0.0.1.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>. A special
+  thanks to The Gallery Group (www.thegallerygroup.com) for helping to support
+  iSCSI on Gentoo.
+
