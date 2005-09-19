@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.5 2005/09/10 14:32:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.6 2005/09/19 00:12:03 flameeyes Exp $
 
 inherit eutils
 
@@ -17,11 +17,6 @@ DEPEND="sys-libs/libavc1394
 	>=media-libs/libdv-0.102
 	jpeg? ( media-libs/jpeg )
 	quicktime? ( media-libs/libquicktime )"
-
-# The following would be better but if it's satisfied by
-# quicktime4linux then we need to use some special linker options
-# (-ldl -lglib)
-#	quicktime? ( virtual/quicktime )"
 
 src_install () {
 	make DESTDIR=${D} install || die "make install failed"
