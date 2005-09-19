@@ -3,9 +3,9 @@ Hash: SHA1
 
 MD5 93d04b229719250dd5b60f22037dd611 hddtemp-0.3_beta11.ebuild 1265
 MD5 7ecb6cd08be82281bfdb2c4e4de32fe5 hddtemp-0.2.ebuild 940
-MD5 f9ea088787abd05c54673836702cfa45 hddtemp-0.3_beta13.ebuild 1321
+MD5 9eba0b8dd0067e80de4fbc3c19e82377 hddtemp-0.3_beta13.ebuild 1317
 MD5 67358d9fae033adf04e11bd6e19204d6 hddtemp-0.3_beta10.ebuild 1135
-MD5 3e219770e3f4ab101cb6de3c44c6895a ChangeLog 4795
+MD5 e69dcbf82660ed31a9b47977b2494083 ChangeLog 4893
 MD5 ac68604576ccfc58e653bc0982bef4d4 metadata.xml 281
 MD5 a68cddcf81bf2b2853e3064f5c1185f1 hddtemp-0.3_beta12.ebuild 1264
 MD5 8bb14bf26d828268c3494f280039c866 hddtemp-0.3_beta8.ebuild 1142
@@ -23,7 +23,7 @@ MD5 91e4b7762278d6c80f97ce6039442e8d files/hddtemp-0.3_beta13-setsid.patch 370
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDLu9XKRy60XGEcJIRAnDsAJ4qLccW3dnxwVstduSySnJoVxI3ZQCfSi8U
-yCil1uMS0QMErDSvjPfboZM=
-=eDzH
+iD8DBQFDLybZntT9W3vfTuoRAovBAJ9tftQ7zrfLCwJASz40a0LcFy0roQCdFned
+/YYam78gb8IFPNzJSo7v5BU=
+=9tY3
 -----END PGP SIGNATURE-----
