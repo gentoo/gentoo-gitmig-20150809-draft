@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/onak
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/ChangeLog,v 1.1 2005/09/19 08:37:34 robbat2 Exp $
+
+*onak-0.3.2 (19 Sep 2005)
+
+  19 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +onak-0.3.2.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
