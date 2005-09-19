@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.30 2005/09/10 16:37:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.31 2005/09/19 07:31:14 axxo Exp $
 
 pkglistpath="${T}/java-pkg-list"
 
@@ -294,7 +294,7 @@ java-pkg_jar-from()
 	if [ -z "${jar}" ] ; then
 		return 0
 	else
-		die "failed too find ${destjar}"
+		die "failed too find ${jar}"
 	fi
 }
 
