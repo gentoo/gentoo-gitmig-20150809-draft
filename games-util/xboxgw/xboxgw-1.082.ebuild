@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxgw/xboxgw-1.082.ebuild,v 1.3 2004/06/24 23:33:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxgw/xboxgw-1.082.ebuild,v 1.4 2005/09/19 00:18:30 metalgod Exp $
 
 XBOXGW_P="${PN}-1.08-2"
 HMLIBS_P="hmlibs-1.07-2"
@@ -11,7 +11,7 @@ SRC_URI="http://www.xboxgw.com/rel/dist2.1/tarballs/i386/${XBOXGW_P}.tgz
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 S="${WORKDIR}"

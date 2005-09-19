@@ -1,4 +1,14 @@
-MD5 7dbda80822e367276205eb7f348d608f xboxgw-1.082.ebuild 757
-MD5 855a81ce15ef3ff132e67fd9c23e6677 ChangeLog 454
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bf5639e3238887b5701b8d7b041dfe8 ChangeLog 570
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 5e05fcf5ff781aad22d6f2650fef7c51 xboxgw-1.082.ebuild 764
 MD5 efed66a562004965f5e92faba8dcbbe3 files/digest-xboxgw-1.082 128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDLhICwUpWvClEHQoRAid9AJ4sFz349tkpr8rYjr1A8caHfcgvAwCbBOyi
+gRYWWBe2xbKHqlqoyWpyrK4=
+=oH5p
+-----END PGP SIGNATURE-----
