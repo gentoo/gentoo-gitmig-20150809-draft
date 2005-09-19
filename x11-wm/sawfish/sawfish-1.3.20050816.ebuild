@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.4 2005/09/04 13:31:53 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20050816.ebuild,v 1.5 2005/09/19 21:27:30 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3.20040120
 [[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -40,6 +40,7 @@ fi
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/libtool.patch"
 	# This is for alpha, but there's no reason to restrict it
 	gnuconfig_update
 }
