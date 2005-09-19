@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Beautifier
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Beautifier/ChangeLog,v 1.8 2005/09/08 08:13:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Beautifier/ChangeLog,v 1.9 2005/09/19 01:45:27 weeve Exp $
+
+  19 Sep 2005; Jason Wever <weeve@gentoo.org>
+  PEAR-XML_Beautifier-1.1-r1.ebuild:
+  Added ~sparc keyword.
 
 *PEAR-XML_Beautifier-1.1-r1 (08 Sep 2005)
 
