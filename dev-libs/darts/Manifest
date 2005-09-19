@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a05bcf0c86a70167d10b8d62ec20d7ba ChangeLog 1434
+MD5 428edbaa361930858cf5809cce29e4d7 ChangeLog 1518
 MD5 327b11180cc96a0cb2ec056a58c1a5a4 darts-0.1.ebuild 709
 MD5 064398a6672fdc8d14838bdf84a6a3bb darts-0.2.ebuild 727
+MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
 MD5 88519c5312922c4298c6a2dd2a7b3f10 files/digest-darts-0.1 61
 MD5 f2224a0a42eaae21381fb98ab20be217 files/digest-darts-0.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCWyrvKRy60XGEcJIRAvEqAJ98/E23eIlJuopsSKXNoTTnky3OaACdFvvq
-GHFq9ppDwkdZ2VLWn7aEiZo=
-=Mba6
------END PGP SIGNATURE-----
