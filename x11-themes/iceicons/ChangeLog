@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/iceicons
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.5 2005/08/05 17:16:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.6 2005/09/19 13:40:44 gustavoz Exp $
+
+  19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  iceicons-0.10.0.ebuild:
+  Stable on sparc
 
   05 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   iceicons-0.10.0.ebuild:

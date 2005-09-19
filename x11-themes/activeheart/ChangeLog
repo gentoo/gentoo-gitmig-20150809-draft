@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.6 2005/09/17 19:32:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.7 2005/09/19 13:34:36 gustavoz Exp $
+
+  19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  activeheart-1.2.1.ebuild:
+  Stable on sparc
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   activeheart-1.2.1.ebuild:
