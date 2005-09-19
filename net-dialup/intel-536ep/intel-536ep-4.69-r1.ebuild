@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.69-r1.ebuild,v 1.1 2005/03/24 15:26:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/intel-536ep/intel-536ep-4.69-r1.ebuild,v 1.2 2005/09/19 21:19:38 mrness Exp $
 
 inherit eutils flag-o-matic linux-mod
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://aiedownload.intel.com/df-support/6497/eng/${P}.tgz"
 LICENSE="Intel"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 S=${WORKDIR}/intel-536EP-2.56.76.0
 MODULE_NAMES="Intel536(:${S}/coredrv)"
