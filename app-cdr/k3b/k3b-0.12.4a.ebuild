@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.4a.ebuild,v 1.1 2005/09/19 14:26:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.4a.ebuild,v 1.2 2005/09/19 22:44:27 carlo Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -50,9 +50,6 @@ I18N="${PN}-i18n-${PV}"
 # Check the {po,doc}/Makefile.am files in k3b-i18n package.
 LANGS="bg br bs ca cs cy da de el en_GB es et fr ga hi hu is it lt mk nb nl nn pa pl pt pt_BR ru sl sr sv ta tr uk zh_CN"
 
-MAKE_LANGS=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
-MAKE_LANGS=${MAKE_LANGS/sr/sr sr@Latn}
-
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
 done
@@ -63,6 +60,8 @@ pkg_setup() {
 		eerror "but sys-apps/dbus is not built with Qt support."
 		die
 	fi
+	MAKE_LANGS=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
+	MAKE_LANGS=${MAKE_LANGS/sr/sr sr@Latn}
 }
 
 src_compile() {

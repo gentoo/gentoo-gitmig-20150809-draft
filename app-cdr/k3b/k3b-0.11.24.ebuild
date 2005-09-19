@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.24.ebuild,v 1.4 2005/07/30 20:40:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.24.ebuild,v 1.5 2005/09/19 22:44:27 carlo Exp $
 
 inherit kde eutils
 
@@ -43,9 +43,6 @@ I18N="${PN}-i18n-${PV%.*}"
 LANGS="ar bg bs ca cs da de el en_GB es et fi fo fr gl hu it ja nb nl nso pl pt pt_BR ro ru sk sl sr sv ta tr ven xh xx zh_CN zh_TW zu"
 LANGS_DOC="da de es et fr pt ru sv"
 
-MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
-MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
-
 for X in $LANGS; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
 done
@@ -54,6 +51,8 @@ src_unpack() {
 	kde_src_unpack
 	epatch "${FILESDIR}/k3b-0.11.17-noarts.patch"
 	make -f admin/Makefile.common || die
+	MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
+	MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
 }
 
 src_compile() {
