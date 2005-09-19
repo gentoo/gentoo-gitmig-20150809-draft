@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.5 2005/08/01 11:15:27 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.6 2005/09/19 15:27:28 ka0ttic Exp $
+
+  19 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> -eselect-0.9.5.ebuild:
+  0.9.5 has a broken digest; not worth keeping around, so removing it.
 
   01 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> eselect-0.9.5.ebuild,
   eselect-0.9.6.ebuild:
