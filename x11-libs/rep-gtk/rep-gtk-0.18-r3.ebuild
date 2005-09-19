@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.1 2005/09/01 19:33:55 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.2 2005/09/19 21:28:00 truedfx Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ SLOT="gtk-2.0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="gnome"
 
-DEPEND=">=dev-libs/librep-0.17-r2
+DEPEND=">=dev-libs/librep-0.13
 	>=dev-util/pkgconfig-0.12.0
 	>=gnome-base/libglade-2.0.0
 	>=x11-libs/gtk+-2.0.3
@@ -36,6 +36,8 @@ src_unpack() {
 	# longer available in recent versions of gtk, and sawfish doesn't use
 	# them anyway.  Bug 48439
 	epatch "${FILESDIR}/rep-gtk-0.18-gtk26.patch"
+
+	epatch "${FILESDIR}/libtool.patch"
 }
 
 src_compile() {

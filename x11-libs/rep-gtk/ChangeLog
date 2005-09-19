@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.46 2005/09/02 19:28:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.47 2005/09/19 21:28:00 truedfx Exp $
+
+  19 Sep 2005; Harald van Dĳk <truedfx@gentoo.org> +files/libtool.patch,
+  rep-gtk-0.18-r3.ebuild:
+  Fix librep libtool mess instead of continuing to try to work around it
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   rep-gtk-0.18-r2.ebuild:
