@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.19 2005/09/08 08:11:16 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.20 2005/09/19 01:16:57 weeve Exp $
+
+  19 Sep 2005; Jason Wever <weeve@gentoo.org>
+  PEAR-Text_Wiki-1.0.0-r1.ebuild:
+  Added ~sparc keyword.
 
 *PEAR-Text_Wiki-1.0.0-r1 (08 Sep 2005)
 
