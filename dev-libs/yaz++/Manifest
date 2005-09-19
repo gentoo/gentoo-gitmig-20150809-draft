@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8769cd519db25a5a501955c23c9774f1 ChangeLog 689
 MD5 fe26b549e58c8926bf93e4fb78696348 metadata.xml 275
 MD5 d9d0b18bf00cfb459ef9e24b2cb26592 yaz++-0.9.ebuild 904
 MD5 f8cb680a5c77407c5873d45afc06cc0d files/digest-yaz++-0.9 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLz1lCRZPokWLroQRAsD3AJ4ihEIeCkB0E97Sw7pWxl4e7qa3EACfde/J
+iVadm9UtADFXmFOhEdKXULw=
+=7EYx
+-----END PGP SIGNATURE-----

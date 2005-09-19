@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f70dc42b2695552de6475eb586ea488d ChangeLog 1130
 MD5 baecda85db8f2f90e495be668d7108a8 metadata.xml 250
 MD5 e83256abb6db7c53f842899e85db1909 socketstream-0.3.0.ebuild 604
 MD5 d632623b5f2389c91efc7b7e5e56a8f3 socketstream-0.7.0-r1.ebuild 1026
 MD5 b81fbdba36dad0176562cefa5d84419e files/digest-socketstream-0.3.0 70
 MD5 d6df5b9e48fe37372b5f91cd84fb7670 files/digest-socketstream-0.7.0-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLzzOCRZPokWLroQRAhdMAKDGPW9JihfqiKXJbicT+DthomzaiACgvLrg
+rSeY3+hw9Dg0qt480casmQ0=
+=OBna
+-----END PGP SIGNATURE-----

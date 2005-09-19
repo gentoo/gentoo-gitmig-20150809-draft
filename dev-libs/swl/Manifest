@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 effff62e204d9ab92a2315b8df0b7af7 ChangeLog 1166
 MD5 e8990e064ad6234d2fabee71d653d6e7 metadata.xml 839
 MD5 092754cf7e8a68ee8e2de6f5b927c74d swl-0.4.0_rc4.ebuild 1434
@@ -10,3 +13,10 @@ MD5 3017cfc2c27408b017e6359fc4aeabdf files/digest-swl-0.4.0_rc5 66
 MD5 6250348b05764860006958a57373bcaa files/digest-swl-0.4.0_rc5-r1 136
 MD5 ea5bdafecfc9870072cedbc3447c0a5f files/digest-swl-0.4.0_rc5-r2 136
 MD5 5d83f45a0c31bea8342002a1a89b9e06 files/digest-swl-0.4.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLzz/CRZPokWLroQRAgKxAKCC8N7JwKdBdni9Zwp0gsdQ35UPJwCgl8iC
+txIV/epxEPNyG0h9XGLduRQ=
+=YlaN
+-----END PGP SIGNATURE-----

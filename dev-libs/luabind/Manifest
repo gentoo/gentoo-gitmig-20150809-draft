@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6cb6c7c893104adc053e91ac66060692 ChangeLog 1034
 MD5 1bb45342037e945eadcfdc3342d5ecb3 luabind-6-r1.ebuild 732
 MD5 e0ed8816aafeebfb69750cb60d30022f luabind-6.ebuild 715
 MD5 c6481e888232c301a62acc17f6fecf9f metadata.xml 221
 MD5 b5429820d4bcbb65850c97cae3ef2f6d files/digest-luabind-6 62
 MD5 b5429820d4bcbb65850c97cae3ef2f6d files/digest-luabind-6-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLzwsCRZPokWLroQRAhtPAKDGznauMDcchSr6rUoz30M73Z833QCdGfnw
+fNRpY/Ry/DtOKgU49p26KGY=
+=QgEM
+-----END PGP SIGNATURE-----

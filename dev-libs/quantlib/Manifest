@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a19a680e282ce2e20c13f6af0873dca9 ChangeLog 2511
 MD5 a3fb19083b6aca15b423c3b6b648c7dc metadata.xml 392
 MD5 e2dffa311c568ce9188cb40af32c9062 quantlib-0.3.0.ebuild 614
@@ -6,3 +9,10 @@ MD5 414ea58af1f9658afadbae0787ec50e7 quantlib-0.3.10.ebuild 626
 MD5 ef122c0b93cef23d281a4079cd92c78b files/digest-quantlib-0.3.0 70
 MD5 37fe0d5ad1311f05e9058d712453f0c0 files/digest-quantlib-0.3.9 67
 MD5 8b93bda2b3e67c428c27003c57cbb623 files/digest-quantlib-0.3.10 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLzyWCRZPokWLroQRAuSzAJ9iZvaWhES55j5chvuGLLyHSjcu0wCePNhN
+CgbUkVY6qNSgtym78FP7tG0=
+=FcKO
+-----END PGP SIGNATURE-----

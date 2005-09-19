@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6d5479edb038410adf079c5c6590cc9 ChangeLog 2408
 MD5 acdf5c918d02c97d984332414891678e log4cxx-0.9.5.ebuild 881
 MD5 8211362a19f81bd9b197fe9ba86a1dfa log4cxx-0.9.7-r2.ebuild 1852
@@ -7,3 +10,10 @@ MD5 a94dc071335f2e2545d523996053a685 files/digest-log4cxx-0.9.7-r2 65
 MD5 f9e8c2a552b387262cde2f04b5dc9605 files/log4cxx-0.9.5-fix-errno.diff 683
 MD5 f1b5b29185d699bc52fd6f9d23af3588 files/log4cxx-0.9.7-gentoo.diff 1989
 MD5 b11a3e797b67c6aea1bb82f6473890df files/log4cxx-0.9.7-use-SQLWCHAR.diff 967
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLzwTCRZPokWLroQRAlh9AJsG+ZTzawSN/X2A3rdEAhIO5S6xEgCgipIM
+QWqQT58LYRE78ISGOqmGz7s=
+=D02f
+-----END PGP SIGNATURE-----
