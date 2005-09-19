@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1457 2005/09/19 10:22:45 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1458 2005/09/19 10:43:43 ferdy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -447,7 +447,6 @@ mail-client/mutt:pop - Enable support for pop
 mail-client/mutt:smime - Enable support for smime
 mail-client/muttng:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/muttng:gpgme - Enable support for gpgme
-mail-client/muttng:idn - Enable support for Internalized Domain Names
 mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:pop - Enable support for pop
 mail-client/muttng:smime - Enable support for smime
@@ -667,7 +666,6 @@ net-analyzer/bwm-ng:csv - enable csv output
 net-analyzer/bwm-ng:html - enable html output
 net-analyzer/echoping:http - enable support for http protocol.
 net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
-net-analyzer/echoping:idn - enable support for Internalized Domain Names.
 net-analyzer/echoping:priority - enable socket priority support.
 net-analyzer/echoping:smtp - enable supprt for SMTP protocol.
 net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
@@ -714,7 +712,6 @@ net-dialup/ppp:dhcp - Enables the dhcp plugin
 net-dialup/ppp:mppe-mppc - Enables support for mppe-mppc
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
-net-dns/bind:idn - enables support for Internationalized Domain Names
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:fwdzone - enables forward zone patch
@@ -831,7 +828,6 @@ net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail applica
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/bridge-utils:sysfs - Enable use of the sysfs filesystem (Linux-2.6+) via libsysfs
 net-misc/curl:ares - Enabled c-ares dns support
-net-misc/curl:idn - Enable libidn support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
@@ -1088,7 +1084,6 @@ www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
-www-client/elinks:idn - Enable support for Internalized Domain Names
 www-client/elinks:lua - enable lua support
 www-client/elinks:nntp - Enable support for the NNTP
 www-client/epiphany-extensions:firefox - build against firefox instead of mozilla
