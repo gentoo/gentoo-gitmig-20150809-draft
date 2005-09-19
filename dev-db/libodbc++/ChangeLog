@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libodbc++
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.5 2005/07/02 20:55:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.6 2005/09/19 22:19:25 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd
 
 *libodbc++-0.2.3-r1 (02 Jul 2005)
 
