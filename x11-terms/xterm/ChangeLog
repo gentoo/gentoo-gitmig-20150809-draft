@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.105 2005/09/17 06:58:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.106 2005/09/19 12:54:05 gustavoz Exp $
+
+  19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> xterm-204.ebuild:
+  Stable on sparc wrt #101333
 
   17 Sep 2005; Markus Rothe <corsair@gentoo.org> xterm-204.ebuild:
   Stable on ppc64
