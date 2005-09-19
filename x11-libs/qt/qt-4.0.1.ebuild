@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.3 2005/08/23 23:12:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.1.ebuild,v 1.4 2005/09/19 14:06:03 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -63,6 +63,10 @@ qt_mkspecs_dir() {
 }
 
 src_unpack() {
+	echo "S: .$S."
+	echo "D: .$D."
+	echo "L: .$QTLIBDIR."
+
 	unpack ${A}
 	cd ${S}
 

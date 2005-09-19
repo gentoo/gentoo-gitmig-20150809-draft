@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.246 2005/09/17 16:35:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.247 2005/09/19 14:06:03 caleb Exp $
+
+*qt-3.3.4-r8 (19 Sep 2005)
+
+  19 Sep 2005; Caleb Tennis <caleb@gentoo.org> +qt-3.3.4-r8.ebuild,
+  qt-4.0.1.ebuild:
+  Adding 3.3.4-r8 which is the same as -r7 except we force the build to use
+  the system zlib instead of allowing the option via the use flag, as this
+  gets us past the zlib error, which is fixed in 3.3.5 but which isn't ready
+  to go stable yet (see bug #105695)
 
 *qt-3.3.5 (17 Sep 2005)
 
