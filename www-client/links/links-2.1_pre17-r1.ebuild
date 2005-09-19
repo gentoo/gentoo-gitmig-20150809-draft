@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.17 2005/08/16 04:49:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.18 2005/09/19 19:08:30 vanquirius Exp $
 
 inherit eutils
 
-DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
-HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
+DESCRIPTION="links is a fast lightweight text and graphic web-browser"
+HOMEPAGE="http://links.twibright.com/"
 # To handle pre-version ...
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="${HOMEPAGE}/download/${MY_P}.tar.bz2
+SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/local/clock/links/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-utf8.diff.bz2"
 
 LICENSE="GPL-2"
