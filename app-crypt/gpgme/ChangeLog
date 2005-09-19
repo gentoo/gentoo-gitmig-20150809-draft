@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.79 2005/09/16 21:02:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.80 2005/09/19 20:35:49 vanquirius Exp $
+
+  19 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> gpgme-1.0.2.ebuild:
+  Use mirror:// in SRC_URI.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
