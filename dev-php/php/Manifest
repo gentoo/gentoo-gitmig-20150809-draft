@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1f66af0f38d01aed7a7f1e2a95385e3e php-4.3.11-r1.ebuild 1952
-MD5 1832b7dad433181a1ea82028e176f098 php-4.4.0.ebuild 1080
-MD5 eaa1a899f214a9ad1a095e9f6a4f5fc5 php-4.3.11.ebuild 1214
-MD5 2d4bf663a968bd92888083480240d284 php-4.4.0-r1.ebuild 1818
-MD5 e4646845a2f5c973cdd7dda410416943 ChangeLog 25990
+MD5 b84406645b72e593fef232dbf82681e9 ChangeLog 26119
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 d1536bfe7ebf7dab5076fcd56b03250a files/digest-php-4.3.11-r1 290
-MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
-MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
-MD5 58cd61c7ae093d9e2b847d68e76b88a2 files/digest-php-4.4.0-r1 288
-MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
-MD5 b048b183d4cc334d774ba478d695c055 files/php4.4.0-pcre-security.patch 6176
-MD5 522f94bfc40f65c2263785f960035875 files/libmbfl-headers.patch 309
-MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
-MD5 b3403a09e5d5fa394900b99ca6f63335 files/digest-php-4.4.0 211
-MD5 37b9c16c4d9688ed40561a2e29955896 files/php4.3.11-pcre-security.patch 6030
-MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 eaa1a899f214a9ad1a095e9f6a4f5fc5 php-4.3.11.ebuild 1214
+MD5 1832b7dad433181a1ea82028e176f098 php-4.4.0.ebuild 1080
+MD5 43d9442ccb467c42865b39cf514408a9 php-4.3.11-r1.ebuild 1953
+MD5 03b267674d79678e92546bfbc623c10f php-4.4.0-r1.ebuild 1819
 MD5 c3936dcc33eacdde589f42f0f28e4bd6 files/digest-php-4.3.11 213
+MD5 b3403a09e5d5fa394900b99ca6f63335 files/digest-php-4.4.0 211
+MD5 d1536bfe7ebf7dab5076fcd56b03250a files/digest-php-4.3.11-r1 290
+MD5 58cd61c7ae093d9e2b847d68e76b88a2 files/digest-php-4.4.0-r1 288
+MD5 522f94bfc40f65c2263785f960035875 files/libmbfl-headers.patch 309
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLsmqntT9W3vfTuoRAjrSAJwKlOrKu4fgqqPO0UCm2sXftonR+ACdHRXh
-e4mjnyPJMX47Rl0WpNJemG4=
-=aPwe
------END PGP SIGNATURE-----
+MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
+MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
+MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
+MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
+MD5 37b9c16c4d9688ed40561a2e29955896 files/php4.3.11-pcre-security.patch 6030
+MD5 b048b183d4cc334d774ba478d695c055 files/php4.4.0-pcre-security.patch 6176
