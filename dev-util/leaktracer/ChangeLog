@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/leaktracer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.7 2005/08/12 19:43:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/ChangeLog,v 1.8 2005/09/19 22:36:59 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
+  Adding to cpp herd
 
   12 Aug 2005; Luis Medinas <metalgod@gentoo.org> leaktracer-2.4.ebuild:
   Add ~amd64 Keywords.

@@ -1,4 +1,15 @@
-MD5 0637b745e95f0074b2a44ca0cd6a65b0 ChangeLog 1342
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7891922ae9e2562f306edc66c0e63c13 ChangeLog 1426
 MD5 9e3ab2cb122b951053d5062d97c1d75c leaktracer-2.4.ebuild 905
+MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
 MD5 33c69089859fd02bcf44f3047740462e files/LeakCheck-gentoo.patch 349
 MD5 acf3dc455f0ee43fd7fef44c0822d37c files/digest-leaktracer-2.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLz2YCRZPokWLroQRAvtHAKDamHboiDeTRfoPEXaNOlawT9rXtwCcDbpt
+X+WXJtSeh4mHkmyXbuOa8vI=
+=J0lI
+-----END PGP SIGNATURE-----
