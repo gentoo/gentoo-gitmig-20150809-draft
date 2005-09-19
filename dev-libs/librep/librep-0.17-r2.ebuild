@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.2 2005/09/15 12:48:24 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.3 2005/09/19 21:28:28 truedfx Exp $
 
 inherit eutils libtool toolchain-funcs multilib
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/libtool.patch"
 	epatch "${FILESDIR}/rep_file_fdopen.patch"
 	sed -i -e '7s/AM_PATH_REP/[&]/' rep.m4 || die "sed failed"
 	elibtoolize || die "elibtoolize failed"
@@ -42,8 +43,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dosym ../../../bin/libtool /usr/$(get_libdir)/rep/${CHOST}/libtool
-	fowners -h root:0 /usr/$(get_libdir)/rep/${CHOST}/libtool
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README THANKS TODO TREE
 	docinto doc
 	dodoc doc/*
