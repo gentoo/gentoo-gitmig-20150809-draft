@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc13.ebuild,v 1.2 2005/09/07 03:37:29 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc13.ebuild,v 1.3 2005/09/19 21:03:22 vanquirius Exp $
 
-inherit versionator
+inherit versionator flag-o-matic
 
 MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="Prelude-IDS framework for easy access to the Prelude database"
@@ -38,9 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	# prevent file collision
-	rm ${D}/usr/lib/perl5/5.8.6/i686-linux/perllocal.pod
+	make DESTDIR="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {

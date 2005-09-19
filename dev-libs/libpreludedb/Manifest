@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eebb2c2fdd222d6289db363996184ba1 ChangeLog 1951
+MD5 38827efc2ba71ea677f3974c506f707c libpreludedb-0.9.0_rc13.ebuild 1636
+MD5 d7bdb89dd846ed1cf54c9a35e1982a63 ChangeLog 2117
 MD5 46a99e432c86964e317f92a77160a836 metadata.xml 256
-MD5 968502da3f1870d81f933284e971bc2e libpreludedb-0.9.0_rc12.ebuild 1690
-MD5 a51ec64de208dd59804922bcacf7ba3a libpreludedb-0.9.0_rc13.ebuild 1699
-MD5 e850f2b2c16b8d27e059ca02f21d7481 files/digest-libpreludedb-0.9.0_rc12 75
 MD5 68b46c8ad5612060f30b36644a37125c files/digest-libpreludedb-0.9.0_rc13 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHm3AwUpWvClEHQoRAomBAJ9Dzvm2sr0bSmymbA/UITJX5CJtjwCfYv7M
-jxA6N2neTHe653PW1If5gSQ=
-=c5qu
------END PGP SIGNATURE-----
