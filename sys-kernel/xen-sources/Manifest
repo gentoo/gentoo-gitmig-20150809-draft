@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8a024946b29f52439f3282e0bae7a887 ChangeLog 677
+MD5 10b23d6bff50e5d6f41325012c7f56c8 ChangeLog 792
+MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
+MD5 c65785b52914d837701380016454f884 xen-sources-2.6.12.5.ebuild 1260
+MD5 1aa17aaeeb18f884cbd436fa45712c68 xen-sources-2.6.11.10.ebuild 1266
 MD5 13009cc7a494b5362d2385af132a699f files/digest-xen-sources-2.6.11.10 130
 MD5 3cdceca5bc99850a0ff128a97e370653 files/digest-xen-sources-2.6.12.5 129
-MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
-MD5 1aa17aaeeb18f884cbd436fa45712c68 xen-sources-2.6.11.10.ebuild 1266
-MD5 cedeb199023d83abb8fd6a268bccc984 xen-sources-2.6.12.5.ebuild 1259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDH3j5I1lqEGTUzyQRAiD6AJ9RWxMpZ+ad5Rqgz3mjB/XoYcm2uACgwoRm
-m0iGeXh8/991lqZVUfBsttI=
-=VoLb
------END PGP SIGNATURE-----
