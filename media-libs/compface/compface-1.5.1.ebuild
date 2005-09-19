@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.1.ebuild,v 1.8 2005/07/19 23:43:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.1.ebuild,v 1.9 2005/09/19 12:18:10 seemant Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	sed -i -e "s:\r::" Makefile.in
+	sed -i -e "s:\r::" Makefile.in xbm2xface.pl
 	epatch ${FILESDIR}/${P}-destdir.diff
 	WANT_AUTOCONF=2.5 autoconf
 
