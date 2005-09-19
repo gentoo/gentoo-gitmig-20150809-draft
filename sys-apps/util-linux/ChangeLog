@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.118 2005/09/19 04:18:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.119 2005/09/19 14:04:29 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> util-linux-2.12q-r3.ebuild:
+  Stable on x86
 
   19 Sep 2005; Jason Wever <weeve@gentoo.org> util-linux-2.12q-r3.ebuild:
   Stable on SPARC wrt security bug #105805.

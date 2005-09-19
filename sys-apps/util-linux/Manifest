@@ -1,9 +1,12 @@
-MD5 3723ce03184144afae95ca7fa6616ec3 ChangeLog 20182
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8f17acd0d0987a6a4da0d2eab879b589 ChangeLog 20277
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5497e9050dc8cde95a0e015edcd59c81 util-linux-2.12i-r1.ebuild 3960
 MD5 42a00cdd523f8facea7f10a9f4df86a1 util-linux-2.12q-r2.ebuild 5692
 MD5 40353e338343ed2b6a8f23259c881e49 util-linux-2.12q.ebuild 4785
-MD5 500f1314638303fe6f8e6fdd86828f23 util-linux-2.12q-r3.ebuild 5812
+MD5 59b5eafcdb237a7938e92ba436c63d4a util-linux-2.12q-r3.ebuild 5813
 MD5 0b95e856fd2f375270cf2ec4eaa69c8a files/crypto-loop.confd 505
 MD5 d20405e12353610b3ef8fbc2e1d57f2a files/crypto-loop.initd 1625
 MD5 cfa3960fd97ca16c85b0d1b87e6ba226 files/digest-util-linux-2.12i-r1 156
@@ -27,13 +30,20 @@ MD5 c9c2c92d7bba0652f22b638127c2107e files/util-linux-2.12i-pic.patch 2457
 MD5 33ddd96078cf91030b80f73eb70f5371 files/util-linux-2.12i-swapon-check-symlinks.patch 875
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 bc90959c4718e7dc5d53dcddac1172f5 files/util-linux-2.12q-debian-10cfdisk.patch 1888
+MD5 b360252f16d707f668b605d7a2abb791 files/util-linux-2.12q-dont-umask.patch 439
 MD5 570b9b148cbb60ec16de30940990ab53 files/util-linux-2.12q-i18n-update.patch 344
 MD5 28b1a8ed38823851eafadacef8ce11ec files/util-linux-2.12q-no-m68k-fdisk.patch 239
 MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
-MD5 b360252f16d707f668b605d7a2abb791 files/util-linux-2.12q-dont-umask.patch 439
 MD5 f182d2c3c90cdc74c816a4656a8f3bbf files/util-linux-2.12q-update_mtab-fixes.patch 2636
 MD5 3708f6eda344a2aa0a4d85d49f69dcee files/util-linux-2.12q-update-mtab-when-moving.patch 1036
 MD5 9d4c2454a6506ec913d901830ab06a22 files/util-linux-2.12-only-root-can-remount.patch 294
 MD5 99fa2ff2cb56217b6971e76e275923f9 files/util-linux-2.12q-more-fake-checks-v2.patch 1176
 MD5 8a13c61b447c1533df4b919cf2646fea files/util-linux-2.12q-umount-dont-write-mtab-with-remount.patch 467
 MD5 202b78b99074c7c91faea44d1de6e1bd files/util-linux-2.12q-use-update_mtab-for-fake.patch 546
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLsWVCRZPokWLroQRAjENAKDZ3o0rvlm/PUms1H6gXt6Gv4NcyACgqA7n
+a2sCSwaXQ4h20nvhxxigq20=
+=SeNl
+-----END PGP SIGNATURE-----
