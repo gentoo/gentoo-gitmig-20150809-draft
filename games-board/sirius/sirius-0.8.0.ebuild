@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/sirius/sirius-0.8.0.ebuild,v 1.5 2004/08/20 00:33:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/sirius/sirius-0.8.0.ebuild,v 1.6 2005/09/19 18:34:06 wolf31o2 Exp $
 
 inherit games
 
@@ -16,8 +16,7 @@ IUSE=""
 DEPEND="=x11-libs/gtk+-2*
 	=gnome-base/gconf-2*
 	gnome-base/libgnomeui
-	gnome-base/libgnomecanvas
-	media-libs/gdk-pixbuf"
+	gnome-base/libgnomecanvas"
 
 src_install() {
 	egamesinstall || die
