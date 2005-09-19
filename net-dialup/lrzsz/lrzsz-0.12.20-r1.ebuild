@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.3 2005/06/27 07:39:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.4 2005/09/19 21:21:46 mrness Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Communication package providing the X, Y, and ZMODEM file transfer protocols"
 HOMEPAGE="http://www.ohse.de/uwe/software/lrzsz.html"
@@ -17,6 +17,7 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
+
 	epatch ${FILESDIR}/${PN}-makefile-smp.patch
 }
 

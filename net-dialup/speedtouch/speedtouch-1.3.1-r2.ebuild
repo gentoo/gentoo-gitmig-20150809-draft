@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.4 2005/07/23 21:49:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.5 2005/09/19 21:23:33 mrness Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 MY_P=${P/_/-}
-S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="GPL Driver for the Alcatel Speedtouch USB under *nix"
 HOMEPAGE="http://speedtouch.sf.net/"
@@ -18,6 +17,8 @@ IUSE="static debug"
 
 DEPEND=""
 RDEPEND=">=net-dialup/ppp-2.4.1"
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
