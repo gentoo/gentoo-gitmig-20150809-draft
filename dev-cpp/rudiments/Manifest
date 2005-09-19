@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b50d3d02827061a3ffcf7527d0ee516e ChangeLog 942
 MD5 e530d29fd4b767ef02df8cff92441d88 metadata.xml 499
 MD5 b42df53cc834509875f1f4318377b999 rudiments-0.25.1.ebuild 949
@@ -6,3 +9,10 @@ MD5 35c9e48401261eb078225fced108714e rudiments-0.27.ebuild 643
 MD5 663754f61bf4123ce32d3843cdd21a49 files/digest-rudiments-0.25.1 68
 MD5 30044559d9ff9d4a74e48d412427966e files/digest-rudiments-0.26.3 68
 MD5 8a9a6dfdd03db9b344b58a7f6d59114e files/digest-rudiments-0.27 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLy/CCRZPokWLroQRAuOtAJ9uh8bSyPvy7plEk8J7aCeKbRicrQCgvCXw
+8Y1vJXOLubyJ+Obu0BYTl3U=
+=3HAL
+-----END PGP SIGNATURE-----

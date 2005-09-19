@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f12b38a251004a8ade9942684efe15b8 ChangeLog 1476
 MD5 7ba209f3b177d48d608bb14e6f5bd0cf metadata.xml 562
 MD5 662b8f3cf6087584520a213f787a554e poslib-1.0.5.ebuild 750
 MD5 73c6b7b853a93e981dc94144f89b265b poslib-1.0.6.ebuild 753
 MD5 493d2924243ec303551d83a251ba508b files/digest-poslib-1.0.5 64
 MD5 8b3b8697695a69ad7041944215efa104 files/digest-poslib-1.0.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLy+kCRZPokWLroQRAvmIAJ9frpaQYa8EAtDhi2zhQt0hedUesQCfXXot
+r8xCRwomuO7leNmGFMZxi6I=
+=NUZp
+-----END PGP SIGNATURE-----
