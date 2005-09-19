@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/openafs-legacy-0.1.ebuild,v 1.1 2005/07/27 20:15:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/openafs-legacy-0.1.ebuild,v 1.2 2005/09/19 15:26:39 stefaan Exp $
 
 DESCRIPTION="Package that provides access to a FHS compliant OpenAFS installation through soft-links at legacy paths"
 HOMEPAGE="http://www.gentoo.org/ http://www.openafs.org/"
@@ -8,6 +8,7 @@ HOMEPAGE="http://www.gentoo.org/ http://www.openafs.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64 ~alpha"
+IUSE=""
 
 DEPEND="sys-apps/baselayout"
 PDEPEND="net-fs/openafs"
