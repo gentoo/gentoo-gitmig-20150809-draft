@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.42.2.ebuild,v 1.5 2005/08/30 17:48:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.42.2.ebuild,v 1.6 2005/09/19 13:30:37 flameeyes Exp $
 
 inherit gnome2 eutils
 
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	media-libs/fontconfig
 	sys-libs/zlib
 	media-libs/libpng
-	=sys-devel/gcc-3*
+	>=sys-devel/gcc-3
 	>=dev-libs/libsigc++-2.0.3
 	>=dev-cpp/gtkmm-2.4
 	dev-cpp/glibmm
