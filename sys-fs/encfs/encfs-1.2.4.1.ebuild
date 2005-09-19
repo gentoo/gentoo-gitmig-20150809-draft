@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.2.4.1.ebuild,v 1.2 2005/09/17 22:56:58 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.2.4.1.ebuild,v 1.3 2005/09/19 19:17:06 vanquirius Exp $
 
 inherit versionator
 
@@ -16,8 +16,6 @@ DEPEND=">=dev-libs/openssl-0.9.7
 	>=sys-fs/fuse-2.2
 	>=dev-libs/rlog-1.3.6
 	nls? ( >=sys-devel/gettext-0.14.1 )"
-
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
 
