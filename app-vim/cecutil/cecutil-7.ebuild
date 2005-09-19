@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/cecutil-7.ebuild,v 1.5 2005/09/12 22:38:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/cecutil-7.ebuild,v 1.6 2005/09/19 21:54:21 cryos Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: library used by many of Charles Campbell's plugins"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=1066"
 LICENSE="vim"
-KEYWORDS="alpha ~amd64 ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 mips ppc sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\
