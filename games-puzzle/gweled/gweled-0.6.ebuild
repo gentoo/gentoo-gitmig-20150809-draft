@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.6.ebuild,v 1.1 2005/01/27 21:20:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.6.ebuild,v 1.2 2005/09/19 18:30:50 wolf31o2 Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic games
 
 DESCRIPTION="Bejeweled clone game"
 HOMEPAGE="http://sebdelestaing.free.fr/gweled/"
@@ -17,6 +17,12 @@ DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/librsvg-2
 	>=gnome-base/libgnomeui-2"
 
+src_unpack() {
+	unpack ${A}
+	# Adding gcc4 patch from halcy0n
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
+
 src_compile() {
 	filter-flags -fomit-frame-pointer
 	econf || die "econf failed"
@@ -30,4 +36,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS NEWS
+	prepgamesdirs
 }
