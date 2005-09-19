@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ussp-push/ussp-push-0.4.ebuild,v 1.3 2005/08/16 22:51:11 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ussp-push/ussp-push-0.4.ebuild,v 1.4 2005/09/19 20:08:21 mrness Exp $
 
 DESCRIPTION="OBEX object pusher for Linux"
 HOMEPAGE="http://xmailserver.org/ussp-push.html"
@@ -13,7 +13,6 @@ IUSE=""
 
 DEPEND="net-wireless/bluez-libs
 	dev-libs/openobex"
-RDEPEND="${DEPEND}"
 
 src_unpack(){
 	unpack ${A}
