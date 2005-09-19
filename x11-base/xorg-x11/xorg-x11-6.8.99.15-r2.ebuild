@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r2.ebuild,v 1.1 2005/09/17 16:07:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.15-r2.ebuild,v 1.2 2005/09/19 16:34:55 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -472,7 +472,9 @@ unpack_all() {
 		if use nls; then
 			unpack gemini-koi8-u.tar.bz2 > /dev/null
 		fi
-		unpack eurofonts-X11.tar.bz2 > /dev/null
+		if ! use minimal; then
+			unpack eurofonts-X11.tar.bz2 > /dev/null
+		fi
 		if use font-server; then
 			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
 		fi
