@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0c.ebuild,v 1.4 2004/12/08 12:05:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.5.0c.ebuild,v 1.5 2005/09/19 00:03:19 flameeyes Exp $
 
 IUSE="alsa"
 
-inherit eutils
+inherit eutils portability
 
 DESCRIPTION="AWE Utilities - sfxload"
 HOMEPAGE="http://www.alsa-project.org/~iwai/awedrv.html#Utils"
@@ -25,7 +25,7 @@ src_compile() {
 		epatch ${FILESDIR}/${PN}-0.5.0b-configure-noalsa.patch
 		econf --with-sfpath=${BANK_LOC} || die
 		epatch ${FILESDIR}/${PN}-0.5.0b-makefile-noalsa.patch
-		sed -i -e 's/'^LIBS.*-lasound.*$'/LIBS = -lm -ldl -lpthread/' Makefile
+		sed -i -e 's/'^LIBS.*-lasound.*$'/LIBS = -lm $(dlopen_lib) -lpthread/' Makefile
 	else
 		econf --with-sfpath=${BANK_LOC} || die
 	fi
