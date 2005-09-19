@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e581d92eaa9302a778c92b85bfda22dd stardict-freedict-eng-deu-2.4.2.ebuild 504
 MD5 0bef326a602cbaa49e765d13ef2fd313 ChangeLog 1099
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 3247c132c56cc274c0b4d547441c9aee files/digest-stardict-freedict-eng-deu-2.4.2 98
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDLsIyKRy60XGEcJIRArQQAKCdRrrjLHQAgSVq+GazeMIDvzlmtQCdENCp
+sMYo7f+ou/ZyrqLE4UhiUf8=
+=VXxG
+-----END PGP SIGNATURE-----
