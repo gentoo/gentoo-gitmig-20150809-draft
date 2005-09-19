@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3.ebuild,v 1.6 2005/06/11 01:58:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3.ebuild,v 1.7 2005/09/19 21:10:12 vanquirius Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -9,8 +9,8 @@
 
 inherit flag-o-matic
 
-MY_P=${PN}-NG-${PV}
-S=${WORKDIR}/${MY_P}
+MY_P="${PN}-NG-${PV}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A suite for man in the middle attacks and network mapping"
 HOMEPAGE="http://ettercap.sourceforge.net/"
@@ -46,14 +46,14 @@ src_compile() {
 	fi
 
 	econf ${myconf} \
-		`use_enable gtk gtk` \
-		`use_enable debug debug` \
-		`use_with ncurses ncurses` \
+		$(use_enable gtk) \
+		$(use_enable debug) \
+		$(use_with ncurses) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 }
