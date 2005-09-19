@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.46 2005/09/02 12:15:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.47 2005/09/19 21:39:45 lu_zero Exp $
+
+*bochs-2.2.1-r1 (19 Sep 2005)
+
+  19 Sep 2005; Luca Barbato <lu_zero@gentoo.org> +bochs-2.2.1-r1.ebuild:
+  gtk2 removal
 
   02 Sep 2005; Luca Barbato <lu_zero@gentoo.org> bochs-2.2.1.ebuild:
   fix for bug #104119
