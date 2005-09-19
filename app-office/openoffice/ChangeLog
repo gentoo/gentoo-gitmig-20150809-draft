@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.123 2005/09/17 22:06:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.124 2005/09/19 19:38:47 hansmi Exp $
+
+  19 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openoffice-1.1.5.ebuild:
+  Back to ~ppc, sorry for the trouble. My script for listing ebuilds needing
+  stabelizing has a bug and I didn't check enough.
 
   17 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   openoffice-1.1.5.ebuild:
