@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.4.ebuild,v 1.1 2005/09/06 04:18:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.4.ebuild,v 1.2 2005/09/19 14:41:02 mkay Exp $
 
 inherit eutils
 
@@ -179,8 +179,9 @@ pkg_postinst() {
 	if use mozilla; then
 		echo
 		einfo "xpi handler was placed in /usr/share/${PN} directory."
-		einfo "Run it as root user and you can use ed2k links in your"
-		einfo "favorite web browser (mozilla / firefox)."
+		einfo "Open it in your favorite web browser (mozilla / firefox)"
+		einfo "to install extension"
+		echo
 	fi;
 }
 
