@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1458 2005/09/19 10:43:43 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1459 2005/09/19 16:00:09 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -432,6 +432,7 @@ kde-base/kdeutils:pbbuttonsd - Enable support for the Apple PMU daemon pbbuttons
 kde-base/kig:kig-scripting - Enable support for python scripting
 kde-base/kmilo:pbbuttonsd - Enable support for the Apple PMU daemon pbbuttonsd
 kde-base/kooka:kadmos - Enable support for the kadmos OCR engine
+kde-base/kopete:sametime - Enable support for the Sametime protocol for instant messaging
 kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 mail-client/evolution:firefox - Use Firefox's NSS/NSPR libraries if SSL is enabled
