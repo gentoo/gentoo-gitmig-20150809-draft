@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-tbnl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.12 2005/09/10 01:03:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tbnl/ChangeLog,v 1.13 2005/09/19 18:14:20 mkennedy Exp $
+
+*cl-tbnl-0.7.0 (19 Sep 2005)
+
+  19 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-tbnl-0.5.5.ebuild,
+  +cl-tbnl-0.7.0.ebuild:
+  New upstream version; Removed old ebuilds.
 
 *cl-tbnl-0.6.1 (10 Sep 2005)
 
