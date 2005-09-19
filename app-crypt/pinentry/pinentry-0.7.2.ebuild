@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.8 2005/08/07 10:08:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.9 2005/09/19 13:58:45 gustavoz Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 IUSE="gtk gtk2 ncurses qt"
 
 DEPEND="gtk? (
