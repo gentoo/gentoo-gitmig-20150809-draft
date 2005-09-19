@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.12 2005/08/24 15:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/powiedz-1.0.ebuild,v 1.13 2005/09/19 10:08:33 spock Exp $
 
 inherit eutils
 
@@ -27,8 +27,9 @@ src_compile() {
 	ldlibs="-lm"
 
 	if use esd; then
-		ldlibs="${ldlibs} -lesd -lpthread -ldl"
+		ldlibs="${ldlibs} `esd-config --libs`"
 		defs="${defs} -DUSE_ESD=1"
+		cflags="${cflags} `esd-config --cflags`"
 	fi
 
 	if use arts; then

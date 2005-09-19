@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/powiedz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/ChangeLog,v 1.10 2005/08/24 15:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/ChangeLog,v 1.11 2005/09/19 10:08:33 spock Exp $
+
+  19 Sep 2005; Michał Januszewski <spock@gentoo.org> powiedz-1.0.ebuild:
+  Fixed linking when 'esd' is in USE (bug #106446).
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> powiedz-1.0.ebuild:
   epatch does not need die.
