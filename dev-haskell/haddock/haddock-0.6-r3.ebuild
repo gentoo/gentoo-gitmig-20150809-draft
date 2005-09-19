@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.10 2005/09/15 10:39:17 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.11 2005/09/19 06:50:33 araujo Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -8,7 +8,7 @@
 #   tetex  - Build the above docs as PostScript as well.
 
 
-inherit base eutils ghc-package
+inherit base eutils ghc-package multilib
 IUSE="doc tetex"
 
 DESCRIPTION="A documentation tool for Haskell"
