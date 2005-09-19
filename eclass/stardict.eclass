@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.10 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.11 2005/09/19 13:45:46 gustavoz Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -31,7 +31,7 @@ SRC_URI="mirror://sourceforge/stardict/${DICT_P}.tar.bz2"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 
 DEPEND=">=app-dicts/stardict-2.1"
 
