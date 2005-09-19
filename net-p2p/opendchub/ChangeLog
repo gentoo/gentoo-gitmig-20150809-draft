@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/opendchub
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.12 2005/02/05 18:16:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.13 2005/09/19 12:28:50 mkay Exp $
+
+*opendchub-0.7.14-r3 (19 Sep 2005)
+
+  19 Sep 2005; <mkay@gentoo.org> +opendchub-0.7.14-r3.ebuild:
+  Fixed perl support. Thanks ierdnah for bug #71137)
 
   05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   opendchub-0.7.14-r2.ebuild:
