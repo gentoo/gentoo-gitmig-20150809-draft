@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ptypes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.8 2005/09/03 14:28:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.9 2005/09/19 22:32:17 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
+  Adding to cpp herd
 
 *ptypes-2.0.2 (03 Sep 2005)
 

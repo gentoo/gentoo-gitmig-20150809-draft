@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.16 2005/09/18 23:52:54 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.17 2005/09/19 22:32:42 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd
 
   19 Sep 2005; Luis Medinas <metalgod@gentoo.org> quantlib-0.3.10.ebuild:
   Added ~amd64 keyword. Closes bug #106347.

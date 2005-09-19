@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvutil
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.21 2005/08/13 23:12:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.22 2005/09/19 22:25:50 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   dvutil-0.13.15-r2.ebuild:

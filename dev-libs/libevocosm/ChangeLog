@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevocosm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.4 2004/06/24 23:16:19 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.5 2005/09/19 22:29:03 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd
 
   14 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> libevocosm-2.5.2.ebuild:
   Unmasked on x86 and amd64.

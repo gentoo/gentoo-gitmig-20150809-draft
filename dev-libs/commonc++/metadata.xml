@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>cpp</herd>
 <maintainer>
-  <email>aliz@gentoo.org</email>
+<email>arj@gentoo.org</email>
+<name>Anders Rune Jensen</name>
 </maintainer>
 </pkgmetadata>

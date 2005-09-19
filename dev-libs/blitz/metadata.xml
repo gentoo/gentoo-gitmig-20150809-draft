@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>cpp</herd>
 	<maintainer>
 		<email>dragonheart@gentoo.org</email>
 		<description>Guilty of overmaintaince. feel free to take over</description>

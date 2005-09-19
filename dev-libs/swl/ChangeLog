@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/swl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/ChangeLog,v 1.6 2005/09/11 14:18:27 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/swl/ChangeLog,v 1.7 2005/09/19 22:34:26 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd
 
 *swl-0.4.0 (11 Sep 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.19 2005/09/02 19:34:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.20 2005/09/19 22:21:35 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> blitz-0.8.ebuild:
   Stable on ppc.
