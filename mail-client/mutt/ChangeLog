@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.61 2005/09/19 10:52:09 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.62 2005/09/19 20:18:32 ferdy Exp $
+
+  19 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/mutt-1.5.11-sasl.patch, mutt-1.5.11.ebuild:
+  fix sasl wrt bug #106545
 
 *mutt-1.5.11 (19 Sep 2005)
 
