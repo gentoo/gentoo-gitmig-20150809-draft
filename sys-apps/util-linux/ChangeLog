@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.116 2005/09/18 17:32:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.117 2005/09/19 00:23:19 metalgod Exp $
+
+  19 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  util-linux-2.12q-r3.ebuild:
+  Marked Stable on amd64. Bug #105805.
 
   18 Sep 2005; Markus Rothe <corsair@gentoo.org> util-linux-2.12q-r3.ebuild:
   Stable on ppc64 (bug #105805)
