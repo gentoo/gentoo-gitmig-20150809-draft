@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.16 2005/04/10 20:51:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.17 2005/09/19 17:53:01 flameeyes Exp $
+
+*bsdsfv-1.18-r1 (19 Sep 2005)
+
+  19 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/bsdsfv-1.18-64bit.patch, +bsdsfv-1.18-r1.ebuild:
+  Added patch to work fine on 64bit arches. Don't let the package be stripped
+  by the makefile. Respected the configured compiler.
 
   10 Apr 2005; Mike Frysinger <vapier@gentoo.org> bsdsfv-1.18.ebuild:
   Mark -amd64 since it failed to properly verify half the files in a 70 disk set.

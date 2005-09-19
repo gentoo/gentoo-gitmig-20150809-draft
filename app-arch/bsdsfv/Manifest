@@ -1,3 +1,16 @@
-MD5 9b88b9f94fa78e013e90db078bee5a59 ChangeLog 1663
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c52d01216cb87f6bb74f74a1832e8905 ChangeLog 1941
+MD5 5272193c1cffbd0d714721be1ebaa5a9 bsdsfv-1.18-r1.ebuild 719
 MD5 def713ebb472d3e5bb941ab3723802d1 bsdsfv-1.18.ebuild 526
+MD5 9cdf8f8e27eabb71f8dce2d0ffcc5da4 files/bsdsfv-1.18-64bit.patch 2392
+MD5 edec83a4548c43916e86bf0263c41b9c files/digest-bsdsfv-1.18-r1 62
 MD5 edec83a4548c43916e86bf0263c41b9c files/digest-bsdsfv-1.18 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDLvsrj5H05b2HAEkRAkz4AJwLttR8YRUtuPwizV1vcD3rcHz/CgCdG2Nk
+ya4OvqcgfSjJSPdDhN03Ayw=
+=/7RO
+-----END PGP SIGNATURE-----
