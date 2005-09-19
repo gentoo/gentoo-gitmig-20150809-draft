@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.2.ebuild,v 1.6 2005/04/21 19:09:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.2.ebuild,v 1.7 2005/09/19 11:11:41 cryos Exp $
 
 inherit python kde eutils
 
@@ -58,7 +58,7 @@ einfo "dev-util/cvs dev-util/subversion:	provide frontend for cvs version contro
 einfo ">=dev-util/ctags-5:			faster and more powerful code browsing logic"
 einfo "app-doc/doxygen:				generate KDE-style documentation for your project"
 einfo "app-misc/glimpse:			index and search your project's documentation"
-einfo "net-www/htdig:				ditto. yet another supported indexing/searching backend"
+einfo "www-misc/htdig:				ditto. yet another supported indexing/searching backend"
 einfo "app-arch/rpm:				supports creating RPMs of your project"
 einfo "app-emulation/visualboyadvance		create and run projects for this gameboy"
 einfo
