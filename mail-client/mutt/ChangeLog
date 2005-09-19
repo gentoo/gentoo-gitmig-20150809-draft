@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.60 2005/08/17 22:42:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.61 2005/09/19 10:52:09 ferdy Exp $
+
+*mutt-1.5.11 (19 Sep 2005)
+
+  19 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> metadata.xml,
+  +mutt-1.5.11.ebuild:
+  version bump. dropped ppc-macos keyword wrt bug #106498. adding myself to
+  metadata
 
 *mutt-1.5.10-r1 (17 Aug 2005)
 
