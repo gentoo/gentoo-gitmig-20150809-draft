@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6103967b3bf755c713fb83ac9a73bd73 ChangeLog 2606
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b54d9fa150f3ad8c6bbd017b931b23df Authen-SASL-2.09.ebuild 627
 MD5 862f67497440e7c389439022f38c517b Authen-SASL-2.04.ebuild 608
 MD5 98b123015faa26a7ab5bb49bb89f4cc3 files/digest-Authen-SASL-2.04 66
 MD5 e0ec82823ecca8a527e9435497fadcd9 files/digest-Authen-SASL-2.09 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDLzVVntT9W3vfTuoRAmYIAJ9zip71OQgQsC94p1BFgYQsw+G+LwCfcuer
+wMNfYHcskkEqtf0/FnuX3HE=
+=yopu
+-----END PGP SIGNATURE-----
