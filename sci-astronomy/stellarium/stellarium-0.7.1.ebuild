@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.7.1.ebuild,v 1.1 2005/09/17 21:47:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.7.1.ebuild,v 1.2 2005/09/19 18:19:32 mr_bones_ Exp $
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time."
 HOMEPAGE="http://stellarium.free.fr/"
@@ -14,6 +14,7 @@ IUSE="nls"
 DEPEND="virtual/x11
 	virtual/opengl
 	media-libs/libsdl
+	media-libs/sdl-mixer
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
