@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autopano-sift
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/ChangeLog,v 1.3 2005/09/18 15:29:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/ChangeLog,v 1.4 2005/09/19 16:43:06 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> autopano-sift-2.3.ebuild:
+  Fixed deps for glade-sharp and gtk-sharp. bug #106508
 
   18 Sep 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   autopano-sift-2.3.ebuild:
