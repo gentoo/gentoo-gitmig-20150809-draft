@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.131 2005/09/16 20:31:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.132 2005/09/19 19:16:13 vanquirius Exp $
+
+*gnupg-1.9.19 (19 Sep 2005)
+
+  19 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> +gnupg-1.9.19.ebuild:
+  Version bump for bug 106534. Thanks to Paolo Pedroni <paolo dot pedroni at
+  iol dot it>.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
