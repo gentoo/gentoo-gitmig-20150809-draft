@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ripperx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.19 2005/09/04 10:53:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ChangeLog,v 1.20 2005/09/19 03:32:52 vanquirius Exp $
+
+*ripperx-2.6.6 (19 Sep 2005)
+
+  19 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -files/ripperx-2.3-gcc34.patch, -ripperx-2.3.ebuild,
+  -ripperx-2.6.1.ebuild, +ripperx-2.6.6.ebuild:
+  Version bump for bug 95771. Thanks to Rossen Apostolov <rossen at protein
+  dot osaka-u dot ac dot jp>. Also, removing old ebuilds.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> ripperx-2.3.ebuild,
   ripperx-2.6.1.ebuild, ripperx-2.6.4.ebuild:

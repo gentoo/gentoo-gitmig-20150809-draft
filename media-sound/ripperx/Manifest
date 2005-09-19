@@ -1,21 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce9f075927559a23b751e48dc1793c83 ChangeLog 3012
-MD5 e14b7feb02fb25f73e97c668fe52f024 ripperx-2.6.1.ebuild 1146
 MD5 82ed07e65b0c7eaa143184f76e0c3d32 ripperx-2.6.4.ebuild 1115
-MD5 d3398a10bb4ac0f782a3504c272d9e33 ripperx-2.3.ebuild 1053
+MD5 3de0ddce3897b8db628b7aae51cc2aa2 ripperx-2.6.6.ebuild 1055
+MD5 f6fa06dd075f9433263f318ade5a490d ChangeLog 3333
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
 MD5 4a749204e0efd8e974e60aa87fd1d86f files/digest-ripperx-2.6.4 65
-MD5 1f2af914ab56a0c8534da1b64458d910 files/digest-ripperx-2.6.1 65
+MD5 b91a8a2d33b39e47da7e77aba4b765b2 files/digest-ripperx-2.6.6 65
 MD5 89f653a43ad3b4ec7559ff31bcbe361e files/ripperx-2.6.1-gcc34.patch 1886
-MD5 d9b642d70de10a941fc7db96fa760734 files/ripperx-2.3-gcc34.patch 1601
 MD5 b15842d5d282af9b7f9da313c9a6a1f4 files/ripperx-2.6.4-wrapper 515
-MD5 e7b366801eb77e3f9ce37e94c38f3921 files/digest-ripperx-2.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtIxj5H05b2HAEkRAl1rAJ0a+qhkc5PZshbqDN/AJdJjokqRiACePnmF
-JLmY/kX6DWnvlMWKSG+nACE=
-=jIVv
------END PGP SIGNATURE-----

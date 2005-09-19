@@ -1,10 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.1.ebuild,v 1.10 2005/09/04 10:53:13 flameeyes Exp $
-
-IUSE=""
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.6.ebuild,v 1.1 2005/09/19 03:32:52 vanquirius Exp $
 
 MY_P="${P/x/X}"
 S="${WORKDIR}/${MY_P}"
@@ -15,19 +11,14 @@ SRC_URI="mirror://sourceforge/ripperx/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/lame
 	media-sound/cdparanoia
 	media-libs/id3lib
 	media-libs/flac"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc34.patch
-}
 
 src_install () {
 	dodoc CHANGES FAQ README* TODO
