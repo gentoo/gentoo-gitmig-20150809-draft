@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1455 2005/09/18 12:52:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1456 2005/09/19 00:15:40 spock Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1085,7 +1085,11 @@ www-apps/tikiwiki:graphviz - enable graphviz support
 www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
+www-client/elinks:finger - Enable support for the finger protocol
+www-client/elinks:gopher - Enable support for the gopher protocol
+www-client/elinks:idn - Enable support for Internalized Domain Names
 www-client/elinks:lua - enable lua support
+www-client/elinks:nntp - Enable support for the NNTP
 www-client/epiphany-extensions:firefox - build against firefox instead of mozilla
 www-client/epiphany:firefox - build against firefox instead of mozilla
 www-client/galeon:firefox - build against firefox instead of mozilla
