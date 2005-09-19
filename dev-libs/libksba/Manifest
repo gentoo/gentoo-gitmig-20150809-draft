@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dbc21aad2e3522670659af5d835224fb libksba-0.9.12.ebuild 785
 MD5 22cac7b18ff235140a01c4b6e2f223d1 libksba-0.4.7.ebuild 614
 MD5 5e974837da54d225c18976fb0d7d5405 libksba-0.9.11.ebuild 778
@@ -10,3 +13,10 @@ MD5 24c004110e2ec7dd95837318f73feedc files/digest-libksba-0.9.6 65
 MD5 af87b3024250f157c1cc5523304dd9c5 files/digest-libksba-0.9.8 65
 MD5 e6e539b2679ae5c66dd51839cf59d8ec files/digest-libksba-0.9.11 66
 MD5 22be074cfc15845eead90489d55fea41 files/digest-libksba-0.9.12 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDLsSwKRy60XGEcJIRAvKtAKCeserU5GyJpdduhRot+W8kzIGjYQCbBTm6
+pgevqxfm380AiT4OUk7Segs=
+=7xUM
+-----END PGP SIGNATURE-----
