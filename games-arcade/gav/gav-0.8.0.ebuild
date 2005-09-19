@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.8 2005/05/21 18:34:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.8.0.ebuild,v 1.9 2005/09/19 17:42:43 mr_bones_ Exp $
 
 inherit games
 
@@ -18,19 +18,17 @@ SRC_URI="mirror://sourceforge/gav/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 sparc"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND="media-libs/sdl-image
+DEPEND="media-libs/sdl-image
 	media-libs/sdl-net
 	media-libs/libsdl"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 
 	cp Makefile.Linux Makefile               || die "cp 1 failed"
 	cp automa/Makefile.Linux automa/Makefile || die "cp 2 failed"
@@ -38,14 +36,14 @@ src_unpack() {
 	cp net/Makefile.Linux net/Makefile       || die "cp 4 failed"
 
 	sed -i \
-		-e "s:/usr/bin:${GAMES_BINDIR}:" Makefile || \
-			die "sed Makefile failed"
+		-e "s:/usr/bin:${GAMES_BINDIR}:" Makefile \
+		|| die "sed failed"
 	sed -i \
-		-e "/-Wall/ s$ ${CXXFLAGS}" CommonHeader || \
-			die "sed CommonHeader failed"
+		-e "/-Wall/ s$ ${CXXFLAGS}" CommonHeader \
+		|| die "sed failed"
 
 	# Now, unpack the additional themes
-	cd ${S}/themes
+	cd "${S}"/themes
 	# unpack everything because it's easy
 	unpack ${A}
 	# and kill off what we don't want
