@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.178 2005/09/17 20:24:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.179 2005/09/19 18:19:16 corsair Exp $
+
+  19 Sep 2005; Markus Rothe <corsair@gentoo.org> subversion-1.2.3-r1.ebuild:
+  Stable on ppc64 (bug #106421)
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> subversion-1.2.3.ebuild:
   Mark 1.2.3 stable on ia64
