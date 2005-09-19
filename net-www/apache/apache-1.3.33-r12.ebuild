@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r12.ebuild,v 1.2 2005/09/18 19:20:09 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r12.ebuild,v 1.3 2005/09/19 00:22:55 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -132,8 +132,7 @@ src_compile() {
 	if useq ssl; then
 		cd src/support
 		rm -f ab ab.o
-		make ab CFLAGS="${CFLAGS} -DUSE_SSL -lcrypto -lssl
-		-I/usr/include/openssl -L/usr/$(get_libdir)" || die
+		make ab CFLAGS="${CFLAGS} -DUSE_SSL -lcrypto -lssl -I/usr/include/openssl -L/usr/$(get_libdir)" || die
 		mv ab ab-ssl
 		rm -f ab.o
 		make ab || die
