@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.14.ebuild,v 1.1 2005/09/19 14:08:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-frontends/sane-frontends-1.0.14.ebuild,v 1.2 2005/09/19 15:30:46 swegener Exp $
 
 DESCRIPTION="Scanner Access Now Easy"
 HOMEPAGE="http://www.sane-project.org"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gimp"
 
-DEPEND=">=media-gfx/sane-backends
+DEPEND="media-gfx/sane-backends
 	gimp? ( media-gfx/gimp )"
 
 src_compile() {
