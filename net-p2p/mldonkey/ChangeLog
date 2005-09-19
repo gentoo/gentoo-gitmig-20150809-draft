@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.96 2005/09/18 13:12:59 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.97 2005/09/19 00:33:19 mkay Exp $
+
+  19 Sep 2005; <mkay@gentoo.org> mldonkey-2.6.4-r1.ebuild:
+  Added checking if gd was built with truetype. Thanks Frittella Laurento for
+  bug #106396
 
   18 Sep 2005; <mkay@gentoo.org> files/mldonkey.initd:
   Fixed init script. Thanks M. Giritli <giritli@sonne.uni-freiburg.de> for bug

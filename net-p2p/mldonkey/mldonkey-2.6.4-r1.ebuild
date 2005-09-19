@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.4-r1.ebuild,v 1.1 2005/09/14 21:22:31 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.4-r1.ebuild,v 1.2 2005/09/19 00:33:19 mkay Exp $
 
 inherit eutils
 
@@ -52,6 +52,12 @@ pkg_setup() {
 	if use gtk && use gtk2 && !(built_with_use dev-ml/lablgtk svg); then
 		eerror "dev-ml/lablgtk must be built with the 'svg' USE flag to use the gtk2 gui"
 		die "Recompile dev-ml/lablgtk with enabled svg USE flag"
+	fi
+
+	if use gd && !(built_with_use media-libs/gd truetype); then
+		eerror "media-libs/gd must be built with the 'truetype' to compile"
+		eerror "mldonkey with gd support"
+		die "Recompile media-libs/gd with enabled truetype USE flag"
 	fi
 }
 
