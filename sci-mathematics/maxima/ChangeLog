@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.9 2005/08/29 23:26:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.10 2005/09/19 04:24:15 ribosome Exp $
+
+*maxima-5.9.1-r4 (19 Sep 2005)
+
+  19 Sep 2005; Olivier Fisette <ribosome@gentoo.org>
+  -files/5.9.1-sbcl-gentoo.patch, -maxima-5.9.1-r2.ebuild,
+  -maxima-5.9.1-r3.ebuild, +maxima-5.9.1-r4.ebuild:
+  New ebuild with improved support for LISP compilers, thanks to Lucas Chiesa
+  <lucas.chiesa@gmail.com> (fixes bug #98763). Removed obsolete versions.
 
   29 Aug 2005; Olivier Fisette <ribosome@gentoo.org> maxima-5.9.1-r3.ebuild:
   Readded ~amd64 support, thanks to a patch by Matthew Kennedy

@@ -1,78 +1,70 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r2.ebuild,v 1.3 2005/08/20 18:16:23 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.1-r4.ebuild,v 1.1 2005/09/19 04:24:15 ribosome Exp $
 
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
-SRC_URI="mirror://sourceforge/maxima/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="cmucl clisp gcl sbcl tetex emacs auctex"
+KEYWORDS="~x86 ~amd64"
+IUSE="cmucl clisp sbcl tetex emacs auctex"
 
 DEPEND="tetex? ( virtual/tetex )
 	emacs? ( virtual/emacs )
 	auctex? ( app-emacs/auctex )
 	>=sys-apps/texinfo-4.3
-	x86? ( !clisp?	( !sbcl? ( !gcl? ( !cmucl? ( dev-lisp/cmucl ) ) ) ) )
+	!clisp? ( !sbcl? ( !cmucl? ( >=dev-lisp/gcl-2.6.7 ) ) )
+	cmucl? ( >=dev-lisp/cmucl-19a )
 	clisp? ( >=dev-lisp/clisp-2.33.2-r1 )
-	x86? ( cmucl? ( >=dev-lisp/cmucl-19a ) )
-	x86? ( gcl?	  ( >=dev-lisp/gcl-2.6.7 ) )
-	x86? ( sbcl?  ( >=dev-lisp/sbcl-0.8.14 ) )"
+	sbcl?  ( >=dev-lisp/sbcl-0.8.14 )"
 RDEPEND=">=dev-lang/tk-8.3.3
 	 >=media-gfx/gnuplot-4.0-r1"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-sbcl-gentoo.patch || die
-	cd ${S}/interfaces/emacs/emaxima
-	epatch ${FILESDIR}/maxima-emacs.patch
+	epatch "${FILESDIR}"/maxima-${PV}-unicode-fix.patch
+	cd "${S}"/interfaces/emacs/emaxima
+	epatch "${FILESDIR}"/maxima-emacs.patch
 }
 
 src_compile() {
-	local myconf=""
-	if use cmucl || use clisp || use gcl || use sbcl; then
+	local myconf
+	if use cmucl || use clisp || use sbcl; then
 		if use cmucl; then
 			myconf="${myconf} --enable-cmucl"
 		fi
 		if use clisp; then
 			myconf="${myconf} --enable-clisp"
 		fi
-		if use gcl; then
-			ewarn "Important - GCL must be installed with"
-			ewarn "ANSI support.  Otherwise this build will"
-			ewarn "fail.  To check this, start gcl and look"
-			ewarn "for a header like the following:"
-			ewarn "GCL (GNU Common Lisp)  2.6.5 ANSI"
-			ewarn "If you see CtL1 where ANSI is, then you"
-			ewarn "need to emerge gcl using something like"
-			ewarn "USE=\"ansi\" emerge gcl"
-			myconf="${myconf} --enable-gcl"
-		fi
 		if use sbcl; then
 			myconf="${myconf} --enable-sbcl"
 		fi
 	else
-		myconf="${myconf} --enable-cmucl"
+		if ! built_with_use dev-lisp/gcl ansi; then
+			eerror "GCL must be installed with ANSI."
+			eerror "Try USE=\"ansi\" emerge gcl"
+			die "This package needs gcl with USE=ansi"
+		fi
+		myconf="${myconf} --enable-gcl"
 	fi
-
-	./configure --prefix=/usr ${myconf} || die
-	emake || die
+	econf ${myconf} || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	if use emacs
 	then
-		elisp-site-file-install ${FILESDIR}/50maxima-gentoo.el
+		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el
 	fi
 	if use tetex
 	then
 		insinto /usr/share/texmf/tex/latex/emaxima
-		doins ${S}/interfaces/emacs/emaxima/emaxima.sty
+		doins "${S}"/interfaces/emacs/emaxima/emaxima.sty
 	fi
 
 	# Install documentation.
