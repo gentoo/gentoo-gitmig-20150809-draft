@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.23 2005/09/07 12:29:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.24 2005/09/19 16:32:51 greg_g Exp $
+
+  19 Sep 2005; Gregorio Guidi <greg_g@gentoo.org> kopete-3.5_alpha1.ebuild:
+  Add support for the Sametime protocol.
 
 *kopete-3.5_alpha1 (07 Sep 2005)
 
