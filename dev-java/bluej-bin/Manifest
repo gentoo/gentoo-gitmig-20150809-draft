@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 6121dd52ff2675551042e21d9b981eeb bluej-bin-2.0.5.ebuild 1626
 MD5 758bf5f8aabbdbcad5a7fd73bda1f628 bluej-bin-2.0.4.ebuild 1622
 MD5 ca49c0ca859f84e7ae67c60aa4c5e2b2 bluej-bin-1.3.5.ebuild 1409
-MD5 86bbe94bf4489079e5996d9343e982de ChangeLog 3258
+MD5 fd9e1bdcc0cd8c31fa16493c3f74b780 ChangeLog 3405
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 96b0da96c131cc5326e8f464fc7c9529 files/digest-bluej-bin-1.3.5 245
 MD5 1c7558be7cd285e1978311bb1d2ac5fc files/digest-bluej-bin-2.0.4 245
+MD5 16e65e78297292b8edce54266735427c files/digest-bluej-bin-2.0.5 245
 MD5 dc091e8adc602f493ddc2d222240133c files/bluej 115
 MD5 ac193d7badaaf8349132498c13ba3416 files/bluej.desktop 260
 MD5 8e01fa11a15c98a002059bfadbb29632 files/bluej-bin-2.0.4 141
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCez5GI1lqEGTUzyQRAlXfAJwMsd3YnWzPqqsxAsJdbMBn5iY4FgCfTHK3
-D7IDunfhDdPTFz9cav+cLZI=
-=u/kp
+iD8DBQFDL3DGevY57Fted3ERAs+/AJ48VYceNahYxa8v/nJ7I5FSYfsVNgCePrFv
+Mn9bG6xkxP0aWa3hcFtF/Vs=
+=3r5C
 -----END PGP SIGNATURE-----
