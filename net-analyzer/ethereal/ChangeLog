@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.135 2005/09/17 19:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.136 2005/09/19 19:55:39 vanquirius Exp $
+
+  19 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -ethereal-0.10.11.ebuild, -ethereal-0.10.11-r1.ebuild,
+  ethereal-0.10.12.ebuild:
+  Kill gtk2 USE flag for bug 106560.
 
   29 Jul 2005; Benjamin Smee <strerror@gentoo.org> ethereal-0.10.12.ebuild:
   Fixed spelling as per bug 100725
