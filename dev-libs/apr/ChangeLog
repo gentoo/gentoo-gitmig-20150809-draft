@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.40 2005/09/18 22:52:02 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.41 2005/09/19 19:59:34 hansmi Exp $
+
+  19 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> apr-0.9.6-r3.ebuild:
+  Stable on hppa and ppc.
 
   18 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> apr-0.9.6-r3.ebuild:
   Stable on amd64, bug 105516.
