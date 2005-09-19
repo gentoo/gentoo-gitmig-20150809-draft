@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.22 2005/08/24 22:31:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.23 2005/09/19 21:01:22 axxo Exp $
+
+*libnjb-2.2.3 (19 Sep 2005)
+
+  19 Sep 2005; Thomas Matthijs <axxo@gentoo.org> -libnjb-2.2.1.ebuild,
+  -libnjb-2.2.2.ebuild, +libnjb-2.2.3.ebuild:
+  version bump
 
 *libnjb-2.2.1 (24 Aug 2005)
 
