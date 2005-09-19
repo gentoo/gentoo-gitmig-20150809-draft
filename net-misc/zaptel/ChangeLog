@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.63 2005/09/17 01:01:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.64 2005/09/19 19:45:56 stkn Exp $
+
+  19 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  -files/zaptel-1.0.0-experimental-devfs26.diff,
+  -files/zaptel-1.0.3-gcc34.patch, -zaptel-1.0.3.ebuild,
+  -zaptel-1.0.4.ebuild, -zaptel-1.0.6.ebuild, -zaptel-1.0.7.ebuild,
+  -zaptel-1.0.9_p1.ebuild:
+  Removed outdated ebuilds.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   zaptel-1.2.0_beta1.ebuild:

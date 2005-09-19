@@ -1,56 +1,34 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 276ca202b6c1471af85d43ce0eb6b94f zaptel-1.0.7-r1.ebuild 6517
-MD5 42f062a13ffcf3c15e50b910ca4f2443 zaptel-1.0.3.ebuild 3512
-MD5 05517ce3f7bdb892f419c01c24442bba zaptel-1.0.7.ebuild 6089
-MD5 1ab383ffeab849e778401125f478fc6d zaptel-1.0.4-r1.ebuild 4417
 MD5 ac774e9b1e15c4e3060c325560be97d3 zaptel-1.0.6-r1.ebuild 6217
-MD5 a9b97edfc9559f48e71f9f232590143f zaptel-1.0.9_p1-r1.ebuild 6641
-MD5 0b745c4f596e378862e200cfdecb2a45 zaptel-1.0.4.ebuild 4457
-MD5 9cad7ade4727d907fd31d95ff881f3e2 zaptel-1.0.6.ebuild 6259
-MD5 7b71dc1e0aeb7f40043afe45ef467c74 zaptel-1.2.0_beta1.ebuild 9003
+MD5 1ab383ffeab849e778401125f478fc6d zaptel-1.0.4-r1.ebuild 4417
 MD5 5c63aa4881f27d9421f5e005c6333687 zaptel-1.0.9_p2.ebuild 6637
-MD5 935e1670d5ab508f6459fb45838d3bf3 zaptel-1.0.9_p1.ebuild 6445
-MD5 6263a968f86b50a23db0b3bcaf19b0ae zaptel-1.0.8.ebuild 6370
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 474e6bd789df7d867652a5387dd1b069 ChangeLog 11561
-MD5 cce31b4380f9c62e91293dff1523d5e0 files/zaptel-bristuff-0.2.0-RC8g.patch 5551
-MD5 077231bb1ba50aedfd08476b9d4eb18b files/zaptel-1.0.9_p2-gentoo.diff 5179
-MD5 090668aabb8e77cfd0d83835f52bd105 files/zaptel-1.0.4-gcc34.patch 821
-MD5 144ec2aec65f20a934f7affe613c69aa files/zaptel-1.2.0_beta1-gentoo.diff 4867
-MD5 74863c2b19f217f2f23daa1cd617c4f9 files/zaptel-bristuff-0.2.0-RC7k.patch 6065
-MD5 3a4f554056143ac54f033cc3356821b5 files/digest-zaptel-1.0.9_p1-r1 214
-MD5 3bff3fd5d8dc52513ceeac546e1e11bf files/zaptel.udevd 358
-MD5 60910db3ceada75031a91d419832871d files/zaptel-1.0.0-experimental-devfs26.diff 5474
-MD5 62b106ceaf6f69da6e1051c37b33f3f5 files/digest-zaptel-1.2.0_beta1 70
-MD5 f5d81a19c52c5e88fefed12251674134 files/zaptel-bristuff-0.2.0-RC8n.patch 6064
-MD5 66c86744220e6716f15393caf0ee408d files/digest-zaptel-1.0.3 64
-MD5 9abebf47ce7e7122a184a62e5baed146 files/zaptel-1.0.3-gcc34.patch 1540
-MD5 ede13eb6a35e876076adeed8a253e1e7 files/digest-zaptel-1.0.9_p1 214
-MD5 a1ef57fe463da11030f2e18d87535466 files/zaptel.rc6 972
-MD5 296ec9da581d5768ca13840b1a32c33f files/digest-zaptel-1.0.7 212
-MD5 0c81001d4c9efeeffeb1332580fb4cdc files/digest-zaptel-1.0.6-r1 212
-MD5 8471d7eb15aebff9c72f67861cb1ad88 files/zaptel-1.0.7-gentoo.diff 4459
-MD5 e5a799243335f31a494bb4f90edbb9e4 files/zaptel-1.0.3-gentoo.diff 3456
-MD5 6029a1280d38d8c67577bc7a873fd336 files/zaptel-1.0.9-rtc.patch 4238
-MD5 5fe59834ed82727b3297f9e39eb855be files/zaptel-1.0.9-gentoo.diff 4855
-MD5 0c81001d4c9efeeffeb1332580fb4cdc files/digest-zaptel-1.0.6 212
+MD5 276ca202b6c1471af85d43ce0eb6b94f zaptel-1.0.7-r1.ebuild 6517
+MD5 6263a968f86b50a23db0b3bcaf19b0ae zaptel-1.0.8.ebuild 6370
+MD5 a9b97edfc9559f48e71f9f232590143f zaptel-1.0.9_p1-r1.ebuild 6641
+MD5 e85646b140faa58366e07dac6d933aea ChangeLog 11837
+MD5 7b71dc1e0aeb7f40043afe45ef467c74 zaptel-1.2.0_beta1.ebuild 9003
 MD5 f06df1defd75000b5fdfa7f81b4ef78b files/zaptel-bristuff-0.2.0-RC8l.patch 5551
+MD5 3bff3fd5d8dc52513ceeac546e1e11bf files/zaptel.udevd 358
+MD5 62b106ceaf6f69da6e1051c37b33f3f5 files/digest-zaptel-1.2.0_beta1 70
+MD5 144ec2aec65f20a934f7affe613c69aa files/zaptel-1.2.0_beta1-gentoo.diff 4867
+MD5 fae1145da422b8838c2a6ac3405dc4c4 files/zaptel.confd 371
+MD5 6fec683d2df451d8094093511d1138db files/zaptel.devfsd 204
+MD5 051e2ff3f1222e2b551a70e9cd1b31f0 files/digest-zaptel-1.0.4-r1 64
+MD5 8471d7eb15aebff9c72f67861cb1ad88 files/zaptel-1.0.7-gentoo.diff 4459
+MD5 f46e4409c0bb701f8a6214e793de72a2 files/digest-zaptel-1.0.8 212
+MD5 cce31b4380f9c62e91293dff1523d5e0 files/zaptel-bristuff-0.2.0-RC8g.patch 5551
+MD5 a1ef57fe463da11030f2e18d87535466 files/zaptel.rc6 972
+MD5 6029a1280d38d8c67577bc7a873fd336 files/zaptel-1.0.9-rtc.patch 4238
+MD5 0c81001d4c9efeeffeb1332580fb4cdc files/digest-zaptel-1.0.6-r1 212
+MD5 69d0c3831715ccac6422b13a99fc6557 files/digest-zaptel-1.0.9_p2 214
+MD5 3a4f554056143ac54f033cc3356821b5 files/digest-zaptel-1.0.9_p1-r1 214
+MD5 090668aabb8e77cfd0d83835f52bd105 files/zaptel-1.0.4-gcc34.patch 821
+MD5 d40a84eeea5866a3afbac2603e970e7b files/zaptel-1.0.4-experimental-devfs26.diff 5982
+MD5 f5d81a19c52c5e88fefed12251674134 files/zaptel-bristuff-0.2.0-RC8n.patch 6064
 MD5 e72dc0fa3cbcd55182b6f05d8c731694 files/zaptel-1.0.8-gentoo.diff 4747
-MD5 051e2ff3f1222e2b551a70e9cd1b31f0 files/digest-zaptel-1.0.4 64
 MD5 9be11ef13f32ceaffef87920fe47a93e files/digest-zaptel-1.0.7-r1 212
 MD5 d893c36bffff825ab0e6d48e1ad0acea files/zaptel-bristuff-0.2.0-RC8h.patch 6064
-MD5 051e2ff3f1222e2b551a70e9cd1b31f0 files/digest-zaptel-1.0.4-r1 64
-MD5 fae1145da422b8838c2a6ac3405dc4c4 files/zaptel.confd 371
-MD5 f46e4409c0bb701f8a6214e793de72a2 files/digest-zaptel-1.0.8 212
-MD5 69d0c3831715ccac6422b13a99fc6557 files/digest-zaptel-1.0.9_p2 214
-MD5 6fec683d2df451d8094093511d1138db files/zaptel.devfsd 204
-MD5 d40a84eeea5866a3afbac2603e970e7b files/zaptel-1.0.4-experimental-devfs26.diff 5982
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK2svLLFUmVNQ7rkRAhLeAKDQdeUKgbUlUEhejGkFEoX5yGAOpQCg1iVM
-cRpa85ujrLm/SHciOCtvPyo=
-=0oUJ
------END PGP SIGNATURE-----
+MD5 e5a799243335f31a494bb4f90edbb9e4 files/zaptel-1.0.3-gentoo.diff 3456
+MD5 74863c2b19f217f2f23daa1cd617c4f9 files/zaptel-bristuff-0.2.0-RC7k.patch 6065
+MD5 5fe59834ed82727b3297f9e39eb855be files/zaptel-1.0.9-gentoo.diff 4855
+MD5 077231bb1ba50aedfd08476b9d4eb18b files/zaptel-1.0.9_p2-gentoo.diff 5179
