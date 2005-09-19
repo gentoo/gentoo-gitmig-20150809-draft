@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r2.ebuild,v 1.1 2005/09/16 19:07:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124-r2.ebuild,v 1.2 2005/09/19 16:03:13 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -135,7 +135,7 @@ src_install() {
 
 	# this makes the vmware-vmx executable only executable by vmware group
 	fowners root:vmware ${dir}/lib/bin{,-debug}/vmware-vmx || die
-	fperms 750 ${dir}/lib/bin{,-debug}/vmware-vmx || die
+	fperms 4750 ${dir}/lib/bin{,-debug}/vmware-vmx || die
 
 	# this adds udev rules for vmmon*
 	dodir /etc/udev/rules.d
