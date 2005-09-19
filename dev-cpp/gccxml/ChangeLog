@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gccxml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.6 2005/08/06 01:17:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.7 2005/09/19 21:36:29 halcy0n Exp $
+
+  19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd.
 
   06 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> gccxml-0.6.0.ebuild:
   Added ~mips.
