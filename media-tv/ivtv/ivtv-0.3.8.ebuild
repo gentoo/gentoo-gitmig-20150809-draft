@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.4 2005/09/15 19:38:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.5 2005/09/19 22:57:28 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -133,7 +133,7 @@ pkg_postinst() {
 	ewarn "ln -sf /lib/modules/ivtv-fw-enc-250-350.bin /lib/modules/ivtv-fw-enc.bin"
 	ewarn
 	ewarn "PVR-150/500 users need to run the following command to setup the firmware:"
-	ewarn "ln -sf /lib/modules/HcwFalcn.rom /lib/modules/ivtv/fw-enc.bin"
+	ewarn "ln -sf /lib/modules/HcwFalcn.rom /lib/modules/ivtv/ivtv-fw-enc.bin"
 	ewarn
 	echo
 }
