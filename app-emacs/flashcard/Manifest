@@ -2,14 +2,16 @@
 Hash: SHA1
 
 MD5 ae51ac23c6dc7ba60fe09bac29c2b634 flashcard-2.3.1.ebuild 601
-MD5 4ce4c13b5f2f99314238a39b6ef2494d ChangeLog 427
+MD5 a11654bb2d6798b0bad565fe754c3707 ChangeLog 564
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 01a07bfb66237d1b8d538d8e02b03d23 flashcard-2.3.2.ebuild 601
 MD5 bbd25dafb51ed5c4677f757d70b83b20 files/digest-flashcard-2.3.1 65
 MD5 a9dd0a6609414dd02e097438fffa18d5 files/50flashcard-gentoo.el 259
+MD5 2aa8e555463a26271db7a4a59952a535 files/digest-flashcard-2.3.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGWZuyiNZaEAZA+ARAjyTAJ9y6PYGKFHIHszTLeQIHi9ad98eTgCdHlz/
-oCTN7E344K1zVfhUKRZOzRk=
-=rDTb
+iD8DBQFDLvEVyiNZaEAZA+ARAjjIAJ4najxSFGF/kknMFMasG7mJWb6XjgCggmG/
+xjDAIcwsSEjp/TX36NhuB58=
+=gut2
 -----END PGP SIGNATURE-----
