@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.11 2005/06/15 18:32:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.12 2005/09/20 20:46:16 mr_bones_ Exp $
 
 inherit games cvs
 
 DESCRIPTION="DOS Emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
 
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
 IUSE="alsa opengl"
 SLOT="0"
@@ -22,11 +22,12 @@ DEPEND="virtual/libc
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/dosbox"
 ECVS_MODULE="dosbox"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
-S="${WORKDIR}/${ECVS_MODULE}"
+ECVS_TOP_DIR=${DISTDIR}/cvs-src/${PN}
+
+S=${WORKDIR}/${ECVS_MODULE}
 
 src_compile() {
-	local myconf=""
+	local myconf
 
 	if ! use alsa ; then
 		myconf="--without-alsa-prefix --without-alsa-inc-prefix --disable-alsatest"
@@ -41,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 	prepgamesdirs
 }
