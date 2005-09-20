@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmdrawer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.14 2005/09/02 19:25:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.15 2005/09/20 07:28:23 s4t4n Exp $
+
+*wmdrawer-0.10.5-r2 (20 Sep 2005)
+
+  20 Sep 2005; Michele Noberasco <s4t4n@gentoo.org> wmdrawer-0.10.5-r2.ebuild:
+  Revision bump, substituting gtk2 with gtk USE flag. I'm leaving already unmasked
+  archs as they are, since this is a non-change anyway. Fixes bug #106560.
+  wmdrawer-0.10.5-r1.ebuild:
+  Wiped out previous ebuild.
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   wmdrawer-0.10.5-r1.ebuild:
