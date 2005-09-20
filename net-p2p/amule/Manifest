@@ -5,7 +5,7 @@ MD5 1abaced287e5f9e1594893fb667a96df amule-2.0.3.ebuild 2258
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 b3c15e104e1b64f5499fad3b01f9b27d amule-1.2.8-r1.ebuild 829
 MD5 bcdd2b75d6b9bc9030bad15ae7748780 amule-2.0.1-r1.ebuild 2167
-MD5 a1f91ff4881b24f5431f90136caf7628 amule-2.0.3-r2.ebuild 2197
+MD5 9842bde0d727d0714cf5ae1f01c14f19 amule-2.0.3-r2.ebuild 2167
 MD5 75c780e3a94f217a14a99371aa7e9a56 files/amuleweb.initd 1176
 MD5 8cde6982e4b5300f4521da90ab8733d6 files/amule-2.0.0_rc7-wxgtk.patch 1293
 MD5 6cfdc1b9b4a65d47e9047a8fed427889 files/amuled.confd 409
