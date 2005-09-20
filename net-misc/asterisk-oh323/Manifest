@@ -1,22 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 523fc371f7710183b5046783ca64cbba ChangeLog 1628
-MD5 5640cab5679236e722c37c8a3ca42646 asterisk-oh323-0.5.10.ebuild 960
-MD5 b1f61ef934bf7c481663f3550413e82e asterisk-oh323-0.6.5.ebuild 1171
-MD5 3fcfea43a5ef408069ccc48ab4089d51 asterisk-oh323-0.6.6.ebuild 1203
-MD5 5f3da3b300fafed1e2639505fb938afb files/asterisk-oh323-0.5.10-Makefile.patch 1649
-MD5 ffa52289baeedd9c24e1a9eb21ab721f files/asterisk-oh323-0.5.10-asterisk-driver-Makefile.patch 323
-MD5 c14a16ac3b4367dbe209d5895bee0fbe files/asterisk-oh323-0.6.5-Makefile.patch 2527
-MD5 7812b5cd1b960503c8e3bb849bdd316c files/asterisk-oh323-0.6.6-Makefile.patch 5382
-MD5 2a85703c4ed5f0a0f4a163643ba1809c files/digest-asterisk-oh323-0.5.10 72
-MD5 442630149f00b75cebe5b3f876545ba3 files/digest-asterisk-oh323-0.6.5 71
-MD5 fa0eebb1d3bd976c64178706c0214330 files/digest-asterisk-oh323-0.6.6 71
+MD5 475e40c6e7019ffb09cc5dd816d75af5 asterisk-oh323-0.7.3.ebuild 1545
+MD5 6a641b45da8a7775c1311ea0591726a5 asterisk-oh323-0.6.7.ebuild 1476
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0HTGI1lqEGTUzyQRAiMDAKCSykt5+44Sq10rTlZsHNlNn7iQlwCgthrW
-XXihuNMe2G2XHIheV42T5Jo=
-=/6YJ
------END PGP SIGNATURE-----
+MD5 d5a522d63cdebb4bc9daebab10e6b36d ChangeLog 2222
+MD5 3fcfea43a5ef408069ccc48ab4089d51 asterisk-oh323-0.6.6.ebuild 1203
+MD5 7812b5cd1b960503c8e3bb849bdd316c files/asterisk-oh323-0.6.6-Makefile.patch 5382
+MD5 144ff815a14eb2951c1febcc6141b6fc files/digest-asterisk-oh323-0.6.7 71
+MD5 55a1973743617df96f4a1298853e19af files/digest-asterisk-oh323-0.7.3 71
+MD5 05d8b63dc6b9772e6e0c7014a4de98e8 files/asterisk-oh323-0.7.3-gentoo.diff 371
+MD5 fa0eebb1d3bd976c64178706c0214330 files/digest-asterisk-oh323-0.6.6 71
+MD5 5d6aa1f77e7660782f2f3f290bc1be77 files/asterisk-oh323-0.6.7-Makefile.diff 5925

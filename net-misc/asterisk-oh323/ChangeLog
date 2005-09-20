@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/asterisk-oh323
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.6 2005/07/08 22:43:03 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/ChangeLog,v 1.7 2005/09/20 16:10:59 stkn Exp $
+
+*asterisk-oh323-0.7.3 (20 Sep 2005)
+*asterisk-oh323-0.6.7 (20 Sep 2005)
+
+  20 Sep 2005; Stefan Knoblich <stkn@gentoo.org>
+  -files/asterisk-oh323-0.5.10-Makefile.patch,
+  -files/asterisk-oh323-0.5.10-asterisk-driver-Makefile.patch,
+  -files/asterisk-oh323-0.6.5-Makefile.patch,
+  +files/asterisk-oh323-0.6.7-Makefile.diff,
+  +files/asterisk-oh323-0.7.3-gentoo.diff, -asterisk-oh323-0.5.10.ebuild,
+  -asterisk-oh323-0.6.5.ebuild, +asterisk-oh323-0.6.7.ebuild,
+  +asterisk-oh323-0.7.3.ebuild:
+  Version bump, new versions work with current pwlib and openh323 versions and
+  removed old ebuilds.
 
 *asterisk-oh323-0.6.6 (09 Jul 2005)
 
