@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4469 2005/09/19 20:45:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4470 2005/09/20 02:08:14 ribosome Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (19 Sep 2005)
+# The new GAMESS package will need some testing before it
+# can be considered a candidate for the stable branch.
+sci-chemistry/gamess
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 Sep 2005)
 # Adding new GGZ ebuilds to portage.  I am masking them all
