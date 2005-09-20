@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.154 2005/09/20 09:19:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.155 2005/09/20 17:23:42 hansmi Exp $
+
+  20 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> perl-5.8.6-r6.ebuild:
+  Stable on ppc.
 
 *perl-5.8.7-r1 (20 Sep 2005)
 *perl-5.8.6-r6 (20 Sep 2005)
