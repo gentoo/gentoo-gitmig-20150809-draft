@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.459 2005/09/20 02:33:07 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.460 2005/09/20 19:17:04 flameeyes Exp $
+
+  20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r5.ebuild,
+  xorg-x11-6.8.99.15-r2.ebuild:
+  Make util-linux conditional to GNU userland, added note for FBSD.
 
 *xorg-x11-6.8.2-r5 (20 Sep 2005)
 
