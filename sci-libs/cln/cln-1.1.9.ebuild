@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.9.ebuild,v 1.1 2005/06/05 15:49:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.1.9.ebuild,v 1.2 2005/09/20 15:32:52 dang Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="CLN, a class library (C++) for numbers"
 
@@ -36,6 +36,7 @@ src_compile() {
 	./configure \
 		--build=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
 		--datadir=/usr/share/doc/${P} \
 		--mandir=/usr/share/man || die "./configure failed"
