@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.ebuild,v 1.4 2005/08/17 19:18:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-39.ebuild,v 1.5 2005/09/20 15:38:23 mr_bones_ Exp $
 
 inherit wxwidgets games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scorched3d/Scorched3D-${PV}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="gtk2 mysql"
+IUSE="mysql"
 
 DEPEND="virtual/opengl
 	>=media-libs/openal-20050504
@@ -24,11 +24,7 @@ DEPEND="virtual/opengl
 S=${WORKDIR}/scorched
 
 pkg_setup() {
-	if use gtk2; then
-		need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
-	else
-		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
-	fi
+	need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
 	games_pkg_setup
 }
 
@@ -44,11 +40,7 @@ src_unpack() {
 
 src_compile() {
 	# work around portage bug: described in bug #73527
-	if use gtk2; then
-		need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
-	else
-		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
-	fi
+	need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
 	egamesconf \
 		--disable-dependency-tracking \
 		--exec_prefix="${GAMES_PREFIX}" \
