@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r3.ebuild,v 1.4 2005/07/10 15:26:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r4.ebuild,v 1.1 2005/09/20 17:52:43 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="A powerful Model View Controller Framework for JSP/Servlets"
 SRC_URI="mirror://apache/jakarta/struts/source/jakarta-${P}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/struts/index.html"
 LICENSE="Apache-1.1"
-SLOT="0"
+SLOT="1.1"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/commons-beanutils-1.6*
 	>=dev-java/commons-collections-2.1
@@ -53,7 +53,7 @@ src_install() {
 	java-pkg_dojar target/library/struts.jar
 
 	# install the tld files
-	insinto /usr/share/${PN}/lib
+	insinto /usr/share/${PN}-${SLOT}/lib
 	doins target/library/*.tld
 
 	dodoc README STATUS
