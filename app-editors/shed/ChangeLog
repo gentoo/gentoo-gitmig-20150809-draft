@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/shed
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.8 2005/08/28 16:10:29 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.9 2005/09/20 19:08:40 kito Exp $
+
+  20 Sep 2005; Kito <kito@gentoo.org> shed-1.11.ebuild:
+  ~ppc-macos. Closes Bug 106594
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> shed-1.11.ebuild:
   Added ~amd64 keywords. Closes bug #103870.
