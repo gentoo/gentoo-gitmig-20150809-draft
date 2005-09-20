@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4482 2005/09/20 19:35:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4483 2005/09/20 20:24:23 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -50,15 +50,15 @@ sci-chemistry/gamess
 # Adding new GGZ ebuilds to portage.  I am masking them all
 # here until they can all be added and will unmask them all
 # at once since some of them need a little work.
-=dev-games/ggz-client-libs-0.0.11
-=dev-games/libggz-0.0.11
-=games-board/ggz-gnome-client-0.0.11
-=games-board/ggz-gtk-client-0.0.11
-=games-board/ggz-gtk-games-0.0.11
-=games-board/ggz-kde-client-0.0.11
-=games-board/ggz-kde-games-0.0.11
-=games-board/ggz-sdl-games-0.0.11
-=games-board/ggz-txt-client-0.0.11
+>=dev-games/ggz-client-libs-0.0.11
+>=dev-games/libggz-0.0.11
+>=games-board/ggz-gnome-client-0.0.11
+>=games-board/ggz-gtk-client-0.0.11
+>=games-board/ggz-gtk-games-0.0.11
+>=games-board/ggz-kde-client-0.0.11
+>=games-board/ggz-kde-games-0.0.11
+>=games-board/ggz-sdl-games-0.0.11
+>=games-board/ggz-txt-client-0.0.11
 
 # Aaron Walker <ka0ttic@gentoo.org> (19 Sep 2005)
 # Infinite loop issue when running SSI's.  Also some possible
