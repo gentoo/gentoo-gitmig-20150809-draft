@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1460 2005/09/19 16:27:53 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1461 2005/09/20 08:33:32 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -415,7 +415,6 @@ kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
-kde-base/kdegraphics:kadmos - Enable support for the kadmos OCR engine in kooka
 kde-base/kdegraphics:nodrm - Disable DRM support in kpdf
 kde-base/kdegraphics:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
