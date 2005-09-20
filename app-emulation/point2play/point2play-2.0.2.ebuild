@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.2.ebuild,v 1.3 2005/07/22 00:03:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-2.0.2.ebuild,v 1.4 2005/09/20 01:39:15 vapier Exp $
 
 inherit eutils
 
@@ -43,5 +43,5 @@ src_unpack() {
 src_install() {
 	mv usr "${D}"/ || die "mv usr"
 	# remove duplicated desktop files
-	rm -r "${D}"/usr/share/gnome
+	rm -r "${D}"/usr/share/{gnome,appplications,applnk}
 }
