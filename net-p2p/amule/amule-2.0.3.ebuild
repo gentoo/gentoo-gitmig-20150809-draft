@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3.ebuild,v 1.4 2005/09/17 22:26:45 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3.ebuild,v 1.5 2005/09/20 09:40:19 mkay Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc ~ppc64 ~sparc ~alpha"
-IUSE="amuled debug gtk2 nls remote stats unicode"
+IUSE="amuled debug gtk nls remote stats unicode"
 
 
 DEPEND=">=x11-libs/wxGTK-2.6.0
@@ -27,14 +27,8 @@ DEPEND=">=x11-libs/wxGTK-2.6.0
 
 pkg_setup() {
 	export WX_GTK_VER="2.6"
-	if ! use gtk2; then
-		need-wxwidgets gtk
-	elif use unicode; then
-		need-wxwidgets unicode
-	else
-		need-wxwidgets gtk2
-	fi
-
+	need-wxwidgets gtk
+	use unicode && need-wxwidgets unicode
 }
 
 src_unpack() {
@@ -52,6 +46,7 @@ src_compile() {
 		--disable-optimize \
 		--with-wx-config=${WX_CONFIG} \
 		--with-wxbase-config=${WX_CONFIG} \
+		--disable-embedded-crypto \
 		`use_enable debug` \
 		`use_enable nls` \
 		`use_enable remote amulecmd` \

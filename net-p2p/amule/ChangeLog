@@ -1,19 +1,10 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.47 2005/09/18 12:25:05 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.48 2005/09/20 09:40:19 mkay Exp $
 
-*amule-2.0.3-r1 (18 Sep 2005)
-
-  18 Sep 2005; <mkay@gentoo.org> +amule-2.0.3-r1.ebuild:
-  Amule uses external crypto++ now. Thanks Andreas Eriksson and others in bug
-  #66605
-
-  18 Sep 2005; <mkay@gentoo.org> files/amuleweb.initd:
-  Command-line parameters for amuleweb have changed. Fixing init.d script.
-  This also close bug #105642
-
-  18 Sep 2005; <mkay@gentoo.org> amule-2.0.1.ebuild:
-  Older version has the same problem with symlinks outside sandbox. Fixed
+  20 Sep 2005; <mkay@gentoo.org> files/amuleweb.initd, amule-1.2.8.ebuild,
+  amule-2.0.1.ebuild, amule-2.0.3.ebuild, amule-2.0.3-r1.ebuild:
+  Removing gtk2 flag
 
   17 Sep 2005; <mkay@gentoo.org> amule-2.0.3.ebuild:
   Fixing symlinks made to files in live system (sandbox violation)
