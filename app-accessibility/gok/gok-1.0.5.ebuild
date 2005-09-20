@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.11 2005/09/20 17:31:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.12 2005/09/20 19:12:06 seemant Exp $
 
-inherit gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="Gnome Onscreen Keyboard"
 HOMEPAGE="http://www.gok.ca/"
@@ -39,3 +39,8 @@ G2CONF="${G2CONF} $(use_enable static)"
 
 # So it doesn't break when building kbd files
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_test() {
+	addpredict /
+	Xmake check || die
+}
