@@ -2,11 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>X11</herd>
-<maintainer>
-	<email>hhg@gentoo.org</email>
-	<name>Hallgrimur H. Gunnarsson</name>
-</maintainer>
 <longdescription>
-    Hacked version of the libiterm library.
+	Hacked version of the libiterm library.
 </longdescription>
 </pkgmetadata>
