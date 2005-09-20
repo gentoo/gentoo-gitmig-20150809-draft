@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.4.ebuild,v 1.2 2005/09/19 14:41:02 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.4-r2.ebuild,v 1.1 2005/09/20 17:38:13 mkay Exp $
 
 inherit eutils
 
-IUSE="gtk gtk2 oldgtk guionly batch threads gd doc mozilla"
+IUSE="gtk guionly batch threads gd doc mozilla"
 
 MOZVER="1.7"
 
@@ -18,10 +18,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
 
 RDEPEND="dev-lang/perl
-	gtk2? ( >=gnome-base/librsvg-2.4.0
+	gtk? ( >=gnome-base/librsvg-2.4.0
 			>=dev-ml/lablgtk-2.4 )
-	gtk? ( =dev-ml/lablgtk-1.2.7* )
-	oldgtk? ( =dev-ml/lablgtk-1.2.7* )
 	gd? ( >=media-libs/gd-2.0.28 )"
 
 DEPEND="${RDEPEND}
@@ -32,34 +30,33 @@ DEPEND="${RDEPEND}
 MLUSER="p2p"
 
 pkg_setup() {
-	echo ""
-	einfo "If the compile with gui fails, and you have updated ocaml"
-	einfo "recently, you may have forgotten that you need to run"
-	einfo "/usr/portage/dev-lang/ocaml/files/ocaml-rebuild.sh"
-	einfo "to learn which ebuilds you need to recompile"
-	einfo "each time you update ocaml to a different version"
-	einfo "see the ocaml ebuild for details"
-	echo ""
-
-	if (use gtk && use gtk2) || (use gtk && use oldgtk) || (use gtk2 && use oldgtk); then
-		eerror "Only one GUI must be chosen! (gtk || gtk2 || oldgtk)"
-		die "Choose only one GUI"
+	if use gtk; then
+		echo ""
+		einfo "If the compile with gui fails, and you have updated ocaml"
+		einfo "recently, you may have forgotten that you need to run"
+		einfo "/usr/portage/dev-lang/ocaml/files/ocaml-rebuild.sh"
+		einfo "to learn which ebuilds you need to recompile"
+		einfo "each time you update ocaml to a different version"
+		einfo "see the ocaml ebuild for details"
+		echo ""
 	fi
 
-	if use guionly && !(use gtk2 || use gtk || use oldgtk); then
-		eerror "You need to choose a GUI (gtk || gtk2 || oldgtk)"
-		die "You have guionly enabled, but you haven't chosen any of GUIs"
+	if use guionly && ! use gtk ; then
+		echo
+		eerror "You have guionly enabled, but gtk flag is disabled"
+		die
 	fi
 
-	if use gtk2 && !(built_with_use dev-ml/lablgtk svg); then
-		eerror "dev-ml/lablgtk must be built with the 'svg' USE flag to use the gtk2 gui"
+	if use gtk && !(built_with_use dev-ml/lablgtk svg); then
+		eerror "dev-ml/lablgtk must be built with the 'svg' USE flag to use the gtk gui"
 		die "Recompile dev-ml/lablgtk with enabled svg USE flag"
 	fi
-}
 
-src_unpack() {
-	unpack ${P}.tar.bz2
-	cd ${S}
+	if use gd && !(built_with_use media-libs/gd truetype); then
+		eerror "media-libs/gd must be built with the 'truetype' to compile"
+		eerror "mldonkey with gd support"
+		die "Recompile media-libs/gd with enabled truetype USE flag"
+	fi
 }
 
 src_compile() {
@@ -73,13 +70,10 @@ src_compile() {
 	# threads 	Enables multiple threads (TURN IT ON YES WILL YA?)
 	# onlygui	Disable all nets support, build only chosen GUI
 
-	if use gtk2; then
+	if use gtk; then
 		myconf="--enable-gui=newgui2"
-	elif use gtk; then
-		myconf="--enable-gui=newgui1"
-	elif use oldgtk; then
-		myconf="--enable-gui=oldgui"
-	else myconf="--disable-gui"
+	else
+		myconf="--disable-gui"
 	fi
 
 	if use guionly; then
@@ -100,13 +94,13 @@ src_compile() {
 	export OCAMLRUNPARAM="l=256M"
 	emake || die "Make Failed"
 
-	if !(use guionly); then
+	if ! use guionly; then
 		emake utils || die "make utils failed"
 	fi;
 }
 
 src_install() {
-	if !(use guionly); then
+	if ! use guionly; then
 		dobin mlnet mld_hash get_range copysources make_torrent subconv
 		dobin ${FILESDIR}/mldonkey
 
@@ -114,9 +108,8 @@ src_install() {
 		exeinto /etc/init.d; newexe ${FILESDIR}/mldonkey.initd mldonkey
 	fi
 
-	if (use gtk2 || use gtk || use oldgtk); then
+	if use gtk; then
 		dobin mlgui mlguistarter mlchat mlim mlprogress
-
 		domenu ${FILESDIR}/${PN}-gui.desktop
 		doicon ${FILESDIR}/${PN}.png
 	fi
@@ -148,13 +141,13 @@ src_install() {
 }
 
 pkg_preinst() {
-	if !(use guionly); then
+	if ! use guionly; then
 		enewuser ${MLUSER} -1 /bin/bash /home/p2p users
 	fi
 }
 
 pkg_postinst() {
-	if !(use guionly); then
+	if ! use guionly; then
 		echo
 		einfo "Running \`mldonkey' will start the server inside ~/.mldonkey/"
 		einfo "If you want to start mldonkey in a particular working directory,"

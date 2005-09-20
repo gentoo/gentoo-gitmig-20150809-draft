@@ -1,61 +1,79 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.28-r4.ebuild,v 1.2 2005/02/05 18:56:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.0-r1.ebuild,v 1.1 2005/09/20 17:38:13 mkay Exp $
 
 inherit eutils
 
-IUSE="gtk gtk2"
-
-PATCHPACK="patch_pack28h.gz"
+IUSE="gd gtk"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
-SRC_URI="http://download.berlios.de/pub/mldonkey/spiralvoice/cvs/${P}.tar.bz2
-	http://download.berlios.de/pub/mldonkey/spiralvoice/patchpacks/${PATCHPACK}"
+SRC_URI="http://savannah.nongnu.org/download/mldonkey/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
 
-RDEPEND=">=dev-lang/ocaml-3.08
-	dev-lang/perl
-	net-misc/wget
-	gtk? ( !gtk2? ( =dev-ml/lablgtk-1.2.7* ) )
-	gtk? ( gtk2? ( >=dev-ml/lablgtk-2.4 ) )"
+RDEPEND="dev-lang/perl
+		net-misc/wget
+		>=dev-lang/ocaml-3.08.3
+		gtk? ( >=gnome-base/librsvg-2.4.0
+				>=dev-ml/lablgtk-2.4 )
+		gd? ( >=media-libs/gd-2.0.28 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 MLUSER="p2p"
 
+pkg_setup() {
+	echo ""
+	einfo "If the compile with gui fails, and you have updated ocaml"
+	einfo "recently, you may have forgotten that you need to run"
+	einfo "/usr/portage/dev-lang/ocaml/files/ocaml-rebuild.sh"
+	einfo "to learn which ebuilds you need to recompile"
+	einfo "each time you update ocaml to a different version"
+	einfo "see the ocaml ebuild for details"
+	echo ""
+	if use gtk; then
+		built_with_use dev-ml/lablgtk svg || \
+	die "dev-ml/lablgtk must be built with the 'svg' USE flag to use the gtk gui"
+	fi
+}
+
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
-	epatch ${DISTDIR}/${PATCHPACK}
-	use gtk || epatch ${FILESDIR}/${PV}-config.patch
 	export WANT_AUTOCONF=2.5
 	cd config; autoconf; cd ..
+	use gtk && epatch ${FILESDIR}/${P}-gtk2-gentoo.patch
 }
 
 src_compile() {
-	use gtk || export GTK_CONFIG="no"
-
-	# the dirs are not (yet) used, but it doesn't hurt to specify them anyway
+	myconf="";
+	if use gtk; then
+		myconf="--enable-gui"
+	fi;
 	econf \
 		--sysconfdir=/etc/mldonkey \
 		--sharedstatedir=/var/mldonkey \
 		--localstatedir=/var/mldonkey \
-		--enable-batch \
 		--enable-checks \
+		--disable-batch \
 		--enable-pthread \
-		`use_enable gtk2` || die
+		`use_enable gtk gtk2` \
+		`use_enable gd` \
+		${myconf} || die "Configure Failed!"
+
 	export OCAMLRUNPARAM="l=256M"
-	emake || die
+	emake || die "Make Failed"
 }
 
 src_install() {
 	dobin mlnet
-	use gtk && dobin mlchat mlgui mlguistarter mlim mlnet+gui
+	if use gtk ; then
+		dobin mlchat mlgui mlguistarter mlim mlnet+gui
+	fi
 	dobin ${FILESDIR}/mldonkey
 
 	dodoc ChangeLog Copying.txt Developers.txt Install.txt
@@ -97,5 +115,11 @@ pkg_postinst() {
 	einfo "the /etc/init.d/mldonkey script. To control bandwidth, use"
 	einfo "the 'slow' and 'fast' arguments. Be sure to have a look at"
 	einfo "/etc/conf.d/mldonkey also."
+	echo
+	einfo "Attention: 2.6 has changed the inifiles structure, so downgrading"
+	einfo "will be problematic."
+	einfo "User settings (admin) are transferred to users.ini from "
+	einfo "downloads.ini"
+	einfo "Old ini files are automatically converted to the new format"
 	echo
 }

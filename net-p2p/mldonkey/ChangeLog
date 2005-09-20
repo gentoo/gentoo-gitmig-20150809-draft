@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.98 2005/09/19 14:41:02 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.99 2005/09/20 17:38:13 mkay Exp $
+
+*mldonkey-2.6.4-r2 (20 Sep 2005)
+*mldonkey-2.6.0-r1 (20 Sep 2005)
+
+  20 Sep 2005; <mkay@gentoo.org> -files/2.5.28-config.patch,
+  -mldonkey-2.5.16-r10.ebuild, -mldonkey-2.5.27-r1.ebuild,
+  -mldonkey-2.5.28-r4.ebuild, +mldonkey-2.6.0-r1.ebuild,
+  -mldonkey-2.6.2.ebuild, -mldonkey-2.6.3.ebuild, -mldonkey-2.6.4.ebuild,
+  +mldonkey-2.6.4-r2.ebuild:
+  New revision bump without gtk2 flag. Also removing few older versions
 
   19 Sep 2005; <mkay@gentoo.org> mldonkey-2.6.2.ebuild,
   mldonkey-2.6.3.ebuild, mldonkey-2.6.4.ebuild, mldonkey-2.6.4-r1.ebuild:
