@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.6 2005/03/18 16:25:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glide64/mupen64-glide64-0.7.ebuild,v 1.7 2005/09/20 15:22:53 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -12,13 +12,12 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="gtk2"
+IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
-	gtk2? ( >=x11-libs/gtk+-2 )
-	!gtk2? ( =x11-libs/gtk+-1.2* )"
+	>=x11-libs/gtk+-2"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,11 +25,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-compile.patch"
-	epatch "${FILESDIR}/${P}-inifix.patch"
-	if use gtk2; then
-		epatch "${FILESDIR}/${P}-gtk2.patch"
-	fi
+	epatch "${FILESDIR}/${P}-compile.patch" \
+		"${FILESDIR}/${P}-inifix.patch" \
+		"${FILESDIR}/${P}-gtk2.patch"
 
 	make clean || die "couldn't clean"
 

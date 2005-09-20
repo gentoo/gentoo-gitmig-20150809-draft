@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.8 2005/05/30 18:37:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.9 2005/09/20 15:26:50 mr_bones_ Exp $
 
-inherit games eutils libtool
-
-IUSE="gtk2"
+inherit eutils libtool games
 
 DESCRIPTION="an graphics plugin for mupen64"
 SRC_URI="http://mupen64.emulation64.com/files/0.4/riceplugin.tar.bz2"
@@ -13,55 +11,37 @@ HOMEPAGE="http://mupen64.emulation64.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="sys-libs/zlib
-	!gtk2? ( =x11-libs/gtk+-1.2* )
-	gtk2? ( =x11-libs/gtk+-2* )
+	=x11-libs/gtk+-2*
 	media-libs/libsdl
-	dev-lang/nasm
 	virtual/glu
 	virtual/opengl"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	dev-lang/nasm"
 
 S="${WORKDIR}/riceplugin"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-
-	epatch ${FILESDIR}/${PN}-makefile.patch || die "patch failed"
-
-	if use gtk2 ; then
-		epatch ${FILESDIR}/${PN}-gtk2.patch || die "patch failed"
-	fi
-
-	epatch ${FILESDIR}/${PN}-compile.patch || die "patch failed"
-	epatch ${FILESDIR}/${PN}-gcc4.patch || die "patch failed"
-
-	# the riceplugin requires sse support
-	#echo "#include <xmmintrin.h>" > ${T}/test.c
-	#$(gcc-getCC) ${CFLAGS} -o ${T}/test.s -S ${T}/test.c >&/dev/null || die
-	#"failed sse test"
-
+	epatch "${FILESDIR}"/${PN}-makefile.patch \
+		"${FILESDIR}"/${PN}-gtk2.patch \
+		"${FILESDIR}"/${PN}-compile.patch \
+		"${FILESDIR}"/${PN}-gcc4.patch
 }
 
 src_compile() {
-
 	emake || die "emake failed"
-
 }
 
 src_install() {
-	local dir=${GAMES_LIBDIR}/mupen64
-	dodir ${dir}
-
-	exeinto ${dir}/plugins
+	exeinto "${GAMES_LIBDIR}"/mupen64/plugins
 	doexe *.so
-	insinto ${dir}/plugins
+	insinto "${GAMES_LIBDIR}"/mupen64/plugins
 	doins *.ini
-
 	prepgamesdirs
 }

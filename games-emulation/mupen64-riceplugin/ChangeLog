@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-riceplugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/ChangeLog,v 1.10 2005/05/30 18:37:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/ChangeLog,v 1.11 2005/09/20 15:26:50 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  mupen64-riceplugin-5.1.0.ebuild:
+  remove gtk2 use flag
 
   30 May 2005; Sven Wegener <swegener@gentoo.org>
   mupen64-riceplugin-5.1.0.ebuild:
