@@ -3,8 +3,8 @@ MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
 MD5 8b8118567805f4ea62359eb7dbf2019e nagios-core-1.2-r2.ebuild 6616
 MD5 d7530bbd763d7f33259bc3e4ee4a63ec nagios-core-1.2-r3.ebuild 7164
 MD5 eff1ecc359415a26a0461804205a4a47 nagios-core-1.2-r4.ebuild 7086
-MD5 9bb86738077e11fb84476291fa7a9e57 nagios-core-2.0b_p1.ebuild 5919
-MD5 b41164a51cf848d19bc8ff7198dce385 nagios-core-2.0b_p2.ebuild 5950
+MD5 e08453ded08e613710c30205d4224f1b nagios-core-2.0b_p1.ebuild 5819
+MD5 f98387d6cd92c7df6a257380fb214163 nagios-core-2.0b_p2.ebuild 5850
 MD5 446906907cccdbf195442373c6f17f77 files/2.x-series-nsca.patch 767
 MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
 MD5 565ce2a690d50aeb542e7afe44b8c733 files/Makefile-distclean.diff.bz2 1133
