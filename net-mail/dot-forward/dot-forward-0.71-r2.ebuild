@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r2.ebuild,v 1.1 2005/09/20 17:36:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r2.ebuild,v 1.2 2005/09/20 17:37:18 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -41,3 +41,4 @@ src_install() {
 	insinto /var/qmail/bin
 	doins dot-forward || die
 }
+
