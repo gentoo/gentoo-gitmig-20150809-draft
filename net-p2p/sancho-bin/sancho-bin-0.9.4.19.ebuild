@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.19.ebuild,v 1.4 2005/08/11 00:55:15 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.19.ebuild,v 1.5 2005/09/20 16:34:37 mkay Exp $
 
 IUSE="gtk"
 
@@ -50,9 +50,5 @@ pkg_postinst() {
 	einfo
 	einfo "Sancho requires the presence of a p2p core, like"
 	einfo "net-p2p/mldonkey, in order to operate."
-	einfo
-	einfo "Note also that previous versions of sancho-bin"
-	einfo "had the gtk2 USE flag by mistake. This has now"
-	einfo "been changed to \"gtk\" for those affected."
 	einfo
 }
