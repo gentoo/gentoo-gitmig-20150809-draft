@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.10 2005/08/31 22:29:57 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-1.0.5.ebuild,v 1.11 2005/09/20 17:31:49 dang Exp $
 
 inherit gnome2
 
@@ -11,6 +11,7 @@ LICENSE="LGPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc static"
+RESTRICT="test"
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/gconf-2

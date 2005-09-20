@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.57 2005/09/17 15:08:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.58 2005/09/20 17:31:49 dang Exp $
+
+  20 Sep 2005; <dang@gentoo.org> gok-1.0.5.ebuild:
+  Restrict test. Bug #106686
 
   31 Aug 2005; Herbie Hopkins <herbs@gentoo.org> gok-1.0.5.ebuild:
   Stable on amd64.
