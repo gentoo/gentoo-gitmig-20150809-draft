@@ -1,0 +1,9 @@
+# ChangeLog for dev-tex/svninfo
+# Copyright 2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.1 2005/09/20 20:41:39 carpaski Exp $
+
+*rcsinfo-0.2.1 (01 Aug 2005)
+
+  01 Aug 2005; Nicholas Jones <carpaski@gentoo.org> +svninfo-0.2.1.ebuild:
+  Initial import.
+

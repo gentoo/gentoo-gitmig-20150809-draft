@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44f959dab5e04dc6340b38e79b20a3c1 svninfo-0.2.1.ebuild 513
+MD5 7b150a8219a5d3a66bea547fcfaa0035 ChangeLog 324
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 2af4dbfa5059d0e1229a021bc2025b79 files/digest-svninfo-0.2.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDMHQTBDOEqLMd+jQRAsb5AKClDPbmG5vMGYoIG1Ka71FKDK2XHgCdGe0w
+Zeo2otoVKyTQcXPH4R2Zizc=
+=NCEk
+-----END PGP SIGNATURE-----
