@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.6 2005/09/20 15:20:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.7 2005/09/20 15:21:24 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -9,9 +9,9 @@ DESCRIPTION="An OpenGL graphics plugin for the mupen64 N64 emulator"
 HOMEPAGE="http://deltaanime.ath.cx/~blight/n64/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
-KEYWORDS="~amd64 x86"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="~amd64 x86"
 IUSE="asm"
 
 RDEPEND="media-libs/libsdl
