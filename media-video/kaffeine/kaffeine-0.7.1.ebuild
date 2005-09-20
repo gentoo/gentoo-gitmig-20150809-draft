@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1.ebuild,v 1.1 2005/09/04 22:17:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1.ebuild,v 1.2 2005/09/20 02:39:12 caleb Exp $
 
 inherit eutils kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kaffeine/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="dvb gstreamer"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0-r4
