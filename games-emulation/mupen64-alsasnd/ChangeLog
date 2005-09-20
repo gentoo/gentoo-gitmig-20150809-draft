@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-alsasnd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.7 2005/07/07 04:36:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.8 2005/09/20 15:04:28 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  mupen64-alsasnd-0.4.ebuild:
+  remove gtk2 use flag
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> mupen64-alsasnd-0.4.ebuild:
   Fix qt dep
