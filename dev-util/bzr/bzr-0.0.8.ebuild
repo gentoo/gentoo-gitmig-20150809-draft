@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.0.5.ebuild,v 1.2 2005/07/05 09:52:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.0.8.ebuild,v 1.1 2005/09/20 19:15:20 arj Exp $
 
 inherit distutils
 MY_P="bzr-${PV}"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND=">=dev-lang/python-2.3
+DEPEND=">=dev-lang/python-2.4
 	dev-python/elementtree"
 S="${WORKDIR}/${MY_P}"
 
