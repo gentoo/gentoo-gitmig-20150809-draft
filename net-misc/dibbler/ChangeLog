@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/dibbler
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.1 2005/09/20 07:53:59 gmsoft Exp $
+
+*dibbler-0.4.1 (20 Sep 2005)
+
+  20 Sep 2005; Guy Martin <gmsoft@gentoo.org> +files/dibbler-client,
+  +files/dibbler-relay, +files/dibbler-server, +metadata.xml,
+  +dibbler-0.4.1.ebuild:
+  Initial import. Ebuild made by Tomasz Mrugalski <thomson@klub.com.pl>.
+

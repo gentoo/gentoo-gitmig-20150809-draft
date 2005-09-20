@@ -1,0 +1,7 @@
+MD5 3eb192e81f6a38f8c1bddfa85f69ec45 ChangeLog 465
+MD5 31508375d60731e83c03bd5cf19cd8b8 dibbler-0.4.1.ebuild 1457
+MD5 bbb94d56dd1c61e150293ce213bb61e1 metadata.xml 218
+MD5 f4f93d6cec932f44908ea817b2306213 files/digest-dibbler-0.4.1 140
+MD5 ef5ae7d52342350eab3c684d8aa3dbe0 files/dibbler-client 465
+MD5 c584858dc5d5056fdae143114c65a211 files/dibbler-relay 458
+MD5 2102046a4e21f60ef9bee94a0dc5330c files/dibbler-server 465
