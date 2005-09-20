@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.18 2005/02/25 22:07:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.19 2005/09/20 14:55:59 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -gnubg-0.13.0-r1.ebuild, -gnubg-0.14.2.ebuild:
+  clean old versions
 
   25 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> gnubg-0.14.3.ebuild:
   fix up deps; turn off gtk1 support since it's broken (bug #83283)
