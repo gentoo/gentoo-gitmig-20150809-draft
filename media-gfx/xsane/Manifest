@@ -1,4 +1,6 @@
+MD5 1ec14e1ee0ca39dda7b4e5633402ddaf xsane-0.97-r1.ebuild 1630
 MD5 8c5d4fdcaf6572134cefe867a24ae018 xsane-0.97.ebuild 1677
+MD5 6ae34fea270d96a514c3b684fafcf3a1 ChangeLog 5116
 MD5 1f00d52c238ab654e46144b458cb8090 metadata.xml 347
-MD5 e29734f1db538db6034049b184696d80 ChangeLog 4965
 MD5 918ef3f00d812af7c8417080ff4b8f75 files/digest-xsane-0.97 63
+MD5 918ef3f00d812af7c8417080ff4b8f75 files/digest-xsane-0.97-r1 63
