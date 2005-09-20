@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.4a.ebuild,v 1.2 2005/09/19 22:44:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.4a.ebuild,v 1.3 2005/09/20 02:13:39 caleb Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="css dvdr encode ffmpeg flac hal kde mp3 musepack vorbis"
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
-	hal? ( =sys-apps/dbus-0.23*
-		=sys-apps/hal-0.4* )
+	hal? ( sys-apps/dbus sys-apps/hal )
 	media-libs/libsndfile
 	media-libs/libsamplerate
 	media-libs/taglib
