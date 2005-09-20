@@ -1,7 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.94 2005/09/18 21:56:30 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.95 2005/09/20 21:43:56 arj Exp $
 
+  20 Sep 2005; Anders Rune Jensen <arj@gentoo.org> metadata.xml:
+  Remove coredumb since he has been inactive for quite a while.
+	
 *sqlite-3.2.6 (18 Sep 2005)
 
   18 Sep 2005; Anders Rune Jensen <arj@gentoo.org> +sqlite-3.2.6.ebuild:
