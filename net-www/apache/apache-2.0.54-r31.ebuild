@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.8 2005/09/19 20:00:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.9 2005/09/20 21:17:58 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -346,7 +346,7 @@ pkg_postinst() {
 		einfo "You should also at this time rebuild all your modules"
 		einfo
 		einfo "For more information, see"
-		einfo "    http://www.gentoo.org/proj/en/apache/upgrading.xml"
+		einfo "    http://www.gentoo.org/proj/en/apache-upgrading.xml"
 		einfo
 	fi
 
