@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4472 2005/09/20 03:41:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4473 2005/09/20 04:31:52 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Robin Johnson <robbat2@gentoo.org> (19 Sep 2005)
+# Masked for early testing.
+sys-block/open-iscsi
 
 # Mark Loeser <halcy0n@gentoo.org> (19 Sep 2005)
 # Masking gzip-x86 before its pending removal due to dead upstream and
