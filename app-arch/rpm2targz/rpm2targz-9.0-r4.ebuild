@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r4.ebuild,v 1.1 2005/08/22 23:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r4.ebuild,v 1.2 2005/09/20 12:35:42 flameeyes Exp $
 
 inherit toolchain-funcs eutils
 
@@ -18,8 +18,9 @@ IUSE=""
 DEPEND="app-arch/cpio
 	sys-apps/file"
 RDEPEND="${DEPEND}
-	sys-apps/util-linux
-	sys-apps/which"
+	userland_GNU? (
+		sys-apps/util-linux
+		sys-apps/which )"
 
 S=${WORKDIR}
 
