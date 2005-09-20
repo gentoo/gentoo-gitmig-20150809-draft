@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.33 2005/09/20 20:32:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.34 2005/09/20 20:38:57 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -freeciv-1.14.2.ebuild:
+  remove freeciv-1 now that freeciv-2 is well established
 
   20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> freeciv-2.0.5.ebuild:
   remove gtk2 use flag; fix src_install; tidy
