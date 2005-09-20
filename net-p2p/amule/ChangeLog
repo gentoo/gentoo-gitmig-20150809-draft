@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.50 2005/09/20 10:48:50 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.51 2005/09/20 15:38:06 mkay Exp $
+
+*amule-2.0.3-r3 (20 Sep 2005)
+*amule-2.0.1-r2 (20 Sep 2005)
+*amule-1.2.8-r2 (20 Sep 2005)
+
+  20 Sep 2005; <mkay@gentoo.org> +amule-1.2.8-r2.ebuild,
+  +amule-2.0.1-r2.ebuild, +amule-2.0.3-r3.ebuild:
+  new revisions, which uses gtk2. please - leave them both for a while
 
 *amule-2.0.3-r2 (20 Sep 2005)
 
