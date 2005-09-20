@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/dopewars
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.12 2005/05/26 02:46:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.13 2005/09/20 14:33:18 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  dopewars-1.5.10.ebuild:
+  remove gtk2 use flag
 
 *dopewars-1.5.10 (26 May 2005)
 
