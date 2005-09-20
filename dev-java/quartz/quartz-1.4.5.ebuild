@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.2 2005/07/18 16:57:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.3 2005/09/20 17:56:13 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/jre-1.4
 		jboss? ( >=www-servers/jboss-3.2.3 )
 		jta? ( >=dev-java/jta-1.0.1 )
 		jmx? ( >=dev-java/jmx-1.2.1 )
-		struts? ( >=dev-java/struts-1.1 )
+		struts? ( =dev-java/struts-1.1* )
 		jikes? ( dev-java/jikes )"
 
 DEPEND=">=virtual/jdk-1.4
@@ -47,7 +47,7 @@ src_compile() {
 		antflags="${antflags} -Dlib.jboss-system.jar=/usr/share/jboss/lib/jboss-system.jar"
 		antflags="${antflags} -Dlib.jboss.jar=/var/lib/jboss/default/lib/jboss.jar"
 	fi
-	use struts && CLASSPATH="$CLASSPATH:$(java-pkg_getjars struts)"
+	use struts && CLASSPATH="$CLASSPATH:$(java-pkg_getjars struts-1.1)"
 
 	antflags="${antflags} compile jar"
 	use doc && antflags="${antflags} javadoc"
