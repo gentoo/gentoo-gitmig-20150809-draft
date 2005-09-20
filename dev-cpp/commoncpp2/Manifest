@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3602d04a5ec30186b52ee2ccc4eda87e ChangeLog 2450
-MD5 439188ea7d940e87e9a73074fe677c7d commoncpp2-1.0.13.ebuild 1116
-MD5 436fda5fa8821aa716c0e7904a070a54 commoncpp2-1.2.5.ebuild 1007
-MD5 48b3a9012a35172f62f97fd70398a25f commoncpp2-1.3.0.ebuild 1008
-MD5 179e4901e684e63c3727eb63b9a80b5a commoncpp2-1.3.1.ebuild 1006
-MD5 12860306be0978b8ad430eac996a2eda commoncpp2-1.3.13.ebuild 1019
 MD5 9b2404bcf93a0418e748ec611550b00f metadata.xml 245
+MD5 439188ea7d940e87e9a73074fe677c7d commoncpp2-1.0.13.ebuild 1116
+MD5 48b3a9012a35172f62f97fd70398a25f commoncpp2-1.3.0.ebuild 1008
+MD5 436fda5fa8821aa716c0e7904a070a54 commoncpp2-1.2.5.ebuild 1007
+MD5 7a0c4df125348dd52f15164d617b639a commoncpp2-1.3.1.ebuild 1015
+MD5 80cb3c94e24416e019030be54bf3933b commoncpp2-1.3.13.ebuild 1026
+MD5 f25f230dcb501712ee807fd62e1e2be2 ChangeLog 2592
 MD5 781ce9f97c4496dcb0ec078a74cba8d2 files/digest-commoncpp2-1.0.13 69
+MD5 24b577b86d1c3649917142f48079a7d9 files/digest-commoncpp2-1.3.13 69
 MD5 6990ef52b125e72e39312b276bb91b15 files/digest-commoncpp2-1.2.5 68
 MD5 a5251c2c33ea6e211308f6945cb2d4a6 files/digest-commoncpp2-1.3.0 68
 MD5 989863ac3c644b855628421d81012679 files/digest-commoncpp2-1.3.1 68
-MD5 24b577b86d1c3649917142f48079a7d9 files/digest-commoncpp2-1.3.13 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLy9ECRZPokWLroQRAhgoAJ94CZWR4u+tnWf5/IRvQUO1QSutTQCg5aaQ
-OMdEw3PnGBzxQFITEg48nlI=
-=N8K7
------END PGP SIGNATURE-----

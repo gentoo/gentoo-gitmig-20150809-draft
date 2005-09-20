@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.3.1.ebuild,v 1.1 2005/03/29 20:51:33 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.3.1.ebuild,v 1.2 2005/09/20 18:30:29 arj Exp $
 
 DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for threading, sockets, file access, daemons, persistence, serial I/O, XML parsing, and system services"
 SRC_URI="mirror://sourceforge/cplusplus/${P}.tar.gz"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="doc xml2"
 
-DEPEND="xml2? ( dev-libs/libxml2 )"
+DEPEND="xml2? ( >=dev-libs/libxml2-2.6.19 )"
 
 src_compile() {
 	use xml2 \
