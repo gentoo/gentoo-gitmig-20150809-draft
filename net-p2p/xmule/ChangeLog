@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.60 2005/09/13 19:31:09 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.61 2005/09/20 16:31:08 mkay Exp $
+
+*xmule-1.10.1-r1 (20 Sep 2005)
+*xmule-1.10.0-r1 (20 Sep 2005)
+*xmule-1.8.4-r2 (20 Sep 2005)
+
+  20 Sep 2005; <mkay@gentoo.org> +files/xmule-1.10.1-crypto-gentoo.patch,
+  +xmule-1.8.4-r2.ebuild, +xmule-1.10.0-r1.ebuild, +xmule-1.10.1-r1.ebuild:
+  dropping gtk2 flag
 
   13 Sep 2005; <mkay@gentoo.org> xmule-1.10.0.ebuild:
   Marking 1.10.0 stable at x86. Older versions will be removed soon if there'll

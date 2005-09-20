@@ -1,0 +1,21 @@
+--- configure.ac.orig	2005-07-26 09:41:05.000000000 +0200
++++ configure.ac	2005-07-26 09:40:55.000000000 +0200
+@@ -79,15 +79,15 @@
+ 
+ if test x"$have_cryptopp" = x"yes"; then
+     cryp_name="cryptopp";
+-    have_crypto = 1
++    have_crypto=1
+ fi
+ 
+ if test x"$have_cryptopp2" = x"yes"; then
+     cryp_name="crypto++"
+-    have_crypto = 1
++    have_crypto=1
+ fi
+ 
+-if [have_crypto -eq 1]; then
++if test x"$have_crypto" = x1; then
+     echo "Cryp name: -$cryp_name-"
+   AC_DEFINE_UNQUOTED(HAVE_CRYPTOPP, 1, [Define if you have the Crypto++ development headers and libraries.])
+     if test -n "$cryptopp_prefix"; then
