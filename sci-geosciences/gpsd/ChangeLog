@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.5 2005/09/06 06:18:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.6 2005/09/20 05:35:39 nerdboy Exp $
+
+  20 Sep 2005; Steve Arnold <nerdboy@gentoo.org> gpsd-2.25-r1.ebuild,
+  gpsd-2.26.ebuild, gpsd-2.29.ebuild:
+  added additional LDFLAGS to fix bug #106330 (fix submitted by Morgan
+  Collins <sirmorcant@morcant.org>)
 
 *gpsd-2.29 (06 Sep 2005)
 *gpsd-2.25-r1 (06 Sep 2005)
