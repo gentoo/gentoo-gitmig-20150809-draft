@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4470 2005/09/20 02:08:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4471 2005/09/20 02:32:12 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Mark Loeser <halcy0n@gentoo.org> (19 Sep 2005)
+# Masking gzip-x86 before its pending removal due to dead upstream and
+# security exploits (see email to gentoo-dev@)
+app-arch/gzip-x86
 
 # Olivier Fisette <ribosome@gentoo.org> (19 Sep 2005)
 # The new GAMESS package will need some testing before it
