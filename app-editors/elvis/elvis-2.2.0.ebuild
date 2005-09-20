@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.2.0.ebuild,v 1.9 2005/01/01 13:23:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.2.0.ebuild,v 1.10 2005/09/20 18:11:38 kito Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cs.pdx.edu/pub/elvis/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ppc64"
+KEYWORDS="alpha amd64 ppc ~ppc-macos ppc64 sparc x86"
 IUSE="X"
 
 DEPEND=">=sys-libs/ncurses-5.2
