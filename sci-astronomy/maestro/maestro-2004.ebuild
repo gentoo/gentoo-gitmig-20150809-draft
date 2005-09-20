@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/maestro/maestro-2004.ebuild,v 1.1 2004/12/24 03:53:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/maestro/maestro-2004.ebuild,v 1.2 2005/09/20 03:10:34 dang Exp $
 
 DESCRIPTION="Maestro is a public release software package that NASA scientists use to operate the Spirit and Opportunity Rovers."
 SRC_URI="http://freecache.org/http://mars9.telascience.org:81/softwaredownload/Maestro-Linux.tar.gz"
@@ -10,7 +10,7 @@ DEPEND=""
 RDEPEND=">=virtual/jre-1.4"
 LICENSE="maestro"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 
 S=${WORKDIR}/R2004_02-Public-Linux
 
