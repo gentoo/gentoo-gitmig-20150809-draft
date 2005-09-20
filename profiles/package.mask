@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4479 2005/09/20 11:02:23 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4480 2005/09/20 16:10:15 stkn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Knoblich <stkn@gentoo.org> (20 Sep 2005)
+# Asterisk-1.2.0_beta still masked, therefore mask this one too.
+>=net-misc/asterisk-oh323-0.7.3
 
 # Marcin Kryczek <mkay@gentoo.org> (20 Sep 2005)
 # There're definitly to much xmule's versions in tree
