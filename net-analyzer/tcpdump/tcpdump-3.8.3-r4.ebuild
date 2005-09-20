@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r4.ebuild,v 1.2 2005/07/02 20:33:30 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r4.ebuild,v 1.3 2005/09/20 03:23:07 vanquirius Exp $
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -20,12 +20,12 @@ DEPEND="virtual/libpcap
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-gcc4.patch
-	epatch ${FILESDIR}/${P}-bgp-infinite-loop2.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}-bgp-infinite-loop2.patch"
 
 	if use ssl ; then
-		sed -i -e 's|des\(_cbc_encrypt\)|DES\1|' ${S}/configure || \
+		sed -i -e 's|des\(_cbc_encrypt\)|DES\1|' "${S}"/configure || \
 			die "sed configure failed"
 	fi
 }
