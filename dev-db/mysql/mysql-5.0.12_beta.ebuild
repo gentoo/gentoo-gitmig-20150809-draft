@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.8 2005/09/16 08:34:02 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.9 2005/09/20 09:36:10 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${PN}"
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20050908.tar.bz2"
+	mirror://gentoo/mysql-extras-20050919.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,9 +28,9 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	bdb? ( sys-apps/ed )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
+	userland_GNU? ( sys-process/procps )
 	>=sys-libs/zlib-1.2.3
 	>=sys-apps/texinfo-4.7-r1
-	sys-process/procps
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
@@ -41,16 +41,12 @@ if version_is_at_least "4.1.3" ; then
 fi
 
 mysql_upgrade_error() {
-	mysql_get_datadir
-	ewarn "Sorry plain upgrade from version of MySQL before 4.1.4 is NOT supported."
-	ewarn "Be sure to read \"Upgrading from version 4.0 to 4.1\" section"
+	ewarn "Sorry, plain up/downgrade between different version of MySQL is (still)"
+	ewarn "un-supported."
+	ewarn "Some gentoo documentation on how to do it:"
+	ewarn "http://www.gentoo.org/doc/en/mysql-upgrading.xml"
+	ewarn "Also on the MySQL website:"
 	ewarn "http://dev.mysql.com/doc/mysql/en/upgrading-from-4-0.html"
-	ewarn "then unmerge previous version of MySQL with"
-	ewarn "#emerge -C dev-db/mysql"
-	ewarn "move your data out of \"${DATADIR}\""
-	ewarn "#emerge =dev-db/${P}"
-	ewarn "reload data you dumped with \"mysqldump\" Because you have read "
-	ewarn "the documentation on how to upgrade"
 	ewarn ""
 	ewarn "You can also choose to preview some new MySQL 4.1 behaviour"
 	ewarn "adding a section \"[mysqld-4.0]\" followed by the word \"new\""
@@ -99,12 +95,22 @@ mysql_get_datadir() {
 
 pkg_setup() {
 
-	mysql_get_datadir
-	if ! useq minimal && version_is_at_least "4.1.4"; then
-		if has_version "<=dev-db/mysql-4.1.4" \
-		&& ! built_with_use dev-db/mysql minimal \
-		&& [ -d "${DATADIR}/mysql" ]; then
+	if [[ -z $MYSQL_STRAIGHT_UPGRADE ]] ; then
+		mysql_get_datadir
+		local curversion="dev-db/${PN}-${PV%.*}"
+		local oldversion="$(best_version dev-db/mysql)"
+		oldversion=${oldversion%.*}
+
+		# permit upgrade from old version if it's safe
+		useq minimal && oldversion=""
+		built_with_use dev-db/mysql minimal && oldversion=""
+		[[ -d "${DATADIR}/mysql" ]] || oldversion=""
+
+		if [[ -n "${oldversion}" ]] && [[ "${oldversion}" != "${curversion}" ]]
+		then
 			mysql_upgrade_error
+			eerror "MySQL-${oldversion} found, up/downgrade to \"${curversion}\" is unsupported"
+			eerror "export MYSQL_STRAIGHT_UPGRADE=1 to force"
 			die
 		fi
 	fi
@@ -114,6 +120,7 @@ pkg_setup() {
 	enewgroup mysql 60 || die "problem adding group mysql"
 	enewuser mysql 60 -1 /dev/null mysql \
 	|| die "problem adding user mysql"
+
 }
 
 src_unpack() {
