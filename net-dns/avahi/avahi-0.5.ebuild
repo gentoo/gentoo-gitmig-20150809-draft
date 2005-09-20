@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.5.ebuild,v 1.1 2005/09/14 18:44:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.5.ebuild,v 1.2 2005/09/20 14:52:07 swegener Exp $
 
 inherit eutils qt3 mono
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/libdaemon
 		>=gnome-base/libglade-2
 		>=dev-libs/glib-2
 	)
-	mono? ( dev-lang/mono )
+	mono? ( >=dev-lang/mono-1.1.3 )
 	dbus? (
 		>=sys-apps/dbus-0.30
 		python? (
