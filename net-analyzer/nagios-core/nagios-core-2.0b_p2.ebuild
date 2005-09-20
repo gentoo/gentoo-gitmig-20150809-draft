@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.4 2005/09/20 03:59:36 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.5 2005/09/20 04:05:26 soulse Exp $
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -166,9 +166,9 @@ pkg_preinst() {
 	keepdir /var/nagios/rw
 
 	if use noweb; then
-		chown nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+		chown -R nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	else
-		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+		chown -R nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 
 	chmod ug+s ${D}/var/nagios/rw || die "Failed Chmod of ${D}/var/nagios/rw"
