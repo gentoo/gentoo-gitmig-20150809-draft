@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/psemu-cdr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/ChangeLog,v 1.8 2005/04/24 03:30:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/ChangeLog,v 1.9 2005/09/20 15:31:42 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> psemu-cdr-1.8.ebuild:
+  remove gtk2 use flag ; tidy
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> psemu-cdr-1.8.ebuild:
   Stable on ppc.
