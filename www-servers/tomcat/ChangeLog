@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.38 2005/09/17 12:22:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.39 2005/09/20 17:56:51 betelgeuse Exp $
+
+*tomcat-5.0.28-r6 (20 Sep 2005)
+
+  20 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  files/5.0.28/tomcat.init, tomcat-5.0.28-r4.ebuild,
+  -tomcat-5.0.28-r5.ebuild, +tomcat-5.0.28-r6.ebuild:
+  Struts is now slotted so fixed the dependencies. In the latest revision
+  fixed bug #99704. Thanks to David Owen <fugue88@hotmail.com> for reporting.
+  Also startup problems from bug #103925 should now be fixed.
 
 *tomcat-5.0.28-r5 (14 Sep 2005)
 

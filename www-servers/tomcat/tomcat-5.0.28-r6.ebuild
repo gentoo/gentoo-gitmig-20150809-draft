@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r5.ebuild,v 1.2 2005/09/18 14:10:44 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r6.ebuild,v 1.1 2005/09/20 17:56:51 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
 LICENSE="Apache-2.0"
+#only one accepted revision of struts to force upgrading because of slot changes
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
@@ -31,7 +32,7 @@ RDEPEND=">=virtual/jdk-1.4
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/saxpath-1.0
 	~dev-java/servletapi-2.4
-	=dev-java/struts-1.1*
+	=dev-java/struts-1.1-r4
 	dev-java/sun-jaf-bin
 	>=dev-java/xerces-2.6.2-r1
 	jikes? ( dev-java/jikes )"
@@ -45,6 +46,7 @@ S=${WORKDIR}/jakarta-${P}-src
 
 TOMCAT_HOME="/usr/share/${PN}-${SLOT}"
 TOMCAT_NAME="${PN}-${SLOT}"
+WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/default/webapps"
 
 src_unpack() {
 	unpack ${A}
@@ -103,7 +105,7 @@ src_compile(){
 	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
 	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
 	antflags="${antflags} -Dregexp.jar=$(java-config -p jakarta-regexp-1.3)"
-	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts struts.jar)"
+	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts-1.1 struts.jar)"
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
@@ -113,7 +115,7 @@ src_compile(){
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
 	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
-	antflags="${antflags} -Dstruts.home=/usr/share/struts"
+	antflags="${antflags} -Dstruts.home=/usr/share/struts-1.1/"
 
 	ant ${antflags} || die "compile failed"
 
@@ -139,21 +141,16 @@ src_install() {
 	diropts -m755
 	dodir /usr/share/${TOMCAT_NAME}
 
-	dodir /var/log/${TOMCAT_NAME}/default
+	keepdir /var/log/${TOMCAT_NAME}/default
 	chown -R tomcat:tomcat ${D}/var/log/${TOMCAT_NAME}
-	dodir /etc/${TOMCAT_NAME}/default/
+	keepdir /etc/${TOMCAT_NAME}/default/
 	chown -R tomcat:tomcat ${D}/etc/${TOMCAT_NAME}
-	dodir /var/tmp/${TOMCAT_NAME}/default
+	keepdir /var/tmp/${TOMCAT_NAME}/default
 	chown -R tomcat:tomcat ${D}/var/tmp/${TOMCAT_NAME}
-	dodir /var/run/${TOMCAT_NAME}/default
+	keepdir /var/run/${TOMCAT_NAME}/default
 	chown -R tomcat:tomcat ${D}/var/run/${TOMCAT_NAME}
 	dodir /var/lib/${TOMCAT_NAME}/default
 	chown -R tomcat:tomcat ${D}/var/lib/${TOMCAT_NAME}
-
-	keepdir /var/log/${TOMCAT_NAME}/default
-	keepdir /etc/${TOMCAT_NAME}/default/
-	keepdir /var/tmp/${TOMCAT_NAME}/default
-	keepdir /var/run/${TOMCAT_NAME}/default
 
 	# we don't need dos scripts	
 	rm -f bin/*.bat
@@ -188,7 +185,7 @@ src_install() {
 	# replace a packed struts.jar
 	cd server/webapps/admin/WEB-INF/lib
 	rm -f struts.jar
-	java-pkg_jar-from struts struts.jar
+	java-pkg_jar-from struts-1.1 struts.jar
 	cd ${base}
 
 	# replace the default pw with a random one, see #92281 
@@ -201,9 +198,10 @@ src_install() {
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
 	cp -R bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
+	keepdir               ${WEBAPPS_DIR}
+	set_webapps_perms     ${D}/${WEBAPPS_DIR}
+
 	# if the useflag is set, copy over the examples
-	dodir /var/lib/${TOMCAT_NAME}/default/webapps
-	keepdir /var/lib/${TOMCAT_NAME}/default/webapps
 	if use examples; then
 		cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
 		cp -pr webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
@@ -219,7 +217,7 @@ src_install() {
 	cp ${FILESDIR}/${PV}/log4j.properties ${D}/etc/${TOMCAT_NAME}/
 	chown tomcat:tomcat ${D}/etc/${TOMCAT_NAME}/log4j.properties
 
-	use doc && dodoc ${S}/jakarta-tomcat-5/{LICENSE,RELEASE-NOTES,RUNNING.txt}
+	dodoc  ${S}/jakarta-tomcat-5/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/default/tomcat-users.xml
 }
 
@@ -227,7 +225,6 @@ pkg_postinst() {
 	#due to previous ebuild bloopers, make sure everything is correct
 	chown root:0 /etc/init.d/${TOMCAT_NAME}
 	chown root:0 /etc/conf.d/${TOMCAT_NAME}
-
 	chmod -R 750 /etc/${TOMCAT_NAME}
 
 	einfo
@@ -271,4 +268,16 @@ pkg_postinst() {
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
 	einfo
+
+	einfo "${WEBAPPS_DIR}"
+	einfo "is now owned by tomcat:tomcat and has 750 as permissions."
+	einfo "This is needed to deploy WAR files from the manager webapp."
+	einfo "See bug 99704. If you are upgrading tomcat you need to manually"
+	einfo "change the permissions."
+}
+
+#helpers
+set_webapps_perms() {
+	chown  tomcat:tomcat ${1} || die "Failed to change owner off ${1}."
+	chmod  750           ${1} || die "Failed to change permissions off ${1}."
 }

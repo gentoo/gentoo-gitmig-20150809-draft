@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.7 2005/08/26 13:45:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.8 2005/09/20 17:56:51 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
 LICENSE="Apache-2.0"
+#only one revision of struts to force upgrade because of slotting
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
@@ -31,7 +32,7 @@ RDEPEND=">=virtual/jdk-1.4
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/saxpath-1.0
 	~dev-java/servletapi-2.4
-	=dev-java/struts-1.1*
+	=dev-java/struts-1.1-r4
 	dev-java/sun-jaf-bin
 	>=dev-java/xerces-2.6.2-r1
 	jikes? ( dev-java/jikes )"
@@ -103,7 +104,7 @@ src_compile(){
 	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
 	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
 	antflags="${antflags} -Dregexp.jar=$(java-config -p jakarta-regexp-1.3)"
-	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts struts.jar)"
+	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts-1.1 struts.jar)"
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
@@ -113,7 +114,7 @@ src_compile(){
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
 	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
-	antflags="${antflags} -Dstruts.home=/usr/share/struts"
+	antflags="${antflags} -Dstruts.home=/usr/share/struts-1.1/"
 
 	ant ${antflags} || die "compile failed"
 
@@ -188,7 +189,7 @@ src_install() {
 	# replace a packed struts.jar
 	cd server/webapps/admin/WEB-INF/lib
 	rm -f struts.jar
-	java-pkg_jar-from struts struts.jar
+	java-pkg_jar-from struts-1.1 struts.jar
 	cd ${base}
 
 	# replace the default pw with a random one, see #92281 

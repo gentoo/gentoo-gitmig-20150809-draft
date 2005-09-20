@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 ff1524d371f1ff9a12eaa651674fe7d0 tomcat-5.0.27-r6.ebuild 3889
-MD5 7d3e02b6a6894cf8d2189a2377112ce9 tomcat-5.0.28-r5.ebuild 9717
-MD5 c8f45be5e36dcd7078dc0defe2810fce tomcat-5.0.28-r4.ebuild 9588
-MD5 2bdb50475de81d9979ce2bbd281cb0dd ChangeLog 17395
+MD5 857c539ac6d3e9f0b9d3f45cb00ca701 tomcat-5.0.28-r4.ebuild 9670
+MD5 37dc61b21182d30e21f2682bdf329408 ChangeLog 17807
 MD5 c11ce937193406815ff7a2b306784fd8 metadata.xml 555
+MD5 3b6e68aa059b3571c1d5d48dbe18ac71 tomcat-5.0.28-r6.ebuild 10127
 MD5 d5a48abc8db5543a73abbbf151d0630e files/digest-tomcat-5.0.27-r6 75
 MD5 af26ca4772989a2090085a6e24b71628 files/digest-tomcat-5.0.28-r4 78
-MD5 af26ca4772989a2090085a6e24b71628 files/digest-tomcat-5.0.28-r5 78
+MD5 af26ca4772989a2090085a6e24b71628 files/digest-tomcat-5.0.28-r6 78
 MD5 cbb635ed31e3b7ddabe1db851a8b471e files/5.0.27/gentoo.diff 463
 MD5 38c130772e7d43dcdff78b3d94f96efd files/5.0.27/tomcat.env 27
 MD5 bf74c2bd8c21359ada1793cddfa95f37 files/5.0.27/tomcat.conf 2660
@@ -19,7 +19,7 @@ MD5 987ddee3c5a93ccaa4311c85f5dfceb3 files/5.0.28/gentoo.diff 541
 MD5 286d3dcf80a376b72913412cec25e496 files/5.0.28/tomcat.env 34
 MD5 6eaf54e60fd0b74ae37ec1dbd8540598 files/5.0.28/build.xml-01.patch 623
 MD5 a4df0ce5b57f2bcaa707ff3b5858bee4 files/5.0.28/tomcat.conf 2707
-MD5 c0d89ffb4276e8a6d0cf08fcad6517f9 files/5.0.28/tomcat.init 701
+MD5 8f6ccdf1c60e7671d28f0eb67decd468 files/5.0.28/tomcat.init 715
 MD5 4a887877fb26ce5a6a1d58c66578bd7f files/5.0.28/log4j.properties 401
 MD5 744a9ce174144fc5689c1fabee527e55 files/5.0.28/build.xml-02.patch 3177
 MD5 be12f05c16725d1c68cd1ba916ff8748 files/5.0.28/tomcat.conf-r1 2709
@@ -27,7 +27,7 @@ MD5 98a29b32de00d97f156dc31dfe3cf472 files/5.0.28/jikes.diff 584
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLXVO8zY1VwezZiERArTPAJ9F21osYX8vgm2CQ7psI1BkKzlbiQCeLptF
-z1wxycY48IT1d5mlB4cuj1Q=
-=49hE
+iD8DBQFDME2HQiJ/wx066S4RAp/UAJwMoiCbKt/1Vw9B19MgDYKL+6YLsgCfXcOJ
+mgVTsUWaY2SsPZdyHm8gXAg=
+=V5BF
 -----END PGP SIGNATURE-----
