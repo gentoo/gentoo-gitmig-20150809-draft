@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.1 2005/09/20 04:33:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.2 2005/09/20 08:00:38 robbat2 Exp $
+
+  20 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> files/iscsid-init.d,
+  open-iscsi-0.4.413.ebuild:
+  Change SRC_URI to mirror://gentoo/ now that the source has spread, also
+  clean up install location for modules, security of config file and
+  databases, and clean up the init script to be gentoo-like instead of
+  debian-like.
 
 *open-iscsi-0.4.413 (20 Sep 2005)
 

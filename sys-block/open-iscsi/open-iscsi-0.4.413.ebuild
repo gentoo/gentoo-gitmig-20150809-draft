@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-0.4.413.ebuild,v 1.1 2005/09/20 04:33:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-0.4.413.ebuild,v 1.2 2005/09/20 08:00:38 robbat2 Exp $
 
 inherit versionator linux-mod eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Open-iSCSI project is a high performance, transport independent, mu
 HOMEPAGE="http://www.open-iscsi.org/"
 MY_PV="$(replace_version_separator 2 '-')"
 MY_P="${PN}-${MY_PV}"
-SRC_URI="http://dev.gentoo.org/~robbat2/distfiles/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 		sys-apps/util-linux"
 S="${WORKDIR}/${MY_P}"
 
-MODULE_NAMES_ARG="drivers/scsi:${S}/kernel"
+MODULE_NAMES_ARG="kernel/drivers/scsi:${S}/kernel"
 MODULE_NAMES="iscsi_tcp(${MODULE_NAMES_ARG}) scsi_transport_iscsi(${MODULE_NAMES_ARG})"
 BUILD_TARGETS="all"
 CONFIG_CHECK="CRYPTO_MD5 CRYPTO_CRC32C"
@@ -70,4 +70,15 @@ src_install() {
 	doins etc/iscsid.conf
 	doins ${FILESDIR}/initiatorname.iscsi
 	newinitd ${FILESDIR}/iscsid-init.d iscsid
+
+	# security
+	keepdir /var/db/iscsi
+	fperms 700 /var/db/iscsi
+	fperms 600 /etc/iscsid.conf
+}
+
+pkg_postinst() {
+	linux-mod_pkg_postinst
+	[ -d /var/db/iscsi ] && chmod 700 /var/db/iscsi
+	[ -f /etc/iscsid.conf ] && chmod 600 /etc/iscsid.conf
 }
