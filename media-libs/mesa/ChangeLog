@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.40 2005/09/09 06:56:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.41 2005/09/20 07:06:40 spyderous Exp $
+
+*mesa-6.3.2-r1 (20 Sep 2005)
+
+  20 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +mesa-6.3.2-r1.ebuild:
+  Mesa isn't making libGLU.so -> libGLU.so.# unversioned to versioned symlink.
+  This makes stuff trying to link against libGLU break.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
