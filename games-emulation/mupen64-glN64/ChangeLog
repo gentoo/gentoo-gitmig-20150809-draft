@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-glN64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/ChangeLog,v 1.9 2005/04/24 20:04:08 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/ChangeLog,v 1.10 2005/09/20 15:20:20 mr_bones_ Exp $
+
+  20 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  mupen64-glN64-0.4.1_rc2-r1.ebuild:
+  remove gtk2 use flag; tidy
 
   24 Apr 2005; Daniel Goller <morfic@gentoo.org>
   +files/mupen64-glN64-noasmfix.patch, -mupen64-glN64-0.4.1_pre1.ebuild,
