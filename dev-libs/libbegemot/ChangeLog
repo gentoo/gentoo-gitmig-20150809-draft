@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libbegemot
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbegemot/ChangeLog,v 1.1 2005/09/20 19:39:59 flameeyes Exp $
+
+*libbegemot-1.11 (20 Sep 2005)
+
+  20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +libbegemot-1.11.ebuild:
+  Added libbegemot 1.11. This will be used by Gentoo/FreeBSD and for bsnmp as
+  soon as it will work on Linux.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5e3e7084ecb80783ce61bfc1e380bcb ChangeLog 453
+MD5 7664924999a25f353cd962dad7e18d0e libbegemot-1.11.ebuild 619
+MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
+MD5 c9f6fd9edfffb7eea3ae9bb38136dfbf files/digest-libbegemot-1.11 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMGW6j5H05b2HAEkRArHXAJ4mxoKy+R3rxSxsuxEkZ3V1frLP1ACbB5up
+0MoBox8kpNqxHYxDnzG1G10=
+=zhqE
+-----END PGP SIGNATURE-----
