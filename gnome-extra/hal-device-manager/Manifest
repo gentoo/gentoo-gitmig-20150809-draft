@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 69eba2454d639f4d96c426762d649e26 ChangeLog 1167
-MD5 eb9fc0f14948ace4d2a7ca05b08bedd9 hal-device-manager-0.4.5.ebuild 827
+MD5 fded686e2a87e6bd2ce2bb42a78c5211 ChangeLog 1276
 MD5 12ddc8b02a20377ad04d34bdab42cbc0 metadata.xml 242
-MD5 2d41831601b615cc1b8362044da11ee9 hal-device-manager-0.5.ebuild 825
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.5 0
+MD5 eb9fc0f14948ace4d2a7ca05b08bedd9 hal-device-manager-0.4.5.ebuild 827
+MD5 21628bc374afb3bcfd6ad052164720a2 hal-device-manager-0.5.ebuild 834
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.4.5 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-hal-device-manager-0.5 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDBD95BtvusYtCZMsRAg1lAJ9o9utY45cInewpoEYMgKziU6z91ACbBXY3
-x7axm3ZDt0o4J+8jrg6WjJk=
-=Ltt4
+iD8DBQFDMGfXKRy60XGEcJIRAgmwAKCwRgpmmFlx3toB8TPzbCVGN0EYlQCglBde
+RyI+kyBrJUhhdFrV4QoHRN8=
+=mBZF
 -----END PGP SIGNATURE-----
