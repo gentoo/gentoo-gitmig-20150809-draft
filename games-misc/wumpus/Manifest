@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 fe88a14a715126c6553aebfa910fc67b ChangeLog 1102
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 75e48d428eee445b3d3c88d34c30b5b8 ChangeLog 1013
-MD5 32d2a277259795bcf5d5b8bdbd7ace1f wumpus-1.4.ebuild 1199
+MD5 48e31ac4fdf891e9ca8693181f32a9b5 wumpus-1.4.ebuild 1208
 MD5 65e2103344545ff9cc1e34473acb0d41 files/digest-wumpus-1.4 151
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDDQGqmOfEJZHYOKcRAukIAKCNObvfsHSWn54p2rSKXhqW7a2bfACgpKeU
-mbOUp+AF7/9s93OP22kVJpE=
-=2cza
------END PGP SIGNATURE-----
