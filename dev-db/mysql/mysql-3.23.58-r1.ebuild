@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.16 2005/09/09 11:42:28 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.58-r1.ebuild,v 1.17 2005/09/20 15:29:32 vivo Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,8 @@ SDIR=MySQL-${SVER}
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/${SDIR}/${P}.tar.gz
-	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${P}.tar.gz"
+	ftp://mysql.valueclick.com/pub/mysql/Downloads/${SDIR}/${P}.tar.gz
+	mirror://gentoo/mysql-extras-20050920.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,20 +34,24 @@ src_unpack() {
 	use innodb || ewarn "InnoDB support is not selected to be compiled in."
 	unpack ${A} || die
 	cd ${S} || die
+
+	local MY_PATCH_SOURCE="${WORKDIR}/mysql-extras"
+
 	# required for qmail-mysql
-	epatch ${FILESDIR}/mysql-3.23-nisam.h.diff
+	epatch ${MY_PATCH_SOURCE}/mysql-3.23-nisam.h.diff || die
 	# zap startup script messages
-	epatch ${FILESDIR}/mysql-3.23.52-install-db-sh.diff
+	epatch ${MY_PATCH_SOURCE}/mysql-3.23.52-install-db-sh.diff || die
 	# zap binary distribution stuff
-	epatch ${FILESDIR}/mysql-3.23-safe-mysqld-sh.diff
+	epatch ${MY_PATCH_SOURCE}/mysql-3.23-safe-mysqld-sh.diff || die
 	# for correct hardcoded sysconf directory
-	epatch ${FILESDIR}/mysql-3.23-my-print-defaults.diff
-	#patch -p1 < ${FILESDIR}/mysql-3.23.51-tcpd.patch || die
-	#epatch ${FILESDIR}/mysql-4.0.14-security-28394.patch
+	epatch ${MY_PATCH_SOURCE}/mysql-3.23-my-print-defaults.diff || die
+	#patch -p1 < ${MY_PATCH_SOURCE}/mysql-3.23.51-tcpd.patch || die
+	#epatch ${MY_PATCH_SOURCE}/mysql-4.0.14-security-28394.patch
 
 	# security fix from http://lists.mysql.com/internals/15185
 	# gentoo bug #60744
-	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-4.0-mysqlhotcopy-security.patch
+	EPATCH_OPTS="-p1 -d ${S}" \
+	epatch ${MY_PATCH_SOURCE}/${PN}-4.0-mysqlhotcopy-security.patch || die
 
 	# upstream bug http://bugs.mysql.com/bug.php?id=7971
 	# names conflict with stuff in 2.6.10 kernel headers

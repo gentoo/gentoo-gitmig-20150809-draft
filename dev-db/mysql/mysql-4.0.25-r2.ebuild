@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.16 2005/09/12 14:58:15 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.17 2005/09/20 15:29:32 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}"
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
 SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
-	mirror://gentoo/mysql-extras-20050908.tar.bz2"
+	mirror://gentoo/mysql-extras-20050920.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -116,7 +116,7 @@ src_unpack() {
 
 	# fixed in 4.0.25
 	#EPATCH_OPTS="-p1 -d ${S}" \
-	#epatch ${FILESDIR}/${PN}-4.0.24-manual.texi.patch || die
+	#epatch ${MY_PATCH_SOURCE}/${PN}-4.0.24-manual.texi.patch || die
 
 	# attempt to get libmysqlclient_r linked against ssl if USE="ssl" enabled
 	# i would really prefer to fix this at the Makefile.am level, but can't

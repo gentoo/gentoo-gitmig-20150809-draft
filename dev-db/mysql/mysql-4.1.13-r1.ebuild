@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.9 2005/09/16 08:34:02 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.10 2005/09/20 15:29:32 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -14,7 +14,8 @@ S="${WORKDIR}/${PN}"
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="http://www.mysql.com/"
-SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz"
+SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
+	mirror://gentoo/mysql-extras-20050920.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -121,24 +122,26 @@ src_unpack() {
 	mv "${WORKDIR}/${NEWP}" "${S}"
 	cd "${S}"
 
+	local MY_PATCH_SOURCE="${WORKDIR}/mysql-extras"
+
 	# for correct hardcoded sysconf directory
-	epatch "${FILESDIR}/${PN}-4.0-my-print-defaults.diff"
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.0-my-print-defaults.diff"
 
 	# attempt to get libmysqlclient_r linked against ssl if USE="ssl" enabled
 	# i would really prefer to fix this at the Makefile.am level, but can't
 	# get the software to autoreconf as distributed - too many missing files
-	epatch "${FILESDIR}/${PN}-4.1.9-thrssl.patch"
+	epatch "${MY_PATCH_SOURCE}/${PN}-4.1.9-thrssl.patch"
 
 	# PIC fixes
 	# bug #42968
-	epatch "${FILESDIR}/035_x86_asm-pic-fixes-r1.patch"
+	epatch "${MY_PATCH_SOURCE}/035_x86_asm-pic-fixes-r1.patch"
 
 	if use tcpd; then
-		epatch "${FILESDIR}/${PN}-4.0.14-r1-tcpd-vars-fix.diff"
+		epatch "${MY_PATCH_SOURCE}/${PN}-4.0.14-r1-tcpd-vars-fix.diff"
 	fi
 
 	# avoid error running src_test and not enabling geometry USE flag
-	useq geometry || epatch "${FILESDIR}/${PN}-test-myisam-geometry.patch"
+	useq geometry || epatch "${MY_PATCH_SOURCE}/${PN}-test-myisam-geometry.patch"
 
 	for d in ${S} ${S}/innobase; do
 		cd ${d}
