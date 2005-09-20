@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.1.ebuild,v 1.1 2005/09/08 02:05:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/gnome-volume-manager-1.5.1.ebuild,v 1.2 2005/09/20 19:47:04 gustavoz Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="http://primates.ximian.com/~fejj/gvm//${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc crypt"
 
 RDEPEND=">=x11-libs/gtk+-2.6
