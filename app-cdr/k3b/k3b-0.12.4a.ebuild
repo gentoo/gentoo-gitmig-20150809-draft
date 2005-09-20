@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.4a.ebuild,v 1.3 2005/09/20 02:13:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.4a.ebuild,v 1.4 2005/09/20 11:22:00 flameeyes Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -42,6 +42,8 @@ RDEPEND="${DEPEND}
 need-kde 3.3
 
 I18N="${PN}-i18n-${PV}"
+
+PATCHES="${FILESDIR}/${P}-qt-3.3.5.patch"
 
 # These are the languages and translated documentation supported by k3b for 
 # version 0.11.x. If you are using this ebuild as a model for another ebuild 
