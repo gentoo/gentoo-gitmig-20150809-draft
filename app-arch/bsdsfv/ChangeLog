@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.17 2005/09/19 17:53:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.18 2005/09/20 12:32:55 flameeyes Exp $
+
+  20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/bsdsfv-1.18-64bit.patch:
+  Fix patch to work on non-glibc systems, inttypes seems to be needed there, too.
 
 *bsdsfv-1.18-r1 (19 Sep 2005)
 

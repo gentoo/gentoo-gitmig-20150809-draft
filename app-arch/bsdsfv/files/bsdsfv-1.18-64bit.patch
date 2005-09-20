@@ -2,15 +2,13 @@ Index: bsdsfv/bsdsfv.c
 ===================================================================
 --- bsdsfv.orig/bsdsfv.c
 +++ bsdsfv/bsdsfv.c
-@@ -60,9 +60,13 @@ typedef struct sfvtable {
+@@ -59,10 +59,10 @@ typedef struct sfvtable {
+ #include <sys/stat.h>
  #include <sys/mman.h>
  #include <dirent.h>
- 
-+#ifdef __GLIBC__
 +#include <inttypes.h>
-+#endif
-+
  
+-
 -long
 -UpdateCRC(unsigned long CRC, const char *buffer, long count)
 +int32_t
@@ -18,7 +16,7 @@ Index: bsdsfv/bsdsfv.c
  {
  	/*
  	 * Note: if you want to know how CRC32-checking works, I
-@@ -70,7 +74,7 @@ UpdateCRC(unsigned long CRC, const char 
+@@ -70,7 +70,7 @@ UpdateCRC(unsigned long CRC, const char 
  	 * There is not much you can change in this function, so
  	 * if you need a CRC32-check yourself, feel free to rip.
  	 */
@@ -27,7 +25,7 @@ Index: bsdsfv/bsdsfv.c
  		0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419,
  		    0x706af48f,
  		0xe963a535, 0x9e6495a3, 0x0edb8832, 0x79dcb8a4, 0xe0d5e91e,
-@@ -175,13 +179,13 @@ UpdateCRC(unsigned long CRC, const char 
+@@ -175,13 +175,13 @@ UpdateCRC(unsigned long CRC, const char 
  
  
  
@@ -45,7 +43,7 @@ Index: bsdsfv/bsdsfv.c
  
  	/*
  	 * Note: different buffer sizes may result in noticable 
-@@ -306,7 +310,7 @@ main(int argc, char *argv[])
+@@ -306,7 +306,7 @@ main(int argc, char *argv[])
  	FILE *missingfile;
  	DIR *dirp;
  	struct dirent *dp;
@@ -54,7 +52,7 @@ Index: bsdsfv/bsdsfv.c
  	int cnt;
  	int dothisone;
  	char cfname[FNAMELEN];
-@@ -487,8 +491,8 @@ main(int argc, char *argv[])
+@@ -487,8 +487,8 @@ main(int argc, char *argv[])
  				printf("Adding file: %s ... ", cfname);
  				fflush(stdout);
  				mycrc = GetFileCRC(cfname);
@@ -65,7 +63,7 @@ Index: bsdsfv/bsdsfv.c
  
  				// uncomment next 2 lines to 
  				// convert filename to upper case, for whatever reason
-@@ -516,7 +520,7 @@ main(int argc, char *argv[])
+@@ -516,7 +516,7 @@ main(int argc, char *argv[])
  			printf("Testing %s ... ", cfname);
  			fflush(stdout);
  			mycrc = GetFileCRC(cfname);
@@ -74,7 +72,7 @@ Index: bsdsfv/bsdsfv.c
  			fflush(stdout);
  
  			sfvfile = fopen(sfvname, "rt");
-@@ -675,7 +679,7 @@ main(int argc, char *argv[])
+@@ -675,7 +675,7 @@ main(int argc, char *argv[])
  
  					mycrc = GetFileCRC(dp->d_name);
  
