@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/tome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.19 2005/03/30 16:26:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.20 2005/09/20 17:10:23 kito Exp $
+
+  20 Sep 2005; Kito <kito@gentoo.org> tome-2.3.1.ebuild:
+  ~ppc-macos. Closes Bug 106571
 
   30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> tome-2.3.1.ebuild:
   Stable on ppc.
