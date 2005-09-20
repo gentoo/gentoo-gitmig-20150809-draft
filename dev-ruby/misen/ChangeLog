@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/misen
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/misen/ChangeLog,v 1.1 2005/09/20 17:16:06 killerfox Exp $
+
+*misen-0.11.1 (20 Sep 2005)
+
+  20 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org> +metadata.xml,
+  +misen-0.11.1.ebuild:
+  Initial import. ebuild written by myself.
+
