@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/ispell-no
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ChangeLog,v 1.1 2005/09/20 19:00:27 arj Exp $
+
+*ispell-no-2.0 (20 Sep 2005)
+
+  20 Sep 2005; Anders Rune Jensen <arj@gentoo.org> +ispell-no-2.0.ebuild:
+  New package. Fixed #105912
