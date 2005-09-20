@@ -1,0 +1,8 @@
+# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/files/initiatorname.iscsi,v 1.1 2005/09/20 04:33:34 robbat2 Exp $
+#
+# This file must contain a InitiatorName entry!
+# white space is significent here!
+#InitiatorName=iqn.2005-09.tld.domain.hostname:openiscsi-initiator
+#InitiatorAlias=foobar
