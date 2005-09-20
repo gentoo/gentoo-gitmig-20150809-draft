@@ -1,0 +1,15 @@
+# ChangeLog for sci-chemistry/gamess
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.1 2005/09/20 02:20:37 ribosome Exp $
+
+*gamess-05272005 (20 Sep 2005)
+
+  20 Sep 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/comp-gentoo.patch, +files/compall-gentoo.patch,
+  +files/compddi-gentoo.patch, +files/ddi-use-ssh-gentoo.patch,
+  +files/lked-gentoo.patch, +files/runall-gentoo.patch,
+  +files/rungms-gentoo.patch, +metadata.xml, +gamess-05272005.ebuild:
+  Initial import (fixes bug #105901). Package masked to allow for some
+  testing. Many thanks to Markus Dittrich <markusle@gmail.com> for his ebuild
+  and patches.
+
