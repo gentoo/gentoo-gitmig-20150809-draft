@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 8174fb46013b9f228c08ccb5f6023020 muh-2.2_beta1.ebuild 907
 MD5 8dbc3e3f09f5a1b40a3f5cb45bba4343 muh-2.1_rc1.ebuild 787
-MD5 da7dbee115397b6e308fe911595bd5ea metadata.xml 328
 MD5 940f3f88863045ea59998fcfd12212ce ChangeLog 1344
-MD5 23e0c42c9152a26274c01bbf269cf489 files/digest-muh-2.1_rc1 62
+MD5 b6349308b0057ef8c7cc6c3b44f6a534 metadata.xml 225
 MD5 45e5d28a6140d65317c16041e8962e74 files/digest-muh-2.2_beta1 64
+MD5 23e0c42c9152a26274c01bbf269cf489 files/digest-muh-2.1_rc1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK1SjLLFUmVNQ7rkRAhzEAJ45jSD9W6ChpucAQUpGfjS54+s4LgCgteCa
-rgLyM/Y78Y3nscCf/E2DiIk=
-=3Y7g
+iD8DBQFDMIAtV3J2n04EauwRAmq/AKCyPsC5lD3ErmubgOmb0Z6r412vTQCeIZyb
+P2x8IkEMkC1E9ifxXO8F+NY=
+=LwTv
 -----END PGP SIGNATURE-----
