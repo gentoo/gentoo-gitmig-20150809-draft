@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.0.ebuild,v 1.1 2005/09/17 23:29:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.0.ebuild,v 1.2 2005/09/20 00:48:14 leonardop Exp $
 
 inherit multilib gnome2
 
@@ -33,6 +33,12 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 
+set_gtk_confdir() {
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0}
+}
+
 pkg_setup() {
 	# FIXME : USEify croco support (?)
 	G2CONF="--with-croco \
@@ -42,10 +48,6 @@ pkg_setup() {
 		$(use_enable gnome gnome-vfs)        \
 		$(use_enable mozilla mozilla-plugin) \
 		$(use_enable static)"
-
-	# An arch specific config directory is used on multilib systems
-	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 }
 
 src_install() {
@@ -56,10 +58,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	set_gtk_confdir
 	gdk-pixbuf-query-loaders > ${GTK2_CONFDIR}/gdk-pixbuf.loaders
-
 }
 
 pkg_postrm() {
+	set_gtk_confdir
 	gdk-pixbuf-query-loaders > ${GTK2_CONFDIR}/gdk-pixbuf.loaders
 }
