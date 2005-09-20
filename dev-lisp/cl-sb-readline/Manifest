@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b94c8399f90f244d207ea9887db27e16 cl-sb-readline-0.1.ebuild 812
+MD5 debfe16ca42d882e04429cfd6a5fc933 cl-sb-readline-0.1.ebuild 831
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
-MD5 0fdf03fc5d0b273ca6af674f5dadd38b ChangeLog 481
+MD5 3480437097fb9893ee905f5fd09c7ef5 ChangeLog 602
 MD5 9615ca5075924c6112c57fb70d1ca5bd files/0.1-load-foreign-library-gentoo.patch 638
 MD5 85bd51806886ebc71dcfe5cf442ac7ad files/digest-cl-sb-readline-0.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMCx6yiNZaEAZA+ARAqTfAJ9xEGn6e2krbeh8uwwvEPh3I/yOwgCfYiUC
-EvqGUCuJxGeGQvUOfSuMKmA=
-=cqLd
+iD8DBQFDMC1wyiNZaEAZA+ARAl9xAJ9bgUc1GusbKbr6EximE2lvhVmOPACfZNMX
+1cDBfiuWhGNJHSwmNsXrObo=
+=x2Lw
 -----END PGP SIGNATURE-----
