@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r1.ebuild,v 1.3 2005/09/20 09:59:18 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.1-r1.ebuild,v 1.1 2005/09/20 09:59:18 mkay Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -46,7 +46,6 @@ src_compile() {
 		--disable-optimize \
 		--with-wx-config=${WX_CONFIG} \
 		--with-wxbase-config=${WX_CONFIG} \
-		--disable-embedded-crypto \
 		`use_enable debug` \
 		`use_enable nls` \
 		`use_enable remote amulecmd` \
