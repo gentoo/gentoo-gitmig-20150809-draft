@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.3 2005/08/30 01:17:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.4 2005/09/20 19:34:28 gustavoz Exp $
+
+  20 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> pycairo-0.9.0.ebuild:
+  Keyworded ~sparc
 
   30 Aug 2005; <dang@gentoo.org> pycairo-0.9.0.ebuild:
   Marked ~amd64
