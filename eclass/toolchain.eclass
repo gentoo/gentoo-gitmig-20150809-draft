@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.190 2005/09/06 05:14:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.191 2005/09/20 02:15:37 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -760,10 +760,10 @@ gcc_pkg_setup() {
 		mips)
 			# Must compile for mips64-linux target if we want n32/n64 support
 			case "${CTARGET}" in
-				mips64-*) ;;
+				mips64*) ;;
 				*)
 					if use n32 || use n64; then
-						eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+						eerror "n32/n64 can only be used when target host is mips64*-*-linux-*";
 						die "Invalid USE flags for CTARGET ($CTARGET)";
 					fi
 				;;
@@ -778,7 +778,7 @@ gcc_pkg_setup() {
 		esac
 
 		# we dont want to use the installed compiler's specs to build gcc!
-		unset GCC_SPECS || :
+		unset GCC_SPECS
 	fi
 
 	want_libssp && libc_has_ssp && \
@@ -1051,6 +1051,7 @@ gcc_do_configure() {
 		confgcc="${confgcc} --target=${CTARGET}"
 	fi
 	[[ -n ${CBUILD} ]] && confgcc="${confgcc} --build=${CBUILD}"
+	is_crosscompile && confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 
 	# ppc altivec support
 	confgcc="${confgcc} $(use_enable altivec)"
@@ -1519,27 +1520,15 @@ gcc-compiler_src_install() {
 	if is_crosscompile && is_multilib; then
 		CHOST_x86="i686-pc-linux-gnu"
 		CHOST_amd64="x86_64-pc-linux-gnu"
-		CHOST_o32="mips-unknown-linux-gnu"
-		CHOST_n32="mips64-unknown-linux-gnu"
-		CHOST_n64="mips64-unknown-linux-gnu"
 		CHOST_ppc="powerpc-unknown-linux-gnu"
 		CHOST_ppc64="powerpc64-unknown-linux-gnu"
 		CHOST_sparc32="sparc-unknown-linux-gnu"
 		CHOST_sparc64="sparc64-unknown-linux-gnu"
 
 		case $(tc-arch) in
-		amd64)
-			abilist="x86"
-		;;
-		ppc64)
-			abilist="ppc"
-		;;
-		mips)
-			abilist="o32"
-		;;
-		sparc)
-			abilist="sparc32"
-		;;
+		amd64) abilist="x86";;
+		ppc64) abilist="ppc";;
+		sparc) abilist="sparc32";;
 		*)
 			eeror "Unknown multilib arch: $(tc-arch)"
 			die "Unknown multilib arch: $(tc-arch)"
@@ -2017,17 +2006,12 @@ gcc_crosscompile_multilib_specs() {
 		config="sparc/t-linux64"
 		libdirs=". sparc32"
 	;;
-	mips)
-		# TOCHECK: Not sure about this logic --eradicator
-		config="mips/t-linux64"
-		libdirs="o32 n32 ."
-	;;
 	*)
 		eerror "Invalid multilib arch ($(tc-arch)) in gcc_crosscompile_multilib_specs"
 		die "Invalid multilib arch ($(tc-arch)) in gcc_crosscompile_multilib_specs"
 	esac
 
-	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/${config}
+	sed -i -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" "${S}"/gcc/config/${config}
 }
 
 disable_multilib_libjava() {
