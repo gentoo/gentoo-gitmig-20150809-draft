@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.43 2005/09/16 22:27:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.44 2005/09/20 09:56:14 ferdy Exp $
+
+*maildrop-2.0.0 (20 Sep 2005)
+
+  20 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/maildrop-2.0.0-fix-maildir_la.patch,
+  -maildrop-1.8.1.20050828.ebuild, +maildrop-2.0.0.ebuild:
+  version bump. removing development version. add alias to trusted users wrt
+  bug #105230
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

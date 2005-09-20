@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1.20050828.ebuild,v 1.5 2005/09/15 10:59:49 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.0.ebuild,v 1.1 2005/09/20 09:56:14 ferdy Exp $
 
 inherit eutils gnuconfig
 
@@ -32,7 +32,8 @@ DEPEND="!mail-mta/courier
 			>=sys-libs/db-3
 			~sys-devel/autoconf-2.59
 		)
-	)"
+	)
+	>=sys-devel/automake-1.9.3"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl"
@@ -43,6 +44,13 @@ src_unpack() {
 
 	# Do not use lazy bindings on /usr/bin/maildrop
 	sed -i -e 's~^maildrop_LDFLAGS =~& -Wl,-z,now~g' maildrop/Makefile.in
+
+	# Fix libpcre linking in maildir/
+	cd ${S}/maildir
+	epatch ${FILESDIR}/${P}-fix-maildir_la.patch
+	aclocal || die "aclocal failed (maildir)"
+	WANT_AUTOMAKE=1.9.3 automake --foreign || die "automake failed (maildir)"
+	cd ${S}
 
 	# Be nice with uclibc also
 	use elibc_uclibc && sed -i -e 's~linux-gnu\*~& | linux-uclibc~' config.sub
@@ -58,13 +66,14 @@ src_unpack() {
 	fi
 
 	if ! use fam ; then
-		epatch ${FILESDIR}/${P%.*}-disable-fam.patch
+		epatch ${FILESDIR}/${PN}-1.8.1-disable-fam.patch
 		cd ${S}/maildir
 		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (maildir)"
 	fi
 
 	# Only recreate configure if needed
 	if ! use fam || { ! use gdbm && use berkdb ; } ; then
+		cd ${S}
 		gnuconfig_update
 		libtoolize --copy --force
 		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (topdir)"
@@ -73,6 +82,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	local mytrustedusers="apache dspam root mail \
+		daemon postmaster qmaild mmdf vmail alias"
 
 	if use gdbm ; then
 		myconf="${myconf} --with-db=gdbm"
@@ -96,7 +107,7 @@ src_compile() {
 		--enable-maildirquota \
 		--enable-use-dotlock=1 \
 		--enable-restrict-trusted=1 \
-		--enable-trusted-users='apache dspam root mail daemon postmaster qmaild mmdf vmail' \
+		--enable-trusted-users="${mytrustedusers}" \
 		--enable-maildrop-uid=root \
 		--enable-maildrop-gid=mail \
 		--with-default-maildrop=./.maildir/ \
