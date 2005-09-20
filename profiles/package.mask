@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4478 2005/09/20 10:05:17 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4479 2005/09/20 11:02:23 mkay Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -67,11 +67,6 @@ sci-chemistry/gamess
 # See bug #106402.
 ~x11-libs/qt-3.3.5
 ~dev-db/qt-unixODBC-3.3.5
-
-# Marcin Kryczek <mkay@gentoo.org> (19 Sep 2005)
-# This ebuild depends on crypto++, which is not
-# tested on all needed arch
-=net-p2p/amule-2.0.3-r1
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (18 Sep 2005)
 # Waiting for Gnome 2.12 Unmask
