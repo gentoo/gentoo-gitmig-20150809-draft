@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.1 2005/09/18 17:33:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.2 2005/09/20 13:13:42 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -73,3 +73,19 @@ dlopen_lib() {
 	fi
 }
 
+# Gets the home directory for the specified user
+# it's a wrap around egetent as the position of the home directory in the line
+# varies depending on the os used.
+#
+# To use that, inherit eutils, not portability!
+egethome() {
+	ent=$(egetent passwd $1)
+
+	if [[ "${USERLAND}" == "Darwin" || "${ELIBC}" == "FreeBSD" ]]; then
+		# Darwin/OSX and FreeBSD uses position 9 to store the home dir
+		cut -d: -f9 <<<${ent}
+	else
+		# Linux and NetBSD uses position 6 instead
+		cut -d: -f6 <<<${ent}
+	fi
+}
