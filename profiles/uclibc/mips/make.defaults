@@ -1,7 +1,7 @@
 ARCH="mips"
 ACCEPT_KEYWORDS="mips"
 
-CHOST="mips-gentoo-linux-uclibc"
+CHOST="set-CHOST-in-your-/etc/make.conf"
 
 FEATURES="-sandbox"
 
