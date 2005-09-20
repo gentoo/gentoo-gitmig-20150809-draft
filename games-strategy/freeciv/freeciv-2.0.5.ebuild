@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.5.ebuild,v 1.2 2005/09/11 05:37:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.5.ebuild,v 1.3 2005/09/20 20:32:38 mr_bones_ Exp $
 
 inherit games
 
@@ -17,26 +17,21 @@ SRC_URI="ftp://ftp.freeciv.org/pub/freeciv/stable/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86"
-IUSE="alsa dedicated esd gtk gtk2 nls readline sdl Xaw3d"
+IUSE="alsa dedicated esd gtk nls readline sdl Xaw3d"
 
 RDEPEND="sys-libs/zlib
 	readline? ( sys-libs/readline )
 	!dedicated? (
 		virtual/x11
 		gtk? (
-			gtk2? (
-				>=x11-libs/gtk+-2.0.0
-				>=dev-libs/glib-2.0.0
-				>=dev-libs/atk-1.0.3
-				>=x11-libs/pango-1.0.5
-			)
-			!gtk2? (
-				=x11-libs/gtk+-1*
-				>=dev-libs/glib-1.2.5
-				>=media-libs/imlib-1.9.2
-			)
+			>=x11-libs/gtk+-2.0.0
+			>=dev-libs/glib-2.0.0
+			>=dev-libs/atk-1.0.3
+			>=x11-libs/pango-1.0.5
 		)
-		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) )
+		!gtk? (
+			Xaw3d? ( x11-libs/Xaw3d )
+		)
 		alsa? (
 			>=media-libs/alsa-lib-1.0
 			>=media-libs/audiofile-0.2
@@ -56,11 +51,7 @@ pkg_setup() {
 	games_pkg_setup
 	if ! use dedicated ; then
 		if use gtk ; then
-			if use gtk2 ; then
-				einfo "The Freeciv Client will be built with the GTK+-2 toolkit"
-			else
-				einfo "The Freeciv Client will be built with the GTK+-1.2 toolkit"
-			fi
+			einfo "The Freeciv Client will be built with the GTK+-2 toolkit"
 		elif use Xaw3d ; then
 			einfo "The Freeciv Client will be built with the Xaw3d toolkit"
 		else
@@ -78,7 +69,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	return 0
 
 	# install locales in /usr/share/locale
 	sed -i \
@@ -116,9 +106,7 @@ src_compile() {
 		myclient="xaw"
 		use Xaw3d && myclient="xaw3d"
 		if use gtk ; then
-			use gtk2 \
-				&& myclient="gtk-2.0" \
-				|| myclient="gtk"
+			myclient="gtk-2.0"
 		fi
 		#FIXME --enable-{alsa,esd,sdl-mixer} actually disable them...
 		#FIXME   ==> use --disable-* only, and autodetect to enable.
