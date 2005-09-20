@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.2 2005/06/25 20:26:07 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.3 2005/09/20 03:44:23 soulse Exp $
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -141,6 +141,12 @@ src_install() {
 	do
 		chown -R nagios:nagios ${D}/${dir} || die "Failed chown of ${D}/${dir}"
 	done
+
+	#Related with bug #89160
+
+	if use !noweb; then
+		chown nagios:apache usr/nagios/rw/nagios.cmd
+	fi
 
 	#Apache Module
 	if use !noweb; then
