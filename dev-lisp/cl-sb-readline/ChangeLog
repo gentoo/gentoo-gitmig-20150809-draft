@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/cl-sb-readline
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sb-readline/ChangeLog,v 1.1 2005/09/20 15:35:27 mkennedy Exp $
+
+*cl-sb-readline-0.1 (20 Sep 2005)
+
+  20 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.1-load-foreign-library-gentoo.patch, +metadata.xml,
+  +cl-sb-readline-0.1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+
