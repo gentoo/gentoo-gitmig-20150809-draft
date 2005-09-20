@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.192 2005/09/20 02:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.193 2005/09/20 04:50:53 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1051,7 +1051,6 @@ gcc_do_configure() {
 		confgcc="${confgcc} --target=${CTARGET}"
 	fi
 	[[ -n ${CBUILD} ]] && confgcc="${confgcc} --build=${CBUILD}"
-	is_crosscompile && confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 
 	# ppc altivec support
 	confgcc="${confgcc} $(use_enable altivec)"
@@ -1082,13 +1081,22 @@ gcc_do_configure() {
 	GCC_LANG=${GCC_LANG:-c}
 	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
 
-	# When building a stage1 cross-compiler (just C compiler), we have to
-	# disable a bunch of features or gcc goes boom
-	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
-		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
-	# If we want to do C++ on avr then we have to punt threads
-	elif is_crosscompile && [[ ${CTARGET} == "avr" ]] ; then
-		confgcc="${confgcc} $(use_enable !static shared) --disable-threads"
+	if is_crosscompile ; then
+		# When building a stage1 cross-compiler (just C compiler), we have to
+		# disable a bunch of features or gcc goes boom
+		local needed_libc=""
+		case ${CTARGET} in
+			*-gnu)    needed_libc=glibc;;
+			*-uclibc) needed_libc=uclibc;;
+			avr)      confgcc="${confgcc} $(use_enable !static shared) --disable-threads";;
+		esac
+		if [[ -n ${needed_libc} ]] ; then
+			if ! has_version ${CATEGORY}/${needed_libc} ; then
+				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+			else
+				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
+			fi
+		fi
 	else
 		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix"
 	fi
@@ -1529,8 +1537,9 @@ gcc-compiler_src_install() {
 		amd64) abilist="x86";;
 		ppc64) abilist="ppc";;
 		sparc) abilist="sparc32";;
+		mips)  true;;
 		*)
-			eeror "Unknown multilib arch: $(tc-arch)"
+			eerror "Unknown multilib arch: $(tc-arch)"
 			die "Unknown multilib arch: $(tc-arch)"
 		esac
 
