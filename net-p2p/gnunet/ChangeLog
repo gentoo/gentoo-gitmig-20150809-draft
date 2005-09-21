@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.36 2005/09/12 18:38:58 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.37 2005/09/21 11:53:08 mkay Exp $
+
+  21 Sep 2005; <mkay@gentoo.org> gnunet-0.7.0.ebuild:
+  GTK support isn't optional. Fixing
 
 *gnunet-0.7.0 (06 Sep 2005)
 
