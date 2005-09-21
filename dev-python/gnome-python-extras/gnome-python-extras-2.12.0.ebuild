@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.11.4.ebuild,v 1.4 2005/09/16 17:50:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/gnome-python-extras-2.12.0.ebuild,v 1.1 2005/09/21 21:42:50 dang Exp $
 
 inherit eutils gnome2 python
 
@@ -13,21 +13,22 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc firefox mozilla"
 
 RDEPEND=">=dev-lang/python-2.3
-	>=x11-libs/gtk+-2.4.0
-	>=dev-libs/glib-2.6.0
-	>=dev-python/gnome-python-2.10.0
-	>=dev-python/pygtk-2.4.0
+	>=x11-libs/gtk+-2.4
+	>=dev-libs/glib-2.6
+	>=dev-python/gnome-python-2.10
+	>=dev-python/pygtk-2.4
 	=gnome-extra/libgtkhtml-2.6*
-	>=gnome-base/libgnomeprint-2.2.0
-	>=gnome-base/libgnomeprintui-2.2.0
+	>=gnome-base/libgnomeprint-2.2
+	>=gnome-base/libgnomeprintui-2.2
 	>=x11-libs/gtksourceview-1.1.90
-	>=gnome-base/gnome-panel-2.2.0
+	>=gnome-base/gnome-panel-2.10
 	>=x11-libs/libwnck-2.9.92
 	firefox? ( >=www-client/mozilla-firefox-1.0 )
-	mozilla? ( >=www-client/mozilla-1.2 )
+	!firefox? ( mozilla? ( >=www-client/mozilla-1.2 ) )
 	>=gnome-base/libgtop-2.9.5
-	>=gnome-extra/nautilus-cd-burner-2.9.4
-	>=app-text/gtkspell-2.0.0
+	>=gnome-extra/nautilus-cd-burner-2.11.1
+	>=app-text/gtkspell-2
+	>=gnome-base/gconf-2.10
 	media-video/totem
 	"
 
