@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.15 2005/09/16 10:18:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.16 2005/09/21 02:16:31 geoman Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1145,7 +1145,7 @@ src_unpack() {
 			use hardened || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6490_hppa_hardened-disable__init_arrays.patch"
 		;;
 		mips)
-			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 3000-all-2.3.4-dl_execstack-PaX-support.patch"
+			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 3000-all-2.3.4-dl_execstack-PaX-support.patch 6600_mips_librt-mips.patch 6640_mips_unistd_h-fixes.patch"
 			use_multilib && GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6680_mips_nolib3264.patch"
 		;;
 	esac

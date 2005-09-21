@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.387 2005/09/18 16:21:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.388 2005/09/21 02:16:31 geoman Exp $
+
+  21 Sep 2005; Stephen P. Becker <geoman@gentoo.org>
+  glibc-2.3.5.20050722.ebuild:
+  exclude patches 6640_mips_unistd_h-fixes.patch and 
+  6600_mips_librt-mips.patch since the first isn't required anymore, and 
+  the second breaks the glibc compile--note a new, similar patch may be 
+  needed to facilitate transition between old userlands with the GLIBC_2.0 
+  symbol in librt
 
   18 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> glibc-2.3.5-r1.ebuild:
   Added to ~ppc.
