@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r2.ebuild,v 1.3 2005/08/30 19:25:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r2.ebuild,v 1.4 2005/09/21 20:51:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -28,7 +28,7 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license || die "License check failed"
+	check_license ut2003
 	if use experimental
 	then
 		ewarn "You are enabling support for an experimental patch from icculus."
