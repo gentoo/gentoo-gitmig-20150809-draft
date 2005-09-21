@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.2 2005/09/20 13:13:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.3 2005/09/21 02:46:41 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -28,30 +28,16 @@ treecopy() {
 #
 # compatibility function that mimes seq command if not available
 seq() {
-	local p
-	p=$(type -P seq)
+	local p=$(type -P seq)
 
 	case $# in
-		1)
-			min=1
-			max=$1
-			step=1
-			;;
-		2)
-			min=$1
-			max=$2
-			step=1
-			;;
-		3)
-			min=$1
-			max=$3
-			step=$2
-			;;
-		*)
-			die "seq called with wrong parameters number"
+		1) min=1  max=$1 step=1  ;;
+		2) min=$1 max=$2 step=1  ;;
+		3) min=$1 max=$3 step=$2 ;;
+		*) die "seq called with wrong number of arguments" ;;
 	esac
 
-	if [[ -z "${p}" ]]; then
+	if [[ -z ${p} ]] ; then
 		local reps
 		# BSD userland
 		if [[ ${step} != 0 ]]; then
