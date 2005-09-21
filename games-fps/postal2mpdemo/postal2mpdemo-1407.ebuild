@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.12 2005/09/03 22:03:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mpdemo/postal2mpdemo-1407.ebuild,v 1.13 2005/09/21 20:37:22 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,7 +27,7 @@ dir="${GAMES_PREFIX_OPT}/${PN}"
 Ddir="${D}/${dir}"
 
 pkg_setup() {
-	check_license
+	check_license postal2
 	games_pkg_setup
 }
 

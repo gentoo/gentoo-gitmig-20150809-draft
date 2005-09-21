@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.13 2005/08/11 11:59:42 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.14 2005/09/21 20:35:25 wolf31o2 Exp $
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r3.ebuild:
+  Changed check_license to explicitly list license to check.
 
   11 Aug 2005; Carlos Silva <r3pek@gentoo.org> ut2003-demo-2206-r3.ebuild:
   marked ~amd64. closes bug #102076

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.9 2005/08/11 11:59:42 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.10 2005/09/21 20:35:25 wolf31o2 Exp $
 
 inherit games
 
@@ -24,7 +24,7 @@ dir="${GAMES_PREFIX_OPT}/${PN}"
 Ddir="${D}/${dir}"
 
 pkg_setup() {
-	check_license
+	check_license ut2003-demo
 	games_pkg_setup
 }
 

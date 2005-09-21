@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.4 2005/08/30 19:51:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.5 2005/09/21 20:45:26 wolf31o2 Exp $
 
 inherit games
 
@@ -27,7 +27,7 @@ S="${WORKDIR}"
 dir="${GAMES_PREFIX_OPT}/${PN}"
 
 pkg_setup() {
-	check_license || die "License check failed"
+	check_license ut2003
 	ewarn "The installed game takes about 2.7GB of space!"
 	cdrom_get_cds System/Packages.md5 StaticMeshes/AWHardware.usx.uz2 \
 		Extras/MayaPLE/Maya4PersonalLearningEditionEpic.exe
