@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a249ac4a502502746f43ff2b2d429842 ChangeLog 21018
+MD5 87f41f552f3b4d9f8e4ea7d7c9b2f8ee ChangeLog 21110
+MD5 845ba0e216f2adf5eb504a5eb06b9037 sbcl-0.9.4.ebuild 5046
 MD5 0c9bf11185a2a2f1916fc3dc72c0e89e metadata.xml 1037
 MD5 4b4f52ef8ceb0eb77b6976520c78f719 sbcl-0.9.3.ebuild 5046
-MD5 38b5ba1623a05e05f11816275543596e sbcl-0.9.4.ebuild 5047
 MD5 41c44af5374afae0f627457c2406ce35 files/digest-sbcl-0.9.3 557
 MD5 d118e40afe2da4c015ff893db4ae12c3 files/digest-sbcl-0.9.4 557
-MD5 da8c0ba7c4f5f9e9924953290d266070 files/0.9.4/README.Gentoo 1060
-MD5 683427165f7d0717333bbb9762972b8d files/0.9.4/customize-target-features.lisp-prefix 95
-MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.4/customize-target-features.lisp-suffix 8
-MD5 3869dca83085d07e01386eda00c05943 files/0.9.4/install-clc.lisp 980
 MD5 5adaa789503e3fecd45ee5724d33584c files/0.9.4/sbcl-gentoo.patch 3810
+MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.4/customize-target-features.lisp-suffix 8
 MD5 7447a308f36b4ad14626357d8f2c8db6 files/0.9.4/sbcl.sh 1512
 MD5 653f804ebcd167d167f8163756b7da17 files/0.9.4/sbclrc 639
-MD5 a525c50480694091f6a6688c1472ab10 files/0.9.3/README.Gentoo 1060
-MD5 683427165f7d0717333bbb9762972b8d files/0.9.3/customize-target-features.lisp-prefix 95
-MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.3/customize-target-features.lisp-suffix 8
-MD5 3869dca83085d07e01386eda00c05943 files/0.9.3/install-clc.lisp 980
+MD5 3869dca83085d07e01386eda00c05943 files/0.9.4/install-clc.lisp 980
+MD5 683427165f7d0717333bbb9762972b8d files/0.9.4/customize-target-features.lisp-prefix 95
+MD5 da8c0ba7c4f5f9e9924953290d266070 files/0.9.4/README.Gentoo 1060
 MD5 fa37ba308cbdad5cf330525fd1ebcd28 files/0.9.3/sbcl-gentoo.patch 3810
+MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.9.3/customize-target-features.lisp-suffix 8
 MD5 7447a308f36b4ad14626357d8f2c8db6 files/0.9.3/sbcl.sh 1512
 MD5 653f804ebcd167d167f8163756b7da17 files/0.9.3/sbclrc 639
+MD5 3869dca83085d07e01386eda00c05943 files/0.9.3/install-clc.lisp 980
+MD5 683427165f7d0717333bbb9762972b8d files/0.9.3/customize-target-features.lisp-prefix 95
+MD5 a525c50480694091f6a6688c1472ab10 files/0.9.3/README.Gentoo 1060
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDIfWgyiNZaEAZA+ARAvMAAJ9PEn4UujJeP7pdoOJbYnbiQ9hAiwCfej7S
-b3XzltAjzfiv7s8JEAabYZg=
-=OjRK
+iD8DBQFDMZclKRy60XGEcJIRAkkKAJ9RAITNNeTS8j6EIeBfaD3dUj3rzQCfaPpO
+8sAxYeilABFhxRhP6ZbJnk0=
+=yPU+
 -----END PGP SIGNATURE-----

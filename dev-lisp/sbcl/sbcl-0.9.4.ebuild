@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.4.ebuild,v 1.2 2005/09/09 20:49:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.9.4.ebuild,v 1.3 2005/09/21 17:23:15 gustavoz Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="x86 ppc ~sparc ~mips ~amd64"
+KEYWORDS="x86 ppc sparc ~mips ~amd64"
 IUSE="hardened ldb nosource threads unicode"
 
 DEPEND="=dev-lisp/common-lisp-controller-4*
