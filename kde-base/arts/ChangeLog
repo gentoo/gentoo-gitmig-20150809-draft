@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.179 2005/09/18 14:16:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.180 2005/09/21 17:17:58 greg_g Exp $
+
+*arts-3.5_beta1 (21 Sep 2005)
+
+  21 Sep 2005; Gregorio Guidi <greg_g@gentoo.org> +arts-3.5_beta1.ebuild:
+  New version.
 
   18 Sep 2005; Caleb Tennis <caleb@gentoo.org> arts-3.4.1-r2.ebuild,
   arts-3.4.2.ebuild, arts-3.5_alpha1.ebuild:

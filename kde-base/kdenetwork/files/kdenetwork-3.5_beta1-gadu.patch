@@ -1,0 +1,40 @@
+diff -Nur kdenetwork-3.4.91.orig/kopete/protocols/gadu/gaduaccount.cpp kdenetwork-3.4.91/kopete/protocols/gadu/gaduaccount.cpp
+--- kdenetwork-3.4.91.orig/kopete/protocols/gadu/gaduaccount.cpp	2005-09-10 10:20:18.000000000 +0200
++++ kdenetwork-3.4.91/kopete/protocols/gadu/gaduaccount.cpp	2005-09-21 15:05:10.000000000 +0200
+@@ -157,8 +157,8 @@
+ 
+ 	p->config = configGroup();
+ 
+-	initActions();
+ 	initConnections();
++	initActions();
+ 
+ 	QString nick = p->config->readEntry( QString::fromAscii( "nickName" ) );
+ 	if ( !nick.isNull() ) {
+diff -Nur kdenetwork-3.4.91.orig/kopete/protocols/gadu/gadusession.cpp kdenetwork-3.4.91/kopete/protocols/gadu/gadusession.cpp
+--- kdenetwork-3.4.91.orig/kopete/protocols/gadu/gadusession.cpp	2005-09-10 10:20:18.000000000 +0200
++++ kdenetwork-3.4.91/kopete/protocols/gadu/gadusession.cpp	2005-09-21 15:05:10.000000000 +0200
+@@ -704,20 +704,20 @@
+ 
+ 	switch( event->type ) {
+ 		case GG_EVENT_MSG:
++			kdDebug(14100) << "incoming message:class:" << event->event.msg.msgclass << endl;
+ 			if ( event->event.msg.msgclass == GG_CLASS_CTCP ) {
+ 				kdDebug( 14100 ) << "incomming ctcp " << endl;
+ 				// TODO: DCC CONNECTION
+ 				emit incomingCtcp( event->event.msg.sender );
+-				break;
+ 			}
+-			if ( event->event.msg.msgclass == GG_CLASS_MSG || event->event.msg.msgclass == GG_CLASS_CHAT ) {
++
++			if ( (event->event.msg.msgclass & GG_CLASS_MSG) || (event->event.msg.msgclass & GG_CLASS_CHAT) ) {
+ 				gaduMessage.message =
+ 					textcodec->toUnicode((const char*)event->event.msg.message);
+ 				gaduMessage.sender_id = event->event.msg.sender;
+ 				gaduMessage.sendTime.setTime_t( event->event.msg.time, Qt::LocalTime );
+ 				gaduMessage.message = rtf->convertToHtml( gaduMessage.message, event->event.msg.formats_length, event->event.msg.formats );
+ 				emit messageReceived( &gaduMessage );
+-				break;
+ 			}
+ 		break;
+ 		case GG_EVENT_ACK:
