@@ -1,12 +1,15 @@
 # ChangeLog for dev-ml/extlib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.2 2005/02/06 15:47:19 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.3 2005/09/21 17:02:34 mattam Exp $
+
+  21 Sep 2005; Matthieu Sozeau <mattam@gentoo.org> :
+  Version bump (fixes #87864).
 
 *extlib-1.3 (06 Feb 2005)
 
-  06 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> extlib-1.2.ebuild,
-  +extlib-1.3.ebuild:
-  Version bump, move older version to stable.
+  06 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> -extlib-1.2.ebuild,
+  +extlib-1.4.ebuild:
+  Version bump.
 
 *extlib-1.2 (21 Aug 2004)
 
