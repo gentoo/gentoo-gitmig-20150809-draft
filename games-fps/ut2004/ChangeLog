@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.29 2005/08/30 19:25:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.30 2005/09/21 20:50:01 wolf31o2 Exp $
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3355.ebuild,
+  ut2004-3355-r1.ebuild:
+  Changed check_license to explicitly list license to check. Added x86 to
+  3355-r1 ebuild, as there is no difference for x86 from 3355. Cleaning up
+  older ebuilds.
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3355.ebuild,
   ut2004-3355-r1.ebuild, ut2004-3355-r2.ebuild:

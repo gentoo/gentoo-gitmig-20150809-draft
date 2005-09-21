@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r1.ebuild,v 1.4 2005/08/30 19:25:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355-r1.ebuild,v 1.5 2005/09/21 20:50:01 wolf31o2 Exp $
 
 inherit games
 
@@ -9,11 +9,11 @@ DESCRIPTION="Unreal Tournament 2004 - Editor's Choice Edition"
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
 	http://speculum.twistedgamer.com/pub/0day.icculus.org/${PN}/${MY_P}
-	http://icculus.org/~icculus/tmp/${PN}-lnx-amd64-05282005.tar.bz2"
+	amd64? ( http://icculus.org/~icculus/tmp/${PN}-lnx-amd64-05282005.tar.bz2 )"
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 RESTRICT="nostrip nomirror"
 IUSE="opengl dedicated"
 
@@ -29,14 +29,13 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license || die "License check failed"
-
+	check_license ut2003
 	games_pkg_setup
 }
 
 src_install() {
 	# moving patched binary into proper location
-	mv -f ${WORKDIR}/ut2004-bin-linux-amd64 ${S}/System
+	use amd64 && mv -f ${WORKDIR}/ut2004-bin-linux-amd64 ${S}/System
 
 	# Installing patch files
 	for p in {Animations,Help,Speech,System,Textures,Web}
