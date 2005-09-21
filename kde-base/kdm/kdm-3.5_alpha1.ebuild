@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5_alpha1.ebuild,v 1.1 2005/09/07 11:35:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5_alpha1.ebuild,v 1.2 2005/09/21 17:34:22 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -39,19 +39,9 @@ src_install() {
 	kde-meta_src_install
 	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install
 
-	# We tell kdm to /use session files from /usr/share/xsessions.
-	# I've removed some other kdmrc mods from here, since it's not clear why
-	# the default aren't ok (and I'm not sure about the benefits of using
-	# the xdm configfiles under /etc/X11 instead of our own ones),
-	# and it's the Gentoo Way to avoid modifying upstream behaviour.
-	# Tell me if you don't like this. --danarmak
-	cd ${D}/${KDEDIR}/share/config/kdm || die
+	# Customize the kdmrc configuration
 	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" \
-		-e "s:#GreetFont=:GreetFont=Sans Serif,24,-1,5,50,0,0,0,0,0\n#GreetFont=:" \
-		-e "s:#StdFont=:StdFont=Sans Serif,12,-1,5,50,0,0,0,0,0\n#StdFont=:" \
-		-e "s:#FailFont=:FailFont=Sans Serif,12,-1,5,75,0,0,0,0,0\n#FailFont=:" \
-		-e "s:#AntiAliasing=:AntiAliasing=true\n#AntiAliasing=:" \
-		kdmrc
+		${D}/${KDEDIR}/share/config/kdm/kdmrc || die
 }
 
 pkg_postinst() {
