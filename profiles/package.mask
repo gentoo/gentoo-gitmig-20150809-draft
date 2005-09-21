@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4484 2005/09/21 00:18:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4485 2005/09/21 16:01:25 humpback Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Gustavo Felisberto <humpback@gentoo.org> (21 Sep 2005)
+# This is beta code and is only of interest for testers
+=app-emulation/vmware-workstation-5.5.0.16325
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (20 Sep 2005)
 # This needs some testing before I unleash it on the world.
@@ -1288,10 +1292,6 @@ app-portage/basc
 # Before adding for testing ;)
 =dev-libs/apr-1.1.1
 =dev-libs/apr-util-1.1.2
-
-# Gustavo Felisberto <humpback@gentoo.org> (08 April 2005)
-# Initial import to give users chance to test
-net-im/pymsn-t
 
 # Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
 # Doesn't build anymore. Asked maintainer to fix or remove it.
