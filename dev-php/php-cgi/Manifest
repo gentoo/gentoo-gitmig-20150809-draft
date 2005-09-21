@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d872a25f985f00e2d9cc17379b2d0492 php-cgi-4.4.0-r1.ebuild 972
 MD5 98731632103435e701ba69cea7b38800 php-cgi-4.3.11-r2.ebuild 1840
 MD5 58596c107f1a23e6be418c9dae669e74 php-cgi-4.4.0.ebuild 969
@@ -17,3 +20,10 @@ MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
 MD5 37b9c16c4d9688ed40561a2e29955896 files/php4.3.11-pcre-security.patch 6030
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMbolViELBEf1JB0RAqN7AJ99TXFE2hWlmahQ2UlDQmC/k+z6swCfVdWV
+Bup2Bgnq+tiAHBnYrfdAsjg=
+=avcv
+-----END PGP SIGNATURE-----
