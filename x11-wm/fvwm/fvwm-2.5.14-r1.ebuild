@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.14.ebuild,v 1.1 2005/08/28 20:19:12 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.14-r1.ebuild,v 1.1 2005/09/21 08:28:01 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 LICENSE="GPL-2 FVWM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bidi debug gtk gtk2 imlib nls perl png readline rplay stroke tcltk truetype xinerama"
+IUSE="bidi debug gtk imlib nls perl png readline rplay stroke tcltk truetype xinerama"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		gtk? ( =x11-libs/gtk+-1.2*
@@ -155,7 +155,7 @@ src_install() {
 
 	if use perl; then
 
-		local toolkits="gtk2 gtk tcltk"
+		local toolkits="gtk tcltk"
 
 		if use tcltk; then
 			# Install the very cool FvwmTabs module
@@ -183,14 +183,7 @@ src_install() {
 			# Remove gtk bindings (requires gtk-perl/gtk2-perl)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm \
 				${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
-			toolkits=${toolkits/gtk2/}
 			toolkits=${toolkits/gtk/}
-		else
-			if ! use gtk2; then
-				# Just remove the gtk2 bindings (requires gtk2-perl)
-				rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
-				toolkits=${toolkits/gtk2/}
-			fi
 		fi
 		toolkits=${toolkits// /}
 		if ! test "${toolkits}"; then
