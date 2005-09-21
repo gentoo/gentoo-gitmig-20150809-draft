@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 53bf2c5e8536959706dc6456df858b00 unison-2.12.0.ebuild 1637
-MD5 a4757ad39d6014ba1a3db3e3d6292457 unison-2.13.0.ebuild 1927
 MD5 bfd01cd66f086cc9ca50321067cb43c1 unison-2.9.1-r1.ebuild 1276
-MD5 638b40b0aa46090ca68941f72ef3742b ChangeLog 4869
-MD5 38eaac5e705cb7500f081bb5fc220273 files/digest-unison-2.12.0 65
-MD5 76c33afd24bb34b9dbe90989e3235e36 files/digest-unison-2.13.0 204
-MD5 29b28492666138199820e9df8fcc6a47 files/digest-unison-2.9.1-r1 64
+MD5 6bb195dada52ef3a89cfce725153d743 unison-2.12.0-r1.ebuild 1442
+MD5 895352e780be1770c0ca73c7a694c4ec unison-2.13.16.ebuild 1696
+MD5 8b6f14fa98998bc5019f4006af2e5dff ChangeLog 5188
+MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
+MD5 a5c77f41a817220743b90f1e530c0739 unison-2.17.1.ebuild 1773
+MD5 38eaac5e705cb7500f081bb5fc220273 files/digest-unison-2.12.0-r1 65
+MD5 613c9eae8429f41c8218d4967501b0ef files/digest-unison-2.17.1 204
 MD5 5abcf068ada1ab9eedbe3dfa16ad15fb files/ocaml-3.08-extnames.patch 748
 MD5 402b704e5c7c71a69fd6400c395834ec files/unison-2.12.0-gtk2-bug.patch 490
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLAoPKf2g/qXtneoRAmClAJ4sf3h8ShHLPiRNTXN68QpwLfLztACghUvr
-7w740uxt5YC8ksWJmlry5+Q=
-=uiGy
------END PGP SIGNATURE-----
+MD5 29b28492666138199820e9df8fcc6a47 files/digest-unison-2.9.1-r1 64
+MD5 3e50ed2240ee231bdb6079e1289eb97b files/digest-unison-2.13.16 207
