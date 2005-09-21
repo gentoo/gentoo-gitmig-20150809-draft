@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 c30c3dcb479450775e6b471e1960a9e6 qt-4.0.1.ebuild 5613
 MD5 20c9b273d559aebcc6aa71b28f47fcbd qt-3.3.5.ebuild 9940
-MD5 7db4f9ddc9f6fd5d523d2e459c6614a1 qt-3.3.4-r8.ebuild 9991
+MD5 18cb8894af97e45b277628a9730f1647 qt-3.3.4-r8.ebuild 9990
 MD5 a242233fb1072c5cfbe5ebbab1443e8d qt-3.3.4-r3.ebuild 9049
 MD5 cf386ea22e4be00ea893fecf5a6220ba qt-4.0.0.ebuild 5721
 MD5 29eb571b78b63bccc11984b19cd7153b qt-3.3.4-r7.ebuild 9966
 MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
-MD5 d03206bf1d8458f9cdddbb91427cc447 ChangeLog 1447
+MD5 21c23728985368e8276f2b94f929b10a ChangeLog 1555
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 8a3143b4c6b3ed6f9407e6dad3887482 qt-3.3.4-r6.ebuild 9052
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
@@ -40,9 +40,9 @@ MD5 33975d39870dca02e85664411a93eae1 files/qt-3.3.4-gcc4.patch 1002
 MD5 8f75ba0e151481962fcb239dc216cf39 files/qt-3.3.4-0051-qtoolbar_77047.patch 1278
 MD5 eb6eb6b68c8f747b12a3a53efc4b6480 files/0038-dragobject-dont-prefer-unknown.patch 2551
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMFVlntT9W3vfTuoRAu34AJ9/5vG63AtDIscPXr6TxsGJseH/KQCeOHB9
-01a/mZ06cOUvB1U7JTABF1g=
-=uDc1
+iD8DBQFDMSnWViELBEf1JB0RAuTMAJ4xbJrscXEk5KQabhSxqyw0cKH3bwCaAuwt
+ES77neVde+VCimrfPDPEv20=
+=sFlR
 -----END PGP SIGNATURE-----
