@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.1 2005/04/09 02:13:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.2 2005/09/21 02:40:53 vapier Exp $
+
+*libunwind-0.98.5 (21 Sep 2005)
+
+  21 Sep 2005; Mike Frysinger <vapier@gentoo.org> +libunwind-0.98.5.ebuild:
+  Version bump.
 
 *libunwind-0.98.4 (08 Apr 2005)
 

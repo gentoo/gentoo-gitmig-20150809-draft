@@ -1,4 +1,16 @@
-MD5 bacba3661ba64d8303ded922154ca5ee libunwind-0.98.4.ebuild 595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f8a4a3c105cc320fe2d488b2aaf0c0df libunwind-0.98.5.ebuild 595
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 06ef3f18911c945fc4ff4b311cdb9a1a ChangeLog 337
+MD5 bacba3661ba64d8303ded922154ca5ee libunwind-0.98.4.ebuild 595
+MD5 56550e6fa857a1eef5a20a0f70b18248 ChangeLog 463
 MD5 0d17274a86e9a49bfd1dd8cfcc7db374 files/digest-libunwind-0.98.4 68
+MD5 f204f2cb28edc79e6203858ec9af562a files/digest-libunwind-0.98.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMMhTgIKl8Uu19MoRAv4pAJ0Z3w1G1TBhZ35Jsh4BB5jOP6xa/gCeMGrt
+YHhNoKTkjweBFCqMxM2a72A=
+=qC4h
+-----END PGP SIGNATURE-----
