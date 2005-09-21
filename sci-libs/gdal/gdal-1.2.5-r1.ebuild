@@ -1,11 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5-r1.ebuild,v 1.5 2005/09/11 04:21:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.5-r1.ebuild,v 1.6 2005/09/21 06:19:14 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils multilib
-
-# libgrass support is coming soon...
-#	grass? ( >=sci-geosciences/grass-5.0 )
 
 IUSE="jpeg png gif python postgres mysql ogdi fits debug"
 

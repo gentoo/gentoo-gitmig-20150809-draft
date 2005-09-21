@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r3.ebuild,v 1.4 2005/09/17 21:50:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r3.ebuild,v 1.5 2005/09/21 06:19:14 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -28,12 +28,12 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	ogdi? ( sci-libs/ogdi )
 	gml? ( dev-libs/xerces-c )
 	|| (
-		postgres? ( dev-db/postgresql )
-		mysql? ( dev-db/mysql )
+	    postgres? ( dev-db/postgresql )
+	    mysql? ( dev-db/mysql )
 	)
 	|| (
-		netcdf? ( sci-libs/netcdf )
-		hdf? ( sci-libs/hdf )
+	    netcdf? ( sci-libs/netcdf )
+	    hdf? ( sci-libs/hdf )
 	)
 	jasper? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
@@ -48,14 +48,14 @@ src_unpack() {
 	elibtoolize --patch-only
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
-		einfo	"Checking is HDF4 compiled with szip..."
-		if built_with_use sci-libs/hdf szip ; then
-			einfo	"Found HDF4 compiled with szip. Nice."
-		else
-			ewarn 	"HDF4 must be compiled with szip USE flag!"
-			einfo 	"Emerge HDF with szip USE flag and then emerge GDAL."
-			die 	"HDF4 not merged with szip use flag"
-		fi
+	    einfo	"Checking is HDF4 compiled with szip..."
+	    if built_with_use sci-libs/hdf szip ; then
+		einfo	"Found HDF4 compiled with szip. Nice."
+	    else
+		ewarn 	"HDF4 must be compiled with szip USE flag!"
+		einfo 	"Emerge HDF with szip USE flag and then emerge GDAL."
+		die 	"HDF4 not merged with szip use flag"
+	    fi
 	fi
 }
 
@@ -65,45 +65,45 @@ src_compile() {
 	# it doesn't work without ${D} (or with econf and einstall).
 
 	pkg_conf="--prefix=${D}usr --exec-prefix=${D}usr --bindir=${D}usr/bin \
-		--datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal \
-		--libdir=${D}usr/$(get_libdir) --mandir=${D}usr/share/man
-		--with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
-		--enable-static=no --enable-shared=yes --with-gnu-ld"
+	    --datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal \
+	    --libdir=${D}usr/$(get_libdir) --mandir=${D}usr/share/man \
+	    --with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
+	    --enable-static=no --enable-shared=yes --with-gnu-ld"
 
 	# the above should make libtool behave for the most part
 
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
-		$(use_with postgres pg) $(use_with fits cfitsio) \
-		$(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
-		$(use_with sqlite) $(use_with jasper) $(use_with odbc)
-		$(use_with gml xerces)"
+	    $(use_with postgres pg) $(use_with fits cfitsio) \
+	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
+	    $(use_with sqlite) $(use_with jasper) $(use_with odbc) \
+	    $(use_with gml xerces)"
 
 	# It can't find this
 	if useq ogdi ; then
-		use_conf="--with-ogdi=/usr/lib ${use_conf}"
+	    use_conf="--with-ogdi=/usr/lib ${use_conf}"
 	fi
 
 	if useq gif ; then
-		use_conf="--with-gif=internal ${use_conf}"
+	    use_conf="--with-gif=internal ${use_conf}"
 	else
-		use_conf="--with-gif=no ${use_conf}"
+	    use_conf="--with-gif=no ${use_conf}"
 	fi
 
 	if useq debug ; then
-	        export CFG=debug
+	    export CFG=debug
 	fi
 
 	# Enable newer Grass support only
 	if useq grass ; then
-		use_conf="--with-grass=/usr/grass60 ${use_conf}"
-		use_conf="--with-libgrass=no ${use_conf}"
+	    use_conf="--with-grass=/usr/grass60 ${use_conf}"
+	    use_conf="--with-libgrass=no ${use_conf}"
 	fi
 
 	if useq python ; then
-		use_conf="--with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
-			${use_conf}"
+	    use_conf="--with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
+	    ${use_conf}"
 	else
-		use_conf="--with-python=no ${use_conf}"
+	    use_conf="--with-python=no ${use_conf}"
 	fi
 
 	# Fix doc path just in case
@@ -130,7 +130,9 @@ src_install() {
 	dosed "s:$(INST_DOCS)/gdal:$(INST_DOCS)/html:g" GNUmakefile
 	dodoc Doxyfile.man Doxyfile HOWTO-RELEASE NEWS
 	if useq doc ; then
-	    dohtml html/*.* || die "install html failed"
+	    dohtml html/* || die "install html failed"
+	    docinto ogr
+	    dohtml ogr/html/* || die "install ogr html failed"
 	fi
 }
 
