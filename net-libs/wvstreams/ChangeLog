@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.63 2005/09/07 20:22:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.64 2005/09/21 23:22:29 halcy0n Exp $
+
+  21 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Adding to cpp herd, marking mrness as primary maintainer
 
 *wvstreams-4.0.2-r1 (07 Sep 2005)
 
