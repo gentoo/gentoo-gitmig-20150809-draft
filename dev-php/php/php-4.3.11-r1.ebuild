@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11-r1.ebuild,v 1.4 2005/09/19 19:52:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11-r1.ebuild,v 1.5 2005/09/21 19:50:43 ferdy Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
 
 DESCRIPTION="PHP Shell Interpreter"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 # fixed PCRE library for security issues, bug #102373
