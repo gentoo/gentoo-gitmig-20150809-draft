@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.3.ebuild,v 1.1 2005/08/10 23:08:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.3.3.ebuild,v 1.2 2005/09/21 03:44:50 latexer Exp $
 
 inherit gnome2 mono eutils
 
@@ -34,8 +34,6 @@ DOCS="AUTHORS Changelog INSTALL NEWS README"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	#epatch ${FILESDIR}/${P}-1.1.x-compat.diff || die
-	#epatch ${FILESDIR}/${P}-mono-1.1.7-compat.diff || die
-	#epatch ${FILESDIR}/${P}-mono-1.1.8-compat.diff || die
+	epatch ${FILESDIR}/${P}-mono-1.1.9-compat.diff
 }
 
