@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/makepp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/makepp/ChangeLog,v 1.4 2005/01/03 00:08:29 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/makepp/ChangeLog,v 1.5 2005/09/21 23:15:58 vapier Exp $
+
+*makepp-1.40.1a (21 Sep 2005)
+
+  21 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/makepp-1.40.1a-install.patch, +makepp-1.40.1a.ebuild:
+  Version bump to fix #106780.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
