@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.193 2005/09/20 04:50:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.194 2005/09/21 02:58:59 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -109,11 +109,11 @@ elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
 	# specific gcc targets, like libffi. Note that we dont override the value
 	# returned by get_libdir here.
 	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/$(get_libdir)}
-	LIBEXECPATH=${TOOLCHAIN_LIBEXE:-${PREFIX}/libexec/gcc/}
+	LIBEXECPATH=${TOOLCHAIN_LIBEXE:-${PREFIX}/libexec/gcc}
 	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${PREFIX}/include}
-	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/bin/}
-	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/}
-	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${PREFIX}/include/g++-v3/}
+	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/bin}
+	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share}
+	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${PREFIX}/include/g++-v3}
 fi
 
 XGCC="${WORKDIR}/build/gcc/xgcc -B${WORKDIR}/build/gcc"
@@ -688,57 +688,7 @@ create_gcc_env_entry() {
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
 
-	if has_version '>=sys-devel/gcc-config-1.4.0' ; then
-		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
-
-		local ctarget_alias
-		local abi
-		local FAKE_TARGETS=""
-
-		if is_crosscompile; then
-			case ${CTARGET} in
-			x86_64*)
-				FAKE_TARGETS="i686-pc-linux-gnu"
-				echo "CFLAGS_i686_pc_linux_gnu=\"-m32\"" >> ${gcc_envd_file}
-			;;
-			sparc64*)
-				FAKE_TARGETS="sparc-unknown-linux-gnu"
-				echo "CFLAGS_sparc_unknown_linux_gnu=\"-m32\"" >> ${gcc_envd_file}
-			;;
-			mips64*)
-				FAKE_TARGETS="mips-unknown-linux-gnu"
-				echo "CFLAGS_mips_unknown_linux_gnu=\"-mabi=32\"" >> ${gcc_envd_file}
-			;;
-			powerpc64*)
-				FAKE_TARGETS="powerpc-unknown-linux-gnu"
-				echo "CFLAGS_powerpc_unknown_linux_gnu=\"-m32\"" >> ${gcc_envd_file}
-			;;
-			*)
-				FAKE_TARGETS=""
-			;;
-			esac
-
-			echo "CFLAGS_default=\"\"" >> ${gcc_envd_file}
-		else
-			for abi in $(get_all_abis) ; do
-				for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_FAKE_TARGETS ${abi}) ; do
-					if [[ ${ctarget_alias} != ${CHOST} ]] ; then
-						FAKE_TARGETS="${FAKE_TARGETS+${FAKE_TARGETS} }${ctarget_alias}"
-						local var="CFLAGS_${ctarget_alias//-/_}"
-						echo "${var}=\"$(get_abi_CFLAGS ${abi}) ${!var}\"" >> ${gcc_envd_file}
-					fi
-				done
-			done
-
-			echo "CFLAGS_default=\"$(get_abi_CFLAGS ${DEFAULT_ABI})\"" >> ${gcc_envd_file}
-		fi
-
-		if [[ -n ${FAKE_TARGETS} ]] ; then
-			echo "FAKE_TARGETS=\"${FAKE_TARGETS}\"" >> ${gcc_envd_file}
-		fi
-	elif is_crosscompile ; then
-		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
-	fi
+	is_crosscompile && echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
 
 	# Set which specs file to use
 	[[ -n ${gcc_specs_file} ]] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
@@ -1525,19 +1475,20 @@ gcc-compiler_src_install() {
 	fi
 
 	# Setup symlinks to multilib ABIs for crosscompiled gccs
-	if is_crosscompile && is_multilib; then
-		CHOST_x86="i686-pc-linux-gnu"
-		CHOST_amd64="x86_64-pc-linux-gnu"
-		CHOST_ppc="powerpc-unknown-linux-gnu"
-		CHOST_ppc64="powerpc64-unknown-linux-gnu"
-		CHOST_sparc32="sparc-unknown-linux-gnu"
-		CHOST_sparc64="sparc64-unknown-linux-gnu"
+	if is_crosscompile && is_multilib ; then
+		local CHOST_post=${CTARGET#*-}
+		CHOST_x86="i686-${CHOST_post}"
+		CHOST_amd64="x86_64-${CHOST_post}"
+		CHOST_ppc="powerpc-${CHOST_post}"
+		CHOST_ppc64="powerpc64-${CHOST_post}"
+		CHOST_sparc32="sparc-${CHOST_post}"
+		CHOST_sparc64="sparc64-${CHOST_post}"
 
 		case $(tc-arch) in
 		amd64) abilist="x86";;
 		ppc64) abilist="ppc";;
 		sparc) abilist="sparc32";;
-		mips)  true;;
+		mips)  abilist="";; # mips is already handled properly
 		*)
 			eerror "Unknown multilib arch: $(tc-arch)"
 			die "Unknown multilib arch: $(tc-arch)"
@@ -1555,7 +1506,7 @@ gcc-compiler_src_install() {
 		rm -rf "${D}"${DATAPATH}/{man,info}
 	else
 		if [[ -d ${WORKDIR}/build/${CTARGET}/libstdc++-v3/docs/doxygen/man ]] ; then
-			cp -r ${WORKDIR}/build/${CTARGET}/libstdc++-v3/docs/doxygen/man/man3 ${D}/${DATAPATH}/man/
+			cp -r ${WORKDIR}/build/${CTARGET}/libstdc++-v3/docs/doxygen/man/man? ${D}/${DATAPATH}/man/
 		fi
 		prepman ${DATAPATH}
 		prepinfo ${DATAPATH}
@@ -2047,33 +1998,13 @@ fix_libtool_libdir_paths() {
 }
 
 is_multilib() {
-	case $(tc-arch) in
-		sparc)
-			case ${CTARGET} in
-				sparc64*)
-					is_crosscompile || has_multilib_profile || use multilib
-					;;
-				*)
-					false
-					;;
-			esac
-		;;
-		mips)
-			case ${CTARGET} in
-				mips64*)
-					is_crosscompile || has_multilib_profile || use multilib
-					;;
-				*)
-					false
-					;;
-			esac
-		;;
-		amd64|ppc64)
-			is_crosscompile || has_multilib_profile || use multilib
-		;;
-		*)
-			false
-		;;
+	case ${CTARGET} in
+		*-uclibc) false ;;
+
+		x86_64*|mips64*|powerpc64*|sparc64*)
+			is_crosscompile || has_multilib_profile || use multilib ;;
+
+		*)	false ;;
 	esac
 }
 
