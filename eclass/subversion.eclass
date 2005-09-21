@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.23 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.24 2005/09/21 23:32:21 vapier Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -107,9 +107,14 @@ function subversion_svn_fetch() {
 
 	# check for the protocol.
 	case ${ESVN_REPO_URI%%:*} in
-		http)	;;
-		https)	;;
-		svn)	;;
+		http|https)
+			if built_with_use dev-util/subversion nowebdav ; then
+				eerror "In order to emerge this package, you need to"
+				eerror "re-emerge subversion with USE=-nowebdav"
+				die "Please run 'USE=-nowebdav emerge subversion'"
+			fi
+			;;
+		svn) ;;
 		*)
 			die "${ESVN}: fetch from "${ESVN_REPO_URI%:*}" is not yet implemented."
 			;;
@@ -227,7 +232,7 @@ function subversion_bootstrap() {
 
 function subversion_src_unpack() {
 
-	if [ "${A}" != "" ]; then
+	if [[ -n ${A} ]] ; then
 		unpack ${A}
 	fi
 
