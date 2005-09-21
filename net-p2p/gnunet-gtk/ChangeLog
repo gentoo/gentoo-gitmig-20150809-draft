@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/gnunet-gtk
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.1 2005/09/21 12:24:16 mkay Exp $
+
+*gnunet-gtk-0.7.0 (21 Sep 2005)
+
+  21 Sep 2005; <mkay@gentoo.org> +gnunet-gtk-0.7.0.ebuild:
+  gnunet is now splitted and the gui is delivered in separate package.
+  Initial version. Thanks Glenn L. McGrath for bug #67222
+
