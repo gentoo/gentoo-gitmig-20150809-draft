@@ -1,0 +1,33 @@
+diff -Nru a/Makefile b/Makefile
+--- a/Makefile	2004-08-14 03:56:28 -07:00
++++ b/Makefile	2004-08-14 03:56:28 -07:00
+@@ -1,7 +1,7 @@
+ VERSION = 2
+ PATCHLEVEL = 6
+ SUBLEVEL = 8
+-EXTRAVERSION =
++EXTRAVERSION = .1
+ NAME=Zonked Quokka
+ 
+ # *DOCUMENTATION*
+diff -Nru a/fs/nfs/file.c b/fs/nfs/file.c
+--- a/fs/nfs/file.c	2004-08-14 03:56:28 -07:00
++++ b/fs/nfs/file.c	2004-08-14 03:56:28 -07:00
+@@ -72,7 +72,7 @@
+ 
+ static int nfs_check_flags(int flags)
+ {
+-	if (flags & (O_APPEND | O_DIRECT))
++	if ((flags & (O_APPEND | O_DIRECT)) == (O_APPEND | O_DIRECT))
+ 		return -EINVAL;
+ 
+ 	return 0;
+@@ -89,7 +89,7 @@
+ 	int res;
+ 
+ 	res = nfs_check_flags(filp->f_flags);
+-	if (!res)
++	if (res)
+ 		return res;
+ 
+ 	lock_kernel();

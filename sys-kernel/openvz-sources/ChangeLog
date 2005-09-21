@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/openvz-sources
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.1 2005/09/21 14:02:21 hollow Exp $
+
+*openvz-sources-022.034 (21 Sep 2005)
+
+  21 Sep 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/linux-2.6.8.1.patch, +metadata.xml, +openvz-sources-022.034.ebuild:
+  Initial openvz kernel. Thx to kir from freenode#openvz
+
