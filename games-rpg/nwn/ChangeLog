@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.23 2005/09/16 02:49:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.24 2005/09/21 00:39:04 wolf31o2 Exp $
+
+*nwn-1.66-r1 (21 Sep 2005)
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  nwn-1.66.ebuild, +nwn-1.66-r1.ebuild:
+  Initial commit of new split ebuild for nwn (1.66-r1). It is currently
+  masked, but I'm hoping that this becomes the default for nwn quite shortly.
+  Closing bug #106484.
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> nwn-1.65-r1.ebuild,
   nwn-1.66.ebuild:
