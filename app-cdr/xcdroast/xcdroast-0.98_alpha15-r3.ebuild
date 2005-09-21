@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.14 2005/09/14 15:21:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.15 2005/09/21 18:26:25 metalgod Exp $
 
 inherit eutils
 
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc amd64"
-IUSE="nls dvdr gtk2"
+IUSE="nls dvdr gtk"
 
-DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.3 )
-	!gtk2? ( >=media-libs/gdk-pixbuf-0.16.0 )"
+DEPEND="gtk? ( >=x11-libs/gtk+-2.0.3 )
+	!gtk? ( >=media-libs/gdk-pixbuf-0.16.0 )"
 
 RDEPEND="
 	dvdr? (
@@ -29,14 +29,14 @@ src_unpack() {
 	unpack ${P}_new_configure.tar.gz
 
 	cd ${S}/src
-	use gtk2 && epatch ${FILESDIR}/gtk2locale.patch
+	use gtk && epatch ${FILESDIR}/gtk2locale.patch
 	use amd64 && epatch ${FILESDIR}/64bit_gsize.patch
 }
 
 src_compile() {
 	econf \
 		$(use_enable nls) \
-		$(use_enable gtk2) \
+		$(use_enable gtk) \
 		--disable-dependency-tracking || die
 
 	make PREFIX=/usr || die

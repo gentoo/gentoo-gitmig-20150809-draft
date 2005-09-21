@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.42 2005/09/14 15:21:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.43 2005/09/21 18:26:25 metalgod Exp $
+
+  21 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  xcdroast-0.98_alpha15-r3.ebuild:
+  Switch gtk2 use flag to gtk. Bug #106560.
 
   14 Sep 2005; Luis Medinas <metalgod@gentoo.org>
   xcdroast-0.98_alpha15-r3.ebuild:
