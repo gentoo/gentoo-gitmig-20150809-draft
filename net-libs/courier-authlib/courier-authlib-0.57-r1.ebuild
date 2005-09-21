@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.57-r1.ebuild,v 1.1 2005/08/24 08:37:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.57-r1.ebuild,v 1.2 2005/09/21 12:18:24 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -12,7 +12,7 @@ S="${WORKDIR}/${P%%_pre}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~ppc64"
+KEYWORDS="x86 ~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~ppc64"
 IUSE="postgres ldap mysql berkdb gdbm pam crypt debug"
 RESTRICT="nouserpriv"
 
