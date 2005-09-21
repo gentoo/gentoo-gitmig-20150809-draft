@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.3 2005/03/18 16:49:58 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.6.0.ebuild,v 1.4 2005/09/21 21:28:24 mattam Exp $
 
 inherit eutils
 
@@ -54,15 +54,20 @@ pkg_setup() {
 src_unpack() {
 
 	unpack ${A}
+	cd ${S}
 	# need to remove texhash, it'll cause problems with
 	# the sandbox if we try and run it during emerge
-	sed -i -e "s/texhash//" ${S}/Makefile
+	sed -i -e "s/texhash//" Makefile
+
+	if has_version ">=dev-lang/ocaml-3.08.4"; then
+		sed -i -e "s/resize_window/resize_subwindow/" grY11.c
+	fi
 
 	if use cjk ; then
 		local fp=/usr/X11R6/lib/X11/fonts/truetype
 		sed -i -e "s%msmincho.ttc%${fp}/kochi-mincho-subst.ttf%g" \
 			-e "s%msgothic.ttc%${fp}/kochi-gothic-subst.ttf%g" \
-			${S}/conf/jpfonts.conf
+			conf/jpfonts.conf
 	fi
 
 }
