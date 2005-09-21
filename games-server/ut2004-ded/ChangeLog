@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.6 2005/08/30 19:32:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.7 2005/09/21 20:52:37 wolf31o2 Exp $
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-ded-3355.ebuild:
+  Changed check_license to explicitly list license to check.
 
   30 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -ut2004-ded-3339.ebuild, ut2004-ded-3355.ebuild:

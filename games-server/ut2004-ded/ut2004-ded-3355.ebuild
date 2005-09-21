@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3355.ebuild,v 1.3 2005/08/30 19:32:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3355.ebuild,v 1.4 2005/09/21 20:52:37 wolf31o2 Exp $
 
 inherit games
 
@@ -25,7 +25,7 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license || die "License check failed"
+	check_license ut2003
 	games_pkg_setup
 }
 
