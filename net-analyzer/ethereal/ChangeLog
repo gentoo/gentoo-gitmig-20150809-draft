@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.136 2005/09/19 19:55:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.137 2005/09/21 21:21:44 vanquirius Exp $
+
+  21 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> ethereal-0.10.12.ebuild:
+  Fix ebuild so that it works without building X. Passing --disable-ethereal
+  _does_ have an influence now. Fixes bug 106772. Thanks to Chris
+  Paulson-Ellis <chris at edesix dot com>.
 
   19 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
   -ethereal-0.10.11.ebuild, -ethereal-0.10.11-r1.ebuild,

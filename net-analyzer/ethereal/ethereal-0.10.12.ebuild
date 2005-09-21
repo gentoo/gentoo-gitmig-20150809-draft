@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.12.ebuild,v 1.9 2005/09/19 19:55:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.12.ebuild,v 1.10 2005/09/21 21:21:44 vanquirius Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -13,10 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="adns gtk ipv6 snmp ssl kerberos"
-
-# if --disable-gtk2 is not passed to configure it will try to build with glib-2.0.
-# --disable-ethereal do not have an influence.
-
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( >=net-analyzer/net-snmp-5.1.1 )
@@ -54,8 +50,10 @@ src_compile() {
 	local myconf
 
 	if use gtk; then
-		myconf="${myconf} $(use_enable gtk gtk2)"
+		einfo "Building with gtk support"
 	else
+		einfo "Building without gtk support"
+		myconf="${myconf} --disable-ethereal"
 		# the asn1 plugin needs gtk
 		sed -i -e '/plugins.asn1/d' Makefile.in || die "sed failed"
 		sed -i -e '/^SUBDIRS/s/asn1//' plugins/Makefile.in || die "sed failed"
@@ -67,6 +65,7 @@ src_compile() {
 		$(use_with adns) \
 		$(use_with kerberos krb5) \
 		$(use_with snmp net-snmp) \
+		$(use_enable gtk gtk2) \
 		--without-ucd-snmp \
 		--enable-dftest \
 		--enable-randpkt \

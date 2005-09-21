@@ -1,5 +1,5 @@
-MD5 522d6f7acd4653ce2c99368ace3db6a9 ethereal-0.10.12.ebuild 3505
-MD5 d4d00cfbd05c26084f690ad15d70cdad ChangeLog 10741
+MD5 f8df469837b3a964d556a54c89c4dd7e ethereal-0.10.12.ebuild 3472
+MD5 5bce438ee5ecab27c437a1b0be899305 ChangeLog 11005
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
 MD5 34bd8a0285aea402be479f40304aa947 files/digest-ethereal-0.10.12 70
 MD5 a4d5fb3621ed4e86f311718f1447a870 files/fifo.patch 1138
