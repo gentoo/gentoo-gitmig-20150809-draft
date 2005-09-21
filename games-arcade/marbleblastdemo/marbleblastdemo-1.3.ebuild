@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastdemo/marbleblastdemo-1.3.ebuild,v 1.5 2005/08/11 23:43:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastdemo/marbleblastdemo-1.3.ebuild,v 1.6 2005/09/21 20:30:55 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ DEPEND=""
 S=${WORKDIR}
 
 pkg_setup() {
-	check_license
+	check_license MARBLEBLAST
 	games_pkg_setup
 }
 

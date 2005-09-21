@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/marbleblastdemo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastdemo/ChangeLog,v 1.3 2005/08/11 23:43:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastdemo/ChangeLog,v 1.4 2005/09/21 20:30:55 wolf31o2 Exp $
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  marbleblastdemo-1.3.ebuild:
+  Changed check_license to explicitly list license to check.
 
   11 Aug 2005; Olivier Crête <tester@gentoo.org>
   marbleblastdemo-1.3.ebuild:
