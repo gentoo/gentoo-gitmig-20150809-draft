@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 151698471c967f2ee266891aaebd18ea mod_php-4.4.0.ebuild 6145
-MD5 4fa68e7608c16694675eb9592f7a8438 mod_php-4.4.0-r2.ebuild 6879
+MD5 351294e87971c75ff03f3b68b85663fd mod_php-4.4.0-r2.ebuild 6877
 MD5 e91b5fb961ab382291a45f5221ae7394 mod_php-4.3.11-r1.ebuild 6930
 MD5 5497fe36dda29f34ea7e35780683acd8 mod_php-4.4.0-r1.ebuild 6370
 MD5 adf20bea2955fa8bb573026c733864b5 mod_php-4.3.11.ebuild 6196
 MD5 344c2ed7ef423d32e92495a11a482ae0 mod_php-4.4.0-r3.ebuild 5912
-MD5 3f0549aadc441345be253d395d47a948 ChangeLog 46962
+MD5 0667b9ac338f7834eeb1eadebbb3381d ChangeLog 47077
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
 MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
@@ -34,7 +34,7 @@ MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0-a2/70_mod_php.conf 485
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMdXvViELBEf1JB0RAqU0AJ9hQZOjNPHJ/jey3VYoOWhAuXohgwCbBphv
-Gtdvcvf7/5DWgq8TS+fsiYc=
-=Em5K
+iD8DBQFDMdgtViELBEf1JB0RArw0AJ9/YeD52Hb69FN05W22v1HSnlT25wCfRDeX
+6QkuQK63q3cNCnz0cGsAxPU=
+=peqR
 -----END PGP SIGNATURE-----
