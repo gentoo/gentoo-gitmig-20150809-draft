@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fa361f79b130c94c0bde4e06db5ca71f bmpx-0.11.2.ebuild 1808
+MD5 d6dc7457c353c9624d947e58eed71aba ChangeLog 386
+MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
+MD5 278bfefa3b03e686b43c85755dc0957d files/digest-bmpx-0.11.2 64
+MD5 1f848b32c8c1478af3f6d3097f07fc52 files/bmpx-0.11.2-desktop.patch 382
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMbSP1ZcsMnZjRyIRAreGAJ9jEmJMae0BX4FgKE9kDW2fCeiDXACgqi7g
+E9EjrV346ChCw0IzCruqEQ8=
+=GFq/
+-----END PGP SIGNATURE-----
