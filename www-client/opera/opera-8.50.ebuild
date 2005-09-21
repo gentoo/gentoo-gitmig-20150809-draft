@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.50.ebuild,v 1.1 2005/09/20 10:29:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.50.ebuild,v 1.2 2005/09/21 16:14:33 axxo Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ RDEPEND="virtual/x11
 	          media-libs/jpeg )"
 
 SLOT="0"
-LICENSE="OPERA"
+LICENSE="OPERA-8.50"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 src_unpack() {
