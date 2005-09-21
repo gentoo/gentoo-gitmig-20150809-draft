@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.30 2005/09/18 16:21:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.31 2005/09/21 03:23:02 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -27,7 +27,7 @@ GLIBC_MANPAGE_VERSION="2.3.5"
 GLIBC_INFOPAGE_VERSION="2.3.5"
 
 # Gentoo patchset
-PATCH_VER="1.9"
+PATCH_VER="1.10"
 
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
@@ -285,8 +285,6 @@ toolchain-glibc_pkg_preinst() {
 }
 
 toolchain-glibc_src_install() {
-	setup_flags
-
 	# Need to dodir first because it might not exist (bad amd64 profiles)
 	dodir $(alt_usrlibdir)
 
@@ -848,8 +846,6 @@ setup_locales() {
 glibc_do_configure() {
 	local myconf
 
-	setup_flags
-
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
 	unset LANGUAGE LANG LC_ALL
@@ -966,12 +962,10 @@ use_multilib() {
 }
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
-crosscompile_setup() {
-	if is_crosscompile || tc-is-cross-compiler; then
-		# CFLAGS are used by ${CTARGET}-gcc
-		local VAR="CFLAGS_"${CTARGET//-/_}
-		CFLAGS=${!VAR-"-O2"}
+setup_env() {
+	setup_flags
 
+	if is_crosscompile || tc-is-cross-compiler ; then
 		case ${CTARGET} in
 			x86_64*)
 				export CFLAGS_x86=${CFLAGS_x86--m32}
@@ -990,17 +984,17 @@ crosscompile_setup() {
 			mips64*)
 				export CFLAGS_o32=${CFLAGS_o32--mabi=32}
 				export CHOST_o32=${CTARGET/mips64/mips}
-				export CDEFINE_o32="_ABIO32"
+				export CDEFINE_o32="_MIPS_SIM == _ABIO32"
 				export LIBDIR_o32="lib"
 
 				export CFLAGS_n32=${CFLAGS_n32--mabi=n32}
 				export CHOST_n32=${CTARGET}
-				export CDEFINE_n32="_ABIN32"
+				export CDEFINE_n32="_MIPS_SIM == _ABIN32"
 				export LIBDIR_n32="lib32"
 
 				export CFLAGS_n64=${CFLAGS_n64--mabi=64}
 				export CHOST_n64=${CTARGET}
-				export CDEFINE_n64="_ABI64"
+				export CDEFINE_n64="_MIPS_SIM == _ABI64"
 				export LIBDIR_n64="lib64"
 
 				export MULTILIB_ABIS="n64 n32"
@@ -1038,8 +1032,17 @@ crosscompile_setup() {
 				export MULTILIB_ABIS="default"
 				export DEFAULT_ABI="default"
 		esac
+	fi
 
-		ABI=${DEFAULT_ABI}
+	export ABI=${ABI:-${DEFAULT_ABI:-default}}
+
+	if is_crosscompile || tc-is-cross-compiler ; then
+		# We need to export CFLAGS with abi information in them because
+		# glibc's configure script checks CFLAGS for some targets (like mips)
+		local VAR=CFLAGS_${CTARGET//-/_}
+		export CFLAGS=${!VAR--O2}
+		VAR=CFLAGS_${ABI}
+		export CFLAGS="${CFLAGS} ${!VAR}"
 	fi
 }
 
@@ -1112,8 +1115,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	crosscompile_setup
-	export ABI="${DEFAULT_ABI}"
+	setup_env
 
 	case $(tc-arch) in
 		hppa)
@@ -1183,7 +1185,7 @@ src_unpack() {
 }
 
 src_compile() {
-	crosscompile_setup
+	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
 		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
@@ -1192,7 +1194,7 @@ src_compile() {
 			OABI=${ABI}
 			einfo "Building multilib glibc for ABIs: $(get_install_abis)"
 			for ABI in $(get_install_abis) ; do
-				export ABI=${ABI}
+				export ABI
 				src_compile
 			done
 			ABI=${OABI}
@@ -1202,12 +1204,11 @@ src_compile() {
 		unset MLTEST
 	fi
 
-	ABI=${ABI:-default}
 	toolchain-glibc_src_compile
 }
 
 src_test() {
-	crosscompile_setup
+	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
 		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
@@ -1227,12 +1228,11 @@ src_test() {
 		unset MLTEST
 	fi
 
-	ABI=${ABI:-default}
 	toolchain-glibc_src_test
 }
 
 src_install() {
-	crosscompile_setup
+	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
 		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
@@ -1250,8 +1250,6 @@ src_install() {
 		fi
 		unset MLTEST
 	fi
-
-	ABI=${ABI:-default}
 
 	# Handle stupid lib32 BS
 	unset OLD_LIBDIR
