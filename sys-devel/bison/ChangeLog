@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.42 2005/09/15 04:26:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.43 2005/09/21 23:43:04 vapier Exp $
+
+*bison-2.1 (21 Sep 2005)
+
+  21 Sep 2005; Mike Frysinger <vapier@gentoo.org> +bison-2.1.ebuild:
+  Version bump #106803 by Michael Cramer.
 
   15 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   +files/bison-2.0-token-name-translate.patch, bison-2.0.ebuild:
