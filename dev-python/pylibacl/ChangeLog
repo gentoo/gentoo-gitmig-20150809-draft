@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pylibacl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.1 2005/09/21 16:48:39 robbat2 Exp $
+
+*pylibacl-0.2.1 (21 Sep 2005)
+
+  21 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +pylibacl-0.2.1.ebuild:
+  Initial commit, ebuild submitted by Thomas Bettler
+  <bettlertho@sis.unibe.ch>, dependancy for new rdiff-backup.
+
