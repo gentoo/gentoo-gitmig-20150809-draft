@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1463 2005/09/21 19:36:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1464 2005/09/21 21:12:20 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -36,6 +36,7 @@ app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinint b
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 64 bits integers.
 app-backup/kdar:dar32 - Support libdar32.so to use.
 app-backup/kdar:dar64 - Support libdar64.so to use.
+app-backup/rdiff-backup:xattr - if you want extended attributes enabled
 app-cdr/cdrdao:pccts - Use dev-util/pccts instead of the built-in substitution.
 app-cdr/cdrtools:on-the-fly-crypt - On the fly AES encryption for CD-Rs.
 app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make www-apps/disc-cover work.
