@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r5.ebuild,v 1.3 2005/09/20 23:48:05 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r5.ebuild,v 1.4 2005/09/21 17:10:47 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1428,6 +1428,8 @@ check_migrate_return() {
 	if [ "${MIGRATE_RETURN}" -eq "0" ]; then
 		einfo "rsync successful!"
 	else
+		eerror "rsync failed."
+		eerror "Check for migrate-* files in ${T}."
 		die "rsync failed. Exit code: ${MIGRATE_RETURN}."
 	fi
 
