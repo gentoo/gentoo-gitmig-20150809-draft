@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/noia-1.0-r1.ebuild,v 1.2 2005/09/18 16:49:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/noia-1.0-r1.ebuild,v 1.3 2005/09/21 19:23:17 chriswhite Exp $
 
 DESCRIPTION="The Noia icon theme"
 SRC_URI="http://es.kde.org/downloads/noia-kde-icons-1.00.tgz"
 HOMEPAGE="http://www.carlitus.net"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
