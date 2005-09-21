@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/omake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.5 2005/02/17 20:05:20 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.6 2005/09/21 18:48:01 mattam Exp $
+
+*omake-0.9.6.5 (21 Sep 2005)
+
+  21 Sep 2005; Matthieu Sozeau <mattam@gentoo.org> +files/omake-config,
+  -omake-0.9.4.ebuild, +omake-0.9.6.5.ebuild:
+  Version bump, also fix bug #84296.
 
   17 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> :
   Stable on x86, ppc, with downgraded readline dependency.
