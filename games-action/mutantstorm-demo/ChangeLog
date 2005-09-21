@@ -1,6 +1,10 @@
 # ChangeLog for games-action/mutantstorm-demo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.5 2005/06/29 13:16:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.6 2005/09/21 20:19:09 wolf31o2 Exp $
+
+  21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  mutantstorm-demo-1.33.ebuild:
+  Changed check_license to explicitly list license to check.
 
   29 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   mutantstorm-demo-1.33.ebuild:

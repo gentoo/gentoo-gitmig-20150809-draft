@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.3 2005/06/29 13:16:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.4 2005/09/21 20:19:09 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/opengl
 		app-emulation/emul-linux-x86-sdl )"
 
 pkg_setup() {
-	check_license
+	check_license POMPOM
 	games_pkg_setup
 }
 
