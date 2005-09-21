@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.4.ebuild,v 1.6 2005/07/31 05:20:27 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.4.ebuild,v 1.7 2005/09/21 16:34:52 seemant Exp $
 
 inherit eutils perl-module
 
@@ -124,7 +124,7 @@ fix_psad_conf() {
 	# Ditch the _CHANGEME_ for hostname, substituting in our real hostname
 	[ -e /etc/hostname ] && myhostname="$(< /etc/hostname)"
 	[ "${myhostname}" == "" ] && myhostname="$HOSTNAME"
-	mydomain=".$(grep domain /etc/resolv.conf | cut -d" " -f2)"
+	mydomain=".$(grep ^domain /etc/resolv.conf | cut -d" " -f2)"
 	sed -i "s:HOSTNAME\(.\+\)\_CHANGEME\_;:HOSTNAME\1${myhostname}${mydomain};:" psad.conf || die "fix_psad_conf failed"
 
 	# Fix up paths
