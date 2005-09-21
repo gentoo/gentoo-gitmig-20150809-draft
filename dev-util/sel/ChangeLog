@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.9 2005/04/24 03:00:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.10 2005/09/21 20:37:22 wschlich Exp $
+
+  21 Sep 2005; Wolfram Schlich <wschlich@gentoo.org> sel-0.08.4.ebuild:
+  mark stable on x86
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> sel-0.08.4.ebuild:
   Stable on ppc.
