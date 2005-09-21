@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1461 2005/09/20 08:33:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1462 2005/09/21 00:00:15 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -370,7 +370,12 @@ games-kids/gcompris:editor - Build the optional editor program.
 games-mud/mmucl:mccp - adds support for the Mud Client Compression Protocol
 games-rpg/eternal-lands:mapeditor - Install the mapeditor as well as the game
 games-rpg/eternal-lands:nomusic - Disable install of music files
+games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
+games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
+games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
+games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
+games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
 games-simulation/openttd:timidity - Add sound support (timidity)
 games-strategy/freecraft-fcmp:music - Installs optional music data
 games-strategy/freelords:editor - Installs optional map editor
