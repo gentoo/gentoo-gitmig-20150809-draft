@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.43 2005/08/05 03:37:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.44 2005/09/21 23:19:08 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -101,6 +101,7 @@ toolchain-binutils_src_compile() {
 
 	cd "${MY_BUILDDIR}"
 	local myconf=""
+	is_cross && myconf="${myconf} --with-sysroot=/usr/${CTARGET}"
 	use nls \
 		&& myconf="${myconf} --without-included-gettext" \
 		|| myconf="${myconf} --disable-nls"
@@ -116,8 +117,8 @@ toolchain-binutils_src_compile() {
 		--libdir=${LIBPATH} \
 		--libexecdir=${LIBPATH} \
 		--includedir=${INCPATH} \
-		--enable-shared \
 		--enable-64-bit-bfd \
+		--enable-shared \
 		--disable-werror \
 		${myconf} ${EXTRA_ECONF}"
 	echo ./configure ${myconf}
@@ -163,9 +164,11 @@ toolchain-binutils_src_install() {
 			mv ${x} ${x/${CTARGET}-}
 		done
 
-		mv "${D}"/usr/${CHOST}/${CTARGET}/include "${D}"/${INCPATH}
-		mv "${D}"/usr/${CHOST}/${CTARGET}/lib/* "${D}"/${LIBPATH}/
-		rm -r "${D}"/usr/${CHOST}
+		if [[ -d ${D}/usr/${CHOST}/${CTARGET} ]] ; then
+			mv "${D}"/usr/${CHOST}/${CTARGET}/include "${D}"/${INCPATH}
+			mv "${D}"/usr/${CHOST}/${CTARGET}/lib/* "${D}"/${LIBPATH}/
+			rm -r "${D}"/usr/${CHOST}
+		fi
 	else
 		insinto ${INCPATH}
 		doins "${S}/include/libiberty.h"

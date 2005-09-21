@@ -1,15 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.59 2005/08/13 08:10:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.60 2005/09/21 23:19:08 vapier Exp $
 
-# Current Maintainer: Tal Peer <coredumb@gentoo.org>
-# Original Author:    Dan Armak <danarmak@gentoo.org>
-
-# SSH auth code by Danny <danny.milo@gmx.net>
-
-# SSH password authentication support and host key verification
-# support by Jeremy Maitin-Shepard <jbms@gentoo.org>
-
+inherit eutils
 
 # This eclass provides the generic cvs fetching functions.  To use
 # this from an ebuild, set the `ebuild-configurable settings' as
@@ -535,10 +528,7 @@ cvs_src_unpack() {
 	if [ -n "$PATCHES" ]; then
 		debug-print "$FUNCNAME: PATCHES=$PATCHES, S=$S, autopatching"
 		cd "$S"
-		for x in $PATCHES; do
-			debug-print "patching from $x"
-			patch -p0 < "$x"
-		done
+		epatch ${PATCHES}
 		# Make sure we don't try to apply patches more than once,
 		# since cvs_src_unpack is usually called several times from
 		# e.g. kde-source_src_unpack
