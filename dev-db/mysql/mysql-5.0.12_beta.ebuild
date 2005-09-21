@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.10 2005/09/20 15:29:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.11 2005/09/21 17:52:06 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -59,6 +59,11 @@ mysql_upgrade_warning() {
 	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
 	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
 	ewarn "app-portage/gentoolkit."
+	ewarn ""
+	ewarn "the value of \"innodb_log_file_size\" into /etc/mysql/my.cnf file "
+	ewarn "has changed size from \"8M\" to \"5M\"."
+	ewarn "To start mysql either revert the value back to \"8M\" or backup and"
+	ewarn "remove the old ib_logfile* from the datadir"
 }
 
 mysql_get_datadir() {

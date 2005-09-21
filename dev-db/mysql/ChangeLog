@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.240 2005/09/20 15:29:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.241 2005/09/21 17:52:05 vivo Exp $
+
+  21 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
+  mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:
+  mysql_upgrade_warning() updated with hint on innodb logs
 
   20 Sep 2005; Francesco Riosa <vivo@gentoo.org>
   -files/mysql-3.23.52-install-db-sh.diff,

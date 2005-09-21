@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.8 2005/09/20 15:29:32 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.9 2005/09/21 17:52:06 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -52,6 +52,8 @@ mysql_upgrade_error() {
 	ewarn "You can also choose to preview some new MySQL 4.1 behaviour"
 	ewarn "adding a section \"[mysqld-4.0]\" followed by the word \"new\""
 	ewarn "into /etc/mysql/my.cnf (you need a recent MySQL version)"
+	ewarn ""
+
 }
 
 mysql_upgrade_warning() {
@@ -60,6 +62,11 @@ mysql_upgrade_warning() {
 	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
 	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
 	ewarn "app-portage/gentoolkit."
+	ewarn ""
+	ewarn "the value of \"innodb_log_file_size\" into /etc/mysql/my.cnf file "
+	ewarn "has changed size from \"8M\" to \"5M\"."
+	ewarn "To start mysql either revert the value back to \"8M\" or backup and"
+	ewarn "remove the old ib_logfile* from the datadir"
 }
 
 mysql_get_datadir() {
