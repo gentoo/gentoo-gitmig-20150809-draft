@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r4.ebuild,v 1.10 2005/07/12 11:44:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r4.ebuild,v 1.11 2005/09/21 07:00:00 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -18,10 +18,10 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-lang-1.0"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
-	junit? ( >=dev-java/junit-3.7 )
+	junit? ( >=dev-java/junit-3.7  >=dev-java/ant-tasks-1.6.2 )
 	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )
-	>=dev-java/ant-1.6.2"
+	>=dev-java/ant-core-1.6.2"
 
 src_unpack() {
 	unpack ${A}

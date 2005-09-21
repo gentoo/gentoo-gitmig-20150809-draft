@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.19 2005/06/05 12:56:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.20 2005/09/21 07:00:00 betelgeuse Exp $
+
+  21 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  commons-cli-1.0-r4.ebuild:
+  ant-tasks are only needed with USE="junit". Fixes bug #106743.
 
   05 Jun 2005; Jan Brinkmann <luckyduck@gentoo.org>
   commons-cli-1.0-r4.ebuild:
