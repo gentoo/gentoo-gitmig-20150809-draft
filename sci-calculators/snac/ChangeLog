@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/snac
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/snac/ChangeLog,v 1.2 2004/12/24 20:07:35 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/snac/ChangeLog,v 1.3 2005/09/21 01:31:52 dang Exp $
+
+  21 Sep 2005; <dang@gentoo.org> snac-0.3.ebuild:
+  Marked ~amd64
 
 *snac-0.3 (24 Dec 2004)
 
