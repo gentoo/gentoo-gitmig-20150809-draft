@@ -1,6 +1,18 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.45 2005/09/21 14:01:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.46 2005/09/21 19:28:39 ka0ttic Exp $
+
+*lighttpd-1.4.4-r1 (21 Sep 2005)
+
+  21 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/1.4.3/01_all_r716-fix-remoteip-cache-keepalive.diff,
+  +files/1.4.3/03_all_r722-fix-no-global-mysql-segv.diff,
+  +files/1.4.3/04_all_r723-fix-mod_ssi-inf-loop.diff,
+  +files/1.4.3/02_all_r721-add-case-302.diff,
+  +files/1.4.3/05_all_r724-fix-error-msg-segv.diff,
+  +files/1.4.3/06_all_r725-fix-NULL-dereference.diff,
+  -lighttpd-1.4.4.ebuild, +lighttpd-1.4.4-r1.ebuild:
+  Revision bump; add patches from upstream to fix various bugs.
 
   21 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> lighttpd-1.4.3.ebuild:
   Keyworded ~sparc, makes ciaranm and geoman happy
