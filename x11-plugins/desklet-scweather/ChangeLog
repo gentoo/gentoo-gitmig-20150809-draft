@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-scweather
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-scweather/ChangeLog,v 1.6 2005/08/30 14:40:20 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-scweather/ChangeLog,v 1.7 2005/09/21 22:41:21 hparker Exp $
+
+  21 Sep 2005; Homer Parker <hparker@gentoo.org>
+  desklet-scweather-0.4.ebuild:
+  Marked ~amd64.
 
 *desklet-scweather-0.4 (30 Aug 2005)
 
