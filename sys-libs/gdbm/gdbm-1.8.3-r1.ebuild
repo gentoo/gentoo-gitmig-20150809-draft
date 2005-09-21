@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.15 2005/09/10 14:55:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.16 2005/09/21 23:15:19 vapier Exp $
 
-inherit flag-o-matic eutils libtool
+inherit eutils libtool
 
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
@@ -15,49 +15,35 @@ IUSE="berkdb"
 
 DEPEND="berkdb? ( sys-libs/db )"
 
-pkg_setup() {
-	# On OSX there is no user/group bin, see bug #96743
-	if use ppc-macos;
-	then
-		enewgroup bin
-		enewuser bin -1 -1 -1 bin
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	append-flags -fomit-frame-pointer
+	epatch "${FILESDIR}"/${P}-fix-install-ownership.patch #24178
 	elibtoolize
 }
 
 src_compile() {
-	econf || die
-	use berkdb || sed -i '/HAVE_LIBNDBM/s:.*::' autoconf.h
+	use berkdb || export ac_cv_lib_dbm_main=no ac_cv_lib_ndbm_main=no
+	econf --includedir=/usr/include/gdbm || die
 	emake || die
 }
 
 src_install() {
-	make INSTALL_ROOT="${D}" install || die
-
-	make \
-		includedir=/usr/include/gdbm \
-		INSTALL_ROOT="${D}" \
-		install-compat || die
-
+	make INSTALL_ROOT="${D}" install install-compat || die
 	dodoc ChangeLog NEWS README
+}
 
+pkg_preinst() {
 	# temp backwards support #32510
 	if [[ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ]] ; then
-		cp ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ${D}/usr/$(get_libdir)/
-		touch ${D}/usr/$(get_libdir)/libgdbm.so.2
+		touch "${D}"/usr/$(get_libdir)/libgdbm.so.2
 	fi
 }
 
 pkg_postinst() {
-	if [ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ] ; then
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ]] ; then
 		ewarn "Please run revdep-rebuild --soname libgdbm.so.2"
 		ewarn "After that completes, it will be safe to remove the old"
-		ewarn "library (${ROOT}/usr/$(get_libdir)/libgdbm.so.2)."
+		ewarn "library (${ROOT}usr/$(get_libdir)/libgdbm.so.2)."
 	fi
 }

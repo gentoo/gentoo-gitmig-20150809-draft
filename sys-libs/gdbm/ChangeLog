@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gdbm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.34 2005/09/10 14:55:53 grobian Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.35 2005/09/21 23:15:19 vapier Exp $
+
+  21 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gdbm-1.8.3-fix-install-ownership.patch, gdbm-1.8.3-r1.ebuild:
+  Clean up ebuild and fix install permissions #24178.
 
   10 Sep 2005; Fabian Groffen <grobian@gentoo.org> gdbm-1.8.3-r1.ebuild:
   Replace "uclibctoolize" with "elibtoolize" and add the bin user/group if on

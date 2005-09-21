@@ -1,6 +1,17 @@
-MD5 035bd71b9dbef7ba02a7a33de5461a4e gdbm-1.8.3-r1.ebuild 1582
-MD5 22314eff7a4f923601e6dba3863baf3d gdbm-1.8.0-r5.ebuild 1232
-MD5 cc4fb38733aaeb94a7613f61f1c53cb6 ChangeLog 4414
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e77dfc3f70817b0d79d6de1ef72a9262 gdbm-1.8.3-r1.ebuild 1371
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 017b1a2d0ae227d89ee16480e3129a3b files/digest-gdbm-1.8.0-r5 62
+MD5 22314eff7a4f923601e6dba3863baf3d gdbm-1.8.0-r5.ebuild 1232
+MD5 71105d688b424414cf6701315d17d75e ChangeLog 4589
+MD5 9ed34cb95efec19c95fbf28a2e7e0986 files/gdbm-1.8.3-fix-install-ownership.patch 1567
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3-r1 62
+MD5 017b1a2d0ae227d89ee16480e3129a3b files/digest-gdbm-1.8.0-r5 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMemngIKl8Uu19MoRApnrAJ9u+YoRcBoBdYot/FrIWsZaVAzaKwCcCFio
+tF9nIRcbcuPmsH7KJ5f2y7A=
+=DpBn
+-----END PGP SIGNATURE-----
