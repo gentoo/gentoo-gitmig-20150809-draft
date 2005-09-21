@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmbscan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.2 2005/09/21 20:10:52 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.3 2005/09/21 20:29:35 wschlich Exp $
+
+  21 Sep 2005; Wolfram Schlich <wschlich@gentoo.org>
+  +files/nmbscan-1.2.4-head.diff, nmbscan-1.2.4.ebuild:
+  add 'head' parameter fix
 
   21 Sep 2005; Wolfram Schlich <wschlich@gentoo.org> nmbscan-1.2.4.ebuild:
   mark stable on x86
