@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.5 2005/05/06 16:32:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.6 2005/09/21 00:58:28 ribosome Exp $
+
+*glpk-4.8 (21 Sep 2005)
+
+  21 Sep 2005; Olivier Fisette <ribosome@gentoo.org> +glpk-4.8.ebuild:
+  New version. Documents and examples are now installed into proper locations
+  (fixes bug #106520). Thanks to Markus Dittrich <markusle@gmail.com> for his
+  work.
 
   06 May 2005; David Holm <dholm@gentoo.org> glpk-4.7.ebuild:
   Added to ~ppc.

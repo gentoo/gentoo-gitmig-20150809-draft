@@ -1,4 +1,6 @@
-MD5 e202a8e37e62cbbe6985c5f9477eb75e ChangeLog 1530
+MD5 5fdadd8dc3d3171236a7ef2b6b6c2ba6 glpk-4.8.ebuild 1080
 MD5 7d861a12f224b0cd985efbabf8265588 glpk-4.7.ebuild 903
+MD5 838ee756642dcba953bd64c5f3ab798a ChangeLog 1794
 MD5 f9b985eff5cf629c334273be8fbdee5c metadata.xml 219
 MD5 8b0aabaae9e61d7aa12c4bb982b2a996 files/digest-glpk-4.7 60
+MD5 24b218cfde877d055613cae7fe421cd9 files/digest-glpk-4.8 60
