@@ -17,6 +17,6 @@ export CFLAGS_x86
 if [ -L /lib32 -o -L /usr/lib32 ] && [ ${PORTAGE_CALLER} != "repoman" ] ; then
 	eerror "It appears you have switched to the 2005.0 profile without following"
 	eerror "the upgrade guide.  Please see the following URL for more information:"
-	eerror "http://www.gentoo.org/proj/en/base/amd64/2005.0-upgrade-amd64.xml"
+	eerror "http://www.gentoo.org/proj/en/base/amd64/howtos/index.xml?part=1&chap=1"
 	exit 1
 fi
