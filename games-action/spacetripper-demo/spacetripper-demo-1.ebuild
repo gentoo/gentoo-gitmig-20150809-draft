@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.5 2005/08/12 05:15:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.6 2005/09/21 20:27:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,8 +19,12 @@ Ddir=${D}/${dir}
 
 S=${WORKDIR}
 
+pkg_setup() {
+	check_license POMPOM
+	games_pkg_setup
+}
+
 src_unpack() {
-	check_license
 	unpack_makeself
 }
 

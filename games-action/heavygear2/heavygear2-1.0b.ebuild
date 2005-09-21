@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.9 2005/09/06 17:37:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.10 2005/09/21 20:28:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,7 +25,7 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license || die "License check failed"
+	check_license LOKI-EULA
 	cdrom_get_cds shell/movies/asteroid.mpg
 	if use videos ; then
 		ewarn "The installed game takes about 500MB of space!"
