@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.6.ebuild,v 1.1 2005/04/25 12:25:59 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.6.ebuild,v 1.2 2005/09/21 15:30:17 phosphan Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://lancet.mit.edu/ga/"
 SRC_URI="http://lancet.mit.edu/ga/dist/galib${MYPV}.tgz"
 LICENSE="GAlib"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 
