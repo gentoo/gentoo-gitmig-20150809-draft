@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.1-r5.ebuild,v 1.1 2005/08/22 17:08:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.1-r5.ebuild,v 1.2 2005/09/21 15:14:01 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://vlsi.cornell.edu/magic/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses
