@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.220.ebuild,v 1.1 2005/09/03 23:32:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.230.ebuild,v 1.1 2005/09/21 23:57:57 eradicator Exp $
 
-IUSE="apache2 pam postgres ssl webmin-minimal"
+IUSE="apache2 postgres ssl webmin-minimal"
 
 inherit eutils pam
 
@@ -18,14 +18,17 @@ LICENSE="BSD"
 SLOT="0"
 
 # ~mips removed because of broken deps. Bug #86085
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~s390 sparc x86"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
-	 pam? ( virtual/pam )
 	 ssl? ( dev-perl/Net-SSLeay )
 	 postgres? ( dev-perl/DBD-Pg )
 	 dev-perl/XML-Generator"
+
+# See bug #62123
+#	 pam? ( dev-perl/Authen-PAM )
+
 
 src_unpack() {
 	unpack ${A}
@@ -38,6 +41,9 @@ src_unpack() {
 		if use apache2; then
 			epatch ${FILESDIR}/${PN}-1.140-apache2.patch
 		fi
+
+		# Correct ldapness
+		epatch ${FILESDIR}/${PN}-1.230-ldap-useradmin.patch
 
 		# Postfix should modify the last entry of the maps file
 		epatch ${FILESDIR}/${PN}-1.170-postfix.patch
@@ -112,13 +118,14 @@ src_install() {
 	${D}/usr/libexec/webmin/setup.sh > ${T}/webmin-setup.out 2>&1 || die "Failed to create initial webmin configuration."
 
 	# Fixup the config files to use their real locations
-	sed -i -e 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' ${D}/etc/webmin/miniserv.conf
+	sed -i -e "s:^pidfile=.*$:pidfile=${ROOT}/var/run/webmin.pid:" ${D}/etc/webmin/miniserv.conf
 	find ${D}/etc/webmin -type f | xargs sed -i -e "s:${D}:${ROOT}:g"
 
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
 	keepdir /var/log/webmin/
 
+	# Get rid of this crap...
 	rm -rf ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1
 	rm -f ${D}/usr/libexec/webmin/acl/Authen-SolarisRBAC-0.1.tar.gz
 }
