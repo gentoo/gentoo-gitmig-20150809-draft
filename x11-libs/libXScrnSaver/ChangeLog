@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXScrnSaver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.9 2005/09/09 08:10:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/ChangeLog,v 1.10 2005/09/21 21:42:57 lu_zero Exp $
+
+  21 Sep 2005; Luca Barbato <lu_zero@gentoo.org>
+  libXScrnSaver-0.99.1.ebuild:
+  Marked ~ppc
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
