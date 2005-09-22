@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-Sendmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.3 2005/09/22 13:17:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.4 2005/09/22 13:26:03 ferdy Exp $
+
+  22 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  Mail-Sendmail-0.79.ebuild:
+  marked ~alpha, wrt bug #106873
 
   22 Sep 2005; Luca Barbato <lu_zero@gentoo.org> Mail-Sendmail-0.79.ebuild:
   Marked ~ppc
