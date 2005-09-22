@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r14.ebuild,v 1.11 2005/07/12 05:07:35 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r14.ebuild,v 1.12 2005/09/22 03:26:55 vapier Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -129,7 +129,7 @@ src_install() {
 	doins xmms/xmms_mini.xpm
 
 	insinto /etc/X11/wmconfig
-	donewins xmms/xmms.wmconfig xmms
+	newins xmms/xmms.wmconfig xmms
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/xmms.desktop
