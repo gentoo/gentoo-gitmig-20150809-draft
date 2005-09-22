@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.63 2005/09/22 19:25:49 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.64 2005/09/22 22:59:29 ticho Exp $
+
+*amavisd-new-2.3.3-r1 (22 Sep 2005)
+
+  22 Sep 2005; Andrej Kacian <ticho@gentoo.org>
+  +amavisd-new-2.3.3-r1.ebuild:
+  Install amavisd-release utility. Closes bug #100329, reported by valli
+  <gentoo at valli.org>.
 
   22 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
   amavisd-new-2.3.3.ebuild:
