@@ -1,5 +1,17 @@
-MD5 1cb61405028e3358b0a4e331b22a278f ChangeLog 2479
-MD5 bb3520c17ae5e8b5deeb55bb416403de metadata.xml 174
-MD5 8ebbb9551ca5d6224f27d9849ca9a98a tuareg-mode-1.44.3.ebuild 655
-MD5 e7c81b365ffc91f473051fbc9d8be609 files/50tuareg-mode-gentoo.el 286
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 de3a796dd59ef15d4c4809d67ab8495d ChangeLog 2739
+MD5 8cf0b02ec0ef33ba9f52a2903d897dba metadata.xml 486
+MD5 c3caecbcb399d51d826bfc44474cad7f tuareg-mode-1.44.3.ebuild 689
+MD5 30adf517275a5374995623dd7ca175e6 tuareg-mode-1.45.0.ebuild 692
+MD5 8459f3f754a0bce0db441d3dafa3f931 files/50tuareg-mode-gentoo.el 285
 MD5 cd3c5f0b44d106df0e00f032d583f205 files/digest-tuareg-mode-1.44.3 70
+MD5 531e8ed36ddb73768dc13cbb8672e642 files/digest-tuareg-mode-1.45.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMsUJyiNZaEAZA+ARAoQkAJ9LdHnVNKSfLQQbbkaO1stgGb3IYQCcDIXP
+9VhT8CHe6BqTH55KBTi36Jo=
+=krnR
+-----END PGP SIGNATURE-----
