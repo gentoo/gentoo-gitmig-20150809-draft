@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.51 2005/08/22 12:12:10 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.52 2005/09/22 14:13:36 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -426,7 +426,7 @@ linux-mod_pkg_setup() {
 
 linux-mod_src_compile() {
 	local modulename libdir srcdir objdir i n myARCH="${ARCH}"
-	unset ARCH
+	ARCH="$(tc-arch-kernel)"
 
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
 
