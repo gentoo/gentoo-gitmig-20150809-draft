@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.252 2005/09/21 09:33:45 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.253 2005/09/22 01:41:52 halcy0n Exp $
+
+  22 Sep 2005; Mark Loeser <halcy0n@gentoo.org> qt-3.3.4-r8.ebuild:
+  Stable on x86; bug #105695
 
   21 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> qt-3.3.4-r8.ebuild:
   stable on alpha wrt bug #105695
