@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jmi-interface
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/ChangeLog,v 1.5 2005/08/15 20:27:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmi-interface/ChangeLog,v 1.6 2005/09/22 23:40:00 betelgeuse Exp $
+
+  22 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  jmi-interface-1.0-r1.ebuild:
+  Added missing ant-core to dependencies. Fixes bug #106929.
 
   15 Aug 2005; Petteri Räty <betelgeuse@gentoo.org>
   jmi-interface-1.0-r1.ebuild:
