@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 8019509aa2e591e793301d62b73ed8ab ChangeLog 6078
 MD5 5515dcfdfb95a79a1e9f10e035736382 nail-11.25-r1.ebuild 1435
-MD5 b2e9e25cbcbb88f992ae3d1e4cc6dd0e nail-11.25-r3.ebuild 1882
-MD5 5cff7c0cfb4bf4020cba474074bc7b59 ChangeLog 5980
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r1 63
-MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r3 63
+MD5 f3cc22e52a8c9ea4b6711b31dfcfacf9 nail-11.25-r3.ebuild 1884
 MD5 40398648c9e2e41662ae61caea846c57 files/nail-nosocket.patch 473
+MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r3 63
+MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r1 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDMr7pViELBEf1JB0RApS8AJ9UZ31wJSprVFR4z4xYl0HrVseNEwCfYXDJ
-3GM6oreLiKtijuCN/qubUhc=
-=s4fe
+iD8DBQFDMvT9KRy60XGEcJIRAtT5AJ0bBrYayUGeewt7FNxkRUboaEQshACcCIqP
+YDr7h+2oKiCSn+zVdhLhN/c=
+=CBO8
 -----END PGP SIGNATURE-----
