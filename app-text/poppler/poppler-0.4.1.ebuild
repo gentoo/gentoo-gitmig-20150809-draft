@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.1.ebuild,v 1.3 2005/09/02 00:16:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.1.ebuild,v 1.4 2005/09/22 14:50:47 dang Exp $
 
 inherit eutils
 
@@ -30,9 +30,7 @@ src_unpack(){
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-cairo-ft.patch
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
-	libtoolize --force || die "libtoolize failed"
+	WANT_AUTOMAKE=1.9 eautoreconf
 }
 
 src_compile() {
