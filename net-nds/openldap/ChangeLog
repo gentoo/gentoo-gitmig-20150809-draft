@@ -1,6 +1,19 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.141 2005/09/17 22:03:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.142 2005/09/22 19:57:41 robbat2 Exp $
+
+  22 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.26.ebuild,
+  openldap-2.1.27.ebuild, openldap-2.1.27-r1.ebuild, openldap-2.1.30.ebuild,
+  openldap-2.1.30-r1.ebuild, openldap-2.1.30-r2.ebuild,
+  openldap-2.1.30-r3.ebuild, openldap-2.1.30-r4.ebuild,
+  openldap-2.1.30-r5.ebuild, openldap-2.2.14.ebuild, openldap-2.2.19.ebuild,
+  openldap-2.2.23.ebuild, openldap-2.2.23-r1.ebuild, openldap-2.2.24.ebuild,
+  openldap-2.2.26.ebuild, openldap-2.2.26-r1.ebuild,
+  openldap-2.2.26-r2.ebuild, openldap-2.2.27.ebuild,
+  openldap-2.2.27-r1.ebuild, openldap-2.2.28.ebuild,
+  openldap-2.2.28-r1.ebuild:
+  Bug #103421, use -1 instead of /bin/false for enewuser to allow working on
+  freebsd.
 
   17 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> openldap-2.2.26.ebuild,
   openldap-2.2.26-r1.ebuild, openldap-2.2.26-r2.ebuild,

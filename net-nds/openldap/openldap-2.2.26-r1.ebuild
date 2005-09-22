@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r1.ebuild,v 1.2 2005/09/17 22:03:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26-r1.ebuild,v 1.3 2005/09/22 19:57:41 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -106,7 +106,7 @@ pkg_setup() {
 pkg_preinst() {
 	openldap_upgrade_warning
 	enewgroup ldap 439
-	enewuser ldap 439 /bin/false /usr/lib/openldap ldap
+	enewuser ldap 439 -1 /usr/lib/openldap ldap
 }
 
 src_unpack() {

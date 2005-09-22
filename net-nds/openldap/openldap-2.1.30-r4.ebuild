@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r4.ebuild,v 1.13 2005/06/06 11:28:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r4.ebuild,v 1.14 2005/09/22 19:57:41 robbat2 Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ DEPEND="${DEPEND}
 
 pkg_preinst() {
 	enewgroup ldap 439
-	enewuser ldap 439 /bin/false /usr/lib/openldap ldap
+	enewuser ldap 439 -1 /usr/lib/openldap ldap
 }
 
 src_unpack() {
