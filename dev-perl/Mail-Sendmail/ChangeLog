@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Sendmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.2 2005/09/22 11:34:58 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.3 2005/09/22 13:17:36 lu_zero Exp $
+
+  22 Sep 2005; Luca Barbato <lu_zero@gentoo.org> Mail-Sendmail-0.79.ebuild:
+  Marked ~ppc
 
   22 Sep 2005; Luis Medinas <metalgod@gentoo.org> Mail-Sendmail-0.79.ebuild:
   Added ~amd64. Bug #106873.
