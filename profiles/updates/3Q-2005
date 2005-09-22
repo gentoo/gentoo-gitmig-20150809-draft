@@ -69,4 +69,4 @@ move dev-java/gnu-activation dev-java/gnu-jaf
 slotmove =dev-java/gnu-javamail-20040331 0 1
 slotmove =dev-java/struts-1.1* 0 1.1
 slotmove =dev-java/struts-1.2* 0 1.2
-
+move sys-devel/makepp dev-util/makepp
