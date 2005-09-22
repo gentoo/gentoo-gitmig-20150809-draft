@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.120 2005/09/22 19:41:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.121 2005/09/22 19:45:30 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -46,8 +46,9 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test pkg_posti
 IUSE="selinux nls acl"
 
 if version_is_at_least "6.3.086" ; then
-	DEPEND="${DEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
-	RDEPEND="${RDEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
+#	DEPEND="${DEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
+#	RDEPEND="${RDEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
+	:
 elif version_is_at_least "6.3.075" ; then
 	IUSE="${IUSE} termcap-compat"
 else
