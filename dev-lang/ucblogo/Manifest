@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2400199650d98940f8fa4f9596417d2 ucblogo-5.5.ebuild 806
+MD5 9764728c9ef2188f3fd2177cd7b5add1 ChangeLog 328
+MD5 201627e0b37fcbb8d71bbf61866214fc files/ucblogo-5.5-fhs.patch 815
+MD5 dc6eae6786d18d32e5ebec3476074f75 files/ucblogo-5.5-destdir.patch 2053
+MD5 bf4574962bbaffaa1d55eeab946e5fce files/digest-ucblogo-5.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMh7NgIKl8Uu19MoRAqwxAJ4vIW+nxAEryXzICLkbEfidna2uHQCfRchb
+dC8WezSH5hGOfn/316oHB74=
+=XTgf
+-----END PGP SIGNATURE-----

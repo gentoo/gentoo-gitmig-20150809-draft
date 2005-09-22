@@ -1,0 +1,8 @@
+# ChangeLog for dev-lang/ucblogo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ChangeLog,v 1.1 2005/09/22 03:02:02 vapier Exp $
+
+*ucblogo-5.5 (21 Sep 2005)
+
+  21 Sep 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
