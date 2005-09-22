@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0cd51c43eb642e7bbaa85403356d8eb7 pine-4.63-r3.ebuild 5495
+MD5 49a8faab6ceb6698c1023994bf607376 pine-4.63-r3.ebuild 5494
 MD5 df36c8865a5c3109974fb630251fe32d pine-4.62-r1.ebuild 5252
 MD5 80055259213721a085dd8a1987e39bb7 pine-4.62.ebuild 5790
 MD5 39ea4ca073f9ab5b6a90fa942993830a pine-4.63-r2.ebuild 5404
 MD5 cf1187ddd78dc5f02054c93585efef96 pine-4.62-r2.ebuild 5404
 MD5 f1759a695182611038a02645cdfc3826 pine-4.63.ebuild 5396
 MD5 918f11739d9028dd2425ad4381504d9a pine-4.61-r5.ebuild 4999
-MD5 35fccfd8898de8fbb1e7f8adaba54e25 ChangeLog 17396
+MD5 f454fa8aa05f4a77e985b941c87a4e96 ChangeLog 17489
 MD5 0bd68adface8003f4aa7d13b452150cf pine-4.63-r1.ebuild 5401
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 de52689ee75160c695bf4659ee956845 files/imap-4.7c2-flock_4.60.patch 537
@@ -33,7 +33,7 @@ MD5 3eb735b51e3192ee78b7b556e83256b3 files/transparency.patch 447
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMfHzQlM6RnzZP+IRAnr6AJ0Q3m0V+YBWeq0406uehQMOanhndQCfYZcI
-IRBFellsRUqw6Q2n6nr7YmQ=
-=d/7U
+iD8DBQFDMsgVViELBEf1JB0RAgJtAJ9HqfxsmIanrtrVk/Yr59pc2xdnqgCfbtCm
+0636BYd7Dl/tcpcMxmOydyk=
+=WMZc
 -----END PGP SIGNATURE-----
