@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.5.ebuild,v 1.2 2005/09/18 14:02:05 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.5.ebuild,v 1.3 2005/09/22 11:46:00 metalgod Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="!app-office/openoffice
 	virtual/x11
