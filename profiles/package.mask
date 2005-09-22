@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4489 2005/09/22 10:54:39 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4490 2005/09/22 17:58:49 wschlich Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Wolfram Schlich <wschlich@gentoo.org> (22 Sep 2005)
+# Hardmasking in accordance with g2boojum
+# as it has weird unresolved issues
+=net-mail/dovecot-1.0_alpha2
 
 # Andrej Kacian <ticho@gentoo.org> (22 Sep 2005)
 # Upstream re-released with same version number. Masking until I'm sure which
