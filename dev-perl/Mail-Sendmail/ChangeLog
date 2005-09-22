@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Mail-Sendmail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.1 2005/09/22 09:28:40 r3pek Exp $
+
+*Mail-Sendmail-0.79 (22 Sep 2005)
+
+  22 Sep 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
+  +Mail-Sendmail-0.79.ebuild:
+  Initial commit. Ebuild by me
+
