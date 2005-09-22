@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bc1977f64e62daada0fa20a219b856ec webmin-1.230.ebuild 4101
 MD5 c6d3309b62a5ba19e3aa3893e0cca346 webmin-1.170-r3.ebuild 3681
 MD5 f967ac80dd5964238529b77dfc8ea37f webmin-1.210-r1.ebuild 4048
@@ -20,3 +23,10 @@ MD5 171e9e052878636913441103aac011b0 files/digest-webmin-1.210-r1 209
 MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
 MD5 54dc8937e05bd76ad86a6c5f5ae6a333 files/init.d.webmin 859
 MD5 c53333c5a45f347207179bd957253b86 files/webmin-1.230-ldap-useradmin.patch 905
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMr0TViELBEf1JB0RAvr3AJ9pJnyBQ2LS0UoIlADIwZ4JMKh2TQCfarxh
+d7pVJgwLOy9KJQJSdMRFWQA=
+=EoAe
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 870f3e00e0e5fac14672b5b7592c2bb1 usermin-1.130-r1.ebuild 2297
 MD5 e32f52fa5d335504537d711f0ce6a162 usermin-1.160.ebuild 2291
 MD5 fdba8056f644fc9de2fb481efe0c93d7 ChangeLog 10139
@@ -10,3 +13,10 @@ MD5 2e7603feaff187884dd9b1e66601f02b files/usermin.pam 382
 MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
 MD5 2e7c19bb66f99c168fc2e86b4bb4862c files/init.d.usermin 825
 MD5 ba4e105ca9f8d294ba4e3d7774bf0760 files/usermin-1.150-setup-nocheck.patch 998
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMr0BViELBEf1JB0RArgnAJ43OUO+1/j6KTJNMxyZZr4cHoFAfQCePwZ8
+vVm9XqA/qYualQEBFlaIhSU=
+=c/c1
+-----END PGP SIGNATURE-----
