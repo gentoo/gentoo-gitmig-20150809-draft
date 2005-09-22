@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/kmilo-3.5_alpha1.ebuild,v 1.1 2005/09/07 12:08:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/kmilo-3.5_alpha1.ebuild,v 1.2 2005/09/22 11:32:33 greg_g Exp $
 
 KMNAME=kdeutils
 MAXKDEVER=$PV
@@ -13,8 +13,6 @@ KEYWORDS="~amd64"
 IUSE="pbbuttonsd"
 DEPEND="pbbuttonsd? ( app-laptop/pbbuttonsd )"
 RDEPEND="${DEPEND}"
-
-PATCHES="$FILESDIR/configure-fix-kdeutils-powerbook.patch"
 
 src_compile() {
 	local myconf="$(use_with pbbuttonsd powerbook)"
