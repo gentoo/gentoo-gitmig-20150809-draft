@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.12.0.ebuild,v 1.1 2005/09/10 02:12:15 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.12.0.ebuild,v 1.2 2005/09/22 02:00:29 allanonjl Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-1.3.7
 	>=media-libs/gst-plugins-0.8.2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/orbit-2
-	>=gnome-extra/nautilus-cd-burner-2.9
+	>=gnome-extra/nautilus-cd-burner-2.12
 	>=gnome-base/gail-0.0.3
 	>=gnome-base/libglade-1.99.12
 	dev-libs/libxml2
