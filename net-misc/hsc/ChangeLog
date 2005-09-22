@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/hsc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.9 2005/03/25 14:33:53 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.10 2005/09/22 10:11:32 mattam Exp $
+
+*hsc-0.999 (22 Sep 2005)
+
+  22 Sep 2005; Matthieu Sozeau <mattam@gentoo.org> -hsc-0.931.ebuild,
+  hsc-0.935.ebuild, +hsc-0.999.ebuild:
+  Add latest version, mark 935 stable on x86, remove unused version.
 
   25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> hsc-0.935.ebuild:
   Marked ~amd64.

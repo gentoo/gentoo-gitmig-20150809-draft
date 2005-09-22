@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e6dfafc53615a3ce446667824094f35a ChangeLog 1409
+MD5 098410dc31789dd9bd4fb030f96148b1 hsc-0.999.ebuild 883
 MD5 b6e4912cd17dd5bfe1460280587cde5e hsc-0.929.ebuild 948
-MD5 033ed1ab829a31b219e762ab07cc7335 hsc-0.931.ebuild 950
+MD5 f85dd82adfb4ee4005a57a0769907963 hsc-0.935.ebuild 796
+MD5 2359307c6c619ab55bc75f609c2b3f3e ChangeLog 1612
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 6e4fd010fbce453a72b9a435cc891332 hsc-0.935.ebuild 800
 MD5 13a8398dc37427ed00147e630652fb0e files/Makefile.hsc-0.929.patch.gz 629
 MD5 216b1a2fbc023fbb42ba08e5a33571e9 files/Makefile.hsc-0.931.patch.bz2 791
 MD5 91d17721a179d561b59ff20245d03077 files/digest-hsc-0.929 62
-MD5 1d690bc652bb7489cd60995a251a076a files/digest-hsc-0.931 62
 MD5 fe32a6823ac1404e688790987990ebb0 files/digest-hsc-0.935 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCRCYM5mJXAu5GbtIRAj5oAJoDGWXv3yBvgNARtmrACZ78nwFysgCfWO7V
-wEAQO5Pb03uPNeifkhDKRpg=
-=COZb
------END PGP SIGNATURE-----
+MD5 1f2aa1a529bbcb71e35c77d0f82de0ee files/digest-hsc-0.999 62

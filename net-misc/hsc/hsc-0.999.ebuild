@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.931.ebuild,v 1.4 2005/03/25 14:33:53 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.999.ebuild,v 1.1 2005/09/22 10:11:32 mattam Exp $
 
 DESCRIPTION="An HTML preprocessor using ML syntax"
 HOMEPAGE="http://www.linguistik.uni-erlangen.de/~msbethke/software.html"
@@ -8,29 +8,25 @@ SRC_URI="http://www.linguistik.uni-erlangen.de/~msbethke/binaries/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE=""
 
 DEPEND="virtual/libc"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	bzcat ${FILESDIR}/Makefile.${PF}.patch.bz2|patch -p1 Makefile || die "patch failed"
-}
-
 src_compile() {
-	#The patch ensures this line works.
-	make || die
+	econf
+	emake -j1 || die
 }
 
 src_install() {
 	dodir /usr/bin
-	dodir /usr/lib
-	dodir /usr/share
-	#This makefile uses INSTDIR instead of DESTDIR
-	make INSTDIR=${D}/usr/ install || die
+	dodir /usr/share/doc/hsc
+	dodir /usr/share/hsc
+
+
+	make BINDIR=${D}/usr/bin DATADIR=${D}/usr/share/hsc \
+		prefix=${D}/usr docdir=${D}/usr/share/doc/hsc datadir=${D}/usr/share/hsc install || die
 }
 
 pkg_postinst() {
