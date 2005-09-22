@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.0_alpha20050825.ebuild,v 1.2 2005/09/05 04:18:29 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.0_alpha20050922.ebuild,v 1.1 2005/09/22 20:44:56 ciaranm Exp $
 
 inherit vim
 
@@ -20,5 +20,6 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos"
 IUSE=""
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
-	~app-editors/vim-core-${PV}"
-RDEPEND="${RDEPEND} !app-editors/nvi"
+	!minimal? ( ~app-editors/vim-core-${PV} )"
+RDEPEND="${RDEPEND} !app-editors/nvi
+	!minimal? ( ~app-editors/vim-core-${PV} )"

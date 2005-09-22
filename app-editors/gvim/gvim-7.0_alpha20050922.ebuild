@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.0_alpha20050825.ebuild,v 1.1 2005/08/25 15:52:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.0_alpha20050922.ebuild,v 1.1 2005/09/22 20:45:26 ciaranm Exp $
 
 inherit vim
 
@@ -18,22 +18,16 @@ SRC_URI="${SRC_URI}
 S=${WORKDIR}/vim${VIM_VERSION/.*}
 DESCRIPTION="GUI version of the Vim text editor"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="aqua gnome gtk gtk2 motif nextaw qt"
+IUSE="aqua gnome gtk motif nextaw qt"
 PROVIDE="virtual/editor"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}
 	virtual/x11
 	!aqua? (
 		gtk? (
-			gtk2? (
-				>=x11-libs/gtk+-2.4
-				virtual/xft
-				gnome? ( >=gnome-base/libgnomeui-2.6 )
-			)
-			!gtk2? (
-				gnome? ( gnome-base/gnome-libs )
-				!gnome? ( =x11-libs/gtk+-1.2* )
-			)
+			>=x11-libs/gtk+-2.4
+			virtual/xft
+			gnome? ( >=gnome-base/libgnomeui-2.6 )
 		)
 		!gtk? (
 			qt? (
