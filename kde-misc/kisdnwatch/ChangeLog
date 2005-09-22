@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kisdnwatch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.5 2005/08/17 10:08:01 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.6 2005/09/22 14:15:23 greg_g Exp $
+
+  22 Sep 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kisdnwatch-01.00.10.ebuild:
+  Stable on x86.
 
 *kisdnwatch-01.00.10 (17 Aug 2005)
 
