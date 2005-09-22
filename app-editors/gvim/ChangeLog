@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.148 2005/08/25 15:52:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.149 2005/09/22 19:52:44 ciaranm Exp $
+
+*gvim-6.3.086 (22 Sep 2005)
+
+  22 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> +gvim-6.3.086.ebuild:
+  New version. Drop termcap support, bug #103105. Drop gtk1 support, bug
+  #106560. Make minimal USE flag not need vim-core. Fix vimrc to work with vim
+  built with -eval.
 
 *gvim-7.0_alpha20050825 (25 Aug 2005)
 
