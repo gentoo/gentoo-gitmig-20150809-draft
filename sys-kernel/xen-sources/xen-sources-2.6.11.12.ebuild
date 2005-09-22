@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.11.10.ebuild,v 1.2 2005/09/07 23:24:02 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/xen-sources-2.6.11.12.ebuild,v 1.1 2005/09/22 22:32:34 chrb Exp $
 
 ETYPE="sources"
 inherit kernel-2 eutils
