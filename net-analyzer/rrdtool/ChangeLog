@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.81 2005/09/06 12:28:17 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.82 2005/09/22 01:17:51 ramereth Exp $
+
+*rrdtool-1.2.11-r2 (22 Sep 2005)
+
+  22 Sep 2005; Lance Albertson <ramereth@gentoo.org>
+  +rrdtool-1.2.11-r2.ebuild:
+  * removed unneeded RDEPEND on media-libs/gd for 1.2.x (See bug #106682 for
+  details)
 
 *rrdtool-1.2.11-r1 (06 Sep 2005)
 
