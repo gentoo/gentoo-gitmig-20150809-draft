@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.17 2005/07/08 05:28:05 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.18 2005/09/22 13:45:48 matsuu Exp $
+
+*fribidi-0.10.5 (22 Sep 2005)
+
+  22 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> +fribidi-0.10.5.ebuild:
+  Version bumped. Bug 104349.
 
   08 Jul 2005; Hardave Riar <hardave@gentoo.org> fribidi-0.10.4.ebuild:
   Stable on mips.
