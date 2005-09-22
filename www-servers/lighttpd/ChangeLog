@@ -1,6 +1,21 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.46 2005/09/21 19:28:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.47 2005/09/22 09:39:30 ka0ttic Exp $
+
+  22 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/1.4.3/01_all_r716-fix-remoteip-cache-keepalive.diff,
+  -files/1.4.3/03_all_r722-fix-no-global-mysql-segv.diff,
+  -files/1.4.3/05_all_r724-fix-error-msg-segv.diff,
+  +files/1.4.4/01_all_r716-fix-remoteip-cache-keepalive.diff,
+  -files/1.4.3/02_all_r721-add-case-302.diff,
+  -files/1.4.3/04_all_r723-fix-mod_ssi-inf-loop.diff,
+  -files/1.4.3/06_all_r725-fix-NULL-dereference.diff,
+  +files/1.4.4/03_all_r722-fix-no-global-mysql-segv.diff,
+  +files/1.4.4/05_all_r724-fix-error-msg-segv.diff,
+  +files/1.4.4/02_all_r721-add-case-302.diff,
+  +files/1.4.4/04_all_r723-fix-mod_ssi-inf-loop.diff,
+  +files/1.4.4/06_all_r725-fix-NULL-dereference.diff:
+  Naming the patch directory correctly would help.
 
 *lighttpd-1.4.4-r1 (21 Sep 2005)
 
