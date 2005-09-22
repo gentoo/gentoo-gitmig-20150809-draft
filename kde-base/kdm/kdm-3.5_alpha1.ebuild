@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5_alpha1.ebuild,v 1.2 2005/09/21 17:34:22 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5_alpha1.ebuild,v 1.3 2005/09/22 11:30:53 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -51,5 +51,10 @@ pkg_postinst() {
 		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
 		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/default1.png" \
 		    "${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
+	fi
+	if [ ! -e "${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon" ]; then
+		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
+		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/root1.png" \
+			"${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon"
 	fi
 }
