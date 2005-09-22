@@ -1,22 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ff2ada07b7eb78fe8bd3b887ed44e471 ghc-6.4.1.ebuild 6004
 MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
 MD5 44522ba468aae54fcea378e3817fcd72 ghc-6.2.2.ebuild 5562
 MD5 9620778937a1aff6ef88863c81222cfc ghc-6.4.ebuild 6109
-MD5 826d31ff131228d18edf4ce4e181ed97 ChangeLog 12193
+MD5 8f2072fc6e6925a51d0991c3ed579744 ChangeLog 12289
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 558c6b9e9b0e15185b69cdfe241dad9a files/ghc-updater 8775
 MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
 MD5 ffd472c0685cf2766ce6533265f9a3c9 files/ghc-6.4-powerpc.patch 908
 MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
 MD5 9e9c22452b545fd9ec1367155c15d8e2 files/digest-ghc-6.2.2 67
+MD5 7c38a5e2d5ecf8446f38ff41fa4d4152 files/digest-ghc-6.4.1 67
 MD5 75417bc4dea34cd08ea105457ccd3032 files/digest-ghc-6.4 65
 MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDFxYLKRy60XGEcJIRAknxAJ9kVNBgaCHjf1ttOZX2kSbLLtWKrgCeIxar
-znL7C4m3nNhoLEOC90C+hMk=
-=Nc2p
+iD8DBQFDMrREkyZuKN4EQ6YRAjxFAJ9MrcbItexpyMRniGUQQXVWyrCV0gCeOiI5
+tI43tEDOP4H7Vx7DCDGd+W8=
+=xJqZ
 -----END PGP SIGNATURE-----
