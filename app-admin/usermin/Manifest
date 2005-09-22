@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 9b74391181c7e127eca386cb387fc206 ChangeLog 10031
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 d0f2adbb973f16ba9640ff3411783320 usermin-1.160.ebuild 2298
 MD5 870f3e00e0e5fac14672b5b7592c2bb1 usermin-1.130-r1.ebuild 2297
-MD5 3fcad80f3b85fc1de45504dd7fea09ff ChangeLog 9930
-MD5 790e601fcd965a2804ac85e89d9dee35 files/digest-usermin-1.130-r1 66
+MD5 07defd8ad209fa3f978c824d9fbbc320 usermin-1.160.ebuild 2294
 MD5 0267babe04fc651a7357b983fe40ec98 files/digest-usermin-1.160 66
+MD5 790e601fcd965a2804ac85e89d9dee35 files/digest-usermin-1.130-r1 66
 MD5 2e7c19bb66f99c168fc2e86b4bb4862c files/init.d.usermin 825
 MD5 bd4b2cc177b4fb7b0f96edc60008a6b5 files/usermin-1.080-safestop.patch 620
 MD5 e93705fc1a8b2d9410a920a777890624 files/usermin-1.100-setup-nocheck.patch 951
 MD5 2e7603feaff187884dd9b1e66601f02b files/usermin.pam 382
 MD5 609774f17b0470a793fb7791278e270d files/usermin.pam-include 210
 MD5 ba4e105ca9f8d294ba4e3d7774bf0760 files/usermin-1.150-setup-nocheck.patch 998
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMfIQArHZZzCEUG0RAqi9AJwPDlVITwLeAyum74zp9FzWRmcJxgCfZOjE
-nLQZ250ByFZz9/F0AjFhGsQ=
-=4mzO
------END PGP SIGNATURE-----
