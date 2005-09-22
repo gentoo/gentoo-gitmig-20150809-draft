@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25c206e40cc00a1984b8e8cacd94bd04 ChangeLog 2437
 MD5 0b706baeef1ccff3f5f4a5fd4ef35ade libkcal-3.5_beta1.ebuild 570
 MD5 5537c0f9e9a00b0b60f3e334f8f77125 libkcal-3.5_alpha1.ebuild 571
@@ -8,3 +11,10 @@ MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkcal-3.4.1 208
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkcal-3.5_beta1 68
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-libkcal-3.5_alpha1 68
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-libkcal-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMx34j5H05b2HAEkRAkD+AJ9kl/XVXUOdPTmw2e+QBe5RWXaj5QCdGyZs
+JMDyR8f1BivEsahvKi2Ojoc=
+=qsdN
+-----END PGP SIGNATURE-----

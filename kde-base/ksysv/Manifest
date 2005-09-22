@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 156f9681cdd2d4a9acf3d653494cd36b ChangeLog 1658
 MD5 a9f67c09e406e199dc9fa3219fdda828 ksysv-3.5_alpha1.ebuild 398
 MD5 f68daa47f7ed2a568d92484ab280e7d2 ksysv-3.5_beta1.ebuild 397
@@ -8,3 +11,10 @@ MD5 713a5942a98adf02c6242a5532d64fd9 files/digest-ksysv-3.5_alpha1 69
 MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-ksysv-3.4.2 286
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-ksysv-3.4.1 211
 MD5 27e68187b25ba15cc1e9f8981eacca8a files/digest-ksysv-3.5_beta1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMxd2j5H05b2HAEkRAvRxAKCTo8Hb8eH4aF8nYysKG/3yLD9wAgCeIc6g
+fSbkxyD3X9JITPJ7Yv25lbY=
+=Zn1t
+-----END PGP SIGNATURE-----

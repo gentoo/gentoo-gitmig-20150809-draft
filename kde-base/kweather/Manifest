@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 468d89400fe01947299a126a3363aee3 kweather-3.5_alpha1.ebuild 383
 MD5 ded899b7f4c97daf259ac5ab7f26eed7 kweather-3.4.1.ebuild 400
 MD5 0506ab01443ae6c8f3df83abefb6bd58 ChangeLog 2657
@@ -11,3 +14,10 @@ MD5 db23f81be024e32a09dc0929b2358b34 files/digest-kweather-3.5_alpha1 68
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1-r1 208
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kweather-3.4.1 208
 MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kweather-3.5_beta1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMxwaj5H05b2HAEkRApsQAJ4lARrHkhTuyzrpTfv1fBiH7hGpAQCfTrCv
+az9zTXiIrWKvjXOIlzsvyW0=
+=xHCz
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1b08b9aff8b7093ea5d6894659da0f74 ChangeLog 2863
 MD5 49580aea427534893bb110fe6a9765c1 kdenetwork-filesharing-3.4.1.ebuild 467
 MD5 503221e16728678f885803862b28396a kdenetwork-filesharing-3.5_alpha1.ebuild 457
@@ -8,3 +11,10 @@ MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-kdenetwork-filesharing-3.5_alp
 MD5 16b903e400a8cf2d73f3c237799238db files/digest-kdenetwork-filesharing-3.5_beta1 71
 MD5 1277f401bade54acfa086cf013950252 files/digest-kdenetwork-filesharing-3.4.2 296
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kdenetwork-filesharing-3.4.1 218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMvjtj5H05b2HAEkRAmSlAJ9v8yx12j+ejzQl9cpriVDlZ14TKQCgnz6z
+jIooylWejOcUew8kUyQAoEc=
+=BU8r
+-----END PGP SIGNATURE-----

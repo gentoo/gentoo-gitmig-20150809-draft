@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 099e4f1901ba5e67293c8dafe38cdaa3 kdesu-3.4.1.ebuild 389
 MD5 d679f2fa6f4598db94349388d777d3f4 ChangeLog 2263
 MD5 5d5cee078c64e4fbb6ecf3317c9ce4aa kdesu-3.5_alpha1.ebuild 368
@@ -6,3 +9,10 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-kdesu-3.5_alpha1 69
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdesu-3.5_beta1 69
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdesu-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMvtsj5H05b2HAEkRAguiAKCM2jxcNXO6FHaqoK/NzFo8jUf2AACgpBQE
+xc/9Zp9dNxsGkQ8khtpoS+8=
+=tk9l
+-----END PGP SIGNATURE-----

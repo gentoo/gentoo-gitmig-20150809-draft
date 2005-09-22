@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fc874c62d88209a4adb80c29aafeebf7 ChangeLog 2235
 MD5 3489c95bf8a0fcbabdcd723765aefb4d kpf-3.5_beta1.ebuild 377
 MD5 ac5c14365e8decd61ab1846d495bd1db kpf-3.4.1.ebuild 388
@@ -8,3 +11,10 @@ MD5 1277f401bade54acfa086cf013950252 files/digest-kpf-3.4.2 296
 MD5 16b903e400a8cf2d73f3c237799238db files/digest-kpf-3.5_beta1 71
 MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-kpf-3.5_alpha1 71
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kpf-3.4.1 218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMw9vj5H05b2HAEkRAqceAJ44PX/Er20UT54A2Qkr2UAg7PblgACeOHcz
+ZEeIRmjSob1XoJ6G/cPaRUg=
+=JiR6
+-----END PGP SIGNATURE-----

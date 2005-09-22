@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 504f9f346e708b8a4f6ad92dcc1e3cd9 ChangeLog 2516
 MD5 3952a1cb9e49600c14791c204b7f3f6d kfouleggs-3.5_alpha1.ebuild 693
 MD5 36d5509305bc3d02dec5d217fd9d178a kfouleggs-3.5_beta1.ebuild 692
@@ -8,3 +11,10 @@ MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kfouleggs-3.4.1 212
 MD5 6bcd92642a069f9cd68ca412a0c3665c files/digest-kfouleggs-3.5_alpha1 70
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kfouleggs-3.4.2 288
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kfouleggs-3.5_beta1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMv6Xj5H05b2HAEkRAnCNAJwJIy0UT7oDyyfs7+p43t+5HAJg2wCdEofl
+ix15uzS7x9YOUr49zpn+qF4=
+=6VBJ
+-----END PGP SIGNATURE-----

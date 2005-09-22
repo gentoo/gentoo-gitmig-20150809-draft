@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 715f62a7b8d771069df28c38ba7b844b kdeartwork-styles-3.4.2.ebuild 437
 MD5 4405d48f730b79910391d3b56c331bdf ChangeLog 2738
 MD5 8d7990e2244354ef27481997bbca879f kdeartwork-styles-3.5_alpha1.ebuild 414
@@ -8,3 +11,10 @@ MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-styles-3.4.1 220
 MD5 5234e1c4183e1fcf2920020eeff6965a files/digest-kdeartwork-styles-3.5_alpha1 72
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-styles-3.4.2 298
 MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-styles-3.5_beta1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMvYMj5H05b2HAEkRAo4gAJ9w+H4Qa5sS2raKVNgpBgSRvEKvJwCfeKN/
+JQ4H9dy5pS0r3zNm2DLdUWE=
+=VCf8
+-----END PGP SIGNATURE-----

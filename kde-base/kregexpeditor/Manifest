@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 27b860a0f2ac9e22c814d0797f53ba7c ChangeLog 2643
 MD5 0d2726deffd1ecb49751c7fe4f21a194 kregexpeditor-3.4.1-r1.ebuild 451
 MD5 1b4bd81c8df371dab2a1f11944235d58 kregexpeditor-3.5_beta1.ebuild 428
@@ -8,3 +11,10 @@ MD5 aa852c5670b437cbfc2af5900a234661 files/digest-kregexpeditor-3.5_alpha1 69
 MD5 ba38338e687742fb5a9e7458de260898 files/digest-kregexpeditor-3.5_beta1 69
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1-r1 212
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kregexpeditor-3.4.1 212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMxFFj5H05b2HAEkRAp9rAJ0eCvZtcrkL4NQvjIMPK+PUB3P5PACfbs1e
+D7PnXxIIc22GWZ5Sfdj6opI=
+=uDUH
+-----END PGP SIGNATURE-----

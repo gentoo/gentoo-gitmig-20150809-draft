@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0517daa346612e50e60119680a33a3da kmail-3.4.2.ebuild 1629
 MD5 0d4bd0aac0425afd4b9f86b1aefb21f8 ChangeLog 3772
 MD5 aa82a9cf16faab980f09bd8763b742d1 kmail-3.4.1.ebuild 1610
@@ -16,3 +19,10 @@ MD5 5c8908dca1e2acb4ba2df3455255bdc7 files/kmail-3.5_alpha1-kdeenablefinal-fix.d
 MD5 0dc20eebce2c8cb4475f065683ae24ff files/kdepim-3.4.2-partnode.patch 756
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kmail-3.5_beta1 68
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2 282
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMwULj5H05b2HAEkRAu0cAJkB12ZiMKVDKN8to0OwF5EqDnbW2QCgpomI
+yKkDCdTq0nDEkbd8zVOReUg=
+=uIXv
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 76118c5ad1bd09bdda2cfe88f4baa816 ChangeLog 2567
 MD5 a22b16081decc9ed8e6039dd9392d13f kontact-3.4.1.ebuild 1039
 MD5 ace7ca8f34b25395dc7a3f3e031364f8 kontact-3.5_alpha1.ebuild 1029
@@ -8,3 +11,10 @@ MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-3.4.2 282
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-kontact-3.5_alpha1 68
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kontact-3.5_beta1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-3.4.1 208
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMwypj5H05b2HAEkRAhTJAKCC0cegq3ePKFLbmfnChPae58XAAACeNcFJ
+kYIP4/FblOHq/20OdiYDD5k=
+=vVAm
+-----END PGP SIGNATURE-----

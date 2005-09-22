@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be6641f0ea4623cf43ebc5e05038d5e3 kwifimanager-3.4.1.ebuild 555
 MD5 3cb7d448d8d83c676be89f0314d5ca4c kwifimanager-3.5_alpha1.ebuild 475
 MD5 5326c65500eea5716335c6db6470e516 ChangeLog 2584
@@ -9,3 +12,10 @@ MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-kwifimanager-3.5_alpha1 71
 MD5 1277f401bade54acfa086cf013950252 files/digest-kwifimanager-3.4.2 296
 MD5 16b903e400a8cf2d73f3c237799238db files/digest-kwifimanager-3.5_beta1 71
 MD5 426360bf289efe11a499f1fa89bb2f4b files/wireless-extensions-api.diff 528
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMxxZj5H05b2HAEkRAuu8AJ9TljwcWic8sFr5W0lV64U8rYYI0ACeLGDt
+3neUWX1le57WSbHyOl5IJFE=
+=K/RU
+-----END PGP SIGNATURE-----

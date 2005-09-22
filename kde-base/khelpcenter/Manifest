@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a6a9184afc4dcf6cdde17ad1905fdd7 ChangeLog 2706
 MD5 46bb74648b8cd9ba339e2df64932ca40 khelpcenter-3.4.1-r1.ebuild 472
 MD5 a158fe8d8cf86fa350a761f90c9394d4 khelpcenter-3.4.1.ebuild 399
@@ -10,3 +13,10 @@ MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-khelpcenter-3.5_alpha1 69
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khelpcenter-3.4.2 287
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1 212
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-khelpcenter-3.5_beta1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMwAwj5H05b2HAEkRAhcrAKCJ06IpxOgf1UFtzQnPMJ+w6AwfZgCfQZxF
+PK2TqS5ah1FzyVudPK6kJWI=
+=gAMJ
+-----END PGP SIGNATURE-----
