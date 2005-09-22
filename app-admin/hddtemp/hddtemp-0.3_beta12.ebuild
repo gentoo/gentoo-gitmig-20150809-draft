@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta12.ebuild,v 1.4 2005/04/29 23:45:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta12.ebuild,v 1.5 2005/09/22 03:25:02 vapier Exp $
 
 MY_P=${P/_beta/-beta}
 
@@ -47,6 +47,6 @@ src_install() {
 		doins ${FILESDIR}/hddtemp.db
 	fi
 
-	insinto /etc/conf.d ; donewins ${FILESDIR}/hddtemp-conf.d hddtemp
-	exeinto /etc/init.d ; newexe ${FILESDIR}/hddtemp-init hddtemp
+	newconfd ${FILESDIR}/hddtemp-conf.d hddtemp
+	newinitd ${FILESDIR}/hddtemp-init hddtemp
 }
