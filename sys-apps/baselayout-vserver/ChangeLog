@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout-vserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.11 2005/09/04 18:25:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.12 2005/09/22 10:11:52 hollow Exp $
+
+*baselayout-vserver-1.12.0_pre8-r2 (22 Sep 2005)
+
+  22 Sep 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch,
+  +baselayout-vserver-1.12.0_pre8-r2.ebuild:
+  adapt r2 + fix init timeout issues
 
 *baselayout-vserver-1.12.0_pre8-r1 (04 Sep 2005)
 
