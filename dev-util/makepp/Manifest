@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 1a68cc4c9c63e4d01e3a193d2415508e makepp-1.40.1a.ebuild 975
+MD5 ef7826d2eda1c7a3a0aac90ad767f632 makepp-1.18.ebuild 1008
+MD5 4e50ed367d0e547c43a3b10090fabca9 ChangeLog 699
+MD5 654d2795cdd9a6ae279129f7d191cae3 files/makepp-1.18-install.patch 2499
+MD5 083fda7b26387aa8eb168a509be56113 files/digest-makepp-1.18 63
+MD5 eb7bb91a8a065d358755c93817bddc5c files/makepp-1.40.1a-install.patch 426
+MD5 4eca3b7eff43ee070de2ecf824a4f74e files/digest-makepp-1.40.1a 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMk7pgIKl8Uu19MoRAu4ZAKCCELz4E2p67zrnKXW3c/mNfnn1wwCbBZtX
+e6ZkyJWLGhH39+Q1+A+bIzY=
+=KKtq
+-----END PGP SIGNATURE-----
