@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.62 2005/09/16 22:00:05 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.63 2005/09/22 23:25:37 chrb Exp $
+
+*sip-4.3.1 (23 Sep 2005)
+
+  23 Sep 2005; Chris Bainbridge <chrb@gentoo.org> +sip-4.3.1.ebuild:
+  Version bump, fixed LICENSE, bug #93575.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
