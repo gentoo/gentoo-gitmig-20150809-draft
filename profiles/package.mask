@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4490 2005/09/22 17:58:49 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4491 2005/09/22 18:28:05 ciaranm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ciaran McCreesh <ciaranm@gentoo.org> (22 Sep 2005)
+# Needs updated selinux patch.
+~sys-apps/findutils-4.2.24
 
 # Wolfram Schlich <wschlich@gentoo.org> (22 Sep 2005)
 # Hardmasking in accordance with g2boojum
