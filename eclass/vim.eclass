@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.119 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.120 2005/09/22 19:41:42 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -14,10 +14,8 @@
 
 # gvim's GUI preference order is as follows:
 # aqua                          CARBON (not tested, 7+)
-# -aqua gtk gtk2 gnome          GNOME2 (6.3-r1+, earlier uses GTK2)
-# -aqua gtk gtk2 -gnome         GTK2
-# -aqua gtk -gtk2 gnome         GNOME1
-# -aqua gtk -gtk2 -gnome        GTK1
+# -aqua gtk gnome               GNOME2 (6.3-r1+, earlier uses GTK2)
+# -aqua gtk -gnome              GTK2
 # -aqua -gtk qt                 QT (7+)
 # -aqua -gtk -qt motif          MOTIF
 # -aqua -gtk -motif nextaw      NEXTAW (7+)
@@ -31,7 +29,7 @@ MY_PN="${PN%-cvs}"
 # This isn't a conditional inherit from portage's perspective, since $MY_PN is
 # constant at cache creation time. It's therefore legal and doesn't break
 # anything. I even checked with carpaski first :) (08 Sep 2004 ciaranm)
-if [[ "${MY_PN}" != "vim-core" ]] ; then
+if [[ "${MY_PN}" != "vim-core" ]] && ! version_is_at_least "6.3.086" ; then
 	inherit debug
 fi
 
@@ -47,7 +45,10 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test pkg_posti
 
 IUSE="selinux nls acl"
 
-if version_is_at_least "6.3.075" ; then
+if version_is_at_least "6.3.086" ; then
+	DEPEND="${DEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
+	RDEPEND="${RDEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
+elif version_is_at_least "6.3.075" ; then
 	IUSE="${IUSE} termcap-compat"
 else
 	IUSE="${IUSE} ncurses"
@@ -79,7 +80,11 @@ else
 		DEPEND="${DEPEND} vim-with-x? ( virtual/x11 )"
 		RDEPEND="${RDEPEND} vim-with-x? ( virtual/x11 )"
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
-		IUSE="${IUSE} gnome gtk gtk2 motif"
+		if version_is_at_least "6.3.086" ; then
+			IUSE="${IUSE} gnome gtk motif"
+		else
+			IUSE="${IUSE} gnome gtk gtk2 motif"
+		fi
 	fi
 fi
 
@@ -130,7 +135,10 @@ DEPEND="${DEPEND}
 	dev-util/ctags"
 RDEPEND="${RDEPEND} dev-util/ctags"
 
-if version_is_at_least "6.3.075" ; then
+if version_is_at_least "6.3.086" ; then
+	DEPEND="${DEPEND} >=sys-libs/ncurses-5.2-r2"
+	RDEPEND="${RDEPEND} >=sys-libs/ncurses-5.2-r2"
+elif version_is_at_least "6.3.075" ; then
 	DEPEND="${DEPEND}
 		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
 		termcap-compat?   ( sys-libs/libtermcap-compat )"
@@ -204,15 +212,9 @@ apply_vim_patches() {
 }
 
 vim_pkg_setup() {
-	if ! version_is_at_least "6.3-r2" ; then
-		eerror "${PF} is no longer supported by vim.eclass. Maybe you need to"
-		eerror "re-run 'emerge sync', or maybe you need to check your overlay"
-		eerror "and /etc/portage/package.* files."
-		die "${PF} not supported."
-	fi
-
 	# people with broken alphabets run into trouble. bug 82186.
 	unset LANG LC_ALL
+	export LC_COLLATE="C"
 }
 
 vim_src_unpack() {
@@ -354,7 +356,9 @@ vim_src_compile() {
 			--disable-gpm"
 
 	else
-		use debug && append-flags "-DDEBUG"
+		if ! version_is_at_least "6.3.086" ; then
+			use debug && append-flags "-DDEBUG"
+		fi
 
 		myconf="--with-features=huge \
 			--enable-multibyte"
@@ -395,7 +399,7 @@ vim_src_compile() {
 				einfo "Building gvim with the Carbon GUI"
 				myconf="${myconf} --enable-gui=carbon"
 			elif use gtk ; then
-				if use gtk2 ; then
+				if version_is_at_least "6.3.086" ; then
 					myconf="${myconf} --enable-gtk2-check"
 					if use gnome ; then
 						einfo "Building gvim with the Gnome 2 GUI"
@@ -405,12 +409,23 @@ vim_src_compile() {
 						myconf="${myconf} --enable-gui=gtk2"
 					fi
 				else
-					if use gnome ; then
-						einfo "Building gvim with the Gnome 1 GUI"
-						myconf="${myconf} --enable-gui=gnome"
+					if use gtk2 ; then
+						myconf="${myconf} --enable-gtk2-check"
+						if use gnome ; then
+							einfo "Building gvim with the Gnome 2 GUI"
+							myconf="${myconf} --enable-gui=gnome2"
+						else
+							einfo "Building gvim with the gtk+-2 GUI"
+							myconf="${myconf} --enable-gui=gtk2"
+						fi
 					else
-						einfo "Building gvim with the gtk+-1.2 GUI"
-						myconf="${myconf} --enable-gui=gtk"
+						if use gnome ; then
+							einfo "Building gvim with the Gnome 1 GUI"
+							myconf="${myconf} --enable-gui=gnome"
+						else
+							einfo "Building gvim with the gtk+-1.2 GUI"
+							myconf="${myconf} --enable-gui=gtk"
+						fi
 					fi
 				fi
 			elif [[ $(get_major_version ) -ge 7 ]] && use qt ; then
@@ -441,7 +456,9 @@ vim_src_compile() {
 
 	# Note: If USE=gpm, then ncurses will still be required. See bug #93970
 	# for the reasons behind the USE flag change.
-	if version_is_at_least "6.3.075" ; then
+	if version_is_at_least "6.3.086" ; then
+		myconf="${myconf} --with-tlib=ncurses"
+	elif version_is_at_least "6.3.075" ; then
 		use termcap-compat \
 			&& myconf="${myconf} --with-tlib=termcap" \
 			|| myconf="${myconf} --with-tlib=ncurses"
@@ -515,17 +532,7 @@ vim_src_install() {
 				|| die "install failed"
 		fi
 
-		keepdir /usr/share/vim/vim${VIM_VERSION/.}/keymap
-
-		# Azarah put in the below "fix" in early 2002 but it makes
-		# things painful when going from 6.1->6.2a, etc.  It also
-		# seems to be completely unnecessary, so I'm removing it.
-		# (24 Apr 2003 agriffis)
-		#
-		# fix problems with vim not finding its data files.
-		#echo "VIMRUNTIME=/usr/share/vim/vim${VIM_VERSION/.}" > 40vim
-		#insinto /etc/env.d
-		#doins 40vim
+		keepdir /usr/share/vim/vim${VIM_VERSION/./}/keymap
 
 		# default vimrc is installed by vim-core since it applies to
 		# both vim and gvim
@@ -678,12 +685,12 @@ vim_pkg_postinst() {
 	einfo
 
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
-		einfo "To see what's new in this release, use :help version${VIM_VERSION/.*}.txt"
+		einfo "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
 		einfo
 	fi
 
 	# Warn about VIMRUNTIME
-	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/.}" ] ; then
+	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/./}" ] ; then
 		ewarn
 		ewarn "WARNING: You have VIMRUNTIME set in your environment from an old"
 		ewarn "installation.  You will need to either unset VIMRUNTIME in each"
@@ -693,7 +700,7 @@ vim_pkg_postinst() {
 	fi
 
 	# Scream loudly if the user is using a -cvs ebuild
-	if [[ -z "${PN/*-cvs}" ]] ; then
+	if [[ -z "${PN/*-cvs/}" ]] ; then
 		ewarn "You are using a -cvs ebuild. Be warned that this is not"
 		ewarn "officially supported and may not work."
 		ewarn " "
@@ -757,20 +764,6 @@ vim_src_test() {
 	# Test 49 won't work inside a portage environment
 	einfo "Test 49 isn't sandbox-friendly, so it will be skipped."
 	sed -i -e 's~test49.out~~g' Makefile
-
-	# TODO: Find out why this test doesn't work with vim7. Hopefully it'll get
-	# fixed fairly soon. Not worth tracking it down until the hashtables code
-	# stabilises though.. (22 Jan 2005 ciaranm)
-	if version_is_at_least "7.0_alpha20050201" ; then
-		einfo "Test 55, which checks various new vim7 features, is believed"
-		einfo "to be working again. If it fails with a segfault, please"
-		einfo "let ciaranm know by email or on IRC."
-
-	elif version_is_at_least "7.0_alpha20050122" ; then
-		einfo "Test 55 shows some known bugs in new vim7 features. It will"
-		einfo "fail with a segfault, so it will be skipped for now."
-		sed -i -e 's~test55.out~~g' Makefile
-	fi
 
 	# We don't want to rebuild vim before running the tests
 	sed -i -e 's,: \$(VIMPROG),: ,' Makefile
