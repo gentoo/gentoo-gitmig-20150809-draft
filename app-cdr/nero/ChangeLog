@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.6 2005/08/28 18:50:12 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.7 2005/09/22 18:24:53 wschlich Exp $
+
+*nero-2.0.0.3b (22 Sep 2005)
+
+  22 Sep 2005; Wolfram Schlich <wschlich@gentoo.org> nero-2.0.0.2.ebuild,
+  +nero-2.0.0.3b.ebuild:
+  mark 2.0.0.2 stable on x86, add 2.0.0.3b archmasked
 
   28 Aug 2005; Luis Medinas <metalgod@gentoo.org> nero-2.0.0.2.ebuild:
   Fix build for AMD64. Closes bug #103626.
