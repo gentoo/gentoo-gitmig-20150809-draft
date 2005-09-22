@@ -1,20 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 716be15e99f89578f84479fdbd7b9797 ChangeLog 2152
+MD5 3348681c9a930abae0d1a55678e07ad9 ChangeLog 2582
 MD5 857f9ce87c6030f3d8eb7d3105f30c8e jde-2.3.3-r1.ebuild 1297
-MD5 b6c7ee3b6ef85ad220fab5240fb1a05e metadata.xml 737
 MD5 f55e226bbfa9f5e1d1609b07a382f49c jde-2.3.3.ebuild 1105
+MD5 b6c7ee3b6ef85ad220fab5240fb1a05e metadata.xml 737
+MD5 89a4892497d9e7eb68c10306a98346f9 jde-2.3.5-r1.ebuild 1260
 MD5 053f73255b0f10f1a8efc1f8a4f6c8b6 jde-2.3.5.ebuild 1088
-MD5 9f280cc7e0e050bd10d6585bf23ef45a files/digest-jde-2.3.3 62
 MD5 978bb89eb6293ac482b193ade2a80b94 files/2.3.3-jde-new-buffer-menu-gentoo.patch 509
-MD5 9f280cc7e0e050bd10d6585bf23ef45a files/digest-jde-2.3.3-r1 62
 MD5 7158a0f444921d301f3048ce0c65435c files/70jde-gentoo.el 223
+MD5 9f280cc7e0e050bd10d6585bf23ef45a files/digest-jde-2.3.3 62
+MD5 9f280cc7e0e050bd10d6585bf23ef45a files/digest-jde-2.3.3-r1 62
 MD5 54c2c6fef8729628f62a445430024f44 files/digest-jde-2.3.5 62
+MD5 991a8910d2c8572f9ee653354614916c files/2.3.5-cedet-version-adjust-gentoo.patch 549
+MD5 54c2c6fef8729628f62a445430024f44 files/digest-jde-2.3.5-r1 62
+MD5 6acb955ff8a6964dc6a09732e8f7c9ee files/2.3.5-70jde-gentoo.el 101
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2WiwcsIHjyDViGQRAicHAJ0dTDjI9GqcuI+BZcFoJoY2/bPe2gCffrDw
-7cmhJrU14YjZ/K6PoYsj6ZA=
-=2fBW
+iD8DBQFDMzJuyiNZaEAZA+ARApjuAJ9p7h2nKGMGvF7X/mraq/g/C27fCQCeLA/b
+Il+b6MvIaRrBM54CwbpcPJw=
+=0KDx
 -----END PGP SIGNATURE-----
