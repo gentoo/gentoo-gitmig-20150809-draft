@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/ciphire-mail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ChangeLog,v 1.7 2005/09/22 14:50:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ciphire-mail/ChangeLog,v 1.8 2005/09/22 14:53:34 wolf31o2 Exp $
+
+  22 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ciphire-mail-1.0.0.ebuild, ciphire-mail-1.1.009.ebuild,
+  ciphire-mail-1.1.015.ebuild:
+  Revert last change.
 
   22 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   ciphire-mail-1.0.0.ebuild, ciphire-mail-1.1.009.ebuild,
