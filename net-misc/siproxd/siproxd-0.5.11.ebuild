@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.11.ebuild,v 1.1 2005/05/07 15:36:23 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/siproxd-0.5.11.ebuild,v 1.2 2005/09/22 23:24:06 stkn Exp $
 
 inherit eutils
 
@@ -26,6 +26,9 @@ src_unpack() {
 	# re-create configure (stolen from dhcpd :)
 	einfo "Re-creating configure..."
 	autoreconf -fi || die "autoreconf failed"
+
+	# Make the daemon run as user 'siproxd' by default
+	sed -i -e "s:nobody:siproxd:" doc/siproxd.conf.example
 }
 
 src_compile() {
@@ -47,4 +50,16 @@ src_install() {
 	newexe ${FILESDIR}/siproxd.rc6 siproxd
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO RELNOTES
+
+	# Set up siproxd directories
+	keepdir /var/lib/siproxd
+	keepdir /var/run/siproxd
+}
+
+pkg_postinst() {
+	enewgroup siproxd
+	enewuser siproxd -1 -1 /dev/null siproxd
+
+	fowners siproxd:siproxd /var/lib/siproxd
+	fowners siproxd:siproxd /var/run/siproxd
 }

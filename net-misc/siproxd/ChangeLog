@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/siproxd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.1 2005/05/07 15:36:23 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.2 2005/09/22 23:24:06 stkn Exp $
+
+  23 Sep 2005; Stefan Knoblich <stkn@gentoo.org> files/siproxd.rc6,
+  siproxd-0.5.11.ebuild:
+  Added non-root changes (with little modifications) submitted by CJ Kucera in
+  bug #97309.
 
 *siproxd-0.5.11 (07 May 2005)
 

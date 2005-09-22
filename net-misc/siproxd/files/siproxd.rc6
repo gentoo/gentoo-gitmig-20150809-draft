@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/files/siproxd.rc6,v 1.1 2005/05/07 15:36:23 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/files/siproxd.rc6,v 1.2 2005/09/22 23:24:06 stkn Exp $
 
 depend() {
 	need net
@@ -20,12 +20,12 @@ start() {
 
 	ebegin "Starting siproxd"
 	start-stop-daemon --start --exec /usr/sbin/siproxd -- \
-		-p /var/run/siproxd.pid -c /etc/siproxd.conf
+		-p /var/run/siproxd/siproxd.pid -c /etc/siproxd.conf
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping siproxd"
-	start-stop-daemon --stop --pidfile /var/run/siproxd.pid
+	start-stop-daemon --stop --pidfile /var/run/siproxd/siproxd.pid
 	eend $?
 }
