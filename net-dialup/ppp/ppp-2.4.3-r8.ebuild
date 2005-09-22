@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r8.ebuild,v 1.2 2005/08/29 05:55:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r8.ebuild,v 1.3 2005/09/22 23:00:36 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -24,10 +24,6 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	CONFIG_CHECK="PPP"
-	use activefilter && CONFIG_CHECK="${CONFIG_CHECK} PPP_FILTER"
-	linux-info_pkg_setup
-
 	if ! use radius; then
 		echo
 		ewarn "RADIUS plugins installation is now controled by radius useflag!"
@@ -229,12 +225,24 @@ src_install() {
 }
 
 pkg_postinst() {
+	if get_version ; then
+		echo
+		ewarn "If any of the following kernel configuration options is missing,"
+		ewarn "you should reconfigure and rebuild your kernel before running pppd."
+		CONFIG_CHECK="~PPP"
+		use activefilter && CONFIG_CHECK="${CONFIG_CHECK} ~PPP_FILTER"
+		CONFIG_CHECK="${CONFIG_CHECK} ~PPP_BSDCOMP ~PPP_DEFLATE"
+		check_extra_config
+		echo
+	fi
+
 	if [ ! -e ${ROOT}/dev/.devfsd ] && [ ! -e ${ROOT}/dev/.udev ] && [ ! -e ${ROOT}/dev/ppp ]; then
 		mknod ${ROOT}/dev/ppp c 108 0
 	fi
 	if [ "$ROOT" = "/" ]; then
 		/sbin/update-modules
 	fi
+
 	#create *-secrets files if not exists
 	[ -f "${ROOT}/etc/ppp/pap-secrets" ] || \
 		cp -pP "${ROOT}/etc/ppp/pap-secrets.example" "${ROOT}/etc/ppp/pap-secrets"
