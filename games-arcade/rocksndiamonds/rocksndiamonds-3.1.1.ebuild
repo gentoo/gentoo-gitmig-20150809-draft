@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.1.1.ebuild,v 1.1 2005/08/24 05:11:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.1.1.ebuild,v 1.2 2005/09/22 23:45:23 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -17,19 +17,16 @@ SRC_URI="http://www.artsoft.org/RELEASES/unix/rocksndiamonds/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE="X sdl"
 
-RDEPEND="virtual/libc
-	app-arch/unzip
+DEPEND="app-arch/unzip
 	X? ( virtual/x11 )
 	!sdl? ( virtual/x11 )
 	sdl? ( >=media-libs/libsdl-1.2.3
 		>=media-libs/sdl-mixer-1.2.4
 		media-libs/sdl-net
 		>=media-libs/sdl-image-1.2.2 )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -71,7 +68,9 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin rocksndiamonds.x11 || die "dogamesbin failed"
+	if use X || { ! use X && ! use sdl; } ; then
+		dogamesbin rocksndiamonds.x11 || die "dogamesbin failed"
+	fi
 	if use sdl ; then
 		dogamesbin rocksndiamonds.sdl || die "dogamesbin failed"
 		dosym rocksndiamonds.sdl "${GAMES_BINDIR}/rocksndiamonds"
