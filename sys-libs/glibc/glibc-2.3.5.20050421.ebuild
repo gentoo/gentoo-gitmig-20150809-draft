@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.36 2005/09/16 10:18:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.37 2005/09/22 06:10:29 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -186,11 +186,8 @@ toolchain-glibc_src_unpack() {
 	# infopages else it does not help much (mtimes change if there is a change
 	# to them with branchupdate)
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
-		cd "${WORKDIR}"
-		unpack ${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-
 		cd "${S}"
-		epatch "${WORKDIR}"/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch
+		epatch "${DISTDIR}"/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 
 		# Snapshot date patch
 		einfo "Patching version to display snapshot date ..."
@@ -789,9 +786,8 @@ want_tls() {
 			esac
 		;;
 		x86)
-			case ${CTARGET/-*} in
-				i486|i586|i686)	return 0 ;;
-			esac
+			# requires i486 or better #106556
+			[[ ${CTARGET} == i[4567]86* ]] && return 0
 		;;
 	esac
 

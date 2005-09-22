@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.16 2005/09/21 02:16:31 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.17 2005/09/22 06:10:29 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -68,11 +68,7 @@ is_crosscompile() {
 
 GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 
-# Don't set this to :-, - allows us to override BRANCH_UPDATE to be empty:
-#
-#   ${parameter:-word}
-#     Use  Default Values.  If parameter is unset or null, the expansion of
-#     word is substituted.
+# Don't set this to :-, - allows BRANCH_UPDATE=""
 BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
@@ -190,10 +186,6 @@ toolchain-glibc_src_unpack() {
 	# infopages else it does not help much (mtimes change if there is a change
 	# to them with branchupdate)
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
-		cd "${WORKDIR}"
-		# Why is it being unpacked first??
-		#unpack ${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-
 		cd "${S}"
 		epatch "${DISTDIR}"/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 
@@ -797,9 +789,8 @@ want_tls() {
 			esac
 		;;
 		x86)
-			case ${CTARGET/-*} in
-				i486|i586|i686)	return 0 ;;
-			esac
+			# requires i486 or better #106556
+			[[ ${CTARGET} == i[4567]86* ]] && return 0
 		;;
 	esac
 
