@@ -1,4 +1,14 @@
-MD5 148c0f15f1fd05cfb4b80da55dbb26a4 ChangeLog 786
-MD5 628af8a64e8af0f3f2ea8141a30dbc1d arptables-0.0.3.ebuild 776
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3eaf375e87551d0b332db3a82109c9d7 metadata.xml 221
+MD5 4a98111de235efe619eacbf3fbdf7a75 arptables-0.0.3.ebuild 650
+MD5 148c0f15f1fd05cfb4b80da55dbb26a4 ChangeLog 786
 MD5 dab844f5d0908181fa638560485b5cc2 files/digest-arptables-0.0.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDMh8qgIKl8Uu19MoRAnc2AJ9dq4vuz1y2p05AY6SV19ULYBvX/wCfYpKN
+6WQbs5PiyhHkWsZhbxExWiY=
+=PQrI
+-----END PGP SIGNATURE-----
