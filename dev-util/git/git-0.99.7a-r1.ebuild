@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.7a.ebuild,v 1.1 2005/09/21 23:41:49 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.7a-r1.ebuild,v 1.1 2005/09/22 17:57:08 r3pek Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ SRC_URI="http://kernel.org/pub/software/scm/git/${PN}-core-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="mozsha1 ppcsha1 doc nocurl gitsendemail"
+IUSE="mozsha1 ppcsha1 doc nocurl tcltk gitsendemail"
 S="${WORKDIR}/${PN}-core-${PV}"
 
 DEPEND="dev-libs/openssl
@@ -22,11 +22,11 @@ DEPEND="dev-libs/openssl
 RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
-		dev-lang/tk
+		tcltk? ( dev-lang/tk )
 		!nocurl? ( net-misc/curl )
 		>=dev-util/cvsps-2.1
 		dev-perl/String-ShellQuote
-		gitsendemail? ( mail-mta/sendmail )"
+		gitsendemail? ( dev-perl/Mail-Sendmail )"
 
 src_unpack() {
 	unpack ${A}
@@ -69,6 +69,9 @@ src_install() {
 	if use gitsendemail; then
 		exeinto /usr/bin
 		doexe git-send-email.perl
+	fi
+	if !(use tcltk); then
+		rm ${D}/usr/bin/gitk
 	fi
 
 	dodoc README COPYING
