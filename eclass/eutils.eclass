@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.198 2005/09/18 22:02:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.199 2005/09/22 14:52:36 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1136,12 +1136,12 @@ check_license() {
 	if [ -z "${lic}" ] ; then
 		lic="${PORTDIR}/licenses/${LICENSE}"
 	else
-		if [ -e "${PORTDIR}/licenses/${src}" ] ; then
-			lic="${PORTDIR}/licenses/${src}"
-		elif [ -e "${PWD}/${src}" ] ; then
-			lic="${PWD}/${src}"
-		elif [ -e "${src}" ] ; then
-			lic="${src}"
+		if [ -e "${PORTDIR}/licenses/${lic}" ] ; then
+			lic="${PORTDIR}/licenses/${lic}"
+		elif [ -e "${PWD}/${lic}" ] ; then
+			lic="${PWD}/${lic}"
+		elif [ -e "${lic}" ] ; then
+			lic="${lic}"
 		fi
 	fi
 	[ ! -f "${lic}" ] && die "Could not find requested license ${src}"
