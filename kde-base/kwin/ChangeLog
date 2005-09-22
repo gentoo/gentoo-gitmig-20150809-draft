@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.18 2005/09/12 13:26:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.19 2005/09/22 21:05:00 flameeyes Exp $
+
+*kwin-3.5_beta1 (22 Sep 2005)
+
+  22 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +kwin-3.5_beta1.ebuild:
+  Bump to 3.5 beta1.
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> kwin-3.4.1.ebuild:
   Mark 3.4.1 stable on alpha

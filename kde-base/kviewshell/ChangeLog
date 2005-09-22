@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kviewshell
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kviewshell/ChangeLog,v 1.15 2005/09/07 13:11:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kviewshell/ChangeLog,v 1.16 2005/09/22 20:59:44 flameeyes Exp $
+
+*kviewshell-3.5_beta1 (22 Sep 2005)
+
+  22 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kviewshell-qt-3.3.5.patch, kviewshell-3.4.2.ebuild,
+  +kviewshell-3.5_beta1.ebuild:
+  Bump to 3.5 beta1.
 
 *kviewshell-3.5_alpha1 (07 Sep 2005)
 

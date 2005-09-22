@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.24 2005/09/19 15:55:04 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.25 2005/09/22 20:05:39 flameeyes Exp $
+
+*kpdf-3.5_beta1 (22 Sep 2005)
+
+  22 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +kpdf-3.5_beta1.ebuild:
+  Bump to 3.5 beta1.
 
   19 Sep 2005; Gregorio Guidi <greg_g@gentoo.org> kpdf-3.5_alpha1.ebuild:
   Do not pass configure switches for DRM anymore (see bug 83838).

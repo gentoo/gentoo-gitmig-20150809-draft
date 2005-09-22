@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d891de8c5833bd58409cd20ad54c1724 ChangeLog 2711
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5_alpha1 0
-MD5 4532e72b8eda62bcbe43262c9721a833 kdeadmin-meta-3.4.1.ebuild 901
+MD5 75b53708533b1b8ba793d82e43739b9f ChangeLog 2861
 MD5 9d364fed497b9fa2907c0618205fe8eb kdeadmin-meta-3.4.2.ebuild 922
-MD5 50172bd7e7c065641a235a194bc1ab5b kdeadmin-meta-3.5_alpha1.ebuild 887
+MD5 4532e72b8eda62bcbe43262c9721a833 kdeadmin-meta-3.4.1.ebuild 901
+MD5 50172bd7e7c065641a235a194bc1ab5b kdeadmin-meta-3.5_beta1.ebuild 887
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIikhI1lqEGTUzyQRAt+CAJsFVaLICbHQNFX6Z/FRNWSgpYtrRwCg1MlJ
-RfkTQGk0GV+VZ1Gyyh0Jvtw=
-=BlnT
------END PGP SIGNATURE-----
+MD5 50172bd7e7c065641a235a194bc1ab5b kdeadmin-meta-3.5_alpha1.ebuild 887
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5_alpha1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.5_beta1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.2 0

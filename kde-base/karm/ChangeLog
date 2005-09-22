@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.16 2005/09/07 10:50:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.17 2005/09/22 17:47:08 flameeyes Exp $
+
+*karm-3.5_beta1 (22 Sep 2005)
+
+  22 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +karm-3.5_beta1.ebuild:
+  Bump to 3.5 beta1.
 
 *karm-3.5_alpha1 (07 Sep 2005)
 

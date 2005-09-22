@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.12 2005/09/07 13:08:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.13 2005/09/22 20:55:53 flameeyes Exp $
+
+*kuiviewer-3.5_beta1 (22 Sep 2005)
+
+  22 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +kuiviewer-3.5_beta1.ebuild:
+  Bump to 3.5 beta1.
 
 *kuiviewer-3.5_alpha1 (07 Sep 2005)
 
