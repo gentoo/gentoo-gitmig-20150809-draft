@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.39 2005/09/20 17:56:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.40 2005/09/22 00:06:03 betelgeuse Exp $
+
+*tomcat-5.0.28-r7 (22 Sep 2005)
+
+  22 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
+  files/5.0.28/tomcat.init, +tomcat-5.0.28-r7.ebuild:
+  Added --background to stop too in the init script. Also fixed some
+  permissions and cleaned directory creation code.
 
 *tomcat-5.0.28-r6 (20 Sep 2005)
 
