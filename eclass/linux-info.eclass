@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.30 2005/07/14 19:33:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.31 2005/09/22 14:09:25 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -374,73 +374,78 @@ check_modules_supported() {
 }
 
 check_extra_config() {
-	local	config negate error local_error i n temp_config
+	local	config negate error local_error i n 
+	local	temp_config die reworkmodulenames
 
 	# if we haven't determined the version yet, we need too.
 	get_version;
 
-	einfo "Checking for suitable kernel configuration options"
+	einfo "Checking for suitable kernel configuration options:"
 	for config in ${CONFIG_CHECK}
 	do
-		negate="${config:0:1}"
-		if [ "${negate}" == "!" ];
-		then
-			config="${config:1}"
-			if linux_chkconfig_present ${config}
-			then
-				local_error="${config}_ERROR"
-				local_error="${!local_error}"
-				[ -n "${local_error}" ] && eerror "  ${local_error}" || \
-					eerror "  CONFIG_${config}:\tshould not be set in the kernel configuration, but it is."
-				error=1
-			fi
-		elif [ "${negate}" == "@" ];
-		then
-			# we never call this unless we are using MODULE_NAMES
+		# if we specify any fatal, ensure we honor them
+		die=1
+		error=0
+		negate=0
+		reworkmodulenames=0
 
-			config="${config:1}"
+		if [[ -z ${config//\!*} ]]; then
+			negate=1
+			config=${config:1}
+		fi
+		if [[ -z ${config/\@*} ]]; then
+			die=2
+			reworkmodulenames=1
+			config=${config:1}
+		fi
+		if [[ -z ${config/\~*} ]]; then
+			die=0
+			config=${config:1}
+		fi
+
+		if [[ ${negate} == 1 ]]; then
+			linux_chkconfig_present ${config} && error=2
+		elif [[ ${reworkmodulenames} == 1 ]]; then
 			temp_config="${config//*:}"
 			config="${config//:*}"
-			if linux_chkconfig_present ${config}
-			then
-				local_error="${config}_ERROR"
-				local_error="${!local_error}"
-				[ -n "${local_error}" ] && eerror "  ${local_error}" || \
-					eerror "  CONFIG_${config}:\tshould not be set in the kernel configuration, but it is."
-
-				for i in ${MODULE_NAMES}
-				do
+			if linux_chkconfig_present ${config}; then
+				for i in ${MODULE_NAMES}; do
 					n="${i//${temp_config}}"
-					[ -z "${n//(*}" ] && MODULE_IGNORE="${MODULE_IGNORE} ${temp_config}"
+					[[ -z ${n//(*} ]] && \
+						MODULE_IGNORE="${MODULE_IGNORE} ${temp_config}"
 				done
-				error=0
+				error=2
 			fi
 		else
-			if ! linux_chkconfig_present ${config}
-			then
-				# Support the new syntax first.
-				local_error="ERROR_${config}"
+			linux_chkconfig_present ${config} || error=1
+		fi
+
+		if [[ ${die} == 0 ]]; then
+			ebegin "CONFIG_${config}"
+			eend ${error}
+		else
+			if [[ ${error} > 0 ]]; then
+				local_error="${config}_ERROR"
 				local_error="${!local_error}"
-
-				# then fall back on the older syntax.
-				if [[ -z ${local_error} ]] ; then
-					local_error="${config}_ERROR"
-					local_error="${!local_error}"
+				if [[ -z "${local_error}" ]]; then
+					[[ ${error} == 1 ]] \
+						&& local_error="is not set when it should be." \
+						|| local_error="should not be set. But it is."
+					local_error="CONFIG_${config}:\t ${local_error}"
 				fi
-
-				[[ -n ${local_error} ]] && eerror "  ${local_error}" || \
-					eerror "  CONFIG_${config}:\tshould be set in the kernel configuration, but isn't"
-				error=1
+				eerror "  ${local_error}"
 			fi
 		fi
 	done
 
-	if [ "${error}" == 1 ] ;
-	then
+	if [[ ${error} > 0 ]]; then
 		eerror "Please check to make sure these options are set correctly."
-		eerror "Once you have satisfied these options, please try merging"
-		eerror "this package again."
-		die "Incorrect kernel configuration options"
+		eerror "Failure to do so may cause unexpected problems."
+		if [[ ${die} == 1 ]]; then
+			eerror "Once you have satisfied these options, please try merging"
+			eerror "this package again."
+			die "Incorrect kernel configuration options"
+		fi
 	fi
 }
 
