@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1002ef42f65dce34e596ca12d8d766da akregator-3.5_alpha1.ebuild 647
 MD5 a95ef484dfcc546853d046a83850553a akregator-3.4.1-r1.ebuild 787
 MD5 d71963bf43ec1787db11e284a538ae0e ChangeLog 3071
 MD5 5423f5066bf8b71ffea6ddeaf65a05ed akregator-3.4.2.ebuild 666
 MD5 cbea42aea3668a2227f03e0599b96f8b akregator-3.4.1.ebuild 665
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 1002ef42f65dce34e596ca12d8d766da akregator-3.5_beta1.ebuild 647
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-akregator-3.4.2 282
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-akregator-3.4.1-r1 208
 MD5 2943bf542accb5d027810434e6cebe1d files/digest-akregator-3.5_alpha1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-akregator-3.4.1 208
 MD5 b6a29865e7aefe8e3858bd65de651d3d files/kdepim-3.4.1-akregator-unread.patch 673
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHsHIj5H05b2HAEkRAvhHAKCRpz7QPNfKUEnTBvGWxVdWulLBlwCfVSJQ
-RFv0B/8Trw3YvZQ3tWcShlM=
-=4I24
------END PGP SIGNATURE-----
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-akregator-3.5_beta1 68
