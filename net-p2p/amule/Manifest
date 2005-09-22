@@ -1,10 +1,11 @@
-MD5 598adb138a321ea843fc709c4b5533e1 ChangeLog 7565
+MD5 037dc131319fe67d8ab0287bfdcefec3 ChangeLog 7704
 MD5 8089773038f60bec63f9fc87c15aa26e amule-1.2.8.ebuild 922
 MD5 5ff5515bcbef5c070e0356ce1f01aef4 amule-2.0.1.ebuild 2229
 MD5 1abaced287e5f9e1594893fb667a96df amule-2.0.3.ebuild 2258
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 52781eab799d0ab31cdcd3847805789e amule-1.2.8-r2.ebuild 826
 MD5 b3c15e104e1b64f5499fad3b01f9b27d amule-1.2.8-r1.ebuild 829
+MD5 167ff1e9d9706cd018375966be633f1d amule-2.0.3-r4.ebuild 2606
 MD5 9842bde0d727d0714cf5ae1f01c14f19 amule-2.0.3-r2.ebuild 2167
 MD5 4b1e5b8f876490da282983c0fe3af6e6 amule-2.0.1-r2.ebuild 2183
 MD5 28a843108dc2a81ececee701965cb3da amule-2.0.3-r3.ebuild 2183
@@ -23,3 +24,4 @@ MD5 e875c8bb7caccbc783bbd7238b520a04 files/digest-amule-2.0.1-r1 65
 MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3-r2 65
 MD5 e875c8bb7caccbc783bbd7238b520a04 files/digest-amule-2.0.1-r2 65
 MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3-r3 65
+MD5 393ff0bdafbbb32d292387e1ca196737 files/digest-amule-2.0.3-r4 65
