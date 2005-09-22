@@ -1,6 +1,16 @@
-MD5 23f8ba9e96d5be9c3dbf242f78e74721 qalculate-kde-0.8.0.ebuild 584
-MD5 e5740fa61d97f1fb941abe948e6670a6 qalculate-kde-0.8.1.1.ebuild 597
-MD5 831b312ce4b32f865cc6898f1eb96cbe ChangeLog 836
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f8e05c215a29357dcb9945f0216695b ChangeLog 942
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
+MD5 23f8ba9e96d5be9c3dbf242f78e74721 qalculate-kde-0.8.0.ebuild 584
+MD5 5aa33ce49c63aabd22be56dc656a1040 qalculate-kde-0.8.1.1.ebuild 604
 MD5 6d56317fb72c62a5b0455a3a3aa01161 files/digest-qalculate-kde-0.8.0 72
 MD5 9dee732210d49f0dee15d88076758017 files/digest-qalculate-kde-0.8.1.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDMqZwwUpWvClEHQoRAmQUAJ438M7xacHitJHUX+8VUO3mj58mIgCeI3ZT
+zOUbSIV3VlQ9KHhxkofzOyI=
+=zrJM
+-----END PGP SIGNATURE-----
