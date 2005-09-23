@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-1.05-r2.ebuild,v 1.6 2005/09/10 20:50:35 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-1.05-r2.ebuild,v 1.7 2005/09/23 01:18:48 ramereth Exp $
 
 DESCRIPTION="mod_fcgid is a binary-compatible alternative to mod_fastcgi
 with better process management"
@@ -24,7 +24,7 @@ RDEPEND="<=net-www/apache-2.0.54-r30
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${WORKDIR}
-	mv ${MY_P} ${PN}-${PV}
+	mv ${MY_P} ${P}
 	cd ${S}
 	sed -i '/^include/s:$:\nINCLUDES=-I/usr/include/apache2:;/^top_dir/s:local:lib:' Makefile
 }
@@ -32,7 +32,8 @@ src_unpack() {
 src_install() {
 	dodoc AUTHOR ChangeLog INSTALL.txt
 	exeinto /usr/lib/apache2-extramodules ; doexe .libs/${PN}.so
-	insinto /etc/apache2/conf/modules.d ; doins ${FILESDIR}/20_mod_fcgid.conf
+	insinto /etc/apache2/conf/modules.d
+	newins ${FILESDIR}/20_mod_fcgid.conf-oldlayout 20_mod_fcgid.conf
 }
 
 pkg_postinst() {
