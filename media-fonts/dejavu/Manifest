@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a088c8deff75f9fbf8b110978dde3ca ChangeLog 1579
 MD5 8cc03a304930e2391d136ff84d011e80 dejavu-1.8.ebuild 674
 MD5 e1fee922ea262b276f7370be31088839 dejavu-1.11.ebuild 690
@@ -8,3 +11,10 @@ MD5 802e023d624af60a02a26f2553da0f23 files/digest-dejavu-1.11 67
 MD5 adbfe2b219243a3198dd3e8b0decf819 files/digest-dejavu-1.8 66
 MD5 b8ebada311be8f36d3249401a37b9c0d files/digest-dejavu-1.10 67
 MD5 25bffaa89d39ec2c3bc9266f0bd20509 files/digest-dejavu-1.9 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNCDnKRy60XGEcJIRAldIAJ950YxE46QR8YoGZCxxnbwPV7WodwCZAbPF
+IJ8zRA8lJvhLXumLqxOiLSU=
+=yH+T
+-----END PGP SIGNATURE-----

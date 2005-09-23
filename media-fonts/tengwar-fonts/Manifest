@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0302a30c542acd602a7912f82ed08e9e ChangeLog 1370
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 31b02ffea6067f90a3d713193760ecf5 tengwar-fonts-1.9d.ebuild 834
 MD5 e9151029b577a1b07f73f808864df63c files/digest-tengwar-fonts-1.9d 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNCKnKRy60XGEcJIRAmSKAJsF93xTVKE3e3Mhe59VqGh7Q+Dq5QCfcmBz
+HU7OyP0PQSma532ZEQj/NCE=
+=wiZL
+-----END PGP SIGNATURE-----

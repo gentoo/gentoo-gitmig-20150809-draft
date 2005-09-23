@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d2f546f1affa347afdcdf3633b40e32e ChangeLog 724
 MD5 af8a5f3513b51e256b3c6b5b5e6754f1 metadata.xml 217
 MD5 8c74d4952bad40684c0354fbf6924dfc urwvn-fonts-2.0.ebuild 579
 MD5 a5a25439da2fa20c5aaedbc739806442 files/digest-urwvn-fonts-2.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNCRsKRy60XGEcJIRAmqkAJ40EnbDACh0e2cpAt9oeyyFGFTvfQCeJAhe
+/mqKK/wY6vT1lNZgJ4BMO20=
+=iorx
+-----END PGP SIGNATURE-----

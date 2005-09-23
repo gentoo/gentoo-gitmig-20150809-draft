@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1d97ddc1a408c7a3af18339dc4d115fa ChangeLog 1123
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 27eef6e5809b166bfdaae9c562ee3577 artwiz-aleczapka-en-1.3.ebuild 570
 MD5 f36946b5d3a710e549c69900d6a33c7c files/digest-artwiz-aleczapka-en-1.3 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNB9eKRy60XGEcJIRAmTUAJ49mNUvWm7/WQUofl66R2bz9aFTLgCcDHu1
+uqEfUHjH3AoLyhxWhPTzmnA=
+=X/Wo
+-----END PGP SIGNATURE-----

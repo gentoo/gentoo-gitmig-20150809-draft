@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 48a6e1100adfe6ab3595ac4a7459f4de ChangeLog 1141
 MD5 695d1f5f8173cb2bb46e7b985d8eddae ezra-sil-2.0.ebuild 913
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 113ec949b81d6ff92f8f269a96634ab0 files/digest-ezra-sil-2.0 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNCHKKRy60XGEcJIRAjHlAJ93AgYrxgPWrx18it/VMBGm80SLewCgmLpj
+Coo3wmzH8Ul+2ZCifaUOo7c=
+=5MgB
+-----END PGP SIGNATURE-----

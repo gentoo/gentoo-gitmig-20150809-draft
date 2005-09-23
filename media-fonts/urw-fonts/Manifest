@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 820599117f92221c9c5baa3271ae66b6 ChangeLog 2491
 MD5 31c48f30aacad1a1d67fcb64384c3aa5 urw-fonts-2.1-r2.ebuild 724
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
@@ -5,3 +8,10 @@ MD5 44dd5f1440e7a2a9f5c1c994c13cbea6 urw-fonts-2.0-r1.ebuild 1408
 MD5 cfca3b77cb76ade070a8c4b123705aed files/digest-urw-fonts-2.1-r2 69
 MD5 c93a1f8a8417b0864a0b328cca029055 files/fonts.conf 10193
 MD5 55bed1fe8e23fa03a0dfc0c4cb6fcbe1 files/digest-urw-fonts-2.0-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNCQnKRy60XGEcJIRAtVdAKCyVaSat/AIatHlYtdsiEU6xMuw9QCfess2
+4v5wKdyNzCSjfyVOR+AGOfE=
+=wMGV
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ec44804f4eb8e3246b1bc9650a58166 ChangeLog 874
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
 MD5 909314b9c29b2d819ee9b7a3c7102c24 unfonts-extra-1.0.1.ebuild 579
 MD5 f95d49c562c7b63341077c2f4c8429b1 files/digest-unfonts-extra-1.0.1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNCOaKRy60XGEcJIRAoiWAKCOd4wgWIo5fNmrSETnDApCbCI5CQCfRPE1
+fW7xiXZeo1eh+RAC4D3ugvI=
+=uJ0v
+-----END PGP SIGNATURE-----
