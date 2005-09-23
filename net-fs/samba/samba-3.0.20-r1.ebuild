@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20-r1.ebuild,v 1.2 2005/09/03 12:00:29 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20-r1.ebuild,v 1.3 2005/09/23 16:33:57 satya Exp $
 
 inherit eutils versionator
 
@@ -19,7 +19,9 @@ PFVSCAN=${PN}-vscan-${VSCAN_VER}
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org/
 	http://www.openantivirus.org/projects.php"
-SRC_URI="mirror://samba/${MY_P}.tar.gz
+SRC_URI="
+	mirror://samba/${MY_P}.tar.gz
+	mirror://samba/old-versions/${MY_P}.tar.gz
 	oav? ( mirror://sourceforge/openantivirus/${PFVSCAN}.tar.bz2 )
 	mirror://gentoo/${MY_PP}.tar.bz2"
 
