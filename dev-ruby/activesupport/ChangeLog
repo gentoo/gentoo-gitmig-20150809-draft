@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.11 2005/08/01 18:49:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.12 2005/09/23 01:34:25 caleb Exp $
+
+  23 Sep 2005; Caleb Tennis <caleb@gentoo.org> -activesupport-1.0.0.ebuild,
+  -activesupport-1.0.1.ebuild, -activesupport-1.0.2.ebuild,
+  -activesupport-1.0.3.ebuild, -activesupport-1.0.4.ebuild:
+  Remove old versions
 
   01 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
   activesupport-1.1.1.ebuild:
