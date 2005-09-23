@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.9 2005/09/20 21:17:58 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.10 2005/09/23 04:36:51 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -10,7 +10,7 @@ GENTOO_PATCHSTAMP="20050918-02"
 GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
-DESCRIPTION="The Apache Web Server, Version 2.0.x"
+DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://httpd.apache.org/"
 SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 	http://dev.gentoo.org/~${GENTOO_DEVSPACE}/dist/apache/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
@@ -308,7 +308,7 @@ src_install () {
 pkg_postinst() {
 
 	# Automatically generate test ceritificates if ssl USE flag is beeing set
-	if useq ssl; then
+	if useq ssl -a !-e ${ROOT}/etc/apache2/ssl/server.crt; then
 		cd ${ROOT}/etc/apache2/ssl
 		einfo
 		einfo "Generating self-signed test certificate in /etc/apache2/ssl..."
