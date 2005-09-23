@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.2.ebuild,v 1.8 2005/09/02 12:48:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.2.ebuild,v 1.9 2005/09/23 14:24:10 fmccor Exp $
 
 inherit ruby
 
@@ -19,6 +19,14 @@ DEPEND=">=x11-libs/fox-1.2
 	x11-libs/fxscintilla"
 USE_RUBY="ruby16 ruby18 ruby19"
 S=${WORKDIR}/${MY_P}
+
+src_unpack()  {
+	unpack ${A}
+	einfo "Avoid all -O0 builds"
+	cd ${S}
+	sed -i -e 's:-O0 -Iinclude:-Iinclude:g' \
+		ext/fox12/extconf.rb || die "Can't fix forced -O0"
+}
 
 src_compile() {
 	ruby install.rb config --prefix=/usr || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.6.ebuild,v 1.2 2005/09/23 02:05:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.6.ebuild,v 1.3 2005/09/23 14:24:10 fmccor Exp $
 
 inherit ruby
 
@@ -27,4 +27,7 @@ src_unpack() {
 
 	sed -i -e 's:libs, "fxscintilla":libs, "fxscintilla-1.2":g' \
 		 ext/fox12/extconf.rb || die "sed error"
+	einfo "Avoid -O0 builds"
+	sed -i -e 's:-O0 -Iinclude:-Iinclude:g' \
+		ext/fox12/extconf.rb || die "Can't fix forced -O0"
 }
