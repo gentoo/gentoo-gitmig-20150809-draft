@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.166 2005/09/17 11:38:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.167 2005/09/23 01:40:02 ciaranm Exp $
+
+*fluxbox-0.9.14-r1 (23 Sep 2005)
+
+  23 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> -fluxbox-0.9.14.ebuild,
+  +fluxbox-0.9.14-r1.ebuild:
+  Fix style file backgrounds, bug #106074
 
 *fluxbox-0.9.14 (15 Sep 2005)
 

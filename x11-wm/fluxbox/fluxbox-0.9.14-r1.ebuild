@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14.ebuild,v 1.1 2005/09/15 01:26:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.14-r1.ebuild,v 1.1 2005/09/23 01:40:02 ciaranm Exp $
 
 inherit eutils
 
@@ -51,6 +51,15 @@ src_unpack() {
 	# broken, we'll do what we can to make it less painful by default.
 	use truetype 1>/dev/null && \
 		echo "session.screen0.antialias: true" >> data/init.in
+
+	# Fix broken styles
+	ebegin "Fixing backgrounds..."
+	for style in "${S}/data/styles/"* ; do
+		[[ -f "${style}" ]] || continue
+		sed -i -e 's,\([^f]\)bsetroot,\1fbsetroot,' "${style}" \
+			|| die "styles sed failed on ${style}"
+	done
+	eend 0
 }
 
 src_compile() {
