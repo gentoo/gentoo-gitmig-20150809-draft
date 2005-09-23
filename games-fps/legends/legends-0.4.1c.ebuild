@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.4 2005/09/09 15:32:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.5 2005/09/23 02:31:41 mr_bones_ Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ DESCRIPTION="A fast-paced first-person-perspective online multiplayer game simil
 HOMEPAGE="http://legendsthegame.net/"
 SRC_URI="http://www.legendsthegame.net/files//${MY_P}.tar.gz
 	mirror://gentoo/${PN}.png
-	dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
+	http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
 
 RESTRICT="nomirror"
 KEYWORDS="-* ~amd64 x86"
