@@ -1,4 +1,6 @@
 MD5 be4b9fbb36f41acbaccc1e403faaa500 rubygems-0.8.10.ebuild 902
-MD5 0c9d9c29210ca79bdb6fd730648977d3 ChangeLog 2069
+MD5 b2ddcf9ba8d6b38f43610f2f3304fb76 rubygems-0.8.11.ebuild 902
+MD5 39d69104ce281e38ad43973ce739be61 ChangeLog 2187
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 8bbad53ea0e9bb1a53892ef892176238 files/digest-rubygems-0.8.10 64
+MD5 c4cfa55864944c9d028da394e1565262 files/digest-rubygems-0.8.11 64
