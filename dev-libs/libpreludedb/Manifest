@@ -1,4 +1,4 @@
-MD5 38827efc2ba71ea677f3974c506f707c libpreludedb-0.9.0_rc13.ebuild 1636
-MD5 d7bdb89dd846ed1cf54c9a35e1982a63 ChangeLog 2117
+MD5 14f85709f3589c6e65693d375f53cedc libpreludedb-0.9.0.ebuild 1544
+MD5 0c07d65892c3ef291a2f1bebec12059b ChangeLog 2284
 MD5 46a99e432c86964e317f92a77160a836 metadata.xml 256
-MD5 68b46c8ad5612060f30b36644a37125c files/digest-libpreludedb-0.9.0_rc13 75
+MD5 e3fc591d96386006ea662c8a8f5e41fc files/digest-libpreludedb-0.9.0 70

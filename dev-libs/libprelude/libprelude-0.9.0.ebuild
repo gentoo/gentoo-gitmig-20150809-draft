@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc14.ebuild,v 1.1 2005/08/26 21:49:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0.ebuild,v 1.1 2005/09/23 03:21:11 vanquirius Exp $
 
-inherit versionator perl-module flag-o-matic
+inherit perl-module flag-o-matic
 
-MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="Prelude-IDS Framework Library"
 HOMEPAGE="http://www.prelude-ids.org/"
-SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
+SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,8 +18,6 @@ DEPEND=">=net-libs/gnutls-1.0.17
 
 #	doc? ( dev-util/gtk-doc )"
 # Doc disabled as per bug 77575
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	use perl && perl-module_pkg_setup
@@ -43,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	use perl && fixlocalpod
 }
 
