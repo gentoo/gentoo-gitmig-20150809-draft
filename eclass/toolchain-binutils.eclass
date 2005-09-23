@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.44 2005/09/21 23:19:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.45 2005/09/23 23:52:33 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -101,7 +101,6 @@ toolchain-binutils_src_compile() {
 
 	cd "${MY_BUILDDIR}"
 	local myconf=""
-	is_cross && myconf="${myconf} --with-sysroot=/usr/${CTARGET}"
 	use nls \
 		&& myconf="${myconf} --without-included-gettext" \
 		|| myconf="${myconf} --disable-nls"
