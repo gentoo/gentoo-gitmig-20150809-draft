@@ -1,11 +1,21 @@
-MD5 b4349d44edf178c49b79b64cb30ff881 boehm-gc-6.5.ebuild 1357
-MD5 9b414c7b815d3ede7ef22bc0569ac761 boehm-gc-6.3-r1.ebuild 1156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf5d82de04adee8e8fa1517ce65a8f36 boehm-gc-6.5.ebuild 1358
+MD5 8adecc7d91b8b6131c21c68342e20a76 ChangeLog 4729
 MD5 c82aeb6fa446251b7192e425ae3c163a boehm-gc-6.4.ebuild 1153
 MD5 b3a70ad752d292947b46d9354c243626 boehm-gc-6.6.ebuild 1363
-MD5 a7d8a9d0baf90453f32d8f638d52fecb ChangeLog 4633
 MD5 ae35aecf3e681586ace5f8c15866aed7 metadata.xml 222
-MD5 fdb67fd6d2adebe72bf49c937b4948a5 files/digest-boehm-gc-6.4 57
-MD5 b8b5e747f06731368f0e8b8f8dfbf43f files/digest-boehm-gc-6.5 57
-MD5 e080f72c7b4eb1514628f50533dbf9ff files/digest-boehm-gc-6.6 57
+MD5 9b414c7b815d3ede7ef22bc0569ac761 boehm-gc-6.3-r1.ebuild 1156
 MD5 4f7d55dd5fae69a3751b1620e37f0d29 files/boehm-gc-6.5-gentoo.patch 2815
+MD5 b8b5e747f06731368f0e8b8f8dfbf43f files/digest-boehm-gc-6.5 57
+MD5 fdb67fd6d2adebe72bf49c937b4948a5 files/digest-boehm-gc-6.4 57
 MD5 6cc733152c37395a1f0f51588a932f13 files/digest-boehm-gc-6.3-r1 57
+MD5 e080f72c7b4eb1514628f50533dbf9ff files/digest-boehm-gc-6.6 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNB4GKRy60XGEcJIRAhSpAKCqnX/WycVyE2A1CUypzkvVZ3AiQQCeOfro
+uBg6+4/NA3gWeCP6FtW6dXY=
+=Sk9o
+-----END PGP SIGNATURE-----
