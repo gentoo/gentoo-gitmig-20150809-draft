@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.97 2005/09/19 11:11:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.98 2005/09/23 11:09:56 flameeyes Exp $
+
+*kdevelop-3.3_beta1 (23 Sep 2005)
+
+  23 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdevelop-qt-3.3.5.patch, +kdevelop-3.3_beta1.ebuild:
+  Bump to 3.3 beta1.
 
   19 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> kdevelop-3.1.2.ebuild,
   kdevelop-3.2.1-r1.ebuild, kdevelop-3.2.2.ebuild,
