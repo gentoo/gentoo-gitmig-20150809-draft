@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.53 2005/09/20 16:06:57 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.54 2005/09/23 16:12:05 corsair Exp $
+
+  23 Sep 2005; Markus Rothe <corsair@gentoo.org> openafs-1.4.0_rc3.ebuild:
+  Added ~ppc64 (bug #100625)
 
   20 Sep 2005; Stefaan De Roeck <stefaan@gentoo.org> ChangeLog:
 	-openafs-1.2.13.ebuild, -openafs-1.2.13-r1.ebuild,
