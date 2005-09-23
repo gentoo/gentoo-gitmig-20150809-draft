@@ -5,7 +5,7 @@
  MINOR_VERSION=0
  RELEASE_VERSION=4
 -EXTRA_VERSION=""
-+EXTRA_VERSION="-p11-gentoo"
++EXTRA_VERSION="-pl1-gentoo"
  VERSION="$MAJOR_VERSION.$MINOR_VERSION.$RELEASE_VERSION$EXTRA_VERSION"
  
  dnl Define where extension directories are located in the configure context
