@@ -1,23 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.9.ebuild,v 1.4 2005/09/23 01:45:23 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6_rc1.ebuild,v 1.1 2005/09/23 01:45:23 st_lim Exp $
 
 inherit eutils
 
+MY_PV=${PV/_/.}
+S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
-SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
+SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${MY_PV}.tar.gz
 		http://dspam.nuclearelephant.com/sources/extras/dspam_sa_trainer.tar.gz"
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite sqlite3 large-domain logrotate virtual-users"
-DEPEND="exim? ( >=mail-mta/exim-4.34 )
-		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
-		maildrop? ( >=mail-filter/maildrop-1.5.3 )
-		sqlite? ( <dev-db/sqlite-3 )
-		sqlite3? ( >=dev-db/sqlite-3 )
+IUSE="debug mysql neural oci8 postgres sqlite large-domain logrotate virtual-users"
+DEPEND="mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
+		sqlite? ( dev-db/sqlite )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
-		procmail? ( >=mail-filter/procmail-3.22 )
 		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		>=sys-libs/db-4.0
 		"
@@ -27,13 +25,13 @@ KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 SLOT="0"
 
 # some FHS-like structure
-HOMEDIR="/etc/mail/dspam"
-DATADIR="/var/spool/dspam"
+HOMEDIR="/var/spool/dspam"
+CONFDIR="/etc/mail/dspam"
 LOGDIR="/var/log/dspam"
 
 pkg_setup() {
 	local multiple_dbs="0"
-	local supported_dbs="mysql postgres oci8 sqlite sqlite3"
+	local supported_dbs="mysql postgres oci8 sqlite"
 	for foo in ${supported_dbs}; do
 		if use ${foo}; then
 			let multiple_dbs="((multiple_dbs + 1 ))"
@@ -50,7 +48,7 @@ pkg_setup() {
 		has_version ">=sys-apps/portage-2.0.50" && (
 		einfo "It would be best practice to add the set of USE flags that you use for this"
 		einfo "package to the file: /etc/portage/package.use. Example:"
-		einfo "\`echo \"mail-filter/dspam -mysql postgres -oci8 -sqlite\" >> /etc/portage/package.use\`"
+		einfo "\`echo \"mail-filter/dspam -mysql postgres -oci8 -sqlite -sqlite3\" >> /etc/portage/package.use\`"
 		einfo "to build dspam with Postgres database as your dspam backend."
 		)
 		echo
@@ -84,15 +82,12 @@ src_compile() {
 	local myconf
 
 	myconf="${myconf} --enable-long-username"
+	myconf="${myconf} --with-delivery-agent=/usr/bin/procmail"
 	use large-domain && myconf="${myconf} --enable-large-scale" ||\
 	    myconf="${myconf} --enable-domain-scale"
 
 	myconf="${myconf} --with-dspam-home=${HOMEDIR}"
-	myconf="${myconf} --with-dspam-mode=4755"
-	myconf="${myconf} --with-dspam-owner=dspam"
-	myconf="${myconf} --with-dspam-group=dspam"
-	myconf="${myconf} --sysconfdir=${HOMEDIR}"
-	myconf="${myconf} --with-logdir=${LOGDIR}"
+	myconf="${myconf} --sysconfdir=${CONFDIR}"
 	use virtual-users || myconf="${myconf} --enable-homedir"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
@@ -100,7 +95,10 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug"
 
 	# select storage driver
-	if use mysql; then
+	if use sqlite ; then
+		myconf="${myconf} --with-storage-driver=sqlite_drv"
+		myconf="${myconf} --enable-virtual-users"
+	elif use mysql; then
 		myconf="${myconf} --with-storage-driver=mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
@@ -136,55 +134,35 @@ src_compile() {
 		if (expr ${ORACLE_HOME/*\/} : 10 1>/dev/null 2>&1); then
 			myconf="${myconf} --with-oracle-version=10"
 		fi
-	elif use sqlite3 ; then
-		myconf="${myconf} --with-storage-driver=sqlite3_drv"
-		myconf="${myconf} --enable-virtual-users"
-	elif use sqlite ; then
-		myconf="${myconf} --with-storage-driver=sqlite_drv"
-		myconf="${myconf} --enable-virtual-users"
 	else
 		myconf="${myconf} --with-storage-driver=libdb4_drv"
 	fi
 
 	econf ${myconf} || die
 	emake || die
-
 }
 
 src_install () {
 
 	# Fix issues with older dspam configuration
-	CONFIG_PROTECT="${CONFIG_PROTECT} ${DATADIR} /var/run/dspam"
+	CONFIG_PROTECT="${CONFIG_PROTECT} ${HOMEDIR} ${CONFDIR} /var/run/dspam"
 	CONFIG_PROTECT_MASK="${CONFIG_PROTECTMASK/${HOMEDIR}/}"
-	CONFIG_PROTECT_MASK="${CONFIG_PROTECTMASK/${DATADIR}/}"
+	CONFIG_PROTECT_MASK="${CONFIG_PROTECTMASK/${CONFDIR}/}"
 
-	# open up perms on /etc/mail/dspam
+	# open up perms on $HOMEDIR
 	diropts -m0775 -o dspam -g dspam
 	dodir ${HOMEDIR}
 	keepdir ${HOMEDIR}
 
-	# keeps dspam data in /var
+	# keeps dspam data in $CONFDIR
 	diropts -m0775 -o dspam -g dspam
-	dodir ${DATADIR}
-	keepdir ${DATADIR}
-
-	# keeps dspam log in /var/log
-	diropts -m0775 -o dspam -g dspam
-	dodir ${LOGDIR}
-	keepdir ${LOGDIR}
-	insinto ${LOGDIR}
-	touch ${T}/empty.file
-	newins ${T}/empty.file system.log
-	chown dspam:dspam ${D}/${LOGDIR}/system.log
-	dosym ${LOGDIR}/system.log ${HOMEDIR}/system.log
-
-	# ${HOMEDIR}/data is a symlink to ${DATADIR}
-	dosym ${DATADIR} ${HOMEDIR}/data
+	dodir ${CONFDIR}
+	keepdir ${CONFDIR}
 
 	# make install
 	make DESTDIR=${D} install || die
-	chmod 4755 ${D}/usr/bin/dspam
-	chmod 4755 ${D}/usr/bin/dspam_stats
+	chmod o+s ${D}/usr/bin/dspam
+	chmod o+s ${D}/usr/bin/dspam_stats
 
 	# documentation
 	dodoc CHANGELOG LICENSE README* RELEASE.NOTES UPGRADING
@@ -193,44 +171,22 @@ src_install () {
 	dodoc doc/*.txt
 	docinto gentoo
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
-	if use mysql; then
+	if use sqlite; then
+		dodoc src/tools.sqlite_drv/README
+	elif use mysql; then
 		dodoc src/tools.mysql_drv/README
 	elif use postgres ; then
 		dodoc src/tools.pgsql_drv/README
 	elif use oci8 ; then
 		dodoc src/tools.ora_drv/README
-	elif use sqlite || use sqlite3 ; then
-		dodoc src/tools.sqlite_drv/README
 	fi
 	doman man/dspam*
 	dodoc ${DISTDIR}/dspam_sa_trainer.tar.gz
 
 	# build some initial configuration data
-	[ -f ${HOMEDIR}/dspam.conf ] \
-		&& cp ${HOMEDIR}/dspam.conf ${T}/dspam.conf \
-		|| cp src/dspam.conf ${T}/dspam.conf
+	[ ! -f ${CONFDIR}/dspam.conf ] \
+		&& cp src/dspam.conf ${T}/dspam.conf
 
-	if use cyrus; then
-		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/lib/cyrus/deliver %u\":gI' \
-			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/lib/cyrus/deliver\":gI' \
-			-i ${T}/dspam.conf
-	elif use exim; then
-		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/exim -oMr spam-scanned %u\":gI' \
-			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/exim -oMr spam-scanned %u\":gI' \
-			-i ${T}/dspam.conf
-	elif use maildrop; then
-		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/maildrop -d %u\":gI' \
-			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/maildrop\":gI' \
-			-i ${T}/dspam.conf
-	elif use procmail; then
-		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/procmail -d %u\":gI' \
-			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/bin/procmail":gI' \
-			-i ${T}/dspam.conf
-	else
-		sed -e 's:^#*\(UntrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/sendmail\":gI' \
-			-e 's:^\(TrustedDeliveryAgent\)[\t ]*.*:\1 \"/usr/sbin/sendmail\":gI' \
-			-i ${T}/dspam.conf
-	fi
 	if use mysql || use postgres; then
 		if has_version ">sys-kernel/linux-headers-2.6"; then
 			# keeps dspam socket for deamon in /var/run/dspam
@@ -254,10 +210,14 @@ src_install () {
 	local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
 
 	# database related configuration and scripts
-	if use mysql; then
+	if use sqlite; then
+		insinto ${CONFDIR}
+		insopts -m644 -o dspam -g dspam
+		newins src/tools.sqlite_drv/purge.sql sqlite_purge.sql
+	elif use mysql; then
 		# Use existing configuration if possible
-		if [[ -f ${ROOT}${HOMEDIR}/mysql.data ]]; then
-			DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${HOMEDIR}/mysql.data") )
+		if [[ -f ${ROOT}${CONFDIR}/mysql.data ]]; then
+			DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${CONFDIR}/mysql.data") )
 			for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 				[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
 			done
@@ -281,7 +241,7 @@ src_install () {
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> ${T}/mysql.data
 		done
-		insinto ${HOMEDIR}
+		insinto ${CONFDIR}
 		insopts -m644 -o dspam -g dspam
 		doins ${T}/mysql.data
 		newins src/tools.mysql_drv/mysql_objects-space.sql mysql_objects-space.sql
@@ -294,8 +254,8 @@ src_install () {
 
 	elif use postgres ; then
 		# Use existing configuration if possible
-		if [ -f ${ROOT}${HOMEDIR}/pgsql.data ]; then
-			DSPAM_DB_DATA=( $(cat "${ROOT}${HOMEDIR}/pgsql.data") )
+		if [ -f ${ROOT}${CONFDIR}/pgsql.data ]; then
+			DSPAM_DB_DATA=( $(cat "${ROOT}${CONFDIR}/pgsql.data") )
 			for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 				[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
 			done
@@ -319,7 +279,7 @@ src_install () {
 			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> ${T}/pgsql.data
 		done
 
-		insinto ${HOMEDIR}
+		insinto ${CONFDIR}
 		insopts -m644 -o dspam -g dspam
 		doins ${T}/pgsql.data
 		newins src/tools.pgsql_drv/pgsql_objects.sql pgsql_objects.sql
@@ -328,8 +288,8 @@ src_install () {
 
 	elif use oci8 ; then
 		# Use existing configuration if possible
-		if [ -f ${ROOT}${HOMEDIR}/oracle.data ]; then
-			DSPAM_DB_DATA=( $(cat "${ROOT}${HOMEDIR}/oracle.data") )
+		if [ -f ${ROOT}${CONFDIR}/oracle.data ]; then
+			DSPAM_DB_DATA=( $(cat "${ROOT}${CONFDIR}/oracle.data") )
 			for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 				[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
 			done
@@ -350,48 +310,44 @@ src_install () {
 			echo "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" >> ${T}/oracle.data
 		done
 
-		insinto ${HOMEDIR}
+		insinto ${CONFDIR}
 		insopts -m644 -o dspam -g dspam
 		doins ${T}/oracle.data
 		newins src/tools.ora_drv/oral_objects.sql ora_objects.sql
 		newins src/tools.ora_drv/virtual_users.sql ora_virtual_users.sql
 		newins src/tools.ora_drv/purge.sql ora_purge.sql
-	elif use sqlite || use sqlite3 ; then
-		insinto ${HOMEDIR}
-		insopts -m644 -o dspam -g dspam
-		newins src/tools.sqlite_drv/purge.sql sqlite_purge.sql
 	fi
 
 	sed -e "s:^\(Purge.*\):###\1:g" \
 		-e "s:^#\(Purge.*\):\1:g" \
 		-e "s:^###\(Purge.*\):#\1:g" \
 		-i ${T}/dspam.conf
-	insinto ${HOMEDIR}
+	insinto ${CONFDIR}
 	insopts -m644 -o dspam -g dspam
 	doins ${T}/dspam.conf
 
 	# installs the notification messages
 	# -> The documentation is wrong! The files need to be in ./txt
 	diropts -m0775 -o dspam -g dspam
-	dodir ${HOMEDIR}/txt
-	keepdir ${HOMEDIR}/txt
-	insinto ${HOMEDIR}/txt
+	dodir ${CONFDIR}/txt
+	keepdir ${CONFDIR}/txt
+	insinto ${CONFDIR}/txt
 	insopts -m644 -o dspam -g dspam
 	doins ${S}/txt/*.txt
 
 	# Create the opt-in / opt-out directories
 	diropts -m0775 -o dspam -g dspam
-	dodir ${HOMEDIR}/opt-in
-	keepdir ${HOMEDIR}/opt-in
-	dodir ${HOMEDIR}/opt-out
-	keepdir ${HOMEDIR}/opt-out
+	dodir ${CONFDIR}/opt-in
+	keepdir ${CONFDIR}/opt-in
+	dodir ${CONFDIR}/opt-out
+	keepdir ${CONFDIR}/opt-out
 
 	# logrotation scripts
 	diropts -m0755 -o dspam -g dspam
 	dodir /etc/logrotate.d
 	keepdir /etc/logrotate.d
 	insinto /etc/logrotate.d
-	insopts -m0755 -o dspam -g dspam
+	insopts -m0644 -o dspam -g dspam
 	newins ${FILESDIR}/logrotate.dspam dspam
 
 	# dspam cron job
@@ -403,7 +359,7 @@ src_install () {
 	doexe ${FILESDIR}/dspam.cron
 
 	# dspam enviroment
-	echo -ne "CONFIG_PROTECT=\"${DATADIR} /var/run/dspam\"\n\n" > ${T}/40dspam
+	echo -ne "CONFIG_PROTECT=\"${CONFDIR} /var/run/dspam\"\n\n" > ${T}/40dspam
 	doenvd ${T}/40dspam || die
 }
 
@@ -429,8 +385,10 @@ pkg_postinst() {
 }
 
 pkg_config () {
-	if use mysql ; then
-		DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${HOMEDIR}/mysql.data") )
+	if use sqlite ; then
+		einfo "sqlite_drv will automatically create the necessary database"
+	elif use mysql ; then
+		DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${CONFDIR}/mysql.data") )
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 			[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
 		done
@@ -457,24 +415,24 @@ pkg_config () {
 
 		if [ "${DSPAM_MySQL_DB_Type}" == "1" ]
 		then
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-space.sql
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFDIR}/mysql_objects-space.sql
 		else
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-speed.sql
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFDIR}/mysql_objects-speed.sql
 		fi
 
 		if use virtual-users ; then
 			einfo "Creating DSPAM MySQL database for virtual-users users"
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_virtual_users.sql
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFDIR}/mysql_virtual_users.sql
 		fi
 
 		if use neural ; then
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_neural.sql
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFDIR}/mysql_neural.sql
 		fi
 
 		einfo "Creating DSPAM MySQL user \"${DSPAM_MySQL_USER}\""
 		/usr/bin/mysql -u root -p -e "GRANT SELECT,INSERT,UPDATE,DELETE ON ${DSPAM_MySQL_DB}.* TO ${DSPAM_MySQL_USER}@localhost IDENTIFIED BY '${DSPAM_MySQL_PWD}';FLUSH PRIVILEGES;" -D mysql
 	elif use postgres ; then
-		DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${HOMEDIR}/pgsql.data") )
+		DSPAM_DB_DATA=( $(sed "s:^[\t ]*$:###:gI" "${ROOT}${CONFDIR}/pgsql.data") )
 		for DB_DATA_INDEX in $(seq 0 $((${#DSPAM_DB_DATA[@]} - 1))); do
 			[[ "${DSPAM_DB_DATA[$DB_DATA_INDEX]}" = "###" ]] && DSPAM_DB_DATA[$DB_DATA_INDEX]=""
 		done
@@ -489,11 +447,11 @@ pkg_config () {
 		/usr/bin/psql -h localhost -d template1 -U postgres -c "CREATE USER ${DSPAM_PgSQL_USER} WITH PASSWORD '${DSPAM_PgSQL_PWD}' NOCREATEDB NOCREATEUSER; CREATE DATABASE ${DSPAM_PgSQL_DB}; GRANT ALL PRIVILEGES ON DATABASE ${DSPAM_PgSQL_DB} TO ${DSPAM_PgSQL_USER}; GRANT ALL PRIVILEGES ON SCHEMA public TO ${DSPAM_PgSQL_USER}; UPDATE pg_database SET datdba=(SELECT usesysid FROM pg_shadow WHERE usename='${DSPAM_PgSQL_USER}') WHERE datname='${DSPAM_PgSQL_DB}';"
 
 		einfo "Creating DSPAM PostgreSQL tables"
-		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_objects.sql 1>/dev/null 2>&1
+		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${CONFDIR}/pgsql_objects.sql 1>/dev/null 2>&1
 
 		if use virtual-users ; then
 			einfo "Creating DSPAM PostgreSQL database for virtual-users users"
-			PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual-users.sql 1>/dev/null 2>&1
+			PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${CONFDIR}/pgsql_virtual-users.sql 1>/dev/null 2>&1
 		fi
 	elif use oci8 ; then
 		einfo "We have not enought Oracle knowledge to configure Oracle"
@@ -507,11 +465,6 @@ pkg_config () {
 		einfo "access the database."
 		einfo "Please read your dspam.conf, oracle.data and the README for"
 		einfo "more info on how to setup DSPAM with Oracle."
-	elif use sqlite3 ; then
-		einfo "sqlite3_drv will automatically create the necessary database"
-		einfo "objects for each user upon first use of DSPAM by that user."
-	elif use sqlite ; then
-		einfo "sqlite_drv will automatically create the necessary database"
 		einfo "objects for each user upon first use of DSPAM by that user."
 	fi
 
