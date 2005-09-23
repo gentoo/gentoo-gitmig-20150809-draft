@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.208-r2.ebuild,v 1.2 2005/08/30 06:08:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.208-r2.ebuild,v 1.3 2005/09/23 04:34:58 hollow Exp $
 
 inherit eutils
 
@@ -15,11 +15,12 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="glibc crypt"
 DEPEND="!glibc? ( >=dev-libs/dietlibc-0.27 )
-		glibc? ( sys-libs/glibc )
-		sys-apps/iproute2
-		net-misc/vconfig
-		crypt? ( dev-libs/beecrypt )
-		net-firewall/iptables"
+	glibc? ( sys-libs/glibc )
+	crypt? ( dev-libs/beecrypt )
+	sys-apps/iproute2
+	net-misc/vconfig
+	net-firewall/iptables
+	sys-process/procps"
 
 src_unpack() {
 	unpack ${A} || die
