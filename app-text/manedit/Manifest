@@ -1,8 +1,18 @@
-MD5 b144e8c7735157e044af49100f77e887 manedit-0.5.8.ebuild 1391
-MD5 5811985f2b1ed357b095aa4e43dc1408 manedit-0.6.1.ebuild 1390
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6de82c3cdfbe0f86a79f7fc58fd82e86 manedit-0.6.1.ebuild 1385
 MD5 d653ccb02640fb8c7bb937974c9cc8fa metadata.xml 220
-MD5 df378b5d689ec6eae05dbda009e7688d ChangeLog 2129
+MD5 b144e8c7735157e044af49100f77e887 manedit-0.5.8.ebuild 1391
 MD5 685e9eeed3b76ecae9884c5ac4286e32 manedit-0.5.10.ebuild 1392
-MD5 b29f4205b9b893aec1e4fb1d498f7a85 files/digest-manedit-0.6.1 66
-MD5 597965ae2db264334fb5d42025570902 files/digest-manedit-0.5.10 67
+MD5 df378b5d689ec6eae05dbda009e7688d ChangeLog 2129
 MD5 1390d92484758cbae2d6fd4745f62718 files/digest-manedit-0.5.8 66
+MD5 597965ae2db264334fb5d42025570902 files/digest-manedit-0.5.10 67
+MD5 b29f4205b9b893aec1e4fb1d498f7a85 files/digest-manedit-0.6.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNJXkgIKl8Uu19MoRAn2AAJ0dU8N3rUGqVdvd4KaTaho1AI12igCfZFoV
+JnVLj+CaC8TASOh5K4Z9vaQ=
+=0f6M
+-----END PGP SIGNATURE-----
