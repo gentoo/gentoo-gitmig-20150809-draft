@@ -1,0 +1,10 @@
+# ChangeLog for app-text/mxml2man
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mxml2man/ChangeLog,v 1.1 2005/09/23 22:43:58 flameeyes Exp $
+
+*mxml2man-8.5.9.1 (23 Sep 2005)
+
+  23 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +mxml2man-8.5.9.1.ebuild:
+  Added mxml2man, a man page generator that evolves Apple's xml2man.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c11b3d4501e4f8561945ec8ad8ae3a7 ChangeLog 409
+MD5 62d52cfc7ddab1f17aca6bc48b5933ea mxml2man-8.5.9.1.ebuild 735
+MD5 39dd9e8063852d1a532ee8eb736d12e6 metadata.xml 406
+MD5 af551b2c2465efe55bbd22774bf669c6 files/digest-mxml2man-8.5.9.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNIVnj5H05b2HAEkRAjAQAKCBF4gYjo9JNKGXq1NHZhFY4yL5bACgj2Pg
+EAp8Mr4ZtYfKd08HuTZNmWs=
+=/ryK
+-----END PGP SIGNATURE-----
