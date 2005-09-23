@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.6.0.1.ebuild,v 1.3 2005/08/23 20:07:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.6.0.1.ebuild,v 1.4 2005/09/23 19:02:10 metalgod Exp $
 
 inherit eutils java-utils java-pkg games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://triplea.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_source_${MY_PV}.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc jikes"
 
