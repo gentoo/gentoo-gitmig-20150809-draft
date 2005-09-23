@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.11 2005/08/24 00:01:36 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.12 2005/09/23 15:33:52 gustavoz Exp $
+
+  23 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> culmus-0.101.ebuild:
+  Stable on sparc
 
   24 Aug 2005; Jonathan Smith <smithj@gentoo.org> culmus-0.93-r1.ebuild,
   culmus-0.100-r1.ebuild:

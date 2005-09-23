@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101.ebuild,v 1.2 2005/08/23 14:46:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101.ebuild,v 1.3 2005/09/23 15:33:52 gustavoz Exp $
 
 inherit font
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
 	http://culmus.sourceforge.net/fancy/comix.tar.gz
 	http://culmus.sourceforge.net/fancy/ktav-yad.tar.gz"
 HOMEPAGE="http://culmus.sourceforge.net/"
-KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~alpha sparc"
 SLOT="0"
 LICENSE="|| ( GPL-2 LICENSE-BITSTREAM )"
 IUSE=""

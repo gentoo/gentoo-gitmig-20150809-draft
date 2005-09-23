@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.1-r2.ebuild,v 1.6 2005/08/23 21:41:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.1-r2.ebuild,v 1.7 2005/09/23 15:49:18 gustavoz Exp $
 
 inherit eutils rpm font
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://rpmfind.net/linux/fedora/core/development/SRPMS/${P}-7.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 alpha ppc64 ~sparc"
+KEYWORDS="x86 ppc amd64 alpha ppc64 sparc"
 IUSE=""
 
 #DEPEND="app-arch/rpm2targz"
