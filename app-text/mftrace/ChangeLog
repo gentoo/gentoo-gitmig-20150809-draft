@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.22 2005/08/23 20:33:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.23 2005/09/23 14:55:58 matsuu Exp $
+
+*mftrace-1.1.16 (23 Sep 2005)
+
+  23 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> mftrace-1.0.34.ebuild,
+  mftrace-1.1.2.ebuild, +mftrace-1.1.16.ebuild:
+  Fixed HOMEPAGE and SRC_URI, Bug 98962.
+  Version bumped, Bug 100292.
 
   23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> mftrace-1.0.34.ebuild:
   Stable on sparc
