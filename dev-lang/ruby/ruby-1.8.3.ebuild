@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.3.ebuild,v 1.2 2005/09/23 01:09:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.3.ebuild,v 1.3 2005/09/23 01:30:51 caleb Exp $
 
 ONIGURUMA="onigd2_4_2"
 
@@ -100,8 +100,9 @@ src_install() {
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
 	else
-		dosym /usr/$(get_libdir)/libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%.*}
-		dosym /usr/$(get_libdir)/libruby${SLOT/./}.so.${PV%_*} /usr/$(get_libdir)/libruby.so.${PV%_*}
+		cd ${D}${ROOT}/usr/$(get_libdir)
+		dosym libruby${SLOT/./}.so.${PV%_*} libruby.so.${PV%.*}
+		dosym libruby${SLOT/./}.so.${PV%_*} libruby.so.${PV%_*}
 	fi
 
 	dodoc COPYING* ChangeLog MANIFEST README* ToDo
