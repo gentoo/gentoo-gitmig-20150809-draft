@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.83 2005/09/21 00:20:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.84 2005/09/23 23:47:08 kloeri Exp $
+
+  23 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> libperl-5.8.7.ebuild:
+  Stable on alpha, bug 106678.
 
   21 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> libperl-5.8.7.ebuild:
   Stable on sparc wrt #106678
