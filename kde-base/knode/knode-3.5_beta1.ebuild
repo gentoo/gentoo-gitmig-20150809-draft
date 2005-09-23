@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-3.5_beta1.ebuild,v 1.1 2005/09/22 19:43:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-3.5_beta1.ebuild,v 1.2 2005/09/23 17:11:17 cryos Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -25,5 +25,6 @@ KMEXTRACTONLY="
 	libkdenetwork/
 	kontact/interfaces
 	libkmime
-	libkpgp"
+	libkpgp
+	libemailfunctions"
 KMEXTRA="kontact/plugins/knode" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
