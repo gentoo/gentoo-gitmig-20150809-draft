@@ -1,4 +1,14 @@
-MD5 cf91d462ba59e3f3aa40a6acf3a6282b wmpager-1.2-r1.ebuild 744
-MD5 e4d13926c6d2b0d416dc8e76aa91e22f ChangeLog 1002
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bd241675c35a40b1fe1e5a6d4adebfa4 ChangeLog 1089
 MD5 042cee404485bb503546e27f5a3ca180 metadata.xml 161
+MD5 510e639b5cbfc9eb809794d591ebcd14 wmpager-1.2-r1.ebuild 751
 MD5 1dd5012756a79572f3f42486bc0500ba files/digest-wmpager-1.2-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDM0ej/aM9DdBw91cRAq+sAKCw3C9VDni3XrF+o1o69UtueFE+2QCguEbA
+e46BqDAN6wMTu+/mys94KCc=
+=mhg9
+-----END PGP SIGNATURE-----
