@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc8.ebuild,v 1.2 2005/09/07 03:38:40 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0.ebuild,v 1.1 2005/09/23 03:29:43 vanquirius Exp $
 
-inherit flag-o-matic versionator
+inherit flag-o-matic
 
-MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="Prelude-IDS Manager"
 HOMEPAGE="http://www.prelude-ids.org/"
-SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
+SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,8 +25,6 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S="${WORKDIR}/${MY_P}"
-
 src_compile() {
 	local myconf
 
@@ -40,13 +37,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	insinto /etc/init.d
 	insopts -m 755
-	newins ${FILESDIR}/gentoo.init prelude-manager
+	newins "${FILESDIR}"/gentoo.init prelude-manager
 	insinto /etc/conf.d
 	insopts -m 644
-	newins ${FILESDIR}/gentoo.conf prelude-manager
+	newins "${FILESDIR}"/gentoo.conf prelude-manager
 
 	keepdir /var/lib/spool/prelude-manager
 }
