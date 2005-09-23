@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Trigger
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.11 2005/09/05 14:26:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.12 2005/09/23 16:29:29 corsair Exp $
+
+  23 Sep 2005; Markus Rothe <corsair@gentoo.org> Class-Trigger-0.08.ebuild,
+  Class-Trigger-0.09.ebuild:
+  Stable on ppc64 (bug #101114)/added ~ppc64 to 0.09
 
   05 Sep 2005; Brent Baude <ranger@gentoo.org> Class-Trigger-0.08.ebuild:
   marking Class-Trigger-0.08 ~ppc64 in support of Bug 101114
