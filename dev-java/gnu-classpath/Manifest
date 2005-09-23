@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 b97f5a72d61bfe20d7683a2eceae0d66 gnu-classpath-0.15-r1.ebuild 1654
+MD5 61749f9b6a523a9e3d95db83a13f2ff8 gnu-classpath-0.18.ebuild 1815
 MD5 5d7a0f180847456ca193b735042028a1 gnu-classpath-0.14.ebuild 1213
-MD5 f47188aea1a9e6d2aea8b73393670a47 ChangeLog 4972
+MD5 1564061040f6974de61b65a24a06c476 ChangeLog 5296
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 2690159fdd3e679de05cd6daed73f4da files/digest-gnu-classpath-0.15-r1 67
 MD5 9b2c43cfbb9e8d325407a9ddd2068a5d files/digest-gnu-classpath-0.14 67
+MD5 e8174eff88cbeae8528507c699821eea files/digest-gnu-classpath-0.18 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC25ry/rLF9B432nYRAuKaAKCaIvd9BzKCTTzE8M9zpd5pFuJW1gCfS4To
-a7B2T+JUe+YAPj7avlntOoQ=
-=rOjo
+iD8DBQFDNHy2QiJ/wx066S4RAmcrAJsEVlrRT7gMSfmOZm3M2Ap2HM5kpACeOdS3
+MgciVvb9n1cNtTbpcqI8heU=
+=tkNs
 -----END PGP SIGNATURE-----
