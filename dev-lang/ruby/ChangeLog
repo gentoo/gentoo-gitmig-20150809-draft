@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.147 2005/09/23 01:04:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.148 2005/09/23 01:09:25 caleb Exp $
+
+  23 Sep 2005; Caleb Tennis <caleb@gentoo.org> ruby-1.8.2-r2.ebuild,
+  ruby-1.8.3.ebuild:
+  Add a blocker against dev-ruby/rdoc, as its now provided in ruby itself
 
 *ruby-1.8.3 (23 Sep 2005)
 
