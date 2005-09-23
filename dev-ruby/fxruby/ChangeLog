@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.26 2005/09/23 02:05:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.27 2005/09/23 02:07:26 caleb Exp $
+
+  23 Sep 2005; Caleb Tennis <caleb@gentoo.org> -fxruby-1.0.28-r1.ebuild,
+  -fxruby-1.0.29.ebuild, -fxruby-1.2.4.ebuild, -fxruby-1.2.5.ebuild:
+  Remove old versions
 
   23 Sep 2005; Caleb Tennis <caleb@gentoo.org> fxruby-1.2.6.ebuild:
   x86 stable
