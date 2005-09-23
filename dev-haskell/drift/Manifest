@@ -1,6 +1,18 @@
-MD5 3d189059450d87aba5aefeb7eacb1dda ChangeLog 587
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e76cac8a7e7b89c94862f259aa55e5c6 drift-2.1.0.ebuild 827
 MD5 c044471a67d38c35ee16c1c7f7225527 drift-2.0.4.ebuild 831
+MD5 be307dca01bd6deafc28e0d0459ea188 drift-2.1.2.ebuild 834
+MD5 70be0685cce3c75390a364db7eab639c ChangeLog 720
 MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
-MD5 e5b705f7626fe3d92958d40facf05264 drift-2.1.0.ebuild 831
 MD5 ef4178698c778fa0dad69a79526d4a86 files/digest-drift-2.0.4 63
 MD5 58458ce024b7d5fbdd1bdf276b33cccc files/digest-drift-2.1.0 63
+MD5 049fa3abaa35311125b3024616014e09 files/digest-drift-2.1.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDNAY4kyZuKN4EQ6YRArJQAJ9vJk5tmA2k+YMKQbyudBWZ3TU3zACfXdbj
+DfhDjQBFcLqr/VxVAhkZxmk=
+=/sxH
+-----END PGP SIGNATURE-----

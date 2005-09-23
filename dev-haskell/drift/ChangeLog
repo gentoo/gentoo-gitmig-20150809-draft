@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/drift
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.4 2005/05/04 16:43:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.5 2005/09/23 13:40:22 dcoutts Exp $
+
+*drift-2.1.2 (23 Sep 2005)
+
+  23 Sep 2005; <duncan@gentoo.org> drift-2.1.0.ebuild, +drift-2.1.2.ebuild:
+  New drift point release
 
   04 May 2005; David Holm <dholm@gentoo.org> drift-2.1.0.ebuild:
   Added to ~ppc.
