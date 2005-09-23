@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.12 2005/05/04 16:53:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.13 2005/09/23 13:25:55 dcoutts Exp $
+
+  23 Sep 2005; <duncan@gentoo.org> happy-1.15.ebuild:
+  Marked stable on x86.
 
   04 May 2005; David Holm <dholm@gentoo.org> happy-1.15.ebuild:
   Added to ~ppc.

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b868f3e2f60d94a83e392eb8b9f8e09f ChangeLog 1263
+MD5 b439d02d2952158ac80622b27b1c2d6a ChangeLog 1360
 MD5 3f6e26f4a44d1b5c6ff6380d989e6af6 metadata.xml 222
+MD5 d6e969e4cbfa253d8eff3155448a639a hsshellscript-2.3.0.ebuild 1072
 MD5 342a987a2862d37266ce8637603dd0b1 hsshellscript-2.2.2.ebuild 1073
-MD5 a803e58a525a9589fd00076e531d644a hsshellscript-2.3.0.ebuild 1073
 MD5 c9d8872752f437db8832460ece2f90b0 hsshellscript-2.6.0.ebuild 1243
 MD5 7ae622841800669416a46ccab3d9a9b0 files/digest-hsshellscript-2.2.2 71
 MD5 e99cbf0bf1d4793de8d69765d43ded70 files/digest-hsshellscript-2.3.0 72
 MD5 669d010e1fd7c5bb71478b2efb700fff files/digest-hsshellscript-2.6.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNAF4BQBy/eDH5uERAlZjAKDSP1G4Cdg34t5cQV6DfDryYWZ1iwCgl68u
-M5dL8v1/710DV3e9JgWFzJA=
-=TajA
------END PGP SIGNATURE-----
