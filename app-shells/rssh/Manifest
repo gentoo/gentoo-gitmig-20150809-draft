@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 50a92135a4b84f4d693a77f4683dcdab ChangeLog 1149
+MD5 7de2c370bb347ca049dca537568659ae rssh-2.2.3.ebuild 844
+MD5 fc4c77dcc9ecf4d55db84d2c59e7b629 ChangeLog 1238
 MD5 7b93999626c2904945bb487fe7f4b377 metadata.xml 273
-MD5 0b30701747d6624e34ef2c29dd5d8c0a rssh-2.2.3.ebuild 838
 MD5 3867f15cbcd6dbd7f3b1817143ffaa45 files/digest-rssh-2.2.3 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB6rxgroRuSHgZdywRAjw9AJ4pemo97SpaYcGGJM8BFKKUJ/NGNACfSPRh
-QyxFgzD8ZIXNYMBKP2Jcwf0=
-=z4tP
+iD8DBQFDNFTkntT9W3vfTuoRAuhsAKCUm3tHwzWCaCBxdDEzYYgrgyshsQCeKDlq
+8Wn9yQCprHYMc2StSyWer5I=
+=Ujub
 -----END PGP SIGNATURE-----
