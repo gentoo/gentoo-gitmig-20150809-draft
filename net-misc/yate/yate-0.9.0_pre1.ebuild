@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.9.0_pre1.ebuild,v 1.1 2005/09/09 02:12:45 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/yate-0.9.0_pre1.ebuild,v 1.2 2005/09/23 00:04:39 stkn Exp $
 
-IUSE="gsm gtk2 h323 ilbc zaptel"
+IUSE="gsm gtk h323 ilbc zaptel"
 
 inherit eutils
 
@@ -20,20 +20,12 @@ DEPEND="media-sound/sox
 	zaptel? ( >=net-libs/libpri-1.0.0
 	          >=net-misc/zaptel-1.0.0 )
 	h323? ( >=net-libs/openh323-1.15.3 )
-	gtk2? ( >=x11-libs/gtk+-2.6.8 )
+	gtk? ( >=x11-libs/gtk+-2.6.8 )
 	gsm? ( media-sound/gsm )"
-
-#src_unpack() {
-#	unpack ${A}
-#
-#	cd ${S}
-#	# patch for gcc3.4
-#	epatch ${FILESDIR}/${P}-gcc34.patch
-#}
 
 src_compile() {
 	econf \
-		$(use_with gtk2 libgtk2 /usr) \
+		$(use_with gtk libgtk2 /usr) \
 		$(use_with h323 openh323 /usr) \
 		$(use_with h323 pwlib /usr) \
 		$(use_with zaptel libpri) \
