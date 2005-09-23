@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.15 2005/06/26 18:48:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.16 2005/09/23 04:25:57 caleb Exp $
+
+*mysql-ruby-2.7 (23 Sep 2005)
+
+  23 Sep 2005; Caleb Tennis <caleb@gentoo.org> +mysql-ruby-2.7.ebuild:
+  Version bump
 
   26 Jun 2005; Simon Stelling <blubb@gentoo.org> mysql-ruby-2.5.2.ebuild:
   added ~amd64 keyword
