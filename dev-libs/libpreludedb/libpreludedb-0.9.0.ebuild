@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0_rc13.ebuild,v 1.3 2005/09/19 21:03:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0.ebuild,v 1.1 2005/09/23 03:25:13 vanquirius Exp $
 
-inherit versionator flag-o-matic
+inherit flag-o-matic
 
-MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="Prelude-IDS framework for easy access to the Prelude database"
 HOMEPAGE="http://www.prelude-ids.org/"
-SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
+SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,8 +18,6 @@ DEPEND="virtual/libc
 	doc? ( dev-util/gtk-doc )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
-
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	local myconf
