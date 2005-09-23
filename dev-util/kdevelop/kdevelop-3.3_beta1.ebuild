@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3_beta1.ebuild,v 1.1 2005/09/23 11:09:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3_beta1.ebuild,v 1.2 2005/09/23 15:38:23 cryos Exp $
 
 inherit kde eutils
 
-MY_PV=3.2.90
+MY_PV=3.2.91
 S=${WORKDIR}/${PN}-${MY_PV}
 
 DESCRIPTION="Integrated Development Enviroment for Unix, supporting KDE/Qt, C/C++ and a many other languages."

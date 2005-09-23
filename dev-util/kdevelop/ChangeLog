@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.98 2005/09/23 11:09:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.99 2005/09/23 15:38:23 cryos Exp $
+
+  23 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdevelop-3.3_beta1.ebuild:
+  Updated MY_PV to 3.2.91 so that it builds beta1.
 
 *kdevelop-3.3_beta1 (23 Sep 2005)
 
