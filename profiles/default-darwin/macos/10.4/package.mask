@@ -13,6 +13,7 @@ app-shells/zsh
 dev-db/sqlite
 dev-lang/perl
 dev-lang/python
+dev-lang/ruby
 dev-libs/libxml2
 dev-perl/XML-Parser
 dev-util/intltool
