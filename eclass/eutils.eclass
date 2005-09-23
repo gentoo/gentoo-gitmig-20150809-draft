@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.199 2005/09/22 14:52:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.200 2005/09/23 20:44:26 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1144,7 +1144,7 @@ check_license() {
 			lic="${lic}"
 		fi
 	fi
-	[ ! -f "${lic}" ] && die "Could not find requested license ${src}"
+	[ ! -f "${lic}" ] && die "Could not find requested license ${lic}"
 	local l="`basename ${lic}`"
 
 	# here is where we check for the licenses the user already
