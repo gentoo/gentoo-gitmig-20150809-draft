@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.17.ebuild,v 1.1 2005/02/11 07:14:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.17.ebuild,v 1.2 2005/09/23 02:03:54 eradicator Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
-RDEPEND=">=dev-php/mod_php-4.2"
+RDEPEND=">=virtual/httpd-php-4.2"
 
 pkg_setup() {
 	webapp_pkg_setup

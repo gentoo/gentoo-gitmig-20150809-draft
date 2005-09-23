@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.18.1.ebuild,v 1.4 2005/05/31 15:01:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.18.1.ebuild,v 1.5 2005/09/23 02:03:54 eradicator Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 
-RDEPEND=">=dev-php/mod_php-4.2"
+RDEPEND=">=virtual/httpd-php-4.2"
 
 S="${WORKDIR}/mythplugins-${PV}/${PN}"
 
