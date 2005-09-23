@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.41.ebuild,v 1.2 2005/08/09 15:31:01 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.2.1.ebuild,v 1.1 2005/09/23 21:21:28 voxus Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sysoev.ru/nginx/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug fastcgi imap pcre threads ssl zlib"
 
 DEPEND="dev-lang/perl
@@ -31,7 +31,9 @@ src_compile() {
 
 	use fastcgi	|| myconf="${myconf} --without-http_fastcgi_module"
 	use zlib	|| myconf="${myconf} --without-http_gzip_module"
-	use pcre	|| myconf="${myconf} --without-pcre"
+	use pcre	|| {
+		myconf="${myconf} --without-pcre --without-http_rewrite_module"
+	}
 	use debug	&& myconf="${myconf} --with-debug"
 	use ssl		&& myconf="${myconf} --with-http_ssl_module"
 	use imap	&& myconf="${myconf} --with-imap" # pop3/imap4 proxy support
