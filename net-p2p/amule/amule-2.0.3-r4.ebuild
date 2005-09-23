@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.1 2005/09/22 22:39:01 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.3-r4.ebuild,v 1.2 2005/09/23 00:05:27 swegener Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -55,16 +55,16 @@ src_compile() {
 
 	if use gtk; then
 		myconf="--enable-amule-gui"
-		use stats && myconf="${myconf} 
-			--enable-wxcas 
+		use stats && myconf="${myconf}
+			--enable-wxcas
 			--enable-alc"
-		use remote && myconf="${myconf} 
+		use remote && myconf="${myconf}
 			--enable-amulecmdgui
 			--enable-webservergui"
 	else
 		myconf="--disable-monolithic"
 	fi
-	
+
 	econf \
 		--disable-optimize \
 		--with-wx-config=${WX_CONFIG} \
