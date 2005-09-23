@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.9 2005/08/10 17:14:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.10 2005/09/23 19:48:30 axxo Exp $
 
 inherit java-pkg eutils
 
-MY_PV="${PV//.}"
-MY_PV="${MY_PV//_}"
+MY_PV="${PV//./}"
+MY_PV="${MY_PV//_/}"
 
 DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
@@ -59,7 +59,7 @@ src_install () {
 	keepdir /usr/share/jedit/jars
 
 	echo "#!/bin/bash" > ${PN}
-	echo "java -jar /usr/share/jedit/jedit.jar \$@" >> ${PN}
+	echo "java -jar /usr/share/jedit/jedit.jar \"\${@}\"" >> ${PN}
 	dobin ${PN}
 
 	insinto /usr/share/icons/hicolor/128x128/apps

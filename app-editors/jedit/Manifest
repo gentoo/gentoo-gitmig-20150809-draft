@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 586a3297b41fb005256c9740d612cdd8 jedit-4.2-r1.ebuild 2105
+MD5 b277fdbbcd3dea93b17449b4fa5d94ed jedit-4.2.ebuild 2380
 MD5 25ee2abd8c5370c92292de4248328276 ChangeLog 8333
-MD5 1750800257848d612b2f89313889f388 jedit-4.2-r1.ebuild 2100
-MD5 fc8cdf5ee10d9f48cbea1da239bc9e9d jedit-4.2.ebuild 2374
 MD5 0c1bc759b6cafc454c336cb35fd05550 metadata.xml 257
-MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
-MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2-r1 66
 MD5 c8305f25e0689d0224f1c0f565a92709 files/jedit-4.1-jikes-fix.patch 492
+MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2 66
 MD5 e4b1187284c6be90f0acaa0d919da8ba files/jedit.desktop 186
+MD5 46c44ce1da70402f205102ea5e9ec8b1 files/digest-jedit-4.2-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNFw3/rLF9B432nYRAnXwAJ4vrpHb7HdmMfu5jRLzU1FRJM/qzACgsa/L
+XWGrF4d70PmHUaNKC4mI2Fk=
+=cWBR
+-----END PGP SIGNATURE-----

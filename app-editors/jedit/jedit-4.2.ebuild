@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.12 2005/07/11 11:23:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2.ebuild,v 1.13 2005/09/23 19:48:30 axxo Exp $
 
 inherit java-utils
 
-MY_PV="${PV//.}"
-MY_PV="${MY_PV//_}"
+MY_PV="${PV//./}"
+MY_PV="${MY_PV//_/}"
 
 DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
@@ -69,7 +69,7 @@ src_install () {
 	cat >${D}/usr/share/jedit/jedit.sh <<-EOF
 		#!/bin/bash
 
-		java -jar /usr/share/jedit/jedit.jar \$@
+		java -jar /usr/share/jedit/jedit.jar \"\$@\"
 	EOF
 	chmod 755 ${D}/usr/share/jedit/jedit.sh
 
