@@ -22,6 +22,7 @@ lesspipe_file() {
 		*" shared object"*) lesspipe "$1" ".so" ;;
 		*" Zip archive"*)   lesspipe "$1" ".zip" ;;
 		*" ELF "*)          readelf -a -- "$1" ;;
+		*": data")          hexdump -C -- "$1" ;;
 	esac
 }
 
