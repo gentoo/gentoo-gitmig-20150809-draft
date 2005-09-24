@@ -20,7 +20,7 @@ access to dn.regex="^uid=([^,]+),ou=addr,(uid=([^,]+),ou=Users,ou=OxObjects,dc=g
   by dn.exact,expand="$2" write
 
 # default rule allowing users full access to their own entries
-access to attr=birthDay,cn,description,gecos,givenName,homePhone,initials,l,labeledURI,mobile,o,ou,OXAppointmentDays,OXTaskDays,OXTimeZone,pager,postalCode,preferredLanguage,sn,st,street,title,userCountry
+access to attr=birthDay,cn,description,facsimileTelephoneNumber,gecos,givenName,homePhone,initials,l,labeledURI,mobile,o,ou,OXAppointmentDays,OXTaskDays,OXTimeZone,pager,postalCode,preferredLanguage,sn,st,street,telephoneNumber,title,userCountry
     by self write
     by users read
 
