@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.75 2005/09/22 18:01:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.76 2005/09/24 19:13:05 eradicator Exp $
+
+  24 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/usermin-1.100-setup-nocheck.patch, -usermin-1.130-r1.ebuild:
+  Removing insecure versions.
 
   22 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> usermin-1.160.ebuild:
   Stable on hppa, ppc.

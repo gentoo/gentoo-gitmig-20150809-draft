@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.102 2005/09/22 18:01:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.103 2005/09/24 19:14:43 eradicator Exp $
+
+  24 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -webmin-1.210-r1.ebuild:
+  Removing insecure versions.
 
   22 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> webmin-1.230.ebuild:
   Stable on hppa, ppc.
