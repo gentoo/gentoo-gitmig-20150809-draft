@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/kolourpaint-3.5_beta1.ebuild,v 1.1 2005/09/22 19:48:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/kolourpaint-3.5_beta1.ebuild,v 1.2 2005/09/24 19:02:57 cryos Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -10,3 +10,6 @@ inherit kde-meta eutils
 DESCRIPTION="Paint Program for KDE"
 KEYWORDS="~amd64"
 IUSE=""
+
+# The setCustomAuthorText function seems to have been removed.
+PATCHES="$FILESDIR/${P}-compile-fix.patch"

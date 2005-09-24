@@ -1,0 +1,32 @@
+--- kolourpaint/kolourpaint.cpp	2005-09-10 09:19:07.000000000 +0100
++++ kolourpaint/kolourpaint.cpp	2005-09-24 19:30:54.000000000 +0100
+@@ -74,28 +74,7 @@
+     // this is _not_ the same as KAboutData::License_BSD
+     aboutData.setLicenseText (kpLicenseText);
+ 
+-
+-    aboutData.setCustomAuthorText (
+-        I18N_NOOP
+-        (
+-            "\n"
+-            "For support, or to report bugs and feature requests, please email\n"
+-            "<kolourpaint-support@lists.sourceforge.net>"
+-            " - the free and friendly\n"
+-            "KolourPaint support service.\n"
+-            "\n"
+-        ),
+-        I18N_NOOP
+-        (
+-            "<qt>"
+-            "For support, or to report bugs and feature requests, please email<br>"
+-            "<a href=\"mailto:kolourpaint-support@lists.sourceforge.net\">kolourpaint-support@lists.sourceforge.net</a>"
+-            " - the free and friendly<br>"
+-            "KolourPaint support service.<br>"
+-            "<br>"
+-            "</qt>"
+-        ));
+-
++    aboutData.setBugAddress("kolourpaint-support@lists.sourceforge.net");
+ 
+     // SYNC: with AUTHORS
+ 

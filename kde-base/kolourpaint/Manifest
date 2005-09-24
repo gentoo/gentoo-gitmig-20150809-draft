@@ -1,18 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c4774f5bb16c1143519236ba3a115b7 ChangeLog 2649
+MD5 346dbb01a04f905951f789570abd0ee4 kolourpaint-3.5_beta1.ebuild 487
 MD5 5d1fec3c0695e48ce0adf2843a0b54ac kolourpaint-3.4.2.ebuild 408
 MD5 a44022fb1411ba50607f4c25d6b75bf6 kolourpaint-3.4.1.ebuild 395
-MD5 250ea68ac3a37020906b4ae712ff2bf2 kolourpaint-3.5_beta1.ebuild 384
+MD5 d4c0fe2da221153786f64d99b897d4c7 ChangeLog 2822
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kolourpaint-3.4.2 300
+MD5 2101ba9939546290111b1732a8ff440b files/kolourpaint-3.5_beta1-compile-fix.patch 1120
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kolourpaint-3.5_beta1 72
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kolourpaint-3.4.1 221
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kolourpaint-3.4.2 300
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDNWjhj5H05b2HAEkRAgmlAJ9WkpELzwDaDWO+YUiZVJnChNVD3gCfdgNF
-sjKk5vrdi1yABTivkS5kyKE=
-=XFQy
+iD8DBQFDNaMAntT9W3vfTuoRApoRAKCuQQtRKq5T5P1TsMDUKbEBNIK02gCeKUDN
+Hz0E4Gj6xUzUcaeaih8KF2Q=
+=TNgz
 -----END PGP SIGNATURE-----
