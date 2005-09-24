@@ -1,17 +1,27 @@
-MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
-MD5 5600ad85428bca4898ea3db305ba3dcc Apache-Gallery-0.8.ebuild 1525
-MD5 189251f54bb9ff3cbbb7760e78ed1828 ChangeLog 3420
-MD5 71622639b1ca7147d93e55dec436267a Apache-Gallery-0.9.1.ebuild 1586
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 91d4f661748ac4ca4e130222f4f1af38 Apache-Gallery-0.6.ebuild 1459
 MD5 d2ffb46253b5ea9e00e990ec8a90904f Apache-Gallery-0.8-r1.ebuild 2125
 MD5 b5db9e0472430724adea6de9580b41c5 Apache-Gallery-0.8-r2.ebuild 2125
-MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r1 69
-MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8 69
-MD5 f372bf3342f63c4d3a680051e80b5571 files/digest-Apache-Gallery-0.6 69
-MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r2 69
-MD5 9e0a44b67c66dc689a3769827946f3f8 files/76_apache1-gallery.conf 738
-MD5 f946c05f08e4b517465f3a09639a5fe7 files/digest-Apache-Gallery-0.9.1 71
-MD5 004b7af7fb9d52598cf9ed7db91697c6 files/76_apache2-gallery.conf 1442
+MD5 5600ad85428bca4898ea3db305ba3dcc Apache-Gallery-0.8.ebuild 1525
+MD5 d810d3fda63ae815ed953913e95c14f7 Apache-Gallery-0.9.1.ebuild 1594
+MD5 1651961e48de135aefe57e04def5a8d1 ChangeLog 3542
+MD5 2a5bdc93be7720976d88be5034a17df2 metadata.xml 444
 MD5 862b7db14e194f66c345bdaee71e0d00 files/76_apache-gallery.conf 1461
-MD5 5edd6a9688af26ad0b3f71d8e2ad8770 files/postinstall-en.txt 90
+MD5 9e0a44b67c66dc689a3769827946f3f8 files/76_apache1-gallery.conf 738
+MD5 004b7af7fb9d52598cf9ed7db91697c6 files/76_apache2-gallery.conf 1442
 MD5 d9a1361f6d0f1dac9def27a0b57cf30c files/apache-gallery.conf 757
+MD5 f372bf3342f63c4d3a680051e80b5571 files/digest-Apache-Gallery-0.6 69
+MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8 69
+MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r1 69
+MD5 3c77fe3e38d06f53fca962becfe10d81 files/digest-Apache-Gallery-0.8-r2 69
+MD5 f946c05f08e4b517465f3a09639a5fe7 files/digest-Apache-Gallery-0.9.1 71
+MD5 5edd6a9688af26ad0b3f71d8e2ad8770 files/postinstall-en.txt 90
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNaDBKf2g/qXtneoRAoQUAKCxqBvq/MJFpaKwH6TmTWhPyrd5kQCfQuho
+8kZK89r03wf46KJPbLcHqac=
+=TU7N
+-----END PGP SIGNATURE-----
