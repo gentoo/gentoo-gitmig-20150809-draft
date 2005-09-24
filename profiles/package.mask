@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4494 2005/09/24 03:17:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4495 2005/09/24 09:38:48 greg_g Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -183,12 +183,14 @@ sys-apps/pmount
 >=kde-base/akregator-3.5_alpha1
 >=kde-base/amor-3.5_alpha1
 >=kde-base/ark-3.5_alpha1
+>=kde-base/artsplugin-akode-3.5_alpha1
 >=kde-base/artsplugin-audiofile-3.5_alpha1
 >=kde-base/artsplugin-mpeglib-3.5_alpha1
 >=kde-base/artsplugin-mpg123-3.5_alpha1
 >=kde-base/artsplugin-xine-3.5_alpha1
 >=kde-base/atlantik-3.5_alpha1
 >=kde-base/atlantikdesigner-3.5_alpha1
+>=kde-base/blinken-3.5_alpha1
 >=kde-base/certmanager-3.5_alpha1
 >=kde-base/cervisia-3.5_alpha1
 >=kde-base/dcoprss-3.5_alpha1
@@ -202,6 +204,7 @@ sys-apps/pmount
 >=kde-base/kalarm-3.5_alpha1
 >=kde-base/kalzium-3.5_alpha1
 >=kde-base/kamera-3.5_alpha1
+>=kde-base/kanagram-3.5_alpha1
 >=kde-base/kandy-3.5_alpha1
 >=kde-base/kappfinder-3.5_alpha1
 >=kde-base/kapptemplate-3.5_alpha1
@@ -297,6 +300,7 @@ sys-apps/pmount
 >=kde-base/kfloppy-3.5_alpha1
 >=kde-base/kfouleggs-3.5_alpha1
 >=kde-base/kgamma-3.5_alpha1
+>=kde-base/kgeography-3.5_alpha1
 >=kde-base/kget-3.5_alpha1
 >=kde-base/kghostview-3.5_alpha1
 >=kde-base/kgoldrunner-3.5_alpha1
