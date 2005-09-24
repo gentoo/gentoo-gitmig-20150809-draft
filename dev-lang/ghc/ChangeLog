@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.66 2005/09/22 13:37:55 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.67 2005/09/24 00:06:38 dcoutts Exp $
+
+  23 Sep 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
+  Disabled java USE flag due to bug #106992
 
 *ghc-6.4.1 (22 Sep 2005)
 
