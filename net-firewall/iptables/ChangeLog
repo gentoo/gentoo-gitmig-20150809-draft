@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.83 2005/09/17 12:07:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.84 2005/09/24 23:24:54 dragonheart Exp $
+
+*iptables-1.3.3-r2 (25 Sep 2005)
+
+  25 Sep 2005; Daniel Black <dragonheart@gentoo.org>  iptables-1.3.3-r2.ebuild:
+  updated to use l7-filter-2.0-beta
 
 *iptables-1.3.3-r1 (17 Sep 2005)
 
