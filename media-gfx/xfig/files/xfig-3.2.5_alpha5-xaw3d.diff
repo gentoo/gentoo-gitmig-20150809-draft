@@ -1,0 +1,11 @@
+--- Imakefile.orig	2005-09-24 18:07:43.000000000 -0300
++++ Imakefile	2005-09-24 18:08:08.000000000 -0300
+@@ -49,7 +49,7 @@
+ XCOMM Uncomment the following definition for XAW3D if you want to use
+ XCOMM the 3d Athena Widget Set (highly recommended!)
+ 
+-XCOMM #define XAW3D
++#define XAW3D
+ 
+ XCOMM Uncomment the following if you have David Hawkey's Xaw3D version 1.5E which has
+ XCOMM some new features, including "Tips", which replace xfig's "help balloons"

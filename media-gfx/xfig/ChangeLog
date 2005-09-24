@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.18 2005/09/13 17:36:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.19 2005/09/24 21:31:55 vanquirius Exp $
+
+*xfig-3.2.5_alpha5 (24 Sep 2005)
+
+  24 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/xfig-3.2.5_alpha5-gentoo.diff, +files/xfig-3.2.5_alpha5-xaw3d.diff,
+  +metadata.xml, -xfig-3.2.3d-r1.ebuild, -xfig-3.2.4.ebuild,
+  +xfig-3.2.5_alpha5.ebuild:
+  Version bump for bug 71205, thanks to Cristian Peraferrer <corellian at
+  interec dot org>. Ported gentoo and xaw3d patches, shape patch is integrated
+  upstream.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> xfig-3.2.4-r2.ebuild:
   Mark 3.2.4-r2 stable on alpha
