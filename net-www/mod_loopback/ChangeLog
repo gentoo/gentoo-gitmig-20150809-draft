@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_loopback
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_loopback/ChangeLog,v 1.16 2005/09/18 21:15:10 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_loopback/ChangeLog,v 1.17 2005/09/24 08:47:37 corsair Exp $
+
+  24 Sep 2005; Markus Rothe <corsair@gentoo.org>
+  mod_loopback-2.01-r1.ebuild:
+  Stable on ppc64
 
   18 Sep 2005; Michael Stewart <vericgar@gentoo.org>
   mod_loopback-2.01-r1.ebuild:
