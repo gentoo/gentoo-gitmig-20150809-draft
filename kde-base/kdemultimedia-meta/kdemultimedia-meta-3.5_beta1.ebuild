@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.5_beta1.ebuild,v 1.2 2005/09/24 10:39:13 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/kdemultimedia-meta-3.5_beta1.ebuild,v 1.3 2005/09/24 10:40:28 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -18,7 +18,6 @@ RDEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/artsplugin-akode)
 		$(deprange $PV $MAXKDEVER kde-base/juk)
 		$(deprange $PV $MAXKDEVER kde-base/kaboodle)
 		$(deprange $PV $MAXKDEVER kde-base/kaudiocreator)
-		$(deprange $PV $MAXKDEVER kde-base/akode)
 		$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
 		$(deprange $PV $MAXKDEVER kde-base/krec)
 		$(deprange $PV $MAXKDEVER kde-base/noatun) )
