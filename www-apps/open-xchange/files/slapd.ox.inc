@@ -27,7 +27,7 @@ access to dn.regex="^uid=([^,]+),ou=addr,(uid=([^,]+),ou=Users,ou=OxObjects,dc=g
 #
 # This is not secure and thus hasn't been set here.  To enable it, add
 # uid to the following list
-access to attrs=birthDay,cn,description,facsimileTelephoneNumber,gecos,givenName,homePhone,initials,l,labeledURI,mobile,o,ou,OXAppointmentDays,OXTaskDays,OXTimeZone,pager,postalCode,preferredLanguage,sn,st,street,telephoneNumber,title,userCountry
+access to attrs=birthDay,cn,description,facsimileTelephoneNumber,gecos,givenName,homePhone,initials,l,labeledURI,mobile,o,ou,OXAppointmentDays,OXDayViewInterval,OXDayViewEndTime,OXDayViewStartTime,OXTaskDays,OXTimeZone,pager,postalCode,preferredLanguage,sn,st,street,telephoneNumber,title,userCountry
     by self write
     by users read
 
@@ -35,4 +35,6 @@ access to *
   by dn="uid=root,ou=Users,ou=OxObjects,dc=gen-ux,dc=com" write
   by * read
 
-index uid,mailEnabled,cn,sn,givenname,lnetMailAccess,alias,loginDestination eq,sub
+# This is supposed to give a performance boose, but it just breaks things for
+# me -- eradicator
+#index uid,mailEnabled,cn,sn,givenname,lnetMailAccess,alias,loginDestination eq,sub
