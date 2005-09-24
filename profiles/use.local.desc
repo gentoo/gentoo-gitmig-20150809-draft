@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1466 2005/09/22 19:02:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1467 2005/09/24 03:20:52 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1086,6 +1086,7 @@ www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vp
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/moinmoin:rss - Add RSS support
 www-apps/nut:cgi - Add CGI script support
+www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  
 www-apps/rt:lighttpd - Add lighttpd support
 www-apps/swish-e:pdf - enable support for exporting to pdf
 www-apps/tikiwiki:graphviz - enable graphviz support
