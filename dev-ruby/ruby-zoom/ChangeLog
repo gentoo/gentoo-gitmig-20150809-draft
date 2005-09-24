@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-zoom
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.1 2005/08/25 09:07:42 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.2 2005/09/24 11:10:40 blubb Exp $
+
+  24 Sep 2005; Simon Stelling <blubb@gentoo.org> ruby-zoom-0.2.0.ebuild:
+  added ~amd64 keyword
 
 *ruby-zoom-0.2.0 (25 Aug 2005)
 
