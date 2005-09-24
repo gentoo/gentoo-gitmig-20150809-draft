@@ -1,32 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c6d3309b62a5ba19e3aa3893e0cca346 webmin-1.170-r3.ebuild 3681
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 f967ac80dd5964238529b77dfc8ea37f webmin-1.210-r1.ebuild 4048
+MD5 c6d3309b62a5ba19e3aa3893e0cca346 webmin-1.170-r3.ebuild 3681
 MD5 4a7d5788537cfcbab015c6f7f1b9aa1e webmin-1.230.ebuild 4099
-MD5 a2e47c306ee0576cd0a89ce718a23914 ChangeLog 3393
-MD5 c53333c5a45f347207179bd957253b86 files/webmin-1.230-ldap-useradmin.patch 905
-MD5 1b791b42466b4d6db599c2b8fed29871 files/digest-webmin-1.230 210
-MD5 0ebd73f1cd5948ec1c3532a2f59f2c53 files/webmin-1.170-postfix.patch 868
-MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
-MD5 171e9e052878636913441103aac011b0 files/digest-webmin-1.210-r1 209
-MD5 082b9fc08240293b2b7b3609ba8e0cfd files/virtual-server-2.31-checkip.patch 607
-MD5 4f5dc10c2c1d19218cecfc2a678a0ce4 files/virtual-server-2.31-pgsql.patch 579
-MD5 395e49092aa7b9e808d3e9d723508884 files/webmin-1.140-apache2.patch 1250
-MD5 6a55026b21c4da9284b31236deeceda7 files/webmin-gentoo-init 864
-MD5 54dc8937e05bd76ad86a6c5f5ae6a333 files/init.d.webmin 859
-MD5 bb2acab90ada721c723d91a5a97c193c files/webmin-1.130-webalizer.patch 615
-MD5 bc8eb1c9de103599fc00b140b0ed1f9f files/uninstall.sh 260
+MD5 cbfd050584e4e5344f4d388ec649fe27 ChangeLog 3512
 MD5 6d9dfc76f788500ff3c85cbb42667487 files/digest-webmin-1.170-r3 209
+MD5 54dc8937e05bd76ad86a6c5f5ae6a333 files/init.d.webmin 859
+MD5 bc8eb1c9de103599fc00b140b0ed1f9f files/uninstall.sh 260
+MD5 082b9fc08240293b2b7b3609ba8e0cfd files/virtual-server-2.31-checkip.patch 607
 MD5 cc16dcb159f84c912365504002444a08 files/virtual-server-2.31-namevirtual.patch 2951
 MD5 cad6a5577a4c4b3773702ab1bd8d6461 files/virtual-server-2.31-nocgibin.patch 1073
+MD5 4f5dc10c2c1d19218cecfc2a678a0ce4 files/virtual-server-2.31-pgsql.patch 579
 MD5 5a13292127e1353674038bffda8e4a70 files/virtual-server-2.60-nocgibin.patch 1277
+MD5 bb2acab90ada721c723d91a5a97c193c files/webmin-1.130-webalizer.patch 615
+MD5 395e49092aa7b9e808d3e9d723508884 files/webmin-1.140-apache2.patch 1250
+MD5 0ebd73f1cd5948ec1c3532a2f59f2c53 files/webmin-1.170-postfix.patch 868
 MD5 512204473654b6eb41308d3319ba6144 files/webmin-1.170-setup-nocheck.patch 943
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNjGgIKl8Uu19MoRAgGAAJ9PJphBS+XioyQtIVvhf9H7rKQJgwCdHSaF
-lWCFqa0BQMMni4wA9I4ytLs=
-=VV1y
------END PGP SIGNATURE-----
+MD5 6a55026b21c4da9284b31236deeceda7 files/webmin-gentoo-init 864
+MD5 7d80c86adbd36eeb8f220b9efdd30819 files/webmin-pam 101
+MD5 1b791b42466b4d6db599c2b8fed29871 files/digest-webmin-1.230 210
+MD5 c53333c5a45f347207179bd957253b86 files/webmin-1.230-ldap-useradmin.patch 905
