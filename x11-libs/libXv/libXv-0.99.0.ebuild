@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/libXv-0.99.0.ebuild,v 1.4 2005/08/24 01:07:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/libXv-0.99.0.ebuild,v 1.5 2005/09/24 08:36:25 lu_zero Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="X.Org Xv library"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~amd64 ~arm ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 #IUSE="X gnome"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext"
