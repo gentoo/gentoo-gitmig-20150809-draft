@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a408c890b609771bd640704bb99f1113 kdesdk-meta-3.4.2.ebuild 1174
-MD5 fd113fbe8c12926f64e3bf534a51d6d8 ChangeLog 2722
+MD5 59266ea2a4038959fd0e933e84a945aa ChangeLog 2832
 MD5 f124b7bdcbcadfa4d8af1a8a17ed5cd4 kdesdk-meta-3.5_beta1.ebuild 1142
 MD5 d7d74ad03e831442c3c9c22bce75ff3d kdesdk-meta-3.4.1.ebuild 1154
-MD5 7b5b905e1efa0b67ebcb6e05d572c049 kdesdk-meta-3.5_alpha1.ebuild 1139
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5_alpha1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdesdk-meta-3.5_beta1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMydoj5H05b2HAEkRAtRBAKCU5DPFhAGHvYMDMI0blV+fCgVemQCeJFQh
-xd3BqTP4ghfVw1ogDyiH7sQ=
-=mef8
------END PGP SIGNATURE-----

@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28568806318b1467428860f1caec171a ChangeLog 2771
+MD5 84d721f57dc4e9263aaf3fe8741fcf0c ChangeLog 2897
 MD5 e4e3b39d815198e7511699287e90a9db kdeaddons-docs-konq-plugins-3.4.1.ebuild 515
-MD5 18eaef7d9bff97a9d09772bb83b75d46 kdeaddons-docs-konq-plugins-3.5_alpha1.ebuild 494
 MD5 cf608fa88827cde8512c9103d507d8dc kdeaddons-docs-konq-plugins-3.5_beta1.ebuild 493
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f7c6609b2333ccd23784fc7dd847030e files/digest-kdeaddons-docs-konq-plugins-3.5_alpha1 70
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-kdeaddons-docs-konq-plugins-3.5_beta1 70
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kdeaddons-docs-konq-plugins-3.4.1 215
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMvPEj5H05b2HAEkRAiUJAJ9B+K7O6f/nlicQ+J9K4lZiweXkjgCZAS20
-Ko6WRCExIZR3sNAHEYgSReY=
-=hoMd
------END PGP SIGNATURE-----

@@ -1,21 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5f0baf1c86fb69b0d536dda7661228bd kmailcvt-3.5_alpha1.ebuild 373
-MD5 60cdb1bdd02f421db9fdb4d796019be1 ChangeLog 2576
+MD5 70c7c45a5d7401e5cee86618a52fb40d ChangeLog 2683
 MD5 cef98d58639182ee17a50ebbdc116f34 kmailcvt-3.4.1.ebuild 384
 MD5 4840c4d850f6d4f468b7e2217ec22b61 kmailcvt-3.4.1-r1.ebuild 471
 MD5 21cdf4f0e1c04d166a272376da82fc99 kmailcvt-3.5_beta1.ebuild 372
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5b0dda9287797546fcf34f2ca390d165 files/fix-kmailcvt-compilation.diff 5790
-MD5 2943bf542accb5d027810434e6cebe1d files/digest-kmailcvt-3.5_alpha1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmailcvt-3.4.1-r1 208
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmailcvt-3.4.1 208
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kmailcvt-3.5_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMwU8j5H05b2HAEkRAlM5AKCUW/aesWR7BuBYk/WSPqV7sg/S+QCfbVok
-TZRHvk+voGsmOSwX6oojRSg=
-=4GWM
------END PGP SIGNATURE-----

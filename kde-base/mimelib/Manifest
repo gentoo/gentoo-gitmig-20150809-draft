@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 361526f7485940a1c02a9f1a08fcf3b7 mimelib-3.5_beta1.ebuild 367
-MD5 96e45850445b1cb116686f62d54c1ea5 ChangeLog 2437
+MD5 a243594097e78f99ad83177fb0f40da7 ChangeLog 2543
 MD5 2739af1ccf73445db9a3428c766a36c5 mimelib-3.4.1.ebuild 378
-MD5 bdd76a878edd7eccc02e833687af7d6f mimelib-3.5_alpha1.ebuild 368
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 f7a734d81f1980048efc5de59b324af5 mimelib-3.4.2.ebuild 391
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-mimelib-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-mimelib-3.4.2 282
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-mimelib-3.5_beta1 68
-MD5 2943bf542accb5d027810434e6cebe1d files/digest-mimelib-3.5_alpha1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMyHxj5H05b2HAEkRAgaUAJ9bGiKPJ+w3Nn/NiKHRDxvgGzIr2gCfVAms
-7VlYGR/h8XM9vVtFWlQEFR4=
-=osMi
------END PGP SIGNATURE-----

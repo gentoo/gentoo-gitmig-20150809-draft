@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 9790febde70facc1141fb41fd9160687 ChangeLog 2680
 MD5 b271de29aa1af888a552164019995d4c kalzium-3.4.2.ebuild 582
-MD5 52d8154d8a44c1473dc22b3461bbf7a2 kalzium-3.5_beta1.ebuild 604
-MD5 0279ddee73c361a20e0dc2b8f1d9bf9c kalzium-3.5_alpha1.ebuild 559
 MD5 af3397486a2e6c6c376f64311a06fc6e kalzium-3.4.1.ebuild 569
-MD5 64f8a5365a97657b05e285acf8f52c10 ChangeLog 2570
+MD5 52d8154d8a44c1473dc22b3461bbf7a2 kalzium-3.5_beta1.ebuild 604
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kalzium-3.5_beta1 68
-MD5 2183f1f3cb76d620970c208e56787241 files/digest-kalzium-3.5_alpha1 68
-MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kalzium-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kalzium-3.4.2 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDNES/ntT9W3vfTuoRAsQrAJ9xKKIyXsR2TXxOHzJRk3fk4PMDlgCdFQyH
-k89+LcVYSPp1SUdnKvqUWyQ=
-=kFfN
------END PGP SIGNATURE-----
+MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kalzium-3.4.1 208

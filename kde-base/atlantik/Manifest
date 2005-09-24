@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56c2082f1f5fb76e5420626c212c96f7 ChangeLog 2470
+MD5 3c5f797534ab0aa44ba0a4726a61c8bb ChangeLog 2577
 MD5 96da51483e0560e695ee447811cca8d9 atlantik-3.4.2.ebuild 554
-MD5 51edd8b13acb276f76d74181d3f81624 atlantik-3.5_alpha1.ebuild 531
 MD5 798930ac787f57cd2ccb3f62b7d7fa4e atlantik-3.5_beta1.ebuild 530
 MD5 df82b50ea4c41d84ded31c451780e808 atlantik-3.4.1.ebuild 541
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-atlantik-3.4.1 212
-MD5 6bcd92642a069f9cd68ca412a0c3665c files/digest-atlantik-3.5_alpha1 70
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-atlantik-3.4.2 288
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-atlantik-3.5_beta1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMupAj5H05b2HAEkRAnINAKChmXJ2wW9QuIcS+JYJ5W81JXr2VACeLMSA
-bDii3/3vZzyj6F/NlhdGOY8=
-=9kJh
------END PGP SIGNATURE-----

@@ -1,9 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2d0ac44281806fa1f11a96b9065fc91 kopete-3.5_alpha1.ebuild 902
 MD5 4e684e15946f023c333345b687db259c kopete-3.4.1.ebuild 515
-MD5 ba8061bb676b97b3dadf6e8168f8a8d3 ChangeLog 3955
+MD5 ffcfc41916817aaae51108c2dddcae16 ChangeLog 4060
 MD5 994554c943ba088573fcf744404b14a4 kopete-3.4.2.ebuild 1009
 MD5 6dc75dab20827560fbc31111864e9849 kopete-3.5_beta1.ebuild 904
 MD5 866ca4d8f807ee9c2e8ccec828160ef1 kopete-3.4.1-r1.ebuild 724
@@ -14,12 +10,4 @@ MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kopete-3.4.1 218
 MD5 284887f9ed6a0a0b0efc3a0d88f11868 files/digest-kopete-3.4.1-r1 297
 MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
 MD5 1277f401bade54acfa086cf013950252 files/digest-kopete-3.4.2 296
-MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-kopete-3.5_alpha1 71
 MD5 2db2170b384350ce6c05cd23c0bb21c7 files/disable-meanwhile.diff 351
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMw1Yj5H05b2HAEkRAroMAJ44sUm+FybjhvOB4VIltaB50hr+XwCfZOKK
-k8Mq9V7o6ltqX+T3FJ8NKdI=
-=YCGH
------END PGP SIGNATURE-----

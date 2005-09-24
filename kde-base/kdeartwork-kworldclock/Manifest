@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 87b84919de7395fd5a443a06bd96747b ChangeLog 2700
-MD5 749d24f4bc4e21b95e5caf0d8faf3c5c kdeartwork-kworldclock-3.5_alpha1.ebuild 490
+MD5 2fc821cf4dae3d883522363397aa910a ChangeLog 2821
 MD5 cf3349896ee1e58a53a73cf4cb4821b1 kdeartwork-kworldclock-3.4.1.ebuild 500
 MD5 5586e2033faee4a3ebbb39841f6c955d kdeartwork-kworldclock-3.5_beta1.ebuild 489
 MD5 cb5b9a8d02e0062330eeb83fc1dcaa57 kdeartwork-kworldclock-3.4.2.ebuild 513
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-kworldclock-3.5_beta1 72
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kworldclock-3.4.2 298
-MD5 5234e1c4183e1fcf2920020eeff6965a files/digest-kdeartwork-kworldclock-3.5_alpha1 72
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kworldclock-3.4.1 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMvWZj5H05b2HAEkRArY0AJ0Ys7YPHcacFzjUle5ztaGuKp/CwgCfYNGD
-QK7EBWjmpFYBJrCh551xpHQ=
-=nSVn
------END PGP SIGNATURE-----

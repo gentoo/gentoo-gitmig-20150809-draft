@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a3441911d4ff4f0d6ad1e2103500c0d knode-3.5_beta1.ebuild 916
-MD5 c992bd95bc1cec3051bea7593c939ee1 knode-3.5_alpha1.ebuild 902
-MD5 e4fcd154680487c975f2d6265b26bca7 knode-3.4.2.ebuild 929
+MD5 0d2c0e7a5d7e9f06a27e86e8b24d8872 ChangeLog 2740
 MD5 016657b19b87bd0b96689330350d410f knode-3.4.1.ebuild 912
-MD5 ffdb5e52f426ab48f410e784be2ef6d0 ChangeLog 2632
+MD5 e4fcd154680487c975f2d6265b26bca7 knode-3.4.2.ebuild 929
+MD5 4a3441911d4ff4f0d6ad1e2103500c0d knode-3.5_beta1.ebuild 916
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 2943bf542accb5d027810434e6cebe1d files/digest-knode-3.5_alpha1 68
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-knode-3.5_beta1 68
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-knode-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-knode-3.4.2 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDNDdTntT9W3vfTuoRArkWAKCH9rbMtzCgvWYlatiCcq66dIPMqQCeIQae
-nXhykZge8cPeokcNpzmyDTg=
-=H0t6
------END PGP SIGNATURE-----
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-knode-3.5_beta1 68
