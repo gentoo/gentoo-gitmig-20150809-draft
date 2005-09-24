@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a9f9a1af5b818bd3f19b9e05cc45354 ChangeLog 2809
-MD5 5b36f50146f6d8daf37bfea9b94bbeae kdeedu-meta-3.5_beta1.ebuild 1295
-MD5 dc70cada60232d7cf5ed9eb823d30d7b kdeedu-meta-3.4.1.ebuild 1306
-MD5 02029c1082815a6d3df7c5b3488acf83 kdeedu-meta-3.4.2.ebuild 1319
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 c94bcb1459efcce0f036f722955b29f6 kdeedu-meta-3.5_alpha1.ebuild 1292
+MD5 b5c758b24a1a7006441dd5386d7c4e5a ChangeLog 2923
+MD5 dc70cada60232d7cf5ed9eb823d30d7b kdeedu-meta-3.4.1.ebuild 1306
+MD5 e7fa2e7245a291b13476d7cf155989d7 kdeedu-meta-3.5_beta1.ebuild 1373
+MD5 02029c1082815a6d3df7c5b3488acf83 kdeedu-meta-3.4.2.ebuild 1319
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5_alpha1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5_beta1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.4.2 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeedu-meta-3.5_alpha1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMyYRj5H05b2HAEkRAn2xAJ9WDx08BLqIwvX6Vrx6Y6b7vI/9MQCfRtBd
-zpHavG1HhWIntCdPA/QOvG0=
-=O/qG
------END PGP SIGNATURE-----
