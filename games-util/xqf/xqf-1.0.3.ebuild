@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.3.ebuild,v 1.5 2005/09/20 14:54:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.3.ebuild,v 1.6 2005/09/24 20:12:52 mr_bones_ Exp $
 
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
@@ -12,6 +12,7 @@ KEYWORDS="amd64 hppa ppc x86"
 IUSE="nls geoip bzip2"
 
 DEPEND="=x11-libs/gtk+-2*
+	media-libs/gdk-pixbuf
 	nls? ( sys-devel/gettext )
 	geoip? ( dev-libs/geoip )
 	bzip2? ( app-arch/bzip2 )"
