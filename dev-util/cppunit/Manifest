@@ -2,15 +2,16 @@
 Hash: SHA1
 
 MD5 c4c708e3dc384f836a21bfea63ae3288 metadata.xml 162
+MD5 fab92a2dfa6317ee68fe648a89dd63fc cppunit-1.10.2.ebuild 1017
 MD5 2088e693ce5dc24d9d17c07ab0abe304 cppunit-1.8.0.ebuild 915
-MD5 41a5a6e8ffd25ba170b4907c4aa022d7 cppunit-1.10.2.ebuild 971
 MD5 1bd2626402c56ff5372577b3638fd5f2 ChangeLog 1619
-MD5 b71249733f097340c7893dfdc0538885 files/digest-cppunit-1.8.0 65
 MD5 2f66c625e1f7de63458cfb987e9b0d9d files/digest-cppunit-1.10.2 66
+MD5 5a6b916219a39b44961b68d66037912c files/cppunit-1.10.2-m4.patch 304
+MD5 b71249733f097340c7893dfdc0538885 files/digest-cppunit-1.8.0 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC4P+ZKRy60XGEcJIRAm6/AKCNbvjbxr9eM1v1hvFjUW2HVwRJdACfRN16
-VYV83TgHGlY/5GdL/y9Dtjc=
-=RnI1
+iD8DBQFDNL+IgIKl8Uu19MoRAjFmAJ9U+K8uRonrcajhnDtEgkiUnhRq1ACdF2cb
+mRsfaWJtiA1HtZOP5YKf2Yw=
+=+rWv
 -----END PGP SIGNATURE-----
