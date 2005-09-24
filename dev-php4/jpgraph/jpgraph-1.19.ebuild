@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/jpgraph/jpgraph-1.19.ebuild,v 1.1 2005/09/18 14:23:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/jpgraph/jpgraph-1.19.ebuild,v 1.2 2005/09/24 17:21:24 cryos Exp $
 
 inherit php-lib-r1
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.aditus.nu/jpgraph/"
 SRC_URI="http://members.chello.se/jpgraph/jpgdownloads/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="truetype"
 
 RDEPEND="${RDEPEND}
