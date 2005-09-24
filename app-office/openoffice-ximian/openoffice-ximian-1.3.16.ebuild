@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.16.ebuild,v 1.2 2005/09/24 05:36:47 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.16.ebuild,v 1.3 2005/09/24 07:02:39 suka Exp $
 
 # Notes:
 #
@@ -578,12 +578,6 @@ src_install() {
 	sed -i -e s/'=oo'/'=xoo'/g *.desktop
 	insinto /usr/share/applications
 	doins *.desktop
-
-	if use kde
-	then
-		insinto /usr/share/mimelnk/application
-		doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
-	fi
 
 	# Install corrected Symbol Font
 	insinto /usr/share/fonts/TTF/
