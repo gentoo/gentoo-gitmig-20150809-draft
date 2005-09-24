@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/kfax-3.5_beta1.ebuild,v 1.1 2005/09/22 18:52:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfax/kfax-3.5_beta1.ebuild,v 1.2 2005/09/24 12:48:20 cryos Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -17,3 +17,4 @@ $(deprange $PV $MAXKDEVER kde-base/kviewshell)"
 KMEXTRA="kfaxview"
 KMCOPYLIB="libkmultipage kviewshell"
 KMEXTRACTONLY="kviewshell/"
+KMCOMPILEONLY="kviewshell"
