@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.16 2005/05/14 05:21:11 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.17 2005/09/24 12:17:48 hansmi Exp $
+
+  24 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  wxpython-docs-2.6.0.0-r1.ebuild:
+  Unstable on ppc.
 
   14 May 2005; Rob Cakebread <pythonhead@gentoo.org>
   wxpython-docs-2.6.0.0-r1.ebuild:
