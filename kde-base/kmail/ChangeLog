@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.26 2005/09/22 19:24:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.27 2005/09/24 14:35:02 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -kmail-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *kmail-3.5_beta1 (22 Sep 2005)
 

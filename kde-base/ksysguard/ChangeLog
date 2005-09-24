@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.22 2005/09/22 20:40:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.23 2005/09/24 15:40:07 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -ksysguard-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *ksysguard-3.5_beta1 (22 Sep 2005)
 

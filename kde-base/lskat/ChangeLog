@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/lskat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.16 2005/09/22 21:27:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.17 2005/09/24 16:19:53 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -lskat-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *lskat-3.5_beta1 (22 Sep 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpf/ChangeLog,v 1.15 2005/09/22 20:08:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpf/ChangeLog,v 1.16 2005/09/24 15:12:47 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> -kpf-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *kpf-3.5_beta1 (22 Sep 2005)
 

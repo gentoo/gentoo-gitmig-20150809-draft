@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.19 2005/09/24 10:43:41 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.20 2005/09/24 16:35:46 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeedu-meta-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
   24 Sep 2005; Gregorio Guidi <greg_g@gentoo.org>
   kdeedu-meta-3.5_beta1.ebuild:

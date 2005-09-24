@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.14 2005/09/22 17:32:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.15 2005/09/24 12:56:13 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -cervisia-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *cervisia-3.5_beta1 (22 Sep 2005)
 

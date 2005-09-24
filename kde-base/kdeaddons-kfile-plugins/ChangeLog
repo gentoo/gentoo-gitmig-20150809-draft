@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.15 2005/09/22 18:11:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.16 2005/09/24 13:31:01 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeaddons-kfile-plugins-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *kdeaddons-kfile-plugins-3.5_beta1 (22 Sep 2005)
 

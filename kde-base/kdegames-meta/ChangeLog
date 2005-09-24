@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.18 2005/09/22 21:46:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.19 2005/09/24 16:36:36 flameeyes Exp $
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -kdegames-meta-3.5_alpha1.ebuild:
+  Removed 3.5_alpha1.
 
 *kdegames-meta-3.5_beta1 (22 Sep 2005)
 
