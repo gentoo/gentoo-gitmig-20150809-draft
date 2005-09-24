@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.11 2005/04/21 14:13:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.12 2005/09/24 23:36:58 dragonheart Exp $
 
 inherit distutils eutils
 
@@ -11,21 +11,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
-IUSE="gtk2"
+IUSE="gtk"
 
 DEPEND="virtual/python
 	>=sys-apps/sed-4"
 RDEPEND="dev-python/pycrypto
-	gtk2? ( >=dev-python/pygtk-2 )"
+	gtk? ( >=dev-python/pygtk-2 )"
 
 pkg_setup() {
-	# If pygtk was compiled without gnome support, this command fails.
-	# Dirty hack but there is no way to depend on package compiled
-	# with specified USE flag.
-	if use gtk2
+	if use gtk
 	then
-		grep gnome /var/db/pkg/dev-python/pygtk-*/USE &>/dev/null ||
-			die "You need to compile pygtk-2 with gnome support!"
+		if ! built_with_use dev-python/pygtk gnome
+		then
+			die "You need to compile dev-python/pygtk with gnome USE flag!"
+		fi
 	fi
 }
 
@@ -39,7 +38,7 @@ src_unpack() {
 
 	# If we don't compiling with GTK support, let's change default
 	# frontend for kedpm to CLI.
-	use gtk2 || sed -i -e 's/"gtk"  # default/"cli"  # default/' scripts/kedpm
+	use gtk || sed -i -e 's/"gtk"  # default/"cli"  # default/' scripts/kedpm
 }
 
 src_install() {
