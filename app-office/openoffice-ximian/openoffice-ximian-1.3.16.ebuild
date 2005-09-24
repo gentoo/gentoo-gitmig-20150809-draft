@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.16.ebuild,v 1.1 2005/09/17 07:33:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.16.ebuild,v 1.2 2005/09/24 05:36:47 suka Exp $
 
 # Notes:
 #
@@ -131,7 +131,7 @@ pkg_setup() {
 
 set_languages () {
 
-	strip-linguas en pt ru el nl fr es fi hu ca it cs sk da sv nb no pl de sl pt_BR th et ja ko zh_CN zh_TW tr hi_IN ar he
+	strip-linguas en pt ru el nl fr es fi hu ca it cs sk da sv nb nn pl de sl pt_BR th et ja ko zh_CN zh_TW tr hi_IN ar he
 	if [ -n "${LINGUAS}" ] ; then
 		# use the leftmost value
 		temp_lang=( ${LINGUAS} )
@@ -171,7 +171,9 @@ set_languages () {
 			;;
 		sv ) OOLANGNO=46; OOLANGNAME=SWED; OOLFULLNAME=Swedish
 			;;
-		no ) OOLANGNO=47; OOLANGNAME=NORBOK; OOLFULLNAME="Norwegian"
+		nn ) OOLANGNO=79; OOLANGNAME=NORNYN; OOLFULLNAME="Norwegian"
+			;;
+		nb ) OOLANGNO=47; OOLANGNAME=NORBOK; OOLFULLNAME="Norwegian"
 			;;
 		pl ) OOLANGNO=48; OOLANGNAME=POL; OOLFULLNAME=Polish
 			;;
@@ -267,6 +269,9 @@ src_unpack() {
 
 	#fix for bug #82385
 	epatch ${FILESDIR}/${OO_VER}/getcompver.awk.patch
+
+	#Allow building with libxslt >= 1.1.15
+	use java || epatch ${FILESDIR}/${OO_VER}/build-new-xslt.diff
 
 	#Workaround for bug #73940, may break debug use flag on ppc
 	if use ppc; then
