@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 aa333946b92b009f73c374ceeb7c33f0 open-xchange-0.8.1.2.ebuild 21555
 MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
 MD5 3763a6f30682cee252c57a59b68f7585 ChangeLog 719
-MD5 12c124e3ea34f5f1164d5c3470c509f0 files/slapd.ox.inc 1218
+MD5 3bb1df1a14949f4742d6a3f1448545e2 files/slapd.ox.inc 1237
 MD5 ec8d72f6da3dbefde48787a53fa071bf files/digest-open-xchange-0.8.1.2 138
 MD5 5388f979621c5e4d333aef5cd37f0062 files/init.d.open-xchange 1877
 MD5 cfa72c4f5e62b779052acf1cd629234b files/88_mod_jk.ox.conf 1228
@@ -12,7 +12,7 @@ MD5 7d1504e4241974d3583575b3827b0f5a files/open-xchange-htaccess 174
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNbl7ArHZZzCEUG0RAvFJAJ0Xkxn6jnPC3R6yMwp2v88fiEph5wCcCO1l
-GqFU1zzugkZ+Hy16v77sRqA=
-=ci99
+iD8DBQFDNb2qArHZZzCEUG0RApt5AJ9E1Tx0IUrwAX/kGvpEnfSTsB7A3wCfSpcB
+E3VE4SWysMF2JeQXGARNhcg=
+=foKk
 -----END PGP SIGNATURE-----
