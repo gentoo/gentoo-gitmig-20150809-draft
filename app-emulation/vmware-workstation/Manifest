@@ -1,7 +1,10 @@
-MD5 36194dac0c911cdbc5b79b6030f221a4 vmware-workstation-5.5.0.16325.ebuild 7281
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 17c623e566264d9382457efa50d0e1a4 vmware-workstation-5.5.0.16325.ebuild 7283
 MD5 57ca08fdcf66e6a4bc0596b8a0c0b012 vmware-workstation-3.2.1.2242-r4.ebuild 7989
 MD5 f6ff1ff7da77185cd1a446a896f7bbb1 vmware-workstation-4.5.2.8848-r7.ebuild 8334
-MD5 ad5f85d9e60df3cb7e948d07347d62eb ChangeLog 22313
+MD5 0147ab6dd85d9d81a202dc0c93c0e7dc ChangeLog 22427
 MD5 a4e5ebe5e931d6196fd49550e067b078 metadata.xml 339
 MD5 74763bea39350b142da34a0faf9d2d02 vmware-workstation-5.0.0.13124-r2.ebuild 8285
 MD5 48c1667773503fee21a1068da07440b9 files/90vmware 70
@@ -18,3 +21,10 @@ MD5 48c1667773503fee21a1068da07440b9 files/3.2.1.2242/90vmware 70
 MD5 3bfb39f5e96f60db67c7246f74c21501 files/3.2.1.2242/vmware-config.pl-gcc-generalized.patch 2948
 MD5 b95a250f31a6d2005176b27b8d48c182 files/3.2.1.2242/vmware-glibc-2.3.2-compat.c 1039
 MD5 cd2c7dfb0ea80293b3647713f5e35969 files/3.2.1.2242/vmware 1419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNZ6Z8zY1VwezZiERAnq6AJ47Jz8OuldceohWS61ECgiKyTt2uQCgraG4
+hHEOz/fRH5wgx3Z9Ieg1f+U=
+=Bnzt
+-----END PGP SIGNATURE-----
