@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ebb38b725412c8a039ff85ecac02abc ChangeLog 71472
+MD5 3cd4cfd67b407321acaee93425bd2c27 ChangeLog 71590
 MD5 b56779cb8460b101ad6912c8f45ff583 apache-1.3.29-r2.ebuild 7237
 MD5 3e32afd7bbab740bdce0fc0cf45d5be3 apache-1.3.31-r1.ebuild 6816
 MD5 a448a0e7566f85098cf55c54e4c6621f apache-1.3.31-r2.ebuild 6941
@@ -23,7 +23,7 @@ MD5 17e12318b6dd1cd8bb25cb987490c7fd apache-1.3.33-r6.ebuild 7108
 MD5 8dfa3f0fbdc01264e754bd3ebf7b8a5a apache-2.0.54-r15.ebuild 12594
 MD5 be59fbc220730a0212fbf6f34a1a6652 apache-2.0.54-r30.ebuild 12930
 MD5 293dd4690d7e9a7dbe66297767c8895f apache-1.3.33-r12.ebuild 9023
-MD5 8ee8fd6270eaa18994ab671cb7c7a582 apache-2.0.54-r31.ebuild 13256
+MD5 9bb5bfca2ff6b258d6638e9e7b337423 apache-2.0.54-r31.ebuild 13255
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
 MD5 998b4b7df08eb15641e0b9132443b365 files/apache-1.3.27-apachectl.patch 1328
 MD5 37d2c4ea8e1a6725deaca42b6aa22c69 files/apache-1.3.27_db4_gentoo.patch 1006
@@ -108,7 +108,7 @@ MD5 5d45e2b46965e7c6866b259df4efe4b2 files/patches/2.0.50-r1/Readme.PATCHES 357
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNYobKf2g/qXtneoRAoKlAJ4hCkjQ6pACrfIamUZxQkoHSnTC5gCfSCfC
-QJmNfxTnNWnuuVHpKni7XFc=
-=xU6Q
+iD8DBQFDNbzNKf2g/qXtneoRAoQ6AJwKn2Paooja2rR6477ydSBs8wNmjwCguDhZ
+4xlUhVH3rn5ychE3+ewUrJo=
+=P64T
 -----END PGP SIGNATURE-----
