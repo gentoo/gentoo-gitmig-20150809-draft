@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.9 2005/09/24 10:00:44 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.10 2005/09/24 12:16:39 hansmi Exp $
+
+  24 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
+  http-replicator-3.0.ebuild:
+  Stable on ppc.
 
   24 Sep 2005; Luis Medinas <metalgod@gentoo.org>
   http-replicator-3.0.ebuild:
