@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.123 2005/09/06 23:26:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.124 2005/09/24 09:36:29 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -142,10 +142,13 @@ kde-base/kdebindings kde-base/qtruby
 kde-base/kdebindings kde-base/qtsharp
 kde-base/kdebindings kde-base/smoke
 kde-base/kdebindings kde-base/xparts
+kde-base/kdeedu kde-base/blinken
 kde-base/kdeedu kde-base/kalzium
+kde-base/kdeedu kde-base/kanagram
 kde-base/kdeedu kde-base/kbruch
 kde-base/kdeedu kde-base/kdeedu-applnk
 kde-base/kdeedu kde-base/keduca
+kde-base/kdeedu kde-base/kgeography
 kde-base/kdeedu kde-base/khangman
 kde-base/kdeedu kde-base/kig
 kde-base/kdeedu kde-base/kiten
@@ -218,6 +221,7 @@ kde-base/kdegraphics kde-base/kviewshell
 kde-base/kdegraphics kde-base/libkscan
 kde-base/kdegraphics kde-base/libksvg
 kde-base/kdemultimedia kde-base/akode
+kde-base/kdemultimedia kde-base/artsplugin-akode
 kde-base/kdemultimedia kde-base/artsplugin-audiofile
 kde-base/kdemultimedia kde-base/artsplugin-mpeglib
 kde-base/kdemultimedia kde-base/artsplugin-mpg123
