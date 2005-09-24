@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/rekall
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.17 2005/08/23 22:10:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/ChangeLog,v 1.18 2005/09/24 12:17:31 hansmi Exp $
+
+  24 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> rekall-2.2.4.ebuild:
+  Stable on ppc.
 
   23 Aug 2005; Gregorio Guidi <greg_g@gentoo.org> rekall-2.2.4.ebuild:
   Stable on x86.
