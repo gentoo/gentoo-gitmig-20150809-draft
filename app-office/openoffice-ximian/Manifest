@@ -1,7 +1,7 @@
 MD5 3908545ea3f61c386910277dc6201042 openoffice-ximian-1.3.14.ebuild 17995
-MD5 d988cd13c1a42ab71db133d116c19f67 openoffice-ximian-1.3.16.ebuild 17832
+MD5 1b8e32bdb264470ac97dab820cd3e39c openoffice-ximian-1.3.16.ebuild 18004
 MD5 2172597e048d38d848b3ee1ffdda7790 openoffice-ximian-1.3.9-r1.ebuild 17912
-MD5 39ffa2d96ae8afecd31f1f6157b5652e ChangeLog 34186
+MD5 7cc1e5f4abb8c08bdb4015581e9e46dc ChangeLog 34377
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 e84e07ee231b9ceaabacc5556a63f647 files/digest-openoffice-ximian-1.3.9-r1 492
 MD5 62fa209accdad43ffb6c4fe805cddda5 files/digest-openoffice-ximian-1.3.14 493
@@ -32,5 +32,6 @@ MD5 e08721c60cf0f7bc7ea0a714baeac120 files/1.1.5/getcompver.awk.patch 418
 MD5 ba6affa60977e5d658fe5a2125abb691 files/1.1.5/xooffice-wrapper-1.3 6091
 MD5 3d3555a66a2d8a66613d4e4471701eb8 files/1.1.5/pthreadlink-fix.patch 1163
 MD5 3f008e2c5595512c7f6306b1a722612e files/1.1.5/nptl.patch 243
+MD5 9784ab4484e09b8230284b27d20d4264 files/1.1.5/build-new-xslt.diff 650
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.5/STLport-vector.patch 1472
 MD5 a9233bc0091b925de38145108267b949 files/1.1.5/newstlportfix.patch 3638
