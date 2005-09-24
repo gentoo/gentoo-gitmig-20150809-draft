@@ -1,0 +1,12 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/packages,v 1.1 2005/09/24 18:59:15 eradicator Exp $
+
+# Since we're running a sparc64 kernel w/ 32bit (v9) userland,
+# we need gcc-sparc64 for kernels.
+*sys-devel/gcc-sparc64
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Earlier versions aren't patched to work with 2.6 headers
+*>sys-boot/silo-1.4.9
+

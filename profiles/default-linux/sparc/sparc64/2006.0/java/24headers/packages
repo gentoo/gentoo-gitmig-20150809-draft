@@ -1,0 +1,11 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/java/24headers/packages,v 1.1 2005/09/24 18:59:15 eradicator Exp $
+
+# Use 2.4 linux-headers by default
+-*virtual/os-headers
+*<sys-kernel/linux-headers-2.5
+
+# Earlier silo's can work with 2.4 headers
+-*>sys-boot/silo-1.4.9
+*sys-boot/silo
