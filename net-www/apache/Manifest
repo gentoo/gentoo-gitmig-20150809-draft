@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4ebb38b725412c8a039ff85ecac02abc ChangeLog 71472
 MD5 b56779cb8460b101ad6912c8f45ff583 apache-1.3.29-r2.ebuild 7237
 MD5 3e32afd7bbab740bdce0fc0cf45d5be3 apache-1.3.31-r1.ebuild 6816
@@ -102,3 +105,10 @@ MD5 30add456de1ed8fab4bc473a4afda161 files/patches/2.0.49-r1/04_ssl_makefile.pat
 MD5 21a6ee55341125140e40c0f48144277d files/patches/2.0.49-r1/Readme.PATCHES 507
 MD5 d52999376f67a872ee48cbae72db0160 files/patches/2.0.49-r2/01_gentoo_cgi.patch 10319
 MD5 5d45e2b46965e7c6866b259df4efe4b2 files/patches/2.0.50-r1/Readme.PATCHES 357
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNYobKf2g/qXtneoRAoKlAJ4hCkjQ6pACrfIamUZxQkoHSnTC5gCfSCfC
+QJmNfxTnNWnuuVHpKni7XFc=
+=xU6Q
+-----END PGP SIGNATURE-----
