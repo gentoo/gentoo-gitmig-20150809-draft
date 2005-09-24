@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.2 2005/09/24 10:38:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.3 2005/09/24 23:38:37 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -69,7 +69,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# reported bug at open-xchang.org #656
+	# http://www.open-xchange.org/cgi-bin/bugzilla/show_bug.cgi?id=734
+	epatch ${FILESDIR}/${P}-login.patch
+
+	# http://www.open-xchange.org/cgi-bin/bugzilla/show_bug.cgi?id=656
 	sed -i "s|\${DESTDIR}|\$(DESTDIR)|g" Makefile.am
 
 	export WANT_AUTOMAKE=1.8
