@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/blinken
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.1 2005/09/24 10:24:08 greg_g Exp $
+
+*blinken-3.5_beta1 (24 Sep 2005)
+
+  24 Sep 2005; Gregorio Guidi <greg_g@gentoo.org> +metadata.xml,
+  +blinken-3.5_beta1.ebuild:
+  Initial import. New package in KDE 3.5.
+
