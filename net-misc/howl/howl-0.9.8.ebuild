@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.13 2005/09/19 14:22:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.8.ebuild,v 1.14 2005/09/24 04:40:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.porchdogsoft.com/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~s390 sparc x86"
+KEYWORDS="amd64 arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
