@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/stratagus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.4 2005/09/16 22:11:44 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.5 2005/09/24 06:34:50 mr_bones_ Exp $
+
+  24 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> stratagus-2.1.ebuild:
+  only turn on oggvorbis support if both the ogg and vorbis use flags are set
+  (bug #101875)
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

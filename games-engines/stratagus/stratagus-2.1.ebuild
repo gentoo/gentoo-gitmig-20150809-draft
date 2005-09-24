@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.9 2005/07/25 09:00:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.10 2005/09/24 06:34:50 mr_bones_ Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/stratagus/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug doc flac mp3 mikmod ogg vorbis opengl"
+IUSE="debug doc flac mp3 mikmod ogg opengl vorbis"
 
 RDEPEND="virtual/x11
 	app-arch/bzip2
@@ -23,18 +23,20 @@ RDEPEND="virtual/x11
 	flac? ( media-libs/flac )
 	mp3? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
-	ogg? ( media-libs/libogg media-libs/libvorbis )
-	vorbis? ( media-libs/libogg media-libs/libvorbis )"
+	ogg? ( vorbis? ( media-libs/libogg media-libs/libvorbis ) )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/stratagus-${MY_PV}
 
 src_compile() {
-	local myconf=""
-	(use ogg || use vorbis) \
-		&& myconf="--enable-ogg" \
-		|| myconf="--disable-ogg"
+	local myconf
+
+	if use ogg && use vorbis ; then
+		myconf="--enable-ogg" \
+	else
+		myconf="--disable-ogg"
+	fi
 	econf \
 		$(use_enable debug) \
 		$(use_with mikmod) \
