@@ -1,6 +1,13 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.56 2005/09/10 06:25:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.57 2005/09/24 14:25:40 flameeyes Exp $
+
+*scrollkeeper-0.3.14-r2 (24 Sep 2005)
+
+  24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/scrollkeeper-0.3.14-nls.patch, +scrollkeeper-0.3.14-r2.ebuild:
+  Added patch to handle properly disabled NLS support as per bug #103386.
+  Fixes Gentoo/FreeBSD.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   scrollkeeper-0.3.14-r1.ebuild:
