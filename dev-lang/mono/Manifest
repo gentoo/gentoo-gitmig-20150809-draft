@@ -3,8 +3,8 @@ MD5 a26e3dfefdd6e8d9991627030f6c8e33 mono-1.1.8.2.ebuild 2264
 MD5 10c58186e6ce0ab643d16c883f2071ff mono-1.0.5-r5.ebuild 3718
 MD5 b9e80f65b4235c829ff1d67b5b1740f8 mono-1.0.6.ebuild 3693
 MD5 bee0ab0027a903bd17143fd0a35dff9f mono-1.1.8.1.ebuild 2264
-MD5 d02a5a84cf04f8cdb2d1683740d72161 mono-1.1.9.1.ebuild 2218
-MD5 f2af9618ffd2a37573c9e28a0badc57a ChangeLog 18587
+MD5 2a824cae047be7a6790d688b671521a1 mono-1.1.9.1.ebuild 2271
+MD5 89db5426fa76ebbc88026ae031d11182 ChangeLog 18768
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 11d665ed756230c132abd852c40da43e mono-1.1.8.3.ebuild 2488
 MD5 37e534333d18587029873b843d639840 mono-1.1.7-r1.ebuild 2546
@@ -27,3 +27,4 @@ MD5 85422af6a9f91917a9c9c3b8cceb5c33 files/mono-1.1.7-ppc-tls.diff 412
 MD5 2acaae80bdfac5c08af32cfd24b36c43 files/mono-1.1.8.3-array-getvalue.diff 1327
 MD5 f82809daef4d783797094233672feb3f files/mono-1.1.8.3-icall.diff 433
 MD5 e57f70fb8569f040ed1b4669c3e07652 files/digest-mono-1.1.8.3 66
+MD5 25426f960f7fc04c8932375f20885eda files/mono-1.1.9.1-io-layer-fix.diff 5552
