@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4496 2005/09/24 12:17:12 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4497 2005/09/24 15:08:23 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Peter Johanson <latexer@gentoo.org> (24 Sep 2005)
+# Duf release from upstream. Awaiting a fix for bug #106971
+=dev-lang/mono-1.1.9.1
 
 # Christian Heim <phreak@gentoo.org> (24 Sep 2005)
 # Needs some more testing
