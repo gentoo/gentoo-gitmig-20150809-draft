@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.1 2005/09/24 03:24:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.2 2005/09/24 10:38:00 swegener Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -71,7 +71,7 @@ src_unpack() {
 
 	# reported bug at open-xchang.org #656
 	sed -i "s|\${DESTDIR}|\$(DESTDIR)|g" Makefile.am
-	
+
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 	libtoolize --force --copy || die
@@ -79,7 +79,7 @@ src_unpack() {
 	automake -a -f -c || die
 	autoheader || die
 	autoconf || die
-	
+
 	# doing all preconfigure which can be done here
 	# correct ispell-handling of german dictionary
 	sed -i "s|-ddeutsch|-dgerman|g" conf/webmail/spellcheck.cfg
@@ -93,9 +93,9 @@ src_unpack() {
 	find groupware/ -regex '.*\.htm' |xargs sed -i "s|/cfintranet/|/open-xchange/cfintranet/|g"
 	find templates/ -regex '.*\.htm' |xargs sed -i "s|/cfintranet/|/open-xchange/cfintranet/|g"
 	find webmail/ -regex '.*\.htm' |xargs sed -i "s|/cfintranet/|/open-xchange/cfintranet/|g"
-	
+
 	find templates/ -regex '.*\.lang' |xargs sed -i "s|/cfintranet/|/open-xchange/cfintranet/|g"
-	
+
 	find system/www/ -regex '.*\.htm' |xargs sed -i "s|/cfintranet/|/open-xchange/cfintranet/|g"
 	find system/www/ -regex '.*\.js' |xargs sed -i "s|/cfintranet/|/open-xchange/cfintranet/|g"
 
@@ -124,7 +124,7 @@ src_compile() {
 		fi
 		myconf="${myconf} --with-dbdriver=com.mysql.jdbc.Driver"
 	fi
-	
+
 	myconf="${myconf} $(use_enable doc) $(use_enable webdav) $(use_enable ssl)"
 
 	myconf="${myconf} --with-servletdir=${SERVLETDIR}"
@@ -176,7 +176,7 @@ src_install() {
 	# Install this big thing
 	cd ${S}
 	make DESTDIR=${D} install || die "Failed on make install"
-	
+
 	# copy the ldif.in file for better config-abilities in pkg_preinst
 	cp ${S}/system/setup/init_ldap.ldif.in ${D}/usr/share/open-xchange/init_ldap.ldif
 
@@ -186,7 +186,7 @@ src_install() {
 	rm ${D}/var/open-xchange/log/sessiond.log
 	rm ${D}/var/open-xchange/log/webmail.log
 	rmdir ${D}/var/open-xchange/log/
-	
+
 	# create log-dir
 	keepdir /var/log/open-xchange
 
@@ -203,7 +203,7 @@ src_install() {
 	# Init script
 	newinitd "${FILESDIR}/init.d.open-xchange" open-xchange || die "newinitd failed"
 
-	if has_version '<www-servers/tomcat-5.0.28-r4' ; then	
+	if has_version '<www-servers/tomcat-5.0.28-r4' ; then
 		dosed 's:tomcat-5:tomcat5:' /etc/init.d/open-xchange
 	fi
 
@@ -283,7 +283,7 @@ pkg_preinst(){
 		# copying the CA-certificate
 		dodir /etc/open-xchange/groupware/sslcerts/oxCA
 		cp ${T}/*ca.crt ${D}/etc/open-xchange/groupware/sslcerts/oxCA/cacert.pem
-		
+
 		# copying the groupware-key and -cert the way ox would like it to have
 		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.key ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupwarekey.pem
 		mv ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupware.crt ${D}/etc/open-xchange/groupware/sslcerts/oxCERTS/groupwarecert.pem
@@ -300,33 +300,33 @@ pkg_postinst() {
 	webapp_pkg_postinst
 
 	chgrp -R apache /var/open-xchange/*
-	einfo " "
-	einfo " "
+	einfo
+	einfo
 	einfo " ==========================================================="
-	einfo " "
+	einfo
 	einfo "        You have successfully installed Open-Xchange"
-	einfo " "
+	einfo
 	einfo " ==========================================================="
-	einfo " "
+	einfo
 	einfo "   o FILE LOCATIONS"
 	einfo "        1.  Configuration: /etc/open-xchange"
 	einfo "        2.  HTML Files: 	  /usr/share/open-xchange"
-	einfo " "
+	einfo
 	einfo "   o STARTING and STOPPING the Open-Xchange"
 	einfo "        /etc/init.d/openexchange start"
 	einfo "        /etc/init.d/openexchange stop"
 	einfo "        /etc/init.d/openexchange restart"
-	einfo " "
+	einfo
 	einfo "Execute the following command"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	einfo "to setup the initial open-xchange environment."
-	einfo " "
-	
+	einfo
+
 	if has_version '=net-nds/openldap-2.1*' ; then
 		ewarn "You have got OpenLDAP-2.1.* installed."
 		ewarn "Please make sure you've got enabled aci support for this package."
 		ewarn "For more information: http://gentoo-wiki.com/HOWTO_Open-Xchange#OpenLDAP"
-		ewarn ""
+		ewarn
 		ewarn "If you already have this done, ignore this warning"
 	fi
 }
@@ -347,7 +347,7 @@ get_user_config() {
 		echo ${default}
 	else
 		echo ${readval}
-	fi	
+	fi
 }
 
 pkg_config() {
@@ -376,7 +376,7 @@ pkg_config() {
 	if false && [[ -e "${ROOT}/etc/open-xchange/admintools.conf" ]] ; then
 		local temp_var
 		echo "Installation of OX detected"
-	
+
 		temp_var=$(get_oxvar DEFAULT_SQL_HOST)
 		[[ -n ${temp_var} ]] && OX_DBHOST==${temp_var}
 
@@ -407,7 +407,7 @@ pkg_config() {
 
 	# Now asking the user
 	einfo "If values are correct just press enter else enter the new value"
-	
+
 	OX_DBHOST=$(get_user_config "${OX_DBHOST}" "Database Host")
 	OX_DBNAME=$(get_user_config "${OX_DBNAME}" "Database Name")
 	OX_DBUSER=$(get_user_config "${OX_DBUSER}" "Database User")
@@ -425,7 +425,7 @@ pkg_config() {
 	[[ -d "${T}/ox_war" ]] && rm -rf ${T}/ox_war
 	mkdir -p ${T}/ox_war
 	unzip ${ROOT}/${SERVLETDIR}/umin.war -d ${T}/ox_war
-	
+
 	sed -i "s|LDAP_SERVER=.*|LDAP_SERVER=${OX_LDAPSERVER}|g" ${T}/ox_war/WEB-INF/classes/oxuserminconfig.properties
 	sed -i "s|LDAP_BASEDN=.*|LDAP_BASEDN=${OX_BASEDN}|g" ${T}/ox_war/WEB-INF/classes/oxuserminconfig.properties
 	sed -i "s|SQL_SERVER_GROUPWARE=.*|SQL_SERVER_GROUPWARE=${OX_DBHOST}|g" ${T}/ox_war/WEB-INF/classes/oxuserminconfig.properties
@@ -433,7 +433,7 @@ pkg_config() {
 	sed -i "s|SQL_SERVER_GROUPWARE_DATABASE_USERNAME=.*|SQL_SERVER_GROUPWARE_DATABASE_USERNAME=${OX_DBUSER}|g" ${T}/ox_war/WEB-INF/classes/oxuserminconfig.properties
 	sed -i "s|SQL_SERVER_GROUPWARE_DATABASE_PASSWORD=.*|SQL_SERVER_GROUPWARE_DATABASE_PASSWORD=${OX_DBPASS}|g" ${T}/ox_war/WEB-INF/classes/oxuserminconfig.properties
 	sed -i "s|CSS_PATH=/cfintranet/css/stylesheet.css|CSS_PATH=/open-xchange/cfintranet/css/stylesheet.css|g" ${T}/ox_war/WEB-INF/classes/oxuserminconfig.properties
-	
+
 	cd ${T}/ox_war
 	zip -r -9 umin.war *
 	cp umin.war ${ROOT}/${SERVLETDIR}
@@ -445,7 +445,7 @@ pkg_config() {
 	sed -i "s|@basedn@|${OX_BASEDN}|g" ${ROOT}/usr/share/open-xchange/init_ldap.ldif
 	sed -i "s|@domain@|${OX_DOMAIN}|g" ${ROOT}/usr/share/open-xchange/init_ldap.ldif
 	sed -i "s|@organization@|${OX_ORG}|g" ${ROOT}/usr/share/open-xchange/init_ldap.ldif
-	
+
 	local OX_BASEDC="`echo ${OX_BASEDN} | sed -n 's:dc=\([-A-Za-z_]*\).*:\1:p'|head -n 1`"
 	sed -i "s|@basedc@|${OX_BASEDC}|g" ${ROOT}/usr/share/open-xchange/init_ldap.ldif
 
@@ -487,9 +487,7 @@ pkg_config() {
 	echo
 	einfo "And setup /etc/conf.d/postgresql"
 	einfo "PGOPTS=\"-i\""
-	
-	
-	
+
 	# Tell the user how to propegate ldap and the db
 	## at first automatially change config in init_ldap.ldif and configuration-files
 
@@ -521,21 +519,21 @@ pkg_config() {
 	ewarn "Please make sure to STOP slapd to maintain database consistency (from slapadd(8c))!!!"
 	einfo "+++++++++++++++++++++++++++++++++"
 	einfo "/etc/init.d/slapd stop"
-	einfo ""
+	einfo
 	einfo "Add this to /etc/openldap/slapd.conf:"
 	einfo "include         /etc/openldap/schema/cosine.schema"
- 	einfo "include         /etc/openldap/schema/inetorgperson.schema"
- 	einfo "include         /etc/openldap/schema/misc.schema"
- 	einfo "include         /etc/openldap/schema/nis.schema"
- 	einfo "include         /etc/openldap/schema/openldap.schema"
+	einfo "include         /etc/openldap/schema/inetorgperson.schema"
+	einfo "include         /etc/openldap/schema/misc.schema"
+	einfo "include         /etc/openldap/schema/nis.schema"
+	einfo "include         /etc/openldap/schema/openldap.schema"
 	einfo "include         /etc/openldap/schema/openxchange.schema"
-	einfo ""
+	einfo
 	einfo "If you want an initial set of access rights (enables your user, editing their password, ...)"
 	einfo "you should also add the following line:"
 	einfo "include         /etc/openldap/slapd.ox.inc"
-	einfo ""
+	einfo
 	einfo "slapadd -l /usr/share/open-xchange/init_ldap.ldif"
-	einfo ""
+	einfo
 	einfo "/etc/init.d/slapd start"
 
 	echo
