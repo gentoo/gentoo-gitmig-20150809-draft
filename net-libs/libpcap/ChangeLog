@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.45 2005/09/17 00:58:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.46 2005/09/24 08:22:45 corsair Exp $
+
+  24 Sep 2005; Markus Rothe <corsair@gentoo.org> libpcap-0.9.3.ebuild:
+  Stable on ppc64
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> libpcap-0.9.3.ebuild:
   Mark 0.9.3 stable on ia64

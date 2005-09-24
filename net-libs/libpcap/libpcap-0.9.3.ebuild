@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.3.ebuild,v 1.10 2005/09/17 08:27:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.9.3.ebuild,v 1.11 2005/09/24 08:22:45 corsair Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE="ipv6"
 
 DEPEND="virtual/libc
