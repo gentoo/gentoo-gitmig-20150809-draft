@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.62.ebuild,v 1.1 2005/09/24 00:15:38 swegener Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.62.ebuild,v 1.2 2005/09/24 11:05:01 swegener Exp $
 
 DESCRIPTION="Dock any application into the system tray/notification area"
 HOMEPAGE="http://alltray.sourceforge.net/"
@@ -18,8 +16,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	append-flags -DLIBDIR="'\"/usr/$(get_libdir)\"'"
-
 	econf || die "econf failed"
 	emake X_CFLAGS="-fPIC" || die "emake failed"
 }
