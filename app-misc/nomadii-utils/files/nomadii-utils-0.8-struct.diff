@@ -1,0 +1,33 @@
+--- nomadII-utils-0.8.orig/libnomadII/low_level.c	2005-09-24 15:42:39.000000000 -0300
++++ nomadII-utils-0.8/libnomadII/low_level.c	2005-09-24 15:59:15.000000000 -0300
+@@ -31,6 +31,21 @@
+ #include <linux/usb.h>
+ #include <linux/usbdevice_fs.h>
+ 
++struct usbdevfs_ctrltransfer_hack {
++	__u8 bRequestType;
++	__u8 bRequest;
++	__u16 wValue;
++	__u16 wIndex;
++	__u16 wLength;
++	__u32 timeout;  /* in milliseconds */
++ 	void __user *data;
++	short length;
++	int request;
++	int requesttype;
++	int value;
++	int index;
++};
++
+ typedef struct {
+ 	__u8 requesttype;
+ 	__u8 request;
+@@ -312,7 +327,7 @@
+ {
+ 	int result;
+ #ifdef WITH_USBDEVFS
+-	struct usbdevfs_ctrltransfer msg;
++	struct usbdevfs_ctrltransfer_hack msg;
+ #else
+ 	struct NomadII_cmd msg;
+ #endif
