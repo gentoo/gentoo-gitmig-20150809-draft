@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.4 2005/08/09 02:08:55 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18-r1.ebuild,v 1.5 2005/09/24 15:42:22 carlo Exp $
 
 inherit eutils
 
 DESCRIPTION="A utility to prettyprint /proc/*"
-SRC_URI="ftp://ftp.cistron.nl/pub/people/svm/${P}.tar.gz"
-HOMEPAGE="ftp://ftp.cistron.nl/pub/people/svm/"
+SRC_URI="http://www.kozmix.org/src/${P}.tar.gz"
+HOMEPAGE="http://www.kozmix.org/src/"
 
 SLOT="0"
 LICENSE="GPL-2"
