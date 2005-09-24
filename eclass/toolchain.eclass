@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.195 2005/09/22 01:33:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.196 2005/09/24 23:40:47 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -692,6 +692,109 @@ create_gcc_env_entry() {
 
 	# Set which specs file to use
 	[[ -n ${gcc_specs_file} ]] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
+}
+
+add_profile_eselect_conf() {
+	local compiler_config_file=$1
+	local abi=$2
+	local specs=$3
+	local gcc_specs_file
+	local var
+
+	if [[ -z ${specs} ]] ; then
+		# I'm leaving the following commented out to remind me that it
+		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
+		# on chroot or in non-toolchain.eclass gcc ebuilds!
+		#gcc_specs_file="${LIBPATH}/specs"
+		gcc_specs_file=""
+
+		if use hardened ; then
+			specs="hardened"
+		else
+			specs="vanilla"
+		fi
+	else
+		gcc_specs_file="${LIBPATH}/${specs}.specs"
+	fi
+
+	echo >> ${compiler_config_file}
+	if [[ ${abi} == "default" ]] ; then
+		echo "[${specs}]" >> ${compiler_config_file}
+		echo "	ctarget=${CTARGET}" >> ${compiler_config_file}
+	else
+		echo "[${abi}-${specs}]" >> ${compiler_config_file}
+		var="CTARGET_${abi}"
+		if [[ -n ${!var} ]] ; then
+			echo "	chost=${!var}" >> ${compiler_config_file}
+		else
+			var="CHOST_${abi}"
+			if [[ -n ${!var} ]] ; then
+				echo "	chost=${!var}" >> ${compiler_config_file}
+			else
+				echo "	chost=${CTARGET}" >> ${compiler_config_file}
+			fi
+		fi
+	fi
+
+	local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+	local LDPATH=${LIBPATH}
+	if [[ ${MULTIDIR} != "." ]] ; then
+		LDPATH="${LIBPATH}/${MULTIDIR}"
+	fi
+
+	echo "	ldpath=${LDPATH}" >> ${compiler_config_file}
+
+	if [[ -n ${gcc_specs_file} ]] ; then
+		echo "	spec=${gcc_specs_file}" >> ${compiler_config_file}
+	fi
+
+	var="CFLAGS_${abi}"
+	if [[ -n ${!var} ]] ; then
+		echo "	cflags=${!var}" >> ${compiler_config_file}
+	fi
+}
+
+create_eselect_conf() {
+	local config_dir="/etc/eselect/compiler"	
+	local compiler_config_file="${D}/${config_dir}/${CTARGET}-${GCC_CONFIG_VER}.conf"
+	local abi
+
+	dodir ${config_dir}
+
+	echo "[global]" > ${compiler_config_file}
+	echo "	version=${CTARGET}-${GCC_CONFIG_VER}" >> ${compiler_config_file}
+	echo "	binpath=${BINPATH}" >> ${compiler_config_file}
+	echo "	manpath=${DATAPATH}/man" >> ${compiler_config_file}
+	echo "	infopath=${DATAPATH}/info" >> ${compiler_config_file}
+	echo "	alias_cc=gcc" >> ${compiler_config_file}
+
+	if [[ -x "${D}/${BINPATH}/${CTARGET}-g77" ]] ; then
+		echo "	alias_gfortran=g77" >> ${compiler_config_file}
+	elif [[ -x "${D}/${BINPATH}/${CTARGET}-gfortran" ]] ; then
+		echo "	alias_g77=gfortran" >> ${compiler_config_file}
+	fi
+
+	for abi in $(get_all_abis) ; do 
+		add_profile_eselect_conf "${compiler_config_file}" "${abi}"
+
+		if want_split_specs ; then
+			if use hardened ; then
+				add_profile_eselect_conf "${compiler_config_file}" "${abi}" vanilla
+			elif hardened_gcc_works ; then
+				add_profile_eselect_conf "${compiler_config_file}" "${abi}" hardened
+			fi
+
+			if hardened_gcc_works || hardened_gcc_works pie ; then
+				add_profile_eselect_conf "${compiler_config_file}" "${abi}" hardenednossp
+			fi
+
+			if hardened_gcc_works || hardened_gcc_works ssp ; then
+				add_profile_eselect_conf "${compiler_config_file}" "${abi}" hardenednopie
+			fi
+
+			add_profile_eselect_conf "${compiler_config_file}" "${abi}" hardenednopiessp
+		fi
+	done
 }
 
 #----<< specs + env.d logic >>----
@@ -1527,6 +1630,9 @@ gcc-compiler_src_install() {
 	# use gid of 0 because some stupid ports don't have
 	# the group 'root' set to gid 0
 	chown -R root:0 "${D}"${LIBPATH}
+
+	# Create config files for eselect-compiler
+	create_eselect_conf
 }
 
 # Move around the libs to the right location.
@@ -1841,12 +1947,22 @@ should_we_gcc_config() {
 	use build && return 0
 
 	# if the current config is invalid, we definitely want a new one
-	env -i gcc-config -c ${CTARGET} >&/dev/null || return 0
+	if has_version 'app-admin/eselect-compiler' ; then
+		env -i eselect compiler show ${CTARGET} >&/dev/null || return 0
+	else
+		env -i gcc-config -c ${CTARGET} >&/dev/null || return 0
+	fi
 
 	# if the previously selected config has the same major.minor (branch) as
 	# the version we are installing, then it will probably be uninstalled
 	# for being in the same SLOT, make sure we run gcc-config.
-	local curr_config_ver=$(env -i gcc-config -c ${CTARGET} | awk -F - '{ print $5 }')
+	local curr_config_ver
+	if has_version 'app-admin/eselect-compiler' ; then
+		curr_config_ver=$(env -i eselect compiler show ${CTARGET} | cut -f1 -d/ | awk -F - '{ print $5 }')
+	else
+		curr_config_ver=$(env -i gcc-config -c ${CTARGET} | awk -F - '{ print $5 }')
+	fi
+
 	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
 
 	# If we're using multislot, just run gcc-config if we're installing
@@ -1867,7 +1983,11 @@ should_we_gcc_config() {
 		einfo "switch to the newly installed gcc version, do the"
 		einfo "following:"
 		echo
-		einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
+		if has_version 'app-admin/eselect-compiler' ; then
+			einfo "eselect compiler set <profile>"
+		else
+			einfo "gcc-config ${CTARGET}-${GCC_CONFIG_VER}"
+		fi
 		einfo "source /etc/profile"
 		echo
 		ebeep
@@ -1878,33 +1998,80 @@ should_we_gcc_config() {
 do_gcc_config() {
 	if ! should_we_gcc_config ; then
 		# Just make sure all our LDPATH's are updated
-		gcc-config --use-old --force
+		if has_version 'app-admin/eselect-compiler' ; then
+			eselect compiler update
+		else
+			gcc-config --use-old --force
+		fi
 		return 0
 	fi
 
-	# the grep -v is in there to filter out informational messages >_<
-	local current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v ^\ )
+	if has_version 'app-admin/eselect-compiler' ; then
+		local current_gcc_config=$(env -i eselect compiler show ${CTARGET})
+		local current_specs=$(echo ${current_gcc_config} | cut -f2 -d/)
+		if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${current_specs} &> /dev/null; then
+			einfo "The following compiler profile has been activated based on your previous profile:"
+			einfo "${CTARGET}-${GCC_CONFIG_VER}/${current_specs}"
+		else
+			local prefix=${current_specs%-*}
+			[[ -n ${prefix} ]] && prefix="${prefix}-"
 
-	# figure out which specs-specific config is active. yes, this works
-	# even if the current config is invalid.
-	local current_specs=$(echo ${current_gcc_config} | awk -F - '{ print $6 }')
-	local use_specs=""
-	[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+			local spec
+			if use hardened ; then
+				spec="hardened"
+			else
+				spec="vanilla"
+			fi
 
-	if [[ -n ${use_specs} ]] && \
-	   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
-	then
-		ewarn "The currently selected specs-specific gcc config,"
-		ewarn "${current_specs}, doesn't exist anymore. This is usually"
-		ewarn "due to enabling/disabling hardened or switching to a version"
-		ewarn "of gcc that doesnt create multiple specs files. The default"
-		ewarn "config will be used, and the previous preference forgotten."
-		ebeep
-		epause
-		use_specs=""
+			if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec} &> /dev/null ; then
+				ewarn "We were not able to select the currently in use profile with"
+				ewarn "your newly emerged gcc.  Instead, we have enabled the following:"
+				ewarn "${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec}"
+				ewarn "If this is incorrect, please use 'eselect compiler set' to"
+				ewarn "select another profile."
+			else
+				if [[ -n ${DEFAULT_ABI} ]] ; then
+					prefix="${DEFAULT_ABI}-"
+				fi
+
+				if eselect compiler set ${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec} &> /dev/null ; then
+					ewarn "We were not able to select the currently in use profile with"
+					ewarn "your newly emerged gcc.  Instead, we have enabled the following:"
+					ewarn "${CTARGET}-${GCC_CONFIG_VER}/${prefix}${spec}"
+					ewarn "If this is incorrect, please use 'eselect compiler set' to"
+					ewarn "select another profile."
+				else
+					eerror "We were not able to automatically set the current compiler"
+					eerror "to your newly emerged gcc.  Please use 'eselect compiler set'"
+					eerror "to select your compiler."
+				fi
+			fi
+		fi
+	else
+		local current_gcc_config=$(env -i gcc-config -c ${CTARGET} | grep -v ^\ )
+
+		# figure out which specs-specific config is active. yes, this works
+		# even if the current config is invalid.
+		local current_specs=$(echo ${current_gcc_config} | awk -F - '{ print $6 }')
+
+		local use_specs=""
+		[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+
+		if [[ -n ${use_specs} ]] && \
+		   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
+		then
+			ewarn "The currently selected specs-specific gcc config,"
+			ewarn "${current_specs}, doesn't exist anymore. This is usually"
+			ewarn "due to enabling/disabling hardened or switching to a version"
+			ewarn "of gcc that doesnt create multiple specs files. The default"
+			ewarn "config will be used, and the previous preference forgotten."
+			ebeep
+			epause
+			use_specs=""
+		fi
+
+		gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
 	fi
-
-	gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
 }
 
 # This function allows us to gentoo-ize gcc's version number and bugzilla
