@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.13 2005/05/10 18:10:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.14 2005/09/24 07:31:28 vapier Exp $
 
 #
 # Helper functions
@@ -98,12 +98,12 @@ BEGIN {
 				# Drop the directory if its a child directory of
 				# one that was already added ...
 				# For example, if we have:
-				#  /usr/lib /usr/lib/mozilla /usr/lib/nss
-				# We really just want to save /usr/lib
+				#   /usr/lib /usr/libexec /usr/lib/mozilla /usr/lib/nss
+				# We really just want to save /usr/lib /usr/libexec
 				#
 				CHILD = 0
 				for (y in DIRLIST) {
-					if (nodes[x] ~ "^" DIRLIST[y]) {
+					if (nodes[x] ~ "^" DIRLIST[y] "(/|$)") {
 						CHILD = 1
 						break
 					}
