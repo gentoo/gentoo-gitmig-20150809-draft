@@ -1,4 +1,14 @@
-MD5 b374b22dcc450df5f2216c7c4015aad8 man-pages-fr-1.64.0.ebuild 896
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee863916bc5c271c5f8362b4bdd7871d ChangeLog 1153
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 c720797fca10a9691f600821699a2f5c ChangeLog 1041
+MD5 1f446f1f920923c56a27bb816743a3d3 man-pages-fr-1.64.0.ebuild 963
 MD5 71681a56780c0352afa1eefe5a53aa2f files/digest-man-pages-fr-1.64.0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNYkFwnQyISwouHwRAnD9AJ4t4fA8tuf4PZH5N2tFZQNNHBZtkQCeKRfv
+UeolIyCAw6SzDedxiqMmsiw=
+=Vwbr
+-----END PGP SIGNATURE-----

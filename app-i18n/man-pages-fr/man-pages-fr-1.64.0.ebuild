@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/man-pages-fr-1.64.0.ebuild,v 1.1 2005/09/02 04:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/man-pages-fr-1.64.0.ebuild,v 1.2 2005/09/24 18:08:18 truedfx Exp $
 
 MY_P=${P/-pages/}
 DESCRIPTION="A somewhat comprehensive collection of french Linux man pages"
@@ -21,6 +21,8 @@ src_unpack() {
 	cd "${S}"
 	# Don't trample on lilo's files, closes bug #91314
 	rm man8/lilo.8 man5/lilo.conf.5
+	# Also don't touch shadow's files
+	rm man1/{chsh,groups,passwd}.1
 }
 
 src_compile() { :; }

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-fr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.1 2005/09/02 04:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.2 2005/09/24 18:08:18 truedfx Exp $
+
+  24 Sep 2005; Harald van Dĳk <truedfx@gentoo.org>
+  man-pages-fr-1.64.0.ebuild:
+  Don't touch shadow's files
 
 *manpages-fr-0.9.5-r1 (11 Jun 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20050415.ebuild,v 1.1 2005/09/02 04:30:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20050415.ebuild,v 1.2 2005/09/24 18:08:50 truedfx Exp $
 
 MY_P="man-pages-ja-${PV}"
 GENTOO_MAN_P="portage-${P/man-/man}"
@@ -31,6 +31,14 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# Get rid of file collisions with man and shadow
+	rm -r manual/{man{,-db},shadow}
+	rm manual/*/man{1/{chfn,chsh,groups,newgrp,passwd,su}.1,8/{vigr,vipw}.8}
+}
+
 src_compile() { :; }
 
 src_install() {
@@ -45,7 +53,7 @@ src_install() {
 		done
 	done
 
-	cd ${WORKDIR}/${GENTOO_MAN_P}
+	cd "${WORKDIR}/${GENTOO_MAN_P}"
 
 	for x in *; do
 		if [ -d "$x" ]; then

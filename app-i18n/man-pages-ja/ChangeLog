@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ja
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.1 2005/09/02 04:30:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.2 2005/09/24 18:08:50 truedfx Exp $
+
+  24 Sep 2005; Harald van Dĳk <truedfx@gentoo.org>
+  man-pages-ja-20050415.ebuild:
+  Get rid of file collisions with man and shadow
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   manpages-ja-20041115.ebuild:
