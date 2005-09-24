@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.18 2005/09/21 17:36:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.19 2005/09/24 07:12:45 corsair Exp $
+
+  24 Sep 2005; Markus Rothe <corsair@gentoo.org> php-docs-20050822.ebuild:
+  Stable on ppc64
 
   21 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   php-docs-20050822.ebuild:
