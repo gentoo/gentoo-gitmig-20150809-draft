@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.5.ebuild,v 1.3 2005/09/22 11:46:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.5.ebuild,v 1.4 2005/09/24 07:24:37 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -8,7 +8,7 @@
 
 inherit eutils fdo-mime
 
-IUSE="java kde"
+IUSE="java"
 
 INSTDIR="/opt/OpenOffice.org"
 MY_P="OOo_${PV}_LinuxIntel_install"
@@ -115,8 +115,6 @@ src_install() {
 	einfo "Installing menu shortcuts..."
 	dodir /usr/share
 	cp -pPR ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
-
-	use kde && cp -pPR ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}/usr/share
 
 	for x in ${D}${INSTDIR}/share/kde/net/*.desktop; do
 		# We have to handle soffice and setup differently

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.130.ebuild,v 1.2 2005/09/19 16:19:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.130.ebuild,v 1.3 2005/09/24 07:24:37 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -10,7 +10,6 @@ INSTDIR="/usr/lib/openoffice"
 SNV="$(get_version_component_range 3)"
 S="${WORKDIR}/SRC680_m${SNV}_native_packed-1_en-US.8955/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
-
 
 LANGPACK="OOo_${PV}_LinuxIntel_langpack"
 LANGPACKPATH="http://oootranslation.services.openoffice.org/pub/OpenOffice.org/680m${SNV}/${LANGPACK}"
@@ -108,8 +107,6 @@ src_install () {
 	dodir /usr/share/mime
 	mv ${WORKDIR}/opt/openoffice.org${PV}/* ${D}${INSTDIR}
 	mv ${WORKDIR}/usr/share/icons/* ${D}/usr/share/icons
-
-	use kde && dodir /usr/share/mimelnk/application && mv ${WORKDIR}/opt/kde3/share/mimelnk/application/* ${D}/usr/share/mimelnk/application
 
 	#Menu entries
 	cd ${D}${INSTDIR}/share/xdg/
