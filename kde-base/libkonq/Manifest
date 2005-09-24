@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c54b9141fa03541e27aea30d366957a ChangeLog 2573
 MD5 3136bcddab4b7ca984aa4bc5967fa062 libkonq-3.4.1.ebuild 396
 MD5 9320f6e8847cf27a1364813959d3e2b4 libkonq-3.4.2.ebuild 409
@@ -6,3 +9,10 @@ MD5 3cfdcb41f4182f57143a80af6d020600 libkonq-3.5_beta1.ebuild 385
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-libkonq-3.4.2 287
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-libkonq-3.4.1 212
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-libkonq-3.5_beta1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNXraj5H05b2HAEkRAl1WAKCMrQ7R5Xbzv6w+YDZWLzoVppSBogCbBu2o
+JxqLvl7aEQvq3pY4R+Aa3Q4=
+=Vczf
+-----END PGP SIGNATURE-----
