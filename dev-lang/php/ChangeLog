@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.47 2005/09/18 13:21:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.48 2005/09/24 19:21:33 weeve Exp $
+
+  24 Sep 2005; Jason Wever <weeve@gentoo.org> php-5.0.5-r1.ebuild:
+  Added ~sparc keyword.
 
 *php-5.0.5-r1 (18 Sep 2005)
 *php-5.0.4-r1 (18 Sep 2005)
