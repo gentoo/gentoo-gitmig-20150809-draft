@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a13f6a79d60dcebcaff86667a753c9ce gst-plugins-vorbis-0.8.11.ebuild 440
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 7ecb0480ce2538f76c75e3d07ac549ad gst-plugins-vorbis-0.8.10.ebuild 431
@@ -8,3 +11,10 @@ MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-vorbis-0.8.10 72
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-vorbis-0.8.8 71
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-vorbis-0.8.11 72
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-vorbis-0.8.9 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNMrwgIKl8Uu19MoRAv+vAJ9o4uf0EoGQfBgDevMiOm5g2qOlqQCfb+Jz
+gjjWZS+6O2nF0H1zpck2O2Q=
+=RXjN
+-----END PGP SIGNATURE-----
