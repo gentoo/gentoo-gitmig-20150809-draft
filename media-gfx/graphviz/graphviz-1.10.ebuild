@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.23 2005/08/13 18:40:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.24 2005/09/24 05:53:14 halcy0n Exp $
 
 inherit gnuconfig
 
@@ -18,6 +18,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2
 	>=media-libs/jpeg-6b
 	media-libs/freetype
+	sys-devel/gettext
 	tcltk? ( >=dev-lang/tk-8.3 )"
 
 src_unpack() {
