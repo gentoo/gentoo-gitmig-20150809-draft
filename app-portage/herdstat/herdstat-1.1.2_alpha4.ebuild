@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2_alpha3.ebuild,v 1.1 2005/09/17 15:38:19 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2_alpha4.ebuild,v 1.1 2005/09/24 12:55:28 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
