@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.4 2005/09/11 17:49:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.5 2005/09/24 11:01:36 hansmi Exp $
 
 inherit webapp eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz
 	ftp://ftp.eu.uu.net/pub/unix/ticketing/${PN}/release/${P}.tar.gz
 	ftp://rhinst.ece.cmu.edu/${PN}/release/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="
 	>=net-www/webapp-config-1.11-r1
