@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r2.ebuild,v 1.1 2005/09/24 11:01:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r2.ebuild,v 1.2 2005/09/24 23:24:37 vapier Exp $
 
 inherit eutils libtool
 
@@ -24,18 +24,13 @@ src_unpack() {
 
 src_compile() {
 	use berkdb || export ac_cv_lib_dbm_main=no ac_cv_lib_ndbm_main=no
-	econf || die
+	econf --includedir=/usr/include/gdbm || die
 	emake || die
 }
 
 src_install() {
-	make INSTALL_ROOT="${D}" install || die
-
-	make \
-	includedir=/usr/include/gdbm \
-	INSTALL_ROOT="${D}" \
-	install-compat || die
-
+	make INSTALL_ROOT="${D}" install install-compat || die
+	mv "${D}"/usr/include/gdbm/gdbm.h "${D}"/usr/include/ || die
 	dodoc ChangeLog NEWS README
 }
 
