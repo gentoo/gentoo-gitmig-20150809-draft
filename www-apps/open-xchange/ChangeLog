@@ -1,0 +1,13 @@
+# ChangeLog for www-apps/open-xchange
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.1 2005/09/24 03:24:00 eradicator Exp $
+
+*open-xchange-0.8.1.2 (24 Sep 2005)
+
+  24 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/88_mod_jk.ox.conf, +files/init.d.open-xchange,
+  +files/open-xchange-htaccess, +files/slapd.ox.inc, +metadata.xml,
+  +open-xchange-0.8.1.2.ebuild:
+  Initial ebuild for open-xchange. See bug #62197. There have been many
+  contributors and testers, so hats off to all involved.
+
