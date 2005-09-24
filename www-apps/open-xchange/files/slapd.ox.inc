@@ -20,7 +20,14 @@ access to dn.regex="^uid=([^,]+),ou=addr,(uid=([^,]+),ou=Users,ou=OxObjects,dc=g
   by dn.exact,expand="$2" write
 
 # default rule allowing users full access to their own entries
-access to attr=birthDay,cn,description,facsimileTelephoneNumber,gecos,givenName,homePhone,initials,l,labeledURI,mobile,o,ou,OXAppointmentDays,OXTaskDays,OXTimeZone,pager,postalCode,preferredLanguage,sn,st,street,telephoneNumber,title,userCountry
+
+# In order to let users modify their attributes through OX, you must grant
+# users access to modify uid because of upstream bug #736:
+# http://www.open-xchange.org/cgi-bin/bugzilla/show_bug.cgi?id=736
+#
+# This is not secure and thus hasn't been set here.  To enable it, add
+# uid to the following list
+access to attrs=birthDay,cn,description,facsimileTelephoneNumber,gecos,givenName,homePhone,initials,l,labeledURI,mobile,o,ou,OXAppointmentDays,OXTaskDays,OXTimeZone,pager,postalCode,preferredLanguage,sn,st,street,telephoneNumber,title,userCountry
     by self write
     by users read
 
