@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.6 2005/08/24 07:54:42 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.7 2005/09/25 16:05:36 hparker Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.dotfiles.com/software/wmmp3/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 DEPEND="virtual/x11
 	>=media-sound/mpg123-0.59s-r2"
