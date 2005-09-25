@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/gotmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.33 2005/06/26 09:11:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/ChangeLog,v 1.34 2005/09/25 16:15:40 hparker Exp $
+
+  25 Sep 2005; Homer Parker <hparker@gentoo.org> gotmail-0.8.4.ebuild:
+  Stable on amd64.
 
   26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> gotmail-0.8.4.ebuild:
   Stable on ppc.
