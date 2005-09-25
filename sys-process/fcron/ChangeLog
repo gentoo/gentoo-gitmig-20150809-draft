@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.7 2005/09/12 01:34:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.8 2005/09/25 15:54:52 ka0ttic Exp $
+
+  25 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/fcron-2.0.0-configure.diff, fcron-3.0.0.ebuild:
+  Added debug to IUSE for --with-debug configure option; also updated
+  fcron-2.0.0-configure.diff so configure doesn't override CFLAGS.
 
 *fcron-3.0.0 (12 Sep 2005)
 

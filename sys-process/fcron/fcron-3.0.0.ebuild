@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.0.ebuild,v 1.1 2005/09/12 01:34:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.0.ebuild,v 1.2 2005/09/25 15:54:52 ka0ttic Exp $
 
 inherit cron pam
 
@@ -10,7 +10,7 @@ SRC_URI="http://fcron.free.fr/archives/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa ~amd64"
-IUSE="pam doc selinux"
+IUSE="debug doc pam selinux"
 
 DEPEND="virtual/editor
 	doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
@@ -51,6 +51,7 @@ src_compile() {
 	econf \
 		$(use_with pam) \
 		$(use_with selinux) \
+		$(use_with debug) \
 		--with-username=cron \
 		--with-groupname=cron \
 		--with-piddir=/var/run \
@@ -60,6 +61,7 @@ src_compile() {
 		--with-sendmail=/usr/sbin/sendmail \
 		--with-fcrondyn=yes \
 		--with-editor=${EDITOR} \
+		--with-shell=/bin/sh \
 		${myconf} \
 		|| die "Configure problem"
 
@@ -91,7 +93,7 @@ src_install() {
 	newinitd ${FILESDIR}/fcron.rc6 fcron || die "newinitd failed"
 
 	# doc stuff
-	dodoc MANIFEST VERSION doc/txt/*.txt
+	dodoc MANIFEST VERSION doc/txt/*.txt script/check_system_crontabs
 	newdoc files/fcron.conf fcron.conf.sample
 	use doc && dohtml doc/HTML/*.html
 	dodoc ${FILESDIR}/crontab
@@ -102,5 +104,9 @@ src_install() {
 pkg_postinst() {
 	einfo "Each user who uses fcron should be added to the cron group"
 	einfo "in /etc/group and also be added in /etc/fcron/fcron.allow"
+	einfo
+	einfo "It is possible to emulate vixie-cron's behavior with regards to /etc/crontab"
+	einfo "and /etc/cron.d.  To do so, read the directions provided in the script,"
+	einfo "/usr/share/doc/${PF}/check_system_crontabs.gz."
 	cron_pkg_postinst
 }
