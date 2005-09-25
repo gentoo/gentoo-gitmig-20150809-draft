@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.196 2005/09/24 23:40:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.197 2005/09/25 12:30:26 swegener Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -755,7 +755,7 @@ add_profile_eselect_conf() {
 }
 
 create_eselect_conf() {
-	local config_dir="/etc/eselect/compiler"	
+	local config_dir="/etc/eselect/compiler"
 	local compiler_config_file="${D}/${config_dir}/${CTARGET}-${GCC_CONFIG_VER}.conf"
 	local abi
 
@@ -774,7 +774,7 @@ create_eselect_conf() {
 		echo "	alias_g77=gfortran" >> ${compiler_config_file}
 	fi
 
-	for abi in $(get_all_abis) ; do 
+	for abi in $(get_all_abis) ; do
 		add_profile_eselect_conf "${compiler_config_file}" "${abi}"
 
 		if want_split_specs ; then

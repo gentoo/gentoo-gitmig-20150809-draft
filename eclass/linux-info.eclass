@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.31 2005/09/22 14:09:25 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.32 2005/09/25 12:30:26 swegener Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -374,7 +374,7 @@ check_modules_supported() {
 }
 
 check_extra_config() {
-	local	config negate error local_error i n 
+	local	config negate error local_error i n
 	local	temp_config die reworkmodulenames
 
 	# if we haven't determined the version yet, we need too.

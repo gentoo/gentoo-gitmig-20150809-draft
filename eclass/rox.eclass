@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.7 2005/09/25 11:05:50 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.8 2005/09/25 12:30:26 swegener Exp $
 
 # ROX eclass Version 2
 
@@ -18,9 +18,6 @@
 
 # need python to byte compile modules, if any
 inherit python
-
-ECLASS=rox
-INHERITED="${INHERITED} ${ECLASS}"
 
 if [ -z "$ROX_VER" ]; then
 	ROX_VER="2.1.0"

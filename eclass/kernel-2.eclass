@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.145 2005/09/15 00:11:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.146 2005/09/25 12:30:26 swegener Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -786,7 +786,7 @@ unipatch() {
 		cp -f ${i} ${T}/
 	done
 	UNIPATCH_DOCS="${tmp}"
-	
+
 	# clean up  KPATCH_DIR's - fixes bug #53610
 	for x in ${KPATCH_DIR}; do rm -Rf ${x}; done
 

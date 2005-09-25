@@ -1,15 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.18 2005/09/14 22:41:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.19 2005/09/25 12:30:26 swegener Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This eclass is the old style of php, that was used before php-core was
 # introduced.
 
 inherit eutils flag-o-matic
-
-ECLASS=php
-INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst pkg_preinst
 
@@ -44,10 +41,10 @@ IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap infor
 # we need db-1.* for ndbm
 # and then either of db3 or db4
 IUSE="${IUSE} berkdb"
-RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.* 
-							  || ( >=sys-libs/db-4.0.14-r2 
+RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.*
+							  || ( >=sys-libs/db-4.0.14-r2
 								   >=sys-libs/db-3.2.9-r9
-							     ) 
+							     )
 							)"
 
 # Everything is in this list is dynamically linked agaist or needed at runtime
@@ -60,7 +57,7 @@ RDEPEND="
    curl? ( >=net-misc/curl-7.10.2 )
    x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
    freetds? ( >=dev-db/freetds-0.53 )
-   gd-external? ( media-libs/gd >=media-libs/jpeg-6b 
+   gd-external? ( media-libs/gd >=media-libs/jpeg-6b
                   >=media-libs/libpng-1.2.5 )
    gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
    gdbm? ( >=sys-libs/gdbm-1.8.0 )
@@ -71,7 +68,7 @@ RDEPEND="
    nls? ( sys-devel/gettext )
    odbc? ( >=dev-db/unixODBC-1.8.13 )
    pam? ( >=sys-libs/pam-0.75 )
-   pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b 
+   pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b
              >=media-libs/libpng-1.2.5 >=media-libs/tiff-3.5.5 )
    png? ( >=media-libs/libpng-1.2.5 )
    postgres? ( >=dev-db/postgresql-7.1 )
@@ -81,17 +78,17 @@ RDEPEND="
    ssl? ( >=dev-libs/openssl-0.9.5 )
    tiff? ( >=media-libs/tiff-3.5.5 )
    xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
-   truetype? ( =media-libs/freetype-2* =media-libs/freetype-1* 
+   truetype? ( =media-libs/freetype-2* =media-libs/freetype-1*
                media-libs/t1lib )
    >=net-libs/libwww-5.3.2
    >=app-text/sablotron-0.97
    dev-libs/expat
-   sys-libs/zlib 
+   sys-libs/zlib
    virtual/mta"
 
 # libswf is ONLY available on x86
-RDEPEND="${RDEPEND} flash? ( 
-		x86? ( media-libs/libswf ) 
+RDEPEND="${RDEPEND} flash? (
+		x86? ( media-libs/libswf )
 		>=media-libs/ming-0.2a )"
 
 #The new XML extension in PHP5 requires libxml2-2.5.10
@@ -109,7 +106,7 @@ DEPEND="${DEPEND} !dev-libs/9libs"
 DEPEND="${DEPEND} !dev-libs/libiconv"
 
 #Waiting for somebody to want this:
-#cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev ) 
+#cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev )
 
 #export this here so we can use it
 myconf="${myconf}"
