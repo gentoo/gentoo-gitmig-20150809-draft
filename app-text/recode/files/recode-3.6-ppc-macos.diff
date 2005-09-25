@@ -1,6 +1,5 @@
-diff -uNr recode/src/Makefile.in recode-new/src/Makefile.in
---- recode/src/Makefile.in	Mon Jan 22 12:14:16 2001
-+++ recode-new/src/Makefile.in	Tue Feb  1 14:03:47 2005
+--- recode/src/Makefile.in
++++ recode/src/Makefile.in
 @@ -165,11 +165,11 @@
  strip-data$U.lo testdump$U.lo ucs$U.lo utf16$U.lo utf7$U.lo utf8$U.lo \
  varia$U.lo vn$U.lo flat$U.lo html$U.lo lat1ltex$U.lo lat1txte$U.lo \
@@ -15,15 +14,3 @@ diff -uNr recode/src/Makefile.in recode-new/src/Makefile.in
  recode_LDFLAGS = 
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-diff -uNr recode/src/request.c recode-new/src/request.c
---- recode/src/request.c	Wed Jun 28 13:40:21 2000
-+++ recode-new/src/request.c	Tue Feb  1 14:05:13 2005
-@@ -1073,7 +1073,7 @@
-   if (task->output.cursor + 4 >= task->output.limit)
-     {
-       RECODE_OUTER outer = task->request->outer;
--      size_t old_size = task->output.limit - task->output.buffer;
-+      size_t old_size = task->output.cursor - task->output.buffer;
-       size_t new_size = task->output.cursor + 4 - task->output.buffer;
- 
-       /* FIXME: Rethink about how the error should be reported.  */
