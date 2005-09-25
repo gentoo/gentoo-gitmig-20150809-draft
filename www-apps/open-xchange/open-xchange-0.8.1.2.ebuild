@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.3 2005/09/24 23:38:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.4 2005/09/25 18:31:04 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -376,21 +376,21 @@ pkg_config() {
 	local OX_ROOTPW=${OX_ROOTPW-"secret"}
 
 	# Guess base on the installed config
-	if false && [[ -e "${ROOT}/etc/open-xchange/admintools.conf" ]] ; then
+	if [[ -e "${ROOT}/etc/open-xchange/admintools.conf" ]] ; then
 		local temp_var
 		echo "Installation of OX detected"
 
 		temp_var=$(get_oxvar DEFAULT_SQL_HOST)
-		[[ -n ${temp_var} ]] && OX_DBHOST==${temp_var}
+		[[ -n ${temp_var} ]] && OX_DBHOST=${temp_var}
 
 		temp_var=$(get_oxvar DEFAULT_SQL_DB)
-		[[ -n ${temp_var} ]] && OX_DBNAME==${temp_var}
+		[[ -n ${temp_var} ]] && OX_DBNAME=${temp_var}
 
 		temp_var=$(get_oxvar DEFAULT_SQL_USER)
-		[[ -n ${temp_var} ]] && OX_DBUSER==${temp_var}
+		[[ -n ${temp_var} ]] && OX_DBUSER=${temp_var}
 
 		temp_var=$(get_oxvar DEFAULT_SQL_PASS)
-		[[ -n ${temp_var} ]] && OX_DBPASS==${temp_var}
+		[[ -n ${temp_var} ]] && OX_DBPASS=${temp_var}
 
 		temp_var=$(get_oxvar ORGA)
 		[[ -n ${temp_var} ]] && OX_ORG=${temp_var}
@@ -399,7 +399,7 @@ pkg_config() {
 		[[ -n ${temp_var} ]] && OX_ROOTDN=${temp_var}
 
 		temp_var=$(get_oxvar BINDPW)
-		[[ -n ${temp_var} ]] && OX_ROOTPW=${OX_ROOTPW_TEMP}
+		[[ -n ${temp_var} ]] && OX_ROOTPW=${temp_var}
 
 		if [[ -e "${ROOT}/etc/open-xchange/groupware/ldap.conf" ]] ; then
 			# taken from admintools.conf self
