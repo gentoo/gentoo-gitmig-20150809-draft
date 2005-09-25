@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46d2ac38aeb9158b126419eee13ca9e1 ChangeLog 989
 MD5 f3a777f2c6eeebb99f32e02b52b65a70 hplip-0.9.3.ebuild 2570
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 39df325ae3f38e64a979900d6c54d24f hplip-0.9.4.ebuild 2575
-MD5 08c6a123168afd2edaabc7724cfce658 hplip-0.9.5.ebuild 2578
+MD5 fc5d663410ed958093a9eaabce3b7f34 hplip-0.9.5.ebuild 2578
+MD5 81570967dcde75538763a31fcba9da9d ChangeLog 1111
 MD5 ce4ebffecf6776bf8b594d515f151b0e files/digest-hplip-0.9.3 146
 MD5 5243cb60063760c1f71d7d026720421e files/hplip.init.d 898
 MD5 6d67b8483b9c21c792fda3ed690cb26a files/digest-hplip-0.9.4 145
-MD5 4dd03ee039acb8d9c1050fc8a2689520 files/digest-hplip-0.9.5 145
+MD5 cbf1b3a3716e0de9faef1b950ad93b9d files/digest-hplip-0.9.5 145
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDNuXcwUpWvClEHQoRAgzlAJ9Q6jF8QzSsEHaK3r6WbNjA5n9P8gCfSJTe
-pxga3iH5tdaMGlMShf2I1SU=
-=AhnO
+iD8DBQFDNufmwUpWvClEHQoRAsT5AJ9rDl+AKunIZ/nG9L0Wf+QJqiYSIgCffDkX
+5U1ZtxOva/zms+14qxnub8Q=
+=LorF
 -----END PGP SIGNATURE-----

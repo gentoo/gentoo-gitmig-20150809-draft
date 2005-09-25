@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.5.ebuild,v 1.1 2005/09/25 17:00:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-0.9.5.ebuild,v 1.2 2005/09/25 17:10:17 metalgod Exp $
 
 inherit eutils
 
-DB_V=1.5-20050607
+DB_V=1.5-20050925
 DESCRIPTION="HP Linux Imaging and Printing System. Includes net-print/hpijs, scanner drivers and service tools."
 HOMEPAGE="http://hpinkjet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hpinkjet/${P}.tar.gz
