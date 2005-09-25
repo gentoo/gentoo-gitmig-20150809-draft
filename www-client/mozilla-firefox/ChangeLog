@@ -1,6 +1,18 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.80 2005/09/17 23:02:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.81 2005/09/25 23:31:47 azarah Exp $
+
+*mozilla-firefox-1.0.7 (25 Sep 2005)
+
+  25 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mozilla-1.7.6-gcc4.patch, +files/mozilla-1.7.8-amd64.patch,
+  +files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch,
+  +files/mozilla-1.7.12-libart-freetype.patch,
+  +mozilla-firefox-1.0.7.ebuild:
+  New release, GLSA105396. Use libart rather than cairo, bug #106713. Update
+  gtk2 and xft code from upstream to fix various freetype-2.1.9 issues
+  including printing non-latin. Same for the libart renderer code. Update gcc4
+  patches to allow building on gcc4.
 
   17 Sep 2005; Jason Wever <weeve@gentoo.org>
   mozilla-firefox-1.0.6-r7.ebuild:
