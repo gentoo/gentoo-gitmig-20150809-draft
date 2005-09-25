@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.1 2005/09/21 16:54:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.2 2005/09/25 02:55:15 weeve Exp $
+
+  25 Sep 2005; Jason Wever <weeve@gentoo.org> pyxattr-0.2.ebuild:
+  Added ~sparc keyword.
 
 *pyxattr-0.2 (21 Sep 2005)
 
