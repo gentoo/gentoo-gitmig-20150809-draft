@@ -1,14 +1,24 @@
-MD5 8b9973be78c16e99631d189e4ac4c775 mDNSResponder-107.1.ebuild 2146
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e3228fa5e9074e7ecd1308c9b5a2ef03 ChangeLog 2635
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e110f34bac8e308172df60f7aa54244a ChangeLog 2783
 MD5 8b3554909fb9a64630ea24a3a85d850d mDNSResponder-98.ebuild 1015
-MD5 7087496865b0e264a209619124877965 files/mDNSResponder-98-Makefiles.patch 3631
+MD5 642f4d4d00cc80310934d0f8c3839f5a mDNSResponder-107.1.ebuild 2311
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 526779dd93f31199a9486a8c97b3d859 files/dnsextd.init.d 998
-MD5 dc4d5a4581328c0742083dbf8794512c files/digest-mDNSResponder-107.1 72
 MD5 b74cd777522f1afe94e70f9fe28f8152 files/mDNSResponderPosix.conf.d 67
-MD5 6bfaec39e5143be17c23ebdbdd0ada06 files/mDNSResponderPosix.conf 437
-MD5 854ae89c0e0738fa68590659fe262309 files/digest-mDNSResponder-98 69
 MD5 27629c08c7cc567113bdd270b670feaf files/mdnsd.init.d 845
-MD5 ccbbf27de7cb7a7a00b82ce91dc784ee files/dnsextd.conf.d 426
+MD5 dc4d5a4581328c0742083dbf8794512c files/digest-mDNSResponder-107.1 72
 MD5 3e72df7f18d10cc944d1d2756f75a543 files/mDNSResponderPosix.init.d 1247
+MD5 ccbbf27de7cb7a7a00b82ce91dc784ee files/dnsextd.conf.d 426
+MD5 854ae89c0e0738fa68590659fe262309 files/digest-mDNSResponder-98 69
+MD5 6bfaec39e5143be17c23ebdbdd0ada06 files/mDNSResponderPosix.conf 437
+MD5 7087496865b0e264a209619124877965 files/mDNSResponder-98-Makefiles.patch 3631
 MD5 2550bc56ecb633b4002835a7256d4734 files/mDNSResponder-107.1-Makefiles.patch 5442
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNyKgj5H05b2HAEkRAlZJAJ0U7XgdxpG80RfByEg8s42EliCePQCffvZQ
+hA9MOPBny+++/N/rkzua7vY=
+=LFRq
+-----END PGP SIGNATURE-----

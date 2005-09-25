@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.18 2005/09/12 11:42:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.19 2005/09/25 22:19:55 flameeyes Exp $
+
+  25 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mDNSResponder-107.1.ebuild:
+  Fix multilib-strictness and make it compatible with FreeBSD.
 
   12 Sep 2005; Aron Griffis <agriffis@gentoo.org> mDNSResponder-98.ebuild:
   Mark 98 stable on alpha

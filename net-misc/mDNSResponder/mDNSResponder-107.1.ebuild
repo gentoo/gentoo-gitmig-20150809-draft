@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.1 2005/08/27 16:46:45 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.1.ebuild,v 1.2 2005/09/25 22:19:55 flameeyes Exp $
 
-inherit eutils
+inherit eutils multilib base
 
 DESCRIPTION="The mDNSResponder project is a component of Bonjour, Apple's initiative for zero-configuration networking."
 HOMEPAGE="http://developer.apple.com/networking/bonjour/index.html"
@@ -13,9 +13,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}/${P}-Makefiles.patch"
+PATCHES="${FILESDIR}/${P}-Makefiles.patch"
+
+pkg_setup() {
+	if use elibc_FreeBSD; then
+		os=freebsd
+	else
+		os=linux
+	fi
 }
 
 src_compile() {
@@ -25,10 +30,10 @@ src_compile() {
 	fi
 
 	cd ${S}/mDNSPosix
-	emake os=linux ${debug} || die "make mDNSPosix failed"
+	emake os=${os} ${debug} || die "make mDNSPosix failed"
 
 	cd ${S}/Clients
-	emake os=linux ${debug} || die "make Clients failed"
+	emake os=${os} ${debug} || die "make Clients failed"
 }
 
 src_install() {
@@ -49,7 +54,7 @@ src_install() {
 		objdir=debug
 	fi
 
-	emake DESTDIR="${D}" os=linux ${debug} install || die "install failed"
+	make DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
 
 	dosbin ${S}/mDNSPosix/build/${objdir}/dnsextd
 	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSResponderPosix
@@ -69,6 +74,10 @@ src_install() {
 	doins ${FILESDIR}/mDNSResponderPosix.conf
 
 	dodoc ${S}/README.txt
+
+	# Fix multilib-strictness
+	mv ${D}/lib ${D}/$(get_libdir)
+	mv ${D}/usr/lib ${D}/usr/$(get_libdir)
 }
 
 pkg_postinst() {
