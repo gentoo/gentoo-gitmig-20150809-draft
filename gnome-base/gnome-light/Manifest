@@ -2,21 +2,23 @@
 Hash: SHA1
 
 MD5 c43138fea8cc4925dfdc7a5d7fb14e32 gnome-light-2.8.1.ebuild 2174
+MD5 d46f4eedb66ccab9d35614173b2c10fd gnome-light-2.6.2.ebuild 2167
+MD5 e27fd93777eecc9c172831e2a1d63be0 gnome-light-2.8.0.ebuild 2135
+MD5 6d8965788006b4043700e2d1cab50635 gnome-light-2.10_pre0.ebuild 2165
+MD5 7e5e450b11971bc4e4557b519f437c40 gnome-light-2.12.0.ebuild 2129
+MD5 5c0c01634ad4f78f835570f5c7d567de ChangeLog 2758
 MD5 d98427d2059246ff1d3091afb7fc3d43 gnome-light-2.10.ebuild 2095
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ae4af66fdfee410edf04ee4b2314fc95 ChangeLog 2640
-MD5 e27fd93777eecc9c172831e2a1d63be0 gnome-light-2.8.0.ebuild 2135
-MD5 d46f4eedb66ccab9d35614173b2c10fd gnome-light-2.6.2.ebuild 2167
-MD5 6d8965788006b4043700e2d1cab50635 gnome-light-2.10_pre0.ebuild 2165
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.10_pre0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.10 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.6.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.8.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.8.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.12.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.10_pre0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-light-2.10 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCqMy2KRy60XGEcJIRAuy/AJ9C6UzTfCNLnCEEShTpXUEZzTXCIACgn/La
-SmUrFEBTEPsPK2j8aVRk/Zk=
-=iePG
+iD8DBQFDNtmPomPajV0RnrERAhG1AJ0aqIEA4xb/LqGUIxipR6FATXnqmQCfeukn
+MbyklUO+o6sNdbRj4Ray38s=
+=aL0V
 -----END PGP SIGNATURE-----
