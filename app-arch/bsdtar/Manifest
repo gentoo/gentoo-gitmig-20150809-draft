@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c21a71672f822e90c808077482b9e5ed bsdtar-1.02.034.ebuild 903
+MD5 71d61cda7a9f116fc2874c6949784a41 bsdtar-1.02.034.ebuild 940
 MD5 1305c3eeea0332d6b65566a0621d5a7c bsdtar-1.02.027-r1.ebuild 1112
-MD5 b8cdf3761cde6eefcdc008f2b02397e1 ChangeLog 2721
+MD5 73950cf44926ecea1c3b28d3ce89f392 ChangeLog 2866
 MD5 237fafd1cf6bf6b5047443e93f74007c bsdtar-1.02.030.ebuild 1120
 MD5 afec809b169074e5d5b0803e4f8f5ec8 metadata.xml 428
 MD5 23a5ba81fd708274f460d74e61f6f10d files/bsdtar-1.02.027-osx.patch 475
@@ -13,7 +13,7 @@ MD5 2a8e4734601d558f6ce4f0df1a3a7033 files/digest-bsdtar-1.02.030 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNpPuj5H05b2HAEkRApGxAJ9rlbEMbgWGIxSosg9bvy6qpk/2KgCfYHxz
-mmvLQ3aNSyunhfk+sm8cICY=
-=Ygjh
+iD8DBQFDNpabj5H05b2HAEkRAotIAJ48nkkWV6KZmSvMh6Yxz4OQ59cIXACgh/zP
+ZWzwmkIe4+Sf7osDdqGDbac=
+=DPVO
 -----END PGP SIGNATURE-----

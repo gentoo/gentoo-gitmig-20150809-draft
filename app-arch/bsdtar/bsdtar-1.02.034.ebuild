@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.034.ebuild,v 1.1 2005/09/25 12:10:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.034.ebuild,v 1.2 2005/09/25 12:22:21 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,9 @@ IUSE="build static"
 RDEPEND="!static? ( >=dev-libs/libarchive-1.02.032 )"
 
 src_compile() {
-	( use static || use build ) && append-ldflags -static
+	if ! use userland_Darwin; then
+		( use static || use build ) && append-ldflags -static
+	fi
 
 	econf --bindir=/bin || die "econf failed"
 	emake || die "emake failed"
