@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d1x
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/ChangeLog,v 1.4 2004/06/24 21:53:54 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/ChangeLog,v 1.5 2005/09/25 07:13:41 mr_bones_ Exp $
+
+  25 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> d1x-20040118.ebuild:
+  unpack in src_unpack; tidy
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> d1x-20040118.ebuild:
   don't rdepend on nasm; depend on sed >= 4

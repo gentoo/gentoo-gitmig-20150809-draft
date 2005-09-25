@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 42a81d50e4b6a16cbdb2b1106c9a200f ChangeLog 528
 MD5 3b90dbebc21faee848d364a02fc20bac metadata.xml 459
-MD5 cbeb6f281823d4a28bdbc45dd2622e52 d1x-20040118.ebuild 3373
-MD5 203a18187bcba9679a5b3102853fe7f4 files/digest-d1x-20040118 135
+MD5 44f83ea59b6385beb5c38e771a6cf33f d1x-20040118.ebuild 3047
+MD5 07b4e52d8fb5abcd710b6de332562e1d ChangeLog 635
 MD5 fe21a7e67ef24de5864a502206052663 files/d1x-missiondir.patch 754
+MD5 203a18187bcba9679a5b3102853fe7f4 files/digest-d1x-20040118 135
 MD5 951de74e67288963ee03c3719074f3fb files/d1x-makefile-linux.patch 1074
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDINQMV3J2n04EauwRAg0RAKCu1/I3L98pZrS+ZT2OfVc0akRqzwCePXK2
-o7r1aW23f7CzaleyHqeLQhE=
-=AGuw
------END PGP SIGNATURE-----
