@@ -1,7 +1,17 @@
-MD5 dba8f903277cb4fe50c51b3d27527c87 ChangeLog 5933
-MD5 38c2ce8037af26dc753862a61eb59e4f dump-0.4.40.ebuild 1549
-MD5 eaed81deeed5fa12851266a227ceb37c dump-0.4.39.ebuild 1541
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7b798cbea6e9a29ae22ece46ce51b41e dump-0.4.37.ebuild 1540
+MD5 eaed81deeed5fa12851266a227ceb37c dump-0.4.39.ebuild 1541
+MD5 2c9e71b1b29f0a316167b2d640a66ffd dump-0.4.40.ebuild 1457
+MD5 dba8f903277cb4fe50c51b3d27527c87 ChangeLog 5933
 MD5 68a2aca891a2c4b0f855df69ae2727f9 files/digest-dump-0.4.40 63
-MD5 15319d17b124480af1cb76202c5cb78d files/digest-dump-0.4.37 63
 MD5 918243abb15a1cf0df32c00b42d77b50 files/digest-dump-0.4.39 63
+MD5 15319d17b124480af1cb76202c5cb78d files/digest-dump-0.4.37 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNn1DgIKl8Uu19MoRAkDsAJ46TLugAuO7J5I2Gfl7VNU8GC1IFQCfXW0T
+SBEPR7wcKpoDZL8SfVQjEhU=
+=6053
+-----END PGP SIGNATURE-----

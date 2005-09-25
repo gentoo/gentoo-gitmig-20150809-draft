@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.40.ebuild,v 1.1 2005/05/10 23:26:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.40.ebuild,v 1.2 2005/09/25 10:33:49 vapier Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -13,30 +13,24 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="readline static"
 
-DEPEND=">=sys-fs/e2fsprogs-1.27
+RDEPEND=">=sys-fs/e2fsprogs-1.27
 	>=app-arch/bzip2-1.0.2
 	>=sys-libs/zlib-1.1.4
 	readline? ( sys-libs/readline )"
-RDEPEND="${DEPEND}
-	|| (
-		app-arch/star
-		app-arch/tar
-	)"
-
-# virtual/os-headers never belong in RDEPENDs
-DEPEND="${DEPEND} virtual/os-headers"
+DEPEND="${RDEPEND}
+	virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "s:-ltermcap:-lncurses:g" configure || die
 }
 
 src_compile() {
 	econf \
 		--with-dumpdatespath=/etc/dumpdates \
-		--with-binowner=root \
-		--with-bingroup=root \
+		--with-{bin,man}owner=root \
+		--with-{bin,man}grp=root \
 		--enable-largefile \
 		$(use_enable static) \
 		$(use_enable static staticz) \
@@ -47,7 +41,7 @@ src_compile() {
 
 src_install() {
 	# built on old autotools, no DESTDIR support
-	einstall MANDIR=${D}/usr/share/man/man8 || die
+	einstall MANDIR="${D}"/usr/share/man/man8 || die
 	mv "${D}"/usr/sbin/{,dump-}rmt
 	mv "${D}"/usr/share/man/man8/{,dump-}rmt.8
 
