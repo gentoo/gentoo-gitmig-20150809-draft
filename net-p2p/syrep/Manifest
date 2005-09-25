@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd4f1cc63b4ef51688156e31f224723b syrep-0.6.ebuild 1032
 MD5 39faf8be929a8328e60628345863c85a ChangeLog 485
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 77db216ecabf366edb645bc535a28321 files/syrep-0.6-gentoo.diff 6243
+MD5 7ccbeb22ff3b2ed925f6ec8c25c13fe4 metadata.xml 161
+MD5 fd4f1cc63b4ef51688156e31f224723b syrep-0.6.ebuild 1032
 MD5 ffe0e6d4be90ab89e5f2f4ff60c8f4e1 files/digest-syrep-0.6 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNwx9I1lqEGTUzyQRArtQAKCx6RILIGGTqqRpp5xR83xFkFK3TQCdEu97
-AU0Ju6u4YgLw23limXHKAyI=
-=ciUx
------END PGP SIGNATURE-----
+MD5 77db216ecabf366edb645bc535a28321 files/syrep-0.6-gentoo.diff 6243
