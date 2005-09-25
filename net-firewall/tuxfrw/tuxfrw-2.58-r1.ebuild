@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.58-r1.ebuild,v 1.2 2005/07/26 12:00:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.58-r1.ebuild,v 1.3 2005/09/25 12:52:27 angusyoung Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-info
 
 DESCRIPTION="TuxFrw is a complete firewall automation tool for GNU/Linux."
 HOMEPAGE="http://tuxfrw.sf.net/"
