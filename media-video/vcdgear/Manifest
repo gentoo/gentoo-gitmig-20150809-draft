@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84d0bc55d61ed8ed7ae2f3d2be5cdbc0 ChangeLog 818
-MD5 6d66344d2ea7c7cb5ba5312cea1acfed vcdgear-1.6e.ebuild 828
+MD5 5377c41b3a32ab80c9eadd4675f91565 vcdgear-1.76.ebuild 718
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 6d66344d2ea7c7cb5ba5312cea1acfed vcdgear-1.6e.ebuild 828
+MD5 4ce877cf2bb32a7b38bf019005d3fac5 ChangeLog 940
 MD5 341f3a6cb742e39ed0b4e349c14d4c98 files/digest-vcdgear-1.6e 132
+MD5 6c76b8a4188d39fc62f3eebec7191db2 files/digest-vcdgear-1.76 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC9KD85mJXAu5GbtIRAqN1AJ9mtuF6in2x//Ua1RO7I7kKRahlugCeIR6v
-prCQ6u/91m1a3jpxwkxgScU=
-=/4qf
+iD8DBQFDNnvJgIKl8Uu19MoRApRLAJ4gWQ6wQ1epMBn3vw4zj8ljFwZl6wCePpyk
+/9ejTC0UvFnz/hujMKhreF4=
+=1OB5
 -----END PGP SIGNATURE-----
