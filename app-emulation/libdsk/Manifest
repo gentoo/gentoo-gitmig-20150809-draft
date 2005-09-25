@@ -1,9 +1,19 @@
-MD5 d1722ea6cbaf05e99cf8a745ca4a2ba5 libdsk-1.1.6.ebuild 801
-MD5 0ccdc49fdccd3324770dcf517c193406 ChangeLog 1338
-MD5 eb5db62242f3b3d7db3536b567d2e89a libdsk-1.1.5.ebuild 800
-MD5 a92ccc9109f3bb8c36e7597064966708 metadata.xml 314
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c41d59a55392505114451b081a6ad558 ChangeLog 1426
 MD5 e8fd165188427455ff367b4fc471d175 libdsk-1.1.0.ebuild 698
+MD5 a92ccc9109f3bb8c36e7597064966708 metadata.xml 314
+MD5 4f3ba1d81a3ad2d1701be496b631316f libdsk-1.1.5.ebuild 800
+MD5 d1722ea6cbaf05e99cf8a745ca4a2ba5 libdsk-1.1.6.ebuild 801
 MD5 ec130e196a8c6b8a6aa58f027e03678a files/digest-libdsk-1.1.0 64
-MD5 ff74a732def146b14fd58e696be16ae1 files/digest-libdsk-1.1.5 64
 MD5 c23119642b9add713a082cf56ad2ed29 files/digest-libdsk-1.1.6 64
 MD5 57f6d0ef6a15482c84932239633bcbee files/libdsk-1.1.4-destdirfix.patch 509
+MD5 ff74a732def146b14fd58e696be16ae1 files/digest-libdsk-1.1.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNnvzmdTrptrqvGERAgM8AKCWgAm0kyOPwySreOGmXhAggGLSzgCcD+TK
+9IFWsb184tequ8kjlhsTyrI=
+=TPO4
+-----END PGP SIGNATURE-----
