@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dcfldd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.4 2005/08/20 04:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.5 2005/09/25 04:01:07 dragonheart Exp $
+
+  25 Sep 2005; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  dcfldd-1.2.4.ebuild:
+  forensics herd takes maintainence. Thanks vapier. 1.2.4 stable now too
 
 *dcfldd-1.2.4 (20 Aug 2005)
 
