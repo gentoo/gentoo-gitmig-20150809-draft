@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.28 2005/09/25 09:29:39 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.29 2005/09/25 12:06:38 radek Exp $
+
+  25 Sep 2005; Radoslaw Stachowiak <radek@gentoo.org> files/7z, files/7za:
+  changed wrapper script to include " around @
 
   25 Sep 2005; Radoslaw Stachowiak <radek@gentoo.org> files/7z, +files/7za,
   -p7zip-0.91.ebuild, p7zip-4.27.ebuild:
