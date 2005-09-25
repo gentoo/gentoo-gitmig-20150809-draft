@@ -1,0 +1,11 @@
+--- trafshow-5.2.1.orig/screen.c	2005-08-01 15:12:34.000000000 -0300
++++ trafshow-5.2.1/screen.c	2005-09-25 13:42:40.000000000 -0300
+@@ -41,8 +41,6 @@
+ int prompt_mode = 0;
+ double line_factor = 1;
+ 
+-extern int curs_dock_x, curs_dock_y;
+-
+ /*
+  * Initialize curses.
+  */
