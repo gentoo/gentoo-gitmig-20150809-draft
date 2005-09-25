@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.27 2005/09/24 15:00:59 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.28 2005/09/25 09:29:39 radek Exp $
+
+  25 Sep 2005; Radoslaw Stachowiak <radek@gentoo.org> files/7z, +files/7za,
+  -p7zip-0.91.ebuild, p7zip-4.27.ebuild:
+  fixed bug #107107 with wrong wrapper/symlink usage. removed old version.
 
   24 Sep 2005; Radoslaw Stachowiak <radek@gentoo.org> p7zip-4.27.ebuild:
   Removed ppc-macos keyword due to compilation bug

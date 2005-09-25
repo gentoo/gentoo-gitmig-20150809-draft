@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.2 2005/09/24 15:00:59 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.3 2005/09/25 09:29:39 radek Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,15 +31,13 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/7za || die "dobin 7za"
-
-	# currently (4.27) not needed, due to separate 7z
-	#dosym 7za /usr/bin/7z
-	dobin bin/7z || die "dobin 7z"
+	# this wrappers can not be symlinks, p7zip should be called with full path
+	dobin ${FILESDIR}/7za || die "dobin 7za"
+	dobin ${FILESDIR}/7z || die "dobin 7z"
 
 	dodir /usr/lib/${PN}
 	exeinto /usr/lib/${PN}
-	doexe bin/7z bin/7za
+	doexe bin/7z bin/7za bin/7zCon.sfx
 	dodir /usr/lib/${PN}/Codecs
 	exeinto /usr/lib/${PN}/Codecs
 	doexe bin/Codecs/*

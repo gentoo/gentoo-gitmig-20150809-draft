@@ -1,0 +1,5 @@
+#!/bin/sh
+# 7za wrapper, p7zip, should be called with full path
+# so symlink and copy should not be used instead.
+
+exec /usr/lib/p7zip/7za $@
