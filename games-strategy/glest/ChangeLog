@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.5 2005/09/17 20:03:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.6 2005/09/25 07:42:07 mr_bones_ Exp $
+
+  25 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/glest-1.0.10_p7-fake-checkGlCaps.patch, -glest-1.0.10_p7.ebuild:
+  clean older version
 
   17 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> glest-1.1.0.ebuild:
   install linux config file instead of windows config file. (bug #103797)
