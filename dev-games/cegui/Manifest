@@ -4,13 +4,15 @@ Hash: SHA1
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 c3061025a6fb77f06211ecd6a0cade40 cegui-0.2.0.ebuild 1097
 MD5 cf8f8d6ef623d03062d1943f6bf5aa3d cegui-0.3.0.ebuild 1108
-MD5 7e45a3d82d56eef1762cee83e984db2c ChangeLog 490
+MD5 c002dc63192b69b592efb84bd0bda2b7 cegui-0.4.0.ebuild 1329
+MD5 747a206b5697b14d81ca5d14e20fa1f7 ChangeLog 631
 MD5 938129631f2fa1d25d5aa6ca78ae06f0 files/digest-cegui-0.3.0 75
 MD5 8fe1b67f8734fc763fbd2346a15bbde6 files/digest-cegui-0.2.0 69
+MD5 af3ae4691a45d04152ae83383481af3e files/digest-cegui-0.4.0 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8tEygIKl8Uu19MoRAtEFAJ4vBmQzKV0GiiOkCDYhXYp/e2wv1wCfScrl
-9Y5yPMvxUKW3y8t95HlNRC0=
-=LQV7
+iD8DBQFDNmNdgIKl8Uu19MoRArD9AJ9whCe8WBKdK0J3i8WzuVEfF7UXpQCeLyBQ
+7FBkPdCx7bZr4w2pmMAQu6M=
+=7p9g
 -----END PGP SIGNATURE-----
