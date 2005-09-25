@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.20.ebuild,v 1.1 2005/09/02 05:06:09 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.20.ebuild,v 1.2 2005/09/25 08:41:18 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
-inherit eutils libtool
+inherit eutils
 
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
@@ -106,6 +106,9 @@ src_unpack() {
 	# In some cases EGREP is not set by the build system.
 	epatch "${FILESDIR}"/1.5.14/libtool-1.5.14-egrep.patch
 
+	# Make sure LD_LIBRARY_PATH doesn't override RUNPATH #99593
+	epatch "${FILESDIR}"/1.5.20/libtool-1.5.20-override-LD_LIBRARY_PATH.patch
+
 	ebegin "Generating ltmain.sh"
 	gen_ltmain_sh || die "Failed to generate ltmain.sh!"
 	eend 0
@@ -125,7 +128,6 @@ src_unpack() {
 	done
 	cd "${S}"
 
-	uclibctoolize
 	epunt_cxx
 }
 

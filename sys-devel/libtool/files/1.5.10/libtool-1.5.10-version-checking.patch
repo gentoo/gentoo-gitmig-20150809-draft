@@ -26,17 +26,17 @@
 +if test -z "$ltmain"; then
 +  AC_MSG_RESULT(no)
 +  echo
-+  echo "*** [Gentoo] sanity check failed! ***"
++  echo "*** @<:@Gentoo@:>@ sanity check failed! ***"
 +  echo "*** \$ltmain is not defined, please check the patch for consistency! ***"
 +  echo
 +  exit 1
 +fi
 +gentoo_lt_version="@_LT_VERSION@"
-+gentoo_ltmain_version=`grep '^[[:space:]]*VERSION=' $ltmain | sed -e 's|^[[:space:]]*VERSION=||'`
++gentoo_ltmain_version=`grep '^@<:@@<:@:space:@:>@@:>@*VERSION=' $ltmain | sed -e 's|^@<:@@<:@:space:@:>@@:>@*VERSION=||'`
 +if test "$gentoo_lt_version" != "$gentoo_ltmain_version"; then
 +  AC_MSG_RESULT(no)
 +  echo
-+  echo "*** [Gentoo] sanity check failed! ***"
++  echo "*** @<:@Gentoo@:>@ sanity check failed! ***"
 +  echo "*** libtool.m4 and ltmain.sh have a version mismatch! ***"
 +  echo "*** (libtool.m4 = $gentoo_lt_version, ltmain.sh = $gentoo_ltmain_version) ***"
 +  echo
