@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-3.5_beta1.ebuild,v 1.1 2005/09/22 18:16:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-3.5_beta1.ebuild,v 1.2 2005/09/25 10:14:05 greg_g Exp $
 
 KMMODULE=kscreensaver
 KMNAME=kdeartwork
@@ -18,15 +18,7 @@ DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/kscreensaver)
 
 src_compile() {
 	local myconf="$myconf --with-dpms --with-libart
-	              $(use_with opengl gl)"
-
-	if use xscreensaver; then
-		myconf="${myconf} --with-xscreensaver
-		        --with-xscreensaver-dir=/usr/lib/misc/xscreensaver
-		        --with-xscreensaver-config=/usr/share/xscreensaver/config"
-	else
-		myconf="${myconf} --without-xscreensaver"
-	fi
+	              $(use_with opengl gl) $(use_with xscreensaver)"
 
 	kde-meta_src_compile
 }
