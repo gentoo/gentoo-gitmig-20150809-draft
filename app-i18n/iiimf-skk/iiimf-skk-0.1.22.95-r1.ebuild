@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95.ebuild,v 1.4 2005/01/01 14:28:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95-r1.ebuild,v 1.1 2005/09/25 00:04:30 matsuu Exp $
 
 inherit eutils
 
@@ -12,12 +12,11 @@ SRC_URI="mirror://sourceforge.jp/iiimf-skk/9344/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="nls gtk2 canna debug"
+IUSE="nls canna debug"
 
 DEPEND="virtual/libc
 	>=sys-libs/db-3
-	gtk2? ( =x11-libs/gtk+-2* )
-	!gtk2? ( =x11-libs/gtk+-1.2* )
+	>=x11-libs/gtk+-2
 	dev-libs/libxml2
 	app-i18n/im-sdk
 	virtual/skkserv
@@ -33,8 +32,8 @@ src_compile() {
 
 	local myconf
 	# configure script is broken wrt --disable-*
+	myconf="${myconf} --enable-gtk2"
 	use nls && myconf="${myconf} --enable-nls"
-	use gtk2 && myconf="${myconf} --enable-gtk2"
 	use debug && myconf="${myconf} --enable-debug"
 	use canna && myconf="${myconf} --enable-canna"
 
