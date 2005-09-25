@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.10.ebuild,v 1.4 2005/08/24 15:09:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.10.ebuild,v 1.5 2005/09/25 20:41:05 mkay Exp $
 
 inherit distutils eutils
 
@@ -14,9 +14,9 @@ LICENSE="MIT"
 SLOT="0"
 
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ppc64 ~alpha"
-IUSE="X"
+IUSE="gtk"
 
-RDEPEND="X? ( >=dev-python/wxpython-2.4 )
+RDEPEND="gtk? ( >=dev-python/wxpython-2.4 )
 	>=dev-lang/python-2.1
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}
@@ -44,7 +44,7 @@ src_install() {
 	cp -pPR /etc/mailcap ${D}/etc/
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/btdownloadgui.py '%s'; test=test -n \"\$DISPLAY\""
 
-	if use X; then
+	if use gtk; then
 		dodir ${PIXMAPLOC}
 		insinto ${PIXMAPLOC}
 		doins *.ico *.gif
