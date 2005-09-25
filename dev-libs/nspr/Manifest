@@ -2,21 +2,21 @@
 Hash: SHA1
 
 MD5 249653fbfdf5589f8a8bb2f645f017a1 nspr-4.1.2.ebuild 1160
-MD5 80e81a92769f5a4ac5cc0280f225039c ChangeLog 4347
 MD5 c3e6bf1670e6e6f79920efb95aff7fd5 nspr-4.4.1.ebuild 1144
+MD5 d3ce1a1e550a679dad6f7592447d4b2c nspr-4.4.1-r2.ebuild 1796
+MD5 4e09dedbd2811a413643332821c39d05 ChangeLog 4479
 MD5 695935dce10dfe23aad92e8122edeaa3 nspr-4.3.ebuild 1009
-MD5 527595c7a05d02a4bd56a75ac4aaee62 nspr-4.4.1-r2.ebuild 1850
-MD5 1a031c0f4c5de0e38a0df0b5308c3453 files/nspr-4.4.1-hppa.patch 4046
-MD5 b12990968c289b9e7f8fbb2174ec827c files/nspr-4.3-amd64.patch 7713
-MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1-r2 63
 MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1 63
 MD5 10437559f8044e78299742d18180760e files/digest-nspr-4.1.2 63
-MD5 6cbbac8e2a77405ce2ab861405896548 files/digest-nspr-4.3 61
 MD5 8febddba94492208369d1934210180f9 files/nspr-4.4.1-ppc64.patch 2077
+MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1-r2 63
+MD5 1a031c0f4c5de0e38a0df0b5308c3453 files/nspr-4.4.1-hppa.patch 4046
+MD5 b12990968c289b9e7f8fbb2174ec827c files/nspr-4.3-amd64.patch 7713
+MD5 6cbbac8e2a77405ce2ab861405896548 files/digest-nspr-4.3 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCmBij5H05b2HAEkRAq/4AJwOpdzg+vDy6LZRl2wOcyVGXuAcwwCeNyPW
-jKgxnItKdGeUQZIrGQExd2c=
-=2OKF
+iD8DBQFDNn5sgIKl8Uu19MoRAiJqAJkBz3nCqPp28IkeYviVLzdQvWSNqACaAsJc
+yX2xmeBqHrwrn8pKfxNoSss=
+=HC78
 -----END PGP SIGNATURE-----
