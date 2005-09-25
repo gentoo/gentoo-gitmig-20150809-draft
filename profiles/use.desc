@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.266 2005/09/19 10:43:43 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.267 2005/09/25 08:32:43 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -80,7 +80,6 @@ dvdread - Enables usage of Ogle's libdvdread for DVD playback
 eds - Enables support for Evolution-Data-Server(eds)
 emacs - Adds support for GNU Emacs
 emacs-w3 - Add support for Emacs/W3 where applicable
-#embedded - Reserved flag for the embedded herd
 emboss - Adds support for the European Molecular Biology Open Software Suite
 empress - Adds support for the Empress database server
 empress-bcs - Adds local access support for the Empress database server
@@ -350,18 +349,3 @@ yahoo - Enable Yahoo Messenger IM protocol support
 yaz - Adds in optional support for the Z39.50 Protocol for Information Retrieval (YAZ)
 zeo - Adds support for Zope Enterprise Objects
 zlib - Adds support for zlib (de)compression
-
-# The following flags are NOT to be set or unset by users
-alpha - indicates that architecture is 64-bit Alpha
-amd64 - indicates that architecture is AMD64
-arm - indicates that architecture is ARM
-hppa - indicates that architecture is HP PA-Risc
-ia64 - indicates that architecture is 64-bit Itanium
-mips - indicates that architecture is MIPS based
-ppc - indicates that architecture is PowerPC
-ppc64 - indicates that architecture is PowerPC64
-ppc-macos - indicates that platform is Mac OS (Jaguar, Panther or Tiger)
-s390 - indicates that architecture is zSeries/s390
-sh - indicates that architecture is SuperH
-sparc - indicates that architecture is (32-bit) Sparc
-x86 - indicates that architecture is x86
