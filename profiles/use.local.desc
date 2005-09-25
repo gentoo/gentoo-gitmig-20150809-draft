@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1467 2005/09/24 03:20:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1468 2005/09/25 08:31:39 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -142,8 +142,8 @@ app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
 app-text/evince:djvu - Enable djvu viewer support for Evince
 app-text/evince:dvi - Enable the built-in DVI viewer for Evince
-app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
 app-text/evince:nautilus - Enable the nautilus plugin
+app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer for Evince
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
@@ -240,8 +240,8 @@ dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cgi - Enable CGI SAPI
 dev-lang/php:cli - Enable CLI SAPI
 dev-lang/php:discard-path - Switch on common security setting for CGI SAPI
-dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:fastbuild - Build PHP quicker (experimental)
+dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:java-external - Use the external java extension rather than the bundled one
 dev-lang/php:java-internal - Use the bundled java extension in PHP4
 dev-lang/php:overload - Enable the overload extension
@@ -296,9 +296,9 @@ dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
+dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/gtk-perl:applet - Enable gnome applet support
 dev-perl/gtk-perl:gnome-print - Enable gnome-print support
-dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-php/eaccelerator:inode - Enable inode-based caching.
 dev-php/mod_php:mkconfig - Package up files required for php-config package (for maintainer use only)
 dev-php/php-cgi:force-cgi-redirect - Enable security check for internal server redirects.
@@ -334,10 +334,10 @@ dev-util/eclipse-sdk:firefox - Pick embedded browser from Mozilla Firefox
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
 dev-util/eric:idl - Enable omniorb support
-dev-util/git:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs
-dev-util/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
-dev-util/git:nocurl - This use flag prevents git-http-pull since GIT will be built without curl
 dev-util/git:gitsendemail - Installs a script that sends patches to email address's
+dev-util/git:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs
+dev-util/git:nocurl - This use flag prevents git-http-pull since GIT will be built without curl
+dev-util/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/global:vim - vim funny stuff for global
 dev-util/kdevelop:ada - Enable support for the ada programming language
@@ -372,12 +372,12 @@ games-kids/gcompris:editor - Build the optional editor program.
 games-mud/mmucl:mccp - adds support for the Mud Client Compression Protocol
 games-rpg/eternal-lands:mapeditor - Install the mapeditor as well as the game
 games-rpg/eternal-lands:nomusic - Disable install of music files
-games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
-games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
-games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-rpg/nwn-data:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn-data:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-rpg/nwn-data:sou - Installs the Shadows of Undrentide expension pack
+games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
+games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
+games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
 games-simulation/openttd:timidity - Add sound support (timidity)
 games-strategy/freecraft-fcmp:music - Installs optional music data
 games-strategy/freelords:editor - Installs optional map editor
