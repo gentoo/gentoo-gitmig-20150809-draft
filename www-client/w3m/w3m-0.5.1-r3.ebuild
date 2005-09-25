@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r3.ebuild,v 1.1 2005/09/21 16:04:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r3.ebuild,v 1.2 2005/09/25 00:09:19 matsuu Exp $
 
 inherit eutils
 
@@ -20,9 +20,9 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~ppc64 ~ia64 ~ppc-macos"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~ppc-macos ~sparc x86"
 IUSE="X async fbcon gpm gtk imlib lynxkeymap migemo nls ssl unicode xface"
-#IUSE="canna unicode"
+#IUSE="canna"
 
 # canna? ( app-i18n/canna )
 # We cannot build w3m with gtk+2 w/o X because gtk+2 ebuild doesn't
