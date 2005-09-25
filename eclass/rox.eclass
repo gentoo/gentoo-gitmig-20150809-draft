@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.6 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.7 2005/09/25 11:05:50 svyatogor Exp $
 
 # ROX eclass Version 2
 
@@ -16,6 +16,11 @@
 
 # For examples refer to ebuilds in rox-extra/
 
+# need python to byte compile modules, if any
+inherit python
+
+ECLASS=rox
+INHERITED="${INHERITED} ${ECLASS}"
 
 if [ -z "$ROX_VER" ]; then
 	ROX_VER="2.1.0"
@@ -53,26 +58,27 @@ rox_src_install() {
 	fi
 	insinto /usr/lib/rox
 	doins -r ${APPNAME}
-	#set correct permisions on files, in case they are wrong
-	chmod 755 ${D}/usr/lib/rox/${APPNAME}/AppRun
-	chmod 755 ${D}/usr/lib/rox/${APPNAME}/AppletRun
+	#set correct permissions on files, in case they are wrong
+	#include all subdirectories in search, just in case
+	find ${D}/usr/lib/rox/${APPNAME} -name 'AppRun' | xargs chmod 755 	>/dev/null 2>&1
+	find ${D}/usr/lib/rox/${APPNAME} -name 'AppletRun' | xargs chmod 755 >/dev/null 2>&1
 
-	# set permisions for programms where we have libdir script
+	# set permissions for programs where we have libdir script
 	if [ -f ${D}/usr/lib/rox/${APPNAME}/libdir ]; then
-	    chmod 755 ${D}/usr/lib/rox/${APPNAME}/libdir
+		chmod 755 ${D}/usr/lib/rox/${APPNAME}/libdir
 	fi
 
-	# set permisiaon for programms where we have rox_run script (all who using rox-clib )
+	# set permissions for programs where we have rox_run script (all who using rox-clib )
 	if [ -f ${D}/usr/lib/rox/${APPNAME}/rox_run ]; then
 	    chmod 755 ${D}/usr/lib/rox/${APPNAME}/rox_run
 	fi
 
-	# some programms have choice_install script
+	# some programs have choice_install script
 	if [ -f ${D}/usr/lib/rox/${APPNAME}/choice_install ]; then
 	    chmod 755 ${D}/usr/lib/rox/${APPNAME}/choice_install
 	fi
 
-	# set permisions on all binares files for compiled programms per arch
+	# set permissions on all binares files for compiled programs per arch
 	if [ -n "$SET_PERM" ]; then
 	    ARCH="`uname -m`"
 	    case $ARCH in
@@ -84,13 +90,18 @@ rox_src_install() {
 
 	#create a script in bin to run the application from command line
 	dodir /usr/bin/
-	echo "#!/bin/sh" > "${D}/usr/bin/${APPNAME}"
-	echo "exec /usr/lib/rox/${APPNAME}/AppRun \"\$@\"" >> "${D}/usr/bin/${APPNAME}"
-	chmod a+x ${D}/usr/bin/${APPNAME}
+	cat >${D}/usr/bin/${APPNAME} <<EOF
+#!/bin/sh
+exec /usr/lib/rox/${APPNAME}/AppRun "\$@"
+EOF
+	chmod 755 ${D}/usr/bin/${APPNAME}
+
+	#now compile any and all python files
+	python_mod_optimize $D/usr/lib/rox/${APPNAME} >/dev/null 2>&1
 }
 
 rox_pkg_postinst() {
-	einfo "The $APPNAME has been installed into /usr/lib/rox"
+	einfo "$APPNAME has been installed into /usr/lib/rox"
 	einfo "You can run it by enter $APPNAME in command line or"
 	einfo "can run it by pointing Rox file manage to that location"
 	einfo "and click on new application"
