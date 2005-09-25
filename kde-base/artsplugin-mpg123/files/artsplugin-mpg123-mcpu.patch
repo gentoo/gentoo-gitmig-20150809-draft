@@ -1,0 +1,12 @@
+Index: kdemultimedia-3.4.91/mpg123_artsplugin/configure.in.in
+===================================================================
+--- kdemultimedia-3.4.91/mpg123_artsplugin/configure.in.in.orig
++++ kdemultimedia-3.4.91/mpg123_artsplugin/configure.in.in
+@@ -59,7 +59,6 @@ if test "$ARCH_TYPE" = "i686" -a "$MMX_S
+ fi
+ # ARCH_PPC
+ if test "$ARCH_TYPE" = "ppc"; then
+-	ARCH_CFLAGS="$ARCH_CFLAGS -mcpu=ppc"
+ 	MPG123_PLAT_LIB=libmpppc.la
+ fi
+ # ARCH_ULTRA
