@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-9999.ebuild,v 1.2 2004/12/11 23:36:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-9999.ebuild,v 1.3 2005/09/25 06:53:57 vapier Exp $
 
 ECVS_MODULE="e17/apps/e"
 inherit enlightenment
@@ -14,6 +14,14 @@ DEPEND="sys-devel/libtool
 	dev-libs/eet
 	dev-libs/embryo
 	x11-libs/evas"
+
+pkg_setup() {
+	if ! built_with_use media-libs/edje png ; then
+		eerror "Re-emerge edje with USE=png"
+		die "Re-emerge edje with USE=png"
+	fi
+	enlightenment_pkg_setup
+}
 
 src_install() {
 	enlightenment_src_install
