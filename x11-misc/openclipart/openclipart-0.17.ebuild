@@ -1,19 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.12.ebuild,v 1.3 2005/07/09 07:34:31 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.17.ebuild,v 1.1 2005/09/25 21:09:37 nelchael Exp $
 
 inherit eutils
 
 DESCRIPTION="Open Clip Art Library (openclipart.org)"
 HOMEPAGE="http://www.openclipart.org/"
-SRC_URI="http://www.openclipart.org/downloads/${PV}/${P}.tar.bz2"
+SRC_URI="http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2"
 
 LICENSE="public-domain" # creative commons
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc svg png pdf wmf gzip"
 
-# we don't really need anything to run, but compression is optionally needed
+# we don't really need anything to run
 DEPEND=""
 RDEPEND=""
 
@@ -64,7 +64,7 @@ src_compile() {
 
 src_install() {
 	local DIR FILES
-	dodoc LICENSE.txt README.txt
+	dodoc LICENSE README
 	find -type d | sort | while read DIR
 	do
 		FILES=$(select_files "$DIR")
