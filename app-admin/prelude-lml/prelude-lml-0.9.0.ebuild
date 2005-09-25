@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.9.0.ebuild,v 1.1 2005/09/23 03:41:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/prelude-lml-0.9.0.ebuild,v 1.2 2005/09/25 02:13:22 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="doc debug"
 DEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!app-admin/prelude-lml-cvs
-	>=dev-libs/libprelude-0.9.0_rc1
+	>=dev-libs/libprelude-0.9.0
 	dev-libs/libpcre
 	doc? ( dev-util/gtk-doc )"
 
