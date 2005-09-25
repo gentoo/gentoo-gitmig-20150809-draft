@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4aabe2e9b6ed4b1dc1c14bdf5f378f91 ChangeLog 1150
-MD5 1e0055ff3096b4f687a6d56997a6f796 pmount-0.9.3-r3.ebuild 1486
+MD5 3ff17ae0e7345d0dae285f5cc3369236 pmount-0.9.3-r3.ebuild 1493
+MD5 9569a5aa1da05a027f7803b2e4be0a27 ChangeLog 1252
 MD5 aac86bf5e50eb9cef83a6f6800c560af metadata.xml 253
 MD5 840c7e69303d19acc8e0a62976a4c135 files/digest-pmount-0.9.3-r3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDMGbaKRy60XGEcJIRAp+IAKCOpvXcLSlacidzaTp8oSS9pBTFNQCfU4s9
-cN/WVn9wKRKfT56VY6/pLLU=
-=BlZA
------END PGP SIGNATURE-----
