@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.1 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.2 2005/09/25 15:21:22 kloeri Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -34,8 +34,12 @@ EXT_DIR="`${PHPCONFIG} --extension-dir 2>/dev/null`"
 # ---end ebuild configurable settings
 
 DEPEND="${DEPEND}
-		>=sys-devel/m4-1.4
-		>=sys-devel/libtool-1.4.3"
+		>=sys-devel/m4-1.4.3
+		>=sys-devel/libtool-1.5.18
+		>=sys-devel/automake-1.9.6
+		sys-devel/automake-wrapper
+		>=sys-devel/autoconf-2.59
+		sys-devel/autoconf-wrapper"
 
 php-ext-base-r1_buildinilist() {
 	# work out the list of .ini files to edit/add to
@@ -65,7 +69,7 @@ php-ext-base-r1_src_install() {
 
 php-ext-base-r1_addextension() {
 	if [ "${PHP_EXT_ZENDEXT}" = "yes" ] ; then
-		if built_with_use =${PHP_PKG} apache2 threads ; then
+		if has_zts ; then
 			ext_type="zend_extension_ts"
 			ext_file="${EXT_DIR}/$1"
 		else

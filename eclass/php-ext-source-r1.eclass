@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.1 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.2 2005/09/25 15:21:22 kloeri Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -25,8 +25,12 @@ EXPORT_FUNCTIONS src_compile src_install
 # ---end ebuild configurable settings
 
 DEPEND="${DEPEND}
-		>=sys-devel/m4-1.4
-		>=sys-devel/libtool-1.4.3"
+		>=sys-devel/m4-1.4.3
+		>=sys-devel/libtool-1.5.18
+		>=sys-devel/automake-1.9.6
+		sys-devel/automake-wrapper
+		>=sys-devel/autoconf-2.59
+		sys-devel/autoconf-wrapper"
 
 php-ext-source-r1_src_compile() {
 	# pull in the PHP settings
@@ -34,7 +38,7 @@ php-ext-source-r1_src_compile() {
 	my_conf="${my_conf} --prefix=${PHPPREFIX} --with-php-config=${PHPCONFIG}"
 	addpredict /usr/share/snmp/mibs/.index
 	#phpize creates configure out of config.m4
-	export WANT_AUTOMAKE=1.6
+	export WANT_AUTOMAKE=1.9 WANT_AUTOCONF=2.5
 	${PHPIZE}
 	./configure ${my_conf} || die "Unable to configure code to compile"
 	emake || die "Unable to make code"

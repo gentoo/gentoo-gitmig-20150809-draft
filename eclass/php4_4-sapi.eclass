@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.3 2005/09/18 12:57:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.4 2005/09/25 15:21:22 kloeri Exp $
 #
 # ########################################################################
 #
@@ -46,6 +46,12 @@ DEPEND="${DEPEND}
 	!dev-php/php
 	!dev-php/php-cgi
 	!dev-php/mod_php
+	>=sys-devel/m4-1.4.3
+	>=sys-devel/libtool-1.5.18
+	>=sys-devel/automake-1.9.6
+	sys-devel/automake-wrapper
+	>=sys-devel/autoconf-2.59
+	sys-devel/autoconf-wrapper
 	berkdb? ( =sys-libs/db-4* )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( dev-db/cdb )
@@ -217,7 +223,7 @@ php4_4-sapi_check_awkward_uses() {
 	confutils_use_depend_all "solid"		"odbc"
 
 	# PEAR support
-	confutils_use_depend_all "pear"			"cli" "pcre" "xml"
+	confutils_use_depend_all "pear"			"cli" "pcre" "xml" "zlib"
 
 	# Readline and libedit do the same thing; you can't have both
 	confutils_use_conflict "readline" "libedit"
