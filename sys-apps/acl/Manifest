@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6a8cb2900cbf017fc249b6c6facc6c74 ChangeLog 5895
+MD5 3fb8481acda7e25fc113503048270918 acl-2.2.27.ebuild 1472
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 89190d1927c01dcf4ab26d7c9cae87d4 acl-2.2.31.ebuild 1280
-MD5 ab7369108a8dc89c122acb92afa60b88 ChangeLog 5749
-MD5 71c37c5e792f4001cac7c054f9fea620 acl-2.2.27.ebuild 1470
-MD5 089e5cae0e2e085a622fd209e91b0cec files/digest-acl-2.2.31 66
 MD5 ceae91d3b0c364559020d5a1737763ce files/acl-2.2.27-nls.patch 1282
 MD5 202ece244d099994a2eda97e02a85a15 files/digest-acl-2.2.27 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGNfmgIKl8Uu19MoRAn6vAJ44/5JaPKV32Xi2Zu4On83IT68JuwCggv0I
-dMM2kMPLw6wncpHDMN9/z/A=
-=g10W
------END PGP SIGNATURE-----
+MD5 089e5cae0e2e085a622fd209e91b0cec files/digest-acl-2.2.31 66

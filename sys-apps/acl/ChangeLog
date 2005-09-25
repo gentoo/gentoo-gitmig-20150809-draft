@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.42 2005/09/02 22:52:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.43 2005/09/25 11:20:57 redhatter Exp $
+
+  25 Sep 2005; Stuart Longland <redhatter@gentoo.org> acl-2.2.27.ebuild:
+  Marking stable as per bug #73278 (which has hung around for yonks)
 
 *acl-2.2.31 (02 Sep 2005)
 
