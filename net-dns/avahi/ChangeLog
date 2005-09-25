@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.11 2005/09/20 14:52:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.12 2005/09/25 13:26:04 swegener Exp $
+
+  25 Sep 2005; Sven Wegener <swegener@gentoo.org> -avahi-0.4.ebuild:
+  Removed old ebuild.
 
   20 Sep 2005; Sven Wegener <swegener@gentoo.org> avahi-0.5.ebuild:
   Updated mono dependency, bug #106640. Thanks to Frederick Martin.
