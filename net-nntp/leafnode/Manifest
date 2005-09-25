@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b63cdf975c6b0e4033e3ceac16357126 leafnode-1.11.3.ebuild 1530
-MD5 996af0ec1da3994ff6dbcb85274d6f1e leafnode-2.0.0_alpha20050514.ebuild 2147
-MD5 a3e2b47ca29a487438674c53e90dbc5d ChangeLog 11822
-MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 dbc24acfe37122337d045dc7045c6dd7 files/local.groups 83
-MD5 510836c882c3365d0441ba7d8854ba6b files/leafnode.xinetd 230
-MD5 5909cb0566e88e7694e85246c78fe4ff files/fetchnews.cron 177
+MD5 08f932bdc1f88a6364eb9f26339ae0b5 ChangeLog 12040
 MD5 ee50839a364965911fa700d599b16d7a files/digest-leafnode-1.11.3 72
+MD5 0badba1fb24fd281e875516fe5767928 files/digest-leafnode-2.0.0_alpha20050914 82
+MD5 5909cb0566e88e7694e85246c78fe4ff files/fetchnews.cron 177
+MD5 510836c882c3365d0441ba7d8854ba6b files/leafnode.xinetd 230
+MD5 dbc24acfe37122337d045dc7045c6dd7 files/local.groups 83
 MD5 c26d4b571aa7c3964a7e9fa0a10a3c90 files/moderators 29
-MD5 7825c744d2fcc19505159fab63ec7e83 files/digest-leafnode-2.0.0_alpha20050514 82
 MD5 72cc5e849b413ec0cf288a65980dd3b5 files/texpire.cron 158
+MD5 b63cdf975c6b0e4033e3ceac16357126 leafnode-1.11.3.ebuild 1530
+MD5 23ff80370c03c92133f70490748e5cd0 leafnode-2.0.0_alpha20050914.ebuild 1660
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCqvK6I1lqEGTUzyQRAgz0AJ4xB+9hUlHFEwSCfJi8PA12YfkHSQCdEhoK
-lA8Q4qgbsNFKSI0nRDRU1b8=
-=Bxpm
+iD8DBQFDNqq+I1lqEGTUzyQRAuXqAJ9NDATAMqwd/CZNjQKq8FgIL7UESACfSzh5
+KAnDSBs9CAVRIemDpINMH58=
+=YAMe
 -----END PGP SIGNATURE-----

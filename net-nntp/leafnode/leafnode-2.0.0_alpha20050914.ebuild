@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050514.ebuild,v 1.1 2005/06/11 14:18:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-2.0.0_alpha20050914.ebuild,v 1.1 2005/09/25 13:48:26 swegener Exp $
 
 inherit flag-o-matic
 
@@ -32,15 +32,17 @@ src_compile() {
 		--with-spooldir=/var/spool/news \
 		$(use_with ipv6) \
 		$(use_with pam) \
-		|| die "./configure failed"
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	rm -rf "${D}"/var/spool
-	keepdir /var/lock/news
+	keepdir \
+		/var/lock/news \
+		/var/lib/news \
+		/var/spool/news
 
 	insinto /etc/leafnode
 	doins "${FILESDIR}"/{local.groups,moderators} || die "doins failed"
@@ -49,28 +51,12 @@ src_install() {
 	newins "${FILESDIR}"/leafnode.xinetd leafnode-nntp || die "newins failed"
 
 	exeinto /etc/cron.hourly
-	doexe "${FILESDIR}"/fetchnews.cron || die "doexe failed"
+	newexe "${FILESDIR}"/fetchnews.cron fetchnews || die "doexe failed"
 	exeinto /etc/cron.daily
-	doexe "${FILESDIR}"/texpire.cron || die "doexe failed"
+	newexe "${FILESDIR}"/texpire.cron texpire || die "doexe failed"
 
 	dodoc \
 		AUTHORS COPYING* CREDITS ChangeLog DEBUGGING ENVIRONMENT FAQ \
 		INSTALL NEWS TODO README || die "dodoc failed"
 	dohtml README.html || die "dohtml failed"
-}
-
-pkg_postinst() {
-	mkdir -p "${ROOT}"/var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
-	mkdir -p "${ROOT}"/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
-
-	chown -R news:news "${ROOT}"/var/spool/news
-	find "${ROOT}"/var/spool/news -type d -exec chmod 02775 {} \;
-
-	zcat "${ROOT}"/usr/share/doc/${PF}/README_FIRST.gz | while read line
-	do
-		einfo "${line}"
-	done
-
-	einfo
-	einfo "DO MAKE SURE THAT YOU RUN texpire -r IF YOU HAVE ARTICLES IN THE SPOOL"
 }
