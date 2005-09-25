@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.36 2005/07/23 23:39:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.37 2005/09/25 15:10:08 chrb Exp $
+
+  25 Sep 2005; Chris Bainbridge <chrb@gentoo.org>
+  libstdc++-v3-3.3.3-r1.ebuild, libstdc++-v3-3.3.4.ebuild,
+  libstdc++-v3-3.3.6.ebuild:
+  Remove gcc 3.4 flag -mno-tls-direct-seg-refs, bug #103827
 
   23 Jul 2005; Tony Vroon <chainsaw@gentoo.org> libstdc++-v3-3.3.4.ebuild,
   libstdc++-v3-3.3.6.ebuild:

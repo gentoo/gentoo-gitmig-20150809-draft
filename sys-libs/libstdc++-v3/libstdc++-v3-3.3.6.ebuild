@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.3 2005/07/24 09:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.4 2005/09/25 15:10:08 chrb Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -87,6 +87,7 @@ do_filter_flags() {
 	filter-flags -funit-at-a-time
 	filter-flags -fweb
 	filter-flags -fno-web
+	filter-flags -mno-tls-direct-seg-refs
 
 	# xgcc isnt patched with propolice
 	filter-flags -fstack-protector-all
