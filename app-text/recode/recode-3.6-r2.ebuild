@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.2 2005/09/25 06:35:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.3 2005/09/25 11:38:54 vapier Exp $
 
 inherit flag-o-matic eutils libtool
 
 DEB_VER=11
 DESCRIPTION="Convert files between various character sets"
 HOMEPAGE="http://recode.progiciels-bpi.ca/"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz
-	mirror://debian/pool/main/r/recode/recode_${PV}-${DEB_VER}.diff.gz"
+SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +19,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${WORKDIR}"/recode_${PV}-${DEB_VER}.diff
+	epatch "${FILESDIR}"/${P}-debian-${DEB_VER}.patch
 
 	if use ppc-macos; then
 		epatch "${FILESDIR}"/${P}-ppc-macos.diff

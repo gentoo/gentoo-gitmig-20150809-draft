@@ -1,6 +1,11 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.32 2005/09/25 03:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.33 2005/09/25 11:38:54 vapier Exp $
+
+  25 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/recode-3.6-debian-11.patch, recode-3.6-r2.ebuild:
+  Just rip out the useful chunks from the Debian patchset so we dont have to
+  screw around with autotools.
 
 *recode-3.6-r2 (25 Sep 2005)
 
