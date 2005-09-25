@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.25 2005/09/17 02:00:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.26 2005/09/25 15:50:32 ka0ttic Exp $
+
+  25 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> fbpanel-4.3.ebuild:
+  Don't let build override CC and CFLAGS, bug #106263.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> fbpanel-4.3.ebuild:
   Mark 4.3 stable on alpha
