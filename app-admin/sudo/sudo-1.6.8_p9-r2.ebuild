@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r2.ebuild,v 1.5 2005/09/21 09:28:25 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p9-r2.ebuild,v 1.6 2005/09/25 16:28:10 taviso Exp $
 
 inherit eutils pam
 
@@ -18,6 +18,7 @@ DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	ldap? ( >=net-nds/openldap-2.1.30-r1 )
 	skey? ( >=app-admin/skey-1.1.5-r1 )
 	sys-devel/bison
+	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
@@ -149,7 +150,7 @@ src_install() {
 	if has_version virtual/pam; then
 		pamd_mimic_system sudo auth account password session
 	else
-		newpamd ${FILESDIR}/sudo-1.6.8_p8 sudo
+		dopamd ${FILESDIR}/sudo
 	fi
 
 	insinto /etc
