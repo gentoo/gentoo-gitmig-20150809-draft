@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.21 2005/09/16 01:53:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.22 2005/09/25 14:10:45 griffon26 Exp $
+
+*rpc2-1.28 (23 Sep 2005)
+
+  23 Sep 2005; Maurice van der Pot <griffon26@gentoo.org> +rpc2-1.28.ebuild:
+  Added rpc2 1.28 for new coda release 6.0.12
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> rpc2-1.27.ebuild:
   Mark 1.27 stable on alpha

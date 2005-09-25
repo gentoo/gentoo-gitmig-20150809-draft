@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
-MD5 24b0ef40b39022648507a8feb8779006 ChangeLog 2995
-MD5 53eaae10ba9f0a9804d5cab6c48fd23f rpc2-1.27.ebuild 693
 MD5 2c1971926f6e952f6c2eb36548ba6fda rpc2-1.25.ebuild 685
-MD5 d76f83c7ea459ced23c70f97e5d8dc3f files/digest-rpc2-1.27 61
+MD5 53eaae10ba9f0a9804d5cab6c48fd23f rpc2-1.27.ebuild 693
+MD5 c39f74f161ceeaa26ed8253e728495ab ChangeLog 3146
+MD5 abaded235389d3007e90a10f79eca90b rpc2-1.28.ebuild 697
 MD5 afd955627beb0c85e99173637166065a files/digest-rpc2-1.25 61
+MD5 d76f83c7ea459ced23c70f97e5d8dc3f files/digest-rpc2-1.27 61
+MD5 7f397cf4cdb57ccdc37cd991c3e22aa4 files/digest-rpc2-1.28 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNq/+MGnpIbeahxwRApVLAJ99rPFzQ4uS8gj04WoSujMlIsgl2QCaAyGg
+xnoM8FtwntwKEk0khqP6wv8=
+=JEMk
+-----END PGP SIGNATURE-----
