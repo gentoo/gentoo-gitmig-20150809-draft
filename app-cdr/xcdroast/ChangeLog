@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.44 2005/09/25 12:12:48 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.45 2005/09/25 16:27:28 metalgod Exp $
+
+  25 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  xcdroast-0.98_alpha15-r3.ebuild:
+  Removed gtk1 support now this package will be forced to build only with gtk2
+  support.
 
   25 Sep 2005; Luis Medinas <metalgod@gentoo.org>
   xcdroast-0.98_alpha15-r3.ebuild:
