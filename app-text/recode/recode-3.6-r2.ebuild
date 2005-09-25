@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.1 2005/09/25 03:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.2 2005/09/25 06:35:12 vapier Exp $
 
 inherit flag-o-matic eutils libtool
 
 DEB_VER=11
 DESCRIPTION="Convert files between various character sets"
-HOMEPAGE="http://www.gnu.org/software/recode/"
+HOMEPAGE="http://recode.progiciels-bpi.ca/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz
 	mirror://debian/pool/main/r/recode/recode_${PV}-${DEB_VER}.diff.gz"
 
