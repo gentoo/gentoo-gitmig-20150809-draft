@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.20 2005/08/02 12:51:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.21 2005/09/25 23:27:32 azarah Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -182,8 +182,21 @@ mozconfig_init() {
 	mozconfig_use_enable ipv6
 	mozconfig_use_enable xinerama
 	mozconfig_use_enable xprint
-	mozconfig_use_enable truetype freetype2
-	mozconfig_use_enable truetype freetypetest
+
+	if [[ ${MOZ_FREETYPE2} == "no" ]] ; then
+		# Newer mozilla/firefox builds should use xft and not freetype.
+		# Should be default for mozilla-1.7.12 and mozilla-firefox-1.0.7.
+		# Not sure if we should enable xft in this case, but might clash
+		# with USE=moznoxft ...
+		# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c139
+		# https://bugzilla.mozilla.org/show_bug.cgi?id=215219i
+		#mozconfig_use_enable truetype freetype2
+		#mozconfig_use_enable truetype freetypetest
+		mozconfig_annotate gentoo --disable-freetype2
+	else
+		mozconfig_use_enable truetype freetype2
+		mozconfig_use_enable truetype freetypetest
+	fi
 
 	if use debug; then
 		mozconfig_annotate +debug \
