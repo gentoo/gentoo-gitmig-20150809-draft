@@ -9,7 +9,7 @@ MD5 807c722806216ba00fc787b70baf93e5 mandrake-artwork-0.9.1-r1.ebuild 1371
 MD5 579d1d6f048154239798e9cd9ba9ee76 mandrake-artwork-0.9.ebuild 1407
 MD5 8949cd9feac4d4bc96fa97b2fd86641d ChangeLog 3848
 MD5 80bbd4e4ca0f45155459f15b38c2ec3b mandrake-artwork-0.9.6.ebuild 1584
-MD5 c5173a187ae7918e452e3f10b43d7ffd mandrake-artwork-1.0.2.ebuild 1685
+MD5 8ea66429b25409a513f24595333b6127 mandrake-artwork-1.0.2.ebuild 1462
 MD5 2f96c2ed82e3d4380e2678d931dc9238 files/digest-mandrake-artwork-0.9.3 70
 MD5 10b1eca8f5057c4501458d31fc3d7f11 files/digest-mandrake-artwork-1.0.2 70
 MD5 3edca42eb97517ded61d3787226a8549 files/digest-mandrake-artwork-0.9.1-r1 70
@@ -21,7 +21,7 @@ MD5 18491a6a8d22c319b0dd7016ab0264ca files/digest-mandrake-artwork-0.9.6 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNoClgIKl8Uu19MoRAv78AJ4i5xXSlcVaA4QLT5Yshd48D6l8UwCfZ+vv
-7hGqOAQjMPUM1YOOVyii8OE=
-=IRq3
+iD8DBQFDNoJpgIKl8Uu19MoRAltuAJ9XbXLc+hW5luAqziHSONQqPrT7agCfUtrF
+sMDB+d+fIx6OY5D0A/XHkxc=
+=dUzN
 -----END PGP SIGNATURE-----
