@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/ltp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.5 2005/08/07 12:04:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.6 2005/09/25 01:56:21 dragonheart Exp $
+
+  25 Sep 2005; Daniel Black <dragonheart@gentoo.org> ltp-20041104.ebuild,
+  ltp-20041203.ebuild:
+  fixed to use treecopy for BSD compatibility - bug #106443 - thanks Diego
+  Pettenò
 
   07 Aug 2005; Simon Stelling <blubb@gentoo.org> ltp-20041203.ebuild:
   added ~amd64 keyword

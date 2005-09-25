@@ -1,10 +1,20 @@
-MD5 f45f417bed36364437c59779c00daeec ChangeLog 1017
-MD5 5577d51f140105e12307dcdb1fddfafc ltp-20041104.ebuild 1160
-MD5 66d494f650a410258f323406f7447ec3 ltp-20041203.ebuild 1174
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 74a2723b6f19ea4f80877c1f1691823e ltp-20041104.ebuild 1166
 MD5 f592f012ff1df95e9b2dcd743df2405b metadata.xml 402
+MD5 aa6785d698d947a65cf21966c136f156 ChangeLog 1206
+MD5 22e4f09bf12f55f1e546a1ab4c7fafed ltp-20041203.ebuild 1184
+MD5 e2a7ff766a942e7a6a8e299cb74edacb files/runltp-path.patch 387
 MD5 e4bb569a7ad39bd83b66430469168d6b files/IDcheck-noninteractive.patch 729
 MD5 d1ba3a9b21ea0697d2b92b74e9147231 files/digest-ltp-20041104 67
+MD5 e17b3facc501915809ff69e8f9a12056 files/ltp-ballista-paths.patch 8166
 MD5 acbebd9bb97c2f8b55f62c4c87a48deb files/digest-ltp-20041203 67
 MD5 1c87578ced34310bd048cc03c9ac45c4 files/ltp-20041203-ballista-paths.patch 6203
-MD5 e17b3facc501915809ff69e8f9a12056 files/ltp-ballista-paths.patch 8166
-MD5 e2a7ff766a942e7a6a8e299cb74edacb files/runltp-path.patch 387
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNgPWmdTrptrqvGERAj4PAKCIuRDWEYE++4/xifq2rRrOaxunNwCfWc9n
+EDzPZ/6Hx+tgv2DILf3Grnk=
+=u0pP
+-----END PGP SIGNATURE-----

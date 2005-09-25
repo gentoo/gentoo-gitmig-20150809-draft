@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20041203.ebuild,v 1.4 2005/08/07 12:04:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20041203.ebuild,v 1.5 2005/09/25 01:56:21 dragonheart Exp $
 
-inherit eutils
+inherit eutils portability
 
 MY_P="${PN}-full-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ltp/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE=""
 
@@ -35,7 +35,7 @@ src_install() {
 	make install || die "install failed"
 
 	mkdir -p ${D}/usr/libexec/ltp/testcases ${D}/usr/bin/ || die "mkdir failed"
-	cp --parents -r testcases pan/pan runtest ver_linux IDcheck.sh ${D}/usr/libexec/ltp || die "cp failed"
+	treecopy testcases pan/pan runtest ver_linux IDcheck.sh ${D}/usr/libexec/ltp || die "cp failed"
 	cp runltp runalltests.sh ${D}/usr/bin || die "cp failed"
 
 	# TODO: fix this so it works from "outside" the source tree
