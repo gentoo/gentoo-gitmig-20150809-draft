@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45d226539fc0e2d3f242fc56abe228b1 ChangeLog 3624
-MD5 bca2ecf18b913eeb713049629869c429 metadata.xml 323
 MD5 3995b97c3f5bc9cc62600062c8ca3ae1 cdrecord-prodvd-2.01.01-r1.ebuild 1007
-MD5 582eee47fac258556c9594d7b296c6ab files/cdrecord-wrapper.sh 472
+MD5 45d226539fc0e2d3f242fc56abe228b1 ChangeLog 3624
+MD5 42a9c4f7512d4e79a0b119838d1adcd3 metadata.xml 235
 MD5 b634591137522e7730456a726a32c008 files/digest-cdrecord-prodvd-2.01.01-r1 86
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCrDJD5mJXAu5GbtIRAkOJAJkBzo8T/pf85YN6+WnOLa/J7w6B0QCfWb/5
-IKhbYQNupRELCQS8wsRYidI=
-=qDys
------END PGP SIGNATURE-----
+MD5 582eee47fac258556c9594d7b296c6ab files/cdrecord-wrapper.sh 472

@@ -1,5 +1,5 @@
-MD5 47626f89f956a2047a88831a017860fd ChangeLog 4283
 MD5 ed6e64dd824930a48f96e09642ca964e dvd+rw-tools-5.21.4.10.8.ebuild 956
-MD5 34aff7ebf51a9a0fea022909fe8e86f1 metadata.xml 420
+MD5 47626f89f956a2047a88831a017860fd ChangeLog 4283
+MD5 253771ef61712813c70a378507085662 metadata.xml 287
 MD5 fce4ae0aea831d5b1f176e8dcff5059f files/01_all_samsung-media-fix.patch 701
 MD5 753e5e7fcdcc5b990cee000f16b2507f files/digest-dvd+rw-tools-5.21.4.10.8 76
