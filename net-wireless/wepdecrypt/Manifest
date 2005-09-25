@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2e4af653ae912ece1008f58a7a42ee33 wepdecrypt-0.7.ebuild 1054
-MD5 9b225b40b96ee94ecf13b15a9e7c43a3 wepdecrypt-0.6.ebuild 746
+MD5 cfdc1a645e994ea68053fbb6c2f49480 ChangeLog 911
 MD5 2603eeeb20b24caddac3e9ce6996f357 metadata.xml 251
-MD5 def6e769d5a1427543da1c92e2710a21 ChangeLog 787
-MD5 e716a841224316bea78aec9e1c6901c5 files/digest-wepdecrypt-0.7 65
+MD5 9b225b40b96ee94ecf13b15a9e7c43a3 wepdecrypt-0.6.ebuild 746
+MD5 24ebabfc90f0baa0909a26bfa796341e wepdecrypt-0.7.ebuild 1059
 MD5 e49207bf0ce5d9c2120dda758124196b files/digest-wepdecrypt-0.6 65
+MD5 e716a841224316bea78aec9e1c6901c5 files/digest-wepdecrypt-0.7 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDK2GjLLFUmVNQ7rkRAlTGAKC25fRzMelUf0FdeNIcDIj9ZIBtAwCgtraT
-lryXSUMM6cH6oBIa14/QGK4=
-=QBUX
+iD8DBQFDNngnmdTrptrqvGERAjlTAJ0aA+cMCgmCWkz2MCoERiCAt2WFkgCeMh7U
+s4gd7oG7hvWFb6qn4SSEoEY=
+=+N7l
 -----END PGP SIGNATURE-----
