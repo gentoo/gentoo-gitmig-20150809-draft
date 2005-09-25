@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.8 2005/09/25 12:30:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.9 2005/09/25 15:59:18 svyatogor Exp $
 
 # ROX eclass Version 2
 
@@ -94,7 +94,7 @@ EOF
 	chmod 755 ${D}/usr/bin/${APPNAME}
 
 	#now compile any and all python files
-	python_mod_optimize $D/usr/lib/rox/${APPNAME} >/dev/null 2>&1
+	python_mod_optimize ${D}/usr/lib/rox/${APPNAME} >/dev/null 2>&1
 }
 
 rox_pkg_postinst() {
