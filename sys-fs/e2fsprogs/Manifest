@@ -1,30 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84243bd9d25301bcbbb58599a2dd9f5d ChangeLog 13071
-MD5 85f36b5553a8d70e2fea0709edbc74f1 e2fsprogs-1.35-r1.ebuild 3271
-MD5 7110400b8107690e0f1ec51538148f9b e2fsprogs-1.36-r2.ebuild 2519
-MD5 0577d34f83fb9b4c593ed88ff96edf02 e2fsprogs-1.36.ebuild 3294
 MD5 fa9189b7073d4c93726ab05bfa396db4 e2fsprogs-1.37-r1.ebuild 3297
-MD5 1204b9ef213580d5e95cc699846fcdc4 e2fsprogs-1.37.ebuild 2978
-MD5 f61ef64c89b41792f6a7b0d2fc721bdb e2fsprogs-1.38.ebuild 3458
+MD5 85f36b5553a8d70e2fea0709edbc74f1 e2fsprogs-1.35-r1.ebuild 3271
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35-r1 67
-MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36 67
-MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36-r2 67
-MD5 65689a8be4c1b58f8e64f22165313292 files/digest-e2fsprogs-1.37 67
-MD5 65689a8be4c1b58f8e64f22165313292 files/digest-e2fsprogs-1.37-r1 67
-MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38 67
+MD5 f61ef64c89b41792f6a7b0d2fc721bdb e2fsprogs-1.38.ebuild 3458
+MD5 7110400b8107690e0f1ec51538148f9b e2fsprogs-1.36-r2.ebuild 2519
+MD5 84243bd9d25301bcbbb58599a2dd9f5d ChangeLog 13071
 MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
-MD5 c5e6ed46f8a6b9f75273863110887b22 files/e2fsprogs-1.36-makefile.patch 3546
-MD5 4a7d54ccac4002d10462c40660712a72 files/e2fsprogs-1.36-sed-locale.patch 2142
+MD5 e86bf4d241506baff5f647cbd30ae7a0 files/digest-e2fsprogs-1.36-r2 67
 MD5 e49935e8abf94d6e906bad2d068d43c3 files/e2fsprogs-1.37-e2p-test.patch 380
-MD5 f079047f6885f762f6fa838b55236cb2 files/e2fsprogs-sed-locale.patch 5989
+MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35-r1 67
+MD5 4a7d54ccac4002d10462c40660712a72 files/e2fsprogs-1.36-sed-locale.patch 2142
+MD5 0911aedd4968aa4053139791a961e2a2 files/digest-e2fsprogs-1.38 67
+MD5 65689a8be4c1b58f8e64f22165313292 files/digest-e2fsprogs-1.37-r1 67
 MD5 e85d057f99af6c980acf9a8697da9dd7 files/e2fsprogs-1.38-disconnected-inodes.patch 2881
+MD5 c5e6ed46f8a6b9f75273863110887b22 files/e2fsprogs-1.36-makefile.patch 3546
+MD5 f079047f6885f762f6fa838b55236cb2 files/e2fsprogs-sed-locale.patch 5989
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIHBXEZCkKN40op4RApowAJ44leVDFz9M2IzCprx/rz9x/IUxNQCeJTkX
-K7JuzfCDkDsAfhEaVjDtz58=
-=/Oxd
+iD8DBQFDNyO2gIKl8Uu19MoRAgPpAJ9E/nNdlf60J3yQUAB4tT/Z6DvT9wCfUY1i
+gWUy7bp0ntGVYf/JV3ytMuc=
+=GKFH
 -----END PGP SIGNATURE-----
