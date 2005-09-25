@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6e427d77df693bcabefe381b040c830 ChangeLog 1003
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 e9eed0598402a0b172d0ac6a4808b59a wmbutton-0.5.ebuild 929
@@ -6,3 +9,10 @@ MD5 7d562ae9a457c07a11b6c6038769dc6f files/sample.wmbutton 659
 MD5 542aee10cbc05b839c1f6d09f98b6406 files/wmbutton-buttons.xpm 25003
 MD5 76263f6d447775d0a50f3a42e9e8299e files/wmbutton-cflags.patch 483
 MD5 1bbe314d935c36bdb0cc7e80141624c9 files/wmbutton.desktop 242
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDNuy5wUpWvClEHQoRArlPAJsF82GCePfmhkjq4qUa+lY/dwkHogCghwsz
+Jl1CnwU2W/w25MAZJ5pXqA4=
+=/lkC
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.5.ebuild,v 1.6 2004/11/24 05:08:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.5.ebuild,v 1.7 2005/09/25 17:29:14 metalgod Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 src_unpack()
 {

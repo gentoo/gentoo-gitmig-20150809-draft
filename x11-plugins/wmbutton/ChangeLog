@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbutton
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.6 2004/11/24 05:08:13 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.7 2005/09/25 17:29:14 metalgod Exp $
+
+  25 Sep 2005; Luis Medinas <metalgod@gentoo.org> wmbutton-0.5.ebuild:
+  Added ~amd64 keywords. Closes bug #107124
 
   23 Nov 2004; Jason Wever <weeve@gentoo.org> wmbutton-0.5.ebuild:
   Added ~sparc keyword.
