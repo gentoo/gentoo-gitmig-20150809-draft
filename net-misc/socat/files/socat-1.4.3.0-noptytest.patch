@@ -1,0 +1,95 @@
+--- socat-1.4/test.sh.original	2005-09-25 19:59:59.000000000 +1000
++++ socat-1.4/test.sh	2005-09-25 19:59:51.000000000 +1000
+@@ -623,8 +623,7 @@
+ fi
+ #------------------------------------------------------------------------------
+ 
+-#if false; then
+-if true; then
++if false; then
+ for addr in exec system; do
+     ADDR=$(echo "$addr" |tr a-z A-Z)
+ 
+@@ -3124,82 +3123,6 @@
+ esac
+ N=$((N+1))
+ 
+-
+-testptywaitslave () {
+-    local N="$1"
+-    local TEST="$2"
+-    local PTYTYPE="$3"	# ptmx or openpty
+-    local opts="$4"
+-
+-tp="$td/test$N.pty"
+-ts="$td/test$N.socket"
+-tf="$td/test$N.file"
+-tdiff="$td/test$N.diff"
+-te1="$td/test$N.stderr1"
+-te2="$td/test$N.stderr2"
+-te3="$td/test$N.stderr3"
+-te4="$td/test$N.stderr4"
+-da="test$N.1 $(date) $RANDOM"
+-printf "test %2d $TEST... " $N
+-# first generate a pty, then a socket
+-($SOCAT $opts -lpsocat1 pty,$PTYTYPE,pty-wait-slave,link="$tp" unix-listen:"$ts" 2>"$te1"; rm -f "$tp") 2>/dev/null &
+-pid=$!
+-waitfile "$tp"
+-# if pty was non-blocking, the socket is active, and socat1 will term
+-$SOCAT $opts -lpsocat2 file:/dev/null unix:"$ts" 2>"$te2"
+-# if pty is blocking, first socat is still active and we get a connection now
+-#((echo "$da"; sleep 2) |$SOCAT -lpsocat3 $opts - file:"$tp",$PTYOPTS2 >"$tf" 2>"$te3") &
+-( (waitfile "$ts"; echo "$da"; sleep 1) |$SOCAT -lpsocat3 $opts - file:"$tp",$PTYOPTS2 >"$tf" 2>"$te3") &
+-waitfile "$ts"
+-# but we need an echoer on the socket
+-$SOCAT $opts -lpsocat4 unix:"$ts" echo 2>"$te4"
+-# now $tf file should contain $da
+-#kill $pid 2>/dev/null
+-wait
+-#
+-if echo "$da" |diff - "$tf"> "$tdiff"; then
+-    $PRINTF "$OK\n"
+-else
+-    $PRINTF "${YELLOW}FAILED${NORMAL}\n"
+-    cat "$tdiff"
+-    cat "$te1"
+-    #cat "$te2"	# not of interest
+-    cat "$te3"
+-    cat "$te4"
+-fi
+-}
+-
+-NAME=PTMXWAITSLAVE
+-PTYTYPE=ptmx
+-case "$TESTS" in
+-*%$NAME%*|*%FUNCTIONS%*)
+-TEST="$NAME: test if master pty ($PTYTYPE) waits for slave connection"
+-if ! feat=$(testaddrs pty); then
+-    $PRINTF "test %2d $TEST... ${YELLOW}$(echo $feat| tr 'a-z' 'A-Z') not available${NORMAL}\n" $N
+-elif ! feat=$(testoptions "$PTYTYPE" pty-wait-slave); then
+-    $PRINTF "test %2d $TEST... ${YELLOW}option $(echo $feat| tr 'a-z' 'A-Z') not available${NORMAL}\n" $N
+-else
+-   testptywaitslave "$N" "$TEST" "$PTYTYPE" "$opts"
+-fi
+-esac
+-N=$((N+1))
+-
+-NAME=OPENPTYWAITSLAVE
+-PTYTYPE=openpty
+-case "$TESTS" in
+-*%$NAME%*|*%FUNCTIONS%*)
+-TEST="$NAME: test if master pty ($PTYTYPE) waits for slave connection"
+-if ! feat=$(testaddrs pty); then
+-    $PRINTF "test %2d $TEST... ${YELLOW}$(echo $feat| tr 'a-z' 'A-Z') not available${NORMAL}\n" $N
+-elif ! feat=$(testoptions "$PTYTYPE" pty-wait-slave); then
+-    $PRINTF "test %2d $TEST... ${YELLOW}option $(echo $feat| tr 'a-z' 'A-Z') not available${NORMAL}\n" $N
+-else
+-   testptywaitslave "$N" "$TEST" "$PTYTYPE" "$opts"
+-fi
+-esac
+-N=$((N+1))
+-
+-
+ NAME=CONNECTTIMEOUT
+ case "$TESTS" in
+ *%$NAME%*|*%FUNCTIONS%*)

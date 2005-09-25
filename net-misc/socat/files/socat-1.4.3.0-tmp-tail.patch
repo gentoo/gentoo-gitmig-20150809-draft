@@ -1,0 +1,29 @@
+--- socat-1.4/test.sh.orig	2005-09-25 18:59:31.000000000 +1000
++++ socat-1.4/test.sh	2005-09-25 18:59:20.000000000 +1000
+@@ -112,7 +112,7 @@
+ [ -z "$TESTS" ] && TESTS="CONSISTENCY FUNCTIONS FILAN"
+ 
+ [ -z "$USER" ] && USER="$LOGNAME"	# HP-UX
+-TD="/tmp/$USER/$$"; td="$TD"
++TD="${TMP:-/tmp}/$USER/$$"; td="$TD"
+ rm -rf "$TD" || (echo "cannot rm $TD" >&2; exit 1)
+ mkdir -p "$TD"
+ #trap "rm -r $TD" 0 3
+@@ -3089,7 +3089,7 @@
+ TEST="$NAME: check type printed for directories"
+ te="$td/test$N.stderr"
+ printf "test %2d $TEST... " $N
+-type=$($FILAN -f . 2>$te |tail -1 |awk '{print($2);}')
++type=$($FILAN -f . 2>$te |tail -n 1 |awk '{print($2);}')
+ if [ "$type" = "dir" ]; then
+     $PRINTF "$OK\n"
+ else
+@@ -3111,7 +3111,7 @@
+ $SOCAT unix-l:"$ts" /dev/null </dev/null 2>"$te1" &
+ spid=$!
+ waitfile "$ts" 1
+-type=$($FILAN -f "$ts" 2>$te2 |tail -1 |awk '{print($2);}')
++type=$($FILAN -f "$ts" 2>$te2 |tail -n 1 |awk '{print($2);}')
+ if [ "$type" = "socket" ]; then
+     $PRINTF "$OK\n"
+ else
