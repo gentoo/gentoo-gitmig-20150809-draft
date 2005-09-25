@@ -1,11 +1,23 @@
-MD5 c5d633b98e31fe162b792d99a288924a habak-0.2.4.1.ebuild 653
-MD5 807f1ca77ed467a2c8207419eac9fa67 metadata.xml 222
-MD5 0a2ea0ea723d008a911010785063fe34 habak-0.2.4.ebuild 647
-MD5 af9513fb09abab4559f5b5a14de9c3ed ChangeLog 2071
-MD5 749e307da9c7cbf3aa55c6801509b9ab habak-0.2.3.ebuild 646
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2c63e3793ac00eadfbc4a66168f257ad ChangeLog 2210
 MD5 fb3ee4feabe04c4d2965bb0d7b6c4258 habak-0.2.1.ebuild 659
+MD5 749e307da9c7cbf3aa55c6801509b9ab habak-0.2.3.ebuild 646
+MD5 c5d633b98e31fe162b792d99a288924a habak-0.2.4.1.ebuild 653
+MD5 0a2ea0ea723d008a911010785063fe34 habak-0.2.4.ebuild 647
+MD5 869463144657d0029a0dd64bad7adecb habak-0.2.5.ebuild 648
+MD5 807f1ca77ed467a2c8207419eac9fa67 metadata.xml 222
+MD5 1eb9928171d8bff4312b6fdb48ec4f85 files/README.en 6729
+MD5 29141cd94765be7794ae60b9d1661d5a files/digest-habak-0.2.1 63
+MD5 0382d58de6e152819af199f87d4e2c34 files/digest-habak-0.2.4.1 64
 MD5 e158008d2adb7bf05208fc7b45b5d17e files/digest-habak-0.2.3 63
 MD5 daa4c86a8af6011c72ecfefeeb7f6d13 files/digest-habak-0.2.4 63
-MD5 29141cd94765be7794ae60b9d1661d5a files/digest-habak-0.2.1 63
-MD5 1eb9928171d8bff4312b6fdb48ec4f85 files/README.en 6729
-MD5 0382d58de6e152819af199f87d4e2c34 files/digest-habak-0.2.4.1 64
+MD5 5c75dece06428482ef86d8b83f65e0c7 files/digest-habak-0.2.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNvu72jLqHNfbg2URAqmRAJ94RowTmvYKaI1zQQRefqBeddUJ/wCgoIJx
+GRx7d9uCB+psKUjIVrGjCyI=
+=hcVQ
+-----END PGP SIGNATURE-----
