@@ -1,22 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90f3dea7b66a995f7d008d47c4ae63ed digikamimageplugins-0.7.3.ebuild 673
-MD5 023044f2fa2ebd99e359a961756cc171 digikamimageplugins-0.7.2.ebuild 673
+MD5 71389bf5829c43114fe8a2ba738ed273 digikamimageplugins-0.8.0_beta2.ebuild 671
 MD5 0e6c18f5c63f978d26053d4c7c783e9e digikamimageplugins-0.7.4.ebuild 1070
 MD5 b1b1bc2d31dc06cfbfd739afda3ddf75 digikamimageplugins-0.7.1.ebuild 671
-MD5 20e5775369a43e37362fc6349d3c781f ChangeLog 2225
+MD5 c2b98807a7370d1e6682a2ae5ef1bddc ChangeLog 2509
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e00697258b2bae3d3dd67f66c4846f92 digikamimageplugins-0.8.0_beta1.ebuild 671
 MD5 cbdecacefd6988b24dfe88efaa0aa196 files/digest-digikamimageplugins-0.7.1 79
-MD5 71f46403d716e990af68157e8d04d3bf files/digest-digikamimageplugins-0.7.2 80
-MD5 6cc91efe4beed080e3bc7a7f7768adfd files/digest-digikamimageplugins-0.7.3 80
 MD5 a427102c5d972d65ba8fbc2a9b03bf39 files/digest-digikamimageplugins-0.7.4 163
-MD5 35e29bbae0fe2a41e70fbc03951196af files/digest-digikamimageplugins-0.8.0_beta1 85
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK1H5ntT9W3vfTuoRAuanAJ9ZYlqgDgcjWJuZ2CJVY4xz8UkoEQCeI7Nn
-dcNUop1q6mD5ORJ7O9SCsS8=
-=DldV
------END PGP SIGNATURE-----
+MD5 f20c5cda21d19afa1d2b98a67c6695ef files/digest-digikamimageplugins-0.8.0_beta2 85
