@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.31 2005/09/17 02:01:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.32 2005/09/25 17:15:10 nelchael Exp $
+
+*idesk-0.7.4 (25 Sep 2005)
+
+  25 Sep 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/idesk-0.3.5-clickbox-and-singleclick.patch, +idesk-0.7.4.ebuild:
+  Version bump, removed old 0.3.5 patch.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> idesk-0.5.6.ebuild:
   Mark 0.5.6 stable on alpha
