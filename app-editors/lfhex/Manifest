@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a85d8623b9290898ece24f40b4ecb2e8 lfhex-0.3.7.1.ebuild 693
 MD5 44033cf6e77e416e214ff344198449dc lfhex-0.3.7-r1.ebuild 876
-MD5 e4393ce75d3e87336a42d880d106fcd4 ChangeLog 1506
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 5210ab3ab2afd86f01a92fd21a222808 ChangeLog 1634
+MD5 d9c3e7c14c0a7285aaf093c359da112f files/digest-lfhex-0.3.7.1 64
 MD5 ee28bebce85257e0e2fc93bc323d4e9b files/lfhex-gcc3-inline-fix.patch 539
 MD5 278540748b028890d6885b09b0ab834c files/digest-lfhex-0.3.7-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDNhLgmdTrptrqvGERAoEBAJ9HxMpAI5Moxeijbl6+6bF1tQm8ygCgm1Fz
+3yclrRNPfDH8OJxDoGW8++s=
+=EPJp
+-----END PGP SIGNATURE-----
