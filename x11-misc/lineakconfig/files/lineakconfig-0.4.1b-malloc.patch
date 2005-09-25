@@ -1,0 +1,14 @@
+diff -Nru lineakconfig-0.4.1b/src/support.c lineakconfig-0.4.1b.patched/src/support.c
+--- lineakconfig-0.4.1b/src/support.c	2004-04-20 22:42:13.000000000 +0200
++++ lineakconfig-0.4.1b.patched/src/support.c	2005-09-25 23:42:45.000000000 +0200
+@@ -746,8 +746,8 @@
+ 	}
+   }	
+   if (dfile == NULL) {
+-	dfile = malloc( (strlen(CONFDIR) + 1 + strlen("/etc/") +1) * sizeof(char));
+-	sprintf(dfile,"%s/%s", "/etc/", DEFFILE);
++	dfile = malloc( (strlen(CONFDIR) + 1 + strlen(DEFFILE) +1) * sizeof(char));
++	sprintf(dfile,"%s/%s", CONFDIR, DEFFILE);
+   }
+   
+   /* does the file exist? */
