@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.38.ebuild,v 1.12 2005/09/08 17:02:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.38.ebuild,v 1.13 2005/09/25 22:16:04 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -54,7 +54,7 @@ src_install() {
 	# Move shared libraries to /lib/, install static libraries to /usr/lib/,
 	# and install linker scripts to /usr/lib/.
 	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/
+	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/ || die "move .so"
 	dolib.a lib/libcom_err.a || die "dolib.a"
 	gen_usr_ldscript libcom_err.so
 }

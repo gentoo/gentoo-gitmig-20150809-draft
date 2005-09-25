@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.14 2005/09/10 05:50:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ss-1.38.ebuild,v 1.15 2005/09/25 22:16:31 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -55,7 +55,7 @@ src_install() {
 	# Move shared libraries to /lib/, install static libraries to /usr/lib/,
 	# and install linker scripts to /usr/lib/.
 	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/
+	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/ || die "move .so"
 	dolib.a lib/libss.a || die "dolib.a"
 	gen_usr_ldscript libss.so
 }
