@@ -1,5 +1,4 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 20eb1c899f3804dae3e3868dd09c0df5 kdegraphics-3.5_alpha1.ebuild 1336
 MD5 147b40df8ee62b12632ebe33507a1f64 kdegraphics-3.4.2.ebuild 1721
 MD5 d168992c0e7f21589c7706bf69219dce kdegraphics-3.2.3-r4.ebuild 1372
 MD5 98852f97b55a3d2f778aa9ee9b6a1396 kdegraphics-3.4.1.ebuild 1394
@@ -33,4 +32,3 @@ MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r3 71
 MD5 4caddebea4d845abb2de6dbbfe1b979a files/kdegraphics-3.4.2-kpdf-fix.patch 1024
 MD5 a603b1f40c870db682665f57f908df0e files/digest-kdegraphics-3.4.2 71
 MD5 26b54ece47e2617478338586ebfd253d files/post-3.2.3-kdegraphics-2.diff 1742
-MD5 900bec871d5baed80378fb8d57527f75 files/digest-kdegraphics-3.5_alpha1 72

@@ -4,7 +4,6 @@ MD5 ee61a50c3cf582d9eddea6fc12002679 kdeaddons-3.4.2.ebuild 1542
 MD5 e3dfeb12f5a3f2a77fdc457fc61ad355 kdeaddons-3.4.1.ebuild 1345
 MD5 7b4e5c9e9955bbdea022d98a520ec466 ChangeLog 17732
 MD5 3a692b7c76a442ddec552bbb5786d366 kdeaddons-3.3.2.ebuild 994
-MD5 acd129a714e21ae951799170d3df1201 kdeaddons-3.5_alpha1.ebuild 1143
 MD5 b2676065f8c89b6a2b9ffef083fac50f kdeaddons-3.2.3.ebuild 988
 MD5 913bd9f1c52d68ec7faa72960464132e files/kdeaddons-3.2.3-gcc34.patch 1256
 MD5 b222a3f919d71f11915038fe18b0a7d7 files/digest-kdeaddons-3.4.1 69
@@ -14,5 +13,4 @@ MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
 MD5 bed9e2e46d8e7de37c5996e1ad3025bd files/digest-kdeaddons-3.4.2 69
 MD5 f510fb4a423935c458f3e01d994b5bd2 files/digest-kdeaddons-3.3.2 69
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-kdeaddons-3.5_beta1 70
-MD5 f7c6609b2333ccd23784fc7dd847030e files/digest-kdeaddons-3.5_alpha1 70
 MD5 e773fdc5e9bf3ab47e4dada5fba0ebbe files/digest-kdeaddons-3.2.3 69

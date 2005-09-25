@@ -1,7 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3e5f9d9151b0e949e220754c4466d29c kdebase-3.3.2-r1.ebuild 3843
 MD5 771fb9eceec5b0d9c5bae83af47b7882 kdebase-3.2.3-r3.ebuild 3476
-MD5 cfe17ce5888fabac43aa7112e7df3a99 kdebase-3.5_alpha1.ebuild 4109
 MD5 c9a8dd6584d378e6e0130a37ab107632 kdebase-3.5_beta1.ebuild 4087
 MD5 96c415fdff10e920b78bf20952d8ebb0 ChangeLog 38059
 MD5 9ea970c24377c122bfd0d1024d1aed0e kdebase-3.3.2-r2.ebuild 3627
@@ -23,7 +22,6 @@ MD5 f06224b0a38152e5d3435b00a70bcf6c files/konsole-3.3.2.patch 1201
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
 MD5 bd3cde92164bce3a560d0e62a5895757 files/post-3.2.3-kdebase-smb.diff 496
 MD5 ee7ed731fc8a9b896d5888b94febb4fe files/digest-kdebase-3.4.2-r1 68
-MD5 4c82da1fa6a4aec326b681a8878c686d files/digest-kdebase-3.5_alpha1 69
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r3 68
 MD5 78fb451ad534b71fc3e541e9e5759dac files/kde.desktop 3910
 MD5 c13bb6243f0c10dd3892ca00a9fce333 files/kdebase-3.4-configure.patch 7273

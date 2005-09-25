@@ -5,7 +5,6 @@ MD5 a0a423eb46bcca9f140b0a97645a0177 kdelibs-3.3.2-r10.ebuild 4318
 MD5 176460cf9160b02b1a157612af59e346 kdelibs-3.4.1-r1.ebuild 3363
 MD5 8d47d2d277da56556e6259efe061cc54 ChangeLog 44016
 MD5 2c3feefcb9434725dedeef7d9c400d02 kdelibs-3.4.1-r2.ebuild 3357
-MD5 fc8e5888a89364756c8da36a47668862 kdelibs-3.5_alpha1.ebuild 3512
 MD5 a2754ea94836037eda37593282978e6c kdelibs-3.2.3-r9.ebuild 3831
 MD5 06b75ddcec5d5e38f703654a2d50030c kdelibs-3.4.2-r1.ebuild 3333
 MD5 97766212645b832cda19843b15698607 kdelibs-3.2.3-r7.ebuild 3566
@@ -18,7 +17,6 @@ MD5 b93484486086ff60f9633f48ed311877 files/post-3.2.3-kdelibs-kimgio.diff 39789
 MD5 e8b51d92930950619b2139c22d4e1407 files/digest-kdelibs-3.3.2-r10 517
 MD5 4d3faaf48564cde79aac52957f7e6278 files/kdelibs-3.4.1-ktoolbar-crash.patch 2215
 MD5 4f827df22c4b05fdb50535c985ff5cb1 files/kdelibs-3.4.2-gmail-fix.patch 724
-MD5 9d3a84842fd8cadc966a39fe719af3b8 files/kdelibs-3.5_alpha1-crash.patch 1090
 MD5 ac733469cad0b673ee2a6fc35edc0e91 files/digest-kdelibs-3.4.2-r1 68
 MD5 02c4482bb15fc1a504621c2627a4deee files/digest-kdelibs-3.2.3-r7 529
 MD5 581be8df4ecfd3cf649bb36b6f57e35a files/kdelibs-3.4.1-configure.patch 4558
@@ -32,5 +30,4 @@ MD5 ac733469cad0b673ee2a6fc35edc0e91 files/digest-kdelibs-3.4.2 68
 MD5 5e9c627e4e9e367ce88ed62a0a9ac162 files/post-3.2.3-kdelibs-khtml.diff 2411
 MD5 b291a4a134cac9072ad1140a78eee9ce files/kdelibs-3.4.1-kntlm.patch 1323
 MD5 481aadcb2e3cd311fce3a29b12c86b83 files/digest-kdelibs-3.5_beta1 69
-MD5 1551689b9fc2ba49fcc5ce1e3c935325 files/digest-kdelibs-3.5_alpha1 69
 MD5 138c3252883171d55ec24ed0318950fd files/post-3.3.2-kdelibs-kate.diff 2212

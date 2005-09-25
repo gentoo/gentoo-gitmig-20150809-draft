@@ -1,6 +1,5 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 19d8f03da6a87e62066fe106379154ee kdenetwork-3.5_beta1.ebuild 1723
-MD5 7d61b86079f71ca48d151ebc6d1d4551 kdenetwork-3.5_alpha1.ebuild 1595
 MD5 c92e16d6f8fe0395811956dc3a08ac75 kdenetwork-3.4.2.ebuild 1789
 MD5 06f52f60ec495740a1fe9fbb67f4b002 ChangeLog 21917
 MD5 052f80801ba7cdc0589776a7ff562286 kdenetwork-3.4.1-r1.ebuild 1715
@@ -24,4 +23,3 @@ MD5 a4f0ff59ade2b98019bd0968a4615141 files/digest-kdenetwork-3.4.2 70
 MD5 426360bf289efe11a499f1fa89bb2f4b files/wireless-extensions-api.diff 528
 MD5 28c3ba792f8a0ce436216062cefa7908 files/reslisa 549
 MD5 e07566eb35cec7afdfa2e38edf7cdcd1 files/kdenetwork-3.3.2-kwifimanager-configlocation.patch 720
-MD5 5772a41030eba632e4b8ba24456e95b2 files/digest-kdenetwork-3.5_alpha1 71

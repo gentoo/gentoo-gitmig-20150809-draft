@@ -3,16 +3,13 @@ MD5 b4802bd82fc3d12e6f743beb36b8acda kdesdk-3.3.2.ebuild 503
 MD5 5e0cc8faaf27dcdcc64b297cc2fc1c71 kdesdk-3.4.2.ebuild 1259
 MD5 53b70b46435cbcf30026aa9a84b17562 ChangeLog 12520
 MD5 27813b6ec7aceda1c7af98816ddefc95 kdesdk-3.4.1.ebuild 513
-MD5 dbdc83abc6e0a972faffa5a51745265e kdesdk-3.5_alpha1.ebuild 1326
 MD5 616ebbb6468ed653c5370bd042239ad0 kdesdk-3.2.3.ebuild 419
 MD5 32931a6639d048433b3ec112ad773cf5 kdesdk-3.5_beta1.ebuild 1328
 MD5 05b78a43919e346c710b79326bac8ad5 files/digest-kdesdk-3.3.2 66
-MD5 f62e9f1fd83aa5b60e81f6cf024cc52f files/kdesdk-3.5_alpha1-compile.patch 885
 MD5 e9178add9702e87b7fe025e8f7a2f8db files/digest-kdesdk-3.4.1 66
 MD5 ad23546d0ec5bf0193c3135d739a332b files/kdesdk-3.5-configure-db.patch 1736
 MD5 e909850d57bdca22b0b476f1acf0fd5d files/kdesdk-3.5_beta1-compile.patch 1406
 MD5 5d548fa64f7fd6d2883d96488a8615c2 files/digest-kdesdk-3.2.3 66
 MD5 086313a32c0a92f42f8050236d4494ab files/digest-kdesdk-3.4.2 66
 MD5 72d5f7e9416a5e70c188be7159797367 files/kdesdk-3.4-configure.patch 2511
-MD5 0f5913d34a4f08cd2fd48d67e6acbe7e files/digest-kdesdk-3.5_alpha1 67
 MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-kdesdk-3.5_beta1 67
