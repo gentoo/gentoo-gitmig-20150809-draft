@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.1.ebuild,v 1.1 2005/09/17 04:11:28 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.4.1.ebuild,v 1.2 2005/09/25 02:28:08 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
 	mirror://gentoo/snort-2.4.0-genpatches.tar.bz2
-	${HOMEPAGE}/pub-bin/downloads.cgi/Download/comm_rules/Community-Rules.tar.gz
+	http://www.snort.org/pub-bin/downloads.cgi/Download/comm_rules/Community-Rules.tar.gz
 	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )"
 
 LICENSE="GPL-2"
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	prelude? ( >=dev-libs/libprelude-0.9.0_rc1 )
+	prelude? ( >=dev-libs/libprelude-0.9.0 )
 	odbc? ( dev-db/unixODBC )
 	inline? (
 		~net-libs/libnet-1.0.2a
@@ -80,7 +80,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	# There is no --diable-flexresp, cannot use use_enable
+	# There is no --disable-flexresp, cannot use use_enable
 	use flexresp && myconf="${myconf} --enable-flexresp"
 
 	use inline && append-flags -I/usr/include/libipq
@@ -112,8 +112,7 @@ src_install() {
 		etc/*.map etc/threshold.conf
 	newins etc/snort.conf snort.conf.distrib
 
-	# use prelude && doins etc/prelude-classification.config
-
+	# init script is known to be broken in 2.4.x; bug 101157
 	newinitd "${FILESDIR}/snort.rc6" snort
 	newconfd "${FILESDIR}/snort.confd" snort
 

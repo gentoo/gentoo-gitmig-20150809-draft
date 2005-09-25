@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.9 2005/09/17 04:11:28 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.3-r1.ebuild,v 1.10 2005/09/25 02:28:08 vanquirius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	prelude? ( >=dev-libs/libprelude-0.9.0_rc1 )
+	prelude? ( >=dev-libs/libprelude-0.9.0 )
 	odbc? ( dev-db/unixODBC )
 	inline? (
 				~net-libs/libnet-1.0.2a
@@ -74,7 +74,6 @@ src_unpack() {
 
 	# bug 105852
 	epatch "${FILESDIR}/${P}-log.c.diff"
-
 
 	einfo "Regenerating autoconf/automake files"
 	autoreconf -f -i || die "autoreconf failed"
