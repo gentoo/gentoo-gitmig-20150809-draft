@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.13 2005/09/10 11:46:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.14 2005/09/25 18:41:40 corsair Exp $
+
+  25 Sep 2005; Markus Rothe <corsair@gentoo.org> libical-0.24_rc4-r1.ebuild:
+  Added ~ppc64
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   libical-0.24_rc4-r1.ebuild:
