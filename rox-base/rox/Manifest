@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d199bff10c128f6ed3f508320225f54e rox-2.1.5.ebuild 1654
+MD5 405e56b760faa7acd5dea5fd58165cd6 ChangeLog 6914
 MD5 d2259b48b71edd757994a7420e6efd53 rox-2.2.0.ebuild 1741
-MD5 e6bfd1872018b9fe59555171994a71bc rox-2.1.4.ebuild 1653
-MD5 b57d6ce63d5ba32c8ff37e77e8ae673f rox-2.1.3.ebuild 1650
-MD5 e4ca966aa0d81056cda760dcd1459ee2 ChangeLog 6641
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 6582a6fac3d7f42181413ef84b8ef834 files/rox-2.2.0-gcc4.patch 746
+MD5 d199bff10c128f6ed3f508320225f54e rox-2.1.5.ebuild 1654
+MD5 b57d6ce63d5ba32c8ff37e77e8ae673f rox-2.1.3.ebuild 1650
+MD5 e6bfd1872018b9fe59555171994a71bc rox-2.1.4.ebuild 1653
+MD5 bbc2bb80b4fcf6ff31956ea7747b3535 rox-2.3.ebuild 1935
+MD5 16ef34ea63806f156b1cf68e34055f12 files/2.1.2-crash-save-display-settings.patch.bz2 1910
+MD5 93f2d819182714fd4bd786848bb6e9a6 files/digest-rox-2.2.0 59
 MD5 41ab2c5f1d5e3be857ddbad7ba6a7d2a files/digest-rox-2.1.3 59
 MD5 d7f3344d55ed0b3c386ef215755c31cf files/digest-rox-2.1.4 59
 MD5 b7b99c9a9584fa68610e637fabb7b95e files/digest-rox-2.1.5 59
-MD5 93f2d819182714fd4bd786848bb6e9a6 files/digest-rox-2.2.0 59
-MD5 16ef34ea63806f156b1cf68e34055f12 files/2.1.2-crash-save-display-settings.patch.bz2 1910
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0T80evY57Fted3ERArMvAJ9c3xVe04d8ckYPY0fFxYLW+JdyzACgniiT
-G9JsAxcq3cPiF/4V880hLsg=
-=wU+4
------END PGP SIGNATURE-----
+MD5 27db9585e8acfde2e54224f63bed8e80 files/digest-rox-2.3 129
+MD5 6582a6fac3d7f42181413ef84b8ef834 files/rox-2.2.0-gcc4.patch 746
