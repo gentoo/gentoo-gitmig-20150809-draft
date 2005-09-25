@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.23 2005/09/17 00:51:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.24 2005/09/25 15:49:47 nelchael Exp $
+
+  25 Sep 2005; Krzysiek Pawlik <nelchael@gentoo.org> xbindkeys-1.7.2.ebuild:
+  Stable on x86
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
