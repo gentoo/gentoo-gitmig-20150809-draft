@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ami
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ChangeLog,v 1.7 2005/01/01 14:24:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ChangeLog,v 1.8 2005/09/25 00:47:34 matsuu Exp $
+
+*ami-1.2.3-r1 (25 Sep 2005)
+
+  25 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> +ami-1.2.3-r1.ebuild:
+  Cleanup ebuild.
+  gtk2 removal, Bug #106560.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> ami-1.2.3.ebuild:
   Added missing ? after !use in dependency.
