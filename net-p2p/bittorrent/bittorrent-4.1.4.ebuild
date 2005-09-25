@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.5 2005/09/10 16:09:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.4.ebuild,v 1.6 2005/09/25 22:30:09 mkay Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -15,9 +15,9 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 LICENSE="BitTorrent"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
-IUSE="X"
+IUSE="gtk"
 
-RDEPEND="X? (
+RDEPEND="gtk? (
 		>=x11-libs/gtk+-2.4
 		>=dev-python/pygtk-2.4
 	)
@@ -35,7 +35,7 @@ PYTHON_MODNAME="BitTorrent"
 
 src_install() {
 	distutils_src_install
-	if ! use X; then
+	if ! use gtk; then
 		rm ${D}/usr/bin/bittorrent
 	fi
 	dohtml redirdonate.html
@@ -47,7 +47,7 @@ src_install() {
 
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/bittorrent '%s'; test=test -n \"\$DISPLAY\""
 
-	if use X; then
+	if use gtk; then
 		if [ -n "`grep 'application/x-bittorrent' ${D}/etc/mailcap`" ]; then
 			# replace bittorrent entry if it already exists
 			einfo "updating bittorrent mime info"
@@ -62,7 +62,7 @@ src_install() {
 		sed -i '/btdownloadgui/d' ${D}/etc/mailcap
 	fi
 
-	if use X ; then
+	if use gtk ; then
 		cp ${D}/usr/share/pixmaps/${MY_P}/bittorrent.ico ${D}/usr/share/pixmaps/
 		make_desktop_entry "bittorrent" "BitTorrent" \
 			/usr/share/pixmaps/bittorrent.ico "Network" "/usr/bin/"
