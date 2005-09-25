@@ -1,6 +1,9 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.42 2005/08/11 20:20:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.43 2005/09/25 00:34:31 carlo Exp $
+
+  25 Sep 2005; Carsten Lohrke <carlo@gentoo.org> realplayer-10.0.5.ebuild:
+  Fixed url.
 
   11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   realplayer-10.0.3.ebuild, realplayer-10.0.3-r1.ebuild,
