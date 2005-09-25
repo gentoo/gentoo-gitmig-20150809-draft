@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.3 2005/09/25 09:29:39 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.4 2005/09/25 10:09:11 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,8 +17,8 @@ S=${WORKDIR}/${PN}_${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	use static && epatch ${FILESDIR}/p7zip-4.16_x86_static.patch
+	cd "${S}"
+	use static && epatch "${FILESDIR}"/p7zip-4.16_x86_static.patch
 	sed -i \
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
@@ -32,24 +32,21 @@ src_compile() {
 
 src_install() {
 	# this wrappers can not be symlinks, p7zip should be called with full path
-	dobin ${FILESDIR}/7za || die "dobin 7za"
-	dobin ${FILESDIR}/7z || die "dobin 7z"
+	make_wrapper 7za "/usr/lib/${PN}/7za"
+	make_wrapper 7z "/usr/lib/${PN}/7z"
 
-	dodir /usr/lib/${PN}
 	exeinto /usr/lib/${PN}
-	doexe bin/7z bin/7za bin/7zCon.sfx
-	dodir /usr/lib/${PN}/Codecs
+	doexe bin/7z bin/7za bin/7zCon.sfx || die "doexe bins"
 	exeinto /usr/lib/${PN}/Codecs
-	doexe bin/Codecs/*
-	dodir /usr/lib/${PN}/Formats
+	doexe bin/Codecs/* || die "doexe Codecs"
 	exeinto /usr/lib/${PN}/Formats
-	doexe bin/Formats/*
+	doexe bin/Formats/* || die "doexe Formats"
 
-	doman man1/7z.1
-	doman man1/7za.1
+	doman man1/7z.1 man1/7za.1
+	dodoc ChangeLog README TODO
 
-	if use doc; then
-		dodoc ChangeLog README TODO DOCS/*.txt
+	if use doc ; then
+		dodoc DOCS/*.txt
 		dohtml -r DOCS/MANUAL/*
 	fi
 }
