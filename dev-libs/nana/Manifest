@@ -1,4 +1,14 @@
-MD5 075a65ed94b1e55efecbdbdf9bc40ad8 nana-2.5.ebuild 1131
-MD5 e88b8124fd6531a433c2ea7c438881a7 ChangeLog 379
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ecd264e1c7b4e9e1fc8f33103f487f8 metadata.xml 433
+MD5 1aef2d35cc42dbabf8bb90b9a1e37107 ChangeLog 464
+MD5 aa0af8f1972afbfeed1ce69199573026 nana-2.5.ebuild 848
 MD5 798180f7a8b25f1dc536a8926451dd79 files/digest-nana-2.5 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNoVDgIKl8Uu19MoRAvjTAJ916Hm4IIGKaBfzqb74kY0fEdqgfACfedT/
+c5163Vrztjr+OoJWI1ro70o=
+=5CTw
+-----END PGP SIGNATURE-----
