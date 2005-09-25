@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5_beta1.ebuild,v 1.1 2005/09/21 17:17:59 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5_beta1-r1.ebuild,v 1.1 2005/09/25 21:12:51 flameeyes Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.5
@@ -18,7 +18,7 @@ LICENSE="GPL-2 LGPL-2"
 
 SLOT="3.5"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="alsa esd artswrappersuid jack mp3 nas hardened vorbis"
+IUSE="alsa esd artswrappersuid jack mp3 nas vorbis"
 
 RDEPEND="$(qt_min_version 3.3)
 	>=dev-libs/glib-2
@@ -34,15 +34,8 @@ RDEPEND="$(qt_min_version 3.3)
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	kde_src_unpack
-	epatch "${FILESDIR}/arts-1.3.2-alsa-bigendian.patch"
-
-	if (is-flag -fstack-protector || is-flag -fstack-protector-all || use hardened); then
-		epatch ${FILESDIR}/arts-1.4-mcopidl.patch
-		make -f admin/Makefile.common || die
-	fi
-}
+PATCHES="${FILESDIR}/arts-1.3.2-alsa-bigendian.patch
+	${FILESDIR}/arts-1.4-mcopidl.patch"
 
 src_compile() {
 	myconf="$(use_enable alsa) $(use_enable vorbis)
