@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 9ecc6d5ec65707176486ec3897789caf ss-1.38.ebuild 1644
 MD5 cf167c86a300ffb7f8e3762c30723b6f ss-1.37.ebuild 1618
@@ -7,3 +10,10 @@ MD5 0911aedd4968aa4053139791a961e2a2 files/digest-ss-1.38 67
 MD5 4a7d54ccac4002d10462c40660712a72 files/ss-1.37-sed-locale.patch 2142
 MD5 65689a8be4c1b58f8e64f22165313292 files/digest-ss-1.37 67
 MD5 7f1f3f4827354d52879671fc615fba03 files/ss-1.37-makefile.patch 1318
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDNyHwgIKl8Uu19MoRAgLFAJ0U6hbi98YlIXrZLgRM83YcvHCMygCfajnw
+PKUT1wIVb5wGZVOMpVvf8S8=
+=EHm6
+-----END PGP SIGNATURE-----
