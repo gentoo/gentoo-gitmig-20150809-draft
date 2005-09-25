@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.200 2005/09/23 20:44:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.201 2005/09/25 10:08:23 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1586,14 +1586,15 @@ make_wrapper() {
 	local tmpwrapper=$(emktemp)
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
-cd "${chdir}"
-export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
-exec ${bin} "\$@"
+cd "${chdir:-.}"
+if [ "\${LD_LIBRARY_PATH+set}" = "set" ] && [ -n "${libdir}" ] ; then
+	export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
+fi
+exec "${bin}" "\$@"
 EOF
 	chmod go+rx "${tmpwrapper}"
-	if [ -n "${5}" ]
-	then
-		exeinto ${5}
+	if [[ -n ${path} ]] ; then
+		exeinto "${path}"
 		newexe "${tmpwrapper}" "${wrapper}"
 	else
 		newbin "${tmpwrapper}" "${wrapper}"
