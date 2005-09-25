@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-  <email>pylon@gentoo.org</email>
-  <name>Lars Weiler</name>
-  <description>Commited ebuild, but no testing possible.</description>
-</maintainer>
 <longdescription>
   Fork of cdrtools with DVD-writing capabilities.  Some front-ends may have
   issues with this package.

@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-  <email>pylon@gentoo.org</email>
-  <name>Lars Weiler</name>
-  <description>Testing on x86 and ppc with SCSI and ATAPI writers.</description>
-</maintainer>
 <longdescription>
   CD command line recording, ripping and copying tool.  Especially ISOs- and
   bin/cue-files are handled very well.

@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-	<email>pylon@gentoo.org</email>
-	<name>Lars Weiler</name>
-	<description>Primary maintainer</description>
-</maintainer>
 <longdescription>
 dvdrtools is a fork of cdrtools, with the primary goal of supporting
 writable DVD drives.

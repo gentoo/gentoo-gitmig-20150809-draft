@@ -3,10 +3,5 @@
 
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-	<email>pylon@gentoo.org</email>
-	<name>Lars Weiler</name>
-	<description>Testing on x86 and ppc</description>
-</maintainer>
 <longdescription>Menu based front-end to mkisofs and cdrecord</longdescription>
 </pkgmetadata>

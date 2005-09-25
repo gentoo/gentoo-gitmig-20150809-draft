@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-  <email>pylon@gentoo.org</email>
-  <name>Lars Weiler</name>
-  <description>Testing on x86 and ppc with SCSI and ATAPI writers.  Adding features to ebuild</description>
-</maintainer>
 <longdescription>CD and DVD command line recording and ripping tools.</longdescription>
 </pkgmetadata>
