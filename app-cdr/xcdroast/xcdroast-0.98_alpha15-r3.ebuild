@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.15 2005/09/21 18:26:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.16 2005/09/25 12:12:48 metalgod Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		$(use_enable nls) \
-		$(use_enable gtk) \
+		$(use_enable gtk gtk2) \
 		--disable-dependency-tracking || die
 
 	make PREFIX=/usr || die

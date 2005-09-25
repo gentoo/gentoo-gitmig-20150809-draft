@@ -1,7 +1,17 @@
-MD5 99f07f1c21a8bcebab860233b08e4eb1 xcdroast-0.98_alpha15-r3.ebuild 1954
-MD5 92a027f08ed32662cc46894c566f1e55 ChangeLog 7571
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 37aeb49467005c07e9a3242ba79150b3 ChangeLog 7688
 MD5 c7cf0bf2a01fd5bb41778f1941040287 metadata.xml 247
-MD5 26768959e3621b77b59f887551742eba files/xcdroast-0.98alpha15-dvd.patch 15532
-MD5 ccb3a30dc25ffa6c7d78b64ea8cb7f75 files/gtk2locale.patch 643
-MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
+MD5 993c8a4af0cb2f45830145f9dc1231f3 xcdroast-0.98_alpha15-r3.ebuild 1959
 MD5 121eabf95d22bf4f85b5c0426bf133a5 files/64bit_gsize.patch 471
+MD5 ccb3a30dc25ffa6c7d78b64ea8cb7f75 files/gtk2locale.patch 643
+MD5 26768959e3621b77b59f887551742eba files/xcdroast-0.98alpha15-dvd.patch 15532
+MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDNqJcwUpWvClEHQoRAtm4AKCHbm5LvbomID3PRCKS75y+ClJm4QCdGH9U
+kJAPc9vahNFgYGToIKm4sRo=
+=zPrK
+-----END PGP SIGNATURE-----
