@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4501 2005/09/25 17:07:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4502 2005/09/25 19:31:27 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -125,8 +125,8 @@ sci-chemistry/gamess
 
 # Marcus D. Hanwell <cryos@gentoo.org> (17 Sep 2005)
 # Beta version testing
-=media-gfx/digikam-0.8.0_beta1
-=media-plugins/digikamimageplugins-0.8.0_beta1
+>=media-gfx/digikam-0.8.0_beta1
+>=media-plugins/digikamimageplugins-0.8.0_beta1
 
 # Renat Lumpau <rl03@gentoo.org> (15 Sep 2005)
 # masked due to security bug #103308
