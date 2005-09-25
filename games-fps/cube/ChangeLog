@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/cube
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.9 2004/11/12 16:02:04 blubb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.10 2005/09/25 01:14:19 vapier Exp $
+
+*cube-20050829 (25 Sep 2005)
+
+  25 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/cube-20050829-gentoo-paths.patch, +cube-20050829.ebuild:
+  Version bump #104292 by a bunch of peeps.
 
   11 Nov 2004; Simon Stelling <blubb@gentoo.org> cube-20040522.ebuild:
   added ~amd64 

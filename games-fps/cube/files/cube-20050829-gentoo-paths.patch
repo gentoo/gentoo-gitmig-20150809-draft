@@ -1,0 +1,42 @@
+--- tools.cpp
++++ tools.cpp
+@@ -100,8 +100,19 @@
+ 
+ ///////////////////////// misc tools ///////////////////////
+ 
++char *addfullpath(char *s) {
++    static char ret[256];      // choose a reasonable max buffer size
++    if (s[0] == '/') { return s; }
++        int slen = strlen(s);
++        memset(ret, 0x00, 256);
++        memcpy(ret, GAMES_DATADIR, GAMES_DATADIR_LEN);
++        memcpy(ret+GAMES_DATADIR_LEN, s, slen);
++        return ret;
++    }
++
+ char *path(char *s)
+ {
++    s = addfullpath(s);
+     for(char *t = s; t = strpbrk(t, "/\\"); *t++ = PATHDIV);
+     return s;
+ };
+--- rendergl.cpp.origin	2005-08-30 17:07:30.000000000 +0200
++++ rendergl.cpp	2005-08-30 17:12:52.000000000 +0200
+@@ -69,6 +69,7 @@
+ 
+ bool installtex(int tnum, char *texname, int &xs, int &ys, bool clamp)
+ {
++    texname = addfullpath(texname);
+     SDL_Surface *s = IMG_Load(texname);
+     if(!s) { conoutf("couldn't load texture %s", texname); return false; };
+     if(s->format->BitsPerPixel!=24) { conoutf("texture must be 24bpp: %s", texname); return false; };
+--- tools.h
++++ tools.h
+@@ -110,6 +110,7 @@
+ 
+ 
+ 
++extern char *addfullpath(char *s);
+ extern char *path(char *s);
+ extern char *loadfile(char *fn, int *size);
+ extern void endianswap(void *, int, int);
