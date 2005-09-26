@@ -1,8 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1eec655a4ae3ceaaecaac9dcc2ed52d2 gdm-themes-2.0-r1.ebuild 4396
-MD5 cab833ea192155065c07aac34424a76c gdm-themes-1.0-r1.ebuild 1727
-MD5 3a76c423a31bfe0c7383fc0bbe339824 ChangeLog 2403
+MD5 4ae0771d74f3f70550dfa5056ea258af gdm-themes-2.0-r2.ebuild 4282
+MD5 2fb94a5053671fc802de4676f0c5c5c3 ChangeLog 2740
 MD5 9ea9a9c5601b7f2be3f46b882cbf3f03 metadata.xml 416
-MD5 766c9ab191efc4bdaa274b934c3eb6b3 gdm-themes-1.0.ebuild 1653
-MD5 267b9a61fd87562b2472231edfcd1e85 files/digest-gdm-themes-1.0-r1 1911
 MD5 fd04b31a7e6615c5f265a6597164284f files/digest-gdm-themes-2.0-r1 6897
-MD5 4521cae17d4d1e38070589d7f7135c63 files/digest-gdm-themes-1.0 1837
+MD5 2cd87c741821bc4f15c61fb77b495865 files/digest-gdm-themes-2.0-r2 6479
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDOGUv8zY1VwezZiERArwLAJ44OLmistumoXwyCHA0dLfGUmn8qACfdeGZ
+IozYCfYKwsBfSF0dnq7xBKY=
+=EeSA
+-----END PGP SIGNATURE-----
