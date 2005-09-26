@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.10 2005/05/01 18:13:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.11 2005/09/26 18:22:15 wolf31o2 Exp $
 
-inherit gnuconfig games eutils
+inherit gnuconfig eutils games
 
 DESCRIPTION="3D motor sports simulator"
 HOMEPAGE="http://gracer.sourceforge.net/"
