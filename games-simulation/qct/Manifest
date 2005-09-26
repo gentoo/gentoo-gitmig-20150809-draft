@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 48f5561b2d97332b939cc7a9cd3208b2 qct-0.7.ebuild 879
+MD5 4f069ffb3dfa24dd44eb699b4b3cd25a ChangeLog 839
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 33b56a74f2bd9ea5227031f75039b4e1 qct-0.7.ebuild 877
-MD5 1bb7190f85a47be2db1ce8e9a8226e9b ChangeLog 729
-MD5 7daeff4db5ed966d68fe4d944aa247b1 files/qct-0.7-constant.patch 712
 MD5 987c0051916a2bfe70b434fcdaec006f files/digest-qct-0.7 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxwRAgIKl8Uu19MoRAtPOAKCClQV5z2f1JiVbxnWMk5mtrhIlkACdFSZf
-Rz/U72lMQHDtgCS5moF6QZ4=
-=h99/
------END PGP SIGNATURE-----
+MD5 7daeff4db5ed966d68fe4d944aa247b1 files/qct-0.7-constant.patch 712
