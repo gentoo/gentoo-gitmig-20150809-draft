@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/xzip
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.5 2004/12/29 00:01:52 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.6 2005/09/26 17:56:36 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> xzip-1.8.2-r2.ebuild:
+  Making games last on inherit line.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
