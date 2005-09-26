@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/readahead-list
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.7 2005/07/17 12:56:13 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.8 2005/09/26 04:36:42 robbat2 Exp $
+
+  26 Sep 2005; Robin H. Johnson <robbat2@gentoo.org>
+  readahead-list-0.20050517.0220.ebuild:
+  Stable on x86, 132 days in ~x86.
 
   17 Jul 2005; Jared Hudson <jhhudso@gentoo.org>
   readahead-list-0.20050517.0220.ebuild:
