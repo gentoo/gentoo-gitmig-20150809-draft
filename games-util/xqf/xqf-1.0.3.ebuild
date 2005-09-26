@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.3.ebuild,v 1.6 2005/09/24 20:12:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.3.ebuild,v 1.7 2005/09/26 03:46:22 vapier Exp $
 
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
@@ -9,10 +9,11 @@ SRC_URI="mirror://sourceforge/xqf/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc x86"
-IUSE="nls geoip bzip2"
+IUSE="nls geoip bzip2 gtk2"
 
-DEPEND="=x11-libs/gtk+-2*
-	media-libs/gdk-pixbuf
+DEPEND="
+	gtk2? ( =x11-libs/gtk+-2* )
+	!gtk2? ( =x11-libs/gtk+-1* media-libs/gdk-pixbuf )
 	nls? ( sys-devel/gettext )
 	geoip? ( dev-libs/geoip )
 	bzip2? ( app-arch/bzip2 )"
@@ -36,6 +37,7 @@ src_compile() {
 		$(use_enable geoip) \
 		$(use_enable bzip2) \
 		$(use_enable debug) \
+		$(use_enable gtk2) \
 		|| die
 	emake || die "emake failed"
 }
