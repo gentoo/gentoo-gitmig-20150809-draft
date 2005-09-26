@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_beta4.ebuild,v 1.1 2005/05/31 22:40:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_beta4.ebuild,v 1.2 2005/09/26 01:38:17 dang Exp $
 
 inherit flag-o-matic libtool
 
-IUSE="cups foomaticdb gtk nls readline"
+IUSE="cups foomaticdb gtk nls readline ppds"
 
 MY_P=gutenprint-5.0.0-beta4
 
