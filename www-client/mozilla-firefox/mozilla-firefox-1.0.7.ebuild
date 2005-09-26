@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7.ebuild,v 1.1 2005/09/25 23:31:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7.ebuild,v 1.2 2005/09/26 14:23:05 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -282,7 +282,7 @@ src_install() {
 	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10MozillaFirefox
 
 	# Install docs
-	dodoc LEGAL LICENSE
+	dodoc ${S}/{LEGAL,LICENSE}
 }
 
 pkg_postinst() {
