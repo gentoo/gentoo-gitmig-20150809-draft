@@ -1,6 +1,10 @@
 # ChangeLog for games-server/halflife-steam
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/ChangeLog,v 1.8 2005/02/28 18:41:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/ChangeLog,v 1.9 2005/09/26 18:19:59 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  halflife-steam-2.0.ebuild:
+  Making games last on inherit line.
 
   28 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> :
   Need to use binary mode to transfer hldsupdatetool_readme.txt (bug #80378)
