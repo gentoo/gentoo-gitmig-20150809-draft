@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/4stattack
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/ChangeLog,v 1.5 2004/12/28 12:16:01 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/ChangeLog,v 1.6 2005/09/26 18:13:01 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  4stattack-2.1.4.ebuild:
+  Making games last on inherit line.
 
   28 Dec 2004; Joseph Jezak <josejx@gentoo.org> 4stattack-2.1.4.ebuild:
   Marked ppc stable.
