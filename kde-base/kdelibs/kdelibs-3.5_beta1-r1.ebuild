@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5_beta1.ebuild,v 1.1 2005/09/21 17:18:55 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5_beta1-r1.ebuild,v 1.1 2005/09/26 08:30:55 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -55,6 +55,9 @@ src_unpack() {
 
 	# Configure check for ACLs.
 	epatch "${FILESDIR}/${P}-configure-acl.patch"
+
+	# Fix for pumount that was passed the wrong device name
+	epatch "${FILESDIR}/kioslave-pumount-devname.patch"
 
 	# For the configure check.
 	make -f admin/Makefile.common || die
