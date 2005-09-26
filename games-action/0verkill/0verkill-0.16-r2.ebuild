@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.6 2004/06/24 21:51:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.7 2005/09/26 19:23:07 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,6 +25,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
 	sed -i \
 		-e "s:data/:${GAMES_DATADIR}/${PN}/data/:" cfg.h \
+		|| die "sed failed"
+	sed -i \
+		-e "s:@CFLAGS@ -O3 :@CFLAGS@ :" Makefile.in \
 		|| die "sed failed"
 }
 

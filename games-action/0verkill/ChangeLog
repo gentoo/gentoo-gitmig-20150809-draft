@@ -1,6 +1,10 @@
 # ChangeLog for games-action/0verkill
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.9 2004/06/24 21:51:22 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.10 2005/09/26 19:23:07 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  0verkill-0.16-r2.ebuild:
+  Added sed to remove extra -O3 from CFLAGS.
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   0verkill-0.16-r2.ebuild:
