@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.49 2005/09/17 00:37:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.50 2005/09/26 16:23:51 obz Exp $
+
+*gthumb-2.6.8 (26 Sep 2005)
+
+  26 Sep 2005; Mike Gardiner <obz@gentoo.org> +gthumb-2.6.8.ebuild:
+  A new, mostly bugfix release, as requested in bug #107108.
 
 *gthumb-2.6.7 (17 Sep 2005)
 
