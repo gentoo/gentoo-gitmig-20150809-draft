@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8efc2dd18053d9554af13393c4d5ee2f ChangeLog 468
-MD5 47e90966208e99d9608c60329c20d594 files/digest-npadmin-0.8.7 65
-MD5 a50b137e4f29385fdb2cdfc91b325ab3 files/npadmin-0.8.7-stdlib.patch 258
+MD5 6d81e6ac479048ddb4a865bceaa8e0c6 npadmin-0.8.7.ebuild 760
+MD5 746d6417d4f9cd42c62b19c4b2d50a19 ChangeLog 579
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 d9a54063805dc78a180581a8eae3f6f8 npadmin-0.8.7.ebuild 762
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/bEI1lqEGTUzyQRAjtiAKCQ5n+UU4djgWr16UPgT4pxNEjaAgCgvN0f
-ZLzVa/zx86sab+2FaVW1gbk=
-=xWV2
------END PGP SIGNATURE-----
+MD5 a50b137e4f29385fdb2cdfc91b325ab3 files/npadmin-0.8.7-stdlib.patch 258
+MD5 47e90966208e99d9608c60329c20d594 files/digest-npadmin-0.8.7 65
