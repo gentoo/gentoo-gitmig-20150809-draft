@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acddebdbedf79838018a9c86e2dbf1c9 mupen64-jttl_sound-1.2.ebuild 1016
-MD5 1c230d67429fce2826b4f84c97af40d0 ChangeLog 964
+MD5 6ada4f5becfb4c8c7c9af304c4f1ab73 mupen64-jttl_sound-1.2.ebuild 1016
+MD5 a54abe14e0150d70854d8e76a110494c ChangeLog 1089
 MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
 MD5 d36511359fea3ac49bf4143ff0a75c73 files/mupen64-jttl_sound-gentoo-sdl.patch 740
 MD5 15a6f8ba72caa4ce4756527060ba4d4d files/digest-mupen64-jttl_sound-1.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm11OI1lqEGTUzyQRAiWtAJ4hxk3BqbTB9yo+8nqLqJwH1YhfWgCfdEjU
-fWtgdGIn8BqcxleLfXPBiLQ=
-=+hxJ
------END PGP SIGNATURE-----

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 73156b12084b3dd8226d717e5e4b80ed pcsx2-0.8.1.ebuild 1638
 MD5 c682f106baa8968236f43cfed2bc5871 pcsx2-0.6.ebuild 1516
-MD5 866434852e5fd01a60b6842025947fdf pcsx2-0.8.1.ebuild 1636
-MD5 4299324836422f7abde881ca0e6922c7 ChangeLog 948
-MD5 7f767cd968c92287092f1677b680d93c files/digest-pcsx2-0.8.1 62
+MD5 e546ce2af960880dcf517e3d3aacb4bf ChangeLog 1062
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 4bdc90cba4d2039218051770ee1fff2f files/pcsx2 1368
 MD5 4117c94231158b69fecb21aa7f049626 files/pcsx2-0.8.1-amd64.patch 609
 MD5 7824dc74e2dffea379d9aa075d6dbecd files/digest-pcsx2-0.6 62
-MD5 4bdc90cba4d2039218051770ee1fff2f files/pcsx2 1368
 MD5 98a9029664c06eed7f435badf6397b4d files/pcsx2.png 11497
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC9qeQgIKl8Uu19MoRAmRPAJ9NnGsK4u3++RFdnkFFHnJw+Sc9AACeMYiY
-GbCkGxoK7OrybY0CB5vkhTw=
-=LcTY
------END PGP SIGNATURE-----
+MD5 7f767cd968c92287092f1677b680d93c files/digest-pcsx2-0.8.1 62

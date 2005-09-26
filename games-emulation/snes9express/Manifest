@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c33f1cc7bd10a37871309f8140fcc2ab snes9express-1.42.ebuild 774
+MD5 e72a3a353320e084f72c1cba530ce327 ChangeLog 810
 MD5 8152dd0afb80b8991f9d3354c05fda78 metadata.xml 226
-MD5 73f164cb9749723b05ca4bb7fb510648 snes9express-1.42.ebuild 772
-MD5 d91c21d1f3bbce04e7de7e4a2ec9b509 ChangeLog 690
 MD5 56710e5516c8de9fbd8a3f2332859393 files/snes9express-1.42-fix.patch 249
 MD5 4b260d8bf99869f59d2ea478d201e559 files/digest-snes9express-1.42 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC4DnggIKl8Uu19MoRAlNwAJ9ntQRTJE3LAyKa7fV0ETWLvPwvxACePGRC
-qC3PGwC25KysfWKTUutEDXw=
-=7KBM
------END PGP SIGNATURE-----

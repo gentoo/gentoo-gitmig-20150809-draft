@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d9dde5f00ad746a3c6b3c45e8d151b1 ChangeLog 1116
-MD5 dff7cb6744fd0966075d9c4d3d22063e game-launcher-0.9.8.ebuild 1164
+MD5 5711e7ca020a544ed5db8538fb7e9e2e ChangeLog 1238
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 671b1311f9989ac4e746ae60042ec36c files/0.9.8-digi-oss.patch 229
-MD5 0ce1a828196b8d4e3e0302ed4d95c4d3 files/0.9.8-gcc3.patch 299
+MD5 0dc7661dc305704a198c825638156c1e game-launcher-0.9.8.ebuild 1164
 MD5 fe19d89e23c88c3309c2a323e0b4f7f4 files/0.9.8-gentoo.patch 6097
 MD5 79514d6adf8fd7f9d6fc78210cc91aee files/digest-game-launcher-0.9.8 55
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1WNI1lqEGTUzyQRAhDbAKDbWeRGQRkUa33OuQbI7wkVg8A6LACfbvDA
-u42zmRCHbdnbAWeZccxraaI=
-=ceIn
------END PGP SIGNATURE-----
+MD5 671b1311f9989ac4e746ae60042ec36c files/0.9.8-digi-oss.patch 229
+MD5 0ce1a828196b8d4e3e0302ed4d95c4d3 files/0.9.8-gcc3.patch 299
