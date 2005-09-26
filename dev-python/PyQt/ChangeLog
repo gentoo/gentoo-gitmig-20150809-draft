@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.55 2005/04/21 18:56:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.56 2005/09/26 15:26:47 chrb Exp $
+
+*PyQt-3.15 (26 Sep 2005)
+
+  26 Sep 2005; Chris Bainbridge <chrb@gentoo.org> +PyQt-3.15.ebuild:
+  Version bump for #107104
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> PyQt-3.13.ebuild:
   Stable on ppc.

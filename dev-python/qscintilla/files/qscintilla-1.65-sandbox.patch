@@ -1,0 +1,23 @@
+--- Makefile.orig	2005-09-26 16:18:10.808635240 +0000
++++ Makefile	2005-09-26 16:19:30.253557776 +0000
+@@ -370,7 +370,7 @@
+ QMAKE_TARGET = qscintilla
+ DESTDIR  = $(QTDIR)/lib/
+ TARGET   = libqscintilla.so.6.0.0
+-TARGETA	= $(QTDIR)/lib/libqscintilla.a
++TARGETA	= libqscintilla.a
+ TARGETD	= libqscintilla.so.6.0.0
+ TARGET0	= libqscintilla.so
+ TARGET1	= libqscintilla.so.6
+@@ -407,11 +407,6 @@
+ 	-ln -s $(TARGET) $(TARGET0)
+ 	-ln -s $(TARGET) $(TARGET1)
+ 	-ln -s $(TARGET) $(TARGET2)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET0)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET1)
+-	-$(DEL_FILE) $(QTDIR)/lib/$(TARGET2)
+-	-$(MOVE) $(TARGET) $(TARGET0) $(TARGET1) $(TARGET2) $(QTDIR)/lib/
+ 
+ 
+ 
