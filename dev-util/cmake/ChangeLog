@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.21 2005/09/26 10:37:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.22 2005/09/26 19:21:14 sbriesen Exp $
+
+  26 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org> cmake-2.2.1.ebuild:
+  fixing parallel build problem (emake -j1).
 
 *cmake-2.2.1 (26 Sep 2005)
 *cmake-2.2.0-r1 (26 Sep 2005)
