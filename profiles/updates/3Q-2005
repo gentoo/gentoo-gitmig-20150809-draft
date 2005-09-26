@@ -70,3 +70,7 @@ slotmove =dev-java/gnu-javamail-20040331 0 1
 slotmove =dev-java/struts-1.1* 0 1.1
 slotmove =dev-java/struts-1.2* 0 1.2
 move sys-devel/makepp dev-util/makepp
+move net-libs/aqhbci-qt-tools net-libs/aqbanking
+move net-libs/aqhbci-ddvcard sys-libs/libchipcard
+move net-libs/aqhbci-rsacard sys-libs/libchipcard
+move net-libs/aqhbci net-libs/aqbanking
