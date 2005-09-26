@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.8 2005/05/09 14:52:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.9 2005/09/26 18:24:21 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 MY_P=${PN}-030311
 DESCRIPTION="realtime strategy game engine for games like Warcraft/Starcraft/etc."
