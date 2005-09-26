@@ -1,0 +1,21 @@
+--- layout/html/base/src/nsObjectFrame.cpp.orig	2005-05-15 00:40:19.000000000 +0200
++++ layout/html/base/src/nsObjectFrame.cpp	2005-05-15 00:43:44.000000000 +0200
+@@ -1720,7 +1720,7 @@
+       break;
+ 
+     nsHTMLContainerFrame::CreateViewForFrame(divFrame, this, PR_FALSE);
+-    mFrames.AppendFrame(this, divFrame);
++    // mFrames.AppendFrame(this, divFrame);
+ 
+     rv = NS_NewImageFrame(shell, &imgFrame);
+     if (NS_FAILED(rv))
+@@ -1756,6 +1756,9 @@
+ 
+     if (textFrame)
+       textFrame->Destroy(aPresContext);
++  } else {
++    // Creation of all our anonymous content succeeded.
++    mFrames.AppendFrame(this, divFrame);
+   }
+ 
+   nsCOMPtr<nsISupportsArray> array;

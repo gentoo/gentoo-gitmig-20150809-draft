@@ -1,0 +1,15 @@
+--- mozilla/configure.in.az	2005-09-26 00:07:40.000000000 +0200
++++ mozilla/configure.in	2005-09-26 00:10:56.000000000 +0200
+@@ -3430,9 +3430,10 @@
+ if test "$MOZ_ENABLE_XFT"
+ then
+     AC_DEFINE(MOZ_ENABLE_XFT)
+-    PKG_CHECK_MODULES(MOZ_XFT, xft)
+     if test "$MOZ_ENABLE_GTK2"; then
+-        PKG_CHECK_MODULES(_PANGOCHK, pango >= 1.1.0)
++        PKG_CHECK_MODULES(MOZ_XFT, xft pangoxft >= 1.1.0)
++    else
++        PKG_CHECK_MODULES(MOZ_XFT, xft)
+     fi
+ fi
+ 

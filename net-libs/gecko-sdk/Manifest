@@ -1,4 +1,24 @@
-MD5 5a6f53058dc7672f746cb71a89d3ce33 ChangeLog 2291
-MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8b22525bd9a836743abec05930d9543f gecko-sdk-1.7.12.ebuild 6945
 MD5 7297b847a9f0fadad2c55425d8f49f97 gecko-sdk-1.7.8.ebuild 6801
+MD5 e774e3ab3446f71e588ff052fdd95ada ChangeLog 2930
+MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
+MD5 b7c78ba7ca0c519d0f3d2b80ab4cdd74 files/mozilla-1.7.6-ppc64.patch 3651
+MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
+MD5 5b22d0e1ea93923e3e66787c286ad86f files/mozilla-1.7.8-objectframefix.diff 673
+MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/mozilla-hppa.patch 7863
+MD5 1f71cb3a30531a90fb7d1d3445588ba6 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
+MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
+MD5 eb21396de389b3ef0277d5f95d59c348 files/mozilla-1.7.8-amd64.patch 4020
+MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-1.7.6-gcc4.patch 1818
+MD5 8047a3fb75a7615d8c40e82de392468f files/digest-gecko-sdk-1.7.12 504
 MD5 5d946445ba7bba30fb129f941bc7e84b files/digest-gecko-sdk-1.7.8 203
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDN0jI1ZcsMnZjRyIRAoLtAJ4jDTVP3are/zuC+a/5aYaWDpfLsgCcDNse
+F9gyxhvNJI0rLeU1IQLl+/8=
+=1kQK
+-----END PGP SIGNATURE-----

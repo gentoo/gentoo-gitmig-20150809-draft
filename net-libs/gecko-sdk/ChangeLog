@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.14 2005/07/11 22:02:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.15 2005/09/26 01:01:15 azarah Exp $
+
+*gecko-sdk-1.7.12 (26 Sep 2005)
+
+  26 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mozilla-1.7.6-gcc4.patch, +files/mozilla-1.7.6-ppc64.patch,
+  +files/mozilla-1.7.8-amd64.patch,
+  +files/mozilla-1.7.8-objectframefix.diff,
+  +files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch,
+  +files/mozilla-1.7.12-libart-freetype.patch, +files/mozilla-hppa.patch,
+  +files/mozilla-stackgrowth.patch, +gecko-sdk-1.7.12.ebuild:
+  New release, GLSA105396. Use libart rather than cairo, bug #106713. Update
+  gtk2 and xft code from upstream to fix various freetype-2.1.9 issues
+  including printing non-latin. Same for the libart renderer code.
 
 *gecko-sdk-1.7.8 (11 Jul 2005)
 
