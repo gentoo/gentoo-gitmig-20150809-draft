@@ -1,8 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9284e2f2c1af67f999a793be06af8ef9 cmake-2.0.5.ebuild 791
 MD5 c7008534123f6886fbc11f82417c0b39 metadata.xml 347
-MD5 93bcae9fd087dfe6f4ab9f22c512d059 ChangeLog 2918
+MD5 c3d999071e6827fb71686b0e19849279 ChangeLog 3433
 MD5 535056ed03ebcf34e1cb4ff3f97424c0 cmake-2.0.6.ebuild 907
-MD5 9c913b69851732891574702f6dcb9e73 cmake-2.2.0.ebuild 976
+MD5 30e99f7c6e1f5025d89a90a836f45b52 cmake-2.2.1.ebuild 1220
+MD5 a959a6103f04ad2383ccec8c6d0936e8 cmake-2.2.0-r1.ebuild 1223
+MD5 ff8b2e9d4e8d7cb5c6fcd50682c9fe21 cmake-2.0.6-r1.ebuild 1011
 MD5 beb07080ff2955d2e023b17bc15e6b67 files/digest-cmake-2.0.6 64
-MD5 6b3e76d4d01f10ed7f93bb39cc603f8c files/digest-cmake-2.2.0 64
+MD5 a1a51ec90e30f352bb6f0aa3822083e7 files/digest-cmake-2.2.1 64
+MD5 6b3e76d4d01f10ed7f93bb39cc603f8c files/digest-cmake-2.2.0-r1 64
 MD5 583f594b8088c13f635368d141de40cb files/digest-cmake-2.0.5 64
+MD5 beb07080ff2955d2e023b17bc15e6b67 files/digest-cmake-2.0.6-r1 64
+MD5 dd14e025d4b768e7ea416902ddc0b756 files/cmake-2.2.0-rpath-fix.patch 448
+MD5 cc142b07505b203f41d024728adb130f files/cmake-2.0.6-rpath-fix.patch 526
+MD5 c47657a48f7a256e7cd145d89274b9f1 files/cmake-2.2.1-rpath-fix.patch 444
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDN89mmdTrptrqvGERAsu5AJ4o69sDBNYiD8xUHpVULmsYTJFIngCggmPM
+aeuGM6pcxYKncgJ4bO5HACg=
+=KMBV
+-----END PGP SIGNATURE-----

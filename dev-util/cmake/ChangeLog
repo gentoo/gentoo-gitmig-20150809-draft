@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.20 2005/09/02 19:37:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.21 2005/09/26 10:37:03 dragonheart Exp $
+
+*cmake-2.2.1 (26 Sep 2005)
+*cmake-2.2.0-r1 (26 Sep 2005)
+*cmake-2.0.6-r1 (26 Sep 2005)
+
+  26 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/cmake-2.0.6-rpath-fix.patch, +files/cmake-2.2.0-rpath-fix.patch,
+  +files/cmake-2.2.1-rpath-fix.patch, +cmake-2.0.6-r1.ebuild,
+  -cmake-2.2.0.ebuild, +cmake-2.2.0-r1.ebuild, +cmake-2.2.1.ebuild:
+  insecure runpaths as per security bug #105721 resulted in 2.2.0-r1 and
+  2.0.6-r1. Thanks Ashu Tiwary. version bump to 2.2.1 as per bug #106781 by
+  David Somers
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> cmake-2.0.6.ebuild:
   Stable on ppc.

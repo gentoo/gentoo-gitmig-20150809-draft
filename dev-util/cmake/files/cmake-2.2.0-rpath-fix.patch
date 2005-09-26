@@ -1,0 +1,11 @@
+--- cmake-2.2.0/./Modules/CMakeGenericSystem.cmake.orig	2005-09-26 07:49:25.000000000 +1000
++++ cmake-2.2.0/./Modules/CMakeGenericSystem.cmake	2005-09-26 07:49:38.000000000 +1000
+@@ -21,7 +21,7 @@
+   SET(CMAKE_SHARED_LIBRARY_CXX_FLAGS "-fPIC")   # -pic
+ ENDIF(CMAKE_COMPILER_IS_GNUCXX)
+ 
+-SET (CMAKE_SKIP_RPATH "NO" CACHE BOOL
++SET (CMAKE_SKIP_RPATH "YES" CACHE BOOL
+      "If set, runtime paths are not added when using shared libraries.")
+ 
+    
