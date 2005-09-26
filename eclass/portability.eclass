@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.3 2005/09/21 02:46:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.4 2005/09/26 23:33:55 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -73,5 +73,23 @@ egethome() {
 	else
 		# Linux and NetBSD uses position 6 instead
 		cut -d: -f6 <<<${ent}
+	fi
+}
+
+# Gets the name of the BSD-ish make command (pmake from NetBSD)
+#
+# This will return make (provided by system packages) for BSD userlands,
+# or bsdmake for Darwin userlands and pmake for the rest of userlands,
+# both of which are provided by sys-devel/pmake package.
+#
+# Note: the bsdmake for Darwin userland is with compatibility with MacOSX
+# default name.
+get_bmake() {
+	if [[ ${USERLAND} == *BSD ]]; then
+		echo make
+	elif [[ ${USERLAND} == "Darwin" ]]; then
+		echo bsdmake
+	else
+		echo pmake
 	fi
 }
