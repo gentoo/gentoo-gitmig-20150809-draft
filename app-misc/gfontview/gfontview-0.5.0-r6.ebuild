@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.10 2005/04/21 19:14:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.11 2005/09/26 16:09:11 dang Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="nls gnome"
 DEPEND=">=media-libs/t1lib-1.0.1
 	=media-libs/freetype-1*
 	=x11-libs/gtk+-1.2*
+	media-libs/giflib
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	virtual/lpr"
 RDEPEND="nls? ( sys-devel/gettext )"
