@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ndu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.7 2005/02/13 03:38:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ChangeLog,v 1.8 2005/09/26 04:28:14 robbat2 Exp $
+
+  26 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> ndu-0.4-r2.ebuild:
+  Stable on x86, 226 days in ~x86.
 
 *ndu-0.4-r2 (12 Feb 2005)
 
