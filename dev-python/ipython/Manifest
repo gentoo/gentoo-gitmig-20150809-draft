@@ -1,28 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76d3d40e048c0f405b11b6d81aaed021 ipython-0.6.12.ebuild 564
-MD5 8aa9e54922f4fad62772c286d3ecacf5 ipython-0.6.14.ebuild 566
-MD5 76eab1274c016c376851b198cfe96d9d ipython-0.6.6.ebuild 556
-MD5 7075ed8593e0febf3903acc1b9350ef2 ipython-0.5.0.ebuild 635
-MD5 5c48ae7508d7e684f2d23200af7f522b ipython-0.6.11.ebuild 557
-MD5 e63955c9dab8532ef34069830cff93ef ipython-0.6.13.ebuild 561
-MD5 f5ecc40b19a187a9985b20866852c04e ipython-0.6.15.ebuild 566
-MD5 316bd0a4a934ca461924b6696e8cd99c ChangeLog 3165
-MD5 dcd9522d5a21fe1b88069e8b9d9b3601 ipython-0.6.10.ebuild 555
+MD5 f81dd77ecaaae7d8726d70249a9fdc69 ChangeLog 3463
 MD5 bc7bf882e287892e01bed6a317323bac metadata.xml 1078
-MD5 398c8603e20a6f2b983f654f1cd5a380 files/digest-ipython-0.5.0 65
-MD5 3d4340f6bd77fd74a9700435c41801e6 files/digest-ipython-0.6.6 65
-MD5 0b3f279ac14923d13ad872492ab5cf6a files/digest-ipython-0.6.10 66
-MD5 f2a7ec52cc3e58c50bf28d492d700d61 files/digest-ipython-0.6.11 66
-MD5 c205e2bec033a9d9e57739a525941116 files/digest-ipython-0.6.12 66
+MD5 41da284cfee60d5a59274e429ad7a808 ipython-0.6.13.ebuild 560
+MD5 d35091ccc91d50ef92c780b8633b6b80 ipython-0.6.14.ebuild 564
+MD5 58551d9da14b64782451689223444e0f ipython-0.6.15.ebuild 564
 MD5 3a97850f5f76e1bd8fe6082fc70e091d files/digest-ipython-0.6.13 66
 MD5 7631bba5e54a813acc27c705fd86f421 files/digest-ipython-0.6.14 66
 MD5 ba1f7f14c7a2ab29ed1844b33d1c386b files/digest-ipython-0.6.15 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCocmUntT9W3vfTuoRAs4xAKCeCMO11zl1pM4VBoEKeAYsWNPCtwCfaMQe
-Rf6MxJNiiayuYkvzpFk6Nh4=
-=4XbF
+iD8DBQFDOByYTM53OX+9xmMRAo5sAJ9OJSqZGEseQDqPMM7yqgiP2QDr4QCgybzx
+U0ZInKTSyre5cibZ72kBeC4=
+=w+dD
 -----END PGP SIGNATURE-----
