@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8c5675e36f2f7d393dd634e387f538d6 ipset-2.1.0.20050119.ebuild 1711
-MD5 de2060831dbc0bfe4750b1d6ef3feaa7 ipset-2.1.0.20050119-r1.ebuild 1610
-MD5 8acdd3b54586a49f3391459eb2136989 ChangeLog 852
+MD5 81097c0394419fcc18c0d10d5e11bca7 ipset-2.1.0.20050119-r1.ebuild 1608
+MD5 a6be5b32657b9c804e789eb54b62e705 ChangeLog 974
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 eeb0a192ff8d4aa8efabfbae1e3ccf7c files/digest-ipset-2.1.0.20050119-r1 72
 MD5 eeb0a192ff8d4aa8efabfbae1e3ccf7c files/digest-ipset-2.1.0.20050119 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe4CaI1lqEGTUzyQRAs5sAKCxKIWaSz8GxXFCj3blfUaAJP10ygCg3qVY
-7qNUcSmwfKNvacLDixCaRLQ=
-=r8fY
------END PGP SIGNATURE-----
