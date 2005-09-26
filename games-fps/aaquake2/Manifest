@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f88aab01902daf445b7499a05d9774c ChangeLog 335
-MD5 cab2f43fa86a47146df4828f6d04979a aaquake2-0.1.ebuild 1587
+MD5 203223c7142385e7f5aed0a50e70183d ChangeLog 448
 MD5 587731cb875d15339a21a8c99c02bc5d metadata.xml 626
+MD5 b11f283e8a2063e206b3f0b420c1a28f aaquake2-0.1.ebuild 1589
 MD5 6b4f3f4f340a0982351384061f9ee8fa files/0.1-gentoo.patch 3309
 MD5 3704e9e7f7fb3fe2bc76025575bfcb7b files/digest-aaquake2-0.1 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiCQZHTu7gpaalycRAt4tAJ0UsRtfp/Xa06+/fwZEpuZqjk2OLgCgyTCu
-C6fzNSVc84c89vnpPSBw4S0=
-=RNdZ
------END PGP SIGNATURE-----

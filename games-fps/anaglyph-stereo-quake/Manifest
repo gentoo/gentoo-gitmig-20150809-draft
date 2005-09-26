@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a01fefb743d435c7cd09efe37e73ed71 ChangeLog 965
-MD5 8882ab59effec532381ce5677343a560 anaglyph-stereo-quake-130100-r1.ebuild 1437
+MD5 e61bc6d09bfc396dc9bf1843efa37e0e anaglyph-stereo-quake-130100-r1.ebuild 1440
+MD5 42e26918615b527b7b8c0f44095a1921 ChangeLog 1098
 MD5 6424c6f1d79eef29759728085572f308 metadata.xml 1253
-MD5 285ecebade8c014a499f23ffe68da975 files/digest-anaglyph-stereo-quake-130100-r1 155
-MD5 2cdc759b378cdf4dea66f3d85e1e0263 files/fix-sys_printf.patch 271
-MD5 41c0380996274c19f292758da6dc66cd files/gentoo-paths.patch 1005
-MD5 c1ebbdc10cf08c7d223e07c0f8cb288b files/makefile-cflags.patch 721
 MD5 7262313d61aa23feac532c98f818ddf5 files/makefile-onlyglx.patch 464
-MD5 a4c6edf40c5ddec35cc9cc9b5e408482 files/makefile-path-fixes.patch 928
 MD5 4609964e62cdec31ee47cebf59f8fde4 files/stupid-dosformat.patch 749
 MD5 046439ba03755b96972e0835d58386dc files/anaglyph-stereo-quake-130100-amd64.patch 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB8RBkroRuSHgZdywRAqTEAJ45vg/8SuiE9SEbETY7ZZF85f3doACgj0lm
-khtnlR+uKPgsRjz6kLjeamU=
-=0gTK
------END PGP SIGNATURE-----
+MD5 41c0380996274c19f292758da6dc66cd files/gentoo-paths.patch 1005
+MD5 285ecebade8c014a499f23ffe68da975 files/digest-anaglyph-stereo-quake-130100-r1 155
+MD5 2cdc759b378cdf4dea66f3d85e1e0263 files/fix-sys_printf.patch 271
+MD5 a4c6edf40c5ddec35cc9cc9b5e408482 files/makefile-path-fixes.patch 928
+MD5 c1ebbdc10cf08c7d223e07c0f8cb288b files/makefile-cflags.patch 721
