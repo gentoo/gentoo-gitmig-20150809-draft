@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 17d043db6f5684cbbcd95314139a99fc clamsmtp-1.5.ebuild 1356
-MD5 0b8bd782ed880f3feef6a4828f4a11f1 clamsmtp-1.4.1.ebuild 1357
-MD5 13adaf39a3955f727d7676ec39984c13 ChangeLog 736
+MD5 251c2e70096f4c05264974a74f076f9e clamsmtp-1.5.ebuild 1354
+MD5 ec24c2c678c433cdf405dd103e3372ab clamsmtp-1.4.1.ebuild 1356
+MD5 c26b66baf78fd9d775a0a78e5758492e ChangeLog 884
 MD5 e4238fef843c6ceb78bd9013a90a918f metadata.xml 465
 MD5 baf953395c3097dca31171f7ebade75a files/clamsmtpd.init 462
 MD5 2484eb1d778828a2e967f6f4680aa9d0 files/digest-clamsmtp-1.5 64
@@ -11,7 +11,7 @@ MD5 dfac95f01e87493f9f73b59692c19489 files/digest-clamsmtp-1.4.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDFdDQlM6RnzZP+IRAslBAJ9WM4Cg3sC7CH8kivRjQ9UBGm3JhQCdHLwX
-7dfxEdytAvRdpYdmO/UENyI=
-=Nb8Y
+iD8DBQFDN57nQlM6RnzZP+IRAnetAKDCR8HH+geZyG08FmBjYTprUMkpXgCfRtY1
+xMRu2BAcOfYNzgDIfrxaPeg=
+=CMR4
 -----END PGP SIGNATURE-----
