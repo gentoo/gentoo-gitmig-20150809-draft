@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.87 2005/09/16 23:21:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.88 2005/09/26 11:01:46 dragonheart Exp $
+
+*lftp-3.3.0 (26 Sep 2005)
+
+  26 Sep 2005; Daniel Black <dragonheart@gentoo.org> +lftp-3.3.0.ebuild:
+  version bump - bug #107232 - thanks to Philip Lafleur
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
