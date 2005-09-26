@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/dvhtool-1.0.1-r1.ebuild,v 1.1 2005/09/25 05:53:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/dvhtool-1.0.1-r1.ebuild,v 1.2 2005/09/26 21:40:29 kumba Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-debian.diff
 
 	# Allow dvhtool to recognize Linux RAID and Linux LVM partitions
-	epatch ${FILESDIR}/${P}-1.0.1-add-raid-lvm-parttypes.patch
+	epatch ${FILESDIR}/${P}-add-raid-lvm-parttypes.patch
 }
 
 src_compile() {
