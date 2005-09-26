@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-2.7.0.21.ebuild,v 1.1 2005/09/26 15:32:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-2.7.0.21.ebuild,v 1.2 2005/09/26 16:35:32 swegener Exp $
 
 inherit eutils toolchain-funcs versionator linux-info
 
@@ -48,7 +48,7 @@ src_unpack() {
 	epatch ${FILESDIR}/vzctl-2.7.0-gentoo_conf_d.patch
 	epatch ${FILESDIR}/vzctl-2.7.0-gentoo_etc_vz.patch
 }
-			
+
 src_compile() {
 	emake VZKERNEL_HEADERS=${KV_DIR}/include || die "emake failed"
 }
