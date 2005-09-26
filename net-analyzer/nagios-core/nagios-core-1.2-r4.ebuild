@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.4 2005/07/09 18:38:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.5 2005/09/26 15:30:08 eldad Exp $
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 IUSE="noweb mysql postgres perl debug apache2"
 
 DEPEND="virtual/mailx

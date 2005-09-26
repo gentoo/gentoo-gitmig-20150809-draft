@@ -1,20 +1,30 @@
-MD5 8d2b53030b34777692a113480b403a15 ChangeLog 9397
-MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
-MD5 8b8118567805f4ea62359eb7dbf2019e nagios-core-1.2-r2.ebuild 6616
-MD5 d7530bbd763d7f33259bc3e4ee4a63ec nagios-core-1.2-r3.ebuild 7164
-MD5 eff1ecc359415a26a0461804205a4a47 nagios-core-1.2-r4.ebuild 7086
-MD5 ce3be07134c88a9567e69cfbe28fe86a nagios-core-2.0b_p1.ebuild 5825
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be04314bc38c3f1ad8b15ac0b7399264 nagios-core-2.0b_p2.ebuild 5856
-MD5 446906907cccdbf195442373c6f17f77 files/2.x-series-nsca.patch 767
-MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
+MD5 245ae631470f09b98d5eb40a35a59d8e nagios-core-1.2-r3.ebuild 7161
+MD5 ce3be07134c88a9567e69cfbe28fe86a nagios-core-2.0b_p1.ebuild 5825
+MD5 8b8118567805f4ea62359eb7dbf2019e nagios-core-1.2-r2.ebuild 6616
+MD5 33cb82c11240d04aee53074e0b43e681 nagios-core-1.2-r4.ebuild 7082
+MD5 618b065f1cc13f3620b1f75a3846e33e ChangeLog 9511
+MD5 a1ece421fae3536d1e5dd9b5ecb0215d metadata.xml 928
+MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
+MD5 aa5bb53aee1f5609395e8184f2eff4a6 files/digest-nagios-core-2.0b_p1 65
+MD5 19566d92e4989244216c7fb6d19d688c files/digest-nagios-core-2.0b_p2 65
 MD5 565ce2a690d50aeb542e7afe44b8c733 files/Makefile-distclean.diff.bz2 1133
+MD5 446906907cccdbf195442373c6f17f77 files/2.x-series-nsca.patch 767
 MD5 f2947dec6b9a839da79606bcc394036b files/conf.d 409
+MD5 d062be8c632fbfa88dd1194e0bea2abf files/nagios 1389
+MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
+MD5 faad55511f21831997f9150547aa4e7d files/nagios.cfg-sample.gz 7224
+MD5 cee7d66cc61be3558af44ab177d99e1f files/submit_check_result_via_nsca.patch 585
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r2 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r3 63
 MD5 cd183719838dc2a8b9cafa8a639f4ad2 files/digest-nagios-core-1.2-r4 63
-MD5 aa5bb53aee1f5609395e8184f2eff4a6 files/digest-nagios-core-2.0b_p1 65
-MD5 19566d92e4989244216c7fb6d19d688c files/digest-nagios-core-2.0b_p2 65
-MD5 d062be8c632fbfa88dd1194e0bea2abf files/nagios 1389
-MD5 faad55511f21831997f9150547aa4e7d files/nagios.cfg-sample.gz 7224
-MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
-MD5 cee7d66cc61be3558af44ab177d99e1f files/submit_check_result_via_nsca.patch 585
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDOBQcT+MN7JbqCpMRAm1MAJ9mDsQkq/wKfvAgY4wyDgKZ9esT+wCgjRwj
+aY1pB6WR5GBdCW6Z8J7eGsg=
+=/J7i
+-----END PGP SIGNATURE-----
