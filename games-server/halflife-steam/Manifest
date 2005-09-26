@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 456e105f6e97515e7d941eaab1862e41 halflife-steam-2.0.ebuild 1850
+MD5 5ddbf6307af25de9ee8fad90896cffeb halflife-steam-2.0.ebuild 1853
+MD5 d8e625dccd5d18d84dfc2a7bf3875d22 ChangeLog 977
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6758e89cb08728bcf3d96e5b027a2510 ChangeLog 857
 MD5 1a2fca780fe7fa2572152ebc6327cacb files/digest-halflife-steam-2.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzbZVgIKl8Uu19MoRAr3KAJ4u79iMlxhDbSwh+qryfqJtHdBM0wCdGEdt
-vKXHmJ3CKNbD8RMNgoEBmKM=
-=AhGo
------END PGP SIGNATURE-----

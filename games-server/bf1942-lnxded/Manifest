@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 72499fc361d53df41654324368c123b3 bf1942-lnxded-1.61.ebuild 1127
+MD5 2bdbe8bc295502818e434861cdf564f2 ChangeLog 1296
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f972fdf40884b0dcfea13ea8780fe767 bf1942-lnxded-1.61.ebuild 1125
-MD5 2dc575c95b5df29c0a7f861de75fd76a ChangeLog 1175
-MD5 bf917f08c7e23de66fcfbb9af6cf70f5 files/digest-bf1942-lnxded-1.61 144
 MD5 3ae4022c4198eca3682f6bbc8f91618f files/bf1942-lnxded 50
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFnoJgIKl8Uu19MoRAmrRAJ9sAFh2Wo5Wwcci9G7P/1vXMYvwxgCdHQXl
-W1pPg/LTMeD+WKYpB+5ijvg=
-=/EhH
------END PGP SIGNATURE-----
+MD5 bf917f08c7e23de66fcfbb9af6cf70f5 files/digest-bf1942-lnxded-1.61 144
