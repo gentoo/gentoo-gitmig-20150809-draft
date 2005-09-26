@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-ctf/quake1-ctf-4.0.ebuild,v 1.1 2005/01/16 23:37:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-ctf/quake1-ctf-4.0.ebuild,v 1.2 2005/09/26 18:08:17 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="The original Three Wave Capture The Flag"
 HOMEPAGE="http://www.threewave.com/"

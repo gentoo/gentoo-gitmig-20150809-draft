@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-movies/quake1-movies-0.ebuild,v 1.2 2005/04/20 04:23:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-movies/quake1-movies-0.ebuild,v 1.3 2005/09/26 18:05:31 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="a collection of all the greatest Quake movies"
 HOMEPAGE="http://www.planetquake.com/cineplex/history.html"

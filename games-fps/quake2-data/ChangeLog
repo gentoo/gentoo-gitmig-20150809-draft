@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-data
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.5 2004/09/18 02:54:48 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.6 2005/09/26 18:10:14 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake2-data-3.20.ebuild:
+  Making games last on inherit line.
 
   17 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   quake2-data-3.20.ebuild:

@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.7 2004/12/25 05:39:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.8 2005/09/26 18:05:56 wolf31o2 Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
 #inherit cvs
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="adds stencil shadows and per pixel lights to quake"
 HOMEPAGE="http://tenebrae.sourceforge.net/"

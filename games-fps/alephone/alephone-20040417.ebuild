@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20040417.ebuild,v 1.2 2005/08/23 00:59:21 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20040417.ebuild,v 1.3 2005/09/26 18:10:42 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="An enhanced version of the classic Mac game, Marathon"
 HOMEPAGE="http://source.bungie.org/"

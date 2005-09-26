@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.4 2005/08/23 00:59:21 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.5 2005/09/26 18:10:42 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  alephone-20040417.ebuild:
+  Making games last on inherit line.
 
   23 Aug 2005; Homer Parker <hparker@gentoo.org> alephone-20040417.ebuild:
   Marked ~amd64.

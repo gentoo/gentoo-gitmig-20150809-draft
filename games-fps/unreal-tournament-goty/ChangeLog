@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament-goty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.7 2005/09/16 03:00:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.8 2005/09/26 18:08:44 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  unreal-tournament-goty-451.ebuild:
+  Making games last on inherit line.
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org>
   unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
