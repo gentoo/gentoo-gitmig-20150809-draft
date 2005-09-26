@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.1.ebuild,v 1.6 2005/04/08 04:03:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.1.ebuild,v 1.7 2005/09/26 18:22:41 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 MY_PN=SearchAndRescue
 DESCRIPTION="aircraft based rescue simulator"
