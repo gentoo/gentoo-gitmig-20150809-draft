@@ -74,3 +74,4 @@ move net-libs/aqhbci-qt-tools net-libs/aqbanking
 move net-libs/aqhbci-ddvcard sys-libs/libchipcard
 move net-libs/aqhbci-rsacard sys-libs/libchipcard
 move net-libs/aqhbci net-libs/aqbanking
+move dev-util/xdoclet-bin dev-java/xdoclet
