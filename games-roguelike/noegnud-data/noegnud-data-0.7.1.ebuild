@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-data/noegnud-data-0.7.1.ebuild,v 1.4 2004/06/24 23:13:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-data/noegnud-data-0.7.1.ebuild,v 1.5 2005/09/26 18:16:54 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 BASE_PV=0.7.0
 DESCRIPTION="ultimate User Interface for nethack"

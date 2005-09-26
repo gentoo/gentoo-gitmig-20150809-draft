@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-data/noegnud-data-0.8.0.ebuild,v 1.7 2004/12/16 15:11:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-data/noegnud-data-0.8.0.ebuild,v 1.8 2005/09/26 18:16:54 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 # for more info on these themes visit:
 # http://noegnud.sourceforge.net/downloads.shtml
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/noegnud/noegnud-${PV}_data-tileset-${GUI_THEME}.ta
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 S=${WORKDIR}/noegnud-${PV}/data
