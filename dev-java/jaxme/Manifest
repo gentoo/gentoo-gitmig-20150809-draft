@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e9a7eb4bf672025e3db35688b4385d64 jaxme-0.3.1.ebuild 1637
-MD5 0039940b6d64ba20e8239123875327e7 ChangeLog 631
+MD5 7e0b05d4335c011dad0b2396acb80d78 jaxme-0.3.1.ebuild 1632
+MD5 0ad379264a6a203e5adbc07d75ada234 ChangeLog 711
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 8039a2f19bcc273d417ec48d00bbe87a files/jaxme-0.3.1-gentoo.patch 1771
 MD5 853d4cf0c1e2efc633bcfad8ade239e2 files/digest-jaxme-0.3.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKx0j8zY1VwezZiERAmRQAKCdyPuCJFmqMGzOWgM/pF8nxsZAOgCgg47m
-kRmVJKIPwl0xsVl5uYCb5CY=
-=zaK8
------END PGP SIGNATURE-----

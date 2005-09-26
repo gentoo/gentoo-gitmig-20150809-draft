@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8e62e9da6933cad08ce0806601ec461 xsdlib-20050627.ebuild 1304
-MD5 2227fec46b15b0a8bcb00ce7d5f938ee ChangeLog 645
+MD5 a75dbe298cdc71ec110257fe19fa973a xsdlib-20050627.ebuild 1299
+MD5 eb303276aff14db706aef90084b014c5 ChangeLog 729
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 deae413bcd3f85133671b3ae81328a0a files/digest-xsdlib-20050627 64
 MD5 6fa3757ff4f41105754bce24069ed4f4 files/build-20050627.xml 1817
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKx4h8zY1VwezZiERAixBAJ4+Hmf3N8eujqSOElp/dBXjBQEr6gCdFlmZ
-aEhMChd1Ti9C/7FuGO4eN4o=
-=WaGW
------END PGP SIGNATURE-----
