@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-4.ebuild,v 1.2 2005/09/14 20:25:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.ebuild,v 1.1 2005/09/26 09:02:11 flameeyes Exp $
 
 DESCRIPTION="Multiplatform command to eject and load CD-Rom drives"
 HOMEPAGE="http://dev.gentoo.org/~flameeyes/projects.xhtml"
@@ -17,14 +17,15 @@ RDEPEND=">=dev-libs/libcdio-0.75-r1
 	nls? ( sys-devel/gettext )
 	!virtual/eject"
 DEPEND="${RDEPEND}
-	sys-apps/sed
-	sys-devel/gettext
-	app-text/txt2man"
+	sys-apps/sed"
 
 PROVIDE="virtual/eject"
 
 src_compile() {
-	econf $(use_enable nls) || die "econf failed"
+	econf \
+		$(use_enable nls) \
+		--enable-lock-workaround \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
