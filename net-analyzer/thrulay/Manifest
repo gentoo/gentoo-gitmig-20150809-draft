@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00c515235977e8fa7aa736a93b33e02e thrulay-0.6.ebuild 875
-MD5 ab5382267181eee7ec36795f155f82d1 ChangeLog 568
+MD5 bf68fd2b6d35df44d3fbf5c88f0ea6f5 thrulay-0.6.ebuild 873
+MD5 3b6ffdcf2b2a98176bf8587dedd92631 ChangeLog 676
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 22c6b7ad0b49aeb367c0160abcb9d894 files/thrulayd-init.d 674
 MD5 0df0073ca802c6d7e563f1d6976c1b76 files/digest-thrulay-0.6 62
 MD5 e4de7b3550ee143566a9226eac80b630 files/thrulayd-conf.d 366
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCogxnI1lqEGTUzyQRAokiAKC5wHvhC2m75/QrWL1f4XsEvJbykgCcC8+9
-X5ygjXBAXTwlebyjnBJ9oVg=
-=dRey
------END PGP SIGNATURE-----
