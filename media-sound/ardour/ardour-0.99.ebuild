@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.99.ebuild,v 1.1 2005/09/26 07:56:32 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.99.ebuild,v 1.2 2005/09/26 11:53:29 eldad Exp $
 
 inherit eutils
 
@@ -71,6 +71,7 @@ src_compile() {
 		NLS=${NLS} \
 		PREFIX=/usr \
 		USE_SSE_EVERYWHERE=${SSE} \
+		BUILD_SSE_OPTIMIZATIONS=${SSE} \
 		KSI=0 \
 		-j2
 }
