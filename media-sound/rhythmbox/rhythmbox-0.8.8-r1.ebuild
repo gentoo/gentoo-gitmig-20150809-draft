@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.8 2005/07/27 20:16:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.8-r1.ebuild,v 1.9 2005/09/26 15:31:47 dang Exp $
 
 inherit gnome2 eutils
 
@@ -81,5 +81,8 @@ src_unpack()
 	epatch ${FILESDIR}/${PN}-0.8.7-gst_shn_support.patch
 	# fix ipod crasher
 	epatch ${FILESDIR}/${P}-ipod.patch
+	# Fix empty X libs. Bug #91707
+	epatch ${FILESDIR}/${P}-empty-xlib.patch
 
+	autoconf || die "Autoconf failed"
 }

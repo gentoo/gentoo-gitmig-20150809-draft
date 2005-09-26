@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.56 2005/07/27 20:16:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.57 2005/09/26 15:31:47 dang Exp $
+
+  26 Sep 2005; <dang@gentoo.org> +files/rhythmbox-0.8.8-empty-xlib.patch,
+  rhythmbox-0.8.8-r1.ebuild:
+  Fix empty xlibs. Bug #91707
 
   27 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   rhythmbox-0.8.8-r1.ebuild:
