@@ -1,0 +1,47 @@
+--- 1/config/rules.mk	2005-07-28 01:45:18.000000000 +0000
++++ 2/config/rules.mk	2005-07-28 01:45:21.000000000 +0000
+@@ -507,5 +507,10 @@
+ # 
+ ifeq ($(OS_ARCH),Linux)
+ ifdef IS_COMPONENT
++DSO_LDOPTS += -Wl,-rpath,#RPATH_FIXER
++OS_LDFLAGS += -Wl,-rpath,#RPATH_FIXER
+ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
++else
++DSO_LDOPTS += -Wl,-rpath,#RPATH_FIXER
++OS_LDFLAGS += -Wl,-rpath,#RPATH_FIXER
+ endif
+--- 1/nsprpub/config/rules.mk	2003-09-16 02:00:28.000000000 +0000
++++ 2/nsprpub/config/rules.mk	2005-07-30 04:00:21.000000000 +0000
+@@ -87,6 +87,9 @@
+ endif
+ endif
+ 
++DSO_LDOPTS += -Wl,-rpath,#RPATH_FIXER
++OS_LDFLAGS += -Wl,-rpath,#RPATH_FIXER
++
+ #
+ # This makefile contains rules for building the following kinds of
+ # libraries:
+--- 1/security/coreconf/rules.mk	2005-07-31 16:31:37.000000000 +0000
++++ 2/security/coreconf/rules.mk	2005-07-31 16:37:27.000000000 +0000
+@@ -349,7 +349,7 @@
+ ifdef XP_OS2_VACPP
+ 	$(MKSHLIB) $(DLLFLAGS) $(LDFLAGS) $(OBJS) $(SUB_SHLOBJS) $(LD_LIBS) $(EXTRA_LIBS) $(EXTRA_SHARED_LIBS)
+ else
+-	$(MKSHLIB) -o $@ $(OBJS) $(SUB_SHLOBJS) $(LD_LIBS) $(EXTRA_LIBS) $(EXTRA_SHARED_LIBS)
++	$(MKSHLIB) -Wl,-rpath,#RPATH_FIXER -o $@ $(OBJS) $(SUB_SHLOBJS) $(LD_LIBS) $(EXTRA_LIBS) $(EXTRA_SHARED_LIBS)
+ endif
+ 	chmod +x $@
+ ifeq ($(OS_TARGET),Darwin)
+--- 1/security/coreconf/rules.mk	2005-08-01 11:40:54.000000000 +0000
++++ 2/security/coreconf/rules.mk	2005-08-01 11:50:31.000000000 +0000
+@@ -291,7 +291,7 @@
+ ifdef XP_OS2_VACPP
+ 	$(MKPROG) -Fe$@ $(CFLAGS) $(OBJS) $(EXTRA_LIBS) $(EXTRA_SHARED_LIBS) $(OS_LIBS)
+ else
+-	$(MKPROG) -o $@ $(CFLAGS) $(OBJS) $(LDFLAGS) $(EXTRA_LIBS) $(EXTRA_SHARED_LIBS) $(OS_LIBS)
++	$(MKPROG) -Wl,-rpath,#RPATH_FIXER -o $@ $(CFLAGS) $(OBJS) $(LDFLAGS) $(EXTRA_LIBS) $(EXTRA_SHARED_LIBS) $(OS_LIBS)
+ endif
+ endif
+ 

@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.83 2005/09/26 20:43:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.84 2005/09/26 22:08:12 azarah Exp $
+
+*mozilla-firefox-1.0.7-r1 (26 Sep 2005)
+
+  26 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch,
+  +files/mozilla-1.7.12-rpath.patch, +mozilla-firefox-1.0.7-r1.ebuild:
+  Add rpath stuff, bug #100597. Fix epiphany/galeon/etc segfaulting at
+  startup. Fix firefox segfaulting at first startup, bug #107233.
 
   26 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mozilla-firefox-1.0.7.ebuild:
