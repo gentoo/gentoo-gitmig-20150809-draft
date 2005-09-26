@@ -1,0 +1,19 @@
+--- mozilla/gfx/src/gtk/nsFontMetricsXft.cpp	2005-09-26 20:39:02.000000000 +0200
++++ mozilla.az/gfx/src/gtk/nsFontMetricsXft.cpp	2005-09-26 20:34:34.000000000 +0200
+@@ -2775,10 +2779,14 @@ FreeGlobals(void)
+     NS_IF_RELEASE(gFontEncodingProperties);
+     NS_IF_RELEASE(gCharsetManager);
+     gCTLEnabled = PR_FALSE;
+-    if (gPangoContext)
++    if (gPangoContext) {
+         g_object_unref(gPangoContext);
+-    if (gPangoAttrList)
++        gPangoContext = nsnull;
++    }
++    if (gPangoAttrList) {
+         pango_attr_list_unref(gPangoAttrList);
++        gPangoAttrList = nsnull;
++    }
+ 
+     gFontXftMaps.Clear();
+ 

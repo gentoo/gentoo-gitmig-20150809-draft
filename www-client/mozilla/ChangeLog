@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.77 2005/09/26 20:46:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.78 2005/09/26 22:12:50 azarah Exp $
+
+*mozilla-1.7.12-r1 (26 Sep 2005)
+
+  26 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch,
+  +files/mozilla-1.7.12-rpath.patch, +mozilla-1.7.12-r1.ebuild:
+  Add rpath stuff, bug #100597.  Fix epiphany/galeon/etc segfaulting at startup.
 
   26 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> mozilla-1.7.12.ebuild:
   Stable on sparc wrt #105396
