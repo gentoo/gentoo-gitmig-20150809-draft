@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.15 2005/09/24 16:29:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.16 2005/09/26 10:19:51 greg_g Exp $
+
+  26 Sep 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdesdk-3.5_beta1-compile.patch, umbrello-3.5_beta1.ebuild:
+  Add patch to fix compilation error (#107167).
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -umbrello-3.5_alpha1.ebuild:
