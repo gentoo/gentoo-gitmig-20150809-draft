@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/adom-1.1.1-r1.ebuild,v 1.6 2004/07/01 05:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/adom/adom-1.1.1-r1.ebuild,v 1.7 2005/09/26 14:38:01 dang Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.adom.de/adom/download/linux/${P//.}-elf.tar.gz"
 
 LICENSE="adom"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/libc
