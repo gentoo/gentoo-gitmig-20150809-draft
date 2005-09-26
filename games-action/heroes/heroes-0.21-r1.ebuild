@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.2 2005/08/10 19:26:12 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.3 2005/09/26 17:35:09 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 data_ver=1.5
 snd_trk_ver=1.0

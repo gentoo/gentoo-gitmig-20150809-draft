@@ -1,6 +1,9 @@
 # ChangeLog for games-action/heroes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.9 2005/09/16 22:02:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.10 2005/09/26 17:35:09 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> heroes-0.21-r1.ebuild:
+  Making games last on inherit line.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
