@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.47 2005/09/26 07:56:32 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.48 2005/09/26 07:59:11 eldad Exp $
+
+  26 Sep 2005; Eldad Zack <eldad@gentoo.org> -ardour-0.9_beta26.ebuild,
+  -ardour-0.9_beta27.ebuild:
+  Purged old ebuilds for beta26 and beta27.
 
 *ardour-0.99 (26 Sep 2005)
 
