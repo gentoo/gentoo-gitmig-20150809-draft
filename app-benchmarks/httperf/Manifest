@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c57055bf03358d09277997c948df939b httperf-0.8.ebuild 983
-MD5 7578510b87df3b116bb063a08c17b4cf ChangeLog 449
+MD5 e400600689cab6fbd81fd11e90bd1fd4 httperf-0.8.ebuild 1011
+MD5 0fc6b034c75f65aba58e8f37379b7969 ChangeLog 561
 MD5 895c658c1644917118d147978f7d1147 metadata.xml 945
 MD5 81630570d60ade0eaf6caad7ee4a1c4a files/httperf-0.8-optional-ssl.diff 694
 MD5 a719ff22f9a66c55067ea922e45d13a0 files/httperf-0.8-respect-DESTDIR.diff 712
@@ -10,7 +10,7 @@ MD5 44858ef0273b02f6bb71ec6aca26c0a7 files/digest-httperf-0.8 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDA6NnEZCkKN40op4RAj1KAKCza0sxrdbPG0S6r6yc6/U5PfvJJwCbBOj1
-l+h1W015kXPqrdu+mtghWwM=
-=huBh
+iD8DBQFDOCjKEZCkKN40op4RAsT3AKCdy3V3dzqvaea5v7RWGK1qiN7AsgCfTntv
+PwbPDJ9i/Hj4nwWo9XhXQvI=
+=g3QV
 -----END PGP SIGNATURE-----
