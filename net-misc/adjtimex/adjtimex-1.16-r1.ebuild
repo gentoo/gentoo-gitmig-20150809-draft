@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16-r1.ebuild,v 1.6 2005/01/19 12:54:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/adjtimex-1.16-r1.ebuild,v 1.7 2005/09/26 04:32:51 robbat2 Exp $
 
 inherit fixheadtails eutils
 
@@ -16,7 +16,7 @@ SRC_URI="${DEBIAN_URI}/${DEBIAN_PATCH}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc"
