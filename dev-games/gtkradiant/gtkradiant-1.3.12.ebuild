@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.3.12.ebuild,v 1.5 2005/01/01 17:59:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.3.12.ebuild,v 1.6 2005/09/26 17:10:46 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="FPS level editor"
 HOMEPAGE="http://www.qeradiant.com/?data=editors/gtk"
