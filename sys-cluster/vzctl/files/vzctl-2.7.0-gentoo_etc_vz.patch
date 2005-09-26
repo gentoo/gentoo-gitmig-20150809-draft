@@ -1,0 +1,173 @@
+diff -ur vzctl-2.7.0-21-gentoo/etc/cron.d/vpsnetclean vzctl-2.7.0-21-gentoo_etc_vz/etc/cron.d/vpsnetclean
+--- vzctl-2.7.0-21-gentoo/etc/cron.d/vpsnetclean	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/etc/cron.d/vpsnetclean	2005-09-23 19:32:28.869928216 +0400
+@@ -10,5 +10,5 @@
+ # Clean VPS network rules (arp,route,iptables)
+ #
+ 
+-*/5 * * * * root /etc/sysconfig/vz-scripts/vpsnetclean
++*/5 * * * * root /etc/vz/vpsnetclean
+ 
+diff -ur vzctl-2.7.0-21-gentoo/etc/cron.d/vpsreboot vzctl-2.7.0-21-gentoo_etc_vz/etc/cron.d/vpsreboot
+--- vzctl-2.7.0-21-gentoo/etc/cron.d/vpsreboot	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/etc/cron.d/vpsreboot	2005-09-23 19:32:40.663135376 +0400
+@@ -11,4 +11,4 @@
+ # If vzagent not installed you can enable reboot functionality by
+ # commented out the line below.
+ 
+-*/5 * * * * root /etc/sysconfig/vz-scripts/vpsreboot
++*/5 * * * * root /etc/vz/vpsreboot
+diff -ur vzctl-2.7.0-21-gentoo/etc/dists/Makefile vzctl-2.7.0-21-gentoo_etc_vz/etc/dists/Makefile
+--- vzctl-2.7.0-21-gentoo/etc/dists/Makefile	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/etc/dists/Makefile	2005-09-23 19:33:33.289135008 +0400
+@@ -8,7 +8,7 @@
+ # WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+ 
+ INSTALL = install
+-DISTCONFDIR = /etc/sysconfig/vz-scripts/dists
++DISTCONFDIR = /etc/vz/dists
+ DISTSCRIPTDIR = ${DISTCONFDIR}/scripts
+ DISTSCRIPTS = debian-add_ip.sh debian-del_ip.sh debian-set_hostname.sh 	\
+ 	functions postcreate.sh redhat-7.x_add_ip.sh redhat-add_ip.sh 	\
+diff -ur vzctl-2.7.0-21-gentoo/etc/vps-functions vzctl-2.7.0-21-gentoo_etc_vz/etc/vps-functions
+--- vzctl-2.7.0-21-gentoo/etc/vps-functions	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/etc/vps-functions	2005-09-23 19:32:57.723541800 +0400
+@@ -26,7 +26,7 @@
+ 
+ # iptables parameters
+ VE_STATE_DIR="/var/vz/veip/"
+-CONF_DIR="/etc/sysconfig/vz-scripts/"
++CONF_DIR="/etc/vz/"
+ 
+ ARPSEND_CMD="arpsend -c 1 -w 1"
+ IP_CMD=/sbin/ip
+diff -ur vzctl-2.7.0-21-gentoo/etc/vpsreboot vzctl-2.7.0-21-gentoo_etc_vz/etc/vpsreboot
+--- vzctl-2.7.0-21-gentoo/etc/vpsreboot	2005-09-23 00:42:56.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/etc/vpsreboot	2005-09-23 19:33:18.666358008 +0400
+@@ -11,7 +11,7 @@
+ # Script to start VPS was rebooted
+ #
+ 
+-CONF_DIR=/etc/sysconfig/vz-scripts
++CONF_DIR=/etc/vz
+ VE_INFO=/proc/vz/veinfo
+ REBOOT_MARK='reboot'
+ LOCKFILE='/var/lock/vereboot.lock'
+diff -ur vzctl-2.7.0-21-gentoo/include/dist.h vzctl-2.7.0-21-gentoo_etc_vz/include/dist.h
+--- vzctl-2.7.0-21-gentoo/include/dist.h	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/include/dist.h	2005-09-23 19:33:57.653431072 +0400
+@@ -23,7 +23,7 @@
+ #define	SET_UGID_QUOTA		6
+ #define	POST_CREATE		7
+ 
+-#define DIST_DIR		"/etc/sysconfig/vz-scripts/dists"
++#define DIST_DIR		"/etc/vz/dists"
+ 
+ typedef struct {
+ 	char *def_ostmpl;
+diff -ur vzctl-2.7.0-21-gentoo/include/types.h vzctl-2.7.0-21-gentoo_etc_vz/include/types.h
+--- vzctl-2.7.0-21-gentoo/include/types.h	2005-09-23 00:48:31.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/include/types.h	2005-09-23 19:34:10.927413120 +0400
+@@ -12,7 +12,7 @@
+ #define	_TYPES_H_
+ 
+ #define GLOBAL_CFG              "/etc/conf.d/vz"
+-#define VPS_CONF_DIR            "/etc/sysconfig/vz-scripts/"
++#define VPS_CONF_DIR            "/etc/vz/"
+ #define LIB_DIR			"/usr/lib/vzctl/lib/"
+ #define VPS_SCRIPTS_DIR         "/usr/lib/vzctl/scripts/"
+ 
+diff -ur vzctl-2.7.0-21-gentoo/include/vzlist.h vzctl-2.7.0-21-gentoo_etc_vz/include/vzlist.h
+--- vzctl-2.7.0-21-gentoo/include/vzlist.h	2005-09-23 19:50:57.549383320 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/include/vzlist.h	2005-09-23 19:36:19.801821232 +0400
+@@ -25,7 +25,7 @@
+ #define PROCVEINFO	"/proc/vz/veinfo"
+ #define PROCFSHED	"/proc/fairsched"
+ 
+-#define SCRIPT_DIR	"/etc/sysconfig/vz-scripts/"
++#define SCRIPT_DIR	"/etc/vz/"
+ #define CFG_FILE	"/etc/conf.d/vz"
+ #define VZQUOTA		"/usr/sbin/vzquota"
+ 
+diff -ur vzctl-2.7.0-21-gentoo/man/vps.conf.5 vzctl-2.7.0-21-gentoo_etc_vz/man/vps.conf.5
+--- vzctl-2.7.0-21-gentoo/man/vps.conf.5	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/man/vps.conf.5	2005-09-23 19:34:49.617531328 +0400
+@@ -3,10 +3,10 @@
+ .SH NAME
+ vps.conf \- configuration file for a Virtual Private Server
+ .SH SYNOPSIS
+-/etc/sysconfig/vz-scripts/XXX.conf
++/etc/vz/XXX.conf
+ .SH DESCRIPTION
+ This is a configuration file for a VPS. It is stored as
+-\fB/etc/sysconfig/vz-scripts/\fR\fIXXX\fB.conf\fR, where \fIXXX\fR
++\fB/etc/vz/\fR\fIXXX\fB.conf\fR, where \fIXXX\fR
+ is the ID of the given VPS.
+ .PP
+ Configuration file consists of lines in the form
+diff -ur vzctl-2.7.0-21-gentoo/man/vzctl.8 vzctl-2.7.0-21-gentoo_etc_vz/man/vzctl.8
+--- vzctl-2.7.0-21-gentoo/man/vzctl.8	2005-09-23 00:47:29.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/man/vzctl.8	2005-09-23 19:35:31.225206000 +0400
+@@ -319,7 +319,7 @@
+ .TP
+ \fB--applyconfig\fR \fIname\fR
+ Read VPS parameters from VPS sample configuration file
+-\f(CW\fB/etc/sysconfig/vz-scripts/ve-\fIname\fR\f(CW\fB.conf-sample\fR, and
++\f(CW\fB/etc/vz/ve-\fIname\fR\f(CW\fB.conf-sample\fR, and
+ apply them, if --save option specified save to VPS config file. These parameters
+ are not changed (\fBHOSTNAME\fR \fBIP_ADDRESS\fR \fBOSTEMPLATE\fR \fBVE_ROOT\fR \fBVE_PRIVATE\fR)
+ .SS Performing VPS actions
+@@ -329,7 +329,7 @@
+ 
+ If the \fB--config\fR \fIname\fR option is specified, values from
+ example configuration file
+-\f(CW\fB/etc/sysconfig/vz-scripts/ve-\fIname\fR\f(CW\fB.conf-sample\fR
++\f(CW\fB/etc/vz/ve-\fIname\fR\f(CW\fB.conf-sample\fR
+ are put into VPS configuration file. If VPS configuration file already exists,
+ it will be removed.
+ 
+@@ -423,7 +423,7 @@
+ \f(CR
+ /etc/conf.d/vz
+ .br
+-/etc/sysconfig/vz-scripts/vpsid.conf
++/etc/vz/vpsid.conf
+ .br
+ /proc/vz/veinfo
+ .br
+diff -ur vzctl-2.7.0-21-gentoo/man/vzsplit.8 vzctl-2.7.0-21-gentoo_etc_vz/man/vzsplit.8
+--- vzctl-2.7.0-21-gentoo/man/vzsplit.8	2005-09-23 00:42:16.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/man/vzsplit.8	2005-09-23 19:35:48.716546912 +0400
+@@ -19,7 +19,7 @@
+ .TP
+ \fB-f\fR \fIconf_name\fR
+ Specified config name. The program output will be placed to
+-/etc/sysconfig/vz-scripts/ve-\fIconf_name\fR.conf-sample.
++/etc/vz/ve-\fIconf_name\fR.conf-sample.
+ .TP
+ \fB-s\fR \fIswapsize\fR
+ Specified swap size in Kbytes. If not given swap size will be read
+diff -ur vzctl-2.7.0-21-gentoo/src/Makefile vzctl-2.7.0-21-gentoo_etc_vz/src/Makefile
+--- vzctl-2.7.0-21-gentoo/src/Makefile	2005-09-23 19:46:37.460922776 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/src/Makefile	2005-09-23 19:46:25.085804080 +0400
+@@ -14,7 +14,7 @@
+       LIBDIR = $(PREFIX)/lib/vzctl
+     CACHEDIR = /vz/template/cache
+    VZCONFDIR = /etc/conf.d
+-  VPSCONFDIR = /etc/sysconfig/vz-scripts
++  VPSCONFDIR = /etc/vz
+  DISTCONFDIR = $(VPSCONFDIR)/dists
+ NETSCRIPTDIR = /etc/sysconfig/network-scripts
+     CRONDDIR = /etc/cron.d
+diff -ur vzctl-2.7.0-21-gentoo/src/vzsplit.c vzctl-2.7.0-21-gentoo_etc_vz/src/vzsplit.c
+--- vzctl-2.7.0-21-gentoo/src/vzsplit.c	2005-09-23 00:42:17.000000000 +0400
++++ vzctl-2.7.0-21-gentoo_etc_vz/src/vzsplit.c	2005-09-23 19:36:41.454529520 +0400
+@@ -27,7 +27,7 @@
+ 
+ #define PROCMEM		"/proc/meminfo"
+ #define PROCTHREADS	"/proc/sys/kernel/threads-max"
+-#define OUTPATH		"/etc/sysconfig/vz-scripts/"
++#define OUTPATH		"/etc/vz/"
+ #define PROCCPU		"/proc/cpuinfo"
+ 
+ #define MAX_SL		3

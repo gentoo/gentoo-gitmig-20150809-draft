@@ -1,0 +1,112 @@
+diff -ur vzctl-2.7.0-21/etc/vpsnetclean vzctl-2.7.0-21-gentoo/etc/vpsnetclean
+--- vzctl-2.7.0-21/etc/vpsnetclean	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/etc/vpsnetclean	2005-09-23 00:43:35.000000000 +0400
+@@ -17,7 +17,7 @@
+ VE_RUN=
+ VE_PREV=
+ 
+-. /etc/sysconfig/vz
++. /etc/conf.d/vz
+ 
+ 
+ #
+diff -ur vzctl-2.7.0-21/etc/vpsreboot vzctl-2.7.0-21-gentoo/etc/vpsreboot
+--- vzctl-2.7.0-21/etc/vpsreboot	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/etc/vpsreboot	2005-09-23 00:42:56.000000000 +0400
+@@ -16,8 +16,8 @@
+ REBOOT_MARK='reboot'
+ LOCKFILE='/var/lock/vereboot.lock'
+ 
+-[ -f /etc/sysconfig/vz ] || exit
+-. /etc/sysconfig/vz
++[ -f /etc/conf.d/vz ] || exit
++. /etc/conf.d/vz
+ 
+ function check_reboot()
+ {
+@@ -28,7 +28,7 @@
+ 	VEID=${veid}
+ 	[ -f "${CONF_DIR}/${veid}.conf" ] || return
+ 	eval ` (
+-		. /etc/sysconfig/vz;
++		. /etc/conf.d/vz;
+ 		. ${CONF_DIR}/${veid}.conf;
+ 		echo ve_root=${VE_ROOT}\;;
+ 		echo allowreboot=${ALLOWREBOOT}\;;
+diff -ur vzctl-2.7.0-21/include/types.h vzctl-2.7.0-21-gentoo/include/types.h
+--- vzctl-2.7.0-21/include/types.h	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/include/types.h	2005-09-23 00:48:31.000000000 +0400
+@@ -11,7 +11,7 @@
+ #ifndef	_TYPES_H_
+ #define	_TYPES_H_
+ 
+-#define GLOBAL_CFG              "/etc/sysconfig/vz"
++#define GLOBAL_CFG              "/etc/conf.d/vz"
+ #define VPS_CONF_DIR            "/etc/sysconfig/vz-scripts/"
+ #define LIB_DIR			"/usr/lib/vzctl/lib/"
+ #define VPS_SCRIPTS_DIR         "/usr/lib/vzctl/scripts/"
+diff -ur vzctl-2.7.0-21/include/vzlist.h vzctl-2.7.0-21-gentoo/include/vzlist.h
+--- vzctl-2.7.0-21/include/vzlist.h	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/include/vzlist.h	2005-09-23 19:50:57.549383320 +0400
+@@ -26,7 +26,7 @@
+ #define PROCFSHED	"/proc/fairsched"
+ 
+ #define SCRIPT_DIR	"/etc/sysconfig/vz-scripts/"
+-#define CFG_FILE	"/etc/sysconfig/vz"
++#define CFG_FILE	"/etc/conf.d/vz"
+ #define VZQUOTA		"/usr/sbin/vzquota"
+ 
+ #define MAXCPUUNITS	500000
+diff -ur vzctl-2.7.0-21/man/vz.5 vzctl-2.7.0-21-gentoo/man/vz.5
+--- vzctl-2.7.0-21/man/vz.5	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/man/vz.5	2005-09-23 00:47:11.000000000 +0400
+@@ -2,7 +2,7 @@
+ .SH NAME
+ vz \- global Open Virtuozzo configuration file
+ .SH SYNOPSIS
+-/etc/sysconfig/vz
++/etc/conf.d/vz
+ .SH DESCRIPTION
+ This is global configuration file for Open Virtuozzo.
+ It consists of lines in the form
+diff -ur vzctl-2.7.0-21/man/vzctl.8 vzctl-2.7.0-21-gentoo/man/vzctl.8
+--- vzctl-2.7.0-21/man/vzctl.8	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/man/vzctl.8	2005-09-23 00:47:29.000000000 +0400
+@@ -421,7 +421,7 @@
+ .SH FILES
+ .ad l
+ \f(CR
+-/etc/sysconfig/vz
++/etc/conf.d/vz
+ .br
+ /etc/sysconfig/vz-scripts/vpsid.conf
+ .br
+diff -ur vzctl-2.7.0-21/src/Makefile vzctl-2.7.0-21-gentoo/src/Makefile
+--- vzctl-2.7.0-21/src/Makefile	2005-09-12 19:23:58.000000000 +0400
++++ vzctl-2.7.0-21-gentoo/src/Makefile	2005-09-23 19:46:37.460922776 +0400
+@@ -13,7 +13,7 @@
+      SBINDIR = $(PREFIX)/sbin
+       LIBDIR = $(PREFIX)/lib/vzctl
+     CACHEDIR = /vz/template/cache
+-   GLBCONFIG = /etc/sysconfig/vz
++   VZCONFDIR = /etc/conf.d
+   VPSCONFDIR = /etc/sysconfig/vz-scripts
+  DISTCONFDIR = $(VPSCONFDIR)/dists
+ NETSCRIPTDIR = /etc/sysconfig/network-scripts
+@@ -122,7 +122,7 @@
+ 		$(INSTALL) ../etc/$$file $(DESTDIR)$(NETSCRIPTDIR)/$$file; \
+ 	done
+ inst-configs:
+-	$(INSTALL) -m 644 ../etc/vz $(DESTDIR)$(GLBCONFIG)
++	$(INSTALL) -m 644 ../etc/vz $(DESTDIR)$(VZCONFDIR)/vz
+ ifeq ($(ARCH),ia64)
+ 	for file in $(VECONFIG); do \
+ 		$(INSTALL) ../etc/$$file.ia64 $(DESTDIR)$(VPSCONFDIR)/$$file; \
+@@ -153,6 +153,7 @@
+ 	$(INSTALL) -d $(DESTDIR)$(VZLOCKDIR)
+ 	$(INSTALL) -d $(DESTDIR)$(LOGRDIR)
+ 	$(INSTALL) -d $(DESTDIR)$(CACHEDIR)
++	$(INSTALL) -d $(DESTDIR)$(VZCONFDIR)
+ 	$(INSTALL) -m 644 ../etc/logrotate.d/vzctl $(DESTDIR)$(LOGRDIR)/vzctl
+ 
+ install-lib: inst-lib
