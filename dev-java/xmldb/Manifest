@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e75bc2e8b072b347c9910c3d403ba5d xmldb-20011111.ebuild 1290
 MD5 4bce1c3f8e1446f229a865a62bb9c00b ChangeLog 951
 MD5 4faf265a8407c19b79f6a6922d030ff0 metadata.xml 439
 MD5 21c727f1afea0d4c02f10a03bbbedd60 files/xmldb-20011111-unreachable.patch 456
 MD5 ccc56c03955f7034075ae8f491924635 files/digest-xmldb-20011111 69
 MD5 216371e5d4c8989fdab24cf70fef05ab files/build-20011111.xml 1982
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDN9QI/rLF9B432nYRAmdaAJ9vy6QCdJHc8P6tM0p7XSfoKed7yACgyo4T
+f5BtsFcSLnDbOffgZjf8aNw=
+=tx3I
+-----END PGP SIGNATURE-----

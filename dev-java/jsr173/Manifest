@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 792a21a38f329e9526ae54010468adaa jsr173-1.0.ebuild 1266
 MD5 f53a0e195309ebee4a604b721f61b487 ChangeLog 697
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 c1514eff44a7a2cca3ab0bee30140efd files/build-1.0.xml 1771
 MD5 792db1cd7ea6dc98f85d378d93640840 files/digest-jsr173-1.0 55
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDN9R6/rLF9B432nYRAlN7AJ9ZZ01990wDLvvdlCguIUekL0PTcQCfVyQx
+LLuQaOhfe3KDDRkdlxIWn+M=
+=EHZk
+-----END PGP SIGNATURE-----
