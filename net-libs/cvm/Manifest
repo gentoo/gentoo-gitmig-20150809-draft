@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0245d79ba0bed5697fb7e774bbe2997b cvm-0.32-r1.ebuild 1185
+MD5 cfc9024c2e3895d6fb8faa33c7005f2a cvm-0.32-r1.ebuild 1182
 MD5 dd8a3a88d774cc706b7c1b9e62b2482d cvm-0.32.ebuild 1209
 MD5 33732ff6120bb4b3bf1f0de06210ca64 cvm-0.18.ebuild 1282
-MD5 0bf83ad13a465c3272f962a5598fe2ed ChangeLog 981
+MD5 ab967586382d335350a8854cb1c3de66 ChangeLog 1089
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 51108b9115b8df5073cf8007c873e46f files/digest-cvm-0.32-r1 59
 MD5 dda571945279b300a80ccff143fe6fa7 files/digest-cvm-0.18 59
 MD5 51108b9115b8df5073cf8007c873e46f files/digest-cvm-0.32 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCm2LWI1lqEGTUzyQRAp1XAJ4gsHMP7i+t34/fyUqCWHSsMEmCOwCfV+Kz
-PcmKM0AOxdOJcNHhU8cXuTQ=
-=w67k
------END PGP SIGNATURE-----
