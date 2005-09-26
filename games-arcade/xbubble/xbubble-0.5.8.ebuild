@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.6 2005/05/15 20:45:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.7 2005/09/26 17:39:55 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="a Puzzle Bobble clone similar to Frozen-Bubble"
 HOMEPAGE="http://www.nongnu.org/xbubble/"

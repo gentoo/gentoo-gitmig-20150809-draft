@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.7 2005/05/04 00:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.8 2005/09/26 17:39:14 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="blockout type game where you bounce a proton ball trying to destroy blocks"
 HOMEPAGE="http://www.techrescue.org/xboing/"

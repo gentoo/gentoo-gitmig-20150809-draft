@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.5 2005/02/28 04:02:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.6 2005/09/26 17:36:14 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="platform game inspired by games like Manic Miner and Jet Set Willy"
 HOMEPAGE="http://dragontech.sourceforge.net/index.php?main=pachi&lang=en"

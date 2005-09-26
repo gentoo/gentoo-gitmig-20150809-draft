@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tuxracer-demo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/ChangeLog,v 1.3 2004/08/07 22:45:23 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/ChangeLog,v 1.4 2005/09/26 17:38:43 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  tuxracer-demo-1.1.ebuild:
+  Making games last on inherit line.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> tuxracer-demo-1.1.ebuild:
   Typo in DESCRIPTION: artic -> arctic. Bug 59717.

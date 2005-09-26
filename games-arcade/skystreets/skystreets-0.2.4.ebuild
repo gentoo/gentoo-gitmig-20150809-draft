@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/skystreets-0.2.4.ebuild,v 1.3 2005/01/30 04:26:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/skystreets-0.2.4.ebuild,v 1.4 2005/09/26 17:39:37 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="A clone of the old dos Skyroads game"
 HOMEPAGE="http://skystreets.kaosfusion.com/"

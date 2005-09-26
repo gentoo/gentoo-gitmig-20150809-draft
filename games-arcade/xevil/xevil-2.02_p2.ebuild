@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2.ebuild,v 1.9 2004/12/28 18:24:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xevil/xevil-2.02_p2.ebuild,v 1.10 2005/09/26 17:37:31 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DEB_PATCH=2
 MY_PV=${PV/_p/r}
