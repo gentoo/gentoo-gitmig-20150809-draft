@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.15 2005/09/17 00:44:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.16 2005/09/26 15:58:07 hanno Exp $
+
+*gwenhywfar-1.18.0 (26 Sep 2005)
+
+  26 Sep 2005; Hanno Boeck <hanno@gentoo.org> +gwenhywfar-1.18.0.ebuild:
+  Version bump.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
