@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69ab0855154cfa3fc4869850e1ec470b heroes-0.21-r1.ebuild 1545
+MD5 5e09d43c86d8675545191d0d910df00d heroes-0.21-r1.ebuild 1548
+MD5 a6d0a23ec9f7f1142ffdf7ebbc05496b ChangeLog 2610
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a18bb54d411ba99608ca64537d03f290 ChangeLog 2493
-MD5 ba75ef912d119247f215f75fea97ce45 files/0.21-cvs-segfault-fix.patch 575
 MD5 629b186fe097d16cc43e4748d648acf0 files/digest-heroes-0.21-r1 286
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK0E0LLFUmVNQ7rkRAg/4AJ948CzBHFL/mMY0bC/fduAjqbA15QCgs5YX
-JpWoqK4MuAM4cBt9h/dD3YE=
-=LZlq
------END PGP SIGNATURE-----
+MD5 ba75ef912d119247f215f75fea97ce45 files/0.21-cvs-segfault-fix.patch 575
