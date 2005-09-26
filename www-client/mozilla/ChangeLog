@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.76 2005/09/26 14:28:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.77 2005/09/26 20:46:41 gustavoz Exp $
+
+  26 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> mozilla-1.7.12.ebuild:
+  Stable on sparc wrt #105396
 
   26 Sep 2005; Martin Schlemmer <azarah@gentoo.org> mozilla-1.7.12.ebuild:
   Fix doc installation.
