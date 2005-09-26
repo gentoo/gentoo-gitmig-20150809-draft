@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.12.ebuild,v 1.2 2005/09/26 00:32:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.12.ebuild,v 1.3 2005/09/26 14:28:28 azarah Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -365,7 +365,7 @@ src_install() {
 	doexe ${FILESDIR}/mozilla-rebuild-databases.pl
 
 	# Install docs
-	dodoc LEGAL LICENSE
+	dodoc ${S}/{LEGAL,LICENSE}
 
 	# Update Google search plugin to use UTF8 charset ...
 	insinto ${MOZILLA_FIVE_HOME}/searchplugins
