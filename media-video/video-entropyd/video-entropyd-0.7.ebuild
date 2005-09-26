@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/video-entropyd-0.7.ebuild,v 1.2 2005/07/28 11:26:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/video-entropyd-0.7.ebuild,v 1.3 2005/09/26 04:25:22 robbat2 Exp $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.vanheusden.com/ved/"
 SRC_URI="http://www.vanheusden.com/ved/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 DEPEND="virtual/libc"
 S="${WORKDIR}/${MY_P}"
