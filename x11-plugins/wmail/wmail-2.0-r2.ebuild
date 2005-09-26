@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r1.ebuild,v 1.5 2004/10/23 16:38:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r2.ebuild,v 1.1 2005/09/26 10:33:03 s4t4n Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 amd64 ppc ~sparc"
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/libdockapp-0.5.0"
+	=x11-libs/libdockapp-0.5.0-r1"
 
 src_unpack()
 {
