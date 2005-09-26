@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.6 2005/01/09 10:49:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.7 2005/09/26 17:45:44 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 S=${WORKDIR}/PcsxSrc-${PV}
 DESCRIPTION="Playstation emulator"
@@ -15,7 +15,6 @@ KEYWORDS="x86 -ppc"
 IUSE="opengl"
 
 DEPEND="sys-libs/zlib
-	>=sys-apps/sed-4
 	app-arch/unzip
 	x11-libs/gtk+
 	gnome-base/libglade"

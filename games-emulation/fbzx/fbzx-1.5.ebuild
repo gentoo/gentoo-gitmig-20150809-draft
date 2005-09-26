@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.5.ebuild,v 1.4 2005/08/12 22:00:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.5.ebuild,v 1.5 2005/09/26 17:44:41 wolf31o2 Exp $
 
-inherit games eutils toolchain-funcs
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A Sinclair Spectrum emulator, designed to work at full screen using the FrameBuffer"
 HOMEPAGE="http://www.rastersoft.com/fbzx.html"

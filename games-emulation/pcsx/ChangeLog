@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/pcsx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.6 2005/01/09 10:49:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.7 2005/09/26 17:45:44 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> pcsx-1.5-r1.ebuild:
+  Making games last on inherit line.
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> pcsx-1.5-r1.ebuild:
   Added missing parentheses in SRC_URI/*DEPEND/LICENSE.

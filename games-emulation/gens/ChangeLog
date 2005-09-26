@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gens
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.12 2005/06/12 12:12:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.13 2005/09/26 17:45:07 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> gens-2.12b.ebuild:
+  Making games last on inherit line.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> gens-2.12b.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

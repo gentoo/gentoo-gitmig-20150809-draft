@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-padxwin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/ChangeLog,v 1.5 2005/04/24 03:31:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/ChangeLog,v 1.6 2005/09/26 17:54:40 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  psemu-padxwin-1.6.ebuild:
+  Making games last on inherit line.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   psemu-padxwin-1.6.ebuild:

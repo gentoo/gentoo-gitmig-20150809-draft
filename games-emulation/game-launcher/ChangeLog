@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/game-launcher
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/ChangeLog,v 1.6 2004/09/30 00:38:29 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/ChangeLog,v 1.7 2005/09/26 17:50:44 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  game-launcher-0.9.8.ebuild:
+  Making games last on inherit line.
 
   06 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   game-launcher-0.9.8.ebuild:

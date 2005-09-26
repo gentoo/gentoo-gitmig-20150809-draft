@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-input/mupen64-blight-input-0.0.8-r1.ebuild,v 1.2 2005/01/06 04:58:18 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-input/mupen64-blight-input-0.0.8-r1.ebuild,v 1.3 2005/09/26 17:46:51 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="An input plugin for the mupen64 N64 emulator"
 HOMEPAGE="http://mupen64.emulation64.com/"

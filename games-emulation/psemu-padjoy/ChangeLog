@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-padjoy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padjoy/ChangeLog,v 1.6 2004/06/24 22:34:36 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padjoy/ChangeLog,v 1.7 2005/09/26 17:54:36 wolf31o2 Exp $
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  psemu-padjoy-0.81.ebuild, psemu-padjoy-0.82.ebuild:
+  Making games last on inherit line.
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   psemu-padjoy-0.82.ebuild:
