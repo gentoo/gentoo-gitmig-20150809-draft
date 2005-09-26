@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.17 2005/09/25 16:27:28 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.18 2005/09/26 07:43:17 metalgod Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="nls dvdr"
 
 DEPEND=">=x11-libs/gtk+-2.0.3
-	>=media-libs/gdk-pixbuf-0.16.0"
+	"
 
 RDEPEND="
 	dvdr? (
