@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.23 2005/08/30 18:39:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.24 2005/09/26 10:57:00 s4t4n Exp $
+
+*wmnetload-1.3-r2 (26 Sep 2005)
+
+  26 Sep 2005; Michele Noberasco <s4t4n@gentoo.org> wmnetload-1.3-r2.ebuild:
+  Revision bump, directly as stable, updating libdockapp dependancy. Closes bug #104903 and bug #105530.
 
   30 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   wmnetload-1.3-r1.ebuild:
