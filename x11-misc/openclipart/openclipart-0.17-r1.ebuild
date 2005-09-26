@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.17.ebuild,v 1.1 2005/09/25 21:09:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.17-r1.ebuild,v 1.1 2005/09/26 18:32:36 nelchael Exp $
 
 inherit eutils
 
@@ -19,6 +19,14 @@ RDEPEND=""
 
 # suggested basedir for cliparts
 CLIPART="/usr/share/clipart/${PN}"
+S="${WORKDIR}/openclipart-${PV}-full"
+
+src_unpack() {
+	unpack "${A}"
+	einfo "Removing nsis directory"
+	cd "${S}"
+	rm -fr nsis
+}
 
 select_files() {
 	# select wanted formats, optionally compress them
@@ -72,7 +80,9 @@ src_install() {
 		then
 			einfo "Installing ${DIR#*/}"
 			insinto "${CLIPART}/${DIR#*/}"
-			doins ${FILES}
+			for f in ${FILES}; do
+				doins "${f}"
+			done;
 		fi
 	done
 }
