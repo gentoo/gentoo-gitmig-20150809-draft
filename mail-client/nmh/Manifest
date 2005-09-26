@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e3d06a3947eaf2b7f8d7dee7b53f9bee nmh-1.1-r1.ebuild 1657
-MD5 2dc5ef7375ec5ed5dbc288505dff0502 nmh-1.1.ebuild 1525
 MD5 61328c981af8cf348a2b188506eff58c nmh-1.0.4-r3.ebuild 1391
+MD5 63ee46b00901ffb46894a4160aff52d1 nmh-1.1-r1.ebuild 1656
+MD5 2dc5ef7375ec5ed5dbc288505dff0502 nmh-1.1.ebuild 1525
+MD5 fd630e3576fe485367fe69da6a1f789b ChangeLog 3062
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 63d5647dcc314062902a963a37024220 ChangeLog 2979
 MD5 99d2bd65d462ef3d400834c4eb3ab41c files/nmh-1.1-inc-login.patch 552
-MD5 59aed45aec804fa7284a6424a31a1ef3 files/nmh-1.0.4-configure-vitest.patch 356
 MD5 06add1122d19eaf6dce391f099b76d3f files/digest-nmh-1.1-r1 59
-MD5 70aa719a7d3c1d0ee4d481a8a603537a files/nmh-1.1-configure-vitest.patch 332
-MD5 06add1122d19eaf6dce391f099b76d3f files/digest-nmh-1.1 59
 MD5 339b171982f2e23bb6ea3bdd5eeca163 files/digest-nmh-1.0.4-r3 61
-MD5 637757c29641c06801989cb38c272984 files/nmh-1.1-install.patch 1077
-MD5 fa36a4dfabf2747ec6314bd0d81e71ef files/nmh-1.1-m_getfld.patch 571
-MD5 20d9382ce8107879e07d57ae4b2b9727 files/nmh-1.0.4-m_getfld.patch 375
+MD5 59aed45aec804fa7284a6424a31a1ef3 files/nmh-1.0.4-configure-vitest.patch 356
 MD5 95d84e891e1f50445012106704041247 files/nmh-1.1-annotate-fix.patch 443
+MD5 20d9382ce8107879e07d57ae4b2b9727 files/nmh-1.0.4-m_getfld.patch 375
+MD5 fa36a4dfabf2747ec6314bd0d81e71ef files/nmh-1.1-m_getfld.patch 571
+MD5 637757c29641c06801989cb38c272984 files/nmh-1.1-install.patch 1077
+MD5 06add1122d19eaf6dce391f099b76d3f files/digest-nmh-1.1 59
+MD5 70aa719a7d3c1d0ee4d481a8a603537a files/nmh-1.1-configure-vitest.patch 332
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK0a6LLFUmVNQ7rkRAqhaAJ9DNjsErbQ7KmfVjY80QYrhtpU22QCfYIOG
-Dk0aGP5OEhOxp1GCnhsgd5k=
-=p1oZ
+iD8DBQFDN7F3QlM6RnzZP+IRArWWAJ93nGke00FDG0TZx5rlnB8/HbI1SwCeK0Rb
++9C/u/+P2MnXW6tjvfX6NJA=
+=P0j0
 -----END PGP SIGNATURE-----

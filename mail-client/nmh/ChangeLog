@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.15 2005/09/16 22:26:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.16 2005/09/26 08:29:18 ticho Exp $
+
+  26 Sep 2005; Andrej Kacian <ticho@gentoo.org> nmh-1.1-r1.ebuild:
+  Stable on x86.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
