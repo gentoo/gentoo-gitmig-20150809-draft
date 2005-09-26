@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.201 2005/09/25 10:08:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.202 2005/09/26 21:54:56 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1584,13 +1584,15 @@ newpamd() {
 make_wrapper() {
 	local wrapper=$1 bin=$2 chdir=$3 libdir=$4 path=$5
 	local tmpwrapper=$(emktemp)
+	# We don't want to quote ${bin} so that people can pass complex
+	# things as $bin ... "./someprog --args"
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir:-.}"
 if [ "\${LD_LIBRARY_PATH+set}" = "set" ] && [ -n "${libdir}" ] ; then
 	export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
 fi
-exec "${bin}" "\$@"
+exec ${bin} "\$@"
 EOF
 	chmod go+rx "${tmpwrapper}"
 	if [[ -n ${path} ]] ; then
