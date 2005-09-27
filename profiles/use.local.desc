@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1472 2005/09/26 16:10:19 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1473 2005/09/27 00:20:30 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -543,6 +543,7 @@ media-libs/ploticus:svgz - Compressed svg graphics support
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/svgalib:no-helper - Do not build the helper kernel module
+media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/xine-lib:cle266 - Suport for the via XvMC libs
 media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
