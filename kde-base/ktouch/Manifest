@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e1fc52bf53fe2d47119bf2c7aa931887 ChangeLog 2627
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 a50c86813e4b31df22422af68af96607 ktouch-3.5_beta1.ebuild 542
+MD5 ab702ed034d34741415d23e5b18a34f0 ChangeLog 2736
 MD5 5e1e319fb7514047f6ca35538b3b5724 ktouch-3.4.2.ebuild 439
 MD5 efaf8d02d7a1a0d04de75b0f13d880da ktouch-3.4.1.ebuild 426
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 3d85dad5bc53276f65a4b36ccf40f2c4 ktouch-3.5_beta1.ebuild 495
+MD5 bb87804db4b06c40fdff58984b70c393 files/digest-ktouch-3.5_beta1 68
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-ktouch-3.4.2 282
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-ktouch-3.4.1 208
-MD5 bb87804db4b06c40fdff58984b70c393 files/digest-ktouch-3.5_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXUEj5H05b2HAEkRAqXBAJ0bevI70Ccdp9wgn8aaJy2Qf2EQPQCgpbIr
-oo/uUQ3K+Zr6IqgorqHWgR8=
-=DuDr
------END PGP SIGNATURE-----
