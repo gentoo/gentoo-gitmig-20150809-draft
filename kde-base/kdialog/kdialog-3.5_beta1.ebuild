@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/kdialog-3.5_beta1.ebuild,v 1.1 2005/09/22 18:45:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/kdialog-3.5_beta1.ebuild,v 1.2 2005/09/27 18:03:16 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -13,12 +13,5 @@ IUSE=""
 
 RDEPEND="virtual/eject"
 
+KMEXTRA="kdeeject"
 KMNODOCS=true
-
-src_install() {
-	kde-meta_src_install
-	# see bug 89867
-#	cp ${FILESDIR}/kdeeject-${PV} ${T}/kdeeject
-#	into ${PREFIX}
-#	dobin ${T}/kdeeject
-}
