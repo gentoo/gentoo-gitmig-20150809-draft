@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4504 2005/09/26 12:21:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4505 2005/09/27 19:41:39 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -705,7 +705,7 @@ media-video/toxine
 >=dev-cpp/libgnomeuimm-2.11
 >=dev-cpp/libxmlpp-2.11
 >=gnome-base/gnome-light-2.12
-
+>=dev-util/glade-2.12
 # -- gnome mask end
 
 # Martin Schlemmer <azarah@gentoo.org>
