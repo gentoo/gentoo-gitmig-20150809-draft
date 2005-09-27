@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9a28ceddc54e96fd392c0cb2969a7fa ChangeLog 13732
+MD5 60a6fe7068cfdc48db9f521bfeac4970 ChangeLog 13877
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 87afbaa27805c015e37148d0347887af php-cgi-4.3.11-r1.ebuild 1110
 MD5 58596c107f1a23e6be418c9dae669e74 php-cgi-4.4.0.ebuild 969
 MD5 d872a25f985f00e2d9cc17379b2d0492 php-cgi-4.4.0-r1.ebuild 972
-MD5 98731632103435e701ba69cea7b38800 php-cgi-4.3.11-r2.ebuild 1840
-MD5 bb0b29729ab0c01efd613ff75f0480dd php-cgi-4.4.0-r2.ebuild 1692
-MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
-MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
-MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 3c748a970b69c07ad74200cb15f966a5 php-cgi-4.3.11-r2.ebuild 1839
+MD5 94012b5f66c90b6ae052dbf7e2e4801c php-cgi-4.4.0-r2.ebuild 1691
+MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-php-cgi-4.4.0 285
+MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-php-cgi-4.4.0-r1 285
+MD5 225b57325cbdf582288a8796da9d72f5 files/digest-php-cgi-4.3.11-r1 287
+MD5 ce1f1b2a1e56cf4459b2cbfdcce6b03f files/digest-php-cgi-4.3.11-r2 364
+MD5 61c52577ff879166da224373e27ad11e files/digest-php-cgi-4.4.0-r2 362
 MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
 MD5 a9b932952f12aa01a9f98a7fcbf32ed9 files/php4.3.11-pcre-security.patch 6031
 MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
 MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
-MD5 225b57325cbdf582288a8796da9d72f5 files/digest-php-cgi-4.3.11-r1 287
-MD5 ce1f1b2a1e56cf4459b2cbfdcce6b03f files/digest-php-cgi-4.3.11-r2 364
-MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-php-cgi-4.4.0-r1 285
-MD5 61c52577ff879166da224373e27ad11e files/digest-php-cgi-4.4.0-r2 362
-MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-php-cgi-4.4.0 285
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDM5dEmPFBzbX68WERAj45AKCPqthdaGlmRrDU34eeWh3X9YsLuACglUlF
-Nf6lEPVZPWqhrCjIdOQqrbo=
-=3r3I
------END PGP SIGNATURE-----
+MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
+MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
