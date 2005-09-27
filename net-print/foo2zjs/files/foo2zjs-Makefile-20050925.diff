@@ -1,0 +1,119 @@
+diff -Nuarp foo2zjs.orig/Makefile foo2zjs/Makefile
+--- foo2zjs.orig/Makefile	2005-09-25 11:44:11.000000000 +0200
++++ foo2zjs/Makefile	2005-09-25 12:13:55.000000000 +0200
+@@ -6,8 +6,8 @@ EUID := $(shell id -u)
+ VERSION=0.0
+ 
+ # Installation prefix...
+-PREFIX=/usr/local
+-PREFIX=/usr
++PREFIX=$(DESTDIR)/usr/local
++PREFIX=$(DESTDIR)/usr
+ 
+ # Pathnames for this package...
+ BIN=$(PREFIX)/bin
+@@ -17,7 +17,7 @@ MANDIR=$(PREFIX)/share/man
+ DOCDIR=$(PREFIX)/share/doc/foo2zjs/
+ 
+ # Pathnames for referenced packages...
+-FOODB=/usr/share/foomatic/db/source
++FOODB=$(PREFIX)/share/foomatic/db/source
+ 
+ # User ID's
+ LPuid=-olp
+@@ -115,9 +115,6 @@ ifeq ($(UNAME),Linux)
+ 	endif
+ endif
+ 
+-# Compiler flags
+-CFLAGS +=	-O2 -Wall
+-
+ #
+ # Rules to create test documents
+ #
+@@ -212,6 +209,7 @@ install: all install-prog install-icc2ps
+ 	# On Suse 9.0, run "yast"
+ 
+ install-prog:
++	[ -d $(BIN) ] || install -d -m 755 $(BIN)/
+ 	#
+ 	# Install driver, wrapper, and development tools
+ 	#
+@@ -239,6 +237,7 @@ install-foo:
+ 	#
+ 	@if [ -d $(FOODB) ]; then \
+ 	    for dir in driver printer opt; do \
++		[ -d $(FOODB)/$$dir/ ] || install -d -m 755 $(FOODB)/$$dir/; \
+ 		echo install -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
+ 		install -c -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
+ 	    done \
+@@ -256,9 +255,9 @@ install-foo:
+ 	#
+ 	# Clear foomatic cache and rebuild database if needed
+ 	#
+-	rm -rf /var/cache/foomatic/*/*
+-	if [ -d /var/cache/foomatic/compiled ]; then \
+-	    cd /var/cache/foomatic/compiled; \
++	rm -rf $(DESTDIR)/var/cache/foomatic/*/*
++	if [ -d $(DESTDIR)/var/cache/foomatic/compiled ]; then \
++	    cd $(DESTDIR)/var/cache/foomatic/compiled; \
+ 	    foomatic-combo-xml -O >overview.xml; \
+ 	fi
+ 
+@@ -306,15 +305,13 @@ install-extra:
+ 	# foo2oak ICM files (if any)
+ 	install $(LPuid) $(LPgid) -m 775 -d $(SHAREOAK)/icm/
+ 
+-USBDIR=/etc/hotplug/usb
++USBDIR=$(DESTDIR)/etc/hotplug/usb
+ install-hotplug:
+ 	[ -d $(USBDIR) ] || install -d -m 755 $(USBDIR)/
+ 	install -c -m 755 hplj1000 $(USBDIR)/
+ 	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1005
+ 	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1020
+-	$(USBDIR)/hplj1000 install-usermap
+-	$(USBDIR)/hplj1005 install-usermap
+-	$(USBDIR)/hplj1020 install-usermap
++	install -c -m 755 hplj.usermap $(USBDIR)/
+ 
+ clean:
+ 	-rm -f foo2zjs zjsdecode
+@@ -466,7 +463,7 @@ xxx.zm: FRC
+ ppd:
+ 	./getweb ppd
+ 
+-MODEL=/usr/share/cups/model
++MODEL=$(PREFIX)/share/cups/model
+ install-ppd:
+ 	#
+ 	# Install PPD files for CUPS
+@@ -523,7 +520,6 @@ install-doc: doc
+ 	install -c -m 644 README $(DOCDIR)
+ 	install -c -m 644 ChangeLog $(DOCDIR)
+ 
+-GROFF=/usr/local/test/bin/groff
+ GROFF=groff
+ manual.pdf: $(MANPAGES)
+ 	-$(GROFF) -t -man $(MANPAGES) | ps2pdf - $@
+diff -Nuarp foo2zjs.orig/hplj.usermap foo2zjs/hplj.usermap
+--- foo2zjs.orig/hplj.usermap	1970-01-01 01:00:00.000000000 +0100
++++ foo2zjs/hplj.usermap	2005-09-25 12:13:45.000000000 +0200
+@@ -0,0 +1,3 @@
++hplj1000 0x0003 0x03f0 0x0517 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
++hplj1005 0x0003 0x03f0 0x1317 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
++hplj1020 0x0003 0x03f0 0x2B17 0x0000 0x0000 0x00 0x00 0x00 0x00 0x00 0x00 0x00000000
+diff -Nuarp foo2zjs.orig/icc2ps/Makefile foo2zjs/icc2ps/Makefile
+--- foo2zjs.orig/icc2ps/Makefile	2003-08-08 03:38:13.000000000 +0200
++++ foo2zjs/icc2ps/Makefile	2005-09-25 12:05:47.000000000 +0200
+@@ -1,10 +1,9 @@
+-PREFIX=	/usr
++PREFIX=	$(DESTDIR)/usr
+ BIN=	$(PREFIX)/bin
+ SRC=	icc2ps.c xgetopt.c
+ LIB=	cmscam97.c cmscnvrt.c cmserr.c cmsgamma.c cmsgmt.c cmsintrp.c cmsio1.c \
+ 	cmslut.c cmsmatsh.c cmsmtrx.c cmsnamed.c cmspack.c cmspcs.c cmsps2.c \
+ 	cmssamp.c cmswtpnt.c cmsxform.c
+-CFLAGS=	-O3
+ 
+ all: foo2zjs-icc2ps
+ 

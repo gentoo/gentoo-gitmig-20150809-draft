@@ -1,6 +1,14 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.5 2005/09/17 00:19:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.6 2005/09/27 12:37:14 genstef Exp $
+
+*foo2zjs-20050925 (27 Sep 2005)
+
+  27 Sep 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/foo2zjs-Makefile-20050925.diff,
+  +files/foo2zjs-udevfwld-20050925.diff, +foo2zjs-20050925.ebuild:
+  New ebuild including an udev-Run-rule and hplj 1020 Support thanks to
+  Czirkos Zoltan <cirix@fw.hu> for testing, bug 106502
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

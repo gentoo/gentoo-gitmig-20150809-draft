@@ -1,16 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 87559f5f87f2ad396e043be0e0140d8c foo2zjs-20050925.ebuild 2072
 MD5 dd5a53f7b7c08325d45369e7c377f992 foo2zjs-20050319.ebuild 1569
+MD5 6aadacbb2373becaaeffad6a6f15f1b2 ChangeLog 1553
 MD5 6062bcaf60fde68c2418376f4cd91f3e metadata.xml 266
-MD5 4d653f5cf2faef75243a2edee4c56094 ChangeLog 1231
-MD5 e5f349ce9616aa37a291ae69beefc357 files/foo2zjs-Makefile.patch 3324
 MD5 156dfe6cef969d11cc59957ad027a51e files/digest-foo2zjs-20050319 238
+MD5 0dbc389eaf50f7d1f92fdd46c45dc26d files/digest-foo2zjs-20050925 317
+MD5 e5f349ce9616aa37a291ae69beefc357 files/foo2zjs-Makefile.patch 3324
+MD5 bb79f8d34c72525b9f37bcc8860173a8 files/foo2zjs-Makefile-20050925.diff 3673
+MD5 dce03f6b0db19f79acff583b9c282b61 files/foo2zjs-udevfwld-20050925.diff 8465
 MD5 379e40f8651bfdf8764f4afbc9594b41 files/hp-printer-udev.patch 767
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK2FPLLFUmVNQ7rkRAlvNAJ0cWxkzVckFsbq1ygk5K4d0zM6CLgCfWXui
-Y0b4PMjo3W+q4GP3061s5xY=
-=kJDK
------END PGP SIGNATURE-----
