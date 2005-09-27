@@ -1,0 +1,43 @@
+#define ABEKASA60
+#define ABEKASA62
+#define ALIAS
+##define CGM
+#define CUBICOMP
+##define DVIRLE
+#define GRAYFILES
+#define MACPAINT
+##define PBMPLUS
+##define SUNRASTER
+#define TARGA
+#define VICAR
+#define WASATCH
+#define WAVEFRONT
+
+#define GCC
+
+#define CONST_DECL
+#define NO_MAKE_MAKEFILE
+#define USE_TIME_H
+#define SYS_V_SETPGRP
+#define USE_PROTOTYPES
+#define USE_RANDOM
+#define USE_STDARG
+#define USE_STDLIB_H
+#define USE_UNISTD_H
+#define USE_STRING_H
+#define VOID_STAR
+#define USE_XLIBINT_H
+#define X_SHARED_MEMORY
+
+#defpath DEST bin
+#defpath RI include
+#defpath RL lib
+
+ROFF = nroff
+ROFFOPT = -man
+ROFFPIPE = | lpr
+
+INCTIFF = 
+LIBTIFF = -ltiff
+INCX11 =
+LIBX11 = -lX11

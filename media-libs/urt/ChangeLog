@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/urt
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.1 2005/09/27 00:19:32 vapier Exp $
+
+*urt-3.1b (26 Sep 2005)
+
+  26 Sep 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
