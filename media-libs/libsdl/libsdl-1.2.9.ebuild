@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.4 2005/09/07 23:19:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.5 2005/09/27 23:29:54 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -68,10 +68,12 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	if use x86 ; then
-		# silly bundled asm triggers TEXTREL ... maybe someday
-		# i'll fix this properly, but for now hide with USE=pic
-		use pic || myconf="${myconf} $(use_enable x86 nasm)"
+	# silly bundled asm triggers TEXTREL ... maybe someday
+	# i'll fix this properly, but for now hide with USE=pic
+	if [[ $(tc-arch) != "x86" ]] || use pic ; then
+		myconf="${myconf} --disable-nasm"
+	else
+		myconf="${myconf} $(use_enable x86 nasm)"
 	fi
 	use noflagstrip || strip-flags
 	use noaudio && myconf="${myconf} --disable-audio"
