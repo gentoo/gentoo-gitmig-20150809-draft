@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 38731aa56c6475132bc34c691fdb75db ChangeLog 2523
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 c9dc4a9ca8dc9ab67ddfe3f68a55a2c1 ChangeLog 2416
-MD5 93d88bd77e3b8832b26556e958c67f36 quanta-docs-20041123.ebuild 1222
 MD5 ad2b24290032cafaf94d04734c3e197e quanta-docs-20030405.ebuild 900
+MD5 8420e9e283f3c2c100b85afb6a881517 quanta-docs-20041123.ebuild 1221
 MD5 9ecae47968f19157b0cb7ec923d55e4a files/digest-quanta-docs-20030405 384
 MD5 8b647008e1fa6b42f81dfc616782c435 files/digest-quanta-docs-20041123 395
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDOUxpwUpWvClEHQoRAmhhAJ96j2w7B6575iXtVy1dGX4hpgK+EQCfdf4T
+ukd/ePduGUXigwztpbi4HDQ=
+=0puN
+-----END PGP SIGNATURE-----
