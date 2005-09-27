@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r3.ebuild,v 1.3 2005/09/10 13:13:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r3.ebuild,v 1.4 2005/09/27 16:59:12 lu_zero Exp $
 
 IUSE="opengl dlloader"
 
@@ -125,12 +125,10 @@ pkg_preinst() {
 src_install() {
 	local ATI_ROOT="/usr/lib/opengl/ati"
 
-	cd ${WORKDIR}
+	cd ${WORKDIR}/lib/modules/fglrx/build_mod
+	linux-mod_src_install
 
-	# DRM module
-	insinto /lib/modules/${KV_FULL}/video
-	# set_kvobj
-	doins ${WORKDIR}/lib/modules/fglrx/build_mod/fglrx.${KV_OBJ}
+	cd ${WORKDIR}
 
 	local native_dir
 	use x86 && native_dir="lib"
@@ -265,7 +263,7 @@ pkg_postinst() {
 	ewarn "# emerge -Nu ati-drivers"
 	fi
 	# DRM module
-	update-modules
+	linux-mod_pkg_postinst
 }
 
 pkg_postrm() {
