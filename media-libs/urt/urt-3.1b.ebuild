@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b.ebuild,v 1.3 2005/09/27 12:05:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b.ebuild,v 1.4 2005/09/27 20:41:39 vanquirius Exp $
 
 inherit eutils
 
@@ -16,9 +16,9 @@ IUSE="gif gs tiff X"
 DEPEND="X? ( virtual/x11 )
 	gif? ( media-libs/giflib )
 	tiff? ( media-libs/tiff )
-	gs? ( app-text/ghostscript )"
+	gs? ( virtual/ghostscript )"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 urt_config() {
 	use $1 && echo "#define $2" || echo "##define $2"
