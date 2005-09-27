@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.1 2005/09/09 01:56:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.2 2005/09/27 19:56:06 wolf31o2 Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ IUSE="videos"
 
 DESCRIPTION="Sid Meier's Alpha Centauri"
 HOMEPAGE="http://www.lokigames.com/products/smac/"
-SRC_URI="ftp://sunsite.dk/mirrors/lokigames/updates/${PN}/${P}-x86.run"
+SRC_URI="mirror://lokigames/${PN}/${P}-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"

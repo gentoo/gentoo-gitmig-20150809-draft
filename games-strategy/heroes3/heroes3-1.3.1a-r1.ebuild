@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.5 2005/09/21 20:55:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.6 2005/09/27 19:55:09 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -19,10 +19,8 @@ KEYWORDS="x86"
 # Since I do not have a PPC machine to test with, I will leave the PPC stuff in
 # here so someone else can stabilize loki_setupdb and loki_patch for PPC and
 # then KEYWORD this appropriately.
-SRC_URI="x86? ( ftp://ftp.planetmirror.com/pub/lokigames/updates/${PN}/${P}-cdrom-x86.run
-		ftp://snuffleupagus.animearchive.org/loki/updates/${PN}/${P}-cdrom-x86.run )
-	ppc? ( ftp://ftp.planetmirror.com/pub/lokigames/updates/${PN}/${P}-ppc.run
-		ftp://snuffleupagus.animearchive.org/loki/updates/${PN}/${P}-ppc.run )"
+SRC_URI="x86? ( mirror://lokigames/${PN}/${P}-cdrom-x86.run )
+	ppc? ( mirror://lokigames/${PN}/${P}-ppc.run )"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
