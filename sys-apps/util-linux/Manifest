@@ -5,7 +5,7 @@ MD5 40353e338343ed2b6a8f23259c881e49 util-linux-2.12q.ebuild 4785
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5497e9050dc8cde95a0e015edcd59c81 util-linux-2.12i-r1.ebuild 3960
 MD5 42a00cdd523f8facea7f10a9f4df86a1 util-linux-2.12q-r2.ebuild 5692
-MD5 f40ef19730231cee302d7cdabe56aa0b util-linux-2.12q-r3.ebuild 5809
+MD5 5caff498045d46b5ee7afbb9aad0a357 util-linux-2.12q-r3.ebuild 5853
 MD5 37089f71e91dec5ebbcc7506bbaf4334 ChangeLog 20615
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
@@ -43,7 +43,7 @@ MD5 8a13c61b447c1533df4b919cf2646fea files/util-linux-2.12q-umount-dont-write-mt
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNNefgIKl8Uu19MoRAguJAJ930s+n0jmpa7v4/Y6aT6BXRjRpDgCeLzRk
-K3Mjy6SIRW9tFZhEjfiuHqY=
-=L1EO
+iD8DBQFDOc/hgIKl8Uu19MoRAgAGAJ43Ztei7cLCwQBa982jnaooyCM/mQCdFHNA
+dReicDM7OGMTh5qC3/BqTiw=
+=7cgX
 -----END PGP SIGNATURE-----

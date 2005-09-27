@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r3.ebuild,v 1.9 2005/09/24 04:34:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r3.ebuild,v 1.10 2005/09/27 23:03:04 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -163,8 +163,9 @@ src_install() {
 	if use old-crypt ; then
 		cd "${OLD_CRYPT_P}"/mount
 		into /
-		newsbin mount mount-old-crypt || die
-		newsbin losetup losetup-old-crypt || die
+		newbin mount mount-old-crypt || die
+		newbin losetup losetup-old-crypt || die
+		fperms 4711 /bin/{mount,losetup}-old-crypt
 	fi
 }
 
