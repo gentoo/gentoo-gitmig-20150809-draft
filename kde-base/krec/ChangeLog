@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.19 2005/09/25 19:34:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/ChangeLog,v 1.20 2005/09/27 17:29:04 greg_g Exp $
+
+  27 Sep 2005; Gregorio Guidi <greg_g@gentoo.org> krec-3.5_beta1.ebuild:
+  Fix compilation error (#107163).
 
   25 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> krec-3.5_beta1.ebuild:
   Compile arts/gui as that seems to be needed as per bug #107163.

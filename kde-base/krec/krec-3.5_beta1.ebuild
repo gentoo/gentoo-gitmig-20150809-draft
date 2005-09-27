@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/krec-3.5_beta1.ebuild,v 1.3 2005/09/25 19:34:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/krec-3.5_beta1.ebuild,v 1.4 2005/09/27 17:29:04 greg_g Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -19,12 +19,7 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-arts)
 	encode? ( mp3? ( media-sound/lame )
 	          vorbis? ( media-libs/libvorbis ) )"
 
-KMCOPYLIB="libartsgui_kde arts/gui/kde/
-	libartscontrolsupport arts/tools/"
-KMEXTRACTONLY="
-	arts/
-	kioslave/audiocd/configure.in.in"
-KMCOMPILEONLY="arts/gui/"
+KMCOMPILEONLY="arts"
 
 pkg_setup() {
 	if ! useq arts; then
