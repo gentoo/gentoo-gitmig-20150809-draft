@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.35 2005/09/16 20:29:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.36 2005/09/27 21:56:37 vanquirius Exp $
+
+*bestcrypt-1.6_p1-r2 (27 Sep 2005)
+
+  27 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +bestcrypt-1.6_p1-r2.ebuild:
+  Make kgsha256 and install libkgsha{,256}.so for bug 107392. Thanks to Alex
+  <nitro dot fuel3d at gmail dot com>.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

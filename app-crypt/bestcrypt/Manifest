@@ -1,25 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 647e65173bc7229527e94aea50a6f3fd bestcrypt-1.6_p1.ebuild 3317
 MD5 01fa3fab9cef0bcfe01671f972ba1052 bestcrypt-1.5_p11.ebuild 3130
-MD5 3c2d03aae97763035f173f2bb94dee06 bestcrypt-1.6_p1-r1.ebuild 3080
-MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
+MD5 647e65173bc7229527e94aea50a6f3fd bestcrypt-1.6_p1.ebuild 3317
 MD5 e30c17c4efee41b1ed3f849680d9cdfa bestcrypt-1.5_p10.ebuild 2974
-MD5 47361d06cc51d9e0fcd11771be0bb75d ChangeLog 7098
-MD5 0f4e6e0c1442b612832726753739f6b2 files/digest-bestcrypt-1.5_p11 208
+MD5 8dcf940430c4916eec795612a8273ec0 bestcrypt-1.6_p1-r2.ebuild 3257
+MD5 3c2d03aae97763035f173f2bb94dee06 bestcrypt-1.6_p1-r1.ebuild 3080
+MD5 a8e7acdec10895ce130fa0c98721fc86 ChangeLog 7337
+MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 c9fdd7c76eb3731a6166cc9ff17bf722 files/digest-bestcrypt-1.5_p10 137
-MD5 063ae0f67213da39ed4dd75a594b3b07 files/bcrypt3 3246
-MD5 01225cc87eee84cf54232c86b04e8c93 files/bestcrypt.devfs 1673
-MD5 e9585e8f08138f46bdda7b88ddd81cd8 files/bestcrypt-1.5_p10-makefile_fix.patch 1136
+MD5 0f4e6e0c1442b612832726753739f6b2 files/digest-bestcrypt-1.5_p11 208
 MD5 e4fb0265d55a570daf750fa7c0b8414c files/bestcrypt-1.6_p1-makefile_fix.patch 1367
-MD5 009cee9a408478ebf4f7c1a381c7e8b2 files/bestcrypt-1.5_p11-makefile_fix.patch 1148
-MD5 dee6aa8c71224187da9fbc2b2a6fc167 files/digest-bestcrypt-1.6_p1 136
 MD5 6a91a7867c21eaa1be5ac4b829ae34d9 files/digest-bestcrypt-1.6_p1-r1 207
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKytrLLFUmVNQ7rkRAoOKAKCtu6WZymAp7DUMGl1KZBBGRviaDQCcCt9e
-FR0WrDUoeMwn/OUO46SqkYA=
-=xt16
------END PGP SIGNATURE-----
+MD5 6a91a7867c21eaa1be5ac4b829ae34d9 files/digest-bestcrypt-1.6_p1-r2 207
+MD5 dee6aa8c71224187da9fbc2b2a6fc167 files/digest-bestcrypt-1.6_p1 136
+MD5 e9585e8f08138f46bdda7b88ddd81cd8 files/bestcrypt-1.5_p10-makefile_fix.patch 1136
+MD5 063ae0f67213da39ed4dd75a594b3b07 files/bcrypt3 3246
+MD5 009cee9a408478ebf4f7c1a381c7e8b2 files/bestcrypt-1.5_p11-makefile_fix.patch 1148
+MD5 01225cc87eee84cf54232c86b04e8c93 files/bestcrypt.devfs 1673
