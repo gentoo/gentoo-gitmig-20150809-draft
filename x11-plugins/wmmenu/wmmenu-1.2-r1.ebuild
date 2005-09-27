@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.2 2005/09/26 10:10:09 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmenu/wmmenu-1.2-r1.ebuild,v 1.3 2005/09/27 13:13:07 metalgod Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.fcoutant.freesurf.fr/download/${P}.tar.gz"
 HOMEPAGE="http://www.fcoutant.freesurf.fr/wmmenu.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 DEPEND="virtual/x11
 	>=x11-libs/libdockapp-0.5.0-r1
 	gnome? ( media-libs/gdk-pixbuf )"
