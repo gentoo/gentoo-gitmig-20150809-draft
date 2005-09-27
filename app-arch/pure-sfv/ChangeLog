@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pure-sfv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.7 2005/05/04 19:13:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.8 2005/09/27 12:02:11 josejx Exp $
+
+  27 Sep 2005; Joseph Jezak <josejx@gentoo.org> pure-sfv-0.3.ebuild:
+  Marked ppc stable for bug #107378.
 
   04 May 2005; David Holm <dholm@gentoo.org> pure-sfv-0.3.ebuild:
   Added to ~ppc.
