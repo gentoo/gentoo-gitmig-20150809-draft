@@ -1,0 +1,13 @@
+--- digikam/configure.in.in	2005-09-19 16:47:55.000000000 +0100
++++ digikam/configure.in.in	2005-09-27 15:43:24.000000000 +0100
+@@ -35,10 +35,6 @@
+ CPPFLAGS=$digikam_save_cppflags
+ AC_LANG_POP(C++)
+ 
+-if test "x$digikam_enable_hidden_visibility" = "xyes"; then
+-   KDE_ENABLE_HIDDEN_VISIBILITY 
+-fi
+-
+ # -----------------------------------------------------------------
+ # pkg config check
+ # -----------------------------------------------------------------
