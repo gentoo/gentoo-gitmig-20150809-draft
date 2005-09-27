@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26dab9942912ad058ca6b42a6d0e663a jnettop-0.11.0.ebuild 591
+MD5 b94b0db0c9e3a8f5a7979c80131609d3 jnettop-0.11.0.ebuild 587
 MD5 44d5022ec080a145e4c901a547dce721 jnettop-0.10.1.ebuild 588
-MD5 b9f3fc8fd692fe7b0897d1dc64f64d11 ChangeLog 1557
+MD5 91d5d67522b7be72cbabe819f0e73d51 ChangeLog 1725
 MD5 2930c32f90fae83ab0a2afb6ffd0c934 metadata.xml 240
 MD5 6ffb841d0ecd0c29a7b3097a6b2762bd files/digest-jnettop-0.10.1 66
 MD5 818479a5c52ad2a5efb2667ddb76d4ab files/digest-jnettop-0.11.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxWVgEZCkKN40op4RAuGtAJ9xmcJf04m7k8hGB8yqKiSpoyRg+QCglIZL
-adscZh6oLg29RwD2wJGDfe4=
-=1ykk
------END PGP SIGNATURE-----
