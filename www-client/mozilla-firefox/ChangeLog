@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.84 2005/09/26 22:08:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.85 2005/09/27 20:27:46 azarah Exp $
+
+*mozilla-firefox-1.0.7-r2 (27 Sep 2005)
+
+  27 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  +mozilla-firefox-1.0.7-r2.ebuild:
+  Add pango and other patches from fedora in effort to try and resolve bug
+  #107372.
 
 *mozilla-firefox-1.0.7-r1 (26 Sep 2005)
 
