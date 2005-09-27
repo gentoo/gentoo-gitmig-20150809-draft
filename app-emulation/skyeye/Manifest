@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48834ccc5ffa5b7734f8cac702fcd38a metadata.xml 156
+MD5 2ae5c891d5340c88716423bd78f85b40 skyeye-1.0.0.ebuild 635
+MD5 9aba677f73f1416c0ca08fd177fc02c6 ChangeLog 337
+MD5 37305a9721efe16d2daac739288329be files/digest-skyeye-1.0.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDOKhTgIKl8Uu19MoRAqnvAJ9Rg3K1SG4wFbgKXZlRvlMKo3ndKgCdEuNR
+nYlrACKNodAISOF9Jv5+u2Y=
+=jE5z
+-----END PGP SIGNATURE-----
