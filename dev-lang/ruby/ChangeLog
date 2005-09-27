@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.152 2005/09/27 11:53:00 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.153 2005/09/27 12:25:08 fmccor Exp $
+
+  27 Sep 2005; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.3.ebuild:
+  Add sparc keyword (Security Bug #106996); concerns expressed in the bug's
+  comments are cured by upgrading rubygems, activesupport.
 
   27 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org> ruby-1.8.3.ebuild:
   Stable on hppa. bug #106996
