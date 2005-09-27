@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.273 2005/09/21 22:00:57 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.274 2005/09/27 02:50:34 weeve Exp $
+
+  27 Sep 2005; Jason Wever <weeve@gentoo.org> mod_php-4.3.11-r1.ebuild,
+  mod_php-4.4.0-r2.ebuild:
+  Stable on SPARC wrt security bug #102373.
 
   21 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mod_php-4.4.0-r2.ebuild:
