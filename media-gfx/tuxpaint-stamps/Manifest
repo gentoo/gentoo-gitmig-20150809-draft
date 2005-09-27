@@ -1,5 +1,15 @@
-MD5 625a5fdd6005b34606d0872f963997f9 ChangeLog 483
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 941d64c90f41c2e00c7c07c715cd285e ChangeLog 612
 MD5 548bfb2cefb8615b331cfcd311684e16 metadata.xml 376
-MD5 ecac815bb694e843c570e2568749db40 tuxpaint-stamps-20041003.ebuild 801
+MD5 947237e5d722342383c66fd73e921355 tuxpaint-stamps-20041003.ebuild 807
 MD5 cdc1bab02af9f48c5726f46f6f8d6578 files/digest-tuxpaint-stamps-20041003 79
 MD5 7b37712ba33469a003c56a2116b2d272 files/tuxpaint-stamps-2004-10-03-makefile.patch 746
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFDOU2QwUpWvClEHQoRAhFbAJIDfUmxbWMoU3mMcEA5DkdbseE5AJ4jT8Nq
+wloYsScWJc2m/Ak7WFKZ0A==
+=tGdZ
+-----END PGP SIGNATURE-----
