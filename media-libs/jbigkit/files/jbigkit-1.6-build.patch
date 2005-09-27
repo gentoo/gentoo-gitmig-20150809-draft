@@ -1,0 +1,11 @@
+--- Makefile.orig	2005-09-26 10:00:06.000000000 -0400
++++ Makefile	2005-09-26 10:00:21.000000000 -0400
+@@ -8,7 +8,7 @@
+ CCFLAGS = -O2 -W
+ #CCFLAGS = -O -g -W -Wall -ansi -pedantic #-DDEBUG  # developer only
+ 
+-CFLAGS = $(CCFLAGS) -I../libjbig
++CFLAGS += -I../libjbig
+ 
+ VERSION=1.6
+ 
