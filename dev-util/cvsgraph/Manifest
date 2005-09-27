@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9f09b5af5f1d7390ed2a4c68c487e08 cvsgraph-1.5.2.ebuild 1008
+MD5 8f696a1e51b4a3fc264e2cdd3802f2a3 ChangeLog 1686
 MD5 b6efa4678f12d01fef400e8856477918 cvsgraph-1.5.1.ebuild 1008
-MD5 052f94ee09a0656aca0ff1797dd406cd ChangeLog 1565
+MD5 6395245fd902b16193e476d95d51cf0e cvsgraph-1.5.2.ebuild 1009
 MD5 e5e0dc1b17b1dd57e95178b9554c0b60 metadata.xml 163
 MD5 2086afa850eeaa80b59e22475144d46b files/digest-cvsgraph-1.5.1 66
 MD5 14797959b956fab083b69c516d2681be files/digest-cvsgraph-1.5.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCsBevEZCkKN40op4RAoYRAJ9bwMzFVMJ6Lwc+zmKrHQ77U1NqLQCfeblG
-jKtkN4Mj1tFpdTFvpp7WaJw=
-=+Dou
+iD8DBQFDOVBHwUpWvClEHQoRAh6+AJ9hdLboMYCV9DRBR5Vg9RNRGjfa8gCfctfF
+rNCyX/UhnHtDQsfRXwMhAh8=
+=7Mph
 -----END PGP SIGNATURE-----

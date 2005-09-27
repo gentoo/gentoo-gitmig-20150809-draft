@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsgraph
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.9 2005/06/15 11:56:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.10 2005/09/27 13:00:32 metalgod Exp $
+
+  27 Sep 2005; Luis Medinas <metalgod@gentoo.org> cvsgraph-1.5.2.ebuild:
+  Added ~amd64 keywords. Closes bug #107288.
 
 *cvsgraph-1.5.2 (15 Jun 2005)
 
