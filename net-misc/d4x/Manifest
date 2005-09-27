@@ -1,7 +1,7 @@
 MD5 1a5d0162ab11f8382fbf615f00a4ae24 d4x-2.5.0-r1.ebuild 1868
-MD5 ed2b3b1b795c97a49109070de1c031c3 d4x-2.5.5.ebuild 1816
+MD5 d199408639e90aa9fa3679b7468ae35b d4x-2.5.5.ebuild 1862
 MD5 c1d99567166886bdb3e9f215fca712c0 d4x-2.4.1-r1.ebuild 1982
-MD5 fb0fa44252098279cda1a5251de00dcd ChangeLog 5488
+MD5 ec73c8deb53af69ea86489f933db99c2 ChangeLog 5611
 MD5 3f142d03f332a3f7047929a1b476c14f metadata.xml 301
 MD5 c43d3d36795505bc7f4a75d4d6e7f03b d4x-2.5.1.ebuild 1814
 MD5 5b49dbe10d588970e6f766cfdb310e67 files/d4x-2.5.0_rc2-gtk24.patch 279
@@ -11,5 +11,6 @@ MD5 4f038da47df5648c8799469e62ec03b6 files/digest-d4x-2.5.0-r1 67
 MD5 7025e0ce352893c55b23ffeea8f87d1c files/d4x-2.5.0_rc4-fix-cast.patch 317
 MD5 07dde74dfe302bab95327f285a5a16ba files/d4x-2.4.1-fix-statusbar-crash.patch 772
 MD5 512e25cdcccd73401a82518c6e49ae8c files/d4x-2.5.0-fix-compile-gtk26.patch 2957
+MD5 6d5c6288586182443c6dd1bb19ab86e8 files/d4x-2.5.5-stdint.patch 403
 MD5 95b235ef645b366b79c6d4465afce23b files/digest-d4x-2.5.1 62
 MD5 dafd14e65c89813ec81820ab77ded45a files/digest-d4x-2.5.5 62

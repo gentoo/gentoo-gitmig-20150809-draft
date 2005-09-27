@@ -1,0 +1,11 @@
+diff -Nru d4x-2.5.5/main/base64.cc d4x-2.5.5.patched/main/base64.cc
+--- d4x-2.5.5/main/base64.cc	2005-09-16 06:32:16.000000000 +0200
++++ d4x-2.5.5.patched/main/base64.cc	2005-09-26 20:42:33.000000000 +0200
+@@ -13,6 +13,7 @@
+ #include "base64.h"
+ #include <string.h>
+ #include <stdio.h>
++#include <stdint.h>
+ 
+ char Table64[64]={  'A','B','C','D','E','F','G','H',
+ 		    'I','J','K','L','M','N','O','P',

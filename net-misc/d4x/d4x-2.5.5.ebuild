@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.5.ebuild,v 1.1 2005/09/25 22:26:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.5.ebuild,v 1.2 2005/09/27 18:50:23 nelchael Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -28,6 +28,8 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e "s:CXXFLAGS=\"-O2\":CXXFLAGS=\"${CXXFLAGS}\":g;s:OPTFLAGS=\"-O2\":OPTFLAGS=\"\":g" \
 		configure.orig >configure
+
+	epatch "${FILESDIR}/d4x-${PV}-stdint.patch"
 }
 
 src_compile() {

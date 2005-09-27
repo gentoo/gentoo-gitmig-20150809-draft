@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.33 2005/09/25 22:26:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.34 2005/09/27 18:50:23 nelchael Exp $
+
+  27 Sep 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/d4x-2.5.5-stdint.patch, d4x-2.5.5.ebuild:
+  Fix bug 107297.
 
 *d4x-2.5.5 (25 Sep 2005)
 
