@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.15 2005/09/26 01:01:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.16 2005/09/27 14:32:45 azarah Exp $
+
+  27 Sep 2005; Martin Schlemmer <azarah@gentoo.org> gecko-sdk-1.7.8.ebuild:
+  Fix missing patch, bug #107371.
 
 *gecko-sdk-1.7.12 (26 Sep 2005)
 

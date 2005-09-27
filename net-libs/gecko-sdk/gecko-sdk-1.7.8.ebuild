@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.8.ebuild,v 1.1 2005/07/11 22:02:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.8.ebuild,v 1.2 2005/09/27 14:32:45 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -21,7 +21,8 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${MY_PV}
 	crypt? ( !moznomail? (
 		http://www.mozilla-enigmail.org/downloads/src/ipc-${IPCVER}.tar.gz
 		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
-	) )"
+	) )
+	mirror://gentoo/mozilla-firefox-1.0-4ft2.patch.bz2"
 
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
@@ -72,7 +73,7 @@ src_unpack() {
 	# patch out ft caching code since the API changed between releases of
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
-	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.3-4ft2.patch
+	epatch ${DISTDIR}/mozilla-firefox-1.0-4ft2.patch.bz2
 
 	# Patch to allow compilation on ppc64 - bug #54843
 	use ppc64 && epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.6-ppc64.patch
