@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/netpbm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.66 2005/08/16 02:13:49 lu_zero Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.67 2005/09/27 01:14:05 vapier Exp $
+
+*netpbm-10.29-r1 (27 Sep 2005)
+
+  27 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.29-anytopnm.patch, +files/netpbm-10.29-build.patch,
+  +files/netpbm-10.29-pnmtopng-alpha-check.patch, +netpbm-10.29-r1.ebuild:
+  Fix by Andy Chambers for segfault in pnmtopng #104434 by Heiko Baums. Fix by
+  Matthew Lange for buggy anytopnm #105127 by Erik Thiele. Add real manpages
+  #67017. Also try to fix parallel building.
 
 *netpbm-10.29 (16 Aug 2005)
 

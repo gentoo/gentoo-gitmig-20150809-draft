@@ -1,0 +1,18 @@
+Fix segfault when converting files w/out alpha
+
+Patch by Andy Chambers
+
+http://bugs.gentoo.org/104434
+
+--- converter/other/pnmtopng.c
++++ converter/other/pnmtopng.c
+@@ -1690,7 +1690,8 @@
+             pnm_promoteformatrow(xelrow, cols, maxval, format, maxval,
+                                  PPM_TYPE);
+             
+-            makePngLine(line, xelrow, cols, maxval, alpha, alpha_mask[row],
++            makePngLine(line, xelrow, cols, maxval, 
++			alpha, alpha ? alpha_mask[row] : NULL,
+                         cht, caht, info_ptr, png_maxval, depth);
+ 
+             png_write_row(png_ptr, line);

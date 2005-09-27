@@ -1,0 +1,58 @@
+Patch by Matthew Lange
+
+http://bugs.gentoo.org/105127
+
+--- converter/other/anytopnm
++++ converter/other/anytopnm
+@@ -73,7 +73,7 @@
+     file --mime /dev/null >/dev/null 2>/dev/null
+     if [ $? -eq 0 ]; then
+         # Now that we know the --mime option exists, use it.
+-        mimeType=`file --mime "$1" | cut -d: -f2-`
++        mimeType=`file --mime "$1" | cut -d: -f2- | cut -c2-`
+     else
+         # file --mime failed; we don't know why, but we assume it's because it
+         # is a traditional 'file' program that doesn't have a --mime option.
+@@ -90,26 +90,26 @@
+     case "$1" in
+ 
+         image/jpeg )
+-            type = "jfif"
++            type="jfif"
+             ;;
+         image/gif )
+-            type = "gif"
++            type="gif"
+             ;;
+         image/tiff )
+-            type = "tiff"
++            type="tiff"
+             ;;
+         image/bmp )
+-            type = "bmp"
++            type="bmp"
+             ;;
+         image/png )
+-            type = "png"
++            type="png"
+             ;;
+         image/x-portable-bitmap | image/x-portable-pixmap | \
+                 image/x-portable-greymap)
+-            type = "pnm"
++            type="pnm"
+             ;;
+         image/x-xpm )
+-            type = "xpm"
++            type="xpm"
+             ;;
+         * )
+             filetype=unknown
+@@ -541,7 +541,7 @@
+ 
+ setMimeType "$file"
+ 
+-typeDescription=`file "$file" | cut -d: -f2-`
++typeDescription=`file "$file" | cut -d: -f2- | cut -c2`
+ 
+ determineType "$file" "$mimeType" "$typeDescription" "$fileExtension"
+ 
