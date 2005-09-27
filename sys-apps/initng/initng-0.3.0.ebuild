@@ -1,23 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.2.3.ebuild,v 1.1 2005/09/24 00:19:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.3.0.ebuild,v 1.1 2005/09/27 23:05:57 vapier Exp $
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.thinktux.net/"
-SRC_URI="http://initng.thinktux.net/download/${P}.tar.bz2"
+SRC_URI="http://initng.thinktux.net/download/v${PV:0:3}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="debug"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/CFLAGS=.*ALL_CFLAGS/s|.*|:;|' \
-		configure || die "sed configure"
-}
 
 src_compile() {
 	econf \
