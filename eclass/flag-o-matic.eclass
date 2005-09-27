@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.92 2005/08/01 10:50:55 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.93 2005/09/27 01:06:47 vapier Exp $
 
 
 # need access to emktemp()
@@ -149,10 +149,12 @@ filter-flags() {
 }
 
 filter-lfs-flags() {
+	[[ -n $@ ]] && die "filter-lfs-flags takes no arguments"
 	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
 append-lfs-flags() {
+	[[ -n $@ ]] && die "append-lfs-flags takes no arguments"
 	append-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
@@ -166,6 +168,10 @@ append-flags() {
 }
 
 replace-flags() {
+	[[ $# != 2 ]] \
+		&& echo && eerror "Usage: replace-flags <old flag> <new flag>" \
+		&& die "replace-flags takes 2 arguments, not $#"
+
 	local f fset
 	declare -a new_CFLAGS new_CXXFLAGS
 
