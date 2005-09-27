@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.1 2005/09/27 00:19:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.2 2005/09/27 10:03:09 ticho Exp $
+
+  27 Sep 2005; Andrej Kacian <ticho@gentoo.org> urt-3.1b.ebuild:
+  Keyworded ~x86. Bug #107346.
 
 *urt-3.1b (26 Sep 2005)
 

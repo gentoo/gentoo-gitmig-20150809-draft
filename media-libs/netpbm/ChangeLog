@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.68 2005/09/27 01:15:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.69 2005/09/27 10:04:15 ticho Exp $
+
+  27 Sep 2005; Andrej Kacian <ticho@gentoo.org> netpbm-10.29-r1.ebuild:
+  Keyworded ~x86. Bug #107346.
 
 *netpbm-10.29-r1 (27 Sep 2005)
 
