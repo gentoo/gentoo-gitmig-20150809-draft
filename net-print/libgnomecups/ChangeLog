@@ -1,6 +1,12 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.44 2005/08/05 16:53:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.45 2005/09/27 03:35:24 leonardop Exp $
+
+*libgnomecups-0.2.2 (27 Sep 2005)
+
+  27 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +libgnomecups-0.2.2.ebuild:
+  New version.
 
 *libgnomecups-0.2.0-r2 (05 Aug 2005)
 
