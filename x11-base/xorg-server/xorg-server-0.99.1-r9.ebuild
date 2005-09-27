@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r9.ebuild,v 1.1 2005/09/13 01:02:51 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1-r9.ebuild,v 1.2 2005/09/27 19:37:26 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -78,7 +78,9 @@ DEPEND="${RDEPEND}
 	x11-proto/glproto
 	dri? ( x11-proto/xf86driproto
 		x11-libs/libdrm )"
-#	xprint? ( x11-proto/printproto )
+#	xprint? ( x11-proto/printproto
+#		x11-apps/mkfontdir
+#		x11-apps/mkfontscale )
 
 pkg_setup() {
 	# localstatedir is used for the log location; we need to override the default
