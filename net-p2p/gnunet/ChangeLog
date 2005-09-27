@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.39 2005/09/26 23:06:00 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.40 2005/09/27 13:16:08 mkay Exp $
+
+*gnunet-0.7.0-r1 (27 Sep 2005)
+
+  27 Sep 2005; <mkay@gentoo.org> +gnunet-0.7.0-r1.ebuild:
+  Changing default sql-module from sqlite into mysql if compiled without
+  sqlite support. Ebuild now also need at least one of sqlite or mysql USE
+  flags
 
   26 Sep 2005; <mkay@gentoo.org> gnunet-0.7.0.ebuild:
   mysql support was built even with USE=-mysql if mysql was installed in
