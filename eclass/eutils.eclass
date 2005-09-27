@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.202 2005/09/26 21:54:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.203 2005/09/27 12:38:56 ka0ttic Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -420,14 +420,15 @@ egetent() {
 			;;
 		esac
 	elif [[ "${USERLAND}" == "BSD" ]] ; then
-		local action
-		if [ "$1" == "passwd" ]
-		then
-			action="user"
-		else
-			action="group"
+		local opts action="user"
+		[[ $1 == "passwd" ]] || action="group"
+
+		# lookup by uid/gid
+		if [[ $2 == [[:digit:]]* ]] ; then
+			[[ ${action} == "user" ]] && opts="-u" || opts="-g"
 		fi
-		pw show "${action}" "$2" -q
+
+		pw show ${action} ${opts} "$2" -q
 	else
 		which nscd >& /dev/null && nscd -i "$1"
 		getent "$1" "$2"
