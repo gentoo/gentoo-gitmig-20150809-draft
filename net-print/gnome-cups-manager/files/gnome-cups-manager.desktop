@@ -10,4 +10,4 @@ Icon=gnome-dev-printer
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;Application;Settings;System
+Categories=GNOME;Application;Settings;System;
