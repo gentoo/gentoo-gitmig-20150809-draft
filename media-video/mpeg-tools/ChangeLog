@@ -1,6 +1,19 @@
 # ChangeLog for media-video/mpeg-tools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.10 2004/08/12 20:50:20 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.11 2005/09/27 00:38:43 vapier Exp $
+
+*mpeg-tools-1.5b-r2 (27 Sep 2005)
+
+  27 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  files/mpeg-tools-1.5b-64bit_fixes.patch,
+  +files/mpeg-tools-1.5b-build.patch,
+  +files/mpeg-tools-1.5b-system-jpeg.patch,
+  +files/mpeg-tools-1.5b-tempfile-convert.patch,
+  +files/mpeg-tools-1.5b-tempfile-mpeg-encode.patch,
+  +files/mpeg-tools-1.5b-tempfile-tests.patch, +mpeg-tools-1.5b-r2.ebuild:
+  Clean up source code, fix insecure tempfile usage #107344, and let netpbm
+  install the converting programs eyuvtoppm/ppmtoeyuv since it has newer
+  versions #78777.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.
