@@ -1,6 +1,7 @@
 - Don't install libnetpbm.a and libnetpbm.so into a sep link dir
 - Try to fix parallel building
 - Make the libopt tool less 'helpful'
+- Pass $(LINUXSVGALIB) to `libopt` so that 'libvga.so' is turned into '-lvga'
 
 --- lib/Makefile
 +++ lib/Makefile
@@ -58,3 +59,14 @@
 +        if (shut_the_hell_up == FALSE)
          fprintf(stderr, "libopt results: '%s'\n", outputLine);
          retval = 0;
+--- other/Makefile
++++ other/Makefile
+@@ -53,7 +53,7 @@
+ 
+ ppmsvgalib: %: %.o $(NETPBMLIB) $(LIBOPT)
+ 	$(LD) $(LDFLAGS) -o $@ $< \
+-	  `$(LIBOPT) $(NETPBMLIB)` $(LINUXSVGALIB) $(MATHLIB) $(LDLIBS) \
++	  `$(LIBOPT) $(NETPBMLIB) $(LINUXSVGALIB)` $(MATHLIB) $(LDLIBS) \
+ 	  $(LADD) 
+ 
+ install.bin: install.bin.local
