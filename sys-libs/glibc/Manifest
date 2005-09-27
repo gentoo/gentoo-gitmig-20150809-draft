@@ -6,7 +6,7 @@ MD5 53ca9d018c1156e40ae6b4aecfafc7c1 glibc-2.3.4.20041102-r1.ebuild 34314
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 3eda9d663fe1a353baea5a53df6d6bbb glibc-2.3.5.ebuild 40235
 MD5 d4685f67b36e4a0c1fc0db8516523d2e glibc-2.3.4.20040808-r1.ebuild 27749
-MD5 fd27362b55ca22db1e96f02663e88c4e glibc-2.3.5-r1.ebuild 40315
+MD5 64ffd648b10ed51f5f7615cb5650e7c8 glibc-2.3.5-r1.ebuild 40348
 MD5 a789e9155b746cc1c16da9a7604a0fb2 glibc-2.3.4.20040619-r2.ebuild 21400
 MD5 b93ff1f1ad8baa0a062abb18f22d63f9 glibc-2.3.4.20041102-r2.ebuild 41373
 MD5 73fc10b9878bccc90533b031bbfb7996 glibc-2.3.5.20050722.ebuild 40400
@@ -34,7 +34,7 @@ MD5 2a03ed91154589a9473bac46eacff1e9 files/digest-glibc-2.3.4.20041102-r2 387
 MD5 75b85b24e4ded1b0e8a0a762d5805818 files/digest-glibc-2.3.4.20041102-r1 383
 MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
 MD5 13701e6cc0de584680502c0cd958f2cf files/glibc-sec-hotfix-20040804.patch 4319
-MD5 ef51d76e0888ca6362974eb4a1806ca1 files/digest-glibc-2.3.5-r1 516
+MD5 4d652835c9fb80faefa4edaec68c5427 files/digest-glibc-2.3.5-r1 516
 MD5 184eddb92615fb991dce41b9edbfa690 files/glibc-manpages-2.3.2.tar.bz2 14700
 MD5 bbe355d94c5a36e11f543d12b70b5702 files/glibc-sec-hotfix-20040916.patch 3080
 MD5 d8830438ea871dbfd1acf7a3d0299159 files/test-__thread.c 53
@@ -135,7 +135,7 @@ MD5 ae9425cd4199cccd69c6d22633583dc1 files/2.3.3/ssp.c 4041
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOHK1gIKl8Uu19MoRAt9AAJ9WsiQQpPqHfgYHwv+aBlUSkgIPoACfWD9s
-IiNWTq/nW8GnLhYJZXxruqc=
-=fzFo
+iD8DBQFDOdfGgIKl8Uu19MoRAqhuAJ9jsFv9aIn1XWpN4tNcebzuL8zQWACaAwxv
++vIOar8OX4xRxPGFHVGFQt4=
+=IG7S
 -----END PGP SIGNATURE-----
