@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.2 2005/09/27 10:03:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.3 2005/09/27 12:05:32 seemant Exp $
+
+  27 Sep 2005; Seemant Kulleen <seemant@gentoo.org> urt-3.1b.ebuild:
+  change the rm to rm -f in src_unpack, as some terminals leave you with a
+  question about removing write-protected files
 
   27 Sep 2005; Andrej Kacian <ticho@gentoo.org> urt-3.1b.ebuild:
   Keyworded ~x86. Bug #107346.

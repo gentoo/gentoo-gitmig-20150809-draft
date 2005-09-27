@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c5d94208123d3068ac08d850056bdf91 urt-3.1b.ebuild 1519
-MD5 62e16e79ce5a818a2d00c9e024f5ee25 ChangeLog 417
+MD5 08d1a7b52b3123a8a22f7bb4264ce9d8 ChangeLog 612
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+MD5 3f1cc4492788d4e76fd134b25a6eb6bb urt-3.1b.ebuild 1546
 MD5 6f003bc3da29163d55742e87559a3a87 files/digest-urt-3.1b 60
 MD5 5cf67043e6b90e68277ec2c02066556f files/gentoo-config 670
-MD5 eb209f87460fb61c12f96550740045e8 files/urt-3.1b-tempfile.patch 593
 MD5 3f2cd2217e501f325bdc547781337c5c files/urt-3.1b-compile-updates.patch 3397
 MD5 17ad983b2b258ee3e633108e342276c1 files/urt-3.1b-rle-fixes.patch 5072
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDORj5QlM6RnzZP+IRAiCOAKDEFhqRA+fehKlxjvHIwIoc1tdF5wCgomDj
-zwnNO84Ro2Yb5zBOOXzGR3E=
-=hLGk
------END PGP SIGNATURE-----
+MD5 eb209f87460fb61c12f96550740045e8 files/urt-3.1b-tempfile.patch 593

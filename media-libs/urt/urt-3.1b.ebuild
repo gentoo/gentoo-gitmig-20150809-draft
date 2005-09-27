@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b.ebuild,v 1.2 2005/09/27 10:03:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b.ebuild,v 1.3 2005/09/27 12:05:32 seemant Exp $
 
 inherit eutils
 
@@ -25,9 +25,9 @@ urt_config() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	rm bin/README
+	unpack ${A} ; cd "${S}"
+	chmod +w bin/README
+	rm -f bin/README
 
 	epatch "${FILESDIR}"/${P}-rle-fixes.patch
 	epatch "${FILESDIR}"/${P}-compile-updates.patch
