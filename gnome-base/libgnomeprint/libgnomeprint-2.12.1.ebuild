@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.12.0.ebuild,v 1.1 2005/09/14 02:59:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.12.1.ebuild,v 1.1 2005/09/27 05:19:25 leonardop Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cups doc static"
+IUSE="cups doc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=media-libs/libart_lgpl-2.3.7
@@ -34,10 +34,10 @@ DEPEND="${RDEPEND}
 		~app-text/docbook-xml-dtd-4.1.2
 		>=dev-util/gtk-doc-0.9 )"
 
-DOCS="AUTHORS ChangeLog* NEWS README"
+DOCS="AUTHORS BUGS ChangeLog* NEWS README"
 USE_DESTDIR="1"
 
 
 pkg_setup() {
-	G2CONF="$(use_with cups) $(use_enable static)"
+	G2CONF="$(use_with cups)"
 }
