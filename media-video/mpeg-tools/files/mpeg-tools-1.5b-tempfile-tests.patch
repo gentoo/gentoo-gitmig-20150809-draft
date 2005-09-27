@@ -31,12 +31,12 @@ Also rewrite the diffscript in sh since csh isnt always available
 --- mepg_encode/tst/diffscript.sh
 +++ mepg_encode/tst/diffscript.sh
 @@ -0,0 +1,16 @@
-+diff $1 $2 > ./tst/foobar
-+egrep Blocks ./tst/foobar > ./tst/blockbar
++diff $1 $2 > ./foobar
++egrep Blocks ./foobar > ./blockbar
 +
-+if test ! -s ./tst/blockbar ; then
-+	diff $3 $4 > ./tst/foobar.mpg
-+	if test -s ./tst/foobar.mpg ; then
++if test ! -s ./blockbar ; then
++	diff $3 $4 > ./foobar.mpg
++	if test -s ./foobar.mpg ; then
 +		echo "FAILURE! (different output -- probably endian bug).  Please send bug report."
 +		exit 1
 +	else
@@ -50,7 +50,8 @@ Also rewrite the diffscript in sh since csh isnt always available
 --- mpeg_encode/tst/test_all
 +++ mpeg_encode/tst/test_all
 @@ -1,19 +1,19 @@
- #!/bin/csh -f
+-#!/bin/csh -f
++#!/bin/sh
  cd ..
 -echo "First we encode three mpegs... (note requires 5MB on /tmp)"
 -rm -f /tmp/ts{,2,d}.{mpg,stat}
@@ -67,15 +68,15 @@ Also rewrite the diffscript in sh since csh isnt always available
  
  echo "Test one - tst/ts.param"
 -csh diffscript /tmp/ts.stat ts.stat /tmp/ts.mpg ts.mpg
-+sh diffscript.sh ./tst/ts.stat ts.stat ./tst/ts.mpg ts.mpg
++sh diffscript.sh ./ts.stat.new ts.stat ./ts.mpg.new ts.mpg
  
  echo "Test two - tst/ts2.param (different pattern)"
 -csh diffscript /tmp/ts2.stat ts2.stat /tmp/ts2.mpg ts2.mpg
-+sh diffscript.sh ./tst/ts2.stat ts2.stat ./tst/ts2.mpg ts2.mpg
++sh diffscript.sh ./ts2.stat.new ts2.stat ./ts2.mpg.new ts2.mpg
  
  echo "Test three - tst/tsd.param (uses decoded frames)"
 -csh diffscript /tmp/tsd.stat tsd.stat /tmp/tsd.mpg tsd.mpg
-+sh diffscript.sh ./tst/tsd.stat tsd.stat ./tst/tsd.mpg tsd.mpg
++sh diffscript.sh ./tsd.stat.new tsd.stat ./tsd.mpg.new tsd.mpg
  
 --- mpeg_encode/tst/diffscript
 +++ mpeg_encode/tst/diffscript

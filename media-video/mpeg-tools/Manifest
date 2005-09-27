@@ -13,7 +13,7 @@ MD5 44b911d91abb56f60d64cc8b07074b11 files/mpeg-tools-1.5b-build.patch 1414
 MD5 bf748902484902bcc7eb4e616a8d04dd files/digest-mpeg-tools-1.5b-r2 73
 MD5 bf748902484902bcc7eb4e616a8d04dd files/digest-mpeg-tools-1.5b-r1 73
 MD5 ac3d41c507a2fc1b1cfcf8ca91e1e983 files/mpeg-tools-1.5b-tempfile-mpeg-encode.patch 2538
-MD5 b6d276af6f148879e1569d6ea5d2077a files/mpeg-tools-1.5b-tempfile-tests.patch 5269
+MD5 f7cc407da44caa2318d26dab75f3459a files/mpeg-tools-1.5b-tempfile-tests.patch 5256
 MD5 bf748902484902bcc7eb4e616a8d04dd files/digest-mpeg-tools-1.5b 73
 MD5 ee6ac6a97ef340aecff643f24bc2f02c files/1.5b/mpeg-tools-1.5b-gentoo.patch 560
 MD5 1c465916c02ad5e984eefda8b236fbc9 files/1.5b/libpnmrw.c 37348
@@ -22,7 +22,7 @@ MD5 1f0b9c5d21516dc0b597bdd8563a7e39 files/1.5b/libpnmrw.h 6791
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOJTJgIKl8Uu19MoRAhDUAJ9gsQREkmJjxvwJcDmtAYyFupS8mQCdFpZ6
-JuurYPYoLi4GUEKbIl1OsmM=
-=Q8PH
+iD8DBQFDOJcfgIKl8Uu19MoRAlCEAJ4wKlxn7yYRcTe5vVye6Zeb2iJ/DgCfS7C9
+NRF1bub974fy/QNwe72gWU4=
+=Op/+
 -----END PGP SIGNATURE-----
