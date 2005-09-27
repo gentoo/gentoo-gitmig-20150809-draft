@@ -1,6 +1,18 @@
-MD5 f141eb4a357f24eb8fccd93c16888c76 libkipi-0.1.1.ebuild 522
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 8203f7051be85015d7882ec2c414c3ed ChangeLog 1070
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 81cfcaa03c2a948313d9ae194cad5f3a libkipi-0.1.2.ebuild 521
 MD5 cd8165cd8f60f4a6bba8efa8e1205831 libkipi-0.1.ebuild 506
-MD5 bcae8a7b274f837cab4eafd4c65e91e1 files/digest-libkipi-0.1.1 66
+MD5 f141eb4a357f24eb8fccd93c16888c76 libkipi-0.1.1.ebuild 522
+MD5 4e56f515e0e18713a9bb5f87790a9ac7 ChangeLog 1201
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ad6aaaabfd77646ea1b2ab2f9972e230 files/digest-libkipi-0.1 64
+MD5 bcae8a7b274f837cab4eafd4c65e91e1 files/digest-libkipi-0.1.1 66
+MD5 bbe932f305949265ddf6197fb66d5e9d files/digest-libkipi-0.1.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDOYiyntT9W3vfTuoRAvdKAJ9ky4407UYaCa1dHk2az4nW8LKu4gCdEesG
+L1P2VawJ6GRIHA89fdA1rI4=
+=CWiG
+-----END PGP SIGNATURE-----

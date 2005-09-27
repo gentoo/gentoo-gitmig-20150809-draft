@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkipi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.7 2005/08/26 22:59:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.8 2005/09/27 17:59:49 cryos Exp $
+
+*libkipi-0.1.2 (27 Sep 2005)
+
+  27 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> +libkipi-0.1.2.ebuild:
+  Version bump, bug 107195.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> libkipi-0.1.1.ebuild:
   add ~alpha ~ia64
