@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.151 2005/09/23 13:38:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.152 2005/09/27 11:53:00 killerfox Exp $
+
+  27 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org> ruby-1.8.3.ebuild:
+  Stable on hppa. bug #106996
 
   23 Sep 2005; Sven Wegener <swegener@gentoo.org> ruby-1.8.3.ebuild:
   ${D}${ROOT} is bad. dosym doesn't use the cwd for symlinking, so we don't need
