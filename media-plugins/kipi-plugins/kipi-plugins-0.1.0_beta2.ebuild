@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_beta2.ebuild,v 1.3 2005/04/07 15:46:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_beta2.ebuild,v 1.4 2005/09/27 22:20:03 carlo Exp $
 
 inherit kde
 
@@ -26,6 +26,10 @@ DEPEND="media-libs/libkexif
 RDEPEND="${DEPEND}
 	media-gfx/dcraw"
 need-kde 3.1
+
+pkg_setup(){
+	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
+}
 
 src_compile() {
 	myconf="$(use_with opengl)"
