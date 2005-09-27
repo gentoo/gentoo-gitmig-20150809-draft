@@ -1,38 +1,44 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.4.ebuild,v 1.9 2005/08/10 12:29:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.2.ebuild,v 1.1 2005/09/27 01:45:19 leonardop Exp $
 
-inherit libtool eutils flag-o-matic
+inherit gnome.org libtool eutils flag-o-matic debug
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sparc x86"
-IUSE="doc hardened static"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+IUSE="debug doc hardened"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? (
+		>=dev-util/gtk-doc-1.4
+		~app-text/docbook-xml-dtd-4.1.2 )"
 
 RDEPEND="virtual/libc"
 
-src_unpack() {
 
-	unpack ${A}
-	cd ${S}
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
 	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
 
 	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
 		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
 	fi
-
 }
 
 src_compile() {
+	local myconf="--with-threads=posix \
+		$(use_enable doc gtk-doc)"
+
+	# --disable-debug is not recommended for production use
+	use debug && myconf="${myconf} --enable-debug=yes"
 
 	epunt_cxx
 
@@ -41,20 +47,13 @@ src_compile() {
 		append-ldflags "-L/usr/lib -lpthread"
 	fi
 
-	# enable static for PAM
-	econf \
-		--with-threads=posix \
-		`use_enable static` \
-		`use_enable doc gtk-doc` \
-		|| die
-
-	emake || die
-
+	econf $myconf || die "./configure failed"
+	emake || die "Compilation failed"
 }
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# Do not install charset.alias for ppc-macos since it already exists.
 	if use ppc-macos ; then
@@ -67,6 +66,6 @@ src_install() {
 	dodir /etc/env.d
 	echo "G_BROKEN_FILENAMES=1" > ${D}/etc/env.d/50glib2
 
-	dodoc AUTHORS ChangeLog* README* INSTALL NEWS*
+	dodoc AUTHORS ChangeLog* NEWS* README
 
 }
