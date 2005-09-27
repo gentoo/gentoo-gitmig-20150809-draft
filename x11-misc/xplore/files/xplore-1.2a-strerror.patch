@@ -1,0 +1,20 @@
+diff -urp xplore-1.2a/error.c xplore-1.2a.strerror/error.c
+--- xplore-1.2a/error.c	2002-05-01 09:59:23 -0500
++++ xplore-1.2a.strerror/error.c	2005-09-06 06:14:53 -0500
+@@ -65,14 +65,12 @@ void xplerr2(int err, String s1, String 
+     pxplerr(msg);
+ }
+ 
+-extern const char *const sys_errlist[];
+-
+ static void psyserr(String s)
+ {
+   if (errno) {
+     String msg = (String) alloca(strlen(errmsg[ERR_SYS])+strlen(s)+
+-				 strlen(sys_errlist[errno]));
+-    sprintf(msg, errmsg[ERR_SYS], s, sys_errlist[errno]);
++				 strlen(strerror(errno)));
++    sprintf(msg, errmsg[ERR_SYS], s, strerror(errno));
+     pxplerr(msg);
+   } else
+     pxplerr(s);
