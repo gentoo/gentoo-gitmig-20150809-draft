@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.1 2005/07/06 10:50:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.1.4-r1.ebuild,v 1.2 2005/09/27 19:47:50 kloeri Exp $
 
 inherit python eutils apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/httpd/modpython/${P}.tgz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND="dev-lang/python"
 
