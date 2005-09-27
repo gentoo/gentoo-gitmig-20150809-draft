@@ -1,25 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
-MD5 d499b550f4e6f2b1546fc73bc770cb4a ChangeLog 2293
-MD5 cdb8f489725c41d3a4b0e89db8f508a9 baselayout-vserver-1.11.12-r4.ebuild 12238
+MD5 5a22687957c3f2cf3ae5d6e217b792cf ChangeLog 2658
 MD5 62648662d2305c044a9c92f90c624098 baselayout-vserver-1.11.13.ebuild 12918
-MD5 0ff36c7fa19f3cdbf576919fad131783 baselayout-vserver-1.12.0_pre8-r1.ebuild 12211
 MD5 61e88d37b9d7a2ab226edbbfe3b94180 baselayout-vserver-1.12.0_pre8-r2.ebuild 12599
-MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
-MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
-MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
-MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
+MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
+MD5 146c72b29984722318f811b008471e6c baselayout-vserver-1.11.13-r1.ebuild 13257
 MD5 cd1ba3815d5592a3c65f185cc7585107 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
-MD5 53ec83d5ccc83d7f3dc430db626cb464 files/digest-baselayout-vserver-1.11.12-r4 78
+MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
+MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
+MD5 51a97031d54d767b45fb247d60727e9d files/fakelog.initd 449
+MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
+MD5 d7ecadaa032eb2c365b837c146b29f11 files/baselayout-vserver-1.11.13-init-timeout-fix.patch 471
+MD5 a551ddae4bfb1b2bd7cbc16c57f481d3 files/digest-baselayout-vserver-1.11.13-r1 78
 MD5 a551ddae4bfb1b2bd7cbc16c57f481d3 files/digest-baselayout-vserver-1.11.13 78
-MD5 d1b600f26f783320972a6692720df0d3 files/digest-baselayout-vserver-1.12.0_pre8-r1 83
 MD5 d1b600f26f783320972a6692720df0d3 files/digest-baselayout-vserver-1.12.0_pre8-r2 83
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMoPGmPFBzbX68WERAkRYAJ0bVB2boSwQN+EqJ1wXm4HaSDsSiwCeN1mB
-xVIrkvArzS1Jtse9PU9ot2o=
-=WgbJ
+iD8DBQFDOUtcmPFBzbX68WERAozvAKCWp+djwTyib4ZkWM+heISPo0I1iACgmLdU
+/w5bt4a75JIitSYTpXV/qdE=
+=2maY
 -----END PGP SIGNATURE-----

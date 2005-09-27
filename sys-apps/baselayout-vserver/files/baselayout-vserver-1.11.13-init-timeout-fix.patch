@@ -1,0 +1,10 @@
+diff -Nrup rc-scripts-1.6.13-vserver.orig/etc/inittab rc-scripts-1.6.13-vserver/etc/inittab
+--- rc-scripts-1.6.13-vserver.orig/etc/inittab	2005-07-17 11:58:06.000000000 +0200
++++ rc-scripts-1.6.13-vserver/etc/inittab	2005-09-27 07:35:39.000000000 +0200
+@@ -21,3 +21,6 @@ l4:4:wait:/sbin/rc default
+ l5:5:wait:/sbin/rc default
+ l6:6:wait:/sbin/rc reboot
+ #z6:6:respawn:/sbin/sulogin
++
++# What to do at the "Three Finger Salute".
++ca:12345:ctrlaltdel:/sbin/shutdown -r now

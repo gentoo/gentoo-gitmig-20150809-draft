@@ -1,21 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.12-r4.ebuild,v 1.7 2005/08/31 08:50:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.11.13-r1.ebuild,v 1.1 2005/09/27 13:36:23 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
-SV=1.6.12		# rc-scripts version
+SV=1.6.13		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}-vserver"
 DESCRIPTION="Filesystem baselayout and init scripts for Linux-VServer"
-HOMEPAGE="http://dev.gentoo.org/~hollow/vserver/"
-SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}-vserver.tar.bz2
-		http://dev.gentoo.org/~hollow/vserver/baselayout/rc-scripts-${SV}${SVREV}-vserver.tar.bz2"
+HOMEPAGE="http://dev.gentoo.org/~hollow/vserver"
+SRC_URI="${HOMEPAGE}/baselayout/rc-scripts-${SV}${SVREV}-vserver.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="bootstrap build fakelog static"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
@@ -32,10 +31,17 @@ RDEPEND=">=sys-apps/sysvinit-2.84
 DEPEND="virtual/os-headers"
 PROVIDE="virtual/baselayout"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch ${FILESDIR}/${P}-init-timeout-fix.patch
+}
+
 src_compile() {
 	use static && append-ldflags -static
 
-	make -C ${S}/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
+	make -C "${S}"/src CC="$(tc-getCC)" LD="$(tc-getCC) ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die
 }
 
@@ -70,11 +76,18 @@ EOF
 # aren't listed in CONTENTS, unfortunately.
 unkdir() {
 	einfo "Running unkdir to workaround bug 9849"
-	find ${D} -depth -type d -exec rmdir {} \; 2>/dev/null
+	find "${D}" -depth -type d -exec rmdir {} \; 2>/dev/null
 	if [[ $? == 127 ]]; then
 		ewarn "Problem running unkdir: find command not found"
 	fi
 }
+
+# Same as kdir above, but for symlinks #103618
+ksym() {
+	echo "ln -s '$1' '${ROOT}/$2' &> /dev/null || ewarn '  unable to symlink $2 to $1' " \
+		>> "${D}"/usr/share/baselayout/mklinks.sh
+}
+
 
 src_install() {
 	local dir libdirs libdirs_env rcscripts_dir
@@ -173,8 +186,8 @@ src_install() {
 	fi
 
 	# FHS compatibility symlinks stuff
-	dosym /var/tmp /usr/tmp
-	dosym share/man /usr/local/man
+	ksym /var/tmp /usr/tmp
+	ksym share/man /usr/local/man
 
 	#
 	# Setup files in /etc
@@ -188,7 +201,7 @@ src_install() {
 	# attempting to merge files, (3) accidentally packaging up personal files
 	# with quickpkg
 	fperms 0600 /etc/shadow
-	mv ${D}/etc/{passwd,shadow,group,hosts,issue.devfix} ${D}/usr/share/baselayout
+	mv "${D}"/etc/{passwd,shadow,group,hosts,issue.devfix} "${D}"/usr/share/baselayout
 
 	insopts -m0755
 	insinto /etc/init.d
@@ -213,7 +226,7 @@ src_install() {
 		libdirs_env="${libdirs_env}:/lib32:/usr/lib32:/usr/local/lib32"
 	fi
 
-	# List all the multilib libdirs in /etc/env/04multilib (only if they're 
+	# List all the multilib libdirs in /etc/env/04multilib (only if they're
 	# actually different from the normal
 	if has_multilib_profile || [[ $(get_libdir) != "lib" || -n ${CONF_MULTILIBDIR} ]]; then
 		echo "LDPATH=\"${libdirs_env}\"" > ${D}/etc/env.d/04multilib
@@ -234,20 +247,20 @@ src_install() {
 	# Setup files related to /dev
 	#
 	into /
-	dosbin ${S}/sbin/MAKEDEV
+	dosbin "${S}"/sbin/MAKEDEV
 	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
 	dosym ../sbin/MAKEDEV /dev/MAKEDEV
 
 	#
 	# Setup files in /bin
 	#
-	cd ${S}/bin
+	cd "${S}"/bin
 	dobin rc-status
 
 	#
 	# Setup files in /sbin
 	#
-	cd ${S}/sbin
+	cd "${S}"/sbin
 	into /
 	dosbin rc rc-update
 	# These moved from /etc/init.d/ to /sbin to help newb systems
@@ -265,7 +278,7 @@ src_install() {
 	# These are support files for other things in baselayout that needn't be
 	# under CONFIG_PROTECTed /etc
 	#
-	cd ${S}/sbin
+	cd "${S}"/sbin
 	exeinto ${rcscripts_dir}/sh
 	doexe rc-services.sh rc-daemon.sh rc-help.sh
 
@@ -276,22 +289,22 @@ src_install() {
 	if ! use build; then
 		# This is for new depscan.sh and env-update.sh
 		# written in awk
-		cd ${S}/sbin
+		cd "${S}"/sbin
 		into /
 		dosbin depscan.sh
 		dosbin env-update.sh
 		insinto ${rcscripts_dir}/awk
-		doins ${S}/src/awk/*.awk
+		doins "${S}"/src/awk/*.awk
 	fi
 
 	#
 	# Install baselayout documentation
 	#
 	if ! use build ; then
-		doman ${S}/man/*.*
+		doman "${S}"/man/*.*
 		docinto /
 		dodoc ${FILESDIR}/copyright
-		dodoc ${S}/ChangeLog
+		dodoc "${S}"/ChangeLog
 	fi
 
 	#
@@ -299,6 +312,25 @@ src_install() {
 	#
 	cd ${S}/src
 	make DESTDIR="${D}" install || die
+
+	# Normal baselayout generate devices in pkg_postinst(), but we keep
+	# it here because
+	# (1) devices would show up in CONTENTS
+	# (2) we just generate the devices if either build or bootstrap is useflags
+	# (3) it is not likely that anyone uses devfsd inside a vserver (nor udev)
+	# The most common cases are that people are either updating
+	# baselayout or installing from scratch.  In the installation case,
+	# it's no different to have here instead of pkg_postinst().  Nor is
+	# it in the update case, as neither build nor bootstrap will be in
+	# the active use flags.
+
+	if use build || use bootstrap; then
+		cd ${D}/dev || die
+
+		ebegin "Making and populating /dev with safe device nodes..."
+		./MAKEDEV generic-vserver
+		eend $? || die
+	fi
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir
@@ -311,7 +343,8 @@ pkg_postinst() {
 	einfo "Creating directories and .keep files."
 	einfo "Some of these might fail if they're read-only mounted"
 	einfo "filesystems, for example /dev or /proc.  That's okay!"
-	source ${ROOT}/usr/share/baselayout/mkdirs.sh
+	source "${ROOT}"/usr/share/baselayout/mkdirs.sh
+	source "${ROOT}"/usr/share/baselayout/mklinks.sh
 
 	# Set up default runlevel symlinks
 	# This used to be done in src_install but required knowledge of ${ROOT},
