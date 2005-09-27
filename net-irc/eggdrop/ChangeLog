@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.47 2005/08/28 12:44:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.48 2005/09/27 22:51:24 swegener Exp $
+
+  27 Sep 2005; Sven Wegener <swegener@gentoo.org> eggdrop-1.6.17-r2.ebuild:
+  Use an updated patchset that fixes bug #107413.
 
   28 Aug 2005; Simon Stelling <blubb@gentoo.org> eggdrop-1.6.17-r2.ebuild:
   stable on amd64
