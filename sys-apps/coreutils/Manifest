@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8577db21fb57249bfb4b37b8ecea61eb coreutils-5.3.0-r1.ebuild 4186
+MD5 5eeb51e8963f00bb2eb53e3b1ffd1b42 coreutils-5.3.0-r1.ebuild 4186
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 fff1a8181bbfa0f4e7dca93103f6faf0 coreutils-5.2.1-r2.ebuild 4195
 MD5 5bdec1c20e3ce89222cbdd53f0859044 coreutils-5.2.1-r7.ebuild 4604
@@ -11,11 +11,11 @@ MD5 8c4e2e82c0b5e6fc4088d1bc496681b4 files/DIR_COLORS 3593
 MD5 77947b96aaadc6a33d53156b5b5e4630 files/digest-coreutils-5.2.1-r2 225
 MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149
 MD5 c82065025499ef6aec62f772aa8637cf files/digest-coreutils-5.2.1-r7 148
-MD5 dddc7ecaddfa6e4fd98cdc3919e18ba9 files/digest-coreutils-5.3.0-r1 148
+MD5 897ff60239ed7b2b12ab098b2516a7ac files/digest-coreutils-5.3.0-r1 148
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJh7qgIKl8Uu19MoRAgMUAJsFfXiaCCS9jckkduFV/DK1BTb2PQCdGBbh
-KnUzi70x6B26Ah1Vk+iSQkg=
-=ASd0
+iD8DBQFDOJ/hgIKl8Uu19MoRAq8pAJ9PyVjmtAFLlYxOImSsyebxtug9EwCeIX4B
+K92y01BmE68Upe3HmKiyPgU=
+=GbE7
 -----END PGP SIGNATURE-----
