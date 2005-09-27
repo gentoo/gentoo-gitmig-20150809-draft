@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.22 2005/09/26 22:20:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.23 2005/09/27 20:06:20 azarah Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -37,7 +37,7 @@ export USE_PTHREADS=1
 
 mozconfig_init() {
 	declare enable_optimize pango_version myext x
-	declare MOZ=$([[ ${PN} == mozilla ]] && echo true || echo false)
+	declare MOZ=$([[ ${PN} == mozilla || ${PN} == gecko-sdk ]] && echo true || echo false)
 	declare FF=$([[ ${PN} == *firefox ]] && echo true || echo false)
 	declare TB=$([[ ${PN} == *thunderbird ]] && echo true || echo false)
 	declare SB=$([[ ${PN} == *sunbird ]] && echo true || echo false)
@@ -50,7 +50,7 @@ mozconfig_init() {
 	####################################
 
 	case ${PN} in
-		mozilla)
+		mozilla|gecko-sdk)
 			# The other builds have an initial --enable-extensions in their
 			# .mozconfig.  The "default" set in configure applies to mozilla
 			# specifically.
@@ -230,15 +230,11 @@ mozconfig_init() {
 	if use moznoxft; then
 		mozconfig_annotate "disabling xft2 by request (+moznoxft)" --disable-xft
 	else
-		# We need Xft2.0 locally installed
 		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
-			# We also need pango-1.1, else Mozilla links to both
-			# Xft1.1 *and* Xft2.0, and segfault...
-			pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
-			if [[ ${pango_version//.} -gt 10 ]]; then
-				mozconfig_annotate "-moznoxft" --enable-xft
+			if [[ ${MOZ_PANGO} == "yes" ]]; then
+				mozconfig_annotate "-moznoxft" --enable-xft --enable-pango
 			else
-				mozconfig_annotate "bad pango version <1.1" --disable-xft
+				mozconfig_annotate "-moznoxft" --enable-xft
 			fi
 		else
 			mozconfig_annotate "no pkg-config xft" --disable-xft
