@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 74a2723b6f19ea4f80877c1f1691823e ltp-20041104.ebuild 1166
 MD5 f592f012ff1df95e9b2dcd743df2405b metadata.xml 402
-MD5 aa6785d698d947a65cf21966c136f156 ChangeLog 1206
+MD5 710c6791e8777eae127f24625fa97485 ChangeLog 1196
 MD5 22e4f09bf12f55f1e546a1ab4c7fafed ltp-20041203.ebuild 1184
 MD5 e2a7ff766a942e7a6a8e299cb74edacb files/runltp-path.patch 387
 MD5 e4bb569a7ad39bd83b66430469168d6b files/IDcheck-noninteractive.patch 729
@@ -14,7 +14,7 @@ MD5 1c87578ced34310bd048cc03c9ac45c4 files/ltp-20041203-ballista-paths.patch 620
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDNgPWmdTrptrqvGERAj4PAKCIuRDWEYE++4/xifq2rRrOaxunNwCfWc9n
-EDzPZ/6Hx+tgv2DILf3Grnk=
-=u0pP
+iD8DBQFDOv97mdTrptrqvGERAsuJAJ9E6rrv+XF2/uI3aTnzxBwF10nXxgCfZRXP
+jarErefsQHwHZpDMTZ0CVgQ=
+=p105
 -----END PGP SIGNATURE-----
