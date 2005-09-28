@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.3 2005/09/28 19:59:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.4 2005/09/28 23:19:10 ciaranm Exp $
 
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
@@ -70,9 +70,7 @@ if [[ -z "${VIM_SPELL_CODE}" ]] ; then
 	VIM_SPELL_CODE="${PN/vim-spell-/}"
 fi
 
-if [[ -z "${DESCRIPTION}" ]] ; then
-	DESCRIPTION="vim spell files: ${VIM_SPELL_LANGUAGE} (${VIM_SPELL_CODE})"
-fi
+DESCRIPTION="vim spell files: ${VIM_SPELL_LANGUAGE} (${VIM_SPELL_CODE})"
 
 if [[ -z "${HOMEPAGE}" ]] ; then
 	HOMEPAGE="http://www.vim.org/"
