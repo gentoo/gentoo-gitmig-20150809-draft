@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.3-r1.ebuild,v 1.1 2005/09/05 00:25:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.4.ebuild,v 1.1 2005/09/28 17:58:23 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug doc tiff jpeg static"
+IUSE="debug doc jpeg tiff"
 
 RDEPEND="|| ( (
 		x11-libs/libXrender
@@ -25,6 +25,7 @@ RDEPEND="|| ( (
 		x11-libs/libXrandr
 		x11-libs/libXfixes )
 		virtual/x11 )
+
 	>=dev-libs/glib-2.7.1
 	>=x11-libs/pango-1.9
 	>=dev-libs/atk-1.0.1
@@ -55,16 +56,12 @@ pkg_setup() {
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0}
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Patches from upstream CVS repository for GNOME bugs #310270,
-	# #314980 and #315135.
-	epatch ${FILESDIR}/${P}-misc_fixes.patch
 
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
@@ -94,9 +91,8 @@ src_compile() {
 	local myconf="$(use_enable doc gtk-doc) \
 		$(use_with jpeg libjpeg) \
 		$(use_with tiff libtiff) \
-		$(use_enable static) \
-		--with-libpng \
-		--with-gdktarget=x11 \
+		--with-libpng            \
+		--with-gdktarget=x11     \
 		--with-xinput"
 
 	# Passing --disable-debug is not recommended for production use
@@ -113,9 +109,6 @@ src_compile() {
 }
 
 src_install() {
-
-	dodir ${GTK2_CONFDIR}
-
 	make DESTDIR="${D}" install || die "Installation failed"
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
@@ -123,12 +116,9 @@ src_install() {
 	echo "GDK_USE_XFT=1" > ${D}/etc/env.d/50gtk2
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
-
 }
 
 pkg_postinst() {
-
-	gtk-query-immodules-2.0  > /${GTK2_CONFDIR}/gtk.immodules
-	gdk-pixbuf-query-loaders > /${GTK2_CONFDIR}/gdk-pixbuf.loaders
-
+	gtk-query-immodules-2.0  > ${GTK2_CONFDIR}/gtk.immodules
+	gdk-pixbuf-query-loaders > ${GTK2_CONFDIR}/gdk-pixbuf.loaders
 }
