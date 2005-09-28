@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.60 2005/09/24 21:00:06 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.61 2005/09/28 19:00:16 latexer Exp $
+
+  28 Sep 2005; Peter Johanson <latexer@gentoo.org> -mono-1.1.7-r1.ebuild,
+  -mono-1.1.8.1.ebuild, -mono-1.1.8.2.ebuild, mono-1.1.8.3.ebuild,
+  -mono-1.1.9.ebuild, mono-1.1.9.1.ebuild:
+  Add missing sys-devel/bc dep from bug #107519. Remove some older 1.1.x ebuilds.
 
   24 Sep 2005; Peter Johanson <latexer@gentoo.org>
   +files/mono-1.1.9.1-io-layer-fix.diff, mono-1.1.9.1.ebuild:
