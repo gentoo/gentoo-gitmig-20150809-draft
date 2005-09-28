@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-de
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.1 2005/09/28 20:29:25 citizen428 Exp $
+
+*vim-spell-de-20050925 (28 Sep 2005)
+
+  28 Sep 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +vim-spell-de-20050925.ebuild:
+  New package.
+
