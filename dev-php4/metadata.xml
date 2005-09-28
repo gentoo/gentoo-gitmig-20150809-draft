@@ -5,4 +5,8 @@
 		The dev-php4 category contains libraries, utilities and PECL
 		packages only for version 4 of the PHP programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-php enthält Bibliotheken, Werkzeuge und
+		PECL-Pakete für Version 4 der Programmiersprache PHP.
+	</longdescription>
 </catmetadata>
