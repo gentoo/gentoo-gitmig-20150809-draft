@@ -49,3 +49,7 @@ app-vim/taglist
 # Nonetheless, cpio is part of System, and we don't want it pulled in
 # for users of this profile.
 app-arch/cpio
+
+# libidn needs java-config.  This one is not yet ported, so as long as
+# thre is no solution for that it is masked
+net-dns/libidn

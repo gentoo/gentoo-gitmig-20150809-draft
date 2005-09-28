@@ -24,3 +24,6 @@ wxwindows
 
 # see GCC man-page (-static): "This option will not work on Mac OS X..."
 static
+
+# pulls libidn, which has problems with java-config
+idn
