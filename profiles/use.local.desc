@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1474 2005/09/27 16:07:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1475 2005/09/28 09:15:38 cryos Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -940,10 +940,10 @@ sci-chemistry/ghemical:mpqc - Use the MPQC package for quantum-mechanical calcul
 sci-chemistry/libghemical:mopac7 - Use the MOPAC7 package for semi-empirical calculations
 sci-chemistry/libghemical:mpqc - Use the MPQC package for quantum-mechanical calculations
 sci-chemistry/libghemical:openbabel - Use the OpenBabel package for file conversions
-sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
-sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
-sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT;
-sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient;
+sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
+sci-geosciences/gmt:gmthigh - Adds high resolution bathymetry database
+sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
+sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
 sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-libs/acml:sse2 - Enables sse2 support
 sci-libs/fftw:sse2 - Enables sse2 support
