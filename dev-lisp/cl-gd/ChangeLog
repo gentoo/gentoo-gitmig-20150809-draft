@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-gd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.17 2005/05/24 18:48:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.18 2005/09/28 16:03:26 mkennedy Exp $
+
+*cl-gd-0.5.0 (28 Sep 2005)
+
+  28 Sep 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-gd-0.5.0.ebuild:
+  New upstream version; New dependency on dev-lisp/cl-cffi for CLISP support.
 
   24 May 2005; <mkennedy@gentoo.org> cl-gd-0.4.6.ebuild, cl-gd-0.4.7.ebuild:
   Keywording ~sparc
