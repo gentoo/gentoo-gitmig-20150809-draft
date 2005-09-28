@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5_beta1.ebuild,v 1.1 2005/09/21 17:30:07 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5_beta1.ebuild,v 1.2 2005/09/28 12:45:58 greg_g Exp $
 
 inherit kde
 
@@ -42,6 +42,11 @@ src_unpack() {
 	# work around bug 96143
 	if [ -e ${WORKDIR}/kde-i18n-pt_BR-3.4.91 ] ; then
 		sed -i -e "s:kommander::" ${WORKDIR}/kde-i18n-pt_BR-3.4.91/docs/kdewebdev/Makefile.in
+	fi
+
+	# Fix compilation error (kde bug 113283). Applied in rc1.
+	if [ -e ${WORKDIR}/kde-i18n-de-3.4.91 ] ; then
+		epatch "${FILESDIR}/kde-i18n-de-3.4.91-compile.patch"
 	fi
 }
 

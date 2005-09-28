@@ -1,0 +1,93 @@
+diff -Nur kde-i18n-de-3.4.91.orig/docs/kdebase/faq/desktop.docbook kde-i18n-de-3.4.91/docs/kdebase/faq/desktop.docbook
+--- kde-i18n-de-3.4.91.orig/docs/kdebase/faq/desktop.docbook	2005-09-10 13:28:10.000000000 +0200
++++ kde-i18n-de-3.4.91/docs/kdebase/faq/desktop.docbook	2005-09-28 12:16:53.000000000 +0200
+@@ -43,21 +43,23 @@
+ <answer>
+ 
+ <para
+->Stellen Sie zunächst sicher, dass Sie Ausführungs-Rechte für die Programme <command
++>Stellen Sie zunächst sicher, dass Sie Ausführungsrechte für die Programme <command
+ >mount</command
+ > und <command
+ >umount</command
+ > besitzen, um auf die relevanten Gerät zugreifen zu können. </para>
+ <para
+->Then you can add any device via &RMB; on the desktop and then choosing <menuchoice
++>Nun können Sie jedes Geräte über einen Klick mit der <mousebutton
++>rechten</mousebutton
++> Maustaste auf der Arbeitsfläche, Auswahl von <menuchoice
+ ><guimenu
+->Create New</guimenu
++>Neu erstellen</guimenu
+ ><guimenuitem
+->Link to Device</guimenuitem
++>Verknüpfung zu Gerät</guimenuitem
+ ></menuchoice
+-> and then selecting the device of the type you wish to control from the desktop. Fill in the settings for the device in the dialog that appears and click <guilabel
++> sowie Auswahl des gewünschtes Gerätetyps auf der Arbeitsfläche anlegen. Füllen Sie die Einstellungen für das Gerät in dem erscheinenden Dialog aus und drücken Sie <guilabel
+ >OK</guilabel
+->. You can use the resulting desktop icon to mount/unmount the device from the desktop. </para>
++>. Sie können das erstellte Arbeitsflächensymbol dazu benutzen das Gerät direkt von der Arbeitsfläche aus ein- bzw. auszuhängen. </para>
+ 
+ </answer>
+ </qandaentry>
+@@ -93,7 +95,7 @@
+ </question>
+ <answer>
+ <para
+->Mouse wheel support comes with &Qt; 2.0 and above, so &kde; based on that will automatically support the use of the mouse scroll wheel if your system is configured correctly. Check your &X-Server; settings support the use of a scrollwheel if it is not working.</para>
++>Unterstützung für Mäuse mit Rollrad ist in &Qt; 2.0 und höher enthalten, also unterstützt &kde;, das darauf basiert, die Nutzung des Rollrades automatisch, wenn Ihr System richtig eingerichtet ist. Überprüfen Sie die Einstellungen des &X-Server;s, wenn das Mausrad nicht funktioniert.</para>
+ </answer>
+ </qandaentry>
+ 
+diff -Nur kde-i18n-de-3.4.91.orig/docs/kdemultimedia/artsbuilder/detail.docbook kde-i18n-de-3.4.91/docs/kdemultimedia/artsbuilder/detail.docbook
+--- kde-i18n-de-3.4.91.orig/docs/kdemultimedia/artsbuilder/detail.docbook	2005-09-10 11:29:21.000000000 +0200
++++ kde-i18n-de-3.4.91/docs/kdemultimedia/artsbuilder/detail.docbook	2005-09-28 12:17:12.000000000 +0200
+@@ -41,7 +41,7 @@
+ > Eine Struktur besteht aus mehreren verbundenen Modulen, bei denen einige Kanäle feste Parameter haben, andere untereinander verbunden sind während einige Kanäle vielleicht gar nicht verbunden sind. </para>
+ 
+ <para
+-> &artsbuilder; dient zur Beschreibung dieser Strukturen. Sie beschreiben, welche Module in welcher Weise verbunden werden sollen. Wenn Sie damit fertig sind, können Sie die Beschreibung speichern oder &arts; zu der Erzeugung der Struktur veranlassen (Struktur ausführen). </para>
++> &arts-builder; dient zur Beschreibung dieser Strukturen. Sie beschreiben, welche Module in welcher Weise verbunden werden sollen. Wenn Sie damit fertig sind, können Sie die Beschreibung speichern oder &arts; zu der Erzeugung der Struktur veranlassen (Struktur ausführen). </para>
+ 
+ <para
+ > Als Ergebnis hören Sie wahrscheinlich einige Klänge, falls nichts schiefgegangen ist. </para>
+@@ -412,7 +412,7 @@
+ > ... gleiche Busnamen werden verbunden). Über diese Busenden erscheinen die gesendeten Signale wieder in einer Struktur. </para>
+ 
+ <para
+-> Die Uplinks und Downlinks können zu unterschiedlichen Strukturen gehören. Sie können sogar zwei Instanzen von &artsbuilder; verwenden und in einer davon einen Uplink und in der Anderen den passenden Downlink haben. </para>
++> Die Uplinks und Downlinks können zu unterschiedlichen Strukturen gehören. Sie können sogar zwei Instanzen von &arts-builder; verwenden und in einer davon einen Uplink und in der Anderen den passenden Downlink haben. </para>
+ 
+ <para
+ > Eine besondere Eigenschaft ist die Dynamik dieser Verbindungen. Teile können sich jederzeit ein- oder ausklinken; das sollte kein Klicken oder andere Geräusche verursachen. </para>
+@@ -572,7 +572,7 @@
+ <para
+ > Buildable (type boolean, recommended): This indicates whether the component is usable with <acronym
+ >RAD</acronym
+-> tools (such as &artsbuilder;) which use components by assigning properties and connecting ports. It is recommended to set this value to true for almost any signal processing component (such as filters, effects, oscillators, ...), and for all other things which can be used in <acronym
++> tools (such as &arts-builder;) which use components by assigning properties and connecting ports. It is recommended to set this value to true for almost any signal processing component (such as filters, effects, oscillators, ...), and for all other things which can be used in <acronym
+ >RAD</acronym
+ > like fashion, but not for internal stuff like for instance <interfacename
+ >Arts::InterfaceRepo</interfacename
+@@ -1325,7 +1325,7 @@
+ >-Element gebildet werden. Wenn es also eine &Qt;-Implementation dieser grundlegenden Elemente gibt, kann der Effekt sich mit Hilfe von &Qt; darstellen. Wenn es eine Gtk-Implementation gibt, funktioniert das für Gtk ebenfalls (die Funktionsweise sollte mehr oder weniger gleichwertig sein). </para>
+ 
+ <para
+-> Da wir &IDL; benutzen, sollte &artsbuilder; (oder andere Programme) in der Lage sein, &GUI;s optisch zusammenzuführen oder mit einigen Parametern basierend auf den Schnittstellen selbst zusammenzustellen. Es sollte relativ einfach sein, eine <quote
++> Da wir &IDL; benutzen, sollte &arts-builder; (oder andere Programme) in der Lage sein, &GUI;s optisch zusammenzuführen oder mit einigen Parametern basierend auf den Schnittstellen selbst zusammenzustellen. Es sollte relativ einfach sein, eine <quote
+ >GUI nach Beschreibung erstellen</quote
+ >-Klasse zu programmieren, die eine &GUI;-Beschreibung (in der Form Parameter und Kontrollelement) in ein &GUI;-Objekt umsetzt. </para>
+ 
+diff -Nur kde-i18n-de-3.4.91.orig/docs/kdemultimedia/artsbuilder/mcop.docbook kde-i18n-de-3.4.91/docs/kdemultimedia/artsbuilder/mcop.docbook
+--- kde-i18n-de-3.4.91.orig/docs/kdemultimedia/artsbuilder/mcop.docbook	2005-09-10 11:29:21.000000000 +0200
++++ kde-i18n-de-3.4.91/docs/kdemultimedia/artsbuilder/mcop.docbook	2005-09-28 14:03:58.000000000 +0200
+@@ -1633,7 +1633,7 @@
+ > on each object that tells you about the methods that an object supports, this leaves out things like attributes (properties), streams and inheritance relations. </para>
+ 
+ <para
+-> This seriously breaks applications like &artsbuilder;. But remember: &DCOP; was not so much intended to be an object model (as &Qt; already has one with <application
++> This seriously breaks applications like &arts-builder;. But remember: &DCOP; was not so much intended to be an object model (as &Qt; already has one with <application
+ >moc</application
+ > and similar), nor to be something like <acronym
+ >CORBA</acronym
