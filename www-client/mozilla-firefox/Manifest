@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 27212c3bfc3d15dc4bb42454380c533b mozilla-firefox-1.0.6-r5.ebuild 9631
 MD5 7f073b544e7967d3453ab8579292ef3e mozilla-firefox-1.0.6-r4.ebuild 9543
 MD5 722de3d81a6bf50a4b21d1ff5815dff3 mozilla-firefox-1.0.7-r1.ebuild 11097
-MD5 0097e448c7a5b9c5ec77cf58cbae4509 ChangeLog 32019
+MD5 ee528b0fe22b6fff3765c18d7eb3119c ChangeLog 32209
 MD5 8a30120dc035d60c58db0a9dc8c3b91b mozilla-firefox-1.0.6-r7.ebuild 9771
 MD5 06023401dbf9f17149696616a240647d mozilla-firefox-1.0.6-r3.ebuild 9154
 MD5 6d3af6331c1b75d7991a5680fc9602c7 mozilla-firefox-1.0.6-r2.ebuild 8318
-MD5 e50572c9466eb47c077239e2d02ad79d mozilla-firefox-1.0.7-r2.ebuild 8534
+MD5 01f761adf68f87eef8142b277cdd6853 mozilla-firefox-1.0.7-r2.ebuild 8519
 MD5 d8c6c3085e4fc8d06ef878579dddf116 mozilla-firefox-1.0.6-r6.ebuild 11233
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 07a5a1ce0146f1badc4e04849a9b1830 files/mozilla-firefox-1.0.6-gcc4.patch 6131
@@ -35,7 +35,7 @@ MD5 0aa74349ef4f69637967343f43540733 files/mozilla-firefox-1.0.3-prefs.patch 340
 MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r6 447
 MD5 3970f49b3f72cec38e126a2a140b524f files/gtk-prompt-service.patch 5520
 MD5 8e7d6f3220336cd4467d20bbe402e09a files/embedprompter-modal.patch 1548
-MD5 c8733e2cfe01c3c4bae55f0123014ec9 files/digest-mozilla-firefox-1.0.7-r2 231
+MD5 bebee751ca5635853d0d2d50b3c33846 files/digest-mozilla-firefox-1.0.7-r2 231
 MD5 eafec999c965792bf81df6bcbbe6c5ea files/gtk-tooltips.patch 2308
 MD5 787437939618daf271673626f6414b15 files/mozilla-firefox-1.0.6-GLSA105396.patch 4049
 MD5 23d1fbd03cc6dd346a4e4ce8f2d88ebf files/mozilla-1.3-alpha-stubs.patch 4646
@@ -45,7 +45,7 @@ MD5 2cdd03eb2752bc01ba07ad837e926f39 files/icon/mozillafirefox.desktop 168
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOavD1ZcsMnZjRyIRAnDrAKCNzQj/mKR676tcPgVA4Z7sHQFSgACgjvcC
-x5xTsHpyFjRl409FP5SF22Q=
-=1KG+
+iD8DBQFDOmrv1ZcsMnZjRyIRAnm5AJ9DOMH+Xs4RxRRPhwcNBc05HDQfLQCfcojl
+L/8RhmaJCHUlUmaXfhfMYfQ=
+=mOj5
 -----END PGP SIGNATURE-----

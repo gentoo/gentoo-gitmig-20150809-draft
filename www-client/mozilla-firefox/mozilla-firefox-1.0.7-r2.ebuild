@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7-r2.ebuild,v 1.1 2005/09/27 20:27:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7-r2.ebuild,v 1.2 2005/09/28 10:03:32 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -9,7 +9,7 @@ MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
 	                 # when older is removed from tree.
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
 
-PVER="1.7.12-patches-1.0"
+PVER="1.7.12-patches-1.1"
 SVGVER="2.3.10p1"
 
 DESCRIPTION="Firefox Web Browser"
@@ -22,8 +22,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/fi
 	mirror://gentoo/mozilla-${PVER}.tar.bz2
 	http://dev.gentoo.org/~azarah/mozilla/mozilla-${PVER}.tar.bz2"
 
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
-KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="gnome java mozdevelop mozsvg mozcalendar"

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.85 2005/09/27 20:27:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.86 2005/09/28 10:03:32 azarah Exp $
+
+  28 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  mozilla-firefox-1.0.7-r2.ebuild:
+  Update patch set with patch from bug #96869 (comment #48). Unmask as it
+  seems to fix bug #107372.
 
 *mozilla-firefox-1.0.7-r2 (27 Sep 2005)
 
