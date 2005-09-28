@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.11.ebuild,v 1.4 2005/08/26 19:00:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.11.ebuild,v 1.5 2005/09/28 11:58:49 hanno Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -41,9 +41,9 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=app-text/docbook-xml-dtd-4.1.2*
 	=sys-libs/db-1*
 	ofx? ( >=dev-libs/libofx-0.7.0 )
-	hbci? ( net-libs/aqhbci-qt-tools )
-	chipcard? ( sys-libs/libchipcard
-		net-libs/aqhbci-ddvcard )
+	hbci? ( net-libs/aqbanking
+		chipcard? ( sys-libs/libchipcard )
+	)
 	quotes? ( dev-perl/DateManip
 		dev-perl/Finance-Quote
 		dev-perl/HTML-TableExtract )
