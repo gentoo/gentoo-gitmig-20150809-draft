@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.122 2005/09/28 19:11:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.123 2005/09/28 19:35:57 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -511,7 +511,6 @@ vim_src_install() {
 				installtools \
 				install-languages \
 				install-icons \
-				installspell \
 				DESTDIR=${D} \
 				BINDIR=/usr/bin \
 				MANDIR=/usr/share/man \
