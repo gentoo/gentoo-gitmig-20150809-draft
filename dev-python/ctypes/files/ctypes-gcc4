@@ -1,0 +1,11 @@
+--- ctypes-0.9.6/source/_ctypes.c	2004-10-26 03:05:46.000000000 +0200
++++ ctypes-0.9.6-gcc4/source/_ctypes.c	2005-09-26 11:36:41.231754000 +0200
+@@ -3880,7 +3880,7 @@
+ 	(inquiry)Pointer_nonzero, /* nb_nonzero */
+ };
+ 
+-static PyTypeObject Pointer_Type = {
++PyTypeObject Pointer_Type = {
+ 	PyObject_HEAD_INIT(NULL)
+ 	0,
+ 	"_ctypes._Pointer",
