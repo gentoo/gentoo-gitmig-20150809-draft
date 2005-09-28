@@ -1,9 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 27212c3bfc3d15dc4bb42454380c533b mozilla-firefox-1.0.6-r5.ebuild 9631
 MD5 7f073b544e7967d3453ab8579292ef3e mozilla-firefox-1.0.6-r4.ebuild 9543
-MD5 722de3d81a6bf50a4b21d1ff5815dff3 mozilla-firefox-1.0.7-r1.ebuild 11097
 MD5 ee528b0fe22b6fff3765c18d7eb3119c ChangeLog 32209
 MD5 8a30120dc035d60c58db0a9dc8c3b91b mozilla-firefox-1.0.6-r7.ebuild 9771
 MD5 06023401dbf9f17149696616a240647d mozilla-firefox-1.0.6-r3.ebuild 9154
@@ -14,7 +10,6 @@ MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 07a5a1ce0146f1badc4e04849a9b1830 files/mozilla-firefox-1.0.6-gcc4.patch 6131
 MD5 6da2b9dec8c7fbe104122a424727fb39 files/digest-mozilla-firefox-1.0.6-r3 451
 MD5 1652483bf7e1d08241cd5e0436bea2ae files/10MozillaFirefox 32
-MD5 f8e76316e656f43d103616a3045b4961 files/digest-mozilla-firefox-1.0.7-r1 523
 MD5 e71e3d11bf8e3a03f965cf894593c28c files/digest-mozilla-firefox-1.0.6-r2 382
 MD5 03df358b463796309e2ce8b87b180085 files/securebrowserui-iirq.patch 1101
 MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
@@ -42,10 +37,3 @@ MD5 23d1fbd03cc6dd346a4e4ce8f2d88ebf files/mozilla-1.3-alpha-stubs.patch 4646
 MD5 730bebc28f073d8c08d32c78252445d5 files/mozilla-1.7.12-rpath.patch 1752
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
 MD5 2cdd03eb2752bc01ba07ad837e926f39 files/icon/mozillafirefox.desktop 168
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDOmrv1ZcsMnZjRyIRAnm5AJ9DOMH+Xs4RxRRPhwcNBc05HDQfLQCfcojl
-L/8RhmaJCHUlUmaXfhfMYfQ=
-=mOj5
------END PGP SIGNATURE-----

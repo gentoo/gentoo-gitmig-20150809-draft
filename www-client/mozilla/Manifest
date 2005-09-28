@@ -1,8 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1a242e5dd432f1fc4b5396b7593c1cb8 mozilla-1.7.10-r1.ebuild 12594
-MD5 8ec7ef0da3f09354431718988cde3776 mozilla-1.7.12-r1.ebuild 13623
 MD5 efb11836f2b5c8f484f743a401229c53 mozilla-1.7.11-r2.ebuild 12246
 MD5 e6235ce812a28be8c0e9847ca4997c38 mozilla-1.7.12-r2.ebuild 11750
 MD5 4a3893efe400f678966d29f91932761b ChangeLog 52256
@@ -17,7 +13,6 @@ MD5 b7c78ba7ca0c519d0f3d2b80ab4cdd74 files/mozilla-1.7.6-ppc64.patch 3651
 MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
 MD5 787437939618daf271673626f6414b15 files/mozilla-1.7.11-GLSA105396.patch 4049
 MD5 f928943477be0f114ef393d3a4c28e80 files/digest-mozilla-1.7.10-r1 432
-MD5 8047a3fb75a7615d8c40e82de392468f files/digest-mozilla-1.7.12-r1 504
 MD5 5b22d0e1ea93923e3e66787c286ad86f files/mozilla-1.7.8-objectframefix.diff 673
 MD5 4be28298e258904448e10462fcb67c72 files/digest-mozilla-1.7.11-r1 428
 MD5 f928943477be0f114ef393d3a4c28e80 files/digest-mozilla-1.7.10-r2 432
@@ -42,10 +37,3 @@ MD5 d0e52abf109fe61c4195f0cbf002ae18 files/google.src 706
 MD5 e3c488f3226f61adbb11d6a73ae84209 files/icon/mozilla.desktop 153
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
 MD5 068edb8c46e34027f9c3febc19656c70 files/1.3/mozilla-1.3-fix-RAW-target.patch 328
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDOmsi1ZcsMnZjRyIRAneIAJ4/GQbyKnWo8DavRhFrohAt01uSdQCdHopE
-ZxmX3E97S97Jm5crs7NEF+E=
-=u6+0
------END PGP SIGNATURE-----
