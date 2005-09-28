@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.155 2005/09/28 00:23:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.156 2005/09/28 19:35:02 corsair Exp $
+
+  28 Sep 2005; Markus Rothe <corsair@gentoo.org> ruby-1.8.3.ebuild:
+  Stable on ppc64
 
   28 Sep 2005; Andrej Kacian <ticho@gentoo.org> ruby-1.8.3.ebuild:
   Stable on x86, bug #106996.
