@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.29-r1.ebuild,v 1.2 2005/09/27 10:04:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.29-r1.ebuild,v 1.3 2005/09/28 23:55:52 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~x86"
 IUSE="svga jpeg tiff png zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
