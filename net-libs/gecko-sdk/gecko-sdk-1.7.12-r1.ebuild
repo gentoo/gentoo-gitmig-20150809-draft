@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.12-r1.ebuild,v 1.1 2005/09/28 11:27:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.12-r1.ebuild,v 1.2 2005/09/28 14:21:47 swegener Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -184,7 +184,7 @@ src_compile() {
 
 src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/gecko-sdk"
-	
+
 	dodir /usr/$(get_libdir)
 	cp -RL ${S}/dist/sdk ${D}/${MOZILLA_FIVE_HOME}
 	# Also install the embedded dist for galeon, epiphany, etc
