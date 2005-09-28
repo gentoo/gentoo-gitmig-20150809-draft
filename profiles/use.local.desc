@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1476 2005/09/28 15:00:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1477 2005/09/28 22:34:04 dju Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1096,6 +1096,9 @@ www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring an
 www-apps/rt:lighttpd - Add lighttpd support
 www-apps/swish-e:pdf - enable support for exporting to pdf
 www-apps/tikiwiki:graphviz - enable graphviz support
+www-apps/trac:cgi - Add CGI script support
+www-apps/trac:enscript -  Add enscript support to colourize code stored in the repository
+www-apps/trac:silvercity - Add SilverCity support to colourize code stored in the repository
 www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
