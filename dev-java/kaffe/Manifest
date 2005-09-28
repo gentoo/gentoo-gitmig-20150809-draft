@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bd99f73897c72ae2548c1335a73aff8 ChangeLog 5681
-MD5 73eba47e4376b8ef0277917e9775d215 kaffe-1.1.4.ebuild 1384
-MD5 fbe6520260055eea60aa62c9e6c0525a kaffe-1.1.4-r1.ebuild 1428
-MD5 0dbd2265323a31ffe6c44ccbf42e92e7 metadata.xml 344
-MD5 bedc2c8045f4427b9e5b5f7d4a0feb2d kaffe-1.1.4_p20041220.ebuild 1595
-MD5 5537a1325fe5c1edf280f06e46a14a5d kaffe-1.1.5.ebuild 1431
 MD5 5cd588f479e7388a3aee24d57df9b804 kaffe-1.1.5-r1.ebuild 2598
-MD5 db3c5b7c7434756580165a330667dde8 files/kaffe-1.1.5 464
-MD5 2e1f733100256452cb1fd7749144206c files/kaffe-1.1.4_p20041220 474
-MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4-r1 64
+MD5 ffe01c57cefea0e6bdc10e4bc158dbcc kaffe-1.1.6.ebuild 3143
+MD5 fbe6520260055eea60aa62c9e6c0525a kaffe-1.1.4-r1.ebuild 1428
+MD5 5537a1325fe5c1edf280f06e46a14a5d kaffe-1.1.5.ebuild 1431
+MD5 699ea69fb9771328b3142e6b74c5aad1 ChangeLog 5916
+MD5 0dbd2265323a31ffe6c44ccbf42e92e7 metadata.xml 344
+MD5 73eba47e4376b8ef0277917e9775d215 kaffe-1.1.4.ebuild 1384
 MD5 5705b7951b83fc326ce97b101de8cb49 files/kaffe-1.1.4 506
-MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4 64
+MD5 db3c5b7c7434756580165a330667dde8 files/kaffe-1.1.5 464
+MD5 42825d131cd9a6c5f3ed65112e06f7a7 files/kaffe-1.1.6 464
 MD5 6b922132b47393ca82554800904339da files/kaffe-1.1.4-r1 467
-MD5 89ab9ab78ed555baabd7d861d042b7c2 files/digest-kaffe-1.1.4_p20041220 75
-MD5 15d4e7be27bfaa5a835fd5acc810f3ba files/digest-kaffe-1.1.5-r1 64
+MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4 64
 MD5 15d4e7be27bfaa5a835fd5acc810f3ba files/digest-kaffe-1.1.5 64
+MD5 c55ea6790f89725bffc5ab3fd2f42647 files/digest-kaffe-1.1.6 136
+MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4-r1 64
+MD5 15d4e7be27bfaa5a835fd5acc810f3ba files/digest-kaffe-1.1.5-r1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJuY6KRy60XGEcJIRAu1vAKCQbiKbmnMyhQa5nggogCqg0mWpqgCfSwP8
-pGabwaaj6cpYZ+eSUcWF2P8=
-=oU3i
+iD4DBQFDOxe6QiJ/wx066S4RApo1AJd0XA+c/BhzGthmFjq2vXv3K2t9AJ9utLz3
+lEiBzBy09nfa1S7zem6kkg==
+=1av/
 -----END PGP SIGNATURE-----
