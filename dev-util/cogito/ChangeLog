@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.17 2005/09/13 20:50:26 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.18 2005/09/28 08:21:11 iluxa Exp $
+
+  28 Sep 2005; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
+  cogito-0.14.1.ebuild:
+  mark ~mips
 
 *cogito-0.14.1 (13 Sep 2005)
 
