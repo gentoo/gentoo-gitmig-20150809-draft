@@ -7,11 +7,11 @@ MD5 4929ded555c18b2909d24d20290eb23e ChangeLog 3327
 MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r6 63
 MD5 f70fffdbc4af6ca684817ede925c6087 files/smpeg-0.4.4-config.patch 472
 MD5 dcc2db7c8aa509096fc557b99bd35490 files/smpeg-0.4.4-m4.patch 233
-MD5 ff8036a570bdd3a43ed9710f91ca0556 files/smpeg-0.4.4-gnu-stack.patch 907
+MD5 7d1d2f2e55e8d98f7d62dcbb680cec7d files/smpeg-0.4.4-gnu-stack.patch 955
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJhQ8gIKl8Uu19MoRAjvvAKCAn8xGImnLmbiXOPmtKoJW9vLzAQCfdJUp
-mrc94cYeI+5IK+PXYDpyuAU=
-=DAa8
+iD8DBQFDOxBNgIKl8Uu19MoRAqRsAJ9dBsD3v02dt3+UGtGg2EAjDBFksQCdHffi
+59gXFYaQNGg8PPb5+GUrweQ=
+=6fnc
 -----END PGP SIGNATURE-----
