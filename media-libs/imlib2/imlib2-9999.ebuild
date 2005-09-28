@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.11 2005/09/08 02:34:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.12 2005/09/28 00:34:13 vapier Exp $
 
 inherit enlightenment toolchain-funcs
 
 MY_P=${P/_/-}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
-HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib2.html"
+HOMEPAGE="http://www.enlightenment.org/Libraries/Imlib2/"
 
 IUSE="X bzip2 gif jpeg mmx mp3 png tiff zlib"
 
@@ -22,11 +22,11 @@ DEPEND="=media-libs/freetype-2*
 
 src_compile() {
 	local mymmx=""
-	if [[ $(tc-ARCH) == "amd64" ]] ; then
-		mymmx="--enable-amd64 --disable-mmx"
-	else
+#	if [[ $(tc-arch) == "amd64" ]] ; then
+#		mymmx="--enable-amd64 --disable-mmx"
+#	else
 		mymmx="--disable-amd64 $(use_enable mmx)"
-	fi
+#	fi
 
 	export MY_ECONF="
 		$(use_with X x) \
