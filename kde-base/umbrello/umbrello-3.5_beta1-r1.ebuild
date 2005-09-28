@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/umbrello-3.5_beta1.ebuild,v 1.2 2005/09/26 10:19:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/umbrello-3.5_beta1-r1.ebuild,v 1.1 2005/09/28 14:19:24 flameeyes Exp $
 
 KMNAME=kdesdk
 MAXKDEVER=$PV
@@ -12,4 +12,6 @@ KEYWORDS="~amd64"
 IUSE=""
 
 # Fix compilation. Applied for rc1.
-PATCHES1="${FILESDIR}/kdesdk-3.5_beta1-compile.patch"
+PATCHES="${FILESDIR}/kdesdk-3.5_beta1-compile.patch
+	${FILESDIR}/kdesdk-3.5_beta1-crash.patch
+	${FILESDIR}/umbrello-qt-3.3.5.patch"

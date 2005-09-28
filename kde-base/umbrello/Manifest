@@ -1,9 +1,21 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b4ee85af48c02e02fa4425daccbd799f ChangeLog 2538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 15c59514c459c17d1785f7a7eaf3efea umbrello-3.4.1.ebuild 390
-MD5 4857e930c7870c29742d0d438b1abeb1 umbrello-3.5_beta1.ebuild 466
+MD5 345da341b7eb11f1752b78d6cd5796de ChangeLog 2814
+MD5 94d4e5502048ac39cc91428ad2bef924 umbrello-3.5_beta1-r1.ebuild 550
 MD5 d90d841849894a72dda6b8329d44183b umbrello-3.4.2.ebuild 398
-MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-umbrello-3.5_beta1 67
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-umbrello-3.5_beta1-r1 67
+MD5 0f4007b5db8e59debdab22a1e984546f files/umbrello-qt-3.3.5.patch 788
 MD5 9b4e9e38740207531ab771519519d01e files/digest-umbrello-3.4.1 206
-MD5 0a38813829924b012d8b632f47abb45d files/digest-umbrello-3.4.2 280
 MD5 e909850d57bdca22b0b476f1acf0fd5d files/kdesdk-3.5_beta1-compile.patch 1406
+MD5 0a38813829924b012d8b632f47abb45d files/digest-umbrello-3.4.2 280
+MD5 bb0014fd062d56a11c42435a49d483cb files/kdesdk-3.5_beta1-crash.patch 729
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDOqaXj5H05b2HAEkRAqhbAJ9JOLvCL8Cpee8yiBpqPeJWYwcb4QCfWY0l
+N8LCVg3dn82mpsKesqAD+TI=
+=kyHG
+-----END PGP SIGNATURE-----
