@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/sdcc-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/ChangeLog,v 1.7 2005/09/27 21:12:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/ChangeLog,v 1.8 2005/09/28 07:59:46 dragonheart Exp $
+
+  28 Sep 2005; Daniel Black <dragonheart@gentoo.org>
+  sdcc-cvs-2.4.0-r1.ebuild:
+  unstabilisied x86 due to cvs
 
   27 Sep 2005; Simon Stelling <blubb@gentoo.org> sdcc-cvs-2.4.0-r1.ebuild:
   remove stable amd64 keyword, cvs live builds should never get marked stable

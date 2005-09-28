@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/sdcc-cvs-2.4.0-r1.ebuild,v 1.5 2005/09/27 21:12:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/sdcc-cvs-2.4.0-r1.ebuild,v 1.6 2005/09/28 07:59:46 dragonheart Exp $
 
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/sdcc"
@@ -14,7 +14,7 @@ HOMEPAGE="http://sdcc.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 DEPEND="virtual/libc
