@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.19 2005/09/14 18:24:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.20 2005/09/28 05:38:18 ferringb Exp $
+
+  28 Sep 2005; Brian Harring <ferringb@gentoo.org> ppmd-9.1_p10.ebuild:
+  Version bump.
+
+*ppmd-9.1_p10 (28 Sep 2005)
 
   14 Sep 2005; Fabian Groffen <grobian@gentoo.org> ppmd-9.1_p8.ebuild:
   Marking ~ppc-macos (bug #105857)
