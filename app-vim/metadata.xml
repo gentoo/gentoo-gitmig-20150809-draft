@@ -2,7 +2,7 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The app-vim category contains plugins and syntax file
+		The app-vim category contains plugins, syntax file and spelling
 		packages for the Vim text editor.
 	</longdescription>
 	<longdescription lang="de">
