@@ -5,17 +5,19 @@ MD5 d2c3a8a3ea5a2609eaf2289b3995dea4 poppler-0.3.3.ebuild 939
 MD5 d7a0327f479e0afd0bd13cd6cbf00f89 poppler-0.4.1.ebuild 1073
 MD5 2775f0555069e7375c82e6898951cc98 poppler-0.3.0.ebuild 860
 MD5 0f47305adf0da4f94dc6ef03291cd175 poppler-0.3.2.ebuild 941
-MD5 c9ff43a19769bec23df6362c2f156b53 ChangeLog 1698
+MD5 c2a39769b0ada07dabb9f33344bb5557 ChangeLog 1854
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 a7a442b7ddc6f73836d04408238326b1 poppler-0.4.2.ebuild 1320
 MD5 3342aad1175b4b522f84e453999fbb05 files/poppler-0.4.1-cairo-ft.patch 470
 MD5 9fcae20e4d0c670e6f53602e516991aa files/digest-poppler-0.3.0 65
 MD5 25675c998a475fcdd58b64313df002b5 files/digest-poppler-0.3.2 65
 MD5 ffa0dcdb55709d044c7cefd7da512fe8 files/digest-poppler-0.3.3 65
 MD5 ff3789d555c986604a49249f0df50c8a files/digest-poppler-0.4.1 65
+MD5 be62fc9641cde65e89b62b2a629bb617 files/digest-poppler-0.4.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMsYOomPajV0RnrERAkxyAJ4nmyyn8cvO1xbRScnMMWljladGTgCbB4nG
-Tzs9/MlQF1kI5tBvTUQI87M=
-=MnPI
+iD8DBQFDOrLeomPajV0RnrERAsxhAJ4pVHREqlay0Oc8CArgJCTZlM8wygCfbO3F
+QiYo1H4m7o6t5s+2LWJSCSs=
+=sID3
 -----END PGP SIGNATURE-----
