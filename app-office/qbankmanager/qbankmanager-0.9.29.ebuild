@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.29.ebuild,v 1.1 2005/09/26 16:19:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.29.ebuild,v 1.2 2005/09/28 12:10:46 hanno Exp $
 
 inherit eutils qt3
 
@@ -15,6 +15,14 @@ IUSE="debug"
 
 DEPEND=">=net-libs/aqbanking-1.6.0_beta
 	=x11-libs/qt-3*"
+
+pkg_setup() {
+	if ! built_with_use net-libs/aqbanking qt; then
+		einfo "qbankmanager needs the qt-bindings of aqbanking."
+		einfo "TO enable them, rebuild aqbanking with qt in USE."
+		die "aqbanking was built without qt support."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
