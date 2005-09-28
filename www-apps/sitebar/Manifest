@@ -1,7 +1,19 @@
-MD5 a681e4733f99e79c8d7075fab53c0272 ChangeLog 1053
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 e5ff6b38f58910b1a158919cc8ab3601 sitebar-3.2.6.ebuild 841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8fdd2fe61a30b12f98ef693e1501b9fd sitebar-3.3.3.ebuild 896
-MD5 55c56a38fde4a9d4d2c9cd141259ccba files/digest-sitebar-3.2.6 66
+MD5 8b2638d2745871fd4bb31e3d574a3a49 sitebar-3.3.5.ebuild 893
+MD5 895c2c1f7206eac49a25365069fccefe ChangeLog 1182
+MD5 e5ff6b38f58910b1a158919cc8ab3601 sitebar-3.2.6.ebuild 841
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 bdd0317fff7e2cccecc51d7d97cd8dc7 files/postinstall-en.txt 93
+MD5 55c56a38fde4a9d4d2c9cd141259ccba files/digest-sitebar-3.2.6 66
 MD5 ef9082a8a38ad403f80d049f1d91644b files/digest-sitebar-3.3.3 66
+MD5 3f8d5cf97d2bf0569e9ecf305c6e686e files/digest-sitebar-3.3.5 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDOeJtEzitwsaoONoRAj+aAJ0dtn+hvuWyWp1e5NUmOF+cjhV8hwCgzJhj
+ZhshaimNySiYM6p/PQQU2PA=
+=2HPk
+-----END PGP SIGNATURE-----

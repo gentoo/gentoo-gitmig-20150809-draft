@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/sitebar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.7 2005/08/24 02:46:54 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.8 2005/09/28 00:22:57 rl03 Exp $
+
+*sitebar-3.3.5 (28 Sep 2005)
+
+  28 Sep 2005; Renat Lumpau <rl03@gentoo.org> +sitebar-3.3.5.ebuild:
+  Version bump wrt bug #107445.
 
   24 Aug 2005; Homer Parker <hparker@gentoo.org> sitebar-3.3.3.ebuild:
   Marked ~amd64.
