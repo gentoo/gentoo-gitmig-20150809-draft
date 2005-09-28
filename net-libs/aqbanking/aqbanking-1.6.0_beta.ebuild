@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.6.0_beta.ebuild,v 1.1 2005/09/26 16:12:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.6.0_beta.ebuild,v 1.2 2005/09/28 12:02:52 hanno Exp $
 
 inherit kde-functions
 
@@ -10,16 +10,18 @@ SRC_URI="mirror://sourceforge/aqbanking/${P/_/}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ia64 ~ppc ~sparc ~alpha ~amd64"
-IUSE="debug ofx geldkarte chipcard dtaus hbci kde gtk2 qt python"
+IUSE="debug ofx geldkarte chipcard dtaus hbci kde qt"
 DEPEND=">=sys-libs/gwenhywfar-1.16.0
 	app-misc/ktoblzcheck
 	ofx? >=dev-libs/libofx-0.8
 	geldkarte? >=sys-libs/libchipcard-1.9.15_beta
-	chipcard? >=sys-libs/libchipcard-1.9.15_beta
-	gtk2? >=dev-util/glade-2"
+	chipcard? >=sys-libs/libchipcard-1.9.15_beta"
 
 # ctypes is not yet keyworded on most archs
 #	python? dev-python/ctypes
+# gtk2 doesn't build without X, not needed at the moment because no app uses it.
+#	gtk2? >=dev-util/glade-2"
+
 S=${WORKDIR}/${P/_/}
 
 
@@ -30,7 +32,8 @@ src_compile() {
 	local FRONTENDS="cbanking"
 	use qt && FRONTENDS="${FRONTENDS} qbanking"
 	use kde && FRONTENDS="${FRONTENDS} kbanking"
-	use gtk2 && FRONTENDS="${FRONTENDS} g2banking"
+
+#	use gtk2 && FRONTENDS="${FRONTENDS} g2banking"
 
 	local BACKENDS=""
 	use hbci && BACKENDS="aqhbci"
