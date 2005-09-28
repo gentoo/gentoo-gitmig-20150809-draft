@@ -1,9 +1,19 @@
-MD5 202a4b115174a500df0cd354848deed6 ChangeLog 6531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bea3dfbd4ba707ce469cd08f9a264da6 ChangeLog 6633
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 66b5fb24b12d077d4437c865b1c1d449 procmail-3.22-r6.ebuild 1788
-MD5 c0c55607475e4858cf05ff20290ca1d8 procmail-3.22-r7.ebuild 1872
+MD5 25e33df24d0b9b11395e5ada9c2703de procmail-3.22-r7.ebuild 1872
 MD5 3b583fb1759a67d82e1f304ea40c2859 files/digest-procmail-3.22-r6 65
 MD5 280e86cd3850b13629b0beee3c2c5522 files/gentoo-maildir2.diff 797
 MD5 e0c638b848ae112a847d5ef48cb9f209 files/procmail-lazy-bindings.diff 622
 MD5 3b583fb1759a67d82e1f304ea40c2859 files/digest-procmail-3.22-r7 65
 MD5 6c44beee1c99e38bfd3b3bda6979db00 files/procmail-comsat-segfault.diff 822
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDOvTrwUpWvClEHQoRAhGrAJ41m17wHX6bUp/rulmnEMqhrnsALQCePjqc
+/U9hi5znyYvOeqv/t22jsS4=
+=6J/J
+-----END PGP SIGNATURE-----
