@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4b66c4a9289e8795cf8ac464beae76af ChangeLog 2000
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 457523d34af0fa6b21722b5951b2008a qbankmanager-0.9.29.ebuild 842
 MD5 69bfc13da9bf05db8ed8130680aa9820 files/digest-qbankmanager-0.9.29 71
 MD5 513e5771877e65400c1b4641105070a8 files/editcategoryreport.ui.gz 2306
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDOoZur2QksT29OyARArWxAKChYHqx6w5pCDLaDN6/Hyr3QjmcYwCcDd2v
+RohCXCq5UtgDB5gWqvTLyzY=
+=5lhJ
+-----END PGP SIGNATURE-----
