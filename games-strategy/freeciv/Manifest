@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7f5ab55771584dc457c6f112d416e7a9 freeciv-2.0.5.ebuild 4299
-MD5 d469d8285e7c701d11ce29f52a03391c ChangeLog 6052
+MD5 7e592550ae9720139a90b9d9b155b877 freeciv-2.0.6.ebuild 4304
+MD5 6833dfd4133b46f328abe6cb822b59fb ChangeLog 6178
 MD5 7b03506340a683cb71edfc8a8f9fa1d6 files/digest-freeciv-2.0.5 129
+MD5 4ce4efd98429501807abbaa1341c7dad files/digest-freeciv-2.0.6 129
