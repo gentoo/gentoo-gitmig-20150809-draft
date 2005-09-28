@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea2039a6d078a4607f1909521d599154 ChangeLog 17293
+MD5 9bf4fbcdf2bc1773563c5597e0a3c720 ChangeLog 17383
 MD5 c8736c4b16b0d76461f3fca45ef6d40e abiword-2.2.5-r1.ebuild 2365
 MD5 104b0fc7f156da8e5b73eb8f9acec45c abiword-2.2.7-r1.ebuild 2459
 MD5 9e4591bf64ea466fd2fa7e545c67842f abiword-2.2.8-r1.ebuild 2540
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5684d03afc9900f6b6cdbea3a5df24ef abiword-2.2.9.ebuild 2337
-MD5 d340595d5a0ed70a2c5e2ae9a2bb06a4 abiword-2.2.10.ebuild 2337
+MD5 269248c8087d3dfc3940548a3fb980c9 abiword-2.2.10.ebuild 2335
 MD5 465c848797c2f2fa0a916a76d733c379 files/2.2.8-gcc4.patch 506
 MD5 cb31301bf61f64e0751b3ae0c382ca41 files/abiword-security-fix.patch 456
 MD5 05bd382bc17a222b7d38e46dd90350c0 files/digest-abiword-2.2.5-r1 68
@@ -15,10 +12,3 @@ MD5 18acb96f28cede2da43044aaa82a6f94 files/digest-abiword-2.2.7-r1 68
 MD5 73661645f9c415ca25f9da7c17fd2628 files/digest-abiword-2.2.8-r1 68
 MD5 ed594302c92a3587c8057f0d36a8e90a files/digest-abiword-2.2.9 68
 MD5 8b023d31957e4d3d1684959d96564364 files/digest-abiword-2.2.10 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDOvq0wUpWvClEHQoRAsMOAJ9I8POs3cA9iU5aqLc0hmYHpIKZowCfUcmD
-Y5C0y2W4NdPBiRGQgD1LtMo=
-=/w9b
------END PGP SIGNATURE-----
