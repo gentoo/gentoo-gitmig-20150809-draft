@@ -1,12 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.12-r1.ebuild,v 1.2 2005/09/28 10:04:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.12-r2.ebuild,v 1.1 2005/09/28 10:04:24 azarah Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
 	                 # when older is removed from tree.
+MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
+	                 # when older is removed from tree.
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
 
+PVER="1.1"
 EMVER="0.92.0"
 IPCVER="1.1.3"
 SVGVER="2.3.10p1"
@@ -18,19 +21,17 @@ MY_PV=${MY_PV/_rc/rc}	# handle rc
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/source/${PN}-${MY_PV}-source.tar.bz2
+SRC_URI="http://ftp.${PN}.org/pub/${PN}.org/${PN}/releases/${PN}${MY_PV}/source/${PN}-${MY_PV}-source.tar.bz2
 	crypt? ( !moznomail? (
-		http://www.mozilla-enigmail.org/downloads/src/ipc-${IPCVER}.tar.gz
-		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
+		http://www.${PN}-enigmail.org/downloads/src/ipc-${IPCVER}.tar.gz
+		http://www.${PN}-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
 	) )
 	mozsvg? (
 		mirror://gentoo/moz_libart_lgpl-${SVGVER}.tar.bz2
-		http://dev.gentoo.org/~azarah/mozilla/moz_libart_lgpl-${SVGVER}.tar.bz2
+		http://dev.gentoo.org/~azarah/${PN}/moz_libart_lgpl-${SVGVER}.tar.bz2
 	)
-	mirror://gentoo/mozilla-jslibmath-alpha.patch
-	mirror://gentoo/mozilla-1.7.12-gtk2xft.patch.bz2
-	http://dev.gentoo.org/~azarah/mozilla/mozilla-1.7.12-gtk2xft.patch.bz2
-	http://dev.gentoo.org/~agriffis/dist/mozilla-1.7.10-nsplugins-v2.patch"
+	mirror://gentoo/${P}-patches-${PVER}.tar.bz2
+	http://dev.gentoo.org/~azarah/${PN}/${P}-patches-${PVER}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
@@ -50,7 +51,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	postgres? ( >=dev-db/postgresql-7.2.0 )"
 
-S=${WORKDIR}/mozilla
+S=${WORKDIR}/${PN}
 
 # Needed by src_compile() and src_install().
 # Would do in pkg_setup but that loses the export attribute, they
@@ -63,7 +64,7 @@ S=${WORKDIR}/mozilla
 #export MOZILLA_OFFICIAL=1
 
 src_unpack() {
-	unpack mozilla-${MY_PV}-source.tar.bz2
+	unpack ${PN}-${MY_PV}-source.tar.bz2 ${P}-patches-${PVER}.tar.bz2
 	cd ${S} || die
 
 	# Unpack the enigmail plugin
@@ -83,81 +84,23 @@ src_unpack() {
 
 	####################################
 	#
-	# architecture patches
+	# patch collection
 	#
 	####################################
 
-	if [[ $(gcc-major-version) -eq 3 ]]; then
-		# ABI Patch for alpha/xpcom for gcc-3.x
-		if [[ ${ARCH} == alpha ]]; then
-			epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
-		fi
-	fi
+	# Firefox only patches
+	rm -f ${WORKDIR}/patch/{093,094,402,407}*
+	# Need pango-1.10.0 stable
+	rm -f ${WORKDIR}/patch/03[67]*
+	epatch ${WORKDIR}/patch
 
-	# HPPA patches from Ivar <orskaug@stud.ntnu.no>
-	# <gmsoft@gentoo.org> (22 Dec 2004)
-	epatch ${FILESDIR}/mozilla-hppa.patch
-
-	# patch to fix math operations on alpha, makes maps.google.com work!
-	epatch ${DISTDIR}/mozilla-jslibmath-alpha.patch
-
-	# Patch to allow compilation on ppc64 - bug #54843
-	use ppc64 && epatch ${FILESDIR}/mozilla-1.7.6-ppc64.patch
-
-	# Fix building on amd64 with gcc4 (patch from Debian)
-	epatch ${FILESDIR}/${PN}-1.7.8-amd64.patch
-
-	####################################
-	#
-	# general compilation and run-time fixes
-	#
-	####################################
-
-	# Build with RPATH set, bug #100597
-	epatch ${FILESDIR}/mozilla-1.7.12-rpath.patch
-
-	# GCC4 compile fix, bug #87800
-	epatch ${FILESDIR}/${PN}-1.7.6-gcc4.patch
-
-	# Fix stack growth logic
-	epatch ${FILESDIR}/${PN}-stackgrowth.patch
-
-	# Rather use gtk2+xft than freetype for font rendering, and add patch
-	# from mozilla bugzilla to improve printing.
-	# https://bugzilla.mozilla.org/show_bug.cgi?id=215219#c113
-	epatch ${DISTDIR}/mozilla-1.7.12-gtk2xft.patch.bz2
-	# Fix for above - check that pango context is valid
-	epatch ${FILESDIR}/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch
-	# Fix for above - should link to libpangoxft
-	epatch ${FILESDIR}/mozilla-1.7.12-gtk2xft-link-pangoxft.patch
-
-	# Fix libart SVG renderer building against newer freetype2
-	epatch ${FILESDIR}/mozilla-1.7.12-libart-freetype.patch
-
-	####################################
-	#
-	# behavioral fixes
-	#
-	####################################
-
-	# Mozilla Bug 292257, https://bugzilla.mozilla.org/show_bug.cgi?id=292257
-	# Mozilla crashes under some rare cases when plugin.default_plugin_disabled
-	# is true. This patch fixes that. Backported by hansmi@gentoo.org.
-	epatch ${FILESDIR}/${PN}-1.7.8-objectframefix.diff
+	# Without 03[67]* patches, we need to link to pangoxft
+	epatch ${FILESDIR}/${PN}-1.7.12-gtk2xft-link-pangoxft.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
 	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
-
-	# look in /usr/lib/nsplugins for plugins, in addition to the usual places
-	epatch ${DISTDIR}/mozilla-1.7.10-nsplugins-v2.patch
-
-	####################################
-	#
-	# security fixes
-	#
-	####################################
 
 	# Needed by some of the patches
 	WANT_AUTOCONF=2.1 autoconf || die "WANT_AUTOCONF failed"
@@ -300,12 +243,12 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/icon/mozilla-icon.png
+	doins ${FILESDIR}/icon/${PN}-icon.png
 
 	# Fix bug 54179: Install .desktop file into /usr/share/applications
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
 	insinto /usr/share/applications
-	doins ${FILESDIR}/icon/mozilla.desktop
+	doins ${FILESDIR}/icon/${PN}.desktop
 
 	# Fix icons to look the same everywhere
 	insinto ${MOZILLA_FIVE_HOME}/icons
@@ -353,19 +296,20 @@ src_install() {
 	fi
 
 	# Fix mozilla-config and install it
-	sed -i -e "s|/usr/$(get_libdir)/mozilla-${MY_PV}|${MOZILLA_FIVE_HOME}|g
-		s|/usr/include/mozilla-${MY_PV}|${MOZILLA_FIVE_HOME}/include|g
-		s|/usr/share/idl/mozilla-${MY_PV}|${MOZILLA_FIVE_HOME}/idl|g
+	sed -i -e "s|/usr/$(get_libdir)/${PN}-${MY_PV}|${MOZILLA_FIVE_HOME}|g
+		s|/usr/include/${PN}-${MY_PV}|${MOZILLA_FIVE_HOME}/include|g
+		s|/usr/share/idl/${PN}-${MY_PV}|${MOZILLA_FIVE_HOME}/idl|g
 		s|\(echo -L.*\)\($\)|\1 -Wl,-rpath,${MOZILLA_FIVE_HOME}\2|" \
-		${S}/build/unix/mozilla-config
+		${S}/build/unix/${PN}-config
 	exeinto ${MOZILLA_FIVE_HOME}
-	doexe ${S}/build/unix/mozilla-config
+	doexe ${S}/build/unix/${PN}-config
 
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in ${S}/build/unix/*.pc; do
 		sed -i -e "s|^libdir=.*|libdir=${MOZILLA_FIVE_HOME}|
 			s|^includedir=.*|includedir=${MOZILLA_FIVE_HOME}/include|
+			s|^idldir=.*|idldir=${MOZILLA_FIVE_HOME}/idl|
 			s|\(Libs:.*\)\($\)|\1 -Wl,-rpath,\${libdir}\2|" ${x}
 		doins ${x}
 	done
@@ -373,14 +317,14 @@ src_install() {
 	# Install env.d snippet, which isn't necessary for running mozilla, but
 	# might be necessary for programs linked against firefox
 	insinto /etc/env.d
-	doins ${FILESDIR}/10mozilla
-	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10mozilla
+	doins ${FILESDIR}/10${PN}
+	dosed "s|/usr/lib|/usr/$(get_libdir)|" /etc/env.d/10${PN}
 
 	# Install rebuild script since mozilla-bin doesn't support registration yet
 	exeinto ${MOZILLA_FIVE_HOME}
-	doexe ${FILESDIR}/mozilla-rebuild-databases.pl
+	doexe ${FILESDIR}/${PN}-rebuild-databases.pl
 	dosed -e 's|/lib/|/'"$(get_libdir)"'/|g' \
-		${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
+		${MOZILLA_FIVE_HOME}/${PN}-rebuild-databases.pl
 
 	# Install docs
 	dodoc ${S}/{LEGAL,LICENSE}
@@ -402,7 +346,7 @@ pkg_postinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Update the component registry
-	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=mozilla \
+	MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=${PN} \
 		/usr/libexec/mozilla-launcher -register
 
 	# This should be called in the postinst and postrm of all the
@@ -415,8 +359,8 @@ pkg_postrm() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	# Update the component registry
-	if [[ -x ${MOZILLA_FIVE_HOME}/mozilla-bin ]]; then
-		MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=mozilla \
+	if [[ -x ${MOZILLA_FIVE_HOME}/${PN}-bin ]]; then
+		MOZILLA_LIBDIR=${ROOT}${MOZILLA_FIVE_HOME} MOZILLA_LAUNCHER=${PN} \
 			/usr/libexec/mozilla-launcher -register
 	fi
 

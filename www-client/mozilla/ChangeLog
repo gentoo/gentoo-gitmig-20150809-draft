@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.78 2005/09/26 22:12:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.79 2005/09/28 10:04:24 azarah Exp $
+
+*mozilla-1.7.12-r2 (28 Sep 2005)
+
+  28 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
+  mozilla-1.7.12-r1.ebuild, +mozilla-1.7.12-r2.ebuild:
+  Add pango and other patches from fedora in effort to try and resolve bug
+  #107372. Update patch set with patch from bug #96869 (comment #48).
 
 *mozilla-1.7.12-r1 (26 Sep 2005)
 
