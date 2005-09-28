@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.96 2005/09/21 17:28:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.97 2005/09/28 14:26:24 flameeyes Exp $
+
+*kdesdk-3.5_beta1-r1 (28 Sep 2005)
+
+  28 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdesdk-3.5_beta1-crash.patch, -kdesdk-3.5_beta1.ebuild,
+  +kdesdk-3.5_beta1-r1.ebuild:
+  Added patch to fix umbrello crash on starting.
 
 *kdesdk-3.5_beta1 (21 Sep 2005)
 
