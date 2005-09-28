@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.2 2005/09/28 19:13:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.3 2005/09/28 19:59:46 ciaranm Exp $
 
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
@@ -55,7 +55,9 @@
 # spell files. It's best to let upstream know if you've generated spell files
 # for another language rather than keeping them Gentoo-specific.
 
-EXPORT_FUNCTIONS src_install
+inherit eutils
+
+EXPORT_FUNCTIONS src_install pkg_postinst
 
 IUSE=""
 DEPEND="|| ( >=app-editors/vim-7_alpha
@@ -92,5 +94,26 @@ vim-spell_src_install() {
 	done
 
 	[[ -z "${had_spell_file}" ]] && die "Didn't install any spell files?"
+}
+
+vim-spell_pkg_postinst() {
+	target="/usr/share/vim/vimfiles/spell/"
+	echo
+	einfo "To enable ${VIM_SPELL_LANGUAGE} spell checking, use"
+	einfo "    :setlocal spell spelllang=${VIM_SPELL_CODE}"
+	echo
+	einfo "The following (Vim internal, not file) encodings are supported for"
+	einfo "this language:"
+	for f in "${ROOT}/${target}/${VIM_SPELL_CODE}".*.spl ; do
+		enc="${f##*/${VIM_SPELL_CODE}.}"
+		enc="${enc%.spl}"
+		[[ -z "${enc}" ]] && continue
+		einfo "    ${enc}"
+	done
+	echo
+	einfo "For further documentation, use:"
+	einfo "    :help spell"
+	echo
+	epause
 }
 
