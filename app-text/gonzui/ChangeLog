@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gonzui
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.5 2005/07/30 21:54:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.6 2005/09/28 21:43:26 matsuu Exp $
+
+  28 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> -gonzui-1.1.ebuild,
+  gonzui-1.2.ebuild:
+  Stable on x86.
 
   30 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> gonzui-1.2.ebuild:
   Add dev-lang/ocaml to DEPEND. gonzui needs ocamlc to index ocaml programs.
