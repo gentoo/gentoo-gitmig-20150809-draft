@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 64129d32a5af560915b1860817134cb7 extra-syntax-3.ebuild 908
 MD5 581ce1e8e5f6c6a5ba700576da24c368 extra-syntax-4.ebuild 901
 MD5 87eb58b955b352f74fbb25d4fcdff8ba extra-syntax-2.ebuild 879
@@ -6,3 +9,10 @@ MD5 e01819eb69473ee14483bee48945197c ChangeLog 1493
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDOy1iLLFUmVNQ7rkRAuogAJ4k8DTXi7GB07CiIxTGkic2h1mAqQCeN1cW
+69H0++fSa9wl/QsNRxAt/f4=
+=s8+W
+-----END PGP SIGNATURE-----
