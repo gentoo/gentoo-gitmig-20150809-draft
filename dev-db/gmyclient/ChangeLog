@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/gmyclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.10 2005/09/18 03:16:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/ChangeLog,v 1.11 2005/09/28 20:46:03 dragonheart Exp $
+
+  28 Sep 2005; Daniel Black <dragonheart@gentoo.org> gmyclient-0.3.ebuild:
+  giflib added as a dependancy - bug #107535 thanks federico
 
   18 Sep 2005; Jason Wever <weeve@gentoo.org> gmyclient-0.3.ebuild:
   Added ~sparc keyword.

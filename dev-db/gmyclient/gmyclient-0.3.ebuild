@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.15 2005/09/18 03:16:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.16 2005/09/28 20:46:03 dragonheart Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE="nls"
 
 DEPEND=">=gnome-base/gnome-libs-1.2
 		>=dev-db/mysql-3
-		=gnome-base/libglade-0*"
+		=gnome-base/libglade-0*
+		media-libs/giflib"
 
 src_unpack() {
 	unpack ${A}
@@ -24,12 +25,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable nls` || die "econf failed"
+	econf $(use_enable nls) || die "econf failed"
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "installed failed"
-	dodoc AUTHORS COPYING README
+	dodoc AUTHORS README
 	mv ${D}/usr/share/gmyclient/doc ${D}/usr/share/doc/${PF}/html
 }
