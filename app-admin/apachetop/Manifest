@@ -1,8 +1,14 @@
-MD5 f6ff73b07e6200015cf890cd5b2150f2 ChangeLog 3303
-MD5 7c24f70666f4ab80a7968850da5b9ce6 apachetop-0.11.ebuild 1033
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ae59afc3a444b95bceb4f44742ab5209 apachetop-0.12.5.ebuild 1000
-MD5 b5da4bf360971eda809f72ee392de6ac apachetop-0.12.ebuild 1058
+MD5 cd3f99def9543d896b7a058eed40486c ChangeLog 3421
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 fdecf3384b463c0f2b2d46f6417c7a69 files/digest-apachetop-0.11 66
-MD5 6e87f45d9828dcc07fc87b5f2c75d159 files/digest-apachetop-0.12 66
 MD5 946d0848d81bf273d4d8a0cf79667a31 files/digest-apachetop-0.12.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDOeQzEzitwsaoONoRAkgCAKCODnRjM18ildbFT8uqxNsGR49zVgCbBwVo
+L5iliq6szyNPzMRTFRXCIQk=
+=wMWe
+-----END PGP SIGNATURE-----
