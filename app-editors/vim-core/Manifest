@@ -1,8 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 30796cc7964dd0b94b574d5ce140f80a vim-core-7.0_alpha20050922.ebuild 754
 MD5 438b5a0d91e4f1dadecd8519aeae6e72 vim-core-6.3.084-r2.ebuild 1063
+MD5 e7b66fe07c7b3717ad04af3369ca4aee vim-core-7.0_alpha20050928.ebuild 766
 MD5 e3bd3fbd47b779a02d6977dc95fda06b vim-core-6.3.075.ebuild 1049
 MD5 fcc1e01f80bdca4b49cd8a54bbafe814 vim-core-6.3.068.ebuild 1046
 MD5 d508e596b3e60137b87bd13e79b547a3 vim-core-6.3.074.ebuild 1059
@@ -17,15 +15,9 @@ MD5 2ad354160ca3635ea115beb56e237e7c files/vimrc 3879
 MD5 516fcbe7fcdff28cd13524a3fc8b95eb files/digest-vim-core-7.0_alpha20050922 163
 MD5 c11f47ad5c2dec1ccb6e2d3806bea9bc files/digest-vim-core-6.3.086 425
 MD5 ba542e54d91a04a85435253ae35301b6 files/xxd-completion 461
+MD5 a65308105a0c09c0ec5cc1aea1b62264 files/digest-vim-core-7.0_alpha20050928 163
 MD5 9acf0e8856bbca4122ae7bdb9a33eed7 files/digest-vim-core-6.3.084-r2 425
 MD5 266f8b682476da0ec6c4d39de5a79264 files/vimrc-r1 5728
 MD5 49f34fea09c3041dba7daa3a6cb05c85 files/digest-vim-core-6.3.075 418
 MD5 c2d0302eae7fc80b2a1cb38ddab9d3d3 files/rphillips-invalcolorpatch.diff 722
 MD5 ee43986336dcd1bd970b36075692c1a1 files/digest-vim-core-6.3.068 418
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDMxfmLLFUmVNQ7rkRAtUaAJ91WcjY9VS73kIkSvygMDVgzOu9MgCfYdFk
-BnqzVsTQjEt4zwtKryHyv4Q=
-=254i
------END PGP SIGNATURE-----
