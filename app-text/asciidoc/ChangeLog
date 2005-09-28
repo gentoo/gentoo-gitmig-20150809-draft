@@ -1,6 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.16 2005/09/18 14:18:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.17 2005/09/28 08:19:12 iluxa Exp $
+
+  28 Sep 2005; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
+  asciidoc-7.0.1-r1.ebuild:
+  mark ~mips
 
   18 Sep 2005; Markus Rothe <corsair@gentoo.org> asciidoc-7.0.1-r1.ebuild:
   Added ~ppc64 (bug #106318)
