@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.5 2005/09/27 23:29:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.6 2005/09/28 04:05:36 kito Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -91,14 +91,6 @@ src_compile() {
 		$(tc-getCC) directfb-test.c -ldirectfb 2>/dev/null \
 			&& directfbconf="--enable-video-directfb" \
 			|| ewarn "Disabling DirectFB since libdirectfb.so is broken"
-	fi
-
-	if use ppc-macos ; then
-		append-flags -fno-common -undefined dynamic_lookup -framework OpenGL
-		# fix for gcc-apple >3.3
-		if [ -e libgcc_s.1.dylib ] ; then
-			append-ldflags -lgcc_s
-		fi
 	fi
 
 	myconf="${myconf} ${directfbconf}"
