@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.121 2005/09/22 19:45:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.122 2005/09/28 19:11:34 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -657,9 +657,9 @@ vim_pkg_postinst() {
 		fdo-mime_mime_database_update
 	fi
 
-	einfo
 	if [[ $(get_major_version ) -lt 7 ]] ; then
 		if [[ "${MY_PN}" == "gvim" ]] ; then
+			echo
 			einfo "To enable UTF-8 viewing, set guifont and guifontwide: "
 			einfo ":set guifont=-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1"
 			einfo ":set guifontwide=-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1"
@@ -670,6 +670,7 @@ vim_pkg_postinst() {
 			einfo "Then, set read encoding to UTF-8:"
 			einfo ":set encoding=utf-8"
 		elif [[ "${MY_PN}" == "vim" ]] ; then
+			echo
 			einfo "gvim has now a seperate ebuild, 'emerge gvim' will install gvim"
 		fi
 	else
@@ -679,15 +680,23 @@ vim_pkg_postinst() {
 			# explaining them.
 		elif [[ "${MY_PN}" == "vim" ]] ; then
 			echo
-			# TODO: once we have the GUIs working, display a message explaining
-			# them.
+			einfo "To install a GUI version of vim, use the app-editors/gvim"
+			einfo "package."
 		fi
+		echo
+		einfo "Vim 7 includes an integrated spell checker. You need to install"
+		einfo "word list files before you can use it. There are ebuilds for"
+		einfo "some of these named app-vim/vim-spell-*. If your language of"
+		einfo "choice is not included, please consult vim-spell.eclass for"
+		einfo "instructions on how to make a package."
+		ewarn
+		ewarn "Note that the English word lists are no longer installed by"
+		ewarn "default."
 	fi
-	einfo
 
 	if [[ "${MY_PN}" != "vim-core" ]] ; then
+		echo
 		einfo "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
-		einfo
 	fi
 
 	# Warn about VIMRUNTIME
@@ -697,16 +706,17 @@ vim_pkg_postinst() {
 		ewarn "installation.  You will need to either unset VIMRUNTIME in each"
 		ewarn "terminal, or log out completely and back in.  This problem won't"
 		ewarn "happen again since the ebuild no longer sets VIMRUNTIME."
-		ewarn
 	fi
 
 	# Scream loudly if the user is using a -cvs ebuild
 	if [[ -z "${PN/*-cvs/}" ]] ; then
+		ewarn
 		ewarn "You are using a -cvs ebuild. Be warned that this is not"
 		ewarn "officially supported and may not work."
-		ewarn " "
 		ebeep 5
 	fi
+
+	echo
 
 	if version_is_at_least 6.3.1 ; then
 		bash-completion_pkg_postinst
