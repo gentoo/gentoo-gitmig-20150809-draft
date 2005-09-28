@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r2.ebuild,v 1.3 2005/09/10 08:35:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r2.ebuild,v 1.4 2005/09/28 05:30:24 nerdboy Exp $
 
 inherit eutils
 
@@ -35,6 +35,8 @@ src_unpack() {
 	epatch ${FILESDIR}/configure-gcc-3.4.patch
 	epatch ${FILESDIR}/hylafax-hostvuln.patch
 	epatch ${FILESDIR}/${P}-faxmail-charset.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch ${FILESDIR}/hylafax-4.2-tmpdir.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1.ebuild,v 1.2 2005/08/12 07:39:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1.ebuild,v 1.3 2005/09/28 05:30:24 nerdboy Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 sparc ~hppa ~alpha ~amd64 ~ppc"
 
 DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=sys-libs/zlib-1.1.4
@@ -27,13 +27,19 @@ RDEPEND="${DEPEND}
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/hylafax-4.2-tmpdir.patch
+}
+
 src_compile() {
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
-		--with-DIR_LIB=/usr/lib
+		--with-DIR_LIB=/usr/$(get_libdir)
 		--with-DIR_LIBEXEC=/usr/sbin
-		--with-DIR_LIBDATA=/usr/lib/fax
+		--with-DIR_LIBDATA=/usr/$(get_libdir)/fax
 		--with-DIR_LOCKS=/var/lock
 		--with-DIR_MAN=/usr/share/man
 		--with-DIR_SPOOL=/var/spool/fax
@@ -67,7 +73,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,sbin} /usr/lib/fax /usr/share/man /var/spool /var/spool/recvq
+	dodir /usr/{bin,sbin} /usr/$(get_libdir)/fax /usr/share/man /var/spool /var/spool/recvq
 	fowners uucp:uucp /var/spool/fax
 	fperms 0600 /var/spool/fax
 	dodir /usr/share/doc/${P}/html
@@ -75,10 +81,10 @@ src_install() {
 	make \
 		BIN=${D}/usr/bin \
 		SBIN=${D}/usr/sbin \
-		LIBDIR=${D}/usr/lib \
-		LIB=${D}/usr/lib \
+		LIBDIR=${D}/usr/$(get_libdir) \
+		LIB=${D}/usr/$(get_libdir) \
 		LIBEXEC=${D}/usr/sbin \
-		LIBDATA=${D}/usr/lib/fax \
+		LIBDATA=${D}/usr/$(get_libdir)/fax \
 		MAN=${D}/usr/share/man \
 		SPOOL=${D}/var/spool/fax \
 		HTMLDIR=${D}/usr/share/doc/${P}/html \
