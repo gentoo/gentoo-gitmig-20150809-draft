@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.1 2005/09/28 18:27:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-spell.eclass,v 1.2 2005/09/28 19:13:13 ciaranm Exp $
 
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
@@ -24,16 +24,10 @@
 #   things. The vim herd will handle unmasking your spell packages when vim7
 #   comes out of package.mask.
 #
-# * Create the app-vim/vim-spell-${CODE} package. A sample ebuild will look
-#   something like (header removed):
-#
-#     VIM_SPELL_LANGUAGE="French"
-#
-#     inherit vim-spell
-#
-#     LICENSE="GPL-2"
-#     KEYWORDS="~sparc ~mips"
-#     IUSE=""
+# * Create the app-vim/vim-spell-${CODE} package. You should base your ebuild
+#   upon app-vim/vim-spell-en. You will need to change VIM_SPELL_LANGUAGE,
+#   KEYWORDS and LICENSE. Check the license carefully! The README will tell
+#   you what it is.
 #
 # * Don't forget metadata.xml. You should list vim as the herd, and yourself
 #   as the maintainer (there is no need to join the vim herd just for spell
