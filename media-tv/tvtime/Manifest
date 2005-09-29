@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 461fa690aaeed122104c5654d4b98714 ChangeLog 4629
 MD5 d19bb57e494a860d7ed0aaa7961d8406 metadata.xml 247
+MD5 013a7785e90003c22261a994e06146ca tvtime-0.9.12.ebuild 1284
 MD5 584e0127bcc058f665ecd1c5833c5929 tvtime-0.9.15.ebuild 1473
 MD5 1f96f671cfee328c5d95949ef1bea237 tvtime-0.99.ebuild 1393
-MD5 66c479aacdfd41c2a63716326fb468e8 tvtime-0.9.10-r1.ebuild 1552
-MD5 1d3b8e634e0cbddd9c26bf9467279f45 ChangeLog 4461
-MD5 013a7785e90003c22261a994e06146ca tvtime-0.9.12.ebuild 1284
+MD5 8476949ca4ef9c07c35153ea05418869 tvtime-1.0.1.ebuild 1392
+MD5 352d39fb5ee53bdb9ea901579c0d7b9d files/digest-tvtime-0.9.12 66
+MD5 da73995bcdbdc131e5bf2864d5e3b85f files/digest-tvtime-0.9.15 66
 MD5 3284a56b7388007a53ad0a907bda2b40 files/digest-tvtime-0.99 64
 MD5 f868d4bcfd4c67150a6b209d3cddf1b6 files/tvtime-0.9.10-make.patch 4489
 MD5 ee506c523f1880bb929e7e5f25d4fe6b files/tvtime-pic.patch 248
-MD5 da73995bcdbdc131e5bf2864d5e3b85f files/digest-tvtime-0.9.15 66
-MD5 352d39fb5ee53bdb9ea901579c0d7b9d files/digest-tvtime-0.9.12 66
-MD5 e6cc6888101a6d0b8c9d1ae128b68e7a files/digest-tvtime-0.9.10-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJkU5gIKl8Uu19MoRAmu3AJ49QjGShku0V7X1MBM4ytT+sTjYdwCfQCKv
-4MfaElpkJj1m6y0uOKXjWJE=
-=6PL7
------END PGP SIGNATURE-----
+MD5 41a4847d5d361629e869a31052331e3c files/digest-tvtime-1.0.1 65
