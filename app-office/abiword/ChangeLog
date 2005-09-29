@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.133 2005/09/28 23:21:51 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.134 2005/09/29 16:21:52 ferdy Exp $
+
+  29 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> abiword-2.2.10.ebuild:
+  stable on alpha wrt bug #107351
 
   28 Sep 2005; Paul Varner <fuzzyray@gentoo.org> abiword-2.2.10.ebuild:
   Stable on x86. Builds and appears to work fine. Bug# 107351
