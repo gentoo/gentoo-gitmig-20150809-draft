@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1477 2005/09/28 22:34:04 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1478 2005/09/29 00:06:31 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -530,6 +530,7 @@ media-gfx/ufraw:gimp - Build a plugin for the GIMP
 media-gfx/xsane:gimp - Build a plugin for the GIMP
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/gd:fontconfig - Enable support for managing custom fonts via fontconfig
+media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
