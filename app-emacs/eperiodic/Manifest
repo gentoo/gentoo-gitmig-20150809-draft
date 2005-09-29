@@ -1,5 +1,5 @@
-MD5 60d6f8e0904fe40dd9b73603464f5ccd ChangeLog 512
-MD5 39018f0404f04608776ec1a78e0e9032 eperiodic-1.26.ebuild 507
+MD5 e0418fed17a5952c4fde0fbc2029f898 ChangeLog 597
+MD5 997cf1df134ca50f6b7f7d23b7f42a67 eperiodic-1.26.ebuild 510
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 17d4f92819a8b8b84b82fddc6847ddf2 files/50eperiodic-gentoo.el 190
 MD5 a8c455c0fa83882de18e7e3f16ee55d6 files/digest-eperiodic-1.26 66

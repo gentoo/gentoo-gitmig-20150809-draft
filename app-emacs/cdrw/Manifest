@@ -1,5 +1,5 @@
-MD5 7217e66da58e1bdd1d1eccf8bf0d3100 ChangeLog 472
-MD5 280a973482153a3160e88e569d8e67ad cdrw-1.2.ebuild 995
+MD5 4e6ec1c542ed4914725e42f5f5c65364 ChangeLog 551
+MD5 da8958832d312f294babc34b6ec224bf cdrw-1.2.ebuild 998
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 f9728854da0dbae2d82fa65577d0ba16 files/50cdrw-gentoo.el 443
 MD5 5246abf2a7779ebedff9cdd5038c4dc7 files/digest-cdrw-1.2 59
