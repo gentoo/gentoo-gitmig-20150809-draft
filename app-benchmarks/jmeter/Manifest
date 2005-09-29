@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 8843e93331b00587a638dff7772c018e jmeter-2.0.1.ebuild 1171
 MD5 c78d91516071b671b44a5038d9aa774a jmeter-1.9.1.ebuild 1058
 MD5 945190a7504cc63b1f32b6a62aabcddc ChangeLog 3533
-MD5 8843e93331b00587a638dff7772c018e jmeter-2.0.1.ebuild 1171
-MD5 f25e15c2c56158951e55bc55117b3bad jmeter-2.0.1-r1.ebuild 1946
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a62f7266e5fa7c30d2b82af95a3fea55 files/digest-jmeter-1.9.1 74
 MD5 93ea369264f1330ccbcbe9b6b2da7424 files/digest-jmeter-2.0.1 74
-MD5 93ea369264f1330ccbcbe9b6b2da7424 files/digest-jmeter-2.0.1-r1 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDwvMj5H05b2HAEkRAjpTAKCSBsFglb49gXxa8VfJ7ObRA8Ho+QCfV+ps
-hu8jQs6vAqv7n37xgJyxGyc=
-=mlAH
+iD8DBQFDO/u+/rLF9B432nYRArB0AJ4gxIruT5E/rFUp8kgcYASswNlVVACeMBfl
+dpp5MXAD9AyUncb0MCKqvUE=
+=qpmw
 -----END PGP SIGNATURE-----
