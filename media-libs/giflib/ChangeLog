@@ -1,11 +1,12 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.26 2005/09/29 00:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.27 2005/09/29 10:02:46 vapier Exp $
 
 *giflib-4.1.3-r2 (29 Sep 2005)
 
   29 Sep 2005; Mike Frysinger <vapier@gentoo.org> +giflib-4.1.3-r2.ebuild:
-  Make sure we control X11/GL/rle dependencies via USE #107497.
+  Make sure we control X11/rle dependencies via USE #107497.  Force disable
+  opengl since the GL tools need fixing #107551.
 
   23 Jul 2005; Mike Frysinger <vapier@gentoo.org> giflib-4.1.3-r1.ebuild:
   Fix typo in blocker #99977 by Noe.
