@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.18.ebuild,v 1.2 2005/08/22 16:34:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.18.ebuild,v 1.3 2005/09/29 01:59:06 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
@@ -82,7 +82,7 @@ src_test() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc ChangeLog INSTALL NEWS README THANKS TODO VERSION
+	dodoc ChangeLog NEWS README THANKS TODO VERSION
 
 	if ! use caps ; then
 		fperms u+s,go-r /usr/bin/gpg2

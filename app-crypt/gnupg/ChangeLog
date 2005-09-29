@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.132 2005/09/19 19:16:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.133 2005/09/29 01:59:06 vanquirius Exp $
+
+  29 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> gnupg-1.2.6.ebuild,
+  gnupg-1.4.1.ebuild, gnupg-1.4.1-r1.ebuild, gnupg-1.4.2-r1.ebuild,
+  gnupg-1.4.2-r2.ebuild, gnupg-1.9.18.ebuild, gnupg-1.9.19.ebuild:
+  Do not dodoc INSTALL.
 
 *gnupg-1.9.19 (19 Sep 2005)
 

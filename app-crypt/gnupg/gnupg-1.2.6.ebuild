@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.25 2005/08/03 11:48:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.26 2005/09/29 01:59:06 vanquirius Exp $
 
 inherit eutils flag-o-matic
 
@@ -97,7 +97,7 @@ src_install() {
 	# keep the documentation in /usr/share/doc/...
 	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
 
-	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS PROJECTS README THANKS \
+	dodoc AUTHORS BUGS ChangeLog NEWS PROJECTS README THANKS \
 		TODO VERSION doc/{FAQ,HACKING,DETAILS,ChangeLog,OpenPGP,faq.raw}
 
 	use idea && dodoc ${S}/cipher/idea.c
