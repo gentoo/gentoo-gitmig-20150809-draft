@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/PEAR-Mail-1.1.6-r1.ebuild,v 1.3 2005/09/11 18:43:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/PEAR-Mail-1.1.9.ebuild,v 1.1 2005/09/29 11:32:58 sebastian Exp $
 
 inherit php-pear-r1
 
