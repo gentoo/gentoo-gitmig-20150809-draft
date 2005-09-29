@@ -1,0 +1,21 @@
+--- wtf/acronyms
++++ wtf/acronyms
+@@ -64,2 +64,3 @@
+ FCFS	first come first served
++FFS	for fuck's sake
+ FIGJAM	fuck I'm good, just ask me
+@@ -151,4 +151,5 @@
+ OIC	oh, I see
+ OMG	oh, my god
++OOB	out of bounds
+ OT	off topic
+ OTL	out to lunch
+@@ -163,3 +164,3 @@
+ PNP	plug and pray
+-POC	point of contact
++POC	point of contact / proof of concept
+ POLA	principle of least astonishment
+@@ -231,2 +232,3 @@
+ U/L	upload
++UNF	universal noise of fucking
+ UTSL	use the source, Luke

@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/wtf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/ChangeLog,v 1.9 2005/08/01 18:33:02 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/ChangeLog,v 1.10 2005/09/29 08:03:46 vapier Exp $
+
+*wtf-20050505-r1 (29 Sep 2005)
+
+  29 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wtf-20050505-updates.patch, +wtf-20050505-r1.ebuild:
+  Add some more useful definitions.
 
   01 Aug 2005; Lina Pezzella <j4rg0n@gentoo.org> wtf-20050505.ebuild:
   Stable ppc-macos
