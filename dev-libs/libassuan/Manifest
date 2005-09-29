@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c62e64aed0d05b04730a73c2b33cfb8 libassuan-0.6.9.ebuild 650
-MD5 b8752f95a8c787f0b1d1555cdd072f39 libassuan-0.6.10.ebuild 659
-MD5 1ba43f7dcca70d7dca5a04109a65e8be ChangeLog 2381
+MD5 d92a5aefb4dc6fcfda88c46fa8f2c053 libassuan-0.6.9.ebuild 644
+MD5 d0ea062119f514bc04274b9a0a35cd26 libassuan-0.6.10.ebuild 650
+MD5 238189d489499845c08ab1d4e7acbf9b ChangeLog 2511
 MD5 b1a4c3f100342f9335a6974737f5e5ec metadata.xml 872
 MD5 c821d962fcc031a8a7a1bcc14c3f6e10 files/digest-libassuan-0.6.10 68
 MD5 47b669d380236521b14ebaa0a9972533 files/digest-libassuan-0.6.9 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLsT1KRy60XGEcJIRAgL4AJ9tddY2bTUybms1iE3FnQkn1UNbBQCfVHlP
-y86Tuo4WgF//N5t2tZ38xC0=
-=43QB
------END PGP SIGNATURE-----
