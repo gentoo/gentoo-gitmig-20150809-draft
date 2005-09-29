@@ -1,0 +1,60 @@
+http://bugs.gentoo.org/106105
+
+--- util/texindex.c
++++ util/texindex.c
+@@ -99,6 +99,9 @@ long nlines;
+ /* Directory to use for temporary files.  On Unix, it ends with a slash.  */
+ char *tempdir;
+ 
++/* Basename for temp files inside of tempdir.  */
++char *tempbase;
++
+ /* Number of last temporary file.  */
+ int tempcount;
+ 
+@@ -190,6 +193,11 @@ main (int argc, char **argv)
+ 
+   decode_command (argc, argv);
+ 
++  /* XXX mkstemp not appropriate, as we need to have somewhat predictable
++   * names. But race condition was fixed, see maketempname. 
++   */
++  tempbase = mktemp ("txidxXXXXXX");
++
+   /* Process input files completely, one by one.  */
+ 
+   for (i = 0; i < num_infiles; i++)
+@@ -392,21 +400,21 @@ For more information about these matters
+ static char *
+ maketempname (int count)
+ {
+-  static char *tempbase = NULL;
+   char tempsuffix[10];
+-
+-  if (!tempbase)
+-    {
+-      int fd;
+-      tempbase = concat (tempdir, "txidxXXXXXX");
+-
+-      fd = mkstemp (tempbase);
+-      if (fd == -1)
+-        pfatal_with_name (tempbase);
+-    }
++  char *name, *tmp_name;
++  int fd;
+ 
+   sprintf (tempsuffix, ".%d", count);
+-  return concat (tempbase, tempsuffix);
++  tmp_name = concat (tempdir, tempbase);
++  name = concat (tmp_name, tempsuffix);
++  free(tmp_name);
++
++  fd = open (name, O_CREAT|O_EXCL|O_WRONLY, 0600);
++  if (fd == -1)
++    pfatal_with_name (name);
++
++  close(fd);
++  return name;
+ }
+ 
+ 
