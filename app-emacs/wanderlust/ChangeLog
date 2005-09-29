@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.41 2005/08/28 02:19:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.42 2005/09/29 08:08:30 usata Exp $
+
+  29 Sep 2005; Mamoru KOMACHI <usata@gentoo.org> files/70wl-gentoo.el,
+  -wanderlust-2.14.0.ebuild, wanderlust-2.14.0-r1.ebuild:
+  Stable on x86. Fixed incorrect load-path in 70wl-gentoo.el; bug #106559.
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org>
   wanderlust-2.14.0-r1.ebuild:
