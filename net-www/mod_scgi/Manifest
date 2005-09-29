@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3af536f32ac0d8c79fad0f36b60ad03c mod_scgi-1.2_alpha1-r2.ebuild 3003
-MD5 bbca58910d5432389ebc547695ba7beb mod_scgi-1.2_alpha2.ebuild 3006
-MD5 e944b7fb2a1ed3eb7d439e2a9888c3f0 mod_scgi-1.2_alpha1-r1.ebuild 2761
-MD5 3f4a8c76b6f207aea5bf0da86e5a3865 mod_scgi-1.2.ebuild 1011
-MD5 548bca4f2f846aea8479ed4a59227db2 mod_scgi-1.2_alpha1.ebuild 1122
 MD5 7510fab6a1f780f9c086db280c6a5df1 ChangeLog 1993
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-mod_scgi-1.2_alpha1 61
-MD5 7ec590d1ee6da7b63a722808c6758ee7 files/digest-mod_scgi-1.2_alpha2 61
+MD5 99a5294d5f067977521b6148d7b32a47 mod_scgi-1.2_alpha1-r1.ebuild 2990
+MD5 1f4f1fff6b5890418a41b67f7646cd4d mod_scgi-1.2_alpha1-r2.ebuild 3232
+MD5 548bca4f2f846aea8479ed4a59227db2 mod_scgi-1.2_alpha1.ebuild 1122
+MD5 d5dbfda0fedc8029d0428c03d8a4a096 mod_scgi-1.2_alpha2.ebuild 3235
+MD5 3f4a8c76b6f207aea5bf0da86e5a3865 mod_scgi-1.2.ebuild 1011
 MD5 98c270edf79608cb914cbc7d6ffea7b0 files/20_mod_scgi.conf 1243
+MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-mod_scgi-1.2_alpha1 61
 MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-mod_scgi-1.2_alpha1-r1 61
 MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-mod_scgi-1.2_alpha1-r2 61
+MD5 7ec590d1ee6da7b63a722808c6758ee7 files/digest-mod_scgi-1.2_alpha2 61
 MD5 7092d8881e1387d40515b82e1c4e9afb files/digest-mod_scgi-1.2 59
 MD5 c9efe9ec123cff4add21c35d7bbcdeb9 files/1.2/20_mod_scgi.conf 1245
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1uzKBXaUFmZvwyMRAgCCAKDaZNZC12vPQ40bTK3wfVa5wfeUYACgxqnP
-QVKEE40ny36jC4hMMhQ2h6w=
-=Ad9A
------END PGP SIGNATURE-----
