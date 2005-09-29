@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/conky-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/ChangeLog,v 1.3 2005/09/29 09:47:21 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/ChangeLog,v 1.4 2005/09/29 16:12:16 slarti Exp $
+
+  29 Sep 2005; Tom Martin <slarti@gentoo.org> conky-syntax-20050923.ebuild:
+  Marked ~amd64, bug #107549.
 
   29 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
   conky-syntax-20050923.ebuild:
