@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.146 2005/09/25 12:30:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.147 2005/09/29 21:37:55 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -259,17 +259,20 @@ if [[ ${ETYPE} == sources ]]; then
 					  >=sys-devel/binutils-2.11.90.0.31 )
 			doc? ( app-text/docbook-sgml-utils
 				   app-text/xmlto )"
+
 	kernel_is ge 2 6 13 && \
 		DEPEND="${DEPEND}
-			sys-fs/udev"
-	RDEPEND="${DEPEND}
-			!build? ( >=sys-libs/ncurses-5.2
-					  sys-devel/make )"
+				!sys-fs/devfsd"
+
+	RDEPEND="!build? ( >=sys-libs/ncurses-5.2
+			           sys-devel/make )
+			 virtual/dev-manager"
 
 	PROVIDE="virtual/linux-sources"
 	kernel_is gt 2 4 && PROVIDE="${PROVIDE} virtual/alsa"
+
 	SLOT="${PVR}"
-	DESCRIPTION="Sources for the Linux kernel"
+	DESCRIPTION="Sources for the ${KV_MAJOR}.${KV_MINOR} linux kernel"
 	IUSE="symlink build doc"
 elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
