@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.185 2005/09/29 16:18:52 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.186 2005/09/29 16:22:35 hardave Exp $
+
+  29 Sep 2005; Hardave Riar <hardave@gentoo.org>
+  kdegraphics-3.3.2-r3.ebuild:
+  Stable on mips, bug #100263.
 
   29 Sep 2005; Hardave Riar <hardave@gentoo.org>
   kdegraphics-3.4.1-r1.ebuild:
