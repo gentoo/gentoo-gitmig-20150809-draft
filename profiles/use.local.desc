@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1478 2005/09/29 00:06:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1479 2005/09/29 05:58:43 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -133,6 +133,7 @@ app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
 app-shells/scsh-install-lib:scsh - Use a non-FHS directory layout.
 app-shells/scsh:scsh - Use a non-FHS directory layout.
+app-shells/shish:diet - Use dietlibc
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/acroread:noplugin - Do not install the acroread browser plugin
 app-text/crm114:mew - Add support for using the mewdecode mime decoder.
