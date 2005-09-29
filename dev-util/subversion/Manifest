@@ -1,15 +1,25 @@
-MD5 7245694bac46182ed3aadfb5e7427ca4 ChangeLog 31122
-MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cfa59c9afda5a7c452c5bd40ff432279 subversion-1.1.3.ebuild 11416
-MD5 d1b4be21029db212c0c4e6f9bbc33248 subversion-1.2.3-r1.ebuild 10847
 MD5 cc25172d7426868a71c4839570ed71ab subversion-1.2.3.ebuild 11779
-MD5 dc8ba46b50a61d868eb76f524c212381 files/vc-svn.el 16847
-MD5 4fd39b311d09602c93a9ff0aceaf8596 files/70svn-gentoo.el 136
-MD5 b8146e2661f55257aef6d41e79897b63 files/subversion-1.1.1-perl-vendor.patch 713
-MD5 ce6f3698724b55cf49e647727207cca5 files/subversion-db4.patch 563
+MD5 5202c634e439ee53e382d31ae7d43df8 subversion-1.2.3-r1.ebuild 10846
+MD5 3a2241ab8b558f599106c83e897a29b5 ChangeLog 31223
+MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
+MD5 1c207179f5bf0b148528312cbc37632d files/digest-subversion-1.1.3 70
+MD5 4cdbf1f8636cd0a207ae87228b6f412b files/digest-subversion-1.2.3 70
 MD5 8de1f6e76dcb072171a09aaba2fd3b2b files/svnserve.confd 323
 MD5 7d95a67c28ea2a5c204628d5104c1427 files/svnserve.initd 817
 MD5 196636ccd0b2c9a8903c7d6a0a356153 files/svnserve.xinetd 329
-MD5 1c207179f5bf0b148528312cbc37632d files/digest-subversion-1.1.3 70
-MD5 4cdbf1f8636cd0a207ae87228b6f412b files/digest-subversion-1.2.3 70
+MD5 b8146e2661f55257aef6d41e79897b63 files/subversion-1.1.1-perl-vendor.patch 713
 MD5 4cdbf1f8636cd0a207ae87228b6f412b files/digest-subversion-1.2.3-r1 70
+MD5 dc8ba46b50a61d868eb76f524c212381 files/vc-svn.el 16847
+MD5 4fd39b311d09602c93a9ff0aceaf8596 files/70svn-gentoo.el 136
+MD5 ce6f3698724b55cf49e647727207cca5 files/subversion-db4.patch 563
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO9oFViELBEf1JB0RAjBdAJ9EIBsKwxNXi82KZn+xly76wz7SIACeKsDZ
+FnvJwTZrS8M0Ya6kJjCqqJk=
+=A33I
+-----END PGP SIGNATURE-----
