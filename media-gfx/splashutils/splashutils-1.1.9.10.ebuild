@@ -1,16 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6-r1.ebuild,v 1.6 2005/07/08 23:31:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10.ebuild,v 1.1 2005/09/29 08:47:37 spock Exp $
 
-inherit multilib linux-mod
+inherit eutils multilib linux-mod
 
 MISCSPLASH="miscsplashutils-0.1.3"
-GENTOOSPLASH="splashutils-gentoo-0.1.10"
-V_KLIBC="1.0.8"
+GENTOOSPLASH="splashutils-gentoo-0.1.14"
 V_JPEG="6b"
 V_PNG="1.2.8"
-V_ZLIB="1.2.1"
+V_ZLIB="1.2.3"
 V_FT="2.1.9"
+
+ZLIBSRC="libs/zlib-${V_ZLIB}"
+LPNGSRC="libs/libpng-${V_PNG}"
+JPEGSRC="libs/jpeg-${V_JPEG}"
+FT2SRC="libs/freetype-${V_FT}"
 
 IUSE="hardened png truetype kdgraphics"
 
@@ -22,14 +26,11 @@ SRC_URI="mirror://gentoo/${PN}-lite-${PV}.tar.bz2
 	 mirror://sourceforge/libpng/libpng-${V_PNG}.tar.bz2
 	 ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v${V_JPEG}.tar.gz
 	 mirror://sourceforge/freetype/freetype-${V_FT}.tar.bz2
-	 http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/klibc-${V_KLIBC}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Stable/klibc-${V_KLIBC}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/klibc-${V_KLIBC}.tar.bz2"
+	 http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~x86 ~amd64 ~ppc"
 RDEPEND="truetype? ( >=media-libs/freetype-2 )
 	png? ( >=media-libs/libpng-1.2.7 )
 	>=media-libs/jpeg-6b
@@ -37,7 +38,8 @@ RDEPEND="truetype? ( >=media-libs/freetype-2 )
 	!media-gfx/bootsplash
 	media-gfx/fbgrab"
 DEPEND="${RDEPEND}
-	virtual/linux-sources"
+	virtual/linux-sources
+	>=dev-libs/klibc-1.0.14-r1"
 
 S="${WORKDIR}/${P/_/-}"
 SG="${WORKDIR}/${GENTOOSPLASH}"
@@ -48,7 +50,7 @@ pkg_setup() {
 		ewarn "Due to problems with klibc, it is currently impossible to compile splashutils"
 		ewarn "with 'hardened' GCC flags. As a workaround, the package will be compiled with"
 		ewarn "-fno-stack-protector. Hardened GCC features will not be used while building"
-		ewarn "the fbsplash kernel helper."
+		ewarn "the splash kernel helper."
 	fi
 }
 
@@ -70,18 +72,20 @@ spl_conf_use() {
 	fi
 }
 
+pkg_setup() {
+	check_kernel_built
+}
+
 src_unpack() {
 	unpack ${A}
-	ln -s ${KERNEL_DIR} ${S}/linux
+	ln -s ${KV_DIR} ${S}/linux
 
-	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT},klibc-${V_KLIBC}} ${S}/libs
-	ln -s ../../linux ${S}/libs/klibc-${V_KLIBC}/linux
+	mv ${WORKDIR}/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} ${S}/libs
 	# We need to delete the Makefile and let it be rebuilt when splashutils
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
-
-	check_kernel_built
+	cd ${S}
 
 	# Check whether the kernel tree has been patched with fbsplash.
 	if [[ ! -e ${KV_DIR}/include/linux/console_splash.h ]]; then
@@ -95,40 +99,43 @@ src_unpack() {
 		spl_conf yes CONFIG_FBSPLASH
 	fi
 
-	# This should make splashutils compile on systems with hardened GCC.
-	sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
-	sed -e 's@CFLAGS  =@CFLAGS  = -fno-stack-protector@' -i ${S}/libs/klibc-${V_KLIBC}/klibc/MCONFIG
+	if built_with_use sys-devel/gcc vanilla ; then
+		ewarn "Your GCC was built with the 'vanilla' flag set. If you can't compile"
+		ewarn "splashutils, you're on your own, as this configuration is not supported."
+	else
+		# This should make splashutils compile on systems with hardened GCC.
+		sed -e 's@K_CFLAGS =@K_CFLAGS = -fno-stack-protector@' -i ${S}/Makefile
+	fi
 
 	mkdir ${S}/kernel
 
 	# Use tty16 as the default silent tty.
 	sed -i -e 's/#define TTY_SILENT.*/#define TTY_SILENT 16/' ${S}/splash.h
 
-	sed -i -e 's#/usr/bin/openvt -fc ${TTY}#/usr/bin/openvt -c ${TTY} echo -n ""#' ${SG}/init-splash
+	if ! use truetype ; then
+		sed -i -e 's/fbtruetype kbd/kbd/' ${SM}/Makefile
+	fi
 }
 
 src_compile() {
-	local miscincs
-
-	if [ -n "${KBUILD_OUTPUT}" ]; then
-		miscincs="-I${T} -I${KBUILD_OUTPUT}/include"
-	fi
-
 	spl_conf_use png CONFIG_PNG
 	spl_conf_use truetype CONFIG_TTF
 	spl_conf_use truetype CONFIG_TTF_KERNEL
 	spl_conf_use kdgraphics CONFIG_SILENT_KD_GRAPHICS
 	sed -i -e "s/^CFLAGS[ \t]*=.*/CFLAGS = ${CFLAGS}/" Makefile
-	emake -j1 MISCINCS="${miscincs}" || die "failed to build splashutils"
 
 	cd ${SM}
 	emake LIB=$(get_libdir) || die "failed to build miscsplashutils"
+	cd ${S}
+	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
+	emake -j1 LIB=$(get_libdir) || die "failed to build splashutils"
 }
 
 src_install() {
 	cd ${SM}
 	make DESTDIR=${D} install || die
 
+	export ZLIBSRC LPNGSRC JPEGSRC FT2SRC
 	cd ${S}
 	make DESTDIR=${D} install || die
 
@@ -143,6 +150,9 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${SG}/init-splash splash
+
+	insinto /usr/share/${PN}
+	doins ${SG}/initrd.splash
 
 	insinto /sbin
 	doins ${SG}/splash-functions.sh
@@ -159,6 +169,7 @@ src_install() {
 pkg_postinst() {
 	ebegin "Checking whether /dev/tty1 is in place"
 	mount --bind / ${T}
+
 	if [[ ! -c ${T}/dev/tty1 ]]; then
 		eend 1
 		ewarn "It appears that the /dev/tty1 character device doesn't exist on"
@@ -167,28 +178,34 @@ pkg_postinst() {
 		ewarn "  mount --bind / /lib/splash/tmp"
 		ewarn "  mknod /lib/splash/tmp/dev/tty1 c 4 1"
 		ewarn "  umount /lib/splash/tmp"
+		echo ""
 	else
 		eend 0
 	fi
 	umount ${T}
 
+	if has_version sys-fs/devfsd || ! has_version sys-fs/udev ; then
+		ewarn "This package has been designed with udev in mind. Other solutions, such as"
+		ewarn "devfs or a static /dev tree might work, but are generally discouraged and"
+		ewarn "not supported. If you decice to switch to udev, you might want to have a"
+		ewarn "look at 'The Gentoo udev Guide', which can be found at"
+		ewarn "  http://www.gentoo.org/doc/en/udev-guide.xml"
+		echo ""
+	fi
+
+	ewarn "If you're upgrading from a pre-1.0 splashutils version, make sure that you"
+	ewarn "rebuild your initrds. You can use the splash_geninitramfs script to do that."
 	echo ""
-	ewarn "Due to a change in the splash protocol you will have to rebuild"
-	ewarn "all initrds created with splashutils < 1.1.9. This can be done"
-	ewarn "with the splash_geninitramfs script."
-	echo ""
-	ewarn "It is required that you add 'CONSOLE=/dev/tty1', to make sure all"
-	ewarn "init messages are printed to the first tty, and not the foreground one."
-	ewarn "It is advised that you add 'quiet' as an additional, standalone"
-	ewarn "parameter to suppress non-critical kernel messages."
+	ewarn "It is required that you add 'console=tty1' to your kernel"
+	ewarn "command line parameters."
 	echo ""
 	einfo "After these modifications, the relevant part of the kernel command"
 	einfo "line might look like:"
-	einfo "    splash=silent,fadein,theme:emergence quiet CONSOLE=/dev/tty1"
+	einfo "  splash=silent,fadein,theme:emergence console=tty1"
 	echo ""
 	einfo "The sample Gentoo themes (emergence, gentoo) have been removed from the"
 	einfo "core splashutils package. To get some themes you might want to emerge:"
-	einfo "    media-gfx/splash-themes-livecd"
-	einfo "    media-gfx/splash-themes-gentoo"
+	einfo "  media-gfx/splash-themes-livecd"
+	einfo "  media-gfx/splash-themes-gentoo"
 	echo ""
 }
