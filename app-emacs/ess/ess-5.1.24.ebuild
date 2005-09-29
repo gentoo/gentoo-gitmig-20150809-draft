@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.1.24.ebuild,v 1.7 2005/01/01 13:45:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.1.24.ebuild,v 1.8 2005/09/29 09:27:23 usata Exp $
 
 inherit elisp
 
@@ -45,7 +45,7 @@ src_install() {
 	doins ${S}/doc/ess-intro.pdf
 	insinto /usr/share/doc/${P}/examples
 	doins ${S}/etc/function-outline.S
-	cp -Rf ${S}/etc/other/S-spread ${D}/usr/share/doc/${P}/examples
+	cp -pPR ${S}/etc/other/S-spread ${D}/usr/share/doc/${P}/examples
 }
 
 pkg_postinst() {
