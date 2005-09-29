@@ -1,6 +1,20 @@
-MD5 2edd284deac0f95f480f174f871a8a28 ChangeLog 1630
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0aedd8901d9398b9269fae505a250c8f ChangeLog 1832
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 c86de0114e14bb899e314af7a16f28a6 soya-0.9.1.ebuild 1238
 MD5 9395012f8845529f96ea13b3f9bf6a88 soya-0.9.2.ebuild 1260
+MD5 d697c3fd7266c25e0aeeb296c09ff5e2 soya-0.10.1.ebuild 2765
+MD5 1d82441037a359ae9f15cc9289efc234 soya-0.10.ebuild 2685
 MD5 ce7ebbfababcb0bf12631502c229319d files/digest-soya-0.9.1 63
 MD5 138fe892cff3c70621ac7189ede6a5bc files/digest-soya-0.9.2 64
+MD5 b4b649c31b7108c03468e3c6a06dd082 files/digest-soya-0.10.1 138
+MD5 1d7d0f2ab0a31243830102f1d11c59b6 files/digest-soya-0.10 134
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPHJsKf2g/qXtneoRAhpEAJ9CruGee0uKJZUST20IqKbHvfwJrQCfcZn4
+GZ/BOM/KKdySWYjcVM+z/a8=
+=GV3w
+-----END PGP SIGNATURE-----

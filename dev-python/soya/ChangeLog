@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.11 2005/03/12 02:21:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.12 2005/09/29 23:01:42 kloeri Exp $
+
+*soya-0.10.1 (29 Sep 2005)
+*soya-0.10 (29 Sep 2005)
+
+  29 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> +soya-0.10.ebuild,
+  +soya-0.10.1.ebuild:
+  New versions, ebuilds by Arc Riley <arc@xiph.org>.
 
   12 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> -soya-0.5.ebuild,
   -soya-0.6.1.ebuild, -soya-0.8.1.ebuild, -soya-0.8.2.ebuild,
