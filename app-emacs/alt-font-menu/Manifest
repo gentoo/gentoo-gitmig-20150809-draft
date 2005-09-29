@@ -1,5 +1,15 @@
-MD5 a9558aa751abc10affd0ab7e70670750 alt-font-menu-0.4.ebuild 593
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0695ff8710f1424d65fd97bfd6de003b ChangeLog 1102
+MD5 0398511aaad2cba10e8a10a5925cd331 alt-font-menu-0.4.ebuild 590
 MD5 f21574e693de4e6bec7f94b72e7ea13a metadata.xml 432
-MD5 08aa7d8e0dd392fc03737d8e7eee422d ChangeLog 1008
-MD5 67a4efb98ff441bb697eb234c353805d files/50alt-font-menu-gentoo.el 237
 MD5 1bc2bcf0a856f4afe0de193475d14605 files/digest-alt-font-menu-0.4 67
+MD5 67a4efb98ff441bb697eb234c353805d files/50alt-font-menu-gentoo.el 237
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3a9csIHjyDViGQRAoPUAKDoOMltJuFt7gteRMHr6AAJ2g1jxACgynrE
+n4OjORaFYlh0QHyzELeR5a8=
+=ecSY
+-----END PGP SIGNATURE-----
