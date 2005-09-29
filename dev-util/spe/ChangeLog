@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.17 2005/06/20 12:23:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.18 2005/09/29 20:35:22 kloeri Exp $
+
+*spe-0.7.5c (29 Sep 2005)
+
+  29 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
+  +files/spe-wxversion.patch, +spe-0.7.5c.ebuild:
+  Bump to latest version, wxversion patch by Rob Cakebread
+  <pythonhead@gentoo.org>.
 
   20 Jun 2005; Jason Wever <weeve@gentoo.org> spe-0.7.3a.ebuild:
   Added ~sparc keyword.

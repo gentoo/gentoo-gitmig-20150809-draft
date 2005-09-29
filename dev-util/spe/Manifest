@@ -1,23 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2ed34f78ea17c47246390cb63bf915a7 ChangeLog 2198
-MD5 666d9771d3bb00e2801ad24e472ec7d3 files/digest-spe-0.5.1a 82
-MD5 d7b222aad27177169608286ea0e18ac9 files/digest-spe-0.5.1d 82
-MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.5.1f 82
-MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.7.1a 82
-MD5 f4455c7c456733c72a20607cd8fd816c files/digest-spe-0.7.3a 79
-MD5 84b0a8b787ec8c3b89836eb571eda5f9 files/spe_setup.patch 277
+MD5 7a264ed937ae2de71d70b6959a85c4ee ChangeLog 2416
 MD5 6ebeaaff1d72f4b710a98339cbf235fc metadata.xml 372
 MD5 8527d184a4526c21f70121beeb67a663 spe-0.5.1a.ebuild 1092
 MD5 87cad5a12aa85e82e81660fdda67e8ed spe-0.5.1d.ebuild 1540
 MD5 d3c2b48e745d650ba5071fb056c763ed spe-0.5.1f.ebuild 1662
 MD5 1489276d327666c728696f3d4dd0d6e0 spe-0.7.1a.ebuild 1663
 MD5 b304e15e9d9a178d5339c40b3ae196fb spe-0.7.3a.ebuild 1625
+MD5 1d1dfd37be217c2b19a0256179163f28 spe-0.7.5c.ebuild 1553
+MD5 666d9771d3bb00e2801ad24e472ec7d3 files/digest-spe-0.5.1a 82
+MD5 d7b222aad27177169608286ea0e18ac9 files/digest-spe-0.5.1d 82
+MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.5.1f 82
+MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.7.1a 82
+MD5 f4455c7c456733c72a20607cd8fd816c files/digest-spe-0.7.3a 79
+MD5 84b0a8b787ec8c3b89836eb571eda5f9 files/spe_setup.patch 277
+MD5 4fd2cfdfd8c5bd78ead70447170c95ba files/spe-wxversion.patch 214
+MD5 12fe3da8220d813faf70e795be8100b0 files/digest-spe-0.7.5c 82
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCz/xTI1lqEGTUzyQRAla/AKDC1WlANmJn7qp+yakmbjduU9rKTgCgm9I4
-m0UvwNW/kWRpXmUh+BVybnc=
-=ScRo
+iD8DBQFDPFArKf2g/qXtneoRAm1uAJ9k8YGznq9uGPbeoki8CCYJGiyU8wCdFimF
+fxWwNTKuNZlgZiKZVOzuOf4=
+=SADt
 -----END PGP SIGNATURE-----

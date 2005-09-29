@@ -1,0 +1,11 @@
+--- spe.org	2005-05-04 22:04:34.791484208 -0700
++++ spe	2005-05-04 22:05:01.658399816 -0700
+@@ -1,5 +1,8 @@
+ #!/usr/bin/env python
+ 
++import wxversion
++wxversion.select("2.6")
++
+ import _spe.SPE
+ _spe.SPE.main()
+ 
