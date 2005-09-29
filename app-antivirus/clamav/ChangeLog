@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.112 2005/09/18 07:07:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.113 2005/09/29 11:54:42 ticho Exp $
+
+  29 Sep 2005; Andrej Kacian <ticho@gentoo.org> files/clamd.rc,
+  files/clamd.rc.new, clamav-0.86.2.ebuild:
+  Improved config parsing from within the initscript, thanks to Georgi
+  Georgiev <chutz at gg3.net>, bug #107362.
 
   18 Sep 2005; Markus Rothe <corsair@gentoo.org> clamav-0.87.ebuild:
   Stable on ppc64 (bug #106279)
