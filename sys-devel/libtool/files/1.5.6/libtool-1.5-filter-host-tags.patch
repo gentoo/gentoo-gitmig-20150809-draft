@@ -5,7 +5,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=77921
 
 --- libtool-1.5.10/ltmain.in
 +++ libtool-1.5.10/ltmain.in
-@@ -242,7 +242,17 @@
+@@ -242,7 +242,21 @@
  	    esac
  	    CC_quoted="$CC_quoted $arg"
  	  done
@@ -13,6 +13,9 @@ http://bugs.gentoo.org/show_bug.cgi?id=77921
 +	    trimedcc=`echo ${CC} | $SED -e "s/${host}-//g"`
 +	    # and sometimes libtool has CC=<HOST>-gcc but user does CC=gcc
 +	    extendcc=${host}-${CC}
++	    # and sometimes libtool has CC=<OLDHOST>-gcc but user has CC=<NEWHOST>-gcc  
++	    # (Gentoo-specific hack because we always export $CHOST)
++	    mungedcc=${CHOST-${host}}-${trimedcc}
  	    case "$@ " in
 +	      "cc "* | " cc "* | "${host}-cc "* | " ${host}-cc "*|\
 +	      "gcc "* | " gcc "* | "${host}-gcc "* | " ${host}-gcc "*)
@@ -20,6 +23,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=77921
 +	      break ;;
 +	      "$trimedcc "* | " $trimedcc "* | "`$echo $trimedcc` "* | " `$echo $trimedcc` "*|\
 +	      "$extendcc "* | " $extendcc "* | "`$echo $extendcc` "* | " `$echo $extendcc` "*|\
++	      "$mungedcc "* | " $mungedcc "* | "`$echo $mungedcc` "* | " `$echo $mungedcc` "*|\
  	      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "* | " $CC_quoted"* | "$CC_quoted "* | " `$echo $CC_quoted` "* | "`$echo $CC_quoted` "*)
  	      # The compiler in the base compile command matches
  	      # the one in the tagged configuration.
