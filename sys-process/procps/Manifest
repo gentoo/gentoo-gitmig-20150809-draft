@@ -3,15 +3,11 @@ Hash: SHA1
 
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4a4b346c7f5174c2bad1dbbff1af6b80 procps-3.2.5-r1.ebuild 2277
-MD5 b634dee52a3696de89de82a4eb20098c procps-3.2.4-r2.ebuild 1961
-MD5 814bb8cdaee78c5e87244c92220f85c4 procps-3.2.5.ebuild 1856
 MD5 aad896c3f2c7a0e64cd5226b0689be4e ChangeLog 17725
 MD5 de36ba695b3d4de6ac4ff35df181b872 procps-3.2.3-r1.ebuild 1494
 MD5 b4c0071255f4d33e7d87742f10426d4c procps-3.2.4-r3.ebuild 2364
 MD5 7ba1d9bd2f1c46766282250643ab9ebd files/procps-mips-define-pagesize.patch 1028
-MD5 f4e5ac4b1eaf4acdbf0dc9573cdf5438 files/digest-procps-3.2.5 64
 MD5 7e94d86add2921b1262479b92f51da27 files/3.2.4-linux26-slab.patch 521
-MD5 a26e86ab1efcb58809f0f46aa735ef07 files/digest-procps-3.2.4-r2 64
 MD5 5fdac6b265f6ff3866056fb2d97d2a0c files/procps-mips-n32_isnt_usable_on_mips64_yet.patch 431
 MD5 7455bab26f4331ffc66d62113bc973db files/digest-procps-3.2.3-r1 64
 MD5 5557c7fb6275f031e3770c70993baf69 files/3.2.4-64bit-display.patch 1566
@@ -22,7 +18,7 @@ MD5 a26e86ab1efcb58809f0f46aa735ef07 files/digest-procps-3.2.4-r3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCn9UgIKl8Uu19MoRAndQAJ99xmbbMWVdl7lCdlk94l8TOsTHNwCeNTEW
-fqNR6t+Ng/h1IgKJpf8sO7E=
-=eXFU
+iD8DBQFDOy9ggIKl8Uu19MoRAiQJAJ4yps6gHr9PqqLC4x6JCkF0CnlNkgCfRNPf
+Cu8ux8Dhp5lL6jLeM9+POv8=
+=MYYL
 -----END PGP SIGNATURE-----
