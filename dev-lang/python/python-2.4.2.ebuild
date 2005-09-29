@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2.ebuild,v 1.1 2005/09/28 18:13:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2.ebuild,v 1.2 2005/09/29 13:48:34 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -54,7 +54,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	echo "her er vi.. $(pwd)"
 	# unnecessary termcap dep in readline (#79013)
 	epatch ${FILESDIR}/${PN}-2.4.2-readline.patch
 	# db4.2 support

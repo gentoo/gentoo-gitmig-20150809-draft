@@ -12,7 +12,7 @@ MD5 ad616f0fecea68a16aea3f97e46c9a72 python-2.4-r3.ebuild 7106
 MD5 1297065ab6caf1a8d31f06f4575a5798 python-2.4.1-r1.ebuild 8849
 MD5 1df326999058ecec71a274a37ba15514 python-2.4.1.ebuild 8094
 MD5 0b2169037f60f9e451936c89cc92066f ChangeLog 27628
-MD5 84b16b34a0b0c9f2584eb3cabe2abb7f python-2.4.2.ebuild 8873
+MD5 93cab482d83bc03cae5421cef92da7e8 python-2.4.2.ebuild 8846
 MD5 678a7e4660de986e8e22808d18f93686 files/digest-python-2.4.2 66
 MD5 1c5cd53cb89c821a549968bac31df0f1 files/depreorder.py 2235
 MD5 f3f370c8d1382c1a7571cfc1cbb196d9 files/digest-python-2.1.3-r1 62
@@ -67,7 +67,7 @@ MD5 36b36bac050785b8e393dc72f8e51d2f files/python-2.4.2-readline.patch 8628
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOt1lKf2g/qXtneoRAuynAJ9s1nXb6/bWIVvLdtIIMH5hm2LfnACgnV1g
-nhYkv4qMUxgn4A6omoFSVKQ=
-=zpdv
+iD8DBQFDO/DOKf2g/qXtneoRArGFAJ4oJ7TRG5XaOISxWuCz8swGMBuTWACeIITx
+pwBAmZxH/3HvXJX+9Grgcmg=
+=uTEw
 -----END PGP SIGNATURE-----
