@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.35 2005/08/01 11:25:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.36 2005/09/29 20:51:37 allanonjl Exp $
+
+  29 Sep 2005; John N. Laliberte <allanonjl@gentoo.org>
+  gtkspell-2.0.11.ebuild:
+  stable on x86
 
   01 Aug 2005; Marinus Schraal <foser@gentoo.org> gtkspell-2.0.11.ebuild :
   Fix up enchant dep to deal with deprecated API (#46657)
