@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.38 2005/09/28 23:57:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.39 2005/09/29 22:38:45 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -752,7 +752,7 @@ want_nptl() {
 
 	# Archs that can use NPTL
 	case $(tc-arch) in
-		alpha|amd64|ia64|ppc|ppc64|s390|x86)
+		alpha|amd64|ia64|mips|ppc|ppc64|s390|x86)
 			return 0;
 		;;
 		sparc)
@@ -774,7 +774,7 @@ want_linuxthreads() {
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	case $(tc-arch) in
-		alpha|amd64|ia64|ppc|ppc64|s390)
+		alpha|amd64|ia64|mips|ppc|ppc64|s390)
 			return 0;
 		;;
 		sparc)
@@ -858,6 +858,8 @@ glibc_do_configure() {
 	use erandom || myconf="${myconf} --disable-dev-erandom"
 
 	use glibc-omitfp && myconf="${myconf} --enable-omitfp"
+
+	[[ ${CTARGET} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
 
 	if [ "$1" == "linuxthreads" ] ; then
 		if want_tls && [[ ${CTARGET} != i[45]86-* ]] ; then
