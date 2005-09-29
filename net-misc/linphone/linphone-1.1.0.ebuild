@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.1.0.ebuild,v 1.2 2005/09/02 16:07:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.1.0.ebuild,v 1.3 2005/09/29 23:46:17 stkn Exp $
 
 inherit eutils
 
@@ -11,9 +11,9 @@ HOMEPAGE="http://www.linphone.org/?lang=us"
 SRC_URI="http://simon.morlat.free.fr/download/${MY_DPV}/source/${P}.tar.gz"
 SLOT=1
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
-IUSE="xv ipv6 gnome alsa"
+IUSE="alsa gnome ipv6 xv"
 
 DEPEND="dev-libs/glib
 	dev-perl/XML-Parser

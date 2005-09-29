@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 de0086c1f53a825df1cfa28b327a527a linphone-0.10.2.ebuild 1288
-MD5 7766347f0c2ab8c5fda9592ad38a4398 linphone-1.1.0.ebuild 1699
+MD5 01f56328db3d3e0ec12540b47df0bd5c linphone-1.1.0.ebuild 1698
 MD5 408df05a0ca926b1458fbe767194a204 linphone-1.0.1.ebuild 1423
-MD5 7b5105965a8d68d79d216de6da5ec62f ChangeLog 3911
 MD5 bf329e2b298c08082a3ff4dfe6c236b3 metadata.xml 315
-MD5 339685aec8a9df716c358f64f877a2f6 files/digest-linphone-1.0.1 67
-MD5 43613eb580df59c222f3572287b2adf2 files/digest-linphone-1.1.0 67
-MD5 09a1ce01898450b93c37d1021c5b4c7e files/linphone-1.0.1-ipv6-include.diff 340
+MD5 e58594e2516f31b0d4ea4ffc2742011b ChangeLog 4001
 MD5 29e56d450d4aa47d230872e2b18eae40 files/digest-linphone-0.10.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGHkpomPajV0RnrERAmv/AJ9gmHVhciMXY54v4SX8EK1ApLWr9gCeLHJq
-hipUebDdHFQjmdKc3KjF7VE=
-=PgLz
------END PGP SIGNATURE-----
+MD5 09a1ce01898450b93c37d1021c5b4c7e files/linphone-1.0.1-ipv6-include.diff 340
+MD5 43613eb580df59c222f3572287b2adf2 files/digest-linphone-1.1.0 67
+MD5 339685aec8a9df716c358f64f877a2f6 files/digest-linphone-1.0.1 67
