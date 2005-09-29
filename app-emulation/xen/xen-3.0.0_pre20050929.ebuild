@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20050919.ebuild,v 1.1 2005/09/19 16:45:42 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20050929.ebuild,v 1.1 2005/09/29 17:49:37 chrb Exp $
 
 inherit mount-boot
 
 DESCRIPTION="The Xen virtual machine monitor and Xend daemon"
 HOMEPAGE="http://xen.sourceforge.net"
-DATE="20050919"
+DATE="20050929"
 SRC_URI="mirror://gentoo/xen-unstable-${DATE}.tar.bz2"
 
 LICENSE="GPL-2"
