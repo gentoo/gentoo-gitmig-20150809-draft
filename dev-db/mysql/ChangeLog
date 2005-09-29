@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.241 2005/09/21 17:52:05 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.242 2005/09/29 16:17:02 vivo Exp $
+
+*mysql-5.0.13_rc (29 Sep 2005)
+
+  29 Sep 2005; Francesco Riosa <vivo@gentoo.org> +mysql-5.0.13_rc.ebuild,
+  -mysql-5.0.12_beta.ebuild:
+  MySQL-5.0 version bump, first relase candidate.
+  Removed "geometry" USE flag, it will disappear also from the other versions
+  at next bump.
+  Reason for this is recursive failures at compile time or in the test suite.
+  Note that "spatial extensions" (those affected by "geometry") are now always
+  on.
 
   21 Sep 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
   mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild:
