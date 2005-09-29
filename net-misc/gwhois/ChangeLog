@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.8 2005/09/28 19:04:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.9 2005/09/29 00:43:24 yoswink Exp $
+
+  29 Sep 2005; Jose Luis Rivero <yoswink@gentoo.org> gwhois-20050115.ebuild:
+  Stable on alpha due to #93820
 
   28 Sep 2005; Simon Stelling <blubb@gentoo.org> gwhois-20050115.ebuild:
   stable on amd64
