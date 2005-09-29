@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.45 2005/09/16 06:42:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.46 2005/09/29 13:22:07 seemant Exp $
+
+  29 Sep 2005; Seemant Kulleen <seemant@gentoo.org>
+  mplayerplug-in-3.11.ebuild:
+  added a missing \ without which --with-gecko-sdk was taken to be a command,
+  instead of a configure flag
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   mplayerplug-in-2.85.ebuild:

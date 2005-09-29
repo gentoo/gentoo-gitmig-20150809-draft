@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.11.ebuild,v 1.1 2005/09/29 07:07:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.11.ebuild,v 1.2 2005/09/29 13:22:07 seemant Exp $
 
 inherit nsplugins toolchain-funcs multilib
 
@@ -34,7 +34,7 @@ src_compile() {
 	fi
 
 	### Force gtk2 since mozilla only uses gtk2 now
-	econf --enable-gtk2
+	econf --enable-gtk2 \
 		${myconf} || die "econf failed"
 
 	emake || die "emake failed"

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2184d7fa0813c1a889168efe9b8957ba ChangeLog 7499
+MD5 3e78e4511f64625ca58f0862c69b36ad ChangeLog 7689
 MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
-MD5 dd12cc307a2fc2c00237b06a38cd20c5 mplayerplug-in-2.85.ebuild 1464
 MD5 a93db3f864de724c0408dc08506f2d90 mplayerplug-in-2.80.ebuild 1458
-MD5 347780a631f30562709f90012ff48f2c mplayerplug-in-3.11.ebuild 1922
+MD5 dd12cc307a2fc2c00237b06a38cd20c5 mplayerplug-in-2.85.ebuild 1464
+MD5 57abcac20b9d0545da4d221b80bcf267 mplayerplug-in-3.11.ebuild 1925
+MD5 8642e3be6b1af51cbbf7e7790cc8ba12 files/digest-mplayerplug-in-2.80 71
 MD5 c2e30e3c9bd430344299015704bc28b6 files/digest-mplayerplug-in-2.85 71
 MD5 8c3b348cd7951d7c21c115f602e22f31 files/digest-mplayerplug-in-3.11 71
-MD5 8642e3be6b1af51cbbf7e7790cc8ba12 files/digest-mplayerplug-in-2.80 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDO5KxcsIHjyDViGQRAnwRAKDfW6CN1QLIqt3E7yjfxkrvcydgdwCfYcNf
-Rz9FK7c6X3oT+0G+2D048qw=
-=dK/Z
------END PGP SIGNATURE-----
