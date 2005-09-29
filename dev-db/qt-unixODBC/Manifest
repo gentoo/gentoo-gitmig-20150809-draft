@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86d6ed2817aa1cf7cca3a7a4683d3899 ChangeLog 1729
+MD5 e896f236c422961d36c8e9b47b528341 ChangeLog 1848
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 2a1ae045ff7268b117acc2d64cfa5469 qt-unixODBC-3.3.4.ebuild 1575
 MD5 cf97247e5887c5605d2bde1aedab1bb1 qt-unixODBC-3.3.5.ebuild 1615
-MD5 237323d80d9dbfdcb580845e9b1a83b9 qt-unixODBC-3.3.4-r1.ebuild 1612
+MD5 6acfcc91ce7ffb564dd08069756040fd qt-unixODBC-3.3.4-r1.ebuild 1611
 MD5 07a5c97eddc68da556434cdd09a7a903 files/digest-qt-unixODBC-3.3.4 72
 MD5 d09855ad814a45f5c624cd6680628f96 files/digest-qt-unixODBC-3.3.5 72
 MD5 07a5c97eddc68da556434cdd09a7a903 files/digest-qt-unixODBC-3.3.4-r1 72
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMguXCRZPokWLroQRAqsqAJ474Rc+B9Ju4l2hQ6qvmz11B7xP2gCg0S47
-S7ccNpt5Yl3w1jAwD7HnH0E=
-=cBXF
------END PGP SIGNATURE-----

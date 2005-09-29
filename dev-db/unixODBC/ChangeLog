@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.50 2005/09/10 10:19:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.51 2005/09/29 01:27:55 hardave Exp $
+
+  29 Sep 2005; Hardave Riar <hardave@gentoo.org> unixODBC-2.2.11-r1.ebuild:
+  Stable on mips.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> unixODBC-2.2.11-r1.ebuild:
   Mark 2.2.11-r1 stable on alpha
