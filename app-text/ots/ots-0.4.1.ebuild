@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.1.ebuild,v 1.9 2005/09/03 00:41:27 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.4.1.ebuild,v 1.10 2005/09/29 01:29:51 vanquirius Exp $
 
 DESCRIPTION="Open source Text Summarizer, as used in newer releases of abiword and kword."
 HOMEPAGE="http://libots.sourceforge.net/"
@@ -27,7 +27,7 @@ src_compile() {
 src_install() {
 	einstall || die
 	rm -rf "${D}"/usr/share/doc/libots
-	dodoc AUTHORS BUGS ChangeLog HACKING INSTALL NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog HACKING NEWS README TODO
 	cd "${S}"/doc/html
 	dohtml -r ./
 }
