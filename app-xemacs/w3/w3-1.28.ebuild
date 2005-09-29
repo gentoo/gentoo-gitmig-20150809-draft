@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/w3-1.28.ebuild,v 1.7 2005/01/01 17:20:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/w3-1.28.ebuild,v 1.8 2005/09/29 05:42:09 josejx Exp $
 
 SLOT="0"
 IUSE=""
@@ -11,7 +11,7 @@ DEPEND="app-xemacs/mail-lib
 app-xemacs/xemacs-base
 app-xemacs/ecrypto
 "
-KEYWORDS="amd64 x86 ~ppc alpha sparc ppc64"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages
 
