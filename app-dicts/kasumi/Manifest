@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9cf51c9ed5a4c4a77e173a732372fb09 ChangeLog 1279
-MD5 b599f71649391f751572cfd5be2d38a5 kasumi-0.3.ebuild 752
+MD5 680e93523605924f18f0553549ac5d77 ChangeLog 1458
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 edce0f6ab0747579e755483c1b00a8b2 kasumi-0.7.ebuild 749
-MD5 1842e3cba356b66d2eec8dca9bafb4bc kasumi-0.8.ebuild 750
-MD5 a77a0c56713c01515c999bfd29cad704 kasumi-0.6.ebuild 749
-MD5 28482544be7c4f6a1de3920f4a46e3d4 files/digest-kasumi-0.3 62
-MD5 35a0b368feb458c33fb1c0e0d0ba1927 files/digest-kasumi-0.6 62
+MD5 b722d326622b8106faac7ece18de3d35 kasumi-0.8.ebuild 749
+MD5 d63a72b4e572dd0a204e0cc29fd325fd kasumi-0.10.ebuild 751
 MD5 5e492f281a838088bd88e7e964255841 files/digest-kasumi-0.8 62
 MD5 eb5c9efce1c1a4316709875e451c74fc files/digest-kasumi-0.7 62
+MD5 8f57424bdb741e10bce18266e011278d files/digest-kasumi-0.10 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCW1sTVWNWqTUmv+0RAocnAJsEGRC3ypE/qrKtQ1eyYM4ugo5VCwCfcAzm
-R9Kg57LBo7bbIFsE+rwttgw=
-=r1v3
+iD8DBQFDO5Kt1u6irqznjogRAt6PAKCv5VPNd4J2k7F9MJ9+ysoxEtqTyACggr0V
+1HE4WFwe7xht3AXXX70Wejo=
+=8Z5j
 -----END PGP SIGNATURE-----
