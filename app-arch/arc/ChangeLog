@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/arc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.17 2005/05/17 22:04:30 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.18 2005/09/29 22:21:51 vapier Exp $
+
+*arc-5.21m (29 Sep 2005)
+
+  29 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/arc-5.21m-compile-cleanups.patch, -files/arc-521e-timeh.patch,
+  +arc-5.21m.ebuild:
+  Version bump to fix insecure tempfile usage #107312.
 
   17 May 2005; Andrej Kacian <ticho@gentoo.org> arc-5.21j.ebuild:
   Inherit toolchain-funcs instead of gcc eclass. Bug #92745.

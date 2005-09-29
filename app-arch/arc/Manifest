@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 d3144f57c73c1337c32620078515ed2b arc-5.21j.ebuild 632
-MD5 b582129de7af451ac475267e7e77a225 ChangeLog 1812
+MD5 1502e4d0fa21b900c75e916c3dcd380e arc-5.21m.ebuild 764
+MD5 cdbf10e766e8fde3e81c13c3f617e2d9 ChangeLog 2038
+MD5 6174a0060742261d0e4eff7e164ad577 files/digest-arc-5.21m 60
+MD5 b36a4a9f1625800ba497b99c5fac5614 files/arc-5.21m-compile-cleanups.patch 4315
 MD5 12b115e43717df51d9b655c7ed456240 files/digest-arc-5.21j 60
-MD5 11bcb6a067f0bdd2e47b77a6a444b376 files/arc-521e-timeh.patch 516
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCimp7QlM6RnzZP+IRAjg3AJsFkHn7UdEY+UiQSHSUZXBqJxX2KgCeKQYu
-0dCqvuDTiAte/hJiVVTgDI0=
-=6RuC
+iD8DBQFDPGlAgIKl8Uu19MoRAtbGAJ9DbrHcjd9n843XCZoH3xnfiEJhzACfXlC8
+BeV8UFLCmLd4cFuPrWS9FB4=
+=m9m/
 -----END PGP SIGNATURE-----
