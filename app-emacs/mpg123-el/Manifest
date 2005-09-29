@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5c8977aaf4da548f8f5850d4639057a8 ChangeLog 748
 MD5 ddd6fda859f1cedceca092bc4d18c516 mpg123-el-1.42.ebuild 1053
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 425a8001688ad8ceca2b40245a62be50 files/digest-mpg123-el-1.42 66
 MD5 21ae7501baae4ed25333b0a82217762d files/50mpg123-el-gentoo.el 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO30ycsIHjyDViGQRAiLwAKCGjBEQywNzAM3vFT6v2q6oHY6yeQCgrmPr
+Hp3Wj5fsBJmRbdDgaOo6ROQ=
+=7sdm
+-----END PGP SIGNATURE-----
