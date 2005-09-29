@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.4 2005/09/18 04:45:38 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.5 2005/09/29 16:33:45 obz Exp $
 
 inherit gnome2 eutils
 
@@ -22,9 +22,7 @@ RDEPEND=">=gnome-base/libbonobo-2.3.1
 	gnome-base/gnome-mime-data
 	>=x11-misc/shared-mime-info-0.14
 	dev-libs/popt
-	samba? (
-		>=net-fs/samba-3
-		!gnome-extra/gnome-vfs-extras )
+	samba? ( >=net-fs/samba-3 )
 	ssl? (
 		>=dev-libs/openssl-0.9.5
 		!gnome-extra/gnome-vfs-sftp )
