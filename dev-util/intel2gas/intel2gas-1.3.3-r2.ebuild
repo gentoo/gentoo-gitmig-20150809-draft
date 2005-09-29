@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3-r1.ebuild,v 1.1 2005/09/28 07:36:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3-r2.ebuild,v 1.1 2005/09/29 21:51:51 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="Converts assembler source from Intel (NASM), to AT&T (gas)"
 HOMEPAGE="http://www.niksula.cs.hut.fi/~mtiihone/intel2gas/"
@@ -12,6 +14,11 @@ IUSE=""
 DEPEND="virtual/libc
 	sys-devel/gcc"
 RDEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-segfault.patch
+}
 
 src_install() {
 	emake \
