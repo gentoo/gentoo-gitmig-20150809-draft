@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03eed28f8d8a9555815bc1386e8a52db eventwatcher-0.4.1.ebuild 551
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 83c95f2ba566d4578f30842b12abe92c ChangeLog 1898
+MD5 03eed28f8d8a9555815bc1386e8a52db eventwatcher-0.4.1.ebuild 551
+MD5 4cdd848ce2d6291b1bd6fa5ad5b19167 eventwatcher-0.4.2.ebuild 552
+MD5 5a9d8cc1168cb17e5c406506cea0a9ae ChangeLog 2038
+MD5 8098a7b7b1c7806f2221c742a6fb9b17 files/digest-eventwatcher-0.4.2 71
 MD5 304c4a092488847276952be861142c4a files/digest-eventwatcher-0.4.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK1ZnLLFUmVNQ7rkRAhAgAKCg4eQ1k2WRoVzTQFpcNeoPI0RRygCgy/oo
-4Qr3xwFEoJZI1jMDOhgSgs0=
-=3lEV
------END PGP SIGNATURE-----
