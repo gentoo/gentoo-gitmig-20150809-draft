@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 085bf925a1dc6f9756f484ac688a92f9 metadata.xml 447
 MD5 ab3519ae0f7d0763b8869d9156cdc68c tiff-3.7.1-r1.ebuild 1029
 MD5 c544051c0ec2dc577291733cfb9b7f2a tiff-3.7.2.ebuild 970
-MD5 1d0122addd41759f06a58b2fce583bff tiff-3.7.3.ebuild 896
+MD5 0a2e2c7d89527498c24026ed094eca88 tiff-3.7.3.ebuild 901
 MD5 b64fbb01f0483be2e70cca30ae4bd926 ChangeLog 8903
 MD5 0d970257da4fc0fba7ae38016e4655d6 files/digest-tiff-3.7.1-r1 63
+MD5 4bffd94510b6a669790656394f2d0302 files/tiff-3.7.1-trans.patch 479
 MD5 9bd055973e8798d783f0e87f5d6c160d files/digest-tiff-3.7.2 63
 MD5 252bce379522d9df360262d3f341fe80 files/digest-tiff-3.7.3 63
 MD5 6a9a255a3b89908c05b1f8bbde260e26 files/tiff-3.7.1-tiffdump.patch 439
-MD5 4bffd94510b6a669790656394f2d0302 files/tiff-3.7.1-trans.patch 479
 MD5 f0b2abf65d2e777bb249d460fc54cd87 files/tiff-3.7.2-buffer_check.patch 2093
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLAUcKf2g/qXtneoRAnNdAKDAnPy5tCvTH7YOpSnDrEk3+vxEQACghXM5
-IlL+3oBBsWpYAlaTHNInEho=
-=awRC
------END PGP SIGNATURE-----
