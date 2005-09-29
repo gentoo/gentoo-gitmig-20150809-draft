@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.31 2005/08/17 10:08:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.32 2005/09/29 10:08:38 usata Exp $
+
+  29 Sep 2005; Mamoru KOMACHI <usata@gentoo.org> -scim-tables-0.5.2.ebuild,
+  scim-tables-0.5.3.ebuild:
+  Do not enable arts if arts USE is not set. Thanks to kasim.terzic@gmail.com;
+  bug #102853.
 
 *scim-tables-0.5.3 (17 Aug 2005)
 
