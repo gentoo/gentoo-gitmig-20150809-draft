@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.3.ebuild,v 1.1 2005/08/19 23:15:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.3.ebuild,v 1.2 2005/09/29 02:44:41 vanquirius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.0
@@ -19,10 +19,9 @@ DEPEND=">=gnome-base/libglade-2.0
 	sys-devel/gettext"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-res_mkquery.patch
-	epatch ${FILESDIR}/${PN}-0.9.1-fix-mkinstalldirs.diff
+	unpack ${A}; cd "${S}"
+	epatch "${FILESDIR}"/${P}-res_mkquery.patch
+	epatch "${FILESDIR}"/${PN}-0.9.1-fix-mkinstalldirs.diff
 }
 
 src_compile() {
@@ -34,15 +33,15 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# move shortcut to gnome2 compliant location
 	dodir /usr/share/applications
-	mv ${D}/usr/share/gnome/apps/Applications/etherape.desktop \
-		${D}/usr/share/applications
-	echo "Categories=GNOME;Application;Network;" >> ${D}/usr/share/applications/etherape.desktop
-	rm -rf ${D}/usr/share/gnome
+	mv "${D}"/usr/share/gnome/apps/Applications/etherape.desktop \
+		"${D}"/usr/share/applications
+	echo "Categories=GNOME;Application;Network;" >> "${D}"/usr/share/applications/etherape.desktop
+	rm -rf "${D}"/usr/share/gnome
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog FAQ INSTALL NEWS OVERVIEW
+	dodoc ABOUT-NLS AUTHORS ChangeLog FAQ NEWS OVERVIEW
 	dodoc README* TODO
 }

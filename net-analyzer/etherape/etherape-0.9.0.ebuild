@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.0.ebuild,v 1.10 2005/04/24 23:37:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.0.ebuild,v 1.11 2005/09/29 02:44:41 vanquirius Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install() {
 	echo "Categories=GNOME;Application;Network;" >> ${D}/usr/share/applications/etherape.desktop
 	rm -rf ${D}/usr/share/gnome
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog FAQ INSTALL NEWS OVERVIEW
+	dodoc ABOUT-NLS AUTHORS ChangeLog FAQ NEWS OVERVIEW
 	dodoc README* TODO
 }
 
