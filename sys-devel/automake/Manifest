@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 038fd25744010b665c4f8176dc74cbc3 automake-1.9.6-r1.ebuild 1463
 MD5 c2b7648d70be8a4ab0080ed00cb796e3 automake-1.6.3.ebuild 1431
 MD5 60753f865fa023a3bcd0466250a743a7 automake-1.4_p6.ebuild 1809
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 60402cbb0e854aea08a716500d6b48b9 automake-1.9.6.ebuild 1400
-MD5 e92da70fff503e5e1ab84cdb2b42b057 automake-1.9.5.ebuild 1400
 MD5 3ad0b6b355e91b67210e8e14e81de267 automake-1.8.5-r3.ebuild 1503
 MD5 88db2f78adf73dd93c0e21a58259d2eb automake-1.5.ebuild 1696
-MD5 2bcdc60669453e3bf4004bb894344dcf ChangeLog 12544
+MD5 6fd04a53a1b2b9d7508f84336d0497c7 ChangeLog 12769
 MD5 f648af66d23f848644ae7f0e0a0fd8a9 automake-1.7.9-r1.ebuild 1506
 MD5 a1b9c06cc3ba7ac88f3b870f51d35758 files/digest-automake-1.9.6 67
 MD5 4c0ad89956f0b70972c19a60c65f9275 files/automake-1.9.3-infopage-namechange.patch 1109
 MD5 252f1212a83cc74c42cd557bc3f65e32 files/digest-automake-1.4_p6 67
 MD5 a56b2416416ab1f0bdc71cb7ab0454d6 files/automake-1.5-slot.patch 1191
+MD5 41bfebb78fd15ed76ef2ae3a7d76d726 files/automake-1.9.6-include-dir-prefix.patch 1106
 MD5 e93136e02eb000c938f564484d306d76 files/automake-1.7.9-infopage-namechange.patch 592
 MD5 29dec70b283dffd42358d3643b1754c3 files/digest-automake-1.7.9-r1 67
 MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
@@ -23,14 +24,14 @@ MD5 91bfbe9a39ed2eee6bfa0254bad56d5d files/automake-1.4-libtoolize.patch 542
 MD5 a4327436d159f9262364994c88489ee6 files/automake-1.4-subdirs-89656.patch 944
 MD5 fbf3743bc8590dcb5bd34c675cb9d9f0 files/automake-1.5-target_hook.patch 1132
 MD5 a591fd70f20b40a46667f57326ad4b7c files/digest-automake-1.6.3 67
-MD5 e24b7d1101074fe4f610b71143f7f843 files/digest-automake-1.9.5 67
 MD5 9587f00ace066c11b5c22d72afe630a9 files/automake-1.8.2-infopage-namechange.patch 1131
 MD5 0fe9854b3a6384ef4c7b0bd2bad72c59 files/digest-automake-1.8.5-r3 67
+MD5 a1b9c06cc3ba7ac88f3b870f51d35758 files/digest-automake-1.9.6-r1 67
 MD5 5c2fe79f8f664efdb7e2736e88c10f09 files/automake-1.5-test-fixes.patch 2303
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDC7h2gIKl8Uu19MoRAkSAAJ0Z3oKtrRSSx4MLTtQqzGGn0V9IMQCfY2S7
-dDww4LrRfkn3qjm24dUZdvI=
-=AmkT
+iD8DBQFDO6qWgIKl8Uu19MoRAtTvAJ4ryIoTvRj/c/DTBsAHslKDdLSzewCfU082
+q/r1nVI/dc875i3eHNXopFw=
+=Q+pJ
 -----END PGP SIGNATURE-----
