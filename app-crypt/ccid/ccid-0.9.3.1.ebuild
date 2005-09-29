@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-0.9.3.1.ebuild,v 1.2 2005/07/21 07:52:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-0.9.3.1.ebuild,v 1.3 2005/09/29 01:40:35 vanquirius Exp $
 
 inherit eutils
 
@@ -21,15 +21,13 @@ RDEPEND=">=sys-apps/pcsc-lite-1.2.9_beta6
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${WORKDIR}/ccid_${MY_PV}-${MY_PV_P}.diff"
 }
 
 src_install() {
 	cd ccid-${MY_PV}.orig
-	make install DESTDIR=${D} || die "Cannot install"
+	make install DESTDIR="${D}" || die "Cannot install"
 
-	dodoc README
-	dodoc AUTHORS
-	dodoc COPYING
+	dodoc README AUTHORS
 }
