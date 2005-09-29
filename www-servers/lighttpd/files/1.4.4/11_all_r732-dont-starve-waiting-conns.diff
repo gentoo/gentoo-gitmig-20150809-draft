@@ -1,0 +1,27 @@
+Modified: branches/lighttpd-merge-1.4.x/src/network.c
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/network.c	2005-09-22 13:45:33 UTC (rev 731)
++++ branches/lighttpd-merge-1.4.x/src/network.c	2005-09-23 16:31:49 UTC (rev 732)
+@@ -30,6 +30,7 @@
+ 	server     *srv = (server *)s;
+ 	server_socket *srv_socket = (server_socket *)context;
+ 	connection *con;
++	int loops = 0;
+ 	
+ 	UNUSED(context);
+ 	
+@@ -40,8 +41,11 @@
+ 				revents);
+ 		return HANDLER_ERROR;
+ 	}
+-	
+-	while (NULL != (con = connection_accept(srv, srv_socket))) {
++
++	/* accept()s at most 100 connections directly
++	 *
++	 * we jump out after 100 to give the waiting connections a chance */	
++	for (loops = 0; loops < 100 && NULL != (con = connection_accept(srv, srv_socket)); loops++) {
+ 		handler_t r;
+ 		
+ 		connection_state_machine(srv, con);
+

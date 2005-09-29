@@ -1,0 +1,128 @@
+Modified: branches/lighttpd-merge-1.4.x/src/network_freebsd_sendfile.c
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/network_freebsd_sendfile.c	2005-09-22 08:24:08 UTC (rev 727)
++++ branches/lighttpd-merge-1.4.x/src/network_freebsd_sendfile.c	2005-09-22 09:08:06 UTC (rev 728)
+@@ -104,13 +104,14 @@
+ 			}
+ 			
+ 			/* check which chunks have been written */
++			cq->bytes_out += r;
++			con->bytes_written += r;
+ 			
+ 			for(i = 0, tc = c; i < num_chunks; i++, tc = tc->next) {
+ 				if (r >= (ssize_t)chunks[i].iov_len) {
+ 					/* written */
+ 					r -= chunks[i].iov_len;
+ 					tc->offset += chunks[i].iov_len;
+-					con->bytes_written += chunks[i].iov_len;
+ 					
+ 					if (chunk_finished) {
+ 						/* skip the chunks from further touches */
+@@ -124,7 +125,6 @@
+ 					/* partially written */
+ 					
+ 					tc->offset += r;
+-					con->bytes_written += r;
+ 					chunk_finished = 0;
+ 					
+ 					break;
+@@ -182,6 +182,7 @@
+ 			
+ 			c->offset += r;
+ 			con->bytes_written += r;
++			cq->bytes_out += r;
+ 			
+ 			if (c->offset == c->file.length) {
+ 				chunk_finished = 1;
+
+Modified: branches/lighttpd-merge-1.4.x/src/network_linux_sendfile.c
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/network_linux_sendfile.c	2005-09-22 08:24:08 UTC (rev 727)
++++ branches/lighttpd-merge-1.4.x/src/network_linux_sendfile.c	2005-09-22 09:08:06 UTC (rev 728)
+@@ -95,7 +95,9 @@
+ 			}
+ 			
+ 			/* check which chunks have been written */
+-			
++			cq->bytes_out += r;
++			con->bytes_written += r;
++
+ 			for(i = 0, tc = c; i < num_chunks; i++, tc = tc->next) {
+ 				if (r >= (ssize_t)chunks[i].iov_len) {
+ 					/* written */
+@@ -119,8 +121,6 @@
+ 					break;
+ 				}
+ 			}
+-			cq->bytes_out += r;
+-			con->bytes_written += r;
+ 			
+ 			break;
+ 		}
+
+Modified: branches/lighttpd-merge-1.4.x/src/network_openssl.c
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/network_openssl.c	2005-09-22 08:24:08 UTC (rev 727)
++++ branches/lighttpd-merge-1.4.x/src/network_openssl.c	2005-09-22 09:08:06 UTC (rev 728)
+@@ -123,6 +123,7 @@
+ 			} else {
+ 				c->offset += r;
+ 				con->bytes_written += r;
++				cq->bytes_out += r;
+ 			}
+ 			
+ 			if (c->offset == (off_t)c->mem->used - 1) {
+@@ -208,6 +209,7 @@
+ 				} else {
+ 					c->offset += r;
+ 					con->bytes_written += r;
++					cq->bytes_out += r;
+ 				}
+ 			
+ 				if (c->offset == c->file.length) {
+
+Modified: branches/lighttpd-merge-1.4.x/src/network_write.c
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/network_write.c	2005-09-22 08:24:08 UTC (rev 727)
++++ branches/lighttpd-merge-1.4.x/src/network_write.c	2005-09-22 09:08:06 UTC (rev 728)
+@@ -61,6 +61,7 @@
+ 			
+ 			c->offset += r;
+ 			con->bytes_written += r;
++			cq->bytes_out += r;
+ 			
+ 			if (c->offset == (off_t)c->mem->used - 1) {
+ 				chunk_finished = 1;
+@@ -136,6 +137,7 @@
+ #endif
+ 			c->offset += r;
+ 			con->bytes_written += r;
++			cq->bytes_out += r;
+ 			
+ 			if (c->offset == c->file.length) {
+ 				chunk_finished = 1;
+
+Modified: branches/lighttpd-merge-1.4.x/src/network_writev.c
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/network_writev.c	2005-09-22 08:24:08 UTC (rev 727)
++++ branches/lighttpd-merge-1.4.x/src/network_writev.c	2005-09-22 09:08:06 UTC (rev 728)
+@@ -116,6 +116,9 @@
+ 				}
+ 			}
+ 			
++			cq->bytes_out += r;
++			con->bytes_written += r;
++
+ 			/* check which chunks have been written */
+ 			
+ 			for(i = 0, tc = c; i < num_chunks; i++, tc = tc->next) {
+@@ -142,9 +145,6 @@
+ 				}
+ 			}
+ 			
+-			cq->bytes_out += r;
+-			con->bytes_written += r;
+-
+ 			break;
+ 		}
+ 		case FILE_CHUNK: {

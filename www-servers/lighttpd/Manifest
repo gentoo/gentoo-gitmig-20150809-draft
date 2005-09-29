@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 15468c1601f8061e5ad2d5f62b39b964 lighttpd-1.4.3.ebuild 5143
-MD5 7cfdb1530a50feb5e61c8ccbf42edea0 lighttpd-1.4.4-r1.ebuild 5141
 MD5 5aaaf3e31839a20fb69fc5526e69d849 lighttpd-1.3.16.ebuild 2547
 MD5 49ded22216ffc6092d1a1e04a6e420c1 lighttpd-1.3.13-r3.ebuild 2607
-MD5 4d8249640a07c0685033fbe781ac456b ChangeLog 14914
+MD5 c40708fb4f213877b44b2a7709565ccc lighttpd-1.4.4-r2.ebuild 5141
+MD5 20a5c0f5453c8f514a82e24849319fe0 ChangeLog 15483
 MD5 6a9d4814404d8d51327e5b8306ee3d7e metadata.xml 726
 MD5 1d925aed297ec4541fb230dd19e11bc1 files/spawn-fcgi.confd 1076
 MD5 f984dc26b2bc491272d302ab453f6e6b files/lighttpd-1.3.13-ldap-binddn.diff 3863
@@ -20,7 +20,7 @@ MD5 5eb378dcd8905a09175df3e48953100c files/lighttpd-1.3.13-zope-deserves-lovins-
 MD5 8e76b9feaedbf0286936be381bc5ffac files/lighttpd.initd 1000
 MD5 8f9c2d7a51a85b60ef1a6da355083fd0 files/digest-lighttpd-1.4.3 66
 MD5 0c57eeef1963af5add8b9608e0bc0d0f files/lighttpd-1.3.13-no-mysql-means-no-mysql.diff 1456
-MD5 10ee947ef00d754e74198ff482c0527d files/digest-lighttpd-1.4.4-r1 66
+MD5 10ee947ef00d754e74198ff482c0527d files/digest-lighttpd-1.4.4-r2 66
 MD5 44374d14af9b69b8f60f8d73f14c848d files/lighttpd-1.3.13-pam-name.diff 564
 MD5 210f81ad7867965b19993d0a4d8d54e7 files/lighttpd.logrotate 488
 MD5 9c1407e95f62ed22da66c4ef5f69c3b5 files/conf/mod_cgi.conf 869
@@ -28,15 +28,22 @@ MD5 df5b2360ea380d988bf16905ab214286 files/conf/lighttpd.conf 8182
 MD5 b4c80dba9c626d5f89d3c3797ac6670c files/conf/mod_fastcgi.conf 661
 MD5 fef397e7bcf1b741dea211a555e1803c files/conf/mime-types.conf 3291
 MD5 3d3f73f5f3046cc609c2178424175a7a files/1.4.4/01_all_r716-fix-remoteip-cache-keepalive.diff 2902
+MD5 dec389763586af8f48bf671c92eb1c78 files/1.4.4/10_all_r729-display-content_ndx.diff 1035
 MD5 4aa695a0125bbde51ec234f3494b7364 files/1.4.4/05_all_r724-fix-error-msg-segv.diff 616
 MD5 8cb5ff1a3717873bf349a10cf5011af3 files/1.4.4/06_all_r725-fix-NULL-dereference.diff 332
+MD5 f924a986a483d7ce28f9484f18cd7770 files/1.4.4/07_all_r726-sce-set-if-HANDLER_GO_ON.diff 7020
 MD5 9edac090a187f3a1862f2277787df479 files/1.4.4/03_all_r722-fix-no-global-mysql-segv.diff 613
+MD5 9df7b7a076aea655916dbc179c2dbdca files/1.4.4/11_all_r732-dont-starve-waiting-conns.diff 866
+MD5 9b828b071da2581ae9b70b95cb7bb366 files/1.4.4/08_all_r727-fix-another-error-msg-segv.diff 678
+MD5 87ec2164d60e46b1893b972667724387 files/1.4.4/09_all_r728-handle-written-correctly.diff 3776
+MD5 68c835a600101e9be7bea9d49e3e22e9 files/1.4.4/12_all_r736-fix-max-request-size.diff 3005
 MD5 bb6d7e474027bfabdfcdfff3549498ae files/1.4.4/02_all_r721-add-case-302.diff 358
+MD5 79a9523d859fff7af5021850a7352a1e files/1.4.4/13_all_r745-fix-64bit-crc32.diff 829
 MD5 14fefc136222d1747894ce7f7e36c5ee files/1.4.4/04_all_r723-fix-mod_ssi-inf-loop.diff 1407
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMnwKEZCkKN40op4RApShAKCJRa1yWRu0pnRXRWgcdYRYgZVlGACdHehJ
-2R0/RtZbndPTlOIluCX7R/A=
-=WKPn
+iD8DBQFDPCSWEZCkKN40op4RAqhiAJ9jts56QMljvoeCPpkuXX5SdRD4PwCeLbu3
+AxnA8K2SikO4wMAnahlg5PQ=
+=Z4yz
 -----END PGP SIGNATURE-----

@@ -1,0 +1,24 @@
+Modified: branches/lighttpd-merge-1.4.x/src/configparser.y
+===================================================================
+--- branches/lighttpd-merge-1.4.x/src/configparser.y	2005-09-22 13:13:01 UTC (rev 729)
++++ branches/lighttpd-merge-1.4.x/src/configparser.y	2005-09-22 13:33:18 UTC (rev 730)
+@@ -162,7 +162,8 @@
+     array_insert_unique(ctx->current->value, B);
+     B = NULL;
+   } else {
+-    fprintf(stderr, "Duplicate config variable in conditional 1 %s: %s\n", 
++    fprintf(stderr, "Duplicate config variable in conditional %d %s: %s\n", 
++            ctx->current->context_ndx,
+             ctx->current->key->ptr, B->key->ptr);
+     ctx->ok = 0;
+     B->free(B);
+@@ -196,7 +197,8 @@
+       array_insert_unique(ctx->current->value, du);
+     }
+   } else {
+-    fprintf(stderr, "Undefined config variable in conditional 1 %s: %s\n", 
++    fprintf(stderr, "Undefined config variable in conditional %d %s: %s\n", 
++            ctx->current->context_ndx,
+             ctx->current->key->ptr, A->ptr);
+     ctx->ok = 0;
+   }

@@ -1,0 +1,269 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN lighttpd-1.4.4.orig/src/stat_cache.c lighttpd-1.4.4/src/stat_cache.c
+--- lighttpd-1.4.4.orig/src/stat_cache.c	2005-09-27 00:54:27.000000000 -0400
++++ lighttpd-1.4.4/src/stat_cache.c	2005-09-27 00:54:44.000000000 -0400
+@@ -179,7 +179,6 @@
+ 	while (sc->files) {
+ 		int osize;
+ 		splay_tree *node = sc->files;
+-		stat_cache_entry *sce = node->data;
+ 
+ 		osize = sc->files->size;
+ 			
+@@ -252,8 +251,7 @@
+ 	stat_cache *sc = srv->stat_cache;
+ 	size_t events;
+ 
+-
+-	UNUSED(revent);
++	UNUSED(_fce);
+ 	/* */
+ 
+ 	if ((revent & FDEVENT_IN) &&
+@@ -355,7 +353,10 @@
+ 	stat_cache_entry *sce = NULL;
+ 	stat_cache *sc;
+ 	struct stat st;
++	size_t k;
++#ifdef DEBUG_STAT_CACHE	
+ 	size_t i;
++#endif
+ 
+ 	int file_ndx;
+ 	splay_tree *file_node = NULL;
+@@ -456,125 +457,121 @@
+ 		return HANDLER_ERROR;
+ 	}
+ 
+-	
+-	if (S_ISREG(st.st_mode) || S_ISDIR(st.st_mode)) {
+-		size_t k;
+-
+-		if (S_ISREG(st.st_mode)) {
+-			int fd;
+-			/* see if we can open the file for reading */
+-			if (-1 == (fd = open(name->ptr, O_RDONLY))) {
+-				return HANDLER_ERROR;
+-			}
+-			close(fd);
++	if (S_ISREG(st.st_mode)) {
++		int fd;
++		/* see if we can open the file for reading */
++		if (-1 == (fd = open(name->ptr, O_RDONLY))) {
++			return HANDLER_ERROR;
+ 		}
++		close(fd);
++	}
+ 
+-		if (NULL == sce) {
+-			int osize = 0;
++	if (NULL == sce) {
++		int osize = 0;
+ 		       
+-			if (sc->files) {
+-				osize = sc->files->size;
+-			}
++		if (sc->files) {
++			osize = sc->files->size;
++		}
+ 
+-			sce = stat_cache_entry_init();
+-			buffer_copy_string_buffer(sce->name, name);
+-			
+-			sc->files = splaytree_insert(sc->files, file_ndx, sce); 
++		sce = stat_cache_entry_init();
++		buffer_copy_string_buffer(sce->name, name);
++		
++		sc->files = splaytree_insert(sc->files, file_ndx, sce); 
+ #ifdef DEBUG_STAT_CACHE	
+-			if (ctrl.size == 0) {
+-				ctrl.size = 16;
+-				ctrl.used = 0;
+-				ctrl.ptr = malloc(ctrl.size * sizeof(*ctrl.ptr));
+-			} else if (ctrl.size == ctrl.used) {
+-				ctrl.size += 16;
+-				ctrl.ptr = realloc(ctrl.ptr, ctrl.size * sizeof(*ctrl.ptr));
+-			}
++		if (ctrl.size == 0) {
++			ctrl.size = 16;
++			ctrl.used = 0;
++			ctrl.ptr = malloc(ctrl.size * sizeof(*ctrl.ptr));
++		} else if (ctrl.size == ctrl.used) {
++			ctrl.size += 16;
++			ctrl.ptr = realloc(ctrl.ptr, ctrl.size * sizeof(*ctrl.ptr));
++		}
+ 
+-			ctrl.ptr[ctrl.used++] = file_ndx;
++		ctrl.ptr[ctrl.used++] = file_ndx;
+ 
+-			assert(sc->files);
+-			assert(sc->files->data == sce);
+-			assert(osize + 1 == splaytree_size(sc->files));
++		assert(sc->files);
++		assert(sc->files->data == sce);
++		assert(osize + 1 == splaytree_size(sc->files));
+ #endif
+-		}
++	}
+ 
+-		sce->st = st;
+-		sce->stat_ts = srv->cur_ts;
++	sce->st = st;
++	sce->stat_ts = srv->cur_ts;
+ 
+-		if (S_ISREG(st.st_mode)) {	
+-			/* determine mimetype */
+-			buffer_reset(sce->content_type);
++	if (S_ISREG(st.st_mode)) {	
++		/* determine mimetype */
++		buffer_reset(sce->content_type);
+ 		
+-			for (k = 0; k < con->conf.mimetypes->used; k++) {
+-				data_string *ds = (data_string *)con->conf.mimetypes->data[k];
+-				buffer *type = ds->key;
+-			
+-				if (type->used == 0) continue;
++		for (k = 0; k < con->conf.mimetypes->used; k++) {
++			data_string *ds = (data_string *)con->conf.mimetypes->data[k];
++			buffer *type = ds->key;
++		
++			if (type->used == 0) continue;
+ 
+-				/* check if the right side is the same */
+-				if (type->used > name->used) continue;
++			/* check if the right side is the same */
++			if (type->used > name->used) continue;
+ 
+-				if (0 == strncasecmp(name->ptr + name->used - type->used, type->ptr, type->used - 1)) {
+-					buffer_copy_string_buffer(sce->content_type, ds->value);
+-					break;
+-				}
++			if (0 == strncasecmp(name->ptr + name->used - type->used, type->ptr, type->used - 1)) {
++				buffer_copy_string_buffer(sce->content_type, ds->value);
++				break;
+ 			}
+-			etag_create(sce->etag, &(sce->st));
++		}
++		etag_create(sce->etag, &(sce->st));
+ #ifdef HAVE_XATTR
+-			if (buffer_is_empty(sce->content_type)) {
+-				stat_cache_attr_get(sce->content_type, name->ptr);
+-			}
+-#endif
++		if (buffer_is_empty(sce->content_type)) {
++			stat_cache_attr_get(sce->content_type, name->ptr);
+ 		}
++#endif
++	}
+ 		
+ #ifdef HAVE_FAM_H
+-		if (sc->fam &&
+-		    (srv->srvconf.stat_cache_engine == STAT_CACHE_ENGINE_FAM)) {
+-			/* is this directory already registered ? */
+-			if (!dir_node) {
+-				fam_dir = fam_dir_entry_init();
+-				fam_dir->fc = sc->fam;
++	if (sc->fam &&
++	    (srv->srvconf.stat_cache_engine == STAT_CACHE_ENGINE_FAM)) {
++		/* is this directory already registered ? */
++		if (!dir_node) {
++			fam_dir = fam_dir_entry_init();
++			fam_dir->fc = sc->fam;
+ 
+-				buffer_copy_string_buffer(fam_dir->name, sc->dir_name);
+-				
+-				fam_dir->version = 1;
++			buffer_copy_string_buffer(fam_dir->name, sc->dir_name);
++			
++			fam_dir->version = 1;
++			
++			fam_dir->req = calloc(1, sizeof(FAMRequest));
++			
++			if (0 != FAMMonitorDirectory(sc->fam, fam_dir->name->ptr, 
++						     fam_dir->req, fam_dir)) {
+ 				
+-				fam_dir->req = calloc(1, sizeof(FAMRequest));
++				log_error_write(srv, __FILE__, __LINE__, "sbs", 
++						"monitoring dir failed:", 
++						fam_dir->name, 
++						FamErrlist[FAMErrno]);
+ 				
+-				if (0 != FAMMonitorDirectory(sc->fam, fam_dir->name->ptr, 
+-							     fam_dir->req, fam_dir)) {
+-					
+-					log_error_write(srv, __FILE__, __LINE__, "sbs", 
+-							"monitoring dir failed:", 
+-							fam_dir->name, 
+-							FamErrlist[FAMErrno]);
+-					
+-					fam_dir_entry_free(fam_dir);
+-				} else {
+-					int osize = 0;
+-
+-				       	if (sc->dirs) {
+-						osize = sc->dirs->size;
+-					}
+-
+-					sc->dirs = splaytree_insert(sc->dirs, dir_ndx, fam_dir); 
+-					assert(sc->dirs);
+-					assert(sc->dirs->data == fam_dir);
+-					assert(osize == (sc->dirs->size - 1));
+-				}
++				fam_dir_entry_free(fam_dir);
+ 			} else {
+-				fam_dir = dir_node->data;
++				int osize = 0;
++
++			       	if (sc->dirs) {
++					osize = sc->dirs->size;
++				}
++
++				sc->dirs = splaytree_insert(sc->dirs, dir_ndx, fam_dir); 
++				assert(sc->dirs);
++				assert(sc->dirs->data == fam_dir);
++				assert(osize == (sc->dirs->size - 1));
+ 			}
++		} else {
++			fam_dir = dir_node->data;
++		}
++		
++		/* bind the fam_fc to the stat() cache entry */
+ 			
+-			/* bind the fam_fc to the stat() cache entry */
+-			
+-			if (fam_dir) {
+-				sce->dir_version = fam_dir->version;
+-				sce->dir_ndx     = dir_ndx;
+-			}
++		if (fam_dir) {
++			sce->dir_version = fam_dir->version;
++			sce->dir_ndx     = dir_ndx;
+ 		}
+-#endif
+ 	}
++#endif
++
+ 	*ret_sce = sce;
+ 
+ 	return HANDLER_GO_ON;
+@@ -608,7 +605,7 @@
+ 
+ int stat_cache_trigger_cleanup(server *srv) {
+ 	stat_cache *sc;
+-	size_t max_ndx = 0, i, j;
++	size_t max_ndx = 0, i;
+ 	int *keys;
+ 
+ 	sc = srv->stat_cache;
+@@ -628,9 +625,11 @@
+ 		node = sc->files;
+ 		
+ 		if (node && (node->key == ndx)) {
++#ifdef DEBUG_STAT_CACHE	
++			size_t j;
+ 			int osize = splaytree_size(sc->files);
+ 			stat_cache_entry *sce = node->data;
+-
++#endif
+ 			stat_cache_entry_free(node->data);
+ 			sc->files = splaytree_delete(sc->files, ndx);
+ 
