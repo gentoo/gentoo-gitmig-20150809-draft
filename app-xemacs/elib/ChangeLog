@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/elib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/elib/ChangeLog,v 1.7 2005/01/01 17:02:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/elib/ChangeLog,v 1.8 2005/09/29 06:21:42 josejx Exp $
+
+  29 Sep 2005; Joseph Jezak <josejx@gentoo.org> elib-1.10.ebuild:
+  Marked ppc stable.
 
   09 Aug 2004; Tom Gall <tgall@gentoo.org> elib-1.10.ebuild:
   stable on ppc64

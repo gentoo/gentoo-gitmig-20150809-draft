@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/mailcrypt-2.12.ebuild,v 1.10 2005/01/01 17:08:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mailcrypt/mailcrypt-2.12.ebuild,v 1.11 2005/09/29 06:40:41 josejx Exp $
 
 SLOT="0"
 IUSE=""
@@ -16,7 +16,7 @@ app-xemacs/mh-e
 app-xemacs/rmail
 app-xemacs/vm
 "
-KEYWORDS="amd64 x86 ~ppc alpha sparc ppc64"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 inherit xemacs-packages
 
