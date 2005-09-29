@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.18 2005/09/29 20:35:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.19 2005/09/29 23:35:54 hparker Exp $
+
+  29 Sep 2005; Homer Parker <hparker@gentoo.org> spe-0.7.5c.ebuild:
+  Marked ~amd64.
 
 *spe-0.7.5c (29 Sep 2005)
 
