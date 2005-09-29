@@ -1,48 +1,38 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 789db49b072678e36c38e88533c65d17 ChangeLog 1655
+MD5 bef90500a12ee2237dc651c19bf9453b ChangeLog 1756
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 98c2c897d6bb5fd3f7c6af49cd8decb7 qt-3.3.4-r2.ebuild 8565
 MD5 a242233fb1072c5cfbe5ebbab1443e8d qt-3.3.4-r3.ebuild 9049
-MD5 8a3143b4c6b3ed6f9407e6dad3887482 qt-3.3.4-r6.ebuild 9052
 MD5 29eb571b78b63bccc11984b19cd7153b qt-3.3.4-r7.ebuild 9966
-MD5 cf386ea22e4be00ea893fecf5a6220ba qt-4.0.0.ebuild 5721
 MD5 c30c3dcb479450775e6b471e1960a9e6 qt-4.0.1.ebuild 5613
+MD5 cf386ea22e4be00ea893fecf5a6220ba qt-4.0.0.ebuild 5721
 MD5 20c9b273d559aebcc6aa71b28f47fcbd qt-3.3.5.ebuild 9940
-MD5 c378f20a54d31c24a62c4790a8fb4e92 qt-3.3.4-r8.ebuild 9991
+MD5 8a3143b4c6b3ed6f9407e6dad3887482 qt-3.3.4-r6.ebuild 9052
+MD5 0c41e29ab95b34daced92b941fd89cea qt-3.3.4-r8.ebuild 9990
 MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
 MD5 8b3da5dae8babfcbdee3be465579d6c2 files/0002-dnd_active_window_fix.patch 7289
 MD5 0cc401186f490faf55906cd458280db8 files/0037-dnd-timestamp-fix.patch 2138
 MD5 eb6eb6b68c8f747b12a3a53efc4b6480 files/0038-dragobject-dont-prefer-unknown.patch 2551
 MD5 c7f65a0625242eccf159e2b8ee74976d files/45qt3 109
 MD5 7dc4f78d52452c28ba797ffc7db34f23 files/50qtdir3 16
+MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r7 166
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r2 166
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r3 166
-MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r6 166
-MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r7 166
+MD5 33975d39870dca02e85664411a93eae1 files/qt-3.3.4-gcc4.patch 1002
+MD5 ee2de925bc2929fe4404483c0eca556b files/digest-qt-4.0.1 81
 MD5 7eae3f0a0cb9f3188a994c9f546c869e files/digest-qt-4.0.0 86
+MD5 f23686dab01383c584bb16c69e36b68e files/qt-3.3.4-gcc4-volatile.patch 2480
+MD5 3d30d5b1a92ec492ff8bfd173fba293c files/digest-qt-3.3.5 166
+MD5 08ed7e5a6f33e7f88c7e86f13898fca2 files/qt-3.3.5-uic-fix.patch 711
+MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r8 166
 MD5 4122542a37b787efb9476b0fb1fdafc0 files/qt-3.3.4-0047-fix-kmenu-widget.diff 992
 MD5 8f75ba0e151481962fcb239dc216cf39 files/qt-3.3.4-0051-qtoolbar_77047.patch 1278
 MD5 b9689fa9461944ba25ebf0acde5fb70b files/qt-3.3.4-flickerfree_qiconview_buffered.patch 3347
 MD5 0221c85bc6f785b68812fc7f42110742 files/qt-3.3.4-flickerfree_qscrollview_fixwindowactivate.patch 1540
-MD5 33975d39870dca02e85664411a93eae1 files/qt-3.3.4-gcc4.patch 1002
 MD5 527200fe7fd34be19a63e56a09ad7f47 files/qt-3.3.4-immodule-focus.patch 877
-MD5 7e6cdd22e2c697769754db9d6b3ae963 files/qt-3.3.4-macos.patch 18798
 MD5 3e5e045d0c1448839a8dc1c82aeef21b files/qt-3.3.4-qclipboard-hack.patch 1662
 MD5 da2eb517a4c29a58002e92864ff966e5 files/qt-no-rpath-uic.patch 294
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
 MD5 fff1c03b4a3ad38904a30d1b2de88a07 files/qt4-nomkdir.patch 866
 MD5 2f121ac14a939da7f1958ffc866f8560 files/qt4-rpath.patch 353
-MD5 ee2de925bc2929fe4404483c0eca556b files/digest-qt-4.0.1 81
-MD5 f23686dab01383c584bb16c69e36b68e files/qt-3.3.4-gcc4-volatile.patch 2480
-MD5 3d30d5b1a92ec492ff8bfd173fba293c files/digest-qt-3.3.5 166
-MD5 08ed7e5a6f33e7f88c7e86f13898fca2 files/qt-3.3.5-uic-fix.patch 711
-MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r8 166
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMgvwCRZPokWLroQRAnMkAKDPvJiAxtJNpAFD6wPE/g4X8GCzmACfRNfq
-89YJszaAaFYVyMTZMbkdeF0=
-=2QpK
------END PGP SIGNATURE-----
+MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r6 166
+MD5 7e6cdd22e2c697769754db9d6b3ae963 files/qt-3.3.4-macos.patch 18798
