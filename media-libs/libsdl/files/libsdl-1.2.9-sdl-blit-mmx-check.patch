@@ -1,0 +1,15 @@
+Fix segfaults when playing games like bomberclone
+
+http://bugs.gentoo.org/104533
+
+--- src/video/SDL_blit_N.c
++++ src/video/SDL_blit_N.c
+@@ -2245,7 +2245,7 @@
+ 			    MASKOK(dstfmt->Bmask, table[which].dstB) &&
+ 			    dstfmt->BytesPerPixel == table[which].dstbpp &&
+ 			    (a_need & table[which].alpha) == a_need &&
+-			    ((table[which].blit_features & GetBlitFeatures()) == table[which].blit_features) )
++			    (table[which].blit_features & GetBlitFeatures()))
+ 				break;
+ 		}
+ 		sdata->aux_data = table[which].aux_data;

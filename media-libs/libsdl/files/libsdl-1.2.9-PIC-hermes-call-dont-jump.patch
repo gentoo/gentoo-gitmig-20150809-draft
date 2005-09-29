@@ -1,0 +1,350 @@
+Fixes from PaX team to eliminate TEXTRELs in hermes code
+
+--- src/hermes/mmx_main.asm
++++ src/hermes/mmx_main.asm
+@@ -10,7 +10,6 @@
+ BITS 32
+ 
+ GLOBAL _ConvertMMX
+-GLOBAL _mmxreturn
+ 
+ 
+ SECTION .text
+@@ -50,9 +49,8 @@ _ConvertMMX:
+ y_loop:	
+ 	mov ecx,[ebp+4]
+ 
+-	jmp [ebp+32]
++	call [ebp+32]
+ 
+-_mmxreturn:	
+ 	add esi,[ebp+12]
+ 	add edi,[ebp+28]
+ 	
+--- src/hermes/x86_main.asm
++++ src/hermes/x86_main.asm
+@@ -12,7 +12,6 @@
+ BITS 32
+ 
+ GLOBAL _ConvertX86
+-GLOBAL _x86return
+ 	
+ GLOBAL _Hermes_X86_CPU
+ 
+@@ -54,9 +53,8 @@
+ y_loop:	
+ 	mov ecx,[ebp+4]
+ 
+-	jmp [ebp+32]
++	call [ebp+32]
+ 
+-_x86return:	
+ 	add esi,[ebp+12]
+ 	add edi,[ebp+28]
+ 	
+--- src/hermes/x86p_16.asm
++++ src/hermes/x86p_16.asm
+@@ -25,7 +25,6 @@ GLOBAL _ConvertX86p16_16BGR555
+ GLOBAL _ConvertX86p16_8RGB332
+ 
+ EXTERN _ConvertX86
+-EXTERN _x86return
+ 
+ 
+ SECTION .text
+@@ -57,7 +56,7 @@ _ConvertX86p16_16BGR565:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 ; head
+     mov eax,edi
+@@ -135,7 +134,7 @@ _ConvertX86p16_16BGR565:
+     add edi,BYTE 2
+ 
+ .L7
+-    jmp _x86return
++    retn
+ 
+ 
+ 
+@@ -164,7 +163,7 @@ _ConvertX86p16_16RGB555:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 ; head
+     mov eax,edi
+@@ -243,7 +242,7 @@ _ConvertX86p16_16RGB555:
+     jmp SHORT .L6
+ 
+ .L7 pop ebp
+-    jmp _x86return
++    retn
+ 
+ 
+ 
+@@ -277,7 +276,7 @@ _ConvertX86p16_16BGR555:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 ; head
+     mov eax,edi
+@@ -361,7 +360,7 @@ _ConvertX86p16_16BGR555:
+     add edi,BYTE 2
+ 
+ .L7
+-    jmp _x86return
++    retn
+ 
+ 
+ 
+@@ -394,7 +393,7 @@ _ConvertX86p16_8RGB332:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 mov eax,edi
+     and eax,BYTE 11b
+@@ -492,5 +491,5 @@ _ConvertX86p16_8RGB332:
+     jnz .L6
+ 
+ .L7 pop ebp
+-    jmp _x86return
++    retn
+ 
+--- src/hermes/x86p_32.asm
++++ src/hermes/x86p_32.asm
+@@ -23,8 +23,7 @@ GLOBAL _ConvertX86p32_16RGB555
+ GLOBAL _ConvertX86p32_16BGR555
+ GLOBAL _ConvertX86p32_8RGB332
+ 
+-EXTERN _x86return
+-		
++
+ SECTION .text
+ 
+ 
+@@ -53,7 +52,7 @@ _ConvertX86p32_32BGR888:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 ; save ebp
+     push ebp
+@@ -113,7 +112,7 @@ _ConvertX86p32_32BGR888:
+     jnz .L5
+ 
+ .L6 pop ebp
+-    jmp _x86return
++    retn
+ 	
+ 
+ 	
+@@ -133,7 +132,7 @@ _ConvertX86p32_32RGBA888:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 ; save ebp
+     push ebp
+@@ -184,7 +183,7 @@ _ConvertX86p32_32RGBA888:
+     jnz .L5
+ 
+ .L6 pop ebp
+-    jmp _x86return
++    retn
+ 
+ 	
+ 
+@@ -204,7 +203,7 @@ _ConvertX86p32_32BGRA888:
+     dec ecx
+     jnz .L1
+ .L2
+-    jmp _x86return
++    retn
+ 
+ .L3 ; save ebp
+     push ebp
+@@ -257,7 +256,7 @@ _ConvertX86p32_32BGRA888:
+     jnz .L5
+ 
+ .L6 pop ebp
+-    jmp _x86return
++    retn
+ 
+ 
+ 	
+@@ -282,7 +281,7 @@ _ConvertX86p32_24RGB888:
+ 	dec ecx
+ 	jnz .L1
+ .L2 
+-	jmp _x86return
++	retn
+ 
+ .L3	;	 head
+ 	mov edx,edi
+@@ -354,7 +353,7 @@ _ConvertX86p32_24RGB888:
+ 	jnz .L6
+ 
+ .L7	pop ebp
+-	jmp _x86return
++	retn
+ 
+ 
+ 
+@@ -380,7 +379,7 @@ _ConvertX86p32_24BGR888:
+ 	dec ecx
+ 	jnz .L1
+ .L2
+-	jmp _x86return
++	retn
+ 
+ .L3 ; head
+ 	mov edx,edi
+@@ -455,7 +454,7 @@ _ConvertX86p32_24BGR888:
+ 
+ .L7 
+ 	pop ebp
+-	jmp _x86return
++	retn
+  
+ 
+ 	
+@@ -484,7 +483,7 @@ _ConvertX86p32_16RGB565:
+ 	jnz .L1
+ 
+ .L2:				; End of short loop
+-	jmp _x86return
++	retn
+ 
+ 	
+ .L3	; head
+@@ -570,7 +569,7 @@ _ConvertX86p32_16RGB565:
+ 	add edi,BYTE 2
+ 
+ .L7:	
+-	jmp _x86return
++	retn
+ 
+ 
+ 
+@@ -599,7 +598,7 @@ _ConvertX86p32_16BGR565:
+ 	dec ecx
+ 	jnz .L1
+ .L2
+-	jmp _x86return
++	retn
+ 
+ .L3	; head
+ 	mov ebx,edi
+@@ -684,7 +683,7 @@ _ConvertX86p32_16BGR565:
+ 	add edi,BYTE 2
+ 
+ .L7 
+-	jmp _x86return
++	retn
+ 
+ 
+ 	
+@@ -713,7 +712,7 @@ _ConvertX86p32_16RGB555:
+ 	dec ecx
+ 	jnz .L1
+ .L2
+-	jmp _x86return
++	retn
+ 
+ .L3	; head
+ 	mov ebx,edi
+@@ -795,7 +794,7 @@ _ConvertX86p32_16RGB555:
+ 	add edi,BYTE 2
+ 
+ .L7
+-	jmp _x86return
++	retn
+ 
+ 
+ 
+@@ -825,7 +824,7 @@ _ConvertX86p32_16BGR555:
+ 	dec ecx
+ 	jnz .L1
+ .L2 
+-	jmp _x86return
++	retn
+ 
+ .L3	; head
+ 	mov ebx,edi
+@@ -910,7 +909,7 @@ _ConvertX86p32_16BGR555:
+ 	add edi,BYTE 2
+ 
+ .L7
+-	jmp _x86return
++	retn
+ 
+ 
+ 
+@@ -1040,5 +1039,5 @@ _ConvertX86p32_8RGB332:
+ 	jnz .L3
+ 	
+ .L4:	
+-	jmp _x86return
++	retn
+ 
+--- src/hermes/mmxp2_32.asm
++++ src/hermes/mmxp2_32.asm
+@@ -27,8 +27,6 @@ GLOBAL _ConvertMMXpII32_16BGR565
+ GLOBAL _ConvertMMXpII32_16RGB555
+ GLOBAL _ConvertMMXpII32_16BGR555
+ 
+-EXTERN _mmxreturn
+- 
+ SECTION .data
+ 	
+ ALIGN 8
+@@ -108,7 +98,7 @@ _ConvertMMXpII32_24RGB888:
+         dec ecx
+         jnz .L3
+ .L4:
+-        jmp _mmxreturn
++        return
+ 
+ 
+ 
+@@ -176,7 +173,7 @@ _ConvertMMXpII32_16RGB565:
+         jnz .L3
+ 
+ .L4:
+-	jmp _mmxreturn
++	retn
+ 
+ 	
+ _ConvertMMXpII32_16BGR565:
+@@ -245,7 +249,7 @@ _ConvertMMXpII32_16BGR565:
+         jnz .L3
+ 
+ .L4:
+-        jmp _mmxreturn
++        retn
+ 
+ _ConvertMMXpII32_16BGR555:
+ 
+@@ -380,5 +384,5 @@ _convert_bgr555_cheat:
+ 	jnz .L3	
+ 
+ .L4:		
+-	jmp _mmxreturn
++	retn
+ 

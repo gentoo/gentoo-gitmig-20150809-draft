@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.88 2005/09/28 04:05:36 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.89 2005/09/29 09:47:26 vapier Exp $
+
+*libsdl-1.2.9-r1 (29 Sep 2005)
+
+  29 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libsdl-1.2.9-PIC-SDL_stretch.patch,
+  +files/libsdl-1.2.9-PIC-hermes-call-dont-jump.patch,
+  +files/libsdl-1.2.9-PIC-hermes-cpuid.patch,
+  +files/libsdl-1.2.9-PIC-load-mmx-masks-from-stack.patch,
+  +files/libsdl-1.2.9-gcc-mmx.patch,
+  +files/libsdl-1.2.9-no-exec-stack.patch,
+  +files/libsdl-1.2.9-sdl-blit-mmx-check.patch, +libsdl-1.2.9-r1.ebuild:
+  Fix building with gcc-4 #104437, fixes for PIC issues from PaX team, and fix
+  segfault in bomberclone #104533.
 
   28 Sep 2005; Kito <kito@gentoo.org> libsdl-1.2.9.ebuild:
   remove unneeded macos append-flags.
