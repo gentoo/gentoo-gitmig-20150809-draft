@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/libfreevec-0.8.ebuild,v 1.1 2005/09/29 13:56:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/libfreevec-0.8.ebuild,v 1.2 2005/09/29 15:00:05 swegener Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ DEPEND=">=sys-devel/gcc-3.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	libtoolize --copy --force
 	autoreconf
 }
@@ -37,7 +37,5 @@ src_install() {
 }
 
 pkg_postinst() {
-
-ewarn "Beware that library has known bugs, DO NOT PRELOAD IT"
-
+	ewarn "Beware that library has known bugs, DO NOT PRELOAD IT"
 }
