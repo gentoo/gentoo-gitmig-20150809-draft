@@ -1,0 +1,11 @@
+diff -ur xpad-2.9/src/xpad-toolbar.c xpad-2.9-smallicons/src/xpad-toolbar.c
+--- xpad-2.9/src/xpad-toolbar.c	2004-12-24 02:49:44.000000000 +0100
++++ xpad-2.9-smallicons/src/xpad-toolbar.c	2005-09-28 00:01:03.000000000 +0200
+@@ -213,6 +213,7 @@
+ 	gtk_toolbar_set_tooltips (GTK_TOOLBAR (toolbar), TRUE);
+ 	gtk_toolbar_set_style (GTK_TOOLBAR (toolbar), GTK_TOOLBAR_ICONS);
+ 	gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), FALSE);
++	gtk_toolbar_set_icon_size (GTK_TOOLBAR (toolbar), GTK_ICON_SIZE_MENU);
+ 	
+ 	g_signal_connect_swapped (xpad_settings (), "change-buttons", G_CALLBACK (xpad_toolbar_change_buttons), toolbar);
+ 	

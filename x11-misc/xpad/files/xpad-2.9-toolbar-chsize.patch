@@ -1,0 +1,265 @@
+diff -ur xpad-2.9/src/xpad-pad.c xpad-2.9-ticho/src/xpad-pad.c
+--- xpad-2.9/src/xpad-pad.c	2005-08-24 03:54:05.000000000 +0200
++++ xpad-2.9-ticho/src/xpad-pad.c	2005-09-27 17:34:45.000000000 +0200
+@@ -393,18 +393,21 @@
+ {
+ 	if (!GTK_WIDGET_VISIBLE (pad->priv->toolbar))
+ 	{
+-		GtkRequisition req;
+-		
+ 		if (GTK_WIDGET (pad)->window)
+ 			gdk_window_freeze_updates (GTK_WIDGET (pad)->window);
+ 		gtk_widget_show (pad->priv->toolbar);
+-		if (!pad->priv->toolbar_height)
++		if (xpad_settings_get_toolbar_changes_window_size ( xpad_settings ()))
+ 		{
+-			gtk_widget_size_request (pad->priv->toolbar, &req);
+-			pad->priv->toolbar_height = req.height;
++			GtkRequisition req;
++
++			if (!pad->priv->toolbar_height)
++			{
++				gtk_widget_size_request (pad->priv->toolbar, &req);
++				pad->priv->toolbar_height = req.height;
++			}
++			pad->priv->height += pad->priv->toolbar_height;
++			gtk_window_resize (GTK_WINDOW (pad), pad->priv->width, pad->priv->height);
+ 		}
+-		pad->priv->height += pad->priv->toolbar_height;
+-		gtk_window_resize (GTK_WINDOW (pad), pad->priv->width, pad->priv->height);
+ 		if (GTK_WIDGET (pad)->window)
+ 			gdk_window_thaw_updates (GTK_WIDGET (pad)->window);
+ 	}
+@@ -417,9 +420,13 @@
+ 	{
+ 		if (GTK_WIDGET (pad)->window)
+ 			gdk_window_freeze_updates (GTK_WIDGET (pad)->window);
+-		pad->priv->height -= pad->priv->toolbar_height;
+ 		gtk_widget_hide (pad->priv->toolbar);
+-		gtk_window_resize (GTK_WINDOW (pad), pad->priv->width, pad->priv->height);
++		if (xpad_settings_get_toolbar_changes_window_size (xpad_settings ()))
++		{
++			pad->priv->height -= pad->priv->toolbar_height;
++			gtk_window_resize (GTK_WINDOW (pad), pad->priv->width, pad->priv->height);
++			
++		}
+ 		if (GTK_WIDGET (pad)->window)
+ 			gdk_window_thaw_updates (GTK_WIDGET (pad)->window);
+ 	}
+diff -ur xpad-2.9/src/xpad-preferences.c xpad-2.9-ticho/src/xpad-preferences.c
+--- xpad-2.9/src/xpad-preferences.c	2005-03-04 00:50:42.000000000 +0100
++++ xpad-2.9-ticho/src/xpad-preferences.c	2005-09-27 17:34:12.000000000 +0200
+@@ -39,6 +39,7 @@
+ 	GtkWidget *editcheck;
+ 	GtkWidget *stickycheck;
+ 	GtkWidget *confirmcheck;
++	GtkWidget *toolbarchsizecheck;
+ 	
+ 	GtkWidget *textbutton;
+ 	GtkWidget *backbutton;
+@@ -47,6 +48,7 @@
+ 	guint notify_edit_handler;
+ 	guint notify_sticky_handler;
+ 	guint notify_confirm_handler;
++	guint notify_toolbarchsize_handler;
+ 	guint notify_font_handler;
+ 	guint notify_back_handler;
+ 	guint notify_text_handler;
+@@ -58,11 +60,13 @@
+ 	guint editcheck_handler;
+ 	guint stickycheck_handler;
+ 	guint confirmcheck_handler;
++	guint toolbarchsize_handler;
+ };
+ 
+ static void change_edit_check (GtkToggleButton *button, XpadPreferences *pref);
+ static void change_sticky_check (GtkToggleButton *button, XpadPreferences *pref);
+ static void change_confirm_check (GtkToggleButton *button, XpadPreferences *pref);
++static void change_toolbarchsize_check (GtkToggleButton *button, XpadPreferences *pref);
+ static void change_color_check (GtkToggleButton *button, XpadPreferences *pref);
+ static void change_font_check (GtkToggleButton *button, XpadPreferences *pref);
+ static void change_text_color (GtkColorButton *button, XpadPreferences *pref);
+@@ -71,6 +75,7 @@
+ static void notify_edit (XpadPreferences *pref);
+ static void notify_sticky (XpadPreferences *pref);
+ static void notify_confirm (XpadPreferences *pref);
++static void notify_toolbarchsize (XpadPreferences *pref);
+ static void notify_fontname (XpadPreferences *pref);
+ static void notify_text_color (XpadPreferences *pref);
+ static void notify_back_color (XpadPreferences *pref);
+@@ -179,6 +184,7 @@
+ 	pref->priv->editcheck = gtk_check_button_new_with_mnemonic (_("_Edit lock"));
+ 	pref->priv->stickycheck = gtk_check_button_new_with_mnemonic (_("_Pads start on all workspaces"));
+ 	pref->priv->confirmcheck = gtk_check_button_new_with_mnemonic (_("_Confirm pad deletion"));
++	pref->priv->toolbarchsizecheck = gtk_check_button_new_with_mnemonic (_("_Toolbar changes window size."));
+ 	
+ 	gtk_dialog_add_button (GTK_DIALOG (pref), "gtk-close", GTK_RESPONSE_CLOSE);
+ 	gtk_dialog_set_default_response (GTK_DIALOG (pref), GTK_RESPONSE_CLOSE);
+@@ -236,6 +242,7 @@
+ 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (pref->priv->editcheck), xpad_settings_get_edit_lock (xpad_settings ()));
+ 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (pref->priv->stickycheck), xpad_settings_get_sticky (xpad_settings ()));
+ 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (pref->priv->confirmcheck), xpad_settings_get_confirm_destroy (xpad_settings ()));
++	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (pref->priv->toolbarchsizecheck), xpad_settings_get_toolbar_changes_window_size (xpad_settings ()));
+ 	
+ 	vbox = gtk_vbox_new (FALSE, 6);
+ 	gtk_box_pack_start (GTK_BOX (vbox), pref->priv->antifontcheck, FALSE, FALSE, 0);
+@@ -275,7 +282,8 @@
+ 	
+ 	gtk_box_pack_start (GTK_BOX (options_vbox), pref->priv->editcheck, FALSE, FALSE, 0);
+ 	gtk_box_pack_start (GTK_BOX (options_vbox), pref->priv->stickycheck, FALSE, FALSE, 0);
+-	gtk_box_pack_start (GTK_BOX (options_vbox), pref->priv->confirmcheck, FALSE, FALSE, 0);	
++	gtk_box_pack_start (GTK_BOX (options_vbox), pref->priv->confirmcheck, FALSE, FALSE, 0);
++	gtk_box_pack_start (GTK_BOX (options_vbox), pref->priv->toolbarchsizecheck, FALSE, FALSE, 0);
+ 	
+ 	global_vbox = g_object_new (GTK_TYPE_VBOX,
+ 		"border-width", 6,
+@@ -290,6 +298,7 @@
+ 	pref->priv->editcheck_handler = g_signal_connect (pref->priv->editcheck, "toggled", G_CALLBACK (change_edit_check), pref);
+ 	pref->priv->stickycheck_handler = g_signal_connect (pref->priv->stickycheck, "toggled", G_CALLBACK (change_sticky_check), pref);
+ 	pref->priv->confirmcheck_handler = g_signal_connect (pref->priv->confirmcheck, "toggled", G_CALLBACK (change_confirm_check), pref);
++	pref->priv->toolbarchsize_handler = g_signal_connect (pref->priv->toolbarchsizecheck, "toggled", G_CALLBACK (change_toolbarchsize_check), pref);
+ 	pref->priv->colorcheck_handler = g_signal_connect (pref->priv->colorcheck, "toggled", G_CALLBACK (change_color_check), pref);
+ 	pref->priv->fontcheck_handler = g_signal_connect (pref->priv->fontcheck, "toggled", G_CALLBACK (change_font_check), pref);
+ 	pref->priv->text_handler = g_signal_connect (pref->priv->textbutton, "color-set", G_CALLBACK (change_text_color), pref);
+@@ -301,6 +310,7 @@
+ 	pref->priv->notify_sticky_handler = g_signal_connect_swapped (xpad_settings (), "notify::sticky", G_CALLBACK (notify_sticky), pref);
+ 	pref->priv->notify_edit_handler = g_signal_connect_swapped (xpad_settings (), "notify::edit-lock", G_CALLBACK (notify_edit), pref);
+ 	pref->priv->notify_confirm_handler = g_signal_connect_swapped (xpad_settings (), "notify::confirm-destroy", G_CALLBACK (notify_confirm), pref);
++	pref->priv->notify_toolbarchsize_handler = g_signal_connect_swapped (xpad_settings (), "notify::toolbar-chsize", G_CALLBACK (notify_toolbarchsize), pref);
+ 	
+ 	g_object_unref (size_group_labels);
+ 	
+@@ -308,7 +318,7 @@
+ 	
+ 	/* Make window not so squished */
+ 	gtk_widget_size_request (GTK_WIDGET (pref), &req);
+-	g_object_set (G_OBJECT (pref), "default-width", (gint) (req.height * 0.8), NULL);
++//	g_object_set (G_OBJECT (pref), "default-width", (gint) (req.height * 0.8), NULL);
+ }
+ 
+ static void
+@@ -394,6 +404,14 @@
+ }
+ 
+ static void
++change_toolbarchsize_check (GtkToggleButton *button, XpadPreferences *pref)
++{
++	g_signal_handler_block (xpad_settings (), pref->priv->notify_toolbarchsize_handler);
++	xpad_settings_set_toolbar_changes_window_size (xpad_settings (), gtk_toggle_button_get_active (button));
++	g_signal_handler_unblock (xpad_settings (), pref->priv->notify_toolbarchsize_handler);
++}
++
++static void
+ change_text_color (GtkColorButton *button, XpadPreferences *pref)
+ {
+ 	GdkColor color;
+@@ -516,3 +534,11 @@
+ 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (pref->priv->confirmcheck), xpad_settings_get_confirm_destroy (xpad_settings ()));
+ 	g_signal_handler_unblock (pref->priv->confirmcheck, pref->priv->confirmcheck_handler);
+ }
++
++static void
++notify_toolbarchsize (XpadPreferences *pref)
++{
++	g_signal_handler_block (pref->priv->toolbarchsizecheck, pref->priv->toolbarchsize_handler);
++	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (pref->priv->toolbarchsizecheck), xpad_settings_get_toolbar_changes_window_size (xpad_settings ()));
++	g_signal_handler_unblock (pref->priv->toolbarchsizecheck, pref->priv->toolbarchsize_handler);
++}
+diff -ur xpad-2.9/src/xpad-settings.c xpad-2.9-ticho/src/xpad-settings.c
+--- xpad-2.9/src/xpad-settings.c	2004-10-12 00:58:37.000000000 +0200
++++ xpad-2.9-ticho/src/xpad-settings.c	2005-09-27 17:05:15.000000000 +0200
+@@ -33,6 +33,7 @@
+ 	guint height;
+ 	gboolean has_decorations;
+ 	gboolean confirm_destroy;
++	gboolean toolbar_chsize;
+ 	gboolean edit_lock;
+ 	gboolean sticky;
+ 	gboolean has_toolbar;
+@@ -57,6 +58,7 @@
+   PROP_HEIGHT,
+   PROP_HAS_DECORATIONS,
+   PROP_CONFIRM_DESTROY,
++  PROP_TOOLBAR_CHANGES_WINDOW_SIZE,
+   PROP_STICKY,
+   PROP_EDIT_LOCK,
+   PROP_HAS_TOOLBAR,
+@@ -135,6 +137,14 @@
+ 	                                                       G_PARAM_READWRITE));
+ 	
+ 	g_object_class_install_property (gobject_class,
++	                                 PROP_TOOLBAR_CHANGES_WINDOW_SIZE,
++	                                 g_param_spec_boolean ("toolbar_chsize",
++	                                                       "Toolbar Changes Window Size",
++	                                                       "Whether toolbar displaying and hiding changes window size",
++	                                                       TRUE,
++	                                                       G_PARAM_READWRITE));
++	
++	g_object_class_install_property (gobject_class,
+ 	                                 PROP_STICKY,
+ 	                                 g_param_spec_boolean ("sticky",
+ 	                                                       "Default Stickiness",
+@@ -328,11 +338,28 @@
+ 	g_object_notify (G_OBJECT (settings), "confirm_destroy");
+ }
+ 
++void xpad_settings_set_toolbar_changes_window_size (XpadSettings *settings, gboolean changes)
++{
++	if (settings->priv->toolbar_chsize == changes)
++		return;
++	
++	settings->priv->toolbar_chsize = changes;
++	
++	save_to_file (settings, DEFAULTS_FILENAME);
++	
++	g_object_notify (G_OBJECT (settings), "toolbar_chsize");
++}
++
+ gboolean xpad_settings_get_confirm_destroy (XpadSettings *settings)
+ {
+ 	return settings->priv->confirm_destroy;
+ }
+ 
++gboolean xpad_settings_get_toolbar_changes_window_size (XpadSettings *settings)
++{
++	return settings->priv->toolbar_chsize;
++}
++
+ void xpad_settings_set_edit_lock (XpadSettings *settings, gboolean lock)
+ {
+ 	if (settings->priv->edit_lock == lock)
+@@ -556,6 +583,10 @@
+ 	case PROP_CONFIRM_DESTROY:
+ 		xpad_settings_set_confirm_destroy (settings, g_value_get_boolean (value));
+ 		break;
++
++	case PROP_TOOLBAR_CHANGES_WINDOW_SIZE:
++		xpad_settings_set_toolbar_changes_window_size (settings, g_value_get_boolean (value));
++		break;
+ 	
+ 	case PROP_STICKY:
+ 		xpad_settings_set_sticky (settings, g_value_get_boolean (value));
+@@ -620,6 +651,10 @@
+ 		g_value_set_boolean (value, xpad_settings_get_confirm_destroy (settings));
+ 		break;
+ 	
++	case PROP_TOOLBAR_CHANGES_WINDOW_SIZE:
++		g_value_set_boolean (value, xpad_settings_get_confirm_destroy (settings));
++		break;
++	
+ 	case PROP_STICKY:
+ 		g_value_set_boolean (value, xpad_settings_get_sticky (settings));
+ 		break;
+diff -ur xpad-2.9/src/xpad-settings.h xpad-2.9-ticho/src/xpad-settings.h
+--- xpad-2.9/src/xpad-settings.h	2005-08-24 03:39:19.000000000 +0200
++++ xpad-2.9-ticho/src/xpad-settings.h	2005-09-27 16:56:38.000000000 +0200
+@@ -66,6 +66,9 @@
+ void xpad_settings_set_confirm_destroy (XpadSettings *settings, gboolean confirm);
+ gboolean xpad_settings_get_confirm_destroy (XpadSettings *settings);
+ 
++void xpad_settings_set_toolbar_changes_window_size (XpadSettings *settings, gboolean changes);
++gboolean xpad_settings_get_toolbar_changes_window_size (XpadSettings *settings);
++
+ void xpad_settings_set_sticky (XpadSettings *settings, gboolean sticky);
+ gboolean xpad_settings_get_sticky (XpadSettings *settings);
+ 

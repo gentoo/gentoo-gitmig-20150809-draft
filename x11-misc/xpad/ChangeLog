@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.37 2005/08/26 00:12:20 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.38 2005/09/29 10:47:12 ferdy Exp $
+
+*xpad-2.9-r1 (29 Sep 2005)
+
+  29 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/xpad-2.9-smallicons.patch, +files/xpad-2.9-toolbar-chsize.patch,
+  +xpad-2.9-r1.ebuild:
+  Add patches from Andrej Kacian (aka ticho@g.o)
 
 *xpad-2.9 (26 Aug 2005)
 
