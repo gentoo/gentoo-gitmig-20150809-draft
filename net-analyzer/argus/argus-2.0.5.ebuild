@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.12 2005/07/19 12:47:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.13 2005/09/29 02:35:02 vanquirius Exp $
 
 inherit eutils
 
@@ -19,17 +19,16 @@ DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.4.6"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A} ; cd "${S}"
 
-	epatch ${FILESDIR}/${P}-libpcap-include.patch
+	epatch "${FILESDIR}"/${P}-libpcap-include.patch
 
 	# Fix hardcoded config file
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	epatch "${FILESDIR}"/${PF}-gentoo.diff
 }
 
 src_install () {
-	dodoc COPYING CREDITS INSTALL README
-	dodoc doc/FAQ doc/HOW-TO doc/CHANGES
+	dodoc CREDITS README doc/{FAQ,HOW-TO,CHANGES}
 
 	#do not install man/man1/tcpdump.1, file collision
 	doman man/man1/ra* man/man5/* man/man8/*
