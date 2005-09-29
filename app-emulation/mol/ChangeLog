@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.50 2005/08/06 21:05:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.51 2005/09/29 03:05:43 josejx Exp $
+
+*mol-0.9.71_pre1-r3 (29 Sep 2005)
+
+  29 Sep 2005; Joseph Jezak <josejx@gentoo.org> +files/mol-uname.diff,
+  +files/mol-verify_area.diff, +mol-0.9.71_pre1-r3.ebuild:
+  Added patch for uname bug #105741 (thanks _bambam) and fixed building on
+  2.6.14 kernels.
 
   06 Aug 2005; Carsten Lohrke <carlo@gentoo.org> mol-0.9.70.ebuild,
   mol-0.9.70-r1.ebuild, mol-0.9.71_pre1.ebuild, mol-0.9.71_pre1-r1.ebuild,

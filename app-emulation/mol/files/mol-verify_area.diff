@@ -1,0 +1,157 @@
+diff -ur src/kmod/include/misc.h src/kmod/include/misc.h
+--- src/kmod/include/misc.h	2005-09-14 13:30:23.362968000 +0200
++++ src/kmod/include/misc.h	2005-09-14 13:31:26.170893250 +0200
+@@ -17,6 +17,21 @@
+ #ifndef _H_MOD
+ #define _H_MOD
+ 
++/*
++ *  * Nico
++ *  */
++
++#include <linux/version.h>
++#include <asm/uaccess.h>
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#define compat_verify_area(a,b,c)       ( ! access_ok(a,b,c) )
++#else
++#define compat_verify_area(a,b,c)       verify_area(a,b,c)
++#endif
++
++
++
+ extern int 	g_num_sessions;			/* number of active sessions */
+ 
+ struct kernel_vars;
+diff -ur src/kmod/Linux/dev.c src/kmod/Linux/dev.c
+--- src/kmod/Linux/dev.c	2005-09-14 13:30:23.302964250 +0200
++++ src/kmod/Linux/dev.c	2005-09-14 13:31:38.319652500 +0200
+@@ -153,7 +153,7 @@
+ 
+ 	switch( cmd ) {
+ 	case MOL_IOCTL_GET_DIRTY_FBLINES:  /* short *retbuf, int size -- npairs */
+-		if( verify_area(VERIFY_WRITE, (short*)p1, p2) )
++		if( compat_verify_area(VERIFY_WRITE, (short*)p1, p2) )
+ 			break;
+ 		ret = get_dirty_fb_lines( kv, (short*)p1, p2 );
+ 		break;
+@@ -188,7 +188,7 @@
+ 		break;
+ 
+ 	case MOL_IOCTL_SET_RAM: /* void ( char *lvbase, size_t size ) */
+-		if( verify_area(VERIFY_WRITE, (char*)p1, p2) )
++		if( compat_verify_area(VERIFY_WRITE, (char*)p1, p2) )
+ 			break;
+ 		kv->mmu.linux_ram_base = (char*)p1;
+ 		kv->mmu.ram_size = p2;
+diff -ur src/netdriver/sheep.c src/netdriver/sheep.c
+--- src/netdriver/sheep.c	2005-09-14 13:30:24.479037750 +0200
++++ src/netdriver/sheep.c	2005-09-14 13:31:11.169955750 +0200
+@@ -80,7 +80,13 @@
+  */
+ 
+ #ifdef LINUX_26
++
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,12))
++#define compat_sk_alloc(a,b,c)  sk_alloc( (a), (b), &mol_proto, 1 )
++#else
+ #define compat_sk_alloc(a,b,c)	sk_alloc( (a), (b), (c), NULL )
++#endif
++
+ #define skt_set_dead(skt)	do {} while(0)
+ #define wmem_alloc		sk_wmem_alloc
+ #else
+@@ -156,8 +162,14 @@
+  * the IP address is wrong.)
+  */
+ 
++
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,14))
++static int
++sheep_net_receiver( struct sk_buff *skb, struct net_device *dev, struct packet_type *pt, struct net_device *orig_dev )
++#else
+ static int 
+ sheep_net_receiver( struct sk_buff *skb, struct net_device *dev, struct packet_type *pt )
++#endif
+ {
+ 	int multicast = (ETH_HDR(skb)->h_dest[0] & ETH_ADDR_MULTICAST);
+ 	const char *laddr = dev->dev_addr;
+@@ -242,6 +254,15 @@
+ /************************************************************************/
+ /*	misc device ops							*/
+ /************************************************************************/
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,12))
++static struct proto mol_proto =
++{
++	.name     = "MOL",
++	.owner     = THIS_MODULE,
++	.obj_size    = sizeof(struct sock)
++};
++#endif
++
+ 
+ static int 
+ sheep_net_open( struct inode *inode, struct file *f )
+@@ -286,6 +318,10 @@
+ 	while( (skb=skb_dequeue(&v->queue)) )
+ 		kfree_skb(skb);
+ 
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,12))
++	proto_unregister(&mol_proto);
++#endif
++
+ 	// Free private variables
+ 	kfree(v);
+ 	return 0;
+diff -ur src/netdriver/tun.c src/netdriver/tun.c
+--- src/netdriver/tun.c	2005-09-14 13:30:24.471037250 +0200
++++ src/netdriver/tun.c	2005-09-14 13:31:15.082200250 +0200
+@@ -240,7 +240,7 @@
+ 	DBG(KERN_INFO "%s: tun_chr_write %d\n", tun->name, count);
+ 
+ 	for (i = 0, len = 0; i < count; i++) {
+-		if (verify_area(VERIFY_READ, iv[i].iov_base, iv[i].iov_len))
++		if (compat_verify_area(VERIFY_READ, iv[i].iov_base, iv[i].iov_len))
+ 			return -EFAULT;
+ 		len += iv[i].iov_len;
+ 	}
+@@ -304,7 +304,7 @@
+ 	DBG(KERN_INFO "%s: tun_chr_read\n", tun->name);
+ 
+ 	for (i = 0, len = 0; i < count; i++) {
+-		if (verify_area(VERIFY_WRITE, iv[i].iov_base, iv[i].iov_len))
++		if (compat_verify_area(VERIFY_WRITE, iv[i].iov_base, iv[i].iov_len))
+ 			return -EFAULT;
+ 		len += iv[i].iov_len;
+ 	}
+diff -ur src/netdriver/sheep.c src/netdriver/sheep.c
+--- src/netdriver/sheep.c	2005-09-28 22:10:36.000000000 -0400
++++ src/netdriver/sheep.c	2005-09-28 22:13:44.000000000 -0400
+@@ -271,14 +271,25 @@
+ 	struct SheepVars *v;
+ 	D(bug("sheep_net: open\n"));
+ 
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,12))
++	if (proto_register(&mol_proto,0) < 0)
++	{
++		printk(KERN_INFO "Unable to register protocol type\n");
++		return -1;
++	}
++#endif
++
+ 	// Must be opened with read permissions
+ 	if( (f->f_flags & O_ACCMODE) == O_WRONLY )
+ 		return -EPERM;
+ 
+ 	// Allocate private variables
+-	f->private_data = v = (struct SheepVars *)kmalloc( sizeof(*v), GFP_USER );
+-	if( !v )
++	f->private_data = kmalloc(sizeof(struct SheepVars), GPF_USER);
++	if( f->private_data == NULL)
+ 		return -ENOMEM;
++
++	v = (struct SheepVars *) f->private_data;
++	
+ 	memset( v, 0, sizeof(*v) );
+ 	memcpy( v->fake_addr, fake_addr_, 6 );
+ 

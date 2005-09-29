@@ -1,0 +1,20 @@
+--- scripts/mol_uname.bak	2005-09-28 21:41:58.000000000 -0400
++++ scripts/mol_uname	2005-09-28 21:42:24.000000000 -0400
+@@ -54,16 +54,7 @@
+ # Determine the version string of the running kernel
+ ###########################################################
+ 
+-unset SMP ALTIVEC
+-cat /proc/version | grep SMP > /dev/null 
+-[ $? == 0 ] && SMP="-smp"
+-
+-#only bother about altivec in 2.4
+-if [ -f /proc/ksyms ] ; then
+-    grep altivec /proc/ksyms > /dev/null 
+-    [ $? != 0 ] && ALTIVEC="-noav"
+-fi
+-THIS_UNAME=`uname -r`$SMP$ALTIVEC
++THIS_UNAME=`uname -r`
+ 
+ 
+ ###########################################################
