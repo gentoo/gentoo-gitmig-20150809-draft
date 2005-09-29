@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea3a866e53fa4feda036bd09ae90ca53 ChangeLog 653
 MD5 62d94641798229a71103f7baff3d9f07 elib-1.10.ebuild 384
 MD5 8cdb4afbd49b2092df08b7f691b38115 files/digest-elib-1.10 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4f2csIHjyDViGQRAtlEAJsFUytpf2ZaYYLzJ/4aLbitinZQ1ACcCgil
+8i8Sa1vIM2smT8k7/Mk6EFs=
+=rEsl
+-----END PGP SIGNATURE-----

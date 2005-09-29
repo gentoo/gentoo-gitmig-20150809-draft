@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 231477fc7d1b5af09735763334567cab ChangeLog 686
 MD5 d71c0b2af88432341e6184b338432c33 pcl-cvs-1.64.ebuild 535
 MD5 efedf40b2f0698200ff7013f4304bdba files/digest-pcl-cvs-1.64 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4nScsIHjyDViGQRAtznAJ4zv0gN/gQ5seVNAxpD/57p3WDDkwCgoqWr
+G9TfRgAFHGHTn9AP1RSjpFQ=
+=gIul
+-----END PGP SIGNATURE-----

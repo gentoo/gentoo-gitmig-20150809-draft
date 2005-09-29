@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07d3cacfb33db44c8d7cbb5e437026c9 ChangeLog 658
 MD5 62abe5d60dae53480cd467710de02f1d efs-1.29.ebuild 438
 MD5 0f7642fc4c3816dc4414806edfb6a415 files/digest-efs-1.29 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4vKcsIHjyDViGQRAsaJAJ43cM7U9g2zSajnJhF4vrRp+JabTwCgwuJ2
+JSP3M9EAkYECyZERAAMITE8=
+=E8aP
+-----END PGP SIGNATURE-----

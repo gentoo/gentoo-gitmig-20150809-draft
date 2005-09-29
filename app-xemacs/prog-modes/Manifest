@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90c83281d6d66aacc96bb1d78be6c494 prog-modes-1.67.ebuild 663
 MD5 3bcae6ea45203db9b80346746a2f0547 ChangeLog 864
 MD5 1c180d91e0aee12ee4fae9286fb2b9af prog-modes-1.72.ebuild 669
 MD5 95189a8aa6dd34997cffced84cdfe9a9 files/digest-prog-modes-1.72 70
 MD5 1d0294ff43ce356af58eacce0bfd2aeb files/digest-prog-modes-1.67 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4sKcsIHjyDViGQRAhuxAKDkFnQSJllky0ZT7sGUGAB0yzftNQCgn3IS
+nAvvUUItsqrQwsQ7fjfnPr8=
+=5/Ee
+-----END PGP SIGNATURE-----

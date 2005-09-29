@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9d0b5ef0be037fbab8562fd69f34cf6b ChangeLog 679
 MD5 4a9f081cf322bf0b7ec8d0f5b94c6e7b emerge-1.09.ebuild 383
 MD5 2cd5698ff4a1ccac489c841628109f2a files/digest-emerge-1.09 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4qNcsIHjyDViGQRAupkAJ4+VfdG90ly4F6wHRvrPnF9GxmbBwCeMgG+
+WbtalaulaCVS/51UjKnlI+8=
+=d6Oz
+-----END PGP SIGNATURE-----

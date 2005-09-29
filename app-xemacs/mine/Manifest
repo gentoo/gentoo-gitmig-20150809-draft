@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 451c8fbd21222637afea9d68daaa56b9 ChangeLog 573
 MD5 b3830faac3914ba84b44cbd9d3428ed2 mine-1.14.ebuild 378
 MD5 487a80d2e1c0f2b556c5f95e3076e965 files/digest-mine-1.14 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO48ZcsIHjyDViGQRAk5rAJ9yT/QDa4F3lqNXwzTa5mcB2m/CLwCgswWl
+ku+ChMExuvq91wb+jP4bzCg=
+=zXEO
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 762780eaae1ddefdbd4d6dbc09e82cc4 ChangeLog 967
 MD5 233e20b59a303d753c9756ba70473d61 perl-modes-1.04.ebuild 477
 MD5 0f39d0139849956930b1a500aca9c6de metadata.xml 365
 MD5 39843c38bdfa50b29175d874da95d3bb perl-modes-1.02.ebuild 477
 MD5 e5df5958e2b8e460e8cdb3badb321527 files/digest-perl-modes-1.04 70
 MD5 126a4d5bc7a6ca22f524c5a3a9fecb25 files/digest-perl-modes-1.02 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO47IcsIHjyDViGQRArbRAKDhcDd7AE3FQ1kVb8V7HgA2uf6WyACbBpvO
+a70e5Ggmk+fPRN36s5+ZLG4=
+=XQyb
+-----END PGP SIGNATURE-----

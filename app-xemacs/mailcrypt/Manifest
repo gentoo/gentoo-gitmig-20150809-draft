@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 11cb470d697a093df79ad5c1d06f192b ChangeLog 701
 MD5 944b30716393b2e00905449b0f2f7659 mailcrypt-2.12.ebuild 545
 MD5 5a59690f53e76d99c087ef9a2d5feacf files/digest-mailcrypt-2.12 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4xqcsIHjyDViGQRAiXjAKCeqoSbA3GEV358cSqs+H+epyB5NACdE5Q7
+0CqXlaY6vp9/BcGtWpOWWeY=
+=surm
+-----END PGP SIGNATURE-----

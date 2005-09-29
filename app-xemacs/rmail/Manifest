@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3c4b5385084826555dd4f5010649dfa4 ChangeLog 672
 MD5 12ef6f00ca77910d90b1c4f0c448e93c rmail-1.13.ebuild 447
 MD5 82cf6b29aa4cf02184fb2fde059bb0c2 files/digest-rmail-1.13 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4zQcsIHjyDViGQRAqLUAKCxxQJM/ehTkhsfdhkzoyYEy8C/ywCfVGIH
+QDinVf9u8d7Jha7qjyUqxcg=
+=m3Gb
+-----END PGP SIGNATURE-----

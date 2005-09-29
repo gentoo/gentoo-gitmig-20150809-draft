@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 945180c94170dd18cca81098a2be6bc7 ChangeLog 755
 MD5 1b5557748c8c4a0ff7de0a80315a659c time-1.12.ebuild 406
 MD5 e17ec8696c2cf1cfeb7593ba3b988495 files/digest-time-1.12 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO44BcsIHjyDViGQRAthnAJ4gIIXeV9K6tWd+U/TrmV4llnVpSwCgmzQh
+6IRjf9NA/kQghWtliRNE6HU=
+=63fK
+-----END PGP SIGNATURE-----

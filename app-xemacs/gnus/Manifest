@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5aad3fb5d2e5ec34d5b3035e1f30762e ChangeLog 1225
 MD5 f33d8f058523dd7845f12be27b2ef42a gnus-1.64.ebuild 551
 MD5 f6227ef62da3e9dda0e04394bde8e4e2 gnus-1.65.ebuild 580
@@ -6,3 +9,10 @@ MD5 bf2c3d19dfa549e3ff1d74758034b4f7 gnus-1.71.ebuild 617
 MD5 91be7e701a52b62a9eb17b92ffa4e50b files/digest-gnus-1.65 65
 MD5 4ec47b9f0631690da8f1e628f52aa8ca files/digest-gnus-1.71 66
 MD5 5cfd2f95cc9989e86953e6e7f6cbe142 files/digest-gnus-1.64 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO4w3csIHjyDViGQRAn/kAJ9HQYH4LXunjHxmKOptTQYu2mJI0wCfby41
+6Xu6mOmy4YvYqxzmXv6Z0k4=
+=9eqZ
+-----END PGP SIGNATURE-----
