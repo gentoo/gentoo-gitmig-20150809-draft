@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4e6ec1c542ed4914725e42f5f5c65364 ChangeLog 551
 MD5 da8958832d312f294babc34b6ec224bf cdrw-1.2.ebuild 998
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 f9728854da0dbae2d82fa65577d0ba16 files/50cdrw-gentoo.el 443
 MD5 5246abf2a7779ebedff9cdd5038c4dc7 files/digest-cdrw-1.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3iPcsIHjyDViGQRApq6AJwICqm3400zkApkkF5QgkNGhH7AYACfR6nU
+H48AcMIlAQg9rHH+rh/pKsw=
+=7Otq
+-----END PGP SIGNATURE-----

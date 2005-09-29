@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4738dec745b80d71a805d7134aabd13d ChangeLog 823
 MD5 7075625441e53a7da69c8564c02ebef2 elscreen-1.3.2.ebuild 853
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 60dbc5dfdd0b6cac43c6017b75657794 files/60elscreen-gentoo.el 99
 MD5 740f57b491f360a076d93b8a329c4d8a files/digest-elscreen-1.3.2 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3pgcsIHjyDViGQRAo59AJ42tLTkjZ282QsUvuoIdx2Ekq0JVQCfbj71
+a6Rpa7bjMLYsP83S2WAwLmE=
+=Lnln
+-----END PGP SIGNATURE-----

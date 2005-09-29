@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9122b4523501fefa54a7cc76afe723ed ChangeLog 913
 MD5 5677b046e5839e0b556ddb875890ec9c crontab-mode-1.18.ebuild 489
 MD5 4acc0c00f0248e1ffafad9d06ac3a917 crontab-mode-1.11.ebuild 830
@@ -5,3 +8,10 @@ MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 d88eefc12059655611014cffd1633002 files/50crontab-mode-gentoo.el 183
 MD5 e09c6ef69b72d2688e616a05655e58e3 files/digest-crontab-mode-1.18 67
 MD5 a6a5697f06bbef90f1dbf98c87beb236 files/digest-crontab-mode-1.11 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3kzcsIHjyDViGQRAipTAJwJJyYH2E7OPryuxiTv8rpv05wedwCgm6kx
+YpFX7Rz5mzl16OoeIunniOw=
+=t5MH
+-----END PGP SIGNATURE-----

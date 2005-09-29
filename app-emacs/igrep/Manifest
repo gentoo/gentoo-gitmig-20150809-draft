@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc59cf13725d1bf597ca93ee93bb11a1 ChangeLog 565
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 3df69563c58dd35f03bccddef16fcea1 igrep-2.93.ebuild 481
 MD5 cb6b8b04b8b86f17afe952a80b4ec33d files/digest-igrep-2.93 61
 MD5 cf8ba1bce245cdff66b34dc2e6fc6dae files/50igrep-gentoo.el 1218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3wTcsIHjyDViGQRAtViAKDnYQ6nrrpzR63g9FJSYcQ4BKXuaACfXsIh
+Xg/H2YIKlQiTDBXYy5BgW58=
+=cNqo
+-----END PGP SIGNATURE-----

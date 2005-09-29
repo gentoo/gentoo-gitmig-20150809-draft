@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 50259c5ce5dbae8ca11d7c384c1bdf48 ChangeLog 572
 MD5 d58e5286b4651df386b0db6ae5a13b04 analog-1.29.ebuild 886
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 b5b18348bc63e22e3419bfd16f3b6560 files/digest-analog-1.29 62
 MD5 7eb8d20fbf40655e4cce9f95603fa7c9 files/50analog-gentoo.el 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3escsIHjyDViGQRAjKIAKCJhrHSsZFFTibUOUDiRcx4DnXuRgCeIFo/
+bhcubO7bqitG3JPsF/dO9n4=
+=XmDj
+-----END PGP SIGNATURE-----

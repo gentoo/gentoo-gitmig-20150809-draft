@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0fa6f357d813e6686de3b738b54859d0 ChangeLog 580
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 88db34d3976a2d93719223599b690ee6 bubblet-0.74.ebuild 832
 MD5 2c2687930ed28ea361005cdfeb1ec855 files/50bubblet-gentoo.el 104
 MD5 44054456124247bda052093292bd9fbb files/digest-bubblet-0.74 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3f+csIHjyDViGQRAmqFAKCVRYoYjOytzj915+5NE5RL7DNR7wCeKHWf
+SeRooUdJ2qjmLgffEpwTYQk=
+=FN4T
+-----END PGP SIGNATURE-----
