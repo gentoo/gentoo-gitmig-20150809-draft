@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.12 2005/09/28 00:34:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.13 2005/09/29 22:32:09 vapier Exp $
 
 inherit enlightenment toolchain-funcs
 
@@ -33,7 +33,7 @@ src_compile() {
 		$(use_with jpeg) \
 		$(use_with png) \
 		$(use_with tiff) \
-		$(use_with gif giflib) \
+		$(use_with gif) \
 		$(use_with zlib) \
 		$(use_with bzip2) \
 		$(use_with mp3 id3) \
