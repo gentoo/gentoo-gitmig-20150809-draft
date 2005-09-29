@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/extra-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.13 2005/09/29 09:49:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/extra-syntax/ChangeLog,v 1.14 2005/09/29 16:22:26 slarti Exp $
+
+  29 Sep 2005; Tom Martin <slarti@gentoo.org> extra-syntax-4.ebuild:
+  Marked ~amd64, bug #107549.
 
   29 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> extra-syntax-4.ebuild:
   marked ~alpha wrt bug #107549

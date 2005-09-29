@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 64129d32a5af560915b1860817134cb7 extra-syntax-3.ebuild 908
+MD5 ba3f738ad7c20699015a38f07aed7030 extra-syntax-4.ebuild 919
+MD5 1e37723c5f1fc89256e080e17dc4ce5d ChangeLog 1811
 MD5 87eb58b955b352f74fbb25d4fcdff8ba extra-syntax-2.ebuild 879
-MD5 f988aa4a8fc65625b11587a88bc80141 extra-syntax-4.ebuild 911
-MD5 98a74fe96eb8101d01ef8dc68ab5326a ChangeLog 1710
 MD5 c12b313eed9efb8f61723cb9ebf22c36 metadata.xml 253
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-2 0
+MD5 64129d32a5af560915b1860817134cb7 extra-syntax-3.ebuild 908
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-extra-syntax-2 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDO7l6ViELBEf1JB0RAud9AJ4nRkee7UgyJdqzEqrDRzwmF3PhpgCeK95d
-/2xJ9m+YRawfKHT1ect0UuE=
-=jxWm
+iD8DBQFDPBTdCHk4+ZoBpvsRApIWAKDDcAe8QF98Bb1ex4g1ZMfVIartcgCgyTFr
+hKKpawK+mHCoQF5uQhrSYvQ=
+=XNme
 -----END PGP SIGNATURE-----
