@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.11.ebuild,v 1.2 2005/09/29 13:22:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.11.ebuild,v 1.3 2005/09/29 14:04:32 josejx Exp $
 
-inherit nsplugins toolchain-funcs multilib
+inherit nsplugins multilib
 
 DESCRIPTION="mplayer plug-in for Gecko based browsers"
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
@@ -15,7 +15,7 @@ IUSE="gecko-sdk"
 
 DEPEND=">=media-video/mplayer-0.92
 		gecko-sdk? ( net-libs/gecko-sdk )
-		!gecko-sdk? || ( >=www-client/mozilla-1.6 www-client/mozilla-firefox)
+		!gecko-sdk? ( || ( >=www-client/mozilla-1.6 www-client/mozilla-firefox) )
 		>=x11-libs/gtk+-2.2.0
 		dev-libs/atk*
 		>=dev-libs/glib-2.2.0
@@ -23,12 +23,10 @@ DEPEND=">=media-video/mplayer-0.92
 
 S=${WORKDIR}/${PN}
 
-PLUGINS="gmp rm qt wmp"
-
 src_compile() {
 	local myconf
 
-	if ! use gecko-sdk; then
+	if use gecko-sdk; then
 		einfo Configuring to build using gecko-sdk
 		myconf="${myconf} --with-gecko-sdk=/usr/$(get_libdir)/gecko-sdk"
 	fi
@@ -48,6 +46,8 @@ src_install() {
 	insinto /opt/netscape/plugins
 	doins mplayerplug-in.xpt || die "xpt failed"
 	inst_plugin /opt/netscape/plugins/mplayerplug-in.xpt
+
+	PLUGINS="gmp rm qt wmp"
 
 	for plugin in ${PLUGINS}; do
 		### Install the plugin
