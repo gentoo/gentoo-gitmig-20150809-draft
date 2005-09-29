@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.22 2005/09/26 21:17:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.23 2005/09/29 18:17:10 humpback Exp $
+
+  29 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  gdm-themes-2.0-r2.ebuild:
+  Fixed src_uri for variety_blue
 
   26 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
   -gdm-themes-1.0.ebuild, -gdm-themes-1.0-r1.ebuild,

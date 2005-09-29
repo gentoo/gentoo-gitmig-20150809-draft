@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 1eec655a4ae3ceaaecaac9dcc2ed52d2 gdm-themes-2.0-r1.ebuild 4396
-MD5 4ae0771d74f3f70550dfa5056ea258af gdm-themes-2.0-r2.ebuild 4282
-MD5 2fb94a5053671fc802de4676f0c5c5c3 ChangeLog 2740
+MD5 f5aa93d973de4bb0b1a86730e3b33e0d gdm-themes-2.0-r2.ebuild 4302
+MD5 251cb1f3289ef37df33ffd652cef112d ChangeLog 2859
 MD5 9ea9a9c5601b7f2be3f46b882cbf3f03 metadata.xml 416
 MD5 fd04b31a7e6615c5f265a6597164284f files/digest-gdm-themes-2.0-r1 6897
 MD5 2cd87c741821bc4f15c61fb77b495865 files/digest-gdm-themes-2.0-r2 6479
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOGUv8zY1VwezZiERArwLAJ44OLmistumoXwyCHA0dLfGUmn8qACfdeGZ
-IozYCfYKwsBfSF0dnq7xBKY=
-=EeSA
+iD8DBQFDPC+D8zY1VwezZiERAoXMAJ4v7KLY+XKhOW5113Octknj8jeC+QCgrNd4
+reqePh1g8PhG2bR39kWQd8g=
+=MT9a
 -----END PGP SIGNATURE-----
