@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.82 2005/09/28 20:09:22 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.83 2005/09/29 04:50:31 halcy0n Exp $
+
+  29 Sep 2005; Mark Loeser <halcy0n@gentoo.org> mozilla-1.7.12-r2.ebuild:
+  Stable on x86; bug #105396
 
   28 Sep 2005; Rene Nussbaumer <killerfox@gentoo.org>
   mozilla-1.7.12-r2.ebuild:

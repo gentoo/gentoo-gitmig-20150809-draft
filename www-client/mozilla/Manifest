@@ -7,7 +7,7 @@ MD5 afa167a2e95520ba2899ca04145f7a87 mozilla-1.7.11-r1.ebuild 12179
 MD5 efb11836f2b5c8f484f743a401229c53 mozilla-1.7.11-r2.ebuild 12246
 MD5 d93266fa522c8503a5c3c8563b799968 mozilla-1.7.11.ebuild 12172
 MD5 5ac1d6e61327816f403bd186db788f7a mozilla-1.7.11-r3.ebuild 12321
-MD5 59ed8c6f87c1c6bd4e013209cf5e03f3 mozilla-1.7.12-r2.ebuild 11750
+MD5 37c7e8d2a4dd3dc714f9e46bedc177d3 mozilla-1.7.12-r2.ebuild 11749
 MD5 b99dabe3c40cfafe2e63bdef95815596 files/10mozilla 105
 MD5 f928943477be0f114ef393d3a4c28e80 files/digest-mozilla-1.7.10-r1 432
 MD5 f928943477be0f114ef393d3a4c28e80 files/digest-mozilla-1.7.10-r2 432
@@ -30,9 +30,9 @@ MD5 7d244b888dbd302c14414cbfc1f62501 files/xft.js 135
 MD5 4be28298e258904448e10462fcb67c72 files/digest-mozilla-1.7.11-r3 428
 MD5 787437939618daf271673626f6414b15 files/mozilla-1.7.11-GLSA105396.patch 4049
 MD5 3beb280426b5afc68a2a132edf1b58f7 files/digest-mozilla-1.7.12-r2 360
-MD5 bedafc238f92edd9cb98fae3d1af96df files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch 620
 MD5 1f71cb3a30531a90fb7d1d3445588ba6 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
 MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
+MD5 bedafc238f92edd9cb98fae3d1af96df files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch 620
 MD5 730bebc28f073d8c08d32c78252445d5 files/mozilla-1.7.12-rpath.patch 1752
 MD5 068edb8c46e34027f9c3febc19656c70 files/1.3/mozilla-1.3-fix-RAW-target.patch 328
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
