@@ -1,6 +1,12 @@
 # ChangeLog for games-action/d2x
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.10 2005/07/07 13:39:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.11 2005/09/29 19:59:30 wolf31o2 Exp $
+
+*d2x-0.2.5-r2 (29 Sep 2005)
+
+  29 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/d2x-0.2.5-dofpcalcs-macro.patch, +d2x-0.2.5-r2.ebuild:
+  Added patch submitted to bug #98810 and closing bug #98810.
 
   07 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> d2x-0.2.5-r1.ebuild:
   Changed nocd to cdinstall, since it is optional and breaks interactivity.
