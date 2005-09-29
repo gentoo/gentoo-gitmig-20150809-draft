@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libfreevec
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/ChangeLog,v 1.1 2005/09/29 13:56:46 lu_zero Exp $
+
+*libfreevec-0.8 (29 Sep 2005)
+
+  29 Sep 2005; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +libfreevec-0.8.ebuild:
+  Initial release, please beware of the known issues
+
