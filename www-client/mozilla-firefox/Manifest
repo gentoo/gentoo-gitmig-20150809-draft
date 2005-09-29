@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 997645e48244a08ff22fbbb278449df8 ChangeLog 32630
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 6d3af6331c1b75d7991a5680fc9602c7 mozilla-firefox-1.0.6-r2.ebuild 8318
@@ -37,3 +40,10 @@ MD5 bebee751ca5635853d0d2d50b3c33846 files/digest-mozilla-firefox-1.0.7-r2 231
 MD5 bedafc238f92edd9cb98fae3d1af96df files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch 620
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
 MD5 2cdd03eb2752bc01ba07ad837e926f39 files/icon/mozillafirefox.desktop 168
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDO3HuCRZPokWLroQRAvbtAKCQqSn0OdCmDe/OZOPV/03i4FhnjACfZYhE
+vF/WM3Jptum68PHIrWE+VN4=
+=nkoj
+-----END PGP SIGNATURE-----
