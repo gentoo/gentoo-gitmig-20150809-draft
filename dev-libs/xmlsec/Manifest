@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56c71b19887541f91ea4b3f2cf4464c9 ChangeLog 1173
-MD5 ca493bbd2dac96464aff867334b16905 xmlsec-1.2.8.ebuild 1242
+MD5 9ada4be94b018482b48a043e2fdbf4c3 xmlsec-1.2.5.ebuild 1423
+MD5 f49de555fd28ac53e43f7c20aeee5537 xmlsec-1.2.9.ebuild 1192
+MD5 bc4c79af3164e56d1090b3f54ee3dd7f xmlsec-1.2.8.ebuild 1134
+MD5 8d0b1ae19a130dd5a45dba8ff61b0953 ChangeLog 1333
 MD5 1c3665b87d1e39c6799909da58f41b26 metadata.xml 160
-MD5 dbb1b209a1da128099150e08440f42b8 xmlsec-1.2.5.ebuild 1421
-MD5 1cfe5bcecc8c0c37550109bab44dad35 xmlsec-1.2.9.ebuild 1195
-MD5 8d267af575cd797af0e273430c12f7a4 files/digest-xmlsec-1.2.8 66
 MD5 19c95ef82bbe44f2aba5f597b1f083dc files/xmlsec-1.2.2-nss-nspr-configure.in.patch 3407
 MD5 a1e47b5acaab9e8403826080e78f56a5 files/digest-xmlsec-1.2.5 66
+MD5 8d267af575cd797af0e273430c12f7a4 files/digest-xmlsec-1.2.8 66
 MD5 15e08ab683b3b7bda649bb228ef78459 files/digest-xmlsec-1.2.9 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBnt4mdTrptrqvGERAjqlAJ4otSE0R+Ph1PK0ZjYCDcfDNEhH0wCfQu7W
-nPPeVYX4dPP0vrM1otVA52w=
-=v04z
------END PGP SIGNATURE-----
