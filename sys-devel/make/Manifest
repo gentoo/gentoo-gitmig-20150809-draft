@@ -1,18 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f86f99b2ab003e6f5483f365a3db7ebc make-3.80-r2.ebuild 1301
 MD5 039d9a79c20899233ae7f42867feee7c make-3.80-r1.ebuild 1105
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 145efadf0db5bdcca004e1ef96e38521 ChangeLog 3849
-MD5 3adc1d9cc832e98b435305f9f466279b files/3.80-memory.patch 2248
+MD5 f86f99b2ab003e6f5483f365a3db7ebc make-3.80-r2.ebuild 1301
+MD5 cd294e0cc4eb67fedc45653fee8a3c41 make-3.80-r3.ebuild 1250
+MD5 389b848eb375318eadf5ae4b05f1d0d0 ChangeLog 4080
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r2 62
-MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r1 62
+MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r3 62
+MD5 85ce0c4d36cd02b0c1abae84c022dba3 files/make-3.80-parallel-build-failure.patch 2210
 MD5 ea2daf4e61545882b6ba566f2b9132a2 files/make-3.80-ppc64-hardened-clock_gettime.patch 514
+MD5 3adc1d9cc832e98b435305f9f466279b files/3.80-memory.patch 2248
+MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK2VHLLFUmVNQ7rkRAk5oAJ9AWoTy+ZNCPgSkhQ9o+mb255/d3QCfQVeA
-k8WxuoTkMq0X7Jp4zVntrF8=
-=CzrD
+iD8DBQFDPGuOgIKl8Uu19MoRAjhEAJ4qRPsFNJbXLK56nH5jnJ75gOpUDwCffYyD
+52ORL1FoXo8BsQMJud/XjoI=
+=aVOh
 -----END PGP SIGNATURE-----
