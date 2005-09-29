@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 8cf780b3d90694490fa4085f0f1d59eb ChangeLog 3878
 MD5 68e8f6854f38d88b6b6f0cd7ded9b721 gecko-sdk-1.7.8.ebuild 6838
 MD5 8b22525bd9a836743abec05930d9543f gecko-sdk-1.7.12.ebuild 6945
-MD5 edaa2043e54cc72e157499f79f855cf8 ChangeLog 3762
-MD5 f10fdabee942b58f6253db2893014120 gecko-sdk-1.7.12-r1.ebuild 8013
 MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
+MD5 26318b0cf0ced356334d9f8bf7838045 gecko-sdk-1.7.12-r1.ebuild 8013
 MD5 b7c78ba7ca0c519d0f3d2b80ab4cdd74 files/mozilla-1.7.6-ppc64.patch 3651
+MD5 be67106b98a3cc1562eee877200e6ae0 files/digest-gecko-sdk-1.7.8 280
 MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/mozilla-hppa.patch 7863
 MD5 baddc2dbe81599d1575a4a4f95314377 files/mozilla-rebuild-databases.pl 2412
-MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
-MD5 5b22d0e1ea93923e3e66787c286ad86f files/mozilla-1.7.8-objectframefix.diff 673
 MD5 1f71cb3a30531a90fb7d1d3445588ba6 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
-MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-1.7.6-gcc4.patch 1818
-MD5 eb21396de389b3ef0277d5f95d59c348 files/mozilla-1.7.8-amd64.patch 4020
-MD5 c927b56f320d1bacf28c49a7ee3c37ba files/digest-gecko-sdk-1.7.12 376
 MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
 MD5 19bfbff741d54e3b35b048ab445096ed files/digest-gecko-sdk-1.7.12-r1 232
-MD5 be67106b98a3cc1562eee877200e6ae0 files/digest-gecko-sdk-1.7.8 280
+MD5 c927b56f320d1bacf28c49a7ee3c37ba files/digest-gecko-sdk-1.7.12 376
+MD5 5b22d0e1ea93923e3e66787c286ad86f files/mozilla-1.7.8-objectframefix.diff 673
+MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
+MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-1.7.6-gcc4.patch 1818
+MD5 eb21396de389b3ef0277d5f95d59c348 files/mozilla-1.7.8-amd64.patch 4020
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDO8fE3og80iZgVQgRAumOAJ4t5LKVZOOS6VkL+fJaBCb/bcmgjACeM588
-C1xovqf47Lgc2upvDbQWbGo=
-=zA3Y
+iD8DBQFDPAfeKRy60XGEcJIRAhBLAJ4z7MTwHUJN8PC8mRZv1dxlIQVJdQCfckHG
+8sCrvJsNCKrc3YpavxvgWzE=
+=HFnh
 -----END PGP SIGNATURE-----
