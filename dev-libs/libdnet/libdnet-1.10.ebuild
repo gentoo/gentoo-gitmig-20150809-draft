@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.10.ebuild,v 1.2 2005/05/16 19:01:31 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.10.ebuild,v 1.3 2005/09/29 02:29:46 vanquirius Exp $
 
 inherit eutils
 
@@ -10,14 +10,14 @@ SRC_URI="mirror://sourceforge/libdnet/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~ia64 ~amd64"
 IUSE="python"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's/suite_free(s);//' test/check/*.c || die "sed failed"
-	epatch ${FILESDIR}/${P}-gcc4.diff
+	epatch "${FILESDIR}"/${P}-gcc4.diff
 }
 
 src_compile () {
@@ -30,6 +30,6 @@ src_test() {
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README
 }
