@@ -1,0 +1,10 @@
+--- mp_mount.c	2005-09-29 12:04:12.000000000 +0200
++++ mp_mount.c.new	2005-09-29 12:04:23.000000000 +0200
+@@ -60,7 +60,6 @@
+ #include <rpc/rpc.h>
+ #ifdef linux
+ #define _LINUX_SUNRPC_MSGPROT_H_
+-#define __KERNEL__		/* define nfs_fh for nfs_mount_data */
+ #include "nfs_prot.h"
+ #undef __KERNEL__
+ #else
