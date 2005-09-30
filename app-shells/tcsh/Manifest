@@ -1,41 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68ae6ae936111250398633fbfe8b05c7 ChangeLog 5555
-MD5 299cd79eb3cbc2a3caeac1c3a0309556 files/csh.cshrc_new 2810
-MD5 4869b9da87c79854e2cc97241f125853 files/csh.login_new 1482
-MD5 968abc8b96dbc3821d09bc3ee58c41a7 files/digest-tcsh-6.12-r3 121
-MD5 36f0897401e2ff873f97e8eac302169d files/digest-tcsh-6.13 121
-MD5 36f0897401e2ff873f97e8eac302169d files/digest-tcsh-6.13-r1 121
-MD5 8adf2e3c68136062a1023af2832b3c7a files/digest-tcsh-6.14 121
-MD5 18a0fc2cb5f14ddf82a1947cdd43ca43 files/tcsh-6.11.00-termcap.patch 406
-MD5 0c7590ddc33afe8fa448f51871ad677c files/tcsh-6.12-tc.os.h-gentoo.diff 363
-MD5 c6384002cda1bc11c1e31ca9513b9ad6 files/tcsh-6.12.00-setpgrp.patch 545
-MD5 f47afb634d66cb19feac4ab83997a576 files/tcsh-6.13.00-arch.patch 1055
-MD5 1b31eca34600baccddcfdf5d8bca139d files/tcsh-6.13.00-charset.patch 616
-MD5 08dda7e3da3d8f4bc8e41d5ac7a4fbdd files/tcsh-6.13.00-closem.patch 433
-MD5 01e7c42d58599a89564127e92f85caac files/tcsh-6.13.00-codeset.patch 2448
-MD5 fb2384289b070107607f18091513ec74 files/tcsh-6.13.00-cstr.patch 396
-MD5 d612d75d8d811c7932e5c214946cb7ba files/tcsh-6.13.00-dspmbyte.patch 2312
-MD5 87462113a0339dfc85377c3fbef14828 files/tcsh-6.13.00-fcntl.patch 726
-MD5 4ed6009ff61cfdc1f29287d8a0e0835c files/tcsh-6.13.00-glob.patch 305
-MD5 c2ca2472d2e81e30f23492c306c03ada files/tcsh-6.13.00-iconv.patch 11230
-MD5 88ecd43a2f94275ddecaae78650745f8 files/tcsh-6.13.00-utmp.patch 1578
-MD5 8a48eb2d6512d50375df4e87e060feed files/tcsh-6.13.00-winchg.patch 1731
-MD5 16713fff7d0ccc21e1c32b250cdc44ff files/tcsh-aliases 2399
-MD5 8c5915d05b8b0c2db109c754a2bee20f files/tcsh-bindkey 3597
-MD5 e717dd2122d1ae7ab9ee8ebf2c33636a files/tcsh-settings 3271
-MD5 6bd69d3c815412ada4579ac8f8cc9c45 files/tcsh.config 1466
-MD5 a51fb6146ec2bcb7a603e5af41f6c7a2 files/tcsh_enable_kanji.diff 466
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 89674d2fb5c06a3b4b5310a3212c81a2 tcsh-6.12-r3.ebuild 1382
 MD5 1b865e9c0349146f352678370c667127 tcsh-6.13-r1.ebuild 1889
-MD5 40885229543eeb01a6a91b426c29e29d tcsh-6.13.ebuild 1249
 MD5 c250d0af9e636acf93f75180f66ed639 tcsh-6.14.ebuild 1234
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz9FHI1lqEGTUzyQRArfaAJ4kOuM2iZAbw0WM/yAyBQA+QqtR1wCfars/
-A2M1h1C+Ul1n2aTDF/kBPnk=
-=qTYG
------END PGP SIGNATURE-----
+MD5 89674d2fb5c06a3b4b5310a3212c81a2 tcsh-6.12-r3.ebuild 1382
+MD5 40885229543eeb01a6a91b426c29e29d tcsh-6.13.ebuild 1249
+MD5 efacfc119398b8f59b9ee3f65ca80c58 tcsh-6.14-r1.ebuild 2454
+MD5 17b2dbd92367c80ba3d034ac758d4267 ChangeLog 6074
+MD5 57ae68ef95b893d172203de06faf380d metadata.xml 655
+MD5 4869b9da87c79854e2cc97241f125853 files/csh.login_new 1482
+MD5 c6384002cda1bc11c1e31ca9513b9ad6 files/tcsh-6.12.00-setpgrp.patch 545
+MD5 16713fff7d0ccc21e1c32b250cdc44ff files/tcsh-aliases 2399
+MD5 18a0fc2cb5f14ddf82a1947cdd43ca43 files/tcsh-6.11.00-termcap.patch 406
+MD5 1b31eca34600baccddcfdf5d8bca139d files/tcsh-6.13.00-charset.patch 616
+MD5 8c5915d05b8b0c2db109c754a2bee20f files/tcsh-bindkey 3597
+MD5 a51fb6146ec2bcb7a603e5af41f6c7a2 files/tcsh_enable_kanji.diff 466
+MD5 d612d75d8d811c7932e5c214946cb7ba files/tcsh-6.13.00-dspmbyte.patch 2312
+MD5 36f0897401e2ff873f97e8eac302169d files/digest-tcsh-6.13 121
+MD5 8adf2e3c68136062a1023af2832b3c7a files/digest-tcsh-6.14 121
+MD5 c2ca2472d2e81e30f23492c306c03ada files/tcsh-6.13.00-iconv.patch 11230
+MD5 fb2384289b070107607f18091513ec74 files/tcsh-6.13.00-cstr.patch 396
+MD5 968abc8b96dbc3821d09bc3ee58c41a7 files/digest-tcsh-6.12-r3 121
+MD5 36f0897401e2ff873f97e8eac302169d files/digest-tcsh-6.13-r1 121
+MD5 64585b7284837bece8d5ba281d3bda0c files/digest-tcsh-6.14-r1 135
+MD5 6bd69d3c815412ada4579ac8f8cc9c45 files/tcsh.config 1466
+MD5 0c7590ddc33afe8fa448f51871ad677c files/tcsh-6.12-tc.os.h-gentoo.diff 363
+MD5 299cd79eb3cbc2a3caeac1c3a0309556 files/csh.cshrc_new 2810
+MD5 f47afb634d66cb19feac4ab83997a576 files/tcsh-6.13.00-arch.patch 1055
+MD5 e717dd2122d1ae7ab9ee8ebf2c33636a files/tcsh-settings 3271
+MD5 87462113a0339dfc85377c3fbef14828 files/tcsh-6.13.00-fcntl.patch 726
+MD5 01e7c42d58599a89564127e92f85caac files/tcsh-6.13.00-codeset.patch 2448
+MD5 4ed6009ff61cfdc1f29287d8a0e0835c files/tcsh-6.13.00-glob.patch 305
+MD5 8a48eb2d6512d50375df4e87e060feed files/tcsh-6.13.00-winchg.patch 1731
+MD5 08dda7e3da3d8f4bc8e41d5ac7a4fbdd files/tcsh-6.13.00-closem.patch 433
+MD5 88ecd43a2f94275ddecaae78650745f8 files/tcsh-6.13.00-utmp.patch 1578

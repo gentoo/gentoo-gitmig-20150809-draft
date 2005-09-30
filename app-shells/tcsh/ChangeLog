@@ -1,6 +1,18 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.40 2005/06/14 19:55:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.41 2005/09/30 19:42:05 grobian Exp $
+
+*tcsh-6.14-r1 (30 Sep 2005)
+
+  30 Sep 2005; Fabian Groffen <grobian@gentoo.org> metadata.xml,
+  +tcsh-6.14-r1.ebuild:
+  Adding new revision of 6.14 which incorporates a whole new configuration
+  system, that resolves (hopefully) many bugs.  The new config is much more
+  closer to the bare defaults and does not activate all kind of customisations
+  by default.
+  Made myself maintainer and updated metadata.xml.
+  Resolves bugs #17660 #17852 #18340 #18852 #26122 #26159 #27877 #47059 #49851
+  #89295 #93968 #105246
 
   14 Jun 2005; Fernando J. Pereda <ferdy@gentoo.org> tcsh-6.13-r1.ebuild:
   Stable on alpha
