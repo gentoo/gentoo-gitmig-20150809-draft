@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.11.5.1.ebuild,v 1.1 2005/09/30 03:28:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.11.5.1.ebuild,v 1.2 2005/09/30 13:43:34 azarah Exp $
 
 inherit gnome2 eutils
 
 MY_P=${P/_p/-}
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Next generation Beep Media Player"
-HOMEPAGE="http://www.sosdg.org/~larne/w/BMPx"
-SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz
-	http://beepmp.sf.net/${MY_P}.tar.gz"
+HOMEPAGE="http://bmpx.berlios.de/"
+SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz"
+# NB: Change to .bz2 with next release!!
 
 LICENSE="GPL-2"
 SLOT="0"
