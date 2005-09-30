@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3015a168eb2c0b7ad3024e42aee38f9 ChangeLog 2698
-MD5 89480361945b4ee1fe3626101bc1a3e5 sdl-sound-1.0.1-r2.ebuild 1438
-MD5 766c571b88d75cbe216f66fef1061778 sdl-sound-1.0.1.ebuild 1590
+MD5 6f811ccb69c9d1a916dd25ae81587d0a sdl-sound-1.0.1-r1.ebuild 1166
+MD5 287c701aa62949c37fb232c0f46bf88f sdl-sound-1.0.1.ebuild 1584
+MD5 09c9ced300d546c5b1a7395f1dc66d85 sdl-sound-1.0.1-r2.ebuild 1432
+MD5 76a5dd21d9cc0839ca7e21b22103c9e3 ChangeLog 2856
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 7fcf099dded0d42691503886fe0b8d89 sdl-sound-1.0.1-r1.ebuild 1172
-MD5 ac57f8a9a3aceed84463057baf569ddf files/digest-sdl-sound-1.0.1-r2 68
-MD5 ac57f8a9a3aceed84463057baf569ddf files/digest-sdl-sound-1.0.1 68
-MD5 8bbc02320ecd20c8a7ed18a63f317ca1 files/gcc331.patch 1235
 MD5 ac57f8a9a3aceed84463057baf569ddf files/digest-sdl-sound-1.0.1-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCt5mRgIKl8Uu19MoRAlozAJ4omYwdR3t6Cm6SgWgIygY+sil9ZwCeNlW3
-HLhsAdAw5tCBeaMCwxoZjLo=
-=+BY+
------END PGP SIGNATURE-----
+MD5 ac57f8a9a3aceed84463057baf569ddf files/digest-sdl-sound-1.0.1-r2 68
+MD5 8bbc02320ecd20c8a7ed18a63f317ca1 files/gcc331.patch 1235
+MD5 ac57f8a9a3aceed84463057baf569ddf files/digest-sdl-sound-1.0.1 68
