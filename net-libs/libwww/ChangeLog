@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.34 2005/06/22 17:58:20 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.35 2005/09/30 22:47:54 matsuu Exp $
+
+  30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> libwww-5.4.0-r3.ebuild:
+  Stable on sh.
 
   22 Jun 2005; Herbie Hopkins <herbs@gentoo.org> libwww-5.4.0-r3.ebuild:
   Fix multilib issue.
