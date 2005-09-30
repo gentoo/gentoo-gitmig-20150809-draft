@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.1.ebuild,v 1.7 2005/06/28 05:28:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.1.ebuild,v 1.8 2005/09/30 18:42:04 wolf31o2 Exp $
 
 DESCRIPTION="Various development tools for NeoEngine"
 HOMEPAGE="http://www.neoengine.org/"
@@ -36,5 +36,5 @@ src_unpack() {
 
 src_install() {
 	einstall || die "Installation failed"
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
