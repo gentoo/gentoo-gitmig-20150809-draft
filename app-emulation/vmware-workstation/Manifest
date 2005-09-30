@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 17c623e566264d9382457efa50d0e1a4 vmware-workstation-5.5.0.16325.ebuild 7283
+MD5 1787e79c7a8501427cf6a374fac66e2f vmware-workstation-5.5.0.16958.ebuild 7283
 MD5 57ca08fdcf66e6a4bc0596b8a0c0b012 vmware-workstation-3.2.1.2242-r4.ebuild 7989
 MD5 f6ff1ff7da77185cd1a446a896f7bbb1 vmware-workstation-4.5.2.8848-r7.ebuild 8334
-MD5 0147ab6dd85d9d81a202dc0c93c0e7dc ChangeLog 22427
+MD5 19b7f3ddbe0770c3fde116d448c8665e ChangeLog 22769
 MD5 a4e5ebe5e931d6196fd49550e067b078 metadata.xml 339
 MD5 74763bea39350b142da34a0faf9d2d02 vmware-workstation-5.0.0.13124-r2.ebuild 8285
 MD5 48c1667773503fee21a1068da07440b9 files/90vmware 70
@@ -12,9 +12,9 @@ MD5 3d52845458d26fe7602a53a6716c4484 files/digest-vmware-workstation-4.5.2.8848-
 MD5 227d86a502f1a78cc8f0f1eb2cceda6a files/digest-vmware-workstation-3.2.1.2242-r4 210
 MD5 c2dc0111fb5bf45ff99578b57d349cb3 files/vmware.rc 1417
 MD5 55441829b237e3efd78d06a1b1a73035 files/vmware-workstation-5.0.0.13124-config.patch 443
-MD5 195f969c62233e2b9dc9c0a48b031751 files/vmware-workstation-5.5.0.16325-config.patch 1121
+MD5 195f969c62233e2b9dc9c0a48b031751 files/vmware-workstation-5.5.0.16958-config.patch 1121
 MD5 39940ffef13b8c05110826e5ec26d88b files/digest-vmware-workstation-5.0.0.13124-r2 159
-MD5 25177e95950bda528d29a96dddc250a4 files/digest-vmware-workstation-5.5.0.16325 84
+MD5 4256ac2e5dccfd7f9e85c24adbff45bc files/digest-vmware-workstation-5.5.0.16958 84
 MD5 aa1b576735134579f04b29763901dc4f files/vmware.xml 1592
 MD5 87e9f24e29aaec45c84f7e57a50f96f2 files/vmware-workstation-4.5.2.8848-librarypath.patch 807
 MD5 48c1667773503fee21a1068da07440b9 files/3.2.1.2242/90vmware 70
@@ -24,7 +24,7 @@ MD5 cd2c7dfb0ea80293b3647713f5e35969 files/3.2.1.2242/vmware 1419
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNZ6Z8zY1VwezZiERAnq6AJ47Jz8OuldceohWS61ECgiKyTt2uQCgraG4
-hHEOz/fRH5wgx3Z9Ieg1f+U=
-=Bnzt
+iD8DBQFDPYv78zY1VwezZiERAu1CAJ4u4ipdOkiTb2WAVUZ0Jj6RytIBswCghTLa
+5/WxhzqPvUTjBL39oVM1eFM=
+=uJZN
 -----END PGP SIGNATURE-----

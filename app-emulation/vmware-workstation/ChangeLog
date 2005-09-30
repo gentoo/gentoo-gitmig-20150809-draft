@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.98 2005/09/24 18:45:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.99 2005/09/30 19:02:59 humpback Exp $
+
+*vmware-workstation-5.5.0.16958 (30 Sep 2005)
+
+  30 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  -files/vmware-workstation-5.5.0.16325-config.patch,
+  +files/vmware-workstation-5.5.0.16958-config.patch,
+  -vmware-workstation-5.5.0.16325.ebuild,
+  +vmware-workstation-5.5.0.16958.ebuild:
+  Removed older 5.5 build and newer version.
 
   24 Sep 2005; Gustavo Felisberto <humpback@gentoo.org>;
   vmware-workstation-5.5.0.16325.ebuild:

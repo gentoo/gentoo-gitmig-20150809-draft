@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.16325.ebuild,v 1.2 2005/09/24 18:45:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.0.16958.ebuild,v 1.1 2005/09/30 19:02:59 humpback Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -10,7 +10,7 @@ inherit eutils
 
 S=${WORKDIR}/vmware-distrib
 #ANY_ANY="vmware-any-any-update93"
-NP="VMware-workstation-e.x.p-16325"
+NP="VMware-workstation-5.5.0-16958"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SRC_URI="${NP}.tar.gz"
