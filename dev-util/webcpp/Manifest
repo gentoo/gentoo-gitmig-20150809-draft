@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 b8a7c1be28aa2341c7d2166674a09715 ChangeLog 1701
 MD5 40f2df11939cb4f25669bf2120026643 webcpp-0.8.2.ebuild 848
-MD5 32844d152d9500ff060e3ae265bfd64d webcpp-0.8.4.ebuild 850
-MD5 d5e3dd2ef3f0147b516fc89adcf45fd3 ChangeLog 1604
+MD5 c25bc42840eaef7eadb95543792dfbd3 webcpp-0.8.4.ebuild 857
 MD5 c70d64516929d525c0994078bb8101f6 files/digest-webcpp-0.8.2 68
 MD5 c69afcc594588037cae5334b2b0c5600 files/digest-webcpp-0.8.4 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCm1xFI1lqEGTUzyQRAjZnAJ4jHdP85MRti+cVvD8q3MPzmxIrlACdGPJV
-8BQIsY5UJpjjYWhUKmSGmTo=
-=je9J
+iD8DBQFDPW+dwUpWvClEHQoRAialAJwMlmz2F1IcLPndVjzLr8vW7zL1vACfTIbj
+st+6UQ1lbFTlSBxd40hxBoI=
+=ErPz
 -----END PGP SIGNATURE-----
