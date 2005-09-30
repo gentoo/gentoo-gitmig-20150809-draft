@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b297b9c1e8ea29a0cc2e1cef23b9db02 ChangeLog 4679
 MD5 310e8c9b63068dd54c1f1ea15d06a806 libIDL-0.8.5.ebuild 604
-MD5 59f3ffac553ca6c8854a0c483f6614fd libIDL-0.8.6.ebuild 694
-MD5 39d0d8efc7ede637e431985edf435138 ChangeLog 4586
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 741d2dd899af78fd80a653e7d2ce8fed files/digest-libIDL-0.8.5 65
+MD5 39bc1cc1f836c07131a3b2291b06a263 libIDL-0.8.6.ebuild 692
 MD5 f3c99c88c626147713ecfbfe65ffa28e files/digest-libIDL-0.8.6 65
+MD5 741d2dd899af78fd80a653e7d2ce8fed files/digest-libIDL-0.8.5 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDPUf6KRy60XGEcJIRAl9AAJ91+j9ZgP/exzaftpkERSm0llVikwCeOnuK
+pmnYcLJ1iyi387YnEfdyFvQ=
+=uiA1
+-----END PGP SIGNATURE-----
