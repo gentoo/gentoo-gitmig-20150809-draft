@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.7.ebuild,v 1.1 2005/05/15 21:54:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.10.ebuild,v 1.1 2005/09/30 23:50:19 carlo Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/python
 
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="~alpha ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc sasl ssl"
 
 PYTHON_MODNAME="ldap"
@@ -28,8 +28,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp setup.cfg setup.cfg.orig
-	sed -e "s:^library_dirs =.*:library_dirs = /usr/lib /usr/lib/sasl2:" \
-		-e "s:^include_dirs =.*:include_dirs = /usr/include:" \
+	sed -e "s:^library_dirs =.*:library_dirs = ${ROOT}/usr/lib ${ROOT}/usr/lib/sasl2:" \
+		-e "s:^include_dirs =.*:include_dirs = ${ROOT}/usr/include:" \
 		-i setup.cfg || die "error fixing setup.cfg"
 
 	local mylibs="ldap"
