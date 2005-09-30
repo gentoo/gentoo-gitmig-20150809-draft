@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 8298b477a8cde25dfe4ceb303bfadb49 apachetop-0.12.5-r1.ebuild 1099
 MD5 ae59afc3a444b95bceb4f44742ab5209 apachetop-0.12.5.ebuild 1000
-MD5 cd3f99def9543d896b7a058eed40486c ChangeLog 3421
+MD5 35c60f695a24436c7c8999dd46892ab6 ChangeLog 3599
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 ddba3662bcd820b6ba4b41b4e254724b files/CAN-2005-2660.patch 577
+MD5 946d0848d81bf273d4d8a0cf79667a31 files/digest-apachetop-0.12.5-r1 68
 MD5 946d0848d81bf273d4d8a0cf79667a31 files/digest-apachetop-0.12.5 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDOeQzEzitwsaoONoRAkgCAKCODnRjM18ildbFT8uqxNsGR49zVgCbBwVo
-L5iliq6szyNPzMRTFRXCIQk=
-=wMWe
+iD8DBQFDPXR9EzitwsaoONoRAttRAJ9j3ANNmb9cw2cT2vX2WrBzYLXOlgCfQith
+n4DtQ+2Hs/OoC7Yxt2R57Ck=
+=3L6g
 -----END PGP SIGNATURE-----

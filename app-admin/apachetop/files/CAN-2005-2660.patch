@@ -1,0 +1,20 @@
+--- apachetop-0.12.5.orig/src/apachetop.cc	2005-09-27 20:48:10.000000000 -0400
++++ apachetop-0.12.5/src/apachetop.cc	2005-09-27 20:49:26.000000000 -0400
+@@ -1105,7 +1105,16 @@
+ 	FILE *d;
+         va_list args;
+ 
+-	if (cf.debug && (d = fopen(DEBUG_OUTPUT, "a")))
++	static char fileName[1024] = {'\0'};
++
++	if ( !strlen( fileName ) )
++	{
++		strcpy( fileName, "/tmp/atop.XXXXXX" );
++		mkdtemp( fileName );
++		strncat( fileName, "/debug", sizeof(fileName ) );
++	}
++
++	if (cf.debug && (d = fopen(fileName, "a")))
+ 	{
+         	va_start(args, fmt);
+         	vfprintf(d, fmt, args);
