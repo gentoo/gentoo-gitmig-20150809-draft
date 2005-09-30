@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.09.ebuild,v 1.5 2005/09/30 15:34:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.09.ebuild,v 1.6 2005/09/30 18:13:26 axxo Exp $
 
 inherit java eutils
 
@@ -24,7 +24,7 @@ IUSE="doc browserplugin jce mozilla"
 
 #glibc dep: #102423
 DEPEND=">=dev-java/java-config-1.1.5
-	>=sys-libs/glibc-2.3.5 
+	>=sys-libs/glibc-2.3.5
 	sys-apps/sed
 	app-arch/unzip
 	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
