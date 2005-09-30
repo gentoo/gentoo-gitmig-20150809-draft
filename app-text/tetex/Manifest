@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 8f27cd5e7c06b0c37851607799f69316 tetex-1.0.7-r13.ebuild 4770
-MD5 ebb5312ccec7bb8f4d6dba5dfe889c42 tetex-2.0.2-r5.ebuild 1158
-MD5 2ce21318dff4993ac4b43860e86734d2 tetex-2.0.2-r6.ebuild 1169
+MD5 0f8500396bced0f297604c1919883bc6 tetex-2.0.2-r5.ebuild 1162
 MD5 bfdb2c8fdf372c6b4f08a7acc30ddd5e tetex-3.0-r1.ebuild 2062
-MD5 6cd41c075b51c2d25f67a2b0602a5fc9 tetex-3.0-r2.ebuild 1182
 MD5 6d84991ef4fd00210a9eb68fdb393bd8 tetex-3.0-r3.ebuild 1272
-MD5 45b550d1976ea6dfa75883c090f75ef5 ChangeLog 16497
-MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
+MD5 5ec3bbcf0526206f46edf6734f6305d6 tetex-2.0.2-r6.ebuild 1174
+MD5 3058d01e61a91e690cb7f66ce72d0395 ChangeLog 16586
+MD5 6cd41c075b51c2d25f67a2b0602a5fc9 tetex-3.0-r2.ebuild 1182
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r5 282
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r6 282
+MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
+MD5 0e727f58dac2997f22e90f51b2d79da3 files/tetex-3.0-kpathsea-pic.patch 1590
+MD5 41f87c91f8bb6ceeae3c1fb7ca0dce1c files/tetex-texdoctk-gentoo.patch 509
+MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
 MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0-r1 202
 MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0-r2 202
-MD5 6f48f0b987b7ea33b02aea8ba198eeed files/iso-8859-7.def 4419
+MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0-r3 202
 MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
-MD5 41f87c91f8bb6ceeae3c1fb7ca0dce1c files/tetex-texdoctk-gentoo.patch 509
-MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
+MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
 MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
 MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
-MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
-MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 7184c72f1e38b2f0ddb843687cf80832 files/digest-tetex-3.0-r3 202
-MD5 0e727f58dac2997f22e90f51b2d79da3 files/tetex-3.0-kpathsea-pic.patch 1590
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLDWsKf2g/qXtneoRAn3PAJ9tYHCst6GhtTZYt/QYfND6/qKv2gCeIGH+
-5EVvTCBwnKeVj+TOzYboISg=
-=47f4
------END PGP SIGNATURE-----
+MD5 6f48f0b987b7ea33b02aea8ba198eeed files/iso-8859-7.def 4419
+MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
