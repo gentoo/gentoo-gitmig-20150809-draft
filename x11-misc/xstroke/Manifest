@@ -1,4 +1,6 @@
-MD5 8fe2f282dca1615cd498c92e5e7e0832 ChangeLog 2010
 MD5 fdb120fdd094c8ea214692ab455c9324 xstroke-0.5.12-r1.ebuild 940
+MD5 a4a559a663f66ee1abf2682bc984c58c xstroke-0.6.ebuild 607
+MD5 5bcff67465e8376c3a39bb3aa01862e8 ChangeLog 2168
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 0bff6fe5c7b5973932081ba82302166d files/digest-xstroke-0.6 64
 MD5 cc5958392fa37b59c913ee1c87e5bf57 files/digest-xstroke-0.5.12-r1 66

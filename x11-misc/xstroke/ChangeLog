@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xstroke
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.15 2004/12/28 22:13:35 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.16 2005/09/30 15:56:59 nelchael Exp $
+
+*xstroke-0.6 (30 Sep 2005)
+
+  30 Sep 2005; Krzysiek Pawlik <nelchael@gentoo.org> +xstroke-0.6.ebuild:
+  Version bump. Ebuild by Radek Podgorny, bug 107689.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
