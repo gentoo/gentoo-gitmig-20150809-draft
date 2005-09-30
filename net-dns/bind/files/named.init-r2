@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r1,v 1.1 2005/09/30 18:47:17 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r2,v 1.1 2005/09/30 22:33:25 voxus Exp $
 
 opts="start stop reload restart"
 
@@ -23,8 +23,11 @@ checkconfig() {
 
 	# as suggested in bug #107724
 	PIDFILE=$(\
-		grep -Eo -m1 "^[^#\"]*pid\-file +\".+\" *;" \
-		${CHROOT}/etc/bind/named.conf | cut -d\" -f2\
+		egrep -v \
+			"^([[:cntrl:] ]+(#|//|/\*)|(#|//|/\*))" \
+			${CHROOT}/etc/bind/named.conf \
+				| egrep -o -m1 "pid\-file +\".+\" *;" \
+				| cut -d\" -f2
 	)
 
 	KEY="${CHROOT}/etc/bind/rndc.key"
