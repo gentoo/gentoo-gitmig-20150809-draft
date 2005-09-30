@@ -1,5 +1,5 @@
-MD5 01f56328db3d3e0ec12540b47df0bd5c linphone-1.1.0.ebuild 1698
+MD5 810e47a5b7316d318b884037eb874345 linphone-1.1.0.ebuild 1667
 MD5 bf329e2b298c08082a3ff4dfe6c236b3 metadata.xml 315
-MD5 3cb189c816c2039ead20e48a47bfd923 ChangeLog 4125
+MD5 61c613902c913c0c7410adc925ffde88 ChangeLog 4316
 MD5 09a1ce01898450b93c37d1021c5b4c7e files/linphone-1.0.1-ipv6-include.diff 340
 MD5 43613eb580df59c222f3572287b2adf2 files/digest-linphone-1.1.0 67

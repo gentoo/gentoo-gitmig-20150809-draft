@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.1.0.ebuild,v 1.3 2005/09/29 23:46:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linphone/linphone-1.1.0.ebuild,v 1.4 2005/09/30 16:23:36 stkn Exp $
 
 inherit eutils
 
@@ -21,8 +21,7 @@ DEPEND="dev-libs/glib
 	|| ( >=media-libs/speex-1.1.6
 	     <media-libs/speex-1.1.0 )
 	x86? 	( xv? ( dev-lang/nasm ) )
-	gnome? 	( >=gnome-base/gnome-panel-2
-		  >=gnome-base/libgnome-2
+	gnome? 	( >=gnome-base/libgnome-2
 		  >=gnome-base/libgnomeui-2
 		  >=x11-libs/gtk+-2 )
 	alsa? 	( media-libs/alsa-lib )"
