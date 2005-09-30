@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.89 2005/09/24 08:45:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.90 2005/09/30 18:47:17 voxus Exp $
+
+*bind-9.2.5-r7 (30 Sep 2005)
+*bind-9.3.1-r5 (30 Sep 2005)
+
+  30 Sep 2005; Konstantin Arkhipov <voxus@gentoo.org> +bind-9.2.5-r7.ebuild,
+  +bind-9.3.1-r5.ebuild, +files/named.init-r1, -bind-9.3.1-r4.ebuild:
+  Closing bugs regarding pid-file detecting: #107724 and #102135.
 
   24 Sep 2005; Markus Rothe <corsair@gentoo.org> bind-9.2.5-r6.ebuild:
   Stable on ppc64
