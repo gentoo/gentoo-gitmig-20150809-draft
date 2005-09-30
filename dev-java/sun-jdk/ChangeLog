@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.121 2005/09/16 13:18:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.122 2005/09/30 15:34:19 axxo Exp $
+
+  30 Sep 2005; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.4.2.08.ebuild,
+  sun-jdk-1.4.2.08-r1.ebuild, sun-jdk-1.4.2.09.ebuild:
+  depend on glibc bug #102423
 
 *sun-jdk-1.5.0.05 (16 Sep 2005)
 

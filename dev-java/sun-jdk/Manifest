@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d9dc268ec8a940d046643b528b8bea35 sun-jdk-1.4.2.08-r1.ebuild 6742
+MD5 41f6f64fe3d6d8f5a55d5b4bf5f85248 sun-jdk-1.4.2.08-r1.ebuild 6787
 MD5 5213a160fff46bbc88446cb67f44bf1e sun-jdk-1.3.1.13.ebuild 3729
-MD5 125263f3a2b5cb656216597a863f7f50 sun-jdk-1.4.2.09.ebuild 6740
+MD5 d657c50554b24c95cd67e232e194941c sun-jdk-1.4.2.09.ebuild 6785
 MD5 6e6334f4e89e27aca419bc2dea752336 sun-jdk-1.2.2.017.ebuild 2898
 MD5 c54b9d9bb647d3f68b7885759578cf21 sun-jdk-1.5.0.05.ebuild 7206
-MD5 0cb1c2cf8e115c4a63fbc76600810073 sun-jdk-1.4.2.08.ebuild 6441
+MD5 704f374a634a0fcfc7ec341421a028e8 sun-jdk-1.4.2.08.ebuild 6485
 MD5 5d49aa4b2d517a27f6a7ff6c4d1e0e4b sun-jdk-1.5.0.04.ebuild 7206
-MD5 daaf77959ca0879d5e6d59152d153ed8 ChangeLog 25040
+MD5 4ead8a5aaaaaeaf1683faa01b02fd366 ChangeLog 25200
 MD5 16c9e337522b7e477aece60ff98dde54 metadata.xml 239
 MD5 0f94a657aa38fbca24dd767967474bc4 files/sun-jdk-1.3.1.13 475
 MD5 a09b1bc3e393f76692593707b8a273c0 files/sun-jdk-1.4.2.08 640
@@ -27,7 +27,7 @@ MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKsm8/rLF9B432nYRAqPtAKCA+7Z8eiGtIUiJ85jvEKtyQyO4fQCgwqvv
-pUOUMXhNlSP1MPPrwlW1vaY=
-=7bgM
+iD8DBQFDPVsd/rLF9B432nYRAlAmAJ9WyTg1y3hvOvw8x8dmDVv2nn2+gQCfeY6F
+EEK7olm2Yv1BaCDxYEzpIHk=
+=h9uO
 -----END PGP SIGNATURE-----
