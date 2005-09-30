@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7-r2.ebuild,v 1.8 2005/09/29 13:24:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.7-r2.ebuild,v 1.9 2005/09/30 03:27:44 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -9,7 +9,7 @@ MOZ_PANGO="yes"      # Need to enable for newer .. remove here and in mozconfig
 	                 # when older is removed from tree.
 inherit flag-o-matic toolchain-funcs eutils mozconfig mozilla-launcher makeedit multilib
 
-PVER="1.7.12-patches-1.1"
+PVER="1.7.12-patches-1.2"
 SVGVER="2.3.10p1"
 
 DESCRIPTION="Firefox Web Browser"
@@ -213,6 +213,7 @@ src_install() {
 	for x in ${S}/build/unix/*.pc; do
 		sed -i -e "s|^libdir=.*|libdir=${MOZILLA_FIVE_HOME}|
 			s|^includedir=.*|includedir=${MOZILLA_FIVE_HOME}/include|
+			s|^idldir=.*|idldir=${MOZILLA_FIVE_HOME}/idl|
 			s|\(Libs:.*\)\($\)|\1 -Wl,-rpath,\${libdir}\2|" ${x}
 		doins ${x}
 	done
