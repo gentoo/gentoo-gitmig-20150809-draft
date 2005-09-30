@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.23 2005/09/30 20:09:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.24 2005/09/30 20:17:21 fuzzyray Exp $
+
+  30 Sep 2005; Paul Varner <fuzzyray@gentoo.org> arc-5.21m.ebuild:
+  Stable on x86 (bug #107312)
 
   30 Sep 2005; Simon Stelling <blubb@gentoo.org> arc-5.21m.ebuild:
   stable on amd64 wrt bug 107312
