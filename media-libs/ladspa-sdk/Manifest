@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cbf098acd5aed2c2c8826fa7540fbd0f ChangeLog 3888
 MD5 4d0bb9a796eb2601da31a8658f022d35 ladspa-sdk-1.0.ebuild 876
 MD5 f0d1be35e8cabbc5ee80436d6e6a532e ladspa-sdk-1.12-r1.ebuild 1207
@@ -10,3 +13,10 @@ MD5 5e4df3cc34668d1ae00d1b0df109481c files/ladspa-sdk-1.12-test.patch 1024
 MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12-r1 63
 MD5 cac1ad9f78c8b6a13d80cd27413990c6 files/digest-ladspa-sdk-1.12-r2 63
 MD5 abe8c6de8caf5688d31b1f3cfced0596 files/ladspa-sdk-1.12-ppc-macos.patch 1784
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPVrfj5H05b2HAEkRAnPkAKCT4YC4eJzOrSfSiLDng3ZSUO/+WACgjZZg
+Y/Aff/Zn8NVMgFQwpn8bskU=
+=QJcR
+-----END PGP SIGNATURE-----
