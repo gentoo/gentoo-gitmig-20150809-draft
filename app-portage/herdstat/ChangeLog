@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.58 2005/09/24 12:55:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.59 2005/09/30 07:00:26 ka0ttic Exp $
+
+*herdstat-1.1.2_alpha5 (30 Sep 2005)
+
+  30 Sep 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -herdstat-1.1.2_alpha4.ebuild, +herdstat-1.1.2_alpha5.ebuild:
+  Version bump; added curl to IUSE.
 
 *herdstat-1.1.2_alpha4 (24 Sep 2005)
 
