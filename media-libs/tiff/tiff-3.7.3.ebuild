@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.3.ebuild,v 1.3 2005/09/29 00:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.3.ebuild,v 1.4 2005/09/30 02:21:00 vapier Exp $
 
-inherit eutils
-
-DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images."
+DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images"
 HOMEPAGE="http://www.libtiff.org/"
 SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz"
 
@@ -16,16 +14,13 @@ IUSE=""
 DEPEND=">=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.3-r2"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
-}
-
 src_compile() {
-	local myconf
-	myconf="--without-x"
+	local myconf=""
 	use ppc-macos && myconf=" --disable-cxx"
-	econf ${myconf} || die "econf failed"
+	econf \
+		--without-x \
+		${myconf} \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
