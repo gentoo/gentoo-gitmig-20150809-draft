@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gxmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/ChangeLog,v 1.10 2005/04/21 19:15:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/ChangeLog,v 1.11 2005/09/30 16:26:14 cretin Exp $
+
+*gxmms-0.3.0 (30 Sep 2005)
+
+  30 Sep 2005; Stefan Jones <cretin@gentoo.org> +gxmms-0.3.0.ebuild:
+  New gxmms version, see bug #96469
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> gxmms-0.1.1.ebuild:
   Stable on ppc.
