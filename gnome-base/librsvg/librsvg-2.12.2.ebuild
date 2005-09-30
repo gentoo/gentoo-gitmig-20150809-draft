@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.0.ebuild,v 1.2 2005/09/20 00:48:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.2.ebuild,v 1.1 2005/09/30 00:45:20 leonardop Exp $
 
 inherit multilib gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc gnome mozilla static zlib"
+IUSE="doc gnome mozilla zlib"
 
 RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=x11-libs/gtk+-2
@@ -46,8 +46,7 @@ pkg_setup() {
 		--enable-gtk-theme                   \
 		$(use_with zlib svgz)                \
 		$(use_enable gnome gnome-vfs)        \
-		$(use_enable mozilla mozilla-plugin) \
-		$(use_enable static)"
+		$(use_enable mozilla mozilla-plugin)"
 }
 
 src_install() {

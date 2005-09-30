@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.83 2005/09/20 00:48:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.84 2005/09/30 00:45:20 leonardop Exp $
+
+*librsvg-2.12.2 (30 Sep 2005)
+
+  30 Sep 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -librsvg-2.12.0.ebuild, +librsvg-2.12.2.ebuild:
+  New version.
 
   20 Sep 2005; Leonardo Boshell <leonardop@gentoo.org> librsvg-2.9.5.ebuild,
   librsvg-2.12.0.ebuild:
