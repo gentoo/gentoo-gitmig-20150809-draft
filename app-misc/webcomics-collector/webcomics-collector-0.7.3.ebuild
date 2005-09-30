@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/webcomics-collector-0.7.3.ebuild,v 1.2 2005/01/01 15:29:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/webcomics-collector-0.7.3.ebuild,v 1.3 2005/09/30 01:40:30 vapier Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="python script for downloading webcomics"
 HOMEPAGE="http://collector.skumleren.net/"
@@ -16,6 +16,13 @@ IUSE=""
 S=${WORKDIR}/collector-${PV}
 
 DOCS="UPGRADE"
+
+pkg_setup() {
+	if ! built_with_use dev-lang/python gdbm ; then
+		eerror "You need to emerge python with USE=gdbm"
+		die "re-emerge python with USE=gdbm"
+	fi
+}
 
 pkg_postinst() {
 	ewarn "If you are upgrading from an earlier version of Collector, please"
