@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.2 2005/06/21 04:36:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.1-r1.ebuild,v 1.3 2005/09/30 18:48:46 wolf31o2 Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="A library that handles the decoding of sound file formats"
@@ -38,5 +38,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc CHANGELOG CREDITS INSTALL README TODO
+	dodoc CHANGELOG CREDITS README TODO
 }

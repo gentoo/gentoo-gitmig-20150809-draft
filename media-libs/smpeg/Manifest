@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab3f31fc8059aa73b6848802d4828467 smpeg-0.4.4-r6.ebuild 1518
+MD5 b06aefcfd7c56746451214c6a0c6bf8b smpeg-0.4.4-r6.ebuild 1530
+MD5 a176f3278196c95235bb739fd13c4d36 ChangeLog 3434
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 4929ded555c18b2909d24d20290eb23e ChangeLog 3327
-MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r6 63
-MD5 f70fffdbc4af6ca684817ede925c6087 files/smpeg-0.4.4-config.patch 472
 MD5 dcc2db7c8aa509096fc557b99bd35490 files/smpeg-0.4.4-m4.patch 233
+MD5 f70fffdbc4af6ca684817ede925c6087 files/smpeg-0.4.4-config.patch 472
 MD5 7d1d2f2e55e8d98f7d62dcbb680cec7d files/smpeg-0.4.4-gnu-stack.patch 955
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPLcMgIKl8Uu19MoRAo5EAJ9fkHmpob8YW7V1XMJjFvaFgDVMRACfWvHs
-6E93kBn99M+oBICs3m9AsH4=
-=Ser0
------END PGP SIGNATURE-----
+MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r6 63

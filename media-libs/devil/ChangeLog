@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.15 2005/09/30 02:48:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.16 2005/09/30 18:46:56 wolf31o2 Exp $
+
+  30 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> devil-1.6.6-r2.ebuild,
+  devil-1.6.7.ebuild, devil-1.6.7-r1.ebuild:
+  Removed INSTALL.
 
 *devil-1.6.7-r1 (30 Sep 2005)
 
