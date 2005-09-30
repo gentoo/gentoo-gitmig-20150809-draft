@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r2.ebuild,v 1.2 2005/09/29 06:12:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/mpeg-tools-1.5b-r2.ebuild,v 1.3 2005/09/30 20:36:21 blubb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/encode/${MY_PN}-${PV}-
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/x11"

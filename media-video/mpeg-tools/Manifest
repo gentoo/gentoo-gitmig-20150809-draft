@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5e0bdad40dbc26a57a7c1966d8eb0a7 ChangeLog 2078
+MD5 00e2a839fa0458dd161e8e4f828212a5 ChangeLog 2186
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 0ca9d85354046cd139e1fab894900df0 mpeg-tools-1.5b-r1.ebuild 1354
 MD5 8d067537a06634e898b40532dd5d3233 mpeg-tools-1.5b.ebuild 1127
-MD5 22713800ca0b8828b0f2c5e7d5b148c9 mpeg-tools-1.5b-r2.ebuild 1622
+MD5 9df9ddb53e39acb9ae211f62cc8050dd mpeg-tools-1.5b-r2.ebuild 1626
 MD5 bf748902484902bcc7eb4e616a8d04dd files/digest-mpeg-tools-1.5b 73
 MD5 bf748902484902bcc7eb4e616a8d04dd files/digest-mpeg-tools-1.5b-r1 73
 MD5 411d4b0fde7b753d3ff9008eb9eaefcc files/mpeg-tools-1.5b-64bit_fixes.patch 6986
@@ -19,10 +16,3 @@ MD5 1c465916c02ad5e984eefda8b236fbc9 files/1.5b/libpnmrw.c 37348
 MD5 1f0b9c5d21516dc0b597bdd8563a7e39 files/1.5b/libpnmrw.h 6791
 MD5 b45f0ebe9bad10888b67ac1d1475c0d4 files/1.5b/mpeg-tools-1.5b-fix-exit-call.patch 464
 MD5 ee6ac6a97ef340aecff643f24bc2f02c files/1.5b/mpeg-tools-1.5b-gentoo.patch 560
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDO4XnCRZPokWLroQRAhurAJ46lrm1WIX+J40VNeE8uKxm/jYKfgCePtWK
-NR3ULG2VTvboy1nKpQzaL44=
-=c1D0
------END PGP SIGNATURE-----
