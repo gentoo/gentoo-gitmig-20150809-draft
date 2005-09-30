@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c5e3bb83b31af767f345b0e18b6fddc1 sel-0.08.4.ebuild 856
+MD5 f921af92e22bc6690da021e6f6e7c8c8 ChangeLog 1330
 MD5 055f08369eee77412eab46e7db94233f metadata.xml 411
 MD5 bdcf8bf0a5545298dc37c3737b04840f sel-0.08.2.ebuild 868
-MD5 901483e96cc24ba3c1a1a629a60633d7 ChangeLog 1229
-MD5 ac3a5718c24372eaf3c9d0950a0bfcf9 files/digest-sel-0.08.4 61
+MD5 e4db2b28b72c34e9cc98f09eb9a68fc5 sel-0.08.4.ebuild 854
 MD5 818e7285d5fbddbcc36791c52f632f0e files/digest-sel-0.08.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNjOgIKl8Uu19MoRAhx8AJ95jFTYFOT9CcAsINHFx0DjU5OWbQCeIeqh
-tzgabWvLkYTZcoIpnCrEN7E=
-=o0WQ
------END PGP SIGNATURE-----
+MD5 ac3a5718c24372eaf3c9d0950a0bfcf9 files/digest-sel-0.08.4 61
