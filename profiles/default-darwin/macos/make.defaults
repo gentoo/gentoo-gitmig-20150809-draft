@@ -5,12 +5,5 @@
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="ppc-macos"
-
-CHOST=powerpc-apple-darwin
-PLATFORM=$CHOST
-
-USE="ppc-macos"
-KERNEL="Darwin"
-USERLAND="Darwin"
-LIBC="Darwin"
+USE="opengl ppc-macos"
 
