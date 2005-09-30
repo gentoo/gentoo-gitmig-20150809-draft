@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a11d7e70236d85095ff120ecd4e925e gdm-2.8.0.3.ebuild 3656
 MD5 627b1fa463c4ca8eb039e61ad4804fa2 ChangeLog 15810
 MD5 37330f87e87c8fceb266a57f66bfdb81 gdm-2.6.0.9-r2.ebuild 3561
@@ -22,3 +25,10 @@ MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
 MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
 MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.2.5/security/console.apps/gdmconfig 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDPUrqKRy60XGEcJIRAjDpAJoCT6yvtV52Ysat4covNq15DVe9wgCcDdzN
+W+UwZcSJgn2qyOpIqwNXoQ0=
+=wHm8
+-----END PGP SIGNATURE-----
