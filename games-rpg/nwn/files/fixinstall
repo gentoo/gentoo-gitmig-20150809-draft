@@ -92,14 +92,14 @@ chown GENTOO_USER:GENTOO_GROUP GENTOO_DIR/nwn/ -R
 chmod g+rwX GENTOO_DIR/nwn/ -R
 
 # 1.65-specific fixes to permissions
-chmod a-x GENTOO_DIR/nwn/data/patch.bif
-chmod a-x GENTOO_DIR/nwn/nwm/Chapter1.nwm
-chmod a-x GENTOO_DIR/nwn/nwm/Chapter1E.nwm
-chmod a-x GENTOO_DIR/nwn/nwm/Chapter2.nwm
-chmod a-x GENTOO_DIR/nwn/nwm/Chapter2E.nwm
-chmod a-x GENTOO_DIR/nwn/nwm/Chapter3.nwm
-chmod a-x GENTOO_DIR/nwn/nwm/Chapter4.nwm
-chmod a-x GENTOO_DIR/nwn/nwm/Prelude.nwm
-chmod a-x GENTOO_DIR/nwn/patch.key
+chmod a-x GENTOO_DIR/nwn/data/patch.bif 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Chapter1.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Chapter1E.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Chapter2.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Chapter2E.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Chapter3.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Chapter4.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/nwm/Prelude.nwm 2>&1 > /dev/null
+chmod a-x GENTOO_DIR/nwn/patch.key 2>&1 > /dev/null
 
 printf "\nYou are ready to run Neverwinter Nights.\n\n"
