@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.19 2005/05/01 18:24:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.20 2005/09/30 15:32:37 flameeyes Exp $
+
+  30 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> ladspa-cmt-1.15.ebuild:
+  Respect user-defined CXXFLAGS.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   ladspa-cmt-1.15.ebuild:

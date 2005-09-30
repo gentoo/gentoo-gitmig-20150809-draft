@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.14 2005/04/21 19:19:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.15 2005/09/30 15:33:23 flameeyes Exp $
 
 inherit eutils
 
@@ -35,7 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -j1 targets || die
+	# It sets CXXFLAGS to CFLAGS, can be wrong..
+	# Just set CXXFLAGS to what they should be
+	emake -j1 targets CXXFLAGS="$CXXFLAGS -I. -fPIC" || die
 }
 
 src_test() {
