@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vimcommander
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.12 2005/04/24 12:21:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.13 2005/09/30 16:00:26 metalgod Exp $
+
+  30 Sep 2005; Luis Medinas <metalgod@gentoo.org>
+  vimcommander-1.54.2.2.ebuild:
+  Added ~amd64 keywords.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   vimcommander-1.54.2.2.ebuild:
