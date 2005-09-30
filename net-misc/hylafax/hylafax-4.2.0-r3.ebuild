@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1-r1.ebuild,v 1.4 2005/09/28 05:30:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r3.ebuild,v 1.1 2005/09/30 07:00:17 nerdboy Exp $
 
-inherit eutils multilib pam
+inherit eutils
 
-IUSE="faxonly jpeg pam mgetty"
+IUSE="faxonly jpeg pam"
 
 DESCRIPTION="Client-server fax package for class 1 and 2 fax modems."
 HOMEPAGE="http://www.hylafax.org"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="x86 sparc ~hppa ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 sparc hppa alpha amd64 ppc"
 
 DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=sys-libs/zlib-1.1.4
@@ -20,39 +20,38 @@ DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=media-libs/tiff-3.7.0
 	jpeg? ( media-libs/jpeg )
 	sys-apps/gawk
-	pam? ( virtual/pam )
-	mgetty? ( net-dialup/mgetty )"
+	pam? ( sys-libs/pam )"
 
 RDEPEND="${DEPEND}
-	net-mail/metamail"
+	app-arch/sharutils"
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	epatch ${FILESDIR}/${P}-openpam.patch
+	epatch ${FILESDIR}/${P}-faxcron_uid.patch
+	epatch ${FILESDIR}/${P}-tiff_version.patch
+	epatch ${FILESDIR}/configure-gcc-3.4.patch
+	epatch ${FILESDIR}/hylafax-hostvuln.patch
+	epatch ${FILESDIR}/${P}-faxmail-charset.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/hylafax-4.2-tmpdir.patch
 }
 
 src_compile() {
-	if use faxonly; then
-		if use mgetty; then
-			eerror "You cannot set both faxonly and mgetty, please remove one." && die "invalid use flags"
-		fi
-	fi
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
-		--with-DIR_LIB=/usr/$(get_libdir)
+		--with-DIR_LIB=/usr/lib
 		--with-DIR_LIBEXEC=/usr/sbin
-		--with-DIR_LIBDATA=/usr/$(get_libdir)/fax
+		--with-DIR_LIBDATA=/usr/lib/fax
 		--with-DIR_LOCKS=/var/lock
 		--with-DIR_MAN=/usr/share/man
 		--with-DIR_SPOOL=/var/spool/fax
 		--with-DIR_HTML=/usr/share/doc/${P}/html
 		--with-DIR_CGI=${WORKDIR}
+		--with-PATH_EGETTY=/bin/false
 		--with-HTML=yes
 		--with-PATH_DPSRIP=/var/spool/fax/bin/ps2fax
 		--with-PATH_IMPRIP=\"\"
@@ -60,16 +59,6 @@ src_compile() {
 		--with-LIBTIFF=\"-ltiff -ljpeg -lz\"
 		--with-OPTIMIZER=\"${CFLAGS}\"
 		--with-DSO=auto"
-
-	if use mgetty; then
-		my_conf="${my_conf} \
-			--with-PATH_EGETTY=/usr/sbin/mgetty \
-			--with-PATH_VGETTY=/usr/sbin/vgetty"
-	else
-		my_conf="${my_conf} \
-			--with-PATH_EGETTY=/bin/false \
-			--with-PATH_VGETTY=/bin/false"
-	fi
 
 	if [ -h /etc/localtime ]; then
 		local continent=$(readlink /etc/localtime | cut -d / -f 5)
@@ -90,18 +79,18 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{bin,sbin} /usr/$(get_libdir)/fax /usr/share/man /var/spool /var/spool/recvq
+	dodir /usr/{bin,sbin} /usr/lib/fax /usr/share/man /var/spool /var/spool/recvq
 	fowners uucp:uucp /var/spool/fax
 	fperms 0600 /var/spool/fax
-	dodir /usr/share/doc/${P}/html /usr/$(get_libdir)
+	dodir /usr/share/doc/${P}/html
 
 	make \
 		BIN=${D}/usr/bin \
 		SBIN=${D}/usr/sbin \
-		LIBDIR=${D}/usr/$(get_libdir) \
-		LIB=${D}/usr/$(get_libdir) \
+		LIBDIR=${D}/usr/lib \
+		LIB=${D}/usr/lib \
 		LIBEXEC=${D}/usr/sbin \
-		LIBDATA=${D}/usr/$(get_libdir)/fax \
+		LIBDATA=${D}/usr/lib/fax \
 		MAN=${D}/usr/share/man \
 		SPOOL=${D}/var/spool/fax \
 		HTMLDIR=${D}/usr/share/doc/${P}/html \
@@ -119,18 +108,16 @@ src_install() {
 	insopts -m 755
 	newins ${FILESDIR}/hylafax-4.2 hylafax
 
-	pamd_mimic_system hylafax auth account session
-
 	dodoc COPYRIGHT README TODO VERSION
 }
 
 pkg_postinst() {
-	ewarn "New Hylafax tiff support requires at least tiff-3.7.0 now,"
+	ewarn "New Hylafax tiff support requires tiff-3.7.0 now,"
 	ewarn "but hopefully this libtiff silliness is now fixed."
-	ewarn "If you have trouble building this brittle C++ code,"
-	ewarn "try disabling distcc and setting MAKEOPTS to -j1."
 	echo
-	einfo "Hylafax is back to depending on metamail for mime handling."
+	einfo "Hylafax now depends on sharutils instead of metamail for mime"
+	einfo "handling, however, you can continue to use the latter if you"
+	einfo "like (emerge metamail manually)."
 	echo
 	einfo "Now run faxsetup and (if necessary) faxaddmodem."
 	echo

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1.ebuild,v 1.3 2005/09/28 05:30:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.1-r2.ebuild,v 1.1 2005/09/30 07:00:17 nerdboy Exp $
 
-inherit eutils
+inherit eutils multilib pam
 
-IUSE="faxonly jpeg pam"
+IUSE="faxonly jpeg pam mgetty"
 
 DESCRIPTION="Client-server fax package for class 1 and 2 fax modems."
 HOMEPAGE="http://www.hylafax.org"
@@ -20,7 +20,8 @@ DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=media-libs/tiff-3.7.0
 	jpeg? ( media-libs/jpeg )
 	sys-apps/gawk
-	pam? ( sys-libs/pam )"
+	pam? ( virtual/pam )
+	mgetty? ( net-dialup/mgetty )"
 
 RDEPEND="${DEPEND}
 	net-mail/metamail"
@@ -30,10 +31,17 @@ export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-openpam.patch
 	epatch ${FILESDIR}/hylafax-4.2-tmpdir.patch
 }
 
 src_compile() {
+	if use faxonly; then
+		if use mgetty; then
+			eerror "You cannot set both faxonly and mgetty, please remove one." && die "invalid use flags"
+		fi
+	fi
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
@@ -45,7 +53,6 @@ src_compile() {
 		--with-DIR_SPOOL=/var/spool/fax
 		--with-DIR_HTML=/usr/share/doc/${P}/html
 		--with-DIR_CGI=${WORKDIR}
-		--with-PATH_EGETTY=/bin/false
 		--with-HTML=yes
 		--with-PATH_DPSRIP=/var/spool/fax/bin/ps2fax
 		--with-PATH_IMPRIP=\"\"
@@ -53,6 +60,16 @@ src_compile() {
 		--with-LIBTIFF=\"-ltiff -ljpeg -lz\"
 		--with-OPTIMIZER=\"${CFLAGS}\"
 		--with-DSO=auto"
+
+	if use mgetty; then
+		my_conf="${my_conf} \
+			--with-PATH_EGETTY=/usr/sbin/mgetty \
+			--with-PATH_VGETTY=/usr/sbin/vgetty"
+	else
+		my_conf="${my_conf} \
+			--with-PATH_EGETTY=/bin/false \
+			--with-PATH_VGETTY=/bin/false"
+	fi
 
 	if [ -h /etc/localtime ]; then
 		local continent=$(readlink /etc/localtime | cut -d / -f 5)
@@ -76,7 +93,7 @@ src_install() {
 	dodir /usr/{bin,sbin} /usr/$(get_libdir)/fax /usr/share/man /var/spool /var/spool/recvq
 	fowners uucp:uucp /var/spool/fax
 	fperms 0600 /var/spool/fax
-	dodir /usr/share/doc/${P}/html
+	dodir /usr/share/doc/${P}/html /usr/$(get_libdir)
 
 	make \
 		BIN=${D}/usr/bin \
@@ -101,6 +118,8 @@ src_install() {
 	insinto /etc/init.d
 	insopts -m 755
 	newins ${FILESDIR}/hylafax-4.2 hylafax
+
+	pamd_mimic_system hylafax auth account session
 
 	dodoc COPYRIGHT README TODO VERSION
 }
