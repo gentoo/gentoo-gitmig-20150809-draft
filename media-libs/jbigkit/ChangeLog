@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.18 2005/09/27 00:16:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.19 2005/09/30 02:16:07 vapier Exp $
+
+*jbigkit-1.6-r1 (30 Sep 2005)
+
+  30 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/jbigkit-1.6-shared-lib.patch, +jbigkit-1.6-r1.ebuild:
+  Build a shared library since imagemagick tries to link against libjbig #107542.
 
 *jbigkit-1.6 (27 Sep 2005)
 

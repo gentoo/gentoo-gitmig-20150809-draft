@@ -1,0 +1,32 @@
+--- libjbig/Makefile
++++ libjbig/Makefile
+@@ -7,7 +7,10 @@
+ # Options for the compiler: A high optimization level is suggested
+ CFLAGS = -O -Wall -ansi -pedantic
+ 
++AR = ar
++RANLIB = ranlib
++
+-all: libjbig.a tstcodec
++all: libjbig.a libjbig.so tstcodec
+ 
+ tstcodec: tstcodec.c jbig.c jbig.h jbig_tab.o
+ 	$(CC) $(CFLAGS) -o tstcodec -DTEST_CODEC tstcodec.c jbig.c \
+@@ -15,8 +18,15 @@
+ 
+ libjbig.a: jbig.o jbig_tab.o
+ 	rm -f libjbig.a
+-	ar rc libjbig.a jbig.o jbig_tab.o
+-	-ranlib libjbig.a
++	$(AR) rc libjbig.a jbig.o jbig_tab.o
++	$(RANLIB) libjbig.a
++
++SOBJS = jbig.lo jbig_tab.lo
++libjbig.so: $(SOBJS)
++	$(CC) -shared $(LDFLAGS) -o $@ -Wl,-soname -Wl,$@ $(SOBJS)
++
++%.lo: %.c jbig.h
++	$(CC) $(CFLAGS) -fPIC -c $< -o $@
+ 
+ jbig.o: jbig.c jbig.h
+ 
