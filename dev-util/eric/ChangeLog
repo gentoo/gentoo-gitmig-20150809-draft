@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.29 2005/06/06 01:43:33 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.30 2005/09/30 22:19:32 kloeri Exp $
+
+*eric-3.7.2 (30 Sep 2005)
+
+  30 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> +eric-3.7.2.ebuild:
+  Version bump, fixes PyQt problem, bug 107716.
 
 *eric-3.7.0 (06 Jun 2005)
 

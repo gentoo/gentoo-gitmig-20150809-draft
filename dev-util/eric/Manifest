@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 05c8e1a05e6a09a60108e1c1c79e76d7 ChangeLog 3214
-MD5 34640472389dc3c0573f8e74d6d5c06a eric-3.6.1.ebuild 1971
 MD5 f76ccb88ea256dbee588b2fbf2c9a466 eric-3.5.1.ebuild 1411
-MD5 56ad59727dbcdbf30e7ed8282d3913e5 metadata.xml 175
+MD5 34640472389dc3c0573f8e74d6d5c06a eric-3.6.1.ebuild 1971
 MD5 e540736f47366c65a95d8a162f061fb9 eric-3.6.2.ebuild 2020
 MD5 19fd562085f109171fcddb901466c007 eric-3.7.0.ebuild 2020
-MD5 956bcc4dc5687fa2d72d08e691bdcb33 files/digest-eric-3.6.1 273
+MD5 56ad59727dbcdbf30e7ed8282d3913e5 metadata.xml 175
+MD5 5e1a7ddd57ff5eba6d3082aadc78364a eric-3.7.2.ebuild 1661
+MD5 48e8fb3e0a088b30a49e91b276ad51df ChangeLog 3364
 MD5 e14b132d7ca618c37915f9c0b24c32ed files/digest-eric-3.5.1 273
+MD5 956bcc4dc5687fa2d72d08e691bdcb33 files/digest-eric-3.6.1 273
 MD5 e361d61b6b938c9a08d6001c79dfdac4 files/digest-eric-3.6.2 273
 MD5 e01d7fa46cc5262747c66d6f073419fb files/digest-eric-3.7.0 273
+MD5 6706775a7d9b9ac225834ccb335696d8 files/digest-eric-3.7.2 273
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCo6pmxtZcznfol0URArq5AJ9yX8HZmkjjPYzclJdZp76cU8ls0ACgwbaa
-VLRZqOnBasHE/ssnz8Hjbx0=
-=9hr+
+iD8DBQFDPboDKf2g/qXtneoRAtuLAJ4tkIvQcmKlySzg+DJ0lQpxtKkk0gCgu9W1
+650dDvNQmCq2j0mlTj6Jk2c=
+=9sLK
 -----END PGP SIGNATURE-----
