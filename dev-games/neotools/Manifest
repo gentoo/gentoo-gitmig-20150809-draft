@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7495bf417b3ad192e05a59e7fd5581e5 neotools-0.8.1.ebuild 957
+MD5 da9a7d4ac04b24fba400366896c0b6ea ChangeLog 980
 MD5 2bea91bd3c0cec937ef3019b5dae161b metadata.xml 473
-MD5 11854b7b6d8540e08867a689756f9f7d neotools-0.8.1.ebuild 963
-MD5 befe585b3bca76a6baf8408b39c52b10 ChangeLog 885
 MD5 5b830b64facde8a5b6569e9372495ea6 files/digest-neotools-0.8.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwOAtgIKl8Uu19MoRAgzDAJ4vwsaQkp5D9tqK1rGvMPhOkegBDACfWbmC
-+AVkb5wOekykiM5rpjbmYs0=
-=hPI5
------END PGP SIGNATURE-----
