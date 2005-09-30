@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.2 2005/09/22 13:59:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.3 2005/09/30 01:24:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -105,15 +105,18 @@ src_install() {
 	cd ${Ddir}
 	for d in ambient data dmvault hak localvault music override portraits
 	do
-		cd ${d}
-		for f in $(find . -name '*.*') ; do
-			lcf=$(echo ${f} | tr [:upper:] [:lower:])
-			if [ ${f} != ${lcf} ] && [ -f ${f} ]
-			then
-				mv ${f} $(echo ${f} | tr [:upper:] [:lower:])
-			fi
-		done
-		cd ${Ddir}
+		if [ -d ${d} ]
+		then
+			cd ${d}
+			for f in $(find . -name '*.*') ; do
+				lcf=$(echo ${f} | tr [:upper:] [:lower:])
+				if [ ${f} != ${lcf} ] && [ -f ${f} ]
+				then
+					mv ${f} $(echo ${f} | tr [:upper:] [:lower:])
+				fi
+			done
+			cd ${Ddir}
+		fi
 	done
 	if ! use sou && ! use hou
 	then
@@ -122,7 +125,7 @@ src_install() {
 	doicon ${FILESDIR}/nwn.png
 	prepgamesdirs
 	chmod -R g+rwX ${Ddir}/saves ${Ddir}/localvault ${Ddir}/dmvault \
-		|| die "could not chmod"
+		2>&1 > /dev/null || die "could not chmod"
 	chmod g+rwX ${Ddir} || die "could not chmod"
 }
 
