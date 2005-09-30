@@ -1,18 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 99fc2cbfef5545693b3dd5e9ddadc53f ChangeLog 11238
-MD5 14f0431b1c4f28af518a025e02ff5066 hylafax-4.2.0-r3.ebuild 3538
-MD5 d82acf1bcf0f7f9e181d6a2821292f2e metadata.xml 435
-MD5 dbf75f6a881780c8c822212d59909331 hylafax-4.2.1-r2.ebuild 3866
-MD5 21516d5d24d3ba17d8f1540c8c7f876f hylafax-4.2.2.ebuild 3825
+MD5 fa83948864d83f34f54ce35f26b38ed6 files/99hylafax-4.2 75
 MD5 eab749cee07de1984c9756e6eb886df0 files/configure-gcc-3.4.patch 696
 MD5 61b6d16148a84723c2996b519a57d498 files/digest-hylafax-4.2.0-r3 66
-MD5 c4edcc178e6eeca8ec4680be0790e6da files/hylafax-4.2.0-fPIC.patch 1627
 MD5 e1c4b78af20d5e332db1aef29080caf7 files/digest-hylafax-4.2.1-r2 66
 MD5 393322f25c85e29fe90c0d2cbe503833 files/digest-hylafax-4.2.2 66
-MD5 fa83948864d83f34f54ce35f26b38ed6 files/99hylafax-4.2 75
 MD5 491e78765b433d7c11146120cf7e40f8 files/hylafax-4.2 3759
-MD5 363ea0f56887928eb876bbe25223de85 files/hylafax-hostvuln.patch 2098
-MD5 cfcafeadd916b8a9103b9b9110887916 files/hylafax-4.2.0-faxcron_uid.patch 527
-MD5 6fd09a3cd0a1657591fc6c5c076cd462 files/hylafax-4.2.0-tiff_version.patch 1011
 MD5 6c0efb14f66d112c7e11255ce1835079 files/hylafax-4.2-tmpdir.patch 3433
-MD5 0bf655709c9fc6c62ffc7d2a63340c90 files/hylafax-4.2.1-openpam.patch 1571
+MD5 c4edcc178e6eeca8ec4680be0790e6da files/hylafax-4.2.0-fPIC.patch 1627
+MD5 cfcafeadd916b8a9103b9b9110887916 files/hylafax-4.2.0-faxcron_uid.patch 527
 MD5 9cf5cada0895231b3d403f8791431102 files/hylafax-4.2.0-faxmail-charset.patch 473
+MD5 6fd09a3cd0a1657591fc6c5c076cd462 files/hylafax-4.2.0-tiff_version.patch 1011
+MD5 0bf655709c9fc6c62ffc7d2a63340c90 files/hylafax-4.2.1-openpam.patch 1571
+MD5 363ea0f56887928eb876bbe25223de85 files/hylafax-hostvuln.patch 2098
+MD5 14f0431b1c4f28af518a025e02ff5066 hylafax-4.2.0-r3.ebuild 3538
+MD5 dbf75f6a881780c8c822212d59909331 hylafax-4.2.1-r2.ebuild 3866
+MD5 21516d5d24d3ba17d8f1540c8c7f876f hylafax-4.2.2.ebuild 3825
+MD5 d82acf1bcf0f7f9e181d6a2821292f2e metadata.xml 435
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPSoQI1lqEGTUzyQRAkbIAJ9Nxm0qIOECei+fh/U0uFVTwXysLwCg26PY
+RPtn0fW/bewGXoLiNnjQbZw=
+=j6mQ
+-----END PGP SIGNATURE-----
