@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/omnievents
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/ChangeLog,v 1.1 2005/09/30 00:55:14 kloeri Exp $
+
+*omnievents-2.6.2 (30 Sep 2005)
+
+  30 Sep 2005; Bryan Østergaard <kloeri@gentoo.org> +files/omnievents-conf,
+  +files/omnievents-init, +metadata.xml, +omnievents-2.6.2.ebuild:
+  Initial commit, ebuild by James Le Cuirot <chewi@ffaura.com>, bug 87857.
+

@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 781ac2f7ab281b61c56e4e5990e21819 omnievents-2.6.2.ebuild 1045
+MD5 200332597151f526a1704008cea0bdf3 metadata.xml 224
+MD5 54ed446a1b9a17463063131de40af363 ChangeLog 464
+MD5 ab37db48c0c5fa7134cf1c0d5dfbe5a5 files/digest-omnievents-2.6.2 73
+MD5 0f14063c749ad37cbb4188b0ac08cfa3 files/omnievents-init 769
+MD5 6558f859f00eb7f641388d0f60b160f6 files/omnievents-conf 804
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPI0HKf2g/qXtneoRAu1BAJ9iAYCZ6X87TzjLWt4RiW8S8COSgACcDrB1
+MXbIMjpYM2V0+Sypz/ul1Tw=
+=kt19
+-----END PGP SIGNATURE-----
