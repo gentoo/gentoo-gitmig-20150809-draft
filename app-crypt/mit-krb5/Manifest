@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 065afd5317faf1801fb5f5f5c9b16321 mit-krb5-1.4.1-r2.ebuild 3111
+MD5 77512904fda59ebf56aa151148c033d3 ChangeLog 17237
 MD5 f3ea9dd1d52f37139fbc4d101044f821 metadata.xml 241
-MD5 82a7aa1f05e36be7d58e9c3fe5244be7 mit-krb5-1.4.1-r2.ebuild 3109
-MD5 b65de05dd9265b47a0a8c8273d74f9a4 ChangeLog 17144
-MD5 bd5b2d0e988dc8f634c70e965d75cb3a files/digest-mit-krb5-1.4.1-r2 200
-MD5 186bd4cbeff944079f44105d4c962c80 files/kdc.conf 438
-MD5 fbb2a86038ab98ca0c7493ad9d55ace9 files/krb5.conf 541
 MD5 c451148d1b3e182a19a8f9084d0b55b8 files/krb5.confd 233
 MD5 d7dcbbab51ce1849c77c083b8d363c15 files/krb5.initd 1486
+MD5 fbb2a86038ab98ca0c7493ad9d55ace9 files/krb5.conf 541
 MD5 ae7e2bde0b20e580f49d5a3c524b445b files/mit-krb5-lazyldflags.patch 509
-MD5 61a61d22565605924a06789f9da352bf files/mit-krb5kadmind.initd 687
+MD5 186bd4cbeff944079f44105d4c962c80 files/kdc.conf 438
+MD5 bd5b2d0e988dc8f634c70e965d75cb3a files/digest-mit-krb5-1.4.1-r2 200
 MD5 c214030264300e2d84375d23d7c1f892 files/mit-krb5kdc.initd 656
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLDK5Kf2g/qXtneoRAmUsAKCbSwvfRSai78Kdy2mZ0JEyF5f9cgCeKRMK
-ayYEa2Qy7JIFk5b6a6NrK4Y=
-=5oB6
------END PGP SIGNATURE-----
+MD5 61a61d22565605924a06789f9da352bf files/mit-krb5kadmind.initd 687
