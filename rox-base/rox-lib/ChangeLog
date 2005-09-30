@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.3 2005/05/22 10:18:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.4 2005/09/30 08:04:10 svyatogor Exp $
+
+*rox-lib-2.0.2 (30 Sep 2005)
+
+  30 Sep 2005; Sergey Kuleshov <svyatogor@gentoo.org> +rox-lib-2.0.2.ebuild:
+  New version added. Bug #79333
 
   22 May 2005; Simon Stelling <blubb@gentoo.org> rox-lib-1.9.16.ebuild:
   added ~amd64 keyword
