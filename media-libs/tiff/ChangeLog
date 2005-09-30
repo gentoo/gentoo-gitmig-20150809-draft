@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/tiff
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.65 2005/09/17 11:59:02 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.66 2005/09/30 02:38:24 vapier Exp $
+
+*tiff-3.7.4 (30 Sep 2005)
+
+  30 Sep 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/tiff-3.7.4-assign-dont-compare.patch, +tiff-3.7.4.ebuild:
+  Version bump #106827 by Francisco Javier.
 
 *tiff-3.7.3 (03 Aug 2005)
 
