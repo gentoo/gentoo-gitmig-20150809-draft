@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/devil
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.14 2005/04/21 19:18:41 hansmi Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.15 2005/09/30 02:48:00 vapier Exp $
+
+*devil-1.6.7-r1 (30 Sep 2005)
+
+  30 Sep 2005; Mike Frysinger <vapier@gentoo.org> devil-1.6.7.ebuild:
+  Add optional support for xpm/allegro/mng #91610 by James Le Cuirot.
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> devil-1.6.7.ebuild:
   Stable on ppc.

@@ -1,8 +1,20 @@
-MD5 4c2001514fc1fe99e978c2021792c97f ChangeLog 1738
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 626733ec2481dc685f50549d16f8546e devil-1.6.6-r2.ebuild 1267
 MD5 b1d0332565f2a5604730bfd28084cfe7 devil-1.6.7.ebuild 1177
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6d366044841f5d55e08b7791864b0d59 files/digest-devil-1.6.6-r2 63
+MD5 d62f33e0981b8fe594de8726c8963620 ChangeLog 1910
+MD5 6cfa63ea6b11ca455a312a7b286a0c71 devil-1.6.7-r1.ebuild 1345
 MD5 23e87e84b73b2c7994b446040df2738e files/1.6.6-configure.in.patch 8140
-MD5 28d09fde772494441e9f5a30e2b20097 files/digest-devil-1.6.7 64
 MD5 00ece5df43475a333ec6812e0ba74af4 files/devil-1.6.7-png-types.patch 348
+MD5 28d09fde772494441e9f5a30e2b20097 files/digest-devil-1.6.7-r1 64
+MD5 28d09fde772494441e9f5a30e2b20097 files/digest-devil-1.6.7 64
+MD5 6d366044841f5d55e08b7791864b0d59 files/digest-devil-1.6.6-r2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPKelgIKl8Uu19MoRAvEFAJwMTuo0HEbGtz05an5BGzLp+8rHHwCeOClH
+TAeOl7Pfocbg+ZbsH1QFGPI=
+=FUx5
+-----END PGP SIGNATURE-----
