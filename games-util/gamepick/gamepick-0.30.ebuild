@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.30.ebuild,v 1.4 2005/09/20 14:49:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.30.ebuild,v 1.5 2005/09/30 18:45:12 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_install() {
 	dogamesbin gamepick gamepick-stage{2,3} || die "dogamesbin"
-	dodoc ABOUT INSTALL README TODO
+	dodoc ABOUT README TODO
 	insinto "${GAMES_SYSCONFDIR}"
 	doins gamepick.conf
 	insinto "${GAMES_DATADIR}"/${PN}
