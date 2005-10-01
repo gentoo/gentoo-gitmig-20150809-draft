@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6274b51c1c6a8e4b604dd000ce78eabb ChangeLog 4296
-MD5 f7f7ec373633d8614440f73c99838d77 gtkspell-2.0.11.ebuild 1013
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 2d38a46d48a54fdfd1ca59d8db5d7c57 ChangeLog 4397
+MD5 29e592e3e19eb1b826fdcdde871dd6c4 gtkspell-2.0.11.ebuild 1012
 MD5 837c8b2c0504f33feacb22c9eebacabe gtkspell-2.0.4-r1.ebuild 1169
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f9abff1da530fea89cf3043f082cc2d3 files/digest-gtkspell-2.0.11 67
-MD5 7b72f96acd5c9a16b6a6284de819f4aa files/gtkspell-2.0.4-docbookx.patch 582
-MD5 b91273fd65f12fdab689ed2beb37c352 files/gtkspell-2.0.10-enchant.patch 8894
-MD5 2c687dc22e69904275ba8afee73f55a9 files/gtkspell-2.0.4-enchant.patch 11806
 MD5 ae68a374d757954ed1b57e829bb90ea3 files/digest-gtkspell-2.0.4-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDPXPHKRy60XGEcJIRAt1jAJ9j+jEsGD+zGUdmZ4wBpGz2UujnIACfYdTM
-yBeoqHnWHRzGh5ByAhV/4e8=
-=sF/l
------END PGP SIGNATURE-----
+MD5 b91273fd65f12fdab689ed2beb37c352 files/gtkspell-2.0.10-enchant.patch 8894
+MD5 7b72f96acd5c9a16b6a6284de819f4aa files/gtkspell-2.0.4-docbookx.patch 582
+MD5 2c687dc22e69904275ba8afee73f55a9 files/gtkspell-2.0.4-enchant.patch 11806
