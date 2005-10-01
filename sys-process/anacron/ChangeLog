@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/anacron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.4 2005/07/14 06:45:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.5 2005/10/01 17:56:22 ka0ttic Exp $
+
+  01 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> anacron-2.3-r2.ebuild:
+  /var/spool/anacron should be keepdir'd, bug #107756; also use newinitd
+  instead of newexe.
 
 *anacron-2.3-r2 (14 Jul 2005)
 

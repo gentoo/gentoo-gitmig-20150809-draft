@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/anacron-2.3-r2.ebuild,v 1.1 2005/07/14 06:45:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/anacron-2.3-r2.ebuild,v 1.2 2005/10/01 17:56:22 ka0ttic Exp $
 
 inherit eutils
 
@@ -32,11 +32,11 @@ src_compile() {
 src_install() {
 	#this does not work if the directory exists already
 	diropts -m0750 -o root -g cron
-	dodir /var/spool/anacron
+	keepdir /var/spool/anacron
 
 	doman anacrontab.5 anacron.8
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/anacron.rc6 anacron
+	newinitd ${FILESDIR}/anacron.rc6 anacron
 
 	dodoc ChangeLog COPYING README TODO
 
