@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.20 2005/09/10 22:13:45 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.21 2005/10/01 16:38:27 chrb Exp $
+
+*zodb-3.5.1 (01 Oct 2005)
+
+  01 Oct 2005; Chris Bainbridge <chrb@gentoo.org> +zodb-3.5.1.ebuild:
+  Version bump. This corresponds to the ZODB that will ship in Zope 3.1.0
+  final. ZODB 3.5.1 contains (just) a few bugfixes relative to 3.5.0,
+  involving Zope 3's zeoctl and mkzeoinst scripts, and the ZopeUndo.Prefix
+  class.
 
 *zodb-3.5.0 (10 Sep 2005)
 
