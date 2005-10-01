@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.29.ebuild,v 1.2 2005/09/20 05:35:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.29.ebuild,v 1.3 2005/10/01 05:51:09 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -18,7 +18,7 @@ DEPEND="X? ( virtual/motif
 		virtual/x11
 	)
 	usb? ( sys-apps/hotplug )
-	dbus? ( =sys-apps/dbus-0.23.4* )
+	dbus? ( ~sys-apps/dbus-0.23.4 )
 	dev-lang/python
 	app-text/xmlto
 	virtual/libc
@@ -52,14 +52,14 @@ src_install() {
 	    newinitd ${FILESDIR}/gpsd.init gpsd
 	fi
 	if use X ; then
-	    insinto /usr/lib/X11/app-defaults
-	    newins xgps.ad xgps
-	    newins xgpsspeed.ad xgpsspeed
+	    insinto /usr/$(get_libdir)/X11/app-defaults
+	    newins xgps.ad Xgps
+	    newins xgpsspeed.ad Xgpsspeed
 	fi
 	dobin logextract
 	diropts "-m0644"
-	exeinto /usr/lib/python${PYVER}/site-packages
-	doexe gps.py
+	exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
+	doexe gps.py gpsfake.py
 	dodoc AUTHORS HACKING INSTALL README TODO ${FILESDIR}/40-usb-serial.rules
 }
 
