@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 15e07e299a96234dfff0e9effdb1c740 ChangeLog 976
+MD5 4de90eedba968f463ae5acfb9b2140ae xfm-1.4.3.ebuild 1116
+MD5 9f7115ee62b830738dfc26b242e3e236 ChangeLog 1089
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 7e98a1e662f5ec3968667bb05a60b5f6 xfm-1.4.3.ebuild 1098
-MD5 bcfae9591c9931439f5bcb29d8c93a94 files/digest-xfm-1.4.3 61
 MD5 0f75a007428c6d3d50de93fcdbb67a6f files/xfm-1.4.3-malloc.patch 413
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCru1Xl5AvwDPiUowRAi77AKCm1B5GfV5n3Dyc2HG1NaBOhwFMtACeLKIQ
-GePMx/eqvIctyDBwXtjJ/m8=
-=5qpm
------END PGP SIGNATURE-----
+MD5 bcfae9591c9931439f5bcb29d8c93a94 files/digest-xfm-1.4.3 61

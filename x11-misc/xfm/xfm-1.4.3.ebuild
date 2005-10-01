@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.4 2005/06/14 14:44:11 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.5 2005/10/01 00:30:03 nelchael Exp $
+
+inherit eutils
 
 DESCRIPTION="A classic X11 file manager"
 HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/"

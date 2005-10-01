@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/ChangeLog,v 1.5 2005/06/14 14:44:11 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/ChangeLog,v 1.6 2005/10/01 00:30:03 nelchael Exp $
+
+  01 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> xfm-1.4.3.ebuild:
+  Fix bug 66133 (add missing inherit).
 
   14 Jun 2005; Jonathan Smith <smithj@gentoo.org>
   +files/xfm-1.4.3-malloc.patch, xfm-1.4.3.ebuild:
