@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4fb7805c853f0a30d3b0c9d8e7f0ff04 ChangeLog 26518
 MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
 MD5 60c5b928eb843c0dea525da8a5c570d3 sylpheed-1.0.5.ebuild 1571
@@ -10,3 +13,10 @@ MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
 MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
 MD5 40cb8d52d0b4fc73ccad5bb3a5f007a6 files/digest-sylpheed-2.0.0 68
 MD5 acaec4415ed56184b524f510f9774c2d files/digest-sylpheed-2.0.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDPpp5wUpWvClEHQoRAtTYAJ9l1QT8SAZWzVmMW6WL+q6N+YpYMACfXyy7
+HJ+p4qpEmxeJX/+WKWPg/xQ=
+=Wd/k
+-----END PGP SIGNATURE-----
