@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4516 2005/10/01 18:08:24 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4517 2005/10/01 23:39:25 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (01 Oct 2005)
+# Adding partial eclipse builds for jface
+dev-java/eclipse-osgi
+dev-java/eclipse-core
+dev-java/eclipse-jface
 
 # Petteri Räty <betelgeuse@gentoo.org> (01 Oct 2005)
 # Adding a package.mask to ensure a smoother transition to splitted 
