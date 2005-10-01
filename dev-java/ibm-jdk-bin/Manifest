@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 edac7a820d997b903bcde34b38e0c25e ChangeLog 3973
-MD5 ea9623a638b903b943495bb8d1b8bebd ibm-jdk-bin-1.4.1-r2.ebuild 2447
-MD5 6e8429dfc644f2018cfef35b2fa3c23e ibm-jdk-bin-1.4.2.ebuild 2681
+MD5 375e3119c268855071c8d432d125c3f8 ibm-jdk-bin-1.4.2.ebuild 2805
+MD5 391cc434454339957cd70fa912fc3888 ChangeLog 4093
 MD5 2f88465cd5ad6adb1c76759ff3078666 metadata.xml 348
-MD5 605642c801114b645d12bc93a5f3e911 files/ibm-jdk-bin-1.4.2 472
 MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
-MD5 cfb8abeb0f582ad72b0971269e7dee32 files/digest-ibm-jdk-bin-1.4.2 443
 MD5 2a5694754d47014cb37eae87a4758efb files/ibm-jdk-bin-1.4.1 451
-MD5 a7254981b84488a01ed49fee3e8429e2 files/digest-ibm-jdk-bin-1.4.1-r2 280
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDxN+j5H05b2HAEkRAjyvAJ9sqXUlzu+3jtVf4mvSiNeGVx6X4wCgnyuj
-FSDHeIZ2/SAzQm4+sL9ajQ0=
-=RgR2
------END PGP SIGNATURE-----
+MD5 605642c801114b645d12bc93a5f3e911 files/ibm-jdk-bin-1.4.2 472
+MD5 cfb8abeb0f582ad72b0971269e7dee32 files/digest-ibm-jdk-bin-1.4.2 443
