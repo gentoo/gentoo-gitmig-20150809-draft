@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 52a6eb1153335d3d2b44c8ec2c9d6396 commons-cli-1.0-r4.ebuild 1611
 MD5 e72035a72f727cc9d4f72a40898f31da ChangeLog 3156
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b534e655c6a40ff5b01098dddcda205c files/commons-cli-1.0-gentoo.diff 4407
 MD5 8e1e3125e998bf49313b7e5ac3a5b1a0 files/digest-commons-cli-1.0-r4 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPkax/rLF9B432nYRAo8iAJ9l1bk6h7CbRtH0gfiUQSXTmsYWzwCgjXVy
+pCCeeWRgQALiEUGwrOrX2b8=
+=uDBB
+-----END PGP SIGNATURE-----
