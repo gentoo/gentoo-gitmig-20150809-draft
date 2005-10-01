@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ami-1.2.3-r1.ebuild,v 1.1 2005/09/25 00:47:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ami-1.2.3-r1.ebuild,v 1.2 2005/10/01 22:51:09 matsuu Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://ami.kldp.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.7.0"
