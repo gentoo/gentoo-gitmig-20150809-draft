@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.105 2005/09/16 21:22:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.106 2005/10/01 00:48:20 vapier Exp $
+
+*wine-20050930 (01 Oct 2005)
+
+  01 Oct 2005; Mike Frysinger <vapier@gentoo.org> +wine-20050930.ebuild:
+  Version bump #107746 by rvalles@es.gnu.org.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
