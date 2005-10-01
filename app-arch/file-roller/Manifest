@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 82f6d19d9a611cf7320a8b59ccea1a18 ChangeLog 16885
-MD5 d1ade2c84e49b039e25bd379a2510cda file-roller-2.12.0.ebuild 1411
-MD5 2a73abf3a70b4c8e0993ca9affe94909 file-roller-2.10.4.ebuild 1410
 MD5 6a822233a7d4799925d086c7fe2b743e file-roller-2.10.0-r1.ebuild 1489
 MD5 fab7851231fc02801db3f51c775a447a file-roller-2.10.3.ebuild 1354
+MD5 b96edc38a69b7cf1bf871b30c75bbd5c file-roller-2.10.4.ebuild 1408
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 d1ade2c84e49b039e25bd379a2510cda file-roller-2.12.0.ebuild 1411
+MD5 16f0d59bf75f70c830269d4701560204 ChangeLog 16982
+MD5 d779986864325c09e5caba951a634f9a files/digest-file-roller-2.10.0-r1 72
+MD5 be190f54f0aaa0ff36a6d17c56e1a5b6 files/digest-file-roller-2.10.3 72
+MD5 639fd7660e2205b9a529b1df15ff765b files/digest-file-roller-2.10.4 72
+MD5 cb207c4a86910d9e23948e4fb15d5d8d files/file-roller-2.10-use_fr_rpm2cpio.patch 1113
 MD5 d12176c3351e047a90fc4740f4b09237 files/file-roller-2.10.0-fix_whitespace.patch 1713
 MD5 b3c29c8524d0b4485f2b5abc64d003fe files/file-roller-2.10.2-fix_unrar.patch 858
-MD5 67f58f96b7c00be703c9bf9cf38cd191 files/file-roller-2.8.0-use_bin_tar.patch 405
-MD5 be190f54f0aaa0ff36a6d17c56e1a5b6 files/digest-file-roller-2.10.3 72
-MD5 d779986864325c09e5caba951a634f9a files/digest-file-roller-2.10.0-r1 72
-MD5 d23f66e1c734a44ce6ee89b0e724b371 files/rpm2cpio-file-roller 2556
-MD5 cb207c4a86910d9e23948e4fb15d5d8d files/file-roller-2.10-use_fr_rpm2cpio.patch 1113
 MD5 52258671fa0060fb4c537665f1be68b6 files/file-roller-2.10.3-use_bin_tar.patch 504
+MD5 67f58f96b7c00be703c9bf9cf38cd191 files/file-roller-2.8.0-use_bin_tar.patch 405
+MD5 d23f66e1c734a44ce6ee89b0e724b371 files/rpm2cpio-file-roller 2556
 MD5 2a7437a05769ab6183f3668cd78fad91 files/digest-file-roller-2.12.0 72
-MD5 639fd7660e2205b9a529b1df15ff765b files/digest-file-roller-2.10.4 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLD1GJrHF4yAQTrARAtG2AKDPnsZ6BihQ4HlHCwG3NSqH+IWK4wCfUVHn
-icMhO9azWBhdSmmVSG249eA=
-=eC+U
+iD4DBQFDPw2TKf2g/qXtneoRAlbvAJ0c5BHjCZfi/w7AsEFEQHnDkIiwjQCYg9km
+9eVam6ChK8EBn2W/S6u01Q==
+=g95K
 -----END PGP SIGNATURE-----
