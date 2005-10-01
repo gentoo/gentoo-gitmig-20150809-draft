@@ -1,24 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e57748276505fab96a2ab4e64de45366 metadata.xml 220
-MD5 8acf56587de4c66daf1cfed2cc8be000 portage-2.0.51.19.ebuild 13221
-MD5 a4921b091c6057013549c33f933bfd40 portage-2.0.51.22-r2.ebuild 5708
-MD5 7c109f64a1b96c1134ac490d0233fa3b portage-2.1.0_alpha20050718.ebuild 2566
 MD5 fc0f2ec6f18f9744037a47705057b9d1 ChangeLog 1108
-MD5 d84a1f0f9b6dad85ff874923647de011 portage-2.0.52-r1.ebuild 3640
 MD5 d5d5b818347fd87b290ecb0b17516b34 files/05portage.envd 34
 MD5 f29e1e5ab80c7078b004e60002173ccb files/2.0.51.22-fixes.patch 9339
+MD5 7e8e000ab445e5860a8dae291ea2dfe7 files/2.0.52-fixes.patch 1420
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
 MD5 f8627c17a73d8568e94f92ea15c69360 files/digest-portage-2.0.51.19 70
 MD5 159e3519c10187285ab4b0a536b2a1d3 files/digest-portage-2.0.51.22-r2 70
-MD5 87eff9b432487777e55298413c33ab4a files/digest-portage-2.1.0_alpha20050718 80
-MD5 7e8e000ab445e5860a8dae291ea2dfe7 files/2.0.52-fixes.patch 1420
 MD5 635a143e3d0587687c2f43209de5c53e files/digest-portage-2.0.52-r1 67
+MD5 c0bbeeb302bc22a9e0e6e91c76526dcc files/digest-portage-2.0.53_rc1 71
+MD5 87eff9b432487777e55298413c33ab4a files/digest-portage-2.1.0_alpha20050718 80
+MD5 e57748276505fab96a2ab4e64de45366 metadata.xml 220
+MD5 8acf56587de4c66daf1cfed2cc8be000 portage-2.0.51.19.ebuild 13221
+MD5 a4921b091c6057013549c33f933bfd40 portage-2.0.51.22-r2.ebuild 5708
+MD5 d84a1f0f9b6dad85ff874923647de011 portage-2.0.52-r1.ebuild 3640
+MD5 953dd0c76cd59b3c4d1a32c568e5c9e6 portage-2.0.53_rc1.ebuild 3586
+MD5 7c109f64a1b96c1134ac490d0233fa3b portage-2.1.0_alpha20050718.ebuild 2566
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDINAPxvWNPsk/ZP4RAs1jAJ0VgkrUNI45hm9mTpYsKPtODA2/cQCgjh/F
-5AeM8aOXvScHqy2FxH0phHo=
-=MAKm
+iD8DBQFDPnrKxvWNPsk/ZP4RAka/AKCd7insqwQZ/B9/tQvX83wPdTagGgCeLBSj
+fHMnDC22W6LhVDD4XcaNe4c=
+=EHgP
 -----END PGP SIGNATURE-----
