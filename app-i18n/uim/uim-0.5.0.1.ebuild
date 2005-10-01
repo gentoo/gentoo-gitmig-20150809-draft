@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.5.0.1.ebuild,v 1.2 2005/10/01 10:51:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.5.0.1.ebuild,v 1.3 2005/10/01 11:48:18 usata Exp $
 
 inherit eutils kde-functions flag-o-matic multilib
 
@@ -75,7 +75,8 @@ src_compile() {
 	libtoolize --copy --force
 
 	# --with-scim is not stable enough
-	econf ${myconf} --without-scim || die "econf failed"
+	# --with-libedit should be fixed in SVN trunk, but not well tested
+	econf ${myconf} --without-scim --without-libedit || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
