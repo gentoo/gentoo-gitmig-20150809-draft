@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/linux-wlan-ng-utils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-utils/ChangeLog,v 1.1 2005/10/01 14:34:33 betelgeuse Exp $
+
+*linux-wlan-ng-utils-0.2.2 (01 Oct 2005)
+
+  01 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +linux-wlan-ng-utils-0.2.2.ebuild:
+  Initial addition for the new split linux-wlan-ng ebuilds.
+

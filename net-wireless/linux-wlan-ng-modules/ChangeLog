@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/linux-wlan-ng-modules
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.1 2005/10/01 14:42:37 betelgeuse Exp $
+
+*linux-wlan-ng-modules-0.2.2 (01 Oct 2005)
+
+  01 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +files/linux-wlan-ng-0.2.2-module_param.patch, +metadata.xml,
+  +linux-wlan-ng-modules-0.2.2.ebuild:
+  Initial addition for the new split linux-wlan-ng ebuilds.
+

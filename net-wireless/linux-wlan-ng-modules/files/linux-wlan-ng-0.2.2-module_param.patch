@@ -1,0 +1,12 @@
+diff -urp linux-wlan-ng-0.2.1/src/prism2/driver/prism2_cs.c linux-wlan-ng-0.2.1-module_param/src/prism2/driver/prism2_cs.c
+--- linux-wlan-ng-0.2.1/src/prism2/driver/prism2_cs.c	2005-07-20 19:16:55.000000000 +0200
++++ linux-wlan-ng-0.2.1-module_param/src/prism2/driver/prism2_cs.c	2005-08-24 21:41:34.000000000 +0200
+@@ -21,7 +21,7 @@ static u_int	prism2_ignorevcc=0;		/* Boo
+ 						 * is set to and what the CIS
+ 						 * says.
+ 						 */
+-#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,11) )
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,11)) && (LINUX_VERSION_CODE > KERNEL_VERSION(2,5,0))
+ #if (LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,5))
+ static int numlist = 4;
+ module_param_array(irq_list, int, numlist, 0444);
