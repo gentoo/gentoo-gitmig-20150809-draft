@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/lcdtest
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.1 2005/10/01 22:48:31 chainsaw Exp $
+
+*lcdtest-1.01 (01 Oct 2005)
+
+  01 Oct 2005; <chainsaw@gentoo.org> +metadata.xml, +lcdtest-1.01.ebuild:
+  Initial commit. Ebuild based on the one by Rafal Rzepecki
+  <divide@poczta.onet.pl> in bug #105814.
+
