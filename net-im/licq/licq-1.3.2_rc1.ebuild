@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.0-r4.ebuild,v 1.2 2005/07/07 04:52:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2_rc1.ebuild,v 1.1 2005/10/01 14:58:52 voxus Exp $
 
-inherit eutils kde-functions
+inherit eutils kde-functions multilib
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P/_pre/-PRE}.tar.bz2
-		http://dev.gentoo.org/~voxus/licq/licq-branch-update-20050315.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P/_rc/RC}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -24,23 +23,17 @@ RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
 DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt? ( =x11-libs/qt-3* )
-	ncurses? ( sys-libs/ncurses =dev-libs/cdk-4.9.11.20031210-r1 )
+	ncurses? ( sys-libs/ncurses >=dev-libs/cdk-4.9.11.20031210-r1 )
 	crypt? ( >=app-crypt/gpgme-1.0.0 )"
+
+S="${WORKDIR}/${P/_rc/RC}"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S} && epatch ${DISTDIR}/${PN}-branch-update-20050315.patch.bz2
+	cd ${S}
 
-	if use msn
-	then
-		epatch ${FILESDIR}/${PV}-msnpacket_sync.patch || die "msn fix failed"
-	fi
-
-	if use ncurses
-	then
-		epatch ${FILESDIR}/${PV}-suse_bool.patch || die "console patch failed"
-	fi
+	use ncurses && epatch ${FILESDIR}/1.3.0-suse_bool.patch
 
 	if use kde
 	then
@@ -54,23 +47,26 @@ src_unpack() {
 	else
 		if ! use qt
 		then
-				ebegin "Setting console plugin as default..."
-				cp ${S}/src/licq.conf.h ${T}
-				sed "s:Plugin1 = qt-gui:Plugin1 = console:" \
-					${T}/licq.conf.h > ${S}/src/licq.conf.h
-				eend $?
+			ebegin "Setting console plugin as default..."
+			cp ${S}/src/licq.conf.h ${T}
+			sed "s:Plugin1 = qt-gui:Plugin1 = console:" \
+				${T}/licq.conf.h > ${S}/src/licq.conf.h
+			eend $?
 		fi
 	fi
 
-	cd ${S}/plugins/qt-gui && \
-		epatch ${FILESDIR}/${PV}-no_stupid_koloboks.patch || \
-		ewarn "Fail to kill koloboks, forget it"
+	# Install plugins in the correct libdir
+	sed -i -e "s:lib/licq/:$(get_libdir)/licq/:" \
+		${S}/include/licq_constants.h || die "sed failed"
+	sed -i -e 's:$(prefix)/lib:@libdir@:' \
+		${S}/plugins/*/src/Makefile.{in,am} || die "sed failed"
 }
 
 src_compile() {
-	local first_conf
+
 	use ssl		|| myconf="${myconf} --disable-openssl"
 	use socks5	&& myconf="${myconf} --enable-socks5"
+
 	if use crypt
 	then
 		myconf="${myconf} --enable-gpgme"
@@ -78,7 +74,28 @@ src_compile() {
 		myconf="${myconf} --disable-gpgme"
 	fi
 
+	for n in `echo auto-reply console email msn osd qt-gui rms`; do
+		cd ${S}/plugins/${n}
+
+		ebegin "Recreating configure in plugins/${n}"
+		rm -f Makefile && make -f Makefile.cvs 2>&1 > /dev/null
+		eend ${?}
+	done
+
+	cd ${S}
+
+	# bug #21009
+	find . -name 'configure' -exec sed -e "s:sed 's/-g:sed 's/^-g:" -i {} \;
+
 	econf ${myconf} || die
+
+	use crypt && {
+		# workaround for gpgme's headers inclusion path
+		sed \
+			-e "s:FAULT_INCLUDES =:FAULT_INCLUDES = -I/usr/include/gpgme:" \
+			-i ${S}/src/Makefile
+	}
+
 	emake || die
 
 	# Create the various plug-ins
@@ -90,6 +107,9 @@ src_compile() {
 		set-kdedir 3
 
 		use kde && myconf="${myconf} --with-kde"
+
+		# Problems finding qt on multilib systems
+		myconf="${myconf} --with-qt-libraries=${QTDIR}/$(get_libdir)"
 
 		# note! watch the --prefix=/usr placement;
 		# licq itself installs into /usr, but the
