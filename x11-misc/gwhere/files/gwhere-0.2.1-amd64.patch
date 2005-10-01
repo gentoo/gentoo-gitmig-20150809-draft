@@ -1,0 +1,59 @@
+diff -Nru gwhere-0.2.1.original/src/data/Makefile.am gwhere-0.2.1/src/data/Makefile.am
+--- gwhere-0.2.1.original/src/data/Makefile.am	2005-10-01 16:48:42.000000000 +0200
++++ gwhere-0.2.1/src/data/Makefile.am	2005-10-01 16:54:20.000000000 +0200
+@@ -4,7 +4,7 @@
+ 	-I$(top_srcdir)/intl \
+ 	-I$(top_srcdir)/src \
+ 	@GTK_CFLAGS@ \
+-	-D${HOST_OS}
++	-D${HOST_OS} -fPIC
+ 
+ noinst_LIBRARIES = libgwdata.a
+ 
+diff -Nru gwhere-0.2.1.original/src/db/Makefile.am gwhere-0.2.1/src/db/Makefile.am
+--- gwhere-0.2.1.original/src/db/Makefile.am	2005-10-01 16:48:42.000000000 +0200
++++ gwhere-0.2.1/src/db/Makefile.am	2005-10-01 16:54:08.000000000 +0200
+@@ -4,7 +4,7 @@
+ 	-I$(top_srcdir)/intl \
+ 	-I$(top_srcdir)/src \
+ 	@GTK_CFLAGS@ \
+-	-D${HOST_OS}
++	-D${HOST_OS} -fPIC
+ 
+ noinst_LIBRARIES = libgwdb.a
+ 
+diff -Nru gwhere-0.2.1.original/src/main.c gwhere-0.2.1/src/main.c
+--- gwhere-0.2.1.original/src/main.c	2005-10-01 16:48:42.000000000 +0200
++++ gwhere-0.2.1/src/main.c	2005-10-01 16:48:52.000000000 +0200
+@@ -24,6 +24,7 @@
+ #include <glib.h>
+ 
+ #include <stdlib.h>
++#include <locale.h>
+ 
+ #if defined ( OS_WIN32)
+ 	#include <windows.h>
+diff -Nru gwhere-0.2.1.original/src/plugins/Makefile.am gwhere-0.2.1/src/plugins/Makefile.am
+--- gwhere-0.2.1.original/src/plugins/Makefile.am	2005-10-01 16:48:42.000000000 +0200
++++ gwhere-0.2.1/src/plugins/Makefile.am	2005-10-01 16:56:12.000000000 +0200
+@@ -5,7 +5,7 @@
+ 	-I$(top_srcdir)/intl \
+ 	-I$(top_srcdir)/src \
+ 	@GTK_CFLAGS@ \
+-	-D${HOST_OS}
++	-D${HOST_OS} -fPIC
+ 
+ noinst_LIBRARIES = libgwplugins.a
+ 
+diff -Nru gwhere-0.2.1.original/src/tools/Makefile.am gwhere-0.2.1/src/tools/Makefile.am
+--- gwhere-0.2.1.original/src/tools/Makefile.am	2005-10-01 16:48:42.000000000 +0200
++++ gwhere-0.2.1/src/tools/Makefile.am	2005-10-01 16:51:59.000000000 +0200
+@@ -4,7 +4,7 @@
+ 	-I$(top_srcdir)/intl \
+ 	-I$(top_srcdir)/src \
+ 	@GTK_CFLAGS@ \
+-	-D${HOST_OS}
++	-D${HOST_OS} -fPIC
+ 
+ noinst_LIBRARIES = libgwtools.a
+ 

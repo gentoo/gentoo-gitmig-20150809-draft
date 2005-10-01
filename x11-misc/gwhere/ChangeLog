@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/gwhere
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gwhere/ChangeLog,v 1.12 2005/09/17 02:00:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gwhere/ChangeLog,v 1.13 2005/10/01 15:14:25 nelchael Exp $
+
+*gwhere-0.2.1-r1 (01 Oct 2005)
+
+  01 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/gwhere-0.2.1-amd64.patch, +gwhere-0.2.1-r1.ebuild:
+  Fix compilation on amd64 (bug 104488) and remove gtk2 USE flag (bug 106560).
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> gwhere-0.1.4.ebuild:
   Mark 0.1.4 stable on alpha
