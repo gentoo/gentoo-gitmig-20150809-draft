@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1de505b6b1bfcf8647b46ac63191d435 ChangeLog 2887
+MD5 3fc65d8a7759a87efcec2f29419ec74e ChangeLog 2990
+MD5 896d5fe4110ac5174882964651e10736 curphoo-0.3.12-r1.ebuild 1039
 MD5 2bfae1e5bb975f12d5062aa546c12884 metadata.xml 224
-MD5 48dd2183382398f3535f5304bc7b0458 curphoo-0.3.12-r1.ebuild 1032
+MD5 122cab072db3abe0d1b856902409642f files/0.3.12-session-server-gentoo.patch 507
 MD5 1a18c568484293132a02204630d6324d files/curphoo.1 1755
 MD5 7bfb17e560e41bd3286ed9948e874972 files/curphoo.sh 113
 MD5 b967810475a0de3912a90f4f4f20ab1c files/digest-curphoo-0.3.12-r1 140
-MD5 122cab072db3abe0d1b856902409642f files/0.3.12-session-server-gentoo.patch 507
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC94ThyiNZaEAZA+ARAhFWAJ0eat+TsRkM1EdLmB0m//Bb5V1tBwCdEzPI
-DgRhsW2UfJM87k86c3PVoeg=
-=MNeB
+iD8DBQFDPvnUyiNZaEAZA+ARAiX0AJ9JGVpg2XXsjtXpqIpGXGvPAOOorQCeNOUy
+tXcXVbMWASI6DEkhdItIjMQ=
+=gnwc
 -----END PGP SIGNATURE-----
