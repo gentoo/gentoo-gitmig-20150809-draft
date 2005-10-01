@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.0.ebuild,v 1.4 2005/08/16 09:30:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_suphp/mod_suphp-0.6.0.ebuild,v 1.5 2005/10/01 10:13:32 hollow Exp $
 
 inherit apache-module eutils
 
@@ -52,7 +52,7 @@ pkg_setup() {
 	fi
 
 	einfo
-	einfo "Using ${mode/mode-} mode"
+	einfo "Using ${SUPHP_SETIDMODE/mode-} mode"
 	einfo
 	einfo "You can manipulate several configure options of this"
 	einfo "ebuild through environment variables:"
