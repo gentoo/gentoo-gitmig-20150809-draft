@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac11d007c365f26c024a1b20b8e03bb0 poi-2.5-r2.ebuild 1910
+MD5 d46f736bccdce71619e63b4bd8acbe92 poi-2.5-r2.ebuild 1910
 MD5 03e6fd2d325b9e014aa6abd0b1c67e20 ChangeLog 1747
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 34ac7de875dec815d44a2bdbf7f4a64f files/digest-poi-2.5-r2 79
 MD5 bf71154ca919a88d8c12da29e33ef4d9 files/poi-2.5-jikes-fix.patch 1190
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2AIL/rLF9B432nYRAk9qAKCI5+5z7zzDklnTvg/W1QM4r1u2fACgvfw1
-kgJH/dXjlaHzBmrkd/GFmiU=
-=x6Jt
------END PGP SIGNATURE-----
