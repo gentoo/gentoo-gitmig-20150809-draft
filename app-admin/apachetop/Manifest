@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d280f0fcde3d0e3a8f19cba8fed8e2c0 ChangeLog 3708
-MD5 ae59afc3a444b95bceb4f44742ab5209 apachetop-0.12.5.ebuild 1000
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 ffbe345dd00472ba61885cbcb8d31d3d apachetop-0.12.5-r1.ebuild 1101
+MD5 120f51e8a13ade1705de95faed0b4f0e ChangeLog 3826
+MD5 ae59afc3a444b95bceb4f44742ab5209 apachetop-0.12.5.ebuild 1000
+MD5 b89c5d52d68b6fbfb807fadeac8e82eb apachetop-0.12.5-r1.ebuild 1099
 MD5 ddba3662bcd820b6ba4b41b4e254724b files/CAN-2005-2660.patch 577
 MD5 946d0848d81bf273d4d8a0cf79667a31 files/digest-apachetop-0.12.5-r1 68
 MD5 946d0848d81bf273d4d8a0cf79667a31 files/digest-apachetop-0.12.5 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPeEjCRZPokWLroQRAi73AJ90ljuL+XPr9g1ATzN08VbmBncBcQCgm9NW
-qUb597FKR6qc7kUsgosB/Bk=
-=aFA9
------END PGP SIGNATURE-----
