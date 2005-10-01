@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0c8a60f440cfb9d75d136c9e06b619d9 kxdocker-0.37.ebuild 651
 MD5 af0f2c1aa4185c52dd4f4ea588f22286 metadata.xml 349
 MD5 7d5e97cbbb80792bffd87153fd16d4f4 ChangeLog 414
+MD5 98be0eca71172e7359998dae6b6062c8 kxdocker-0.38.ebuild 651
 MD5 83da188cebd5a60bb4844220506340a4 files/digest-kxdocker-0.37 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDPeXVmdTrptrqvGERAs6eAKCe6kaLX0ap5G+UNQuT1WAt/IoQ+gCghjcJ
-5Cn722K/acFNPTP0zuK7q2Y=
-=oQLU
------END PGP SIGNATURE-----
+MD5 64a5aa7a0bf4b46a83edf1b9361ef7bb files/digest-kxdocker-0.38 66
