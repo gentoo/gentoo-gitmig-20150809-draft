@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 429af4b41152d0e511347df204704350 ChangeLog 3558
-MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 223b0e1b047eef92ccd01c4ff0f4e854 ulogd-1.01.ebuild 1027
-MD5 d1c339faa088c670080ce4042ccbdeeb ulogd-1.02-r1.ebuild 1287
 MD5 aad60f87d1f306a38a0b5583438c38dc ulogd-1.02.ebuild 1176
+MD5 b74874eb883af202fd920196133b492d ChangeLog 3637
+MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
+MD5 d1c339faa088c670080ce4042ccbdeeb ulogd-1.02-r1.ebuild 1287
+MD5 e5952182c592a721008cff1051d53a9c files/ulogd 735
+MD5 86ac93af3679a4fc4f96d0ffff52cd63 files/digest-ulogd-1.02-r1 63
 MD5 e346a1112f49dea95c9302f251dd3102 files/digest-ulogd-1.01 63
 MD5 86ac93af3679a4fc4f96d0ffff52cd63 files/digest-ulogd-1.02 63
-MD5 86ac93af3679a4fc4f96d0ffff52cd63 files/digest-ulogd-1.02-r1 63
-MD5 e5952182c592a721008cff1051d53a9c files/ulogd 735
-MD5 86019df8b3674b4649f91134561f6c59 files/ulogd-0.98 763
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCAckrArHZZzCEUG0RAnTEAJ9vZpwo/FBo27DGYIASefuInW/vEgCeNa39
-MOmroGxr0ih/dw0+AL+AQtE=
-=NTNW
------END PGP SIGNATURE-----
+MD5 f5d3c0a518647280c89caf76f7c6709b files/ulogd-0.98 731

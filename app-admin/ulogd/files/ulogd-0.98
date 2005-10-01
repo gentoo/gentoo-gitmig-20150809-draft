@@ -40,9 +40,7 @@ stop() {
 
 reload() {
 	initService
-        ebegin "Reloading ulogd.conf file"
-	killproc ulogd -HUP
-	RETVAL=$?
-	echo
-	return $RETVAL
+	ebegin "Reloading ulogd.conf file"
+	killall -HUP ulogd
+	eend $?
 }	
