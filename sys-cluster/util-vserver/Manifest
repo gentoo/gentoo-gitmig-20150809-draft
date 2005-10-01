@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 36395b81865ba4c8f92d8d1229caabb0 ChangeLog 5693
 MD5 493021fa14e20216e8ce772e9dc10a62 metadata.xml 588
 MD5 720b866e5950871ab9c672f678bb5909 util-vserver-0.30.205-r1.ebuild 1926
-MD5 12c5c4e6eca85f3716a06051dc066c38 util-vserver-0.30.208-r3.ebuild 2609
+MD5 3e99b2fb4ac14124c04301e2ba78d253 util-vserver-0.30.208-r3.ebuild 2646
 MD5 b3c3f9e3c220a288d48c43ef109ddf2b files/vservers.confd 1560
 MD5 9f45fd567b0b82deb30b950b680d983a files/vservers.initd 1692
 MD5 09276c3e50cf5c0f8d30ef0422f05fd8 files/vprocunhide 570
@@ -14,7 +14,7 @@ MD5 14608df972e2a679a7c99744366dbbe7 files/digest-util-vserver-0.30.208-r3 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPs/5mPFBzbX68WERAniWAJ0UsgfKqyTz2gxccTCc6+QxE3M/YgCfdgWY
-HLi4dqzzn6yhM/1/aXls4Os=
-=1t96
+iD8DBQFDPtDumPFBzbX68WERAvunAJ41WyDNGiDMTrHSbN4ICSkCuMNVYgCeNcVH
+9ViFVgncAgFEQEJ35Ku/z8g=
+=JwIt
 -----END PGP SIGNATURE-----
