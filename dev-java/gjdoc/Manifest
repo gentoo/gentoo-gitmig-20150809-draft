@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c7d4c205ad4e8930a5747e441f020eb gjdoc-0.7.5.ebuild 1502
-MD5 7d5f9bf973196a077fad1b5fa3fe985d ChangeLog 434
+MD5 c4237b6cb393873b7433a33d33c3a170 ChangeLog 536
+MD5 8abce6f70f29fda8cf9eef3a9a2504bf gjdoc-0.7.5.ebuild 1504
 MD5 0d8df1cd88e392aa059af56ac1d368e9 metadata.xml 535
 MD5 3fb0d8107550edfcee8ba6f0cf1bfc85 files/digest-gjdoc-0.7.5 63
 MD5 09c41d12fbdde13c5d1d4a64aa66bd0f files/gjdoc 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDORvUQiJ/wx066S4RAnVIAJ4iYbu19JhjcTbYxBn+L5qse2DefwCeImOL
-2DCxHTLsvMUiHZ1xijDx8x0=
-=d0+l
------END PGP SIGNATURE-----
