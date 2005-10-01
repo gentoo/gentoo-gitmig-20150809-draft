@@ -1,0 +1,23 @@
+Only in with: with.fasl
+diff -u with.orig/with.lisp with/with.lisp
+--- with.orig/with.lisp	2002-02-19 05:48:00.000000000 -0600
++++ with/with.lisp	2005-10-01 01:58:49.000000000 -0500
+@@ -187,7 +187,7 @@
+ 			    collect x
+ 			    do (pop lst))))
+ 	   (values decltok decls lst)))
+-	(t (error "~S is not a WITH declaration keyword"))))
++	(t (error "~S is not a WITH declaration keyword" decltok))))
+ 
+ (defun decl-terminating-kw-p (x)
+   (or (null x)
+@@ -215,7 +215,7 @@
+   (or (symbol-name-equal x "DO")
+       (symbol-name-equal x "IN")))
+ 
+-(defconstant +default-eq-toks+ '(= := <-))
++(cl+:defconst +default-eq-toks+ '(= := <-))
+ (defun kw-in-set-p (x &optional (valid-eq-toks +default-eq-toks+))
+   (member x valid-eq-toks :test #'symbol-name-equal))
+ 
+Only in with: with.lisp~

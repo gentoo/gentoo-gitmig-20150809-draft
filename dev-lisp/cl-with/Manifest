@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee1d25d191a9e56912ef2589bb6e42cd ChangeLog 464
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 ee8b7035cbd180863ee6f73e3d79264b cl-with-20020712.ebuild 709
+MD5 ccc12fa5ca6b0d3216f9781ff56c749a files/with.asd 240
+MD5 2f1ffabbcf47cfff7431333eaabf196e files/digest-cl-with-20020712 64
+MD5 d2b60c46eb4ada016acc95251aca2b96 files/20020712-gentoo.patch 795
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPjW2yiNZaEAZA+ARAlBOAJkBdvpO+h7chSYqLIKapdMhRa1P7ACfZhuv
+2lpvl9JzXUKLeIyzT/5Q0Hg=
+=Vmtq
+-----END PGP SIGNATURE-----
