@@ -134,6 +134,5 @@ if [ $1 = "install" ]; then
 	fi
 
 else
-	[[ -z "${MY_INSTALLDIR}" ]] && die "${MY_INSTALLDIR} not found!"
-	rm -f "${FILES}" bz.cfg.pl
+	echo "done."
 fi

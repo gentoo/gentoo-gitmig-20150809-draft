@@ -1,0 +1,2 @@
+Please read the Release Notes, especially if you are upgrading:
+ http://www.bugzilla.org/releases/2.20/release-notes.html

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.3.ebuild,v 1.5 2005/07/11 18:21:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.3.ebuild,v 1.6 2005/10/01 16:00:59 rl03 Exp $
 
 inherit webapp
 
@@ -53,14 +53,14 @@ src_install () {
 		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
 	done
 
-	cp ${FILESDIR}/2.18.1-r1/apache.htaccess ${D}/${MY_HTDOCSDIR}/.htaccess
+	cp ${FILESDIR}/2.18/apache.htaccess ${D}/${MY_HTDOCSDIR}/.htaccess
 
 	local FILE="bugzilla.cron.daily bugzilla.cron.tab"
-	cd ${FILESDIR}/2.18.1-r1
+	cd ${FILESDIR}/2.18
 	cp ${FILE} ${D}/${MY_HTDOCSDIR}
 
 	# add the reconfigure hook
-	webapp_hook_script ${FILESDIR}/2.18.1-r1/reconfig
+	webapp_hook_script ${FILESDIR}/2.18/reconfig
 
 	webapp_src_install
 }

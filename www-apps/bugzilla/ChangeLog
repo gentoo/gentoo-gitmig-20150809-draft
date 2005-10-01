@@ -1,6 +1,23 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.36 2005/08/08 21:32:40 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.37 2005/10/01 16:00:59 rl03 Exp $
+
+*bugzilla-2.20 (01 Oct 2005)
+*bugzilla-2.18.4 (01 Oct 2005)
+
+  01 Oct 2005; Renat Lumpau <rl03@gentoo.org>
+  -files/2.18.1-r1/apache.htaccess, -files/2.18.1-r1/reconfig,
+  -files/2.18.1-r1/bugzilla.cron.daily, +files/2.20/apache.htaccess,
+  -files/2.18.1-r1/bugzilla.cron.tab, +files/2.20/bugzilla.cron.daily,
+  +files/2.18/bugzilla.cron.daily, +files/2.20/bugzilla.cron.tab,
+  +files/2.18/apache.htaccess, +files/2.18/bugzilla.cron.tab,
+  +files/2.18/reconfig, +files/2.20/postinstall-en.txt,
+  +files/2.20/reconfig, -files/2.20_rc1/apache.htaccess,
+  -files/2.20_rc1/bugzilla.cron.daily, -files/2.20_rc1/bugzilla.cron.tab,
+  -files/2.20_rc1/reconfig, bugzilla-2.18.3.ebuild, +bugzilla-2.18.4.ebuild,
+  -bugzilla-2.20_rc1.ebuild, -bugzilla-2.20_rc2.ebuild,
+  +bugzilla-2.20.ebuild:
+  Version bumps wrt security bug #107796.
 
 *bugzilla-2.20_rc2 (08 Aug 2005)
 
