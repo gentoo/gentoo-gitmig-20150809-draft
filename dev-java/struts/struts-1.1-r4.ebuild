@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r4.ebuild,v 1.1 2005/09/20 17:52:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1-r4.ebuild,v 1.2 2005/10/01 08:20:48 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/struts-legacy
 	>=dev-java/commons-digester-1.5
 	>=dev-java/commons-fileupload-1.0
-	>=dev-java/commons-lang-1.0
+	=dev-java/commons-lang-2.0*
 	>=dev-java/commons-logging-1.0
 	>=dev-java/commons-validator-1.0
 	=dev-java/jakarta-oro-2.0*
