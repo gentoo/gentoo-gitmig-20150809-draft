@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.5 2005/10/01 18:40:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.2.ebuild,v 1.6 2005/10/01 18:57:13 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -38,7 +38,7 @@ RDEPEND=">=virtual/jre-1.4
 	 postgres? ( ~dev-java/jdbc3-postgresql-7.4.5 dev-db/postgresql )
 	 ssl? ( dev-libs/openssl dev-perl/IO-Socket-SSL )"
 
-# COMMENT: Why is the jdbc requirement set to 7.4.5 and now >=7.4.5?
+# COMMENT: Why is the jdbc requirement set to 7.4.5 and not >=7.4.5?
 
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.4"
@@ -135,11 +135,11 @@ src_compile() {
 
 	myconf="${myconf} --with-servletdir=${SERVLETDIR}"
 
-	if has_version '>=www-servers/tomcat-5.0.28-r4' ; then
+#	if has_version '>=www-servers/tomcat-5.0.28-r4' ; then
 		myconf="${myconf} --with-jsdkjar=${TOMCAT_DIR}/common/lib/servlet-api.jar"
-	else
-		myconf="${myconf} --with-jsdkjar=/usr/share/servletapi-2.4/lib/servlet-api.jar"
-	fi
+#	else
+#		myconf="${myconf} --with-jsdkjar=/usr/share/servletapi-2.4/lib/servlet-api.jar"
+#	fi
 
 	myconf="${myconf} --with-mailjar=/usr/share/sun-javamail-bin/lib/mail.jar"
 	myconf="${myconf} --with-activationjar=/usr/share/sun-jaf-bin/lib/activation.jar"
