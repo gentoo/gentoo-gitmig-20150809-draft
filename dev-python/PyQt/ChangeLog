@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.56 2005/09/26 15:26:47 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.57 2005/10/01 16:30:53 chrb Exp $
+
+  01 Oct 2005; Chris Bainbridge <chrb@gentoo.org> PyQt-3.15.ebuild:
+  Fix DEPEND to allow latest qscintilla.
 
 *PyQt-3.15 (26 Sep 2005)
 
