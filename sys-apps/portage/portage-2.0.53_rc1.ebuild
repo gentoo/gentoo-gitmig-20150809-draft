@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc1.ebuild,v 1.1 2005/10/01 12:01:32 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc1.ebuild,v 1.2 2005/10/01 13:13:04 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -29,11 +29,12 @@ src_compile() {
 	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} -o tbz2tool tbz2tool.c
 
-	if ! use ppc-macos; then
-		cd "${S}"/src/python-missingos
-		chmod +x setup.py
-		./setup.py build || die "Failed to build missingos module"
-	fi
+	#Removing until next rc as the compile script points to python-2.2
+	#if ! use ppc-macos; then
+	#	cd "${S}"/src/python-missingos
+	#	chmod +x setup.py
+	#	./setup.py build || die "Failed to build missingos module"
+	#fi
 
 	if use x86-fbsd; then
 		cd "${S}"/src/bsd-flags
@@ -56,10 +57,11 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	if ! use ppc-macos; then
-		cd "${S}"/src/python-missingos
-		./setup.py install --root ${D} || die "Failed to install missingos module"
-	fi
+	#Removing until next rc as the compile script points to python-2.2
+	#if ! use ppc-macos; then
+	#	cd "${S}"/src/python-missingos
+	#	./setup.py install --root ${D} || die "Failed to install missingos module"
+	#fi
 
 	if use x86-fbsd; then
 		cd "${S}"/src/bsd-flags
