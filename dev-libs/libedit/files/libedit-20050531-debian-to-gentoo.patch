@@ -111,12 +111,12 @@
 +.depend: vi.h emacs.h common.h fcns.h help.h help.c
 +	-mkdir .a .so
 +.c.o:
-+	${CC} ${CFLAGS} -c $< -o .a/$*
-+	${CC} ${CFLAGS} -fPIC -c $< -o .so/$*
-+libedit.a: ${OOBJS}
-+	${AR} -r $@ .a/*
-+libedit.so: ${OOBJS}
-+	${CC} --shared -o $@ .so/* ${LIBS}
++	$(CC) $(CFLAGS) -c $< -o .a/$*
++	$(CC) $(CFLAGS) -fPIC -c $< -o .so/$*
++libedit.a: $(OOBJS)
++	$(AR) -r $@ .a/*
++libedit.so: $(OOBJS)
++	$(CC) --shared -o $@ .so/* $(LIBS) -Wl,-soname -Wl,libedit.so
 --- netbsd-cvs/el.c
 +++ libedit-uNF/el.c
 @@ -439,8 +439,10 @@
