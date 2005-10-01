@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r1.ebuild,v 1.16 2005/10/01 08:24:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.1.ebuild,v 1.1 2005/10/01 08:24:41 axxo Exp $
 
 inherit java-pkg
 
@@ -8,15 +8,13 @@ DESCRIPTION="Jakarta components to manipulate core java classes"
 HOMEPAGE="http://jakarta.apache.org/commons/lang/"
 SRC_URI="mirror://apache/jakarta/commons/lang/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-core-1.4
+	>=dev-java/ant-core-1.6
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3"
-LICENSE="Apache-1.1"
-SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 ppc64"
+LICENSE="Apache-2.0"
+SLOT="2.1"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc jikes source"
-
-S="${WORKDIR}/${P}-src"
 
 src_compile() {
 	local antflags="jar"
