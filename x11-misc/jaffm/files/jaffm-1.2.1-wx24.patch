@@ -1,0 +1,23 @@
+diff -Nru jaffm-1.2.1.original/filetree.h jaffm-1.2.1/filetree.h
+--- jaffm-1.2.1.original/filetree.h	2005-10-01 14:46:08.000000000 +0200
++++ jaffm-1.2.1/filetree.h	2005-10-01 15:35:50.000000000 +0200
+@@ -20,6 +20,7 @@
+ public:
+ 	UFiletree(wxWindow *oParent, wxWindowID iID, wxTextCtrl *oLocation, MainWindow *oParentWindow, Settings *oNewSettings);
+ 	
++	wxTreeItemId UFiletree::GetParent(wxTreeItemId item) const { return GetItemParent(item); }
+ 	wxString getFullpath(wxTreeItemId iItem);
+ 	void selectPrevItem();
+ 	void selectNextItem();
+diff -Nru jaffm-1.2.1.original/mainwindow.cpp jaffm-1.2.1/mainwindow.cpp
+--- jaffm-1.2.1.original/mainwindow.cpp	2005-10-01 14:46:08.000000000 +0200
++++ jaffm-1.2.1/mainwindow.cpp	2005-10-01 14:46:44.000000000 +0200
+@@ -541,7 +541,7 @@
+ 	// the keycodes are hardcoded into USettings,
+ 	// so that we'll only have to change USettings
+ 	// and not MainWindow as well, when the time comes.
+-	std::string sKeySignal = oSettings->getKeySignal(oEvent.GetCode());
++	std::string sKeySignal = oSettings->getKeySignal(oEvent.GetKeyCode());
+ 	
+ 	if (sKeySignal == "ToggleMenubar")
+ 	{
