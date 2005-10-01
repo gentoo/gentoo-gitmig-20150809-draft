@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.13 2005/06/01 02:03:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.14 2005/10/01 00:40:16 vapier Exp $
+
+*libedit-20050930 (01 Oct 2005)
+
+  01 Oct 2005; Mike Frysinger <vapier@gentoo.org> +libedit-20050930.ebuild:
+  Update cvs snapshot.
 
 *libedit-20050531 (01 Jun 2005)
 
