@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r2.ebuild,v 1.9 2005/09/14 23:22:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r2.ebuild,v 1.10 2005/10/01 15:34:55 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -220,7 +220,7 @@ src_test() {
 
 	#skip all tests that fail during emerge but pass without emerge:
 	#(See bug# 67970)
-	local skip_tests="subprocess tcl urllib urllib2"
+	local skip_tests="global mimetools mmap strptime subprocess tcl time urllib urllib2 zipimport"
 
 	for test in ${skip_tests} ; do
 		mv ${S}/Lib/test/test_${test}.py ${T}
