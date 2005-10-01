@@ -1,7 +1,17 @@
-MD5 68969238ecde22a27b010488adfd490b rng-tools-1.0.ebuild 625
-MD5 12e31686a2b0a21090e681e84b43d47e rng-tools-1.1.ebuild 753
-MD5 c588d8b07a474e6b5db116f73fa4606e ChangeLog 1222
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2622d8b7d52a1b3370406d852235fbd0 ChangeLog 1329
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8a54d06ce57e0986d7ec3978f267795e files/rngd 1176
+MD5 68969238ecde22a27b010488adfd490b rng-tools-1.0.ebuild 625
+MD5 6d3c2f84ade60cdcf1e2e4c461af069b rng-tools-1.1.ebuild 765
 MD5 25da430ad0aab2964839df1b25d14d45 files/digest-rng-tools-1.0 64
 MD5 ff1ccf65909bb96c328b0c5b5261b3ee files/digest-rng-tools-1.1 64
+MD5 8a54d06ce57e0986d7ec3978f267795e files/rngd 1176
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPrFyKf2g/qXtneoRAjX8AJ9YpVDaYVuo87k532gXyznSLmWVLgCeIUhF
+QrV2a29X0gBM7DAdMA21gk0=
+=IE7T
+-----END PGP SIGNATURE-----
