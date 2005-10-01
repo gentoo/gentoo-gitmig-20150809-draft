@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.0.026.ebuild,v 1.1 2005/09/02 23:30:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-9.0.026.ebuild,v 1.2 2005/10/01 16:19:57 ribosome Exp $
 
 inherit rpm
 
@@ -98,8 +98,8 @@ src_install () {
 	# dodoc ${S}/lgpltext
 	dodoc ${S}/flicense
 	dodir ${instdir}
-	cp -a opt/intel/fc*/9.0/* ${D}/${instdir}
-	cp -a opt/intel/idb*/9.0/* ${D}/${instdir}
+	cp -pPR opt/intel/fc*/9.0/* ${D}/${instdir}
+	cp -pPR opt/intel/idb*/9.0/* ${D}/${instdir}
 	insinto /etc/env.d
 	doins ${FILESDIR}/${MMV}/05ifc || die
 }

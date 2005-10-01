@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.15 2005/05/26 22:50:39 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.16 2005/10/01 16:19:57 ribosome Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
@@ -66,7 +66,7 @@ src_compile() {
 src_install () {
 	dodoc lgpltext
 	dodoc flicense
-	cp -a opt ${D}
+	cp -pPR opt ${D}
 
 	# ifc enviroment
 	insinto /etc/env.d

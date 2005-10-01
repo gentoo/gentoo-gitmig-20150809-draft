@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.9 2005/05/26 22:50:39 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.10 2005/10/01 16:19:57 ribosome Exp $
 
 inherit rpm
 
@@ -70,7 +70,7 @@ src_compile() {
 
 src_install () {
 	dodoc flicense
-	cp -a opt ${D}
+	cp -pPR opt ${D}
 
 	# ifc enviroment
 	insinto /etc/env.d
