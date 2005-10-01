@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.95.ebuild,v 1.8 2005/09/10 15:31:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vamps/vamps-0.95.ebuild,v 1.9 2005/10/01 10:10:25 phreak Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Very fast requantisizing tool for backup DVDs"
-HOMEPAGE="http://www.heise.de/ct/ftp/04/01/094/"
-SRC_URI="ftp://ftp.heise.de/pub/ct/listings/0401-094.tgz"
+HOMEPAGE="http://sourceforge.net/projects/vamps/"
+SRC_URI="mirror://sourceforge/vamps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
