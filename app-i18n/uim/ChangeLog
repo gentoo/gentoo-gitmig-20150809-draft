@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.127 2005/10/01 15:30:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.128 2005/10/01 20:29:37 halcy0n Exp $
+
+  01 Oct 2005; Mark Loeser <halcy0n@gentoo.org> uim-0.5.0.1.ebuild:
+  Stable on x86; bug #107748
 
   01 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> uim-0.5.0.1.ebuild:
   Stable on hppa, ppc. See bug #107748.
