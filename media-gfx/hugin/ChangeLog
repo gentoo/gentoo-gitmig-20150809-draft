@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.4 2005/09/16 06:46:01 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.5 2005/10/01 20:11:13 halcy0n Exp $
+
+*hugin-0.5_rc2 (01 Oct 2005)
+*hugin-0.5_rc1-r1 (01 Oct 2005)
+
+  01 Oct 2005; Mark Loeser <halcy0n@gentoo.org> +hugin-0.5_rc1-r1.ebuild,
+  +hugin-0.5_rc2.ebuild:
+  Remove gtk useflag, since gtk2 is the only available toolkit.  Bump to _rc2.
+  bug #107776
 
   16 Sep 2005; Mark Loeser <halcy0n@gentoo.org> hugin-0.5_rc1.ebuild:
   Stable on x86
