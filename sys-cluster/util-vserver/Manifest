@@ -1,27 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7e09ae18b680cde9a65841825b5cca28 ChangeLog 5034
+MD5 cf98e51e15523dadaaead1853c9f9cd6 ChangeLog 5440
 MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
 MD5 720b866e5950871ab9c672f678bb5909 util-vserver-0.30.205-r1.ebuild 1926
-MD5 f29aa933d0444049e1d84a00b0402ffc util-vserver-0.30.207.ebuild 1962
-MD5 fff43e39c76c24ff96f4c61e78878f64 util-vserver-0.30.208.ebuild 1962
-MD5 f2e84fd637169889eae9b5b971e619a9 util-vserver-0.30.208-r1.ebuild 2241
-MD5 2f744c909dd827973119520be84cec84 util-vserver-0.30.208-r2.ebuild 2124
+MD5 aeb9bc64ced38b5a80d96f22bfff4bf2 util-vserver-0.30.208-r3.ebuild 2561
 MD5 b3c3f9e3c220a288d48c43ef109ddf2b files/vservers.confd 1560
 MD5 9f45fd567b0b82deb30b950b680d983a files/vservers.initd 1692
 MD5 09276c3e50cf5c0f8d30ef0422f05fd8 files/vprocunhide 570
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205-r1 74
-MD5 e9f396453e3aeb9f364489b7baec4238 files/digest-util-vserver-0.30.207 74
-MD5 a71c848ecb606f355054a9fb34bb6970 files/digest-util-vserver-0.30.208-r1 154
-MD5 9bef009652d5bbb4ee70d04bc7adb4ba files/digest-util-vserver-0.30.208-r2 157
-MD5 0fb2840471aeb47987109d913eb11413 files/digest-util-vserver-0.30.208 74
-MD5 697cd56c9853cbbaff1920b1d2e4deb9 files/0.30.208-r1/vservers.confd 1697
-MD5 31e730ae55387d6a9638f2107524630b files/0.30.208-r1/vservers.initd 1838
+MD5 14608df972e2a679a7c99744366dbbe7 files/digest-util-vserver-0.30.208-r3 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDM4ZMmPFBzbX68WERAnjZAJ9LTUzCEeGvSran7O4U5ELiCAH6WgCeMGgm
-aCXm9eAYpY5a5d/ZWOHa8MU=
-=cRQR
+iD8DBQFDPjxkmPFBzbX68WERAsPlAJ92BwDiD6KktX1EEJLyG4hik+GbywCeIclx
+UaLdJnp4Sp+F1fqBCC+00Pg=
+=48dG
 -----END PGP SIGNATURE-----
