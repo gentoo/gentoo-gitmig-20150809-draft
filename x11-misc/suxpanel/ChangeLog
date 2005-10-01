@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/suxpanel
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.1 2005/10/01 11:13:56 nelchael Exp $
+
+*suxpanel-0.4a (01 Oct 2005)
+
+  01 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/suxpanel-0.4a-Makefile.in.patch, +metadata.xml,
+  +suxpanel-0.4a.ebuild:
+  New package. Thanks to Przemyslaw Maciag. Bug 94009.
+
