@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 8b3f490eb3185eeb4b4cbe754e3aa2f9 ChangeLog 2900
 MD5 62648662d2305c044a9c92f90c624098 baselayout-vserver-1.11.13.ebuild 12918
 MD5 61e88d37b9d7a2ab226edbbfe3b94180 baselayout-vserver-1.12.0_pre8-r2.ebuild 12599
-MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
+MD5 e5ba31c20aa49371e645a8950abd1054 metadata.xml 231
 MD5 63f20868c3d2988043352911ae17ee6a baselayout-vserver-1.11.13-r1.ebuild 13180
 MD5 cd1ba3815d5592a3c65f185cc7585107 files/baselayout-vserver-1.12.0_pre8-init-timeout-fix.patch 339
 MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-vserver-1.12.0_pre8-whitelist-fixes.patch 1236
@@ -18,7 +18,7 @@ MD5 d1b600f26f783320972a6692720df0d3 files/digest-baselayout-vserver-1.12.0_pre8
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPUYGmPFBzbX68WERAqSGAKCYZAZX/BL4B7O71tFfUQgLmVNaRACfQokw
-mXQiRQ8Nm0IxCqYogQCgggU=
-=86h2
+iD8DBQFDPoslmPFBzbX68WERAr5GAJ9URWLGAjGDO5gotBM6Bh914u9/qwCePbrr
+Ai/Ed6CmWHBcUo2z4HOPXlY=
+=QZH9
 -----END PGP SIGNATURE-----
