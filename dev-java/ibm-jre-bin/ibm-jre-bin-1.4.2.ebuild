@@ -1,20 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.12 2005/09/02 12:26:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.13 2005/10/01 07:34:45 axxo Exp $
 
 inherit java
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="IBM Java Development Kit ${PV}"
 HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
-SRC_URI="ppc? ( mirror://gentoo/IBMJava2-JRE-142.ppc.tgz )
-	ppc64? ( mirror://gentoo/IBMJava2-JRE-142.ppc64.tgz )
-	x86? ( mirror://gentoo/IBMJava2-JRE-142.tgz )"
+SRC_URI="ppc? ( IBMJava2-JRE-142.ppc.tgz )
+	ppc64? ( IBMJava2-JRE-142.ppc64.tgz )
+	x86? ( IBMJava2-JRE-142.tgz )"
 PROVIDE="virtual/jre"
 IUSE="browserplugin mozilla"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86 ppc64 -*"
+RESTRICT=fetch
+
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5"
 RDEPEND=""
@@ -26,6 +28,15 @@ elif use ppc64; then
 else
 	S=${WORKDIR}/IBMJava2-142
 fi;
+
+pkg_nofetch() {
+	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
+	einfo "Please visit: ${HOMEPAGE}"
+	einfo "Download: ${A}"
+	einfo "Place the file in: ${DISTDIR}"
+	einfo "Rerun emerge"
+}
+
 
 src_compile() {
 	einfo "${PF} is a binary package, no compilation required"

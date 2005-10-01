@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f74438aa6d024686503f0ca8c7c91e15 ibm-jre-bin-1.4.2.ebuild 1792
-MD5 4caf5cdb58523f3ddec4236fbc1d8a3d ChangeLog 2821
-MD5 388c5e610c525c19f953233fec2b9478 ibm-jre-bin-1.4.1-r1.ebuild 1762
+MD5 6e43cfd9614b7622088739954bb8b649 ibm-jre-bin-1.4.2.ebuild 1979
+MD5 cb05ecaa7b0e702e478cd902d0ab753e ChangeLog 2941
 MD5 fb2a9b7b6110f3fc99c228068cac96b8 metadata.xml 284
-MD5 51a2a58cc1b1113444ccc5c545f2674e files/digest-ibm-jre-bin-1.4.1-r1 211
 MD5 8bd327361eb4826b3903c4358cc44a2b files/ibm-jre-bin-1.4.1 685
-MD5 2e39286179863d6cfd0686f84e4907f6 files/digest-ibm-jre-bin-1.4.2 211
 MD5 dbb65981559a5881a93e19de3dde0b7c files/ibm-jre-bin-1.4.2 681
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGEUFj5H05b2HAEkRAgdQAJ0THWTVqqaP8Rx7iQhmDOxzzOLykQCgoZsR
-mUyG9/QG1r/+2TP99uyPAl4=
-=VgJG
------END PGP SIGNATURE-----
+MD5 2e39286179863d6cfd0686f84e4907f6 files/digest-ibm-jre-bin-1.4.2 211
