@@ -1,18 +1,32 @@
---- libjbig/Makefile
-+++ libjbig/Makefile
-@@ -7,7 +7,10 @@
+--- libjbig/Makefile.orig	2005-10-01 16:18:37.000000000 +0200
++++ libjbig/Makefile	2005-10-01 16:36:16.000000000 +0200
+@@ -1,13 +1,24 @@
+ # Unix makefile for the JBIG-KIT library
+ # $Id: jbigkit-1.6-shared-lib.patch,v 1.2 2005/10/01 14:48:07 grobian Exp $
+ 
++include ../uname.mk
++
+ # Select an ANSI/ISO C compiler here, GNU gcc is recommended
+ CC = gcc
+ 
  # Options for the compiler: A high optimization level is suggested
  CFLAGS = -O -Wall -ansi -pedantic
  
+-all: libjbig.a tstcodec
 +AR = ar
 +RANLIB = ranlib
 +
--all: libjbig.a tstcodec
-+all: libjbig.a libjbig.so tstcodec
++ifeq ($(UNAME),Darwin)
++	SONAME = dylib
++else
++	SONAME = so
++endif
++
++all: libjbig.a libjbig.$(SONAME) tstcodec
  
  tstcodec: tstcodec.c jbig.c jbig.h jbig_tab.o
  	$(CC) $(CFLAGS) -o tstcodec -DTEST_CODEC tstcodec.c jbig.c \
-@@ -15,8 +18,15 @@
+@@ -15,8 +26,17 @@
  
  libjbig.a: jbig.o jbig_tab.o
  	rm -f libjbig.a
@@ -24,6 +38,8 @@
 +SOBJS = jbig.lo jbig_tab.lo
 +libjbig.so: $(SOBJS)
 +	$(CC) -shared $(LDFLAGS) -o $@ -Wl,-soname -Wl,$@ $(SOBJS)
++libjbig.dylib: $(SOBJS)
++	$(CC) -dynamic $(LDFLAGS) -o $@ -dynamiclib -install_name $@ $(SOBJS)
 +
 +%.lo: %.c jbig.h
 +	$(CC) $(CFLAGS) -fPIC -c $< -o $@

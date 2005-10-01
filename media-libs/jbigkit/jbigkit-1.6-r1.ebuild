@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.6-r1.ebuild,v 1.1 2005/09/30 02:16:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.6-r1.ebuild,v 1.2 2005/10/01 14:48:07 grobian Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents"
 HOMEPAGE="http://www.cl.cam.ac.uk/~mgk25/jbigkit/"
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-shared-lib.patch
+	echo "UNAME = `uname -s`" > uname.mk
 }
 
 src_install() {
@@ -31,7 +32,7 @@ src_install() {
 
 	insinto /usr/include
 	newins libjbig/jbig.h jbig.h || die "doins include"
-	dolib libjbig/libjbig.{a,so} || die "dolib"
+	dolib libjbig/libjbig{.a,$(get_libname)} || die "dolib"
 
 	dodoc ANNOUNCE CHANGES INSTALL TODO
 }
