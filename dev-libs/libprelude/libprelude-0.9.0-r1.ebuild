@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0.ebuild,v 1.1 2005/09/23 03:21:11 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0-r1.ebuild,v 1.1 2005/10/01 04:31:00 dragonheart Exp $
 
 inherit perl-module flag-o-matic
 
@@ -26,6 +26,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch ${FILESDIR}/${P}-perlpathfix.patch
 #    grep -qs 'include.*fts.h' prelude-adduser/prelude-adduser.c || die "remove lfs filter"
 	filter-lfs-flags
 }
@@ -35,6 +36,12 @@ src_compile() {
 		$(use_enable perl) \
 		$(use_enable python) \
 		|| die "econf failed"
+	#if use perl
+	#then
+#		make -C bindings perl/Makefile || die
+#		sed -i -e "s:^LD_RUN_PATH.*::" bindings/perl/Makefile
+#	fi
+										
 	emake -j1 || die "emake failed"
 	# -j1 may not be necessary in the future
 }

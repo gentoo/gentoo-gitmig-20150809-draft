@@ -1,0 +1,20 @@
+--- libprelude-0.9.0/bindings/perl/Makefile.PL.in.orig	2005-10-01 14:05:32.000000000 +1000
++++ libprelude-0.9.0/bindings/perl/Makefile.PL.in	2005-10-01 14:05:56.000000000 +1000
+@@ -6,7 +6,7 @@
+ 
+ my %attributs = (NAME => 'Prelude',
+ 		 INC => '-I@top_srcdir@ -I@top_builddir@/src/include -I@top_srcdir@/src/include -I@top_builddir@/src/libprelude-error @PTHREAD_CFLAGS@',
+-		 LIBS => ["-L@top_builddir@/src/.libs -lprelude", "-L$ENV{LIBDIR} -lprelude @libprelude_libs@ @LIBADD_DL@ @PTHREAD_LIBS@" ],
++		 LIBS => ["-lprelude", "-L$ENV{LIBDIR} -lprelude @libprelude_libs@ @LIBADD_DL@ @PTHREAD_LIBS@" ],
+ 		 LDDLFLAGS => "-L@top_builddir@/src/.libs @PTHREAD_CFLAGS@ $Config{lddlflags}");
+ 
+ if ( abs_path("@top_srcdir@") ne abs_path("@top_builddir@") ) {
+@@ -21,7 +21,7 @@
+ if ( -w $Config{"sitelib"} ) {
+     $attributs{"INSTALLDIRS"} = "site";
+ } else {
+-    $attributs{"PREFIX"} = "$ENV{DESTDIR}/@prefix@";
++    $attributs{"PREFIX"} = "@prefix@";
+ }
+ 
+ WriteMakefile(%attributs);

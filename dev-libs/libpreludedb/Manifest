@@ -1,4 +1,4 @@
-MD5 93c51450aaa25e66bfb8629731b55355 libpreludedb-0.9.0.ebuild 1539
-MD5 36a2eef1258b23cd2a8c4684454ded0f ChangeLog 2407
+MD5 5b3209f47a4e1bbc2f179a70b7cc7a53 libpreludedb-0.9.0-r1.ebuild 1628
 MD5 46a99e432c86964e317f92a77160a836 metadata.xml 256
-MD5 e3fc591d96386006ea662c8a8f5e41fc files/digest-libpreludedb-0.9.0 70
+MD5 694ca6484c32cb78ce33e4b6f643c4ea files/libpreludedb-0.9.0-perlpathfix.patch 894
+MD5 e3fc591d96386006ea662c8a8f5e41fc files/digest-libpreludedb-0.9.0-r1 70
