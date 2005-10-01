@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.8 2005/10/01 00:08:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.9 2005/10/01 00:36:19 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails
 
@@ -97,6 +97,7 @@ src_compile() {
 		&& myconf="${myconf} --with-kerberos" \
 		|| myconf="${myconf} --without-kerberos"
 
+	unset BC_ENV_ARGS
 	econf \
 		--with-hackdir=/usr/lib/misc/xscreensaver \
 		--with-configdir=/usr/share/xscreensaver/config \
