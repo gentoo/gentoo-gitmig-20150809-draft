@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.0.1_pre2-r1.ebuild,v 1.1 2005/09/11 19:37:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.0.1_pre2-r1.ebuild,v 1.2 2005/10/01 06:14:17 hollow Exp $
 
 ETYPE="sources"
 CKV="2.6.13"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Full sources including gentoo and Linux-VServer patchsets for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="http://dev.gentoo.org/~hollow/vserver"
-SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} http://dev.gentoo.org/~phreak/vserver-sources/${PVR}/${PF}.tar.bz2"
+SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${HOMEPAGE}/patches/${PF}.tar.bz2"
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/${PF}.tar.bz2"
