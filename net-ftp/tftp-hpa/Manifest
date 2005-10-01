@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 196ddaf2534e352a067294e2a03fdaff ChangeLog 4217
-MD5 3294d34a49f574703165fc6fe107e551 tftp-hpa-0.40.1.ebuild 1024
-MD5 0b942a8eed3507099acec26ffd91bd07 tftp-hpa-0.40-r1.ebuild 1019
+MD5 64b89cea2b9b468a4c4068b0ec5382a4 files/digest-tftp-hpa-0.40-r1 65
 MD5 ce9766cf2b5c3fcf0deab319ac68ad38 files/digest-tftp-hpa-0.40.1 67
 MD5 9e0867241bab97104a2d82fb8035725b files/in.tftpd.confd 145
 MD5 0deba94161c48e49f0e2ee02afde4940 files/in.tftpd.rc6 443
-MD5 64b89cea2b9b468a4c4068b0ec5382a4 files/digest-tftp-hpa-0.40-r1 65
+MD5 0b942a8eed3507099acec26ffd91bd07 tftp-hpa-0.40-r1.ebuild 1019
+MD5 e10e0ab53365fc79a9265d387e4a4d36 tftp-hpa-0.40.1.ebuild 1020
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPj62mdTrptrqvGERAtIaAKCcp/iGqefFQrj6EHdeWUDOrqNQ7QCfYdmB
-YMJVfnI5YE34o9Uu74qBkFM=
-=M0uO
+iD8DBQFDPoAFI1lqEGTUzyQRAhL8AJ9CPkYEpNKk5pSOhJIswqbvftkGKgCfZKlT
+t6NzrHvZcVHjZuC1BFWyL7c=
+=PKV0
 -----END PGP SIGNATURE-----
