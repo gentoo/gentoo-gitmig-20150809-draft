@@ -52,3 +52,7 @@ app-arch/cpio
 # libidn needs java-config.  This one is not yet ported, so as long as
 # thre is no solution for that it is masked
 net-dns/libidn
+
+# Ruby 1.8.2 compiles, but it contains a security bug.  We cannot
+# compile 1.8.3 because it needs autoconf 2.59 which we don't have
+dev-lang/ruby
