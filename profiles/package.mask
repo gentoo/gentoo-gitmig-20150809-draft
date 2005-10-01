@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4517 2005/10/01 23:39:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4518 2005/10/01 23:45:56 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (01 Oct 2005)
+# Masking because of bug 107240 (exporting PDF/Latex)
+=media-gfx/xfig-3.2.5_alpha5
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (01 Oct 2005)
 # Adding partial eclipse builds for jface
