@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
-MD5 c2dd539d6dec546f775eee53dd75062d ChangeLog 1045
-MD5 b88dc535e486af3367af1e337d369f38 eselect-opengl-1.0.2.ebuild 2692
-MD5 3035cd280e9553e83e75ead616119849 eselect-opengl-1.0.1.ebuild 2688
+MD5 3d4d51f1ddb876573310c35049cae441 ChangeLog 1190
 MD5 08e743c19133bdc32646eb0bc6953ff6 eselect-opengl-1.0.2-r1.ebuild 2754
-MD5 3a40d87eb84b0f56ac411645aec50f87 files/digest-eselect-opengl-1.0.2 183
-MD5 512a3c7402fe3eb842d443befb947fbc files/digest-eselect-opengl-1.0.1 183
 MD5 3a40d87eb84b0f56ac411645aec50f87 files/digest-eselect-opengl-1.0.2-r1 183
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJ5EyArHZZzCEUG0RArdrAJ9ZX1FKNGMTl2Vqv9KsVfEQtuxXPQCfQzrd
-0Y21/5eSlznQIBo7QB9v4Qg=
-=/wgI
------END PGP SIGNATURE-----
