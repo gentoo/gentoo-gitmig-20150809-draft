@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/ng-spice-rework
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.6 2005/05/17 18:20:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.7 2005/10/01 21:19:39 ribosome Exp $
+
+*ng-spice-rework-17 (01 Oct 2005)
+
+  01 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
+  +ng-spice-rework-17.ebuild:
+  New version (fixes bug #90616).
 
   17 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   ng-spice-rework-15.ebuild:
