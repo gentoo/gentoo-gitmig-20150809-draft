@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/open-xchange
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.3 2005/09/24 23:38:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/ChangeLog,v 1.4 2005/10/01 18:40:02 eradicator Exp $
+
+  01 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/open-xchange-0.8.1.2-reply.patch, open-xchange-0.8.1.2.ebuild:
+  Fixed upstream bug #762 with buggy reply.
 
   24 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
   +files/open-xchange-0.8.1.2-login.patch, open-xchange-0.8.1.2.ebuild:

@@ -1,0 +1,13 @@
+--- open-xchange-0.8.1-2.orig/src/com/openexchange/webmail/ComposeMessage.java	2005-08-26 08:08:58.000000000 -0700
++++ open-xchange-0.8.1-2/src/com/openexchange/webmail/ComposeMessage.java	2005-10-01 11:38:34.000000000 -0700
+@@ -408,8 +408,8 @@ public class ComposeMessage {
+ 		    
+ 		} else if (!wms.draft && tmp_wms.getFrom() != null) {
+ 		    String rht = no.getCode("reply_header_text");
+-		    rht = rht.replaceAll("${date}", tmp_wms.getSentDate());
+-		    rht = rht.replaceAll("${from}", WebmailTools.htmlFormat(tmp_wms.getFrom()));
++		    rht = rht.replaceAll("\\$\\{date\\}", tmp_wms.getSentDate());
++		    rht = rht.replaceAll("\\$\\{from\\}", WebmailTools.htmlFormat(tmp_wms.getFrom()));
+ 		    mailtext.append(rht + "\n\n");
+ 		    
+ 		}
