@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta1.ebuild,v 1.2 2005/10/01 11:34:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta1.ebuild,v 1.3 2005/10/01 11:44:23 eradicator Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Utility to configure the active toolchain compiler"
 HOMEPAGE="http://www.gentoo.org/"
@@ -30,6 +32,14 @@ pkg_postinst() {
 	rm -f ${ROOT}/etc/env.d/05gcc*
 
 	ewarn "You should source /etc/profile in your open shells."
+}
+
+src_compile() {
+	# gcc-4.0.1 and 4.0.2 don't make profile-manager right if using -ftracer
+	filter-flags -ftracer
+
+	econf
+	emake || die
 }
 
 src_install() {
