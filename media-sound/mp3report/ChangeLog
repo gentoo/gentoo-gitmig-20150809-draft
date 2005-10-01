@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/mp3report
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3report/ChangeLog,v 1.1 2005/10/01 22:05:14 chainsaw Exp $
+
+*mp3report-1.0.2 (01 Oct 2005)
+
+  01 Oct 2005; <chainsaw@gentoo.org> +metadata.xml, +mp3report-1.0.2.ebuild:
+  Initial commit. Ebuild based on the one by Rene Zbinden <rene.zbinden@solnet.ch> in bug #81172.
+
