@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2004.11.16-r1.ebuild,v 1.4 2005/10/01 21:54:30 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2005.06.13-r1.ebuild,v 1.1 2005/10/01 21:54:30 ribosome Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 SLOT="0"
 IUSE="ginac qhull"
 
-DEPEND=">=sci-mathematics/octave-2.1.62
+DEPEND="=sci-mathematics/octave-2.1.69*
 		>=sys-apps/sed-4
-		sys-libs/libtermcap-compat
+		sys-libs/ncurses
 		!amd64? ( ginac? ( sci-mathematics/ginac ) )
 		qhull? ( >=media-libs/qhull-3.1-r1 )"
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-mex.patch
+	epatch ${FILESDIR}/${PN}-randmtzig.patch
 
 	# make it compile when X isn't installed. The source file there really
 	# doesn't need X at all.
@@ -31,7 +32,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
+	econf --enable-shared || die "econf failed"
 
 	# this must be done before the *PATH variables are changed
 	cd extra/graceplot && make grace_octave_path.m
