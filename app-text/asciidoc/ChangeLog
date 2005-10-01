@@ -1,6 +1,10 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.17 2005/09/28 08:19:12 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.18 2005/10/01 10:25:57 grobian Exp $
+
+  01 Oct 2005; Fabian Groffen <grobian@gentoo.org> asciidoc-7.0.1-r1.ebuild:
+  Marking ~ppc-macos (bug #107530)
+  Fixing a dead symlinks issue which is fatal on OSX.
 
   28 Sep 2005; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
   asciidoc-7.0.1-r1.ebuild:
