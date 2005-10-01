@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 56b3dc7aac2ea984c231d70c9df31f53 ChangeLog 5228
 MD5 56122f37e35189189d93ce277d960894 diffstat-1.38.ebuild 774
 MD5 fec2e0c910482a245b19ec5115690fbc diffstat-1.39.ebuild 785
@@ -7,3 +10,10 @@ MD5 aaf2c4b7f099958647cad46682bb37eb files/diffstat-1.37-hard-locale.patch 578
 MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
 MD5 666ce000416b4abc08973a81cf0cf6ed files/digest-diffstat-1.39 61
 MD5 aa992e69db1a27154ec66a30ee026c3b files/digest-diffstat-1.40 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDPo8DwUpWvClEHQoRAvJqAJ9XPA21uqF4ffOQOUsMk2CQCV51MACfVOvk
+bXepBlyIL7O45vg47cT+52g=
+=o/jY
+-----END PGP SIGNATURE-----
