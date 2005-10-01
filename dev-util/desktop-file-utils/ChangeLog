@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.32 2005/09/11 02:00:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.33 2005/10/01 12:26:22 metalgod Exp $
+
+  01 Oct 2005; Luis Medinas <metalgod@gentoo.org>
+  desktop-file-utils-0.10.ebuild:
+  Marked Stable on amd64.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   desktop-file-utils-0.10.ebuild:
