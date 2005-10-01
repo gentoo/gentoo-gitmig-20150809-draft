@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/shish-0.7_pre3.ebuild,v 1.1 2005/09/29 05:58:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/shish-0.7_pre3.ebuild,v 1.2 2005/10/01 13:44:42 hollow Exp $
 
 inherit toolchain-funcs
 
@@ -20,11 +20,12 @@ DEPEND="diet? ( dev-libs/dietlibc )"
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	use diet && export CC="diet $(tc-getCC) -nostdinc"
+}
+
 src_compile() {
-	useq diet && export DIET="diet"
-	econf \
-		$(use_enable debug) \
-		|| die "econf failed"
+	econf $(use_enable debug) || die "econf failed"
 
 	# parallel make is b0rked
 	emake -j1 || die "emake failed"
@@ -38,8 +39,6 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Updating /etc/shells"
-	{ grep -v "^/bin/shish$" /etc/shells;
-	echo "/bin/shish"
-	} > ${T}/shells
+	( grep -v "^/bin/shish$" /etc/shells; echo "/bin/shish" ) > ${T}/shells
 	mv -f ${T}/shells /etc/shells
 }

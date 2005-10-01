@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
-MD5 a5d7e6c47b19aefc9966cd4c202a7508 shish-0.7_pre3.ebuild 994
+MD5 82ef02ac7150d7ed1b6da838df50746c shish-0.7_pre3.ebuild 1020
 MD5 9fe91ed4c9f254b7c15bf03482b8faff ChangeLog 371
 MD5 e757d2d1cac83cfb7cb0ffe0c49ef5f4 files/digest-shish-0.7_pre3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDO4MWmPFBzbX68WERAhCdAKCK97BVJETyS7KnXVGKnEZj8pRFUgCffiHA
-EIAPOJZqErx1xIkPGjEcArk=
-=hmJ8
+iD8DBQFDPpNQmPFBzbX68WERAj1tAJ4pMBNy8PJNg9+GI7xvdKhVnr5cvwCeN//k
+pBQQkdZh7GyqJH+rQl2w5Ng=
+=tCkg
 -----END PGP SIGNATURE-----
