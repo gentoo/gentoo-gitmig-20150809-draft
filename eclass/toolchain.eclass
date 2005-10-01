@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.197 2005/09/25 12:30:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.198 2005/10/01 21:27:15 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -725,13 +725,13 @@ add_profile_eselect_conf() {
 		echo "[${abi}-${specs}]" >> ${compiler_config_file}
 		var="CTARGET_${abi}"
 		if [[ -n ${!var} ]] ; then
-			echo "	chost=${!var}" >> ${compiler_config_file}
+			echo "	ctarget=${!var}" >> ${compiler_config_file}
 		else
 			var="CHOST_${abi}"
 			if [[ -n ${!var} ]] ; then
-				echo "	chost=${!var}" >> ${compiler_config_file}
+				echo "	ctarget=${!var}" >> ${compiler_config_file}
 			else
-				echo "	chost=${CTARGET}" >> ${compiler_config_file}
+				echo "	ctarget=${CTARGET}" >> ${compiler_config_file}
 			fi
 		fi
 	fi
