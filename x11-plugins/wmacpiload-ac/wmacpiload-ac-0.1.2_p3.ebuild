@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/wmacpiload-ac-0.1.2_p3.ebuild,v 1.3 2005/07/25 19:07:09 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/wmacpiload-ac-0.1.2_p3.ebuild,v 1.4 2005/10/01 23:36:11 morfic Exp $
 
 MY_P="wmacpiload-0.1.2-ac3"
 
@@ -16,7 +16,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 S=${WORKDIR}/${MY_P}
 

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56593c00f62db6369dd262eaf1c60076 ChangeLog 617
+MD5 40ec515b43e9deb5beace50f337eabfc ChangeLog 731
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 d9478ba4a5df2e086975658e756b38aa wmacpiload-ac-0.1.2_p3.ebuild 891
+MD5 87532001d1510b1e1df3eb6971733409 wmacpiload-ac-0.1.2_p3.ebuild 898
 MD5 ae494fc4b8b5d8aecd2bfc5da1063fff files/digest-wmacpiload-ac-0.1.2_p3 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5TiHl5AvwDPiUowRAj8+AJ918avzmZL019U0sd9clh86MyubVACePBcb
-4bZiDJoJZRUhVEAxuxRn+t8=
-=l6VL
------END PGP SIGNATURE-----
