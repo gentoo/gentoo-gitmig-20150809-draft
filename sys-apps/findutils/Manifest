@@ -6,8 +6,8 @@ MD5 7adff12b202c11921f01e3a5cac2ab92 findutils-4.2.23.ebuild 1627
 MD5 e63b61d5721b385b5ebde50fa9a285d3 findutils-4.2.18.ebuild 2087
 MD5 77afdd0a4bd1f36df4bfe6a006595d7f findutils-4.2.20.ebuild 1891
 MD5 1f7197b778d47c773d19430261c84f49 metadata.xml 261
-MD5 0a3397f9e31b76d5f8dda98449150532 ChangeLog 7568
-MD5 c90ead9a405b5e60689765dbab03af4e findutils-4.2.24.ebuild 1685
+MD5 ab508db148816c57912242a986d9c5b0 ChangeLog 7690
+MD5 b6a7d70d17ac0b2f629de8655eea5224 findutils-4.2.24.ebuild 1710
 MD5 62f86a597482354916befe2e1f084b8d files/findutils-4.2.18-selinux.diff 15327
 MD5 6d52de5b305608054e88b17c5b282048 files/findutils-4.2.20-man.patch 331
 MD5 2b5e0b42a11ea009340805d461a6ecc5 files/digest-findutils-4.2.24 69
@@ -23,7 +23,7 @@ MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDOzAdLLFUmVNQ7rkRAqYAAJ9wo/AVOzVUPkCBXGA2mEeG0+w4hgCfX/8q
-WZUyu8QMuiRXurmwtHVDdQY=
-=drdG
+iD8DBQFDPwgyLLFUmVNQ7rkRAp7AAKCwzkx0Kknb7KC/JHRB9UgDhX3OQACffqqu
+z7Cf5OXY+rkT28d9+kVgJdg=
+=LyVd
 -----END PGP SIGNATURE-----
