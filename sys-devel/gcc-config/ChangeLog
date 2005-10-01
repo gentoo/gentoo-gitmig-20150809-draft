@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.107 2005/09/18 04:51:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.108 2005/10/01 03:28:48 eradicator Exp $
+
+*gcc-config-2.0.0_beta1 (01 Oct 2005)
+
+  01 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +gcc-config-2.0.0_beta1.ebuild:
+  Added gcc-config wrapper for beta version of eselect-compiler. It still
+  needs to be cleaned up a bit, but it's functional, so putting it into
+  portage (package.mask still of course).
 
   18 Sep 2005; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.3.12:
   Add support for spaces in make.conf settings #105855.
