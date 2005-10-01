@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0-r1.ebuild,v 1.1 2005/10/01 04:31:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0-r1.ebuild,v 1.2 2005/10/01 12:23:27 swegener Exp $
 
 inherit perl-module flag-o-matic
 
@@ -41,7 +41,7 @@ src_compile() {
 #		make -C bindings perl/Makefile || die
 #		sed -i -e "s:^LD_RUN_PATH.*::" bindings/perl/Makefile
 #	fi
-										
+
 	emake -j1 || die "emake failed"
 	# -j1 may not be necessary in the future
 }
