@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.1 2005/09/30 00:55:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.2 2005/10/01 13:48:49 kloeri Exp $
 
 inherit versionator
 
@@ -39,6 +39,6 @@ src_install () {
 	dodir /var/lib/omniEvents
 	keepdir /var/lib/omniEvents
 
-	install -D -m0755 ${FILESDIR}/${PN}-init ${D}/etc/init.d/${PN}
-	install -D -m0644 ${FILESDIR}/${PN}-conf ${D}/etc/conf.d/${PN}
+	newinitd "${FILESDIR}"/${PN}-init ${PN}
+	newinitd "${FILESDIR}"/${PN}-conf ${PN}
 }
