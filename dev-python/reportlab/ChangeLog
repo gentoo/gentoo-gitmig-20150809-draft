@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.21 2005/09/10 23:45:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.22 2005/10/01 17:59:20 fserb Exp $
+
+  01 Oct 2005; Fernando Serboncini <fserb@gentoo.org> reportlab-1.20.ebuild:
+  Removed tar hack on src_install(). Closes #101936.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> reportlab-1.20.ebuild:
   Mark 1.20 stable on alpha

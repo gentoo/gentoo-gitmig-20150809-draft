@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.20.ebuild,v 1.5 2005/09/10 23:45:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.20.ebuild,v 1.6 2005/10/01 17:59:20 fserb Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -33,11 +33,6 @@ src_unpack() {
 src_install() {
 	python_version
 	distutils_src_install
-
-	# crude hack to fix data files in the right dir
-	cd ${D}/usr/lib/python${PYVER}
-	tar -cv reportlab | tar -C ${D}/usr/lib/python${PYVER}/site-packages -x
-	rm -rf ${D}/usr/lib/python${PYVER}/reportlab
 
 	# docs
 	cd ${S}
