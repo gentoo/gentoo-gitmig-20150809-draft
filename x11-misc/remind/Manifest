@@ -1,16 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da2636dbd7e085236b52a4f1f9998873 ChangeLog 1229
+MD5 680777d7abd7bf19450a4b9351889fa4 remind-03.00.23-r1.ebuild 732
+MD5 e8328bfbb182a3af016379062cdf7716 remind-03.00.23-r2.ebuild 994
+MD5 45fc24bcff04005f33e4d68201ef312e remind-03.00.22.ebuild 581
+MD5 65fd1692f2bc73c1a8954e1133d8d1dd ChangeLog 1561
+MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
 MD5 375c9caf7bde9ce5f35f13bdeda4ca17 files/digest-remind-03.00.22 67
 MD5 e303deb68b9bb5fad91b5fce2901bf56 files/digest-remind-03.00.23-r1 67
-MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
-MD5 45fc24bcff04005f33e4d68201ef312e remind-03.00.22.ebuild 581
-MD5 680777d7abd7bf19450a4b9351889fa4 remind-03.00.23-r1.ebuild 732
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6h7WI1lqEGTUzyQRAqKYAJsG/OSSWOd6o0T/squk/qAzSv4FmQCfe/Th
-sy7casZ8dHRx7GVnAas3jVY=
-=WIae
------END PGP SIGNATURE-----
+MD5 e303deb68b9bb5fad91b5fce2901bf56 files/digest-remind-03.00.23-r2 67
+MD5 f19644c3bde4fb67f73f8a1f92127aa8 files/3.00.23/04-rem-cmd.patch 348
+MD5 9b1b590133c6c87a65a2c529b8e8db15 files/3.00.23/03-tkremind-no-newlines.patch 1013
+MD5 7c5af810d26f0e9c10a5476a82c91fe1 files/3.00.23/01-optional-filename.patch 4493
+MD5 d6c37960f3daba2f5aa9076d0eca4098 files/3.00.23/03-broken-postscript.patch 638

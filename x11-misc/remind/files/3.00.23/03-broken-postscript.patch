@@ -1,0 +1,17 @@
+Do not print closing bracket if a "remind -p" entry ends in space
+characters. It is already printed as a part of the invoked finish:
+label, which results in an additional bracket that corrupts the
+generated PostScript.
+				René van Bevern <rvb@pro-linux.de>
+
+diff -Nur remind-03.00.23/src/rem2ps.c remind-03.00.23.new/src/rem2ps.c
+--- remind-03.00.23/src/rem2ps.c	2005-07-29 12:24:53.000000000 +0200
++++ remind-03.00.23.new/src/rem2ps.c	2005-07-29 12:25:05.000000000 +0200
+@@ -643,7 +643,6 @@
+ 	    PutChar(')');
+ 	    while(isspace((unsigned char)*s)) s++;
+ 	    if (!*s) {
+-		printf("]\n");
+ 		goto finish;
+ 	    }
+ 	    PutChar('(');

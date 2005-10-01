@@ -1,0 +1,30 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 03-tkremind-no-newlines.dpatch.dpatch by Rene van Bevern <rvb@pro-linux.de>
+##
+## DP: Following patch prevents tkremind from destroying your reminder files
+## DP: with newlines if entered into the body field of the "Add Reminder"
+## DP: dialog.
+
+@DPATCH@
+--- remind-03.00.23.orig/scripts/tkremind	2005-04-19 15:08:46.000000000 +0200
++++ remind-03.00.23/scripts/tkremind	2005-04-28 10:57:08.000000000 +0200
+@@ -1240,7 +1240,8 @@
+ 		lappend ans "-global-$winstem" [eval set $winstem]
+ 	    }
+ 	    "Entry" {
+-		lappend ans "-entry-$winstem" [$win get]
++	    	# Do not put newlines in the reminder files
++		lappend ans "-entry-$winstem" [string map -nocase {"\n" " "} [$win get]]
+ 	    }
+ 	}
+     }
+@@ -1519,7 +1520,8 @@
+ 	regsub -- {^-stdin-\([0-9]*\): } $err {} err
+ 	error "Error from Remind: $err"
+     }
+-    append rem " MSG $body"
++    # Do not include newline characters after MSG
++    append rem " MSG " [string map -nocase {"\n" " "} $body]
+     return $rem
+ }
+ 
