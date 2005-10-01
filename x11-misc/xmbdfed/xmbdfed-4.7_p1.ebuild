@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.5 2004/09/29 08:12:47 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.7_p1.ebuild,v 1.6 2005/10/01 08:52:09 nelchael Exp $
 
 inherit eutils
 MY_P=${P/_p*}
@@ -32,8 +32,8 @@ src_compile() {
 	# specifying the correct options for Gentoo.
 
 	local flags=""
-	local incs="-I/usr/X11R6/include"
-	local libs="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
+	local incs="`motif-config --cflags`"
+	local libs="`motif-config --libs` -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
 
 	if use truetype ; then
 		flags="FTYPE_DEFS=\"-DHAVE_FREETYPE\""
