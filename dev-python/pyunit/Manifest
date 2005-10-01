@@ -1,4 +1,14 @@
-MD5 c1a9dedf36b296e1e5e145e51da581c8 ChangeLog 699
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 a6a862b35cf7ab42a66465627d19ec89 pyunit-1.4.1.ebuild 586
+MD5 c93ae9414d37ed3703b39ac69da2a31d pyunit-1.4.1.ebuild 593
+MD5 0e3f269a47abf4ece693fe11e85be72b ChangeLog 823
 MD5 351f50b78d59c43f43258940b6b03cb1 files/digest-pyunit-1.4.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDPuFrwUpWvClEHQoRAqsTAJ4/TBBCNu3ILcHT2z1I26neg/KsdACfVIPK
+v3OYezdXdR0jTiWkvjkCwtQ=
+=klJb
+-----END PGP SIGNATURE-----
