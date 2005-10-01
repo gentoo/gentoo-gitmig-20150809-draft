@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gwhere/gwhere-0.1.6.ebuild,v 1.2 2005/07/07 11:55:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gwhere/gwhere-0.1.6-r1.ebuild,v 1.1 2005/10/01 15:25:09 nelchael Exp $
 
 DESCRIPTION="Removable media cataloger made with GTK+"
 HOMEPAGE="http://www.gwhere.org/"
@@ -10,15 +10,13 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="gtk gtk2 nls"
+IUSE="nls"
 
-DEPEND="!gtk2? ( >=x11-libs/gtk+-1.2 )
-	gtk2? ( >=x11-libs/gtk+-2 )
+DEPEND=">=x11-libs/gtk+-2
 		nls? ( sys-devel/gettext )"
 
 src_compile() {
-	econf `use_enable nls` \
-		      `use_enable gtk gtk20` || die
+	econf `use_enable nls` --enable-gtk20 || die
 	emake || die "emake failed"
 }
 
