@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.7 2005/09/17 00:38:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.8 2005/10/01 23:43:25 weeve Exp $
+
+  01 Oct 2005; Jason Wever <weeve@gentoo.org> lsscsi-0.14.ebuild:
+  Added ~sparc keyword.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.14.ebuild,v 1.4 2005/09/16 11:31:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.14.ebuild,v 1.5 2005/10/01 23:43:25 weeve Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.torque.net/scsi/lsscsi-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ppc x86"
+KEYWORDS="alpha amd64 hppa ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=sys-fs/sysfsutils-1.2.0"
