@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 5babe50ca95b86a32bbe8be72ff78f8f lcdtest-1.01.ebuild 674
+MD5 113caaf7358e23cd7d146355f922a448 ChangeLog 498
 MD5 eeee4743c4e463eeed3a7a4c15380e0d metadata.xml 254
-MD5 21939c175ff3c3c4c4130fe324d747aa ChangeLog 413
-MD5 0c1a7553e0d4f7631219a6bd80572688 lcdtest-1.01.ebuild 672
 MD5 9709ad40b41ff6bbf92be9f01f464e30 files/digest-lcdtest-1.01 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPxKHp5vW4rUFj5oRAp0EAJ4hbvaWeB0ywaiFyjtLQv8FkOf38wCgvSUk
-jiWCg9USxCjcxLUb0+0ZbkI=
-=ugBv
+iD8DBQFDPxWCQlM6RnzZP+IRAgtSAJwPGEGiiRFaHhKEbfgUd8jUAiUJlQCdESE0
+byTtQGWNT5kBdZI+FSo82Sc=
+=h+2i
 -----END PGP SIGNATURE-----
