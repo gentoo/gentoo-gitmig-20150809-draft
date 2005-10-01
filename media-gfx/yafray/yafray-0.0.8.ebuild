@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.8.ebuild,v 1.2 2005/09/04 14:02:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.8.ebuild,v 1.3 2005/10/01 10:12:02 blubb Exp $
 
 inherit eutils python multilib
 
@@ -28,9 +28,7 @@ src_unpack() {
 	libtoolize --copy --force
 	epatch ${FILESDIR}/${P}-scons.patch
 	epatch ${FILESDIR}/${P}-64bit.patch
-	if [[ $(get_libdir) == "lib64" ]] ; then
-		epatch ${FILESDIR}/${P}-multilib.patch
-	fi
+	epatch ${FILESDIR}/${P}-libdir.patch
 	# Dirty hack for a dirty buildsystem.
 	sed -i -e "s:-O3:${CXXFLAGS} -fsigned-char:g" *-settings.py
 }
@@ -40,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	scons prefix="/usr" destdir="${D}" install || die
+	scons prefix="/usr" destdir="${D}" libdir="/$(get_libdir)" install || die
 
 	find ${D} -name .sconsign -exec rm \{\} \;
 	dodoc AUTHORS 		|| die "dodoc failed"

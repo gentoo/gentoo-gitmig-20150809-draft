@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.22 2005/09/17 03:11:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.23 2005/10/01 10:12:02 blubb Exp $
+
+  01 Oct 2005; Simon Stelling <blubb@gentoo.org>
+  +files/yafray-0.0.8-libdir.patch, -files/yafray-0.0.8-multilib.patch,
+  yafray-0.0.8.ebuild:
+  replace the old multilib-patch with a more elegant one, thanks to Ben
+  Skeggs; bug 103431
 
   17 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
   -files/yafray-gcc34-fix.gz, yafray-0.0.6.ebuild:
