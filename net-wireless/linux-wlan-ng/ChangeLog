@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.49 2005/09/24 09:10:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.50 2005/10/01 14:50:58 betelgeuse Exp $
+
+*linux-wlan-ng-0.2.2 (01 Oct 2005)
+
+  01 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  +files/linux-wlan-ng-gentoo-init, +linux-wlan-ng-0.2.2.ebuild:
+  Version bump using the new splitted linux-wlan-ng ebuilds.
 
   24 Sep 2005; Simon Stelling <blubb@gentoo.org>
   linux-wlan-ng-0.2.1_pre23.ebuild:

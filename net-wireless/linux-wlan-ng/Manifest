@@ -1,9 +1,22 @@
-MD5 e91691a7c81c2bb8cca55526d7b0b003 ChangeLog 10256
-MD5 e67cea130653fc787a96bb81b00a6733 linux-wlan-ng-0.2.0-r3.ebuild 4752
-MD5 1d27e6e859600c0c1a310b3dbd11c274 linux-wlan-ng-0.2.1_pre20.ebuild 4254
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d18b5a83fee6b963bc534d52f0d1dbf2 linux-wlan-ng-0.2.1_pre23.ebuild 3722
+MD5 1d27e6e859600c0c1a310b3dbd11c274 linux-wlan-ng-0.2.1_pre20.ebuild 4254
+MD5 eb2e9c7af8d1bb31d5789d205ba3dd6b linux-wlan-ng-0.2.2.ebuild 3865
+MD5 e67cea130653fc787a96bb81b00a6733 linux-wlan-ng-0.2.0-r3.ebuild 4752
+MD5 2e5133ed8567ce85ec9b5b637aea3444 ChangeLog 10477
 MD5 6ad1de0749fc3b426ff7f4f422d2484c metadata.xml 254
-MD5 296af9529b8492a5a12f1ba06d2a71de files/digest-linux-wlan-ng-0.2.0-r3 511
 MD5 44bd75f98be313622f43eb03b494e125 files/digest-linux-wlan-ng-0.2.1_pre20 517
 MD5 b11e06135cc8790abe78af54fa4fe95d files/digest-linux-wlan-ng-0.2.1_pre23 147
+MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-0.2.2 72
+MD5 7fd052d0b20448622b9d05bd474f509b files/linux-wlan-ng-gentoo-init 1934
+MD5 296af9529b8492a5a12f1ba06d2a71de files/digest-linux-wlan-ng-0.2.0-r3 511
 MD5 e2ca4c6c0bc3d8daef9ea0f822b88dca files/linux-wlan-2.6.10-fix.diff 3670
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDPqKBQiJ/wx066S4RAmorAJ48AI+aO/hnEciCCg0vChEBq7dDKQCfR1ln
+lWFGcaDcGD/S8oDqaGblQz4=
+=2t5K
+-----END PGP SIGNATURE-----
