@@ -15,12 +15,12 @@ MD5 e57748276505fab96a2ab4e64de45366 metadata.xml 220
 MD5 8acf56587de4c66daf1cfed2cc8be000 portage-2.0.51.19.ebuild 13221
 MD5 a4921b091c6057013549c33f933bfd40 portage-2.0.51.22-r2.ebuild 5708
 MD5 d84a1f0f9b6dad85ff874923647de011 portage-2.0.52-r1.ebuild 3640
-MD5 cf8e91b8d75b20761e495ae9923be783 portage-2.0.53_rc1.ebuild 3731
+MD5 e631056f084ca2e3c8b56aaa1fa99885 portage-2.0.53_rc1.ebuild 3731
 MD5 7c109f64a1b96c1134ac490d0233fa3b portage-2.1.0_alpha20050718.ebuild 2566
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPouNxvWNPsk/ZP4RAhrIAJ9kN9yqI+q0BV/lopIQ7zkdIwCy5gCfYgc2
-o/IfbQsrDeNSxdwFBNA2dN8=
-=5ruY
+iD8DBQFDPrYqxvWNPsk/ZP4RAmCgAKCQMes0TTDeQel8NzVY9E8HjtoRdACgsLNP
+6YQNHwDVbmUBQ8LD2oPUNWY=
+=yl2P
 -----END PGP SIGNATURE-----
