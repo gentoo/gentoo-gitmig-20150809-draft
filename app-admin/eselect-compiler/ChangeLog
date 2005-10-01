@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-compiler
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.1 2005/10/01 03:25:44 eradicator Exp $
+
+*eselect-compiler-2.0.0_beta1 (01 Oct 2005)
+
+  01 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +eselect-compiler-2.0.0_beta1.ebuild:
+  Initial version of replacement to gcc-config. It has much better support for
+  multilib, cross compilers, and per-user configurations.
+
