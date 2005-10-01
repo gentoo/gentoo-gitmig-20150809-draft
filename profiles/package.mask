@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4512 2005/10/01 06:12:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4513 2005/10/01 11:55:16 jstubbs Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jason Stubbs <jstubbs@gentoo.org> (01 Oct 2005)
+# Masked for initial testing.
+=sys-apps/portage-2.0.53*
 
 # Ciaran McCreesh <ciaranm@gentoo.org> (29 Sep 2005)
 # Getting more and more broken with each release... Pending removal.
