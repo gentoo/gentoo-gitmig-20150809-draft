@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha03-r2.ebuild,v 1.1 2005/08/22 04:27:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha03-r2.ebuild,v 1.2 2005/10/01 16:47:12 metalgod Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -60,10 +60,14 @@ src_unpack() {
 src_compile() {
 	gnuconfig_update
 
-	use unicode && append-flags "-finput-charset=ISO-8859-1 -fexec-charset=UTF-8"
-	if use x86;
-		then
-		strip-flags
+	if use unicode; then
+		local flags="$(test_flag -finput-charset=ISO-8859-1 -fexec-charset=UTF-8)"
+		if [[ -n ${flags} ]]; then
+			append-flags ${flags}
+		else
+			ewarn "Your compiler does not support the options required to build"
+			ewarn "cdrtools with unicode in USE. unicode flag will be ignored."
+		fi
 	fi
 	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
