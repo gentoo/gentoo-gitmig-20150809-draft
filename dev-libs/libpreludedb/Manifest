@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 199bf7a0c02ce5f8759c78a5e606b501 libpreludedb-0.9.0-r1.ebuild 1632
 MD5 46a99e432c86964e317f92a77160a836 metadata.xml 256
 MD5 f4e0132e0776ce696e34b8aecbec6a3a ChangeLog 2663
 MD5 694ca6484c32cb78ce33e4b6f643c4ea files/libpreludedb-0.9.0-perlpathfix.patch 894
 MD5 e3fc591d96386006ea662c8a8f5e41fc files/digest-libpreludedb-0.9.0-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDPhA+mdTrptrqvGERAoCiAJwL0rz9h3fBVfoz8fYQpcE4mtOSFQCeNhkO
+1YIQvQCejujtuvF9Xly1hhk=
+=/xIx
+-----END PGP SIGNATURE-----
