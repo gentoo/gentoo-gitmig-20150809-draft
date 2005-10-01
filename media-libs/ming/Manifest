@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b018d03fbc156d6f2adf318a10bae6d ChangeLog 1998
 MD5 9afc1d607998764113e5f948b758ea34 ming-0.2a.ebuild 1181
 MD5 839b93943f7ed7316fd838e6f18829d4 ming-0.2a-r1.ebuild 2065
-MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a 58
+MD5 63323198d952c3a28471de656a28292a ChangeLog 2122
+MD5 4b743cb606d3d6b135a8eb5b041f0f6e ming-0.2a-r2.ebuild 2228
 MD5 0d2b63f032d402518c9384d5db4404b1 files/ming-0.2a-fpic.patch 1814
 MD5 e086353fa9ba2b2e6b9ca9c87b04a367 files/ming-0.2a-gentoo.diff 369
+MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a 58
 MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a-r1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCD11dArHZZzCEUG0RAumaAJ9T0Z/m2Sra0gM6aEaVYgcUXCaN4QCffSVK
-/zo9NaN8lkpimPipS5W6qG8=
-=vUfr
------END PGP SIGNATURE-----
+MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a-r2 58
