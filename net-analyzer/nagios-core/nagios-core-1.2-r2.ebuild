@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.13 2005/07/09 18:38:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.14 2005/10/01 18:14:11 soulse Exp $
 
 inherit eutils
 
@@ -159,7 +159,7 @@ src_install() {
 
 	if use !noweb; then
 		if use apache2; then
-			insinto /etc/apache2/conf/modules.d
+			insinto /etc/apache2/modules.d
 			doins ${FILESDIR}/99_nagios.conf
 		else
 			insinto /etc/apache/conf/addon-modules
