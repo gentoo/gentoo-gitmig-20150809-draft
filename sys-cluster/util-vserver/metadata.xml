@@ -6,6 +6,11 @@
 		<email>vserver-devs@gentoo.org</email>
 	</maintainer>
 	<longdescription>
-		util-vserver provides tools an mechanisms for vserver-patched kernels.
+		util-vserver is a Linux virtual server utility framework,
+		allowing an administrator to set up multiple, isolated
+		virtual servers. It can be used to run various services
+		securely separated, without requiring special configuration.
+		Virtual servers are unable to interact with each other, or
+		the main server.
 	</longdescription>
 </pkgmetadata>

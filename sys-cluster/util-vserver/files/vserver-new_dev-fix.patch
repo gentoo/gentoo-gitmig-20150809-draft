@@ -1,0 +1,10 @@
+--- tools/vserver-new.old	2005-10-01 18:58:31.580500000 +0200
++++ tools/vserver-new	2005-10-01 18:57:19.179975250 +0200
+@@ -244,6 +244,7 @@
+ 	cp -L /etc/resolv.conf etc/resolv.conf || die "failed to copy DNS information"
+ 	
+ 	mount -t proc none proc/ || die "failed to mount procfs"
++	mount --bind /dev dev/ || die "failed to mount dev"
+ 	
+ 	cat <<EOF > tmp/vserver-new-stage3.sh
+ #!/bin/bash
