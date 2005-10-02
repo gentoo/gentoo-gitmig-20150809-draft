@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/mbr-1.1.8.ebuild,v 1.1 2005/09/03 07:43:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/mbr-1.1.8.ebuild,v 1.2 2005/10/02 14:24:11 swegener Exp $
 
 DESCRIPTION="A replacement master boot record for IBM-PC compatible computers"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~neilt/mbr/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 -ppc -sparc -alpha"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="sys-devel/bin86"
 
 src_install() {
 	dosbin install-mbr || die

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mbr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.7 2005/09/03 07:43:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.8 2005/10/02 14:24:11 swegener Exp $
+
+  02 Oct 2005; Sven Wegener <swegener@gentoo.org> mbr-1.1.5.ebuild,
+  mbr-1.1.8.ebuild:
+  QA: Added missing DEPEND on sys-devel/bin86
 
 *mbr-1.1.8 (03 Sep 2005)
 
