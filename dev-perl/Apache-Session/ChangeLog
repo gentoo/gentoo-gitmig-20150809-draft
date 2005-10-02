@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.16 2005/08/25 22:18:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.17 2005/10/02 11:59:47 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  Apache-Session-1.60.ebuild:
+  Mark 1.60 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   Apache-Session-1.60.ebuild:
