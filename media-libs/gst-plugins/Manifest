@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56d7a706336587d2fa212627b4f067a1 gst-plugins-0.8.10.ebuild 1933
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 8e320139d05f7bf1576946363b252512 gst-plugins-0.8.8.ebuild 1932
-MD5 8a0d2b56949d504c95170d79d2510cf9 gst-plugins-0.8.8-r2.ebuild 2159
+MD5 274d4059d5996197f1acc269c0069f54 ChangeLog 17187
+MD5 72130cbac13e9edb34b298efea9f26e6 gst-plugins-0.8.10.ebuild 1933
 MD5 da1b0d389782eafdd7a0dfbac3c5c853 gst-plugins-0.8.2.ebuild 1866
 MD5 29102377c273141ee80cf7f2fca7b603 gst-plugins-0.8.11.ebuild 2036
-MD5 f25aa655a936ff5577e855f74966e82d ChangeLog 17091
+MD5 8a0d2b56949d504c95170d79d2510cf9 gst-plugins-0.8.8-r2.ebuild 2159
+MD5 8e320139d05f7bf1576946363b252512 gst-plugins-0.8.8.ebuild 1932
 MD5 0315828d8eb38b680523080db6653e4f gst-plugins-0.8.9-r2.ebuild 2272
-MD5 2a2cbe69a3c199ac03a66ae707700d70 files/gst-plugins-0.8.8-qtdemux.diff.gz 5379
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-0.8.10 72
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
-MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
-MD5 047909fa0e548bb37041ef3b534f7a30 files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-0.8.9-r2 71
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-0.8.11 72
 MD5 a619f8fe6364e211b5c12d36fa4c60dc files/gst-plugins-0.8.11-conffix.patch 845
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8 71
-MD5 62a6ceb0d791f58680a8260b121f06ba files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8-r2 71
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-0.8.10 72
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-0.8.9-r2 71
+MD5 047909fa0e548bb37041ef3b534f7a30 files/gst-plugins-0.8.8-gstplaybin_subfont.patch 3927
+MD5 2a2cbe69a3c199ac03a66ae707700d70 files/gst-plugins-0.8.8-qtdemux.diff.gz 5379
+MD5 62a6ceb0d791f58680a8260b121f06ba files/gst-plugins-0.8.9-qtdemux-fixrawpcm.patch 698
 MD5 5f3b15884236441972571887125d0a48 files/gst-plugins-0.8.9-riffmedia-isompeg4.patch 1178
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNMpRgIKl8Uu19MoRAsSIAJ92EWrHzgXOaL3PcpFGfshgPvpGkACfdW56
-1omjlStdF98kJLYRt81k3nw=
-=NFWs
------END PGP SIGNATURE-----
+MD5 08ef8415d9778f702053aa3e0090404b files/gst-plugins-0.8.9-ximagefix.patch 2525
