@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac17f04fb50141e0a8ce532268b44260 sensors-applet-1.5.ebuild 722
+MD5 df55967c8aa772e7028874ec35ec21b6 ChangeLog 360
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 29ee9ab06a6645b9bfed724b2ea39346 files/digest-sensors-applet-1.5 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQE/zomPajV0RnrERAqAhAJ919hUor+5j+dVHEnNwEbh0GCTn1wCZAdK8
+3McZrpgqQS8oA7t15OwGJP0=
+=OhFB
+-----END PGP SIGNATURE-----
