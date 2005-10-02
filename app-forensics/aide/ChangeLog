@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.14 2005/09/30 15:19:38 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.15 2005/10/02 21:47:00 strerror Exp $
+
+  02 Oct 2005; Benjamin Smee <strerror@gentoo.org>
+  +files/aide-0.10_p20040917-r1-fix-psql.diff:
+  Added file for postgres fix re BUG 107927
 
 *aide-0.10_p20040917-r1 (30 Sep 2005)
 

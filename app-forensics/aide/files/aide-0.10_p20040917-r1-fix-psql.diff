@@ -1,0 +1,137 @@
+diff -urN aide.orig/src/db.c aide/src/db.c
+--- aide.orig/src/db.c	2004-09-17 22:37:09.110596472 -0400
++++ aide/src/db.c	2004-09-18 01:03:54.923909368 -0400
+@@ -175,7 +175,7 @@
+ #ifdef WITH_PSQL
+   case url_sql: {
+     error(255,"db_sql readline...");
+-    s=db_readline_sql(db);
++    s=db_readline_sql(db, conf);
+     
+     break;
+   }
+diff -urN aide.orig/src/db_sql.c aide/src/db_sql.c
+--- aide.orig/src/db_sql.c	2004-09-17 22:37:09.085600272 -0400
++++ aide/src/db_sql.c	2004-09-18 01:14:05.191134648 -0400
+@@ -156,7 +156,7 @@
+   return ret;
+ }
+ 
+-void db_readline_sql_int(int* d,int db,int i) 
++void db_readline_sql_int(int* d,int db,int i,db_config* conf) 
+ {
+   FILE** db_filep=NULL;
+ 
+@@ -182,7 +182,7 @@
+ 
+ }
+ 
+-void db_readline_sql_char(char** d,int db,const int i) 
++void db_readline_sql_char(char** d,int db,const int i,db_config* conf) 
+ {
+   
+   volatile int cr,des;
+@@ -221,27 +221,27 @@
+   
+ }
+ 
+-void db_readline_sql_byte(void** d,int db,int i) {
++void db_readline_sql_byte(void** d,int db,int i,db_config* conf) {
+   
+-  db_readline_sql_char(d,db,i);
++  db_readline_sql_char((char **)d,db,i,conf);
+   
+   if (*d!=NULL) {
+-    *d=base64tobyte(*d,strlen(*d));
++    *d=(void *)base64tobyte(*d,strlen(*d));
+   }
+   
+ }
+ 
+-void db_readline_sql_time(void** d,int db,int i) {
++void db_readline_sql_time(void** d,int db,int i,db_config* conf) {
+   
+-  db_readline_sql_char(d,db,i);
++  db_readline_sql_char((char **)d,db,i,conf);
+   
+   if (*d!=NULL) {
+-    *d=base64totime_t(*d);
++    *d=(void *)base64totime_t(*d);
+   }
+   
+ }
+ 
+-db_line* db_readline_sql(int db) {
++db_line* db_readline_sql(int db,db_config* conf) {
+   
+   volatile db_line* rline;
+   int i;
+@@ -275,33 +275,35 @@
+   }
+   rline=(db_line*)malloc(1*sizeof(db_line));
+   
+-  db_readline_sql_byte(&(rline->md5),db,(int)db_md5);
+-  db_readline_sql_byte(&(rline->sha1),db,db_sha1);
+-  db_readline_sql_byte(&(rline->rmd160),db,db_rmd160);
+-  db_readline_sql_byte(&(rline->tiger),db,db_tiger);
++  db_readline_sql_byte((void *)&(rline->md5),   db,(int)db_md5, conf);
++  db_readline_sql_byte((void *)&(rline->sha1),  db, db_sha1,    conf);
++  db_readline_sql_byte((void *)&(rline->rmd160),db, db_rmd160,  conf);
++  db_readline_sql_byte((void *)&(rline->tiger), db, db_tiger,   conf);
+ #ifdef WITH_MHASH
+-  db_readline_sql_byte(&(rline->crc32),db,db_crc32);
+-  db_readline_sql_byte(&(rline->haval),db,db_haval);
+-  db_readline_sql_byte(&(rline->gost),db,db_gost);
++  db_readline_sql_byte((void *)&(rline->crc32), db, db_crc32,   conf);
++  db_readline_sql_byte((void *)&(rline->haval), db, db_haval,   conf);
++  db_readline_sql_byte((void *)&(rline->gost),  db, db_gost,    conf);
+ #endif
+-  db_readline_sql_char(&(rline->filename),db,db_filename);
+-  db_readline_sql_char(&(rline->linkname),db,db_linkname);
++  db_readline_sql_char((char **)&(rline->filename),db,db_filename, conf);
++  db_readline_sql_char((char **)&(rline->linkname),db,db_linkname, conf);
+   
+-  db_readline_sql_int(&(rline->perm),db,db_perm);
+-  db_readline_sql_int(&(rline->uid),db,db_uid);
+-  db_readline_sql_int(&(rline->gid),db,db_gid);
+-  db_readline_sql_int(&(rline->inode),db,db_inode);
+-  db_readline_sql_int(&(rline->nlink),db,db_lnkcount);
+-  
+-  db_readline_sql_int(&(rline->size),db,db_osize);
+-  db_readline_sql_int(&(rline->bcount),db,db_bcount);
+-  db_readline_sql_int(&(rline->attr),db,db_attr);
+-  
+-  db_readline_sql_time(&(rline->atime),db,db_atime);
+-  db_readline_sql_time(&(rline->ctime),db,db_ctime);
+-  db_readline_sql_time(&(rline->mtime),db,db_mtime);
++  db_readline_sql_int((int *)&(rline->perm),  db,   db_perm,  conf);
++  db_readline_sql_int((int *)&(rline->uid),   db,   db_uid,   conf);
++  db_readline_sql_int((int *)&(rline->gid),   db,   db_gid,   conf);
++  db_readline_sql_int((int *)&(rline->inode), db,   db_inode, conf);
++  db_readline_sql_int((int *)&(rline->nlink), db,   db_lnkcount, conf);
++  
++  db_readline_sql_int((int *)&(rline->size),  db, (int)db_osize,  conf);
++  db_readline_sql_int((int *)&(rline->bcount),db, db_bcount, conf);
++  db_readline_sql_int((int *)&(rline->attr),  db, db_attr,   conf);
++  
++  db_readline_sql_time((void *)&(rline->atime),db, db_atime,  conf);
++  db_readline_sql_time((void *)&(rline->ctime),db, db_ctime,  conf);
++  db_readline_sql_time((void *)&(rline->mtime),db, db_mtime,  conf);
+ 
++#ifdef WITH_ACL
+   rline->acl=NULL;
++#endif
+   
+   ((psql_data*)(*db_filep))->curread++;
+   
+diff -urN aide.orig/include/db_sql.h aide/include/db_sql.h
+--- aide.orig/include/db_sql.h	2004-09-17 22:37:09.296568200 -0400
++++ aide/include/db_sql.h	2004-09-18 01:02:26.605335832 -0400
+@@ -50,6 +50,6 @@
+ };
+ 
+ int db_close_sql(void*);
+-db_line* db_readline_sql(int db);
++db_line* db_readline_sql(int db, db_config* conf);
+ 
+ #endif
