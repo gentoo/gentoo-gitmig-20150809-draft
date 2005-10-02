@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.12-r2.ebuild,v 1.7 2005/09/29 13:29:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.12-r2.ebuild,v 1.8 2005/10/02 00:57:42 hansmi Exp $
 
 unset ALLOWED_FLAGS  # Stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -101,6 +101,16 @@ src_unpack() {
 	ebegin "Patching smime to call perl from /usr/bin"
 	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
+
+	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
+	# PowerPC, because with that configuration, mozilla detects a ppc64 system.
+	# -- hansmi, 2005-10-02
+	if use ppc && [[ "${PROFILE_ARCH}" == ppc64 ]]; then
+		sed -i -e "s#OS_TEST=\`uname -m\`\$#OS_TEST=${ARCH}#" \
+			${S}/configure.in
+		sed -i -e "s#OS_TEST :=.*uname -m.*\$#OS_TEST:=${ARCH}#" \
+			${S}/security/coreconf/arch.mk
+	fi
 
 	# Needed by some of the patches
 	WANT_AUTOCONF=2.1 autoconf || die "WANT_AUTOCONF failed"

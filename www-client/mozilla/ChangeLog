@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.85 2005/09/29 13:29:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.86 2005/10/02 00:57:42 hansmi Exp $
+
+  02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mozilla-1.7.12-r2.ebuild:
+  Fix a compilation issue using the 32-bit userland with 64-bit kernel on
+  PowerPC.
 
   29 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mozilla-1.7.12-r2.ebuild:
