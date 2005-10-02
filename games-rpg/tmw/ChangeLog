@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.9 2005/09/06 06:31:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.10 2005/10/02 08:29:59 vapier Exp $
+
+*tmw-0.0.16-r1 (02 Oct 2005)
+
+  02 Oct 2005; Mike Frysinger <vapier@gentoo.org> +tmw-0.0.16-r1.ebuild:
+  Add missing curl DEPEND #106499 by Mauro Iazzi and missing music file
+  #106681 by Matija Suklje (hook).
 
 *tmw-0.0.16 (06 Sep 2005)
 
