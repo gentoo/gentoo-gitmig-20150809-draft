@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.41 2005/09/17 14:57:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.42 2005/10/02 03:16:35 weeve Exp $
+
+  02 Oct 2005; Jason Wever <weeve@gentoo.org> exim-4.52.ebuild:
+  Added ~sparc keyword.
 
   18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> exim-4.50-r1.ebuild:
   Stable on ppc.
