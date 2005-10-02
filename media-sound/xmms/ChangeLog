@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.188 2005/09/16 23:07:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.189 2005/10/02 02:11:11 hardave Exp $
+
+  02 Oct 2005; Hardave Riar <hardave@gentoo.org> xmms-1.2.10-r15.ebuild:
+  Stable on mips.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
