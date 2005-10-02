@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.64 2005/10/01 17:02:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.65 2005/10/02 17:24:24 hansmi Exp $
+
+  02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> ChangeLog:
+  Stable on ppc.
 
   01 Oct 2005; Luis Medinas <metalgod@gentoo.org>
   nessus-libraries-2.2.5.ebuild:
