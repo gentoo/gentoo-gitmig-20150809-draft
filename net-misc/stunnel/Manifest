@@ -1,9 +1,10 @@
-MD5 8bb8aec4367fb7a6a89e50206617376d ChangeLog 6734
+MD5 bac2dc1649b4346f2a37819058b5fab5 ChangeLog 6860
 MD5 40938d8bb3bba86aea441e89ad04bdc9 stunnel-3.26.ebuild 1085
 MD5 3c7d56a1f6a95f21ceb95ddf5c76073c metadata.xml 703
 MD5 b2b41fa38d0e49a159629341ba9f8f48 stunnel-4.05.ebuild 1755
 MD5 1217dcb1ea077fa30403aa71cdaf7480 stunnel-4.09.ebuild 2127
 MD5 3bd273c44186325bbd29a68101e43841 stunnel-4.10-r1.ebuild 2271
+MD5 a410e4c81415aa7817d0ffbbd4131479 stunnel-4.09-r1.ebuild 2226
 MD5 9193cc027bed086a3852dc7189602f0b files/stunnel.conf 1423
 MD5 f4879ffd6081bf6db14af6fac04f6b9e files/stunnel.rc6 933
 MD5 c0fb8fc4f6d919edc9d76e0f423873eb files/digest-stunnel-4.05 64
@@ -18,3 +19,4 @@ MD5 093291f53a8df7fb48928a750c4074f5 files/digest-stunnel-4.10-r1 64
 MD5 09f88a8e4bd6ae556b11c82d2c09de32 files/stunnel-4.10-inetd.patch 818
 MD5 b42ca1fbeb5d6454de36aac4cb893294 files/stunnel-3.26-gentoo.diff 941
 MD5 ea2086dcf69dddf6d075a7040d209335 files/digest-stunnel-3.26 64
+MD5 b562ecc7a9dab7e2e2582a0601b42569 files/digest-stunnel-4.09-r1 64
