@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cd0a57cf46e0d077717e22f8455be37 ChangeLog 2521
-MD5 27dbdb75cc1c963f7c06379fddf8c513 ktoblzcheck-0.7-r1.ebuild 741
-MD5 b6614f8ff25a10b892a43c1cfd8a6ddf ktoblzcheck-1.2.ebuild 674
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 5d7c5bfba74350cf4d49521b48b5e128 ChangeLog 2625
+MD5 83869812d007eed11a0cfa72b21c2fff ktoblzcheck-1.2.ebuild 673
+MD5 27dbdb75cc1c963f7c06379fddf8c513 ktoblzcheck-0.7-r1.ebuild 741
 MD5 bb226567278b7656389cc5ea93ec44f5 ktoblzcheck-1.7.ebuild 674
-MD5 af8b6b4de58e969469ffd1e1014c04ba files/digest-ktoblzcheck-0.7-r1 67
 MD5 c9f756def30f9e3748758e7d95076df5 files/digest-ktoblzcheck-1.2 67
 MD5 7cbeecef2ba27e6185335d102bd5297a files/digest-ktoblzcheck-1.7 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJ1YIr2QksT29OyARAhjFAJ4mY1Swcg7SGsAc0Vu5BYj4VvrEZACgkDdE
-m0YHaUMTkWutbVkrZ+x7NHE=
-=Nq1+
------END PGP SIGNATURE-----
+MD5 af8b6b4de58e969469ffd1e1014c04ba files/digest-ktoblzcheck-0.7-r1 67
