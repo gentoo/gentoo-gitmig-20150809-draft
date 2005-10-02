@@ -1,40 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61a6dd89dbdfe7b9fd30ae8e1fb8fff5 ChangeLog 47860
-MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
-MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
-MD5 389638f1d46b6c41cd4d87b471572f4b files/4.4.0-a1/70_mod_php.conf 484
-MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0-a2/70_mod_php.conf 485
-MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
-MD5 225b57325cbdf582288a8796da9d72f5 files/digest-mod_php-4.3.11 287
-MD5 ce1f1b2a1e56cf4459b2cbfdcce6b03f files/digest-mod_php-4.3.11-r1 364
-MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-mod_php-4.4.0 285
-MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-mod_php-4.4.0-r1 285
-MD5 61c52577ff879166da224373e27ad11e files/digest-mod_php-4.4.0-r2 362
-MD5 61c52577ff879166da224373e27ad11e files/digest-mod_php-4.4.0-r3 362
-MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
-MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
-MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
+MD5 3e54c657a1b15632c17b7d2eea9f322a mod_php-4.3.11-r1.ebuild 7159
+MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 8d6457890ecaf1bd91d1e79982fb4b5d mod_php-4.4.0-r2.ebuild 7106
+MD5 01eb2d17df30e46e3cd655b89574f81b ChangeLog 47967
+MD5 dacd61e1bba6292b852a354a22be284a mod_php-4.4.0.ebuild 6372
+MD5 56190a6344d0e907c007b55af5d4fca0 mod_php-4.3.11.ebuild 6423
+MD5 8612b8c5707e897544ac144213f9f075 mod_php-4.4.0-r3.ebuild 6140
+MD5 a3e29df002dbde1d18ab31334ed266ef mod_php-4.4.0-r1.ebuild 6597
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
-MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
-MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
+MD5 07529a6c32d73282c53d2936ed8ea9bd files/with-iodbc.diff 444
+MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-mod_php-4.4.0-r1 285
 MD5 a9b932952f12aa01a9f98a7fcbf32ed9 files/php4.3.11-pcre-security.patch 6031
 MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
-MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
+MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
+MD5 61c52577ff879166da224373e27ad11e files/digest-mod_php-4.4.0-r3 362
+MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
+MD5 61c52577ff879166da224373e27ad11e files/digest-mod_php-4.4.0-r2 362
+MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
+MD5 225b57325cbdf582288a8796da9d72f5 files/digest-mod_php-4.3.11 287
 MD5 ad986b02a371b2fea3b4ae5060c9dc81 files/stdint.diff 358
-MD5 07529a6c32d73282c53d2936ed8ea9bd files/with-iodbc.diff 444
-MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 3e54c657a1b15632c17b7d2eea9f322a mod_php-4.3.11-r1.ebuild 7159
-MD5 56190a6344d0e907c007b55af5d4fca0 mod_php-4.3.11.ebuild 6423
-MD5 a3e29df002dbde1d18ab31334ed266ef mod_php-4.4.0-r1.ebuild 6597
-MD5 8d6457890ecaf1bd91d1e79982fb4b5d mod_php-4.4.0-r2.ebuild 7106
-MD5 9bd39caeebbda398724a83fedaa83ad0 mod_php-4.4.0-r3.ebuild 6141
-MD5 dacd61e1bba6292b852a354a22be284a mod_php-4.4.0.ebuild 6372
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPoAsI1lqEGTUzyQRAlkNAJ4+IQKDENhNOxUImpxArWQ5p4SotgCgkDUB
-YgZInuLt9AVyPzkUxXuIRVA=
-=9W8T
------END PGP SIGNATURE-----
+MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
+MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
+MD5 ce1f1b2a1e56cf4459b2cbfdcce6b03f files/digest-mod_php-4.3.11-r1 364
+MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
+MD5 9b7f8c71395e9ac97dc87a48c9e4770d files/digest-mod_php-4.4.0 285
+MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
+MD5 389638f1d46b6c41cd4d87b471572f4b files/4.4.0-a1/70_mod_php.conf 484
+MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
+MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0-a2/70_mod_php.conf 485
+MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
