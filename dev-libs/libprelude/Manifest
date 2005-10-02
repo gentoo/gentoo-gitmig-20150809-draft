@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8d319557101b5dc5e5a68e842be0065b ChangeLog 5932
+MD5 ba0c6fc80529bdc9c9e4e07337cab98e ChangeLog 6163
 MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10-r1 69
-MD5 13a4e2272babddf5894aeea10c46ac64 files/digest-libprelude-0.9.0-r1 69
-MD5 a2ad3653e21b791601a8cfb9ea80792a files/libprelude-0.9.0-perlpathfix.patch 980
+MD5 13a4e2272babddf5894aeea10c46ac64 files/digest-libprelude-0.9.0-r2 69
+MD5 dcf37eea640fa68fa888992a00393b90 files/libprelude-0.9.0-perlpathfix.patch 1934
 MD5 5530b51e2aabfdddb68f05ba69c95171 libprelude-0.8.10-r1.ebuild 1099
-MD5 683a54faed52ab9e14bbdb962caee933 libprelude-0.9.0-r1.ebuild 1514
+MD5 965b58aa9133a05925efb9596d4a4d09 libprelude-0.9.0-r2.ebuild 1393
 MD5 58ac7b9f0648503cb1ef46d0e5c96a12 metadata.xml 224
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDPn/VI1lqEGTUzyQRAl/PAJ9gd6gNsb0dL+ru2kr2WaxaU0/pqwCfeYYc
-z3j2zE3YuK6XTOyIEGM1i94=
-=Trar
+iD8DBQFDQG71mdTrptrqvGERAoJtAJ4yphR1I7ttLUIvtnAdHHsgaTA2VACePaz/
+WR852AmeMyDZ4MsiRMzbGvY=
+=Ky5v
 -----END PGP SIGNATURE-----
