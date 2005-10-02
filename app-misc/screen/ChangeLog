@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.103 2005/09/16 22:20:56 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.104 2005/10/02 19:38:29 swegener Exp $
+
+  02 Oct 2005; Sven Wegener <swegener@gentoo.org> files/screenrc:
+  Remove dead link from screenrc, bug 107919.
 
   16 Sep 2005; Stephen Bennett <spb@gentoo.org> screen-4.0.2-r4.ebuild:
   Added selinux policy to RDEPEND
