@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4521 2005/10/02 14:15:07 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4522 2005/10/02 17:00:58 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (02 Oct 2005)
+# Upstream is dead and does not compile against the latest swig.
+# There are no packages using the library and there are better
+# alternatives. Will be moved to java experimental if no-one steps up.
+dev-java/wx4j
 
 # Marcus D. Hanwell <cryos@gentoo.org> (02 Oct 2005)
 # Masking experimental ebuild - should allow kdebase-kioslaves to work with
