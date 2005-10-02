@@ -1,7 +1,17 @@
-MD5 68f9a834d7a09b4958c1cc0fc362a881 ChangeLog 1624
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a714a9c6d126d067b7a4444d41b76428 ChangeLog 1722
 MD5 20fe97af5a405bb51c964f2b791eb0c1 wterm-6.2.9-r1.ebuild 806
-MD5 abf1e2f43eb2e1627a80eb7fe78fa292 wterm-6.2.9-r2.ebuild 947
+MD5 f9937700e98690e07f19531bb3b32228 wterm-6.2.9-r2.ebuild 954
 MD5 b14e34f4d4ba29b277588cac30508e10 wterm-6.2.9.ebuild 737
 MD5 0b2a748c025855769dc0cb12266b9e3c files/digest-wterm-6.2.9 64
 MD5 0b2a748c025855769dc0cb12266b9e3c files/digest-wterm-6.2.9-r1 64
 MD5 0b2a748c025855769dc0cb12266b9e3c files/digest-wterm-6.2.9-r2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDP/TvwUpWvClEHQoRAtUUAKCC7WeJaGrV+UsvODOzHnasJXru4wCfYgOj
+kP7O7uE9Rk9zbpeoyRQWCnw=
+=qT/Q
+-----END PGP SIGNATURE-----
