@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.23 2005/09/27 20:06:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.24 2005/10/02 13:41:10 azarah Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/x11
 	>=www-client/mozilla-launcher-1.22
 	>=x11-libs/gtk+-2.2.0
 	>=dev-libs/glib-2.2.0
-	>=x11-libs/pango-1.2.1
+	>=x11-libs/pango-1.5.0
 	>=dev-libs/libIDL-0.8.0
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )"
 
