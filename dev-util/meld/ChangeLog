@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.28 2005/09/03 15:18:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.29 2005/10/02 14:29:42 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> meld-1.0.0.ebuild:
+  Mark 1.0.0 stable on ia64
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> meld-1.0.0.ebuild:
   Stable on ppc.
