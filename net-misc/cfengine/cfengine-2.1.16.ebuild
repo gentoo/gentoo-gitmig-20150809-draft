@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.13.ebuild,v 1.6 2005/04/25 03:48:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.16.ebuild,v 1.1 2005/10/02 18:26:20 ramereth Exp $
 
 inherit eutils
 
@@ -10,11 +10,11 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ppc sparc x86"
+KEYWORDS="amd64 arm ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/db-3.2
-	>=dev-libs/openssl-0.9.6k"
+	>=dev-libs/openssl-0.9.7"
 
 src_compile() {
 	# Enforce /var/cfengine for historical compatibility
@@ -22,8 +22,10 @@ src_compile() {
 		--with-workdir=/var/cfengine \
 		--with-berkeleydb=/usr || die
 
-	# Fix Makefile to skip doc & inputs install to wrong locations
-	sed -i -e 's/\(SUBDIRS.*\) inputs doc/\1/' Makefile
+	# Fix Makefile to skip doc,inputs, & contrib install to wrong locations
+	sed -i -e 's/\(DIST_SUBDIRS.*\) contrib inputs doc/\1/' Makefile
+	sed -i -e 's/\(SUBDIRS.*\) contrib inputs/\1/' Makefile
+	sed -i -e 's/\(install-data-am.*\) install-docDATA/\1/' Makefile
 
 	emake || die
 }
@@ -32,13 +34,15 @@ src_install() {
 	newinitd "${FILESDIR}"/cfservd.rc6 cfservd
 
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO INSTALL
 
 	# Manually install doc and inputs
 	doinfo doc/*.info*
 	dohtml doc/*.html
-	dodoc inputs/*.example
+	doman doc/*.8
 	dodoc ${FILESDIR}/cfportage.README
+	docinto examples
+	dodoc inputs/*.example
 
 	# Create cfengine working directory
 	mkdir -p ${D}/var/cfengine

@@ -11,6 +11,13 @@
 		<name>Lance Albertson</name>
 	</maintainer>
 	<longdescription>
-	Cfengine, or the configuration engine is an autonomous agent and a middle to high level policy language for building expert systems which administrate and configure large computer networks. Cfengine uses the idea of classes and a primitive intelligence to define and automate the configuration and maintenance of system state, for small to huge configurations. Cfengine is designed to be a part of a computer immune system, and can be thought of as a gaming agent. It is ideal for cluster management and has been adopted for use all over the world in small and huge organizations alike.
+	Cfengine, or the configuration engine is an autonomous agent and a middle to
+	high level policy language for building expert systems which administrate
+	and configure large computer networks. Cfengine uses the idea of classes and
+	a primitive intelligence to define and automate the configuration and
+	maintenance of system state, for small to huge configurations. Cfengine is
+	designed to be a part of a computer immune system, and can be thought of as
+	a gaming agent. It is ideal for cluster management and has been adopted for
+	use all over the world in small and huge organizations alike.
 	</longdescription>
 </pkgmetadata>

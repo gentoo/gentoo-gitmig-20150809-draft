@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.60 2005/08/20 18:21:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.61 2005/10/02 18:26:20 ramereth Exp $
+
+*cfengine-2.1.16 (02 Oct 2005)
+
+  02 Oct 2005; Lance Albertson <ramereth@gentoo.org>
+  -files/cfengine-2.1.10-setnetgrent.patch, metadata.xml,
+  -cfengine-2.1.13.ebuild, -cfengine-2.1.14.ebuild, +cfengine-2.1.16.ebuild:
+  * Rev bump for 2.1.16
+  * Ebuild cleanup
+  * Fix wordwrap in metadata.xml
+  * Removed unused patch
 
   20 Aug 2005; Jason Wever <weeve@gentoo.org> cfengine-2.1.15-r1.ebuild:
   Stable on SPARC.
