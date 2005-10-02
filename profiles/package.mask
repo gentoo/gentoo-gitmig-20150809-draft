@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4520 2005/10/02 11:44:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4521 2005/10/02 14:15:07 cryos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Marcus D. Hanwell <cryos@gentoo.org> (02 Oct 2005)
+# Masking experimental ebuild - should allow kdebase-kioslaves to work with
+# the new hal/dbus, bug 105553.
+=kde-base/kdebase-kioslaves-3.4.2-r1
 
 # Marcelo Goes <vanquirius@gentoo.org> (01 Oct 2005)
 # Masking because of bug 107240 (exporting PDF/Latex)
