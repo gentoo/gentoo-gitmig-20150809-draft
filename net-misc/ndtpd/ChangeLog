@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ndtpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ChangeLog,v 1.10 2005/03/19 12:43:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ChangeLog,v 1.11 2005/10/02 14:49:06 flameeyes Exp $
+
+  02 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ndtpd-3.1.5.ebuild:
+  Don't use /bin/false as shell for ndtpuser user. Use -1 instead.
 
   19 Mar 2005; MATSUU Takuto <matsuu@gentoo.org> ndtpd-3.1.5.ebuild:
   Marked as ~amd64.
