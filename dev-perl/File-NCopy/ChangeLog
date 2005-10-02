@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-NCopy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.10 2005/08/25 23:04:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.11 2005/10/02 12:41:49 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> File-NCopy-0.34.ebuild:
+  Mark 0.34 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> File-NCopy-0.34.ebuild:
   add ~ia64
