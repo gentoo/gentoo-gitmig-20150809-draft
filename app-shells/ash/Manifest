@@ -1,4 +1,4 @@
-MD5 164c0fd78c4d801713061b8ba7c831e6 ChangeLog 1917
-MD5 997ad167270c7845694739cc77c65db2 ash-1.6.ebuild 1401
-MD5 c9c7e478fdca81cc11c51dc17bd6afc9 files/ash-1.6-gcc4.diff 234
+MD5 0e6368f23a1511cd269cdda82bafc199 ChangeLog 2010
+MD5 5ac595f97da79b68ca2a8b37883a12d6 ash-1.6.ebuild 1400
 MD5 8ae8baf7eab9f0bf48c73e3198ab0ee4 files/digest-ash-1.6 127
+MD5 c9c7e478fdca81cc11c51dc17bd6afc9 files/ash-1.6-gcc4.diff 234
