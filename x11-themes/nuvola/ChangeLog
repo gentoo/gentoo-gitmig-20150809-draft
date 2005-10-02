@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/nuvola
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.12 2005/09/18 16:45:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.13 2005/10/02 19:58:43 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> nuvola-1.0-r1.ebuild:
+  Mark 1.0-r1 stable on ia64
 
   18 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> -nuvola-1.0.ebuild:
   Remove old package dependant on kde as is now stable on every arch it was
