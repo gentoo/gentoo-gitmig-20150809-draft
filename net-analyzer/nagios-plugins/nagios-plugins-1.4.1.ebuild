@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.4 2005/09/10 18:24:13 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.5 2005/10/02 04:14:37 ramereth Exp $
 
 inherit eutils
 
@@ -18,10 +18,7 @@ DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( >=dev-db/mysql-3.23.52-r1 )
 	postgres? ( >=dev-db/postgresql-7.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	!amd64? ( !sparc? ( !ppc? ( radius? ( >=net-dialup/radiusclient-0.3.2 ) ) ) )"
-
-	# Remove the arch blocks for radius once they get marked ~arch for those
-	# archs
+	radius? ( >=net-dialup/radiusclient-0.3.2 )"
 
 # test broken anyway	test? ( >=dev-perl/Cache-Cache-1.03 )"
 
