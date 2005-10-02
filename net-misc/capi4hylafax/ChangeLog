@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.11 2005/08/11 19:48:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.12 2005/10/02 23:07:41 sbriesen Exp $
+
+*capi4hylafax-01.03.00.3 (02 Oct 2005)
+
+  02 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capi4hylafax.confd, +files/capi4hylafax.initd, metadata.xml,
+  +capi4hylafax-01.03.00.3.ebuild:
+  version bump, ebuild and init-scripts enhancements, adding ~amd64 to keywords.
 
 *capi4hylafax-01.02.03.13 (11 Aug 2005)
 
