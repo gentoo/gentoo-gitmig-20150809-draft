@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.2 2005/09/21 13:05:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.3 2005/10/02 14:02:29 spock Exp $
 
 inherit eutils
 
@@ -40,6 +40,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 	mv "${PN}-0.10.4.conf" "${PN}.conf"
+	if ! use ftp ; then
+		sed -i -e 's/\(.*protocol.ftp.*\)/# \1/' ${PN}.conf
+	fi
+
 	use ppc-macos && epatch ${FILESDIR}/${PN}-osx-configure.diff
 }
 
