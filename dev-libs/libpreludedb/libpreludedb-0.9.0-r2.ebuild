@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0-r1.ebuild,v 1.1 2005/10/01 04:27:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.0-r2.ebuild,v 1.1 2005/10/02 23:52:23 dragonheart Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug doc mysql postgres perl python"
+IUSE="doc mysql postgres perl python"
 
 DEPEND="virtual/libc
 	>=dev-libs/libprelude-0.9.0
@@ -27,7 +27,6 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use debug && append-flags -O -ggdb
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --enable-gtk-doc=no"
 	use mysql && myconf="${myconf} --enable-mysql" || myconf="${myconf} --enable-mysql=no"
 	use postgres && myconf="${myconf} --enable-postgresql" || myconf="${myconf} --enable-postgresql=no"
@@ -35,7 +34,7 @@ src_compile() {
 	use python && myconf="${myconf} --enable-python" || myconf="${myconf} --enable-python=no"
 	econf ${myconf} || die "econf failed"
 
-	LD_RUN_PATH=""	emake -j1 || die "emake failed"
+	emake -j1 || die "emake failed"
 	# -j1 may not be necessary in the future
 }
 
