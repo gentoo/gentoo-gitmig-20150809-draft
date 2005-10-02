@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-pinyin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.6 2005/09/29 10:24:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.7 2005/10/02 01:44:21 kloeri Exp $
+
+  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
+  scim-pinyin-0.5.91.ebuild:
+  Stable on alpha.
 
   29 Sep 2005; Mamoru KOMACHI <usata@gentoo.org> scim-pinyin-0.5.91.ebuild:
   Added arts USE. Thanks to kasim.terzic@gmail.com; bug #105196.
