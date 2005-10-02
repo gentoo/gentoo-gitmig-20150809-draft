@@ -1,5 +1,15 @@
-MD5 c4237b6cb393873b7433a33d33c3a170 ChangeLog 536
-MD5 8abce6f70f29fda8cf9eef3a9a2504bf gjdoc-0.7.5.ebuild 1504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac3a3e4ad86613b8102c2c6938d62ef5 gjdoc-0.7.5.ebuild 1514
+MD5 4585003c94101c82ceb212eb985917e7 ChangeLog 632
 MD5 0d8df1cd88e392aa059af56ac1d368e9 metadata.xml 535
 MD5 3fb0d8107550edfcee8ba6f0cf1bfc85 files/digest-gjdoc-0.7.5 63
 MD5 09c41d12fbdde13c5d1d4a64aa66bd0f files/gjdoc 137
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQDag8zY1VwezZiERAjRkAKCdrr6+vtGRxJX1Knweb/F3D9hFHQCfUz6q
+fbUyoFtNKFCORWsB/NBJdKY=
+=G0Yv
+-----END PGP SIGNATURE-----
