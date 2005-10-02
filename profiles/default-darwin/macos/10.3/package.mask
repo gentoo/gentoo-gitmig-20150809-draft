@@ -10,6 +10,7 @@ app-editors/vim
 >=app-portage/esearch-0.7.1
 app-shells/bash
 app-shells/zsh
+dev-lang/parrot
 dev-lang/perl
 dev-lang/python
 dev-libs/libprelude
