@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2ca665be43527302f16be614928bcf3 ChangeLog 10575
+MD5 e9ae427a7ef129c9d02d690fd83b04a3 ChangeLog 10672
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 5fb666b241c86fff4ddc0880de44be48 mod_ssl-2.8.17.ebuild 2188
 MD5 13338aa13b7124ea1609e8560cbaabeb mod_ssl-2.8.18.ebuild 2188
@@ -10,7 +7,7 @@ MD5 8caaa97021cfd052c33fc36ec9a5458a mod_ssl-2.8.20.ebuild 2289
 MD5 86c74e1d2f258764b5586a33b1bf609a mod_ssl-2.8.21.ebuild 2300
 MD5 bbb586df2f07216912fce9393932984b mod_ssl-2.8.22-r1.ebuild 1780
 MD5 b7fde5ba7a78cb851cb8c290405a3356 mod_ssl-2.8.22.ebuild 2314
-MD5 2e517dca3a5b04e3f1fe7fd8bd76f8aa mod_ssl-2.8.24-r1.ebuild 1778
+MD5 5323627c5a5d2706d6a2c466912f6bd1 mod_ssl-2.8.24-r1.ebuild 1777
 MD5 e69db8e34d2e78462bc039a5fa56ca98 mod_ssl-2.8.24.ebuild 2313
 MD5 515630b3e53faa458b8ec7a0e73bef55 files/10_mod_ssl.conf 2859
 MD5 959a0125c23ead91b0071f4ffc54e9bc files/default-ssl.conf 7653
@@ -26,10 +23,3 @@ MD5 71ac46d211c8aa42c7a5e51c6165862a files/mod_ssl.conf 2460
 MD5 8270779f233bc311118f53ebce7338e7 files/ssl.default-vhost.conf 6985
 MD5 a68a0b56a629886ec3ebd08bfb0f638c files/digest-mod_ssl-2.8.24 73
 MD5 a68a0b56a629886ec3ebd08bfb0f638c files/digest-mod_ssl-2.8.24-r1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNYmeKf2g/qXtneoRAjwNAKCxvbpNT5NLOMW9gz+74N6CUUGrNwCfVPbL
-4VuCs3mCGwPZNyu2AtZWvgs=
-=9qAb
------END PGP SIGNATURE-----
