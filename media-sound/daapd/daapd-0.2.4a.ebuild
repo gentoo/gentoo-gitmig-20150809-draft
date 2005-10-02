@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.5 2005/01/03 21:21:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.4a.ebuild,v 1.1 2005/10/02 11:15:35 dsd Exp $
 
-IUSE="aac howl mpeg4"
 
 inherit flag-o-matic eutils
 
@@ -13,6 +12,7 @@ SRC_URI="http://www.deleet.de/projekte/daap/daapd/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
+IUSE="aac howl mpeg4"
 
 DEPEND="sys-libs/zlib
 	howl? ( >=net-misc/howl-0.9.6-r1 )
@@ -23,11 +23,11 @@ DEPEND="sys-libs/zlib
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-
 	cd ${S}
-	if ! use howl; then
-		sed -ie 's/HOWL_ENABLE = 1/HOWL_ENABLE = 0/g' makefile
+	epatch ${FILESDIR}/${PN}-0.2.4-gentoo.patch
+
+	if use howl; then
+		sed -ie 's/HOWL_ENABLE = 0/HOWL_ENABLE = 1/g' makefile
 	fi
 
 	if ! use mpeg4; then
@@ -36,22 +36,19 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake || die "make failed"
 }
 
 src_install() {
 	dobin daapd
 
-	dodoc COPYING README* daapd-example.conf
+	dodoc README* daapd-example.conf
 	doman ${PN}.8
 
 	insinto /etc
 	newins daapd-example.conf daapd.conf
 
-	insinto /etc/conf.d
-	newins ${FILESDIR}/daapd.conf.d daapd || die
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/daapd.init.d daapd || die
+	newconfd ${FILESDIR}/daapd.conf.d daapd || die
+	newinitd ${FILESDIR}/daapd.init.d daapd || die
 }
 

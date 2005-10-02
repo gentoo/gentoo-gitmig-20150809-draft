@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/daapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.15 2005/08/24 16:49:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.16 2005/10/02 11:15:35 dsd Exp $
+
+*daapd-0.2.4a (02 Oct 2005)
+
+  02 Oct 2005; Daniel Drake <dsd@gentoo.org> -daapd-0.2.3d.ebuild,
+  -daapd-0.2.4.ebuild, +daapd-0.2.4a.ebuild:
+  Version bump thanks to Colin Tinker <g1gsw@dsl.pipex.com> in bug #101656,
+  also fix howl/mDNS support
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> daapd-0.2.4.ebuild:
   Use newconfd/newinitd. Don't install COPYING.
