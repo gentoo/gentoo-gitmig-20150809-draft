@@ -1,4 +1,14 @@
-MD5 c6fd0a80830e99489b9b020657435d25 integrity-1.0.ebuild 1233
-MD5 faaf70e5e70527b587977b351fe6cbc4 ChangeLog 603
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be9f763d988da70e9dcbea064d52cc72 ChangeLog 703
+MD5 6b441a2f00d68ceb0e6e30f7fe9da5c5 integrity-1.0.ebuild 1243
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 b08c2b54f880cc4ef78a0fafafbb3626 files/digest-integrity-1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDP/RuwUpWvClEHQoRAqEmAJ9mbJPL0YtPUvBURwuS9v5AH5IDBgCdGxIx
+0QWwihGJGhBFUJysJzCqHqU=
+=j1Hj
+-----END PGP SIGNATURE-----
