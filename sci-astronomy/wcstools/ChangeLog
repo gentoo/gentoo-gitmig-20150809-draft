@@ -1,0 +1,11 @@
+# ChangeLog for sci-astronomy/wcstools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.1 2005/10/02 15:22:55 ribosome Exp $
+
+*wcstools-3.6.2 (02 Oct 2005)
+
+  02 Oct 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +wcstools-3.6.2.ebuild:
+  Initial import. Ebuild submitted by Sebastien Fabbro <seb@ist.utl.pt> (bug
+  #65666).
+
