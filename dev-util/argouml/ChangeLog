@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/argouml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.14 2005/09/10 14:20:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.15 2005/10/02 18:57:17 humpback Exp $
+
+*argouml-0.19.6 (02 Oct 2005)
+
+  02 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +argouml-0.19.6.ebuild:
+  Bump with SRC_URI update.
 
 *argouml-0.18.1-r1 (10 Sep 2005)
 
