@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2e70468a408baf854731f28ccd1228d4 lout-3.31.ebuild 1923
 MD5 4058f06f0e1f4543f077c51eb00298fb lout-3.29.ebuild 1806
 MD5 e325d5b4c83b35004d68937449bdfce3 lout-3.30.ebuild 1923
-MD5 10d00583b37c725536ed7ae85921023a ChangeLog 2548
-MD5 e898eb4de64cf9908d6e2e6cd48c5141 files/lout-3.25-r1-makefile-gentoo.patch 9685
+MD5 b91ae589f2f2708ffcb9279b217acc63 ChangeLog 2765
 MD5 29594e4e47a72654d5819c6ebb2d1bef files/digest-lout-3.29 62
 MD5 97dd1622e0573b3b3d3157f15865753a files/digest-lout-3.30 62
+MD5 71f7b349fa7618b22609e5b1253f8120 files/digest-lout-3.31 62
+MD5 e898eb4de64cf9908d6e2e6cd48c5141 files/lout-3.25-r1-makefile-gentoo.patch 9685
 MD5 eef4aadd919d3cc3b4025debb538c7fa files/lout-3.29-makefile-gentoo.patch 5985
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFDKzw5LLFUmVNQ7rkRAhD8AJipojXFfoLP7GfRDYvnVGrZgboCAKCusvs6
-9I+Qy1ahYHzulHAoSa7ZaQ==
-=tIbY
------END PGP SIGNATURE-----

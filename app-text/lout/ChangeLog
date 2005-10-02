@@ -1,6 +1,13 @@
 # ChangeLog for app-text/lout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.16 2005/09/16 21:41:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.17 2005/10/02 20:00:05 grobian Exp $
+
+*lout-3.31 (02 Oct 2005)
+
+  02 Oct 2005; Fabian Groffen <grobian@gentoo.org> +lout-3.31.ebuild:
+  - Bump to version 3.31
+  - added ~ppc-macos
+  - changed /usr/lib/libz.a into -lz to allow for compilation also on OSX
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
