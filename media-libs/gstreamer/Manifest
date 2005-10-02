@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 727b17e18255eb1103c4230dee1dc976 gstreamer-0.8.10.ebuild 2809
-MD5 a50c0fc2d4a186d979f3867e3fbedb41 gstreamer-0.8.9-r3.ebuild 3117
+MD5 e8ac05b376fc29b3fec9bd9a4522768a ChangeLog 15289
+MD5 301bbbe66729c54178c3244326b42651 gstreamer-0.8.10.ebuild 2810
 MD5 33b6ac74fc51e0f460d79ec171873377 gstreamer-0.8.11.ebuild 2819
-MD5 50313bd72dfd35a407b787573d85d40c ChangeLog 15197
-MD5 eb396dce225d8cbcae77d8c7a60cae55 files/gstreamer-0.8.9-64_dataprotocol.patch 557
-MD5 7f5ad30642cb2c0af9d64ac11c9dabb2 files/digest-gstreamer-0.8.9-r3 69
-MD5 5adc10998a8ad71887996272e5775022 files/gstreamer-0.8.9-fixpluginload.patch 3982
-MD5 fd63f7bf7d7eacc104d81267e447fcab files/gstreamer-0.8.9-gstqueue_lock.patch 3975
-MD5 465e9b8e2f33205128b7a69eca2e2c02 files/gstreamer-0.8.3-jade_fix.patch 1713
+MD5 a50c0fc2d4a186d979f3867e3fbedb41 gstreamer-0.8.9-r3.ebuild 3117
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 dc2b5e6aa445825a850920f9e3d55392 files/digest-gstreamer-0.8.11 70
 MD5 22f436d2188144ecb6918fc8960cb70e files/digest-gstreamer-0.8.10 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNMo6gIKl8Uu19MoRAm13AJwPgtegnzf3Uc9jkZFOul09Ckh7uACfUdux
-Uvl4euM4pMGOjJYJGeYQ1f8=
-=Urdv
------END PGP SIGNATURE-----
+MD5 7f5ad30642cb2c0af9d64ac11c9dabb2 files/digest-gstreamer-0.8.9-r3 69
+MD5 465e9b8e2f33205128b7a69eca2e2c02 files/gstreamer-0.8.3-jade_fix.patch 1713
+MD5 eb396dce225d8cbcae77d8c7a60cae55 files/gstreamer-0.8.9-64_dataprotocol.patch 557
+MD5 5adc10998a8ad71887996272e5775022 files/gstreamer-0.8.9-fixpluginload.patch 3982
+MD5 fd63f7bf7d7eacc104d81267e447fcab files/gstreamer-0.8.9-gstqueue_lock.patch 3975
