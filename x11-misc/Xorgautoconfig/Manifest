@@ -1,6 +1,16 @@
-MD5 20003f345533440f60d309c7034d28ec ChangeLog 749
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4bf290a7ffd834a21ba0d98db3e3f737 ChangeLog 847
 MD5 7bf9db274cb3f4499f7010b44d60954f Xorgautoconfig-0.2.ebuild 827
 MD5 48169cd3f60d9ce3ade2ef3a03c92da6 metadata.xml 341
-MD5 9dc2fd56dbef9dc375c8c2d28d8188f4 Xorgautoconfig-0.2.1.ebuild 830
+MD5 54e9bcdafd79739e9c7211c05badc0d5 Xorgautoconfig-0.2.1.ebuild 829
 MD5 2acd791c33364e32f005276d651f92bf files/digest-Xorgautoconfig-0.2 70
 MD5 70ed740b857fe2a2fad9c599bc6b3f56 files/digest-Xorgautoconfig-0.2.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQApZcsIHjyDViGQRAoLWAKDXvbf0IiNkrMI5eP5MTmo/svyooQCeP2wM
+0XzKXw12MZ9pQ+grsfVnLSw=
+=1x4V
+-----END PGP SIGNATURE-----

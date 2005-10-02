@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.1.ebuild,v 1.1 2005/07/20 20:33:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.1.ebuild,v 1.2 2005/10/02 16:27:35 josejx Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~josejx/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64"
+KEYWORDS="ppc ~ppc64"
 IUSE=""
 
 DEPEND=""
