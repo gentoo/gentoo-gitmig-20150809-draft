@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fdf47a0a316ed724f5afe15e6ccd93ec ChangeLog 3284
-MD5 5e83aa40741c7ae458653fb9ed8b7805 metadata.xml 230
-MD5 514a59a777ab8e9d3945d81e09aa043a hteditor-0.9.1.ebuild 838
-MD5 7eb158519c9ebdc936cbc8cd27a3e1fa hteditor-0.8.0-r2.ebuild 990
-MD5 4fdc03b4d266c243331e2ad79382e935 hteditor-0.9.0.ebuild 837
+MD5 9b14973cc9087696c1e35b3c22b24b4e ChangeLog 3374
+MD5 a21e729e2e4f8eb73a1fd9a7a2e4b6ec files/digest-hteditor-0.8.0-r2 134
 MD5 2b7fc3bf96772b9a2f845ce7473e54b8 files/digest-hteditor-0.9.0 61
 MD5 aac2da6a4a213c02233749dfedc5965a files/digest-hteditor-0.9.1 61
-MD5 a21e729e2e4f8eb73a1fd9a7a2e4b6ec files/digest-hteditor-0.8.0-r2 134
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDNhEMmdTrptrqvGERAmtIAJ9G1mykKBfBsZhyJl+NW9gRg2+zRQCdH8N/
-KRmMkpGstjVZhDXF5PoQ9UY=
-=f2YK
------END PGP SIGNATURE-----
+MD5 7eb158519c9ebdc936cbc8cd27a3e1fa hteditor-0.8.0-r2.ebuild 990
+MD5 767109c4c321b3f327e19adf6a8f1bfc hteditor-0.9.0.ebuild 831
+MD5 514a59a777ab8e9d3945d81e09aa043a hteditor-0.9.1.ebuild 838
+MD5 5e83aa40741c7ae458653fb9ed8b7805 metadata.xml 230
