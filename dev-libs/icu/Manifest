@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1949f28b02060a0982158c781ff38498 icu-2.0.ebuild 690
 MD5 3f269ee0c22b61b9434b8fcf567801b8 icu-2.6.2.ebuild 700
 MD5 27b2c735ead510c05718b6c41ed68612 icu-2.2.ebuild 690
 MD5 e50a0da38f460ad50c80398722514953 icu-3.2.ebuild 737
 MD5 7d81066f7c93a337dd0dd56ab6acf954 icu-2.6.ebuild 697
-MD5 c3e3748bdc69c7f1622549c7323ed9eb icu-3.4.ebuild 722
-MD5 5a7f68004e90b88940e795f9cea99991 ChangeLog 3415
+MD5 39006bf77e9e092368356f916cc52188 icu-3.4.ebuild 731
+MD5 04855b469918b15fad6536fc4940053c ChangeLog 3516
 MD5 fe310ea62d58fe82c787a3af71f15fdc icu-2.8.ebuild 709
 MD5 b5865f551fa6dd21658e0f8349638c9f metadata.xml 223
 MD5 4866f088b0207e279913eb90e844d167 files/digest-icu-2.0 57
@@ -17,10 +14,3 @@ MD5 baca077f88ee8644f9b8852926aa2013 files/digest-icu-2.8 57
 MD5 302a8079bba0a97f0bd26ec6c584fb5c files/digest-icu-3.2 57
 MD5 5ebb4fe633e7a82d1f784db351fea949 files/digest-icu-3.4 57
 MD5 3b3b2d007397ef47733e105388d0f391 files/digest-icu-2.6.2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKl1EaGfFFLhbXWkRAuGKAJ0S++ImsKJC7omVqd1a1+zrY8Y9xgCfZhaE
-Utw0chh9Cziibe9nnghaTtk=
-=pgYl
------END PGP SIGNATURE-----
