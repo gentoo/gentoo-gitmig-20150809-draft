@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/conky-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/ChangeLog,v 1.5 2005/09/30 18:06:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conky-syntax/ChangeLog,v 1.6 2005/10/02 01:38:01 kloeri Exp $
+
+  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
+  conky-syntax-20050923.ebuild:
+  ~ia64 keyword.
 
   30 Sep 2005; Markus Rothe <corsair@gentoo.org>
   conky-syntax-20050923.ebuild:
