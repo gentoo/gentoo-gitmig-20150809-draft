@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 546d503ce2a47a51a4cc478eebb0ca5a ChangeLog 1472
-MD5 0f7bef0b2940ab442263434c568a7c04 numlockx-1.0.ebuild 649
+MD5 35f082c8cc458eb692c4a1a6eac5ee03 ChangeLog 1573
+MD5 05c5af619cc1008b2940edcb2c7de99b numlockx-1.0.ebuild 657
 MD5 2c3435e2da3ad10fedcb879bca4d3895 files/digest-numlockx-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDP8djJrHF4yAQTrARAj0qAJ9RH/ILjXW0nlxDYu5E13WxZRutcgCdGJQ+
+Ti9tNaoWo5nl1bq58bs0jiU=
+=UsWe
+-----END PGP SIGNATURE-----
