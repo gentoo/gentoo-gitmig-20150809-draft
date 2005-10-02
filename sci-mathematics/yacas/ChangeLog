@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/yacas
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.4 2005/01/14 17:05:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.5 2005/10/02 02:47:45 ribosome Exp $
+
+*yacas-1.0.58 (02 Oct 2005)
+
+  02 Oct 2005; Olivier Fisette <ribosome@gentoo.org> yacas-1.0.56.ebuild,
+  yacas-1.0.57.ebuild, +yacas-1.0.58.ebuild:
+  New version. Ebuild clean-ups. Fixed location of help files (bug #106308).
 
 *yacas-1.0.57 (14 Jan 2005)
 
