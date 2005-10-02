@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20-r1.ebuild,v 1.2 2005/09/27 16:59:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.16.20-r1.ebuild,v 1.3 2005/10/02 11:11:28 chrb Exp $
 
 IUSE="opengl"
 
@@ -120,6 +120,7 @@ src_install() {
 	local ATI_ROOT="/usr/lib/opengl/ati"
 
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
+	MODULE_NAMES="fglrx(video::${WORKDIR}/lib/modules/fglrx/build_mod)"
 	linux-mod_src_install
 
 	cd ${WORKDIR}
