@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.11.5.1.ebuild,v 1.2 2005/09/30 13:43:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/bmpx-0.11.5.1.ebuild,v 1.3 2005/10/02 17:33:31 azarah Exp $
 
 inherit gnome2 eutils
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
 
 # gstreamer is default backend
-G2CONF="${G2CONF} $(use_enable hal)"
+G2CONF="${G2CONF} $(use_enable dbus)"
 #useq xine || G2CONF="${G2CONF} --enable-gst"
 
 USE_DESTDIR="1"
