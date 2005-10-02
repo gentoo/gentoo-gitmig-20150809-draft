@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.19 2005/08/28 04:51:34 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.20 2005/10/02 14:05:57 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> cheetah-0.9.17.ebuild:
+  Mark 0.9.17 stable on ia64
 
 *cheetah-0.9.18 (28 Aug 2005)
 
