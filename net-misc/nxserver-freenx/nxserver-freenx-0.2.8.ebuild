@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.8.ebuild,v 1.1 2005/02/19 10:18:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.2.8.ebuild,v 1.2 2005/10/02 14:43:31 flameeyes Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="net-misc/nx-x11
 S=${WORKDIR}/freenx-${PV}
 
 pkg_setup () {
-	enewuser nx -1 /bin/false /usr/NX/home/nx
+	enewuser nx -1 -1 /usr/NX/home/nx
 }
 
 src_unpack() {

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.12 2005/05/23 19:10:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.13 2005/10/02 14:43:31 flameeyes Exp $
+
+  02 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  nxserver-freenx-0.2.7.ebuild, nxserver-freenx-0.2.8.ebuild,
+  nxserver-freenx-0.4.0.ebuild:
+  Don't use /bin/false as shell for nx user. Use -1 instead.
 
 *nxserver-freenx-0.4.0 (23 May 2005)
 

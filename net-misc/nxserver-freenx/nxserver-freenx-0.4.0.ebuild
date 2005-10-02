@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.4.0.ebuild,v 1.1 2005/05/23 19:10:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.4.0.ebuild,v 1.2 2005/10/02 14:43:31 flameeyes Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="virtual/ssh
 S=${WORKDIR}/freenx-${PV}
 
 pkg_setup () {
-	enewuser nx -1 /bin/false /usr/NX/home/nx
+	enewuser nx -1 -1 /usr/NX/home/nx
 }
 
 src_unpack() {
