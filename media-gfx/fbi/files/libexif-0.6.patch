@@ -1,0 +1,45 @@
+diff -rNu fbi-1.31.orig/exiftran.c fbi-1.31/exiftran.c
+--- fbi-1.31.orig/exiftran.c	2004-02-22 20:27:40.000000000 +0800
++++ fbi-1.31/exiftran.c	2005-03-30 10:43:37.969549144 +0800
+@@ -22,9 +22,10 @@
+ #ifdef HAVE_LIBEXIF
+ static void dump_exif(FILE *out, ExifData *ed)
+ {
+-    const char *title, *value;
++    const char *title;
+     ExifEntry  *ee;
+     int tag,i;
++    char value[1024];
+ 
+     for (i = 0; i < EXIF_IFD_COUNT; i++) {
+ 	fprintf(out,"   ifd %s\n", exif_ifd_get_name (i));
+@@ -35,7 +36,7 @@
+ 	    ee = exif_content_get_entry (ed->ifd[i], tag);
+ 	    if (NULL == ee)
+ 		continue;
+-	    value = exif_entry_get_value(ee);
++	    exif_entry_get_value(ee, value, sizeof(value));
+ 	    fprintf(out,"      0x%04x  %-30s %s\n", tag, title, value);
+ 	}
+     }
+diff -rNu fbi-1.31.orig/fbi.c fbi-1.31/fbi.c
+--- fbi-1.31.orig/fbi.c	2004-02-22 20:24:29.000000000 +0800
++++ fbi-1.31/fbi.c	2005-03-30 10:47:50.785115336 +0800
+@@ -398,6 +398,7 @@
+     l1 = 0;
+     l2 = 0;
+     for (tag = 0; tag < ARRAY_SIZE(tags); tag++) {
++	char temp_value[1024];
+ 	ee = exif_content_get_entry (ed->ifd[EXIF_IFD_0], tags[tag]);
+ 	if (NULL == ee)
+ 	    ee = exif_content_get_entry (ed->ifd[EXIF_IFD_EXIF], tags[tag]);
+@@ -407,7 +408,8 @@
+ 	    continue;
+ 	}
+ 	title[tag] = exif_tag_get_title(tags[tag]);
+-	value[tag] = strdup(exif_entry_get_value(ee));
++	exif_entry_get_value(ee, temp_value, sizeof(temp_value));
++	value[tag] = strdup(temp_value);
+ 	len = strlen(title[tag]);
+ 	if (l1 < len)
+ 	    l1 = len;

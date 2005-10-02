@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 613c1083cd2f413525dc7d4c59068968 fbi-1.31-r1.ebuild 1130
-MD5 7fc77b947cec0d01897854f31eb34b31 metadata.xml 367
-MD5 71f04cdbc9d615c1eedcf4b76543e1ba ChangeLog 4241
 MD5 3cea4d52fae981c56e196120997c2a45 fbi-1.31.ebuild 964
+MD5 613c1083cd2f413525dc7d4c59068968 fbi-1.31-r1.ebuild 1130
+MD5 3b037e25cdcb13c80eb0256a857e7aee fbi-1.31-r2.ebuild 1216
+MD5 91d22c21db02f0ecb1ef6d36248ac3b9 ChangeLog 4426
+MD5 7fc77b947cec0d01897854f31eb34b31 metadata.xml 367
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r1 59
+MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31-r2 59
 MD5 9dde96dcd60bc6d7921ce3302e83a343 files/digest-fbi-1.31 59
+MD5 784a957950cb4e63c0f58c4988e75d84 files/libexif-0.6.patch 1489
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC4f1MgIKl8Uu19MoRAiKCAJ4+VbgEJCBVhZdJrZ55y/22zUa5cgCdHW/Z
-iNQ6DrE16pqDzxKuQvWyNZc=
-=B3cJ
+iD8DBQFDQDHFchej4aZK9/cRApfdAJ9rdSwucSvoFZhoYcKbvTP7NNKgdwCfVirT
+CaIN7I503AJzgj9pyHj+EqU=
+=Y0Ze
 -----END PGP SIGNATURE-----
