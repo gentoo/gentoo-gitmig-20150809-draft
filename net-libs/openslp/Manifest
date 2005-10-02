@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7f79cffa0ae6dc390e87781e51f4248 metadata.xml 220
+MD5 03336769f6b7c61f397b7bda8a68cf3a openslp-1.2.1.ebuild 939
 MD5 fb07378e184212e79f4c4008b0e69239 openslp-1.0.11.ebuild 855
 MD5 16d4985dc3bbc616a5d8c0f08d9878fa openslp-1.0.9a.ebuild 705
-MD5 5968cb337684e7df871650c0ef560c93 openslp-1.2.1.ebuild 936
-MD5 e87536f91241648ec821f9efbcb0ba18 ChangeLog 3910
-MD5 570fc57cfed48b272c0d000a21927d26 files/digest-openslp-1.0.11 66
-MD5 67fd195194d45cffe4a08f4d0d0c5c2f files/digest-openslp-1.0.9a 66
+MD5 077a4c10c7fa821820e9f9612e0a2ab4 ChangeLog 3998
+MD5 d7f79cffa0ae6dc390e87781e51f4248 metadata.xml 220
 MD5 97a5b3202b42cbb36942b17299b2701d files/digest-openslp-1.2.1 65
 MD5 f87ab978aa65541b72c9aef6e1e5677e files/slpd-init 2294
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLAfvKf2g/qXtneoRAiL7AJ9nqXtgXN8lm0DamJjfNlfsyQJUfwCgsRkK
-hzryrngorXzfP1sx4rnnWEw=
-=P1R+
------END PGP SIGNATURE-----
+MD5 570fc57cfed48b272c0d000a21927d26 files/digest-openslp-1.0.11 66
+MD5 67fd195194d45cffe4a08f4d0d0c5c2f files/digest-openslp-1.0.9a 66

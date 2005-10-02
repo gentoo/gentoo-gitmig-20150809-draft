@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.34 2005/09/17 12:11:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.35 2005/10/02 04:58:54 matsuu Exp $
+
+  02 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> openslp-1.2.1.ebuild:
+  Stable on sh.
 
   26 Jun 2005; Rene Nussbaumer <killerfox@gentoo.org> openslp-1.2.1.ebuild:
   Stable on hppa. bug #85347
