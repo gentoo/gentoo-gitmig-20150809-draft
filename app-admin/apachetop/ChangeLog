@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.33 2005/10/01 22:39:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.34 2005/10/02 13:06:22 rl03 Exp $
+
+  02 Oct 2005; Renat Lumpau <rl03@gentoo.org> -apachetop-0.12.5.ebuild:
+  Removing vulnerable version
 
   01 Oct 2005; Jason Wever <weeve@gentoo.org> apachetop-0.12.5-r1.ebuild:
   Stable on SPARC wrt security bug #104473.
