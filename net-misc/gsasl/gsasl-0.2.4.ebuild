@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.4.ebuild,v 1.7 2005/07/05 20:44:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.4.ebuild,v 1.8 2005/10/02 15:48:23 agriffis Exp $
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
 # 	optional external libraries.
-KEYWORDS="amd64 ~ia64 ppc sparc x86"
+KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE="kerberos nls static doc"
 PROVIDE="virtual/gsasl"
 DEPEND="virtual/libc
