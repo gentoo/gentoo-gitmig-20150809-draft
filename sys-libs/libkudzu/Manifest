@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77daeea62b548dd1850baf088d7b2798 ChangeLog 1542
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 8e69707d0f0913ad645458b9565de654 libkudzu-1.1.62-r1.ebuild 1132
+MD5 31e553f122d10f8fdf981dbd47a972ae ChangeLog 1653
 MD5 80f488f77f5b46aec6387423a7b2a2c4 libkudzu-1.1.62.ebuild 1097
+MD5 145bf7d96ebe8952467e0faed648797a libkudzu-1.1.62-r1.ebuild 1131
+MD5 5a34775ded0d577c19911b83ea61884c files/digest-libkudzu-1.1.62 65
 MD5 5a34775ded0d577c19911b83ea61884c files/digest-libkudzu-1.1.62-r1 65
 MD5 f997880b4d33533af23ca07e2656bd31 files/sunlance.patch 470
-MD5 5a34775ded0d577c19911b83ea61884c files/digest-libkudzu-1.1.62 65
 MD5 04eb5ef4b3ee508cd36744ff1f709b39 files/ppc.patch 274
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDPXYSKRy60XGEcJIRAsQdAJ9ntFaPJcVhFUvkb7ktIm0hapkz3QCfbaD3
-00bDKD/oaVApKazNm0/PHqI=
-=gABo
------END PGP SIGNATURE-----
