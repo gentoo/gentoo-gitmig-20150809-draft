@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 076507c9a013d95dcee3792b850313fd etherape-0.9.3.ebuild 1324
-MD5 98d4e2bc2ef606806bf07ee7f32625fc ChangeLog 4003
-MD5 d8307d213e01909e87c072d2b3e9450c metadata.xml 254
+MD5 1a92fdd553981eb21d883556b1b3d5d4 ChangeLog 4096
 MD5 055fd4a254cc6d675c0d168ebd8a1461 etherape-0.9.0.ebuild 1241
-MD5 e0c5c68b74ad90834cbdea3b792a19a4 files/etherape-0.9.1-fix-mkinstalldirs.diff 563
-MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.1-res_mkquery.patch 466
-MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.0-res_mkquery.patch 466
+MD5 71ae541d4558f880b2783e4c4a885ac3 etherape-0.9.3.ebuild 1321
 MD5 4ec4396b2bd551ad7dc1ddc3ca92a8e1 files/digest-etherape-0.9.0 66
-MD5 4c9a26055b22c23b639f1807cb0710f0 files/etherape-0.9.1-gcc4.diff 8075
-MD5 0015559610bab6a40691241598863f72 files/etherape-0.9.0-libpcap-include.patch 399
 MD5 76397dabeac22c60a8fc7400eab6a8e1 files/digest-etherape-0.9.3 66
+MD5 0015559610bab6a40691241598863f72 files/etherape-0.9.0-libpcap-include.patch 399
+MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.0-res_mkquery.patch 466
+MD5 e0c5c68b74ad90834cbdea3b792a19a4 files/etherape-0.9.1-fix-mkinstalldirs.diff 563
+MD5 4c9a26055b22c23b639f1807cb0710f0 files/etherape-0.9.1-gcc4.diff 8075
+MD5 878e13dfd52ac79ec511a2ff1d259b73 files/etherape-0.9.1-res_mkquery.patch 466
 MD5 5ce49da683534b84b59d34525deb611b files/etherape-0.9.3-res_mkquery.patch 620
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDPXdzKRy60XGEcJIRAgyTAJ9jrvtv7LxThnKASN2Ce8Uq0EO2BgCfXILB
-CxkoxroaAAdAvQmNDRZymm4=
-=tK+O
------END PGP SIGNATURE-----
+MD5 d8307d213e01909e87c072d2b3e9450c metadata.xml 254
