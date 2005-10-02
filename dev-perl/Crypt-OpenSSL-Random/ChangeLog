@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Random
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.13 2005/08/25 22:48:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.14 2005/10/02 12:31:53 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  Crypt-OpenSSL-Random-0.03-r2.ebuild:
+  Mark 0.03-r2 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   Crypt-OpenSSL-Random-0.03-r2.ebuild:
