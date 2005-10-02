@@ -1,24 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8cef90196c47124526c5ec05425457c9 ChangeLog 9265
+MD5 4d076ac79c3676eb22d02357791ead84 cfengine-2.1.16.ebuild 2249
+MD5 78ca953228396511baf3f7ccef97fe27 metadata.xml 984
 MD5 c116a9798a497778b145ee38980692a1 cfengine-2.1.14-r1.ebuild 2256
-MD5 7b6935177932b682ae3a53cd2e6a9cc3 metadata.xml 977
 MD5 55b5cd09421554e49815035eda48164c cfengine-2.1.15-r1.ebuild 2250
-MD5 0fc2e52b014b73ecd1ecf09bac0aba53 cfengine-2.1.14.ebuild 2063
-MD5 047b3a63d198f4bf3902d25b49896cef cfengine-2.1.13.ebuild 2062
-MD5 c18fb5ce7e2a5e8bc526c88ae3904305 ChangeLog 8940
-MD5 a9aa786ac4c8e32d55d8469af8ddf29b files/cfengine-2.1.10-setnetgrent.patch 1037
-MD5 815d5e5ddde6c8fda9da1dbd529181aa files/digest-cfengine-2.1.14 68
-MD5 e34708413b735ba7b5402ee47b2bb62d files/digest-cfengine-2.1.13 68
+MD5 f4fe82c710efac73c0895ad268c54196 files/cfportage.README 2294
 MD5 ade9e66709bdb04df3f0beba72f3a008 files/module-cfportage.tbz2 3099
+MD5 d07b5988a1635858506b57b2350b5f02 files/digest-cfengine-2.1.16 68
 MD5 f1a9344587920c108d487766f61e90cf files/cfservd.rc6 259
 MD5 815d5e5ddde6c8fda9da1dbd529181aa files/digest-cfengine-2.1.14-r1 68
-MD5 f4fe82c710efac73c0895ad268c54196 files/cfportage.README 2294
 MD5 1781d04ce20330f0e9b266753eff4c91 files/digest-cfengine-2.1.15-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC8qUgIKl8Uu19MoRAq5EAJ45xP+/l9JKyLzrPBGKo+JJMEXMygCfQNOy
-6W/+2nYhWbHYgvwPsimiYhY=
-=SKbb
------END PGP SIGNATURE-----
