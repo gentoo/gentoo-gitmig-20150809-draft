@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.67 2005/09/15 11:45:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.68 2005/10/02 08:54:40 hardave Exp $
+
+  02 Oct 2005; Hardave Riar <hardave@gentoo.org>
+  gst-plugins-mad-0.8.10.ebuild, gst-plugins-mad-0.8.11.ebuild:
+  Keyworded ~mips.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   gst-plugins-mad-0.8.10.ebuild:
