@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 556e8a2cb080ad72e497fef1cbc871c9 bugzilla-2.18.4.ebuild 1786
-MD5 78e27654d12a7a46a21fb069b1bd6de7 bugzilla-2.20.ebuild 1845
+MD5 959ebeef024854bb61c9b32a42d88db2 ChangeLog 9053
 MD5 246d31921cf90d0d24d5bad6f35e9a9b bugzilla-2.18.3.ebuild 1781
-MD5 560866a1dd0de5bd6999308bfcc05b4b ChangeLog 8936
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 24f132ccd4b11bb49c26326fd0584f4c files/digest-bugzilla-2.20 66
-MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
-MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
-MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18/bugzilla.cron.tab 54
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
+MD5 9d9467020784101816ba8a25e485cc74 bugzilla-2.18.4.ebuild 1787
+MD5 78e27654d12a7a46a21fb069b1bd6de7 bugzilla-2.20.ebuild 1845
 MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
+MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18/bugzilla.cron.tab 54
 MD5 5d26668841a63cf6ba69e8f191a5c50a files/2.18/reconfig 3661
+MD5 42151252d49e42c9839f80c80dff9138 files/2.20/apache.htaccess 94
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
 MD5 ec5f3f87022982a0f130cf592c0c9d83 files/2.20/postinstall-en.txt 122
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
-MD5 42151252d49e42c9839f80c80dff9138 files/2.20/apache.htaccess 94
 MD5 0def7ca5b4d3ddd839e4663c5d784380 files/2.20/reconfig 5004
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDPrLTEzitwsaoONoRAlg/AKCcAcGS8agvLP2jF3MmNzxK64ebqwCgrKOV
-we2R3CM5zQOmWJzAgmYadbc=
-=BDeo
------END PGP SIGNATURE-----
+MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
+MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
+MD5 24f132ccd4b11bb49c26326fd0584f4c files/digest-bugzilla-2.20 66
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161

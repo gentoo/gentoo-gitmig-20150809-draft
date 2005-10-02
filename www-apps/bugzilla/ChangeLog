@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.37 2005/10/01 16:00:59 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.38 2005/10/02 12:26:41 hansmi Exp $
+
+  02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  bugzilla-2.18.4.ebuild:
+  Stable on ppc. See bug #107796.
 
 *bugzilla-2.20 (01 Oct 2005)
 *bugzilla-2.18.4 (01 Oct 2005)
