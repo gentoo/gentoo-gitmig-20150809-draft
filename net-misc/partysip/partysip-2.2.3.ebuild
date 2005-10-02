@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.2.3.ebuild,v 1.2 2005/07/18 11:51:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/partysip/partysip-2.2.3.ebuild,v 1.3 2005/10/02 18:00:09 stkn Exp $
 
 IUSE="berkdb debug syslog"
 
@@ -24,6 +24,12 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.diff
+
+	# fix libresolv check in configure.in (#107885)
+	# instead of res_query, we search for the real (internal)
+	# function name __res_query, because res_query isn't in the symbol
+	# list of libresolv on amd64
+	epatch ${FILESDIR}/${P}-libresolv-check.diff
 
 	# put partysip  binary into /usr/sbin
 	sed -i -e "s:^bin_PROGRAMS:sbin_PROGRAMS:" \
