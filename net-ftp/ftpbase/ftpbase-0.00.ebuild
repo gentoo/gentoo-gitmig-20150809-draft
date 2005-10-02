@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.10 2005/09/04 06:06:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.11 2005/10/02 23:01:56 matsuu Exp $
 
 inherit eutils pam
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="pam"
 
 DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.8 2005/08/23 13:26:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.9 2005/10/02 23:01:56 matsuu Exp $
+
+  02 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> ftpbase-0.00.ebuild:
+  Stable on sh.
 
   23 Aug 2005; Roy Marples <uberlord@gentoo.org> ftpbase-0.00.ebuild:
   Changed default shell from /bin/false to -1 so enewuser can pick the

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.3-r1.ebuild,v 1.9 2005/09/19 11:46:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.3-r1.ebuild,v 1.10 2005/10/02 23:02:59 matsuu Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="pam tcpd ssl selinux xinetd"
 
 DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
