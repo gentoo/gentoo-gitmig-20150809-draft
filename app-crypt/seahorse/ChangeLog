@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.44 2005/09/27 13:04:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.45 2005/10/02 04:06:26 weeve Exp $
+
+  02 Oct 2005; Jason Wever <weeve@gentoo.org> seahorse-0.7.8.ebuild:
+  Stable on SPARC.
 
   27 Sep 2005; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.8.ebuild:
   ppc stable
