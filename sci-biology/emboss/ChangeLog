@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.19 2005/09/24 08:56:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.20 2005/10/02 17:30:43 hansmi Exp $
+
+  02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> emboss-3.0.0.ebuild:
+  Stable on ppc.
 
   24 Sep 2005; Markus Rothe <corsair@gentoo.org> emboss-3.0.0.ebuild:
   Stable on ppc64
