@@ -1,6 +1,14 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.93 2005/09/30 03:27:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.94 2005/10/02 15:04:48 azarah Exp $
+
+*mozilla-firefox-1.0.7-r3 (02 Oct 2005)
+
+  02 Oct 2005; Martin Schlemmer <azarah@gentoo.org> +files/firefox.1,
+  files/icon/mozillafirefox.desktop, +mozilla-firefox-1.0.7-r3.ebuild:
+  Fix default theme not being listed in theme manager, bug #107660.  Filter
+  flags for SSP, as firefox at least do not seem to work with it, bug #96869.
+  Add MIME types associations, bug #107491.  Add manpage, bug #107493.
 
   30 Sep 2005; Martin Schlemmer <azarah@gentoo.org>
   mozilla-firefox-1.0.7-r2.ebuild:
