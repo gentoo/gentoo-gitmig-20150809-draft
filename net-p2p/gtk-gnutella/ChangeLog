@@ -1,10 +1,15 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.51 2005/09/21 12:04:18 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.52 2005/10/02 14:54:20 mkay Exp $
 
   21 Sep 2005; <mkay@gentoo.org> -gtk-gnutella-0.93.3.ebuild,
   -gtk-gnutella-0.94.ebuild, -gtk-gnutella-0.95.3.ebuild:
   Removing old versions
+
+*gtk-gnutella-0.95.4-r1 (20 Sep 2005)
+
+  20 Oct 2005; <mkay@gentoo.org> +gtk-gnutella-0.95.4:
+  New revision bump without gtk2 flag
 
   13 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-gnutella-0.95.4.ebuild:
