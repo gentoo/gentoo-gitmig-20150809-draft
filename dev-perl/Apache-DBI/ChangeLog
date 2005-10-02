@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.22 2005/08/25 22:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.23 2005/10/02 11:59:02 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Apache-DBI-0.94.ebuild:
+  Mark 0.94 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Apache-DBI-0.94.ebuild:
   add ~ia64
