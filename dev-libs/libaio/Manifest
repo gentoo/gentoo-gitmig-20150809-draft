@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a2ab6b08b0c0abf362ad1c3f8390cbbf ChangeLog 1125
+MD5 29e53943085f389f153bbadeb849ecee libaio-0.3.15.ebuild 909
 MD5 08aeb8a15f772dfe8e124e6ea138ddef libaio-0.3.92.ebuild 649
-MD5 5c41d1839a1950521d31f3222fd21567 ChangeLog 1021
-MD5 860857b3ff483b8746769ef8428bf70d libaio-0.3.15.ebuild 908
 MD5 9ab89b277f4e93b87b8a50f7c524b0d9 files/digest-libaio-0.3.15 71
+MD5 da0b52d4053e3f897aa738e9adeee32b files/libaio-0.3.15-more-arches.patch 1649
 MD5 7991c55ade205cb4de301576e8b4b524 files/libaio-0.3.15-2.5-2-Makefile.patch 430
 MD5 79f7b9e04e046cf3a0b7594f26eee18a files/digest-libaio-0.3.92 65
-MD5 da0b52d4053e3f897aa738e9adeee32b files/libaio-0.3.15-more-arches.patch 1649
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDC9a7gIKl8Uu19MoRAtLnAJ0bKTpuPhgbY3nwkOHdrDKx4KWkJQCdEiaO
-iew/OuntbD1e+lwcrc3knSA=
-=VkKW
------END PGP SIGNATURE-----

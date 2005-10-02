@@ -1,5 +1,5 @@
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 c077ee811f3e7d89c7448017d8a02bb7 ChangeLog 1197
-MD5 ea0d45d1643f8483cdd4147a0270ed47 confuse-2.5.ebuild 1322
+MD5 f1a0c67d9f1d9e96b3ad33091c993dfa ChangeLog 1296
+MD5 3bcc746aa30ffa15cdb31bf293c35722 confuse-2.5.ebuild 1321
 MD5 52586bc716a63758a26e05b633a2bab0 files/digest-confuse-2.5 63
 MD5 e63af9d342810c6b32080c4d5c4a5456 files/confuse-2.5-maketest.patch 581
