@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/wx4j
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wx4j/ChangeLog,v 1.1 2005/04/17 15:32:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wx4j/ChangeLog,v 1.2 2005/10/02 15:07:14 betelgeuse Exp $
+
+  02 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  wx4j-0.2.0.ebuild:
+  wx4j now always uses gtk+-2 because of bug #106560. Added a longdescription
+  to metadata.xml.
 
 *wx4j-0.2.0 (17 Apr 2005)
 
