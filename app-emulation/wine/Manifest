@@ -8,8 +8,8 @@ MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 6c66896742c41611bc3b57a9931fdf67 wine-20050419.ebuild 3764
 MD5 9dc47b39e00bea2064474e3afe52aa1e wine-20050628.ebuild 3828
 MD5 f1be5e15e0d156796ad3bc9d54271d84 wine-20050725-r1.ebuild 3829
-MD5 a8557f5b07b720dfb156f46c8e30b24b wine-20041019-r3.ebuild 3019
-MD5 ac6603333fc05e821a531feed116e2c9 ChangeLog 19184
+MD5 e459abd4e5de2e549b1d93de6cb16dcf wine-20041019-r3.ebuild 3074
+MD5 aa7ef64424dd15bbbac6b41ae6cc12b3 ChangeLog 19324
 MD5 0aea125fe95aaead526e5a92213fa33a wine-20050524.ebuild 3826
 MD5 a88b1c3805433fbd7138fd2ff24da76b wine-20050830.ebuild 3815
 MD5 5bf58e79f25d01b2d0ee60629ec13065 wine-20050310-r1.ebuild 3829
@@ -33,11 +33,12 @@ MD5 c8ec4d9cf45eb34d587a17129ab09fb9 files/digest-wine-20050830 67
 MD5 8eeac00eaf290def7bac0e2c3b479ea6 files/wine-20050830-no-ldap.patch 3994
 MD5 cf49af131a341a471a493cd0d5693fd2 files/digest-wine-20050930 67
 MD5 1668a758aa2007cb99a773b3c5c844c9 files/winearts-kdecvs-fix.patch 325
+MD5 138d22e6669e8997cdf4dc6292db748d files/wine-20041019-alsa-headers.patch 448
 MD5 45243901331840c35f12426a17b31bd2 files/wine-20050310-upstream-colortable.patch 1546
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPd0cgIKl8Uu19MoRAq80AJ94jGKnDzquvv153AJOunhNyR+nbQCfeHCU
-3/qdvr4tR5LoqXtwWxsFA2Q=
-=xGiI
+iD8DBQFDP1OVgIKl8Uu19MoRAsQiAJ9CJar3IoWy42bqQKkgtMQ+ML3oSwCfVuqk
+W3QqNgBEcWMKYRVFFPxkHuw=
+=dGo5
 -----END PGP SIGNATURE-----
