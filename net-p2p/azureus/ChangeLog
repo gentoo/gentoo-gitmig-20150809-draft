@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.4 2005/05/12 07:06:49 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.5 2005/10/02 23:34:04 mkay Exp $
+
+*azureus-2.3.0.4 (02 Oct 2005)
+
+  02 Oct 2005; <mkay@gentoo.org> +files/azureus-gentoo-2.3.0.4.sh,
+  +files/UpdaterPatcher.java, +azureus-2.3.0.4.ebuild:
+  version bump
 
   12 May 2005; Jochen Maes <sejo@gentoo.org> azureus-2.2.0.0-r1.ebuild:
   added an ewarn about not using it as root
