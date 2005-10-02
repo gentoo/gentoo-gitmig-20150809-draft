@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 159e3db7f360180ec61aa21b2ff7e5df ChangeLog 1166
-MD5 6e812d783d3d129087b46f6fc04118d9 files/1.0-r1/27_mod_tcl.conf 198
-MD5 cbffddf639b56fd470943100478e18dc files/27_mod_tcl.conf 203
-MD5 289c346a0106a5488604599fd5e91ae6 files/digest-mod_tcl-1.0 63
-MD5 289c346a0106a5488604599fd5e91ae6 files/digest-mod_tcl-1.0-r1 63
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 eefb60577a66f3f6d59c84cac327fc27 mod_tcl-1.0-r1.ebuild 748
 MD5 ebac5463ac6a8f731d66cbbcf8847a0b mod_tcl-1.0.ebuild 835
+MD5 efa1256cc80c5f680ebbc4f7015255be mod_tcl-1.0-r1.ebuild 746
+MD5 bd1298279708c029a7803d9ebdb84b55 ChangeLog 1274
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 289c346a0106a5488604599fd5e91ae6 files/digest-mod_tcl-1.0 63
+MD5 cbffddf639b56fd470943100478e18dc files/27_mod_tcl.conf 203
+MD5 289c346a0106a5488604599fd5e91ae6 files/digest-mod_tcl-1.0-r1 63
+MD5 6e812d783d3d129087b46f6fc04118d9 files/1.0-r1/27_mod_tcl.conf 198
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0G5jI1lqEGTUzyQRAmuXAKCE3bF5fFGCfR9POg7ziVNAG1Z5xACdH8Cn
-Q+abf3NJD0u7AGZ4cURprzQ=
-=ea0I
+iD8DBQFDQDMJQlM6RnzZP+IRAq6rAKCLbvQ1UnzGxZhGRLTIgOmL2htLkgCgg1dg
+ig6T3mqGEZI41mlNhFkv0os=
+=+XOq
 -----END PGP SIGNATURE-----
