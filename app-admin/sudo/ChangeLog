@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.80 2005/10/02 11:24:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.81 2005/10/02 18:40:41 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> sudo-1.6.8_p9-r2.ebuild:
+  Mark 1.6.8_p9-r2 stable on alpha
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> sudo-1.6.8_p9-r2.ebuild:
   Mark 1.6.8_p9-r2 stable on ia64
