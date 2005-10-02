@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.8 2005/09/29 01:27:55 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.9 2005/10/02 05:05:16 matsuu Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixodbc.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ~ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ~ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="qt gnome"
 
 DEPEND="virtual/libc
