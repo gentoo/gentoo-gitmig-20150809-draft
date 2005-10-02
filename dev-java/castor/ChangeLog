@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.12 2005/09/11 12:01:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.13 2005/10/02 19:17:52 betelgeuse Exp $
+
+*castor-0.9.7 (18 Sep 2005)
+
+  18 Sep 2005; Petteri Räty <betelgeuse@gentoo.org> +castor-0.9.7.ebuild:
+  Version bump. Fixes bug #105577. Thanks to <wiktorw@people.pl> and Josh
+  Nichols <nichoj@alum.rpi.edu>.
 
   11 Sep 2005; Petteri Räty <betelgeuse@gentoo.org>
   castor-0.9.5.3-r1.ebuild:

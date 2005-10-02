@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 a60f8a28c39620e66f235ba6479a35b5 castor-0.9.5.3-r1.ebuild 1866
-MD5 1c04bd25408f6371c7af9fba486d0a6d ChangeLog 1863
+MD5 33760acddb1652153ce36f9bdd79022c castor-0.9.7.ebuild 1976
+MD5 86972bfdcd4c91007064a34498975826 ChangeLog 2075
 MD5 774373e19c9c08854e8d705a1756afbb metadata.xml 416
 MD5 a07a47cbd64524563caccf7a0f649553 files/0.9.5.3-jikes.patch 1316
+MD5 21050c5d30ff492f6d2bedc47492a19c files/digest-castor-0.9.7 66
 MD5 925da383ab0658b27587273d0f315f06 files/build-xml.patch 2859
 MD5 943c414729ed76f67dc46a6373bd6094 files/digest-castor-0.9.5.3-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJBynQiJ/wx066S4RAkwEAJ9a0FokUvlH6oK0aXrn8hapiRgtEQCfXtmu
-Zs/C7sxeXcPEP5xzG6/s9S0=
-=GukL
+iD8DBQFDQDKDQiJ/wx066S4RAsqhAJ9RHt6ZkTDNUQ5E9lItHBllpmeinQCeLCgx
+3PN5R9CzLrO+ywgdmcgaISM=
+=RRVd
 -----END PGP SIGNATURE-----
