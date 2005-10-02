@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f4e385d9e30335ee38373e36b4e3dd6a ChangeLog 1043
-MD5 30f47a9dba2f856ad9417d09cb583284 licq-themes-0.0.1.ebuild 2982
+MD5 99480f8ac0f0cc4703c96f0224ffe7f4 licq-themes-0.0.1.ebuild 2980
+MD5 f0215f71eac9072fdec4735a86f39e8c ChangeLog 1147
 MD5 54b15ff4d12312cc29beafa87a922f73 files/digest-licq-themes-0.0.1 3422
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGEy6j5H05b2HAEkRAnhFAKCQYAyTIcn97QMj/g+622QPnfGQAQCfQM04
-qrXXv9pBuDqZ81MjanWpx4g=
-=ddhi
------END PGP SIGNATURE-----
