@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.5.0_pre20050626.ebuild,v 1.2 2005/08/24 00:22:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.5.0_pre20050626.ebuild,v 1.3 2005/10/02 08:24:02 vapier Exp $
 
 inherit eutils games rpm
 
@@ -11,7 +11,7 @@ SRC_URI="http://zerowing.idsoftware.com/files/radiant/nightly/${PV:0:3}/gtkradia
 
 LICENSE="qeradiant"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 RDEPEND="media-libs/libpng

@@ -1,16 +1,26 @@
-MD5 2646406ba6dc1fc4537194717d43c1dc gtkradiant-1.3.12.ebuild 1310
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f1130b9e4aa1a279e80ccdaea71c8a1d gtkradiant-1.5.0_pre20041205.ebuild 1010
-MD5 ed6aeb4e5884d8cb72305a557de98d23 gtkradiant-1.5.0_pre20050626.ebuild 1016
+MD5 9c392282a19df0c12b6a15150c130f81 metadata.xml 538
+MD5 8c63c0c9bc64351105ede596804f857e gtkradiant-1.5.0_pre20050626.ebuild 1010
+MD5 2646406ba6dc1fc4537194717d43c1dc gtkradiant-1.3.12.ebuild 1310
 MD5 edf3fc969333a4551fb2cf5c5a9abf40 gtkradiant-1.4.0.ebuild 1644
 MD5 a1cad01766f358bddb0c33f3e49253ef ChangeLog 1487
-MD5 9c392282a19df0c12b6a15150c130f81 metadata.xml 538
-MD5 78012ad36011d8cf41354d509bcf5faa files/radiant 137
 MD5 0dce3f3cf6514f0ba360faebf7f0329d files/q2.game 315
 MD5 f387ea4ffe33d6456f53c5a65e10e597 files/q3.game 321
-MD5 2a27da1131c5916209d6c9381c06d182 files/wolf.game 318
 MD5 3633c9d3f6ed52242495709273e66209 files/et.game 328
-MD5 e87d17f38772a874e6484462e0ce092e files/q3map2 136
-MD5 031d93d17697b6512404b8a7e3a5006e files/digest-gtkradiant-1.3.12 71
-MD5 d05f4e65ce265d106f0112ea0765627b files/digest-gtkradiant-1.5.0_pre20041205 82
-MD5 00d19c37fed45188e1c911e2b5b4a588 files/digest-gtkradiant-1.5.0_pre20050626 82
 MD5 68a371cbed93f7eaa0ea5d87c2c14d81 files/digest-gtkradiant-1.4.0 70
+MD5 78012ad36011d8cf41354d509bcf5faa files/radiant 137
+MD5 d05f4e65ce265d106f0112ea0765627b files/digest-gtkradiant-1.5.0_pre20041205 82
+MD5 031d93d17697b6512404b8a7e3a5006e files/digest-gtkradiant-1.3.12 71
+MD5 2a27da1131c5916209d6c9381c06d182 files/wolf.game 318
+MD5 e87d17f38772a874e6484462e0ce092e files/q3map2 136
+MD5 00d19c37fed45188e1c911e2b5b4a588 files/digest-gtkradiant-1.5.0_pre20050626 82
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDP5l2gIKl8Uu19MoRAg6TAJ97z4bx8Q00He5e2WWiPyhDRy9NiACeNGNO
+t1nWYWJPFrM21hvw/FbLJ1Y=
+=/tYf
+-----END PGP SIGNATURE-----
