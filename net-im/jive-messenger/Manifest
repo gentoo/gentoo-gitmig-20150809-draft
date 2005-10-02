@@ -1,5 +1,15 @@
-MD5 6a818545f39f5ec78a8cf908489656ce jive-messenger-2.2.0.ebuild 1003
-MD5 2fc75871248cb26fc4d7f15eac7db26b ChangeLog 658
-MD5 8dc250b7b8a82d02968621fefb2d60f8 metadata.xml 475
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57be2a73f635865b401d8d3c35f3b7b4 ChangeLog 846
 MD5 ca570b000e9e9bba05102063a0157e58 files/digest-jive-messenger-2.2.0 77
 MD5 5681dff03e260f1ec3890daf6e14199b files/init.d/jive 801
+MD5 65e9a3fc50bf1bcc923bb66012d4763b jive-messenger-2.2.0.ebuild 992
+MD5 8dc250b7b8a82d02968621fefb2d60f8 metadata.xml 475
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDP/Uaj5H05b2HAEkRArh5AJ4hz50dZ9PrCCcXF8mubkeiD7D3mgCfcEQR
+yrt+5oVuj3asUgWrAr6+eTw=
+=y6dv
+-----END PGP SIGNATURE-----
