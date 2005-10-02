@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.10.ebuild,v 1.3 2005/09/29 02:29:46 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.10.ebuild,v 1.4 2005/10/02 11:55:57 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libdnet/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~hppa ~ia64 ~amd64"
+KEYWORDS="~amd64 ~hppa ia64 ~ppc ~sparc x86"
 IUSE="python"
 
 src_unpack() {
