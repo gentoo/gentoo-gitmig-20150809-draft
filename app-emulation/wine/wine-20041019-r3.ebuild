@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.16 2005/08/23 01:13:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20041019-r3.ebuild,v 1.17 2005/10/02 03:24:58 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,6 +37,7 @@ src_unpack() {
 	unpack Wine-${PV}.tar.gz
 
 	cd "${S}"
+	epatch "${FILESDIR}"/wine-20041019-alsa-headers.patch
 	epatch "${FILESDIR}"/wine-20050524-alsa-headers.patch
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in

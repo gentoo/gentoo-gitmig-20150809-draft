@@ -1,3 +1,5 @@
+http://bugs.gentoo.org/107822
+
 --- wine-20041019/dlls/winmm/winealsa/audio_05.c
 +++ wine-20041019/dlls/winmm/winealsa/audio_05.c
 @@ -39,6 +39,7 @@
