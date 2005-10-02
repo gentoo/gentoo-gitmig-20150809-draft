@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c0ac656ff758ea31e9b1d62df9b8c7d fetchyahoo-2.9.0.ebuild 1066
+MD5 5876804d453085d270e6835e3cc5c9a9 ChangeLog 4008
 MD5 92b293a32e03335e0bfb854612ecdfca fetchyahoo-2.8.6.ebuild 1065
 MD5 f3c306497efb1c533e956cf26288d0c1 fetchyahoo-2.8.8.ebuild 1067
-MD5 284832a12d8021259779bd2a7b2fd1ee ChangeLog 3908
-MD5 3d496e6508901dc733aa1f375a56d5b7 metadata.xml 221
+MD5 66acb110cfa53e7313d1ed298f6e9824 fetchyahoo-2.9.0.ebuild 1066
 MD5 0ec155ebf2f1c66863228215d227313a files/digest-fetchyahoo-2.8.6 67
 MD5 2ca80fdebad2e46631be1bf3373ef097 files/digest-fetchyahoo-2.8.8 67
 MD5 3ed80274a18f1985bf4a7b1e987826d5 files/digest-fetchyahoo-2.9.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDN7TKQlM6RnzZP+IRAmD1AJ98i1YwIhZVMuuZMS5QsdGFLn8pMQCeMKt4
-ATCM8x2VWglh/eMcbASApa0=
-=UZwq
------END PGP SIGNATURE-----
+MD5 3d496e6508901dc733aa1f375a56d5b7 metadata.xml 221
