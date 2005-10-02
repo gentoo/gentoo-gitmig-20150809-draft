@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.12.ebuild,v 1.3 2005/04/03 01:34:17 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/cooledit-3.17.12.ebuild,v 1.4 2005/10/02 20:14:03 grobian Exp $
 
 IUSE="nls spell"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/cooledit/"
 SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~ppc-macos ~x86"
 DEPEND="virtual/x11
 	spell? ( app-text/ispell )"
 
