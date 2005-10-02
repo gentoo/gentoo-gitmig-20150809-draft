@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Lite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.11 2005/08/25 23:27:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.12 2005/10/02 12:55:58 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> MIME-Lite-3.01.ebuild:
+  Mark 3.01 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> MIME-Lite-3.01.ebuild:
   add ~ia64
