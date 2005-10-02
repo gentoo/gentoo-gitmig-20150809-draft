@@ -1,12 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc2.ebuild,v 1.1 2005/10/02 07:11:55 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc3.ebuild,v 1.1 2005/10/02 15:15:54 jstubbs Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
+#SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://gentoo/portage-2.0.53_rc2.tar.bz2 http://dev.gentoo.org/~jstubbs/releases/portage-2.0.53_rc2.tar.bz2"
 LICENSE="GPL-2"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -16,11 +17,13 @@ IUSE="build selinux"
 DEPEND=">=dev-lang/python-2.2.1"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !ppc-macos? ( sys-apps/sandbox ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
 
-S=${WORKDIR}/${PN}-${PV}
+S=${WORKDIR}/portage-2.0.53_rc2
 
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	patch -p1 -s < ${FILESDIR}/2.0.53_rc2-to-rc3.patch
 }
 
 src_compile() {
@@ -56,7 +59,6 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	Removing until next rc as the compile script points to python-2.2
 	if ! use ppc-macos; then
 		cd "${S}"/src/python-missingos
 		./setup.py install --root ${D} || die "Failed to install missingos module"
