@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65a0c4ac5f9d2d7a70f477edc7300fe6 happydoc-2.0.1.ebuild 778
-MD5 5dce7fde69989cd089fbf80d6136a855 happydoc-2.1.ebuild 935
-MD5 83513a39a165a660958b45b9c032ff33 ChangeLog 1617
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 500298b4bf1a8ff17fb488d4c5b9d3b7 ChangeLog 1719
+MD5 65a0c4ac5f9d2d7a70f477edc7300fe6 happydoc-2.0.1.ebuild 778
+MD5 74e727c0353dbc9c5a982bbd6bcebc5d happydoc-2.1.ebuild 938
 MD5 ff94dd4cc18291ab80ea2ecbdf87538f files/digest-happydoc-2.0.1 67
 MD5 c59f336e6e9e7950b97b32aa34f59d69 files/digest-happydoc-2.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJ0YromPajV0RnrERAiv+AJ9ClSsvrKKHIEobSe2XkR3uY89OSgCfQb0s
-WDaDIW5ruDM3pya23Tx+ciY=
-=48Cm
------END PGP SIGNATURE-----
