@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 36cce25455b74386d084d7b4dbeccdd2 mathomatic-12.4.11-r1.ebuild 968
 MD5 f38bccf593e0f1fb97f5b13047bdd99e mathomatic-12.4.5.ebuild 942
 MD5 3bcddd67111a9ae99e5f5e2bd8533332 mathomatic-12.4.11.ebuild 940
-MD5 17680c528466a8822429ef8bb61fdde3 ChangeLog 2184
+MD5 99ae28b30a872b10b18470d87369517a ChangeLog 2352
 MD5 ee7955cc2715e3bac994bb045163c8b1 metadata.xml 479
 MD5 32a964754f69321292b8d2b29b2d89c0 files/digest-mathomatic-12.4.5 66
+MD5 bf6afb923996c68d8e305c5a2124a6e5 files/digest-mathomatic-12.4.11-r1 67
 MD5 bf6afb923996c68d8e305c5a2124a6e5 files/digest-mathomatic-12.4.11 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDM0+1ntT9W3vfTuoRAoPMAJ0biHSWkrIdZcst8wsM8YrxTE5w9wCfZIEw
-h6eBowo2r4GfXjJ9nvqh5vw=
-=GTZh
------END PGP SIGNATURE-----
