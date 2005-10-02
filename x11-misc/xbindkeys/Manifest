@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5511208c811d75ae18b9223e20fccda6 ChangeLog 3419
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 959a3b4fb3b577bded8209e6c25fbd48 xbindkeys-1.7.2.ebuild 825
-MD5 6e1a93329ef0fbc3f32f2d8890a01317 xbindkeys-1.7.1.ebuild 803
-MD5 41999710108548a1c0b5ef8c9cebaaaf files/digest-xbindkeys-1.7.2 67
+MD5 afeb215f634094b1f359d0943e009dd4 ChangeLog 3515
 MD5 2953176c07559b7f87b544fcf1578141 files/digest-xbindkeys-1.7.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDPCX8KRy60XGEcJIRAlFuAJ0TbHmYIE47Umave12F6iGq1DiFdQCdFhg+
-qrvhEqpVV8HYH+3q1Bu0Ydk=
-=VKWO
------END PGP SIGNATURE-----
+MD5 41999710108548a1c0b5ef8c9cebaaaf files/digest-xbindkeys-1.7.2 67
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 6e1a93329ef0fbc3f32f2d8890a01317 xbindkeys-1.7.1.ebuild 803
+MD5 ee41b4ecb70ead4e4170efc15d54ba6a xbindkeys-1.7.2.ebuild 822
