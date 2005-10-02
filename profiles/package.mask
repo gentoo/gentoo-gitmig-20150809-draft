@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4518 2005/10/01 23:45:56 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4519 2005/10/02 07:14:26 jstubbs Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,10 +35,6 @@ dev-java/eclipse-jface
 # Adding a package.mask to ensure a smoother transition to splitted 
 # ebuilds.
 >=net-wireless/linux-wlan-ng-0.2.2
-
-# Jason Stubbs <jstubbs@gentoo.org> (01 Oct 2005)
-# Masked for initial testing.
-=sys-apps/portage-2.0.53*
 
 # Ciaran McCreesh <ciaranm@gentoo.org> (29 Sep 2005)
 # Getting more and more broken with each release... Pending removal.
