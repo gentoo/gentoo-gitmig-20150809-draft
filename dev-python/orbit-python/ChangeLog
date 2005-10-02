@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/orbit-python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/ChangeLog,v 1.17 2005/08/26 03:32:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/ChangeLog,v 1.18 2005/10/02 14:12:35 agriffis Exp $
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  orbit-python-1.99.0-r1.ebuild:
+  Mark 1.99.0-r1 stable on ia64
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   orbit-python-1.99.0-r1.ebuild:
