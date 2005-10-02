@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/tkdvd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.4 2005/08/22 15:54:26 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.5 2005/10/02 18:40:44 metalgod Exp $
+
+*tkdvd-3.8.1 (02 Oct 2005)
+
+  02 Oct 2005; Luis Medinas <metalgod@gentoo.org> -tkdvd-3.4.ebuild,
+  -tkdvd-3.8.ebuild, +tkdvd-3.8.1.ebuild:
+  Version Bump Closes bug #107835. Removed old versions.
 
 *tkdvd-3.8 (22 Aug 2005)
 
