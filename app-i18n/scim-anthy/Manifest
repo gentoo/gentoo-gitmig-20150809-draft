@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 163f742393c67625e8551fe8491e8ecd scim-anthy-0.4.3.ebuild 1071
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 9ec9e4b3b28a5d811c37acdaf4eb28c2 ChangeLog 3055
-MD5 6ad66bf386e7914505042d28a869cf04 scim-anthy-0.6.1.ebuild 1023
-MD5 0f5e58dc6bc35a3c35f3896189d4cd9d scim-anthy-0.5.3.ebuild 1022
-MD5 00e2a0790970c869bdbff0ee0c22ee43 scim-anthy-0.7.0.ebuild 1050
+MD5 b05d811a72559c657ac395353c07038b ChangeLog 3155
 MD5 3f6fbdd8d7fb1233643d6a4b13c14dde files/digest-scim-anthy-0.4.3 68
-MD5 c37fbcc4207cabb9615761df5d84bdc3 files/digest-scim-anthy-0.6.1 68
 MD5 e7bf6c6ea71a0dadd1e3373bfeffb8dd files/digest-scim-anthy-0.5.3 68
+MD5 c37fbcc4207cabb9615761df5d84bdc3 files/digest-scim-anthy-0.6.1 68
 MD5 c81050d7a5d43e19b77fbc5a73ecf48e files/digest-scim-anthy-0.7.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDO5fV1u6irqznjogRAhj0AJ0YdQFiTfJIj3Ii1QWvpOwqN02TwwCbBIV1
-X4v3mfSmDk5Ts/7TCbvRPxo=
-=diZB
------END PGP SIGNATURE-----
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 163f742393c67625e8551fe8491e8ecd scim-anthy-0.4.3.ebuild 1071
+MD5 0f5e58dc6bc35a3c35f3896189d4cd9d scim-anthy-0.5.3.ebuild 1022
+MD5 a6c168fd7ae6e62ac8e3bedecce089e1 scim-anthy-0.6.1.ebuild 1023
+MD5 00e2a0790970c869bdbff0ee0c22ee43 scim-anthy-0.7.0.ebuild 1050
