@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.66 2005/09/30 21:25:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.67 2005/10/02 00:30:05 kloeri Exp $
+
+  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> texinfo-4.8-r1.ebuild:
+  Stable on ia64, bug 106105.
 
   30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> texinfo-4.8-r1.ebuild:
   Stable on sh wrt #106105.
