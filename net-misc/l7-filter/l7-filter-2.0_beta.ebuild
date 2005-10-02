@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.0_beta.ebuild,v 1.1 2005/09/24 23:26:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.0_beta.ebuild,v 1.2 2005/10/02 13:55:22 dragonheart Exp $
 
 inherit linux-info eutils
 
 MY_P=netfilter-layer7-v${PV/_/-}
 DESCRIPTION="Kernel modules for layer 7 iptables filtering"
 HOMEPAGE="http://l7-filter.sourceforge.net"
-SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
+	mirror://gentoo/additional_patch_for_2.6.13.diff"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -88,6 +89,12 @@ src_unpack() {
 	#patch the copied kernel source
 	cd ${S}/kernel
 	EPATCH_OPTS="-F 3" epatch "${S}/${PATCH}"
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=106009#c5
+	if kernel_is eq 2 6 12
+	then
+		epatch ${DISTDIR}/additional_patch_for_2.6.13.diff
+	fi
 }
 
 src_compile() {
@@ -114,6 +121,11 @@ pkg_prerm() {
 	then
 		einfo 'attempting to unpatch l7-patch from kernel'
 		which_patch
+		if kernel_is eq 2 6 12
+		then
+				patch -F 3 -d ${ROOT}/usr/src/linux -R -p1 \
+					<	${DISTDIR}/additional_patch_for_2.6.13.diff
+		fi
 		cd ${T}
 		unpack ${MY_P}.tar.gz
 		EPATCH_SINGLE_MSG="removing previous patch" \

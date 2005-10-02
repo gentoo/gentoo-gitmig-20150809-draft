@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.7 2005/09/17 09:17:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-1.4.ebuild,v 1.8 2005/10/02 13:55:22 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -8,7 +8,7 @@ MY_P=netfilter-layer7-v${PV}
 DESCRIPTION="Kernel modules for layer 7 iptables filtering"
 HOMEPAGE="http://l7-filter.sourceforge.net"
 SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
-	mirror://sourceforge/l7-filter/additional_patch_for_2.6.13.diff"
+	mirror://gentoo/additional_patch_for_2.6.13.diff"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc ~sparc x86"
