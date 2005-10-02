@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.24 2005/10/02 00:23:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.25 2005/10/02 04:27:27 dragonheart Exp $
+
+  02 Oct 2005; Daniel Black <dragonheart@gentoo.org> -cmake-2.0.5.ebuild,
+  -cmake-2.0.6.ebuild:
+  remove rpath vulnerable versions: bug 105721
 
   02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> cmake-2.0.6-r1.ebuild:
   Stable on ia64, bug 105721.
