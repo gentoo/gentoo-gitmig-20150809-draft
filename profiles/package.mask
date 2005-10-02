@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4522 2005/10/02 17:00:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4523 2005/10/02 19:31:50 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (02 Oct 2005)
+# This is a test version, unmask only after asking.
+=media-video/vlc-0.8.4_beta1
 
 # Petteri Räty <betelgeuse@gentoo.org> (02 Oct 2005)
 # Upstream is dead and does not compile against the latest swig.
