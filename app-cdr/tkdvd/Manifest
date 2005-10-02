@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e7543b42ba1aa3ff08fb8004e9b75ea7 ChangeLog 905
 MD5 d0eb51fbe8e05b6ee3ff2486ce2197a8 metadata.xml 166
 MD5 ff0446809621abf3510feef97de88a45 tkdvd-3.7.ebuild 908
 MD5 4c9ab6f68db5f4d7cddd49275a59e2d3 tkdvd-3.8.1.ebuild 910
 MD5 e6131fc63581a649363075e75325e067 files/digest-tkdvd-3.7 60
 MD5 fdb6740ac8b5ebad10f740f2ed7d0000 files/digest-tkdvd-3.8.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQE1wwUpWvClEHQoRAnYfAJsEb5gRHtDtVudklSOEy2cy3Ew/fQCdGVdI
+kkBYqZMCGkK66A21r/fdphM=
+=RFoQ
+-----END PGP SIGNATURE-----
