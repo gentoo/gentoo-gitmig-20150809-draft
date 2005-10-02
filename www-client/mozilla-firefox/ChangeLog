@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.94 2005/10/02 15:04:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.95 2005/10/02 19:51:54 azarah Exp $
+
+  02 Oct 2005; Martin Schlemmer <azarah@gentoo.org>
+  mozilla-firefox-1.0.7-r3.ebuild:
+  Fix flag replacement, bug #107917.
 
 *mozilla-firefox-1.0.7-r3 (02 Oct 2005)
 

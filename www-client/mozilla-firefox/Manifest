@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 27212c3bfc3d15dc4bb42454380c533b mozilla-firefox-1.0.6-r5.ebuild 9631
 MD5 7f073b544e7967d3453ab8579292ef3e mozilla-firefox-1.0.6-r4.ebuild 9543
-MD5 8ed924c1a96288fb9c96659318d13af7 mozilla-firefox-1.0.7-r3.ebuild 9328
-MD5 1238dfbe6e657a418a3c2efeddba608a ChangeLog 33443
+MD5 a3cec6a265f7dde388b8ada806f0b1e1 mozilla-firefox-1.0.7-r3.ebuild 9324
+MD5 29fcc59acb8b3fca8819b43fe02b20f6 ChangeLog 33568
 MD5 8a30120dc035d60c58db0a9dc8c3b91b mozilla-firefox-1.0.6-r7.ebuild 9771
 MD5 06023401dbf9f17149696616a240647d mozilla-firefox-1.0.6-r3.ebuild 9154
 MD5 6d3af6331c1b75d7991a5680fc9602c7 mozilla-firefox-1.0.6-r2.ebuild 8318
@@ -46,7 +46,7 @@ MD5 fc5e3a5d794abcb431bafdbc80c89103 files/icon/mozillafirefox.desktop 341
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDP/eZ1ZcsMnZjRyIRAud7AJ0S0TEbdJ/kqGfRGCqnr6CP0RSJZgCfX/Fk
-X4wYNzVWc40ZYckA6vawdOY=
-=71Na
+iD8DBQFDQDro1ZcsMnZjRyIRAs8aAKClDLBJRoCwCfJDOGG4M7cVqt55KwCeMwXR
+98bNGmceAOjGfavLdEW7O2g=
+=HL1B
 -----END PGP SIGNATURE-----
