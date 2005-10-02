@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.24 2005/09/24 13:41:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.25 2005/10/02 14:20:19 cryos Exp $
+
+*kdebase-kioslaves-3.4.2-r1 (02 Oct 2005)
+
+  02 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/kubuntu_23_hal_api.diff, +kdebase-kioslaves-3.4.2-r1.ebuild:
+  Applied kubuntu patch to kioslaves to allow it to work with the new
+  hal/dbus, bug 105553.
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kdebase-kioslaves-3.5_alpha1.ebuild:
