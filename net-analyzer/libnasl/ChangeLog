@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.63 2005/10/01 17:03:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.64 2005/10/02 17:26:07 hansmi Exp $
+
+  02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> libnasl-2.2.5.ebuild:
+  Stable on ppc.
 
   01 Oct 2005; Luis Medinas <metalgod@gentoo.org> libnasl-2.2.5.ebuild:
   Marked Stable on amd64.
