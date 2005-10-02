@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.162 2005/09/29 17:32:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.163 2005/10/02 00:54:19 kloeri Exp $
+
+  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> perl-5.8.7-r1.ebuild:
+  Stable on ia64, bug 106678.
 
   29 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> perl-5.8.6-r6.ebuild:
   Stable on mips for bug #106678.
