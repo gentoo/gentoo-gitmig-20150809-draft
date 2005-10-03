@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-bind
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bind/ChangeLog,v 1.1 2005/10/02 21:30:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bind/ChangeLog,v 1.2 2005/10/03 04:59:29 mkennedy Exp $
+
+  03 Oct 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-bind-0.1.0.ebuild:
+  Patch fix.
 
 *cl-bind-0.1.0 (02 Oct 2005)
 

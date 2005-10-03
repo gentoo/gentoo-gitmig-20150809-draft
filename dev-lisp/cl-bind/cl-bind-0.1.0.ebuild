@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bind/cl-bind-0.1.0.ebuild,v 1.1 2005/10/02 21:30:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-bind/cl-bind-0.1.0.ebuild,v 1.2 2005/10/03 04:59:29 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -16,15 +16,9 @@ DEPEND="dev-lisp/cl-plus"
 
 S=${WORKDIR}/
 
-CLPACKAGE=with
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${PV}-gentoo.patch
-}
+CLPACKAGE=bind
 
 src_install() {
-	common-lisp-install *.lisp ${FILESDIR}/with.asd
+	common-lisp-install *.{lisp,asd}
 	common-lisp-system-symlink
-	dodoc license.txt
 }
