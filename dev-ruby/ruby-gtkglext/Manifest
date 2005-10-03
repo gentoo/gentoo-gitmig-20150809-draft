@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e472a8f20747524a7a0463614032f63 ruby-gtkglext-0.12.0.ebuild 503
-MD5 44f3502a76a485937ec032f7c7c0ff79 ChangeLog 2105
 MD5 ddb39a7f7aa5cd266214cb65d567cd9e ruby-gtkglext-0.11.0.ebuild 503
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 c95992f6561478a6235168840ff6f8e3 ChangeLog 2209
+MD5 a95aa1bdbc0c3e39b2ff54fbe576ad4e ruby-gtkglext-0.12.0.ebuild 511
 MD5 81d6df26370a1b27b8b48d478365f645 ruby-gtkglext-0.10.1.ebuild 516
 MD5 c42ee800b41133877e25105be71a4382 files/digest-ruby-gtkglext-0.12.0 75
 MD5 becea4be55fd0a464b9eeaa7f3b09570 files/digest-ruby-gtkglext-0.11.0 75
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gtkglext-0.10.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxxxgKf2g/qXtneoRAmY5AJ4sdHZODzE/ynkaBbESRSrg18zffQCeP/Y7
-aBIGYu7rntEXkbpYpOfYN4c=
-=8pJe
------END PGP SIGNATURE-----
