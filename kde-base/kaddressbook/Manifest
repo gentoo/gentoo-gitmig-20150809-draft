@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ff7a8c6fe52db1b08751b7e62f398db ChangeLog 2885
-MD5 da836a591019f65ef3ef30a5676e7c10 kaddressbook-3.4.2.ebuild 1677
-MD5 79eb612ce6209c0c46ff2646b4c4fe71 kaddressbook-3.4.1.ebuild 1664
-MD5 d59a31b4628489b529944d9badbc5925 kaddressbook-3.5_beta1.ebuild 1593
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 da836a591019f65ef3ef30a5676e7c10 kaddressbook-3.4.2.ebuild 1677
+MD5 7545f34a5968ad396c6fbf231f81cccf ChangeLog 2991
+MD5 a8854f652d8134ae4f7015c69affd8ae kaddressbook-3.4.1.ebuild 1673
+MD5 d59a31b4628489b529944d9badbc5925 kaddressbook-3.5_beta1.ebuild 1593
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kaddressbook-3.4.1 208
 MD5 98742ffe69ec2a609069bb2804d85af8 files/configure-fix-kdepim-gnokii-3.4.patch 1965
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kaddressbook-3.4.2 282
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kaddressbook-3.5_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNU6Kj5H05b2HAEkRAvqHAJ0eJpydOsdfagi4WlW8Z+TzUTlG0wCgphe/
-cxw0qkPykomj7Kve2pZ0QcM=
-=K5n8
------END PGP SIGNATURE-----
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kaddressbook-3.4.2 282

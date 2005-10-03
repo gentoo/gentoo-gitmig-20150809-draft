@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9b30e8cadfc40206871c3b65b133bf4c ChangeLog 2673
-MD5 a22b16081decc9ed8e6039dd9392d13f kontact-3.4.1.ebuild 1039
-MD5 45fda1688a924c9135d95e7fa4efd73b kontact-3.5_beta1.ebuild 1028
-MD5 9dff7a48160f0e72f3b691d41cb5126b kontact-3.4.2.ebuild 1054
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-3.4.2 282
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kontact-3.5_beta1 68
+MD5 51ae6a01750a3f1d5c913f1ce2d1ca05 ChangeLog 2774
+MD5 bf6c02ee111ecd3a5d8af5991ac75f9d kontact-3.4.1.ebuild 1048
+MD5 9dff7a48160f0e72f3b691d41cb5126b kontact-3.4.2.ebuild 1054
+MD5 45fda1688a924c9135d95e7fa4efd73b kontact-3.5_beta1.ebuild 1028
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-3.4.1 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWqpj5H05b2HAEkRAj4OAJ0UdYnmvtrXeNgjOctL/+uIzCIfMQCfSx/X
-5xd0UI1MzxsJTSevoBTWPc0=
-=qAOt
------END PGP SIGNATURE-----
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kontact-3.5_beta1 68
+MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-3.4.2 282
