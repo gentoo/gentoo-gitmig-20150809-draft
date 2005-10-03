@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 4f4c339ba908e7ccd8da01a208345284 bmpx-0.11.5.1.ebuild 1701
 MD5 5faca21da0a7dfe8fce8bc986fd852ba bmpx-0.12_rc0.ebuild 1715
-MD5 6988eae09a0ec09f53be84ff29fa5369 ChangeLog 1114
+MD5 28be4824db8c412f733261ec3e400bbd ChangeLog 1235
+MD5 21eeb355b8b22577ff6cd345af4744c4 bmpx-0.12_rc1.ebuild 1698
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
+MD5 94e4107d5e7cc0d7ff964c94dc8962b9 files/digest-bmpx-0.12_rc1 66
 MD5 6eeeffaa4a16ed6e17c562695f23995e files/digest-bmpx-0.11.5.1 66
 MD5 33def4120663c577c8b19c32df95426a files/digest-bmpx-0.12_rc0 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQR3h1ZcsMnZjRyIRAh+qAJ0YcUoB9z8IdOMieHu0tnhbAM31vgCbBLOK
-FxzZcn8IKyXD3kieh5tC3Z0=
-=aMnZ
+iD8DBQFDQVwD1ZcsMnZjRyIRAphhAJ9p+KG3SIVC+sI46Kij9+uZwrnfbACgoqbE
+kGb0n/pQ/N/OYymIz3mFwec=
+=VR9q
 -----END PGP SIGNATURE-----
