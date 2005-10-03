@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c9614c46fd091af6c8d3ae084877152d ChangeLog 9708
+MD5 b410c188f75b54d246a320f53afb8c71 gnopernicus-0.11.7.ebuild 1126
 MD5 9c62d0c99ced71996c5ebac0e6956fc2 gnopernicus-0.10.9.ebuild 1194
 MD5 2bd8b2cae4ff1f77d73a72dc79ebc75d metadata.xml 728
-MD5 7103c097e0769864830105c800968e32 gnopernicus-0.11.6.ebuild 1165
-MD5 c6cc5b51207768c25d7e66d47a3811cc ChangeLog 9541
+MD5 aa1f70f09e748cdcca4a9ee3abc971f5 files/digest-gnopernicus-0.11.7 72
 MD5 6243a2f17f72037185664042ab0aab40 files/digest-gnopernicus-0.10.9 72
-MD5 4b842d2fd65a63bb6d836b9e64f37ae3 files/digest-gnopernicus-0.11.6 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK/MhKf2g/qXtneoRAiGcAJ9lzWamdha+3smejXROYfsVBkvhcACgjC32
-2I6YFm0fDs+worjZLvTYc2g=
-=Lo3t
------END PGP SIGNATURE-----

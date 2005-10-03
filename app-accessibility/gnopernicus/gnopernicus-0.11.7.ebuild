@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.11.6.ebuild,v 1.2 2005/09/12 02:29:50 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.11.7.ebuild,v 1.1 2005/10/03 02:45:53 leonardop Exp $
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Software tools for blind and visually impaired"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.baum.ro/gnopernicus.html"
 LICENSE="LGPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="brltty doc ipv6 static"
+IUSE="brltty doc ipv6"
 
 RDEPEND=">=gnome-base/gconf-2.6.1
 	>=dev-libs/popt-1.5
@@ -38,7 +38,6 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="$(use_enable ipv6) \
-		$(use_enable brltty) \
-		$(use_enable static)"
+		$(use_enable brltty)"
 }
 
