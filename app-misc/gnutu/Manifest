@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 56a793a056131dbf0e3295264e09bb38 metadata.xml 917
+MD5 a85fe0b49f1ce160ffd24ca625a91c83 ChangeLog 488
+MD5 0c4730a91f98230df3025101ba200eaa gnutu-2.0.ebuild 657
+MD5 e1a0556998298a15a6606a6323e6d9fa files/digest-gnutu-2.0 61
+MD5 51a34548e8077ad293b1da15422da2e7 files/gnutu-2.0-event.patch 384
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQSJZFdQwWVoAgN4RAhRdAKCvTgtJ8POYyt9eNR8T/IU6q4jYvwCfel6X
+1A9wC8SRoIuSuYCxr9CFk9Y=
+=F4Vl
+-----END PGP SIGNATURE-----
