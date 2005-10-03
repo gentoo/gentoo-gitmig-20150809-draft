@@ -1,4 +1,16 @@
-MD5 ca47f547f6755c86ed341c3f0e848095 ChangeLog 1071
-MD5 789bbd1bfd0651d6cfb843dc7ba4b626 integrit-3.02.00.ebuild 1294
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 6efef6ac06a89cc5472fcb54c189c8dc ChangeLog 1295
+MD5 2a19310db7695b0611790911c5990fbe integrit-3.05.ebuild 1269
+MD5 789bbd1bfd0651d6cfb843dc7ba4b626 integrit-3.02.00.ebuild 1294
+MD5 69ae97ff8d5f4dbc96a3f2e5d01247a5 files/digest-integrit-3.05 65
 MD5 f34f66e421072f0acbeb86d45edc4ff2 files/digest-integrit-3.02.00 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQRy9FdQwWVoAgN4RArO7AJ4yEnACRXL8ajggpcO0j4pK3DbQ7gCgt4OC
+Th7SI9fVhc7VgPPr7LB+Tfc=
+=0bWH
+-----END PGP SIGNATURE-----

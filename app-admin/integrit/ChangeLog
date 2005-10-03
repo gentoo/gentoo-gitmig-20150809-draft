@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/integrit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.12 2005/08/20 14:16:24 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.13 2005/10/03 03:29:30 chriswhite Exp $
+
+*integrit-3.05 (03 Oct 2005)
+
+  03 Oct 2005; Chris White <chriswhite@gentoo.org> +integrit-3.05.ebuild:
+  Bump to version 3.05. Fixes bug #106749. Tested by creating a database of
+  /usr and modifying a file in /usr/lib.
 
   20 Aug 2005; Luis Medinas <metalgod@gentoo.org> integrit-3.02.00.ebuild:
   Added ~amd64 keywords.
