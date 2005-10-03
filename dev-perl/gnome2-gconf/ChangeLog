@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-gconf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.7 2005/09/08 22:13:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.8 2005/10/03 13:05:09 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> gnome2-gconf-1.000.ebuild:
+  Mark 1.000 stable on ia64
 
   08 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnome2-gconf-1.000.ebuild:
   Mark 1.000 stable on alpha
@@ -28,4 +31,6 @@
   +gnome2-gconf-1.000.ebuild:
   Module for gluing together apps built with gnome2-* perl modules. Requested in
   bug 58796.
+
+
 
