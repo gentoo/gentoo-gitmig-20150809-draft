@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knock
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.21 2005/09/04 15:00:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.22 2005/10/03 10:27:57 pyrania Exp $
+
+*knock-0.5 (03 Oct 2005)
+
+  03 Oct 2005; Markus Nigbur <pyrania@gentoo.org> +knock-0.5.ebuild:
+  Version bump.
 
   04 Sep 2005; Daniel Black <dragonheart@gentoo.org> -knock-0.1.ebuild:
   removed 0.1 - patch problems
