@@ -2,7 +2,7 @@
 
 FILE="bugzilla.cron.daily bugzilla.cron.tab"
 
-function die () 
+function die ()
 {
 	echo
 	echo "***"
@@ -12,85 +12,8 @@ function die ()
 }
 
 if [ $1 = "install" ]; then
-
 	cd "${MY_INSTALLDIR}" || die "Cannot find install dir ${MY_INSTALLDIR}"
-
-	sed -e "s|/var/www/bugzilla|${MY_INSTALLDIR}|g;" -i ${FILE}
-
-	[[ -a localconfig ]] && die "The following does not work on previous installations, please run checksetup.pl in ${MY_INSTALLDIR}"
-
-	echo
-	echo "Finalizing the installation of bugzilla in ${MY_INSTALLDIR}"
-	echo
-	
-	# config setting
-	echo "Details for the bugzilla database"
-	echo "(This scripts creates the database & user)"
-	echo
-
-	echo -n "mysql bugs db host [localhost]: "; read mybugshost
-	[[ -z "${mybugshost}" ]] && mybugshost="localhost"
-
-	echo -n "mysql bugs db port [3306]: "; read mybugsport
-	[[ -z "${mybugsport}" ]] && mybugsport="3306"
-	
-	echo -n "mysql bugs db name [bugs]: "; read mybugsdb
-	[[ -z "${mybugsdb}" ]] && mybugsdb="bugs"
-	
-	echo -n "mysql bugs dbuser name [bugs]: "; read mybugsuser
-	[[ -z "${mybugsuser}" ]] && mybugsuser="bugs"
-
-	echo -n "mysql bugs dbuser password: "; read mybugspwd
-	[[ -z "${mybugspwd}" ]] && die "Error: no dbuser password"
-	pw=${mybugspwd//\'/\\\'}
-
-	# let's create a config file for checksetup.pl
-	echo "\$answer{'db_host'} = '\$db_host = \"${mybugshost}\";" > bz.cfg.pl
-	echo "\$db_port = ${mybugsport};" >> bz.cfg.pl
-	echo "\$db_name = \"${mybugsdb}\";" >> bz.cfg.pl
-	echo "\$db_user = \"${mybugsuser}\";';" >> bz.cfg.pl
-	echo "\$answer{'db_pass'} = q[\$db_pass = '${mybugspwd}';];" >> bz.cfg.pl
-	echo "\$answer{'db_sock'} = q[\$db_sock = '/var/run/mysqld/mysqld.sock';];" >> bz.cfg.pl
-
-	# privileges
-	echo "Setting correct privileges for bugzilla mysql connection"
-	echo -n "Please enter login info for user who has grant privileges on ${mybugshost} [${USER}]: "; read adminuser
-	[[ -z ${adminuser} ]] && adminuser="${USER}"
-	if [ "${mybugshost}" != "localhost" ]; then
-		echo -n "Client address for bugzilla (at db side) [$(hostname -f)]: "; read clientaddr
-		[[ -z ${clientaddr} ]] && clientaddr="$(hostname -f)"
-	fi
-	# this will be default for localhost
-	[[ -z ${clientaddr} ]] && clientaddr="${mybugshost}"
-
-	# check the installed mysql version
-	type -p mysql &>/dev/null || die "mysql program not found !  Check your PATH (or did you emerge with --nodeps ?)"
-	mysql_version="`mysql -V | cut -d' ' -f6 | sed -e 's:,$::'`"
-	[[ -z ${mysql_version} ]] && die "mysql version check failed (got '${mysql_version}')"
-	extra_bugzie_privs=""
-	(( ${mysql_version:0:1} < 4 )) && extra_bugzie_privs=",LOCK TABLES,CREATE TEMPORARY TABLES"
-
-	# if $bugshost == localhost, don't specify -h argument, so local socket can be used.
-	host=${mybugshost/localhost}
-	/etc/init.d/mysql restart || die "Could not (re)start mysql!"
-	mysql -u "${adminuser}" "${host:+-h ${host}}" -p \
-		-P "${mybugsport}" \
-		-e "GRANT SELECT,INSERT,UPDATE,DELETE,INDEX,ALTER,CREATE,DROP,REFERENCES${extra_bugzie_privs} ON ${mybugsdb}.* TO '${mybugsuser}'@'${clientaddr}' IDENTIFIED BY '${pw}'; FLUSH PRIVILEGES;" \
-		|| die "Error initializing database. Please grant permissions manually. See http://www.bugzilla.org/docs/2.18/html/configuration.html."
-
-	echo "Setting the template for localconfig variables"
-	chmod 755 ./checksetup.pl
-	./checksetup.pl bz.cfg.pl || exit 1
-
-	echo "Final step: setting all html templates and db tables"
-	./checksetup.pl || exit 1
-
-	echo -n "Do you want to set a crontab [y/N]" ; read cronyes
-	if [ "${cronyes}+" = "y+" ] ; then 
-		/usr/bin/crontab -u apache ${MY_INSTALLDIR}/bugzilla.cron.tab
-	fi
-
+	sed -e "s|/var/www/bugzilla|${MY_INSTALLDIR}|g" -i ${FILE} || die "sed failed"
 else
-	[[ -z "${MY_INSTALLDIR}" ]] && die "${MY_INSTALLDIR} not found!"
-	rm -f "${FILES}" bz.cfg.pl
+	echo "done"
 fi

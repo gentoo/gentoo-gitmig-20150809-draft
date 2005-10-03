@@ -2,7 +2,7 @@
 
 FILE="bugzilla.cron.daily bugzilla.cron.tab"
 
-function die () 
+function die ()
 {
 	echo
 	echo "***"
@@ -12,127 +12,8 @@ function die ()
 }
 
 if [ $1 = "install" ]; then
-
 	cd "${MY_INSTALLDIR}" || die "Cannot find install dir ${MY_INSTALLDIR}"
-
-	sed -e "s|/var/www/bugzilla|${MY_INSTALLDIR}|g;" -i ${FILE}
-
-	[[ -a localconfig ]] && die "The following does not work on previous installations, please run checksetup.pl in ${MY_INSTALLDIR}"
-
-	echo
-	echo "Finalizing the installation of bugzilla in ${MY_INSTALLDIR}"
-	echo
-	
-	# config setting
-	echo "Details for the bugzilla database"
-	echo "(This scripts creates the database & user)"
-	echo
-
-	echo "If you want to use Postgres, please enter numeric IP"
-	echo "or the config script will hang"
-	echo -n "bugs db host [127.0.0.1]: "; read mybugshost
-	[[ -z "${mybugshost}" ]] && mybugshost="127.0.0.1"
-
-	echo -n "bugs db driver (mysql or pg) [mysql]: "; read mydriver
-	[[ -z "${mydriver}" ]] && mydriver="mysql"
-
-	if [[ ${mydriver} == "mysql" ]]; then
-		port="3306"
-		granter="root"
-	elif [[ ${mydriver} == "pg" ]]; then
-		port="5432"
-		granter="postgres"
-	else
-		die "Wrong db driver"
-	fi
-	
-	echo -n "bugs db port [${port}]: "; read mybugsport
-	[[ -z "${mybugsport}" ]] && mybugsport="${port}"
-	
-	echo -n "bugs db name [bugs]: "; read mybugsdb
-	[[ -z "${mybugsdb}" ]] && mybugsdb="bugs"
-	
-	echo -n "bugs dbuser name [bugs]: "; read mybugsuser
-	[[ -z "${mybugsuser}" ]] && mybugsuser="bugs"
-
-	echo -n "bugs dbuser password: "; read mybugspwd
-	[[ -z "${mybugspwd}" ]] && die "Error: no dbuser password"
-	pw=${mybugspwd//\'/\\\'}
-	
-	echo -n "your SMTP server [localhost]: "; read mysmtp
-	[[ -z "${mysmtp}" ]] && mysmtp="localhost"
-
-	# let's create a config file for checksetup.pl
-	echo "\$answer{'db_host'} = q[" > bz.cfg.pl
-	echo "\$db_host = '${mybugshost}';" >> bz.cfg.pl
-	echo "\$db_driver = '${mydriver}';" >> bz.cfg.pl
-	echo "\$db_port = ${mybugsport};" >> bz.cfg.pl
-	echo "\$db_name = '${mybugsdb}';" >> bz.cfg.pl
-	echo "\$db_user = '${mybugsuser}';" >> bz.cfg.pl
-	echo "];" >> bz.cfg.pl
-	echo "\$answer{'db_pass'} = q[\$db_pass = '${mybugspwd}';];" >> bz.cfg.pl
-	echo "\$answer{'SMTP_SERVER'} = q['${mysmtp}';];" >> bz.cfg.pl
-	if [[ ${mydriver} == "mysql" ]]; then
-		echo "\$answer{'db_sock'} = q[\$db_sock = '/var/run/mysqld/mysqld.sock';];" >> bz.cfg.pl
-	elif [[ ${mydriver} == "pg" ]]; then
-		echo "\$answer{'db_sock'} = q[\$db_sock = '/tmp/.s.PGSQL.${mybugsport}';];" >> bz.cfg.pl
-	else
-		die "Wrong db driver"
-	fi
-
-	# privileges
-	echo "Setting correct privileges for bugzilla connection"
-	echo -n "Please enter login info for user who has grant privileges on ${mybugshost} [${granter}]: "; read adminuser
-	[[ -z ${adminuser} ]] && adminuser="${granter}"
-	if [ "${mybugshost}" != "127.0.0.1" ]; then
-		echo -n "Client address for bugzilla (at db side) [$(hostname -f)]: "; read clientaddr
-		[[ -z ${clientaddr} ]] && clientaddr="$(hostname -f)"
-	fi
-	# this will be default for localhost
-	[[ -z ${clientaddr} ]] && clientaddr="${mybugshost}"
-
-	if [[ ${mydriver} == "mysql" ]]; then
-
-		# check the installed mysql version
-		type -p mysql &>/dev/null || die "mysql program not found !  Check your PATH (or did you emerge with --nodeps ?)"
-		mysql_version="`mysql -V | cut -d' ' -f6 | sed -e 's:,$::'`"
-		[[ -z ${mysql_version} ]] && die "mysql version check failed (got '${mysql_version}')"
-		extra_bugzie_privs=""
-		(( ${mysql_version:0:1} < 4 )) && extra_bugzie_privs=",LOCK TABLES,CREATE TEMPORARY TABLES"
-
-		# if $bugshost == localhost, don't specify -h argument, so local socket can be used.
-		host=${mybugshost/"127.0.0.1"}
-		/etc/init.d/mysql restart || die "Could not (re)start mysql!"
-		mysql -u "${adminuser}" "${host:+-h ${host}}" -p \
-			-P "${mybugsport}" \
-			-e "GRANT SELECT,INSERT,UPDATE,DELETE,INDEX,ALTER,CREATE,DROP,REFERENCES${extra_bugzie_privs} ON ${mybugsdb}.* TO '${mybugsuser}'@'${clientaddr}' IDENTIFIED BY '${pw}'; FLUSH PRIVILEGES;" \
-			|| die "Error initializing database. Please grant permissions manually. See http://www.bugzilla.org/docs/tip/html/configuration.html."
-	
-	elif [[ ${mydriver} == "pg" ]]; then
-		# if $bugshost == localhost, don't specify -h argument, so local socket can be used.
-		host=${mybugshost/"127.0.0.1"}
-		/etc/init.d/postgresql restart || die "Could not (re)start postgresql!"
-		createdb -U "${adminuser}" ${host:+-h ${host}} -W \
-			-p "${mybugsport}" -O "${mybugsuser}" "${mybugsdb}" \
-			|| die "Error initializing database. Please grant permissions manually. See http://www.bugzilla.org/docs/tip/html/configuration.html."
-
-	else
-		die "Wrong db driver"
-	fi
-	
-	echo "Setting the template for localconfig variables"
-	cd ${MY_INSTALLDIR} || die
-	chmod 755 ./checksetup.pl
-	./checksetup.pl bz.cfg.pl || exit 1
-
-	echo "Final step: setting all html templates and db tables"
-	./checksetup.pl || exit 1
-
-	echo -n "Do you want to set a crontab [y/N]" ; read cronyes
-	if [ "${cronyes}+" = "y+" ] ; then 
-		/usr/bin/crontab -u apache ${MY_INSTALLDIR}/bugzilla.cron.tab
-	fi
-
+	sed -e "s|/var/www/bugzilla|${MY_INSTALLDIR}|g" -i ${FILE} || die "sed failed"
 else
 	echo "done."
 fi

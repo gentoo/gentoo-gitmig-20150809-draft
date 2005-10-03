@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.4.ebuild,v 1.3 2005/10/02 13:45:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.4.ebuild,v 1.4 2005/10/03 23:19:53 rl03 Exp $
 
 inherit webapp
 
@@ -59,8 +59,8 @@ src_install () {
 	cd ${FILESDIR}/2.18
 	cp ${FILE} ${D}/${MY_HTDOCSDIR}
 
-	# add the reconfigure hook
 	webapp_hook_script ${FILESDIR}/2.18/reconfig
+	webapp_postinst_txt en ${FILESDIR}/2.18/postinstall-en.txt
 
 	webapp_src_install
 }

@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.39 2005/10/02 13:45:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.40 2005/10/03 23:19:53 rl03 Exp $
+
+  03 Oct 2005; Renat Lumpau <rl03@gentoo.org>
+  +files/2.18/postinstall-en.txt, files/2.18/reconfig,
+  files/2.20/postinstall-en.txt, files/2.20/reconfig,
+  bugzilla-2.18.4.ebuild:
+  Reconfig hook is no longer interactive, per bug #107918.
 
   02 Oct 2005; Markus Rothe <corsair@gentoo.org> bugzilla-2.18.4.ebuild:
   Stable on ppc64 (bug #107796)
