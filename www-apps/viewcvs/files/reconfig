@@ -1,13 +1,18 @@
 #!/bin/bash
-# $Id: reconfig,v 1.5 2005/10/03 05:06:28 ramereth Exp $
+# $Id: reconfig,v 1.6 2005/10/03 14:06:18 ramereth Exp $
 
-if [ $1 = "install" ]; then
-	find ${VHOST_CGIBINDIR}/viewcvs ${VHOST_ROOT}/viewcvs ${VHOST_ROOT}/htdocs/. -type f \
-	| xargs sed -e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"${VHOST_ROOT}/viewcvs/lib\"|g
-	s,\(^CONF_PATHNAME\)\(.*\$\),\1 = \"${VHOST_ROOT}/viewcvs/viewcvs.conf\",g
-	s,\(<VIEWCVS_INSTALL_DIRECTORY>\),${VHOST_ROOT}/viewcvs,g 
-	s,\(<VIEWCVS_APACHE_LIBRARY_DIRECTORY>\),${VHOST_ROOT}/viewcvs/lib,g" -i
-	
-elif [ $1 = "clean" ]; then
-	echo $1
+if [ $1 = "install" ] ; then
+    find ${VHOST_CGIBINDIR}/viewcvs ${VHOST_ROOT}/viewcvs ${VHOST_ROOT}/htdocs/. -type f \
+    | xargs sed -e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"${VHOST_ROOT}/viewcvs/lib\"|g
+    s,\(^CONF_PATHNAME\)\(.*\$\),\1 = \"${VHOST_ROOT}/viewcvs/viewcvs.conf\",g
+    s,\(<VIEWCVS_INSTALL_DIRECTORY>\),${VHOST_ROOT}/viewcvs,g 
+    s,\(<VIEWCVS_APACHE_LIBRARY_DIRECTORY>\),${VHOST_ROOT}/viewcvs/lib,g" -i
+elif [ $1 = "upgrade" ] ; then
+    find ${VHOST_CGIBINDIR}/viewcvs ${VHOST_ROOT}/viewcvs ${VHOST_ROOT}/htdocs/. -type f \
+    | xargs sed -e "s|\(^LIBRARY_DIR\)\(.*\$\)|\1 = \"${VHOST_ROOT}/viewcvs/lib\"|g
+    s,\(^CONF_PATHNAME\)\(.*\$\),\1 = \"${VHOST_ROOT}/viewcvs/viewcvs.conf\",g
+    s,\(<VIEWCVS_INSTALL_DIRECTORY>\),${VHOST_ROOT}/viewcvs,g 
+    s,\(<VIEWCVS_APACHE_LIBRARY_DIRECTORY>\),${VHOST_ROOT}/viewcvs/lib,g" -i
+elif [ $1 = "clean" ] ; then
+    echo $1
 fi
