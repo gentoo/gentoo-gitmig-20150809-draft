@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.20 2004/12/16 10:21:22 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.21 2005/10/03 13:11:36 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-gtk-0.34-r1.ebuild:
+  Mark 0.34-r1 ~ia64
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> ruby-gtk-0.34-r1.ebuild:
   Stable on ppc64
