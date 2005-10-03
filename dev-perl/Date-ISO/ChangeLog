@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ISO
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.20 2005/08/26 03:12:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.21 2005/10/03 09:55:46 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> Date-ISO-1.30.ebuild:
+  Mark 1.30 stable on ia64
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> Date-ISO-1.30.ebuild:
   add ~ia64
