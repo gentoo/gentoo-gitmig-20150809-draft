@@ -1,4 +1,4 @@
-MD5 7f740f7db66e4d3b95dcf45e088484e6 ChangeLog 7116
+MD5 8a5aa422cb10556b2543e0f52984a5ca ChangeLog 7287
 MD5 fa8daabae86da3beefbc3ea1e5ccd42c metadata.xml 779
 MD5 de35d046cef5f9b95a5ddce9f2bf990d viewcvs-0.9.2_p20041207-r1.ebuild 2536
 MD5 60259d2075951e829e25d800b66e6e5b viewcvs-0.9.3.ebuild 1479
@@ -14,3 +14,5 @@ MD5 550579a3a648e62d01ec4c3c3ee47327 files/viewcvs-CAN-2004-1062.patch 341
 MD5 26ecfea58fa51e62bc28985ff0f73048 files/digest-viewcvs-0.9.4 65
 MD5 8dd7c985d9b13ffa051e8f293e88ddb1 files/postinstall-new-en.txt 933
 MD5 6ad94993c3421b9b0413f3268e5f09b6 files/digest-viewcvs-1.0_pre20050929 69
+MD5 9b65df9cd8e1bae9bca4fcf9623396e7 files/viewcvs-mysql-4.0.sql 2495
+MD5 6260728f582a42a165dcf791a36b4825 files/viewcvs-mysql-4.1.sql 2422
