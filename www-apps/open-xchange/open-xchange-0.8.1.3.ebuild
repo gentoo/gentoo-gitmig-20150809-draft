@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.3.ebuild,v 1.1 2005/10/01 19:36:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.3.ebuild,v 1.2 2005/10/03 16:21:08 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -41,6 +41,7 @@ RDEPEND=">=virtual/jre-1.4
 # COMMENT: Why is the jdbc requirement set to 7.4.5 and not >=7.4.5?
 
 DEPEND="${RDEPEND}
+	app-arch/zip
 	>=virtual/jdk-1.4"
 
 RDEPEND="${RDEPEND}
