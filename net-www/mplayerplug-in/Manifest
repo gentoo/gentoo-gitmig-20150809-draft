@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 50901383a4844207cf1bc63cddf566c7 ChangeLog 7817
-MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
-MD5 dd12cc307a2fc2c00237b06a38cd20c5 mplayerplug-in-2.85.ebuild 1464
-MD5 a93db3f864de724c0408dc08506f2d90 mplayerplug-in-2.80.ebuild 1458
-MD5 e91ebc71872b4e0b580931cc0b816129 mplayerplug-in-3.11.ebuild 1911
+MD5 8642e3be6b1af51cbbf7e7790cc8ba12 files/digest-mplayerplug-in-2.80 71
 MD5 c2e30e3c9bd430344299015704bc28b6 files/digest-mplayerplug-in-2.85 71
 MD5 8c3b348cd7951d7c21c115f602e22f31 files/digest-mplayerplug-in-3.11 71
-MD5 8642e3be6b1af51cbbf7e7790cc8ba12 files/digest-mplayerplug-in-2.80 71
+MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
+MD5 a93db3f864de724c0408dc08506f2d90 mplayerplug-in-2.80.ebuild 1458
+MD5 dd12cc307a2fc2c00237b06a38cd20c5 mplayerplug-in-2.85.ebuild 1464
+MD5 13554cd2f6ed5e5f96d1418ca92275d3 mplayerplug-in-3.11.ebuild 1914
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDO/RxcsIHjyDViGQRAuCQAJ4hZ+43AkhMPayzek+YmCR9KBO4+wCeM5F+
-BfIR+nQAXbg07gAm7Cc9HLw=
-=+E3Y
+iD8DBQFDQa6gI1lqEGTUzyQRAnpUAJ0fiSI6gxaqhuHxkje7kBtJR0kgeACeIXzh
+19aLhluxQ4LDzfXInsUAWQ8=
+=zQaJ
 -----END PGP SIGNATURE-----
