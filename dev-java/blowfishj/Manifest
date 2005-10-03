@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 7b91fe60d440c76ca18b1235545c2bba ChangeLog 806
-MD5 3a5af712fee8c17aaa3329c26c88b57e metadata.xml 526
-MD5 7b48a210418626aab07a65ac4c8f92d7 blowfishj-2.14.ebuild 857
+MD5 a0832d7c9511c76cc91f46b023ed2e81 blowfishj-2.14.ebuild 871
 MD5 39730f06814fede1e78c13befd1173c2 files/digest-blowfishj-2.14 69
+MD5 3a5af712fee8c17aaa3329c26c88b57e metadata.xml 526
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2R7M/rLF9B432nYRAnRDAJ4vF+T9AfJxxKWv3WEn7zwS/qyF5wCfSSRf
-WiqXg0kmcWH/9N7V2/tNPUA=
-=JqHQ
+iD8DBQFDQLoM/rLF9B432nYRAk8NAJ4sxCTqs7M3TiDhqeScNsCyHzMzHACgnMvO
+Yky3ob2L8Pf7IFJUumT0lak=
+=VGn/
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14.ebuild,v 1.3 2005/07/16 14:50:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14.ebuild,v 1.4 2005/10/03 04:55:51 axxo Exp $
 
 inherit java-pkg
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 amd64 ppc ~sparc"
 IUSE="doc junit"
 
 DEPEND=">=virtual/jdk-1.4
+	dev-java/ant
 	app-arch/unzip
 	junit? ( dev-java/junit ) "
 RDEPEND=">=virtual/jre-1.4"
