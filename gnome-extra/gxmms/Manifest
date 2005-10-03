@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3a109273429bfc55bc5019f13ae36e58 ChangeLog 1443
+MD5 232ce6bbb6cc38936f56979269e5bd7b files/digest-gxmms-0.1.0 63
+MD5 c2f098f9e51f7348d813e4fb383ce463 files/digest-gxmms-0.1.1 63
+MD5 f69474d7ef5538b0c4f8355c812f2b1a files/digest-gxmms-0.2.1 63
+MD5 aac45a6a47987e460b1fdf26497ffb9e files/digest-gxmms-0.3.0 63
 MD5 17621406053b498f21fbe4d955e2bbe1 gxmms-0.1.0.ebuild 536
 MD5 38b692f35c23ef2869903be0ab7fb9dd gxmms-0.1.1.ebuild 533
 MD5 f83a69b0f7f5984ad25775b013c68367 gxmms-0.2.1.ebuild 540
-MD5 cad18dd3b481499544fe21fe7edacc38 gxmms-0.3.0.ebuild 929
+MD5 a7fe5336f23603de45b4f4f5ededa824 gxmms-0.3.0.ebuild 935
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 232ce6bbb6cc38936f56979269e5bd7b files/digest-gxmms-0.1.0 63
-MD5 aac45a6a47987e460b1fdf26497ffb9e files/digest-gxmms-0.3.0 63
-MD5 c2f098f9e51f7348d813e4fb383ce463 files/digest-gxmms-0.1.1 63
-MD5 f69474d7ef5538b0c4f8355c812f2b1a files/digest-gxmms-0.2.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQa4pI1lqEGTUzyQRAjuaAJ40Bvf9438YWI4I3Hlnhdm1PLAc5ACdFuaP
+iJWq8KGbUSbEBidj4crdSlo=
+=1nOe
+-----END PGP SIGNATURE-----
