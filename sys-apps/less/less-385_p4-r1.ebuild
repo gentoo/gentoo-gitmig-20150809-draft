@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4-r1.ebuild,v 1.1 2005/08/24 23:50:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4-r1.ebuild,v 1.2 2005/10/03 22:19:09 vapier Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 	newbin "${FILESDIR}"/lesspipe.sh lesspipe.sh || die "newbin"
 
 	# the -R is Needed for groff-1.18 and later ...
-	echo 'LESS="-R -M"' > 70less
+	echo 'LESS="-R -M --shift 5"' > 70less
 	doenvd 70less
 
 	for m in *.nro ; do
