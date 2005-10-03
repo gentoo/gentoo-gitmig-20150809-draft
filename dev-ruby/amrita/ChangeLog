@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amrita
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.17 2005/05/01 17:26:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.18 2005/10/03 12:58:45 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> amrita-1.8.2-r1.ebuild:
+  Mark 1.8.2-r1 ~ia64
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   amrita-1.8.2-r1.ebuild:
