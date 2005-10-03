@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Autouse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.21 2005/09/08 16:56:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.22 2005/10/03 11:58:23 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> Class-Autouse-1.17.ebuild:
+  Mark 1.17 stable on ia64
 
   08 Sep 2005; Aron Griffis <agriffis@gentoo.org> Class-Autouse-1.17.ebuild:
   Mark 1.17 stable on alpha
@@ -84,4 +87,3 @@
   02 Jun 2003; Michael Cummings <mcummings@gentoo.org>
   Class-Autouse-0.7.ebuild:
   Fills bug 21791
-
