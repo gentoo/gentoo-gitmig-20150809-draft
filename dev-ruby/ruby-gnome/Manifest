@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ad5a87bbd803f350e58254255b8fd9a1 ChangeLog 2506
-MD5 9318d16e4ffe667f9e5e491ec7439900 ruby-gnome-0.34.ebuild 884
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 e0c5a2672734421c0f0ea9ff760092dc ChangeLog 2598
 MD5 c3ac8fb4cfef63a56ee37c3d48705025 ruby-gnome-0.30.ebuild 826
+MD5 30a73bfc90000e51417d83fbfd6dae83 ruby-gnome-0.34.ebuild 889
 MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-gnome-0.30 70
 MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-gnome-0.34 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGEZsj5H05b2HAEkRAuQvAKCA5HOsLIjnXibDt9gHrSpLnpEYhgCeODeQ
-/CxEAf6Pbfv2MhM+3ejxc3I=
-=s7ND
------END PGP SIGNATURE-----

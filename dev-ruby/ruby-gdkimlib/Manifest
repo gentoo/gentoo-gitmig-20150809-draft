@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89268954b8b0d412ed42e87b531bf820 ChangeLog 2512
-MD5 6616655a3423c3887c092ea4f8010374 ruby-gdkimlib-0.30.ebuild 785
-MD5 f4c18860e74d910c3936ab5659163b85 ruby-gdkimlib-0.34.ebuild 848
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-gdkimlib-0.30 70
+MD5 6bb9f9483b938056526a23cd20270cfa ChangeLog 2607
+MD5 6643af2762a006692d0f088ee0797df8 ruby-gdkimlib-0.34.ebuild 853
+MD5 6616655a3423c3887c092ea4f8010374 ruby-gdkimlib-0.30.ebuild 785
 MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-gdkimlib-0.34 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGEiFj5H05b2HAEkRArABAJ9FZt2ESYWHt8Ickn8VsLa7O5qBEACfVoCU
-1wjROu3nAQCfqvTv5EuXf0o=
-=RmfY
------END PGP SIGNATURE-----
+MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-gdkimlib-0.30 70
