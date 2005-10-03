@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-tcpwrap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.8 2005/04/24 10:55:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.9 2005/10/03 13:26:53 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-tcpwrap-0.6.ebuild:
+  Mark 0.6 ~ia64
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> ruby-tcpwrap-0.6.ebuild:
   stable on amd64
