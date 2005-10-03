@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-zlib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zlib/ChangeLog,v 1.4 2004/11/14 09:19:19 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zlib/ChangeLog,v 1.5 2005/10/03 13:28:08 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-zlib-0.6.0.ebuild:
+  Mark 0.6.0 ~ia64
 
   14 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-zlib-0.6.0.ebuild:
   Stable on ppc.
