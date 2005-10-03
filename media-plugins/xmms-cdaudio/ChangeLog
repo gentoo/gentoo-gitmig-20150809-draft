@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-cdaudio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdaudio/ChangeLog,v 1.5 2005/09/14 05:43:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdaudio/ChangeLog,v 1.6 2005/10/03 12:39:23 hardave Exp $
+
+  03 Oct 2005; Hardave Riar <hardave@gentoo.org>
+  xmms-cdaudio-1.2.10-r1.ebuild:
+  Stable on mips.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   xmms-cdaudio-1.2.10-r1.ebuild:
