@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.21 2005/10/02 16:54:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/ChangeLog,v 1.22 2005/10/03 03:56:31 dragonheart Exp $
+
+  03 Oct 2005; Daniel Black <dragonheart@gentoo.org> Manifest:
+  digest fix - bug #107938
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> ChangeLog:
   Stable on ppc.
