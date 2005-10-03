@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
-MD5 735c1b014e14a4d459574885e621c443 xterm-200-r3.ebuild 2243
-MD5 c42b2497dfa255b8bde0c64ad6c8b7a1 xterm-204.ebuild 2527
-MD5 c269f6412925ebe0ce36b9de8590b25a ChangeLog 15761
-MD5 a5048a1a15d86d400d3e2dbaaa0ac1c8 files/xterm-LANG.patch 1698
+MD5 c8474d3365a1f0d912098d85d6b1e0b0 ChangeLog 15910
 MD5 8c7c791e44946002c03410f9a6e9fc69 files/digest-xterm-204 58
-MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200-r3 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNdEgIKl8Uu19MoRApvEAJ9aIzi+AvZHBLI2LM+4UOnPk1dVngCfZfC9
-z+IPwY+45lOu3/CCDKPJj+M=
-=LLz7
------END PGP SIGNATURE-----
+MD5 a5048a1a15d86d400d3e2dbaaa0ac1c8 files/xterm-LANG.patch 1698
+MD5 99f9752783bc8c4cc41c72ea1e465fec metadata.xml 294
+MD5 c42b2497dfa255b8bde0c64ad6c8b7a1 xterm-204.ebuild 2527

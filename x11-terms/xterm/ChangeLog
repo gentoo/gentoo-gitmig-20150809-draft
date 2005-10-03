@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.107 2005/09/20 08:28:57 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.108 2005/10/03 12:52:31 seemant Exp $
+
+  03 Oct 2005; Seemant Kulleen <seemant@gentoo.org> -xterm-200-r3.ebuild:
+  204 is now stable, (closing bug #10133) -- thanks to all the arch teams
 
   20 Sep 2005; Hardave Riar <hardave@gentoo.org> xterm-204.ebuild:
   Stable on mips, bug #101333.
