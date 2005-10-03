@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.3.0.ebuild,v 1.2 2005/09/26 16:19:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.3.0.ebuild,v 1.3 2005/10/03 08:16:04 greg_g Exp $
 
 inherit kde
 
@@ -27,10 +27,6 @@ pkg_setup(){
 }
 
 src_compile() {
-	# Manually remove visibility support,
-	# will not be needed in next version.
-	export kde_cv_prog_cxx_fvisibility_hidden=no
-
 	local myconf="$(use_enable kipi)"
 	kde_src_compile myconf configure
 	make || die
