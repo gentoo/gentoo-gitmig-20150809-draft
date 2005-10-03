@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/mlview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.13 2005/09/05 20:52:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.14 2005/10/03 06:04:31 leonardop Exp $
+
+*mlview-0.8-r1 (03 Oct 2005)
+
+  03 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +mlview-0.8-r1.ebuild:
+  Remove dbus support since it works with obsolete and incompatible versions.
+  Updated dependencies and dropped 'debug' (provided by gnome2.eclass) and
+  'static' (inaccurate) USE flags.
 
   05 Sep 2005; Doug Goldstein <cardoe@gentoo.org> mlview-0.8.ebuild:
   fixing dbus deps

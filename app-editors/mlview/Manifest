@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3d1c5452dbad40cfae3ada554ea52996 ChangeLog 2793
+MD5 ca0c8b930dbedaa182c8c1ce799124bb ChangeLog 3095
 MD5 ab639871e30a3590f808d0109386ab2b metadata.xml 488
 MD5 cbd2405b11f4b030d1971adf4f10a2fe mlview-0.6.3.ebuild 903
+MD5 9c077730dc42fb728743fb4ddc243fbf mlview-0.8-r1.ebuild 943
 MD5 082cfcb79eacdb006644f1dadab3e782 mlview-0.8.ebuild 1055
 MD5 8040734f5b03630f75d7df9fd48b2aab files/digest-mlview-0.6.3 65
 MD5 9a4c14d6701119f77b6faf025d0e8292 files/digest-mlview-0.8 63
 MD5 279ff8099cb8a67c13952ad6cdc7ce98 files/mlview-0.6.3-gcc2_fix.patch 816
 MD5 355a3710cdd4d752a7518dfc1c1a043f files/mlview-0.8-dot_desktop.patch 834
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHLBzBtvusYtCZMsRAr8xAJ91StwhD1toGnYnG1AEc7ZdFXtaLwCeN61c
-aEDX+dXjXX/wcqHpdRbUZp0=
-=TfYs
------END PGP SIGNATURE-----
+MD5 9a4c14d6701119f77b6faf025d0e8292 files/digest-mlview-0.8-r1 63
