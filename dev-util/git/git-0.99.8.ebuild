@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.7d.ebuild,v 1.2 2005/09/28 08:19:31 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.8.ebuild,v 1.1 2005/10/03 21:49:43 r3pek Exp $
 
 inherit python
 
@@ -52,7 +52,7 @@ src_compile() {
 	if ! use curl; then
 		export NO_CURL=yes
 		ewarn "git-http-pull will not be built because you are not"
-		ewarn "using the curl use flag"
+		ewarn " using the curl use flag"
 	fi
 
 	use gitsendemail && export WITH_SEND_EMAIL=yes
@@ -81,11 +81,11 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "This version of GIT has changed some command names. It this version,"
-	einfo "the old commands will still be present but linked to the new ones."
-	einfo "The future 0.99.8 version of GIT will NOT have this feature."
-	einfo
-	einfo "For the complete list of commands that got changed, visist:"
+	einfo "This version still have the links between the old command names and"
+	einfo "the new command names. Anyway, if you haven't already see the new"
+	einfo "commands, take a look at:"
 	einfo "http://dev.gentoo.org/~r3pek/git-new-command-list.txt"
+	einfo
+	einfo "This will be removed in any version before the final 1.0"
 	einfo
 }
