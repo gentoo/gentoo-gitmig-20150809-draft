@@ -1,6 +1,25 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.48 2005/09/29 17:29:27 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.49 2005/10/03 12:11:24 ka0ttic Exp $
+
+*lighttpd-1.4.5 (03 Oct 2005)
+
+  03 Oct 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/1.4.4/01_all_r716-fix-remoteip-cache-keepalive.diff,
+  -files/1.4.4/03_all_r722-fix-no-global-mysql-segv.diff,
+  -files/1.4.4/07_all_r726-sce-set-if-HANDLER_GO_ON.diff,
+  -files/1.4.4/04_all_r723-fix-mod_ssi-inf-loop.diff,
+  -files/1.4.4/08_all_r727-fix-another-error-msg-segv.diff,
+  -files/1.4.4/02_all_r721-add-case-302.diff,
+  -files/1.4.4/05_all_r724-fix-error-msg-segv.diff,
+  -files/1.4.4/06_all_r725-fix-NULL-dereference.diff,
+  -files/1.4.4/09_all_r728-handle-written-correctly.diff,
+  -files/1.4.4/10_all_r729-display-content_ndx.diff,
+  -files/1.4.4/11_all_r732-dont-starve-waiting-conns.diff,
+  -files/1.4.4/13_all_r745-fix-64bit-crc32.diff,
+  -files/1.4.4/12_all_r736-fix-max-request-size.diff,
+  -lighttpd-1.4.4-r2.ebuild, +lighttpd-1.4.5.ebuild:
+  Version bump; removed 1.4.4-r2 and its plethora of patches.
 
 *lighttpd-1.4.4-r2 (29 Sep 2005)
 
