@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07559cffef7acd40978fc2dab8cfd3cc ChangeLog 3231
-MD5 089d5b46b1b885298f2dbafda5920102 abook-0.5.2-r1.ebuild 808
-MD5 b84db7444894b9927b3f1746e14c8069 abook-0.5.3.ebuild 777
-MD5 4884d21dcd86f761911389c648af60f2 abook-0.5.4.ebuild 780
-MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
-MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
-MD5 a5475e3fbe94b0d082dff30e637ebd48 files/digest-abook-0.5.3 63
-MD5 379ff2ec5d24511e7beeadbb801e6431 files/digest-abook-0.5.4 63
+MD5 430a1936f107689dcea3bb4938edd1ee ChangeLog 3327
 MD5 ff3d843bd695f3a1a9d9ffeee60d3068 metadata.xml 277
+MD5 b84db7444894b9927b3f1746e14c8069 abook-0.5.3.ebuild 777
+MD5 089d5b46b1b885298f2dbafda5920102 abook-0.5.2-r1.ebuild 808
+MD5 91db65883b58ba49fca123bfdd0f2392 abook-0.5.4.ebuild 782
+MD5 a5475e3fbe94b0d082dff30e637ebd48 files/digest-abook-0.5.3 63
+MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
+MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
+MD5 379ff2ec5d24511e7beeadbb801e6431 files/digest-abook-0.5.4 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDQR3gQlM6RnzZP+IRAsfaAJ9f/u1J6cz4nFsoFXGNhFkhcoYUfwCfeiNp
-0zB27KBKSE8nUycghXPUIyE=
-=NWCf
+iD8DBQFDQZEBKRy60XGEcJIRAg5aAKCyUBwgS1XD2jrvo7VhGvk7ruwpxgCeJsK2
+2xUga1XutYF2v+9ICTxK3Fs=
+=7uWS
 -----END PGP SIGNATURE-----
