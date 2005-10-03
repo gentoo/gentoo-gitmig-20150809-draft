@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.462 2005/09/21 17:10:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.463 2005/10/03 19:50:38 joshuabaergen Exp $
+
+*xorg-x11-6.8.2-r6 (03 Oct 2005)
+
+  03 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-x11-6.8.2-r6.ebuild:
+  Added fix for OO/wine transparencies as well as update to mmx code from bug
+  #96053, closing that bug.  Thanks to bartron for both patches.
 
   21 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.2-r4.ebuild, xorg-x11-6.8.2-r5.ebuild:
