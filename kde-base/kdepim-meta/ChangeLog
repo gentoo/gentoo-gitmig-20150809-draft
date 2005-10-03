@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.22 2005/09/24 16:39:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.23 2005/10/03 07:50:05 greg_g Exp $
+
+  03 Oct 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdepim-meta-3.5_beta1.ebuild:
+  Add akregator to the list of kdepim derived ebuilds.
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kdepim-meta-3.5_alpha1.ebuild:

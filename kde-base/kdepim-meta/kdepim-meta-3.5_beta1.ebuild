@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5_beta1.ebuild,v 1.1 2005/09/22 21:50:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5_beta1.ebuild,v 1.2 2005/10/03 07:50:05 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -13,6 +13,7 @@ KEYWORDS="~amd64"
 IUSE="pda"
 
 RDEPEND="
+	$(deprange $PV $MAXKDEVER kde-base/akregator)
 	$(deprange $PV $MAXKDEVER kde-base/certmanager)
 	$(deprange $PV $MAXKDEVER kde-base/kaddressbook)
 	$(deprange $PV $MAXKDEVER kde-base/kalarm)

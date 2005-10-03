@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69746fd92d06014f21f9ad48f6edfb8a kdepim-meta-3.4.2.ebuild 2137
-MD5 db83d821df9465d8e0efea98297bd079 kdepim-meta-3.4.1.ebuild 2104
-MD5 4ffbc4d2561b85812b671d4489e66137 ChangeLog 3373
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e4f7f3356690cd9f796c8da5a69eccb8 kdepim-meta-3.5_beta1.ebuild 2093
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.5_beta1 0
+MD5 69746fd92d06014f21f9ad48f6edfb8a kdepim-meta-3.4.2.ebuild 2137
+MD5 e3acea208ffaf63463fb99c1d6dcb839 kdepim-meta-3.5_beta1.ebuild 2137
+MD5 8c25e2edac4612f105c19c8dbe9e6702 ChangeLog 3508
+MD5 db83d821df9465d8e0efea98297bd079 kdepim-meta-3.4.1.ebuild 2104
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNYF/j5H05b2HAEkRAoceAJ9KyNTA56h2perx/O2vO0vomVpuWwCfTfwp
-F6bWxxVuAYKTdCzKS2nu9GM=
-=wkir
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.5_beta1 0
