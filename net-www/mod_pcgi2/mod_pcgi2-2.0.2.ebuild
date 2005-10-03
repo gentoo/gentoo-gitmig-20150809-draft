@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.3 2005/02/25 12:27:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.2.ebuild,v 1.4 2005/10/03 03:51:46 vericgar Exp $
 
 inherit eutils apache-module
 
 DESCRIPTION="An Apache module to talk to Zope Corporation's PCGI"
-HOMEPAGE="http://www.zope.org/Members/phd/${PN}/"
+HOMEPAGE="http://www.zope.org/Members/phd/mod_pcgi2/"
 SRC_URI="http://zope.org/Members/phd/${PN}/${PN}/${P}-src.tar.gz"
 
 LICENSE="GPL-2"

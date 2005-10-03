@@ -1,10 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.13 2005/07/10 19:52:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.14 2005/10/03 03:51:46 vericgar Exp $
 
 inherit eutils
 
 detectapache() {
+	# DO NOT REPLICATE THIS IN ANY OTHER PACKAGE WITHOUT PORTAGE DEVS PERMISSION
+	# IT IS BROKEN AND A TEMPORARY MEASURE!
+	# YOU'VE BEEN WARNED.
+	if [[ ${EBUILD_PHASE/depend} != ${EBUILD_PHASE} ]]; then
+		APACHEVER=1
+		return
+	fi
+	
 	local domsg=
 	[ -n "$1" ] && domsg=1
 	HAVE_APACHE1=

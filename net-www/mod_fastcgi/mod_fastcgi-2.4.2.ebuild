@@ -1,12 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2.ebuild,v 1.9 2005/01/16 11:54:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2.ebuild,v 1.10 2005/10/03 03:49:10 vericgar Exp $
 
 DESCRIPTION="FastCGI  is a language independent, scalable, open extension to CGI that provides high performance without the limitations of server specific APIs."
 KEYWORDS="x86 ppc ~amd64"
 IUSE="apache2"
 
 detectapache() {
+	# DO NOT REPLICATE THIS IN ANY OTHER PACKAGE WITHOUT PORTAGE DEVS PERMISSION
+	# IT IS BROKEN AND A TEMPORARY MEASURE!
+	# YOU'VE BEEN WARNED.
+	if [[ ${EBUILD_PHASE/depend} != ${EBUILD_PHASE} ]]; then
+		APACHEVER=1
+		return
+	fi
+
 	local domsg=
 	[ -n "$1" ] && domsg=1
 	HAVE_APACHE1=
