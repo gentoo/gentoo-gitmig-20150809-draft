@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.16 2005/10/02 18:07:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.17 2005/10/03 23:54:12 ribosome Exp $
+
+  03 Oct 2005; Olivier Fisette <ribosome@gentoo.org> embassy-3.0.0.ebuild:
+  Stable on ppc-macos (with j4rg0n's permission, bug #102420).
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> embassy-3.0.0.ebuild:
   Stable on ppc.
