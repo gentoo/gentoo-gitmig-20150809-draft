@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.86 2005/09/18 14:11:09 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.87 2005/10/03 12:26:25 seemant Exp $
+
+  03 Oct 2005; Seemant Kulleen <seemant@gentoo.org> heimdal-0.6.5.ebuild,
+  -heimdal-0.7.ebuild, -heimdal-0.7-r1.ebuild, -heimdal-0.7.1.ebuild,
+  heimdal-0.7.1-r1.ebuild:
+  remove crufty versions, and change to eautoreconf (thanks to Flameeyes)
 
 *heimdal-0.7.1-r1 (18 Sep 2005)
 

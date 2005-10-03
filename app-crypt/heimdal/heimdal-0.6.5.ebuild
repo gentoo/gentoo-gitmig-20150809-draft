@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.5.ebuild,v 1.11 2005/09/06 16:09:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.5.ebuild,v 1.12 2005/10/03 12:26:25 seemant Exp $
 
-inherit libtool eutils virtualx toolchain-funcs
+inherit autotools libtool eutils virtualx toolchain-funcs
 
 PATCHVER=0.3
 PATCH_P=${P%.*}-gentoo-patches-${PATCHVER}
@@ -45,12 +45,10 @@ src_unpack() {
 }
 
 src_compile() {
+	ebegin "Running autoreconf"
+		AT_M4DIR="cf" eautoreconf
+	eend $?
 	elibtoolize
-
-	aclocal -I cf || die "configure problem"
-	autoheader || die "configure problem"
-	automake -a || die "configure problem"
-	autoconf || die "configure problem"
 
 	local myconf=""
 
@@ -58,8 +56,6 @@ src_compile() {
 		&& myconf="${myconf} --with-krb4-config=/usr/athena/bin/krb4-config"
 
 	use ldap && myconf="${myconf} --with-openldap=/usr"
-
-	libtoolize --copy --force
 
 	econf \
 		$(use_with ipv6) \
