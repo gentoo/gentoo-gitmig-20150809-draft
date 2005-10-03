@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.0.ebuild,v 1.2 2005/08/18 17:41:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.1.ebuild,v 1.1 2005/10/03 23:20:15 leonardop Exp $
 
-inherit eutils gnome.org gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Text rendering and layout library"
 HOMEPAGE="http://www.pango.org/"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pango.org/"
 LICENSE="LGPL-2 FTL"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc static"
+IUSE="doc"
 
 RDEPEND="virtual/x11
 	virtual/xft
@@ -21,22 +21,18 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	doc? ( >=dev-util/gtk-doc-1
+	doc? (
+		>=dev-util/gtk-doc-1
 		~app-text/docbook-xml-dtd-4.1.2 )"
 
 DOCS="AUTHORS ChangeLog* NEWS README TODO*"
 USE_DESTDIR="1"
 
 
-pkg_setup() {
-	G2CONF="$(use_enable static)"
-}
-
 src_unpack() {
+	unpack "${A}"
+	cd "${S}"
 
-	unpack ${A}
-
-	cd ${S}
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
 	epatch ${FILESDIR}/${PN}-1.2.2-slighthint.patch
@@ -49,7 +45,6 @@ src_unpack() {
 	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
 
 	epunt_cxx
-
 }
 
 src_install() {
@@ -68,8 +63,8 @@ pkg_postinst() {
 		einfo "Generating modules listing..."
 		use amd64 && PANGO_CONFDIR="/etc/pango/${CHOST}"
 		use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && PANGO_CONFDIR="/etc/pango/${CHOST}"
-		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango/}
-		pango-querymodules > /${PANGO_CONFDIR}/pango.modules
+		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango}
+		pango-querymodules > ${PANGO_CONFDIR}/pango.modules
 	fi
 
 }
