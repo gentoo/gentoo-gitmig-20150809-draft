@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.23 2005/08/26 02:36:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.24 2005/10/03 12:18:15 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> XML-Twig-3.17.ebuild:
+  Mark 3.17 stable on ia64
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> XML-Twig-3.17.ebuild:
   add ~ia64
