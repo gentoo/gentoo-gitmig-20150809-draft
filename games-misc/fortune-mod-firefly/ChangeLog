@@ -1,0 +1,11 @@
+# ChangeLog for games-misc/fortune-mod-firefly
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/ChangeLog,v 1.1 2005/10/03 22:31:10 wolf31o2 Exp $
+
+*fortune-mod-firefly-1.5 (03 Oct 2005)
+
+  03 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +fortune-mod-firefly-1.5.ebuild:
+  Initial import. Ebuild by Ben Urban <benurban@comcast.net> and closing bug
+  #107468.
+
