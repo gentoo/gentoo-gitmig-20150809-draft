@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-en
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-en/ChangeLog,v 1.1 2005/09/28 19:31:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-en/ChangeLog,v 1.2 2005/10/03 19:27:48 axxo Exp $
+
+  03 Oct 2005; Thomas Matthijs <axxo@gentoo.org>
+  vim-spell-en-20050928.ebuild:
+  keyword ~x86
 
 *vim-spell-en-20050928 (28 Sep 2005)
 
