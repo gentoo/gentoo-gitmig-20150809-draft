@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.13 2005/08/25 22:40:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.14 2005/10/03 12:44:35 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> Clone-0.18.ebuild:
+  Mark 0.18 stable on ia64
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> Clone-0.18.ebuild:
   add ~ia64
