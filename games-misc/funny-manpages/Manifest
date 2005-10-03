@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 f8fb5796120ab058c8faf97bdee72f8f funny-manpages-1.3_rc5-r1.ebuild 888
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 342bb4411383c59941f86a4b85b7d137 funny-manpages-1.3_rc5.ebuild 787
-MD5 ece0c06f6dc61f92524239ede6f3e66e ChangeLog 825
-MD5 d8e3e4aa04aaf6a41f8e35a6750a073c files/digest-funny-manpages-1.3_rc5 145
+MD5 d533623e206f7f7f12436ef589990d42 ChangeLog 1065
+MD5 d8e3e4aa04aaf6a41f8e35a6750a073c files/digest-funny-manpages-1.3_rc5-r1 145
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGVR7gIKl8Uu19MoRAkEYAJsHJ9j2YPsm4PYDnic5aPKqQu9bVQCbBFEk
-lL7iKeVHY0b11vrFEGIcQiM=
-=0AXi
+iD8DBQFDQaZ7gIKl8Uu19MoRAgtiAJ0WwFLGJ3qM/2dnEiFTVklM2OEjlwCff29t
+KjoKrHY6jwna032Miyb9tkU=
+=mZvL
 -----END PGP SIGNATURE-----

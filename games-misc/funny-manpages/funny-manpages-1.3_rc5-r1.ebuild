@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/funny-manpages-1.3_rc5.ebuild,v 1.6 2005/09/03 07:44:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/funny-manpages/funny-manpages-1.3_rc5-r1.ebuild,v 1.1 2005/10/03 21:44:09 vapier Exp $
 
 inherit eutils
 
-MY_R="5"
-MY_P="${PN}_${PV/_rc?/}"
+MY_R=${PV:0-1}
+MY_P=${PN}_${PV/_rc?/}
 DESCRIPTION="funny manpages collected from various sources"
 HOMEPAGE="http://debian.org/"
 SRC_URI="mirror://debian/pool/main/f/funny-manpages/${MY_P}.orig.tar.gz
@@ -23,9 +23,13 @@ S=${WORKDIR}/${MY_P/_/-}.orig
 src_unpack() {
 	unpack ${A}
 	epatch ${MY_P}-${MY_R}.diff
+
+	cd "${S}"
+	for f in *.[0-57-9]fun ; do
+		mv ${f} ${f/.?fun/.6fun} || die "renaming ${f} failed"
+	done
 }
 
 src_install() {
-	rm -rf debian
-	doman * || die
+	doman *.6fun || die
 }
