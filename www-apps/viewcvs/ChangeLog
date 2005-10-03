@@ -1,6 +1,23 @@
 # ChangeLog for www-apps/viewcvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.19 2005/08/22 23:26:34 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/ChangeLog,v 1.20 2005/10/03 05:06:28 ramereth Exp $
+
+*viewcvs-1.0_pre20050929 (03 Oct 2005)
+
+  03 Oct 2005; Lance Albertson <ramereth@gentoo.org>
+  +files/postinstall-new-en.txt, files/reconfig, viewcvs-0.9.3.ebuild,
+  +viewcvs-1.0_pre20050929.ebuild:
+  * New CVS snapshot with several fixes:
+    * Resolved #77226 giving the option of using either
+      apache1/apache2/lighttpd for cgi capable webservers
+    * Resolved #106506 adding a mysql flag, and mysql-python deps for folks
+      wanting to use the mysql query engine.
+    * Added checks for several apps to ensure they have proper use flags
+      enabled.
+    * Added sql files for creating query engine tables
+    * Fixed reconfig script to fix the mod_python scripts
+    * Updated postinstall to include new information
+  * Marked 0.9.3 stable on x86
 
 *viewcvs-0.9.4 (22 Aug 2005)
 

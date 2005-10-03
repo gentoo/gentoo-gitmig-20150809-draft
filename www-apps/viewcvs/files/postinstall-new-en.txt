@@ -1,0 +1,22 @@
+If you are using Apache, consider adding something like this to your
+apache.conf:
+
+ScriptAlias /viewcvs ${VHOST_CGIBINDIR}/${PN}/viewcvs.cgi
+ScriptAlias /cvsquery ${VHOST_CGIBINDIR}/${PN}/cvsquery.cgi
+
+Before using viewcvs, be sure to configure it properly.
+Edit ${VHOST_ROOT}/${PN}/viewcvs.conf and ${VHOST_ROOT}/${PN}/cvsgraph.conf to
+suit your needs.
+
+If you're using mod_python, remember to add '-D PYTHON' in
+/etc/conf.d/apache. The needed settings for viewcvs have been included in
+${VHOST_ROOT}/htdocs/.htaccess.
+
+If you're wanting to use the query engine, you'll need to first create a
+database. Next, run the following command to populate the database with tables
+you'll need.
+
+# mysql -u root -p <database name> < /usr/share/webapps/viewcvs/${PV}/sqlscripts/mysql/${PV}_create.sql
+
+After this, please read the upstream documentation on how to setup the query
+engine. This can be located at /usr/share/docs/${P}/INSTALL.gz.
