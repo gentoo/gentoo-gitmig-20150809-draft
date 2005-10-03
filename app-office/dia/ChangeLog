@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.70 2005/10/03 17:55:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.71 2005/10/03 18:36:14 ferdy Exp $
+
+  03 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> dia-0.94-r3.ebuild:
+  stable on alpha wrt bug #107916
 
   03 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> dia-0.94-r3.ebuild:
   Stable on sparc wrt #107916
