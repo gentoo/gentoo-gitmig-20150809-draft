@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1483 2005/10/02 21:23:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1484 2005/10/03 04:56:32 ramereth Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1108,6 +1108,8 @@ www-apps/trac:enscript -  Add enscript support to colourize code stored in the r
 www-apps/trac:silvercity - Add SilverCity support to colourize code stored in the repository
 www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
+www-apps/viewcvs:mod_python - Add mod_python support
+www-apps/viewcvs:standalone - Install the standalone client
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
