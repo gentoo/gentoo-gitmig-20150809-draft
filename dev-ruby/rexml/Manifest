@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18650916899af3a5a93f4dec95f1c8cb ChangeLog 2941
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 ba3efed07a5c2ec1b4d0a990d4a142f6 rexml-2.5.8.ebuild 710
 MD5 303fcb233987ff2d7cbb8ac8929cc320 rexml-3.0.2.ebuild 733
-MD5 7f2d8f3ea27c3af2b6513ed9beece22c rexml-3.0.4.ebuild 753
-MD5 8212a4de094b70c4109b28b262682eb0 files/digest-rexml-2.5.8 60
-MD5 b21ee4fd14daaa4cae3798e2f527a7d1 files/digest-rexml-3.0.2 60
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 2addcd747db498ccdf07aa1a2c2c08f7 ChangeLog 3033
+MD5 810aea5854e5ccd9c6a4444662e40eb6 rexml-3.0.4.ebuild 761
+MD5 ba3efed07a5c2ec1b4d0a990d4a142f6 rexml-2.5.8.ebuild 710
 MD5 c3f8de681efb375a15ba82e20d215519 files/digest-rexml-3.0.4 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxsDi60LfUIagIAkRAkcwAJ9n6aVXZi/PWAB+BxCaquoFPDK3tACfaBeu
-ADmoe3TWr/f+Cz4Mtg62ik8=
-=1t5c
------END PGP SIGNATURE-----
+MD5 b21ee4fd14daaa4cae3798e2f527a7d1 files/digest-rexml-3.0.2 60
+MD5 8212a4de094b70c4109b28b262682eb0 files/digest-rexml-2.5.8 60
