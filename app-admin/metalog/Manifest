@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 526548988af84261b9b51be9497173cc metadata.xml 352
-MD5 41c7414c1491ff0ef859d99452671840 metalog-0.8_rc1.ebuild 1401
+MD5 87de1e175edc04567a2c0af08e17fef0 metalog-0.8_rc1.ebuild 1405
+MD5 06d4be1607e8b72d0e6eccc4891460f6 metalog-0.8_rc1-r1.ebuild 1437
 MD5 30a64f82834b4e5880316bde9432a57e metalog-0.7-r1.ebuild 1271
-MD5 f23bc70ac643dcc4549907523dc2a9c9 ChangeLog 4684
-MD5 50d1dd817d7034c47499d28d22146efa metalog-0.8_pre20031130.ebuild 1453
-MD5 a71e9c0a7f187efcffacb5a5a8222058 metalog-0.8_rc1-r1.ebuild 1433
-MD5 f4f9815c9e055df0d006dffa1400e6b3 files/metalog.conf 1777
-MD5 46e8dbe8b0c2eb41e70e839dd799eca8 files/digest-metalog-0.8_rc1-r1 67
-MD5 d16762a967c2f400ba4876a942d16d08 files/digest-metalog-0.8_pre20031130 74
-MD5 257b36998a2426dc9c9aaca45964e054 files/metalog.rc7 740
-MD5 0e76b00b24d125e5715969c6c78cb2ef files/metalog.rc6 658
-MD5 46e8dbe8b0c2eb41e70e839dd799eca8 files/digest-metalog-0.8_rc1 67
-MD5 ab769042aa4721d0ac745943e00c70e4 files/digest-metalog-0.7-r1 63
-MD5 153c40c0040a07e8dff71950df865e61 files/consolelog.sh 349
+MD5 3afcd12e6ac41228a71f4b6ad6812ef1 metalog-0.8_pre20031130.ebuild 1452
+MD5 98f521aac02911daad64753561f64afa ChangeLog 4784
+MD5 526548988af84261b9b51be9497173cc metadata.xml 352
 MD5 6ddd7e03c45fb6d65bbac1dbeb91869d files/metalog.confd 264
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHLJKgIKl8Uu19MoRAjhrAJ9RvTFEHJJKHyyYm/s0pW6WAPtFzQCfWbJl
-VgLh03ghFq6a8iAaBfo/K6o=
-=9QQh
------END PGP SIGNATURE-----
+MD5 d16762a967c2f400ba4876a942d16d08 files/digest-metalog-0.8_pre20031130 74
+MD5 f4f9815c9e055df0d006dffa1400e6b3 files/metalog.conf 1777
+MD5 0e76b00b24d125e5715969c6c78cb2ef files/metalog.rc6 658
+MD5 257b36998a2426dc9c9aaca45964e054 files/metalog.rc7 740
+MD5 46e8dbe8b0c2eb41e70e839dd799eca8 files/digest-metalog-0.8_rc1-r1 67
+MD5 ab769042aa4721d0ac745943e00c70e4 files/digest-metalog-0.7-r1 63
+MD5 46e8dbe8b0c2eb41e70e839dd799eca8 files/digest-metalog-0.8_rc1 67
+MD5 153c40c0040a07e8dff71950df865e61 files/consolelog.sh 349
