@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.36 2005/08/26 02:33:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.37 2005/10/03 12:14:42 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> XML-LibXML-1.58-r1.ebuild:
+  Mark 1.58-r1 stable on ia64
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> XML-LibXML-1.58-r1.ebuild:
   add ~ia64
