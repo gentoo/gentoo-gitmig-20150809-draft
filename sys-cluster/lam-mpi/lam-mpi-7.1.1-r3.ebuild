@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r3.ebuild,v 1.1 2005/08/15 03:30:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1-r3.ebuild,v 1.2 2005/10/03 20:03:44 xmerlin Exp $
 
-inherit fortran flag-o-matic
+inherit fortran flag-o-matic portability
 
 # LAM is a PITA with PBS. If it's detected, there is NO way to turn it off!
 # Likewise for the other SSI boot modules (globus/slurm/tm are affected)
@@ -93,6 +93,6 @@ src_install () {
 	mkdir -p ${D}/usr/share/${P}/examples
 	find -name README -or -iregex '.*\.[chf][c]?$' >${T}/testlist
 	while read p; do
-		cp --parents $p ${D}/usr/share/${P}/examples;
+		treecopy $p ${D}/usr/share/${P}/examples ;
 	done < ${T}/testlist
 }
