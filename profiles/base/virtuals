@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.71 2005/08/18 04:03:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.72 2005/10/03 15:28:01 ferdy Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -68,7 +68,6 @@ virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-php/mod_php
 virtual/psviewer			app-text/gv
 virtual/python				dev-lang/python
-virtual/qmail				mail-mta/qmail
 virtual/quicktime			media-libs/libquicktime
 virtual/ruby				dev-lang/ruby
 virtual/semi				app-emacs/semi
