@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.69 2005/10/03 17:21:59 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.70 2005/10/03 17:55:06 gustavoz Exp $
+
+  03 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> dia-0.94-r3.ebuild:
+  Stable on sparc wrt #107916
 
   03 Oct 2005; <mkay@gentoo.org> dia-0.94-r3.ebuild:
   Marked stable on x86
