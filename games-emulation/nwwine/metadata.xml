@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>wine</herd>
-<longdescription>
-This package allows you to run many winodws applications in your *nix environment. It can be used either with your existing Windows instalation or without it.
-</longdescription> 
-</pkgmetadata>
