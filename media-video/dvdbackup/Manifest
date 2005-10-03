@@ -1,5 +1,5 @@
-MD5 e5b9f332fc86ee40d764a0dd0566019a ChangeLog 1072
-MD5 f144e2e28f32855b1005eb9cd1224b1a dvdbackup-0.1.1-r1.ebuild 827
+MD5 e63f31c42cec248678bfdd2ef65d4408 ChangeLog 1168
+MD5 4fe2696804b58b12ca5d0f1b03f3ac77 dvdbackup-0.1.1-r1.ebuild 826
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 ed788d5aef0628a2098684adad1ec7b8 files/0.1.1-debian-FPE.patch 546
 MD5 a407bd72496e53b75fed9eb61a40e6d1 files/digest-dvdbackup-0.1.1-r1 66
