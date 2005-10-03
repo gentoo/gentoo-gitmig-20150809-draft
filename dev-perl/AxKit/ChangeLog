@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AxKit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.40 2005/08/26 02:58:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/ChangeLog,v 1.41 2005/10/03 12:59:45 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> AxKit-1.6.2.ebuild:
+  Mark 1.6.2 stable on ia64
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> AxKit-1.6.2.ebuild:
   add ~ia64
@@ -144,3 +147,5 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+
