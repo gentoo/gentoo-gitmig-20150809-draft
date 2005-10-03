@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 468b9ad64c793dacbea5eff14f19a14c ruby-libglade-0.34.ebuild 864
-MD5 219ad23b74b5b65d18594798223b2532 ChangeLog 2704
-MD5 ab47808f142c5a54a27a843cfeb55e88 ruby-libglade-0.30.ebuild 852
-MD5 185dcde65515cc357c509027dbad97a9 ruby-libglade-0.29.ebuild 776
-MD5 08ad271503b7021fa43f0545800f22cd ruby-libglade-0.27.ebuild 776
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-libglade-0.34 71
-MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-libglade-0.30 70
-MD5 2ab00a8d832b5e206dfa9cc899c6d4e1 files/digest-ruby-libglade-0.29 71
+MD5 ab47808f142c5a54a27a843cfeb55e88 ruby-libglade-0.30.ebuild 852
+MD5 4efeaadc6934431b8a4356941348a93f ChangeLog 2799
+MD5 08ad271503b7021fa43f0545800f22cd ruby-libglade-0.27.ebuild 776
+MD5 988fa79e253038831771547b7bc064fc ruby-libglade-0.34.ebuild 869
+MD5 185dcde65515cc357c509027dbad97a9 ruby-libglade-0.29.ebuild 776
 MD5 ffcb672a96e98b7778db8aa0886dc9ec files/digest-ruby-libglade-0.27 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGEcrj5H05b2HAEkRAj+tAKCWteSOxz4751uH2eC47NwI6hJLcwCgnAa7
-Ils7ARjSPJzlUgzEqqJDp60=
-=x5xN
------END PGP SIGNATURE-----
+MD5 3b4706cc9d3b5cb2d9d5ec941909a5a2 files/digest-ruby-libglade-0.30 70
+MD5 9c06484497032c542eb25fda52406232 files/digest-ruby-libglade-0.34 71
+MD5 2ab00a8d832b5e206dfa9cc899c6d4e1 files/digest-ruby-libglade-0.29 71
