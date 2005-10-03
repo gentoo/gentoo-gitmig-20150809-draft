@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.14 2005/05/16 06:07:31 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.15 2005/10/03 12:15:00 ka0ttic Exp $
+
+  03 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> fbdesk-1.2.1.ebuild:
+  Cleaned up ebuild: fixed LICENSE (its MIT not GPL-2), fixed DEPEND (libpng
+  was specified twice, one conditional on USE=png and one unconditional...);
+  also use make DESTDIR=${D} install over einstall.
 
   16 May 2005; Aaron Walker <ka0ttic@gentoo.org> fbdesk-1.1.5.ebuild,
   fbdesk-1.2.1.ebuild:
