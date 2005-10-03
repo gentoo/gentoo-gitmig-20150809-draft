@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.12 2005/09/01 13:56:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.13 2005/10/03 11:52:49 ticho Exp $
 
 inherit kde-functions
 
@@ -36,5 +36,5 @@ src_compile() {
 
 src_install() {
 	make INSTALL_ROOT=${D} install || die
-	dodoc AUTHORS COPYING INSTALL README
+	dodoc AUTHORS README
 }

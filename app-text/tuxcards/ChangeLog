@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.13 2005/09/01 13:56:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.14 2005/10/03 11:52:49 ticho Exp $
+
+  03 Oct 2005; Andrej Kacian <ticho@gentoo.org> tuxcards-1.2.ebuild:
+  Do not install generic COPYING and INSTALL files.
 
   01 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> tuxcards-1.2.ebuild:
   Stable on sparc
