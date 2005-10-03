@@ -1,11 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6829a4858413aca1fcdd514c7916bfa5 ChangeLog 6033
+MD5 718881f23ead192ea93f9f29ef521abe ChangeLog 6126
 MD5 35241bc9ea850572d8d7275f822b8162 eject-2.0.13-r1.ebuild 1109
-MD5 a32297daa09fc8aff637da0d41eba7c2 eject-2.0.13-r2.ebuild 1560
+MD5 8326cfa02e968ee3060dc791691fd990 eject-2.0.13-r2.ebuild 1560
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 6ad3c8045456a789af1971b0d6527302 eject-2.1.0.ebuild 1412
+MD5 342a30a8b7f066819287f915db430865 files/digest-eject-2.1.0 62
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r1 63
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r2 63
 MD5 79ae9b9c17b25df97606a29a7bb47150 files/eject-2.0.13-autoclose.patch 726
@@ -13,7 +11,6 @@ MD5 c5613bc078215c657678c57e387731ac files/eject-2.0.13-close-check.patch 1405
 MD5 c72d5d5d53d6390c871f8ee901770c7b files/eject-2.0.13-finddev.patch 1978
 MD5 31688554edc80b2d6cf1ae427a6533f7 files/eject-2.0.13-fstab-error.patch 956
 MD5 c7f02cf0dea0ee27a338220804de25ab files/eject-2.0.13-header.patch 848
-MD5 b92a6e4f192ffefdc4ad665fba3ed4a7 files/eject-2.0.13-i18n-uclibc.patch 645
 MD5 f9dc8e0281dbe9fd3f4db87d5ecfc69e files/eject-2.0.13-kernel25-support.patch 458
 MD5 ba37ff5a9223af8de446a18e62dbe19d files/eject-2.0.13-no-umount.patch 2496
 MD5 9ce8b7632acf54813ee4336d89293b53 files/eject-2.0.13-prefix-defaultdevice-with-dev.patch 488
@@ -22,13 +19,6 @@ MD5 0109237261a5ce6357ddcd041259e61e files/eject-2.0.13-toggle.patch 2838
 MD5 9a4e89b1944feaa8da40749822de0f44 files/eject-2.0.13-use-mountpoints.patch 965
 MD5 4c62f46d6d72dd079fd677db6ae57059 files/eject-2.0.13-xmalloc.patch 654
 MD5 6511dfbfe2029a7e582f958af0d41ca7 files/eject-2.0.13-xregcomp.patch 649
-MD5 342a30a8b7f066819287f915db430865 files/digest-eject-2.1.0 62
+MD5 b92a6e4f192ffefdc4ad665fba3ed4a7 files/eject-2.0.13-i18n-uclibc.patch 645
 MD5 dd1b8295e14d3b2ee85a9f06860a5a9f files/eject-2.1.0-regcomp-check.patch 503
 MD5 b60886258cade258841187669f401bb9 files/eject-2.1.0-scsi-io-update.patch 2949
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPz30Kf2g/qXtneoRAhWeAKCowGFey7KKC619rZUwO5YFldeGbgCeJgUH
-rq2izDCq5vClNNGndP2l7UM=
-=zt2M
------END PGP SIGNATURE-----

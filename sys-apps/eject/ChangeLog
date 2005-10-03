@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.40 2005/10/02 01:54:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.41 2005/10/03 12:26:40 hardave Exp $
+
+  03 Oct 2005; Hardave Riar <hardave@gentoo.org> eject-2.0.13-r2.ebuild:
+  Stable on mips.
 
   02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> eject-2.0.13-r2.ebuild:
   Alpha stable.
