@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bbf89219954345b17098d6c9d2f4b16d ChangeLog 1589
 MD5 a4262fc5d95095792576fe2c22a88bad metadata.xml 461
+MD5 487e954fb96ef65b8306cddc8f4f9dc5 ChangeLog 1680
 MD5 5ac7f576e58bd7b32046aec29e4d8f0c sary-1.1.0.ebuild 578
-MD5 77df26de729d3dd3d253228050c9de4a sary-1.2.0.ebuild 587
+MD5 c2449ef56e27804fff33e236aed499cb sary-1.2.0.ebuild 595
 MD5 c55c660629825958ad308f1c06af3c98 files/digest-sary-1.1.0 62
 MD5 562e523890af15e40431f9c22e24ee43 files/digest-sary-1.2.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCxwAAKf2g/qXtneoRAjwCAJ9/jlP2UfO3hY3/Ds/fIJz+s1yqbwCgjP9e
-Alnu+b51ELuAK2DjIYTFHCE=
-=IvuT
------END PGP SIGNATURE-----
