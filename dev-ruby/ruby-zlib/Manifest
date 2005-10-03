@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 24fd9335da8249e223d4e132053da422 ruby-zlib-0.6.0.ebuild 517
-MD5 60454ca5f5f7e6b6024d003d3199bd27 ChangeLog 540
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 e5af163048cb80f22b95238992270646 ChangeLog 637
+MD5 b88ecaea66c0bc097dc7b47c212aeafe ruby-zlib-0.6.0.ebuild 526
 MD5 70223a78f1d17200eeab31b8dec45658 files/digest-ruby-zlib-0.6.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBlyMnVWNWqTUmv+0RAiZ1AKCSw/+bhG1rQBA9NGI9f4+J4TvM8QCfYmX6
-QhE6REIiawEALJlUVUPyYSM=
-=pFP9
------END PGP SIGNATURE-----

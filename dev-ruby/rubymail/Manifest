@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21467b6d03b758ca174df65cc7bbe033 rubymail-0.16.ebuild 786
-MD5 ff963506294d33177c4d28725543300f ChangeLog 1907
-MD5 2e511518b62710a01274ed4cbeb75d54 rubymail-0.15.ebuild 752
-MD5 d2acd38791e010e8a1be26d737285e1f rubymail-0.17.ebuild 874
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 8d5d7383677398ee812e15d80616b042 files/digest-rubymail-0.16 65
+MD5 266500243c7f49da0f2aaea2864aaf8e ChangeLog 1997
+MD5 2e511518b62710a01274ed4cbeb75d54 rubymail-0.15.ebuild 752
+MD5 21467b6d03b758ca174df65cc7bbe033 rubymail-0.16.ebuild 786
+MD5 693cf42086e7e6d9066b8d1e3bd5740f rubymail-0.17.ebuild 879
 MD5 6a26f746bb36d0f68a574c0b69878991 files/digest-rubymail-0.15 65
 MD5 1aad13db6a51954d8fb330d694041788 files/digest-rubymail-0.17 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGEYpj5H05b2HAEkRAjhZAJsHu63jxsWDWQ+EG9N81XoCs06F4gCffF9v
-rj43hPOW8AbGe835xbaN+L8=
-=ZlZX
------END PGP SIGNATURE-----
+MD5 8d5d7383677398ee812e15d80616b042 files/digest-rubymail-0.16 65
