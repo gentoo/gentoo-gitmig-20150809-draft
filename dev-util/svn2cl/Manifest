@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ec83b303488e612e771c53aba954b9e9 ChangeLog 372
+MD5 c4c2338780c2e4370b34593030f61ada files/digest-svn2cl-0.3 60
+MD5 b9691818298f540becb34adcb66a43fb files/svn2cl-no-same-dir-xsl.diff 504
+MD5 fa9f0ec1a9f013df4ca78764a473a250 metadata.xml 256
+MD5 144f16b009c8e91f84de32c52734d333 svn2cl-0.3.ebuild 849
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQSkhEZCkKN40op4RAgeOAJ9FMm9LOU4qwMDyeKD+HecxLwRRYACggP08
+x2uM4ESf5N5wBR/qCNhLuMM=
+=jCgg
+-----END PGP SIGNATURE-----

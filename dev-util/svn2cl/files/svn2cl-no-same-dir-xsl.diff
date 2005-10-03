@@ -1,0 +1,19 @@
+--- svn2cl.sh.orig	2005-10-03 08:35:46.000000000 -0400
++++ svn2cl.sh	2005-10-03 08:40:26.000000000 -0400
+@@ -105,15 +105,7 @@
+   esac
+ done
+ 
+-# find the directory that this script resides in
+-prog="$0"
+-while [ -h "$prog" ]
+-do
+-  prog=`ls -ld "$prog" | sed "s/^.*-> \(.*\)/\1/;/^[^/]/s,^,$(dirname "$prog")/,"`
+-done
+-dir=`dirname $prog`
+-dir=`cd $dir && pwd`
+-XSL="$dir/svn2cl.xsl"
++XSL="/usr/share/svn2cl/svn2cl.xsl"
+ 
+ # redirect stdout to the changelog file if needed
+ if [ "x$CHANGELOG" != "x-" ]
