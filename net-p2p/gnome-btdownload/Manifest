@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 69fd31ce33755d7cf891bc1122396f98 ChangeLog 1306
+MD5 fa765c02313b3adc969fa6cb55d5d9e8 gnome-btdownload-0.0.11.ebuild 760
+MD5 e572f84f344d4cadd34012a02a9f9b74 gnome-btdownload-0.0.16.ebuild 761
 MD5 cb0acdf2c46a32d90ef2728ce9deeae2 gnome-btdownload-0.0.17.ebuild 761
 MD5 e5f711f50d27b56ac43c93013afe6a3e gnome-btdownload-0.0.20.ebuild 760
-MD5 e572f84f344d4cadd34012a02a9f9b74 gnome-btdownload-0.0.16.ebuild 761
-MD5 fa765c02313b3adc969fa6cb55d5d9e8 gnome-btdownload-0.0.11.ebuild 760
-MD5 35aab611dfbb090169a3553f34a61d72 ChangeLog 1189
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 f55a99e03ae4293df73b975bedf46bca gnome-btdownload-0.0.22.ebuild 756
 MD5 7dbbf8233a94b880b3548c48c958cb5a files/digest-gnome-btdownload-0.0.11 75
 MD5 4b140ad2f7d4ae2d239912c0e85e6b3d files/digest-gnome-btdownload-0.0.16 75
 MD5 1a16eb1a7a3284384812225b64cb97a3 files/digest-gnome-btdownload-0.0.17 75
 MD5 5034ffdb93ddec05d06f47a4bb5ee9b5 files/digest-gnome-btdownload-0.0.20 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCk5qqZ/iYVBmujdURAh1qAJ9XXJTAo/F6l27QRMPFMpEsys5sGACfTJ93
-NmR5Uj7Tamtl82h/KeoN5OE=
-=lslI
------END PGP SIGNATURE-----
+MD5 140a82d3e4bc799c9b4cd5c6ecb137d3 files/digest-gnome-btdownload-0.0.22 75
