@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 581253175eac2308125c8f49b79c0d69 ChangeLog 10531
+MD5 9778077cd291c943f47b93ba3ae98d95 ChangeLog 10620
 MD5 e0f9b7570483cbca8caa3706b334416c gawk-3.1.3-r2.ebuild 2764
-MD5 c4c38bee0c26d229ac064881ebd1c1f3 gawk-3.1.4-r4.ebuild 3858
+MD5 09fbc4e3606506a36a62d00e0a4a4dea gawk-3.1.4-r4.ebuild 3856
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 f8338e33df55e31685444d37f365785e gawk-3.1.5.ebuild 3081
 MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
@@ -20,10 +17,3 @@ MD5 89145324fea9791b0caa1b09f5cee0cb files/gawk-3.1.5-core.patch 643
 MD5 499e2881f167a17f2123ca338836e91d files/gawk-3.1.5-gcc4.patch 826
 MD5 7b48ab999f661a00e70da4eb9ede8376 files/filefuncs/Makefile 1192
 MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDPpAHwUpWvClEHQoRAqhHAJ4uJcB4vL20rlu6jUz8R578eZln3QCfQb3R
-7mDtXc7qXY+rseYAQsg5R44=
-=fDeC
------END PGP SIGNATURE-----
