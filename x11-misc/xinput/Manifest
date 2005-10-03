@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74239a998f4a32922f1c1d8c3afa25ae ChangeLog 537
-MD5 22d68a9a70e4cf40230631dcdd1fc437 xinput-1.2.ebuild 624
-MD5 b6d6e03943837cc96455b231a36de417 metadata.xml 235
+MD5 1bf4ee88a51260bed9173aee8632ae4b ChangeLog 637
 MD5 e982f67f081af704e720bc7a54cdde8a files/digest-xinput-1.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWnHII7fK2cqeyXkRAmZeAKC4C7dTj/hxVmODV2PDlEn6bRYYQACgqBCv
-KRYXShrjL7VNNEZXh/+3ur4=
-=vfqM
------END PGP SIGNATURE-----
+MD5 b6d6e03943837cc96455b231a36de417 metadata.xml 235
+MD5 520fe1baf52043e4dfc4771b7c71be61 xinput-1.2.ebuild 631
