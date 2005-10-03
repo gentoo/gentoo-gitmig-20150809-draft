@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 da1716a3a00bdd0c3c571975d1ee7c2a cl-launch-1.69.ebuild 845
+MD5 97198dbec3b09c7b5be9fa930d04f223 ChangeLog 415
+MD5 3d62afd4f80992c356b279c033de5e86 files/digest-cl-launch-1.69 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQU0ZyiNZaEAZA+ARAp1TAJ4zQS3VNGA6n97DoZ4ARpm+74W4pACaAtrR
+9+ws/ksfY9QnoOyNZsXxAr0=
+=PCOs
+-----END PGP SIGNATURE-----
