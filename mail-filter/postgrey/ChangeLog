@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.9 2005/09/07 21:24:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.10 2005/10/03 12:17:03 ticho Exp $
+
+  03 Oct 2005; Andrej Kacian <ticho@gentoo.org> postgrey-1.21.ebuild,
+  postgrey-1.21-r1.ebuild:
+  Do not install generic COPYING document.
 
   07 Sep 2005; Andrej Kacian <ticho@gentoo.org> files/postgrey.rc,
   files/postgrey.rc.new:
