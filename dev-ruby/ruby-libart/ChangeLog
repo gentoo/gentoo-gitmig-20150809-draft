@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libart
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.11 2005/08/26 14:08:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.12 2005/10/03 13:13:01 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-libart-0.34.ebuild:
+  Mark 0.34 ~ia64
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   ruby-libart-0.30.ebuild, ruby-libart-0.34.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-libglade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.17 2005/09/02 12:35:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.18 2005/10/03 13:18:00 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-libglade-0.34.ebuild:
+  Mark 0.34 ~ia64
 
   02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   ruby-libglade-0.27.ebuild, ruby-libglade-0.29.ebuild,
