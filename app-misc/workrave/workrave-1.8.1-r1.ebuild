@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.1-r1.ebuild,v 1.2 2005/09/20 01:16:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.1-r1.ebuild,v 1.3 2005/10/03 06:59:29 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -35,22 +35,27 @@ RDEPEND=">=dev-libs/glib-2
 	arts? ( kde-base/arts )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	>=dev-util/pkgconfig-0.9"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="ABOUT-NLS AUTHORS ChangeLog NEWS README"
 
 
 pkg_setup() {
-	G2CONF="${G2CONF} --enable-gconf $(use_enable distribution)      \
-	$(use_enable nls) $(use_enable xml2 xml) $(use_enable gnome)     \
-	$(use_enable gnome gnomemm) $(use_enable dbus) $(use_enable kde) \
-	$(use_with arts)"
+	G2CONF="--enable-gconf \
+		$(use_enable distribution)  \
+		$(use_enable nls)           \
+		$(use_enable xml2 xml)      \
+		$(use_enable gnome)         \
+		$(use_enable gnome gnomemm) \
+		$(use_enable dbus)          \
+		$(use_enable kde)           \
+		$(use_with arts)"
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	# Removes a few broken macros. See bug #86939.
 	epatch ${FILESDIR}/${PN}-1.6.2-nls_macros.patch
