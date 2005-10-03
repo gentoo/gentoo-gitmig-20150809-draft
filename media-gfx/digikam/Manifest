@@ -1,19 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c021f4d20051a4c1bdce380324ae4338 digikam-0.8.0_beta2.ebuild 836
-MD5 f8bd35a5a7e8deed4edc283d0e242c10 digikam-0.7.4.ebuild 1220
-MD5 68366a9c281a54129bd0298e9d548793 ChangeLog 4410
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 8ff127446138f30080170bb500661422 digikam-0.7.1.ebuild 633
-MD5 ce9a054c65517516508237e88d86ae1d files/digikam-0.8.0_beta2-configure-fix.patch 459
-MD5 a49dffd18c53481671d310784efc9e78 files/digest-digikam-0.8.0_beta2 73
+MD5 09f0a8d29c4ce182deaff3f3e133bf63 digikam-0.8.0_beta2.ebuild 789
+MD5 3595bd399c34d76c7a6c999435414dc5 ChangeLog 4627
+MD5 e32597bb0e1db575513309f3c705e66b digikam-0.7.4.ebuild 1160
 MD5 65d75029c28dfdaa673c86aa6366ddd2 files/digest-digikam-0.7.1 67
+MD5 a49dffd18c53481671d310784efc9e78 files/digest-digikam-0.8.0_beta2 73
 MD5 55bccecf6ae17fe2365bc62da5ab1640 files/digest-digikam-0.7.4 139
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDPy9IntT9W3vfTuoRAkx2AJ9a1aLkP1BlwQO04MT4JdUFUP6T9ACcCcyE
-DO3VGEI+sU33BbT/kEx5yi0=
-=/DAD
------END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.31 2005/10/02 00:37:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.32 2005/10/03 08:10:42 greg_g Exp $
+
+  03 Oct 2005; Gregorio Guidi <greg_g@gentoo.org>
+  -files/digikam-0.8.0_beta2-configure-fix.patch, digikam-0.7.4.ebuild,
+  digikam-0.8.0_beta2.ebuild:
+  Remove configure patch, not needed anymore (see bug 107571).
 
   02 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> digikam-0.7.4.ebuild:
   Patch to fix configure applied to this version too, bug 107318.

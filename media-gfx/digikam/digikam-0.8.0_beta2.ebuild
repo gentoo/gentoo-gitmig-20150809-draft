@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.0_beta2.ebuild,v 1.2 2005/09/27 15:07:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.0_beta2.ebuild,v 1.3 2005/10/03 08:10:42 greg_g Exp $
 
 inherit kde
 
@@ -26,8 +26,6 @@ DEPEND=">=media-libs/libgphoto2-2
 	!media-plugins/digikamplugins"
 
 need-kde 3.2
-
-PATCHES="${FILESDIR}/${P}-configure-fix.patch"
 
 pkg_setup(){
 	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
