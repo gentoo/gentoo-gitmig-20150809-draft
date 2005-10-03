@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-theme-switch
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.24 2005/09/17 00:54:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.25 2005/10/03 19:43:38 corsair Exp $
+
+  03 Oct 2005; Markus Rothe <corsair@gentoo.org>
+  gtk-theme-switch-2.0.0_rc2-r2.ebuild:
+  Stable on ppc64
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
