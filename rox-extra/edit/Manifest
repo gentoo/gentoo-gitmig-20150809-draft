@@ -1,6 +1,16 @@
-MD5 7d2be885028677aa025f06c2ec1d4a64 edit-2.0.ebuild 690
-MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 feab103fdb8f3c997e06435a1ea0928a ChangeLog 734
 MD5 f274e7d167ea0ac7a7d3c5fb0b6c96ed edit-1.9.5.ebuild 474
+MD5 95f5c89c0aeff3f7ffed7aca7e8b8a4b edit-2.0.ebuild 671
 MD5 f21b7aa99b68eef4b9c99ba8187b0098 files/digest-edit-1.9.5 58
 MD5 7cd1c2c02fc31e1f2dbb5d3b6b583280 files/digest-edit-2.0 56
+MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQa3yI1lqEGTUzyQRAhUyAJ98eFld4vcZ0+fCe5eXmGReq1TnmACgzLnD
+ahoUsrz1NNVf/oNf4HQ9sGc=
+=cS2X
+-----END PGP SIGNATURE-----
