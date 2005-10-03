@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.107 2005/10/02 03:25:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.108 2005/10/03 22:34:18 vapier Exp $
+
+  03 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-20050930-dont-warn-lib-path.patch,
+  +files/wine-20050930-no-x.patch, wine-20050930.ebuild:
+  Fix building with USE=-X #107870 by ChazeFroy and dont display library
+  warning since it is irrelevant for Gentoo users #107971 by Holly Bostick.
 
   02 Oct 2005; Mike Frysinger <vapier@gentoo.org>
   files/wine-20041019-alsa-headers.patch:

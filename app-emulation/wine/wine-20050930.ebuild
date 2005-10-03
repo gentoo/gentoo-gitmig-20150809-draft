@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050930.ebuild,v 1.1 2005/10/01 00:48:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050930.ebuild,v 1.2 2005/10/03 22:34:18 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses lcms"
+IUSE="alsa arts cups debug esd gif glut jack jpeg lcms ldap nas ncurses opengl oss scanner truetype xml2 X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -21,13 +21,18 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	X? ( virtual/x11 )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
+	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
+	ldap? ( net-nds/openldap )
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
+	truetype? ( media-libs/freetype )
+	scanner? ( media-gfx/sane-backends )
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-2.1
 		>=app-emulation/emul-linux-x86-soundlibs-2.1
@@ -63,38 +68,46 @@ src_unpack() {
 	epatch "${FILESDIR}"/winearts-kdecvs-fix.patch
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
 	epatch "${FILESDIR}"/20041019-no-stack.patch #66002
-	epatch "${FILESDIR}"/wine-20050830-gcc-32bit.patch
+#	epatch "${FILESDIR}"/wine-20050830-gcc-32bit.patch
+	epatch "${FILESDIR}"/wine-20050930-no-x.patch
+	epatch "${FILESDIR}"/wine-20050930-dont-warn-lib-path.patch #107971
 }
 
 config_cache() {
 	local h ans="no"
-	use ${1} && ans="yes"
+	use $1 && ans="yes"
 	shift
 	for h in "$@" ; do
-		export ac_cv_${h}=${ans}
+		[[ ${h} == *.h ]] \
+			&& h=header_${h} \
+			|| h=lib_${h}
+		export ac_cv_${h//[:\/.]/_}=${ans}
 	done
 }
 
 src_compile() {
 	export LDCONFIG=/bin/true
-	config_cache jack header_jack_jack_h
-	config_cache cups header_cups_cups_h
-	config_cache alsa header_alsa_asoundlib_h header_sys_asoundlib_h lib_asound_snd_pcm_open
-	use arts || export ARTSCCONFIG="/bin/false"
-	config_cache nas header_audio_audiolib_h header_audio_soundlib_h
-	config_cache gif header_gif_lib_h
-	config_cache glut lib_glut_glutMainLoop
-	config_cache jpeg header_jpeglib_h
-	config_cache oss header_sys_soundcard_h header_machine_soundcard_h header_soundcard_h
-	config_cache lcms header_lcms_h
+	use arts    || export ARTSCCONFIG="/bin/false"
+	use esd     || export ESDCONFIG="/bin/false"
+	use scanner || export sane_devel="no"
+	config_cache jack jack/jack.h
+	config_cache cups cups/cups.h
+	config_cache alsa alsa/asoundlib.h sys/asoundlib.h asound:snd_pcm_open
+	config_cache nas audio/audiolib.h audio/soundlib.h
+	config_cache xml2 libxml/parser.h libxslt/pattern.h libxslt/transform.h
+	config_cache ldap ldap.h lber.h
+	config_cache gif gif_lib.h
+	config_cache glut glut:glutMainLoop
+	config_cache jpeg jpeglib.h
+	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
+	config_cache lcms lcms.h
+	use x86 && config_cache truetype freetype:FT_Init_FreeType
 
 	strip-flags
 	use lcms && append-flags -I"${ROOT}"/usr/include/lcms
 
 	#	$(use_enable amd64 win64)
-	# USE=debug is broken in this release
 	econf \
-		CC=$(tc-getCC) \
 		--sysconfdir=/etc/wine \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
