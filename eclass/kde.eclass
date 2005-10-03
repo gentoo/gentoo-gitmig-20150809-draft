@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.133 2005/09/25 21:03:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.134 2005/10/03 08:02:15 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -58,13 +58,6 @@ kde_src_unpack() {
 	if [ -n "$UIFILES" ]; then
 		debug-print "$FUNCNAME: touching .ui files..."
 		touch $UIFILES
-	fi
-
-	# Visiblity stuff *IS* broken. Just disable it when it's present.
-	# DON'T make this version-dependent, it's NOT version dependant.
-	if grep KDE_ENABLE_HIDDEN_VISIBILITY configure.in &> /dev/null || ! [[ -f configure ]]; then
-		find ${S} -name configure.in.in | xargs sed -i -e 's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
-		rm -f configure
 	fi
 }
 
@@ -140,6 +133,9 @@ kde_src_compile() {
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
 				cd $S
+
+				# Visiblity stuff is broken. Just disable it when it's present.
+				export kde_cv_prog_cxx_fvisibility_hidden=no
 
 				# If we're not a kde-base ebuild, then set up the /usr directories properly
 				# Perhaps this could get changed later to use econf instead?
