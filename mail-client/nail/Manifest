@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 89ec865c26371e72449dd90b18bdac39 ChangeLog 6411
 MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r1 63
 MD5 95cdf41668e1dc14af7ed74c9eb1cb76 files/digest-nail-11.25-r3 63
@@ -5,3 +8,10 @@ MD5 40398648c9e2e41662ae61caea846c57 files/nail-nosocket.patch 473
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 eadd4065bdc0e5049170cd1386974525 nail-11.25-r1.ebuild 1426
 MD5 a0e68323adef1c7e1d48d987a9855a65 nail-11.25-r3.ebuild 1871
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQSBmQlM6RnzZP+IRArwBAJ0fDtbpdKv50AHRq87y6pPfdI2dFACgo/sb
+rpWDktFMuDUr6X/pBWlRUVI=
+=IGqG
+-----END PGP SIGNATURE-----

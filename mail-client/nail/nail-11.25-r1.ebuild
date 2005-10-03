@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r1.ebuild,v 1.8 2005/09/02 02:31:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.25-r1.ebuild,v 1.9 2005/10/03 12:13:01 ticho Exp $
 
 inherit eutils
 DESCRIPTION="Nail is an enhanced mailx-compatible mail client"
@@ -39,7 +39,7 @@ src_install () {
 	EOSMTP
 
 	make DESTDIR=${D} UCBINSTALL=/bin/install PREFIX=/usr install || die "install failed"
-	dodoc AUTHORS COPYING INSTALL README
+	dodoc AUTHORS INSTALL README
 	dodir /bin
 	dosym /usr/bin/nail /bin/mail
 	dosym /usr/bin/nail /usr/bin/mailx

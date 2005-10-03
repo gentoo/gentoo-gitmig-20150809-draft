@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.45 2005/10/02 16:53:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.46 2005/10/03 12:13:01 ticho Exp $
+
+  03 Oct 2005; Andrej Kacian <ticho@gentoo.org> nail-11.25-r1.ebuild,
+  nail-11.25-r3.ebuild:
+  Do not install generic COPYING document.
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> nail-11.25-r3.ebuild:
   Stable on ppc.
