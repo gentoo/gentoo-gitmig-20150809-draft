@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b189e4b6954ecf508fab03bfb7b6a45 ChangeLog 1815
-MD5 3439ca4080ba5253ca98e6ef21e20e9c dlint-1.4.0-r1.ebuild 899
+MD5 9b1bd2f33f9b632474ebfcb6e9b5a78e ChangeLog 1948
+MD5 c198043e51bae7ecab35d674620f8ceb dlint-1.4.0-r1.ebuild 888
+MD5 4939744e059b21f72d18f0741efd30b5 dlint-1.4.0-r2.ebuild 924
 MD5 a46c2f3ad1214afdc1408ef77177a3b9 dlint-1.4.0.ebuild 865
-MD5 0f516c20d49629e662ef970814e48522 metadata.xml 253
-MD5 51d9ffcb88d6ac9cd48fd1558a3406cf dlint-1.4.0-r2.ebuild 935
 MD5 4885c47ebf525bab4ff5af0f22fc14c7 files/digest-dlint-1.4.0 61
 MD5 4885c47ebf525bab4ff5af0f22fc14c7 files/digest-dlint-1.4.0-r1 61
 MD5 4885c47ebf525bab4ff5af0f22fc14c7 files/digest-dlint-1.4.0-r2 61
+MD5 0f516c20d49629e662ef970814e48522 metadata.xml 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCJ0qyKRy60XGEcJIRApp2AJ93PbvmKkS93spi8eqdjEzNNT+frwCZAfl3
-ypuhfbOlFEPXt0b3aIMQ3IA=
-=oPiN
+iD8DBQFDQRibQlM6RnzZP+IRAkO9AJ0ReZhfvZZmFJWEhjAR8Bg5uyh9uQCgoK+y
+2bcMz5LOoXSGcsuZiyQ8fAs=
+=Qp/q
 -----END PGP SIGNATURE-----
