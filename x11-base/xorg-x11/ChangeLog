@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.463 2005/10/03 19:50:38 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.464 2005/10/03 20:11:28 joshuabaergen Exp $
+
+*xorg-x11-6.8.99.15-r3 (03 Oct 2005)
+
+  03 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-x11-6.8.99.15-r3.ebuild:
+  Added fix for OO/wine transparencies as well as update to mmx code from bug
+  #96053, closing that bug.  Thanks to bartron for both patches.
+  
+  Also added patch from bug #104318 to fix colour swapping on big-endian
+  systems.  Thanks to Stephen Becker for that.
 
 *xorg-x11-6.8.2-r6 (03 Oct 2005)
 
