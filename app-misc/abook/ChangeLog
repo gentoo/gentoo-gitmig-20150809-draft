@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.28 2005/09/16 21:27:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.29 2005/10/03 12:02:11 ticho Exp $
+
+  03 Oct 2005; Andrej Kacian <ticho@gentoo.org> abook-0.5.2-r1.ebuild,
+  abook-0.5.3.ebuild, abook-0.5.4.ebuild:
+  0.5.4 stable on x86. Do not install generic INSTALL document.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

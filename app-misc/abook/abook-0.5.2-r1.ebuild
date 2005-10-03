@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.5.2-r1.ebuild,v 1.11 2005/05/15 10:51:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/abook-0.5.2-r1.ebuild,v 1.12 2005/10/03 12:02:11 ticho Exp $
 
 inherit eutils gnuconfig
 
@@ -26,6 +26,6 @@ src_unpack() {
 
 src_install() {
 	make install DESTDIR=${D} || die "install died"
-	dodoc ANNOUNCE AUTHORS BUGS ChangeLog FAQ INSTALL NEWS README THANKS TODO
+	dodoc ANNOUNCE AUTHORS BUGS ChangeLog FAQ NEWS README THANKS TODO
 	dodoc sample.abookrc
 }
