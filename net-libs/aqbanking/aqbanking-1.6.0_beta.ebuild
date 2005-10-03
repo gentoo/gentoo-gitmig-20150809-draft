@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.6.0_beta.ebuild,v 1.2 2005/09/28 12:02:52 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-1.6.0_beta.ebuild,v 1.3 2005/10/03 22:19:16 swegener Exp $
 
 inherit kde-functions
 
@@ -13,9 +13,9 @@ KEYWORDS="~x86 ~ia64 ~ppc ~sparc ~alpha ~amd64"
 IUSE="debug ofx geldkarte chipcard dtaus hbci kde qt"
 DEPEND=">=sys-libs/gwenhywfar-1.16.0
 	app-misc/ktoblzcheck
-	ofx? >=dev-libs/libofx-0.8
-	geldkarte? >=sys-libs/libchipcard-1.9.15_beta
-	chipcard? >=sys-libs/libchipcard-1.9.15_beta"
+	ofx? ( >=dev-libs/libofx-0.8 )
+	geldkarte? ( >=sys-libs/libchipcard-1.9.15_beta )
+	chipcard? ( >=sys-libs/libchipcard-1.9.15_beta )"
 
 # ctypes is not yet keyworded on most archs
 #	python? dev-python/ctypes

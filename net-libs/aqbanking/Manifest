@@ -9,8 +9,7 @@ MD5 a5113a43fcff2982153ac16bf3ea2cc6 aqbanking-1.0.4_beta.ebuild 700
 MD5 d647d450699249f5b8bd88ec36e551a2 aqbanking-1.0.6.ebuild 671
 MD5 b9d23b01ec5b6687b608a00fc7c9dbd8 aqbanking-1.0.8.ebuild 672
 MD5 b5d6686a322b925b38807145c19c9201 aqbanking-1.1.0.ebuild 678
-MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
-MD5 0258652e964cb3a117328664d72852e9 aqbanking-1.6.0_beta.ebuild 1581
+MD5 0f45370d52acb1f48bc4f16e1adb18c3 aqbanking-1.6.0_beta.ebuild 1596
 MD5 1871394417ac872fb0070b0a2f25379a files/digest-aqbanking-0.9.8 67
 MD5 ac162c61869cdb978111c926abc743e9 files/digest-aqbanking-0.9.9 67
 MD5 218018d23612c389cdd79f33864104b9 files/digest-aqbanking-1.0.2_beta 71
@@ -19,10 +18,11 @@ MD5 1093fd6e52214774401a58c75b9162b4 files/digest-aqbanking-1.0.6 67
 MD5 1c5b8e47920f4e3b5dd255a10e7d3b3c files/digest-aqbanking-1.0.8 67
 MD5 90a0a0c187db03c2eddcf192c4432ceb files/digest-aqbanking-1.1.0 68
 MD5 ff9a0f1595c29d0edd0398dcceafaa63 files/digest-aqbanking-1.6.0_beta 72
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOocHr2QksT29OyARAl0uAJ9r+XUT24QGWrLMyal+LDzhyetXFACgg0Ov
-fXRXr+mCORPp8j48zfePfcs=
-=QFCJ
+iD8DBQFDQa5uI1lqEGTUzyQRAqlxAJ46TDcNe8lpSrrujI73JtWKuKk/SQCfZHgX
+UMuKgo4CWh4ajU7ZL5NyGTk=
+=m/na
 -----END PGP SIGNATURE-----
