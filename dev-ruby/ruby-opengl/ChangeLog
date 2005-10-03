@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.10 2005/09/09 15:23:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.11 2005/10/03 13:24:42 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-opengl-0.32d.ebuild:
+  Mark 0.32d ~ia64
 
   09 Sep 2005; Ferris McCormick <fmccor@gentoo.org>
   ruby-opengl-0.32d.ebuild:
