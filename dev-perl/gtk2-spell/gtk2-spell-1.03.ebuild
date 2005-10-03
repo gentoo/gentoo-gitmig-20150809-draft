@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.03.ebuild,v 1.9 2005/09/08 21:14:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.03.ebuild,v 1.10 2005/10/03 12:55:07 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/M/ML/MLEHMANN/${MY_P}.tar.gz"
 HOMEPAGE="http://gtk2-perl.sf.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="${DEPEND}
@@ -27,3 +27,4 @@ src_unpack() {
 	# Without this it cannot find gtkspell <rigo@home.nl>
 	sed -ie "s:\#my:my:g" Makefile.PL || die "sed failed"
 }
+
