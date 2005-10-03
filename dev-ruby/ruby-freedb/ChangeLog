@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-freedb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.6 2005/05/01 18:11:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.7 2005/10/03 13:09:25 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org> ruby-freedb-0.5.ebuild:
+  Mark 0.5 ~ia64
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   ruby-freedb-0.5.ebuild:
