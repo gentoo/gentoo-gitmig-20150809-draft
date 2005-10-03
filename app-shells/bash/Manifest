@@ -1,42 +1,52 @@
-MD5 30fb11f3c3ffeebf09fa3ae90dd0d351 bash-3.0-r12.ebuild 5407
-MD5 a4df32e089db48d7c99fd6be36368475 bash-2.05b-r9.ebuild 3516
-MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
-MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
-MD5 a1a9df37ef2168612bd54e0cf38981b4 ChangeLog 15028
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r11 976
-MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r12 976
-MD5 edac0c7e2accd7f60d64d6361913db6e files/bash-3.0-darwin-conn.patch 983
-MD5 3d73159ab671b57a3f488c044e1a1f47 files/bash-2.05b-setlocale.patch 694
-MD5 b86b65863c2ae21b59d8201c2a3a9e91 files/bash-3.0-trap-fg-signals.patch 641
-MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
-MD5 e685741a0d3aede0600541b946b99564 files/bash-3.0-force-static-linking.patch 952
-MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
-MD5 229ccc2980a94877f2e87f957e9da7bf files/bash_logout 205
-MD5 00cd6ee276de4810e2209dc426b133e4 files/bash-3.0-ulimit.patch 2659
+MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
+MD5 a4df32e089db48d7c99fd6be36368475 bash-2.05b-r9.ebuild 3516
+MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
+MD5 79089edfbb4dcf5b62bb04ff10750dee ChangeLog 15143
+MD5 30fb11f3c3ffeebf09fa3ae90dd0d351 bash-3.0-r12.ebuild 5407
+MD5 3b706b4e822e0480f1ba098db4b292f6 files/bash-3.0-parallel.patch 378
+MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
+MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
+MD5 3d73159ab671b57a3f488c044e1a1f47 files/bash-2.05b-setlocale.patch 694
+MD5 b518c92ffb4ee61be7e4b1d27264a652 files/bash-3.0-pgrp-pipe-fix.patch 462
+MD5 05f32594822720a84f58197c1535fc82 files/bash-3.0-jobs.patch 1064
+MD5 229ccc2980a94877f2e87f957e9da7bf files/bash_logout 205
+MD5 c8362f29e2f8e6cdfd3306c7bcce0439 files/bash-3.0-pwd.patch 583
+MD5 e685741a0d3aede0600541b946b99564 files/bash-3.0-force-static-linking.patch 952
+MD5 ccc195288edb06eb44f4d5e2a9c1da62 files/bash-3.0-crash.patch 1191
 MD5 6bc03ea9b1de46a4789e8223f2224658 files/bash-3.0-read-builtin-pipe.patch 689
+MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
+MD5 edac0c7e2accd7f60d64d6361913db6e files/bash-3.0-darwin-conn.patch 983
+MD5 1f2890881a3a8c96772d60974d06fd42 files/bashrc 1709
+MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
+MD5 7d8a8ef90c1818a0cd66808ac2740638 files/dot-bash_logout 127
+MD5 6dcc418c7812b5f8ebf2f6562eb2e57c files/dot-bashrc 983
+MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
+MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
+MD5 b86b65863c2ae21b59d8201c2a3a9e91 files/bash-3.0-trap-fg-signals.patch 641
+MD5 b802ce25d76787d8c9b4484ca66b17be files/bash-3.0-bash-logger.patch 2197
+MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
+MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
+MD5 a2845a2a194bba75c1875f4a1ad49344 files/bash30-014 698
+MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r11 461
 MD5 b3345c5274b7b08ce50dc5ec0aa11197 files/bash-3.0-read-e-segfault.patch 825
 MD5 46c2816ee5909e997477063cdc050620 files/bash-3.0-manpage.patch 533
-MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
-MD5 addd22b9c7174a5220a350dc84cb738f files/bashrc 1680
-MD5 b518c92ffb4ee61be7e4b1d27264a652 files/bash-3.0-pgrp-pipe-fix.patch 462
-MD5 c8362f29e2f8e6cdfd3306c7bcce0439 files/bash-3.0-pwd.patch 583
-MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
-MD5 ccc195288edb06eb44f4d5e2a9c1da62 files/bash-3.0-crash.patch 1191
-MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
-MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
-MD5 3b706b4e822e0480f1ba098db4b292f6 files/bash-3.0-parallel.patch 378
-MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
-MD5 b802ce25d76787d8c9b4484ca66b17be files/bash-3.0-bash-logger.patch 2197
+MD5 00cd6ee276de4810e2209dc426b133e4 files/bash-3.0-ulimit.patch 2659
+MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r12 976
 MD5 28c9d7407d5332c29dddb656a4a1f1ce files/bash-3.0-invisible.patch 705
-MD5 eea55a33e84dc42b1683592dc8113400 files/bash-3.0-afs.patch 428
-MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r11 461
-MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
-MD5 a2845a2a194bba75c1875f4a1ad49344 files/bash30-014 698
-MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
-MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
-MD5 6dcc418c7812b5f8ebf2f6562eb2e57c files/dot-bashrc 983
-MD5 7d8a8ef90c1818a0cd66808ac2740638 files/dot-bash_logout 127
-MD5 05f32594822720a84f58197c1535fc82 files/bash-3.0-jobs.patch 1064
+MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
+MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
+MD5 eea55a33e84dc42b1683592dc8113400 files/bash-3.0-afs.patch 428
+MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r11 976
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQa/KgIKl8Uu19MoRAvrwAJ9ZumnDX611Pg8oHopMei5XN9rlTQCfTOw9
+x9Y2Dt4A2i8qmmUU5SV+oYs=
+=Tiqu
+-----END PGP SIGNATURE-----

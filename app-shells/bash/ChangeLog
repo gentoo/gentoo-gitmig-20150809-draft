@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.74 2005/09/03 19:49:57 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.75 2005/10/03 22:23:51 vapier Exp $
+
+  03 Oct 2005; Mike Frysinger <vapier@gentoo.org> files/bashrc:
+  Add an alias for colored output to global bashrc.
 
   03 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org> bash-3.0-r12.ebuild:
   fixing parallel build problems using 'emake -j1' (see bug 102426)
