@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1c681eaa1c09ec0db8c097357d9ecf3c ChangeLog 1740
-MD5 072e429c5e95032f2875f7428d811281 files/2.0.2/20_mod_pcgi.conf 263
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 eab503c6009ad6b64e36e162cbb9412c mod_pcgi2-2.0.1.ebuild 3148
+MD5 24fb13524d4e4e0131fab263473c0caa mod_pcgi2-2.0.2.ebuild 917
 MD5 247a6f4e65181d477578aaf0d9f381fa files/20_mod_pcgi.conf 271
 MD5 40eeec73ead705f5c91d71cd1a79681a files/digest-mod_pcgi2-2.0.1 70
-MD5 49f0dc2658376250f0258f45d9a1886c files/digest-mod_pcgi2-2.0.2 70
 MD5 1a8eca96144ae6ea1ca0fb9b099c66e8 files/mod_pcgi2-2.0.1-macrofix.patch 1328
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 0615f85d8a068500d1c47b0a1cdee681 mod_pcgi2-2.0.1.ebuild 2919
-MD5 a9a0c8305daf3e7d31cb671c07ecfad8 mod_pcgi2-2.0.2.ebuild 911
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0XyYI1lqEGTUzyQRAu3OAKDS3TF1qpurs8awJpQ7jQFWV0139ACeJU5u
-FG2NYVSb61WOc9rdhOAYaDw=
-=qqHt
------END PGP SIGNATURE-----
+MD5 49f0dc2658376250f0258f45d9a1886c files/digest-mod_pcgi2-2.0.2 70
+MD5 072e429c5e95032f2875f7428d811281 files/2.0.2/20_mod_pcgi.conf 263
