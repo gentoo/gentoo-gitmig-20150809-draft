@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2fbd51b9317aa659e026ba0074b8096 ChangeLog 2804
-MD5 6084e984b9bc3ab97bbfe11d0f98511a ktnef-3.4.2.ebuild 420
 MD5 1e0b0c3df523612515c2f844c54a88f2 ktnef-3.5_beta1.ebuild 396
-MD5 31911f653ec88295f6ce7550c01ff03d ktnef-3.4.1.ebuild 407
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 fa43cc55a79cd7553c5b26d7924b96d5 ChangeLog 2903
+MD5 2f91e99783b4f6d4af0db4b4a6d8810f ktnef-3.4.1.ebuild 416
+MD5 6084e984b9bc3ab97bbfe11d0f98511a ktnef-3.4.2.ebuild 420
+MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ktnef-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-ktnef-3.4.2 282
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-ktnef-3.5_beta1 68
-MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ktnef-3.4.1 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXTOj5H05b2HAEkRAh7QAKCBaegPfEvw1+WVeuCGXG+g3J16aACfTKa+
-IhbQh5tV3gianbfePBNKRxU=
-=NGsb
------END PGP SIGNATURE-----
