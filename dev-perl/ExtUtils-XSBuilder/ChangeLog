@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ExtUtils-XSBuilder
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSBuilder/ChangeLog,v 1.8 2005/09/15 10:37:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSBuilder/ChangeLog,v 1.9 2005/10/03 09:57:16 agriffis Exp $
+
+  03 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  ExtUtils-XSBuilder-0.27.ebuild:
+  Mark 0.27 stable on ia64
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   ExtUtils-XSBuilder-0.27.ebuild:
@@ -34,4 +38,3 @@
   ExtUtils-XSBuilder-0.25.ebuild, metadata.xml:
   Ebuild submitted by Doug Weimer <dweimer@socal.rr.com> in bug 47875 - dep for
   libapreq-2 in bug 35406
-
