@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-0.9.2.ebuild,v 1.2 2005/05/08 00:47:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-0.9.2.ebuild,v 1.3 2005/10/03 13:05:33 agriffis Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/ncurses-ruby/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 USE_RUBY="ruby18 ruby19"
-KEYWORDS="~alpha ~hppa ~mips ~sparc ~x86 ~amd64 ~ppc"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 DEPEND="virtual/ruby
 	>=sys-libs/ncurses-5.3"
