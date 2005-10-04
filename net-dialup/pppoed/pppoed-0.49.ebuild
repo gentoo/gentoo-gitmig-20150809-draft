@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.3 2005/08/14 10:16:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.49.ebuild,v 1.4 2005/10/04 19:29:58 mrness Exp $
 
 inherit linux-info eutils
 
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS ChangeLog COPYING NEWS README*
+	dodoc AUTHORS ChangeLog NEWS README*
 
 	cd ..
 	docinto docs

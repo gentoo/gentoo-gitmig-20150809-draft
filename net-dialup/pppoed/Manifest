@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cc47b9f42bef9d8502ca9d26bb2cf865 pppoed-0.49.ebuild 1077
 MD5 4f9b19d73e6e16ee5e2b94ec727df375 ChangeLog 1741
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 21fa57e8741b20eece9fcddbe09e6179 files/digest-pppoed-0.49 63
 MD5 e6638bf000c200f77ee828929b2e1dbd files/pppoed-0.49-gcc-3.3.patch 1014
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQthSNSP4Vda7IdsRAqlPAJ9M0Le3Kw2IOBi/M8vCyS5Q0mQL7gCgjE5i
+cDXJjZpn5eY1frDEstmU8nU=
+=f8IQ
+-----END PGP SIGNATURE-----
