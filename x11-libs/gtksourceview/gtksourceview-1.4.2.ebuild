@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.4.1.ebuild,v 1.1 2005/09/11 03:27:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.4.2.ebuild,v 1.1 2005/10/04 03:35:14 leonardop Exp $
 
 inherit gnome2
 
@@ -10,11 +10,12 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc static"
+IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/libxml2-2.5
-	>=gnome-base/libgnomeprint-2.8"
+	>=gnome-base/libgnomeprint-2.8
+	>=dev-libs/glib-2"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -28,5 +29,5 @@ USE_DESTDIR="1"
 
 pkg_setup() {
 	# Removes the gnome-vfs dep
-	G2CONF="$(use_enable static) --disable-build-tests"
+	G2CONF="--disable-build-tests"
 }
