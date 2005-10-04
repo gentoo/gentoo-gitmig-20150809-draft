@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a76f26000d9962c67204219289951e1f ChangeLog 599
-MD5 890e7026d76ccc7132929a1f2a6ea890 dwun-0.96e.ebuild 1197
+MD5 8c03a2304d4972b756cd7306a650ac25 dwun-0.96e.ebuild 1170
+MD5 377a8c5acf1de6f9a2a7393a836bc05a ChangeLog 706
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 f35fbbf57f58799d2c1b43316efcdb93 files/digest-dwun-0.96e 62
 MD5 18fc42049e00d0a1eb921f2ffc958038 files/dwun 518
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBm5bejtv59x0+BrURAloDAKC+sLbsNjyJk0tHL1Hrq18Le8Ed6ACgzHj4
-qiYzoxGBcFEApYD9ScvzoG8=
-=qMuD
------END PGP SIGNATURE-----
+MD5 f35fbbf57f58799d2c1b43316efcdb93 files/digest-dwun-0.96e 62
