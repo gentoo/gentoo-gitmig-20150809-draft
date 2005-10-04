@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.50 2005/09/23 08:23:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.51 2005/10/04 22:11:34 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -349,14 +349,6 @@ function kde-meta_src_unpack() {
 		# kdebase: Remove the installation of the "startkde" script.
 		if [ "$KMNAME" == "kdebase" ]; then
 			sed -i -e s:"bin_SCRIPTS = startkde"::g ${S}/Makefile.am.in
-		fi
-
-		# Visiblity stuff is way broken! Just disable it when it's present
-		# until upstream finds a way to have it working right.
-		if grep KDE_ENABLE_HIDDEN_VISIBILITY configure.in &> /dev/null || ! [[ -f configure ]]; then
-			find ${S} -name configure.in.in | xargs sed -i -e \
-				's:KDE_ENABLE_HIDDEN_VISIBILITY::g'
-			rm -f configure
 		fi
 
 		# for ebuilds with extended src_unpack
