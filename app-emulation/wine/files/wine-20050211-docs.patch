@@ -1,5 +1,5 @@
---- documentation/getting.sgml.orig	2005-02-19 21:00:05.000000000 -0500
-+++ documentation/getting.sgml	2005-02-19 21:01:20.000000000 -0500
+--- documentation/getting.sgml
++++ documentation/getting.sgml
 @@ -30,6 +30,7 @@
            few clicks.  Building your own installable binary package from a 
            source package is also possible, although it is beyond the scope of 

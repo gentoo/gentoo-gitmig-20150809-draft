@@ -1,5 +1,5 @@
---- loader/Makefile.in.orig	2004-12-02 08:57:46.540539616 -0500
-+++ loader/Makefile.in	2004-12-02 08:57:53.043551008 -0500
+--- loader/Makefile.in
++++ loader/Makefile.in
 @@ -21,5 +21,6 @@
  
  @MAKE_RULES@
