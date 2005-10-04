@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.59 2005/09/05 22:23:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.60 2005/10/04 15:48:05 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -194,11 +194,12 @@ elibtoolize() {
 	[[ ${CHOST} == *"-freebsd"* ]] && \
 		elt_patches="${elt_patches} fbsd-conf"
 
-	if use ppc-macos ; then
+	if useq ppc-macos ; then
 		local opts
 		[[ -f Makefile.am ]] && opts="--automake"
 		glibtoolize --copy --force ${opts}
-		darwintoolize
+		
+		elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
 	fi
 
 	for x in ${my_dirlist} ; do
@@ -246,7 +247,8 @@ elibtoolize() {
 					fi
 					;;
 				"uclibc-ltconf")
-					if [[ -e ${x}/ltconfig ]] ; then
+					# Newer libtoolize clears ltconfig, as not used anymore
+					if [[ -s ${x}/ltconfig ]] ; then
 						ELT_walk_patches "${x}/ltconfig" "${y}"
 						ret=$?
 					fi
@@ -260,6 +262,13 @@ elibtoolize() {
 					elif [[ ! -e ${x}/configure && -e ${x}/../configure && \
 					        -n $(grep 'version_type=freebsd-' "${x}/../configure") ]] ; then
 						ELT_walk_patches "${x}/../configure" "${y}"
+						ret=$?
+					fi
+					;;
+				"darwin-ltconf")
+					# Newer libtoolize clears ltconfig, as not used anymore
+					if [[ -s ${x}/ltconfig ]] ; then
+						ELT_walk_patches "${x}/ltconfig" "${y}"
 						ret=$?
 					fi
 					;;
@@ -313,9 +322,14 @@ elibtoolize() {
 							ewarn "  uClibc patch set '${y}' failed to apply!"
 						;;
 					"fbsd-"*)
-						[[ ${CHOST} == *"-freebsd"* ]] && \
+						if [[ ${CHOST} == *"-freebsd"* ]] ; then
 							eerror "  FreeBSD patch set '${y}' failed to apply!"
 							die "FreeBSD patch set '${y}' failed to apply!"
+						fi
+						;;
+					"darwin-"*)
+						useq ppc-macos && \
+							ewarn "  Darwin patch set '${y}' failed to apply!"
 						;;
 				esac
 			fi
@@ -355,35 +369,13 @@ elibtoolize() {
 }
 
 uclibctoolize() {
-	ewarn "uclibctoolize() is depreciated, please just use libtoolize()!"
+	ewarn "uclibctoolize() is depreciated, please just use elibtoolize()!"
 	elibtoolize
 }
 
 darwintoolize() {
-	local targets=""
-	local x
-
-	if [[ -z $* ]] ; then
-		targets=$(find ${S} -name ltmain.sh -o -name ltconfig)
-	fi
-
-	einfo "Applying Darwin/libtool patches ..."
-	for x in ${targets} ; do
-		[[ ! -s ${x} ]] && continue
-		case ${x##*/} in
-		ltmain.sh|ltconfig)
-			local ver=$(grep '^VERSION=' ${x})
-			ver=${ver/VERSION=}
-			if [[ ${ver:0:3} == "1.4" || ${ver:0:3} == "1.5" ]] ; then
-				ver="1.3"   # 1.4, 1.5 and 1.3 are compat
-			fi
-
-			ebegin " Fixing \${S}${x/${S}}"
-			patch -p0 "${x}" "${ELT_PATCH_DIR}/darwin/${x##*/}-${ver:0:3}.patch" > /dev/null
-			eend $? "PLEASE CHECK ${x}"
-			;;
-		esac
-	done
+	ewarn "darwintoolize() is depreciated, please just use elibtoolize()!"
+	elibtoolize
 }
 
 # char *VER_major(string)
