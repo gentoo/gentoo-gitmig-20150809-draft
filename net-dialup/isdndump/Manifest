@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21a1d790c38916892b70d5ac28632513 isdndump-0.01.ebuild 705
 MD5 ef58c5de07047be273f083bdd2701c9a ChangeLog 453
 MD5 5da5d5d1211fbb00d9f7825f7726ae36 metadata.xml 758
 MD5 caa44c999977f16f8d21fd4b4f6a569d files/digest-isdndump-0.01 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQs34NSP4Vda7IdsRArmCAJ0SDCDsT0+KbLP+FZAR2Vc6BtCxdQCeLkZZ
+sHLQn7mpDYR1/Om0uj6nBQg=
+=hJ1M
+-----END PGP SIGNATURE-----

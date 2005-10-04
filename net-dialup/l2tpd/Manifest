@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d59de17534623c844c2f81aa113ae56e l2tpd-0.70_pre20031121.ebuild 1237
+MD5 2541121cba42bd4dcf36a6ebb443f61e l2tpd-0.70_pre20031121.ebuild 1211
 MD5 29dfcbb649bcd5c173d0a97130006a13 l2tpd-0.69-r2.ebuild 1871
 MD5 7b8f8d80ba1cb31a24a450e015cab848 ChangeLog 1858
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
@@ -9,10 +6,3 @@ MD5 8fac6f64a3fa92ee4046a60f1c09dc66 files/digest-l2tpd-0.69-r2 67
 MD5 a89d2270d8abbae0aa7faf07488736f0 files/l2tpd-0.69-can-2004-0649.patch 700
 MD5 acfec4f77489a740550c83d5d275477d files/l2tpd-init 473
 MD5 b77ebcaec769239a75f6715bac6d1bf3 files/digest-l2tpd-0.70_pre20031121 155
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFChCw4jiC39V7gKu0RAoNaAJ4tGnGCBet1xitf6mjCtM++ZINaJwCgpzem
-PBhrHoGnIDm4+Kl14AwknV0=
-=Ncy1
------END PGP SIGNATURE-----

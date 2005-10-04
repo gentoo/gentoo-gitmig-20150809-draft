@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdndump/isdndump-0.01.ebuild,v 1.1 2005/08/20 11:49:55 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdndump/isdndump-0.01.ebuild,v 1.2 2005/10/04 18:45:49 mrness Exp $
 
 inherit eutils rpm
 
@@ -24,5 +24,5 @@ src_compile() {
 
 src_install() {
 	dobin isdndump
-	dodoc ChangeLog INSTALL README TODO
+	dodoc ChangeLog README TODO
 }
