@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/pptpconfig
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.6 2005/02/12 09:33:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.7 2005/10/04 19:55:52 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> pptpconfig-20040722.ebuild:
+  Fix dependency on dev-php4/php-gtk (#106566).
 
   12 Feb 2005; Alin Nastac <mrness@gentoo.org> -pptpconfig-20030731.ebuild:
   Remove old ebuild.
