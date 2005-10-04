@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.13.2.ebuild,v 1.3 2005/07/25 15:58:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.13.2.ebuild,v 1.4 2005/10/04 17:51:13 mrness Exp $
 
 inherit eutils qt3
 
@@ -10,7 +10,7 @@ SRC_URI="http://cutecom.sourceforge.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="$(qt_min_version 3.2)"
@@ -29,7 +29,7 @@ src_compile() {
 
 src_install() {
 	dobin "cutecom"
-	dodoc README Changelog COPYING README
+	dodoc README Changelog README
 
 	make_desktop_entry cutecom "CuteCom" openterm
 }
