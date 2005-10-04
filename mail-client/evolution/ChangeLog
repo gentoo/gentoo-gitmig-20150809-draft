@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.100 2005/09/14 01:44:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.101 2005/10/04 12:54:33 dang Exp $
+
+*evolution-2.4.1 (04 Oct 2005)
+
+  04 Oct 2005; <dang@gentoo.org> +evolution-2.4.1.ebuild:
+  New version
 
   14 Sep 2005; <dang@gentoo.org> evolution-2.4.0.ebuild:
   Remove firefox flag for now, as evo can't be built against it yet and have
