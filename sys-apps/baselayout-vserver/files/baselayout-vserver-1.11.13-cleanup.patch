@@ -194,26 +194,6 @@ diff -NurpP rc-scripts-1.6.13-vserver/init.d/bootmisc rc-scripts-1.6.13-vserver2
  
 +
  # vim:ts=4
-diff -NurpP rc-scripts-1.6.13-vserver/init.d/dummy rc-scripts-1.6.13-vserver2/init.d/dummy
---- rc-scripts-1.6.13-vserver/init.d/dummy	2005-06-11 15:11:23.000000000 +0200
-+++ rc-scripts-1.6.13-vserver2/init.d/dummy	2005-09-03 20:13:45.000000000 +0200
-@@ -1,14 +1,13 @@
- #!/sbin/runscript
- # Copyright 1999-2005 Gentoo Foundation
- # Distributed under the terms of the GNU General Public License v2
--# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/files/baselayout-vserver-1.11.13-cleanup.patch,v 1.1 2005/09/30 14:02:47 hollow Exp $
- 
- start() {
--	return 0
-+    return 0
- }
- 
- stop() {
--	return 0
-+    return 0
- }
- 
- # vim:ts=4
 diff -NurpP rc-scripts-1.6.13-vserver/init.d/halt.sh rc-scripts-1.6.13-vserver2/init.d/halt.sh
 --- rc-scripts-1.6.13-vserver/init.d/halt.sh	1970-01-01 01:00:00.000000000 +0100
 +++ rc-scripts-1.6.13-vserver2/init.d/halt.sh	2005-09-30 15:06:54.672505500 +0200
