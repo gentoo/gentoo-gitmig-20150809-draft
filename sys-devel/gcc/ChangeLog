@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.456 2005/09/28 21:38:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.457 2005/10/04 19:43:03 halcy0n Exp $
+
+*gcc-4.0.2-r1 (04 Oct 2005)
+
+  04 Oct 2005; Mark Loeser <halcy0n@gentoo.org> -gcc-4.0.2.ebuild,
+  +gcc-4.0.2-r1.ebuild:
+  New patchset with a lot of patches from Fedora, as well as patches to fix
+  -fvisibility problems with KDE.
 
 *gcc-4.0.2 (28 Sep 2005)
 
