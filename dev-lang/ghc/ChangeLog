@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.68 2005/10/04 15:07:02 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.69 2005/10/04 19:13:27 gustavoz Exp $
+
+  04 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> ghc-6.4.1.ebuild:
+  Back to the ~ppc
 
   04 Oct 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
   Add ~sparc to KEYWORDS and enable GHCi on sparc.
