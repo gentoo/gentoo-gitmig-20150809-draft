@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f85eefd744521c33df2ec10d3f703de gcdial-0.7b.ebuild 675
-MD5 c8c8085f7506309e5db2dd9b65c7d2ad ChangeLog 608
+MD5 2ce5bb7e6bfc7b99c435d0e991de559d gcdial-0.7b.ebuild 659
+MD5 cdbe23afe02e60b4298f85a4382c8b18 ChangeLog 716
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 d2a4a96f1ee81adf254521ceef110c75 files/digest-gcdial-0.7b 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsJdejiC39V7gKu0RAmXVAJoCipsp/vJpuTWUxiVTK5z5u23tRACg3JZG
-0DV2LJJHjrN4xQipnBobsWk=
-=J73I
------END PGP SIGNATURE-----

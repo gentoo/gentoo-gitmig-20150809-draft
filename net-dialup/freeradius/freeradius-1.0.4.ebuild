@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.4.ebuild,v 1.2 2005/07/20 05:49:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.4.ebuild,v 1.3 2005/10/04 18:37:57 mrness Exp $
 
 inherit eutils
 
@@ -110,7 +110,6 @@ src_install() {
 
 	[ -z "${PR}" ] || mv ${D}/usr/share/doc/${P} ${D}/usr/share/doc/${PF}
 	gzip -f -9 ${D}/usr/share/doc/${PF}/{rfc/*.txt,*}
-	dodoc COPYRIGHT CREDITS INSTALL LICENSE
 	#Copy SQL schemas to doc dir
 	docinto sql.schemas
 	dodoc src/modules/rlm_sql/drivers/rlm_sql_*/*.sql
