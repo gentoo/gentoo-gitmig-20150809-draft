@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1485 2005/10/03 09:38:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1486 2005/10/04 13:44:37 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -592,6 +592,8 @@ media-sound/ncmpc:raw-mode - raw terminal mode
 media-sound/ncmpc:search-screen - Enable search screen (EXPERIMENTAL)
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), usefull for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
+media-sound/snd:gsl - Use the GNU scientific library for calculations
+media-sound/snd:ladspa - Enables the ability to support ladspa plugins
 media-sound/timidity++:ao - Use libao for sound playback
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythtv:frontendonly - Only builds the Frontend component rather then the whole suite
