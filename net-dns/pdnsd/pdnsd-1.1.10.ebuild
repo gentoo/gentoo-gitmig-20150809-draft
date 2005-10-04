@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.22 2005/09/16 05:36:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.23 2005/10/04 20:29:20 mrness Exp $
 
 inherit eutils
 
@@ -68,7 +68,7 @@ src_install() {
 	[ -f ${ROOT}/var/cache/pdnsd/pdnsd.cache ] && \
 		cp ${ROOT}/var/cache/pdnsd/pdnsd.cache ${D}/var/cache/pdnsd/pdnsd.cache
 
-	dodoc AUTHORS COPYING* ChangeLog* NEWS README THANKS TODO README.par
+	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO README.par
 	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
 	docinto html ; dohtml doc/html/*
 	docinto txt ; dodoc doc/txt/*
