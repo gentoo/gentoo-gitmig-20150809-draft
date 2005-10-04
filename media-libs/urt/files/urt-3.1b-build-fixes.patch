@@ -1,0 +1,16 @@
+some hosts are more anal about ar usage than others
+
+http://bugs.gentoo.org/107428
+
+--- lib/makefile.src
++++ lib/makefile.src
+@@ -181,8 +181,7 @@
+ # Rebuild the library from all the .o files.
+ buildlib: $(OBJS)
+ 	-rm -f $(LIBNAME)
+-	ar rc $(LIBNAME)
+-	ar q $(LIBNAME) $(OBJS)
++	ar rc $(LIBNAME) $(OBJS)
+ #ifndef NO_RANLIB
+ 	ranlib $(LIBNAME)
+ #endif

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.3 2005/10/02 02:14:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.4 2005/10/04 00:36:15 vapier Exp $
 
 inherit eutils
 
@@ -32,6 +32,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-rle-fixes.patch
 	epatch "${FILESDIR}"/${P}-compile-updates.patch
 	epatch "${FILESDIR}"/${P}-tempfile.patch
+	epatch "${FILESDIR}"/${P}-build-fixes.patch
+
+	# stupid OS X declares a stack_t type already #107428
+	sed -i -e 's:stack_t:_urt_stack:g' tools/clock/rleClock.c || die
 
 	sed -i -e '/^CFLAGS/s: -O : :' makefile.hdr
 	cp "${FILESDIR}"/gentoo-config config/gentoo
