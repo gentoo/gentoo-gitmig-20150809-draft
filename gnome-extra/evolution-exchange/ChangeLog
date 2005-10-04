@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.4 2005/09/11 03:25:13 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.5 2005/10/04 13:46:47 dang Exp $
+
+*evolution-exchange-2.4.1 (04 Oct 2005)
+
+  04 Oct 2005; <dang@gentoo.org> +evolution-exchange-2.4.1.ebuild:
+  New version
 
 *evolution-exchange-2.4.0 (11 Sep 2005)
 
