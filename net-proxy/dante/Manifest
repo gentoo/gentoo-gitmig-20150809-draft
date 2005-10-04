@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 633c678a48846de5c6ecb2729f85aedc dante-1.1.15-r2.ebuild 2500
 MD5 df4601e1c535460e73b20e28264bb02e dante-1.1.17.ebuild 2335
 MD5 4d196387e01aa6fa4f0f852781b47a58 dante-1.1.15-r1.ebuild 2320
-MD5 91570be053f5eb379209134d36353dea dante-1.1.16.ebuild 2371
-MD5 66e9abe53282ed8ab156e37ee8e8b918 ChangeLog 9319
+MD5 b1a4069d0a3d87842ece182e3f3f6d5c dante-1.1.18.ebuild 2327
+MD5 4b6dbeddf54036464305e622384aa805 ChangeLog 9558
 MD5 19688263fcbda666eeb085869012f86a metadata.xml 246
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
 MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.17-socksify.patch 811
@@ -13,7 +13,6 @@ MD5 7573426ad7edc9ea4dd95f020205fda4 files/sockd.conf-with-pam.patch 295
 MD5 5e74662c76571e30e6a190a2d4d1193a files/dante-1.1.15-optionalpam.patch 10896
 MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15-r1 64
 MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15-r2 64
-MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.16-socksify.patch 811
 MD5 aa0bc92f8670b91aaf92f1e89b7e06c7 files/sockd.conf 7031
 MD5 cf06ad88e50a36ba1326579ab64366b8 files/socks.conf 4185
 MD5 05b76026b104b3a12fcd5d42aecc3041 files/sockd.conf-with-libwrap.patch 870
@@ -21,12 +20,13 @@ MD5 72d9add89e45e3cb921c99d79bdf31a7 files/dante-1.1.15-bindresvport.patch 485
 MD5 30064015b5702cf8059a1639167e8a3f files/dante-1.1.15-getipnodebyname.patch 789
 MD5 eb2041b3f61750335f8702515cb20b7c files/dante-sockd-conf 463
 MD5 1ff7ae828153ebdd013aa82e5c247b7f files/dante-sockd-init 1722
-MD5 fef7d90f2aa02a4dbd6cbc92e999faca files/digest-dante-1.1.16 64
 MD5 38aeb8f6554e02b57e1624594e62cfd9 files/digest-dante-1.1.17 64
+MD5 d4207d41125a3aa07fab48cc977a786c files/digest-dante-1.1.18 64
+MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.18-socksify.patch 811
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDEdK1ntT9W3vfTuoRAhQsAJ0V/tYBb0UQWpj4fkEwsiLKlO2pRACfSoWg
-DZ5Q5L3PYDyZLKgQY8/Ck/4=
-=L08B
+iD8DBQFDQvCONSP4Vda7IdsRAt9ZAJ4+HDDQKze+YdKoH+iZyJGFiKjb6QCeMw32
+rybgX9VZXQOlg5ng/giYwJc=
+=mmoR
 -----END PGP SIGNATURE-----

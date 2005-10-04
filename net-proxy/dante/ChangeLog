@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.16 2005/08/28 15:04:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.17 2005/10/04 21:13:34 mrness Exp $
+
+*dante-1.1.18 (04 Oct 2005)
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org>
+  -files/dante-1.1.16-socksify.patch, +files/dante-1.1.18-socksify.patch,
+  -dante-1.1.16.ebuild, +dante-1.1.18.ebuild:
+  Version bump. Remove old test version.
 
   28 Aug 2005; Marcus D. Hanwell <cryos@gentoo.org> dante-1.1.15-r2.ebuild:
   Stable on amd64.
