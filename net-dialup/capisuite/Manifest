@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05184f4f9f97aa90cf3391b5c7247531 capisuite-0.4.5-r1.ebuild 2089
-MD5 803c69d2db73f6f8de91380a4251dd1c capisuite-0.4.5-r3.ebuild 2253
-MD5 e5c581df9e3359d48332e0fdef90a8af capisuite-0.4.5.ebuild 1348
-MD5 dd2d0882477714a0abeead2be53d8b8f capisuite-0.4.5-r2.ebuild 2183
-MD5 10585eabcd8daf56653b2824ae5fff5b ChangeLog 3912
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 63b5890053139f14a3d3baf78812e0bc files/capisuite-fax-compatibility.patch 423
+MD5 f22e5b90387286bd4d65d87b8e0129c7 ChangeLog 4109
+MD5 a78416517356a0556b33c0b90cf367fb capisuite-0.4.5-r1.ebuild 2091
+MD5 ea7e8b0b9c76d2014e342d4b8703702f capisuite-0.4.5-r2.ebuild 2185
+MD5 d877e3e0606888e68448b205ce391503 capisuite-0.4.5-r3.ebuild 2255
+MD5 60b4589e3d042fd048b087663c6b9fff capisuite-0.4.5.ebuild 1350
 MD5 a6bdc491a9d9a33c0f41c68f06a320ca files/capisuite 487
-MD5 d0b0dd46c8f863d3849ee1ce118da842 files/capisuite-0.4.5-gentoo.patch 1979
 MD5 ae0010a9739f9b1273dd9a679d43d913 files/capisuite-0.4.5-capi4linux_v3.diff 4395
-MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5 68
-MD5 bd2ad19acf9244ce2fcfaa06ad5f53e1 files/capisuite.logrotated 1003
-MD5 135be011248d6215905132143e6a7dab files/capisuite-0.4.5-date-header.patch 821
 MD5 b89c96393c676a2977e9b0b55b553b9f files/capisuite-0.4.5-capiv3.patch 2151
+MD5 135be011248d6215905132143e6a7dab files/capisuite-0.4.5-date-header.patch 821
+MD5 d0b0dd46c8f863d3849ee1ce118da842 files/capisuite-0.4.5-gentoo.patch 1979
+MD5 63b5890053139f14a3d3baf78812e0bc files/capisuite-fax-compatibility.patch 423
+MD5 78748205ff049b27b92175e818a06e0d files/capisuite.initd 1417
+MD5 bd2ad19acf9244ce2fcfaa06ad5f53e1 files/capisuite.logrotated 1003
+MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5 68
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r1 68
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r2 68
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r3 68
-MD5 78748205ff049b27b92175e818a06e0d files/capisuite.initd 1417
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDQtDaNSP4Vda7IdsRAvDSAJ9HQp5f9kvitU49jlP20x9DUvHbJQCfRvGQ
-VfbJT+5nFfxVgf4ij9iR3N4=
-=07hK
------END PGP SIGNATURE-----
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
