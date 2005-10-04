@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.11.ebuild,v 1.1 2005/07/18 07:09:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/esvn/esvn-0.6.11.ebuild,v 1.2 2005/10/04 20:33:33 mrness Exp $
 
 inherit kde-functions
 
@@ -34,6 +34,6 @@ src_install() {
 	make -f esvn.mak INSTALL_ROOT=${D} install
 	dobin esvn esvn-diff-wrapper
 
-	dodoc AUTHORS ChangeLog COPYING LICENSE README
+	dodoc AUTHORS ChangeLog README
 	dohtml -r html-docs/*
 }
