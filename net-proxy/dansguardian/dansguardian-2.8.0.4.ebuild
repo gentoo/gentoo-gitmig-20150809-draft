@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.8.0.4.ebuild,v 1.3 2005/05/30 00:03:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.8.0.4.ebuild,v 1.4 2005/10/04 20:48:47 mrness Exp $
 
 inherit eutils
 
@@ -44,5 +44,5 @@ src_install() {
 	#Fixing location of initscript
 	sed -i -e 's/rc.d\///' ${D}/etc/dansguardian/logrotation
 
-	dodoc INSTALL README LICENSE
+	dodoc README
 }
