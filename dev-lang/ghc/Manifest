@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a025d3894254271254721f5ecf30abe0 ghc-6.4.1.ebuild 6058
+MD5 3140ef1b70c893f026f5b370355b605a ghc-6.4.1.ebuild 6078
 MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
 MD5 44522ba468aae54fcea378e3817fcd72 ghc-6.2.2.ebuild 5562
 MD5 9620778937a1aff6ef88863c81222cfc ghc-6.4.ebuild 6109
-MD5 9044fd7fb42b5dbed8e956c9c5b8bbf9 ChangeLog 12387
+MD5 1629baa6a85ebd69adf08ac675580e60 ChangeLog 12492
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 558c6b9e9b0e15185b69cdfe241dad9a files/ghc-updater 8775
 MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
@@ -18,7 +18,7 @@ MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDNJj3kyZuKN4EQ6YRAsjxAJ989JSGBi1B/1dDC1t/nK1nFrA3jQCfXioA
-vIxoKFsVP/AHUb2ynC1InBE=
-=FZPR
+iD8DBQFDQpsakyZuKN4EQ6YRAt51AJ9ZGCaYZGswtstdwN62D6JxPpNSiQCeMEB4
+XsmaOCDis5eGwF/rFGyCc44=
+=/G7D
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.67 2005/09/24 00:06:38 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.68 2005/10/04 15:07:02 dcoutts Exp $
+
+  04 Oct 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
+  Add ~sparc to KEYWORDS and enable GHCi on sparc.
 
   23 Sep 2005; <duncan@gentoo.org> ghc-6.4.1.ebuild:
   Disabled java USE flag due to bug #106992

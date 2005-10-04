@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1.ebuild,v 1.2 2005/09/24 00:06:38 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1.ebuild,v 1.3 2005/10/04 15:07:02 dcoutts Exp $
 
 # We abandon virtual/ghc in favor of || dependencies.
 # Here's a brief explanation of the new bootstrap logic:
@@ -35,7 +35,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 # re-add ~ppc64 once dependencies are fulfilled
-KEYWORDS="-alpha ~amd64 ~x86"
+KEYWORDS="-alpha ~amd64 ~x86 ~sparc"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -150,7 +150,7 @@ src_compile() {
 	echo "ArSupportsInput:=" >> mk/build.mk
 
 	# Required for some architectures, because they don't support ghc fully ...
-	use ppc || use ppc64 && echo "SplitObjs=NO" >> mk/build.mk
+	use ppc || use ppc64 || use sparc && echo "SplitObjs=NO" >> mk/build.mk
 	use ppc64 && echo "GhcWithInterpreter=NO" >> mk/build.mk
 
 	econf ${myconf} || die "econf failed"
