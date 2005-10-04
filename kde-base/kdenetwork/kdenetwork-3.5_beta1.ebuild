@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5_beta1.ebuild,v 1.1 2005/09/21 17:24:56 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5_beta1.ebuild,v 1.2 2005/10/04 09:20:08 greg_g Exp $
 
 inherit kde-dist
 
@@ -13,17 +13,19 @@ DEPEND="~kde-base/kdebase-${PV}
 	dev-libs/libxslt
 	dev-libs/libxml2
 	net-dns/libidn
+	>=dev-libs/glib-2
 	sametime? ( >=net-libs/meanwhile-0.4.2 )
 	slp? ( net-libs/openslp )
 	wifi? ( net-wireless/wireless-tools )
 	xmms? ( media-sound/xmms )"
+# glib: for webcam support in Kopete.
 
 RDEPEND="${DEPEND}
 	rdesktop? ( >=net-misc/rdesktop-1.4.1 )
 	dev-lang/perl
 	ssl? ( app-crypt/qca-tls
 	       dev-perl/IO-Socket-SSL )"
-# perl: for KSirc
+# perl: for KSirc.
 # qca-tls: for Kopete jabber plugin.
 # IO-Socket-SSL: for SSL support in KSirc.
 

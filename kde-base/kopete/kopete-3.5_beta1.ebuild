@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5_beta1.ebuild,v 1.1 2005/09/22 19:59:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5_beta1.ebuild,v 1.2 2005/10/04 09:22:30 greg_g Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -13,6 +13,7 @@ IUSE="sametime ssl xmms"
 
 DEPEND="dev-libs/libxslt
 	dev-libs/libxml2
+	>=dev-libs/glib-2
 	sametime? ( >=net-libs/meanwhile-0.4.2 )
 	xmms? ( media-sound/xmms )"
 RDEPEND="$DEPEND
