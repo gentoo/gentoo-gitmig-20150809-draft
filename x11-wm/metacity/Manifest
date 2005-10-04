@@ -1,23 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 2846257caf63f6757cdecbb933106a1b ChangeLog 14537
 MD5 cce27e0aabb5863d53e99ff2dfb8ca6e metacity-2.10.3.ebuild 1257
+MD5 7c3acd3b4aaeab17a989e45166252589 metacity-2.12.1.ebuild 1282
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f209f136db09aa39ba91214fd415a697 metacity-2.10.0.ebuild 1210
-MD5 542495e9a270cdf860dbef96dfef9d7e metacity-2.10.2.ebuild 1255
-MD5 f7a79259ea7a8574c19b0fbc394a1b27 metacity-2.12.0.ebuild 1314
-MD5 737de41cfe3b0759dffde00c9c1ed69f metacity-2.10.1.ebuild 1227
-MD5 450e223314d0dd5eb4722f7c55b3f1f9 ChangeLog 14381
-MD5 4d1237112f8e297a7842b29ac4b6adab files/digest-metacity-2.12.0 69
 MD5 8085853ac850bbbd443d6f4c030f39bf files/digest-metacity-2.10.3 69
+MD5 16961ede777e7728d18f802db072e251 files/digest-metacity-2.12.1 69
 MD5 98f6fd8a6545a37a2ddf9b0e11ce54f7 files/metacity-2-logout.patch 7363
-MD5 ed9dff958297725508b84313a48e803e files/digest-metacity-2.10.1 69
 MD5 138ac865c20f1f4f6ff2fde4fa487c00 files/digest-metacity-2.10.0 69
-MD5 0cee2d586461802eec4ccb94b7498901 files/digest-metacity-2.10.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNihgIKl8Uu19MoRAlj2AJ9is9WIKki2mmCoIHTevKTCRu71CwCdH0Yz
-3tkYQdE75RdME1hLsVEv7O0=
-=u3Wu
------END PGP SIGNATURE-----
