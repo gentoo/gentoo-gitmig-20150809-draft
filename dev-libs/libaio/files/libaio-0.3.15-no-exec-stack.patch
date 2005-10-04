@@ -1,0 +1,13 @@
+Make sure that the asm files don't incorrectly trigger an executable
+stack marking in the final shared library.  That's bad, mmmkay.
+
+--- src/ia64_syscall.S
++++ src/ia64_syscall.S
+@@ -15,3 +15,7 @@
+ 	br.ret.sptk.many rp
+ 	.endp __ia64_syscall
+ #endif
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif

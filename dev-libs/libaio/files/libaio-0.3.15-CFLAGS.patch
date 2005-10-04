@@ -1,0 +1,14 @@
+Respect env CFLAGS and build shared objects as PIC
+
+--- libaio/src/Makefile
++++ libaio/src/Makefile
+@@ -1,7 +1,7 @@
+ prefix=/usr
+ 
+-CFLAGS=-nostdlib -nostartfiles -Wall -I. -g -O2
+-SO_CFLAGS=-shared $(CFLAGS)
++CFLAGS+=-nostdlib -nostartfiles -Wall -I.
++SO_CFLAGS=-shared $(CFLAGS) -fPIC
+ L_CFLAGS=$(CFLAGS)
+ LINK_FLAGS=-L.
+ 
