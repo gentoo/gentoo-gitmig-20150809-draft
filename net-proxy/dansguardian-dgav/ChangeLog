@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/dansguardian-dgav
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.4 2005/09/03 15:29:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.5 2005/10/04 21:01:07 mrness Exp $
+
+*dansguardian-dgav-6.4.3 (04 Oct 2005)
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org>
+  dansguardian-dgav-6.4.2a.ebuild, +dansguardian-dgav-6.4.3.ebuild:
+  Version bump. Remove INSTALL and LICENSE from docs.
 
   03 Sep 2005; Alin Nastac <mrness@gentoo.org>
   -files/dgav-6.3.8-virus-response.patch, -dansguardian-dgav-6.3.8.ebuild:
