@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.48 2005/10/04 01:27:12 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.49 2005/10/04 04:04:43 joshuabaergen Exp $
+
+  04 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/0.99.1-r10-check-for-glproto.patch,
+  +files/0.99.1-r10_CAN-2005-2495.patch:
+  Oops, forgot the version-dependent patches.
 
 *xorg-server-0.99.1-r10 (04 Oct 2005)
 
