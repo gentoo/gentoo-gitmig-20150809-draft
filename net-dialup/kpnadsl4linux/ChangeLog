@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/kpnadsl4linux
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.11 2005/09/10 03:34:35 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.12 2005/10/04 18:47:51 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> kpnadsl4linux-1.10-r1.ebuild:
+  Remove INSTALL and COPYING from docs.
 
   09 Sep 2005; Tom Gall <tgall@gentoo.org> kpnadsl4linux-1.10-r1.ebuild:
   stable on ppc64

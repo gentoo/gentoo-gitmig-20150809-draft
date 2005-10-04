@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/kpnadsl4linux-1.10-r1.ebuild,v 1.13 2005/09/10 03:34:35 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/kpnadsl4linux-1.10-r1.ebuild,v 1.14 2005/10/04 18:47:51 mrness Exp $
 
 DESCRIPTION="ADSL4Linux, a PPTP start/stop/etc. program especially for Dutch users, for gentoo."
 HOMEPAGE="http://www.adsl4linux.nl/"
@@ -24,7 +24,7 @@ src_compile() {
 
 src_install() {
 	dosbin adsl
-	dodoc COPYING Changelog INSTALL README
+	dodoc Changelog README
 	exeinto /etc/init.d/
 	newexe init.d.adsl adsl
 	dosbin ${FILESDIR}/${PN}-config
