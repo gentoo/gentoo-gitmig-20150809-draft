@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5.ebuild,v 1.8 2005/07/26 13:48:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5-r1.ebuild,v 1.1 2005/10/04 09:32:49 phosphan Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-va_list.patch"
+	epatch "${FILESDIR}/formatstring.patch"
 }
 
 src_compile() {
