@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/unzip
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.34 2005/09/09 15:11:23 agriffis Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.35 2005/10/04 23:01:07 vapier Exp $
+
+*unzip-5.52-r1 (04 Oct 2005)
+
+  04 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/unzip-5.52-no-exec-stack.patch, +unzip-5.52-r1.ebuild:
+  Make sure unzip isnt built with an executable stack.
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> unzip-5.52.ebuild:
   Mark 5.52 stable on alpha

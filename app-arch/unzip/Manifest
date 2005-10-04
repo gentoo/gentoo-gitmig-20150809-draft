@@ -1,7 +1,20 @@
-MD5 4c9cca80bd3bde938e8921913622b498 unzip-5.50-r2.ebuild 1129
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 889185ece3718e537769c23672bd5ef1 unzip-5.52-r1.ebuild 1271
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 00818fffd777ef5d5dae0e12e1869283 ChangeLog 3835
 MD5 1e8a4d870c17ebc47a8e57a438823739 unzip-5.52.ebuild 1193
+MD5 4c9cca80bd3bde938e8921913622b498 unzip-5.50-r2.ebuild 1129
+MD5 8a3d6aa629908a6bd7c2374fc23cec9a ChangeLog 4033
+MD5 583a5d8bbc70fb1d858c5e40d686e8ce files/digest-unzip-5.50-r2 61
+MD5 96a480a7d42cba427e44955d142d670c files/digest-unzip-5.52-r1 61
+MD5 b17d0181200f3e1f47a55b54eb93527d files/unzip-5.52-no-exec-stack.patch 334
 MD5 96a480a7d42cba427e44955d142d670c files/digest-unzip-5.52 61
 MD5 3b01796cbe10d9492bd8c0825bc83544 files/unzip-5.50-dotdot.patch 3236
-MD5 583a5d8bbc70fb1d858c5e40d686e8ce files/digest-unzip-5.50-r2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQwoLgIKl8Uu19MoRAnQYAJ99p7O4/eLtcSn9K2G0+mrkt6aePQCffru+
+hsbXINrgenQxI3ClPQ/k09E=
+=p6Vs
+-----END PGP SIGNATURE-----
