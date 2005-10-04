@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.12 2005/09/13 21:12:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0.ebuild,v 1.13 2005/10/04 14:57:41 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -48,7 +48,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
-	v4l? ( sys-kernel/linux-headers )
+	v4l? ( virtual/os-headers )
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
 	dev-util/pkgconfig
