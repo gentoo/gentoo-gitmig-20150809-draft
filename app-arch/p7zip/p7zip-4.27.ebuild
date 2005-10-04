@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.4 2005/09/25 10:09:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.27.ebuild,v 1.5 2005/10/04 10:47:05 blubb Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Port of 7-Zip archiver for Unix"
 HOMEPAGE="http://p7zip.sourceforge.net/"
@@ -22,7 +22,7 @@ src_unpack() {
 	sed -i \
 		-e "/^CXX=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
-		-e "s:-O1 -s -fPIC:${CXXFLAGS}:" \
+		-e "s:-O1 -s:${CXXFLAGS}:" \
 		makefile* || die "cleaning up makefiles"
 }
 
@@ -35,11 +35,11 @@ src_install() {
 	make_wrapper 7za "/usr/lib/${PN}/7za"
 	make_wrapper 7z "/usr/lib/${PN}/7z"
 
-	exeinto /usr/lib/${PN}
+	exeinto /usr/$(get_libdir)/${PN}
 	doexe bin/7z bin/7za bin/7zCon.sfx || die "doexe bins"
-	exeinto /usr/lib/${PN}/Codecs
+	exeinto /usr/$(get_libdir)/${PN}/Codecs
 	doexe bin/Codecs/* || die "doexe Codecs"
-	exeinto /usr/lib/${PN}/Formats
+	exeinto /usr/$(get_libdir)/${PN}/Formats
 	doexe bin/Formats/* || die "doexe Formats"
 
 	doman man1/7z.1 man1/7za.1
