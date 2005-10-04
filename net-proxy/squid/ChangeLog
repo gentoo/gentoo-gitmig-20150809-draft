@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.42 2005/09/18 06:54:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.43 2005/10/04 21:19:45 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> -squid-2.5.10.ebuild,
+  squid-2.5.10-r2.ebuild, squid-2.5.10-r4.ebuild:
+  Remove obsolete version. Remove COPYING and COPYRIGHT from docs.
 
   18 Sep 2005; Markus Rothe <corsair@gentoo.org> squid-2.5.10-r4.ebuild:
   Stable on ppc64 (bug #106104)

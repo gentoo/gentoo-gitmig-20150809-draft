@@ -1,14 +1,22 @@
-MD5 17494fc3ef9caa4608cba0c455446108 ChangeLog 22270
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5a123cb8aa8308bf12130208cc3d171b squid-2.5.10-r2.ebuild 6351
+MD5 f3431002a02349e68cd89f7c1770e21e squid-2.5.10-r4.ebuild 6400
+MD5 b69d3ee3b00e8850ce072daef253ad1c ChangeLog 22456
 MD5 c2a21a50fca07975a99242ebc54c2f88 metadata.xml 330
-MD5 20b097989d5bcdac0f6adb1b17987ee7 squid-2.5.10.ebuild 6306
-MD5 9177f968bd8a193d7bec06fe4efc4505 squid-2.5.10-r4.ebuild 6423
-MD5 e9e1e54a7ed3f6f4f00012f78ab9042d squid-2.5.10-r2.ebuild 6374
-MD5 8cc1ace892824f141e77ba74760c02a2 files/digest-squid-2.5.10 157
-MD5 6f30a7f5c48ec35a7044acb189c858c5 files/squid.cron 133
-MD5 5cbc9bcecee98115731f5fc4b0f10907 files/squid.initd 1982
-MD5 6b7e2f22e3d8d628b7f3c0a468f05933 files/digest-squid-2.5.10-r4 157
-MD5 9bc2547e30ed7f253626bd88246c0808 files/digest-squid-2.5.10-r2 157
-MD5 5286e7e73ca5687381fa09ff41dccbd1 files/squid-logrotate 101
 MD5 8e7207b10699502e573d9d60ff0e07a6 files/squid.confd 437
+MD5 5cbc9bcecee98115731f5fc4b0f10907 files/squid.initd 1982
+MD5 6f30a7f5c48ec35a7044acb189c858c5 files/squid.cron 133
+MD5 9bc2547e30ed7f253626bd88246c0808 files/digest-squid-2.5.10-r2 157
+MD5 6b7e2f22e3d8d628b7f3c0a468f05933 files/digest-squid-2.5.10-r4 157
 MD5 40a3fdee0d8db88cb690a6eceb59e45a files/squid.pam 505
+MD5 5286e7e73ca5687381fa09ff41dccbd1 files/squid-logrotate 101
 MD5 208e20395de910fc529fcfb8031bfb13 files/squid.pam-include 326
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFDQvH+NSP4Vda7IdsRAkAqAJ0TMtO61aLXAv47fC5DyXe3a6K6CgCXTwVk
+kW/sxWHmL4mxvajsTrWGig==
+=+c9c
+-----END PGP SIGNATURE-----

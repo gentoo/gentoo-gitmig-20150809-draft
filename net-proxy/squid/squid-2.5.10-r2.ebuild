@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10-r2.ebuild,v 1.9 2005/09/08 14:24:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10-r2.ebuild,v 1.10 2005/10/04 21:19:45 mrness Exp $
 
 inherit eutils pam toolchain-funcs
 
@@ -164,8 +164,7 @@ src_install() {
 	#simply switch this symlink to choose the desired language..
 	dosym /usr/lib/squid/errors/English /etc/squid/errors
 
-	dodoc CONTRIBUTORS COPYING COPYRIGHT CREDITS \
-		ChangeLog QUICKSTART SPONSORS doc/*.txt \
+	dodoc CONTRIBUTORS CREDITS ChangeLog QUICKSTART SPONSORS doc/*.txt \
 		helpers/ntlm_auth/no_check/README.no_check_ntlm_auth
 	newdoc helpers/basic_auth/SMB/README README.auth_smb
 	dohtml helpers/basic_auth/MSNT/README.html RELEASENOTES.html
