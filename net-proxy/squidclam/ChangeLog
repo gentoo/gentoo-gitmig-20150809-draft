@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squidclam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/ChangeLog,v 1.2 2005/06/26 22:22:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/ChangeLog,v 1.3 2005/10/04 21:23:33 mrness Exp $
+
+*squidclam-0.16 (04 Oct 2005)
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> +squidclam-0.16.ebuild:
+  Version bump.
 
   26 Jun 2005; Jason Wever <weeve@gentoo.org> squidclam-0.11.ebuild:
   Added ~sparc keyword wrt bug #96774.
