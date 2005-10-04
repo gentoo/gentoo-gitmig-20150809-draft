@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.6.0-r1.ebuild,v 1.8 2005/09/24 04:37:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.6.0-r1.ebuild,v 1.9 2005/10/04 16:43:31 dang Exp $
+
+inherit eutils multilib
 
 MY_PV=${PV//./_}
 MY_P=${PN}-src_${MY_PV}
@@ -10,13 +12,21 @@ SRC_URI="http://archive.apache.org/dist/xml/xerces-c/Xerces-C_2_6_0/${MY_P}.tar.
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc"
 
 DEPEND="virtual/libc
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix multilib install
+	epatch ${FILESDIR}/${P}-multilib.patch
+}
 
 src_compile() {
 	export XERCESCROOT=${S}
@@ -28,7 +38,7 @@ src_compile() {
 src_install () {
 	export XERCESCROOT=${S}
 	cd ${S}/src/xercesc
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} MLIBDIR=$(get_libdir) install || die
 
 	if use doc; then
 		dodir /usr/share/doc/${P}

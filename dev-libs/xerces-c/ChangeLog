@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.34 2005/09/24 04:37:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.35 2005/10/04 16:43:31 dang Exp $
+
+  04 Oct 2005; <dang@gentoo.org> +files/xerces-c-2.6.0-multilib.patch,
+  +files/xerces-c-2.7.0-multilib.patch, xerces-c-2.6.0-r1.ebuild,
+  xerces-c-2.7.0.ebuild:
+  Make 2.6.0-r1 and 2.7.0 multilib safe, and mark 2.6.0-r1 stable.  Bug #106228
 
   24 Sep 2005; Mark Loeser <halcy0n@gentoo.org> xerces-c-2.6.0.ebuild,
   xerces-c-2.6.0-r1.ebuild:

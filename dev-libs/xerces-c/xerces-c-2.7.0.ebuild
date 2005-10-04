@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0.ebuild,v 1.1 2005/09/05 00:34:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0.ebuild,v 1.2 2005/10/04 16:43:31 dang Exp $
+
+inherit eutils multilib
 
 MY_PV=${PV//./_}
 MY_P=${PN}-src_${MY_PV}
@@ -18,6 +20,14 @@ DEPEND="virtual/libc
 
 S=${WORKDIR}/xerces-c-src
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Fix multilib install
+	epatch ${FILESDIR}/${P}-multilib.patch
+}
+
 src_compile() {
 	export XERCESCROOT=${S}
 	cd src/xercesc
@@ -28,7 +38,7 @@ src_compile() {
 src_install () {
 	export XERCESCROOT=${S}
 	cd ${S}/src/xercesc
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} MLIBDIR=$(get_libdir) install || die
 
 	if use doc; then
 		dodir /usr/share/doc/${P}
