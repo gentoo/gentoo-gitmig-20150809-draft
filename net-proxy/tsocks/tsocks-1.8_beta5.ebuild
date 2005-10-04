@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/tsocks-1.8_beta5.ebuild,v 1.6 2005/08/13 23:00:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/tsocks-1.8_beta5.ebuild,v 1.7 2005/10/04 21:29:51 mrness Exp $
 
 inherit multilib
 
@@ -34,7 +34,6 @@ src_install() {
 	dobin validateconf inspectsocks saveme
 	insinto /etc/socks
 	doins tsocks.conf.*.example
-	dodoc INSTALL
 	# tsocks script is buggy so we need this symlink
 	dodir /usr/$(get_libdir)
 	dosym /$(get_libdir)/libtsocks.so /usr/$(get_libdir)/libtsocks.so
