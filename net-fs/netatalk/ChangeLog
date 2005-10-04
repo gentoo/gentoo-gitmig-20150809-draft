@@ -1,14 +1,17 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.28 2005/07/28 16:49:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.29 2005/10/04 11:35:19 matsuu Exp $
 
-  28 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> netatalk-2.0.3.ebuild:
+  04 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> netatalk-1.6.4-r1.ebuild:
+  Stable on sh.
+
+  28 Jul 2005; Diego Petten嘆 <flameeyes@gentoo.org> netatalk-2.0.3.ebuild:
   Disable openafs support for now.
 
   09 Jul 2005; Jason Wever <weeve@gentoo.org> netatalk-2.0.3.ebuild:
   Added ~sparc keyword wrt bug #97586.
 
-  09 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> -files/atalk,
+  09 Jul 2005; Diego Petten嘆 <flameeyes@gentoo.org> -files/atalk,
   -files/atalk-rc6, -netatalk-1.5.3.1-r1.ebuild, -netatalk-1.6.2.ebuild,
   -netatalk-1.6.3.ebuild, -netatalk-1.6.4.ebuild, -netatalk-2.0.1.ebuild:
   Removed old 1.x series and 2.0.1 which is bugged. Left netatalk-1.6.4-r1
@@ -17,12 +20,12 @@
   07 Jul 2005; Markus Rothe <corsair@gentoo.org> netatalk-2.0.3.ebuild:
   added ~ppc64
 
-  01 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> netatalk-2.0.3.ebuild:
+  01 Jul 2005; Diego Petten嘆 <flameeyes@gentoo.org> netatalk-2.0.3.ebuild:
   Added flags to search in special installation prefix for openafs.
 
 *netatalk-2.0.3 (30 Jun 2005)
 
-  30 Jun 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  30 Jun 2005; Diego Petten嘆 <flameeyes@gentoo.org> metadata.xml,
   netatalk-1.5.3.1-r1.ebuild, netatalk-1.6.2.ebuild, netatalk-1.6.3.ebuild,
   netatalk-1.6.4.ebuild, netatalk-1.6.4-r1.ebuild, netatalk-2.0.1.ebuild,
   +netatalk-2.0.3.ebuild:

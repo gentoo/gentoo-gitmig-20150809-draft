@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 420bfc865eb27b5fdec63c491f9a086a ChangeLog 4825
+MD5 725e95b5d90ddc8ad32795170e447286 netatalk-1.6.4-r1.ebuild 1277
+MD5 196c7cfd516abb078bcad7b9d29ab5fa netatalk-2.0.3.ebuild 2434
+MD5 d09c54315571b7f38bcad52219c39a4e ChangeLog 4918
 MD5 43c6b606d88eab1f3467634846a77491 metadata.xml 347
-MD5 8f9575d3629ca459f2ed69c5eba1cbe9 netatalk-1.6.4-r1.ebuild 1277
-MD5 0c7edfdc98c80c48d13ac360102be770 netatalk-2.0.3.ebuild 2433
-MD5 bd4410c61e921e87c00183817b6e29b9 files/atalknew-rc6 1703
 MD5 6dd0a76546b70cf567b7926c0881c9b5 files/digest-netatalk-1.6.4-r1 67
-MD5 9eeca2a8610190fcd373ff619d56a298 files/netatalk-1.6.4-tempfile.patch 557
 MD5 9ee0857567bda5d9ffabf5d04095e90b files/digest-netatalk-2.0.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC6Qynj5H05b2HAEkRAmcBAJ0Tq86074Cb87pXGmH1jnr8WmfgvwCglhwh
-CRNvxbGBzlS65v1O1OC6ZBE=
-=ehyZ
------END PGP SIGNATURE-----
+MD5 9eeca2a8610190fcd373ff619d56a298 files/netatalk-1.6.4-tempfile.patch 557
+MD5 bd4410c61e921e87c00183817b6e29b9 files/atalknew-rc6 1703
