@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07.3.ebuild,v 1.10 2005/08/07 13:38:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.07.3.ebuild,v 1.11 2005/10/04 19:01:50 mrness Exp $
 
 inherit rpm eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_WORK}
 MY_P=${MY_WORK}-${PV##*.}
 DESCRIPTION="A compact getty program for virtual consoles only."
 HOMEPAGE="ftp://rpmfind.net/linux/fedora/core/3/SRPMS"
-SRC_URI="ftp://rpmfind.net/linux/fedora/core/3/SRPMS/${MY_P}.src.rpm"
+SRC_URI="mirror://fedora/3/SRPMS/${MY_P}.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
