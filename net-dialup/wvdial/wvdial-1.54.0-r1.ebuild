@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0-r1.ebuild,v 1.1 2005/09/15 20:08:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0-r1.ebuild,v 1.2 2005/10/04 20:21:38 mrness Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc COPYING.LIB CHANGES FAQ MENUS README TODO
+	dodoc CHANGES FAQ MENUS README TODO
 }
 
 pkg_postinst() {

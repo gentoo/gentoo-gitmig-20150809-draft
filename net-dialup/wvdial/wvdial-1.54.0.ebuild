@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0.ebuild,v 1.14 2005/02/26 14:30:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0.ebuild,v 1.15 2005/10/04 20:21:38 mrness Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc COPYING.LIB CHANGES FAQ MENUS README TODO
+	dodoc CHANGES FAQ MENUS README TODO
 }
 
 pkg_postinst() {

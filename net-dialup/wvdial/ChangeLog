@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.27 2005/09/16 23:18:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.28 2005/10/04 20:21:38 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> wvdial-1.54.0.ebuild,
+  wvdial-1.54.0-r1.ebuild:
+  Remove COPYING.LIB from docs.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
