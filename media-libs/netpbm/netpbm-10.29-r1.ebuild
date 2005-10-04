@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.29-r1.ebuild,v 1.4 2005/10/02 02:15:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.29-r1.ebuild,v 1.5 2005/10/04 23:20:35 vapier Exp $
 
-inherit flag-o-matic toolchain-funcs eutils
+inherit flag-o-matic toolchain-funcs eutils multilib
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
@@ -23,8 +23,24 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	media-libs/jasper
 	media-libs/urt"
 
+netpbm_libtype() {
+	case ${CHOST} in
+		*-darwin*) echo dylib;;
+		*)         echo unixshared;;
+	esac
+}
+netpbm_libsuffix() {
+	local suffix=$(get_libname)
+	echo ${suffix//\.}
+}
+netpbm_ldshlib() {
+	case ${CHOST} in
+		*-darwin*) echo '-dynamiclib -install_name $(SONAME)';;
+		*)         echo '-shared -Wl,-soname,$(SONAME)';;
+	esac
+}
 netpbm_config() {
-	use $1 && echo ${2:-lib$1.so} || echo NONE
+	use $1 && echo -l${2:-$1} || echo NONE
 }
 
 src_unpack() {
@@ -46,20 +62,24 @@ src_unpack() {
 	STRIPFLAG =
 	CFLAGS_SHLIB = -fPIC
 
+	NETPBMLIBTYPE = $(netpbm_libtype)
+	NETPBMLIBSUFFIX = $(netpbm_libsuffix)
+	LDSHLIB = $(netpbm_ldshlib)
+
 	# Gentoo build options
 	TIFFLIB = $(netpbm_config tiff)
 	JPEGLIB = $(netpbm_config jpeg)
 	PNGLIB = $(netpbm_config png)
-	ZLIB = $(netpbm_config zlib libz.so)
-	LINUXSVGALIB = $(netpbm_config svga libvga.so)
+	ZLIB = $(netpbm_config zlib z)
+	LINUXSVGALIB = $(netpbm_config svga vga)
 
 	# Use system versions instead of bundled
-	JBIGLIB = libjbig.a
+	JBIGLIB = -ljbig
 	JBIGHDR_DIR =
-	JASPERLIB = libjasper.so
+	JASPERLIB = -ljasper
 	JASPERHDR_DIR =
-	URTLIB = librle.a
-	URTHDR_DIR = /usr/include/urt
+	URTLIB = -lrle
+	URTHDR_DIR =
 	EOF
 
 	# Sparc support ...

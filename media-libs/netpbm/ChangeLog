@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.70 2005/10/02 02:15:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.71 2005/10/04 23:20:35 vapier Exp $
+
+  04 Oct 2005; Mike Frysinger <vapier@gentoo.org> netpbm-10.29-r1.ebuild:
+  Redo some library options and merge Darwin support #74101.
 
   02 Oct 2005; Jason Wever <weeve@gentoo.org> netpbm-10.29-r1.ebuild:
   Added ~sparc keyword wrt bug #107346.
