@@ -1,10 +1,20 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4125402d5004e496cf1a1a8502c5053f ChangeLog 7255
 MD5 b17825438654e253026a60c5bbf9666a baghira-0.5h-r1.ebuild 688
 MD5 5246c1f65ddbaf2a3a475c8fb1951321 baghira-0.6e-r1.ebuild 755
-MD5 98a822d036e366f9befb8a88cbc0491f ChangeLog 7099
-MD5 9c196708c17b46934511a47d01f2706a baghira-0.7.ebuild 558
+MD5 8aefe23e5ee49d9476cc9da96827fa0a baghira-0.7.ebuild 612
 MD5 c96920407fffcc205cfd48375eafde0e files/baghira-0.6e-drop_resize_handle.patch 1175
-MD5 dd076d09f198a5c744fcd93be58a49bf files/digest-baghira-0.7 64
 MD5 eb9cfc658932affe09a33b70035d99fa files/baghira-ximian_fix.patch 1041
 MD5 691364364acad0a765bf32167748acb0 files/digest-baghira-0.5h-r1 65
 MD5 0676bc4d0ab8344a3fdbcd7168f26b25 files/digest-baghira-0.6e-r1 65
+MD5 dd076d09f198a5c744fcd93be58a49bf files/digest-baghira-0.7 64
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQnepj5H05b2HAEkRApwdAKCK4b8xQpPvUlYkCkdf5SO/wFQoVACfdieL
+B5F9BKRA+nAALtuAqOypZow=
+=/xCC
+-----END PGP SIGNATURE-----
