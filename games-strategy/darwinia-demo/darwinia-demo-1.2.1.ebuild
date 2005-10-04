@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.2.1.ebuild,v 1.3 2005/09/21 20:54:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.2.1.ebuild,v 1.4 2005/10/04 22:15:49 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -28,19 +28,18 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir} ${GAMES_BINDIR} || die "failed to create dirs"
-	exeinto ${dir}/lib
+	exeinto "${dir}/lib"
 	doexe lib/lib{gcc_s.so.1,SDL-1.2.so.0,vorbis{.so.0,file.so.3},ogg.so.0} \
 		|| die "Copying libraries"
 	doexe lib/{darwinia.bin.x86,open-www.sh} || die "copying executables"
-	insinto ${dir}/lib
+	insinto "${dir}/lib"
 	doins lib/{sounds,main,language}.dat || die "copying data files"
-	insinto ${dir}
+	insinto "${dir}"
 	dodoc README || die "copying docs"
 
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe bin/Linux/x86/darwinia || die "couldn't do exe"
 
-	games_make_wrapper darwinia-demo ./darwinia ${dir}
+	games_make_wrapper darwinia-demo ./darwinia "${dir}"
 	prepgamesdirs
 }
