@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.16 2005/08/14 10:06:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.17 2005/10/04 08:25:21 sejo Exp $
+
+  04 Oct 2005; Jochen Maes <sejo@gentoo.org> checkstyle-3.5.ebuild:
+  Fixing the ant-tasks depend
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> checkstyle-3.5.ebuild:
   Stable on ppc.
