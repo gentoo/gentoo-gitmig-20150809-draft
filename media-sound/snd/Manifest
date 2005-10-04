@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9657676cb7b3f8f453ee3a70a52cc93b ChangeLog 2637
+MD5 9e15a0ded1f6dfaf664f37d8f3a220a9 snd-7.15.ebuild 1655
+MD5 0f65d306cdb9269f20d386413bd1e992 snd-7.10.ebuild 1677
 MD5 10ee0de0cb6e197fbc29f57b2d6fd121 snd-7.4.ebuild 1677
 MD5 4860bb8377d684311fb26adae74ffc36 snd-7.1.ebuild 1740
-MD5 0f65d306cdb9269f20d386413bd1e992 snd-7.10.ebuild 1677
+MD5 93fd3c6d4ec08f156404ab5a77e9fe47 ChangeLog 2778
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 19c799488e3d5a9e0c8ad9334b88b262 files/digest-snd-7.4 60
 MD5 64e6271ddc8b655bf67b620f325dc01d files/digest-snd-7.10 61
+MD5 fd589e474be593bb2e56ca029a6ca4f3 files/digest-snd-7.15 61
 MD5 2c4ab24ebd10504d1d4f2a704ea4e309 files/digest-snd-7.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGtOSj5H05b2HAEkRAlOrAKCH9Sq+Cu6LH8V7+tIzVv3MhugP0gCfaXf9
-MZXJ2gtCASJo88OgNxSXPjI=
-=rnF6
------END PGP SIGNATURE-----
+MD5 19c799488e3d5a9e0c8ad9334b88b262 files/digest-snd-7.4 60

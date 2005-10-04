@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/snd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.22 2005/09/04 10:59:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.23 2005/10/04 13:49:09 matsuu Exp $
+
+*snd-7.15 (04 Oct 2005)
+
+  04 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> +snd-7.15.ebuild:
+  Version bumped.
+  Add some USE flag. Bug 108024.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> snd-7.1.ebuild,
   snd-7.4.ebuild, snd-7.10.ebuild:
