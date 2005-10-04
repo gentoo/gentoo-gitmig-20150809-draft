@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.16 2005/06/27 07:40:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.17 2005/10/04 19:25:34 mrness Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_install() {
 	insinto /etc/minicom
 	doins "${FILESDIR}"/minirc.dfl
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_preinst() {

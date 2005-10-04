@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.3 2005/09/06 16:16:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0.ebuild,v 1.4 2005/10/04 19:27:04 mrness Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 	insinto /etc/modules.d
 	newins ${FILESDIR}/mwave.modules mwave
 
-	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README README.devfs THANKS
+	dodoc AUTHORS ChangeLog FAQ NEWS README README.devfs THANKS
 	docinto doc
 	dodoc doc/mwave.sgml doc/mwave.txt
 	dohtml doc/mwave.html

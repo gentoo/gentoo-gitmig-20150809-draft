@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mwavem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/ChangeLog,v 1.6 2005/09/06 16:16:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/ChangeLog,v 1.7 2005/10/04 19:27:04 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> mwavem-2.0.ebuild:
+  Remove INSTALL from docs.
 
   06 Sep 2005; Alin Nastac <mrness@gentoo.org> mwavem-2.0.ebuild:
   Remove virtual/x11 from DEPEND (#104781).
