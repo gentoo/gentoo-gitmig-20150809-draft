@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.25 2005/09/04 10:39:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.26 2005/10/04 09:50:30 flameeyes Exp $
+
+  04 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/musepack-tools-1.15v-Makefile.patch, musepack-tools-1.15v.ebuild:
+  Fixed patch for +esd/-esd handling. See bug #104147.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   musepack-tools-1.15s-r2.ebuild, musepack-tools-1.15t.ebuild,

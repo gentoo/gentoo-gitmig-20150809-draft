@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.4 2005/09/04 10:39:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.5 2005/10/04 09:50:30 flameeyes Exp $
 
 IUSE="static 16bit esd"
 
@@ -34,9 +34,9 @@ src_unpack() {
 
 	if ! use esd ; then
 		sed -i -e 's/#define USE_ESD_AUDIO/#undef USE_ESD_AUDIO/' mpp.h
-		sed -i -e 's:esd-config:true:' Makefile
 	else
-		sed -i -e 's/#LDADD   += -lesd/LDADD   += -lesd/' Makefile
+		sed -i -e 's/^LDADD    = -lm$/LDADD    = $(shell esd-config --libs)/' \
+			Makefile
 	fi
 
 	if ! use x86 ; then
@@ -50,7 +50,9 @@ src_compile() {
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-mfpmath=sse" "-mfpmath=sse,387"
 	use static && export BLD_STATIC=1
-	ARCH= emake LDADD=-lm mppenc mppdec replaygain || die
+
+	append-flags -I${S}
+	ARCH= emake mppenc mppdec replaygain || die
 }
 
 src_install() {

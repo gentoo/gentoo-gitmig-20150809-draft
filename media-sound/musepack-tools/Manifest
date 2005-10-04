@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c6772fd586092e9a311f2b643eafbf3f musepack-tools-1.15u.ebuild 1506
-MD5 c6851e379402a0001080e9507c4f24b0 ChangeLog 4858
-MD5 2c6f59eed8f1893c3be3699b0d7e19e9 musepack-tools-1.15t.ebuild 1427
-MD5 1bae02184cdfee099296b98e4f09a0ba musepack-tools-1.15s-r2.ebuild 1588
-MD5 faa1d4581f08bf25da8b1b8288048871 musepack-tools-1.15v.ebuild 1499
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 9765f2db5f70d381035134cc86fcf06b files/musepack-tools-1.15u-Makefile.patch 750
-MD5 cfc4d714a4dc0419ccc7091a89543824 files/musepack-tools-1.15s-Makefile.patch 2893
-MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15u-gcc4.patch 288
-MD5 e2b1a42af0b2661239d43baa7204cdf7 files/musepack-tools-1.15r-r1-Makefile.patch 3748
-MD5 9765f2db5f70d381035134cc86fcf06b files/musepack-tools-1.15t-Makefile.patch 750
-MD5 ed58f526be4bbd9e940db917d7821d74 files/digest-musepack-tools-1.15u 69
-MD5 9765f2db5f70d381035134cc86fcf06b files/musepack-tools-1.15v-Makefile.patch 750
-MD5 83959d8ebd21d40ec956ac942fa6b9f1 files/digest-musepack-tools-1.15v 69
-MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15t-gcc4.patch 288
-MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15v-gcc4.patch 288
+MD5 9bf92d69bc1243f335bbfd62213f1320 ChangeLog 5041
 MD5 b81fa7225bc172daee43e316eba11fa0 files/digest-musepack-tools-1.15s-r2 68
 MD5 d81d9df24aeee0d861392505d4941067 files/digest-musepack-tools-1.15t 69
+MD5 ed58f526be4bbd9e940db917d7821d74 files/digest-musepack-tools-1.15u 69
+MD5 83959d8ebd21d40ec956ac942fa6b9f1 files/digest-musepack-tools-1.15v 69
+MD5 e2b1a42af0b2661239d43baa7204cdf7 files/musepack-tools-1.15r-r1-Makefile.patch 3748
+MD5 cfc4d714a4dc0419ccc7091a89543824 files/musepack-tools-1.15s-Makefile.patch 2893
+MD5 9765f2db5f70d381035134cc86fcf06b files/musepack-tools-1.15t-Makefile.patch 750
+MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15t-gcc4.patch 288
+MD5 9765f2db5f70d381035134cc86fcf06b files/musepack-tools-1.15u-Makefile.patch 750
+MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15u-gcc4.patch 288
+MD5 22a0f1804346128859f9a99ff9305cf4 files/musepack-tools-1.15v-Makefile.patch 572
+MD5 ede8b7ca4902507ed93207bf753b9402 files/musepack-tools-1.15v-gcc4.patch 288
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 1bae02184cdfee099296b98e4f09a0ba musepack-tools-1.15s-r2.ebuild 1588
+MD5 2c6f59eed8f1893c3be3699b0d7e19e9 musepack-tools-1.15t.ebuild 1427
+MD5 c6772fd586092e9a311f2b643eafbf3f musepack-tools-1.15u.ebuild 1506
+MD5 7973499cfb5a0111bb91c9e2255e09a3 musepack-tools-1.15v.ebuild 1494
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGs8Gj5H05b2HAEkRAn7FAJ9f+ts93cNU6GznlPNxl9JIy6S0kACgkySO
-mQfciiZn9hAHcuKTgehvLE8=
-=wnmg
+iD8DBQFDQlCsj5H05b2HAEkRArCLAJ9vmE4YpOQ4vbWywnZw1aG+HhYIOQCgoExG
+AzZ/UgKUeFPAHNNsOoBB/F4=
+=4C3f
 -----END PGP SIGNATURE-----

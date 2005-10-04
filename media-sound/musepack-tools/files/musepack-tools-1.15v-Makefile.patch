@@ -9,15 +9,6 @@
  endif
  
  ifdef MINGW
-@@ -97,7 +97,7 @@
- # Name of libraries you need for linking
- 
- ifndef MINGW
--LDADD    = -lm
-+LDADD    = `esd-config --libs`
- #LDADD   += -lesd
- else
- LDADD    = -lwinmm -lws2_32
 @@ -176,9 +176,9 @@
  	-fno-finite-math-only -fno-unsafe-math-optimizations
  endif
