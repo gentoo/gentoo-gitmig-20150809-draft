@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.13 2005/09/23 13:25:55 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.14 2005/10/04 15:12:34 dcoutts Exp $
+
+  04 Oct 2005; <duncan@gentoo.org> happy-1.15.ebuild:
+  Added ~sparc to KEYWORDS.
 
   23 Sep 2005; <duncan@gentoo.org> happy-1.15.ebuild:
   Marked stable on x86.
