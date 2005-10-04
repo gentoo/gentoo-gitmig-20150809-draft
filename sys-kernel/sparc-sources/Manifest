@@ -2,22 +2,24 @@
 Hash: SHA1
 
 MD5 dec627b47037855f96900fe9c20f28ae sparc-sources-2.4.29.ebuild 1268
+MD5 eeb1906072ef33b34d54adab5c8460ca ChangeLog 14780
 MD5 47d259829b113b4c5210820eb981b569 sparc-sources-2.4.30.ebuild 1195
-MD5 cb76d3ab39194c3099f7eee451b39f51 sparc-sources-2.4.31-r1.ebuild 1202
-MD5 5717b5d7466eb1fdc0556f693ebce473 sparc-sources-2.4.31.ebuild 1195
-MD5 9034d755f84a1a5be3d00aa544633c89 ChangeLog 14591
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
+MD5 cb76d3ab39194c3099f7eee451b39f51 sparc-sources-2.4.31-r1.ebuild 1202
+MD5 f512d15c2d81d6f9ae584a8734a9c70e sparc-sources-2.4.31-r2.ebuild 1202
+MD5 5717b5d7466eb1fdc0556f693ebce473 sparc-sources-2.4.31.ebuild 1195
+MD5 4066f3c14b801909fca3c83f3d72c564 files/digest-sparc-sources-2.4.31-r2 143
+MD5 ac8d8bb55e33fd4113aaecc98591f533 files/blade1500.patch 1480
+MD5 d3e6638242e53a9457d91b5e5bf1c648 files/digest-sparc-sources-2.4.31 140
+MD5 145be730c54866ee64961dd0c6316b4b files/digest-sparc-sources-2.4.31-r1 143
 MD5 18898e8c936c287f66f4f234a997f93e files/digest-sparc-sources-2.4.29 140
 MD5 3af0404d78ae35f6d5b8731fa1758016 files/digest-sparc-sources-2.4.30 140
-MD5 d3e6638242e53a9457d91b5e5bf1c648 files/digest-sparc-sources-2.4.31 140
 MD5 0cae39dcfb06422e094da7e364e67c33 files/2.4-sparc64-ramdisk64.patch 2558
 MD5 387e70ce7c98618810dea0f521df76eb files/generate-asm-sparc 1661
-MD5 145be730c54866ee64961dd0c6316b4b files/digest-sparc-sources-2.4.31-r1 143
-MD5 ac8d8bb55e33fd4113aaecc98591f533 files/blade1500.patch 1480
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDHhRGKRy60XGEcJIRAlwyAJ0QJwkG03XQNshvrbq8bTracLeIOACfaFwX
-qYquvHPkRvYX+4n1Z5lR+rs=
-=s6J6
+iD8DBQFDQvKsKRy60XGEcJIRAjuiAJ0Vx6QGW2eD95xvKTkSeG3VsX8akACffKgn
+8FVQhuY8SHtqNqXNry1IAxU=
+=Vqg+
 -----END PGP SIGNATURE-----
