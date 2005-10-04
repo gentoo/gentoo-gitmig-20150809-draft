@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b2b21056f56133cae32bd313c57eccd2 slmodem-2.9.11_pre20050816.ebuild 4344
 MD5 d8bfc7e54bbf93358bef2ed665278ad0 slmodem-2.9.9d.ebuild 3552
 MD5 d3ced2e1ed762e15a291148ebd42a8da ChangeLog 12002
@@ -13,3 +16,10 @@ MD5 fd55ef399408a109742263cd5b4a5219 files/digest-slmodem-2.9.9d 66
 MD5 fd0f0a405fb7f059cc2f5078d54fd884 files/slmodem-2.9.9b-gcc4.patch 463
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
 MD5 9c47e598fd639d46a03493fe7a52595e files/slmodem-remove-URB_ASYNC_UNLINK.patch 436
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQuM9NSP4Vda7IdsRAmGDAJ90nfTnj0sG2VQkuHwtBwtxc0dmfgCfSMjt
+ONjHnYkXsQI3X2//C/nJo9s=
+=Vvpb
+-----END PGP SIGNATURE-----

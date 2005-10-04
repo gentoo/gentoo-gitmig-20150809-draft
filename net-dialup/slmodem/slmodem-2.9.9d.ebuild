@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9d.ebuild,v 1.5 2005/07/11 15:15:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9d.ebuild,v 1.6 2005/10/04 20:16:33 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -90,7 +90,7 @@ src_install() {
 			 ${D}/etc/udev/rules.d/55-${PN}.rules
 	fi
 
-	dodoc COPYING Changes README
+	dodoc Changes README
 }
 
 pkg_postinst() {

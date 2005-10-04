@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.3 2005/09/17 11:45:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.4 2005/10/04 20:16:33 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -100,7 +100,7 @@ src_install() {
 			 ${D}/etc/udev/rules.d/55-${PN}.rules
 	fi
 
-	dodoc COPYING Changes README ${WORKDIR}/ungrab-winmodem/Readme.txt
+	dodoc Changes README ${WORKDIR}/ungrab-winmodem/Readme.txt
 }
 
 pkg_postinst() {
