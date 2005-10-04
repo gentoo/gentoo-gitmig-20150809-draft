@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5.ebuild,v 1.3 2005/03/29 22:02:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/capisuite-0.4.5.ebuild,v 1.4 2005/10/04 18:58:07 mrness Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_install() {
 
 	keepdir /var/spool/capisuite/{done,failed,sendq,users}
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	exeinto /etc/cron.daily
 	doexe capisuite.cron

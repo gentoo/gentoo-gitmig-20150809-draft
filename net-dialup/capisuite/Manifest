@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 05184f4f9f97aa90cf3391b5c7247531 capisuite-0.4.5-r1.ebuild 2089
 MD5 803c69d2db73f6f8de91380a4251dd1c capisuite-0.4.5-r3.ebuild 2253
 MD5 e5c581df9e3359d48332e0fdef90a8af capisuite-0.4.5.ebuild 1348
@@ -16,3 +19,10 @@ MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r1 68
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r2 68
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5-r3 68
 MD5 78748205ff049b27b92175e818a06e0d files/capisuite.initd 1417
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQtDaNSP4Vda7IdsRAvDSAJ9HQp5f9kvitU49jlP20x9DUvHbJQCfRvGQ
+VfbJT+5nFfxVgf4ij9iR3N4=
+=07hK
+-----END PGP SIGNATURE-----
