@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8c03a2304d4972b756cd7306a650ac25 dwun-0.96e.ebuild 1170
 MD5 377a8c5acf1de6f9a2a7393a836bc05a ChangeLog 706
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 18fc42049e00d0a1eb921f2ffc958038 files/dwun 518
 MD5 f35fbbf57f58799d2c1b43316efcdb93 files/digest-dwun-0.96e 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQsbHNSP4Vda7IdsRAjMqAJwNIMC12j9Viz7xnsYDhQ/enq05dwCeMlLX
+k//ESanJ1H1ly3cqnpxSaj0=
+=xIyT
+-----END PGP SIGNATURE-----
