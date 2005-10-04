@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/zphoto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.13 2005/06/04 10:58:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.14 2005/10/04 22:21:40 matsuu Exp $
+
+*zphoto-1.2-r2 (04 Oct 2005)
+
+  04 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> -zphoto-1.1.ebuild,
+  -zphoto-1.2.ebuild, +zphoto-1.2-r2.ebuild:
+  Removed old versions.
+  depricated gtk2 USE flag. Bug #106560.
+  Added ~amd64.
 
   04 Jun 2005; Mamoru KOMACHI <usata@gentoo.org> zphoto-1.2-r1.ebuild:
   Make wxzphoto compile with wxGTK-2.6; bug #94601.

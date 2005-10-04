@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d18170a0e88e7a0ed69bc2559cfdaf7d ChangeLog 2254
-MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
 MD5 5ec71d6c9e72e64850e696640c150609 zphoto-1.2-r1.ebuild 1305
-MD5 8d54a6722f45b38164a275510ced2cdf zphoto-1.1.ebuild 947
-MD5 baf5d2a133584690f28e671a56fbe227 zphoto-1.2.ebuild 953
-MD5 da4e2ed233005ec8423569e0bc407105 files/digest-zphoto-1.2-r1 62
-MD5 c892a3036c833b82808fb04443eb1203 files/digest-zphoto-1.1 62
-MD5 da4e2ed233005ec8423569e0bc407105 files/digest-zphoto-1.2 62
+MD5 5c72072b135edb3555b3c20c40fa1c5d zphoto-1.2-r2.ebuild 1226
+MD5 42d7d9ee58489cc639edde0303a2abea ChangeLog 2481
+MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
 MD5 d3946f39d2b97ca5c97697351f478e3f files/zphoto-0.9-avifile-gentoo.diff 319
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCoYaYVWNWqTUmv+0RAtMwAJsHFDMeKBz1Q+QJT+CGW2YvfJ0xgwCeNps/
-6Sztt/gWWPebIF0+w2lsyMI=
-=ROz8
------END PGP SIGNATURE-----
+MD5 da4e2ed233005ec8423569e0bc407105 files/digest-zphoto-1.2-r1 62
+MD5 da4e2ed233005ec8423569e0bc407105 files/digest-zphoto-1.2-r2 62
