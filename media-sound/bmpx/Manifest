@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 28be4824db8c412f733261ec3e400bbd ChangeLog 1235
+MD5 908ef499d4f4785a36c356ccca02bbde bmpx-0.12_rc2.ebuild 1698
+MD5 ea54e79a2ccc0bf04b84cf3862a5d04f ChangeLog 1356
 MD5 21eeb355b8b22577ff6cd345af4744c4 bmpx-0.12_rc1.ebuild 1698
 MD5 b612d343db3c54560665171eb7db245c metadata.xml 223
 MD5 94e4107d5e7cc0d7ff964c94dc8962b9 files/digest-bmpx-0.12_rc1 66
+MD5 939119e16de32d410715a7eb506a6ab3 files/digest-bmpx-0.12_rc2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQVyz1ZcsMnZjRyIRAjcuAJ0Rq3Lcau3jbf/cfhcOJMad+lwjNQCfRUZz
-M7MnLLLaU++u6sScfgJI2DA=
-=6E9G
+iD8DBQFDQu1B1ZcsMnZjRyIRAnb3AKC389RTa8T0gBMQX3wTI+FqhwT6lwCZAab+
+CYCp8j8Tb37+kQldr3TW020=
+=/hV4
 -----END PGP SIGNATURE-----
