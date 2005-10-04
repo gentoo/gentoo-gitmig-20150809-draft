@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5ca169fcfd41c2e46f99f51f5967b236 metadata.xml 574
-MD5 61bf86b88c5802f1960720e2610c42f0 dragonflycms-9.0.5.0.ebuild 1539
-MD5 1bbf11c642643230e581cb138f93cb98 dragonflycms-9.0.3.0.ebuild 1524
 MD5 ede77ca0f059c716b755868e73a180f6 ChangeLog 1272
+MD5 1bbf11c642643230e581cb138f93cb98 dragonflycms-9.0.3.0.ebuild 1524
 MD5 5489d8ebd937cd75db0cb4937d0082b3 dragonflycms-9.0.4.0.ebuild 1477
-MD5 1d15a225bbe4934b0abc439d9131ee41 files/postinstall-en.txt 826
-MD5 30e21c32d1b9515d3805387218d50fa2 files/digest-dragonflycms-9.0.4.0 70
+MD5 61bf86b88c5802f1960720e2610c42f0 dragonflycms-9.0.5.0.ebuild 1539
+MD5 5ca169fcfd41c2e46f99f51f5967b236 metadata.xml 574
+MD5 4a36804915bb957e5580417773201cc5 dragonflycms-9.0.6.1.ebuild 1537
 MD5 0de8c25d7b281327a6e87009d44c9f20 files/digest-dragonflycms-9.0.3.0 70
+MD5 30e21c32d1b9515d3805387218d50fa2 files/digest-dragonflycms-9.0.4.0 70
 MD5 d51ee9843ef583fd547b75e420105250 files/digest-dragonflycms-9.0.5.0 70
+MD5 1d15a225bbe4934b0abc439d9131ee41 files/postinstall-en.txt 826
+MD5 772df86b0bb435027373f5e22676ee11 files/digest-dragonflycms-9.0.6.1 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDAXZqgIKl8Uu19MoRAvTVAJ991UNbRoiA07gF2nQyOXpc7p9ToQCeJIAt
-kqBwkLe4byY62R6sZMET8tU=
-=6ofl
+iD8DBQFDQmc4MXMsRNMHhmARAgcUAJ42A+7MVvEBoiNJi5nzJ33R1f7G6ACfVDV1
+jHTuiOXB7sCFW/ySeOi70t8=
+=GMMN
 -----END PGP SIGNATURE-----
