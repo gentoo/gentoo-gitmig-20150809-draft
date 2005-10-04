@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.2 2005/10/04 21:26:29 mrness Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install() {
 	insinto /etc/squidGuard/sample/db
 	doins ${FILESDIR}/blockedsites
 
-	dodoc ANNOUNCE CHANGELOG COPYING GPL README
+	dodoc ANNOUNCE CHANGELOG README
 	dohtml doc/*.html
 	docinto text
 	dodoc doc/*.txt

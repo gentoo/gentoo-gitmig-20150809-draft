@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4aa82c44fc5305463752806aa5a7e0cb squidguard-1.2.0-r1.ebuild 1933
 MD5 5b2c185fe27302280de5bfedcbf8b51d ChangeLog 2822
 MD5 6910c65b0c4ea4edfa1c7e642b16ef97 metadata.xml 353
@@ -8,3 +11,10 @@ MD5 71814cadfec6eed3d7ee2437fdd1f0ab files/squidguard-1.2.0-db41.patch 794
 MD5 bca506ead890af8fe52e0fdf5e73440f files/digest-squidguard-1.2.0-r1 69
 MD5 3e17e52277c56640bb3a9a24da57dae9 files/squidGuard.conf.blocksites 192
 MD5 d639b977d8cfd92f19913f1d9fa12564 files/squidguard-1.2.0-db42.patch 1348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFDQvORNSP4Vda7IdsRAsQGAJ90RyNKDvmNFLUM7FCYi1X+d+aMGgCWMxAB
+I5a2JXPHyIlFvVbG7TFsCQ==
+=sa3q
+-----END PGP SIGNATURE-----
