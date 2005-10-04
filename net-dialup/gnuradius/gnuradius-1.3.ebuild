@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3.ebuild,v 1.4 2005/07/05 23:08:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3.ebuild,v 1.5 2005/10/04 18:43:30 mrness Exp $
 
 MY_P=radius-${PV}
 
 DESCRIPTION="GNU radius authentication server"
 HOMEPAGE="http://www.gnu.org/software/radius/radius.html"
-SRC_URI="ftp://ftp.gnu.org/gnu/radius/${MY_P}.tar.gz"
+SRC_URI="mirror://gnu/radius/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
