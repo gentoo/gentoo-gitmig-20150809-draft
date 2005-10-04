@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.1 2005/09/29 09:47:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.2 2005/10/04 23:33:43 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -10,12 +10,12 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="-*" #~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 # WARNING:
 # if you have the noaudio, novideo, nojoystick, or noflagstrip use flags
 # in USE and something breaks, you pick up the pieces.  Be prepared for
 # bug reports to be marked INVALID.
-IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca pic noaudio novideo nojoystick noflagstrip"
+IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick noflagstrip"
 
 RDEPEND=">=media-libs/audiofile-0.1.9
 	alsa? ( media-libs/alsa-lib )
@@ -67,6 +67,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-SDL_stretch.patch
 	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-hermes-call-dont-jump.patch
 	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-load-mmx-masks-from-stack.patch
+	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-yuv-mmx.patch
 	epatch "${FILESDIR}"/${P}-sdl-blit-mmx-check.patch #104533
 
 	./autogen.sh || die "autogen failed"
@@ -75,9 +76,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-	# silly bundled asm triggers TEXTREL ... maybe someday
-	# i'll fix this properly, but for now hide with USE=pic
-	if [[ $(tc-arch) != "x86" ]] || use pic ; then
+	if [[ $(tc-arch) != "x86" ]] ; then
 		myconf="${myconf} --disable-nasm"
 	else
 		myconf="${myconf} $(use_enable x86 nasm)"
