@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.17 2005/08/18 00:13:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.18 2005/10/04 23:12:40 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -50,11 +50,9 @@ src_unpack() {
 		3.4 | 3.3 )
 			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
 			[[ ${ARCH} == "ppc" ||  ${ARCH} == "ppc64" ]] && append-flags -fno-strict-aliasing
-			# <robbat2@gentoo.org> (14 Feb 2004)
-			# bug #69550 openssl breaks in some cases.
-			[[ ${ARCH} == "x86" ]] && append-flags -Wa,--noexecstack
 		;;
 	esac
+	append-flags -Wa,--noexecstack
 
 	# replace CFLAGS
 	OLDIFS=$IFS
