@@ -1,17 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85ba2ebf9d8b1b3306fffeeecf1e66a2 postfix-2.2.3-r1.ebuild 10084
-MD5 e99cb314dfdfb806d46d2ab34e5b9721 postfix-2.2.1.ebuild 9284
-MD5 4d9eb85043534c9607f59c894eb00a3d postfix-2.2.3.ebuild 9704
-MD5 c88c64e440f3086125c64e2ecda79657 postfix-2.2.2-r1.ebuild 9949
-MD5 1ce876997722be856e042fbbb6f607ea postfix-2.2.1-r1.ebuild 9932
-MD5 fe5277b3ba7bf469d5d33532842147dd postfix-2.2.2.ebuild 9929
-MD5 e21e0e9df93046619aa9084042655ce3 ChangeLog 34960
+MD5 e6126738fd82def5f3a931ecde6ad519 postfix-2.2.3-r1.ebuild 10089
+MD5 864931d2d36d709cbb10508eff67ee40 postfix-2.2.1.ebuild 9289
+MD5 c680e396df72231738e21a07258c7df1 postfix-2.2.3.ebuild 9709
+MD5 1d9e71df53902c527a59cf17878e23e5 postfix-2.2.2-r1.ebuild 9954
+MD5 17cc55ab3c0fc0f203edaccf0f8de60e postfix-2.2.1-r1.ebuild 9937
+MD5 3e3e4d2f5732871ecb198288d6962ab2 postfix-2.2.2.ebuild 9934
+MD5 5bc455167d0c5903e0ea329ec20ba6dd ChangeLog 35052
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
-MD5 2aa3c8bc49f3d08ab5f2ce9fc6a490a4 postfix-2.1.5-r2.ebuild 7517
-MD5 dda4c7d9af823110a484908d8c131a51 postfix-2.2.4.ebuild 9224
-MD5 fd0d7c8463eafc67e9d64851558201e7 postfix-2.2.2-r2.ebuild 9701
+MD5 c43e347d49e165904a2cc6ac498cb6f8 postfix-2.1.5-r2.ebuild 7521
+MD5 bd879e41d2b201d9d42f9fde7084e2cc postfix-2.2.4.ebuild 9229
+MD5 7880250859c1a0d58cd6de6a920a7c60 postfix-2.2.2-r2.ebuild 9706
 MD5 98872da0bd186c6e0d2b884b0fa28b78 files/postfix.rc6 610
 MD5 889559c8b5d02597e9e7eec89e328360 files/smtp.pass 141
 MD5 43e9368a07952c4aae9e370b59ce1450 files/smtp.sasl 131
@@ -29,10 +26,3 @@ MD5 a3c32f8c9d1344be08f018d377a61f59 files/mailer.conf 438
 MD5 a50597e80d6dc757bbeffcd17ec5332d files/postfix.rc6.2.2.3 633
 MD5 8d7d372a5e867ebc0b1644ee19105e4e files/postfix.rc6.2.2.4 637
 MD5 502e444ec6b9d6fb9bbef3bb0f5e284a files/smtp.pam 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCyUDQlM6RnzZP+IRAsRPAKCK2tr1w0+xdi4B1jP06yL7fSN3KQCgs+Kz
-3jBI7+6nf3wcDg8DEx+ENzg=
-=jmea
------END PGP SIGNATURE-----
