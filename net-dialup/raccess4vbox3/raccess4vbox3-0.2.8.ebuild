@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/raccess4vbox3-0.2.8.ebuild,v 1.3 2005/02/12 09:46:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/raccess4vbox3-0.2.8.ebuild,v 1.4 2005/10/04 20:07:55 mrness Exp $
 
 inherit eutils
 
@@ -21,6 +21,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
-	dodoc Configuration INSTALL README
+	dodoc Configuration README
 	dohtml doc/*.html
 }

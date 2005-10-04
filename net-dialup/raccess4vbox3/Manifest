@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 520008548bfb392423b93b877fe587dd raccess4vbox3-0.2.8-r1.ebuild 834
 MD5 3f40a2334db4ef83e554921d71949cd2 raccess4vbox3-0.2.8.ebuild 672
 MD5 9eae961ce93692ec51b7b2b0dd5fafa3 ChangeLog 945
@@ -5,3 +8,10 @@ MD5 1ba7533de5c4878b503abb6fb0c93715 metadata.xml 246
 MD5 6aba85ee20deedd07b3142b6d1dae328 files/digest-raccess4vbox3-0.2.8-r1 71
 MD5 6aba85ee20deedd07b3142b6d1dae328 files/digest-raccess4vbox3-0.2.8 71
 MD5 8c363ffdcfba0361f72d46c05b732ec2 files/raccess4vbox3-0.2.8-qp-encode.patch 854
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQuE3NSP4Vda7IdsRAn38AJ9luYFINXHmtaZ9ga5KPehDlKC/LwCeIbfD
+PWbsKeoTs5F/kqSKCMp4VhU=
+=N4HF
+-----END PGP SIGNATURE-----
