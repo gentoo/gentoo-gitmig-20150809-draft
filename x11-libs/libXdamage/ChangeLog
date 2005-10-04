@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXdamage
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.4 2005/09/09 08:10:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.5 2005/10/04 18:36:22 lu_zero Exp $
+
+  04 Oct 2005; Luca Barbato <lu_zero@gentoo.org> libXdamage-1.0.1.ebuild:
+  Marked ~ppc
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
