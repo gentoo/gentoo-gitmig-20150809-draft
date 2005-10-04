@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.2.ebuild,v 1.4 2005/08/12 17:06:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.4.2.ebuild,v 1.5 2005/10/04 20:04:33 mrness Exp $
 
 inherit kde-functions eutils
 
@@ -37,6 +37,6 @@ src_compile() {
 
 src_install () {
 	dobin bin/qtwvdialer
-	dodoc AUTHORS CHANGELOG COPYING README
+	dodoc AUTHORS CHANGELOG README
 
 }
