@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gnunet-gtk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.1 2005/09/21 12:24:16 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.2 2005/10/04 19:35:36 mkay Exp $
+
+  04 Oct 2005; <mkay@gentoo.org> gnunet-gtk-0.7.0.ebuild:
+  Added libglade to DEPEND. Thanks Corvus Corax for bug #108113
 
 *gnunet-gtk-0.7.0 (21 Sep 2005)
 
