@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.5 2005/10/03 16:08:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.6 2005/10/04 11:21:26 matsuu Exp $
+
+  04 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> mt-daapd-0.2.3.ebuild:
+  Added ~sh.
 
 *mt-daapd-0.2.3 (03 Oct 2005)
 
