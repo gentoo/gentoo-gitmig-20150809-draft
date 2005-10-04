@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.27 2005/09/24 13:26:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.28 2005/10/04 09:44:47 greg_g Exp $
+
+*kcontrol-3.4.2-r1 (04 Oct 2005)
+
+  04 Oct 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdebase-3.4.2-kinfocenter-opengl-fix.patch,
+  +kcontrol-3.4.2-r1.ebuild:
+  Add patch to fix opengl related crash (#103937).
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kcontrol-3.5_alpha1.ebuild:
