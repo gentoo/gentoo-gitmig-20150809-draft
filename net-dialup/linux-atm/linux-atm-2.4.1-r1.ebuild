@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.9 2005/09/15 22:06:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.10 2005/10/04 18:54:54 mrness Exp $
 
 inherit eutils
 
@@ -47,6 +47,6 @@ src_install() {
 		man_prefix=/usr/share/man \
 		install || die "make install failed"
 
-	dodoc README NEWS THANKS AUTHORS BUGS INSTALL ChangeLog
+	dodoc README NEWS THANKS AUTHORS BUGS ChangeLog
 	dodoc doc/README* doc/atm*
 }

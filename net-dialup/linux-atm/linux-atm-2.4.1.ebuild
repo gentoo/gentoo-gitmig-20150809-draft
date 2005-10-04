@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.15 2005/02/07 21:02:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1.ebuild,v 1.16 2005/10/04 18:54:54 mrness Exp $
 
 inherit eutils
 
@@ -33,6 +33,6 @@ src_install() {
 		man_prefix=/usr/share/man \
 		install || die
 
-	dodoc README NEWS THANKS AUTHORS BUGS INSTALL ChangeLog
+	dodoc README NEWS THANKS AUTHORS BUGS ChangeLog
 	dodoc doc/README* doc/atm*
 }

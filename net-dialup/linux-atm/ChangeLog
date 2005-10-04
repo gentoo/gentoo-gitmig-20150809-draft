@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.16 2005/09/15 22:06:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.17 2005/10/04 18:54:54 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> linux-atm-2.4.1.ebuild,
+  linux-atm-2.4.1-r1.ebuild:
+  Remove INSTALL from docs.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> linux-atm-2.4.1-r1.ebuild:
   Mark 2.4.1-r1 stable on alpha
