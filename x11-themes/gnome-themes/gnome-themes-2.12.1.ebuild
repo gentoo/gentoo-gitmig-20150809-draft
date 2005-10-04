@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.12.0.ebuild,v 1.1 2005/09/10 03:50:57 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.12.1.ebuild,v 1.1 2005/10/04 02:54:56 leonardop Exp $
 
 inherit gnome2
 
