@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/virtuals,v 1.3 2005/07/06 18:15:02 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/virtuals,v 1.4 2005/10/04 15:55:40 spb Exp $
 
 virtual/linux-sources	sys-kernel/mips-sources
 virtual/os-headers	sys-kernel/mips-headers
-virtual/bootloader 	sys-boot/arcboot
+virtual/bootloader 	sys-boot/dvhtool
 virtual/editor		app-editors/vim
 
