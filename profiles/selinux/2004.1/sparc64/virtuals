@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/virtuals,v 1.7 2004/09/30 15:37:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/virtuals,v 1.8 2005/10/04 15:41:59 spb Exp $
 
 virtual/bootloader	sys-boot/silo
-virtual/linux-sources	sys-kernel/development-sources
+virtual/linux-sources	sys-kernel/vanilla-sources
