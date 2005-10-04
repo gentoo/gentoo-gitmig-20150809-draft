@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.4.1.ebuild,v 1.1 2005/10/04 12:54:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.4.1.ebuild,v 1.2 2005/10/04 22:07:51 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	>=dev-libs/glib-2
 	>=gnome-base/orbit-2.9.8
 	>=gnome-base/libbonobo-2
-	>=gnome-extra/evolution-data-server-1.3.1
+	>=gnome-extra/evolution-data-server-1.4.1
 	>=gnome-base/libbonoboui-2.4.2
 	>=gnome-base/gnome-vfs-2.4
 	>=gnome-base/libgnomeui-2
