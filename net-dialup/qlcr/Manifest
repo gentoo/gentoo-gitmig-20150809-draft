@@ -1,6 +1,14 @@
-MD5 d06d724ac3c9f3c6c20247c863b6b5bb qlcr-0.4.1.ebuild 911
-MD5 1f3af412262dbc30a29378011719bc7e ChangeLog 810
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 575b10cca0bffc70db4fe50a681b342a qlcr-0.4.1.ebuild 904
+MD5 34eae17f2407eb115b52c81374dc5e5c ChangeLog 953
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 93e443c04459e79fa6bb50740dced9cb qlcr-0.4.0.ebuild 934
-MD5 d96cdf829def134e13417671876735bc files/digest-qlcr-0.4.0 65
 MD5 02ad7d4737d3bd7d943382b429aae6a1 files/digest-qlcr-0.4.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDQuAANSP4Vda7IdsRAvPsAJ9wd3mO5CP0vhF0uVcZTZ/QmnnYRwCfcV6R
+UR9KueiQW1R+dIAEt0iiIWI=
+=9VHw
+-----END PGP SIGNATURE-----
