@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.7-r1.ebuild,v 1.1 2005/05/17 19:32:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.7-r1.ebuild,v 1.2 2005/10/04 17:35:39 mrness Exp $
 
 DESCRIPTION="An authentication and accounting server for terminal servers that speak the RADIUS protocol."
 SRC_URI="ftp://ftp.radius.cistron.nl/pub/radius/radiusd-cistron-${PV}.tar.gz"
@@ -52,6 +52,6 @@ src_install() {
 	dodir /etc/raddb
 	insinto /etc/raddb
 	doins raddb/*
-	dodoc COPYRIGHT INSTALL README doc/{ChangeLog,FAQ.txt,README*}
+	dodoc COPYRIGHT README doc/{ChangeLog,FAQ.txt,README*}
 	doman doc/{*.1,*.8,*.5rad,*.8rad}
 }
