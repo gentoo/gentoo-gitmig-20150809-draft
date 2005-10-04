@@ -1,0 +1,27 @@
+--- tools/vserver-new.old	2005-10-04 16:34:08.818098750 +0200
++++ tools/vserver-new	2005-10-04 16:26:13.416388000 +0200
+@@ -186,9 +186,6 @@
+ # Target: stage3                                                               #
+ #------------------------------------------------------------------------------#
+ 
+-STAGE3_DEFAULTTAR="stage3-i686-latest.tar.bz2"
+-STAGE3_DEFAULTURL="http://dev.gentoo.org/~hollow/vserver/stages/${STAGE3_DEFAULTTAR}"
+-
+ stage3_usage() {
+ 	echo "Usage: vserver-new <name> <globalopts> stage3 [<tar>]"
+ 	echo
+@@ -205,10 +202,10 @@
+ 		exit 0
+ 	fi
+ 	
+-	if [ -n "$1" ]; then
+-		tarball=$1
+-		[ "${tarball#/}" == "${tarball}" ] && tarball="`pwd`/${tarball}"
+-	fi
++	[ -z "$1" ] && die "Missing required argument <tar>"
++	
++	tarball=$1
++	[ "${tarball#/}" == "${tarball}" ] && tarball="`pwd`/${tarball}"
+ 	
+ 	stage3_build
+ }

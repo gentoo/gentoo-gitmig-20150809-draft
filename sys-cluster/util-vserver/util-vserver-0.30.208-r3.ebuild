@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.208-r3.ebuild,v 1.4 2005/10/01 19:42:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.208-r3.ebuild,v 1.5 2005/10/04 14:45:14 hollow Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -44,6 +44,7 @@ src_unpack() {
 
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}"/vserver-new_dev-fix.patch
+	epatch "${FILESDIR}"/vserver-new_drop-defaulttar.patch
 	cd - &>/dev/null
 
 	AT_M4DIR="-I m4" \
