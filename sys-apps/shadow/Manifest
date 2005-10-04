@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 41c23ed0904ed9071c85d13aa76d0a42 shadow-4.0.7-r1.ebuild 6582
 MD5 69b75fc8b3df89e5da434f35f6db5e31 shadow-4.0.5-r3.ebuild 5616
-MD5 5946e4282004a450086ec4f043530cfb shadow-4.0.7-r4.ebuild 7187
+MD5 02b151abd6ca7f518c23e6890f201e43 shadow-4.0.7-r4.ebuild 7174
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0528fcbf64cb6383f23308d400e3d58a shadow-4.0.12.ebuild 7110
 MD5 588bb10a6f777e71c67c552906d186a7 shadow-4.0.7-r3.ebuild 7053
@@ -82,7 +82,7 @@ MD5 a5721c39446539b751dceae4b054542b files/pam.d/shadow 171
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJO/igIKl8Uu19MoRAr/cAJ0duDYbeSGIPvBREdUwpp2Ysr3PuwCaA+48
-Rn+vKMOh0T7FRJkwLjBqtCY=
-=YIjG
+iD8DBQFDQxPjgIKl8Uu19MoRAo63AKCAnIoHY+c4Uppp3DeuqNeoBd1uHgCffy8n
+FC1ykenLBgVwldkBYopXePk=
+=j8BS
 -----END PGP SIGNATURE-----
