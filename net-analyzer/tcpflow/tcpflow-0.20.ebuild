@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.20.ebuild,v 1.7 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.20.ebuild,v 1.8 2005/10/04 20:12:03 swegener Exp $
 
 DESCRIPTION="A Tool for monitoring, capturing and storing TCP connections flows"
 HOMEPAGE="http://www.circlemud.org/~jelson/software/tcpflow/"
@@ -11,17 +11,11 @@ KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/libpcap"
-
-
-src_compile() {
-	econf || die "configure problem"
-	emake || die "compile problem"
-}
+DEPEND="virtual/libpcap"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	einstall
 	doman tcpflow.1
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
-

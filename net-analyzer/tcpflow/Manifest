@@ -1,6 +1,16 @@
-MD5 05234a927f820a96ddab7e788f2ba397 ChangeLog 1034
-MD5 04e17c57c255d1c4e3b222e11b4658f4 metadata.xml 261
-MD5 ad215f88e41d4e99f97f3a1b5b853e46 tcpflow-0.20.ebuild 694
-MD5 37ddd735b1e2b5ecf9bd8eaa21657216 tcpflow-0.21.ebuild 688
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a5964d5b37b1baddbc10af65ee565ac9 ChangeLog 1176
 MD5 218d536750e8b2aa04e1f3443bd0960c files/digest-tcpflow-0.20 63
 MD5 fe3e473a09a64af6052d7ad014862c00 files/digest-tcpflow-0.21 63
+MD5 04e17c57c255d1c4e3b222e11b4658f4 metadata.xml 261
+MD5 e01ba7ce99d701187bd0e8db85bd90b1 tcpflow-0.20.ebuild 623
+MD5 119663c90715f620f01c8c89d629c667 tcpflow-0.21.ebuild 709
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQuIwI1lqEGTUzyQRAk6iAJ9//v4/WvUhMUxFVeWJIkdiPBiY4gCfY/Zo
+ysx22QRMb1Da01o6gbOCtaM=
+=tQDQ
+-----END PGP SIGNATURE-----
