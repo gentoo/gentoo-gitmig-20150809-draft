@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gcdial
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.4 2004/11/17 18:52:48 mrness Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.5 2005/10/04 18:40:01 mrness Exp $
+
+  04 Oct 2005; Alin Nastac <mrness@gentoo.org> gcdial-0.7b.ebuild:
+  Remove INSTALL and COPYING from docs.
 
   17 Nov 2004; Alin Nastac <mrness@gentoo.org> gcdial-0.7b.ebuild:
   Marked stable on x86.

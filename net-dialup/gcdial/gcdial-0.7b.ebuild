@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/gcdial-0.7b.ebuild,v 1.5 2005/06/15 21:01:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/gcdial-0.7b.ebuild,v 1.6 2005/10/04 18:40:01 mrness Exp $
 
 DESCRIPTION="A simple GTK+ client for DWUN"
 HOMEPAGE="http://dwun.sourceforge.net/"
@@ -23,5 +23,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "install failed."
-	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
