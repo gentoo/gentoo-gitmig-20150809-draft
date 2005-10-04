@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4ffdea9f588ce9a432af7e63caa5a41e valknut-0.3.7.ebuild 799
-MD5 e23c14264c3e087e7d822d2adb0a1f8f valknut-0.3.0.ebuild 874
-MD5 7a77ca85993cd22dc7ae3969ccf2b793 valknut-0.3.5.ebuild 851
+MD5 f7d052906545306564b83cdc704ca2af ChangeLog 8307
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 388aa7fb3e9cd47d097cc10176660a8c valknut-0.2.20.ebuild 827
 MD5 a12bd69616f9d18c3306579cb4eb9a2c valknut-0.2.21.ebuild 829
+MD5 e23c14264c3e087e7d822d2adb0a1f8f valknut-0.3.0.ebuild 874
 MD5 40a8c18a29d5a0797cc0ba8b00b1bede valknut-0.3.3.ebuild 851
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 16c906827312c7d4cdbed3c9d667fb54 ChangeLog 8194
-MD5 fbb70cefa4c4fe73d8c32c239bf3c927 files/digest-valknut-0.3.0 68
-MD5 54e62140bd8216c460b863b2f7682ea6 files/digest-valknut-0.2.21 68
-MD5 58f1e6aa0e0048f3a23f2af674d97ea5 files/digest-valknut-0.3.3 67
-MD5 2eb5e862b379788fea00a4f3228e0eee files/digest-valknut-0.3.7 67
-MD5 7d34100809db4b0f8ee0b8a6359f71e6 files/digest-valknut-0.3.5 67
+MD5 ba09f771957bf329c7f667c49e6e7b93 valknut-0.3.5.ebuild 854
+MD5 4ffdea9f588ce9a432af7e63caa5a41e valknut-0.3.7.ebuild 799
 MD5 2d270feb5ef8ced992337805e3771b46 files/digest-valknut-0.2.20 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK1fuLLFUmVNQ7rkRAlDkAJ9fmxf5q6M9yCczfk0M3TuMu93VzwCeJ08T
-wJo7oaltfMR8sxk+MCmYjLQ=
-=W9PQ
------END PGP SIGNATURE-----
+MD5 54e62140bd8216c460b863b2f7682ea6 files/digest-valknut-0.2.21 68
+MD5 fbb70cefa4c4fe73d8c32c239bf3c927 files/digest-valknut-0.3.0 68
+MD5 58f1e6aa0e0048f3a23f2af674d97ea5 files/digest-valknut-0.3.3 67
+MD5 7d34100809db4b0f8ee0b8a6359f71e6 files/digest-valknut-0.3.5 67
+MD5 2eb5e862b379788fea00a4f3228e0eee files/digest-valknut-0.3.7 67
