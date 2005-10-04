@@ -1,11 +1,6 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.20 2005/10/01 14:48:07 grobian Exp $
-
-  01 Oct 2005; Fabian Groffen <grobian@gentoo.org>
-  files/jbigkit-1.6-shared-lib.patch, jbigkit-1.6-r1.ebuild:
-  Enhancing spanky's shared lib patch to get it compiling again on OSX using
-  dylibs.
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.21 2005/10/04 00:51:44 vapier Exp $
 
 *jbigkit-1.6-r1 (30 Sep 2005)
 
