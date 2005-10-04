@@ -3,18 +3,18 @@ Hash: SHA1
 
 MD5 e274b90633c12d9a1ba6bedf6e468964 pcsc-lite-1.2.0.ebuild 1263
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 251a614d3a25327a22a3ce18a12ec22d pcsc-lite-1.2.9_beta6.ebuild 1297
+MD5 82811656dccbbcf284fce911c74927a5 pcsc-lite-1.2.9_beta8.ebuild 1296
 MD5 fc3f52c720b3701befff44cf746725a6 pcsc-lite-1.2.9_beta7.ebuild 1281
-MD5 eb5b38396b31d4add8bf45151c3bea6f ChangeLog 1911
+MD5 8402afd20bf316cb4bd70cc055aac1fc ChangeLog 2073
 MD5 52deea7f2003badde6eb9c112bcc9645 files/pcscd-init 485
 MD5 4a6af6338f7bf5bdc3b2488aa9fd3ea4 files/pcscd-confd 84
+MD5 b92c5548172bf19ad5f25561b649982d files/digest-pcsc-lite-1.2.9_beta8 74
 MD5 aa81afb9cffef205c955fc1ab2a9bfd1 files/digest-pcsc-lite-1.2.0 67
-MD5 9f6a6cee89838d92aec450caafcbb9d0 files/digest-pcsc-lite-1.2.9_beta6 73
 MD5 6adc5afb1e8bbcb17a292f8232f9fea8 files/digest-pcsc-lite-1.2.9_beta7 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3akXgIKl8Uu19MoRAlEuAJ9cxT+y7IwZxsjwksGV0b4NkmjXAACcDGn9
-4+Ghjxui0gglVq9c9lstA08=
-=3FrP
+iD8DBQFDQxbfgIKl8Uu19MoRAo5LAJ4limcZpezFeRukQMNwPIAE9D402ACcDBUw
++Q+Jj0FJHicrOqmVOuvUS44=
+=sg1m
 -----END PGP SIGNATURE-----
