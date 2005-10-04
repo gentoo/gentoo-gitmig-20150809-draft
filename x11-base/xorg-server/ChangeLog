@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.47 2005/09/27 19:37:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.48 2005/10/04 01:27:12 joshuabaergen Exp $
+
+*xorg-server-0.99.1-r10 (04 Oct 2005)
+
+  04 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/fix-transparencies.patch, +xorg-server-0.99.1-r10.ebuild:
+  Added fix for OO/wine transparencies from bug #96053.  Thanks to bartron for
+  both patches.
 
   27 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1-r9.ebuild:
