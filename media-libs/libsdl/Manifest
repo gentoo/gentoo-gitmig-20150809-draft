@@ -1,18 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
 MD5 a7bcf0ea25253af8bba0031c22f14e5b libsdl-1.2.9.ebuild 4215
 MD5 7f079469132865bdd25780277639f098 libsdl-1.2.7-r3.ebuild 3960
 MD5 cbbab78f5125f834ffb0f83be4957736 libsdl-1.2.6-r3.ebuild 3013
-MD5 9cd04ba228704f38838643e7debe2504 libsdl-1.2.9-r1.ebuild 4642
+MD5 db2452f2f79d4148c9948fd21b118bce libsdl-1.2.9-r1.ebuild 4562
 MD5 4e4caa64c5b89522b2f0e284282eafe6 libsdl-1.2.8-r1.ebuild 5004
-MD5 75e0d655c427e1834806056f681ffdde ChangeLog 14100
+MD5 f8a050f4f26850f854060b399dbb291c ChangeLog 14281
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.8-nobuggy-X.patch 568
 MD5 e0c6c6ffc15475282fc864b8f52f0abf files/1.2.8-linux26.patch 1268
 MD5 25b8b048d7e5d2a6edc59a66f34566e7 files/libsdl-1.2.9-PIC-load-mmx-masks-from-stack.patch 3901
 MD5 614874c27d89a83dba0cf9754f6fad6e files/digest-libsdl-1.2.9-r1 62
-MD5 abb743f69a1f916ab59e02fe9e6ee46a files/libsdl-1.2.9-sdl-blit-mmx-check.patch 527
+MD5 7335dd719002ab81477446278b2f786f files/libsdl-1.2.9-sdl-blit-mmx-check.patch 551
 MD5 327bae5c9d159acaa55b2da63c3ee561 files/libsdl-1.2.9-PIC-hermes-call-dont-jump.patch 4928
 MD5 c214458f3c67b5451a5f305a2532ce64 files/libsdl-1.2.9-PIC-hermes-cpuid.patch 452
 MD5 e71ab5ce20cb7c70631a59f9d209cce1 files/1.2.7-joystick.patch 1317
@@ -23,12 +20,13 @@ MD5 abf0c6fe9d93e5b0cc9a4dbb6d93ad87 files/1.2.7-joystick2.patch 16196
 MD5 614874c27d89a83dba0cf9754f6fad6e files/digest-libsdl-1.2.9 62
 MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
 MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
+MD5 351838164a2c51a3cc19516e1ee8d3e7 files/libsdl-1.2.9-PIC-yuv-mmx.patch 13260
 MD5 27b5c7cf673424d9c9ce5e26d5031385 files/libsdl-1.2.9-gcc-mmx.patch 15320
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 4e92be33d24fa96149b0e68eb916e259 files/1.2.8-gcc4.patch 6875
 MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r3 62
 MD5 e6471a33cb0d62a807640ef3eccffb5f files/1.2.8-direct-8bit-color.patch 7414
-MD5 d2658d344345e29d331c165e281b4b87 files/libsdl-1.2.9-no-exec-stack.patch 956
+MD5 1aec1ecf1921c28a0b02c6e47c35b192 files/libsdl-1.2.9-no-exec-stack.patch 1146
 MD5 2ce49535d1db8c32ba4345ecc63eee24 files/libsdl-1.2.9-PIC-SDL_stretch.patch 396
 MD5 ebca26b8a60c4c68471691ab7bd9271e files/libsdl-1.2.8-libcaca.patch 19418
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
@@ -41,10 +39,3 @@ MD5 60ecfde6cc7b734ef03b93357c537674 files/1.2.8-keyrepeat.patch 598
 MD5 5b76156f2699a03a798bd4ed9b0f4233 files/libsdl-1.2.8-sdl-config.patch 738
 MD5 7fd44027d68e34cfdd399e23931caa94 files/libsdl-1.2.9-dlvsym-check.patch 907
 MD5 206ddd08dd3e33819d03245d11af3014 files/1.2.7-gcc34.patch 8196
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDO7h1gIKl8Uu19MoRAmKMAJ45GY/IM4KtUBd5owGL6D8EKeI5OgCfSnnP
-risiSIC1cYRgIPKP+xHd1m4=
-=cGk2
------END PGP SIGNATURE-----

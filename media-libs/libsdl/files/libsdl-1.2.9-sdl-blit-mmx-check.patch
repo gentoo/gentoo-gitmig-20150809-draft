@@ -9,7 +9,7 @@ http://bugs.gentoo.org/104533
  			    dstfmt->BytesPerPixel == table[which].dstbpp &&
  			    (a_need & table[which].alpha) == a_need &&
 -			    ((table[which].blit_features & GetBlitFeatures()) == table[which].blit_features) )
-+			    (table[which].blit_features & GetBlitFeatures()))
++			    ((table[which].blit_features & GetBlitFeatures()) == GetBlitFeatures()) )
  				break;
  		}
  		sdata->aux_data = table[which].aux_data;
