@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.5.0-r1.ebuild,v 1.6 2005/06/17 20:24:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.5.0-r1.ebuild,v 1.7 2005/10/04 19:41:23 mrness Exp $
 
 MY_P=pptp-linux-${PV}
 S=${WORKDIR}/${MY_P}
@@ -24,7 +24,7 @@ src_compile() {
 
 src_install() {
 	dosbin pptp
-	dodoc AUTHORS COPYING ChangeLog DEVELOPERS NEWS README TODO USING
+	dodoc AUTHORS ChangeLog DEVELOPERS NEWS README TODO USING
 	dodoc Documentation/*
 	dodoc Reference/*
 	dodir /etc/pptp.d
