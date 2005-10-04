@@ -1,26 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 905699f5d72415ca005d2a915cb4731c kdebase-kioslaves-3.4.1-r1.ebuild 962
+MD5 baa5d6bb5f0bda49ce3e96283732ca46 kdebase-kioslaves-3.4.2.ebuild 1096
+MD5 3196f5d7edade715c6861def61990244 kdebase-kioslaves-3.4.1.ebuild 895
 MD5 d69d7b879d550578a90ea411f07561d8 ChangeLog 4310
-MD5 00c42877b616c0d2c5df33a6eaecbfdd files/configure-fix-kdebase-openexr.patch 703
+MD5 791911a906312e610e13bcb5ea564c40 kdebase-kioslaves-3.5_beta1.ebuild 1018
+MD5 aa60665f6528f6da8f064764de4bfe70 kdebase-kioslaves-3.4.2-r1.ebuild 1299
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-kioslaves-3.4.1-r1 212
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-kioslaves-3.4.2 287
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-kioslaves-3.4.2-r1 287
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdebase-kioslaves-3.5_beta1 69
-MD5 51057f5a3aacb159e8d4cc4af02b00e6 files/kdebase-3.4.1-configure.patch 1916
 MD5 dfb258d599bf770949dff416197af77f files/kdebase-3.5-configure-openexr.patch 780
-MD5 93db6ab96c0cf4d8f28be96dfa7d8f16 files/kubuntu_23_hal_api.diff 36061
-MD5 905699f5d72415ca005d2a915cb4731c kdebase-kioslaves-3.4.1-r1.ebuild 962
-MD5 3196f5d7edade715c6861def61990244 kdebase-kioslaves-3.4.1.ebuild 895
-MD5 e3c37b593164208a768cb3e639cc43bd kdebase-kioslaves-3.4.2-r1.ebuild 1221
-MD5 baa5d6bb5f0bda49ce3e96283732ca46 kdebase-kioslaves-3.4.2.ebuild 1096
-MD5 791911a906312e610e13bcb5ea564c40 kdebase-kioslaves-3.5_beta1.ebuild 1018
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQa7pI1lqEGTUzyQRAr0EAJ9Eo5doSueDhPOpSaZaJYSS9gj5EgCfRN1V
-SpcsBrwOANWYrWg7yg62aLk=
-=DDpJ
------END PGP SIGNATURE-----
+MD5 00c42877b616c0d2c5df33a6eaecbfdd files/configure-fix-kdebase-openexr.patch 703
+MD5 b6281505be2ad7a32d59e136fad31976 files/digest-kdebase-kioslaves-3.4.2-r1 362
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-kioslaves-3.4.2 287
+MD5 51057f5a3aacb159e8d4cc4af02b00e6 files/kdebase-3.4.1-configure.patch 1916
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdebase-kioslaves-3.5_beta1 69
