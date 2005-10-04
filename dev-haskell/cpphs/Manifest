@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ed5cd3812cb8da99a4c7a4c7a4427b4 cpphs-0.9.ebuild 695
-MD5 511b0c3457f63e9d6c87a67e1236bc8d ChangeLog 334
+MD5 b639f0a17952f639d1a33290dd54be26 cpphs-0.9.ebuild 702
+MD5 26588a5a5579fa86a1fd21cba8a79048 ChangeLog 416
 MD5 5cf11c08544b065d0144e11273f0000d metadata.xml 223
 MD5 3a51c6c77b72752e0b6f90ed408e5a83 files/digest-cpphs-0.9 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCixspkyZuKN4EQ6YRAswAAJ91phPeikSJ6aG7O6cfINCqdlL2MgCfS7hy
-zf5L3zAUuHg8rdjNQEQwszw=
-=/LmD
------END PGP SIGNATURE-----

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6229b375c81cede00fb054a92777738 happy-1.15.ebuild 1452
+MD5 8d51b9945c4b7f48e8b857dbb279b591 happy-1.15.ebuild 1459
 MD5 de509a6365e2f5e31d0628ce8587d8ad happy-1.14.ebuild 719
-MD5 2a5f1de791d04e2caf6580b0c37c7859 ChangeLog 1715
+MD5 2f8995916b8448c0609cc6fe7abb0870 ChangeLog 1798
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 ccdd754a8212bb8a0ad2fa759a297250 files/happy-1.14-gcc3.4.patch 1849
 MD5 e4734e57e0ebad5144da11376e6aed02 files/digest-happy-1.14 66
 MD5 eb8bc65651f73e615f61ffc31a95a7c6 files/digest-happy-1.15 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDNANGkyZuKN4EQ6YRAoaKAJ0Q2pMC72eLFTH8823YQop8e8PatgCfQNlx
-L279odDC6HtBS5XIDglqOio=
-=OcLt
------END PGP SIGNATURE-----
