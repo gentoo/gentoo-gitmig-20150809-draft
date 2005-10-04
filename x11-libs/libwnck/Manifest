@@ -1,25 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 3d3c0b4925bd3c81813129cf638c09cc ChangeLog 11540
 MD5 1f85d7bc63bdc5f7ce8039f52381f1dd libwnck-2.10.3.ebuild 703
-MD5 8772a413d333ed84f37599c75e749776 libwnck-2.8.1.ebuild 629
-MD5 824887a64903c2a34721236d3f14d225 libwnck-2.10.2.ebuild 708
 MD5 5c8fc7c865b134e91d23b93aa761ed65 libwnck-2.8.1-r1.ebuild 827
-MD5 b9f55d39e24142eaf255663e8ec2d705 libwnck-2.12.0.ebuild 743
-MD5 9c544386115ed788f4e39b4ff29722a3 ChangeLog 11365
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 9a1f23e9efdb8d2740e6205e104c8ded libwnck-2.10.0.ebuild 650
+MD5 bb5fe8797c92ac5e4c09d82fd98bc99f libwnck-2.12.1.ebuild 721
 MD5 5ad99f98086de45658268d8d707429b5 files/digest-libwnck-2.10.3 67
 MD5 e38978396ff7cef1114dc8f5d3937c99 files/digest-libwnck-2.8.1-r1 66
-MD5 e38978396ff7cef1114dc8f5d3937c99 files/digest-libwnck-2.8.1 66
-MD5 35e9b94b597bef67b2db2d215dfe183d files/digest-libwnck-2.12.0 67
-MD5 a62fe73b5ee667ec25eb03524d635099 files/digest-libwnck-2.10.2 67
-MD5 87f38f544c310a06d6c7d2e5879bd363 files/digest-libwnck-2.10.0 67
 MD5 18b803208062c76b65f948628222f371 files/libwnck-2.8-multimon-tasklist.patch 3045
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNgfgIKl8Uu19MoRAn3BAJ9nTktjGnRQQ78VhVMYea2uWCSXnACfeZCE
-KfqmWWrkUUN4sIPxOVQtBPc=
-=YmvL
------END PGP SIGNATURE-----
+MD5 87f38f544c310a06d6c7d2e5879bd363 files/digest-libwnck-2.10.0 67
+MD5 754635ae4f3928254a64b836327b9b92 files/digest-libwnck-2.12.1 67
