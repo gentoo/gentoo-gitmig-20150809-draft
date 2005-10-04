@@ -1,0 +1,12 @@
+--- kcontrol/info/opengl.cpp.bak	2005-05-23 07:13:35.000000000 -0500
++++ kcontrol/info/opengl.cpp	2005-08-27 10:45:08.000000000 -0500
+@@ -235,6 +235,9 @@
+       GL_COMPRESSED_TEXTURE_FORMATS
+ */
+ 
++  if (!glExtensions)
++	return;
++
+   struct token_name {
+       GLuint type;  // count and flags, !!! count must be <=2 for now
+       GLenum token;

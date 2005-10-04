@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.219 2005/10/03 14:36:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.220 2005/10/04 09:40:15 greg_g Exp $
+
+*kdebase-3.4.2-r2 (04 Oct 2005)
+
+  04 Oct 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdebase-3.4.2-kinfocenter-opengl-fix.patch,
+  +kdebase-3.4.2-r2.ebuild:
+  Add patch for hal-0.5 compatibility (#105553). Add patch to fix opengl
+  related crash (#103937).
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> kdebase-3.4.1-r1.ebuild:
   Mark 3.4.1-r1 stable on alpha

@@ -1,22 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b02d36e053d1ac7bd4348d61669b2f8d kcontrol-3.5_beta1.ebuild 1609
-MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
-MD5 36a20861bd3b7c1ed19fccef9f598848 ChangeLog 4058
-MD5 4a0b15f07ae8a1bc4c778165f7083a13 kcontrol-3.4.1-r1.ebuild 1551
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 4a0b15f07ae8a1bc4c778165f7083a13 kcontrol-3.4.1-r1.ebuild 1551
+MD5 f6ddcb89e8d636e9dad86a9ff397928e kcontrol-3.4.2.ebuild 1779
+MD5 903f84c8273a5690b317efef5f9d9cb4 ChangeLog 4273
+MD5 b02d36e053d1ac7bd4348d61669b2f8d kcontrol-3.5_beta1.ebuild 1609
 MD5 8c071d64261cb5641d4f140ab61debd2 kcontrol-3.4.1.ebuild 1326
-MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2 287
+MD5 ac9c4ad066ae48aaee618b7f297f1768 kcontrol-3.4.2-r1.ebuild 1916
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1 212
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kcontrol-3.5_beta1 69
-MD5 5da6ade21525a3e320c94c4b3351a7a3 files/kdebase-3.4.1-configure.patch 2936
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2-r1 287
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kcontrol-3.4.1-r1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVQNj5H05b2HAEkRAv1WAJ4m8ruDx0WGwYYkGZtZe7jOCZhGVACfeRTc
-Hny+EkeH9hKlAvkXXT8rxrU=
-=/BA4
------END PGP SIGNATURE-----
+MD5 65ca7243fb9d880e763019fdcf5b7264 files/kdebase-3.4.2-kinfocenter-opengl-fix.patch 346
+MD5 64e656c39553f20b12d38eca1f8120d6 files/configure.in.in-kdm-settings.diff 686
+MD5 5da6ade21525a3e320c94c4b3351a7a3 files/kdebase-3.4.1-configure.patch 2936
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kcontrol-3.4.2 287
