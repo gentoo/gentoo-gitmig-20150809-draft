@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gweled
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.7 2005/09/19 18:30:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.8 2005/10/04 20:07:44 mr_bones_ Exp $
+
+*gweled-0.7 (04 Oct 2005)
+
+  04 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +gweled-0.7.ebuild:
+  version bump
 
   19 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/gweled-0.6-gcc4.patch, gweled-0.6.ebuild:
