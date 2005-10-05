@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1d3ffe9b9a77fdf5499f16eec7ae39e liferea-0.9.4.ebuild 754
-MD5 9245e9b948b5835643bccc15d92520a8 liferea-0.9.7a.ebuild 1648
-MD5 915560d42461d2fe568ad7c514038693 liferea-0.9.6.ebuild 754
-MD5 c10756261b814d4100664099a531ec08 liferea-0.9.3.ebuild 746
-MD5 9d15342caa6fd5c98c66bf3e54575ec8 liferea-0.9.5.ebuild 754
-MD5 7504b68c8b045d20597bb5840699eb34 liferea-0.9.7b.ebuild 1647
-MD5 bdc4230a635b1bb7268cc81732fcb5f2 ChangeLog 6832
-MD5 17fcd57ee01a46b7951c709fb6763c52 metadata.xml 255
-MD5 e79d04e2dcb1066bf83edf55b9b1e9f7 files/digest-liferea-0.9.7a 67
-MD5 4d464b035de4131b12167c6ce4a1dffd files/digest-liferea-0.9.7b 67
+MD5 5362f08964bfbae493cce632371336db ChangeLog 6937
 MD5 89a8546ee1cbe401cbbd5c8441eecea4 files/digest-liferea-0.9.3 66
 MD5 321c3cad9efc8895e374795b3d816062 files/digest-liferea-0.9.4 66
 MD5 734099ebdef506d5bef9b2d24fa02f51 files/digest-liferea-0.9.5 66
 MD5 ca0f3d49b323b6401d4b75e56fb151fe files/digest-liferea-0.9.6 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQsrtomPajV0RnrERApn5AJ960W0jfqFuexcc3OkvIZ8WqV7YGACfUznF
-Mvxzxere4chxpJKu820F6Go=
-=InKL
------END PGP SIGNATURE-----
+MD5 e79d04e2dcb1066bf83edf55b9b1e9f7 files/digest-liferea-0.9.7a 67
+MD5 4d464b035de4131b12167c6ce4a1dffd files/digest-liferea-0.9.7b 67
+MD5 c10756261b814d4100664099a531ec08 liferea-0.9.3.ebuild 746
+MD5 a1d3ffe9b9a77fdf5499f16eec7ae39e liferea-0.9.4.ebuild 754
+MD5 9d15342caa6fd5c98c66bf3e54575ec8 liferea-0.9.5.ebuild 754
+MD5 8fa8604001b5a5eb40657ffcdb91239d liferea-0.9.6.ebuild 757
+MD5 9245e9b948b5835643bccc15d92520a8 liferea-0.9.7a.ebuild 1648
+MD5 7504b68c8b045d20597bb5840699eb34 liferea-0.9.7b.ebuild 1647
+MD5 17fcd57ee01a46b7951c709fb6763c52 metadata.xml 255
