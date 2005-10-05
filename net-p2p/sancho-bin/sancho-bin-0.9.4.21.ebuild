@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.21.ebuild,v 1.2 2005/09/20 16:34:37 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.21.ebuild,v 1.3 2005/10/05 23:00:29 blubb Exp $
 
 IUSE="gtk"
 
@@ -14,16 +14,19 @@ HOMEPAGE="http://sancho-gui.sourceforge.net/"
 SRC_URI="gtk? ( http://sancho-gui.sourceforge.net/dl/tmp94/${MY_P}-linux-gtk.tar.bz2 )
 	!gtk? ( http://sancho-gui.sourceforge.net/dl/tmp94/${MY_P}-linux-fox.tar.bz2 )"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="CPL-1.0 LGPL-2.1"
 
 DEPEND="virtual/libc
 	virtual/x11
 	gtk? ( >=x11-libs/gtk+-2
-		>=net-libs/linc-1.0.3 )"
+		>=net-libs/linc-1.0.3 
+		amd64? ( app-emulation/emul-linux-x86-gtklibs ) )"
 
 S="${WORKDIR}/${MY_P}-linux-${TOOLKIT}"
+
+ABI=x86
 
 src_compile() {
 	einfo "Nothing to compile."
