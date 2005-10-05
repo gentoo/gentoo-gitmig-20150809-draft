@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.90 2005/10/04 23:33:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.91 2005/10/05 00:34:45 vapier Exp $
+
+  05 Oct 2005; Mike Frysinger <vapier@gentoo.org> libsdl-1.2.6-r3.ebuild,
+  libsdl-1.2.7-r3.ebuild, libsdl-1.2.8-r1.ebuild, libsdl-1.2.9.ebuild,
+  libsdl-1.2.9-r1.ebuild:
+  Dont RDEPEND on audiofile if USE=noaudio #108091 by Brice Arnould.
 
   04 Oct 2005; Mike Frysinger <vapier@gentoo.org>
   +files/libsdl-1.2.9-PIC-yuv-mmx.patch, libsdl-1.2.9-r1.ebuild:

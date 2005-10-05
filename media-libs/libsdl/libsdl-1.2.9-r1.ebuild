@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.2 2005/10/04 23:33:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.3 2005/10/05 00:34:45 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -17,12 +17,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x8
 # bug reports to be marked INVALID.
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick noflagstrip"
 
-RDEPEND=">=media-libs/audiofile-0.1.9
+RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( >=media-sound/esound-0.2.19 )
 	arts? ( kde-base/arts )
-	nas? ( media-libs/nas
-		virtual/x11 )
+	nas? ( media-libs/nas virtual/x11 )
 	X? ( virtual/x11 )
 	directfb? ( >=dev-libs/DirectFB-0.9.19 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )

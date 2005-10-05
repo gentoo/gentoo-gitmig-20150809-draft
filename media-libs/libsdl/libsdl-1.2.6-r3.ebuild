@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.15 2005/02/25 21:02:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r3.ebuild,v 1.16 2005/10/05 00:34:45 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl noaudio novideo nojoystick"
 # if you disable audio/video/joystick and something breaks, you pick up the pieces
 
-RDEPEND=">=media-libs/audiofile-0.1.9
+RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( >=media-sound/esound-0.2.19 )
 	arts? ( kde-base/arts )

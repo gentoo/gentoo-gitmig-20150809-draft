@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.10 2005/02/25 21:02:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r3.ebuild,v 1.11 2005/10/05 00:34:45 vapier Exp $
 
 inherit toolchain-funcs fixheadtails eutils gnuconfig flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick"
 # if you disable audio/video/joystick and something breaks, you pick up the pieces
 
-RDEPEND=">=media-libs/audiofile-0.1.9
+RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	alsa? ( media-libs/alsa-lib )
 	esd? ( >=media-sound/esound-0.2.19 )
 	arts? ( kde-base/arts )
@@ -29,7 +29,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-S="${WORKDIR}/SDL-${PV}"
+S=${WORKDIR}/SDL-${PV}
 
 pkg_setup() {
 	if use noaudio || use novideo || use nojoystick ; then

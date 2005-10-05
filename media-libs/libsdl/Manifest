@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
-MD5 a7bcf0ea25253af8bba0031c22f14e5b libsdl-1.2.9.ebuild 4215
-MD5 7f079469132865bdd25780277639f098 libsdl-1.2.7-r3.ebuild 3960
-MD5 cbbab78f5125f834ffb0f83be4957736 libsdl-1.2.6-r3.ebuild 3013
-MD5 db2452f2f79d4148c9948fd21b118bce libsdl-1.2.9-r1.ebuild 4562
-MD5 4e4caa64c5b89522b2f0e284282eafe6 libsdl-1.2.8-r1.ebuild 5004
-MD5 f8a050f4f26850f854060b399dbb291c ChangeLog 14281
+MD5 741ea667dd2543b0155d32ae2d5a5126 libsdl-1.2.9.ebuild 4229
+MD5 3ce9b61a50a330133454637dccdbb9e9 libsdl-1.2.7-r3.ebuild 3968
+MD5 33a794f49d333129e866fc0f51ea6ddb libsdl-1.2.6-r3.ebuild 3023
+MD5 39999fa0e8ce011aa4911cbc46d07955 libsdl-1.2.9-r1.ebuild 4574
+MD5 70a9110d4bc653c86cf8fde1b9e59840 libsdl-1.2.8-r1.ebuild 5016
+MD5 67ef3b5c87b5a5c1bc27b5887d9b757c ChangeLog 14522
 MD5 4f1ce33c931d461bed06277f60341085 files/1.2.8-nobuggy-X.patch 568
 MD5 e0c6c6ffc15475282fc864b8f52f0abf files/1.2.8-linux26.patch 1268
 MD5 25b8b048d7e5d2a6edc59a66f34566e7 files/libsdl-1.2.9-PIC-load-mmx-masks-from-stack.patch 3901
@@ -45,7 +45,7 @@ MD5 206ddd08dd3e33819d03245d11af3014 files/1.2.7-gcc34.patch 8196
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQxGugIKl8Uu19MoRAonUAJ9qaRBOPmP5mik9DU5GNfuNM0Mg6ACeIMQP
-dUbNhOjZOlmpqsvlV6/aC9A=
-=QaKb
+iD8DBQFDQx/+gIKl8Uu19MoRAlTHAJ49iKrg223/XePT6fEel1mw/h/1mwCdEeeQ
+pMbwHQtViWXs9ogoEveUxGw=
+=L06K
 -----END PGP SIGNATURE-----
