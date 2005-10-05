@@ -1,20 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4071a2541100bf388bd92a561ebe0577 ChangeLog 1932
-MD5 2aa7f964e840bea93ea0ceb418be50ed mup-4.4.ebuild 2103
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 29305b73b9a0aeb40e32f659dc2547e8 mup-5.1.ebuild 2106
 MD5 948103f2005dce62a32f289b0981a282 mup-5.0.ebuild 2119
+MD5 2aa7f964e840bea93ea0ceb418be50ed mup-4.4.ebuild 2103
+MD5 3235bb9d5dd4d39647bc3c03e2d6be0a ChangeLog 2076
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 41c3b17508896d4f8d030ffa37446b2a mup-4.6.ebuild 2134
 MD5 234ec2d99e4c992ccc12fa76de885a0e files/5.0-beaming-bug.patch 928
-MD5 54c05300dd4879fbf61504bc145fc1ef files/digest-mup-4.6 120
+MD5 af5a1af06445e7d8e07f574d0c40c3c6 files/mup-5.1css.patch 7807
 MD5 d73a9c5effa0eb340ee9eb4b799e32b8 files/4.6-gcc.patch 272
 MD5 3cdff463ef32c2e7b16982e0db999cfa files/digest-mup-4.4 120
+MD5 54c05300dd4879fbf61504bc145fc1ef files/digest-mup-4.6 120
 MD5 631bd9db6b998acd073dbeae3e9cc0b8 files/digest-mup-5.0 120
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDCZuj5H05b2HAEkRAnscAJ9KLNvUY+VZLvgsdkTEbFrkpsIYlgCfdTzb
-avAkQ9G7VnxqUuLIQN6T61A=
-=ELg8
------END PGP SIGNATURE-----
+MD5 f4346f0c55847eeae7adeb14cce4f6c4 files/digest-mup-5.1 120
