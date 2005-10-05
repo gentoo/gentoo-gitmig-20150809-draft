@@ -1,7 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f355fae15ad39da1e7900532ea12873b ChangeLog 9521
 MD5 7b9b4d9f5e7b4fde48b4597c4ba8cf06 pbbuttonsd-0.6.6.ebuild 1140
-MD5 bd51d9aa7f1c2f34debf41dce4cf5e38 ChangeLog 9321
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
+MD5 ddd469d5e866022e8836d4e3ac995fb1 pbbuttonsd-0.7.2.ebuild 1831
 MD5 2430cccf9363cdd529dcef6d66112317 pbbuttonsd-0.7.1.ebuild 1764
 MD5 bfeca35f0f0f5c946cec186998f304e2 files/pbbuttonsd.rc6 472
-MD5 72caa2adac6c8260c57c0ae15cc259f3 files/digest-pbbuttonsd-0.6.6 68
+MD5 d0c2afca8a18bbfdc406106d85d30193 files/digest-pbbuttonsd-0.7.2 68
 MD5 0d5e37ab33c0a4177affbe953a76f8f3 files/digest-pbbuttonsd-0.7.1 68
+MD5 72caa2adac6c8260c57c0ae15cc259f3 files/digest-pbbuttonsd-0.6.6 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRBF9csIHjyDViGQRAjB+AKC9iUmGWdi69W2rQe7md3TMWT8zKwCcCX7Y
+y3QiGpSFW2Id3RhlWt9ZRpw=
+=EnFV
+-----END PGP SIGNATURE-----
