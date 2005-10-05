@@ -1,7 +1,19 @@
-MD5 95e60f7a3529779cf71d93009f73a293 ChangeLog 15012
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2644f43aa2b70a69568b5fe657d03f03 gnumeric-1.4.3-r3.ebuild 2597
 MD5 05cab453a958d1d24692202747791548 gnumeric-1.4.3-r2.ebuild 2572
+MD5 2360a2262452b3e05991a0d7823f3973 ChangeLog 15154
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r2 69
-MD5 3fab812a68d5849434ba8d7ee3ef2887 files/gnumeric-1.4.3-new_gsf_api.patch 3308
-MD5 00512bbcd353d056c02b62335dfd87d1 files/gnumeric-1.4.3-pcre_int_overflow.patch 3916
 MD5 403a9f34b1159b636dec6156951e023d files/gnumeric-1.4.3-makejobs.patch 1591
+MD5 3fab812a68d5849434ba8d7ee3ef2887 files/gnumeric-1.4.3-new_gsf_api.patch 3308
+MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r2 69
+MD5 2bff8e6c3d41ceae3d04783899915363 files/digest-gnumeric-1.4.3-r3 69
+MD5 00512bbcd353d056c02b62335dfd87d1 files/gnumeric-1.4.3-pcre_int_overflow.patch 3916
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRDIEomPajV0RnrERAk5iAJ43EOJtTVGTaSektKxAVqi/x10V8gCfT8YE
+zy1O5yUtXvLXIaBD9gZMRVE=
+=syTO
+-----END PGP SIGNATURE-----
