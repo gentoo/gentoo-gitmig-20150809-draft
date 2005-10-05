@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b9df0b3dd75c05b7440daac11468ab83 xvid-1.1.0_beta2.ebuild 1203
 MD5 d332fc92996c01572c8f514106f41c6d xvid-1.0.0_rc4.ebuild 1074
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
@@ -24,3 +27,10 @@ MD5 666fc1f16bf35b48d500b495509b07b2 files/xvid-1.0-ia64.patch 264
 MD5 8c100445a64d960693db8424931ff0eb files/1.0.1-DESTDIR.patch 1450
 MD5 3943af38157fef55f9da6987560d2e77 files/digest-xvid-0.9.2-r1 67
 MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2-r1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQyqUgIKl8Uu19MoRAqsrAJsF44/HZRjDA2SxpqWqGMkIhIn3iACfcAuQ
+PVG3uZ/+Ulpg7pHQuuZNE9w=
+=iBZk
+-----END PGP SIGNATURE-----

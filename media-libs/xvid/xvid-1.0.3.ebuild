@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.3.ebuild,v 1.8 2005/09/18 00:31:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.3.ebuild,v 1.9 2005/10/05 01:19:55 vapier Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="doc"
 DEPEND="x86? ( >=dev-lang/nasm-0.98.36 )"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}/build/generic"
+S=${WORKDIR}/${MY_P}/build/generic
 
 src_unpack() {
 	unpack ${A}
@@ -30,10 +30,10 @@ src_unpack() {
 src_install() {
 	make install DESTDIR="${D}" || die
 
-	cd ${S}/../../
+	cd "${S}"/../../
 	dodoc AUTHORS ChangeLog README TODO doc/*
 
-	local mylib="$(basename $(ls ${D}/usr/$(get_libdir)/libxvidcore.so*))"
+	local mylib=$(basename $(ls "${D}"/usr/$(get_libdir)/libxvidcore.so*))
 	dosym ${mylib} /usr/$(get_libdir)/libxvidcore.so
 	dosym ${mylib} /usr/$(get_libdir)/${mylib/.0}
 
