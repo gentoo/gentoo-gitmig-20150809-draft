@@ -1,36 +1,26 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 85b5f9326201af5c75913ae646b468d6 ChangeLog 5921
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 8e01e1865534a13a85e07a39895a556e xvid-0.9.1.ebuild 1036
-MD5 c951ce0d729ba204c7657bd7008d1ee6 xvid-0.9.2-r1.ebuild 1146
-MD5 d332fc92996c01572c8f514106f41c6d xvid-1.0.0_rc4.ebuild 1074
-MD5 12796f897e8656ae363eee47d96a4e59 xvid-1.0.1.ebuild 1291
-MD5 684af8a8c5e487d5e197b2b0f7793cec xvid-1.0.2.ebuild 1212
-MD5 7795b1c3b13b10f88a435742379a39a0 xvid-1.0.3.ebuild 1158
-MD5 2b55e892423eb793e8a8e4d0a52c83fb xvid-1.1.0_beta2-r1.ebuild 1701
 MD5 b9df0b3dd75c05b7440daac11468ab83 xvid-1.1.0_beta2.ebuild 1203
-MD5 8c100445a64d960693db8424931ff0eb files/1.0.0_rc4-DESTDIR.patch 1450
-MD5 8c100445a64d960693db8424931ff0eb files/1.0.1-DESTDIR.patch 1450
-MD5 8c100445a64d960693db8424931ff0eb files/1.0.2-DESTDIR.patch 1450
-MD5 8c100445a64d960693db8424931ff0eb files/1.0.3-DESTDIR.patch 1450
-MD5 e83498fda540ee61cdb0ce3fe79585c8 files/digest-xvid-0.9.1 67
-MD5 3943af38157fef55f9da6987560d2e77 files/digest-xvid-0.9.2-r1 67
-MD5 181053d1f28fcfb20d9a491c674d5064 files/digest-xvid-1.0.0_rc4 71
-MD5 ea0eb745946d70fea0c5dfd32d166ddb files/digest-xvid-1.0.1 67
-MD5 3ed49831081a6eb29ccda7ec2956c592 files/digest-xvid-1.0.2 67
-MD5 a508fb244e68f01cbf06e590abbee04e files/digest-xvid-1.0.3 67
-MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2 73
-MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2-r1 73
-MD5 666fc1f16bf35b48d500b495509b07b2 files/xvid-1.0-ia64.patch 264
-MD5 b2f1f286ed22acfa893dae382f47fee2 files/xvid-1.0.1-64bit-clean.patch 1723
+MD5 d332fc92996c01572c8f514106f41c6d xvid-1.0.0_rc4.ebuild 1074
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 228242414e0235d94a7845883b4cb38e xvid-1.0.3.ebuild 1158
+MD5 2b55e892423eb793e8a8e4d0a52c83fb xvid-1.1.0_beta2-r1.ebuild 1701
+MD5 684af8a8c5e487d5e197b2b0f7793cec xvid-1.0.2.ebuild 1212
+MD5 12796f897e8656ae363eee47d96a4e59 xvid-1.0.1.ebuild 1291
+MD5 c951ce0d729ba204c7657bd7008d1ee6 xvid-0.9.2-r1.ebuild 1146
+MD5 8e01e1865534a13a85e07a39895a556e xvid-0.9.1.ebuild 1036
+MD5 85b5f9326201af5c75913ae646b468d6 ChangeLog 5921
 MD5 80a43f67032aa35894fcb976e575c252 files/xvid-1.1.0_beta2-altivec.patch 1070
+MD5 ea0eb745946d70fea0c5dfd32d166ddb files/digest-xvid-1.0.1 67
 MD5 ecea104174b77d80f9bbf94f94a78aec files/xvid-1.1.0_beta2-amd64-gcc4.patch 2135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLLV0Kf2g/qXtneoRAhS3AJoCW/TsZkDB6tF3Zuxh8jCpQchUygCfQxoh
-PeFgceiKkj/qRxLCKDjQL78=
-=ChB4
------END PGP SIGNATURE-----
+MD5 8c100445a64d960693db8424931ff0eb files/1.0.2-DESTDIR.patch 1450
+MD5 3ed49831081a6eb29ccda7ec2956c592 files/digest-xvid-1.0.2 67
+MD5 e83498fda540ee61cdb0ce3fe79585c8 files/digest-xvid-0.9.1 67
+MD5 181053d1f28fcfb20d9a491c674d5064 files/digest-xvid-1.0.0_rc4 71
+MD5 8c100445a64d960693db8424931ff0eb files/1.0.3-DESTDIR.patch 1450
+MD5 a508fb244e68f01cbf06e590abbee04e files/digest-xvid-1.0.3 67
+MD5 b2f1f286ed22acfa893dae382f47fee2 files/xvid-1.0.1-64bit-clean.patch 1723
+MD5 8c100445a64d960693db8424931ff0eb files/1.0.0_rc4-DESTDIR.patch 1450
+MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2 73
+MD5 666fc1f16bf35b48d500b495509b07b2 files/xvid-1.0-ia64.patch 264
+MD5 8c100445a64d960693db8424931ff0eb files/1.0.1-DESTDIR.patch 1450
+MD5 3943af38157fef55f9da6987560d2e77 files/digest-xvid-0.9.2-r1 67
+MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2-r1 73
