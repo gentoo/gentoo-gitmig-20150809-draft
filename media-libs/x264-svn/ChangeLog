@@ -1,6 +1,6 @@
-# ChangeLog for media-libs/x264
+# ChangeLog for media-libs/x264-svn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.2 2005/10/05 11:38:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.3 2005/10/05 14:58:22 swegener Exp $
 
   05 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fixed wrong herd in metadata (it's video, not media-video).

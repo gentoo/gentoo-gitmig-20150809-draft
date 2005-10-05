@@ -1,4 +1,14 @@
-MD5 799d29c836d38a251e2e566b21ba8f90 ChangeLog 469
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 78f88e6cb6daba2d11411b0ba8058fe0 ChangeLog 472
 MD5 1a1c00c8652100411a07386facfc8240 files/digest-x264-svn-20051004 70
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 05e6daf3c7c59f8fd397cc9c22ea461e x264-svn-20051004.ebuild 779
+MD5 db73077d681acb05febeba69cd01f17d x264-svn-20051004.ebuild 779
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQ+onI1lqEGTUzyQRAnL4AJ0c0vxPiFNhZianPHNRTmnacgA7/QCfWFJs
+t9cuKcqho/MJiacJHK2emik=
+=SGwh
+-----END PGP SIGNATURE-----

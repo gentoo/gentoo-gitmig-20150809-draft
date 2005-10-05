@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20051004.ebuild,v 1.1 2005/10/05 09:36:14 zypher Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20051004.ebuild,v 1.2 2005/10/05 14:58:22 swegener Exp $
 
 IUSE="X debug threads"
 
@@ -22,14 +20,14 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	./configure \
-	`use_enable debug` \
-	`use_enable threads pthread` \
-	`use_enable X visualize` \
-	|| die "configure failed"
-	make || die "make failed"
+		$(use_enable debug) \
+		$(use_enable threads pthread) \
+		$(use_enable X visualize) \
+		|| die "configure failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS TODO COPYING
 }
