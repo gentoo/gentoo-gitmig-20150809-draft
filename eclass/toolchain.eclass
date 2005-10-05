@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.199 2005/10/05 06:23:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.200 2005/10/05 08:55:01 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -745,7 +745,7 @@ add_profile_eselect_conf() {
 	echo "	ldpath=${LDPATH}" >> ${compiler_config_file}
 
 	if [[ -n ${gcc_specs_file} ]] ; then
-		echo "	spec=${gcc_specs_file}" >> ${compiler_config_file}
+		echo "	specs=${gcc_specs_file}" >> ${compiler_config_file}
 	fi
 
 	var="CFLAGS_${abi}"
