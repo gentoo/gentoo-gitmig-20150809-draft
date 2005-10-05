@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15-r1.ebuild,v 1.16 2005/01/01 16:02:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15-r1.ebuild,v 1.17 2005/10/05 20:27:31 blubb Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils multilib
 
 S=${WORKDIR}/Aiksaurus-${PV}
 DESCRIPTION="A thesaurus lib, tool and database"
@@ -25,10 +25,10 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fno-exceptions
-	./configure --prefix=/usr || die
+	./configure --prefix=/usr --libdir=/usr/$(get_libdir) || die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
 }
