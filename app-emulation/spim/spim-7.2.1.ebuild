@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1.ebuild,v 1.1 2005/10/05 06:02:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1.ebuild,v 1.2 2005/10/05 20:17:24 eradicator Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="MIPS Simulator"
 HOMEPAGE="http://www.cs.wisc.edu/~larus/spim.html"
@@ -10,12 +10,12 @@ SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
 IUSE="X"
 
 RDEPEND="X? ( virtual/x11 )"
-
 DEPEND="${RDEPEND}
+	sys-devel/bison
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -47,14 +47,14 @@ src_compile() {
 		-e "s:tail -2:tail -n2:" \
 		Makefile
 
-	emake || die
+	emake CC="$(tc-getCC)" || die
 
 	if use X ; then
 		cd ${S}/xspim
 
 		./Configure || die "Configure Failed!"
 
-		xmkmf
+		xmkmf || die
 
 		sed -i \
 			-e 's:@make:@$(MAKE):' \
@@ -63,7 +63,7 @@ src_compile() {
 			-e "s:\(EXCEPTION_PATH = \).*$:\1/var/lib/spim/exceptions.s:" \
 			Makefile
 
-		emake xspim
+		emake CC="$(tc-getCC)" -j1 xspim || die
 	fi
 }
 
