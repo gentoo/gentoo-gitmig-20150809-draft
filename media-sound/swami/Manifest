@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e74fe48aed80b51274062e32e10b2f9 swami-0.9.2.ebuild 748
-MD5 29a172e1b1e050e4fd98c15df5567b5a ChangeLog 369
+MD5 1692b4420c10ce1257ccfbdcdd0ca578 swami-0.9.2.ebuild 833
+MD5 744e2eb3e436ebe5e102b05bda8de131 ChangeLog 489
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 9aed3352256edff71cfdd997f50d2ebe files/digest-swami-0.9.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC3Al5vpz1081QvMkRArCAAJwPv8G//XsJyEMLd8v5+hJnwVt1nwCeLiwS
-pYsZFQioMPwGEjoWEVposNM=
-=h8aR
------END PGP SIGNATURE-----
