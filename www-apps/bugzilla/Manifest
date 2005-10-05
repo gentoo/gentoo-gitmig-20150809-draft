@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ce070168c2246bf32140185afcfc666 bugzilla-2.18.4.ebuild 1816
 MD5 78e27654d12a7a46a21fb069b1bd6de7 bugzilla-2.20.ebuild 1845
-MD5 246d31921cf90d0d24d5bad6f35e9a9b bugzilla-2.18.3.ebuild 1781
-MD5 b0177d04d838fb166bab7f17135ef7c7 ChangeLog 9398
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 246d31921cf90d0d24d5bad6f35e9a9b bugzilla-2.18.3.ebuild 1781
+MD5 41596843044f72d7acea6386b4e59e41 bugzilla-2.18.4.ebuild 1819
+MD5 22620648cc725d7a421007e0006c20f1 ChangeLog 9527
+MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
 MD5 24f132ccd4b11bb49c26326fd0584f4c files/digest-bugzilla-2.20 66
 MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
-MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
-MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18/bugzilla.cron.tab 54
-MD5 06e21bd2fe59b4517ed05fb46c1bff9e files/2.18/postinstall-en.txt 148
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
-MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
-MD5 c1913bf27d5ee8cd7f4f88de0b88312a files/2.18/reconfig 348
-MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
-MD5 7b5e1b8ee2d4e49224f15287c5070b57 files/2.20/postinstall-en.txt 278
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
 MD5 42151252d49e42c9839f80c80dff9138 files/2.20/apache.htaccess 94
+MD5 7b5e1b8ee2d4e49224f15287c5070b57 files/2.20/postinstall-en.txt 278
 MD5 899c42853fbf73268c49d3602eae77d2 files/2.20/reconfig 349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDQbymEzitwsaoONoRAmBaAKChtsbqD6VovBwRs0HHoD2zmi4JQQCfd3ys
-lWTXEnz9OVu5KFK5PCJfwM4=
-=I307
------END PGP SIGNATURE-----
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
+MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
+MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
+MD5 06e21bd2fe59b4517ed05fb46c1bff9e files/2.18/postinstall-en.txt 148
+MD5 c1913bf27d5ee8cd7f4f88de0b88312a files/2.18/reconfig 348
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
+MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18/bugzilla.cron.tab 54
