@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.0-r2.ebuild,v 1.1 2005/09/02 15:58:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.2.ebuild,v 1.1 2005/10/05 01:11:47 leonardop Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="doc glitz png static X"
+IUSE="doc glitz png X"
 
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2.1
@@ -38,24 +38,19 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	# Fix segmentation fault when compiling with -fomit-frame-pointer.
-	# See bug #104265.
-	epatch ${FILESDIR}/${P}-omit_frame_pointer_fix.patch
+	# Call PKG_PROG_PKG_CONFIG to fix other standard pkg-config calls
+	epatch ${FILESDIR}/${P}-pkg_macro.patch
 
-	# Upstream patch to correctly handle displays which don't match the local
-	# endianness. https://bugs.freedesktop.org/show_bug.cgi?id=4321
-	epatch ${FILESDIR}/${P}-display_endianness.patch
-
-	# Fix some tests that were failing on amd64.
-	# https://bugs.freedesktop.org/show_bug.cgi?id=4245
-	epatch ${FILESDIR}/${P}-tests.patch
+	cp aclocal.m4 old_macros.m4
+	aclocal -I . || die "aclocal failed"
+	autoconf || die "autoconf failed"
 }
 
+
 src_compile() {
-	local myconf="$(use_enable X xlib) \
-		$(use_with X x)           \
+	local myconf="$(use_with X x) \
+		$(use_enable X xlib)      \
 		$(use_enable png)         \
-		$(use_enable static)      \
 		$(use_enable doc gtk-doc) \
 		$(use_enable glitz)"
 

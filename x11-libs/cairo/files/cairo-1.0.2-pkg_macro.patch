@@ -1,0 +1,14 @@
+diff -NurdB cairo-1.0.2/configure.in cairo-1.0.2-patched/configure.in
+--- cairo-1.0.2/configure.in	2005-10-04 18:56:21.000000000 -0500
++++ cairo-1.0.2-patched/configure.in	2005-10-04 19:28:12.000000000 -0500
+@@ -83,6 +83,10 @@
+ 
+ dnl ===========================================================================
+ 
++PKG_PROG_PKG_CONFIG
++
++dnl ===========================================================================
++
+ AC_ARG_ENABLE(xlib,
+   [  --disable-xlib          Disable cairo's Xlib backend],
+   [use_xlib=$enableval], [use_xlib=yes])
