@@ -1,0 +1,40 @@
+Gentoo related gitweb information
+=================================
+
+Abstract
+--------
+
+gitweb comes with almost no documentation so this document should cover
+everything needed to set a gitweb instalation in Gentoo. However,
+setting gitweb is really easy. This document assumes you have your
+public repositories in ``/var/git/``.
+
+gitweb.cgi configuration
+------------------------
+
+In the directory where gitweb is installed you have to create at least
+one file named ``index/index.aux``. This file defines the repositories
+gitweb should show. The example below defines a project located in
+``/var/git/test-project.git`` owned by ``Some Project Developer``.
+
+  test-project.git Some+Project+Developer
+
+( Note the use of the plus sign (``+``) )
+
+Also you may want to create the file ``index/text.html``. This file will
+be included in the header of the project listing page in gitweb.
+
+Webserver configuration
+-----------------------
+
+If you use apache you may want to add the following to a ``.htaccess``
+file in the directory where gitweb is installed.
+
+  DirectoryIndex gitweb.cgi
+
+In lighttpd you may want to add ``gitweb.cgi`` to your indexfiles in
+your ``lighttpd.conf`` as follows:
+
+server.indexfiles += ("gitweb.cgi")
+
+.. vim: set tw=72 sw=4 et ft=glep : ..

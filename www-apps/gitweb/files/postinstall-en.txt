@@ -1,0 +1,2 @@
+Before using gitweb please consider reading
+the included Gentoo specific README.gentoo file.
