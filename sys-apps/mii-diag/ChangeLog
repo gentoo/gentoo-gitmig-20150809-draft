@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mii-diag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.10 2005/06/12 20:34:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.11 2005/10/05 14:04:55 gustavoz Exp $
+
+  05 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> mii-diag-2.09.ebuild:
+  Stable on sparc
 
 *mii-diag-2.11 (12 Jun 2005)
 

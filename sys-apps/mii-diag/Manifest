@@ -1,17 +1,27 @@
-MD5 de0cc09c2d67190001a4733136419c68 ChangeLog 1195
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 28962e2fc95a38c3f0f97433969ea57a mii-diag-2.09.ebuild 1209
+MD5 a216541da13a740c4bbee766fa36c5bd ChangeLog 1292
 MD5 ba5fc28572e78ee0093c9f3c58feeb6d mii-diag-2.07.ebuild 1135
-MD5 942f18e13948e3128bee4ba6827e1862 mii-diag-2.09.ebuild 1208
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 2c39bcdd3229e9d01e64021a46e23bd3 mii-diag-2.11.ebuild 1241
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.07 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.09 0
-MD5 0d54b1cf88229649250ec60887082af2 files/libmii.c-2.04 18026
-MD5 9609f9720d656e217df601ee3cb4771e files/libmii.c-2.10 21508
-MD5 0d616641e571129e984ee0925e898ddd files/mii-diag.c-2.07 17835
-MD5 c830d0a359111de4b2a49a73bb909f55 files/mii-diag.c-2.07-gcc33.patch 3257
+MD5 f7212561b55b42d8c453de375c1e622e files/mii-diag.8-2.11 5033
 MD5 8ccb64a469e4983fc52f168d15bf5ab9 files/mii-diag.c-2.09 20169
-MD5 ccd8d527a04534bdea2e0948e26e5a9e files/mii-diag.c-2.09-gcc33.patch 5037
+MD5 0d54b1cf88229649250ec60887082af2 files/libmii.c-2.04 18026
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.11 0
 MD5 a945e8d1734a3cbcf07890a874083937 files/libmii.c-2.11 21592
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.07 0
+MD5 9609f9720d656e217df601ee3cb4771e files/libmii.c-2.10 21508
+MD5 ccd8d527a04534bdea2e0948e26e5a9e files/mii-diag.c-2.09-gcc33.patch 5037
+MD5 c830d0a359111de4b2a49a73bb909f55 files/mii-diag.c-2.07-gcc33.patch 3257
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mii-diag-2.09 0
+MD5 0d616641e571129e984ee0925e898ddd files/mii-diag.c-2.07 17835
 MD5 64a9a08dd016d02b6af3deef3277ad98 files/mii-diag.c-2.11 20252
-MD5 f7212561b55b42d8c453de375c1e622e files/mii-diag.8-2.11 5033
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDQ92oKRy60XGEcJIRAvRWAJ4jDKLM4DIPIB2kS8rydyI1IBZ2hQCgg4Zx
+5+ip0tszU+S3dFSy0ITWKyg=
+=uLce
+-----END PGP SIGNATURE-----
