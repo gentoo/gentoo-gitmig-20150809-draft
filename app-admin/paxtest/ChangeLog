@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.22 2005/09/09 13:47:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.23 2005/10/05 07:48:52 blubb Exp $
+
+  05 Oct 2005; Simon Stelling <blubb@gentoo.org> paxtest-0.9.6.ebuild:
+  make it adhere multilib-strict; bug 107805
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> paxtest-0.9.6.ebuild:
   Mark 0.9.6 stable on alpha

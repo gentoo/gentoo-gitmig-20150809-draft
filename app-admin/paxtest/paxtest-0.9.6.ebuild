@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.6.ebuild,v 1.10 2005/09/09 13:47:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.6.ebuild,v 1.11 2005/10/05 07:48:52 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="PaX regression test suite"
 HOMEPAGE="http://www.adamantix.org/paxtest/"
@@ -24,11 +24,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake DESTDIR=${D} BINDIR=${D}/usr/bin RUNDIR=/usr/lib/paxtest || die
+	emake DESTDIR=${D} BINDIR=${D}/usr/bin RUNDIR=/usr/$(get_libdir)/paxtest || die
 }
 
 src_install() {
-	make DESTDIR="${D}" BINDIR=/usr/bin RUNDIR=/usr/lib/paxtest install || die
+	make DESTDIR="${D}" BINDIR=/usr/bin RUNDIR=/usr/$(get_libdir)/paxtest install || die
 	for doc in Changelog README ;do
 		[[ -f ${doc} ]] && dodoc ${doc}
 	done
