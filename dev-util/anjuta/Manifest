@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 577260a4be9d2ad148f8c8307bad354e ChangeLog 7067
 MD5 21ba3f1fe1fd406d17f9915bacef3612 anjuta-1.2.2-r1.ebuild 1475
 MD5 41ba5e22018256879cd26035cb94889e anjuta-1.2.2.ebuild 1423
-MD5 109fa7aefd167b3d4b4dc9b179caaf77 metadata.xml 219
-MD5 82a6b83bde5a7d0f7ae1645feef7e355 anjuta-1.2.4.ebuild 1761
+MD5 638beaf8456ca76eec2d55e92ca269d4 anjuta-1.2.4.ebuild 1763
 MD5 8639474644eff77f61bc4e3d1aab336d files/anjuta-1.2.2-64bit.patch 2977
 MD5 59468c68592ef02f4549bf1347508779 files/digest-anjuta-1.2.2 65
 MD5 59468c68592ef02f4549bf1347508779 files/digest-anjuta-1.2.2-r1 65
-MD5 14e73ac6e0c7c2dd18f51c92bbea0f0d files/xim_patch.patch 5241
 MD5 50b756284d7bb40f12f76cd64c24cab2 files/digest-anjuta-1.2.4 65
+MD5 14e73ac6e0c7c2dd18f51c92bbea0f0d files/xim_patch.patch 5241
+MD5 109fa7aefd167b3d4b4dc9b179caaf77 metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRFqUI1lqEGTUzyQRAqguAKDSjXnTXBEOgMrBZEUMbAkKYTlNcACfRpQQ
+qQ8Rv0ywe7aIbROk3E1G2V4=
+=FbB/
+-----END PGP SIGNATURE-----

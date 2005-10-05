@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4.ebuild,v 1.4 2005/10/05 21:43:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.4.ebuild,v 1.5 2005/10/05 22:58:14 swegener Exp $
 
 inherit eutils gnome2 multilib
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	sed -i -e "s:packageplugindir=lib:packageplugindir=$(get_libdir):" \
 		configure.in
-	autoreconf	
+	autoreconf
 }
 
 pkg_postinst() {
