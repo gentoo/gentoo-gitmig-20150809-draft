@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.8.ebuild,v 1.1 2005/10/03 21:49:43 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.8a.ebuild,v 1.1 2005/10/05 15:05:04 ferdy Exp $
 
 inherit python
 
@@ -24,7 +24,6 @@ RDEPEND="${DEPEND}
 		>=dev-lang/python-2.3
 		tcltk? ( dev-lang/tk )
 		curl? ( net-misc/curl )
-		>=dev-util/cvsps-2.1
 		dev-perl/String-ShellQuote
 		gitsendemail? ( dev-perl/Mail-Sendmail )"
 
@@ -43,9 +42,9 @@ src_compile() {
 	python_version()
 	[[ $PYVER < 2.4 ]] && export WITH_OWN_SUBPROCESS_PY=yes
 
-	if use mozsha1; then
+	if use mozsha1 ; then
 		export MOZILLA_SHA1=yes
-	elif use ppcsha1; then
+	elif use ppcsha1 ; then
 		export PPC_SHA1=yes
 	fi
 
@@ -59,16 +58,18 @@ src_compile() {
 
 	emake prefix=/usr || die "make failed"
 
-	if use doc; then
-		cd ${S}/Documentation
-		emake || die "make documentation failed"
+	if use doc ; then
+		sed -i \
+			-e "s:^\(WEBDOC_DEST = \).*$:\1${D}/usr/share/doc/${PF}/html/:g" \
+			${S}/Documentation/Makefile || die "sed failed (Documentation)"
+		emake -C Documentation/ || die "make documentation failed"
 	fi
 }
 
 src_install() {
 	make DESTDIR=${D} prefix=/usr install || die "make install failed"
 
-	if use gitsendemail; then
+	if use gitsendemail ; then
 		exeinto /usr/bin
 		doexe git-send-email.perl
 	fi
@@ -76,16 +77,28 @@ src_install() {
 	use tcltk || rm ${D}/usr/bin/gitk
 
 	dodoc README COPYING
-	use doc && doman Documentation/*.1 Documentation/*.7
+	if use doc ; then
+		doman Documentation/*.1 Documentation/*.7
+		make install-webdoc -C Documentation/
+	fi
+
+	newinitd "${FILESDIR}/git-daemon.initd" git-daemon
+	newconfd "${FILESDIR}/git-daemon.confd" git-daemon
 }
 
 pkg_postinst() {
+	echo
+	ewarn "Some commands will be renamed before the final 1.0. Use the git"
+	ewarn "wrapper in your scripts to avoid compatibility problems. Check the"
+	ewarn "changes table at:"
+	echo
+	echo "http://dev.gentoo.org/~r3pek/git-new-command-list.txt"
+	echo
 	einfo
-	einfo "This version still have the links between the old command names and"
-	einfo "the new command names. Anyway, if you haven't already see the new"
-	einfo "commands, take a look at:"
-	einfo "http://dev.gentoo.org/~r3pek/git-new-command-list.txt"
+	einfo "If you want to import arch repositories into git, consider using the"
+	einfo "git-archimport command. You should install dev-util/tla before."
 	einfo
-	einfo "This will be removed in any version before the final 1.0"
+	einfo "If you want to import cvs repositories into git, consider using the"
+	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1"
 	einfo
 }

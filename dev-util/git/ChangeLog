@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.28 2005/10/03 21:49:43 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.29 2005/10/05 15:05:04 ferdy Exp $
+
+*git-0.99.8a (05 Oct 2005)
+
+  05 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/git-daemon.confd, +files/git-daemon.initd, metadata.xml,
+  -git-0.99.8.ebuild, +git-0.99.8a.ebuild:
+  Added myself to metadata. Version bump, added init script and its conf.d
+  file. Fixed USE=doc. Removed not needed deps and rephrased pkg_postinst.
+  Removed old version
 
 *git-0.99.8 (03 Oct 2005)
 
