@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/quixml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.1 2005/10/05 18:59:10 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.2 2005/10/05 20:42:18 hansmi Exp $
+
+  05 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> quixml-0.2.1.ebuild:
+  Added to ~ppc, ~sparc.
 
 *quixml-0.2.1 (05 Oct 2005)
 
