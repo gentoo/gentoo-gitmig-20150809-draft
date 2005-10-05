@@ -1,4 +1,6 @@
-MD5 175fe0796374bb46984f36538c85bcd8 ChangeLog 492
 MD5 5b35068834ee173914390140b9372f30 memo-1.9.4.ebuild 467
 MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
+MD5 9f232bd0c2cb8388cfe184b9b67a2c2a ChangeLog 626
+MD5 7e13b9ecaaef03a6180ffed825e579d8 memo-1.9.5.ebuild 550
 MD5 c7e9f21f1da001a40a22e47bc0b93c67 files/digest-memo-1.9.4 58
+MD5 cb616bca06777d57fa3506621f85b2ef files/digest-memo-1.9.5 58
