@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>r3pek@gentoo.org</email>
+	<email>r3pek@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>ferdy@gentoo.org</email>
+	<name>Fernando J. Pereda</name>
 </maintainer>
 </pkgmetadata>

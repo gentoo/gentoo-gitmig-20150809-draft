@@ -1,9 +1,22 @@
-MD5 0575403dee2e2132b05b5961a4caa9d1 ChangeLog 2719
-MD5 fab79856a5a34e10c8af43c3cfa96d71 cogito-0.12.1.ebuild 1127
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ff2734a27c2a1c99487e50a7e50a67c cogito-0.13.ebuild 1011
-MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
+MD5 fab79856a5a34e10c8af43c3cfa96d71 cogito-0.12.1.ebuild 1127
+MD5 8809f35d3e17ac0b207ac1aba24996ac cogito-0.15.ebuild 1285
 MD5 d5e146e502df9c4b91d119af02b4f288 cogito-0.14.1.ebuild 1019
+MD5 9d17ed956f321444dfa991b1f7bce518 ChangeLog 2956
+MD5 263b796501be2aea2d5fb2ebc7609cb5 metadata.xml 313
 MD5 00437278281ff60bd2fde483168d1e8d files/digest-cogito-0.12.1 66
-MD5 156e507123896b4762100032c2482cc9 files/digest-cogito-0.13 63
 MD5 26b9f9a644232d478c66824d0add749c files/digest-cogito-0.14.1 65
 MD5 61cc18c197e159e18df086dcd8b65380 files/cogito-0.12.1-doc.patch 326
+MD5 156e507123896b4762100032c2482cc9 files/digest-cogito-0.13 63
+MD5 71b09d82f4ac804aad305a3a76b4c813 files/digest-cogito-0.15 63
+MD5 676963ca4370082111f10f59fb6f3fae files/cogito-0.15-doc.patch 1175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQ/YMViELBEf1JB0RAulbAJ48rtk9QFK9NHsqdUKHlpvLupl0vACcCykb
+eGivyaLp0nlp1WSixbe3XC4=
+=eAEB
+-----END PGP SIGNATURE-----

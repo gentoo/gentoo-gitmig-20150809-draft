@@ -1,0 +1,36 @@
+diff -ur cogito-0.15.old/cg-commit-id cogito-0.15/cg-commit-id
+--- cogito-0.15.old/cg-commit-id	2005-09-19 02:46:25.000000000 +0200
++++ cogito-0.15/cg-commit-id	2005-10-05 17:22:26.000000000 +0200
+@@ -5,6 +5,8 @@
+ #
+ # Takes the appropriate ID, defaults to HEAD.
+ 
++USAGE="cg-commit-id [id]"
++
+ id="$1"
+ normid=$(. ${COGITO_LIB}cg-Xnormid "$id") || exit 1
+ type=${normid#* }
+diff -ur cogito-0.15.old/cg-parent-id cogito-0.15/cg-parent-id
+--- cogito-0.15.old/cg-parent-id	2005-09-19 02:46:25.000000000 +0200
++++ cogito-0.15/cg-parent-id	2005-10-05 17:24:55.000000000 +0200
+@@ -7,5 +7,7 @@
+ #
+ # NOTE: Will return multiple SHA1s if ID is a commit with multiple parents.
+ 
++USAGE="cg-parent-id [id]"
++
+ normid=$(. ${COGITO_LIB}cg-Xnormid "$1"^)
+ echo ${normid%% *}
+diff -ur cogito-0.15.old/cg-tree-id cogito-0.15/cg-tree-id
+--- cogito-0.15.old/cg-tree-id	2005-09-19 02:46:25.000000000 +0200
++++ cogito-0.15/cg-tree-id	2005-10-05 17:25:59.000000000 +0200
+@@ -5,6 +5,8 @@
+ #
+ # Takes ID of the appropriate commit, defaults to HEAD.
+ 
++USAGE="cg-tree-id [id]"
++
+ id="$1"
+ normid=$(. ${COGITO_LIB}cg-Xnormid "$id") || exit 1
+ type=${normid#* }
+Only in cogito-0.15.old/: cogito.spec
