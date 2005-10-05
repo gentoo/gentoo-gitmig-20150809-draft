@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.97 2005/09/17 19:38:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.98 2005/10/05 08:06:32 zypher Exp $
+
+*mjpegtools-1.8.0 (19 Sep 2005)
+
+  05 Oct 2005; Marc Hildebrand <zypher@gentoo.org>
+  +mjpegtools-1.8.0.ebuild:
+  Version bump, closes bug #107824. Thanks to Paul Dunwoody for the ebuild.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   mjpegtools-1.6.2-r4.ebuild:
