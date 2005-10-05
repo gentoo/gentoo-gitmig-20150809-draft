@@ -5,10 +5,10 @@ MD5 f870dc6d113a8688fe7163243a2a237d gmime-2.1.9-r1.ebuild 1250
 MD5 c770ce66857e851ed46b59d432987b8e gmime-2.1.9-r3.ebuild 1509
 MD5 5e193e601763e4022d2377be3aefc15f gmime-2.1.15-r1.ebuild 1964
 MD5 f5ec7c3a37845599767a1327305ab979 gmime-2.1.9-r2.ebuild 1266
-MD5 3411881558bd2f4cab4970dd29b3e71b ChangeLog 6096
+MD5 c5172f3cbb0a922f000e6a506666c65e ChangeLog 6213
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 4ed8f14f646f2de63609532992c1b74e gmime-2.1.14-r1.ebuild 1792
-MD5 9b58defbf8ecb0d0dd01d7d4464af910 gmime-2.1.16.ebuild 1923
+MD5 e4046e49517091c540a13933fcf027ef gmime-2.1.16.ebuild 1928
 MD5 ebdde046305100715cd847ee5d6546b7 files/digest-gmime-2.1.16 64
 MD5 154afc14cd94dc661729bf4e4d8af00d files/digest-gmime-2.1.14-r1 64
 MD5 a67db057ccf14eda425af7ef30bb7e52 files/digest-gmime-2.1.15-r1 64
@@ -18,7 +18,7 @@ MD5 6d73d42404a0463371ca8623b16a5869 files/digest-gmime-2.1.9-r3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMoaWQlM6RnzZP+IRAvrQAKCUCaTqsIwx272fbJCDxLDWMEa/CACeMgFa
-eQJOudeFzaZavJxwCilzHwA=
-=ILb9
+iD8DBQFDQ+0/QlM6RnzZP+IRAm+yAJ45+gaXJg7SJCfT28MbfDUEWhI+7ACgpwd6
+rzcCdHkA5mP2zAGuqpi/GME=
+=WmNO
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.36 2005/09/22 10:25:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.37 2005/10/05 15:11:32 ticho Exp $
+
+  05 Oct 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.16.ebuild:
+  Added missing mono USE flag. Closes #108178.
 
   22 Sep 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.16.ebuild,
   -gmime-2.1.16-r1.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.16.ebuild,v 1.4 2005/09/22 10:25:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.16.ebuild,v 1.5 2005/10/05 15:11:32 ticho Exp $
 
 inherit gnome2 eutils mono
 
-IUSE="doc ipv6"
+IUSE="doc ipv6 mono"
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 SRC_URI="http://spruce.sourceforge.net/gmime/sources/v${PV%.*}/${P}.tar.gz"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
