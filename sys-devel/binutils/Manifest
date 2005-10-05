@@ -1,7 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6eaf74d53d6377cace935ae598385a76 binutils-2.15.91.0.2-r1.ebuild 461
 MD5 fae6ef750b66a27f9161bfd414a7353f binutils-2.15.94.0.2.2.ebuild 328
 MD5 12358fd5b4cbb83ba296ab50607d8f2b binutils-2.15.91.0.2-r2.ebuild 336
 MD5 6985eff504595233ceaa68340958e5d6 binutils-2.16.91.0.2.ebuild 349
@@ -13,7 +12,7 @@ MD5 b9ed4c67553ad1d493e8d91f4cece334 binutils-2.15.ebuild 480
 MD5 69fba759662e9acbe7d0acec6083a6e5 binutils-2.16.91.0.3.ebuild 349
 MD5 b0641d59fc4a770438ddc58148ec911d binutils-2.15.90.0.3-r5.ebuild 325
 MD5 98d35099698542dab3713e8db109bd35 binutils-2.16-r1.ebuild 657
-MD5 ea3ba548f73eee4b8c007f5320b8e640 binutils-2.15.92.0.2-r10.ebuild 374
+MD5 0b2aa8431d3f1efaf12b67441381d6f8 binutils-2.15.92.0.2-r10.ebuild 375
 MD5 9d88c0379eb30fa8756b81fed7e0796a binutils-2.16.91.0.1.ebuild 349
 MD5 e531c9e20e50ed1754fc149642707b58 ChangeLog 46122
 MD5 0680ca6de3b49aa48861d46a14a759e7 binutils-2.14.ebuild 298
@@ -25,18 +24,17 @@ MD5 65e8974b5665fe9a11b66932e4b9f462 files/digest-binutils-2.15.91.0.2-r2 249
 MD5 101096a94aae0d7e4d49e98df7925b4d files/digest-binutils-2.14.90.0.8-r3 249
 MD5 d343db5709bbf67c12ca4060de2484f4 files/digest-binutils-2.16.91.0.3 248
 MD5 6a8b5efc573656e95cc8a9982330f1ff files/digest-binutils-2.16-r1 229
-MD5 d2dfe61bd330d130043365ee51c2c7b4 files/digest-binutils-2.15.91.0.2-r1 159
 MD5 c21439c7d3b1c16b0521e1bcc234cc10 files/digest-binutils-2.14 145
 MD5 6b02d30c2c46486ab1d31a6617aad1e2 files/digest-binutils-2.15.90.0.1.1-r5 255
 MD5 461c0c51c9ad3c2c46c6e4d34db91c1a files/digest-binutils-2.16.1 235
 MD5 08f9d4099f935217c457c9779107b29e files/digest-binutils-2.15.90.0.3-r5 248
-MD5 cfc3c76283a4a1a49226dc3d61dd13d8 files/digest-binutils-2.15.92.0.2-r10 249
+MD5 f8b9153fa8e36ee807db1504ebff69fd files/digest-binutils-2.15.92.0.2-r10 249
 MD5 5efaab17f713cb9309dd458abfaa8463 files/digest-binutils-2.16.91.0.1 249
 MD5 ffd27192c1a9eba99ad1a84679b9e892 files/digest-binutils-2.16.91.0.2 248
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQ1vigIKl8Uu19MoRAilpAJoD4962Ao4+LbAz0ec+tuFlQYDUlQCfVDaS
-q42QYancOiLQ/DhKb1emPj4=
-=GED1
+iD8DBQFDQ2KdgIKl8Uu19MoRAvTJAJ0cWDDN3MAwVePvDTvbi8lp+/JNkgCeLf1h
+2nSOfmuAFNYYw31UDhc3B/M=
+=BQpB
 -----END PGP SIGNATURE-----
