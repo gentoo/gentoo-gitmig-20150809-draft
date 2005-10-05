@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.12.0.ebuild,v 1.2 2005/09/19 01:52:12 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.12.1.ebuild,v 1.1 2005/10/05 23:48:22 leonardop Exp $
 
 inherit gnome2
 
@@ -40,7 +40,7 @@ DEPEND=">=gnome-base/gconf-2
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2.4.6
 
-	  app-text/gnome-doc-utils
+	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.8"
@@ -49,8 +49,6 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
 
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	gnome2_omf_fix gnome-doc-utils.make docs/Makefile.in
+pkg_setup() {
+	G2CONF="--disable-scrollkeeper"
 }
