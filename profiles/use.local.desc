@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1486 2005/10/04 13:44:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1487 2005/10/05 00:15:11 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -958,6 +958,9 @@ sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
 sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-libs/acml:sse2 - Enables sse2 support
+sci-libs/charm:cmkopt - Enable CMK optimisation
+sci-libs/charm:smp - Enable direct SMP support using shared memory
+sci-libs/charm:tcp - Use TCP (instead of UPD) for socket communication
 sci-libs/fftw:sse2 - Enables sse2 support
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
