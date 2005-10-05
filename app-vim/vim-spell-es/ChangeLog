@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-spell-es
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-es/ChangeLog,v 1.1 2005/10/05 18:28:28 ferdy Exp $
+
+*vim-spell-es-20051005 (05 Oct 2005)
+
+  05 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> +metadata.xml,
+  +vim-spell-es-20051005.ebuild:
+  initial import
+
