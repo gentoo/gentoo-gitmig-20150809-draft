@@ -1,7 +1,7 @@
-diff -uNr portage-2.0.51.22/ChangeLog portage-2.0.51.22-r2/ChangeLog
---- portage-2.0.51.22/ChangeLog	2005-05-15 19:20:58.000000000 +0900
-+++ portage-2.0.51.22-r2/ChangeLog	2005-07-19 19:37:44.159904000 +0900
-@@ -1,12 +1,43 @@
+diff -uNr portage-2.0.51.22-orig/ChangeLog portage-2.0.51.22/ChangeLog
+--- portage-2.0.51.22-orig/ChangeLog	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/ChangeLog	2005-10-06 01:08:51.000000000 +0900
+@@ -1,12 +1,46 @@
  # ChangeLog for Portage; the Gentoo Linux ports system 
  # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
 -# $Id: ChangeLog,v 1.796.2.125 2005/05/15 09:37:49 jstubbs Exp $
@@ -12,6 +12,9 @@ diff -uNr portage-2.0.51.22/ChangeLog portage-2.0.51.22-r2/ChangeLog
      2. /var/cache/edb/world is now /var/lib/portage/world.
      3. /etc/portage/profile/virtuals is _USER_ configs only.
  
++  06 Oct 2005; Jason Stubbs <jstubbs@gentoo.org> bin/dispatch-conf: Ensure that
++  dispatch-conf's log file is 0600 permissions when enabled. Patch by TGL.
++
 +  19 Jul 2005; Jason Stubbs <jstubbs@gentoo.org> bin/ebuild.sh: Skip protecting
 +  ownership of symlinks. Patch by truedfx #94199
 +
@@ -46,9 +49,28 @@ diff -uNr portage-2.0.51.22/ChangeLog portage-2.0.51.22-r2/ChangeLog
    15 May 2005; Jason Stubbs <jstubbs@gentoo.org> bin/emerge: Made --newuse
    take priority over --usepkg.
  
-diff -uNr portage-2.0.51.22/bin/ebuild.sh portage-2.0.51.22-r2/bin/ebuild.sh
---- portage-2.0.51.22/bin/ebuild.sh	2005-05-15 19:20:58.000000000 +0900
-+++ portage-2.0.51.22-r2/bin/ebuild.sh	2005-07-19 19:38:32.949904000 +0900
+diff -uNr portage-2.0.51.22-orig/bin/dispatch-conf portage-2.0.51.22/bin/dispatch-conf
+--- portage-2.0.51.22-orig/bin/dispatch-conf	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/bin/dispatch-conf	2005-10-06 01:02:51.000000000 +0900
+@@ -64,9 +64,12 @@
+         self.options = dispatch_conf.read_config(MANDATORY_OPTS)
+ 
+         if self.options.has_key("log-file"):
+-            if os.path.exists(self.options["log-file"]):
+-                shutil.copyfile(self.options["log-file"], self.options["log-file"] + '.old')
+-                os.remove(self.options["log-file"])
++            if os.path.isfile(self.options["log-file"]):
++                shutil.copy(self.options["log-file"], self.options["log-file"] + '.old')
++            if os.path.isfile(self.options["log-file"]) \
++               or not os.path.exists(self.options["log-file"]):
++                open(self.options["log-file"], 'w').close()  # Truncate it
++                os.chmod(self.options["log-file"], 0600)
+         else:
+             self.options["log-file"] = "/dev/null"
+ 
+diff -uNr portage-2.0.51.22-orig/bin/ebuild.sh portage-2.0.51.22/bin/ebuild.sh
+--- portage-2.0.51.22-orig/bin/ebuild.sh	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/bin/ebuild.sh	2005-10-06 01:02:11.000000000 +0900
 @@ -1075,9 +1075,9 @@
  	local count=0
  	find "${D}/" -user  portage | while read file; do
@@ -77,9 +99,9 @@ diff -uNr portage-2.0.51.22/bin/ebuild.sh portage-2.0.51.22-r2/bin/ebuild.sh
  	done
  	if (( $count > 0 )); then
  		ewarn "$count files were installed with group portage!"
-diff -uNr portage-2.0.51.22/bin/emake portage-2.0.51.22-r2/bin/emake
---- portage-2.0.51.22/bin/emake	2005-05-15 19:20:58.000000000 +0900
-+++ portage-2.0.51.22-r2/bin/emake	2005-07-19 19:35:16.789904000 +0900
+diff -uNr portage-2.0.51.22-orig/bin/emake portage-2.0.51.22/bin/emake
+--- portage-2.0.51.22-orig/bin/emake	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/bin/emake	2005-10-06 01:02:11.000000000 +0900
 @@ -1,7 +1,7 @@
  #!/bin/bash
  # Copyright 1999-2004 Gentoo Foundation
@@ -95,9 +117,9 @@ diff -uNr portage-2.0.51.22/bin/emake portage-2.0.51.22-r2/bin/emake
  
 -make ${MAKEOPTS} ${EXTRA_EMAKE} "$@"
 +${MAKE:-make} ${MAKEOPTS} ${EXTRA_EMAKE} "$@"
-diff -uNr portage-2.0.51.22/bin/emerge portage-2.0.51.22-r2/bin/emerge
---- portage-2.0.51.22/bin/emerge	2005-05-15 19:20:58.000000000 +0900
-+++ portage-2.0.51.22-r2/bin/emerge	2005-07-19 19:35:16.789904000 +0900
+diff -uNr portage-2.0.51.22-orig/bin/emerge portage-2.0.51.22/bin/emerge
+--- portage-2.0.51.22-orig/bin/emerge	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/bin/emerge	2005-10-06 01:02:11.000000000 +0900
 @@ -1,7 +1,7 @@
  #!/usr/bin/python -O
  # Copyright 1999-2004 Gentoo Foundation
@@ -116,9 +138,9 @@ diff -uNr portage-2.0.51.22/bin/emerge portage-2.0.51.22-r2/bin/emerge
  				iuses=string.split(portage.portdb.aux_get(mykey, ["IUSE"])[0])
  				old_use=string.split(vardbapi.aux_get(mykey, ["USE"])[0])
  				now_use=string.split(self.pkgsettings["USE"])
-diff -uNr portage-2.0.51.22/bin/repoman portage-2.0.51.22-r2/bin/repoman
---- portage-2.0.51.22/bin/repoman	2005-05-15 19:20:58.000000000 +0900
-+++ portage-2.0.51.22-r2/bin/repoman	2005-07-19 19:35:16.789904000 +0900
+diff -uNr portage-2.0.51.22-orig/bin/repoman portage-2.0.51.22/bin/repoman
+--- portage-2.0.51.22-orig/bin/repoman	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/bin/repoman	2005-10-06 01:02:11.000000000 +0900
 @@ -1,7 +1,7 @@
  #!/usr/bin/python -O
  # Copyright 1999-2005 Gentoo Foundation
@@ -154,9 +176,9 @@ diff -uNr portage-2.0.51.22/bin/repoman portage-2.0.51.22-r2/bin/repoman
  				del myfiles[x]
  		mydone=[]
  		if repolevel==3:   # In a package dir
-diff -uNr portage-2.0.51.22/pym/portage.py portage-2.0.51.22-r2/pym/portage.py
---- portage-2.0.51.22/pym/portage.py	2005-05-15 19:20:58.000000000 +0900
-+++ portage-2.0.51.22-r2/pym/portage.py	2005-07-19 19:35:16.789904000 +0900
+diff -uNr portage-2.0.51.22-orig/pym/portage.py portage-2.0.51.22/pym/portage.py
+--- portage-2.0.51.22-orig/pym/portage.py	2005-05-15 19:20:58.000000000 +0900
++++ portage-2.0.51.22/pym/portage.py	2005-10-06 01:03:48.000000000 +0900
 @@ -1,10 +1,10 @@
  # portage.py -- core Portage functionality
  # Copyright 1998-2004 Gentoo Foundation
@@ -167,7 +189,7 @@ diff -uNr portage-2.0.51.22/pym/portage.py portage-2.0.51.22-r2/pym/portage.py
 +cvs_id_string="$Id: portage.py,v 1.524.2.75 2005/05/18 15:33:49 jstubbs Exp $"[5:-2]
  
 -VERSION="2.0.51.22"
-+VERSION="2.0.51.22-r2"
++VERSION="2.0.51.22-r3"
  
  # ===========================================================================
  # START OF IMPORTS -- START OF IMPORTS -- START OF IMPORTS -- START OF IMPORT
