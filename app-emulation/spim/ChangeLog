@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.25 2005/09/10 22:00:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.26 2005/10/05 06:02:33 eradicator Exp $
+
+*spim-7.2.1 (05 Oct 2005)
+
+  05 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/spim-7.2.1-c99.patch, +files/spim-7.2.1-envvar-exception.patch,
+  +files/spim-7.2.1-font.patch, +files/spim-7.2.1-ptrsize.patch,
+  +files/spim-7.2.1-string-stream.patch, +spim-7.2.1.ebuild:
+  Version bump and further patches from me (submitted upstream) to fix amd64.
 
   10 Sep 2005; Saleem Abdulrasool <compnerd@gentoo.org> spim-6.5-r1.ebuild,
   spim-7.0.ebuild, spim-7.1.ebuild:

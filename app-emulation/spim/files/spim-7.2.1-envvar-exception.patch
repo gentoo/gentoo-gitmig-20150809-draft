@@ -1,0 +1,26 @@
+diff -Naurp spim-7.2.1.orig/spim/spim.c spim-7.2.1.ucb/spim/spim.c
+--- spim-7.2.1.orig/spim/spim.c	2005-08-28 13:58:14.000000000 -0700
++++ spim-7.2.1.ucb/spim/spim.c	2005-10-04 19:39:49.559513464 -0700
+@@ -146,6 +146,9 @@ main (int argc, char **argv)
+ 
+   write_startup_message ();
+ 
++  if(getenv("SPIM_EXCEPTION_HANDLER") != NULL)
++    exception_file_name=getenv("SPIM_EXCEPTION_HANDLER");
++
+   for (i = 1; i < argc; i++)
+     {
+ #ifdef WIN32
+diff -Naurp spim-7.2.1.orig/xspim/xspim.c spim-7.2.1.ucb/xspim/xspim.c
+--- spim-7.2.1.orig/xspim/xspim.c	2005-08-28 13:58:15.000000000 -0700
++++ spim-7.2.1.ucb/xspim/xspim.c	2005-10-04 19:39:58.163902605 -0700
+@@ -414,6 +414,9 @@ main (int argc, char **argv)
+ 
+   spim_return_value = 0;
+ 
++  if(getenv("SPIM_EXCEPTION_HANDLER") != NULL)
++    exception_file_name=getenv("SPIM_EXCEPTION_HANDLER");
++
+   toplevel = XtAppInitialize (&app_context, "Xspim", options,
+ 			      XtNumber (options), &argc, argv,
+ 			      fallback_resources, NULL, ZERO);

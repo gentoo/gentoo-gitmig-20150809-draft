@@ -1,0 +1,11 @@
+--- xspim/xspim.c 2005-07-23 17:27:08.000000000 +0000
++++ xspim/xspim.c	2005-07-23 17:27:16.000000000 +0000
+@@ -416,7 +416,7 @@
+ 
+   toplevel = XtAppInitialize (&app_context, "Xspim", options,
+ 			      XtNumber (options), &argc, argv,
+-			      fallback_resources, NULL, ZERO);
++			      NULL, NULL, ZERO);
+ 
+   if (argc >= 0 && argv[argc] != NULL && argv[argc][0] == '-')
+     syntax (argv[0]);		/* Bad command line argument */

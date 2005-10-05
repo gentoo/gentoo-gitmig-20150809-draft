@@ -1,0 +1,492 @@
+diff -Naurp spim-7.2.1.orig/CPU/display-utils.c spim-7.2.1.ucb/CPU/display-utils.c
+--- spim-7.2.1.orig/CPU/display-utils.c	2005-08-28 13:58:11.000000000 -0700
++++ spim-7.2.1.ucb/CPU/display-utils.c	2005-10-04 20:51:29.881936000 -0700
+@@ -220,9 +220,9 @@ format_mem (str_stream *ss, mem_addr fro
+   for ( ; i < to; )
+     {
+       /* Count consecutive zero words */
+-      for (j = 0; (i + (uint32) j * BYTES_PER_WORD) < to; j += 1)
++      for (j = 0; (i + (uint32_t) j * BYTES_PER_WORD) < to; j += 1)
+ 	{
+-	  val = read_mem_word (i + (uint32) j * BYTES_PER_WORD);
++	  val = read_mem_word (i + (uint32_t) j * BYTES_PER_WORD);
+ 	  if (val != 0)
+ 	    {
+ 	      break;
+@@ -234,9 +234,9 @@ format_mem (str_stream *ss, mem_addr fro
+ 	  /* Block of 4 or more zero memory words: */
+ 	  ss_printf (ss, "[0x%08x]...[0x%08x]	0x00000000\n",
+ 		     i,
+-		     i + (uint32) j * BYTES_PER_WORD);
++		     i + (uint32_t) j * BYTES_PER_WORD);
+ 
+-	  i = i + (uint32) j * BYTES_PER_WORD;
++	  i = i + (uint32_t) j * BYTES_PER_WORD;
+ 	  i = format_partial_line (ss, i);
+ 	}
+       else
+diff -Naurp spim-7.2.1.orig/CPU/inst.c spim-7.2.1.ucb/CPU/inst.c
+--- spim-7.2.1.orig/CPU/inst.c	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/inst.c	2005-10-04 20:51:30.213951000 -0700
+@@ -44,13 +44,13 @@
+ static int compare_pair_value (name_val_val *p1, name_val_val *p2);
+ static void format_imm_expr (str_stream *ss, imm_expr *expr, int base_reg);
+ static void i_type_inst_full_word (int opcode, int rt, int rs, imm_expr *expr,
+-				   int value_known, int32 value);
++				   int value_known, int32_t value);
+ static void inst_cmp (instruction *inst1, instruction *inst2);
+ static instruction *make_r_type_inst (int opcode, int rd, int rs, int rt);
+-static instruction *mk_i_inst (int32 value, int opcode, int rs, int rt, int offset);
+-static instruction *mk_j_inst (int32, int opcode, int target);
+-static instruction *mk_r_inst (int32, int opcode, int rs, int rt, int rd, int shamt);
+-static void produce_immediate (imm_expr *expr, int rt, int value_known, int32 value);
++static instruction *mk_i_inst (int32_t value, int opcode, int rs, int rt, int offset);
++static instruction *mk_j_inst (int32_t, int opcode, int target);
++static instruction *mk_r_inst (int32_t, int opcode, int rs, int rt, int rd, int shamt);
++static void produce_immediate (imm_expr *expr, int rt, int value_known, int32_t value);
+ static void sort_a_opcode_table ();
+ static void sort_i_opcode_table ();
+ static void sort_name_table ();
+@@ -192,7 +192,7 @@ i_type_inst (int opcode, int rt, int rs,
+   if (expr->symbol == NULL || SYMBOL_IS_DEFINED (expr->symbol))
+     {
+       /* Evaluate the instruction's expression. */
+-      int32 value = eval_imm_expr (expr);
++      int32_t value = eval_imm_expr (expr);
+ 
+       if (!bare_machine
+ 	  && (((opcode == Y_ADDI_OP
+@@ -234,7 +234,7 @@ i_type_inst (int opcode, int rt, int rs,
+ 
+ static void
+ i_type_inst_full_word (int opcode, int rt, int rs, imm_expr *expr,
+-		       int value_known, int32 value)
++		       int value_known, int32_t value)
+ {
+   if (opcode_is_load_store (opcode))
+     {
+@@ -330,7 +330,7 @@ i_type_inst_full_word (int opcode, int r
+ 
+ 
+ static void
+-produce_immediate (imm_expr *expr, int rt, int value_known, int32 value)
++produce_immediate (imm_expr *expr, int rt, int value_known, int32_t value)
+ {
+   if (value_known && (value & 0xffff) == 0)
+     {
+@@ -682,7 +682,7 @@ format_an_inst (str_stream *ss, instruct
+       return;
+     }
+ 
+-  ss_printf (ss, "0x%08x  %s", (uint32)ENCODING (inst), entry->name);
++  ss_printf (ss, "0x%08x  %s", (uint32_t)ENCODING (inst), entry->name);
+   switch (entry->value2)
+     {
+     case BC_TYPE_INST:
+@@ -1069,7 +1069,7 @@ lower_bits_of_expr (imm_expr *old_expr)
+ /* Return an instruction expression for a constant VALUE. */
+ 
+ imm_expr *
+-const_imm_expr (int32 value)
++const_imm_expr (int32_t value)
+ {
+   return (make_imm_expr (value, NULL, 0));
+ }
+@@ -1079,7 +1079,7 @@ const_imm_expr (int32 value)
+    incremented by the given amount. */
+ 
+ imm_expr *
+-incr_expr_offset (imm_expr *expr, int32 value)
++incr_expr_offset (imm_expr *expr, int32_t value)
+ {
+   imm_expr *new_expr = copy_imm_expr (expr);
+ 
+@@ -1090,10 +1090,10 @@ incr_expr_offset (imm_expr *expr, int32 
+ 
+ /* Return the value of the EXPRESSION. */
+ 
+-int32
++int32_t
+ eval_imm_expr (imm_expr *expr)
+ {
+-  int32 value;
++  int32_t value;
+ 
+   if (expr->symbol == NULL)
+     value = expr->offset;
+@@ -1227,10 +1227,10 @@ sort_i_opcode_table ()
+ #define REGS(R,O) (((R) & 0x1f) << O)
+ 
+ 
+-int32
++int32_t
+ inst_encode (instruction *inst)
+ {
+-  int32 a_opcode = 0;
++  int32_t a_opcode = 0;
+   name_val_val *entry;
+ 
+   if (inst == NULL)
+@@ -1400,11 +1400,11 @@ sort_a_opcode_table ()
+ 
+ 
+ instruction *
+-inst_decode (int32 val)
++inst_decode (int32_t val)
+ {
+-  int32 a_opcode = val & 0xfc000000;
++  int32_t a_opcode = val & 0xfc000000;
+   name_val_val *entry;
+-  int32 i_opcode;
++  int32_t i_opcode;
+ 
+   if (a_opcode == 0)		/* SPECIAL */
+     a_opcode |= (val & 0x3f);
+@@ -1520,7 +1520,7 @@ inst_decode (int32 val)
+ 
+ 
+ static instruction *
+-mk_r_inst (int32 val, int opcode, int rs, int rt, int rd, int shamt)
++mk_r_inst (int32_t val, int opcode, int rs, int rt, int rd, int shamt)
+ {
+   instruction *inst = (instruction *) zmalloc (sizeof (instruction));
+ 
+@@ -1536,7 +1536,7 @@ mk_r_inst (int32 val, int opcode, int rs
+ 
+ 
+ static instruction *
+-mk_i_inst (int32 val, int opcode, int rs, int rt, int offset)
++mk_i_inst (int32_t val, int opcode, int rs, int rt, int offset)
+ {
+   instruction *inst = (instruction *) zmalloc (sizeof (instruction));
+ 
+@@ -1550,7 +1550,7 @@ mk_i_inst (int32 val, int opcode, int rs
+ }
+ 
+ static instruction *
+-mk_j_inst (int32 val, int opcode, int target)
++mk_j_inst (int32_t val, int opcode, int target)
+ {
+   instruction *inst = (instruction *) zmalloc (sizeof (instruction));
+ 
+diff -Naurp spim-7.2.1.orig/CPU/inst.h spim-7.2.1.ucb/CPU/inst.h
+--- spim-7.2.1.orig/CPU/inst.h	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/inst.h	2005-10-04 20:51:30.281954000 -0700
+@@ -79,7 +79,7 @@ typedef struct inst_s
+       mem_addr target;
+     } r_t;
+ 
+-  int32 encoding;
++  int32_t encoding;
+   imm_expr *expr;
+   char *source_line;
+ } instruction;
+@@ -136,7 +136,7 @@ typedef struct inst_s
+ #define SET_TARGET(INST, VAL)	(INST)->r_t.target = (mem_addr)(VAL)
+ 
+ #define ENCODING(INST)		(INST)->encoding
+-#define SET_ENCODING(INST, VAL)	(INST)->encoding = (int32)(VAL)
++#define SET_ENCODING(INST, VAL)	(INST)->encoding = (int32_t)(VAL)
+ 
+ #define EXPR(INST)		(INST)->expr
+ #define SET_EXPR(INST, VAL)	(INST)->expr = (imm_expr*)(VAL)
+@@ -226,20 +226,20 @@ extern int exception_occurred;
+ 
+ imm_expr *addr_expr_imm (addr_expr *expr);
+ int addr_expr_reg (addr_expr *expr);
+-imm_expr *const_imm_expr (int32 value);
++imm_expr *const_imm_expr (int32_t value);
+ imm_expr *copy_imm_expr (imm_expr *old_expr);
+ instruction *copy_inst (instruction *inst);
+ mem_addr current_text_pc ();
+-int32 eval_imm_expr (imm_expr *expr);
++int32_t eval_imm_expr (imm_expr *expr);
+ void format_an_inst (str_stream *ss, instruction *inst, mem_addr addr);
+ void free_inst (instruction *inst);
+ void i_type_inst (int opcode, int rt, int rs, imm_expr *expr);
+ void i_type_inst_free (int opcode, int rt, int rs, imm_expr *expr);
+ void increment_text_pc (int delta);
+-imm_expr *incr_expr_offset (imm_expr *expr, int32 value);
++imm_expr *incr_expr_offset (imm_expr *expr, int32_t value);
+ void initialize_inst_tables ();
+-instruction *inst_decode (int32 value);
+-int32 inst_encode (instruction *inst);
++instruction *inst_decode (int32_t value);
++int32_t inst_encode (instruction *inst);
+ int inst_is_breakpoint (mem_addr addr);
+ void j_type_inst (int opcode, imm_expr *target);
+ void k_text_begins_at_point (mem_addr addr);
+diff -Naurp spim-7.2.1.orig/CPU/mem.c spim-7.2.1.ucb/CPU/mem.c
+--- spim-7.2.1.orig/CPU/mem.c	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/mem.c	2005-10-04 20:51:30.393960000 -0700
+@@ -76,7 +76,7 @@ static void write_memory_mapped_IO (mem_
+ 
+ /* Local variables: */
+ 
+-static int32 data_size_limit, stack_size_limit, k_data_size_limit;
++static int32_t data_size_limit, stack_size_limit, k_data_size_limit;
+ 
+ 
+ 
+diff -Naurp spim-7.2.1.orig/CPU/mem.h spim-7.2.1.ucb/CPU/mem.h
+--- spim-7.2.1.orig/CPU/mem.h	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/mem.h	2005-10-04 20:51:30.489964000 -0700
+@@ -30,7 +30,7 @@
+ 
+ /* Type of contents of a memory word. */
+ 
+-typedef int32 /*@alt unsigned int @*/ mem_word;
++typedef int32_t /*@alt unsigned int @*/ mem_word;
+ 
+ 
+ /* The text segment and boundaries. */
+diff -Naurp spim-7.2.1.orig/CPU/parser.y spim-7.2.1.ucb/CPU/parser.y
+--- spim-7.2.1.orig/CPU/parser.y	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/parser.y	2005-10-04 20:51:30.945984000 -0700
+@@ -470,8 +470,8 @@ int parse_error_occurred; /* Non-zero =>
+ 
+ static imm_expr *branch_offset (int n_inst);
+ static int cc_to_rt (int cc, int nd, int tf);
+-static void check_imm_range (imm_expr*, int32, int32);
+-static void check_uimm_range (imm_expr*, uint32, uint32);
++static void check_imm_range (imm_expr*, int32_t, int32_t);
++static void check_uimm_range (imm_expr*, uint32_t, uint32_t);
+ static void clear_labels ();
+ static label_list *cons_label (label *head, label_list *tail);
+ static void div_inst (int op, int rd, int rs, int rt, int const_divisor);
+@@ -2853,13 +2853,13 @@ initialize_parser (char *file_name)
+ 
+ 
+ static void
+-check_imm_range (imm_expr* expr, int32 min, int32 max)
++check_imm_range (imm_expr* expr, int32_t min, int32_t max)
+ {
+   if (expr->symbol == NULL || SYMBOL_IS_DEFINED (expr->symbol))
+     {
+       /* If expression can be evaluated, compare its value against the limits
+ 	 and complain if the value is out of bounds. */
+-      int32 value = eval_imm_expr (expr);
++      int32_t value = eval_imm_expr (expr);
+ 
+       if (value < min || max < value)
+ 	{
+@@ -2873,19 +2873,19 @@ check_imm_range (imm_expr* expr, int32 m
+ 
+ 
+ static void
+-check_uimm_range (imm_expr* expr, uint32 min, uint32 max)
++check_uimm_range (imm_expr* expr, uint32_t min, uint32_t max)
+ {
+   if (expr->symbol == NULL || SYMBOL_IS_DEFINED (expr->symbol))
+     {
+       /* If expression can be evaluated, compare its value against the limits
+ 	     and complain if the value is out of bounds. */
+-      uint32 value = (uint32)eval_imm_expr (expr);
++      uint32_t value = (uint32_t)eval_imm_expr (expr);
+ 
+       if (value < min || max < value)
+ 	{
+ 	  char str[200];
+ 	  sprintf (str, "immediate value (%d) out of range (%d .. %d)",
+-		   (int32)value, (int32)min, (int32)max);
++		   (int32_t)value, (int32_t)min, (int32_t)max);
+ 	  yywarn (str);
+ 	}
+     }
+diff -Naurp spim-7.2.1.orig/CPU/reg.h spim-7.2.1.ucb/CPU/reg.h
+--- spim-7.2.1.orig/CPU/reg.h	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/reg.h	2005-10-04 20:51:31.109992000 -0700
+@@ -24,8 +24,8 @@
+ */
+ 
+ 
+-typedef int32 /*@alt unsigned int @*/ reg_word;
+-typedef uint32 u_reg_word;
++typedef int32_t /*@alt unsigned int @*/ reg_word;
++typedef uint32_t u_reg_word;
+ 
+ 
+ /* General purpose registers: */
+@@ -180,7 +180,7 @@ extern int *FWR;		/* is possible */
+ 				 run_error ("Odd FP double register number\n"); \
+ 				 else FPR[(REGNO) / 2] = (double) (VALUE);}
+ 
+-#define SET_FPR_W(REGNO, VALUE) {FWR[REGNO] = (int32) (VALUE);}
++#define SET_FPR_W(REGNO, VALUE) {FWR[REGNO] = (int32_t) (VALUE);}
+ 
+ 
+ /* Floating point control registers: */
+diff -Naurp spim-7.2.1.orig/CPU/run.c spim-7.2.1.ucb/CPU/run.c
+--- spim-7.2.1.orig/CPU/run.c	2005-08-28 13:58:12.000000000 -0700
++++ spim-7.2.1.ucb/CPU/run.c	2005-10-04 20:51:31.225997000 -0700
+@@ -1343,7 +1343,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = FPR_D (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)ceil (val));
++		SET_FPR_W (FD (inst), (int32_t)ceil (val));
+ 		break;
+ 	      }
+ 
+@@ -1351,7 +1351,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = (double)FPR_S (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)ceil (val));
++		SET_FPR_W (FD (inst), (int32_t)ceil (val));
+ 		break;
+ 	      }
+ 
+@@ -1389,7 +1389,7 @@ run_spim (mem_addr initial_PC, int steps
+ 
+ 	    case Y_CVT_W_D_OP:
+ 	      {
+-		int val = (int32)FPR_D (FS (inst));
++		int val = (int32_t)FPR_D (FS (inst));
+ 
+ 		SET_FPR_W (FD (inst), val);
+ 		break;
+@@ -1397,7 +1397,7 @@ run_spim (mem_addr initial_PC, int steps
+ 
+ 	    case Y_CVT_W_S_OP:
+ 	      {
+-		int val = (int32)FPR_S (FS (inst));
++		int val = (int32_t)FPR_S (FS (inst));
+ 
+ 		SET_FPR_W (FD (inst), val);
+ 		break;
+@@ -1415,7 +1415,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = FPR_D (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)floor (val));
++		SET_FPR_W (FD (inst), (int32_t)floor (val));
+ 		break;
+ 	      }
+ 
+@@ -1423,7 +1423,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = (double)FPR_S (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)floor (val));
++		SET_FPR_W (FD (inst), (int32_t)floor (val));
+ 		break;
+ 	      }
+ 
+@@ -1573,7 +1573,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = FPR_D (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)(val + 0.5)); /* Casting truncates */
++		SET_FPR_W (FD (inst), (int32_t)(val + 0.5)); /* Casting truncates */
+ 		break;
+ 	      }
+ 
+@@ -1581,7 +1581,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = (double)FPR_S (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)(val + 0.5)); /* Casting truncates */
++		SET_FPR_W (FD (inst), (int32_t)(val + 0.5)); /* Casting truncates */
+ 		break;
+ 	      }
+ 
+@@ -1627,7 +1627,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = FPR_D (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)val); /* Casting truncates */
++		SET_FPR_W (FD (inst), (int32_t)val); /* Casting truncates */
+ 		break;
+ 	      }
+ 
+@@ -1635,7 +1635,7 @@ run_spim (mem_addr initial_PC, int steps
+ 	      {
+ 		double val = (double)FPR_S (FS (inst));
+ 
+-		SET_FPR_W (FD (inst), (int32)val); /* Casting truncates */
++		SET_FPR_W (FD (inst), (int32_t)val); /* Casting truncates */
+ 		break;
+ 	      }
+ 
+@@ -1709,7 +1709,7 @@ start_CP0_timer ()
+      since signals interrupt I/O calls, such as read, and make user
+      interaction with SPIM work very poorly. Since speed isn't an important
+      aspect of SPIM, polling isn't a big deal. */
+-  if (-1 == (int)signal (SIGALRM, SIG_IGN))
++  if (-1 == (long)signal (SIGALRM, SIG_IGN))
+     {
+       perror ("signal failed");
+     }
+diff -Naurp spim-7.2.1.orig/CPU/spim.h spim-7.2.1.ucb/CPU/spim.h
+--- spim-7.2.1.orig/CPU/spim.h	2005-08-28 13:58:13.000000000 -0700
++++ spim-7.2.1.ucb/CPU/spim.h	2005-10-04 20:57:41.038675000 -0700
+@@ -29,12 +29,10 @@
+ #define NULL 0
+ #endif
+ 
++/* Use C99 types for guranteed size */
++#include <stdint.h>
++#include <sys/types.h>
+ 
+-/* Type declarations for portability.  They work for DEC's Alpha (64 bits)
+-   and 32 bit machines */
+-
+-typedef int int32;
+-typedef unsigned int  uint32;
+ typedef union {int i; void* p;} intptr_union;
+ 
+ 
+@@ -45,7 +43,7 @@ typedef union {int i; void* p;} intptr_u
+ #define ROUND_UP(V, B) (((int) V + (B-1)) & ~(B-1))
+ #define ROUND_DOWN(V, B) (((int) V) & ~(B-1))
+ 
+-/* Sign-extend an int16 to an int32 */
++/* Sign-extend an int16 to an int32_t */
+ #define SIGN_EX(X) (((X) & 0x8000) ? ((X) | 0xffff0000) : (X))
+ 
+ 
+@@ -81,7 +79,7 @@ typedef union {int i; void* p;} intptr_u
+ 
+ /* Type of a memory address.  Must be a 32-bit quantity to match MIPS.  */
+ 
+-typedef uint32 /*@alt int @*/ mem_addr;
++typedef uint32_t /*@alt int @*/ mem_addr;
+ 
+ 
+ #define BYTES_PER_WORD 4	/* On the MIPS processor */
+diff -Naurp spim-7.2.1.orig/CPU/sym-tbl.c spim-7.2.1.ucb/CPU/sym-tbl.c
+--- spim-7.2.1.orig/CPU/sym-tbl.c	2005-08-28 13:58:13.000000000 -0700
++++ spim-7.2.1.ucb/CPU/sym-tbl.c	2005-10-04 20:51:32.034034000 -0700
+@@ -303,8 +303,8 @@ resolve_a_label_sub (label *sym, instruc
+       if (EXPR (inst)->symbol == NULL
+ 	  || SYMBOL_IS_DEFINED (EXPR (inst)->symbol))
+ 	{
+-	  int32 value;
+-	  int32 field_mask;
++	  int32_t value;
++	  int32_t field_mask;
+ 
+ 	  if (opcode_is_branch (OPCODE (inst)))
+ 	    {
+diff -Naurp spim-7.2.1.orig/spim/configuration spim-7.2.1.ucb/spim/configuration
+--- spim-7.2.1.orig/spim/configuration	1969-12-31 16:00:00.000000000 -0800
++++ spim-7.2.1.ucb/spim/configuration	2005-10-04 20:51:36.750246000 -0700
+@@ -0,0 +1,2 @@
++-DLITTLEENDIAN
++-DUSE_TERMIOS
+diff -Naurp spim-7.2.1.orig/spim/spim.c spim-7.2.1.ucb/spim/spim.c
+--- spim-7.2.1.orig/spim/spim.c	2005-08-28 13:58:14.000000000 -0700
++++ spim-7.2.1.ucb/spim/spim.c	2005-10-04 22:20:43.110438437 -0700
+@@ -677,9 +677,9 @@ parse_spim_command (FILE *file, int redo
+ 
+         for (i = dump_start; i < dump_limit; i++)
+           {
+-            int32 code = inst_encode (text_seg[i]);
++            int32_t code = inst_encode (text_seg[i]);
+             if (cmd == DUMP_TEXT_CMD)
+-	      code = (int32)htonl ((unsigned long)code);    /* dump in network byte order */
++	      code = (int32_t)htonl ((unsigned long)code);    /* dump in network byte order */
+             (void)fwrite (&code, 1, sizeof(code), fp);
+             words++;
+           }

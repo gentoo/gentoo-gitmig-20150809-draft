@@ -1,12 +1,29 @@
-MD5 56d5b124929236c4d6a74eb7b58ebfec spim-7.0.ebuild 1483
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a95d8001ea354287a34f5a1baded57e ChangeLog 3488
 MD5 ee5e79f45e895aacb34203fba4fc09f1 spim-6.5-r1.ebuild 1443
-MD5 c518e955515d2b620e2777781b97eb0b spim-7.1.ebuild 1392
-MD5 55771256b9a022b0c7fc8ed8e047990c ChangeLog 3124
+MD5 56d5b124929236c4d6a74eb7b58ebfec spim-7.0.ebuild 1483
 MD5 f180f948f41e347de9ebca387391018e metadata.xml 476
-MD5 687579cae8dc43834d01a92be664c826 files/spim-6.5-font.patch 362
+MD5 c518e955515d2b620e2777781b97eb0b spim-7.1.ebuild 1392
+MD5 617b3f569ab7ba2d84893da1dd6bb5c7 spim-7.2.1.ebuild 2154
 MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
 MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
-MD5 d07cf1bbff97319734f9f85a3395ffa8 files/spim-7.0-font.patch 441
-MD5 df8dcbb83771ccb4cccb7006b9a9d1ff files/spim-7.1-font.patch 436
 MD5 e2af6a0e5ca4267cfad9f1bf5e954655 files/digest-spim-7.0 60
+MD5 687579cae8dc43834d01a92be664c826 files/spim-6.5-font.patch 362
+MD5 d07cf1bbff97319734f9f85a3395ffa8 files/spim-7.0-font.patch 441
 MD5 1e56da59f31f01ba293a6c05cc257a5a files/digest-spim-7.1 60
+MD5 df8dcbb83771ccb4cccb7006b9a9d1ff files/spim-7.1-font.patch 436
+MD5 0323f7eab0a1497289beb7246d3b5f9b files/spim-7.2.1-c99.patch 17070
+MD5 8943ac49b31f6df6c679b4ce740514fc files/spim-7.2.1-envvar-exception.patch 991
+MD5 7fdc53102c71df807c81f19ce98f2e08 files/spim-7.2.1-ptrsize.patch 458
+MD5 12aa5d2009bfce93f35bc5b5845fe9b0 files/spim-7.2.1-string-stream.patch 488
+MD5 54351d3e666c30c161818777d2cb5746 files/digest-spim-7.2.1 62
+MD5 a1da7be88dc0cab1e55ec1862aa3f338 files/spim-7.2.1-font.patch 430
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQ2yOOpjtAl+gMRURAj8LAJ401XVV6nPGDuCgFGTxzI5GltG/cACfU2qs
+qwYZJgR1i4DqmkKx8fjAVUk=
+=ouVO
+-----END PGP SIGNATURE-----
