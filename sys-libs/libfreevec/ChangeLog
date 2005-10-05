@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libfreevec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/ChangeLog,v 1.1 2005/09/29 13:56:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfreevec/ChangeLog,v 1.2 2005/10/05 22:59:45 lu_zero Exp $
+
+*libfreevec-0.8-r1 (05 Oct 2005)
+
+  05 Oct 2005; Luca Barbato <lu_zero@gentoo.org> +libfreevec-0.8-r1.ebuild:
+  Removed strcpy and memmove, enable by default the build (HAVE_ALTIVEC_H).
 
 *libfreevec-0.8 (29 Sep 2005)
 
