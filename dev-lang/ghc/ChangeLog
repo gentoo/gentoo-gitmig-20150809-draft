@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.69 2005/10/04 19:13:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.70 2005/10/05 00:02:39 araujo Exp $
+
+  04 Oct 2005; Luis F. Araujo <araujo@gentoo.org> ghc-6.2.2.ebuild:
+  Blocked ghc6.4 in ghc6.2.2
 
   04 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> ghc-6.4.1.ebuild:
   Back to the ~ppc

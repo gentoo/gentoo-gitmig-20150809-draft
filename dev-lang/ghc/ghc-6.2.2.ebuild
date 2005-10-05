@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.17 2005/09/01 14:53:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.18 2005/10/05 00:02:39 araujo Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -33,6 +33,7 @@ PROVIDE="virtual/ghc"
 # FIXME: Add USE support for parallel haskell (requires PVM)
 #	 Get PVM from ftp://ftp.netlib.org/pvm3/
 DEPEND="<virtual/ghc-6.3
+	!>=virtual/ghc-6.4*
 	>=dev-lang/perl-5.6.1
 	>=sys-devel/gcc-2.95.3
 	>=sys-devel/make-3.79.1
