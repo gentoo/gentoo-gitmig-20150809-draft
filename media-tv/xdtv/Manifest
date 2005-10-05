@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7d0fd7fa4d541243b8e77308ee6bdd08 ChangeLog 1432
 MD5 0dfc4d0a0cad3dc6b761593f69ac917b metadata.xml 252
-MD5 5b5f3426bd563eed9f1c237a9fc47aef ChangeLog 1332
+MD5 b43a56f765f69fd0fd45b3656740908a xdtv-2.2.0-r1.ebuild 6779
 MD5 8e8601ced71a197c7720ae4bea851d6c xdtv-2.2.0.ebuild 6038
-MD5 e5d223683b0394d0eb2b12ae840e277d xdtv-2.2.0-r1.ebuild 6781
 MD5 1a76927ad3fc30c72aa7648bfd77f065 files/digest-xdtv-2.2.0 1252
 MD5 ad3fc730b848c1a6a0cfc126861e1f6b files/digest-xdtv-2.2.0-r1 1777
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5LaLj5H05b2HAEkRAgtJAJkByhVrC9JhQQNtXYBU3Xs1+CZQHQCfaxze
-8oGA8BUT+E5vHaF7T3Zmis8=
-=31XH
------END PGP SIGNATURE-----
