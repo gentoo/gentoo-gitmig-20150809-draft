@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4528 2005/10/04 11:14:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4529 2005/10/05 00:19:35 ribosome Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (04 Oct 2005)
+# New package; requires testing.
+sci-libs/charm
 
 # Diego Pettenò <flameeyes@gentoo.org> (02 Oct 2005)
 # This is a test version, unmask only after asking.
