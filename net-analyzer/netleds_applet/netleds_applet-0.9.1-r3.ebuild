@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netleds_applet/netleds_applet-0.9.1-r3.ebuild,v 1.10 2004/07/11 10:26:40 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netleds_applet/netleds_applet-0.9.1-r3.ebuild,v 1.11 2005/10/05 18:40:57 dang Exp $
 
 
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 sparc "
 IUSE=""
 
 DEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
-	>=gnome-base/libgtop-1.0.12-r1"
+	=gnome-base/libgtop-1*"
 
 src_compile() {
 

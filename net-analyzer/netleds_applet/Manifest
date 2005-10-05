@@ -1,4 +1,14 @@
-MD5 62804b44036f27f557912fd3bba5703e netleds_applet-0.9.1-r3.ebuild 660
-MD5 bfa1a48e5974163c0a5be6798c17e633 ChangeLog 1329
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5c9f705e04f61ff987e188d4247f67f9 netleds_applet-0.9.1-r3.ebuild 651
+MD5 ae5bd10c8ee1d4bf77bb381f73d5be9f ChangeLog 1441
 MD5 3cfc13a7a9985c6ba9c6503165923627 metadata.xml 244
 MD5 6a0a0e53bb0cd7a92ed1652efd834cad files/digest-netleds_applet-0.9.1-r3 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRB5comPajV0RnrERAi4jAJ0cXXbGL0uxrGfQjhEJP2F/A2CiKQCfZ3zx
+mFrqxYdjsv5MtWhH5DNBCnQ=
+=OW/1
+-----END PGP SIGNATURE-----
