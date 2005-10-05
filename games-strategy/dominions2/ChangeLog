@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/dominions2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/ChangeLog,v 1.1 2005/10/05 15:58:31 wolf31o2 Exp $
+
+*dominions2-2.16 (05 Oct 2005)
+
+  05 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +dominions2-2.16.ebuild:
+  Initial import. Ebuild by Alex Linke <incubation.11@freenet.de> and modified
+  by me. Tested on amd64 and x86. Closing bug #36706.
+
