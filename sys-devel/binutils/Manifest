@@ -5,7 +5,7 @@ MD5 6eaf74d53d6377cace935ae598385a76 binutils-2.15.91.0.2-r1.ebuild 461
 MD5 fae6ef750b66a27f9161bfd414a7353f binutils-2.15.94.0.2.2.ebuild 328
 MD5 12358fd5b4cbb83ba296ab50607d8f2b binutils-2.15.91.0.2-r2.ebuild 336
 MD5 6985eff504595233ceaa68340958e5d6 binutils-2.16.91.0.2.ebuild 349
-MD5 30f524b971a7e77f932687264a2c84a7 binutils-2.16.1.ebuild 657
+MD5 7d11853f5d95e3fd1809fd23f9111c45 binutils-2.16.1.ebuild 663
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 84ad902908d8f17da02749d97e45fd50 binutils-2.16.90.0.3.ebuild 354
 MD5 d60f4df7ccfeef4d4f5eea9de8a71ad3 binutils-2.14.90.0.8-r3.ebuild 363
@@ -28,7 +28,7 @@ MD5 6a8b5efc573656e95cc8a9982330f1ff files/digest-binutils-2.16-r1 229
 MD5 d2dfe61bd330d130043365ee51c2c7b4 files/digest-binutils-2.15.91.0.2-r1 159
 MD5 c21439c7d3b1c16b0521e1bcc234cc10 files/digest-binutils-2.14 145
 MD5 6b02d30c2c46486ab1d31a6617aad1e2 files/digest-binutils-2.15.90.0.1.1-r5 255
-MD5 d32bb7117be7a7022274bd12c540f4af files/digest-binutils-2.16.1 235
+MD5 461c0c51c9ad3c2c46c6e4d34db91c1a files/digest-binutils-2.16.1 235
 MD5 08f9d4099f935217c457c9779107b29e files/digest-binutils-2.15.90.0.3-r5 248
 MD5 cfc3c76283a4a1a49226dc3d61dd13d8 files/digest-binutils-2.15.92.0.2-r10 249
 MD5 5efaab17f713cb9309dd458abfaa8463 files/digest-binutils-2.16.91.0.1 249
@@ -36,7 +36,7 @@ MD5 ffd27192c1a9eba99ad1a84679b9e892 files/digest-binutils-2.16.91.0.2 248
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNPZigIKl8Uu19MoRAq4cAJ0TSzBImw2sY8HO7lvcvIEpOEMnvwCeK8yd
-545IbcmPmjsapwpX+H/h7ZY=
-=nE1l
+iD8DBQFDQ1vigIKl8Uu19MoRAilpAJoD4962Ao4+LbAz0ec+tuFlQYDUlQCfVDaS
+q42QYancOiLQ/DhKb1emPj4=
+=GED1
 -----END PGP SIGNATURE-----
