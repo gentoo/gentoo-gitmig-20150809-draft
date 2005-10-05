@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.0.ebuild,v 1.5 2005/09/29 16:33:45 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.12.1.ebuild,v 1.1 2005/10/05 04:01:51 leonardop Exp $
 
-inherit gnome2 eutils
+inherit eutils gnome2
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2 LGPL-2"
 
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc gnutls hal howl ipv6 samba ssl static"
+IUSE="doc gnutls hal howl ipv6 samba ssl"
 
 RDEPEND=">=gnome-base/libbonobo-2.3.1
 	>=gnome-base/gconf-1.2
@@ -49,13 +49,19 @@ USE_DESTDIR="1"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable ssl openssl) $(use_enable gnutls) \
-		$(use_enable static) $(use_enable samba) $(use_enable ipv6) \
-		$(use_enable hal) $(use_enable howl) --disable-schemas-install"
+	G2CONF="--disable-schemas-install \
+		$(use_enable ssl openssl) \
+		$(use_enable gnutls)      \
+		$(use_enable samba)       \
+		$(use_enable ipv6)        \
+		$(use_enable hal)         \
+		$(use_enable howl)"
 
-	use hal && G2CONF="${G2CONF} --with-hal-mount=/usr/bin/pmount \
-	--with-hal-umount=/usr/bin/pumount \
-	--with-hal-eject=/usr/bin/eject"
+	if use hal; then
+		G2CONF="${G2CONF} --with-hal-mount=/usr/bin/pmount \
+			--with-hal-umount=/usr/bin/pumount \
+			--with-hal-eject=/usr/bin/eject"
+	fi
 
 	# this works because of the order of conifgure parsing
 	# so should always be behind the use_enable options
@@ -64,14 +70,14 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	epatch ${FILESDIR}/${PN}-2.11.92-fbsd.patch
 	# Fix for API breakage in samba 3.0.20 (#104531)
 	epatch ${FILESDIR}/${PN}-2.11.92-samba-close_fn.patch
 	# Allow the Trash on afs filesystems (#106118)
-	epatch ${FILESDIR}/${P}-afs.patch
+	epatch ${FILESDIR}/${PN}-2.12.0-afs.patch
 
 	autoconf || die "autoconf failed"
 }

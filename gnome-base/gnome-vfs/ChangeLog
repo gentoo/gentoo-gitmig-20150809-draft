@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.176 2005/10/04 13:27:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.177 2005/10/05 04:01:51 leonardop Exp $
+
+*gnome-vfs-2.12.1 (05 Oct 2005)
+
+  05 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -gnome-vfs-2.12.0.ebuild, +gnome-vfs-2.12.1.ebuild:
+  New version.
 
   04 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-vfs-2.10.1-r2.ebuild:
