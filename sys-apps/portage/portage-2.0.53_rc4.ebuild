@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc3.ebuild,v 1.2 2005/10/05 16:13:48 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc4.ebuild,v 1.1 2005/10/05 19:13:26 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -21,6 +21,8 @@ S=${WORKDIR}/${PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}/bin
+	patch -s -p1 < ${FILESDIR}/2.0.53_rc4-extras.patch
 }
 
 src_compile() {
@@ -87,7 +89,7 @@ src_install() {
 	done
 
 	dodir /usr/sbin
-	for x in archive-conf dispatch-conf emerge-webrsync env-update etc-update fixpackages quickpkg regenworld; do
+	for x in archive-conf dispatch-conf emaint emerge-webrsync env-update etc-update fixpackages quickpkg regenworld; do
 		dosym ../lib/portage/bin/${x} /usr/sbin/${x}
 	done
 
