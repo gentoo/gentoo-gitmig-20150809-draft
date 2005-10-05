@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8402adfa905ea64ac4d379fc8709b033 gnome-mag-0.12.0.ebuild 741
-MD5 3b4a290c7e39234f9310eeba20754100 gnome-mag-0.12.1.ebuild 741
-MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
-MD5 0c02f731539fbad5b4bafe4147d304d4 ChangeLog 8140
-MD5 f1b5449355976be07101dd6fd0be58cd files/digest-gnome-mag-0.12.0 69
+MD5 5fd20315ccf77261dc47271619a8bcee ChangeLog 8275
 MD5 791ee34705b8736a75e00bc314ad8192 files/digest-gnome-mag-0.12.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK/KGKf2g/qXtneoRAqWMAJ9gIIbnhyEGh2hERKL7/9LXJEU5SwCglqu8
-S3K2WLW7HV7Pz6jJhH+yiNM=
-=zOU3
------END PGP SIGNATURE-----
+MD5 6d95101ffd2106830305441f9eb9ca1d files/digest-gnome-mag-0.12.2 69
+MD5 3b4a290c7e39234f9310eeba20754100 gnome-mag-0.12.1.ebuild 741
+MD5 b24092009484c5639d38de03780b4768 gnome-mag-0.12.2.ebuild 715
+MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
