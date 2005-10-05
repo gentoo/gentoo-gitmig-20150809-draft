@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.1 2005/10/05 15:58:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.2 2005/10/05 23:34:51 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="x86? (
 		http://www.shrapnelgames.com/downloads/dompatch${PV/\./}_linux_x86.tgz )
 	amd64? (
 		http://www.shrapnelgames.com/downloads/dompatch${PV/\./}_linux_x86.tgz )
-	ppc? ( 
+	ppc? (
 		http://www.shrapnelgames.com/downloads/dompatch${PV/\./}_linux_ppc.tgz )
 	doc? ( http://www.shrapnelgames.com/downloads/DOM2_Walkthrough.pdf
 		http://www.shrapnelgames.com/downloads/manual_addenda.pdf )
