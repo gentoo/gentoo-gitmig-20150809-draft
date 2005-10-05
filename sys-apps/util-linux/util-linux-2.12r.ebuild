@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q-r2.ebuild,v 1.4 2005/09/14 09:07:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r.ebuild,v 1.1 2005/10/05 00:08:01 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 OLD_CRYPT_VER=2.12i
-LOOP_AES_VER=3.0d
+LOOP_AES_VER=3.1b
 DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
@@ -17,7 +17,7 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="crypt old-crypt nls static pam selinux perl"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
@@ -59,14 +59,14 @@ src_unpack() {
 	# Fix mtab updates with `mount --move /foo /bar` #104697
 	epatch "${FILESDIR}"/${PN}-2.12q-update-mtab-when-moving.patch
 
-	# Disable the -r option for non-root users #105805
-	epatch "${FILESDIR}"/${PN}-2.12-only-root-can-remount.patch
-
 	# Respect -n with -r and umount #98675
 	epatch "${FILESDIR}"/${PN}-2.12q-umount-dont-write-mtab-with-remount.patch
 
 	# A few fixes to beat update_mtab() into submission.
 	epatch "${FILESDIR}"/${PN}-2.12q-update_mtab-fixes.patch
+
+	# Use update_mtab() to avoid dups in mtab for 'mount -f'
+	epatch "${FILESDIR}"/${PN}-2.12q-use-update_mtab-for-fake.patch
 
 	# Fix unreadable df output when using devfs ... this check is kind of 
 	# a hack, but whatever, the output isnt critical at all :P
@@ -80,18 +80,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.11z-agetty-domainname-option.patch
 
 	# Fix french translation typo #75693
-	epatch "${FILESDIR}"/${P}-i18n-update.patch
+	epatch "${FILESDIR}"/${PN}-2.12q-i18n-update.patch
 
 	# Add NFS4 support (kernel 2.5/2.6)
 	epatch "${FILESDIR}"/${PN}-2.12i-nfsv4.patch
 
 	# ignore managed/kudzu options #70873
 	epatch "${FILESDIR}"/${PN}-2.12i-ignore-managed.patch
-
-	# Allow util-linux to be built with -fPIC
-	# XXX: this needs to be punted as the error is in the
-	#      syscall macro which is part of linux-headers
-	epatch "${FILESDIR}"/${PN}-2.12i-pic.patch
 
 	# swapon gets confused by symlinks in /dev #69162
 	epatch "${FILESDIR}"/${PN}-2.12p-swapon-check-symlinks.patch
@@ -160,8 +155,9 @@ src_install() {
 	if use old-crypt ; then
 		cd "${OLD_CRYPT_P}"/mount
 		into /
-		newsbin mount mount-old-crypt || die
-		newsbin losetup losetup-old-crypt || die
+		newbin mount mount-old-crypt || die
+		newbin losetup losetup-old-crypt || die
+		fperms 4711 /bin/{mount,losetup}-old-crypt
 	fi
 }
 

@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 40353e338343ed2b6a8f23259c881e49 util-linux-2.12q.ebuild 4785
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 5497e9050dc8cde95a0e015edcd59c81 util-linux-2.12i-r1.ebuild 3960
-MD5 42a00cdd523f8facea7f10a9f4df86a1 util-linux-2.12q-r2.ebuild 5692
+MD5 0fa072288048ab73c7da495402392575 util-linux-2.12r.ebuild 5546
 MD5 5caff498045d46b5ee7afbb9aad0a357 util-linux-2.12q-r3.ebuild 5853
-MD5 37089f71e91dec5ebbcc7506bbaf4334 ChangeLog 20615
+MD5 c41c6a03eba5e5c09e5eab336a63e34a ChangeLog 20795
 MD5 519d6757067c4ee7c634c8b60f9abeb3 files/util-linux-2.12p-swapon-check-symlinks.patch 864
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 28b1a8ed38823851eafadacef8ce11ec files/util-linux-2.12q-no-m68k-fdisk.patch 239
@@ -16,13 +16,13 @@ MD5 f182d2c3c90cdc74c816a4656a8f3bbf files/util-linux-2.12q-update_mtab-fixes.pa
 MD5 3708f6eda344a2aa0a4d85d49f69dcee files/util-linux-2.12q-update-mtab-when-moving.patch 1036
 MD5 65f42fbf981464410f7d5d84a429e920 files/util-linux-no-kill.patch 642
 MD5 a43d2b8c70c5f40a195721dc536abace files/util-linux-2.12-swapon-unistd.patch 289
-MD5 a33ff00c09f558d4273360a581880c23 files/digest-util-linux-2.12q-r2 292
 MD5 570b9b148cbb60ec16de30940990ab53 files/util-linux-2.12q-i18n-update.patch 344
 MD5 73c0cb6f9aa5fa84e701fc68d0478aac files/util-linux-2.12i-nfsv4.patch 12854
 MD5 9d4c2454a6506ec913d901830ab06a22 files/util-linux-2.12-only-root-can-remount.patch 294
 MD5 4460875a6ebcf24a7ca5b41ed12f9fe5 files/util-linux-2.12-gcloop.patch 3806
 MD5 e2d566b683bb1b9b1c3e127b2bbd258b files/digest-util-linux-2.12q 294
 MD5 bc90959c4718e7dc5d53dcddac1172f5 files/util-linux-2.12q-debian-10cfdisk.patch 1888
+MD5 3f20c16ba5d68bfe7518f72d771170ce files/digest-util-linux-2.12r 292
 MD5 a33ff00c09f558d4273360a581880c23 files/digest-util-linux-2.12q-r3 292
 MD5 0be8df03dae23c81a0e929e58a4114e0 files/util-linux-2.11z-01-nfsv4.dif 13442
 MD5 99fa2ff2cb56217b6971e76e275923f9 files/util-linux-2.12q-more-fake-checks-v2.patch 1176
@@ -43,7 +43,7 @@ MD5 8a13c61b447c1533df4b919cf2646fea files/util-linux-2.12q-umount-dont-write-mt
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDOc/hgIKl8Uu19MoRAgAGAJ43Ztei7cLCwQBa982jnaooyCM/mQCdFHNA
-dReicDM7OGMTh5qC3/BqTiw=
-=7cgX
+iD8DBQFDQxm6gIKl8Uu19MoRAgjEAJ4yFDMXw2hBsbEZpUArv+U0KRTL9wCbB5kn
+JVWtG/4fY8TJ1dhj2pU/0x4=
+=sUZ+
 -----END PGP SIGNATURE-----
