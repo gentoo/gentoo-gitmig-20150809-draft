@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 00705e9c967054e0db107272a92ef82a fluidsynth-1.0.6.ebuild 1632
 MD5 b1ec0b159ee4b09353cd22add80ddbc4 fluidsynth-1.0.3.ebuild 1649
 MD5 4c8fbc12d12848250b73b2c72860ffcd fluidsynth-1.0.5.ebuild 1606
 MD5 8584c6baa0df131151da18bb2904afad ChangeLog 2898
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 c1870b0eef4d2331c692f1206a55ac6d files/1.0.3-nonx86.patch 215
-MD5 ff3d9256f0b85633e9c7be266e877937 files/fluidsynth-1.0.6.amd64.patch 550
+MD5 7931c5e28d7e79e8b665caf0613cec38 files/fluidsynth-1.0.6.amd64.patch 625
 MD5 751ab7ab31fc6b9ccf266a683545b750 files/digest-fluidsynth-1.0.3 68
 MD5 7f3eace12f38e061b55b4b207bc65184 files/digest-fluidsynth-1.0.5 68
 MD5 fae86296e0239d950f90b2b6f170070a files/digest-fluidsynth-1.0.6 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0swNvpz1081QvMkRAt8LAJ9h9hUEVj22uIS3U9q2i8MW0JclbQCdGUUk
-XM0pmC47hxGhen10bVQAfxI=
-=TZWB
------END PGP SIGNATURE-----

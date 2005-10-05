@@ -1,5 +1,6 @@
---- fluidsynth-1.0.6/src/fluidsynth_priv.h      2005-06-11 16:40:01.000000000 -0500
-+++ fluidsynth-1.0.6-new/src/fluidsynth_priv.h  2005-07-06 00:38:10.000000000 -0500
+diff -Naur fluidsynth-1.0.6.orig/src/fluidsynth_priv.h fluidsynth-1.0.6/src/fluidsynth_priv.h
+--- fluidsynth-1.0.6.orig/src/fluidsynth_priv.h	2005-06-12 06:40:01.000000000 +0900
++++ fluidsynth-1.0.6/src/fluidsynth_priv.h	2005-10-06 00:22:28.000000000 +0900
 @@ -285,7 +285,12 @@
   * As soon as proper alignment is supported by the compiler, this
   * can be removed.
@@ -10,6 +11,6 @@
 +#else
 +#define FLUID_ALIGN16BYTE(ptr) ptr
 +#endif
-
+ 
  #if WITH_FTS
  #define FLUID_PRINTF                 post
