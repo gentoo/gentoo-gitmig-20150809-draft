@@ -1,0 +1,601 @@
+# patch to fix the examples makefiles such that "make test" will run
+# out of the box 
+
+diff -Naur charm-5.9/examples/ampi/Cjacobi3D/Makefile charm-5.9-backup/examples/ampi/Cjacobi3D/Makefile
+--- charm-5.9/examples/ampi/Cjacobi3D/Makefile	2005-04-05 23:55:15.000000000 +0000
++++ charm-5.9-backup/examples/ampi/Cjacobi3D/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ ampi: jacobi
+ 
+diff -Naur charm-5.9/examples/ampi/alltoall/Makefile charm-5.9-backup/examples/ampi/alltoall/Makefile
+--- charm-5.9/examples/ampi/alltoall/Makefile	2005-04-01 17:02:57.000000000 +0000
++++ charm-5.9-backup/examples/ampi/alltoall/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,5 +1,5 @@
+ OPTS = -O3
+-CHARMC = ../../../bin/charmc -language ampi
++CHARMC=/usr/bin/charmc -language ampi
+ MPICC = mpicc
+ 
+ all: alltoall
+diff -Naur charm-5.9/examples/ampi/creduce/Makefile charm-5.9-backup/examples/ampi/creduce/Makefile
+--- charm-5.9/examples/ampi/creduce/Makefile	2004-10-24 05:56:26.000000000 +0000
++++ charm-5.9-backup/examples/ampi/creduce/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ ampi: test.C
+ 	$(CHARMC) -c test.C
+diff -Naur charm-5.9/examples/ampi/pingpong/Makefile charm-5.9-backup/examples/ampi/pingpong/Makefile
+--- charm-5.9/examples/ampi/pingpong/Makefile	2005-04-28 16:36:27.000000000 +0000
++++ charm-5.9-backup/examples/ampi/pingpong/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,5 +1,5 @@
+ OPTS=-O3 
+-CHARMC=../../../bin/charmc -language ampi $(OPTS)
++CHARMC=/usr/bin/charmc -language ampi $(OPTS)
+ MPICC=mpicc $(OPTS)
+ 
+ #all : pingpong-2way.c
+diff -Naur charm-5.9/examples/bigsim/emulator/Makefile charm-5.9-backup/examples/bigsim/emulator/Makefile
+--- charm-5.9/examples/bigsim/emulator/Makefile	2005-04-09 07:10:17.000000000 +0000
++++ charm-5.9-backup/examples/bigsim/emulator/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ all: jacobi3D maxReduce prime ping octo line ring
+ 	cd littleMD; $(MAKE)
+diff -Naur charm-5.9/examples/bigsim/sdag/jacobi-no-redn/Makefile charm-5.9-backup/examples/bigsim/sdag/jacobi-no-redn/Makefile
+--- charm-5.9/examples/bigsim/sdag/jacobi-no-redn/Makefile	2004-10-26 15:03:53.000000000 +0000
++++ charm-5.9-backup/examples/bigsim/sdag/jacobi-no-redn/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,5 +1,5 @@
+ OPTS=-g
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ all: jacobi
+ 
+diff -Naur charm-5.9/examples/bigsim/tools/loadlog/Makefile charm-5.9-backup/examples/bigsim/tools/loadlog/Makefile
+--- charm-5.9/examples/bigsim/tools/loadlog/Makefile	2005-05-28 06:14:38.000000000 +0000
++++ charm-5.9-backup/examples/bigsim/tools/loadlog/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ loadlog: loadlog.o
+ 	$(CHARMC) -seq -o loadlog loadlog.o -lconv-bluegene-logs -lconv-util -lblue-standalone -language c++
+diff -Naur charm-5.9/examples/charm++/RedExample/Makefile charm-5.9-backup/examples/charm++/RedExample/Makefile
+--- charm-5.9/examples/charm++/RedExample/Makefile	2004-10-24 05:55:27.000000000 +0000
++++ charm-5.9-backup/examples/charm++/RedExample/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS) $(MOPTS) 
++CHARMC=/usr/bin/charmc $(OPTS) $(MOPTS) 
+ 
+ 
+ OBJS = RedExample.o
+@@ -19,7 +19,7 @@
+ 	$(CHARMC) -c RedExample.C
+ 
+ test: all
+-	./charmrun ./RedExample 20 4.5 10.3 +p4
++	./charmrun ++local ./RedExample 20 4.5 10.3 +p4
+ 
+ bgtest: all
+-	./charmrun ./RedExample 20 4.5 10.3 +p4 +x2 +y2 +z2
++	./charmrun ++local ./RedExample 20 4.5 10.3 +p4 +x2 +y2 +z2
+diff -Naur charm-5.9/examples/charm++/hello/1darray/Makefile charm-5.9-backup/examples/charm++/hello/1darray/Makefile
+--- charm-5.9/examples/charm++/hello/1darray/Makefile	2004-10-24 05:55:27.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/1darray/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4 10
++	./charmrun ++local hello +p4 10
+ 
+ bgtest: all
+-	./charmrun hello +p4 10 +x2 +y2 +z1
++	./charmrun ++local hello +p4 10 +x2 +y2 +z1
+diff -Naur charm-5.9/examples/charm++/hello/3darray/Makefile charm-5.9-backup/examples/charm++/hello/3darray/Makefile
+--- charm-5.9/examples/charm++/hello/3darray/Makefile	2004-10-24 21:13:14.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/3darray/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4 10
++	./charmrun ++local hello +p4 10
+ 
+ bgtest: all
+-	./charmrun hello +p4 10 +x2 +y2 +z2
++	./charmrun ++local hello +p4 10 +x2 +y2 +z2
+diff -Naur charm-5.9/examples/charm++/hello/darray/Makefile charm-5.9-backup/examples/charm++/hello/darray/Makefile
+--- charm-5.9/examples/charm++/hello/darray/Makefile	2004-10-24 21:13:14.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/darray/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p2 10
++	./charmrun ++local hello +p2 10
+ 
+ bgtest: all
+-	./charmrun hello +p2 10 +x2 +y2 +z1
++	./charmrun ++local hello +p2 10 +x2 +y2 +z1
+diff -Naur charm-5.9/examples/charm++/hello/dgroup/Makefile charm-5.9-backup/examples/charm++/hello/dgroup/Makefile
+--- charm-5.9/examples/charm++/hello/dgroup/Makefile	2004-10-24 21:13:14.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/dgroup/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p2
++	./charmrun ++local hello +p2
+ 
+ bgtest: all
+-	./charmrun hello +p2 +x2 +y2 +z1
++	./charmrun ++local hello +p2 +x2 +y2 +z1
+diff -Naur charm-5.9/examples/charm++/hello/dllarray/Makefile charm-5.9-backup/examples/charm++/hello/dllarray/Makefile
+--- charm-5.9/examples/charm++/hello/dllarray/Makefile	2004-09-29 19:20:20.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/dllarray/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,4 +17,4 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4 10
++	./charmrun ++local hello +p4 10
+diff -Naur charm-5.9/examples/charm++/hello/fancyarray/Makefile charm-5.9-backup/examples/charm++/hello/fancyarray/Makefile
+--- charm-5.9/examples/charm++/hello/fancyarray/Makefile	2004-10-24 21:13:14.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/fancyarray/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4 10
++	./charmrun ++local hello +p4 10
+ 
+ bgtest: all
+-	./charmrun hello +p4 10 +x2 +y2 +z2
++	./charmrun ++local hello +p4 10 +x2 +y2 +z2
+diff -Naur charm-5.9/examples/charm++/hello/group/Makefile charm-5.9-backup/examples/charm++/hello/group/Makefile
+--- charm-5.9/examples/charm++/hello/group/Makefile	2004-10-24 21:13:15.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/group/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4 10
++	./charmrun ++local hello +p4 10
+ 
+ bgtest: all
+-	./charmrun hello +p4 10 +x2 +y2 +z2
++	./charmrun ++local hello +p4 10 +x2 +y2 +z2
+diff -Naur charm-5.9/examples/charm++/hello/sdag/Makefile charm-5.9-backup/examples/charm++/hello/sdag/Makefile
+--- charm-5.9/examples/charm++/hello/sdag/Makefile	2004-10-24 21:13:15.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/sdag/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4
++	./charmrun ++local hello +p4
+ 
+ bgtest: all
+-	./charmrun hello +p4 +x2 +y2 +z2
++	./charmrun ++local hello +p4 +x2 +y2 +z2
+diff -Naur charm-5.9/examples/charm++/hello/stl_array/Makefile charm-5.9-backup/examples/charm++/hello/stl_array/Makefile
+--- charm-5.9/examples/charm++/hello/stl_array/Makefile	2004-10-24 21:13:15.000000000 +0000
++++ charm-5.9-backup/examples/charm++/hello/stl_array/Makefile	2005-09-27 03:27:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ OBJS = hello.o
+ 
+@@ -17,7 +17,7 @@
+ 	$(CHARMC) -c hello.C
+ 
+ test: all
+-	./charmrun hello +p4 10
++	./charmrun ++local hello +p4 10
+ 
+ bgtest: all
+-	./charmrun hello +p4 10 +x2 +y2 +z2
++	./charmrun ++local hello +p4 10 +x2 +y2 +z2
+diff -Naur charm-5.9/examples/charm++/integrate/Makefile charm-5.9-backup/examples/charm++/integrate/Makefile
+--- charm-5.9/examples/charm++/integrate/Makefile	2004-10-24 05:55:27.000000000 +0000
++++ charm-5.9-backup/examples/charm++/integrate/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm: pgm.o
+ 	$(CHARMC) pgm.o  -o pgm -language charm++
+@@ -10,7 +10,7 @@
+ 	rm -f pgm *.o conv-host *.decl.h *.def.h *~ charmrun
+ 
+ test: pgm
+-	./charmrun pgm +p4 100 5
++	./charmrun ++local pgm +p4 100 5
+ 
+ bgtest: pgm
+-	./charmrun pgm +p4 100 5 +x2 +y2 +z1
++	./charmrun ++local pgm +p4 100 5 +x2 +y2 +z1
+diff -Naur charm-5.9/examples/charm++/integrate2/Makefile charm-5.9-backup/examples/charm++/integrate2/Makefile
+--- charm-5.9/examples/charm++/integrate2/Makefile	2004-11-23 05:58:52.000000000 +0000
++++ charm-5.9-backup/examples/charm++/integrate2/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm: pgm.o
+ 	$(CHARMC) pgm.o  -o pgm -language charm++
+@@ -13,8 +13,8 @@
+ 	rm -f pgm *.o conv-host *.decl.h *.def.h *~ charmrun
+ 
+ test: pgm
+-	./charmrun ./pgm +p2 1000 10
++	./charmrun ++local ./pgm +p2 1000 10
+ 
+ bgtest: pgm
+-	./charmrun ./pgm +p2 1000 10 +x2 +y2 +z1
++	./charmrun ++local ./pgm +p2 1000 10 +x2 +y2 +z1
+ 
+diff -Naur charm-5.9/examples/charm++/integrateArray/Makefile charm-5.9-backup/examples/charm++/integrateArray/Makefile
+--- charm-5.9/examples/charm++/integrateArray/Makefile	2005-02-07 19:39:19.000000000 +0000
++++ charm-5.9-backup/examples/charm++/integrateArray/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,15 +1,15 @@
+ # modify the path of CHARMC
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm: pgm.o
+ 	$(CHARMC) pgm.o  -o pgm -language charm++
+ 
+ 
+ test: pgm
+-	./charmrun +p4 pgm 1000000 100
++	./charmrun ++local +p4 pgm 1000000 100
+ 
+ bgtest: pgm
+-	./charmrun +p4 pgm 1000000 100 +x2 +y2 +z2
++	./charmrun ++local +p4 pgm 1000000 100 +x2 +y2 +z2
+ 
+ 
+ # compile program with trace projections - performance trace library
+diff -Naur charm-5.9/examples/charm++/piArray/Makefile charm-5.9-backup/examples/charm++/piArray/Makefile
+--- charm-5.9/examples/charm++/piArray/Makefile	2005-02-07 19:39:19.000000000 +0000
++++ charm-5.9-backup/examples/charm++/piArray/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,13 +1,13 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm: pgm.o
+ 	$(CHARMC) pgm.o  -o pgm -language charm++
+ 
+ test: pgm
+-	./charmrun +p4 pgm 100000 100
++	./charmrun ++local +p4 pgm 100000 100
+ 
+ bgtest: pgm
+-	./charmrun +p4 pgm 100000 100 +x2 +y2 +z1
++	./charmrun ++local +p4 pgm 100000 100 +x2 +y2 +z1
+ 
+ pgm.o : pgm.C pgm.h pgm.decl.h
+ 	$(CHARMC) -c pgm.C
+diff -Naur charm-5.9/examples/charm++/queens/Makefile charm-5.9-backup/examples/charm++/queens/Makefile
+--- charm-5.9/examples/charm++/queens/Makefile	2004-10-24 05:55:27.000000000 +0000
++++ charm-5.9-backup/examples/charm++/queens/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm:   counter.o pgm.o
+ 	$(CHARMC) counter.o pgm.o -o pgm -language charm++ 
+@@ -25,8 +25,8 @@
+ 
+ 
+ test: pgm
+-	./charmrun ./pgm +p4 10 7
++	./charmrun ++local ./pgm +p4 10 7
+ 
+ bgtest: pgm
+-	./charmrun ./pgm +p4 10 7 +x2 +y2 +z2
++	./charmrun ++local ./pgm +p4 10 7 +x2 +y2 +z2
+ 
+diff -Naur charm-5.9/examples/charm++/ring/Makefile charm-5.9-backup/examples/charm++/ring/Makefile
+--- charm-5.9/examples/charm++/ring/Makefile	2004-10-24 06:07:28.000000000 +0000
++++ charm-5.9-backup/examples/charm++/ring/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm:  ring.o
+ 	$(CHARMC) ring.o  -o pgm -language charm++
+@@ -7,10 +7,10 @@
+ 	$(CHARMC) -c ring.ci ring.C
+ 
+ test: pgm
+-	./charmrun +p4 pgm
++	./charmrun ++local +p4 pgm
+ 
+ bgtest: pgm
+-	./charmrun +p4 pgm +x2 +y2 +z2
++	./charmrun ++local +p4 pgm +x2 +y2 +z2
+ 
+ clean:
+ 	rm -f conv-host pgm *.def.h *.decl.h *.o *~ charmrun
+diff -Naur charm-5.9/examples/charm++/rings/Makefile charm-5.9-backup/examples/charm++/rings/Makefile
+--- charm-5.9/examples/charm++/rings/Makefile	2004-10-24 06:07:28.000000000 +0000
++++ charm-5.9-backup/examples/charm++/rings/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm:  rings.o
+ 	$(CHARMC) rings.o  -o pgm -language charm++
+@@ -7,10 +7,10 @@
+ 	$(CHARMC) -c rings.ci rings.C
+ 
+ test: pgm
+-	./charmrun +p4 pgm
++	./charmrun ++local +p4 pgm
+ 
+ bgtest: pgm
+-	./charmrun +p4 pgm +x2 +y2 +z2
++	./charmrun ++local +p4 pgm +x2 +y2 +z2
+ 
+ clean:
+ 	rm -f conv-host pgm *.o *.decl.h *.def.h *~ charmrun
+diff -Naur charm-5.9/examples/charm++/speeds/Makefile charm-5.9-backup/examples/charm++/speeds/Makefile
+--- charm-5.9/examples/charm++/speeds/Makefile	2004-10-24 06:07:29.000000000 +0000
++++ charm-5.9-backup/examples/charm++/speeds/Makefile	2005-09-27 03:27:21.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pgm:  speed.o
+ 	$(CHARMC) speed.o  -o pgm -language charm++
+@@ -7,10 +7,10 @@
+ 	$(CHARMC) -c speed.ci speed.C
+ 
+ test: pgm
+-	./charmrun +p4 pgm 8
++	./charmrun ++local +p4 pgm 8
+ 
+ bgtest: pgm
+-	./charmrun +p4 pgm 8 +x2 +y2 +z1
++	./charmrun ++local +p4 pgm 8 +x2 +y2 +z1
+ 
+ clean:
+ 	rm -f conv-host pgm *.def.h *.decl.h *.o *~ charmrun
+diff -Naur charm-5.9/examples/converse/ccstest/Makefile charm-5.9-backup/examples/converse/ccstest/Makefile
+--- charm-5.9/examples/converse/ccstest/Makefile	2005-02-02 17:03:16.000000000 +0000
++++ charm-5.9-backup/examples/converse/ccstest/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,5 +1,4 @@
+-CHARMDIR=../../..
+-CHARMC=$(CHARMDIR)/bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ all: server client
+ 
+@@ -7,13 +6,13 @@
+ 	$(CHARMC) -o $@ server.o -language converse++ 
+ 
+ client: client.o
+-	g++ -o $@ client.o -I$(CHARMDIR)/include -L$(CHARMDIR)/lib -lccs-client
++	g++ -o $@ client.o -I/usr/include/charm-5.9 -L/usr/lib -lccs-client
+ 
+ server.o: server.C
+ 	$(CHARMC) -c server.C -language converse++
+ 
+ client.o: client.C
+-	g++ -c client.C -I$(CHARMDIR)/include
++	g++ -c client.C -I/usr/include/charm-5.9
+ 
+ clean:
+ 	rm -f client server *.o conv-host charmrun
+diff -Naur charm-5.9/examples/converse/pingpong/Makefile charm-5.9-backup/examples/converse/pingpong/Makefile
+--- charm-5.9/examples/converse/pingpong/Makefile	2003-08-03 04:24:46.000000000 +0000
++++ charm-5.9-backup/examples/converse/pingpong/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ 
+ pingpong: pingpong.o
+ 	$(CHARMC) -language converse++ -o pingpong pingpong.o
+diff -Naur charm-5.9/examples/fem/crack2D/Makefile charm-5.9-backup/examples/fem/crack2D/Makefile
+--- charm-5.9/examples/fem/crack2D/Makefile	2004-10-24 05:59:12.000000000 +0000
++++ charm-5.9-backup/examples/fem/crack2D/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS)
++CHARMC=/usr/bin/charmc $(OPTS)
+ COMMON_OBJS=	config.o mesh.o node.o \
+ 	lst_NL.o lst_coh2.o
+ FEM_OBJS=fem_main.o fem_mesh.o $(COMMON_OBJS)
+diff -Naur charm-5.9/examples/fem/matrix/Makefile charm-5.9-backup/examples/fem/matrix/Makefile
+--- charm-5.9/examples/fem/matrix/Makefile	2004-10-24 05:59:12.000000000 +0000
++++ charm-5.9-backup/examples/fem/matrix/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS) 
++CHARMC=/usr/bin/charmc $(OPTS) 
+ 
+ all: pgm 
+ 
+diff -Naur charm-5.9/examples/fem/simple2D/Makefile charm-5.9-backup/examples/fem/simple2D/Makefile
+--- charm-5.9/examples/fem/simple2D/Makefile	2004-10-24 05:54:33.000000000 +0000
++++ charm-5.9-backup/examples/fem/simple2D/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -1,4 +1,4 @@
+-CHARMC=../../../bin/charmc $(OPTS) 
++CHARMC=/usr/bin/charmc $(OPTS) 
+ 
+ all: pgm
+ 
+diff -Naur charm-5.9/examples/multiphaseSharedArrays/Makefile_common charm-5.9-backup/examples/multiphaseSharedArrays/Makefile_common
+--- charm-5.9/examples/multiphaseSharedArrays/Makefile_common	2004-10-13 02:58:08.000000000 +0000
++++ charm-5.9-backup/examples/multiphaseSharedArrays/Makefile_common	2005-09-27 03:27:08.000000000 +0000
+@@ -3,7 +3,7 @@
+ 
+ OPTS=
+ CDIR=../../../..
+-CHARMC=$(CDIR)/bin/charmc -language charm++ $(OPTS)
++CHARMC=/usr/bin/charmc -language charm++ $(OPTS)
+ 
+ # Rules to convert .ci to .decl.h and .def.h
+ .SUFFIXES:
+diff -Naur charm-5.9/examples/pose/ASIM/Makefile charm-5.9-backup/examples/pose/ASIM/Makefile
+--- charm-5.9/examples/pose/ASIM/Makefile	2004-10-22 04:38:26.000000000 +0000
++++ charm-5.9-backup/examples/pose/ASIM/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -12,8 +12,8 @@
+ OPTS=-O#-DCMK_OPTIMIZE=1 -DCMK_MEMCHECKS_OFF=1
+ 
+ CHARMBASE=../../..
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin
++CHARMINC=/usr/include/charm-5.9
+ 
+ CHARMC=$(CHARMBIN)/charmc -I$(CHARMINC)/pose $(OPTS)
+ 
+diff -Naur charm-5.9/examples/pose/BigNetSim/Makefile charm-5.9-backup/examples/pose/BigNetSim/Makefile
+--- charm-5.9/examples/pose/BigNetSim/Makefile	2004-10-17 22:48:10.000000000 +0000
++++ charm-5.9-backup/examples/pose/BigNetSim/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -16,8 +16,8 @@
+ 
+ CHARMBASE=../../../
+ #CHARMBASE=/expand8/home/gzheng/old/charm-6-8/net-linux/
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin
++CHARMINC=/usr/include/charm-5.9
+ 
+ ifeq ($(SEQUENTIAL),1)
+ CHARMC=$(CHARMBIN)/charmc -I$(CHARMINC)/pose $(OPTS) -DSEQUENTIAL_POSE=1
+diff -Naur charm-5.9/examples/pose/ChunkSim/Makefile charm-5.9-backup/examples/pose/ChunkSim/Makefile
+--- charm-5.9/examples/pose/ChunkSim/Makefile	2004-10-12 17:12:26.000000000 +0000
++++ charm-5.9-backup/examples/pose/ChunkSim/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -12,8 +12,8 @@
+ OPTS=-O#-DCMK_OPTIMIZE=1 -DCMK_MEMCHECKS_OFF=1
+ 
+ CHARMBASE=../../../
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin
++CHARMINC=/usr/include/charm-5.9
+ 
+ CHARMC=$(CHARMBIN)/charmc -I$(CHARMINC)/pose $(OPTS)
+ 
+@@ -109,4 +109,4 @@
+ 	$(CHARMBIN)/etrans.pl Worker
+ 
+ test:
+-	./pgm 1000 10 1 RANDOM SPARSE 50 -gf 344
+\ No newline at end of file
++	./pgm 1000 10 1 RANDOM SPARSE 50 -gf 344
+diff -Naur charm-5.9/examples/pose/HiSim/Makefile.common charm-5.9-backup/examples/pose/HiSim/Makefile.common
+--- charm-5.9/examples/pose/HiSim/Makefile.common	2004-11-02 07:29:40.000000000 +0000
++++ charm-5.9-backup/examples/pose/HiSim/Makefile.common	2005-09-27 03:27:08.000000000 +0000
+@@ -1,8 +1,8 @@
+ 
+ CHARMBASE=../../../../
+ #CHARMBASE=/expand8/home/gzheng/tmp/pose/charm/net-linux
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin
++CHARMINC=/usr/include/charm-5.9
+ ETRANS=$(CHARMBIN)/etrans.pl
+ OPTS=-g
+ 
+diff -Naur charm-5.9/examples/pose/LBSim/Makefile charm-5.9-backup/examples/pose/LBSim/Makefile
+--- charm-5.9/examples/pose/LBSim/Makefile	2004-11-04 04:30:45.000000000 +0000
++++ charm-5.9-backup/examples/pose/LBSim/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -12,8 +12,8 @@
+ OPTS=-O#-DCMK_OPTIMIZE=1 -DCMK_MEMCHECKS_OFF=1
+ 
+ CHARMBASE=../../../
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin
++CHARMINC=/usr/include/charm-5.9
+ 
+ CHARMC=$(CHARMBIN)/charmc -I$(CHARMINC)/pose $(OPTS)
+ 
+diff -Naur charm-5.9/examples/pose/Ring/Makefile charm-5.9-backup/examples/pose/Ring/Makefile
+--- charm-5.9/examples/pose/Ring/Makefile	2005-02-08 18:58:05.000000000 +0000
++++ charm-5.9-backup/examples/pose/Ring/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -12,8 +12,8 @@
+ OPTS=-O#-DCMK_OPTIMIZE=1 -DCMK_MEMCHECKS_OFF=1
+ 
+ CHARMBASE=../../..
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin/
++CHARMINC=/usr/include/charm-5.9
+ 
+ CHARMC=$(CHARMBIN)/charmc -I$(CHARMINC)/pose $(OPTS)
+ 
+diff -Naur charm-5.9/examples/pose/SimBenchmark/Makefile charm-5.9-backup/examples/pose/SimBenchmark/Makefile
+--- charm-5.9/examples/pose/SimBenchmark/Makefile	2005-03-17 22:31:41.000000000 +0000
++++ charm-5.9-backup/examples/pose/SimBenchmark/Makefile	2005-09-27 03:27:08.000000000 +0000
+@@ -12,8 +12,8 @@
+ OPTS=-O#-DCMK_OPTIMIZE=1 -DCMK_MEMCHECKS_OFF=1
+ 
+ CHARMBASE=../../..
+-CHARMBIN=$(CHARMBASE)/bin
+-CHARMINC=$(CHARMBASE)/include
++CHARMBIN=/usr/bin
++CHARMINC=/usr/include/charm-5.9
+ 
+ CHARMC=$(CHARMBIN)/charmc -I$(CHARMINC)/pose $(OPTS)
+ 
