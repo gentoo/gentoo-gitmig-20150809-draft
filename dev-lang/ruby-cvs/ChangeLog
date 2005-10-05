@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby-cvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.18 2005/04/22 20:53:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.19 2005/10/05 15:18:01 caleb Exp $
+
+  05 Oct 2005; Caleb Tennis <caleb@gentoo.org> -ruby-cvs-1.8.2-r1.ebuild:
+  Remove 1.8 cvs as it's stable ruby now
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> ruby-cvs-1.8.2-r1.ebuild,
   ruby-cvs-1.9.0-r2.ebuild:
