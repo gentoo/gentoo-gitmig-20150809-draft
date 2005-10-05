@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/quixml
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.1 2005/10/05 18:59:10 killerfox Exp $
+
+*quixml-0.2.1 (05 Oct 2005)
+
+  05 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> +metadata.xml,
+  +quixml-0.2.1.ebuild:
+  Initial import. ebuild written by myself
+
