@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.2 2005/10/05 12:46:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.15.ebuild,v 1.3 2005/10/05 12:48:45 matsuu Exp $
 
 IUSE="X alsa esd fam fftw gsl gtk guile jack ladspa motif nls opengl ruby"
+
+inherit multilib
 
 S="${WORKDIR}/${P/\.*//}"
 DESCRIPTION="Snd is a sound editor"
