@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e98d5da2f2d2160298feba7f0d369483 ChangeLog 889
-MD5 c18da1a6f9e62d6b1f846a207dfd13ba knob-1.2.ebuild 475
+MD5 dbad4c0791d33b8066a7500c811ea12a knob-1.2-r1.ebuild 584
+MD5 8d09f07e1b75dd42f55d859acfb8ab99 ChangeLog 1004
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 84476a5f12c6735b58e510e227d9bd1a knob-1.2-r1.ebuild 560
-MD5 e19a414c89ffe94dfd4cae80e1da4248 files/knob-1.2-fPIC.patch 375
 MD5 a56cfa065796d6825807406e890476e5 files/digest-knob-1.2-r1 60
-MD5 a56cfa065796d6825807406e890476e5 files/digest-knob-1.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwLZrugEuf3OQ0akRAhQYAJ9QFZXgaa468KZhntLsMaNnHbuHvgCfZjTv
-i2OBhEgg2kNpWxykWODkmug=
-=lUza
------END PGP SIGNATURE-----
+MD5 e19a414c89ffe94dfd4cae80e1da4248 files/knob-1.2-fPIC.patch 375
