@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.9 2005/10/02 23:01:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.10 2005/10/05 17:27:33 uberlord Exp $
+
+  05 Oct 2005; Roy Marples <uberlord@gentoo.org> ftpbase-0.00.ebuild:
+  Use "egethome ftp" instead of greping and cuting /etc/passwd.
+  This allows us to work on other platforms with a minimum of fuss.
 
   02 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> ftpbase-0.00.ebuild:
   Stable on sh.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.11 2005/10/02 23:01:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.12 2005/10/05 17:27:33 uberlord Exp $
 
 inherit eutils pam
 
@@ -83,11 +83,11 @@ pkg_postinst() {
 	# Install manually using install -d until bug #9849 is solved.
 	# This means that the home directory will not be removed when we uninstall
 	# if it's empty.
-	local homedir="${ROOT}$( egetent passwd ftp | cut -d: -f6 )"
+	local homedir=$( egethome ftp )
 	if [[ ! -d ${homedir} ]]; then
 		einfo "Creating home directory for ftp user"
 		einfo "   ${homedir}"
 		install -d "${homedir}" \
-	    || ewarn "  can't create ${homedir}"
+	    	|| ewarn "  can't create ${homedir}"
 	fi
 }
