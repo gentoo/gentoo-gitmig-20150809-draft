@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.41 2005/10/05 01:43:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r1.ebuild,v 1.42 2005/10/05 03:18:26 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -666,11 +666,6 @@ setup_flags() {
 
 	if [[ -n ${CTARGET_OPT} && ${CBUILD} == ${CHOST} ]] && ! is_crosscompile; then
 		CBUILD_OPT=${CTARGET_OPT}
-	fi
-
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] ; then
-		# broken in 3.4.x
-		replace-flags -march=pentium-m -mtune=pentium3
 	fi
 
 	if $(tc-getCC ${CTARGET}) -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
