@@ -1,37 +1,37 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3318548ad5a620ebd3b5405ef77100fd evolution-1.2.4.ebuild 6254
-MD5 755ba3764519e16940938c27a7e132a3 evolution-2.4.0.ebuild 6417
-MD5 249e276509b42a3954b5935626218dab evolution-2.0.4.ebuild 4093
-MD5 b2bf22eca079cbb39f39c374cb306715 evolution-2.0.3-r2.ebuild 4206
-MD5 3c3a045e22357b7bbb98e000ebf161c1 evolution-2.2.3-r3.ebuild 6063
 MD5 fea4d6fae865658b389bf603c475e742 ChangeLog 30775
-MD5 6ec9b6a7896b799d17a21c4edffd33c9 metadata.xml 272
-MD5 5c4d7df6e3f38dbbbcf3ed981ac2b62b evolution-2.4.1.ebuild 6384
-MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
-MD5 015ecd719e11c1170e7f41b3490f52f7 files/evolution-2-CAN-2005-0102.patch 467
-MD5 35dfdb3422f49ada8891285f5104d29c files/evolution-2.3.8-gentoo.patch 660
-MD5 37b21b99689c8ad1b67df7ed2425e6cc files/evolution-2.2.3-credits.patch 1838
-MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
-MD5 b5eaa2e30f75b8ec2df29cfd90a1e1f0 files/evolution-2.3.7-configure_plugins.patch 3010
-MD5 2381d584d4a3104a6c491b21ecc0bc47 files/evolution_mail-account-gui_authtype.diff 737
-MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
-MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3-r2 70
-MD5 5a8c8a5e4d082901feeb677b0e68cb2c files/digest-evolution-2.2.3-r3 70
+MD5 3318548ad5a620ebd3b5405ef77100fd evolution-1.2.4.ebuild 6254
+MD5 b2bf22eca079cbb39f39c374cb306715 evolution-2.0.3-r2.ebuild 4206
+MD5 249e276509b42a3954b5935626218dab evolution-2.0.4.ebuild 4093
+MD5 3c3a045e22357b7bbb98e000ebf161c1 evolution-2.2.3-r3.ebuild 6063
+MD5 755ba3764519e16940938c27a7e132a3 evolution-2.4.0.ebuild 6417
+MD5 b8b6e85957f1c53b8c75270fd6c9987b evolution-2.4.1.ebuild 6384
 MD5 5d430637760a0c93974ed91b72a16438 files/digest-evolution-1.2.4 131
+MD5 988789d67b6d0e09eea25ba441cda871 files/digest-evolution-2.0.3-r2 70
 MD5 75a9be02c12e91b5ddedbdfd11c07e03 files/digest-evolution-2.0.4 70
+MD5 5a8c8a5e4d082901feeb677b0e68cb2c files/digest-evolution-2.2.3-r3 70
 MD5 ff6f734b2038ba0c6577ca271d3e7718 files/digest-evolution-2.4.0 70
 MD5 df16d9e1a97c7c51943e481671bbe509 files/digest-evolution-2.4.1 70
-MD5 aa077f2d45a8f2def9094b367f1eb60e files/evolution-2.2.3-mail_notify.patch 570
-MD5 a71bb4ab71d2e4cc5e02649d87f36e12 files/evolution-2.2.3-configure_plugins.patch 2733
+MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
 MD5 8909b7f2d3483d55036f21ca2780e4a3 files/evolution-1.1.90-sharedldap.patch 370
+MD5 f44bc5e363c1f976a7a72676886b9d13 files/evolution-1.1.90-subversion.patch 470
+MD5 015ecd719e11c1170e7f41b3490f52f7 files/evolution-2-CAN-2005-0102.patch 467
+MD5 7b8c1cc2fd2428815184d471af4bb3bf files/evolution-2.0.3-gentoo_etc_services.patch 1662
+MD5 a71bb4ab71d2e4cc5e02649d87f36e12 files/evolution-2.2.3-configure_plugins.patch 2733
+MD5 37b21b99689c8ad1b67df7ed2425e6cc files/evolution-2.2.3-credits.patch 1838
 MD5 388d698898d1346cb7007da471abed11 files/evolution-2.2.3-linking-fix.patch 1491
+MD5 aa077f2d45a8f2def9094b367f1eb60e files/evolution-2.2.3-mail_notify.patch 570
+MD5 b5eaa2e30f75b8ec2df29cfd90a1e1f0 files/evolution-2.3.7-configure_plugins.patch 3010
+MD5 35dfdb3422f49ada8891285f5104d29c files/evolution-2.3.8-gentoo.patch 660
 MD5 56a0d793e598c8e0c91ec5ab0e2a4e4b files/evolution.formatstring.patch 2146
+MD5 2381d584d4a3104a6c491b21ecc0bc47 files/evolution_mail-account-gui_authtype.diff 737
+MD5 6ec9b6a7896b799d17a21c4edffd33c9 metadata.xml 272
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQnukomPajV0RnrERArEWAJ4sPMy4K2QmZ9EvY9Dsv666MEF5fwCeIgjf
-1Ab4HkLK32sXut/c3IjooTo=
-=cK1Y
+iD8DBQFDQx8WI1lqEGTUzyQRApQbAJ9AK6+5ib1wbi/3ATYiDPCBB9G1lACgpD/w
+rYeVsJwnuKkCGl+PfpgAHFY=
+=9EvP
 -----END PGP SIGNATURE-----
