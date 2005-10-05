@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.50 2005/09/04 23:23:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.51 2005/10/05 21:43:08 blubb Exp $
+
+  05 Oct 2005; Simon Stelling <blubb@gentoo.org> anjuta-1.2.4.ebuild:
+  make it adhere multilib-strict; bug 97271
 
   04 Sep 2005; Jason Wever <weeve@gentoo.org> anjuta-1.2.4.ebuild:
   Stable on SPARC.
