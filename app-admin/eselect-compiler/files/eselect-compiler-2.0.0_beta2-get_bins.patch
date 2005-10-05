@@ -1,0 +1,17 @@
+Index: compiler.eselect.in
+===================================================================
+--- a/src/profile-manager/compiler.eselect.in	(revision 203)
++++ a/src/profile-manager/compiler.eselect.in	(working copy)
+@@ -90,9 +90,10 @@
+ 
+ 	local i=0
+ 	for file in ${dir}/* ; do
+-		basefile="$(basename ${file})"
++		basefile=$(basename ${file})
++		basefile=${basefile#${prefix}-}
+ 
+-		if [[ -x ${file} && ${basefile#${prefix}-} == ${basefile} ]] ; then
++		if [[ -x ${file} && ! -h ${file} ]] && ! has ${basefile} ${retval} ; then
+ 			if (( i == 0 )) ; then
+ 				(( i++ ))
+ 			else
