@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.1 2005/10/03 05:06:28 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.2 2005/10/05 02:32:22 eradicator Exp $
 
 inherit webapp depend.apache eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://viewcvs.sourceforge.net/"
 SRC_URI="mirror://gentoo/${PN}-${PDATE}.tar.bz2"
 
 LICENSE="viewcvs"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="cvsgraph enscript mod_python mysql standalone"
 
 want_apache

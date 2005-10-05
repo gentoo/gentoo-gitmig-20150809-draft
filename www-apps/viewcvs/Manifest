@@ -1,18 +1,28 @@
-MD5 e2e9bf810f09bd3bd77392e2e1ed2383 ChangeLog 7438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f988cf1eb860f34079022c267408f207 ChangeLog 7551
 MD5 fa8daabae86da3beefbc3ea1e5ccd42c metadata.xml 779
-MD5 de35d046cef5f9b95a5ddce9f2bf990d viewcvs-0.9.2_p20041207-r1.ebuild 2536
 MD5 60259d2075951e829e25d800b66e6e5b viewcvs-0.9.3.ebuild 1479
 MD5 1efa77758ff6f9f8fa039c77a4e4d032 viewcvs-1.0_pre20050523.ebuild 1523
 MD5 add81eb48bf3db049469feb65a64c0dd viewcvs-0.9.4.ebuild 1513
-MD5 524fd70c52d3a112e9f7560f45a81ca5 viewcvs-1.0_pre20050929.ebuild 3302
-MD5 63be22bf657c7d52e524b1a74c92cf2c files/digest-viewcvs-1.0_pre20050523 69
+MD5 df580f4da3b565a5eb77cbeed0ff4eae viewcvs-1.0_pre20050929.ebuild 3311
+MD5 de35d046cef5f9b95a5ddce9f2bf990d viewcvs-0.9.2_p20041207-r1.ebuild 2536
 MD5 1ebd12b88a2c6a6964c0d02b5c82911a files/digest-viewcvs-0.9.3 65
-MD5 9777bfdf8cffc9f8a930dca991d05c11 files/postinstall-en.txt 354
-MD5 12fb198ba0e0736a29ee719e25ab44fb files/reconfig 962
-MD5 48783b2b9bd95be9a4eb1525a0bf708a files/digest-viewcvs-0.9.2_p20041207-r1 69
-MD5 550579a3a648e62d01ec4c3c3ee47327 files/viewcvs-CAN-2004-1062.patch 341
+MD5 63be22bf657c7d52e524b1a74c92cf2c files/digest-viewcvs-1.0_pre20050523 69
 MD5 26ecfea58fa51e62bc28985ff0f73048 files/digest-viewcvs-0.9.4 65
-MD5 8dd7c985d9b13ffa051e8f293e88ddb1 files/postinstall-new-en.txt 933
 MD5 6ad94993c3421b9b0413f3268e5f09b6 files/digest-viewcvs-1.0_pre20050929 69
+MD5 8dd7c985d9b13ffa051e8f293e88ddb1 files/postinstall-new-en.txt 933
 MD5 9b65df9cd8e1bae9bca4fcf9623396e7 files/viewcvs-mysql-4.0.sql 2495
 MD5 6260728f582a42a165dcf791a36b4825 files/viewcvs-mysql-4.1.sql 2422
+MD5 48783b2b9bd95be9a4eb1525a0bf708a files/digest-viewcvs-0.9.2_p20041207-r1 69
+MD5 9777bfdf8cffc9f8a930dca991d05c11 files/postinstall-en.txt 354
+MD5 12fb198ba0e0736a29ee719e25ab44fb files/reconfig 962
+MD5 550579a3a648e62d01ec4c3c3ee47327 files/viewcvs-CAN-2004-1062.patch 341
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDQztFOpjtAl+gMRURAueuAJ9q83ZXYHpGK0UBKXNZW5nzggjJowCgmZH3
+HpOIXxcZky4C2kYH6psfHW0=
+=HZ0Z
+-----END PGP SIGNATURE-----
