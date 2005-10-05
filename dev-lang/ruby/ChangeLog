@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.162 2005/10/05 15:14:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.163 2005/10/05 22:37:21 mr_bones_ Exp $
+
+  05 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ruby-1.6.8-20040728-20041024.diff,
+  +files/ruby-1.6.8-fix-x86_64.patch, +ruby-1.6.8-r12.ebuild:
+  resurrect ruby-1.6 until the deps are cleaned out first
 
   05 Oct 2005; Caleb Tennis <caleb@gentoo.org>
   -files/ruby-1.6.8-20040728-20041024.diff,
