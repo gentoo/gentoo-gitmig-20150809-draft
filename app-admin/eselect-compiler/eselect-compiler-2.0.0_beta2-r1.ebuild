@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta2.ebuild,v 1.3 2005/10/05 08:24:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta2-r1.ebuild,v 1.1 2005/10/05 09:08:08 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="Utility to configure the active toolchain compiler"
 HOMEPAGE="http://www.gentoo.org/"
@@ -18,10 +20,17 @@ IUSE=""
 
 RDEPEND="app-admin/eselect"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-ref.patch
+	epatch ${FILESDIR}/${P}-specs.patch
+}
+
 pkg_postinst() {
-	# Some toolchain.eclass installed confs on amd64 had chost instead of
-	# ctarget.
+	# Some toolchain.eclass installed confs aren't quite right
 	sed -i 's:chost:ctarget:g' ${ROOT}/etc/eselect/compiler/*
+	sed -i 's:spec=:specs=:g' ${ROOT}/etc/eselect/compiler/*
 
 	# Migrate from the old configs
 	if [[ ! -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
@@ -38,6 +47,9 @@ pkg_postinst() {
 	if rm -f ${ROOT}/etc/env.d/05gcc* &> /dev/null ; then
 		ewarn "You should source /etc/profile in your open shells."
 	fi
+
+	ewarn "Thanks for beta testing eselect-compiler.  If you have any problems,"
+	ewarn "please contact eradicator@gentoo.org."
 }
 
 src_install() {

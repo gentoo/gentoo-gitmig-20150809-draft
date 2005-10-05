@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 26ab8354ce0d692d3e94c5cb8cfdc15d ChangeLog 1215
-MD5 98e03aec8bef842f5c2eb3b44f7b12c2 eselect-compiler-2.0.0_beta2.ebuild 1439
-MD5 c7cf3a3617d90adfaacc7c2c012ddfb0 files/digest-eselect-compiler-2.0.0_beta2 79
+MD5 6e7b60299c7fb718fb0774be90f6c56d ChangeLog 1646
+MD5 5c1ff2c5d647220c1d8dc777eba12362 eselect-compiler-2.0.0_beta2-r1.ebuild 1731
+MD5 c7cf3a3617d90adfaacc7c2c012ddfb0 files/digest-eselect-compiler-2.0.0_beta2-r1 79
+MD5 381e44a2470aea23417bf589716517f0 files/eselect-compiler-2.0.0_beta2-ref.patch 836
+MD5 bbad47da67de57c3cf780c0d0ffed175 files/eselect-compiler-2.0.0_beta2-specs.patch 471
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQ43iOpjtAl+gMRURAgMWAJ982AmRiiX1Ve/uvojslmH1HDXHFwCfaek3
-A0AsrmsZT1WKlXVHXx09IWQ=
-=dW6C
+iD8DBQFDQ5gNOpjtAl+gMRURAi1/AKDUA06dDITt6ADVcJh376GD4mvmdwCgjtiY
+mkTRbW2M5jG3+beOVrhhD/Y=
+=sXvv
 -----END PGP SIGNATURE-----
