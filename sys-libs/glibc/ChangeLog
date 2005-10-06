@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.390 2005/09/28 23:57:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.391 2005/10/06 02:49:38 vapier Exp $
+
+*glibc-2.3.5-r2 (06 Oct 2005)
+
+  06 Oct 2005; Mike Frysinger <vapier@gentoo.org> +glibc-2.3.5-r2.ebuild:
+  Push out accumulated fixes and fix amd64 multilib error where
+  C{BUILD,TARGET}_OPT bled across compiles.
 
   28 Sep 2005; Mike Frysinger <vapier@gentoo.org> glibc-2.3.5-r1.ebuild:
   Add fix by Fredrik Tolf #86313.
