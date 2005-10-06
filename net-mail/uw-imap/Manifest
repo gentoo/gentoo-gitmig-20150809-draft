@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9a05288ecb9fada22fff84bf0c5962c uw-imap-2004a.ebuild 3292
 MD5 d1bc1618ec3314f4cc0ba36d64b63574 ChangeLog 11058
 MD5 2a95a847286c5b23cb291f923f75c6e0 uw-imap-2004c-r2.ebuild 4648
@@ -22,3 +25,10 @@ MD5 7fe0f2231e5e0d8b491a8c9780048ac3 files/uw-ipop3s.xinetd 469
 MD5 a0d3f290ad8a98968896a5315628d473 files/uw-imap.xinetd 491
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g 62
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDRXuqKRy60XGEcJIRAjlrAJ4uyKnycabvLi5Y9LJ9Q2sjSSbvVQCeLtWg
+b98YHxZvMNiJqzRHN0BNsvs=
+=97NS
+-----END PGP SIGNATURE-----
