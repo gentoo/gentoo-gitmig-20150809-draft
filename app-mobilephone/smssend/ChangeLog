@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/smssend
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.1 2005/05/15 19:49:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smssend/ChangeLog,v 1.2 2005/10/06 06:01:18 mrness Exp $
+
+  06 Oct 2005; Alin Nastac <mrness@gentoo.org> smssend-3.3.ebuild,
+  smssend-3.4.ebuild:
+  Remove COPYING and INSTALL from docs. Mark stable on x86.
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
   -smssend-3.2.ebuild:

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d5e03eca8a177d376073eb166d5eec2 smssend-3.4.ebuild 944
-MD5 53de284aadf874061b10a5aaf44e3711 smssend-3.3.ebuild 782
-MD5 a673936c41bcef726f0d4ef62aff013b ChangeLog 1696
+MD5 cea5c50860974402dc20e81b94bacd80 smssend-3.4.ebuild 936
+MD5 199f581f573d17168a4c1d09ecb53622 smssend-3.3.ebuild 783
+MD5 dc060265f422e1f435ead99b7fa79d15 ChangeLog 1846
 MD5 d40efbd929fb44aee56a7e39f32cdd76 metadata.xml 222
 MD5 0aca853e97a2597cfc64a9cb6d546cae files/smssend-3.4-verizon.diff 14249
 MD5 2ddd6d84e81318fb024189b2533b7800 files/digest-smssend-3.3 63
@@ -11,7 +11,7 @@ MD5 85e9b56fffa5b05a7a3a6acf4d89a920 files/digest-smssend-3.4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCh6fojiC39V7gKu0RAhRgAJ9fEHLcMza/0WfbwxwqPiHgiq2eWACg3HBT
-QDide3wUdXwzX0aNIxVV0Zk=
-=gLKu
+iD8DBQFDRL3FNSP4Vda7IdsRAs/+AJ9tkJ4w3Gxp0uQmhDOF3Qv88dNN6ACfYx9g
+9ToDBFpJTqKYbdNgyEZWmwQ=
+=XpK7
 -----END PGP SIGNATURE-----
