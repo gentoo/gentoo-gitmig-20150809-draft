@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.33.ebuild,v 1.11 2005/08/24 02:48:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.33.ebuild,v 1.12 2005/10/06 21:57:46 vapier Exp $
 
 inherit flag-o-matic
 
@@ -27,11 +27,12 @@ src_install() {
 	doman *.[58]
 	dodoc AUTHORS CHANGELOG NEWS README TODO WARNINGS
 	newdoc smartd.conf smartd.conf.example
+	docinto examplescripts
+	dodoc examplescripts/*
 
 	insinto /etc
 	doins smartd.conf
 
-	dodir /etc/init.d /etc/conf.d
-	newinitd ${FILESDIR}/smartd.rc smartd
-	newconfd ${FILESDIR}/smartd.confd smartd
+	newinitd "${FILESDIR}"/smartd.rc smartd
+	newconfd "${FILESDIR}"/smartd.confd smartd
 }
