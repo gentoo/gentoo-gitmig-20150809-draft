@@ -1,12 +1,22 @@
-MD5 d3b860c5004ed0f5fbc21ec0687c9bf0 metadata.xml 223
-MD5 25e86d3c164ebaf0e8b46ceef3c5f82e ChangeLog 1745
-MD5 f49ce9646920accff3ebb2316c36ded4 liboil-0.2.0.ebuild 800
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 098ea0d17b9254c19d47f62248af5ed8 liboil-0.3.2.ebuild 729
 MD5 036d4b45a59ce715202a2324327fd028 liboil-0.3.1.ebuild 712
-MD5 01c177c2660c03b06bbf17d27855c9ba liboil-0.3.2.ebuild 725
+MD5 f49ce9646920accff3ebb2316c36ded4 liboil-0.2.0.ebuild 800
+MD5 2ec81f7549e8a7cbd0af95d741a8d911 ChangeLog 1849
+MD5 d3b860c5004ed0f5fbc21ec0687c9bf0 metadata.xml 223
 MD5 9dae13015b2660fb79e851e3e60aa619 liboil-0.2.2.ebuild 805
-MD5 5d5ac560f35118a370bed2a7a948341c files/liboil-0.2.0-altivec.patch 4732
-MD5 9f9ac8781bf99137b62d0b900841f690 files/digest-liboil-0.3.2 64
-MD5 d136c393a4dd1c5b99a077392d18a736 files/digest-liboil-0.2.2 64
 MD5 9224d2f16c82093310f3ec19f52c3ef3 files/digest-liboil-0.2.0 64
+MD5 d136c393a4dd1c5b99a077392d18a736 files/digest-liboil-0.2.2 64
 MD5 c591a24be696fc694c3d4086d456e348 files/digest-liboil-0.3.1 64
+MD5 9f9ac8781bf99137b62d0b900841f690 files/digest-liboil-0.3.2 64
 MD5 a351705a87fb81151843b4e0fbc92862 files/liboil-0.2.2-clobber-list.patch 972
+MD5 5d5ac560f35118a370bed2a7a948341c files/liboil-0.2.0-altivec.patch 4732
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRZhsViELBEf1JB0RAqLTAJ9Q7Cb9JwZccKwyX73SVd+3KWPeyQCeNB02
+3Yf0iOEygmdqtjDREZurm3w=
+=XBrp
+-----END PGP SIGNATURE-----
