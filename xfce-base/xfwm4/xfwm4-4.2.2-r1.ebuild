@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.2.2-r1.ebuild,v 1.1 2005/10/06 06:44:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.2.2-r1.ebuild,v 1.2 2005/10/06 18:41:10 bcowan Exp $
 
 inherit xfce42
 
@@ -18,6 +18,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 	x11-libs/libXfixes
 	x11-libs/libXpm )
 	virtual/x11 )
+	x11-libs/startup-notification
 	~xfce-base/xfce-mcs-manager-${PV}"
 DEPEND="${RDEPEND}
 	|| ( ( x11-proto/xproto
