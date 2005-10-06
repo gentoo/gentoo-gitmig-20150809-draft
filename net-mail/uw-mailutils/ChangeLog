@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.1 2005/10/06 12:06:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.2 2005/10/06 12:20:48 ticho Exp $
+
+  06 Oct 2005; Andrej Kacian <ticho@gentoo.org> uw-mailutils-2004g.ebuild:
+  Stable on x86, due to security bug #108206.
 
 *uw-mailutils-2004g (06 Oct 2005)
 
