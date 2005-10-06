@@ -1,20 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94fe4b6cace933a6aaedd7fb52194eca metadata.xml 288
-MD5 4c6b8d7f8184a00ee8adf70f36c63f71 pump-0.8.11-r1.ebuild 688
-MD5 9b00840a5ad1b3f1a8742b0fb6699969 pump-0.8.19-r1.ebuild 815
-MD5 8c15c559c2db65872d182b20353729f6 ChangeLog 4412
+MD5 dd864c5cf876c843e9684c53aaa96f03 ChangeLog 4552
 MD5 d057200fd35820b24f71841abe4fb946 pump-0.8.21-r7.ebuild 1444
-MD5 f3e80515c4994d15e18d1c17c0740970 files/digest-pump-0.8.21-r7 132
-MD5 dbccd88cdb05d334ef22e298091382e3 files/pump.conf 155
+MD5 94fe4b6cace933a6aaedd7fb52194eca metadata.xml 288
 MD5 d392ca15c9b4bd656b2bfdc185ba654d files/pump-0.8.21-gentoo.diff 20131
-MD5 7158de78d2fd79881a6b2cbf4e13803c files/digest-pump-0.8.11-r1 67
-MD5 2b45c75857947cb4866c175f48304eda files/digest-pump-0.8.19-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNdsgIKl8Uu19MoRAru6AJ4vARRqb5/XeHGSDgQnI1lf5BKmYQCfZ8kz
-kR1z/Sl2vTG7errDGdlAIt4=
-=8xdY
------END PGP SIGNATURE-----
+MD5 f3e80515c4994d15e18d1c17c0740970 files/digest-pump-0.8.21-r7 132
