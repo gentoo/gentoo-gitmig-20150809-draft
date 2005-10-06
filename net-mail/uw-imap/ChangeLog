@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.78 2005/10/06 21:03:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.79 2005/10/06 23:46:50 ranger Exp $
+
+  06 Oct 2005; Brent Baude <ranger@gentoo.org> uw-imap-2004g-r1.ebuild:
+  Marking uw-imap-2004g-r1 ppc64 for bug 108206
 
 *uw-imap-2004g-r2 (06 Oct 2005)
 

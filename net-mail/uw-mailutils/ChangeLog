@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.4 2005/10/06 19:28:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.5 2005/10/06 23:45:57 ranger Exp $
+
+  06 Oct 2005; Brent Baude <ranger@gentoo.org> uw-mailutils-2004g.ebuild:
+  Marking uw-imap-2004g-r1 ppc64 for bug 108206
 
   06 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   uw-mailutils-2004g.ebuild:
