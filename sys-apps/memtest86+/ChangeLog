@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.28 2005/09/17 00:32:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.29 2005/10/06 18:00:43 wolf31o2 Exp $
+
+  06 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  memtest86+-1.60.ebuild:
+  Marking stable on x86.  Blame SpanKY.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
