@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1.ebuild,v 1.5 2005/10/06 18:11:25 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1.ebuild,v 1.6 2005/10/06 21:47:41 swegener Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -42,7 +42,7 @@ PROVIDE="virtual/ghc"
 
 # ghc cannot usually be bootstrapped using later versions ...
 DEPEND="<virtual/ghc-6.5
-	!>=virtual/ghc-6.6*
+	!>=virtual/ghc-6.6
 	>=dev-lang/perl-5.6.1
 	>=sys-devel/gcc-2.95.3
 	>=sys-devel/make-3.79.1
