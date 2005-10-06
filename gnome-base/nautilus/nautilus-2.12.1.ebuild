@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.0.ebuild,v 1.2 2005/09/17 14:59:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.1.ebuild,v 1.1 2005/10/06 07:21:08 leonardop Exp $
 
-inherit gnome2 virtualx
+inherit virtualx gnome2
 
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="static"
+IUSE=""
 # cups flac gstreamer mad ogg vorbis
 
 RDEPEND=">=media-libs/libart_lgpl-2.3.10
@@ -46,7 +46,6 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.10
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.28
-	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/pkgconfig-0.9"
 
 PDEPEND=">=x11-themes/gnome-icon-theme-1.1.91
@@ -55,10 +54,6 @@ PDEPEND=">=x11-themes/gnome-icon-theme-1.1.91
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 USE_DESTDIR="1"
 
-
-pkg_setup() {
-	G2CONF="$(use_enable static)"
-}
 
 #src_unpack() {
 #	unpack "${A}"
@@ -79,5 +74,5 @@ pkg_setup() {
 #}
 
 src_test() {
-	Xmake check || die
+	Xmake check || die "Test phase failed"
 }
