@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.6.ebuild,v 1.7 2005/04/24 12:51:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/skyutils-2.6.ebuild,v 1.8 2005/10/06 05:54:30 mrness Exp $
 
 IUSE="ssl"
 
@@ -21,10 +21,10 @@ RDEPEND="virtual/libc"
 
 src_compile() {
 	econf `use_enable ssl` || die "./configure failed"
-	emake || die
+	emake || die "make failed"
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL License.txt NEWS README
+	emake DESTDIR=${D} install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README
 }

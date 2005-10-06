@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/skyutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.15 2005/04/24 12:51:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.16 2005/10/06 05:54:30 mrness Exp $
+
+*skyutils-2.8 (06 Oct 2005)
+
+  06 Oct 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  -skyutils-2.5.ebuild, skyutils-2.6.ebuild, skyutils-2.7.ebuild,
+  +skyutils-2.8.ebuild:
+  Assign to mobile-phone herd. Remove obsolete version. Remove COPYING 
+  and INSTALL from docs. Mark version 2.7 stable on x86. Version bump.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> skyutils-2.6.ebuild:
   Stable on ppc.

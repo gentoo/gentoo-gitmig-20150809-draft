@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
-	</maintainer>
+	<herd>mobile-phone</herd>
 	<longdescription>This library contains many usefull functions such as
 chained lists, string manipulation, socket, and HTTP protocol).</longdescription>
 </pkgmetadata>

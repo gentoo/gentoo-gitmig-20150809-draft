@@ -1,8 +1,18 @@
-MD5 b67394c3bd8082d03ed2bf5b8748cba7 metadata.xml 463
-MD5 02b1c70db3e6cc12587d0b6ec357ae13 skyutils-2.7.ebuild 772
-MD5 801d7932fa3e3b803b5ae54fb9c83182 ChangeLog 1774
-MD5 980d9aef6092b768843b7364bc2467f0 skyutils-2.5.ebuild 664
-MD5 564993971353e7f4b87f09073ed87c1e skyutils-2.6.ebuild 767
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dcf017eded42c558ce6958f2545163be skyutils-2.6.ebuild 775
+MD5 03662212def28bd53b154c859ed461bc skyutils-2.8.ebuild 778
+MD5 9bf18c42a89d37abed6f1739c99deb47 ChangeLog 2098
+MD5 336f1121ad1f2ee4c38b3fdc24534247 metadata.xml 319
+MD5 4bfa13e2d506c47c42b388b7348446f0 skyutils-2.7.ebuild 777
 MD5 117d166dc994a816b0a9d821233fa251 files/digest-skyutils-2.6 64
-MD5 1d7891962ddf3aba8268ef5e8da67607 files/digest-skyutils-2.5 64
 MD5 dee5ece882ad4a27cca1e1b532f4c95a files/digest-skyutils-2.7 64
+MD5 078351ded0866d14e308e5214a6e7020 files/digest-skyutils-2.8 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDRLwwNSP4Vda7IdsRAj9+AJ9JYhlPobeXQ97BXtjL2aI6Ih9KZQCeKNji
+y9JWgKlno+K9ZC6/ojh7gyE=
+=/qZA
+-----END PGP SIGNATURE-----
