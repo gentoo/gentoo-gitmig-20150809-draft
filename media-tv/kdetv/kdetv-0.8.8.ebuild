@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.7.ebuild,v 1.3 2005/10/06 16:48:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8.ebuild,v 1.1 2005/10/06 16:48:54 carlo Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="lirc"
+IUSE="arts lirc"
 
 DEPEND=">=media-libs/zvbi-0.2.4
 	lirc? ( app-misc/lirc )"
@@ -19,15 +19,15 @@ need-kde 3.2
 
 
 src_unpack() {
-	LANGS="bg br ca cs cy da de en_GB es et fi fr ga gl hu is it lt nb nl pl pt pt_BR ro ru sr sv ta tr"
-	#LANGS_DOC="fr it nl pt ru sv"
+	LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
+	LANGS_DOC="da et fr it nl pt ru sv"
 
 	MAKE_PO=$(echo $(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d))
-	#MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
+	MAKE_DOC=$(echo $(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d))
 
 	kde_src_unpack
 	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_PO}:" ${S}/po/Makefile.in || die "sed for locale failed"
-	#sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} kdetv:" ${S}/doc/Makefile.in || die "sed for locale failed"
+	sed -i -r -e "s:^SUBDIRS =.*:SUBDIRS = \. ${MAKE_DOC} kdetv:" ${S}/doc/Makefile.in || die "sed for locale failed"
 }
 
 src_compile() {
