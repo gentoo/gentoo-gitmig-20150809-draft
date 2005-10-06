@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.81 2005/09/17 22:06:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.82 2005/10/06 20:48:54 grobian Exp $
+
+  06 Oct 2005; Fabian Groffen <grobian@gentoo.org> doxygen-1.4.4.ebuild:
+  Remove ppc-macos specific patch, it's not necessary anymore
 
   17 Sep 2005; Steve Arnold <nerdboy@gentoo.org> doxygen-1.4.4.ebuild:
   replaced lost patch change (fixes bug #106167)
