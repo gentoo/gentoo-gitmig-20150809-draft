@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/raggle-0.4.1.ebuild,v 1.3 2005/08/08 11:24:40 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/raggle-0.4.3.ebuild,v 1.1 2005/10/06 13:05:36 caleb Exp $
 
 inherit ruby
 
@@ -16,7 +16,6 @@ KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
 USE_RUBY="ruby18 ruby19"
 DEPEND="|| ( >=dev-lang/ruby-1.8
-	( ~dev-lang/ruby-1.6.8 dev-ruby/shim-ruby18 )
 	dev-lang/ruby-cvs )"
 RDEPEND=">=dev-ruby/ncurses-ruby-0.8"
 
