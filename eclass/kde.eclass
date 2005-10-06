@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.134 2005/10/03 08:02:15 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.135 2005/10/06 02:05:49 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -211,17 +211,41 @@ slot_rebuild() {
 	local VDB_PATH="$(portageq vdb_path)"
 	local KDE_PREFIX="$(kde-config --prefix)"
 	local REBUILD_LIST=""
+	local BROKEN_PKGS=""
 
 	echo
 	einfo "Scan for possible needed slot related rebuilds.\n"
+	echo
 	for i in ${*} ; do
 		local temp="$(ls -1d ${VDB_PATH}/${i}*)"
 		for j in ${temp} ; do
-			if [[ $(cat $(grep -o /.*/lib.*\.la ${j}/CONTENTS) | grep -co "${KDE_PREFIX}") = 0 ]] ; then
-				REBUILD_LIST="${REBUILD_LIST} =${j/${VDB_PATH}\//}"
+			if ! [[ -f ${j}/CONTENTS ]] ; then
+				eerror "The package db entry for ${j/${VDB_PATH}\//} is broken."
+				BROKEN_PKGS="${BROKEN_PKGS} ${j/${VDB_PATH}\//}"
+				continue
+			fi
+
+			k="$(grep -o /.*/lib.*\.la ${j}/CONTENTS)"
+			m=""
+			for l in ${k} ; do [[ -e ${l} ]] && m="${m} ${l}"; done
+			l="$(echo ${k} ${m} | fmt -w 1 | sort | uniq -u)"
+			
+			if [[ ${l} != "" ]] || [[ ${m} == "" ]] ; then
+				eerror "Installation of ${j/${VDB_PATH}\//} is broken."
+				BROKEN_PKGS="${BROKEN_PKGS} ${j/${VDB_PATH}\//}"
+			else
+				if [[ $(cat ${m}  | grep -co "${KDE_PREFIX}") = 0 ]] ; then
+					REBUILD_LIST="${REBUILD_LIST} =${j/${VDB_PATH}\//}"
+				fi
 			fi
 		done
 	done
+	echo 
+	if [[ -n "${BROKEN_PKGS}" ]] ; then
+		eerror "Anomalies were found. Please do \"emerge ${BROKEN_PKGS}\"."
+		return 1
+	fi
+
 
 	if [[ -n "${REBUILD_LIST}" ]] ; then
 		local temp=""
