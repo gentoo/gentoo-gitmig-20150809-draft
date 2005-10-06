@@ -1,27 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 230af206aef44d7a3e40e7ba7a34c812 ChangeLog 10300
 MD5 f396f31efaeff34334e13c893b633c5b cracklib-2.7-r11.ebuild 2865
-MD5 ff341e2ab7e8ba6603b91ab16be0d69e ChangeLog 10179
 MD5 6bb9f556ff62935bc596599f9a9b6802 cracklib-2.8.3-r1.ebuild 1538
-MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
-MD5 69aa6844bbf39d86cde364729ca9f9dd files/cracklib-2.7-static-lib.patch 1328
-MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
-MD5 f078a8fa2074250986d685cac2b0b271 files/cracklib-2.8.3-dictname.patch 528
-MD5 e00f36f63e3879e2da10580921e484b6 files/digest-cracklib-2.8.3-r1 66
-MD5 ee8b4f377188b6bb5001fc6e8b81e614 files/cracklib-2.7-libdir.patch 1211
-MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
-MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
-MD5 efb1b540d35f2929768dcb3dcf723fee files/cracklib-2.7-cross-compile.patch 492
-MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r11 63
-MD5 6b7b4e9536a1420eed242b648d5a7aa7 files/cracklib-2.8.3-packer-defines.patch 891
-MD5 e9edfa4c3852810514a42e43e4f66b4e files/cracklib-2.7-parallel-make.patch 1066
+MD5 8daaf0ec01f2970bde46420bbeaa3faf cracklib-2.8.5.ebuild 1484
 MD5 8a109d0d79bed1fb528d2f7c2e0bdbc0 files/cracklib-2.7-buffer-packer.patch 602
+MD5 efb1b540d35f2929768dcb3dcf723fee files/cracklib-2.7-cross-compile.patch 492
+MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
+MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
+MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
+MD5 ee8b4f377188b6bb5001fc6e8b81e614 files/cracklib-2.7-libdir.patch 1211
+MD5 e9edfa4c3852810514a42e43e4f66b4e files/cracklib-2.7-parallel-make.patch 1066
+MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
+MD5 69aa6844bbf39d86cde364729ca9f9dd files/cracklib-2.7-static-lib.patch 1328
+MD5 f078a8fa2074250986d685cac2b0b271 files/cracklib-2.8.3-dictname.patch 528
+MD5 6b7b4e9536a1420eed242b648d5a7aa7 files/cracklib-2.8.3-packer-defines.patch 891
+MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r11 63
+MD5 e00f36f63e3879e2da10580921e484b6 files/digest-cracklib-2.8.3-r1 66
+MD5 44e1c89acbadcbd16e795bb6b7cce486 files/digest-cracklib-2.8.5 66
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDAXwbgIKl8Uu19MoRAjJFAJ9PZS5BKYW8BPqEaPE7u3o7qil9OQCbBnzp
-5o5MzsEmCcCgiYmJI3RhTlc=
-=/Prb
+iD8DBQFDRatXgIKl8Uu19MoRAuowAJwNqZnnRT/6ZffLZQomACUBVRSGEgCdGNi4
+LZdJm+GzfS367dM0aQ94mV0=
+=qIdq
 -----END PGP SIGNATURE-----
