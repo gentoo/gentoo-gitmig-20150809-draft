@@ -1,13 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f087605995fc14d75f9b5ee748d02a8 ChangeLog 5348
-MD5 5d633b60e858786a7b3676d5bc1b790a metadata.xml 566
-MD5 67997ffb188bf18507f6a2ac093227a6 mod_python-2.7.10.ebuild 2466
-MD5 3cd9a71487590f5789bcb43c74698602 mod_python-2.7.11.ebuild 1712
-MD5 c21328b1a8879707a158196fc9caa5c2 mod_python-3.1.3-r1.ebuild 1875
-MD5 5e3fd40dd0076fb1e691c36a39e58354 mod_python-3.1.4-r1.ebuild 1530
-MD5 7014ce279d11b10e01891e484d5e6486 mod_python-3.1.4.ebuild 1534
+MD5 652e55499a3f944e6967fc03117805eb ChangeLog 5450
 MD5 fc933df167083c6c8abc4d2e28c6274d files/16_mod_python-r1.conf 1101
 MD5 05bbbfafd26dcf70f83fcc2b015751dc files/16_mod_python.conf 1106
 MD5 eedde8a8dd90829d24fdb18cc86054f6 files/digest-mod_python-2.7.10 66
@@ -17,10 +8,9 @@ MD5 c4619f17df8352dc648c0f89b61e17b6 files/digest-mod_python-3.1.4 65
 MD5 c4619f17df8352dc648c0f89b61e17b6 files/digest-mod_python-3.1.4-r1 65
 MD5 01ce560a5062d990e685e78b756fa5ba files/mod_python.conf 70
 MD5 0779383c65d90a5161e7a11ab5bbbbec files/publisher-2.diff 1383
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDOaIKKf2g/qXtneoRAiqkAKCRkPLMTMLufpuB8CzCtlhNgoXWwQCfS+2L
-L/HlnFdSGOHfNkKi611lQW0=
-=qz4M
------END PGP SIGNATURE-----
+MD5 5d633b60e858786a7b3676d5bc1b790a metadata.xml 566
+MD5 67997ffb188bf18507f6a2ac093227a6 mod_python-2.7.10.ebuild 2466
+MD5 3cd9a71487590f5789bcb43c74698602 mod_python-2.7.11.ebuild 1712
+MD5 c21328b1a8879707a158196fc9caa5c2 mod_python-3.1.3-r1.ebuild 1875
+MD5 79f8cdc52647ce57cf845c31cc93ed54 mod_python-3.1.4-r1.ebuild 1529
+MD5 7014ce279d11b10e01891e484d5e6486 mod_python-3.1.4.ebuild 1534
