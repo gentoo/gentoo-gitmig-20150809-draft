@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.12 2005/09/23 01:55:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.13 2005/10/06 12:59:05 caleb Exp $
+
+  06 Oct 2005; Caleb Tennis <caleb@gentoo.org> -ruby-gettext-0.5.5.ebuild,
+  -ruby-gettext-0.6.1.ebuild, ruby-gettext-0.8.0.ebuild:
+  Remove shim-ruby dep and old versions
 
 *ruby-gettext-1.0.0 (23 Sep 2005)
 
