@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c97cacef51ce9af2ed721636c4436fe1 metadata.xml 631
-MD5 3c477c1ead38e157044cf5aebb2a4c3c eterm-9999.ebuild 1650
-MD5 24f01dc7e30eedc98613d041c4709ba7 eterm-0.9.2-r6.ebuild 1544
-MD5 cec945340826396a59c928b4f95d7e6c eterm-0.9.3-r4.ebuild 1661
 MD5 57dc2a8c50b4b95457ecc5e4612da020 ChangeLog 5464
-MD5 9a9a163d99af109f688f84b04d1e83e8 files/eterm-0.9.3-gcc4.patch 570
-MD5 2914b242770c0fd9c37bf68d32205a0f files/0.9.2-tiling.patch 1206
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eterm-9999 0
-MD5 0cb62ade9b1d35746c7d8a55949137a1 files/eterm-0.9.3-pixmap-colmod.patch 1004
-MD5 c40df349d427482025208b7bea5bcb0a files/digest-eterm-0.9.3-r4 130
-MD5 da95c4485e2244c440ece3da5a9dfca3 files/eterm-0.9.3-deadkeys.patch 4673
-MD5 309a7b42f0c4a1580943f0078f90bd50 files/digest-eterm-0.9.2-r6 129
+MD5 24f01dc7e30eedc98613d041c4709ba7 eterm-0.9.2-r6.ebuild 1544
+MD5 0702d262ad048c594d36e5d37b7fd028 eterm-0.9.3-r4.ebuild 1682
+MD5 d58d297203efd547e0ec1e6f9d600af5 eterm-9999.ebuild 1554
 MD5 c06f18d32325d81aa5c4a895a8798a82 files/0.9.2-ansi16.patch 1730
+MD5 2914b242770c0fd9c37bf68d32205a0f files/0.9.2-tiling.patch 1206
+MD5 309a7b42f0c4a1580943f0078f90bd50 files/digest-eterm-0.9.2-r6 129
+MD5 c40df349d427482025208b7bea5bcb0a files/digest-eterm-0.9.3-r4 130
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eterm-9999 0
 MD5 1ae3058201549b1de7fb8df2753712e0 files/eterm-0.9.3-CARD64.patch 767
+MD5 da95c4485e2244c440ece3da5a9dfca3 files/eterm-0.9.3-deadkeys.patch 4673
+MD5 9a9a163d99af109f688f84b04d1e83e8 files/eterm-0.9.3-gcc4.patch 570
+MD5 0cb62ade9b1d35746c7d8a55949137a1 files/eterm-0.9.3-pixmap-colmod.patch 1004
+MD5 c97cacef51ce9af2ed721636c4436fe1 metadata.xml 631
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJPd3gIKl8Uu19MoRAj2HAJ9grZd2FD0o0gyf3SBafTnfQ6W4GwCffrmz
-56aXOs0tih758clv1kWxbq0=
-=tKB9
+iD8DBQFDRazjgIKl8Uu19MoRAn0ZAJ91I2lOMcbR6MhQ+exp3eF1U2y8gQCfaTfi
+zU2W+JLmqEfXxdWulKWBdBU=
+=UdmX
 -----END PGP SIGNATURE-----

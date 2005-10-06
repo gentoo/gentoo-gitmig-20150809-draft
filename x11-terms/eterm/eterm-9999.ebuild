@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.2 2005/05/07 23:17:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.3 2005/10/06 23:00:19 vapier Exp $
 
 ECVS_MODULE="eterm/Eterm"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
@@ -18,7 +18,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="mmx etwin escreen"
+IUSE="escreen etwin mmx unicode"
 
 DEPEND="virtual/x11
 	>=x11-libs/libast-0.6.1
@@ -32,12 +32,7 @@ src_unpack() {
 	cvs_src_unpack
 	cd "${S}"
 	# autogen.sh is broken so do this ourselves
-	#./autogen.sh || die "autogen failed"
-	aclocal -I . && \
-	autoheader && \
-	libtoolize -c -f && \
-	autoconf && \
-	automake -a -c || die "autotools failed"
+	./autogen.sh || die "autogen failed"
 }
 
 src_compile() {
@@ -51,7 +46,7 @@ src_compile() {
 		--with-imlib \
 		--enable-trans \
 		${mymmx} \
-		--enable-multi-charset \
+		$(use_enable unicode multi-charset) \
 		--with-delete=execute \
 		--with-backspace=auto \
 		|| die "conf failed"

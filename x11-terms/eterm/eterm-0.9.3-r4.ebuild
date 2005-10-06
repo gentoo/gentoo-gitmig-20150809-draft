@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.2 2005/05/14 18:08:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.3 2005/10/06 23:00:19 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
-IUSE="mmx etwin escreen"
+IUSE="escreen etwin mmx unicode"
 
 DEPEND="virtual/x11
 	>=x11-libs/libast-0.6.1
@@ -47,7 +47,7 @@ src_compile() {
 		--with-imlib \
 		--enable-trans \
 		${mymmx} \
-		--enable-multi-charset \
+		$(use_enable unicode multi-charset) \
 		--with-delete=execute \
 		--with-backspace=auto \
 		|| die "conf failed"
