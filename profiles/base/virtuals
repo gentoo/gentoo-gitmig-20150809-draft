@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.72 2005/10/03 15:28:01 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.73 2005/10/06 20:17:25 ferdy Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -34,7 +34,6 @@ virtual/gnustep-back		gnustep-base/gnustep-back-art
 virtual/gzip				app-arch/gzip
 virtual/httpd-php			dev-php/mod_php
 virtual/imap-c-client		net-libs/c-client
-virtual/imapUW				net-mail/uw-imap
 virtual/imapd				net-mail/courier-imap
 virtual/inetd				sys-apps/xinetd
 virtual/j2ee				dev-java/sun-j2ee
