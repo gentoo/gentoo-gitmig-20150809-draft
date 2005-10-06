@@ -1,30 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a4e35182111732df5cfef9d28f9fcfd ChangeLog 3906
+MD5 ea43380bced168754a00f131df85b1e5 ChangeLog 4045
 MD5 47ac744573c05e8e5c5dc6b471bde3fa c-client-2002d-r1.ebuild 1869
-MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
 MD5 cc926ec2e710759c314acd92cd84b770 c-client-2002d.ebuild 1853
-MD5 6d40d56dec0a2c40e801393e6511e83b c-client-2004c.ebuild 2534
-MD5 e7bce4b8478b1128e86efb8bf43a7d08 c-client-2002e-r2.ebuild 2039
 MD5 81f0f9656a107854fa3ddf25217525a6 c-client-2002e-r1.ebuild 1974
+MD5 e7bce4b8478b1128e86efb8bf43a7d08 c-client-2002e-r2.ebuild 2039
+MD5 5fb5acd5c2e0b78dbaca4aa75cb36b74 c-client-2002e.ebuild 1893
 MD5 4c13a5d66e19772a66b8a407a0d32bb9 c-client-2004a-r1.ebuild 2590
 MD5 ecdbce3ee2598f6cf9d5f037333c9766 c-client-2004a.ebuild 2183
-MD5 5fb5acd5c2e0b78dbaca4aa75cb36b74 c-client-2002e.ebuild 1893
-MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r2 62
+MD5 6d40d56dec0a2c40e801393e6511e83b c-client-2004c.ebuild 2534
+MD5 08831025d4f5754ca025e7e34b222164 c-client-2004g.ebuild 2533
 MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
-MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-c-client-2004c 63
-MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
-MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a 62
 MD5 cde23dc2375a8c33998202c8f0c9ae0e files/c-client-2004a-amd64-so-fix.patch 675
+MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62
+MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e 62
 MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r1 62
+MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-c-client-2002e-r2 62
+MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a 62
 MD5 86da98c03bc68723a437d2cf135b0775 files/digest-c-client-2004a-r1 62
-MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbIo9Kf2g/qXtneoRAmmwAKCf0Yvp2q1kbGYufB9fR7fOd8oizACdGlLr
-mPM059dy9JH28xDPGhtFPOg=
-=qrA2
------END PGP SIGNATURE-----
+MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-c-client-2004c 63
+MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-c-client-2004g 62
+MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242

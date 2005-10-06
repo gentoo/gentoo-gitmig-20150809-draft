@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.30 2005/04/25 06:12:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.31 2005/10/06 20:21:17 robbat2 Exp $
+
+*c-client-2004g (06 Oct 2005)
+
+  06 Oct 2005; Robin H. Johnson <robbat2@gentoo.org> +c-client-2004g.ebuild:
+  Bug #107562, version bump.
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   c-client-2004a-r1.ebuild:
