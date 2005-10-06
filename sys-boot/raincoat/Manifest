@@ -1,6 +1,16 @@
-MD5 68de3a676ab51c7bcb9bcfa1b10caf5a ChangeLog 473
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d9cdc8ef7ee72f1c3af8a22de9837d41 ChangeLog 581
 MD5 ad9863564789ca7ada4818eadafeade7 metadata.xml 313
 MD5 7908084db9de678feb02ceaf166d8c3d raincoat-0.5.ebuild 567
 MD5 424601299accc5c90b6ab0198c9b2a73 raincoat-20051004.ebuild 548
 MD5 a9b5c2dc13cae55815935acea499c8e5 files/digest-raincoat-0.5 65
 MD5 0cb43678baf3c848ff7009031e39122b files/digest-raincoat-20051004 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDRam9D78nYLRGtEERAo7TAJ9vxwOCKWtWnSQbz/dSfE1+k7AjhACgh1p1
+/zfbqVA0emHor0DlZQtDv9w=
+=ZUW7
+-----END PGP SIGNATURE-----

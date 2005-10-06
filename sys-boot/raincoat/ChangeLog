@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/raincoat
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raincoat/ChangeLog,v 1.2 2004/10/16 15:07:47 chrb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raincoat/ChangeLog,v 1.3 2005/10/06 20:47:55 gimli Exp $
+
+  06 Oct 2005; Edgar Hucek <gimli@gentoo.org> ChangeLog,
+  +raincoat-20051004.ebuild:
+  New CVS snapshoot
 
   16 Oct 2004; Chris Bainbridge <chrb@gentoo.org> raincoat-0.5.ebuild:
   mark stable
