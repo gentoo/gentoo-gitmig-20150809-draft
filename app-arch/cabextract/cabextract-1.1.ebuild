@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.1.ebuild,v 1.11 2005/01/19 23:31:44 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.1.ebuild,v 1.12 2005/10/06 19:38:33 grobian Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	if [ "${USERLAND}" == "BSD" ] ; then
+	if use userland_BSD || use userland_Darwin ; then
 		epatch ${FILESDIR}/${PN}-configure.patch
 	fi
 }

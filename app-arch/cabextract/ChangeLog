@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.28 2005/01/19 23:31:44 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.29 2005/10/06 19:38:33 grobian Exp $
+
+  06 Oct 2005; Fabian Groffen <grobian@gentoo.org> cabextract-1.1.ebuild:
+  Reenabled patch on Darwin (OSX)
 
   19 Jan 2005; <gongloo@gentoo.org> cabextract-1.1.ebuild:
   Stable on ppc-macos.
