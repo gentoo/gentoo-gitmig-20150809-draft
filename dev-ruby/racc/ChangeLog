@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.22 2005/10/03 13:06:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.23 2005/10/06 12:52:54 caleb Exp $
+
+  06 Oct 2005; Caleb Tennis <caleb@gentoo.org> racc-1.4.4.ebuild:
+  Remove ruby 1.6 dep
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> racc-1.4.4.ebuild:
   Mark 1.4.4 ~ia64
