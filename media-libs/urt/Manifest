@@ -7,13 +7,13 @@ MD5 b33546756e2b39fcd72b66afda68d1a2 ChangeLog 1301
 MD5 eb209f87460fb61c12f96550740045e8 files/urt-3.1b-tempfile.patch 593
 MD5 17ad983b2b258ee3e633108e342276c1 files/urt-3.1b-rle-fixes.patch 5072
 MD5 3f2cd2217e501f325bdc547781337c5c files/urt-3.1b-compile-updates.patch 3397
-MD5 5cf67043e6b90e68277ec2c02066556f files/gentoo-config 670
+MD5 8084f697c1e179ccb48ec8f1e6d1d564 files/gentoo-config 949
 MD5 95677aac597cb74671547777ca82e9e5 files/urt-3.1b-build-fixes.patch 350
 MD5 6f003bc3da29163d55742e87559a3a87 files/digest-urt-3.1b-r1 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQc7TgIKl8Uu19MoRAit5AJ4oIjv2LoeKMV4B+ZxXfYlHQHlddQCeP+9p
-zZBlVMy70hUechUgQCVixc0=
-=QNg2
+iD8DBQFDRINqgIKl8Uu19MoRAlaKAJ40fmGvPIDab7mYgV4Oq7uBNEmpvQCeIhI2
+mje7Myj0eMQGn8A6Mk7am/c=
+=3dtD
 -----END PGP SIGNATURE-----
