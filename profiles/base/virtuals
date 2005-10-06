@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.73 2005/10/06 20:17:25 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.74 2005/10/06 22:47:09 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -45,6 +45,7 @@ virtual/krb5				app-crypt/mit-krb5
 virtual/lapack				sci-libs/lapack-atlas
 virtual/libc				sys-libs/glibc
 virtual/libpcap				net-libs/libpcap
+virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/logger				app-admin/metalog
 virtual/lpr					net-print/cups
 virtual/m3					dev-lang/cm3-bin
