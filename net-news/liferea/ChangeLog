@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.20 2005/10/05 03:24:52 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.21 2005/10/06 19:04:48 hansmi Exp $
+
+  06 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> liferea-0.9.6.ebuild:
+  Stable on ppc.
 
   05 Oct 2005; Paul Varner <fuzzyray@gentoo.org> liferea-0.9.6.ebuild:
   Stable on x86. Bug# 108020

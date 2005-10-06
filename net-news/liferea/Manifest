@@ -1,4 +1,4 @@
-MD5 5362f08964bfbae493cce632371336db ChangeLog 6937
+MD5 cc6bf2c2073656ed4ee0adf51cff4fc0 ChangeLog 7029
 MD5 89a8546ee1cbe401cbbd5c8441eecea4 files/digest-liferea-0.9.3 66
 MD5 321c3cad9efc8895e374795b3d816062 files/digest-liferea-0.9.4 66
 MD5 734099ebdef506d5bef9b2d24fa02f51 files/digest-liferea-0.9.5 66
@@ -8,7 +8,7 @@ MD5 4d464b035de4131b12167c6ce4a1dffd files/digest-liferea-0.9.7b 67
 MD5 c10756261b814d4100664099a531ec08 liferea-0.9.3.ebuild 746
 MD5 a1d3ffe9b9a77fdf5499f16eec7ae39e liferea-0.9.4.ebuild 754
 MD5 9d15342caa6fd5c98c66bf3e54575ec8 liferea-0.9.5.ebuild 754
-MD5 8fa8604001b5a5eb40657ffcdb91239d liferea-0.9.6.ebuild 757
+MD5 68b4de21a63eab314f430396ca9285c7 liferea-0.9.6.ebuild 754
 MD5 9245e9b948b5835643bccc15d92520a8 liferea-0.9.7a.ebuild 1648
 MD5 7504b68c8b045d20597bb5840699eb34 liferea-0.9.7b.ebuild 1647
 MD5 17fcd57ee01a46b7951c709fb6763c52 metadata.xml 255
