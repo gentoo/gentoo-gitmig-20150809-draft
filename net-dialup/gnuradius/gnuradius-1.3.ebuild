@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3.ebuild,v 1.5 2005/10/04 18:43:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.3.ebuild,v 1.6 2005/10/06 05:22:44 mrness Exp $
 
 MY_P=radius-${PV}
 
@@ -40,7 +40,7 @@ src_compile() {
 		`use_enable debug` \
 		`use_enable static` "
 
-	if useq guile; then
+	if use guile; then
 		myconf="$myconf --with-client --with-server-guile"
 	fi
 
