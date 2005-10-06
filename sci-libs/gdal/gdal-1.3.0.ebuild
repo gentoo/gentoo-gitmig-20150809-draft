@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0.ebuild,v 1.2 2005/09/21 06:19:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0.ebuild,v 1.3 2005/10/06 07:11:16 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -46,6 +46,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-installpathfix.patch || die "epatch failed"
 	elibtoolize --patch-only
 	gnuconfig_update
 	if useq netcdf && useq hdf; then
@@ -53,7 +54,7 @@ src_unpack() {
 	    if built_with_use sci-libs/hdf szip ; then
 		einfo	"Found HDF4 compiled with szip. Nice."
 	    else
-		ewarn 	"HDF4 must be compiled with szip USE flag!"
+		ewarn 	"HDF4 (sci-libs/hdf) must be compiled with szip USE flag!"
 		einfo 	"Emerge HDF with szip USE flag and then emerge GDAL."
 		die 	"HDF4 not merged with szip use flag"
 	    fi
@@ -62,16 +63,8 @@ src_unpack() {
 
 src_compile() {
 	distutils_python_version
-	# This package uses old borked automake/autoconf and libtool, so
-	# it doesn't work without ${D} (or with econf and einstall).
 
-	pkg_conf="--prefix=${D}usr --exec-prefix=${D}usr --bindir=${D}usr/bin \
-	    --datadir=${D}usr/share/gdal --includedir=${D}usr/include/gdal \
-	    --libdir=${D}usr/$(get_libdir) --mandir=${D}usr/share/man \
-	    --with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
-	    --enable-static=no --enable-shared=yes --with-gnu-ld"
-
-	# the above should make libtool behave for the most part
+	pkg_conf="--enable-static=no --enable-shared=yes --with-gnu-ld"
 
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 	    $(use_with postgres pg) $(use_with fits cfitsio) \
@@ -101,22 +94,16 @@ src_compile() {
 	fi
 
 	if useq python ; then
-	    use_conf="--with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
+	    use_conf="--with-pymoddir=/usr/${get_libdir}/python${PYVER}/site-packages \
 	    ${use_conf}"
 	else
 	    use_conf="--with-python=no ${use_conf}"
 	fi
 
 	# Fix doc path just in case
-	sed -i -e "s:@exec_prefix@/doc:${D}usr/share/doc/${PF}/html:g" GDALmake.opt.in
+	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" GDALmake.opt.in
 
-	./configure --with-pymoddir=${D}usr/lib/python${PYVER}/site-packages \
-	    ${pkg_conf} ${use_conf}
-
-	# Patch libtool here since it's not created until after configure runs
-	sed -i -e "s:hardcode_into_libs=yes:hardcode_into_libs=no:g" libtool
-	echo '#undef GDAL_PREFIX' >> port/cpl_config.h
-	echo '#define GDAL_PREFIX "/usr"' >> port/cpl_config.h
+	econf ${pkg_conf} ${use_conf} || die "econf failed"
 	emake  || die "emake failed"
 	if useq doc ; then
 	    emake docs || die "emake docs failed"
@@ -126,12 +113,9 @@ src_compile() {
 src_install() {
 	# einstall causes sandbox violations on /usr/lib/libgdal.so
 	make DESTDIR=${D} install || die "make install failed"
-	dosed "s:${D}usr:/usr:g" /usr/bin/gdal-config
-	dosed "s:/usr/local/bin/perl:/usr/bin/perl:g" ${S}/Doxyfile.man
-	dosed "s:$(INST_DOCS)/gdal:$(INST_DOCS)/html:g" GNUmakefile
 	dodoc Doxyfile.man Doxyfile HOWTO-RELEASE NEWS
 	if useq doc ; then
-	    dohtml html/*.* || die "install html failed"
+	    dohtml html/* || die "install html failed"
 	    docinto ogr
 	    dohtml ogr/html/* || die "install ogr html failed"
 	fi
