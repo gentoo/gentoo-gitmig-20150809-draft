@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.21.ebuild,v 1.3 2005/10/05 23:00:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.21.ebuild,v 1.4 2005/10/06 00:01:44 swegener Exp $
 
 IUSE="gtk"
 
@@ -21,7 +21,7 @@ LICENSE="CPL-1.0 LGPL-2.1"
 DEPEND="virtual/libc
 	virtual/x11
 	gtk? ( >=x11-libs/gtk+-2
-		>=net-libs/linc-1.0.3 
+		>=net-libs/linc-1.0.3
 		amd64? ( app-emulation/emul-linux-x86-gtklibs ) )"
 
 S="${WORKDIR}/${MY_P}-linux-${TOOLKIT}"
