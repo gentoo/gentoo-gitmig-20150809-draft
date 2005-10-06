@@ -74,7 +74,6 @@ IUSE="${IUSE}"
 
 RDEPEND=">=x11-libs/gtk+-2.2*
         dev-libs/libxml2
-        x11-libs/startup-notification
         >=dev-libs/dbh-1.0.20
         >=x11-themes/gtk-engines-xfce-2.2.5
 	${RDEPEND}"
