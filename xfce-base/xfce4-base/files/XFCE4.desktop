@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=XFCE4
-Comment=This session logs you into XFCE4
-Exec=startxfce4
-TryExec=startxfce4
-# no icon yet, only the top three are currently used
-Icon=
-Type=Application
