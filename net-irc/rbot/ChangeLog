@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.11 2005/09/17 15:48:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.12 2005/10/06 13:03:18 caleb Exp $
+
+  06 Oct 2005; Caleb Tennis <caleb@gentoo.org> rbot-0.9.7.ebuild:
+  Change dep to ruby 1.8
 
   17 Sep 2005; Sven Wegener <swegener@gentoo.org> rbot-0.9.7.ebuild:
   Only install html API documentation with USE=doc
