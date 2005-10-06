@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-2.0.0.ebuild,v 1.3 2005/06/27 15:14:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-2.0.0.ebuild,v 1.4 2005/10/06 15:49:00 gustavoz Exp $
 
 # Needed for release candidates etc.
 MY_PV="2.0.0"
 
 SLOT="0" # Read src_install notes!
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 DESCRIPTION="Free Pascal Compiler Sources"
 HOMEPAGE="http://www.freepascal.org/"
 IUSE=""
