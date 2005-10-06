@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28789ede496ce8e0749dc01f9c616207 ChangeLog 718
 MD5 8773813255798a06aad7b06e083a1a55 metadata.xml 281
 MD5 b0b439a5fc011901ddc50c3226495066 lazarus-0.9.6.ebuild 2138
 MD5 61b39600553ef3236481fc8ff388f1ac lazarus-0.9.10.ebuild 2143
 MD5 abbae63cd6c109adfb2535d9b12c5625 files/digest-lazarus-0.9.10 69
 MD5 2c5da358e9346c528a1a6b76f1eff1d1 files/digest-lazarus-0.9.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDRV9XKRy60XGEcJIRAvRzAKCmxQWHA/ovABBDbYSdPrE73JQv/QCePV0C
+Wa83owfSrrGct/KRqe63mrk=
+=/R/q
+-----END PGP SIGNATURE-----
