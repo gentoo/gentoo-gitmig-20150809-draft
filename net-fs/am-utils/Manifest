@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a3dd8511b8874ce1b494dce2472c709c metadata.xml 159
+MD5 5ce7a092d2c2bad07d48ab86cbff02fa ChangeLog 1874
+MD5 41e83680e4c88582f1e19568f752f48f am-utils-6.0.10.ebuild 1086
 MD5 fa659c8f7e566979ef1f007f83684f43 am-utils-6.0.9-r1.ebuild 1050
-MD5 429d50ea200d1d7a9bb597d3eaeef237 ChangeLog 1779
-MD5 e8e113a270c32543058716d456757a6d am-utils-6.0.10.ebuild 1080
-MD5 711232de603b2f30af85608b0ba43ca7 files/am-utils-gdbm.patch 1578
-MD5 04ee491d48ffa52a449c447af3c8fbce files/amd.conf 770
 MD5 f08163d2626b71a6c983fc1d0b9383ab files/amd.net 160
 MD5 b3377608b057b265eda754cea94bb69e files/amd.rc 544
+MD5 be507ff6c41cb6a4a15be900320c8429 files/am-utils-6.0.10-parallel-build.patch 2323
 MD5 74f5c331bf7692293e5eb8b1d69310de files/digest-am-utils-6.0.9-r1 67
 MD5 ad7d6557026c6f9dd281a4e9a80e64a4 files/digest-am-utils-6.0.10 68
-MD5 be507ff6c41cb6a4a15be900320c8429 files/am-utils-6.0.10-parallel-build.patch 2323
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCpfdlMGnpIbeahxwRApZcAKCLCfeEx5yUmMvGUwH6Wt5gswfppwCfappu
-7uR46+xYRgkknuH0Z3FHVLE=
-=IGuk
------END PGP SIGNATURE-----
+MD5 711232de603b2f30af85608b0ba43ca7 files/am-utils-gdbm.patch 1578
+MD5 04ee491d48ffa52a449c447af3c8fbce files/amd.conf 770
