@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.44 2005/09/16 01:44:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.45 2005/10/06 01:52:51 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -64,9 +64,8 @@ tc-getBUILD_CC() {
 	if [[ -n ${CBUILD} ]] ; then
 		search=$(type -p ${CBUILD}-gcc)
 		search=${search##*/}
-	else
-		search=gcc
 	fi
+	search=${search:-gcc}
 
 	export BUILD_CC=${search}
 	echo "${search}"
