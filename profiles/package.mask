@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4540 2005/10/06 18:01:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4541 2005/10/06 19:26:46 ciaranm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -125,6 +125,7 @@ dev-java/eclipse-jface
 # Ciaran McCreesh <ciaranm@gentoo.org> (29 Sep 2005)
 # Getting more and more broken with each release... Pending removal.
 app-vim/vimirc
+app-vim/vimspell
 
 # Marcin Kryczek <mkay@gentoo.org> (25 Sep 2005)
 # This project seems to be dead. The last "stable" (and broken) version
