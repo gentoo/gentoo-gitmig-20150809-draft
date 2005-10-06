@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.68 2005/09/21 17:28:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.69 2005/10/06 23:36:17 hardave Exp $
+
+  06 Oct 2005; Hardave Riar <hardave@gentoo.org> kdewebdev-3.4.2.ebuild:
+  Keyworded ~mips.
 
 *kdewebdev-3.5_beta1 (21 Sep 2005)
 

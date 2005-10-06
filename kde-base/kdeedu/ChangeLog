@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.151 2005/09/21 17:22:19 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.152 2005/10/06 23:38:38 hardave Exp $
+
+  06 Oct 2005; Hardave Riar <hardave@gentoo.org> kdeedu-3.4.2-r2.ebuild:
+  Keyworded ~mips.
 
 *kdeedu-3.5_beta1 (21 Sep 2005)
 

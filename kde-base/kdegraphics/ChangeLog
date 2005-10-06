@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.186 2005/09/29 16:22:35 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.187 2005/10/06 23:24:55 hardave Exp $
+
+  06 Oct 2005; Hardave Riar <hardave@gentoo.org>
+  kdegraphics-3.4.2-r2.ebuild:
+  Keyworded ~mips.
 
   29 Sep 2005; Hardave Riar <hardave@gentoo.org>
   kdegraphics-3.3.2-r3.ebuild:
