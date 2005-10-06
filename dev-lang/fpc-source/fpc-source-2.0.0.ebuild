@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-2.0.0.ebuild,v 1.4 2005/10/06 15:49:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/fpc-source-2.0.0.ebuild,v 1.5 2005/10/06 17:26:45 gustavoz Exp $
 
 # Needed for release candidates etc.
 MY_PV="2.0.0"
@@ -41,6 +41,6 @@ src_install () {
 		--exclude="*.xvpics" \
 		--exclude="*.~*" \
 		--exclude="CVS" \
-		${WORKDIR}/fpc ${D}usr/lib/fpc/src
+		${WORKDIR}/fpc/ ${D}usr/lib/fpc/src
 	eend $? || die
 }

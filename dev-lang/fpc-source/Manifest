@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9aa82a9cce584fdfed63d4bfc8a21d09 ChangeLog 1460
+MD5 85e0c015ff9c592769fe41281e0c77af ChangeLog 1565
 MD5 bab07a6688abb4e82baf0c99b60b6c15 fpc-source-2.0.0_rc2.ebuild 1847
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 64f0dad3b324d2f5bf0a8b7907a93d3d fpc-source-2.0.0.ebuild 1349
+MD5 631416fcd394cc8cb4c703f2fd14e03d fpc-source-2.0.0.ebuild 1350
 MD5 cbf4c3b52cbba187c1dd222521df21f7 fpc-source-1.9.5_pre20040820.ebuild 1719
 MD5 0a08fa163a3c573b43867be33e766913 files/digest-fpc-source-2.0.0_rc2 70
 MD5 3197b41dcf78a69bd6aba5c9f97a3cb7 files/digest-fpc-source-1.9.5_pre20040820 141
@@ -12,7 +12,7 @@ MD5 cd231688f22b41aaa230f7deb4752a05 files/digest-fpc-source-2.0.0 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDRUeYKRy60XGEcJIRAp0RAJkBJN6J6+XDeLD3TA4szTqbMArYtwCfT8y0
-hmeWhbVcyoRrvl7JhEkB/CY=
-=tPnc
+iD8DBQFDRV5+KRy60XGEcJIRAkWXAJ9oo2qRo9FUMolVVeo/gCpd2eYQCQCeOkOK
+dDY7fp9qpR2pg94HqBnbUeg=
+=f2UR
 -----END PGP SIGNATURE-----
