@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.1-r1.ebuild,v 1.1 2005/10/06 07:58:35 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfmedia/xfmedia-0.9.1-r1.ebuild,v 1.2 2005/10/06 18:32:39 bcowan Exp $
 
 inherit xfce42
 
