@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.25 2005/01/11 21:18:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.26 2005/10/06 22:48:18 vapier Exp $
 
-inherit gnuconfig libtool
+inherit libtool
 
 DESCRIPTION="XML parsing libraries"
 HOMEPAGE="http://expat.sourceforge.net/"
@@ -18,8 +18,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	gnuconfig_update
-	uclibctoolize
+	elibtoolize
 }
 
 src_install() {

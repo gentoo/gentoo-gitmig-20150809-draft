@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d8b16dcf06de09185c96bc18e116f52f expat-1.95.7-r1.ebuild 831
-MD5 ae18cf435aeb21a9e0c0464ce35c1c31 expat-1.95.7.ebuild 687
-MD5 411f7775c57d51c166a44b33f80ff4c7 expat-1.95.8.ebuild 1003
-MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
 MD5 bd1a7ac3e214371675eba8471d1fb853 ChangeLog 5807
+MD5 588390c6d6676d327a3594a5df5adb03 expat-1.95.7-r1.ebuild 798
+MD5 bd735a5e7d7bc2ca13effd3fabddb63e expat-1.95.7.ebuild 657
+MD5 72018b2cbff84533ed35a3e24127cf8b expat-1.95.8.ebuild 1001
 MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7 64
 MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7-r1 64
 MD5 be97487dd2627fe82f06252c88b83ab1 files/digest-expat-1.95.8 64
+MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLHgkKf2g/qXtneoRAm+XAKCOTjnENMcRqP4F1v+uGaUrMAjHTwCeIpKW
-8iV2t8tbpa2hSsS1dACG28c=
-=EhUb
+iD8DBQFDRaoSgIKl8Uu19MoRAt7VAJ9UHXnLmuV1gE9D8GU1NaFCPCRMigCfZWxB
+hBzWmHUdosLHImFKXLkLFT0=
+=+5kd
 -----END PGP SIGNATURE-----
