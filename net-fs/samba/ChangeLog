@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.206 2005/10/03 11:59:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.207 2005/10/06 14:55:45 satya Exp $
+
+*samba-3.0.20a (06 Oct 2005)
+
+  06 Oct 2005; Christian Andreetta <satya@gentoo.org> +samba-3.0.20a.ebuild:
+  version bump. Fixes bugs #106846 (idmap_rid with winbind), #107606
+  ('bad user' configuration parameter), #107614 (ldapsam support), #107939
 
   03 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> samba-3.0.14a-r2.ebuild:
   Stable on sh.
