@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.7 2005/10/04 00:36:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.8 2005/10/06 06:40:57 grobian Exp $
+
+  06 Oct 2005; Fabian Groffen <grobian@gentoo.org> urt-3.1b-r1.ebuild:
+  Marking ~ppc-macos (bug #107428)
 
   04 Oct 2005; Mike Frysinger <vapier@gentoo.org>
   +files/urt-3.1b-build-fixes.patch, urt-3.1b-r1.ebuild:
