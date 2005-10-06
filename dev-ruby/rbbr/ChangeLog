@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rbbr
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.11 2004/10/03 14:45:36 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.12 2005/10/06 12:55:16 caleb Exp $
+
+  06 Oct 2005; Caleb Tennis <caleb@gentoo.org> -rbbr-0.5.1.ebuild,
+  rbbr-0.6.0.ebuild:
+  Remove old version, remove ruby 1.6 dep
 
   03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> rbbr-0.6.0.ebuild:
   Changed dep to ruby-gtk2. Thanks to Benjamin Herr <ben@0x539.de>. This
