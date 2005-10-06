@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-es
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-es/ChangeLog,v 1.1 2005/10/05 18:28:28 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-es/ChangeLog,v 1.2 2005/10/06 12:03:49 ferdy Exp $
+
+  06 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  vim-spell-es-20051005.ebuild:
+  Setting VIM_SPELL_CODE is not needed, removing
 
 *vim-spell-es-20051005 (05 Oct 2005)
 
