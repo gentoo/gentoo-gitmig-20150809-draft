@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07fb40d3db8375527cfe3347e3f05144 libast-0.6.1-r1.ebuild 954
-MD5 11b1f2e66569782863ba4ab5e8660df1 libast-0.5-r2.ebuild 865
-MD5 0709e001c71db303dc0178e18aa8f59c libast-9999.ebuild 1127
-MD5 f273f8360749863678a12164e2783887 libast-0.6.1.ebuild 846
 MD5 cbd9a750fb8191bb4e33543767251358 ChangeLog 2439
-MD5 ec45fec065a8eccc43870fc678126de7 metadata.xml 820
-MD5 e050b956ec4efca8d3dab20f609ba5c1 files/libast-0.6.1-config-warning.patch 6797
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libast-9999 0
-MD5 177b67afc64c8e52522833c7ce007ab5 files/libast-64bit.patch 295
+MD5 2a9e814b7851e9e22178430153da8110 files/digest-libast-0.5-r2 62
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1 64
 MD5 0cf4b65fa766332e528bddb7cf3d74e2 files/digest-libast-0.6.1-r1 64
-MD5 2a9e814b7851e9e22178430153da8110 files/digest-libast-0.5-r2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCzm36BXaUFmZvwyMRAkkeAJwLiLmqeF01BDj9Z+KWwfpJWoeMxgCfVQtR
-7sDYMF3t0J+UiD6QG7mGQ4k=
-=1NZC
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-libast-9999 0
+MD5 e050b956ec4efca8d3dab20f609ba5c1 files/libast-0.6.1-config-warning.patch 6797
+MD5 177b67afc64c8e52522833c7ce007ab5 files/libast-64bit.patch 295
+MD5 11b1f2e66569782863ba4ab5e8660df1 libast-0.5-r2.ebuild 865
+MD5 07fb40d3db8375527cfe3347e3f05144 libast-0.6.1-r1.ebuild 954
+MD5 f273f8360749863678a12164e2783887 libast-0.6.1.ebuild 846
+MD5 12b50d597efdde0aac77c358c9d6f42a libast-9999.ebuild 1010
+MD5 ec45fec065a8eccc43870fc678126de7 metadata.xml 820
