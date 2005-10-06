@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b3c94a46061474e6abbe69d0ca9e1348 ChangeLog 10170
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 8f03e6f80f60313dd3ea5af64165ba8b yelp-2.10.0.ebuild 1310
-MD5 a38302fa2ff7789722f70371ea1571f6 yelp-2.12.1.ebuild 1282
-MD5 943ea60c165a0c48211e2d9913894134 yelp-2.6.5.ebuild 951
+MD5 c4833a2e4e1d587c717ca61ce83cc55b files/digest-yelp-2.10.0 64
 MD5 c24c32d5dad71be2394955adcd74aef1 files/digest-yelp-2.12.1 64
 MD5 0cf1e0f8c2d2235fc75a784741638f77 files/digest-yelp-2.6.5 63
 MD5 d13c2fbe43ee623230084d6f7bd6ec25 files/yelp-2.6.4-makedepfix.patch 948
-MD5 c4833a2e4e1d587c717ca61ce83cc55b files/digest-yelp-2.10.0 64
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 d8f059be1680731cfa1b677c4ba04fcd yelp-2.10.0.ebuild 1313
+MD5 ecfc8411aacb1717c377bd207ce323d3 yelp-2.12.1.ebuild 1284
+MD5 943ea60c165a0c48211e2d9913894134 yelp-2.6.5.ebuild 951
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRaxLgIKl8Uu19MoRArrGAJ9PJRlFsqkVQ6k2URjW9gxLevKSAgCeKpZa
+2AqQlRjk7QsN+ETNBCpvCWM=
+=baHO
+-----END PGP SIGNATURE-----
