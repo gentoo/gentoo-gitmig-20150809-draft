@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0b81b6e3c557ea1942bee539ef40d615 ChangeLog 2071
-MD5 74d77297406a143a769b86c78acdb270 guile-gtk-0.19-r1.ebuild 791
-MD5 8cf064d2630de66408a683b08cfee8b2 guile-gtk-1.2.0.31.ebuild 914
-MD5 6186a1c88a1584f9db240a56cbdb650a guile-gtk-1.2.0.41.ebuild 779
+MD5 e9d18f986829dc409fa5ee7e4ab9715e ChangeLog 2171
 MD5 a9180c05c39b2c45beaf67462ce81fad files/digest-guile-gtk-0.19-r1 66
 MD5 3256588d322dbad5ec7811568d44d460 files/digest-guile-gtk-1.2.0.31 70
 MD5 11118bda0e08d71792175342cfda5ca1 files/digest-guile-gtk-1.2.0.41 66
 MD5 56c2eb09ecb192e29a3dcf4ae7f397cb files/guile-gtk-0.19-Makefile.in.patch 556
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQChaCRZPokWLroQRAjzgAKDiZV+TVPbw4enQETEP0Cjz3sUG3QCePS7l
-X65avBMOO3hxjy65YgEHLj0=
-=Y1oE
------END PGP SIGNATURE-----
+MD5 74d77297406a143a769b86c78acdb270 guile-gtk-0.19-r1.ebuild 791
+MD5 8cf064d2630de66408a683b08cfee8b2 guile-gtk-1.2.0.31.ebuild 914
+MD5 96bcfc10bff2cf1480ad939ccc91a947 guile-gtk-1.2.0.41.ebuild 777
