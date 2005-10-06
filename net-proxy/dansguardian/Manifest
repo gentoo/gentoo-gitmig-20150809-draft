@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c32f7c16784fe1aba47a15bbb1ea3262 ChangeLog 4911
 MD5 66b41ef646913a4fe63153d4e76c4193 dansguardian-2.8.0.4.ebuild 1176
-MD5 7edfd082772287769db0e7f6ff50c814 dansguardian-2.8.0.6.ebuild 1180
-MD5 1ed4e94381826e36af7a005fcc761a1b ChangeLog 4808
-MD5 30b14eaf02c479d70f60157c1a29a294 metadata.xml 568
+MD5 887c6bdeabb27180c88519f1403b877b dansguardian-2.8.0.6.ebuild 1179
+MD5 6313b934a33da7e4308812e834494074 files/dansguardian-xnaughty-2.7.6-1.diff 2325
+MD5 f4138408fd74e72a62a70abce3c69396 files/dansguardian.init 565
 MD5 579f2cac2dbebe18ff6900fd3aa87f66 files/digest-dansguardian-2.8.0.4 79
 MD5 421e49847907b8c4d53ccc01d17656e6 files/digest-dansguardian-2.8.0.6 79
-MD5 f4138408fd74e72a62a70abce3c69396 files/dansguardian.init 565
-MD5 6313b934a33da7e4308812e834494074 files/dansguardian-xnaughty-2.7.6-1.diff 2325
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDQurQNSP4Vda7IdsRAuCQAJ0aeR2NzRFUQnSh4NyJYzA0b6jbxACeK5mY
-v+GfwjZPWT22L0YBRWr4rmc=
-=dZkJ
------END PGP SIGNATURE-----
+MD5 30b14eaf02c479d70f60157c1a29a294 metadata.xml 568
