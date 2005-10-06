@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.2 2005/04/19 04:44:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.3 2005/10/06 23:00:03 vapier Exp $
 
 ECVS_MODULE="eterm/libast"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
@@ -26,12 +26,7 @@ src_unpack() {
 	cvs_src_unpack
 	cd "${S}"
 	# autogen.sh is broken so do this ourselves
-	#./autogen.sh || die "autogen failed"
-	aclocal -I . && \
-	autoheader && \
-	libtoolize -c -f && \
-	autoconf && \
-	automake -a -c || die "autotools failed"
+	./autogen.sh || die "autogen failed"
 }
 
 src_compile() {
