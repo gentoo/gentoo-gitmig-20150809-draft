@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.41 2005/10/05 14:54:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.42 2005/10/06 15:19:15 agriffis Exp $
+
+  06 Oct 2005; Aron Griffis <agriffis@gentoo.org> bugzilla-2.18.4.ebuild,
+  bugzilla-2.20.ebuild:
+  Mark 2.20 2.18.4 ~alpha/~ia64 #108234
 
   05 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   bugzilla-2.18.4.ebuild:
