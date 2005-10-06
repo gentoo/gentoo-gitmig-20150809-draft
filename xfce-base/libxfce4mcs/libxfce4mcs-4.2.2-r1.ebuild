@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/libxfce4mcs-4.2.2-r1.ebuild,v 1.1 2005/10/06 06:19:06 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/libxfce4mcs-4.2.2-r1.ebuild,v 1.2 2005/10/06 21:41:11 swegener Exp $
 
 inherit xfce42
 
@@ -16,7 +16,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 	~xfce-base/libxfcegui4-${PV}"
 DEPEND="${RDEPEND}
 	|| ( ( x11-libs/libXt
-	x11-proto.xproto )
+	x11-proto/xproto )
 	virtual/x11 )"
 
 core_package
