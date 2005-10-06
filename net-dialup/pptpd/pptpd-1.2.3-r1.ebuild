@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.2.3-r1.ebuild,v 1.3 2005/05/13 04:12:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.2.3-r1.ebuild,v 1.4 2005/10/06 05:17:24 mrness Exp $
 
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
 SRC_URI="mirror://sourceforge/poptop/${P}.tar.gz"
@@ -48,7 +48,7 @@ src_install () {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/pptpd-confd pptpd
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
+	dodoc AUTHORS ChangeLog NEWS README* TODO
 	docinto samples
 	dodoc samples/*
 }
