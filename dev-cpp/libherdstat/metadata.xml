@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>ka0ttic@gentoo.org</email>
+		<name>Aaron Walker</name>
+	</maintainer>
+	<longdescription lang="en">
+C++ library offering interfaces for portage-related things such as
+Gentoo-specific XML files, package searching, and version sorting.  In
+addition, other general-purpose utility classes/functions are offered, such as
+regular expressions, pattern matching, algorithms, and string manipulation.
+	</longdescription>
+</pkgmetadata>
+
