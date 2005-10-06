@@ -1,0 +1,8 @@
+# ChangeLog for sys-kernel/sh-sources
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sh-sources/ChangeLog,v 1.1 2005/10/06 22:41:41 vapier Exp $
+
+*sh-sources-2.6.13 (06 Oct 2005)
+
+  06 Oct 2005; Mike Frysinger <vapier@gentoo.org> +sh-sources-2.6.13.ebuild:
+  Initial import.
