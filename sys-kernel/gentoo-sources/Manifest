@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 e935e807cb37104cc7670ccdc49fb975 gentoo-sources-2.4.28-r9.ebuild 1412
-MD5 4427959b207f9888c98ad2c4013415c5 gentoo-sources-2.6.13-r3.ebuild 1216
+MD5 88ed5141c2ebfc820271bbda03eb26ae gentoo-sources-2.6.13-r3.ebuild 1215
 MD5 8573f612a6e55cbf9f6c7864148f117c gentoo-sources-2.4.31-r1.ebuild 669
 MD5 f6811a73e57b219c65e9f0dd040fac00 gentoo-sources-2.6.13-r2.ebuild 1230
 MD5 08cec32eca745c0b191933166dbef23d gentoo-sources-2.6.12-r10.ebuild 1230
 MD5 bcc1c2ddff5456c0b37148e0913c93b5 gentoo-sources-2.6.13.ebuild 1222
 MD5 2d2150ca2b1b3db3d469a5a2356161fb gentoo-sources-2.6.9-r9.ebuild 1625
-MD5 d31ef11ba401f8a53e7057faeb8a8c6c ChangeLog 49424
+MD5 07e36bbe33ee205be332d78fb608c532 ChangeLog 49521
 MD5 410c3afeb274354a7ce68257edc18012 metadata.xml 283
 MD5 f1f9317b9d0337f2e28aae91b6545c44 gentoo-sources-2.6.13-r1.ebuild 1230
 MD5 578def525c4bfdc7e7a52db7e3c0ce21 gentoo-sources-2.6.12-r9.ebuild 1230
@@ -43,7 +43,7 @@ MD5 45b3d45d2c8aa2357866223b77b53896 files/digest-gentoo-sources-2.6.13-r3 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQ9QATOXg++0VvJQRAkKbAKCfX6CCyLgKB53JtqFAVuBRIs0PngCdHlEv
-2xpKc5514jwlb/i0M4FvsRM=
-=3oto
+iD8DBQFDRSd3TOXg++0VvJQRAvyYAKCdWGhaAP47AmFu60bOWsgU1YPF6QCfXOI1
+/cV63xtIb/97Y1JXbYzFCLQ=
+=BBtb
 -----END PGP SIGNATURE-----
