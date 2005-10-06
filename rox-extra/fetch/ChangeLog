@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/fetch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.4 2005/08/15 00:27:11 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.5 2005/10/06 15:45:06 svyatogor Exp $
+
+*fetch-0.1.1 (06 Oct 2005)
+
+  06 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +fetch-0.1.1.ebuild:
+  New version with new features. (Bug #106719)
 
   15 Aug 2005; Danny van Dyk <kugelfang@gentoo.org> fetch-0.0.3.ebuild:
   Marked ~amd64.
