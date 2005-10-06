@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.45 2005/10/06 01:52:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.46 2005/10/06 21:30:23 kevquinn Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -174,18 +174,20 @@ gcc-micro-version() {
 }
 
 # Returns requested gcc specs directive
-# Note; if a spec exists more than once (e.g. in more than one specs file)
-# the last one read is the active definition - i.e. they do not accumulate,
-# each new definition replaces any previous definition.
+# Note; later specs normally overwrite earlier ones; however if a later
+# spec starts with '+' then it appends.
+# gcc -dumpspecs is parsed first, followed by files listed by "gcc -v"
+# as "Reading <file>", in order.
 gcc-specs-directive() {
-	local specfiles=$($(tc-getCC) -v 2>&1 | grep "^Reading" | awk '{print $NF}')
-	[[ -z ${specfiles} ]] && return 0
-	awk -v spec=$1 \
-'BEGIN	{ sstr=""; outside=1 }
-	$1=="*"spec":"  { sstr=""; outside=0; next }
+	local specfiles=$($(tc-getCC) -v 2>&1 | awk '$1=="Reading" {print $NF}')
+	$(tc-getCC) -dumpspecs 2> /dev/null | cat - ${specfiles} | awk -v directive=$1 \
+'BEGIN	{ pspec=""; spec=""; outside=1 }
+$1=="*"directive":"  { pspec=spec; spec=""; outside=0; next }
 	outside || NF==0 || ( substr($1,1,1)=="*" && substr($1,length($1),1)==":" ) { outside=1; next }
-	{ sstr=sstr $0 }
-END	{ print sstr }' ${specfiles}
+	spec=="" && substr($0,1,1)=="+" { spec=pspec " " substr($0,2); next }
+	{ spec=spec $0 }
+END	{ print spec }'
+	return 0
 }
 
 # Returns true if gcc sets relro
@@ -212,3 +214,10 @@ gcc-specs-ssp() {
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fno-stack-protector:} != ${directive} ]])
 }
+# Returns true if gcc upgrades fstack-protector to fstack-protector-all
+gcc-specs-ssp-to-all() {
+	local directive
+	directive=$(gcc-specs-directive cc1)
+	return $([[ ${directive/\{!fno-stack-protector-all:} != ${directive} ]])
+}
+
