@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4536 2005/10/06 07:32:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4537 2005/10/06 14:22:53 hattya Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Akinori Hattori <hattya@gentoo.org> (06 Oct 2005)
+# development branch
+=mail-client/sylpheed-2.1*
 
 # Brad Cowan <bcowan@gentoo.org> (06 Oct 2005)
 # masking for new eclass and updates for modular Xorg thanks to
