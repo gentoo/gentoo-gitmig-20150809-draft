@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/amrita-1.8.2-r1.ebuild,v 1.14 2005/10/03 12:58:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/amrita-1.8.2-r1.ebuild,v 1.15 2005/10/06 12:50:27 caleb Exp $
 
 inherit ruby
 
@@ -14,5 +14,4 @@ SLOT="0"
 USE_RUBY="ruby16 ruby18 ruby19"
 KEYWORDS="alpha hppa ~ia64 mips ppc ppc64 sparc x86"
 DEPEND="|| ( >=dev-lang/ruby-1.8.0
-	dev-ruby/shim-ruby18
 	dev-lang/ruby-cvs )"

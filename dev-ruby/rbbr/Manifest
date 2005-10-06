@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 908af67c669bbfe73ea5fad5daa82a7a ChangeLog 1608
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a2a3c8c9f96fe91985db06826f968668 rbbr-0.5.1.ebuild 942
-MD5 0561e49d53d91084182e5fd3dc9f22d4 rbbr-0.6.0.ebuild 1021
-MD5 4dd6d22182125b52764eba68c85983ad files/digest-rbbr-0.5.1 70
+MD5 1b0ca7cc1487a736d620763a1a5232b8 ChangeLog 1739
 MD5 de25fedd264f1a4c774374fea6ce760b files/digest-rbbr-0.6.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBYA8zVWNWqTUmv+0RAgaoAKCCQ5QSMJDQsXvY1eSarQd/eB9j6wCfT0ke
-2iDAcFo81feEMhYylAgUFrQ=
-=YTPW
------END PGP SIGNATURE-----
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 d65be0fa868351276f2c98e18325fba5 rbbr-0.6.0.ebuild 978
