@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.201 2005/10/06 06:12:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.202 2005/10/06 10:14:59 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -718,7 +718,7 @@ add_profile_eselect_conf() {
 	fi
 
 	echo >> ${compiler_config_file}
-	if [[ ${abi} == "default" ]] ; then
+	if ! is_multilib ; then
 		echo "[${specs}]" >> ${compiler_config_file}
 		echo "	ctarget=${CTARGET}" >> ${compiler_config_file}
 	else
@@ -830,6 +830,9 @@ gcc_pkg_setup() {
 			fi
 		;;
 		esac
+
+		# Setup variables which would normally be in the profile
+		is_crosscompile && is_multilib && multilib_env ${CTARGET}
 
 		# we dont want to use the installed compiler's specs to build gcc!
 		unset GCC_SPECS
@@ -1157,6 +1160,7 @@ gcc_do_configure() {
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
 				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
 			else
+				# This should be conditional.  It breaks emerging cross-gcc-3.4.4 for me --eradicator
 				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
 		fi
@@ -1592,14 +1596,6 @@ gcc-compiler_src_install() {
 
 	# Setup symlinks to multilib ABIs for crosscompiled gccs
 	if is_crosscompile && is_multilib ; then
-		local CHOST_post=${CTARGET#*-}
-		CHOST_x86="i686-${CHOST_post}"
-		CHOST_amd64="x86_64-${CHOST_post}"
-		CHOST_ppc="powerpc-${CHOST_post}"
-		CHOST_ppc64="powerpc64-${CHOST_post}"
-		CHOST_sparc32="sparc-${CHOST_post}"
-		CHOST_sparc64="sparc64-${CHOST_post}"
-
 		case $(tc-arch) in
 		amd64) abilist="x86";;
 		ppc64) abilist="ppc";;
@@ -1612,7 +1608,7 @@ gcc-compiler_src_install() {
 
 		dodir ${PREFIX}/${CTARGET}/lib
 		for abi in ${abilist}; do
-			dosym ../../$(get_abi_CHOST ${abi})/lib ${PREFIX}/${CTARGET}/lib/${abi}
+			dosym ../../$(get_abi_CTARGET ${abi})/lib ${PREFIX}/${CTARGET}/lib/${abi}
 		done
 	fi
 
