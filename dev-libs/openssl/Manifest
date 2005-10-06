@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 560c69b8f6f46c74fd232d0fcec5ad14 openssl-0.9.8.ebuild 5268
+MD5 9027c6b394e767625c5c7a9ce52f617b openssl-0.9.8.ebuild 5334
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1f6fda2e78ee0e865d8e89ddc67b8935 openssl-0.9.7e-r1.ebuild 8670
+MD5 ee44884b82b96b48d7e33effbbc88230 openssl-0.9.7e-r1.ebuild 8736
 MD5 6fbe613b51aae6d38f151388b4125695 openssl-0.9.7d-r2.ebuild 9016
 MD5 685c33f8a3f1980105944ab3c23a346c openssl-0.9.6m.ebuild 3074
 MD5 d9690fe509be272f2d6ae46224f60985 ChangeLog 21741
-MD5 07efc1d03616319c77209d0e90c8ddcc openssl-0.9.7g.ebuild 5404
+MD5 4ce0d905b32bf15f4fec2b83a07ade33 openssl-0.9.7g.ebuild 5470
 MD5 592d5a5b643b835123af4a44caffc75e files/digest-openssl-0.9.8 66
 MD5 53599279769faf50e5247b68d2907b10 files/openssl-0.9.7e-no-fips.patch 1344
 MD5 91854bcd6c83f040927d490b104bb5a0 files/openssl-0.9.7d-smime.patch 641
@@ -41,7 +41,7 @@ MD5 451e4a94e086f2512ebe97bcefd553f9 files/openssl-0.9.7g-amd64-fbsd.patch 1695
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQwzAgIKl8Uu19MoRAnBdAJ4iXnbmMDDika9us6YqXzcKftQKxQCgg3lM
-vg0xGRP+ZFxZj9zrnzon0O8=
-=I2Qz
+iD8DBQFDRJIngIKl8Uu19MoRAuIYAJ0bOJZ7W7yirVgM+NDoBxGD2rz8jwCfRPKy
+mDUWsCmgr8P2B8MqyFqfG40=
+=hsQn
 -----END PGP SIGNATURE-----
