@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.8 2005/10/06 00:29:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.9 2005/10/06 20:32:03 eradicator Exp $
+
+*eselect-compiler-2.0.0_beta4 (06 Oct 2005)
+
+  06 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -eselect-compiler-2.0.0_beta3.ebuild,
+  +eselect-compiler-2.0.0_beta4.ebuild:
+  Fixed a bug where selecting a non-native compiler removed the native
+  binaries. Use bin_prefix to determine reference file for timestamp which is
+  needed for the alternate targets of multilib crosscompilers.
 
 *eselect-compiler-2.0.0_beta3 (06 Oct 2005)
 
