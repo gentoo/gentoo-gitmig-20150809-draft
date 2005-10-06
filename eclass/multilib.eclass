@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.33 2005/09/21 02:50:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.34 2005/10/06 10:03:53 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -548,4 +548,87 @@ get_libname() {
 			echo ".so.${ver}"
 		fi
 	fi
+}
+
+# This is for the toolchain to setup profile variables when pulling in
+# a crosscompiler (and thus they aren't set in the profile)
+multilib_env() {
+	local CTARGET=$1
+	local CTARGET_post=${CTARGET#*-}
+
+	case $(tc-arch ${CTARGET}) in
+		amd64)
+			export CFLAGS_x86=${CFLAGS_x86--m32}
+			export CHOST_x86=i686-${CTARGET_post}
+			export CTARGET_x86=i686-${CTARGET_post}
+			export CDEFINE_x86="__i386__"
+			export LIBDIR_x86="lib"
+
+			export CFLAGS_amd64=${CFLAGS_amd64--m64}
+			export CHOST_amd64=x86_64-${CTARGET_post}
+			export CTARGET_amd64=x86_64-${CTARGET_post}
+			export CDEFINE_amd64="__x86_64__"
+			export LIBDIR_amd64="lib64"
+
+			export MULTILIB_ABIS="amd64 x86"
+			export DEFAULT_ABI="amd64"
+		;;
+		mips)
+			export CFLAGS_o32=${CFLAGS_o32--mabi=32}
+			export CHOST_o32=mips-${CTARGET_post}
+			export CTARGET_o32=mips-${CTARGET_post}
+			export CDEFINE_o32="_MIPS_SIM == _ABIO32"
+			export LIBDIR_o32="lib"
+
+			export CFLAGS_n32=${CFLAGS_n32--mabi=n32}
+			export CHOST_n32=mips64-${CTARGET_post}
+			export CTARGET_n32=mips64-${CTARGET_post}
+			export CDEFINE_n32="_MIPS_SIM == _ABIN32"
+			export LIBDIR_n32="lib32"
+
+			export CFLAGS_n64=${CFLAGS_n64--mabi=64}
+			export CHOST_n64=mips64-${CTARGET_post}
+			export CTARGET_n64=mips64-${CTARGET_post}
+			export CDEFINE_n64="_MIPS_SIM == _ABI64"
+			export LIBDIR_n64="lib64"
+
+			export MULTILIB_ABIS="n64 n32 o32"
+			export DEFAULT_ABI="n32"
+		;;
+		ppc64)
+			export CFLAGS_ppc=${CFLAGS_ppc--m32}
+			export CHOST_ppc=powerpc-${CTARGET_post}
+			export CTARGET_ppc=powerpc-${CTARGET_post}
+			export CDEFINE_ppc="!__powerpc64__"
+			export LIBDIR_ppc="lib"
+
+			export CFLAGS_ppc64=${CFLAGS_ppc64--m64}
+			export CHOST_ppc64=powerpc64-${CTARGET_post}
+			export CTARGET_ppc64=powerpc64-${CTARGET_post}
+			export CDEFINE_ppc64="__powerpc64__"
+			export LIBDIR_ppc64="lib64"
+
+			export MULTILIB_ABIS="ppc64 ppc"
+			export DEFAULT_ABI="ppc64"
+		;;
+		sparc)
+			export CFLAGS_sparc32=${CFLAGS_sparc32--m32}
+			export CHOST_sparc32=sparc-${CTARGET_post}
+			export CTARGET_sparc32=sparc-${CTARGET_post}
+			export CDEFINE_sparc32="!__arch64__"
+			export LIBDIR_sparc32="lib"
+
+			export CFLAGS_sparc64=${CFLAGS_sparc64--m64}
+			export CHOST_sparc64=sparc64-${CTARGET_post}
+			export CTARGET_sparc64=sparc64-${CTARGET_post}
+			export CDEFINE_sparc64="__arch64__"
+			export LIBDIR_sparc64="lib64"
+
+			export MULTILIB_ABIS="sparc64 sparc32"
+			export DEFAULT_ABI="sparc64"
+		;;
+		*)
+			export MULTILIB_ABIS="default"
+			export DEFAULT_ABI="default"
+	esac
 }
