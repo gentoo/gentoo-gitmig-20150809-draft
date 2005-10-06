@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f87b8e4164e6f4c3f71fd427a2f6019 fwbuilder-2.0.7.ebuild 1065
 MD5 11e6f232f520cdf75476e709f2b3bc7e fwbuilder-1.1.2.ebuild 1390
-MD5 ede8a026f7c5d9122547975ea55b3375 fwbuilder-2.0.9.ebuild 1068
+MD5 e52a5762b7b935db4155c3c5d10f62da fwbuilder-2.0.9.ebuild 1072
 MD5 665b2d8e8a0822627a068fb476f6af4b fwbuilder-2.0.6.ebuild 897
 MD5 c4b7edfc17c76edf4f94cc4a96223e86 fwbuilder-2.0.8.ebuild 1065
-MD5 ed5abcd8a2581a26a0f0471d5cfbe70d ChangeLog 8211
+MD5 46ed69ca7ad7a898b8bc98263998e71c ChangeLog 8318
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 b7ecd1d8440ad584eead03ccddd2a800 files/fwbuilder-1.1.2-nls_fix.patch 382
 MD5 c1a7d072ddaa87c67e47e135f6cbd1cf files/digest-fwbuilder-1.1.2 68
@@ -11,3 +14,10 @@ MD5 70fea7193b1f73a34e3cf49a2ac9c9c7 files/digest-fwbuilder-2.0.6 68
 MD5 99c3ff5a964d751686899517a6b90485 files/digest-fwbuilder-2.0.7 68
 MD5 1675a2e188765ced03b1eefd161a103f files/digest-fwbuilder-2.0.8 68
 MD5 654b2735bc2da5c253033998bd6ae490 files/digest-fwbuilder-2.0.9 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRZTOViELBEf1JB0RAsRXAJ4342DJuqEbYyefRJJlnPPS5pchBwCeIbYI
+o6owhbgWYKX4RGYFJbIcVV0=
+=kwX/
+-----END PGP SIGNATURE-----

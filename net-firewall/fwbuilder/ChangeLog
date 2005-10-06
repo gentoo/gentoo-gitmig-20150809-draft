@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.46 2005/09/20 12:52:52 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.47 2005/10/06 21:18:44 ferdy Exp $
+
+  06 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> fwbuilder-2.0.9.ebuild:
+  marked ~alpha wrt bug #107450
 
 *fwbuilder-2.0.9 (20 Sep 2005)
 
