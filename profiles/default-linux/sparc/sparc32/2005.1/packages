@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.1/packages,v 1.1 2005/06/14 14:12:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2005.1/packages,v 1.2 2005/10/06 22:39:21 vapier Exp $
 
 *>=sys-libs/glibc-2.3.1-r2
 *net-misc/dhcpcd
@@ -17,6 +17,5 @@
 *<sys-devel/gcc-3.4.1
 
 # Use 2.4 linux-headers by default
--*virtual/os-headers
 *<sys-kernel/linux-headers-2.5
 
