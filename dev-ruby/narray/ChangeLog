@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.14 2005/10/03 13:04:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.15 2005/10/06 13:17:10 caleb Exp $
+
+*narray-0.5.8 (06 Oct 2005)
+
+  06 Oct 2005; Caleb Tennis <caleb@gentoo.org> +narray-0.5.8.ebuild:
+  Version bump
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> narray-0.5.7_p2.ebuild:
   Mark 0.5.7_p2 ~ia64
