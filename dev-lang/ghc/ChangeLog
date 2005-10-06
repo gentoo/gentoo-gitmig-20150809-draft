@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.70 2005/10/05 00:02:39 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.71 2005/10/06 12:43:58 dcoutts Exp $
+
+  06 Oct 2005; <duncan@gentoo.org> +files/depsort.py, files/ghc-updater:
+  Make the ghc-updater script work better.
 
   04 Oct 2005; Luis F. Araujo <araujo@gentoo.org> ghc-6.2.2.ebuild:
   Blocked ghc6.4 in ghc6.2.2
