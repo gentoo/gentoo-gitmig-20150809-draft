@@ -2,7 +2,5 @@ MD5 75f39ce9a71022ec8c9e4898f934c605 xfce4-battery-0.3.0.ebuild 400
 MD5 a92454bf80f23e99ba33c674436d0cec xfce4-battery-0.2.0-r1.ebuild 395
 MD5 a76c10a44b4de37a900016ea5b763e00 ChangeLog 1909
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 2ca25226a7ce94cce521eb4b821c194e xfce4-battery-0.2.0.ebuild 722
 MD5 62b116cba4726ccaafa617391576b91e files/digest-xfce4-battery-0.2.0-r1 78
-MD5 62b116cba4726ccaafa617391576b91e files/digest-xfce4-battery-0.2.0 78
 MD5 04f73a252cf92df0af61a44a4fc2054f files/digest-xfce4-battery-0.3.0 78

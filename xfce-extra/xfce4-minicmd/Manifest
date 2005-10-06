@@ -1,6 +1,4 @@
+MD5 e5d8f8ade534c7d0b73f381a677a5ea3 xfce4-minicmd-0.3.0-r1.ebuild 380
 MD5 87550e637bd368552befebbbd51423ee ChangeLog 2059
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 14ae83256036e8668761bd23b9755603 xfce4-minicmd-0.2.0.ebuild 719
-MD5 e5d8f8ade534c7d0b73f381a677a5ea3 xfce4-minicmd-0.3.0-r1.ebuild 380
-MD5 ad7bafe1be6b5607e06a5174e7913b99 files/digest-xfce4-minicmd-0.2.0 78
 MD5 0087842189b5cc0731ef9cdad52307df files/digest-xfce4-minicmd-0.3.0-r1 78
