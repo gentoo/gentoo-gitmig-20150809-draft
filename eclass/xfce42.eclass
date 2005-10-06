@@ -72,7 +72,7 @@ SLOT="0"
 
 IUSE="${IUSE}"
 
-RDEPEND=">=x11-libs/gtk+-2.2*
+RDEPEND=">=x11-libs/gtk+-2.2
         dev-libs/libxml2
         >=dev-libs/dbh-1.0.20
         >=x11-themes/gtk-engines-xfce-2.2.5
