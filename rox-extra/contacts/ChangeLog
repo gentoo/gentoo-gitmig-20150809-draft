@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/contacts
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/contacts/ChangeLog,v 1.1 2005/10/06 16:05:39 svyatogor Exp $
+
+*contacts-0.8.3 (06 Oct 2005)
+
+  06 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org>
+  +contacts-0.8.3.ebuild:
+  New application in rox family. Bug #95148
+
