@@ -1,8 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/virtuals,v 1.12 2005/07/20 00:16:08 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/virtuals,v 1.13 2005/10/06 03:20:31 vapier Exp $
 
 virtual/bootloader			sys-boot/palo
-virtual/alsa				sys-kernel/hppa-sources
-virtual/os-headers			sys-kernel/linux-headers
-virtual/linux-sources		sys-kernel/hppa-sources
