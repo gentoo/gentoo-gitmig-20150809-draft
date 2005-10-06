@@ -1,9 +1,9 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0-r2.ebuild,v 1.7 2004/11/12 08:03:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0-r2.ebuild,v 1.8 2005/10/06 22:29:00 matsuu Exp $
 
 DESCRIPTION="tools for using the Ogg Vorbis sound file format"
-HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
+HOMEPAGE="http://www.vorbis.com/"
 SRC_URI="http://fatpipe.vorbis.com/files/1.0/unix/vorbis-tools-1.0.tar.gz"
 
 LICENSE="as-is"

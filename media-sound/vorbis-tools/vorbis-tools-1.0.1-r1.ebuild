@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1-r1.ebuild,v 1.1 2005/08/25 14:05:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0.1-r1.ebuild,v 1.2 2005/10/06 22:29:00 matsuu Exp $
 
 IUSE="nls flac speex"
 
 inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="tools for using the Ogg Vorbis sound file format"
-HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
+HOMEPAGE="http://www.vorbis.com/"
 SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 
 LICENSE="as-is"
