@@ -1,18 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a1f4f0053f65564cdaaafaf9c71b8d2 ChangeLog 2715
-MD5 4e910ed161d84f6c609edce01a082529 wv-1.0.3.ebuild 1140
-MD5 525c7299058f839eff524bc25c39267e metadata.xml 345
 MD5 6335e6111535a1ebd438e329cee9694e wv-1.0.0-r1.ebuild 1052
-MD5 a1897cf5f55250ffef22b746b2b277f7 files/wv-1.0.3-gcc4.patch 1131
-MD5 79e495e6bfc4b192499c4d28f631ea01 files/digest-wv-1.0.3 60
+MD5 0577e093bf220e56cb0c3072451c3f0b wv-1.0.3-r1.ebuild 1213
+MD5 4e910ed161d84f6c609edce01a082529 wv-1.0.3.ebuild 1140
+MD5 dadfa1fe3e6969fbbf48893d177fc5a0 ChangeLog 2925
+MD5 525c7299058f839eff524bc25c39267e metadata.xml 345
 MD5 97079efa2a5256ad07ada6260b7ec298 files/digest-wv-1.0.0-r1 60
+MD5 79e495e6bfc4b192499c4d28f631ea01 files/digest-wv-1.0.3-r1 60
 MD5 29b026d4ff443552a80797b397d37ec6 files/wv-1.0.0-fix_overflow.patch 1693
+MD5 a1897cf5f55250ffef22b746b2b277f7 files/wv-1.0.3-gcc4.patch 1131
+MD5 f7e6bc9c507c536f3b48679fe2dfafba files/wv-1.0.3-libole2-readonly.patch 1053
+MD5 79e495e6bfc4b192499c4d28f631ea01 files/digest-wv-1.0.3 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCbgeV1ZcsMnZjRyIRAofhAKCKR5gJNz9b2+Jke9zleONkqxBYxgCdF3zQ
-AnFnFEmNOFnhMSi1yn+yQw0=
-=DZYn
+iD8DBQFDRaHsTOXg++0VvJQRAu1HAJ4h6Bk4WqtE5IawsmHsl+O60hKV9wCeO9ZJ
+T0rY+ygPcD5Sp95Qi8idWWo=
+=Uxhm
 -----END PGP SIGNATURE-----

@@ -1,0 +1,32 @@
+From http://users.avafan.com/~fredrik/beagle/wv-libole2-readonly.patch
+See http://mail.gnome.org/archives/dashboard-hackers/2005-August/msg00018.html
+
+--- libole2/ms-ole.c-old	2004-10-22 20:59:51.000000000 -0400
++++ libole2/ms-ole.c	2005-08-03 10:06:14.000000000 -0400
+@@ -1723,7 +1723,7 @@
+ 		 gboolean try_mmap,
+ 		 MsOleSysWrappers *wrappers)
+ {
+-	int prot = PROT_READ | PROT_WRITE;
++	int prot = PROT_READ;
+ 	MsOle *f;
+ 	MsOleHandleType file;
+ 
+@@ -1737,15 +1737,9 @@
+ 	f = *fs = ms_ole_new ();
+ 	take_wrapper_functions (f, wrappers);
+ 
+-	f->file_des = file = f->syswrap->open2 (name, O_RDWR, f->syswrap->closure);
++	f->file_des = file = f->syswrap->open2 (name, O_RDONLY, f->syswrap->closure);
+ 	f->ref_count = 0;
+-	f->mode = 'w';
+-
+-	if (file == BAD_MSOLE_HANDLE) {
+-		f->file_des = file = f->syswrap->open2 (name, O_RDONLY, f->syswrap->closure);
+-		f->mode = 'r';
+-		prot &= ~PROT_WRITE;
+-	}
++	f->mode = 'r';
+ 
+ 	if ((file == BAD_MSOLE_HANDLE) || !(f->syswrap->isregfile (file, f->syswrap->closure))) {
+ 		g_warning ("No such file '%s'\n", name);
