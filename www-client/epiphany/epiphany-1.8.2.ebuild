@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.0.ebuild,v 1.2 2005/09/14 14:57:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-1.8.2.ebuild,v 1.1 2005/10/06 11:49:53 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -32,15 +32,14 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=gnome-base/orbit-2
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
-	!firefox? ( >=www-client/mozilla-1.7.3 )
-	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
-	dbus? ( >=sys-apps/dbus-0.22 )
+	!firefox? ( >=www-client/mozilla-1.7.9 )
+	firefox? ( >=www-client/mozilla-firefox-1.0.5 )
+	dbus? ( >=sys-apps/dbus-0.34 )
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1
 		>=dev-python/gnome-python-2.6 )
 	x11-themes/gnome-icon-theme"
-# pygtk dependency needs to be >= 2.7
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
@@ -56,7 +55,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable dbus) $(use_enable python) --disable-scrollkeeper"
+	G2CONF="--disable-scrollkeeper \
+		$(use_enable dbus) \
+		$(use_enable python)"
 
 	if use firefox; then
 		G2CONF="${G2CONF} --with-mozilla=firefox"

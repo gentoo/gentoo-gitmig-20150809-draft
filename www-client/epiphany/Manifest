@@ -1,29 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 367a39d041ceb2efe66ccac8426e610d epiphany-1.4.8.ebuild 1458
+MD5 e3b5806909a10ac7fdae8e00e9a91314 ChangeLog 17989
 MD5 5ef08e685400da84661b9f037d81a668 epiphany-1.6.0-r3.ebuild 1539
 MD5 d89a18b9e1f3c752a5ea444c4ccfc52f epiphany-1.6.3.ebuild 1387
 MD5 4c5adfec221fca880f8114d80bcaf86c epiphany-1.6.4.ebuild 1540
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 afa899fbb80bede70e99a017779361fa epiphany-1.8.0.ebuild 1825
-MD5 93022a60a326e91e260bd6ce1c33daa5 ChangeLog 17834
-MD5 24ec843041b5b9fd528431dd8e291297 files/digest-epiphany-1.4.8 68
+MD5 70f4cc04c17fcb54a9b43669cef5c4b8 epiphany-1.8.2.ebuild 1796
 MD5 6d49238d1100396b965c157b89c7038f files/digest-epiphany-1.6.0-r3 68
 MD5 eb83ab75c0e81a4aff0d93a8d8a4e338 files/digest-epiphany-1.6.3 68
 MD5 f5e29a6e660b776ab387ee60f32007da files/digest-epiphany-1.6.4 68
-MD5 124caf61eb374940967a1d4c561270ca files/epiphany-1.4.6-fix_includes.patch 869
-MD5 5dd8a008a5612c492c8d0b648f5b0954 files/epiphany-1.4.6-moz-nsiurip.patch 1071
+MD5 5fb4e1fd4c18f309c424c308686d9c43 files/digest-epiphany-1.8.2 68
 MD5 c1fc78ef3e0793861e74799bbcb6238c files/epiphany-1.6.0-fix_includes.patch 519
 MD5 a9590e1794335ecb9fb376a3b128570b files/epiphany-1.6.0-view_source.patch 11178
 MD5 40c2cd3b20e5f2847e868edbc4f58915 files/epiphany-1.6.0-wallet_fix.patch 598
 MD5 2a6d9343d321b67fb737cb87301facfc files/epiphany-1.6.0-wallet_password.patch 1307
 MD5 3e5d6d82d44078ec1c95566207f9bad1 files/epiphany-1.6.3-fix_includes.patch 369
-MD5 4f66f0756bf94bf08a8e0de34314a922 files/digest-epiphany-1.8.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK/l4Kf2g/qXtneoRAmIDAJ4t60s5xgBpvqGNwSL3T0Ji5TlwvQCcDPWd
-id2ZO72t36DmoR6srNbK+do=
-=N5IR
------END PGP SIGNATURE-----
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
