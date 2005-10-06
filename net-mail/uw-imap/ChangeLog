@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.77 2005/10/06 19:31:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.78 2005/10/06 21:03:30 ticho Exp $
+
+*uw-imap-2004g-r2 (06 Oct 2005)
+
+  06 Oct 2005; Andrej Kacian <ticho@gentoo.org> +uw-imap-2004g-r2.ebuild:
+  Remove pic USEflag, and build c-client with -fPIC unconditionally. Closes
+  bug #101051.
 
   06 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   uw-imap-2004g-r1.ebuild:
