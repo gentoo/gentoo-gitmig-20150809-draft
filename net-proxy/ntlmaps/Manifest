@@ -1,9 +1,21 @@
-MD5 a65bb25d95d5de35ca0f2727b1e8e7c9 metadata.xml 489
-MD5 04e94a03696ac53a3f48a3031b24629f ChangeLog 2458
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 facbf9ba94e6cadf744a22d15bf6ad28 ntlmaps-0.9.9-r1.ebuild 1352
-MD5 3299fc41dc2862f119e8dd3146ebc9c5 ntlmaps-0.9.9.5.ebuild 1414
-MD5 2c97eb4d589e8a9f9e9968be5aa96daa files/ntlmaps-0.9.9.5-gentoo.patch 1183
-MD5 f80ba6da97c9b6ecf9589fcbe791abf6 files/digest-ntlmaps-0.9.9.5 66
-MD5 677c6c0d28b021c5c460dcd020ca6dce files/digest-ntlmaps-0.9.9-r1 64
+MD5 725428e123cc0d5a6e858307b1cad14f ntlmaps-0.9.9.5-r1.ebuild 1819
+MD5 b70f9b810544fc7841b9c306f4edd5b8 ntlmaps-0.9.9-r2.ebuild 1822
+MD5 90795c4cb54d0bcbc06e54e7d0b4db94 ChangeLog 2760
+MD5 a65bb25d95d5de35ca0f2727b1e8e7c9 metadata.xml 489
+MD5 ac0c10a9df0cb33d46f761a5e9fc6a1e files/ntlmaps.init 727
 MD5 89d940c1a5df0a265c10c920498f1a03 files/ntlmaps-0.9.9-gentoo.patch 1165
-MD5 8986ad96cdc57db74518ce83fc0fbfee files/ntlmaps.init 725
+MD5 2c97eb4d589e8a9f9e9968be5aa96daa files/ntlmaps-0.9.9.5-gentoo.patch 1183
+MD5 677c6c0d28b021c5c460dcd020ca6dce files/digest-ntlmaps-0.9.9-r1 64
+MD5 677c6c0d28b021c5c460dcd020ca6dce files/digest-ntlmaps-0.9.9-r2 64
+MD5 f80ba6da97c9b6ecf9589fcbe791abf6 files/digest-ntlmaps-0.9.9.5-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDRZm0NSP4Vda7IdsRAqQdAJ4zFvl2CzzJe5qGMyuI8t8ZREDvBgCfcrD9
++BKHmr917biKCd36Ogao8P8=
+=kOPX
+-----END PGP SIGNATURE-----
