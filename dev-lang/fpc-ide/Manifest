@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c968f4c3107ca7cbf3d0699f1bf341e0 metadata.xml 259
-MD5 06bcac80383e387a2e018176a20b267c ChangeLog 540
+MD5 e8d8f83c82c9cf78e6c148bbf8f17ce6 ChangeLog 707
+MD5 16b4c16b99759f61ff32f0d3c9ba83d0 fpc-ide-2.0.0.ebuild 943
 MD5 3dc5d26bf2c9d541e3decd3a0f755df6 fpc-ide-2.0.0_rc2.ebuild 952
+MD5 c968f4c3107ca7cbf3d0699f1bf341e0 metadata.xml 259
 MD5 0a08fa163a3c573b43867be33e766913 files/digest-fpc-ide-2.0.0_rc2 70
+MD5 cd231688f22b41aaa230f7deb4752a05 files/digest-fpc-ide-2.0.0 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCZN5GjUHll2nfF60RApSWAJ9yLEwBJKDLkeqLnJemz5wBt07XIwCgrubH
-5+Qjp5s50XNB43qxtGuRdJs=
-=To7Y
+iD8DBQFDRTn1KRy60XGEcJIRAki6AKCYWQXXjWE74ObJ9bi7N3RZfOQihgCfQphZ
+F4yWRgO1IXyh2Mcs6SCh/o4=
+=+wfw
 -----END PGP SIGNATURE-----
