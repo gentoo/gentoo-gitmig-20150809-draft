@@ -1,17 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a225a222fcd607641ccc6641553ec0e0 ChangeLog 2325
 MD5 52bb20649b74c2aa7f6f9204cec3f7f8 cinelerra-cvs-20050506.ebuild 1688
 MD5 3e962f56ba898d0261d3569f4bf277db cinelerra-cvs-20050801.ebuild 1784
-MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 8b04d706ab919a1e15256a99fc8f5999 ChangeLog 2127
-MD5 6a608309dd1406724b18475452d2e410 files/libmpeg3-20050102-gcc3.4.patch 6060
-MD5 4bd71d15accb4c84eda25a5266c82112 files/digest-cinelerra-cvs-20050801 77
+MD5 fe27c9c6b38b9a514d3c3dd639aa45b1 cinelerra-cvs-20051005.ebuild 1883
+MD5 b775c5b9f768f5e27002063c6693a623 files/20051005-nox264.patch 3391
 MD5 0a7a7d289ef0d57df644a1cc47144170 files/digest-cinelerra-cvs-20050506 77
+MD5 4bd71d15accb4c84eda25a5266c82112 files/digest-cinelerra-cvs-20050801 77
+MD5 af930f0191a6c60306ce736e62c6db74 files/digest-cinelerra-cvs-20051005 77
+MD5 6a608309dd1406724b18475452d2e410 files/libmpeg3-20050102-gcc3.4.patch 6060
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC7m2OpNOQ4DjaQW0RAl4UAJ0X5CXkIefnBimGnrVyKilmGjDu6wCeOlLQ
-DKA4fwZ8S3h9May2kJlLEJs=
-=bpSb
+iD8DBQFDRS4SpNOQ4DjaQW0RAopPAKCTOELt7IoL2pnEDug1eCPqz/TIfgCcD3Za
+SP576Tm85n65GBVa+asUpig=
+=UKad
 -----END PGP SIGNATURE-----

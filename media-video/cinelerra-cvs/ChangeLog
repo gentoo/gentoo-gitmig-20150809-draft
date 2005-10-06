@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.12 2005/08/01 18:44:30 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.13 2005/10/06 14:00:08 zypher Exp $
+
+*cinelerra-cvs-20051005 (05 Oct 2005)
+
+  06 Oct 2005; Marc Hildebrand <zypher@gentoo.org> cinelerra-cvs-20051005.ebuild:
+  Version bump. This introduces Cinelerra version 2.0. Removed ppc keyword.
 
   01 Aug 2005; Marc Hildebrand <zypher@gentoo.org> cinelerra-cvs-20050801.ebuild:
   Added libtheora dependency.
