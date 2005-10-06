@@ -1,3 +1,2 @@
-virtual/kernel			sys-kernel/linux-headers
 virtual/os-headers              sys-kernel/linux-headers
 virtual/linux-sources		sys-kernel/gentoo-sources

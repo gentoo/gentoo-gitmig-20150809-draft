@@ -1,6 +1,5 @@
 virtual/bootloader	sys-boot/bootx
 virtual/commonlisp	dev-lisp/sbcl
-virtual/kernel		sys-libs/libsystem
 virtual/libc	   	sys-libs/libsystem
 virtual/logger		app-admin/sysklogd
 virtual/mta	     	mail-mta/postfix

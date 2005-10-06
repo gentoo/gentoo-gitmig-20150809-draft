@@ -22,7 +22,6 @@ virtual/inetd			sys-apps/xinetd
 virtual/jack			media-sound/jack-audio-connection-kit
 virtual/jdk			dev-java/blackdown-jdk
 virtual/jre			dev-java/blackdown-jre
-virtual/kernel			sys-kernel/linux-headers
 virtual/krb5			app-crypt/mit-krb5
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/logger			app-admin/sysklogd
