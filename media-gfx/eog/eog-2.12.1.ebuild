@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.12.0.ebuild,v 1.1 2005/09/07 16:15:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.12.1.ebuild,v 1.1 2005/10/06 08:34:10 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -47,7 +47,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Fix pkg-config detection if --without-libexif is passed.
-	epatch ${FILESDIR}/eog-2.11.90-pkgconfig_macro.patch
+	epatch ${FILESDIR}/${PN}-2.11.90-pkgconfig_macro.patch
 
 	autoconf || die "autoconf failed"
 

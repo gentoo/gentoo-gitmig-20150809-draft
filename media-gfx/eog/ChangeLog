@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.107 2005/09/13 16:11:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.108 2005/10/06 08:34:10 leonardop Exp $
+
+*eog-2.12.1 (06 Oct 2005)
+
+  06 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> -eog-2.12.0.ebuild,
+  +eog-2.12.1.ebuild:
+  New version.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> eog-2.10.2.ebuild:
   Mark 2.10.2 stable on alpha
