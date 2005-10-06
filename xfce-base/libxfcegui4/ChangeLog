@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.55 2005/10/06 04:32:04 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.56 2005/10/06 06:23:02 bcowan Exp $
+
+  06 Oct 2005; Brad Cowan <bcowan@gentoo.org> libxfcegui4-4.2.2-r1.ebuild:
+  Xfce builds for new eclass and modular Xorg.
 
 *libxfcegui4-4.2.2-r1 (06 Oct 2005)
 
