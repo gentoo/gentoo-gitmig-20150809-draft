@@ -1,4 +1,6 @@
+MD5 d02585913322122ff8530ec729adf561 xfce4-xkb-0.3.2-r2.ebuild 527
 MD5 b0ca8ebce52a8e8e1191940f69d95db8 xfce4-xkb-0.3.2-r1.ebuild 388
-MD5 8e3ec5fd72d354dee625f9352bfb68e4 ChangeLog 493
+MD5 ad16449b500293fa5da529dfbdbe798e ChangeLog 650
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 f2f7062883e987a9719cba81f19d7b34 files/digest-xfce4-xkb-0.3.2-r1 74
+MD5 f2f7062883e987a9719cba81f19d7b34 files/digest-xfce4-xkb-0.3.2-r2 74

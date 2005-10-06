@@ -1,4 +1,6 @@
-MD5 f41a4d4fe4ae10395ab8ee79d6e34761 ChangeLog 384
+MD5 80bbcdac4f9e31c2f202adf3e5314678 ChangeLog 559
+MD5 ee16f1f6531aabb99d43693b0dbc05e0 xfce4-modemlights-0.1.1-r1.ebuild 447
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 7746807868a6da271308a40ca7250a15 xfce4-modemlights-0.1.1.ebuild 392
 MD5 023e1395c880c8de501c3fc05406737e files/digest-xfce4-modemlights-0.1.1 82
+MD5 023e1395c880c8de501c3fc05406737e files/digest-xfce4-modemlights-0.1.1-r1 82
