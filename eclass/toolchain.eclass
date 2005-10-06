@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.200 2005/10/05 08:55:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.201 2005/10/06 06:12:39 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -997,12 +997,21 @@ gcc_src_unpack() {
 	fi
 
 	# Fixup libtool to correctly generate .la files with portage
-	cd ${S}
+	cd "${S}"
 	elibtoolize --portage --shallow --no-uclibc
 
 	gnuconfig_update
 
-	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
+	# update configure files
+	einfo "Fixing misc issues in configure files"
+	for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
+		ebegin "  Updating ${f/${S}\/}"
+		patch "${f}" "${FILESDIR}"/gcc-configure-LANG.patch >& "${T}"/configure-patch.log \
+			|| eerror "Please file a bug about this"
+		eend $?
+	done
+
+	./contrib/gcc_update --touch &> /dev/null
 
 	disable_multilib_libjava || die "failed to disable multilib java"
 }
