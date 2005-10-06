@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 39c786058e92df4174eda7eae9b72067 ChangeLog 4678
 MD5 fb946a077c4e2ae03befc41f3a095b39 metadata.xml 1425
-MD5 51af7d055d99ec024bc5b235922abfb3 skey-1.1.5-r4.ebuild 2850
-MD5 daacd36d4917edd685704e3ce80e1ac0 skey-1.1.5-r5.ebuild 3038
 MD5 8839a8cf3f9f54680781d3a88fddd378 skey-1.1.5-r3.ebuild 2277
-MD5 e055584c39cc0315d0679b9830946184 ChangeLog 4587
+MD5 ed45119d9d9fc67892e96bea5e0d0e85 skey-1.1.5-r4.ebuild 2850
+MD5 daacd36d4917edd685704e3ce80e1ac0 skey-1.1.5-r5.ebuild 3038
+MD5 c402251257567c1f0321c9c426144ced files/digest-skey-1.1.5-r3 62
 MD5 c402251257567c1f0321c9c426144ced files/digest-skey-1.1.5-r4 62
+MD5 c402251257567c1f0321c9c426144ced files/digest-skey-1.1.5-r5 62
+MD5 ab3f803b5ad68dc89dfb5b544342b403 files/skey-1.1.5-fPIC.patch 271
+MD5 c862d14e1478ec91ed4c5b97f124ea08 files/skey-1.1.5-gentoo.diff.gz 37614
 MD5 f227550f3aee8a1988f3bbc6176cbaf8 files/skey-1.1.5-otp.diff 1437
 MD5 2bc2fd632a13d33a3832ec3bf2449c1b files/skey-login_name_max.diff 386
-MD5 c402251257567c1f0321c9c426144ced files/digest-skey-1.1.5-r3 62
-MD5 ab3f803b5ad68dc89dfb5b544342b403 files/skey-1.1.5-fPIC.patch 271
-MD5 c402251257567c1f0321c9c426144ced files/digest-skey-1.1.5-r5 62
-MD5 c862d14e1478ec91ed4c5b97f124ea08 files/skey-1.1.5-gentoo.diff.gz 37614
 MD5 a9bc02f7e56c25767809dc3d613f0413 files/skey-1.1.5-bind-now.patch 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBlzvgIKl8Uu19MoRAkG/AJ0UOijv7N97SZDISCk4ba1lqvRs4ACePrUJ
-GsfMlCvew2uY8L1zOS9W+dU=
-=6bTZ
------END PGP SIGNATURE-----
