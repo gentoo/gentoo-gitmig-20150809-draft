@@ -1,12 +1,16 @@
-MD5 7246cd0f526ba5c189ee57aa488c1518 mercurial-0.6.ebuild 940
-MD5 5f623231b8f9a0b06100529bba506402 mercurial-0.6c.ebuild 1020
-MD5 57653539c2157532dd8b4f7791209f7a mercurial-0.7.ebuild 1019
-MD5 83fbd730f836f3e8d2167c2aabafe739 mercurial-0.6b.ebuild 941
-MD5 2e06088f711c3c563c4b09f2c0594aba mercurial-0.6b_p20050807.ebuild 1023
-MD5 cbef0bae1805153097ec0a2a63197b57 ChangeLog 2202
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a665f2675f13020037bd5fe782c1c546 metadata.xml 252
-MD5 8844962a08ea4263bd21373de50daed1 files/digest-mercurial-0.6 64
-MD5 e43cb9dbea490ff3358ae3a95c30bca3 files/digest-mercurial-0.7 65
+MD5 ed7836f0d8b1cc4f7075aeead06fe469 ChangeLog 2415
+MD5 2e06088f711c3c563c4b09f2c0594aba mercurial-0.6b_p20050807.ebuild 1023
+MD5 54ff02b0b4987f677a6a7c37225ed2d3 mercurial-0.7.ebuild 1015
 MD5 bd08927a572b3680c8cabb4a45be62e6 files/digest-mercurial-0.6b_p20050807 75
-MD5 769ce93c2fce38b49e9b296f56b04811 files/digest-mercurial-0.6b 66
-MD5 db0258fc4598e1d25bdaf49dbc9489b9 files/digest-mercurial-0.6c 66
+MD5 e43cb9dbea490ff3358ae3a95c30bca3 files/digest-mercurial-0.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDRSe6JrHF4yAQTrARAlitAKCxtVs+8MN2eEuwN0s0W592+lL19gCcCwLw
+d9FroN4qgxeyc0ylQCTs28s=
+=oEpS
+-----END PGP SIGNATURE-----
