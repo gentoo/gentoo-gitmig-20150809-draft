@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r1.ebuild,v 1.2 2005/10/06 12:22:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r1.ebuild,v 1.3 2005/10/06 13:55:33 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -162,7 +162,8 @@ src_install() {
 	cd ${S}
 
 	insinto /usr/include/imap
-	doins c-client/{c-client,mail,imap4r1,rfc822,linkage,misc,smtp,nntp}.h
+	doins c-client/{c-client,mail,imap4r1,rfc822,misc,smtp,nntp}.h
+	doins c-client/linkage.{c,h}
 	doins c-client/{osdep,env_unix,env,fs,ftl,nl,tcp}.h
 	dolib.a c-client/c-client.a
 	dosym /usr/$(get_libdir)/c-client.a /usr/$(get_libdir)/libc-client.a
