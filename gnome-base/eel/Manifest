@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e7a8e50df4d296e6fcb991515167fbf4 eel-2.10.0.ebuild 926
-MD5 8baef0b26155e19c4dfdd9e97ff4be4d eel-2.12.0.ebuild 1065
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 0597cddc505cae01e451d5e8790b554c ChangeLog 12835
+MD5 246e439164baf77dd25e9e338b9f90b8 ChangeLog 12976
 MD5 3a3d6f15ca39ac8335433820d89b0934 eel-1.0.2-r3.ebuild 1053
+MD5 e7a8e50df4d296e6fcb991515167fbf4 eel-2.10.0.ebuild 926
 MD5 12b4d8745c44f9696335fcbaecdf6f62 eel-2.10.1.ebuild 930
-MD5 d29cf83b3200c45a68efc08a64b9fdef files/digest-eel-2.10.1 63
+MD5 973e3d2c15063838e4166cc04279bddb eel-2.12.1.ebuild 1025
 MD5 c884c4a35910537301a9beec39b4d3ce files/digest-eel-1.0.2-r3 61
 MD5 89f62dff205403c2cdd39f793f3833d4 files/digest-eel-2.10.0 63
-MD5 b3bf6fa70623c0c795f52acc423a12de files/digest-eel-2.12.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLCvNJrHF4yAQTrARAp65AJ9shRs1SjohfI3nDzAjuYkC/20rrQCgvZlf
-f+NbtSqwMLAyUwDVBTdBUPM=
-=o+qV
------END PGP SIGNATURE-----
+MD5 d29cf83b3200c45a68efc08a64b9fdef files/digest-eel-2.10.1 63
+MD5 9e2fc1269295e908e26b05b649f2deaa files/digest-eel-2.12.1 63
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
