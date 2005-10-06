@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.202 2005/10/06 10:14:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.203 2005/10/06 20:35:14 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -768,6 +768,7 @@ create_eselect_conf() {
 	echo "	infopath=${DATAPATH}/info" >> ${compiler_config_file}
 	echo "	alias_cc=gcc" >> ${compiler_config_file}
 	echo "	stdcxx_incdir=${STDCXX_INCDIR##*/}" >> ${compiler_config_file}
+	echo "  bin_prefix=${CTARGET}" >> ${compiler_config_file}
 
 	if [[ -x "${D}/${BINPATH}/${CTARGET}-g77" ]] ; then
 		echo "	alias_gfortran=g77" >> ${compiler_config_file}
@@ -1160,7 +1161,8 @@ gcc_do_configure() {
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
 				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
 			else
-				# This should be conditional.  It breaks emerging cross-gcc-3.4.4 for me --eradicator
+				# This should be conditional, but what needs it?
+				# It breaks emerging cross-gcc-3.4.4 for me --eradicator
 				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
 		fi
