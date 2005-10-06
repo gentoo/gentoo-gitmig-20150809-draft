@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-datetime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.10 2005/08/23 22:34:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime/ChangeLog,v 1.11 2005/10/06 17:32:16 bcowan Exp $
+
+*xfce4-datetime-0.3.1-r2 (06 Oct 2005)
+
+  06 Oct 2005; Brad Cowan <bcowan@gentoo.org>
+  +xfce4-datetime-0.3.1-r2.ebuild:
+  Xfce builds for new eclass and modular Xorg.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   xfce4-datetime-0.3.1-r1.ebuild:

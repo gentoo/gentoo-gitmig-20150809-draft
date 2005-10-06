@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-wavelan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.8 2005/08/23 22:36:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan/ChangeLog,v 1.9 2005/10/06 17:50:23 bcowan Exp $
+
+*xfce4-wavelan-0.4.1-r2 (06 Oct 2005)
+
+  06 Oct 2005; Brad Cowan <bcowan@gentoo.org>
+  +xfce4-wavelan-0.4.1-r2.ebuild:
+  Xfce builds for new eclass and modular Xorg.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org>
   xfce4-wavelan-0.4.1-r1.ebuild:

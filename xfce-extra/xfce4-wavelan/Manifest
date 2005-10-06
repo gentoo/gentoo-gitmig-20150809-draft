@@ -1,4 +1,6 @@
 MD5 30938bd7f52b524675b75b071241f99c xfce4-wavelan-0.4.1-r1.ebuild 381
-MD5 2702f13985a264d02dcf47d9f8f8aefa ChangeLog 980
+MD5 9454f5518de8a8b156a72f17822884d1 ChangeLog 1147
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 4cfd3142029c856d1325ab193a2011de xfce4-wavelan-0.4.1-r2.ebuild 383
 MD5 ba5ee60f6d06ce87f11c3c36e51a558a files/digest-xfce4-wavelan-0.4.1-r1 78
+MD5 ba5ee60f6d06ce87f11c3c36e51a558a files/digest-xfce4-wavelan-0.4.1-r2 78
