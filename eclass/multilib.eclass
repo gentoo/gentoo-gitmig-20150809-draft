@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.34 2005/10/06 10:03:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.35 2005/10/06 20:33:21 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -102,6 +102,7 @@ export DEFAULT_ABI=${DEFAULT_ABI:-"default"}
 export CFLAGS_default
 export LDFLAGS_default
 export CHOST_default=${CHOST_default:-${CHOST}}
+export CTARGET_default=${CTARGET_default:-${CTARGET}}
 export LIBDIR_default=${CONF_LIBDIR:-"lib"}
 export CDEFINE_default="__unix__"
 
