@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3b3752b510604285257bc50d9292095a libraw1394-1.2.0.ebuild 645
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 cd2861b2bc0983859e05134ce9941777 libraw1394-1.1.0.ebuild 611
 MD5 8d58b1eab29b84e8d64fed9975d0d444 libraw1394-0.10.1.ebuild 630
 MD5 8b31b8f56d518401205fa664d41df904 ChangeLog 3727
-MD5 097c66aca54299cb3457fe781df7b730 libraw1394-1.2.0.ebuild 636
-MD5 fedb057e70aee44ba2cc1b5e24d5832c libraw1394-1.1.0.ebuild 602
-MD5 ac2865a22563af78175dcace3ad04ce9 files/digest-libraw1394-1.1.0 68
-MD5 73ddb811165c153d57d5e43909e6c136 files/digest-libraw1394-0.10.1 69
 MD5 2bc0a95108d281eccd478c423bb9f918 files/digest-libraw1394-1.2.0 68
+MD5 73ddb811165c153d57d5e43909e6c136 files/digest-libraw1394-0.10.1 69
+MD5 ac2865a22563af78175dcace3ad04ce9 files/digest-libraw1394-1.1.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRJvxgIKl8Uu19MoRAlH3AJsHIJc17S+BJ65gNOu8XioELJaOWwCeLhMX
+7zgrWampzuSgc997uXwiw1M=
+=FvSd
+-----END PGP SIGNATURE-----
