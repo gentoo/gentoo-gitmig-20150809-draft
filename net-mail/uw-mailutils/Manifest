@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bb25c94f9d84a96322147ed6ee676464 uw-mailutils-2004g.ebuild 1000
 MD5 d0d001353fed1072881537c5948f5fd7 ChangeLog 707
 MD5 1bb83f4e84ad8336fcdc25c821ccb680 metadata.xml 272
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-mailutils-2004g 62
 MD5 59c4ba0421f60657457e0aecf07be7be files/uw-mailutils-2004g.patch 1210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRTv/ViELBEf1JB0RAuSTAJ4kOu3K5eABA5dlrGyrrO6mJmkHpwCfaY6I
++eKQW2X96zeoFsEnF6qBys0=
+=YDvU
+-----END PGP SIGNATURE-----

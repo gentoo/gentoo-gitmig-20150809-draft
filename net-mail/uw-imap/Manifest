@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9a05288ecb9fada22fff84bf0c5962c uw-imap-2004a.ebuild 3292
 MD5 e6fc1d3fd118a85fa8cc1b260604fd54 uw-imap-2004g-r1.ebuild 5177
 MD5 f86653fdd59e2727644fc31305b236c2 uw-imap-2004c-r1.ebuild 4127
@@ -22,3 +25,10 @@ MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r1 63
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r2 63
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r3 63
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRTw8ViELBEf1JB0RAsOJAJ0e53sO8itHn9ipD4qfwak2bbf0wwCfWLuL
+x9YDxlVcxnN49ZfcfXANjaQ=
+=0TdL
+-----END PGP SIGNATURE-----
