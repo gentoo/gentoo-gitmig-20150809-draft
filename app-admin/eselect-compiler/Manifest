@@ -1,17 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6b93305f6496bc7a24190884567ff0c7 ChangeLog 1930
-MD5 cc910404a0747b40263fc37baaba9f6f eselect-compiler-2.0.0_beta2-r2.ebuild 1771
-MD5 c7cf3a3617d90adfaacc7c2c012ddfb0 files/digest-eselect-compiler-2.0.0_beta2-r2 79
-MD5 747f5e598f70f9ae4ea66eb352e4fc21 files/eselect-compiler-2.0.0_beta2-get_bins.patch 580
-MD5 381e44a2470aea23417bf589716517f0 files/eselect-compiler-2.0.0_beta2-ref.patch 836
-MD5 bbad47da67de57c3cf780c0d0ffed175 files/eselect-compiler-2.0.0_beta2-specs.patch 471
+MD5 996e86f50eec22726c21bef02cc2033b ChangeLog 2307
+MD5 b7a3e6b055f1af62acd6f9853352d180 eselect-compiler-2.0.0_beta3.ebuild 1600
+MD5 8879aa2f3df6fc851071c73c7bcc2242 files/digest-eselect-compiler-2.0.0_beta3 79
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQ6U9OpjtAl+gMRURAu9IAJ4i20Gh7v3MOzBUg7KdndT9zQ1c1wCfSfJP
-89fvtyVvinOazUYRv/MLb00=
-=nSPd
+iD8DBQFDRHAJOpjtAl+gMRURAre7AJwItJ+LRnat2zC5T5U5WRAg0cOwjgCgmx0E
+WnOv+I/rkRFB+h6/sZEyMmY=
+=XTur
 -----END PGP SIGNATURE-----
