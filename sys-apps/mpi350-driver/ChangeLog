@@ -1,8 +1,0 @@
-# ChangeLog for sys-apps/mpi350-driver
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/ChangeLog,v 1.3 2004/06/24 22:18:24 agriffis Exp $
-
-*mpi350-driver-2.0 (27 Jan 2003)
-
-  27 Jan 2003; Chad Huneycutt <chadh@gentoo.org> mpi350-driver-2.0.ebuild :
-  new ebuild (bug #14563).
