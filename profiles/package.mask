@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4542 2005/10/07 11:03:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4543 2005/10/07 18:32:12 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (07 Oct 2005)
+# Masked in favor of media-tv/xdtv
+media-tv/xawdecode
 
 # Akinori Hattori <hattya@gentoo.org> (06 Oct 2005)
 # development branch
