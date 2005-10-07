@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7cb8076f565b6e2dd84f710630692000 ChangeLog 432
-MD5 80721605865756892b90d04657f7c631 files/digest-service-discovery-applet-0.1 80
+MD5 b40b67a2f6cecea50c80875c28e0b405 ChangeLog 624
+MD5 b2e89a91daa1fb03eea0ee2ae7eecf94 files/digest-service-discovery-applet-0.3 80
 MD5 fee6e15994a6028b5d4ca280c4cabe09 metadata.xml 303
-MD5 2048dee7808d51c4715060894ab20f0b service-discovery-applet-0.1.ebuild 863
+MD5 79f9b8b25a7683f6ae6936c520b63093 service-discovery-applet-0.3.ebuild 918
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDN+gUI1lqEGTUzyQRAlIOAKCMFYGFWo3fQ19xAiclmBIze0F6bQCfbtVH
-TRM64QCyzP/PELuZP3SGwng=
-=7Vo0
+iD8DBQFDRtDuI1lqEGTUzyQRAhksAJ9Xh6NAqOdGhrfW2qms4CbDJ3WXEgCeIPvi
+NOnFVr5nwAIqLN8+BXwaFwg=
+=MQaV
 -----END PGP SIGNATURE-----

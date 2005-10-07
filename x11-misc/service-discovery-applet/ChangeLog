@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/service-discovery-applet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/ChangeLog,v 1.1 2005/09/26 12:22:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/ChangeLog,v 1.2 2005/10/07 19:47:33 swegener Exp $
+
+*service-discovery-applet-0.3 (07 Oct 2005)
+
+  07 Oct 2005; Sven Wegener <swegener@gentoo.org>
+  -service-discovery-applet-0.1.ebuild,
+  +service-discovery-applet-0.3.ebuild:
+  Version bump.
 
 *service-discovery-applet-0.1 (26 Sep 2005)
 
