@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.3 2005/10/07 00:54:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.4 2005/10/07 03:12:03 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -610,6 +610,13 @@ alt_usrlibdir() {
 }
 
 setup_flags() {
+	# Store our CFLAGS because it's changed depending on which CTARGET
+	# we are building when pulling glibc on a multilib profile
+	CFLAGS_BASE=${CFLAGS_BASE-${CFLAGS}}
+	CFLAGS=${CFLAGS_BASE}
+	ASFLAGS_BASE=${ASFLAGS_BASE-${ASFLAGS}}
+	ASFLAGS=${ASFLAGS_BASE}
+
 	# Over-zealous CFLAGS can often cause problems.  What may work for one
 	# person may not work for another.  To avoid a large influx of bugs
 	# relating to failed builds, we strip most CFLAGS out to ensure as few
@@ -620,10 +627,11 @@ setup_flags() {
 
 	unset CBUILD_OPT CTARGET_OPT
 	has_multilib_profile && CTARGET_OPT=$(get_abi_CHOST)
+	[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
 
 	case $(tc-arch) in
-		# Punt this when amd64's 2004.3 is removed
 		amd64)
+			# Punt this when amd64's 2004.3 is removed
 			CFLAGS_x86="-m32"
 		;;
 		ppc)
@@ -638,15 +646,17 @@ setup_flags() {
 			if is_crosscompile || [[ ${PROFILE_ARCH} == "sparc64" ]] || { has_multilib_profile && ! tc-is-cross-compiler; } ; then
 				case ${ABI} in
 					sparc64)
+						filter-flags -Wa,-xarch -Wa,-A
+
 						if is-flag "-mcpu=ultrasparc3"; then
 							CTARGET_OPT="sparc64b-unknown-linux-gnu"
-							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
+							append-flags "-Wa,-xarch=v9b"
+							export ASFLAGS="${ASFLAGS} -Wa,-xarch=v9b"
 						else
 							CTARGET_OPT="sparc64-unknown-linux-gnu"
-							CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
+							append-flags "-Wa,-xarch=v9a"
+							export ASFLAGS="${ASFLAGS} -Wa,-xarch=v9a"
 						fi
-
-						filter-flags -Wa,-xarch -Wa,-A
 					;;
 					*)
 						if is-flag "-mcpu=ultrasparc3"; then
@@ -958,23 +968,22 @@ use_multilib() {
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
 setup_env() {
-	setup_flags
-
 	if is_crosscompile || tc-is-cross-compiler ; then
 		multilib_env ${CTARGET}
+
+		# We only install for this CTARGET on crosscompilers
+		MULTILIB_ABIS=${DEFAULT_ABI}
+		ABI=${DEFAULT_ABI}
 
 		# We need to export CFLAGS with abi information in them because
 		# glibc's configure script checks CFLAGS for some targets (like mips)
 		local VAR="CFLAGS_"${CTARGET//[-.]/_}
 		CFLAGS=${!VAR-"-O2 -pipe"}
-
-		# We only install for this CTARGET on crosscompilers
-		MULTILIB_ABIS=${DEFAULT_ABI}
-
-		ABI=${DEFAULT_ABI:-default}
 	fi
 
 	export ABI=${ABI:-${DEFAULT_ABI:-default}}
+
+	setup_flags
 }
 
 ### /ECLASS PUNTAGE ###

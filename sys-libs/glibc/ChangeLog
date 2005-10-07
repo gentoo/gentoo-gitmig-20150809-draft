@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.392 2005/10/07 00:40:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.393 2005/10/07 03:12:03 eradicator Exp $
+
+  07 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.5-r2.ebuild, glibc-2.3.5.20050722.ebuild:
+  Avoid using CFLAGS_${ABI} for sparc64 as that is deprecated (and won't work
+  with the default eselect-compiler settings).
 
   07 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.5-r2.ebuild, glibc-2.3.5.20050722.ebuild:
