@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.26 2005/07/10 04:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.27 2005/10/07 02:01:56 eradicator Exp $
 
 MAN_VER="3.3.5"
 #BRANCH_UPDATE="20041025"
@@ -48,7 +48,7 @@ KEYWORDS="~alpha ~amd64 arm hppa -ia64 ~mips s390 sh sparc x86"
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
 RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.6
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.6 )
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	elibc_glibc? ( >=sys-libs/glibc-2.3.2-r9 )
@@ -72,7 +72,7 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND="sys-devel/gcc-config"
+PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
 
 src_unpack() {
 	gcc_src_unpack

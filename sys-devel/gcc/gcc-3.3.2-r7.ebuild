@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.23 2005/05/24 04:28:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r7.ebuild,v 1.24 2005/10/07 02:01:56 eradicator Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj emul-linux-x86"
 
@@ -121,19 +121,19 @@ DEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
-	>=sys-devel/gcc-config-1.3.1
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	>=sys-devel/gcc-config-1.3.1
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
-PDEPEND="sys-devel/gcc-config"
+PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
 
 
 chk_gcc_version() {

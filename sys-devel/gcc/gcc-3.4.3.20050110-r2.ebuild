@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r2.ebuild,v 1.10 2005/08/27 04:43:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110-r2.ebuild,v 1.11 2005/10/07 02:01:56 eradicator Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="2.0"
@@ -50,7 +50,7 @@ KEYWORDS="-* ~amd64 -hppa ~ia64 mips ~ppc ~ppc64 ~sparc ~x86"
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
 RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.10
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
@@ -72,7 +72,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND="sys-devel/gcc-config
+PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	!nocxx? ( !mips? ( !ia64? ( !elibc_uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.5 2005/08/16 01:41:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1.ebuild,v 1.6 2005/10/07 02:01:56 eradicator Exp $
 
 PATCH_VER="1.0"
 PATCH_GCC_VER="4.0.1"
@@ -22,7 +22,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-*"
 
 RDEPEND="virtual/libc
-	>=sys-devel/gcc-config-1.3.1
+	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.10 )
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
 	elibc_glibc? ( >=sys-libs/glibc-2.3.5 )
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/binutils-2.15.97"
 
-PDEPEND="sys-devel/gcc-config
+PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) ) ) ) )"
 
 pkg_postinst() {
