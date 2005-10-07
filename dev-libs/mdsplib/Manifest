@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f91c4506dfb506840e03cee255c5aac2 metadata.xml 356
-MD5 07de23335f1c4dbf53e6aebea276e946 mdsplib-0.11.ebuild 715
-MD5 21c615813b1947d0087617437b905624 ChangeLog 516
+MD5 729a3ae1c9c3a76fd257d3f9415f913a ChangeLog 624
 MD5 4ded6e007840789976562bdb0b7323c7 files/digest-mdsplib-0.11 63
+MD5 9fc6a5c68b333043d90af4df465d6818 mdsplib-0.11.ebuild 725
+MD5 f91c4506dfb506840e03cee255c5aac2 metadata.xml 356
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC+k/lKRy60XGEcJIRAqB3AKCO8Ves6DJTn5ZFHxHGB0ZztduZigCgqc1p
-K+eeY/ioZ9jsYvKlAgeWqLE=
-=bPzh
+iD8DBQFDRji4mdTrptrqvGERAom1AKCNknBXev0wgPpVowNZPJr2qHYgngCgimCp
+i2O6kQjkfY/JlENP28EVvto=
+=7rQz
 -----END PGP SIGNATURE-----

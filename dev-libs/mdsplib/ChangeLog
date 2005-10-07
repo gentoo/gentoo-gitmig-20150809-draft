@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mdsplib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.2 2005/08/10 19:04:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.3 2005/10/07 08:58:10 dragonheart Exp $
+
+  07 Oct 2005; Daniel Black <dragonheart@gentoo.org> mdsplib-0.11.ebuild:
+  forgot to add IUSE - bad me
 
   10 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> mdsplib-0.11.ebuild:
   Keyworded ~sparc wrt #99262
