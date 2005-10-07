@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.6 2005/10/07 10:14:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.7 2005/10/07 11:47:09 blubb Exp $
+
+  07 Oct 2005; Simon Stelling <blubb@gentoo.org> uw-mailutils-2004g.ebuild:
+  marked stable on amd64 wrt bug 108206
 
   07 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
   uw-mailutils-2004g.ebuild:
