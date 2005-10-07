@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.9 2005/09/29 10:20:49 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.10 2005/10/07 13:45:35 s4t4n Exp $
+
+  07 Oct 2005; Michele Noberasco <s4t4n@gentoo.org> p3nfs-5.18-r1.ebuild:
+  Stable for x86.
+  -p3nfs-5.18.ebuild:
+  Wiped out older release.
 
 *p3nfs-5.18-r1 (29 Sep 2005)
 
