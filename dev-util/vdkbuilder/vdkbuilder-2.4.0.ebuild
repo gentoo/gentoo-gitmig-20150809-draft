@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.4.0.ebuild,v 1.6 2005/08/07 13:17:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.4.0.ebuild,v 1.7 2005/10/07 18:08:43 flameeyes Exp $
 
 IUSE="nls debug"
 
@@ -39,7 +39,6 @@ src_compile() {
 
 	econf \
 		$(use_enable nls) \
-		--with-gnu-ld \
 		--disable-vdktest \
 		${myconf} || die "econf failed"
 
