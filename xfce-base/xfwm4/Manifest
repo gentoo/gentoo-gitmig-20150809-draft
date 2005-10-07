@@ -1,8 +1,18 @@
-MD5 25a63b62d347f1267e9db113d8edafcb xfwm4-4.2.2.ebuild 424
-MD5 266368d6a1d5673c20a3e9cd39e638dc xfwm4-4.2.2-r1.ebuild 795
-MD5 eb0a3773150331bf96f0f3568a034136 xfwm4-4.2.1.ebuild 433
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2540ac3571ddeaedbcb1538770e5dd9 ChangeLog 6484
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 f433bed794a0723e01fefebc6f76c00b files/digest-xfwm4-4.2.1 64
 MD5 f726c307cf362f000682fb4954c9b52d files/digest-xfwm4-4.2.2 64
 MD5 f726c307cf362f000682fb4954c9b52d files/digest-xfwm4-4.2.2-r1 64
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 eb0a3773150331bf96f0f3568a034136 xfwm4-4.2.1.ebuild 433
+MD5 007a058c236ca871888bede9c699f08b xfwm4-4.2.2-r1.ebuild 798
+MD5 25a63b62d347f1267e9db113d8edafcb xfwm4-4.2.2.ebuild 424
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRs4NI1lqEGTUzyQRAn39AJ424JRkxXkiAJP/GOsdCgnVUcylWQCg0rTz
+yTTpsef08RE00Q6DFzfVy2M=
+=s+Ld
+-----END PGP SIGNATURE-----
