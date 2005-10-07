@@ -1,7 +1,8 @@
 MD5 6b79594e93eecd76a98fd248d9eb3ad8 rsbac-admin-1.2.3.ebuild 2229
+MD5 5de6566b7ccd0b03abe0b1f8e22b8c75 rsbac-admin-1.2.5.ebuild 1603
 MD5 9ba0cdc1f37fca8eee5d069870b6bb9c rsbac-admin-1.2.99.ebuild 2716
 MD5 2af626ad2bd32bd1a95f45b88c18f545 rsbac-admin-1.2.4.ebuild 2771
-MD5 22cd75f68f67a6675929cc68c99aed9d ChangeLog 3141
+MD5 cebe634dfeac6b2b8bb8d5a91ef40cbe ChangeLog 3481
 MD5 035ff78da2388cc0585f93ef2247332d metadata.xml 161
 MD5 0ebfdd628334dbf801142d2a5cd832c1 files/nsswitch.conf 469
 MD5 5bba238d756a6695447f1bb0264a01a3 files/rklogd.init 1014
@@ -10,3 +11,4 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-rsbac-admin-1.2.99 0
 MD5 ffea7c6daada6d0033ed3996d45fd7ca files/rsbac-bugfix-v1.2.3-5.diff 625
 MD5 5089c0e6bbae98d91f7e78a9450465e5 files/digest-rsbac-admin-1.2.3 71
 MD5 1b8e1b375f69babf1fd8b370c33aa4bf files/digest-rsbac-admin-1.2.4 71
+MD5 5b133f0238ddfd21834460d1b7ea1b99 files/digest-rsbac-admin-1.2.5 70
