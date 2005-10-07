@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.6 2005/07/15 14:28:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/trove-1.0.2.ebuild,v 1.7 2005/10/07 21:13:47 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,6 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
 	source? ( app-arch/zip )"
 IUSE="doc jikes source"
 

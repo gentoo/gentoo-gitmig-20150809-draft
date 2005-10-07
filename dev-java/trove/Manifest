@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 df22fbcff229c9f99032d7cb45f0003a trove-1.0.2.ebuild 1077
 MD5 745bff55c34e0b9f7e5dcd676cbeb784 ChangeLog 680
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 bb1bef8a378fc9bfa0c057b4f8c12a00 files/digest-trove-1.0.2 63
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 3e15116348bf2aa6e10372b471436169 trove-1.0.2.ebuild 1069
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC18g8/rLF9B432nYRAku/AKCjuDg3YaHplqO25dMHuyEZvz623wCgt3O4
-cR/eSUJb1lmdOZGlNcc+Oo0=
-=9Jw9
+iD8DBQFDRuU5QiJ/wx066S4RAoUSAJ983p+XLsDTJuulCQnm64R2XiHC0wCgmrL7
+V6I6f5n8XY4m+EUjvWdvVzo=
+=Sv+J
 -----END PGP SIGNATURE-----
