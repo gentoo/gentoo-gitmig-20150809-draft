@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.37 2005/10/07 01:49:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.38 2005/10/07 02:24:47 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -96,8 +96,6 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Defaults:
 export MULTILIB_ABIS=${MULTILIB_ABIS:-"default"}
 export DEFAULT_ABI=${DEFAULT_ABI:-"default"}
-# This causes econf to set --libdir=/usr/lib where it didn't before
-#export ABI=${ABI:-"default"}
 export CFLAGS_default
 export LDFLAGS_default
 export CHOST_default=${CHOST_default:-${CHOST}}
@@ -196,6 +194,7 @@ get_abi_var() {
 get_abi_CFLAGS() { get_abi_var CFLAGS "$@"; }
 get_abi_LDFLAGS() { get_abi_var LDFLAGS "$@"; }
 get_abi_CHOST() { get_abi_var CHOST "$@"; }
+get_abi_CTARGET() { get_abi_var CTARGET "$@"; }
 get_abi_FAKE_TARGETS() { get_abi_var FAKE_TARGETS "$@"; }
 get_abi_CDEFINE() { get_abi_var CDEFINE "$@"; }
 get_abi_LIBDIR() { get_abi_var LIBDIR "$@"; }
