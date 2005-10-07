@@ -1,11 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.1 2005/10/07 02:22:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/make.defaults,v 1.2 2005/10/07 21:58:16 eradicator Exp $
 
 FEATURES="sandbox autoconfig"
 
 MULTILIB_ABIS="x86 amd64"
 DEFAULT_ABI="amd64"
+ABI=${DEFAULT_ABI}
 
 #CFLAGS_amd64="-m64"
 #LDFLAGS_amd64="-m elf_x86_64"
