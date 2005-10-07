@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.204 2005/10/07 04:15:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.205 2005/10/07 15:31:46 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -410,16 +410,18 @@ emktemp() {
 #
 # egetent(database, key)
 egetent() {
-	if [[ "${USERLAND}" == "Darwin" ]] ; then
+	case ${CHOST} in
+	*-darwin*)
 		case "$2" in
-		  *[!0-9]*) # Non numeric
+		*[!0-9]*) # Non numeric
 			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
 			;;
-		  *)	# Numeric
+		*)	# Numeric
 			nidump $1 . | awk -F":" "{ if (\$3 == $2) {print \$0;exit;} }"
 			;;
 		esac
-	elif [[ "${USERLAND}" == "BSD" ]] ; then
+		;;
+	*-freebsd*)
 		local opts action="user"
 		[[ $1 == "passwd" ]] || action="group"
 
@@ -429,10 +431,12 @@ egetent() {
 		fi
 
 		pw show ${action} ${opts} "$2" -q
-	else
-		which nscd >& /dev/null && nscd -i "$1"
+		;;
+	*)
+		type -p nscd >& /dev/null && nscd -i "$1"
 		getent "$1" "$2"
-	fi
+		;;
+	esac
 }
 
 # Simplify/standardize adding users to the system
@@ -551,8 +555,8 @@ enewuser() {
 	# handle extra and add the user
 	local oldsandbox=${SANDBOX_ON}
 	export SANDBOX_ON="0"
-	case ${USERLAND} in
-	Darwin)
+	case ${CHOST} in
+	*-darwin*)
 		### Make the user
 		if [[ -z $@ ]] ; then
 			dscl . create /users/${euser} uid ${euid}
@@ -573,7 +577,7 @@ enewuser() {
 			die "Required function missing"
 		fi
 		;;
-	BSD)
+	*-freebsd*)
 		if [[ -z $@ ]] ; then
 			pw useradd ${euser} ${opts} \
 				-c "added by portage for ${PN}" \
@@ -643,7 +647,7 @@ enewgroup() {
 		then
 			if [ -z "`egetent group ${egid}`" ]
 			then
-				if [[ "${USERLAND}" == "Darwin" ]]; then
+				if [[ "${CHOST}" == *-darwin* ]]; then
 					opts="${opts} ${egid}"
 				else
 					opts="${opts} -g ${egid}"
@@ -667,7 +671,8 @@ enewgroup() {
 	# add the group
 	local oldsandbox="${SANDBOX_ON}"
 	export SANDBOX_ON="0"
-	if [[ "${USERLAND}" == "Darwin" ]]; then
+	case ${CHOST} in
+	*-darwin*)
 		if [ ! -z "${eextra}" ];
 		then
 			einfo "Extra options are not supported on Darwin/OS X yet"
@@ -678,14 +683,16 @@ enewgroup() {
 
 		# If we need the next available
 		case ${egid} in
-		  *[!0-9]*) # Non numeric
+		*[!0-9]*) # Non numeric
 			for egid in $(seq 101 999); do
 				[ -z "`egetent group ${egid}`" ] && break
 			done
 		esac
 		dscl . create /groups/${egroup} gid ${egid}
 		dscl . create /groups/${egroup} passwd '*'
-	elif [[ "${USERLAND}" == "BSD" ]] ; then
+		;;
+
+	*-freebsd*)
 		case ${egid} in
 			*[!0-9]*) # Non numeric
 				for egid in $(seq 101 999); do
@@ -693,9 +700,11 @@ enewgroup() {
 				done
 		esac
 		pw groupadd ${egroup} -g ${egid} || die "enewgroup failed"
-	else
+		;;
+	*)
 		groupadd ${opts} ${egroup} || die "enewgroup failed"
-	fi
+		;;
+	esac
 	export SANDBOX_ON="${oldsandbox}"
 }
 
