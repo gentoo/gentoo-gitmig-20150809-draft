@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.47 2005/09/26 15:24:07 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.48 2005/10/07 23:11:58 blubb Exp $
+
+  07 Oct 2005; Simon Stelling <blubb@gentoo.org> qscintilla-1.65.ebuild:
+  make multilib-strict happy
 
 *qscintilla-1.65 (26 Sep 2005)
 
