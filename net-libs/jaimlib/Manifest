@@ -1,4 +1,14 @@
-MD5 7c188ef00d3b38fbe0f9d2ce4ad26cd7 jaimlib-0.5.ebuild 904
-MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
-MD5 4c3fc350bf798b977ab2a79add71c784 ChangeLog 490
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a35ad22e1968f7c70718c88a0704243 ChangeLog 588
 MD5 566eaf03894842ad9228b6696d38a793 files/digest-jaimlib-0.5 66
+MD5 47f3111ef403a76a67d175de09f20184 jaimlib-0.5.ebuild 914
+MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRpVTyiNZaEAZA+ARAqu3AJ4xjayeolmYGt0uG1oXHXvphvNxjACff7My
+e6ZdKhedHbgjlJFeDKQE1yk=
+=JhWg
+-----END PGP SIGNATURE-----

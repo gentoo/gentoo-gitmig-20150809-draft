@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jaimlib/jaimlib-0.5.ebuild,v 1.2 2004/07/17 09:25:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jaimlib/jaimlib-0.5.ebuild,v 1.3 2005/10/07 15:32:56 mkennedy Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/jaimlib/jaimlibsrc-${PV}.tar.gz"
 HOMEPAGE="http://jaimlib.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.4
