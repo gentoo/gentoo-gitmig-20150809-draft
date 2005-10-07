@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.17 2005/09/22 06:10:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.18 2005/10/07 00:40:10 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -283,7 +283,7 @@ toolchain-glibc_pkg_preinst() {
 }
 
 toolchain-glibc_src_install() {
-	setup_flags
+	setup_env
 
 	# Need to dodir first because it might not exist (bad amd64 profiles)
 	dodir $(alt_usrlibdir)
@@ -624,9 +624,6 @@ setup_flags() {
 	has_multilib_profile && CTARGET_OPT=$(get_abi_CHOST)
 
 	case $(tc-arch) in
-		amd64)
-			CFLAGS_x86="-m32"
-		;;
 		ppc)
 			append-flags "-freorder-blocks"
 		;;
@@ -845,7 +842,7 @@ setup_locales() {
 glibc_do_configure() {
 	local myconf
 
-	setup_flags
+	setup_env
 
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
@@ -963,81 +960,22 @@ use_multilib() {
 }
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
-crosscompile_setup() {
+setup_env() {
+	setup_flags
+
 	if is_crosscompile || tc-is-cross-compiler; then
-		# CFLAGS are used by ${CTARGET}-gcc
-		local VAR="CFLAGS_"${CTARGET//-/_}
-		CFLAGS=${!VAR-"-O2"}
+		multilib_env ${CTARGET}
 
-		case ${CTARGET} in
-			x86_64*)
-				export CFLAGS_x86=${CFLAGS_x86--m32}
-				export CHOST_x86=${CTARGET/x86_64/i686}
-				export CDEFINE_x86="__i386__"
-				export LIBDIR_x86="lib"
+		# We need to export CFLAGS with abi information in them because
+		# glibc's configure script checks CFLAGS for some targets (like mips)
+		local VAR="CFLAGS_"${CTARGET//[-.]/_}
+		CFLAGS=${!VAR-"-O2 -pipe"}
 
-				export CFLAGS_amd64=${CFLAGS_amd64--m64}
-				export CHOST_amd64=${CTARGET}
-				export CDEFINE_amd64="__x86_64__"
-				export LIBDIR_amd64="lib64"
-
-				export MULTILIB_ABIS="amd64"
-				export DEFAULT_ABI="amd64"
-			;;
-			mips64*)
-				export CFLAGS_o32=${CFLAGS_o32--mabi=32}
-				export CHOST_o32=${CTARGET/mips64/mips}
-				export CDEFINE_o32="_ABIO32"
-				export LIBDIR_o32="lib"
-
-				export CFLAGS_n32=${CFLAGS_n32--mabi=n32}
-				export CHOST_n32=${CTARGET}
-				export CDEFINE_n32="_ABIN32"
-				export LIBDIR_n32="lib32"
-
-				export CFLAGS_n64=${CFLAGS_n64--mabi=64}
-				export CHOST_n64=${CTARGET}
-				export CDEFINE_n64="_ABI64"
-				export LIBDIR_n64="lib64"
-
-				export MULTILIB_ABIS="n64 n32"
-				export DEFAULT_ABI="n32"
-			;;
-			powerpc64*)
-				export CFLAGS_ppc=${CFLAGS_ppc--m32}
-				export CHOST_ppc=${CTARGET/powerpc64/powerpc}
-				export CDEFINE_ppc="!__powerpc64__"
-				export LIBDIR_ppc="lib"
-
-				export CFLAGS_ppc64=${CFLAGS_ppc64--m64}
-				export CHOST_ppc64=${CTARGET}
-				export CDEFINE_ppc64="__powerpc64__"
-				export LIBDIR_ppc64="lib64"
-
-				export MULTILIB_ABIS="ppc64"
-				export DEFAULT_ABI="ppc64"
-			;;
-			sparc64*)
-				export CFLAGS_sparc32=${CFLAGS_sparc--m32}
-				export CHOST_sparc32=${CTARGET/sparc64/sparc}
-				export CDEFINE_sparc32="!__arch64__"
-				export LIBDIR_sparc32="lib"
-
-				export CFLAGS_sparc64=${CFLAGS_sparc64--m64}
-				export CHOST_sparc64=${CTARGET}
-				export CDEFINE_sparc64="__arch64__"
-				export LIBDIR_sparc64="lib64"
-
-				export MULTILIB_ABIS="sparc64"
-				export DEFAULT_ABI="sparc64"
-			;;
-			*)
-				export MULTILIB_ABIS="default"
-				export DEFAULT_ABI="default"
-		esac
-
-		ABI=${DEFAULT_ABI}
+		# We only install for this CTARGET on crosscompilers
+		MULTILIB_ABIS=${DEFAULT_ABI}
 	fi
+
+	export ABI=${ABI:-${DEFAULT_ABI:-default}}
 }
 
 ### /ECLASS PUNTAGE ###
@@ -1127,8 +1065,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	crosscompile_setup
-	export ABI="${DEFAULT_ABI}"
+	setup_env
 
 	case $(tc-arch) in
 		hppa)
@@ -1197,7 +1134,7 @@ src_unpack() {
 }
 
 src_compile() {
-	crosscompile_setup
+	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
 		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
@@ -1221,7 +1158,7 @@ src_compile() {
 }
 
 src_test() {
-	crosscompile_setup
+	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
 		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage
@@ -1246,7 +1183,7 @@ src_test() {
 }
 
 src_install() {
-	crosscompile_setup
+	setup_env
 
 	if [[ -z ${OABI} ]] && has_multilib_profile ; then
 		# MULTILIB-CLEANUP: Fix this when FEATURES=multilib-pkg is in portage

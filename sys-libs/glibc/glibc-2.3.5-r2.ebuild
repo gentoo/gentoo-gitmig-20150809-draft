@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.1 2005/10/06 02:49:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.2 2005/10/07 00:40:10 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -622,6 +622,7 @@ setup_flags() {
 	has_multilib_profile && CTARGET_OPT=$(get_abi_CHOST)
 
 	case $(tc-arch) in
+		# Punt this when amd64's 2004.3 is removed
 		amd64)
 			CFLAGS_x86="-m32"
 		;;
@@ -960,84 +961,18 @@ setup_env() {
 	setup_flags
 
 	if is_crosscompile || tc-is-cross-compiler ; then
-		case ${CTARGET} in
-			x86_64*)
-				export CFLAGS_x86=${CFLAGS_x86--m32}
-				export CHOST_x86=${CTARGET/x86_64/i686}
-				export CDEFINE_x86="__i386__"
-				export LIBDIR_x86="lib"
+		multilib_env ${CTARGET}
 
-				export CFLAGS_amd64=${CFLAGS_amd64--m64}
-				export CHOST_amd64=${CTARGET}
-				export CDEFINE_amd64="__x86_64__"
-				export LIBDIR_amd64="lib64"
+		# We need to export CFLAGS with abi information in them because
+		# glibc's configure script checks CFLAGS for some targets (like mips)
+		local VAR="CFLAGS_"${CTARGET//[-.]/_}
+		CFLAGS=${!VAR-"-O2 -pipe"}
 
-				export MULTILIB_ABIS="amd64"
-				export DEFAULT_ABI="amd64"
-			;;
-			mips64*)
-				export CFLAGS_o32=${CFLAGS_o32--mabi=32}
-				export CHOST_o32=${CTARGET/mips64/mips}
-				export CDEFINE_o32="_MIPS_SIM == _ABIO32"
-				export LIBDIR_o32="lib"
-
-				export CFLAGS_n32=${CFLAGS_n32--mabi=n32}
-				export CHOST_n32=${CTARGET}
-				export CDEFINE_n32="_MIPS_SIM == _ABIN32"
-				export LIBDIR_n32="lib32"
-
-				export CFLAGS_n64=${CFLAGS_n64--mabi=64}
-				export CHOST_n64=${CTARGET}
-				export CDEFINE_n64="_MIPS_SIM == _ABI64"
-				export LIBDIR_n64="lib64"
-
-				export MULTILIB_ABIS="n64 n32"
-				export DEFAULT_ABI="n32"
-			;;
-			powerpc64*)
-				export CFLAGS_ppc=${CFLAGS_ppc--m32}
-				export CHOST_ppc=${CTARGET/powerpc64/powerpc}
-				export CDEFINE_ppc="!__powerpc64__"
-				export LIBDIR_ppc="lib"
-
-				export CFLAGS_ppc64=${CFLAGS_ppc64--m64}
-				export CHOST_ppc64=${CTARGET}
-				export CDEFINE_ppc64="__powerpc64__"
-				export LIBDIR_ppc64="lib64"
-
-				export MULTILIB_ABIS="ppc64"
-				export DEFAULT_ABI="ppc64"
-			;;
-			sparc64*)
-				export CFLAGS_sparc32=${CFLAGS_sparc--m32}
-				export CHOST_sparc32=${CTARGET/sparc64/sparc}
-				export CDEFINE_sparc32="!__arch64__"
-				export LIBDIR_sparc32="lib"
-
-				export CFLAGS_sparc64=${CFLAGS_sparc64--m64}
-				export CHOST_sparc64=${CTARGET}
-				export CDEFINE_sparc64="__arch64__"
-				export LIBDIR_sparc64="lib64"
-
-				export MULTILIB_ABIS="sparc64"
-				export DEFAULT_ABI="sparc64"
-			;;
-			*)
-				export MULTILIB_ABIS="default"
-				export DEFAULT_ABI="default"
-		esac
+		# We only install for this CTARGET on crosscompilers
+		MULTILIB_ABIS=${DEFAULT_ABI}
 	fi
 
 	export ABI=${ABI:-${DEFAULT_ABI:-default}}
-
-	if is_crosscompile || tc-is-cross-compiler ; then
-		# We need to export CFLAGS with abi information in them because
-		# glibc's configure script checks CFLAGS for some targets (like mips)
-		local VAR=CFLAGS_${CTARGET//-/_}
-		export CFLAGS=${!VAR--O2}
-		VAR=CFLAGS_${ABI}
-		export CFLAGS="${CFLAGS} ${!VAR}"
-	fi
 }
 
 ### /ECLASS PUNTAGE ###
