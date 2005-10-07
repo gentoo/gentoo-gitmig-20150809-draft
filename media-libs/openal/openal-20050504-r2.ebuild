@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r2.ebuild,v 1.1 2005/09/02 14:35:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r2.ebuild,v 1.2 2005/10/07 10:29:59 lu_zero Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.2 )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	sdl? ( media-libs/libsdl )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	mpeg? ( media-libs/smpeg )"
 
 DEPEND="${RDEPEND}
@@ -51,7 +51,7 @@ src_compile() {
 	use alsa && myconf="${myconf} --enable-alsa"
 	use arts && myconf="${myconf} --enable-arts"
 	use mpeg && myconf="${myconf} --enable-smpeg"
-	use oggvorbis && myconf="${myconf} --enable-vorbis"
+	use vorbis && myconf="${myconf} --enable-vorbis"
 	use debug && myconf="${myconf} --enable-debug-maximus"
 
 	econf ${myconf} --enable-paranoid-locks --libdir=/usr/$(get_libdir) \
