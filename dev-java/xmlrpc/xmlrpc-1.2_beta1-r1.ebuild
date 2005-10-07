@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1-r1.ebuild,v 1.3 2005/07/13 10:45:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1-r1.ebuild,v 1.4 2005/10/07 18:45:29 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.4
-	dev-java/ant
+	dev-java/ant-core
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
@@ -31,7 +31,7 @@ src_compile() {
 src_install() {
 	java-pkg_newjar build/xmlrpc-${MY_PV}.jar ${PN}.jar
 	java-pkg_newjar build/xmlrpc-${MY_PV}-applet.jar ${PN}-applet.jar
-	dodoc *.txt
+	dodoc README.txt
 	use doc && java-pkg_dohtml -r api
 }
 

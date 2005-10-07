@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xmlrpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.8 2005/04/22 08:50:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.9 2005/10/07 18:45:29 betelgeuse Exp $
+
+  07 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  xmlrpc-1.2_beta1-r1.ebuild:
+  xmlrpc only needs ant-core, not the full ant. Removed installation of
+  License.txt.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> xmlrpc-1.2_beta1.ebuild:
   stable on amd64
