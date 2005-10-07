@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.20 2005/10/07 03:12:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.21 2005/10/07 03:43:00 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -629,8 +629,10 @@ setup_flags() {
 	filter-flags -m32 -m64 -mabi=*
 
 	unset CBUILD_OPT CTARGET_OPT
-	has_multilib_profile && CTARGET_OPT=$(get_abi_CTARGET)
-	[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
+	if has_multilib_profile ; then
+		CTARGET_OPT=$(get_abi_CTARGET)
+		[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
+	fi
 
 	case $(tc-arch) in
 		ppc)
