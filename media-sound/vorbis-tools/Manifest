@@ -1,7 +1,8 @@
 MD5 1d1e99776588d7a4c2d006ded8dec7d4 vorbis-tools-1.1.1.ebuild 1347
 MD5 a73db00f1c3bc8ab60df4554fd605bfa vorbis-tools-1.0-r2.ebuild 871
 MD5 b6ec8c81a83937fa8b02b1faf9295fec vorbis-tools-1.0.1-r1.ebuild 1390
-MD5 5d4fcaa60c6bc8bfabdde392ee754fc4 ChangeLog 4535
+MD5 fc4dd983169635156724e2383d3dfc1d vorbis-tools-1.1.1-r1.ebuild 1304
+MD5 a35ae258cf35c9e2362031ceb36def90 ChangeLog 4708
 MD5 08f7faecc3e956ee8567026b16977ce3 vorbis-tools-1.0.1.ebuild 1300
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1 70
@@ -9,3 +10,4 @@ MD5 c6c7f9c0dab0b7b1372a866773587178 files/digest-vorbis-tools-1.1.1 70
 MD5 bc135048b370b69a479ec79194774283 files/vorbis-tools-1.0.1-largefile.patch 458
 MD5 59ac94a6db4621c0ebd90d8b8fe8d9c0 files/digest-vorbis-tools-1.0-r2 68
 MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1-r1 70
+MD5 c6c7f9c0dab0b7b1372a866773587178 files/digest-vorbis-tools-1.1.1-r1 70
