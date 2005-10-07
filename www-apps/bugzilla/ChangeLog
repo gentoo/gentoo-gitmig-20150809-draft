@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.42 2005/10/06 15:19:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.43 2005/10/07 11:56:39 blubb Exp $
+
+  07 Oct 2005; Simon Stelling <blubb@gentoo.org> bugzilla-2.18.4.ebuild:
+  stable on amd64 wrt bug 107796
 
   06 Oct 2005; Aron Griffis <agriffis@gentoo.org> bugzilla-2.18.4.ebuild,
   bugzilla-2.20.ebuild:
