@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.36 2005/10/07 01:22:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.37 2005/10/07 01:49:11 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -556,8 +556,8 @@ multilib_env() {
 	local CTARGET=$1
 	local CTARGET_post=${CTARGET#*-}
 
-	case $(tc-arch ${CTARGET}) in
-		amd64)
+	case ${CTARGET} in
+		x86_64*)
 			export CFLAGS_x86=${CFLAGS_x86--m32}
 			export CHOST_x86=i686-${CTARGET_post}
 			export CTARGET_x86=i686-${CTARGET_post}
@@ -573,7 +573,7 @@ multilib_env() {
 			export MULTILIB_ABIS="amd64 x86"
 			export DEFAULT_ABI="amd64"
 		;;
-		mips)
+		mips64*)
 			export CFLAGS_o32=${CFLAGS_o32--mabi=32}
 			export CHOST_o32=mips-${CTARGET_post}
 			export CTARGET_o32=mips-${CTARGET_post}
@@ -593,12 +593,9 @@ multilib_env() {
 			export LIBDIR_n64="lib64"
 
 			export MULTILIB_ABIS="n64 n32 o32"
-			case ${CTARGET} in
-				mips64*) export DEFAULT_ABI="n32" ;;
-				*)       export DEFAULT_ABI="o32" ;;
-			esac
+		        export DEFAULT_ABI="n32" 
 		;;
-		ppc64)
+		powerpc64*)
 			export CFLAGS_ppc=${CFLAGS_ppc--m32}
 			export CHOST_ppc=powerpc-${CTARGET_post}
 			export CTARGET_ppc=powerpc-${CTARGET_post}
@@ -614,7 +611,7 @@ multilib_env() {
 			export MULTILIB_ABIS="ppc64 ppc"
 			export DEFAULT_ABI="ppc64"
 		;;
-		sparc)
+		sparc64*)
 			export CFLAGS_sparc32=${CFLAGS_sparc32--m32}
 			export CHOST_sparc32=sparc-${CTARGET_post}
 			export CTARGET_sparc32=sparc-${CTARGET_post}
@@ -628,10 +625,7 @@ multilib_env() {
 			export LIBDIR_sparc64="lib64"
 
 			export MULTILIB_ABIS="sparc64 sparc32"
-			case ${CTARGET} in
-				sparc64*) export DEFAULT_ABI="sparc64" ;;
-				*)        export DEFAULT_ABI="sparc32" ;;
-			esac
+			export DEFAULT_ABI="sparc64"
 		;;
 		*)
 			export MULTILIB_ABIS="default"
