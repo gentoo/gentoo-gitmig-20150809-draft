@@ -1,49 +1,10 @@
 # ChangeLog for dev-java/poi
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.10 2005/05/14 16:09:34 luckyduck Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.11 2005/10/07 20:42:09 betelgeuse Exp $
 
-*poi-2.5-r2 (14 May 2005)
+*poi-2.5.1 (07 Oct 2005)
 
-  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -poi-2.5-r1.ebuild,
-  +poi-2.5-r2.ebuild:
-  updated commons-beanutils dependency to reflect new slotting. see #71952
-
-  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
-  -files/poi-2.0-jikes-fix.patch, -poi-2.0.ebuild, poi-2.5-r1.ebuild:
-  stable on ppc
-
-  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> poi-2.5-r1.ebuild,
-  -poi-2.5.ebuild:
-  latest revision stable on x86 and amd64, removed old version.
-
-  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> poi-2.0.ebuild,
-  poi-2.5-r1.ebuild, poi-2.5.ebuild:
-  Keywords ~amd64.
-
-*poi-2.5-r1 (19 Sep 2004)
-
-  19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +poi-2.5-r1.ebuild:
-  Doesn't use packed jars anymore, thanks too Mark Wolfe
-  <mwolfe@netspace.net.au>. The ebuild also evilly fetched other jars it then
-  used, i corrected those. closes #63263
-
-*poi-2.5 (22 Jul 2004)
-
-  22 Jul 2004; Thomas Matthijs <axxo@gentoo.org>
-  +files/poi-2.0-jikes-fix.patch, +files/poi-2.5-jikes-fix.patch,
-  poi-2.0.ebuild, +poi-2.5.ebuild:
-  added junit use flag: run junit tests
-  new upstream version + patch to fix compilation with jikes (closes 57863)
-  added depend on jikes
-
-  20 Apr 2004; Martin Holzer <mholzer@gentoo.org> poi-2.0.ebuild:
-  src_uri now uses mirror://apache
-
-  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> poi-2.0.ebuild:
-  Stable on x86. Fixes according to #45398
-
-*poi-2.0 (27 Feb 2004)
-
-  27 Feb 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml, poi-2.0.ebuild:
-  Initial Import. Closes #41175
+  07 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> +poi-2.5.1.ebuild:
+  Version bump with added support for doc and source use flags. Also, poi now
+  only depends on ant-core instead of full ant.
 
