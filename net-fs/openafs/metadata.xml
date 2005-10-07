@@ -3,12 +3,7 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 <maintainer>
-  	<email>stefaan.deroeck@gmail.com</email>
+  	<email>stefaan@gentoo.org</email>
 	<name>Stefaan De Roeck</name>
-</maintainer>
-<maintainer>
-	<email>seemant@gentoo.org</email>
-	<name>Seemant Kulleen</name>
-	<description>Proxy Maintainer</description>
 </maintainer>
 </pkgmetadata>
