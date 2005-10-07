@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e33384f4c78d2d3054e8a20a20ebf4c4 ChangeLog 3225
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b06eb11d5a98a7ccd95921a65fa28e66 mpc-0.11.1.ebuild 767
-MD5 be874b3ac9e41862c7de66e02728eba6 mpc-0.11.2.ebuild 821
 MD5 ab013848b29e651a3af56444dec8b576 files/digest-mpc-0.11.1 62
 MD5 bd15a464df3a1f1cd0f65b81b8aa0b47 files/digest-mpc-0.11.2 62
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 bf405a486f32cddcd75183730f1bea40 mpc-0.11.1.ebuild 633
+MD5 50de6aa005d4c19ddffa4cd2d3ee1bbd mpc-0.11.2.ebuild 685
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRp6S/rLF9B432nYRAuf9AKCAXGrTitwkQ3h86vEJ/nYvpzO0DwCdFloD
+pWQdaZKSjbYcrOjSpJSIwrY=
+=grcf
+-----END PGP SIGNATURE-----
