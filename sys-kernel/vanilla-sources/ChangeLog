@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.109 2005/10/01 13:25:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.110 2005/10/07 20:14:09 agriffis Exp $
+
+  07 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  vanilla-sources-2.6.13.ebuild, vanilla-sources-2.6.13.1.ebuild,
+  vanilla-sources-2.6.13.2.ebuild, vanilla-sources-2.6.14_rc1.ebuild,
+  vanilla-sources-2.6.14_rc2.ebuild:
+  2.6.13.x is broken on ia64, causes machine checks on boot on rx2600.
+  2.6.14_rc3 at least seems to be ok, so leaving it marked ~ia64
 
 *vanilla-sources-2.6.14_rc3 (01 Oct 2005)
 
