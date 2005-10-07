@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/advancecomp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.26 2005/09/09 14:27:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.27 2005/10/07 16:03:12 taviso Exp $
+
+  07 Oct 2005; Tavis Ormandy <taviso@gentoo.org> advancecomp-1.14.ebuild:
+  stable on x86
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> advancecomp-1.14.ebuild:
   Mark 1.14 stable on alpha
