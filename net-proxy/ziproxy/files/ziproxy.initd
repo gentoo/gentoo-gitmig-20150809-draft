@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/files/ziproxy.initd,v 1.1 2005/10/07 00:03:55 sbriesen Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	local OPT
+	ebegin "Starting ziproxy"
+	[ -n "${CONFIG}" ] && OPT="-c ${CONFIG}" || OPT="-c /etc/ziproxy.conf"
+	[ -n "${ONLYFROM}" ] && OPT="${OPT} -f ${ONLYFROM}"
+	start-stop-daemon --quiet --start --background \
+		--make-pidfile --pidfile /var/run/ziproxy.pid \
+		--exec /usr/bin/netd -- ${OPT}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ziproxy"
+	start-stop-daemon --stop --quiet --pidfile /var/run/ziproxy.pid
+	eend $?
+}

@@ -1,0 +1,11 @@
+# configuraton file for /etc/init.d/ziproxy
+
+# location of the ziproxy config file
+#
+#CONFIG="/etc/ziproxy.conf"
+
+# following option has the same meaning, but higher precedence
+# as "OnlyFrom=" option in configuration file. Uncomment it
+# if you want to set it.
+#
+#ONLYFROM="<IP.address or hostname>"

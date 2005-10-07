@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/ziproxy
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.1 2005/10/07 00:03:55 sbriesen Exp $
+
+*ziproxy-1.5.1 (07 Oct 2005)
+
+  07 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org> +files/ziproxy.confd,
+  +files/ziproxy.initd, +metadata.xml, +ziproxy-1.5.1.ebuild:
+  initial commit, solving bug #63731.
+

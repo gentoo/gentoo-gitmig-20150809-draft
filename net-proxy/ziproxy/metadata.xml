@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>net-proxy</herd>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<longdescription lang="en">
+		Ziproxy is forwarding, non-caching, compressing web proxy server. It
+		squeezes images by converting them to low quality JPEGs and optionally
+		can also compress (gzip) HTML and other text-like data.
+	</longdescription>
+</pkgmetadata>
