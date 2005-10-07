@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.35 2005/10/06 20:33:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.36 2005/10/07 01:22:36 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
 # This eclass is for all functions pertaining to handling multilib.
 # configurations.
-
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -594,7 +593,10 @@ multilib_env() {
 			export LIBDIR_n64="lib64"
 
 			export MULTILIB_ABIS="n64 n32 o32"
-			export DEFAULT_ABI="n32"
+			case ${CTARGET} in
+				mips64*) export DEFAULT_ABI="n32" ;;
+				*)       export DEFAULT_ABI="o32" ;;
+			esac
 		;;
 		ppc64)
 			export CFLAGS_ppc=${CFLAGS_ppc--m32}
@@ -626,10 +628,14 @@ multilib_env() {
 			export LIBDIR_sparc64="lib64"
 
 			export MULTILIB_ABIS="sparc64 sparc32"
-			export DEFAULT_ABI="sparc64"
+			case ${CTARGET} in
+				sparc64*) export DEFAULT_ABI="sparc64" ;;
+				*)        export DEFAULT_ABI="sparc32" ;;
+			esac
 		;;
 		*)
 			export MULTILIB_ABIS="default"
 			export DEFAULT_ABI="default"
+		;;
 	esac
 }
