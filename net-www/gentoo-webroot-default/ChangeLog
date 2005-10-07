@@ -1,6 +1,10 @@
 # ChangeLog for net-www/gentoo-webroot-default
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.16 2005/10/02 01:48:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.17 2005/10/07 18:00:11 gustavoz Exp $
+
+  07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gentoo-webroot-default-0.2.ebuild:
+  Stable on sparc wrt #106421
 
   02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
   gentoo-webroot-default-0.2.ebuild:
