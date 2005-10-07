@@ -1,5 +1,0 @@
-PATH=/usr/qt/3/bin
-ROOTPATH=/usr/qt/3/bin
-LDPATH=/usr/qt/3/lib
-QMAKESPEC=linux-g++
-MANPATH=/usr/qt/3/doc/man
