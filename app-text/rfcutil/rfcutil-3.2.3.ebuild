@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.23 2005/09/10 06:13:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.24 2005/10/07 08:38:28 dragonheart Exp $
 
 inherit eutils
 
@@ -28,8 +28,7 @@ src_unpack() {
 src_install() {
 	newbin ${MY_P} ${MY_PN} || die
 	doman ${MY_PN}.1
-	dodoc CHANGELOG INSTALL KNOWN_BUGS README
-
+	dodoc CHANGELOG KNOWN_BUGS README
 	keepdir /var/cache/rfc
 }
 

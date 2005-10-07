@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rfcutil
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.19 2005/09/10 06:13:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.20 2005/10/07 08:38:28 dragonheart Exp $
+
+  07 Oct 2005; Daniel Black <dragonheart@gentoo.org> rfcutil-3.2.3.ebuild:
+  Don't install INSTALL documentation
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> rfcutil-3.2.3.ebuild:
   Mark 3.2.3 stable on alpha
