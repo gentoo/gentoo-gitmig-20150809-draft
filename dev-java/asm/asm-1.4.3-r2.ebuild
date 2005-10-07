@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r2.ebuild,v 1.1 2005/09/10 15:32:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r2.ebuild,v 1.2 2005/10/07 21:04:09 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SLOT="1.4"
 KEYWORDS="x86 ~ppc amd64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant
+	dev-java/ant-core
 	dev-java/ant-owanttask"
 RDEPEND=">=virtual/jre-1.3"
 

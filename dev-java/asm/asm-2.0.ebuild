@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0.ebuild,v 1.1 2005/07/31 06:24:48 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0.ebuild,v 1.2 2005/10/07 21:04:09 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 amd64 ppc"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )
-	dev-java/ant
+	dev-java/ant-core
 	dev-java/ant-owanttask"
 RDEPEND=">=virtual/jre-1.3"
 
