@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ecf9763436c2e1c7ad1c4bf89d3202ec exult-1.2.ebuild 2570
-MD5 1168f77aaa56e214673f58bc384d02c8 ChangeLog 1614
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f57e6d96772375d1636621b8505cfbc8 ChangeLog 1752
+MD5 3272a723ea396097f3a9e0cbb64d1ed7 exult-1.2.ebuild 2570
 MD5 b1ba6382930a1604b072fe00fad87c3a files/digest-exult-1.2 194
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe4dII1lqEGTUzyQRAmYMAJ46PtdiEOyHsdBDcRkCPfe5JlyEgwCfSTZ2
-y+PYLZfRvnq3kx5o/zOSrO0=
-=KKCr
------END PGP SIGNATURE-----
