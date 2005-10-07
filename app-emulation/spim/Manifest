@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5c7a54aacad400f4d8c773763bbddd53 ChangeLog 3711
+MD5 56f67d1b81f192ade7776d46fc4c6b17 ChangeLog 3847
 MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
 MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
 MD5 e2af6a0e5ca4267cfad9f1bf5e954655 files/digest-spim-7.0 60
@@ -16,14 +16,14 @@ MD5 a1da7be88dc0cab1e55ec1862aa3f338 files/spim-7.2.1-font.patch 430
 MD5 7fdc53102c71df807c81f19ce98f2e08 files/spim-7.2.1-ptrsize.patch 458
 MD5 12aa5d2009bfce93f35bc5b5845fe9b0 files/spim-7.2.1-string-stream.patch 488
 MD5 f180f948f41e347de9ebca387391018e metadata.xml 476
-MD5 ee5e79f45e895aacb34203fba4fc09f1 spim-6.5-r1.ebuild 1443
-MD5 56d5b124929236c4d6a74eb7b58ebfec spim-7.0.ebuild 1483
-MD5 c518e955515d2b620e2777781b97eb0b spim-7.1.ebuild 1392
+MD5 9a055d12390dbbce3523f2f315da72db spim-6.5-r1.ebuild 1445
+MD5 4b7b9ffd8181a2ca02d4dafe0867c21b spim-7.0.ebuild 1485
+MD5 5d648b6c9e3dbd5e00da4716ccef6436 spim-7.1.ebuild 1394
 MD5 548deb7d9eca69a650ca06890c86669e spim-7.2.1.ebuild 2245
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRDUTOpjtAl+gMRURAgxtAKCcVf7RNZn1hXQWZ3Fzv62ipENHMQCgnXpX
-j6ZAWH7XsKNDmPqsTFNSAqY=
-=y/f2
+iD8DBQFDRjpIOpjtAl+gMRURAn6BAKCeLxmqGAbDBK/AxF6ZOqM8OSrzRgCghAKD
+qKownvTYbnuIVQkfW5/P/W8=
+=0Em5
 -----END PGP SIGNATURE-----
