@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.4 2005/09/22 23:13:43 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/xmingw-gcc-3.4.2-r1.ebuild,v 1.5 2005/10/07 17:54:38 cretin Exp $
 
 MY_P=${P/xmingw-/}
 S=${WORKDIR}/${MY_P}
@@ -68,8 +68,6 @@ src_compile() {
 		--disable-nls \
 		--enable-threads \
 		--with-gcc \
-		--with-gnu-ld \
-		--with-gnu-as \
 		--disable-win32-registry \
 		--enable-sjlj-exceptions \
 		--without-x \
