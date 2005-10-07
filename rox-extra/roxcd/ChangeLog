@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/roxcd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.2 2005/03/05 23:51:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.3 2005/10/07 11:12:06 svyatogor Exp $
+
+*roxcd-0.5.4 (07 Oct 2005)
+
+  07 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +roxcd-0.5.4.ebuild:
+  New version. Bug #106975
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org> roxcd-0.4.5.ebuild:
   Marked ~ppc for bug #83706.
