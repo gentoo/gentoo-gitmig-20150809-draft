@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r1.ebuild,v 1.6 2005/10/06 23:46:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r1.ebuild,v 1.7 2005/10/07 08:16:49 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -72,7 +72,7 @@ src_unpack() {
 		# Now there is only c-client left, which should be built with -fPIC
 		append-flags -fPIC
 		# Apply our patch to actually build the shared library for PHP5
-		epatch ${FILESDIR}/${P}-amd64-so-fix.patch
+		epatch ${FILESDIR}/${PN}-2004c-amd64-so-fix.patch
 	fi
 
 	use pic || use alpha && append-flags -fPIC

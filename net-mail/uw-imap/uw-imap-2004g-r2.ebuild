@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.1 2005/10/06 21:03:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.2 2005/10/07 08:16:49 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -64,7 +64,7 @@ src_unpack() {
 
 	if use amd64; then
 		# Apply our patch to actually build the shared library for PHP5
-		epatch ${FILESDIR}/${P}-amd64-so-fix.patch
+		epatch ${FILESDIR}/${PN}-2004c-amd64-so-fix.patch
 	fi
 
 	# Now we must make all the individual Makefiles use different CFLAGS,

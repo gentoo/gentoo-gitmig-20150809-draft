@@ -1,26 +1,36 @@
-MD5 59456c4343a1c35e5efceef6983964e4 ChangeLog 11376
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e9a05288ecb9fada22fff84bf0c5962c uw-imap-2004a.ebuild 3292
+MD5 be3f2ea5efe04d2cb170225f1f74c2a5 uw-imap-2004g-r1.ebuild 5196
 MD5 f86653fdd59e2727644fc31305b236c2 uw-imap-2004c-r1.ebuild 4127
-MD5 2a95a847286c5b23cb291f923f75c6e0 uw-imap-2004c-r2.ebuild 4648
-MD5 f3ec9bb4aab0e6c37b20265378f7d413 uw-imap-2004c-r3.ebuild 5209
 MD5 f8341ad011ccea95c157f34f869a0a69 uw-imap-2004c.ebuild 3296
-MD5 10d10ab87d8447fbf5158420969e9121 uw-imap-2004g-r1.ebuild 5190
-MD5 685d1d67143d2ec91915720efa52e968 uw-imap-2004g-r2.ebuild 5130
-MD5 a38cbc05bb48226fbefeeb3f71585d6b uw-imap-2004g.ebuild 5209
+MD5 f3ec9bb4aab0e6c37b20265378f7d413 uw-imap-2004c-r3.ebuild 5209
+MD5 dda7fd03e70713743f3de84ee18d7542 uw-imap-2004g.ebuild 5216
+MD5 2f32e65318f2f15f1c932aaa89ecc3f9 ChangeLog 11535
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 4241619a695423aca65be9e524afa0ee uw-imap-2004g-r2.ebuild 5137
+MD5 2a95a847286c5b23cb291f923f75c6e0 uw-imap-2004c-r2.ebuild 4648
+MD5 506e7347cac698714cf5cd60eca761ba files/uw-ipop2.xinetd 563
+MD5 7fe0f2231e5e0d8b491a8c9780048ac3 files/uw-ipop3s.xinetd 469
+MD5 a0d3f290ad8a98968896a5315628d473 files/uw-imap.xinetd 491
 MD5 86da98c03bc68723a437d2cf135b0775 files/digest-uw-imap-2004a 62
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c 63
+MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g 62
+MD5 113b8cca9a203707f69bd0f6632ded57 files/uw-imap.pam-system-auth 343
+MD5 dfcbb9b410d2d513c15520e713043769 files/uw-ipop3.xinetd 472
+MD5 f93adbc027c40ed405bbde4bb1330f2d files/uw-imaps.xinetd 486
+MD5 cde23dc2375a8c33998202c8f0c9ae0e files/uw-imap-2004c-amd64-so-fix.patch 675
+MD5 f9441b5a20dd2477f12e0b0f04e2748d files/uw-imap.pam 243
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r1 63
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r2 63
 MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r3 63
-MD5 cde23dc2375a8c33998202c8f0c9ae0e files/uw-imap-2004c-amd64-so-fix.patch 675
-MD5 f9441b5a20dd2477f12e0b0f04e2748d files/uw-imap.pam 243
-MD5 113b8cca9a203707f69bd0f6632ded57 files/uw-imap.pam-system-auth 343
-MD5 a0d3f290ad8a98968896a5315628d473 files/uw-imap.xinetd 491
-MD5 f93adbc027c40ed405bbde4bb1330f2d files/uw-imaps.xinetd 486
-MD5 506e7347cac698714cf5cd60eca761ba files/uw-ipop2.xinetd 563
-MD5 dfcbb9b410d2d513c15520e713043769 files/uw-ipop3.xinetd 472
-MD5 7fe0f2231e5e0d8b491a8c9780048ac3 files/uw-ipop3s.xinetd 469
-MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g 62
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g-r1 62
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-imap-2004g-r2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRi8GQlM6RnzZP+IRAo1rAKCTXw/tpllpmtClpoVRLRCnYQ3nWwCgxH4R
+CaU2WD5ThcRUq1Nc36FxH34=
+=ZHaM
+-----END PGP SIGNATURE-----
