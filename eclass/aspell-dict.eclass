@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.34 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.35 2005/10/07 23:22:29 arj Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -26,10 +26,12 @@ SLOT="0"
 if [ x${ASPOSTFIX} = x6 ] ; then
 	RDEPEND=">=app-text/aspell-0.60
 		sys-apps/which"
+	DEPEND="${RDEPEND}"
 	KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 else
 	RDEPEND=">=app-text/aspell-0.50
 		sys-apps/which"
+	DEPEND="${RDEPEND}"
 	KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 fi
 
