@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 39c921eddde1b22af99c0cd82497f293 ChangeLog 1324
-MD5 bdf8f0eddbeaecf5631856936d0143e1 guilib-1.1.0-r1.ebuild 827
-MD5 dba17058d5de92af2e46c9956c124804 guilib-1.1.0.ebuild 812
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 dea147aefcabdc26fe552ac67dcbfd20 ChangeLog 1500
+MD5 909d50c371b633e51373526c5b87be81 files/digest-guilib-1.1.0 64
 MD5 909d50c371b633e51373526c5b87be81 files/digest-guilib-1.1.0-r1 64
 MD5 63ac633c5440a7f2dc346c46bc32fd9b files/guilib-1.1.0.makefile.patch 993
-MD5 909d50c371b633e51373526c5b87be81 files/digest-guilib-1.1.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDwtEj5H05b2HAEkRAkYvAJwM3es3WlH3d43tRFxiwKg998M6RgCeNKbP
-1AOEwZkdtDiCWZxeZ4PzMTw=
-=M9+p
------END PGP SIGNATURE-----
+MD5 19ee7609eedfb3a97f20f35bd2954964 guilib-1.1.0-r1.ebuild 738
+MD5 434b4d61b7f0606fb5dc36de33b23e06 guilib-1.1.0.ebuild 722
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
