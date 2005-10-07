@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.39 2005/10/07 03:39:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.40 2005/10/07 05:37:16 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -244,14 +244,14 @@ get_install_abis() {
 get_all_abis() {
 	local order=""
 
-	if [ -z "${MULTILIB_ABIS}" ]; then
+	if [[ -z ${MULTILIB_ABIS} ]] ; then
 		echo "default"
 		return 0
 	fi
 
 	for x in ${MULTILIB_ABIS}; do
-		if [ "${x}" != "${DEFAULT_ABI}" ]; then
-			order="${order:+${order }}${x}"
+		if [[ ${x} != ${DEFAULT_ABI} ]] ; then
+			order="${order:+${order} }${x}"
 		fi
 	done
 	order="${order:+${order} }${DEFAULT_ABI}"
@@ -592,7 +592,7 @@ multilib_env() {
 			export LIBDIR_n64="lib64"
 
 			export MULTILIB_ABIS="n64 n32 o32"
-		        export DEFAULT_ABI="n32" 
+			export DEFAULT_ABI="n32" 
 		;;
 		powerpc64*)
 			export CFLAGS_ppc=${CFLAGS_ppc--m32}
