@@ -1,8 +1,18 @@
-MD5 61ea96021eb19a8af5bc58404e90dc23 ChangeLog 2792
-MD5 54532d9cd3833e3c65d9136f3a1b6458 metadata.xml 630
-MD5 4e2c598e8cb4ff972704246ffa0af579 gnu-smalltalk-2.1.11.ebuild 2193
-MD5 74879afedea01875194c738996afe0a6 gnu-smalltalk-2.1.12.ebuild 2199
-MD5 1b43b00217fd402ab0f309202f633e46 files/50gnu-smalltalk-gentoo.el 268
-MD5 4335632b4c5c11b3d8d38f821befc042 files/digest-gnu-smalltalk-2.1.12 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 316815e07c78fed5846c4e8af781f5c5 ChangeLog 2900
 MD5 21a8210b48bb02fc7aad1a7d58bd7c1d files/2.1.11-gst-image-temp.patch 2123
+MD5 1b43b00217fd402ab0f309202f633e46 files/50gnu-smalltalk-gentoo.el 268
 MD5 96390d8b21fc85acdf2e84a2d91c6a66 files/digest-gnu-smalltalk-2.1.11 69
+MD5 4335632b4c5c11b3d8d38f821befc042 files/digest-gnu-smalltalk-2.1.12 69
+MD5 4e2c598e8cb4ff972704246ffa0af579 gnu-smalltalk-2.1.11.ebuild 2193
+MD5 8838f154d2c96b317aa09d9d8fb8ec06 gnu-smalltalk-2.1.12.ebuild 2208
+MD5 54532d9cd3833e3c65d9136f3a1b6458 metadata.xml 630
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDRpLcyiNZaEAZA+ARAna4AJ41koE0q/WVzrPQo2ASkCk2HDFFYQCbBBBn
+3MsE70KOPIx+cDv/GP93k+A=
+=+YkH
+-----END PGP SIGNATURE-----

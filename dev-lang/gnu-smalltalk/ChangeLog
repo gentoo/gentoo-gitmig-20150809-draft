@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.13 2005/09/13 13:19:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.14 2005/10/07 15:22:41 mkennedy Exp $
+
+  07 Oct 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  gnu-smalltalk-2.1.12.ebuild:
+  Keywording ~amd64.
 
   13 Sep 2005; Ferris McCormick <fmccor@gentoo.org>
   gnu-smalltalk-2.1.12.ebuild:
