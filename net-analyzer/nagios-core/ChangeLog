@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.55 2005/10/01 18:14:11 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.56 2005/10/07 18:30:28 gustavoz Exp $
+
+  07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  nagios-core-1.2-r4.ebuild:
+  Stable on sparc wrt #103060
 
   01 Oct 2005; <soulse@gentoo.org> nagios-core-1.2-r2.ebuild,
   nagios-core-1.2-r3.ebuild, nagios-core-1.2-r4.ebuild:
