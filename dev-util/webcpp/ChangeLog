@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/webcpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/ChangeLog,v 1.6 2005/09/30 16:03:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/ChangeLog,v 1.7 2005/10/07 14:47:26 flameeyes Exp $
+
+  07 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> webcpp-0.8.2.ebuild,
+  webcpp-0.8.4.ebuild:
+  Don't assume GNU ld. Remove src_compile as it falls back to the default.
 
   30 Sep 2005; Luis Medinas <metalgod@gentoo.org> webcpp-0.8.4.ebuild:
   Added ~amd64 keywords.
