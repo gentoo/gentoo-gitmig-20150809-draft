@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.123 2005/09/11 08:30:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.124 2005/10/07 01:29:08 allanonjl Exp $
+
+*gnome-games-2.12.1 (07 Oct 2005)
+
+  07 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-games-2.12.0.ebuild, +gnome-games-2.12.1.ebuild:
+  bump gtk/glib deps, remove esound patch since it was merged upstream, filed
+  gnome bug (#318162) for howl (again) and guile configure switches. remove
+  static useflag.
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> gnome-games-2.10.1.ebuild:
   Mark 2.10.1 stable on alpha

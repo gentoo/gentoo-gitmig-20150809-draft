@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.12.0.ebuild,v 1.1 2005/09/07 19:54:53 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.12.1.ebuild,v 1.1 2005/10/07 01:29:08 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -10,15 +10,15 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="artworkextra guile howl static"
+IUSE="artworkextra guile howl"
 
 RDEPEND=">=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnome-2
-	>=x11-libs/gtk+-2.5.4
+	>=x11-libs/gtk+-2.6.3
 	>=gnome-base/librsvg-2
 	>=gnome-base/libglade-2
-	>=dev-libs/glib-2
+	>=dev-libs/glib-2.6.3
 	>=gnome-base/gnome-vfs-2
 	guile? ( >=dev-util/guile-1.6.5 )
 	artworkextra? ( gnome-extra/gnome-games-extra-data )
@@ -39,7 +39,6 @@ pkg_setup() {
 
 	G2CONF="--with-scores-group=${GAMES_GROUP} \
 		$(use_enable howl) \
-		$(use_enable static) \
 		$(use_enable guile)"
 }
 
@@ -47,12 +46,10 @@ src_unpack() {
 	unpack "${A}"
 	cd "${S}"
 
-	# Fix compilation if esound is not installed (bug #104952).
-	epatch ${FILESDIR}/${PN}-2.10.1-no_esd.patch
 	# Implement --enable-guile switch
-	epatch ${FILESDIR}/${P}-guile_switch.patch
+	epatch ${FILESDIR}/${PN}-2.12.0-guile_switch.patch
 	# Resolve symbols at execution time in setgid binaries
-	epatch ${FILESDIR}/${P}-no_lazy_bindings.patch
+	epatch ${FILESDIR}/${PN}-2.12.0-no_lazy_bindings.patch
 
 	epatch ${FILESDIR}/${PN}-2.11.4-nohowl.patch
 
