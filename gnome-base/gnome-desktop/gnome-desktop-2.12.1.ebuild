@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.12.0.ebuild,v 1.1 2005/09/09 02:30:52 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.12.1.ebuild,v 1.1 2005/10/07 02:11:37 allanonjl Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="static"
+IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.6
@@ -33,8 +33,7 @@ USE_DESTDIR="1"
 
 
 pkg_setup() {
-	G2CONF="--with-gnome-distributor=Gentoo $(use_enable static) \
-		--disable-scrollkeeper"
+	G2CONF="--with-gnome-distributor=Gentoo --disable-scrollkeeper"
 }
 
 src_unpack() {
