@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.8 2005/09/02 11:35:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.9 2005/10/07 00:20:43 xmerlin Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -60,6 +60,7 @@ src_compile() {
 
 	econf \
 		${myconf} \
+		--sysconfdir=${D}/etc \
 		`use_enable ssl` \
 		`use_enable nls`|| die "econf failed"
 

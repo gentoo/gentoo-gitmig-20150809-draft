@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4.ebuild,v 1.3 2005/09/02 11:35:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4.ebuild,v 1.4 2005/10/07 00:20:43 xmerlin Exp $
 
 inherit gnuconfig eutils
 
@@ -62,6 +62,7 @@ src_compile() {
 	use nologin && myconf="${myconf} --disable-login"
 	econf \
 		${myconf} \
+		--sysconfdir=${D}/etc \
 		--infodir=/usr/share/doc/${PF} || die "econf failed"
 	cp Makefile Makefile.orig
 	sed -e "s/partimag\.root/root:0/g" Makefile.orig > Makefile

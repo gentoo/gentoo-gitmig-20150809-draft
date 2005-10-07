@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.3 2005/09/02 11:35:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.4 2005/10/07 00:20:43 xmerlin Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -75,6 +75,7 @@ src_compile() {
 	fi
 	econf \
 		${myconf} \
+		--sysconfdir=${D}/etc \
 		`use_enable ssl` \
 		`use_enable nls` \
 		`use_enable static all-static` \
