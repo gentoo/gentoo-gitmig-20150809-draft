@@ -5,8 +5,6 @@ MD5 c0305f496353b27f98c0c42e4005cb8a files/digest-ruby-1.8.2-r2 125
 MD5 65c0fa57dea7939af268a53a2e50b173 files/digest-ruby-1.8.3 125
 MD5 be89d4c412387337e14a1d141b90b125 files/oniguruma-2.3.1-gentoo.patch 593
 MD5 d4b55b8964955655827a50afba707a69 files/re.c.182.patch 2472
-MD5 a061fe32b8e0538c203bccebcd2ad8ac files/ruby-1.6.8-20040728-20041024.diff 3094
-MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
 MD5 5d27b5dca2842607d0dd0469612a2224 files/ruby-1.8.2-soap.diff 596
 MD5 2026b6d80f876e54e87b8fe906d469ca files/ruby-1.8.2-unittest.diff 822
 MD5 d1fd7f979894cfe7da89ec38992788eb files/ruby-1.8.2-xmlrpc-ipimethods-fix.diff 441
