@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.198 2005/10/06 13:32:17 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.199 2005/10/07 20:15:17 agriffis Exp $
+
+  07 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  gentoo-sources-2.6.13.ebuild, gentoo-sources-2.6.13-r1.ebuild,
+  gentoo-sources-2.6.13-r2.ebuild, gentoo-sources-2.6.13-r3.ebuild:
+  Arch-mask 2.6.13 on ia64 since it causes machine checks on rx2600. 2.6.14
+  seems to be fixed so well wait for gentoo-sources-2.6.14
 
   06 Oct 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.13-r3.ebuild:
