@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.37 2005/09/22 06:10:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.38 2005/10/07 05:11:11 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -904,7 +904,7 @@ glibc_do_configure() {
 		--libexecdir=$(alt_prefix)/lib/misc/glibc
 		${EXTRA_ECONF}"
 
-	export CC="$(tc-getCC ${CTARGET})"
+	has_version app-admin/eselect-compiler || export CC="$(tc-getCC ${CTARGET})"
 
 	GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
 	mkdir -p ${GBUILDDIR}
