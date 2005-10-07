@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0398cd8c9c9269590cd46cd4c54d10d2 asm-1.5.2-r1.ebuild 989
-MD5 a2032e76deb5dae90d318fdec122dd74 asm-1.4.3-r2.ebuild 987
-MD5 6415bb8e6125ba50b9e020e224c9bf38 asm-1.4.1.ebuild 1030
-MD5 893bcf625154cc55d3e2ee36b6c385cd asm-2.0.ebuild 1081
 MD5 a29623f388f2a6bf81319d76508ddb54 ChangeLog 2526
-MD5 b7f9b7d59df453c8c330bff15bf5508b metadata.xml 888
-MD5 947e688c1e6dc0951aeacfce6f56d645 files/digest-asm-2.0 59
-MD5 bab3b96826160bc8cf16cdce85e62adc files/digest-asm-1.4.3-r2 61
+MD5 e1d5f6fe10dbffc76bc489ecfc20969e asm-1.4.1.ebuild 1040
+MD5 bc0ce4fa6bbaca432c598548863aa08f asm-1.4.3-r2.ebuild 998
+MD5 b2ddf66dcac189061630a6e62a93244d asm-1.5.2-r1.ebuild 1000
+MD5 766f4510c4b431136cefc0074b71075f asm-2.0.ebuild 1090
 MD5 351a824f800a6f89e9e6eb967a63c796 files/digest-asm-1.4.1 62
+MD5 bab3b96826160bc8cf16cdce85e62adc files/digest-asm-1.4.3-r2 61
 MD5 7d7bc01bc5c7f583f0ab7ef377b4823b files/digest-asm-1.5.2-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIvyq/rLF9B432nYRAtEPAKC3QvapzlKpi1sB7cbEm8kg5qayoQCdGuPl
-23gxq3nxLU9CT3xt6EClkGc=
-=7TAL
------END PGP SIGNATURE-----
+MD5 947e688c1e6dc0951aeacfce6f56d645 files/digest-asm-2.0 59
+MD5 b7f9b7d59df453c8c330bff15bf5508b metadata.xml 888

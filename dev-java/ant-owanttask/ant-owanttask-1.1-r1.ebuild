@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r1.ebuild,v 1.6 2005/07/15 17:39:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r1.ebuild,v 1.7 2005/10/07 21:01:51 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc amd64"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
-	dev-java/ant"
+	dev-java/ant-core"
 S=${WORKDIR}/owanttask-${PV}
 
 src_compile() {
