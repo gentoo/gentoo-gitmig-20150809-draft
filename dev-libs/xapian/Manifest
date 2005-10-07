@@ -1,22 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc13939b32182f2e280f538a7179834b xapian-0.9.1.ebuild 1074
-MD5 d5ca64f3ae6f2daeecb49d01e32f0dda ChangeLog 1863
-MD5 fe34c0fc51be91b1df02dd01b5147a34 xapian-0.7.5.ebuild 957
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 c9f15d872bc71177444b09b0ba76c372 xapian-0.8.3.ebuild 973
-MD5 78846ec7edcd4d4c07fda9aa1d526441 xapian-0.8.5.ebuild 908
-MD5 8619fe3cd54afb7729ebfe2aa17a3ddd xapian-0.9.2.ebuild 1074
-MD5 094ae3889d9308fb32f50aaec1e102ef files/digest-xapian-0.9.1 70
-MD5 802444d86d5656f568bff8e3c4650ac1 files/digest-xapian-0.7.5 70
+MD5 eb1e07752a9cd1079c88d28b7fdddcad ChangeLog 2136
 MD5 e34ccc257ed62a9946b05160c1665929 files/digest-xapian-0.8.3 70
-MD5 359ff8c7c668bd7df20e45e8518254cf files/digest-xapian-0.8.5 70
 MD5 331c7c366023b054a158e1a234b856f2 files/digest-xapian-0.9.2 70
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 d3581907e3585c0ce4f8fe7e6e8e39e9 xapian-0.8.3.ebuild 957
+MD5 aad8230cbbfec0062d9f2e3b69de9038 xapian-0.9.2.ebuild 1056
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC2YrmmdTrptrqvGERAuQoAJ9lgd8n/LVX7vXS3t6L1oyv4jwzdgCeINmx
-rJKyrIGyhofBbk9f26gH9yQ=
-=rP5i
+iD8DBQFDRkuamdTrptrqvGERAtGeAJsFabsN6UGg7mMYJZNFjRIpy7iRMACfbK3d
+dlj/xFK/acvQpu2hNf7zrxk=
+=N726
 -----END PGP SIGNATURE-----
