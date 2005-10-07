@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.12.ebuild,v 1.8 2005/08/30 23:47:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.12.ebuild,v 1.9 2005/10/07 03:30:33 eradicator Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -29,6 +29,8 @@ setup_multilib() {
 		export MULTILIB_ABIS="x86 amd64"
 		export CFLAGS_amd64=${CFLAGS_amd64:-"-m64"}
 		export CFLAGS_x86=${CFLAGS_x86-"-m32 -L/emul/linux/x86/lib -L/emul/linux/x86/usr/lib"}
+		export CHOST_amd64="x86_64-pc-linux-gnu"
+		export CHOST_x86="i686-pc-linux-gnu"
 		export LIBDIR_amd64=${LIBDIR_amd64-${CONF_LIBDIR}}
 		export LIBDIR_x86=${LIBDIR_x86-${CONF_MULTILIBDIR}}
 	fi
@@ -65,9 +67,15 @@ src_compile() {
 	ewarn "If configure fails with a 'cannot run C compiled programs' error, try this:"
 	ewarn "FEATURES=-sandbox emerge sandbox"
 
+	local iscross=0
+	[[ -n ${CBUILD} && ${CBUILD} != ${CHOST} ]] && iscros=1
+
 	OABI="${ABI}"
 	for ABI in $(get_install_abis); do
 		export ABI
+		export CHOST=$(get_abi_CHOST)
+		[[ ${iscross} == 0 ]] && export CBUILD=${CHOST}
+
 		cd ${S}-${ABI}
 
 		einfo "Configuring sandbox for ABI=${ABI}..."
@@ -86,7 +94,6 @@ src_install() {
 
 	OABI="${ABI}"
 	for ABI in $(get_install_abis); do
-		export ABI
 		cd ${S}-${ABI}
 		einfo "Installing sandbox for ABI=${ABI}..."
 		make DESTDIR="${D}" install || die "make install failed for ${ABI}"
@@ -106,4 +113,3 @@ pkg_preinst() {
 	chown root:portage ${IMAGE}/var/log/sandbox
 	chmod 0770 ${IMAGE}/var/log/sandbox
 }
-
