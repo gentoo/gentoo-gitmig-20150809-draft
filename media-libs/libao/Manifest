@@ -1,29 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 869b4a41f426650b97a7c1c5f098df99 libao-0.8.6.ebuild 1233
-MD5 717963b145966a698a918924145d7117 ChangeLog 6916
-MD5 06a915c89a29cebc68fee4182fa56cc7 libao-0.8.4.ebuild 876
-MD5 9b45423b224a6ca312675ce60925dbd9 libao-0.8.4-r1.ebuild 1281
 MD5 9ad75806e8d6849933bac54412d0c1ff libao-0.8.6-r1.ebuild 1449
 MD5 b9c077f26586aadc00e9e212a01ad496 libao-0.8.5.ebuild 1229
-MD5 52a821ddc6df9002e54f63de7ca3e73b libao-0.8.3-r1.ebuild 844
+MD5 dc30c65a07aadc75aa46e88ac533a033 libao-0.8.6-r2.ebuild 1420
+MD5 339ccdcaa59416a57d023bfd525ad5ed ChangeLog 7266
 MD5 c3f0408a07f0c5d2af3ebcffcd836154 metadata.xml 257
-MD5 e6273f789010799956933aad72d23a5c files/libao-0.8.6-ppc-macos.patch 1862
-MD5 7136898ef15fe566b6e7dd2b72183df1 files/libao-0.8.3-r1.patch 671
-MD5 1c57b32742f5d9c82ff22b45b1f5865e files/digest-libao-0.8.4 63
-MD5 e379fe3da46646e9aad3e91faea68606 files/alsa-1.0.patch 278
-MD5 e2d17570d5e260a709cfe3715107d94d files/digest-libao-0.8.5 63
-MD5 91ea6d44f5feb641704b813186508a0d files/libao-0.8.5-ppc-macos.patch 3038
-MD5 5d49f3e442bd95b0fe757ce978db12f9 files/digest-libao-0.8.3-r1 63
 MD5 483a5fe5056608b9c0d47a944670fc87 files/digest-libao-0.8.6-r1 129
-MD5 1c57b32742f5d9c82ff22b45b1f5865e files/digest-libao-0.8.4-r1 63
-MD5 2a007685813f036e268b422d430f1450 files/libao-0.8.4-esd.patch 437
-MD5 1fe9b2eddcd0bcc2bc223d29725f4b1b files/digest-libao-0.8.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHCRIj5H05b2HAEkRAtkDAJ0ayjPxzW6SAin+GEVDaFoJyaLukQCfYEBE
-BF1NCRJ0QOoYUklrv9d244Q=
-=CesB
------END PGP SIGNATURE-----
+MD5 f0c7b22eb94ec3d7579323d160b6afeb files/digest-libao-0.8.6-r2 135
+MD5 91ea6d44f5feb641704b813186508a0d files/libao-0.8.5-ppc-macos.patch 3038
+MD5 e2d17570d5e260a709cfe3715107d94d files/digest-libao-0.8.5 63
+MD5 e6273f789010799956933aad72d23a5c files/libao-0.8.6-ppc-macos.patch 1862
