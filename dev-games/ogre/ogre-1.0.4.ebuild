@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.4.ebuild,v 1.1 2005/09/03 02:29:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.4.ebuild,v 1.2 2005/10/07 04:03:37 vapier Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE="cegui cg devil double-precision doc gtk opengl openexr sdl threads"
 
 RDEPEND=">=dev-libs/zziplib-0.13.36
 	=media-libs/freetype-2*
-	threads? ( dev-libs/boost )
+	threads? ( >=dev-libs/boost-1.33.0 )
 	cegui? ( >=dev-games/cegui-0.3.0 )
 	devil? ( >=media-libs/devil-1.5 )
 	openexr? ( >=media-libs/openexr-1.2 )
