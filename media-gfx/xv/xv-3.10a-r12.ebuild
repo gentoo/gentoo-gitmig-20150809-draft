@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.3 2005/07/12 04:31:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.4 2005/10/07 16:39:59 taviso Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.bz2 ftp:/
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
@@ -77,5 +77,5 @@ src_install() {
 			MANDIR=/usr/share/man/man1 \
 			LIBDIR=${T} install || die
 
-	dodoc README{,.jumbo,.pcd} INSTALL CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
+	dodoc README{,.jumbo,.pcd} CHANGELOG BUGS IDEAS docs/*.ps docs/*.doc
 }
