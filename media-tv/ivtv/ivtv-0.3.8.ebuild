@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.6 2005/10/07 05:43:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.7 2005/10/07 16:08:10 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -19,7 +19,7 @@ SRC_URI="http://dl.ivtvdriver.org/${PN}/${P}.tar.gz
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
@@ -50,6 +50,7 @@ src_unpack() {
 	sed -e "s:^VERS26=.*:VERS26=${KV_MAJOR}.${KV_MINOR}:g" \
 		-i ${S}/driver/Makefile || die "sed failed"
 
+	cd ${S}
 	# This powerpc patch patches the source of the driver to disable DMA on ppc,
 	# instead PIO is used. Also, it force enables -fsigned-char and does not
 	# build some modules that contain x86 asm.
@@ -137,7 +138,7 @@ pkg_postinst() {
 	ewarn "ln -sf /lib/modules/ivtv-fw-enc-250-350.bin /lib/modules/ivtv-fw-enc.bin"
 	ewarn
 	ewarn "PVR-150/500 users need to run the following command to setup the firmware:"
-	ewarn "ln -sf /lib/modules/HcwFalcn.rom /lib/modules/ivtv/ivtv-fw-enc.bin"
+	ewarn "ln -sf /lib/modules/HcwFalcn.rom /lib/modules/ivtv-fw-enc.bin"
 	ewarn
 	echo
 }

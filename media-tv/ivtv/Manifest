@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9d4e8dcba852c47be6e1a2c3b0f31508 ChangeLog 5517
 MD5 5458ad51769cecb853e0afb00ab63930 files/digest-ivtv-0.2.0_rc3-r5 134
 MD5 956acbfe3a222cc4b612da479232d670 files/digest-ivtv-0.3.8 191
 MD5 98a1ec166f665108688586fd5b36c05d files/ivtv 89
-MD5 42953f1e55ea4e5deeb805ae865cdfbf files/ivtv-0.3.8-devname.patch 798
-MD5 592fe48c2d71a392ff1febb8cd486767 files/ppc-odw.patch 2374
+MD5 831334865cb46ecade346b32f1686d4a files/ivtv-0.3.8-devname.patch 644
+MD5 45b398aa7ee5b6e55121b8a1b5dc3f3b files/ppc-odw.patch 587
 MD5 28b327ad3b268ad20a14a516c72e9908 ivtv-0.2.0_rc3-r5.ebuild 3964
-MD5 6e498711f948a3703e8bb338aac39b67 ivtv-0.3.8.ebuild 4544
+MD5 c6cc948a6f1e78e5a9a02fff65807360 ivtv-0.3.8.ebuild 4553
 MD5 71007461e2e10f367a6a8f7a0b0d7d6a metadata.xml 465
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDRguQBtvusYtCZMsRAj0YAJ9X6eyRrj84hCM8HA133CCKg7EuhwCfQZmk
-MexLOO5cpbh5mJxvqvzf19E=
-=BfXS
------END PGP SIGNATURE-----
