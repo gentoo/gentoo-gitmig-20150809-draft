@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.38 2005/06/12 22:54:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.39 2005/10/07 22:01:36 matsuu Exp $
+
+*speex-1.1.10 (07 Oct 2005)
+
+  07 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> +speex-1.1.10.ebuild:
+  Version bumped. Bug 105277.
+  Cleanup ebuild.
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> speex-1.1.7.ebuild:
   Stable on alpha.
