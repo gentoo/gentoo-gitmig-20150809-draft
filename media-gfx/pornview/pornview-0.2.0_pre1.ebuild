@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.14 2005/08/01 20:56:27 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.15 2005/10/07 16:16:10 flameeyes Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ RESTRICT="nomirror"
 S="${WORKDIR}/${P/_/}"
 
 src_compile() {
-	local myflags="--with-gnu-ld"
+	local myflags
 	# --with-normal-paned     Use standard gtk+ paned
 
 	# This is considered experimental but appears to work fine

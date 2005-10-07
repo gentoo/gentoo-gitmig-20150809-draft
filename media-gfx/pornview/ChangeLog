@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.25 2005/09/16 22:56:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.26 2005/10/07 16:16:10 flameeyes Exp $
+
+  07 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  pornview-0.2.0_pre1.ebuild:
+  Don't assume ld is GNU ld.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

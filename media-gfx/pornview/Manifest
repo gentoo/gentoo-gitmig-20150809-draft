@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31687c1b0081a8c30c9a5a8b51f504a4 ChangeLog 2719
-MD5 f32e32ce991fdcddd2deb058cdad768f pornview-0.2.0_pre1.ebuild 1720
+MD5 87bd520192bd8db3c90c637f6402b809 ChangeLog 2834
 MD5 99e3e0440e74b2a8efcc2c958be7718f files/digest-pornview-0.2.0_pre1 70
-MD5 ab6f7336b8990c2fbbc86ac3ed04e07c files/pornview-0.2.0_pre1-4.diff 9594
 MD5 6ebbb2673f7c4a0889d2d9af5ba1d9c3 files/gtkxine.diff 676
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK03ULLFUmVNQ7rkRAsJKAJ9Z0R3Bwf8k/seqEM8j1JJN82jEYgCglDZT
-bkFn85ZHdS3bkzxRYq4dYhI=
-=/hbR
------END PGP SIGNATURE-----
+MD5 ab6f7336b8990c2fbbc86ac3ed04e07c files/pornview-0.2.0_pre1-4.diff 9594
+MD5 4bcf5579c4804071f64615381039b821 pornview-0.2.0_pre1.ebuild 1704
