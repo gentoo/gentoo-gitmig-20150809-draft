@@ -1,0 +1,74 @@
+--- denyhosts.cfg-dist	2005-09-29 02:18:45.000000000 +0200
++++ denyhosts.cfg-dist	2005-10-06 15:28:38.000000000 +0200
+@@ -9,13 +9,16 @@
+ # argument
+ #
+ # Redhat:
+-SECURE_LOG = /var/log/secure
++#SECURE_LOG = /var/log/secure
+ #
+ # Mandrake or FreeBSD: 
+ #SECURE_LOG = /var/log/auth.log
+ #
+-# SuSE:
+-#SECURE_LOG = /var/log/messages
++# Gentoo/SuSE:
++SECURE_LOG = /var/log/messages
++#
++# Metalog:
++#SECURE_LOG = /var/log/sshd/current
+ #
+ ########################################################################
+ 
+@@ -115,7 +118,7 @@
+ # Note: when run in daemon mode, this directory should be specified
+ # as an absolute path name (eg. /home/foo/denyhosts/data)
+ #
+-WORK_DIR = denyhosts
++WORK_DIR = /var/lib/denyhosts
+ #
+ #######################################################################
+ 
+@@ -157,11 +160,13 @@
+ # running at a time.
+ #
+ # Redhat/Fedora:
+-LOCK_FILE = /var/lock/subsys/denyhosts
++#LOCK_FILE = /var/lock/subsys/denyhosts
+ #
+ # Debian
+ #LOCK_FILE = /var/run/denyhosts.pid
+ #
++# Gentoo
++LOCK_FILE = /var/run/denyhosts.pid
+ # Misc
+ #LOCK_FILE = /tmp/denyhosts.lock
+ #
+--- setup.py	2005-07-23 00:39:17.000000000 +0200
++++ setup.py	2005-10-06 15:30:51.000000000 +0200
+@@ -17,17 +17,17 @@
+       author="Phil Schwartz",
+       author_email="phil_schwartz@users.sourceforge.net",
+       url="http://denyhosts.sourceforge.net",
+-      scripts=['denyhosts.py'],
++##      scripts=['denyhosts.py'],
+       package_dir={'DenyHosts': 'DenyHosts'},
+       packages=["DenyHosts"],
+       ##py_modules=["denyhosts_version"],
+-      data_files=[(libpath, glob("denyhosts.cfg-dist")),
+-                  (libpath, glob("denyhosts-daemon-initscript")),
+-                  (libpath, glob("setup.py")),
+-                  (libpath, glob("daemon-control-dist")),
+-                  (libpath, glob("CHANGELOG.txt")),
+-                  (libpath, glob("README.txt")),
+-                  (libpath, glob("LICENSE.txt"))],
++##      data_files=[(libpath, glob("denyhosts.cfg-dist")),
++##                  (libpath, glob("denyhosts-daemon-initscript")),
++##                  (libpath, glob("setup.py")),
++##                  (libpath, glob("daemon-control-dist")),
++##                  (libpath, glob("CHANGELOG.txt")),
++##                  (libpath, glob("README.txt")),
++##                  (libpath, glob("LICENSE.txt"))],
+       license="GPL",
+       ##extra_path='denyhosts',
+       long_description="""

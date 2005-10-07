@@ -1,0 +1,6 @@
+MD5 0015cea517edcd1b57cb5b6c1ace0d61 denyhosts-1.1.2.ebuild 1527
+MD5 98d82c02eea0fd1ce5b0e03328b52d98 ChangeLog 468
+MD5 82c6f940fc1a08d481d8d46de563bce7 metadata.xml 203
+MD5 de49bade96ff5bfa9d27a281c17a3e3e files/digest-denyhosts-1.1.2 66
+MD5 90c425b8fbcfa5fc084063999c2e3b9a files/denyhosts-gentoo.patch 2395
+MD5 6fc356bc1e3fc84f327ac4c822ac531b files/denyhosts.init 346

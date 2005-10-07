@@ -1,0 +1,19 @@
+#!/sbin/runscript
+
+opts="depend start stop"
+
+depend() {
+	need logger sshd
+}
+
+start() {
+	ebegin "Starting DenyHosts daemon"
+	start-stop-daemon --start --exec /usr/bin/denyhosts -- --daemon -c /etc/denyhosts.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping DenyHosts daemon"
+	start-stop-daemon --quiet --stop --pidfile /var/run/denyhosts.pid
+	eend $?
+}
