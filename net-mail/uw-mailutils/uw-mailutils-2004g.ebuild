@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2004g.ebuild,v 1.7 2005/10/07 11:47:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2004g.ebuild,v 1.8 2005/10/07 13:28:32 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,8 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	!<=net-mail/uw-imap-2004g"
+	!<net-mail/uw-imap-2004g-r1
+	!<mail-client/pine-4.64-r1"
 
 src_unpack() {
 	unpack ${A}
