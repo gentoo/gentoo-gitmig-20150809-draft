@@ -1,52 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 27212c3bfc3d15dc4bb42454380c533b mozilla-firefox-1.0.6-r5.ebuild 9631
-MD5 7f073b544e7967d3453ab8579292ef3e mozilla-firefox-1.0.6-r4.ebuild 9543
-MD5 a3cec6a265f7dde388b8ada806f0b1e1 mozilla-firefox-1.0.7-r3.ebuild 9324
-MD5 29fcc59acb8b3fca8819b43fe02b20f6 ChangeLog 33568
-MD5 8a30120dc035d60c58db0a9dc8c3b91b mozilla-firefox-1.0.6-r7.ebuild 9771
-MD5 06023401dbf9f17149696616a240647d mozilla-firefox-1.0.6-r3.ebuild 9154
-MD5 6d3af6331c1b75d7991a5680fc9602c7 mozilla-firefox-1.0.6-r2.ebuild 8318
-MD5 a98efa57e6fa9ad9a44343f5db5e8bf7 mozilla-firefox-1.0.7-r2.ebuild 8562
-MD5 d8c6c3085e4fc8d06ef878579dddf116 mozilla-firefox-1.0.6-r6.ebuild 11233
-MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 07a5a1ce0146f1badc4e04849a9b1830 files/mozilla-firefox-1.0.6-gcc4.patch 6131
-MD5 6da2b9dec8c7fbe104122a424727fb39 files/digest-mozilla-firefox-1.0.6-r3 451
+MD5 da4785ef539cd7ea5606af67ac1f2299 ChangeLog 33743
 MD5 1652483bf7e1d08241cd5e0436bea2ae files/10MozillaFirefox 32
 MD5 e71e3d11bf8e3a03f965cf894593c28c files/digest-mozilla-firefox-1.0.6-r2 382
-MD5 03df358b463796309e2ce8b87b180085 files/securebrowserui-iirq.patch 1101
-MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
-MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r5 447
-MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r7 447
-MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
-MD5 48baf2f328e6478812c24e59037ff99c files/firefox-0.9-init.tar.bz2 3322
-MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/mozilla-hppa.patch 7863
-MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-firefox-1.0.4-gcc4.patch 1818
+MD5 6da2b9dec8c7fbe104122a424727fb39 files/digest-mozilla-firefox-1.0.6-r3 451
 MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r4 447
-MD5 1f71cb3a30531a90fb7d1d3445588ba6 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
-MD5 3961b39c763ff8f98b56098ac0cdbecc files/mozilla-firefox-1.0-kp_separator.patch 444
-MD5 bedafc238f92edd9cb98fae3d1af96df files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch 620
-MD5 07f9a980afa2dde67554657c00b8be18 files/mozilla-rpath-1.patch 1716
-MD5 eb21396de389b3ef0277d5f95d59c348 files/mozilla-1.7.8-amd64.patch 4020
-MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-1.7.6-gcc4.patch 1818
-MD5 0aa74349ef4f69637967343f43540733 files/mozilla-firefox-1.0.3-prefs.patch 3406
-MD5 1d1a1fe09e04d58a8d9faa9f14ffd0c6 files/digest-mozilla-firefox-1.0.7-r3 231
+MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r5 447
 MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r6 447
-MD5 3970f49b3f72cec38e126a2a140b524f files/gtk-prompt-service.patch 5520
-MD5 6a7a2240dc5864e7f8ee444e34e84461 files/firefox.1 2538
-MD5 8e7d6f3220336cd4467d20bbe402e09a files/embedprompter-modal.patch 1548
+MD5 8e6ffd5837cb4de55271592e3448b177 files/digest-mozilla-firefox-1.0.6-r7 447
 MD5 1d1a1fe09e04d58a8d9faa9f14ffd0c6 files/digest-mozilla-firefox-1.0.7-r2 231
+MD5 1d1a1fe09e04d58a8d9faa9f14ffd0c6 files/digest-mozilla-firefox-1.0.7-r3 231
+MD5 8e7d6f3220336cd4467d20bbe402e09a files/embedprompter-modal.patch 1548
+MD5 48baf2f328e6478812c24e59037ff99c files/firefox-0.9-init.tar.bz2 3322
+MD5 6a7a2240dc5864e7f8ee444e34e84461 files/firefox.1 2538
+MD5 3970f49b3f72cec38e126a2a140b524f files/gtk-prompt-service.patch 5520
 MD5 eafec999c965792bf81df6bcbbe6c5ea files/gtk-tooltips.patch 2308
-MD5 787437939618daf271673626f6414b15 files/mozilla-firefox-1.0.6-GLSA105396.patch 4049
-MD5 23d1fbd03cc6dd346a4e4ce8f2d88ebf files/mozilla-1.3-alpha-stubs.patch 4646
-MD5 730bebc28f073d8c08d32c78252445d5 files/mozilla-1.7.12-rpath.patch 1752
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
 MD5 fc5e3a5d794abcb431bafdbc80c89103 files/icon/mozillafirefox.desktop 341
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQDro1ZcsMnZjRyIRAs8aAKClDLBJRoCwCfJDOGG4M7cVqt55KwCeMwXR
-98bNGmceAOjGfavLdEW7O2g=
-=HL1B
------END PGP SIGNATURE-----
+MD5 23d1fbd03cc6dd346a4e4ce8f2d88ebf files/mozilla-1.3-alpha-stubs.patch 4646
+MD5 bedafc238f92edd9cb98fae3d1af96df files/mozilla-1.7.12-gtk2xft-invalidate-pango_context.patch 620
+MD5 1f71cb3a30531a90fb7d1d3445588ba6 files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch 465
+MD5 f7930e7f2cba691a9b6654b61ba1217e files/mozilla-1.7.12-libart-freetype.patch 2412
+MD5 730bebc28f073d8c08d32c78252445d5 files/mozilla-1.7.12-rpath.patch 1752
+MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-1.7.6-gcc4.patch 1818
+MD5 eb21396de389b3ef0277d5f95d59c348 files/mozilla-1.7.8-amd64.patch 4020
+MD5 3961b39c763ff8f98b56098ac0cdbecc files/mozilla-firefox-1.0-kp_separator.patch 444
+MD5 0aa74349ef4f69637967343f43540733 files/mozilla-firefox-1.0.3-prefs.patch 3406
+MD5 a3ab6ae2213780c0e20c5b9aa8f018e9 files/mozilla-firefox-1.0.4-gcc4.patch 1818
+MD5 787437939618daf271673626f6414b15 files/mozilla-firefox-1.0.6-GLSA105396.patch 4049
+MD5 07a5a1ce0146f1badc4e04849a9b1830 files/mozilla-firefox-1.0.6-gcc4.patch 6131
+MD5 8f8d70da6eb8cf07acbbb85fb0f08636 files/mozilla-hppa.patch 7863
+MD5 07f9a980afa2dde67554657c00b8be18 files/mozilla-rpath-1.patch 1716
+MD5 03df358b463796309e2ce8b87b180085 files/securebrowserui-iirq.patch 1101
+MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
+MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
+MD5 6d3af6331c1b75d7991a5680fc9602c7 mozilla-firefox-1.0.6-r2.ebuild 8318
+MD5 06023401dbf9f17149696616a240647d mozilla-firefox-1.0.6-r3.ebuild 9154
+MD5 7f073b544e7967d3453ab8579292ef3e mozilla-firefox-1.0.6-r4.ebuild 9543
+MD5 27212c3bfc3d15dc4bb42454380c533b mozilla-firefox-1.0.6-r5.ebuild 9631
+MD5 d8c6c3085e4fc8d06ef878579dddf116 mozilla-firefox-1.0.6-r6.ebuild 11233
+MD5 8a30120dc035d60c58db0a9dc8c3b91b mozilla-firefox-1.0.6-r7.ebuild 9771
+MD5 a98efa57e6fa9ad9a44343f5db5e8bf7 mozilla-firefox-1.0.7-r2.ebuild 8562
+MD5 b686423c9050edfcfd7ff72ea4081f09 mozilla-firefox-1.0.7-r3.ebuild 9734
