@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.0.2.ebuild,v 1.8 2004/06/24 23:37:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.0.2.ebuild,v 1.9 2005/10/07 18:01:45 flameeyes Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ src_compile() {
 	epatch ${FILESDIR}/${P}-makefile.in.patch
 
 	econf \
-		--with-gnu-ld \
 		`use_enable nls` \
 		`use_enable gnome` \
 		|| die "econf failed"

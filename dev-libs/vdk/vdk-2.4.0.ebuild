@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.8 2005/08/07 13:16:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.9 2005/10/07 18:01:45 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -44,7 +44,6 @@ src_compile() {
 
 	econf \
 		${myconf} \
-		--with-gnu-ld \
 		--enable-testvdk=no \
 		|| die "econf failed"
 
