@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/ntp-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.6 2005/09/10 06:55:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.7 2005/10/07 13:57:50 metalgod Exp $
+
+  07 Oct 2005; Luis Medinas <metalgod@gentoo.org>
+  ntp-syntax-20031001.ebuild:
+  Marked Stable on amd64. Bug #108267.
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   ntp-syntax-20031001.ebuild:
