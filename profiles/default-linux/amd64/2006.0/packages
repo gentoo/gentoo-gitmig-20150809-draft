@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/packages,v 1.1 2005/10/07 02:22:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/packages,v 1.2 2005/10/07 07:28:45 eradicator Exp $
 
 *>=sys-devel/binutils-2.15.90.0.1.1-r4
 *>=sys-devel/gcc-3.4.3-r1
 
-# Avoid the bad NIS stuff with 2.3.4.20041102 and the ugly ebuilds prior to it
-*>=sys-libs/glibc-2.3.5
+# ${CHOST} over ${ABI} changes went into 2.3.5-r2
+*>=sys-libs/glibc-2.3.5-r2
 
 # Use only portages with sandbox split off
 *>=sys-apps/portage-2.0.51.22
