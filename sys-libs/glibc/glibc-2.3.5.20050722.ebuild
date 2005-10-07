@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.22 2005/10/07 05:11:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050722.ebuild,v 1.23 2005/10/07 10:19:06 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -598,7 +598,10 @@ alt_prefix() {
 
 alt_libdir() {
 	if is_crosscompile ; then
-		echo /usr/${CTARGET}/$(get_libdir)
+		case ${CTARGET} in
+			mips64*) echo /usr/${CTARGET}/$(get_libdir) ;;
+			*)	 echo /usr/${CTARGET}/lib ;;
+		esac
 	else
 		echo /$(get_libdir)
 	fi
@@ -606,7 +609,10 @@ alt_libdir() {
 
 alt_usrlibdir() {
 	if is_crosscompile ; then
-		echo /usr/${CTARGET}/$(get_libdir)
+		case ${CTARGET} in
+			mips64*) echo /usr/${CTARGET}/$(get_libdir) ;;
+			*)	 echo /usr/${CTARGET}/lib ;;
+		esac
 	else
 		echo /usr/$(get_libdir)
 	fi
