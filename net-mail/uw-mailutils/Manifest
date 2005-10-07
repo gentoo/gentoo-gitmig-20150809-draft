@@ -1,5 +1,5 @@
-MD5 0e445e5b779d3a9a0707f1d268e3bf84 ChangeLog 945
 MD5 1bb83f4e84ad8336fcdc25c821ccb680 metadata.xml 272
-MD5 b83b5b838ac6b5bd59098febe47dcab5 uw-mailutils-2004g.ebuild 1013
+MD5 39e5728aa1dafc2c0160a2dd43b95d3d ChangeLog 1069
+MD5 ef6d888a0e60bafb1479f053b2fc7edd uw-mailutils-2004g.ebuild 1022
 MD5 5eb8b5fa92f61ec775be70c761ea24ae files/digest-uw-mailutils-2004g 62
 MD5 59c4ba0421f60657457e0aecf07be7be files/uw-mailutils-2004g.patch 1210
