@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/shapelib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.4 2005/09/24 10:04:06 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.5 2005/10/07 10:19:18 carlo Exp $
+
+  07 Oct 2005; Carsten Lohrke <carlo@gentoo.org> shapelib-1.2.10.ebuild:
+  fixed typo
 
   24 Sep 2005; Luis Medinas <metalgod@gentoo.org> shapelib-1.2.10.ebuild:
   Added ~amd64 keyword. Bug #106917.
