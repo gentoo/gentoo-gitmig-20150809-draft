@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kedpm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.11 2005/09/24 23:36:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.12 2005/10/07 08:04:59 dragonheart Exp $
+
+  07 Oct 2005; Daniel Black <dragonheart@gentoo.org> kedpm-0.4.0.ebuild:
+  don't install INSTALL documentation
 
   24 Sep 2005; Daniel Black <dragonheart@gentoo.org> kedpm-0.4.0.ebuild:
   gtk2 fix - bug #106560. Fixed USE test cludge

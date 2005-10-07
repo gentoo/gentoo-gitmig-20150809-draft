@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.12 2005/09/24 23:36:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0.ebuild,v 1.13 2005/10/07 08:04:59 dragonheart Exp $
 
 inherit distutils eutils
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 src_install() {
 	distutils_src_install
-	dodoc AUTHORS CHANGES ChangeLog INSTALL NEWS PKG-INFO README
+	dodoc AUTHORS CHANGES ChangeLog NEWS PKG-INFO README
 	cp -r test run_tests ${D}/usr/share/${PN}
 }
 
