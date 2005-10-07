@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 f64aab28526927ef86cf53d2710429ea ChangeLog 1092
+MD5 56abb8bfe2d4125c64c956dfdaafa5e0 files/digest-ghostscript-gnu-8.16 284
+MD5 1bc8d57179e8617ec05c8338703d1fd4 files/digest-ghostscript-gnu-8.16-r1 284
+MD5 e4275b4f3839efa5381664245348f678 ghostscript-gnu-8.16-r1.ebuild 3199
 MD5 c3a97ad06dfa5ba7df36e4900924444b ghostscript-gnu-8.16.ebuild 3207
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 3d4502d337120d50b11df20c8fb461b0 ChangeLog 928
-MD5 56abb8bfe2d4125c64c956dfdaafa5e0 files/digest-ghostscript-gnu-8.16 284
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKzvvLLFUmVNQ7rkRAt8pAKC7qSpkwbirv6hlWnoipgj94QizgwCdF3dx
-h1UKnclydkfLkAIyRs8mKSk=
-=oRO3
+iD8DBQFDReQlomPajV0RnrERAks4AJ9M4ob5SfV/k7f43pCn6d76o1UfWQCeKy4y
+4lWQ9CH9FzxTAonXgAj5FeU=
+=62xj
 -----END PGP SIGNATURE-----

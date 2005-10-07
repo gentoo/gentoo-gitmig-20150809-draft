@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.4 2005/09/16 21:40:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.5 2005/10/07 02:56:56 dang Exp $
+
+*ghostscript-gnu-8.16-r1 (07 Oct 2005)
+
+  07 Oct 2005; <dang@gentoo.org> +ghostscript-gnu-8.16-r1.ebuild:
+  Work around use of D as a directory separator. Bug #74090
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
