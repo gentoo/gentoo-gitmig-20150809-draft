@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.5 2005/09/19 22:57:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.6 2005/10/07 05:43:43 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -55,6 +55,10 @@ src_unpack() {
 	# build some modules that contain x86 asm.
 
 	use ppc && epatch ${FILESDIR}/ppc-odw.patch
+
+	# http://ivtvdriver.org/trac/ticket/25
+	# future kernel compatiblity
+	epatch ${FILESDIR}/${P}-devname.patch
 }
 
 src_compile() {

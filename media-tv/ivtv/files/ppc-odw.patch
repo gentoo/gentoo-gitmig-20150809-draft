@@ -1,0 +1,62 @@
+diff -urN ivtv-0.3.7-orig/ChangeLog ivtv-0.3.7/ChangeLog
+--- ivtv-0.3.7-orig/ChangeLog	2005-07-28 07:53:14.003679936 +0000
++++ ivtv-0.3.7/ChangeLog	2005-07-28 07:57:25.672420472 +0000
+@@ -1,5 +1,9 @@
+ IVTV changes:
+ 
++#0.3.7 - PowerPC patches - Pieter Van den Abeele <pvdabeel@gentoo.org>
++       - disables building of x86 asm utils
++       - force disable DMA, force enable PIO 
++
+ #0.3.7 - YUV decoder patches.
+        - powerdown soundchip on cx25840 when not in use. 	
+        - i2c index improvements for cx25840 module.
+diff -urN ivtv-0.3.7-orig/driver/ivtv-driver.h ivtv-0.3.7/driver/ivtv-driver.h
+--- ivtv-0.3.7-orig/driver/ivtv-driver.h	2005-07-28 07:53:13.978683736 +0000
++++ ivtv-0.3.7/driver/ivtv-driver.h	2005-07-28 07:53:42.342371800 +0000
+@@ -202,7 +202,7 @@
+ /* ========================== START USER SETTABLE DMA VARIABLES =========== */
+ /* ======================================================================== */
+ 
+-#define DYNAMIC_MEMORY_ALLOC 	1 /* Allocate memory each stream use */
++#define DYNAMIC_MEMORY_ALLOC 	0 /* Allocate memory each stream use */
+ 
+ /* DMA Buffers Sizes */
+  #define IVTV_DMA_ENC_BUF_SIZE     0x00008000
+@@ -230,9 +230,9 @@
+ #define IVTV_DMA_SG_OSD_ENT	(2883584/PAGE_SIZE)	/* sg entities */
+ 
+ /* Decoder DMA or PIO, 1=PIO, 0=DMA */
+-#define IVTV_VBI_PIO		0
+-#define IVTV_ENC_PIO		0
+-#define IVTV_DEC_PIO		0
++#define IVTV_VBI_PIO		1
++#define IVTV_ENC_PIO		1
++#define IVTV_DEC_PIO		1
+ /* This sometimes times out, seems to  kill
+ 					   encoding sometimes */
+ 
+diff -urN ivtv-0.3.7-orig/utils/Makefile ivtv-0.3.7/utils/Makefile
+--- ivtv-0.3.7-orig/utils/Makefile	2005-07-28 07:53:14.552596488 +0000
++++ ivtv-0.3.7/utils/Makefile	2005-07-28 07:55:39.443569712 +0000
+@@ -1,8 +1,8 @@
+-INSTALLDIR = /usr/local/bin
++INSTALLDIR = /usr/bin
+ HEADERDIR = /usr/include/linux
+ 
+-SANEEXES = ivtvctl ivtvfbctl ivtvplay cx25840ctl
+-INSANEEXES = mpegindex radio vbi fwapi encoder wss vbi_passthrough test_ioctl
++SANEEXES = ivtvctl cx25840ctl
++INSANEEXES = radio vbi fwapi wss vbi_passthrough test_ioctl
+ EXES = $(SANEEXES) $(INSANEEXES)
+ INSTALL_HEADERS = ../driver/ivtv.h
+ 
+@@ -10,7 +10,7 @@
+ LIB_ZVBI_SRC = /home/src/zvbi/zvbi-0.2.15/src/.libs
+ INC_ZVBI_SRC = /home/src/zvbi/zvbi-0.2.15/src
+ 
+-CFLAGS = -I../driver -D_GNU_SOURCE -O2 -Wall
++CFLAGS = -I../driver -D_GNU_SOURCE -O2 -Wall -fsigned-char
+ CXXFLAGS = $(CFLAGS)
+ LDFLAGS = -lm
+ 

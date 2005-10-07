@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.33 2005/09/15 07:41:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.34 2005/10/07 05:43:43 cardoe Exp $
+
+  07 Oct 2005; Doug Goldstein <cardoe@gentoo.org>
+  +files/ivtv-0.3.8-devname.patch, +files/ppc-odw.patch,
+  -ivtv-0.2.0_rc3-r4.ebuild, ivtv-0.3.8.ebuild:
+  Add patch to compile with new kernels
+
+  20 Sep 2005; Doug Goldstein <cardoe@gentoo.org> -ivtv-0.2.0_rc3-r4.ebuild:
+  remove some old ebuilds
 
   15 Sep 2005; Doug Goldstein <cardoe@gentoo.org> ivtv-0.3.8.ebuild:
   Updated firmware to include 150/500 firmware. Switched to recommended
