@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.7 2005/07/15 22:40:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.8 2005/10/07 20:49:14 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~sparc amd64"
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.5
+	>=dev-java/ant-core-1.5
 	jikes? ( >=dev-java/jikes-1.16 )"
 RDEPEND=">=virtual/jre-1.4"
 
