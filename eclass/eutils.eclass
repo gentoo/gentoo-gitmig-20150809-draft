@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.203 2005/09/27 12:38:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.204 2005/10/07 04:15:20 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -495,11 +495,11 @@ enewuser() {
 			die "${eshell} does not exist"
 		fi
 	else
-		for shell in /sbin/nologin /usr/sbin/nologin /bin/false /usr/bin/false /dev/null; do
-			[[ -x ${ROOT}${shell} ]] && break;
+		for shell in /sbin/nologin /usr/sbin/nologin /bin/false /usr/bin/false /dev/null ; do
+			[[ -x ${ROOT}${shell} ]] && break
 		done
 
-		if [[ ${shell} == "/dev/null" ]]; then
+		if [[ ${shell} == "/dev/null" ]] ; then
 			eerror "Unable to identify the shell to use"
 			die "Unable to identify the shell to use"
 		fi
@@ -858,10 +858,12 @@ Path=${path}
 Icon=${icon}
 Categories=Application;${type};" > "${desktop}"
 
-	insinto /usr/share/applications
-	doins "${desktop}"
-
-	return 0
+	(
+		# wrap the env here so that the 'insinto' call
+		# doesn't corrupt the env of the caller
+		insinto /usr/share/applications
+		doins "${desktop}"
+	)
 }
 
 # Make a GDM/KDM Session file
