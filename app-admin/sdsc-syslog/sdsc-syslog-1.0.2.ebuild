@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.7 2005/07/22 09:59:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.8 2005/10/07 08:52:12 dragonheart Exp $
 
 DESCRIPTION="SDSC Secure Syslog provides RFC3080 and RFC3081 logging services"
 HOMEPAGE="http://security.sdsc.edu/software/sdsc-syslog/"
@@ -8,9 +8,8 @@ SRC_URI="mirror://sourceforge/sdscsyslog/sdscsyslogd-${PV}-src.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 # beep		= support BEEP (through RoadRunner)
-# debug		= include debug info
 # doc		= include documentation
 # static    = link with RoadRunner statically
 IUSE="beep debug doc static"
@@ -36,15 +35,13 @@ src_compile() {
 	local myconf
 	if use beep ; then
 		use static \
-			&& myconf=`use_enable beep static-rr` \
-			|| myconf=`use_with beep librr`
+			&& myconf=$(use_enable beep static-rr) \
+			|| myconf=$(use_with beep librr)
 	fi
 
 	econf \
 		${myconf} \
-		`use_enable debug debug` \
-		`use_enable debug testing` \
-		`use_with doc doxygen` \
+		$(use_with doc doxygen) \
 		|| die "configure failed"
 
 	# Build the logger itself ...
@@ -71,6 +68,7 @@ src_install() {
 	mv ${D}/usr/share/SDSCSyslogd/syslogd.conf* ${D}/etc
 	mv ${D}/usr/share/SDSCSyslogd/* ${D}/usr/share/doc/${PF}
 	rmdir ${D}/usr/share/SDSCSyslogd
+	rm ${D}/usr/share/doc/${PF}/COPYING
 
 	# ... and optionally doxygen-generated one
 	use doc && dohtml docs/html/*

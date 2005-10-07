@@ -1,4 +1,14 @@
-MD5 5f79971a13cbe98cf74751d9055aa868 ChangeLog 810
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 8afd5b08e12cb3216d70107cdc8837a9 sdsc-syslog-1.0.2.ebuild 2089
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e7f57a4f1afe09c5801ef5f782caa24e ChangeLog 924
 MD5 074b15001787fa38b9f5936cd10b1c0e files/digest-sdsc-syslog-1.0.2 70
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 d0aba681021309d6d2c4297c69d9ce65 sdsc-syslog-1.0.2.ebuild 2044
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDRjdSmdTrptrqvGERAvAJAJ4udEaySNu+EK5qGf03iHqyttXUHQCdFuNo
+MOvQDBULordc/z5y5mtLegc=
+=4piC
+-----END PGP SIGNATURE-----
