@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.205 2005/10/07 15:31:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.206 2005/10/07 16:21:48 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -432,6 +432,9 @@ egetent() {
 
 		pw show ${action} ${opts} "$2" -q
 		;;
+	*-netbsd*)
+		grep "$2:\*:" /etc/$1
+		;;
 	*)
 		type -p nscd >& /dev/null && nscd -i "$1"
 		getent "$1" "$2"
@@ -701,6 +704,17 @@ enewgroup() {
 		esac
 		pw groupadd ${egroup} -g ${egid} || die "enewgroup failed"
 		;;
+
+	*-netbsd*)
+		case ${egid} in
+		*[!0-9]*) # Non numeric
+			for egid in $(seq 101 999); do
+				[ -z "`egetent group ${egid}`" ] && break
+			done
+		esac
+		groupadd ${egroup} -g ${egid} || die "enewgroup failed"
+		;;
+
 	*)
 		groupadd ${opts} ${egroup} || die "enewgroup failed"
 		;;
