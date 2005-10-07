@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre8-r2.ebuild,v 1.4 2005/09/06 20:04:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_pre8-r2.ebuild,v 1.5 2005/10/07 00:00:14 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -135,7 +135,7 @@ unkdir() {
 
 # Same as kdir above, but for symlinks #103618
 ksym() {
-	echo "ln -s '$1' '${ROOT}/$2' &> /dev/null || ewarn '  unable to symlink $2 to $1' " \
+	echo "[[ ! -e ${ROOT}/$2 ]] && { ln -s '$1' '${ROOT}/$2' &> /dev/null || ewarn '  unable to symlink $2 to $1' ; }" \
 		>> "${D}"/usr/share/baselayout/mklinks.sh
 }
 
