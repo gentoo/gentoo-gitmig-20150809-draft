@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 df2e38c834d7fb2e2309550b40a26b59 ChangeLog 2035
+MD5 9fa3c90bbb4cf6d259467299ecd16b40 ChangeLog 2135
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 12c52cf39314cc26d8d81dc10cabedb0 fence-1.00.00-r1.ebuild 809
-MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-fence-1.00.00-r1 68
-MD5 847b16e549d8f4bf1f496454d7d653ad files/fenced.conf 263
+MD5 ce7ab1d473aa10c3612ad4c2db0694b6 files/fenced.conf 234
 MD5 965225021b3b8d5a293a4d94d5ea4550 files/fenced.rc 1589
+MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-fence-1.00.00-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDHL3a5mJXAu5GbtIRArk5AJ9c7rIyrYTuTaxzvEFbDwq6yfOQ0wCdFHhf
-BPojea3dZIXlEO4157vFjjs=
-=009/
+iD8DBQFDRs84gMUyd/cdjWsRAq5OAJ42r+wkaLpc+xvRIEJ9TNkY5HgbkwCgij5w
+atvGn6tvOQW3igutAsdNfqA=
+=s42V
 -----END PGP SIGNATURE-----
