@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.203 2005/10/06 20:35:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.204 2005/10/07 01:58:27 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1160,10 +1160,8 @@ gcc_do_configure() {
 		if [[ -n ${needed_libc} ]] ; then
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
 				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
-			else
-				# This should be conditional, but what needs it?
-				# It breaks emerging cross-gcc-3.4.4 for me --eradicator
-				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
+			#else
+			#	confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
 		fi
 	else
