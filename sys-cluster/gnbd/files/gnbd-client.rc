@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.4 2005/03/25 02:17:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/files/gnbd-client.rc,v 1.5 2005/10/07 19:48:57 xmerlin Exp $
 
 depend() {
 	use dns logger
@@ -45,7 +45,7 @@ start() {
 	if [ -n "$GNBD" ] ; then
 		ebegin "Importing all GNBDs devices"
 		einfo "$(awk '/^import/ { print "--> server:", $2 }' /etc/gnbdtab )"
-		cat /etc/gnbdtab | awk '/^import/ { print "-i", $2 }' | xargs gnbd_import  > /dev/null
+		cat /etc/gnbdtab | awk '/^import/ { print "-i", $2 }' | xargs -l gnbd_import ${GNBD_CLIENT_OPTS} > /dev/null
 		eend $? "Failed to import gnbd devices"
 	fi
 }

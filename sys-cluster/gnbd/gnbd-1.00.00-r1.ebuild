@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-1.00.00-r1.ebuild,v 1.3 2005/10/07 18:08:54 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-1.00.00-r1.ebuild,v 1.4 2005/10/07 19:48:57 xmerlin Exp $
 
 CLUSTER_VERSION="1.00.00"
 DESCRIPTION="GFS Network Block Devices"
@@ -28,6 +28,9 @@ src_install() {
 
 	newinitd ${FILESDIR}/${PN}-client.rc ${PN}-client || die
 	newinitd ${FILESDIR}/${PN}-srv.rc ${PN}-srv || die
+
+	doconfd ${FILESDIR}/${PN}-client.conf || die
+	doconfd ${FILESDIR}/${PN}-srv.conf || die
 
 	insinto /etc
 	doins ${FILESDIR}/gnbdtab
