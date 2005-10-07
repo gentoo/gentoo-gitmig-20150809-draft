@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2f5983a0310fdc2d0a48f2d0de8399d9 ChangeLog 1735
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 e5bbff906ec7c44d8ec88d8a331dd2e0 lingerd-0.94.ebuild 1085
 MD5 e6acfa29750c53c7c2191ffa4c0047b8 files/lingerd.rc 610
 MD5 78caf28086b76c0e6708c31bbad10ade files/digest-lingerd-0.94 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDRrglKRy60XGEcJIRAtk3AJ48GtkQdZuUIs2/9LaaUooDmOzEMACeKCdy
+LOjC6Xj+VuOdvVan+zu1WTY=
+=dJNG
+-----END PGP SIGNATURE-----

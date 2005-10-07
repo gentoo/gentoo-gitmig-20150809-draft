@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1fcba891a878b29cc20c445087c1f2be ChangeLog 10787
 MD5 5fb666b241c86fff4ddc0880de44be48 mod_ssl-2.8.17.ebuild 2188
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
@@ -23,3 +26,10 @@ MD5 9ba9eb8eced950cd59cb8dadd090f908 files/digest-mod_ssl-2.8.17 73
 MD5 a68a0b56a629886ec3ebd08bfb0f638c files/digest-mod_ssl-2.8.24-r1 73
 MD5 289c880e2ff1c2de91eda32e7e486085 files/digest-mod_ssl-2.8.21 73
 MD5 89239995d079a1bd9abc580e2264c71b files/digest-mod_ssl-2.8.19 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDRrkyKRy60XGEcJIRAoSMAJ9NHONFRncnmcRxDU49QGN0AvjRMwCgkJ7a
+cL23X+72EIUjlssmI2SEdEA=
+=LV9n
+-----END PGP SIGNATURE-----
