@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.26 2005/10/07 00:12:34 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.27 2005/10/07 01:25:52 ranger Exp $
+
+  07 Oct 2005; Brent Baude <ranger@gentoo.org> cutg-148.ebuild:
+  Marking cutg-148 stable ppc64 for bug 108332
 
   07 Oct 2005; Olivier Fisette <ribosome@gentoo.org> cutg-148.ebuild:
   Stable on x86.
