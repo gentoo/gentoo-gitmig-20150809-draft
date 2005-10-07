@@ -5,12 +5,12 @@ MD5 9a5ae93c5c7b404555824ebee0af42bf ChangeLog 1137
 MD5 d999a843cd11311464e92b51af174d3a files/digest-joda-time-0.95 70
 MD5 ea014d642454cd3386817fd1aab626a9 files/digest-joda-time-1.0 69
 MD5 47ec711bd1f098e3e7071ef01d71a315 joda-time-0.95.ebuild 879
-MD5 f3332788fc32e72791313036b6c48503 joda-time-1.0.ebuild 951
+MD5 1426b75e78a02a776be91e35b4d9b2be joda-time-1.0.ebuild 938
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2SLDI1lqEGTUzyQRAkyDAKDc2ZTDlhPumTsxt+wcMc1f5QbLTQCZAU1o
-7CYJunEd1VrA55jxrPdIa40=
-=zv35
+iD8DBQFDRsVHQiJ/wx066S4RApTRAJ9VTghDRHH4BIWPltZe0W4FsTZPmQCgnqIQ
+hD/WKMS6dylSirZ9FJLE3Hw=
+=e9yL
 -----END PGP SIGNATURE-----
