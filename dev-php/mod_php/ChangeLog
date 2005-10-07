@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.277 2005/10/02 20:26:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.278 2005/10/07 18:28:27 gustavoz Exp $
+
+  07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  mod_php-4.4.0-r3.ebuild:
+  Stable on sparc
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> mod_php-4.4.0-r3.ebuild:
   Mark 4.4.0-r3 stable on alpha
