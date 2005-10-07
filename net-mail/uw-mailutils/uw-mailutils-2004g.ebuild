@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2004g.ebuild,v 1.8 2005/10/07 13:28:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2004g.ebuild,v 1.9 2005/10/07 16:55:24 ferdy Exp $
 
 inherit eutils flag-o-matic
 
 MY_P="imap-${PV}"
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="This is a sample skeleton ebuild file"
-HOMEPAGE="http://foo.bar.com/"
+DESCRIPTION="Mail utilities from the UW"
+HOMEPAGE="http://www.washington.edu/imap/"
 SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"

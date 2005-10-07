@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.8 2005/10/07 13:28:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.9 2005/10/07 16:55:24 ferdy Exp $
+
+  07 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  uw-mailutils-2004g.ebuild:
+  fix DESCRIPTION and HOMEPAGE
 
   07 Oct 2005; Andrej Kacian <ticho@gentoo.org> uw-mailutils-2004g.ebuild:
   Added block of pine to deps, to prevent file collisions.
