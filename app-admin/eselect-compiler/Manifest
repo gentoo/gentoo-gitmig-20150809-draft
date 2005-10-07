@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d54a6323364c84e6243c0d708498b1cf ChangeLog 2702
-MD5 ee5aab7a5ce2f42bf7aa76aab3759ff1 eselect-compiler-2.0.0_beta4.ebuild 1600
-MD5 5c4f70409df02b349cfa82dc36b9a19a files/digest-eselect-compiler-2.0.0_beta4 79
+MD5 ddb141c1331ebdf44eed81e97ab8e094 ChangeLog 3018
+MD5 3ff7960feca8a31c1989b1cdb95128e6 eselect-compiler-2.0.0_beta5.ebuild 1600
+MD5 ba6df286e65b8eb34926daa051dc2ae4 files/digest-eselect-compiler-2.0.0_beta5 79
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRYnrOpjtAl+gMRURAtJzAJ0XoGC/wlqBzxjZFAjOynVtw70SowCdGZOV
-+MzpbtxBrQhiU0NTjuhPCiw=
-=xRgJ
+iD8DBQFDRk8jOpjtAl+gMRURApCTAJ9PuuPoxYqt9Oudun0RPeoPGwHKyQCeIp6t
+SdSrHNdlzGUZc/x+rYuJdeA=
+=7Z08
 -----END PGP SIGNATURE-----

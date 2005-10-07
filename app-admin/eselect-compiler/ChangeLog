@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.9 2005/10/06 20:32:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.10 2005/10/07 10:33:45 eradicator Exp $
+
+*eselect-compiler-2.0.0_beta5 (07 Oct 2005)
+
+  07 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -eselect-compiler-2.0.0_beta4.ebuild,
+  +eselect-compiler-2.0.0_beta5.ebuild:
+  Change behavior to NOT use the deprecated CFLAGS_${ABI} unless explicitly
+  enabled in selection.conf (and it is off by default).
 
 *eselect-compiler-2.0.0_beta4 (06 Oct 2005)
 

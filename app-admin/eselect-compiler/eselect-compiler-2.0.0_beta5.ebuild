@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta4.ebuild,v 1.1 2005/10/06 20:32:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta5.ebuild,v 1.1 2005/10/07 10:33:45 eradicator Exp $
 
 DESCRIPTION="Utility to configure the active toolchain compiler"
 HOMEPAGE="http://www.gentoo.org/"
