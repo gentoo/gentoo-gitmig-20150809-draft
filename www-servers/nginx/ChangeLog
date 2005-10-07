@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.47 2005/10/05 07:29:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.48 2005/10/07 20:30:40 voxus Exp $
+
+*nginx-0.2.6 (08 Oct 2005)
+*nginx-0.3.0 (08 Oct 2005)
+
+  08 Oct 2005; Konstantin Arkhipov <voxus@gentoo.org> +nginx-0.2.6.ebuild,
+  +nginx-0.3.0.ebuild:
+  Double bump.
 
 *nginx-0.2.5 (05 Oct 2005)
 
