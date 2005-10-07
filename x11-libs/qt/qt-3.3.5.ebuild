@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.5.ebuild,v 1.1 2005/09/17 16:35:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.5.ebuild,v 1.2 2005/10/07 14:49:28 greg_g Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 SRCTYPE="free"
-DESCRIPTION="QT version ${PV}"
+DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework."
 HOMEPAGE="http://www.trolltech.com/"
 
 IMMQT_P="qt-x11-immodule-unified-qt3.3.4-20041203"
