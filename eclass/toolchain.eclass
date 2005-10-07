@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.205 2005/10/07 04:27:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.206 2005/10/07 10:44:15 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -768,7 +768,7 @@ create_eselect_conf() {
 	echo "	infopath=${DATAPATH}/info" >> ${compiler_config_file}
 	echo "	alias_cc=gcc" >> ${compiler_config_file}
 	echo "	stdcxx_incdir=${STDCXX_INCDIR##*/}" >> ${compiler_config_file}
-	echo "  bin_prefix=${CTARGET}" >> ${compiler_config_file}
+	echo "	bin_prefix=${CTARGET}" >> ${compiler_config_file}
 
 	if [[ -x "${D}/${BINPATH}/${CTARGET}-g77" ]] ; then
 		echo "	alias_gfortran=g77" >> ${compiler_config_file}
@@ -1161,7 +1161,9 @@ gcc_do_configure() {
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
 				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
 			else
-				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
+				case ${CTARGET} in
+					mips64*) confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}" ;;
+				esac
 			fi
 		fi
 	else
