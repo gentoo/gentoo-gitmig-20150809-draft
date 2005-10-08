@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.3 2005/10/08 23:07:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r1.ebuild,v 1.1 2005/10/08 23:07:44 ticho Exp $
 
 inherit eutils
 
 # Using this ugly hack, since we're making our own versioned copies of chappa 
 # patch, as upstream doesn't version them, and patch revision number doesn't
 # always have to correspond to ebuild revision number. (see #59573) 
-CHAPPA_PF="${P}"
+CHAPPA_PF="${P}-r1"
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
 HOMEPAGE="http://www.washington.edu/pine/
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE="ssl ldap kerberos largeterminal pam passfile debug"
 
 DEPEND="virtual/libc
@@ -31,7 +31,10 @@ DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	kerberos? ( app-crypt/mit-krb5 )"
-RDEPEND="${DEPEND} app-misc/mime-types"
+RDEPEND="${DEPEND}
+	app-misc/mime-types
+	net-mail/uw-mailutils
+	!<=net-mail/uw-imap-2004g"
 
 S="${WORKDIR}/${P/-/}"
 
@@ -151,14 +154,12 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/pine bin/pico bin/pilot bin/mtest bin/rpdump bin/rpload \
-	      mailutil/mailutil
+	dobin bin/pine bin/pico bin/pilot bin/rpdump bin/rpload
 
 	# Only mailbase should install /etc/mailcap
 #	donewins doc/mailcap.unx mailcap
 
-	doman doc/pine.1 doc/pico.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1 \
-	      imap/src/mailutil/mailutil.1
+	doman doc/pine.1 doc/pico.1 doc/pilot.1 doc/rpdump.1 doc/rpload.1
 	dodoc CPYRIGHT README doc/brochure.txt doc/tech-notes.txt
 #	if use ipv6 ; then
 #		dodoc "${DISTDIR}/readme.${P}-v6-20031001"
