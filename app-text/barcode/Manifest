@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a308a4ecce6d9f251a87c7f8dda487ac barcode-0.98.ebuild 746
-MD5 e1230f674b00a5dd19a94456c2a72230 ChangeLog 1085
-MD5 127c361eefd0c5e27ce6ac6a650714ac files/digest-barcode-0.98 64
+MD5 404e79c8447f50eee68ce08f8ba0db4f barcode-0.98.ebuild 758
+MD5 4001ed6e9f37fdde33779a4d15987a3f ChangeLog 1193
 MD5 b7499c2cc29b3b9a43afb0cbe82f59c0 files/0.98-info.patch 441
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKzthLLFUmVNQ7rkRAsjHAJ9TY/5eN/1x7PMVTIEBdpffu6wATACgq9av
-/wZWWLeIJ8JRLg9VkvA360k=
-=2akp
------END PGP SIGNATURE-----
+MD5 127c361eefd0c5e27ce6ac6a650714ac files/digest-barcode-0.98 64
