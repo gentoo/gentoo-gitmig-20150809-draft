@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IMAP/PEAR-Net_IMAP-1.0.3-r1.ebuild,v 1.3 2005/09/18 00:05:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IMAP/PEAR-Net_IMAP-1.0.3-r1.ebuild,v 1.4 2005/10/08 11:31:33 sebastian Exp $
 
 inherit php-pear-r1
 
@@ -10,4 +10,4 @@ LICENSE="PHP"
 SLOT="0"
 KEYWORDS="~sparc ~x86"
 IUSE=""
-RDEPEND="${RDEPEND} dev-php/PEAR-Net_Socket"
+RDEPEND=">=dev-php/PEAR-Net_Socket-1.0.6-r1"

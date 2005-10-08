@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MIME_Type
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/ChangeLog,v 1.1 2005/09/22 05:56:56 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MIME_Type/ChangeLog,v 1.2 2005/10/08 11:26:41 sebastian Exp $
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-MIME_Type-1.0.0.ebuild:
+  Fix RDEPEND.
 
 *PEAR-MIME_Type-1.0.0 (22 Sep 2005)
 

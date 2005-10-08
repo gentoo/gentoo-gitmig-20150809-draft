@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.14 2005/09/29 11:32:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail/ChangeLog,v 1.15 2005/10/08 11:23:54 sebastian Exp $
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Mail-1.1.9.ebuild:
+  Fix RDEPEND.
 
 *PEAR-Mail-1.1.9 (29 Sep 2005)
 

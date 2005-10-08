@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.38 2005/09/11 18:16:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.39 2005/10/08 11:21:02 sebastian Exp $
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Log-1.8.7-r1.ebuild:
+  Fix RDEPEND.
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Log-1.8.7-r1.ebuild:
   Added ~sparc keyword.

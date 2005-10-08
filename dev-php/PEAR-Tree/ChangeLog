@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Tree
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.9 2005/09/19 01:21:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Tree/ChangeLog,v 1.10 2005/10/08 11:58:30 sebastian Exp $
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Tree-0.2.4-r1.ebuild:
+  Fix RDEPEND.
 
   19 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Tree-0.2.4-r1.ebuild:
   Added ~sparc keyword.
