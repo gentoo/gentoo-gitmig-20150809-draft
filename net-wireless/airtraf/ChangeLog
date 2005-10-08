@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airtraf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.11 2005/09/04 13:56:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.12 2005/10/08 21:41:57 hansmi Exp $
+
+  08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> airtraf-1.1.ebuild:
+  Stable on ppc.
 
   04 Sep 2005; Daniel Black <dragonheart@gentoo.org> airtraf-1.1.ebuild:
   x86 stable on 1.1. 1.0 fails on newer gcc - to be removed soon
