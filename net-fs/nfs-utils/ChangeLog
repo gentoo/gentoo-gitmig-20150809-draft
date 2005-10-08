@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/nfs-utils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.70 2005/09/17 11:05:07 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.71 2005/10/08 20:34:06 vapier Exp $
+
+*nfs-utils-1.0.7-r2 (08 Oct 2005)
+
+  08 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.0.7-man-pages.patch, files/nfs, files/nfs.confd,
+  +nfs-utils-1.0.7-r2.ebuild:
+  Add support for starting/stopping gssd daemons #108276 and installing their
+  config files. Also tweak the man-pages SEE ALSO #107991.
 
   23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org> files/nfsmount:
   Corrected init script to use 'svc_stop; svc_start' and not 'stop; start'.

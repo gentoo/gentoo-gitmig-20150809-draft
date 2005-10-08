@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/107991
+
+--- utils/nfsd/nfsd.man
++++ utils/nfsd/nfsd.man
+@@ -38,6 +38,7 @@
+ program.
+ .SH SEE ALSO
+ .BR rpc.mountd (8),
++.BR exports (5),
+ .BR exportfs (8),
+ .BR rpc.rquotad (8),
+ .BR nfsstat (8).

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs,v 1.10 2005/03/15 05:43:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs,v 1.11 2005/10/08 20:34:06 vapier Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -21,11 +21,13 @@ restarting=no
 
 # The binary locations
 exportfs=/usr/sbin/exportfs
-statd=/sbin/rpc.statd
-idmapd=/usr/sbin/rpc.idmapd
-rquotad=/usr/sbin/rpc.rquotad
-nfsd=/usr/sbin/rpc.nfsd
-mountd=/usr/sbin/rpc.mountd
+    gssd=/usr/sbin/rpc.gssd
+  idmapd=/usr/sbin/rpc.idmapd
+  mountd=/usr/sbin/rpc.mountd
+    nfsd=/usr/sbin/rpc.nfsd
+ rquotad=/usr/sbin/rpc.rquotad
+   statd=/sbin/rpc.statd
+ svcgssd=/usr/sbin/rpc.svcgssd
 
 depend() {
 	use ypbind net
@@ -33,9 +35,7 @@ depend() {
 	after quota
 }
 
-start_idmapd() {
-	[[ ! -x ${idmapd} ]] && return 0
-
+mount_pipefs() {
 	if grep -q rpc_pipefs /proc/filesystems ; then
 		if ! grep -q "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
 			[[ ! -d /var/lib/nfs/rpc_pipefs ]] && mkdir -p /var/lib/nfs/rpc_pipefs
@@ -44,6 +44,54 @@ start_idmapd() {
 			eend $?
 		fi
 	fi
+}
+
+umount_pipefs() {
+	if [[ ${restarting} == "no" ]] ; then
+		if grep -q "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
+			ebegin "Unmounting RPC pipefs"
+			umount /var/lib/nfs/rpc_pipefs
+			eend $?
+		fi
+	fi
+}
+
+start_gssd() {
+	[[ ! -x ${gssd} || ! -x ${svcgssd} ]] && return 0
+	local ret1 ret2
+
+	ebegin "Starting gssd"
+	${gssd} ${RPCGSSDDOPTS}
+	ret1=$?
+	eend ${ret1}
+
+	ebegin "Starting svcgssd"
+	${svcgssd} ${RPCSVCGSSDDOPTS}
+	ret2=$?
+	eend ${ret2}
+
+	return $((${ret1} + ${ret2}))
+}
+
+stop_gssd() {
+	[[ ! -x ${gssd} || ! -x ${svcgssd} ]] && return 0
+	local ret
+
+	ebegin "Stopping gssd"
+	start-stop-daemon --stop --quiet --exec ${gssd}
+	ret1=$?
+	eend ${ret1}
+
+	ebegin "Stopping svcgssd"
+	start-stop-daemon --stop --quiet --exec ${svcgssd}
+	ret2=$?
+	eend ${ret2}
+
+	return $((${ret1} + ${ret2}))
+}
+
+start_idmapd() {
+	[[ ! -x ${idmapd} ]] && return 0
 
 	ebegin "Starting idmapd"
 	${idmapd} ${RPCIDMAPDOPTS}
@@ -52,19 +100,14 @@ start_idmapd() {
 
 stop_idmapd() {
 	[[ ! -x ${idmapd} ]] && return 0
+	local ret
 
 	ebegin "Stopping idmapd"
 	start-stop-daemon --stop --quiet --exec ${idmapd}
 	ret=$?
 	eend ${ret}
 
-	if [[ $restarting == "no" ]] ; then
-		if grep -q "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts ; then
-			ebegin "Unmounting RPC pipefs"
-			umount /var/lib/nfs/rpc_pipefs
-			eend $?
-		fi
-	fi
+	umount_pipefs
 
 	return ${ret}
 }
@@ -111,7 +154,9 @@ start() {
 	fi
 	# now that nfsd is mounted inside /proc, we can safely start mountd later
 
+	mount_pipefs
 	start_idmapd
+	start_gssd
 	start_statd
 
 	# Exportfs likes to hang if networking isn't working.
@@ -188,7 +233,11 @@ stop() {
 	fi
 
 	stop_statd
+	stop_gssd
 	stop_idmapd
+	umount_pipefs
+
+	return 0
 }
 
 reload() {

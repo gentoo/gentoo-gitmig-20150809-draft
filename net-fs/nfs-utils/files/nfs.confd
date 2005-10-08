@@ -1,7 +1,4 @@
 # /etc/conf.d/nfs
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.confd,v 1.9 2005/03/18 07:22:00 vapier Exp $
-
-# Config file for /etc/init.d/nfs
 
 # If you wish to set the port numbers for lockd,
 # please see /etc/sysctl.conf
@@ -19,6 +16,12 @@ RPCSTATDOPTS=""
 
 # Options to pass to rpc.idmapd
 RPCIDMAPDOPTS=""
+
+# Options to pass to rpc.gssd
+RPCGSSDOPTS=""
+
+# Options to pass to rpc.svcgssd
+RPCSVCGSSDOPTS=""
 
 # Timeout (in seconds) for exportfs
 EXPORTFSTIMEOUT=30
