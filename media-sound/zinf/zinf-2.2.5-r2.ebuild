@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r2.ebuild,v 1.1 2005/07/31 20:17:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r2.ebuild,v 1.2 2005/10/08 16:05:44 vanquirius Exp $
 
 inherit kde-functions eutils flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 -sparc"
+KEYWORDS="~amd64 x86 -sparc"
 IUSE="alsa arts debug esd gnome gtk ipv6 nls vorbis xosd X"
 
 RESTRICT="primaryuri"
@@ -40,11 +40,11 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 src_unpack() {
-	unpack ${A}; cd ${S}
+	unpack ${A}; cd "${S}"
 
-	epatch ${FILESDIR}/${P}-cdplay.patch
-	epatch ${FILESDIR}/${P}-configure.patch
-	epatch ${FILESDIR}/${P}-rtp.patch
+	epatch "${FILESDIR}"/${P}-cdplay.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-rtp.patch
 
 	export WANT_AUTOMAKE=1.7
 	export WANT_AUTOCONF=2.5
@@ -88,5 +88,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
