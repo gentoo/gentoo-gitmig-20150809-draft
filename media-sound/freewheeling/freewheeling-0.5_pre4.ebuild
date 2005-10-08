@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.3 2005/09/04 10:46:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.4 2005/10/08 04:53:13 matsuu Exp $
 
 IUSE="fluidsynth"
 MY_P="fweelin-0.5pre4"
@@ -16,9 +16,8 @@ SLOT="0"
 # don't keyword it stable on amd64 before talking to fvdpol@gentoo.org
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="
-	virtual/libc
-	virtual/jack
+DEPEND="virtual/libc
+	media-sound/jack-audio-connection-kit
 	>=media-libs/libsdl-1.2.4
 	dev-libs/libxml2
 	media-libs/libvorbis
