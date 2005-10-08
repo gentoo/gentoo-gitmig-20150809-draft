@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.3-r2.ebuild,v 1.2 2005/10/02 22:07:27 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.9.3-r2.ebuild,v 1.3 2005/10/08 12:11:50 blubb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://gotbnc.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha -amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -22,6 +22,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	sed -i -e s:./mkpasswd:/usr/bin/bncmkpasswd: ${S}/bncsetup || die
+	epatch ${FILESDIR}/${P}-64bit.patch
 }
 
 src_compile() {
