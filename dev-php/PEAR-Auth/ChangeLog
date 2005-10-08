@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Auth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.4 2005/09/10 06:07:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.5 2005/10/08 10:51:11 sebastian Exp $
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Auth-1.2.3-r1.ebuild:
+  Fix RDEPEND.
 
   10 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Auth-1.2.3-r1.ebuild:
   Added ~sparc keyword.
