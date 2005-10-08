@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.3.ebuild,v 1.6 2005/08/20 18:32:29 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.14.3.ebuild,v 1.7 2005/10/08 17:12:17 swegener Exp $
 
 inherit toolchain-funcs eutils
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dlloader"
 RDEPEND="virtual/x11"
-DEPEND=">=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

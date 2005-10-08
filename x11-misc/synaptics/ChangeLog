@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.46 2005/08/20 18:40:54 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.47 2005/10/08 17:12:17 swegener Exp $
+
+  08 Oct 2005; Sven Wegener <swegener@gentoo.org> synaptics-0.14.1.ebuild,
+  synaptics-0.14.2.ebuild, synaptics-0.14.3.ebuild:
+  Added missing X dependency to DEPEND.
 
   20 Aug 2005; Bryan Stine <battousai@gentoo.org> synaptics-0.14.1.ebuild,
   synaptics-0.14.2.ebuild:

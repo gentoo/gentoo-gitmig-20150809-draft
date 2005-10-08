@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 99f68dee739189506e9174fbeffa2aed ChangeLog 8651
 MD5 595f2c641792adda7a9f78f547a3f98b files/digest-synaptics-0.14.1 69
 MD5 b18951d106b4ce580ac6177b199cf712 files/digest-synaptics-0.14.2 69
@@ -9,3 +12,10 @@ MD5 1cb923bfa5e7e99ae6804f147a1c730c metadata.xml 164
 MD5 296db1bb8b4b4e9f269437ca0aad747a synaptics-0.14.1.ebuild 1962
 MD5 a4ab06d7c8effb31d72c0f2c7af04834 synaptics-0.14.2.ebuild 1962
 MD5 3ec94a739b240ba37a2fb4fe129f8f96 synaptics-0.14.3.ebuild 1963
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDR/4HI1lqEGTUzyQRAibfAJ9B+0lFFU9p+3o7Xgppp7NrsAqbYwCgoLU+
+8VJ0ZNEwFDQtVqDJDjnY++M=
+=jZLt
+-----END PGP SIGNATURE-----
