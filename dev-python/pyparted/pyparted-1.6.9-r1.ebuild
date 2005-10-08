@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.6.9-r1.ebuild,v 1.2 2005/04/05 01:20:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.6.9-r1.ebuild,v 1.3 2005/10/08 18:42:16 kloeri Exp $
 
 RH_EXTRAVERSION="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fedora.redhat.com"
 SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
 IUSE=""
 
 # Needed to build...
