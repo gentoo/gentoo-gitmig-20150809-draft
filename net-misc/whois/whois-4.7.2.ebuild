@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.7.2.ebuild,v 1.3 2005/08/26 10:44:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.7.2.ebuild,v 1.4 2005/10/08 19:31:01 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,7 +47,7 @@ src_install() {
 	dodoc README
 
 	if [[ "${USERLAND}" != "GNU" ]]; then
-		mv ${D}/usr/share/man/man1/{whois,gwhois}.1
-		mv ${D}/usr/bin/{whois,gwhois}
+		mv ${D}/usr/share/man/man1/{whois,mdwhois}.1
+		mv ${D}/usr/bin/{whois,mdwhois}
 	fi
 }

@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93293b17f11e1f480e8e243d4c62a737 whois-4.7.2.ebuild 1267
-MD5 9255ba9fdcf03556f1bb65d887c24d6f ChangeLog 7487
+MD5 4284942fd9ae2b56fc2a9411f0bca35f ChangeLog 7667
+MD5 405e144ea2a2c14c0b066e42461ee8f4 files/digest-whois-4.6.13-r1 63
+MD5 27f0bd22f881041e341aa5cb7b938c28 files/digest-whois-4.6.22 63
+MD5 57973d31d6aaf8ccd822e6f11837978b files/digest-whois-4.7.2 62
+MD5 fbeb270cb2d2f8fbd313166116740f8b files/whois-4.6.13-gentoo-security.patch 4065
+MD5 1327d76b68095d1c08e847fe3bbb4367 files/whois-4.7.2-config-file.patch 198
+MD5 df632f0b3d2992153d9671f55cd835cf files/whois-4.7.2-gentoo-security.patch 5609
 MD5 4130b55a81d2aa0c33620bbe65c274b1 whois-4.6.13-r1.ebuild 1068
 MD5 dfd2ebd559ef35e04b3ae5dfdc0cf9cc whois-4.6.22.ebuild 985
-MD5 57973d31d6aaf8ccd822e6f11837978b files/digest-whois-4.7.2 62
-MD5 1327d76b68095d1c08e847fe3bbb4367 files/whois-4.7.2-config-file.patch 198
-MD5 27f0bd22f881041e341aa5cb7b938c28 files/digest-whois-4.6.22 63
-MD5 fbeb270cb2d2f8fbd313166116740f8b files/whois-4.6.13-gentoo-security.patch 4065
-MD5 405e144ea2a2c14c0b066e42461ee8f4 files/digest-whois-4.6.13-r1 63
-MD5 df632f0b3d2992153d9671f55cd835cf files/whois-4.7.2-gentoo-security.patch 5609
+MD5 e861882f62667c61182650f4c5b8a642 whois-4.7.2.ebuild 1269
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDvK4j5H05b2HAEkRAgQYAJ425BrtqtTQ/FKSIeuWpERATctYgwCfWHGI
-8UbkW7rwoLalVye5yhk0GE4=
-=7h4m
+iD8DBQFDSB6ij5H05b2HAEkRApcWAKCNbqcoNXM+P7E0KjoP2cjYbxq1KgCfQ4ZC
+4QjRaJSpyDcL4FmoPKwEqeU=
+=vTuU
 -----END PGP SIGNATURE-----
