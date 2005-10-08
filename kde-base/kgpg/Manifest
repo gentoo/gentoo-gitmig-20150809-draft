@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 577a26f3cb828acad5319ecb41be39c9 kgpg-3.4.2.ebuild 429
-MD5 25a557068ce67060452f5bdb23434e63 ChangeLog 2488
-MD5 f9f8283df0c428821d08304a4d0b4ffd kgpg-3.5_beta1.ebuild 405
-MD5 0b1c25a5c228b68be4eed5c4eec8bbd7 kgpg-3.4.1.ebuild 416
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 062bb93297f13fe72d1e78a55a449788 files/digest-kgpg-3.4.2 288
+MD5 adb6fcb46c7e36f8d47077d372d2df94 ChangeLog 2588
+MD5 ab3eb220e894b7f84a4ae20d6f35d26e files/digest-kgpg-3.4.1 212
+MD5 528dfb138277c74810b95fa05d2770a8 files/digest-kgpg-3.4.2 288
 MD5 ba38338e687742fb5a9e7458de260898 files/digest-kgpg-3.5_beta1 69
-MD5 e29bbb2db20451106f7980c7008328fa files/digest-kgpg-3.4.1 212
+MD5 0b1c25a5c228b68be4eed5c4eec8bbd7 kgpg-3.4.1.ebuild 416
+MD5 577a26f3cb828acad5319ecb41be39c9 kgpg-3.4.2.ebuild 429
+MD5 255706721ebd9b5d4c9a7419cf9c0d98 kgpg-3.5_beta1.ebuild 411
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNV+4j5H05b2HAEkRAjxSAJ9jxVKiV2LRlG0TNnt0HroyPuhoFgCfeM+5
-iFLv5cbKzeO41CaBsEaNJJs=
-=NFhd
+iD8DBQFDSD6DQiJ/wx066S4RApKtAKCGi9a+RIoK5B7oeEGsyBi7Nk1pPgCfSOuK
+j4i+RYJup2yCsgK5n7XJDKc=
+=kmvW
 -----END PGP SIGNATURE-----
