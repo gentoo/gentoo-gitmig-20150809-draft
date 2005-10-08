@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.10 2005/10/03 13:00:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.11 2005/10/08 13:30:59 zzam Exp $
+
+*gentoo-vdr-scripts-0.1_alpha7 (08 Oct 2005)
+
+  08 Oct 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +gentoo-vdr-scripts-0.1_alpha7.ebuild:
+  Version bumped. Added useflag nvram.
 
 *gentoo-vdr-scripts-0.1_alpha6 (03 Oct 2005)
 
