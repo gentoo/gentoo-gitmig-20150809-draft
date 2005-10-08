@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.5.3.ebuild,v 1.1 2005/10/08 14:01:29 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.5.3.ebuild,v 1.2 2005/10/08 21:20:17 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/tcl-8.3
 	>=dev-tcltk/tclx-8.3
 	dev-tcltk/tcllib
 	dev-tcltk/mysqltcl
-	ssl? >=dev-tcltk/tls-1.4.1"
+	ssl? ( >=dev-tcltk/tls-1.4.1 )"
 RDEPEND="${DEPEND}
 	net-analyzer/p0f
 	net-analyzer/tcpflow
