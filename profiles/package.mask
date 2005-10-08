@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4545 2005/10/08 07:40:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4546 2005/10/08 12:18:37 nixphoeni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1320,22 +1320,8 @@ sys-libs/nss-mysql
 # Joe Sapp <nixphoeni@gentoo.org> (22 May 2005)
 # Removing old desklets that use deprecated functionality.
 # Old -core's are also scheduled to be removed
-x11-plugins/desklet-battery
-x11-plugins/desklet-cornerxmms
-x11-plugins/desklet-goodweather
-x11-plugins/desklet-ltvariations
-x11-plugins/desklet-multitail
-x11-plugins/desklet-psiextras
-x11-plugins/desklet-rhythmlet
-x11-plugins/desklet-rssgrab
-x11-plugins/desklet-sysinfo
-x11-plugins/desklet-temperature
-x11-plugins/desklet-weather
-x11-plugins/desklet-wireless
 # these breaks deps.  Work with arch teams to fix that first (mr_bones_)
 #<gnome-extra/gdesklets-core-0.33.1
-#x11-plugins/desklet-psidisplays
-#x11-plugins/desklet-psisensors
 
 # Danny van Dyk <kugelfang@gentoo.org> (14 May 2005)
 # Masked for testing with eclectic. Subject to major changes.
