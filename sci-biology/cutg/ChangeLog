@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.27 2005/10/07 01:25:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.28 2005/10/08 21:22:14 j4rg0n Exp $
+
+  08 Oct 2005; Lina Pezzella <j4rg0n@gentoo.org> cutg-148.ebuild:
+  Stable ppc-macos, as per Bug 108332
 
   07 Oct 2005; Brent Baude <ranger@gentoo.org> cutg-148.ebuild:
   Marking cutg-148 stable ppc64 for bug 108332
