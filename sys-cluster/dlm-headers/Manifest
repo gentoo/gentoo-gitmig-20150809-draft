@@ -1,6 +1,16 @@
-MD5 e744e00e0b2a98e31816ee9a1ebba7ec ChangeLog 784
-MD5 430fd9cda67ed9c90fcd3f3f6076e6cd dlm-headers-1.00.00.ebuild 769
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c2b0b8108fbc9ad9c10fbbcb932bb91 ChangeLog 782
+MD5 6d758084212352d6b45d0158b52a6074 dlm-headers-1.00.00.ebuild 767
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 513a938721d496a5a4d3b8442f67d5dc dlm-headers-1.01.00.ebuild 769
+MD5 93ea14c995ef257ef23ca58e259f79d5 dlm-headers-1.01.00.ebuild 767
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-dlm-headers-1.00.00 68
 MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-dlm-headers-1.01.00 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDR9+ggMUyd/cdjWsRAgoqAJ0fzYNqw/DV2hRCFLLR5W6e04PmBQCdF2IS
+HBBfUfap1Jn9qmlZwhVCKFI=
+=Q1O1
+-----END PGP SIGNATURE-----
