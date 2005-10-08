@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b964e144113cad5da5e8106176c4911 matrix-1.04.ebuild 529
-MD5 8996b0f13d84dba6e52e31937d52a13c metadata.xml 406
-MD5 8a5b44d86b0649b3693cb81e8b923caa ChangeLog 617
+MD5 c4e65f1440a8a400ca0fe77835c34a8b ChangeLog 747
 MD5 7b3a4ce0ae870550e8272ac2825f3774 files/digest-matrix-1.04 62
+MD5 c9dacef50cd1678c53eeecd8a8a0cb75 files/digest-matrix-1.08 62
+MD5 7b964e144113cad5da5e8106176c4911 matrix-1.04.ebuild 529
+MD5 f688b144b5871abe08d4bdecce661e23 matrix-1.08.ebuild 532
+MD5 8996b0f13d84dba6e52e31937d52a13c metadata.xml 406
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDHkugLLFUmVNQ7rkRAg76AKC9fGGzq5khUSuRqxfUm/S/qoaDwQCgih/S
-RSAusRDqa+vGfKPFUZ0sTuc=
-=9yjS
+iD8DBQFDRw3OLLFUmVNQ7rkRAstiAKCBSUktywQ5DTYa/zmWcFqpZwC9igCeOosn
+QyxVdxHE9TffxL9grHQusVA=
+=Aqv3
 -----END PGP SIGNATURE-----
