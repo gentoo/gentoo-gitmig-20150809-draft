@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.24 2005/08/29 23:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.25 2005/10/08 16:58:41 vapier Exp $
+
+*crossdev-0.9.9-r3 (08 Oct 2005)
+
+  08 Oct 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
+  -crossdev-0.9.9-r2.ebuild, +crossdev-0.9.9-r3.ebuild:
+  Add support for passing -d to portage #108383 by Jan Kobler and allow env
+  USE/ABI to be passed in.
 
 *crossdev-0.9.9-r2 (29 Aug 2005)
 

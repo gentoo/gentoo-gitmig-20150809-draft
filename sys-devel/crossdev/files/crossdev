@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.35 2005/09/21 03:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.36 2005/10/08 16:58:41 vapier Exp $
 
 cd /
 
@@ -31,7 +31,7 @@ ${GOOD}Options${NORMAL}:
     ${GOOD}--k, --kernel${NORMAL} ver     Specify version of kernel headers to use
     ${GOOD}--l, --libc${NORMAL} ver       Specify version of libc to use
     ${GOOD}-C, --clean${NORMAL} target    Uninstall specified target
-    ${GOOD}-b, -p, -v${NORMAL}            Options to pass to emerge (see emerge(1))
+    ${GOOD}-b, -d, -p, -v${NORMAL}        Options to pass to emerge (see emerge(1))
 Basic Targets:
     ${GOOD}-s0, --stage0${NORMAL}         Build just binutils
     ${GOOD}-s1, --stage1${NORMAL}         Also build a C compiler (no libc/C++)
@@ -273,7 +273,7 @@ while [[ $# -gt 0 ]] ; do
 	--ex-only)      EX_FAST="yes";;
 	--ex-gcc)       EX_GCC="yes";;
 	--ex-gdb)       EX_GDB="yes";;
-	-b|-p|-v)       UOPTS="${UOPTS} $1";;
+	-b|-d|-p|-v)    UOPTS="${UOPTS} $1";;
 	-pv|-vp)        UOPTS="${UOPTS} -p -v";;
 	-h|--help)      usage;;
 	-*)             eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
@@ -433,25 +433,25 @@ doemerge() {
 EOPTS="${UOPTS} -u --nodeps"
 
 # make sure multilib crap doesn't screw us over
-export ABI="pos" LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
+export ABI=${ABI:-pos} LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
 
 ex_fast || {
 
 doemerge ${BPKG}
 is_s1 || exit 0
 
-USE="-boundschecking -fortran -gcj -objc nocxx -static" \
+USE="${USE} -boundschecking -fortran -gcj -objc nocxx -static" \
 	doemerge ${GPKG} ${GPKG}-stage1
 is_s2 || exit 0
 doemerge ${KPKG}
 is_s3 || exit 0
-USE=$TARCH doemerge ${LPKG}
+USE="${USE} $TARCH" doemerge ${LPKG}
 
 is_s4 || exit 0
 if ! type -p ${CTARGET}-g++ > /dev/null ; then
 	EOPTS="${UOPTS} --nodeps"
 fi
-USE="-fortran -gcj -objc" \
+USE="${USE} -fortran -gcj -objc" \
 	doemerge ${GPKG} ${GPKG}-stage2
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.9.9-r2.ebuild,v 1.1 2005/08/29 23:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.9.9-r3.ebuild,v 1.1 2005/10/08 16:58:41 vapier Exp $
 
 DESCRIPTION="Gentoo Cross-toolchain generator"
 HOMEPAGE="http://www.gentoo.org/"
