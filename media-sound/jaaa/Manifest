@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c713d716bf19e466b7a24ea1461b8846 jaaa-0.1.2.ebuild 842
-MD5 739c133e134697e574bf99a2c6350b88 ChangeLog 1311
-MD5 8f172655b68697b6b6c58a63f19c461e jaaa-0.1.1.ebuild 841
-MD5 df3297208ae0ead71ca9cbe01468a6fe jaaa-0.1.2-r1.ebuild 965
+MD5 2480b4ef47cef1b5807f2946277ff7a1 jaaa-0.1.2.ebuild 864
+MD5 92912b7b925423f46adfb36ef3598d74 jaaa-0.1.2-r1.ebuild 987
+MD5 94a0126df92dc6f5a6bda5f235c1a49b jaaa-0.1.1.ebuild 863
+MD5 a201482a9b1ab5ea5c718e07f6e9c9ca ChangeLog 1476
 MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
-MD5 c5fa8f63fe2bbc7af6e782c5af3f1e69 files/digest-jaaa-0.1.2 62
 MD5 9872cd47e792a3ca678b392be2c49e3e files/jaaa-0.1.2-amd64.patch 427
-MD5 e6c376d9556fb2165bb225a463160036 files/digest-jaaa-0.1.1 62
 MD5 c5fa8f63fe2bbc7af6e782c5af3f1e69 files/digest-jaaa-0.1.2-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIv+Fj5H05b2HAEkRAh10AJ9rExERyHEfnlHAtSYgYwu1rgynpwCeNUNy
-CLsiLV/rTWjPy4cMaTH5K5k=
-=3FXo
------END PGP SIGNATURE-----
+MD5 e6c376d9556fb2165bb225a463160036 files/digest-jaaa-0.1.1 62
+MD5 c5fa8f63fe2bbc7af6e782c5af3f1e69 files/digest-jaaa-0.1.2 62

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jaaa
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.8 2005/09/10 15:44:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.9 2005/10/08 04:50:32 matsuu Exp $
+
+  08 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> jaaa-0.1.1.ebuild,
+  jaaa-0.1.2.ebuild, jaaa-0.1.2-r1.ebuild:
+  Fixed dependency issue with virtual/jack. Bug 108444.
 
   10 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> jaaa-0.1.1.ebuild,
   jaaa-0.1.2.ebuild, jaaa-0.1.2-r1.ebuild:
