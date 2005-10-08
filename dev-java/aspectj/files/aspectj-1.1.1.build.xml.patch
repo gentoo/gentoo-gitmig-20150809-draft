@@ -1,0 +1,12 @@
+diff -ur org.aspectj.orig/modules/build/build.xml org.aspectj/modules/build/build.xml
+--- org.aspectj.orig/modules/build/build.xml	2005-10-08 13:44:14.709485640 +0300
++++ org.aspectj/modules/build/build.xml	2005-10-08 13:44:32.585768032 +0300
+@@ -13,7 +13,7 @@
+ <!-- ========================================================================= -->
+ 
+ <!DOCTYPE project [
+-<!ENTITY build-properties SYSTEM "file:build-properties.xml">
++<!ENTITY build-properties SYSTEM "build-properties.xml">
+ ]>
+ <project name="build" default="all" basedir=".">
+ 

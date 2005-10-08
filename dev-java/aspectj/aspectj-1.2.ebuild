@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2.ebuild,v 1.7 2005/07/16 17:18:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2.ebuild,v 1.8 2005/10/08 10:55:35 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="AspectJ is a seemless extension to the Java programming language fo
 SRC_URI="mirror://gentoo/aspectj-CVS-V1_2_0.tar.bz2"
 HOMEPAGE="http://www.eclipse.org/aspectj/"
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant"
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.3"
 SLOT="0"
 LICENSE="CPL-1.0 Apache-1.1"
@@ -59,7 +59,7 @@ src_install() {
 	dobin ${FILESDIR}/{ajc,ajbrowser}
 
 	dohtml doc/*.html
-	cp *.html ${D}/usr/share/doc/${PF}/
+	dohtml README-AspectJ.html
 	if use doc; then
 		cp -R doc/{devguide,api,progguide} ${D}/usr/share/doc/${PF}/html
 		cp -R doc/examples ${D}/usr/share/doc/${PF}

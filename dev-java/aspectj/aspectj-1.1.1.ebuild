@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.11 2005/07/16 21:46:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.1.1.ebuild,v 1.12 2005/10/08 10:55:35 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="AspectJ is a seemless extension to the Java programming language fo
 SRC_URI="mirror://gentoo/aspectj-CVS-V1_1_1.tar.bz2"
 HOMEPAGE="http://www.eclipse.org/aspectj/"
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant"
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.3"
 SLOT="0"
 LICENSE="CPL-1.0 Apache-1.1"
@@ -37,8 +37,10 @@ S=${WORKDIR}/org.aspectj/modules
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/aspectj-${PV}-version-gentoo.patch
+	epatch ${FILESDIR}/${P}-version-gentoo.patch
 	cd ${S}
+	epatch ${FILESDIR}/${P}.build.xml.patch
+	epatch ${FILESDIR}/${PN}-1.2-fix-examples-build.xml.patch
 	sed -i "s,DEVELOPMENT,${PV},g" build/build-properties.xml
 	sed -i -e "s,@PV@,${PV},g" -e "s,@PV_LONG@,${PV} (Gentoo Build),g" \
 		org.aspectj.ajdt.core/src/org/aspectj/ajdt/ajc/messages.properties
@@ -46,7 +48,7 @@ src_unpack() {
 
 src_compile() {
 	cd build
-	ant -f build.xml || die
+	ant -f build.xml || die "build failed"
 }
 
 src_install() {
@@ -57,7 +59,7 @@ src_install() {
 	dobin ${FILESDIR}/{ajc,ajbrowser}
 
 	dohtml doc/*.html
-	cp *.html ${D}/usr/share/doc/${PF}/
+	dohtml README-AspectJ.html
 	if use doc; then
 		cp -R doc/{devguide,api,progguide} ${D}/usr/share/doc/${PF}/html
 		cp -R doc/examples ${D}/usr/share/doc/${PF}
