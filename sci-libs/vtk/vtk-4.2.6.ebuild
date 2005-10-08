@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.5 2005/08/24 16:20:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.6 2005/10/08 17:29:34 axxo Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator
+inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg
 
 MY_PV="$(get_version_component_range 1-2)"
 
@@ -104,7 +104,7 @@ src_install() {
 	fi
 
 	# install jar
-	use java && dojar ${S}/bin/vtk.jar
+	use java && java-pkg_dojar ${S}/bin/vtk.jar
 
 	# install documentation
 	use doc && dohtml -r ${WORKDIR}/html/
