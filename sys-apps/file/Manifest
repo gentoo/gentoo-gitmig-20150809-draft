@@ -1,26 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 2bd4b86f2bf7e6f99952ae5339ea8183 ChangeLog 11595
 MD5 c6073a11ea3fcb5cc0d1625a54aad8d4 file-4.12.ebuild 2081
-MD5 d46373392481ffa4240b13570efa88dd file-4.15.ebuild 1449
 MD5 213bc8ded7a22b2fcb129f4ee60e892c file-4.13.ebuild 2226
-MD5 fb6809aab87e2eba25ea6e5d3128dacc ChangeLog 11366
-MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.13-cross-compile.patch 964
-MD5 a952f0eca26a046e4b815529d2b734ef files/misc.magic 71
-MD5 cbb2d6e5512eb5f33299107848ca9e30 files/file-4.15-empty-mime-buffer.patch 708
+MD5 7b53e1d21af2cb92d83127a3765386bf file-4.15-r1.ebuild 1508
+MD5 d46373392481ffa4240b13570efa88dd file-4.15.ebuild 1449
+MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
+MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
 MD5 407c20e1fb3186144d6c7d2788714163 files/digest-file-4.13 61
+MD5 56c4aa931e56a129d1c631c52a3b6d67 files/digest-file-4.15 61
+MD5 56c4aa931e56a129d1c631c52a3b6d67 files/digest-file-4.15-r1 61
+MD5 f856a50dada76a4ca5cee58fbd04e76b files/file-4.13-cross-compile.patch 964
 MD5 7a96e5548d52493366ab39f1c6ae9237 files/file-4.13-ia64.patch 530
 MD5 13c1a487996e5e26560f9feaae56e811 files/file-4.14-gcc2.patch 494
-MD5 56c4aa931e56a129d1c631c52a3b6d67 files/digest-file-4.15 61
-MD5 d336b3490362624aec2e30679c44a198 files/digest-file-4.12 61
-MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
+MD5 26e3155407a33adebfc7ed7d06a59988 files/file-4.15-cracklib-magic.patch 352
+MD5 cbb2d6e5512eb5f33299107848ca9e30 files/file-4.15-empty-mime-buffer.patch 708
 MD5 26f26c3f7caf28f0bdb9dbb6fe83c254 files/file-4.15-libtool.patch 561
 MD5 66df8eecd30769daeb3f643dc6432db3 files/file-4.xx-mips-gentoo.patch 5578
+MD5 a952f0eca26a046e4b815529d2b734ef files/misc.magic 71
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK9AwgIKl8Uu19MoRAlMyAJoCWz5sQzWzJNT1BzqbIDdVlbBJ8ACfQBt8
-xi5Ppbv9Xp4sCVmU2BK9kAk=
-=ddtK
+iD8DBQFDR/FJgIKl8Uu19MoRApwLAJ9XPxhlMyMz9DcZQ69H7XGnoWgFsACfago+
+TlkiXctfABjA5CF517mU2tY=
+=14P9
 -----END PGP SIGNATURE-----
