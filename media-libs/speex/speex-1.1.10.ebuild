@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.10.ebuild,v 1.1 2005/10/07 22:01:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.10.ebuild,v 1.2 2005/10/08 11:53:31 matsuu Exp $
+
+inherit eutils
 
 DESCRIPTION="Speech encoding library"
 HOMEPAGE="http://www.speex.org/"
@@ -13,6 +15,12 @@ IUSE="ogg sse"
 
 DEPEND="virtual/libc
 	ogg? ( >=media-libs/libogg-1.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-sse.patch
+}
 
 src_compile() {
 	local myconf
