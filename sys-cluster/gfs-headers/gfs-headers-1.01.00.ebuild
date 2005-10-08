@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-headers/gfs-headers-1.00.00.ebuild,v 1.4 2005/10/08 15:12:13 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-headers/gfs-headers-1.01.00.ebuild,v 1.1 2005/10/08 15:12:13 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND=">=sys-cluster/dlm-headers-1.00.00
-	>=sys-cluster/cman-headers-1.00.00"
+DEPEND=">=sys-cluster/dlm-headers-1.01.00
+	>=sys-cluster/cman-headers-1.01.00"
 
 RDEPEND=""
 
