@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/cocoon-2.1.6.ebuild,v 1.3 2005/07/18 11:47:59 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/cocoon-2.1.6.ebuild,v 1.4 2005/10/08 14:38:39 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.5.3"
+	>=dev-java/ant-core-1.5.3"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
