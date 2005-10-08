@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20051004.ebuild,v 1.2 2005/10/05 14:58:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20051004-r1.ebuild,v 1.1 2005/10/08 09:25:54 zypher Exp $
 
 IUSE="X debug threads"
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	./configure \
+	./configure --prefix=/usr \
 		$(use_enable debug) \
 		$(use_enable threads pthread) \
 		$(use_enable X visualize) \

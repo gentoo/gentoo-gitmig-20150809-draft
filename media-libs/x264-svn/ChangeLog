@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264-svn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.3 2005/10/05 14:58:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.4 2005/10/08 09:25:54 zypher Exp $
+
+  08 Oct 2005; Marc Hildebrand <zypher@gentoo.org> x264-svn-20051004.ebuild,
+  x264-svn-20051004-r1.ebuild:
+  Fixed wrong configure line. Fixes bug #108436
 
   05 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fixed wrong herd in metadata (it's video, not media-video).
