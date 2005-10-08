@@ -1,0 +1,49 @@
+diff -NurdB librsvg-2.12.6/configure.in librsvg-2.12.6-patched/configure.in
+--- librsvg-2.12.6/configure.in	2005-10-06 21:32:34.000000000 -0500
++++ librsvg-2.12.6-patched/configure.in	2005-10-07 22:30:14.000000000 -0500
+@@ -321,18 +321,37 @@
+ 			 test_mozilla_plugin="$enableval")
+ 
+ if test "x$test_mozilla_plugin" != "xno"; then
+-   if test -z "$MOZILLA_CONFIG"; then
+-      AC_PATH_PROGS(MOZILLA_CONFIG, mozilla-config firefox-config, no)
++   AC_MSG_CHECKING([which gecko to use])
++
++   AC_ARG_WITH([mozilla],
++      AS_HELP_STRING([--with-mozilla],[Which gecko engine to use (default: autodetect)]))
++
++   GECKOS="gecko-sdk firefox mozilla-firefox seamonkey mozilla"
++   gecko=$with_mozilla
++
++   if test "x$gecko" = "x"; then
++      dnl Autodetect gecko
++      for g in $GECKOS; do
++         if $PKG_CONFIG --exists $g-plugin; then
++            gecko=$g
++            break;
++         fi
++      done
++   elif ! $PKG_CONFIG --exists $gecko-plugin; then
++      AC_MSG_ERROR([Gecko "$gecko" not found])
+    fi
+ 
+-   if test "x$MOZILLA_CONFIG" != "xno"; then
+-      _mozilla_include_dir=`$MOZILLA_CONFIG --cflags|sed 's/-I\(.*\) .*/\1/'`
+-      MOZILLA_CFLAGS="-I$_mozilla_include_dir/plugin -I$_mozilla_include_dir/java -I$_mozilla_include_dir/nspr"
+-   else
+-	PKG_CHECK_MODULES(MOZILLA, mozilla-plugin, build_mozilla_plugin=yes, 
+-			[AC_MSG_WARN([mozilla-config not found. Mozilla/Netscape plugin will not be built])])
++   if test "x$gecko" = "x"; then
++      AC_MSG_ERROR([No gecko found])
++   elif ! ( echo "$GECKOS" | egrep "(^| )$gecko(\$| )" > /dev/null); then
++      AC_MSG_ERROR([Unknown gecko "$gecko" specified])
+    fi
+ 
++   AC_MSG_RESULT([$gecko])
++
++   PKG_CHECK_MODULES(MOZILLA, $gecko-plugin, build_mozilla_plugin=yes, 
++      [AC_MSG_WARN([gecko toolkit not found. Mozilla/Netscape plugin will not be built])])
++
+    if test "x$MOZILLA_CFLAGS" != "x"; then
+       build_mozilla_plugin=yes
+    fi

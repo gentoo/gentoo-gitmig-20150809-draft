@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.3.ebuild,v 1.1 2005/09/30 17:30:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.12.6.ebuild,v 1.1 2005/10/08 12:29:02 leonardop Exp $
 
-inherit multilib gnome2
+inherit eutils multilib gnome2
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
@@ -10,7 +10,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc gnome mozilla zlib"
+IUSE="doc gnome nsplugin zlib"
 
 RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=x11-libs/gtk+-2
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	media-libs/freetype
 	>=dev-libs/libcroco-0.6
 	zlib? ( >=gnome-extra/libgsf-1.6 )
-	mozilla? ( >=www-client/mozilla-1.7.3 )
+	nsplugin? ( >=net-libs/gecko-sdk-1.7.3 )
 	gnome? ( >=gnome-base/gnome-vfs-2 )"
 # libgnomeprint dependencies are not necessary
 
@@ -42,11 +42,22 @@ set_gtk_confdir() {
 pkg_setup() {
 	# FIXME : USEify croco support (?)
 	G2CONF="--with-croco \
-		--enable-pixbuf-loader               \
-		--enable-gtk-theme                   \
-		$(use_with zlib svgz)                \
-		$(use_enable gnome gnome-vfs)        \
-		$(use_enable mozilla mozilla-plugin)"
+		--enable-pixbuf-loader                \
+		--enable-gtk-theme                    \
+		$(use_enable gnome gnome-vfs)         \
+		$(use_enable nsplugin mozilla-plugin) \
+		$(use_with zlib svgz)                 \
+		$(use_with nsplugin mozilla gecko-sdk)"
+}
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+
+	# Provide gecko toolkit autodetection and --with-mozilla switch.
+	epatch ${FILESDIR}/${PN}-2.12.6-plugin_checks.patch
+
+	autoconf || die "autoconf failed"
 }
 
 src_install() {
