@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.22 2005/09/21 06:18:14 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.23 2005/10/08 10:41:28 sebastian Exp $
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-HTML_QuickForm-3.2.5-r1.ebuild:
+  Fix RDEPEND.
 
 *PEAR-HTML_QuickForm-3.2.5-r1 (21 Sep 2005)
 *PEAR-HTML_QuickForm-3.2.5 (21 Sep 2005)
