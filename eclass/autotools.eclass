@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.22 2005/10/08 11:18:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.23 2005/10/08 16:02:13 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -23,6 +23,8 @@ inherit eutils gnuconfig
 #   AT_M4DIR          - Additional director(y|ies) aclocal should search
 #   AT_GNUCONF_UPDATE - Should gnuconfig_update() be run (normally handled by
 #                       econf()) [yes|no]
+#   AM_OPTS           - Additional options to pass to automake during
+#                       eautoreconf call.
 
 # Functions:
 #
@@ -64,7 +66,7 @@ eautoreconf() {
 	_elibtoolize --copy --force
 	eautoconf
 	eautoheader
-	eautomake
+	eautomake ${AM_OPTS}
 
 	# Normally run by econf()
 	[[ ${AT_GNUCONF_UPDATE} == "yes" ]] && gnuconfig_update
