@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Services_Amazon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/ChangeLog,v 1.1 2005/10/08 12:56:33 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/ChangeLog,v 1.2 2005/10/08 16:18:04 cardoe Exp $
+
+  08 Oct 2005; Doug Goldstein <cardoe@gentoo.org>
+  PEAR-Services_Amazon-0.3.0.ebuild:
+  adding ~ppc
 
 *PEAR-Services_Amazon-0.3.0 (08 Oct 2005)
 

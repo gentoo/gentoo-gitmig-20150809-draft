@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Socket
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.31 2005/09/11 17:59:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.32 2005/10/08 16:09:43 cardoe Exp $
+
+  08 Oct 2005; Doug Goldstein <cardoe@gentoo.org>
+  PEAR-Net_Socket-1.0.6-r1.ebuild:
+  adding ~ppc
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org>
   PEAR-Net_Socket-1.0.6-r1.ebuild:

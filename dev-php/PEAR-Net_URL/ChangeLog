@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_URL
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.11 2005/09/11 18:00:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.12 2005/10/08 16:08:20 cardoe Exp $
+
+  08 Oct 2005; Doug Goldstein <cardoe@gentoo.org>
+  PEAR-Net_URL-1.0.14-r1.ebuild:
+  adding ~ppc
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Net_URL-1.0.14-r1.ebuild:
   Added ~sparc keyword.
