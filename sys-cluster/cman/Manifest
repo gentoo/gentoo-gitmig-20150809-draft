@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e5a91c7eca767f942563c48bcbf438c4 ChangeLog 1940
-MD5 8c4f5c9b01354f186f312f62a2456391 cman-1.00.00-r1.ebuild 848
+MD5 09ee3b337a4f519eb9c7b6109595edf9 ChangeLog 2184
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
+MD5 4b731a6399f2d37155d3d33e75c274e1 cman-1.00.00-r1.ebuild 805
+MD5 e5dabbf0927e58beb4d20744e4f47029 cman-1.01.00.ebuild 805
 MD5 b10ff12664efd9eae78d46c0e57b1ddf files/cman.conf 1009
 MD5 d7ed316a058c2c07f82ef3fdcfbb73e6 files/cman.rc 3960
 MD5 4f2d164091c3df995eb6cd31f2347a68 files/digest-cman-1.00.00-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHLrz5mJXAu5GbtIRAv21AJ93j9gXVVpVfP+WfMN0IXTcwVwKnwCcCSJ2
-YKeTtPKErs9yr7CiToj7KUU=
-=F3cy
------END PGP SIGNATURE-----
+MD5 9d2b25c988a934245d5ef85edcf067d8 files/digest-cman-1.01.00 68
