@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.20 2005/05/22 02:01:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.21 2005/10/08 12:50:35 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,10 +10,11 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux"
 
-DEPEND="selinux? ( sys-libs/libselinux )"
+DEPEND="virtual/libc
+	selinux? ( sys-libs/libselinux )"
 
 src_unpack () {
 	unpack ${A}
@@ -43,18 +44,17 @@ src_compile() {
 }
 
 src_install() {
-	dodir /lib /usr/include/pwdb
+	dodir /$(get_libdir) /usr/$(get_libdir) /usr/include/pwdb
 	make \
 		INCLUDED=${D}/usr/include/pwdb \
-		LIBDIR=${D}/lib \
+		LIBDIR=${D}/$(get_libdir) \
 		LDCONFIG="echo" \
 		install || die
 
 	preplib /
-	dodir /usr/lib
-	mv ${D}/lib/*.a ${D}/usr/lib
+	mv ${D}/$(get_libdir)/*.a ${D}/usr/$(get_libdir)
 
-	# See bug $4411 for more info
+	# See bug #4411 for more info
 	gen_usr_ldscript libpwdb.so
 
 	insinto /etc
