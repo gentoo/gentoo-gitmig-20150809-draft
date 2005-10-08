@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.395 2005/10/07 10:19:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.396 2005/10/08 00:33:59 eradicator Exp $
+
+  08 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.5-r2.ebuild:
+  Exclude 5005_all_enable-multilib-with-cross-compile.patch unless we're
+  building a mips64 crosscompiler as it breaks everything else.
 
   07 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.5-r2.ebuild, glibc-2.3.5.20050722.ebuild:
