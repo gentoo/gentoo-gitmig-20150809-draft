@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.5b.ebuild,v 1.1 2005/10/08 00:37:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.5b.ebuild,v 1.2 2005/10/08 21:16:34 swegener Exp $
 
 IUSE="alsa arts esd jack ladspa libsamplerate nls oss portaudio sdl sndfile sox"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 DEPEND=">=x11-libs/gtk+-2
 	sndfiile? ( >=media-libs/libsndfile-1.0.10 )
 	sdl? ( >=media-libs/libsdl-1.2.3 )
-	alsa? ( >=media-libs/alsa-lib )
+	alsa? ( media-libs/alsa-lib )
 	arts? ( >=kde-base/arts-3.4.1 )
 	portaudio? ( >=media-libs/portaudio-18 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98.0 )
