@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 a1af9e4d20bedb8a260165ff94fbd430 ChangeLog 1354
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 4bfed18dc1dcdb3004b74c2d30b183b1 jump-0.4.1-r1.ebuild 908
 MD5 8639e23fcf927f50dce51882c08403a1 files/digest-jump-0.4.1-r1 61
+MD5 1662192c2c2111c592aef48216441616 jump-0.4.1-r1.ebuild 919
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC2Ce9/rLF9B432nYRAuNPAJ9hZBcOtoqirrDbvxzmlfYu/E85OACfT5+k
-fj+n53iktX+06lOAzA25nf0=
-=ujGW
+iD8DBQFDR6l9QiJ/wx066S4RAvTXAJ4ys1136CnetUTSJIwtMyLLmzm/vwCgnGdG
+KAkmyLTduWCSAgwsB9MSjmw=
+=TAjx
 -----END PGP SIGNATURE-----

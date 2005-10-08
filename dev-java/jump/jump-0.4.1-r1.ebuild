@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.4.1-r1.ebuild,v 1.8 2005/07/15 21:16:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/jump-0.4.1-r1.ebuild,v 1.9 2005/10/08 11:11:14 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.2
 		sys-apps/sed
-		dev-java/ant"
+		dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.2"
 IUSE="doc"
 
