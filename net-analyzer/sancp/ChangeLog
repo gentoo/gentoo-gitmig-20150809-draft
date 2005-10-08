@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/sancp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.1 2005/10/08 13:52:29 strerror Exp $
+
+*sancp-1.6.1 (08 Oct 2005)
+
+  08 Oct 2005; Benjamin Smee <strerror@gentoo.org> +files/sancp.confd,
+  +files/sancp.rc1, +metadata.xml, +sancp-1.6.1.ebuild:
+  Initial import. Thanks to soulse for base ebuild
+

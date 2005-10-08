@@ -1,0 +1,13 @@
+# Config file for /etc/init.d/sancp
+
+# Interface to listen on
+IFACE="eth0"
+
+# Directory to log in 
+LOGDIR="/var/log/sancp"
+
+# Default config file
+CONF="/etc/sancp/sancp.conf"
+
+# You could add more options :)
+SANCP_OPTS="-d $LOGDIR/today -i $IFACE -c $CONF -u sancp -g sancp"
