@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xautomation
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.13 2005/08/23 21:39:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.14 2005/10/08 17:10:09 swegener Exp $
+
+  08 Oct 2005; Sven Wegener <swegener@gentoo.org> xautomation-0.93.ebuild,
+  xautomation-0.96.ebuild:
+  Added missing X dependency.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> xautomation-0.96.ebuild:
   stable on ia64
