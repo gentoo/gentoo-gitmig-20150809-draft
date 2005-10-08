@@ -1,0 +1,31 @@
+--- usr.orig/sbin/ofpath	2005-10-08 15:59:15.000000000 -0700
++++ usr/sbin/ofpath	2005-10-08 16:21:35.000000000 -0700
+@@ -473,14 +473,6 @@
+ {
+     case "$DEVNODE" in
+ 	sd*)
+-	    if ls -l /proc/device-tree | grep -q ^lr ; then
+-		true
+-	    else
+-		echo 1>&2 "$PRG: /proc/device-tree is broken.  Do not use BootX to boot, use yaboot."
+-		echo 1>&2 "$PRG: The yaboot HOWTO can be found here: http://www.alaska.net/~erbenson/doc"
+-		return 1
+-	    fi
+-
+ 	    ## use common scsiinfo function to get info we need.
+ 	    scsiinfo || return 1
+ 
+@@ -715,13 +707,6 @@
+ {
+     case "$DEVNODE" in
+ 	sd*)
+-	    if ls -l /proc/device-tree | grep -q ^lr ; then
+-		true
+-	    else
+-		echo 1>&2 "$PRG: /proc/device-tree is broken."
+-		return 1
+-	    fi
+-
+ 	    ## use common scsiinfo function to get info we need.
+ 	    scsiinfo || return 1
+ 
