@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r3.ebuild,v 1.6 2005/10/06 07:11:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.1 2005/10/08 21:43:02 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
-IUSE="jpeg png geos gif grass jasper netcdf hdf python postgres mysql \
+IUSE="jpeg png geos gif grass jasper netcdf hdf hdf5 python postgres mysql \
 	odbc sqlite ogdi fits gml doc debug"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
@@ -13,7 +13,7 @@ SRC_URI="http://dl.maptools.org/dl/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa ~ppc64"
 
@@ -27,6 +27,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	fits? ( sci-libs/cfitsio )
 	ogdi? ( sci-libs/ogdi )
 	gml? ( dev-libs/xerces-c )
+	hdf5? ( >=sci-libs/hdf5-1.6.4 )
 	|| (
 	    postgres? ( dev-db/postgresql )
 	    mysql? ( dev-db/mysql )
@@ -54,7 +55,7 @@ src_unpack() {
 		einfo	"Found HDF4 compiled with szip. Nice."
 	    else
 		ewarn 	"HDF4 (sci-libs/hdf) must be compiled with szip USE flag!"
-		einfo   "Emerge HDF with szip USE flag and then emerge GDAL."
+		einfo 	"Emerge HDF with szip USE flag and then emerge GDAL."
 		die 	"HDF4 not merged with szip use flag"
 	    fi
 	fi
@@ -69,7 +70,7 @@ src_compile() {
 	    $(use_with postgres pg) $(use_with fits cfitsio) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
 	    $(use_with sqlite) $(use_with jasper) $(use_with odbc) \
-	    $(use_with gml xerces)"
+	    $(use_with gml xerces) $(use_with hdf5)"
 
 	# It can't find this
 	if useq ogdi ; then
@@ -100,7 +101,7 @@ src_compile() {
 	fi
 
 	# Fix doc path just in case
-	sed -i -e "s:@exec_prefix@/doc:${D}usr/share/doc/${PF}/html:g" GDALmake.opt.in
+	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" GDALmake.opt.in
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
 	emake  || die "emake failed"
