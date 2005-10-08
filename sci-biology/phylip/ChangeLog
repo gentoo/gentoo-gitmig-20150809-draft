@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.9 2005/09/19 02:36:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.10 2005/10/08 21:41:02 j4rg0n Exp $
+
+  08 Oct 2005; Lina Pezzella <j4rg0n@gentoo.org> phylip-3.64.ebuild:
+  Stable ppc-macos, Bug 108335
 
   19 Sep 2005; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Maintainer changed from Stephen Diener (MIA) to Olivier Fisette.
