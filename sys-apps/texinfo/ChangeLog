@@ -1,33 +1,12 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.67 2005/10/02 00:30:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.68 2005/10/08 17:24:42 vapier Exp $
 
-  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on ia64, bug 106105.
+*texinfo-4.8-r2 (08 Oct 2005)
 
-  30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on sh wrt #106105.
-
-  30 Sep 2005; Simon Stelling <blubb@gentoo.org> texinfo-4.8-r1.ebuild:
-  stable on amd64 wrt bug 106105
-
-  30 Sep 2005; Markus Rothe <corsair@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on ppc64 (bug #106105)
-
-  29 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on sparc wrt #106105
-
-  29 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on mips for bug #106105.
-
-  29 Sep 2005; Andrej Kacian <ticho@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on x86, security bug #106105.
-
-  29 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on hppa, ppc.
-
-  29 Sep 2005; Fernando J. Pereda <ferdy@gentoo.org> texinfo-4.8-r1.ebuild:
-  Stable on alpha wrt bug #106105
+  08 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  files/texinfo-4.8-tempfile.patch, +texinfo-4.8-r2.ebuild:
+  Fix segfault in previous tempfile fix #108416.
 
 *texinfo-4.8-r1 (29 Sep 2005)
 
