@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 38cacd856f698aece3658972d125853a pptpclient-1.7.0.ebuild 1127
-MD5 91a738e62b5ea1adbef4717455f58c19 pptpclient-1.5.0-r1.ebuild 1074
-MD5 816f285f7a0594ba2812e7a6858977a4 pptpclient-1.5.0-r2.ebuild 1132
-MD5 5e3db889b82f4a324ef54bf5c2263fc3 ChangeLog 4817
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 2252d0cdc74bbfcc3948a0d188c3db08 pptpclient-1.6.0.ebuild 1126
-MD5 dad6352a156cbe6ce71b057f50af2eec files/options.pptp 359
-MD5 34862b5af00d851d068eb3e384093c3b files/pptp_fe.pl 8100
+MD5 a28522ad8d4357942ef0be83d8924d2d ChangeLog 4916
 MD5 2ae5d625d43dc891c4e445b5049bb947 files/digest-pptpclient-1.5.0-r1 124
 MD5 10a1583f3984e35a544b59b0d9595b2c files/digest-pptpclient-1.5.0-r2 135
 MD5 9dcb3e6b02bf8092a58d76b6d262e94b files/digest-pptpclient-1.6.0 129
 MD5 437731fcd809ae5dd2adfc4bd5746c09 files/digest-pptpclient-1.7.0 129
-MD5 bd60480b6ba90362342540fb9cbe7ebe files/xpptp_fe.pl 5620
 MD5 eeee374ec64214d7f9c26a21ce8f4a36 files/new-mppe/options.pptp 340
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDQtsDNSP4Vda7IdsRAnGqAJoDa2sjFTYqKrvevAaSNZ9In20YxwCeIEzT
-qC0vYRo9TWCeVITpfXPZ50U=
-=C1zF
------END PGP SIGNATURE-----
+MD5 dad6352a156cbe6ce71b057f50af2eec files/options.pptp 359
+MD5 34862b5af00d851d068eb3e384093c3b files/pptp_fe.pl 8100
+MD5 bd60480b6ba90362342540fb9cbe7ebe files/xpptp_fe.pl 5620
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 91a738e62b5ea1adbef4717455f58c19 pptpclient-1.5.0-r1.ebuild 1074
+MD5 816f285f7a0594ba2812e7a6858977a4 pptpclient-1.5.0-r2.ebuild 1132
+MD5 255121ff540667d10976ba5ff1f1b0a3 pptpclient-1.6.0.ebuild 1125
+MD5 38cacd856f698aece3658972d125853a pptpclient-1.7.0.ebuild 1127
