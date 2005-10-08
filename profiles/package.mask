@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4546 2005/10/08 12:18:37 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4547 2005/10/08 12:56:53 mkay Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -181,13 +181,6 @@ games-rpg/nwn-data
 # Stefan Knoblich <stkn@gentoo.org> (20 Sep 2005)
 # Asterisk-1.2.0_beta still masked, therefore mask this one too.
 >=net-misc/asterisk-oh323-0.7.3
-
-# Marcin Kryczek <mkay@gentoo.org> (20 Sep 2005)
-# There're definitly to much xmule's versions in tree
-# Masking for a while - if there'll be no problems
-# with that, i'll remove them in about a week
-=net-p2p/xmule-1.9*
-
 
 # Fernando J. Pereda <ferdy@gentoo.org> (20 Sep 2005)
 # Big bump, p.mask it for a while
