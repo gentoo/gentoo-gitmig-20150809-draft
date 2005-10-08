@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.7 2005/09/09 14:41:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.8 2005/10/08 06:01:28 joshuabaergen Exp $
+
+*util-macros-0.99.0_p20051007 (08 Oct 2005)
+
+  08 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +util-macros-0.99.0_p20051007.ebuild:
+  Add new snapshot to support libX11 snapshot.  Thanks to James Cloos in bug
+  #108300.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
