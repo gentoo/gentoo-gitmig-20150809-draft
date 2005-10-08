@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.1_pre20050905.ebuild,v 1.2 2005/09/06 19:43:15 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-0.99.1_pre20050905.ebuild,v 1.3 2005/10/08 06:04:34 joshuabaergen Exp $
 
 inherit versionator
 
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xcmiscproto
 	x11-proto/kbproto
-	x11-proto/inputproto"
+	x11-proto/inputproto
+	>=x11-misc/util-macros-0.99.0_p20051007"
 
 # Snapshots don't reside on fdo servers
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
