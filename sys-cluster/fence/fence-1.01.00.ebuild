@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.00.00-r1.ebuild,v 1.3 2005/10/08 15:05:56 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.01.00.ebuild,v 1.1 2005/10/08 15:05:56 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-cluster/ccs-1.00.00
-	>=sys-cluster/cman-headers-1.00.00"
+DEPEND=">=sys-cluster/ccs-1.01.00
+	>=sys-cluster/cman-headers-1.01.00"
 
 
 S="${WORKDIR}/${MY_P}/${PN}"
