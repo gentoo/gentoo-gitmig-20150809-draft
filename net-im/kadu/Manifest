@@ -1,23 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee90d60bdcf72bbc50b66198824af3b9 ChangeLog 4253
+MD5 6534a0103be54a1b9fe64c5915cfc09f ChangeLog 4368
 MD5 ef2265e113f71f0c35b266aa93a224cb kadu-0.3.8.ebuild 859
 MD5 c30b964070d0f19383b5da19f14b79dd kadu-0.4.0.ebuild 7598
-MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 MD5 90287df2c186fa948a71b3864453fcad kadu-0.4.1.ebuild 7501
+MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
+MD5 c3f7107c1a5212cf9677f6ea442c7e1e kadu-0.4.1-r1.ebuild 8345
 MD5 7259b6aef0a2d10501b79c455fe4b763 files/digest-kadu-0.3.8 63
 MD5 27947a323558dd9aaa82c5b164f398b8 files/digest-kadu-0.4.0 1699
+MD5 5ec29be748778e605f23b2efe84b78a1 files/digest-kadu-0.4.1 1699
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.3.9-nas-gentoo.diff 986
 MD5 a749836353c0aa03308822bdcbd08422 files/kadu-0.4.0_rc2-libgsm-amd64.patch 331
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.4.0_rc2-nas-gentoo.diff 986
 MD5 0a4dbebc3ca1bcf58ddf0af2e289a663 files/kadu-toolbar_toggle-gentoo.diff 5983
 MD5 e19ebd592e5b94e0b82b481d90861819 files/xosd-gentoo.patch 1148
-MD5 5ec29be748778e605f23b2efe84b78a1 files/digest-kadu-0.4.1 1699
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5Q3gZ/iYVBmujdURAk9QAKD0EagdLLd+euwJuvBx4y7uqvJ3jQCeOm0m
-pju320G8Se3pWjBJVLmnVQ8=
-=BqRA
------END PGP SIGNATURE-----
+MD5 d1111ddea6f815f253125a727a27a2a9 files/digest-kadu-0.4.1-r1 1853

@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.31 2005/07/25 14:04:14 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.32 2005/10/08 17:25:38 mkay Exp $
+
+*kadu-0.4.1-r1 (08 Oct 2005)
+
+  08 Oct 2005; <mkay@gentoo.org> +kadu-0.4.1-r1.ebuild:
+  Most modules in newer versions
 
   25 Jul 2005; <sekretarz@gentoo.org> kadu-0.4.1.ebuild:
   Stable on x86 due security bug #99583
