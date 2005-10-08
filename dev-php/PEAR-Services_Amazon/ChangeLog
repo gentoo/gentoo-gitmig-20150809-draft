@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Services_Amazon
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/ChangeLog,v 1.1 2005/10/08 12:56:33 sebastian Exp $
+
+*PEAR-Services_Amazon-0.3.0 (08 Oct 2005)
+
+  08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Services_Amazon-0.3.0.ebuild:
+  Initial ebuild, closes bug 108452.
+

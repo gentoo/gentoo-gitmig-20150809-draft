@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1bb99160f33b44b2be9f6ab62b3b2603 ChangeLog 423
+MD5 4def51e18f08a271f1ad0fbbd9d25a74 PEAR-Services_Amazon-0.3.0.ebuild 482
+MD5 ecc102884da8f30e4a02515e52ab42fe files/digest-PEAR-Services_Amazon-0.3.0 69
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDR8JfaGfFFLhbXWkRAvhqAJ9XQWjxv/xemb3R/xu3pxNdw77oKACePUk1
+cWcGhchfhbaAsVhw2PD9Bzo=
+=fweI
+-----END PGP SIGNATURE-----
