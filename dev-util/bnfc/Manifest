@@ -1,4 +1,16 @@
-MD5 0b5b5c836b0d01f2dcc76caddd3de7a5 ChangeLog 534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d4d405612753ab288bf4d4fc96483ca bnfc-2.1.2.ebuild 780
+MD5 7826116c2d89b800d64a0654fe71cc4b bnfc-2.2.ebuild 841
+MD5 deb101e267fcec564e679c561060a1fd ChangeLog 689
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 c39f54377c63e2af74a4ef4e99624313 files/digest-bnfc-2.1.2 59
+MD5 20fc3fd3d13153ffa6c3c4221cf80135 files/digest-bnfc-2.2 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDSAEUOKSBj1ObwosRAuwuAKCEIWIFG+HsKL6ryjr7uAhUhfLddgCffWuS
+ZTMEaHx8qh9Aa2y67UoY17g=
+=oi/o
+-----END PGP SIGNATURE-----
