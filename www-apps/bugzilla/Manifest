@@ -1,28 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 65b1431b95a28a2f12bf8395dc2080cd ChangeLog 9884
-MD5 246d31921cf90d0d24d5bad6f35e9a9b bugzilla-2.18.3.ebuild 1781
-MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 74eaf71a7164de951cab3356d3531932 bugzilla-2.18.4.ebuild 1830
 MD5 fa693aea9547860e70aab70ca3c6008f bugzilla-2.20.ebuild 1862
-MD5 df412a960ab7899d10f4fc42b8a3cc5f files/digest-bugzilla-2.18.3 68
-MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
+MD5 d2108d11ca7ee5d40f8f7f032a3816fe ChangeLog 9982
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 24f132ccd4b11bb49c26326fd0584f4c files/digest-bugzilla-2.20 66
-MD5 7b5e1b8ee2d4e49224f15287c5070b57 files/2.20/postinstall-en.txt 278
-MD5 899c42853fbf73268c49d3602eae77d2 files/2.20/reconfig 349
-MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
-MD5 42151252d49e42c9839f80c80dff9138 files/2.20/apache.htaccess 94
-MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
-MD5 06e21bd2fe59b4517ed05fb46c1bff9e files/2.18/postinstall-en.txt 148
-MD5 c1913bf27d5ee8cd7f4f88de0b88312a files/2.18/reconfig 348
+MD5 4a34a6ec468afb645b29aaddedeef49a files/digest-bugzilla-2.18.4 68
 MD5 b38d67b03726b84833bd8c5f632e4020 files/2.18/bugzilla.cron.tab 54
-MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
+MD5 06e21bd2fe59b4517ed05fb46c1bff9e files/2.18/postinstall-en.txt 148
 MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.18/bugzilla.cron.daily 115
+MD5 42151252d49e42c9839f80c80dff9138 files/2.18/apache.htaccess 94
+MD5 c1913bf27d5ee8cd7f4f88de0b88312a files/2.18/reconfig 348
+MD5 b38d67b03726b84833bd8c5f632e4020 files/2.20/bugzilla.cron.tab 54
+MD5 7b5e1b8ee2d4e49224f15287c5070b57 files/2.20/postinstall-en.txt 278
+MD5 0be5a588dc7fdfc9e4898a855bd32361 files/2.20/bugzilla.cron.daily 115
+MD5 42151252d49e42c9839f80c80dff9138 files/2.20/apache.htaccess 94
+MD5 899c42853fbf73268c49d3602eae77d2 files/2.20/reconfig 349
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDRvAHKRy60XGEcJIRAkX+AJ9ZXuOiAlGH1utpMufDI/uxvl+g4QCdFDBD
-1lb0A30eprRDG/kbG61kS0U=
-=S8FW
+iD8DBQFDR8LNEzitwsaoONoRAoLTAKDNK+eSKXgsl0qid0k+sBihFgClTwCguAYh
+oKeytWDptPS9mVHefCX1J1Q=
+=guDN
 -----END PGP SIGNATURE-----
