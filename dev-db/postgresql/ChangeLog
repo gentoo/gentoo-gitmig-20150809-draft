@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.239 2005/10/08 17:29:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.240 2005/10/08 23:06:23 nakano Exp $
+
+*postgresql-8.0.4 (09 Oct 2005)
+*postgresql-7.4.9 (09 Oct 2005)
+*postgresql-7.3.11 (09 Oct 2005)
+
+  09 Oct 2005; <masatomo@gentoo.org> +files/postgresql.init-7.3.11,
+  +files/postgresql-7.3.11-gentoo.patch, +files/pg_autovacuum.conf-7.4.9,
+  +files/pg_autovacuum.init-7.4.9, +files/postgresql.conf-7.4.9,
+  +files/postgresql.init-7.4.9, +files/postgresql-7.4.9-gentoo.patch,
+  +files/postgresql-7.4.9-hppa-testandset.patch,
+  +files/postgresql-7.4.9-vacuum-delay.patch,
+  +files/pg_autovacuum.conf-8.0.4, +files/pg_autovacuum.init-8.0.4,
+  +files/postgresql.conf-8.0.4, +files/postgresql.init-8.0.4,
+  +files/postgresql-8.0.4-gentoo.patch, +files/postgresql-8.0.4-sh.patch,
+  +postgresql-7.3.11.ebuild, +postgresql-7.4.9.ebuild,
+  +postgresql-8.0.4.ebuild:
+  version bump
 
   08 Oct 2005; Thomas Matthijs <axxo@gentoo.org> postgresql-7.3.6-r2.ebuild:
   use java-pkg_dojar not dojar
