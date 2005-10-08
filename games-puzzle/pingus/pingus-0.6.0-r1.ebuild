@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.14 2005/09/12 03:08:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.15 2005/10/08 13:56:52 blubb Exp $
 
 inherit eutils flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="http://pingus.seul.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="-amd64 x86"
 IUSE="nls opengl"
 
 DEPEND=">=media-libs/hermes-1.3.2-r2

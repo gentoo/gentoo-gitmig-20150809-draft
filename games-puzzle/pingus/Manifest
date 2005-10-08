@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 11714ca2a71b7f9db139a313e4a4b261 ChangeLog 2077
+MD5 c2c4be5c78e9deb96264e39ee9a2db5b ChangeLog 2198
 MD5 f40bbfa2eda5672febaa041b87f025b7 metadata.xml 1049
-MD5 76ae42b3fae7a42aa0c1abe800e3918d pingus-0.6.0-r1.ebuild 1350
+MD5 eb79e990fc764b8c3622e0a6611fea1d pingus-0.6.0-r1.ebuild 1349
 MD5 cf74eabf33bb46fc3ed87e741b182c10 files/digest-pingus-0.6.0-r1 66
 MD5 50abceb94694d0b53196bf840e5e2710 files/pingus-0.6.0-gcc.patch 4456
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJPFWCRZPokWLroQRAnZjAJ9SIK/jEa8vdXQ9Cme3y/rtKaeXnACdFRp3
-zcvhJnHrt/kTDrwga1TuTVQ=
-=nE9J
------END PGP SIGNATURE-----
