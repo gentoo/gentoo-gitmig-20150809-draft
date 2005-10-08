@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r5.ebuild,v 1.3 2005/10/08 15:43:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.14.13-r5.ebuild,v 1.4 2005/10/08 18:41:02 mr_bones_ Exp $
 
 IUSE="opengl dlloader"
 
@@ -26,7 +26,7 @@ PROVIDE="virtual/opengl"
 ATIBIN="${D}/opt/ati/bin"
 RESTRICT="nostrip multilib-pkg-force"
 
-MODULE_NAMES="fglrx(video:${WORKDIR}/lib/modules/fglrx/build_mod)
+MODULE_NAMES="fglrx(video:${WORKDIR}/lib/modules/fglrx/build_mod)"
 
 pkg_setup(){
 	#check kernel and sets up KV_OBJ
