@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20050929.ebuild,v 1.1 2005/09/29 17:49:37 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20051007.ebuild,v 1.1 2005/10/08 12:32:33 chrb Exp $
 
 inherit mount-boot
 
 DESCRIPTION="The Xen virtual machine monitor and Xend daemon"
 HOMEPAGE="http://xen.sourceforge.net"
-DATE="20050929"
+DATE="20051007"
 SRC_URI="mirror://gentoo/xen-unstable-${DATE}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc debug"
+IUSE="doc debug screen"
 
 DEPEND="sys-apps/iproute2
 	net-misc/bridge-utils
@@ -22,6 +22,10 @@ DEPEND="sys-apps/iproute2
 	doc? (
 		dev-tex/latex2html
 		media-gfx/transfig
+	)
+	screen? (
+		app-misc/screen
+		app-admin/logrotate
 	)"
 
 S="${WORKDIR}/xen-unstable-${DATE}"
@@ -65,27 +69,12 @@ src_install() {
 	newconfd ${FILESDIR}/xendomains-conf xendomains
 	newinitd ${FILESDIR}/xendomains-init xendomains
 
-	# install kernel source patches
-	dodir /usr/share/xen/patches
-	rm patches/linux-2.6.12/patch-2.6.12.5
-	cd patches
-	for x in *; do tar -jcvf ${D}/usr/share/xen/patches/${x}.tar.bz2 ${x}/; done
-	cd ..
+	# for upstream change tracking
+	dodoc ${S}/XEN-VERSION
 
-	# we need to do whatever mkbuildtree would've done for each platform
-	# linux-2.6: copy public include files, and xenstored.h
-	mkdir linux-2.6-xen-sparse/include/asm-xen/xen-public
-	rm xen/include/public/COPYING
-	cp -dpPR xen/include/public/* linux-2.6-xen-sparse/include/asm-xen/xen-public
-	cp -dpP tools/xenstore/xenstored.h linux-2.6-xen-sparse/include/asm-xen/linux-public
-	# fixme: insert code for other sparse trees here
-
-	# install xen kernel sparse trees
-	for x in *-xen-sparse; do
-	    if [ -e ${x}/mkbuildtree ]; then rm ${x}/mkbuildtree; fi
-	    tar -jcvf ${D}/usr/share/xen/${x}.tar.bz2 -C ${x} .
-	done
-
+	if use screen; then
+		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' ${D}/etc/init.d/xendomains
+	fi
 }
 
 pkg_postinst() {

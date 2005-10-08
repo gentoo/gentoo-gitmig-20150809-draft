@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.5 2005/09/29 17:49:37 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.6 2005/10/08 12:32:33 chrb Exp $
+
+*xen-3.0.0_pre20051007 (08 Oct 2005)
+
+  08 Oct 2005; Chris Bainbridge <chrb@gentoo.org> files/xend-init,
+  files/xendomains-conf, files/xendomains-init,
+  -xen-3.0.0_pre20050929.ebuild, +xen-3.0.0_pre20051007.ebuild:
+  -m Version bump xen-3, now uses udev rules. Add support for screen consoles
+  in xendomains. No longer use broken --halt to bring down domains.
 
 *xen-3.0.0_pre20050929 (29 Sep 2005)
 

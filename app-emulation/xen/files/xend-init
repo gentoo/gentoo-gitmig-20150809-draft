@@ -1,13 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xend-init,v 1.2 2005/09/20 08:57:06 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xend-init,v 1.3 2005/10/08 12:32:33 chrb Exp $
 
 opts="start stop status restart"
 
 depend() {
 	need net
-	before xendomain
+	before xendomain sshd ntpd nfs nfsmount rsyncd portmap
 }
 
 await_daemons_up() {
@@ -27,8 +27,8 @@ start() {
 
 stop() {
 	if [ "$(xm list | wc -l)" -gt 2 ]; then
-		ebegin "  Stopping all domain"
-		/usr/sbin/xm shutdown --all --halt --wait >/dev/null
+		ebegin "  Stopping all domains"
+		/usr/sbin/xm shutdown --all --wait >/dev/null
 		eend $?
 	fi
 

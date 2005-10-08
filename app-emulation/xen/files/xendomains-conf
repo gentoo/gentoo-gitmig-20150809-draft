@@ -1,1 +1,6 @@
+# Directory of domain configs to automatically boot
 AUTODIR=/etc/xen/auto
+
+# set to yes to run all auto 'xm create's in screen
+# with logging to /var/log/xen-consoles/
+SCREEN="no"

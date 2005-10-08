@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xendomains-init,v 1.2 2005/09/20 08:57:06 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/files/xendomains-init,v 1.3 2005/10/08 12:32:33 chrb Exp $
 
 opts="start stop status restart"
 
@@ -18,13 +18,25 @@ is_running() {
 }
 
 start() {
-	einfo "Starting ${AUTODIR} auto Xen domains"
+	einfo "Starting ${AUTODIR} Xen domains"
+	if [[ ${SCREEN} == "yes" ]]; then
+		screen -d -m -S xen -t xen-cbc0
+		screen -r xen -X zombie dr
+		logrotate -f /usr/share/xen/xen-consoles-logrotate
+		screen -r xen -X logfile /var/log/xen-consoles/%t
+		screen -r xen -X logfile flush 1
+		screen -r xen -X deflog on
+	fi
 	# Create all domains with config files in AUTODIR.
 	for dom in $(ls ${AUTODIR}/* 2>/dev/null); do
 		name=$(get_domname ${dom})
 		if ! is_running ${name} ; then
 			ebegin "  Starting domain ${name}"
-			/usr/sbin/xm create --quiet --defconfig ${dom}
+			if [[ ${SCREEN} == "yes" ]]; then
+				screen -r xen -X screen -t ${name} xm create ${dom} -c
+			else
+				xm create --quiet ${dom}
+			fi
 			eend $?
 		else
 			einfo "  Not Starting domain ${name} - allready running"
@@ -39,12 +51,15 @@ stop() {
 		name=$(get_domname ${dom})
 		if is_running ${name} ; then
 			ebegin "  Stopping domain ${name}"
-			/usr/sbin/xm shutdown --halt --wait ${name} >/dev/null
+				xm shutdown --wait ${name} >/dev/null
 			eend $?
 		else
 			einfo "  Not Stopping domain ${name} - not running"
 		fi
 	done
+	if [[ ${SCREEN} == "yes" ]]; then
+		screen -r xen -X quit
+	fi
 }
 
 status() {
