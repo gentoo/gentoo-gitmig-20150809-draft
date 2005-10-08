@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.5 2005/05/18 19:47:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.6 2005/10/08 14:23:23 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.5.1
+	>=dev-java/ant-core-1.5.1
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jdk-1.2"
 

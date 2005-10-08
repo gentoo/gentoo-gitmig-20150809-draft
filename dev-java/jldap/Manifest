@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 833ec96ab1ce7efb10c756e15302da67 ChangeLog 762
 MD5 746f11dbae37cf163aa34b5d858ea783 files/digest-jldap-20040730 78
 MD5 da154e6ce3ac0755232d707bca2dfe34 jldap-20040730.ebuild 1045
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDR9aDQiJ/wx066S4RAthXAJ9C6dtpcLjsrlfF1tl71ff2Ye9OMQCfYHg7
+QT/YHUlj8UDg7yPVbsbZmN4=
+=YIrJ
+-----END PGP SIGNATURE-----
