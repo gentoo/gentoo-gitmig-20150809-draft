@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.ebuild,v 1.5 2005/06/05 11:55:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.6.ebuild,v 1.1 2005/10/08 08:36:12 slarti Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -8,17 +8,16 @@ SRC_URI="http://www.gasmi.net/down/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86 ~ppc"
+IUSE="postgres"
+# Not adding a mysql USE flag. The package defaults to it, so we will too.
 DEPEND="virtual/libc
-	dev-db/mysql
 	sys-libs/zlib
-	>=dev-libs/openssl-0.9.6"
+	>=dev-libs/openssl-0.9.6
+	postgres? ( dev-db/postgresql )
+	!postgres? ( dev-db/mysql )"
 RDEPEND="${DEPEND}
 	>=mail-mta/postfix-2.1"
-
-MY_P="${P}.1"
-S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +26,13 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
+	# It's kind of weird. $(use_with postgres pgsql) won't work...
+	if use postgres ; then
+		myconf="${myconf} --with-pgsql"
+	fi
+
+	econf ${myconf} \
+	|| die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -40,20 +45,19 @@ src_install() {
 	dosed 's:^#USER=.*:USER=nobody:' /etc/gld.conf.sample
 	dosed 's:^#GROUP=.*:GROUP=nobody:' /etc/gld.conf.sample
 
-	dodoc HISTORY LICENSE README*
+	dodoc HISTORY README*
 
-	dodir /usr/share/doc/${PF}/sql
-	insinto /usr/share/doc/${PF}/sql
+	insinto /usr/share/${PN}/sql
 	doins table*
 
 	newinitd ${FILESDIR}/gld.rc gld
 }
 
 pkg_postinst() {
-	echo
+	einfo
 	einfo "Please read /usr/share/doc/${PF}/README.gz for details on how to setup"
 	einfo "gld."
-	echo
-	einfo "The tables.*sql files are located at /usr/share/doc/${PF}/sql."
-	echo
+	einfo
+	einfo "The sql files have been installed to /usr/share/${PN}/sql."
+	einfo
 }

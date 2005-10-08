@@ -1,25 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 974cd6869dfa50025d5a8f8097f29b3f ChangeLog 3867
-MD5 ee053a16e9eae0a66bd394e135dbe16b gld-1.5-r1.ebuild 1595
-MD5 fd1a136fe1866eb522142c76feafa47e gld-1.4.ebuild 1159
-MD5 9b90c83173d174bf703b7cd1962b298f gld-1.5.ebuild 1363
-MD5 c06c8a7fc6d211a8f437ee1f1023b230 gld-1.5-r2.ebuild 1592
-MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
-MD5 92553e000dd0a23d31042352b053cbdf gld-1.5.2.ebuild 1562
-MD5 916c55bdbe2dcf1a53507a6d0028158c files/gld-1.5.2-mxgrey-fix.patch 1696
-MD5 408be3de93fe18f0361ad976ab36589f files/digest-gld-1.4 55
-MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5 55
-MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5-r2 55
+MD5 eeddbde7d4f88edd9d2a51e7c0a9b972 ChangeLog 4123
 MD5 96d50f09283d0a87235b23ce0795499e files/Makefile.in 980
-MD5 4e2b779070d26c7675574fe2420541b8 files/gld.rc 544
 MD5 63658f0d53451dbb79e4330fd997bfab files/digest-gld-1.5.2 57
-MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5-r1 55
+MD5 f91281c6461e403a77e5351e89e398be files/digest-gld-1.6 55
+MD5 4e2b779070d26c7675574fe2420541b8 files/gld.rc 544
+MD5 92553e000dd0a23d31042352b053cbdf gld-1.5.2.ebuild 1562
+MD5 c82f4d42b6f4cb1d4a64e6d031b018d6 gld-1.6.ebuild 1554
+MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDCHdZCHk4+ZoBpvsRAgukAJ9xBrEFIH26v54pJ2WF0EcQ+mp+WgCeKZ9J
-Pc+6zcYVsnu4Jv0NmHR6M9o=
-=C0hJ
+iD8DBQFDR4USCHk4+ZoBpvsRAjtjAJ9xCMi4GdPDt6fz7tvB/BKjYnHK5wCeM3FD
+bNnNviQ5yoO7WLSioTRmOWY=
+=qQHN
 -----END PGP SIGNATURE-----
