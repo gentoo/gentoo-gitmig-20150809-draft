@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/vnc2swf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.11 2005/06/20 00:15:41 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.12 2005/10/08 22:03:13 hansmi Exp $
+
+  08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  vnc2swf-0.4.2-r1.ebuild:
+  Stable on ppc.
 
   20 Jun 2005; Jonathan Smith <smithj@gentoo.org> -vnc2swf-0.4.2.ebuild,
   vnc2swf-0.4.2-r1.ebuild:
