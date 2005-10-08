@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9b35934a6b8f57ba2e898c40998960cd ChangeLog 568
-MD5 d1081a46ac350e8b7c576f1fa77ea563 javatar-2.5.ebuild 1210
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 72a80c98ad1dd5e73ea4567f9faf1897 files/digest-javatar-2.5 63
 MD5 36413f6fec57b8e0f1983fd0b18786fd files/javatar-2.5-build.xml 1878
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2OSV/rLF9B432nYRAimpAJ0V/gCXQc8Yn/IQ+YGQTgAtyf4wFgCfVhRY
-fq9ziLIA6q2ETmNCfjF770w=
-=v5Q4
------END PGP SIGNATURE-----
+MD5 9950fa3949b0e223c2f0316e6f9a987a javatar-2.5.ebuild 1221
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
