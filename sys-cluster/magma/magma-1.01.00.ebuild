@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/magma-1.01.00.ebuild,v 1.1 2005/10/08 12:11:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/magma-1.01.00.ebuild,v 1.2 2005/10/08 14:09:56 xmerlin Exp $
 
 inherit eutils
 
-CLUSTER_VERSION="1.01.00"
+MY_P="cluster-${PV}"
 
 DESCRIPTION="Magma cluster interface"
 HOMEPAGE="http://sources.redhat.com/cluster/"
-SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/cluster-${CLUSTER_VERSION}.tar.gz"
+SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -18,12 +18,12 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN}"
+S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/magma-1.00.00-compile.patch || die
+	epatch ${FILESDIR}/${PN}-1.00.00-compile.patch || die
 }
 
 src_compile() {
