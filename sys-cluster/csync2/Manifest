@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cbc31c53ec5e282a4e6cfee79e360053 csync2-1.16.ebuild 1311
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
-MD5 8a5bbc04f06131b0938f9eb8a96c7b6c ChangeLog 593
-MD5 cbc31c53ec5e282a4e6cfee79e360053 csync2-1.22.ebuild 1311
+MD5 7e70388245655f4c18e13cb9b9b1b0d2 ChangeLog 665
+MD5 4d0196bfac8ddba4632e9d02b2e5f258 csync2-1.22.ebuild 1311
 MD5 8f6c0e3b7da5a8b1a5fd7730f6ae8bdd files/csync2.xinetd 388
 MD5 4f935e316a184e40ddf6dfd0f386c761 files/digest-csync2-1.16 62
 MD5 204c4e198fb5a256de4f61c6069a862b files/digest-csync2-1.22 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDR9sRgMUyd/cdjWsRAh2NAJ9biBR+3V6lwRmz9v/WqAZGN0TFrACfU7Hx
+trOIdz7d0DhIyDJ79TimTHU=
+=w3O4
+-----END PGP SIGNATURE-----
