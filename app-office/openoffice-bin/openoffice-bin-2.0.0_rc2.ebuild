@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc2.ebuild,v 1.3 2005/10/08 20:33:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc2.ebuild,v 1.4 2005/10/08 21:25:28 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -147,7 +147,7 @@ src_install () {
 	# Install wrapper script
 	newbin ${FILESDIR}/${MY_PV3}/ooo-wrapper2 ooffice2
 	sed -i -e s/PV/${PV}/g ${D}/usr/bin/ooffice2 || die
-	sed -i -e "s:lib/:$(get_libdir)/:" ${D}/usr/bin/ooffice2 || die
+	sed -i -e "s|INSTDIR|${INSTDIR}|g" ${D}/usr/bin/ooffice2 || die
 
 	# Component symlinks
 	for app in base calc draw fromtemplate impress math web writer; do

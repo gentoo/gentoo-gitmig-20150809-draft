@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.99 2005/10/08 20:50:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.100 2005/10/08 21:25:28 suka Exp $
+
+  08 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  files/2.0.0/ooo-wrapper2, openoffice-bin-2.0.0_rc2.ebuild:
+  clean up wrapper
 
   08 Oct 2005; Simon Stelling <blubb@gentoo.org>
   openoffice-bin-2.0.0_rc1.ebuild:
