@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc1.ebuild,v 1.2 2005/10/08 17:25:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc1.ebuild,v 1.3 2005/10/08 20:50:28 blubb Exp $
 
 inherit eutils fdo-mime rpm multilib
 
-ABI=x86
+has_multilib_profile && ABI=x86
 
 IUSE="gnome java kde"
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.98 2005/10/08 19:08:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.99 2005/10/08 20:50:28 blubb Exp $
+
+  08 Oct 2005; Simon Stelling <blubb@gentoo.org>
+  openoffice-bin-2.0.0_rc1.ebuild:
+  add forgotten has_multilib_profile in front of ABI=x86
 
 *openoffice-bin-2.0.0_rc2 (08 Oct 2005)
 
