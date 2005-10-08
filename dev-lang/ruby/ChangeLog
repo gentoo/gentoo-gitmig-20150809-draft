@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.164 2005/10/07 15:40:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.165 2005/10/08 15:02:57 grobian Exp $
+
+  08 Oct 2005; Fabian Groffen <grobian@gentoo.org> ruby-1.8.2.ebuild:
+  Dropping ppc-macos keyword to ~ppc-macos for bug #106996
 
   07 Oct 2005; Caleb Tennis <caleb@gentoo.org> -ruby-1.6.8-r12.ebuild:
   Hope I got the 1.6 deps cleared out now
