@@ -1,0 +1,19 @@
+--- linux-2.6-xen-sparse/mkbuildtree.orig	2005-10-07 19:04:20.000000000 +0100
++++ linux-2.6-xen-sparse/mkbuildtree	2005-10-07 21:19:15.000000000 +0100
+@@ -104,14 +104,14 @@
+ for i in `find . -type l`; do rm -f $i; done
+ 
+ # Create symlinks of files and directories which exist in the sparse source
+-relative_lndir ${RS}
++cp -dpPR ${RS}/* .
+ rm -f mkbuildtree
+ 
+ # Create links to the shared definitions of the Xen interfaces.
+ rm -rf ${AD}/include/asm-xen/xen-public
+ mkdir  ${AD}/include/asm-xen/xen-public
+ cd     ${AD}/include/asm-xen/xen-public
+-relative_lndir ../../../${RS}/../xen/include/public
++cp -dpPR ../../../${RS}/../xen/include/public/* .
+ 
+ # Arch-specific post-processing
+ cd ${AD}
