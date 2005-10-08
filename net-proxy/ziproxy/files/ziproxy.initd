@@ -1,18 +1,19 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/files/ziproxy.initd,v 1.1 2005/10/07 00:03:55 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/files/ziproxy.initd,v 1.2 2005/10/08 16:38:58 sbriesen Exp $
 
 depend() {
 	need net
 }
 
 start() {
-	local OPT
+	local OPT="" EXTRA=""
 	ebegin "Starting ziproxy"
 	[ -n "${CONFIG}" ] && OPT="-c ${CONFIG}" || OPT="-c /etc/ziproxy.conf"
 	[ -n "${ONLYFROM}" ] && OPT="${OPT} -f ${ONLYFROM}"
-	start-stop-daemon --quiet --start --background \
+	[ -n "${RUNAS}" ] && EXTRA="--chuid ${RUNAS}"
+	start-stop-daemon --quiet --start --background ${EXTRA} \
 		--make-pidfile --pidfile /var/run/ziproxy.pid \
 		--exec /usr/bin/netd -- ${OPT}
 	eend $?

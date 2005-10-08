@@ -9,3 +9,6 @@
 # if you want to set it.
 #
 #ONLYFROM="<IP.address or hostname>"
+
+# Change to this username/uid before starting the process.
+RUNAS="nobody:nogroup"

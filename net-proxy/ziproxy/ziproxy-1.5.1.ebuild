@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-1.5.1.ebuild,v 1.1 2005/10/07 00:03:55 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-1.5.1.ebuild,v 1.2 2005/10/08 16:38:58 sbriesen Exp $
 
 inherit eutils
 
@@ -22,10 +22,12 @@ DEPEND="dev-libs/confuse
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	# fix sample xinetd config filee
 	sed -i -e "s:/home/juro/bin/:/usr/bin/:g" \
 		-e "s:/home/juro/ziproxy/:/etc/:g" \
 		-e "s:\(disable.*=\).*:\1 yes:g" etc/xinetd.d/ziproxy
+
 	# fix sample config file
 	sed -i -e "s:/usr/local/bin/:/usr/bin/:g" \
 		-e "s:/var/ziproxy/:/var/lib/ziproxy/:g" \
@@ -33,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-shared-confuse --with-cfgfile=/etc/ziproxy.conf"
+	local myconf="--enable-shared-confuse --with-cfgfile=/etc/ziproxy.conf" # --enable-testprogs
 	use jpeg2k && myconf="${myconf} --with-jasper"  # use_with doesn't work
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
