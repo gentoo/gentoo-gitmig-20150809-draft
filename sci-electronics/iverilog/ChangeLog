@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.5 2005/02/18 20:17:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.6 2005/10/08 14:25:34 hansmi Exp $
+
+  08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> iverilog-0.8.1.ebuild:
+  Stable on ppc.
 
 *iverilog-0.8.1 (18 Feb 2005)
 
