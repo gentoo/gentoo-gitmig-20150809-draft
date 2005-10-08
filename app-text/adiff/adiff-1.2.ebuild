@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/adiff-1.2.ebuild,v 1.1 2005/08/15 16:45:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/adiff-1.2.ebuild,v 1.2 2005/10/08 10:33:28 grobian Exp $
 
 DESCRIPTION="wordwise diff"
 HOMEPAGE="http://gentoo.org/~agriffis/adiff/"
@@ -8,7 +8,7 @@ SRC_URI="${HOMEPAGE}/${P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc-macos ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
