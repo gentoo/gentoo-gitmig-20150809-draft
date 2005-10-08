@@ -1,0 +1,53 @@
+diff -Naru postgresql-7.3.11.org/src/interfaces/libpq/Makefile postgresql-7.3.11/src/interfaces/libpq/Makefile
+--- postgresql-7.3.11.org/src/interfaces/libpq/Makefile	2002-12-13 22:18:22.000000000 +0000
++++ postgresql-7.3.11/src/interfaces/libpq/Makefile	2005-05-16 04:12:52.000000000 +0100
+@@ -17,6 +17,7 @@
+ NAME= pq
+ SO_MAJOR_VERSION= 3
+ SO_MINOR_VERSION= 0
++NAME_STATIC_LIB= pq-$(SO_MAJOR_VERSION)
+ 
+ override CPPFLAGS := -I$(srcdir) $(CPPFLAGS) -DFRONTEND -DSYSCONFDIR='"$(sysconfdir)"'
+ 
+diff -Naru postgresql-7.3.11.org/src/interfaces/libpq/nls.mk postgresql-7.3.11/src/interfaces/libpq/nls.mk
+--- postgresql-7.3.11.org/src/interfaces/libpq/nls.mk	2002-09-22 21:57:21.000000000 +0100
++++ postgresql-7.3.11/src/interfaces/libpq/nls.mk	2005-05-16 04:13:08.000000000 +0100
+@@ -1,5 +1,5 @@
+ # $Header: /cvsroot/pgsql/src/interfaces/libpq/nls.mk,v 1.8 2002/09/22 20:57:21 petere Exp $
+-CATALOG_NAME	:= libpq
++CATALOG_NAME	:= libpq-3
+ AVAIL_LANGUAGES	:= cs de es fr pt_BR ru sv zh_CN zh_TW
+ GETTEXT_FILES	:= fe-auth.c fe-connect.c fe-exec.c fe-lobj.c fe-misc.c fe-secure.c
+ GETTEXT_TRIGGERS:= libpq_gettext
+diff -Naru postgresql-7.3.11.org/src/Makefile.shlib postgresql-7.3.11/src/Makefile.shlib
+--- postgresql-7.3.11.org/src/Makefile.shlib	2003-01-11 17:22:34.000000000 +0000
++++ postgresql-7.3.11/src/Makefile.shlib	2005-05-16 04:25:54.000000000 +0100
+@@ -221,7 +221,7 @@
+ 
+ all-lib: all-static-lib all-shared-lib
+ 
+-all-static-lib: lib$(NAME).a
++all-static-lib: lib$(NAME_STATIC_LIB).a
+ 
+ all-shared-lib: $(shlib)
+ 
+@@ -231,7 +231,7 @@
+ MK_NO_LORDER := true
+ endif
+ 
+-lib$(NAME).a: $(OBJS)
++lib$(NAME_STATIC_LIB).a: $(OBJS)
+ ifdef MK_NO_LORDER
+ 	$(LINK.static) $@ $^
+ else
+@@ -302,8 +302,8 @@
+ .PHONY: install-lib install-lib-static install-lib-shared
+ install-lib: install-lib-static install-lib-shared
+ 
+-install-lib-static: lib$(NAME).a
+-	$(INSTALL_STLIB) $< $(DESTDIR)$(libdir)/lib$(NAME).a
++install-lib-static: lib$(NAME_STATIC_LIB).a
++	$(INSTALL_STLIB) $< $(DESTDIR)$(libdir)/lib$(NAME_STATIC_LIB).a
+ 
+ ifeq ($(enable_shared), yes)
+ install-lib-shared: $(shlib)

@@ -1,0 +1,60 @@
+diff -Naru postgresql-7.4.9.org/src/interfaces/libpq/Makefile postgresql-7.4.9/src/interfaces/libpq/Makefile
+--- postgresql-7.4.9.org/src/interfaces/libpq/Makefile	2003-09-27 16:32:48.000000000 +0100
++++ postgresql-7.4.9/src/interfaces/libpq/Makefile	2005-05-16 04:37:16.000000000 +0100
+@@ -17,6 +17,7 @@
+ NAME= pq
+ SO_MAJOR_VERSION= 3
+ SO_MINOR_VERSION= 1
++NAME_STATIC_LIB= pq-$(SO_MAJOR_VERSION)
+ 
+ override CPPFLAGS := -I$(srcdir) $(CPPFLAGS) $(THREAD_CPPFLAGS) -DFRONTEND -DSYSCONFDIR='"$(sysconfdir)"'
+ 
+@@ -66,7 +67,7 @@
+ 	$(INSTALL_DATA) $(srcdir)/libpq-fe.h $(DESTDIR)$(includedir)
+ 	$(INSTALL_DATA) $(srcdir)/libpq-int.h $(DESTDIR)$(includedir_internal)
+ 	$(INSTALL_DATA) $(srcdir)/pqexpbuffer.h $(DESTDIR)$(includedir_internal)
+-	$(INSTALL_DATA) $(srcdir)/pg_service.conf.sample $(DESTDIR)$(datadir)/pg_service.conf.sample
++	$(INSTALL_DATA) $(srcdir)/pg_service.conf.sample $(DESTDIR)$(datadir)/pg_service-${SO_MAJOR_VERSION}.conf.sample
+ 
+ installdirs:
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir) $(DESTDIR)$(includedir_internal)
+diff -Naru postgresql-7.4.9.org/src/interfaces/libpq/nls.mk postgresql-7.4.9/src/interfaces/libpq/nls.mk
+--- postgresql-7.4.9.org/src/interfaces/libpq/nls.mk	2004-10-30 09:22:16.000000000 +0100
++++ postgresql-7.4.9/src/interfaces/libpq/nls.mk	2005-05-16 04:37:23.000000000 +0100
+@@ -1,5 +1,5 @@
+ # $Header: /cvsroot/pgsql/src/interfaces/libpq/nls.mk,v 1.13.2.1 2004/10/30 08:22:16 petere Exp $
+-CATALOG_NAME	:= libpq
++CATALOG_NAME	:= libpq-3
+ AVAIL_LANGUAGES	:= cs de es fr hr it nb pt_BR ru sl sv tr zh_CN zh_TW
+ GETTEXT_FILES	:= fe-auth.c fe-connect.c fe-exec.c fe-lobj.c fe-misc.c fe-secure.c
+ GETTEXT_TRIGGERS:= libpq_gettext pqInternalNotice:2
+diff -Naru postgresql-7.4.9.org/src/Makefile.shlib postgresql-7.4.9/src/Makefile.shlib
+--- postgresql-7.4.9.org/src/Makefile.shlib	2003-10-20 02:34:33.000000000 +0100
++++ postgresql-7.4.9/src/Makefile.shlib	2005-05-16 04:36:25.000000000 +0100
+@@ -224,7 +224,7 @@
+ 
+ all-lib: all-static-lib all-shared-lib
+ 
+-all-static-lib: lib$(NAME).a
++all-static-lib: lib$(NAME_STATIC_LIB).a
+ 
+ all-shared-lib: $(shlib)
+ 
+@@ -234,7 +234,7 @@
+ MK_NO_LORDER := true
+ endif
+ 
+-lib$(NAME).a: $(OBJS)
++lib$(NAME_STATIC_LIB).a: $(OBJS)
+ ifdef MK_NO_LORDER
+ 	$(LINK.static) $@ $^
+ else
+@@ -305,7 +305,7 @@
+ .PHONY: install-lib install-lib-static install-lib-shared
+ install-lib: install-lib-static install-lib-shared
+ 
+-install-lib-static: lib$(NAME).a
++install-lib-static: lib$(NAME_STATIC_LIB).a
+ 	$(INSTALL_STLIB) $< $(DESTDIR)$(libdir)/lib$(NAME).a
+ ifeq ($(PORTNAME), darwin)
+ 	cd $(DESTDIR)$(libdir) && \
