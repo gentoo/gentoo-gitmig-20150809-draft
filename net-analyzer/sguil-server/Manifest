@@ -1,0 +1,4 @@
+MD5 a404aa4a6f1740974826b26331d542dc sguil-server-0.5.3.ebuild 2738
+MD5 0be733a9afedd03d8a6769142ec3a389 files/sguild.confd 616
+MD5 fff5ca1be3a8e56fdd55ad9c95d75bc9 files/sguild.initd 1234
+MD5 9f4730ccda90d1234e864f039ed296e1 files/digest-sguil-server-0.5.3 69

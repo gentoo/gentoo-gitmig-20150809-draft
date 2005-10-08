@@ -1,0 +1,4 @@
+MD5 78e14d710be336f53152c5f9c06da4b7 sguil-sensor-0.5.3.ebuild 2341
+MD5 7dea1d8d6ed9dadaa3768e6ba138fe76 files/digest-sguil-sensor-0.5.3 69
+MD5 5c55306dbda0309d4c2602d9d85d544b files/log_packets.initd 2102
+MD5 eafeeec66dc5b155a58067d03baccc8b files/sensor_agent.initd 794
