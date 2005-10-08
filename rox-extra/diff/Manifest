@@ -1,0 +1,5 @@
+MD5 bf687a26902991b4a85b95c3626684cb diff-2.1.2.ebuild 789
+MD5 5394559a5f84d1ca65c57c3b2380195b metadata.xml 256
+MD5 bf47bf3910217ef6988b05f42f0e31ac ChangeLog 434
+MD5 571cef12b851be55f47b77c699dbe08f files/digest-diff-2.1.2 61
+MD5 53b0aa09c45f6f9ab96a386317a0df08 files/diff-2.1.2_unified-fix.patch 387
