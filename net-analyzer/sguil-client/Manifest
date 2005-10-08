@@ -1,4 +1,4 @@
-MD5 ed729bb6794bd1aac86830f241d8cee3 sguil-client-0.5.3.ebuild 1565
 MD5 b896d22c5a15f2f8240a6468f521080b ChangeLog 374
-MD5 5355b4f79a0130d075711f0a54840239 metadata.xml 223
 MD5 a06fcb621b02784f5cffe366572f7f7b files/digest-sguil-client-0.5.3 69
+MD5 5355b4f79a0130d075711f0a54840239 metadata.xml 223
+MD5 e3e1d8934e616cb60f9cfb1eabcc103e sguil-client-0.5.3.ebuild 1567

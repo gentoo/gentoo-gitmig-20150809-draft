@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.5.3.ebuild,v 1.1 2005/10/08 13:58:13 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.5.3.ebuild,v 1.2 2005/10/08 21:18:39 swegener Exp $
 
 inherit eutils
 
@@ -18,9 +18,9 @@ RDEPEND="
 	>=dev-lang/tk-8.3
 	>=dev-tcltk/itcl-3.2
 	>=dev-tcltk/tclx-8.3
-	>=dev-tcltk/iwidgets
+	dev-tcltk/iwidgets
 	dev-tcltk/tcllib
-	ssl? >=dev-tcltk/tls-1.4.1
+	ssl? ( >=dev-tcltk/tls-1.4.1 )
 	net-analyzer/ethereal"
 
 S=${WORKDIR}/sguil-${PV}
