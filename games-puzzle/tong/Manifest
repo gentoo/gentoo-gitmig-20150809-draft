@@ -1,5 +1,15 @@
-MD5 a0d30d91f3e71376007f398047acbcd4 ChangeLog 462
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 5cff73f8f902a4f74dd694010870831a tong-1.0.ebuild 1071
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5eaf73ee84fec05f35132dd7770802f2 ChangeLog 544
 MD5 81c48728d6b5f4e2585f79ec3fabeeeb files/1.0-makefile.patch 918
 MD5 35e834d1323b4f56d0eceb26e7711cde files/digest-tong-1.0 62
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 7df22959acf068da3014c9d201e200dd tong-1.0.ebuild 1079
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSDHWCHk4+ZoBpvsRAnKNAJ0ZZOQOHrEWgPQduSWZI3fTxb91EgCdF7b6
+Z6DvighKQx2P92PDppXjXDs=
+=Zui8
+-----END PGP SIGNATURE-----
