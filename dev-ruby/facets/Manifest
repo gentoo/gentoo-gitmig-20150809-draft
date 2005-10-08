@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea5d242058394cc4bb5cfd5b9e4783ef facets-0.7.2.ebuild 754
-MD5 4a2f8315ba3177b0da4cb79dfba3fb80 facets-0.6.3.ebuild 655
-MD5 1b9ef0431c96c7b73e2fc8bd66197577 ChangeLog 682
+MD5 a5844bae1892e6b43005bcbf98ff5d72 facets-0.7.2.ebuild 763
+MD5 62d5d2c9cb9e4df1b5afd78cec8c8bee facets-0.6.3.ebuild 525
+MD5 6678b74baba5c3625e88b1b62e90ed05 ChangeLog 801
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 40fb0b9f093ec0e46fa02ab0fb0de1c7 files/digest-facets-0.6.3 61
 MD5 8ab4cf53fb7b00799a0abf2d1de8737a files/digest-facets-0.7.2 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDAgHFehlBotwFZuQRAp0kAJ9XlcCLuKR5tu05l1WKPUONHI7+bgCgjPa0
-JNN4gmZWjRJco9mwQUIvVN0=
-=N/Em
+iD8DBQFDR8ZoZgSmR+etHJoRAlWxAJ91IKijSnCEdbefS/azDdnGS1bLMACglgZ2
+93smCBlGXu132qoLueg71p4=
+=ZR6T
 -----END PGP SIGNATURE-----
