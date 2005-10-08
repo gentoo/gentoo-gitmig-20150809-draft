@@ -7,6 +7,7 @@ app-arch/unzip-5.51
 app-arch/zip-2.3
 app-crypt/mit-krb5-1.4
 app-editors/emacs-21.2
+app-editors/nano-1.2.4
 app-editors/pico-0.0.1
 app-editors/vim-6.2
 app-misc/screen-4.0.2
