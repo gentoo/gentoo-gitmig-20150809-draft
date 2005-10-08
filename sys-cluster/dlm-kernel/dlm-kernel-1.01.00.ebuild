@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.00.00-r1.ebuild,v 1.4 2005/10/08 14:57:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.01.00.ebuild,v 1.1 2005/10/08 14:57:34 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -19,7 +19,7 @@ DEPEND="|| (
 		>=sys-kernel/vanilla-sources-2.6.12
 		>=sys-kernel/gentoo-sources-2.6.12
 	)
-	>=sys-cluster/cman-headers-1.00.00"
+	>=sys-cluster/cman-headers-1.01.00"
 
 RDEPEND=""
 
