@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.10 2005/10/04 18:54:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.4.1-r1.ebuild,v 1.11 2005/10/08 20:50:57 vapier Exp $
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Tools for ATM"
 HOMEPAGE="http://linux-atm.sourceforge.net/"
@@ -12,27 +12,25 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
-RESTRICT="autoconfig"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# Fix labels at end of compound statement errors
-	epatch ${FILESDIR}/${PV}-gcc34.patch
+	epatch "${FILESDIR}"/${PV}-gcc34.patch
 
 	# Fedora patch to fix gcc-4 compilation issues
 	# In particular, this corrects "invalid lvalue in assignment" errors
-	epatch ${FILESDIR}/${PV}-gcc4.patch
+	epatch "${FILESDIR}"/${PV}-gcc4.patch
 
 	# Fedora patch: include stdlib.h for strtol prototype in sigd/cfg_y.y
-	epatch ${FILESDIR}/${PV}-stdlib.patch
+	epatch "${FILESDIR}"/${PV}-stdlib.patch
 
-	# Fixed broken compilation on uclibc env (bug #61184)
-	epatch ${FILESDIR}/${PV}-uclibc.patch
+	elibtoolize
 }
 
 src_compile() {
@@ -43,7 +41,7 @@ src_compile() {
 
 src_install() {
 	make \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		man_prefix=/usr/share/man \
 		install || die "make install failed"
 
