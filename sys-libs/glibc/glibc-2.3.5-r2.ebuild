@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.8 2005/10/08 00:33:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.9 2005/10/08 04:19:36 pebenito Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -899,8 +899,20 @@ glibc_do_configure() {
 		die "invalid pthread option"
 	fi
 
-	if ! use build && use selinux; then
-		myconf="${myconf} --with-selinux"
+	# Since SELinux support is only required for nscd, only enable it if:
+	# 1. USE selinux
+	# 2. ! USE build
+	# 3. only for the primary ABI on multilib systems
+	if use selinux && ! use build; then
+		if use multilib || has_multilib_profile; then
+			if is_final_abi; then
+				myconf="${myconf} --with-selinux"
+			else
+				myconf="${myconf} --without-selinux"
+			fi
+		else
+			myconf="${myconf} --with-selinux"
+		fi
 	else
 		myconf="${myconf} --without-selinux"
 	fi
