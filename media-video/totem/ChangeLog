@@ -1,6 +1,15 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.81 2005/10/02 15:00:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.82 2005/10/08 12:26:19 leonardop Exp $
+
+*totem-1.2.0-r1 (08 Oct 2005)
+
+  08 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  -files/totem-1.1.5-idl.patch, -files/totem-1.1.5-nsi.patch,
+  +files/totem-1.2.0-gecko-sdk.patch, -totem-1.2.0.ebuild,
+  +totem-1.2.0-r1.ebuild:
+  Use gecko-sdk to build browser plugin. Dropped 'mozilla' and 'firefox' USE
+  flags and added 'nsplugin'. Updated dependencies.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> totem-1.0.4.ebuild:
   Mark 1.0.4 stable on ia64
