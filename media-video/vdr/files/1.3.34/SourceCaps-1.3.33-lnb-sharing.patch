@@ -1,0 +1,215 @@
+diff -ru vdr-1.3.34-lnbsharing/config.c vdr-1.3.34-lnbsharing-sourcecaps/config.c
+--- vdr-1.3.34-lnbsharing/config.c	2005-10-08 23:39:10.000000000 +0200
++++ vdr-1.3.34-lnbsharing-sourcecaps/config.c	2005-10-08 23:37:04.000000000 +0200
+@@ -15,6 +15,7 @@
+ #include "interface.h"
+ #include "plugin.h"
+ #include "recording.h"
++#include "sources.h"
+ 
+ // IMPORTANT NOTE: in the 'sscanf()' calls there is a blank after the '%d'
+ // format characters in order to allow any number of blanks after a numeric
+@@ -300,6 +301,8 @@
+   MultiSpeedMode = 0;
+   ShowReplayMode = 0;
+   ResumeID = 0;
++  memset(SourceCaps, 0, sizeof SourceCaps);
++  SourceCapsSet = false;
+   CurrentChannel = -1;
+   CurrentVolume = MAXVOLUME;
+   CurrentDolby = 0;
+@@ -407,6 +410,49 @@
+   return true;
+ }
+ 
++void cSetup::StoreSourceCaps(const char *Name)
++{
++  cSetupLine *l;
++  while ((l = Get(Name)) != NULL)
++        Del(l);
++
++  for (int i = 0; i < MAXDEVICES; i++) {
++      char buffer[MAXPARSEBUFFER]={0,}, *q = buffer;
++      int j = 0;
++      while (SourceCaps[i][j] && j < MAXSOURCECAPS) {
++            if (j==0) 
++               q += snprintf(buffer, sizeof(buffer), "%i ", i+1);
++            q += snprintf(q, sizeof(buffer) - (q-buffer), "%s ", *cSource::ToString(SourceCaps[i][j++]));
++      }
++      if (*buffer)
++         Store(Name, buffer, NULL, true);
++      }
++}
++
++bool cSetup::ParseSourceCaps(const char *Value)
++{
++  char *p;
++  int d = strtol(Value, &p, 10)-1, i = 0;
++  while (p < Value+strlen(Value)) {
++     	if (*p==0) return true;
++     	if (isblank(*p)) ++p;
++     	if (isalpha(*p)) {
++	   int source = cSource::FromString(p);
++	   if (source != cSource::stNone) {
++	      SourceCaps[d][i++] = source;
++	      SourceCapsSet = true;
++	      }
++	   else
++	      return false;
++	   while (!isblank(*p) && *p)
++		 ++p;
++	   if (i>MAXSOURCECAPS) 
++	      return false;
++     	   }
++        }
++  return true;
++}
++
+ bool cSetup::Parse(const char *Name, const char *Value)
+ {
+   if      (!strcasecmp(Name, "OSDLanguage"))         OSDLanguage        = atoi(Value);
+@@ -464,6 +510,7 @@
+   else if (!strcasecmp(Name, "MultiSpeedMode"))      MultiSpeedMode     = atoi(Value);
+   else if (!strcasecmp(Name, "ShowReplayMode"))      ShowReplayMode     = atoi(Value);
+   else if (!strcasecmp(Name, "ResumeID"))            ResumeID           = atoi(Value);
++  else if (!strcasecmp(Name, "SourceCaps"))          return ParseSourceCaps(Value);
+   else if (!strcasecmp(Name, "CurrentChannel"))      CurrentChannel     = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentVolume"))       CurrentVolume      = atoi(Value);
+   else if (!strcasecmp(Name, "CurrentDolby"))        CurrentDolby       = atoi(Value);
+@@ -545,6 +592,7 @@
+   Store("MultiSpeedMode",     MultiSpeedMode);
+   Store("ShowReplayMode",     ShowReplayMode);
+   Store("ResumeID",           ResumeID);
++  if (SourceCapsSet) StoreSourceCaps("SourceCaps");
+   Store("CurrentChannel",     CurrentChannel);
+   Store("CurrentVolume",      CurrentVolume);
+   Store("CurrentDolby",       CurrentDolby);
+diff -ru vdr-1.3.34-lnbsharing/config.h vdr-1.3.34-lnbsharing-sourcecaps/config.h
+--- vdr-1.3.34-lnbsharing/config.h	2005-10-08 23:39:10.000000000 +0200
++++ vdr-1.3.34-lnbsharing-sourcecaps/config.h	2005-10-08 23:37:04.000000000 +0200
+@@ -30,6 +30,9 @@
+ #define MINOSDHEIGHT 324
+ #define MAXOSDHEIGHT 567
+ 
++#define MAXDEVICES         16 // the maximum number of devices in the system
++#define MAXSOURCECAPS     128 // the maximum number of different sources per device
++
+ #define MaxFileName 256
+ #define MaxSkinName 16
+ #define MaxThemeName 16
+@@ -198,6 +201,8 @@
+   void StoreLanguages(const char *Name, int *Values);
+   bool ParseLanguages(const char *Value, int *Values);
+   bool Parse(const char *Name, const char *Value);
++  void StoreSourceCaps(const char *Name);
++  bool ParseSourceCaps(const char *Value);
+   cSetupLine *Get(const char *Name, const char *Plugin = NULL);
+   void Store(const char *Name, const char *Value, const char *Plugin = NULL, bool AllowMultiple = false);
+   void Store(const char *Name, int Value, const char *Plugin = NULL);
+@@ -252,6 +257,8 @@
+   int MultiSpeedMode;
+   int ShowReplayMode;
+   int ResumeID;
++  int SourceCaps[MAXDEVICES][MAXSOURCECAPS];
++  bool SourceCapsSet;
+   int CurrentChannel;
+   int CurrentVolume;
+   int CurrentDolby;
+diff -ru vdr-1.3.34-lnbsharing/device.c vdr-1.3.34-lnbsharing-sourcecaps/device.c
+--- vdr-1.3.34-lnbsharing/device.c	2005-10-08 23:39:10.000000000 +0200
++++ vdr-1.3.34-lnbsharing-sourcecaps/device.c	2005-10-08 23:37:04.000000000 +0200
+@@ -184,8 +184,10 @@
+   for (int i = 0; i < MAXRECEIVERS; i++)
+       receiver[i] = NULL;
+ 
+-  if (numDevices < MAXDEVICES)
++  if (numDevices < MAXDEVICES) {
+      device[numDevices++] = this;
++     SetSourceCaps(cardIndex);
++     }
+   else
+      esyslog("ERROR: too many devices!");
+ }
+@@ -440,6 +442,17 @@
+   return d;
+ }
+ 
++void cDevice::SetSourceCaps(int Index)
++{
++  for (int d = 0; d < numDevices; d++) {
++      if (Index < 0 || Index == device[d]->CardIndex()) {
++	 for (int i = 0; i < MAXSOURCECAPS; i++)
++	     device[d]->sourceCaps[i] = Setup.SourceCaps[device[d]->CardIndex()][i];
++	 }
++      }
++}
++
++
+ void cDevice::Shutdown(void)
+ {
+   primaryDevice = NULL;
+diff -ru vdr-1.3.34-lnbsharing/device.h vdr-1.3.34-lnbsharing-sourcecaps/device.h
+--- vdr-1.3.34-lnbsharing/device.h	2005-10-08 23:39:10.000000000 +0200
++++ vdr-1.3.34-lnbsharing-sourcecaps/device.h	2005-10-08 23:37:36.000000000 +0200
+@@ -23,7 +23,6 @@
+ #include "thread.h"
+ #include "tools.h"
+ 
+-#define MAXDEVICES         16 // the maximum number of devices in the system
+ #define MAXPIDHANDLES      64 // the maximum number of different PIDs per device
+ #define MAXRECEIVERS       16 // the maximum number of receivers per device
+ #define MAXVOLUME         255
+@@ -160,6 +159,8 @@
+          ///< would not be affected by switching to the requested channel.
+ //ML-Ende
+ 
++  static void SetSourceCaps(int Index = -1);
++         ///< Sets the SourceCaps of the given device according to the Setup data.
+   static void Shutdown(void);
+          ///< Closes down all devices.
+          ///< Must be called at the end of the program.
+@@ -167,6 +168,7 @@
+   static int nextCardIndex;
+   int cardIndex;
+ protected:
++  int sourceCaps[MAXSOURCECAPS];
+   cDevice(void);
+   virtual ~cDevice();
+   virtual bool Ready(void);
+diff -ru vdr-1.3.34-lnbsharing/dvbdevice.c vdr-1.3.34-lnbsharing-sourcecaps/dvbdevice.c
+--- vdr-1.3.34-lnbsharing/dvbdevice.c	2005-10-08 23:38:46.000000000 +0200
++++ vdr-1.3.34-lnbsharing-sourcecaps/dvbdevice.c	2005-10-08 23:37:04.000000000 +0200
+@@ -754,10 +754,17 @@
+ bool cDvbDevice::ProvidesSource(int Source) const
+ {
+   int type = Source & cSource::st_Mask;
+-  return type == cSource::stNone
+-      || type == cSource::stCable && frontendType == FE_QAM
+-      || type == cSource::stSat   && frontendType == FE_QPSK
+-      || type == cSource::stTerr  && frontendType == FE_OFDM;
++  if (Setup.SourceCapsSet && type == cSource::stSat && frontendType == FE_QPSK) {
++     for (int i = 0; i < MAXSOURCECAPS; i++)
++         if (sourceCaps[i] == Source)
++            return true;
++     return false;
++     }
++  else
++     return type == cSource::stNone				 
++    	 || type == cSource::stCable && frontendType == FE_QAM	 
++    	 || type == cSource::stSat   && frontendType == FE_QPSK  
++    	 || type == cSource::stTerr  && frontendType == FE_OFDM; 
+ }
+ 
+ bool cDvbDevice::ProvidesTransponder(const cChannel *Channel) const
+diff -ru vdr-1.3.34-lnbsharing/sources.c vdr-1.3.34-lnbsharing-sourcecaps/sources.c
+--- vdr-1.3.34-lnbsharing/sources.c	2005-10-08 23:38:46.000000000 +0200
++++ vdr-1.3.34-lnbsharing-sourcecaps/sources.c	2005-10-08 23:37:04.000000000 +0200
+@@ -68,7 +68,7 @@
+      int pos = 0;
+      bool dot = false;
+      bool neg = false;
+-     while (*++s) {
++     while (*++s && !isblank(*s)) {
+            switch (toupper(*s)) {
+              case '0' ... '9': pos *= 10;
+                                pos += *s - '0';
