@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.2.ebuild,v 1.4 2005/10/04 14:57:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.1-r4.ebuild,v 1.1 2005/10/08 14:45:53 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="6"
+PATCHLEVEL="5"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon ffmpeg xv xvmc nvidia i8x0
 samba dxr3 vidix png mng flac oss v4l xinerama vcd a52 mad"
@@ -49,7 +49,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
-	v4l? ( virtual/os-headers )
+	v4l? ( sys-kernel/linux-headers )
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
 	dev-util/pkgconfig
@@ -64,6 +64,7 @@ src_unpack() {
 	# That patch is highly experimental!
 	EPATCH_EXCLUDE="07_all_vidix64.patch 03_all_kernel26.patch"
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
+	epatch ${FILESDIR}/xine-lib-formatstring.patch
 
 	# Makefile.ams and configure.ac get patched, so we need to rerun
 	# autotools

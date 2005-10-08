@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r4.ebuild,v 1.5 2005/10/06 03:42:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r5.ebuild,v 1.1 2005/10/08 14:45:54 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -17,10 +17,10 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~ppc ppc64 sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts ffmpeg"
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts"
 RESTRICT="nostrip"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -56,7 +56,6 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050906 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
@@ -70,7 +69,7 @@ DEPEND="${RDEPEND}
 		virtual/x11 )
 		)
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
-	v4l? ( virtual/os-headers )
+	v4l? ( sys-kernel/linux-headers )
 	dev-util/pkgconfig
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
@@ -83,6 +82,7 @@ src_unpack() {
 	cd ${S}
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
+	epatch ${FILESDIR}/xine-lib-formatstring.patch
 
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
@@ -203,7 +203,6 @@ src_compile() {
 		$(use_enable vcd) --without-internal-vcdlibs \
 		--disable-polypaudio \
 		--disable-optimizations \
-		$(use_with ffmpeg external-ffmpeg) \
 		${myconf} \
 		--disable-dependency-tracking || die "econf failed"
 

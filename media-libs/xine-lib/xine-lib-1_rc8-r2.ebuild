@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.24 2005/07/01 21:02:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r2.ebuild,v 1.1 2005/10/08 14:45:54 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sparc x86 mips"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec pic"
 RESTRICT="nostrip"
 
@@ -60,6 +60,7 @@ src_unpack() {
 	use pic || EPATCH_EXCLUDE="${EPATCH_EXCLUDE} 04_all_pic.patch 05_x86_hardened-mmx.patch"
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
+	epatch ${FILESDIR}/xine-lib-formatstring.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure.ac

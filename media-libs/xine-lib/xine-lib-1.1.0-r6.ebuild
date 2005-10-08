@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r3.ebuild,v 1.4 2005/10/04 14:57:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r6.ebuild,v 1.1 2005/10/08 14:45:54 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic toolchain-funcs libtool autotools
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
-PATCHLEVEL="14"
+PATCHLEVEL="15"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -20,11 +20,21 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts"
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts ffmpeg"
 RESTRICT="nostrip"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
-	X? ( virtual/x11 )
+	X? ( || ( (
+			x11-libs/libXext
+			x11-libs/libX11 )
+		virtual/x11 ) )
+	xv? ( || ( x11-libs/libXv virtual/x11 ) )
+	xvmc? (
+		|| ( x11-libs/libXvMC virtual/x11 )
+		nvidia? ( media-video/nvidia-glx )
+		cle266? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
+		i8x0? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) ) )
+	xinerama? ( || ( x11-libs/libXinerama virtual/x11 ) )
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-1.2.7 )
@@ -46,10 +56,21 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050906 )
 	!=media-libs/xine-lib-0.9.13*"
 
 DEPEND="${RDEPEND}
-	v4l? ( virtual/os-headers )
+	X? ( || ( (
+			x11-base/xorg-server
+			x11-libs/libXt
+			x11-proto/xextproto
+			x11-proto/xproto
+			x11-proto/videoproto
+			x11-proto/xf86vidmodeproto )
+		virtual/x11 )
+		)
+	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	v4l? ( sys-kernel/linux-headers )
 	dev-util/pkgconfig
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
@@ -62,6 +83,7 @@ src_unpack() {
 	cd ${S}
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patches/
+	epatch ${FILESDIR}/xine-lib-formatstring.patch
 
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
@@ -71,6 +93,8 @@ src_unpack() {
 get_x11_dir() {
 	if [[ -f "${ROOT}/usr/$(get_libdir)/$1" ]]; then
 		echo "${ROOT}/usr/$(get_libdir)"
+	elif [[ -f "${ROOT}/usr/$(get_libdir)/xorg/$1" ]]; then
+		echo "${ROOT}/usr/$(get_libdir)/xorg"
 	elif [[ -f "${ROOT}/usr/X11R6/$(get_libdir)/$1" ]]; then
 		echo "${ROOT}/usr/X11R6/$(get_libdir)"
 	fi
@@ -180,6 +204,7 @@ src_compile() {
 		$(use_enable vcd) --without-internal-vcdlibs \
 		--disable-polypaudio \
 		--disable-optimizations \
+		$(use_with ffmpeg external-ffmpeg) \
 		${myconf} \
 		--disable-dependency-tracking || die "econf failed"
 
