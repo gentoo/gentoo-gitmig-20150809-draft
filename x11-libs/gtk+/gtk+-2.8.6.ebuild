@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.4.ebuild,v 1.1 2005/09/28 17:58:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6.ebuild,v 1.1 2005/10/08 18:22:41 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -110,6 +110,8 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
+
+	dodir ${GTK2_CONFDIR}
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
