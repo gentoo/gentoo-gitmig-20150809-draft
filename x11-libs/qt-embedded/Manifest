@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be7ec97d02e86ffb3f73db5731806575 ChangeLog 3125
-MD5 e94af6ef3445834da6a0b225f5753f75 files/digest-qt-embedded-3.3.4 77
-MD5 e94af6ef3445834da6a0b225f5753f75 files/digest-qt-embedded-3.3.4-r1 77
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
+MD5 d48575a05ee5d001b8a70fa7021b64da qt-embedded-3.3.5.ebuild 4882
+MD5 d08b9cdf43f9733ebee01d5083180e6b ChangeLog 3293
 MD5 b3ec2188177648aa41d5b57edab621dd qt-embedded-3.3.4-r1.ebuild 4754
 MD5 f6de46122209ededf739e42a4f0e834f qt-embedded-3.3.4.ebuild 4808
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0CQ7I1lqEGTUzyQRAoXNAJ9zfxhn0j+9BOIfEKBhMX+dfbGVrACggPGe
-9xitmp/E1rU98loDqmPjevI=
-=bYZB
------END PGP SIGNATURE-----
+MD5 185f23f0859a87e71c55f87ec852d1cc files/digest-qt-embedded-3.3.5 77
+MD5 e94af6ef3445834da6a0b225f5753f75 files/digest-qt-embedded-3.3.4-r1 77
+MD5 e94af6ef3445834da6a0b225f5753f75 files/digest-qt-embedded-3.3.4 77
