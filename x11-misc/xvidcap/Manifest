@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d6fcc6cbf02f5f84faaee56afb533d32 ChangeLog 1559
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 f3c064a1a8a77f28f9951a6de45025d5 xvidcap-1.1.3-r1.ebuild 1090
 MD5 33358554888df8808749a9c3cf28348b files/digest-xvidcap-1.1.3-r1 66
 MD5 588ec359065346a6c3413d4ce9427ec5 files/xvidcap-1.1.3-use-ffmpeg-0.4.9.patch 573
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 d35c261dbf404de5278b26c26c484d13 xvidcap-1.1.3-r1.ebuild 1092
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDR/0QI1lqEGTUzyQRApdNAKDHUF9hLRG7ICw2WC1t8fFW7JaqpwCeN6Jk
+XG8VdKqTsH6AVRklVjC60YU=
+=YlJ0
+-----END PGP SIGNATURE-----
