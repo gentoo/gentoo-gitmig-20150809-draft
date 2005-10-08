@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/cecutil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.19 2005/09/19 21:54:21 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.20 2005/10/08 00:15:29 ciaranm Exp $
+
+*cecutil-9 (08 Oct 2005)
+
+  08 Oct 2005; Ciaran McCreesh <ciaranm@gentoo.org> +cecutil-9.ebuild:
+  Version bump, bug #101782
 
   19 Sep 2005; Marcus D. Hanwell <cryos@gentoo.org> cecutil-7.ebuild:
   Stable on amd64.
