@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.7.ebuild,v 1.2 2005/10/06 13:33:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.7.ebuild,v 1.3 2005/10/08 21:55:44 hansmi Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.selenic.com/mercurial/release/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc x86"
+KEYWORDS="alpha amd64 ia64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
