@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 44011aac929360f02f786a44321d861a yafc-1.0.ebuild 801
-MD5 7012fddb5846c4722d1e2b8192f9bba1 yafc-1.1.ebuild 767
-MD5 4adb1fa2e18efe05fd82277f37fe4233 ChangeLog 1663
+MD5 cb0639360f76cdb1b9e09ce38487a323 ChangeLog 1783
 MD5 fc53f7d8ad4e855bf0cfa4139baae246 files/digest-yafc-1.0 61
 MD5 17a81b5b4a16ec89dfe5963c885f96ab files/digest-yafc-1.1 61
+MD5 ef6247904f7210ae0c5c607a8db1e828 files/digest-yafc-1.1.1 63
+MD5 44011aac929360f02f786a44321d861a yafc-1.0.ebuild 801
+MD5 309ab7053006856465b3b50ead884a24 yafc-1.1.1.ebuild 1325
+MD5 7012fddb5846c4722d1e2b8192f9bba1 yafc-1.1.ebuild 767
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDK1P+LLFUmVNQ7rkRAj3tAJ9LjJdUkNjOTyVstnRjN9c65WkuEACglbg4
-uhZBHWD0+dbBgHP0Vaec/s4=
-=vGjh
+iD8DBQFDSNjXmdTrptrqvGERAhf5AJ9JRHsX1C7vhEnGNg9UGfLvuEVJ4wCfRkr/
+BhAvcWWgdLo2/vfPhW9+KoE=
+=uagF
 -----END PGP SIGNATURE-----
