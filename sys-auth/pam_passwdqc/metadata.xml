@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>pam</herd>
+<maintainer>
+<email>pam-bugs@gentoo.org</email>
+</maintainer>
 <longdescription>
    Password strength checking for PAM aware password changing programs. This is an alternative to the default cracklib.
 </longdescription>
