@@ -19,6 +19,6 @@ MD5 09f0fab6d414a859d0f979bef3e10dfb files/gnome-vfs-2.8.3-reiser4_support.patch
 MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
 MD5 0e9c1c449c2abe63a64021dca1f01c1b gnome-vfs-2.10.0-r2.ebuild 2010
 MD5 cfa26c4d1fd63991f0fd2a0aff0c7f72 gnome-vfs-2.10.1-r1.ebuild 2013
-MD5 6c363042b426f717ba261cc63bd8c9c8 gnome-vfs-2.10.1-r2.ebuild 2209
+MD5 a9bea7c389b41b938670ede1446e0375 gnome-vfs-2.10.1-r2.ebuild 2207
 MD5 42dfd74003879d7682bfc6dd4a405cb9 gnome-vfs-2.12.1.1.ebuild 2164
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158

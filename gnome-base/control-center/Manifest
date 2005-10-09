@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1a2a2a9b4a3cc4c958f919c1c98a562e ChangeLog 17594
 MD5 d4f0febb27460c43fb258412acde17b8 control-center-1.4.0.5-r1.ebuild 1333
 MD5 63d40166766fb5bc828bb2bad93e6422 control-center-2.10.0.ebuild 1905
 MD5 5af1d1aad2b9b7fef198abb27b604c35 control-center-2.10.1-r1.ebuild 2036
-MD5 057a9b63a1fffc8535af779891248213 control-center-2.10.2.ebuild 1987
+MD5 1aae5db8d4986decdb009437e893b1b5 control-center-2.10.2.ebuild 1985
 MD5 3cab1be20dfc1f79ecb30aec964cd27f control-center-2.12.1.ebuild 2265
 MD5 dbc915ad73576e8f0ae8a948e52fb621 files/control-center-1.4.0.5-cflags.patch 744
 MD5 f14d2fe3d15320580a2ab5715e6e2d94 files/control-center-2.10.1-pathfix.patch 6670
@@ -16,3 +19,10 @@ MD5 2f0867c07305e05e49c57051e20dc068 files/digest-control-center-2.10.1-r1 75
 MD5 cd6f25b991e95ef9f518b4c499f2e2f7 files/digest-control-center-2.10.2 75
 MD5 ce951b06688a38662ed2c0e5e8d0d1bc files/digest-control-center-2.12.1 75
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSL5TgIKl8Uu19MoRAvoqAJ47+ubH6IJ0t7xME3X/wj/8isLS2QCdFnKH
+fTjHLHsTQOxzPKtVFtLttXM=
+=GzcM
+-----END PGP SIGNATURE-----
