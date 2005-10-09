@@ -13,6 +13,10 @@
 		La categoría dev-tex contiene librerias y herramientas útiles para
 		trabajar con TeX y ambientes basados en TeX como LaTeX.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-texカテゴリーにはTeXやLaTeXの様なTeXを基礎にした環境下での作業に
+		便利なライブラリーとツールが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-tex categorie bevat bibliotheken en hulpmiddelen voor het werken met
 		TeX en op TeX gebaseerde omgevingen zoals LaTeX.
