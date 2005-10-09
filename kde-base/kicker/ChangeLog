@@ -1,10 +1,6 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.18 2005/10/09 17:57:09 betelgeuse Exp $
-
-  09 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
-  kicker-3.5_beta1.ebuild:
-  Added ~x86 keyword.
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.19 2005/10/09 17:58:33 betelgeuse Exp $
 
   09 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
   kicker-3.5_beta1.ebuild:

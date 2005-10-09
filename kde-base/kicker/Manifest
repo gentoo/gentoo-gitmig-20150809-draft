@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 027d0d2af3cf277f96cbf7ea91ffc62a ChangeLog 2762
+MD5 2e1643b0f5a751ac2628d6098091aeb4 ChangeLog 2659
 MD5 07e3f3f7982d29e2317f32f209e06573 files/applets-configure.in.in.diff 606
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kicker-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kicker-3.4.2 287
@@ -13,7 +13,7 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSVokQiJ/wx066S4RAt+sAJ9ftPlMB4IsRclC/8SqYwG3+pVU6wCdF6KH
-6rSLzKeW2qh4Mgqtav13TYE=
-=AhZ1
+iD8DBQFDSVp7QiJ/wx066S4RAkQ7AJwJMxPSvFExl61XZGkPEzVUPTIAHgCePXvT
+epkbj96yqICAQJqevQLJPkY=
+=6I0r
 -----END PGP SIGNATURE-----
