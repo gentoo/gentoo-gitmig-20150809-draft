@@ -16,7 +16,7 @@ MD5 c697aa743be2a6d8eb675cc5e02877e3 files/digest-iproute2-2.6.11.20050330 74
 MD5 c697aa743be2a6d8eb675cc5e02877e3 files/digest-iproute2-2.6.11.20050330-r1 74
 MD5 efc13e1a9a4a7bd080305d540ff5d48d files/digest-iproute2-2.6.7.20040608-r1 75
 MD5 6076b8af87231defd7a1c2db9473c299 files/iproute2-2.6.11.20050310-dsmark-qdisc.patch 1354
-MD5 b98e894fb240a70345248f67b6b8caff files/iproute2-2.6.11.20050330-parallel-build.patch 685
+MD5 fc446e7f6706fb42a81ccb1f6d3f7e92 files/iproute2-2.6.11.20050330-parallel-build.patch 698
 MD5 6cfe7abf202c01359e341709237fc2df files/iproute2-2.6.11.20050330-stack.patch 306
 MD5 6af5cf770337ca0eaad9f75b1c2555bb files/iproute2-2.6.11.20050330-tc-check-qdisc-features.patch 769
 MD5 f2f62bc9b7aa8ad751e47fa11a952976 files/iproute2-2.6.11.20050330-wrr.patch 13574
@@ -31,7 +31,7 @@ MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRcLKgIKl8Uu19MoRAliNAJ43TYCABQQ4bTjWPdzW/3MlAZaBEQCeK7Bg
-aoz6X9zFjSuq2SsJ61mZnEw=
-=ei0F
+iD8DBQFDSMESgIKl8Uu19MoRAhKMAJ4p77zBE0GF91m/Zj9gfCLZ4Y1n5gCfZRch
+tRKf2N5uNx3bn2B6K3PQm0c=
+=wru7
 -----END PGP SIGNATURE-----

@@ -17,7 +17,7 @@
  all: $(DISTGEN) $(DISTDATA)
 +
 +$(DISTGEN):
-+	$(HOSTCC) -O1 -o $@ $@.c -lm
++	$(HOSTCC) -I../include -O1 -o $@ $@.c -lm
 +
 +%.dist: %
 +	./$* > $@
