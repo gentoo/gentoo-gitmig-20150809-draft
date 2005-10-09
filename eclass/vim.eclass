@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.123 2005/09/28 19:35:57 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.124 2005/10/09 18:08:50 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -43,7 +43,11 @@ fi
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test pkg_postinst pkg_postrm
 
-IUSE="selinux nls acl"
+if version_is_at_least "6.4_beta" ; then
+	IUSE="nls acl"
+else
+	IUSE="selinux nls acl"
+fi
 
 if version_is_at_least "6.3.086" ; then
 #	DEPEND="${DEPEND} nls? ( elibc_uclib? ( dev-libs/libiconv ) )"
@@ -64,7 +68,6 @@ else
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )
-		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )
 		ruby?    ( virtual/ruby )"
 	RDEPEND="${RDEPEND}
@@ -72,9 +75,13 @@ else
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )
-		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )
 		ruby?    ( virtual/ruby )"
+
+	if ! version_is_at_least "6.4_beta" ; then
+		DEPEND="${DEPEND} selinux? ( sys-libs/libselinux )"
+		RDEPEND="${RDEPEND} selinux? ( sys-libs/libselinux )"
+	fi
 
 	if [[ "${MY_PN}" == "vim" ]] ; then
 		IUSE="${IUSE} vim-with-x minimal"
@@ -469,8 +476,12 @@ vim_src_compile() {
 			|| myconf="${myconf} --with-tlib=termcap"
 	fi
 
-	use selinux \
-		|| myconf="${myconf} --disable-selinux"
+	if version_is_at_least "6.4_beta" ; then
+		myconf="${myconf} --disable-selinux"
+	else
+		use selinux \
+			|| myconf="${myconf} --disable-selinux"
+	fi
 
 	econf ${myconf} || die "vim configure failed"
 
