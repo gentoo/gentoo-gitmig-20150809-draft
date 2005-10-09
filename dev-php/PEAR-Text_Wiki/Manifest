@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac425e15a57e24905d97fa09c54452e3 ChangeLog 2744
 MD5 f3883c76c7beb50a422914d3e813f879 PEAR-Text_Wiki-0.20.1.ebuild 429
 MD5 986aecc412c26bb42288439a4214d894 PEAR-Text_Wiki-1.0.0.ebuild 446
@@ -6,3 +9,10 @@ MD5 7b7f6dc88fd079649e1bcaa41f7693a2 files/digest-PEAR-Text_Wiki-0.20.1 64
 MD5 d551cbb11cb236aae2b9d193b519dfa3 files/digest-PEAR-Text_Wiki-1.0.0 63
 MD5 5e5a50e2c850df1310ec2a7c04419b0d files/digest-PEAR-Text_Wiki-1.0.1 63
 MD5 4a29b43e532479b4704760dbb2aebae7 metadata.xml 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSOoNaGfFFLhbXWkRAgTYAJ0ZNlIBtXKKc7sPHpmqXp5KbkxelgCfRFSX
+G1AWuXHNsMc40OA/pcnVIRM=
+=xmUV
+-----END PGP SIGNATURE-----
