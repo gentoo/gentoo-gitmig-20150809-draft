@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.53 2005/09/17 20:12:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.54 2005/10/09 23:59:41 cryos Exp $
+
+  09 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> gmp-4.1.4-r1.ebuild:
+  Add doc USE flag, thanks to Lucas Chiesa <lucas.chiesa@gmail.com> for the
+  patch, closes bug 80031.
 
 *gmp-4.1.4-r1 (14 Aug 2005)
 

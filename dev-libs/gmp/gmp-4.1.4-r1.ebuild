@@ -1,17 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r1.ebuild,v 1.3 2005/09/17 03:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r1.ebuild,v 1.4 2005/10/09 23:59:41 cryos Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
-SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
+	doc? ( http://www.swox.se/${PN}/${PN}-man-${PV}.pdf )"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE=""
+IUSE="doc"
 
 RDEPEND=""
 DEPEND="sys-devel/libtool"
@@ -63,4 +64,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 	dodoc doc/configuration doc/isa_abi_headache
 	dohtml -r doc
+
+	use doc && cp ${DISTDIR}/gmp-man-${PV}.pdf ${D}/usr/share/doc/${PF}
 }
