@@ -13,6 +13,10 @@
 		La categoría dev-ada contiene librerias y utilidades referentes al
 		lenguaje de programación Ada.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-ada カテゴリーにはAdaプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-ada categorie bevat bibliotheken en hulpmiddelen voor het gebruik van
 		de Ada programmeertaal.
