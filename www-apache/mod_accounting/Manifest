@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af82fb3b8a7f4b427606958cbef4459a mod_accounting-0.5.ebuild 1343
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 738044f6451f2f6ad3f3472ceb8e5253 ChangeLog 622
 MD5 2148fe5dd97e63ce3c4a296288af45a4 files/10_mod_accounting.conf 407
+MD5 a6c50c342450f5c0cafb1d2bc9311258 files/digest-mod_accounting-0.5 68
 MD5 58a216778f044115abfdcd1408919298 files/mod_accounting-0.5-all.patch 620
 MD5 86999fe7b606ac09d34b12fc842be634 files/mod_accounting-0.5-fix.patch 505
 MD5 388d4a516dce21a765d9d130ed361fe3 files/mod_accounting-0.5-mysql.patch 598
 MD5 98aaf9bc748c614b9c74ddc522d3b8e1 files/mod_accounting-0.5-pgsql.patch 605
-MD5 a6c50c342450f5c0cafb1d2bc9311258 files/digest-mod_accounting-0.5 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZ369mPFBzbX68WERAtyBAJ48w9Ku5MKX3shYXXN+hPDCvZejsgCfcxWn
-kwbd0Z9zm0qMSXa/miOrLkQ=
-=JNX7
------END PGP SIGNATURE-----
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 af82fb3b8a7f4b427606958cbef4459a mod_accounting-0.5.ebuild 1343

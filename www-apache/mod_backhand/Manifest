@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 87d62c0550560ca8de24661f7668844d ChangeLog 472
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 f7d6b5173bbd969746b2ae4d6078ae8e mod_backhand-1.2.2.ebuild 934
 MD5 5fc66f2f78adbb38c7f4426bb712261d files/05_mod_backhand.conf 888
 MD5 c40657b468e58bcb43580560a6098918 files/digest-mod_backhand-1.2.2 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHz7smPFBzbX68WERAsq8AJ9IRmaKF75d7K2iX1Ll0oQEl61SeQCfRDaF
-+qk4GrpogyUjPGFC8EeR878=
-=pA0J
------END PGP SIGNATURE-----
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 f7d6b5173bbd969746b2ae4d6078ae8e mod_backhand-1.2.2.ebuild 934

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0a820598061b8025807efce68b34c942 ChangeLog 527
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 7b8c6f46ea7a3360e90f9341b19df808 mod_proxy_html-2.4.3.ebuild 704
 MD5 277e79d3f0824115ab0bebc80eaca046 files/27_mod_proxy_html.conf 245
 MD5 118f52447a3a4a4c177622f197bbd33c files/digest-mod_proxy_html-2.4.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZzVSmPFBzbX68WERArfeAJ9jb6x0mPdVreZ4YJMeu5eqHPTFVgCdEbcB
-DK7G7tP8qw8Ijhut0l5WWTM=
-=bdOi
------END PGP SIGNATURE-----
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 7b8c6f46ea7a3360e90f9341b19df808 mod_proxy_html-2.4.3.ebuild 704

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 48f533b4bd4884120335dab53ec3ff5b ChangeLog 650
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 9746971345c0497bae5d50931d05be1c mod_suphp-0.6.0.ebuild 2657
 MD5 8c9cc137769da71d444c2208209857a7 files/70_mod_suphp.conf 1647
-MD5 4c2c4f6d464975c72a932c9eef2e3461 files/suphp.conf 905
 MD5 350380d3dd8b4a29db78e1f336344688 files/digest-mod_suphp-0.6.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDPmHNmPFBzbX68WERAoQxAJ4vLjGR3dc43su06lRp0QeHeqHwVACfdJcz
-4JceoxLYrB78nrc9k1m8GnM=
-=bKZF
------END PGP SIGNATURE-----
+MD5 4c2c4f6d464975c72a932c9eef2e3461 files/suphp.conf 905
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 9746971345c0497bae5d50931d05be1c mod_suphp-0.6.0.ebuild 2657
