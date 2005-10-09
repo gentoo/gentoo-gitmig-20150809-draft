@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.57 2005/08/24 09:44:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.58 2005/10/09 21:50:38 flameeyes Exp $
+
+  09 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  pam-login-4.0.12.ebuild:
+  Call autoconf before elibtoolizing (and use eautoconf instead). Add missing
+  skey useflag. Added pam-bugs@gentoo.org as mail address for pam herd.
 
 *pam-login-4.0.12 (24 Aug 2005)
 

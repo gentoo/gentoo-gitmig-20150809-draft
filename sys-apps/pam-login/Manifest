@@ -1,36 +1,26 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
-MD5 a0b715d76af6c225aa029c1ca789037e pam-login-4.0.12.ebuild 3970
-MD5 b14a60034b1653ab8897c834b7b2d26d pam-login-4.0.11.1-r2.ebuild 3988
-MD5 cfef0ebe1a60cb042450d1e2df0ffea2 ChangeLog 8568
-MD5 15f16bbb5e752541cd8346d7aa5d5904 pam-login-3.17.ebuild 2874
-MD5 f6a4f4c2e8300f1db0e4daf8fc8999b6 pam-login-3.14.ebuild 2801
-MD5 7761083b62bdcb822f1b9533aab2e06c files/pam-login-3.11-lastlog-fix.patch 362
-MD5 804242385ef14139f4b46167396f26f8 files/pam-login-4.0.12-long-groupnames.patch 923
-MD5 e01e197ed3b6d2ec6ae83d23b33088b8 files/login.pamd-4.0 1019
-MD5 c87c0968ace90b32753b91f93ad7bab1 files/pam-login-4.0.11.1-uclibc-missing-l64a.patch 1269
-MD5 9375147f78a25196b654616c969af9a5 files/digest-pam-login-4.0.11.1-r2 69
-MD5 95f7b8980169e81352229bd548909ea7 files/pam-login-4.0.10-fix-configure.patch 579
-MD5 2e7603feaff187884dd9b1e66601f02b files/login.pamd 382
-MD5 636f233fa173a998195016c3808173d4 files/pam-login-4.0.5-skey.patch 395
-MD5 cec3e64e953a7f3f96a1e89d73b62899 files/digest-pam-login-4.0.12 67
-MD5 97fac4bd3167fadfc2abaeaa819ccbde files/pam_login-Werror-off-ppc64.patch 511
-MD5 44f064b586ea49c8e2dc1fca8b9e4599 files/pam-login-4.0.11.1-SUPATH.patch 1614
-MD5 128c7d12948df01d7348a7edede0c2fb files/pam-login-3.14-query_user_context.diff 635
-MD5 b52179dd78e6b6d207600184022114db files/pam-login-4.0.12-dots-in-usernames.patch 1466
-MD5 9470faa54b704ceebd949da53eed5ccc files/login.defs-4.0 6255
-MD5 0021ec2d8f5fc517f0e74f7233fc16c9 files/pam-login-3.11-gcc33.patch 527
-MD5 450a2289f2a383296ad9af005e46da74 files/pam-login-4.0.11.1-ngettext.patch 1038
-MD5 2fdbabc344539e9dfd4955c061596a27 files/pam-login-3.17-query_user_context.patch 423
-MD5 21df4caf263fa2ed75e574f9a067b72e files/login.defs 3229
+MD5 7774f0d58ec2257f660ebfa9b6dc12ad ChangeLog 8816
 MD5 bd631a67641c2ecb9f2da34226ca80a8 files/digest-pam-login-3.14 67
 MD5 e7f9dde204926c73a570b344556e4b1e files/digest-pam-login-3.17 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJO/7gIKl8Uu19MoRAu6bAJ9IITr8qtMck1/DLthlKNf3etxjJACfdtjJ
-iV68optvRk+rXs9hf9Azd/Q=
-=ZwDJ
------END PGP SIGNATURE-----
+MD5 9375147f78a25196b654616c969af9a5 files/digest-pam-login-4.0.11.1-r2 69
+MD5 cec3e64e953a7f3f96a1e89d73b62899 files/digest-pam-login-4.0.12 67
+MD5 21df4caf263fa2ed75e574f9a067b72e files/login.defs 3229
+MD5 9470faa54b704ceebd949da53eed5ccc files/login.defs-4.0 6255
+MD5 2e7603feaff187884dd9b1e66601f02b files/login.pamd 382
+MD5 e01e197ed3b6d2ec6ae83d23b33088b8 files/login.pamd-4.0 1019
+MD5 0021ec2d8f5fc517f0e74f7233fc16c9 files/pam-login-3.11-gcc33.patch 527
+MD5 7761083b62bdcb822f1b9533aab2e06c files/pam-login-3.11-lastlog-fix.patch 362
+MD5 128c7d12948df01d7348a7edede0c2fb files/pam-login-3.14-query_user_context.diff 635
+MD5 2fdbabc344539e9dfd4955c061596a27 files/pam-login-3.17-query_user_context.patch 423
+MD5 95f7b8980169e81352229bd548909ea7 files/pam-login-4.0.10-fix-configure.patch 579
+MD5 44f064b586ea49c8e2dc1fca8b9e4599 files/pam-login-4.0.11.1-SUPATH.patch 1614
+MD5 450a2289f2a383296ad9af005e46da74 files/pam-login-4.0.11.1-ngettext.patch 1038
+MD5 c87c0968ace90b32753b91f93ad7bab1 files/pam-login-4.0.11.1-uclibc-missing-l64a.patch 1269
+MD5 b52179dd78e6b6d207600184022114db files/pam-login-4.0.12-dots-in-usernames.patch 1466
+MD5 804242385ef14139f4b46167396f26f8 files/pam-login-4.0.12-long-groupnames.patch 923
+MD5 636f233fa173a998195016c3808173d4 files/pam-login-4.0.5-skey.patch 395
+MD5 97fac4bd3167fadfc2abaeaa819ccbde files/pam_login-Werror-off-ppc64.patch 511
+MD5 393d06cf4b76671f8e6ce72ac71bdad8 metadata.xml 218
+MD5 f6a4f4c2e8300f1db0e4daf8fc8999b6 pam-login-3.14.ebuild 2801
+MD5 15f16bbb5e752541cd8346d7aa5d5904 pam-login-3.17.ebuild 2874
+MD5 b14a60034b1653ab8897c834b7b2d26d pam-login-4.0.11.1-r2.ebuild 3988
+MD5 1d167d9cc88f389fa3ffcc157d27802d pam-login-4.0.12.ebuild 3989

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.12.ebuild,v 1.1 2005/08/24 09:44:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.12.ebuild,v 1.2 2005/10/09 21:50:38 flameeyes Exp $
 
-inherit eutils libtool flag-o-matic pam
+inherit eutils libtool flag-o-matic pam autotools
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="livecd nls selinux"
+IUSE="livecd nls selinux skey"
 
 DEPEND="virtual/libc
 	sys-libs/pam
@@ -44,11 +44,11 @@ src_unpack() {
 	# Some UCLIBC patches
 	epatch "${FILESDIR}"/${PN}-4.0.11.1-uclibc-missing-l64a.patch
 
+	# Needed by the UCLIBC patches
+	eautoconf
+
 	elibtoolize
 	epunt_cxx
-
-	# Needed by the UCLIBC patches
-	autoconf
 }
 
 src_compile() {
