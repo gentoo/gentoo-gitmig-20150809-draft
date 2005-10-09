@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 df5bd9ebc63c8de2b6b2053706a62e1e ChangeLog 2598
-MD5 84afa8818b47ccb7a0018227b65fdf88 ksmserver-3.5_beta1.ebuild 493
-MD5 cb7611310747d2b737afee894ff07b30 ksmserver-3.4.1.ebuild 515
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-ksmserver-3.5_beta1 69
+MD5 7fe49a2391e333a818e20e24633f3b11 ChangeLog 2704
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ksmserver-3.4.1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXFSj5H05b2HAEkRAllGAJ9bsmU1cGcNWoTpM/oCLd96iXEF1gCfcQQ9
-sVGzsh2bL4dIFKnLwHIJfmo=
-=t9Ao
------END PGP SIGNATURE-----
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-ksmserver-3.5_beta1 69
+MD5 cb7611310747d2b737afee894ff07b30 ksmserver-3.4.1.ebuild 515
+MD5 1c8c4646bff8599b7df74db98e92a882 ksmserver-3.5_beta1.ebuild 498
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

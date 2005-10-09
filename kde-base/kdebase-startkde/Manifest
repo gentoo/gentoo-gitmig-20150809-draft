@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7dd46f75dd81cf0755c2380b01a0887c ChangeLog 3987
-MD5 ed570c51f2bef278168dec6ab85a030c kdebase-startkde-3.5_beta1.ebuild 2175
-MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
-MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1284
-MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1284
+MD5 3f53d5d5286c86ae2430af4dedf795e2 ChangeLog 4100
+MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
+MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdebase-startkde-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kdebase-startkde-3.4.2 287
-MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
-MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdebase-startkde-3.5_beta1 69
-MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVfOj5H05b2HAEkRAi4HAKCj9N9wrTkLkniXVebYMR8zv2K3PgCfa6Do
-3hLyH+t5MoXgyEyJK+d6VGs=
-=myj/
------END PGP SIGNATURE-----
+MD5 acf270f97062baaaa0576f0b2d28b3ce files/kdebase-3.5-startkde-gentoo.patch 1283
+MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.1-gentoo.patch 1284
+MD5 acdc4850637dc2fafa8803790f771164 files/kdebase-startkde-3.4.2-gentoo.patch 1284
+MD5 770f131098299857b2d09195509f1137 kdebase-startkde-3.4.1.ebuild 2171
+MD5 baad6b9a465fb667a269413a29b22162 kdebase-startkde-3.4.2.ebuild 2190
+MD5 516433820289d8014c46b908f154efe8 kdebase-startkde-3.5_beta1.ebuild 2180
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
