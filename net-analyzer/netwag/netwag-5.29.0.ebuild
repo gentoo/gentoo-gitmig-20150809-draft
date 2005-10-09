@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.29.0.ebuild,v 1.2 2005/04/01 14:53:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.29.0.ebuild,v 1.3 2005/10/09 11:31:15 mkay Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -13,11 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="~net-analyzer/netwox-${PV}"
-
-RDEPEND="~net-analyzer/netwox-${PV}
-	>=dev-lang/tk-8
-	>=dev-lang/tcl-8"
+DEPEND="~net-analyzer/netwox-${PV}
+	>=dev-lang/tk-8"
 
 S="${WORKDIR}/${P}-src"
 
