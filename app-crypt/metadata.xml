@@ -5,13 +5,17 @@
 		The app-crypt category contains cryptographic (encryption, decryption,
 		steganography and signing) software.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-crypt enhält kryptographische (Ver- und Entschlüsselung,
+		Steganographie, Signierung) Software.
+	</longdescription>
 	<longdescription lang="es">
 		La categoría app-crypt contiene programas para criptografía
 		(cifrado, des-cifrado, estenografía y firmas). 
 	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie app-crypt enhält kryptographische (Ver- und Entschlüsselung,
-		Steganographie, Signierung) Software.
+	<longdescription lang="ja">
+		app-cryptカテゴリには暗号手法ソフトウェア
+		(暗証化と復号化と電子透かしと電子署名)が含まれます。
 	</longdescription>
 	<longdescription lang="nl">
 		De app-crypt categorie bevat cryptografische applicaties (encryptie,
