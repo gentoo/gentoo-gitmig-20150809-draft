@@ -11,6 +11,10 @@
 	<longdescription lang="es">
 		La categoría games-emulation contiene emuladores dejuegos de plataforma.
 	</longdescription>
+	<longdescription lang="ja">
+		games-emulationカテゴリーにはプラットフォームをエミュレートしたゲームが
+		含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De games-emulation categorie bevat emulators voor verschillende spelcomputers.
 	</longdescription>
