@@ -11,6 +11,9 @@
 		La categoría dev-tcltk contiene herramientas y librerías referentes
 		a Tcl y Tk.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-tcltkカテゴリーにはTclとTkに関連したライブラリーとツールが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-tcltk categorie bevat bibliotheken en hulpmiddelen voor het gebruik van de
 		programmeertalen Tcl en Tk.
