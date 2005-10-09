@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		x11-apps contain various non-core X11 related applications and utlities.
+	</longdescription>
+	<longdescription lang="ja">
+		x11-appsカテゴリには様々なコアなしX11に関連したアプリケーションと
+		ユーティリティが含まれます。
+	</longdescription>
+</catmetadata>
+
