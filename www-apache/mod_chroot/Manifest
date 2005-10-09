@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03424b60d589c5692bfc9b105bb20929 ChangeLog 888
 MD5 4dbbcfe9767bcadb9f56e7aa8e05b909 files/15_mod_chroot.conf 166
 MD5 2f8c0ff8330470476ab8fd9bd4a6c0aa files/digest-mod_chroot-0.2 65
@@ -5,3 +8,10 @@ MD5 e903162063cdf49630efcfb0bdcbf3da files/digest-mod_chroot-0.4 65
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 1826161ce8d8701fa996751c0c9a12c7 mod_chroot-0.2.ebuild 1344
 MD5 535c316313169548459104e633286721 mod_chroot-0.4.ebuild 771
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXlJKf2g/qXtneoRAsYYAJwL4Ka3YC2IzH8CxsCVXGaDVsfCIwCgtqvS
+jDWgv+ZpImTiLknAMHNsgrU=
+=5zUS
+-----END PGP SIGNATURE-----

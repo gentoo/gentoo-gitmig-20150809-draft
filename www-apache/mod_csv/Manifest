@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 43c08546608bb8471760488070b752bb ChangeLog 565
 MD5 e70a5819f69cf94f29424bd80cd04538 files/27_mod_csv.conf 616
 MD5 6fde7126aac9eafb0e6309fc05fd03cf files/digest-mod_csv-0.0.1 58
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 1302e5efa23ed9ba90b993a9c4aab818 mod_csv-0.0.1.ebuild 593
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXlJKf2g/qXtneoRAtR3AKCPWzEjLjH54+IX765+KP6nDbtprQCeJZNp
+8M1eGsHBU6UHKSzHxeW7qIA=
+=lbL9
+-----END PGP SIGNATURE-----

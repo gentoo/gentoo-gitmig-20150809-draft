@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 deb8fba42cab40f99c5ba0b2f78a26f9 ChangeLog 418
 MD5 9999e044bdd1adee4ce39939964a4d8a files/09_mod_depends.conf 374
 MD5 92e89de778bf603e20b8e53258d14b1f files/digest-mod_depends-0.7.0_p200508161 80
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 f6d17ad065d4b555a1750b6aae9d76b2 mod_depends-0.7.0_p200508161.ebuild 872
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXlJKf2g/qXtneoRAprMAKCf2ZILqU01JJ23k2WChsJpLYgEpwCfTBYZ
+6fXUQhCqYY6jTKzGsgS6pOc=
+=zhv8
+-----END PGP SIGNATURE-----
