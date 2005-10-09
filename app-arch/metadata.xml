@@ -5,9 +5,17 @@
 		The app-arch category contains tools for archiving, compressing and
 		uncompressing files or groups of files.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-arch enthält Werkzeuge für das Archivieren, Packen und
+		Entpacken von Dateien oder Gruppen von Dateien.
+	</longdescription>
 	<longdescription lang="es">
 		La categoría app-arch contiene herramientas para archivar, comprimir
 		y descomprimir archivos ó grupos de archivos.
+	</longdescription>
+	<longdescription lang="ja">
+		app-archカテゴリにはファイルをアーカイブする、圧縮する、解凍する
+		ツールが含まれます。
 	</longdescription>
 	<longdescription lang="nl">
 		The app-arch categorie bevat applicaties met betrekking tot het
@@ -16,10 +24,6 @@
 	<longdescription lang="vi">
 		Nhóm app-arch chứa những công cụ để lưu trữ, nén và
 		giải nén các tập tin hoặc nhóm các tập tin.
-	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie app-arch enthält Werkzeuge für das Archivieren, Packen und
-		Entpacken von Dateien oder Gruppen von Dateien.
 	</longdescription>
 </catmetadata>
 
