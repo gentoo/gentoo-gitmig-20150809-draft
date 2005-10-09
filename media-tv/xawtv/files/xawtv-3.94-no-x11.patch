@@ -1,0 +1,20 @@
+--- xawtv-3.94/common/midictrl.c.orig	2005-07-09 15:58:53.000000000 +0200
++++ xawtv-3.94/common/midictrl.c	2005-07-09 15:59:02.000000000 +0200
+@@ -6,7 +6,6 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <pthread.h>
+-#include <X11/Intrinsic.h>
+ 
+ #include "grab-ng.h"
+ #include "commands.h"
+--- xawtv-3.94/common/vbi-data.c.orig	2005-07-09 15:58:53.000000000 +0200
++++ xawtv-3.94/common/vbi-data.c	2005-07-09 15:59:02.000000000 +0200
+@@ -6,7 +6,6 @@
+ #include <assert.h>
+ #include <pthread.h>
+ 
+-#include <X11/Intrinsic.h>
+ 
+ #include "vbi-data.h"
+ #include "vbi-sim.h"

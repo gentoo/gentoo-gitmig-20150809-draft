@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.4 2005/08/16 19:16:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.94-r2.ebuild,v 1.5 2005/10/09 12:29:17 zzam Exp $
 
 inherit virtualx eutils font
 
@@ -11,7 +11,7 @@ MY_FONT=tv-fonts-1.0
 DESCRIPTION="TV application for the bttv driver"
 HOMEPAGE="http://bytesex.org/xawtv/"
 SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
-	http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2
+	X? ( http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2 )
 	mirror://gentoo/${MY_PATCH}"
 
 SLOT="0"
@@ -37,10 +37,17 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-devel/automake
 	sys-devel/libtool"
 
+pkg_setup() {
+	if use X; then
+		font_pkg_setup
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-allow-xlibs-in-normal-search-path.patch
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-no-x11.patch
 	cd ${S}
 	autoreconf || "reconf failed"
 }
@@ -63,8 +70,10 @@ src_compile() {
 
 	emake || die "Make failed"
 
-	cd ${WORKDIR}/${MY_FONT}
-	DISPLAY="" Xmake || die "tvfonts failed"
+	if use X; then
+		cd ${WORKDIR}/${MY_FONT}
+		DISPLAY="" Xmake || die "tvfonts failed"
+	fi
 }
 
 src_install() {
@@ -72,7 +81,7 @@ src_install() {
 	make install DESTDIR=${D} resdir=${D}/etc/X11 || die "make install failed"
 
 	dodoc COPYING Changes README* TODO ${FILESDIR}/webcamrc
-	dointo cgi-bin
+	insinto cgi-bin
 	dodoc scripts/webcam.cgi
 
 	use X || use xv || \
@@ -96,17 +105,21 @@ src_install() {
 	mv ${D}/usr/share/*.list ${D}/usr/share/${PN}
 	mv ${D}/usr/share/Index* ${D}/usr/share/${PN}
 
-	cd ${WORKDIR}/${MY_FONT}
-	insinto /usr/share/fonts/xawtv
-	doins *.gz fonts.alias
+	if use X; then
+		cd ${WORKDIR}/${MY_FONT}
+		insinto /usr/share/fonts/xawtv
+		doins *.gz fonts.alias
 
-	font_xfont_config
-	font_xft_config
+		font_xfont_config
+		font_xft_config
+	fi
 }
 
 pkg_postinst() {
-	ebegin "installing teletype fonts into /usr/share/fonts/xawtv"
-	cd /usr/share/fonts/xawtv
-	mkfontdir
-	eend
+	if use X; then
+		ebegin "installing teletype fonts into /usr/share/fonts/xawtv"
+		cd /usr/share/fonts/xawtv
+		mkfontdir
+		eend
+	fi
 }

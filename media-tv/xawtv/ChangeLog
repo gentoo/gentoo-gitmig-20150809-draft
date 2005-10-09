@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.27 2005/09/15 20:10:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.28 2005/10/09 12:29:17 zzam Exp $
+
+  09 Oct 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +files/xawtv-3.94-no-x11.patch, xawtv-3.94-r2.ebuild:
+  Enable compilation with USE=-X. See Bug #98797.
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> xawtv-3.94-r1.ebuild:
   Mark 3.94-r1 stable on alpha
