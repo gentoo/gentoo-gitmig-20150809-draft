@@ -12,6 +12,10 @@
 	<longdescription lang="es">
 		La categoría net-irc contiene clientes y servidores IRC.
 	</longdescription>
+	<longdescription lang="ja">
+		net-ircカテゴリーにはインターネット・リレー・チャットの
+		クライアントとサーバーが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De net-irc categorie bevat clients &amp; servers voor IRC (Internet Relay Chat).
 	</longdescription>
