@@ -13,6 +13,10 @@
 		La categoría app-office contiene paquetes de oficina 
 		(procesadores de palabras, hojas de balance, presentación).
 	</longdescription>
+	<longdescription lang="ja">
+		app-officeカテゴリには「オフィス」(ワープロや表計算やプレゼンテーション)
+		と言うソフトウェアパッケージが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De app-office categorie bevat applicaties voor kantoorwerk, zoals text-
 		verwerkers, spreadsheets, presentatiehulpmiddelen enz.
