@@ -1,4 +1,14 @@
-MD5 ffaaf7ef5c7bc93312cb40a51bd9c3eb ChangeLog 508
-MD5 630d86334edf801860b9a73eb45215ee gnusim8085-1.2.89.ebuild 1375
-MD5 948cd0d80d554fa9755a77f3b802cea5 metadata.xml 289
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6e70560466caea2be7343b78d247c2c ChangeLog 655
 MD5 aff17e159b1d1b80d7abbe51347dd4ec files/digest-gnusim8085-1.2.89 70
+MD5 1d74b1f230c8b9b77ef8ab96b6fbe7f1 gnusim8085-1.2.89.ebuild 1045
+MD5 948cd0d80d554fa9755a77f3b802cea5 metadata.xml 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDSOnEmdTrptrqvGERAqnnAKCXRoW2lD7/Ck/bP9agUtnGiL34iACcDS9K
+v//4+xdcGsXdaBXLMTkGSOg=
+=8wY3
+-----END PGP SIGNATURE-----
