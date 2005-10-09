@@ -10,6 +10,9 @@
 	<longdescription lang="de">
 		Die Kategorie sys-libs enthält verschiedene Systembibliotheken.
 	</longdescription>
+	<longdescription lang="ja">
+		sys-libsカテゴリには様々なシステムレベルライブラリが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De sys-libs categorie bevat verschillende systeembibliotheken.
 	</longdescription>
