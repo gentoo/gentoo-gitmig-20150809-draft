@@ -17,6 +17,10 @@
 		La categoría dev-java contiene librerias y utilidades para el lenguaje
 		de programación Java.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-java カテゴリーにはJavaプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-java categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal Java.
