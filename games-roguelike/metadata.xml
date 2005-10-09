@@ -13,6 +13,9 @@
 		La categoría games-roguelike contiene juegos que recrean el estilo del
 		Rogue.
 	</longdescription>
+	<longdescription lang="ja">
+		games-roguelike カテゴリーにはRogueスタイルに似たゲームが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De games-roguelike categorie bevat spellen die gebaseerd zijn op de
 		stijl van Rogue, zoals bijvoorbeeld NetHack.
