@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.60 2005/10/04 15:48:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.61 2005/10/09 13:01:41 flameeyes Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -198,7 +198,7 @@ elibtoolize() {
 		local opts
 		[[ -f Makefile.am ]] && opts="--automake"
 		glibtoolize --copy --force ${opts}
-		
+
 		elt_patches="${elt_patches} darwin-ltconf darwin-ltmain"
 	fi
 
@@ -323,8 +323,10 @@ elibtoolize() {
 						;;
 					"fbsd-"*)
 						if [[ ${CHOST} == *"-freebsd"* ]] ; then
-							eerror "  FreeBSD patch set '${y}' failed to apply!"
-							die "FreeBSD patch set '${y}' failed to apply!"
+							if [[ -z $(grep 'Handle Gentoo/FreeBSD as it was Linux' "${x}/configure") ]]; then
+								eerror "  FreeBSD patch set '${y}' failed to apply!"
+								die "FreeBSD patch set '${y}' failed to apply!"
+							fi
 						fi
 						;;
 					"darwin-"*)
