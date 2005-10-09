@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 ab4b88efe687bdbdf4d6d827d53c770a ChangeLog 1285
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 c48c2a3665c6463c4769ff8fb1351805 scgi-1.2.ebuild 621
-MD5 183dc33a6debba1e4d370770c8c47e22 scgi-1.2_alpha1.ebuild 671
-MD5 58ca92f3121021a36283441896b7665d scgi-1.2_alpha2.ebuild 676
 MD5 7092d8881e1387d40515b82e1c4e9afb files/digest-scgi-1.2 59
 MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-scgi-1.2_alpha1 61
 MD5 7ec590d1ee6da7b63a722808c6758ee7 files/digest-scgi-1.2_alpha2 61
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 c48c2a3665c6463c4769ff8fb1351805 scgi-1.2.ebuild 621
+MD5 183dc33a6debba1e4d370770c8c47e22 scgi-1.2_alpha1.ebuild 671
+MD5 58ca92f3121021a36283441896b7665d scgi-1.2_alpha2.ebuild 676
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCZzWOmPFBzbX68WERAtlmAJ4v8TQcsbUBCNo2oEYES8Ys5BpOywCfbVv/
-EF21cfnQScmvkyw+pnG939Q=
-=PTs6
+iD8DBQFDSXbWKf2g/qXtneoRAjzFAJ9fr+F/Iuz5jmx8jhFRtopslyD6VACfcQkU
+MgHyLRr9v1YchIsuylLEmIc=
+=6/7j
 -----END PGP SIGNATURE-----
