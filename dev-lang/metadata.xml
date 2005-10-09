@@ -13,6 +13,10 @@
 		La categoría dev-lang contiene varias implementaciones de lenguajes de
 		programación y sus respectivas herramientas.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-langカテゴリーには様々なプログラミング言語の実行環境とそれに関連した
+		ツールが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-lang categorie bevat implementaties van verschillende programmeertalen
 		en gerelateerde hulpmiddelen.
