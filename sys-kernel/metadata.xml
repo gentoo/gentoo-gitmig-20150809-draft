@@ -13,6 +13,9 @@
 		Die Kategorie sys-kernel enthält Ebuilds für Kernelquellen
 		sowie damit in Zusammenhang stehende Pakete.
 	</longdescription>
+	<longdescription lang="ja">
+		sys-kernelカテゴリにはカーネルソースebuildとカーネル関連ツールが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De sys-kernel categorie bevat ebuilds voor kernelbroncode en gerelateerde
 		hulpmiddelen.
