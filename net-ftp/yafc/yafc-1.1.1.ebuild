@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1.ebuild,v 1.1 2005/10/09 08:45:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.1.1.ebuild,v 1.2 2005/10/09 12:28:13 swegener Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/yafc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="readline krb4 kerberos sock5"
+IUSE="readline krb4 kerberos socks5"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1-r4 )
 	kerberos? ( virtual/krb5 )
@@ -21,7 +21,7 @@ RDEPEND=">=net-misc/openssh-3.0
 	${DEPEND}"
 
 src_compile() {
-	local myconf
+	local myconf=""
 	use krb4 && myconf="${myconf} --with-krb4=/usr/athena" \
 		|| myconf="${myconf} --with-krb4=no"
 	use kerberos && myconf="${myconf} --with-krb5=/usr/ --with-gssapi=/usr" \
@@ -31,7 +31,6 @@ src_compile() {
 	use readline && myconf="${myconf} --with-readline=/usr" \
 		|| myconf="${myconf} --with-readline=no"
 
-	
 	econf $(use_with readline) ${myconf} || die "./configure failed"
 	emake || die "emake failed"
 }

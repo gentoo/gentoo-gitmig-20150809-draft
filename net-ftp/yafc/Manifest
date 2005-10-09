@@ -6,12 +6,12 @@ MD5 fc53f7d8ad4e855bf0cfa4139baae246 files/digest-yafc-1.0 61
 MD5 17a81b5b4a16ec89dfe5963c885f96ab files/digest-yafc-1.1 61
 MD5 ef6247904f7210ae0c5c607a8db1e828 files/digest-yafc-1.1.1 63
 MD5 44011aac929360f02f786a44321d861a yafc-1.0.ebuild 801
-MD5 309ab7053006856465b3b50ead884a24 yafc-1.1.1.ebuild 1325
+MD5 8dadb30fcf4ac7e7eae9aaf999ccb59e yafc-1.1.1.ebuild 1324
 MD5 7012fddb5846c4722d1e2b8192f9bba1 yafc-1.1.ebuild 767
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSNjXmdTrptrqvGERAhf5AJ9JRHsX1C7vhEnGNg9UGfLvuEVJ4wCfRkr/
-BhAvcWWgdLo2/vfPhW9+KoE=
-=uagF
+iD8DBQFDSQz2I1lqEGTUzyQRAj4eAKCrYtrhW1eEsC09MEPro4nBv1nVtACfXKct
+95QSpUZQDIu5npPiexOUOxk=
+=U8oF
 -----END PGP SIGNATURE-----
