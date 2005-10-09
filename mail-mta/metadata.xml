@@ -4,18 +4,22 @@
 	<longdescription lang="en">
 		The mail-mta category contains mail transport agent packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie mail-mta enthält Mail Transport Agents wie z.B. Sendmail und Postfix.
+	</longdescription>
 	<longdescription lang="es">
 		La categoría mail-mta contiene los paquetes de los agentes de transporte
 		de correo electrónico.
 	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie mail-mta enthält Mail Transport Agents wie z.B. Sendmail und Postfix.
-	</longdescription>
-	<longdescription lang="sk">
-		Kategória mail-mta obsahuje serverové balíky pre prenos elektronickej pošty (MTA).
+	<longdescription lang="ja">
+		 mail-mtaカテゴリーにはメール・トランスポート・エージェントのパッケージが
+		 含まれています。
 	</longdescription>
 	<longdescription lang="nl">
 		De mail-mta categorie bevat Mail Transport Agents, zoals sendmail &amp; postfix.
+	</longdescription>
+	<longdescription lang="sk">
+		Kategória mail-mta obsahuje serverové balíky pre prenos elektronickej pošty (MTA).
 	</longdescription>
 	<longdescription lang="vi">
 		Nhóm mail-mta chứa các mail server (Mail Transport Agent).
