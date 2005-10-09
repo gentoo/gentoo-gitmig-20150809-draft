@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>pam</herd>
+<maintainer>
+<email>pam-bugs@gentoo.org</email>
+</maintainer>
 <longdescription>
 pam_ssh_agent is a PAM module that spawns a ssh-agent and adds identities 
 using the password supplied at login.
