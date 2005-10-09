@@ -1,15 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4414de49cdd20a4e9fdc18c835daf198 ChangeLog 4251
-MD5 a82db77e6fbec7c01e2f0f8780750e4b dosemu-1.2.0.ebuild 1268
-MD5 61467ef407e42f1b13d8668a4fcae951 dosemu-1.2.1.ebuild 1269
 MD5 2a0c730756dbf17b977d93a37dd5f4c9 dosemu-1.2.2-r1.ebuild 1557
-MD5 9aa383239a58607f2da3c0ef004fe398 dosemu-1.2.2.ebuild 1343
-MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 4ae7e3a9ddadfe1192178e71729650a3 dosemu-1.3.2.ebuild 1563
-MD5 919e6e482f0bc9f366177904eae0b7c1 files/digest-dosemu-1.2.0 133
-MD5 f07393e4b6ed8e7785ada12c7c1e9763 files/digest-dosemu-1.2.1 133
-MD5 c55a4301f45354bf6dd78364654eedf8 files/digest-dosemu-1.2.2 133
 MD5 7b6524cc4d37cd8b381b03fbd1db190b files/digest-dosemu-1.2.2-r1 135
+MD5 32eebf50bc21249c045ec012f5b70d82 files/digest-dosemu-1.3.2 135
 MD5 497a92330b10bea8772669b9bb821233 files/dosemu-1.2.2-cflags.patch 2584
 MD5 11e355fbc16d4a8c49fbd93df36e1350 files/dosemu-broken-links.diff 521
-MD5 d9edbc98f1c06b2c5ad563ab29928ec0 files/dosemu_kernel26_patch 1480
-MD5 32eebf50bc21249c045ec012f5b70d82 files/digest-dosemu-1.3.2 135
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSYDpr2QksT29OyARArzkAJ0aju6JO4GcZwYf3gNOtTkSaAeDhgCfXOzP
+wJBDKdLKR//B6+V8GVW6hqM=
+=XxrU
+-----END PGP SIGNATURE-----
