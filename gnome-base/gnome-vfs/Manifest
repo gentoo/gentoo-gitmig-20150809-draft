@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9bdae3b3639bc562f9d5db2037b431ed ChangeLog 22003
 MD5 4072a11c3c98c493cbc0bb851176fb44 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
 MD5 071edd844b13f596a2f7d986b4512521 files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
@@ -22,3 +25,10 @@ MD5 cfa26c4d1fd63991f0fd2a0aff0c7f72 gnome-vfs-2.10.1-r1.ebuild 2013
 MD5 a9bea7c389b41b938670ede1446e0375 gnome-vfs-2.10.1-r2.ebuild 2207
 MD5 42dfd74003879d7682bfc6dd4a405cb9 gnome-vfs-2.12.1.1.ebuild 2164
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSL55gIKl8Uu19MoRApdMAJ0ZqXJ0d1VVyGw0VkEq9rXSOzRPtACdG/3z
+BAQEt5xFOz5ZufXzOlH3+pU=
+=4ntO
+-----END PGP SIGNATURE-----
