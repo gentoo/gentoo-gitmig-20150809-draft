@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.36 2005/09/28 22:22:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.37 2005/10/09 22:05:58 betelgeuse Exp $
+
+*kaffe-1.1.6-r1 (09 Oct 2005)
+
+  09 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> +kaffe-1.1.6-r1.ebuild:
+  Version bump for javadoc support using dev-java/gjdoc.
 
 *kaffe-1.1.6 (28 Sep 2005)
 
