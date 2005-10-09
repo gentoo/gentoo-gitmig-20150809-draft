@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 590f310140b9ab33cdd8de3b91c63245 ChangeLog 2625
-MD5 b4fcb29bb7e550874e315084ff94d427 khotkeys-3.4.2.ebuild 443
-MD5 51330a32c6197d220bb44ef01c8b94ec khotkeys-3.4.1.ebuild 384
-MD5 6edd603affe8cf8d90ca230d5e8e7596 khotkeys-3.5_beta1.ebuild 415
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-khotkeys-3.5_beta1 69
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khotkeys-3.4.2 287
-MD5 0e8a254162dbb8519bdd6b4a332b920f files/khotkeys-qt-3.3.5.patch 441
+MD5 3d70ea94b2b32a26de9b60f3124d4ec2 ChangeLog 2730
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khotkeys-3.4.1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWB9j5H05b2HAEkRAteIAJ0TqHtsc6AA0Q19zAN0ZnUdSJjyBwCgghFO
-fW+j3MFCylS4pZf1e1WPWTE=
-=8HA2
------END PGP SIGNATURE-----
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khotkeys-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-khotkeys-3.5_beta1 69
+MD5 0e8a254162dbb8519bdd6b4a332b920f files/khotkeys-qt-3.3.5.patch 441
+MD5 51330a32c6197d220bb44ef01c8b94ec khotkeys-3.4.1.ebuild 384
+MD5 b4fcb29bb7e550874e315084ff94d427 khotkeys-3.4.2.ebuild 443
+MD5 f41bb6d8aa6fc9b0f483a8e23ee6dd49 khotkeys-3.5_beta1.ebuild 420
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

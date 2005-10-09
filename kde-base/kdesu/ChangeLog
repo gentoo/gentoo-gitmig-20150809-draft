@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.17 2005/09/24 14:00:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.18 2005/10/09 18:00:36 betelgeuse Exp $
+
+  09 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> kdesu-3.5_beta1.ebuild:
+  Added ~x86 keyword.
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kdesu-3.5_alpha1.ebuild:

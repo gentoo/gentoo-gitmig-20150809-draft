@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.17 2005/09/24 13:24:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.18 2005/10/09 18:03:50 betelgeuse Exp $
+
+  09 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  kcminit-3.5_beta1.ebuild:
+  Added ~x86 keyword.
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kcminit-3.5_alpha1.ebuild:

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 42e1ac3023b81cca93a808d08806e993 ChangeLog 2816
-MD5 46bb74648b8cd9ba339e2df64932ca40 khelpcenter-3.4.1-r1.ebuild 472
-MD5 a158fe8d8cf86fa350a761f90c9394d4 khelpcenter-3.4.1.ebuild 399
-MD5 d6ab2632f50850e76007f85ca0f16edf khelpcenter-3.5_beta1.ebuild 458
-MD5 de16b613dd354c9f6358995c94e460c3 khelpcenter-3.4.2.ebuild 482
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 089150622eb9c52adfb24c28bbda4f4e ChangeLog 2924
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1 212
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1-r1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-khelpcenter-3.4.2 287
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-khelpcenter-3.4.1 212
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-khelpcenter-3.5_beta1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWAdj5H05b2HAEkRAkMHAJ98m3eVg7GGy4ajS3RZXVt7L9z5AQCfWxX/
-wo5U9tWhHPYenuTHai6K+qE=
-=JVCF
------END PGP SIGNATURE-----
+MD5 46bb74648b8cd9ba339e2df64932ca40 khelpcenter-3.4.1-r1.ebuild 472
+MD5 a158fe8d8cf86fa350a761f90c9394d4 khelpcenter-3.4.1.ebuild 399
+MD5 de16b613dd354c9f6358995c94e460c3 khelpcenter-3.4.2.ebuild 482
+MD5 1becb5b0412e6272348f6655e24731a0 khelpcenter-3.5_beta1.ebuild 463
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

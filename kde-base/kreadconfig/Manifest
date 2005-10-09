@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 86eeac2c8e52feda003e793c4c27c863 ChangeLog 2511
-MD5 c00b94a55a9da6a61e613780c4ef93c9 kreadconfig-3.4.1.ebuild 435
-MD5 22fc9a260be9809b13125455797505c4 kreadconfig-3.5_beta1.ebuild 413
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 21b037b3342b2cc8151e1064cd895348 ChangeLog 2619
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kreadconfig-3.4.1 212
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kreadconfig-3.5_beta1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNW43j5H05b2HAEkRAjgCAJ4pXdRsEyF5QlGjEEt8fFpku24iXACfQuLK
-B70Q6COiFyGniC2P7x0l8N4=
-=NM+Q
------END PGP SIGNATURE-----
+MD5 c00b94a55a9da6a61e613780c4ef93c9 kreadconfig-3.4.1.ebuild 435
+MD5 6ae6810afe38eb48e5c42fa2c013cb4d kreadconfig-3.5_beta1.ebuild 418
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

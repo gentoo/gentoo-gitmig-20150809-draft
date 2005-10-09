@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d672ccfb55405994380dbf64147fbc88 ChangeLog 2699
-MD5 cc157bd65f07645585492668dcdc4018 kpersonalizer-3.5_beta1.ebuild 414
+MD5 c2a94a35113332e7cf67bbbe320915be ChangeLog 2809
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpersonalizer-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpersonalizer-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kpersonalizer-3.5_beta1 69
 MD5 8813ba5f121b35e19fe79572207ef851 kpersonalizer-3.4.1.ebuild 401
 MD5 a91c6e82ca3cea74a65b1c0a554a49d9 kpersonalizer-3.4.2.ebuild 414
+MD5 28d3471c53ee2f5b1f193e27a6609da9 kpersonalizer-3.5_beta1.ebuild 419
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kpersonalizer-3.5_beta1 69
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpersonalizer-3.4.2 287
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpersonalizer-3.4.1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWzcj5H05b2HAEkRAhRDAKCblRq6aLvO+ZOBvQ4YBY72yWAw/gCfXEvx
-NyiNGJfFi9v+G1r150j679Q=
-=8YrS
------END PGP SIGNATURE-----
