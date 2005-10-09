@@ -1,21 +1,22 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/files/log_packets.initd,v 1.1 2005/10/08 14:04:11 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/files/log_packets.initd,v 1.2 2005/10/09 13:54:39 strerror Exp $
 
 opts="start stop cleandisk"
 
-[ -d "${LOG_DIR}" ] && LOGDIR="/var/log/sguild"
-
 
 start() {
-	ebegin "Starting Sensor Agent"
+	ebegin "Starting Log_packest"
 	if [ ! -x /usr/bin/snort ]
 	then
 		eerror "No snort - cannot start"
 		eend 1
 		return 1
 	fi
+
+	LOG_DIR="${LOGDIR}/${HOSTNAME}/dailylogs"
+
 	if [ ! -d ${LOG_DIR} ]
 	then
 		mkdir -p ${LOG_DIR}
@@ -29,9 +30,9 @@ start() {
 		mkdir "${LOG_DIR}/${today}"
 		chmod 770 "${LOG_DIR}/${today}"
 	fi
-	start-stop-daemon --start -c sguil --pidfile /var/run/sguil/logpackets.pid \
+	start-stop-daemon --start --quiet -b -m --pidfile /var/run/sguil/logpackets.pid \
 		--exec /usr/bin/snort \
-		-- ${OPTIONS} -l "${LOG_DIR}/${today}" -b -i "${INTERFACE}" "${FILTER}"
+		-- ${OPTIONS} -l "${LOG_DIR}/${today}" -b -i "${IFACE}" "${FILTER}"
 	real_cleandisk
 	eend $?
 }
@@ -53,10 +54,10 @@ cleandisk() {
 real_cleandisk() {
 	einfo "Checking disk space (limited to ${MAX_DISK_USE}%)..."
 	# grep, awk, tr...woohoo!
-	CUR_USE=$(df ${LOG_DIR} | grep -v -i filesystem | awk '{print $5}' | tr -d %)
+	CUR_USE=$(df -P ${LOG_DIR} | grep -v -i filesystem | awk '{print $5}' | tr -d %)
 	einfo "  Current Disk Use: ${CUR_USE}%"
 	
-	if [ ${CUR_USE} -gt ${MAX_DISK_USE }]
+	if [ ${CUR_USE} -gt ${MAX_DISK_USE} ]
 	then
 		# If we are here then we passed our disk limit
 		# First find the oldest DIR

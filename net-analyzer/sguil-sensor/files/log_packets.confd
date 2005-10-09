@@ -1,0 +1,20 @@
+# Config file for /etc/init.d/log_packets
+
+# This tell snort which interface to listen on (any for every interface)
+IFACE=eth1
+
+# Make sure this matches your IFACE
+PIDFILE=/var/run/log_packets_$IFACE.pid
+
+# You probably don't want to change this, but in case you do
+LOGDIR="/var/lib/sguil"
+
+# Probably not this either
+CONF=/etc/snort/snort.conf
+
+# Percentage of disk to try and maintain
+MAX_DISK_USE=95
+
+# This pulls in the options above
+#SNORT_OPTS="-D -m 122 -u sguil -g sguil -A none -i $IFACE -l $LOGDIR -c $CONF"
+OPTIONS="-m 122 -u sguil -g sguil"
