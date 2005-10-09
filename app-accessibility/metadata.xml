@@ -18,7 +18,8 @@
 		toegankelijkheid bevorderen, bijvoorbeeld een schermlezer.
 	</longdescription>
 	<longdescription lang="ja">
-	app-accessibilityカテゴリィにはアクセシビリティのために使ったパッケージがあります。
+		app-accessibilityカテゴリィにはアクセシビリティと
+		手伝うパッケージが含まれます。
 	</longdescription>
 	<longdescription lang="vi">
 		Nhóm app-accessibility chứa các gói trợ giúp về truy nhập (ví dụ, trình đọc màn hình)
