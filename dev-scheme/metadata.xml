@@ -13,6 +13,10 @@
 		La categoría dev-scheme contiene librerías y utilidades referentes al
 		lenguaje de programación Scheme.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-schemeカテゴリーにはSchemeプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-scheme categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal Scheme.
