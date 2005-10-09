@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		x11-drivers contain drivers that interface with the core X11 server.
+	</longdescription>
+	<longdescription lang="ja">
+		x11-driversカテゴリにはX11コアサーバとインタフェスするドライバが含まれます。
+	</longdescription>
+</catmetadata>
+
