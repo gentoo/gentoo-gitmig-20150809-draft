@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e953c431d649a9496fdda582da96bfb ChangeLog 2225
+MD5 0485b0eca49f2f766aa86d2d61d7c5af ChangeLog 2328
 MD5 828add64d896c29b87566ae8c0842d9d metadata.xml 291
-MD5 b9292de595854e0d1314c7261606abb9 packit-1.0.ebuild 771
+MD5 613e2fcaad8a2153c6501da100641f4a packit-1.0.ebuild 787
 MD5 7eb74f02f5f953dd695526486d7ceed6 files/digest-packit-1.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe4QfI1lqEGTUzyQRApksAKDbIWSpc0Yuq0aE4gApC3XLMV+DIwCfY7T+
-5rT6A46lHNm/COP9B/+1xaA=
-=zNtR
------END PGP SIGNATURE-----
