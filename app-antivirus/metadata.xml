@@ -10,6 +10,9 @@
 	<longdescription lang="de">    
 		Die Kategorie app-antivirus enthält Antiviren-Software.
 	</longdescription>
+	<longdescription lang="ja">
+		app-antivirusカテゴリにはアンチウィルスソフトが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De categorie app-antivirus bevat anti-virus applicaties.
 	</longdescription>
@@ -18,9 +21,6 @@
 	</longdescription>
 	<longdescription lang="vi">
 		Nhóm app-antivirus chứa các ứng dụng chống/diệt virus.
-	</longdescription>
-	<longdescription lang="ja">
-		app-antivirusカテゴリにはアンチウィルスソフトがあります。
 	</longdescription>
 </catmetadata>
 
