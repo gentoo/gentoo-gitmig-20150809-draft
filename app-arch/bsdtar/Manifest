@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71d61cda7a9f116fc2874c6949784a41 bsdtar-1.02.034.ebuild 940
-MD5 1305c3eeea0332d6b65566a0621d5a7c bsdtar-1.02.027-r1.ebuild 1112
-MD5 73950cf44926ecea1c3b28d3ce89f392 ChangeLog 2866
-MD5 237fafd1cf6bf6b5047443e93f74007c bsdtar-1.02.030.ebuild 1120
-MD5 afec809b169074e5d5b0803e4f8f5ec8 metadata.xml 428
+MD5 af265ae64e6dd723f42c70c1cca41000 ChangeLog 3112
+MD5 48b22e51a819c59e46fc138c054cde24 bsdtar-1.02.027-r1.ebuild 1108
+MD5 f182884e1eebd95efb69207a8033b981 bsdtar-1.02.030.ebuild 1116
+MD5 471f7af03340a852981c14a6b97cf002 bsdtar-1.02.034.ebuild 936
 MD5 23a5ba81fd708274f460d74e61f6f10d files/bsdtar-1.02.027-osx.patch 475
 MD5 7cf5fd7cad3a8974a71ce2e1622824c5 files/digest-bsdtar-1.02.027-r1 67
-MD5 7a32873d49fe03bde51bd90d5449c70f files/digest-bsdtar-1.02.034 67
 MD5 2a8e4734601d558f6ce4f0df1a3a7033 files/digest-bsdtar-1.02.030 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNpabj5H05b2HAEkRAotIAJ48nkkWV6KZmSvMh6Yxz4OQ59cIXACgh/zP
-ZWzwmkIe4+Sf7osDdqGDbac=
-=DPVO
------END PGP SIGNATURE-----
+MD5 7a32873d49fe03bde51bd90d5449c70f files/digest-bsdtar-1.02.034 67
+MD5 afec809b169074e5d5b0803e4f8f5ec8 metadata.xml 428

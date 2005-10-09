@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.030.ebuild,v 1.3 2005/08/30 18:12:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.02.030.ebuild,v 1.4 2005/10/09 21:07:37 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,8 +38,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install
 
-	# Create tar symlink for BSD userlands
-	if [[ ${USERLAND} == "BSD" ]]; then
+	# Create tar symlink for FreeBSD
+	if [[ ${CHOST} == *-freebsd* ]]; then
 		dosym bsdtar /bin/tar
 		dosym bsdtar.1.gz /usr/share/man/man1/tar.1.gz
 	fi

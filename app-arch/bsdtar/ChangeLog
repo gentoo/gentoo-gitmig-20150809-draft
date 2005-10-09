@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.14 2005/09/25 12:22:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.15 2005/10/09 21:07:37 flameeyes Exp $
+
+  09 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  bsdtar-1.02.027-r1.ebuild, bsdtar-1.02.030.ebuild, bsdtar-1.02.034.ebuild:
+  Don't symlink bsdtar on every BSD userland, but just on freebsd. NetBSD uses
+  OpenBSD pax instead, for example.
 
   25 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> bsdtar-1.02.034.ebuild:
   Don't try to use -static on Darwin userland, as it doesn't work.
