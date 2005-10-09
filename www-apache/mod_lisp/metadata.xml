@@ -4,6 +4,6 @@
 <herd>apache</herd>
 <herd>common-lisp</herd>
 <maintainer>
-  <email>apache-devs@gentoo.org</email>
+  <email>apache-bugs@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
