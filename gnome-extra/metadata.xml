@@ -11,6 +11,9 @@
 	<longdescription lang="es">
 		La categoría gnome-extra contiene paquetes adicionales de GNOME.
 	</longdescription>
+	<longdescription lang="ja">
+		gnome-extraカテゴリーにはGNOMEのコアなし拡張パッケージが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De gnome-extra categorie bevat optionele extra's voor de GNOME desktopomgeving.
 	</longdescription>
