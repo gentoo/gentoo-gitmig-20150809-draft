@@ -4,11 +4,14 @@
 	<longdescription lang="en">
 		The x11-base category contains various X11 base implementations.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-base enthält verschiedene X11 Implementierungen.
+	</longdescription>
 	<longdescription lang="es">
 		La categoría x11-base contiene varias implementaciones base de X11.
 	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie x11-base enthält verschiedene X11 Implementierungen.
+	<longdescription lang="ja">
+		x11-baseカテゴリーには様々なX11を基本とした実行環境が含まれています。
 	</longdescription>
 	<longdescription lang="nl">
 		De x11-base categorie bevat verschillende implementaties van X11.
