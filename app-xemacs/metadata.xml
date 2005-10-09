@@ -11,6 +11,10 @@
 		La categoría app-xemacs contiene extensiones para el editor de texto
 		XEmacs.
 	</longdescription>
+	<longdescription lang="ja">
+		app-xemacsカテゴリにはXEmacsテキストエディタに
+		関連した拡張パッケージが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De app-xemacs categorie bevat uitbreidingen voor de XEmacs text editor.
 	</longdescription>
