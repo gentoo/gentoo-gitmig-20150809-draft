@@ -13,6 +13,9 @@
 		La categoría app-portage contiene programas para trabajar con portage
 		o con ebuilds.
 	</longdescription>
+	<longdescription lang="ja">
+		app-portageカテゴリにはportageかebuildと使うソフトウェアが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De app-portage categorie bevat applicaties die samenwerken met portage of
 		direct met ebuilds te maken hebben.
