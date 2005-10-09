@@ -1,8 +1,15 @@
-MD5 89548ff452209f596c02be0e9571ba88 metadata.xml 414
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e108b7bac01ae88bcc6015f9a1e2ba25 ChangeLog 563
-MD5 c39dd502528c73e8b6e27a083394b9cb ipodder-2.0_rc4.ebuild 1257
-MD5 7f236cb433c5898af7d3e0f21a0200af ipodder-2.1.9.ebuild 1293
-MD5 1d983b972f7bd801d6b38e6a48c8318c files/digest-ipodder-2.0_rc4 74
-MD5 378af6a8573d43643bad73f3c04e8b52 files/digest-ipodder-2.1.9 73
 MD5 535cd8628eb9d4003ab9bd7e653fc205 files/2.0_rc4-wx26-selector.patch 1953
-MD5 afcfde607562b54fde3f9f39a1caf4e9 files/2.1.9-wx26-selector.patch 599
+MD5 1d983b972f7bd801d6b38e6a48c8318c files/digest-ipodder-2.0_rc4 74
+MD5 c39dd502528c73e8b6e27a083394b9cb ipodder-2.0_rc4.ebuild 1257
+MD5 89548ff452209f596c02be0e9571ba88 metadata.xml 414
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSTQYI1lqEGTUzyQRAvwCAJ92sKGZ3GMIhHNYjsJzAteZpZlvHQCghkZg
+YbWYOoFgifCnrPMURxGq79U=
+=TQFJ
+-----END PGP SIGNATURE-----

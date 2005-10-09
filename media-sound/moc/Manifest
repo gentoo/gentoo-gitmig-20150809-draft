@@ -1,11 +1,18 @@
-MD5 2b58a49dbe642ee3cee6254157ac2c5f moc-2.2.0-r1.ebuild 1201
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1d04660d81ce79bde16fdeb59d181d43 ChangeLog 2451
-MD5 183694d39481467dc2e36d63133f32d5 moc-2.3.1.ebuild 1872
-MD5 48cea70afc23ce66ecfdf65f749fd08f moc-2.1.4-r1.ebuild 1097
-MD5 67bdf1e18ab8094ed9524b8ad9c580fc moc-2.3.0.ebuild 1225
-MD5 b9d38bfd2c874bd26ffc66a146d65048 files/digest-moc-2.3.1 62
-MD5 7d3794df50327b997ab26ab0a1b6de61 files/moc-2.3.1-configure.patch 3063
-MD5 397ca78b313594b61d6b090a5c9e7fd0 files/digest-moc-2.3.0 62
 MD5 986d4f67476a2c02f6ca1b20e7c57c0b files/digest-moc-2.1.4-r1 61
 MD5 285908314a37f1af4c045d98d60a1e0d files/digest-moc-2.2.0-r1 61
+MD5 397ca78b313594b61d6b090a5c9e7fd0 files/digest-moc-2.3.0 62
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 48cea70afc23ce66ecfdf65f749fd08f moc-2.1.4-r1.ebuild 1097
+MD5 2b58a49dbe642ee3cee6254157ac2c5f moc-2.2.0-r1.ebuild 1201
+MD5 67bdf1e18ab8094ed9524b8ad9c580fc moc-2.3.0.ebuild 1225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSTQsI1lqEGTUzyQRAicHAJ0ZjKcUwPGwPdXuINWWzEQ5ozoCrgCbB8Y+
+majRuoIR7VeciqAm/kHrKds=
+=sbAQ
+-----END PGP SIGNATURE-----
