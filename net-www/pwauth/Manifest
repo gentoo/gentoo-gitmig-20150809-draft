@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fb2b6e09742a7d606cfb32830a41c9b3 ChangeLog 1035
 MD5 e42116bd0068c8861ad4698f238933d9 files/digest-pwauth-2.3.1 63
 MD5 e42116bd0068c8861ad4698f238933d9 files/digest-pwauth-2.3.1-r1 63
@@ -8,3 +11,10 @@ MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 b34478a9d4cb30baa96bbb4ad37f1d8c pwauth-2.3.1-r1.ebuild 733
 MD5 650d2a7d7bdbd5d8fc031f8be99487ed pwauth-2.3.1-r2.ebuild 736
 MD5 c336fb35a3fd20d1690fa5a2b6763502 pwauth-2.3.1.ebuild 589
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVSKf2g/qXtneoRAhv3AJ9cZohUDhhGF+GpiKktHXAP3LWyMgCbBVnG
+DuBmOUYQwwKpd8vBZ2eo7qI=
+=5GoW
+-----END PGP SIGNATURE-----

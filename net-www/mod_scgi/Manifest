@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7510fab6a1f780f9c086db280c6a5df1 ChangeLog 1993
 MD5 c9efe9ec123cff4add21c35d7bbcdeb9 files/1.2/20_mod_scgi.conf 1245
 MD5 98c270edf79608cb914cbc7d6ffea7b0 files/20_mod_scgi.conf 1243
@@ -12,3 +15,10 @@ MD5 99a5294d5f067977521b6148d7b32a47 mod_scgi-1.2_alpha1-r1.ebuild 2990
 MD5 1f4f1fff6b5890418a41b67f7646cd4d mod_scgi-1.2_alpha1-r2.ebuild 3232
 MD5 548bca4f2f846aea8479ed4a59227db2 mod_scgi-1.2_alpha1.ebuild 1122
 MD5 d5dbfda0fedc8029d0428c03d8a4a096 mod_scgi-1.2_alpha2.ebuild 3235
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVRKf2g/qXtneoRAvDGAKCnWF3AS6LJd649X5wdgjXSd31k8ACfc+WO
+JV9SKt7eHbkpDFxYNfYLbSU=
+=Wjwp
+-----END PGP SIGNATURE-----

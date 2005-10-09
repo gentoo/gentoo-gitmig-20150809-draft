@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea6b68d30ba6b69a9950066d9e3fc213 ChangeLog 1786
 MD5 cc285f0ff6418e9efb599e45fe4c695c files/77_mod_watch.conf 748
 MD5 2d99e90c1a0ac34fbc7ad74473f526f7 files/digest-mod_watch-3.18 60
@@ -10,3 +13,10 @@ MD5 237d531f1650dd757a4b3034be79ccca mod_watch-3.18-r1.ebuild 778
 MD5 93eb96301afe2fd10f6fd4d486e94286 mod_watch-3.18.ebuild 1271
 MD5 a8a8ffc98759ba297c0cdbbf39718a02 mod_watch-4.03-r1.ebuild 1024
 MD5 105f83e8c4fb05ae442dfeeac384e4e6 mod_watch-4.03.ebuild 1030
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVRKf2g/qXtneoRAoonAJ9ablQUTyjXt4jUMA1nKXpLUc1fJgCgnMY9
+whC7MyBx56zhhCJ1Cb1s3yQ=
+=cJ17
+-----END PGP SIGNATURE-----

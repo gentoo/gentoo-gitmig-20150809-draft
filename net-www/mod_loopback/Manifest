@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57f129678b5de2e8e661706fb186a0f3 ChangeLog 2121
 MD5 b30fae4024f82f8f4fa50e9b0427a75f files/1.04-r1/28_mod_loopback.conf 538
 MD5 b30fae4024f82f8f4fa50e9b0427a75f files/2.01-r1/28_mod_loopback.conf 538
@@ -13,3 +16,10 @@ MD5 d7476d589c7d2f1fdc4e6848fbd1ac05 mod_loopback-1.04.ebuild 778
 MD5 1fee759a2a301bc24d5577ffd86972dc mod_loopback-2.0.ebuild 766
 MD5 83da3d44658a517aa5133cec45630b6d mod_loopback-2.01-r1.ebuild 657
 MD5 8ec1f965c46fc0d37f0b6d2f5d589aaf mod_loopback-2.01.ebuild 801
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVRKf2g/qXtneoRAhgSAJ4ycWCZkwKPQOX1qeGM2002/EykyQCglKWc
+wKhhghwlALckKYk2Xkgs/6s=
+=oGUR
+-----END PGP SIGNATURE-----

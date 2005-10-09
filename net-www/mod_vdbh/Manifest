@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7e57e35608cee74819ca97bc49f8ccf7 ChangeLog 1504
 MD5 fdfebeb3c991150f5d17e7e05637a0f8 files/1.0.3-r1/21_mod_vdbh.conf 566
 MD5 5dde0d1eb90420a1ba31516e99151139 files/21_mod_vdbh.conf 576
@@ -10,3 +13,10 @@ MD5 cbcc1ab3e65f57c510ebc001326d699b mod_vdbh-1.0.2-r1.ebuild 861
 MD5 8557cc1befde7a54896009138801ef48 mod_vdbh-1.0.2.ebuild 856
 MD5 52eafc588f68fd5ceb544c8f7da6b333 mod_vdbh-1.0.3-r1.ebuild 769
 MD5 74385a6bc4fb0462e68c2905edafa613 mod_vdbh-1.0.3.ebuild 878
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVSKf2g/qXtneoRAnBoAJ9Z/sMtihjjuq9SApaKPqRrIbeC6ACgjic6
+nTYw1DdWm2NGHIXCsb7GlU4=
+=ScTz
+-----END PGP SIGNATURE-----

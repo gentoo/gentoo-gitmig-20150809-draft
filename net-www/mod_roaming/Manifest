@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c66cb63f9a0392703d76055e8ac96e7b ChangeLog 1173
 MD5 6ccb5bfdbe8bfba614da810c60d0acee files/18_mod_roaming.conf 414
 MD5 39366ec603c2b484b4172523fba873b6 files/2.0.0-r1/18_mod_roaming.conf 413
@@ -9,3 +12,10 @@ MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 d3544db1c5c7a725b7ee81110ed80c25 mod_roaming-1.0.2.ebuild 691
 MD5 ad3de522a8fb07f9a45866eae9ae89dd mod_roaming-2.0.0-r1.ebuild 715
 MD5 94f2ca6a0cb84f8378d3c30ebd44af38 mod_roaming-2.0.0.ebuild 962
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVRKf2g/qXtneoRAnTmAKC+6O/6bDqCqUXvG9qkSBtCF0dn9gCbByVL
+mBDeBlz6Yffv4bGrI0c+Oj4=
+=06Yp
+-----END PGP SIGNATURE-----

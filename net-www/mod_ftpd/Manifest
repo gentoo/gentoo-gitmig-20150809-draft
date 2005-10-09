@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 57165fc53127a04a303a2647ac3881f8 ChangeLog 945
 MD5 e4b00c859e767293dba0066453b34da2 files/0.12.3-mod_ftpd-ipv6.patch 513
 MD5 a19bb3dea57c7efbb399e53762e5e5fd files/45_mod_ftpd.conf 1644
@@ -7,3 +10,10 @@ MD5 7ff83240a58205cd17a0324bd1122702 files/mod_ftpd.conf 1673
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 2b33a28d8d4fddcf0307662c183a4be1 mod_ftpd-0.12.3.ebuild 1139
 MD5 2d878449cd91075b6d28befe73abaa65 mod_ftpd-0.13.0.ebuild 985
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVSKf2g/qXtneoRAsAVAJ9VgsVCoDcH04NqB33oYkS5UncSXwCbBuCW
+UdjdcUA3wggSzZT8DP0bvOE=
+=/DYg
+-----END PGP SIGNATURE-----

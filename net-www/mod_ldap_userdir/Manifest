@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a71982915136fc470ae035ac6cb705ec ChangeLog 1598
 MD5 2c9d531cb0d54faa89c88213c28ecf26 files/1.1.4-r1/47_mod_ldap_userdir.conf 371
 MD5 650877f5bf9738cca23bbbeeb5bf87d9 files/47_mod_ldap_userdir.conf 375
@@ -10,3 +13,10 @@ MD5 457c489da37120586153b01d035d922a mod_ldap_userdir-1.1.1.ebuild 1748
 MD5 b01aacffc707a62b1b760d36af31191d mod_ldap_userdir-1.1.4-r1.ebuild 1268
 MD5 9fb7efc598ddb660e7881f12960b8137 mod_ldap_userdir-1.1.4.ebuild 1753
 MD5 459b340848d286db2391d1ecc99131ef mod_ldap_userdir-1.1.5.ebuild 1279
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVRKf2g/qXtneoRArI1AJsEq/rgexYyjn+5ZDxRzgIhDe/XUQCfRqwM
+Aydo2+5oSxpOsWxNarj3QWA=
+=ryEO
+-----END PGP SIGNATURE-----

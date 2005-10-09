@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a6efb9ede8e2321042195d885ae279e ChangeLog 828
 MD5 e45b84221c7a081fd11c7f44b083b0e9 files/11_mod_bw.conf 511
 MD5 7fff28dc6fff1c1ce2dcc9d6a36ffe5b files/digest-mod_bw-0.5 58
@@ -7,3 +10,10 @@ MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 4992afc22d51cafed2167d4bdb66d7e5 mod_bw-0.5.ebuild 692
 MD5 9158c225e2c427351554935f52ec5017 mod_bw-0.5_rc1.ebuild 696
 MD5 7c3ebee7f6fce57b22f8fa9f877bf5db mod_bw-0.6.ebuild 700
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVSKf2g/qXtneoRAkd0AJ0bd1NEmOmEkK9u5aPs8ycVlQq1ogCfXNOv
+kWjoGAW3PxxGBqKoy0/Clag=
+=MTPo
+-----END PGP SIGNATURE-----

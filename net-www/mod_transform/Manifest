@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2178f6672ae11725ab49e39c9c87f8c1 ChangeLog 1057
 MD5 db935b300b66a380d0f0b21f43d4a8d5 files/10_mod_transform.conf 113
 MD5 b3e31c1680f2a0e219fed438a86ef676 files/digest-mod_transform-0.4.0 71
@@ -6,3 +9,10 @@ MD5 4add2247f328f42a90844bf430bfbb06 files/mod_transform.conf 92
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 91424bf0348ce57649b84e4e31cc44b3 mod_transform-0.4.0.ebuild 907
 MD5 e32ed578478576a23f43adbcafcfba62 mod_transform-0.6.0.ebuild 888
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVSKf2g/qXtneoRAsURAJ9H3cb7CTV2SsgyFlUXLZcUmg74yQCfT6D8
+5ljrSzrDzmObgnaRwdD3ZBI=
+=OfkV
+-----END PGP SIGNATURE-----

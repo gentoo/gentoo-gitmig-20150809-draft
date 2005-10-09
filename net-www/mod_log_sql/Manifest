@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9220a292f427fc38825f47296a06dcf4 ChangeLog 3788
 MD5 29571a78277bd35aeb290d9489e826d8 files/1.100/10_mod_log_sql.conf 877
 MD5 390ab3cee83f80c19f7102a98e2ec510 files/10_mod_log_sql.conf 1287
@@ -10,3 +13,10 @@ MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 27af64f8043404fe65256378ef0d848b mod_log_sql-1.100.ebuild 1632
 MD5 90e440c9abfbc7e431036821771b8ff9 mod_log_sql-1.97.ebuild 3108
 MD5 0aaa0f5a0a95c1386dafbf090dc2edf3 mod_log_sql-1.98-r1.ebuild 2988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXVSKf2g/qXtneoRAsPzAKC+DCDuInMNP5sq6dNTgkLEuJempQCeMdBl
+7ZzvyValsVTUF7ne63uKDkg=
+=COuh
+-----END PGP SIGNATURE-----
