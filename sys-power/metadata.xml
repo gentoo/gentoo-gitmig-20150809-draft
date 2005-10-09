@@ -14,6 +14,9 @@
 		Die Kategorie sys-power enthält Software für das Powermanagement, wie 
 		beispielsweise Programme zur Änderung der CPU-Frequenz.
 	</longdescription>
+	<longdescription lang="ja">
+		sys-powerカテゴリには電源管理を管理する(例えば、CPU基準化)が含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De sys-power categorie bevat programma's voor energiebeheer, bijvoorbeeld
 		voor het aanpassen van de CPU-kloksnelheid.
