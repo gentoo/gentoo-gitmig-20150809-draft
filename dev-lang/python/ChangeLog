@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.170 2005/10/08 18:40:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.171 2005/10/09 12:53:08 hansmi Exp $
+
+  09 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  python-2.4.1-r1.ebuild:
+  Stable on hppa, ppc.
 
   08 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.4.1-r1.ebuild:
   Stable python-2.4 on alpha, ia64 and x86.
