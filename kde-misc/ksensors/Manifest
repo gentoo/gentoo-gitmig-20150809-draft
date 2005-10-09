@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b95874043c0c62d57f3aa33d798232c5 ChangeLog 3073
+MD5 dd82c5b7b3bc5a018033ced343e2e7ff ksensors-0.7.3.ebuild 561
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 dfebc9bddbac37669b88af11fd303d92 ChangeLog 2969
-MD5 7e8bec1ead66c22d3367ec9a0cbc5fcf ksensors-0.7.3.ebuild 560
 MD5 5fd4df1755f6106cd51487b5399f82ee files/digest-ksensors-0.7.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDSWlPwUpWvClEHQoRAlSAAJ9h7dyIx5oBVKu1d08S7gSpfrs9RgCggt7M
+S21aR38kZL6+Xcf39ENF9SM=
+=Gf6q
+-----END PGP SIGNATURE-----
