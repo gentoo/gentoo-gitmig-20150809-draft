@@ -1,0 +1,77 @@
+diff -Naur dssi-0.9.orig/examples/Makefile dssi-0.9/examples/Makefile
+--- dssi-0.9.orig/examples/Makefile	2004-10-28 20:46:08.000000000 +0900
++++ dssi-0.9/examples/Makefile	2005-10-09 09:58:06.000000000 +0900
+@@ -1,5 +1,6 @@
+ 
+ PREFIX ?= /usr/local
++LIBDIR ?= $(PREFIX)/lib
+ 
+ LIBLO_CFLAGS ?= $(shell pkg-config liblo --cflags)
+ LIBLO_LIBS ?= $(shell pkg-config liblo --libs || echo -llo -lpthread)
+@@ -25,19 +26,20 @@
+ install: all
+ 	mkdir -p $(PREFIX)/bin
+ 	cp dssi_osc_update dssi_osc_send $(PREFIX)/bin/
+-	mkdir -p $(PREFIX)/lib/dssi
+-	cp trivial_synth.so $(PREFIX)/lib/dssi/
+-	cp trivial_sampler.so $(PREFIX)/lib/dssi/
+-	mkdir -p $(PREFIX)/lib/dssi/less_trivial_synth
+-	cp less_trivial_synth.so $(PREFIX)/lib/dssi/
+-	cp less_trivial_synth_qt_gui $(PREFIX)/lib/dssi/less_trivial_synth/LTS_qt
+-	mkdir -p $(PREFIX)/lib/dssi/trivial_sampler
+-	cp trivial_sampler.so $(PREFIX)/lib/dssi/
+-	cp trivial_sampler_qt_gui $(PREFIX)/lib/dssi/trivial_sampler/trivial_sampler_qt
++	mkdir -p $(LIBDIR)/dssi
++	cp trivial_synth.so $(LIBDIR)/dssi/
++	cp trivial_sampler.so $(LIBDIR)/dssi/
++	mkdir -p $(LIBDIR)/dssi/less_trivial_synth
++	cp less_trivial_synth.so $(LIBDIR)/dssi/
++	cp less_trivial_synth_qt_gui $(LIBDIR)/dssi/less_trivial_synth/LTS_qt
++	mkdir -p $(LIBDIR)/dssi/trivial_sampler
++	cp trivial_sampler.so $(LIBDIR)/dssi/
++	cp trivial_sampler_qt_gui $(LIBDIR)/dssi/trivial_sampler/trivial_sampler_qt
+ 	test -x $(PREFIX)/bin/jack-dssi-host && ln -sf jack-dssi-host $(PREFIX)/bin/trivial_sampler
+ 
+ 
+-CFLAGS = -Wall -O2 -I../dssi $(LIBLO_CFLAGS)
++OPTFLAGS=
++CFLAGS = $(OPTFLAGS) -fPIC -Wall -I../dssi $(LIBLO_CFLAGS)
+ CXXFLAGS = $(CFLAGS) -I$(QTINCDIR)
+ LDLIBS = $(LIBLO_LIBS)
+ 
+diff -Naur dssi-0.9.orig/examples/trivial_sampler_qt_gui.cpp dssi-0.9/examples/trivial_sampler_qt_gui.cpp
+--- dssi-0.9.orig/examples/trivial_sampler_qt_gui.cpp	2004-10-28 20:46:08.000000000 +0900
++++ dssi-0.9/examples/trivial_sampler_qt_gui.cpp	2005-10-09 09:58:38.000000000 +0900
+@@ -24,6 +24,7 @@
+ #include <iostream>
+ #include <unistd.h>
+ #include <sndfile.h>
++#include <cmath>
+ 
+ #include "dssi.h"
+ 
+diff -Naur dssi-0.9.orig/jack-dssi-host/Makefile dssi-0.9/jack-dssi-host/Makefile
+--- dssi-0.9.orig/jack-dssi-host/Makefile	2004-10-01 20:57:26.000000000 +0900
++++ dssi-0.9/jack-dssi-host/Makefile	2005-10-09 09:55:40.000000000 +0900
+@@ -10,7 +10,8 @@
+ 	mkdir -p $(PREFIX)/bin
+ 	cp jack-dssi-host $(PREFIX)/bin/
+ 
+-CFLAGS = -Wall -g3 -I../dssi $(shell pkg-config liblo --cflags)
++OPTFLAGS=
++CFLAGS = $(OPTFLAGS) -fPIC -Wall -g3 -I../dssi $(shell pkg-config liblo --cflags)
+ CXXFLAGS = $(CFLAGS)
+ 
+ LDLIBS = -ljack -lasound -lpthread $(shell pkg-config liblo --libs)
+diff -Naur dssi-0.9.orig/jack-dssi-host/jack-dssi-host.c dssi-0.9/jack-dssi-host/jack-dssi-host.c
+--- dssi-0.9.orig/jack-dssi-host/jack-dssi-host.c	2004-11-02 23:14:49.000000000 +0900
++++ dssi-0.9/jack-dssi-host/jack-dssi-host.c	2005-10-09 09:53:57.000000000 +0900
+@@ -597,7 +597,7 @@
+ 		}
+ 		
+ 		if (fork() == 0) {
+-		    execlp(filename, filename, oscUrl, dllName, label, instanceTag, 0);
++		    execlp(filename, filename, oscUrl, dllName, label, instanceTag, NULL);
+ 		    perror("exec failed");
+ 		    exit(1);
+ 		}

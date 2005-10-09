@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/dssi
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.1 2005/10/09 01:12:02 matsuu Exp $
+
+*dssi-0.9 (09 Oct 2005)
+
+  09 Oct 2005; MATSUU Takuto <matsuu@gentoo.org>
+  +files/dssi-0.9-gentoo.patch, +dssi-0.9.ebuild:
+  Initial import. Bug 83082.
+

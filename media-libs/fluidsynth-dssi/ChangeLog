@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/fluidsynth-dssi
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/ChangeLog,v 1.1 2005/10/09 01:15:09 matsuu Exp $
+
+*fluidsynth-dssi-0.9.1 (09 Oct 2005)
+
+  09 Oct 2005; MATSUU Takuto <matsuu@gentoo.org>
+  +fluidsynth-dssi-0.9.1.ebuild:
+  Initial import. Bug 83082.
+
