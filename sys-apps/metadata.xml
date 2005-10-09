@@ -16,6 +16,10 @@
 		als auch Applikationen die noch nicht in eine der anderen sys- Kategorien eingeordnet
 		wurden.
 	</longdescription>
+	<longdescription lang="ja">
+		sys-appsカテゴリには様々なコアシステムアプリケーションの他、まだ他のsys-カテゴリに
+		移動されていないシステムアプリケーションが含まれています。				
+	</longdescription>
 	<longdescription lang="nl">
 		De sys-apps categorie bevat kerenbestanddelen van het systeem, en bepaalde
 		niet-kern toepassingen die nog niet in andere categorien zijn geplaatst.
