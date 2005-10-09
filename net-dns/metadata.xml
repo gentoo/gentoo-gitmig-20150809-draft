@@ -12,6 +12,9 @@
 		La categoría net-dns contiene programas relacionados con el DNS, el
 		sistema de resolución de nombres de dominio.
 	</longdescription>
+	<longdescription lang="ja">
+		net-dnsカテゴリーにはドメイン・ネーム・サービスに関連したソフトウェアが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De net-dns categorie bevat DNS (Domain Name Service) applicaties.
 	</longdescription>
