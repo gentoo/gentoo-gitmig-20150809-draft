@@ -5,13 +5,17 @@
 		The www-misc category contains various miscellaneous world wide web
 		software.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie www-misc enthält verschiedene Programme für das World
+		Wide Web (z.B. htdig, squidanalyser)
+	</longdescription>
 	<longdescription lang="es">
 		La categoría www-misc contiene software misceláneo relacionado con la
 		world wide web (WWW).
 	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie www-misc enthält verschiedene Programme für das World
-		Wide Web (z.B. htdig, squidanalyser)
+	<longdescription lang="ja">
+		www-miscカテゴリーには多種多様なワールド・ワイド・ウェブの
+		ソフトウェアが含まれています。
 	</longdescription>
 	<longdescription lang="nl">
 		De www-misc categorie bevat verschillende programma's voor het WWW zoals
