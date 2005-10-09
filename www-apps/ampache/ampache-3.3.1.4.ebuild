@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.1.4.ebuild,v 1.1 2005/08/14 23:11:23 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.1.4.ebuild,v 1.2 2005/10/09 08:42:08 cardoe Exp $
 
 inherit webapp
 
@@ -12,8 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-RDEPEND="net-www/apache
-	dev-php/php
+RDEPEND="virtual/httpd-php
 	dev-db/mysql"
 DEPEND=""
 

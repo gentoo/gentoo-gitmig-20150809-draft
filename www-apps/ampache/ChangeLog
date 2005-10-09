@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.5 2005/08/14 23:11:23 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.6 2005/10/09 08:42:08 cardoe Exp $
+
+  09 Oct 2005; Doug Goldstein <cardoe@gentoo.org> ampache-3.3.1.4.ebuild:
+  Fixing PHP depends bug #105419
 
 *ampache-3.3.1.4 (14 Aug 2005)
 
