@@ -4,12 +4,15 @@
 	<longdescription lang="en">
 		The x11-libs category contains various X11-related libraries.
 	</longdescription>
-	<longdescription lang="es">
-		La categoría x11-libs contiene varias librerías para X11.
-	</longdescription>
 	<longdescription lang="de">
 		Die Kategorie x11-libs enthält verschiedene Bibliotheken für
 		die X11-Programmierung.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría x11-libs contiene varias librerías para X11.
+	</longdescription>
+	<longdescription lang="ja">
+		x11-libsカテゴリーには様々なX11関連のライブラリが含まれています。
 	</longdescription>
 	<longdescription lang="nl">
 		De x11-libs categorie bevat verschillende bibliotheken gerelateerd
