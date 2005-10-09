@@ -9,6 +9,10 @@
 		La categoría dev-haskell contiene librerias y utilidades referentes
 		al lenguaje de programación Haskell.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-haskell カテゴリーには Haskellプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="de">
 		Die Kategorie dev-haskell enthält Bibliotheken und Werkzeuge für die 
 		Programmiersprache Haskell.
