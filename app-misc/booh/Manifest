@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4bcc92950ed175e6693fff1835f5014 ChangeLog 1474
-MD5 a442f9135a8f2931406426372f6a3ed9 booh-0.7.0.ebuild 1123
 MD5 5f24fbd64efe9b134f74177a75b8fd73 booh-0.7.1.ebuild 1123
+MD5 5616cb8abda5e400adcf92ca147d2704 booh-0.8.2.ebuild 1156
+MD5 e73b9fa87e823c1c0e78e3fd3e9cee32 booh-0.8.3.ebuild 1121
+MD5 a442f9135a8f2931406426372f6a3ed9 booh-0.7.0.ebuild 1123
+MD5 188ebc998838f7c82012c80790f77c1c metadata.xml 240
+MD5 db093968b6a7c01167139a8e549290db ChangeLog 1614
 MD5 84c7c1b7a569a543bb1868cae44959aa booh-0.8.0.ebuild 1123
 MD5 cde87cd406a734b20d0a979f316fc3a2 booh-0.8.1.ebuild 1156
-MD5 5616cb8abda5e400adcf92ca147d2704 booh-0.8.2.ebuild 1156
+MD5 38b8767e3892f96ec098658e9ec4a705 files/digest-booh-0.8.2 63
+MD5 8394f0ea0d46f2b4ea42e8ddd61215db files/digest-booh-0.8.3 63
 MD5 9f599664f863b34f0825c87c999496d2 files/digest-booh-0.7.0 63
 MD5 cd56837d8ed051322647ef10af1f1d04 files/digest-booh-0.7.1 63
 MD5 10e160bc18982d382e48f23114453953 files/digest-booh-0.8.0 63
 MD5 1cc4f952e3cd9afc4ea44cb6f6f46766 files/digest-booh-0.8.1 63
-MD5 38b8767e3892f96ec098658e9ec4a705 files/digest-booh-0.8.2 63
-MD5 188ebc998838f7c82012c80790f77c1c metadata.xml 240
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDCzOfI1lqEGTUzyQRArSGAJ9yVSUJrTv4z1024kqYRBBHDubC5gCgnmno
-p+dKrFfi3G89IAcehvDSlnw=
-=52Is
------END PGP SIGNATURE-----
