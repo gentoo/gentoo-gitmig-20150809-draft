@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.40 2005/10/07 05:37:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.41 2005/10/09 04:40:14 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -552,7 +552,7 @@ get_libname() {
 # This is for the toolchain to setup profile variables when pulling in
 # a crosscompiler (and thus they aren't set in the profile)
 multilib_env() {
-	local CTARGET=$1
+	local CTARGET=${1:-${CTARGET}}
 	local CTARGET_post=${CTARGET#*-}
 
 	case ${CTARGET} in
@@ -591,7 +591,7 @@ multilib_env() {
 			export CDEFINE_n64="_MIPS_SIM == _ABI64"
 			export LIBDIR_n64="lib64"
 
-			export MULTILIB_ABIS="n64 n32 o32"
+			export MULTILIB_ABIS="n64 n32" # o32
 			export DEFAULT_ABI="n32" 
 		;;
 		powerpc64*)
