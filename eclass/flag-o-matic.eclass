@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.93 2005/09/27 01:06:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.94 2005/10/09 22:28:35 flameeyes Exp $
 
 
 # need access to emktemp()
@@ -59,6 +59,8 @@ inherit eutils toolchain-funcs multilib
 # notice: modern automatic specs files will also suppress -fstack-protector-all
 # when only -fno-stack-protector is given
 #
+#### bindnow-flags ####
+# Returns the flags to enable "now" binding in the current selected linker.
 #
 ################ DEPRECATED functions ################
 # The following are still present to avoid breaking existing
@@ -497,4 +499,21 @@ gcc2-flags() {
 	replace-cpu-flags ev6{7,8} ev6
 
 	export CFLAGS CXXFLAGS
+}
+
+# Gets the flags needed for "NOW" binding
+bindnow-flags() {
+	case $($(tc-getLD) -v 2>&1 </dev/null) in
+	*GNU* | *'with BFD'*) # GNU ld
+		echo "-Wl,-z,now" ;;
+	*Apple*) # Darwin ld
+		echo "-bind_at_load" ;;
+	*)
+		# Some linkers just recognize -V instead of -v
+		case $($(tc-getLD) -V 2>&1 </dev/null) in
+			*Solaris*) # Solaris accept almost the same GNU options
+				echo "-Wl,-z,now" ;;
+		esac
+		;;
+	esac
 }
