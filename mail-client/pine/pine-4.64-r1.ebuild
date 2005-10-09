@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r1.ebuild,v 1.2 2005/10/09 20:59:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r1.ebuild,v 1.3 2005/10/09 21:01:10 carlo Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ DEPEND="virtual/libc
 	kerberos? ( app-crypt/mit-krb5 )"
 RDEPEND="${DEPEND}
 	app-misc/mime-types
-	!net-mail/uw-mailutils
+	net-mail/uw-mailutils
 	!<=net-mail/uw-imap-2004g"
 
 S="${WORKDIR}/${P/-/}"
