@@ -13,6 +13,10 @@
 		La categoría dev-perl contiene librerías y utilidades referentes
 		al lenguaje de programación Perl.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-perlカテゴリーにはPerlプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-perl categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal Perl.
