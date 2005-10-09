@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d34f05c8df3acad241e61d62286571b3 ChangeLog 4280
-MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 4ec4255d2b21b1220d9d81490a29fc5e mythweb-0.17.ebuild 1396
-MD5 87fc2579ce3a02a03347c46751d64ddb mythweb-0.18.1.ebuild 1455
-MD5 67c131deae039971648b7a6921fbf7d2 files/postinstall-en.txt 381
-MD5 571d8572a1c374567a581ee138a196f1 files/digest-mythweb-0.17 65
+MD5 7b01673a4752018496a86b0820cb9002 ChangeLog 4405
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythweb-0.18.1 72
+MD5 67c131deae039971648b7a6921fbf7d2 files/postinstall-en.txt 381
+MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+MD5 41eef79e469581ba557daa7ac3224646 mythweb-0.18.1.ebuild 1140
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDM3TaArHZZzCEUG0RAibKAJ9BIAhJUtqtPkgRm1Nb/xIX1F3hfgCdEA33
-isleYNqv0kHRpsJaUX378GE=
-=OW66
+iD8DBQFDSNeIBtvusYtCZMsRAq7wAKCLIsCaQ2UUnZMBoTTQiQsKrH40mACaAw0U
+u80z/0O8zq4r7zJ1KmeZqKk=
+=xmPG
 -----END PGP SIGNATURE-----
