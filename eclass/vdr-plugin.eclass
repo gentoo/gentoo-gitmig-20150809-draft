@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.4 2005/08/22 16:20:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.5 2005/10/09 20:13:07 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -36,8 +36,8 @@
 
 
 # ${FILESDIR}/rc-addon-${PV}.sh or ${FILESDIR}/rc-addon.sh:
-#     The first matching is installed under /usr/lib/vdr/rcscript/vdr.${VDRPLUGIN}.sh
-#     (in example vdr-femon this would be /usr/lib/vdr/rcscript/vdr.femon.sh)
+#     The first matching is installed under /usr/lib/vdr/rcscript/plugin-${VDRPLUGIN}.sh
+#     (in example vdr-femon this would be /usr/lib/vdr/rcscript/plugin-femon.sh)
 #
 #     This file is sourced by the startscript when plugin is activated in /etc/conf.d/vdr
 #     It could be used for special startup actions for this plugins, or to create the
@@ -158,7 +158,7 @@ vdr-plugin_src_install() {
 	for f in ${FILESDIR}/rc-addon-${PV}.sh ${FILESDIR}/rc-addon.sh; do
 		if [[ -f "${f}" ]]; then
 			insinto "${VDR_RC_DIR}"
-			newins "${f}" vdr.${VDRPLUGIN}.sh
+			newins "${f}" plugin-${VDRPLUGIN}.sh
 			break
 		fi
 	done
