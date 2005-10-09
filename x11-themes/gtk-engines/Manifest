@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a67550806ef7f36945d5d5ea9952e64b ChangeLog 5711
 MD5 c05083a16f957fda1c27e0b0cfc91005 files/digest-gtk-engines-0.12 68
 MD5 a544bee199fe05aa866462a7633f45ec files/digest-gtk-engines-2.6.3-r1 70
@@ -7,5 +10,12 @@ MD5 cd6c6ed17e724aa3ae5aea4dd904477e files/gtk-engines-2.6.3-fix_clearlooks_path
 MD5 d792d5b0ca15aad2214ca213459bae78 gtk-engines-0.12.ebuild 825
 MD5 494cf28d7e4ead9b70574215a6656f57 gtk-engines-2.6.3-r1.ebuild 734
 MD5 752319c4d8d94d95b189e5d4862ce69c gtk-engines-2.6.4-r2.ebuild 712
-MD5 76784f50c900728ff2a2b006f437f0a0 gtk-engines-2.6.5.ebuild 709
+MD5 038b0d1abf0a434150eee92fc7b388ba gtk-engines-2.6.5.ebuild 707
 MD5 36faf46cc298a5e4b601aafac15ec93b metadata.xml 568
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSL19gIKl8Uu19MoRAl/FAJ0eWLJSht2HpP9p1XtePdpzACgg7ACdHL+H
+jao6WJ0v4IIA9A1C4vQ5Wjs=
+=x7/w
+-----END PGP SIGNATURE-----
