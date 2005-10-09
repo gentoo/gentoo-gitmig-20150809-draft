@@ -6,7 +6,11 @@
 		packages only for version 5 of the PHP programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-php enthält Bibliotheken, Werkzeuge und
-		PECL-Pakete für Version 5 der Programmiersprache PHP.
+		Die Kategorie dev-php enth辰lt Bibliotheken, Werkzeuge und
+		PECL-Pakete f端r Version 5 der Programmiersprache PHP.
+	</longdescription>
+	<longdescription lang="ja">
+		dev-php5カテゴリーにはPHPプログラミング言語のバージョン5だけに
+		関連したライブラリーとユーティリティとPECLパッケージが含まれます。
 	</longdescription>
 </catmetadata>
