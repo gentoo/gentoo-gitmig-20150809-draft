@@ -10,6 +10,10 @@
 		información de los procesos. Los paquetes de 'cron' también están
 		incluidos en esta categoría.
 	</longdescription>
+	<longdescription lang="ja">
+		sys-processカテゴリにはプロセスを照会と操作パッケージが含まれます。
+		cronデーモンはここに含まれます。
+	</longdescription>
 	<longdescription lang="de">
 		Die Kategorie sys-process enthält Pakete für das Arbeiten mit Prozessen.
 		Auch die Cron-Daemons sind in dieser Kategorie enthalten.
