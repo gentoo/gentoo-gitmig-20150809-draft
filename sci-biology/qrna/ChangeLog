@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/qrna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.5 2005/08/07 14:21:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.6 2005/10/09 20:42:48 halcy0n Exp $
+
+  09 Oct 2005; Mark Loeser <halcy0n@gentoo.org> qrna-2.0.3c.ebuild:
+  Stable on x86
 
 *qrna-2.0.3c (07 Aug 2005)
 

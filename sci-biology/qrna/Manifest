@@ -1,7 +1,17 @@
-MD5 9dbe030b7efef2234382170012f4c3e1 qrna-2.0.3b.ebuild 1326
-MD5 48ca790e12c4e44c69d30860dccf1cab qrna-2.0.3c.ebuild 1327
-MD5 53e3ce5db09aa41ce305800153431583 ChangeLog 1258
-MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e0e7f927022155f9544485000d417af ChangeLog 1342
 MD5 9127b0a4628230fc3bf2e201ca7519a9 files/26qrna 30
 MD5 37c729a337a1eba6eda00b69f3d5f608 files/digest-qrna-2.0.3b 65
 MD5 12392df208522b818f5f2c72a7770a0e files/digest-qrna-2.0.3c 65
+MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+MD5 9dbe030b7efef2234382170012f4c3e1 qrna-2.0.3b.ebuild 1326
+MD5 9def8ead685bf4d02b124f0dba062ae8 qrna-2.0.3c.ebuild 1325
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSYESCRZPokWLroQRAmnlAKCymEkcGtKCP3MyIrLYKPn1vKdbHgCeNEnR
+XVjfiR4Jiww8fJDsbMOWO9Y=
+=kjkT
+-----END PGP SIGNATURE-----
