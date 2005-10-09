@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.10 2005/10/08 21:41:02 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.11 2005/10/09 20:37:39 halcy0n Exp $
+
+  09 Oct 2005; Mark Loeser <halcy0n@gentoo.org> phylip-3.64.ebuild:
+  Stable on x86
 
   08 Oct 2005; Lina Pezzella <j4rg0n@gentoo.org> phylip-3.64.ebuild:
   Stable ppc-macos, Bug 108335
