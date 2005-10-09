@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.190 2005/09/28 19:20:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.191 2005/10/09 18:15:15 ciaranm Exp $
+
+*vim-6.4_beta (09 Oct 2005)
+
+  09 Oct 2005; Ciaran McCreesh <ciaranm@gentoo.org> +vim-6.4_beta.ebuild:
+  New version. Dropped selinux support, bug #106912.
 
 *vim-7.0_alpha20050928 (28 Sep 2005)
 

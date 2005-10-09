@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.151 2005/09/28 19:21:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.152 2005/10/09 18:14:41 ciaranm Exp $
+
+*gvim-6.4_beta (09 Oct 2005)
+
+  09 Oct 2005; Ciaran McCreesh <ciaranm@gentoo.org> +gvim-6.4_beta.ebuild:
+  New version. Dropped selinux support, bug #106912.
 
 *gvim-7.0_alpha20050928 (28 Sep 2005)
 
