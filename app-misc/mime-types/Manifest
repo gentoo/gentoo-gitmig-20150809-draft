@@ -1,8 +1,18 @@
-MD5 001f93febced05398ea71b4d17601ee2 mime-types-3.ebuild 540
-MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 70061425ca0e42b8e9f9377752c09bea ChangeLog 4274
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 c187634236e398522015ecffb173cf8c mime-types-4.ebuild 541
 MD5 215fe0afc74ecf02f4614b6be1122753 files/digest-mime-types-2 63
 MD5 c92d6d001f3ea5c1deb593b177666734 files/digest-mime-types-3 63
 MD5 ca194125240fb65d630d91f76e4f4446 files/digest-mime-types-4 63
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
+MD5 001f93febced05398ea71b4d17601ee2 mime-types-3.ebuild 540
+MD5 e295dd165636599d333feecb49eee023 mime-types-4.ebuild 538
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSLs1gIKl8Uu19MoRAgKiAJ9GUAOsfo7rrpHPWf4YNPen94mK+gCfRIVD
+HnX5K6iha7QZrdZEaDi8kbE=
+=BH/6
+-----END PGP SIGNATURE-----
