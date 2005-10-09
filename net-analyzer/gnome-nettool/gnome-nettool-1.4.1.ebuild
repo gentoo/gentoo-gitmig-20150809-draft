@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-1.4.0.ebuild,v 1.1 2005/09/10 02:28:45 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-1.4.1.ebuild,v 1.1 2005/10/09 06:46:46 joem Exp $
 
 inherit gnome2
 
@@ -28,7 +28,7 @@ DEPEND=">=x11-libs/gtk+-2.5.4
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
 
-	>=dev-util/intltool-0.28
+	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"

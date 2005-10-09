@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.14 2005/09/10 02:28:45 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.15 2005/10/09 06:46:46 joem Exp $
+
+*gnome-nettool-1.4.1 (09 Oct 2005)
+
+  09 Oct 2005; Joe McCann <joem@gentoo.org> -gnome-nettool-1.4.0.ebuild,
+  +gnome-nettool-1.4.1.ebuild:
+  New version
 
 *gnome-nettool-1.4.0 (10 Sep 2005)
 
