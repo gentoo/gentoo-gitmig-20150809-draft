@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.1 2005/09/03 17:16:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.2 2005/10/09 02:01:39 kloeri Exp $
 
 inherit distutils eutils elisp-common
 
@@ -49,7 +49,7 @@ install_txt_doc() {
 
 src_test() {
 	cd ${S}/test
-	./alltests.py || die "alltests.py failed"
+	PYTHONPATH="${S}" ./alltests.py || die "alltests.py failed"
 }
 
 src_install() {
