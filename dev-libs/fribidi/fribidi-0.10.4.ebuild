@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.21 2005/07/09 01:28:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.22 2005/10/09 11:52:22 grobian Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	use ppc-macos && epatch ${FILESDIR}/${PN}-macos.patch
+	epatch ${FILESDIR}/${PN}-macos.patch
 }
 
 src_compile() {

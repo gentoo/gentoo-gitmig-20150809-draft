@@ -1,0 +1,11 @@
+--- fribidi-0.10.5/configure.orig	2005-10-09 13:38:30.000000000 +0200
++++ fribidi-0.10.5/configure	2005-10-09 13:39:27.000000000 +0200
+@@ -6076,7 +6076,7 @@
+     ;;
+ 
+   darwin* | rhapsody*)
+-    allow_undefined_flag='-undefined suppress'
++    allow_undefined_flag=''
+     # FIXME: Relying on posixy $() will cause problems for
+     #        cross-compilation, but unfortunately the echo tests do not
+     #        yet detect zsh echo's removal of \ escapes.

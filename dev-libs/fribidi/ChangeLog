@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.18 2005/09/22 13:45:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.19 2005/10/09 11:52:22 grobian Exp $
+
+  09 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/fribidi-0.10.5-darwin.patch, fribidi-0.10.4.ebuild,
+  fribidi-0.10.5.ebuild:
+  - Removing conditional patching for ppc-macos
+  - Fixing patch for 0.10.5
+  - Fixing libtool/compilation for 0.10.5 on OSX
+  - Removing ANNOUNCE from doc on 0.10.5 as dodoc complains it cannot find it
 
 *fribidi-0.10.5 (22 Sep 2005)
 
