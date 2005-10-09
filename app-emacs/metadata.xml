@@ -12,6 +12,10 @@
 		La categoría app-emacs contiene paquetes de extensión para el editor
 		de texto Emacs.
 	</longdescription>
+	<longdescription lang="ja">
+		app-emacsカテゴリにはEmacsテキストエディタに関連した
+		拡張パッケージが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De app-emac categorie bevat extensies voor Emacs.
 	</longdescription>
