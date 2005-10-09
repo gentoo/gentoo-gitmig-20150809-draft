@@ -11,6 +11,9 @@
 		La categoría app-dicts contiene paquetes de diccionarios y 
 		para listar palabras.
 	</longdescription>
+	<longdescription lang="ja">
+		app-dictsカテゴリには辞書とワードリスとパッケージが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De app-dict categorie bevat woordenboeken en andere woordlijsten.
 	</longdescription>
