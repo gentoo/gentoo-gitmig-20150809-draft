@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.47 2005/08/29 23:01:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.48 2005/10/09 08:15:44 greg_g Exp $
+
+  09 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> kmplayer-0.8.4b.ebuild,
+  kmplayer-0.9.0b.ebuild, kmplayer-0.9.0c.ebuild:
+  Fix homepage (#108554).
 
   29 Aug 2005; Carsten Lohrke <carlo@gentoo.org> kmplayer-0.9.0c.ebuild:
   reconstitution of mplayer use flag and additional warning

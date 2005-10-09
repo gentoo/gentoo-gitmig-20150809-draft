@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.0b.ebuild,v 1.1 2005/08/07 16:50:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.0b.ebuild,v 1.2 2005/10/09 08:15:44 greg_g Exp $
 
 inherit kde
 
@@ -8,8 +8,8 @@ MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="MPlayer frontend for KDE"
-HOMEPAGE="http://www.xs4all.nl/~jjvrieze/kmplayer.html"
-SRC_URI="http://www.xs4all.nl/~jjvrieze/${MY_P}.tar.bz2"
+HOMEPAGE="http://kmplayer.kde.org/"
+SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
