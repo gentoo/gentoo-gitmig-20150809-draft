@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.2 2005/10/05 02:32:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-1.0_pre20050929.ebuild,v 1.3 2005/10/09 22:17:08 ramereth Exp $
 
 inherit webapp depend.apache eutils
 
@@ -48,6 +48,12 @@ pkg_setup() {
 	webapp_pkg_setup
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-commitid-fix.patch
+}
+
 src_compile() {
 	sed -i -e "s:1.0-dev:${PV}:" lib/viewcvs.py
 }
@@ -80,8 +86,8 @@ src_install() {
 	cp -r tools/ ${D}/${MY_HOSTROOTDIR}/${PN}/
 	cp -r tests/ ${D}/${MY_HOSTROOTDIR}/${PN}/
 	insinto ${MY_HOSTROOTDIR}/${PN}
-	newins viewcvs.conf.dist viewcvs.conf
-	newins cvsgraph.conf.dist cvsgraph.conf
+	newins viewcvs.conf.dist viewcvs.conf.example
+	newins cvsgraph.conf.dist cvsgraph.conf.example
 
 	dosym /usr/share/doc/${PF}/html ${MY_HTDOCSDIR}/doc
 	dodoc INSTALL TODO CHANGES README
@@ -92,8 +98,8 @@ src_install() {
 		newexe standalone.py viewcvs-standalone
 	fi
 
-	webapp_configfile ${MY_HOSTROOTDIR}/${PN}/viewcvs.conf
-	webapp_configfile ${MY_HOSTROOTDIR}/${PN}/cvsgraph.conf
+	webapp_configfile ${MY_HOSTROOTDIR}/${PN}/viewcvs.conf.example
+	webapp_configfile ${MY_HOSTROOTDIR}/${PN}/cvsgraph.conf.example
 	webapp_postinst_txt en ${FILESDIR}/postinstall-new-en.txt
 	webapp_hook_script ${FILESDIR}/reconfig
 

@@ -1,0 +1,20 @@
+diff -u -r1.61 -r1.62
+--- viewcvs/viewcvs/lib/vclib/bincvs/__init__.py	2005/10/03 20:57:12	1.61
++++ viewcvs/viewcvs/lib/vclib/bincvs/__init__.py	2005/10/05 12:51:50	1.62
+@@ -290,10 +290,16 @@
+                '^retrieving revision (.*)$',
+                '^diff .*$',
+                ]
++    _re_diff_warning = re.compile(
++      r'^.*rcsdiff: .*,v: warning: Unknown phrases like .*\n$')
+     for i in range(len(headers)):
+       line = fp.readline()
+       if not line:
+         raise vclib.Error("Error reading diff headers")
++      # Eat up any warning lines
++      while re.match(_re_diff_warning, line):
++        line = fp.readline()
++      # Make sure we get five good lines of output that match what we expect
+       if not re.match(headers[i], string.lstrip(line)):
+         raise vclib.Error("Error parsing diff headers")
+     return fp
