@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.3.ebuild,v 1.1 2005/09/20 03:41:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.3.ebuild,v 1.2 2005/10/09 10:02:46 mkay Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -28,6 +28,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# tcpdump needs some optymalization. see bug #108391
+	( ! is-flag -O? || is-flag -O0 ) && append-flags -O
+
 	replace-flags -O[3-9] -O2
 	filter-flags -finline-functions
 

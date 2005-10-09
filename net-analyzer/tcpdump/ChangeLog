@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.55 2005/09/20 03:41:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.56 2005/10/09 10:02:46 mkay Exp $
+
+  09 Oct 2005; <mkay@gentoo.org> tcpdump-3.9.3.ebuild:
+  Forcing at least -O optymalization. This close bug #108391
 
 *tcpdump-3.9.3 (20 Sep 2005)
 
@@ -61,7 +64,7 @@
   Added patch to make gcc-4 a happy camper; also updated to use
   toolchain-funcs.eclass rather than gcc.eclass.
 
-  07 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  07 May 2005; Bryan Ăstergaard <kloeri@gentoo.org>
   tcpdump-3.8.3-r2.ebuild:
   Stable on alpha + ia64, bug 90541.
 
