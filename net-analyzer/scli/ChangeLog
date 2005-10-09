@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scli
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.4 2005/04/19 13:57:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.5 2005/10/09 10:51:01 mkay Exp $
+
+  09 Oct 2005; <mkay@gentoo.org> scli-0.2.12.ebuild:
+  Fixing dependencies (bug #108118). Also - changing autoreconf to autoconf,
+  which is enought for our patches
 
   19 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> scli-0.2.12.ebuild:
   Marked stable on x86.

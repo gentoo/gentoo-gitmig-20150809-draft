@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.2.12.ebuild,v 1.3 2005/04/19 13:57:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.2.12.ebuild,v 1.4 2005/10/09 10:51:01 mkay Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~sparc"
 IUSE="debug"
 
 RDEPEND="virtual/libc
-	>=dev-libs/glib-1.2
+	=dev-libs/glib-1.2*
 	>=sys-libs/ncurses-5
 	>=sys-libs/readline-4
 	dev-libs/libxml2
@@ -30,8 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	einfo "Updating autoconf/automake files"
-	WANT_AUTOCONF=2.13 WANT_AUTOMAKE=1.4 autoreconf || die "autoreconf failed"
+	WANT_AUTOCONF=2.59 autoconf || die "autoconf failed"
 
 	append-flags -I/usr/include/libxml2
 
