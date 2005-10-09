@@ -6,7 +6,11 @@
 		packages only for version 4 of the PHP programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-php enthält Bibliotheken, Werkzeuge und
-		PECL-Pakete für Version 4 der Programmiersprache PHP.
+		Die Kategorie dev-php enth辰lt Bibliotheken, Werkzeuge und
+		PECL-Pakete f端r Version 4 der Programmiersprache PHP.
+	</longdescription>
+	<longdescription lang="ja">
+		dev-php4 カテゴリーにはPHPプログラミング言語のバージョン4だけに
+		関連したライブラリーとユーティリティとPECLパッケージが含まれます。
 	</longdescription>
 </catmetadata>
