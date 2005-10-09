@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-streamdev
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/ChangeLog,v 1.1 2005/10/09 12:13:15 zzam Exp $
+
+*vdr-streamdev-0.3.3_pre20050529 (09 Oct 2005)
+
+  09 Oct 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-streamdev-0.3.3_pre20050529-includes.patch, +metadata.xml,
+  +vdr-streamdev-0.3.3_pre20050529.ebuild:
+  Initial import of ebuild from gentoo.de.
+
