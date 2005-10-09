@@ -13,6 +13,10 @@
 		La categoría dev-db contiene librerias y utilidades para programación
 		referente a bases de datos.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-dbカテゴリーにはデータベース・プログラミングに関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-db categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van verschillende database-programmeertalen.
