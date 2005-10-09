@@ -1,12 +1,22 @@
-MD5 5a6ae5eb362df9ac031b4f5cfffc745f ChangeLog 7409
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3c06dd9b3855a5f5575e95220eedaec9 ChangeLog 7503
+MD5 756db6700c84d3b303bfc3d0a28871de files/21ncbi 166
+MD5 a5f54430f6f7422d75320e91068cae0b files/21ncbi-r1 232
+MD5 6fa8c1b5254e9c217c399c949bc75f45 files/digest-ncbi-tools-20041020-r1 144
+MD5 ae77b2436a5f4dfcb6f71f2149782dc7 files/digest-ncbi-tools-20050429 144
+MD5 9cef4ca17113d005c44d3bf3d330f747 files/digest-ncbi-tools-20050605 144
+MD5 6b62beda180ee6d7d4d4a52507acc3ff files/ncbi-tools-20050605-lop.patch 701
+MD5 23986a001c85eb8c2c319aacfa9cb40c files/ncbirc 33
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 6c8b57dc3b8c8523ae2adb7a1a8f1ed3 ncbi-tools-20041020-r1.ebuild 5630
 MD5 0cfe991ee8c23a5a862c2386eba988e8 ncbi-tools-20050429.ebuild 5628
-MD5 8c65a876c54cef592fb6eaf5190af8a8 ncbi-tools-20050605.ebuild 5694
-MD5 a5f54430f6f7422d75320e91068cae0b files/21ncbi-r1 232
-MD5 756db6700c84d3b303bfc3d0a28871de files/21ncbi 166
-MD5 9cef4ca17113d005c44d3bf3d330f747 files/digest-ncbi-tools-20050605 144
-MD5 6fa8c1b5254e9c217c399c949bc75f45 files/digest-ncbi-tools-20041020-r1 144
-MD5 ae77b2436a5f4dfcb6f71f2149782dc7 files/digest-ncbi-tools-20050429 144
-MD5 23986a001c85eb8c2c319aacfa9cb40c files/ncbirc 33
-MD5 6b62beda180ee6d7d4d4a52507acc3ff files/ncbi-tools-20050605-lop.patch 701
+MD5 b14bc7c791aea27ab6e6afef619346ef ncbi-tools-20050605.ebuild 5694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSXbgCRZPokWLroQRAhWxAJ0c7yfSqov7t2EWqS4KqL9TbA7m6wCeNYAU
+3Wdy7dEnijeF07pReXjUsgE=
+=avmX
+-----END PGP SIGNATURE-----
