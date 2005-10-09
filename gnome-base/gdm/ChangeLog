@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.124 2005/10/04 09:06:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.125 2005/10/09 18:07:00 metalgod Exp $
+
+  09 Oct 2005; Luis Medinas <metalgod@gentoo.org> gdm-2.8.0.3.ebuild:
+  Marked Stable on amd64.
 
 *gdm-2.8.0.5 (04 Oct 2005)
 
