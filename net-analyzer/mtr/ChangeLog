@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.50 2005/09/19 19:30:30 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.51 2005/10/09 10:10:57 mkay Exp $
+
+  09 Oct 2005; <mkay@gentoo.org> mtr-0.69.ebuild, mtr-0.69-r1.ebuild:
+  Fixing dependencies (bug #108100)
 
   19 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> -mtr-0.67.ebuild,
   mtr-0.69.ebuild, mtr-0.69-r1.ebuild:
