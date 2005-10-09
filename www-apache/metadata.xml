@@ -10,6 +10,9 @@
 	<longdescription lang="de">
 		Die Kategorie www-apache enthält Module für den Webserver Apache.
 	</longdescription>
+	<longdescription lang="ja">
+		www-apacheカテゴリーにはApacheウエブサーバーのモジュールが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De www-apache categorie bevat modules voor de Apache webserver.
 	</longdescription>
