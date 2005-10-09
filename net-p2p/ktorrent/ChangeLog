@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.6 2005/09/14 22:49:13 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.7 2005/10/09 14:15:00 greg_g Exp $
+
+*ktorrent-1.1 (09 Oct 2005)
+
+  09 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +ktorrent-1.1.ebuild:
+  New version.
 
   14 Sep 2005; <mkay@gentoo.org> ktorrent-1.0.ebuild:
   Upstream has changed location of sources. Updating SRC_URI
