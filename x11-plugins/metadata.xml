@@ -5,13 +5,17 @@
 		The x11-plugins category contains plugin packages for various X11
 		applications.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-plugins enthält Plugins für verschiedene 
+		X11-Applikationen.
+	</longdescription>
 	<longdescription lang="es">
 		La categoría x11-plugins contiene paquetes de extensiones para
 		varias aplicaciones X11.
 	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie x11-plugins enthält Plugins für verschiedene 
-		X11-Applikationen.
+	<longdescription lang="ja">
+		x11-pluginsカテゴリーには様々なX11アプリケーションの
+		プラグイン・パッケージが含まれています。
 	</longdescription>
 	<longdescription lang="nl">
 		De x11-plugins categorie bevat plugins voor verschillende 
