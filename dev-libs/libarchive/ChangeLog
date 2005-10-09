@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libarchive
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.12 2005/09/25 12:10:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/ChangeLog,v 1.13 2005/10/09 19:46:05 flameeyes Exp $
+
+  09 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libarchive-1.02.030.ebuild, libarchive-1.02.034.ebuild:
+  No need to touch the GNU files as now eautoreconf recognize when using
+  --foreign.
 
 *libarchive-1.02.034 (25 Sep 2005)
 

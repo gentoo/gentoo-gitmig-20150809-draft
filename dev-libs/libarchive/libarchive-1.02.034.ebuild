@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.02.034.ebuild,v 1.1 2005/09/25 12:10:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libarchive/libarchive-1.02.034.ebuild,v 1.2 2005/10/09 19:46:05 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -26,8 +26,6 @@ src_unpack() {
 
 	# Build with libtool to build shared library
 	epatch ${FILESDIR}/${PN}-1.02.027-libtool.patch
-
-	touch NEWS README AUTHORS ChangeLog COPYING
 
 	eautoreconf
 	elibtoolize
