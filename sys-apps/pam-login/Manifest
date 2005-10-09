@@ -1,4 +1,4 @@
-MD5 7774f0d58ec2257f660ebfa9b6dc12ad ChangeLog 8816
+MD5 15d112a169586b4b1c3db5e7b3f9e5ed ChangeLog 8940
 MD5 bd631a67641c2ecb9f2da34226ca80a8 files/digest-pam-login-3.14 67
 MD5 e7f9dde204926c73a570b344556e4b1e files/digest-pam-login-3.17 67
 MD5 9375147f78a25196b654616c969af9a5 files/digest-pam-login-4.0.11.1-r2 69
@@ -23,4 +23,4 @@ MD5 393d06cf4b76671f8e6ce72ac71bdad8 metadata.xml 218
 MD5 f6a4f4c2e8300f1db0e4daf8fc8999b6 pam-login-3.14.ebuild 2801
 MD5 15f16bbb5e752541cd8346d7aa5d5904 pam-login-3.17.ebuild 2874
 MD5 b14a60034b1653ab8897c834b7b2d26d pam-login-4.0.11.1-r2.ebuild 3988
-MD5 1d167d9cc88f389fa3ffcc157d27802d pam-login-4.0.12.ebuild 3989
+MD5 df176d893e727f84defe9cab73658e23 pam-login-4.0.12.ebuild 3995

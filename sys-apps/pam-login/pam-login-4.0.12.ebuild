@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.12.ebuild,v 1.2 2005/10/09 21:50:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-4.0.12.ebuild,v 1.3 2005/10/09 22:42:36 flameeyes Exp $
 
 inherit eutils libtool flag-o-matic pam autotools
 
@@ -52,7 +52,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -Wl,-z,now
+	append-ldflags $(bindnow-flags)
 	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] \
 		&& export ac_cv_func_setpgrp_void=yes
 	econf \
