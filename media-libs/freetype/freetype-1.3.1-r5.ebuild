@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.29 2005/01/15 21:49:16 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r5.ebuild,v 1.1 2005/10/09 16:04:25 foser Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -13,7 +13,7 @@
 # When we update to freetype-pre1.4 or any later version, we should use
 # the included contrib directory and not download any additional files.
 
-inherit gnuconfig
+inherit eutils libtool
 
 P2=${PN}1-contrib
 DESCRIPTION="TTF-Library"
@@ -25,20 +25,28 @@ SRC_URI="ftp://ftp.freetype.org/freetype/freetype1/${P}.tar.gz
 
 LICENSE="FTL"
 SLOT="1"
-KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 s390"
-IUSE="nls"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="nls tetex"
 
-DEPEND="virtual/libc"
-RDEPEND="nls? ( sys-devel/gettext )"
+DEPEND="virtual/libc
+	tetex? ( virtual/tetex )"
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
+
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	# freetype1-contrib goes under freetype-1.3.1
 	cd ${S}
 	unpack ${P2}.tar.gz
 
-	gnuconfig_update
+	cd ${S}
+	# remove unneeded include for BSD (#104016)
+	epatch ${FILESDIR}/${P}-malloc.patch
+
+	elibtoolize
+
 }
 
 src_compile() {
@@ -56,10 +64,12 @@ src_compile() {
 	make || die
 
 	# make contrib utils
-	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner
-	do
+
+	use tetex && myconf="${myconf} --with-kpathsea-dir=/usr/lib"
+
+	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner ; do
 		cd ${S}/freetype1-contrib/${x}
-		econf || die
+		econf ${myconf} || die
 		make || die
 	done
 }
@@ -70,10 +80,10 @@ src_install() {
 	# Seems to require a shared libintl (getetxt comes only with a static one
 	# But it seems to work without problems
 
-	make -f arch/unix/Makefile prefix=${D}/usr install || die
+	make -f arch/unix/Makefile prefix=${D}/usr libdir=${D}/usr/$(get_libdir) install || die
 
 	cd ${S}/po
-	make prefix=${D}/usr install || die
+	make prefix=${D}/usr libdir=${D}/usr/$(get_libdir) install || die
 
 	cd ${S}
 	dodoc announce PATENTS README readme.1st
@@ -88,6 +98,12 @@ src_install() {
 		ttf2pk/.libs/ttf2pk ttf2pk/.libs/ttf2tfm \
 		ttfbanner/.libs/ttfbanner \
 		|| die
+	if use tetex ; then
+		insinto /usr/share/texmf/ttf2pk
+		doins ttf2pk/data/* || die
+		insinto /usr/share/texmf/ttf2pfb
+		doins ttf2pfb/Uni-T1.enc || die
+	fi
 	newman ttf2bdf/ttf2bdf.man ttf2bdf/ttf2bdf.man.1
 	doman ttf2bdf/ttf2bdf.man.1
 	docinto contrib
