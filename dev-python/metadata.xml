@@ -13,6 +13,10 @@
 		La categoría dev-python contiene librerias y utilidades referentes al
 		lenguaje de programación Python.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-pythonカテゴリーにはPythonプログラミング言語で記述された/のために
+		記述されたライブラリーと>ユーティリティとバインディングが含まれます。
+	</longdescription>
 	<longdescription lang="pl">
 		Kategoria dev-python zawiera biblioteki oraz narzędzia związane
 		z językiem programowania Python.
