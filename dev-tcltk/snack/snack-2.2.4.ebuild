@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.9 2005/09/04 12:25:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.4.ebuild,v 1.10 2005/10/09 00:15:29 matsuu Exp $
 
 inherit eutils
 IUSE="alsa vorbis"
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D}usr install || die "make install failed"
+	make DESTDIR=${D} install || die "make install failed"
 	cd ..
 	dodoc BSD.txt  COPYING  README changes
 	dohtml doc/*
