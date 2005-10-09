@@ -13,6 +13,10 @@
 		La categoría app-laptop contiene paquetes diseñados para trabajar
 		con ciertas clases de laptops ó computadoras portátiles.
 	</longdescription>
+	<longdescription lang="ja">
+		app-laptopカテゴリには様々なラップトップとノートブックコンピュータで
+		使うパッケージが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De app-laptop categorie bevat applicaties voor laptopgebruikers.
 	</longdescription>
