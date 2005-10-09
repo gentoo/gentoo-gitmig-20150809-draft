@@ -13,6 +13,10 @@
 		La categoría dev-ml contiene librerías y utilidades referentes al
 		lenguaje de programación ML.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-ml カテゴリーにはMLプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-ml categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal ML.
