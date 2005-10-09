@@ -7,7 +7,7 @@ MD5 a27d6facdfc6067598afe50484f4a7f2 files/digest-mod_loopback-1.04-r1 63
 MD5 f1c19206af4cd3a4ca06bd566755f538 files/digest-mod_loopback-2.0 63
 MD5 012e0b3a81a96ca283bf5b3d1333ce87 files/digest-mod_loopback-2.01 63
 MD5 012e0b3a81a96ca283bf5b3d1333ce87 files/digest-mod_loopback-2.01-r1 63
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
 MD5 998d5d93bac0302d3ae3413925eca14c mod_loopback-1.04-r1.ebuild 635
 MD5 d7476d589c7d2f1fdc4e6848fbd1ac05 mod_loopback-1.04.ebuild 778
 MD5 1fee759a2a301bc24d5577ffd86972dc mod_loopback-2.0.ebuild 766

@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 459b340848d286db2391d1ecc99131ef mod_ldap_userdir-1.1.5.ebuild 1279
-MD5 b01aacffc707a62b1b760d36af31191d mod_ldap_userdir-1.1.4-r1.ebuild 1268
-MD5 9fb7efc598ddb660e7881f12960b8137 mod_ldap_userdir-1.1.4.ebuild 1753
-MD5 457c489da37120586153b01d035d922a mod_ldap_userdir-1.1.1.ebuild 1748
 MD5 a71982915136fc470ae035ac6cb705ec ChangeLog 1598
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4-r1 73
+MD5 2c9d531cb0d54faa89c88213c28ecf26 files/1.1.4-r1/47_mod_ldap_userdir.conf 371
 MD5 650877f5bf9738cca23bbbeeb5bf87d9 files/47_mod_ldap_userdir.conf 375
 MD5 7c29da41475b54ecba7e1ca97c9d9bea files/digest-mod_ldap_userdir-1.1.1 73
 MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4 73
+MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4-r1 73
 MD5 b89b865212327846622772a687a363df files/digest-mod_ldap_userdir-1.1.5 73
-MD5 2c9d531cb0d54faa89c88213c28ecf26 files/1.1.4-r1/47_mod_ldap_userdir.conf 371
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1uutBXaUFmZvwyMRAlxQAJ9tWkcfqtHa24ugVKCE7+ayxZxoBgCgvohT
-9VY689zPYd0cV/a2oAnTt5Q=
-=3O9O
------END PGP SIGNATURE-----
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 457c489da37120586153b01d035d922a mod_ldap_userdir-1.1.1.ebuild 1748
+MD5 b01aacffc707a62b1b760d36af31191d mod_ldap_userdir-1.1.4-r1.ebuild 1268
+MD5 9fb7efc598ddb660e7881f12960b8137 mod_ldap_userdir-1.1.4.ebuild 1753
+MD5 459b340848d286db2391d1ecc99131ef mod_ldap_userdir-1.1.5.ebuild 1279

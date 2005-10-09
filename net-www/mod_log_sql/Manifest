@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0aaa0f5a0a95c1386dafbf090dc2edf3 mod_log_sql-1.98-r1.ebuild 2988
-MD5 90e440c9abfbc7e431036821771b8ff9 mod_log_sql-1.97.ebuild 3108
 MD5 9220a292f427fc38825f47296a06dcf4 ChangeLog 3788
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 27af64f8043404fe65256378ef0d848b mod_log_sql-1.100.ebuild 1632
-MD5 7a6e57cfb8898c79734fcf40291206cb files/digest-mod_log_sql-1.97 68
+MD5 29571a78277bd35aeb290d9489e826d8 files/1.100/10_mod_log_sql.conf 877
 MD5 390ab3cee83f80c19f7102a98e2ec510 files/10_mod_log_sql.conf 1287
 MD5 1224e8eacc308462c8a4eb86b12f6ac7 files/10_mod_log_sql_apache2.conf 1114
 MD5 86f476a1d8473e45132caa3f88a6a5bc files/digest-mod_log_sql-1.100 70
+MD5 7a6e57cfb8898c79734fcf40291206cb files/digest-mod_log_sql-1.97 68
 MD5 37cf2cb766664bd12fc8af5c9dd4444f files/digest-mod_log_sql-1.98-r1 68
 MD5 9081e8e239b5a17a817f21f7370afecc files/mod_log_sql-1.97-gentoo.patch 913
-MD5 29571a78277bd35aeb290d9489e826d8 files/1.100/10_mod_log_sql.conf 877
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1uxTBXaUFmZvwyMRArxcAJwOIN2MgFb7fJ1LZ/oU4L6mJ/X/zwCglQQc
-CpxcZPyAsyQvAfDYzbcaz90=
-=0/q0
------END PGP SIGNATURE-----
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 27af64f8043404fe65256378ef0d848b mod_log_sql-1.100.ebuild 1632
+MD5 90e440c9abfbc7e431036821771b8ff9 mod_log_sql-1.97.ebuild 3108
+MD5 0aaa0f5a0a95c1386dafbf090dc2edf3 mod_log_sql-1.98-r1.ebuild 2988

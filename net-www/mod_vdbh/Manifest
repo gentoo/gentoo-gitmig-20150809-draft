@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52eafc588f68fd5ceb544c8f7da6b333 mod_vdbh-1.0.3-r1.ebuild 769
-MD5 8557cc1befde7a54896009138801ef48 mod_vdbh-1.0.2.ebuild 856
-MD5 cbcc1ab3e65f57c510ebc001326d699b mod_vdbh-1.0.2-r1.ebuild 861
 MD5 7e57e35608cee74819ca97bc49f8ccf7 ChangeLog 1504
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 74385a6bc4fb0462e68c2905edafa613 mod_vdbh-1.0.3.ebuild 878
-MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2 65
-MD5 697732d8b1d327f07a0d56a17f021ae5 files/digest-mod_vdbh-1.0.3 64
-MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2-r1 65
-MD5 697732d8b1d327f07a0d56a17f021ae5 files/digest-mod_vdbh-1.0.3-r1 64
-MD5 5dde0d1eb90420a1ba31516e99151139 files/21_mod_vdbh.conf 576
 MD5 fdfebeb3c991150f5d17e7e05637a0f8 files/1.0.3-r1/21_mod_vdbh.conf 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeq8aI1lqEGTUzyQRAl7OAJ4lHDxpyiclEuK7XLBmbOhjmMUtsQCfUA0z
-vpMZzhhqnFSY5jiGtkwQVhY=
-=sciV
------END PGP SIGNATURE-----
+MD5 5dde0d1eb90420a1ba31516e99151139 files/21_mod_vdbh.conf 576
+MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2 65
+MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2-r1 65
+MD5 697732d8b1d327f07a0d56a17f021ae5 files/digest-mod_vdbh-1.0.3 64
+MD5 697732d8b1d327f07a0d56a17f021ae5 files/digest-mod_vdbh-1.0.3-r1 64
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 cbcc1ab3e65f57c510ebc001326d699b mod_vdbh-1.0.2-r1.ebuild 861
+MD5 8557cc1befde7a54896009138801ef48 mod_vdbh-1.0.2.ebuild 856
+MD5 52eafc588f68fd5ceb544c8f7da6b333 mod_vdbh-1.0.3-r1.ebuild 769
+MD5 74385a6bc4fb0462e68c2905edafa613 mod_vdbh-1.0.3.ebuild 878

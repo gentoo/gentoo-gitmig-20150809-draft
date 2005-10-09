@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd00de2aa1d22981a01aaf63fc70082e mod_auth_kerb-5.0_rc6.ebuild 1019
 MD5 7024ad263908c49daf6cb65673d91cf6 ChangeLog 1173
-MD5 862f1e12609fd86384b8bae627fab5cf mod_auth_kerb-4.11-r1.ebuild 864
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 305a2884f3d786ee45d11ca24a2f5859 mod_auth_kerb-4.11.ebuild 1079
 MD5 c9bbfd002811a674505b3844837a63ee files/11_mod_auth_kerb.conf 180
-MD5 05d525e36b7e86f564e3a15608eca8e4 files/mod_auth_kerb_register.patch 782
+MD5 0e8d91e6c3aa51e78b989b56d2b4028c files/4.11-r1/11_mod_auth_kerb.conf 362
+MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11 69
 MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11-r1 69
 MD5 738a52c466673dc44a3cd64f54d85390 files/digest-mod_auth_kerb-5.0_rc6 72
-MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11 69
-MD5 0e8d91e6c3aa51e78b989b56d2b4028c files/4.11-r1/11_mod_auth_kerb.conf 362
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1uMlBXaUFmZvwyMRArSlAJ9TM+d9/pispFC9MA8iTZmrSjTvpgCgtOYb
-IHey5DiFwHIWNGGe0z8tLXo=
-=+MtW
------END PGP SIGNATURE-----
+MD5 05d525e36b7e86f564e3a15608eca8e4 files/mod_auth_kerb_register.patch 782
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
+MD5 862f1e12609fd86384b8bae627fab5cf mod_auth_kerb-4.11-r1.ebuild 864
+MD5 305a2884f3d786ee45d11ca24a2f5859 mod_auth_kerb-4.11.ebuild 1079
+MD5 fd00de2aa1d22981a01aaf63fc70082e mod_auth_kerb-5.0_rc6.ebuild 1019
