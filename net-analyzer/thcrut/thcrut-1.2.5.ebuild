@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation, Copyright 2003 The Hackers Choice - http://www.thc.org
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.8 2005/07/19 16:36:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.9 2005/10/09 10:28:42 mkay Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libpcap
-	<net-libs/libnet-1.1
-	>=net-libs/libnet-1.0.2a-r3"
+	<net-libs/libnet-1.1"
 
 src_unpack() {
 	unpack ${A}
