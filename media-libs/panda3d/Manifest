@@ -1,9 +1,16 @@
-MD5 be429ac9228ce100c3455e8987bf64b6 metadata.xml 549
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4d877c68670ae4023436822be48a177f ChangeLog 670
-MD5 726ecb6787d4f315ed53e8749b92255a panda3d-1.0.5.ebuild 2693
-MD5 2166ca2eb790f47a2d9c7b2fc9f5bc98 panda3d-1.0.4.ebuild 1971
-MD5 afabf922d82cce22ed050446ba7185e2 files/panda3d-1.0.4-makepanda.patch 8796
-MD5 b2f365ceb058065d5719d1481218a9b2 files/digest-panda3d-1.0.5 67
-MD5 978479bc4bc45efcd9df722ffe0745e9 files/digest-panda3d-1.0.4 67
-MD5 cd54907a91e74458c4d817e4014adb0a files/panda3d-1.0.5-makepanda.patch 8711
 MD5 79f10078b2f9a3474518d533a2d86e97 files/50panda3d 216
+MD5 978479bc4bc45efcd9df722ffe0745e9 files/digest-panda3d-1.0.4 67
+MD5 afabf922d82cce22ed050446ba7185e2 files/panda3d-1.0.4-makepanda.patch 8796
+MD5 be429ac9228ce100c3455e8987bf64b6 metadata.xml 549
+MD5 2166ca2eb790f47a2d9c7b2fc9f5bc98 panda3d-1.0.4.ebuild 1971
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSTQCI1lqEGTUzyQRAgmpAJ97CG93vcmiin1lIUnOe6t5+j+tVgCfUWHR
+goGlqTwkVmA1sdEsJ6oPOm0=
+=mqop
+-----END PGP SIGNATURE-----
