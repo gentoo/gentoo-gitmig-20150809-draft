@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.0.ebuild,v 1.2 2005/09/18 17:13:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.1.ebuild,v 1.1 2005/10/09 23:42:08 leonardop Exp $
 
 inherit gnome2
 
@@ -26,7 +26,6 @@ RDEPEND=">=x11-libs/gtk+-2.5
 	>=x11-libs/libwnck-2.9.3
 	>=app-admin/system-tools-backends-1.1.3
 	>=gnome-base/gnome-desktop-2.11.1
-	dev-libs/libxslt
 	>=sys-apps/hal-0.5.3
 	>=sys-apps/dbus-0.34
 	>=media-libs/gstreamer-0.8.2
@@ -35,10 +34,11 @@ RDEPEND=">=x11-libs/gtk+-2.5
 	acpi? ( sys-power/acpid )"
 
 DEPEND="${RDEPEND}
+	dev-libs/libxslt
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
 	>=app-text/scrollkeeper-0.1.4
-	  app-text/gnome-doc-utils"
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 USE_DESTDIR="1"
@@ -47,7 +47,9 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 
 pkg_setup() {
-	G2CONF="$(use_enable ipv6) --disable-scrollkeeper --enable-flags"
+	G2CONF="--disable-scrollkeeper \
+		--enable-flags \
+		$(use_enable ipv6)"
 
 	if ! use apm && ! use acpi; then
 		G2CONF="${G2CONF} --disable-battstat"
