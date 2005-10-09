@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.19 2005/07/12 00:55:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.20 2005/10/09 00:41:36 dostrow Exp $
+
+*yaboot-1.3.13-r1 (09 Oct 2005)
+
+  09 Oct 2005; Daniel Ostrow <dostrow@gentoo.org> +files/yaboot-ofpath-device-tree.patch,
+  +yaboot-1.3.13-r1.ebuild:
+  Added patch for bug #103610. Thanks to Stefan Bruda <bruda@turing.ubishops.ca>
+  for pointing out the patch.
 
   12 Jul 2005; Joseph Jezak <josejx@gentoo.org> yaboot-1.3.11-r1.ebuild,
   yaboot-1.3.12-r1.ebuild, yaboot-1.3.13.ebuild:
