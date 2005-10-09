@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.9 2005/10/08 04:19:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.10 2005/10/09 04:47:51 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -313,7 +313,7 @@ toolchain-glibc_src_install() {
 		fi
 
 		# punt all the junk not needed by a cross-compiler
-		rm -rf "${D}"$(alt_prefix)/{bin,etc,$(get_libdir)/gconv,sbin,share}
+		rm -rf "${D}"$(alt_prefix)/{bin,etc,$(get_libdir)/{gconv,misc},sbin,share}
 	fi
 
 	if want_linuxthreads && want_nptl ; then
@@ -990,20 +990,21 @@ use_multilib() {
 setup_env() {
 	if is_crosscompile || tc-is-cross-compiler ; then
 		multilib_env ${CTARGET}
-
-		# We only install for this CTARGET on crosscompilers
-		MULTILIB_ABIS=${DEFAULT_ABI}
-		ABI=${DEFAULT_ABI}
-
-		# We need to export CFLAGS with abi information in them because
-		# glibc's configure script checks CFLAGS for some targets (like mips)
-		local VAR="CFLAGS_"${CTARGET//[-.]/_}
-		CFLAGS=${!VAR-"-O2 -pipe"}
 	fi
 
 	export ABI=${ABI:-${DEFAULT_ABI:-default}}
 
 	setup_flags
+
+	if is_crosscompile || tc-is-cross-compiler ; then
+		# We only install for this CTARGET on crosscompilers
+		MULTILIB_ABIS=${MULTILIB_ABIS:-DEFAULT_ABI}
+
+		# We need to export CFLAGS with abi information in them because
+		# glibc's configure script checks CFLAGS for some targets (like mips)
+		local VAR1=CFLAGS_${CTARGET//[-.]/_} VAR2=CFLAGS_${ABI}
+		export CFLAGS="${CFLAGS} ${!VAR1-${!VAR2--O2 -pipe}}"
+	fi
 }
 
 ### /ECLASS PUNTAGE ###
@@ -1166,7 +1167,6 @@ src_compile() {
 		unset OABI
 		return 0
 	fi
-	unset MLTEST
 
 	toolchain-glibc_src_compile
 }
@@ -1186,7 +1186,6 @@ src_test() {
 		unset OABI
 		return 0
 	fi
-	unset MLTEST
 
 	toolchain-glibc_src_test
 }
@@ -1205,7 +1204,6 @@ src_install() {
 		unset OABI
 		return 0
 	fi
-	unset MLTEST
 
 	# Handle stupid lib32 BS
 	unset OLD_LIBDIR
