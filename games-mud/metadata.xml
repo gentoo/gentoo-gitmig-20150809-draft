@@ -10,6 +10,9 @@
 	<longdescription lang="es">
 		La categoría games-mud contiene juegos de tipo MUD multijugador.
 	</longdescription>
+	<longdescription lang="ja">
+		games-mudカテゴリーには多人数用のダンジョン・ゲームが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De games-mud categorie bevat MUD (Multi-User Dungeon) spellen.
 	</longdescription>
