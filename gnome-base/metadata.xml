@@ -10,6 +10,9 @@
 	<longdescription lang="es">
 		La catagoría gnome-base contiene los paquetes principales de GNOME.
 	</longdescription>
+	<longdescription lang="ja">
+		gnome-baseカテゴリーにはGNOMEのコア・パッケージが含まれています。
+	</longdescription>
 	<longdescription lang="nl">
 		De gnome-base categorie bevat de basisonderdelen van de GNOME desktopomgeving.
 	</longdescription>
