@@ -5,13 +5,17 @@
 		The x11-misc category contains miscellaneous X11 applications which do
 		not belong elsewhere.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-misc enthält verschiedene X11-Applikationen die sich
+		nicht anderweitig einordnen lassen.
+	</longdescription>
 	<longdescription lang="es">
 		La categoría x11-misc contiene aplicaciones mixtas de X11 que no
 		pertenecen a ninguna otra categoría.
 	</longdescription>
-	<longdescription lang="de">
-		Die Kategorie x11-misc enthält verschiedene X11-Applikationen die sich
-		nicht anderweitig einordnen lassen.
+	<longdescription lang="ja">
+		x11-miscカテゴリーには他のカテゴリーに分類されなかった
+		多種多様なX11アプリケーションが含まれて>います。
 	</longdescription>
 	<longdescription lang="nl">
 		De x11-misc categorie bevat verschillende X11-applicaties die niet in andere
