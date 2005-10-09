@@ -4,12 +4,16 @@
 	<longdescription lang="en">
 		The www-client category contains world wide web clients.
 	</longdescription>
-	<longdescription lang="es">
-		La categoría www-client contiene clientes del world wide web (WWW).
-	</longdescription>
 	<longdescription lang="de">
 		Die Kategorie www-client enthält verschiedene Clientprogramme für
 		das WWW wie z.B. Browser, Download-Utilities und RSS-Aggregatoren.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría www-client contiene clientes del world wide web (WWW).
+	</longdescription>
+	<longdescription lang="ja">
+		www-clientカテゴリーには様々なワールド・ワイド・ウェブの
+		クライアントが含まれています。
 	</longdescription>
 	<longdescription lang="nl">
 		De www-client categorie bevat verschillende client voor het WWW zoals
