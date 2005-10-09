@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/ez-ipupdate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.12 2004/12/11 20:18:38 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.13 2005/10/09 22:48:07 sbriesen Exp $
+
+*ez-ipupdate-3.0.11_beta8-r2 (09 Oct 2005)
+
+  09 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/ez-ipupdate.initd, +metadata.xml,
+  +ez-ipupdate-3.0.11_beta8-r2.ebuild:
+  Switching to debian sources which contain all security fixes. Original
+  source is not available anymore. Ebuild completely rewritten, init-script
+  now handles more than one config. Solving bug #85158.
 
   11 Dec 2004; Sven Wegener <swegener@gentoo.org>
   ez-ipupdate-3.0.11_beta8-r1.ebuild:
