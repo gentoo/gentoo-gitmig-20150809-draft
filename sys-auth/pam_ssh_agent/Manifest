@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 286a9dd49c3aa717290a8ead91079762 pam_ssh_agent-0.2.ebuild 941
-MD5 4e3246c5b7463cf1bef5e6ad8679825e ChangeLog 1444
-MD5 24fdd5b3ee7531626d835a563f7af490 pam_ssh_agent-0.1.ebuild 806
-MD5 a8cd1dda22d8abb57607d6a9120cbdee metadata.xml 306
-MD5 b282eeda6089e3c9c9b22a04b3b9c529 pam_ssh_agent-0.2-r1.ebuild 918
-MD5 1d5291ee53a193ca3c632a37f7b3b27f files/pam_ssh_agent-0.2-openpam.patch 984
+MD5 b3bbb4c99a5eaeb66b1779f605ddb3e9 ChangeLog 1560
 MD5 fc8f4b2dfc03ece3f7da24ed6b8258fa files/digest-pam_ssh_agent-0.1 68
 MD5 d9ee254275c299e8f21bdcb01001bbc1 files/digest-pam_ssh_agent-0.2 68
 MD5 d9ee254275c299e8f21bdcb01001bbc1 files/digest-pam_ssh_agent-0.2-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyuQu1ZcsMnZjRyIRAiaHAJ41wcRmutLcr/iLs4T7+z1oN2fuMwCeIBVy
-vCwM2u5wuM6jIhlm0lnEbXA=
-=/QEs
------END PGP SIGNATURE-----
+MD5 1d5291ee53a193ca3c632a37f7b3b27f files/pam_ssh_agent-0.2-openpam.patch 984
+MD5 2664d2eb9f4c01e7f2ecf0e025cece86 metadata.xml 368
+MD5 24fdd5b3ee7531626d835a563f7af490 pam_ssh_agent-0.1.ebuild 806
+MD5 b282eeda6089e3c9c9b22a04b3b9c529 pam_ssh_agent-0.2-r1.ebuild 918
+MD5 286a9dd49c3aa717290a8ead91079762 pam_ssh_agent-0.2.ebuild 941
