@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2004g.ebuild,v 1.9 2005/10/07 16:55:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2004g.ebuild,v 1.10 2005/10/09 21:20:35 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	yes | make lnp EXTRACFLAGS="${CFLAGS}" SSLTYPE=none || die
+	yes | make slx EXTRACFLAGS="${CFLAGS}" SSLTYPE=none || die
 }
 
 src_install() {
