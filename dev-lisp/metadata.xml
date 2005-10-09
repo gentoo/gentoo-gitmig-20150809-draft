@@ -13,6 +13,10 @@
 		La categoría dev-lisp contiene librerias y utilidades referentes al
 		lenguaje de programación Lisp.
 	</longdescription>
+	<longdescription lang="ja">
+		dev-lisp カテゴリーにはLispプログラミング言語に関連したライブラリーと
+		ユーティリティが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De dev-lisp categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal Lisp.
