@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mbrowse
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.8 2005/07/08 13:35:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/ChangeLog,v 1.9 2005/10/09 12:12:11 mkay Exp $
+
+  09 Oct 2005; <mkay@gentoo.org> mbrowse-0.3.1.ebuild:
+  Fixing gtk dependency (bug #108103)
 
   08 Jul 2005; David Holm <dholm@gentoo.org> mbrowse-0.3.1.ebuild:
   Added to ~ppc.

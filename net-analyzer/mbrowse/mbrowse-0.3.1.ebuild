@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.3.1.ebuild,v 1.9 2005/07/08 13:35:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.3.1.ebuild,v 1.10 2005/10/09 12:12:11 mkay Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp
-	>=x11-libs/gtk+-1.2.10"
+	=x11-libs/gtk+-1.2*"
 
 src_unpack() {
 	unpack ${A}
