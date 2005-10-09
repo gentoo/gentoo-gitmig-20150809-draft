@@ -12,6 +12,9 @@
 		Die Kategorie sys-block enthält Pakete für die Arbeit mit Blockgeräten
 		(Festplatten, Disketten, CD-ROMs etc.).
 	</longdescription>
+	<longdescription lang="ja">
+		sys-blockカテゴリにはブロックデバイスと使用パッケージが含まれます。
+	</longdescription>
 	<longdescription lang="nl">
 		De sys-block categorie bevat gereedschappen voor het omgaan met blok-apparaten
 		zoals harde schijven, diskettes en CD-ROM's.
