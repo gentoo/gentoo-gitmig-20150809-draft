@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.255 2005/10/02 17:14:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.256 2005/10/09 06:58:21 gongloo Exp $
+
+  09 Oct 2005; <gongloo@gentoo.org> +files/qt-3.3.5-macos.patch,
+  qt-3.3.5.ebuild:
+  macos patch fixes for qt-3.3.5
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> qt-3.3.4-r8.ebuild:
   Mark 3.3.4-r8 stable on ia64
