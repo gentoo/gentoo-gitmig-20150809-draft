@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.43 2005/10/08 10:10:01 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.44 2005/10/09 18:47:34 peitolm Exp $
+
+  09 Oct 2005; Colin Morey <peitolm@gentoo.org> exim-4.54.ebuild:
+  missing DEPEND fix bug #108605
 
   02 Oct 2005; Jason Wever <weeve@gentoo.org> exim-4.52.ebuild:
   Added ~sparc keyword.
