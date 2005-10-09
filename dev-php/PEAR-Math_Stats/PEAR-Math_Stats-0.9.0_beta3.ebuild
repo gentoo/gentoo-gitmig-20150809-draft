@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/PEAR-Math_Stats-0.9.0_beta3.ebuild,v 1.1 2005/09/07 08:08:03 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Math_Stats/PEAR-Math_Stats-0.9.0_beta3.ebuild,v 1.2 2005/10/09 09:01:49 sebastian Exp $
 
 inherit php-pear
 
@@ -11,3 +11,4 @@ LICENSE="PHP"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
+S="${WORKDIR}/Math_Stats-0.9.0beta3"
