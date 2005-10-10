@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bab804783fb587a6bdccf7f00fd7b46e ChangeLog 2829
-MD5 7f2a1b5f0f1cdd039e311f3b35f6ffec opensp-1.5-r1.ebuild 1643
-MD5 4bb7ed53fa5d16755f7e9267c0ec8ea9 opensp-1.5.1.ebuild 1446
+MD5 906fd5d4b57807c4dce0b176a307aa24 ChangeLog 2918
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 7f2a1b5f0f1cdd039e311f3b35f6ffec opensp-1.5-r1.ebuild 1643
+MD5 fa24641560a22a06bab86d078bd3d745 opensp-1.5.1.ebuild 1446
 MD5 d13d9dd0ed8278bf6f63f6178ea795af files/digest-opensp-1.5-r1 63
 MD5 f2c6fce376b1b43840245b32f1ba23d6 files/digest-opensp-1.5.1 65
 MD5 2493e97d55dbdcd92b9275915b8b8286 files/opensp-1.5-gcc33.patch 1857
 MD5 28c4615619978171db28bf0060eb6dc7 files/opensp-1.5-gcc34.patch 263
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCy6uKTM53OX+9xmMRAuWVAJwN9mrYVcZhx0MWuRZ9qysGP+pIaACfWtFT
-3UJJxdsFavyzdWfQHlgG5SE=
-=+T/2
------END PGP SIGNATURE-----
