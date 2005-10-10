@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 248749fd3d10563ad9ef71d466217a32 ChangeLog 1360
+MD5 41577e0829bb277f27070394385fb239 ChangeLog 1545
 MD5 31ae0c6dfb87e80f757e11b284ce19f1 files/digest-loop-aes-3.0b 67
 MD5 fea513cc65c067262f379ffa404834c7 files/digest-loop-aes-3.0c 67
 MD5 083cae12c968ae38da2a2a89c57c3a7e files/digest-loop-aes-3.0d 67
+MD5 eb6b569a2c08e28b28f553acad7a2c5b files/digest-loop-aes-3.1b 67
 MD5 6cc8146043588a78178cdddf5633f164 loop-aes-3.0b.ebuild 1393
 MD5 2c3b295881f082348e2a3891237ea8f9 loop-aes-3.0c.ebuild 1564
 MD5 78070721315578b190079387314a04ee loop-aes-3.0d.ebuild 1569
+MD5 bba4a71c8c286002a112adac11035f8f loop-aes-3.1b.ebuild 1565
 MD5 6d924ebdbe12162835ab1c1ea584636e metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1Rz6I1lqEGTUzyQRAvaHAKCcETNeeRkJm3w5w4aO+8jHJULAQACcDX7/
-BXmkM+FYukBnkvtD0z44bBQ=
-=BPFr
------END PGP SIGNATURE-----
