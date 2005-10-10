@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0-r2.ebuild,v 1.2 2005/09/29 18:17:10 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0-r2.ebuild,v 1.3 2005/10/10 23:13:39 humpback Exp $
 
 #RESTRIC="nomirror"
 DESCRIPTION="Some nice themes for the GDM Greeter"
@@ -37,7 +37,6 @@ SRC_URI="${THEME_URI}GDM-300-lantueno.tar.gz
 	${THEME_URI}GDM-DumbCloud.tar.gz
 	${THEME_URI}GDM-Dune.tar.gz
 	${THEME_URI}GDM-Eli-Theme.zip
-	${THEME_URI}GDM-Emo-Blue.tar.gz
 	${THEME_URI}GDM-Falling-Angel.tar.gz
 	${THEME_URI}GDM-Flame.tar.gz
 	${THEME_URI}GDM-Flowers.tar.gz
