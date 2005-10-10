@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 c51e0cbb9443921a0ae4abb843de8073 initng-0.3.0.ebuild 852
-MD5 ffde518ba51da6650947f36b7f2b0fe8 initng-9999.ebuild 1105
-MD5 fc1d9f5111c5d9fbcdd8978f9825396d initng-0.3.1.ebuild 1021
-MD5 9f4976bd8ad9256d369f9a5dcbc50843 ChangeLog 3423
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-initng-9999 0
-MD5 41d8b07d2dbee157430d7ad2fe5ea90e files/digest-initng-0.3.0 65
+MD5 d6a28769220595bfa149278ccf8f9406 ChangeLog 3549
 MD5 6cef60eedc984421cfe296cb3767e298 files/digest-initng-0.3.1 65
+MD5 19d26cbd2417625c976f9eaf2e65d78b files/digest-initng-0.3.2 65
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-initng-9999 0
+MD5 fc1d9f5111c5d9fbcdd8978f9825396d initng-0.3.1.ebuild 1021
+MD5 ef505e07ef4343dbb64618b11dd8f1bf initng-0.3.2.ebuild 1021
+MD5 ffde518ba51da6650947f36b7f2b0fe8 initng-9999.ebuild 1105
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRIYdgIKl8Uu19MoRAkfKAJ9Xv0dAvZx0Kf/j60T4WHPFylJ7wACfRtdr
-eqxR918cdpSEwNAzxN4qaGw=
-=qap5
+iD8DBQFDSnd+gIKl8Uu19MoRAiZVAJ9akrOgh2oXDpjUK/GPCDmQmAvWxgCfSLw8
+P4lxvUDCcrnz+wkwQQJCKRA=
+=OLjq
 -----END PGP SIGNATURE-----
