@@ -17,7 +17,7 @@ checkconfig() {
 start() {
         checkconfig || return 1
         ebegin "Starting Sensor Agent"
-        start-stop-daemon --start -c sguil --pidfile /var/run/sguil/sensor.pid \
+        start-stop-daemon --start -c sguil -m --pidfile /var/run/sguil/sensor.pid \
 			--quiet --exec /usr/bin/sensor_agent.tcl -- -D -c "/etc/sguil/sensor_agent.conf">/dev/null 2>&1
         eend $?
 }
