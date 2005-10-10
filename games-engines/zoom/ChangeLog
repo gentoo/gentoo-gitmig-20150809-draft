@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/zoom
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.8 2005/09/02 19:40:44 hansmi Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/ChangeLog,v 1.9 2005/10/10 15:05:01 vapier Exp $
+
+*zoom-1.0.3 (10 Oct 2005)
+
+  10 Oct 2005; Mike Frysinger <vapier@gentoo.org> +zoom-1.0.3.ebuild:
+  Version bump #108580 by Alan Swanson.
 
   02 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> zoom-1.0.2.ebuild:
   Stable on ppc.

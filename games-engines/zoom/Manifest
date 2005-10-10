@@ -1,6 +1,18 @@
-MD5 b581cb11e3d3bf8528dbfe24196aad8b zoom-1.0.2.ebuild 854
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0b249de031fd4da5025cb1f4e2453916 ChangeLog 963
-MD5 25494f1eb4d61a63715c2d86001383ea zoom-1.0.1.ebuild 753
-MD5 6699ace441676d52320311c918a35da5 files/digest-zoom-1.0.2 63
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d4163610973dbfed80cc689065e80f4d ChangeLog 1101
 MD5 274d0aee2efb7262d8e4a03d7f7005c7 files/digest-zoom-1.0.1 62
+MD5 6699ace441676d52320311c918a35da5 files/digest-zoom-1.0.2 63
+MD5 3a375c20ba41bed38aa1b2b1892ec41b files/digest-zoom-1.0.3 63
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 25494f1eb4d61a63715c2d86001383ea zoom-1.0.1.ebuild 753
+MD5 b581cb11e3d3bf8528dbfe24196aad8b zoom-1.0.2.ebuild 854
+MD5 39d0f8b59197d9e6f4eb340c8de83ad9 zoom-1.0.3.ebuild 850
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSoOYgIKl8Uu19MoRAo02AJ4ki37WSXujh0oRFxmTBFaqxkV+2wCdHTD4
+++3uQ2tCkcaE+0OuaGOxfYk=
+=SbvQ
+-----END PGP SIGNATURE-----
