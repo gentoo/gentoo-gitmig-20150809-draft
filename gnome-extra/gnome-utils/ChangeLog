@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.103 2005/10/10 04:58:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.104 2005/10/10 07:32:19 hardave Exp $
+
+  10 Oct 2005; Hardave Riar <hardave@gentoo.org>
+  gnome-utils-2.10.1-r1.ebuild:
+  Stable on mips.
 
 *gnome-utils-2.12.1 (10 Oct 2005)
 
