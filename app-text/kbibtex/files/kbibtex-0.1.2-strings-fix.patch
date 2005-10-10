@@ -1,0 +1,11 @@
+diff -Naur kbibtex-0.1.2_orig/src/bibtexstring.cpp kbibtex-0.1.2/src/bibtexstring.cpp
+--- kbibtex-0.1.2_orig/src/bibtexstring.cpp	2005-09-30 17:12:30.000000000 +0200
++++ kbibtex-0.1.2/src/bibtexstring.cpp	2005-09-30 17:12:48.000000000 +0200
+@@ -112,6 +112,7 @@
+             else result.append( "\"" );
+ 
+             result.append( " }" );
++            return result;
+         }
+         break;
+     case BibTeXFile::formatXML:

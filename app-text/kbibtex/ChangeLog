@@ -1,6 +1,13 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.1 2005/09/23 12:28:11 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.2 2005/10/10 09:33:54 cryos Exp $
+
+*kbibtex-0.1.2-r1 (10 Oct 2005)
+
+  10 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/kbibtex-0.1.2-strings-fix.patch, +kbibtex-0.1.2-r1.ebuild:
+  Patch applied to fix @string element bug, thanks to Thomas Fischer
+  <fischer@unix-ag.uni-kl.de> for the patch, bug 107753.
 
 *kbibtex-0.1.2 (23 Sep 2005)
 
