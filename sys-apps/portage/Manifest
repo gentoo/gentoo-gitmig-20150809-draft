@@ -10,12 +10,12 @@ MD5 e78f188ee88c7cb5b3ee471749004a79 files/digest-portage-2.0.53_rc5 71
 MD5 87eff9b432487777e55298413c33ab4a files/digest-portage-2.1.0_alpha20050718 80
 MD5 e57748276505fab96a2ab4e64de45366 metadata.xml 220
 MD5 c292522590607e4bae9337f1097e194f portage-2.0.51.22-r3.ebuild 5708
-MD5 2c8c946b6259a5432bcd08203655bb68 portage-2.0.53_rc5.ebuild 3689
+MD5 bfbb7a5429a13ce57570b5b7ae425349 portage-2.0.53_rc5.ebuild 3624
 MD5 c7250b47d02fe3891edabf2a687dc0ce portage-2.1.0_alpha20050718.ebuild 2573
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSgD9xvWNPsk/ZP4RAqXeAJ49Pr/V2TcOXmOEEplJz/fsP4xavACgrdKH
-koLdtxcUunUOZTCg0E8qHjQ=
-=KOun
+iD8DBQFDSgIAxvWNPsk/ZP4RAkymAJ9fuJt/+jSmtyX7/hgBjfAsiy2UiQCfRJG/
+iOIMhLvQXVQZi5B6dmi72tM=
+=pSRH
 -----END PGP SIGNATURE-----
