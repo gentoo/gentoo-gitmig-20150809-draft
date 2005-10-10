@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.18 2005/09/07 21:15:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.19 2005/10/10 14:01:49 ticho Exp $
+
+*mpd-svn-20051009 (10 Oct 2005)
+
+  10 Oct 2005; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20051009.ebuild:
+  Snapshot update. Upstream fixed configure.ac tests to use .
 
 *mpd-svn-20050907 (07 Sep 2005)
 

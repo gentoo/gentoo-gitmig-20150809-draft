@@ -3,9 +3,10 @@ Hash: SHA1
 
 MD5 1e7cf3dbea0c71acfd3656c55aa1870a mpd-svn-20050731.ebuild 3943
 MD5 51fc9629c4887379b64eb34ff41aeac4 mpd-svn-20050601.ebuild 3943
+MD5 39c2a66ba6d81e6b63a3aaa9ed58223c mpd-svn-20051009.ebuild 3965
 MD5 a832e52d5789026d84611787edddf804 mpd-svn-20050408-r1.ebuild 3945
 MD5 0632b570f63947b63e6dcfaf7bf15d0f mpd-svn-20050907.ebuild 3965
-MD5 a9cf69bfa9a199f1944f67fd1e9eb63c ChangeLog 4155
+MD5 901d95ed9d712191bfcaba5b87909860 ChangeLog 4325
 MD5 28ed49040b6ddc36def2c2a536394b37 metadata.xml 251
 MD5 4e971b7fca427a0ee25dae15d1dd1697 mpd-svn-20050823.ebuild 3965
 MD5 c5dbcf547c18db7bc2f46dfcc877190b files/digest-mpd-svn-20050408-r1 69
@@ -14,11 +15,12 @@ MD5 1e90c2bf70a37aa60def8f6570621667 files/digest-mpd-svn-20050601 69
 MD5 f401f6ffc23b28ea41f472eb3d2ef6c0 files/digest-mpd-svn-20050731 69
 MD5 e539ac321bff94e6f20dfe3c4ae41a71 files/digest-mpd-svn-20050823 69
 MD5 c7ffbfef29f971631b7390ec47b70769 files/digest-mpd-svn-20050907 69
+MD5 5d7578fe5b1a752eac4f981a7c53c4bf files/digest-mpd-svn-20051009 69
 MD5 02158d2f5c411a78b65c7f692fb81405 files/mpd.pidfile.rc6 717
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDH1ibQlM6RnzZP+IRAsJDAJ9nkZYGSAVtbf9Ezvhqt0Gn/qLuiwCgoin5
-SvQL9oQ6A5r0VMx0a6wbQ+A=
-=vXkQ
+iD8DBQFDSnRnQlM6RnzZP+IRAsQRAJ99rs/Y+ryGPSP6CtORsRV3ZvJHCACcDREl
+CuOFPOQL4aVwWXzkd5VhWoc=
+=xks0
 -----END PGP SIGNATURE-----
