@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/scmxx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/scmxx/ChangeLog,v 1.4 2005/07/21 20:44:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/scmxx/ChangeLog,v 1.5 2005/10/10 19:18:08 mrness Exp $
+
+*scmxx-0.8.1 (10 Oct 2005)
+
+  10 Oct 2005; Alin Nastac <mrness@gentoo.org> -scmxx-0.6.4.ebuild,
+  -scmxx-0.7.4.ebuild, scmxx-0.7.5.ebuild, scmxx-0.8.0.ebuild,
+  +scmxx-0.8.1.ebuild:
+  Remove INSTALL from docs. Remove obsolete versions. Mark ver 0.8.0 as stable
+  on x86. Version bump (#108297).
 
 *scmxx-0.8.0 (21 Jul 2005)
 

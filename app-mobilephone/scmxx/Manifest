@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eea654fd1d6f9e4d51c975b931b8c1be scmxx-0.7.5.ebuild 642
-MD5 818889c4322b699026deb597c2fd4147 scmxx-0.6.4.ebuild 635
-MD5 cb1b0f1ed97085ff178773fbdbbdd17c scmxx-0.8.0.ebuild 655
-MD5 845ddeb2b7e38f4e6f680cdb64e06490 scmxx-0.7.4.ebuild 643
-MD5 fa8633560fccab60f2a229fecdb5678a ChangeLog 1422
+MD5 ba729a9621ca5c31531b65f5c2c4a259 scmxx-0.7.5.ebuild 656
+MD5 057a020e4c5edcc9641204933a4a07f4 scmxx-0.8.0.ebuild 668
+MD5 b97cbf492c246f22a47f6be23c098207 ChangeLog 1718
 MD5 8e1fd49c29f85eea8da87d6e7de450c6 metadata.xml 165
-MD5 1eef12ab94ebfa087a3c6a72bafb781c files/digest-scmxx-0.6.4 63
-MD5 c2d3d5089aa744093a0db55255a1f689 files/digest-scmxx-0.7.4 137
+MD5 4064d7ae779a65bc5e5300fb8b25e92d scmxx-0.8.1.ebuild 669
 MD5 4841a129968f6eb4e7edbf7c190fa534 files/digest-scmxx-0.7.5 64
 MD5 6743d3a18bcb5403b3f5e19ed582a2d5 files/digest-scmxx-0.8.0 64
+MD5 e29687d26cfe90ce3dac133667b07094 files/digest-scmxx-0.8.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFC4AlRNSP4Vda7IdsRAqh2AJ9jIc3ZADLmOPz8nePOY7BF0qmIhACfYhLg
-TZrJCUiRmX9IWO4K3ySgI8I=
-=DIYo
+iD8DBQFDSr6ONSP4Vda7IdsRAt6LAJ43ufcKWnM5BI8yOqtVRdg+AUKVCwCcCy7e
+snSQUronvJ6ZMGVvEoYOvRY=
+=NNWy
 -----END PGP SIGNATURE-----
