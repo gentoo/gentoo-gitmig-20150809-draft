@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.41 2005/10/09 04:40:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.42 2005/10/10 21:18:15 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -553,19 +553,18 @@ get_libname() {
 # a crosscompiler (and thus they aren't set in the profile)
 multilib_env() {
 	local CTARGET=${1:-${CTARGET}}
-	local CTARGET_post=${CTARGET#*-}
 
 	case ${CTARGET} in
 		x86_64*)
 			export CFLAGS_x86=${CFLAGS_x86--m32}
-			export CHOST_x86=i686-${CTARGET_post}
-			export CTARGET_x86=i686-${CTARGET_post}
+			export CHOST_x86=${CTARGET/x86_64/i686}
+			export CTARGET_x86=${CHOST_x86}
 			export CDEFINE_x86="__i386__"
 			export LIBDIR_x86="lib"
 
 			export CFLAGS_amd64=${CFLAGS_amd64--m64}
-			export CHOST_amd64=x86_64-${CTARGET_post}
-			export CTARGET_amd64=x86_64-${CTARGET_post}
+			export CHOST_amd64=${CTARGET}
+			export CTARGET_amd64=${CTARGET_amd64}
 			export CDEFINE_amd64="__x86_64__"
 			export LIBDIR_amd64="lib64"
 
@@ -574,20 +573,20 @@ multilib_env() {
 		;;
 		mips64*)
 			export CFLAGS_o32=${CFLAGS_o32--mabi=32}
-			export CHOST_o32=mips-${CTARGET_post}
-			export CTARGET_o32=mips-${CTARGET_post}
+			export CHOST_o32=${CTARGET/mips64/mips}
+			export CTARGET_o32=${CHOST_o32}
 			export CDEFINE_o32="_MIPS_SIM == _ABIO32"
 			export LIBDIR_o32="lib"
 
 			export CFLAGS_n32=${CFLAGS_n32--mabi=n32}
-			export CHOST_n32=mips64-${CTARGET_post}
-			export CTARGET_n32=mips64-${CTARGET_post}
+			export CHOST_n32=${CTARGET}
+			export CTARGET_n32=${CHOST_n32}
 			export CDEFINE_n32="_MIPS_SIM == _ABIN32"
 			export LIBDIR_n32="lib32"
 
 			export CFLAGS_n64=${CFLAGS_n64--mabi=64}
-			export CHOST_n64=mips64-${CTARGET_post}
-			export CTARGET_n64=mips64-${CTARGET_post}
+			export CHOST_n64=${CTARGET}
+			export CTARGET_n64=${CHOST_n64}
 			export CDEFINE_n64="_MIPS_SIM == _ABI64"
 			export LIBDIR_n64="lib64"
 
@@ -596,14 +595,14 @@ multilib_env() {
 		;;
 		powerpc64*)
 			export CFLAGS_ppc=${CFLAGS_ppc--m32}
-			export CHOST_ppc=powerpc-${CTARGET_post}
-			export CTARGET_ppc=powerpc-${CTARGET_post}
+			export CHOST_ppc=${CTARGET/powerpc64/powerpc}
+			export CTARGET_ppc=${CHOST_ppc}
 			export CDEFINE_ppc="!__powerpc64__"
 			export LIBDIR_ppc="lib"
 
 			export CFLAGS_ppc64=${CFLAGS_ppc64--m64}
-			export CHOST_ppc64=powerpc64-${CTARGET_post}
-			export CTARGET_ppc64=powerpc64-${CTARGET_post}
+			export CHOST_ppc64=${CTARGET}
+			export CTARGET_ppc64=${CHOST_ppc64}
 			export CDEFINE_ppc64="__powerpc64__"
 			export LIBDIR_ppc64="lib64"
 
@@ -612,14 +611,14 @@ multilib_env() {
 		;;
 		sparc64*)
 			export CFLAGS_sparc32=${CFLAGS_sparc32--m32}
-			export CHOST_sparc32=sparc-${CTARGET_post}
-			export CTARGET_sparc32=sparc-${CTARGET_post}
+			export CHOST_sparc32=${CTARGET/sparc64/sparc}
+			export CTARGET_sparc32=${CHOST_sparc32}
 			export CDEFINE_sparc32="!__arch64__"
 			export LIBDIR_sparc32="lib"
 
 			export CFLAGS_sparc64=${CFLAGS_sparc64--m64}
-			export CHOST_sparc64=sparc64-${CTARGET_post}
-			export CTARGET_sparc64=sparc64-${CTARGET_post}
+			export CHOST_sparc64=${CTARGET}
+			export CTARGET_sparc64=${CHOST_sparc64}
 			export CDEFINE_sparc64="__arch64__"
 			export LIBDIR_sparc64="lib64"
 
