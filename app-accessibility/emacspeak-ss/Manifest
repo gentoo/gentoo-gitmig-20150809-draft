@@ -1,5 +1,15 @@
-MD5 aac0d410dd510b4f4dd3693faa48ba13 ChangeLog 825
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b7be8127a01463301c650da45054ab6b emacspeak-ss-1.9.1.ebuild 822
-MD5 206e78b71a6c2fd545e1667ab105728e metadata.xml 229
-MD5 34acab277b2c64c19f4cdb5fa7f0b5e2 files/digest-emacspeak-ss-1.9.1 69
+MD5 68811835a8756615056df39f35e15ab9 metadata.xml 805
+MD5 ed54b7f62d55083c7f44299435c573e3 ChangeLog 942
 MD5 ae296ee62005f5d9624f59cc47f78716 files/gentoo-apollo-fix.patch 1003
+MD5 34acab277b2c64c19f4cdb5fa7f0b5e2 files/digest-emacspeak-ss-1.9.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSpWSFdQwWVoAgN4RAsGEAJ4tdGrsxkGnmdZvQ5AQ+3FygBkaAwCeMvJ3
+sSJcZ1c7mzkd2oU9nwsuqC4=
+=ykOK
+-----END PGP SIGNATURE-----
