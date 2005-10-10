@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.9 2005/10/10 12:13:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.10 2005/10/10 20:33:46 ranger Exp $
+
+  10 Oct 2005; Brent Baude <ranger@gentoo.org> urt-3.1b-r1.ebuild:
+  Marking urt ~ppc64 for bug 107346
 
   10 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> urt-3.1b-r1.ebuild:
   Use the right gcc for current arch, so that it work with newer compiler-config.
