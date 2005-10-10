@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.6.2.ebuild,v 1.11 2005/10/10 07:54:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.6.2.ebuild,v 1.12 2005/10/10 11:40:01 flameeyes Exp $
 
-inherit versionator gnome2
+inherit versionator gnome2 eutils
 
 MY_P=${P/lib/}
 MY_PN=${PN/lib/}
@@ -41,3 +41,11 @@ ELTCONF="--reverse-deps"
 
 DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 G2CONF="${G2CONF} $(use_enable static)"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-fbsd.patch
+}
+
