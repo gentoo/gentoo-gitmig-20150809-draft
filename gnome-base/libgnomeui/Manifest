@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1e523a432a7b626b7284a1bd440a844f libgnomeui-2.10.1.ebuild 1492
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 09879afddd9229b85e15aa019616d248 ChangeLog 11148
 MD5 ffcb9cab9748d63cbb564fec4117c859 libgnomeui-2.10.0.ebuild 1152
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 cbccf9f886aadc5dd6e32e506753f989 libgnomeui-2.10.1.ebuild 1492
 MD5 f3a74d0873a33eb482a61036f12403c4 libgnomeui-2.12.0.ebuild 1456
-MD5 68b30b0cc85f7ab51a950b1867abcb1b ChangeLog 11055
-MD5 4becd0494324e4349c245e2b95b0f663 files/libgnomeui-2.8.0-ditch_ancient_pics.patch 505
-MD5 f0706d5b94c45e0015d0da77c53fb66d files/digest-libgnomeui-2.12.0 71
 MD5 de45532214b2589e59dfdafcc4bfaea6 files/digest-libgnomeui-2.10.0 71
+MD5 f0706d5b94c45e0015d0da77c53fb66d files/digest-libgnomeui-2.12.0 71
+MD5 4becd0494324e4349c245e2b95b0f663 files/libgnomeui-2.8.0-ditch_ancient_pics.patch 505
 MD5 176f244e66b8eac4b53a2aa9fa48cce9 files/digest-libgnomeui-2.10.1 71
 MD5 675ca0714915ab850a823d726c0c5f4c files/libgnomeui-2.10.1-gentoo.patch 3902
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNXNgIKl8Uu19MoRAgb+AJ9BS0VbySYOL2mowk8GNsSMvBYi+gCcCfZE
-SXAztnMNWvspA30DvsdEhow=
-=BKiw
------END PGP SIGNATURE-----
