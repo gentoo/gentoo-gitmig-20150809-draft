@@ -1,24 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4667f33dc876413b4dd989f0d9381bb7 gnome-utils-2.8.1.ebuild 1141
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 e16a399c5a5f9f0112e62cdb86da13ab gnome-utils-2.10.1-r1.ebuild 1244
-MD5 be8ec9f791474d3a2d9814ceecfb20b7 ChangeLog 12662
-MD5 22b4e2b0e138aab39cb04137d1c9f55e gnome-utils-2.12.0.ebuild 1059
-MD5 8c33499309a1ece4481fb6d161058609 gnome-utils-2.10.0.ebuild 1193
-MD5 62292c35e7929905ad1e54d64faf457f gnome-utils-1.4.1.2.ebuild 1770
-MD5 7f6c4dde21c087f0af77c8374ca6da31 files/gnome-utils-2.6.2-gfloppymajor.patch 933
-MD5 5d6009bce57d48f0dea3ded00d2c1d12 files/digest-gnome-utils-2.12.0 72
-MD5 536b1103c2a53ca7485697352a308809 files/digest-gnome-utils-2.10.0 72
-MD5 f72b26ca184501563846835353e2750e files/gnome-utils-2.10.1-gdict_pref.patch 6856
-MD5 caf01bac7da4888355b1c173652d2525 files/digest-gnome-utils-2.10.1-r1 72
-MD5 41af2c6a875d5a02609b98998a2cf614 files/digest-gnome-utils-2.8.1 71
+MD5 fa4e2755c88c4294daf0f2b46e494916 ChangeLog 12827
 MD5 5ed644c587beafb4c4a1461bbe322a1d files/digest-gnome-utils-1.4.1.2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLECQJrHF4yAQTrARAouuAKCVGei+FRu2UdPQzxZsEGYnVtzpCQCeKHb/
-yUiISH41+Umya1WqMO6QDhw=
-=ypeZ
------END PGP SIGNATURE-----
+MD5 536b1103c2a53ca7485697352a308809 files/digest-gnome-utils-2.10.0 72
+MD5 caf01bac7da4888355b1c173652d2525 files/digest-gnome-utils-2.10.1-r1 72
+MD5 9b3eac0bc78d177675af9a85728b1dc5 files/digest-gnome-utils-2.12.1 72
+MD5 f72b26ca184501563846835353e2750e files/gnome-utils-2.10.1-gdict_pref.patch 6856
+MD5 62292c35e7929905ad1e54d64faf457f gnome-utils-1.4.1.2.ebuild 1770
+MD5 8c33499309a1ece4481fb6d161058609 gnome-utils-2.10.0.ebuild 1193
+MD5 e16a399c5a5f9f0112e62cdb86da13ab gnome-utils-2.10.1-r1.ebuild 1244
+MD5 e6042e58b3bd26539db98046d5eaf679 gnome-utils-2.12.1.ebuild 1058
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
