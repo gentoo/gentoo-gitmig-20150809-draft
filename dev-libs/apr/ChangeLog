@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.42 2005/09/29 21:14:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.43 2005/10/10 20:57:00 kugelfang Exp $
+
+  10 Oct 2005; Danny van Dyk <kugelfang@gentoo.org> apr-0.9.6-r4.ebuild:
+  Marked ~ppc-macos.
 
   29 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> apr-0.9.6-r3.ebuild:
   Stable on sh.
