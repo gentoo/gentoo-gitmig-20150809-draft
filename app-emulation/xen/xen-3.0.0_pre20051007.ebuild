@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20051007.ebuild,v 1.1 2005/10/08 12:32:33 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20051007.ebuild,v 1.2 2005/10/10 13:36:14 chrb Exp $
 
 inherit mount-boot
 
@@ -29,6 +29,13 @@ DEPEND="sys-apps/iproute2
 	)"
 
 S="${WORKDIR}/xen-unstable-${DATE}"
+
+src_unpack() {
+	unpack ${A}
+	# hardened flags
+	echo "CFLAGS += -nopie -fno-stack-protector -fno-stack-protector-all" \
+		>> ${S}/xen/arch/x86/Rules.mk
+}
 
 src_compile() {
 	local myopt

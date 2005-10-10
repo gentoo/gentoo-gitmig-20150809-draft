@@ -1,4 +1,4 @@
-MD5 91f552a9f3f76a5b0137e31c3db26082 ChangeLog 1491
+MD5 db575728f80858c4dee58864bd3cbc5f ChangeLog 1599
 MD5 6eaea330ed78459069eb5ba608e654dd files/digest-xen-2.0.7 63
 MD5 c9b4ec0d862e7d516ad6793c7240a237 files/digest-xen-3.0.0_pre20051007 75
 MD5 16d372298e94a8eef72c1943b1ed5561 files/xend-conf 347
@@ -7,4 +7,4 @@ MD5 11ef318e35fcfed12931f182fc01955a files/xendomains-conf 180
 MD5 a8399d2d398bb05f40dd3e9bf4332af1 files/xendomains-init 1663
 MD5 23ec60d5040f966fda250a47d8903428 metadata.xml 252
 MD5 b25e5ad259e28bab5d8d3b4c0a62d278 xen-2.0.7.ebuild 2853
-MD5 fe7ae6018a56e15c91f0cdf8cc4a6436 xen-3.0.0_pre20051007.ebuild 2012
+MD5 8809ad5d8a2a5baf06e47965f08dc0d8 xen-3.0.0_pre20051007.ebuild 2166
