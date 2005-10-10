@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.46 2005/10/06 21:30:23 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.47 2005/10/10 21:19:43 vapier Exp $
 #
-# Author: Toolchain Ninjas <ninjas@gentoo.org>
+# Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
 # This eclass contains (or should) functions to get common info
 # about the toolchain (libc/compiler/binutils/etc...)
@@ -96,10 +96,10 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 
 	case ${host} in
 		alpha*)		echo alpha;;
-		x86_64*)	ninj x86_64 amd64;;
 		arm*)		echo arm;;
-		thumb*)		echo arm;;
+		cris*)		echo cris;;
 		hppa*)		ninj parisc hppa;;
+		i?86*)		ninj i386 x86;;
 		ia64*)		echo ia64;;
 		m68*)		echo m68k;;
 		mips*)		echo mips;;
@@ -108,15 +108,16 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 						&& ninj ppc64 ppc \
 						|| echo ppc
 					;;
+		s390*)		echo s390;;
+		sh64*)		ninj sh64 sh;;
+		sh*)		echo sh;;
 		sparc64*)	ninj sparc64 sparc;;
 		sparc*)		[[ ${PROFILE_ARCH} == "sparc64" ]] \
 						&& ninj sparc64 sparc \
 						|| echo sparc
 					;;
-		s390*)		echo s390;;
-		sh64*)		ninj sh64 sh;;
-		sh*)		echo sh;;
-		i?86*)		ninj i386 x86;;
+		vax*)		echo vax;;
+		x86_64*)	ninj x86_64 amd64;;
 		*)			echo ${ARCH};;
 	esac
 }
@@ -133,21 +134,21 @@ tc-endian() {
 
 	case ${host} in
 		alpha*)		echo big;;
-		x86_64*)	echo little;;
 		arm*b*)		echo big;;
 		arm*)		echo little;;
-		thumb*)		echo little;;
+		cris*)		echo little;;
 		hppa*)		echo big;;
+		i?86*)		echo little;;
 		ia64*)		echo little;;
 		m68*)		echo big;;
 		mips*l*)	echo little;;
 		mips*)		echo big;;
 		powerpc*)	echo big;;
-		sparc*)		echo big;;
 		s390*)		echo big;;
 		sh*b*)		echo big;;
 		sh*)		echo little;;
-		i?86*)		echo little;;
+		sparc*)		echo big;;
+		x86_64*)	echo little;;
 		*)			echo wtf;;
 	esac
 }
@@ -220,4 +221,3 @@ gcc-specs-ssp-to-all() {
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fno-stack-protector-all:} != ${directive} ]])
 }
-
