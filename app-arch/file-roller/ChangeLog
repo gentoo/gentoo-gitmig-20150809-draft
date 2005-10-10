@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.142 2005/10/07 01:49:54 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.143 2005/10/10 21:01:06 hardave Exp $
+
+  10 Oct 2005; Hardave Riar <hardave@gentoo.org> file-roller-2.10.4.ebuild:
+  Stable on mips.
 
 *file-roller-2.12.1 (07 Oct 2005)
 
