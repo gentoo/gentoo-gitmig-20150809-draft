@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.05.ebuild,v 1.1 2005/09/16 13:18:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.05.ebuild,v 1.2 2005/10/10 16:23:12 betelgeuse Exp $
 
 inherit java eutils
 
@@ -51,9 +51,17 @@ FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetail
 
 
 pkg_nofetch() {
+	local archtext=""
+
+	if use x86; then
+		archtext="Linux"
+	elif use amd64; then
+		archtext="Linux AMD64"
+	fi
+
 	einfo "Please download ${At} from:"
-	einfo ${FETCH_SDK}
-	einfo "(Select the Self-extracting (.bin) for Linux or Linux AMD64, depending on your arch)"
+	einfo "${FETCH_SDK}"
+	einfo "Select the ${archtext} self-extracting file"
 	einfo "and move it to ${DISTDIR}"
 
 	if use jce; then
@@ -156,8 +164,8 @@ src_install() {
 	set_java_env ${FILESDIR}/${VMHANDLE}
 
 	# TODO prepman "fixes" symlink ja -> ja__JP.eucJP in 'man' directory,
-	#      creating ja.gz -> ja_JP.eucJP.gz. This is broken as ja_JP.eucJP
-	#      is a directory and will not be gzipped ;)
+	#	  creating ja.gz -> ja_JP.eucJP.gz. This is broken as ja_JP.eucJP
+	#	  is a directory and will not be gzipped ;)
 }
 
 pkg_postinst() {
@@ -221,6 +229,6 @@ pkg_postinst() {
 	if ! use browserplugin && use mozilla; then
 		ewarn
 		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'browserplugin' please update your USE"
+		ewarn "has been renamed to 'browserplugin' please update your USE."
 	fi
 }
