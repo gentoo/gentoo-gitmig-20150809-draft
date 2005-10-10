@@ -18,6 +18,7 @@ dev-libs/libxml2
 dev-perl/XML-Parser
 dev-util/intltool
 dev-util/guile
+dev-util/subversion
 >=mail-client/mutt-1.5.11
 media-libs/a52dec
 net-misc/curl
