@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.172 2005/10/10 08:19:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.173 2005/10/10 12:13:38 metalgod Exp $
+
+  10 Oct 2005; Luis Medinas <metalgod@gentoo.org> python-2.4.1-r1.ebuild:
+  Marked Stable on amd64.
 
   10 Oct 2005; Markus Rothe <corsair@gentoo.org> python-2.4.1-r1.ebuild:
   Stable on ppc64
