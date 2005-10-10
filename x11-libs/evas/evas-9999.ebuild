@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.9 2005/10/06 22:59:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.10 2005/10/10 14:45:44 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -18,11 +18,12 @@ DEPEND="X? ( virtual/x11 )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
 	cairo? ( >=x11-libs/cairo-0.2.0 )
 	dev-util/pkgconfig"
+#	X? ( xcb-util )
 
 src_compile() {
+#		$(use_enable X software-xcb)
 	export MY_ECONF="
 		$(use_enable X software-x11) \
-		$(use_enable X software-xcb) \
 		$(use_enable directfb) \
 		$(use_enable fbcon fb) \
 		--enable-buffer \

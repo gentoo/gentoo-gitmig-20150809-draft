@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 c47cea35f74726886c6a01e2e6ff2825 ChangeLog 347
 MD5 c064686ff4f1ed7fc1d15580da62a43e evas-0.9.9.006.ebuild 2392
 MD5 bc7fbeb6f38c80f53b30cb338fdf1a4a evas-0.9.9.013.ebuild 2293
-MD5 f44fed5b1564cd55bee0e7c37259735c evas-9999.ebuild 2031
+MD5 b76dddfd04a95ba322e89b7abdf798f9 evas-9999.ebuild 2049
 MD5 9d86af0cdb22a056ba7bb91fb1ce740d files/digest-evas-0.9.9.006 67
 MD5 81fd70f52f317f461489865d36914b99 files/digest-evas-0.9.9.013 67
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-evas-9999 0
@@ -12,7 +12,7 @@ MD5 f252e043af6a26e0d6d472a0af071f6d metadata.xml 1304
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRazFgIKl8Uu19MoRAg1+AJ41KgwihHiveoEMBQRkD1orRTQ+MwCfdGFH
-HmhbvbW4obwr8ZgxBQOvSt8=
-=h556
+iD8DBQFDSn8TgIKl8Uu19MoRAqyrAJwIOkc1dU0N57NszgFW58yHD3/VbACfag8K
+POoX5hmr7Y07R5sRe3t0O6Y=
+=92vJ
 -----END PGP SIGNATURE-----
