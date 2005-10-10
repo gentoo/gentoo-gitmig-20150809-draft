@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 940150a77ee1283126f1e3bfdc8703f2 ChangeLog 1124
 MD5 86ff0b77ab1740f299796c60d5dd4518 rev-plugins-0.2.1.ebuild 731
+MD5 976cf94118ca368ee6e3d6b58d25aa15 rev-plugins-0.3.1.ebuild 719
+MD5 24f9907cf826991989043d735c95235e ChangeLog 1261
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 0d303e095f852c97bcbd1a1f09b50a1d files/digest-rev-plugins-0.2.1 69
+MD5 0a9dd37040dadcd74c3a8dc9f699834f files/digest-rev-plugins-0.3.1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGsWUj5H05b2HAEkRAtPXAJ0ZBoK8jrJT8di04oXOPhYI9DquggCeIprb
-VO+Oio6706ByBNk5S/A19dI=
-=Mty1
+iD8DBQFDSrtXvpz1081QvMkRAsQrAJ9IavpllBHzsrJqsdsRNTJRTv60swCfS+6F
+h6D1sHkfIink7Bo34t+NUWk=
+=ZARa
 -----END PGP SIGNATURE-----
