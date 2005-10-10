@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/bug-buddy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.82 2005/10/05 23:48:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.83 2005/10/10 11:22:40 flameeyes Exp $
+
+  10 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/bug-buddy-2.10.0-fbsd.patch, bug-buddy-2.10.0.ebuild:
+  Added patch for FreeBSD compatibility (missing include).
 
 *bug-buddy-2.12.1 (05 Oct 2005)
 
