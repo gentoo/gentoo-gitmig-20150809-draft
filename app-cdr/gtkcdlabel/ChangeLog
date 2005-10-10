@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.21 2005/08/18 10:44:30 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.22 2005/10/10 00:08:39 metalgod Exp $
+
+  10 Oct 2005; Luis Medinas <metalgod@gentoo.org>
+  -gtkcdlabel-1.0_pre7.ebuild, gtkcdlabel-1.0_pre7-r1.ebuild:
+  Added a missing dependency closes bug #107895. Removing older version
 
 *gtkcdlabel-1.0_pre7-r1 (18 Aug 2005)
 
