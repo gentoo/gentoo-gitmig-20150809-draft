@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 51f30fb6df5794ffd70b78f99c8f8db3 ChangeLog 1614
 MD5 a297b200623fd9c91fcc162009f6d313 exo-0.2.0-r1.ebuild 487
-MD5 e335d7552a97fb658e9e857521c91a07 exo-0.3.0-r1.ebuild 596
-MD5 63485c4c0f0deea0c7a4c06280955b9a exo-0.3.0.ebuild 438
+MD5 28434366e9b0eb8fbd0d9de0bf52c07c exo-0.3.0-r1.ebuild 601
+MD5 43d3544caf4bab5addd6098a4a7488d6 exo-0.3.0.ebuild 441
 MD5 807f3878637440cc0068a1174e3945e1 exo-0.3.0_pre1.ebuild 495
 MD5 ff443b2ff08285d00d134f52370c49c0 files/digest-exo-0.2.0-r1 62
 MD5 3329f89c13001f50cc3b9c995b84c4d3 files/digest-exo-0.3.0 62
 MD5 3329f89c13001f50cc3b9c995b84c4d3 files/digest-exo-0.3.0-r1 62
 MD5 1a12f2a9caec3822eec394a4cfa7fa9d files/digest-exo-0.3.0_pre1 66
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSobCgIKl8Uu19MoRAqgHAJ9sDNx42W6kb8NtRwJMdzKX/7MM8wCfQ7MF
+vsryMOEsGpduyjMb/wUYf9k=
+=dkYg
+-----END PGP SIGNATURE-----
