@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20051007.ebuild,v 1.3 2005/10/10 13:44:37 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.0_pre20051010.ebuild,v 1.1 2005/10/10 16:43:02 chrb Exp $
 
 inherit mount-boot
 
 DESCRIPTION="The Xen virtual machine monitor and Xend daemon"
 HOMEPAGE="http://xen.sourceforge.net"
-DATE="20051007"
+DATE="20051010"
 SRC_URI="mirror://gentoo/xen-unstable-${DATE}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -29,14 +29,6 @@ DEPEND="sys-apps/iproute2
 	)"
 
 S="${WORKDIR}/xen-unstable-${DATE}"
-
-src_unpack() {
-	unpack ${A}
-	# hardened flags
-	einfo "Disabling PIE and SSP CFLAGS"
-	echo "CFLAGS += -nopie -fno-stack-protector -fno-stack-protector-all" \
-		>> ${S}/xen/arch/x86/Rules.mk
-}
 
 src_compile() {
 	local myopt
