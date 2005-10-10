@@ -1,8 +1,18 @@
-MD5 3b2d66a8f3995b74d281f4ca80a30b74 brltty-3.6.1-r1.ebuild 835
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 284eb04695f75c8c226190f136635870 metadata.xml 604
+MD5 374750b902e6c17dfad149f9126ebb5c ChangeLog 4253
 MD5 b69eb608789e94959869c6fa6a409407 brltty-3.5.ebuild 669
-MD5 400cd2fad2e2bd56b1920c9cdd5d1420 metadata.xml 259
-MD5 0c9b49a400b9a487c26a1608a43b9a55 ChangeLog 4158
 MD5 dd7dcc1f1c76ae3d9a882452e1938747 brltty-3.6.ebuild 792
+MD5 3b2d66a8f3995b74d281f4ca80a30b74 brltty-3.6.1-r1.ebuild 835
 MD5 b1706df140ca8876753283a3a222a3d5 files/digest-brltty-3.6 63
-MD5 7d93e814d84d01d5a05daab69875e2f9 files/digest-brltty-3.5 62
 MD5 af551ceff5cb2d450b638b0116e2898d files/digest-brltty-3.6.1-r1 65
+MD5 7d93e814d84d01d5a05daab69875e2f9 files/digest-brltty-3.5 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSodiFdQwWVoAgN4RAuAdAJ9N/AtQ5viXrrSwIpVRQfRz5SnsRwCfawVs
+y+FPlynTtN63HRv/iPPzmvc=
+=xY7I
+-----END PGP SIGNATURE-----
