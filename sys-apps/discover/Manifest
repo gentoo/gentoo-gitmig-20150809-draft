@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a2bfe9a68a6b6b0a31db16b656b300d8 ChangeLog 1853
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5477a1b959ba030eb1c6b5cc3c2dd427 discover-2.0.7.ebuild 1098
 MD5 67a51497ee3fcc51b62061fd046a5eea discover-2.0.2.ebuild 1094
-MD5 622af6b2cf2794fd0ba50addb2a815af files/digest-discover-2.0.7 66
+MD5 9468e2808e019c5e7901c3a66ab62254 discover-2.0.7.ebuild 1177
 MD5 35b4323ba6b9e9878fdda8d7d3703e89 files/digest-discover-2.0.2 66
+MD5 622af6b2cf2794fd0ba50addb2a815af files/digest-discover-2.0.7 66
 MD5 a43ca5971902215ada3f6fd11f9e61b1 files/etc-init.d-discover 4860
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSnmagIKl8Uu19MoRAumOAJ47qAfQSnhxt8AubVekUYWyeK41zwCcDeHy
+qX2WkZ3ovzuIy1r/uILF6X0=
+=/sZM
+-----END PGP SIGNATURE-----

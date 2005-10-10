@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-2.0.7.ebuild,v 1.1 2005/03/09 01:00:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-2.0.7.ebuild,v 1.2 2005/10/10 14:22:24 vapier Exp $
 
 DESCRIPTION="Library and front-end for retrieving information about a system's hardware"
-HOMEPAGE="http://componentizedlinux.org/discover/"
+HOMEPAGE="http://alioth.debian.org/projects/pkg-discover/"
 SRC_URI="http://archive.progeny.com/progeny/discover/${P}.tar.gz"
 
 LICENSE="as-is"
@@ -18,9 +18,12 @@ PDEPEND="sys-apps/discover-data"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	if ! which docbook-to-man 2>/dev/null ; then
-		if which docbook2man 2>/dev/null ; then
+	cd "${S}"
+	sed -i \
+		-e '/curl_libs=.*sed/d' \
+		configure || die #108695
+	if ! type -p docbook-to-man > /dev/null ; then
+		if type -p docbook2man > /dev/null ; then
 			sed -i 's:docbook-to-man:docbook2man:' doctools/docbook.mk
 		else
 			sed -i 's:docbook-to-man:echo:' doctools/docbook.mk
