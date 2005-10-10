@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/attal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.14 2005/09/26 18:23:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.15 2005/10/10 07:01:31 mr_bones_ Exp $
+
+*attal-0.9.4 (10 Oct 2005)
+
+  10 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +attal-0.9.4.ebuild:
+  version bump
 
   26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> attal-0.8.1.ebuild,
   attal-0.9.2.ebuild:
