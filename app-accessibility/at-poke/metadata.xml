@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome-accessibility</herd>
+<longdescription lang="en">
+	at-poke is a package to test gnome accessibility compliance.
+</longdescription>
+<longdescription lang="ja">
+	at-pokeはgnomeアクセシビリティをテストするパッケージです。
+</longdescription>
 </pkgmetadata>

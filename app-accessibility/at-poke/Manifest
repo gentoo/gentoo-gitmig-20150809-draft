@@ -1,4 +1,14 @@
-MD5 fc9746415abe69fad0e45e6fd74984de ChangeLog 1558
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0c5da6c4f82fb88b560f025b7670663 metadata.xml 411
+MD5 6397bb16e1d6912a300a71acb25f76a8 ChangeLog 1691
 MD5 629060fb60d5431093ce26fcb59db0ac at-poke-0.2.2.ebuild 684
-MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 a781d8b13dc3a577fbdf5d58a226acbe files/digest-at-poke-0.2.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSoPaFdQwWVoAgN4RAr+bAKDJuZGXqV2Gcc7UlbFI8t3oF4LgkACgnz8B
+D8csVME98G8QmRCGnZ2cdl4=
+=drcU
+-----END PGP SIGNATURE-----
