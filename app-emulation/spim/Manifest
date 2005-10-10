@@ -1,4 +1,4 @@
-MD5 45fd014c4b2620587c753d89b30fd706 ChangeLog 4072
+MD5 8878c5bae72edf52a01dd78ab3c26c86 ChangeLog 4193
 MD5 d71d66b98121e4e42ca59fa94310ed1e files/6.5-parser.patch 266
 MD5 3962179c22e4349945b01edbadfac9a5 files/digest-spim-6.5-r1 60
 MD5 e2af6a0e5ca4267cfad9f1bf5e954655 files/digest-spim-7.0 60
@@ -17,5 +17,5 @@ MD5 f180f948f41e347de9ebca387391018e metadata.xml 476
 MD5 9a055d12390dbbce3523f2f315da72db spim-6.5-r1.ebuild 1445
 MD5 4b7b9ffd8181a2ca02d4dafe0867c21b spim-7.0.ebuild 1485
 MD5 5d648b6c9e3dbd5e00da4716ccef6436 spim-7.1.ebuild 1394
-MD5 b70bbd94f22d79abac5b74db164c8b83 spim-7.2.1-r1.ebuild 2156
+MD5 8312eff4ccec272a3e01d3138e2b8d78 spim-7.2.1-r1.ebuild 2247
 MD5 548deb7d9eca69a650ca06890c86669e spim-7.2.1.ebuild 2245

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1-r1.ebuild,v 1.1 2005/10/07 09:06:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1-r1.ebuild,v 1.2 2005/10/10 03:05:52 compnerd Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,6 +27,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-7.2.1-c99.patch
 	epatch ${FILESDIR}/${PN}-7.2.1-ptrsize.patch
 	epatch ${FILESDIR}/${PN}-7.2.1-string-stream.patch
+
+	# Fix documentation files
+	cd ${S}/Documentation
+	mv spim.man spim.1
+	mv xspim.man xspim.1
 }
 
 src_compile() {
