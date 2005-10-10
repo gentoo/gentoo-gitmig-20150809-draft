@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc4.ebuild,v 1.1 2005/10/05 19:13:26 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc5.ebuild,v 1.1 2005/10/10 05:48:48 jstubbs Exp $
 
 inherit toolchain-funcs
 
