@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f6a6153b5b6538bdcb1f45441ae74f29 HTML-Parser-3.45.ebuild 875
+MD5 f67fb13539975ea16c22a1d042be1eca ChangeLog 6920
 MD5 4d21a0c2a91bc569d6fa2d388bbd4880 HTML-Parser-3.36-r1.ebuild 899
-MD5 170e915ebbaa6daa620af5f6552e78f4 ChangeLog 6825
+MD5 7d0ad98dca551efb8a2aec71abd47cea HTML-Parser-3.45.ebuild 876
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 af0ff1f0a3657e83a07e968fc2a52fb0 files/digest-HTML-Parser-3.36-r1 67
 MD5 3aa6ad736b6a561df25f2cfde7966c6e files/digest-HTML-Parser-3.45 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLDQXntT9W3vfTuoRAmBnAJwLI/xtm6pH+5lWvGscQrY0uqA3XwCfWTHJ
-qVLdzkxq/JJiq7u7CJQLiqU=
-=Ovru
------END PGP SIGNATURE-----
