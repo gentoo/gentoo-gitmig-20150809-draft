@@ -1,14 +1,24 @@
-MD5 d4ee8434219c2a30d66b5ad39a805826 vte-0.11.15.ebuild 1299
-MD5 feb3ddbf7088e92fe5662bdbeae17118 vte-0.11.12.ebuild 943
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a576ce54b0366e172da95cf9356ff29 ChangeLog 10298
-MD5 a688f298c76e3381b21f2353e5b860c9 vte-0.11.13-r2.ebuild 1398
-MD5 868d864d04e328d67b2a752f96404025 vte-0.11.14.ebuild 1285
-MD5 f8d6220ac03de9b337c4b0ec5243f55f files/vte-0.11.13-memory_fix.patch 7661
 MD5 18e062a775ab3d1b9bb67830755399e4 files/digest-vte-0.11.12 64
+MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
+MD5 474fbe78bad6ae4cf058ee9d98cb33fa files/digest-vte-0.11.14 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15 64
+MD5 a7aa4ac7847db18d6ffa62fd957f152e files/vte-0.11.11-vtemodule.patch 445
+MD5 f8d6220ac03de9b337c4b0ec5243f55f files/vte-0.11.13-memory_fix.patch 7661
 MD5 3805528034f3d01fa27e24f600618c0d files/vte-line-scroll.patch 2234
 MD5 31acc289fb190f9bdd0285147233eee0 files/vte-no_lazy_bindings.patch 419
-MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
-MD5 a7aa4ac7847db18d6ffa62fd957f152e files/vte-0.11.11-vtemodule.patch 445
-MD5 474fbe78bad6ae4cf058ee9d98cb33fa files/digest-vte-0.11.14 64
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 feb3ddbf7088e92fe5662bdbeae17118 vte-0.11.12.ebuild 943
+MD5 bc44d3cec32c6cce3c67b487662bea8a vte-0.11.13-r2.ebuild 1401
+MD5 cf4b446bbc8b45368b6cb55d8c1151d4 vte-0.11.14.ebuild 1287
+MD5 0459ea41a4b7b590827d9842215e1752 vte-0.11.15.ebuild 1301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSo3xgIKl8Uu19MoRAimQAKCDIf4vLZ3onsbeYqpPqp9qnsFzHgCeMa+h
+oaGOC8iuVl0l/s8e9rb2Khc=
+=imSn
+-----END PGP SIGNATURE-----
