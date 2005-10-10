@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.54.ebuild,v 1.2 2005/10/09 18:47:34 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.54.ebuild,v 1.3 2005/10/10 20:04:17 peitolm Exp $
 
 inherit eutils
 
@@ -141,7 +141,7 @@ src_unpack() {
 				-e "s:# \(USE_GNUTLS=yes\):\1:" \
 				-e "s:# \(TLS_LIBS=-lgnutls -ltasn1 -lgcrypt\):\1:"Local/Makefile
 		else
-			sed \
+			sed -i \
 				-e "s:# \(TLS_LIBS=-lssl -lcrypto\):\1:" Local/Makefile
 		fi
 	fi

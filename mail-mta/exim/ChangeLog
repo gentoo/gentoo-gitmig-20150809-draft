@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.44 2005/10/09 18:47:34 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.45 2005/10/10 20:04:17 peitolm Exp $
+
+  10 Oct 2005; Colin Morey <peitolm@gentoo.org> exim-4.54.ebuild:
+  fix to Local/Makefile sed
 
   09 Oct 2005; Colin Morey <peitolm@gentoo.org> exim-4.54.ebuild:
   missing DEPEND fix bug #108605
