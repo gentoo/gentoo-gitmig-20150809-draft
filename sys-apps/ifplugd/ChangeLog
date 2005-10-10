@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.27 2005/09/08 14:37:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.28 2005/10/10 07:39:01 uberlord Exp $
+
+*ifplugd-0.28-r3 (10 Oct 2005)
+
+  10 Oct 2005; Roy Marples <uberlord@gentoo.org>
+  -files/ifplugd-0.26-gentoo.diff, +files/ifplugd-0.28-nlapi.diff,
+  files/ifplugd.init, metadata.xml, -ifplugd-0.28-r2.ebuild,
+  +ifplugd-0.28-r3.ebuild:
+  Fixed init script to work with all options and stop correctly with
+  baselayout<1.12 wrt #108464
+  
+  ifplugd.action is now installed to /etc
 
 *ifplugd-0.28-r2 (08 Sep 2005)
 

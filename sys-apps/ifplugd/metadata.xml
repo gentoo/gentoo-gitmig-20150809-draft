@@ -6,4 +6,5 @@
 		<email>uberlord@gentoo.org</email>
 		<name>Roy Marples</name>
 	</maintainer>
+	<longdescription>Brings up/down ethernet ports automatically with cable detection</longdescription>
 </pkgmetadata>

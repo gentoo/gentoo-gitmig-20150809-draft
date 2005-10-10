@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r2.ebuild,v 1.1 2005/09/08 14:37:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r3.ebuild,v 1.1 2005/10/10 07:39:01 uberlord Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="dev-util/pkgconfig
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-nlapi.diff"
 }
 
 src_compile() {
@@ -40,7 +40,9 @@ src_install() {
 
 	insinto /etc/conf.d ; newins "${FILESDIR}/${PN}.conf" "${PN}" || die
 	exeinto /etc/init.d ; newexe "${FILESDIR}/${PN}.init" "${PN}" || die
-	exeinto /usr/sbin ; newexe "${FILESDIR}/${PN}.action" "${PN}.action"
+	dodir "/etc/${PN}"
+	exeinto "/etc/${PN}"
+	newexe "${FILESDIR}/${PN}.action" "${PN}.action" || die
 
 	cd "${S}/doc"
 	dodoc README SUPPORTED_DRIVERS
