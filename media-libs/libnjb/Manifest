@@ -1,24 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8b1346477a12e418214f060eec94b6a1 libnjb-2.2.ebuild 1051
-MD5 ab05a96e93160fb76c44c73da564a046 libnjb-2.2.3.ebuild 1064
-MD5 08a6b13091c718edd325a42cb2e7a997 libnjb-1.2.ebuild 1207
-MD5 5e59b3096d9a9061f0566d7dbc2ec390 ChangeLog 3214
-MD5 c21ad33988f6e6b227ecafac24d6eda1 libnjb-2.1.2.ebuild 1084
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
+MD5 755d937469197510731775ccc9d03639 ChangeLog 3470
 MD5 ee354651ff3fa41baa3e00119f65563b files/digest-libnjb-1.2 62
-MD5 7c3b243f6eefe2001b8ed9286411d69c files/digest-libnjb-2.2 62
-MD5 786a98942a3fda4f8367f518f413731d files/libnjb-2.0_pre20050208-gentoo-multilib.patch 640
-MD5 abf7c2c90f2fa0bda8417050514e1e2d files/libnjb-1.2-gentoo-multilib.patch 640
 MD5 1ad18266b17b36578ea26405aae99b91 files/digest-libnjb-2.1.2 64
+MD5 7c3b243f6eefe2001b8ed9286411d69c files/digest-libnjb-2.2 62
 MD5 cac891c4604b957c05c0311b0ed398c6 files/digest-libnjb-2.2.3 64
-MD5 b8b03bca7250e43640fce00915a54f69 files/nomadjukebox 1048
+MD5 52f1f2e225196985b151cd3557640f43 files/digest-libnjb-2.2.4 64
+MD5 abf7c2c90f2fa0bda8417050514e1e2d files/libnjb-1.2-gentoo-multilib.patch 640
+MD5 786a98942a3fda4f8367f518f413731d files/libnjb-2.0_pre20050208-gentoo-multilib.patch 640
 MD5 eccde352d9d2ac120ddcaa4183003577 files/libnjb-errno.patch 278
+MD5 b8b03bca7250e43640fce00915a54f69 files/nomadjukebox 1048
+MD5 08a6b13091c718edd325a42cb2e7a997 libnjb-1.2.ebuild 1207
+MD5 c21ad33988f6e6b227ecafac24d6eda1 libnjb-2.1.2.ebuild 1084
+MD5 7d0719df57a6d38abf27350b55c301a2 libnjb-2.2.3.ebuild 1067
+MD5 bba5716492dfadc8c8c1d851944ac7d9 libnjb-2.2.4.ebuild 1068
+MD5 8b1346477a12e418214f060eec94b6a1 libnjb-2.2.ebuild 1051
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDLydR/rLF9B432nYRAvZuAKCRmRAY+Bw2AVw/n4TgJYAjy5ms7wCgv9aD
-SrPRf72uToq3/V47+w0hdsc=
-=Kk2B
+iD8DBQFDSuaRp5vW4rUFj5oRAkD7AJ9Xmnha+1/O0TUk9thVPa2ldqe/ZACfWe/6
+rYiQgXiPZNxbVToHFIxvFH8=
+=HbpT
 -----END PGP SIGNATURE-----

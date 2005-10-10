@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.23 2005/09/19 21:01:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.24 2005/10/10 22:07:19 chainsaw Exp $
+
+*libnjb-2.2.4 (10 Oct 2005)
+
+  10 Oct 2005; <chainsaw@gentoo.org> libnjb-2.2.3.ebuild,
+  +libnjb-2.2.4.ebuild:
+  Version bump. Adds support for Creative Zen (Micro-like unit with 20GB
+  capacity) and makes turbo speed optional. 2.2.3 stable on amd64.
 
 *libnjb-2.2.3 (19 Sep 2005)
 
