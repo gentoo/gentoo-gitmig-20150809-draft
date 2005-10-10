@@ -1,15 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e2276f3abba81dedb5b77238c4b76190 ChangeLog 16396
+MD5 a137c6b421adcd49b8a5993e18d3d376 ChangeLog 16596
 MD5 df5b2360ea380d988bf16905ab214286 files/conf/lighttpd.conf 8182
 MD5 fef397e7bcf1b741dea211a555e1803c files/conf/mime-types.conf 3291
 MD5 9c1407e95f62ed22da66c4ef5f69c3b5 files/conf/mod_cgi.conf 869
 MD5 b4c80dba9c626d5f89d3c3797ac6670c files/conf/mod_fastcgi.conf 661
 MD5 77ba3937d1e8762f8d8b6b2ea9ee1aaa files/digest-lighttpd-1.3.13-r3 67
 MD5 c54a6d92e91493bbb27e8f346f6ac342 files/digest-lighttpd-1.3.16 67
-MD5 8f9c2d7a51a85b60ef1a6da355083fd0 files/digest-lighttpd-1.4.3 66
-MD5 080f2b1be14e4f457e06d9b99c351a15 files/digest-lighttpd-1.4.5 66
+MD5 c087586319160eacb4cb2ff4f098e4e7 files/digest-lighttpd-1.4.6 66
 MD5 7fdb430fc7240e6e6a9078e4e57f6322 files/lighttpd-1.3.10.initd 666
 MD5 8648177a5f9a79cd4ba0eaaa4e769fdc files/lighttpd-1.3.11-gentoo.diff 1784
 MD5 f984dc26b2bc491272d302ab453f6e6b files/lighttpd-1.3.13-ldap-binddn.diff 3863
@@ -24,13 +23,12 @@ MD5 1d925aed297ec4541fb230dd19e11bc1 files/spawn-fcgi.confd 1076
 MD5 e605a4ead0ce7b1e0788c0b0b1161871 files/spawn-fcgi.initd 1383
 MD5 49ded22216ffc6092d1a1e04a6e420c1 lighttpd-1.3.13-r3.ebuild 2607
 MD5 5aaaf3e31839a20fb69fc5526e69d849 lighttpd-1.3.16.ebuild 2547
-MD5 15468c1601f8061e5ad2d5f62b39b964 lighttpd-1.4.3.ebuild 5143
-MD5 e039b934ff13f7d36cf1f6a494c90bfa lighttpd-1.4.5.ebuild 5142
+MD5 72645136402557fac96496c117e89459 lighttpd-1.4.6.ebuild 5142
 MD5 6a9d4814404d8d51327e5b8306ee3d7e metadata.xml 726
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQSAaEZCkKN40op4RAvWwAKCPSak0IgfCi1GQ5LSVtSqg11hVqQCfSbpI
-KVgt2JxspsVND3zEYX3/6Cg=
-=7PPa
+iD8DBQFDSqLxEZCkKN40op4RAh61AJ0WsPEALh+6eO4qVlgm1dTWpqauuACeIEnY
+NyTH9/kmI6o+sgBWxa316HE=
+=GNFX
 -----END PGP SIGNATURE-----
