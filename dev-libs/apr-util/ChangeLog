@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.32 2005/09/19 20:00:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.33 2005/10/10 03:23:15 matsuu Exp $
+
+  10 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> apr-util-0.9.6-r2.ebuild,
+  apr-util-1.1.2.ebuild:
+  Stable on sh.
 
   19 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   apr-util-0.9.6-r2.ebuild:

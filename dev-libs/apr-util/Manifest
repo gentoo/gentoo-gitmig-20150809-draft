@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae2312f2e20c4e22eea31d4a34c3df92 ChangeLog 4212
-MD5 e6ec661231604e55ac37e336cd1a7eab apr-util-0.9.6-r2.ebuild 2022
-MD5 8a7639f619bb8932997d481c3a26e060 apr-util-1.1.2.ebuild 1904
-MD5 5c39070c5a30db4f82b9373cadee4c45 files/apr-util-0.9.x-161086:161087.patch 4671
-MD5 467e8ba98a938b691d27ec9971dbfe12 files/digest-apr-util-0.9.6-r2 66
-MD5 c46881efc10b92ab7b6189cdc9070929 files/digest-apr-util-1.1.2 66
+MD5 eb1e072b34afd26a02d5673d81dd0046 apr-util-1.1.2.ebuild 1910
+MD5 395fb3a51519fa219c61881a2a6b8a7d apr-util-0.9.6-r2.ebuild 2025
+MD5 5e874041ada8e305444ab673ac112876 ChangeLog 4329
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSXyhKf2g/qXtneoRAsWuAJ44cnhQNkxCxqZpUCij10qkmELNpgCeJIvc
-sfRW0TcLKEEyHoOfqYoH2m0=
-=TkP7
------END PGP SIGNATURE-----
+MD5 c46881efc10b92ab7b6189cdc9070929 files/digest-apr-util-1.1.2 66
+MD5 467e8ba98a938b691d27ec9971dbfe12 files/digest-apr-util-0.9.6-r2 66
+MD5 5c39070c5a30db4f82b9373cadee4c45 files/apr-util-0.9.x-161086:161087.patch 4671
