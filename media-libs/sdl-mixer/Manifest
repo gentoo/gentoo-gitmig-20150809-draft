@@ -10,12 +10,12 @@ MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 92
 MD5 85c429a982fe437337599502a8fa6c1d files/sdl-mixer-1.2.6-mikmod-music-init.patch 260
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 375360d31ec4aa8f404bb421dc7bc39b sdl-mixer-1.2.5-r1.ebuild 1421
-MD5 613dfb3b587e2d71931f69374c2f1c88 sdl-mixer-1.2.6-r1.ebuild 1304
+MD5 e9ce06b7207658c19886d1a7ef8de16a sdl-mixer-1.2.6-r1.ebuild 1313
 MD5 23705937b9797ba254ff614c89c1b306 sdl-mixer-1.2.6.ebuild 1225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSoLOgIKl8Uu19MoRAnyBAKCAFiMe4TnhkIF/Co4JFR9FzXnQZQCfU0KX
-omiInhpP772JqwXUQa6ENhc=
-=zL8B
+iD8DBQFDSoLygIKl8Uu19MoRAgk3AJ9HUcnl6gY8KnPWm3cppS9yVmu+eQCfYKdR
+bufxl5/hddhza9RNhwAjs6w=
+=TW1p
 -----END PGP SIGNATURE-----
