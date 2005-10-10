@@ -1,10 +1,20 @@
-MD5 9a40014992896091dc1df657a3587acb emacspeak-22.ebuild 821
-MD5 206e78b71a6c2fd545e1667ab105728e metadata.xml 229
-MD5 7f8a0d16123aa2e64a828dc87f39c43e ChangeLog 1897
-MD5 59810d8aee9b46f65475dbd159886da3 emacspeak-20.ebuild 825
-MD5 0e022980aaffd2e898a4860a13771b01 emacspeak-21.ebuild 821
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 438e5b6aae7112538154b441ceeb8794 emacspeak-18.ebuild 826
+MD5 45864cf3d83c6fc4fc1d3803aedfb96d metadata.xml 561
+MD5 c8d6564ed266cd819bd4e8d37aaa478c ChangeLog 2018
+MD5 0e022980aaffd2e898a4860a13771b01 emacspeak-21.ebuild 821
+MD5 9a40014992896091dc1df657a3587acb emacspeak-22.ebuild 821
+MD5 59810d8aee9b46f65475dbd159886da3 emacspeak-20.ebuild 825
 MD5 b38eb61001174a2ab2858373b5e614fa files/digest-emacspeak-18 65
 MD5 31e38738acd583c42cc41161fee83d92 files/digest-emacspeak-21 66
 MD5 52a13763a2eae6a719743e9b604dd4a6 files/digest-emacspeak-20 66
 MD5 3169b34efb56e872d3d46b781ddb9d5b files/digest-emacspeak-22 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSpODFdQwWVoAgN4RAhcrAKDuAvppa20wAtokLHZAHJcy7gpbIgCgu7Ye
+5t1Cxk6nq7DYWIqOXsNpArQ=
+=d6Re
+-----END PGP SIGNATURE-----
