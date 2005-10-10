@@ -1,35 +1,35 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 52f8bfbb245ef947f797ac63eca799b7 xv-3.10a-r12.ebuild 2120
-MD5 dbc079b0004dcfe2bd4286fc96923eac ChangeLog 10103
-MD5 d3caaf1691b52006d2295f1443fe691b xv-3.10a-r9.ebuild 2529
-MD5 e85f1a876b925f9a8b4a29eabc3e3788 xv-3.10a-r11.ebuild 2321
+MD5 d014f85d07fd1897a85de316c59b5d42 ChangeLog 10179
+MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r10 127
+MD5 6f7117c9be7e979494866250a24a3338 files/digest-xv-3.10a-r11 145
+MD5 bf64513c42257ec1f60b78efabf94e6e files/digest-xv-3.10a-r12 145
+MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r8 127
+MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r9 127
+MD5 270b4d6ba55f1253d0d1edfde1640844 files/xv-3.10a-bmpfix.patch.bz2 1249
+MD5 24acb62ee86813a3fde2819683b2ffc9 files/xv-3.10a-makefile-osx.patch 538
+MD5 4b034e22d5bb0502e383afcfeb8ea4b0 files/xv-3.10a-ppc.patch 359
+MD5 5abcdae2ed559d5909856a83ab102180 files/xv-3.10a-r11-xv-osx.patch 1088
+MD5 123bdb40134767bb438eeaccb50f1646 files/xv-3.10a-security.diff 4079
+MD5 32841798fbb3c9923d5d8a26994e1b0a files/xv-3.10a-vdcomp-osx.patch 341
+MD5 b6755903a15ab242469da379020a0a66 files/xv-3.10a-xv-osx.patch 615
+MD5 4e152e258221470988e2fc31bd8e03d5 files/xv-3.10a-yaos.dif.bz2 4212
+MD5 63deb1e35f05b4f406f141d1e48ff17b files/xv-filename-format-string.diff 319
+MD5 a5b5fd8ad9fbef9a63f360d83f55e546 files/xv-optimize-jpeg.diff 553
+MD5 f555e07727c8b51042dae772ae474f42 files/xv-postscript-double-free.diff 864
+MD5 8edd408b62a85896b2b76411f7839c60 files/xv-smoothing-algorithm.diff 6418
+MD5 cda66dd1f3a032802881a6ae4430e0d6 files/xv-use-getcwd.patch 222
 MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
 MD5 2954b497004732142fd6d69104cf2499 xv-3.10a-r10.ebuild 2689
+MD5 e85f1a876b925f9a8b4a29eabc3e3788 xv-3.10a-r11.ebuild 2321
+MD5 4b1f1325771e6af179644a7d89fc3173 xv-3.10a-r12.ebuild 2115
 MD5 fbe8dc0be0ab018633f1e153b56c1662 xv-3.10a-r8.ebuild 2347
-MD5 a5b5fd8ad9fbef9a63f360d83f55e546 files/xv-optimize-jpeg.diff 553
-MD5 123bdb40134767bb438eeaccb50f1646 files/xv-3.10a-security.diff 4079
-MD5 b6755903a15ab242469da379020a0a66 files/xv-3.10a-xv-osx.patch 615
-MD5 4b034e22d5bb0502e383afcfeb8ea4b0 files/xv-3.10a-ppc.patch 359
-MD5 4e152e258221470988e2fc31bd8e03d5 files/xv-3.10a-yaos.dif.bz2 4212
-MD5 cda66dd1f3a032802881a6ae4430e0d6 files/xv-use-getcwd.patch 222
-MD5 5abcdae2ed559d5909856a83ab102180 files/xv-3.10a-r11-xv-osx.patch 1088
-MD5 270b4d6ba55f1253d0d1edfde1640844 files/xv-3.10a-bmpfix.patch.bz2 1249
-MD5 63deb1e35f05b4f406f141d1e48ff17b files/xv-filename-format-string.diff 319
-MD5 8edd408b62a85896b2b76411f7839c60 files/xv-smoothing-algorithm.diff 6418
-MD5 6f7117c9be7e979494866250a24a3338 files/digest-xv-3.10a-r11 145
-MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r9 127
-MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r8 127
-MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r10 127
-MD5 32841798fbb3c9923d5d8a26994e1b0a files/xv-3.10a-vdcomp-osx.patch 341
-MD5 f555e07727c8b51042dae772ae474f42 files/xv-postscript-double-free.diff 864
-MD5 bf64513c42257ec1f60b78efabf94e6e files/digest-xv-3.10a-r12 145
-MD5 24acb62ee86813a3fde2819683b2ffc9 files/xv-3.10a-makefile-osx.patch 538
+MD5 d3caaf1691b52006d2295f1443fe691b xv-3.10a-r9.ebuild 2529
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRtu/KRy60XGEcJIRAiZFAJ0TmgeycAPJG3Sz3F60z+4z2xWoaQCeLNYn
-Hi5ZmpB56f+OUSR4lLoM5U4=
-=HrW6
+iD8DBQFDStAzomPajV0RnrERAsTbAJ9JCQXxV1Pe6szfBYuSnbhZp+UNhgCghPId
+8Xlm9b4oVlE6POvSaMU4lCA=
+=SMWA
 -----END PGP SIGNATURE-----
