@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.25.ebuild,v 1.1 2005/10/07 21:09:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.25.ebuild,v 1.2 2005/10/10 23:50:01 pebenito Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-# SELINUX_PATCH="findutils-4.2.23-selinux.patch"
+SELINUX_PATCH="findutils-4.2.24-selinux.diff"
 
 DESCRIPTION="GNU utilities for finding files"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
@@ -29,7 +29,7 @@ src_unpack() {
 	sed -i '/^SUBDIRS/s/locate//' Makefile.in
 
 	# Patches for selinux
-	# use selinux && epatch "${FILESDIR}/${SELINUX_PATCH}"
+	use selinux && epatch "${FILESDIR}/${SELINUX_PATCH}"
 }
 
 src_compile() {
