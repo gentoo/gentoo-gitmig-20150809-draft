@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.18 2005/08/17 19:32:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.19 2005/10/10 21:37:16 vivo Exp $
+
+  10 Oct 2005; Francesco Riosa <vivo@gentoo.org>
+  mysqlnavigator-1.4.1.ebuild, mysqlnavigator-1.4.2.ebuild:
+  fix Bug #108666 mysqlnavigator homepage isn't working
 
   17 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   mysqlnavigator-1.4.2.ebuild:
