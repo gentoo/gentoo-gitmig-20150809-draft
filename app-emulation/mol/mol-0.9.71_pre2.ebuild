@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.6 2005/08/06 21:05:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre2.ebuild,v 1.1 2005/10/10 02:14:13 josejx Exp $
 
 inherit flag-o-matic eutils linux-mod
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~ppc"
-IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb"
+IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb pci"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -27,7 +27,6 @@ MODULE_NAMES="mol(mol:${S}/src/kmod/Linux)
 			  sheep(net:${S}/src/netdriver)
 			  tun(net:${S}/src/netdriver)"
 
-
 pkg_setup() {
 	echo
 	einfo "If you want to use MOL fullscreen on a virtual console"
@@ -39,28 +38,17 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-module-fix.patch
-	epatch ${FILESDIR}/${P}-nopriority.patch
-
-	# Fixes bug 79428
-	epatch ${FILESDIR}/${P}-linux-2.6.9.patch
-
-	# Adds big filesystem (>2Gb) image support, bug #80098
-	epatch ${FILESDIR}/${P}-big-filesystem.patch
-
-	# Fixes bug tmp-offset access violation
-	epatch ${FILESDIR}/${P}-tmp-offset.patch
-
-	# dhcp config fix and show dchpd messages on starting mol
-	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
-	sed -i "s:DHCPD\ -q\ -cf:DHCPD\ -cf:g" Doc/config/tunconfig || die
-
+	# PCI Debugging Patch
+	if use debug; then
+		epatch ${FILESDIR}/${PN}-pciproxy-dump.patch
+	fi
 }
 
 src_compile() {
 	filter-flags -fsigned-char
+	append-flags -D_FILE_OFFSET_BITS=64
+	append-flags -D_LARGE_FILES
 
 	export KERNEL_SOURCE="/usr/src/${FK}"
 	export LDFLAGS=""
@@ -84,6 +72,7 @@ src_compile() {
 	use vnc      || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config-ppc
 	use dga      || sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
 	use usb      || sed -i "s:CONFIG_USBDEV=y:# CONFIG_USBDEV is not set:" .config-ppc
+	use pci		 && sed -i "s:# CONFIG_PCIPROXY is not set:CONFIG_PCIPROXY=y:" .config-ppc
 
 	einfo "The configuration has been altered according to your USE-flags."
 	# reinitialize our changed configuration

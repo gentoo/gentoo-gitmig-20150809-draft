@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.51 2005/09/29 03:05:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.52 2005/10/10 02:14:13 josejx Exp $
+
+*mol-0.9.71_pre2 (10 Oct 2005)
+
+  10 Oct 2005; Joseph Jezak <josejx@gentoo.org> -mol-0.9.71_pre1.ebuild,
+  -mol-0.9.71_pre1-r1.ebuild, -mol-0.9.71_pre1-r2.ebuild,
+  +mol-0.9.71_pre2.ebuild:
+  Fixed Tiger 8GB install bug, XSHM bug, sheep build bug and rolled all of the
+  patches into a new snapshot. Removed obsolete ebuilds.
 
 *mol-0.9.71_pre1-r3 (29 Sep 2005)
 

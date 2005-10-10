@@ -1,35 +1,31 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8ca7b5ed6930915784abebce8a5c633c ChangeLog 10122
-MD5 56f8a1561157a28124d55347470da6c8 mol-0.9.70.ebuild 4047
-MD5 90f79bdde801865b57b9e5f4645df4df mol-0.9.71_pre1-r1.ebuild 4819
-MD5 3263d375abba2d098c636efc2b135ea5 metadata.xml 333
-MD5 64d6b0cac92a9184a83139de626d3c08 mol-0.9.71_pre1-r2.ebuild 5090
-MD5 457d88cf9e8da3a70ef024b28d6032a0 mol-0.9.71_pre1-r3.ebuild 5208
-MD5 17cd94d375a868aa1424c87c33d451e8 mol-0.9.70-r1.ebuild 3939
-MD5 4918ee55f2de727970e557ea98fc70dd mol-0.9.71_pre1.ebuild 4517
-MD5 11a4255ad58825f89d459519290217c2 files/mol-verify_area.diff 4696
-MD5 f0299c003ac50a8f73bd8264889116d7 files/mol-0.9.71_pre1-linux-2.6.9.patch 2571
-MD5 934e9ecf483ff3c4e34bb6307212d776 files/mol-0.9.70-nopriority.patch 1853
-MD5 659812abffbd24cf3a951dc3ea433827 files/mol-pciproxy-dump.patch 8955
-MD5 8d619246101648133ade3b39a2269e47 files/digest-mol-0.9.71_pre1-r3 187
-MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70-r1 64
-MD5 37a24cbf6bb78c4d9bd4c79b18aab9d6 files/mol-0.9.71_pre1-big-filesystem.patch 6554
-MD5 2f8f758938db9b3cb5a13c0b33d989e3 files/mol-module-fix.patch 327
-MD5 453e05b555f037270dd6da665e100aa8 files/digest-mol-0.9.71_pre1 69
-MD5 0ea7bd65a5ff4666665a71fb9652aae8 files/mol-0.9.70-makefile-fix.patch 924
-MD5 8d619246101648133ade3b39a2269e47 files/digest-mol-0.9.71_pre1-r2 187
+MD5 d95e9650c582d4ad79acef5a6cbaaca5 ChangeLog 10449
 MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70 64
-MD5 de4dd986b6c963eae483aebbab3d7a0d files/digest-mol-0.9.71_pre1-r1 121
-MD5 1b1d52b69bcae00d0339c0f3f4ae9a6d files/mol-tiger.patch 3681
-MD5 8eb2c97c995cba996b31b0ba38ef4fd0 files/mol-0.9.71_pre1-tmp-offset.patch 864
-MD5 c0056d18f99396ba8607109a26dc9188 files/mol-uname.diff 618
+MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70-r1 64
+MD5 8d619246101648133ade3b39a2269e47 files/digest-mol-0.9.71_pre1-r3 187
+MD5 74a6f40961448f1afaad0c8feeca09e2 files/digest-mol-0.9.71_pre2 69
+MD5 0ea7bd65a5ff4666665a71fb9652aae8 files/mol-0.9.70-makefile-fix.patch 924
+MD5 934e9ecf483ff3c4e34bb6307212d776 files/mol-0.9.70-nopriority.patch 1853
+MD5 37a24cbf6bb78c4d9bd4c79b18aab9d6 files/mol-0.9.71_pre1-big-filesystem.patch 6554
+MD5 f0299c003ac50a8f73bd8264889116d7 files/mol-0.9.71_pre1-linux-2.6.9.patch 2571
 MD5 3bf68312e4299f777065f55eea5297fa files/mol-0.9.71_pre1-nopriority.patch 1861
+MD5 8eb2c97c995cba996b31b0ba38ef4fd0 files/mol-0.9.71_pre1-tmp-offset.patch 864
+MD5 2f8f758938db9b3cb5a13c0b33d989e3 files/mol-module-fix.patch 327
+MD5 659812abffbd24cf3a951dc3ea433827 files/mol-pciproxy-dump.patch 8955
+MD5 1b1d52b69bcae00d0339c0f3f4ae9a6d files/mol-tiger.patch 3681
+MD5 c0056d18f99396ba8607109a26dc9188 files/mol-uname.diff 618
+MD5 11a4255ad58825f89d459519290217c2 files/mol-verify_area.diff 4696
+MD5 3263d375abba2d098c636efc2b135ea5 metadata.xml 333
+MD5 17cd94d375a868aa1424c87c33d451e8 mol-0.9.70-r1.ebuild 3939
+MD5 56f8a1561157a28124d55347470da6c8 mol-0.9.70.ebuild 4047
+MD5 457d88cf9e8da3a70ef024b28d6032a0 mol-0.9.71_pre1-r3.ebuild 5208
+MD5 9f8834a0ad9b34a43e9e14e9818fbf3f mol-0.9.71_pre2.ebuild 4217
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDO1oDcsIHjyDViGQRAr0lAKCn2BSHgI1tywJVeGVdMM/AH3X58QCeOnZV
-cSEZwrSVvEaIq+l4e/+SHvM=
-=l3NX
+iD8DBQFDSc6EcsIHjyDViGQRAjNBAKCtnMrOLq7GIepdvoB+0SCbnEacWgCg3PqX
+MxyLg9KmdTWfMMGPJyWAWK0=
+=9ueS
 -----END PGP SIGNATURE-----
