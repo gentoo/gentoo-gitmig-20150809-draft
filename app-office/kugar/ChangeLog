@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kugar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.15 2005/09/12 14:01:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.16 2005/10/10 22:09:38 greg_g Exp $
+
+*kugar-1.4.2 (10 Oct 2005)
+
+  10 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +kugar-1.4.2.ebuild:
+  New version.
 
   12 Sep 2005; Aron Griffis <agriffis@gentoo.org> kugar-1.4.1.ebuild:
   Mark 1.4.1 stable on alpha

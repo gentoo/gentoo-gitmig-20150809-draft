@@ -1,6 +1,15 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.113 2005/09/03 15:52:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.114 2005/10/10 22:06:00 greg_g Exp $
+
+*koffice-1.4.2 (10 Oct 2005)
+*koffice-1.4.1-r1 (10 Oct 2005)
+
+  10 Oct 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/koffice-1.4.1-rtfimport.patch, +koffice-1.4.1-r1.ebuild,
+  +koffice-1.4.2.ebuild:
+  New version. Includes fix for buffer overflow in RTF import. Fix applied to
+  1.4.1, too.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> koffice-1.4.1.ebuild:
   Stable on ppc.
