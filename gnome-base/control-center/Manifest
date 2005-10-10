@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1a2a2a9b4a3cc4c958f919c1c98a562e ChangeLog 17594
+MD5 f76d90233d04d3c21a816e195c63126e ChangeLog 17692
 MD5 d4f0febb27460c43fb258412acde17b8 control-center-1.4.0.5-r1.ebuild 1333
 MD5 63d40166766fb5bc828bb2bad93e6422 control-center-2.10.0.ebuild 1905
 MD5 5af1d1aad2b9b7fef198abb27b604c35 control-center-2.10.1-r1.ebuild 2036
-MD5 1aae5db8d4986decdb009437e893b1b5 control-center-2.10.2.ebuild 1985
 MD5 3cab1be20dfc1f79ecb30aec964cd27f control-center-2.12.1.ebuild 2265
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 294e051e6d17a76882fba5b23a6b53a9 control-center-2.10.2.ebuild 1985
 MD5 dbc915ad73576e8f0ae8a948e52fb621 files/control-center-1.4.0.5-cflags.patch 744
+MD5 cd6f25b991e95ef9f518b4c499f2e2f7 files/digest-control-center-2.10.2 75
 MD5 f14d2fe3d15320580a2ab5715e6e2d94 files/control-center-2.10.1-pathfix.patch 6670
-MD5 6d346011e61ca1c016c3c391881f9a4a files/control-center-2.11-gentoo_xcursor.patch 527
+MD5 ce951b06688a38662ed2c0e5e8d0d1bc files/digest-control-center-2.12.1 75
 MD5 fdc3d7feea8b429588a2d193c9547dbf files/control-center-2.2.0.1-alpha_hack.patch 2997
 MD5 63670f480e3cafb0d9dc8b3423425071 files/control-center-2.6.0-remove-pmu.patch 1210
 MD5 c74402dbfb3e7cdb095304cc4751d86a files/control-center-2.9-logout.patch 4083
 MD5 38949ed5d795344f78a96af44764f896 files/digest-control-center-1.4.0.5-r1 76
 MD5 86ede4717972671750335483cefdf77b files/digest-control-center-2.10.0 75
 MD5 2f0867c07305e05e49c57051e20dc068 files/digest-control-center-2.10.1-r1 75
-MD5 cd6f25b991e95ef9f518b4c499f2e2f7 files/digest-control-center-2.10.2 75
-MD5 ce951b06688a38662ed2c0e5e8d0d1bc files/digest-control-center-2.12.1 75
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSL5TgIKl8Uu19MoRAvoqAJ47+ubH6IJ0t7xME3X/wj/8isLS2QCdFnKH
-fTjHLHsTQOxzPKtVFtLttXM=
-=GzcM
------END PGP SIGNATURE-----
+MD5 6d346011e61ca1c016c3c391881f9a4a files/control-center-2.11-gentoo_xcursor.patch 527
