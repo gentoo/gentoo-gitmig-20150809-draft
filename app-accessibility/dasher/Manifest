@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 266e95dffa745c00a8fa6f0d5c4ba811 dasher-3.2.15.ebuild 1512
-MD5 645aac23c66d08fa6064bdb7c95c76ef metadata.xml 420
-MD5 b36aedb6555c20ac2d20f53dbeb30989 dasher-3.2.16.ebuild 1738
+MD5 76d666e6399f7768a17fe572e9a3096e metadata.xml 718
+MD5 069505ea9ef3b1c6713048f6a9df9d8d ChangeLog 6090
 MD5 993cd40f1be659a5450be19014171459 dasher-3.2.17.ebuild 1738
+MD5 b36aedb6555c20ac2d20f53dbeb30989 dasher-3.2.16.ebuild 1738
 MD5 adf4faf2c799e5174002772dc078f4e4 dasher-3.2.18.ebuild 1631
-MD5 69ba40d5c0c541d4e9d4824027c2259e ChangeLog 5977
+MD5 266e95dffa745c00a8fa6f0d5c4ba811 dasher-3.2.15.ebuild 1512
+MD5 ec3cb701a9f3f224e16cc88cb09f810b files/digest-dasher-3.2.18 67
+MD5 8f98c5422486b58fc0d6850e20582140 files/digest-dasher-3.2.16 67
+MD5 5b4b3e17b421919e17bc182404ffa36c files/digest-dasher-3.2.15 67
+MD5 9fcdb2723451b2020f4736773717c62b files/digest-dasher-3.2.17 67
 MD5 497bed8a975cd29705cb0e9b41f45d76 files/dasher-3.2.11-xtst_fix.patch 872
 MD5 29b515c44bcfdd79db45f38f65879994 files/dasher-3.2.15-buildwindowtree.patch 499
-MD5 5b4b3e17b421919e17bc182404ffa36c files/digest-dasher-3.2.15 67
-MD5 8f98c5422486b58fc0d6850e20582140 files/digest-dasher-3.2.16 67
-MD5 9fcdb2723451b2020f4736773717c62b files/digest-dasher-3.2.17 67
-MD5 ec3cb701a9f3f224e16cc88cb09f810b files/digest-dasher-3.2.18 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK/IgKf2g/qXtneoRAtTGAJ9GO4UY6S5SLBHBIqV8iyp7PNIm+wCgvFEW
-Y9c4eoqdEDNIUUj8/p69nGI=
-=h+f0
+iD8DBQFDSoyNFdQwWVoAgN4RAjGbAJ9KrLxy2a0izF94k04eVHHTBxITmwCgy+/N
+KofwDGCrlymyvt3gsGJx8PM=
+=VzRO
 -----END PGP SIGNATURE-----
