@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.75 2005/10/10 13:07:16 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.76 2005/10/10 19:57:37 dang Exp $
+
+  10 Oct 2005; <dang@gentoo.org> pine-4.64-r1.ebuild:
+  Marked stable on amd64
 
   10 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> pine-4.64-r1.ebuild:
   Stable on alpha wrt bug #108647
