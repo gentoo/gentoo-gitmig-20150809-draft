@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.96 2005/09/11 07:17:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.97 2005/10/10 06:47:51 hardave Exp $
+
+  10 Oct 2005; Hardave Riar <hardave@gentoo.org> libgnomeui-2.10.1.ebuild:
+  Stable on mips.
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> libgnomeui-2.10.1.ebuild:
   Mark 2.10.1 stable on alpha
