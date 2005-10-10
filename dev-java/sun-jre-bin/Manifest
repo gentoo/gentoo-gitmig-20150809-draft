@@ -1,24 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bd305ef0eacff48852e4e8035b1afb03 sun-jre-bin-1.4.2.08.ebuild 4845
-MD5 29886fcd70e0cb38f20f0dd3746ca846 sun-jre-bin-1.4.2.08-r1.ebuild 5124
-MD5 74b2512c3c4444a5d14064b5833e5719 sun-jre-bin-1.5.0.04.ebuild 5251
-MD5 fc79a20cf4aebc9ba7221f0722072b52 sun-jre-bin-1.4.2.09.ebuild 5122
-MD5 562fc6469b492c04abdc4f1993d61810 ChangeLog 5870
-MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
+MD5 385c8a7042d91cb58c696ebd454a4bf3 ChangeLog 6122
 MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08 75
+MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08-r1 75
 MD5 74299380ad85352daa11ed361d0ae7c4 files/digest-sun-jre-bin-1.4.2.09 75
 MD5 375f1fcc6d5fbf77a2202df4851b0033 files/digest-sun-jre-bin-1.5.0.04 149
-MD5 8f5aa278070a1b37d88a9abe3f238c31 files/digest-sun-jre-bin-1.4.2.08-r1 75
+MD5 ebf375761c2ad0048952e100b454dd8e files/digest-sun-jre-bin-1.5.0.05 149
 MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
 MD5 41e51040ed9b1b50fa87f9508a287442 files/sun-jre-bin-1.4.2.08 571
 MD5 d18163e6fa7ea0858c360d08eed4f0ab files/sun-jre-bin-1.4.2.09 571
 MD5 0b5b2341968924443dee6ae25db868a2 files/sun-jre-bin-1.5.0.04 569
+MD5 6007d953795be8bd8064d7809acd957e files/sun-jre-bin-1.5.0.05 575
+MD5 ca35f917561afc166491d77810b71095 metadata.xml 242
+MD5 29886fcd70e0cb38f20f0dd3746ca846 sun-jre-bin-1.4.2.08-r1.ebuild 5124
+MD5 bd305ef0eacff48852e4e8035b1afb03 sun-jre-bin-1.4.2.08.ebuild 4845
+MD5 fc79a20cf4aebc9ba7221f0722072b52 sun-jre-bin-1.4.2.09.ebuild 5122
+MD5 74b2512c3c4444a5d14064b5833e5719 sun-jre-bin-1.5.0.04.ebuild 5251
+MD5 528630de492a8a995b772ece75bb019b sun-jre-bin-1.5.0.05.ebuild 5330
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKEjp/rLF9B432nYRAvOwAJ93FvTSiUiTWZct4j0i5ktRm1676QCeMawQ
-Puzm+Qf4HkiFcbNQEQYvyD4=
-=CAWZ
+iD8DBQFDSpBmQiJ/wx066S4RAp01AJ9DaQT7u69/2Y2IsxBe6dzedJcO8gCgmdqK
+DDoohkrrk2h2UHOLsZwORg4=
+=OmZH
 -----END PGP SIGNATURE-----
