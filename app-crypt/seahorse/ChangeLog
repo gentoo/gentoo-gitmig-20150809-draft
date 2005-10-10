@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.45 2005/10/02 04:06:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.46 2005/10/10 21:39:42 dragonheart Exp $
+
+  10 Oct 2005; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.6.ebuild,
+  seahorse-0.7.8.ebuild, seahorse-0.7.9.ebuild:
+  added libsoup dependancy - bug #108741 (thank Anders Hellgren). Fixed BSD*
+  linker flags too
 
   02 Oct 2005; Jason Wever <weeve@gentoo.org> seahorse-0.7.8.ebuild:
   Stable on SPARC.

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.4 2005/07/29 23:13:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.6.ebuild,v 1.5 2005/10/10 21:39:42 dragonheart Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="gnome front end to gnupg"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -26,6 +26,7 @@ RDEPEND="virtual/x11
 	dev-util/intltool
 	dev-libs/glib
 	x11-misc/shared-mime-info
+	net-libs/libsoup
 	ldap? ( net-nds/openldap )"
 
 #no ~ppc64 keyword yet 	>=gnome-base/bonobo-activation-2
@@ -45,11 +46,8 @@ src_unpack() {
 
 src_compile() {
 	autoconf
-	# note below doesn't work - need to fix
-	append-ldflags -Wl,-z,now
-	export LDFLAGS
-
-	G2CONF=`use_enable ldap`
+	append-ldflags $(bindnow-flags)
+	G2CONF=$(use_enable ldap)
 	gnome2_src_compile
 }
 
