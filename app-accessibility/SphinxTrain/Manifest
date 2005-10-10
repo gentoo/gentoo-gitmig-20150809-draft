@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 34ccb5d0fad678901de3fb55668a7cd4 ChangeLog 1827
-MD5 c10264921e030d1878c19b378c63f190 SphinxTrain-0.9.1-r1.ebuild 1005
-MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 7ee585b5d5453d603e510f969b876524 files/digest-SphinxTrain-0.9.1-r1 74
+MD5 403ac1b21e549f99cb8fec8794c5aa71 metadata.xml 385
+MD5 f8c3756df5df669213bdc3b35f3472d9 ChangeLog 2001
+MD5 a16bf38f0e68d3b0562d30ebaeab7c58 SphinxTrain-0.9.1-r1.ebuild 1015
 MD5 993e38eaa81b891528bd3447e4d92a90 files/gcc.patch 816
+MD5 7ee585b5d5453d603e510f969b876524 files/digest-SphinxTrain-0.9.1-r1 74
 MD5 ec84597032aebb4fcfceb47872a5134d files/gcc34.patch 333
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3snFArHZZzCEUG0RAlA8AJ97/rG2TPIARHYC23yZrhfT+WdokQCfbNK+
-S064fbi/B/58KnJFXtSC5sk=
-=EzCA
+iD8DBQFDSmiNFdQwWVoAgN4RAiRrAKDxI1Ipwmxd9EM/2EjAauAWhgEC4gCfcEnd
+gnHh7n6+hQ68SvvgnIpXGwo=
+=YLVs
 -----END PGP SIGNATURE-----
