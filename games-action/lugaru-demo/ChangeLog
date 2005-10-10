@@ -1,6 +1,10 @@
 # ChangeLog for games-action/lugaru-demo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.1 2005/09/06 02:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.2 2005/10/10 14:47:04 wolf31o2 Exp $
+
+  10 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  lugaru-demo-1.0.ebuild:
+  Added emul-linux-x86-sdl to RDEPEND for amd64.
 
 *lugaru-demo-1.0 (05 Sep 2005)
 

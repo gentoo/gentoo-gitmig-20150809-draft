@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0.ebuild,v 1.1 2005/09/06 02:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0.ebuild,v 1.2 2005/10/10 14:47:04 wolf31o2 Exp $
 
 inherit games
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="sys-libs/glibc"
+RDEPEND="sys-libs/glibc
+	amd64? ( app-emulation/emul-linux-x86-sdl )"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
