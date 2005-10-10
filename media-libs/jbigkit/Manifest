@@ -1,19 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 58f928723be08c9121089af83ca4547b jbigkit-1.6-r1.ebuild 1173
-MD5 4e84e1e79ca429311ce5af75fb72c3c5 jbigkit-1.6.ebuild 1016
-MD5 f38ae5389c51dc49e9046dc00c043403 jbigkit-1.4.ebuild 1111
-MD5 faa967aa43d4525e435c13f1392ab092 ChangeLog 1903
+MD5 d9d01da2c6b20a989348d027e365d177 ChangeLog 2150
+MD5 3b69012688770808e2d9ebaf7d43533e files/digest-jbigkit-1.4 63
 MD5 d1b93d8aefb118f3259cc9ac2a55239e files/digest-jbigkit-1.6 63
 MD5 d1b93d8aefb118f3259cc9ac2a55239e files/digest-jbigkit-1.6-r1 63
 MD5 b5fa036877461225b796e1bab1fb2179 files/jbigkit-1.6-build.patch 284
-MD5 3b69012688770808e2d9ebaf7d43533e files/digest-jbigkit-1.4 63
+MD5 70021e4d1632a1277102944be46039d7 files/jbigkit-1.6-respect-make.patch 916
 MD5 390efb595be40382210383e92f50b8e9 files/jbigkit-1.6-shared-lib.patch 925
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQdJ0gIKl8Uu19MoRArwrAJ9mjT1t5HI06+fRuVWvcXzLOS+zTwCeI/TW
-PQ04cJphupoaDfC6hxh4PK0=
-=ZCT1
------END PGP SIGNATURE-----
+MD5 f38ae5389c51dc49e9046dc00c043403 jbigkit-1.4.ebuild 1111
+MD5 4c80f760102cb381be776b6bfe4297ad jbigkit-1.6-r1.ebuild 1301
+MD5 4e84e1e79ca429311ce5af75fb72c3c5 jbigkit-1.6.ebuild 1016

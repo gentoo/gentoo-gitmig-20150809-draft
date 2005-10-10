@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.6-r1.ebuild,v 1.4 2005/10/04 00:51:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.6-r1.ebuild,v 1.5 2005/10/10 12:24:35 flameeyes Exp $
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents"
 HOMEPAGE="http://www.cl.cam.ac.uk/~mgk25/jbigkit/"
@@ -23,6 +23,11 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-shared-lib.patch
+	epatch "${FILESDIR}"/${P}-respect-make.patch
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_test() {

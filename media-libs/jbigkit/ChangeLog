@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.21 2005/10/04 00:51:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.22 2005/10/10 12:24:35 flameeyes Exp $
+
+  10 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/jbigkit-1.6-respect-make.patch, jbigkit-1.6-r1.ebuild:
+  Added patch to respect the $(MAKE) variable. Use the right compiler for
+  current arch to build with newer compiler-config.
 
 *jbigkit-1.6-r1 (30 Sep 2005)
 
