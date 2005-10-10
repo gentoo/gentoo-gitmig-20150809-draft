@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce50ddbcaf8378053739a3a4697a80ef ChangeLog 4232
-MD5 06d4e8ee4b430f17d2f223c2a55d507b desktop-file-utils-0.10.ebuild 924
+MD5 47921578ef239281b0f4e10dee97d67d ChangeLog 4333
+MD5 8a5a56ffb7095f0a23207e68c5a8331d desktop-file-utils-0.10.ebuild 923
 MD5 a14cfd2626eb7ec319b7489be271998a desktop-file-utils-0.9.ebuild 916
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
 MD5 367c27a5e805a5ab6bbdaee8563cacf6 files/desktop-file-utils-0.10-noemacs.patch 409
 MD5 a5b7ad2bec794347c2aa4fd97ccb4228 files/desktop-file-utils-0.8-noemacs.patch 417
 MD5 0e35e3a36f381ec9666f47b801026825 files/digest-desktop-file-utils-0.10 75
 MD5 f7113107af039bf8cf5156ecc74e62f5 files/digest-desktop-file-utils-0.9 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDPo6vwUpWvClEHQoRAkaoAJ9mRLeLwEtLLqtWCWQ37J5hmSeL6QCeMd66
-ARhN5ohjshECleR4veBApHs=
-=53qu
------END PGP SIGNATURE-----
