@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/ntlmaps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.6 2005/10/06 21:39:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.7 2005/10/10 13:00:20 ferdy Exp $
+
+  10 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  ntlmaps-0.9.9-r2.ebuild:
+  stable on alpha wrt bug #107766
 
 *ntlmaps-0.9.9.5-r1 (06 Oct 2005)
 *ntlmaps-0.9.9-r2 (06 Oct 2005)
