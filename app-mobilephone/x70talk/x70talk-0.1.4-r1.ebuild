@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/x70talk/x70talk-0.1.4-r1.ebuild,v 1.2 2005/09/19 20:13:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/x70talk/x70talk-0.1.4-r1.ebuild,v 1.3 2005/10/10 19:28:34 mrness Exp $
 
 inherit eutils
 
@@ -25,5 +25,5 @@ src_unpack() {
 
 src_install() {
 	dobin x70talk
-	dodoc ChangeLog README TODO COPYING
+	dodoc ChangeLog README TODO
 }

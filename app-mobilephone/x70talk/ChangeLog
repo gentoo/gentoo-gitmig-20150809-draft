@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/x70talk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/x70talk/ChangeLog,v 1.1 2005/05/15 08:42:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/x70talk/ChangeLog,v 1.2 2005/10/10 19:28:34 mrness Exp $
+
+  10 Oct 2005; Alin Nastac <mrness@gentoo.org> x70talk-0.1.4-r1.ebuild:
+  Remove COPYING from docs.
 
 *x70talk-0.1.4-r1 (15 May 2005)
 
