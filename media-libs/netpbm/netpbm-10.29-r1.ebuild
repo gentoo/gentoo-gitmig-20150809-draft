@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.29-r1.ebuild,v 1.5 2005/10/04 23:20:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.29-r1.ebuild,v 1.6 2005/10/10 14:45:25 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -50,6 +50,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/netpbm-10.29-anytopnm.patch #105127
 	epatch "${FILESDIR}"/netpbm-10.29-pnmtopng-alpha-check.patch #104434
 	epatch "${FILESDIR}"/netpbm-10.29-build.patch
+	epatch "${FILESDIR}"/netpbm-10.29-infinity.patch
 
 	rm -f configure
 	cp Makefile.config.in Makefile.config

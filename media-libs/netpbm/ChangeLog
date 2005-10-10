@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.71 2005/10/04 23:20:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.72 2005/10/10 14:45:24 flameeyes Exp $
+
+  10 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/netpbm-10.29-infinity.patch, netpbm-10.29-r1.ebuild:
+  Added patch to rename the INFINITY variable to infinity to avoid problems
+  where the first is a system define.
 
   04 Oct 2005; Mike Frysinger <vapier@gentoo.org> netpbm-10.29-r1.ebuild:
   Redo some library options and merge Darwin support #74101.
