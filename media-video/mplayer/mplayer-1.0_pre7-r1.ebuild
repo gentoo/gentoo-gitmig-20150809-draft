@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.8 2005/08/31 14:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.9 2005/10/10 13:08:10 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -128,6 +128,7 @@ src_unpack() {
 
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-gcc4-amd64.patch
 
 	# fixes mplayer not seeing gcc 3.4-blahetc type
 	# gcc versions.  Half stolen from toolchain-funcs

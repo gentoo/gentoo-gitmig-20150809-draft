@@ -1,0 +1,65 @@
+diff -ur MPlayer-1.0pre7try2-orig/libavcodec/libpostproc/postprocess_template.c MPlayer-1.0pre7try2/libavcodec/libpostproc/postprocess_template.c
+--- MPlayer-1.0pre7try2-orig/libavcodec/libpostproc/postprocess_template.c	2005-10-03 13:05:15.824886936 +0000
++++ MPlayer-1.0pre7try2/libavcodec/libpostproc/postprocess_template.c	2005-10-03 12:58:26.370023055 +0000
+@@ -3496,7 +3496,7 @@
+ 				"prefetchnta 32(%%"REG_a", %0)	\n\t"
+ 				"prefetcht0 32(%%"REG_d", %2)	\n\t"
+ 			:: "r" (srcBlock), "r" ((long)srcStride), "r" (dstBlock), "r" ((long)dstStride),
+-			"m" ((long)x), "m" ((long)copyAhead)
++			"g" ((long)x), "g" ((long)copyAhead)
+ 			: "%"REG_a, "%"REG_d
+ 			);
+ 
+@@ -3642,7 +3642,7 @@
+ 				"prefetchnta 32(%%"REG_a", %0)	\n\t"
+ 				"prefetcht0 32(%%"REG_d", %2)	\n\t"
+ 			:: "r" (srcBlock), "r" ((long)srcStride), "r" (dstBlock), "r" ((long)dstStride),
+-			"m" ((long)x), "m" ((long)copyAhead)
++			"g" ((long)x), "g" ((long)copyAhead)
+ 			: "%"REG_a, "%"REG_d
+ 			);
+ 
+diff -ur MPlayer-1.0pre7try2-orig/postproc/swscale_template.c MPlayer-1.0pre7try2/postproc/swscale_template.c
+--- MPlayer-1.0pre7try2-orig/postproc/swscale_template.c	2005-10-03 13:05:15.828887121 +0000
++++ MPlayer-1.0pre7try2/postproc/swscale_template.c	2005-10-03 13:12:18.948389447 +0000
+@@ -765,14 +765,14 @@
+ 		asm volatile(
+ 				YSCALEYUV2YV12X(0, CHR_MMX_FILTER_OFFSET)
+ 				:: "r" (&c->redDither),
+-				"r" (uDest), "m" ((long)chrDstW)
++				"r" (uDest), "p" ((long)chrDstW)
+ 				: "%"REG_a, "%"REG_d, "%"REG_S
+ 			);
+ 
+ 		asm volatile(
+ 				YSCALEYUV2YV12X(4096, CHR_MMX_FILTER_OFFSET)
+ 				:: "r" (&c->redDither),
+-				"r" (vDest), "m" ((long)chrDstW)
++				"r" (vDest), "p" ((long)chrDstW)
+ 				: "%"REG_a, "%"REG_d, "%"REG_S
+ 			);
+ 	}
+@@ -780,7 +780,7 @@
+ 	asm volatile(
+ 			YSCALEYUV2YV12X(0, LUM_MMX_FILTER_OFFSET)
+ 			:: "r" (&c->redDither),
+-			   "r" (dest), "m" ((long)dstW)
++			   "r" (dest), "p" ((long)dstW)
+ 			: "%"REG_a, "%"REG_d, "%"REG_S
+ 		);
+ #else
+@@ -2552,8 +2552,13 @@
+ 		"add $1, %%"REG_a"		\n\t"
+ 		"cmp %2, %%"REG_a"		\n\t"
+ 		" jb 1b				\n\t"
+-
++/* GCC-3.3 makes MPlayer crash on IA-32 machines when using "g" operand here,
++   which is needed to support GCC-4.0 */
++#if defined(ARCH_X86_64) && ((__GNUC__ > 3) || ( __GNUC__ == 3 && __GNUC_MINOR__ >= 4))
++		:: "m" (src1), "m" (dst), "g" ((long)dstWidth), "m" (xInc_hi), "m" (xInc_lo),
++#else
+ 		:: "m" (src1), "m" (dst), "m" ((long)dstWidth), "m" ((long)(xInc_hi)), "m" ((xInc_lo)),
++#endif
+ 		"r" (src2)
+ 		: "%"REG_a, "%"REG_b, "%ecx", "%"REG_D, "%esi"
+ 		);
