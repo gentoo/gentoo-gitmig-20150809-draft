@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.5 2005/10/06 06:40:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.6 2005/10/10 12:13:48 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="the Utah Raster Toolkit is a library for dealing with raster images"
 HOMEPAGE="http://www.cs.utah.edu/gdc/projects/urt/"
@@ -51,7 +51,7 @@ src_unpack() {
 
 src_compile() {
 	./Configure config/gentoo || die "config"
-	emake || die "emake"
+	emake CC=$(tc-getCC) || die "emake"
 }
 
 src_install() {
