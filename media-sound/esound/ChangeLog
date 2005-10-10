@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.63 2005/09/14 07:21:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.64 2005/10/10 07:35:44 hardave Exp $
+
+  10 Oct 2005; Hardave Riar <hardave@gentoo.org> esound-0.2.36-r1.ebuild:
+  Stable on mips.
 
   14 Sep 2005; Aron Griffis <agriffis@gentoo.org> esound-0.2.36-r1.ebuild:
   Mark 0.2.36-r1 stable on alpha
