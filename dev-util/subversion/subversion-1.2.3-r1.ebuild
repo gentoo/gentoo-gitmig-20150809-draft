@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r1.ebuild,v 1.11 2005/10/07 18:20:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r1.ebuild,v 1.12 2005/10/10 11:11:46 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -221,8 +221,9 @@ EOF
 	dodoc CHANGES
 	dodoc tools/xslt/svnindex.css tools/xslt/svnindex.xsl
 	find contrib tools -name \*.in -print0 | xargs -0 rm -f
-	cp -r --parents tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
-	cp -r --parents contrib/hook-scripts ${D}/usr/share/doc/${PF}/
+	mkdir -p ${D}/usr/share/doc/${PF}/
+	cp -r tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
+	cp -r contrib/hook-scripts ${D}/usr/share/doc/${PF}/
 
 	docinto notes
 	for f in notes/*

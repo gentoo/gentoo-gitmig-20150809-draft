@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.19 2005/09/10 20:47:26 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.20 2005/10/10 11:11:46 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -241,8 +241,9 @@ EOF
 	dodoc CHANGES
 	dodoc tools/xslt/svnindex.css tools/xslt/svnindex.xsl
 	find contrib tools -name \*.in -print0 | xargs -0 rm -f
-	cp -r --parents tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
-	cp -r --parents contrib/hook-scripts ${D}/usr/share/doc/${PF}/
+	mkdir -p ${D}/usr/share/doc/${PF}/
+	cp -r tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
+	cp -r contrib/hook-scripts ${D}/usr/share/doc/${PF}/
 
 	# Install documentation
 	docinto notes

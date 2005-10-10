@@ -1,10 +1,14 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.185 2005/10/07 18:20:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.186 2005/10/10 11:11:46 pauldv Exp $
 
   07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   subversion-1.2.3-r1.ebuild:
   Stable on sparc
+
+  04 Oct 2005; <pauldv@gentoo.org> subversion-1.1.3.ebuild,
+  subversion-1.2.3-r1.ebuild, subversion-1.2.3.ebuild:
+  Try to fix bug #106443 to make the ebuild work on bsd.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   subversion-1.2.3-r1.ebuild:
