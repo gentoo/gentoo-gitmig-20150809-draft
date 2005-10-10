@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9209db7611ba4676263f8482b75db520 gst-plugins-gnomevfs-0.8.8.ebuild 409
-MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 b8bc22cb258f4a9697ee92f8cc909b55 gst-plugins-gnomevfs-0.8.10.ebuild 411
+MD5 b7358d8aacf217009de5b604ff2bd6ee ChangeLog 6761
 MD5 33505f3fd76cbebc340bcf599e766af1 gst-plugins-gnomevfs-0.8.11.ebuild 420
+MD5 9209db7611ba4676263f8482b75db520 gst-plugins-gnomevfs-0.8.8.ebuild 409
 MD5 511201ff74c98378cfe40844a6e383f6 gst-plugins-gnomevfs-0.8.9.ebuild 419
-MD5 a9ee22a815d504bec8edc17b0b889323 ChangeLog 6656
-MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-gnomevfs-0.8.9 71
-MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-gnomevfs-0.8.8 71
+MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 3b69d2e3c742642e0e3fbc106af4f174 gst-plugins-gnomevfs-0.8.10.ebuild 411
 MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-gnomevfs-0.8.11 72
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-gnomevfs-0.8.8 71
+MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-gnomevfs-0.8.9 71
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-gnomevfs-0.8.10 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNMqYgIKl8Uu19MoRAvuQAJwKxAT4riAw/Z9bDR0QnfEQuu08AgCfeXiz
-cUEVMZa3/CzIyji49DnDbdM=
-=LbU4
------END PGP SIGNATURE-----
