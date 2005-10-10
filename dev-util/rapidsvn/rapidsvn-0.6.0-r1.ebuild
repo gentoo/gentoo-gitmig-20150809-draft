@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.6.0-r1.ebuild,v 1.2 2005/09/16 06:26:20 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.6.0-r1.ebuild,v 1.3 2005/10/10 02:53:00 nerdboy Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE="doc gtk2"
 
 DEPEND="~net-misc/neon-0.24.7
 	>=dev-util/subversion-1.0.0
-	>=x11-libs/wxGTK-2.4.2-r2
+	~x11-libs/wxGTK-2.4.2
 	doc? ( dev-libs/libxslt app-text/docbook-sgml-utils app-doc/doxygen app-text/docbook-xsl-stylesheets )"
 
 src_unpack() {
