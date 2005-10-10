@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8b8c20778198096e0ea9e607870e567c ChangeLog 4375
-MD5 26489361fe682baf353e4b7cef7bba16 files/digest-syslinux-1.76 65
-MD5 d44d8f9a65b91ec75463ccc8dd60cee3 files/digest-syslinux-2.13 66
-MD5 55cac8782710921227939964ce2fc373 files/digest-syslinux-3.07 67
-MD5 490e31f6c68e021aa2cd0e5f6e2a366d files/digest-syslinux-3.09 67
-MD5 745c98992cd9629f7128ffcffb696c1a files/digest-syslinux-3.11 67
-MD5 90200c4b3f861abb39c0e6f7c132aad6 files/syslinux-3.07-nossp.patch 9251
-MD5 e9158a5fd6994f2109942545e8104e40 files/syslinux-3.08-nossp.patch 7141
-MD5 e278b0938cce81e1f5dd1c428f9b6275 files/syslinux-3.09-nopie.patch 1201
-MD5 60d345846a62cc4386410737f94c85b0 files/syslinux-3.11-nopie.patch 1125
-MD5 bad31caf09744863cd7b3069f9884566 files/syslinux-3.11-nossp.patch 7205
+MD5 927249ca05466e55dd37a9bd7fd3b3db ChangeLog 4495
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 fad406869474fc3a7cfde4203eb896fe syslinux-1.76.ebuild 760
 MD5 87356b71e2805dafa9e2b0ff5bb21059 syslinux-2.13.ebuild 942
 MD5 3a4f99082ffcdeeee54d16c334378b82 syslinux-3.07.ebuild 1040
-MD5 899370b03a110730daf94f5ca5d86aad syslinux-3.09.ebuild 1088
+MD5 db61b751c7b6ad05cdcc58e5805200db syslinux-3.09.ebuild 1088
 MD5 625d186a95e6fa13924bb67f5a3cf988 syslinux-3.11.ebuild 1094
+MD5 26489361fe682baf353e4b7cef7bba16 files/digest-syslinux-1.76 65
+MD5 d44d8f9a65b91ec75463ccc8dd60cee3 files/digest-syslinux-2.13 66
+MD5 55cac8782710921227939964ce2fc373 files/digest-syslinux-3.07 67
+MD5 490e31f6c68e021aa2cd0e5f6e2a366d files/digest-syslinux-3.09 67
+MD5 90200c4b3f861abb39c0e6f7c132aad6 files/syslinux-3.07-nossp.patch 9251
+MD5 e9158a5fd6994f2109942545e8104e40 files/syslinux-3.08-nossp.patch 7141
+MD5 e278b0938cce81e1f5dd1c428f9b6275 files/syslinux-3.09-nopie.patch 1201
+MD5 745c98992cd9629f7128ffcffb696c1a files/digest-syslinux-3.11 67
+MD5 60d345846a62cc4386410737f94c85b0 files/syslinux-3.11-nopie.patch 1125
+MD5 bad31caf09744863cd7b3069f9884566 files/syslinux-3.11-nossp.patch 7205
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDSKsTCRZPokWLroQRAsDtAJ0Y4rEk0oQXKf772XRJk3zyJCs6+ACdFI9u
-wQBFJan7WDJlIyJIeI8UJyM=
-=IAWl
+iD8DBQFDScl7wUpWvClEHQoRAqmUAJ9Ak3A7IcwOOB0oKDH85ppb7lho+ACgiebi
+iEkrOMLPGwtFK4O2kwpj8II=
+=KvxB
 -----END PGP SIGNATURE-----

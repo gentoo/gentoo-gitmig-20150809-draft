@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.09.ebuild,v 1.2 2005/10/09 05:30:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.09.ebuild,v 1.3 2005/10/10 00:51:53 metalgod Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND="sys-fs/mtools"
