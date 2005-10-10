@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.94 2005/10/10 00:33:39 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.95 2005/10/10 00:42:47 metalgod Exp $
+
+*xpdf-3.01-r1 (10 Oct 2005)
+
+  10 Oct 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/xpdf-3.01-resize.patch, +xpdf-3.01-r1.ebuild:
+  Added upstream patch to fix resize bug. Closes bug #105735.
 
   10 Oct 2005; Luis Medinas <metalgod@gentoo.org> -xpdf-3.00-r9.ebuild:
   Removing unneeded version.

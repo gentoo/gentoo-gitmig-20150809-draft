@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f13e994172ac291729772d570871aca7 ChangeLog 11320
+MD5 70e0d87fe45f5a370ffd8647ff0a90f7 ChangeLog 11517
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 0e303cf49620828eff323b0251d0141c xpdf-3.00-r8.ebuild 3622
 MD5 4baf6cdd9480cd938afaede8334c7a72 xpdf-3.00-r10.ebuild 3909
 MD5 763deff18a7e6e7125aca1f3d6be3229 xpdf-3.01.ebuild 3529
+MD5 3045b88b069de08b88a1c5c25b8caea6 xpdf-3.01-r1.ebuild 3562
 MD5 ec978d9450f061ea49ee697b39d545bf files/digest-xpdf-3.00-r8 767
 MD5 41c050cd5c7ccdcf1676a6852c7a35ed files/xpdf-3.00-PathScanner.patch.bz2 1003
 MD5 3df9058a9971c09627e71dad6b056244 files/xpdf-3.00-core.patch.bz2 271
@@ -27,10 +28,12 @@ MD5 8bcdee9af356073f2e0dd88071379148 files/xpdf-3.01-crash.patch 1057
 MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01 767
 MD5 24d9ec970f2b8178c64f7150be0d7ace files/xpdf-3.00-64bit.patch 1304
 MD5 145b821ca07a9e6a110dfe0088a39dc0 files/xpdf-3.01-pdftoppm.patch 1911
+MD5 934ccc815f9aecaa94152266f8fb29d8 files/xpdf-3.01-resize.patch 1232
+MD5 fb31167789c80b1a01d773fc5108c356 files/digest-xpdf-3.01-r1 767
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDScZVwUpWvClEHQoRAnu3AJ9Ht3DKwQBw6SgfEO3PyxiWez65VACdHGjH
-vrSK9bBPJiBb/Pb1Rt03INM=
-=BoBk
+iD8DBQFDScc+wUpWvClEHQoRAr5xAJ4of7A6fiaXT7Jf7v0lYkCGZpiL+QCfcq7y
+TFufY306l6zFzcmy6lDbl/I=
+=Jk1c
 -----END PGP SIGNATURE-----
