@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a431d4777c3eacfc431b9999501e1634 ChangeLog 1797
 MD5 d70719558b669d516582f062bf02d7c9 files/digest-terminal-0.2.2-r1 67
 MD5 7ef99426867dafad5a6020ba78dfa5c2 files/digest-terminal-0.2.4 68
@@ -5,6 +8,13 @@ MD5 7ef99426867dafad5a6020ba78dfa5c2 files/digest-terminal-0.2.4-r1 68
 MD5 ffe4301116b9b2a849aeb52d1e74fd0f files/digest-terminal-0.2.4_pre1 71
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 348192d3f84c53883baa3988cc4fa885 terminal-0.2.2-r1.ebuild 528
-MD5 e25518f7e3acd2f6ec7e4ddce00b54de terminal-0.2.4-r1.ebuild 793
-MD5 cff02cf9a88cf24abdc13ec6b24e627e terminal-0.2.4.ebuild 626
+MD5 73cc384de1653bc5884812a286dcf7eb terminal-0.2.4-r1.ebuild 798
+MD5 835d382d94f5e9ce2a169b8ac2b1ffb5 terminal-0.2.4.ebuild 629
 MD5 2f33f0835f138986e6019840d3fad951 terminal-0.2.4_pre1.ebuild 542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSo58gIKl8Uu19MoRAskqAJ9sIZFCvQhCy7btZ3yCm0gsnl45zgCeOXo5
+XlPRNtZhjD7a9ZL8wrVZ5sA=
+=UyIj
+-----END PGP SIGNATURE-----

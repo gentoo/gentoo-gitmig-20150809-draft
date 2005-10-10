@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.4.ebuild,v 1.6 2005/10/08 21:47:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.4.ebuild,v 1.7 2005/10/10 15:51:28 vapier Exp $
 
 DESCRIPTION="Terminal with close ties to xfce"
 HOMEPAGE="http://www.os-cillation.com/"
-KEYWORDS="~amd64 ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 arm ia64 ppc ~ppc64 ~sparc x86"
 
 IUSE="dbus"
 
