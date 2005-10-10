@@ -1,0 +1,11 @@
+--- SDL_mixer-1.2.6/music.c
++++ SDL_mixer-1.2.6/music.c
+@@ -392,7 +392,7 @@
+ #ifdef LIBMIKMOD_MUSIC
+ 	if(!MikMod_InfoDriver())
+ #endif
+-	MikMod_RegisterAllDrivers();
++	MikMod_RegisterDriver(&drv_nos);
+ #ifdef LIBMIKMOD_MUSIC
+ 	if(!MikMod_InfoLoader())
+ #endif

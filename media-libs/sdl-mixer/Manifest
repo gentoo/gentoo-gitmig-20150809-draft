@@ -1,18 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 23705937b9797ba254ff614c89c1b306 sdl-mixer-1.2.6.ebuild 1225
-MD5 98d99e954e2ccebd613b5396df79e07d ChangeLog 4005
-MD5 375360d31ec4aa8f404bb421dc7bc39b sdl-mixer-1.2.5-r1.ebuild 1421
-MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
-MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 929
+MD5 5945a1bed5e1f840d0f5532d23b852b4 ChangeLog 4261
 MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
+MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
 MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6 68
+MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6-r1 68
+MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 929
+MD5 85c429a982fe437337599502a8fa6c1d files/sdl-mixer-1.2.6-mikmod-music-init.patch 260
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 375360d31ec4aa8f404bb421dc7bc39b sdl-mixer-1.2.5-r1.ebuild 1421
+MD5 613dfb3b587e2d71931f69374c2f1c88 sdl-mixer-1.2.6-r1.ebuild 1304
+MD5 23705937b9797ba254ff614c89c1b306 sdl-mixer-1.2.6.ebuild 1225
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0FbEgIKl8Uu19MoRAheMAJ9bU52/9VS4GhazAdKckfl/2j4JvgCdEYFV
-gmNFAQ95uWyVfmbUN09oygA=
-=r3j7
+iD8DBQFDSoLOgIKl8Uu19MoRAnyBAKCAFiMe4TnhkIF/Co4JFR9FzXnQZQCfU0KX
+omiInhpP772JqwXUQa6ENhc=
+=zL8B
 -----END PGP SIGNATURE-----
