@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.9a-r1.ebuild,v 1.4 2005/09/13 09:50:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.9a-r1.ebuild,v 1.5 2005/10/10 21:55:16 vapier Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -18,6 +18,12 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/alsa-lib-1.0.9"
 RDEPEND="${DEPEND}
 	sys-apps/pciutils"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-strsignal.patch #103189
+}
 
 src_compile() {
 	# Largefile support, bug #91056

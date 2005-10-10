@@ -1,17 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 024d6714b8f85dc1b274aaf45fd6738f ChangeLog 17086
+MD5 d5f267960c8fcb8ae440810a0efe297c alsa-utils-1.0.10_rc1.ebuild 2678
 MD5 a2a37bf9cb817343a6a58e20cfea9bb8 alsa-utils-1.0.7.ebuild 2272
-MD5 b5f6bb65e4a152dd4845975b937c3781 alsa-utils-1.0.9a-r1.ebuild 2428
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 78e6b292416944d569f209dbd5f413c2 ChangeLog 16842
 MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
-MD5 f13a05df61cb05b5f0a6370996e2be9e alsa-utils-1.0.10_rc1.ebuild 2610
+MD5 d9b19e1fc31acdd0b7091ce79400ce85 alsa-utils-1.0.9a-r1.ebuild 2525
 MD5 8bf806386c8a966605549b7a91fd9131 alsa-utils-1.0.9a.ebuild 2343
 MD5 954b0951b5fed9bf591abf9e7cc1963e files/alsa-modules.conf-rc 1162
-MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
+MD5 6945018085dd4204d2f26490fb7b50b6 files/alsa-utils-1.0.10_rc1-largefile.patch 445
+MD5 4d2059fdfeeafe53e5d42692d9c2f14e files/alsa-utils-1.0.10_rc1-nls.patch 1959
+MD5 504c2047f55a094833631892ab099ada files/alsa-utils-1.0.9a-strsignal.patch 454
+MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
+MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
+MD5 3fe96c02287b96cbeb720e8d7b6d810a files/digest-alsa-utils-1.0.10_rc1 73
 MD5 ddaf1d5cc1a19dff65e19e6470bc711d files/digest-alsa-utils-1.0.7 69
 MD5 ec6210532acb9b397bacb3eb81f7593a files/digest-alsa-utils-1.0.8 69
+MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a 70
 MD5 2bfc6eaf49d769272a46ed2046b73944 files/digest-alsa-utils-1.0.9a-r1 70
-MD5 6945018085dd4204d2f26490fb7b50b6 files/alsa-utils-1.0.10_rc1-largefile.patch 445
-MD5 3fe96c02287b96cbeb720e8d7b6d810a files/digest-alsa-utils-1.0.10_rc1 73
-MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
-MD5 4d2059fdfeeafe53e5d42692d9c2f14e files/alsa-utils-1.0.10_rc1-nls.patch 1959
-MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSuO1gIKl8Uu19MoRAoovAJsFzb/Z+ysm1VHMT2sKnjrWBpl9oQCfQ7cg
+QlryiVhA7ixq0ztRsZOa8yg=
+=pibo
+-----END PGP SIGNATURE-----
