@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.6 2005/05/03 07:56:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.7 2005/10/10 00:15:52 metalgod Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xdr.com/dash/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/x11"
