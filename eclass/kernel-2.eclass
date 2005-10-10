@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.148 2005/10/07 08:25:04 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.149 2005/10/10 17:59:03 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -513,13 +513,15 @@ install_sources() {
 
 install_manpages() {
 	kernel_is lt 2 5 && return
-	sed -ie "s#/usr/local/man#${D}/usr/share/man#g" \
-		scripts/makeman Documentation/DocBook/Makefile
+
+	local myfiles="Documentation/DocBook/Makefile"
+	kernel_is lt 2 6 12 && myfiles="scripts/makeman ${myfiles}"
+	
+	sed -ie "s#/usr/local/man#${D}/usr/share/man#g" ${myfiles}
 	ebegin "Installing manpages"
 	env -u ARCH make installmandocs
 	eend $?
-	sed -ie "s#${D}/usr/share/man#/usr/local/man#g" \
-		scripts/makeman Documentation/DocBook/Makefile
+	sed -ie "s#${D}/usr/share/man#/usr/local/man#g" ${myfiles}
 }
 
 # pkg_preinst functions
