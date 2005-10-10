@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.5 2005/09/23 02:31:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1c.ebuild,v 1.6 2005/10/10 19:12:38 mr_bones_ Exp $
 
 inherit games
 
@@ -35,7 +35,7 @@ src_unpack() {
 	# keep libSDL-1.3.so because legends requires it as of 0.4.0, and
 	# 1.2.6 is highest in portage
 	# rm libSDL-*.so*
-	rm runlegends libSDL-1.2.so.0 libopenal.so libogg.so.0 libvorbis.so.0
+	rm runlegends libSDL-1.2.so.0 libopenal.so libogg.so.0 libvorbis.so.0 *.DLL
 	find . -type f -exec chmod a-x '{}' \;
 	chmod a+x lindedicated LinLegends
 	cp "${FILESDIR}"/legends{,-ded} "${T}" || die "cp failed"
@@ -55,7 +55,7 @@ src_install() {
 	if use dedicated ; then
 		dogamesbin "${T}"/legends-ded || die "dogamesbin failed (2)"
 	fi
-	doicon ${DISTDIR}/${PN}.png
+	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry legends "Legends"
 	prepgamesdirs
 }
