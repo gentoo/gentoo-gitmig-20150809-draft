@@ -1,20 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.3.8.ebuild,v 1.7 2005/10/07 16:08:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.0.ebuild,v 1.1 2005/10/10 05:55:01 cardoe Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="ivtv driver for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
 
-#FW_VER="pvr_1.18.21.22168_inf.zip" ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER}
-FW_VER_150="mce_cd_v27a.zip"
-FW_VER="pvr48wdm_1.8.22037.exe"
+FW_VER_DEC="pvr_1.18.21.22254_inf.zip"
+FW_VER_ENC="pvr_2.0.24.23035.zip"
 #Switched to recommended firmware by driver
 
-SRC_URI="http://dl.ivtvdriver.org/${PN}/${P}.tar.gz
-	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/win9x-2k-xp_mpeg_wdm_drv/${FW_VER}
-	http://hauppauge.lightpath.net/software/mce/${FW_VER_150}"
+SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/0.4.x/${P}.tar.gz
+	ftp://ftp.shspvr.com/download/wintv-pvr_150-500/inf/${FW_VER_ENC}
+	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER_DEC}"
 
 RESTRICT="nomirror"
 SLOT="0"
@@ -45,7 +44,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	unpack ${FW_VER_150}
+	unpack ${FW_VER_ENC}
 
 	sed -e "s:^VERS26=.*:VERS26=${KV_MAJOR}.${KV_MINOR}:g" \
 		-i ${S}/driver/Makefile || die "sed failed"
@@ -55,11 +54,7 @@ src_unpack() {
 	# instead PIO is used. Also, it force enables -fsigned-char and does not
 	# build some modules that contain x86 asm.
 
-	use ppc && epatch ${FILESDIR}/ppc-odw.patch
-
-	# http://ivtvdriver.org/trac/ticket/25
-	# future kernel compatiblity
-	epatch ${FILESDIR}/${P}-devname.patch
+	use ppc && epatch ${FILESDIR}/${P}-ppc-odw.patch
 }
 
 src_compile() {
@@ -73,20 +68,15 @@ src_compile() {
 src_install() {
 	cd ${S}/utils
 	dodir /lib/modules
-	./ivtvfwextract.pl ${DISTDIR}/${FW_VER} \
-		${D}/lib/modules/ivtv-fw-enc-250-350.bin \
+	./ivtvfwextract.pl ${DISTDIR}/${FW_VER_DEC} \
+		${D}/lib/modules/ivtv-fw-enc.bin \
 		${D}/lib/modules/ivtv-fw-dec.bin
 
 	insinto /lib/modules
-	newins ${WORKDIR}/WinTV-PVR-150500MCE_2_0_30_23074_WHQL/HcwFalcn.rom HcwFalcn.rom
-	newins ${WORKDIR}/WinTV-PVR-150500MCE_2_0_30_23074_WHQL/HcwMakoA.ROM HcwMakoA.ROM
+	newins ${WORKDIR}/HcwMakoA.ROM HcwMakoA.ROM
 
 	cd ${S}
-	dodoc README doc/*
-	cd ${S}/utils
-	newdoc README README.utils
-	dodoc README.mythtv-ivtv README.X11
-	dodoc lircd-g.conf lircd.conf lircrc
+	dodoc README doc/* utils/README.X11
 
 	cd ${S}/utils
 	#should work... no idea why its not
@@ -130,15 +120,4 @@ pkg_postinst() {
 			echo
 		fi
 	done
-
-	echo
-	ewarn
-	ewarn
-	ewarn "PVR-250/350 users need to run the following command to setup the firmware:"
-	ewarn "ln -sf /lib/modules/ivtv-fw-enc-250-350.bin /lib/modules/ivtv-fw-enc.bin"
-	ewarn
-	ewarn "PVR-150/500 users need to run the following command to setup the firmware:"
-	ewarn "ln -sf /lib/modules/HcwFalcn.rom /lib/modules/ivtv-fw-enc.bin"
-	ewarn
-	echo
 }
