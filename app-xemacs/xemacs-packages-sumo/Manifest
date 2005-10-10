@@ -1,10 +1,20 @@
-MD5 dc08d14db108901ada27c95b1bcb8767 xemacs-packages-sumo-2003.04.14.ebuild 1004
-MD5 4b347a6b2dcfe9f3c1c9d9f3d0b77d38 xemacs-packages-sumo-2003.06.29.ebuild 1004
-MD5 fafdbd52fb2b47bd90eac05f8ed793d1 xemacs-packages-sumo-2003.08.31.ebuild 1003
-MD5 fe75fe77f4de42a58fe3a82f14359b83 xemacs-packages-sumo-2003.11.13.ebuild 1024
-MD5 318aca68493dedbf830212272edb37b5 ChangeLog 3399
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 863a8337568c40b80f846af1ce2dea6a ChangeLog 3486
 MD5 123706b91a161701cfa75c4f046b47a6 files/digest-xemacs-packages-sumo-2003.04.14 158
 MD5 000199e7085ae7f2a965a46d92ba8cc6 files/digest-xemacs-packages-sumo-2003.06.29 158
 MD5 ef504c5661092407b7150a3761aa6f4e files/digest-xemacs-packages-sumo-2003.08.31 158
-MD5 51c024ab16fd1ae87402597c47d68db4 files/digest-xemacs-packages-sumo-2003.11.13 158
+MD5 e90fe61209e740b8681b857cea2aa49e files/digest-xemacs-packages-sumo-2003.11.13 158
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 dc08d14db108901ada27c95b1bcb8767 xemacs-packages-sumo-2003.04.14.ebuild 1004
+MD5 4b347a6b2dcfe9f3c1c9d9f3d0b77d38 xemacs-packages-sumo-2003.06.29.ebuild 1004
+MD5 fafdbd52fb2b47bd90eac05f8ed793d1 xemacs-packages-sumo-2003.08.31.ebuild 1003
+MD5 857047639ed0bd950e0c1bf53c5e2359 xemacs-packages-sumo-2003.11.13.ebuild 1025
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDSscMomPajV0RnrERApWJAJ9/xkrks3fDWniV2V3siV8dVv/1HQCdGQVD
+04UK/mRuyaFKlgc9gL3hAUQ=
+=yFit
+-----END PGP SIGNATURE-----
