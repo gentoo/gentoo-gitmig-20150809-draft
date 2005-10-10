@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.52 2005/10/10 02:14:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.53 2005/10/10 17:49:22 josejx Exp $
+
+*mol-0.9.71_pre3 (10 Oct 2005)
+
+  10 Oct 2005; Joseph Jezak <josejx@gentoo.org> +mol-0.9.71_pre3.ebuild:
+  Fixed Tiger acceleration and compilation on GCC4.
 
 *mol-0.9.71_pre2 (10 Oct 2005)
 

@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d95e9650c582d4ad79acef5a6cbaaca5 ChangeLog 10449
+MD5 ab30b9a2ae19c325467a65c4d3308ae2 ChangeLog 10607
 MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70 64
 MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70-r1 64
 MD5 8d619246101648133ade3b39a2269e47 files/digest-mol-0.9.71_pre1-r3 187
 MD5 74a6f40961448f1afaad0c8feeca09e2 files/digest-mol-0.9.71_pre2 69
+MD5 12008a6b0dab64cb3eecdb7c54f5fa22 files/digest-mol-0.9.71_pre3 69
 MD5 0ea7bd65a5ff4666665a71fb9652aae8 files/mol-0.9.70-makefile-fix.patch 924
 MD5 934e9ecf483ff3c4e34bb6307212d776 files/mol-0.9.70-nopriority.patch 1853
 MD5 37a24cbf6bb78c4d9bd4c79b18aab9d6 files/mol-0.9.71_pre1-big-filesystem.patch 6554
@@ -22,10 +23,11 @@ MD5 17cd94d375a868aa1424c87c33d451e8 mol-0.9.70-r1.ebuild 3939
 MD5 56f8a1561157a28124d55347470da6c8 mol-0.9.70.ebuild 4047
 MD5 457d88cf9e8da3a70ef024b28d6032a0 mol-0.9.71_pre1-r3.ebuild 5208
 MD5 9f8834a0ad9b34a43e9e14e9818fbf3f mol-0.9.71_pre2.ebuild 4217
+MD5 1dff2c90ae1356d1174d0f7af2f5e485 mol-0.9.71_pre3.ebuild 4273
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSc6EcsIHjyDViGQRAjNBAKCtnMrOLq7GIepdvoB+0SCbnEacWgCg3PqX
-MxyLg9KmdTWfMMGPJyWAWK0=
-=9ueS
+iD8DBQFDSqnFcsIHjyDViGQRArN/AJ9oY4Fl9FaJxT+JWOOmr+zYvxRKEACgzsf0
+hsHo37mY8YnZLTMq8WYeACo=
+=WDBX
 -----END PGP SIGNATURE-----
