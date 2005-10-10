@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.8.ebuild,v 1.7 2005/10/10 21:39:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.8.ebuild,v 1.8 2005/10/10 21:41:46 dragonheart Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/x11
 	>=gnome-base/nautilus-2.10
 	dev-util/intltool
 	dev-libs/glib
-	net-libs/libsoup
+	>=net-libs/libsoup-2.2
 	x11-misc/shared-mime-info
 	ldap? ( net-nds/openldap )"
 
