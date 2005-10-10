@@ -1,13 +1,18 @@
 --- utils/Makefile	2005-10-04 17:44:12.000000000 -0400
-+++ utils/Makefile.new	2005-10-10 01:39:32.000000000 -0400
-@@ -2,8 +2,8 @@
++++ utils/Makefile.new	2005-10-10 14:04:34.000000000 -0400
+@@ -2,12 +2,12 @@
  BINDIR = $(PREFIX)/bin
  HDRDIR = /usr/include/linux
  
 -EXES := ivtvctl ivtvfbctl ivtvplay cx25840ctl ivtv-detect \
 -        ivtv-radio ivtv-tune/ivtv-tune ivtv-mpegindex ivtv-encoder 
 +EXES := ivtvctl cx25840ctl ivtv-detect \
-+        ivtv-radio ivtv-tune/ivtv-tune  
++        ivtv-radio ivtv-tune/ivtv-tune 
  
  HEADERS := ../driver/ivtv.h
+ 
+-CFLAGS = -I../driver -D_GNU_SOURCE -O2 -Wall
++CFLAGS = -I../driver -D_GNU_SOURCE -O2 -Wall -fsigned-char
+ CXXFLAGS = $(CFLAGS)
+ export CFLAGS CXXFLAGS
  
