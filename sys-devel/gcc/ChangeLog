@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.459 2005/10/07 02:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.460 2005/10/10 14:10:28 halcy0n Exp $
+
+  10 Oct 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.2-r1.ebuild:
+  Remove SPLIT_SPECS for now, until we have a better complete solution; bug
+  #106690
 
   07 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-2.95.3-r9.ebuild, gcc-3.2.3-r4.ebuild, gcc-3.3.2-r7.ebuild,

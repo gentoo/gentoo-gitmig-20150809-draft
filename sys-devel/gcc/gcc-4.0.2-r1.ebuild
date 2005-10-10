@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r1.ebuild,v 1.2 2005/10/07 02:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r1.ebuild,v 1.3 2005/10/10 14:10:29 halcy0n Exp $
 
 PATCH_VER="1.2"
 PATCH_GCC_VER="4.0.2"
@@ -13,10 +13,6 @@ HTB_VER="1.00"
 HTB_GCC_VER="4.0.1"
 
 ETYPE="gcc-compiler"
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=${SPLIT_SPECS-true}
 
 inherit toolchain
 
