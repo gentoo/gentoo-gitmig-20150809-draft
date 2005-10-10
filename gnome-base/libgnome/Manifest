@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d4aab3edadae4244f10b5d8995b92a33 ChangeLog 11773
+MD5 838e34b163bd061ae18b4899e3a7813c libgnome-2.10.0.ebuild 961
 MD5 c2201849f233f3a9539cf84e3d256d2a libgnome-2.12.0.1.ebuild 1194
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ad76bd0c423cb4988641770516939563 libgnome-2.10.1-r1.ebuild 1313
-MD5 838e34b163bd061ae18b4899e3a7813c libgnome-2.10.0.ebuild 961
-MD5 e2df8796a0fee4db93bbb2efbd75ff3b ChangeLog 11679
-MD5 76fe91d7841e0e5a67d978f7d47f7777 files/digest-libgnome-2.12.0.1 70
-MD5 ce5833278452053c32262d4da9f4832f files/libgnome-gcc4.patch 457
+MD5 d128ecaf07d885d845b4621052caf2e1 libgnome-2.10.1-r1.ebuild 1313
 MD5 3111d83a6edd0cd8430b893cbbaedd88 files/digest-libgnome-2.10.0 68
 MD5 1be586cdc4d2e5cb606b6efd70db2e33 files/libgnome-2.10.1-esd_switch.patch 1346
+MD5 76fe91d7841e0e5a67d978f7d47f7777 files/digest-libgnome-2.12.0.1 70
+MD5 ce5833278452053c32262d4da9f4832f files/libgnome-gcc4.patch 457
 MD5 0216190dd7ef123c458e740d241ee252 files/digest-libgnome-2.10.1-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD4DBQFDNNYEgIKl8Uu19MoRAmtQAJ4k4ZT7x1rguXFNfZtp9aw5sJHreQCWKY1w
-Taa94zKMBj6dBKDSUkqmRA==
-=NY2H
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 01021470429c13db8036de0100b9e262 ChangeLog 8750
 MD5 14836365302cf0622a63c0689702c58a libgnomecanvas-2.10.0.ebuild 738
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 1b4ca3f222a28e3522573ce3af74042b libgnomecanvas-2.12.0.ebuild 799
-MD5 7d3f04e8f91000fc8cd9003b0d0234a9 libgnomecanvas-2.10.2.ebuild 773
-MD5 eefc665d3d5d4421e46b4d513b97f052 ChangeLog 8651
-MD5 02f3cae041cd776702c63a07c531d992 files/digest-libgnomecanvas-2.12.0 74
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 eabd9d3654738d06a65d9dee0e2440bb libgnomecanvas-2.10.2.ebuild 773
 MD5 019e7427481f8aa14ba11634cf02f427 files/digest-libgnomecanvas-2.10.0 74
+MD5 02f3cae041cd776702c63a07c531d992 files/digest-libgnomecanvas-2.12.0 74
 MD5 2b0668b32da28903ccc2dcabd46ccfbd files/digest-libgnomecanvas-2.10.2 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNYjgIKl8Uu19MoRAnU0AJ9fz6S2qDFYJUJ9mmS5FBakHBAt+wCfVM3P
-0II39/2DW42s43lndUy1LPI=
-=BDb2
------END PGP SIGNATURE-----
