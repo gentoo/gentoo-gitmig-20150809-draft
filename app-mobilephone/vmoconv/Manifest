@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a2b5b64270db2d6c6de17af5f952217f vmoconv-1.0.ebuild 791
 MD5 2d017dc9142fe2f8b6f0bb747d5e0033 ChangeLog 666
 MD5 3d703bfbe760589ae8b4bdefb1df9dac metadata.xml 370
 MD5 ad51711b81f583af1b493e09c0bb8e7c files/digest-vmoconv-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDSsB0NSP4Vda7IdsRAt+xAJ9T0WvMNN3X8mn8wrq+HlOt8bNHUACeLdkm
+H9lzTWFqWvYjXNYUq5NySo0=
+=UVqg
+-----END PGP SIGNATURE-----

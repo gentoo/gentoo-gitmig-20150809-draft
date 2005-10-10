@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f4db36aa586e1f416ea9e0d049b5f9d7 ChangeLog 1241
+MD5 47921e7893d1830d7a7caa8ae9a450b9 ChangeLog 1342
 MD5 0b19074f61428a73704b9c39c12548c4 metadata.xml 369
-MD5 a5e9b45e1ff9f06ed14509fe50222af9 x70talk-0.1.4-r1.ebuild 660
+MD5 8833854c9a67bb70e42e348664a0c479 x70talk-0.1.4-r1.ebuild 652
 MD5 8b12fd0c382a7b845e45f197c73a537b files/digest-x70talk-0.1.4-r1 64
 MD5 a38d52fd46840d397b317cf911326a46 files/x70talk-correct-month.diff 534
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLxvsNSP4Vda7IdsRAqg4AJ9WXE8cgd8XAkKI/by+5ecZF1aY/QCfWPWI
-FnPFWSsuMStaUAHpL8bBbOU=
-=0oLB
------END PGP SIGNATURE-----
