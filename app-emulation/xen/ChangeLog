@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.7 2005/10/10 13:36:14 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.8 2005/10/10 13:44:37 chrb Exp $
+
+  10 Oct 2005; Chris Bainbridge <chrb@gentoo.org>
+  xen-3.0.0_pre20051007.ebuild:
+  add disabling cflags einfo
 
   10 Oct 2005; Chris Bainbridge <chrb@gentoo.org>
   xen-3.0.0_pre20051007.ebuild:
