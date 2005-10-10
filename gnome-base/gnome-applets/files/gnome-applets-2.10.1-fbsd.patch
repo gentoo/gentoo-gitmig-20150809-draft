@@ -1,0 +1,55 @@
+Index: gnome-applets-2.10.1/configure.in
+===================================================================
+--- gnome-applets-2.10.1.orig/configure.in
++++ gnome-applets-2.10.1/configure.in
+@@ -19,6 +19,9 @@ AC_SUBST(X_LIBS)
+ 
+ GNOME_COMPILE_WARNINGS
+ 
++dnl Check for non-portable headers
++AC_CHECK_HEADERS([pty.h values.h])
++
+ dnl Stuff we might need, not quite sure yet
+ 
+ GTK_REQUIRED=2.5.0
+Index: gnome-applets-2.10.1/gweather/weather.c
+===================================================================
+--- gnome-applets-2.10.1.orig/gweather/weather.c
++++ gnome-applets-2.10.1/gweather/weather.c
+@@ -20,7 +20,10 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <math.h>
++
++#ifdef HAVE_VALUES_H
+ #include <values.h>
++#endif
+ 
+ #ifdef __FreeBSD__
+ #include <sys/types.h>
+Index: gnome-applets-2.10.1/modemlights/modem-applet.c
+===================================================================
+--- gnome-applets-2.10.1.orig/modemlights/modem-applet.c
++++ gnome-applets-2.10.1/modemlights/modem-applet.c
+@@ -24,13 +24,21 @@
+ 
+ #include <panel-applet.h>
+ #include <fcntl.h>
++#ifdef HAVE_PTY_H
+ #include <pty.h>
++#endif
+ #include <sys/poll.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <libxml/tree.h>
+ #include <glade/glade.h>
+ 
++#ifdef __FreeBSD__
++#include <sys/ioctl.h>
++#include <termios.h>
++#include <libutil.h>
++#endif
++
+ #include "modem-applet.h"
+ 
+ #define MODEM_APPLET_GET_PRIVATE(obj)  (G_TYPE_INSTANCE_GET_PRIVATE ((obj), TYPE_MODEM_APPLET, ModemAppletPrivate))

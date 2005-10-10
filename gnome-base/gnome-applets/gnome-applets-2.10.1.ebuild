@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.10.1.ebuild,v 1.11 2005/09/11 06:10:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.10.1.ebuild,v 1.12 2005/10/10 12:29:02 flameeyes Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
@@ -46,10 +46,13 @@ MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR="1"
 
 src_unpack() {
-
 	unpack ${A}
-	gnome2_omf_fix
+	cd ${S}
 
+	epatch ${FILESDIR}/${P}-fbsd.patch
+	AT_M4DIR="m4" eautoreconf
+
+	gnome2_omf_fix
 }
 
 src_install() {
