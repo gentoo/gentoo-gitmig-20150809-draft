@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0cbfd83b40cfaf410385fb8b84510cec ChangeLog 15881
-MD5 089a6cd04bdf99cc478d5b9c8f683633 gnome-session-2.10.0-r3.ebuild 2125
+MD5 2d105d82a879ac894d40e94c03bba8f4 ChangeLog 15982
 MD5 4499ec98ae9a50f5de83b8ce43411a80 gnome-session-2.10.0.ebuild 1586
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ba9241603da48c1a647be78924e3394d gnome-session-2.12.0.ebuild 1975
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 56aa74472b71a3a0189ff2ea99acd943 gnome-session-2.10.0-r3.ebuild 2124
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
 MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0 134
 MD5 39beb568f51916dc9351460344445640 files/digest-gnome-session-2.10.0-r3 134
-MD5 ef9c116121d03af45e5f6f00050da2d6 files/gnome-session-2.10.0-esd_switch.patch 1910
-MD5 b3685e6ab1ec8736038735270ae11fb5 files/gnome-session-2.10.0-no_smproxy.patch 2103
+MD5 e41648eab2faa7c6aa27c407c49a88a4 files/digest-gnome-session-2.12.0 134
 MD5 1472ffe4555c4aab66d8359a4031544d files/gnome-session-2.10.0-schema_defaults.patch 648
 MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.patch 1484
 MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
-MD5 e41648eab2faa7c6aa27c407c49a88a4 files/digest-gnome-session-2.12.0 134
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDJO2hwUpWvClEHQoRArEoAJ9o5GoGtWKgP+q1LmsqqvyAB0n8JwCdHQoc
-ONjdK1nax7QEkbCYuVNTboE=
-=GYqG
------END PGP SIGNATURE-----
+MD5 ef9c116121d03af45e5f6f00050da2d6 files/gnome-session-2.10.0-esd_switch.patch 1910
+MD5 b3685e6ab1ec8736038735270ae11fb5 files/gnome-session-2.10.0-no_smproxy.patch 2103
