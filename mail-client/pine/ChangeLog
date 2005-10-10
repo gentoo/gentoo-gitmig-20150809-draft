@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.73 2005/10/09 21:01:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.74 2005/10/10 03:44:33 weeve Exp $
+
+  10 Oct 2005; Jason Wever <weeve@gentoo.org> pine-4.64-r1.ebuild:
+  Stable on SPARC wrt bug #108647.
 
   09 Oct 2005; Carsten Lohrke <carlo@gentoo.org> pine-4.64-r1.ebuild:
   sry, reverted
