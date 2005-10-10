@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sancp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.2 2005/10/10 00:16:45 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.3 2005/10/10 00:35:50 strerror Exp $
+
+  10 Oct 2005; Benjamin Smee <strerror@gentoo.org> files/sancp.rc1:
+  fixed typo in sancp.rc1
 
   10 Oct 2005; Benjamin Smee <strerror@gentoo.org> +files/sguil_sancp.conf:
   Added sguil_sancp.conf
