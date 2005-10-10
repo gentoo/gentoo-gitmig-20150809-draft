@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 13d7ca84b5f5f3ab3453cf11ea18fe27 ChangeLog 2093
 MD5 2b0b0623d889932d22c276713b4b8d7d metadata.xml 223
 MD5 3e969922cc9b62c92a80cd5a108eeb9c pyparted-1.6.6.ebuild 878
@@ -6,3 +9,10 @@ MD5 e60ac629923dab401918fc86d7a6a207 pyparted-1.6.9.ebuild 1057
 MD5 870e184dc826576ff5943b1e39586621 files/digest-pyparted-1.6.9-r1 69
 MD5 1c3b5c95a85ac9c079423549c7922a84 files/digest-pyparted-1.6.6 69
 MD5 d0b426a010ec790060151f6c56b4aaa6 files/digest-pyparted-1.6.9 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDSqX2KRy60XGEcJIRAsNaAKCv2IPofaHsfWJbzFwdJaxnmUmg2gCeOpL+
+CZBGQM+miuNwbAXGpLH8QXw=
+=i+xG
+-----END PGP SIGNATURE-----
