@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r1.ebuild,v 1.2 2005/07/26 23:18:20 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r1.ebuild,v 1.3 2005/10/10 09:15:12 cryos Exp $
 
-inherit eutils toolchain-funcs pam
+inherit eutils toolchain-funcs pam portability
 
 MY_PN="poppassd"
 MY_P="${MY_PN}-${PV}"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 
 src_compile() {
 	$(tc-getCC) -c ${CFLAGS} ${MY_PN}.c || die "Compile failed."
-	$(tc-getCC) -o poppassd ${MY_PN}.o -lpam -ldl || die "Linking failed."
+	$(tc-getCC) -o poppassd ${MY_PN}.o -lpam $(dlopen_lib) || die "Linking failed."
 }
 
 src_install() {
