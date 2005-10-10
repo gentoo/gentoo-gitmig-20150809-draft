@@ -1,0 +1,39 @@
+The patch from upstream (shadow-4.0.11.1-SUPATH.patch) sets environ too
+early when using PAM, so move it to !USE_PAM.  Also set USER and SHELL.
+
+--- shadow-4.0.11.1/src/su.c	2005-08-04 12:34:35.000000000 +0200
++++ shadow-4.0.11.1.az/src/su.c	2005-08-04 12:38:57.000000000 +0200
+@@ -594,11 +594,6 @@
+ 		addenv ("PATH", cp);
+ 	}
+
+-#ifndef USE_PAM
+-	/* setup the environment for PAM later on, else we run into auth problems */
+-	environ = newenvp;	/* make new environment active */
+-#endif
+-
+ 	if (getenv ("IFS"))	/* don't export user IFS ... */
+ 		addenv ("IFS= \t\n", NULL);	/* ... instead, set a safe IFS */
+ 
+@@ -666,6 +664,8 @@
+ 		exit (1);
+ 	}
+ #else				/* !USE_PAM */
++	environ = newenvp;	/* make new environment active */
++	
+ 	if (!amroot)		/* no limits if su from root */
+ 		setup_limits (&pwent);
+ 
+@@ -676,8 +676,11 @@
+ 	if (fakelogin)
+ 		setup_env (&pwent);
+ #if 1				/* Suggested by Joey Hess. XXX - is this right?  */
+-	else
++	else {
+ 		addenv ("HOME", pwent.pw_dir);
++		addenv ("USER", pwent.pw_name);
++		addenv ("SHELL", pwent.pw_shell);
++	}
+ #endif
+ 
+ 	/*

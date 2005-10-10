@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.121 2005/08/24 11:33:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.122 2005/10/10 22:42:44 vapier Exp $
+
+*shadow-4.0.13 (10 Oct 2005)
+
+  10 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.13-dots-in-usernames.patch,
+  +files/shadow-4.0.13-login.defs.patch,
+  +files/shadow-4.0.13-long-groupnames.patch,
+  +files/shadow-4.0.13-nonis.patch,
+  +files/shadow-4.0.13-su-fix-environment.patch, +shadow-4.0.13.ebuild:
+  Version bump.
 
   24 Aug 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/shadow-4.0.12-gcc2.patch, shadow-4.0.12.ebuild:
