@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.80 2005/10/11 02:08:30 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.81 2005/10/11 02:16:31 langthang Exp $
+
+*postfix-2.2.5 (11 Oct 2005)
+
+  11 Oct 2005; Tuấn Văn <langthang@gentoo.org> +files/postfix.rc6.2.2.5,
+  +postfix-2.2.5.ebuild:
+  bump to postfix-2.2.5 without mailer eclass.
+  remove -ldl as it is not necessary, resolve bug #106446.
+  change "need net" to "use net", resolve bug #96850.
 
   11 Oct 2005; Tuấn Văn <langthang@gentoo.org> -files/postfix.rc6.2.2.3,
   -postfix-2.2.1.ebuild, -postfix-2.2.1-r1.ebuild, -postfix-2.2.2.ebuild,
