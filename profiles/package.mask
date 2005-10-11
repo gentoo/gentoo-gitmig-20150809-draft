@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4557 2005/10/11 13:24:21 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4558 2005/10/11 13:26:31 axxo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1619,6 +1619,7 @@ net-misc/zebra
 # impossible, see bug #69970 and bug 65937 for more information/discussion
 # http://www.gentoo-wiki.com/Java_FAQ
 >=dev-java/sun-jdk-1.4.99
+=dev-java/jrockit-jdk-bin-1.5*
 >=dev-java/java-sdk-docs-1.4.99
 
 # <taviso@gentoo.org> (06 Jan 2004)
