@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/qrna
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.6 2005/10/09 20:42:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.7 2005/10/11 15:15:26 metalgod Exp $
+
+  11 Oct 2005; Luis Medinas <metalgod@gentoo.org> qrna-2.0.3c.ebuild:
+  Marked Stable on amd64.
 
   09 Oct 2005; Mark Loeser <halcy0n@gentoo.org> qrna-2.0.3c.ebuild:
   Stable on x86
