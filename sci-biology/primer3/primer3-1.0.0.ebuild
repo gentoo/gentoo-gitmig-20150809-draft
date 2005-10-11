@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.0.0.ebuild,v 1.8 2005/09/04 14:54:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.0.0.ebuild,v 1.9 2005/10/11 15:07:20 metalgod Exp $
 
 DESCRIPTION="Design primers for PCR reactions."
 HOMEPAGE="http://frodo.wi.mit.edu/primer3/primer3_code.html"
@@ -8,7 +8,7 @@ SRC_URI="http://frodo.wi.mit.edu/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="whitehead"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc-macos ppc64 x86"
+KEYWORDS="amd64 ppc ppc-macos ppc64 x86"
 IUSE=""
 
 RDEPEND=""

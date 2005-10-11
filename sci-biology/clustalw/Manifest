@@ -1,4 +1,14 @@
-MD5 55a0d5344b9ddc811cecb12460b8f995 ChangeLog 2015
-MD5 ec571c3b6e024d8a9180d6b69e6b9d9f clustalw-1.83-r1.ebuild 1060
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 447e51e7af24dcbb734cd0ec6848a48c ChangeLog 2118
+MD5 26c36d2e5f2ad6adb7cb7a175eeb89d9 clustalw-1.83-r1.ebuild 1060
 MD5 59931bb873b284e7ab0b7c452e87d075 files/digest-clustalw-1.83-r1 69
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDS+KtwUpWvClEHQoRAjJ0AJsHK6Zyds9q1l2b6hcJ+yJKkscMigCfY5eQ
+AVBqo/igUeExMhLyMRBBb10=
+=PhJB
+-----END PGP SIGNATURE-----
