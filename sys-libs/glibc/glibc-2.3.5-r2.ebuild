@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.10 2005/10/09 04:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.11 2005/10/11 00:00:07 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -227,14 +227,14 @@ toolchain-glibc_src_compile() {
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
 		einfo "Building GLIBC with linuxthreads..."
-		make PARALLELMFLAGS="${MAKEOPTS} -j1" ${MAKEFLAGS} || die
+		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
 	fi
 	if want_nptl ; then
 		# ... and then do the optional nptl build
 		unset LD_ASSUME_KERNEL
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
-		make PARALLELMFLAGS="${MAKEOPTS} -j1" ${MAKEFLAGS} || die
+		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
 	fi
 }
 
@@ -304,14 +304,6 @@ toolchain-glibc_src_install() {
 	fi
 
 	if is_crosscompile ; then
-		# Glibc doesn't setup multilib crosscompiled dirs right, but it
-		# sets up native multilib dirs right, so just do this when we
-		# crosscompile.
-		if [[ $(get_libdir) != "lib" && -d ${D}$(alt_prefix)/lib ]] ; then
-			dodir $(alt_libdir)
-			mv "${D}"$(alt_prefix)/lib/* "${D}"$(alt_libdir)
-		fi
-
 		# punt all the junk not needed by a cross-compiler
 		rm -rf "${D}"$(alt_prefix)/{bin,etc,$(get_libdir)/{gconv,misc},sbin,share}
 	fi
@@ -595,10 +587,7 @@ alt_prefix() {
 
 alt_libdir() {
 	if is_crosscompile ; then
-		case ${CTARGET} in
-			mips64*) echo /usr/${CTARGET}/$(get_libdir) ;;
-			*)	 echo /usr/${CTARGET}/lib ;;
-		esac
+		echo /usr/${CTARGET}/$(get_libdir)
 	else
 		echo /$(get_libdir)
 	fi
@@ -606,10 +595,7 @@ alt_libdir() {
 
 alt_usrlibdir() {
 	if is_crosscompile ; then
-		case ${CTARGET} in
-			mips64*) echo /usr/${CTARGET}/$(get_libdir) ;;
-			*)	 echo /usr/${CTARGET}/lib ;;
-		esac
+		echo /usr/${CTARGET}/$(get_libdir)
 	else
 		echo /usr/$(get_libdir)
 	fi
@@ -1087,14 +1073,10 @@ src_unpack() {
 		mips)
 			GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 3000-all-2.3.4-dl_execstack-PaX-support.patch"
 			use_multilib \
-				&& GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6680_mips_nolib3264.patch"
+				&& GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6680_mips_nolib3264.patch" \
+				|| GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5005_all_enable-multilib-with-cross-compile.patch"
 		;;
 	esac
-
-	if ! is_crosscompile || [[ ${CTARGET#mips64} == ${CTARGET} ]] ; then
-		# This patch breaks every other multilib crosscompiler except mips64, and it only partially fixes that.
-		GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5005_all_enable-multilib-with-cross-compile.patch"
-	fi
 
 	GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5020_all_nomalloccheck.patch"
 
