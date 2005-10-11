@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c19af6c1a4d5cc3fd9f7668c26bdeb71 ChangeLog 63073
-MD5 f51ce492513c3ccfaf25109ef2447727 baselayout-1.11.13-r1.ebuild 18880
 MD5 10e1b8881d42750dd6e8e7cf343ea999 baselayout-1.12.0_pre7-r1.ebuild 18852
 MD5 2f7efa6af5983c5736e7822e5034afbe baselayout-1.12.0_pre8-r2.ebuild 19230
-MD5 8e94b4b8d22e16ea03fa08dd0475170a files/baselayout-1.12.0_pre7-ifconfig.patch 1327
-MD5 caf4f58ffd12206e0cdf22834afceb4f files/baselayout-1.12.0_pre8-usr-remount-ro.patch 502
+MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
+MD5 f51ce492513c3ccfaf25109ef2447727 baselayout-1.11.13-r1.ebuild 18880
+MD5 349768ad5818de3eea66916886999f75 ChangeLog 63213
+MD5 87f40148881c3d385bba0b50f89a86f5 baselayout-1.12.0_pre9.ebuild 19112
+MD5 6d5643e0857fc0f32f026e33d453c0c8 files/digest-baselayout-1.12.0_pre7-r1 75
+MD5 24ab73edde880efe7f7716737a2ec56f files/digest-baselayout-1.12.0_pre9 75
 MD5 645ee27aa823d5fb836b8f160326201e files/baselayout-1.12.0_pre8-whitelist-fixes.patch 1236
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 8dae78310577f3fb14c58704d529feb3 files/digest-baselayout-1.11.13-r1 70
-MD5 6d5643e0857fc0f32f026e33d453c0c8 files/digest-baselayout-1.12.0_pre7-r1 75
+MD5 8e94b4b8d22e16ea03fa08dd0475170a files/baselayout-1.12.0_pre7-ifconfig.patch 1327
 MD5 0f24c65f92bca9e5131d6ebd4ad6cfa0 files/digest-baselayout-1.12.0_pre8-r2 75
-MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDRbrvgIKl8Uu19MoRAj4jAJ0fBVwATGFmpaGk1fGnJ3+QV3oJBwCeKtWi
-qPdEheTDtJfAVbsqDJ0xA/8=
-=94bR
------END PGP SIGNATURE-----
+MD5 caf4f58ffd12206e0cdf22834afceb4f files/baselayout-1.12.0_pre8-usr-remount-ro.patch 502
