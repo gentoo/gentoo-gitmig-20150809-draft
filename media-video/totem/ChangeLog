@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.83 2005/10/11 01:27:13 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.84 2005/10/11 15:12:41 gustavoz Exp $
+
+  11 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> totem-1.2.0-r1.ebuild:
+  Back to ~sparc hand-masking dvd here since gst-plugins-dvdnav is b0rked for us
 
   11 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
   totem-1.2.0-r1.ebuild:
