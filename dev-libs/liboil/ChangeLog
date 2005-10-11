@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.13 2005/10/06 21:34:14 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.14 2005/10/11 11:49:18 zaheerm Exp $
+
+*liboil-0.3.3 (11 Oct 2005)
+
+  11 Oct 2005; <zaheer@gentoo.org> +liboil-0.3.3.ebuild:
+  version bump
 
   06 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> liboil-0.3.2.ebuild:
   marked ~alpha wrt bug #105807
