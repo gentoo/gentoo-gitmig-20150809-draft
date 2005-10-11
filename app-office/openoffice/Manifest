@@ -38,4 +38,4 @@ MD5 c42ff313cdc05c1102bbe41e5d9d5f07 files/digest-openoffice-2.0.0_rc2 414
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 60a58fcd938c9d5a770a92f6b7eb9b5d openoffice-1.1.4-r1.ebuild 16561
 MD5 a69a836ff536fa824b7bb4390198d2e6 openoffice-1.1.5.ebuild 16566
-MD5 b182564776b6c1fd8046f10a164b0bad openoffice-2.0.0_rc2.ebuild 6893
+MD5 15a6d6f1adee9e4b71ab14c4b9b12708 openoffice-2.0.0_rc2.ebuild 6862

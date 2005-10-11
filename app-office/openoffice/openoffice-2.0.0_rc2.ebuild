@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.2 2005/10/11 15:18:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.3 2005/10/11 15:25:15 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -9,7 +9,6 @@ IUSE="curl eds gnome java kde ldap mozilla nas python zlib xml2"
 OO_VER="${PV/_rc2}"
 MY_PV="2.0.rc2"
 PATCHLEVEL="OOO680"
-KDE_ICON_VER="6"
 PATCHDIR="${WORKDIR}/ooo-build-${MY_PV}"
 SRC="ooo680-m2"
 S="${WORKDIR}/${SRC}"
@@ -20,7 +19,7 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-system.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
-	kde? ( http://go-oo.org/packages/SRC680/ooo_crystal_images-${KDE_ICON_VER}.tar.bz2 )
+	kde? ( http://go-oo.org/packages/SRC680/ooo_crystal_images-6.tar.bz2 )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2"
 
 HOMEPAGE="http://go-oo.org"
