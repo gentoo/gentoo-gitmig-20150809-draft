@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.6 2005/09/09 16:51:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.27.ebuild,v 1.7 2005/10/11 19:01:51 zzam Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ FNAME_LNBSHARING="BETA-configurableLNBshare-VDR_1.3.26.patch"
 FNAME_SOURCECAPS_NORMAL="vdr-1.3.27-SourceCaps.diff"
 FNAME_SOURCECAPS_LNBSHARING="vdr-1.3.27-SourceCaps-lnb-sharing.diff"
 
-DESCRIPTION="The Video Disk Recorder"
+DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.cadsoft.de/vdr/"
 SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2
 	lnbsharing? ( http://xn--ltzke-jua.de/dvb/VDR_LNB_sharing_patch/${FNAME_LNBSHARING} )
