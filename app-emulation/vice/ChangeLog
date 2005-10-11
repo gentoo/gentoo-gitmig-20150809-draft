@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.25 2005/08/15 14:18:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.26 2005/10/11 06:35:16 mr_bones_ Exp $
+
+*vice-1.17 (11 Oct 2005)
+
+  11 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +vice-1.17.ebuild:
+  version bump
 
   15 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> vice-1.14-r1.ebuild,
   vice-1.16.ebuild:
