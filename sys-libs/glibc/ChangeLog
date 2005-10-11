@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.397 2005/10/08 04:19:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.398 2005/10/11 23:55:21 eradicator Exp $
+
+  11 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.5-r2.ebuild:
+  Set MULTILIB_ABIS to DEFAULT_ABI if ! use multilib.
 
   08 Oct 2005; Chris PeBenito <pebenito@gentoo.org> glibc-2.3.5-r1.ebuild,
   glibc-2.3.5-r2.ebuild:

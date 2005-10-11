@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.11 2005/10/11 00:00:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.12 2005/10/11 23:55:21 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -966,8 +966,11 @@ fix_lib64_symlinks() {
 
 use_multilib() {
 	case ${CTARGET} in
+		*-uclibc) false ;;
+
 		sparc64*|mips64*|amd64|ppc64)
-			is_crosscompile || has_multilib_profile || use multilib ;;
+			has_multilib_profile || use multilib ;;
+
 		*)  false ;;
 	esac
 }
@@ -976,6 +979,9 @@ use_multilib() {
 setup_env() {
 	if is_crosscompile || tc-is-cross-compiler ; then
 		multilib_env ${CTARGET}
+		if ! use multilib ; then
+			MULTILIB_ABIS=${DEFAULT_ABI}
+		fi
 	fi
 
 	export ABI=${ABI:-${DEFAULT_ABI:-default}}
