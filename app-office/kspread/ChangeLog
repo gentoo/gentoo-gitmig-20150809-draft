@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.17 2005/10/10 22:09:09 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.18 2005/10/11 19:11:28 agriffis Exp $
+
+  11 Oct 2005; Aron Griffis <agriffis@gentoo.org> kspread-1.4.2.ebuild:
+  Mark 1.4.2 ~ia64
 
 *kspread-1.4.2 (10 Oct 2005)
 
