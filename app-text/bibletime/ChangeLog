@@ -1,6 +1,11 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.20 2005/07/27 21:21:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.21 2005/10/11 12:42:06 greg_g Exp $
+
+*bibletime-1.5.1 (11 Oct 2005)
+
+  11 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +bibletime-1.5.1.ebuild:
+  New version (#107289). Add support for translations.
 
 *bibletime-1.5 (27 Jul 2005)
 
