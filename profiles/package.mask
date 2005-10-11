@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4552 2005/10/11 02:12:04 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4553 2005/10/11 02:20:35 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -673,11 +673,6 @@ x11-misc/service-discovery-applet
 # Diego Pettenò <flameeyes@gentoo.org> (18 August 2005)
 # Toxine needs to be verified with upstream for a few issues.
 media-video/toxine
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (17 August 2005)
-# Masking libsvg-cairo because its for cairo-0.9.2 mainly
-# and that is masked for GNOME purposes.
->=x11-libs/libsvg-cairo-0.1.6
 
 # Peter Johanson <latexer@gentoo.org> (18 May 2005)
 # Masking the *-sharp-2.5.x stuff, as 2.3.x is prefered by upstream.
