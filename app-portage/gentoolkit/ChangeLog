@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.53 2005/09/23 22:43:26 fuzzyray Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.54 2005/10/11 23:43:44 vapier Exp $
+
+*gentoolkit-0.2.0-r1 (11 Oct 2005)
+
+  11 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +gentoolkit-0.2.0-r1.ebuild:
+  Dont install qpkg anymore since it is deprecated #108899.
 
 *gentoolkit-0.2.1_pre8 (23 Sep 2005)
 
