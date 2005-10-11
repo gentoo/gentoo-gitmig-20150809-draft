@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.207 2005/10/11 00:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.208 2005/10/11 23:53:59 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -833,7 +833,12 @@ gcc_pkg_setup() {
 		esac
 
 		# Setup variables which would normally be in the profile
-		is_crosscompile && is_multilib && multilib_env ${CTARGET}
+		if is_crosscompile ; then
+			multilib_env ${CTARGET}
+			if ! use multilib ; then
+				MULTILIB_ABIS=${DEFAULT_ABI}
+			fi
+		fi
 
 		# we dont want to use the installed compiler's specs to build gcc!
 		unset GCC_SPECS
@@ -2130,7 +2135,7 @@ is_multilib() {
 		*-uclibc) false ;;
 
 		x86_64*|mips64*|powerpc64*|sparc64*)
-			is_crosscompile || has_multilib_profile || use multilib ;;
+			has_multilib_profile || use multilib ;;
 
 		*)	false ;;
 	esac
