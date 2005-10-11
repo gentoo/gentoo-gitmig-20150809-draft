@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.30 2005/10/06 20:04:01 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.31 2005/10/11 00:58:49 r3pek Exp $
+
+*git-0.99.8c (11 Oct 2005)
+
+  11 Oct 2005; Carlos Silva <r3pek@gentoo.org> +git-0.99.8c.ebuild:
+  New version from upstream. This version have an important fix to
+  git-ls-tree. When two identical blobs or trees were contained in a tree, the
+  earlier code mislabeled them in the output.
 
 *git-0.99.8b (06 Oct 2005)
 
