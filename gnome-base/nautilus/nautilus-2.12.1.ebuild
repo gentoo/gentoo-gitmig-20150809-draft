@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.1.ebuild,v 1.1 2005/10/06 07:21:08 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.1.ebuild,v 1.2 2005/10/11 13:30:44 seemant Exp $
 
 inherit virtualx gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 # cups flac gstreamer mad ogg vorbis
 
@@ -74,5 +74,8 @@ USE_DESTDIR="1"
 #}
 
 src_test() {
-	Xmake check || die "Test phase failed"
+	if hasq userpriv $FEATURES ;
+	then
+		Xmake check || die "Test phase failed"
+	fi
 }
