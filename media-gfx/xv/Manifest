@@ -1,7 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d014f85d07fd1897a85de316c59b5d42 ChangeLog 10179
+MD5 ba9562b902681c97e5f2a27f3d18b3ba ChangeLog 10271
+MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
+MD5 2954b497004732142fd6d69104cf2499 xv-3.10a-r10.ebuild 2689
+MD5 e85f1a876b925f9a8b4a29eabc3e3788 xv-3.10a-r11.ebuild 2321
+MD5 6f24a0366b1a69dc2a948ac0b2edb637 xv-3.10a-r12.ebuild 2117
+MD5 fbe8dc0be0ab018633f1e153b56c1662 xv-3.10a-r8.ebuild 2347
+MD5 d3caaf1691b52006d2295f1443fe691b xv-3.10a-r9.ebuild 2529
 MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r10 127
 MD5 6f7117c9be7e979494866250a24a3338 files/digest-xv-3.10a-r11 145
 MD5 bf64513c42257ec1f60b78efabf94e6e files/digest-xv-3.10a-r12 145
@@ -20,16 +23,3 @@ MD5 a5b5fd8ad9fbef9a63f360d83f55e546 files/xv-optimize-jpeg.diff 553
 MD5 f555e07727c8b51042dae772ae474f42 files/xv-postscript-double-free.diff 864
 MD5 8edd408b62a85896b2b76411f7839c60 files/xv-smoothing-algorithm.diff 6418
 MD5 cda66dd1f3a032802881a6ae4430e0d6 files/xv-use-getcwd.patch 222
-MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
-MD5 2954b497004732142fd6d69104cf2499 xv-3.10a-r10.ebuild 2689
-MD5 e85f1a876b925f9a8b4a29eabc3e3788 xv-3.10a-r11.ebuild 2321
-MD5 4b1f1325771e6af179644a7d89fc3173 xv-3.10a-r12.ebuild 2115
-MD5 fbe8dc0be0ab018633f1e153b56c1662 xv-3.10a-r8.ebuild 2347
-MD5 d3caaf1691b52006d2295f1443fe691b xv-3.10a-r9.ebuild 2529
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDStAzomPajV0RnrERAsTbAJ9JCQXxV1Pe6szfBYuSnbhZp+UNhgCghPId
-8Xlm9b4oVlE6POvSaMU4lCA=
-=SMWA
------END PGP SIGNATURE-----
