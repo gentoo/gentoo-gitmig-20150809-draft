@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/isdn-firmware
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.9 2005/09/11 19:50:23 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn-firmware/ChangeLog,v 1.10 2005/10/11 11:37:31 sbriesen Exp $
+
+*isdn-firmware-2005.8.15.2 (11 Oct 2005)
+
+  11 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org> metadata.xml,
+  +isdn-firmware-2005.8.15.2.ebuild:
+  version bump. switched to opensuse mirrors.
 
   11 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org>
   isdn-firmware-2005.3.21.3.ebuild:
