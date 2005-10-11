@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.99.ebuild,v 1.12 2005/08/24 14:17:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.99.ebuild,v 1.13 2005/10/11 22:05:44 wolf31o2 Exp $
 
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://fedora.redhat.com/projects/additional-projects/kudzu/"
 
-KEYWORDS="x86 amd64 -ppc -sparc alpha -mips"
+KEYWORDS="alpha amd64 -mips -ppc -sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
