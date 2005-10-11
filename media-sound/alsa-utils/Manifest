@@ -1,6 +1,5 @@
-MD5 024d6714b8f85dc1b274aaf45fd6738f ChangeLog 17086
-MD5 d5f267960c8fcb8ae440810a0efe297c alsa-utils-1.0.10_rc1.ebuild 2678
-MD5 d5f267960c8fcb8ae440810a0efe297c alsa-utils-1.0.10_rc2.ebuild 2678
+MD5 5d106e9f656e285c92570f9ed1dc9650 ChangeLog 17267
+MD5 7386ee7a3dc291848d8a3ada711ded07 alsa-utils-1.0.10_rc2.ebuild 2566
 MD5 a2a37bf9cb817343a6a58e20cfea9bb8 alsa-utils-1.0.7.ebuild 2272
 MD5 26f5354615b23de013a20117251274ee alsa-utils-1.0.8.ebuild 2269
 MD5 d9b19e1fc31acdd0b7091ce79400ce85 alsa-utils-1.0.9a-r1.ebuild 2525
@@ -11,7 +10,6 @@ MD5 4d2059fdfeeafe53e5d42692d9c2f14e files/alsa-utils-1.0.10_rc1-nls.patch 1959
 MD5 504c2047f55a094833631892ab099ada files/alsa-utils-1.0.9a-strsignal.patch 454
 MD5 2a50971b115f63d74d0054c7e3ee9144 files/alsasound 7106
 MD5 f4f492c382b243ebf558809a372fd6b7 files/alsasound.confd 515
-MD5 3fe96c02287b96cbeb720e8d7b6d810a files/digest-alsa-utils-1.0.10_rc1 73
 MD5 5583841a2a5a206ad2838524c2cc7528 files/digest-alsa-utils-1.0.10_rc2 73
 MD5 ddaf1d5cc1a19dff65e19e6470bc711d files/digest-alsa-utils-1.0.7 69
 MD5 ec6210532acb9b397bacb3eb81f7593a files/digest-alsa-utils-1.0.8 69

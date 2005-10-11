@@ -1,6 +1,5 @@
-MD5 6afad6513083d1300baa923b42bf2830 ChangeLog 27576
-MD5 f050928e9fbfe3c2ddd774e5929ca950 alsa-driver-1.0.10_rc1.ebuild 4565
-MD5 f050928e9fbfe3c2ddd774e5929ca950 alsa-driver-1.0.10_rc2.ebuild 4565
+MD5 e53d7073613677d60bbe8f31dc364cdb ChangeLog 27756
+MD5 ef9f6258e4d35bb6b821c1252be1b218 alsa-driver-1.0.10_rc2.ebuild 4564
 MD5 3c0f4daec01807f3cce65c8fff87ff3f alsa-driver-1.0.3.ebuild 3366
 MD5 4f4a1c953e628c974d5accd88a6c0d0c alsa-driver-1.0.8.ebuild 4688
 MD5 2225d603271147071152961c6f768d37 alsa-driver-1.0.9b.ebuild 4560
@@ -8,7 +7,6 @@ MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
 MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 346
 MD5 be4912a88e538a1f620b2fd422859ef6 files/alsa-driver-1.0.9b-sparc64-ioctl-detect.patch 513
-MD5 021076363d07efbc932afb961f1f3cf7 files/digest-alsa-driver-1.0.10_rc1 75
 MD5 569ec84f258f90c508827a3040062f41 files/digest-alsa-driver-1.0.10_rc2 75
 MD5 938a2ee36c54416322d1acd47b249c99 files/digest-alsa-driver-1.0.3 71
 MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-driver-1.0.8 71
