@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.28 2005/01/02 22:46:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.29 2005/10/11 16:06:57 agriffis Exp $
+
+  11 Oct 2005; Aron Griffis <agriffis@gentoo.org> wv2-0.2.2.ebuild:
+  Mark 0.2.2 ~ia64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
