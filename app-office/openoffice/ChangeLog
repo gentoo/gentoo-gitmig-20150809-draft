@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.127 2005/10/11 05:55:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.128 2005/10/11 15:18:07 suka Exp $
+
+  11 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.0_rc2.ebuild:
+  Fix SRC_URI for the crystal icons
 
 *openoffice-2.0.0_rc2 (11 Oct 2005)
 
