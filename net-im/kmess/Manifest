@@ -2,8 +2,6 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 1d9119f0fba19cc69d8860e27021515c kmess-1.4.1.ebuild 446
 MD5 6a3d6b27daf6934b34eaff9c4b476990 ChangeLog 3632
 MD5 f4eceff12866f1895c48f02ffcaf6a1a kmess-1.3.ebuild 580
-MD5 38a1ff084aed2bab5dc8d98ecceec610 kmess-1.4_pre1.ebuild 493
 MD5 c383ac2a5ed132e6b2ab8a5ea59a09ba files/digest-kmess-1.3 62
-MD5 241bc198b894441b1ed54494d34d4b54 files/digest-kmess-1.4_pre1 66
 MD5 e12777ab311fc4456e711cac5452542d files/kmess-1.3-compilation-fix.patch 1673
 MD5 74476fcd2dd800adec3fd0798d49941e files/digest-kmess-1.4.1 64
