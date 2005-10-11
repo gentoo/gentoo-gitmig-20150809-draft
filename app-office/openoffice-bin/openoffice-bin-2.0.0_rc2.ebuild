@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc2.ebuild,v 1.4 2005/10/08 21:25:28 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc2.ebuild,v 1.5 2005/10/11 06:03:51 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -72,7 +72,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 RDEPEND="!app-office/openoffice
 	virtual/x11
@@ -157,7 +157,7 @@ src_install () {
 	dosym ${INSTDIR}/program/spadmin.bin /usr/bin/oopadmin2
 
 	# Change user install dir
-	sed -i -e s/.openoffice.org2/.ooo-2.0.0/g ${D}${INSTDIR}/program/bootstraprc || die
+	sed -i -e s/.openoffice.org2/.ooo-2.0/g ${D}${INSTDIR}/program/bootstraprc || die
 
 	# Fixing some icon dir permissions
 	chmod +r -R ${D}/usr/share/icons/ || die
