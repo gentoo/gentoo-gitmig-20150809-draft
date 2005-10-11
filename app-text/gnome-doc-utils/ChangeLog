@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.36 2005/10/10 08:10:39 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.37 2005/10/11 13:07:59 allanonjl Exp $
+
+  11 Oct 2005; <allanon@gentoo.org> gnome-doc-utils-0.4.2.ebuild:
+  add check for libxml2 and python flag, fixes #108844
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org>
   gnome-doc-utils-0.2.1.ebuild:
