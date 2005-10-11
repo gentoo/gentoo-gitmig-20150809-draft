@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4553 2005/10/11 02:20:35 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4554 2005/10/11 03:38:40 dostrow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,7 +42,7 @@ media-tv/xawdecode
 # Daniel Ostrow <dostrow@gentoo.org>
 =xfce-base/libxfce4mcs-4.2.2-r1
 =xfce-base/libxfce4util-4.2.2-r1
-=xfce-base/libxfcegui4-4.2.2-r1
+>=xfce-base/libxfcegui4-4.2.2-r1
 =xfce-base/xfce-mcs-manager-4.2.2-r1
 =xfce-base/xfce-mcs-plugins-4.2.2-r1
 =xfce-base/xfce-utils-4.2.2-r1
