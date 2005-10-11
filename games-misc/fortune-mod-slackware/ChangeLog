@@ -1,0 +1,10 @@
+# ChangeLog for games-misc/fortune-mod-slackware
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.1 2005/10/11 07:17:28 mr_bones_ Exp $
+
+*fortune-mod-slackware-1.10 (11 Oct 2005)
+
+  11 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +fortune-mod-slackware-1.10.ebuild:
+  initial commit - ebuild supplied by Peter Hyman via bug #108380
+
