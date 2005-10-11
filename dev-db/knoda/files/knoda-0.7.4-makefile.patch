@@ -1,0 +1,88 @@
+diff -Nur knoda-0.7.4.orig/hk_kdeclasses/Makefile.am knoda-0.7.4/hk_kdeclasses/Makefile.am
+--- knoda-0.7.4.orig/hk_kdeclasses/Makefile.am	2005-06-11 18:41:20.000000000 +0200
++++ knoda-0.7.4/hk_kdeclasses/Makefile.am	2005-10-11 13:09:37.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = . pics
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdedbdesigner/Makefile.am knoda-0.7.4/hk_kdedbdesigner/Makefile.am
+--- knoda-0.7.4.orig/hk_kdedbdesigner/Makefile.am	2004-05-01 17:36:38.000000000 +0200
++++ knoda-0.7.4/hk_kdedbdesigner/Makefile.am	2005-10-11 14:57:38.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdeformpart/Makefile.am knoda-0.7.4/hk_kdeformpart/Makefile.am
+--- knoda-0.7.4.orig/hk_kdeformpart/Makefile.am	2004-08-08 19:34:57.000000000 +0200
++++ knoda-0.7.4/hk_kdeformpart/Makefile.am	2005-10-11 14:57:48.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdegridpart/Makefile.am knoda-0.7.4/hk_kdegridpart/Makefile.am
+--- knoda-0.7.4.orig/hk_kdegridpart/Makefile.am	2003-06-19 16:08:16.000000000 +0200
++++ knoda-0.7.4/hk_kdegridpart/Makefile.am	2005-10-11 14:57:58.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdeqbepart/Makefile.am knoda-0.7.4/hk_kdeqbepart/Makefile.am
+--- knoda-0.7.4.orig/hk_kdeqbepart/Makefile.am	2004-05-16 16:14:20.000000000 +0200
++++ knoda-0.7.4/hk_kdeqbepart/Makefile.am	2005-10-11 14:58:08.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdequerypart/Makefile.am knoda-0.7.4/hk_kdequerypart/Makefile.am
+--- knoda-0.7.4.orig/hk_kdequerypart/Makefile.am	2004-08-08 19:34:58.000000000 +0200
++++ knoda-0.7.4/hk_kdequerypart/Makefile.am	2005-10-11 14:58:18.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdereportpart/Makefile.am knoda-0.7.4/hk_kdereportpart/Makefile.am
+--- knoda-0.7.4.orig/hk_kdereportpart/Makefile.am	2004-08-09 20:12:32.000000000 +0200
++++ knoda-0.7.4/hk_kdereportpart/Makefile.am	2005-10-11 14:58:30.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
+diff -Nur knoda-0.7.4.orig/hk_kdetablepart/Makefile.am knoda-0.7.4/hk_kdetablepart/Makefile.am
+--- knoda-0.7.4.orig/hk_kdetablepart/Makefile.am	2004-08-08 19:34:59.000000000 +0200
++++ knoda-0.7.4/hk_kdetablepart/Makefile.am	2005-10-11 14:58:39.000000000 +0200
+@@ -1,7 +1,4 @@
+ ## Makefile.am for hk_kdeclasses
+-libdir=$(kde_libraries)
+-includedir=$(kde_includes)
+-
+ 
+ SUBDIRS = .
+ 
