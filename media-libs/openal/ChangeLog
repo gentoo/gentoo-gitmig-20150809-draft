@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.44 2005/10/07 10:29:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.45 2005/10/11 23:55:55 wolf31o2 Exp $
+
+  11 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  openal-20050504-r2.ebuild:
+  Fixing oggvorbis->vorbis in IUSE.
 
   07 Oct 2005; Luca Barbato <lu_zero@gentoo.org> openal-20050504-r2.ebuild:
   oggvorbis is a deprecated useflag

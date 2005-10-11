@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r2.ebuild,v 1.2 2005/10/07 10:29:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20050504-r2.ebuild,v 1.3 2005/10/11 23:55:55 wolf31o2 Exp $
 
 inherit eutils gnuconfig
 
-IUSE="alsa arts esd sdl debug oggvorbis mpeg"
+IUSE="alsa arts esd sdl debug vorbis mpeg"
 DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
 SRC_URI="http://dev.gentoo.org/~eradicator/openal/${P}.tar.bz2"
 HOMEPAGE="http://www.openal.org"
