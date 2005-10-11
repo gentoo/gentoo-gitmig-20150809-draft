@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9bdae3b3639bc562f9d5db2037b431ed ChangeLog 22003
-MD5 4072a11c3c98c493cbc0bb851176fb44 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
-MD5 071edd844b13f596a2f7d986b4512521 files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
-MD5 2ae3110a6e6fb30cfa593e4210535dc2 files/1.0/gnome-vfs-1.0.5-gcc3.4.patch 837
-MD5 7320d4ac9d4f99766075061daa53ea63 files/1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892
-MD5 25d42b1a4cf935fbedd3465bc4a8dd7c files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
+MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
+MD5 a9bea7c389b41b938670ede1446e0375 gnome-vfs-2.10.1-r2.ebuild 2207
+MD5 0e9c1c449c2abe63a64021dca1f01c1b gnome-vfs-2.10.0-r2.ebuild 2010
+MD5 26a55164c4d867a775a07c55fb497862 gnome-vfs-2.12.1.1.ebuild 2151
+MD5 cfa26c4d1fd63991f0fd2a0aff0c7f72 gnome-vfs-2.10.1-r1.ebuild 2013
+MD5 8e40460e32b98466360187092ada6242 ChangeLog 22137
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 09f0fab6d414a859d0f979bef3e10dfb files/gnome-vfs-2.8.3-reiser4_support.patch 710
+MD5 ba8ad5c040af8bd498c9ec71ac1df40e files/gnome-vfs-2-CAN-2005-0706.patch 490
+MD5 59ad154c6254211757fde7973afffc14 files/gnome-vfs-2.12.0-afs.patch 663
+MD5 75d0133c9ee4ef3355b25dad13c6cd9a files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
+MD5 c599d081cb908d1fe6851ab69d80a7fa files/gnome-vfs-2.10.1-fbsd.patch 1505
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r4 68
 MD5 2bebfc7d172b325dc37efef679cbf545 files/digest-gnome-vfs-2.10.0-r2 70
 MD5 d20a2ead9fd45768a182fe24423b0842 files/digest-gnome-vfs-2.10.1-r1 70
 MD5 d20a2ead9fd45768a182fe24423b0842 files/digest-gnome-vfs-2.10.1-r2 70
-MD5 24140c8ea60f06d7afa34e26f37c23dc files/digest-gnome-vfs-2.12.1.1 72
-MD5 ba8ad5c040af8bd498c9ec71ac1df40e files/gnome-vfs-2-CAN-2005-0706.patch 490
-MD5 c4482dd33a470e671d27a00eb8fbe044 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
-MD5 c599d081cb908d1fe6851ab69d80a7fa files/gnome-vfs-2.10.1-fbsd.patch 1505
-MD5 75d0133c9ee4ef3355b25dad13c6cd9a files/gnome-vfs-2.10.1-samba-close_fn.patch 1895
 MD5 6aa77e036ebb110dad9bc8244c3a7081 files/gnome-vfs-2.11.92-fbsd.patch 1036
-MD5 59ad154c6254211757fde7973afffc14 files/gnome-vfs-2.12.0-afs.patch 663
-MD5 09f0fab6d414a859d0f979bef3e10dfb files/gnome-vfs-2.8.3-reiser4_support.patch 710
-MD5 ed7cf04e9deeacff0d7c7848a5985556 gnome-vfs-1.0.5-r4.ebuild 2122
-MD5 0e9c1c449c2abe63a64021dca1f01c1b gnome-vfs-2.10.0-r2.ebuild 2010
-MD5 cfa26c4d1fd63991f0fd2a0aff0c7f72 gnome-vfs-2.10.1-r1.ebuild 2013
-MD5 a9bea7c389b41b938670ede1446e0375 gnome-vfs-2.10.1-r2.ebuild 2207
-MD5 42dfd74003879d7682bfc6dd4a405cb9 gnome-vfs-2.12.1.1.ebuild 2164
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSL55gIKl8Uu19MoRApdMAJ0ZqXJ0d1VVyGw0VkEq9rXSOzRPtACdG/3z
-BAQEt5xFOz5ZufXzOlH3+pU=
-=4ntO
------END PGP SIGNATURE-----
+MD5 c4482dd33a470e671d27a00eb8fbe044 files/gnome-vfs-2.10.1-date_time_stamp.patch 2297
+MD5 24140c8ea60f06d7afa34e26f37c23dc files/digest-gnome-vfs-2.12.1.1 72
+MD5 7320d4ac9d4f99766075061daa53ea63 files/1.0/gnome-vfs-1.0.5-gtkdoc_fixes.patch 4892
+MD5 25d42b1a4cf935fbedd3465bc4a8dd7c files/1.0/gnome-vfs-1.0.5-proxy.patch 2863
+MD5 2ae3110a6e6fb30cfa593e4210535dc2 files/1.0/gnome-vfs-1.0.5-gcc3.4.patch 837
+MD5 4072a11c3c98c493cbc0bb851176fb44 files/1.0/gnome-vfs-1.0.5-codeset.patch 1762
+MD5 071edd844b13f596a2f7d986b4512521 files/1.0/gnome-vfs-1.0.5-fix-segfault.patch 430
