@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.10_rc1.ebuild,v 1.5 2005/10/10 21:55:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.10_rc2.ebuild,v 1.1 2005/10/11 15:37:59 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 MY_P="${P/_rc/rc}"
 
@@ -26,13 +26,10 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-largefile.patch
-	epatch "${FILESDIR}"/${P}-nls.patch
-	epatch "${FILESDIR}"/${PN}-1.0.9a-strsignal.patch #103189
+	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-largefile.patch
+	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-nls.patch
 
-	aclocal || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
+	eautoreconf
 }
 
 src_compile() {
