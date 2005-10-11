@@ -1,10 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c71244a9e99ed7d730b9f17c0cf02c2 ChangeLog 35614
+MD5 3e911cda4b04cbc5c6bb8109ac690a49 ChangeLog 35760
 MD5 c2fd2c8cd7f31c4c876db365a98b972e files/digest-postfix-2.1.5-r2 363
 MD5 ff949f18a6d77e67fba4ed20907d0592 files/digest-postfix-2.2.4 135
 MD5 a45bc89f84c0c8cd2f467b49eba737c8 files/digest-postfix-2.2.5 135
+MD5 a45bc89f84c0c8cd2f467b49eba737c8 files/digest-postfix-2.2.5-r1 135
 MD5 a3c32f8c9d1344be08f018d377a61f59 files/mailer.conf 438
 MD5 fd78f3c5211f280a77dc8c8acd3dd898 files/postfix-2.0.9-get-FQDN.patch 1057
 MD5 98872da0bd186c6e0d2b884b0fa28b78 files/postfix.rc6 610
@@ -16,11 +17,12 @@ MD5 43e9368a07952c4aae9e370b59ce1450 files/smtp.sasl 131
 MD5 86c229fe394877d2c6a26aa5367bc697 metadata.xml 253
 MD5 c43e347d49e165904a2cc6ac498cb6f8 postfix-2.1.5-r2.ebuild 7521
 MD5 bd879e41d2b201d9d42f9fde7084e2cc postfix-2.2.4.ebuild 9229
+MD5 0df1abf51f640086bad33992b95ac00e postfix-2.2.5-r1.ebuild 9238
 MD5 8fdc476077654cdfbc9987e650db8a07 postfix-2.2.5.ebuild 9539
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDS0z35FrxP71izLARAnv6AJ9gI2mVeUKsfUmvMGIWIsIlbJ2dBgCg0lRC
-eO3d0aTm5v2elkj0BiyNOOI=
-=uPjW
+iD8DBQFDS03i5FrxP71izLARAs5fAKDRoVm/5SRCzN7mWHx7dwmz7+6JwgCfYEcd
+Y2dvcwPFyUdX5S1moHBIvig=
+=FCOd
 -----END PGP SIGNATURE-----
