@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 429e23ffa47ffd63bd090fd322b2bf75 ChangeLog 4554
 MD5 69fb0f18b0f74a88453cf989a0515f08 files/digest-ogle-0.9.1 62
 MD5 9e5be8c6673243e1604cfbec495081d5 files/digest-ogle-0.9.2 62
@@ -9,3 +12,10 @@ MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 48eb1335e280252c79162cf4a877afc3 ogle-0.9.1.ebuild 1951
 MD5 a675efc13c32c81dd51df68a2275084a ogle-0.9.2-r1.ebuild 1684
 MD5 06e259d193deb6588b6ef89a19f45d32 ogle-0.9.2.ebuild 2046
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDS8m1KRy60XGEcJIRAkc6AJ0QFhGrGDd204atHxljQUAyX8Yg4ACfQp5X
+8dc+AOuUjTbpqrGF4JqQn6o=
+=axVv
+-----END PGP SIGNATURE-----
