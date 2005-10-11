@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e835ede9baaeb3c99be927e05939fd78 libtommath-0.36.ebuild 667
+MD5 5c50d006bc68b8664e4b6234ddf8f12e ChangeLog 1759
 MD5 1975fddb3dc5a2ef223a6fd719dc9523 metadata.xml 2651
-MD5 8cabbaeecea1a719e3cdbff6596fbb08 libtommath-0.36.ebuild 655
 MD5 87523239a8e9209fca019fb62dc7444a libtommath-0.35.ebuild 604
-MD5 0ecd9332517c47af301bcd99bb80621e ChangeLog 1648
 MD5 04ebd08cc7e4122c2e5ef0118959c176 files/digest-libtommath-0.35 62
 MD5 83cd756148c5260fa077190d61ab987b files/digest-libtommath-0.36 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFC+WNdgIKl8Uu19MoRAiPqAJ4stgu1sVmd+mMVb9QOW8I87zY92wCcCxLh
-7n6kAfPV5Cj3twlU+IxSOhM=
-=Polw
------END PGP SIGNATURE-----
