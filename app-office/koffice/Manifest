@@ -1,4 +1,4 @@
-MD5 21790d04ea9bc0710970c75333847c7f koffice-1.4.1-r1.ebuild 1685
+MD5 254b80eb47879416b76899e98b6a4560 koffice-1.4.1-r1.ebuild 1753
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 2e12249c233187695f60e6f177e0baab ChangeLog 15947
 MD5 bdcb79a8db04904d6e6c7110e0ff3ec9 koffice-1.3.5-r2.ebuild 1211
@@ -6,7 +6,7 @@ MD5 3ea93db9f2f2175af3c12a4533272623 koffice-1.4.2.ebuild 1542
 MD5 216a4ec901dca4c7e574aae8a09c40da koffice-1.4.1.ebuild 1538
 MD5 ad0ad852e8525875ef9661ea4cf5546b files/koffice-1.4.1-rtfimport.patch 8794
 MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-koffice-1.4.1 68
-MD5 79e9d059a9a700c3c8009978d0aa0ce3 files/digest-koffice-1.4.1-r1 68
+MD5 59512f920182567b8e9420e5e3d1bc9b files/digest-koffice-1.4.1-r1 144
 MD5 6ee3768e50296eb2a8158093ee518133 files/CAN-2005-0064.patch 829
 MD5 cf5b314fdf4094ea845edfddf2cf39b5 files/digest-koffice-1.4.2 68
 MD5 77399be6733ffca4ed1142ab319c1453 files/koffice_1_3_xpdf_buffer_overflow.diff 1808
