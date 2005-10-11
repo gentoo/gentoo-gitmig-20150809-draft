@@ -1,6 +1,9 @@
 # ChangeLog for app-text/c2ps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.10 2005/08/10 15:37:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.11 2005/10/11 18:19:39 grobian Exp $
+
+  11 Oct 2005; Fabian Groffen <grobian@gentoo.org> c2ps-4.0.ebuild:
+  Marked ~ppc-macos (bug #108591)
 
   10 Aug 2005; Simon Stelling <blubb@gentoo.org> c2ps-4.0.ebuild:
   added ~amd64 keyword
