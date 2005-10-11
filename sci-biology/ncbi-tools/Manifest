@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c06dd9b3855a5f5575e95220eedaec9 ChangeLog 7503
+MD5 0824e735628c7458bf4ac4e120e6b497 ChangeLog 7610
 MD5 756db6700c84d3b303bfc3d0a28871de files/21ncbi 166
 MD5 a5f54430f6f7422d75320e91068cae0b files/21ncbi-r1 232
 MD5 6fa8c1b5254e9c217c399c949bc75f45 files/digest-ncbi-tools-20041020-r1 144
@@ -12,11 +12,11 @@ MD5 23986a001c85eb8c2c319aacfa9cb40c files/ncbirc 33
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 6c8b57dc3b8c8523ae2adb7a1a8f1ed3 ncbi-tools-20041020-r1.ebuild 5630
 MD5 0cfe991ee8c23a5a862c2386eba988e8 ncbi-tools-20050429.ebuild 5628
-MD5 b14bc7c791aea27ab6e6afef619346ef ncbi-tools-20050605.ebuild 5694
+MD5 8e26105fd1dd13db910a7b02fa9af643 ncbi-tools-20050605.ebuild 5694
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDSXbgCRZPokWLroQRAhWxAJ0c7yfSqov7t2EWqS4KqL9TbA7m6wCeNYAU
-3Wdy7dEnijeF07pReXjUsgE=
-=avmX
+iD8DBQFDS+tEwUpWvClEHQoRAkGjAJ0Y3n1T3KZ5ZzttxGm7aEwyA+CM3ACgg6YA
+IjaertL6CL8TuINWNPyRFos=
+=2fc6
 -----END PGP SIGNATURE-----
