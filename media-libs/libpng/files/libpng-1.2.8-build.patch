@@ -1,0 +1,74 @@
+Clean up build system to make cross-compiling easy
+
+--- scripts/makefile.linux
++++ scripts/makefile.linux
+@@ -8,12 +8,12 @@
+ PNGMIN = 1.2.8
+ PNGVER = $(PNGMAJ).$(PNGMIN)
+ 
+-CC=gcc
++CC?=gcc
+ 
+ # where "make install" puts libpng12.a, libpng12.so*,
+ # libpng12/png.h and libpng12/pngconf.h
+ # Prefix must be a full pathname.
+-prefix=/usr/local
++prefix=/usr
+ 
+ # Where the zlib library and include files are located.
+ #ZLIBLIB=/usr/local/lib
+@@ -31,18 +31,25 @@
+ 
+ # for pgcc version 2.95.1, -O3 is buggy; don't use it.
+ 
+-CFLAGS=-I$(ZLIBINC) -Wall -O3 -funroll-loops \
+-	$(ALIGN) # $(WARNMORE) -g -DPNG_DEBUG=5
++CFLAGS += -Wall $(ALIGN) 
++ifneq ($(ZLIBINC),)
++CFLAGS += -I$(ZLIBINC)
++endif
++
++ifneq ($(ZLIBLIB),)
++LDFLAGS += -L$(ZLIBLIB) -Wl,-rpath,$(ZLIBLIB)
++endif
++LDFLAGS    += -lz -lm
++LDFLAGS_A   = $(LDFLAGS) libpng.a
++LDFLAGS_SO  = $(LDFLAGS) -L. -Wl,-rpath,. -lpng12
+ 
+-LDFLAGS=-L. -Wl,-rpath,. -L$(ZLIBLIB) -Wl,-rpath,$(ZLIBLIB) -lpng12 -lz -lm
+-LDFLAGS_A=-L$(ZLIBLIB) -Wl,-rpath,$(ZLIBLIB) libpng.a -lz -lm
+-
+-RANLIB=ranlib
++AR?=ar
++RANLIB?=ranlib
+ #RANLIB=echo
+ 
+ INCPATH=$(prefix)/include
+ LIBPATH=$(prefix)/lib
+-MANPATH=$(prefix)/man
++MANPATH=$(prefix)/share/man
+ BINPATH=$(prefix)/bin
+ 
+ # override DESTDIR= on the make install command line to easily support
+@@ -74,7 +81,7 @@
+ all: libpng.a $(LIBNAME).so pngtest pngtest-static libpng.pc libpng-config
+ 
+ libpng.a: $(OBJS)
+-	ar rc $@ $(OBJS)
++	$(AR) rc $@ $(OBJS)
+ 	$(RANLIB) $@
+ 
+ libpng.pc:
+@@ -104,10 +111,10 @@
+ libpng.so.3.$(PNGMIN): $(OBJSDLL)
+ 	$(CC) -shared -Wl,-soname,libpng.so.3 \
+ 	-o libpng.so.3.$(PNGMIN) \
+-	$(OBJSDLL)
++	$(OBJSDLL) $(LDFLAGS)
+ 
+ pngtest: pngtest.o $(LIBNAME).so
+-	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
++	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS_SO)
+ 
+ pngtest-static: pngtest.o libpng.a
+ 	$(CC) -o pngtest-static $(CFLAGS) pngtest.o $(LDFLAGS_A)
