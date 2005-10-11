@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.10 2005/10/11 01:06:29 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.11 2005/10/11 13:59:27 gustavoz Exp $
+
+  11 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  portage-utils-0.1.6.ebuild:
+  Stable on sparc
 
   11 Oct 2005; Stephen Bennett <spb@gentoo.org> portage-utils-0.1.6.ebuild:
   mips stable by request
