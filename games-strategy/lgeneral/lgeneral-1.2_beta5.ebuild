@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta5.ebuild,v 1.1 2005/10/06 15:28:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta5.ebuild,v 1.2 2005/10/11 06:55:48 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -24,6 +24,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gcc4.patch
 	# Build a temporary lgc-pg that knows about /var/tmp/portage in work/lgc-pg:
 	cp -pPR "${S}" "${WORKDIR}/lgc-pg" || die "cp failed."
 }

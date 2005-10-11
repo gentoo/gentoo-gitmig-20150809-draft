@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.13 2005/10/06 15:28:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.14 2005/10/11 06:55:47 mr_bones_ Exp $
+
+  11 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.2_beta5-gcc4.patch, lgeneral-1.2_beta5.ebuild:
+  add patch from Marien Zwart for current gcc __FUNCTION__ handling (bug
+  #106258)
 
 *lgeneral-1.2_beta5 (06 Oct 2005)
 
