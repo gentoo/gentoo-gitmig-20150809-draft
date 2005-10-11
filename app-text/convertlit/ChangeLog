@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convertlit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.6 2005/04/21 20:36:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.7 2005/10/11 18:40:42 grobian Exp $
+
+  11 Oct 2005; Fabian Groffen <grobian@gentoo.org> convertlit-1.8.ebuild:
+  Marked ~ppc-macos (bug #108462)
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> convertlit-1.8.ebuild:
   stable on amd64
