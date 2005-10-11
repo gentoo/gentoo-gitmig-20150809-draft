@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 170ca89e885ee4127a33845b38e6fc08 color-tools-1.2.0.ebuild 763
-MD5 f596101849a401f9e4523310c5517983 color-tools-1.3.0.ebuild 751
-MD5 792f0e54dbdaa344dad0b9a543953957 ChangeLog 568
-MD5 51d7fcdd635fd0590ec84b8cfb4d8561 metadata.xml 158
+MD5 84448c0553ba899b0b7ca9635f24d8fb ChangeLog 696
+MD5 85fd4bd5bdead88b546232ca4875665b color-tools-1.2.0.ebuild 757
+MD5 ab1cb449720cdac5eb35e94fd87ee90b color-tools-1.3.0.ebuild 745
 MD5 737f4ad3c0cbc67e773ac13732be86f1 files/digest-color-tools-1.2.0 65
 MD5 2028f5f20c5716c4851111d95b8239b5 files/digest-color-tools-1.3.0 65
+MD5 51d7fcdd635fd0590ec84b8cfb4d8561 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDb6EehlBotwFZuQRAuyTAKCdDhYZylcuNUxN2a3YPQs+q4K2wgCgn+Xf
-o4mf1TMGLECADmXgKAI4XRU=
-=bISf
+iD8DBQFDS8OEQlM6RnzZP+IRAgCPAJ4miOaxqoeiP3m/rmd86vz0g53taACdGavR
+9sWpDBVh8+m7P2tYYahewow=
+=71WU
 -----END PGP SIGNATURE-----
