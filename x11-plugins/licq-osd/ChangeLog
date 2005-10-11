@@ -1,8 +1,8 @@
 # ChangeLog for x11-plugins/licq-osd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/licq-osd/ChangeLog,v 1.3 2005/03/15 12:51:03 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/licq-osd/ChangeLog,v 1.4 2005/10/11 09:51:45 greg_g Exp $
 
-*licq-osd-1.2.7.5 (15 Mar 2005)
+*licq-osd-1.2.7.5-r1 (15 Mar 2005)
 
   15 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> -licq-osd-1.2.7.5.ebuild,
   +licq-osd-1.2.7.5-r1.ebuild:
