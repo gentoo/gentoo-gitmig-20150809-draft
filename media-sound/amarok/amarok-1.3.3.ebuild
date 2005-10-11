@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.3.ebuild,v 1.1 2005/10/09 19:28:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.3.ebuild,v 1.2 2005/10/11 19:20:40 flameeyes Exp $
 
 inherit kde eutils
 
@@ -70,11 +70,16 @@ src_compile() {
 	# it must be installed in the KDE install directory.
 	PREFIX="${KDEDIR}"
 
+	# Extra, unsupported engines are forcefully disabled.
 	local myconf="$(use_with arts) $(use_with xine) $(use_with gstreamer)
 	              $(use_enable mysql) $(use_enable postgres postgresql)
 	              $(use_with opengl) $(use_with xmms)
 	              $(use_with visualization libvisual)
-	              $(use_enable !noamazon amazon)"
+	              $(use_enable !noamazon amazon)
+				  $(use_with musicbrainz)
+				  --without-helix
+				  --without-mas
+				  --without-nmm"
 
 	kde_src_compile
 }
