@@ -18,7 +18,6 @@ dev-libs/libxml2
 dev-perl/XML-Parser
 dev-util/intltool
 dev-util/guile
-dev-util/subversion
 media-libs/a52dec
 net-misc/curl
 sys-apps/diffutils
