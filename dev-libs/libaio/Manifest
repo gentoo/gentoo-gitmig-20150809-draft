@@ -1,21 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21b52191ea78f5212b490edc3a9322dc libaio-0.3.15-r1.ebuild 986
-MD5 08aeb8a15f772dfe8e124e6ea138ddef libaio-0.3.92.ebuild 649
-MD5 d4126848bd14dd7824f556c30daa172b ChangeLog 1390
-MD5 29e53943085f389f153bbadeb849ecee libaio-0.3.15.ebuild 909
+MD5 6e34e5393af8beb0454f5bc560732c64 ChangeLog 1570
+MD5 f428ecdc8be7efe16c318119722043bf files/digest-libaio-0.3.104 65
 MD5 9ab89b277f4e93b87b8a50f7c524b0d9 files/digest-libaio-0.3.15 71
-MD5 2397f736c573f05d5f50a588ec984eee files/libaio-0.3.15-CFLAGS.patch 325
-MD5 7991c55ade205cb4de301576e8b4b524 files/libaio-0.3.15-2.5-2-Makefile.patch 430
-MD5 014fb327dc5e5d3930b0191632efd43f files/libaio-0.3.15-no-exec-stack.patch 316
 MD5 9ab89b277f4e93b87b8a50f7c524b0d9 files/digest-libaio-0.3.15-r1 71
-MD5 79f7b9e04e046cf3a0b7594f26eee18a files/digest-libaio-0.3.92 65
+MD5 e99faa2f5a79e88ee2f1a6a7190cd7a0 files/libaio-0.3.104-build.patch 507
+MD5 7991c55ade205cb4de301576e8b4b524 files/libaio-0.3.15-2.5-2-Makefile.patch 430
+MD5 2397f736c573f05d5f50a588ec984eee files/libaio-0.3.15-CFLAGS.patch 325
 MD5 da0b52d4053e3f897aa738e9adeee32b files/libaio-0.3.15-more-arches.patch 1649
+MD5 014fb327dc5e5d3930b0191632efd43f files/libaio-0.3.15-no-exec-stack.patch 316
+MD5 bd9363ec4f98acceb29b66f0f7709081 libaio-0.3.104.ebuild 761
+MD5 21b52191ea78f5212b490edc3a9322dc libaio-0.3.15-r1.ebuild 986
+MD5 29e53943085f389f153bbadeb849ecee libaio-0.3.15.ebuild 909
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQwnHgIKl8Uu19MoRAn9RAJ9RqIhFZQHU1scyDiqj/RvuFUy8sQCdGh1S
-P5/qqMDYq7eM/exjQ9PCsOM=
-=oWD+
+iD8DBQFDTEyzgIKl8Uu19MoRAqWOAJ0T7ffGmwnhIvLpWqgnrtbE1stRzgCbB2oi
+YwG9TiC0eRHBYRKS6/MFN+Q=
+=p77t
 -----END PGP SIGNATURE-----
