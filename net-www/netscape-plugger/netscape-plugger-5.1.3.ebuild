@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-5.1.3.ebuild,v 1.2 2005/03/23 16:19:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-5.1.3.ebuild,v 1.3 2005/10/11 03:12:04 morfic Exp $
 
 inherit eutils nsplugins
 
@@ -11,7 +11,7 @@ SRC_URI="http://fredrik.hubbe.net/plugger/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND="www-client/mozilla"

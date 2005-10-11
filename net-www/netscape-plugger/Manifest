@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17083715834c8f38d0b6a23f1cea037f netscape-plugger-5.1.3.ebuild 1047
+MD5 053f2f77633b2fae76e6affcab64a71a ChangeLog 2615
+MD5 4a28edb859938625a0ac14728384fdf6 metadata.xml 446
+MD5 ec0e4c7ec563ff35acd0598db898b1f4 netscape-plugger-4.0-r1.ebuild 933
 MD5 ffc3947ed2eebb2b734257fa7ac639b2 netscape-plugger-4.0-r2.ebuild 874
 MD5 706d9ffda1bcb58605b5acea2ee55522 netscape-plugger-5.0.ebuild 641
-MD5 ec0e4c7ec563ff35acd0598db898b1f4 netscape-plugger-4.0-r1.ebuild 933
-MD5 35186ebe56edf9b58c2c77a9010d5d2d ChangeLog 2513
-MD5 4a28edb859938625a0ac14728384fdf6 metadata.xml 446
-MD5 5f1b3cd15b7f47906b144e93cee0aa4a files/digest-netscape-plugger-5.1.3 64
-MD5 b7f35bce3782c3774f0b0890c9190e3f files/digest-netscape-plugger-5.0 62
+MD5 bbe5bbb839f12d0391670dc290f2be10 netscape-plugger-5.1.3.ebuild 1053
 MD5 9e9681a21cd0675ba0df953f1abdb0c6 files/digest-netscape-plugger-4.0-r1 78
 MD5 9e9681a21cd0675ba0df953f1abdb0c6 files/digest-netscape-plugger-4.0-r2 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1vCbBXaUFmZvwyMRAtBfAKCpsRkPuocb7RAfKt4J/o1Kt4L7lgCgo8sJ
-Xrme6aTDAg8NedXSBAQJ7LM=
-=9a/H
------END PGP SIGNATURE-----
+MD5 b7f35bce3782c3774f0b0890c9190e3f files/digest-netscape-plugger-5.0 62
+MD5 5f1b3cd15b7f47906b144e93cee0aa4a files/digest-netscape-plugger-5.1.3 64
