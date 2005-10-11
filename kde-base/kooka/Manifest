@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7a08cea280207da76e2fcba25915cb9 ChangeLog 2611
-MD5 087e934f7168694e0d8dfecd125b510c kooka-3.4.2.ebuild 1028
-MD5 71bcda6978e34c1ecb28dba19ec30150 kooka-3.4.1.ebuild 671
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 04936fb4b73566598973235d483ec589 kooka-3.5_beta1.ebuild 677
+MD5 2ec99581b83906e6ddaa1e495c23e549 ChangeLog 2787
+MD5 51a35089fe1f6247f9cf221c77a57177 files/configure-fix-kdegraphics-kadmos.patch 1714
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kooka-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kooka-3.4.2 300
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kooka-3.5_beta1 72
 MD5 0abb98c262645006a4b116c0635edb49 files/kdegraphics-3.4.1-gocr.patch 454
-MD5 51a35089fe1f6247f9cf221c77a57177 files/configure-fix-kdegraphics-kadmos.patch 1714
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kooka-3.4.1 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWsOj5H05b2HAEkRAgrzAKCe6YoLvYpo9rYxfGKFTSwFx2TWkgCfZ6A1
-7ptBq+GI+NH2j8/bg3/uaRg=
-=6xfy
------END PGP SIGNATURE-----
+MD5 6f27766dd3224f76199cd8d09b3f2be2 kooka-3.4.1.ebuild 690
+MD5 90ad8660103053342c8b3242329df544 kooka-3.4.2.ebuild 1047
+MD5 95e25bc29f5f6be0cee34d2cadaa6819 kooka-3.5_beta1.ebuild 694
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
