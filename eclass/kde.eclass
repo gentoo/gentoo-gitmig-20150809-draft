@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.135 2005/10/06 02:05:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.136 2005/10/11 23:50:25 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -35,6 +35,9 @@ kde_pkg_setup() {
 			die
 		fi
 	fi
+
+	# Let filter visibility flags that will *really* hurt your KDE
+	filter-flags -fvisibility=hidden -fvisibility-inlines-hidden
 }
 
 kde_src_unpack() {
