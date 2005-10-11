@@ -1,63 +1,45 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.4 2005/08/17 08:01:04 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3-r1.ebuild,v 1.5 2005/10/11 04:48:31 sebastian Exp $
 
-PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
+PHP_EXT_NAME="eaccelerator"
+PHP_EXT_INI="yes"
+
 [ -z "${EACCELERATOR_CACHEDIR}" ] && EACCELERATOR_CACHEDIR=/var/cache/eaccelerator
+
 inherit php-ext-source
 
 DESCRIPTION="A PHP Accelerator & Encoder."
 HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.gz"
-IUSE="apache2 inode session"
+IUSE="inode session"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-DEPEND="$DEPEND
+DEPEND="${DEPEND}
+		=virtual/httpd-php-4*
 		!dev-php/ioncube_loaders
 		!dev-php/PECL-apc"
 
-HTTPD_USER=root
-HTTPD_GROUP=root
-
-has_version "net-www/apache" && USE_APACHE=1 && inherit webapp-apache
-[ -n "${USE_APACHE}" ] && webapp-detect || NO_WEBSERVER=1
-
-pkg_setup() {
-	if [ "${NO_WEBSERVER}" = "1" ]; then
-		ewarn "No webserver detected - ${EACCELERATOR_CACHEDIR} will be"
-		ewarn "owned by ${HTTPD_USER} instead"
-	else
-		einfo "Configuring cache dir ${EACCELERATOR_CACHEDIR} for ${WEBAPP_SERVER}"
-	fi
-}
+# this is a good example of why we need all web servers installed under a
+# common 'www' user and group!
+HTTPD_USER=apache
+HTTPD_GROUP=apache
 
 src_compile() {
-	# eAccelerator does not work with Zend Thread Safety (ZTS)
-	# so about if we are using Apache 2 with an MPM that would
-	# require ZTS.
-	if use apache2; then
-		APACHE2_MPM="`/usr/sbin/apache2 -l | egrep 'worker|perchild|leader|threadpool|prefork'|cut -d. -f1|sed -e 's/^[[:space:]]*//g;s/[[:space:]]+/ /g;'`"
-		case "${APACHE2_MPM}" in
-			*prefork*) ;;
-			*) eerror "eAccelerator does not yet work with the Apache 2 MPM in use." ; die ;;
-		esac;
-	fi
-
-	myconf="--enable-eaccelerator=shared"
+	my_conf="--enable-eaccelerator=shared"
 
 	if use !session; then
-		myconf="${myconf} --without-eaccelerator-sessions"
+		my_conf="${my_conf} --without-eaccelerator-sessions"
 	fi
 
 	if use !inode; then
-		myconf="${myconf} --without-eaccelerator-use-inode"
+		my_conf="${my_conf} --without-eaccelerator-use-inode"
 	fi
 
 	export WANT_AUTOMAKE=1.6
-
 	php-ext-source_src_compile
 }
 
@@ -92,9 +74,15 @@ src_install() {
 	php-ext-base_addtoinifiles ";eaccelerator.admin.password" '"hashed_password"'
 }
 
-pkg_postinst () {
-	einfo "You need to restart your webserver to activate eAccelerator."
-	einfo
+pkg_postinst() {
+	# you only need to restart the webserver if you're using mod_php
+	if has_version "dev-php/mod_php" ; then
+		einfo "You need to restart your webserver to activate eAccelerator."
+		einfo
+	fi
+
+	# this web interface needs moving into a separate, webapp-config compatible
+	# package!!
 	einfo "A web interface is available to manage the eAccelerator cache."
 	einfo "Copy /usr/share/eaccelerator/*.php to somewhere"
 	einfo "where your web server can see it. See the documentation on how"
