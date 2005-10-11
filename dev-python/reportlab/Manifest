@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5281db45fa34620319fe34d6b3a87664 ChangeLog 3541
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 c31328a75a20407ff0661b07a3952ead reportlab-1.14.ebuild 807
-MD5 f2a79ba699fea793dda74658f46e4a0e reportlab-1.17-r1.ebuild 1018
-MD5 89620654000c1db5f2df5294af90bebd reportlab-1.18.ebuild 1015
-MD5 98e6c6a7451162270ca26c4f8f13175e reportlab-1.19.ebuild 1280
-MD5 20cd41a7b464c68e6b28d0cc48cede94 reportlab-1.20.ebuild 1090
+MD5 52b7187455237bc00ae901fefdc14f8a ChangeLog 3673
+MD5 f8fae2ab18041c7466c36685624a2192 files/1.14/setup.py 2887
+MD5 cdbafc7e047b69becba3bddfef8a61da files/1.17/setup.py 2887
 MD5 ae52d6e28f68d0a56dad9fdc2c295b92 files/digest-reportlab-1.14 64
 MD5 d5f5c0582f5df6e146b770ba6262cae9 files/digest-reportlab-1.17-r1 64
 MD5 9331d627b77ad16c57c78fe9f40f56df files/digest-reportlab-1.18 64
 MD5 1a0dfff787c5347b40acdab713d5c613 files/digest-reportlab-1.19 64
 MD5 cfacdbb1031922fe26d82130652169c7 files/digest-reportlab-1.20 64
-MD5 f8fae2ab18041c7466c36685624a2192 files/1.14/setup.py 2887
-MD5 cdbafc7e047b69becba3bddfef8a61da files/1.17/setup.py 2887
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 c31328a75a20407ff0661b07a3952ead reportlab-1.14.ebuild 807
+MD5 f2a79ba699fea793dda74658f46e4a0e reportlab-1.17-r1.ebuild 1018
+MD5 89620654000c1db5f2df5294af90bebd reportlab-1.18.ebuild 1015
+MD5 98e6c6a7451162270ca26c4f8f13175e reportlab-1.19.ebuild 1280
+MD5 55874c0ef34d419a2cd1c7cc06ac7248 reportlab-1.20.ebuild 1090
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDPs6axtZcznfol0URAmSEAKCgSepxSKmroSlpKUQ8TpDB/FJlGQCfU9Up
-BI7F+bgoUmO1Kf/yUEnjSdU=
-=bfbl
+iD4DBQFDTEs5Kf2g/qXtneoRAvAgAJiG2frcTTm+GDu6syCVghqPbknWAJ9RsoEo
+eAein0AmMQ8v6FqA4ECk0w==
+=9Pog
 -----END PGP SIGNATURE-----
