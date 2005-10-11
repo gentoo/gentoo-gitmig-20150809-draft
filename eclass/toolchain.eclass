@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.206 2005/10/07 10:44:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.207 2005/10/11 00:00:26 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
-RESTRICT="nostrip"
+RESTRICT="nostrip" # cross-compilers need controlled stripping
 
 #---->> eclass stuff <<----
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails
@@ -970,10 +970,6 @@ gcc_src_unpack() {
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
 
-	if is_crosscompile && is_multilib; then
-		gcc_crosscompile_multilib_specs || die "Hacking specs for crosscompile-multilib failed"
-	fi
-
 	local version_string="${GCC_CONFIG_VER}"
 
 	# Backwards support... add the BRANCH_UPDATE for 3.3.5-r1 and 3.4.3-r1
@@ -1161,9 +1157,7 @@ gcc_do_configure() {
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
 				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
 			else
-				case ${CTARGET} in
-					mips64*) confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}" ;;
-				esac
+				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
 		fi
 	else
@@ -1594,24 +1588,6 @@ gcc-compiler_src_install() {
 			mv "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include
 			rm -Rf "${D}"${LIBPATH}/include/libffi
 		fi
-	fi
-
-	# Setup symlinks to multilib ABIs for crosscompiled gccs
-	if is_crosscompile && is_multilib ; then
-		case $(tc-arch) in
-		amd64) abilist="x86";;
-		ppc64) abilist="ppc";;
-		sparc) abilist="sparc32";;
-		mips)  abilist="";; # mips is already handled properly
-		*)
-			eerror "Unknown multilib arch: $(tc-arch)"
-			die "Unknown multilib arch: $(tc-arch)"
-		esac
-
-		dodir ${PREFIX}/${CTARGET}/lib
-		for abi in ${abilist}; do
-			dosym ../../$(get_abi_CTARGET ${abi})/lib ${PREFIX}/${CTARGET}/lib/${abi}
-		done
 	fi
 
 	cd "${S}"
@@ -2125,32 +2101,6 @@ disgusting_gcc_multilib_HACK() {
 
 	einfo "updating multilib directories to be: ${libdirs}"
 	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/${config}
-}
-
-gcc_crosscompile_multilib_specs() {
-	local config=
-	local libdirs=
-	case $(tc-arch) in
-	amd64)
-		config="i386/t-linux64"
-		libdirs=". x86"
-	;;
-	ppc64)
-		# TOCHECK: Not entirely sure about this one.  What to do about soft-float? --eradicator
-		config="rs6000/t-linux64"
-		libdirs=". ppc"
-	;;
-	sparc)
-		config="sparc/t-linux64"
-		libdirs=". sparc32"
-	;;
-	mips) return 0;;
-	*)
-		eerror "Invalid multilib arch ($(tc-arch)) in gcc_crosscompile_multilib_specs"
-		die "Invalid multilib arch ($(tc-arch)) in gcc_crosscompile_multilib_specs"
-	esac
-
-	sed -i -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" "${S}"/gcc/config/${config}
 }
 
 disable_multilib_libjava() {
