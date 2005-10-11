@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.101 2005/10/11 06:03:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.102 2005/10/11 06:15:32 suka Exp $
+
+  11 Oct 2005; Andreas Proschofsky <suka@gentoo.org> ChangeLog:
+  Another shot at the icon dir permission problem
 
   11 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-2.0.0_rc2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc2.ebuild,v 1.5 2005/10/11 06:03:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0_rc2.ebuild,v 1.6 2005/10/11 06:15:32 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -160,7 +160,7 @@ src_install () {
 	sed -i -e s/.openoffice.org2/.ooo-2.0/g ${D}${INSTDIR}/program/bootstraprc || die
 
 	# Fixing some icon dir permissions
-	chmod +r -R ${D}/usr/share/icons/ || die
+	chmod 755 -R ${D}/usr/share/icons/ || die
 
 	# Icon symlinks for gnome
 	dodir /usr/share/pixmaps
