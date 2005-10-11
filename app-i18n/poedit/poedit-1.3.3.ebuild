@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.3.ebuild,v 1.1 2005/10/11 20:33:54 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.3.3.ebuild,v 1.2 2005/10/11 20:36:17 pythonhead Exp $
 
 inherit eutils wxwidgets
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://poedit.sourceforge.net/"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="spell unicode"
 
 DEPEND=">x11-libs/wxGTK-2.6
