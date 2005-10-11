@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r2.ebuild,v 1.9 2005/09/11 00:33:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r3.ebuild,v 1.1 2005/10/11 16:12:22 pythonhead Exp $
 
 inherit eutils wxwidgets python multilib
 
@@ -79,8 +79,6 @@ src_install() {
 		|| mypyconf="${mypyconf} WXPORT=gtk"
 	use unicode && mypyconf="${mypyconf} UNICODE=1"
 
-	python setup.py ${mypyconf} install --prefix=/usr \
-	--install-lib=/usr/$(get_libdir)/ --root=${D} || die
 
 	# This can all be removed when 2.4.3 is released:
 	# Future: Make sure we don't clobber existing wxversion.py or wx.pth
@@ -95,8 +93,9 @@ src_install() {
 	dest=${site_pkgs}/${wx_name}
 	dodir ${site_pkgs}
 	dodir ${dest}
-	mv ${D}/${site_pkgs}/wx ${D}/${dest}
-	mv ${D}/${site_pkgs}/wxPython ${D}/${dest}
+
+	python setup.py ${mypyconf} install --prefix=/usr \
+	--install-lib=${dest} --root=${D} || die
 
 	echo ${wx_name} > ${D}/${site_pkgs}/wx.pth || \
 		die "Couldn't create wx.pth"

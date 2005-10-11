@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.27 2005/09/11 00:33:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.28 2005/10/11 16:12:22 pythonhead Exp $
+
+*wxpython-2.4.2.4-r3 (11 Oct 2005)
+
+  11 Oct 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +wxpython-2.4.2.4-r3.ebuild:
+  Fixes bug #108643
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   wxpython-2.4.2.4-r2.ebuild:
