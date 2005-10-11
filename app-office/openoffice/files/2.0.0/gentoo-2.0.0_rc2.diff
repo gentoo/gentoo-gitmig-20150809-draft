@@ -10,6 +10,15 @@
  
  [ DebianBaseOnly ]
  odk-remove-non-free.diff
+@@ -496,6 +496,8 @@
+ config_office-system-db-4.3.diff
+ # fix the configure check for system mozilla and python, thanks to suka
+ config_office-system-mozila-python-fix.diff
++# fix the configure check for openldap
++config_office-openldap-fix.diff
+ 
+ # Don't fail when building --without-stlport4
+ buildfix-ucb-without-stlport4.diff
 @@ -733,6 +730,7 @@
  [ GentooOnly ]
  version-2-0-sysuserconfig.diff

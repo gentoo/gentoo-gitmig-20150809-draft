@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.128 2005/10/11 15:18:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.129 2005/10/11 19:01:22 suka Exp $
+
+  11 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  files/2.0.0/gentoo-2.0.0_rc2.diff,
+  +files/2.0.0/config_office-openldap-fix.diff, openoffice-2.0.0_rc2.ebuild:
+  First shot at fixing bug #108898, added patch to fix broken OOo
+  configure-script
 
   11 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.0_rc2.ebuild:
