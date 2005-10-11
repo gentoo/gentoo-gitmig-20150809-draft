@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.7 2005/07/16 21:04:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.8 2005/10/11 18:50:56 chrb Exp $
+
+  11 Oct 2005; Chris Bainbridge <chrb@gentoo.org> geda-20040111-r1.ebuild,
+  geda-20041228.ebuild, geda-20050313.ebuild:
+  fix for new (but older version number) gtkwave
 
   16 Jul 2005; <plasmaroo@gentoo.org> geda-20050313.ebuild:
   Remove vbs DEPEND.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20050313.ebuild,v 1.2 2005/07/16 21:04:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-20050313.ebuild,v 1.3 2005/10/11 18:50:56 chrb Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ DEPEND=">=dev-libs/glib-1.2.10
 	>=sci-libs/libgeda-${PV}
 	>=sci-electronics/gerbv-1.00
 	>=sci-electronics/gnucap-0.33
-	>=sci-electronics/gtkwave-2.0.0_pre20030319
+	sci-electronics/gtkwave
 	>=sci-electronics/gwave-20031224
 	>=sci-electronics/pcb-20040903
 	>=sci-electronics/iverilog-0.8
