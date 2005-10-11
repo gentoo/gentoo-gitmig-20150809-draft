@@ -1,29 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6cb863af5558a5d0dcdb37f57aec5fe7 ChangeLog 5227
-MD5 567cad53853adfda1ae7f205966523a8 files/digest-hk_classes-0.6.2a 198
-MD5 63250076b187f1feb6dd60af946bf54b files/digest-hk_classes-0.7 196
-MD5 85913ee0452ca03c30bc07640aa4926e files/digest-hk_classes-0.7.1 198
-MD5 9a8287b2b5ae901849742e71aed36a1b files/digest-hk_classes-0.7.2 198
-MD5 9a8287b2b5ae901849742e71aed36a1b files/digest-hk_classes-0.7.2-r1 198
-MD5 24b5944ef78b0d8aa0111b2008467175 files/digest-hk_classes-0.7.3 198
-MD5 6b7976ee6a0bb9e2480836fedd9a0e88 files/digest-hk_classes-0.7.4 157
-MD5 d814ff5d08373a9f2aae3023ada1503c files/hk_classes-0.7.3-amd64.patch 2749
-MD5 6d1cdb63ba68017fa4a1c5cf47a08324 files/hk_classes-0.7.4-amd64.patch 5032
-MD5 3986d92d3fe87dfac8646b3527e465cb files/hk_classes-amd64.patch 2569
-MD5 e708185e31fbf1b071be94f4b3ba5f57 hk_classes-0.6.2a.ebuild 1647
-MD5 5626f8e0e7fc410ca9b10fa91aaa29df hk_classes-0.7.1.ebuild 1146
-MD5 832936c67b88303fdf3252f71fd1476b hk_classes-0.7.2-r1.ebuild 1486
-MD5 fb3260dbb9853ebdaa2fb00cc70b6d9b hk_classes-0.7.2.ebuild 1199
-MD5 227492cacb1ac7af3bbca40a78095698 hk_classes-0.7.3.ebuild 1482
-MD5 2837c382c28380d3f0bec927e49ffb15 hk_classes-0.7.4.ebuild 1932
-MD5 2dcc319450160699603ac7c4903c9466 hk_classes-0.7.ebuild 1106
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCwHCtI1lqEGTUzyQRAiz5AJ9IbR2hSXitMdaHAiQwp782hJeWAQCgvcAq
-6SHHauXrP7/MhuofvG2vPYQ=
-=5f/7
------END PGP SIGNATURE-----
+MD5 6cb863af5558a5d0dcdb37f57aec5fe7 ChangeLog 5227
+MD5 5626f8e0e7fc410ca9b10fa91aaa29df hk_classes-0.7.1.ebuild 1146
+MD5 2837c382c28380d3f0bec927e49ffb15 hk_classes-0.7.4.ebuild 1932
+MD5 6d1cdb63ba68017fa4a1c5cf47a08324 files/hk_classes-0.7.4-amd64.patch 5032
+MD5 6b7976ee6a0bb9e2480836fedd9a0e88 files/digest-hk_classes-0.7.4 157
+MD5 85913ee0452ca03c30bc07640aa4926e files/digest-hk_classes-0.7.1 198
+MD5 3986d92d3fe87dfac8646b3527e465cb files/hk_classes-amd64.patch 2569
