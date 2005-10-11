@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b60df34ca440fa9fb7db93a8ecd2048f ChangeLog 11260
+MD5 7643666d3674325ca8c9b9d07d70ace7 ChangeLog 11341
 MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9 64
 MD5 375b1725c7c89570ce74eba2a96b767d files/digest-sudo-1.6.8_p9-r2 64
 MD5 6c08a6d5527a45278ebc165df7f0031d files/sudo 223
@@ -10,12 +10,12 @@ MD5 2a601951e4e5d6bdafc31b223737ddf5 files/sudo-ldap_timelimit.diff 2550
 MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
 MD5 59acf8b0292a8e60b5277b5dc952cfc4 files/sudoers 1645
 MD5 4e3ab49065539b5aa4d3153261b5d687 metadata.xml 561
-MD5 d1d5cb6d25e760c0d0a6732c3990cda9 sudo-1.6.8_p9-r2.ebuild 6746
+MD5 eed7089e2bb4626271fcbec0166bd849 sudo-1.6.8_p9-r2.ebuild 6743
 MD5 f7258273dc788f3949cfab7e9b8d1cd6 sudo-1.6.8_p9.ebuild 6039
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSLtwgIKl8Uu19MoRAmS0AJ9D4WihogF2X0AHP6Y4j04qQUsSbgCdHbRX
-ssIYagEq9ID7MlzEu2eUAGo=
-=RIEx
+iD8DBQFDSx8/omPajV0RnrERAic1AJ95oEREOgDrWZk2qY89uboWXcvTDACfcSQQ
+HPh6JTSNQS7o0RTShwabi3A=
+=tDNz
 -----END PGP SIGNATURE-----

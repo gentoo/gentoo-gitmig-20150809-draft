@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.83 2005/10/06 06:24:37 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.84 2005/10/11 02:10:56 dang Exp $
+
+  11 Oct 2005; <dang@gentoo.org> sudo-1.6.8_p9-r2.ebuild:
+  Marked stable on amd64
 
   06 Oct 2005; Hardave Riar <hardave@gentoo.org> sudo-1.6.8_p9-r2.ebuild:
   Stable on mips.
