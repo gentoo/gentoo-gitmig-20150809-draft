@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.136 2005/10/11 15:20:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.137 2005/10/12 23:58:36 allanonjl Exp $
+
+*gnome-applets-2.12.1-r1 (12 Oct 2005)
+
+  12 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gnome-applets-2.12.1-hal-switch.patch,
+  +gnome-applets-2.12.1-r1.ebuild:
+  add configure switch for hal/dbus.  submitted patch upstream, #318722 (gnome)
 
   11 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-applets-2.12.1.ebuild:
