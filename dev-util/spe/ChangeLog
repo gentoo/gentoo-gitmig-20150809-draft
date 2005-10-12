@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.19 2005/09/29 23:35:54 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.20 2005/10/12 00:27:40 kloeri Exp $
+
+*spe-0.7.5c-r1 (12 Oct 2005)
+
+  12 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> +spe-0.7.5c-r1.ebuild:
+  Fix permission issues, bug 108538.
 
   29 Sep 2005; Homer Parker <hparker@gentoo.org> spe-0.7.5c.ebuild:
   Marked ~amd64.
