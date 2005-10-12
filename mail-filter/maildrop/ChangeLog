@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.45 2005/10/12 18:11:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.46 2005/10/12 18:38:38 ferdy Exp $
+
+*maildrop-2.0.1 (12 Oct 2005)
+
+  12 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -files/maildrop-2.0.0-fix-maildir_la.patch, -maildrop-2.0.0.ebuild,
+  +maildrop-2.0.1.ebuild:
+  version bump. remove old version
 
   12 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> maildrop-2.0.0.ebuild:
   use bindnow-flags

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.0.ebuild,v 1.2 2005/10/12 18:11:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.1 2005/10/12 18:38:38 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -44,13 +44,6 @@ src_unpack() {
 
 	# Do not use lazy bindings on /usr/bin/maildrop
 	sed -i -e "s~^maildrop_LDFLAGS =~& $(bindnow-flags)~g" maildrop/Makefile.in
-
-	# Fix libpcre linking in maildir/
-	cd ${S}/maildir
-	epatch ${FILESDIR}/${P}-fix-maildir_la.patch
-	aclocal || die "aclocal failed (maildir)"
-	WANT_AUTOMAKE=1.9.3 automake --foreign || die "automake failed (maildir)"
-	cd ${S}
 
 	# Be nice with uclibc also
 	use elibc_uclibc && sed -i -e 's~linux-gnu\*~& | linux-uclibc~' config.sub
