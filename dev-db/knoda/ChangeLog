@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.31 2005/10/11 13:32:21 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.32 2005/10/12 14:15:46 carlo Exp $
+
+  12 Oct 2005; Carsten Lohrke <carlo@gentoo.org> knoda-0.7.4-r1.ebuild:
+  minor dependency fix
 
 *knoda-0.7.4-r1 (11 Oct 2005)
 
