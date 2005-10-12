@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.10_rc2.ebuild,v 1.1 2005/10/11 15:36:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.10_rc2.ebuild,v 1.2 2005/10/12 15:02:22 flameeyes Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="virtual/alsa
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
-PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
+PDEPEND="jack? ( =media-plugins/alsa-jack-${PV/rc2/rc1}* )"
 
 src_compile() {
 	# needed to avoid gcc looping internaly
