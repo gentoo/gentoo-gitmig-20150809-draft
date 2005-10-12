@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.0.ebuild,v 1.1 2005/09/20 09:56:14 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.0.ebuild,v 1.2 2005/10/12 18:11:37 ferdy Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Mail delivery agent/filter"
 [[ -z ${PV/?.?} ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -43,7 +43,7 @@ src_unpack() {
 	cd ${S}
 
 	# Do not use lazy bindings on /usr/bin/maildrop
-	sed -i -e 's~^maildrop_LDFLAGS =~& -Wl,-z,now~g' maildrop/Makefile.in
+	sed -i -e "s~^maildrop_LDFLAGS =~& $(bindnow-flags)~g" maildrop/Makefile.in
 
 	# Fix libpcre linking in maildir/
 	cd ${S}/maildir
