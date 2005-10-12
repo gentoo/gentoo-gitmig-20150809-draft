@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-0.2.2.ebuild,v 1.1 2005/10/12 00:34:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-0.2.2.ebuild,v 1.2 2005/10/12 03:09:58 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/libsdl-1.2.8
 src_unpack() {
 	unpack ${A}
 
-	sed s:DATADIR:"$GAMES_DATADIR"/${PN}/: \
+	sed s:DATADIR:"${GAMES_DATADIR}/${PN}/": \
 		"${FILESDIR}"/${PV}-clparse.c.patch > \
 		${T}/${PV}-clparse.c.patch \
 	|| die "sed failed"

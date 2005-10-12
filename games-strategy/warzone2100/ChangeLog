@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.1 2005/10/12 00:34:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.2 2005/10/12 03:09:58 wolf31o2 Exp $
+
+  12 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  warzone2100-0.2.2.ebuild:
+  Cleaning up sed line.
 
 *warzone2100-0.2.2 (12 Oct 2005)
 
