@@ -105,7 +105,7 @@ sys-devel/bison-1.28
 sys-devel/distcc-2.0.2
 sys-devel/flex-2.5.4a
 sys-devel/gcc-3.3.1495
-sys-devel/gdb-5.3.20030128 
+sys-devel/gdb-5.3
 sys-devel/gnuserv-2
 sys-devel/libtool-1.5.10-r4
 sys-devel/m4-1.4
