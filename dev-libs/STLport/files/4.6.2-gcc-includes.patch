@@ -1,5 +1,5 @@
---- STLport-4.6.2/stlport/config/stl_gcc.h.orig	2004-05-29 22:27:30.514737048 -0400
-+++ STLport-4.6.2/stlport/config/stl_gcc.h	2004-05-29 22:26:14.539287072 -0400
+--- STLport-4.6.2/stlport/config/stl_gcc.h
++++ STLport-4.6.2/stlport/config/stl_gcc.h
 @@ -7,7 +7,9 @@
  # define _STLP_USE_GLIBC
  #endif
@@ -10,12 +10,17 @@
  
  # if defined(__FreeBSD__) || defined (__hpux) || defined(__amigaos__) || ( defined(__OS2__) && defined(__EMX__) )
  #  define _STLP_NO_WCHAR_T
-@@ -263,7 +265,7 @@
+@@ -263,7 +265,12 @@
  
  # if (__GNUC__ >= 3)
  
 -#  if ((__GNUC_MINOR__ == 0) || (__APPLE__))
 +#  if 1 || ((__GNUC_MINOR__ == 0) || (__APPLE__))
++#   if __GNUC__ >= 4
++#   define _STLP_NATIVE_INCLUDE_PATH ../g++-v4
++#   define _STLP_NATIVE_OLD_STREAMS_INCLUDE_PATH ../g++-v4/backward
++#   else
  #   define _STLP_NATIVE_INCLUDE_PATH ../g++-v3
  #   define _STLP_NATIVE_OLD_STREAMS_INCLUDE_PATH ../g++-v3/backward
++#   endif
  #  else
