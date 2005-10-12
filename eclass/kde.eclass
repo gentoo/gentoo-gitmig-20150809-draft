@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.136 2005/10/11 23:50:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.137 2005/10/12 11:18:41 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
 # Revisions Caleb Tennis <caleb@gentoo.org>
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 
-inherit base eutils kde-functions
+inherit base eutils kde-functions flag-o-matic
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 IUSE="debug arts xinerama kdeenablefinal"
