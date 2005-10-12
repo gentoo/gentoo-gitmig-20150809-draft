@@ -1,13 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.58 2005/10/12 16:53:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.59 2005/10/12 16:55:53 uberlord Exp $
 
 *dhcp-3.0.3 (12 Oct 2005)
 
   12 Oct 2005; Roy Marples <uberlord@gentoo.org> +files/dhcp-3.0.3-tr.patch,
   +files/dhclient-ntp.patch, +dhcp-3.0.3.ebuild:
   Version bump
-  Includes fixes for #102473 (tr.c not compiling)
+  Includes fixes for #102473 (tr.c not compiling, patch by Ed Catmur)
   and dhclient ntp support #63868
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> dhcp-3.0.1-r1.ebuild:
