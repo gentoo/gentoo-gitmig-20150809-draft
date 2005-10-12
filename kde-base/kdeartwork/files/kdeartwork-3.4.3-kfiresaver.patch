@@ -1,0 +1,12 @@
+diff -Nur kdeartwork-3.4.3.orig/kscreensaver/kdesavers/Makefile.am kdeartwork-3.4.3/kscreensaver/kdesavers/Makefile.am
+--- kdeartwork-3.4.3.orig/kscreensaver/kdesavers/Makefile.am	2005-10-05 15:11:45.000000000 +0200
++++ kdeartwork-3.4.3/kscreensaver/kdesavers/Makefile.am	2005-10-10 16:19:25.000000000 +0200
+@@ -95,7 +95,7 @@
+ desktop_DATA = KBanner.desktop KPolygon.desktop \
+                KSlideshow.desktop KLines-saver.desktop KLorenz.desktop \
+                KBlob.desktop KVm.desktop \
+-               KClock.desktop $(X11_DESKTOP_FILES) $(GL_DESKTOP_FILES) $(LIBART_DESKTOP_FILES)
++               KClock.desktop $(X11_DESKTOP_FILES) $(GL_DESKTOP_FILES) $(LIBART_DESKTOP_FILES) $(ARTS_GL_DESKTOP_FILES)
+ 
+ desktopdir = $(kde_appsdir)/System/ScreenSavers
+ 

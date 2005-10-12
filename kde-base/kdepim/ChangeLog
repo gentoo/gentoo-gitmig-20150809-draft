@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.172 2005/10/06 23:19:26 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.173 2005/10/12 13:27:31 greg_g Exp $
+
+*kdepim-3.4.3 (12 Oct 2005)
+
+  12 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +kdepim-3.4.3.ebuild:
+  New version.
 
   06 Oct 2005; Hardave Riar <hardave@gentoo.org> kdepim-3.4.2-r1.ebuild:
   Keyworded ~mips.

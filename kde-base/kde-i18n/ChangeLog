@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.75 2005/09/28 12:45:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.76 2005/10/12 13:32:54 greg_g Exp $
+
+*kde-i18n-3.4.3 (12 Oct 2005)
+
+  12 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +kde-i18n-3.4.3.ebuild:
+  New version.
 
   28 Sep 2005; Gregorio Guidi <greg_g@gentoo.org>
   +files/kde-i18n-de-3.4.91-compile.patch, kde-i18n-3.5_beta1.ebuild:

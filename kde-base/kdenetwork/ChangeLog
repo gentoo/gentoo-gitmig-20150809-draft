@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.167 2005/10/06 23:22:37 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.168 2005/10/12 13:26:46 greg_g Exp $
+
+*kdenetwork-3.4.3 (12 Oct 2005)
+
+  12 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +kdenetwork-3.4.3.ebuild:
+  New version.
 
   06 Oct 2005; Hardave Riar <hardave@gentoo.org> kdenetwork-3.4.2.ebuild:
   Keyworded ~mips.
