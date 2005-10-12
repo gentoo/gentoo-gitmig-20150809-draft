@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.5_pre2.ebuild,v 1.5 2005/05/08 18:23:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.5_pre2.ebuild,v 1.6 2005/10/12 16:50:36 metalgod Exp $
 
 DESCRIPTION="Daemon to mount/unmount devices, based on info from HAL"
 HOMEPAGE="http://ivman.sf.net"
 SRC_URI="mirror://sourceforge/ivman/${P}.tar.bz2"
 LICENSE="QPL"
-KEYWORDS="~amd64 x86 ~ppc"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 SLOT="0"
 

@@ -1,9 +1,19 @@
-MD5 217682a6813a0a28a1a7be4b3b6adc54 ivman-0.5_pre3.ebuild 1310
-MD5 392dac71a9d493156ec2f1bad94150a2 ChangeLog 3187
-MD5 13d1e30e628dfbee0e3e2fc9e97905f2 ivman-0.6.4.ebuild 2574
-MD5 2bdc162253b44f623a4ae735767bf0f8 ivman-0.5_pre2.ebuild 1309
-MD5 94ae54dc83c1b4b61c9edccab725465b metadata.xml 265
-MD5 f1e67af6cdf8b51ac4c5cd5e8e7ec298 files/ivman-0.3.init 524
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b52fbf8237f31593c844ba5a52a0c064 ChangeLog 3308
 MD5 7b663d58e12a086e30f6eb8e5cf965d3 files/digest-ivman-0.5_pre2 67
 MD5 a561344e43c3fcfab148515b471ecd5a files/digest-ivman-0.5_pre3 67
 MD5 4aac9f5d6f83eeda363d051c89933adf files/digest-ivman-0.6.4 64
+MD5 f1e67af6cdf8b51ac4c5cd5e8e7ec298 files/ivman-0.3.init 524
+MD5 7a702903471226e8942d6d9c8dfdcba5 ivman-0.5_pre2.ebuild 1309
+MD5 217682a6813a0a28a1a7be4b3b6adc54 ivman-0.5_pre3.ebuild 1310
+MD5 13d1e30e628dfbee0e3e2fc9e97905f2 ivman-0.6.4.ebuild 2574
+MD5 94ae54dc83c1b4b61c9edccab725465b metadata.xml 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTU0JwUpWvClEHQoRAp6cAJ9RtjbIakVtNuWK4MKn1edI2sjqSACffbTV
+e2esTC+hKlwQoQ+hYzqAPcI=
+=tBQM
+-----END PGP SIGNATURE-----
