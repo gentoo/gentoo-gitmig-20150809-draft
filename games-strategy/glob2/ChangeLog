@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.23 2005/05/17 17:17:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.24 2005/10/12 22:55:55 mr_bones_ Exp $
+
+  12 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> glob2-0.8.15.ebuild:
+  add desktop entry support (bug #109043)
 
   17 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -files/glob2-0.8.11-configure_speex.patch, -glob2-0.8.10.ebuild,

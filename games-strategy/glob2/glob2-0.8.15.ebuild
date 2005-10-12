@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.15.ebuild,v 1.2 2005/05/17 17:00:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.15.ebuild,v 1.3 2005/10/12 22:55:55 mr_bones_ Exp $
 
 inherit games
 
@@ -36,5 +36,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README TODO
+	make_desktop_entry glob2 "Globulation 2"
 	prepgamesdirs
 }
