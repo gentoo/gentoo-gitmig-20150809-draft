@@ -1,0 +1,11 @@
+--- xv-3.10a-jumbo-enh-patch-20050501.txt.orig	2005-05-01 15:51:22.000000000 -0500
++++ xv-3.10a-jumbo-enh-patch-20050501.txt	2005-10-12 10:08:39.000000000 -0500
+@@ -7503,7 +7503,7 @@
+  	if (wasTiffUp) { TIFFDialog(wasTiffUp);  wasTiffUp=0; }
+  #endif
+ +#ifdef HAVE_PNG
+-+	if (wasPngUp)  { PNGDialog(wasJpegUp);   wasPngUp=0; }
+++	if (wasPngUp)  { PNGDialog(wasPngUp);   wasPngUp=0; }
+ +#endif
+ +#ifdef HAVE_PCD
+ +	if (wasPcdUp)  { PCDDialog(wasPcdUp);    wasPcdUp=0; }

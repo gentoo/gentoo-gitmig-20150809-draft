@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.7 2005/10/11 15:31:58 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.8 2005/10/12 16:13:13 taviso Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -21,6 +21,9 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
+
+	# bug #109012
+	cd ${WORKDIR}; epatch ${FILESDIR}/jumbo-patch-nojpeg.diff || die
 
 	cd ${S}
 
