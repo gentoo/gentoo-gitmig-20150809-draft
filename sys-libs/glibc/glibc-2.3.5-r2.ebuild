@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.13 2005/10/12 00:47:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.14 2005/10/12 22:33:12 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1078,6 +1078,12 @@ src_unpack() {
 			use_multilib \
 				&& GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 6680_mips_nolib3264.patch" \
 				|| GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5005_all_enable-multilib-with-cross-compile.patch"
+		;;
+		amd64)
+			if ! has_multilib_profile && ! is_crosscompile ; then
+				# the gentoo-libdir patch hack conflicts with these
+				GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5005_all_enable-multilib-with-cross-compile.patch"
+			fi
 		;;
 	esac
 
