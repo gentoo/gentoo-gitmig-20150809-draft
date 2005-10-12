@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gitweb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.2 2005/10/06 11:54:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/ChangeLog,v 1.3 2005/10/12 18:40:48 ferdy Exp $
+
+  12 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> gitweb-247.ebuild:
+  set +x on gitweb.cgi
 
   06 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> gitweb-247.ebuild:
   add missing git dependency

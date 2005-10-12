@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 756744ceed7cfca68a8905e70e5b5897 gitweb-247.ebuild 806
-MD5 4dba9b83e8b427570ea1d8c824500f4e ChangeLog 473
+MD5 3da336a3df2cded379245eac2e006fde gitweb-247.ebuild 828
+MD5 2dfffd85ed67ad7e84e59e037eaad320 ChangeLog 569
 MD5 b32bfee3c12fac430c39b4247b8ff31f metadata.xml 259
 MD5 f1a84515eba72a08a13816239fe73998 files/README.gentoo 1265
 MD5 9272f93dddc13f4407e7354314666e24 files/digest-gitweb-247 62
@@ -10,7 +10,7 @@ MD5 ba79e998d31eedfab7871f5372d6890c files/postinstall-en.txt 93
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRRCZViELBEf1JB0RAuk2AJ9YnLpyjnuFumYaGaYTk8+Zm5RUgwCcDYQt
-sju0PIb0hThrwgOlVGVey/s=
-=J6kE
+iD8DBQFDTVjbViELBEf1JB0RAjWXAJ0Sj9DLUtzPkFXFsBbZzam13zpx1ACdFeZ/
+eQ87qJo7lFiEJHJ/IAmtH0k=
+=bIzv
 -----END PGP SIGNATURE-----

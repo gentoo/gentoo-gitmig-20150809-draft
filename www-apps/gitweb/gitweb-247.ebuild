@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-247.ebuild,v 1.2 2005/10/06 11:54:23 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gitweb/gitweb-247.ebuild,v 1.3 2005/10/12 18:40:48 ferdy Exp $
 
 inherit webapp
 
@@ -25,6 +25,8 @@ src_install() {
 		-e 's:^\(my $projectroot = *\).*$:\1"/var/git";:g' \
 		-e 's:indextext\.html:index/text.html:g' \
 		gitweb.cgi || die "sed failed"
+
+	chmod +x gitweb.cgi
 
 	cp gitweb.cgi ${D}${MY_HTDOCSDIR}
 
