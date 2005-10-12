@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r3.ebuild,v 1.4 2005/07/09 18:52:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r3.ebuild,v 1.5 2005/10/12 06:04:47 pylon Exp $
 
 inherit eutils gnuconfig versionator toolchain-funcs
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE="on-the-fly-crypt unicode"
 
 DEPEND="!app-cdr/dvdrtools"
-RDEPEND="on-the-fly-crypt? ( sys-fs/cryptsetup )"
+RDEPEND="on-the-fly-crypt? ( || ( sys-fs/cryptsetup sys-fs/cryptsetup-luks ) )"
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01

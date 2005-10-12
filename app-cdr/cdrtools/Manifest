@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 23774e05bb2f4f654d3b0715a1e2a360 ChangeLog 19641
+MD5 9415e003d3c05a3b7186359bb54f1d2b cdrtools-2.01.01_alpha01-r2.ebuild 3877
 MD5 5a2a9ad0ab6a40d5ee27662bf265bc41 cdrtools-2.01-r1.ebuild 2830
-MD5 7851326782af5e5357d8e24d8decee25 cdrtools-2.01-r3.ebuild 3608
-MD5 1f5b609bc623a95800f968ec4bdd4eac cdrtools-2.01.01_alpha01-r2.ebuild 3850
+MD5 e108cb930937dedd5f896bb0746ebb56 cdrtools-2.01.01_alpha03-r2.ebuild 3990
+MD5 95614cdf93109df9859f145c7872efbb cdrtools-2.01-r3.ebuild 3635
+MD5 308bc3a58a7e177414d041c902def1e2 ChangeLog 19877
 MD5 015ab4293805faaa417d5ac5304750c4 metadata.xml 254
-MD5 6817af3df53f157fe4f24d5b47f75235 cdrtools-2.01.01_alpha03-r2.ebuild 3963
+MD5 9c89bdd0371267dc24f8640160b9ea9e files/cdrtools-2.01a27-writemode.patch 477
 MD5 3b1ffea11e1653b7b16c2c89597d1c5a files/cdrtools-2.01-scsi-remote.patch 938
-MD5 c848b3b9b6921469483a22caa0fd40c3 files/digest-cdrtools-2.01-r1 67
-MD5 8165b59a7b14939c58a88ca1f272cad4 files/digest-cdrtools-2.01-r3 147
-MD5 0e8283f78b14f3ead0e78d197e1d5ed1 files/digest-cdrtools-2.01.01_alpha01-r2 153
+MD5 0a9c4d3c7d28293dd147c78f57dd2a1f files/cdrtools-2.01.01a01-scanbus.patch 776
 MD5 1a596f5cae257e97c559716336b30e5b files/mkisofs-iconv-10.patch 16986
 MD5 5c79e3ba5125fdb0695604c77a00b707 files/cdrtools-2.01.01a03-rezero.patch 558
+MD5 c848b3b9b6921469483a22caa0fd40c3 files/digest-cdrtools-2.01-r1 67
+MD5 8165b59a7b14939c58a88ca1f272cad4 files/digest-cdrtools-2.01-r3 147
 MD5 118ed27cd1f6e1cc5e48adc622bb8528 files/cdrtools-2.01.01a03-warnings.patch 853
-MD5 9c89bdd0371267dc24f8640160b9ea9e files/cdrtools-2.01a27-writemode.patch 477
-MD5 0a9c4d3c7d28293dd147c78f57dd2a1f files/cdrtools-2.01.01a01-scanbus.patch 776
+MD5 0e8283f78b14f3ead0e78d197e1d5ed1 files/digest-cdrtools-2.01.01_alpha01-r2 153
 MD5 a5a56cb102587325619a4d3a610d0085 files/digest-cdrtools-2.01.01_alpha03-r2 153
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDPsvQwUpWvClEHQoRAqWEAJ9+1fo1b61Nr+E7u0+cXva1N2bLMgCfeLd5
-RL2fZkFhK06dank5ZAS050M=
-=cHGw
------END PGP SIGNATURE-----
