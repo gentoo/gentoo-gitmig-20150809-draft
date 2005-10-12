@@ -5,12 +5,12 @@ MD5 41c34bd332905d1eb66b789eaaac56a9 ChangeLog 1307
 MD5 86348e00b2e2d3102704e83a886d9b3d files/digest-foremost-0.69 64
 MD5 1ff94b62b800c7da0132e900b5544403 files/digest-foremost-1.0 63
 MD5 8988816827872cd28af0f1a87c7928ea foremost-0.69.ebuild 728
-MD5 e613b8d122529664efa3ec412e4a88b1 foremost-1.0.ebuild 754
+MD5 6ae93ecd1100d1764708e58ef7c52940 foremost-1.0.ebuild 759
 MD5 9f665d3c6a1e0eb7509c6d55fc171395 metadata.xml 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDTY0pmdTrptrqvGERAjYtAJ9oIjDtNIk+1ABJj3qklpZU18ed8wCfWK0n
-1Fcacr298ebJw77XoFctL2w=
-=i10P
+iD8DBQFDTY19mdTrptrqvGERAseMAJ9jJkFOGLZzWJ02LYk6KOnLUPHnygCcCDmS
+jaqoXURB92FY29OFj6oW89A=
+=nMZH
 -----END PGP SIGNATURE-----
