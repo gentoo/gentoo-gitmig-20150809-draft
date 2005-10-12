@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f814a278804c3d5cabecb62023b56cd ChangeLog 18653
+MD5 e43b0e0aaa5d3c455bdf663801ebcea7 ChangeLog 18762
 MD5 8f1d4661a745dab7f2113e7068c6e04e files/digest-pine-4.61-r5 139
 MD5 fa3a8604150ceb9b876b6c5f1f2309ab files/digest-pine-4.62 206
 MD5 1d3052dda4b361277ca31ce465a29626 files/digest-pine-4.62-r1 139
@@ -32,12 +32,12 @@ MD5 0bd68adface8003f4aa7d13b452150cf pine-4.63-r1.ebuild 5401
 MD5 39ea4ca073f9ab5b6a90fa942993830a pine-4.63-r2.ebuild 5404
 MD5 68514ee5deb5aa96b92f1560495a3fa7 pine-4.63-r3.ebuild 5492
 MD5 f1759a695182611038a02645cdfc3826 pine-4.63.ebuild 5396
-MD5 09ef68fccd8f9f547071b500f8ad8003 pine-4.64-r1.ebuild 5450
+MD5 cc2ba54bc815796d07fad7f889ae4983 pine-4.64-r1.ebuild 5451
 MD5 f5c3b6e2fcc8955980d54be53436e01e pine-4.64.ebuild 5489
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSsfHomPajV0RnrERAoRQAJ41cb4gzpuahL3KQ+bc/9wVArbtfwCfTg/G
-LZSrNOcsP200FrZ99LR3m5U=
-=ZlRb
+iD8DBQFDTSSpcsIHjyDViGQRAj3mAJ9NEeFRToymhJq99WomcXL+11fitQCg1inN
+cq0AvC0qEsswb2469hJL5ek=
+=Jg0N
 -----END PGP SIGNATURE-----
