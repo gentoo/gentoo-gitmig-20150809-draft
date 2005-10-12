@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2-r1.ebuild,v 1.1 2005/09/20 07:06:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.3.2-r1.ebuild,v 1.2 2005/10/12 16:43:40 spyderous Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -31,7 +31,8 @@ RDEPEND="dev-libs/expat
 	x11-libs/libdrm
 	x11-libs/libICE
 	app-admin/eselect-opengl
-	motif? ( virtual/motif )"
+	motif? ( virtual/motif )
+	!<x11-base/xorg-x11-7"
 DEPEND="${RDEPEND}
 	x11-misc/makedepend
 	x11-proto/xf86vidmodeproto

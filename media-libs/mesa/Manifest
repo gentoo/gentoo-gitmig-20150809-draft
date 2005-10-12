@@ -1,5 +1,5 @@
-MD5 2dee9c3d4502a160bd39c4bfd52c6243 mesa-6.3.2-r1.ebuild 5651
-MD5 b19700b97802c11d4e97a6147eb9188c ChangeLog 8925
+MD5 135b3c1c65a39d68adcf6f1dc928cb33 mesa-6.3.2-r1.ebuild 5674
+MD5 93587a56317bb53dbe207f525710af93 ChangeLog 9052
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a9b60dbab413bb1645804918f13b7378 files/mesa-add-dri-asm-files.patch 21517
 MD5 bd015b299e16dfdc191313c06776eb96 files/digest-mesa-6.3.2-r1 67
