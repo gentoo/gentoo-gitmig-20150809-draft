@@ -1,0 +1,9 @@
+--- isc-dhcp/client/clparse.c
++++ isc-dhcp/client/clparse.c
+@@ -63,6 +63,7 @@
+ 	DHO_DOMAIN_NAME,
+ 	DHO_DOMAIN_NAME_SERVERS,
+ 	DHO_HOST_NAME,
++	DHO_NTP_SERVERS,
+ 	0
+ };
