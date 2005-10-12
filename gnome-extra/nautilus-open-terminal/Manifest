@@ -1,6 +1,16 @@
-MD5 9c0f1ea9b742b6faaa4067e002f2eb90 ChangeLog 633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 830463a63438b93c3456703b364920f0 ChangeLog 714
 MD5 b75720f4371a90dcb84d54b5e2b7a145 files/digest-nautilus-open-terminal-0.4 78
 MD5 06a1fb133fc4fccd444d3fb85d0e2887 files/digest-nautilus-open-terminal-0.6 78
 MD5 50f2cc1fcef3723bd92ec0e9bca49566 metadata.xml 309
 MD5 2d41251f04ca43d652351e1672d554d1 nautilus-open-terminal-0.4.ebuild 773
-MD5 73c73a35a693b00434207ac81845d4bd nautilus-open-terminal-0.6.ebuild 798
+MD5 48916b10258ff4dea2c72a1849f4cbea nautilus-open-terminal-0.6.ebuild 801
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTT+uomPajV0RnrERAr9fAJ4tJvmrujGhmqnWnpWHYmK+XRYNDwCeIU2A
+5/dea1xrDmLwfyaZcgCvSlo=
+=HJsc
+-----END PGP SIGNATURE-----
