@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.22 2005/10/11 19:01:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.23 2005/10/12 10:18:24 zzam Exp $
+
+*vdr-1.3.34-r1 (12 Oct 2005)
+
+  12 Oct 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +files/1.3.34/vdr-1.3.34-shutdown-retry.diff, +vdr-1.3.34-r1.ebuild:
+  Changed shutdown-behaviour, and corrected a bug in shutdown. Cosmetic
+  changes to ebuild.
 
   11 Oct 2005; Matthias Schwarzott <zzam@gentoo.org> vdr-1.2.6-r1.ebuild,
   vdr-1.3.27.ebuild, vdr-1.3.34.ebuild:
