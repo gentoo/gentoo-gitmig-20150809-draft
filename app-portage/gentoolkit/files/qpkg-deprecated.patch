@@ -1,0 +1,41 @@
+Only in gentoolkit-0.2.0-r2: .svn
+diff -ur gentoolkit-0.2.0-r1/makedefs.mak gentoolkit-0.2.0-r2/makedefs.mak
+--- gentoolkit-0.2.0-r1/makedefs.mak	2004-10-10 16:48:11.000000000 -0500
++++ gentoolkit-0.2.0-r2/makedefs.mak	2005-10-12 11:30:42.000000000 -0500
+@@ -6,8 +6,8 @@
+ 
+ # Override this on command line when making a release, ie 'dist'
+ 
+-VERSION=0.2.0_pre10
+-RELEASE_TAG=
++VERSION=0.2.0
++RELEASE_TAG=-r2
+ PYVERSION="`python-config | sed 's/-l//' | sed 's/ -lm.*//'`"
+ DESTDIR=
+ 
+diff -ur gentoolkit-0.2.0-r1/src/qpkg/Makefile gentoolkit-0.2.0-r2/src/qpkg/Makefile
+--- gentoolkit-0.2.0-r1/src/qpkg/Makefile	2004-10-10 16:48:10.000000000 -0500
++++ gentoolkit-0.2.0-r2/src/qpkg/Makefile	2005-10-12 11:07:34.000000000 -0500
+@@ -14,7 +14,7 @@
+ 	cp {Makefile,README,AUTHORS,ChangeLog,TODO,qpkg,qpkg.1} ../../${distdir}/src/qpkg/
+ 
+ install:
+-	install -m 0755 qpkg $(bindir)/
+ 	install -d $(docdir)/qpkg	
+-	install -m 0644 {README,AUTHORS,ChangeLog} $(docdir)/qpkg/
+-	install -m 0644 qpkg.1 $(mandir)/
++	install -d $(DESTDIR)/usr/lib/gentoolkit/bin/
++	install -m 0755 qpkg $(DESTDIR)/usr/lib/gentoolkit/bin/
++	install -m 0644 {README,AUTHORS,ChangeLog,qpkg.1} $(docdir)/qpkg/
+diff -ur gentoolkit-0.2.0-r1/src/revdep-rebuild/revdep-rebuild gentoolkit-0.2.0-r2/src/revdep-rebuild/revdep-rebuild
+--- gentoolkit-0.2.0-r1/src/revdep-rebuild/revdep-rebuild	2004-10-10 16:48:11.000000000 -0500
++++ gentoolkit-0.2.0-r2/src/revdep-rebuild/revdep-rebuild	2005-10-12 11:02:29.000000000 -0500
+@@ -209,7 +209,7 @@
+ 		echo -n >$LLIST.4_packages_raw
+ 		echo -n >$LLIST.4_package_owners
+ 		cat $LLIST.3_rebuild | while read FILE ; do
+-			PKG="$(qpkg -nc -f "$FILE")"
++			PKG="$(/usr/lib/gentoolkit/bin/qpkg -nc -f "$FILE")"
+ 			if [ -z "$PKG" ] ; then
+ 				echo -n -e "\n  ${RD}*** $FILE not owned by any package is broken! ***${NO}"
+ 				echo "$FILE -> (none)" >> $LLIST.4_package_owners

@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.54 2005/10/11 23:43:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.55 2005/10/12 16:55:20 fuzzyray Exp $
+
+*gentoolkit-0.2.0-r2 (12 Oct 2005)
+
+  12 Oct 2005; Paul Varner <fuzzyray@gentoo.org>
+  +files/qpkg-deprecated.patch, +gentoolkit-0.2.0-r2.ebuild:
+  Fix to deprecate qpkg and still have revdep-rebuild work properly. #108899,
+  #109011
 
 *gentoolkit-0.2.0-r1 (11 Oct 2005)
 
