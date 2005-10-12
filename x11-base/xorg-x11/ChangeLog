@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.464 2005/10/03 20:11:28 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.465 2005/10/12 05:38:18 joshuabaergen Exp $
+
+  12 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org> ChangeLog:
+  Add a patch for a missing NULL-check in the radeon driver.
+  https://bugs.freedesktop.org/show_bug.cgi?id=4001
 
 *xorg-x11-6.8.99.15-r3 (03 Oct 2005)
 
