@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phing
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/ChangeLog,v 1.4 2005/09/10 13:46:31 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/ChangeLog,v 1.5 2005/10/12 11:10:08 humpback Exp $
+
+  12 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>; phing-2.1.0.ebuild:
+  Added ~amd64 to KEYWORDS
 
   10 Sep 2005; Sebastian Bergmann <sebastian@gentoo.org> phing-2.1.0.ebuild:
   Use new PEAR eclass.

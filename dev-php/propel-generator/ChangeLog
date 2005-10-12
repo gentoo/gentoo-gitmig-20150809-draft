@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/propel-generator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-generator/ChangeLog,v 1.7 2005/09/18 06:44:38 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-generator/ChangeLog,v 1.8 2005/10/12 11:11:03 humpback Exp $
+
+  12 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  propel-generator-1.1.1.ebuild:
+  Added ~amd64 to KEYWORDS
 
 *propel-generator-1.1.1 (18 Sep 2005)
 
