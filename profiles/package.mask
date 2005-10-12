@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4565 2005/10/12 22:07:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4566 2005/10/12 23:33:46 morfic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -2015,3 +2015,7 @@ dev-db/mysqltool
 # Security issues, and unmaintained upstream
 # <dang@gentoo.org> (18 Aug 2005)
 app-admin/gwcc
+
+# Masking new boost ebuild to be able to test new icc paths
+# <morfic@gentoo.org> (12 Oct 2005)
+=dev-libs/boost-1.33.0-r1
