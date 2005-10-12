@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r2.ebuild,v 1.18 2005/07/05 23:45:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r2.ebuild,v 1.1 2005/10/12 04:56:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,17 +11,16 @@ HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${P}.tar.gz
 	mirror://openssl/source/${OLD_096_P}.tar.gz"
 
-LICENSE="openssl"
+LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="emacs"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+IUSE="emacs test bindist zlib"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-apps/diffutils
 	>=dev-lang/perl-5
-	>=sys-apps/sed-4
-	!elibc_uclibc? ( sys-devel/bc )"
+	!test? ( sys-devel/bc )"
 
 S=${WORKDIR}
 
@@ -31,70 +30,47 @@ src_unpack() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 
-	epatch ${FILESDIR}/openssl-0.9.7c-tempfile.patch || die "patch failed"
+	epatch "${FILESDIR}"/${PN}-0.9.7c-tempfile.patch
+	[[ $(tc-arch) == "ppc64" ]] && epatch "${FILESDIR}"/addppc64support.diff
+	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-arm-big-endian.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-hppa-fix-detection.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7e-no-fips.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7e-ptr-casting.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-mem-clr-ptr-cast.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7e-x86_64-bn-asm.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-CAN-2005-2969.patch #108046
+	epatch "${FILESDIR}"/${PN}-0.9.7e-superh.patch
 
-	if [ "${ARCH}" = "ppc64" ]; then
-		epatch ${FILESDIR}/addppc64support.diff
-	fi
-
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-smime.patch
-
-	if [ "${ARCH}" = "hppa" ]; then
-		# Tells to compile a static version of openssl
-		sed -i -e \
-		's!^"linux-parisc"\(.*\)::BN\(.*\)::!"linux-parisc"\1:-ldl:BN\2::::::::::dlfcn:linux-shared:-fPIC::.so.\\$(SHLIB_MAJOR).\\$(SHLIB_MINOR)!' \
-		Configure \
-		|| die "sed failed"
-		# Fix detection of parisc running 64 bit kernel
-		sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config \
-		|| die "sed failed"
-	fi
-	if [ "${ARCH}" = "arm" ]; then
-		# patch linker to add -ldl or things linking aginst libcrypto fail
-		sed -i -e \
-			's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
-			Configure \
-			|| die "sed failed"
-	fi
-
-	if [ "${ARCH}" = "alpha" -a "${CC}" != "ccc" ]; then
-	# ccc compiled openssl will break things linked against
-	# a gcc compiled openssl, the configure will automatically detect 
-	# ccc and use it, so stop that if user hasnt asked for it.
-		sed -i -e \
-			's!CC=ccc!CC=gcc!' config \
-			|| die "sed failed"
-	fi
-
-	case $( gcc-version ) in
-		3.2 )
-			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loop 		;;
+	case $(gcc-version) in
+		3.2)
+			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loop
+		;;
 		3.4 | 3.3 )
 			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
-			if [ "${ARCH}" = "ppc" -o  "${ARCH}" = "ppc64" ]; then
-			append-flags -fno-strict-aliasing
-			fi
+			[[ ${ARCH} == "ppc" ||  ${ARCH} == "ppc64" ]] && append-flags -fno-strict-aliasing
+			# <robbat2@gentoo.org> (14 Feb 2004)
+			# bug #69550 openssl breaks in some cases.
+			[[ ${ARCH} == "x86" ]] && append-flags -Wa,--noexecstack
 		;;
 	esac
 
 	# replace CFLAGS
 	OLDIFS=$IFS
-	IFS="
-"
+	IFS=$'\n'
 	for a in $( grep -n -e "^\"linux-" Configure ); do
 		LINE=$( echo $a | awk -F: '{print $1}' )
 		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
-		# for ppc64 I have to be careful given current
-		# toolchain issues
-		if [ "${ARCH}" != "ppc64" ]; then
-			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) $CFLAGS"
+		# for ppc64 I have to be careful given current toolchain issues
+		if [[ ${ARCH} != "ppc64" ]]; then
+			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" ) $CFLAGS"
 		else
-			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) "
+			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" ) "
 
 		fi
 
-		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure \
+		sed -i "${LINE}s:$CUR_CFLAGS:$NEW_CFLAGS:" Configure \
 		|| die "sed failed"
 	done
 	IFS=$OLDIFS
@@ -102,22 +78,22 @@ src_unpack() {
 	if [ "$(get_libdir)" != "lib" ] ; then
 		# using a library directory other than lib requires some magic
 		sed -i \
-			-e 	"s+\(\$(INSTALL_PREFIX)\$(INSTALLTOP)\)/lib+\1/$(get_libdir)+g" \
-			-e	"s+libdir=\$\${exec_prefix}/lib+libdir=\$\${exec_prefix}/$(get_libdir)+g" \
-		Makefile.org \
-		|| die "sed failed"
-		./config --test-sanity || die
+			-e "s+\(\$(INSTALL_PREFIX)\$(INSTALLTOP)\)/lib+\1/$(get_libdir)+g" \
+			-e "s+libdir=\$\${exec_prefix}/lib+libdir=\$\${exec_prefix}/$(get_libdir)+g" \
+			Makefile.org \
+			|| die "sed failed"
+		./config --test-sanity || die "sanity failed"
 	fi
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 
-	        epatch ${FILESDIR}/${OLD_096_P}-gentoo.diff
+		epatch "${FILESDIR}"/${OLD_096_P}-gentoo.diff
 
 		case ${ARCH} in
 		mips)
-			epatch ${FILESDIR}/openssl-0.9.6-mips.diff
+			epatch "${FILESDIR}"/openssl-0.9.6-mips.diff
 		;;
 		arm)
 			# patch linker to add -ldl or things linking aginst libcrypto fail
@@ -139,8 +115,7 @@ src_unpack() {
 
 		# replace CFLAGS
 		OLDIFS=$IFS
-		IFS="
-"
+		IFS=$'\n'
 		for a in $( grep -n -e "^\"linux-" Configure ); do
 	  		LINE=$( echo $a | awk -F: '{print $1}' )
 	  		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
@@ -156,34 +131,39 @@ src_compile() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 
+	# Clean out patent-or-otherwise-encumbered code.
+	# MDC-2: 4,908,861 13/03/2007
+	# IDEA:  5,214,703 25/05/2010
+	# RC5:   5,724,428 03/03/2015
+	# EC:    ????????? ??/??/2015
+	use bindist && conf_options="no-idea no-rc5 no-mdc2 -no-ec"
+
+	use zlib && conf_options="${conf_options} zlib-dynamic"
+
 	# Build correctly for mips, mips64, & mipsel
 	if use mips; then
-		if [ "`echo ${CHOST} | grep "mipsel"`" ]; then
+		if [[ ${CHOST/mipsel} != ${CHOST} ]] ; then
 			mipsarch="linux-mipsel"
 		else
 			mipsarch="linux-mips"
 		fi
 
-		./Configure ${mipsarch} --prefix=/usr --openssldir=/etc/ssl \
-			shared threads || die
-	# We have to force the target for hppa because detection
-	# is broken on SMP box
-	elif [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
-		./Configure linux-parisc --prefix=/usr --openssldir=/etc/ssl \
+		./Configure ${mipsarch} ${conf_options} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	# force sparcv8 on sparc32 profile
 	elif [ "$PROFILE_ARCH" = "sparc" ]; then
-		./Configure linux-sparcv8 --prefix=/usr --openssldir=/etc/ssl \
+		./Configure linux-sparcv8 ${conf_options} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	elif [ "${ABI}" = "sparc64" ]; then
-		./Configure linux64-sparcv9 --prefix=/usr --openssldir=/etc/ssl \
+		./Configure linux64-sparcv9 ${conf_options} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	else
-		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
+		./config ${conf_options} --prefix=/usr --openssldir=/etc/ssl shared threads \
+			|| die "config failed"
 	fi
 
 	einfo "Compiling ${P}"
-	make all || die
+	make CC="$(tc-getCC)" all || die "make all failed"
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -219,13 +199,16 @@ src_compile() {
 		fi
 
 		einfo "Compiling ${OLD_096_P}"
-		make all || die
+		make CC="$(tc-getCC)" all || die
 	}
 }
 
 src_test() {
+	# make sure sandbox doesnt die on *BSD
+	add_predict /dev/crypto
+
 	cd ${WORKDIR}/${P}
-	make test || die
+	make test || die "make test failed"
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -238,7 +221,7 @@ src_install() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 	make INSTALL_PREFIX=${D} MANDIR=/usr/share/man install || die
-	dodoc CHANGES* FAQ LICENSE NEWS README
+	dodoc CHANGES* FAQ NEWS README
 	dodoc doc/*.txt
 	dohtml doc/*
 
@@ -255,14 +238,13 @@ src_install() {
 	LD_LIBRARY_PATH="${D}"/usr/$(get_libdir)/ \
 	OPENSSL=${D}/usr/bin/openssl /usr/bin/perl tools/c_rehash ${D}/etc/ssl/certs
 
-	# The man pages rand.3 and passwd.1 conflict with other packages
-	# Rename them to ssl-* and also make a symlink from openssl-* to ssl-*
-	cd ${D}/usr/share/man/man1
-	mv passwd.1 ssl-passwd.1
-	ln -sf ssl-passwd.1 openssl-passwd.1
-	cd ${D}/usr/share/man/man3
-	mv rand.3 ssl-rand.3
-	ln -sf ssl-rand.3 openssl-rand.3
+	# These man pages with other packages so rename them
+	cd "${D}"/usr/share/man
+	for m in man1/passwd.1 man3/rand.3 man3/err.3 ; do
+		d=${m%%/*} ; m=${m##*/}
+		mv ${d}/{,ssl-}${m}
+		ln -s ssl-${m} ${d}/openssl-${m}
+	done
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
