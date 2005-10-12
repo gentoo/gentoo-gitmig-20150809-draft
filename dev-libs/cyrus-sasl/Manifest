@@ -5,7 +5,7 @@ MD5 6da8cfd55c9dc45e0930171d1c25689d cyrus-sasl-2.1.21-r1.ebuild 9479
 MD5 449b680b5253bc3e9af3862872f735c4 cyrus-sasl-2.1.21.ebuild 9198
 MD5 62922ef59be6add5b73bc4f12b9041ea cyrus-sasl-2.1.20-r1.ebuild 8558
 MD5 d9fda6c54c37d9a72b5ec222a0f942cb cyrus-sasl-2.1.20-r3.ebuild 9191
-MD5 11cdae49fa48973052a05a7d6a3de649 ChangeLog 22432
+MD5 6d04c93fd1525389b9a0cadda1de1ffb ChangeLog 22550
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 97de45d37a62d1c1e7e52740007637b7 cyrus-sasl-2.1.20.ebuild 7352
 MD5 5d8f83e453b4f7dff5eeee74335de870 files/cyrus-sasl-1.5.24-rpath.patch 448
@@ -32,7 +32,7 @@ MD5 41c1024f02bc0725406a23eeff93edd5 files/saslauthd-2.1.20.conf 906
 MD5 cb4a5c5160219818e04196847ba9f7a1 files/cyrus-sasl-2.1.17-db4.patch 1451
 MD5 4717e635830a067d9abb83da6b2700cb files/saslauthd-2.1.21.conf 906
 MD5 7b24e99c21a5924543fe82cd82a1d741 files/saslauthd.pam 223
-MD5 c38995773eff23cf7f05b23fe7fba6d3 files/saslauthd.rc6 525
+MD5 bfda634830e1525c8a1a5750f8d54fca files/saslauthd.rc6 541
 MD5 4144a6962acfd7983cc292259375149d files/cyrus-sasl-2.1.19-configdir.patch 8231
 MD5 bc046561db59ed3f4d0cc417b099c2f9 files/java.README.gentoo 934
 MD5 228579b200f0a570f9c02d222f400672 files/cyrus-sasl-gcc32.patch 426
