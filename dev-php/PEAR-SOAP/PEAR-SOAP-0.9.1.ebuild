@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/PEAR-SOAP-0.8.1-r1.ebuild,v 1.4 2005/10/08 11:50:32 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/PEAR-SOAP-0.9.1.ebuild,v 1.1 2005/10/12 07:30:53 sebastian Exp $
 
 inherit php-pear-r1
 
