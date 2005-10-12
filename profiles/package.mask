@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4562 2005/10/12 16:54:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4563 2005/10/12 17:23:46 danarmak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,29 @@
 ##
 ##   End example
 ##
+
+# Dan Armak <danarmak@gentoo.org> (12 Oct 2005)
+# Temp mask of monolithic KDE 3.4.3 ebuilds, because the split ones haven't been committed yet.
+# This creates an upgrade/downgrade loop on kdelibs 3.4.2/3.4.3 for split ebuilds users.
+=kde-base/arts-3.4.3*
+=kde-base/kdelibs-3.4.3*
+=kde-base/kdeaccessibility-3.4.3*
+=kde-base/kdeaddons-3.4.3*
+=kde-base/kdeadmin-3.4.3*
+=kde-base/kdeartwork-3.4.3*
+=kde-base/kdebase-3.4.3*
+=kde-base/kdeedu-3.4.3*
+=kde-base/kdegames-3.4.3*
+=kde-base/kdegraphics-3.4.3*
+=kde-base/kde-i18n-3.4.3*
+=kde-base/kde-3.4.3*
+=kde-base/kdemultimedia-3.4.3*
+=kde-base/kdenetwork-3.4.3*
+=kde-base/kdepim-3.4.3*
+=kde-base/kdesdk-3.4.3*
+=kde-base/kdetoys-3.4.3
+=kde-base/kdeutils-3.4.3
+=kde-base/kdewebdev-3.4.3
 
 # Christian Heim <phreak@gentoo.org (12 Oct 2005)
 # prerelease, needs some testing
