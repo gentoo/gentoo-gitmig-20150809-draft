@@ -1,41 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ebec5090ec1bb46bed278ddd5ba60fd ChangeLog 5614
-MD5 dddf09e76c6f943ebc4931e2ff794320 docutils-0.3.3-r1.ebuild 1903
-MD5 3d9a2fc8cc55909edb3592bedc6435d9 docutils-0.3.9.ebuild 2464
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 6e959fc339273f356ea3552a779ed058 ChangeLog 5713
 MD5 32c18f62ef442534b43d411bfd8c40a6 docutils-0.3-r1.ebuild 1770
-MD5 74a7b1584824888016191380b65cea31 docutils-0.3_pre20030530-r3.ebuild 1541
-MD5 e1eaaeec8acf361749fdbd003312baa3 docutils-0.3.7.ebuild 2492
+MD5 dddf09e76c6f943ebc4931e2ff794320 docutils-0.3.3-r1.ebuild 1903
 MD5 c45be82484f7cc076c69a559e3133d62 docutils-0.3.5.ebuild 1969
-MD5 e3fa7c72245aae7d90beef3bf411583b files/glep_htmlwrite.py 4162
-MD5 4be747a533a3ba63b1cad7ced8b8ba04 files/docutils-0.3.7-extramodules.patch 1163
-MD5 694b883b9a8f714dc375a547cdf62b1d files/digest-docutils-0.3-r1 64
-MD5 7c025532adb8b09116980747be7ccc61 files/docutils-0.3-extramodules.patch 1155
-MD5 25c0102e3a347e2b80d72a778ae0549d files/digest-docutils-0.3.9 124
-MD5 d30e8a9c7f49c164696893c2f39f41ee files/digest-docutils-0.3.3-r1 72
-MD5 9d184e504ea5367a9309b9a1691d5147 files/docutils-0.3.5-extramodules.patch 1163
-MD5 0a2c7c1478f8b72f97b3d12534b4159e files/glepread.py 1647
-MD5 fd7797bcc6dfaac58ec5408e4e3dac99 files/docutils-0.3.3-extramodules.patch 1159
-MD5 4787b6c5e6678d3f211ec7f8ec71aa03 files/glep.py 699
-MD5 a88bbfee1135288043eeffcb178fab00 files/digest-docutils-0.3.5 124
-MD5 fded948d9eac24154eab24b2b56d15d6 files/glepstrans.py 10420
+MD5 6a4765b7142bbd0f4288de80ca837d68 docutils-0.3.7.ebuild 2488
+MD5 3d9a2fc8cc55909edb3592bedc6435d9 docutils-0.3.9.ebuild 2464
+MD5 74a7b1584824888016191380b65cea31 docutils-0.3_pre20030530-r3.ebuild 1541
 MD5 dac9480a7b5144f60cb48675c654f5a3 files/50docutils-gentoo.el 280
+MD5 694b883b9a8f714dc375a547cdf62b1d files/digest-docutils-0.3-r1 64
+MD5 d30e8a9c7f49c164696893c2f39f41ee files/digest-docutils-0.3.3-r1 72
+MD5 a88bbfee1135288043eeffcb178fab00 files/digest-docutils-0.3.5 124
 MD5 90906547cd2223248f6619d44b7fb688 files/digest-docutils-0.3.7 124
+MD5 25c0102e3a347e2b80d72a778ae0549d files/digest-docutils-0.3.9 124
 MD5 8c6d9ea3ddd2e36b369112ee20b660fb files/digest-docutils-0.3_pre20030530-r3 73
-MD5 bacb84b99614ef28729cb5adf4763242 files/glep-0.3.3/glep_htmlwrite.py 3246
-MD5 f3c575d69568fafe2159283355e7efc0 files/glep-0.3.3/glepread.py 1833
-MD5 8a92d518608c84c83ce14ac840f96834 files/glep-0.3.3/glep.py 699
-MD5 bba4f5a38311f907d4ddb4a5514099ea files/glep-0.3.3/glepstrans.py 10898
+MD5 7c025532adb8b09116980747be7ccc61 files/docutils-0.3-extramodules.patch 1155
+MD5 fd7797bcc6dfaac58ec5408e4e3dac99 files/docutils-0.3.3-extramodules.patch 1159
+MD5 9d184e504ea5367a9309b9a1691d5147 files/docutils-0.3.5-extramodules.patch 1163
+MD5 4be747a533a3ba63b1cad7ced8b8ba04 files/docutils-0.3.7-extramodules.patch 1163
+MD5 770e48a59980bce89ab956ab96396a7c files/glep-0.3-r1/glep.py 699
 MD5 a273d63de34b5da93a15764998c054d2 files/glep-0.3-r1/glep_htmlwrite.py 4168
 MD5 d6fc669e125324930e72f2421779a5c2 files/glep-0.3-r1/glepread.py 1647
-MD5 770e48a59980bce89ab956ab96396a7c files/glep-0.3-r1/glep.py 699
 MD5 52f6ec87bfa6c5c8ec86c85e2a2ed58a files/glep-0.3-r1/glepstrans.py 10428
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDSqaAKRy60XGEcJIRAqOkAJ98Z3UN0T+rseQhDGFu9iuL03kANACgsl2j
-xshPSH3PoiF4BAZZXz740a8=
-=CTwd
------END PGP SIGNATURE-----
+MD5 8a92d518608c84c83ce14ac840f96834 files/glep-0.3.3/glep.py 699
+MD5 bacb84b99614ef28729cb5adf4763242 files/glep-0.3.3/glep_htmlwrite.py 3246
+MD5 f3c575d69568fafe2159283355e7efc0 files/glep-0.3.3/glepread.py 1833
+MD5 bba4f5a38311f907d4ddb4a5514099ea files/glep-0.3.3/glepstrans.py 10898
+MD5 4787b6c5e6678d3f211ec7f8ec71aa03 files/glep.py 699
+MD5 e3fa7c72245aae7d90beef3bf411583b files/glep_htmlwrite.py 4162
+MD5 0a2c7c1478f8b72f97b3d12534b4159e files/glepread.py 1647
+MD5 fded948d9eac24154eab24b2b56d15d6 files/glepstrans.py 10420
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
