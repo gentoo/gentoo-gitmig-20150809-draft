@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.6 2005/10/12 11:44:27 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.7 2005/10/12 13:41:51 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -99,7 +99,7 @@ pkg_setup() {
 		ewarn
 	else
 		export LINGUAS_OOO="${LINGUAS//_/-}"
-		export LINGUAS_OOO="${LINGUAS//en /en-US }"
+		export LINGUAS_OOO="${LINGUAS_OOO//en /en-US }"
 	fi
 
 	if use !java; then
