@@ -1,13 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 62bdc3989eddc1772c249259f5ca6fcc ChangeLog 2788
+MD5 17f2d0caebba7a9232e705817aabe5c8 ChangeLog 2927
 MD5 0d32a739d9a15e9734ab1f73a763e150 files/0.15.1-nocg.patch 1535
 MD5 1a623c9495c1a9f63d402d570d74e79d files/digest-ogre-0.15.1 77
 MD5 77b04d7b9bd7c05800bc038e8e7e5536 files/digest-ogre-1.0.1 76
 MD5 f8f854062e8f3ade51a25fa86c2c4d4d files/digest-ogre-1.0.2 76
 MD5 cf71b4b5f6ddad4290f634c826385b29 files/digest-ogre-1.0.3_p1 78
 MD5 ccbf336b72643dadd3f83a7cd0051558 files/digest-ogre-1.0.4 76
+MD5 d8129c8c4e2aed4621f8d7250eedb118 files/digest-ogre-1.0.5 76
 MD5 00b83fe5730136f01f243b1f16fd478f files/ogre-1.0.1-autotools.patch 3482
 MD5 a71b8412cf3e1e75c6d8cf54120adc2e files/ogre-1.0.2-autotools.patch 672
 MD5 b11c4d3064c807f259eae5a15f61232a metadata.xml 4326
@@ -16,10 +17,11 @@ MD5 24a70171384ad7a8b14c8a5e4e891521 ogre-1.0.1.ebuild 2217
 MD5 fcf412acd8bd58918ffa8c5e6639151a ogre-1.0.2.ebuild 2384
 MD5 269e60601427284b5996689c4d5ff208 ogre-1.0.3_p1.ebuild 2446
 MD5 f9df69d54123bd5bac080ca1d837a119 ogre-1.0.4.ebuild 2536
+MD5 df0b4799b3ceef6be597881d6289f945 ogre-1.0.5.ebuild 2536
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRfP+gIKl8Uu19MoRAoOcAJ4kmJgXUgZ2jVvwYK4YRerU08VeHQCfZAsk
-rFRw1tu/ZIiOtnnTHMYdkf8=
-=hAvo
+iD8DBQFDTaIDgIKl8Uu19MoRAlU/AJ95r3XTe3H94IinB3KWOJMprGtUpgCffBoo
+Dr26jJ0Z0lBbFgljLwloPBU=
+=NAOs
 -----END PGP SIGNATURE-----

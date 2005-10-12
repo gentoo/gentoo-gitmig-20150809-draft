@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.21 2005/09/03 02:29:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.22 2005/10/12 23:51:35 vapier Exp $
+
+*ogre-1.0.5 (12 Oct 2005)
+
+  12 Oct 2005; Mike Frysinger <vapier@gentoo.org> +ogre-1.0.5.ebuild:
+  Version bump #108918 by Anton Romanov.
 
 *ogre-1.0.4 (03 Sep 2005)
 
