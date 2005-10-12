@@ -1,5 +1,8 @@
-MD5 9ff6d94b42daad813304738094a6b36c ChangeLog 2010
-MD5 8300729cacee219a9d850bce8fa76267 callgrind-0.10.0.ebuild 727
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad20d51e3f226d81cc337dc176dbc855 ChangeLog 2133
+MD5 ec31619167c200378ffd25861bd0ae3d callgrind-0.10.0.ebuild 737
 MD5 1b042a95b298f8d41e5deda5df97acc0 callgrind-0.9.11-r1.ebuild 807
 MD5 7b2c4bbdbf212df3e8e328a568822e17 callgrind-0.9.12.ebuild 727
 MD5 fd019cb535b08fdbae43cb0a32b840cc files/callgrind-0.9.11-pic.patch 796
@@ -7,3 +10,10 @@ MD5 e81d708b6105ad1595f64cbe09a21856 files/digest-callgrind-0.10.0 68
 MD5 9fec370836b1b35ed92c7fcc97732b29 files/digest-callgrind-0.9.11-r1 68
 MD5 d9e50bb8e3fba3a9dc46f344a0c1b68a files/digest-callgrind-0.9.12 68
 MD5 ce27d2d79c120eec4ba4563651b7e5c1 metadata.xml 261
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTU6/wUpWvClEHQoRAqIUAJ4gF0tO899LO7hfbufAjNkS6X7cgwCdEWAg
+mBJQMBS6ZOV7a5LsaK16deM=
+=/1Rf
+-----END PGP SIGNATURE-----
