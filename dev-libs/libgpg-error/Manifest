@@ -6,12 +6,12 @@ MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0-r1 68
 MD5 4d5f6ae916a18ac9e6c7d571f4f979e3 files/digest-libgpg-error-1.1 68
 MD5 351613fb76980248b69def1933899216 files/libgpg-error-1.0-locale.h.patch 367
 MD5 6b909421919cd66e4ff58b1609b8aae3 libgpg-error-1.0-r1.ebuild 1054
-MD5 10fa27c802aede3896d202228b565f4a libgpg-error-1.1.ebuild 841
+MD5 93f18379bc0093e6b3014382a45a7a81 libgpg-error-1.1.ebuild 821
 MD5 cbb90c3fb885f86a1c6bea0f4493f9ab metadata.xml 250
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTQeNI1lqEGTUzyQRAtWIAJoDsvtlwH1Ld9nV5R2wMflmXyNA/QCeOC5t
-ddjV2xHLgD8huYgN06p8DUE=
-=+Qix
+iD8DBQFDTQfyI1lqEGTUzyQRAqZUAJ4vpW9i9kxj2iKwO2+cxERzRq1XZACgtiIO
+qmfSx5FJlHWOgvjSf9wo25o=
+=+Jed
 -----END PGP SIGNATURE-----

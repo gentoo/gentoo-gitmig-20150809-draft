@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.1.ebuild,v 1.5 2005/10/12 12:54:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.1.ebuild,v 1.6 2005/10/12 12:55:58 swegener Exp $
 
 inherit libtool
 
@@ -14,7 +14,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sh 
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
-DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack "${A}"
