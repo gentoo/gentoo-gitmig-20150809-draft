@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.86 2005/09/29 23:32:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.87 2005/10/12 15:35:23 dang Exp $
+
+  12 Oct 2005; <dang@gentoo.org> libtool-1.5.20.ebuild:
+  Marked stable on amd64
 
   29 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   files/1.5.6/libtool-1.5-filter-host-tags.patch:
