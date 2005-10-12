@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.28 2005/09/24 20:20:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.29 2005/10/12 14:05:28 carlo Exp $
+
+*tellico-1.0.2 (12 Oct 2005)
+
+  12 Oct 2005; Carsten Lohrke <carlo@gentoo.org> +tellico-1.0.2.ebuild:
+  version bump
 
 *tellico-1.0.1 (24 Sep 2005)
 
