@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 82d5b3bc3fff6a6b67530154a2268652 ChangeLog 865
 MD5 7955f7cfdb12769244a56813931fad9d PEAR-Numbers_Words-0.13.1.ebuild 425
 MD5 49836770d36a44635a0f31cdc444afb6 PEAR-Numbers_Words-0.14.0.ebuild 384
 MD5 712e20e9a63fa736878d496ba1cb1ad4 files/digest-PEAR-Numbers_Words-0.13.1 68
 MD5 749b0f8eaaa0099d9dc7987ae1b15496 files/digest-PEAR-Numbers_Words-0.14.0 68
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTLPLaGfFFLhbXWkRAmefAJ43ijxUuvIHYcwmSnaHq+euCYKZaACfUcLP
+q3pD8fKz9btqhvAcML0dGOs=
+=WYJY
+-----END PGP SIGNATURE-----
