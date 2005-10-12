@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a74e17dc2ada3eae01115e085b54c1e ChangeLog 886
-MD5 9f665d3c6a1e0eb7509c6d55fc171395 metadata.xml 227
-MD5 1a2c49dffe18f8a75e17fafae5dc4cbe dcfldd-1.2.2.ebuild 652
-MD5 c998f726ab91bb395e2d8ea68f1836e0 dcfldd-1.2.4.ebuild 563
-MD5 3201022427aff6dedf8455be81c7a2d0 files/digest-dcfldd-1.2.4 64
+MD5 cbbbdc97f0ae813017c2993e3498f161 ChangeLog 1263
+MD5 4bc012d1c5403978dfc326346c0b806b dcfldd-1.2.2.ebuild 743
+MD5 55ef56ead87d49db6bc82b013e172e0f dcfldd-1.2.4-r1.ebuild 659
+MD5 1c132caf217f6313e4f7404120cbde3b dcfldd-1.2.4.ebuild 648
+MD5 3a79a9f5e94568a6ec1bc4d3c789ea12 files/dcfldd-1.2.4_md5_amd64_fix.patch 1033
 MD5 d3182354b01dc122b2ab3b2122302ac5 files/digest-dcfldd-1.2.2 64
+MD5 3201022427aff6dedf8455be81c7a2d0 files/digest-dcfldd-1.2.4 64
+MD5 3201022427aff6dedf8455be81c7a2d0 files/digest-dcfldd-1.2.4-r1 64
+MD5 9f665d3c6a1e0eb7509c6d55fc171395 metadata.xml 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDNm2jmdTrptrqvGERAg5jAJ0W5EMGctzIT2C7OioUD3i+w2PcMgCeKoGZ
-mkT+az481f2EDOGPfwZdiGs=
-=iHSX
+iD8DBQFDTYWNmdTrptrqvGERAnuoAJ42Pk1p0afzUxfjU7amrX4ZjOtnUACggWvf
+PpFsIObtHzHflX1TvMM/iUo=
+=nrk5
 -----END PGP SIGNATURE-----

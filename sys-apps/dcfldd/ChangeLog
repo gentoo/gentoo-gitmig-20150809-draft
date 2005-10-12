@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dcfldd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.6 2005/09/25 09:27:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.7 2005/10/12 21:51:59 dragonheart Exp $
+
+*dcfldd-1.2.4-r1 (12 Oct 2005)
+
+  12 Oct 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/dcfldd-1.2.4_md5_amd64_fix.patch, dcfldd-1.2.2.ebuild,
+  dcfldd-1.2.4.ebuild, +dcfldd-1.2.4-r1.ebuild:
+  -amd64 masked on versions 1.2.2 and 1.2.4 due to bad md5 implenation in bug
+  108653. Corrected version in 1.2.4-r1 thanks to Martin Scharrer for the bug
+  report and the patch
 
   25 Sep 2005; Daniel Black <dragonheart@gentoo.org> dcfldd-1.2.4.ebuild:
   ~ppc keyworded
