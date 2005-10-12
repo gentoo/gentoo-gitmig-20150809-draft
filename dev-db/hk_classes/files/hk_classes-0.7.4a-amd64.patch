@@ -1,0 +1,87 @@
+--- ./hk_xbaseclasses/Makefile.am.orig	2005-10-12 14:51:50.000000000 +0200
++++ ./hk_xbaseclasses/Makefile.am	2005-10-12 14:56:24.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ AM_CPPFLAGS=
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_xbasedriver_la_LDFLAGS = -version-info 0:0:0  -lxbsql -L../hk_classes -L@XBASELIBDIR@   -lhk_classes
+ 
+--- ./hk_paradoxclasses/Makefile.am.orig	2005-10-12 14:51:50.000000000 +0200
++++ ./hk_paradoxclasses/Makefile.am	2005-10-12 14:56:24.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ AM_CPPFLAGS=
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_paradoxdriver_la_LDFLAGS = -version-info 0:0:0  -lpx -L../hk_classes -L@PARADOXLIBDIR@   -lhk_classes
+ 
+--- ./hk_odbcclasses/Makefile.am.orig	2005-10-12 14:51:50.000000000 +0200
++++ ./hk_odbcclasses/Makefile.am	2005-10-12 14:56:24.000000000 +0200
+@@ -1,6 +1,6 @@
+ libdir=@HK_CLASSESDIR@/drivers
+ INCLUDES= -I../hk_classes -I@ODBCINCDIR@ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_odbcdriver_la_LDFLAGS = -version-info 0:0:0 -l@ODBCLIBRARY@  -L@ODBCLIBDIR@ -lhk_classes  -L../hk_classes 
+ 
+--- ./hk_sqliteclasses/Makefile.am.orig	2005-10-12 14:51:51.000000000 +0200
++++ ./hk_sqliteclasses/Makefile.am	2005-10-12 14:56:25.000000000 +0200
+@@ -1,7 +1,7 @@
+ libdir=@HK_CLASSESDIR@/drivers
+ INCLUDES= -I../hk_classes -I@SQLITEINCDIR@
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_sqlite2driver_la_LDFLAGS = -version-info 0:0:0 -lsqlite -L../hk_classes -L@SQLITELIBDIR@ -lhk_classes
+ 
+--- ./hk_mdbclasses/Makefile.am.orig	2005-10-12 14:51:51.000000000 +0200
++++ ./hk_mdbclasses/Makefile.am	2005-10-12 14:56:25.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ AM_CPPFLAGS=$(GLIB_CFLAGS)
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_mdbdriver_la_LDFLAGS = -version-info 0:0:0  -lmdb -lmdbsql -L../hk_classes -L@MDBLIBDIR@ $(GLIB_LIBADD)  -lhk_classes
+ 
+--- ./hk_sqlite3classes/Makefile.am.orig	2005-10-12 14:51:51.000000000 +0200
++++ ./hk_sqlite3classes/Makefile.am	2005-10-12 14:56:25.000000000 +0200
+@@ -1,7 +1,7 @@
+ libdir=@HK_CLASSESDIR@/drivers
+ INCLUDES= -I../hk_classes -I@SQLITE3INCDIR@
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_sqlite3driver_la_LDFLAGS = -version-info 0:0:0 -lsqlite3 -L../hk_classes -L@SQLITE3LIBDIR@ -lhk_classes
+ 
+--- ./hk_mysqlclasses/Makefile.am.orig	2005-10-12 14:51:52.000000000 +0200
++++ ./hk_mysqlclasses/Makefile.am	2005-10-12 14:56:25.000000000 +0200
+@@ -1,7 +1,7 @@
+ libdir=@HK_CLASSESDIR@/drivers
+ INCLUDES= -I../hk_classes -I@MYSQLINCDIR@
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_mysqldriver_la_LDFLAGS = -version-info 3:4:0 -lmysqlclient -L../hk_classes -L@MYSQLLIBDIR@ -lhk_classes
+ 
+--- ./hk_firebirdclasses/Makefile.am.orig	2005-10-12 14:51:52.000000000 +0200
++++ ./hk_firebirdclasses/Makefile.am	2005-10-12 14:56:25.000000000 +0200
+@@ -3,7 +3,7 @@
+ 
+ AM_CPPFLAGS=
+ 
+-AM_CXXFLAGS= -Wall
++AM_CXXFLAGS= -Wall -fPIC
+ 
+ libhk_firebirddriver_la_LDFLAGS = -version-info 0:0:0  -lfbclient -L../hk_classes -L@FIREBIRDLIBDIR@   -lhk_classes
+ 

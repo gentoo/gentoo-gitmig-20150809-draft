@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.4.ebuild,v 1.2 2005/06/27 21:33:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.4a.ebuild,v 1.1 2005/10/12 14:12:47 carlo Exp $
 
 inherit eutils python
 
@@ -50,7 +50,7 @@ src_compile() {
 	python_version
 	export LIBPYTHON="-lpython${PYVER} -lz"
 
-	myconf="--with-pythondir=/usr/$(get_libsir)/python${PYVER}/\
+	myconf="--with-pythondir=/usr/$(get_libdir)/python${PYVER}/\
 		`use_with mysql`\
 		`use_with firebird`\
 		`use_with odbc`\
