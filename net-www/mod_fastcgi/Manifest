@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2ccc8b0e692ffce7704d575a6631e14b ChangeLog 2072
+MD5 c5ba09ba52a78a27a604cf97a7b38a62 ChangeLog 2176
 MD5 de79c0397228d06bdfd6fdb48ded2ea8 files/2.4.2-r1/20_mod_fastcgi.conf 200
 MD5 f91641961f208de56af9e453c8cf414c files/20_mod_fastcgi.conf 221
 MD5 e243c356a4eb728bb4372c4f99296d37 files/Makefile-2.4.0 436
@@ -9,12 +6,5 @@ MD5 c28c5986e00f82855ecbd1887f1cd72b files/digest-mod_fastcgi-2.4.2 68
 MD5 c28c5986e00f82855ecbd1887f1cd72b files/digest-mod_fastcgi-2.4.2-r1 68
 MD5 60fafe97f43e4a2c2a38c4423b6b3958 files/mod_fastcgi.conf 92
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 793b90d19b427059cbd8d5afc9ad6ae7 mod_fastcgi-2.4.2-r1.ebuild 851
+MD5 eb0e8eb546ee04654d1dd0c157f6917c mod_fastcgi-2.4.2-r1.ebuild 851
 MD5 db1c511d9d8c1c684ec67d18815a450b mod_fastcgi-2.4.2.ebuild 3204
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSXVSKf2g/qXtneoRAkYzAJ0emio3tEiwKlL+p0Fskb2y5WF0JQCgksBb
-RDqCM25ZnltSVnJ5BSfQ8to=
-=Jsk4
------END PGP SIGNATURE-----
