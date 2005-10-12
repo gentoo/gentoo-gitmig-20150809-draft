@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_pre3.ebuild,v 1.1 2005/08/11 23:49:47 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40_pre4.ebuild,v 1.1 2005/10/12 21:36:09 truedfx Exp $
 
 inherit flag-o-matic
 
@@ -18,27 +18,14 @@ RDEPEND="${DEPEND}
 	dev-lang/perl"
 S=${WORKDIR}/${P%_pre*}
 
-add_flag() {
-	for flag in "$@"; do
-		if test_flag "$flag" >/dev/null; then
-			append-flags "$flag"
-			return
-		fi
-	done
-}
-
 src_compile() {
-	add_flag -std=c99 -ansi
-	add_flag -pedantic
-	add_flag -Wall
-	add_flag -Wextra -W
-	emake || die
+	./configure || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
-	newsbin ufed.pl ufed || die
+	newsbin ufed.pl ufed
 	doman ufed.8
-	dodoc ChangeLog
 	insinto /usr/lib/ufed
 	doins *.pm
 	exeinto /usr/lib/ufed
