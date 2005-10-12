@@ -1,0 +1,24 @@
+diff -Nru rp-pppoe-3.6.orig/configs/pppoe.conf rp-pppoe-3.6/configs/pppoe.conf
+--- rp-pppoe-3.6.orig/configs/pppoe.conf	2005-08-10 04:50:46.000000000 +0300
++++ rp-pppoe-3.6/configs/pppoe.conf	2005-09-17 16:53:39.844303080 +0300
+@@ -115,7 +115,7 @@
+ FIREWALL=NONE
+ 
+ # Linux kernel-mode plugin for pppd.  If you want to try the kernel-mode
+-# plugin, use LINUX_PLUGIN=/etc/ppp/plugins/rp-pppoe.so
++# plugin, use LINUX_PLUGIN=rp-pppoe.so
+ LINUX_PLUGIN=
+ 
+ # Any extra arguments to pass to pppoe.  Normally, use a blank string
+diff -Nru rp-pppoe-3.6.orig/scripts/pppoe-connect.in rp-pppoe-3.6/scripts/pppoe-connect.in
+--- rp-pppoe-3.6.orig/scripts/pppoe-connect.in	2005-08-10 04:50:46.000000000 +0300
++++ rp-pppoe-3.6/scripts/pppoe-connect.in	2005-09-17 16:53:39.845302928 +0300
+@@ -295,7 +295,7 @@
+ 	$SETSID $OVERRIDE_PPPD_COMMAND &
+ 	echo "$!" > $PPPD_PIDFILE
+     elif test "$LINUX_PLUGIN" != "" ; then
+-	$SETSID $PPPD $PPP_STD_OPTIONS $DEMAND &
++	$SETSID $PPPD $DEMAND $PPP_STD_OPTIONS &
+ 	echo "$!" > $PPPD_PIDFILE
+     else
+ 	$SETSID $PPPD pty "$PPPOE_CMD" \

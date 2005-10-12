@@ -1,0 +1,12 @@
+diff -Nru rp-pppoe-3.6.orig/scripts/pppoe-connect.in rp-pppoe-3.6/scripts/pppoe-connect.in
+--- rp-pppoe-3.6.orig/scripts/pppoe-connect.in	2005-10-12 20:31:43.000000000 +0300
++++ rp-pppoe-3.6/scripts/pppoe-connect.in	2005-10-12 20:41:23.799332072 +0300
+@@ -202,7 +202,7 @@
+ 
+ # If we're using kernel-mode PPPoE on Linux...
+ if test "$LINUX_PLUGIN" != "" ; then
+-    PLUGIN_OPTS="plugin $LINUX_PLUGIN rp_pppoe_dev $ETH"
++    PLUGIN_OPTS="plugin $LINUX_PLUGIN"
+     if test -n "$SERVICENAME" ; then
+ 	PLUGIN_OPTS="$PLUGIN_OPTS rp_pppoe_service $SERVICENAME"
+     fi
