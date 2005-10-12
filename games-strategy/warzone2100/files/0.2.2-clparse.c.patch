@@ -1,0 +1,16 @@
+--- src/clparse.c.origin	2005-09-02 13:27:01.000000000 +0200
++++ src/clparse.c	2005-09-02 20:01:08.000000000 +0200
+@@ -56,6 +56,13 @@
+ 	pXor = xorString(cl);
+ 	sprintf(cl2,"%s%s","-",cl);
+ 
++	// paths Gentoo
++	resSetBaseDir("DATADIR");
++	if (_chdir("DATADIR") != 0)
++	{
++		DBERROR(("Path not found: DATADIR \n"));
++	}
++				
+ 	/* loop through command line */
+ 	for( i = 1; i < argc; ++i) {
+ 		tokenType = argv[i];
