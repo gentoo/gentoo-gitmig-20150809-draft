@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.36 2005/10/10 17:45:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.37 2005/10/12 03:44:24 cardoe Exp $
+
+*ivtv-0.4.0-r2 (12 Oct 2005)
+
+  12 Oct 2005; Doug Goldstein <cardoe@gentoo.org>
+  files/ivtv-0.4.0-ppc-odw.patch, -ivtv-0.4.0.ebuild, -ivtv-0.4.0-r1.ebuild,
+  +ivtv-0.4.0-r2.ebuild:
+  Change in the Makefile was making it install to /usr/local/bin. More PPC
+  changes.
 
 *ivtv-0.4.0-r1 (10 Oct 2005)
 

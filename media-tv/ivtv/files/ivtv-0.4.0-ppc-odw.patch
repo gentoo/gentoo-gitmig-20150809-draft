@@ -16,3 +16,27 @@
  CXXFLAGS = $(CFLAGS)
  export CFLAGS CXXFLAGS
  
+--- driver/ivtv-driver.h	2005-10-09 06:50:56.000000000 -0400
++++ driver/ivtv-driver.h.new	2005-10-11 23:30:03.000000000 -0400
+@@ -166,7 +166,7 @@
+ /* ========================== START USER SETTABLE DMA VARIABLES =========== */
+ /* ======================================================================== */
+ 
+-#define DYNAMIC_MEMORY_ALLOC 	1 /* Allocate memory each stream use */
++#define DYNAMIC_MEMORY_ALLOC 	0 /* Allocate memory each stream use */
+ 
+ /* DMA Buffers Sizes */
+ #define IVTV_DMA_ENC_BUF_SIZE     0x00008000
+@@ -190,9 +190,9 @@
+ #define IVTV_DMA_SG_OSD_ENT	(2883584/PAGE_SIZE)	/* sg entities */
+ 
+ /* Decoder DMA or PIO, 1=PIO, 0=DMA */
+-#define IVTV_VBI_PIO		0
+-#define IVTV_ENC_PIO		0
+-#define IVTV_DEC_PIO		0
++#define IVTV_VBI_PIO		1
++#define IVTV_ENC_PIO		1
++#define IVTV_DEC_PIO		1
+ /* This sometimes times out, seems to  kill
+ 					   encoding sometimes */
+ 

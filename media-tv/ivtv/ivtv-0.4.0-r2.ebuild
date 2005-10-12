@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.0.ebuild,v 1.1 2005/10/10 05:55:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.4.0-r2.ebuild,v 1.1 2005/10/12 03:44:24 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -38,8 +38,10 @@ pkg_setup() {
 		cx25840(extra:${S}/driver)
 		tuner(extra:${S}/driver)
 		wm8775(extra:${S}/driver)
-		tda9887(extra:${S}/driver)"
-	linux_chkconfig_present FB && MODULE_NAMES="${MODULE_NAMES}"
+		tda9887(extra:${S}/driver)
+		cs53l32a(extra:${S}/driver)"
+	linux_chkconfig_present FB && \
+	MODULE_NAMES="${MODULE_NAMES} ivtv-fb(extra:${S}/driver)"
 }
 
 src_unpack() {
@@ -72,15 +74,14 @@ src_install() {
 		${D}/lib/modules/ivtv-fw-enc.bin \
 		${D}/lib/modules/ivtv-fw-dec.bin
 
+	make KERNELDIR=${KERNEL_DIR} DESTDIR=${D} PREFIX=/usr install || die "failed to install"
+
 	insinto /lib/modules
 	newins ${WORKDIR}/HcwMakoA.ROM HcwMakoA.ROM
+	newins ${S}/ivtv_init_mpeg.bin ivtv_init_mpeg.bin
 
 	cd ${S}
 	dodoc README doc/* utils/README.X11
-
-	cd ${S}/utils
-	#should work... no idea why its not
-	make KERNELDIR=${KERNEL_DIR} DESTDIR=${D} INSTALLDIR=/usr/bin install || die "failed to install"
 
 	cd ${S}/driver
 	linux-mod_src_install || die "failed to install modules"
