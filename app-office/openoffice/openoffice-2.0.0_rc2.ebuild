@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.4 2005/10/11 19:01:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.5 2005/10/12 10:21:47 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
 IUSE="curl eds gnome java kde ldap mozilla nas python zlib xml2"
 
 OO_VER="${PV/_rc2}"
-MY_PV="2.0.rc2"
+MY_PV="2.0.rc2-2"
 PATCHLEVEL="OOO680"
 PATCHDIR="${WORKDIR}/ooo-build-${MY_PV}"
 SRC="ooo680-m2"
@@ -39,6 +39,7 @@ RDEPEND="!app-office/openoffice-bin
 		>=gnome-base/gconf-2.0 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	kde? ( kde-base/kdelibs )
+	mozilla? ( >=www-client/mozilla-1.7.10 )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.4
 	>=media-libs/fontconfig-2.2.0
@@ -78,10 +79,7 @@ PROVIDE="virtual/ooo"
 pkg_setup() {
 
 	ewarn
-	ewarn " This is a pre-release, so expect stuff to be broken, in fact there are "
-	ewarn " known problems. To sum it up: Good luck, you are on your own. "
 
-	ewarn
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
@@ -124,6 +122,7 @@ src_unpack() {
 
 	#Additional and new patches get here
 	cp -pPRf ${FILESDIR}/${OO_VER}/config_office-openldap-fix.diff ${PATCHDIR}/patches/src680 || die
+	cp -pPRf ${FILESDIR}/${OO_VER}/no-ldap-mozilla.diff ${PATCHDIR}/patches/src680 || die
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"

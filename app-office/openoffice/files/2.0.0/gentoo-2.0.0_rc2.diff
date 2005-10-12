@@ -19,11 +19,12 @@
  
  # Don't fail when building --without-stlport4
  buildfix-ucb-without-stlport4.diff
-@@ -733,6 +730,7 @@
+@@ -732,6 +734,8 @@
  [ GentooOnly ]
  version-2-0-sysuserconfig.diff
  gentoo-splash.diff
 +no-fontooo-wizard.diff
++no-ldap-mozilla.diff
  
  #
  # NOTE: 64 bit OOo is work in progress!
