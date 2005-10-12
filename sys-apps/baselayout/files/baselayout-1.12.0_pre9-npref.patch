@@ -1,0 +1,13 @@
+Index: init.d/net.lo
+===================================================================
+--- init.d/net.lo	(revision 1563)
++++ init.d/net.lo	(working copy)
+@@ -180,7 +180,7 @@
+ 	umods=( "${umods[@]}" "${modules[@]}" )
+ 
+ 	# Add our preferred modules
+-	npref=3
++	npref=4
+ 	umods=( "${umods[@]}" "iproute2" "dhcpcd" "iwconfig" "netplugd" )
+ 
+ 	# First we strip any modules that conflict from user settings

@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.277 2005/10/11 15:18:23 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.278 2005/10/12 06:26:45 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_pre9-r1 (12 Oct 2005)
+
+  12 Oct 2005; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.12.0_pre9-npref.patch,
+  +baselayout-1.12.0_pre9-r1.ebuild:
+  Changed number of preferred modules from 3 to 4 in net.lo, #108960.
 
 *baselayout-1.12.0_pre9 (11 Oct 2005)
 
