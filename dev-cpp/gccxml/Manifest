@@ -1,14 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0eeec99fb2c7d3774fac18eca461abd7 ChangeLog 822
+MD5 b5ad8efc39b7a1cc0d1ca7a278872f5e ChangeLog 1039
+MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
+MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0-r1 65
+MD5 792c797769c6059ef2f9ebd6ce4b2e65 files/obstack.h.diff 3852
+MD5 c79d320ec210d61db57c6594771b1917 gccxml-0.6.0-r1.ebuild 865
 MD5 8c02797818273db2d2c3e5e7c2449cfe gccxml-0.6.0.ebuild 813
 MD5 d698342d42579c976d124866016978c1 metadata.xml 228
-MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLy9oCRZPokWLroQRAp7uAKDL5QfZR1lxPNd1Q9hKlEv+cFvBlgCeLadJ
-y8MSc9ZVPCHwfDaUpSTAFJs=
-=KuxJ
------END PGP SIGNATURE-----
