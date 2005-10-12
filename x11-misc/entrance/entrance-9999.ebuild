@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.4 2005/04/10 03:44:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.5 2005/10/12 04:44:31 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -24,17 +24,15 @@ DEPEND="virtual/x11
 src_unpack() {
 	enlightenment_src_unpack
 	if [ -d gentooed ] ; then
-		mv gentooed ${S}/data/themes/
-		cd ${S}/data/themes
+		mv gentooed "${S}"/data/themes/
+		cd "${S}"/data/themes
 		sed -i '/^SUBDIRS/s:$: gentooed:' Makefile.am
 		cp default/{Makefile.am,build_theme.sh} gentooed/
 		cd gentooed
 		ln -s images img
 		sed -i 's:default:gentooed:g' Makefile.am build_theme.sh
-		sed -i 's:\(data/themes/default/Makefile\):\1 data/themes/gentooed/Makefile:' ${S}/configure.in
+		sed -i 's:\(data/themes/default/Makefile\):\1 data/themes/gentooed/Makefile:' "${S}"/configure.in
 	fi
-	cd ${S}
-	epatch ${FILESDIR}/no-listen-tcp.patch
 }
 
 src_compile() {
