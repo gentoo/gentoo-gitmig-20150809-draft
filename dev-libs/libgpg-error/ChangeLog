@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.36 2005/09/28 21:39:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.37 2005/10/12 10:39:33 dragonheart Exp $
+
+  12 Oct 2005; Daniel Black <dragonheart@gentoo.org>
+  libgpg-error-1.0-r1.ebuild, libgpg-error-1.1.ebuild:
+  Fixed elibctoolize that I broke - bug #106399. Sorry uclibc users
 
   28 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   libgpg-error-1.1.ebuild:

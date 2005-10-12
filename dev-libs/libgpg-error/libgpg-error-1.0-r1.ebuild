@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.13 2005/08/17 22:41:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.14 2005/10/12 10:39:33 dragonheart Exp $
 
 inherit libtool eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 		env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed"
 		autoheader || die "autoheader failed"
 	fi
-	uclibctoolize
+	elibctoolize
 }
 
 src_compile() {
