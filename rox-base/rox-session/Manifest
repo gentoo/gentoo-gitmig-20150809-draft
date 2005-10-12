@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4fbbdb31c794f57433bc07589c2bcd0 rox-session-0.1.20.ebuild 726
-MD5 1a5e86156b76265ea8125e4a91f59e8c ChangeLog 1437
+MD5 a061d9418f171ef39bacc91b06d96450 ChangeLog 1599
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 c4fbbdb31c794f57433bc07589c2bcd0 rox-session-0.1.20.ebuild 726
 MD5 51fd19eda7aacd844c1bd5a6cd57d151 rox-session-0.1.21.ebuild 730
+MD5 c2f298b05d9aadadbbe352c7f5333183 rox-session-0.26.ebuild 1602
+MD5 6746e572a2e4a848f5228873903fad07 files/ROX-Session 51
 MD5 2fbd5b90cd0ab5251e571069b37ce294 files/digest-rox-session-0.1.20 67
 MD5 69620f9bcf7f4ca9ce765d68d957c25e files/digest-rox-session-0.1.21 67
-MD5 6746e572a2e4a848f5228873903fad07 files/ROX-Session 51
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBp5SlI1lqEGTUzyQRAvC3AKCPtSglMK3tzPnPUQCvtJqROjCLAACdHlIs
-brW3a7d21eku3ptQWXjy1C4=
-=7EcZ
------END PGP SIGNATURE-----
+MD5 bed7c6fdff0fc34302a88e622fa4f54e files/digest-rox-session-0.26 65
