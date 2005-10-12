@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r3.ebuild,v 1.3 2005/10/07 18:14:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/mod_dav-1.0.3-r3.ebuild,v 1.4 2005/10/12 19:30:08 hansmi Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ DESCRIPTION="Apache module for Distributed Authoring and Versioning"
 HOMEPAGE="http://www.webdav.org/mod_dav/"
 SRC_URI="http://www.webdav.org/mod_dav/${PN}-${MY_V}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 DEPEND=""
 LICENSE="as-is"
 SLOT="0"
