@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.118 2005/10/11 23:45:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.119 2005/10/12 06:49:43 weeve Exp $
+
+  12 Oct 2005; Jason Wever <weeve@gentoo.org> koffice-1.4.1-r1.ebuild:
+  Stable on SPARC wrt security bug #108411.
 
   11 Oct 2005; Aron Griffis <agriffis@gentoo.org> koffice-1.4.2.ebuild:
   Mark 1.4.2 ~ia64
