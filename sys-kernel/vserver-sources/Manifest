@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6cb542a571ef45f2e121aafd58291717 ChangeLog 6136
+MD5 e37faa9f9e9ba9cf577a893b6920cbe5 ChangeLog 6261
 MD5 9ad64ba1a94849ed87ff74df46547308 files/digest-vserver-sources-2.0-r1 299
+MD5 5924688c45831bed102690d1716b5676 files/digest-vserver-sources-2.0.1_pre2-r1 304
 MD5 d3b302c691bf54e4694736cea6fe47d6 files/digest-vserver-sources-2.1.0_rc3 300
 MD5 f703b135c202d58849f005abf3c728b4 metadata.xml 526
 MD5 fd2677cdadb6c8f9cd1050658a8b861d vserver-sources-2.0-r1.ebuild 742
+MD5 2c887568cc1e721dae7033bfce847d46 vserver-sources-2.0.1_pre2-r1.ebuild 749
 MD5 e2dcfecdc0f03c63eb960c0fa251585d vserver-sources-2.1.0_rc3.ebuild 782
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD4DBQFDQ/U1flZ8QqxhrsMRAt2zAJ9JyIVrCdnZ2bwFlzvhl3YLVhvb8gCYrusL
-bQ+HOhKpOI27a9bsmjUhzw==
-=imGD
+iD8DBQFDTS7wflZ8QqxhrsMRAkG7AJ46YnSEBdY2vEGM8fqN68kxhWUZpwCfSl1s
+yf4MKU7IMb8cH0aXE5FXVkc=
+=rKjC
 -----END PGP SIGNATURE-----
