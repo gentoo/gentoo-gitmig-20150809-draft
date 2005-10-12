@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.26 2005/09/09 15:17:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.27 2005/10/12 06:52:16 sebastian Exp $
+
+*PEAR-Date-1.4.5 (12 Oct 2005)
+
+  12 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -PEAR-Date-1.4.3-r1.ebuild, +PEAR-Date-1.4.5.ebuild:
+  Version bump.
 
   09 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Date-1.4.3-r1.ebuild:
   Re-added ~sparc keyword as we had already fixed broken deps.
