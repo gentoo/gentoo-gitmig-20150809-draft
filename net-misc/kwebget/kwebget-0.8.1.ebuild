@@ -1,28 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.4 2005/01/01 01:11:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.5 2005/10/12 12:55:21 greg_g Exp $
 
-inherit kde
+inherit kde eutils
 
-DESCRIPTION="KWebGet - a KDE wget frontend"
-SRC_URI="http://www.kpage.de/download/kwebget-0.8.1.tar.bz2"
+DESCRIPTION="A KDE frontend for wget."
 HOMEPAGE="http://www.kpage.de/en/"
+SRC_URI="http://www.kpage.de/download/${P}.tar.bz2"
+LICENSE="GPL-2"
 
 SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 
-RDEPEND="$DEPEND
-	>=net-misc/wget-1.9-r2"
+RDEPEND=">=net-misc/wget-1.9-r2"
 
-S="${WORKDIR}/kwebget"
+need-kde 3
 
-need-kde 3.0
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	kde_src_unpack
-	# respect the "alsa" USE flag until it's fixed upstream
+
+	# respect the "arts" USE flag until it's fixed upstream
 	use arts || epatch ${FILESDIR}/kwebget-0.8.1-configure.patch
 }
-
