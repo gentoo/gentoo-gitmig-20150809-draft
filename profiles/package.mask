@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4559 2005/10/11 21:40:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4560 2005/10/12 15:50:04 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org (12 Oct 2005)
+# prerelease, needs some testing
+>=sys-kernel/vserver-sources-2.1.0*
 
 # Andreas Proschofsky <suka@gentoo.org> (11 Oct 2005)
 # Release Candidate, needs testing
