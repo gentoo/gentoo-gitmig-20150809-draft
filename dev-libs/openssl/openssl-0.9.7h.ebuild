@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8-r1.ebuild,v 1.2 2005/10/12 05:20:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7h.ebuild,v 1.1 2005/10/12 05:20:02 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,6 +10,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
 LICENSE="openssl"
 SLOT="0"
+# make sure your arch is ABI compat before adding KEYWORD back in
 KEYWORDS="-*"
 IUSE="emacs test bindist zlib"
 
@@ -24,13 +25,15 @@ src_unpack() {
 
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-0.9.8-ppc64.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-ppc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
-	epatch "${FILESDIR}"/${PN}-0.9.8-hppa-fix-detection.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-hppa-fix-detection.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
-	epatch "${FILESDIR}"/${PN}-0.9.8-parallel-build.patch
-	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
-	epatch "${FILESDIR}"/${PN}-0.9.8-CAN-2005-2969.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-no-fips.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-mem-clr-ptr-cast.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7h-ABI-compat.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-superh.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-amd64-fbsd.patch
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
@@ -69,7 +72,7 @@ src_unpack() {
 		sed -i \
 			-e "s+\(\$(INSTALL_PREFIX)\$(INSTALLTOP)\)/lib+\1/$(get_libdir)+g" \
 			-e "s+libdir=\$\${exec_prefix}/lib+libdir=\$\${exec_prefix}/$(get_libdir)+g" \
-			Makefile.org engines/Makefile \
+			Makefile.org \
 			|| die "sed failed"
 		./config --test-sanity || die "sanity failed"
 	fi
@@ -133,24 +136,17 @@ src_install() {
 	insinto /etc/ssl/certs
 	doins certs/*.pem
 	LD_LIBRARY_PATH="${D}"/usr/$(get_libdir)/ \
-	OPENSSL="${D}"/usr/bin/openssl /usr/bin/perl tools/c_rehash \
-		"${D}"/etc/ssl/certs
+	OPENSSL="${D}"/usr/bin/openssl /usr/bin/perl tools/c_rehash "${D}"/etc/ssl/certs
 
 	# These man pages with other packages so rename them
 	cd "${D}"/usr/share/man
 	for m in man1/passwd.1 man3/rand.3 man3/err.3 ; do
 		d=${m%%/*} ; m=${m##*/}
-		mv -f ${d}/{,ssl-}${m}
-		ln -snf ssl-${m} ${d}/openssl-${m}
+		mv ${d}/{,ssl-}${m}
+		ln -s ssl-${m} ${d}/openssl-${m}
 	done
 
 	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
-}
-
-pkg_preinst() {
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libcrypto.so.0.9.7 ]] ; then
-		cp -pPR "${ROOT}"/usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.7 "${IMAGE}"/usr/$(get_libdir)/
-	fi
 }
 
 pkg_postinst() {
@@ -164,12 +160,12 @@ pkg_postinst() {
 		rm -f "${BN_H}"
 	fi
 
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libcrypto.so.0.9.7 ]] ; then
+	if [[ -e ${ROOT}/usr/lib/libcrypto.so.0.9.6 ]] ; then
 		ewarn "You must re-compile all packages that are linked against"
-		ewarn "OpenSSL 0.9.7 by using revdep-rebuild from gentoolkit:"
-		ewarn "# revdep-rebuild --soname libssl.so.0.9.7"
-		ewarn "# revdep-rebuild --soname libcrypto.so.0.9.7"
-		ewarn "After this, you can delete /usr/$(get_libdir)/libssl.so.0.9.7"
-		ewarn "and /usr/$(get_libdir)/libcrypto.so.0.9.7"
+		ewarn "OpenSSL 0.9.6 by using revdep-rebuild from gentoolkit:"
+		ewarn "# revdep-rebuild --soname libssl.so.0.9.6"
+		ewarn "# revdep-rebuild --soname libcrypto.so.0.9.6"
+		ewarn "After this, you can delete /usr/lib/libssl.so.0.9.6 and /usr/lib/libcrypto.so.0.9.6"
+		touch -c "${ROOT}"/usr/lib/lib{crypto,ssl}.so.0.9.6
 	fi
 }
