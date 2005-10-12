@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.6 2005/10/12 12:22:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.7 2005/10/12 12:25:01 seemant Exp $
+
+  12 Oct 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/lynx-2.8.4.1c-gentoo.patch, -files/lynx-2.8.4.1d-gentoo.patch,
+  -files/lynx-2.8.4a-LYStrings.c-gentoo.patch, lynx-2.8.5.ebuild:
+  remove old crufty patches as well
 
   12 Oct 2005; Seemant Kulleen <seemant@gentoo.org> -lynx-2.8.4.1c.ebuild,
   -lynx-2.8.4.1d.ebuild, -lynx-2.8.4.1d-r1.ebuild:
