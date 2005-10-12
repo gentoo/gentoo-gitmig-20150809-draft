@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.5.2.ebuild,v 1.3 2005/09/29 19:30:46 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/cvsgraph-1.5.2.ebuild,v 1.4 2005/10/12 19:40:00 hansmi Exp $
 
 DESCRIPTION="CVS/RCS repository grapher"
 HOMEPAGE="http://www.akhphd.au.dk/~bertho/cvsgraph"
@@ -8,7 +8,7 @@ SRC_URI="http://www.akhphd.au.dk/~bertho/cvsgraph/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 -ia64 ~ppc ~sparc x86"
+KEYWORDS="-alpha ~amd64 -ia64 ppc ~sparc x86"
 IUSE="gif jpeg nls png truetype zlib"
 
 DEPEND="media-libs/gd
