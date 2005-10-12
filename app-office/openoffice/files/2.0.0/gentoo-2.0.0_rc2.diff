@@ -28,23 +28,10 @@
  
  #
  # NOTE: 64 bit OOo is work in progress!
---- distro-configs/Common.conf.in.old	2005-07-27 19:33:53.000000000 +0200
-+++ distro-configs/Common.conf.in	2005-08-24 19:10:33.000000000 +0200
-@@ -2,17 +2,10 @@
- --disable-crashdump
- --disable-epm
- --enable-crashdump=no
----enable-openldap
- --with-build-version=\"Build @OOO_BUILDVERSION@\"
- --with-lang=\"@OOO_LANGS@\"
- --without-fonts
- --without-gpc
- --with-system-freetype
- --with-system-gcc
----with-system-jpeg
----with-system-libxml
----with-system-mozilla
----with-system-python
----with-system-zlib
----enable-evolution2
- @CAIRO_CONFIGURE_FLAG@
+--- distro-configs/Gentoo.conf.in       2005-08-26 11:48:38.000000000 +0200
++++ distro-configs/Gentoo.conf.in.new   2005-10-11 23:32:25.000000000 +0200
+@@ -4,3 +4,4 @@
+ --with-system-expat
+ --with-system-stdlibs
+ --with-system-xrender-headers
++--without-system-jpeg

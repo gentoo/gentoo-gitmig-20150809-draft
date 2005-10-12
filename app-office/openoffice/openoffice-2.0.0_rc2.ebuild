@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.5 2005/10/12 10:21:47 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc2.ebuild,v 1.6 2005/10/12 11:44:27 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -69,7 +69,8 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	java? ( =virtual/jdk-1.4*
 		dev-java/ant-core )
-	!java? ( dev-libs/libxslt )
+	!java? ( dev-libs/libxslt
+		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
 	python? ( >=dev-lang/python-2.3.4 )
 	xml2? ( >=dev-libs/libxml2-2.0 )"
@@ -105,7 +106,8 @@ pkg_setup() {
 		ewarn " You are building with java-support disabled, this results in some "
 		ewarn " of the OpenOffice.org functionality (i.e. help) being disabled. "
 		ewarn " If something you need does not work for you, rebuild with "
-		ewarn " java in your USE-flags "
+		ewarn " java in your USE-flags. Also the xml2 use-flag is disabled with "
+		ewarn " -java to prevent build breakage. "
 		ewarn
 	fi
 
