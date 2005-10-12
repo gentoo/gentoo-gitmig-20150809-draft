@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.208 2005/10/11 23:53:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.209 2005/10/12 22:39:57 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1343,7 +1343,7 @@ gcc_do_filter_flags() {
 	strip-unsupported-flags
 
 	# dont want to funk ourselves
-	filter-flags '-mabi*' -m32 -m64
+	filter-flags '-mabi*' -m31 -m32 -m64
 
 	case ${GCC_BRANCH_VER} in
 	3.2|3.3)
@@ -2132,11 +2132,8 @@ fix_libtool_libdir_paths() {
 
 is_multilib() {
 	case ${CTARGET} in
-		*-uclibc) false ;;
-
-		x86_64*|mips64*|powerpc64*|sparc64*)
+		mips64*|powerpc64*|s390x*|sparc64*|x86_64*)
 			has_multilib_profile || use multilib ;;
-
 		*)	false ;;
 	esac
 }

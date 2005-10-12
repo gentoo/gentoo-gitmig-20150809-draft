@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.42 2005/10/10 21:18:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.43 2005/10/12 22:39:07 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -608,6 +608,22 @@ multilib_env() {
 
 			export MULTILIB_ABIS="ppc64 ppc"
 			export DEFAULT_ABI="ppc64"
+		;;
+		s390x*)
+			export CFLAGS_s390=${CFLAGS_s390--m31} # the 31 is not a typo
+			export CHOST_s390=${CTARGET/s390x/s390}
+			export CTARGET_s390=${CHOST_s390}
+			export CDEFINE_s390="!__s390x__"
+			export LIBDIR_s390="lib"
+
+			export CFLAGS_s390x=${CFLAGS_s390x--m64}
+			export CHOST_s390x=${CTARGET}
+			export CTARGET_s390x=${CHOST_s390x}
+			export CDEFINE_s390x="__s390x__"
+			export LIBDIR_s390x="lib64"
+
+			export MULTILIB_ABIS="s390x s390"
+			export DEFAULT_ABI="s390x"
 		;;
 		sparc64*)
 			export CFLAGS_sparc32=${CFLAGS_sparc32--m32}

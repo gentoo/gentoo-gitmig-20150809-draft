@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.45 2005/09/23 23:52:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.46 2005/10/12 22:39:24 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -185,14 +185,18 @@ toolchain-binutils_src_install() {
 	# we want to tell binutils-config that it's cool if
 	# it generates multiple sets of binutil symlinks.
 	# e.g. sparc gets {sparc,sparc64}-unknown-linux-gnu
-	local targ=${CTARGET/-*}
+	local targ=${CTARGET/-*} src="" dst=""
 	local FAKE_TARGETS=${CTARGET}
 	case ${targ} in
-		mips64*|powerpc64|sparc64*)
-			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/64-/-}";;
-		mips*|powerpc|sparc*)
-			FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/-/64-}";;
+		mips*)    src="mips"    dst="mips64";;
+		powerpc*) src="powerpc" dst="powerpc64";;
+		s390*)    src="s390"    dst="s390x";;
+		sparc*)   src="sparc"   dst="sparc64";;
 	esac
+	case ${targ} in
+		mips64*|powerpc64*|s390x*|sparc64*) targ=${src} src=${dst} dst=${targ};;
+	esac
+	[[ -n ${src}${dst} ]] && FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/${src}/${dst}}"
 
 	# Generate an env.d entry for this binutils
 	cd "${S}"
