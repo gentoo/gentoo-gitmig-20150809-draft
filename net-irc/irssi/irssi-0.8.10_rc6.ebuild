@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.10 2005/06/13 19:35:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc6.ebuild,v 1.1 2005/10/13 13:09:27 swegener Exp $
 
 inherit perl-module eutils flag-o-matic
 
@@ -8,8 +8,7 @@ MY_P="${P//_/-}"
 
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
-SRC_URI="http://irssi.org/files/${MY_P}.tar.gz
-	mirror://gentoo/${P}-CVS-20050121.patch.bz2"
+SRC_URI="http://irssi.org/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +23,7 @@ RDEPEND="!net-irc/irssi-cvs
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.13 )"
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}"/${MY_P}
@@ -38,9 +38,7 @@ src_unpack() {
 		-e 's/[^ 	]\+\.html//g' docs/Makefile.in || \
 			die "sed doc/Makefile.in failed"
 
-	epatch "${WORKDIR}"/${P}-CVS-20050121.patch
 	epatch "${FILESDIR}"/irssi-socks-fix.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
