@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5.ebuild,v 1.1 2005/09/12 00:22:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5.ebuild,v 1.2 2005/10/13 14:58:57 swegener Exp $
 
 inherit flag-o-matic eutils versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="perl tcltk python ssl mmx ipv6 nls xchattext xchatnogtk xchatdccserver"
 
 # Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	!xchatnogtk? ( >=x11-libs/gtk+-2.0.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
-	python? ( dev-lang/python )
+	python? ( >=dev-lang/python-2.2 )
 	tcltk? ( dev-lang/tcl )
 	!net-irc/xchat-gnome"
 
