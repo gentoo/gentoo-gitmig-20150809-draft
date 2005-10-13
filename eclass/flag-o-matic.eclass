@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.94 2005/10/09 22:28:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.95 2005/10/13 05:33:34 vapier Exp $
 
 
 # need access to emktemp()
@@ -312,17 +312,17 @@ test_version_info() {
 }
 
 strip-unsupported-flags() {
-	local NEW_CFLAGS NEW_CXXFLAGS
+	local x NEW_CFLAGS NEW_CXXFLAGS
 
 	for x in ${CFLAGS} ; do
-		NEW_CFLAGS="${NEW_CFLAGS} `test_flag ${x}`"
+		NEW_CFLAGS="${NEW_CFLAGS} $(test_flag ${x})"
 	done
 	for x in ${CXXFLAGS} ; do
-		NEW_CXXFLAGS="${NEW_CXXFLAGS} `test_flag ${x}`"
+		NEW_CXXFLAGS="${NEW_CXXFLAGS} $(test_flag ${x})"
 	done
 
-	export CFLAGS="${NEW_CFLAGS}"
-	export CXXFLAGS="${NEW_CXXFLAGS}"
+	export CFLAGS=${NEW_CFLAGS}
+	export CXXFLAGS=${NEW_CXXFLAGS}
 }
 
 get-flag() {
@@ -414,12 +414,12 @@ has_m32() {
 
 	[ "$(tc-arch)" = "amd64" ] && has_multilib_profile && return 0
 
-	local temp="$(emktemp)"
-	echo "int main() { return(0); }" > ${temp}.c
+	local temp=$(emktemp)
+	echo "int main() { return(0); }" > "${temp}".c
 	MY_CC=$(tc-getCC)
-	${MY_CC/ .*/} -m32 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
+	${MY_CC/ .*/} -m32 -o "$(emktemp)" "${temp}".c > /dev/null 2>&1
 	local ret=$?
-	rm -f ${temp}.c
+	rm -f "${temp}".c
 	[ "$ret" != "1" ] && return 0
 	return 1
 }
