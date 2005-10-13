@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1ef0fa7079edc99cdbc39a4510a90620 ChangeLog 15243
+MD5 e0a504728deb8189779576d61cb0db95 ChangeLog 15354
 MD5 8ad4f6ed8863c26c4ac562e1d00e6db1 files/1.4.3/libtool-1.2f-cache.patch 698
 MD5 55544e163772c87195b893d27e00a0f8 files/1.4.3/libtool-1.3.5-mktemp.patch 642
 MD5 67757e15bfa1cdefb5c23f76198329ec files/1.4.3/libtool-1.3.5-nonneg.patch 895
@@ -33,12 +33,12 @@ MD5 2cd6110e84c85c183c7b8dcd0be814e7 files/ltconfig-uclibc.patch 1167
 MD5 856e14ff512ae227c3d32c3582618ff9 libtool-1.3.5.ebuild 1454
 MD5 e48784e20efad8d2437f1c271104a4b4 libtool-1.5.16.ebuild 5178
 MD5 50b3b9fe1d346665231c739e48d616b6 libtool-1.5.18-r1.ebuild 5181
-MD5 72a8157813e3ae6e06940ee1b2fdb298 libtool-1.5.20.ebuild 5047
+MD5 77d96a962460cd1aa2b82f9a7292d684 libtool-1.5.20.ebuild 5049
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDTWSlQlM6RnzZP+IRAnbkAJ0Y4y29axXXlCBaiIsf207Gwq5AWQCglhTK
-N8RSxDuQ3E/aecs7Jqo7zhk=
-=eJoV
+iD8DBQFDTmQsKRy60XGEcJIRAo0HAJ0Qajq7/iMy+v8LS4zD1DURsKF4xQCfbLn8
+106pN70rRT6XccHMDCvVHBM=
+=FRex
 -----END PGP SIGNATURE-----
