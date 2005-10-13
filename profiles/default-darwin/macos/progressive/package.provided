@@ -10,9 +10,7 @@ app-editors/pico-0.0.1
 app-editors/vim-6.2
 app-misc/screen-4.0.2
 app-misc/srm-1.2.6
-app-shells/bash-2.05b-r2
 app-shells/tcsh-6.12
-app-shells/zsh-4.2.3
 app-text/enscript-1.6.1
 app-text/rcs-5.7
 app-text/texi2html-1.57
@@ -89,7 +87,6 @@ sys-apps/diffutils-2.5.8
 sys-apps/ed-0.2-r3
 sys-apps/file-4.10
 sys-apps/findutils-4.1.7
-sys-apps/gawk-2.8
 sys-apps/grep-2.5.1
 sys-apps/groff-1.19.1
 sys-apps/less-382

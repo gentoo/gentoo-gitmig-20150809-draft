@@ -10,6 +10,9 @@ app-editors/vim
 >=app-portage/esearch-0.7.1
 app-shells/bash
 app-shells/zsh
+app-vim/phpdocs
+app-vim/gentoo-syntax
+app-vim/taglist
 dev-lang/parrot
 dev-lang/perl
 dev-lang/python
@@ -22,6 +25,7 @@ dev-util/subversion
 >=mail-client/mutt-1.5.11
 media-libs/a52dec
 net-misc/curl
+net-misc/rsync
 sys-apps/diffutils
 sys-apps/gawk
 sys-apps/grep
@@ -34,16 +38,12 @@ sys-devel/automake-wrapper
 sys-devel/bison
 sys-devel/flex
 sys-devel/libperl
-sys-libs/ncurse
+sys-libs/com_err
+sys-libs/ncurses
 x11-libs/gtk+
 ##
 # end collision-protect
 ##
-
-# These packages depend on packages that would violate collision-protect
-app-vim/phpdocs
-app-vim/gentoo-syntax
-app-vim/taglist
 
 # Cpio is provided by Apple on 10.3.  The Gentoo binary is installed to
 # a separate location so the package does not cause a collision.

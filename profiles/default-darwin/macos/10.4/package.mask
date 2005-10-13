@@ -20,6 +20,7 @@ dev-util/intltool
 dev-util/guile
 media-libs/a52dec
 net-misc/curl
+net-misc/rsync
 sys-apps/diffutils
 sys-apps/gawk
 sys-apps/grep
@@ -32,6 +33,7 @@ sys-devel/automake-wrapper
 sys-devel/bison
 sys-devel/flex
 sys-devel/libperl
+sys-libs/com_err
 sys-libs/ncurses
 sys-libs/readline
 x11-libs/gtk+
