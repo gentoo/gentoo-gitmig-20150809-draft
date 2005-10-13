@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.21 2005/10/12 16:07:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.22 2005/10/13 19:25:37 ranger Exp $
+
+  13 Oct 2005; Brent Baude <ranger@gentoo.org> kword-1.4.1-r1.ebuild:
+  Marking kword-1.4.1-r1 for security bug.
 
   12 Oct 2005; Joseph Jezak <josejx@gentoo.org> kword-1.4.1-r1.ebuild:
   Marked ppc stable for bug #108411.

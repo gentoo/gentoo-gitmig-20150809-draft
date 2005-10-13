@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.4.1-r1.ebuild,v 1.6 2005/10/12 16:07:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.4.1-r1.ebuild,v 1.7 2005/10/13 19:25:38 ranger Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI}
 	mirror://kde/security_patches/post-koffice-1.4.1-rtfimport.diff"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
