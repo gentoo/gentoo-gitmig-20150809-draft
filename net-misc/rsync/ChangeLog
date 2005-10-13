@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.82 2005/09/16 23:31:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.83 2005/10/13 00:29:57 kito Exp $
+
+  13 Oct 2005; Kito <kito@gentoo.org> rsync-2.6.6.ebuild:
+  ~ppc-macos keyword
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
