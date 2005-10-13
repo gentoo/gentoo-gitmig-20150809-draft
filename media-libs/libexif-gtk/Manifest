@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20faf4121aaaec438b476c11344218fc libexif-gtk-0.3.5.ebuild 980
+MD5 870a37e8432b0a09268832745888fc55 libexif-gtk-0.3.5.ebuild 979
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
-MD5 f192c9540a9fbe89d76b7d3b3f852c92 ChangeLog 1346
+MD5 cf9f21f9ff188082bd58ea65ad8c2d12 ChangeLog 1451
 MD5 e05e9a09ac9d62e5ed5c451bc1a59ef1 libexif-gtk-0.3.3.ebuild 927
 MD5 1cb4ed683e9dcd61ad4f896d698fb1ab files/libexif-gtk-0.3.3-gtk24.patch 1032
 MD5 ea96791db6eac5b04ff8b939c423e167 files/digest-libexif-gtk-0.3.5 69
 MD5 72e044de06d759e4f39c2f03f345fb22 files/digest-libexif-gtk-0.3.3 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDD42MBXaUFmZvwyMRAo63AKDbH5bg+TFG42S6DTMOgvn28yWDNACgkI78
-PVLFNEuMI2PkfwpjhZ7Ogjo=
-=c7H/
------END PGP SIGNATURE-----
