@@ -1,6 +1,5 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 fef0a783445dc1777ae544a10291e35f searchandrescue-0.8.2.ebuild 1645
 MD5 c188dd0f51236ac6a4dbb51dbba7cff6 ChangeLog 1031
-MD5 08d186b8d3ec9636687f7453c0981c9b files/searchandrescue-0.8.1-gcc33.patch 883
 MD5 70585567904bf3efb823e6310904356a files/digest-searchandrescue-0.8.2 154
 MD5 08d186b8d3ec9636687f7453c0981c9b files/searchandrescue-0.8.2-gcc33.patch 883
