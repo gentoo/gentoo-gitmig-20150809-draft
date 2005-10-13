@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.5.3-r1.ebuild,v 1.2 2005/10/10 01:09:54 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.5.3-r1.ebuild,v 1.3 2005/10/13 15:20:03 swegener Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/sguil-${PV}
 
 pkg_setup() {
-	if built_with_use tcl threads ; then
+	if built_with_use dev-lang/tcl threads ; then
 		eerror
 		eerror "Sguil does not run when tcl was built with threading enabled."
 		eerror "Please rebuild tcl without threads and reemerge this ebuild."
@@ -32,7 +32,7 @@ pkg_setup() {
 		die
 	fi
 
-	if ! built_with_use snort sguil ; then
+	if ! built_with_use net-analyzer/snort sguil ; then
 		eerror
 		eerror "You need to emerge snort with 'sguil' USE flag to get"
 		eerror "the full sguil functionality"
