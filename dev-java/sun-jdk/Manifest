@@ -1,9 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ead8a5aaaaaeaf1683faa01b02fd366 ChangeLog 25200
+MD5 3828e3331b265f9510a8dd23ced33f66 ChangeLog 25359
 MD5 92fc551c12c9a260dd9ced69d15cf0f3 files/digest-sun-jdk-1.2.2.017 78
 MD5 d1e29e8acce3cfec9912e23aa366478a files/digest-sun-jdk-1.3.1.13 76
+MD5 7339eea38c2cfdfdc4cd777a02c4cbc1 files/digest-sun-jdk-1.3.1.16 76
 MD5 49cf0d15bb5d59149d1828735355d139 files/digest-sun-jdk-1.4.2.08 140
 MD5 49cf0d15bb5d59149d1828735355d139 files/digest-sun-jdk-1.4.2.08-r1 140
 MD5 ce8f1c0c94a74aadae5d58b68c254161 files/digest-sun-jdk-1.4.2.09 140
@@ -12,6 +13,7 @@ MD5 40541411b01ed36dc30322d7a5ab2ee9 files/digest-sun-jdk-1.5.0.05 212
 MD5 64ade01a917993ba9712b2c0d2f4a580 files/javaws-waitid.c 833
 MD5 ac1c6e8860b4cb03e284664cacf7a977 files/sun-jdk-1.2.2.017 328
 MD5 0f94a657aa38fbca24dd767967474bc4 files/sun-jdk-1.3.1.13 475
+MD5 0b7cc36964f2fa50ad778e865f0cc851 files/sun-jdk-1.3.1.16 471
 MD5 a09b1bc3e393f76692593707b8a273c0 files/sun-jdk-1.4.2.08 640
 MD5 ca5181076e4ba09c94548af2da8690dd files/sun-jdk-1.4.2.09 646
 MD5 dd77d4988db134284732594414f5e93c files/sun-jdk-1.5.0.04 613
@@ -19,6 +21,7 @@ MD5 50d600429785f626eef0bb4048cbc009 files/sun-jdk-1.5.0.05 613
 MD5 16c9e337522b7e477aece60ff98dde54 metadata.xml 239
 MD5 6e6334f4e89e27aca419bc2dea752336 sun-jdk-1.2.2.017.ebuild 2898
 MD5 5213a160fff46bbc88446cb67f44bf1e sun-jdk-1.3.1.13.ebuild 3729
+MD5 68ec3218a193d0f591af6e65462b2c94 sun-jdk-1.3.1.16.ebuild 3728
 MD5 3a0cb65b1b04ec878b9c96908ed5149a sun-jdk-1.4.2.08-r1.ebuild 6786
 MD5 704f374a634a0fcfc7ec341421a028e8 sun-jdk-1.4.2.08.ebuild 6485
 MD5 c7ea8614185f77bd8657b327b5a70cf9 sun-jdk-1.4.2.09.ebuild 6784
@@ -27,7 +30,7 @@ MD5 7c61488980355e42c6c9ba1513efaf48 sun-jdk-1.5.0.05.ebuild 7277
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSpWdQiJ/wx066S4RAml1AJ9dpqOZCcOETTVP1KILL6EkYkcmWwCeM5gh
-JWcB/dvrlm0pSBEhabsvdZs=
-=Q4ls
+iD8DBQFDTi46/rLF9B432nYRAjfSAJ9E31VDqga82bcVnfLu449b75qUhgCfVIk7
+eKR4czF7X30+apcPJH7TIss=
+=fcOL
 -----END PGP SIGNATURE-----
