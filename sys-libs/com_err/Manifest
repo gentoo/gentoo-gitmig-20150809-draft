@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f43c212f730ee7eff8f20e044bab7d1 com_err-1.38.ebuild 1941
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 4aa5c4716912fb5fbf142b581f071b6a com_err-1.37.ebuild 1960
 MD5 8e0b3ab0a3690a9ee332ea09427f7fb8 ChangeLog 2378
-MD5 4a7d54ccac4002d10462c40660712a72 files/com_err-1.37-sed-locale.patch 2142
-MD5 0911aedd4968aa4053139791a961e2a2 files/digest-com_err-1.38 67
-MD5 65689a8be4c1b58f8e64f22165313292 files/digest-com_err-1.37 67
+MD5 4aa5c4716912fb5fbf142b581f071b6a com_err-1.37.ebuild 1960
+MD5 1dcc64e907c838ee19ee9dccb4068f4f com_err-1.38.ebuild 1978
 MD5 7f1f3f4827354d52879671fc615fba03 files/com_err-1.37-makefile.patch 1318
+MD5 4a7d54ccac4002d10462c40660712a72 files/com_err-1.37-sed-locale.patch 2142
+MD5 65689a8be4c1b58f8e64f22165313292 files/digest-com_err-1.37 67
+MD5 0911aedd4968aa4053139791a961e2a2 files/digest-com_err-1.38 67
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNyHUgIKl8Uu19MoRAvvAAJ4vuctLj6gmcd1p56jCDX/k1DuoLACfaeRm
-ZSiE+EqltTNFldbZ6JGbnwM=
-=66me
+iD8DBQFDTbA4gIKl8Uu19MoRAlQpAJ0flZYpujJibb4ar/XDdvwyNARz6gCfaVE0
+T7XBLUtZM68lO69h9/lKQY4=
+=WEuW
 -----END PGP SIGNATURE-----
