@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 19db0449d3971c277eb608f321cebb81 ChangeLog 1287
 MD5 7dea1d8d6ed9dadaa3768e6ba138fe76 files/digest-sguil-sensor-0.5.3-r1 69
 MD5 7dea1d8d6ed9dadaa3768e6ba138fe76 files/digest-sguil-sensor-0.5.3-r2 69
@@ -7,3 +10,10 @@ MD5 87465a7b8792682b4dae8e2e46eed0bb files/sensor_agent.initd 757
 MD5 5355b4f79a0130d075711f0a54840239 metadata.xml 223
 MD5 f788b3998ae8bb39f840efa32e4cbb29 sguil-sensor-0.5.3-r1.ebuild 2612
 MD5 2e2cd8bb5e2d134cfafb10559453d43f sguil-sensor-0.5.3-r2.ebuild 2721
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD4DBQFDTns5I1lqEGTUzyQRAgZiAKCVVrmG5CzGA6VafN8gjDxs5+tk+gCWNGcT
+WzoMD2QkZdonqSd+3XkwIA==
+=RI3b
+-----END PGP SIGNATURE-----
