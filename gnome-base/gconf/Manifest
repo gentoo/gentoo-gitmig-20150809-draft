@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 92e5e04bfdcd104514e19ad5a1538861 gconf-2.10.0.ebuild 1947
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9f586fcd2813a75ccd7da699616850b9 gconf-2.12.0.ebuild 2011
-MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
+MD5 70d95e2a7965007fac109dfdfa6846b6 ChangeLog 16452
 MD5 ac7cff50ecafeb03d9e4f489cbbf037f gconf-1.0.8-r3.ebuild 1707
+MD5 7998f0e3fab48622265a6b5277bf28ed gconf-1.0.8-r5.ebuild 1872
 MD5 a3295c560e968484fb4d35f2b3bb4d49 gconf-1.0.9.ebuild 1842
-MD5 95e14a24bfbc80f5798b31595d060bc8 ChangeLog 16361
-MD5 c370dd7fe858619a5da314b780370722 gconf-2.10.1-r1.ebuild 2015
-MD5 8cfc79bc2dbac8f93a77df81c0a90bca files/digest-gconf-2.10.0 66
-MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r3 64
-MD5 faf030a14a8782cfd512c48b4b0d3297 files/digest-gconf-1.0.9 64
-MD5 1dd5411bdbfdf13b035f9d03ef9858c1 files/digest-gconf-2.12.0 66
+MD5 92e5e04bfdcd104514e19ad5a1538861 gconf-2.10.0.ebuild 1947
+MD5 e9577b3216e9a2ab22f87bf5b234ca27 gconf-2.10.1-r1.ebuild 2015
+MD5 9f586fcd2813a75ccd7da699616850b9 gconf-2.12.0.ebuild 2011
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 117bfac59f5e93e340fe707b61bc5b53 files/digest-gconf-2.10.1-r1 66
+MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r3 64
 MD5 e36bf98a90603eebfcc4d3dacd5fa785 files/digest-gconf-1.0.8-r5 64
-MD5 8485bd44122f283d1549e1f1cdddd03f files/gconfd-2-fix.patch 1820
+MD5 faf030a14a8782cfd512c48b4b0d3297 files/digest-gconf-1.0.9 64
+MD5 8cfc79bc2dbac8f93a77df81c0a90bca files/digest-gconf-2.10.0 66
+MD5 1dd5411bdbfdf13b035f9d03ef9858c1 files/digest-gconf-2.12.0 66
 MD5 aaa79f3ad5c910cfa6f813112e66f79e files/gconf-1.0.9-locallock_mdk.patch 1202
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNNVNgIKl8Uu19MoRArCmAJ97r+1VA12VY1e+X+KkHhF9iX9o/wCfctCt
-xgzwXAPm4WVpcmXOflJqnpU=
-=+Qc3
------END PGP SIGNATURE-----
+MD5 8485bd44122f283d1549e1f1cdddd03f files/gconfd-2-fix.patch 1820
