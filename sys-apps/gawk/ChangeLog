@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.67 2005/10/03 12:03:16 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.68 2005/10/13 00:11:25 kito Exp $
+
+  13 Oct 2005; Kito <kito@gentoo.org> gawk-3.1.5.ebuild:
+  ~ppc-macos keyword
 
   03 Oct 2005; Hardave Riar <hardave@gentoo.org> gawk-3.1.4-r4.ebuild:
   Stable on mips.
