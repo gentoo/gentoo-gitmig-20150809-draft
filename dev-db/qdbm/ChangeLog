@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.46 2005/10/08 21:53:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.47 2005/10/13 17:16:10 agriffis Exp $
+
+  13 Oct 2005; Aron Griffis <agriffis@gentoo.org> qdbm-1.8.31.ebuild:
+  Mark 1.8.31 stable on ia64
 
   08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.31.ebuild:
   Stable on ppc.
