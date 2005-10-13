@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec488c2827fab65ef67f47709c1c7de0 metadata.xml 253
-MD5 1a95441fd1f018617845b2c58771db87 ChangeLog 9261
-MD5 a5d19843c668e7b64025789aa4d0968b keychain-2.6.1.ebuild 920
-MD5 c7098fa09e7d06bbfc7fb79f8a174d64 keychain-2.5.5.ebuild 908
-MD5 bed523e11da74c4a84a77943bd53bdc1 files/digest-keychain-2.6.1 66
+MD5 19097c46861a498fc7bd7d0475526a37 ChangeLog 9423
 MD5 2a123dba1a5e3746da8d974628e8da01 files/digest-keychain-2.5.5 66
+MD5 bed523e11da74c4a84a77943bd53bdc1 files/digest-keychain-2.6.1 66
+MD5 80aa699afd426896a360ba323280fd1e keychain-2.5.5.ebuild 888
+MD5 b040c4c5c776d3973e6d74c61a211b93 keychain-2.6.1.ebuild 900
+MD5 ec488c2827fab65ef67f47709c1c7de0 metadata.xml 253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDSsQ+JrHF4yAQTrARAsNvAKCwXaJTo/gL2HiqGROUAeFzhmQ7uACgsqeb
-yfxr4DM1EEF6uPBpANq41Y8=
-=UKtx
+iD8DBQFDTqwuJrHF4yAQTrARAqV+AKCTUqGDC+Z+gvvc+49Y8oo2pl8qiQCfYeRj
+JpiYPwW9uNeIQoVo+M2VoGI=
+=RIlO
 -----END PGP SIGNATURE-----
