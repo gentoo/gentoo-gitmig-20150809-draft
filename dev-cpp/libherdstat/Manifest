@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 5b2b5988c77643908e076821d2743d1b ChangeLog 370
 MD5 201bde6172a1da320e27c881b86211d3 files/digest-libherdstat-0.1.0_beta1 77
 MD5 96eff68e1105530032ffbd938925f1f2 libherdstat-0.1.0_beta1.ebuild 1184
-MD5 98dd6c8bcfa84065160f1889043f9ce7 metadata.xml 597
+MD5 b0b19a2ad7f5b88f52f6698b5b5083bf metadata.xml 593
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDRWwvEZCkKN40op4RAsKqAJwNj2EmSqfhTzHTP71Kc9fhGs4XCwCeOozD
-3BlwfUsTgZFS13368+VA32A=
-=rncu
+iD8DBQFDTg/eEZCkKN40op4RApdZAJ0YgooxSfzT2M4BJpUCR2/khzLecgCgwy2u
+mxd9k11V4bkGNWyHOz3hKa0=
+=PZa1
 -----END PGP SIGNATURE-----
