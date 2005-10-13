@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.28 2005/10/10 07:39:01 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.29 2005/10/13 16:29:53 uberlord Exp $
+
+*ifplugd-0.28-r4 (13 Oct 2005)
+
+  13 Oct 2005; Roy Marples <uberlord@gentoo.org> files/ifplugd.action,
+  -ifplugd-0.28-r3.ebuild, +ifplugd-0.28-r4.ebuild:
+  Fixed initng support, #109150
 
 *ifplugd-0.28-r3 (10 Oct 2005)
 

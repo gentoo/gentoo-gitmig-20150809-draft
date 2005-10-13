@@ -1,7 +1,6 @@
 #!/bin/sh
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd.action,v 1.5 2005/09/01 15:33:28 uberlord Exp $
 #
 # Gentoo-specific ifplugd.action
 #
@@ -11,7 +10,7 @@
 
 if grep -q initng /proc/1/cmdline 
 then
-    EXEC="ngc"
+    EXEC="/sbin/ngc"
     INITNG="yes"
 else
     EXEC="/etc/init.d/net.$1"
