@@ -1,7 +1,6 @@
 #!/bin/sh
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/files/netplug,v 1.1 2005/09/02 11:11:21 uberlord Exp $
 #
 # Gentoo-specific netplug script 
 #
@@ -14,7 +13,7 @@ ACTION="$2"
 
 if grep -q initng /proc/1/cmdline 
 then
-    EXEC="ngc"
+    EXEC="/sbin/ngc"
     INITNG="yes"
 else
     EXEC="/etc/init.d/net.${IFACE}"
