@@ -1,30 +1,17 @@
-diff -uNr fortune-mod-1.99.1/datfiles/Makefile fortune-mod-1.99.1-new/datfiles/Makefile
---- fortune-mod-1.99.1/datfiles/Makefile	Fri Mar  5 07:29:56 2004
-+++ fortune-mod-1.99.1-new/datfiles/Makefile	Tue Feb  1 15:23:49 2005
-@@ -58,7 +58,7 @@
- 	if [ $(WEB) = 1 ] ; then cd html && $(MAKE) install ; fi
- 	for i in $(COOKIES) ; do \
- 		install -m 0644 $$i $$i.dat $(COOKIEDIR) || exit $? ; \
--		cp -d $$i.u8 $(COOKIEDIR) ; \
-+		cp -R $$i.u8 $(COOKIEDIR) ; \
- 		done
+--- fortune-mod-1.99.1/Makefile
++++ fortune-mod-1.99.1/Makefile
+@@ -65,8 +65,7 @@
+ RECODELIBS=-lrecode
  
- clean:
-diff -uNr fortune-mod-1.99.1/datfiles/off/Makefile fortune-mod-1.99.1-new/datfiles/off/Makefile
---- fortune-mod-1.99.1/datfiles/off/Makefile	Fri Mar  5 07:29:56 2004
-+++ fortune-mod-1.99.1-new/datfiles/off/Makefile	Tue Feb  1 15:24:28 2005
-@@ -38,7 +38,7 @@
- 	install -m 0755 -d $(OCOOKIEDIR)
- 	for i in $(OCOOKIES) ; \
- 	    do install -m 0644 $$i $$i.dat $(OCOOKIEDIR) || exit $$? ; \
--	    cp -d $$i.u8 $(OCOOKIEDIR) ; \
-+	    cp -R $$i.u8 $(OCOOKIEDIR) ; \
- 	done
+ DEFINES=-DFORTDIR="\"$(COOKIEDIR)\"" -DOFFDIR="\"$(OCOOKIEDIR)\"" -DLOCFORTDIR="\"$(LOCALDIR)\"" -DLOCOFFDIR="\"$(LOCALODIR)\""
+-CFLAGS=-O2 $(DEFINES) -Wall -fomit-frame-pointer -pipe -fsigned-char
+-LDFLAGS=-s
++CFLAGS += $(DEFINES) -fsigned-char
  
- clean:
-diff -uNr fortune-mod-1.99.1/fortune/fortune.c fortune-mod-1.99.1-new/fortune/fortune.c
---- fortune-mod-1.99.1/fortune/fortune.c	Fri Mar  5 07:29:56 2004
-+++ fortune-mod-1.99.1-new/fortune/fortune.c	Tue Feb  1 15:28:44 2005
+ # The above flags are used by default; the debug flags are used when make
+ # is called with a debug target, such as 'make debug'
+--- fortune-mod-1.99.1/fortune/fortune.c
++++ fortune-mod-1.99.1/fortune/fortune.c
 @@ -97,7 +97,7 @@
  #endif /* killing warnings */
  
@@ -34,21 +21,19 @@ diff -uNr fortune-mod-1.99.1/fortune/fortune.c fortune-mod-1.99.1-new/fortune/fo
  
  #ifdef HAVE_STDBOOL_H
  #include <stdbool.h>
-@@ -256,7 +256,7 @@
- RECODE_OUTER outer;
+@@ -256,6 +256,7 @@
  
  int add_dir(register FILEDESC *);
--
+ 
 +const char *program_name;
  char *program_version(void)
  {
      static char buf[BUFSIZ];
-@@ -1675,15 +1675,17 @@
- {
+@@ -1675,14 +1675,17 @@
      char *ctype, *crequest;
      getargs(ac, av);
--
-+	program_name = (char *const) av[0];
+ 
++    program_name = (char *const) av[0];
      outer = recode_new_outer(true);
      request = recode_new_request (outer);
  
@@ -65,10 +50,9 @@ diff -uNr fortune-mod-1.99.1/fortune/fortune.c fortune-mod-1.99.1-new/fortune/fo
      crequest = malloc(strlen(ctype) + 7 + 1);
      sprintf(crequest, "UTF-8..%s", ctype);
      recode_scan_request (request, crequest);
-diff -uNr fortune-mod-1.99.1/util/rot.c fortune-mod-1.99.1-new/util/rot.c
---- fortune-mod-1.99.1/util/rot.c	Fri Mar  5 07:29:57 2004
-+++ fortune-mod-1.99.1-new/util/rot.c	Tue Feb  1 15:29:51 2005
-@@ -5,6 +5,7 @@
+--- fortune-mod-1.99.1/util/rot.c
++++ fortune-mod-1.99.1/util/rot.c
+@@ -5,10 +5,11 @@
  
  #include <stdio.h>
  #include <ctype.h>
@@ -76,14 +60,17 @@ diff -uNr fortune-mod-1.99.1/util/rot.c fortune-mod-1.99.1-new/util/rot.c
  
  int main(void)
  {
-diff -uNr fortune-mod-1.99.1/util/unstr.c fortune-mod-1.99.1-new/util/unstr.c
---- fortune-mod-1.99.1/util/unstr.c	Fri Mar  5 07:29:57 2004
-+++ fortune-mod-1.99.1-new/util/unstr.c	Tue Feb  1 15:30:41 2005
-@@ -96,7 +96,7 @@
- #include	<ctype.h>
+-    char a, b;
++    short int a, b;
+ 
+     while ((a = getchar()) != EOF)
+     {
+--- fortune-mod-1.99.1/util/unstr.c
++++ fortune-mod-1.99.1/util/unstr.c
+@@ -96,6 +96,7 @@
  #include	<string.h>
  #include	<unistd.h>
--
+ 
 +#include	<stdlib.h>
  #ifndef MAXPATHLEN
  #define	MAXPATHLEN	1024

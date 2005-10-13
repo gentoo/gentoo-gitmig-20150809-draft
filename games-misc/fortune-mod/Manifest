@@ -1,5 +1,17 @@
-MD5 43a071fbd4253dda8556f72d25c9c2e1 ChangeLog 4554
-MD5 d962711282e74285afccfbe293c27bfe fortune-mod-1.99.1-r1.ebuild 1641
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 93f27593bdaa6eca5cd1847f895076da ChangeLog 4736
 MD5 5ff47d4205e2b0ea5e0a538115a58237 files/digest-fortune-mod-1.99.1-r1 71
-MD5 50bbbab155b4fc9db4abb8a3b2ea7666 files/fortune-mod-1.99.1-gentoo.patch 2866
+MD5 5ff47d4205e2b0ea5e0a538115a58237 files/digest-fortune-mod-1.99.1-r2 71
+MD5 7bc30eb65bb0a4619124cb2219064945 files/fortune-mod-1.99.1-gentoo.patch 2040
+MD5 d962711282e74285afccfbe293c27bfe fortune-mod-1.99.1-r1.ebuild 1641
+MD5 8163bf6e09f06a09452b09d6965a26e4 fortune-mod-1.99.1-r2.ebuild 1041
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTasygIKl8Uu19MoRAooQAJ9l2FMevttaq8eoZQVHB8qoBR2YSACfd9Sm
+gymnLjytObtjhtP9ztoMdsk=
+=NzsO
+-----END PGP SIGNATURE-----
