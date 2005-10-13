@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.69 2005/10/12 16:13:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.70 2005/10/13 17:41:03 agriffis Exp $
+
+  13 Oct 2005; Aron Griffis <agriffis@gentoo.org> xv-3.10a-r12.ebuild:
+  Mark 3.10a-r12 stable on ia64
 
   12 Oct 2005; Tavis Ormandy <taviso@gentoo.org>
   +files/jumbo-patch-nojpeg.diff, xv-3.10a-r12.ebuild:
