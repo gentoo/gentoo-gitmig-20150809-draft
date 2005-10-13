@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.43 2005/10/12 22:39:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.44 2005/10/13 03:43:55 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -533,19 +533,22 @@ create_ml_includes-sym_for_dir() {
 }
 
 get_libname() {
+	local libname
 	local ver=$1
-	if use userland_Darwin ; then
-		if [ -z ${ver} ] ; then
-			echo ".dylib"
-		else
-			echo ".${ver}.dylib"
-		fi
+	case ${CHOST} in
+		*-darwin*) libname="dylib";;
+		*)         libname="so";;
+	esac
+
+	if [[ -z $@ ]] ; then
+		echo ".${libname}"
 	else
-		if [ -z ${ver} ] ; then
-			echo ".so"
-		else
-			echo ".so.${ver}"
-		fi
+		for ver in "$@" ; do
+			case ${CHOST} in
+				*-darwin*) echo ".${ver}.${libname}";;
+				*)         echo ".${libname}.${ver}";;
+			esac
+		done
 	fi
 }
 
