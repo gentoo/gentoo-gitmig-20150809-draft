@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.4 2005/09/09 22:20:43 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.5 2005/10/13 05:01:42 mrness Exp $
+
+  13 Oct 2005; Alin Nastac <mrness@gentoo.org> yaps-0.96.ebuild:
+  Remove COPYRIGHT and INSTALL from docs.
 
   09 Sep 2005; Stefan Briesenick <sbriesen@gentoo.org> yaps-0.96.ebuild:
   stable on x86.

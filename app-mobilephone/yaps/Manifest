@@ -1,6 +1,16 @@
-MD5 329248d2963588b4c124b0a0e6885b75 yaps-0.96.ebuild 1725
-MD5 e179e4010e581c4774e519f9bec12f7f ChangeLog 738
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 69e77ba8276e4ac896dfb9ea0a5e385f yaps-0.96.ebuild 1705
+MD5 4bd60c2e8d8ea87f4a5c3d015fc08403 ChangeLog 844
 MD5 2e3ea70bd2303c7b7915e056bdd44066 metadata.xml 258
 MD5 8cd1ba9738bbe553fc3d400dd7f7c20c files/yaps-0.96.patch 9867
 MD5 5b713d70117b792c0fa6a519f8c0b208 files/digest-yaps-0.96 121
 MD5 836bccf5ccea5152fa69261df18d3bb9 files/yaps-0.96-capiv3.patch 1820
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTepNNSP4Vda7IdsRAr9PAJ93X/qRYROTCMUkccCYn4+IroUGhgCdEnZW
+3LcUqXrsd1yvRXO4vRwNnzo=
+=yOj6
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96.ebuild,v 1.4 2005/09/09 22:20:43 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96.ebuild,v 1.5 2005/10/13 05:01:42 mrness Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_install() {
 	keepdir /usr/lib/yaps
 	doman yaps.1
 	dohtml yaps.html
-	dodoc BUGREPORT COPYRIGHT INSTALL README yaps.lsm yaps.doc
+	dodoc BUGREPORT README yaps.lsm yaps.doc
 	docinto contrib
 	dodoc contrib/{README,m2y.pl,tap.sl}
 }
