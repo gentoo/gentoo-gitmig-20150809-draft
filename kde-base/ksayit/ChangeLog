@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksayit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.19 2005/10/13 00:10:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.20 2005/10/13 18:07:37 danarmak Exp $
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> ksayit-3.4.3.ebuild:
+  Correct dep: there's no kdemultimedia-arts-3.4.2, the dep should accept
+  verion 3.4.1.
 
 *ksayit-3.4.3 (13 Oct 2005)
 
