@@ -1,4 +1,4 @@
-MD5 d8855fd97c9ffc1783c7f41695ae5541 ChangeLog 3928
+MD5 9c7022956f803fe93acd2b3e0c621812 ChangeLog 4075
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-kscreensaver-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-kscreensaver-3.4.2 298
 MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-kscreensaver-3.4.3 71
@@ -7,6 +7,6 @@ MD5 a51b6bfc735f8cec40cd4481a289309d files/kdeartwork-3.4-configure.patch 7591
 MD5 fe55c64ff5050b92d175b2114c2d1667 files/kdeartwork-3.4.1-configure.patch 815
 MD5 2fe0472a2ca64ac229f658b1414755ac kdeartwork-kscreensaver-3.4.1.ebuild 850
 MD5 c63624b52624e2ed23a1a06aa27452e4 kdeartwork-kscreensaver-3.4.2.ebuild 1062
-MD5 c63624b52624e2ed23a1a06aa27452e4 kdeartwork-kscreensaver-3.4.3.ebuild 1062
+MD5 26724abe16f76f9ed97ac77c2f924932 kdeartwork-kscreensaver-3.4.3.ebuild 1064
 MD5 bbfe5a3296bd93ab351a917768104c7c kdeartwork-kscreensaver-3.5_beta1.ebuild 753
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

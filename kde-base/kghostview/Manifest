@@ -1,4 +1,4 @@
-MD5 a7f17c0de4a91b00bc138b3f8c9baa45 ChangeLog 2817
+MD5 842393c557de30ddb0881088945befb0 ChangeLog 2938
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kghostview-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kghostview-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kghostview-3.4.3 71
@@ -6,6 +6,6 @@ MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kghostview-3.5_beta1 72
 MD5 c52515e268cbff75a6f7b7d1ee1fad47 files/kdegraphics-3.4-gcc4.patch 1226
 MD5 7bf336ee8e49a2aea158cb57735bdb9e kghostview-3.4.1.ebuild 520
 MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.2.ebuild 649
-MD5 6ec0dc30cd76eb94471e5d617b0b14a5 kghostview-3.4.3.ebuild 649
+MD5 2bf3b11bf10c3b6d1f8d77a44ea53749 kghostview-3.4.3.ebuild 651
 MD5 2841ffdb5ccb7d3cf71ce194d383fc0b kghostview-3.5_beta1.ebuild 510
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

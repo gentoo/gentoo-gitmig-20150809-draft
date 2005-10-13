@@ -1,4 +1,4 @@
-MD5 1c437d36782c0f1079f06cff532b1dce ChangeLog 3392
+MD5 ee514841d576894a844482ae191cf232 ChangeLog 3525
 MD5 4781ed6b323012399cdd6a4c4f5070f0 files/configure-fix-kdepim-sasl.patch 1750
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kioslaves-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kioslaves-3.4.2 282
@@ -6,6 +6,6 @@ MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-kioslaves-3.4.3 67
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kdepim-kioslaves-3.5_beta1 68
 MD5 58e12ae1cb38bb037aca5d8f4f5f6dcc kdepim-kioslaves-3.4.1.ebuild 600
 MD5 129500cb7462d0899369a77aacc3f993 kdepim-kioslaves-3.4.2.ebuild 716
-MD5 129500cb7462d0899369a77aacc3f993 kdepim-kioslaves-3.4.3.ebuild 716
+MD5 34f5f243ae0b77a3cad4c74e9f2e9ecd kdepim-kioslaves-3.4.3.ebuild 718
 MD5 97257547e5695b74f02d223b722686f5 kdepim-kioslaves-3.5_beta1.ebuild 638
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

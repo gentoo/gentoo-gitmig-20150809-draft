@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 77414ec04e486a758ce5341dbf7a3bee kuickshow-3.4.1.ebuild 444
 MD5 d0eb76109e58eb0e979a74049c4aea24 ChangeLog 2571
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kuickshow-3.4.1 221
+MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kuickshow-3.5_beta1 72
+MD5 1017bce04e454ee3ec21e72fad731db5 kuickshow-3.4.1.ebuild 445
 MD5 7f4c73fa699e1ba82ab1b288232b048f kuickshow-3.5_beta1.ebuild 422
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kuickshow-3.5_beta1 72
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kuickshow-3.4.1 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXYzj5H05b2HAEkRAoAfAKCTbV3i4NYlTAeT5aXCf+fAcuujtQCbBTb3
-XKu8jz0mqeJjchWN8Vjt15Q=
-=nklR
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 14a95501f6208549a467ad6cf53b5ab0 ChangeLog 2518
+MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpager-3.4.1 212
+MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpager-3.4.2 287
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kpager-3.5_beta1 69
 MD5 503aba0b3e78759016f2b275744aad19 kpager-3.4.1.ebuild 390
+MD5 a2b9bee7a7a9ffce75e053f60cfb5e64 kpager-3.4.2.ebuild 407
 MD5 ee4d8d5bae4e1e37243a8a66f74e63dd kpager-3.5_beta1.ebuild 379
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 d311682d891c52b1078d353831aeedf7 kpager-3.4.2.ebuild 403
-MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kpager-3.4.2 287
-MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kpager-3.4.1 212
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kpager-3.5_beta1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWwFj5H05b2HAEkRAk/yAJ95M+proGRBayJw9EtsSJv5M/MuZACgjZt8
-y0cCB8VSSMMHdVLDc0w+CpE=
-=fJij
------END PGP SIGNATURE-----

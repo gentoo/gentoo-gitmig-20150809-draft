@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 da037ed3c6a55abd6f102422a89e3453 ChangeLog 2545
-MD5 6cdd3680287d9a6889d0718bed8daae6 kdeartwork-emoticons-3.5_beta1.ebuild 454
-MD5 9989111e39f7930b46fd3ac606368efa kdeartwork-emoticons-3.4.1.ebuild 476
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-emoticons-3.5_beta1 72
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-emoticons-3.4.1 220
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVWZj5H05b2HAEkRAg7NAJ4/DSOubEINVTzp00cfjUwSr6fEwgCeI3Sn
-aE/qfYwmkW0FiZV+XsZtCmI=
-=S1d1
------END PGP SIGNATURE-----
+MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-emoticons-3.5_beta1 72
+MD5 10ad847af3e31a98282f887aefc48289 kdeartwork-emoticons-3.4.1.ebuild 477
+MD5 6cdd3680287d9a6889d0718bed8daae6 kdeartwork-emoticons-3.5_beta1.ebuild 454
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

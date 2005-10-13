@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c069c3e10d7037c170c7bbe089752930 ChangeLog 2727
-MD5 4edc2c97857fe10a8c060ed13454ea93 renamedlg-audio-3.5_beta1.ebuild 457
-MD5 a1674d0d93997dab1f94a67ee960775d renamedlg-audio-3.4.1.ebuild 479
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-renamedlg-audio-3.4.1 215
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-renamedlg-audio-3.5_beta1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNX5kj5H05b2HAEkRAsqCAJoCWoMcPFXAwvbePBpJIG5/IVRcfwCgngUt
-aD72kvSZn8scDSYss8c7nRM=
-=yGdU
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 835c8ca988e0a528cee017971540fe3d renamedlg-audio-3.4.1.ebuild 480
+MD5 4edc2c97857fe10a8c060ed13454ea93 renamedlg-audio-3.5_beta1.ebuild 457

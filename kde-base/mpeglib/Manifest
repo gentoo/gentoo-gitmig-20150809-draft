@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 659ab68050a498557fb91e3cb473d51f ChangeLog 2754
-MD5 df27c7737c8be95d95bcdb05a8a0ddaa mpeglib-3.4.1.ebuild 530
-MD5 eac0d95b0a2738b8af39a720d9a8f81f mpeglib-3.5_beta1.ebuild 508
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-mpeglib-3.4.1 227
 MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-mpeglib-3.5_beta1 74
 MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
-MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-mpeglib-3.4.1 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNX0sj5H05b2HAEkRAjiTAJsHJeiyCOTDcwNyXkuEt10DLy/YxQCfWECG
-wQNK2FJ/Jfh4Y0KC/LGhD1E=
-=maBC
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 4316e87ea935012e5f9221a99ea1f119 mpeglib-3.4.1.ebuild 531
+MD5 eac0d95b0a2738b8af39a720d9a8f81f mpeglib-3.5_beta1.ebuild 508

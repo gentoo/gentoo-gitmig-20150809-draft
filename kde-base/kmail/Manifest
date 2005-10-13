@@ -1,4 +1,4 @@
-MD5 2ad2a59dab1e7a30cdc51ba3ba6a2919 ChangeLog 3876
+MD5 2dbe1d0eca878d55e49b64ab3deddd15 ChangeLog 3987
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1 208
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmail-3.4.1-r1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kmail-3.4.2 282
@@ -12,6 +12,6 @@ MD5 b9964e02eff2a443f6299bb15de581b4 kmail-3.4.1-r1.ebuild 1674
 MD5 aa82a9cf16faab980f09bd8763b742d1 kmail-3.4.1.ebuild 1610
 MD5 393bf626aee24f4dd500ca341e1d314c kmail-3.4.2-r1.ebuild 1856
 MD5 0517daa346612e50e60119680a33a3da kmail-3.4.2.ebuild 1629
-MD5 f625e9a090223d55b6d64243324735cb kmail-3.4.3.ebuild 1735
+MD5 3b3f9a1da3166244060fe2af2b2afa71 kmail-3.4.3.ebuild 1734
 MD5 722b3b96a6dd865bf95b5aa9d0edb225 kmail-3.5_beta1.ebuild 1745
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

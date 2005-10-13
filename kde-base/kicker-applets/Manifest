@@ -1,4 +1,4 @@
-MD5 096b2656a77d4f1671e00325b8920006 ChangeLog 2867
+MD5 2ba559d68b3a13064187bbdc706ecff0 ChangeLog 2996
 MD5 a1717c6a0c5ce2efbdca2ecac8ac058e files/configure-fix-kdeaddons-xmms.patch 691
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-kicker-applets-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-kicker-applets-3.4.2 291
@@ -6,6 +6,6 @@ MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-kicker-applets-3.4.3 69
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-kicker-applets-3.5_beta1 70
 MD5 8bf1434a3b4545130c6db9ea2542c6dd kicker-applets-3.4.1.ebuild 634
 MD5 6f2ba54a38d4dbe069094105ed2332ea kicker-applets-3.4.2.ebuild 689
-MD5 6f2ba54a38d4dbe069094105ed2332ea kicker-applets-3.4.3.ebuild 689
+MD5 c71cc3e66abad39a4b5bb936e7aab4a1 kicker-applets-3.4.3.ebuild 691
 MD5 2e01fd70927cb031004f4f804ced8ef2 kicker-applets-3.5_beta1.ebuild 609
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

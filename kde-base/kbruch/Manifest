@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 068932fbb640b5dee673016b816199cc ChangeLog 2542
-MD5 4d7c8098d79608b38f85a521aef44aa1 kbruch-3.4.1.ebuild 411
-MD5 8c9faddd03b9f89d304f5dec3ee26947 kbruch-3.4.2.ebuild 424
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 66c430129cd3cacc977ba3b14ab14cf9 kbruch-3.5_beta1.ebuild 400
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kbruch-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kbruch-3.4.2 282
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kbruch-3.5_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVJVj5H05b2HAEkRAmsZAJ9UtnKXur2VwwtfaC7jPFLhQ9g2AQCfQYOA
-NHL7yurxrUdsEZ6bDt5HF1k=
-=Unks
------END PGP SIGNATURE-----
+MD5 4d7c8098d79608b38f85a521aef44aa1 kbruch-3.4.1.ebuild 411
+MD5 487a500e11a662ab284b77a0cd4a7391 kbruch-3.4.2.ebuild 428
+MD5 66c430129cd3cacc977ba3b14ab14cf9 kbruch-3.5_beta1.ebuild 400
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
