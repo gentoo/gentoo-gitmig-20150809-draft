@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.21 2005/09/21 03:10:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.22 2005/10/13 22:05:53 agriffis Exp $
+
+  13 Oct 2005; Aron Griffis <agriffis@gentoo.org> pgadmin3-1.2.2.ebuild:
+  Mark 1.2.2 stable on alpha
 
   21 Sep 2005; Jason Wever <weeve@gentoo.org> pgadmin3-1.2.2.ebuild:
   Stable on SPARC.
