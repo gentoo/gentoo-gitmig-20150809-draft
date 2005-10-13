@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.22 2005/10/13 18:36:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.23 2005/10/13 19:11:11 danarmak Exp $
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> kdeedu-meta-3.4.3.ebuild:
+  Readding ~alpha keyword, since kvoctrain has been keyworded ~alpha.
 
   13 Oct 2005; Dan Armak <danarmak@gentoo.org> kdeedu-meta-3.4.3.ebuild:
   Removing ~alpha keyword, because the dep kvoctrain has had its keyword
