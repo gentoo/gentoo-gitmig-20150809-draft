@@ -1,0 +1,47 @@
+#!/sbin/runscript
+
+VPNDIR="/etc/openvpn"
+VPN="${myservice##*.}"
+if [[ -n ${VPN} && ${myservice} != "openvpn" ]]; then
+	VPNPID="/var/run/openvpn.${VPN}.pid"
+else
+	VPNPID="/var/run/openvpn.pid"
+fi
+VPNCONF="${VPNDIR}/${VPN}.conf"
+
+depend() {
+	need net
+}
+
+checktundevice() {
+	if [[ -h /dev/net/tun && -c /dev/misc/net/tun ]]; then
+		ebegin "Detected broken /dev/net/tun symlink, fixing..."
+		rm -f /dev/net/tun
+		ln -s /dev/misc/net/tun /dev/net/tun
+		eend $?
+	fi
+}
+
+start() {
+	checktundevice || return 1
+
+	ebegin "Starting ${myservice}"
+	
+	if [[ ! -e "${VPNCONF}" ]]; then
+		eend 1 "${VPNCONF} does not exist"
+		return 1
+	fi
+		
+	start-stop-daemon --start --exec /usr/sbin/openvpn --pidfile "${VPNPID}" \
+		-- --config "${VPNCONF}" --writepid "${VPNPID}"	\
+		--daemon --cd "${VPNDIR}"
+	eend $? "Check your logs to see why startup failed"
+}
+
+stop() {
+	ebegin "Stopping ${myservice}"
+	start-stop-daemon --stop -exec /usr/sbin/openvpn --pidfile "${VPNPID}"
+	eend $?
+}
+
+# vim: ts=4
