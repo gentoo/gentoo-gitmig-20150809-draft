@@ -1,4 +1,6 @@
 MD5 b13f41101b40d63435fbee7af7d2da93 pykota-1.22_p1548.ebuild 2186
-MD5 947895f30580893aba24f17ca59c07e6 ChangeLog 1176
+MD5 0054a3b01088e68e0f9c5a5f1fd14f13 ChangeLog 1309
+MD5 318c34eb87f142094e09797e3ecf5ebe pykota-1.23_p1869.ebuild 1267
 MD5 68e6cbe8d4d860030959e33547d7f3e8 metadata.xml 472
 MD5 2736d18b6d1f4c57ab7f86d5f90f816e files/digest-pykota-1.22_p1548 70
+MD5 76d5071f3d14fa1e9aa4eb0bd12e91a8 files/digest-pykota-1.23_p1869 71
