@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5cac9e2b8fabea82f7310c3bd7162145 ChangeLog 344
+MD5 b6c0e28f694b40c5502b12bb00cce129 elapse-9999.ebuild 355
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-elapse-9999 0
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTaURgIKl8Uu19MoRAp/rAJ9ac5A8fRz9vqpLT7yZ6mPBjTEmDQCfVgD5
+1i3XGhFc6Ohl1ybI1+oUcAg=
+=Njxc
+-----END PGP SIGNATURE-----
