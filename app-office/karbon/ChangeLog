@@ -1,6 +1,9 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.16 2005/10/10 22:03:09 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.17 2005/10/13 13:02:05 agriffis Exp $
+
+  13 Oct 2005; Aron Griffis <agriffis@gentoo.org> karbon-1.4.2.ebuild:
+  Mark 1.4.2 ~ia64
 
 *karbon-1.4.2 (10 Oct 2005)
 
