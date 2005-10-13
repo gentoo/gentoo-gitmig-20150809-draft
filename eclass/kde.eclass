@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.137 2005/10/12 11:18:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.138 2005/10/13 15:13:14 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -232,7 +232,7 @@ slot_rebuild() {
 			m=""
 			for l in ${k} ; do [[ -e ${l} ]] && m="${m} ${l}"; done
 			l="$(echo ${k} ${m} | fmt -w 1 | sort | uniq -u)"
-			
+
 			if [[ ${l} != "" ]] || [[ ${m} == "" ]] ; then
 				eerror "Installation of ${j/${VDB_PATH}\//} is broken."
 				BROKEN_PKGS="${BROKEN_PKGS} ${j/${VDB_PATH}\//}"
@@ -243,7 +243,7 @@ slot_rebuild() {
 			fi
 		done
 	done
-	echo 
+	echo
 	if [[ -n "${BROKEN_PKGS}" ]] ; then
 		eerror "Anomalies were found. Please do \"emerge ${BROKEN_PKGS}\"."
 		return 1
