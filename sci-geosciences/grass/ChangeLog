@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.13 2005/09/17 21:53:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.14 2005/10/13 06:38:35 nerdboy Exp $
+
+  13 Oct 2005; Steve Arnold <nerdboy@gentoo.org> -grass-6.0.0-r2.ebuild,
+  grass-6.0.1.ebuild:
+  ebuild cleanup and change for bug #106877
 
   17 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> grass-6.0.0-r2.ebuild:
   Stable on ppc.

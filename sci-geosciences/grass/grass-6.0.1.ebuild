@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.1 2005/09/14 03:58:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.0.1.ebuild,v 1.2 2005/10/13 06:38:35 nerdboy Exp $
 
 inherit eutils
 
@@ -12,10 +12,11 @@ SRC_URI="http://grass.itc.it/grass60/source/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="6"
-KEYWORDS="~x86 ~amd64 ~ppc ~ppc64 ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc sparc"
+# To-do: get ppc64 gdal deps fixed up
 
 # add gdal back to use flags once grass is fixed
-IUSE="blas fftw jpeg lapack motif mysql nls odbc opengl png postgres readline tcltk tiff truetype"
+IUSE="blas fftw jpeg lapack motif mysql nls odbc opengl png postgres readline tiff truetype"
 
 RESTRICT="nostrip"
 
@@ -28,9 +29,9 @@ DEPEND=">=sys-devel/make-3.80
 	>=sys-devel/gcc-3.2.2
 	sys-apps/man
 	>=sci-libs/proj-4.4.7
+	sci-libs/gdal
 	blas? ( virtual/blas )
 	fftw? ( =sci-libs/fftw-2* )
-	sci-libs/gdal
 	jpeg? ( media-libs/jpeg )
 	lapack? ( virtual/lapack )
 	motif? ( x11-libs/openmotif )
@@ -39,12 +40,12 @@ DEPEND=">=sys-devel/make-3.80
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	png? ( >=media-libs/libpng-1.2.2 )
 	readline? ( sys-libs/readline )
-	tcltk? ( >=dev-lang/tcl-8.3.4
-		>=dev-lang/tk-8.3.4 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( >=media-libs/freetype-2.0 )
 	nls? ( x11-terms/mlterm )
 	opengl? ( virtual/opengl )
+	>=dev-lang/tcl-8.3.4
+	>=dev-lang/tk-8.3.4
 	virtual/x11"
 
 src_unpack() {
