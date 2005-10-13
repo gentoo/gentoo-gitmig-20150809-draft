@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.45 2005/10/10 20:04:17 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.46 2005/10/13 19:09:50 killerfox Exp $
+
+  13 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> exim-4.54.ebuild:
+  Unstable on hppa. See bug #103894.
 
   10 Oct 2005; Colin Morey <peitolm@gentoo.org> exim-4.54.ebuild:
   fix to Local/Makefile sed
