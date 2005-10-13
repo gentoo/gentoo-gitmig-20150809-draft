@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.3 2005/08/11 09:23:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.4 2005/10/13 17:31:24 dang Exp $
 
 inherit rpm eutils versionator
 
@@ -33,7 +33,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 
 RDEPEND="|| ( app-shells/tcsh app-shells/csh )
-	 x86? ( app-admin/fam
+	 x86? ( virtual/fam
 	        !bundled-libs? ( =x11-libs/qt-3*
 	                         || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* )
 	                         >=x11-libs/openmotif-2.2 ) )
