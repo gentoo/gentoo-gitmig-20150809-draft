@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8088136e00ace5786ba6e26db80c7103 ChangeLog 1734
-MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 e13b29549cb7215de381566577e895e5 man2html-1.5l-r2.ebuild 1446
-MD5 240204af381dd8cf73538da575009b00 man2html-1.5l.ebuild 1554
-MD5 3af5d41f1e323799c0ce76d306a60194 man2html-1.5l-r1.ebuild 1822
-MD5 1f9c3d195ff74e7f73229d5024179273 files/mansec.patch 639
-MD5 a63bfea0511bb4ea9292d63dc11348b3 files/digest-man2html-1.5l-r2 60
-MD5 56100920b7436cf90ed14c82d9d6475e files/manwhatis-gentoo.patch 638
+MD5 a62c67148ba1539a79819f17083c7892 ChangeLog 1849
 MD5 a63bfea0511bb4ea9292d63dc11348b3 files/digest-man2html-1.5l 60
-MD5 cc4443b206a96b25c569d6fb800f717d files/mansearch-gentoo.patch 686
-MD5 8907539a119c6fcb706af01a90e6923f files/man2html.cron 120
 MD5 a63bfea0511bb4ea9292d63dc11348b3 files/digest-man2html-1.5l-r1 60
+MD5 a63bfea0511bb4ea9292d63dc11348b3 files/digest-man2html-1.5l-r2 60
+MD5 8907539a119c6fcb706af01a90e6923f files/man2html.cron 120
+MD5 cc4443b206a96b25c569d6fb800f717d files/mansearch-gentoo.patch 686
+MD5 1f9c3d195ff74e7f73229d5024179273 files/mansec.patch 639
+MD5 56100920b7436cf90ed14c82d9d6475e files/manwhatis-gentoo.patch 638
+MD5 3af5d41f1e323799c0ce76d306a60194 man2html-1.5l-r1.ebuild 1822
+MD5 938ad41d504cbd20bd01ad66d2cce13c man2html-1.5l-r2.ebuild 1455
+MD5 240204af381dd8cf73538da575009b00 man2html-1.5l.ebuild 1554
+MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfdOTKf2g/qXtneoRAuWCAKCvrFBmPAqahoLrF/KfP0Nl9vb26gCeIeBK
-kMaVAFtS+wdfNb+pjJIqm68=
-=0Je1
+iD8DBQFDTqfPwUpWvClEHQoRAmldAJ9MEkmcbk4FZmZHUfmFsSL344vofQCfVsm+
+ppmIjUzrjGR9LertoEyzwJ0=
+=GEqp
 -----END PGP SIGNATURE-----
