@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.16 2005/08/07 13:08:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.17 2005/10/13 22:40:44 matsuu Exp $
+
+*kamix-0.6.3 (10 Oct 2005)
+
+  10 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> kamix-0.6.1.ebuild,
+  +kamix-0.6.3.ebuild:
+  Version bumped. Bug 95979.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kamix-0.5.7.ebuild:
   Stable on ppc.
