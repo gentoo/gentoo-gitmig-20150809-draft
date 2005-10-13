@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.5 2005/09/28 13:05:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.6 2005/10/13 13:50:06 johnm Exp $
 
 inherit versionator kde-functions
 
@@ -14,12 +14,13 @@ SRC_URI="mirror://gentoo/${PN}-${CVS_VERSION}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc"
-IUSE="evo irmc ldap bluetooth pda kdepim"
+IUSE="evo irmc ldap bluetooth pda kdepim arts kdeenablefinal"
 # evo    - evolution plugin
 # irmc   - bluetooth/irmc/irda plugin ( local )
 # pda    - opie plugin                ( local )
 # ldap   - ldap plugin - experimental
 # kdepim - sync with the kdepim app
+# arts	 - potentially required for kdepim.
 
 DEPEND=">=gnome-base/libbonobo-2.2
 		>=gnome-base/libgnomeui-2.2
@@ -36,7 +37,8 @@ DEPEND=">=gnome-base/libbonobo-2.2
 				         		>=net-wireless/bluez-utils-2.7 ) )
 		pda? ( >=net-misc/curl-7.10.5
 				app-pda/pilot-link )
-		kdepim? ( || ( kde-base/kdepim-meta kde-base/kdepim ) )
+		kdepim? ( || ( kde-base/kdepim-meta kde-base/kdepim )
+				  arts? ( kde-base/arts ) )
 		ldap? ( >=net-nds/openldap-2.0.27
 				>=dev-libs/cyrus-sasl-2.1.4 )"
 
@@ -69,7 +71,7 @@ run_compile() {
 	autoheader || die "Failed during autoheader!"
 	automake --add-missing --gnu || die "Failed during automake!"
 	autoconf || die "Failed during autoconf!"
-	econf CPPFLAGS="${myInc} ${CPPFLAGS}" || die "Failed during econf!"
+	econf CPPFLAGS="${myInc} ${CPPFLAGS}" ${myConf} || die "Failed during econf!"
 	make || die "Failed during make!"
 }
 
@@ -86,7 +88,10 @@ src_compile() {
 		set-qtdir 3
 		set-kdedir 3
 		myInc="-I${KDEDIR}/include ${myInc}"
+		myConf="$(use_with arts)
+				$(use_enable kdeenablefinal final)"
 	fi
+
 	use pda && myInc="-I/usr/include/libpisock ${myInc}"
 	run_compile;
 	for plugin_dir in ${PLUGINS}; do
