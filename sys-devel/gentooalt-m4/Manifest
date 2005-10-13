@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b73c51f1d5904f316ae2b01191cb82f6 ChangeLog 327
+MD5 b9e6fe58b02d4dad2ca3d5d5bbf67b37 files/digest-gentooalt-m4-20051010 72
+MD5 5d65f5a69946b58dad70851a50f72916 gentooalt-m4-20051010.ebuild 580
+MD5 b521e5a03b95132663a6153528688b02 metadata.xml 582
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTjIwj5H05b2HAEkRAob4AKCmfYmTRBTpdDDgdf5l2n+97awtFwCbBMeV
+nvU/BGzLo5UTzkhzjZWWj38=
+=uzKy
+-----END PGP SIGNATURE-----

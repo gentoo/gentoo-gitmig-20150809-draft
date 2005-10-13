@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+ <email>flameeyes@gentoo.org</email>
+</maintainer>
+<longdescription lang="en">
+This packages contians some m4 macro files for aclocal/autotools that carries
+macros that are often used to patch packages to behave correctly with respect to
+Gentoo/ALT ports.
+There is a macro to check the library where dlopen() function is and one to
+check which linker flags should be used to link something with "now" bindings.
+</longdescription>
+</pkgmetadata>
