@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.47 2005/10/07 03:30:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.48 2005/10/13 17:52:56 azarah Exp $
+
+  13 Oct 2005; Martin Schlemmer <azarah@gentoo.org> sandbox-1.2.12.ebuild,
+  sandbox-1.2.13.ebuild:
+  Add workaround for bug #109036.
 
   07 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   sandbox-1.2.9.ebuild, sandbox-1.2.10.ebuild, sandbox-1.2.11.ebuild,
