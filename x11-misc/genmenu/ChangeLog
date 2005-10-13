@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/genmenu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.19 2005/06/22 13:16:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.20 2005/10/13 01:46:15 metalgod Exp $
+
+  13 Oct 2005; Luis Medinas <metalgod@gentoo.org> genmenu-1.0.7.ebuild:
+  Added ~amd64 keyword.
 
   22 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> genmenu-1.0.7.ebuild:
   Stable on sparc
