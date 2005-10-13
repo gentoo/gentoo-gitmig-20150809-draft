@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e5247b89063ef7969fb81c370360c0dc ChangeLog 2649
-MD5 948134448cee4780547e59b72d0b2866 libkdegames-3.4.2.ebuild 679
-MD5 297d16110d664a5a551adb6e92ad880c libkdegames-3.4.1.ebuild 424
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 6007cf3f446561361071951bfd7586fd libkdegames-3.5_beta1.ebuild 655
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-libkdegames-3.4.1 212
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-libkdegames-3.5_beta1 70
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-libkdegames-3.4.2 288
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXnnj5H05b2HAEkRAq+dAJ4p8pjV7b7s/eYQerAOfy23/u6LkwCfQLq4
-eMVdgv1+scr54/QuTdQvl4Y=
-=onfY
------END PGP SIGNATURE-----
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-libkdegames-3.4.3 68
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-libkdegames-3.5_beta1 70
+MD5 297d16110d664a5a551adb6e92ad880c libkdegames-3.4.1.ebuild 424
+MD5 948134448cee4780547e59b72d0b2866 libkdegames-3.4.2.ebuild 679
+MD5 948134448cee4780547e59b72d0b2866 libkdegames-3.4.3.ebuild 679
+MD5 6007cf3f446561361071951bfd7586fd libkdegames-3.5_beta1.ebuild 655
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 714cdec14532c8effa7385165a847ad5 ktip-3.4.1.ebuild 386
 MD5 0e9a98595e84288c4cba8856cf76959d ChangeLog 2414
-MD5 af19f082ea061baf5b2e74d584ccee54 ktip-3.5_beta1.ebuild 375
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.2.ebuild 399
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-ktip-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-ktip-3.4.2 287
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-ktip-3.4.3 68
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-ktip-3.5_beta1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXSdj5H05b2HAEkRAudcAJ9e9OmmVD+DUZsTw/k/70y7UtccPwCffipQ
-NAs32uLM4gKXCCgiKdslSJU=
-=ijnz
------END PGP SIGNATURE-----
+MD5 714cdec14532c8effa7385165a847ad5 ktip-3.4.1.ebuild 386
+MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.2.ebuild 399
+MD5 eac8411130f691aadd011eb5dd19420a ktip-3.4.3.ebuild 399
+MD5 af19f082ea061baf5b2e74d584ccee54 ktip-3.5_beta1.ebuild 375
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

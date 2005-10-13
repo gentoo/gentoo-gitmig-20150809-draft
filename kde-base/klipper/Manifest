@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 00a48ff403c655bd021fe3740f04ce9c klipper-3.4.1.ebuild 412
 MD5 55f78ab0b0b8ba8b087c6a2e5b9a6786 ChangeLog 2543
-MD5 734c1ffb0875eb7d6be5c70a78b4b561 klipper-3.5_beta1.ebuild 401
-MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.2.ebuild 425
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-klipper-3.5_beta1 69
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-klipper-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-klipper-3.4.2 287
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWOXj5H05b2HAEkRAh4fAJ9zR14xYptswxnCkNVLUOqs4xycYACaAiYM
-4JbVHrQ9s2BwwegB3GdGBV0=
-=T9Z+
------END PGP SIGNATURE-----
+MD5 b334b621242eaf5a23035e870f09dea6 files/digest-klipper-3.4.3 68
+MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-klipper-3.5_beta1 69
+MD5 00a48ff403c655bd021fe3740f04ce9c klipper-3.4.1.ebuild 412
+MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.2.ebuild 425
+MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.3.ebuild 425
+MD5 734c1ffb0875eb7d6be5c70a78b4b561 klipper-3.5_beta1.ebuild 401
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

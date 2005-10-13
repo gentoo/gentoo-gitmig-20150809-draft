@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.22 2005/10/02 14:50:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.23 2005/10/13 00:09:49 danarmak Exp $
+
+*akregator-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +akregator-3.4.3.ebuild:
+  New version.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> akregator-3.4.2.ebuild,
   akregator-3.5_beta1.ebuild:

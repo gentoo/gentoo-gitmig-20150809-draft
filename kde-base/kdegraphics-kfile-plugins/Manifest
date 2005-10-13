@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4aeac89383d9f735d9a734cce67237c4 ChangeLog 3112
-MD5 cd8f32acce0e2541d0481b1b69e7d6fa kdegraphics-kfile-plugins-3.4.2.ebuild 812
+MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.patch 704
+MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdegraphics-kfile-plugins-3.4.1 221
+MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kdegraphics-kfile-plugins-3.4.2 300
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-kfile-plugins-3.4.3 71
+MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kdegraphics-kfile-plugins-3.5_beta1 72
 MD5 a01138948c8970285dccba96ddf7b5e8 kdegraphics-kfile-plugins-3.4.1.ebuild 701
+MD5 cd8f32acce0e2541d0481b1b69e7d6fa kdegraphics-kfile-plugins-3.4.2.ebuild 812
+MD5 cd8f32acce0e2541d0481b1b69e7d6fa kdegraphics-kfile-plugins-3.4.3.ebuild 812
 MD5 6fd7b2569935398e8167a41ddc256aa3 kdegraphics-kfile-plugins-3.5_beta1.ebuild 728
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kdegraphics-kfile-plugins-3.5_beta1 72
-MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kdegraphics-kfile-plugins-3.4.2 300
-MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdegraphics-kfile-plugins-3.4.1 221
-MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.patch 704
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVhkj5H05b2HAEkRArvhAJ9jpW93KTIIa2r4Q9YCa70uOT67fQCgn1xf
-/o/0AN9E43Udco7u5i+FCsQ=
-=KCyb
------END PGP SIGNATURE-----

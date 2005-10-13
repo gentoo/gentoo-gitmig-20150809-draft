@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 329838a1d60e4a2ebc845bca7509f58a ChangeLog 2351
-MD5 3aca7675e7e7bf55ae276fe28202db43 kompare-3.5_beta1.ebuild 432
+MD5 9b4e9e38740207531ab771519519d01e files/digest-kompare-3.4.1 206
+MD5 0a38813829924b012d8b632f47abb45d files/digest-kompare-3.4.2 280
+MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kompare-3.4.3 66
+MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-kompare-3.5_beta1 67
 MD5 dfce6af7e27adc161347a56c006b6058 kompare-3.4.1.ebuild 444
 MD5 355fc0c218e4d450356f84dcedf6c595 kompare-3.4.2.ebuild 452
+MD5 355fc0c218e4d450356f84dcedf6c595 kompare-3.4.3.ebuild 452
+MD5 3aca7675e7e7bf55ae276fe28202db43 kompare-3.5_beta1.ebuild 432
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-kompare-3.5_beta1 67
-MD5 0a38813829924b012d8b632f47abb45d files/digest-kompare-3.4.2 280
-MD5 9b4e9e38740207531ab771519519d01e files/digest-kompare-3.4.1 206
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWlDj5H05b2HAEkRAp4CAJ0SUkV8sBbQwjO+SOV+Y0kHu9hxBgCaAhK3
-AW6tSbPukUC/lBkwv/N5QyI=
-=QiH2
------END PGP SIGNATURE-----

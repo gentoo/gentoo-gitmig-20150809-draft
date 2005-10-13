@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.153 2005/10/12 13:24:08 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.154 2005/10/13 00:09:53 danarmak Exp $
+
+*kdeedu-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +kdeedu-3.4.3.ebuild:
+  New version.
 
 *kdeedu-3.4.3-r10 (12 Oct 2005)
 *kdeedu-3.4.3 (12 Oct 2005)

@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/libksieve-3.4.1.ebuild,v 1.9 2005/09/13 14:49:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/libksieve-3.4.1.ebuild,v 1.10 2005/10/13 00:10:08 danarmak Exp $
 
 KMNAME=kdepim
-MAXKDEVER=3.4.2
+MAXKDEVER=3.4.3
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

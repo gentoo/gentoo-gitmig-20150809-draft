@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 140d62e7384d210800d4ad3ec1e53054 ChangeLog 2438
-MD5 3665da2025415fe54bfedb565fd7964b kdf-3.5_beta1.ebuild 370
-MD5 f007e558c29a0839c7f7a52bc77fc9a3 kdf-3.4.1.ebuild 392
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kdf-3.4.1 212
+MD5 7693585dde083d1c2cc205db10692163 files/digest-kdf-3.4.3 68
 MD5 ba38338e687742fb5a9e7458de260898 files/digest-kdf-3.5_beta1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVwxj5H05b2HAEkRAraPAJ92esyd10O8QWZkPykjT61PgZy/BgCffTNk
-jB2uLP0hrThoqkjk2BRijts=
-=ZOxN
------END PGP SIGNATURE-----
+MD5 f007e558c29a0839c7f7a52bc77fc9a3 kdf-3.4.1.ebuild 392
+MD5 424c622df69fa11c62683c96145b0dd0 kdf-3.4.3.ebuild 390
+MD5 3665da2025415fe54bfedb565fd7964b kdf-3.5_beta1.ebuild 370
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

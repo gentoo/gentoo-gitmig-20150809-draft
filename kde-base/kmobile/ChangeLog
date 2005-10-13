@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmobile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmobile/ChangeLog,v 1.13 2005/10/11 09:59:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmobile/ChangeLog,v 1.14 2005/10/13 00:10:02 danarmak Exp $
+
+*kmobile-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +kmobile-3.4.3.ebuild:
+  New version.
 
   11 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   kmobile-3.5_beta1.ebuild:

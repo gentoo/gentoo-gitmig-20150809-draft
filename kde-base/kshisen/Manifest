@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 20bdbbf93cb9f76eff1888dddb3628fa ChangeLog 2543
-MD5 b16f86b5e5b8b5ec6155982bb5db6cdf kshisen-3.5_beta1.ebuild 533
-MD5 c6e32aeff2e10322968812e85b00a0ce kshisen-3.4.1.ebuild 544
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 89fc7a1ba7d12c04f9e6e057d15a67bc kshisen-3.4.2.ebuild 557
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kshisen-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kshisen-3.4.2 288
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kshisen-3.4.3 68
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kshisen-3.5_beta1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXAoj5H05b2HAEkRAgUjAJ9B+vlJcCDaUDSypk5jmkKxPtaIvQCbBxhh
-7yiEO5A4SLUG35UTcL4xzYM=
-=/5Yw
------END PGP SIGNATURE-----
+MD5 c6e32aeff2e10322968812e85b00a0ce kshisen-3.4.1.ebuild 544
+MD5 89fc7a1ba7d12c04f9e6e057d15a67bc kshisen-3.4.2.ebuild 557
+MD5 89fc7a1ba7d12c04f9e6e057d15a67bc kshisen-3.4.3.ebuild 557
+MD5 b16f86b5e5b8b5ec6155982bb5db6cdf kshisen-3.5_beta1.ebuild 533
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.21 2005/09/24 16:38:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.22 2005/10/13 00:09:54 danarmak Exp $
+
+*kdemultimedia-meta-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +kdemultimedia-meta-3.4.3.ebuild:
+  New version.
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kdemultimedia-meta-3.5_alpha1.ebuild:

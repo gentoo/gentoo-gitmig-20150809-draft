@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f2e6daf95db53f5a758cd51dfc2004f5 ChangeLog 2536
+MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-lisa-3.4.1 218
+MD5 1277f401bade54acfa086cf013950252 files/digest-lisa-3.4.2 296
+MD5 c259b2aa6bede478d4afff87117e9685 files/digest-lisa-3.4.3 70
+MD5 16b903e400a8cf2d73f3c237799238db files/digest-lisa-3.5_beta1 71
+MD5 286554f1aa942a969d3521d60b4f4def files/lisa 532
+MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
+MD5 18120584a2975ce21312780ef0eaf12b files/reslisa 556
+MD5 01dd2bacee59738f96d17c77774a5102 files/reslisa.conf 450
+MD5 529ae72a16e0bc3ddbf409b7635d622e lisa-3.4.1.ebuild 1003
 MD5 375c5ed27d74f4028a5305008e772fad lisa-3.4.2.ebuild 1016
+MD5 375c5ed27d74f4028a5305008e772fad lisa-3.4.3.ebuild 1016
 MD5 3b62c3e01126c747105728fd88487a80 lisa-3.5_beta1.ebuild 992
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 529ae72a16e0bc3ddbf409b7635d622e lisa-3.4.1.ebuild 1003
-MD5 01dd2bacee59738f96d17c77774a5102 files/reslisa.conf 450
-MD5 1277f401bade54acfa086cf013950252 files/digest-lisa-3.4.2 296
-MD5 d97100af0cb95f733660b7a61492d71f files/lisa.conf 452
-MD5 286554f1aa942a969d3521d60b4f4def files/lisa 532
-MD5 16b903e400a8cf2d73f3c237799238db files/digest-lisa-3.5_beta1 71
-MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-lisa-3.4.1 218
-MD5 18120584a2975ce21312780ef0eaf12b files/reslisa 556
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNXyYj5H05b2HAEkRAgN9AJ9M0fwdTaIJ5UUXVjtNeML9CeBblQCgmZh/
-Sf/9b5ff8Hp2Fl0nuYbIdRg=
-=D0ih
------END PGP SIGNATURE-----

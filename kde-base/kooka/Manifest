@@ -2,9 +2,11 @@ MD5 2ec99581b83906e6ddaa1e495c23e549 ChangeLog 2787
 MD5 51a35089fe1f6247f9cf221c77a57177 files/configure-fix-kdegraphics-kadmos.patch 1714
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kooka-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kooka-3.4.2 300
+MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kooka-3.4.3 71
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kooka-3.5_beta1 72
 MD5 0abb98c262645006a4b116c0635edb49 files/kdegraphics-3.4.1-gocr.patch 454
 MD5 6f27766dd3224f76199cd8d09b3f2be2 kooka-3.4.1.ebuild 690
 MD5 90ad8660103053342c8b3242329df544 kooka-3.4.2.ebuild 1047
+MD5 90ad8660103053342c8b3242329df544 kooka-3.4.3.ebuild 1047
 MD5 95e25bc29f5f6be0cee34d2cadaa6819 kooka-3.5_beta1.ebuild 694
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

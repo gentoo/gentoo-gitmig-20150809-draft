@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.15 2005/07/28 21:16:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.16 2005/10/13 00:10:04 danarmak Exp $
+
+*korundum-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +korundum-3.4.3.ebuild:
+  New version.
 
 *korundum-3.4.2 (28 Jul 2005)
 

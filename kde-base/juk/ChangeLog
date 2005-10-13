@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.22 2005/09/24 13:37:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.23 2005/10/13 00:09:50 danarmak Exp $
+
+*juk-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +juk-3.4.3.ebuild:
+  New version.
 
   24 Sep 2005; Gregorio Guidi <greg_g@gentoo.org> juk-3.5_beta1.ebuild:
   Make the ebuild work properly with KDE 3.5 (#107018). Enable akode support.

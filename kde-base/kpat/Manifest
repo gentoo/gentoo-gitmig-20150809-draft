@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b06e81cb4813a4ce743b178b4b6bbbde ChangeLog 2587
-MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.2.ebuild 616
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpat-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpat-3.4.2 288
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpat-3.4.3 68
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kpat-3.5_beta1 70
 MD5 03ad99fddd67c9bc3850c3d6ae741b03 kpat-3.4.1.ebuild 604
+MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.2.ebuild 616
+MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.3.ebuild 616
 MD5 4cd721f0ff28ec5184f735bce5a3f3b0 kpat-3.5_beta1.ebuild 592
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpat-3.4.2 288
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kpat-3.5_beta1 70
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpat-3.4.1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWw/j5H05b2HAEkRAvmFAJ483wTF9IUMOUmK7r5WvtoUh0PjtACdEQp8
-2CdtoAC4UFj639nktPn1Yx4=
-=pVBS
------END PGP SIGNATURE-----

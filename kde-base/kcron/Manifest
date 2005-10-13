@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f792f4c04b28449fde3efd47d5238b42 ChangeLog 2494
-MD5 9b1ced202c1d04355a7b8cb2442cf0d9 kcron-3.5_beta1.ebuild 369
-MD5 7d070e7472fea8fbc31dc4bc4a7db226 kcron-3.4.1.ebuild 391
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kcron-3.4.1 211
+MD5 80b3c1753e84c4d6d9caf0502325b7b4 files/digest-kcron-3.4.3 68
 MD5 27e68187b25ba15cc1e9f8981eacca8a files/digest-kcron-3.5_beta1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNVRBj5H05b2HAEkRAt3OAJ9HQ8d65aLHHzBOh9sBcOUrNq+9pwCfdOIP
-bJVi0EDkIhAwIiwnN+Dk7ts=
-=ZEVf
------END PGP SIGNATURE-----
+MD5 7d070e7472fea8fbc31dc4bc4a7db226 kcron-3.4.1.ebuild 391
+MD5 fd059317a9244c7d06ae0669f54d803e kcron-3.4.3.ebuild 389
+MD5 9b1ced202c1d04355a7b8cb2442cf0d9 kcron-3.5_beta1.ebuild 369
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

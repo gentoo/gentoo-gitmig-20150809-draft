@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.4.2.ebuild,v 1.1 2005/07/28 21:16:26 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.4.2.ebuild,v 1.2 2005/10/13 00:10:09 danarmak Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/kalyptus kalyptus/*.pm"
 KM_MAKEFILESREV=1
-MAXKDEVER=$PV
+MAXKDEVER=3.4.3
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

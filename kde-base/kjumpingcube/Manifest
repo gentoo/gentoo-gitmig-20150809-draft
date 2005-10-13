@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab746a29763e566c9cb829647cddb154 kjumpingcube-3.4.2.ebuild 572
 MD5 375566fcf1e5a2f857b2f5f03df67dcb ChangeLog 2674
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kjumpingcube-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kjumpingcube-3.4.2 288
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kjumpingcube-3.4.3 68
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kjumpingcube-3.5_beta1 70
+MD5 73bbdcb6a9357fbcc65f6d010c1a7f6b kjumpingcube-3.4.1.ebuild 559
+MD5 ab746a29763e566c9cb829647cddb154 kjumpingcube-3.4.2.ebuild 572
+MD5 ab746a29763e566c9cb829647cddb154 kjumpingcube-3.4.3.ebuild 572
 MD5 033365f6ca839e88a1dd7d40e5e084e8 kjumpingcube-3.5_beta1.ebuild 548
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 73bbdcb6a9357fbcc65f6d010c1a7f6b kjumpingcube-3.4.1.ebuild 559
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kjumpingcube-3.4.2 288
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kjumpingcube-3.5_beta1 70
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kjumpingcube-3.4.1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWJAj5H05b2HAEkRAvgYAJ0bVZzR7BVLHSJOcoEK/8kJruJu2wCeIK9q
-T4bEJ5Y6ck58Z9oBab3ci4M=
-=bvRG
------END PGP SIGNATURE-----

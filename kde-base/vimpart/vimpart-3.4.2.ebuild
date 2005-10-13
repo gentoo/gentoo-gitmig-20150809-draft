@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/vimpart/vimpart-3.4.2.ebuild,v 1.2 2005/08/08 20:48:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/vimpart/vimpart-3.4.2.ebuild,v 1.3 2005/10/13 00:10:09 danarmak Exp $
 KMNAME=kdeaddons
-MAXKDEVER=$PV
+MAXKDEVER=3.4.3
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

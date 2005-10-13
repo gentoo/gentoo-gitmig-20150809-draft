@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bcc0b65d78e83c8636236b5fbf8dc2c ksayit-3.4.2.ebuild 599
 MD5 c4ed01d066320c51164814ed70533702 ChangeLog 2420
-MD5 0e5cf4c5876b481bc3e0e3844459200a ksayit-3.5_beta1.ebuild 573
-MD5 0d3f3e556729870be5c9bde1c883173c ksayit-3.4.1.ebuild 584
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e40e61649226223ac8c5051bc56cd28a files/digest-ksayit-3.4.2 320
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-ksayit-3.4.1 236
+MD5 e40e61649226223ac8c5051bc56cd28a files/digest-ksayit-3.4.2 320
+MD5 69f79fb831b8a4318ac609aefa806adb files/digest-ksayit-3.4.3 76
 MD5 174790e90449897638084f6c4bea761f files/digest-ksayit-3.5_beta1 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNW+Qj5H05b2HAEkRAhh0AJ9anZ6p4CPnHwiBHW2dibrOV+FVzQCfWm35
-YpIMVhYOiA1GCHvvmqjRmxM=
-=Qaw+
------END PGP SIGNATURE-----
+MD5 0d3f3e556729870be5c9bde1c883173c ksayit-3.4.1.ebuild 584
+MD5 0bcc0b65d78e83c8636236b5fbf8dc2c ksayit-3.4.2.ebuild 599
+MD5 7446e1f706485c98eb869586217eb065 ksayit-3.4.3.ebuild 599
+MD5 0e5cf4c5876b481bc3e0e3844459200a ksayit-3.5_beta1.ebuild 573
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

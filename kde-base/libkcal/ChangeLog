@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkcal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.19 2005/10/03 13:30:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcal/ChangeLog,v 1.20 2005/10/13 00:10:07 danarmak Exp $
+
+*libkcal-3.4.3 (13 Oct 2005)
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> +libkcal-3.4.3.ebuild:
+  New version.
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> libkcal-3.4.1.ebuild:
   Mark 3.4.1 stable on alpha

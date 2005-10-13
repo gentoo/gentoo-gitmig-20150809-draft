@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f7e9f6646e2aaa3491ad590cbabb745c ChangeLog 2965
 MD5 c9d4d9c2c2f4446a1e62871a2d56e7be artsplugin-mpeglib-3.4.1.ebuild 747
+MD5 9a8dabbaaf44d709fd9073afe712fb8c artsplugin-mpeglib-3.4.3.ebuild 752
 MD5 bc43fea3fdf2f530761cecc269eece46 artsplugin-mpeglib-3.5_beta1.ebuild 730
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-artsplugin-mpeglib-3.4.1 227
+MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-artsplugin-mpeglib-3.4.3 73
 MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-artsplugin-mpeglib-3.5_beta1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNUvij5H05b2HAEkRAkUpAKCfJBcJVG43NJ7Ep6qZVHxFIzP5RwCgphvv
-RJzrBaLOGbLL9e13hOjnQ5Y=
-=l51w
------END PGP SIGNATURE-----
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6e7e5a7c13307097a79866bde6f52b36 ChangeLog 2518
-MD5 4d425630ee002afb24e2ec47f0fc4576 klines-3.5_beta1.ebuild 571
+MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klines-3.4.1 212
+MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klines-3.4.2 288
+MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-klines-3.4.3 68
+MD5 cec48d7b091caec0087349ff3924ad36 files/digest-klines-3.5_beta1 70
 MD5 f8a30ff2b23475765116f02d38ad5894 klines-3.4.1.ebuild 582
 MD5 ecae7980e5ea1cca3bd591d610727de2 klines-3.4.2.ebuild 595
+MD5 ecae7980e5ea1cca3bd591d610727de2 klines-3.4.3.ebuild 595
+MD5 4d425630ee002afb24e2ec47f0fc4576 klines-3.5_beta1.ebuild 571
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 cec48d7b091caec0087349ff3924ad36 files/digest-klines-3.5_beta1 70
-MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-klines-3.4.2 288
-MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-klines-3.4.1 212
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNWMyj5H05b2HAEkRAmbMAJ4/SHefiiRsn5pGwZqIcbfQPFZcaACdHNTk
-U49xUfKMCmtq1QZM5t3eP0g=
-=59zJ
------END PGP SIGNATURE-----
