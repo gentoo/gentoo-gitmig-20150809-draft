@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/jpgraph
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.18 2005/10/11 04:51:36 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.19 2005/10/13 21:35:50 sebastian Exp $
+
+  13 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -jpgraph-1.19.ebuild:
+  Pull jpgraph-1.19 as requested by Brian Harring for bug 107467.
 
 *jpgraph-1.19-r1 (11 Oct 2005)
 
