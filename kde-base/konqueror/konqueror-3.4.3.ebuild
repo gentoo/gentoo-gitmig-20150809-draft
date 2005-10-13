@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.4.3.ebuild,v 1.1 2005/10/13 00:10:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.4.3.ebuild,v 1.2 2005/10/13 07:31:05 greg_g Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -23,13 +23,3 @@ java? ( >=virtual/jre-1.4 )"
 
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h
-
-src_unpack() {
-	kde-meta_src_unpack
-
-	cd ${S}
-
-	# Avoid name-filter expansion for files that do exists (bug #101501)
-	epatch "${FILESDIR}/kdebase-3.4.2-konqueror-filter.patch"
-}
-
