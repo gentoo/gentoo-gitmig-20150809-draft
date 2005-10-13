@@ -1,18 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c6328b6d849278040d33aef965a928a7 ChangeLog 1253
+MD5 a6a84831f8734f90356799cb4350fb48 ChangeLog 1540
 MD5 23b2a1190eb15492bd60934979e29068 files/digest-nettle-1.10 63
 MD5 5c1ac7a65b61d5f2a91ddd7c4e472c38 files/digest-nettle-1.12 63
 MD5 1c08b4e710f464b4dbb276122b447738 files/digest-nettle-1.13 63
+MD5 1c08b4e710f464b4dbb276122b447738 files/digest-nettle-1.13-r1 63
+MD5 b28d8f2bb39fc707d82a13413e6cd2c7 files/nettle-1.13-PIC.patch 6732
+MD5 1d2804d36016baa2bb798ddf87d6e960 files/nettle-1.13-no-exec-stack.patch 1424
+MD5 007f00412ae9a343601ec9f3ff7c1da3 files/nettle-1.13-preprocess-asm.patch 668
 MD5 243e4cd9809545d12f991b2d417040e1 metadata.xml 159
 MD5 518c09edea33da5a9247f03f2133d844 nettle-1.10.ebuild 791
 MD5 3b7eab2fbf428a13449355b121c0c72c nettle-1.12.ebuild 704
+MD5 d7a27de7e274703e69648ba001472095 nettle-1.13-r1.ebuild 938
 MD5 6995b4d5a430439ce80f70760f57743e nettle-1.13.ebuild 787
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSx2IgIKl8Uu19MoRAgUFAKCAAiFQ31Xbptd1XJcU4g2mj+5oUwCcClW4
-3f5h5rX78uOcC1iPoOFA25k=
-=ZMoN
+iD8DBQFDTfEJgIKl8Uu19MoRAi6BAJ96dRW1PwZu1zZNYUcrgsnNfofa8wCdG/i8
+G1wbMLzv0zGmae8da5g8U38=
+=42LQ
 -----END PGP SIGNATURE-----

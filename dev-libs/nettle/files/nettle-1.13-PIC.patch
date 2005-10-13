@@ -1,0 +1,277 @@
+PIC patch to fix TEXTREL's in the library.
+
+Patch by PaX team
+
+--- nettle/x86/aes-encrypt.asm
++++ nettle/x86/aes-encrypt.asm
+@@ -42,20 +42,29 @@
+ 	pushl	%esi		C  8(%esp)
+ 	pushl	%edi		C  4(%esp)
+ 
+-	C ctx = 20(%esp)
+-	C length = 24(%esp)
+-	C dst = 28(%esp)
+-	C src = 32(%esp)
++#ifdef __PIC__
++#undef __i686
++	call	___i686.get_pc_thunk.bx
++	addl	$_GLOBAL_OFFSET_TABLE_, %ebx
++	pushl	C_NAME(_nettle_aes_encrypt_table)@GOT(%ebx)
++#else
++	pushl	C_NAME(_nettle_aes_encrypt_table)
++#endif
++
++	C ctx = 24(%esp)
++	C length = 28(%esp)
++	C dst = 32(%esp)
++	C src = 36(%esp)
+ 
+-	movl	24(%esp), %ebp
++	movl	28(%esp), %ebp
+ 	testl	%ebp,%ebp
+ 	jz	.Lend
+ 	
+ .Lblock_loop:
+-	movl	20(%esp),%esi	C  address of context struct ctx
+-	movl	32(%esp),%ebp	C  address of plaintext
++	movl	24(%esp),%esi	C  address of context struct ctx
++	movl	36(%esp),%ebp	C  address of plaintext
+ 	AES_LOAD(%esi, %ebp)
+-	addl	$16, 32(%esp)	C Increment src pointer
++	addl	$16, 36(%esp)	C Increment src pointer
+ 
+ 	C  get number of rounds to do from ctx struct	
+ 	movl	AES_NROUNDS (%esi),%ebp
+@@ -65,16 +74,16 @@
+ .Lround_loop:
+ 	pushl	%esi		C  save this first: we'll clobber it later
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_encrypt_table),a,b,c,d)
++	AES_ROUND(4(%esp),a,b,c,d)
+ 	pushl	%edi		C  save first on stack
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_encrypt_table),b,c,d,a)
++	AES_ROUND(8(%esp),b,c,d,a)
+ 	pushl	%edi		C  save first on stack
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_encrypt_table),c,d,a,b)
++	AES_ROUND(12(%esp),c,d,a,b)
+ 	pushl	%edi		C  save first on stack
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_encrypt_table),d,a,b,c)
++	AES_ROUND(16(%esp),d,a,b,c)
+ 	
+ 	movl	%edi,%edx
+ 	popl	%ecx
+@@ -112,23 +121,24 @@
+ 	C S-box substitution
+ 	mov	$4,%edi
+ .Lsubst:
+-	AES_SUBST_BYTE(C_NAME(_nettle_aes_encrypt_table))
++	AES_SUBST_BYTE((%esp))
+ 
+ 	decl	%edi
+ 	jnz	.Lsubst
+ 
+ 	C Add last subkey, and store encrypted data
+-	movl	28(%esp),%edi
++	movl	32(%esp),%edi
+ 	AES_STORE(%esi, %edi)
+ 	
+-	addl	$16, 28(%esp)	C Increment destination pointer
+-	subl	$16, 24(%esp)	C Length
++	addl	$16, 32(%esp)	C Increment destination pointer
++	subl	$16, 28(%esp)	C Length
+ 
+ 	C NOTE: Will loop forever if input data is not an
+ 	C integer number of blocks.
+ 	jnz	.Lblock_loop
+ 
+ .Lend: 
++	addl	$4, %esp
+ 	popl	%edi
+ 	popl	%esi
+ 	popl	%ebp
+@@ -136,6 +146,16 @@
+ 	ret
+ EPILOGUE(nettle_aes_encrypt)
+ 
++#ifdef __PIC__
++	.section	.gnu.linkonce.t.___i686.get_pc_thunk.bx,"ax",@progbits
++.globl ___i686.get_pc_thunk.bx
++	.hidden	___i686.get_pc_thunk.bx
++	.type	___i686.get_pc_thunk.bx, @function
++___i686.get_pc_thunk.bx:
++	movl	(%esp), %ebx
++	ret
++#endif
++
+ #ifdef __ELF__
+ .section .note.GNU-stack,"",@progbits
+ #endif
+--- nettle/x86/aes-decrypt.asm
++++ nettle/x86/aes-decrypt.asm
+@@ -31,20 +31,29 @@
+ 	pushl	%esi		C  8(%esp)
+ 	pushl	%edi		C  4(%esp)
+ 
+-	C ctx = 20(%esp)
+-	C length = 24(%esp)
+-	C dst = 28(%esp)
+-	C src = 32(%esp)
++#ifdef __PIC__
++#undef __i686
++	call	___i686.get_pc_thunk.bx
++	addl	$_GLOBAL_OFFSET_TABLE_, %ebx
++	pushl	C_NAME(_nettle_aes_decrypt_table)@GOT(%ebx)
++#else
++	pushl	C_NAME(_nettle_aes_decrypt_table)
++#endif
++
++	C ctx = 24(%esp)
++	C length = 28(%esp)
++	C dst = 32(%esp)
++	C src = 36(%esp)
+ 
+-	movl	24(%esp), %ebp
++	movl	28(%esp), %ebp
+ 	testl	%ebp,%ebp
+ 	jz	.Lend
+ 	
+ .Lblock_loop:
+-	movl	20(%esp),%esi	C  address of context struct ctx
+-	movl	32(%esp),%ebp	C  address of plaintext
++	movl	24(%esp),%esi	C  address of context struct ctx
++	movl	36(%esp),%ebp	C  address of plaintext
+ 	AES_LOAD(%esi, %ebp)
+-	addl	$16, 32(%esp)	C Increment src pointer
++	addl	$16, 36(%esp)	C Increment src pointer
+ 
+ 	C  get number of rounds to do from struct	
+ 	movl	AES_NROUNDS (%esi),%ebp	
+@@ -57,16 +66,16 @@
+ 	C In these patterns, note that each row, like
+ 	C "a,d,c,b" corresponds to one *column* of the 
+ 	C array _aes_decrypt_table.idx.
+-	AES_ROUND(C_NAME(_nettle_aes_decrypt_table),a,d,c,b)
++	AES_ROUND(4(%esp),a,d,c,b)
+ 	pushl	%edi		C  save first on stack
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_decrypt_table),b,a,d,c)
++	AES_ROUND(8(%esp),b,a,d,c)
+ 	pushl	%edi
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_decrypt_table),c,b,a,d)
++	AES_ROUND(12(%esp),c,b,a,d)
+ 	pushl	%edi		C  save first on stack
+ 
+-	AES_ROUND(C_NAME(_nettle_aes_decrypt_table),d,c,b,a)
++	AES_ROUND(16(%esp),d,c,b,a)
+ 
+ 	movl	%edi,%edx
+ 	popl	%ecx
+@@ -104,23 +113,24 @@
+ 	C inverse S-box substitution
+ 	mov	$4,%edi
+ .Lsubst:
+-	AES_SUBST_BYTE(C_NAME(_nettle_aes_decrypt_table))
++	AES_SUBST_BYTE((%esp))
+ 
+ 	decl	%edi
+ 	jnz	.Lsubst
+ 
+ 	C Add last subkey, and store encrypted data
+-	movl	28(%esp),%edi
++	movl	32(%esp),%edi
+ 	AES_STORE(%esi, %edi)
+ 	
+-	addl	$16, 28(%esp)	C Increment destination pointer
+-	subl	$16, 24(%esp)	C Length
++	addl	$16, 32(%esp)	C Increment destination pointer
++	subl	$16, 28(%esp)	C Length
+ 
+ 	C NOTE: Will loop forever if input data is not an
+ 	C integer number of blocks.
+ 	jnz	.Lblock_loop
+ 
+ .Lend: 
++	addl	$4, %esp
+ 	popl	%edi
+ 	popl	%esi
+ 	popl	%ebp
+@@ -128,6 +138,16 @@
+ 	ret
+ EPILOGUE(nettle_aes_decrypt)
+ 
++#ifdef __PIC__
++	.section	.gnu.linkonce.t.___i686.get_pc_thunk.bx,"ax",@progbits
++.globl ___i686.get_pc_thunk.bx
++	.hidden	___i686.get_pc_thunk.bx
++	.type	___i686.get_pc_thunk.bx, @function
++___i686.get_pc_thunk.bx:
++	movl	(%esp), %ebx
++	ret
++#endif
++
+ #ifdef __ELF__
+ .section .note.GNU-stack,"",@progbits
+ #endif
+--- nettle/x86/machine.m4
++++ nettle/x86/machine.m4
+@@ -36,19 +36,23 @@ define(<AES_ROUND>, <
+ 	movl	%e<>$2<>x, %esi
+ 	andl	<$>0xff, %esi
+ 	shll	<$>2,%esi		C  index in table
+-	movl	AES_TABLE0 + $1 (%esi),%edi
++	addl	$1, %esi
++	movl	AES_TABLE0 (%esi),%edi
+ 	movl	%e<>$3<>x, %esi
+ 	shrl	<$>6,%esi
+ 	andl	<$>0x000003fc,%esi C  clear all but offset bytes
+-	xorl	AES_TABLE1 + $1 (%esi),%edi
++	addl	$1, %esi
++	xorl	AES_TABLE1 (%esi),%edi
+ 	movl	%e<>$4<>x,%esi	C  third one
+ 	shrl	<$>14,%esi
+ 	andl	<$>0x000003fc,%esi
+-	xorl	AES_TABLE2 + $1 (%esi),%edi
++	addl	$1, %esi
++	xorl	AES_TABLE2 (%esi),%edi
+ 	movl	%e<>$5<>x,%esi	C  fourth one
+ 	shrl	<$>22,%esi
+ 	andl	<$>0x000003fc,%esi
+-	xorl	AES_TABLE3 + $1 (%esi),%edi>)dnl
++	addl	$1, %esi
++	xorl	AES_TABLE3 (%esi),%edi>)dnl
+ 
+ dnl AES_FINAL_ROUND(a, b, c, d)
+ dnl Computes one word of the final round. Leaves result in %edi.
+@@ -75,20 +79,24 @@ dnl the words one byte to the left.
+ define(<AES_SUBST_BYTE>, <
+ 	movl	%eax,%ebp
+ 	andl	<$>0x000000ff,%ebp
+-	movb	AES_SBOX + $1 (%ebp),%al
++	addl	$1, %ebp
++	movb	AES_SBOX (%ebp),%al
+ 	roll	<$>8,%eax
+ 
+ 	movl	%ebx,%ebp
+ 	andl	<$>0x000000ff,%ebp
+-	movb	AES_SBOX + $1 (%ebp),%bl
++	addl	$1, %ebp
++	movb	AES_SBOX (%ebp),%bl
+ 	roll	<$>8,%ebx
+ 
+ 	movl	%ecx,%ebp
+ 	andl	<$>0x000000ff,%ebp
+-	movb	AES_SBOX + $1 (%ebp),%cl
++	addl	$1, %ebp
++	movb	AES_SBOX (%ebp),%cl
+ 	roll	<$>8,%ecx
+ 
+ 	movl	%edx,%ebp
+ 	andl	<$>0x000000ff,%ebp
+-	movb	AES_SBOX + $1 (%ebp),%dl
++	addl	$1, %ebp
++	movb	AES_SBOX (%ebp),%dl
+ 	roll	<$>8,%edx>)dnl

@@ -1,0 +1,64 @@
+Make sure library is generated without an executable stack
+
+Patch by PaX team
+
+--- nettle/sparc/aes.asm
++++ nettle/sparc/aes.asm
+@@ -363,3 +363,7 @@
+ 	! aes256 (ECB decrypt): 11.13s, 0.898MB/s
+ 	! aes256 (CBC encrypt): 15.30s, 0.654MB/s
+ 	! aes256 (CBC decrypt): 12.93s, 0.773MB/s
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif
+--- nettle/x86/arcfour-crypt.asm
++++ nettle/x86/arcfour-crypt.asm
+@@ -89,3 +89,7 @@
+ 	popl	%ebx
+ 	ret
+ EPILOGUE(nettle_arcfour_crypt)
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif
+--- nettle/x86/aes.asm
++++ nettle/x86/aes.asm
+@@ -4,3 +4,7 @@
+ C isn't needed.
+ 
+ 	.file	"aes.asm"
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif
+--- nettle/x86/sha1-compress.asm
++++ nettle/x86/sha1-compress.asm
+@@ -322,3 +322,7 @@
+ C  of two instructions, one of which is a store, per two rounds. For the
+ C  twenty rounds involving f3, that's 20 instructions, 10 of which are
+ C  stores, or about 1.5 %.
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif
+--- nettle/x86/aes-encrypt.asm
++++ nettle/x86/aes-encrypt.asm
+@@ -135,3 +135,7 @@
+ 	popl	%ebx
+ 	ret
+ EPILOGUE(nettle_aes_encrypt)
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif
+--- nettle/x86/aes-decrypt.asm
++++ nettle/x86/aes-decrypt.asm
+@@ -127,3 +127,7 @@
+ 	popl	%ebx
+ 	ret
+ EPILOGUE(nettle_aes_decrypt)
++
++#ifdef __ELF__
++.section .note.GNU-stack,"",@progbits
++#endif

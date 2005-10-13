@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.9 2005/10/11 02:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.10 2005/10/13 05:28:41 vapier Exp $
+
+*nettle-1.13-r1 (13 Oct 2005)
+
+  13 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/nettle-1.13-PIC.patch, +files/nettle-1.13-no-exec-stack.patch,
+  +files/nettle-1.13-preprocess-asm.patch, +nettle-1.13-r1.ebuild:
+  Fixes from PaX team to address executable stacks and PIC bugs.
 
 *nettle-1.13 (11 Oct 2005)
 

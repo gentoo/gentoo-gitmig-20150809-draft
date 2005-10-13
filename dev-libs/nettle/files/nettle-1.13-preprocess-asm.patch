@@ -1,0 +1,26 @@
+Since we now use preprocessor macro's in the asm files, we
+need to make sure gcc preprocesses it.
+
+Patch by PaX team
+
+--- nettle/Makefile.in
++++ nettle/Makefile.in
+@@ -152,14 +152,14 @@
+ 
+ .asm.$(OBJEXT):
+ 	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
+-		$< >$*.s
+-	$(COMPILE) $(CCPIC_MAYBE) -c $*.s
++		$< >$*.S
++	$(COMPILE) $(CCPIC_MAYBE) -c $*.S
+ 	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
+ 
+ .asm.p$(OBJEXT):
+ 	$(M4) $(srcdir)/asm.m4 machine.m4 config.m4 \
+-		$< >$*.s
+-	$(COMPILE) $(SHLIBCFLAGS) -c $*.s -o $@
++		$< >$*.S
++	$(COMPILE) $(SHLIBCFLAGS) -c $*.S -o $@
+ 	echo "$@ : $< $(srcdir)/asm.m4 machine.m4 config.m4" >$@.d 
+ 
+ # Texinfo rules
