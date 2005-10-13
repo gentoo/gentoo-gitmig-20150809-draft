@@ -1,9 +1,19 @@
-MD5 9a82a68539185c9777061cf508dae977 ChangeLog 5892
-MD5 38d46371d4968b1adc706d093858b6ef gauche-0.8.3.ebuild 1122
-MD5 ab5917a111acfed4d7fd6abc15e4b3b9 gauche-0.8.5.ebuild 1122
-MD5 e9fa98743d1cf3b213a4b04f52baf5f8 metadata.xml 619
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 08de90c5a9a40897360d23714a3534c5 ChangeLog 6003
 MD5 27605cb14e108b005797503b884e6e67 files/digest-gauche-0.8.3 62
 MD5 662729c0ca18c20cd945fb332874362a files/digest-gauche-0.8.5 62
 MD5 58ca35453cb35833ef880d3e1d3ea5d2 files/gauche-aclocal.m4-1.31.diff 1099
 MD5 7bc4cbd7c32584661896116bd48fdee0 files/gauche-aclocal.m4-cc.diff 479
 MD5 177cc4fa4c84d465bab80e5b3adb5cc1 files/gauche-gdbm-gentoo.diff 729
+MD5 38d46371d4968b1adc706d093858b6ef gauche-0.8.3.ebuild 1122
+MD5 d73f1ec8639d0915e33d6d6ed3f1b573 gauche-0.8.5.ebuild 1131
+MD5 e9fa98743d1cf3b213a4b04f52baf5f8 metadata.xml 619
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTqwWwUpWvClEHQoRAhsRAJ9PiG2Vg6BSMLh6OlNAomC53h1ZuwCdEJZD
+UCX0I93CVekzhJDw+R0WEpM=
+=dQJ1
+-----END PGP SIGNATURE-----

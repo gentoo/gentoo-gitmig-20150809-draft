@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gauche
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.16 2005/07/24 14:24:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.17 2005/10/13 17:48:29 metalgod Exp $
+
+  13 Oct 2005; Luis Medinas <metalgod@gentoo.org> gauche-0.8.5.ebuild:
+  Added ~amd64 keyword. Bug #108735.
 
   24 Jul 2005; Akinori Hattori <hattya@gentoo.org> -gauche-0.8.4.ebuild:
   0.8.5 is the bug fix release of this.
