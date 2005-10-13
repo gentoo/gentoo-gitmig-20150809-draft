@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.5 2005/10/02 03:15:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.6 2005/10/13 18:42:24 killerfox Exp $
+
+  13 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  libspf2-1.2.5-r1.ebuild:
+  Unstable on hppa.
 
   02 Oct 2005; Jason Wever <weeve@gentoo.org> libspf2-1.2.5-r1.ebuild:
   Added ~sparc keyword.
