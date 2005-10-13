@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.2.ebuild,v 1.1 2005/10/13 13:13:28 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.2.ebuild,v 1.2 2005/10/13 19:30:49 mkay Exp $
 
 inherit flag-o-matic eutils
 
@@ -39,22 +39,29 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="X debug alsa arts esd voice speech nas oss spell ssl tcltk xmms xosd amarok extraicons extramodules mail"
+IUSE="debug alsa arts esd voice speech nas oss spell ssl tcltk
+	xmms xosd amarok extraicons extramodules mail config_wizard"
 
 DEPEND="=x11-libs/qt-3*
-	media-libs/libsndfile
-	alsa? ( media-libs/alsa-lib virtual/alsa )
-	arts? ( kde-base/arts )
+	alsa? ( media-libs/alsa-lib virtual/alsa
+	media-libs/libsndfile )
+	arts? ( kde-base/arts
+			media-libs/libsndfile )
+	esd? ( media-sound/esound
+			media-libs/libsndfile )
+	nas? ( media-libs/nas
+			media-libs/libsndfile )
+	oss? ( media-libs/libsndfile )
+	config_wizard? ( media-libs/libsndfile )
+	voice? ( media-libs/libsndfile )
 	amarok? ( media-sound/amarok )
-	esd? ( media-sound/esound )
-	nas? ( media-libs/nas )
 	spell? ( app-dicts/aspell-pl )
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
 	tcltk? ( >=dev-lang/tcl-8.4.0 >=dev-lang/tk-8.4.0 )
 	xmms? ( media-sound/xmms )
-	xosd? ( x11-libs/xosd )
-	X? ( virtual/x11 )"
+	xosd? ( x11-libs/xosd )"
+
 
 SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	amarok? ( http://scripts.one.pl/amarok/stable/0.4.0/amarok-${AMAROK}.tar.gz )
@@ -144,8 +151,6 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags -fno-rtti
-
 	# Enabling default iconset
 	module_config icons_default y
 
@@ -153,7 +158,6 @@ src_compile() {
 	module_config account_management m
 	module_config autoaway m
 	module_config autoresponder m
-	module_config config_wizard m
 	module_config dcc m
 	module_config default_sms m
 	module_config docking m
@@ -161,8 +165,9 @@ src_compile() {
 	module_config hints m
 	module_config notify m
 	module_config sms m
-	module_config sound m
 	module_config desktop_docking m
+	use config_wizard && \
+		( module_config sound m; module_config config_wizard m )
 
 	if use extramodules; then
 		if use !tcltk; then
@@ -186,13 +191,14 @@ src_compile() {
 	use ssl && module_config encryption y
 
 	# dynamic modules
-	use alsa && module_config alsa_sound m
-	use arts && module_config arts_sound m
-	use esd && module_config esd_sound m
-	use nas && module_config nas_sound m
-	use voice && module_config voice m
-	use X && module_config x11_docking m
-	use X && module_config wmaker_docking m
+	use alsa 	&&	( module_config sound m; module_config alsa_sound m )
+	use arts 	&& 	( module_config sound m; module_config arts_sound m )
+	use esd 	&&	( module_config sound m; module_config esd_sound m )
+	use nas 	&&	( module_config sound m; module_config nas_sound m )
+	use voice 	&&	( module_config sound m; module_config voice m )
+	use oss 	&&	( module_config sound m; module_config dsp_sound m )
+	module_config x11_docking m
+	module_config wmaker_docking m
 
 	# Some fixes
 	einfo "Fixing modules spec files"
@@ -207,7 +213,8 @@ src_compile() {
 
 	if use extramodules; then
 	    einfo "Changing default firewall log location to user's homedir/.gg/firewall.log"
-	    sed ${WORKDIR}/firewall.tcl -i -e 's%$module(scriptpath)/firewall.log%$env(HOME)/.gg/firewall.log%g'
+	    sed ${WORKDIR}/firewall.tcl -i -e \
+			's%$module(scriptpath)/firewall.log%$env(HOME)/.gg/firewall.log%g'
 	fi
 
 	local myconf
@@ -233,7 +240,8 @@ src_install() {
 		insinto /usr/share/kadu/modules/data/tcl_scripting/scripts
 		doins ${WORKDIR}/KaduChess/{data,pics,KaduChess.tcl}
 		# small fix form author's site
-		sed ${D}/usr/share/kadu/modules/data/tcl_scripting/scripts/KaduChess.tcl -i -e 's/on chat0 KC_recv KC_recv/on chat0 KC_recv/g'
+		sed ${D}/usr/share/kadu/modules/data/tcl_scripting/scripts/KaduChess.tcl -i -e \
+			's/on chat0 KC_recv KC_recv/on chat0 KC_recv/g'
 
 		einfo "Installing Firewall module"
 		doins ${WORKDIR}/firewall{.tcl,.png}
