@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/kdeedu-meta-3.4.3.ebuild,v 1.1 2005/10/13 00:09:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/kdeedu-meta-3.4.3.ebuild,v 1.2 2005/10/13 12:42:43 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
-DESCRIPTION="kdeedu 3.3.0 - merge this to pull in all kdeedu-derived packages"
+DESCRIPTION="kdeedu - merge this to pull in all kdeedu-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
