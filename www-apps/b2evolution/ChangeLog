@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/b2evolution
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.8 2005/10/13 14:57:04 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.9 2005/10/13 14:59:12 r3pek Exp $
+
+  13 Oct 2005; Carlos Silva <r3pek@gentoo.org>
+  -b2evolution-0.9.0.12-r2.ebuild:
+  Removed old version
 
 *b2evolution-0.9.1 (13 Oct 2005)
 
