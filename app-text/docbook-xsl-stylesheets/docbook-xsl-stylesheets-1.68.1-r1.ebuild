@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.68.1-r1.ebuild,v 1.10 2005/10/03 11:36:15 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.68.1-r1.ebuild,v 1.11 2005/10/13 00:06:56 leonardop Exp $
 
 DESCRIPTION="XSL Stylesheets for Docbook"
 HOMEPAGE="http://docbook.sourceforge.net/projects/xsl/index.html"
@@ -37,7 +37,7 @@ src_install() {
 		done
 
 		cd ${S}
-		cp -af ${i} ${D}/${DEST}
+		cp -pPRf ${i} ${D}/${DEST}
 	done
 
 	# Install the documentation

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.57 2005/10/03 11:36:15 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.58 2005/10/13 00:06:56 leonardop Exp $
+
+  13 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  docbook-xsl-stylesheets-1.66.1.ebuild,
+  docbook-xsl-stylesheets-1.68.1-r1.ebuild:
+  Modified 'cp' call as per bug #103487.
 
   03 Oct 2005; Hardave Riar <hardave@gentoo.org>
   docbook-xsl-stylesheets-1.68.1-r1.ebuild:

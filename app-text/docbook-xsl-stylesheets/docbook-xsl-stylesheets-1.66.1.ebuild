@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.66.1.ebuild,v 1.8 2005/04/08 12:31:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.66.1.ebuild,v 1.9 2005/10/13 00:06:56 leonardop Exp $
 
 DESCRIPTION="XSL Stylesheets for Docbook"
 HOMEPAGE="http://docbook.sourceforge.net/"
@@ -28,7 +28,7 @@ src_install() {
 	for i in ${sheets}; do
 
 		cd ${S}
-		cp -af ${i} ${D}/${DEST}
+		cp -pPRf ${i} ${D}/${DEST}
 		cd ${D}/${DEST}/${i}
 
 		[ -e ChangeLog ] && \
@@ -41,7 +41,7 @@ src_install() {
 	# Install the documentation
 	cd ${S}
 	dodoc BUGS TODO WhatsNew
-	cp -af doc ${D}/usr/share/doc/${PF}/html
+	cp -pPRf doc ${D}/usr/share/doc/${PF}/html
 	cp VERSION ${D}/${DEST}
 
 	# Only a few things in /usr/share/doc make sense to compress.
