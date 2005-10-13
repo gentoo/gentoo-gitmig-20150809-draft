@@ -1,12 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bd376642ae985629f764e5e51834131d ChangeLog 25599
-MD5 323192908f52dfb3288ffc92c0efc091 files/2.4.4-plugin-fixes.patch 1351
+MD5 84a785f24aff322195545dbad2f48403 ChangeLog 25826
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
 MD5 21bc6820aa6d0c8722509a74c7fccb3d files/digest-xchat-2.4.3 134
-MD5 9ad4dba7e07a9c38f4515bf2acbb9a66 files/digest-xchat-2.4.4-r2 150
 MD5 c5d53c24b3ebfec1f168930213f55fea files/digest-xchat-2.4.5 65
+MD5 055e7c834c44f30b024cb1ae04719f62 files/digest-xchat-2.5.0_pre20051013 77
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
 MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
 MD5 17073299c8c2c65062ad2e77cd03b841 files/xc245-fix-te-notify.diff 403
@@ -14,12 +13,12 @@ MD5 ee98eba7f1061680d8d0582a10d72cb7 files/xchat-dccserver-0.5.patch 11776
 MD5 fb5772136a872c08434566d4f0bcdc7f metadata.xml 179
 MD5 4634f562e01b219d3bcfb0ae6acb8397 xchat-1.8.11-r1.ebuild 2264
 MD5 f70fee92ab2e258ea7be208d0ddfa4b6 xchat-2.4.3.ebuild 2266
-MD5 c591165fd310fdeac6d0176bfe68d777 xchat-2.4.4-r2.ebuild 2452
 MD5 89e57e546fe0b1ffa905b08f20da69a3 xchat-2.4.5.ebuild 2301
+MD5 795889de752b7c47e177346019fcae82 xchat-2.5.0_pre20051013.ebuild 2122
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDJMo6I1lqEGTUzyQRAlYwAJsGTdCe1BLtGLM76nF3FMy6OFlWSQCgyUHu
-YwN0whMDC6OjtzYdDJe9dqI=
-=GiUq
+iD8DBQFDTnNRI1lqEGTUzyQRAr8MAKCU32w8Rnr48MbnP2K+81xp4fIkMACfZQNn
+YfOwz8ucolIt5nedQp+5rac=
+=TdrG
 -----END PGP SIGNATURE-----
