@@ -1,6 +1,16 @@
-MD5 209075b72d313e717b2aadb1cc3413a7 ChangeLog 1123
-MD5 0bbfd32ca9864625c55ab6460dbbd963 metadata.xml 755
-MD5 d58919993279f6287afbea62c5d5a658 t-coffee-2.50.ebuild 1289
-MD5 0cef4109c15c0f7f6a4307dd162c6823 t-coffee-2.66.ebuild 1143
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 482f901b4cc06efa6e9e5f90587300f4 ChangeLog 1212
 MD5 fa17e53f0288a9e7046c7a15bfe12cb7 files/digest-t-coffee-2.50 87
 MD5 ed78ff61d489ff54debcffde53dca64e files/digest-t-coffee-2.66 87
+MD5 0bbfd32ca9864625c55ab6460dbbd963 metadata.xml 755
+MD5 d58919993279f6287afbea62c5d5a658 t-coffee-2.50.ebuild 1289
+MD5 45b40d372b805c5f8594e943561c2f0c t-coffee-2.66.ebuild 1144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTfvuCRZPokWLroQRAnzbAKDmAl0z82p5zB2QYlWt9OgHx06+MwCfe/xp
+Bcvz80GLaGaFVmkaerAHXq4=
+=fRGq
+-----END PGP SIGNATURE-----
