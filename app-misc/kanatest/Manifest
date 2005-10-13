@@ -1,4 +1,14 @@
-MD5 03c2172f424eb5905572bc046f4f96b5 ChangeLog 834
-MD5 b821db8397853807bc6e5cf31312959e kanatest-0.3.6.ebuild 587
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 608880e6e95579f6348089eba3027dde ChangeLog 949
 MD5 3c4131f0b62eb6170fd975ae6b9d1283 files/digest-kanatest-0.3.6 66
+MD5 9b8d4c5787557b2703e69dcdffc97c20 kanatest-0.3.6.ebuild 584
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTu8AI1lqEGTUzyQRAlbOAKDfo0IS7niG6bUfkM7GEZH/i0zEOgCfZQEx
+WR8dN2pJ14d6i1lNwi/Wu9g=
+=chqb
+-----END PGP SIGNATURE-----

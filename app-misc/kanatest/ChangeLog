@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.8 2005/07/21 17:21:05 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.9 2005/10/13 23:34:10 swegener Exp $
+
+  13 Oct 2005; Sven Wegener <swegener@gentoo.org> kanatest-0.3.6.ebuild:
+  Added missing pkgconfig dependency.
 
   21 Jul 2005; David Holm <dholm@gentoo.org> kanatest-0.3.6.ebuild:
   Added to ~ppc.
