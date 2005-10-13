@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kvoctrain
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.23 2005/10/13 00:10:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.24 2005/10/13 19:08:43 danarmak Exp $
+
+  13 Oct 2005; Dan Armak <danarmak@gentoo.org> kvoctrain-3.4.3.ebuild:
+  Added ~alpha keyword (with OK from alpha team member kloeri) since
+  kdeedu-3.4.3 has it.
 
 *kvoctrain-3.4.3 (13 Oct 2005)
 
