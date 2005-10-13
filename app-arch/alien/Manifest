@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41cd004a6833de51c89133a1bbe03a66 ChangeLog 1594
-MD5 fc7d4e5519fb6815b854de3faa8dd784 alien-8.47.ebuild 991
-MD5 99b2dabecb4e5cf792013801c676a55b alien-8.53.ebuild 994
-MD5 c1dd8145bb2ba4dffe27cebb2e66498f files/digest-alien-8.47 61
-MD5 869a00fbb58ca01403a80930ad635859 files/digest-alien-8.53 61
 MD5 6e77f3196f8735be5ba01cafd0c6b1bc metadata.xml 219
+MD5 3de366b79d3405ee0caa35e4f0875ca5 ChangeLog 1693
+MD5 99b2dabecb4e5cf792013801c676a55b alien-8.53.ebuild 994
+MD5 32a48b430a53694588bbe69330284cdc alien-8.47.ebuild 990
+MD5 869a00fbb58ca01403a80930ad635859 files/digest-alien-8.53 61
+MD5 c1dd8145bb2ba4dffe27cebb2e66498f files/digest-alien-8.47 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDJDmKI1lqEGTUzyQRAuXmAJ9u/kWfLf9O2Ri4nQakparSNUmh5QCg2yB/
-JL+DlpmRSlORIUgWqJRLWHc=
-=75lW
+iD8DBQFDTqDXJrHF4yAQTrARAoMdAKClJHng+C9l+MREUsl8dd1dvQx8/QCfShc+
+vW70aPOwRR+EK1XA9t9t1E4=
+=ADDL
 -----END PGP SIGNATURE-----
