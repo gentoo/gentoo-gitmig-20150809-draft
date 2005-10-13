@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/corewars
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/ChangeLog,v 1.7 2005/06/15 19:09:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/ChangeLog,v 1.8 2005/10/13 20:33:49 mr_bones_ Exp $
+
+  13 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -corewars-0.9.12.ebuild, -corewars-0.9.13.ebuild:
+  clean older ebuilds
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   corewars-0.9.12.ebuild, corewars-0.9.13.ebuild:
