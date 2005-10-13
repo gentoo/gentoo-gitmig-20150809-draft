@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.85 2005/10/13 19:07:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.86 2005/10/13 21:44:51 fuzzyray Exp $
+
+  13 Oct 2005; Paul Varner <fuzzyray@gentoo.org>
+  mozilla-thunderbird-1.0.7.ebuild:
+  Stable on x86. Bug #109094
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-1.0.7.ebuild:

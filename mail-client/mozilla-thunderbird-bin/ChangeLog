@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.33 2005/10/02 20:12:59 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.34 2005/10/13 21:46:03 fuzzyray Exp $
+
+  13 Oct 2005; Paul Varner <fuzzyray@gentoo.org>
+  mozilla-thunderbird-bin-1.0.7.ebuild:
+  Stable on x86. Bug #109094
 
 *mozilla-thunderbird-bin-1.0.7 (02 Oct 2005)
 
