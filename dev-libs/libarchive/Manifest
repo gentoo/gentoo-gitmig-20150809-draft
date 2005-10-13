@@ -1,12 +1,24 @@
-MD5 dc6a6d5159bb33e3305f39bd33cc824e ChangeLog 2543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf027c79b67819bdd2f7a00247a62094 ChangeLog 2860
 MD5 7050cbd8598ed396d741592975d848ce files/digest-libarchive-1.02.027 71
 MD5 7050cbd8598ed396d741592975d848ce files/digest-libarchive-1.02.027-r1 71
 MD5 d7fe2d46a0582f18a38c90c0e79545d2 files/digest-libarchive-1.02.030 71
 MD5 7bf2f3770c7741740f3b554684b51b9b files/digest-libarchive-1.02.034 71
+MD5 b32445efe19aa2ded4fca7547554ee4d files/digest-libarchive-1.02.036 71
 MD5 180a813572b34500cce919b95ec86b65 files/libarchive-1.02.027-libtool.patch 1554
 MD5 7fe214e0de0090f3344a9e4a1792a5b3 files/libarchive-1.02.027-osx.patch 609
 MD5 45386ed25b5c1a63e390e4fb028833f0 libarchive-1.02.027-r1.ebuild 1146
 MD5 6530e11ad3afae081d8c1cd12c6fdd39 libarchive-1.02.027.ebuild 691
 MD5 058ca8290fc079a14c0351832972f51a libarchive-1.02.030.ebuild 1022
 MD5 5ef52636cd37dc7827071fce176d4ed3 libarchive-1.02.034.ebuild 1033
+MD5 f067afe25b7c47e0b31688b11a8f6d7a libarchive-1.02.036.ebuild 855
 MD5 985eb3e6f7fb60fd3651ba1cae41c609 metadata.xml 464
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTisQj5H05b2HAEkRAshKAJ9MLpWNvRelRgL2QW5pdYzTIxzBXQCdFj9T
+AndppX6aTAF9qf16jOf+mc4=
+=4h0R
+-----END PGP SIGNATURE-----
