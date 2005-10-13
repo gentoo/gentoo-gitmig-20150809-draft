@@ -1,7 +1,17 @@
-MD5 b03dc337379003c95270d3ca20c89e8e simh-3.5.0.ebuild 1116
-MD5 38e799a79ed7992f527d662e4b4e1df4 simh-3.3.0.ebuild 1115
-MD5 d566c636e662859023847d37bdd232df ChangeLog 532
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 1dc0c3f3a27cb7fb307f8d027cb65f85 files/makefile.patch 383
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 33f5de37bbb9612c89525e971bceae3c ChangeLog 637
 MD5 ff5b80de0c6ccbeb7007cd208b3882d1 files/digest-simh-3.3.0 59
 MD5 106dbb8bf6477a1d79d4eced5719a9a8 files/digest-simh-3.5.0 59
+MD5 1dc0c3f3a27cb7fb307f8d027cb65f85 files/makefile.patch 383
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 38e799a79ed7992f527d662e4b4e1df4 simh-3.3.0.ebuild 1115
+MD5 35eb7fe797aa3fb3833b080bbb1c387e simh-3.5.0.ebuild 1121
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTq3cwUpWvClEHQoRApwkAJ9rSFIoc+nKCT+IQ9mye4+YNhdsggCeLyd5
+xSgCRJmn/Grj9AG5KZljtv4=
+=kDwa
+-----END PGP SIGNATURE-----
