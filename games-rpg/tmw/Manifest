@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fbd471b6adf37768789e9b34f435121 ChangeLog 1730
-MD5 a933813e8f649c13b231f99f5639b421 files/digest-tmw-0.0.16-r1 127
-MD5 e49ce75b0ee692a5348fa56fbda9648b files/digest-tmw-0.0.17 127
-MD5 6e873b44081c25fa618a3bd28d74f86c files/tmw-0.0.12-desktop.patch 757
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 f64825736e53be2ee93876dd3cec6056 tmw-0.0.16-r1.ebuild 1415
-MD5 d360e804b2b7aaf374e21fc3afc6c4f8 tmw-0.0.17.ebuild 1412
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDTaBMgIKl8Uu19MoRAt8hAJ0SdsLagLsLq8XCNjlOhNukFKsW5wCffmLB
-DEOzblX2ndvTNlPW08DxLs0=
-=VAn2
------END PGP SIGNATURE-----
+MD5 5fbd471b6adf37768789e9b34f435121 ChangeLog 1730
+MD5 629f3b5d9b44aafc605d5d0489a82985 tmw-0.0.17.ebuild 1435
+MD5 e49ce75b0ee692a5348fa56fbda9648b files/digest-tmw-0.0.17 127
+MD5 a933813e8f649c13b231f99f5639b421 files/digest-tmw-0.0.16-r1 127
+MD5 6e873b44081c25fa618a3bd28d74f86c files/tmw-0.0.12-desktop.patch 757
