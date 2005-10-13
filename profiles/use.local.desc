@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1496 2005/10/13 14:04:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1497 2005/10/13 19:29:37 mkay Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -784,6 +784,7 @@ net-im/gaim:silc - Enable SILC protocol support
 net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:amarok - Enables amarok support in kadu
+net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:extraicons - Enables extra icon sets
 net-im/kadu:extramodules - Enables extra module in kadu
 net-im/kadu:mail - Enables mail module in kadu
