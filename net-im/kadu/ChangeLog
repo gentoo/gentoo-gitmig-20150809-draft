@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.32 2005/10/08 17:25:38 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.33 2005/10/13 13:13:28 mkay Exp $
+
+*kadu-0.4.2 (13 Oct 2005)
+
+  13 Oct 2005; <mkay@gentoo.org> +kadu-0.4.2.ebuild:
+  Version bump
 
 *kadu-0.4.1-r1 (08 Oct 2005)
 
