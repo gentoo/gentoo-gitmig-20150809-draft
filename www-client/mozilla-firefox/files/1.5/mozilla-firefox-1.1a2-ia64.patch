@@ -1,0 +1,75 @@
+--- mozilla.orig/extensions/transformiix/source/base/Double.cpp
++++ mozilla/extensions/transformiix/source/base/Double.cpp
+@@ -75,14 +75,7 @@
+ #define CPU_IS_ARM
+ #endif
+ 
+-#if (__GNUC__ == 2 && __GNUC_MINOR__ > 95) || __GNUC__ > 2
+-/**
+- * This version of the macros is safe for the alias optimizations
+- * that gcc does, but uses gcc-specific extensions.
+- */
+-
+ typedef union txdpun {
+-    PRFloat64 d;
+     struct {
+ #if defined(IS_LITTLE_ENDIAN) && !defined(CPU_IS_ARM)
+         PRUint32 lo, hi;
+@@ -90,8 +83,14 @@
+         PRUint32 hi, lo;
+ #endif
+     } s;
++    PRFloat64 d;
+ } txdpun;
+ 
++#if (__GNUC__ == 2 && __GNUC_MINOR__ > 95) || __GNUC__ > 2
++/**
++ * This version of the macros is safe for the alias optimizations
++ * that gcc does, but uses gcc-specific extensions.
++ */
+ #define TX_DOUBLE_HI32(x) (__extension__ ({ txdpun u; u.d = (x); u.s.hi; }))
+ #define TX_DOUBLE_LO32(x) (__extension__ ({ txdpun u; u.d = (x); u.s.lo; }))
+ 
+@@ -117,20 +116,20 @@
+ 
+ //-- Initialize Double related constants
+ #ifdef IS_BIG_ENDIAN
+-const PRUint32 nanMask[2] =    {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK,
+-                                0xffffffff};
+-const PRUint32 infMask[2] =    {TX_DOUBLE_HI32_EXPMASK, 0};
+-const PRUint32 negInfMask[2] = {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT, 0};
++const txdpun nanMask =    {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK,
++                           0xffffffff};
++const txdpun infMask =    {TX_DOUBLE_HI32_EXPMASK, 0};
++const txdpun negInfMask = {TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT, 0};
+ #else
+-const PRUint32 nanMask[2] =    {0xffffffff,
+-                                TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK};
+-const PRUint32 infMask[2] =    {0, TX_DOUBLE_HI32_EXPMASK};
+-const PRUint32 negInfMask[2] = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
++const txdpun nanMask = {0xffffffff,
++                        TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_MANTMASK};
++const txdpun infMask =    {0, TX_DOUBLE_HI32_EXPMASK};
++const txdpun negInfMask = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
+ #endif
+ 
+-const double Double::NaN = *((double*)nanMask);
+-const double Double::POSITIVE_INFINITY = *((double*)infMask);
+-const double Double::NEGATIVE_INFINITY = *((double*)negInfMask);
++const double Double::NaN = nanMask.d;
++const double Double::POSITIVE_INFINITY = infMask.d;
++const double Double::NEGATIVE_INFINITY = negInfMask.d;
+ 
+ /*
+  * Determines whether the given double represents positive or negative
+--- mozilla.orig/js/src/fdlibm/fdlibm.h
++++ mozilla/js/src/fdlibm/fdlibm.h
+@@ -61,7 +61,7 @@
+ #define __LITTLE_ENDIAN
+ #endif
+ 
+-#if defined(linux) && (defined(__i386__) || defined(__x86_64__) || defined(__ia64))
++#if defined(linux) && (defined(__i386__) || defined(__x86_64__) || defined(__ia64) || defined(__MIPSEL))
+ #define __LITTLE_ENDIAN
+ #endif
+ 

@@ -1,13 +1,8 @@
 [Desktop Entry]
-Version=1.0
-Encoding=UTF-8
 Name=Mozilla Firefox
-GenericName=Web Browser
-Comment=Browse the Web
+Comment=Web Browser
 Exec=/usr/bin/firefox %U
-Icon=firefox-icon.png
+Icon=deerpark-icon.png
 Terminal=false
 Type=Application
-StartupWMClass=Firefox-bin
-MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;
 Categories=Application;Network;
