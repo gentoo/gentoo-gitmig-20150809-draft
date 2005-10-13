@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.1 2005/10/08 21:43:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.2 2005/10/13 06:46:23 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -39,7 +39,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	jasper? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( sci-libs/geos )
-	grass? ( ~sci-geosciences/grass-6.0.0 )
+	grass? ( >=sci-geosciences/grass-6.0.0 )
 	sqlite? ( dev-db/sqlite )
 	doc? ( app-doc/doxygen )"
 
@@ -74,7 +74,7 @@ src_compile() {
 
 	# It can't find this
 	if useq ogdi ; then
-	    use_conf="--with-ogdi=/usr/lib ${use_conf}"
+	    use_conf="--with-ogdi=/usr/${get_libdir} ${use_conf}"
 	fi
 
 	if useq gif ; then
