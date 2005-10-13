@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.243 2005/09/30 22:46:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.244 2005/10/13 13:11:39 hardave Exp $
+
+  13 Oct 2005; Hardave Riar <hardave@gentoo.org> mysql-4.0.25-r2.ebuild:
+  Stable on mips.
 
   30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> mysql-4.0.24.ebuild:
   Stable on sh.
