@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.12.0.ebuild,v 1.5 2005/10/11 15:39:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.12.0.ebuild,v 1.6 2005/10/13 15:12:38 allanonjl Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -154,15 +154,15 @@ pkg_postinst() {
 	einfo " export WINDOW_MANAGER=\"/usr/bin/metacity\""
 	einfo "of course this works for all other window managers as well"
 	einfo
-	einfo "To take full advantage of GNOME's functionality, please start"
-	einfo "the File Alteration Monitoring service (famd) before using"
-	einfo "GNOME, unless you have a specific reason for not doing so."
+	einfo "To take full advantage of GNOME's functionality, please emerge"
+	einfo "gamin, a File Alteration Monitor."
+	einfo "Make sure you have inotify enabled in your kernel ( >=2.6.13 )"
 	einfo
-	einfo "To start famd now use:"
-	einfo "'/etc/init.d/famd start'"
+	einfo "Make sure you rc-update del famd and emerge unmerge fam if you"
+	einfo "are switching from fam to gamin."
 	einfo
-	einfo "And please ensure you add it to the default runlevel using:"
-	einfo "'rc-update add famd default'"
+	einfo "If you have problems, you may want to try using fam instead."
+	einfo
 	einfo
 	einfo "Add yourself to the plugdev group if you want"
 	einfo "automounting to work."
