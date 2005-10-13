@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2-r1.ebuild,v 1.9 2005/07/25 15:29:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.2-r1.ebuild,v 1.10 2005/10/13 13:29:17 greg_g Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
@@ -23,11 +23,6 @@ DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	>=dev-libs/glib-2
 	$(qt_min_version 3.3)"
 
-# patch to configure.in.in that makes the vorbis, libmad deps optional
-# has no version number in its filename because it's the same for all
-# arts versions - the patched file hasn't changed in a year's time
-# PATCHES="$FILESDIR/optional-deps.diff"
-
 src_unpack() {
 	kde_src_unpack
 	epatch ${FILESDIR}/1.3.0-jack-configure.in.in.patch
@@ -42,9 +37,6 @@ src_unpack() {
 	# rm -f $S/configure
 
 	cd ${S} && make -f admin/Makefile.common
-	# use amd64 && epatch ${FILESDIR}/arts-${PV}-buffer.patch
-	# this patch fixes the high cpu usage of mp3 and vorbis
-	# epatch ${FILESDIR}/arts-vorbis-fix.dif
 }
 
 src_compile() {
