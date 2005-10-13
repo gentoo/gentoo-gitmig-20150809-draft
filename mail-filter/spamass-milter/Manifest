@@ -1,9 +1,19 @@
-MD5 67c48744c5889f36bc412e727ea79be3 ChangeLog 1593
-MD5 06dd3cc51e395ab6b5a26a08d478a20b metadata.xml 224
-MD5 3c5e71a09169653de6ba7d4f00692de5 spamass-milter-0.2.0.ebuild 1097
-MD5 4f82509f75ac4cc73e67765d96deae98 spamass-milter-0.3.0.ebuild 1105
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 137c14e631c9102130ff3ebaeb69ab39 ChangeLog 1726
 MD5 6eb8a3de8515f037fac65110c0f01563 files/README.gentoo 756
 MD5 8366b48906aec5d343a1796672b3bea3 files/digest-spamass-milter-0.2.0 72
+MD5 61950fa1041550e97fa464db1faafa92 files/digest-spamass-milter-0.3.0 73
 MD5 9b3cd222a3e0e7e2d9efcf05ab733597 files/spamass-milter.conf 388
 MD5 6a292dff25de76c223735d09f8c25c8b files/spamass-milter.rc 750
-MD5 61950fa1041550e97fa464db1faafa92 files/digest-spamass-milter-0.3.0 73
+MD5 06dd3cc51e395ab6b5a26a08d478a20b metadata.xml 224
+MD5 3c5e71a09169653de6ba7d4f00692de5 spamass-milter-0.2.0.ebuild 1097
+MD5 08a092a3b744343ec727b467b63b5907 spamass-milter-0.3.0.ebuild 1115
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDTmN0KRy60XGEcJIRAu7eAKCgDJ/v3ljXh5+hUtVXwrNspUYuTgCgomax
+oAruTXb8PJKw1vX3MHsPvZY=
+=PHTV
+-----END PGP SIGNATURE-----
