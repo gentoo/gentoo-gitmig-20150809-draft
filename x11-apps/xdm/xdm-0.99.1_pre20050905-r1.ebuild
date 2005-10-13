@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-0.99.1_pre20050905-r1.ebuild,v 1.1 2005/09/06 19:36:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-0.99.1_pre20050905-r1.ebuild,v 1.2 2005/10/13 04:51:36 spyderous Exp $
 
 inherit versionator
 
@@ -27,7 +27,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 CONFIGURE_OPTIONS="$(use_enable xprint)
 	$(use_enable ipv6)
-	$(use_with pam)"
+	$(use_with pam)
+	--libdir=/etc/X11"
 
 pkg_setup() {
 	if use xprint && ! built_with_use x11-libs/libXaw xprint; then
