@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.12.1.ebuild,v 1.1 2005/10/09 07:11:34 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.12.1.ebuild,v 1.2 2005/10/13 01:49:13 joem Exp $
 
 inherit gnome2
 
@@ -15,7 +15,8 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomecanvas-2
-	>=dev-libs/glib-2.7.3"
+	>=dev-libs/glib-2.7.3
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
