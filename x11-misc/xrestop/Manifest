@@ -1,6 +1,16 @@
-MD5 95125a9b1e250f434f70a74aa1cbf365 xrestop-0.2.ebuild 590
-MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
-MD5 a947f4aedd552f1e80bba593be07af53 ChangeLog 1462
-MD5 bd36997cbf522831efbb4aa198f9d255 xrestop-0.3.ebuild 631
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba940ec5200152f7149eee28d08380cf ChangeLog 1595
 MD5 12fce93e62dc29cb74ecb54bd5c77b9b files/digest-xrestop-0.2 62
 MD5 3a3ff3bc2fa0dac8838dc57d4b7ef99b files/digest-xrestop-0.3 62
+MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 32d73a278e2ae93de5b08650b9b21883 xrestop-0.2.ebuild 592
+MD5 12dbc5506d270e664aff211970c49684 xrestop-0.3.ebuild 630
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTvOJI1lqEGTUzyQRAhojAKDPasLtM857whpMY3jVphdSGbtzUgCeINKp
+V0GzfXYbn8DpFtH9paH+QSM=
+=cJ0R
+-----END PGP SIGNATURE-----
