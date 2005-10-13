@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.7 2005/07/13 16:34:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.8 2005/10/13 18:24:25 zzam Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if has_version x11-base/xorg-x11 && ! built_with_use x11-base/xorg-x11 xv; then
-		die "You need xv support to compile transcode."
+		die "You need xorg-x11 emerged with xv support to compile transcode."
 	fi
 }
 

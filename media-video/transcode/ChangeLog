@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.113 2005/09/17 19:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.114 2005/10/13 18:24:25 zzam Exp $
+
+  13 Oct 2005; Matthias Schwarzott <zzam@gentoo.org>
+  transcode-0.6.14-r2.ebuild, transcode-1.0.0.ebuild:
+  Made error message about missing xv for xorg-x11 a bit more useful.
 
   27 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> transcode-1.0.0.ebuild:
   Removed gcc-3 dependency from 1.0 series. Closes #100495.
