@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.57 2005/10/03 03:32:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.58 2005/10/14 03:52:23 allanonjl Exp $
+
+*sound-juicer-2.12.2-r1 (14 Oct 2005)
+
+  14 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/sound-juicer-2.12.2-file-chooser-3.patch,
+  +sound-juicer-2.12.2-r1.ebuild:
+  apply patch to fix when going to edit->preferences, fixes #108895
 
 *sound-juicer-2.12.2 (03 Oct 2005)
 
