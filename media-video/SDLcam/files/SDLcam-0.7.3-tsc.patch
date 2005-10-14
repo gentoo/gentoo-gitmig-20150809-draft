@@ -1,0 +1,51 @@
+Patch by Tobias Klausmann to fix TSC issues on Pentium M's
+
+http://bugs.gentoo.org/109161
+
+--- misc.c
++++ misc.c
+@@ -25,6 +25,11 @@
+ #include "dyn_misc.h"
+ #include "misc.h"
+ 
++#define rdtsc(low,high) \
++     __asm__ __volatile__("rdtsc" : "=a" (low), "=d" (high))
++
++
++
+ char *xStrdup (const char *t) {{{
+   char *ret;
+   ret = strdup (t);
+@@ -42,18 +47,9 @@
+ 
+ void getTimeStampCounter ( TimeStampCounter *t ) {{{
+ #ifdef TIMER	
+-	unsigned int h=t->high;
+-	unsigned int l=t->low ;
+-	asm (	
+-		"push %%eax	\n"
+-		"push %%edx	\n"
+-		"rdtsc		\n"
+-		"movl %%eax,%1	\n"
+-		"movl %%edx,%0	\n"
+-		"pop  %%edx	\n"
+-		"pop  %%edx	\n"
+-		: "=m" (h) , "=m" (l)
+-	    );
++	unsigned long h=t->high;
++	unsigned long l=t->low ;
++	rdtsc(l,h);
+ 	t->high = h;
+ 	t->low  = l;
+ #else	
+--- misc.h.orig	2005-10-08 13:52:05.000000000 +0200
++++ misc.h	2005-10-08 13:52:18.000000000 +0200
+@@ -24,7 +24,7 @@
+ 
+ char *xStrdup (const char *t);
+ 
+-typedef struct { unsigned int high, low; } TimeStampCounter;
++typedef struct { unsigned long high, low; } TimeStampCounter;
+ void getTimeStampCounter ( TimeStampCounter *t );
+ void Start_Timer (unsigned int idx);
+ void Ende_Timer  (unsigned int idx);

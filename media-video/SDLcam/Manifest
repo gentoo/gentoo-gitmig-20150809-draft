@@ -1,17 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 604fa3f460ad81bae5763faca26059b0 ChangeLog 752
-MD5 9c86830b089cab3e08a1f927b14d78b9 metadata.xml 579
+MD5 afb9134e4f2a677d88851973c1a88dab ChangeLog 974
 MD5 7b80507b7eb8ac2429c56569cd60cc3d SDLcam-0.7.3-r1.ebuild 1517
+MD5 683da4b3fc1258de05b95134b1a43471 SDLcam-0.7.3-r2.ebuild 1626
 MD5 2357ecf5188cac42c1b2d985a8f4a036 files/0.7.3-gcc3.patch 3271
-MD5 a523b1e156a6131b8713b7d1e1206d9b files/0.7.3-no-divx.patch 395
-MD5 0c1ad55a2817e3ef4a1141f8ba9ccefb files/digest-SDLcam-0.7.3-r1 64
 MD5 eb83f71dceccfba016349f3f2cf22538 files/0.7.3-linux-2.6.patch 517
+MD5 a523b1e156a6131b8713b7d1e1206d9b files/0.7.3-no-divx.patch 395
+MD5 f0dcf5387852f05d423f26f645d4df43 files/SDLcam-0.7.3-prototypes.patch 1045
+MD5 6a6efe94d07cda44c908c7cf8fcfcc2a files/SDLcam-0.7.3-tsc.patch 1172
+MD5 0c1ad55a2817e3ef4a1141f8ba9ccefb files/digest-SDLcam-0.7.3-r1 64
+MD5 0c1ad55a2817e3ef4a1141f8ba9ccefb files/digest-SDLcam-0.7.3-r2 64
+MD5 9c86830b089cab3e08a1f927b14d78b9 metadata.xml 579
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBjBidHTu7gpaalycRAo5mAJ43rvXFyxreDYgjl2Ddggv5tSiciQCgkWg1
-y/70ur6k+Hwj8W6kZv8+r8g=
-=s/gi
+iD8DBQFDTv39gIKl8Uu19MoRAgyoAJwLm2SMaAxZndF08+u/N/5UxVH3igCfX3Or
+lly6fz7IlMvV0kNxMLCEs/w=
+=oNwr
 -----END PGP SIGNATURE-----
