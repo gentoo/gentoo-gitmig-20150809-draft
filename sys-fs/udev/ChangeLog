@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.142 2005/09/16 11:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.143 2005/10/14 17:55:54 r3pek Exp $
+
+  14 Oct 2005; Carlos Silva <r3pek@gentoo.org> udev-068-r1.ebuild,
+  udev-070.ebuild:
+  Added a workaround to the md5sum calculation. Older versions of coreutils
+  doesn't return the end '-'
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org> udev-068-r1.ebuild:
   Mark 068-r1 stable on alpha

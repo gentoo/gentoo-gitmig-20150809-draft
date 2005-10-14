@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-070.ebuild,v 1.1 2005/09/14 23:46:22 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-070.ebuild,v 1.2 2005/10/14 17:55:54 r3pek Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,6 +29,7 @@ export USE_KLIBC
 
 
 pkg_setup() {
+	# Why is check_KV needed here?!
 	[ "${USE_KLIBC}" = "true" ] && check_KV
 
 	return 0
@@ -49,8 +50,9 @@ src_unpack() {
 
 	# Make sure there is no sudden changes to udev.rules.gentoo
 	# (more for my own needs than anything else ...)
-	if [ "`md5sum < "${S}/etc/udev/gentoo/udev.rules"`" != \
-	     "84fa41fd643ad2afeb922b3048cfd05f  -" ]
+	MD5=`md5sum < "${S}/etc/udev/gentoo/udev.rules"`
+	MD5=${MD5/  -/}
+	if [ "${MD5}" != "84fa41fd643ad2afeb922b3048cfd05f" ]
 	then
 		echo
 		eerror "gentoo/udev.rules has been updated, please validate!"
