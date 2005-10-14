@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.210 2005/10/14 03:27:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.211 2005/10/14 03:42:06 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -76,6 +76,7 @@ if [[ ${PV} != ${PV/_alpha/} ]] ; then
 elif [[ ${PV} != ${PV/_beta/} ]] ; then
 	SNAPSHOT=${GCC_BRANCH_VER}-${PV##*_beta}
 fi
+export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
 
 if [[ ${ETYPE} == "gcc-library" ]] ; then
 	GCC_VAR_TYPE=${GCC_VAR_TYPE:-non-versioned}
@@ -1011,7 +1012,7 @@ gcc_src_unpack() {
 	einfo "Fixing misc issues in configure files"
 	for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
 		ebegin "  Updating ${f/${S}\/}"
-		patch "${f}" "${FILESDIR}"/gcc-configure-LANG.patch >& "${T}"/configure-patch.log \
+		patch "${f}" "${GCC_FILESDIR}"/gcc-configure-LANG.patch >& "${T}"/configure-patch.log \
 			|| eerror "Please file a bug about this"
 		eend $?
 	done
@@ -1611,9 +1612,9 @@ gcc-compiler_src_install() {
 	# between binary and source package borks things ....
 	if ! is_crosscompile; then
 		insinto /lib/rcscripts/awk
-		doins ${FILESDIR}/awk/fixlafiles.awk
+		doins "${GCC_FILESDIR}"/awk/fixlafiles.awk
 		exeinto /sbin
-		doexe ${FILESDIR}/fix_libtool_files.sh
+		doexe "${GCC_FILESDIR}"/fix_libtool_files.sh
 	fi
 
 	# use gid of 0 because some stupid ports don't have
@@ -1787,7 +1788,7 @@ exclude_gcc_patches() {
 do_gcc_stub() {
 	local v stub_patch=""
 	for v in ${GCC_RELEASE_VER} ${GCC_BRANCH_VER} ; do
-		stub_patch=${FILESDIR}/stubs/gcc-${v}-$1-stub.patch
+		stub_patch=${GCC_FILESDIR}/stubs/gcc-${v}-$1-stub.patch
 		if [[ -e ${stub_patch} ]] ; then
 			EPATCH_SINGLE_MSG="Applying stub patch for $1 ..." \
 			epatch "${stub_patch}"
@@ -1852,7 +1853,7 @@ do_gcc_SSP_patches() {
 	epatch ${ssppatch}
 
 	if [[ ${PN} == "gcc" && ${sspdocs} == "no" ]] ; then
-		epatch ${FILESDIR}/pro-police-docs.patch
+		epatch "${GCC_FILESDIR}"/pro-police-docs.patch
 	fi
 
 	# we apply only the needed parts of protectonly.dif
@@ -1864,7 +1865,7 @@ do_gcc_SSP_patches() {
 	# cc1: stack smashing attack in function ix86_split_to_parts()
 	if use build && version_is_at_least 3.4.0 ; then
 		if gcc -dumpspecs | grep -q "fno-stack-protector:" ; then
-			epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
+			epatch "${GCC_FILESDIR}"/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 		fi
 	fi
 
