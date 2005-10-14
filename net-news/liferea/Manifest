@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a1d3ffe9b9a77fdf5499f16eec7ae39e liferea-0.9.4.ebuild 754
-MD5 9245e9b948b5835643bccc15d92520a8 liferea-0.9.7a.ebuild 1648
-MD5 68b4de21a63eab314f430396ca9285c7 liferea-0.9.6.ebuild 754
-MD5 c10756261b814d4100664099a531ec08 liferea-0.9.3.ebuild 746
-MD5 9d15342caa6fd5c98c66bf3e54575ec8 liferea-0.9.5.ebuild 754
-MD5 7504b68c8b045d20597bb5840699eb34 liferea-0.9.7b.ebuild 1647
-MD5 305af2223b8cbc5902ba26f6b5ef8c37 ChangeLog 7224
-MD5 17fcd57ee01a46b7951c709fb6763c52 metadata.xml 255
-MD5 28b1891c4814b2194f573d96697838bd liferea-1.0_rc2.ebuild 1696
-MD5 f9efd550765d540bf2d15dd7fafe153f files/digest-liferea-1.0_rc2 68
-MD5 e79d04e2dcb1066bf83edf55b9b1e9f7 files/digest-liferea-0.9.7a 67
-MD5 4d464b035de4131b12167c6ce4a1dffd files/digest-liferea-0.9.7b 67
+MD5 e19bfb5dbbb6931795f665fd67723622 ChangeLog 7402
 MD5 89a8546ee1cbe401cbbd5c8441eecea4 files/digest-liferea-0.9.3 66
 MD5 321c3cad9efc8895e374795b3d816062 files/digest-liferea-0.9.4 66
 MD5 734099ebdef506d5bef9b2d24fa02f51 files/digest-liferea-0.9.5 66
 MD5 ca0f3d49b323b6401d4b75e56fb151fe files/digest-liferea-0.9.6 66
+MD5 e79d04e2dcb1066bf83edf55b9b1e9f7 files/digest-liferea-0.9.7a 67
+MD5 4d464b035de4131b12167c6ce4a1dffd files/digest-liferea-0.9.7b 67
+MD5 f9efd550765d540bf2d15dd7fafe153f files/digest-liferea-1.0_rc2 68
+MD5 c10756261b814d4100664099a531ec08 liferea-0.9.3.ebuild 746
+MD5 a1d3ffe9b9a77fdf5499f16eec7ae39e liferea-0.9.4.ebuild 754
+MD5 9d15342caa6fd5c98c66bf3e54575ec8 liferea-0.9.5.ebuild 754
+MD5 0fe6a7dbc1797c24738228a6335d1b1f liferea-0.9.6.ebuild 763
+MD5 aed35f3670dd5999f07f2939bb25d01d liferea-0.9.7a.ebuild 1653
+MD5 34fb76c3e6811967de9e30dd77623e8b liferea-0.9.7b.ebuild 1652
+MD5 e095cad58a0b42c61be1be19dcee0bbd liferea-1.0_rc2.ebuild 1701
+MD5 17fcd57ee01a46b7951c709fb6763c52 metadata.xml 255
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDT3oQZgSmR+etHJoRAtWqAJ4sYot/jCzsJSsoTCq2Vp94Eosl6QCfe5lL
-AeihJg7xVvjKbC5wbqqvQUE=
-=3XvH
+iD8DBQFDT9GJKRy60XGEcJIRAgXKAJwIB5kEO64OeV6B/gNoTzXWSd6TAACaA953
+1qZ9YHX7V8qoN3fv1Xet7vY=
+=S18o
 -----END PGP SIGNATURE-----
