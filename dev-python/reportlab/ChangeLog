@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.23 2005/10/11 23:30:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.24 2005/10/14 13:49:35 gustavoz Exp $
+
+  14 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> reportlab-1.20.ebuild:
+  Stable on sparc
 
   11 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> reportlab-1.20.ebuild:
   Stable on x86, fixes python-2.4 issues, bug 108649.
