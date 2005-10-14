@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.5.ebuild,v 1.1 2005/10/06 22:53:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.5.ebuild,v 1.2 2005/10/14 00:09:54 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cracklib/${MY_P}.tar.gz"
 LICENSE="CRACKLIB"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="python"
+IUSE="nls python"
 
 DEPEND=""
 
@@ -26,16 +26,16 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with python) || die
+	econf \
+		$(use_enable nls) \
+		$(use_with python) \
+		|| die
 	emake || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	rm -r "${D}"/usr/share/cracklib
-
-	insinto /usr/include
-	doins lib/packer.h || die "doins packer.h"
 
 	# move shared libs to /
 	dodir /$(get_libdir)
