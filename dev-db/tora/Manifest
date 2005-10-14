@@ -1,10 +1,20 @@
-MD5 215185735400f02e67ad15278f25a21f ChangeLog 7099
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8af3460a0d4e1da178788766914aa22e tora-1.3.18.ebuild 1693
 MD5 bda8803c4adc9cf0b308b71157891f05 metadata.xml 536
-MD5 c4b61bf1c5edd0b69d9ba4d977ab8e48 tora-1.3.16.ebuild 1576
+MD5 c04d6ea9e8358a0642cd97c00aafe050 ChangeLog 7203
 MD5 9d61e3565065f86729ea6f2ec5fcd736 tora-1.3.16-r1.ebuild 1727
-MD5 1f487eb6bf57f6a6556f64b58b9de6b8 tora-1.3.18.ebuild 1691
-MD5 360385b94626738c4ea70afa2cc2ed56 files/digest-tora-1.3.16 64
-MD5 360385b94626738c4ea70afa2cc2ed56 files/digest-tora-1.3.16-r1 64
-MD5 515605f39cc89ed7f4e3efb14ae9bb59 files/tora-1.3.16-configure-no_oracle.diff 2153
+MD5 c4b61bf1c5edd0b69d9ba4d977ab8e48 tora-1.3.16.ebuild 1576
 MD5 0b13d1a7a8370a01657623ade86d1c0b files/tora-1.3.16-sh-no_oracle.diff 611
 MD5 e7b421c2548859407e95274c02f11b70 files/digest-tora-1.3.18 64
+MD5 360385b94626738c4ea70afa2cc2ed56 files/digest-tora-1.3.16-r1 64
+MD5 360385b94626738c4ea70afa2cc2ed56 files/digest-tora-1.3.16 64
+MD5 515605f39cc89ed7f4e3efb14ae9bb59 files/tora-1.3.16-configure-no_oracle.diff 2153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTwAkJrHF4yAQTrARAqeaAKCoVsS8ZJDg4NbwyFmcmYmaQVXpvgCfd4UA
+/8Al9ChHgSIY3/jLWG981TE=
+=db+v
+-----END PGP SIGNATURE-----
