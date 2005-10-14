@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.2 2005/08/24 04:08:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20050701_p1825.ebuild,v 1.3 2005/10/14 17:27:31 gustavoz Exp $
 
 inherit latex-package toolchain-funcs
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.cse.ohio-state.edu/~gurari/TeX4ht/
 SRC_URI="http://www.cse.ohio-state.edu/~gurari/TeX4ht/fix/${MY_P}.tar.gz"
 
 LICENSE="LPPL-1.2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 SLOT="0"
 
 DEPEND=">=sys-apps/sed-4"
