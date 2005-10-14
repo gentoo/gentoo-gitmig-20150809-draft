@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/sbd
+# ChangeLog for net-analyzer/sbd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.1 2005/10/14 00:53:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sbd/ChangeLog,v 1.2 2005/10/14 12:16:03 swegener Exp $
 
 *sbd-1.37 (25 Aug 2005)
 
