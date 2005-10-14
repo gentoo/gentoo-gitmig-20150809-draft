@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.2 2005/07/24 21:38:33 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.0-r1.ebuild,v 1.3 2005/10/14 17:45:14 gustavoz Exp $
 
 inherit eutils
 
@@ -9,12 +9,13 @@ STABLE="2.0.0"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 DESCRIPTION="Free Pascal Compiler"
 HOMEPAGE="http://www.freepascal.org/"
 IUSE="doc"
 SRC_URI="mirror://sourceforge/freepascal/fpc-${MY_PV}.source.tar.gz
 	 x86? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.i386-linux.tar )
+	 sparc? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.sparc-linux.tar )
 	 ppc? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.powerpc-linux.tar )
 	 amd64? ( mirror://sourceforge/freepascal/fpc-${MY_PV}.x86_64-linux.tar )"
 DEPEND="!dev-lang/fpc-bin
@@ -28,6 +29,12 @@ src_unpack() {
 	x86)
 		tar -xf binary.i386-linux.tar || die "Unpacking binary.i386-linux.tar failed!"
 		tar -zxf base.i386-linux.tar.gz || die "Unpacking base.i386-linux.tar.gz failed!"
+		;;
+	sparc)
+		tar -xf binary.sparc-linux.tar || die "Unpacking binary.sparc-linux.tar
+		failed!"
+		tar -zxf base.sparc-linux.tar.gz || die "Unpacking
+		base.sparc-linux.tar.gz failed!"
 		;;
 	ppc)
 		tar -xf binary.powerpc-linux.tar || die "Unpacking binary.powerpc-linux.tar failed!"
@@ -44,6 +51,9 @@ set_pp() {
 	case ${ARCH} in
 	x86)
 		FPCARCH=386
+		;;
+	sparc)
+		FPCARCH=sparc
 		;;
 	ppc)
 		FPCARCH=ppc
@@ -110,6 +120,9 @@ pkg_preinst() {
 	x86)
 		FPCARCH=386
 		;;
+	sparc)
+		FPCARCH=sparc
+		;;
 	ppc)
 		FPCARCH=ppc
 		;;
@@ -132,6 +145,9 @@ pkg_postinst() {
 	case ${ARCH} in
 	x86)
 		FPCARCH=386
+		;;
+	sparc)
+		FPCARCH=sparc
 		;;
 	ppc)
 		FPCARCH=ppc

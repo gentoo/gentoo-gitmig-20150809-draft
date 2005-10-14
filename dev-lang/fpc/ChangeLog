@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.23 2005/09/15 22:02:41 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.24 2005/10/14 17:45:14 gustavoz Exp $
+
+  14 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> fpc-2.0.0-r1.ebuild:
+  Added sparc support and keyworded accordingly
 
   15 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
   fpc-1.9.5_pre20040820.ebuild:
