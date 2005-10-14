@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.209 2005/10/12 22:39:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.210 2005/10/14 03:27:34 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -189,7 +189,7 @@ gcc_get_s_dir() {
 #	PATCH_GCC_VER
 #			This should be set to the version of the gentoo patch tarball.
 #			The resulting filename of this tarball will be:
-#			${PN}-${PATCH_GCC_VER:-${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+#			gcc-${PATCH_GCC_VER:-${GCC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 #
 #	PIE_VER
 #	PIE_GCC_VER
@@ -202,7 +202,7 @@ gcc_get_s_dir() {
 #					PIE_VER="8.7.6.5"
 #					PIE_GCC_VER="3.4.0"
 #			The resulting filename of this tarball will be:
-#			${PN}-${PIE_GCC_VER:-${GCC_RELEASE_VER}}-piepatches-v${PIE_VER}.tar.bz2
+#			gcc-${PIE_GCC_VER:-${GCC_RELEASE_VER}}-piepatches-v${PIE_VER}.tar.bz2
 #				old syntax (do not define PIE_CORE anymore):
 #					PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 #
@@ -252,7 +252,7 @@ get_gcc_src_uri() {
 	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
 
 	[[ -n ${PIE_VER} ]] && \
-		PIE_CORE=${PIE_CORE:-${PN}-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2}
+		PIE_CORE=${PIE_CORE:-gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2}
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
@@ -261,10 +261,10 @@ get_gcc_src_uri() {
 	elif [[ -n ${SNAPSHOT} ]] ; then
 		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT}.tar.bz2"
 	else
-		GCC_SRC_URI="mirror://gnu/gcc/${P}/gcc-${GCC_RELEASE_VER}.tar.bz2"
+		GCC_SRC_URI="mirror://gnu/gcc/gcc-${PV}/gcc-${GCC_RELEASE_VER}.tar.bz2"
 		# we want all branch updates to be against the main release
 		[[ -n ${BRANCH_UPDATE} ]] && \
-			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2)"
+			GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2)"
 	fi
 
 	# propolice aka stack smashing protection
@@ -291,7 +291,7 @@ get_gcc_src_uri() {
 
 	# various gentoo patches
 	[[ -n ${PATCH_VER} ]] && \
-		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2)"
+		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2)"
 
 	# strawberry pie, Cappuccino and a Gauloises (it's a good thing)
 	[[ -n ${PIE_VER} ]] && \
@@ -1725,10 +1725,10 @@ gcc_quick_unpack() {
 	fi
 
 	[[ -n ${PATCH_VER} ]] && \
-		unpack ${PN}-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
+		unpack gcc-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
 
 	[[ -n ${UCLIBC_VER} ]] && \
-		unpack ${PN}-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
+		unpack gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
 
 	if want_ssp ; then
 		if [[ -n ${PP_FVER} ]] ; then
@@ -1745,13 +1745,13 @@ gcc_quick_unpack() {
 		if [[ -n ${PIE_CORE} ]] ; then
 			unpack ${PIE_CORE}
 		else
-			unpack ${PN}-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
+			unpack gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
 		fi
 	fi
 
 	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
 	want_boundschecking && \
-		unpack "bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
+		unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
 
 	popd > /dev/null
 }
@@ -1805,7 +1805,7 @@ do_gcc_HTB_boundschecking_patches() {
 	fi
 
 	# modify the bounds checking patch with a regression patch
-	epatch "${WORKDIR}/bounds-checking-${PN}-${HTB_GCC_VER}-${HTB_VER}.patch"
+	epatch "${WORKDIR}/bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch"
 	release_version="${release_version}, HTB-${HTB_GCC_VER}-${HTB_VER}"
 }
 
