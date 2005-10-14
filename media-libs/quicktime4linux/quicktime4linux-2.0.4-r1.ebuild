@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.4.ebuild,v 1.2 2005/05/15 02:25:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.4-r1.ebuild,v 1.1 2005/10/14 12:39:01 flameeyes Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 -ppc ~amd64"
+KEYWORDS="~amd64 -ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/jpeg
@@ -21,7 +21,7 @@ DEPEND="media-libs/jpeg
 	>=media-sound/lame-3.93.1
 	>=media-libs/libogg-1.0
 	>=media-libs/libvorbis-1.0
-	x86? ( media-libs/divx4linux )
+	=dev-libs/glib-1.2*
 	media-libs/a52dec
 	media-libs/faac
 	media-libs/faad2
@@ -39,8 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	make MYCFLAGS="${CFLAGS}" || die
-	make util MYCFLAGS="${CFLAGS}" || die
+	make CC=$(tc-getCC) MYCFLAGS="${CFLAGS}" || die
+	make util CC=$(tc-getCC) MYCFLAGS="${CFLAGS}" || die
 }
 
 src_install() {

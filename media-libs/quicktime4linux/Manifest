@@ -1,14 +1,20 @@
-MD5 a451e6f3919219d88e226b25f7f88a42 ChangeLog 4555
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 6a2c20038939155bde70d0bda698b9c8 quicktime4linux-1.5.5-r1.ebuild 983
-MD5 ff99d415c5017af8ef79964c77b2e319 quicktime4linux-1.6.2.ebuild 1201
-MD5 f8ef5ec417726adb9cded3fd79b7e89c quicktime4linux-2.0.0-r1.ebuild 1461
-MD5 c58a7ff56454d9fd628c3a824144d123 quicktime4linux-2.0.0.ebuild 924
-MD5 28e567638af9808bc83dce5e27b8a10f quicktime4linux-2.0.4.ebuild 1319
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e132ad3972c7f791d88fb111f56113fd ChangeLog 5018
 MD5 cff036b41967a42ea65b3eef0002f4a0 files/2.0.0-gentoo-libmpeg3.patch 663
 MD5 20c7d429ba0312f794acf28415a87403 files/2.0.4-external-libs.patch 2226
 MD5 d174f89f47c93a15f31744ff3c78e270 files/digest-quicktime4linux-1.5.5-r1 149
 MD5 7ba7a569ff1c1d5d53285361ed6c5413 files/digest-quicktime4linux-1.6.2 154
-MD5 05a81d2da899448b5ec3b5bbf23b6f2d files/digest-quicktime4linux-2.0.0 79
-MD5 d4ca2cbd6ad27b322e4fe55691deb764 files/digest-quicktime4linux-2.0.0-r1 155
-MD5 9b609bee6de30124e7d091979bc123c6 files/digest-quicktime4linux-2.0.4 79
+MD5 9b609bee6de30124e7d091979bc123c6 files/digest-quicktime4linux-2.0.4-r1 79
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 6a2c20038939155bde70d0bda698b9c8 quicktime4linux-1.5.5-r1.ebuild 983
+MD5 ff99d415c5017af8ef79964c77b2e319 quicktime4linux-1.6.2.ebuild 1201
+MD5 471f2ad7acceec4e13a140ae5ee3f9a4 quicktime4linux-2.0.4-r1.ebuild 1357
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDT6cFj5H05b2HAEkRAuuNAJ9ArnK43Pv1C/WEdFZ3Kk9uIUnqvwCeP1PE
+KnE9p1lG0xb1FfwuvFOTDOU=
+=2eL9
+-----END PGP SIGNATURE-----
