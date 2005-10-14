@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>TCP/IP swiss army knife extended with twofish encryption</longdescription>
+<maintainer>
+ <email>vapier@gentoo.org</email>
+</maintainer>
 </pkgmetadata>

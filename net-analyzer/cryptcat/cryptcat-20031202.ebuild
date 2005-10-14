@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.11 2005/09/09 02:41:03 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.12 2005/10/14 01:33:57 vapier Exp $
 
 inherit eutils toolchain-funcs
 
 DEB_PVER=2
 MY_P=${PN}_${PV}
-DESCRIPTION="TCP/IP swiss army knife extended with twofish encryption"
+DESCRIPTION="netcat clone extended with twofish encryption"
 HOMEPAGE="http://farm9.org/Cryptcat/"
 SRC_URI="http://farm9.org/Cryptcat/${MY_P}.tar.gz
 	mirror://debian/pool/main/c/cryptcat/${MY_P}-${DEB_PVER}.diff.gz"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
