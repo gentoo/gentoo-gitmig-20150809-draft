@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.207 2005/10/06 14:55:45 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.208 2005/10/14 13:33:59 satya Exp $
+
+*samba-3.0.20b (14 Oct 2005)
+
+  14 Oct 2005; Christian Andreetta <satya@gentoo.org> +samba-3.0.20b.ebuild:
+  3.0.20b version bump (bug #109174), which fixes also swat: xinetd dependency
+  (bug #81387), smbmount not suid (bug #105680), sql backend and mysql schema
+  (bug #106457), ldapsam support (bug #108400) 
 
 *samba-3.0.20a (06 Oct 2005)
 
