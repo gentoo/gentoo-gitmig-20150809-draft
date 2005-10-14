@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.5 2005/08/05 15:55:41 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.6 2005/10/14 00:44:11 spyderous Exp $
+
+*gromacs-3.3 (14 Oct 2005)
+
+  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>; +gromacs-3.3.ebuild:
+  (#109184) Bump. Main change in ebuild is adding a check for fftw built w/
+  mpi if trying to build w/ mpi. One of the more interesting upstream changes
+  is the addition of x86-64 and ia64 assembly.
 
   05 Aug 2005; <omkhar@gentoo.org> +files/gromacs-ppc64-altivec.patch,
   gromacs-3.2.1-r1.ebuild:
