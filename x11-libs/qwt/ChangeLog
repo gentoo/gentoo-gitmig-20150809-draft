@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.24 2005/08/24 16:51:06 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.25 2005/10/14 01:42:30 cryos Exp $
+
+*qwt-4.2.0-r1 (14 Oct 2005)
+
+  14 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> +qwt-4.2.0-r1.ebuild:
+  Fix symlinks on multilib systems.
 
   24 Aug 2005; Patrick Kursawe <phosphan@gentoo.org> qwt-4.2.0.ebuild:
   No longer using cp -a (bug #103487)

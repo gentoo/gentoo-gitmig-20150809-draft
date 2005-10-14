@@ -1,4 +1,16 @@
-MD5 d3c608370a711cda1c08bce558c47ee6 qwt-4.2.0.ebuild 1486
-MD5 b2363c3bbaf262e0e1bf75c44414e329 ChangeLog 3847
-MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 137b20a841965f09bab79e09c7ad759b ChangeLog 3984
 MD5 73ff067302f4cd37fba77ed8baeda94b files/digest-qwt-4.2.0 62
+MD5 73ff067302f4cd37fba77ed8baeda94b files/digest-qwt-4.2.0-r1 62
+MD5 c000c0728c9136f1b54cbc3a5fc07644 metadata.xml 220
+MD5 8db867be6245f92c1eee15090ac5bb88 qwt-4.2.0-r1.ebuild 1526
+MD5 d3c608370a711cda1c08bce558c47ee6 qwt-4.2.0.ebuild 1486
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTw0VntT9W3vfTuoRAuNdAJ9WNh124C05i1MUzj6/KPKvFViLVgCgl699
+D4SVhXCqrT3YEMJ4VSWZ36Y=
+=xOvZ
+-----END PGP SIGNATURE-----
