@@ -3,4 +3,4 @@ MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-secpolicy-3.4.1 211
 MD5 27e68187b25ba15cc1e9f8981eacca8a files/digest-secpolicy-3.5_beta1 69
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 4da9f5c771b81146b497cf7114a937ea secpolicy-3.4.1.ebuild 477
-MD5 76bcfc80a43bd1b559c910a6fc29b1f7 secpolicy-3.5_beta1.ebuild 454
+MD5 d126a80ef6c066dc6f011980a682429a secpolicy-3.5_beta1.ebuild 461

@@ -1,4 +1,4 @@
-MD5 a063d2841d6ad018dee48c9a19724629 ChangeLog 2852
+MD5 5df19ffefd4babd9e283c71650640c25 ChangeLog 2972
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-ktouch-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-ktouch-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-ktouch-3.4.3 67
@@ -7,6 +7,6 @@ MD5 bb87804db4b06c40fdff58984b70c393 files/digest-ktouch-3.5_beta1 68
 MD5 efaf8d02d7a1a0d04de75b0f13d880da ktouch-3.4.1.ebuild 426
 MD5 5e1e319fb7514047f6ca35538b3b5724 ktouch-3.4.2.ebuild 439
 MD5 d9413f8d1b3079b22fed7fa1acca5a50 ktouch-3.4.3.ebuild 441
-MD5 a50c86813e4b31df22422af68af96607 ktouch-3.5.0_beta2.ebuild 542
+MD5 a4a5ed67cc61ee56f5dbc3468749bcea ktouch-3.5.0_beta2.ebuild 546
 MD5 a50c86813e4b31df22422af68af96607 ktouch-3.5_beta1.ebuild 542
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

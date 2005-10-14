@@ -2,5 +2,5 @@ MD5 6f050ccb68e29f03c2a00dd00a33b92c ChangeLog 2463
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libksieve-3.4.1 208
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libksieve-3.5_beta1 68
 MD5 3cb35eb35ca38ddbc212d2e7d31df44c libksieve-3.4.1.ebuild 475
-MD5 bc2e2369f39457bedd35a4e7aef1769c libksieve-3.5_beta1.ebuild 452
+MD5 39352952c7835777fdf20f523ccf0b82 libksieve-3.5_beta1.ebuild 459
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

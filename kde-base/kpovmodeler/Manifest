@@ -1,4 +1,4 @@
-MD5 3103378ffbea78de38d3b6976031689d ChangeLog 2772
+MD5 4c4ad3357fd11c043e35146568cd326b ChangeLog 2902
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kpovmodeler-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kpovmodeler-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kpovmodeler-3.4.3 71
@@ -7,6 +7,6 @@ MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kpovmodeler-3.5_beta1 72
 MD5 7cd6730f4fdc82cf4871455ad1022de4 kpovmodeler-3.4.1.ebuild 467
 MD5 9e25d8e20b4c35fa155c6a3b885859fe kpovmodeler-3.4.2.ebuild 505
 MD5 fda20550b1948e06d0534fab70e5ef59 kpovmodeler-3.4.3.ebuild 507
-MD5 3701b8f587bd3a262fa395ec7c986075 kpovmodeler-3.5.0_beta2.ebuild 481
+MD5 4654287018e912e721dc640cd510f021 kpovmodeler-3.5.0_beta2.ebuild 482
 MD5 3701b8f587bd3a262fa395ec7c986075 kpovmodeler-3.5_beta1.ebuild 481
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

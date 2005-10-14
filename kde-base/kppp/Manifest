@@ -1,4 +1,4 @@
-MD5 bcdee805d22722fbc471a7d7fc0862a3 ChangeLog 2575
+MD5 3829d05e8889e1de0aba67975f498929 ChangeLog 2691
 MD5 92bc3a39b10976f1a0aa8342b525a4ab files/digest-kppp-3.4.1 218
 MD5 1277f401bade54acfa086cf013950252 files/digest-kppp-3.4.2 296
 MD5 c259b2aa6bede478d4afff87117e9685 files/digest-kppp-3.4.3 70
@@ -7,6 +7,6 @@ MD5 16b903e400a8cf2d73f3c237799238db files/digest-kppp-3.5_beta1 71
 MD5 ce44f87b14d346a7cd53aaf9096a21d6 kppp-3.4.1.ebuild 393
 MD5 06e47599ed78b05cfbbdd6b07849268b kppp-3.4.2.ebuild 406
 MD5 c6a2ee644041fb40bb73d2c908275794 kppp-3.4.3.ebuild 408
-MD5 ac70a3c32ec74bd287c13bd853140554 kppp-3.5.0_beta2.ebuild 382
+MD5 3756352fca44f7abdd4bb4d6878bf264 kppp-3.5.0_beta2.ebuild 383
 MD5 ac70a3c32ec74bd287c13bd853140554 kppp-3.5_beta1.ebuild 382
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

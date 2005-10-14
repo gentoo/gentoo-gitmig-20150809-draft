@@ -1,4 +1,4 @@
-MD5 a45750f7cf09d2b14418c11416d0fa7b ChangeLog 2791
+MD5 924ab6b407e47f88fb44db0e93c72f3f ChangeLog 2907
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-korn-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-korn-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-korn-3.4.3 67
@@ -7,6 +7,6 @@ MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-korn-3.5_beta1 68
 MD5 f9e5153175532e5ce88e049f61939cc4 korn-3.4.1.ebuild 773
 MD5 b2717f375d62dc3a62ec65b8276c4d77 korn-3.4.2.ebuild 788
 MD5 b2d288ef14c68ec6b2484caa5983ffc4 korn-3.4.3.ebuild 792
-MD5 b31c088ced9ea7ab5da2d55d858c4af7 korn-3.5.0_beta2.ebuild 718
+MD5 4c8112ab6e8103c8049c428a82b0578d korn-3.5.0_beta2.ebuild 719
 MD5 8175a6e0f5c01833eebe6ee7afef0268 korn-3.5_beta1.ebuild 762
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

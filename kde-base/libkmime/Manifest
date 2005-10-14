@@ -2,5 +2,5 @@ MD5 649a342836cd030bf437164560b27234 ChangeLog 2543
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkmime-3.4.1 208
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkmime-3.5_beta1 68
 MD5 66eee958280e92fae21fcb2505a726b4 libkmime-3.4.1.ebuild 416
-MD5 5cf1003ce961d920b6a69f7e63ea2392 libkmime-3.5_beta1.ebuild 393
+MD5 572793f7eab96616332ee88a70b55afb libkmime-3.5_beta1.ebuild 400
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

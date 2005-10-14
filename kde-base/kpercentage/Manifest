@@ -4,5 +4,5 @@ MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kpercentage-3.4.2 282
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kpercentage-3.5_beta1 68
 MD5 2820532f23e42c235e0005b185700960 kpercentage-3.4.1.ebuild 453
 MD5 e78ae38868569574cd0469edb559c426 kpercentage-3.4.2.ebuild 470
-MD5 8d3b5b1c82ad95859cff4e15c5c62616 kpercentage-3.5_beta1.ebuild 442
+MD5 d0eb37629ce0169cbcee933fb604c340 kpercentage-3.5_beta1.ebuild 449
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

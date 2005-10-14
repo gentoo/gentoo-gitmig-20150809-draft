@@ -1,4 +1,4 @@
-MD5 f18d0a988b0a6ad03ebf9fecb2b68113 ChangeLog 3104
+MD5 9644a8375f2cc24a469289efdf118036 ChangeLog 3252
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kontact-specialdates-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kontact-specialdates-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kontact-specialdates-3.4.3 67
@@ -7,6 +7,6 @@ MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kontact-specialdates-3.5_beta1
 MD5 ff077b11ff2c156103c5c3d4320fb66c kontact-specialdates-3.4.1.ebuild 1132
 MD5 3e548f8c524d789a670f319d5ccc5251 kontact-specialdates-3.4.2.ebuild 1145
 MD5 7f6598d1e1e86b6640f0fd257c176e9b kontact-specialdates-3.4.3.ebuild 1147
-MD5 69ca0fce2f69babd1b8f459c86cc3d6b kontact-specialdates-3.5.0_beta2.ebuild 1121
+MD5 608c73dc380c646363b58b930f8c7723 kontact-specialdates-3.5.0_beta2.ebuild 1122
 MD5 69ca0fce2f69babd1b8f459c86cc3d6b kontact-specialdates-3.5_beta1.ebuild 1121
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

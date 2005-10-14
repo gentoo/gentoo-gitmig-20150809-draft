@@ -1,4 +1,4 @@
-MD5 6f744c46df1da3a8f18e4d76d4f1645a ChangeLog 1931
+MD5 6a527aa7b57860332190c0ae5307bfe8 ChangeLog 2055
 MD5 02d4a8eb91816526b12d85dd5cd34169 files/digest-kpackage-3.4.1 211
 MD5 9d1b64c1a3fcf3755ead7efab419928f files/digest-kpackage-3.4.2 286
 MD5 80b3c1753e84c4d6d9caf0502325b7b4 files/digest-kpackage-3.4.3 68
@@ -7,6 +7,6 @@ MD5 27e68187b25ba15cc1e9f8981eacca8a files/digest-kpackage-3.5_beta1 69
 MD5 10cf39315da282f65e8d8559adfe6111 kpackage-3.4.1.ebuild 430
 MD5 77367f93b958ae31556b9d853c2a43cd kpackage-3.4.2.ebuild 433
 MD5 f901e83b78bd98a6b91dfc84b69b991a kpackage-3.4.3.ebuild 433
-MD5 b025081fb18635ca194f37923c26dee7 kpackage-3.5.0_beta2.ebuild 427
+MD5 766d9c652fb80de32b4c6ac3174d1f59 kpackage-3.5.0_beta2.ebuild 428
 MD5 b025081fb18635ca194f37923c26dee7 kpackage-3.5_beta1.ebuild 427
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

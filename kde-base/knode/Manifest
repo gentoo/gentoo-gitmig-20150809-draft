@@ -1,4 +1,4 @@
-MD5 9982769db4a098b0ff5e523c34f5f0f1 ChangeLog 2851
+MD5 ea46ac7de758340ddb71f4ba9a6a8f5c ChangeLog 2969
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-knode-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-knode-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-knode-3.4.3 67
@@ -7,6 +7,6 @@ MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-knode-3.5_beta1 68
 MD5 016657b19b87bd0b96689330350d410f knode-3.4.1.ebuild 912
 MD5 e4fcd154680487c975f2d6265b26bca7 knode-3.4.2.ebuild 929
 MD5 0aa2d534aa7996e7466e07c11828c239 knode-3.4.3.ebuild 931
-MD5 e0c1868be677f6f6f5a2d00d18c3a322 knode-3.5.0_beta2.ebuild 928
+MD5 24c2c31a80cf3196e7362c8f0a33170b knode-3.5.0_beta2.ebuild 933
 MD5 4a3441911d4ff4f0d6ad1e2103500c0d knode-3.5_beta1.ebuild 916
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

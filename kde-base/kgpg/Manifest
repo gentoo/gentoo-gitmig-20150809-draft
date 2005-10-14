@@ -1,4 +1,4 @@
-MD5 5ad20b9ab85d1cff2935e724ae1ca6c9 ChangeLog 2696
+MD5 5bd05eb29d852a7ce4cb16c4edb594b9 ChangeLog 2812
 MD5 ab3eb220e894b7f84a4ae20d6f35d26e files/digest-kgpg-3.4.1 212
 MD5 528dfb138277c74810b95fa05d2770a8 files/digest-kgpg-3.4.2 288
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kgpg-3.4.3 68
@@ -7,6 +7,6 @@ MD5 ba38338e687742fb5a9e7458de260898 files/digest-kgpg-3.5_beta1 69
 MD5 0b1c25a5c228b68be4eed5c4eec8bbd7 kgpg-3.4.1.ebuild 416
 MD5 577a26f3cb828acad5319ecb41be39c9 kgpg-3.4.2.ebuild 429
 MD5 368bd5903bbcb14df27348242e4e9325 kgpg-3.4.3.ebuild 431
-MD5 255706721ebd9b5d4c9a7419cf9c0d98 kgpg-3.5.0_beta2.ebuild 411
+MD5 2fd9f8815c7698fe32c359a9e584fb52 kgpg-3.5.0_beta2.ebuild 411
 MD5 255706721ebd9b5d4c9a7419cf9c0d98 kgpg-3.5_beta1.ebuild 411
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

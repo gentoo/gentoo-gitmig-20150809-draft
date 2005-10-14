@@ -1,4 +1,4 @@
-MD5 0e62f7b478a74d74345e3a11dfca4211 ChangeLog 2627
+MD5 9c42e560a6da7e0ccf2197a8594ed23d ChangeLog 2745
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kfind-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kfind-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kfind-3.4.3 68
@@ -7,6 +7,6 @@ MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kfind-3.5_beta1 69
 MD5 ca1c00ee43f73a5cfb21b287a87aa946 kfind-3.4.1.ebuild 496
 MD5 77c2d7ad47599ddee089326a3ac58a4a kfind-3.4.2.ebuild 509
 MD5 2a6467b1b491cbcfd7e9d72462a3ab32 kfind-3.4.3.ebuild 511
-MD5 be35f5f13686c74c89ada0ae94a611b0 kfind-3.5.0_beta2.ebuild 452
+MD5 a07dd18017e3f50a17cdfae4027ba620 kfind-3.5.0_beta2.ebuild 453
 MD5 4a9dfa3416d83952e60dfdcfe407930e kfind-3.5_beta1.ebuild 485
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

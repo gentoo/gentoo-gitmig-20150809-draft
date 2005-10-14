@@ -1,4 +1,4 @@
-MD5 47c6d2d9a9a0a8329ff34b8f790dcbba ChangeLog 2773
+MD5 f069a02b78c7a03ad810b5fb563f2ef2 ChangeLog 2903
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kbattleship-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kbattleship-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kbattleship-3.4.3 68
@@ -7,6 +7,6 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kbattleship-3.5_beta1 70
 MD5 6464e69434d69b538c8394f61ecceb02 kbattleship-3.4.1.ebuild 545
 MD5 6ed5e868bdcd1bb970fcdae14c827693 kbattleship-3.4.2.ebuild 558
 MD5 663b5de92cb37f2554fef9cbbdfd2522 kbattleship-3.4.3.ebuild 560
-MD5 670b76ada1e4764b0d9bb404ba0ec1f6 kbattleship-3.5.0_beta2.ebuild 497
+MD5 7e25218284812ee3ab996c432004a099 kbattleship-3.5.0_beta2.ebuild 498
 MD5 500079f1cce92dbd587c6b19b06c3a6d kbattleship-3.5_beta1.ebuild 534
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

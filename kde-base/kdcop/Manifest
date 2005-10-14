@@ -2,5 +2,5 @@ MD5 d4d25105339a2bb8b926d24315c1528b ChangeLog 2367
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kdcop-3.4.1 212
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kdcop-3.5_beta1 69
 MD5 04b4b7bae66ce589cad00a6bd002416b kdcop-3.4.1.ebuild 421
-MD5 8df0e9cf7baea6ffde22c99e97a8ef1a kdcop-3.5_beta1.ebuild 398
+MD5 0ad7bcf3bc19db858c98aa13a0bb69cc kdcop-3.5_beta1.ebuild 405
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

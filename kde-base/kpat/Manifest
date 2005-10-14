@@ -1,4 +1,4 @@
-MD5 619c2656a187e358044d6558e33b9276 ChangeLog 2696
+MD5 1e28d97184b89b7d9fcd3e71370927d2 ChangeLog 2812
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kpat-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kpat-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kpat-3.4.3 68
@@ -7,6 +7,6 @@ MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kpat-3.5_beta1 70
 MD5 03ad99fddd67c9bc3850c3d6ae741b03 kpat-3.4.1.ebuild 604
 MD5 b9d1e25d4ad1e4bf60175ef2a73bce62 kpat-3.4.2.ebuild 616
 MD5 bb62cbf19ac807a539e52a65e4c5cb4b kpat-3.4.3.ebuild 618
-MD5 4aed4393125b87af284532eace924cfa kpat-3.5.0_beta2.ebuild 553
+MD5 9fe1b70c4610012b0918788320f84f4e kpat-3.5.0_beta2.ebuild 554
 MD5 4cd721f0ff28ec5184f735bce5a3f3b0 kpat-3.5_beta1.ebuild 592
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

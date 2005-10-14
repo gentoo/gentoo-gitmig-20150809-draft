@@ -1,4 +1,4 @@
-MD5 9b9a6c392d89fdaf7d76415285c237cd ChangeLog 2685
+MD5 d4847edf599436584a037f12d6edae5d ChangeLog 2809
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-khangman-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-khangman-3.4.2 282
 MD5 e6c244e749eb5eaea2195aab1a2b3f23 files/digest-khangman-3.4.3 67
@@ -7,6 +7,6 @@ MD5 bb87804db4b06c40fdff58984b70c393 files/digest-khangman-3.5_beta1 68
 MD5 4dedcc4fed51647a43272d0049888a63 khangman-3.4.1.ebuild 561
 MD5 55e6e6832fe5e34f563546ecd3bb5ff1 khangman-3.4.2.ebuild 574
 MD5 a6a1e78856d98591087d11ac9e596cb7 khangman-3.4.3.ebuild 578
-MD5 59a0c36d7fcbc969ff32822114e6fbe9 khangman-3.5.0_beta2.ebuild 515
+MD5 f4c568ccbd1f99f8b59a081d84d1ff93 khangman-3.5.0_beta2.ebuild 516
 MD5 469b5e8c7d246d6e666b17ae4e9dcd34 khangman-3.5_beta1.ebuild 550
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

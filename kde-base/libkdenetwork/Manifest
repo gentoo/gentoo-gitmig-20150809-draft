@@ -2,5 +2,5 @@ MD5 baa83e791686a1d83f59c2b8fbd7928c ChangeLog 2806
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkdenetwork-3.4.1 208
 MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkdenetwork-3.5_beta1 68
 MD5 eca12bb55fcc283016c05e1b0fa01552 libkdenetwork-3.4.1.ebuild 457
-MD5 c3ca7389ff8400c25c6a2399a660213c libkdenetwork-3.5_beta1.ebuild 434
+MD5 b78cb790f5e975bdde0ab441e1306757 libkdenetwork-3.5_beta1.ebuild 441
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -4,5 +4,5 @@ MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kverbos-3.4.2 282
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kverbos-3.5_beta1 68
 MD5 2d6f45d1c0d651baaa1edb61c1a9a60d kverbos-3.4.1.ebuild 398
 MD5 acff97711b4d299811e8380b92d20786 kverbos-3.4.2.ebuild 415
-MD5 b789a74372d8207a5567a095922cd4c4 kverbos-3.5_beta1.ebuild 387
+MD5 7e27017853bbf5229a81a10d85380966 kverbos-3.5_beta1.ebuild 394
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

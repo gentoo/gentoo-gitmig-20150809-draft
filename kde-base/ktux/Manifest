@@ -4,5 +4,5 @@ MD5 51760bf43f61d4083bb13b322559c21f files/digest-ktux-3.4.2 282
 MD5 7edab32df6e3405c16e1002962773ef4 files/digest-ktux-3.5_beta1 68
 MD5 774e93586bf6c1bf70939025191581ef ktux-3.4.1.ebuild 405
 MD5 a3a7f9d6221be5f9bef1ce6231502bcf ktux-3.4.2.ebuild 422
-MD5 1acba3d30600b8243c03a1dcd57c5226 ktux-3.5_beta1.ebuild 394
+MD5 3c96e19ed2492f954fe9d8a195409d91 ktux-3.5_beta1.ebuild 401
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

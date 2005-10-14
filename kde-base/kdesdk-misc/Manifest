@@ -2,5 +2,5 @@ MD5 b1f51fa4752d145f9264ce615031861b ChangeLog 2203
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kdesdk-misc-3.4.1 206
 MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-kdesdk-misc-3.5_beta1 67
 MD5 6b6b44fe221c713810ca58463a95350e kdesdk-misc-3.4.1.ebuild 528
-MD5 ff6942621330f8d25ab6b7471f46dd7d kdesdk-misc-3.5_beta1.ebuild 511
+MD5 29339e608f10bf49871c3c1e72d808db kdesdk-misc-3.5_beta1.ebuild 518
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

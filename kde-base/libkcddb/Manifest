@@ -1,4 +1,4 @@
-MD5 9f01f75aebb0ebc35c9f4f55c80aaf38 ChangeLog 2819
+MD5 51e3bcf26d60126e3d9d1eebcf67033c ChangeLog 2943
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-libkcddb-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-libkcddb-3.4.2 308
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-libkcddb-3.4.3 73
@@ -7,6 +7,6 @@ MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-libkcddb-3.5_beta1 74
 MD5 74329c5b5d4a466f60bb139613c80ca5 libkcddb-3.4.1.ebuild 389
 MD5 fc11b71c2ca8dc699727bcfe4139ad30 libkcddb-3.4.2.ebuild 402
 MD5 974deea4e4720e93f666a70e57189379 libkcddb-3.4.3.ebuild 404
-MD5 b4fdccbd53db3b87b230b556b58cca1f libkcddb-3.5.0_beta2.ebuild 378
+MD5 75b7b0e7871ea773d9f12696852cb1fe libkcddb-3.5.0_beta2.ebuild 379
 MD5 b4fdccbd53db3b87b230b556b58cca1f libkcddb-3.5_beta1.ebuild 378
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
