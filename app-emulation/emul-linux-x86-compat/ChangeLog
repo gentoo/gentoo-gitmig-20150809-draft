@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.4 2005/05/26 12:42:43 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.5 2005/10/14 23:13:05 blubb Exp $
+
+*emul-linux-x86-compat-1.0-r1 (14 Oct 2005)
+
+  14 Oct 2005; Simon Stelling <blubb@gentoo.org>
+  +files/75emul-linux-x86-compat, +emul-linux-x86-compat-1.0-r1.ebuild:
+  since it does only depend on emul-linux-x86-glibc which does nothing on
+  2005.0 or later, install the env.d-file ourself
 
   26 May 2005; Herbie Hopkins <herbs@gentoo.org>
   emul-linux-x86-compat-1.0.ebuild:
