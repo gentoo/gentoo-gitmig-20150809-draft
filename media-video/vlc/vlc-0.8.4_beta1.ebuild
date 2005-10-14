@@ -1,19 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta1.ebuild,v 1.1 2005/10/03 09:17:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta1.ebuild,v 1.2 2005/10/14 19:31:13 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
 # media-video/vlc:tarkin - Enables experimental tarkin codec
-# media-video/vlc:h264 - Enables H264 encoding support with libx264
 # media-video/vlc:cyberlink - Enable CyberLink UPnP stack
 
 # Missing USE-flags due to needed testing
 # media-video/vlc:dirac - Enables experimental dirac codec
 # media-video/vlc:avahi - Enables Bonjour service discovery via Avahi
-
-# Missing USE-flags due to unstable support
-# hal
+# media-video/vlc:h264 - Enables H264 encoding support with libx264
 
 inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools
 
@@ -92,9 +89,6 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 		nsplugin? ( >=net-libs/gecko-sdk-1.7.8 )
 		shout? ( media-libs/libshout )
 		win32codecs? ( media-libs/win32codecs )"
-#		threads? ( dev-libs/pth )
-#		portaudio? ( >=media-libs/portaudio-0.19 )
-# 		slp? ( net-libs/openslp )
 
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.6*
