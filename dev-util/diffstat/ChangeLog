@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.41 2005/10/01 12:28:00 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.42 2005/10/14 16:52:47 ka0ttic Exp $
+
+*diffstat-1.41 (14 Oct 2005)
+
+  14 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> -diffstat-1.38.ebuild,
+  +diffstat-1.41.ebuild:
+  Version bump; tidy old version.
 
   01 Oct 2005; Luis Medinas <metalgod@gentoo.org> diffstat-1.40.ebuild:
   Marked Stable on amd64.
