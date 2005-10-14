@@ -8,7 +8,7 @@ MD5 9af7d1931cb03eca6ab84c86fe856575 files/digest-imlib2-1.2.1.009 68
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-imlib2-9999 0
 MD5 540efed058c6dccad80586ddd3af9604 files/imlib-1.2.0-bounds-check.patch 1076
 MD5 e493696ea98688132769496642a1044c files/imlib2-1.2.0-loaders.patch 2613
-MD5 4795c0cb40349fb84538fe52668f893c imlib2-1.2.0-r2.ebuild 1149
+MD5 009600ec0c993b107ca64c6da8822090 imlib2-1.2.0-r2.ebuild 1284
 MD5 a2f74872969140e87df62c826badda89 imlib2-1.2.1.006.ebuild 1220
 MD5 3bacf78c8e1ad74f01c664cc9af0f954 imlib2-1.2.1.009.ebuild 1220
 MD5 93ca856045f5f2a4e89c6c8b35198264 imlib2-9999.ebuild 1216
@@ -16,7 +16,7 @@ MD5 0c36280f1141c2ab86d0bd09ceec038a metadata.xml 2284
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTabAgIKl8Uu19MoRAhprAJ4lFDoDMj80HgQR9NWqnlJgIMyq1gCfdVBv
-xMAGBdHRwJFUBnhOKIGSrvY=
-=M2rK
+iD8DBQFDTwUCgIKl8Uu19MoRAm0OAJ49aoqL40X8eoo2TaNlGU3owMHhugCdFH/R
+5T8cfJpA/HR2U3yot7HGJRY=
+=7hyM
 -----END PGP SIGNATURE-----
