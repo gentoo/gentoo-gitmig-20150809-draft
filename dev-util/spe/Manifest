@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75f20209b6ea71fa6bf09407e4bb36d5 ChangeLog 2815
+MD5 a91bcfc4bcd58f8467224e9b6f7fe1db ChangeLog 2916
 MD5 666d9771d3bb00e2801ad24e472ec7d3 files/digest-spe-0.5.1a 82
 MD5 d7b222aad27177169608286ea0e18ac9 files/digest-spe-0.5.1d 82
 MD5 0465e3df590b254707522e5b1d2eb64c files/digest-spe-0.5.1f 82
@@ -16,7 +16,7 @@ MD5 84b0a8b787ec8c3b89836eb571eda5f9 files/spe_setup.patch 277
 MD5 6ebeaaff1d72f4b710a98339cbf235fc metadata.xml 372
 MD5 8527d184a4526c21f70121beeb67a663 spe-0.5.1a.ebuild 1092
 MD5 87cad5a12aa85e82e81660fdda67e8ed spe-0.5.1d.ebuild 1540
-MD5 edcc392938c043038d377a4d723d0fd2 spe-0.5.1f-r1.ebuild 1748
+MD5 46bd5d722de4c22232fc2c6135cda34c spe-0.5.1f-r1.ebuild 1748
 MD5 d3c2b48e745d650ba5071fb056c763ed spe-0.5.1f.ebuild 1662
 MD5 1489276d327666c728696f3d4dd0d6e0 spe-0.7.1a.ebuild 1663
 MD5 b304e15e9d9a178d5339c40b3ae196fb spe-0.7.3a.ebuild 1625
@@ -25,7 +25,7 @@ MD5 54e6aa7898ff7f7e5c5919558fe265d4 spe-0.7.5c.ebuild 1561
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUCXoKf2g/qXtneoRAqtoAJ9Xeabxg++QlV2ME4vPYvE0LzztUwCeKtF7
-LSRl2es/kxCm3K52BzGkK2M=
-=FVNH
+iD8DBQFDUDT9CRZPokWLroQRAiG0AJ9D4yy0ZcDeEHcVrrCUovDl9DSZIACgzpJk
+XkZXfTTkBN5Xdl1simBToII=
+=Pxqp
 -----END PGP SIGNATURE-----
