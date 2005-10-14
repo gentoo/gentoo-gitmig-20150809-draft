@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.20 2005/10/12 00:27:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.21 2005/10/14 21:40:42 kloeri Exp $
+
+*spe-0.5.1f-r1 (14 Oct 2005)
+
+  14 Oct 2005; Bryan Østergaard <kloeri@gentoo.org>
+  +files/spe-0.5-wxversion.patch, +spe-0.5.1f-r1.ebuild:
+  Fix world-writable files.
 
 *spe-0.7.5c-r1 (12 Oct 2005)
 

@@ -1,0 +1,81 @@
+diff -urN SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/Child.py SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/Child.py
+--- SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/Child.py	2004-05-16 11:33:00.000000000 +0200
++++ SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/Child.py	2005-10-14 23:25:11.262667750 +0200
+@@ -11,6 +11,8 @@
+ ####Modules---------------------------------------------------------------------
+ import os, sys, re, time
+ 
++import wxversion
++wxversion.select("2.4")
+ import wx
+ from wx.lib.evtmgr import eventManager
+ 
+@@ -795,4 +797,4 @@
+         if fileNames:
+             self.openList(fileNames)
+             return 1
+-        else:return 0
+\ No newline at end of file
++        else:return 0
+diff -urN SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/info.py SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/info.py
+--- SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/info.py	2004-05-16 11:33:05.000000000 +0200
++++ SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/info.py	2005-10-14 23:25:35.216164750 +0200
+@@ -81,6 +81,8 @@
+ except:
+     pass
+ if isnotroot:
++    import wxversion
++    wxversion.select("2.4")
+     import wx
+     INFO['wxVersionC'] = '.'.join([str(x)for x in wx.VERSION])
+ 
+diff -urN SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/Parent.py SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/Parent.py
+--- SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/Parent.py	2004-05-16 11:33:05.000000000 +0200
++++ SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/Parent.py	2005-10-14 23:25:57.333547000 +0200
+@@ -14,6 +14,8 @@
+ import sm.scriptutils,sm.wxp
+ 
+ #---wxPython
++import wxversion
++wxversion.select("2.4")
+ import wx
+ import wx.stc
+ from wx.lib.evtmgr import eventManager
+diff -urN SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/shortcuts.py SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/shortcuts.py
+--- SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/shortcuts.py	2004-05-16 11:33:18.000000000 +0200
++++ SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/shortcuts.py	2005-10-14 23:26:18.254854500 +0200
+@@ -7,6 +7,8 @@
+ 
+ __doc__=INFO['doc']%INFO
+ #_______________________________________________________________________________
++import wxversion
++wxversion.select("2.4")
+ import wx
+ #import wx.help
+ 
+@@ -48,4 +50,4 @@
+     elif key==wx.WXK_F12    and not control and not alt: self.menuViewShell(event)
+     elif key==wx.WXK_RETURN and     control and not alt: self.menuEditBrowseTo(event)
+     else:event.Skip()
+-    self.GetActiveChild().eventEditorPositionChange(event)
+\ No newline at end of file
++    self.GetActiveChild().eventEditorPositionChange(event)
+diff -urN SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/SPE.py SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/SPE.py
+--- SPE-0.5.1.d-wx2.4.2.4.-bl2.31.orig/build/lib/_spe/SPE.py	2004-05-16 11:33:18.000000000 +0200
++++ SPE-0.5.1.d-wx2.4.2.4.-bl2.31/build/lib/_spe/SPE.py	2005-10-14 23:26:41.828327750 +0200
+@@ -23,6 +23,8 @@
+     from sm.wxp.smdi import App
+     import Menu,Parent,Child
+     try:
++        import wxversion
++	wxversion.select("2.4")
+         import wx
+         wxV='.'.join([str(x)for x in wx.VERSION])
+         if wxV!=INFO['wxVersion']:
+@@ -70,4 +72,4 @@
+     app.MainLoop()
+ 
+ if __name__=='__main__':
+-    main(debug=DEBUG)
+\ No newline at end of file
++    main(debug=DEBUG)
