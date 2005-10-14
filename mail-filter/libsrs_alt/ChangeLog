@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libsrs_alt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.5 2005/10/13 18:54:37 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.6 2005/10/14 08:54:40 blubb Exp $
+
+  14 Oct 2005; Simon Stelling <blubb@gentoo.org>
+  libsrs_alt-1.0_rc1-r1.ebuild:
+  added ~amd64 keyword
 
   13 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
   libsrs_alt-1.0_rc1-r1.ebuild:
