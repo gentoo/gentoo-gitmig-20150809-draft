@@ -40,7 +40,7 @@ start() {
 
 stop() {
 	ebegin "Stopping ${myservice}"
-	start-stop-daemon --stop -exec /usr/sbin/openvpn --pidfile "${VPNPID}"
+	start-stop-daemon --stop --exec /usr/sbin/openvpn --pidfile "${VPNPID}"
 	eend $?
 }
 
