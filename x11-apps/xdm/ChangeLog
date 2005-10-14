@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.15 2005/10/13 04:51:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.16 2005/10/14 18:51:04 spyderous Exp $
+
+*xdm-0.99.1_pre20051014 (14 Oct 2005)
+
+  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xdm-0.99.1_pre20051014.ebuild:
+  New snapshot. Fixes zero-size files in /etc/X11/xdm: xdm-config, Xresources
+  and Xservers.
 
   13 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xdm-0.99.1_pre20050905-r1.ebuild:
