@@ -1,6 +1,16 @@
-MD5 883a57c3686b5dcdbef05be7e1c6e7f2 ChangeLog 1582
-MD5 ff8de25781358ae1ed4bb5a3ce21c109 aldumb-0.9.2-r1.ebuild 966
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 021ee4ac24f9cc30e25616c539a2b66c ChangeLog 1719
+MD5 37769c0b44c32500e2cda5f3cc08e185 aldumb-0.9.2-r1.ebuild 1035
 MD5 30d85b9ae7753da4dfc8bd4d40875282 files/aldumb-0.9.2-PIC.patch 2704
-MD5 74d6f31a83c47d916813fff87eb8e9cf files/digest-aldumb-0.9.2-r1 68
 MD5 c86b4d38a194df18a6826e03b0863d50 files/aldumb-0.9.2.Makefile.patch 664
+MD5 74d6f31a83c47d916813fff87eb8e9cf files/digest-aldumb-0.9.2-r1 68
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDT54Rj5H05b2HAEkRAgZrAJ4/fQsznn5kxl3sjVlN2/HdCJ5EeQCdGzUb
+jiOShFAPV+5zOKfwkK66ROI=
+=Lsew
+-----END PGP SIGNATURE-----

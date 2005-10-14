@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2-r1.ebuild,v 1.7 2005/08/11 18:26:16 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2-r1.ebuild,v 1.8 2005/10/14 12:00:19 flameeyes Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Allegro support for DUMB (an IT, XM, S3M, and MOD player library)"
 HOMEPAGE="http://dumb.sourceforge.net/"
@@ -34,6 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib /usr/include /usr/bin
-	make PREFIX="${D}/usr" install || die "make install failed"
+	dodir /usr/$(get_libdir) /usr/include /usr/bin
+	make PREFIX="${D}/usr" LIB_INSTALL_PATH="${D}/usr/$(get_libdir)" install \
+		|| die "make install failed"
 }
