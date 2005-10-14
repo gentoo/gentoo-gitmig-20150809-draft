@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.21 2005/10/06 19:04:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.22 2005/10/14 09:27:20 citizen428 Exp $
+
+*liferea-1.0_rc2 (14 Oct 2005)
+
+  14 Oct 2005; Michael Kohl <citizen428@gentoo.org> +liferea-1.0_rc2.ebuild:
+  Version bump. Patch submitted by TGL <degrenier@easyconnect.fr> in bug #105068
 
   06 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> liferea-0.9.6.ebuild:
   Stable on ppc.
