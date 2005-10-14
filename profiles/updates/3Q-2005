@@ -75,3 +75,4 @@ move net-libs/aqhbci-ddvcard sys-libs/libchipcard
 move net-libs/aqhbci-rsacard sys-libs/libchipcard
 move net-libs/aqhbci net-libs/aqbanking
 move dev-util/xdoclet-bin dev-java/xdoclet
+move net-misc/netcat6 net-analyzer/netcat6
