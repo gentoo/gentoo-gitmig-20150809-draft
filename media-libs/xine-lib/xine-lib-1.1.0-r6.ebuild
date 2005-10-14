@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r6.ebuild,v 1.3 2005/10/11 13:20:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.0-r6.ebuild,v 1.4 2005/10/14 13:50:08 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -135,22 +135,28 @@ src_compile() {
 
 	if use xvmc; then
 		count="0"
-		use nvidia && count="`expr ${count} + 1`"
-		use i8x0 && count="`expr ${count} + 1`"
-		use cle266 && count="`expr ${count} + 1`"
+		if use nvidia; then
+			count="`expr ${count} + 1`"
+			xvmclib="XvMCNVIDIA"
+		fi
+
+		if use i8x0; then
+			count="`expr ${count} + 1`"
+			xvmclib="I810XvmC"
+		fi
+
+		if use cle266; then
+			count="`expr ${count} + 1`"
+			xvmclib="viaXvMC"
+		fi
+
 		if [[ "${count}" -gt "1" ]]; then
 			eerror "Invalid combination of USE flags"
 			eerror "When building support for xvmc, you may only include support for one video card:"
 			eerror "   nvidia, i8x0, cle266"
 			eerror ""
-			die "emerge again with different USE flags"
-		fi
-
-		use nvidia && xvmclib="XvMCNVIDIA"
-		use i8x0 && xvmclib="I810XvmC"
-		use cle266 && xvmclib="viaXvMC"
-
-		if [[ -n "${xvmclib}" ]]; then
+			eerror "XvMC support will not be built."
+		elif [[ -n "${xvmclib}" ]]; then
 			xvmcconf="--with-xvmc-lib=${xvmclib} --with-xxmc-lib=${xvmclib}"
 			xvmcdir=$(get_x11_dir libXvMC.so)
 
@@ -223,10 +229,4 @@ src_install() {
 	dohtml doc/faq/faq.html doc/hackersguide/*.html doc/hackersguide/*.png
 
 	rm -rf ${D}/usr/share/doc/xine
-}
-
-pkg_postinst() {
-	einfo
-	einfo "Make sure to remove your ~/.xine if upgrading from a pre-1.0 version."
-	einfo
 }
