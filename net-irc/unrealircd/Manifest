@@ -1,8 +1,18 @@
-MD5 d1701b4c6de751c277fb43034409eeff ChangeLog 5463
-MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 8df1e272f659d36d9daf07cddae158d5 unrealircd-3.2.3-r1.ebuild 3902
-MD5 e383b823dba7444bc7987c02eea26996 unrealircd-3.2.3.ebuild 3416
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ae96562a4da6eb96a325484356f1e75 ChangeLog 5579
 MD5 0c44732c1496b1645f59af5da99b3bb4 files/digest-unrealircd-3.2.3 64
 MD5 0c44732c1496b1645f59af5da99b3bb4 files/digest-unrealircd-3.2.3-r1 64
 MD5 d9a803f03c66dbd732f2ffb356cb589a files/unrealircd.confd 499
 MD5 9758629d4e608b7a45c17c340c9b4f13 files/unrealircd.rc 640
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 4482a3a47adb97b1a1722aff18e91a90 unrealircd-3.2.3-r1.ebuild 3909
+MD5 e383b823dba7444bc7987c02eea26996 unrealircd-3.2.3.ebuild 3416
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDT8RrKRy60XGEcJIRAs7QAJ9oCiyNYfDBqy13TbZy93rfbIoQEwCfeE4J
+OrcYIej4LMbk7F8mR24GoiE=
+=REaE
+-----END PGP SIGNATURE-----
