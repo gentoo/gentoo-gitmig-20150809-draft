@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.51 2005/10/04 22:11:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.52 2005/10/14 17:22:06 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -25,6 +25,7 @@ case "$PV" in
 	3.4.0_rc1)		TARBALLDIRVER="3.4.0"; TARBALLVER="3.4.0-rc1" ;;
 	3.5_alpha1)		TARBALLDIRVER="3.4.90"; TARBALLVER="3.4.90" ;;
 	3.5_beta1)		TARBALLDIRVER="3.4.91"; TARBALLVER="3.4.91" ;;
+	3.5_beta2)		TARBALLDIRVER="3.4.92"; TARBALLVER="3.4.92" ;;
 	*)				TARBALLDIRVER="$PV"; TARBALLVER="$PV" ;;
 esac
 if [ "${KMNAME}" = "koffice" ]; then
@@ -79,6 +80,9 @@ if [ "$KDEBASE" = "true" ]; then
 				;;
 		3.4.2)		XDELTA_BASE="stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
 				XDELTA_DELTA="stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta stable/3.4.2/src/$KMNAME-3.4.1-3.4.2.tar.xdelta"
+				;;
+		3.5.0_beta2)	XDELTA_BASE="unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
+				XDELTA_DELTA="unstable/3.4.92/src/$KMNAME-3.4.91-3.4.91.tar.xdelta"
 				;;
 		*)		;;
 	esac
