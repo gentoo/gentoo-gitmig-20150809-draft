@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/netcat6
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.1 2005/10/14 00:50:05 vapier Exp $
+
+*netcat6-0.5 (02 Jun 2003)
+
+  02 Jun 2003; Peter Johanson <latexer@gentoo.org> netcat6-0.5.ebuild:
+  Initial import. Netcat version that supports IPv6 also
+
