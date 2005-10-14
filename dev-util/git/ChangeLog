@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.31 2005/10/11 00:58:49 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.32 2005/10/14 15:13:43 ferdy Exp $
+
+*git-0.99.8c-r1 (14 Oct 2005)
+
+  14 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> -git-0.99.8b.ebuild,
+  -git-0.99.8c.ebuild, +git-0.99.8c-r1.ebuild:
+  provide a custom src_test since the default one fails. fix one pkg_postinst
+  einfo. remove 0.99.8{b,c}
 
 *git-0.99.8c (11 Oct 2005)
 
