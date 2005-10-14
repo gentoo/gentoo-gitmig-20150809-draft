@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.49 2005/10/04 04:04:43 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.50 2005/10/14 07:21:12 spyderous Exp $
+
+*xorg-server-0.99.1_p20051013 (14 Oct 2005)
+
+  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-server-0.99.1_p20051013.ebuild:
+  Update to today's CVS. Enable xprint USE flag. Stop filtering
+  -fomit-frame-pointer, because it works now. Add dep on
+  >=x11-proto/glproto-1.4.1_pre20051013 to fix build breakage.
 
   04 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/0.99.1-r10-check-for-glproto.patch,
