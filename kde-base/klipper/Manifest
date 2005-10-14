@@ -2,9 +2,11 @@ MD5 dd3127580e8e7aecfda12237d9d12e04 ChangeLog 2658
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-klipper-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-klipper-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-klipper-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-klipper-3.5.0_beta2 216
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-klipper-3.5_beta1 69
 MD5 00a48ff403c655bd021fe3740f04ce9c klipper-3.4.1.ebuild 412
 MD5 9d2381ef0103b302864d2b3ddc7b4d73 klipper-3.4.2.ebuild 425
 MD5 867f789e5ede2bc58a63929fdbc748b4 klipper-3.4.3.ebuild 427
+MD5 734c1ffb0875eb7d6be5c70a78b4b561 klipper-3.5.0_beta2.ebuild 401
 MD5 734c1ffb0875eb7d6be5c70a78b4b561 klipper-3.5_beta1.ebuild 401
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

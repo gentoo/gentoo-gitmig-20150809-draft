@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klines
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.18 2005/10/13 00:10:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.19 2005/10/14 18:41:55 danarmak Exp $
+
+*klines-3.4.3 (14 Oct 2005)
+
+  14 Oct 2005; Dan Armak <danarmak@gentoo.org> +klines-3.5.0_beta2.ebuild:
+  New version.
 
 *klines-3.4.3 (13 Oct 2005)
 

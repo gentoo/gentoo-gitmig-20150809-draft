@@ -2,9 +2,11 @@ MD5 bb26e7ea35e4fe488d94f2a20398cd3d ChangeLog 3174
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5.0_beta2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.5_beta1 0
 MD5 0568a67f40cae03b57bcbcd07a213f49 kdeartwork-meta-3.4.1.ebuild 989
 MD5 e203adf71436a8122d389e6860647b92 kdeartwork-meta-3.4.2.ebuild 1010
 MD5 5aade837599e2b5b0ea65e3ada842038 kdeartwork-meta-3.4.3.ebuild 1011
+MD5 b905351dc58347b3a1a4dab92db86678 kdeartwork-meta-3.5.0_beta2.ebuild 996
 MD5 508be9b2831f13e86c8efcb9d49509bf kdeartwork-meta-3.5_beta1.ebuild 978
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

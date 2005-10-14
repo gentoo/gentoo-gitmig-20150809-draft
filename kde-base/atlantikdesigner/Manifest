@@ -2,9 +2,11 @@ MD5 8a5c7d5a6757a48f9b3b3e6526173b9a ChangeLog 2940
 MD5 c85f14ce2dda1942f774b5c12700f4b2 atlantikdesigner-3.4.1.ebuild 492
 MD5 5aea3cb64a24ec01389c2667aff99a89 atlantikdesigner-3.4.2.ebuild 505
 MD5 b4cf3e88238cb640273dfc0b72cff4c1 atlantikdesigner-3.4.3.ebuild 507
+MD5 6a66cfc453b77e54c1d416f8dcf48eca atlantikdesigner-3.5.0_beta2.ebuild 447
 MD5 0b8b329548a5c28e2838f06817d241c6 atlantikdesigner-3.5_beta1.ebuild 481
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-atlantikdesigner-3.4.1 215
 MD5 aef1ad04d3f153a78e0b5aa9742d6f9e files/digest-atlantikdesigner-3.4.2 291
 MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-atlantikdesigner-3.4.3 69
+MD5 c87a32e577bf07599564a43d36f80fef files/digest-atlantikdesigner-3.5.0_beta2 218
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-atlantikdesigner-3.5_beta1 70
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

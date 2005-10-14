@@ -3,9 +3,11 @@ MD5 d34b4b86b659b21184ada6cc00ec5569 files/configure-fix-kdegraphics-openexr.pat
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kdegraphics-kfile-plugins-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kdegraphics-kfile-plugins-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kdegraphics-kfile-plugins-3.4.3 71
+MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kdegraphics-kfile-plugins-3.5.0_beta2 225
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kdegraphics-kfile-plugins-3.5_beta1 72
 MD5 a01138948c8970285dccba96ddf7b5e8 kdegraphics-kfile-plugins-3.4.1.ebuild 701
 MD5 cd8f32acce0e2541d0481b1b69e7d6fa kdegraphics-kfile-plugins-3.4.2.ebuild 812
 MD5 758ffeb5adf15ac282b3da9453159a93 kdegraphics-kfile-plugins-3.4.3.ebuild 814
+MD5 6fd7b2569935398e8167a41ddc256aa3 kdegraphics-kfile-plugins-3.5.0_beta2.ebuild 728
 MD5 6fd7b2569935398e8167a41ddc256aa3 kdegraphics-kfile-plugins-3.5_beta1.ebuild 728
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

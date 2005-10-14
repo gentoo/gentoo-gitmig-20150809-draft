@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.1 2005/09/24 10:24:08 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.2 2005/10/14 18:41:48 danarmak Exp $
+
+*blinken-3.4.3 (14 Oct 2005)
+
+  14 Oct 2005; Dan Armak <danarmak@gentoo.org> +blinken-3.5.0_beta2.ebuild:
+  New version.
 
 *blinken-3.5_beta1 (24 Sep 2005)
 

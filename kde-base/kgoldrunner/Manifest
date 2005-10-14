@@ -2,9 +2,11 @@ MD5 7f7ccf7e9e75514da6eb974d2dabbdbe ChangeLog 2803
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kgoldrunner-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kgoldrunner-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kgoldrunner-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kgoldrunner-3.5.0_beta2 218
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kgoldrunner-3.5_beta1 70
 MD5 74560d2d825c242d4b689aa60dda3bf0 kgoldrunner-3.4.1.ebuild 580
 MD5 12918bb501998be21add2060085e314b kgoldrunner-3.4.2.ebuild 593
 MD5 36afab50c5acf2c5e66ff833053299ef kgoldrunner-3.4.3.ebuild 595
+MD5 5cd35634f61cf7b25612f063c5b94432 kgoldrunner-3.5.0_beta2.ebuild 530
 MD5 dd51b775258ecce4e0f1df2f456f14a7 kgoldrunner-3.5_beta1.ebuild 569
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

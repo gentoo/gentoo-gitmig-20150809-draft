@@ -2,9 +2,11 @@ MD5 f7fe79fcdc704f4ecf896ab885199b43 ChangeLog 2575
 MD5 dd51237c7f58169a5ba9d85f9d6fbf7e files/digest-kodo-3.4.1 208
 MD5 51760bf43f61d4083bb13b322559c21f files/digest-kodo-3.4.2 282
 MD5 4792409083f3033f880840748c1ec31a files/digest-kodo-3.4.3 67
+MD5 4ae7eba9ab986e6234dba1ff579990e1 files/digest-kodo-3.5.0_beta2 212
 MD5 7edab32df6e3405c16e1002962773ef4 files/digest-kodo-3.5_beta1 68
 MD5 0239358fc632ebb04cb5a8481939c50b kodo-3.4.1.ebuild 412
 MD5 8386a0c00558be1f089f35d692b8c9f0 kodo-3.4.2.ebuild 425
 MD5 c413a3e52519cba465ee94496823d32a kodo-3.4.3.ebuild 427
+MD5 df1cf13215e2f002d6438a86c17c4075 kodo-3.5.0_beta2.ebuild 401
 MD5 df1cf13215e2f002d6438a86c17c4075 kodo-3.5_beta1.ebuild 401
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

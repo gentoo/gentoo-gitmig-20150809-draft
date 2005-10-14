@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.18 2005/10/13 00:09:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.19 2005/10/14 18:41:50 danarmak Exp $
+
+*kcalc-3.4.3 (14 Oct 2005)
+
+  14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kcalc-3.5.0_beta2.ebuild:
+  New version.
 
 *kcalc-3.4.3 (13 Oct 2005)
 

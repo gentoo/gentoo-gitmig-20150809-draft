@@ -2,9 +2,11 @@ MD5 0d820ccc88515b476bc8ca8f8acb43ff ChangeLog 2745
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ktuberling-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ktuberling-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-ktuberling-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-ktuberling-3.5.0_beta2 218
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-ktuberling-3.5_beta1 70
 MD5 47f3638d71a0d8fd8364dec6f2a54440 ktuberling-3.4.1.ebuild 544
 MD5 037fad6ac34aaaa59e760dd8d6772cd5 ktuberling-3.4.2.ebuild 557
 MD5 6f245620ed9f77b07afb43c5cb2b190a ktuberling-3.4.3.ebuild 559
+MD5 47fc6d923309b0ee0aaa546e083d37c6 ktuberling-3.5.0_beta2.ebuild 496
 MD5 7324a80f4273611d06dd6b14d4f8a8e5 ktuberling-3.5_beta1.ebuild 533
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

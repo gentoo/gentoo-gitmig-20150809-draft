@@ -3,9 +3,11 @@ MD5 6b1138834ead945e1b1116dd3a92a7f9 files/configure-fix-kdesdk-db-3.4.patch 999
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kbabel-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kbabel-3.4.2 280
 MD5 c697e8b36b03bdccd95cf2d3980a0634 files/digest-kbabel-3.4.3 66
+MD5 b094a9766a49e423018d7721adbefd0c files/digest-kbabel-3.5.0_beta2 210
 MD5 2dedaff6e076b2ee7b9ab8535fe74203 files/digest-kbabel-3.5_beta1 67
 MD5 dfde24583562b306a9d74f0d3902dd32 kbabel-3.4.1.ebuild 419
 MD5 8674548f2ded07167d5b431a9314d138 kbabel-3.4.2.ebuild 1014
 MD5 f27d283418bc05479052efa325636675 kbabel-3.4.3.ebuild 1016
+MD5 2b85ce0f2afe2904ee7051f2331df5bb kbabel-3.5.0_beta2.ebuild 996
 MD5 2b85ce0f2afe2904ee7051f2331df5bb kbabel-3.5_beta1.ebuild 996
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

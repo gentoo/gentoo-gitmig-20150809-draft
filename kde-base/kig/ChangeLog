@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.23 2005/10/13 07:51:01 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.24 2005/10/14 18:41:55 danarmak Exp $
+
+*kig-3.4.3 (14 Oct 2005)
+
+  14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kig-3.5.0_beta2.ebuild:
+  New version.
 
 *kig-3.4.3-r10 (13 Oct 2005)
 

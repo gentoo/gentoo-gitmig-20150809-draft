@@ -2,9 +2,11 @@ MD5 0bb188098f26188557835adf087384ac ChangeLog 3546
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.4.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.4.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.4.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.5.0_beta2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdebase-meta-3.5_beta1 0
 MD5 d9cf09112472e8a05372d6e7d01b9567 kdebase-meta-3.4.1.ebuild 2270
 MD5 4717b82557ace97d037f3a94e31602cc kdebase-meta-3.4.2.ebuild 2303
 MD5 fc86478e1c31d84e8fe623755a15f917 kdebase-meta-3.4.3.ebuild 2307
+MD5 b80d6bdb7355ac67e46d4aa26f15a5da kdebase-meta-3.5.0_beta2.ebuild 2295
 MD5 d889c49d489ec969446910fc35be6fa1 kdebase-meta-3.5_beta1.ebuild 2259
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

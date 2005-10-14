@@ -2,9 +2,11 @@ MD5 16f61d3b094657b26d858cae1fcde7dd ChangeLog 2989
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-styles-3.4.1 220
 MD5 52630059e55189d550ffb49b50e90d85 files/digest-kdeartwork-styles-3.4.2 298
 MD5 48256bc40d421d92b903308f172a596e files/digest-kdeartwork-styles-3.4.3 71
+MD5 025789635e7fc20be5b0cd4ef7f7401e files/digest-kdeartwork-styles-3.5.0_beta2 224
 MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-styles-3.5_beta1 72
 MD5 55c3d246e65bff2332b99f52d5216d2e kdeartwork-styles-3.4.1.ebuild 424
 MD5 715f62a7b8d771069df28c38ba7b844b kdeartwork-styles-3.4.2.ebuild 437
 MD5 b1c660823ca5ab2296e34f3580ec2898 kdeartwork-styles-3.4.3.ebuild 439
+MD5 95a6cc45f0e21d3541ec5f8a99d79048 kdeartwork-styles-3.5.0_beta2.ebuild 413
 MD5 95a6cc45f0e21d3541ec5f8a99d79048 kdeartwork-styles-3.5_beta1.ebuild 413
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

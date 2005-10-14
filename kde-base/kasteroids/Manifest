@@ -2,9 +2,11 @@ MD5 b7b14c8212813920de922e26303ef2d5 ChangeLog 3004
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kasteroids-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kasteroids-3.4.2 288
 MD5 bafb1bf1d1decae41875c6a20c9d5dca files/digest-kasteroids-3.4.3 68
+MD5 b6349ba4ffa313babdf28579b63915f9 files/digest-kasteroids-3.5.0_beta2 218
 MD5 cec48d7b091caec0087349ff3924ad36 files/digest-kasteroids-3.5_beta1 70
 MD5 885e5e5818b3cb22eb5989c5a1ff50b8 kasteroids-3.4.1.ebuild 690
 MD5 c4beacc55130d4dcb9ad3413cc7722c5 kasteroids-3.4.2.ebuild 703
 MD5 c6ff7d20abf9f4d7dc96be09a5d3a9eb kasteroids-3.4.3.ebuild 705
+MD5 1f4a7a1a38fc095a7e0c8906a8764655 kasteroids-3.5.0_beta2.ebuild 642
 MD5 3516345ce810fd125ee8bedb2019ace3 kasteroids-3.5_beta1.ebuild 679
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

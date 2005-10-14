@@ -2,9 +2,11 @@ MD5 545353c335ad3b4344687fff9fb1f632 ChangeLog 2575
 MD5 a2ff872942277aa4226570c6c728c417 files/digest-kmag-3.4.1 236
 MD5 e40e61649226223ac8c5051bc56cd28a files/digest-kmag-3.4.2 320
 MD5 69f79fb831b8a4318ac609aefa806adb files/digest-kmag-3.4.3 76
+MD5 f33393ffa45cd6993ed65a63d5d5ea49 files/digest-kmag-3.5.0_beta2 240
 MD5 174790e90449897638084f6c4bea761f files/digest-kmag-3.5_beta1 77
 MD5 19c05d6c1ac39ca43f4b1485ea23586d kmag-3.4.1.ebuild 388
 MD5 c7c8dbe64461ad978a6481c99be2b5f0 kmag-3.4.2.ebuild 401
 MD5 846f1fc898db56ddb9a126eb8d96e323 kmag-3.4.3.ebuild 403
+MD5 2a0e8fcaa7e71444a6b0c54b79ae0aff kmag-3.5.0_beta2.ebuild 377
 MD5 2a0e8fcaa7e71444a6b0c54b79ae0aff kmag-3.5_beta1.ebuild 377
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

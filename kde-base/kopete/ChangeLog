@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.28 2005/10/13 12:38:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.29 2005/10/14 18:41:57 danarmak Exp $
+
+*kopete-3.4.3 (14 Oct 2005)
+
+  14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kopete-3.5.0_beta2.ebuild:
+  New version.
 
   13 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> kopete-3.4.1.ebuild,
   kopete-3.4.1-r1.ebuild, kopete-3.4.2.ebuild, kopete-3.4.3.ebuild,

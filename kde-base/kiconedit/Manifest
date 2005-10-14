@@ -2,9 +2,11 @@ MD5 5676adc749ff60e768a146aed7a70eb8 ChangeLog 2716
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-kiconedit-3.4.1 221
 MD5 cb94e5a98246b8c80e29c3d668e4be9d files/digest-kiconedit-3.4.2 300
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-kiconedit-3.4.3 71
+MD5 34075fd4ff1990fb26dfc1ac0482a541 files/digest-kiconedit-3.5.0_beta2 225
 MD5 40554f7678788d1d4cdcf0824da8434f files/digest-kiconedit-3.5_beta1 72
 MD5 ca6f2bb6b975f12082a94d769b885ba6 kiconedit-3.4.1.ebuild 384
 MD5 ab55457ffdad53f8593c7826a7dec4af kiconedit-3.4.2.ebuild 397
 MD5 fb88bacc29ed85dcaa0ca6880e5cbfee kiconedit-3.4.3.ebuild 399
+MD5 cc94a90b7efbbfa1bd91b3b58b763a4a kiconedit-3.5.0_beta2.ebuild 373
 MD5 cc94a90b7efbbfa1bd91b3b58b763a4a kiconedit-3.5_beta1.ebuild 373
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

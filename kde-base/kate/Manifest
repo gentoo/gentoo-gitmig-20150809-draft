@@ -2,10 +2,12 @@ MD5 66611a5b5150962828875a570b3e75d5 ChangeLog 2679
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kate-3.4.1 212
 MD5 7deca5e51240260b2976fbbe9326ed6d files/digest-kate-3.4.2 287
 MD5 b334b621242eaf5a23035e870f09dea6 files/digest-kate-3.4.3 68
+MD5 b44dde9d2ab94ac82ba56e8b653e6700 files/digest-kate-3.5.0_beta2 216
 MD5 b50fc512a289fe7a1ef658080cb0a0b3 files/digest-kate-3.5_beta1 69
 MD5 3b51987b260bd459b22f032394a48dc0 files/kate-gcc-4.patch 287
 MD5 e3aec595f1bb9e306214befbaecc006a kate-3.4.1.ebuild 436
 MD5 c1847e2ae10a648a883ec88fd6b73ac6 kate-3.4.2.ebuild 410
 MD5 1dc2adef9f65da180cc5ad0b480f4664 kate-3.4.3.ebuild 412
+MD5 126eb5da21bb52349a3d7213aa2e47e4 kate-3.5.0_beta2.ebuild 386
 MD5 126eb5da21bb52349a3d7213aa2e47e4 kate-3.5_beta1.ebuild 386
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
