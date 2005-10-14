@@ -1,13 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 42dc3d556cafc793c69e2f2b1e73c42e ChangeLog 11954
+MD5 ffb904ab37e1116a3da4102fcf9e4bdb ChangeLog 12099
 MD5 44501c7c8b83bf06c34a755121274e50 files/digest-getmail-4.3.10 66
 MD5 86240c0d474cc541504969f938a0e7f2 files/digest-getmail-4.3.11 66
 MD5 0e00d2f84aaec37e2d43c04266dd30b5 files/digest-getmail-4.3.12 66
-MD5 764ab11154c7919b1b4c9e3ba91d3c8d files/digest-getmail-4.3.3 65
-MD5 ff20696bcca438d803e7db5eb143f566 files/digest-getmail-4.3.4 65
-MD5 c01dba72bb8ffcff4ba3d1307a83d7c9 files/digest-getmail-4.3.5 65
 MD5 a1b89b1b56a166aa875358170a4a8c22 files/digest-getmail-4.3.6 65
 MD5 f5a22cb502a1c483c3ee6949eeff6f17 files/digest-getmail-4.3.7 65
 MD5 0816084fea7e8c63bcaf3a3a06989971 files/digest-getmail-4.3.8 65
@@ -15,9 +12,6 @@ MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
 MD5 a9abfa3836d8a7f2410e433e3ef22869 getmail-4.3.10.ebuild 1576
 MD5 3fdc4f664b92aa170d211d5cd63691f2 getmail-4.3.11.ebuild 1576
 MD5 34a7028bbf7006efd607a026ada3a2dc getmail-4.3.12.ebuild 1721
-MD5 fdef5056f5957616e00845af65dca038 getmail-4.3.3.ebuild 1536
-MD5 7ff569cfd8e9625cc2d510aa8bab82fb getmail-4.3.4.ebuild 1535
-MD5 26cbc55544cd00c4a3c50446469b4483 getmail-4.3.5.ebuild 1535
 MD5 05cbe328f38a338772dcb1a07a8951e9 getmail-4.3.6.ebuild 1538
 MD5 e8ecf73e336b8da0350c1c2cb583b998 getmail-4.3.7.ebuild 1543
 MD5 2d6ac2f2f4a737687e99cf1f4c0559ce getmail-4.3.8.ebuild 1539
@@ -25,7 +19,7 @@ MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDT0sSQlM6RnzZP+IRAvtHAKDCCuHttx1pNnoW5OlmYUQ6w4zdFACfejjC
-a49pFdD+d01U06+F8PCYgPI=
-=8u5Y
+iD8DBQFDT0t8QlM6RnzZP+IRAsb1AJoCjQr3Rf2smpwJ8z+Wtzu2sg9XqQCeLPTm
+jHSFiPkn9CUkmZPyFVt5LWA=
+=/c8z
 -----END PGP SIGNATURE-----
