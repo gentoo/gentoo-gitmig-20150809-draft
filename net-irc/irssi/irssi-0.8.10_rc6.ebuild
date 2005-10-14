@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc6.ebuild,v 1.1 2005/10/13 13:09:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc6.ebuild,v 1.2 2005/10/14 12:18:15 swegener Exp $
 
 inherit perl-module eutils flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="!net-irc/irssi-cvs
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.13 )"
 DEPEND="${RDEPEND}
-	dev-lang/perl
+	>=dev-util/pkgconfig-0.9.0
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}"/${MY_P}
@@ -53,18 +53,13 @@ src_compile() {
 	fi
 
 	econf \
-		--with-glib2 \
-		--without-servertest \
 		--with-proxy \
 		--with-ncurses \
 		$(use_with perl) \
 		$(use_enable ipv6) \
 		$(use_with socks5 socks) \
-		${myconf} || die "./configure failed"
+		${myconf} || die "econf failed"
 	emake || die "emake failed"
-
-	# Generate updated help
-	./syntax.pl
 }
 
 src_install() {

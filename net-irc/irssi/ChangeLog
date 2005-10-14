@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.67 2005/10/13 13:09:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.68 2005/10/14 12:18:15 swegener Exp $
+
+  14 Oct 2005; Sven Wegener <swegener@gentoo.org> irssi-0.8.10_rc6.ebuild:
+  Remove unused configure options and no longer needed perl build-time
+  dependency.
 
 *irssi-0.8.10_rc6 (13 Oct 2005)
 
