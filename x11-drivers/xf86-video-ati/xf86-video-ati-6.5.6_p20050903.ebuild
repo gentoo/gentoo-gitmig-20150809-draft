@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.5.6_p20050903.ebuild,v 1.1 2005/09/08 22:25:19 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.5.6_p20050903.ebuild,v 1.2 2005/10/14 17:49:11 dang Exp $
 
 inherit versionator
 
@@ -17,7 +17,7 @@ inherit x-modular
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 DESCRIPTION="X.Org driver for ati cards"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="dri"
 RDEPEND="x11-base/xorg-server"
 DEPEND="${RDEPEND}

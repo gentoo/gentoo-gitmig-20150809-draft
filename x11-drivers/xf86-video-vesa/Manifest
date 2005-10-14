@@ -1,4 +1,4 @@
-MD5 af110c69580fd3d396757b94ba10c78e ChangeLog 603
-MD5 ff9fad8a9b85dcc1fa7225f919a2e349 xf86-video-vesa-1.0.0.ebuild 456
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 1d09e76086126e8146d4abaf8dccbc75 ChangeLog 683
 MD5 0930570e858d41f9f51127fa0d064a9e files/digest-xf86-video-vesa-1.0.0 74
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 a528b0ac0d302a1d2c4756b135a518e6 xf86-video-vesa-1.0.0.ebuild 463
