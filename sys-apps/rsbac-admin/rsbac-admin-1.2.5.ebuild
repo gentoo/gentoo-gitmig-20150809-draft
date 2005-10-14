@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.5.ebuild,v 1.1 2005/10/07 15:39:05 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.5.ebuild,v 1.2 2005/10/14 11:30:23 kang Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 	use pam && {
 		rsbacmakeargs="${makeargs} pam nss"
 	}
-	emake PREFIX=/usr ${rsbacmakeargs} || "cannot build (${rsbacmakeargs})"
+	emake PREFIX=/usr ${rsbacmakeargs} || die "cannot build (${rsbacmakeargs})"
 }
 
 src_install() {
@@ -39,7 +39,8 @@ src_install() {
 	use pam && {
 		rsbacinstallargs="${rsbacinstallargs} pam-install nss-install"
 	}
-	make PREFIX=${D}/usr DESTDIR=${D} ${rsbacinstallargs}
+	make PREFIX=${D}/usr DESTDIR=${D} ${rsbacinstallargs} || \
+	die "cannot install (${rsbacinstallargs})"
 	insinto /etc
 	newins ${FILESDIR}/rsbac.conf rsbac.conf ${FILESDIR}/nsswitch.conf
 	dodir /secoff
