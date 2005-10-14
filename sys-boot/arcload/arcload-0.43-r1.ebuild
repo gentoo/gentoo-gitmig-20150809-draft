@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.43.ebuild,v 1.1 2005/09/11 01:58:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.43-r1.ebuild,v 1.1 2005/10/14 17:32:26 kumba Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,6 +24,15 @@ pkg_setup() {
 		echo -e ""
 		die
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	# Adds in detection support for the R14000, and
+	# tweaks detectbaud() in loader/detect.c to return
+	# a default of 9600bps when the function fails
+	epatch ${FILESDIR}/${P}-tweaks1.patch
 }
 
 src_compile() {

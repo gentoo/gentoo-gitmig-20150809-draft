@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/arcload
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.2 2005/09/11 01:58:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.3 2005/10/14 17:32:26 kumba Exp $
+
+*arcload-0.43-r1 (15 Oct 2005)
+
+  15 Oct 2005; Joshua Kinard <kumba@gentoo.org>
+  +files/arcload-0.43-tweaks1.patch, +arcload-0.43-r1.ebuild,
+  -arcload-0.43.ebuild:
+  Tweaks to arcload; add an identifier to loader/detect.c for R14K cpus, and
+  make detectbaud() return a default of 9600bps in loader/detect.c
 
 *arcload-0.43 (11 Sep 2005)
 
