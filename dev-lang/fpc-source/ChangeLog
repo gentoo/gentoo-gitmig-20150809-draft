@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/fpc-source
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.9 2005/10/06 17:26:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.10 2005/10/14 17:47:01 gustavoz Exp $
+
+  14 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  fpc-source-2.0.0.ebuild:
+  Keyworded ~sparc
 
   06 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   fpc-source-2.0.0.ebuild:
