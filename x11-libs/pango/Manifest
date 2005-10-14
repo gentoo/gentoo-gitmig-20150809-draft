@@ -1,16 +1,26 @@
-MD5 2c372520f2db7dd18e5ee11050001d24 ChangeLog 12408
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a4d0ffeb51ccd5e32c1bdecbe004ab3e pango-1.4.1-r1.ebuild 1881
-MD5 10c01fe6f38e0f3412b79c3beef2f3ed pango-1.8.2.ebuild 1853
-MD5 b7b54115564984b3d12baf5769ffc3ce pango-1.10.1.ebuild 2040
-MD5 da1e20a87deaa737c836f4b9819400db pango-1.8.1-r1.ebuild 1978
-MD5 724ba9499e8fd9e01e37131a0622919e pango-1.8.1.ebuild 1908
-MD5 64bcab7976f0bf42506cf97f7336e0c1 files/digest-pango-1.8.2 65
-MD5 941770096c4a3927b2acb1b81f90b915 files/digest-pango-1.4.1-r1 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c74f9cf6ff56dbfc2f73eef059088910 ChangeLog 12494
 MD5 d01b8f91979149fb6b036c3d443315eb files/digest-pango-1.10.1 66
+MD5 941770096c4a3927b2acb1b81f90b915 files/digest-pango-1.4.1-r1 64
 MD5 54474022d422b0d0cf4b473cfcf5fffb files/digest-pango-1.8.1 64
 MD5 54474022d422b0d0cf4b473cfcf5fffb files/digest-pango-1.8.1-r1 64
+MD5 64bcab7976f0bf42506cf97f7336e0c1 files/digest-pango-1.8.2 65
 MD5 54a56a572951b08340d08e10e4d93414 files/pango-1.0.99.020606-xfonts.patch 4560
 MD5 ee91ace9933dbdbea591e08b6a82bb44 files/pango-1.2.2-slighthint.patch 1124
 MD5 2c7eef6720e5a5aecb7406200c6ede31 files/pango-1.2.5-lib64.patch 1107
 MD5 8de5114d2f4367487b3d70b712115ec4 files/pango-1.8.1-fontfix.patch 1320
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 ea81b5a99e3a4a08ca83fe9e684c662f pango-1.10.1.ebuild 2054
+MD5 a4d0ffeb51ccd5e32c1bdecbe004ab3e pango-1.4.1-r1.ebuild 1881
+MD5 da1e20a87deaa737c836f4b9819400db pango-1.8.1-r1.ebuild 1978
+MD5 724ba9499e8fd9e01e37131a0622919e pango-1.8.1.ebuild 1908
+MD5 10c01fe6f38e0f3412b79c3beef2f3ed pango-1.8.2.ebuild 1853
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUAYvomPajV0RnrERArKNAJ99I3CL3GrlFcxDFFSwLoqsPka8HQCeM1+b
+AjRXWVnhqnJednnM4TKCmtQ=
+=kUDy
+-----END PGP SIGNATURE-----

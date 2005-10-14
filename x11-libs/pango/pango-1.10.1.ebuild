@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.1.ebuild,v 1.2 2005/10/11 13:22:35 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.10.1.ebuild,v 1.3 2005/10/14 19:25:10 dang Exp $
 
 inherit eutils gnome2
 
@@ -30,9 +30,9 @@ USE_DESTDIR="1"
 
 
 pkg_setup() {
-	if ! built_with_use x11-libs/cairo png; then
-		einfo "Please re-emerge x11-libs/cairo with the png use flag set"
-		die "cairo needs png flag set"
+	if ! built_with_use -a x11-libs/cairo png X; then
+		einfo "Please re-emerge x11-libs/cairo with the png and X USE flags set"
+		die "cairo needs png and X flags set"
 	fi
 }
 
