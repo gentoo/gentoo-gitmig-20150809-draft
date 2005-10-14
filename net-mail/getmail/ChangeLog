@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.89 2005/09/17 12:13:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.90 2005/10/14 06:06:54 ticho Exp $
+
+*getmail-4.3.12 (14 Oct 2005)
+
+  14 Oct 2005; Andrej Kacian <ticho@gentoo.org> +getmail-4.3.12.ebuild:
+  Version bump. Added postinst and postrm python magic.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> getmail-4.3.11.ebuild:
   Stable on ppc.
