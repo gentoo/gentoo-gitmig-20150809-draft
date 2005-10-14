@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.12 2005/09/20 19:32:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.13 2005/10/14 19:24:00 dang Exp $
+
+  14 Oct 2005; <dang@gentoo.org> evince-0.4.0-r2.ebuild:
+  Needs poppler built with gtk. bug #109029
 
   20 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   evince-0.4.0-r2.ebuild:
