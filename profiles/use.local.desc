@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1498 2005/10/13 21:02:20 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1499 2005/10/14 13:27:04 satya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -752,9 +752,11 @@ net-fs/netatalk:cracklib - Support for cracklib strong password checking
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/samba:async - Enables asynchronous input/output
 net-fs/samba:automount - Enables automount support
+net-fs/samba:ldapsam - Enables samba 2.2 ldap support (default passwd backend: ldapsam_compat)
 net-fs/samba:libclamav - Enables clamav libraries, without needing to use the daemon
 net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Enables support for user quotas
+net-fs/samba:swat - Enables support for swat configuration gui
 net-fs/samba:syslog - Enables support for syslog
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
