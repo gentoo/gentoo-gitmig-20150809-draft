@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03f310e49e996559963186829dffde4e ChangeLog 7981
-MD5 c7cf0bf2a01fd5bb41778f1941040287 metadata.xml 247
-MD5 84e53a8720bac8be1b270d7b3c91f1e3 xcdroast-0.98_alpha15-r3.ebuild 2048
+MD5 70e4ada20ce048fa42c3ad8f5d78d491 ChangeLog 8101
 MD5 121eabf95d22bf4f85b5c0426bf133a5 files/64bit_gsize.patch 471
+MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
 MD5 ccb3a30dc25ffa6c7d78b64ea8cb7f75 files/gtk2locale.patch 643
 MD5 26768959e3621b77b59f887551742eba files/xcdroast-0.98alpha15-dvd.patch 15532
-MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
+MD5 c7cf0bf2a01fd5bb41778f1941040287 metadata.xml 247
+MD5 0dfbe037ee5bfec359ad281f5d459e54 xcdroast-0.98_alpha15-r3.ebuild 2047
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDN7SUwUpWvClEHQoRAusQAJwPxLnh9JQXafIFV9rchhlzMs80tgCeO6Ud
-jUL/ocqk+nnzqCDs0ORlwas=
-=S1ZP
+iD8DBQFDT7xNKRy60XGEcJIRArGeAKCbZXxf6W4eEFNME5K9XmeB07AtrQCeOVcs
+eaMjRlRwxNg4gskvXIZobhE=
+=42CY
 -----END PGP SIGNATURE-----
