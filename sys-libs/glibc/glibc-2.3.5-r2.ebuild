@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.14 2005/10/12 22:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.15 2005/10/14 02:17:21 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -602,6 +602,11 @@ alt_usrlibdir() {
 }
 
 setup_flags() {
+	# Make sure host make.conf doesn't pollute us
+	if is_crosscompile || tc-is-cross-compiler ; then
+		CHOST=${CTARGET} strip-unsupported-flags
+	fi
+
 	# Store our CFLAGS because it's changed depending on which CTARGET
 	# we are building when pulling glibc on a multilib profile
 	CFLAGS_BASE=${CFLAGS_BASE-${CFLAGS}}
@@ -987,7 +992,7 @@ setup_env() {
 
 	if is_crosscompile || tc-is-cross-compiler ; then
 		# We only install for this CTARGET on crosscompilers
-		MULTILIB_ABIS=${MULTILIB_ABIS:-DEFAULT_ABI}
+		MULTILIB_ABIS=${MULTILIB_ABIS:-${DEFAULT_ABI}}
 
 		# We need to export CFLAGS with abi information in them because
 		# glibc's configure script checks CFLAGS for some targets (like mips)
@@ -1147,16 +1152,25 @@ src_unpack() {
 src_compile() {
 	setup_env
 
-	if [[ -z ${OABI} ]] && has_multilib_profile ; then
-		OABI=${ABI}
-		einfo "Building multilib glibc for ABIs: $(get_install_abis)"
-		for ABI in $(get_install_abis) ; do
-			export ABI
+	if [[ -z ${OABI} ]] ; then
+		if has_multilib_profile ; then
+			OABI=${ABI}
+			einfo "Building multilib glibc for ABIs: $(get_install_abis)"
+			for ABI in $(get_install_abis) ; do
+				export ABI
+				src_compile
+			done
+			ABI=${OABI}
+			unset OABI
+			return 0
+		elif is_crosscompile || tc-is-cross-compiler ; then
+			OABI=${ABI}
+			export ABI=${DEFAULT_ABI}
 			src_compile
-		done
-		ABI=${OABI}
-		unset OABI
-		return 0
+			ABI=${OABI}
+			unset OABI
+			return 0
+		fi
 	fi
 
 	toolchain-glibc_src_compile
