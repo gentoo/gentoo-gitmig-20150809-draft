@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.46 2005/10/12 22:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.47 2005/10/14 02:58:37 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -18,13 +18,13 @@ fi
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
-SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
-	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
-	mirror://gnu/binutils/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${PV}.tar.bz2
+	mirror://kernel/linux/devel/binutils/test/binutils-${PV}.tar.bz2
+	mirror://gnu/binutils/binutils-${PV}.tar.bz2"
 [[ -n ${PATCHVER} ]] && \
-	SRC_URI="${SRC_URI} mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
+	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-patches-${PATCHVER}.tar.bz2"
 [[ -n ${UCLIBC_PATCHVER} ]] && \
-	SRC_URI="${SRC_URI} mirror://gentoo/${P}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
+	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 IUSE="nls multitarget multislot test"
@@ -40,6 +40,8 @@ RDEPEND=">=sys-devel/binutils-config-1.8"
 DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
+
+S=${WORKDIR}/binutils-${PV}
 
 LIBPATH=/usr/$(get_libdir)/binutils/${CTARGET}/${PV}
 INCPATH=${LIBPATH}/include
