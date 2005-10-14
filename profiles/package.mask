@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4571 2005/10/13 19:19:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4572 2005/10/14 08:56:33 citizen428 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -273,10 +273,6 @@ x11-misc/driconf
 #
 # Broken (many compile errors).
 >=www-apps/swish-e-2.4
-
-# Michael Kohl <citizen428@gentoo.org> (7 Sep 2005)
-# Masked because >=sys-apps/dbus-0.30 got masked again
-=net-news/liferea-0.9.7b
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (7 Sep 2005)
 # HAL-Device-Manager needs the matching version
