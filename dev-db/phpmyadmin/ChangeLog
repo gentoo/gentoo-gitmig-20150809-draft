@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.129 2005/10/13 20:16:01 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.130 2005/10/14 21:30:57 halcy0n Exp $
+
+  14 Oct 2005; Mark Loeser <halcy0n@gentoo.org> phpmyadmin-2.6.4_p2.ebuild:
+  Stable on x86; bug #108939
 
   13 Oct 2005; Jose Luis Rivero <yoswink@gentoo.org>
   phpmyadmin-2.6.4_p2.ebuild:
