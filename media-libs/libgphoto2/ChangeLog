@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.54 2005/09/03 20:54:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.55 2005/10/14 23:54:15 allanonjl Exp $
+
+*libgphoto2-2.1.6-r1 (14 Oct 2005)
+
+  14 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +libgphoto2-2.1.6-r1.ebuild:
+  install the .group file instead of using pam_console. use plugdev group
+  instead of default camera group in the .group file. Thanks to Rémi Cardona
+  <remi2402@free.fr> for testing and the updating of patches on bugzie. Fixes
+  #84628
 
   03 Sep 2005; Markus Rothe <corsair@gentoo.org> libgphoto2-2.1.6.ebuild:
   Stable on ppc64
