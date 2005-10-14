@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4e89921378bb18533836fc4b517f6f1d HTML-TableExtract-1.08.ebuild 581
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 86ce35d5028e2670f42eadc2c4975db6 ChangeLog 1263
 MD5 88b7fab82534ea1eafee3bd7f4adc601 HTML-TableExtract-1.10.ebuild 550
 MD5 95120382bf225fcd1bf87699e93e0f3a files/digest-HTML-TableExtract-1.10 73
 MD5 17aecdf5fa48b640132bd082188beea1 files/digest-HTML-TableExtract-1.08 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTwcOJrHF4yAQTrARAmjIAJ0XdeD2OZL2hIOvbG/L/kDVEWxA4gCgpAdo
+1sFGggNeNGNv3lvHO8a6OV4=
+=6elV
+-----END PGP SIGNATURE-----
