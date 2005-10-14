@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/floatflt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/ChangeLog,v 1.10 2004/12/28 20:35:13 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/ChangeLog,v 1.11 2005/10/14 02:06:14 agriffis Exp $
+
+  14 Oct 2005; Aron Griffis <agriffis@gentoo.org> floatflt-1.31a.ebuild:
+  Mark 1.31a stable on alpha
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> floatflt-1.31a.ebuild:
   Stable on amd64.

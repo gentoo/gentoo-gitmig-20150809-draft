@@ -1,4 +1,14 @@
-MD5 b29d4ef63b4b8f43724eed8acf300d55 ChangeLog 836
-MD5 17a146590a4a6932f9b653c4a5cf5d8e floatflt-1.31a.ebuild 698
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 1d38edb30fb55895051efa86568d068d ChangeLog 939
+MD5 2d8ced249d6c06fdcd0b73f75adeefa9 floatflt-1.31a.ebuild 698
 MD5 334f49057e2692bb8b1ffd35d6b3eae8 files/digest-floatflt-1.31a 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTxKjJrHF4yAQTrARAjGGAJsFcS/BT75qF1o5/bIhoLvkWfOf2ACfZ7cu
+vzBBc/fIoDSy9k9jg8tIWU8=
+=H5Gc
+-----END PGP SIGNATURE-----
