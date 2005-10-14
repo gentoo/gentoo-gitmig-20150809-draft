@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 9255c8a3f432f2cd0ad1e1a045079079 glib-perl-1.062.ebuild 754
 MD5 e962733bed2ad644d019d897c409f098 ChangeLog 4489
 MD5 2e8a89384245ef851a789ecbdcf41a5f glib-perl-1.081.ebuild 765
 MD5 f0985e07520ccd93372582a61d920e5c files/digest-glib-perl-1.062 62
 MD5 2a320dc6f223bfb71122994c982133be files/digest-glib-perl-1.081 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTwzBJrHF4yAQTrARAifRAJ4/TlqcR6ENhUgiEOaiDNrqprXragCglPeY
+hIbkyONcb14/B/KWdW5RWhk=
+=yT24
+-----END PGP SIGNATURE-----
