@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 411005f2f0f01f63ff38e87e8ec48047 ChangeLog 4219
-MD5 5d177bc99426825ba4e1201c5ee37112 gtk2-perl-1.081.ebuild 651
+MD5 131f40397c80d7fe426a56b415430141 ChangeLog 4323
+MD5 b1c75a3824f8bfedb3ff0f61560bc2c7 gtk2-perl-1.081.ebuild 650
 MD5 d932cae864ff73aca20f0b970fb2e2a6 gtk2-perl-1.042.ebuild 665
 MD5 e9b9c56e0a10cb488711c58fc1e6d7a5 gtk2-perl-1.062.ebuild 639
 MD5 fbfa27825f6df6ee81397303977947b4 files/digest-gtk2-perl-1.081 62
 MD5 4c85f817a2d758bce3953718548fbb92 files/digest-gtk2-perl-1.062 62
 MD5 4fd687bbc5c9d091a8286f12a05f57fa files/digest-gtk2-perl-1.042 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTw9lJrHF4yAQTrARAvOAAJ4kOcI6hxykbSDwac2Eyn6InwcxpACeK97t
+L43+l5KV40hLwYZDPRdDrcM=
+=uhxa
+-----END PGP SIGNATURE-----
