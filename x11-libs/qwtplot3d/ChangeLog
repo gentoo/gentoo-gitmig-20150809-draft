@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/qwtplot3d
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.1 2005/10/14 02:01:32 cryos Exp $
+
+*qwtplot3d-0.2.6 (14 Oct 2005)
+
+  14 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +qwtplot3d-0.2.6.ebuild:
+  Initial import, ebuild submitted by Martin Corley <Martin.Corley@ed.ac.uk>,
+  closes bug 83294.
+
