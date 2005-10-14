@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.28 2005/10/13 17:23:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.29 2005/10/14 02:03:16 agriffis Exp $
+
+  14 Oct 2005; Aron Griffis <agriffis@gentoo.org> pyxml-0.8.4.ebuild:
+  Mark 0.8.4 stable on alpha
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org> pyxml-0.8.4.ebuild:
   Mark 0.8.4 stable on ia64
