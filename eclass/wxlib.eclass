@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.11 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.12 2005/10/14 21:30:20 pythonhead Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -65,22 +65,14 @@ configure_build() {
 # This is a commodity function which calls configure script
 # with the default parameters plus extra parameters. It's used
 # as building the unicode version required redoing it.
-# It takes all the params and pass them to the script
+# It takes all the params and passes them to the script
 subconfigure() {
-	debug_conf=""
-	if use debug; then
-		debug_conf="--enable-debug --enable-debug_gdb"
-	fi
-	${S}/configure \
-		--host=${CHOST} \
-		--disable-debugreport \
-		--libdir=/usr/$(get_libdir) \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--with-zlib \
-		${debug_conf} \
-		$* || die "./configure failed"
+	ECONF_SOURCE="${S}" \
+		econf \
+			--disable-debugreport \
+			--with-zlib \
+			$(use_enable debug) $(use_enable debug debug_gdb) \
+			$* || die "./configure failed"
 }
 
 # Installs a build
