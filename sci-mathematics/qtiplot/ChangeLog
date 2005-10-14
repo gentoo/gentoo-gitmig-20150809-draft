@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/qtiplot
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/ChangeLog,v 1.1 2005/10/14 02:26:26 cryos Exp $
+
+*qtiplot-0.6.9 (14 Oct 2005)
+
+  14 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +qtiplot-0.6.9.ebuild:
+  Initial import, thanks to Martin Corley <Martin.Corley@ed.ac.uk> for the
+  ebuild, closes bug 83293.
+
