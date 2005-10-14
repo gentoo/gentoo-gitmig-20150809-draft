@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.45 2005/09/15 23:19:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.46 2005/10/14 23:05:57 allanonjl Exp $
+
+*gftp-2.0.18-r2 (14 Oct 2005)
+
+  14 Oct 2005; John N. Laliberte <allanonjl@gentoo.org> -gftp-2.0.14.ebuild,
+  -gftp-2.0.15.ebuild, -gftp-2.0.16-r1.ebuild, -gftp-2.0.17.ebuild,
+  +gftp-2.0.18-r2.ebuild:
+  get rid of gtk2 useflag, clean up old ebuilds, fixes #108555
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org> gftp-2.0.18-r1.ebuild:
   Mark 2.0.18-r1 stable on alpha
