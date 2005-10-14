@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e37faa9f9e9ba9cf577a893b6920cbe5 ChangeLog 6261
-MD5 9ad64ba1a94849ed87ff74df46547308 files/digest-vserver-sources-2.0-r1 299
+MD5 c1f23c88e92fa97c77da79d8592724bb ChangeLog 6406
+MD5 151e0b369686c98b22c005054903d5cc files/digest-vserver-sources-2.0-r1 299
 MD5 5924688c45831bed102690d1716b5676 files/digest-vserver-sources-2.0.1_pre2-r1 304
 MD5 d3b302c691bf54e4694736cea6fe47d6 files/digest-vserver-sources-2.1.0_rc3 300
+MD5 d69941d573e7a778380bfae4602db452 files/digest-vserver-sources-2.1.0_rc4 300
 MD5 f703b135c202d58849f005abf3c728b4 metadata.xml 526
 MD5 fd2677cdadb6c8f9cd1050658a8b861d vserver-sources-2.0-r1.ebuild 742
 MD5 2c887568cc1e721dae7033bfce847d46 vserver-sources-2.0.1_pre2-r1.ebuild 749
 MD5 e2dcfecdc0f03c63eb960c0fa251585d vserver-sources-2.1.0_rc3.ebuild 782
+MD5 8d1f83278128cb550ded8c9c7a15ad72 vserver-sources-2.1.0_rc4.ebuild 745
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTS7wflZ8QqxhrsMRAkG7AJ46YnSEBdY2vEGM8fqN68kxhWUZpwCfSl1s
-yf4MKU7IMb8cH0aXE5FXVkc=
-=rKjC
+iD8DBQFDT+1cmPFBzbX68WERAl7SAJ0WQV09xKhClIBs1fFYBFYhBsK7fACcCE9N
++CF2wX6k2ClO48jka1wH8fU=
+=smtV
 -----END PGP SIGNATURE-----
