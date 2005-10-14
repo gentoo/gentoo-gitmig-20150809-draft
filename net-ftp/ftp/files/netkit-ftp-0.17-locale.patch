@@ -1,8 +1,12 @@
-ripped from Fedora
+Ripped from Fedora
+
+* Wed Dec 15 2004 Tim Waugh <twaugh@redhat.com>
+- Call setlocale() so that readline works correctly (bug #142265).
+
 https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=142265
 
---- netkit-ftp-0.17/ftp/main.c.locale	2004-12-15 16:52:14.504193752 +0000
-+++ netkit-ftp-0.17/ftp/main.c	2004-12-15 16:52:51.719133655 +0000
+--- netkit-ftp-0.17/ftp/main.c
++++ netkit-ftp-0.17/ftp/main.c
 @@ -51,6 +51,7 @@
  
  /* #include <arpa/ftp.h>	<--- unused? */

@@ -1,27 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 bfa2f8566ce2a75364c9aea8087b0270 ChangeLog 3642
+MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r3 66
+MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r5 66
+MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r6 66
+MD5 10adb0b3b66639bdb39e7c976667eb68 files/netkit-ftp-0.17+ssl-0.2+auth.diff 424
+MD5 93f2e2f560f76d5ca833c2172fc2b501 files/netkit-ftp-0.17+ssl-0.2.diff 45616
+MD5 ac6ceef9cbe7bce5e89b97acaba3934f files/netkit-ftp-0.17-acct.patch 419
+MD5 4396c484fc1661431ba229441923c274 files/netkit-ftp-0.17-custom-cflags.patch 587
+MD5 7ea1e6f6fc38c7ec06eeb9317c5b72a5 files/netkit-ftp-0.17-dont-strcpy-overlapping.patch 1375
+MD5 fff08fac8daf71e3580efe0b71b25349 files/netkit-ftp-0.17-ipv6.patch 22850
+MD5 047c2f1c4217615294c3905fa97df40e files/netkit-ftp-0.17-locale.patch 577
+MD5 21b1d9279bb3b48cba7a72be936890d4 files/netkit-ftp-0.17-runique_mget.patch 488
+MD5 a2ce6225bb6a68ca98d6ddec516237b9 files/netkit-ftp-0.17-security.patch 509
+MD5 d632888a47c713e0ee59c4677338ca57 files/netkit-ftp-0.17-segv.patch 2009
+MD5 c6d25ab53501677130cabad19092b0a5 files/netkit-ftp-0.17-ssl-0.2.patch 29528
 MD5 80ca646c7ebf7d86e937294242836ea6 ftp-0.17-r3.ebuild 1034
 MD5 45fd632e8f4c81f73a7ab97dac005132 ftp-0.17-r5.ebuild 1413
-MD5 113d82c24735402ad5beb99e5fe27f79 ChangeLog 3242
-MD5 c9de5d7e13b9b74cb2daf693a6536a78 ftp-0.17-r4.ebuild 1362
-MD5 fde0162cb11d557f9dee994e764ec49f files/netkit-ftp-0.17-ipv6.patch 22300
-MD5 a2ce6225bb6a68ca98d6ddec516237b9 files/netkit-ftp-0.17-security.patch 509
-MD5 10adb0b3b66639bdb39e7c976667eb68 files/netkit-ftp-0.17+ssl-0.2+auth.diff 424
-MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r3 66
-MD5 c6d25ab53501677130cabad19092b0a5 files/netkit-ftp-0.17-ssl-0.2.patch 29528
-MD5 613519a7494f336a0e2a73d8c0d016bb files/netkit-ftp-0.17-locale.patch 539
-MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r4 66
-MD5 21b1d9279bb3b48cba7a72be936890d4 files/netkit-ftp-0.17-runique_mget.patch 488
-MD5 036b2200a177f3266c5cbb3f4d5e4ed5 files/digest-ftp-0.17-r5 66
-MD5 ac6ceef9cbe7bce5e89b97acaba3934f files/netkit-ftp-0.17-acct.patch 419
-MD5 93f2e2f560f76d5ca833c2172fc2b501 files/netkit-ftp-0.17+ssl-0.2.diff 45616
-MD5 4396c484fc1661431ba229441923c274 files/netkit-ftp-0.17-custom-cflags.patch 587
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC8VOdgIKl8Uu19MoRAiubAJ0c2CTi2sWVxps9RVbthHNAWRhLlACeJgwp
-lMlXgURJSKBGWQuJEjiOJiw=
-=JS+3
------END PGP SIGNATURE-----
+MD5 5de7cf5340f5972785e20645fe56ab32 ftp-0.17-r6.ebuild 1556
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
