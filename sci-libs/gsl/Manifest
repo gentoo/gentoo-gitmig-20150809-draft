@@ -1,6 +1,18 @@
-MD5 543ecf56f9fcd9c8be5975608361dbfa gsl-1.4.ebuild 751
-MD5 97343b0540dc688442a0020ff04f928a gsl-1.6.ebuild 773
-MD5 1689a0578087110fbd57b0ab71e8620d ChangeLog 2885
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8543ced81da31f34873704a45506d65b ChangeLog 3011
 MD5 5f0a27845cdb652d4720cf49199a0770 files/digest-gsl-1.4 60
 MD5 5f476c7aedf436616ae45ce5e4bc1a1a files/digest-gsl-1.6 60
+MD5 85f679eae9dc66478eacbaf839652f01 files/digest-gsl-1.7 60
+MD5 543ecf56f9fcd9c8be5975608361dbfa gsl-1.4.ebuild 751
+MD5 97343b0540dc688442a0020ff04f928a gsl-1.6.ebuild 773
+MD5 a967526c2f830ca5c496ade37634e1d5 gsl-1.7.ebuild 826
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDTxo5ntT9W3vfTuoRAi5HAKCDStmT7pZG4PRG3M3hwXzKmBwowACgpOu3
+hsT2nlBofrpq3KxeBfqFU0o=
+=khmu
+-----END PGP SIGNATURE-----
