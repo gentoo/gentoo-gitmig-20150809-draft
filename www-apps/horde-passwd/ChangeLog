@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-passwd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.4 2005/04/26 02:54:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.5 2005/10/14 00:40:05 vapier Exp $
+
+*horde-passwd-3.0 (14 Oct 2005)
+
+  14 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/horde-passwd-3.0-no-clear-password.patch, +horde-passwd-3.0.ebuild:
+  Version bump #109171 by Christoph Gysin.
 
 *horde-passwd-2.2.2 (26 Apr 2005)
 
