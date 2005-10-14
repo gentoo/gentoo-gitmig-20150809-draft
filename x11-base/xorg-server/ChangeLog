@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.51 2005/10/14 07:22:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.52 2005/10/14 16:31:05 joshuabaergen Exp $
+
+  14 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-0.99.1_p20051013.ebuild:
+  Add missing deps (x11-libs/libXres and x11-libs/libxkbui).
 
   14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -files/0.99.1-r9_CAN-2005-2495.patch,
