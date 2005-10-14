@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-3.1.ebuild,v 1.1 2005/07/22 08:47:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-3.3.ebuild,v 1.1 2005/10/14 21:05:10 ka0ttic Exp $
 
 inherit distutils
 

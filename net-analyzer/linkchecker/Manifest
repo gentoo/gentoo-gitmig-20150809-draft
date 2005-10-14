@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a267f9b96539c3897c877b33d27dc7b linkchecker-3.1.ebuild 509
+MD5 ecddbd7f9885932340fb1a3caf188afd ChangeLog 3016
+MD5 fe51c9bc36ce4ce1967c3abf0898dfe3 files/digest-linkchecker-1.12.1 70
+MD5 b44364482dda1723e4b067d7fb64f888 files/digest-linkchecker-3.2 67
+MD5 dfd6e0c885be8d7dc96a674c28821d39 files/digest-linkchecker-3.3 67
 MD5 cba6642890d7458662f063ff839b9858 linkchecker-1.12.1.ebuild 657
 MD5 e601da3d8a0e9b022d2b4a95ff3a227e linkchecker-3.2.ebuild 509
-MD5 da057ce5ba05fd6734d5a74fb3b23fb3 ChangeLog 2866
+MD5 fcb81310bbdbbe22f0ad069718067c1c linkchecker-3.3.ebuild 509
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 fe51c9bc36ce4ce1967c3abf0898dfe3 files/digest-linkchecker-1.12.1 70
-MD5 f846acf0a0a7158ec443a99e85bb166c files/digest-linkchecker-3.1 67
-MD5 b44364482dda1723e4b067d7fb64f888 files/digest-linkchecker-3.2 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC8wPREZCkKN40op4RAmuCAJ9mvTf5RPgfZlS1/DEqHlrh5A817wCcCgD7
-fxcNNwpybRBsvoJlvt1WyKU=
-=FDBL
+iD8DBQFDUB2SEZCkKN40op4RAtu+AKDBaa1Vv0XrOn6KeTpRmeL101SbjgCgkZVB
+yNljPG4K71MbxE80TFxWJnc=
+=M2qC
 -----END PGP SIGNATURE-----
