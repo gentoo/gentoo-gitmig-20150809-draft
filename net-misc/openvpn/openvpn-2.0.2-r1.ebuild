@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.2-r1.ebuild,v 1.1 2005/10/13 14:09:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.2-r1.ebuild,v 1.2 2005/10/14 10:50:06 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~sparc ~x86"
 IUSE="examples iproute2 minimal selinux ssl static threads"
 
 RDEPEND=">=dev-libs/lzo-1.07
-	iproute2? ( sys-apps/iproute2 )
+	iproute2? ( sys-apps/iproute2 ) || ( sys-apps/net-tools )
 	selinux? ( sec-policy/selinux-openvpn )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="${RDEPEND}
