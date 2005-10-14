@@ -1,15 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.64_beta1.ebuild,v 1.1 2005/09/08 16:52:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.64.ebuild,v 1.1 2005/10/14 20:25:49 ka0ttic Exp $
 
 inherit eutils bash-completion
 
-MY_P="${P/_beta/b}"
-S="${WORKDIR}/${MY_P}"
-
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
-SRC_URI="ftp://sid.joedog.org/pub/${PN}/beta/${MY_P}.tar.gz"
+SRC_URI="ftp://sid.joedog.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
@@ -17,8 +14,6 @@ SLOT="0"
 IUSE="debug ssl"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )"
-RDEPEND="${DEPEND}
-	dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
