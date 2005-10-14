@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 119a0a126ae50521b3dae8d1ec30f198 ChangeLog 1850
 MD5 3308ae704f3012264a5e59587930c0b8 files/digest-horde-mnemo-1.1.4 63
 MD5 5ccd7c89dea9941c4766ab82ae4f3458 files/digest-horde-mnemo-2.0.1 66
@@ -6,3 +9,10 @@ MD5 6cad54738ea2ced39092787a784f7107 horde-mnemo-1.1.4.ebuild 425
 MD5 468ea3364330c3b3a1988dd9f4d5c5a3 horde-mnemo-2.0.1.ebuild 443
 MD5 00625cbf2000919edbe7c760a5c671f9 horde-mnemo-2.0.2.ebuild 443
 MD5 c14b95659ea882d1d9a416001fc1463e metadata.xml 284
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTv8ugIKl8Uu19MoRAl8xAJ9nD9KKczxWfYgRPrUcNxGtAsql9wCfWT2n
+KR7voqpwxD3/SrbeSETao80=
+=MD56
+-----END PGP SIGNATURE-----
