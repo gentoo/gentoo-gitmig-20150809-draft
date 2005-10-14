@@ -105,6 +105,26 @@ http://bugs.gentoo.org/show_bug.cgi?id=47507
  	if (argc > 2) {
  #ifdef USE_SSL
                  /* not really an SSL enhancement but something that
+@@ -222,7 +222,7 @@
+ 		     * the default (unofficial) port number
+ 		     */
+ 		    if ((strcmp(argv[2],"ssl-ftp")==0) && (destsp==NULL))
+-		        port = 150;
++		        port = "150";
+ 		    else {
+ 			if (destsp == NULL ) {
+ 			    printf("%s: bad port name-- %s\n",argv[1],argv[2]);
+@@ -230,7 +230,9 @@
+ 			    code = -1;
+ 			    return;
+ 			} else {
+-			    port = ntohs(destsp->s_port);
++			    static char portbuf[10];
++			    snprintf(portbuf, sizeof(portbuf), "%i", ntohs(destsp->s_port));
++			    port = portbuf;
+ 			}
+ 		    }
+ 		} else 
 @@ -233,20 +235,15 @@
  		    }
  		} else 
