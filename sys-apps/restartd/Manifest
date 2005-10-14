@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f1369a2d144717ba0fc0a88963cce8bd ChangeLog 351
+MD5 6a4a22e408a9a5cba0aad29071e7bc43 files/digest-restartd-0.1_alpha3 67
+MD5 f92deaa3f53bb96b4745a6065c21180a restartd-0.1_alpha3.ebuild 796
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDTzXAgIKl8Uu19MoRAotwAKCAAwX5Vz6vGSw6IEG3WfLNZ87cbACdFrgY
+JLPFJV0u68iQ/I362cjt6VQ=
+=Un7E
+-----END PGP SIGNATURE-----
