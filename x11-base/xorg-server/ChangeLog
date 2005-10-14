@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.53 2005/10/14 18:17:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.54 2005/10/14 18:56:42 spyderous Exp $
+
+  14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1_p20051013.ebuild:
+  Also wrap dmxproto dep in minimal USE.
 
   14 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-server-0.99.1_p20051013.ebuild:
