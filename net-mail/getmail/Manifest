@@ -4,14 +4,13 @@ Hash: SHA1
 MD5 93c1ae5bddc970524d0139b151e389d4 ChangeLog 12317
 MD5 86240c0d474cc541504969f938a0e7f2 files/digest-getmail-4.3.11 66
 MD5 0e00d2f84aaec37e2d43c04266dd30b5 files/digest-getmail-4.3.12 66
-MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
 MD5 791dcd5fcb91b0c678d5d48fdd66cfc3 getmail-4.3.11.ebuild 1574
 MD5 34a7028bbf7006efd607a026ada3a2dc getmail-4.3.12.ebuild 1721
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDT1MMQlM6RnzZP+IRApUbAJ95FYOtboZIQzBlqS0QZGrUx1a2NACfXQG+
-CgNgVwA7PKIbl7uGe/gBb5k=
-=G+MT
+iD8DBQFDT1NqQlM6RnzZP+IRAkaTAKCetn+WUgd9otc/cFhH9nScqvtV+wCfV26u
+0InrYXdKTxQFsZ4YGA4vhQI=
+=x7K9
 -----END PGP SIGNATURE-----
