@@ -1,16 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c0a941e08060816c4c7068cd4023602c quagga-0.98.3.ebuild 4861
-MD5 d30997e32c750bff03590ab79f7276ff quagga-0.98.2.ebuild 4468
-MD5 c4bcfc277e856924ed9ba4cead328cba ChangeLog 8277
-MD5 c5d35e84e9953411d425350619e46b15 quagga-0.98.4.ebuild 4238
+MD5 95af004409f46b53eb8c5277bfd5b5b8 quagga-0.98.2.ebuild 4625
+MD5 32d1b21f3a7df65fe58533a8152060f8 ChangeLog 8764
+MD5 7eb6d4f48ba75934fc51d92287a1d38d quagga-0.98.4.ebuild 4393
 MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
-MD5 7b34e71571fb66352e5e6713fe6840a2 quagga-0.96.5-r1.ebuild 3861
+MD5 6f7bbd50a0af9c0e1f2fae5116a8eacf quagga-0.96.5-r1.ebuild 4017
 MD5 cc109a746273bc0d6aee9d758e7524ab files/bgpd.init 900
 MD5 44547b687343ebfed7524cebc5626067 files/ospf6d.init 919
 MD5 1a1df9fb95d48001187e1f56dc4ff5e5 files/digest-quagga-0.98.2 66
-MD5 ab93cbbeeed343892eea7f9b79217a8b files/digest-quagga-0.98.3 66
 MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
 MD5 39b8cb21b55de53af38c94c2f5d85917 files/ripd.init 900
 MD5 120ab1b53975ec86e78266f31e935ab6 files/ripngd.init 920
@@ -23,13 +21,10 @@ MD5 2c1c5b782f96a74b48ccc496ad7a3865 files/zebra.init 1168
 MD5 7da4097332468741416e156a2e5d35e4 files/patches-0.98.2/amir-connected-route.patch 6336
 MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch 14570
 MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.2/ht-20040304-classless-bgp.patch 1581
-MD5 a5a7f270b8ccff05a27e0fa943a0aaf5 files/patches-0.98.3/amir-connected-route.patch 6091
-MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.3/ht-20050110-0.98.0-bgp-md5.patch 14570
-MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.3/ht-20040304-classless-bgp.patch 1581
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDKAVkNSP4Vda7IdsRAhXPAJ92dT40836Pr+s0x8EV30gLLpBiAwCfR+SV
-ANB85ToVTVAmKFMBbVxmdiw=
-=hC/h
+iD8DBQFDTz/mNSP4Vda7IdsRAmfUAKCSM5++hEKa8wp+JfZBzkr1U6LshACfYf4b
+gRBILuFXTuSG+m0ALVamO18=
+=AqBA
 -----END PGP SIGNATURE-----

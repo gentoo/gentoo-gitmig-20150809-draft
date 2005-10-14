@@ -2,7 +2,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.20 2005/09/14 11:11:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.21 2005/10/14 05:19:12 mrness Exp $
+
+  14 Oct 2005; Alin Nastac <mrness@gentoo.org>
+  -files/patches-0.98.3/amir-connected-route.patch,
+  -files/patches-0.98.3/ht-20040304-classless-bgp.patch,
+  -files/patches-0.98.3/ht-20050110-0.98.0-bgp-md5.patch,
+  quagga-0.96.5-r1.ebuild, quagga-0.98.2.ebuild, -quagga-0.98.3.ebuild,
+  quagga-0.98.4.ebuild:
+  Remove obsolete test version 0.98.3. Add a warning about necessity of
+  patching kernel for being able to use TCP MD5 for BGP (#108364). Mark
+  version 0.98.4 stable on x86.
 
   14 Sep 2005; Alin Nastac <mrness@gentoo.org> +files/bgpd.init,
   -files/init/bgpd, -files/init/ospf6d, -files/init/ospfd, -files/init/ripd,

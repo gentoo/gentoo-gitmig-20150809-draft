@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.4.ebuild,v 1.4 2005/09/14 11:11:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.4.ebuild,v 1.5 2005/10/14 05:19:12 mrness Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.quagga.net/download/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi realms"
 
 RDEPEND="sys-apps/iproute2
@@ -111,12 +111,18 @@ pkg_postinst() {
 	einfo "You have to create config files in /etc/quagga before"
 	einfo "starting one of the daemons."
 
+	if use tcpmd5; then
+		echo
+		ewarn "TCP MD5 for BGP needs a patched kernel!"
+		einfo "See http://hasso.linux.ee/quagga/bgp-md5.en.php for more info."
+	fi
+
 	if use ipv6; then
 		echo
 		ewarn "This version of quagga contains a netlink race condition fix that triggered a kernel bug"
 		ewarn "which affects IPv6 users who have a kernel version < 2.6.13-rc6."
-		ewarn "See following links for more info:"
-		ewarn "   http://lists.quagga.net/pipermail/quagga-dev/2005-June/003507.html"
-		ewarn "   http://bugzilla.quagga.net/show_bug.cgi?id=196"
+		einfo "See following links for more info:"
+		einfo "   http://lists.quagga.net/pipermail/quagga-dev/2005-June/003507.html"
+		einfo "   http://bugzilla.quagga.net/show_bug.cgi?id=196"
 	fi
 }
