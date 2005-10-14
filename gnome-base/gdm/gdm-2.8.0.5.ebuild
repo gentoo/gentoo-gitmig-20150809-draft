@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.5.ebuild,v 1.1 2005/10/04 09:06:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.5.ebuild,v 1.2 2005/10/14 17:43:34 dang Exp $
 
 inherit eutils pam gnome2
 
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 USE_DESTDIR="1"
-
+MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	G2CONF="--sysconfdir=/etc/X11 \

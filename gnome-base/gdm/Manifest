@@ -1,26 +1,36 @@
-MD5 6ffd6fc2ed75c732bf3e9090438a9397 ChangeLog 16409
-MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
-MD5 c7ff380f85c291d369369001d00c40a9 gdm-2.8.0.5.ebuild 3600
-MD5 b5feff9292f322953f1622bc2234f622 gdm-2.8.0.3.ebuild 3650
-MD5 37330f87e87c8fceb266a57f66bfdb81 gdm-2.6.0.9-r2.ebuild 3561
-MD5 94376baba0cbbf02a3297b7b4ea3a0ef gdm-2.8.0.4.ebuild 3654
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 65e67c78973b4878d1e6b700bb912ef8 gdm-2.8.0.1-r1.ebuild 3713
-MD5 80ecdc9dea675084c39d7d30876acf5b files/digest-gdm-2.2.5.4-r5 65
-MD5 5b650e1d4d90f356434d217d78a02714 files/digest-gdm-2.8.0.1-r1 211
-MD5 97ae11c23f88fbfd0eb6058b6a8d56b9 files/digest-gdm-2.8.0.3 211
-MD5 a76a5b19c8a2d00733b6be59384612e4 files/digest-gdm-2.6.0.9-r2 137
-MD5 2f36da0ccf882cf2e65d4e7c26e014e5 files/digest-gdm-2.8.0.4 211
-MD5 7dc28411b445f8459abba359b03f36b8 files/gdm-2.4.4-selinux_remove_attr.patch 826
-MD5 222144a2577237cab4e4cd9b929a1654 files/gdm-2.6.0.9-ipv6_config.patch 649
-MD5 760cce8742853b3bf48248051b87193b files/digest-gdm-2.8.0.5 211
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8d5331eea3dea665b85cab87a4d15c05 ChangeLog 16485
 MD5 2a4dc345919a4094ead16d7a122e40bf files/2.2.5/gnomerc 235
-MD5 0107e56a45d8ef4413c1779e809f1c03 files/2.6.0/Xsession 6198
-MD5 a3f4b5a7ab813f106578125638e3b2f0 files/2.6.0/custom.desktop 301
 MD5 d0cb338160e3be8790524af8071cc4df files/2.2.5/pam.d/gdm 380
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.2.5/pam.d/gdmconfig 288
+MD5 114395565e31f41b44d31d731f1478b0 files/2.2.5/security/console.apps/gdmconfig 66
+MD5 0107e56a45d8ef4413c1779e809f1c03 files/2.6.0/Xsession 6198
+MD5 a3f4b5a7ab813f106578125638e3b2f0 files/2.6.0/custom.desktop 301
 MD5 2edddb54af0c3c979b9ef73ba52deb4a files/2.6.0/pam.d/gdm 425
 MD5 6c45b586e2cf16cf89ab544197b12bae files/2.6.0/pam.d/gdm-autologin 406
 MD5 89cc8ab9525284af6babcb9c86122443 files/2.6.0/pam.d/gdmconfig 288
-MD5 114395565e31f41b44d31d731f1478b0 files/2.2.5/security/console.apps/gdmconfig 66
 MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig 66
+MD5 80ecdc9dea675084c39d7d30876acf5b files/digest-gdm-2.2.5.4-r5 65
+MD5 a76a5b19c8a2d00733b6be59384612e4 files/digest-gdm-2.6.0.9-r2 137
+MD5 5b650e1d4d90f356434d217d78a02714 files/digest-gdm-2.8.0.1-r1 211
+MD5 97ae11c23f88fbfd0eb6058b6a8d56b9 files/digest-gdm-2.8.0.3 211
+MD5 2f36da0ccf882cf2e65d4e7c26e014e5 files/digest-gdm-2.8.0.4 211
+MD5 6b6d0be7add58349e04329e1e4af41b9 files/digest-gdm-2.8.0.5 211
+MD5 7dc28411b445f8459abba359b03f36b8 files/gdm-2.4.4-selinux_remove_attr.patch 826
+MD5 222144a2577237cab4e4cd9b929a1654 files/gdm-2.6.0.9-ipv6_config.patch 649
+MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
+MD5 37330f87e87c8fceb266a57f66bfdb81 gdm-2.6.0.9-r2.ebuild 3561
+MD5 65e67c78973b4878d1e6b700bb912ef8 gdm-2.8.0.1-r1.ebuild 3713
+MD5 b5feff9292f322953f1622bc2234f622 gdm-2.8.0.3.ebuild 3650
+MD5 94376baba0cbbf02a3297b7b4ea3a0ef gdm-2.8.0.4.ebuild 3654
+MD5 76b94af05bcd1f1ccda86910e0467452 gdm-2.8.0.5.ebuild 3621
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDT+5nomPajV0RnrERAuItAJ4l/P6yzapA7PkpUR9p1tXOBmEz9ACeI0Ky
+loDgG0hlYRTjff1kBSQKboc=
+=cZI7
+-----END PGP SIGNATURE-----
