@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.2-r2.ebuild,v 1.1 2005/10/14 11:37:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.2-r3.ebuild,v 1.1 2005/10/14 13:04:32 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -26,13 +26,19 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		$(use_enable iproute2) \
+	local myconf=""
+	# We cannot use use_enable with iproute2 as the Makefile stupidly
+	# enables it with --disable-iproute2
+	use iproute2 && myconf="${myconf} --enable-iproute2"
+
+	econf ${myconf} \
 		$(use_enable ssl) \
 		$(use_enable ssl crypto) \
 		$(use_enable threads pthread) \
 		|| die "configure failed"
+
 	use static && sed -e -i '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
+
 	emake || die "make failed"
 
 	if ! use minimal ; then

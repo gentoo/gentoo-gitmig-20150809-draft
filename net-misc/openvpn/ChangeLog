@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.45 2005/10/14 11:37:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.46 2005/10/14 13:04:32 uberlord Exp $
+
+*openvpn-2.0.2-r3 (14 Oct 2005)
+
+  14 Oct 2005; Roy Marples <uberlord@gentoo.org> files/openvpn.init,
+  -openvpn-2.0.2-r2.ebuild, +openvpn-2.0.2-r3.ebuild:
+  init script now modprobes tun if /dev/tun does not exist and errors
+  if tun/tap support is not enabled in the kernel
+  
+  iproute2 USE flag fixed as --disable-iproute2 also enables it in the Makefile
 
 *openvpn-2.0.2-r2 (14 Oct 2005)
 

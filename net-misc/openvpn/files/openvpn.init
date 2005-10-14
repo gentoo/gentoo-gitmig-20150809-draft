@@ -14,6 +14,12 @@ depend() {
 }
 
 checktundevice() {
+	if [[ ! -e /dev/net/tun ]]; then
+		if ! modprobe tun ; then
+			eerror "TUN/TAP support is not available in this kernel"
+			return 1
+		fi
+	fi
 	if [[ -h /dev/net/tun && -c /dev/misc/net/tun ]]; then
 		ebegin "Detected broken /dev/net/tun symlink, fixing..."
 		rm -f /dev/net/tun
@@ -23,10 +29,10 @@ checktundevice() {
 }
 
 start() {
+	ebegin "Starting ${myservice}"
+
 	checktundevice || return 1
 
-	ebegin "Starting ${myservice}"
-	
 	if [[ ! -e "${VPNCONF}" ]]; then
 		eend 1 "${VPNCONF} does not exist"
 		return 1
