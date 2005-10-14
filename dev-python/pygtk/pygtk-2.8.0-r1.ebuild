@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.0.ebuild,v 1.2 2005/10/11 02:23:22 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.0-r1.ebuild,v 1.1 2005/10/14 12:43:17 allanonjl Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2.7.4
 	>=x11-libs/pango-1.9.0
 	>=dev-libs/atk-1.8.0
-	>=dev-python/pycairo-0.5.0
+	>=dev-python/pycairo-0.9.0
 	!arm? ( dev-python/numeric )
 	gnome? ( >=gnome-base/libglade-2.4.0 )
 	opengl? ( virtual/opengl

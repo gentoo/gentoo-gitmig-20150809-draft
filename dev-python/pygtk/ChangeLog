@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.91 2005/10/11 02:23:22 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.92 2005/10/14 12:43:17 allanonjl Exp $
+
+  14 Oct 2005; John N. Laliberte <allanonjl@gentoo.org> pygtk-2.8.0.ebuild:
+  make pycairo >=0.9.0 due to bug #107331
 
   11 Oct 2005; John N. Laliberte <allanonjl@gentoo.org> pygtk-2.8.0.ebuild:
   remove support for alpha, arm, hppa, ia64, mips, ppc64, filed bugs.
