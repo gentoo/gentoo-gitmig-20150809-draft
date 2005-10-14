@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 536fc68713fc6d618f6ac8c02145bddb metadata.xml 687
-MD5 13a1020cf3bd92179d5ed3f108169933 horde-passwd-2.2.2.ebuild 546
-MD5 a77ae1e31c4749c411b8c0f0f1d6c68c ChangeLog 1406
-MD5 41137756c734ffcc398b429aacb06634 files/2.2.1-example-backend-setup.patch 1047
-MD5 a11c3fe18a03687a5e83771b2555b370 files/digest-horde-passwd-2.2.2 64
-MD5 b47a9e2b4ef864a7b9a4937c7bd24ae6 files/2.2.1-main.php-typo.patch 840
+MD5 0bc2a4576b17ab0d4518895dbeb430f3 ChangeLog 1610
 MD5 90a30b8eff0510043a20370d85462e3d files/2.2.1-no-clear-password.patch 496
-MD5 57778ef05cbb06b1e142a98592d3f18c files/2.2.1-crypt-support.patch 3959
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMjL1gIKl8Uu19MoRAhzcAJ0RQQUNO8YiNDiDGzbyv8ml+UevgwCfcF78
-SutT6Y3Ed1siY6g14fiX/1E=
-=3PB8
------END PGP SIGNATURE-----
+MD5 a11c3fe18a03687a5e83771b2555b370 files/digest-horde-passwd-2.2.2 64
+MD5 9a059ac5faff646369e70fe84762ecac files/digest-horde-passwd-3.0 65
+MD5 a663a0df1829b79b8197da762868127a files/horde-passwd-3.0-no-clear-password.patch 424
+MD5 13a1020cf3bd92179d5ed3f108169933 horde-passwd-2.2.2.ebuild 546
+MD5 69f1e1f6a4b43b705625d9ae6efa871b horde-passwd-3.0.ebuild 563
+MD5 536fc68713fc6d618f6ac8c02145bddb metadata.xml 687
