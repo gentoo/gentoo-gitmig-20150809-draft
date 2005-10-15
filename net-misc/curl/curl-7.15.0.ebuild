@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.0.ebuild,v 1.3 2005/10/15 14:55:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.0.ebuild,v 1.4 2005/10/15 15:57:29 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -82,6 +82,9 @@ src_install() {
 
 	insinto /usr/share/aclocal
 	doins docs/libcurl/libcurl.m4
+
+	insinto /usr/lib/pkgconfig
+	doins libcurl.pc
 
 	dodoc CHANGES README
 	dodoc docs/FEATURES docs/INTERNALS docs/LIBCURL

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.44 2005/10/15 14:53:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.45 2005/10/15 15:57:29 dragonheart Exp $
+
+  15 Oct 2005; Daniel Black <dragonheart@gentoo.org> curl-7.15.0.ebuild:
+  libcurl.pc installed as per bug #104110 by Christoph Gysin
 
   15 Oct 2005; Daniel Black <dragonheart@gentoo.org>
   -files/curl-7.10.8-transfer-segv.patch, -files/7.12.0-no-fputc.patch,
