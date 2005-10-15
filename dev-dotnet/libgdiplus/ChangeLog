@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.43 2005/10/15 21:52:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.44 2005/10/15 22:09:12 latexer Exp $
+
+  15 Oct 2005; Peter Johanson <latexer@gentoo.org> libgdiplus-1.1.8.ebuild:
+  Mark stable on x86.
 
 *libgdiplus-1.1.9.2 (15 Oct 2005)
 
