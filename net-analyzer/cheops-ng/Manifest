@@ -1,6 +1,16 @@
-MD5 2faf49a011676af40aaa8866de15b3fc cheops-ng-0.2.0.ebuild 1336
-MD5 6928f9d5f68576d21610df3299f1e940 cheops-ng-0.2.2.ebuild 1321
-MD5 71f29921c7d04e023d1e3680f3b7984f ChangeLog 2321
-MD5 5731c4fdc13f68a2dccaacfbc4fbc611 metadata.xml 257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a48b710a66477bc22896762637b6e218 ChangeLog 2448
+MD5 8f96848d632ffad6b8c3bd5aa30a4a1a cheops-ng-0.2.0.ebuild 1337
+MD5 98018a03497f7b8766e8682cb2779ed3 cheops-ng-0.2.2.ebuild 1322
 MD5 33b404ed127738fbd865480756961af4 files/digest-cheops-ng-0.2.0 64
 MD5 ed8d54dd35c44fdc8a5add323278edd2 files/digest-cheops-ng-0.2.2 64
+MD5 5731c4fdc13f68a2dccaacfbc4fbc611 metadata.xml 257
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUStZcsIHjyDViGQRAj48AJ9UyJ324SCNZLbM81wZYNITj9YjagCgiO5T
+k5C/rDNFj6EaZKXomt4kxcA=
+=CSqu
+-----END PGP SIGNATURE-----
