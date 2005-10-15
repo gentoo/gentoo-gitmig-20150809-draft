@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.92 2005/10/14 12:43:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.93 2005/10/15 02:10:45 allanonjl Exp $
+
+*pygtk-2.8.0-r2 (15 Oct 2005)
+
+  15 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +pygtk-2.8.0-r2.ebuild:
+  remove gnome useflag for libglade, fixes #103056
 
   14 Oct 2005; John N. Laliberte <allanonjl@gentoo.org> pygtk-2.8.0.ebuild:
   make pycairo >=0.9.0 due to bug #107331
