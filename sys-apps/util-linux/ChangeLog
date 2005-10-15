@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.123 2005/10/05 00:08:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.124 2005/10/15 15:42:58 solar Exp $
+
+*util-linux-2.12r-r1 (15 Oct 2005)
+
+  15 Oct 2005; <solar.@gentoo.org>
+  +files/util-linux-2.12r-fdisk-frame-pointers.patch,
+  +util-linux-2.12r-r1.ebuild:
+  - bug #108988 fdisk is unable to always lseek when omiting frame pointers
 
 *util-linux-2.12r (05 Oct 2005)
 

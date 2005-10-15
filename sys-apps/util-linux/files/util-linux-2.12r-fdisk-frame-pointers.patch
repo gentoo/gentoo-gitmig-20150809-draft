@@ -1,0 +1,12 @@
+--- fdisk/Makefile.orig	2005-10-15 14:30:56.000000000 +0000
++++ fdisk/Makefile	2005-10-15 14:33:02.000000000 +0000
+@@ -6,6 +6,9 @@
+ include ../make_include
+ include ../MCONFIG
+ 
++# fdisk when built with ssp and omiting -fomit-frame-pointer causes fdisk/cfdisk/sfdisk to not see the device
++CFLAGS += -fno-omit-frame-pointer
++
+ MAN8=
+ SBIN=
+ CFDISK=cfdisk
