@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0f0dbdfc9d9f4a9f163c772168fc61bd ChangeLog 3994
 MD5 b038ca1f78f3e38be1066b18ee484ed1 art-sharp-1.0.10.ebuild 384
 MD5 28a3c76bb7a04f68a7a336d41b0027ea art-sharp-1.0.8-r1.ebuild 387
@@ -14,3 +17,10 @@ MD5 3ddf35279f4dcf4483ddda4c44e601d6 files/digest-art-sharp-2.3.91 149
 MD5 a46ade80323f449b3edc0c044255118e files/digest-art-sharp-2.5.90 149
 MD5 e183a3b0925a371bebfb8e0eab284191 files/digest-art-sharp-2.5.91 149
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUZeZcsIHjyDViGQRAgKqAKCjfO3kMfm5uYbPh4nU7LYRAFiYkgCeL/Ce
+F5/kxVhIv5cJZk/7Zb1M2XI=
+=L4sn
+-----END PGP SIGNATURE-----
