@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12fde3fb8c26d68ee1bfffb31231d654 linux-wlan-ng-firmware-0.2.2.ebuild 1260
-MD5 09c11d8650459df44c7fabab79746e59 ChangeLog 499
-MD5 14539d26ec261bda643c0b9fa6098bdd metadata.xml 531
-MD5 94e34c91c524fe8f5ab35746a0448fb7 files/prism2_makefile-0.2.2.patch 850
+MD5 1cf8cef4de89d665897e5ad15cda321e ChangeLog 614
 MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-firmware-0.2.2 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDP6XeQiJ/wx066S4RAjEYAJ9jTED0wFhMsw43u6FfCbxAa1FrmACfZHYD
-r08GSkm+9n+M5fyDZPjLpqY=
-=8QpW
------END PGP SIGNATURE-----
+MD5 94e34c91c524fe8f5ab35746a0448fb7 files/prism2_makefile-0.2.2.patch 850
+MD5 6ea3271ac50c1f02afe77320afc382fc linux-wlan-ng-firmware-0.2.2.ebuild 1261
+MD5 14539d26ec261bda643c0b9fa6098bdd metadata.xml 531
