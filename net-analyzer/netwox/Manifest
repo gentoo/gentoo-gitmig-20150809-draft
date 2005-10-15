@@ -1,8 +1,16 @@
-MD5 e62909b6d72cfbe032c9db7023a4921f ChangeLog 2153
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3f2d6b33b2d9e3b5aea1aeea6e067e3 ChangeLog 2351
+MD5 a035a340ad76b6fcae68f450b4c80076 files/digest-netwox-5.28.0 66
+MD5 0d63153f187413a39f046ea4acaa43ff files/digest-netwox-5.31.0 137
 MD5 595b8dd3c2b25d617085a633221eecf1 metadata.xml 257
 MD5 0cd91d1df2d474f3824d2b90f6b6f35c netwox-5.28.0.ebuild 1007
-MD5 05838929a1144d6f37b3119fa405df85 netwox-5.29.0.ebuild 1108
-MD5 e1c17086bb1d24eaa12725338c1612a4 netwox-5.30.0.ebuild 1108
-MD5 a035a340ad76b6fcae68f450b4c80076 files/digest-netwox-5.28.0 66
-MD5 ab0ad2d48129adf261fe4f6a7080be22 files/digest-netwox-5.29.0 66
-MD5 1b773bec70784a0a66e987f70d4b89f3 files/digest-netwox-5.30.0 66
+MD5 fa0ae5e4a4ac1b9227df860fcd91455e netwox-5.31.0.ebuild 1497
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDUIxMmdTrptrqvGERAkQ3AKCCXgQLiyeciuwUZUNfVFMqlN4WywCfZFaW
+HZhqgtyWjl5sn6Jtzjat/bc=
+=vJB1
+-----END PGP SIGNATURE-----
