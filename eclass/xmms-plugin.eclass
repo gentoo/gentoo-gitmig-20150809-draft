@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.19 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.20 2005/10/15 19:12:43 flameeyes Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 
@@ -25,7 +25,7 @@ GENTOO_URI=${GENTOO_URI-"http://dev.gentoo.org/~eradicator/xmms"}
 # Example:
 # SONAME="libmpg123.so"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Xmms Plugin: ${PN}"
 HOMEPAGE="http://www.xmms.org"
