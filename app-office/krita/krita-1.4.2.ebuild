@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.4.2.ebuild,v 1.2 2005/10/13 17:02:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.4.2.ebuild,v 1.3 2005/10/15 22:13:58 flameeyes Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -17,7 +17,7 @@ IUSE="javascript"
 RDEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	>=media-gfx/imagemagick-5.5.2
 	>=media-libs/lcms-1.12
-	javascript? ( kde-base/kjsembed )"
+	javascript? ( || ( kde-base/kjsembed kde-base/kdebindings ) )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

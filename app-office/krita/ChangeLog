@@ -1,6 +1,10 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.15 2005/10/13 17:02:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.16 2005/10/15 22:13:58 flameeyes Exp $
+
+  15 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> krita-1.4.2.ebuild:
+  Added missing dependency on kdebindings for javascript, unbreaking deps for
+  monolithic ebuilds.
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org> krita-1.4.2.ebuild:
   Mark 1.4.2 ~ia64

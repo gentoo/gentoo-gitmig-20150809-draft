@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.121 2005/10/13 19:17:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.122 2005/10/15 22:12:43 flameeyes Exp $
+
+  15 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> koffice-1.4.2.ebuild:
+  Added missing dependency on kdebindings for javascript, unbreaking deps for
+  monolithic ebuilds.
 
   13 Oct 2005; Brent Baude <ranger@gentoo.org> koffice-1.4.1-r1.ebuild:
   Marking koffice-1.4.1-r1 for security fix
