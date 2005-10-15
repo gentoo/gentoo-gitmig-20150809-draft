@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.0.ebuild,v 1.2 2005/10/15 14:53:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.0.ebuild,v 1.3 2005/10/15 14:55:58 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -25,10 +25,10 @@ RDEPEND="gnutls? ( net-libs/gnutls )
 
 DEPEND="${RDEPEND}
 	test? (
-		net-misc/stunnel
 		sys-apps/diffutils
 		dev-lang/perl
 	)"
+# used - but can do without in self test: net-misc/stunnel
 
 src_unpack() {
 	unpack ${A}
