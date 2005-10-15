@@ -1,5 +1,15 @@
-MD5 62e33d90b6a1c48fbb34d040dcd19552 folding-2.97.ebuild 552
-MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 a9afb754c4288c35d130ae869111a5c9 ChangeLog 688
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21531dd0d9c5908971b5450aa4157655 ChangeLog 808
 MD5 1e5aa98f03e60ca6655ecab74c279d0d files/70folding-gentoo.el 264
 MD5 25486bb9ab4fcedfb9a41bc02ee8823e files/digest-folding-2.97 63
+MD5 accc551fc4cc9b223bce2532597c47b9 folding-2.97.ebuild 491
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDULKtyiNZaEAZA+ARAg6GAJ9BwAqkKr3Mf9LyGfDljPwHlAwRewCfZRP2
+Nwqu3Mm022NzPpr63dx1u98=
+=Mk8N
+-----END PGP SIGNATURE-----

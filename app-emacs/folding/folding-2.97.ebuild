@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/folding-2.97.ebuild,v 1.7 2005/09/09 15:58:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/folding-2.97.ebuild,v 1.8 2005/10/15 07:40:56 mkennedy Exp $
 
 inherit elisp
 
 DESCRIPTION="A folding-editor-like Emacs minor mode"
-# HOMEPAGE is not reachable but no other suitable site found
-HOMEPAGE="http://user.it.uu.se/~andersl/emacs.shtml#folding"
+HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/FoldingMode"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
