@@ -1,25 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2b21056f56133cae32bd313c57eccd2 slmodem-2.9.11_pre20050816.ebuild 4344
-MD5 d8bfc7e54bbf93358bef2ed665278ad0 slmodem-2.9.9d.ebuild 3552
-MD5 d3ced2e1ed762e15a291148ebd42a8da ChangeLog 12002
-MD5 e487a8ab7ec754f06a85f64f4aaa7540 metadata.xml 409
-MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
-MD5 618a9ebd35ccb49bf34e6ea522afcb8b files/slmodem-class-simple-to-class.diff 6847
-MD5 e91d1df68be76c531a8514dba77c1886 files/slmodem-2.9.11.modules 106
-MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
-MD5 1a0b854bbe34e01e918b855b7c81ffba files/slmodem-2.9.conf 649
-MD5 3d00e935ef9592cf6538298cacd92a02 files/slmodem-2.9.init 2702
+MD5 f68beb535180251eeb010687253e6c41 ChangeLog 12290
 MD5 8338cfc9815a953d85195bdccd9fbc97 files/digest-slmodem-2.9.11_pre20050816 140
+MD5 cae2ec761f3db78791ab4ec7f0e83d5b files/digest-slmodem-2.9.11_pre20051009 140
 MD5 fd55ef399408a109742263cd5b4a5219 files/digest-slmodem-2.9.9d 66
+MD5 e91d1df68be76c531a8514dba77c1886 files/slmodem-2.9.11.modules 106
 MD5 fd0f0a405fb7f059cc2f5078d54fd884 files/slmodem-2.9.9b-gcc4.patch 463
+MD5 1a0b854bbe34e01e918b855b7c81ffba files/slmodem-2.9.conf 649
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
+MD5 3d00e935ef9592cf6538298cacd92a02 files/slmodem-2.9.init 2702
+MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
+MD5 1561aebe43beb20809e47ea1dd62115f files/slmodem-amd64-Makefile.diff 762
+MD5 618a9ebd35ccb49bf34e6ea522afcb8b files/slmodem-class-simple-to-class.diff 6847
 MD5 9c47e598fd639d46a03493fe7a52595e files/slmodem-remove-URB_ASYNC_UNLINK.patch 436
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDQuM9NSP4Vda7IdsRAmGDAJ90nfTnj0sG2VQkuHwtBwtxc0dmfgCfSMjt
-ONjHnYkXsQI3X2//C/nJo9s=
-=Vvpb
------END PGP SIGNATURE-----
+MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
+MD5 e487a8ab7ec754f06a85f64f4aaa7540 metadata.xml 409
+MD5 b2b21056f56133cae32bd313c57eccd2 slmodem-2.9.11_pre20050816.ebuild 4344
+MD5 2c199b5a99fbf92ba03af59c785abb72 slmodem-2.9.11_pre20051009.ebuild 4549
+MD5 d8bfc7e54bbf93358bef2ed665278ad0 slmodem-2.9.9d.ebuild 3552

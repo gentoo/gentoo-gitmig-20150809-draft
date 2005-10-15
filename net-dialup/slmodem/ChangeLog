@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.51 2005/10/04 20:16:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.52 2005/10/15 11:08:37 genstef Exp $
+
+*slmodem-2.9.11_pre20051009 (15 Oct 2005)
+
+  15 Oct 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/slmodem-amd64-Makefile.diff, +slmodem-2.9.11_pre20051009.ebuild:
+  Version bump, CFLAGS optimization, and amd64 support thanks to Tupone
+  Alfredo <alfredo@tupone.it> in bug 106276
 
   04 Oct 2005; Alin Nastac <mrness@gentoo.org> slmodem-2.9.9d.ebuild,
   slmodem-2.9.11_pre20050816.ebuild:
