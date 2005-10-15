@@ -1,22 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75162aa3ba6e90dd9a5d1e50e8a56240 ChangeLog 21695
+MD5 838b16395516e247ed194a617a627939 ChangeLog 22183
 MD5 8e1251c76b508dfdfe0e4f0c0b166540 files/digest-transcode-0.6.14-r2 144
+MD5 03b7d892f34025e0c5854e0977b5fb49 files/digest-transcode-0.6.14-r3 144
 MD5 790de38f84754a5a010ba5823d8b9770 files/digest-transcode-1.0.1 68
-MD5 3b957eef288ce095a2ff0a256aec7c93 files/transcode-0.6.11-no-mmx.patch 1491
-MD5 b2561dbf66455c878a08afd19868dc5d files/transcode-0.6.12-gcc-3.4.patch 2503
-MD5 085f514d559cd32a401241bbbf639d39 files/transcode-0.6.12-r2-dvdmenu.patch 4840
-MD5 90f42fff1c2a0b4be8df0b015ac2b309 files/transcode-0.6.12-r2-gcc34.patch 2963
-MD5 936b66bb309cb3c1dfa33924d3114fa9 files/transcode-0.6.13-r1-bitstream.patch 446
-MD5 2cb7b1a00a0529a8256fc0104b5f2a09 files/transcode-gcc34.patch 460
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 425d9b33697acb6d0bed99a1c37e6557 transcode-0.6.14-r2.ebuild 4219
+MD5 5b4f88f8e2737c356b62a799eef9eaf9 transcode-0.6.14-r3.ebuild 4031
 MD5 3d76e1fcdf55c214daf11545f59f4c07 transcode-1.0.1.ebuild 3844
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUTxOj5H05b2HAEkRAn7GAJ4iRYjqyeHMCFLZiWZo3DZAwcK2KwCfVssA
-3eYdXuFf8xWix5Ik+DxWCuY=
-=NsJv
+iD8DBQFDUU/6j5H05b2HAEkRAg/xAKCGLnIooylW6d8Sjlrql1wjvpQfOwCfYkYt
+3rYQdIK0KPTL+aC+lzgj9aU=
+=bniR
 -----END PGP SIGNATURE-----
