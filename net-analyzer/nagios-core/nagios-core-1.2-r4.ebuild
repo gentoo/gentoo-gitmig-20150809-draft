@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.8 2005/10/11 03:02:23 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r4.ebuild,v 1.9 2005/10/15 22:04:12 soulse Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -57,6 +57,11 @@ src_unpack() {
 	epatch ${FILESDIR}/submit_check_result_via_nsca.patch
 
 	epatch ${FILESDIR}/Makefile-distclean.diff.bz2
+
+	# libpq-fe.h isnt in psgql/ 
+	cd xdata/
+	sed -i -e "s:pgsql/::" *.c
+
 	cp ${FILESDIR}/nagios.cfg-sample.gz ./
 	gunzip nagios.cfg-sample.gz
 }
@@ -80,7 +85,7 @@ src_compile() {
 	elif use postgres ; then
 		myconf="${myconf} --with-pgsql-xdata"
 
-		if [ -r /usr/include/postgresql/pgsql/libpq-fe.h ] ; then
+		if [ -r /usr/include/postgresql/libpq-fe.h ] ; then
 			myconf="${myconf} --with-pgsql-inc=/usr/include/postgresql"
 		fi
 	fi
