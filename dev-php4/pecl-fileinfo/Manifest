@@ -1,4 +1,4 @@
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 d59a2578e721f3ffb9d310a665563b7d ChangeLog 317
-MD5 74f75371945218d031d9dab2e5ada39f pecl-fileinfo-1.0.ebuild 497
+MD5 e07f77d26ef6bcb9074f421cdcfc04b1 ChangeLog 413
 MD5 46ba777513035be7795811299fa8bf8c files/digest-pecl-fileinfo-1.0 59
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 c1cc2d152e9f47c5423c2930376705cc pecl-fileinfo-1.0.ebuild 503
