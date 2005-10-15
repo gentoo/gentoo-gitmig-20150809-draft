@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 bc27cf508f797d6dd8285ddebae4ea32 ChangeLog 6183
 MD5 4bd7088cb72bd60e8ed7b7e562f3ea95 files/digest-util-vserver-0.30.205-r1 74
 MD5 fa04b4cbc865fd7ef34386bee737b4e6 files/digest-util-vserver-0.30.208-r3 157
-MD5 23a0e28296d1d5b79ad08a816e01e605 files/digest-util-vserver-0.30.208-r4 157
+MD5 75019019ddd3be6dea9c7b26611427fa files/digest-util-vserver-0.30.208-r4 157
 MD5 09276c3e50cf5c0f8d30ef0422f05fd8 files/vprocunhide 570
 MD5 bb0aa3e0f3b2d4216d303bd8ff6ebcb4 files/vserver-new_dev-fix.patch 393
 MD5 5e3714a49fe3701ba1d3e5a0c210f888 files/vserver-new_drop-defaulttar.patch 840
@@ -17,7 +17,7 @@ MD5 ab43eabdf469de7dff04968715e60859 util-vserver-0.30.208-r4.ebuild 2542
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTr9RmPFBzbX68WERAmzRAJ9Es5i9+a8/LQPy6LHkWnPDclq1zwCfY0o2
-e9+jQvBw2ZCod8Md+f+bFjE=
-=Zx6w
+iD8DBQFDUQRkmPFBzbX68WERAjFrAJ9aP87WB1SeF5LT6oHH7dXJ64xKbQCgkpV/
+JupQu+3H0YGd4tNURdUmDPw=
+=Zr8m
 -----END PGP SIGNATURE-----
