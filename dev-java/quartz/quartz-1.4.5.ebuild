@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.3 2005/09/20 17:56:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.4.5.ebuild,v 1.4 2005/10/15 11:41:22 axxo Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ RDEPEND=">=virtual/jre-1.4
 		dbcp? ( >=dev-java/commons-dbcp-1.1 )
 		jboss? ( >=www-servers/jboss-3.2.3 )
 		jta? ( >=dev-java/jta-1.0.1 )
-		jmx? ( >=dev-java/jmx-1.2.1 )
+		jmx? ( >=dev-java/sun-jmx-1.2.1 )
 		struts? ( =dev-java/struts-1.1* )
 		jikes? ( dev-java/jikes )"
 

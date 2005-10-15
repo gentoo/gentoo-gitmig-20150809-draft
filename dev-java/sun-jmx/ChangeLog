@@ -1,0 +1,65 @@
+# ChangeLog for dev-java/sun-jmx
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/ChangeLog,v 1.1 2005/10/15 11:37:31 axxo Exp $
+
+*sun-jmx-1.2.1-r1 (15 Oct 2005)
+
+  15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +sun-jmx-1.2.1-r1.ebuild:
+  move dev-java/jmx dev-java/sun-jmx
+
+  16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
+  Converted to UTF-8, fixed encoding screwups
+
+  26 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jmx-1.2.1.ebuild:
+  stable on ppc, introduced support for the examples and the source useflag
+
+  26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> jmx-1.2.1.ebuild:
+  Stable on sparc
+
+  14 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jmx-1.2.1.ebuild:
+  stable on amd64
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> jmx-1.2.1.ebuild:
+  Stable on ppc64
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jmx-1.2.1.ebuild:
+  added missing jikes dependency.
+
+  20 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/build.xml-jdk1.5.patch, jmx-1.2.1.ebuild:
+  Patch to allow compilation with JDK 1.5, by Petteri Räty
+  <petteri.raty@welho.com>. Fixes #74888.
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> jmx-1.2.1.ebuild:
+  added ~ppc64 to KEYWORDS
+
+  04 Nov 2004; Jason Wever <weeve@gentoo.org> jmx-1.2.1.ebuild:
+  Added ~sparc keyword to fix broken deps.
+
+  03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jmx-1.2.1.ebuild:
+  depend on app-arch/unzip
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jmx-1.2.1.ebuild:
+  keywords ~amd64; closes #67332.
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jmx-1.2.1.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
+
+  12 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jmx-1.2.1.ebuild:
+  Fixed to compile with jikes, Thanks too Dan <dan@intuitivelyobvious.net> for
+  the fix, closes #65978
+
+  05 Sep 2004; David Holm <dholm@gentoo.org> jmx-1.2.1.ebuild:
+  Added to ~ppc.
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jmx-1.2.1.ebuild:
+  Stable on x86. Fixes according to #45398
+
+*jmx-1.2.1 (27 Feb 2004)
+
+  27 Feb 2004; Chris Aniszczyk <zx@gentoo.org> metadata.xml:
+  Initial Import.
+  Thanks to Greg Bowyer <bg115@gre.ac.uk> for the initial ebuild. Closes #37927
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.14 2005/07/10 13:42:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.15 2005/10/15 11:42:40 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jakarta.apache.org/commons/modeler/"
 LICENSE="Apache-1.1"
 SLOT="0"
 RDEPEND=">=virtual/jre-1.4
-	>=dev-java/jmx-1.2.1
+	>=dev-java/sun-jmx-1.2.1
 	>=dev-java/commons-logging-1.0.3
 	>=dev-java/commons-digester-1.4.1
 	>=dev-java/xalan-2.5.1"
@@ -31,8 +31,8 @@ src_unpack() {
 	# Setup the build environment
 	echo "commons-digester.jar=$(java-pkg_getjar commons-digester commons-digester.jar)" >> build.properties
 	echo "commons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)" >> build.properties
-	echo "jmx.jar=$(java-pkg_getjar jmx jmxri.jar)" >> build.properties
-	echo "jmxtools.jar=$(java-pkg_getjar jmx jmxtools.jar)" >> build.properties
+	echo "jmx.jar=$(java-pkg_getjar sun-jmx jmxri.jar)" >> build.properties
+	echo "jmxtools.jar=$(java-pkg_getjar sun-jmx jmxtools.jar)" >> build.properties
 	echo "jaxp.xalan.jar=$(java-pkg_getjars xalan)" >> build.properties
 	echo "junit.jar=$(java-pkg_getjars junit)" >> build.properties
 	mkdir dist

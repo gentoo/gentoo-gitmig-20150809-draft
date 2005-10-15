@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/quartz
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.17 2005/05/21 16:56:49 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.18 2005/10/15 11:41:22 axxo Exp $
+
+  15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> quartz-1.4.5.ebuild:
+  move dev-java/jmx dev-java/sun-jmx
 
 *quartz-1.4.5 (21 May 2005)
 
