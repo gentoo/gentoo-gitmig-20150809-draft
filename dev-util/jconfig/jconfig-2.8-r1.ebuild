@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8-r1.ebuild,v 1.2 2005/07/16 19:01:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/jconfig-2.8-r1.ebuild,v 1.3 2005/10/15 11:49:31 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="doc jikes"
 RDEPEND=">=virtual/jre-1.3
-		dev-java/jmx"
+		dev-java/sun-jmx"
 DEPEND=">=virtual/jdk-1.3
 		${RDEPEND}
 		dev-java/ant-core
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/lib/
 	rm -f *.jar
-	java-pkg_jar-from jmx
+	java-pkg_jar-from sun-jmx
 }
 
 src_compile() {
