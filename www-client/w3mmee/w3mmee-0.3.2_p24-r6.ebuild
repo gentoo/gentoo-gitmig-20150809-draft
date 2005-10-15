@@ -1,24 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r5.ebuild,v 1.2 2005/10/15 10:41:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.1 2005/10/15 10:41:58 matsuu Exp $
 
 inherit alternatives eutils
 
-IUSE="gpm imlib nls ssl"
+IUSE="gpm imlib nls ssl xface"
 
 MY_PV=${PV##*_}-22
 MY_P=${PN}-${MY_PV}
-GC_PV="6.4"
-MY_GC=gc${GC_PV}
 
 DESCRIPTION="A variant of w3m with support for multiple character encodings"
-SRC_URI="http://pub.ks-and-ks.ne.jp/prog/pub/${MY_P}.tar.gz
-	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/${MY_GC}.tar.gz"
+SRC_URI="http://pub.ks-and-ks.ne.jp/prog/pub/${MY_P}.tar.gz"
 HOMEPAGE="http://pub.ks-and-ks.ne.jp/prog/w3mmee/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86 -alpha ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
@@ -26,7 +23,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	dev-lang/perl
 	>=dev-libs/libmoe-1.5.3
 	imlib? ( >=media-libs/imlib-1.9.8
-		media-libs/compface )
+		xface? ( media-libs/compface ) )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
@@ -37,30 +34,21 @@ PROVIDE="virtual/textbrowser
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-
-	unpack ${MY_P}.tar.gz
+	unpack ${A}
 	cd ${S}
-
-	# w3mmee doesn't come with boehm-gc unlike w3m and w3m-m17n.
-	# However, w3mmee cannot be compiled with system gc
-	# (Debian is the only Linux distribution that can compile it)
-	unpack ${MY_GC}.tar.gz
-	mv ${MY_GC} gc
-
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 }
 
 src_compile() {
 
-	local myconf myuse mylang
+	local myconf myuse
 	myuse="use_cookie=y use_ansi_color=y use_history=y
 		display_code=E system_code=E"
 
 	if use ssl ; then
 		myconf="${myconf} --ssl-includedir=/usr/include/openssl
-			--ssl-libdir=/usr/lib"
-		myuse="${myuse} use_ssl=y use_ssl_verify=y
-			use_digest_auth=y"
+			--ssl-libdir=/usr/$(get_libdir)"
+		myuse="${myuse} use_ssl=y use_ssl_verify=y use_digest_auth=y"
 	else
 		myuse="${myuse} use_ssl=n"
 	fi
@@ -79,7 +67,12 @@ src_compile() {
 
 	if use imlib ; then
 		myuse="${myuse} use_image=y use_w3mimg_x11=y
-		use_w3mimg_fb=n w3mimgdisplay_setuid=n use_xface=y"
+		use_w3mimg_fb=n w3mimgdisplay_setuid=n"
+		if use xface ; then
+			myuse="${myuse} use_xface=y"
+		else
+			myuse="${myuse} use_xface=n"
+		fi
 	else
 		myuse="${myuse} use_image=n"
 	fi
@@ -92,13 +85,13 @@ src_compile() {
 	env ${myuse} ./configure -nonstop \
 		-prefix=/usr \
 		-suffix=mee \
-		-auxbindir=/usr/lib/w3mmee \
-		-libdir=/usr/lib/w3mmee/cgi-bin \
+		-auxbindir=/usr/$(get_libdir)/w3mmee \
+		-libdir=/usr/$(get_libdir)/w3mmee/cgi-bin \
 		-helpdir=/usr/share/w3mmee \
 		-mandir=/usr/share/man \
 		-sysconfdir=/etc/w3mmee \
 		-model=custom \
-		-libmoe=/usr/lib \
+		-libmoe=/usr/$(get_libdir) \
 		-mb_h=/usr/include/moe \
 		-mk_btri=/usr/libexec/moe \
 		-cflags=${CFLAGS} -ldflags=${LDFLAGS} \
@@ -108,20 +101,22 @@ src_compile() {
 }
 
 src_install() {
-
-	einstall DESTDIR=${D}
+	make DESTDIR=${D} install || die
 
 	# w3mman and manpages conflict with those from w3m
-	mv ${D}/usr/bin/w3m{,mee}man
-	mv ${D}/usr/share/man/ja/man1/w3m{,mee}.1
-	mv ${D}/usr/share/man/man1/w3m{,mee}.1
-	mv ${D}/usr/share/man/man1/w3mman{,mee}.1
+	mv ${D}/usr/share/man/ja/man1/w3m{,mee}.1 || die
+	mv ${D}/usr/share/man/man1/w3m{,mee}.1 || die
 
-	dodoc 00INCOMPATIBLE.html ChangeLog NEWS* README
+	dodoc ChangeLog NEWS* README
+	dohtml 00INCOMPATIBLE.html
+
 	docinto en
-	dodoc doc/*
+	dodoc doc/HISTORY doc/README* doc/keymap.* doc/menu.*
+	dohtml doc/*
+
 	docinto jp
-	dodoc doc-jp/*
+	dodoc doc-jp/HISTORY doc-jp/README* doc-jp/keymap* doc-jp/menu.*
+	dohtml doc-jp/*
 }
 
 pkg_postinst() {
@@ -129,8 +124,8 @@ pkg_postinst() {
 	w3m_alternatives
 	einfo
 	einfo "If you want to render multilingual text, please refer to"
-	einfo "/usr/share/doc/${P}/en/README.mee or"
-	einfo "/usr/share/doc/${P}/jp/README.mee"
+	einfo "/usr/share/doc/${PF}/en/README.mee or"
+	einfo "/usr/share/doc/${PF}/jp/README.mee"
 	einfo "and set W3MLANG variable respectively."
 	einfo
 }
