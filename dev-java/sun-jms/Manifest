@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67d8d5e3f3675a8432ce52b24c94300e ChangeLog 1207
 MD5 6ca22a64031fe5cba54a958c6c4769b7 files/digest-sun-jms-1.1-r1 67
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 5301e3ad2d047baf691d43a33e47225b sun-jms-1.1-r1.ebuild 1512
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUQFm/rLF9B432nYRAmd8AJ4/WE3q6ctyp61XHQmKk8EnXsGm9wCgs0gi
+paLIKOjPlFw7ndV2MQUvFDk=
+=iguR
+-----END PGP SIGNATURE-----
