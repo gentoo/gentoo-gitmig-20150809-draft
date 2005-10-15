@@ -1,4 +1,6 @@
-MD5 78ca32a182356960479660254111d9e3 ChangeLog 1350
 MD5 fbbed1f694ee536aeff0b049ec2470cc gjiten-2.3.ebuild 1392
+MD5 4f871709d3b23e4af8cd4563528ad0d7 ChangeLog 1478
 MD5 f2fc5e05a51ba163bb49deed0254effe metadata.xml 456
+MD5 f617aab42b6e775854e5812b760c9db7 gjiten-2.4.ebuild 1396
 MD5 7f70f34e92d0d83ae21bf688299aa33e files/digest-gjiten-2.3 62
+MD5 894678a320102912d99451cf9e1e650d files/digest-gjiten-2.4 62

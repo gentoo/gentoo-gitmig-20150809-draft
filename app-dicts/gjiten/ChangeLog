@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.11 2005/04/21 18:12:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.12 2005/10/15 12:06:00 matsuu Exp $
+
+*gjiten-2.4 (15 Oct 2005)
+
+  15 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> +gjiten-2.4.ebuild:
+  Version bumped. Bug 101328.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> gjiten-2.3.ebuild:
   stable on amd64
