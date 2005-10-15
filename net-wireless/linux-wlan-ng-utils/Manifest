@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3c566b7bee4dc49c83f2f4bffcffd8e ChangeLog 561
 MD5 f24842a9d1aeeaa901a2423011ef3b38 files/digest-linux-wlan-ng-utils-0.2.2 72
 MD5 e8015a877a02136938bd4d365bd80005 linux-wlan-ng-utils-0.2.2.ebuild 828
 MD5 6ad1de0749fc3b426ff7f4f422d2484c metadata.xml 254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUYyYcsIHjyDViGQRArm0AJwI52Y0pDXr0K5QyRPwSzk5pLHIwwCg2b1O
+xFHXpyVuB23pMNXs/pGXjEk=
+=3u6F
+-----END PGP SIGNATURE-----
