@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/linux-wlan-ng-modules
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.1 2005/10/01 14:42:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.2 2005/10/15 23:06:49 josejx Exp $
+
+  15 Oct 2005; Joseph Jezak <josejx@gentoo.org>
+  linux-wlan-ng-modules-0.2.2.ebuild:
+  Marked ~ppc for bug #107794.
 
 *linux-wlan-ng-modules-0.2.2 (01 Oct 2005)
 
