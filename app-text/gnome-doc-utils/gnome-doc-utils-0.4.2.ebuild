@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.4.2.ebuild,v 1.3 2005/10/11 13:07:59 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.4.2.ebuild,v 1.4 2005/10/15 18:11:50 allanonjl Exp $
 
 inherit python gnome2 eutils
 
@@ -29,8 +29,8 @@ pkg_setup() {
 	G2CONF="--disable-scrollkeeper"
 
 	if ! built_with_use dev-libs/libxml2 python; then
-		einfo "Please re-emerge libxml2 with the python use flag set"
-		die "libxml2 needs python use flag"
+		einfo "Please re-emerge dev-libs/libxml2 with the python use flag set"
+		die "dev-libs/libxml2 needs python use flag"
 	fi
 }
 
