@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 76c3f463a99a7acc34886f8c1bcfa203 ChangeLog 333
+MD5 ab80585c37a87b42d8562cba7cf6df61 stgit-0.7.1.ebuild 711
+MD5 7152841e766aeabcdb7dc5575d508f34 ChangeLog 472
 MD5 b32bfee3c12fac430c39b4247b8ff31f metadata.xml 259
-MD5 bcdfcb60afb198076e0495c0a496b815 stgit-0.7.ebuild 709
-MD5 850d2ec440370fec9131fb58bbfc2113 files/digest-stgit-0.7 60
+MD5 61d61af10becad44f5b1cb6bd7fd82fb files/digest-stgit-0.7.1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQ/eyViELBEf1JB0RAia2AJ4/9CXTV4vTr6tC2h0lxfHj+qOR3gCeMlhv
-3eFPG6xHoBizasfyOfWzUJI=
-=hYyB
+iD8DBQFDUOxOViELBEf1JB0RAo1MAJ9p6i5cIqVZyzyCoHozEbwVASU6LQCdF+1B
+TiubIpx07WfOxmwftDMmD+Q=
+=reCs
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.7.ebuild,v 1.1 2005/10/05 15:55:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.7.1.ebuild,v 1.1 2005/10/15 11:46:58 ferdy Exp $
 
 inherit distutils
 
