@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.43 2005/10/11 01:07:47 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.44 2005/10/15 20:32:38 josejx Exp $
+
+  15 Oct 2005; Joseph Jezak <josejx@gentoo.org> epiphany-1.8.2.ebuild:
+  Marked ~ppc for bug #108785.
 
   11 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
   epiphany-1.8.2.ebuild:
