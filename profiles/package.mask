@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4572 2005/10/14 08:56:33 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4573 2005/10/15 06:15:58 pythonhead Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Rob Cakebread <pythonhead@gentoo.org> (14 Oct 2005)
+# Masked for testing
+dev-python/setuptools
 
 # Sven Wegener <swegener@gentoo.org> (13 Oct 2005)
 # CVS Development Snapshot
