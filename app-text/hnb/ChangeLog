@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hnb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.12 2005/04/24 11:38:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.13 2005/10/15 12:44:58 grobian Exp $
+
+  15 Oct 2005; Fabian Groffen <grobian@gentoo.org> hnb-1.9.18.ebuild:
+  Marked ~ppc-macos (bug #108633)
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> hnb-1.9.17.ebuild:
   Stable on ppc.
