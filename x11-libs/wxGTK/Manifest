@@ -1,20 +1,30 @@
-MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
-MD5 62be82618a657fca19a51e0825e5e4e9 wxGTK-2.4.2-r2.ebuild 4249
-MD5 58a128b966a8c93bd4b1fbef17e044ed wxGTK-2.4.2-r3.ebuild 4733
-MD5 b2544e112108097113205b4559e87ce7 wxGTK-2.6.0-r1.ebuild 2273
-MD5 e5e46cac84b7cf2e14a5ef57e627989b ChangeLog 14904
-MD5 b8d2d1196e6c7f31335748286b926533 wxGTK-2.5.3.ebuild 4812
-MD5 56de842cb982e2aeb27abbfe3cb3d2ff wxGTK-2.6.1.ebuild 1922
-MD5 847498c20beadcf6d37c6b20e156a539 wxGTK-2.6.2.ebuild 1462
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9993d84e63445b5aac164e43463c6817 ChangeLog 15006
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r2 65
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r3 65
+MD5 d3163f84f4f7dbabab06613667542f9b files/digest-wxGTK-2.5.3 65
+MD5 c8ab55f4ce498e00d800d420ba86ea08 files/digest-wxGTK-2.6.0-r1 143
 MD5 ddd05c3f9a18148cc4359579d4ad8a8a files/digest-wxGTK-2.6.1 143
+MD5 697d7fa6ade210b6af8747e4cc5816cf files/digest-wxGTK-2.6.2 143
 MD5 574b30817d120dcaf7e94832c64b003a files/wxGTK-2.4.1-contrib.patch 572
 MD5 522f6b3a771ea33a1af7ede9c795ab4c files/wxGTK-2.4.1-wxpython1.patch 1102
 MD5 1e85c1c970da32626580dfef7228b314 files/wxGTK-2.4.1-wxpython2.patch 8459
 MD5 6c8af85a3bfec0c477a778258368de56 files/wxGTK-2.4.2-cleanup.patch 18162
 MD5 798d3d05c7adb28f00834aa4ea1f304b files/wxGTK-2.4.2-contrib_animate.patch 442
 MD5 f3bc3ab73cb31c91683e3ed58f8ffabb files/wxGTK-2.4.2-menu.cpp.patch 2253
-MD5 c8ab55f4ce498e00d800d420ba86ea08 files/digest-wxGTK-2.6.0-r1 143
-MD5 46ea78b9bcd6dc41eda547fdfae96dd9 files/digest-wxGTK-2.6.2 143
-MD5 d3163f84f4f7dbabab06613667542f9b files/digest-wxGTK-2.5.3 65
+MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
+MD5 62be82618a657fca19a51e0825e5e4e9 wxGTK-2.4.2-r2.ebuild 4249
+MD5 58a128b966a8c93bd4b1fbef17e044ed wxGTK-2.4.2-r3.ebuild 4733
+MD5 b8d2d1196e6c7f31335748286b926533 wxGTK-2.5.3.ebuild 4812
+MD5 b2544e112108097113205b4559e87ce7 wxGTK-2.6.0-r1.ebuild 2273
+MD5 56de842cb982e2aeb27abbfe3cb3d2ff wxGTK-2.6.1.ebuild 1922
+MD5 53867162494521159243b3dc55df6da6 wxGTK-2.6.2.ebuild 1454
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUVolOpjtAl+gMRURAu9eAJ9jizi1ZPWDZurfPnnZsDO+uhK29wCguLyU
+MwzfGQzbMVR8PDqXmzGlRrg=
+=TuFe
+-----END PGP SIGNATURE-----

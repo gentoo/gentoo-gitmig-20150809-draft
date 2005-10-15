@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.93 2005/10/11 19:09:06 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.94 2005/10/15 19:35:30 eradicator Exp $
+
+  15 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  wxGTK-2.6.2.ebuild:
+  Fixed USE=-X logic.
 
 *wxGTK-2.6.2 (11 Oct 2005)
 
