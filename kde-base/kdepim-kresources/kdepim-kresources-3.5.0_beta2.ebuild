@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.0_beta2.ebuild,v 1.1 2005/10/14 18:41:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.0_beta2.ebuild,v 1.2 2005/10/15 07:11:45 danarmak Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -25,7 +25,6 @@ KMCOPYLIB="
 	libkabinterfaces kaddressbook/interfaces/"
 
 KMEXTRACTONLY="
-	libkcal/
 	korganizer/
 	libkpimexchange/configure.in.in
 	libkdepim/
@@ -35,16 +34,18 @@ KMEXTRACTONLY="
 
 KMCOMPILEONLY="
 	knotes/
+	libkcal/
 	kaddressbook/common/
 	"
 PATCHES="$FILESDIR/use-installed-kode.diff"
 
 src_compile() {
-	export DO_NOT_COMPILE="knotes"
+	export DO_NOT_COMPILE="knotes libkcal"
 
 	kde-meta_src_compile myconf configure
 
 	cd knotes/; make libknotesresources.la
+	cd $S/libkcal/libical/src/libical; make ical.h
 
 	kde-meta_src_compile make
 }
