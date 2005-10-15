@@ -1,26 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 c893b38a7c739adf4efcc95d058b58e5 crimson-0.4.8.ebuild 1400
-MD5 5373cac6ccf10ac744f4e9f7699b7b73 crimson-0.4.2.ebuild 1198
-MD5 c50de1ffa1f2b47e84deb2704c4c9b74 crimson-0.4.4.ebuild 1311
-MD5 50e4f268df8c58d29ad4c5c81dd175d5 crimson-0.4.6.ebuild 1315
 MD5 e1529c9a8179d09c31a147ea5e7029b1 crimson-0.4.3.ebuild 1311
 MD5 1db04ac895d36e7a5a91b00a4e08bc1e crimson-0.4.7.ebuild 1354
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6f5e0d4dcd85c6ea404328dafdc896ac crimson-0.4.5.ebuild 1310
-MD5 b0e46acaec6d31f38e7cbac4a174f123 ChangeLog 2844
+MD5 c50de1ffa1f2b47e84deb2704c4c9b74 crimson-0.4.4.ebuild 1311
+MD5 0bfaf9b8aa20bf6ac0927881dee5399f ChangeLog 2972
+MD5 13e4a71ae43273373505dbde91dd9ae6 crimson-0.4.9.ebuild 1400
+MD5 50e4f268df8c58d29ad4c5c81dd175d5 crimson-0.4.6.ebuild 1315
+MD5 5373cac6ccf10ac744f4e9f7699b7b73 crimson-0.4.2.ebuild 1198
 MD5 30708cd5a52e2002d0f0a8999bb91dac files/digest-crimson-0.4.3 66
 MD5 9cd84df1982b50553976d2e6485a0505 files/digest-crimson-0.4.5 66
-MD5 446f10aa0a9cb82db43ac40640e20ef8 files/digest-crimson-0.4.7 66
 MD5 efea70fda25abaf431eaa4fe853747f7 files/digest-crimson-0.4.4 66
 MD5 23e139bdaf8dfed3ecdaeed1968d9605 files/digest-crimson-0.4.8 66
+MD5 b9e29c0e98315d302745f0ffa3708abd files/digest-crimson-0.4.9 66
+MD5 446f10aa0a9cb82db43ac40640e20ef8 files/digest-crimson-0.4.7 66
 MD5 0adb8abb15f308f3a73074e6dc230562 files/digest-crimson-0.4.6 66
 MD5 1a52415580d0384faf85d82960384432 files/digest-crimson-0.4.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK0YPLLFUmVNQ7rkRApz2AJwJkmJw39+1Dyb9MeuPmAIMH4e+kQCgxaqH
-i0TmDZuM6VNJ3nafeqVObhA=
-=hGKc
------END PGP SIGNATURE-----
