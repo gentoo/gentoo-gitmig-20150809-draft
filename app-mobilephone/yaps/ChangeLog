@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.5 2005/10/13 05:01:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.6 2005/10/15 07:57:30 mrness Exp $
+
+*yaps-0.96-r1 (15 Oct 2005)
+
+  15 Oct 2005; Alin Nastac <mrness@gentoo.org>
+  +files/yaps-0.96-gentoo.patch, +yaps-0.96-r1.ebuild:
+  Add Cityruf service to yaps.rc (#105676).
 
   13 Oct 2005; Alin Nastac <mrness@gentoo.org> yaps-0.96.ebuild:
   Remove COPYRIGHT and INSTALL from docs.
