@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/wavesurfer-1.8.1.ebuild,v 1.2 2005/10/15 11:21:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/wavesurfer-1.8.4.ebuild,v 1.1 2005/10/15 11:21:42 matsuu Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.speech.kth.se/wavesurfer/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-tcltk/snack-2.2.4"
