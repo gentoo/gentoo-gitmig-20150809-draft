@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.6 2005/07/12 21:25:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.7 2005/10/15 13:18:38 axxo Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 RDEPEND=">=virtual/jre-1.4
 	dev-java/concurrent-util
-	dev-java/jms"
+	dev-java/sun-jms"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.5
@@ -32,7 +32,7 @@ src_unpack() {
 	cd ${S}/lib
 	rm *.jar
 	java-pkg_jar-from concurrent-util
-	java-pkg_jar-from jms
+	java-pkg_jar-from sun-jms
 	if use junit ; then
 		ewarn "WARNING: Running unit tests can take a long time."
 		java-pkg_jar-from junit

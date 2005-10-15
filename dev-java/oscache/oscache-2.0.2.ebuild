@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2.ebuild,v 1.4 2005/07/15 18:40:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/oscache-2.0.2.ebuild,v 1.5 2005/10/15 13:19:25 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ RDEPEND=">=virtual/jre-1.3
 		dev-java/commons-collections
 		dev-java/commons-logging
 		=dev-java/servletapi-2.3*
-		dev-java/jms
+		dev-java/sun-jms
 		dev-java/jgroups"
 DEPEND=">=virtual/jdk-1.3
 		${RDEPEND}
@@ -34,7 +34,7 @@ src_compile() {
 	use jikes && javac_cmd="jikes -bootclasspath ${JAVA_HOME}/jre/lib/rt.jar"
 
 	local build_dir=${S}/build
-	local classpath="-classpath $(java-pkg_getjars commons-logging,commons-collections,servletapi-2.3,jms,jgroups):${build_dir}:."
+	local classpath="-classpath $(java-pkg_getjars commons-logging,commons-collections,servletapi-2.3,sun-jms,jgroups):${build_dir}:."
 	mkdir ${build_dir}
 
 	echo "Building core..."

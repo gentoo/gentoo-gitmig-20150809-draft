@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.23 2005/09/17 22:06:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.24 2005/10/15 13:17:52 axxo Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ RDEPEND=">=virtual/jre-1.3
 	)
 	jms? ( || (
 			!ppc? ( dev-java/openjms )
-			dev-java/jms
+			dev-java/sun-jms
 		)
 	)"
 DEPEND=">=virtual/jdk-1.3
@@ -54,8 +54,8 @@ src_unpack() {
 	if use jms; then
 		if has_version dev-java/openjms; then
 			java-pkg_jar-from openjms
-		elif has_version dev-java/jms; then
-			java-pkg_jar-from jms
+		elif has_version dev-java/sun-jms; then
+			java-pkg_jar-from sun-jms
 		fi
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.14 2005/09/17 22:06:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.15 2005/10/15 13:17:52 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ IUSE="doc jikes jms javamail source"
 RDEPEND=">=virtual/jre-1.4
 		dev-java/log4j
 		jms? ( || (
-			dev-java/jms
+			dev-java/sun-jms
 			!ppc? ( dev-java/openjms )
 			)
 		)
@@ -55,8 +55,8 @@ src_unpack() {
 	if use jms; then
 		if has_version dev-java/openjms; then
 			jms="openjms"
-		elif has_version dev-java/jms; then
-			jms="jms"
+		elif has_version dev-java/sun-jms; then
+			jms="sun-jms"
 		fi
 	fi
 

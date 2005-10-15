@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1.ebuild,v 1.5 2005/07/20 14:45:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r1.ebuild,v 1.1 2005/10/15 13:19:36 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/exolabcore
 	dev-db/hsqldb
 	dev-java/jdbm
-	dev-java/jms
+	dev-java/sun-jms
 	dev-java/jta
 	dev-java/log4j
 	=dev-java/jakarta-oro-2.0*
@@ -56,7 +56,7 @@ src_unpack() {
 	java-pkg_jar-from exolabcore
 	java-pkg_jar-from hsqldb
 	java-pkg_jar-from jdbm-1
-	java-pkg_jar-from jms
+	java-pkg_jar-from sun-jms
 	java-pkg_jar-from jta
 	java-pkg_jar-from log4j
 	java-pkg_jar-from servletapi-2.3

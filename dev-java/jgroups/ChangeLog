@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgroups
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.5 2005/07/12 19:33:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.6 2005/10/15 13:18:38 axxo Exp $
+
+  15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> jgroups-2.2.7.ebuild:
+  move dev-java/jms dev-java/sun-jms
 
   12 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jgroups-2.2.7.ebuild:
   Style fixes
