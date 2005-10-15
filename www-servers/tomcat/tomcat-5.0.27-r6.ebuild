@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.2 2005/07/09 17:14:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.3 2005/10/15 11:40:42 axxo Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 
 JT_P="jakarta-${P}.tar.gz"
 S=${WORKDIR}/jakarta-${P}
-SLOT="${PV/.*}"
+SLOT="${PV/.*/}"
 SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/bin/${JT_P}"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="x86 ppc ~sparc ~alpha ~amd64 ~ppc64"

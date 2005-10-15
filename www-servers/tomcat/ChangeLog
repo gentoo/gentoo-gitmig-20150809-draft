@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.40 2005/09/22 00:06:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.41 2005/10/15 11:40:42 axxo Exp $
+
+*tomcat-5.0.28-r8 (15 Oct 2005)
+
+  15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> tomcat-5.0.27-r6.ebuild,
+  -tomcat-5.0.28-r4.ebuild, -tomcat-5.0.28-r6.ebuild,
+  -tomcat-5.0.28-r7.ebuild, +tomcat-5.0.28-r8.ebuild:
+  move dev-java/jmx dev-java/sun-jmx
 
 *tomcat-5.0.28-r7 (22 Sep 2005)
 

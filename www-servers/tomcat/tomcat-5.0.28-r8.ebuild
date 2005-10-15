@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.8 2005/09/20 17:56:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r8.ebuild,v 1.1 2005/10/15 11:40:42 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/src/jakarta-${P}-src.tar.
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
 LICENSE="Apache-2.0"
-#only one revision of struts to force upgrade because of slotting
+#only one accepted revision of struts to force upgrading because of slot changes
 RDEPEND=">=virtual/jdk-1.4
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jdk-1.4
 	>=dev-java/commons-pool-1.2
 	~dev-java/jaxen-1.0
 	>=dev-java/junit-3.8.1
-	dev-java/jmx
+	dev-java/sun-jmx
 	>=dev-java/log4j-1.2.8
 	=dev-java/jakarta-regexp-1.3*
 	>=dev-java/saxpath-1.0
@@ -46,6 +46,7 @@ S=${WORKDIR}/jakarta-${P}-src
 
 TOMCAT_HOME="/usr/share/${PN}-${SLOT}"
 TOMCAT_NAME="${PN}-${SLOT}"
+WEBAPPS_DIR="/var/lib/${TOMCAT_NAME}/default/webapps"
 
 src_unpack() {
 	unpack ${A}
@@ -63,7 +64,7 @@ src_unpack() {
 
 	mkdir ./bin && cd ./bin
 	java-pkg_jar-from commons-logging commons-logging-api.jar
-	java-pkg_jar-from jmx jmxri.jar jmx.jar
+	java-pkg_jar-from sun-jmx jmxri.jar jmx.jar
 	java-pkg_jar-from commons-daemon
 
 	mkdir ../common/endorsed && cd ../common/endorsed
@@ -109,8 +110,8 @@ src_compile(){
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
 	antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"
-	antflags="${antflags} -Djmx.jar=$(java-pkg_getjar jmx jmxri.jar)"
-	antflags="${antflags} -Djmx-tools.jar=$(java-pkg_getjar jmx jmxtools.jar)"
+	antflags="${antflags} -Djmx.jar=$(java-pkg_getjar sun-jmx jmxri.jar)"
+	antflags="${antflags} -Djmx-tools.jar=$(java-pkg_getjar sun-jmx jmxtools.jar)"
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
 	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
@@ -128,7 +129,7 @@ src_install() {
 
 	# init.d, env.d, conf.d
 	newinitd ${FILESDIR}/${PV}/tomcat.init ${TOMCAT_NAME}
-	newconfd ${FILESDIR}/${PV}/tomcat.conf ${TOMCAT_NAME}
+	newconfd ${FILESDIR}/${PV}/tomcat.conf-r1 ${TOMCAT_NAME}
 	newenvd ${FILESDIR}/${PV}/${PN}.env 21${PN}
 
 	if use jikes; then
@@ -137,26 +138,18 @@ src_install() {
 	fi
 
 	# create dir structure
-	diropts -m755
-	dodir /usr/share/${TOMCAT_NAME}
-
-	dodir /var/log/${TOMCAT_NAME}/default
-	chown -R tomcat:tomcat ${D}/var/log/${TOMCAT_NAME}
-	dodir /etc/${TOMCAT_NAME}/default/
-	chown -R tomcat:tomcat ${D}/etc/${TOMCAT_NAME}
-	dodir /var/tmp/${TOMCAT_NAME}/default
-	chown -R tomcat:tomcat ${D}/var/tmp/${TOMCAT_NAME}
-	dodir /var/run/${TOMCAT_NAME}/default
-	chown -R tomcat:tomcat ${D}/var/run/${TOMCAT_NAME}
-	dodir /var/lib/${TOMCAT_NAME}/default
-	chown -R tomcat:tomcat ${D}/var/lib/${TOMCAT_NAME}
-
+	diropts -m755 -o tomcat -g tomcat
+	dodir   /usr/share/${TOMCAT_NAME}
 	keepdir /var/log/${TOMCAT_NAME}/default
-	keepdir /etc/${TOMCAT_NAME}/default/
 	keepdir /var/tmp/${TOMCAT_NAME}/default
 	keepdir /var/run/${TOMCAT_NAME}/default
+	dodir   /var/lib/${TOMCAT_NAME}/default
+	dodir   /etc/${TOMCAT_NAME}/default
+	fperms  440 /etc/${TOMCAT_NAME}/default
 
-	# we don't need dos scripts	
+	diropts -m0755
+
+	# we don't need dos scripts
 	rm -f bin/*.bat
 
 	# copy the manager and admin context's to the right position
@@ -192,19 +185,20 @@ src_install() {
 	java-pkg_jar-from struts-1.1 struts.jar
 	cd ${base}
 
-	# replace the default pw with a random one, see #92281 
+	# replace the default pw with a random one, see #92281
 	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)
 	sed -e s:SHUTDOWN:${randpw}: -i conf/{server,server-minimal}.xml
 
-	# copy over the directories	
+	# copy over the directories
 	chmod -R 750 conf/*
 	chown -R tomcat:tomcat webapps/* conf/*
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
 	cp -R bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
+	keepdir               ${WEBAPPS_DIR}
+	set_webapps_perms     ${D}/${WEBAPPS_DIR}
+
 	# if the useflag is set, copy over the examples
-	dodir /var/lib/${TOMCAT_NAME}/default/webapps
-	keepdir /var/lib/${TOMCAT_NAME}/default/webapps
 	if use examples; then
 		cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
 		cp -pr webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
@@ -217,7 +211,10 @@ src_install() {
 	dosym /var/tmp/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/temp
 	dosym /var/run/${TOMCAT_NAME}/default /var/lib/${TOMCAT_NAME}/default/work
 
-	use doc && dodoc ${S}/jakarta-tomcat-5/{LICENSE,RELEASE-NOTES,RUNNING.txt}
+	cp ${FILESDIR}/${PV}/log4j.properties ${D}/etc/${TOMCAT_NAME}/
+	chown tomcat:tomcat ${D}/etc/${TOMCAT_NAME}/log4j.properties
+
+	dodoc  ${S}/jakarta-tomcat-5/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/default/tomcat-users.xml
 }
 
@@ -225,7 +222,6 @@ pkg_postinst() {
 	#due to previous ebuild bloopers, make sure everything is correct
 	chown root:0 /etc/init.d/${TOMCAT_NAME}
 	chown root:0 /etc/conf.d/${TOMCAT_NAME}
-
 	chmod -R 750 /etc/${TOMCAT_NAME}
 
 	einfo
@@ -269,4 +265,16 @@ pkg_postinst() {
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
 	einfo
+
+	einfo "${WEBAPPS_DIR}"
+	einfo "is now owned by tomcat:tomcat and has 750 as permissions."
+	einfo "This is needed to deploy WAR files from the manager webapp."
+	einfo "See bug 99704. If you are upgrading tomcat you need to manually"
+	einfo "change the permissions."
+}
+
+#helpers
+set_webapps_perms() {
+	chown  tomcat:tomcat ${1} || die "Failed to change owner off ${1}."
+	chmod  750           ${1} || die "Failed to change permissions off ${1}."
 }
