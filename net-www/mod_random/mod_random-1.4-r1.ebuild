@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-1.4-r1.ebuild,v 1.2 2005/02/25 14:50:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-1.4-r1.ebuild,v 1.3 2005/10/15 03:04:54 ticho Exp $
 
 inherit apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://software.tangent.org/"
 SRC_URI="http://download.tangent.org/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 SLOT="1"
 
