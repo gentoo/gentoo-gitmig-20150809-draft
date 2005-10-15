@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e947ece0ccb5698c9d1bae8dfcfc6e8 log4j-1.2.9.ebuild 1635
-MD5 7525940a33699ec1f24fe7bd7fce99b5 log4j-1.2.12.ebuild 1785
-MD5 429d1aa64a490d6ed97645256aa927e1 log4j-1.2.11.ebuild 1791
-MD5 174da51d0bad31157c7f180d1fa95712 ChangeLog 4112
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 d55e5a6d5e0b3b7044122df1b3c55830 files/digest-log4j-1.2.9 72
+MD5 29747ec5db6bce22db7f0171a6d643db ChangeLog 4263
 MD5 c7a6fa71142e97d11735ceccc088752b files/digest-log4j-1.2.11 73
 MD5 d30ee0a14e3537d3f518067d60130a47 files/digest-log4j-1.2.12 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIM03/rLF9B432nYRAig2AKCvxqjedYIViY0NUZvTBTd4IksLfQCfXgLw
-klpIFkdviM0NZa7ZNFfGKxY=
-=uBRc
------END PGP SIGNATURE-----
+MD5 d55e5a6d5e0b3b7044122df1b3c55830 files/digest-log4j-1.2.9 72
+MD5 66f688f3902333537517ca8743b019b6 log4j-1.2.11.ebuild 1797
+MD5 042f6d1d8c7bc4dbec37abb16a58f4ab log4j-1.2.12.ebuild 1797
+MD5 c8928993256543fbbb002091f7c0cc95 log4j-1.2.9.ebuild 1647
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
