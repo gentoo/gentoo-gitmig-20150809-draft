@@ -1,8 +1,16 @@
-MD5 a8129e0711cb0cd9c424f181745b338a ChangeLog 1247
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99e96a03974561a78ac097b008b1fcbe ChangeLog 1611
+MD5 fdee7b0ef5b8e0680cad1e4cf8422931 files/digest-netwag-5.28.0 65
+MD5 b204ff9facfd28dee8e9ece0ef751dc2 files/digest-netwag-5.31.0 135
 MD5 595b8dd3c2b25d617085a633221eecf1 metadata.xml 257
 MD5 efd614677cf66096944b965670ecf278 netwag-5.28.0.ebuild 940
-MD5 10098d5be2b862c3c4bf684e22a04ab1 netwag-5.29.0.ebuild 1044
-MD5 6dcd48f0e4a4188b51aaa677a0bab39e netwag-5.30.0.ebuild 1049
-MD5 fdee7b0ef5b8e0680cad1e4cf8422931 files/digest-netwag-5.28.0 65
-MD5 06b739aa35a76f23b01b5bd75a95031a files/digest-netwag-5.29.0 65
-MD5 1de2a1851bcc435cfe404c176f91eda3 files/digest-netwag-5.30.0 65
+MD5 5fcd6d4c69de865817be8ae1078ee594 netwag-5.31.0.ebuild 1286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDUI4gmdTrptrqvGERAsmCAJ92BqkEDhLVb7uOOpd8o66Q/evqLACfZfl6
+LMNsXHs2AoKGldHTIo8x6p4=
+=6VVm
+-----END PGP SIGNATURE-----
