@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.14 2005/08/26 10:18:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.15 2005/10/15 20:45:37 brix Exp $
+
+  15 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  laptop-mode-tools-1.10.ebuild:
+  Stable on x86.
 
   26 Aug 2005; Henrik Brix Andersen <brix@gentoo.org>
   -files/laptop-mode-tools-1.07-init.d,
