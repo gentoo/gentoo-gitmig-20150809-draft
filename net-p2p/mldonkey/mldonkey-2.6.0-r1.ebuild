@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.0-r1.ebuild,v 1.1 2005/09/20 17:38:13 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.6.0-r1.ebuild,v 1.2 2005/10/15 10:14:10 mkay Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64"
 
 RDEPEND="dev-lang/perl
 		net-misc/wget
-		>=dev-lang/ocaml-3.08.3
+		=dev-lang/ocaml-3.08.3
 		gtk? ( >=gnome-base/librsvg-2.4.0
 				>=dev-ml/lablgtk-2.4 )
 		gd? ( >=media-libs/gd-2.0.28 )"
