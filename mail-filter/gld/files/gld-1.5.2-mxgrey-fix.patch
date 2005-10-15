@@ -1,0 +1,42 @@
+--- gld-1.5.2/greylist.c.orig	2005-08-17 00:44:06.000000000 +0200
++++ gld-1.5.2/greylist.c	2005-08-17 00:40:32.000000000 +0200
+@@ -181,10 +181,29 @@
+ 
+ 	if(conf->update==1)
+ 		{
+-  		if(conf->lightd==1 && fnotdomain==1)
+-			snprintf(query,sizeof(query)-1,"update greylist set last=%d,n=n+1 where ip='%s' and sender='%s' and 
+recipient='%s'",ts,ip,osender,orecipient);
+-
+-        	snprintf(query,sizeof(query)-1,"update greylist set last=%d,n=n+1 where ip='%s' and sender='%s' and 
+recipient='%s'",ts,ip,sender,recipient);
++
++		if(ts-n>conf->mini)
++			{
++	  		if(conf->lightd==1 && fnotdomain==1)
++				snprintf(query,sizeof(query)-1,"update greylist set last=%d,n=n+1 where ip='%s' and sender='%s' and 
+recipient='%s'",ts,ip,osender,orecipient);
++
++        		snprintf(query,sizeof(query)-1,"update greylist set last=%d,n=n+1 where ip='%s' and sender='%s' and 
+recipient='%s'",ts,ip,sender,recipient);
++		}
++		else
++		{
++			//
++			// We have NOT reached the greylist-timeout, so we do NOT increase the message-counter (SQL-field n),
++			// because otherwise we will braek the MXGREY-option.
++			// In fact this means that the THIRD retry will immidiately pass the greylist, as mxgrey checks only for ip and (n>1).
++			//
++			// 2005-08-16   martin@it4linux.de
++			// 
++
++			if(conf->lightd==1 && fnotdomain==1)
++				snprintf(query,sizeof(query)-1,"update greylist set last=%d where ip='%s' and sender='%s' and 
+recipient='%s'",ts,ip,osender,orecipient);
++
++	        	snprintf(query,sizeof(query)-1,"update greylist set last=%d where ip='%s' and sender='%s' and 
+recipient='%s'",ts,ip,sender,recipient);
++		}
+ 
+         	SQLQuery(query);
+         	if(conf->debug==1) printf("%d: Query=(%s)\n",pid,query);
