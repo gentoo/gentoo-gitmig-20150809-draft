@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4574 2005/10/15 12:07:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4575 2005/10/15 12:31:17 ferdy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -194,10 +194,6 @@ games-rpg/nwn-data
 # Stefan Knoblich <stkn@gentoo.org> (20 Sep 2005)
 # Asterisk-1.2.0_beta still masked, therefore mask this one too.
 >=net-misc/asterisk-oh323-0.7.3
-
-# Fernando J. Pereda <ferdy@gentoo.org> (20 Sep 2005)
-# Big bump, p.mask it for a while
->=mail-filter/maildrop-2.0.0
 
 # Mark Loeser <halcy0n@gentoo.org> (19 Sep 2005)
 # Masking gzip-x86 before its pending removal due to dead upstream and
