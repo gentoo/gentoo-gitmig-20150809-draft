@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.33 2005/09/17 14:54:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.34 2005/10/15 23:05:58 eradicator Exp $
+
+*squirrelmail-1.4.5-r1 (15 Oct 2005)
+
+  15 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/squirrelmail-1.4.5-array_shift.patch,
+  +squirrelmail-1.4.5-r1.ebuild:
+  Revbump to fix array_shift bug #108394.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> squirrelmail-1.4.5.ebuild:
   Mark 1.4.5 stable on alpha

@@ -1,0 +1,28 @@
+diff -aurp old/squirrelmail/class/mime/Rfc822Header.class.php new/squirrelmail/class/mime/Rfc822Header.class.php
+--- old/squirrelmail/class/mime/Rfc822Header.class.php	2005-02-07 00:33:29.000000000 +0000
++++ new/squirrelmail/class/mime/Rfc822Header.class.php	2005-10-15 21:17:31.000000000 +0000
+@@ -506,7 +506,8 @@ class Rfc822Header {
+      * that function?
+      */
+-    function parsePriority($value) {
+-        $value = strtolower(array_shift(split('/\w/',trim($value))));
++    function parsePriority($sValue) {
++        $aValue = split('/\w/',trim($sValue));
++	$value = strtolower(array_shift($aValue));
+         if ( is_numeric($value) ) {
+             return $value;
+         }
+diff -aurp old/squirrelmail/functions/imap_messages.php new/squirrelmail/functions/imap_messages.php
+--- old/squirrelmail/functions/imap_messages.php	2005-04-16 17:45:38.000000000 +0000
++++ new/squirrelmail/functions/imap_messages.php	2005-10-15 22:14:09.000000000 +0000
+@@ -477,7 +477,8 @@ function parseArray($read,&$i) {
+  * class/mime/Rfc822Header.php.
+  */
+-function parsePriority($value) {
+-    $value = strtolower(array_shift(split('/\w/',trim($value))));
++function parsePriority($sValue) {
++    $aValue=split('/\w/',trim($sValue));
++    $value = strtolower(array_shift($aValue));
+     if ( is_numeric($value) ) {
+         return $value;
+     }
