@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.28 2005/10/11 16:12:22 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.29 2005/10/15 01:54:51 pythonhead Exp $
+
+  15 Oct 2005; Rob Cakebread <pythonhead@gentoo.org>
+  wxpython-2.6.1.0.ebuild:
+  Stable x86. Fixed wxGTK dep
 
 *wxpython-2.4.2.4-r3 (11 Oct 2005)
 
