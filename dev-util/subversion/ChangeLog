@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.187 2005/10/10 21:25:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.188 2005/10/15 19:23:49 pauldv Exp $
+
+*subversion-1.2.3-r2 (14 Oct 2005)
+
+  14 Oct 2005;  Paul de Vrieze <pauldv@gentoo.org>  subversion-1.2.3-r2.ebuild:
+  Security bump to force a perl version that has secure RUNPATH's (bug #105054)
 
   10 Oct 2005; Danny van Dyk <kugelfang@gentoo.org>
   subversion-1.2.3-r1.ebuild:
