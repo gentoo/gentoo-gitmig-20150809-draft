@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.7-r2.ebuild,v 1.1 2005/09/12 15:49:44 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.7-r2.ebuild,v 1.2 2005/10/15 23:25:09 josejx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://klive.cpushare.com/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/python
