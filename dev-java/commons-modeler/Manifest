@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6081138dc8863dbe14ef61f93d9822f ChangeLog 1626
 MD5 25ce2f4c5b760946a4b8253e501c77b4 commons-modeler-1.1.ebuild 1761
 MD5 87f8f04cdcf795715523851d24cf5c7b files/digest-commons-modeler-1.1 66
 MD5 6cd2a42a25b29cb85c58037271a97037 files/gentoo.diff 510
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUOtH/rLF9B432nYRAvugAKDB7yUGi8LFihePc4v+e0enpx0LGQCgs1mv
+ogt5QHKVtGXwXw9noqc9MAM=
+=B1G9
+-----END PGP SIGNATURE-----
