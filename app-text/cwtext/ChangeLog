@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cwtext
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.8 2005/06/05 12:00:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.9 2005/10/15 19:28:38 grobian Exp $
+
+  15 Oct 2005; Fabian Groffen <grobian@gentoo.org> cwtext-0.94.ebuild:
+  Marked ~ppc-macos (bug #108595)
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> cwtext-0.94.ebuild:
   Stable on ppc.
