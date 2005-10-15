@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/euses
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.1 2005/10/15 20:20:54 chainsaw Exp $
+
+*euses-2.3 (15 Oct 2005)
+
+  15 Oct 2005; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +euses-2.3.ebuild:
+  Initial commit, ebuild based on the one by JeR <jer@xs4all.nl> in bug #92795.
+
