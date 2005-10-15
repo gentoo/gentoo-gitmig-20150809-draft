@@ -1,4 +1,4 @@
-MD5 cd1b6a517d6a583536c6ba0c482d9234 linuxtv-dvb-headers-3.1.ebuild 538
-MD5 832aff784972707a234eea2effb698bb ChangeLog 739
+MD5 34c52619ea4a7bd9c7d5d8e9d39255a4 linuxtv-dvb-headers-3.1.ebuild 497
+MD5 e10b90af0edb0f2eae6902273cd078d5 ChangeLog 882
 MD5 29522d05d6d333b4917b88b6ad461f95 metadata.xml 505
-MD5 7650bf3c6e785a2ba02c2d7faf051912 files/digest-linuxtv-dvb-headers-3.1 75
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linuxtv-dvb-headers-3.1 0

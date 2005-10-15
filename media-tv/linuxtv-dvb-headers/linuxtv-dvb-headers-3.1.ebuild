@@ -1,20 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/linuxtv-dvb-headers-3.1.ebuild,v 1.4 2005/08/14 16:15:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/linuxtv-dvb-headers-3.1.ebuild,v 1.5 2005/10/15 13:50:34 zzam Exp $
 
 inherit eutils
 
-DESCRIPTION="Header files for DVB kernel modules"
+DESCRIPTION="Virtual Package installing the Header files for DVB"
 HOMEPAGE="http://www.linuxtv.org"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND=""
-
-src_install()
-{
-	insinto /usr/include/dvb/linux/dvb
-	doins *.h || die "doins failed"
-}
+RDEPEND="|| (
+		>=sys-kernel/linux-headers-2.6.11-r2
+		media-tv/linuxtv-dvb
+	)"
