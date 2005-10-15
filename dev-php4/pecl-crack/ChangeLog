@@ -1,6 +1,9 @@
 # ChangeLog for dev-php4/pecl-crack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-crack/ChangeLog,v 1.3 2005/09/10 07:48:25 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-crack/ChangeLog,v 1.4 2005/10/15 21:57:55 weeve Exp $
+
+  15 Oct 2005; Jason Wever <weeve@gentoo.org> pecl-crack-0.3.ebuild:
+  Added ~sparc keyword.
 
 *pecl-crack-0.3 (10 Sep 2005)
 
