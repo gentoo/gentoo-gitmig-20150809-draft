@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmlinc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlinc/ChangeLog,v 1.12 2005/07/16 16:29:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlinc/ChangeLog,v 1.13 2005/10/15 14:18:21 grobian Exp $
+
+  15 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  htmlinc-1.0_beta1-r1.ebuild:
+  Marked ~ppc-macos (bug #108635)
 
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> htmlinc-1.0_beta1.ebuild:
   Marked ~ppc at the request of bug #99214.

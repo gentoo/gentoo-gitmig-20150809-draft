@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dde1f8c9b06806137ba5e85200a5c3b4 ChangeLog 1145
+MD5 ab37bfda8812efe5d8de9352cbaff346 htmlinc-1.0_beta1-r1.ebuild 677
+MD5 b9763a586d38076500d5bee80b9102b9 ChangeLog 1263
 MD5 6dd1481a1d4ea570080885900f9ccb85 htmlinc-1.0_beta1.ebuild 647
-MD5 7b5d989ba37d36b1435ff20561deffc4 htmlinc-1.0_beta1-r1.ebuild 664
-MD5 a090e8e4585f069da8d32a89a9ac77ab files/htmlinc-gcc3-gentoo.patch 3601
-MD5 1987c5074e9ade268654c3d872e5e99c files/digest-htmlinc-1.0_beta1-r1 58
 MD5 1987c5074e9ade268654c3d872e5e99c files/digest-htmlinc-1.0_beta1 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC2TXscsIHjyDViGQRAtHVAKCKy1fZWKz+2PM0waDLGi7GCFbDhgCfYjWp
-najRdWV1Mu4vjf84yfC/pZk=
-=mBsW
------END PGP SIGNATURE-----
+MD5 1987c5074e9ade268654c3d872e5e99c files/digest-htmlinc-1.0_beta1-r1 58
+MD5 a090e8e4585f069da8d32a89a9ac77ab files/htmlinc-gcc3-gentoo.patch 3601
