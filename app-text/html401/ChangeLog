@@ -1,6 +1,10 @@
 # ChangeLog for app-text/html401
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.13 2005/08/07 13:29:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/ChangeLog,v 1.14 2005/10/15 14:30:16 grobian Exp $
+
+  15 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  html401-19991224-r2.ebuild:
+  Marked ~ppc-macos (bug #108636)
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   html401-19991224-r2.ebuild:
