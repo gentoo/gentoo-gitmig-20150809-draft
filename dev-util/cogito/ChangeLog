@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.19 2005/10/05 15:49:02 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.20 2005/10/15 22:26:28 ferdy Exp $
+
+*cogito-0.15.1 (15 Oct 2005)
+
+  15 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -files/cogito-0.12.1-doc.patch, -files/cogito-0.15-doc.patch,
+  -cogito-0.12.1.ebuild, -cogito-0.13.ebuild, -cogito-0.14.1.ebuild,
+  -cogito-0.15.ebuild, +cogito-0.15.1.ebuild:
+  version bump. clean old ebuilds
 
 *cogito-0.15 (05 Oct 2005)
 

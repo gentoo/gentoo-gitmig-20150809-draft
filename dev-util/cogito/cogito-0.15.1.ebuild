@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.14.1.ebuild,v 1.2 2005/09/28 08:21:11 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.15.1.ebuild,v 1.1 2005/10/15 22:26:28 ferdy Exp $
 
 inherit eutils
 
@@ -25,10 +25,11 @@ RDEPEND="net-misc/rsync
 src_compile() {
 	emake || die "emake failed"
 
-	if use doc; then
-		cd ${S}/Documentation
-		sed -i -e "/^MAN7_TXT/s/git.txt/#git.txt/g" Makefile
-		make || die "make documentation failed"
+	if use doc ; then
+		#epatch "${FILESDIR}/${P}-doc.patch"
+		sed -i -e "/^docdir=/s:cogito:${PF}:" \
+			${S}/Documentation/Makefile || die "sed failed (Documentation)"
+		emake -C Documentation || die "make documentation failed"
 	fi
 }
 
@@ -36,7 +37,12 @@ src_install() {
 	make install DESTDIR="${D}" prefix="/usr" || die "install failed"
 	dodoc README* VERSION COPYING
 
-	if use doc; then
+	if use doc ; then
 		doman Documentation/*.1 Documentation/*.7
+		dodir /usr/share/doc/${PF}/html
+		cp Documentation/*.html ${D}/usr/share/doc/${PF}/html/
 	fi
+
+	dodir /usr/share/doc/${PF}/contrib
+	cp ${S}/contrib/* ${D}/usr/share/doc/${PF}/contrib
 }
