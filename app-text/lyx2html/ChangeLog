@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lyx2html
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/ChangeLog,v 1.1 2005/05/29 04:31:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/ChangeLog,v 1.2 2005/10/15 16:18:42 josejx Exp $
+
+  15 Oct 2005; Joseph Jezak <josejx@gentoo.org> lyx2html-0.2.ebuild:
+  Marked ~ppc for bug #109278.
 
 *lyx2html-0.2 (29 May 2005)
 

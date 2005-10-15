@@ -1,4 +1,14 @@
-MD5 3bb874de8ea774a0874ab6973183df05 lyx2html-0.2.ebuild 695
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 b7b35cfc843719e9e4c2c8eb72b43a8a ChangeLog 404
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 952a9d78a45f870b10762f53a2542257 ChangeLog 506
 MD5 1026781b76c4b0dc38a18f5bf9372eda files/digest-lyx2html-0.2 63
+MD5 30cb40913fef4428c702998b814b2736 lyx2html-0.2.ebuild 701
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUSv3csIHjyDViGQRAmEkAKCAFMZ/H7Pzrq6cWz7HypkIWIyWbgCdHdx7
+QO4qOpsu6P6ihoZ7X6mfyzA=
+=RtSj
+-----END PGP SIGNATURE-----
