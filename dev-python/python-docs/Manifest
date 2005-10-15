@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de4a54d6511ac0a3c50e3f6f08271dcc ChangeLog 8197
+MD5 9d97720720cbbda86da3b0bd0cd77942 ChangeLog 8301
 MD5 f228bfc10d3eb9dfb215177275b0e1c9 files/digest-python-docs-2.2.2 63
 MD5 e9b50e3077ea663db9a42bc42b725ef1 files/digest-python-docs-2.2.3 63
 MD5 d7a3f8363864425c84dcd47a1524035d files/digest-python-docs-2.3.3 64
@@ -21,12 +18,5 @@ MD5 5c9ada1759a31887ace8ad6b94b3d26c python-docs-2.3.4.ebuild 723
 MD5 6c70f7744f89efe8c8fdae59de2514f6 python-docs-2.3.4_rc1.ebuild 758
 MD5 33a51f99fd5e8f791fdfb9c1d49c484d python-docs-2.3.5.ebuild 728
 MD5 e71014cff126ef82530de785dc5be905 python-docs-2.4.1.ebuild 971
-MD5 cc20b8d9881bcbba005b6bda9270d126 python-docs-2.4.2.ebuild 974
+MD5 08e1fa2797c647702c194bbf98666e9f python-docs-2.4.2.ebuild 970
 MD5 2626303164a38e62cf35b175bfdbc5d9 python-docs-2.4.ebuild 728
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDT7V2KRy60XGEcJIRAp07AKCw0aBmerwyo5OhE4ukVI3by6+TmACfUsFg
-wgpTzW6qjib2SYBHSDXvsvs=
-=mVyz
------END PGP SIGNATURE-----
