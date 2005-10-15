@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apd/pecl-apd-1.0.1.ebuild,v 1.2 2005/09/18 14:33:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apd/pecl-apd-1.0.1.ebuild,v 1.3 2005/10/15 22:49:20 weeve Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_PECL_PKG="apd"
@@ -13,7 +13,7 @@ IUSE=""
 DESCRIPTION="A full-featured engine-level profiler/debugger."
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 
 need_php_by_category
 
