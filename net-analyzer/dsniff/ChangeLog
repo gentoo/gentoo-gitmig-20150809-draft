@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.20 2005/09/17 00:55:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.21 2005/10/15 09:34:08 mkay Exp $
+
+*dsniff-2.3-r7 (15 Oct 2005)
+
+  15 Oct 2005; <mkay@gentoo.org> +dsniff-2.3-r7.ebuild:
+  Fixing local ip inversion (see bug #108144)
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org> dsniff-2.3-r4.ebuild:
   Mark 2.3-r4 stable on alpha
