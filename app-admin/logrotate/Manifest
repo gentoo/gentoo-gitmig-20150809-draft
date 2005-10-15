@@ -1,29 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5990c6a2393224efe2d067d10de0a97c logrotate-3.7.1.ebuild 1723
-MD5 56b2e40af8f7d88199bcd55bf9b1d55a logrotate-3.7.1-r1.ebuild 1764
-MD5 098cc168fade54d752abb4316bf4860f logrotate-3.7.ebuild 1679
-MD5 af9e66d8014737b2344afe21501fae5f logrotate-3.6.5-r1.ebuild 1730
-MD5 5f15f4b9340ac15a0ce9cf1c29ec1db3 ChangeLog 6808
-MD5 c7533062993ae53a9a32d0a58416cd84 metadata.xml 216
-MD5 6ebaa619f7cd1621eb7203fb8f651cee files/logrotate-3.7.1-manpage-fixes.patch 15684
+MD5 457917413851c31a99c16802a3f7045e ChangeLog 7104
+MD5 746e982f984139e917c7d7ee39af40fa files/digest-logrotate-3.7.1-r1 67
+MD5 746e982f984139e917c7d7ee39af40fa files/digest-logrotate-3.7.1-r2 67
+MD5 8259bf9cd3b5bc37dd4cdda62cc9c2de files/logrotate-3.7.1-dateext-maxage.patch 14282
+MD5 8d4271dd12289c4da96b3e4f1fbd0868 files/logrotate-3.7.1-datehack.patch 516
 MD5 d268cc741e71398dc2a14bcdc0bcfeb2 files/logrotate-3.7.1-ignore-hidden.patch 517
+MD5 6ebaa619f7cd1621eb7203fb8f651cee files/logrotate-3.7.1-manpage-fixes.patch 15684
 MD5 721a9af5171ca27c48c51ba338db3036 files/logrotate-3.7.1-no-tmpdir.patch 1266
 MD5 b6b2dec981e0b573366f5d0e74783b5b files/logrotate-3.7.1-taboo-to-debug.patch 517
-MD5 8d4271dd12289c4da96b3e4f1fbd0868 files/logrotate-3.7.1-datehack.patch 516
-MD5 ef1405c48d23249f97330709d1d2a093 files/logrotate-3.6.5-selinux.diff.bz2 1440
-MD5 4942e4ea3f05b91d9d24504c4ddbc776 files/digest-logrotate-3.7 69
-MD5 bdf48119e016d4ee8b829da9e83959bf files/digest-logrotate-3.6.5-r1 71
-MD5 746e982f984139e917c7d7ee39af40fa files/digest-logrotate-3.7.1-r1 67
-MD5 8259bf9cd3b5bc37dd4cdda62cc9c2de files/logrotate-3.7.1-dateext-maxage.patch 14282
+MD5 99475aa9bd9e42d158c0584f3c4544fd files/logrotate-3.7.1-weekly.patch 1165
 MD5 5692e613153f372df5b7510b39ba9c5c files/logrotate.conf 731
 MD5 cf1ca2cfa810abaefc504a76ca38b52a files/logrotate.cron 52
-MD5 746e982f984139e917c7d7ee39af40fa files/digest-logrotate-3.7.1 67
+MD5 56b2e40af8f7d88199bcd55bf9b1d55a logrotate-3.7.1-r1.ebuild 1764
+MD5 b173c5de8be193de7d0e47e4f719c3a6 logrotate-3.7.1-r2.ebuild 1807
+MD5 c7533062993ae53a9a32d0a58416cd84 metadata.xml 216
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKHa0omPajV0RnrERAquBAJ9lh//gsAm2s31PtkO3ev0TjYhrTACfXsvk
-VeEcYfhWcgh2Tr0pNDBPDT8=
-=Cclj
+iD8DBQFDUX3YomPajV0RnrERAhCGAJoDMqq+mM6RSCRghjpsFRcnJLBkTQCeIgw/
+TMgSzxXmiOKoJ4w0D9cj/LY=
+=Uuot
 -----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.44 2005/09/14 19:14:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.45 2005/10/15 22:08:08 dang Exp $
+
+*logrotate-3.7.1-r2 (15 Oct 2005)
+
+  15 Oct 2005; <dang@gentoo.org> -files/logrotate-3.6.5-selinux.diff.bz2,
+  +files/logrotate-3.7.1-weekly.patch, -logrotate-3.6.5-r1.ebuild,
+  -logrotate-3.7.ebuild, -logrotate-3.7.1.ebuild,
+  +logrotate-3.7.1-r2.ebuild:
+  Fix weekly log rotation. bug #107906
 
   14 Sep 2005; <dang@gentoo.org> files/logrotate-3.7.1-manpage-fixes.patch:
   Fix default status file in manpage.  Bug #105958
