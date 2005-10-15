@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.6 2005/10/11 03:02:23 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-2.0b_p2.ebuild,v 1.7 2005/10/15 23:22:12 soulse Exp $
 
 inherit eutils apache-module toolchain-funcs
 
@@ -52,7 +52,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/2.x-series-nsca.patch
-	gunzip -c ${FILESDIR}/nagios.cfg-sample.gz > ./nagios.cfg-sample
+	gunzip -c ${FILESDIR}/nagios-2.0b.cfg-sample.gz > ./nagios.cfg-sample
 }
 
 src_compile() {
