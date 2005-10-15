@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.43 2005/10/15 12:10:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.44 2005/10/15 14:53:28 dragonheart Exp $
+
+  15 Oct 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/curl-7.10.8-transfer-segv.patch, -files/7.12.0-no-fputc.patch,
+  -files/curl-7.10.5-badssl.patch, -curl-7.14.0.ebuild, curl-7.15.0.ebuild:
+  more cleanups. old ebuild/patches removed
 
 *curl-7.15.0 (15 Oct 2005)
 
