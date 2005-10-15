@@ -1,28 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66ed278686866a3187b68d81fe47fa24 metadata.xml 592
-MD5 38badb1189a3476d5066e21ab764aef1 ucspi-tcp-0.88-r10.ebuild 2341
-MD5 f28315c57485584788c9824481bc7603 ucspi-tcp-0.88-r8.ebuild 2148
-MD5 76034b124658a585b29a772acbf2b798 ucspi-tcp-0.88-r9.ebuild 2246
-MD5 e01f5cc6f4c8c36cde32a1f14dfe8ba0 ucspi-tcp-0.88-r11.ebuild 2427
-MD5 9b7edefc3244d63241311cb3b66b1a44 ucspi-tcp-0.88-r12.ebuild 2574
-MD5 1995e753ca166f8d86e397274e74c122 ChangeLog 5600
+MD5 3a5bc47bf49bc213c5a8d8e3ca06b655 ChangeLog 5812
 MD5 fb41d7c55db5124d7488a923e4223576 files/0.88-bigendian.patch 478
 MD5 0479a09fdd4ce855d35e36563cab4743 files/0.88-errno.patch 239
 MD5 b36e99b422384451ac68b3a9b31b7ed6 files/0.88-head-1.patch 1403
+MD5 a52d1d668b5486fde8f138eaab047e70 files/0.88-limits.patch 12356
 MD5 72b6cd8b1b829a6a6939255fdc0b76a3 files/0.88-rblsmtpd-ignore-on-RELAYCLIENT.patch 462
-MD5 eeca4c38b2ce87ccb59e44f241b3c736 files/digest-ucspi-tcp-0.88-r10 350
+MD5 b260fe81e9593e965ccb539b0dcfc4bd files/0.88-tcprules.patch 463
+MD5 07405ee0d3385bc58a5cc3f2034de90a files/digest-ucspi-tcp-0.88-r10 350
+MD5 07405ee0d3385bc58a5cc3f2034de90a files/digest-ucspi-tcp-0.88-r11 350
+MD5 57161a76734c44c65d46f0f93826aaf3 files/digest-ucspi-tcp-0.88-r12 350
+MD5 280de8eb44681996de47516ea0413be0 files/digest-ucspi-tcp-0.88-r13 350
 MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r8 350
 MD5 9eab9910e2978160e33f6c4e9b227efa files/digest-ucspi-tcp-0.88-r9 350
 MD5 64eb2b26c9c0e5d6b4042fd36b74dbb8 files/tcprules-Makefile 168
-MD5 a52d1d668b5486fde8f138eaab047e70 files/0.88-limits.patch 12356
-MD5 eeca4c38b2ce87ccb59e44f241b3c736 files/digest-ucspi-tcp-0.88-r11 350
-MD5 57161a76734c44c65d46f0f93826aaf3 files/digest-ucspi-tcp-0.88-r12 350
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK/zyKf2g/qXtneoRAseGAJsFDwuhC7vrmU77Wzn8jcjmRlQO6ACgsbRU
-WvDGyGQQQXX+PuTHtq8YjFw=
-=Yj4F
------END PGP SIGNATURE-----
+MD5 66ed278686866a3187b68d81fe47fa24 metadata.xml 592
+MD5 38badb1189a3476d5066e21ab764aef1 ucspi-tcp-0.88-r10.ebuild 2341
+MD5 e01f5cc6f4c8c36cde32a1f14dfe8ba0 ucspi-tcp-0.88-r11.ebuild 2427
+MD5 9b7edefc3244d63241311cb3b66b1a44 ucspi-tcp-0.88-r12.ebuild 2574
+MD5 aecb4bd62f2e8f3c55abdaa9baa9eed0 ucspi-tcp-0.88-r13.ebuild 2612
+MD5 f28315c57485584788c9824481bc7603 ucspi-tcp-0.88-r8.ebuild 2148
+MD5 76034b124658a585b29a772acbf2b798 ucspi-tcp-0.88-r9.ebuild 2246

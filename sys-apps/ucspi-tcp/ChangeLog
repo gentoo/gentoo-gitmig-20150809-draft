@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.39 2005/09/17 11:24:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.40 2005/10/15 21:54:54 hansmi Exp $
+
+*ucspi-tcp-0.88-r13 (15 Oct 2005)
+
+  15 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +files/0.88-tcprules.patch, +ucspi-tcp-0.88-r13.ebuild:
+  Added patch from bug 90679 when having lines without a colon.
 
   11 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   ucspi-tcp-0.88-r12.ebuild:
