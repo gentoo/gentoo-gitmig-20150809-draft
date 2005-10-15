@@ -1,6 +1,12 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.116 2005/10/15 17:22:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.117 2005/10/15 17:28:19 flameeyes Exp $
+
+  15 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -transcode-0.6.11.ebuild, -transcode-0.6.12-r1.ebuild,
+  -transcode-0.6.12-r2.ebuild, -transcode-0.6.13-r1.ebuild,
+  -transcode-0.6.14.ebuild:
+  Clean up of older versions.
 
   15 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> transcode-1.0.1.ebuild:
   Remove avifile support, use autotools eclass, don't force -j1 as it seems
