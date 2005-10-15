@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.46 2005/10/14 13:04:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.47 2005/10/15 08:05:22 uberlord Exp $
+
+  15 Oct 2005; Roy Marples <uberlord@gentoo.org> openvpn-2.0.2-r3.ebuild:
+  plugins now really install to /usr/lib/openvpn
 
 *openvpn-2.0.2-r3 (14 Oct 2005)
 
