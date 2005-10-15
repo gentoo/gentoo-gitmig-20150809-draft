@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.20 2005/10/14 18:41:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.21 2005/10/15 07:23:22 danarmak Exp $
+
+  15 Oct 2005; Dan Armak <danarmak@gentoo.org>
+  konsolekalendar-3.5.0_beta2.ebuild:
+  Fix compilation for this version.
 
 *konsolekalendar-3.4.3 (14 Oct 2005)
 
