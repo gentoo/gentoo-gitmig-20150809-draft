@@ -1,4 +1,16 @@
-MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 d08bf3a4a87cf2effb65cfd59b985a7a ChangeLog 659
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d3823e1de2e8cef9578540db04a85245 ChangeLog 790
 MD5 1457e7323451fb0e87792cd69ac6c7c1 cdargs-1.31.ebuild 1530
+MD5 aa9073de5d20d8fafdb8dea4ac26ef21 cdargs-1.32.ebuild 1517
 MD5 003ee1abc0d68de5c012e8fcb85334e7 files/digest-cdargs-1.31 62
+MD5 b2703072f3f582f2fb5c7ec7ee702290 files/digest-cdargs-1.32 62
+MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDUZSXLLFUmVNQ7rkRAtekAKCWILQeoB/go3ScYbcMb+Nu6zFAuQCgjEgE
+R1jfGMqS5tOvHDNwUiAWFkk=
+=olGe
+-----END PGP SIGNATURE-----
