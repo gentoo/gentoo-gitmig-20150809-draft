@@ -1,0 +1,101 @@
+This patch was taken from http://lists.berlios.de/pipermail/at76c503a-develop/2005-September/000235.html
+
+--- at76c503.c
++++ at76c503.c
+@@ -193,7 +193,7 @@ static inline void usb_set_intfdata(stru
+ # define eth_hdr(s) (s)->mac.ethernet
+ # define set_eth_hdr(s,p) (s)->mac.ethernet=(p)
+ #else
+-# define set_eth_hdr(s,p) (s)->mac.raw=(p)
++# define set_eth_hdr(s,p) (s)->mac.raw=(unsigned char *)(p)
+ #endif
+ 
+ /* wireless extension level this source currently supports */
+@@ -205,7 +205,11 @@ static inline void usb_set_intfdata(stru
+ #endif
+ 
+ #ifndef USB_ASYNC_UNLINK
++#ifdef URB_ASYNC_UNLINK
+ #define USB_ASYNC_UNLINK	URB_ASYNC_UNLINK
++#else
++#define USB_ASYNC_UNLINK	0
++#endif
+ #endif
+ 
+ #ifndef FILL_BULK_URB
+@@ -3605,7 +3609,7 @@ static void rx_mgmt_beacon(struct at76c5
+ 	if (match == NULL) {
+ 		/* haven't found the bss in the list */
+ 		if ((match=kmalloc(sizeof(struct bss_info), GFP_ATOMIC)) == NULL) {
+-			dbg(DBG_BSS_TABLE, "%s: cannot kmalloc new bss info (%d byte)",
++			dbg(DBG_BSS_TABLE, "%s: cannot kmalloc new bss info (%zd byte)",
+ 			    dev->netdev->name, sizeof(struct bss_info));
+ 			goto rx_mgmt_beacon_end;
+ 		}
+@@ -6699,7 +6703,9 @@ static const struct iw_handler_def at76c
+ 	.standard	= (iw_handler *) at76c503_handlers,
+ 	.private	= (iw_handler *) at76c503_priv_handlers,
+ 	.private_args	= (struct iw_priv_args *) at76c503_priv_args,
+-#if WIRELESS_EXT > 15
++#if WIRELESS_EXT > 16
++	.get_wireless_stats = at76c503_get_wireless_stats,
++#elif WIRELESS_EXT = 16
+ 	.spy_offset	= offsetof(struct at76c503, spy_data),
+ #endif // #if WIRELESS_EXT > 15
+ 
+@@ -7354,7 +7360,7 @@ struct at76c503 *alloc_new_device(struct
+ 	dev->pm_mode = pm_mode;
+ 	dev->pm_period_us = pm_period;
+ 
+-	strcpy(netdev->name, netdev_name);
++	dev_alloc_name(netdev, netdev_name);
+ 
+ 	return dev;
+ } /* alloc_new_device */
+@@ -7456,7 +7462,15 @@ int init_new_device(struct at76c503 *dev
+ 	netdev->open = at76c503_open;
+ 	netdev->stop = at76c503_stop;
+ 	netdev->get_stats = at76c503_get_stats;
++
++#if WIRELESS_EXT > 16
++	/* Add pointers to enable iwspy support. */
++	dev->wireless_data.spy_data = &dev->spy_data;
++	netdev->wireless_data = &dev->wireless_data;
++#else  /* WIRELESS_EXT > 16 */
+ 	netdev->get_wireless_stats = at76c503_get_wireless_stats;
++#endif /* WIRELESS_EXT > 16 */
++
+ 	netdev->hard_start_xmit = at76c503_tx;
+ 	netdev->tx_timeout = at76c503_tx_timeout;
+ 	netdev->watchdog_timeo = 2 * HZ;
+@@ -7599,7 +7613,7 @@ int at76c503_do_probe(struct module *mod
+ 		}
+ 
+ 		dbg(DBG_DEVSTART, "firmware board %u version %u.%u.%u#%u "
+-		    "(int %x:%x, ext %x:%x)",
++		    "(int %x:%tx, ext %x:%tx)",
+ 		    dev->board_type, version>>24,(version>>16)&0xff,
+ 		    (version>>8)&0xff, version&0xff,
+ 		    dev->intfw_size, dev->intfw-fw_data,
+@@ -7655,7 +7669,7 @@ int at76c503_do_probe(struct module *mod
+ 				dbg(DBG_DEVSTART, "cannot get firmware (ret %d) or all zeros "
+ 				    "- download external firmware", ret);
+ 			dbg(DBG_DEVSTART, "firmware board %u version %u.%u.%u#%u "
+-			    "(int %x:%x, ext %x:%x)",
++			    "(int %x:%tx, ext %x:%tx)",
+ 			    dev->board_type, version>>24,(version>>16)&0xff,
+ 			    (version>>8)&0xff, version&0xff,
+ 			    dev->intfw_size, dev->intfw-fw_data,
+--- at76c503.h
++++ at76c503.h
+@@ -634,6 +634,10 @@
+ #endif
+ #endif
+ 
++#if WIRELESS_EXT > 16
++	struct iw_public_data wireless_data;
++#endif /* WIRELESS_EXT > 16 */
++
+ 	/* These fields contain HW config provided by the device (not all of
+ 	 * these fields are used by all board types) */
+ 	u8 mac_addr[ETH_ALEN];
