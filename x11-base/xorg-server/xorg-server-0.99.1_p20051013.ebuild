@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1_p20051013.ebuild,v 1.4 2005/10/14 18:56:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-0.99.1_p20051013.ebuild,v 1.5 2005/10/15 18:59:39 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 # Hack to make sure autoreconf gets run
@@ -43,9 +43,17 @@ RDEPEND="x11-libs/libXfont
 	x11-apps/xauth
 	x11-apps/xinit
 	app-admin/eselect-opengl
+	x11-libs/libXaw
+	x11-libs/libXpm
+	x11-libs/libXxf86misc
+	x11-libs/libXxf86vm
 	!minimal? ( x11-libs/libdmx
 		x11-libs/libXres )
-	x11-libs/libxkbui" #Xres is dmx-dependent, xkbui is xorgcfg-dependent
+	x11-libs/libxkbui"
+	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
+	# Xaw is dmx- and xorgcfg-dependent
+	# Xpm is dmx- and xorgcfg-dependent, pulls in Xt
+	# Xxf86misc and Xxf86vm are xorgcfg-dependent
 DEPEND="${RDEPEND}
 	x11-proto/randrproto
 	x11-proto/renderproto

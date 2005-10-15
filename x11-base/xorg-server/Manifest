@@ -1,4 +1,4 @@
-MD5 b72f3535dc306f5d483ecd04ae5df3c7 ChangeLog 11120
+MD5 5551c1f4aed3b4810132ede33f91fdab ChangeLog 11332
 MD5 5a445ea35d70ce20671a49049b406680 files/0.99.1-r10-check-for-glproto.patch 911
 MD5 54ab2c693d9e7e6e09b20bb8dd7db297 files/0.99.1-r10_CAN-2005-2495.patch 4387
 MD5 21ec9868da064e8a549db3d501373dea files/digest-xorg-server-0.99.1-r10 239
@@ -6,4 +6,4 @@ MD5 ac79344c93d0172934f99d972e3e0d44 files/digest-xorg-server-0.99.1_p20051013 1
 MD5 7fb68ff739074f0ee643388ee39e20f8 files/fix-transparencies.patch 310
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 803e951251b6a7c0dda68d3a72fba8ad xorg-server-0.99.1-r10.ebuild 3895
-MD5 b48cf730411ae07f6d79c672404cdc1e xorg-server-0.99.1_p20051013.ebuild 3679
+MD5 ba5024ea25f8a77ef61d5a16003dd953 xorg-server-0.99.1_p20051013.ebuild 3893
