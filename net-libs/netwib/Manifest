@@ -6,11 +6,11 @@ MD5 8491c5fb01637c29d04c5a7d351c4b20 files/digest-netwib-5.28.0 66
 MD5 a8db8170d7a582992272cecea5df396a files/digest-netwib-5.31.0 137
 MD5 44374bbb178a0c804d74bb54af07cdc2 metadata.xml 258
 MD5 a42aa11e7b51e62f12d5dd24c5b4044e netwib-5.28.0.ebuild 1020
-MD5 fa8294277077e67da2d3ba6e7c313141 netwib-5.31.0.ebuild 1484
+MD5 e33d7ed7c075bab0fa9c669231181245 netwib-5.31.0.ebuild 1487
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDUITXmdTrptrqvGERAuZUAJwMFSh70SZkmjNRNuvAU2L0H9yaigCgnM/i
-Kjk8+q6DwIDK//ui7HCti80=
-=0QtR
+iD8DBQFDUIjAmdTrptrqvGERAukwAJsHw3fO/+zDQY46KdaHJ06vn0EXQQCfUo38
+bw9uo0nBaqH8o1g/NF5Bbzw=
+=ijdC
 -----END PGP SIGNATURE-----
