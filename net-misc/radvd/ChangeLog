@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.17 2005/08/31 13:28:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.18 2005/10/15 20:40:33 brix Exp $
+
+  15 Oct 2005; Henrik Brix Andersen <brix@gentoo.org> radvd-0.8-r1.ebuild:
+  Stable on x86.
 
 *radvd-0.8-r1 (31 Aug 2005)
 
