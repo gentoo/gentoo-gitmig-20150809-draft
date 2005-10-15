@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/setuptools
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.1 2005/10/15 05:41:59 pythonhead Exp $
+
+*setuptools-0.6_alpha5 (15 Oct 2005)
+
+  15 Oct 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +setuptools-0.6_alpha5.ebuild:
+  Initial commit. Thank you Geoffrey Clements <geoff@electron.me.uk> and
+  Thomas Fullhart <kayos@genetikayos.com> for the ebuild. bug #108227
+
