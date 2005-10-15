@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.33.ebuild,v 1.1 2005/10/06 13:56:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.33-r1.ebuild,v 1.1 2005/10/15 09:06:56 hattya Exp $
 
-inherit java-pkg multilib
+inherit eutils java-pkg multilib
 
 IUSE="debug java perl ruby zlib"
 
@@ -18,6 +18,15 @@ DEPEND="java? ( virtual/jdk )
 	perl? ( dev-lang/perl )
 	ruby? ( virtual/ruby )
 	zlib? ( sys-libs/zlib )"
+
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-runpath.diff
+
+}
 
 src_compile() {
 

@@ -1,0 +1,12 @@
+diff -urN qdbm-1.8.33.orig/perl/Makefile.in qdbm-1.8.33/perl/Makefile.in
+--- qdbm-1.8.33.orig/perl/Makefile.in	2005-06-19 08:12:23.000000000 +0900
++++ qdbm-1.8.33/perl/Makefile.in	2005-10-10 18:24:00.420000000 +0900
+@@ -30,7 +30,7 @@
+ OPTIMIZE = -O2
+ LD = ld
+ LIBS = -L../.. -L/usr/local/lib -lqdbm @LIBS@
+-RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib
++RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib LD_RUN_PATH=""
+ 
+ 
+ 

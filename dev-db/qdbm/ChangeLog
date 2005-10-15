@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.48 2005/10/13 23:36:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.49 2005/10/15 09:06:56 hattya Exp $
+
+*qdbm-1.8.33-r1 (15 Oct 2005)
+
+  15 Oct 2005; Akinori Hattori <hattya@gentoo.org> +files/qdbm-runpath.diff,
+  -qdbm-1.8.33.ebuild, +qdbm-1.8.33-r1.ebuild:
+  fixes bug #108534.
 
   13 Oct 2005; Aron Griffis <agriffis@gentoo.org> qdbm-1.8.31.ebuild:
   Mark 1.8.31 stable on alpha
