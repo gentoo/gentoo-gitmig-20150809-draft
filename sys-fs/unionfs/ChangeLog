@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.15 2005/08/17 17:59:42 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.16 2005/10/15 13:43:49 genstef Exp $
+
+*unionfs-1.0.14 (15 Oct 2005)
+
+  15 Oct 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/unionfs-1.0.14-remove_call_to_ctags.patch, +unionfs-1.0.14.ebuild:
+  Version bump thanks to Alexander Skwar <askwar@digitalprojects.com> in bug
+  104702
 
   17 Aug 2005; Malcolm Lashley <malc@gentoo.org>
   +files/unionfs-1.0.13-amd64.patch, unionfs-1.0.13.ebuild:
