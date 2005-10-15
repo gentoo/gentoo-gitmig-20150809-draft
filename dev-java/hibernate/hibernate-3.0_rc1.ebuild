@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.8 2005/07/18 14:57:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.0_rc1.ebuild,v 1.9 2005/10/15 11:38:44 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="
 		>=virtual/jre-1.4
 
-		=dev-java/cglib-2*
+		=dev-java/cglib-2.0*
 		dev-java/commons-collections
 		dev-java/commons-logging
 		dev-java/concurrent-util
@@ -24,23 +24,20 @@ RDEPEND="
 		dev-java/odmg
 		dev-java/proxool
 
-		c3p0? (
-			dev-java/c3p0
-		)
+		dev-java/c3p0
+
 		dbcp? (
 			dev-java/commons-pool
 			dev-java/commons-dbcp
 		)
 		jboss? (
 			>=www-servers/jboss-3.2.5
-			dev-java/jmx
+			dev-java/sun-jmx
 		)
 		jcs? (
 			dev-java/jcs-bin
 		)
-		oscache? (
 			dev-java/oscache
-		)
 		swarmcache? (
 			dev-java/swarmcache
 		)
@@ -78,11 +75,11 @@ src_unpack() {
 	java-pkg_jar-from proxool
 
 	# c3p0 support
-	if use c3p0 ; then
+	#if use c3p0 ; then
 		java-pkg_jar-from c3p0
-	else
-		find ${S}/src -name "C3P0*" -exec rm {} \;
-	fi
+	#else
+	#	find ${S}/src -name "C3P0*" -exec rm {} \;
+	#fi
 
 	# DBCP support
 	if use dbcp ; then
@@ -97,7 +94,7 @@ src_unpack() {
 		JBOSSHOME=`java-config -p jboss | sed -e "s/\/client.*$//g"`
 		ln -sf ${JBOSSHOME}/server/all/lib/jboss-cache.jar
 		ln -sf ${JBOSSHOME}/lib/jboss-system.jar
-		java-pkg_jar-from jmx
+		java-pkg_jar-from sun-jmx
 		if ! [ -r jboss-cache.jar ] ; then
 			eerror "The JBoss JARs are not readable.  Most likely, the "
 			eerror "/var/lib/jboss directory is not traverseable  by the "
@@ -124,11 +121,11 @@ src_unpack() {
 
 
 	# OSCache support
-	if use oscache ; then
+	#if use oscache ; then
 		java-pkg_jar-from oscache
-	else
-		find ${S}/src -name "OSCache*" -exec rm {} \;
-	fi
+	#else
+	#	find ${S}/src -name "OSCache*" -exec rm {} \;
+	#fi
 
 	# SwarmCache support
 	if use swarmcache ; then

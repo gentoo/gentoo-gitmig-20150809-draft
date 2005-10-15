@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c095131cadc15351faea6d1e4b402a39 ChangeLog 2981
 MD5 b442a0c8138baf4b3737d0a382cfe360 files/digest-hibernate-2.1.8 69
 MD5 e5aa0a8633b0ef9e280d35213fd5254f files/digest-hibernate-3.0_rc1 70
 MD5 3b4b85e4f98e74c162e6782e0286d78d hibernate-2.1.8.ebuild 3631
 MD5 f51a9001024cf1ea8019b5a4f2628fb5 hibernate-3.0_rc1.ebuild 3669
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUOpa/rLF9B432nYRAij3AKCStVDOT7fHHT/K8c4A6a7P5qM+hgCglVyu
+D/PU63OzPFhqHk6GCbeLEXQ=
+=RkoB
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.9 2005/10/01 08:21:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.10 2005/10/15 11:38:44 axxo Exp $
 
 inherit java-pkg
 
@@ -32,7 +32,7 @@ RDEPEND=">=virtual/jre-1.4
 		)
 		jboss? (
 			>=www-servers/jboss-3.2.5
-			dev-java/jmx
+			dev-java/sun-jmx
 		)
 		proxool? (
 			dev-java/proxool
@@ -96,7 +96,7 @@ src_unpack() {
 		JBOSSHOME=`java-config -p jboss | sed -e "s/\/client.*$//g"`
 		ln -sf ${JBOSSHOME}/server/all/lib/jboss-cache.jar
 		ln -sf ${JBOSSHOME}/lib/jboss-system.jar
-		java-pkg_jar-from jmx
+		java-pkg_jar-from sun-jmx
 		if ! [ -r jboss-cache.jar ] ; then
 			eerror "The JBoss JARs are not readable.  Most likely, the "
 			eerror "/var/lib/jboss directory is not traverseable  by the "

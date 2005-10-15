@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.20 2005/07/31 05:22:31 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.21 2005/10/15 11:38:44 axxo Exp $
+
+  15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> hibernate-2.1.8.ebuild,
+  hibernate-3.0_rc1.ebuild:
+  move dev-java/jmx dev-java/sun-jmx, removed some use flags, only way i could
+  get it too build, and st_lim doesnt seem to be fixing it
 
   31 Jul 2005; Lim Swee Tat <st_lim@gentoo.org> hibernate-2.1.8.ebuild:
   Updated and fixed 2.1.8
