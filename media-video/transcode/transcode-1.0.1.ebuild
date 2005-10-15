@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.1.ebuild,v 1.1 2005/10/14 13:28:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.1.ebuild,v 1.2 2005/10/15 17:22:52 flameeyes Exp $
 
-inherit libtool flag-o-matic eutils multilib
+inherit libtool flag-o-matic eutils multilib autotools
 
 MY_P="${P/_/}"
 S=${WORKDIR}/${MY_P}
@@ -13,14 +13,13 @@ SRC_URI="http://www.jakemsr.com/transcode/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="X 3dnow a52 avi altivec dv dvdread mp3 fame truetype \
+IUSE="X 3dnow a52 altivec dv dvdread mp3 fame truetype \
 	gtk imagemagick jpeg lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime \
 	sdl sse sse2 theora v4l xvid xml2 ffmpeg"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
 	dvdread? ( >=media-libs/libdvdread-0.9.0 )
-	>=media-video/ffmpeg-0.4.9_pre1
 	xvid? ( >=media-libs/xvid-1.0.2 )
 	mjpeg? ( >=media-video/mjpegtools-1.6.2-r3 )
 	lzo? ( >=dev-libs/lzo-1.08 )
@@ -29,7 +28,6 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	media-libs/netpbm
 	media-libs/libexif
 	X? ( virtual/x11 )
-	avi? ( >=media-video/avifile-0.7.41.20041001 )
 	mpeg? ( media-libs/libmpeg3 )
 	mp3? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
@@ -58,9 +56,7 @@ src_unpack() {
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		${S}/docs/Makefile.am ${S}/docs/html/Makefile.am
 
-	libtoolize --copy --force || die "libtoolize failed"
-	autoreconf -i || die "autoreconf failed"
-
+	eautoreconf 
 	elibtoolize	# fix invalid paths in .la files of plugins
 }
 
@@ -100,7 +96,6 @@ src_compile() {
 		$(use_enable network netstream) \
 		$(use_enable truetype freetype2) \
 		$(use_enable v4l) \
-		$(use_enable avi avifile) \
 		$(use_enable mp3 lame) \
 		$(use_enable ogg) \
 		$(use_enable vorbis) \
@@ -122,9 +117,10 @@ src_compile() {
 		$(use_with X x) \
 		$(use_with ffmpeg libpostproc-builddir "${ROOT}/usr/$(get_libdir)") \
 		${myconf} \
+		--disable-avifile \
 		|| die
 
-	emake -j1 all || die
+	emake all || die
 
 	if use pvm; then
 		sed -i -e "s:\${exec_prefix}/bin/pvmgs:\$(DESTDIR)/\${exec_prefix}/bin/pvmgs:" ${S}/pvm3/Makefile || die
