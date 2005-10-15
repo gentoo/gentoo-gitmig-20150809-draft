@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.1.ebuild,v 1.1 2005/09/22 22:38:16 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.9.1.ebuild,v 1.2 2005/10/15 20:06:14 latexer Exp $
 
 inherit libtool eutils flag-o-matic toolchain-funcs
 
@@ -24,6 +24,16 @@ DEPEND="sys-devel/libtool
 		gif? ( >=media-libs/giflib-4.1.3 )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )"
+
+pkg_setup () {
+	if ! built_with_use cairo X
+	then
+		eerror "For libgdiplus to compile, cairo must be built with 'X' in"
+		eerror "ones USE flags. Please re-emerge cairo with the 'X' USE flag"
+		eerror "set and then emerge libgdiplus."
+		die "cairo not built with USE='X'."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
