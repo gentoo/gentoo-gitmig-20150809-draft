@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.47-r1.ebuild,v 1.2 2005/09/20 19:28:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.47-r1.ebuild,v 1.3 2005/10/15 20:21:54 josejx Exp $
 
 DESCRIPTION="Provides the list of country and language names"
 HOMEPAGE="http://alioth.debian.org/projects/pkg-isocodes/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/i/iso-codes/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-devel/gettext

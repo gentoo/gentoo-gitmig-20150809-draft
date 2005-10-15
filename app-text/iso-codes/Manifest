@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 862563da8a85fbce52d27480e68ac9bf ChangeLog 1076
+MD5 9cac7d30f140c674ed02162684b920a2 ChangeLog 1164
+MD5 f0bffb8e6476f755092bfe57861f352f files/digest-iso-codes-0.47 72
+MD5 f0bffb8e6476f755092bfe57861f352f files/digest-iso-codes-0.47-r1 72
+MD5 2c4c7fa43f45bcc6099a4d0a725ee642 iso-codes-0.47-r1.ebuild 847
 MD5 3db66b5bb868269ce04d441af6790a36 iso-codes-0.47.ebuild 830
 MD5 e9817ec1ed09efcf042e9d64a3f947ce metadata.xml 387
-MD5 4c9ac5da1371ebc8f3cfe7297df3402c iso-codes-0.47-r1.ebuild 844
-MD5 f0bffb8e6476f755092bfe57861f352f files/digest-iso-codes-0.47-r1 72
-MD5 f0bffb8e6476f755092bfe57861f352f files/digest-iso-codes-0.47 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMGL4KRy60XGEcJIRAgTFAJsGO7wJ1XgY8XnpehK5wgoZu4nlfgCeJ07J
-gLQKG9hzF2nlpTEqkZPPiGM=
-=w3gV
+iD8DBQFDUWUCcsIHjyDViGQRArFwAKC398drRwo2bMZ04mHWUHPF0S07IQCg2BgO
+3P8sLCsFYc6+TXECN0fYEIA=
+=bFSq
 -----END PGP SIGNATURE-----
