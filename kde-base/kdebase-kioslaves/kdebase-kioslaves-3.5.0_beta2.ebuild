@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.0_beta2.ebuild,v 1.1 2005/10/14 18:41:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.0_beta2.ebuild,v 1.2 2005/10/15 08:32:28 danarmak Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -21,11 +21,4 @@ RDEPEND="${DEPEND}
 	$(deprange $PV $MAXKDEVER kde-base/kdialog)"  # for the kdeeject script used by the devices/mounthelper ioslave
 
 myconf="$myconf `use_with ldap` `use_with samba` `use_with hal` `use_with openexr`"
-
-src_unpack() {
-	kde-meta_src_unpack
-
-	cd ${S}
-	epatch ${FILESDIR}/kdebase-3.5-configure-openexr.patch
-}
 
