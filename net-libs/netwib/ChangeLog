@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.20 2005/06/30 20:48:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.21 2005/10/15 04:25:41 dragonheart Exp $
+
+*netwib-5.31.0 (15 Oct 2005)
+
+  15 Oct 2005; Daniel Black <dragonheart@gentoo.org> -netwib-5.29.0.ebuild,
+  -netwib-5.30.0.ebuild, +netwib-5.31.0.ebuild:
+  version bump and cleanout
 
   30 Jun 2005; Daniel Black <dragonheart@gentoo.org> netwib-5.30.0.ebuild:
   fixing install of ${D}/usr/share
