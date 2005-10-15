@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/bootcreator
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.2 2005/01/20 18:13:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/ChangeLog,v 1.3 2005/10/15 23:33:57 josejx Exp $
+
+  15 Oct 2005; Joseph Jezak <josejx@gentoo.org> bootcreator-1.1.ebuild:
+  Added virtual/bootloader to fix virtual in Pegasos profiles.
 
   20 Jan 2005; Lars Weiler <pylon@gentoo.org> bootcreator-1.1.ebuild:
   Stable now.
