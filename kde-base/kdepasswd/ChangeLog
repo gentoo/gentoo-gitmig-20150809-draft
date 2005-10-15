@@ -1,8 +1,8 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.19 2005/10/14 18:41:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.20 2005/10/15 11:08:41 greg_g Exp $
 
-*kdepasswd-3.4.3 (14 Oct 2005)
+*kdepasswd-3.5.0_beta2 (14 Oct 2005)
 
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kdepasswd-3.5.0_beta2.ebuild:
   New version.

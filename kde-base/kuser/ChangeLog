@@ -1,8 +1,8 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.19 2005/10/14 18:42:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.20 2005/10/15 11:08:46 greg_g Exp $
 
-*kuser-3.4.3 (14 Oct 2005)
+*kuser-3.5.0_beta2 (14 Oct 2005)
 
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kuser-3.5.0_beta2.ebuild:
   New version.

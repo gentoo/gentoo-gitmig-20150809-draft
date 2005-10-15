@@ -1,8 +1,8 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.22 2005/10/14 18:41:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.23 2005/10/15 11:08:43 greg_g Exp $
 
-*khelpcenter-3.4.3 (14 Oct 2005)
+*khelpcenter-3.5.0_beta2 (14 Oct 2005)
 
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> +khelpcenter-3.5.0_beta2.ebuild:
   New version.

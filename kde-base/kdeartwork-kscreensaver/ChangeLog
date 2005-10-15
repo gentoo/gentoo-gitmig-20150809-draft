@@ -1,8 +1,8 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.25 2005/10/14 18:41:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.26 2005/10/15 11:08:40 greg_g Exp $
 
-*kdeartwork-kscreensaver-3.4.3 (14 Oct 2005)
+*kdeartwork-kscreensaver-3.5.0_beta2 (14 Oct 2005)
 
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kdeartwork-kscreensaver-3.5.0_beta2.ebuild:
   New version.

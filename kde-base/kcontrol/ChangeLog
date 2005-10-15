@@ -1,8 +1,8 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.31 2005/10/14 18:41:50 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.32 2005/10/15 11:08:40 greg_g Exp $
 
-*kcontrol-3.4.3 (14 Oct 2005)
+*kcontrol-3.5.0_beta2 (14 Oct 2005)
 
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> +kcontrol-3.5.0_beta2.ebuild:
   New version.
