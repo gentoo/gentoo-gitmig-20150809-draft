@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r8.ebuild,v 1.4 2004/10/19 16:36:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r8.ebuild,v 1.5 2005/10/16 23:41:19 eradicator Exp $
 
 IUSE=""
 
@@ -30,10 +30,10 @@ src_compile() {
 	OFILES=${CFILES//.c/.o}
 
 	for FILE in ${CFILES}; do
-		echo $(tc-getCXX) ${CFLAGS} -D_OS_UNIX -c ${FILE} -o ${FILE//.c/.o}
-		$(tc-getCXX) ${CFLAGS} -D_OS_UNIX -c ${FILE} -o ${FILE//.c/.o} || die
-		echo $(tc-getCXX) ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE} -o ${FILE//.c/.lo}
-		$(tc-getCXX) ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE} -o ${FILE//.c/.lo} || die
+		echo $(tc-getCXX) ${CXXFLAGS} -D_OS_UNIX -c ${FILE} -o ${FILE//.c/.o}
+		$(tc-getCXX) ${CXXFLAGS} -D_OS_UNIX -c ${FILE} -o ${FILE//.c/.o} || die
+		echo $(tc-getCXX) ${CXXFLAGS} -D_OS_UNIX -fPIC -c ${FILE} -o ${FILE//.c/.lo}
+		$(tc-getCXX) ${CXXFLAGS} -D_OS_UNIX -fPIC -c ${FILE} -o ${FILE//.c/.lo} || die
 	done
 
 	echo $(tc-getAR) rc libhttpd-persistent.a ${OFILES} || die

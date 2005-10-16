@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9901b8ec185860043203206adad46881 ChangeLog 2978
-MD5 34371b0b6264e8222d4666bf5895f5f7 metadata.xml 432
-MD5 e454dbfc4af1e76104257b9689ea6d94 libhttpd-persistent-1.3p-r8.ebuild 1916
+MD5 82f0c2b352024220768d82465b665fca ChangeLog 3090
 MD5 d59fcbd11fe6a68bf60fcba57b403351 files/digest-libhttpd-persistent-1.3p-r8 64
+MD5 456f70e8b34e7dd53c7896012b6648fd libhttpd-persistent-1.3p-r8.ebuild 1924
+MD5 34371b0b6264e8222d4666bf5895f5f7 metadata.xml 432
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBdUJ/ArHZZzCEUG0RAvEHAJ9c/n7y4Chl6rzmsTEKW+74+Ec0WQCePRTW
-wWhWclvNDaLKwH6K3YCMqCo=
-=bZfZ
+iD8DBQFDUuUrOpjtAl+gMRURAkmQAJ0VydNCPtEr3WtGMym99Moxw/qK6gCgm/LK
+yMYWGvNQM/SzQAMQFnEPTMY=
+=oR7y
 -----END PGP SIGNATURE-----
