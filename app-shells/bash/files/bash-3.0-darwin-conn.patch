@@ -1,9 +1,10 @@
 Sune Foldager writes:
-On Darwin (Mac OS X), bash incorrectly assumed that it has been called over a network connection
-(such as ssh, rsh etc.), when stdin stems from the pipe() system call. This is because bash's heuristic
-code for determining if it's been started over a net connection is incorrect on Darwin kernels.
+On Darwin (Mac OS X), bash incorrectly assumed that it has been called over a 
+network connection (such as ssh, rsh etc.), when stdin stems from the pipe() 
+system call. This is because bash's heuristic code for determining if it's 
+been started over a net connection is incorrect on Darwin kernels.
 
-http://bugs.gentoo.org/show_bug.cgi?id=79124
+http://bugs.gentoo.org/79124
 
 --- /lib/sh/netconn.c
 +++ /lib/sh/netconn.c

@@ -1,3 +1,10 @@
+Ripped from Fedora
+
+- Fixed AFS support for output redirection, so that the correct errors
+  are reported for other filesystems (bug #155373).
+
+https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=155373
+
 --- bash-3.0/redir.c.afs	2005-04-20 09:16:15.000000000 +0100
 +++ bash-3.0/redir.c	2005-04-20 09:16:58.000000000 +0100
 @@ -596,7 +596,9 @@

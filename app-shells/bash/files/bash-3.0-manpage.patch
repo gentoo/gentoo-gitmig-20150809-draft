@@ -1,5 +1,9 @@
---- bash-3.0/doc/bash.1.manpage	2004-11-30 09:33:54.727381784 +0000
-+++ bash-3.0/doc/bash.1	2004-11-30 09:34:06.799075585 +0000
+Ripped from Fedora
+
+fix obvious display bug
+
+--- bash-3.0/doc/bash.1
++++ bash-3.0/doc/bash.1
 @@ -3929,7 +3929,7 @@
  .B SIGHUP
  to all jobs when an interactive login shell exits.
