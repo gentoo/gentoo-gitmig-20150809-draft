@@ -1,16 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b7bdb4115cbb9308c53c7f198ef935bf ChangeLog 7790
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7b93384d2dbd916f4d30ad7156b4cb30 pciutils-2.1.11-r3.ebuild 2108
-MD5 a253f31ceb366bb6cb39b66d28da87d9 pciutils-2.1.11-r4.ebuild 2184
-MD5 01f6c089b82c2df80e255f7fe06fc9c2 pciutils-2.1.11-r5.ebuild 2184
-MD5 e13a2f5b8e9b5ae650934e8d674941f7 files/2.1.11-fix-pci-ids-location-refs.patch 1530
 MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
-MD5 1532c4c74daf454495048467b2a8b04b files/2.1.11-sysfs.patch 10425
-MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r3 131
-MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r4 131
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
 MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
-MD5 70f9f6cb767230245ac30ec658b3fd0a files/pciutils-2.1.11-fix-pci-ids-location-refs.patch 925
+MD5 f8bc3cef20829127ecab494b6b9c886c files/pciutils-2.1.11-bsd.patch 1105
 MD5 6a0ae94d528195517f54f66653f8322e files/pciutils-2.1.11-gentoo-paths.patch 521
 MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
-MD5 f8bc3cef20829127ecab494b6b9c886c files/pciutils-2.1.11-bsd.patch 1105
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 01f6c089b82c2df80e255f7fe06fc9c2 pciutils-2.1.11-r5.ebuild 2184
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUcEFgIKl8Uu19MoRAq8HAJ9N7zJ+XLpYLvYnAw7f4083IhoiPACfRA3L
+pkbgX25U51txgniNbAEvM6g=
+=Qtfh
+-----END PGP SIGNATURE-----
