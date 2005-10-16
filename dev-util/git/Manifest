@@ -2,19 +2,19 @@
 Hash: SHA1
 
 MD5 d35a0c0793dbfc65191588d2eca405d1 git-0.99.8a.ebuild 2835
-MD5 50468c9cd9943960edbcbd6ec3149655 git-0.99.8c-r1.ebuild 2988
 MD5 edebd592261315b29a6b903b414573d2 git-0.7.ebuild 1312
-MD5 d25b206b2af607a5699bbf31010416c1 ChangeLog 4987
+MD5 b359698b7276fa6634ce52c14f4241be ChangeLog 5151
 MD5 3526aab52e4319669bc1064d4d4ac83a metadata.xml 316
+MD5 14d61e2449c5605a74b2109c2fef70f4 git-0.99.8d.ebuild 2985
 MD5 5c96e23fef078682e648254d9197f618 files/git-daemon.confd 376
 MD5 ad6b9193f41375013fad4455bf1acda7 files/git-daemon.initd 526
 MD5 62316f61a79143fdaf1e9f747d1ddf03 files/digest-git-0.99.8a 69
+MD5 59b59b0b41bb8cc134165aba32bdfbce files/digest-git-0.99.8d 69
 MD5 8ebc37d29c321b95a3c0ae51ebee4d4d files/digest-git-0.7 59
-MD5 c54bcb57e21a5986c4befcf024d75e18 files/digest-git-0.99.8c-r1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDT8tXViELBEf1JB0RAj0xAJ0RaL+qh9/0LCYqHie0gcnXiJ6/fQCggnyI
-9ibTZpZveLTjTTETItPCWwI=
-=eNhN
+iD8DBQFDUiApViELBEf1JB0RAma6AJkBy/V2SaNpgK+oVH1BmAGLTwpYbQCfVsuz
+lTQLMxx8J/z5QaQx8hXVAWs=
+=VGIb
 -----END PGP SIGNATURE-----
