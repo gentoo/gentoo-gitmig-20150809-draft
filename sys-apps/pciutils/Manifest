@@ -1,22 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b406d0fc5cae0476ec8ed088570206f0 ChangeLog 7977
+MD5 a31dae35d026223b1e9be027250ac6a3 ChangeLog 8219
 MD5 60d79fbf53038186b939f83841d5f318 files/2.1.11-scan.patch 277
 MD5 a6be9cf60dc5043160d757c9772b1e57 files/digest-pciutils-2.1.11-r5 131
 MD5 ae29f04095b43ceb06e6b0cc94653c36 files/digest-pciutils-2.2.0 130
+MD5 ae29f04095b43ceb06e6b0cc94653c36 files/digest-pciutils-2.2.0-r1 130
 MD5 c6135ce795940ebf3777592d4e6f8049 files/pcimodules-pciutils-2.1.11.diff 11026
 MD5 d3c7e97420324c1d5d1dc032fc39006e files/pcimodules-pciutils-2.2.0.patch 10872
 MD5 f8bc3cef20829127ecab494b6b9c886c files/pciutils-2.1.11-bsd.patch 1105
 MD5 6a0ae94d528195517f54f66653f8322e files/pciutils-2.1.11-gentoo-paths.patch 521
 MD5 f4d220c568a00c1ceafe6dc129ae6e95 files/pciutils-2.1.11-sysfs.patch 10374
+MD5 cf455fe33057e081ba7aaec93e481642 files/pciutils-2.2.0-shared-lib.patch 496
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 01f6c089b82c2df80e255f7fe06fc9c2 pciutils-2.1.11-r5.ebuild 2184
+MD5 d5fb12cf7e12de720f8ec09efe0320a3 pciutils-2.2.0-r1.ebuild 1549
 MD5 4f090aa4aae459880f1201a33a95b3ab pciutils-2.2.0.ebuild 1562
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUcbJgIKl8Uu19MoRAtuhAJ0WyrJ31yoCqRKhbzAVN3Cnd3pHpACdG9AW
-3LG0JqZ0DuYN983/+fbWOwI=
-=ZjQD
+iD8DBQFDUjwvgIKl8Uu19MoRAthGAJsFBKZktR9BI9FX9xUZIqaxrL4vJQCffjzs
+FB33WsgrX+kRlpPQFewAC1E=
+=58dy
 -----END PGP SIGNATURE-----

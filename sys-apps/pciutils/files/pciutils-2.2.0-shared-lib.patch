@@ -1,0 +1,27 @@
+--- pciutils/lib/Makefile
++++ pciutils/lib/Makefile
+@@ -7,6 +7,7 @@
+ INCL=internal.h pci.h config.h header.h sysdep.h types.h
+ 
+ PCILIB=libpci.a
++PCISHLIB=libpci.so
+ 
+ ifdef PCI_HAVE_PM_LINUX_SYSFS
+ OBJS += sysfs.o
+@@ -45,7 +46,15 @@
+ PCILIB=libpciutils.a
+ endif
+ 
+-all: $(PCILIB)
++all: $(PCILIB) $(PCISHLIB)
++
++SHOBJS = $(OBJS:.o=.lo)
++
++%.lo: %.c
++	$(CC) $(CFLAGS) -fPIC -c -o $@ $^
++
++$(PCISHLIB): $(SHOBJS)
++	$(CC) -shared $(CFLAGS) $(LDFLAGS) -o $@ $^ -fPIC
+ 
+ $(PCILIB): $(OBJS)
+ 	rm -f $@
