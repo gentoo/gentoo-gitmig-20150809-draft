@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.57 2005/05/28 12:36:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.58 2005/10/16 20:27:48 ticho Exp $
+
+  16 Oct 2005; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6, metadata.xml:
+  Use 'after alsasound' instead of 'use alsasound' in the initscript. Closes
+  bug #999969, reported by Mike Kelly <pioto01 at gmail.com>.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -mpd-0.11.4.ebuild,
   -mpd-0.11.4-r1.ebuild, -mpd-0.11.4-r2.ebuild, mpd-0.11.5.ebuild:

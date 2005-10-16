@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21e38811ed50249f5b77c39602cf86f9 mpd-0.11.5.ebuild 2914
-MD5 bda8d595882232e7aad62b47e9c02588 ChangeLog 9057
-MD5 74c25ed47224b9d121ba2f3c7e73defe metadata.xml 217
+MD5 bef3ac8f22436175b5842cf788707abc ChangeLog 9270
 MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5 63
-MD5 37f1c56ef509392e0a3cdca333804c31 files/mpd.rc6 894
+MD5 8c5298155f4be6bad9e3f8f97015e4a4 files/mpd.rc6 892
+MD5 9fd12e4e26817b28026335eff94d2fde metadata.xml 252
+MD5 21e38811ed50249f5b77c39602cf86f9 mpd-0.11.5.ebuild 2914
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCmGXH06ebR+OMO78RAm65AJ9ivAfhjsSRc5P8wGMmRpL/hzVb1gCfSFlC
-EvaSawO0+WZ8p3ugucpOjkQ=
-=6z89
+iD4DBQFDUrflQlM6RnzZP+IRAtv2AJ9btWqdeTpu+3+PayCn3HEmRx6/pACXeCYM
+comknKNaLvhLfAZZOHBuVw==
+=PNVi
 -----END PGP SIGNATURE-----
