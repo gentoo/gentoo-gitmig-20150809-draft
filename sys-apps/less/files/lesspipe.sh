@@ -3,6 +3,8 @@
 # Preprocessor for 'less'. Used when this environment variable is set:
 # LESSOPEN="|lesspipe.sh %s"
 
+# TODO: handle compressed files better
+
 trap 'exit 0' PIPE
 
 guesscompress() {
@@ -23,37 +25,44 @@ lesspipe_file() {
 		*" Zip archive"*)   lesspipe "$1" ".zip" ;;
 		*" ELF "*)          readelf -a -- "$1" ;;
 		*": data")          hexdump -C -- "$1" ;;
+		*)                  return 1 ;;
 	esac
+	return 0
 }
 
 lesspipe() {
-	local DECOMPRESSOR=""
 	local match=$2
 	[[ -z ${match} ]] && match=$1
+
+	local DECOMPRESSOR=$(guesscompress "$match")
 
 	case "$match" in
 
 	### Doc files ###
 	*.[0-9n]|*.man|\
 	*.[0-9n].bz2|*.man.bz2|\
-	*.[0-9n].gz|*.man.gz)
-		DECOMPRESSOR=$(guesscompress "$match")
-		if [[ $($DECOMPRESSOR -- "$1" | file -) == *troff* ]] ; then
-			# Need to make sure we pass path to man or it will try 
-			# to locate "$1" in the man search paths
-			if [[ $1 == /* ]] ; then
-				man -- "$1"
-			else
-				man -- "./$1"
-			fi
-		else
-			# We could have matched a library (libc.so.6), so let
-			# `file` figure out what the hell this thing is
-			case "$match" in
-				*.man.gz|*.man.bz2)  $DECOMPRESSOR -- "$1";;
-				*)                   lesspipe_file "$1";;
-			esac
-		fi
+	*.[0-9n].gz|*.man.gz|\
+	*.[0-9][a-z].gz|*.[0-9][a-z].gz)
+		local out=$(${DECOMPRESSOR} -- "$1" | file -)
+		case ${out} in
+			*troff*)
+				# Need to make sure we pass path to man or it will try 
+				# to locate "$1" in the man search paths
+				if [[ $1 == /* ]] ; then
+					man -- "$1"
+				else
+					man -- "./$1"
+				fi
+				;;
+			*text*)
+				${DECOMPRESSOR} -- "$1"
+				;;
+			*)
+				# We could have matched a library (libc.so.6), so let
+				# `file` figure out what the hell this thing is
+				lesspipe_file "$1"
+				;;
+		esac
 		;;
 	*.dvi)      dvi2tty "$1" ;;
 	*.ps|*.pdf) ps2ascii "$1" || pstotext "$1" || pdftotext "$1" ;;

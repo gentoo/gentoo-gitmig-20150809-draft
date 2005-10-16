@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.43 2005/09/17 00:30:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.44 2005/10/16 21:46:13 vapier Exp $
+
+*less-385_p4-r2 (16 Oct 2005)
+
+  16 Oct 2005; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh,
+  +less-385_p4-r2.ebuild:
+  Tweak the manpage case in lesspipe.sh to display compressed text files which
+  are named funny #109419.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
