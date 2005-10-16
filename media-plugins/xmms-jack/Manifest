@@ -1,10 +1,22 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b2361b7888eec14f0cb6c9616350081d xmms-jack-0.10.ebuild 634
-MD5 83f8b2fae7398388cb5ac9abd221623a ChangeLog 2997
-MD5 a5456b7bc1840b0d92788c6464e8231f xmms-jack-0.11.ebuild 1094
-MD5 f3f475aa70b9d8a2fd07d1b4ba01d45f xmms-jack-0.9.ebuild 641
-MD5 00a895abc470307ef4bb5bd4b6b38bb9 files/xmms-jack-0.11-sysbio2jack.patch 708
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8cf9b4f84e6a075fe9c36006b42ccf0a ChangeLog 3184
 MD5 dea9949d72527c2f6934d30116d23912 files/digest-xmms-jack-0.10 66
 MD5 a58c9953d0957178b8f9b8dd743d220c files/digest-xmms-jack-0.11 66
+MD5 4f9b8b5079dfe156b6111f57c8f98e68 files/digest-xmms-jack-0.14 66
 MD5 16ba3899dbe8858a6ac882b2a288c8c3 files/digest-xmms-jack-0.9 65
 MD5 bb7870d9fa77ca8176c1844ef4aa22b0 files/xmms-jack-0.10-cflags.patch 594
+MD5 00a895abc470307ef4bb5bd4b6b38bb9 files/xmms-jack-0.11-sysbio2jack.patch 708
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 b2361b7888eec14f0cb6c9616350081d xmms-jack-0.10.ebuild 634
+MD5 a5456b7bc1840b0d92788c6464e8231f xmms-jack-0.11.ebuild 1094
+MD5 0d8c7b9218301189f3c84a77a5af2e89 xmms-jack-0.14.ebuild 1047
+MD5 f3f475aa70b9d8a2fd07d1b4ba01d45f xmms-jack-0.9.ebuild 641
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDUtEGwUpWvClEHQoRAnwyAJ0TupOf7vE1nlGhWYVBJT2j1F6j0QCfWcEi
+VOSt7mlTE/B/rodeYSmZtLk=
+=0Qae
+-----END PGP SIGNATURE-----

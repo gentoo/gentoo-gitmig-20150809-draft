@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.22 2005/04/08 17:42:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.23 2005/10/16 21:15:32 metalgod Exp $
+
+*xmms-jack-0.14 (16 Oct 2005)
+
+  16 Oct 2005; Luis Medinas <metalgod@gentoo.org> +xmms-jack-0.14.ebuild:
+  Version Bump. This version will not support bmp for now. Closing bug #99471.
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xmms-jack-0.11.ebuild:
   Stable on ppc.
