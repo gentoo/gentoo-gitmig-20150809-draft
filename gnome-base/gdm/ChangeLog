@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.127 2005/10/14 17:43:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.128 2005/10/16 00:28:07 allanonjl Exp $
+
+  16 Oct 2005; John N. Laliberte <allanonjl@gentoo.org> gdm-2.8.0.5.ebuild:
+  add enewgroup/enewuser into pkgsetup for #104767 ( for 2.8.0.5 )
 
   14 Oct 2005; <dang@gentoo.org> gdm-2.8.0.5.ebuild:
   Force -j1.  Bug #33432
