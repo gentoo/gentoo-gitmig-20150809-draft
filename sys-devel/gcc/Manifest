@@ -64,11 +64,11 @@ MD5 b29f3bde3e23f17cd9a9bb4a5b026ea1 files/digest-gcc-3.3.5.20050130-r1 620
 MD5 9e216fb231a24884fe548b31864296b8 files/digest-gcc-3.3.5.20050130-r2 620
 MD5 bc84418435b24e5c06f80f819e35b6fb files/digest-gcc-3.3.6 453
 MD5 c6ea8a92bac6d2638c54c011f98bc5b8 files/digest-gcc-3.4.1-r3 442
-MD5 e76a453a41518cf6a73123fe128c716f files/digest-gcc-3.4.3-r1 607
-MD5 f0d6e8b1503f1745061639b642fb1911 files/digest-gcc-3.4.3.20050110-r2 616
+MD5 b756cafc55e6590c804a20976e6ebc6e files/digest-gcc-3.4.3-r1 607
+MD5 ba7469d4f191ff1baa00b9dd45e3dc6b files/digest-gcc-3.4.3.20050110-r2 616
 MD5 397fee475b161984702afab06d76767c files/digest-gcc-3.4.4-r1 450
 MD5 f0c74f849066ffaefe7d364d69a71961 files/digest-gcc-4.0.1 380
-MD5 350da7918a8358a0181af433b1f603b7 files/digest-gcc-4.0.2-r1 381
+MD5 935eea1ace4e13688f89c88d75b38dbc files/digest-gcc-4.0.2-r1 381
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
 MD5 e0ebf10eb8bf4542ae57ba591daa68a4 files/gcc-configure-LANG.patch 1686
 MD5 f80fd6ebeeea00d3e1649dfccdd85062 files/gcc-spec-env.patch 893
@@ -92,16 +92,16 @@ MD5 e745147dc2058a8cafc25bba7e3f916b gcc-3.3.5.20050130-r1.ebuild 3281
 MD5 809734eb8668d83f43b77b6a24018795 gcc-3.3.5.20050130-r2.ebuild 3281
 MD5 e8abcd8f991d9375ef05279db5feb0b9 gcc-3.3.6.ebuild 3105
 MD5 307b46ee9b86bb1d182824303c4b01f3 gcc-3.4.1-r3.ebuild 31283
-MD5 3cd617291fa5aa8a8191aa80bf9d3a43 gcc-3.4.3-r1.ebuild 5501
-MD5 5460271dd284e83439728668887ecbd2 gcc-3.4.3.20050110-r2.ebuild 5264
+MD5 71e25d702be3dd13ee277b7383345fad gcc-3.4.3-r1.ebuild 5477
+MD5 769273e24a52732ce892d08ebeb4bbeb gcc-3.4.3.20050110-r2.ebuild 5240
 MD5 73ba3aa1e54ae26a48838f0002a2220b gcc-3.4.4-r1.ebuild 5088
-MD5 9dbc125ee891006917722ddb8508d817 gcc-4.0.1.ebuild 1740
-MD5 c4b19b8a8948972f2e6564d8a93cab26 gcc-4.0.2-r1.ebuild 2046
+MD5 24ef46cf2fa60049781de7bf424fc466 gcc-4.0.1.ebuild 1915
+MD5 21ed0a37ceba42e22abb81244e44029f gcc-4.0.2-r1.ebuild 2026
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSzIEgIKl8Uu19MoRAtvUAJ9EZ2kX9uwGfY/pm1yzmATKMPecMACdEFC8
-EA2j4XfV3wm1DDhcw1nYkwc=
-=TDUp
+iD8DBQFDUgk0gIKl8Uu19MoRAhfCAJ43ISuCT/wYl+jqUbgir/tf1xybkQCfb4jq
+thdnltEjHhSczf4ZHdFFZgs=
+=4XxI
 -----END PGP SIGNATURE-----
