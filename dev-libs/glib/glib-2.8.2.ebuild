@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.2.ebuild,v 1.1 2005/09/27 01:45:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.8.2.ebuild,v 1.2 2005/10/16 15:05:04 grobian Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -24,8 +24,6 @@ RDEPEND="virtual/libc"
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
-
-	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
 
 	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
