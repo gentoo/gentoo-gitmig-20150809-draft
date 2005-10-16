@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>
-		java
-	</herd>
-	<maintainer>
-		<email>luckyduck@gentoo.org</email>
-		<name>Jan Brinkmann</name>
-	</maintainer>
+	<herd>java</herd>
 
 	<longdescription>
 	Tomcat is the servlet container that is used in the official Reference

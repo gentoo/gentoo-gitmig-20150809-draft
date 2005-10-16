@@ -19,13 +19,13 @@ MD5 286d3dcf80a376b72913412cec25e496 files/5.0.28/tomcat.env 34
 MD5 14dfced3843054d6f2552437a3776679 files/5.0.28/tomcat.init 728
 MD5 d5a48abc8db5543a73abbbf151d0630e files/digest-tomcat-5.0.27-r6 75
 MD5 af26ca4772989a2090085a6e24b71628 files/digest-tomcat-5.0.28-r8 78
-MD5 c11ce937193406815ff7a2b306784fd8 metadata.xml 555
+MD5 f994107ba9a296c7de72d951eb9ddb29 metadata.xml 454
 MD5 e35c5aa21003d0e3f61bfc44a59104fd tomcat-5.0.27-r6.ebuild 3886
 MD5 dea4438dfc3c1b5bbd13eb05e6d2210f tomcat-5.0.28-r8.ebuild 9958
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUOrQ/rLF9B432nYRAhlWAKCB3hm6gkeM0nEDptDkHJp6yFGl5ACgwzeR
-l1I6qm9ubB+Ru9RHF+xcdtM=
-=T894
+iD8DBQFDUs/tQiJ/wx066S4RAvHcAJ4qtZOtw/iYMoxKUhBM9/qm1Y7RjQCeOcle
+JBPlZuyCOnd2pLDHXvU1lCk=
+=6oQE
 -----END PGP SIGNATURE-----
