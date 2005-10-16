@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmobile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmobile/ChangeLog,v 1.16 2005/10/15 11:08:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmobile/ChangeLog,v 1.17 2005/10/16 16:14:50 danarmak Exp $
+
+  16 Oct 2005; Dan Armak <danarmak@gentoo.org>
+  +files/kmobile-3.5.0_beta2-fix-compilation.diff,
+  kmobile-3.5.0_beta2.ebuild:
+  Added patch to fix compilation.
 
 *kmobile-3.5.0_beta2 (14 Oct 2005)
 

@@ -1,0 +1,28 @@
+--- kmobile/devices/gnokii/gnokii_mobile.cpp.orig	2005-09-10 10:23:39.000000000 +0200
++++ kmobile/devices/gnokii/gnokii_mobile.cpp	2005-10-16 17:43:58.000000000 +0200
+@@ -741,20 +741,20 @@
+   case GN_CALNOTE_NEVER:
+ 		break;
+   case GN_CALNOTE_DAILY:
+-		event.recurrence()->setDaily(1,-1);
++		event.recurrence()->setDaily(1);
+ 		break;
+   case GN_CALNOTE_WEEKLY:
+   case GN_CALNOTE_2WEEKLY:
+-		event.recurrence()->setDaily( 7 + (entry.recurrence==GN_CALNOTE_2WEEKLY ? 7:0) , -1);
++		event.recurrence()->setDaily( 7 + (entry.recurrence==GN_CALNOTE_2WEEKLY ? 7:0));
+ 		break;
+   case GN_CALNOTE_MONTHLY:
+-		event.recurrence()->setMonthly(KCal::Recurrence::rMonthlyPos, 1, -1);
++		event.recurrence()->setMonthly(1);
+ 		break;
+   case GN_CALNOTE_YEARLY:
+-		event.recurrence()->setYearly(KCal::Recurrence::rYearlyPos, 1, -1);
++		event.recurrence()->setYearly(1);
+ 		break;
+   default: // hourly
+-		event.recurrence()->setHourly(entry.recurrence, -1);
++		event.recurrence()->setHourly(entry.recurrence);
+ 		break;
+   }
+ 
