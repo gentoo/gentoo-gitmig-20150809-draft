@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.4.ebuild,v 1.6 2005/07/10 00:48:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.4.4.ebuild,v 1.1 2005/10/16 04:42:00 kumba Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,12 +9,15 @@ MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
-BRANCH_UPDATE="20040623"
+IUSE=""
+BRANCH_UPDATE=""
 
 DESCRIPTION="Mips64 Kernel Compiler (Experimental)"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2
-	mirror://gentoo/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2"
+#	mirror://gentoo/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
@@ -31,13 +34,13 @@ RDEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 
+# Ripped from toolchain.eclass
+gcc_version_patch() {
+	[ -z "$1" ] && die "no arguments to gcc_version_patch"
 
-version_patch() {
-	[ ! -f "$1" ] && return 1
-	[ -z "$2" ] && return 1
-
-	sed -e "s:@GENTOO@:$2:g" ${1} > ${T}/${1##*/}
-	epatch ${T}/${1##*/}
+	sed -i -e 's~\(const char version_string\[\] = ".....\).*\(".*\)~\1 @GENTOO@\2~' ${S}/gcc/version.c || die "failed to add @GENTOO@"
+	sed -i -e "s:@GENTOO@:$1:g" ${S}/gcc/version.c || die "failed to patch version"
+	sed -i -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update bugzilla URL"
 }
 
 src_unpack() {
@@ -47,13 +50,18 @@ src_unpack() {
 	cd ${S}
 
 	# Patch in Branch update
-	epatch ${WORKDIR}/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch
+	if [ ! -z "${BRANCH_UPDATE}" ]; then
+		epatch ${WORKDIR}/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch
+	fi
+
+	# Adds -march=r10000 support to gcc
+	epatch ${FILESDIR}/gcc-3.4.x-mips-add-march-r10k.patch
+
+	# Allows building of kernels for IP28 systems (enable w/ -mip28-cache-barrier)
+	epatch ${FILESDIR}/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch
 
 	# Make gcc's version info specific to Gentoo
-	if [ -z "${PP_VER}" ]; then
-		version_patch ${FILESDIR}/${TMP_P}-gentoo-branding.patch \
-			"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
-	fi
+	gcc_version_patch "(Gentoo Linux ${PVR})"
 }
 
 src_compile() {

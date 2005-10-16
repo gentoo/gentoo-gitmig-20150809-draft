@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2da49466268d052fc446d2a2caab6622 ChangeLog 2621
-MD5 af241dd07c46bc5b0c2d54eac803f1f3 files/digest-gcc-mips64-3.3.4 151
+MD5 a11b6eb55349d1f0889e35cbee226817 ChangeLog 2906
 MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-gcc-mips64-3.4.3-r1 64
+MD5 4b8b4306f268900392bbd0319bdfdf65 files/digest-gcc-mips64-3.4.4 64
 MD5 e411938ca2908079a2359fed5cb3b442 files/gcc-3.3.4-gentoo-branding.patch 874
+MD5 1134e9dabbd6dfba1d91015851f02a2b files/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch 14118
 MD5 f3a1b668077c6486c542dcef1cdd9672 files/gcc-3.4.2-mips-ip28_cache_barriers.patch 12545
-MD5 02b0385d8721862e39060e8811b13bc7 gcc-mips64-3.3.4.ebuild 3167
+MD5 b2922cfe76692e7d2b373a0a255f405e files/gcc-3.4.x-mips-add-march-r10k.patch 14248
 MD5 e4b8145c02cf6a3eaa55f97f715d9677 gcc-mips64-3.4.3-r1.ebuild 3578
+MD5 3a64be2614c445cb7fb807a2b4d97b7f gcc-mips64-3.4.4.ebuild 3651
 MD5 efda60760635b5f29e31a8f730a73086 metadata.xml 364
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0HCCI1lqEGTUzyQRAt52AKCjVn7nZ4m8r50UAEtOUnFgRNJ0lACfae59
-wnwI5ClIg35LucYi9u6khAg=
-=PfjY
------END PGP SIGNATURE-----
