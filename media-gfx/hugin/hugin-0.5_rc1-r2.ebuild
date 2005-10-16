@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc1-r1.ebuild,v 1.1 2005/10/01 20:11:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.5_rc1-r2.ebuild,v 1.1 2005/10/16 02:23:49 halcy0n Exp $
 
 inherit wxwidgets
 
@@ -10,7 +10,7 @@ MY_P=${P/_rc*//}
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 SIFT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="unicode debug"
 
 DEPEND=">=media-libs/libpano12-2.7.0.8
@@ -22,6 +22,12 @@ DEPEND=">=media-libs/libpano12-2.7.0.8
 		media-libs/tiff"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+
+	sed -i -e 's/autopanog\.exe/autopanog/' "${S}"/src/include/hugin/config_defaults.h
+}
 
 src_compile() {
 	export WX_GTK_VER="2.6"

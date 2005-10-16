@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.5 2005/10/01 20:11:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.6 2005/10/16 02:23:49 halcy0n Exp $
+
+*hugin-0.5_rc1-r2 (16 Oct 2005)
+
+  16 Oct 2005; Mark Loeser <halcy0n@gentoo.org> -hugin-0.5_rc1.ebuild,
+  -hugin-0.5_rc1-r1.ebuild, +hugin-0.5_rc1-r2.ebuild:
+  Fixing the default autopano executable.  This ebuild also gets rid of the gtk2
+  useflag
 
 *hugin-0.5_rc2 (01 Oct 2005)
 *hugin-0.5_rc1-r1 (01 Oct 2005)
