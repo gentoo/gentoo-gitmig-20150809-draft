@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.1 2005/10/15 07:57:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.2 2005/10/16 13:48:06 sbriesen Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="capi? ( mirror://sourceforge/capi4yaps/${P}.c2.tgz )
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="capi lua slang unicode"
 
 RDEPEND="capi? ( net-dialup/capi4k-utils )
@@ -24,15 +24,15 @@ use capi && S="${S}.c2"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	# apply patches
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 	use capi \
 		&& grep 2>/dev/null -q CAPI_LIBRARY_V2 /usr/include/capiutils.h \
-		&& epatch ${FILESDIR}/${P}-capiv3.patch
+		&& epatch "${FILESDIR}/${P}-capiv3.patch"
 
 	# if specified, convert all relevant files from latin1 to UTF-8
-	cd ${S}
 	if use unicode; then
 		for i in yaps.doc; do
 			einfo "Converting '${i}' to UTF-8"
@@ -45,7 +45,7 @@ src_compile() {
 	local myconf=""
 	use lua && myconf="${myconf} LUA=True"
 	use slang && myconf="${myconf} SLANG=True"
-	emake CFLAGS="$CFLAGS" ${myconf} || die "emake failed"
+	emake CFLAGS="${CFLAGS}" ${myconf} || die "emake failed"
 }
 
 src_install() {

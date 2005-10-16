@@ -1,6 +1,5 @@
-diff -Nru yaps-0.96.orig/Config yaps-0.96/Config
---- yaps-0.96.orig/Config	1997-06-14 13:32:18.000000000 +0300
-+++ yaps-0.96/Config	2005-10-15 10:32:51.751042480 +0300
+--- Config.orig	2005-06-02 20:28:35.000000000 +0200
++++ Config	2005-10-16 15:13:32.000000000 +0200
 @@ -24,9 +24,9 @@
  #	Name of local configuration file (location is $HOME.)
  YAPS_LCFGFILE 	= .yapsrc
@@ -29,9 +28,8 @@ diff -Nru yaps-0.96.orig/Config yaps-0.96/Config
  endif
  ifdef	MATH
  LLIBS	+= -lm
-diff -Nru yaps-0.96.orig/Makefile yaps-0.96/Makefile
---- yaps-0.96.orig/Makefile	1997-06-06 14:45:35.000000000 +0300
-+++ yaps-0.96/Makefile	2005-10-15 10:32:51.752042328 +0300
+--- Makefile.orig	2005-06-02 20:33:27.000000000 +0200
++++ Makefile	2005-10-16 15:13:32.000000000 +0200
 @@ -33,19 +33,19 @@
  	lynx -cfg=/dev/null -nolist -dump $< > $@
  
@@ -56,9 +54,8 @@ diff -Nru yaps-0.96.orig/Makefile yaps-0.96/Makefile
  	fi
  
  clean:
-diff -Nru yaps-0.96.orig/yaps.rc yaps-0.96/yaps.rc
---- yaps-0.96.orig/yaps.rc	1997-06-11 20:39:06.000000000 +0300
-+++ yaps-0.96/yaps.rc	2005-10-15 10:34:40.313095952 +0300
+--- yaps.rc.orig	2005-06-02 20:28:35.000000000 +0200
++++ yaps.rc	2005-10-16 15:13:32.000000000 +0200
 @@ -9,26 +9,28 @@
  #	This is a comma seperated list of available services. This
  #	is required for autodetect the matching service for a

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.6 2005/10/15 07:57:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.7 2005/10/16 13:48:06 sbriesen Exp $
+
+  16 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  files/yaps-0.96-gentoo.patch, metadata.xml, yaps-0.96-r1.ebuild:
+  fixing broken patch with USE flag 'capi', see #105676
 
 *yaps-0.96-r1 (15 Oct 2005)
 
