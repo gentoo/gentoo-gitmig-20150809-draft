@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.68 2005/09/27 02:54:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.69 2005/10/16 09:44:31 killerfox Exp $
+
+  16 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> ocaml-3.08.3.ebuild:
+  Stable on hppa.
 
   27 Sep 2005; Jason Wever <weeve@gentoo.org> ocaml-3.08.3.ebuild:
   Stable on SPARC.
