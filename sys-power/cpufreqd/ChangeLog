@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.14 2005/09/17 00:44:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.15 2005/10/16 21:25:31 brix Exp $
+
+*cpufreqd-2.0.0_pre1 (16 Oct 2005)
+
+  16 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/nvclock0.8b-fd.patch, +files/cpufreqd-2.0.0-pre1-cpufreqd.conf,
+  +files/cpufreqd-2.0.0-pre1-nv.patch, +files/cpufreqd-2.0.0_pre1-init.d,
+  +cpufreqd-2.0.0_pre1.ebuild:
+  Version bump, bug #107334 and bug #103877. Thanks to Prakash Punnoor.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
