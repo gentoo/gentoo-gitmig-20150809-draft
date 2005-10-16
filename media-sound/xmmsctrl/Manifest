@@ -1,9 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a20eda334732066f58d43dc85d8b8a1a ChangeLog 2721
+MD5 c7c656137800fdd34067cd2e40c9775e files/digest-xmmsctrl-1.7 62
+MD5 820f89eab5c374f7690d5e6ad325876e files/digest-xmmsctrl-1.8 63
+MD5 b147c2e141f7146c49c38d7cbd6d0582 files/digest-xmmsctrl-1.9 63
+MD5 a88964c9149258a942cd42e4f39bf448 files/xmmsctrl-1.8-jump.patch 457
+MD5 81df994f3cc643315bc3ce5f0b83e848 files/xmmsctrl-jump.patch 374
+MD5 8355a79044d2fc38f92aa608a643e650 files/xmmsctrl.bash-completion 1055
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c50cbb6f45a321b72816ea01baf6c87b ChangeLog 2574
 MD5 0993fde26d7701ec1043d6478bffa33b xmmsctrl-1.7.ebuild 792
 MD5 62a10da77f35823a39055f8d7cb8530a xmmsctrl-1.8.ebuild 799
-MD5 820f89eab5c374f7690d5e6ad325876e files/digest-xmmsctrl-1.8 63
-MD5 81df994f3cc643315bc3ce5f0b83e848 files/xmmsctrl-jump.patch 374
-MD5 a88964c9149258a942cd42e4f39bf448 files/xmmsctrl-1.8-jump.patch 457
-MD5 c7c656137800fdd34067cd2e40c9775e files/digest-xmmsctrl-1.7 62
-MD5 8355a79044d2fc38f92aa608a643e650 files/xmmsctrl.bash-completion 1055
+MD5 4579391fe4e39327567ce8e194185953 xmmsctrl-1.9.ebuild 808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDUtPtwUpWvClEHQoRAtUeAJ9kNxwaa/xaMRzyvTFNCeuUdwnFkACbBZoD
+En96bgE8ldqJCebLSg7Cd1w=
+=jqCV
+-----END PGP SIGNATURE-----
