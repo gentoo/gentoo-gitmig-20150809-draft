@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.24 2005/09/03 15:41:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.25 2005/10/16 19:43:45 tgall Exp $
+
+  16 Oct 2005; Tom Gall <tgall@gentoo.org> 
+  java-access-bridge-1.4.5-r1.ebuild:
+  stable on ppc64, bug #109285
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   java-access-bridge-1.4.5-r1.ebuild:
