@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f1907fb669869309b59199a2069cd15 ChangeLog 8717
+MD5 b44568a4f0f1f0b3bf7302951c325a02 ChangeLog 8931
 MD5 d259ae434e176df207cba3deab973f61 boost-1.29.0.ebuild 1426
 MD5 34d13e0eeb58e13e1992908d04d51b45 boost-1.30.0.ebuild 2973
 MD5 4759f9391ad73c487d4f6b3dbf8632a8 boost-1.30.2.ebuild 2960
@@ -9,10 +9,11 @@ MD5 381dce1d7696860d54bb6d5f26ce7dd6 boost-1.31.0.ebuild 3974
 MD5 7403141309dea4e7a191766eba147299 boost-1.32.0-r1.ebuild 5379
 MD5 37f8eb8b22a26f2bc30b6101d14cb9d0 boost-1.32.0-r2.ebuild 5690
 MD5 76f87ddbbddd80f054d8d005d4d66d92 boost-1.32.0-r3.ebuild 6183
-MD5 9f4b3bf1104d681375b01af831179ee8 boost-1.32.0-r4.ebuild 6263
 MD5 8d4eca3eb59bc23e2d53b3d0cfd06c97 boost-1.32.0.ebuild 2294
-MD5 421fe3be35fd6d405bf2b3381d51867f boost-1.33.0.ebuild 6259
 MD5 16a0704d7282649d4c5920e3c8b39bee metadata.xml 343
+MD5 8f040e4c6d6b49c2065005fbc533eeef boost-1.33.0-r1.ebuild 6755
+MD5 421fe3be35fd6d405bf2b3381d51867f boost-1.33.0.ebuild 6259
+MD5 9f4b3bf1104d681375b01af831179ee8 boost-1.32.0-r4.ebuild 6263
 MD5 ed187a2b2048776a7e5b27060d96938c files/digest-boost-1.29.0 65
 MD5 2b36d47323b021671d391600501685cc files/digest-boost-1.30.0 66
 MD5 a09c431deb3a25504525921685cd0e57 files/digest-boost-1.30.2 66
@@ -23,10 +24,12 @@ MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r2 67
 MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r3 67
 MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0-r4 67
 MD5 612f486fa190f86f9be3a17465036dd0 files/digest-boost-1.33.0 67
+MD5 238bb8043f0cdc8bd91f81bd0b55f92a files/boost-alpha-threads.patch 1111
+MD5 612f486fa190f86f9be3a17465036dd0 files/digest-boost-1.33.0-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLzoZCRZPokWLroQRAmr4AKCDW3VEu4gzWqzKxtwiGrJP2wHPjgCfcie7
-YjPyVvUdvvK0uXXkew8p+/M=
-=8xf3
+iD8DBQFDUdmt/aM9DdBw91cRAn+sAKCHmtn9CUypNdPdy7pVwsc7ld2/6gCeJS5v
+4rwd8KjVfoTtApa+qyXNAJ0=
+=YyQ9
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.63 2005/09/19 22:22:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.64 2005/10/16 04:38:56 morfic Exp $
+
+  12 Oct 2005; Daniel Goller <morfic@gentoo.org>
+  +files/boost-alpha-threads.patch, boost-1.33.0.ebuild:
+  Fixing USE=threads on alpha and stopping to have icc path be hardcoded,
+  credits for users in the ebuild
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
