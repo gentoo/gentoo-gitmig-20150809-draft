@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7388eec18b77c325a86e996de6d22790 ChangeLog 3245
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-gnomedb-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gnomedb-sharp-1.0.8 147
@@ -6,3 +9,10 @@ MD5 7839981c4dbdf8f3ee6e24c1a6133b53 gnomedb-sharp-1.0.10.ebuild 534
 MD5 faae62959d74227edfe833f2b4821dde gnomedb-sharp-1.0.8-r1.ebuild 531
 MD5 9d1c7952b89128c9a133f5eea0cb70ab gnomedb-sharp-1.0.8.ebuild 533
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUZ4XcsIHjyDViGQRAq4jAJ9cwyHTHN9AVVnB9YHI7eRw1wAFyQCfa8Bf
+7q+NSBBbqHFZmYgjYN9d6nE=
+=Bu7n
+-----END PGP SIGNATURE-----

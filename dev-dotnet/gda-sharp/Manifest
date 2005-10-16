@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23f3816a5b7336876cbe317d4862b5fd ChangeLog 3308
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-gda-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-gda-sharp-1.0.8 147
@@ -6,3 +9,10 @@ MD5 ca57707ce64abbec7484cb07c3c49ad5 gda-sharp-1.0.10.ebuild 379
 MD5 869b430759ccd1781e5ad0945f169ce9 gda-sharp-1.0.8-r1.ebuild 375
 MD5 4d898b4832144dd2a3ec4ba7818c107d gda-sharp-1.0.8.ebuild 377
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUZ2LcsIHjyDViGQRAgngAKC/L/cmcOsAVVfV7OSrZfKqkxJm+wCfWgtf
+GNknZcvf2k4/7hy86Iy7YAA=
+=7OUE
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f2466be96c9cb486f28d9b9d8dfc3476 ChangeLog 3897
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-vte-sharp-1.0.10 149
 MD5 fef3bd202b3f48969673897302f3be4c files/digest-vte-sharp-1.0.8 147
@@ -14,3 +17,10 @@ MD5 d991a7708d3c30074efd0208a7f5c9a4 vte-sharp-2.3.90.ebuild 450
 MD5 2f2004722b51dbca082dfdf0b8ddd599 vte-sharp-2.3.91.ebuild 450
 MD5 dbe676dd55dfa38ced580017cfcea994 vte-sharp-2.5.90.ebuild 450
 MD5 19b68ec2a8004805e6ed6399c3e131ea vte-sharp-2.5.91.ebuild 450
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUaAZcsIHjyDViGQRApxMAJsGZ3fdZrt7bv+0CDKml6rAM2jaIwCeONBj
+eChmLiKW9+0FUUAL85je7xY=
+=33RN
+-----END PGP SIGNATURE-----
