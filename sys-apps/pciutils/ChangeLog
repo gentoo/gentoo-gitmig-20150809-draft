@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.59 2005/09/29 18:09:55 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.60 2005/10/16 03:17:19 vapier Exp $
+
+*pciutils-2.2.0 (16 Oct 2005)
+
+  16 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/pcimodules-pciutils-2.2.0.patch, +pciutils-2.2.0.ebuild:
+  Version bump #109352 by Daniel Drake.
 
   29 Sep 2005; Hardave Riar <hardave@gentoo.org> pciutils-2.1.11-r5.ebuild:
   Stable on mips.
