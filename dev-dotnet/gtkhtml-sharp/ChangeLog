@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.34 2005/10/16 00:28:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.35 2005/10/16 06:54:54 latexer Exp $
+
+*gtkhtml-sharp-2.5.92 (16 Oct 2005)
+*gtkhtml-sharp-2.3.92 (16 Oct 2005)
+
+  16 Oct 2005; Peter Johanson <latexer@gentoo.org>
+  +gtkhtml-sharp-2.3.92.ebuild, +gtkhtml-sharp-2.5.92.ebuild:
+  Bump.
 
   16 Oct 2005; Joseph Jezak <josejx@gentoo.org> gtkhtml-sharp-1.0.10.ebuild:
   Marked ppc stable for bug #103253.

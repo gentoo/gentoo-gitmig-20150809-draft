@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gnomevfs-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.9 2005/09/16 06:48:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.10 2005/10/16 06:54:21 latexer Exp $
+
+*gnomevfs-sharp-2.5.92 (16 Oct 2005)
+*gnomevfs-sharp-2.3.92 (16 Oct 2005)
+
+  16 Oct 2005; Peter Johanson <latexer@gentoo.org>
+  +gnomevfs-sharp-2.3.92.ebuild, +gnomevfs-sharp-2.5.92.ebuild:
+  Bump.
 
 *gnomevfs-sharp-2.5.91 (16 Sep 2005)
 *gnomevfs-sharp-2.3.91 (16 Sep 2005)

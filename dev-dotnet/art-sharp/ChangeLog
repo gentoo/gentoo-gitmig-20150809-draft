@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.35 2005/10/15 23:52:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.36 2005/10/16 06:53:21 latexer Exp $
+
+*art-sharp-2.5.92 (16 Oct 2005)
+*art-sharp-2.3.92 (16 Oct 2005)
+
+  16 Oct 2005; Peter Johanson <latexer@gentoo.org> +art-sharp-2.3.92.ebuild,
+  +art-sharp-2.5.92.ebuild:
+  Bump.
 
   15 Oct 2005; Joseph Jezak <josejx@gentoo.org> art-sharp-1.0.10.ebuild:
   Marked ppc stable for bug #103253.

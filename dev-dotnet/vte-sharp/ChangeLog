@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.29 2005/10/16 00:33:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.30 2005/10/16 06:55:24 latexer Exp $
+
+*vte-sharp-2.5.92 (16 Oct 2005)
+*vte-sharp-2.3.92 (16 Oct 2005)
+
+  16 Oct 2005; Peter Johanson <latexer@gentoo.org> +vte-sharp-2.3.92.ebuild,
+  +vte-sharp-2.5.92.ebuild:
+  Bump.
 
   16 Oct 2005; Joseph Jezak <josejx@gentoo.org> vte-sharp-1.0.10.ebuild:
   Marked ppc stable for bug #103253.
