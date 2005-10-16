@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb85194ad384e5d5c38bef3e9c26d00c ChangeLog 1744
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 b36ec2fda420b2970719e989c46419b4 psyco-1.4.ebuild 624
-MD5 42e58ed4569bc766b072d1d13bbcbb78 psyco-1.3.ebuild 646
-MD5 2da5719a9fe4692551435e532d2341a0 psyco-1.2.ebuild 623
-MD5 3a838fea67bb4691f1954f8e506fc630 files/digest-psyco-1.4 65
-MD5 10e3e0a6c88e96eecb3c45d840c5c51f files/digest-psyco-1.3 66
+MD5 3259733f27789f446c22ccf698522d77 ChangeLog 1872
 MD5 ee2d6ae386d5817870d5f23b36d90129 files/digest-psyco-1.2 65
+MD5 10e3e0a6c88e96eecb3c45d840c5c51f files/digest-psyco-1.3 66
+MD5 3a838fea67bb4691f1954f8e506fc630 files/digest-psyco-1.4 65
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 2da5719a9fe4692551435e532d2341a0 psyco-1.2.ebuild 623
+MD5 42e58ed4569bc766b072d1d13bbcbb78 psyco-1.3.ebuild 646
+MD5 42ae15338f38b0ac239ab909a430f5b3 psyco-1.4.ebuild 619
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFB5VGBz2gxt1z4IGYRAuHTAJwIl2sm1/MdZP+nyTBEIP9vCeuJIwCaA5A8
-a+90+WBAVShhvF7Spj2vjpo=
-=Gf5U
+iD8DBQFDUs16Kf2g/qXtneoRAiz0AJ47oCXQ0A3mHafsMi+fBi9M0VLBBgCfQZBG
+UIYltddlfDar1rzdxHw7mI4=
+=MDjy
 -----END PGP SIGNATURE-----

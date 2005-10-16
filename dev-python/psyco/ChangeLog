@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psyco
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.13 2005/01/12 16:33:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.14 2005/10/16 22:00:09 kloeri Exp $
+
+  16 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> psyco-1.4.ebuild:
+  Stable 1.4 as 1.2 doesn't support python-2.4, bug 109207.
 
 *psyco-1.4 (12 Jan 2005)
 

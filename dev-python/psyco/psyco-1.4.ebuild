@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.4.ebuild,v 1.1 2005/01/12 16:33:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.4.ebuild,v 1.2 2005/10/16 22:00:09 kloeri Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/psyco/${P}-src.tar.gz"
 IUSE=""
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND=">=dev-lang/python-2.1"
 
 src_install() {
