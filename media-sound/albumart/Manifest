@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 ca460604f6a23da9a437baf1889e6074 ChangeLog 2041
 MD5 719889acda81cad0f8e3b8ff0bb02f67 albumart-1.3.1.ebuild 646
 MD5 81ffa637be1ea29587b616df576bdb96 albumart-1.4.0-r1.ebuild 749
-MD5 51679cf5c025f1e9f5811ffae9fda8be ChangeLog 1857
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 ff7909256f78dca2b360980a0591aed3 albumart-1.4.0.ebuild 650
-MD5 c339d76336595491685fb128eab50cba albumart-1.5.0-r1.ebuild 713
-MD5 5984f5790131a2a32ea91c49b641e40d files/digest-albumart-1.4.0-r1 66
-MD5 bc5e55e5e1a644b233607ed1f775686d files/digest-albumart-1.5.0-r1 66
+MD5 4173f332923a0d78f8a6a43713a7e71d albumart-1.5.0-r1.ebuild 716
 MD5 74c859f013ca46568a1fdc14b522711c files/albumart-1.4.0-sizetype.patch 1387
 MD5 fdc51f934be51b668279394b8c8f5e68 files/digest-albumart-1.3.1 66
 MD5 5984f5790131a2a32ea91c49b641e40d files/digest-albumart-1.4.0 66
+MD5 5984f5790131a2a32ea91c49b641e40d files/digest-albumart-1.4.0-r1 66
+MD5 bc5e55e5e1a644b233607ed1f775686d files/digest-albumart-1.5.0-r1 66
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDIMcfV3J2n04EauwRAvBQAJ9WuIdRaGlmLvd+2n6btaLqK7T8CwCgpfAt
-Bh3xS3vlOKiVgP+JraTOA5E=
-=pdcm
+iD8DBQFDUrGvj5H05b2HAEkRAsizAJ9V2kPt7jsv7WGLqcD+QDES+AosPACeP0jy
+SFPk7WUG0rUUbHcL4Jxw4f0=
+=ONz6
 -----END PGP SIGNATURE-----

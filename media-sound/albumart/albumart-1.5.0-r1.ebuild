@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.5.0-r1.ebuild,v 1.1 2005/06/05 21:29:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.5.0-r1.ebuild,v 1.2 2005/10/16 20:01:09 flameeyes Exp $
 
-inherit eutils
+inherit eutils qt3
 
 DESCRIPTION="Album Cover Art Downloader"
 SRC_URI="http://kempele.fi/~skyostil/projects/albumart/dist/${P}.tar.gz"

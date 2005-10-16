@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/albumart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.12 2005/06/05 21:29:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.13 2005/10/16 20:01:09 flameeyes Exp $
+
+  16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  albumart-1.5.0-r1.ebuild:
+  Add qt3 to inherit so that the ${QTDIR}/etc/settings directory can be
+  written. Closes bug #105220.
 
 *albumart-1.5.0-r1 (05 Jun 2005)
 
