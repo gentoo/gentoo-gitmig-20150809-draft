@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.3 2005/10/02 19:36:55 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.4 2005/10/16 20:30:41 betelgeuse Exp $
+
+*gjdoc-0.7.6 (16 Oct 2005)
+
+  16 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> +gjdoc-0.7.6.ebuild:
+  Version bump.
 
   02 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>; gjdoc-0.7.5.ebuild:
   Added ~amd64
