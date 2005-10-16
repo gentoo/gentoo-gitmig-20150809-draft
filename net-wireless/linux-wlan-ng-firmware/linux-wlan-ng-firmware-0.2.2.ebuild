@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/linux-wlan-ng-firmware-0.2.2.ebuild,v 1.3 2005/10/15 23:03:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/linux-wlan-ng-firmware-0.2.2.ebuild,v 1.4 2005/10/16 20:09:26 betelgeuse Exp $
 
 inherit eutils
 
@@ -39,9 +39,9 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Firmware location has changed to ${ROOT}lib/firmware."
-	einfo "You can run ebuild <ebuild> config to delete"
+	einfo "You can run emerge --config =${PF} to delete"
 	einfo "The old files. Because of the default configuration file"
-	einfo "protection the files are most likely left your system"
+	einfo "protection, the files are most likely left your system"
 	einfo "and are now useless."
 }
 
