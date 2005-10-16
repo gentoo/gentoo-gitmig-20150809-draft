@@ -1,8 +1,12 @@
---- bash-3.0/builtins/ulimit.def	2004-08-27 17:29:19.662577512 +0100
-+++ bash-3.0/builtins/ulimit.def	2004-08-31 12:56:27.693244884 +0100
-@@ -35,14 +35,17 @@
+Ripped from Fedora
+
+--- bash-3.0/builtins/ulimit.def
++++ bash-3.0/builtins/ulimit.def
+@@ -34,15 +34,20 @@
+     -a	all current limits are reported
      -c	the maximum size of core files created
      -d	the maximum size of a process's data segment
++    -e	the maximum scheduling priority (`nice')
      -f	the maximum size of files created by the shell
 +    -i	the maximum number of pending signals
      -l	the maximum size a process may lock into memory
@@ -10,6 +14,7 @@
      -n	the maximum number of open file descriptors
      -p	the pipe buffer size
 +    -q	the maximum number of bytes in POSIX message queues
++    -r	the maximum rt priority
      -s	the maximum stack size
      -t	the maximum amount of cpu time in seconds
      -u	the maximum number of user processes
@@ -18,9 +23,13 @@
  
  If LIMIT is given, it is the new value of the specified resource;
  the special LIMIT values `soft', `hard', and `unlimited' stand for
-@@ -200,6 +203,9 @@
+@@ -199,7 +204,13 @@
+ #ifdef RLIMIT_DATA
    { 'd',	RLIMIT_DATA,  1024,	"data seg size",	"kbytes" },
  #endif
++#ifdef RLIMIT_NICE
++  { 'e',	RLIMIT_NICE, 1,		"max nice",		(char *)NULL},
++#endif /* RLIMIT_NICE */
    { 'f',	RLIMIT_FILESIZE, 1024,	"file size",		"blocks" },
 +#ifdef RLIMIT_SIGPENDING
 +  { 'i',	RLIMIT_SIGPENDING, 1,	"pending signals",	(char *)NULL},
@@ -28,17 +37,20 @@
  #ifdef RLIMIT_MEMLOCK
    { 'l',	RLIMIT_MEMLOCK, 1024,	"max locked memory",	"kbytes" },
  #endif
-@@ -208,6 +214,9 @@
+@@ -208,6 +219,12 @@
  #endif /* RLIMIT_RSS */
    { 'n',	RLIMIT_OPENFILES, 1,	"open files",		(char *)NULL},
    { 'p',	RLIMIT_PIPESIZE, 512,	"pipe size", 		"512 bytes" },
 +#ifdef RLIMIT_MSGQUEUE
 +  { 'q',	RLIMIT_MSGQUEUE, 1,	"POSIX message queues",	"bytes" },
 +#endif
++#ifdef RLIMIT_RTPRIO
++  { 'r',	RLIMIT_RTPRIO, 1,	"max rt priority",	(char *)NULL},
++#endif /* RLIMIT_RTPRIO */
  #ifdef RLIMIT_STACK
    { 's',	RLIMIT_STACK, 1024,	"stack size",		"kbytes" },
  #endif
-@@ -221,6 +230,9 @@
+@@ -221,6 +238,9 @@
  #ifdef RLIMIT_SWAP
    { 'w',	RLIMIT_SWAP,	1024,	"swap size",		"kbytes" },
  #endif
@@ -48,7 +60,7 @@
    { -1, -1, -1, (char *)NULL, (char *)NULL }
  };
  #define NCMDS	(sizeof(limits) / sizeof(limits[0]))
-@@ -647,11 +659,11 @@
+@@ -647,11 +667,11 @@
  
    for (i = 0; limits[i].option > 0; i++)
      {
@@ -63,7 +75,7 @@
      }
  }
  
-@@ -670,7 +682,7 @@
+@@ -670,7 +690,7 @@
        else
          sprintf (unitstr, "(-%c) ", limits[limind].option);
  
@@ -72,3 +84,103 @@
      }
    if (curlim == RLIM_INFINITY)
      puts ("unlimited");
+--- bash-3.0/doc/bashref.texi
++++ bash-3.0/doc/bashref.texi
+@@ -3793,7 +3793,7 @@
+ @item ulimit
+ @btindex ulimit
+ @example
+-ulimit [-acdflmnpstuvSH] [@var{limit}]
++ulimit [-acdeflmnpqrstuvxSH] [@var{limit}]
+ @end example
+ @code{ulimit} provides control over the resources available to processes
+ started by the shell, on systems that allow such control.  If an
+@@ -3814,9 +3814,15 @@
+ @item -d
+ The maximum size of a process's data segment.
+ 
++@item -e
++The maximum scheduling priority.
++
+ @item -f
+ The maximum size of files created by the shell.
+ 
++@item -i
++The maximum number of pending signals.
++
+ @item -l
+ The maximum size that may be locked into memory.
+ 
+@@ -3829,6 +3835,12 @@
+ @item -p
+ The pipe buffer size.
+ 
++@item -q
++The maximum number of bytes in POSIX message queues.
++
++@item -r
++The maximum RT priority.
++
+ @item -s
+ The maximum stack size.
+ 
+@@ -3841,6 +3853,9 @@
+ @item -v
+ The maximum amount of virtual memory available to the process.
+ 
++@item -x
++The maximum amount of file locks.
++
+ @end table
+ 
+ If @var{limit} is given, it is the new value of the specified resource;
+--- bash-3.0/doc/bash.1
++++ bash-3.0/doc/bash.1
+@@ -8362,7 +8362,7 @@
+ returns true if any of the arguments are found, false if
+ none are found.
+ .TP
+-\fBulimit\fP [\fB\-SHacdflmnpstuv\fP [\fIlimit\fP]]
++\fBulimit\fP [\fB\-SHacdefilmnpqrstuvx\fP [\fIlimit\fP]]
+ Provides control over the resources available to the shell and to
+ processes started by it, on systems that allow such control.
+ The \fB\-H\fP and \fB\-S\fP options specify that the hard or soft limit is
+@@ -8398,9 +8398,15 @@
+ .B \-d
+ The maximum size of a process's data segment
+ .TP
++.B \-e
++The maximum scheduling priority (`nice')
++.TP
+ .B \-f
+ The maximum size of files created by the shell
+ .TP
++.B \-i
++The maximum number of pending signals
++.TP
+ .B \-l
+ The maximum size that may be locked into memory
+ .TP
+@@ -8414,6 +8420,12 @@
+ .B \-p
+ The pipe size in 512-byte blocks (this may not be set)
+ .TP
++.B \-q
++The maximum number of bytes in POSIX message queues
++.TP
++.B \-r
++The maximum rt priority
++.TP
+ .B \-s
+ The maximum stack size
+ .TP
+@@ -8425,6 +8437,9 @@
+ .TP
+ .B \-v
+ The maximum amount of virtual memory available to the shell
++.TP
++.B \-x
++The maximum number of file locks
+ .PD
+ .PP
+ If
