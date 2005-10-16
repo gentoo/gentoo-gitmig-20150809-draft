@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6403355ed392cba1ba5313e31e4b9d4 naim-0.11.6.7.ebuild 818
-MD5 c3fbb2e2c7dc0cc10e2400fabb5243fe naim-0.11.7.2.ebuild 884
+MD5 43097b79fbe163c5f225172b08284c4d ChangeLog 8434
+MD5 cce37b118d5ddc9511362f4996c41680 files/digest-naim-0.11.6.1 66
+MD5 4f0d7cdac355995f31c937363881b089 files/digest-naim-0.11.6.4 66
+MD5 8173d59a57157573df8be77614285f60 files/digest-naim-0.11.6.7 66
+MD5 4483bed10e96873921b21e2622ea3568 files/digest-naim-0.11.7.1 66
+MD5 c27b1fe8e0711b6c14cda7a75f4c5188 files/digest-naim-0.11.7.2 66
+MD5 67395540f649e8c1d14a9e93ea51ec4f files/digest-naim-0.11.7.3.1 68
 MD5 8b9315e0eb39178622eff7b321b18517 metadata.xml 326
 MD5 71cff1e8494ea5084330449ab8f16056 naim-0.11.6.1.ebuild 880
-MD5 17624a3ee0b6a7d08dd27f3a03ca94c5 naim-0.11.7.3.1.ebuild 1127
-MD5 1400e2d202dd704ac659676cc42032fc naim-0.11.7.1.ebuild 828
-MD5 ff06ead6f3046500e963277560a5920b ChangeLog 8334
 MD5 3414779fb362cb1ad799b39558a8a7c0 naim-0.11.6.4.ebuild 857
-MD5 4f0d7cdac355995f31c937363881b089 files/digest-naim-0.11.6.4 66
-MD5 67395540f649e8c1d14a9e93ea51ec4f files/digest-naim-0.11.7.3.1 68
-MD5 c27b1fe8e0711b6c14cda7a75f4c5188 files/digest-naim-0.11.7.2 66
-MD5 8173d59a57157573df8be77614285f60 files/digest-naim-0.11.6.7 66
-MD5 cce37b118d5ddc9511362f4996c41680 files/digest-naim-0.11.6.1 66
-MD5 4483bed10e96873921b21e2622ea3568 files/digest-naim-0.11.7.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGfUZgIKl8Uu19MoRAm9mAJ9suCOcTyqG+/tz/OBVM2WhZPnR2QCfcNQ3
-/7gGoQZMZAHCFffgHqYf4BA=
-=myDL
------END PGP SIGNATURE-----
+MD5 b6403355ed392cba1ba5313e31e4b9d4 naim-0.11.6.7.ebuild 818
+MD5 1400e2d202dd704ac659676cc42032fc naim-0.11.7.1.ebuild 828
+MD5 c3fbb2e2c7dc0cc10e2400fabb5243fe naim-0.11.7.2.ebuild 884
+MD5 263d07d5e86651e2efba5ebcffc14762 naim-0.11.7.3.1.ebuild 1133
