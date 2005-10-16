@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.9 2005/10/16 21:51:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.10 2005/10/16 21:54:39 wolf31o2 Exp $
 
 inherit games
 
@@ -55,7 +55,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "You will need to run:"
-	einfo "emerge --config =${PF}"
+	einfo "emerge --config =${CATEGORY}/${PF}"
 	einfo "to make the necessary changes to the system .ini files."
 	echo
 	einfo "Each user whom has already played the game will need to run:"
