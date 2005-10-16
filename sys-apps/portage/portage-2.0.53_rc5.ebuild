@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc5.ebuild,v 1.2 2005/10/10 05:53:09 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.53_rc5.ebuild,v 1.3 2005/10/16 08:48:06 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -15,6 +15,7 @@ SLOT="0"
 IUSE="build selinux"
 DEPEND=">=dev-lang/python-2.2.1"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 userland_GNU? ( sys-apps/debianutils ) >=app-shells/bash-2.05a ) !userland_Darwin? ( sys-apps/sandbox ) selinux? ( >=dev-python/python-selinux-2.15 )"
+PROVIDE="virtual/portage"
 
 S=${WORKDIR}/${PN}-${PV}
 
