@@ -22,5 +22,8 @@
 	<longdescription lang="vi">
 		Nhóm x11-term chứa các terminal emulator cho X11.
 	</longdescription>
+	<longdescription lang="sk">
+		Kategória x11-term obsahuje emulátory terminálu pre prostredia X11.
+	</longdescription>
 </catmetadata>
 
