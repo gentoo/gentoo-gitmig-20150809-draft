@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.1 2005/10/12 18:38:38 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.2 2005/10/16 16:30:37 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -59,6 +59,7 @@ src_unpack() {
 	fi
 
 	if ! use fam ; then
+		cd ${S}
 		epatch ${FILESDIR}/${PN}-1.8.1-disable-fam.patch
 		cd ${S}/maildir
 		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (maildir)"
