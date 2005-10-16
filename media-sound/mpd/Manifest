@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f1719d6da3d723f10c3277096d86eab ChangeLog 9554
+MD5 f9daa97a3573c9744535a243da33eedd ChangeLog 9702
 MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5 63
 MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5-r1 63
 MD5 2d49081576c54bcd26f0b069ba56df83 files/mpd.rc6 889
 MD5 9fd12e4e26817b28026335eff94d2fde metadata.xml 252
-MD5 434ab108019edd4ae3f144bc26d8f769 mpd-0.11.5-r1.ebuild 2984
-MD5 1dfda9d2f290bdeae215eaab6f4e2ca6 mpd-0.11.5.ebuild 2795
+MD5 93b346619a73f75c37dfc54a54966374 mpd-0.11.5-r1.ebuild 3137
+MD5 d785bc485b235bd032eca3d7a23a938a mpd-0.11.5.ebuild 2948
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUsKGQlM6RnzZP+IRAiCTAJ4ujlaH1CYNCbm5TfaajrqE6p/+wgCgs6zS
-wGz1J3qpZm4ZaHvKVD03JKI=
-=2NAZ
+iD8DBQFDUsTXQlM6RnzZP+IRAilpAJ49v5s2bCDgmr6TEAoUPuR0MEkRogCeLICC
+nYIvfle+rxoZVk6GY7/qUs4=
+=YyMT
 -----END PGP SIGNATURE-----

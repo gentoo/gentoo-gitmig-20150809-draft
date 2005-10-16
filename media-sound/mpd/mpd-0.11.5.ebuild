@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5.ebuild,v 1.8 2005/10/16 21:11:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5.ebuild,v 1.9 2005/10/16 21:22:25 ticho Exp $
 
 inherit eutils
 
@@ -26,6 +26,11 @@ DEPEND=">=media-libs/libao-0.8.4
 	vorbis? ( media-libs/libvorbis )"
 
 pkg_setup() {
+	echo
+	ewarn "This package now uses 'vorbis' USE flag, instead of 'ogg'."
+	ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=101877 for details."
+	echo
+
 	enewuser mpd '' '' '' audio || die "problem adding user mpd"
 }
 
