@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.78 2005/07/06 04:18:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.79 2005/10/16 02:31:27 kumba Exp $
+
+*mips-sources-2.6.13.4 (16 Oct 2005)
+
+  16 Oct 2005; Joshua Kinard <kumba@gentoo.org>
+  +mips-sources-2.4.31-r1.ebuild, -mips-sources-2.4.31.ebuild,
+  -mips-sources-2.6.10-r4.ebuild, +mips-sources-2.6.12.5.ebuild,
+  -mips-sources-2.6.12.ebuild, +mips-sources-2.6.13.4.ebuild:
+  Import new kernel versions: 2.6.13.4 for ip22, ip28, ip30, and ip32;; 2.6.12.5
+  for ip27 (2.6.13.4 has major PCI issues on ip27); Also updated 2.4.31 for ip22
+  w/ a patch that allows use of the RJ-45 port on Challenge S.
 
 *mips-sources-2.6.12 (05 Jul 2005)
 

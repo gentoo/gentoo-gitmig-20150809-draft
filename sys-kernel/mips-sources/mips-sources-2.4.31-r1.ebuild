@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.31.ebuild,v 1.1 2005/06/11 20:50:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.31-r1.ebuild,v 1.1 2005/10/16 02:31:27 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20050606"			# Date of diff between kernel.org and lmo CVS
-SECPATCHVER="1.14"			# Tarball version for security patches
-GENPATCHVER="1.12"			# Tarball version for generic patches
+SECPATCHVER="1.15"			# Tarball version for security patches
+GENPATCHVER="1.14"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
@@ -57,6 +57,8 @@ src_unpack() {
 	epatch ${WORKDIR}/mips-patches/misc-2.4-gcc-3.4.x-strcpy-fix.patch
 	epatch ${WORKDIR}/mips-patches/misc-2.4-gcc-3.4.x-stop-dead-code-elim.patch
 
+	# Support the second seeq on Challenge S systems
+	epatch ${WORKDIR}/mips-patches/misc-2.4-ip22-support-mezz-seeq.patch
 
 	# Security Fixes
 #	echo -e ""
