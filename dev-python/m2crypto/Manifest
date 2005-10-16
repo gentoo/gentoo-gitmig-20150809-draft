@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bcc9002b8df4b056b89a1df0b5b43d95 ChangeLog 1553
+MD5 94d97aa441647931f7d20ddadf4fec73 ChangeLog 1725
 MD5 7601c8dba6f5d47b6abd298e4aa754c1 files/digest-m2crypto-0.07_alpha3 68
 MD5 7861e3954b04c975b4c51806c167389b files/digest-m2crypto-0.12 62
 MD5 7861e3954b04c975b4c51806c167389b files/digest-m2crypto-0.12-r1 62
 MD5 0dde9c7574cf4a141183111f8c3f97dd files/digest-m2crypto-0.13 62
-MD5 320a223c574ff50b434b963c8c962554 m2crypto-0.07_alpha3.ebuild 769
-MD5 ee3c4cded0bf051a391335af7974c25c m2crypto-0.12-r1.ebuild 786
-MD5 a8a26facff99282caea81216d66c0fe4 m2crypto-0.12.ebuild 766
-MD5 279e9155db44f8b2e7423e33c6df2e9f m2crypto-0.13.ebuild 789
+MD5 509c817f2a2805cc8a3e6b9a4aef8547 m2crypto-0.07_alpha3.ebuild 775
+MD5 4f3f393a3f7a9d5f7c19931d4bce6004 m2crypto-0.12-r1.ebuild 789
+MD5 ff91b3dd02995b40b890b286df854125 m2crypto-0.12.ebuild 769
+MD5 a1e3a3225d43f188faccca237d5baa54 m2crypto-0.13.ebuild 792
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUm7+Kf2g/qXtneoRAvCWAJ99Ryrj8vFgjOuL3EUTjOOdjuMCMACdFT0Z
-5XfsnS+ZuZXjZJjWhwiIcpA=
-=7jnJ
+iD8DBQFDUsPAKf2g/qXtneoRAhtUAKCGUTfovI/SRiJtLNMfUz0BXi2/6ACfQZ87
+UFFCgWxjIf6zEBmtXJ/cjuc=
+=DPq+
 -----END PGP SIGNATURE-----

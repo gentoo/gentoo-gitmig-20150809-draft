@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.07_alpha3.ebuild,v 1.8 2005/10/16 15:16:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.07_alpha3.ebuild,v 1.9 2005/10/16 21:18:37 kloeri Exp $
 
 DESCRIPTION="A python wrapper for the OpenSSL crypto library"
-HOMEPAGE="http://www.post1.com/home/ngps/m2/"
+HOMEPAGE="http://sandbox.rulemaker.net/ngps/m2/"
 MY_P=${P/_alpha/-snap}
-SRC_URI="http://www.post1.com/home/ngps/m2/${MY_P}.zip"
+SRC_URI="http://sandbox.rulemaker.net/ngps/m2/${MY_P}.zip"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
