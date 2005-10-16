@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7cab4420a696bf278fe69666b4a48bcc ChangeLog 1283
+MD5 89aca7a9d8717e83ceff9fc82d326a8f ChangeLog 1436
 MD5 43d72637d05e7527567b629427e1df71 files/digest-ut2003-bonuspack-epic-1 75
 MD5 2196e2e711354e37821c813bbe2e6316 files/epic-installer 922
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
-MD5 4e5c2c37329e741f29b6fca10160f935 ut2003-bonuspack-epic-1.ebuild 2923
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC1SxtI1lqEGTUzyQRArRMAJ4i95a80foIZGuJPe/0F9o6NxiJsgCffb/u
-gW4B5si4m3XaCClhsU60FXg=
-=g8aG
------END PGP SIGNATURE-----
+MD5 9effd96be65984fd1014f158de4b7a17 ut2003-bonuspack-epic-1.ebuild 2888
