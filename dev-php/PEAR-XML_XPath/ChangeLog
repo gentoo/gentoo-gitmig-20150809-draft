@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_XPath
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.16 2005/10/12 20:43:31 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/ChangeLog,v 1.17 2005/10/16 06:15:31 sebastian Exp $
+
+  16 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-XML_XPath-1.2.2.ebuild:
+  Depend on PHP 4.
 
 *PEAR-XML_XPath-1.2.2 (12 Oct 2005)
 

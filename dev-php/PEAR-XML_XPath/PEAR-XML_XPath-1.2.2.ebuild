@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/PEAR-XML_XPath-1.2.2.ebuild,v 1.1 2005/10/12 20:43:31 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_XPath/PEAR-XML_XPath-1.2.2.ebuild,v 1.2 2005/10/16 06:15:31 sebastian Exp $
 
-inherit php-pear-r1
+inherit php-pear-r1 depend.php
 
 DESCRIPTION="The PEAR::XML_XPath class provided an XPath/DOM XML manipulation, maneuvering and query interface"
 LICENSE="PHP"
@@ -11,9 +11,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 pkg_postinst () {
-	einfo
-	einfo "NOTE: This package requires the domxml extension."
-	einfo "To enable domxml, add xml2 to your USE settings"
-	einfo "and re-merge php."
-	einfo
+	ewarn "The XML_XPath PEAR package is unmaintained and requires"
+	ewarn "PHP 4 built with the DOMXML extension (USE=xml2)."
 }
+
+need_php4
