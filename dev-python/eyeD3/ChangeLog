@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.6 2005/10/12 00:20:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.7 2005/10/16 21:39:38 kloeri Exp $
+
+  16 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> eyeD3-0.6.4.ebuild:
+  Bump x86 stable to fix python dependency, bug 109207.
 
 *eyeD3-0.6.8 (12 Oct 2005)
 
