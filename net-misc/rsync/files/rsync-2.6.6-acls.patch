@@ -1,0 +1,55 @@
+Fix from upstream
+
+This revealed that the acls patch was not properly reporting what files
+were being updated when acls were not being preserved.  The attached
+patch should fix this.
+
+http://lists.samba.org/archive/rsync/2005-July/013169.html
+http://lists.samba.org/archive/rsync/2005-July/013174.html
+
+--- rsync-2.6.6/acls.c
++++ rsync-2.6.6/acls.c
+@@ -845,7 +845,7 @@
+ 		types[] = {SMB_ACL_TYPE_ACCESS, SMB_ACL_TYPE_DEFAULT};
+ 	int ret = 0;
+ 	if (!preserve_acls)
+-		return 0;
++		return 1;
+ 	for (type = &types[0];
+ 	     type < &types[0] + sizeof types / sizeof types[0]
+ 		 && (*type == SMB_ACL_TYPE_ACCESS || S_ISDIR(mode));
+@@ -962,7 +962,7 @@
+ 		}
+ 		return ret;
+ 	}
+-	return 0;
++	return 1;
+ }
+ 
+ void cleanup_keep_backup_acl()
+@@ -992,7 +992,7 @@
+ 	SMB_ACL_TYPE_T *type,
+ 		types[] = {SMB_ACL_TYPE_ACCESS, SMB_ACL_TYPE_DEFAULT};
+ 	if (dry_run || !preserve_acls || S_ISLNK(file->mode))
+-		return 0;
++		return 1;
+ 	if (file == backup_orig_file) {
+ 		if (!strcmp(fname, backup_dest_fname))
+ 			return set_keep_backup_acl();
+--- rsync-2.6.6/rsync.h
++++ rsync-2.6.6/rsync.h
+@@ -667,12 +667,12 @@
+ #define SEND_ACL(file, f)
+ #define RECEIVE_ACL(file, f)
+ #define SORT_FILE_ACL_INDEX_LISTS()
+-#define SET_ACL(fname, file)			0 /* checked return value */
++#define SET_ACL(fname, file)			1 /* checked return value */
+ #define NEXT_ACL_UID()	
+ #define ACL_UID_MAP(uid)
+ #define PUSH_KEEP_BACKUP_ACL(file, orig, dest)
+ #define CLEANUP_KEEP_BACKUP_ACL()
+-#define DUP_ACL(src, orig, mode)		0 /* checked return value */
++#define DUP_ACL(src, orig, mode)		1 /* checked return value */
+ #endif /* SUPPORT_ACLS */
+ #include "smb_acls.h"
+ 
