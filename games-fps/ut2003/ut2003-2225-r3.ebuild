@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.5 2005/09/21 20:45:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.6 2005/10/16 21:50:25 wolf31o2 Exp $
 
 inherit games
 
@@ -156,7 +156,7 @@ pkg_postinst() {
 		einfo "A cdkey file is already present in ${dir}/System"
 	else
 		ewarn "You MUST run this before playing the game:"
-		ewarn "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+		ewarn "emerge --config =${PF}"
 		ewarn "That way you can [re]enter your cdkey."
 	fi
 	echo
