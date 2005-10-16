@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/simpletal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/ChangeLog,v 1.2 2005/08/26 03:46:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/ChangeLog,v 1.3 2005/10/16 22:10:35 kloeri Exp $
+
+*simpletal-3.13 (16 Oct 2005)
+
+  16 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> +simpletal-3.13.ebuild:
+  Version bump.
 
   26 Aug 2005; Aron Griffis <agriffis@gentoo.org> simpletal-3.11.ebuild:
   add ~ia64

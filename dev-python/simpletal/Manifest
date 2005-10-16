@@ -1,6 +1,18 @@
-MD5 deaa3ac7205238ca4e22111006a8a143 simpletal-3.11.ebuild 1302
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 aac2a62b9e2fdaa78939807d45a71cac ChangeLog 826
-MD5 905592d18249144fb292194dc265111e simpletal-3.9.ebuild 1262
-MD5 6087cc9e8740414f14c5d41646acc8ae files/digest-simpletal-3.9 64
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd57cb2316516352704c6b6ae3035cc5 ChangeLog 949
 MD5 8ab1c501fda1db4fbdaa3a452d1ad025 files/digest-simpletal-3.11 65
+MD5 c9162c32bb56331e09f1a327128d088c files/digest-simpletal-3.13 65
+MD5 6087cc9e8740414f14c5d41646acc8ae files/digest-simpletal-3.9 64
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 deaa3ac7205238ca4e22111006a8a143 simpletal-3.11.ebuild 1302
+MD5 4678515f2e9786192424fcf919eb96be simpletal-3.13.ebuild 1300
+MD5 905592d18249144fb292194dc265111e simpletal-3.9.ebuild 1262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUs/mKf2g/qXtneoRAq1qAKC44EQJpkvncrAXvgE16BSZveHcdQCdF7RA
+67hsVKRusTcdb06RwfQu4G4=
+=G0YD
+-----END PGP SIGNATURE-----
