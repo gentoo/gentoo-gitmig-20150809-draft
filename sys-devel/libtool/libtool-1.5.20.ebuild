@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.20.ebuild,v 1.6 2005/10/13 13:41:34 gustavoz Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.20.ebuild,v 1.7 2005/10/16 03:32:12 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils
 
@@ -73,6 +73,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.5.6/${PN}-1.5.6-ltmain-SED.patch
 	epatch "${FILESDIR}"/1.4.3/${PN}-1.4.2-expsym-linux.patch
 	epatch "${FILESDIR}"/1.4.3/${PN}-1.4.3-pass-thread-flags.patch
+	epatch "${FILESDIR}"/1.5.20/${PN}-1.5.20-use-linux-version-in-fbsd.patch #109105
 
 	# Gentoo Patches
 	# Do not create bogus entries in $dependency_libs or $libdir
