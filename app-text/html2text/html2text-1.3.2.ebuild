@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/html2text-1.3.2.ebuild,v 1.14 2005/09/10 06:00:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html2text/html2text-1.3.2.ebuild,v 1.15 2005/10/16 08:56:07 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ src_unpack() {
 	then
 		epatch 1.3.2_to_1.3.2a.diff
 	fi
-	epatch ${FILESDIR}/${P}-darwin.patch
+	epatch ${FILESDIR}/${P}-compiler.patch
 }
 
 src_compile() {
