@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.64 2005/09/21 23:22:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.65 2005/10/16 11:06:29 mrness Exp $
+
+  16 Oct 2005; Alin Nastac <mrness@gentoo.org> wvstreams-4.0.1-r2.ebuild,
+  wvstreams-4.0.2.ebuild, wvstreams-4.0.2-r1.ebuild:
+  Fix DEPEND by adding unconditional dependency of openssl (#108095). Mark
+  4.0.2-r1 stable on x86.
 
   21 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd, marking mrness as primary maintainer

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.11 2005/07/02 18:33:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.12 2005/10/16 11:06:29 mrness Exp $
 
 inherit eutils
 
@@ -11,21 +11,21 @@ SRC_URI="http://www.csclub.uwaterloo.ca/~ja2morri/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 hppa ppc sparc x86"
-IUSE="gtk qt vorbis speex fam qdbm pam slp ssl doc fftw tcltk debug"
+IUSE="gtk qt vorbis speex fam qdbm pam slp doc fftw tcltk debug"
 
 RDEPEND="virtual/libc
+	>=sys-libs/db-3
+	>=sys-libs/zlib-1.1.4
+	>=dev-libs/openssl-0.9.7
 	dev-libs/xplc
 	gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( =x11-libs/qt-3* )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	speex? ( media-libs/speex !=media-libs/speex-1.1.4 )
 	fam? ( virtual/fam )
-	>=sys-libs/db-3
 	qdbm? ( dev-db/qdbm )
 	pam? ( >=sys-libs/pam-0.75 )
 	slp? ( >=net-libs/openslp-1.0.9a )
-	>=sys-libs/zlib-1.1.4
-	ssl? ( >=dev-libs/openssl-0.9.7 )
 	doc? ( app-doc/doxygen )
 	fftw? ( sci-libs/fftw )
 	tcltk? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
@@ -66,13 +66,13 @@ src_compile() {
 		`use_with qdbm` \
 		`use_with pam` \
 		`use_with fftw` \
-		`use_with ssl openssl` \
 		`use_with slp openslp` \
 		`use_with tcltk tcl` \
 		`use_enable debug` \
 		--enable-verbose \
 		--with-bdb \
 		--with-zlib \
+		--with-openssl \
 		--with-xplc \
 		|| die "configure failed"
 	emake CXXOPTS="-fPIC -DPIC" COPTS="-fPIC -DPIC" || die "compile failed"
