@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpdbg-client
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/ChangeLog,v 1.1 2005/09/04 14:32:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/ChangeLog,v 1.2 2005/10/16 05:10:58 weeve Exp $
+
+  16 Oct 2005; Jason Wever <weeve@gentoo.org> phpdbg-client-2.11.32.ebuild:
+  Added ~sparc keyword.
 
   18 Aug 2005; <stuart@gentoo.org> ChangeLog:
   Initial version; replaces older dev-php/* packages

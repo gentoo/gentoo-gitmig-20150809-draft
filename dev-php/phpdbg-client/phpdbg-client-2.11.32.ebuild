@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/phpdbg-client-2.11.32.ebuild,v 1.1 2005/09/04 14:32:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg-client/phpdbg-client-2.11.32.ebuild,v 1.2 2005/10/16 05:10:58 weeve Exp $
 
 S="${WORKDIR}/dbg_client-${PV}${PL}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://dd.cron.ru/dbg/"
 LICENSE="dbgphp"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 
 src_install() {
 	einstall || die "install failed"

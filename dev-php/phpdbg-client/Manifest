@@ -1,4 +1,4 @@
-MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 bca1cdeaa36fd6d3cd730d4eef7e57df ChangeLog 360
-MD5 e737a7e2562c4eab7a2976a02ac7a370 phpdbg-client-2.11.32.ebuild 594
+MD5 813f3e626f4e74c7a798b6906ec60274 ChangeLog 460
 MD5 a636b568cab495479612d8293ec162c6 files/digest-phpdbg-client-2.11.32 71
+MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
+MD5 e19182fba98e85958ed2e84d7ca8ef84 phpdbg-client-2.11.32.ebuild 600
