@@ -1,0 +1,9 @@
+# ChangeLog for dev-cpp/asio
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.1 2005/10/16 07:57:39 rphillips Exp $
+
+*asio-0.3.4 (16 Oct 2005)
+
+  16 Oct 2005; <rphillips@gentoo.org> +metadata.xml, +asio-0.3.4.ebuild:
+  Initial import
+
