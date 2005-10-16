@@ -1,14 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 95e2b5bfd7767aeae061c77f7e1a055e metadata.xml 221
-MD5 c98886a366a10da3796adf62fe39a6fd pathological-1.1.3.ebuild 1990
-MD5 f6021f9e14dad9fa7a22755b273556ad ChangeLog 1400
+MD5 8330618d554f975f0cc2d2c8b3bf5826 ChangeLog 1650
 MD5 af2e4c0e952d40232cb322d621f37995 files/digest-pathological-1.1.3 71
+MD5 af2e4c0e952d40232cb322d621f37995 files/digest-pathological-1.1.3-r1 71
+MD5 c817c498f3d5e44ee7bec1c58f1bc643 files/pathological-1.1.3-music-py.patch 475
+MD5 95e2b5bfd7767aeae061c77f7e1a055e metadata.xml 221
+MD5 b999e8a72467bfffaa96cabe9a638d82 pathological-1.1.3-r1.ebuild 2042
+MD5 c98886a366a10da3796adf62fe39a6fd pathological-1.1.3.ebuild 1990
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC0otsKRy60XGEcJIRAhOUAJ9TxMceFhR7B5v7XTRVrHVD0D1ScACfYKvd
-4POCVtiGScETbjQKB6wKc0g=
-=x31j
+iD8DBQFDUeD4gIKl8Uu19MoRAsu9AJwKdinHwdJbD0kYImz/cCN7SM9jHACfcjfr
+3w3NEzV1u9ZAGlvT4043JgY=
+=bTye
 -----END PGP SIGNATURE-----
