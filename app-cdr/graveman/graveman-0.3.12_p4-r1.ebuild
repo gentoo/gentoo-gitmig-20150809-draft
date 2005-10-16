@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4-r1.ebuild,v 1.6 2005/10/02 18:22:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p4-r1.ebuild,v 1.7 2005/10/16 06:01:41 dertobi123 Exp $
 
 inherit gnome2 eutils
 
@@ -42,6 +42,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/joliet-long.patch
+
+	# If mp3 or ogg support is enabled we need sox, #107755
+	if use mp3 || use oggvorbis && use !sox
+	then
+		ewarn "If you would like to enable MP3 or OGG Support you have to activate the sox USE flag"
+		die
+	fi
 }
 DOCS="AUTHORS ChangeLog INSTALL NEWS README* THANKS"
 USE_DESTDIR="1"

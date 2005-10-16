@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.23 2005/10/02 18:22:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.24 2005/10/16 06:01:41 dertobi123 Exp $
+
+  16 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  graveman-0.3.12_p4-r1.ebuild:
+  If the mp3 and/or oggvorbis USE flag is activated we also need sox.
+  Thanks to Adam in bug #107755
 
   02 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   graveman-0.3.11.ebuild, graveman-0.3.12_p4.ebuild,
