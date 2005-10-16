@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c8739250cd740951ca171f6b1c8d046 metadata.xml 234
-MD5 521b68c4d38d434da1b3b2244b7d8665 ChangeLog 1042
-MD5 c534894361be82f038923158d3ed8a71 adodb-py-1.10.ebuild 753
+MD5 00c4e9b2693885271563c539dec4a96e ChangeLog 1177
 MD5 43cd7b30bc861355c7f81345a32c13da adodb-py-1.0.1.ebuild 757
+MD5 c534894361be82f038923158d3ed8a71 adodb-py-1.10.ebuild 753
+MD5 8239cb63e28770a4d9af56b3bc8cd2f6 adodb-py-1.13.ebuild 753
 MD5 450db37bc2cdb99957226a0f971b1cb3 files/digest-adodb-py-1.0.1 59
 MD5 3266987c7c92564c77b529bb10fd57dd files/digest-adodb-py-1.10 59
+MD5 0319cc534d13027c933ae109f7d46c4d files/digest-adodb-py-1.13 59
+MD5 3c8739250cd740951ca171f6b1c8d046 metadata.xml 234
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCDRh1ugEuf3OQ0akRAluTAJ9/HW8TgP+igV77gJ2Kps6mn54UOACfcsiZ
-vCoJPZY+vwj4dwlR8nuTwXc=
-=d9DN
+iD8DBQFDUtK/Kf2g/qXtneoRAr4qAJ902oL/SPlo2vm9q00qv2tJbCzJGwCeM6Yo
+Few8grSqjEp1BZk5wba7o/U=
+=IbE2
 -----END PGP SIGNATURE-----
