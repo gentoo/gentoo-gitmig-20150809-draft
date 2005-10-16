@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-gladexml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.15 2005/09/08 22:26:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.16 2005/10/16 19:04:24 tgall Exp $
+
+  16 Oct 2005; Tom Gall <tgall@gentoo.org> gtk2-gladexml-1.004.ebuild:
+  added ~ppc64, bug #109334
 
   08 Sep 2005; Aron Griffis <agriffis@gentoo.org> gtk2-gladexml-1.00.ebuild:
   Mark 1.00 stable on alpha
