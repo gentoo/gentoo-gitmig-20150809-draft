@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.211 2005/10/14 03:42:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.212 2005/10/16 10:23:36 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1155,9 +1155,12 @@ gcc_do_configure() {
 		# disable a bunch of features or gcc goes boom
 		local needed_libc=""
 		case ${CTARGET} in
-			*-gnu)    needed_libc=glibc;;
-			*-uclibc) needed_libc=uclibc;;
-			avr)      confgcc="${confgcc} $(use_enable !static shared) --disable-threads";;
+			*-dietlibc) needed_libc=dietlibc;;
+			*-freebsd*) needed_libc=freebsd-lib;;
+			*-gnu)      needed_libc=glibc;;
+			*-klibc)    needed_libc=klibc;;
+			*-uclibc)   needed_libc=uclibc;;
+			avr)        confgcc="${confgcc} $(use_enable !static shared) --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
