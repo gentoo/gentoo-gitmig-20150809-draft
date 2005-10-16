@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.47 2005/10/16 03:53:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.48 2005/10/16 06:57:54 weeve Exp $
+
+  16 Oct 2005; Jason Wever <weeve@gentoo.org> exim-4.54.ebuild:
+  Added ~sparc keyword as it keeps getting dropped from this package :(
 
   15 Oct 2005; Tom Gall <tgall@gentoo.org> exim-4.54.ebuild:
   added ~ppc64 bug#109362
