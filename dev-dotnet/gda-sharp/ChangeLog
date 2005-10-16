@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gda-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.26 2005/08/17 00:38:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/ChangeLog,v 1.27 2005/10/16 00:23:16 josejx Exp $
+
+  16 Oct 2005; Joseph Jezak <josejx@gentoo.org> gda-sharp-1.0.10.ebuild:
+  Marked ppc stable for bug #103253.
 
   17 Aug 2005; Peter Johanson <latexer@gentoo.org> -gda-sharp-1.0.6.ebuild,
   -gda-sharp-1.9.3.1.ebuild, -gda-sharp-1.9.5.ebuild,
