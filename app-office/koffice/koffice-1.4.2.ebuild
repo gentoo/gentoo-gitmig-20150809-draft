@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2.ebuild,v 1.3 2005/10/15 22:12:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2.ebuild,v 1.4 2005/10/16 10:41:17 flameeyes Exp $
 
 inherit kde
 
@@ -25,7 +25,7 @@ RDEPEND=">=media-gfx/imagemagick-5.5.2
 	postgres? ( dev-libs/libpqxx )
 	dev-lang/python
 	>=media-libs/lcms-1.12
-	javascript? ( || ( kde-base/kjsembed kde-base/kdebindings ) )
+	javascript? ( kde-base/kjsembed )
 	!dev-db/kexi"
 
 DEPEND="${RDEPEND}

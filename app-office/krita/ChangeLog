@@ -1,6 +1,10 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.16 2005/10/15 22:13:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.17 2005/10/16 10:44:57 flameeyes Exp $
+
+  16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> krita-1.4.2.ebuild:
+  Sorry, kdebindings was still present here for an artifact, going back on
+  kjsembed, dep tree still broken for monolithic ebuilds.
 
   15 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> krita-1.4.2.ebuild:
   Added missing dependency on kdebindings for javascript, unbreaking deps for
