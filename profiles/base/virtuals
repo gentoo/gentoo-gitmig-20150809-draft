@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.75 2005/10/07 23:38:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.76 2005/10/16 08:49:24 jstubbs Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -65,6 +65,7 @@ virtual/pbs					sys-cluster/torque
 virtual/pcmcia				sys-apps/pcmcia-cs
 virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-php/mod_php
+virtual/portage				sys-apps/portage
 virtual/psviewer			app-text/gv
 virtual/python				dev-lang/python
 virtual/quicktime			media-libs/libquicktime
