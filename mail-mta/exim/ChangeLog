@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.46 2005/10/13 19:09:50 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.47 2005/10/16 03:53:19 tgall Exp $
+
+  15 Oct 2005; Tom Gall <tgall@gentoo.org> exim-4.54.ebuild:
+  added ~ppc64 bug#109362
 
   13 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> exim-4.54.ebuild:
   Unstable on hppa. See bug #103894.
@@ -45,7 +48,7 @@
   05 Jul 2005; Rene Nussbaumer <killerfox@gentoo.org> exim-4.50-r1.ebuild:
   Stable on hppa.
 
-  02 Jul 2005; Bryan ÃÂstergaard <kloeri@gentoo.org> exim-4.50-r1.ebuild:
+  02 Jul 2005; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.50-r1.ebuild:
   Add ~alpha keyword.
 
   26 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> exim-4.50-r1.ebuild:
@@ -128,7 +131,7 @@
   exim-4.43.ebuild:
   KEYWORDS ~amd64 to close bug 61163.
 
-  10 Oct 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> exim-4.42.ebuild:
+  10 Oct 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.42.ebuild:
   Stable on alpha.
 
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> exim-4.42.ebuild:
@@ -140,7 +143,7 @@
   +exim-4.43.ebuild:
   New Version Bump and Bump of 4.42 to stable.
 
-  04 Oct 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> exim-4.42.ebuild:
+  04 Oct 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.42.ebuild:
   Keyword ~alpha.
 
   05 Sep 2004; Guy Martin <gmsoft@gentoo.org> exim-4.41.ebuild,
@@ -227,7 +230,7 @@
   11 May 2004; Guy Martin <gmsoft@gentoo.org> exim-4.34.ebuild:
   Marked stable on hppa.
 
-  11 May 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> exim-4.34.ebuild:
+  11 May 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> exim-4.34.ebuild:
   Stable on alpha, bug #50217.
 
   11 May 2004; Jon Portnoy <avenj@gentoo.org> exim-4.34.ebuild :
