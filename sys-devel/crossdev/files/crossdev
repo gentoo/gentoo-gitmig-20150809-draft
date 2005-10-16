@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.38 2005/10/16 10:26:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.39 2005/10/16 10:35:26 vapier Exp $
 
 cd /
 
@@ -159,6 +159,21 @@ parse_target() {
 
 	CTARGET=${CPRE}
 	[[ -n ${CPOST} ]] && CTARGET=${CTARGET}-${CPOST}
+
+	# Tweak packages based upon CTARGET
+	case ${CTARGET} in
+		# Normal Linux host, just diff libc
+		*-dietlibc) LPKG="dietlibc";;
+		*-klibc)    LPKG="klibc";;
+		*-uclibc)   LPKG="uclibc";;
+
+		# Now for the BSDs ...
+		*-freebsd*)
+			TARCH="${TARCH}-fbsd"
+			LCAT="sys-freebsd" LPKG="freebsd-lib"
+			KCAT="sys-freebsd" KPKG="freebsd-headers"
+			;;
+	esac
 }
 
 setup_portage_vars() {
@@ -284,12 +299,6 @@ done
 
 [[ -z ${CTARGET} ]] && usage 1
 [[ ${STAGE} == "COW" ]] && STAGE=${STAGE_C_CPP}
-case ${CTARGET} in
-	*-dietlibc) LPKG="dietlibc";;
-	*-freebsd*) LPKG="freebsd-lib" KPKG="freebsd-headers";;
-	*-klibc)    LPKG="klibc";;
-	*-uclibc)   LPKG="uclibc";;
-esac
 
 #####################
 ### sanity checks ###
