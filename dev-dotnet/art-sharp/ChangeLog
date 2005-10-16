@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.36 2005/10/16 06:53:21 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.37 2005/10/16 07:02:19 latexer Exp $
+
+  16 Oct 2005; Peter Johanson <latexer@gentoo.org> -art-sharp-1.0.8.ebuild,
+  -art-sharp-2.3.90.ebuild, -art-sharp-2.5.90.ebuild:
+  Remove a few older versions.
 
 *art-sharp-2.5.92 (16 Oct 2005)
 *art-sharp-2.3.92 (16 Oct 2005)
