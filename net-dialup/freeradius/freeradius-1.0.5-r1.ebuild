@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.4.ebuild,v 1.4 2005/10/13 05:06:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.5-r1.ebuild,v 1.1 2005/10/16 08:47:36 mrness Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="edirectory frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
@@ -32,23 +32,29 @@ pkg_setup() {
 	if use edirectory && ! use ldap ; then
 		eerror "Cannot add integration with Novell's eDirectory without having LDAP support!"
 		eerror "Either you select ldap USE flag or remove edirectory"
-		die
+		die "edirectory needs ldap"
 	fi
 	enewgroup radiusd
 	enewuser radiusd -1 -1 /var/log/radius radiusd
 }
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
+	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-whole-archive-gentoo.patch
-
-	export WANT_AUTOCONF=2.1
-	autoconf
+	if use frxp; then
+		#(bug #109003) This patch allows you to store the hash value of the 
+		#username:realm:password string instead of the clear text password.
+		#It can be found here :
+		#	http://bugs.freeradius.org/show_bug.cgi?id=287
+		epatch ${FILESDIR}/${P}-user-password-ha1.patch
+	fi
 }
 
 src_compile() {
+#	export WANT_AUTOCONF=2.1
+	autoconf
+
 	local myconf=" \
 		`use_with snmp` \
 		`use_with frascend ascend-binary` \
@@ -99,7 +105,7 @@ src_install() {
 	dodir /etc/raddb
 	diropts -m0750 -o radiusd -g radiusd
 	dodir /var/log/radius
-	dodir /var/log/radius/radacct
+	keepdir /var/log/radius/radacct
 	dodir /var/run/radiusd
 	diropts
 

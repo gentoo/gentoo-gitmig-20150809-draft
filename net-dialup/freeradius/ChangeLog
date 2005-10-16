@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.39 2005/10/13 05:06:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.40 2005/10/16 08:47:36 mrness Exp $
+
+*freeradius-1.0.5-r1 (16 Oct 2005)
+
+  16 Oct 2005; Alin Nastac <mrness@gentoo.org>
+  -files/freeradius-1.0.4-whole-archive-gentoo.patch,
+  +files/freeradius-1.0.5-user-password-ha1.patch, files/radius.init,
+  -freeradius-1.0.4.ebuild, +freeradius-1.0.5-r1.ebuild:
+  Remove old test version. Change init script for working with user-defined
+  user/group (#108866). Add support for hashed User-Password under control of
+  the frxp useflag (#109003).
 
   04 Oct 2005; Alin Nastac <mrness@gentoo.org>
   -files/freeradius-1.0.2-sql-escape.patch,
