@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.4 2005/10/04 20:16:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20050816.ebuild,v 1.5 2005/10/16 09:11:45 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -134,7 +134,7 @@ pkg_postinst() {
 		einfo "otherwise type: rc-update add alsasound boot"
 		einfo
 		einfo "If you need to use snd-intel8x0m from the kernel"
-		einfo "compile it as a module and edit /etc/module.d/alsa"
+		einfo "compile it as a module and edit /etc/modules.d/alsa"
 		einfo 'to: "alias snd-card-(number) snd-intel8x0m"'
 	fi
 
