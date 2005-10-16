@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 edc892d866ef9bdbf1cf78465cf739a8 ChangeLog 4953
 MD5 b83e36b4dc90c3ce5840f0d2e432b7b2 files/digest-pyxml-0.8.1 63
 MD5 6a14eefbf90c139b1f9b058131cb211f files/digest-pyxml-0.8.2 63
@@ -10,3 +13,10 @@ MD5 ca1eaa65fe8ae61e804accfbb319d803 pyxml-0.8.2.ebuild 923
 MD5 23a4a741f98c9185705fdf8e1cf7cef8 pyxml-0.8.3-r1.ebuild 1136
 MD5 f7a99d5b12e0d068483228a17f5e65da pyxml-0.8.3.ebuild 938
 MD5 5ede70e1fcd294fcfc7c2816080e7bdc pyxml-0.8.4.ebuild 1120
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUbz8gIKl8Uu19MoRAi0KAKCBMrHQh0W3bfTRETREo55YlnlQHwCcDvT7
+Pf3R28XKykbv1jzNP1iCjI0=
+=TmGw
+-----END PGP SIGNATURE-----
