@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.22 2005/10/14 22:45:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.23 2005/10/16 21:09:58 kloeri Exp $
+
+  16 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> -spe-0.5.1a.ebuild,
+  -spe-0.5.1d.ebuild, -spe-0.5.1f.ebuild, -spe-0.7.1a.ebuild,
+  -spe-0.7.3a.ebuild, -spe-0.7.5c.ebuild:
+  Clean out old versions.
 
   14 Oct 2005; Mark Loeser <halcy0n@gentoo.org> spe-0.5.1f-r1.ebuild:
   Stable on x86; bug #108538
