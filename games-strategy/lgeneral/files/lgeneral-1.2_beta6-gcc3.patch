@@ -1,0 +1,14 @@
+Patch by Mike Bonar to fix building with newer gcc versions
+
+http://bugs.gentoo.org/109476
+
+--- src/main.c
++++ src/main.c
+@@ -136,7 +136,6 @@
+         case 'h':
+             if (ctlspec[1] == 0 || strcasecmp(ctlspec, "human") == 0) ctl = PLAYER_CTRL_HUMAN;
+             break;
+-        default:
+     }
+     if (ctl != PLAYER_CTRL_CPU && ctl != PLAYER_CTRL_HUMAN)
+         abortf("Invalid player control: %s\n", ctlspec);

@@ -1,13 +1,24 @@
-MD5 ff6bfa6397434f0f15450b0bec5a338b lgeneral-1.2_beta6.ebuild 1652
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 cca6898907a4441d1f2c7e1a76b6b585 lgeneral-1.2_beta2.ebuild 1481
-MD5 55332d6f35da9d70285b06eab8ef512d lgeneral-1.2_beta5.ebuild 1651
-MD5 128afa83e71a3141c957a56313b92000 lgeneral-1.1.1-r1.ebuild 1113
-MD5 d7f706cc8b01765e821b06ac117fa09c ChangeLog 3241
-MD5 2ed49392adca7517991f0115bf18bc5f files/1.2_beta5-gcc4.patch 841
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c08847e9125f8ab8af6d57c3596a3e4 ChangeLog 3420
 MD5 77fda12a372abfd55040151b84dd2d7b files/1.1.1-netbsd-audio.patch 813
+MD5 2ed49392adca7517991f0115bf18bc5f files/1.2_beta5-gcc4.patch 841
+MD5 2ed49392adca7517991f0115bf18bc5f files/1.2_beta6-gcc4.patch 841
+MD5 9bd18133cff27a13ac0c62fe2ebeba33 files/digest-lgeneral-1.1.1-r1 138
+MD5 a439ff98a9b35e8e232647449c5de2a0 files/digest-lgeneral-1.2_beta2 129
 MD5 75e452fcd09e7f2a437b74ab63f8b175 files/digest-lgeneral-1.2_beta5 130
 MD5 80df20a9e5cbef4c8d3d6cf6b5adc9a8 files/digest-lgeneral-1.2_beta6 130
-MD5 a439ff98a9b35e8e232647449c5de2a0 files/digest-lgeneral-1.2_beta2 129
-MD5 9bd18133cff27a13ac0c62fe2ebeba33 files/digest-lgeneral-1.1.1-r1 138
-MD5 2ed49392adca7517991f0115bf18bc5f files/1.2_beta6-gcc4.patch 841
+MD5 5646809f30092dbfd35378661d2c0554 files/lgeneral-1.2_beta6-gcc3.patch 421
+MD5 128afa83e71a3141c957a56313b92000 lgeneral-1.1.1-r1.ebuild 1113
+MD5 cca6898907a4441d1f2c7e1a76b6b585 lgeneral-1.2_beta2.ebuild 1481
+MD5 55332d6f35da9d70285b06eab8ef512d lgeneral-1.2_beta5.ebuild 1651
+MD5 644dc305c000f4c42337ac9dba8a43f4 lgeneral-1.2_beta6.ebuild 1694
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUsywgIKl8Uu19MoRAipoAJ0UzQyeG11wPVEMPl2ZabseQ9v8KACfWFKl
+07bnLYHKfigxYygSQuSTFNY=
+=DUH6
+-----END PGP SIGNATURE-----
