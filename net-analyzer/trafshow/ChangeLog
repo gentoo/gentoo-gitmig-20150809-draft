@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/trafshow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.21 2005/09/25 16:55:56 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.22 2005/10/16 05:15:24 weeve Exp $
+
+  16 Oct 2005; Jason Wever <weeve@gentoo.org> trafshow-5.2.1.ebuild:
+  Stable on SPARC.
 
   25 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
   -files/trafshow-3.1-gentoo.patch, +files/trafshow-5.2.1-gcc4.diff,
