@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 edc892d866ef9bdbf1cf78465cf739a8 ChangeLog 4953
-MD5 cd22dd2a61678c08eaa0c2c0d513b31f pyxml-0.8.4.ebuild 1124
+MD5 b83e36b4dc90c3ce5840f0d2e432b7b2 files/digest-pyxml-0.8.1 63
+MD5 6a14eefbf90c139b1f9b058131cb211f files/digest-pyxml-0.8.2 63
+MD5 7d09f52601eefbf60eb70af6516bd302 files/digest-pyxml-0.8.3 63
+MD5 7d09f52601eefbf60eb70af6516bd302 files/digest-pyxml-0.8.3-r1 63
+MD5 8d74fb8f5666f5ca295d21908b4912b0 files/digest-pyxml-0.8.4 63
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 51e936111b8f233294927db592963086 pyxml-0.8.1.ebuild 649
 MD5 ca1eaa65fe8ae61e804accfbb319d803 pyxml-0.8.2.ebuild 923
-MD5 f7a99d5b12e0d068483228a17f5e65da pyxml-0.8.3.ebuild 938
 MD5 23a4a741f98c9185705fdf8e1cf7cef8 pyxml-0.8.3-r1.ebuild 1136
-MD5 7d09f52601eefbf60eb70af6516bd302 files/digest-pyxml-0.8.3-r1 63
-MD5 7d09f52601eefbf60eb70af6516bd302 files/digest-pyxml-0.8.3 63
-MD5 6a14eefbf90c139b1f9b058131cb211f files/digest-pyxml-0.8.2 63
-MD5 8d74fb8f5666f5ca295d21908b4912b0 files/digest-pyxml-0.8.4 63
-MD5 b83e36b4dc90c3ce5840f0d2e432b7b2 files/digest-pyxml-0.8.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDTxHxJrHF4yAQTrARAsUeAKCcFs406fAuDIRusHHE6V8iaBQP6QCeN65c
-rjNnEueW2Iigr/+vrAH6c+c=
-=QecT
------END PGP SIGNATURE-----
+MD5 f7a99d5b12e0d068483228a17f5e65da pyxml-0.8.3.ebuild 938
+MD5 5ede70e1fcd294fcfc7c2816080e7bdc pyxml-0.8.4.ebuild 1120
