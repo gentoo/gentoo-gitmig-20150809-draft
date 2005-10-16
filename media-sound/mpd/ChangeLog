@@ -1,10 +1,16 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.59 2005/10/16 20:28:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.60 2005/10/16 21:11:44 ticho Exp $
 
-  16 Oct 2005; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6, metadata.xml:
-  Use 'after alsasound' instead of 'use alsasound' in the initscript. Closes
-  bug #99969, reported by Mike Kelly <pioto01 at gmail.com>.
+*mpd-0.11.5-r1 (16 Oct 2005)
+
+  16 Oct 2005; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6,
+  mpd-0.11.5.ebuild, +mpd-0.11.5-r1.ebuild:
+  Modify installed initscript to need alsasound if alsa USE flag is set.
+  Closes bug #99969 by Mike Kelly <pioto01 at gmail.com>. Change ogg USE flag
+  to vorbis, bug #101877. Removed conditional dependency on libogg, as
+  libvorbis itself depends on it. 'use netmount' in initscript depend(),
+  closes bug #103458, by Nikolay Pashenkov <wildfire at ufanet.ru>.
 
   28 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -mpd-0.11.4.ebuild,
   -mpd-0.11.4-r1.ebuild, -mpd-0.11.4-r2.ebuild, mpd-0.11.5.ebuild:

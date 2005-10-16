@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5.ebuild,v 1.8 2005/10/16 21:11:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r1.ebuild,v 1.1 2005/10/16 21:11:44 ticho Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://mercury.chem.pitt.edu/~shank/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="aac alsa audiofile flac ipv6 mad mikmod unicode vorbis"
 
 DEPEND=">=media-libs/libao-0.8.4
@@ -89,8 +89,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
+	einfo "libao prior to 0.8.4 has issues with the ALSA drivers"
+	einfo "please refer to the FAQ"
+	einfo "http://www.musicpd.org/wiki/moin.cgi/MpdFAQ if you are having"
+	einfo "problems."
+	einfo
 	einfo "The default config now binds the daemon strictly to localhost,"
 	einfo "rather then all available IPs."
-	echo
 }

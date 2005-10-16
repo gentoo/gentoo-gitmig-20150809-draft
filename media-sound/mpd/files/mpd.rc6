@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/files/mpd.rc6,v 1.14 2005/10/16 20:27:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/files/mpd.rc6,v 1.15 2005/10/16 21:11:44 ticho Exp $
 
 depend() {
 	need localmount
-	after alsasound
+	use netmount
 } 
 
 checkconfig() {

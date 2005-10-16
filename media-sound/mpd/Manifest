@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2fd19497a79fd29a04330b10dce4696d ChangeLog 9269
+MD5 7f1719d6da3d723f10c3277096d86eab ChangeLog 9554
 MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5 63
-MD5 8c5298155f4be6bad9e3f8f97015e4a4 files/mpd.rc6 892
+MD5 aaa9ab8f094750f87da906c9b0e28a5c files/digest-mpd-0.11.5-r1 63
+MD5 2d49081576c54bcd26f0b069ba56df83 files/mpd.rc6 889
 MD5 9fd12e4e26817b28026335eff94d2fde metadata.xml 252
-MD5 21e38811ed50249f5b77c39602cf86f9 mpd-0.11.5.ebuild 2914
+MD5 434ab108019edd4ae3f144bc26d8f769 mpd-0.11.5-r1.ebuild 2984
+MD5 1dfda9d2f290bdeae215eaab6f4e2ca6 mpd-0.11.5.ebuild 2795
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUrgYQlM6RnzZP+IRAqGYAJ9MdhzuhEVT2rox50codYfXSl6J1ACgsVtz
-6nueVHyO71N96eMRe2ZpWXk=
-=TY0b
+iD8DBQFDUsKGQlM6RnzZP+IRAiCTAJ4ujlaH1CYNCbm5TfaajrqE6p/+wgCgs6zS
+wGz1J3qpZm4ZaHvKVD03JKI=
+=2NAZ
 -----END PGP SIGNATURE-----
