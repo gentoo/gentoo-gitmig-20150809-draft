@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.24.ebuild,v 1.8 2005/09/24 04:27:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.24.ebuild,v 1.9 2005/10/16 16:23:23 kloeri Exp $
 
 MY_P=${P}-1.3.33
 S=${WORKDIR}/${MY_P}
@@ -44,7 +44,7 @@ src_install() {
 
 	dodoc ANNOUNCE CHANGES CREDITS LICENSE NEWS README*
 	dodir /usr/share/doc/${PF}/html
-	cp -a pkg.ssldoc/* ${D}/usr/share/doc/${PF}/html
+	cp -pPR pkg.ssldoc/* ${D}/usr/share/doc/${PF}/html
 
 	insinto /etc/apache/conf/vhosts
 	doins ${FILESDIR}/ssl.default-vhost.conf
