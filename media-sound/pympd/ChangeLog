@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/pympd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.1 2005/10/16 19:15:17 ticho Exp $
+
+*pympd-0.04 (16 Oct 2005)
+
+  16 Oct 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +pympd-0.04.ebuild:
+  Initial import. Closes bug #103107, by Anton Romanov <theli at ukr.net>.
+
