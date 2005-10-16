@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.267 2005/09/25 08:32:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.268 2005/10/16 23:57:15 chainsaw Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -34,7 +34,7 @@ bindist - Flag to enable or disable options for prebuilt (GRP)  packages (eg. du
 birdstep - Adds support for the Birdstep Database Server
 blas - adds support for the virtual/blas numerical library
 bluetooth - Enable Bluetooth Support
-bmp - (EXPERIMENTAL) Adds beep media player support.  Mainly used to support bmp plugins in xmms, but can also be used for generic beem media player support.
+bmp - Adds beep media player support. Mainly used to support bmp plugins in xmms, though also used for generic BMP support.
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping
 boundschecking - add bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
