@@ -1,0 +1,17 @@
+Index: libquicktime-0.9.7/configure.ac
+===================================================================
+--- libquicktime-0.9.7.orig/configure.ac
++++ libquicktime-0.9.7/configure.ac
+@@ -264,7 +264,11 @@ have_libdv="false"
+ 
+ LIBDV_REQUIRED="0.102"
+ 
+-PKG_CHECK_MODULES(LIBDV, libdv >= $LIBDV_REQUIRED, have_libdv="true", have_libdv="false")
++AC_ARG_WITH([libdv], AC_HELP_STRING([--with-libdv], [Build with libdv support (default: check)]))
++
++if test "x$with_libdv" != "xno"; then
++	PKG_CHECK_MODULES(LIBDV, libdv >= $LIBDV_REQUIRED, have_libdv="true", have_libdv="false")
++fi
+ AC_SUBST(LIBDV_REQUIRED)
+ AC_SUBST(LIBDV_LIBS)
+ AC_SUBST(LIBDV_CFLAGS)

@@ -1,25 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b4c78b88026393e1b3e1fefb26137865 libquicktime-0.9.3-r1.ebuild 1547
-MD5 04c6e7d4ccb20b4bd86e3f5052a2a115 libquicktime-0.9.2.ebuild 1575
-MD5 5b135e9cbb01911e359400b5fb231adf ChangeLog 6114
-MD5 def6c68178313a0e1dedc14f0e12cb93 libquicktime-0.9.4.ebuild 1469
-MD5 d498ff745fbea5fa6d87f64a5a666f68 libquicktime-0.9.7.ebuild 1462
-MD5 0f8ae380dc4d39b7695928351dcc9f06 libquicktime-0.9.6-r1.ebuild 1503
-MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
-MD5 d8c28d6e35d353035732b91b0ab95234 files/libquicktime-0.9.6-cflags.patch 1806
-MD5 2945e87a4f7f7263e45ea3c392895011 files/digest-libquicktime-0.9.3-r1 70
+MD5 6d437fef5645667be06b1c88545240e0 ChangeLog 6429
 MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
-MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
+MD5 2945e87a4f7f7263e45ea3c392895011 files/digest-libquicktime-0.9.3-r1 70
+MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
 MD5 c0abede6c55083f821fd971de2a17ef1 files/digest-libquicktime-0.9.6-r1 70
-MD5 665eeaef01d9cd6ccc580202630897be files/digest-libquicktime-0.9.7 70
+MD5 665eeaef01d9cd6ccc580202630897be files/digest-libquicktime-0.9.7-r1 70
+MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
 MD5 a1721b9ba48b6453245fce4f3fe04e0b files/libquicktime-0.9.4-cflags.patch 1455
+MD5 d8c28d6e35d353035732b91b0ab95234 files/libquicktime-0.9.6-cflags.patch 1806
+MD5 71fde588b024e1d8c472afa0081010b9 files/libquicktime-0.9.7-dv.patch 651
+MD5 04c6e7d4ccb20b4bd86e3f5052a2a115 libquicktime-0.9.2.ebuild 1575
+MD5 b4c78b88026393e1b3e1fefb26137865 libquicktime-0.9.3-r1.ebuild 1547
+MD5 def6c68178313a0e1dedc14f0e12cb93 libquicktime-0.9.4.ebuild 1469
+MD5 0f8ae380dc4d39b7695928351dcc9f06 libquicktime-0.9.6-r1.ebuild 1503
+MD5 f7ed2353ff9fd2d5e44b615cbc35fd1c libquicktime-0.9.7-r1.ebuild 1494
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLHHSj5H05b2HAEkRAkklAKCI6hUxVRvoRd8VhsuISnVOCDw64wCgpRA2
-wrihXMxIH/m44/xPqIxV3SQ=
-=Gil/
+iD8DBQFDUZ6Mj5H05b2HAEkRAuAoAKClSRJQDaJ6ZB1ds7FnJz1FtUcYUwCgkQ/M
+62OiuaL/cdHb5QVw3wQfLRY=
+=/ASC
 -----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.41 2005/09/17 19:42:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.42 2005/10/16 00:27:30 flameeyes Exp $
+
+*libquicktime-0.9.7-r1 (16 Oct 2005)
+
+  16 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libquicktime-0.9.7-dv.patch, -libquicktime-0.9.7.ebuild,
+  +libquicktime-0.9.7-r1.ebuild:
+  New revision with patch to disable libdv support as per bug #108570. Also,
+  add X useflag to be able to build without X.
 
 *libquicktime-0.9.7 (26 May 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7.ebuild,v 1.2 2005/07/13 14:22:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.1 2005/10/16 00:27:30 flameeyes Exp $
 
-inherit libtool eutils
+inherit libtool eutils autotools
 
 DESCRIPTION="A library based on quicktime4linux with extensions"
 HOMEPAGE="http://libquicktime.sourceforge.net/"
@@ -12,18 +12,19 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="gtk jpeg mmx oggvorbis png dv ieee1394"
+IUSE="gtk jpeg mmx vorbis png dv ieee1394 X"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	dv? ( media-libs/libdv )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	ieee1394? (
 		sys-libs/libavc1394
 		sys-libs/libraw1394
 	)
+	X? ( virtual/x11 )
 	!virtual/quicktime"
 PROVIDE="virtual/quicktime"
 
@@ -38,21 +39,22 @@ src_unpack() {
 
 	cd ${S}
 	sed -i "s:\(have_libavcodec=\)true:\1false:g" configure.ac
-	ebegin "Regenerating configure script..."
-	autoconf || die
-	eend
+	epatch "${FILESDIR}/${P}-dv.patch"
 
+	eautoconf
 	elibtoolize
 }
 
 src_compile() {
 	econf --enable-shared \
-	      --enable-static \
-	      $(use_enable mmx) \
-	      $(use_enable gtk) \
-	      $(use_enable ieee1394 firewire)
+		--enable-static \
+		$(use_enable mmx) \
+		$(use_enable gtk) \
+		$(use_enable ieee1394 firewire) \
+		$(use_with dv libdv) \
+		$(use_with X x)
 
-	emake -j1 || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
