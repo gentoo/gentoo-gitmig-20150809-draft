@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.7 2005/07/28 20:54:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.8 2005/10/16 15:19:17 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -159,6 +159,7 @@ src_install() {
 	local statedir="${GAMES_STATEDIR}/${PN}"
 	keepdir "${statedir}/save"
 	mv "${D}/${HACKDIR}/"{record,logfile,perm} "${D}/${statedir}/"
+	make_desktop_entry nethack "Nethack"
 
 	prepgamesdirs
 	chmod -R 660 "${D}/${statedir}"

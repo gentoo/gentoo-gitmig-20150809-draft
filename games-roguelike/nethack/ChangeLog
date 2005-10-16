@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.15 2005/07/28 20:54:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.16 2005/10/16 15:19:17 wolf31o2 Exp $
+
+  16 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  nethack-3.4.3-r1.ebuild:
+  Added desktop entry using make_desktop_entry and closing bug #100788.
 
   28 Jul 2005; Caleb Tennis <caleb@gentoo.org> nethack-3.4.3-r1.ebuild:
   made qt dep qt3 explicit per bug #100235
