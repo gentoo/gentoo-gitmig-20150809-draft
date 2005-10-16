@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.07_alpha3.ebuild,v 1.7 2004/11/04 16:38:44 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.07_alpha3.ebuild,v 1.8 2005/10/16 15:16:44 kloeri Exp $
 
 DESCRIPTION="A python wrapper for the OpenSSL crypto library"
 HOMEPAGE="http://www.post1.com/home/ngps/m2/"
@@ -21,7 +21,7 @@ src_install () {
 	distutils_src_install
 	# can't dodoc, doesn't handle subdirs
 	dodir /usr/share/doc/${PF}/example
-	cp -a demo/* ${D}/usr/share/doc/${PF}/example
+	cp -pPR demo/* ${D}/usr/share/doc/${PF}/example
 	dodoc BUGS CHANGES STORIES
 	dohtml -r doc/*
 }
