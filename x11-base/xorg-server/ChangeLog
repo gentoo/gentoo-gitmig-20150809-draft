@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.58 2005/10/16 20:04:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.59 2005/10/17 17:47:25 spyderous Exp $
+
+  17 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.1_p20051013-r1.ebuild:
+  (#109354) In some mystical way all the dependency changes got reverted in
+  the new revision.
 
   16 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -files/0.99.1-r10-check-for-glproto.patch,
