@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac00214bcbd04bc1612d031e23320275 ChangeLog 2548
 MD5 ab7a0893e657a22aee60e1bf9e5ead5f files/digest-rvm-1.11 60
 MD5 fdd307ea78fc900a01e57b8151f34d4e metadata.xml 224
 MD5 e07e42f32e14813bd40128a22ec6e2ee rvm-1.11.ebuild 636
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDU/n3MGnpIbeahxwRAnpXAJ9Trj8hkmAwLEqTRFCrhl3JJjEtrACfdVLk
+GWIZTEE8miUx7ZCNLnnEbrM=
+=2a1h
+-----END PGP SIGNATURE-----
