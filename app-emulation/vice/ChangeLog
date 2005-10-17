@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.26 2005/10/11 06:35:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.27 2005/10/17 21:43:04 hanno Exp $
+
+  17 Oct 2005; Hanno Boeck <hanno@gentoo.org> vice-1.17.ebuild:
+  Added all USE-flags to IUSE and added missing ffmpeg-dep.
 
 *vice-1.17 (11 Oct 2005)
 
