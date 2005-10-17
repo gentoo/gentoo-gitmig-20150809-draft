@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.3 2005/09/30 01:24:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.4 2005/10/17 21:24:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -33,9 +33,9 @@ RDEPEND="virtual/x11
 	>=media-libs/libsdl-1.2.5
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
-S="${WORKDIR}/nwn"
-dir="${GAMES_PREFIX_OPT}/${PN/-data}"
-Ddir="${D}/${dir}"
+S=${WORKDIR}/nwn
+dir=${GAMES_PREFIX_OPT}/nwn
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	if use sou && use hou
@@ -55,12 +55,12 @@ pkg_setup() {
 }
 
 src_unpack() {
-	mkdir ${S}
-	cd ${S}
+	mkdir "${S}"
+	cd "${S}"
 	unpack nwclient129.tar.gz
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	use nowin && unpack nwresources129.tar.gz
-	cd ${S}
+	cd "${S}"
 	rm -rf override/*
 	# the following is so ugly, please pretend it doesnt exist
 	declare -a Aarray=(${A})
@@ -87,16 +87,23 @@ src_unpack() {
 		unzip -o ${CDROM_ROOT}/Language_data.zip
 		unzip -o ${CDROM_ROOT}/Language_update.zip
 	fi
+	sed -i -e '\:^./nwmain .*:i \
+if [[ -f ./nwmouse.so ]]; then \
+	export XCURSOR_PATH="$(pwd)" \
+	export XCURSOR_THEME=nwmouse \
+	export LD_PRELOAD=./nwmouse.so:$LD_PRELOAD \
+fi \
+	' "${S}/nwn"
 }
 
 src_install() {
-	dodir ${dir}
+	dodir "${dir}"
 	# Since the movies don't play anyway, we'll remove them
-	rm -rf ${S}/movies
-	mkdir -p ${S}/dmvault ${S}/hak ${S}/portraits
-	rm -rf ${S}/dialog.tlk ${S}/dialog.TLK ${S}/dmclient ${S}/nwmain \
-		${S}/nwserver  ${S}/nwm/* ${S}/SDL-1.2.5 ${S}/fixinstall
-	mv ${S}/* ${Ddir}
+	rm -rf "${S}"/movies
+	mkdir -p "${S}"/dmvault "${S}"/hak "${S}"/portraits
+	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dmclient "${S}"/nwmain \
+		"${S}"/nwserver  "${S}"/nwm/* "${S}"/SDL-1.2.5 "${S}"/fixinstall
+	mv "${S}"/* "${Ddir}"
 	keepdir ${dir}/servervault
 	keepdir ${dir}/scripttemplates
 	keepdir ${dir}/saves
@@ -122,7 +129,7 @@ src_install() {
 	then
 		chmod a-x ${Ddir}/data/patch.bif chmod a-x${Ddir}/patch.key
 	fi
-	doicon ${FILESDIR}/nwn.png
+	doicon "${FILESDIR}"/nwn.png
 	prepgamesdirs
 	chmod -R g+rwX ${Ddir}/saves ${Ddir}/localvault ${Ddir}/dmvault \
 		2>&1 > /dev/null || die "could not chmod"
