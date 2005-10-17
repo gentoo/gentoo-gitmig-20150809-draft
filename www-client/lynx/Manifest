@@ -1,6 +1,5 @@
-MD5 5a6491c8c51488abc0918fb5b0c6f572 ChangeLog 6771
+MD5 5a601a177fd354a8e3dcc0a0be8c16f6 ChangeLog 6872
 MD5 a1e9c5cf250af6de957e1986fc815ac7 files/digest-lynx-2.8.5-r1 140
 MD5 62a95dce16ec74f3ecb3bc3df818fbbc files/lynx-2.8.5-darwin.patch 652
-MD5 b0b269efc9ff697e40a10f99919599ea files/lynx2.8.4rel.1a.patch 7515
 MD5 86f376657682fe47a4e2433654488668 lynx-2.8.5-r1.ebuild 1910
 MD5 acaa86fdf4e340e1180ce324110007cd metadata.xml 224
