@@ -1,30 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8cd935fe9371d89682261cf0b47096f1 kdepim-3.4.1-r2.ebuild 1091
+MD5 74f0231c3966c44b4e8cfd5aa18887d5 kdepim-3.4.1-r1.ebuild 1008
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 13ff8d47a95d1b4f4e870bcbea1e162b kdepim-3.3.2.ebuild 673
-MD5 76b3776e2267fb61c040baede74cbcfc kdepim-3.4.2-r1.ebuild 1103
-MD5 403cf4b40608c3fd05e41860aa074a60 kdepim-3.3.2-r1.ebuild 739
-MD5 4000bb872fe5ff6ae994e965aa5efa98 kdepim-3.5.0_beta2.ebuild 674
-MD5 e54ada1924345a94de83f8f6095bd9e0 kdepim-3.5_beta1.ebuild 672
-MD5 b774aef7294ad92319f06fbe21ebd5a3 ChangeLog 22281
+MD5 bd191f576973b483619422b0644f32d1 ChangeLog 22390
+MD5 00f99ae1a1b1e152e071f2f91da7e96f kdepim-3.4.2.ebuild 973
 MD5 a252026b91b7bfe04775d6853857eb00 kdepim-3.4.1.ebuild 881
 MD5 afa4ffbf573c8037c76ec12038e4830b kdepim-3.4.3.ebuild 869
-MD5 00f99ae1a1b1e152e071f2f91da7e96f kdepim-3.4.2.ebuild 973
-MD5 74f0231c3966c44b4e8cfd5aa18887d5 kdepim-3.4.1-r1.ebuild 1008
-MD5 aa082414a507cddea10a24461089ed0c kdepim-3.4.1-r2.ebuild 1091
-MD5 6c76eec1332f6cc580b1b0fe566039fc files/digest-kdepim-3.5.0_beta2 68
-MD5 dbcc0fbc697ad83e081e07c4f7a3c58f files/kdepim-3.4.2-gcc32.patch 5997
-MD5 0324965cf9c67cc4750d7a14cec3ef1f files/kdepim-3.4.1-kpilot-fix.patch 4635
-MD5 0dc20eebce2c8cb4475f065683ae24ff files/kdepim-3.4.2-partnode.patch 756
-MD5 465fb4ad98b38e7c5328429eaabb1000 files/kmail-3.4.1-shift+click-crash.diff 516
-MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kdepim-3.5_beta1 68
-MD5 1e18066c2900b78b7dad11a29ed0f002 files/digest-kdepim-3.4.1-r1 67
-MD5 1e18066c2900b78b7dad11a29ed0f002 files/digest-kdepim-3.4.1-r2 67
-MD5 b6a29865e7aefe8e3858bd65de651d3d files/kdepim-3.4.1-akregator-unread.patch 673
-MD5 1e18066c2900b78b7dad11a29ed0f002 files/digest-kdepim-3.4.1 67
-MD5 c516924ee249a2899621263d30ac3676 files/kdepim-3.3.2-kmail-imap-preview.diff 667
+MD5 76b3776e2267fb61c040baede74cbcfc kdepim-3.4.2-r1.ebuild 1103
+MD5 e54ada1924345a94de83f8f6095bd9e0 kdepim-3.5_beta1.ebuild 672
+MD5 4000bb872fe5ff6ae994e965aa5efa98 kdepim-3.5.0_beta2.ebuild 674
+MD5 403cf4b40608c3fd05e41860aa074a60 kdepim-3.3.2-r1.ebuild 739
+MD5 13ff8d47a95d1b4f4e870bcbea1e162b kdepim-3.3.2.ebuild 673
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kdepim-3.4.3 67
-MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2 66
-MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
 MD5 cdef4c59d15d12f305392988443237bd files/kdepim-3.4-configure.patch 4618
+MD5 1e18066c2900b78b7dad11a29ed0f002 files/digest-kdepim-3.4.1-r2 67
+MD5 465fb4ad98b38e7c5328429eaabb1000 files/kmail-3.4.1-shift+click-crash.diff 516
+MD5 0324965cf9c67cc4750d7a14cec3ef1f files/kdepim-3.4.1-kpilot-fix.patch 4635
+MD5 1e18066c2900b78b7dad11a29ed0f002 files/digest-kdepim-3.4.1-r1 67
+MD5 dbcc0fbc697ad83e081e07c4f7a3c58f files/kdepim-3.4.2-gcc32.patch 5997
 MD5 0ff2af5e4e7ab4d292ff00305302b6b2 files/digest-kdepim-3.4.2 67
+MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-kdepim-3.5_beta1 68
+MD5 c516924ee249a2899621263d30ac3676 files/kdepim-3.3.2-kmail-imap-preview.diff 667
+MD5 6c76eec1332f6cc580b1b0fe566039fc files/digest-kdepim-3.5.0_beta2 68
 MD5 0ff2af5e4e7ab4d292ff00305302b6b2 files/digest-kdepim-3.4.2-r1 67
 MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2-r1 66
+MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
+MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2 66
+MD5 b6a29865e7aefe8e3858bd65de651d3d files/kdepim-3.4.1-akregator-unread.patch 673
+MD5 0dc20eebce2c8cb4475f065683ae24ff files/kdepim-3.4.2-partnode.patch 756
+MD5 1e18066c2900b78b7dad11a29ed0f002 files/digest-kdepim-3.4.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVCcuJrHF4yAQTrARAioqAJ9wZWd+y8WjJEhalMeUxua4M6bMtQCgzltu
+VHBQMfaIFVGEuMUupgJm5r0=
+=sPHN
+-----END PGP SIGNATURE-----
