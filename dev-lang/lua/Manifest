@@ -16,14 +16,14 @@ MD5 157b7a36290e2e020146ed958b570f51 files/lua-ppc-macos-Makefile.patch 5873
 MD5 9495bd1aa03bc8a99e5d0dba5d7285e7 lua-4.0.1.ebuild 776
 MD5 46f8ba718cf6c2f210a03e8999c9178f lua-4.0.ebuild 763
 MD5 1af7a1b2790ca70a77d1c27efb2dfc2d lua-5.0.1_beta20031003-r2.ebuild 2246
-MD5 1b118fa77024895830d7dc99d888be99 lua-5.0.2-r1.ebuild 2359
-MD5 c630eaa5da22c003d4b86247d8ad59db lua-5.0.2.ebuild 2886
+MD5 b97ded73064eeba714d145226aa889f9 lua-5.0.2-r1.ebuild 2364
+MD5 9f2e65ab3be990383fc8bbf1ad0f2a8a lua-5.0.2.ebuild 2890
 MD5 c14409a08c938747f51f94bed9ffc6ac lua-5.0.ebuild 1027
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVDkBgIKl8Uu19MoRAtt7AJ9n6ucSNKWcrbJpxERSGB2w4B7o1ACeLyxy
-l3aidMAI+ysx25InWjpYUWc=
-=pUbW
+iD8DBQFDVDr/gIKl8Uu19MoRAnw6AJ9/IVgqXI7pPdXSI/i5G9FS13KNyQCdGnl9
+aaC8zBTXjEbKhBnxlW9kqhc=
+=6vlr
 -----END PGP SIGNATURE-----
