@@ -1,0 +1,22 @@
+Index: include/configclass.inc
+===================================================================
+--- include/configclass.inc	(revision 328)
++++ include/configclass.inc	(working copy)
+@@ -190,7 +190,7 @@
+    // Tool path locations
+ 
+    var $svnlook = "svnlook";
+-   var $svn = "svn --non-interactive";
++   var $svn = "svn --non-interactive --config-dir /tmp";
+    var $diff = "diff";
+    var $enscript ="enscript";
+    var $sed = "sed";
+@@ -436,7 +436,7 @@
+    
+    function setSVNCommandPath($path)
+    {
+-      $this->setPath($this->svn, $path, "svn");
++      $this->setPath($this->svn, $path, "svn --non-interactive --config-dir /tmp");
+       $this->setPath($this->svnlook, $path, "svnlook");
+    }
+    

@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.7 2005/09/05 10:19:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.8 2005/10/17 13:00:07 uberlord Exp $
+
+*websvn-1.61-r3 (17 Oct 2005)
+
+  17 Oct 2005; Roy Marples <uberlord@gentoo.org>
+  +files/websvn-1.61-german.patch, +files/websvn-1.61-issue32.patch,
+  +websvn-1.61-r3.ebuild:
+  Fixed an issue with German characters - thanks to Lars Teifland for an almost
+  working patch, #65351
+  
+  Fixed the error "svn: Can't check path '/root/.subversion': Permission denied"
+  (websvn issue 32)
 
 *websvn-1.61-r2 (05 Sep 2005)
 
