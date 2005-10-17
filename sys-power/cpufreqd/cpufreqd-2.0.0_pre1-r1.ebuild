@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_pre1-r1.ebuild,v 1.1 2005/10/17 08:14:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_pre1-r1.ebuild,v 1.2 2005/10/17 09:11:20 brix Exp $
 
 inherit eutils
 
@@ -26,8 +26,10 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 
-	cd ${WORKDIR}/nvclock${NVCLOCK_VERSION}
-	epatch ${FILESDIR}/nvclock${NVCLOCK_VERSION}-fd.patch
+	if use nvidea; then
+		cd ${WORKDIR}/nvclock${NVCLOCK_VERSION}
+		epatch ${FILESDIR}/nvclock${NVCLOCK_VERSION}-fd.patch
+	fi
 
 	cd ${S}
 	epatch ${FILESDIR}/${MY_P}-nv.patch
