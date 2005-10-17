@@ -1,7 +1,8 @@
-MD5 b6322ef0ced3a335746762c6949eb274 ChangeLog 11553
+MD5 340d4d024ba575d96efdcf3037d1d7a4 ChangeLog 11666
 MD5 ba82ba9c82d1fc2a39e107b672c55c69 dspam-3.2.7.ebuild 15561
 MD5 7dab4d4f38c0ff375151cb290d4821a7 dspam-3.4.8.ebuild 19650
 MD5 392cd158b99d8553da925dca65c89a2b dspam-3.4.9.ebuild 19680
+MD5 b5d04ec9169981fc4625d3075458d6e0 dspam-3.6.0.ebuild 17621
 MD5 fdc9c985d20f6faab1364ca18425efdb dspam-3.6_rc1.ebuild 17659
 MD5 efd8999118988e78bf1ccc41603e1f2d dspam-3.6_rc3.ebuild 17659
 MD5 c12a54112c6fec3530a7b1a368d04ac8 files/README.postfix 309
@@ -11,6 +12,7 @@ MD5 f2f86e8f7ab440c8537f40fa18a0ee43 files/crontab.mysql 118
 MD5 7735956f416bd58bfcbeee99af43bea0 files/digest-dspam-3.2.7 63
 MD5 fc1ec0be04a47c78e40e3f277e626ba9 files/digest-dspam-3.4.8 129
 MD5 bf443ca4bd218fa9d4b8975bf450c347 files/digest-dspam-3.4.9 129
+MD5 03b69dda833751bdda04e5413a9305e0 files/digest-dspam-3.6.0 129
 MD5 fa4e5904b26e898f888f287387c42b7b files/digest-dspam-3.6_rc1 131
 MD5 3610a1a09b3a045e8794c7a31419d34f files/digest-dspam-3.6_rc3 131
 MD5 34841f2d2c9d6e057b9839bbe354e34a files/dspam.cron 3478
