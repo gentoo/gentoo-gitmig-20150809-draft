@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.83 2005/10/02 16:49:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.84 2005/10/17 14:52:06 ranger Exp $
+
+  17 Oct 2005; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking scim-1.4.2 for bug 109538
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> scim-1.4.2.ebuild:
   Stable on ppc.
