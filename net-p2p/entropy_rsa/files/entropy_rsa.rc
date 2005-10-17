@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	need net
+	[[ ${STORE_TYPE} == "mysql" ]] && need mysql
+}
+
+start() {
+	ebegin "Starting ENTROPY/RSA"
+	cd ~entropy || return 1
+	sudo -u ${ENTROPY_USER} entropy_rsa
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ENTROPY/RSA"
+	cd ~entropy || return 1
+	entropy_rsa --kill
+	eend $?
+}

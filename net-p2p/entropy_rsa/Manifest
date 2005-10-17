@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cffbe973d5663a3e0e12267f16b2cdb0 ChangeLog 357
+MD5 a7022edae25f53acf435f3d327ac6692 entropy_rsa-0.9.1.439.ebuild 2207
+MD5 97484eec85be95860492aeda9fb1d633 files/digest-entropy_rsa-0.9.1.439 70
+MD5 fd9a83213871cf2ccfd572b941702827 files/entropy_rsa.rc 407
+MD5 de97a7df967b27a3afab0d9ba6022469 files/mysql.conf 1189
+MD5 9be079765d601cf8bec0033958b169cb metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUwa6gIKl8Uu19MoRAplcAJ9R5gJdILOcaEPnSW6mFayjKs/iHgCeM+Wr
+zjeVYNqpoU7xMoXgn3ShjBk=
+=8fhH
+-----END PGP SIGNATURE-----
