@@ -1,19 +1,29 @@
-MD5 3dd4ae5273436a1055548ea7d7827532 lua-5.0.2.ebuild 2878
-MD5 1af7a1b2790ca70a77d1c27efb2dfc2d lua-5.0.1_beta20031003-r2.ebuild 2246
-MD5 46f8ba718cf6c2f210a03e8999c9178f lua-4.0.ebuild 763
-MD5 9495bd1aa03bc8a99e5d0dba5d7285e7 lua-4.0.1.ebuild 776
-MD5 c14409a08c938747f51f94bed9ffc6ac lua-5.0.ebuild 1027
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 18e00590a88feafbd330e55642cd4b23 ChangeLog 5212
-MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 b161b713ce4925a3fa8cce51e4dc503e lua-5.0.2-r1.ebuild 2350
-MD5 6365486c1e78a5fc73e34a3bda3feef7 files/lua-4.0-config.patch 840
-MD5 652889fa621a25d6dc41ce0eb76bd5c2 files/digest-lua-4.0.1 61
-MD5 7ada6b04da7ea1d6e5128accf7a3c355 files/digest-lua-5.0.2 61
-MD5 157b7a36290e2e020146ed958b570f51 files/lua-ppc-macos-Makefile.patch 5873
-MD5 7ada6b04da7ea1d6e5128accf7a3c355 files/digest-lua-5.0.2-r1 61
-MD5 74b0268bdadf862659a5a088cf5f424f files/lua-5.0.2-pic.patch 1243
-MD5 f38ae8bf37049562a9b36c30d90eea78 files/digest-lua-5.0.1_beta20031003-r2 61
 MD5 7bb76903226a11484013e9657e217025 files/digest-lua-4.0 55
+MD5 652889fa621a25d6dc41ce0eb76bd5c2 files/digest-lua-4.0.1 61
 MD5 766235af7b9cb542daa81331dd026bab files/digest-lua-5.0 59
+MD5 f38ae8bf37049562a9b36c30d90eea78 files/digest-lua-5.0.1_beta20031003-r2 61
+MD5 7ada6b04da7ea1d6e5128accf7a3c355 files/digest-lua-5.0.2 61
+MD5 7ada6b04da7ea1d6e5128accf7a3c355 files/digest-lua-5.0.2-r1 61
+MD5 6365486c1e78a5fc73e34a3bda3feef7 files/lua-4.0-config.patch 840
 MD5 48a12e850720480ed45115452657c493 files/lua-5.0.1-pic.patch 1306
 MD5 f3cf4211cea7a402f31def33b218561e files/lua-5.0.2-gentoo.patch 524
+MD5 74b0268bdadf862659a5a088cf5f424f files/lua-5.0.2-pic.patch 1243
+MD5 157b7a36290e2e020146ed958b570f51 files/lua-ppc-macos-Makefile.patch 5873
+MD5 9495bd1aa03bc8a99e5d0dba5d7285e7 lua-4.0.1.ebuild 776
+MD5 46f8ba718cf6c2f210a03e8999c9178f lua-4.0.ebuild 763
+MD5 1af7a1b2790ca70a77d1c27efb2dfc2d lua-5.0.1_beta20031003-r2.ebuild 2246
+MD5 1b118fa77024895830d7dc99d888be99 lua-5.0.2-r1.ebuild 2359
+MD5 c630eaa5da22c003d4b86247d8ad59db lua-5.0.2.ebuild 2886
+MD5 c14409a08c938747f51f94bed9ffc6ac lua-5.0.ebuild 1027
+MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVDkBgIKl8Uu19MoRAtt7AJ9n6ucSNKWcrbJpxERSGB2w4B7o1ACeLyxy
+l3aidMAI+ysx25InWjpYUWc=
+=pUbW
+-----END PGP SIGNATURE-----
