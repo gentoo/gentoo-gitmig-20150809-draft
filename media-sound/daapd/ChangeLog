@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/daapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.16 2005/10/02 11:15:35 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.17 2005/10/17 11:44:34 flameeyes Exp $
+
+*daapd-0.2.4a-r1 (17 Oct 2005)
+
+  17 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/daapd-0.2.3d-gentoo.patch, +files/daapd.init.d-2,
+  -files/daapd.init.d, -daapd-0.2.3d-r1.ebuild, -daapd-0.2.4a.ebuild,
+  +daapd-0.2.4a-r1.ebuild:
+  Make sure user-defined compiler, CXXFLAGS and useflags are respected (fixes
+  bug #96818 in a different way). If howl is in useflag, make the service
+  depend on mDNSResponder, else it doesn't work. New init.d, style fixed and
+  make sure it does not fail on successful stop. Remove old versions.
 
 *daapd-0.2.4a (02 Oct 2005)
 
