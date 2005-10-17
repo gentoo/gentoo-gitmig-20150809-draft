@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.1.ebuild,v 1.2 2005/10/02 16:27:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/Xorgautoconfig-0.2.1.ebuild,v 1.3 2005/10/17 18:54:14 josejx Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Xorgautconfig generates xorg.conf files for PPC based computers."
 HOMEPAGE="http://ppc.gentoo.org"
@@ -19,6 +19,7 @@ RDEPEND="sys-apps/pciutils"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/pciutils.patch
 	sed -i -e "/^CC=/s:gcc:$(tc-getCC):" Makefile || die "Can't replace CC"
 }
 

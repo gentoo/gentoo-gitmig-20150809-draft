@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/Xorgautoconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.5 2005/10/02 16:27:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/Xorgautoconfig/ChangeLog,v 1.6 2005/10/17 18:54:14 josejx Exp $
+
+  17 Oct 2005; Joseph Jezak <josejx@gentoo.org> +files/pciutils.patch,
+  Xorgautoconfig-0.2.1.ebuild:
+  Added word/byte type fix for new pciutils.
 
   02 Oct 2005; Joseph Jezak <josejx@gentoo.org> Xorgautoconfig-0.2.1.ebuild:
   Marked ppc stable.
