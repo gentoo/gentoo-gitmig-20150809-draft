@@ -1,4 +1,4 @@
-MD5 8a9a2f1bd60a98dbf6ac73dc0d0aacc6 ccrypt-1.7.ebuild 629
-MD5 04ac4813c4d771c0998f036513c81efb ChangeLog 798
-MD5 59af1ba132e999b7d1c7b6d42ed4b1e7 metadata.xml 248
+MD5 3edfb7fff4c40cc9c325ef2dcb4415f9 ChangeLog 899
+MD5 03da8d084415a757c77b7ee361499dd7 ccrypt-1.7.ebuild 624
 MD5 bda761df87b02dfdba73a468a2c7b33c files/digest-ccrypt-1.7 62
+MD5 59af1ba132e999b7d1c7b6d42ed4b1e7 metadata.xml 248
