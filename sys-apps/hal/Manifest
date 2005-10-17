@@ -1,33 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a146b79d18a689bbc8a96b81f74c7f6 hal-0.4.7-r2.ebuild 3455
-MD5 a5326d72a3951062c8bd4542ba864f4a hal-0.5.4.ebuild 3377
-MD5 0c43f691d7e607d57a1ab2077d745751 hal-0.4.8.ebuild 3375
-MD5 2cf5b3c9219c87b1d9aee01f4f5f19bb hal-0.4.5-r2.ebuild 3118
-MD5 8dda1b4bd7c60475ca876cf4b8aca8b1 ChangeLog 6974
-MD5 a60767d83157413d549c69b98fac962c metadata.xml 303
-MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
-MD5 64253ef1f2dcf68b2d82429026280085 files/hal-0.4.7-dont_add_device_twice-r1.patch 691
-MD5 442da36fd75002bb8300b0fcb65a1371 files/hal-0.4.5-vat_ntfs_labels.patch 2874
-MD5 c1624c9456f164c1b611e3ab22fb105d files/hal-0.4.7-device_info_leak.patch 2203
+MD5 62920c9866cbed87777a4c60869c231b ChangeLog 7120
+MD5 40a7b45f127bfdcacaa142660ad8b5f9 files/0.5-hald.rc 537
 MD5 ada3b2801b82813b4f10fd6f6caf9d6f files/digest-hal-0.4.5-r2 62
 MD5 3031a9fe74f43859c313d5f3076e68cd files/digest-hal-0.4.7-r2 62
-MD5 7ee3fd5b5ee117f14633350e5b335c2f files/hal-unmount.dev 397
-MD5 a4d2c4884a3dedf2450cf37508d3c122 files/hal-0.4.7-vfat_mount_utf8.patch 670
 MD5 2bbbb519c89110dfec96cf63cf541afc files/digest-hal-0.4.8 62
 MD5 27cab5d91e93d8b692246d0ce4110122 files/digest-hal-0.5.4 62
+MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
+MD5 b0e12a62ce698e1eb2a32139498330cd files/hal-0.4.5-gentoo_gphoto2_usermap.patch 817
+MD5 f3ba6ada28cf947f8a7b7ec8fdd708ba files/hal-0.4.5-net_lockup.patch 2429
+MD5 442da36fd75002bb8300b0fcb65a1371 files/hal-0.4.5-vat_ntfs_labels.patch 2874
+MD5 c1624c9456f164c1b611e3ab22fb105d files/hal-0.4.7-device_info_leak.patch 2203
+MD5 64253ef1f2dcf68b2d82429026280085 files/hal-0.4.7-dont_add_device_twice-r1.patch 691
+MD5 58ed07e2de5e898a1e4eeedf595ddb06 files/hal-0.4.7-sys_floppy_detection.patch 568
+MD5 a4d2c4884a3dedf2450cf37508d3c122 files/hal-0.4.7-vfat_mount_utf8.patch 670
 MD5 e3ecbfe57c0833d32f0ea57a0de58aee files/hal-0.4.8-fix_dvdram.patch 465
 MD5 25cb64ec27a48a80126b6de5ff6c3340 files/hal-0.5.1-old_storage_policy.patch 856
-MD5 b0e12a62ce698e1eb2a32139498330cd files/hal-0.4.5-gentoo_gphoto2_usermap.patch 817
-MD5 40a7b45f127bfdcacaa142660ad8b5f9 files/0.5-hald.rc 537
-MD5 f3ba6ada28cf947f8a7b7ec8fdd708ba files/hal-0.4.5-net_lockup.patch 2429
-MD5 58ed07e2de5e898a1e4eeedf595ddb06 files/hal-0.4.7-sys_floppy_detection.patch 568
-MD5 a0ce1c268e0b7d0967ec7b8e0d0d26d2 files/hal-0.4.1-old_storage_policy.patch 1216
+MD5 7ee3fd5b5ee117f14633350e5b335c2f files/hal-unmount.dev 397
+MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
+MD5 2cf5b3c9219c87b1d9aee01f4f5f19bb hal-0.4.5-r2.ebuild 3118
+MD5 1a146b79d18a689bbc8a96b81f74c7f6 hal-0.4.7-r2.ebuild 3455
+MD5 0c43f691d7e607d57a1ab2077d745751 hal-0.4.8.ebuild 3375
+MD5 5e420f80c5c9cdaabfbf920679b0ce3c hal-0.5.4.ebuild 3413
+MD5 a60767d83157413d549c69b98fac962c metadata.xml 303
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKe/3omPajV0RnrERAna6AKCBJZb4D3n/TqZvFS77VnbTceOngQCfbwYy
-2g/3P9doOUc/smHT4FVD+cw=
-=1gIQ
+iD8DBQFDU9DIBtvusYtCZMsRAldrAJ4gFpwDIzRnwxhFmgNX8wY5JcVrgACfdqku
+S/J5z8nzBbLz61qiwYsw0l8=
+=g4I/
 -----END PGP SIGNATURE-----
