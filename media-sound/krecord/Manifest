@@ -1,4 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 6d77e29d64d1338babbde807ff396a8a krecord-1.14.ebuild 548
-MD5 41ced037e2e6af622b19a5304fb5a656 ChangeLog 972
+MD5 c5f2e5325f37148310a9ad27a01bb242 krecord-1.16.ebuild 791
+MD5 11cbc6d798e53c7ea1eecac1535f9121 ChangeLog 1104
 MD5 2fab5ef6807980c4614875cc700cac45 files/digest-krecord-1.14 63
+MD5 548cd8736591da19d5005b3c86c98cbd files/digest-krecord-1.16 63
