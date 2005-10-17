@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.45 2005/09/17 09:57:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.46 2005/10/17 10:14:45 brix Exp $
+
+*hostap-driver-0.4.5 (17 Oct 2005)
+
+  17 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +files/hostap-driver-0.4.5-firmware.patch, +hostap-driver-0.4.5.ebuild:
+  New development snapshot, bug #108319.
 
   17 Sep 2005; Simon Stelling <blubb@gentoo.org> hostap-driver-0.4.4.ebuild:
   added ~amd64 keyword
