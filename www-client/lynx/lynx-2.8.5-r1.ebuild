@@ -1,22 +1,25 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5.ebuild,v 1.5 2005/10/12 12:25:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r1.ebuild,v 1.1 2005/10/17 11:58:37 seemant Exp $
 
 inherit eutils flag-o-matic
 
-#MY_PV=${PV/.1d/rel.1}
+SEC_V=2005-3120
+
 MY_P=${P/-/}
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.browser.org/"
-SRC_URI="ftp://lynx.isc.org/${MY_P}/${MY_P}.tar.bz2"
+SRC_URI="ftp://lynx.isc.org/${MY_P}/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/${P}-CAN-${SEC_V}.patch.bz2
+	mirror://gentoo/${P}-CAN-${SEC_V}.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE="ssl nls ipv6"
 
-DEPEND=">=sys-libs/ncurses-5.1
-	>=sys-libs/zlib-1.1.3
+DEPEND="sys-libs/ncurses
+	sys-libs/zlib
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 PROVIDE="virtual/textbrowser"
@@ -24,15 +27,14 @@ PROVIDE="virtual/textbrowser"
 S=${WORKDIR}/${PN}${PV//./-}
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A}; cd ${S}
+	epatch ${WORKDIR}/${P}-CAN-${SEC_V}.patch
 	use userland_Darwin && epatch ${FILESDIR}/${P}-darwin.patch
 }
 
 src_compile() {
 	local myconf
-	use nls && myconf="${myconf} --enable-nls"
 	use ssl && myconf="${myconf} --with-ssl=yes"
-	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	append-flags -DANSI_VARARGS
 
@@ -49,14 +51,15 @@ src_compile() {
 		--enable-scrollbar \
 		--enable-included-msgs \
 		--with-zlib \
+		$(use_enable nls) \
+		$(use_enable ipv6) \
 		${myconf} || die
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	make prefix=${D}/usr datadir=${D}/usr/share mandir=${D}/usr/share/man \
-		libdir=${D}/etc/lynx install || die
+	einstall libdir=${D}/etc/lynx || die
 
 	dosed "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help/lynx_help_main.html|" \
 			/etc/lynx/lynx.cfg
