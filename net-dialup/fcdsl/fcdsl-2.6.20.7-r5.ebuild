@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r5.ebuild,v 1.1 2005/06/02 20:12:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r5.ebuild,v 1.2 2005/10/17 16:14:57 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -125,7 +125,7 @@ pkg_postinst() {
 	einfo
 	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
 	einfo "    etc-update"
-	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
+	einfo "    emerge --config '=${CATEGORY}/${PF}'"
 	einfo "    /etc/init.d/capi start"
 	einfo "    drdsl"
 	ewarn
