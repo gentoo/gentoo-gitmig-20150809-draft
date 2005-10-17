@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.1.ebuild,v 1.2 2005/10/15 17:22:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.1.ebuild,v 1.3 2005/10/17 04:04:22 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -56,7 +56,7 @@ src_unpack() {
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		${S}/docs/Makefile.am ${S}/docs/html/Makefile.am
 
-	eautoreconf 
+	eautoreconf
 	elibtoolize	# fix invalid paths in .la files of plugins
 }
 

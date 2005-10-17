@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 5b4f88f8e2737c356b62a799eef9eaf9 transcode-0.6.14-r3.ebuild 4031
+MD5 8e40a02609ceb8f6b6ee760ee469f881 transcode-1.0.1.ebuild 3843
 MD5 838b16395516e247ed194a617a627939 ChangeLog 22183
+MD5 425d9b33697acb6d0bed99a1c37e6557 transcode-0.6.14-r2.ebuild 4219
 MD5 8e1251c76b508dfdfe0e4f0c0b166540 files/digest-transcode-0.6.14-r2 144
 MD5 03b7d892f34025e0c5854e0977b5fb49 files/digest-transcode-0.6.14-r3 144
 MD5 790de38f84754a5a010ba5823d8b9770 files/digest-transcode-1.0.1 68
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 425d9b33697acb6d0bed99a1c37e6557 transcode-0.6.14-r2.ebuild 4219
-MD5 5b4f88f8e2737c356b62a799eef9eaf9 transcode-0.6.14-r3.ebuild 4031
-MD5 3d76e1fcdf55c214daf11545f59f4c07 transcode-1.0.1.ebuild 3844
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUU/6j5H05b2HAEkRAg/xAKCGLnIooylW6d8Sjlrql1wjvpQfOwCfYkYt
-3rYQdIK0KPTL+aC+lzgj9aU=
-=bniR
------END PGP SIGNATURE-----
