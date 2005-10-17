@@ -1,4 +1,14 @@
-MD5 3872fa74b3ff487a464cd3fb6ced6355 ChangeLog 657
-MD5 078d4daf4f9a35eb89c22961d2150812 fortune-mod-pqf-6.0.ebuild 762
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef94dc2be06e83cf4c47826611de3956 ChangeLog 732
 MD5 2bc15e79b919923f3f7a61bb57edbdc5 files/digest-fortune-mod-pqf-6.0 52
+MD5 fcdc688d31ba4b039c97a87384806d2b fortune-mod-pqf-6.0.ebuild 766
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDU8sRomPajV0RnrERAi1JAJ0XvcAfH9wwzvxLEhi4zj2dYTYG3ACbBoiX
+rSPnl6mCu3kZ2jtEhKuLYbw=
+=ZhxI
+-----END PGP SIGNATURE-----
