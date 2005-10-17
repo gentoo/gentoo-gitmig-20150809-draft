@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0_beta2.ebuild,v 1.2 2005/10/14 22:35:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.0_beta2.ebuild,v 1.3 2005/10/17 23:26:36 puggy Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -49,6 +49,13 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	sys-devel/gettext
 	dev-util/pkgconfig"
+
+src_unpack() {
+	kde_src_unpack
+
+	# Fix big endian problem with kwallet
+	epatch "${FILESDIR}/${P}-kwallet-stdint.patch"
+}
 
 src_compile() {
 	myconf="--with-distribution=Gentoo

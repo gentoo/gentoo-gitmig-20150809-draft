@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.281 2005/10/15 11:08:41 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.282 2005/10/17 23:26:36 puggy Exp $
+
+  17 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  +files/kdelibs-3.5.0_beta2-kwallet-stdint.patch,
+  kdelibs-3.5.0_beta2.ebuild:
+  Fix for big endian of 3.5 beta2
 
   14 Oct 2005; Dan Armak <danarmak@gentoo.org> kdelibs-3.5.0_beta2.ebuild:
   Removed patches applied upstream for this version.
