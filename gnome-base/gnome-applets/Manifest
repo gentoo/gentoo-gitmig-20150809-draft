@@ -1,16 +1,29 @@
-MD5 859be0a7d42bbee51904ab93885199b9 gnome-applets-1.4.0.5.ebuild 1037
-MD5 f0f21c699a4e71e179115f815c3c80fa gnome-applets-2.10.1.ebuild 1741
-MD5 f7e7e4f9e9c57cb847852b38b4c0e531 gnome-applets-2.10.0.ebuild 1639
-MD5 b5c7329982e8397e6f95455994ecec06 gnome-applets-2.6.2.ebuild 1570
-MD5 6624f3e55d16f759d7cf4079187427ec gnome-applets-2.12.1.ebuild 1818
-MD5 62bf724004b6320fab60e20a40395f15 gnome-applets-2.12.1-r1.ebuild 1970
-MD5 eda38c104207856042049273067a5cb6 ChangeLog 18668
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 347176fa1d21ab752ac65c462d6d59c9 files/digest-gnome-applets-2.6.2 73
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57883177d1621ea0419a99b69d83c1fd ChangeLog 18866
+MD5 e8861003d9c73bcf26b9df775ec65fbe files/digest-gnome-applets-1.4.0.5 75
 MD5 90c7825724b0c78966d8bbf5f401e9b8 files/digest-gnome-applets-2.10.0 74
 MD5 fa49e6f2df38c7035ec9671ffbc030de files/digest-gnome-applets-2.10.1 74
 MD5 94a972f1942603b7060203bcddeab736 files/digest-gnome-applets-2.12.1 74
 MD5 94a972f1942603b7060203bcddeab736 files/digest-gnome-applets-2.12.1-r1 74
-MD5 f7ba655004c33f5a85ce78bba4b818f4 files/gnome-applets-2.12.1-hal-switch.patch 772
+MD5 94a972f1942603b7060203bcddeab736 files/digest-gnome-applets-2.12.1-r2 74
+MD5 347176fa1d21ab752ac65c462d6d59c9 files/digest-gnome-applets-2.6.2 73
 MD5 ebcb8c6d8a9406b441de3e591d350960 files/gnome-applets-2.10.1-fbsd.patch 1494
-MD5 e8861003d9c73bcf26b9df775ec65fbe files/digest-gnome-applets-1.4.0.5 75
+MD5 f7ba655004c33f5a85ce78bba4b818f4 files/gnome-applets-2.12.1-hal-switch.patch 772
+MD5 ed5d90f4b6499259a6bb64d87171272c files/gnome-applets-2.12.1-volume-mute.patch 2310
+MD5 859be0a7d42bbee51904ab93885199b9 gnome-applets-1.4.0.5.ebuild 1037
+MD5 f7e7e4f9e9c57cb847852b38b4c0e531 gnome-applets-2.10.0.ebuild 1639
+MD5 f0f21c699a4e71e179115f815c3c80fa gnome-applets-2.10.1.ebuild 1741
+MD5 62bf724004b6320fab60e20a40395f15 gnome-applets-2.12.1-r1.ebuild 1970
+MD5 296d0bba348dd4fb6fff5b040a36ed8d gnome-applets-2.12.1-r2.ebuild 2045
+MD5 6624f3e55d16f759d7cf4079187427ec gnome-applets-2.12.1.ebuild 1818
+MD5 b5c7329982e8397e6f95455994ecec06 gnome-applets-2.6.2.ebuild 1570
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUvzcomPajV0RnrERAjmNAJ0UxeN291uwr99/Tjw2iawTkPXJZQCfRa4e
+9XA0KonHM0shu8OC6gQxlq4=
+=oQgi
+-----END PGP SIGNATURE-----

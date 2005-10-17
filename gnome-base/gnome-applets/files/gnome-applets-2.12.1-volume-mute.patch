@@ -1,0 +1,64 @@
+diff --exclude-from=/home/dang/.diffrc -u -ruN gnome-applets-2.12.1.orig/mixer/applet.c gnome-applets-2.12.1/mixer/applet.c
+--- gnome-applets-2.12.1.orig/mixer/applet.c	2005-10-03 21:02:17.000000000 -0400
++++ gnome-applets-2.12.1/mixer/applet.c	2005-10-16 19:19:43.000000000 -0400
+@@ -716,7 +716,7 @@
+       case GDK_SCROLL_UP:
+       case GDK_SCROLL_DOWN: {
+         GtkAdjustment *adj = gtk_range_get_adjustment (applet->dock->scale);
+-        gfloat volume = adj->value;
++        gdouble volume = adj->value;
+ 
+         if (event->direction == GDK_SCROLL_UP) {
+           volume += adj->step_increment;
+@@ -828,7 +828,7 @@
+     case GDK_Up:
+     case GDK_Down: {
+       GtkAdjustment *adj = gtk_range_get_adjustment (applet->dock->scale);
+-      gint volume = adj->value, increment;
++      gdouble volume = adj->value, increment;
+ 
+       if (event->keyval == GDK_Up || event->keyval == GDK_Down)
+         increment = adj->step_increment;
+@@ -942,10 +942,10 @@
+ void
+ gnome_volume_applet_adjust_volume (GstMixer *mixer,
+ 				   GstMixerTrack *track,
+-				   float volume)
++				   gdouble volume)
+ {
+   int range = track->max_volume - track->min_volume;
+-  float scale = ((float) range) / 100;
++  gdouble scale = ((gdouble) range) / 100;
+   int *volumes, n;
+ 
+   volume *= scale;
+@@ -953,7 +953,7 @@
+ 
+   volumes = g_new (gint, track->num_channels);
+   for (n = 0; n < track->num_channels; n++)
+-    volumes[n] = lrintf (volume);
++    volumes[n] = lrint (volume);
+   gst_mixer_set_volume (mixer, track, volumes);
+   g_free (volumes);
+ }
+@@ -990,7 +990,7 @@
+ {
+   GnomeVolumeApplet *applet = data;
+   gint *volumes, n;
+-  gfloat v;
++  gdouble v;
+   GList *iter;
+ 
+   if (applet->lock)
+diff --exclude-from=/home/dang/.diffrc -u -ruN gnome-applets-2.12.1.orig/mixer/applet.h gnome-applets-2.12.1/mixer/applet.h
+--- gnome-applets-2.12.1.orig/mixer/applet.h	2005-10-03 21:02:17.000000000 -0400
++++ gnome-applets-2.12.1/mixer/applet.h	2005-10-16 19:19:07.000000000 -0400
+@@ -92,7 +92,7 @@
+ 
+ void     gnome_volume_applet_adjust_volume (GstMixer      *mixer,
+ 					    GstMixerTrack *track,
+-					    float          volume);
++					    gdouble        volume);
+ GType    gnome_volume_applet_get_type (void);
+ gboolean gnome_volume_applet_setup    (GnomeVolumeApplet *applet,
+ 				       GList             *elements);
