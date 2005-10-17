@@ -145,3 +145,4 @@ freetts
 lirc
 
 3dfx
+pike

@@ -72,3 +72,5 @@ lm_sensors
 
 # we can't test wifi currently
 wifi
+
+pike
