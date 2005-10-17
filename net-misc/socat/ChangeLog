@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/socat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.19 2005/09/25 10:32:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.20 2005/10/17 05:58:55 soulse Exp $
+
+*socat-1.4.3.0-r1 (17 Oct 2005)
+*socat-1.4.2.0-r1 (17 Oct 2005)
+
+  17 Oct 2005; <soulse@gentoo.org> +socat-1.4.2.0-r1.ebuild,
+  +socat-1.4.3.0-r1.ebuild:
+  Rev bumps as per bug #109331 thanks to James Rowe <jnrow@ukfsn.org>, new
+  tcp-wrappers depend added as an option.
 
 *socat-1.4.3.0 (25 Sep 2005)
 
