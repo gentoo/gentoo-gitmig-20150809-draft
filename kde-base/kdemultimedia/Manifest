@@ -1,20 +1,30 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 57855b014278a1ca1f47472322fa221a kdemultimedia-3.4.1-r1.ebuild 1925
-MD5 31324613721465d34f5a62e712fee02c kdemultimedia-3.3.2.ebuild 1767
 MD5 93863e4c481dfe303b0afd932a054cea kdemultimedia-3.4.3.ebuild 2014
+MD5 07c3c5c2b16ffe5a9f2d3b04423253a9 kdemultimedia-3.4.2.ebuild 2008
+MD5 041c469c8a946bafb853ff21a98d1e3b ChangeLog 25650
+MD5 31324613721465d34f5a62e712fee02c kdemultimedia-3.3.2.ebuild 1767
+MD5 bfab37322a08d99e36a6293f215deac9 kdemultimedia-3.4.1.ebuild 1772
+MD5 69025b5755c07548974ac22390000e20 kdemultimedia-3.4.1-r1.ebuild 1926
 MD5 737f64ac537885eae4bf7c46fd07290d kdemultimedia-3.5_beta1.ebuild 2191
 MD5 e38be9472572c26bd1c79a9aaf384e83 kdemultimedia-3.5.0_beta2.ebuild 2193
-MD5 f42e779eb8657bf74aa0142fe31e9db3 ChangeLog 25532
-MD5 bfab37322a08d99e36a6293f215deac9 kdemultimedia-3.4.1.ebuild 1772
-MD5 07c3c5c2b16ffe5a9f2d3b04423253a9 kdemultimedia-3.4.2.ebuild 2008
-MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
-MD5 7768e89277edde1b1e163ae65e5a4e9c files/digest-kdemultimedia-3.4.1 73
-MD5 7768e89277edde1b1e163ae65e5a4e9c files/digest-kdemultimedia-3.4.1-r1 73
-MD5 30810bdee5baa766c389b0a4d8533a4e files/digest-kdemultimedia-3.3.2 73
-MD5 0ed594ab9238b688fca70c1959d3932e files/kdemultimedia-3.4.1-akode-hang.patch 653
-MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634
-MD5 c59a8866e503610aa8719048121bd7a2 files/digest-kdemultimedia-3.5.0_beta2 74
-MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kdemultimedia-3.5_beta1 74
 MD5 05ac286d8f93c4f275aa4cec809fb5a9 files/digest-kdemultimedia-3.4.3 73
 MD5 ab4383e2b9810696530127a0a5464bfc files/kdemultimedia-3.4-configure.patch 5211
+MD5 30810bdee5baa766c389b0a4d8533a4e files/digest-kdemultimedia-3.3.2 73
+MD5 7768e89277edde1b1e163ae65e5a4e9c files/digest-kdemultimedia-3.4.1-r1 73
+MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-kdemultimedia-3.5_beta1 74
+MD5 b7a984a57c27e1e62a606d90d0c39437 files/kdemultimedia-3.4.0-amd64.patch 523
+MD5 c59a8866e503610aa8719048121bd7a2 files/digest-kdemultimedia-3.5.0_beta2 74
+MD5 7768e89277edde1b1e163ae65e5a4e9c files/digest-kdemultimedia-3.4.1 73
+MD5 0ed594ab9238b688fca70c1959d3932e files/kdemultimedia-3.4.1-akode-hang.patch 653
+MD5 0af60268ec8424c72256db89062b6f31 files/kdemultimedia-64bit.patch 634
 MD5 dfce952f93ee14ecafcfea645134aec2 files/digest-kdemultimedia-3.4.2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDU+eYJrHF4yAQTrARAqPBAJ9qyNNPRGVnNnsMqntxBo63A0DXZACgmhZs
+R+O5FDz0yjNaT0TXFLYfIng=
+=uH+m
+-----END PGP SIGNATURE-----
