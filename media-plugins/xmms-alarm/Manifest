@@ -1,8 +1,18 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e85154c79dccd346211e033ae6b0fbd0 ChangeLog 2144
-MD5 b99fe96f5cd208e3487291cf2cfbd754 xmms-alarm-0.3.5.ebuild 779
-MD5 b24e1a8a3a04b9e859baecb3dd9a798c xmms-alarm-0.3.6.ebuild 782
-MD5 0bf57f7a12664fc3924cb2612f350a51 xmms-alarm-0.3.3.ebuild 779
-MD5 2ba5b840605f2ac80eb924e3fef876c9 files/digest-xmms-alarm-0.3.3 68
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 730a75d15e54603b31c9ac7eba54db04 ChangeLog 2322
 MD5 5c525b0a8f0bc98b8e0cdb0ada2b2f9a files/digest-xmms-alarm-0.3.5 68
 MD5 3cfce7c85732ac39e169d62b5a1a0215 files/digest-xmms-alarm-0.3.6 68
+MD5 879af2e8bf388a1b0e3d1cfb6e5445c5 files/digest-xmms-alarm-0.3.7 69
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 b99fe96f5cd208e3487291cf2cfbd754 xmms-alarm-0.3.5.ebuild 779
+MD5 b24e1a8a3a04b9e859baecb3dd9a798c xmms-alarm-0.3.6.ebuild 782
+MD5 c0cb35f9f81d016dedf979eaaedc7b8b xmms-alarm-0.3.7.ebuild 787
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDUyBRwUpWvClEHQoRAmK1AJoCuafaGVlomzbB9YgHQo4XZWQqfwCghmgq
+b+pHMeIiE39YyIA0iK3jpJc=
+=xd75
+-----END PGP SIGNATURE-----

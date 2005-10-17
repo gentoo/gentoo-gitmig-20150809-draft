@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/xmms-alarm-0.3.3.ebuild,v 1.6 2005/09/04 09:55:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-alarm/xmms-alarm-0.3.7.ebuild,v 1.1 2005/10/17 02:51:40 metalgod Exp $
 
 DESCRIPTION="An alarm plugin for XMMS"
 HOMEPAGE="http://www.snika.uklinux.net/index.php?show=xmms-alarm"
-SRC_URI="http://www.snika.uklinux.net/xmms-alarm/${P}.tar.gz"
+SRC_URI="http://www.snika.uklinux.net/xmms-alarm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/xmms"
