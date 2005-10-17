@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.6 2005/10/13 06:16:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.7 2005/10/17 05:20:43 josejx Exp $
+
+  17 Oct 2005; Joseph Jezak <josejx@gentoo.org> t-coffee-2.66.ebuild:
+  Marked ppc stable for bug #108340.
 
   13 Oct 2005; Mark Loeser <halcy0n@gentoo.org> t-coffee-2.66.ebuild:
   Stable on x86
