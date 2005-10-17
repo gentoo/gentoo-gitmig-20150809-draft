@@ -63,3 +63,4 @@ mozilla
 dbus
 
 3dfx
+mono

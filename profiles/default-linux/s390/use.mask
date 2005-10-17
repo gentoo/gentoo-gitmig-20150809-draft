@@ -66,3 +66,4 @@ neXt
 lesstif
 motif
 glitz
+mono
