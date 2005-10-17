@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d777aabfea7e4b5050d4be825ec16d9 ccrtp-1.3.4.ebuild 632
-MD5 49b32583c982702680e5be3b9aea1df5 ChangeLog 394
-MD5 c1a6093f6bf43cae3b4360e3620d9992 metadata.xml 252
+MD5 9bb8e067941780a95cadb4a01c9fcb48 ChangeLog 534
+MD5 179a095c09cbaae39e5732fd2db7f456 ccrtp-1.3.4.ebuild 615
+MD5 1a11fe5158f0b4fa5c0d52ef0f44e983 ccrtp-1.3.5.ebuild 615
 MD5 e2450d97ee3ec317929ba907208f2a88 files/digest-ccrtp-1.3.4 63
+MD5 46446c015677f6eb590de0f77206674f files/digest-ccrtp-1.3.5 63
+MD5 c1a6093f6bf43cae3b4360e3620d9992 metadata.xml 252
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDCAGzmdTrptrqvGERAuW6AJ9gwtg+W0cI3fJL/09P3FCO6/+jRQCfXRYu
-iagzsC8KOWHlVt9xtT4EE8Y=
-=MYnM
+iD8DBQFDU/dPmdTrptrqvGERArOQAKCWuzBToKlc5WxJ2QhgXjfDrwl09ACghnXl
+wPRe/3kiF4c+l647Gn+cWxo=
+=ybNc
 -----END PGP SIGNATURE-----
