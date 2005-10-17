@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.3 2005/10/14 19:24:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.4 2005/10/17 14:28:26 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -54,8 +54,8 @@ ELTCONF="--portage"
 
 pkg_setup() {
 	if ! built_with_use app-text/poppler gtk; then
-		einfo "Please re-emerge x11-libs/cairo with the png and X USE flags set"
-		die "cairo needs png and X flags set"
+		einfo "Please re-emerge app-text/poppler with the gtk USE flag set"
+		die "poppler needs gtk flag set"
 	fi
 }
 
