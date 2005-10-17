@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d101b486162524e33d5677481de8ed9 ChangeLog 2789
+MD5 caf12bbdc998630a82fb4d1d84212747 ChangeLog 2894
 MD5 407269b8d1524b0f8e71dece76bdd291 files/digest-phylip-3.63 64
 MD5 6a0365a6136c482528c2ddcd860a9d97 files/digest-phylip-3.64 64
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 79bff51b068a2d1acf814997451e8e69 phylip-3.63.ebuild 956
-MD5 17d4ee3549562abd896ae2cf51bea6c1 phylip-3.64.ebuild 990
+MD5 b56d632ce611256d9e51dff8a142efe1 phylip-3.64.ebuild 988
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSX+wCRZPokWLroQRAu89AJ4/2Xksq1NXjM5g9yu4azA/07a+PwCdEDDe
-282SLWmCcim/1VwGFnRGPIA=
-=cSQE
+iD8DBQFDUzN9csIHjyDViGQRAhorAKDAdFqgLngLseO4Esf5bwetWSRzVgCfZMfJ
+ocF121VF7lz6Dtwi8h10bs0=
+=YNUz
 -----END PGP SIGNATURE-----
