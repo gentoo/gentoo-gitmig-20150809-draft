@@ -1,0 +1,121 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN source-highlight-2.2.orig/configure.ac source-highlight-2.2/configure.ac
+--- source-highlight-2.2.orig/configure.ac	2005-10-17 09:48:06.000000000 -0400
++++ source-highlight-2.2/configure.ac	2005-10-17 09:58:52.000000000 -0400
+@@ -150,7 +150,8 @@
+ AM_CONDITIONAL(NO_HELP2MAN, test -z "$ac_cv_path_HELP2MAN" )
+ 
+ dnl this is for generating references
+-AC_PATH_PROGS(CTAGS, ctags)
++AC_PATH_PROGS(CTAGS, exuberant-ctags)
++AC_SUBST([$CTAGS])
+ AM_CONDITIONAL(NO_CTAGS, test -z "$ac_cv_path_CTAGS" )
+ 
+ dnl *******************
+@@ -244,4 +245,4 @@
+ 
+ ctags is not installed so you won't be able to
+ generate references (--gen-references).])
+-fi
+\ No newline at end of file
++fi
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN source-highlight-2.2.orig/doc/Makefile.am source-highlight-2.2/doc/Makefile.am
+--- source-highlight-2.2.orig/doc/Makefile.am	2005-10-17 09:48:06.000000000 -0400
++++ source-highlight-2.2/doc/Makefile.am	2005-10-17 10:12:10.000000000 -0400
+@@ -20,7 +20,7 @@
+ 
+ CPP2HTML = $(SRCHILITEPROG) -s cpp -f html $(STD_STYLE)
+ 
+-CPP2HTML_WREFS = $(CPP2HTML) --title="Contains references to tags" --gen-references=inline --ctags="ctags --excmd=n --tag-relative=yes -o my_test_ref.tags"
++CPP2HTML_WREFS = $(CPP2HTML) --title="Contains references to tags" --gen-references=inline --ctags="@CTAGS@ --excmd=n --tag-relative=yes -o my_test_ref.tags"
+ 
+ CHANGELOG2HTML = $(SRCHILITEPROG) -s changelog -f html $(STD_STYLE)
+ 
+@@ -44,55 +44,55 @@
+ endif
+ 
+ lang-list.texinfo: $(top_srcdir)/src/lang.map
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ --lang-list | sed -e 's/@/@@/' > $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ --lang-list | sed -e 's/@/@@/' > $@
+ 
+ outlang-list.texinfo: $(top_srcdir)/src/outlang.map
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ --outlang-list | sed -e 's/@/@@/' > $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ --outlang-list | sed -e 's/@/@@/' > $@
+ 
+ test.java.texinfo: $(top_srcdir)/tests/test.java
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test.java --style-file=$(top_srcdir)/src/texinfo.style -n > $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test.java --style-file=$(top_srcdir)/src/texinfo.style -n > $@
+ 
+ test_ref.h.texinfo: $(top_srcdir)/tests/test.h
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test.h --style-file=$(top_srcdir)/src/texinfo.style -n --gen-references=postline > $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test.h --style-file=$(top_srcdir)/src/texinfo.style -n --gen-references=postline > $@
+ 
+ debug.java.texinfo: $(top_srcdir)/tests/debug.java
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/debug.java --style-file=$(top_srcdir)/src/texinfo.style -n > $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/debug.java --style-file=$(top_srcdir)/src/texinfo.style -n > $@
+ 
+ %.lang.texinfo: $(top_srcdir)/src/%.lang
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ %.outlang.texinfo: $(top_srcdir)/src/%.outlang
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ %.lang.texinfo: $(top_srcdir)/tests/%.lang
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ %.lang.texinfo: $(srcdir)/%.lang
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ %.style.texinfo: $(top_srcdir)/src/%.style
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ %.diff.texinfo: %.diff
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ %.cpp.texinfo: $(top_srcdir)/tests/%.cpp
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $< --style-file=$(top_srcdir)/src/texinfo.style -o $@
+ 
+ test_extreme_comment_wrong.texinfo: $(top_srcdir)/tests/test_extreme_comment.cpp
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment.lang
++	$(SRCHILITEEXE)  --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment.lang
+ 
+ test_extreme_comment_1.texinfo: $(top_srcdir)/tests/test_extreme_comment.cpp
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment2.lang
++	$(SRCHILITEEXE)  --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment2.lang
+ 
+ test_extreme_comment_wrong2.texinfo: $(top_srcdir)/tests/test_extreme_comment2.cpp
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment2.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment2.lang
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment2.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment2.lang
+ 
+ test_extreme_comment_2.texinfo: $(top_srcdir)/tests/test_extreme_comment2.cpp
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment2.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment3.lang
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment2.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment3.lang
+ 
+ test_extreme_comment_3.texinfo: $(top_srcdir)/tests/test_extreme_comment3.cpp
+-	$(SRCHILITEEXE) --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment3.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment3.lang
++	$(SRCHILITEEXE) --ctags=@CTAGS@ --data-dir=$(top_srcdir)/src/ -f texinfo -i $(top_srcdir)/tests/test_extreme_comment3.cpp --style-file=$(top_srcdir)/src/texinfo.style -o $@ --lang-def=extreme_comment3.lang
+ 
+ %.show.texinfo: %.lang
+ 	$(SRCHILITEEXE) --show-regex=$< 2> $@
+@@ -143,7 +143,7 @@
+ # note that $(srcdir) actually points to doc dir
+ 
+ langdef.lang.html: $(top_srcdir)/src/langdef.lang
+-	$(SRCHILITEPROG) $(STD_STYLE) -i $(top_srcdir)/src/langdef.lang -o langdef.lang.html
++	$(SRCHILITEPROG)  --ctags=@CTAGS@ $(STD_STYLE) -i $(top_srcdir)/src/langdef.lang -o langdef.lang.html
+ 
+ startapp.cc.html: $(top_srcdir)/src/startapp.cc
+ 	$(CPP2HTML) --doc $(OUTPUT_HERE) $(top_srcdir)/src/startapp.cc
+@@ -236,4 +236,4 @@
+ texinfo-clean:
+ 	rm -f $(GENERATEDINFOS)
+ 
+-DISTCLEANFILES = $(HTML_GENERATED_FILES) source-highlight.1 $(GENERATEDINFOS) tags langdef.lang.html
+\ No newline at end of file
++DISTCLEANFILES = $(HTML_GENERATED_FILES) source-highlight.1 $(GENERATEDINFOS) tags langdef.lang.html

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.18 2005/09/08 17:07:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.19 2005/10/17 14:22:39 ka0ttic Exp $
+
+*source-highlight-2.2 (17 Oct 2005)
+
+  17 Oct 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/source-highlight-exuberant-ctags.diff,
+  +source-highlight-2.2.ebuild:
+  Version bump.
 
 *source-highlight-2.1.2 (08 Sep 2005)
 
