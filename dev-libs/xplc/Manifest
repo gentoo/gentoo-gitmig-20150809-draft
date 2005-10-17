@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3a2a14e0cc76899541c876d92d3be23a metadata.xml 334
-MD5 67a426c8bd2b540a1c7442dead73054f ChangeLog 2380
-MD5 e1a80347d1518eaddc2cc8c83dbfb309 xplc-0.3.11.ebuild 730
-MD5 285182d6929c5649f76b0c56721bfff4 xplc-0.3.12.ebuild 734
-MD5 4a746f28f5ce9cf4694a583dc1971c6b xplc-0.3.10.ebuild 643
+MD5 076f62bfc381eb9bb17420f2592e19ad ChangeLog 2473
 MD5 8fd0e44d58b89a352fc8ac2880ce33ec files/digest-xplc-0.3.10 63
-MD5 09827bbe7062e63b20f540e649164c98 files/digest-xplc-0.3.12 63
 MD5 33758b3956338dd872212b9ed9b69b8a files/digest-xplc-0.3.11 63
+MD5 09827bbe7062e63b20f540e649164c98 files/digest-xplc-0.3.12 63
+MD5 3a2a14e0cc76899541c876d92d3be23a metadata.xml 334
+MD5 4a746f28f5ce9cf4694a583dc1971c6b xplc-0.3.10.ebuild 643
+MD5 e1a80347d1518eaddc2cc8c83dbfb309 xplc-0.3.11.ebuild 730
+MD5 43aa957417adaaa0f690429976ec03a1 xplc-0.3.12.ebuild 733
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDU5i3JrHF4yAQTrARAjgmAJwNCzGqd4/9QH1XqvmXHrcbqXJ2CACgg9xV
-F4aM00qUAWeJWOYog/xEwnM=
-=0qGU
+iD8DBQFDU8zoKRy60XGEcJIRAmqmAJ9zo+OR4lym/8GsQycHMo5+oJPWSgCgg5+d
+Q6SGNGJUDNGHoMuANftKkkM=
+=5lEj
 -----END PGP SIGNATURE-----
