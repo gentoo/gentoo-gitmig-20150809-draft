@@ -2,8 +2,11 @@ MD5 9fb91056beb8b98def1946df1dd1c091 advancemame-0.97.0.ebuild 1992
 MD5 1cd2f47f08128d77ce8d0f1ef3e05192 advancemame-0.99.0.ebuild 1995
 MD5 972b8c9f939a33a7074e0819fb55455c metadata.xml 962
 MD5 6c8ebaf2682fcb3a3e4f5d1040ea6a52 advancemame-0.100.0.ebuild 1996
-MD5 73210106ed2497874205595599dc4568 ChangeLog 6351
+MD5 6276350b3d70cb9387fb7adceeb59094 advancemame-0.101.0.ebuild 1983
+MD5 344ace28d61275a09d042192d71f3993 ChangeLog 6515
+MD5 893791a430019a7eb1c0eaf15758a93f files/0.101.0-pic.patch 344
 MD5 63958a71d7c2fd25aad23a633abb03de files/digest-advancemame-0.100.0 73
+MD5 6cb88ba34b78dc9a265b2b68bf084a66 files/digest-advancemame-0.101.0 73
 MD5 893791a430019a7eb1c0eaf15758a93f files/0.95.0-pic.patch 344
 MD5 893791a430019a7eb1c0eaf15758a93f files/0.99.0-pic.patch 344
 MD5 893791a430019a7eb1c0eaf15758a93f files/0.100.0-pic.patch 344
