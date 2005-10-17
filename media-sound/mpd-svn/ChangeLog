@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.19 2005/10/10 14:01:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.20 2005/10/17 00:52:17 ticho Exp $
+
+*mpd-svn-20051009-r1 (17 Oct 2005)
+
+  17 Oct 2005; Andrej Kacian <ticho@gentoo.org> -files/mpd.pidfile.rc6,
+  files/mpd.rc6, -mpd-svn-20050408-r1.ebuild, -mpd-svn-20050601.ebuild,
+  -mpd-svn-20050731.ebuild, -mpd-svn-20050823.ebuild,
+  -mpd-svn-20050907.ebuild, +mpd-svn-20051009-r1.ebuild:
+  Changed ogg USE flag to vorbis, bug #101877. Changed home directory of mpd
+  user and all related config settings to /var/lib/mpd, bug #101662. Added
+  'use netmount' to initscript depend(). Removed old ebuilds.
 
 *mpd-svn-20051009 (10 Oct 2005)
 
