@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.18.ebuild,v 1.3 2005/10/16 20:32:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.18.ebuild,v 1.4 2005/10/17 21:23:47 axxo Exp $
 
 MY_P=${P/gnu-/}
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java programming language"
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
 IUSE="examples gtk xml2"
 
 #cairo? ( >=x11-libs/cairo-0.5.0 )
-RDEPEND="gtk? ( >=x11-libs/gtk+-2.4
+RDEPEND="gtk? ( =x11-libs/gtk+-2.6*
 				>=dev-libs/glib-2.0 )
 		 xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 

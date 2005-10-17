@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.39 2005/10/17 21:18:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.40 2005/10/17 21:23:47 axxo Exp $
+
+  17 Oct 2005; Thomas Matthijs <axxo@gentoo.org> gnu-classpath-0.18.ebuild:
+  Depend on gtk =2.6*, since it doesnt build with 2.8
 
   16 Oct 2005; Tom Gall <tgall@gentoo.org> gnu-classpath-0.18.ebuild:
   added ~ppc64
