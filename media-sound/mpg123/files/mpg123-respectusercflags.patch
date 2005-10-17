@@ -1,0 +1,29 @@
+--- Makefile	2005-04-01 13:35:32.000000000 +0200
++++ Makefile.fix	2005-04-01 13:35:45.000000000 +0200
+@@ -330,7 +330,7 @@
+ linux-x86_64:
+ 	$(MAKE) LDFLAGS= \
+ 		OBJECTS='decode.o dct64.o audio_oss.o' \
+-		CFLAGS=' -Wall -DLINUX -DOSS -DUSE_MMAP \
++		CFLAGS='$(CFLAGS) -Wall -DLINUX -DOSS -DUSE_MMAP \
+ 			$(RPM_OPT_FLAGS)' \
+ 		mpg123-make
+ 
+@@ -338,7 +338,7 @@
+ 	$(MAKE) LDFLAGS= \
+ 		AUDIO_LIB='-lesd -laudiofile' \
+ 		OBJECTS='decode.o dct64.o audio_esd.o' \
+-		CFLAGS=' -Wall -DLINUX -DOSS -DUSE_MMAP \
++		CFLAGS='$(CFLAGS) -Wall -DLINUX -DOSS -DUSE_MMAP \
+ 			$(RPM_OPT_FLAGS)' \
+ 		mpg123-make
+ 
+@@ -346,7 +346,7 @@
+ 	$(MAKE) LDFLAGS= \
+ 		AUDIO_LIB='-lasound' \
+ 		OBJECTS='decode.o dct64.o audio_alsa.o' \
+-		CFLAGS=' -Wall -DLINUX -DOSS -DUSE_MMAP \
++		CFLAGS='$(CFLAGS) -Wall -DLINUX -DOSS -DUSE_MMAP \
+ 			$(RPM_OPT_FLAGS)' \
+ 		mpg123-make
+ 

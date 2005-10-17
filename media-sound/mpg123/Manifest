@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e54064d490f53255a6f0ab99bbace5c8 ChangeLog 13856
+MD5 dbf0274154aae330c7a1c46aa462beda ChangeLog 14073
+MD5 a147137fdcd756dd021b9807a2fae2b6 files/0.59s-set-terminal-line-settings-once.patch 767
+MD5 31d9204617f76bd0b55e6f1c7242886a files/digest-mpg123-0.59s-r10 141
+MD5 12a16d9aafab05a0ad9eace12cf3596a files/digest-mpg123-0.59s-r8 141
+MD5 31d9204617f76bd0b55e6f1c7242886a files/digest-mpg123-0.59s-r9 141
+MD5 154058014fa42867a57faa57b857521a files/mpg123-osx.diff 11227
+MD5 083de56193d644c972c2cf5034aaa100 files/mpg123-respectusercflags.patch 854
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 c7bd4d6de9a930e986e8c396f2459e04 mpg123-0.59s-r10.ebuild 3384
 MD5 f0035c0fdcb5496afb587c41ea83c1a3 mpg123-0.59s-r8.ebuild 2875
 MD5 05675bb6e6c4d77cf959c767dfa1eaf9 mpg123-0.59s-r9.ebuild 3101
-MD5 354bd2e62bcf98d94e96b67e79e50640 mpg123-0.59s-r10.ebuild 3279
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 31d9204617f76bd0b55e6f1c7242886a files/digest-mpg123-0.59s-r9 141
-MD5 31d9204617f76bd0b55e6f1c7242886a files/digest-mpg123-0.59s-r10 141
-MD5 a147137fdcd756dd021b9807a2fae2b6 files/0.59s-set-terminal-line-settings-once.patch 767
-MD5 12a16d9aafab05a0ad9eace12cf3596a files/digest-mpg123-0.59s-r8 141
-MD5 154058014fa42867a57faa57b857521a files/mpg123-osx.diff 11227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGEvrj5H05b2HAEkRArKgAJ0ZLin9Z5vMIdgu9VYu6t6oF/IWlACfe7og
-0obgfqd/SDuXUQQ0eUKBvIY=
-=0ziw
+iD8DBQFDU5Dmj5H05b2HAEkRAsmnAJ9bizjoSwQidexc00WvniF/DpSb+wCdFKbB
+DiJ68kET8anFRNLMAUW2MpI=
+=eq1X
 -----END PGP SIGNATURE-----

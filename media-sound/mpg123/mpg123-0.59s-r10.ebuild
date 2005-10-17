@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r10.ebuild,v 1.2 2005/09/02 12:55:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r10.ebuild,v 1.3 2005/10/17 11:53:51 flameeyes Exp $
 
 inherit eutils
 
@@ -41,6 +41,9 @@ src_unpack() {
 
 	# Bug #70592; terminal line settings should only be set once; not everytime a new song starts
 	epatch ${FILESDIR}/${PV}-set-terminal-line-settings-once.patch
+
+	# Bug #87539; user CFLAGS are not respected on amd64
+	epatch ${FILESDIR}/${PN}-respectusercflags.patch
 
 	if use ppc-macos;
 	then
