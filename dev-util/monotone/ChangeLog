@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.20 2005/10/01 02:15:31 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.21 2005/10/17 19:36:25 dragonheart Exp $
+
+*monotone-0.23-r1 (17 Oct 2005)
+
+  17 Oct 2005; Daniel Black <dragonheart@gentoo.org> -monotone-0.23.ebuild,
+  +monotone-0.23-r1.ebuild:
+  added -fno-omit-frame-pointer as per bug #109507 thanks to Glenn L. McGrath
 
 *monotone-0.23 (30 Sep 2005)
 

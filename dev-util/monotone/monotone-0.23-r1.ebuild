@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.23.ebuild,v 1.1 2005/10/01 02:15:31 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.23-r1.ebuild,v 1.1 2005/10/17 19:36:25 dragonheart Exp $
 
 inherit elisp-common flag-o-matic
 
@@ -32,12 +32,14 @@ src_compile() {
 	# more aggressive optimizations cause trouble with the crypto library
 	strip-flags
 	append-flags -fno-stack-protector-all -fno-stack-protector \
-		-fno-strict-aliasing
+		-fno-strict-aliasing -fno-omit-frame-pointer
 
 	econf ${myconf} || die "configure failed"
 	emake || die "Compilation failed"
 
-	use doc && make html
+	if use doc; then
+		make html || die 'html compilation failed'
+	fi
 
 	use emacs && elisp-compile contrib/*.el
 }
