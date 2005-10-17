@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0172abf02770ca15d3b6c5a22a74bd41 ChangeLog 1156
+MD5 a2ff8062e1298028b3f8de52c95775bc ChangeLog 1251
 MD5 934e43226b4872ededfc619b15a2e9b7 eyeD3-0.6.2.ebuild 615
-MD5 00936b0e140e62e45f44faacced6b528 eyeD3-0.6.4.ebuild 613
+MD5 a825ecb12d1d24824af788fc30c77799 eyeD3-0.6.4.ebuild 614
 MD5 934a427090b2f8fda2f7aa4cbbb9d62e eyeD3-0.6.8.ebuild 614
 MD5 bce4e691a14a0c3f938260b863788103 files/digest-eyeD3-0.6.2 63
 MD5 fa45e4c8da5a8db7b0b85bf40c4783e9 files/digest-eyeD3-0.6.4 62
 MD5 4b98b613c0ef6bd3ed849a1643615c13 files/digest-eyeD3-0.6.8 63
 MD5 72449c562b30ea2bb3f5570423673e8b metadata.xml 178
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDUsinKf2g/qXtneoRAgS8AJ9xDCbZZFy/ZyqPt9oS8VZQ1Cm+dACeOOV7
-8+qsSUPZvBh6M97sf6QPvns=
-=GpzM
+iD8DBQFDU7hPKRy60XGEcJIRAqvwAJwPglBHmFBIgLRMsOhPnnhsfE5tbQCaA8Y2
+yMp3yHTdvw9Y0mprWmAAVnU=
+=ziU0
 -----END PGP SIGNATURE-----
