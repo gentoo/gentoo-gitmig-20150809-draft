@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4576 2005/10/15 23:00:59 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4577 2005/10/17 04:23:51 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (17 Oct 2005)
+# Buggy and seemingly not maintained upstream
+# Using media-gfx/gqview is a much better choice.
+media-gfx/gtksee
 
 # Peter Johanson <latexer@gentoo.org> (15 Oct 2005)
 # Masking new monodoc split ebuilds, pending gtk-sharp, etc updates.
