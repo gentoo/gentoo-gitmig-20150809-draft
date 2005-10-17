@@ -12,12 +12,12 @@ MD5 007f00412ae9a343601ec9f3ff7c1da3 files/nettle-1.13-preprocess-asm.patch 668
 MD5 243e4cd9809545d12f991b2d417040e1 metadata.xml 159
 MD5 518c09edea33da5a9247f03f2133d844 nettle-1.10.ebuild 791
 MD5 3b7eab2fbf428a13449355b121c0c72c nettle-1.12.ebuild 704
-MD5 abafedf17d6e60e5fee4200e269a44d8 nettle-1.13-r1.ebuild 1052
+MD5 60f7e46a009e02d67935e4db3048a3c9 nettle-1.13-r1.ebuild 1058
 MD5 6995b4d5a430439ce80f70760f57743e nettle-1.13.ebuild 787
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUDQjgIKl8Uu19MoRAlLxAJ9mHFKqq7zyxXh6cbF5+xpPCi6dOwCdHrIM
-45mz/n/WF6L/CwUZFp8kXUg=
-=hICd
+iD8DBQFDVC5dgIKl8Uu19MoRAmHSAJ9NIxKfT84HSaaF3PcVJeq4LeZJOwCfaqXc
+ZwzaMZKuaGT7AOmweCfPaok=
+=47nr
 -----END PGP SIGNATURE-----
