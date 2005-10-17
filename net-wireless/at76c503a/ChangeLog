@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.5 2005/10/15 13:03:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.6 2005/10/17 05:35:38 genstef Exp $
+
+  17 Oct 2005; Stefan Schweizer <genstef@gentoo.org>
+  files/at76c503a-kernel-2.6-fixes.diff:
+  Fix dos<->unix newlines in kernel-2.6-fixes.diff
 
 *at76c503a-0.12_beta23-r1 (15 Oct 2005)
 
