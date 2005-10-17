@@ -1,0 +1,11 @@
+--- bksys/kde.py.orig	2005-10-15 17:13:39.000000000 +0200
++++ bksys/kde.py	2005-10-15 17:14:01.000000000 +0200
+@@ -816,7 +816,7 @@
+ 		lenv.KDEinstall( 'KDEDOC', lenv.join(lang,destination), cache )
+ 		
+ 		if env['_INSTALL']:
+-			dir=lenv.join(lenv.getInstDirForResType('KDEDOC'), lang, destination)
++			dir=lenv.join(env['DESTDIR'], lenv.getInstDirForResType('KDEDOC'), lang, destination)
+ 			comp='mkdir -p %s && cd %s && rm -f common && ln -s ../common common' % (dir, dir)
+ 			lenv.Execute(comp)
+ 			
