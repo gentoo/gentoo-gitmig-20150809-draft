@@ -1,28 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f905a614fde3a85e0adefb203ece18fc metadata.xml 321
-MD5 e7e6046cd8636379b027013e5611ceaf coda-6.0.11.ebuild 7693
-MD5 8a8d38f5264d5208b8505db44551a40f coda-6.0.10.ebuild 7770
-MD5 74aae1c441ef9051b70de88883748457 coda-6.0.8.ebuild 7741
-MD5 9f57bf8fe91e1e51305b534dc8ad436a ChangeLog 4863
-MD5 1c9a39159ad792e79b481d42c7328c2c coda-6.0.12.ebuild 7693
-MD5 78b3c40cf0a838d73ed8a67e9d153589 files/coda-update 1223
-MD5 f40f2b0227b97168e8dcd64c86f2e8cc files/codasrv 941
-MD5 1ea6425841d7fed645aad9d06d728ff7 files/auth2 1041
-MD5 9c2db8abdf6c03a125489b31ab191c00 files/digest-coda-6.0.8 63
-MD5 fcba6f871a054b13f4f49b5c64c746f2 files/digest-coda-6.0.10 64
-MD5 bc3186837c0aeaec912e7040cadd36d9 files/coda-6.0.10-venus-setup-fix.patch 662
-MD5 90ab5e322be7ffed9b181e74c6c35072 files/digest-coda-6.0.11 64
-MD5 57ae3214fc33e1ba8d8d4d0406ad9afe files/digest-coda-6.0.12 64
-MD5 0e33cefc07af92d1e9351c60412f9628 files/6.0.8/venus 702
+MD5 469a020b1649b3e874d9c772e8003da1 ChangeLog 5126
+MD5 6018929c97b227fa6d769263fd4534a2 coda-6.0.10.ebuild 7736
+MD5 1ace070514205dcf1b63261baf94c49c coda-6.0.11.ebuild 7659
+MD5 76e5ad6cb465f82a6f28b7e9097aece9 coda-6.0.12.ebuild 7659
 MD5 b4e38a53462318a1c6db3a3b1d7e3db3 files/6.0.10/venus 703
 MD5 818953dac5d5dd5981ea6b6125cc7d91 files/6.0.11/venus 703
 MD5 e8eceaf4a75c95c4960701632ab31578 files/6.0.12/venus 703
+MD5 1ea6425841d7fed645aad9d06d728ff7 files/auth2 1041
+MD5 bc3186837c0aeaec912e7040cadd36d9 files/coda-6.0.10-venus-setup-fix.patch 662
+MD5 78b3c40cf0a838d73ed8a67e9d153589 files/coda-update 1223
+MD5 f40f2b0227b97168e8dcd64c86f2e8cc files/codasrv 941
+MD5 fcba6f871a054b13f4f49b5c64c746f2 files/digest-coda-6.0.10 64
+MD5 90ab5e322be7ffed9b181e74c6c35072 files/digest-coda-6.0.11 64
+MD5 57ae3214fc33e1ba8d8d4d0406ad9afe files/digest-coda-6.0.12 64
+MD5 f905a614fde3a85e0adefb203ece18fc metadata.xml 321
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDNrBiMGnpIbeahxwRAgDyAJwNYG6GGKSdNnOfq6buUAOlvFeKmQCgh8/E
-zxk+zLsQzT8gWi7L7fGLkO0=
-=NIHm
+iD8DBQFDU/iBMGnpIbeahxwRAjEQAJ9kCVmcVpQq1+676LzZ3QepNqoBrACdH7fQ
+utUsBYm2TUV2SrmYMydWyqM=
+=ZOsC
 -----END PGP SIGNATURE-----
