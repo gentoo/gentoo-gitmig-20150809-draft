@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20051009-r1.ebuild,v 1.1 2005/10/17 00:52:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20051009-r1.ebuild,v 1.2 2005/10/17 14:42:41 ticho Exp $
 
 inherit eutils
 
@@ -105,7 +105,7 @@ src_install() {
 	dosed 's:^error_file.*$:error_file "/var/log/mpd.error.log":' /etc/mpd.conf
 	dosed 's:^pid_file.*$:pid_file "/var/run/mpd/mpd.pid":' /etc/mpd.conf
 	dosed 's:^db_file.*:db_file "/var/lib/mpd/database":' /etc/mpd.conf
-	dosed 's:^#state_file.*$:state_file "/var/lib/mpd/state:' /etc/mpd.conf
+	dosed 's:^#state_file.*$:state_file "/var/lib/mpd/state":' /etc/mpd.conf
 	diropts -m0755 -o mpd -g audio
 	dodir /var/lib/mpd/music
 	keepdir /var/lib/mpd/music
