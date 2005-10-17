@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b39122b5283da2e2b806548de4cbadb4 ChangeLog 26525
+MD5 d1d9adb4879389fcd0b0bc0cf53de069 ChangeLog 26597
 MD5 511c376c4c6346bcbf51531ef811f00c files/digest-udev-030 61
 MD5 c104f1a0b8423e8f410aaa2fb7b6c745 files/digest-udev-045 61
 MD5 ce48708bcbf9e1e3fcfb02c02e412f54 files/digest-udev-056 61
@@ -51,11 +51,11 @@ MD5 428e955c009eebb4173dd0e059327e96 udev-067.ebuild 5914
 MD5 0b0240991924922eab433e39cf1ca953 udev-068-r1.ebuild 6698
 MD5 bd19acabc0ff3c10b792a8ad7e102009 udev-068.ebuild 6646
 MD5 0bd16f42f1bd404a650da235c6eda855 udev-069.ebuild 6648
-MD5 0c8b0e24aac1697b0c35898d3d0f34bb udev-070.ebuild 6693
+MD5 6678622718718ecd374947097bdf67be udev-070.ebuild 6688
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDU7WeKRy60XGEcJIRAuE3AJ9s53xuEqKzaGykUm/cv2cll+UraQCgmJwE
-Q6x3Cod/Qx3elbHHKuWFZVg=
-=57iE
+iD8DBQFDU8nGomPajV0RnrERAou5AJ4yHHT5oko6cQ6j1R4PU2HNf1Y8UACdFOS7
+/zAQCz/otRFt+VWo8/TxI4Q=
+=zCD/
 -----END PGP SIGNATURE-----
