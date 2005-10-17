@@ -1,0 +1,74 @@
+--- xsys-2.0.8/pci.h.orig	2005-10-17 19:18:34.000000000 +0100
++++ xsys-2.0.8/pci.h	2005-10-17 19:19:17.000000000 +0100
+@@ -23,6 +23,6 @@
+ 
+ #include <pci/pci.h>
+ void pci_find_fullname(char *fullname, char *vendor, char *device);
+-int  pci_find_by_class(word *class, char *vendor, char *device);
++int  pci_find_by_class(u16 *class, char *vendor, char *device);
+ 
+ #endif
+--- xsys-2.0.8/pci.c.orig	2005-10-17 19:20:14.000000000 +0100
++++ xsys-2.0.8/pci.c	2005-10-17 19:21:47.000000000 +0100
+@@ -35,7 +35,7 @@
+   	struct device *next;
+   	struct pci_dev *dev;
+   	unsigned int config_cnt;
+-  	byte config[256];
++  	u8 config[256];
+ };
+ 
+ struct device *first_dev;
+@@ -77,12 +77,12 @@
+       	}
+ }
+ 
+-word get_conf_word(struct device *d, unsigned int pos)
++u16 get_conf_word(struct device *d, unsigned int pos)
+ {
+   	return d->config[pos] | (d->config[pos+1] << 8);
+ }
+ 
+-int pci_find_by_class(word *class, char *vendor, char *device)
++int pci_find_by_class(u16 *class, char *vendor, char *device)
+ {
+ 	struct device *d;
+ 	struct pci_dev *p;
+--- xsys-2.0.8/parse.c.orig	2005-10-17 19:19:28.000000000 +0100
++++ xsys-2.0.8/parse.c	2005-10-17 19:19:58.000000000 +0100
+@@ -214,7 +214,7 @@
+ int xs_parse_sound(char *snd_card)
+ {
+ 	char buffer[bsize], cards[bsize] = "\0", vendor[7] = "\0", device[7] = "\0", *pos;
+-	word class = PCI_CLASS_MULTIMEDIA_AUDIO;
++	u16 class = PCI_CLASS_MULTIMEDIA_AUDIO;
+ 
+ 	FILE *fp = NULL;
+ 	if((fp = fopen("/proc/asound/cards", "r"))== NULL) {
+@@ -255,7 +255,7 @@
+ int xs_parse_video(char *vid_card)
+ {
+ 	char vendor[7] = "\0", device[7] = "\0";
+-	word class = PCI_CLASS_DISPLAY_VGA;
++	u16 class = PCI_CLASS_DISPLAY_VGA;
+ 	if (pci_find_by_class(&class, vendor, device))
+ 		return 1;
+ 	else
+@@ -266,7 +266,7 @@
+ int xs_parse_ether(char *ethernet_card)
+ {
+ 	char vendor[7] = "\0", device[7] = "\0";
+-	word class = PCI_CLASS_NETWORK_ETHERNET;
++	u16 class = PCI_CLASS_NETWORK_ETHERNET;
+ 	if (pci_find_by_class(&class, vendor, device))
+ 		return 1;
+ 	else
+@@ -277,7 +277,7 @@
+ int xs_parse_agpbridge(char *agp_bridge)
+ {
+ 	char vendor[7] = "\0", device[7] = "\0";
+-	word class = PCI_CLASS_BRIDGE_HOST;
++	u16 class = PCI_CLASS_BRIDGE_HOST;
+ 	if (pci_find_by_class(&class, vendor, device))
+ 		return 1;
+ 	else
