@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5bebe8218025b3d88cb44a985be15484 dbacl-1.11.ebuild 537
 MD5 90f825aac79bdf3fb9aac385e92d33ea dbacl-1.3.ebuild 651
+MD5 b5137009815512c4d5e1513f7038e283 dbacl-1.11.ebuild 549
 MD5 aa90c8aed7345231051998e2c41d2099 dbacl-1.9.ebuild 533
-MD5 8da465317818b8ea79d924d631f6e369 ChangeLog 1090
-MD5 90303a32af96ff0aee3249780e9a4acc files/dbacl-1.3.patch 329
+MD5 c36c2a2d199257f50428fea867aca7b8 ChangeLog 1195
 MD5 507fe7ec064ad085163d9a3d0f398747 files/digest-dbacl-1.11 62
-MD5 e71b7deca695d8c24eb175d78efc22f7 files/digest-dbacl-1.9 61
+MD5 90303a32af96ff0aee3249780e9a4acc files/dbacl-1.3.patch 329
 MD5 88700653fcf265dfc7485528be51901e files/digest-dbacl-1.3 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKzuBLLFUmVNQ7rkRAmKEAJ9a40vnc527plnlsrZESTTFg1hsAACcDyMm
-VOu2el83JmiJWFdzS3OQn4Y=
-=2q5F
------END PGP SIGNATURE-----
+MD5 e71b7deca695d8c24eb175d78efc22f7 files/digest-dbacl-1.9 61
