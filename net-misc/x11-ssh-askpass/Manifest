@@ -1,6 +1,17 @@
-MD5 2f35eb3fe5b508d139ed569af1d65653 ChangeLog 2239
-MD5 d8d330386e303b9b36044d872224b3e8 x11-ssh-askpass-1.2.2-r1.ebuild 1035
-MD5 caba812c565130548aa84adc7650c4c0 x11-ssh-askpass-1.2.4.1.ebuild 936
-MD5 a5820e00831335cc416df383e206a5eb files/digest-x11-ssh-askpass-1.2.4.1 74
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a04319af9b208cfca9958e831c5fc8f5 ChangeLog 2463
 MD5 a507a3e3da835a4e8d763cdea183d071 files/digest-x11-ssh-askpass-1.2.2-r1 72
+MD5 a5820e00831335cc416df383e206a5eb files/digest-x11-ssh-askpass-1.2.4.1-r1 74
 MD5 1a90e521c0674c6fd9a34b9c6ebfcb62 files/stupid-imake.diff 548
+MD5 2c1edf73176f0cce9f6ee1753c6c08d9 metadata.xml 298
+MD5 d8d330386e303b9b36044d872224b3e8 x11-ssh-askpass-1.2.2-r1.ebuild 1035
+MD5 a7e463b20c6bf868057c22b2203f891a x11-ssh-askpass-1.2.4.1-r1.ebuild 969
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVBx/BtvusYtCZMsRAie5AKCHKwkSmK7OnwUotny6X7ZiO7a9lQCdERhS
+f/nfmz5h7sJtiPjyMblbHTg=
+=RVqF
+-----END PGP SIGNATURE-----

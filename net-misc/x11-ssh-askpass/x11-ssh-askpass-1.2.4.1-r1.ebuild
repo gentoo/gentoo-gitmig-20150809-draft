@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1.ebuild,v 1.4 2004/07/01 22:12:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1-r1.ebuild,v 1.1 2005/10/17 21:49:33 cardoe Exp $
+
+inherit eutils multilib
 
 IUSE=""
 DESCRIPTION="X11-based passphrase dialog for use with OpenSSH"
@@ -13,11 +15,11 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
 
 DEPEND="virtual/libc
 	virtual/x11"
-RDEPEND="virtual/x11
+RDEPEND="${DEPEND}
 	virtual/ssh"
 
 src_compile() {
-	./configure --prefix=/usr --libexecdir=/usr/lib/misc || die
+	econf --libexecdir=/usr/$(get_libdir)/misc || die
 	xmkmf || die
 	make includes || die
 	make "CDEBUGFLAGS=${CFLAGS}" || die
@@ -26,7 +28,7 @@ src_compile() {
 src_install() {
 	newman x11-ssh-askpass.man x11-ssh-askpass.1
 	dobin x11-ssh-askpass
-	dodir /usr/lib/misc
-	dosym /usr/bin/x11-ssh-askpass /usr/lib/misc/ssh-askpass
+	dodir /usr/$(get_libdir)/misc
+	dosym /usr/bin/x11-ssh-askpass /usr/$(get_libdir)/misc/ssh-askpass
 	dodoc ChangeLog README TODO
 }
