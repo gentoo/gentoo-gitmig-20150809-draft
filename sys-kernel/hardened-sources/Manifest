@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 441c0d8e71fbd8b34be5c5482190376a hardened-sources-2.4.31.ebuild 777
-MD5 93a4d00db58486dd65300eedce38b154 hardened-sources-2.4.30-r1.ebuild 780
-MD5 fa3b7ecf3b151d6902c9a01e9212b02d hardened-sources-2.6.13.ebuild 765
-MD5 25bf1797fc8bb476db7eb6dba6dea8c4 ChangeLog 16121
-MD5 ea581939769338f7f2905ba91ed91c6f metadata.xml 979
-MD5 d63b70be4c4c070ce524bf69824563db hardened-sources-2.6.11-r15.ebuild 838
-MD5 dd9860be46684ce346eb3979cd1ce668 files/digest-hardened-sources-2.6.11-r15 230
+MD5 382a6739c4d7f5f7c9f5a8b101c9c951 ChangeLog 16382
 MD5 31b0edc023e247961a1743f3661da443 files/digest-hardened-sources-2.4.30-r1 145
 MD5 4c68ccd8c0fb38ead3d209ef4b0d03d6 files/digest-hardened-sources-2.4.31 145
+MD5 dd9860be46684ce346eb3979cd1ce668 files/digest-hardened-sources-2.6.11-r15 230
 MD5 f804ffb412794ba397d7310c57896c3d files/digest-hardened-sources-2.6.13 228
+MD5 be14740b084d4b311402e5227e179763 files/digest-hardened-sources-2.6.13-r1 228
+MD5 93a4d00db58486dd65300eedce38b154 hardened-sources-2.4.30-r1.ebuild 780
+MD5 441c0d8e71fbd8b34be5c5482190376a hardened-sources-2.4.31.ebuild 777
+MD5 d63b70be4c4c070ce524bf69824563db hardened-sources-2.6.11-r15.ebuild 838
+MD5 b929ec6805c77bb246104d027ff9ff87 hardened-sources-2.6.13-r1.ebuild 768
+MD5 fa3b7ecf3b151d6902c9a01e9212b02d hardened-sources-2.6.13.ebuild 765
+MD5 ea581939769338f7f2905ba91ed91c6f metadata.xml 979
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKyCOz7mlh8wQzGMRAr3yAJ9VHuJKyyYd1tEHBzs2dZmiTfkHyACfZiWm
-kjbt2sb0J/nQ6WHn4/nkU5k=
-=omwW
+iD8DBQFDU89kz7mlh8wQzGMRAv98AJ9vxsP6+19IaDN3M9t5evG1VkmZHACgj3OL
+yZNrhYikXIwdqTBN0Qm5kq4=
+=FO9K
 -----END PGP SIGNATURE-----
