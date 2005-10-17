@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.241 2005/10/15 19:49:20 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.242 2005/10/17 16:40:41 nakano Exp $
+
+  17 Oct 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/postgresql.conf-8.1_beta1, -files/postgresql.init-8.1_beta1,
+  -files/postgresql.conf-8.1_beta2, -files/postgresql.init-8.1_beta2,
+  -files/postgresql-8.1_beta1-gentoo.patch,
+  -files/postgresql-8.1_beta1-sh.patch,
+  -files/postgresql-8.1_beta2-gentoo.patch,
+  -files/postgresql-8.1_beta2-sh.patch, -postgresql-8.1_beta1.ebuild,
+  -postgresql-8.1_beta2.ebuild:
+  Removed old versions.
 
 *postgresql-8.1_beta3 (15 Oct 2005)
 
