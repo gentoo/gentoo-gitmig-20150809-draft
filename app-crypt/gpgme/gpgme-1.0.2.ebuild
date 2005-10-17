@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.2.ebuild,v 1.14 2005/09/19 20:35:49 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.2.ebuild,v 1.15 2005/10/17 19:25:01 dragonheart Exp $
 
 inherit eutils libtool
 
@@ -56,6 +56,10 @@ src_compile() {
 
 	# For when gnupg-1.9+ gets unmasked
 	#	$(use_with smime gpgsm /usr/bin/gpgsm) \
+
+	if use selinux; then
+		sed  -i -e "s:tests = tests:tests = :" Makefile.in || die 
+	fi 
 
 	econf \
 		--includedir=/usr/include/gpgme \
