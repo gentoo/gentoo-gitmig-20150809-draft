@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 5d6134093187a104087e1d813150e094 advancemenu-2.4.10.ebuild 2526
-MD5 aa4a480d153c0c3d87a2fa8afa0b2532 ChangeLog 2934
+MD5 3537624856060f4a4a2e9cc99705c2db advancemenu-2.4.11.ebuild 2529
+MD5 7f053fcfec3523a6c920f490ee62dbfc ChangeLog 3124
 MD5 fceeb76637a021f26b3d0ddefd9f12d3 files/advancemenu-2.4.10-alsa-pkg-config.patch 1041
 MD5 d6f9ec5617c3b3e0fdf5947df18af24e files/digest-advancemenu-2.4.10 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC5XWugIKl8Uu19MoRAngAAJ9mKVITRnbjVMfj35ROKkLwf9ToOgCfQwmU
-7cF3KLvre3I4md6uAsD5tJQ=
-=nQfO
------END PGP SIGNATURE-----
+MD5 fceeb76637a021f26b3d0ddefd9f12d3 files/advancemenu-2.4.11-alsa-pkg-config.patch 1041
+MD5 e3724ff5c86566b947b85cc814abe55b files/digest-advancemenu-2.4.11 71
