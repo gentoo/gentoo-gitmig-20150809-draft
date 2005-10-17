@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.3.ebuild,v 1.1 2005/10/17 15:42:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.4.3.ebuild,v 1.2 2005/10/17 23:02:19 carlo Exp $
 
 inherit kde
 
@@ -13,6 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
+DEPEND=">=dev-util/scons-0.96.1"
 RDEPEND="|| ( sys-apps/slocate sys-apps/rlocate )"
 need-kde 3.1
 

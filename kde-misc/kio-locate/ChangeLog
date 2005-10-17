@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio-locate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.16 2005/10/17 15:42:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.17 2005/10/17 23:02:19 carlo Exp $
+
+  17 Oct 2005; Carsten Lohrke <carlo@gentoo.org> kio-locate-0.4.3.ebuild:
+  accidentally dropped scons dependency
 
 *kio-locate-0.4.3 (17 Oct 2005)
 
