@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.4 2005/10/17 14:28:26 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.5 2005/10/17 15:09:44 dang Exp $
 
 inherit gnome2 eutils
 
@@ -65,6 +65,8 @@ src_unpack(){
 	epatch ${FILESDIR}/${P}-t1lib_is_t1.patch
 	# Fix .desktop file so menu item shows up
 	epatch ${FILESDIR}/${P}-display-menu.patch
+	# Make tiff really optional
+	epatch ${FILESDIR}/${P}-no-tiff.patch
 	automake || die "automake failed"
 	gnome2_omf_fix ${S}/help/Makefile.in
 	autoconf || die "autoconf failed"

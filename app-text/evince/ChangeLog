@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.14 2005/10/17 14:28:26 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.15 2005/10/17 15:09:44 dang Exp $
+
+  17 Oct 2005; <dang@gentoo.org> +files/evince-0.4.0-no-tiff.patch,
+  evince-0.4.0-r2.ebuild:
+  Make tiff actually optional
 
   17 Oct 2005; John N. Laliberte <allanonjl@gentoo.org>
   evince-0.4.0-r2.ebuild:
