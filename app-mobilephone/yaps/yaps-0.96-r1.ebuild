@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.3 2005/10/16 16:41:22 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.4 2005/10/17 22:24:21 sbriesen Exp $
 
 inherit eutils
 
@@ -20,11 +20,15 @@ RDEPEND="capi? ( net-dialup/capi4k-utils )
 DEPEND="${RDEPEND}
 	lua? ( dev-util/pkgconfig )"
 
-use capi && S="${S}.c2"
+S="${WORKDIR}"
+
+pkg_setup() {
+	use capi && MY_S="${S}/${P}.c2" || MY_S="${S}/${P}"
+}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	cd "${MY_S}"
 
 	# apply patches
 	epatch "${FILESDIR}/${P}-gentoo.patch"
@@ -42,13 +46,16 @@ src_unpack() {
 }
 
 src_compile() {
+	cd "${MY_S}"
 	local myconf=""
+	use capi && cd "${WORKDIR}/${P}.c2"
 	use lua && myconf="${myconf} LUA=True"
 	use slang && myconf="${myconf} SLANG=True"
 	emake CFLAGS="${CFLAGS}" ${myconf} || die "emake failed"
 }
 
 src_install() {
+	cd "${MY_S}"
 	dobin yaps
 	insinto /etc
 	doins yaps.rc

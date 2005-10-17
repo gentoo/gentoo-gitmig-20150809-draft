@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.8 2005/10/16 16:41:22 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.9 2005/10/17 22:24:21 sbriesen Exp $
+
+  17 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org> yaps-0.96-r1.ebuild:
+  removed 'use capi' from global scope.
 
   16 Oct 2005; Stefan Briesenick <sbriesen@gentoo.org> yaps-0.96-r1.ebuild:
   reverted x86 to ~x86. Sorry, my fault. Forget to reset keywords after fixing
