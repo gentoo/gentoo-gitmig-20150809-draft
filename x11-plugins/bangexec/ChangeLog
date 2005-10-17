@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/bangexec
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/ChangeLog,v 1.5 2005/06/21 02:23:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bangexec/ChangeLog,v 1.6 2005/10/17 03:45:38 gothgirl Exp $
+
+  17 Oct 2005; <gothgirl@gentoo.org> -bangexec-1.1.4.ebuild,
+  -bangexec-1.3.0.ebuild, bangexec-1.3.0.2.ebuild:
+  Updated Homepage and SRC_URI
 
 *bangexec-1.3.0.2 (21 Jun 2005)
 
