@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.45 2005/10/13 15:13:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.46 2005/10/17 08:45:38 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -593,7 +593,7 @@ multilib_env() {
 			export CDEFINE_n64="_MIPS_SIM == _ABI64"
 			export LIBDIR_n64="lib64"
 
-			export MULTILIB_ABIS="n64 n32" # o32
+			export MULTILIB_ABIS="n64 n32 o32"
 			export DEFAULT_ABI="n32"
 		;;
 		powerpc64*)
