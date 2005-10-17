@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.27 2005/10/11 19:49:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.28 2005/10/17 19:17:16 ranger Exp $
+
+  17 Oct 2005; Brent Baude <ranger@gentoo.org> libpqxx-2.5.1.ebuild:
+  Marking ppc64 for koffice dep on 2005.0 profile
 
   11 Oct 2005; Aron Griffis <agriffis@gentoo.org> libpqxx-2.5.5.ebuild:
   Mark 2.5.5 ~ia64
