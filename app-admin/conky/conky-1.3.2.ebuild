@@ -1,64 +1,58 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.2.ebuild,v 1.2 2005/08/10 19:07:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.3.2.ebuild,v 1.1 2005/10/17 19:21:31 dragonheart Exp $
 
 inherit eutils
 
 DESCRIPTION="Conky is an advanced, highly configurable system monitor for X"
-HOMEPAGE="http://conky.rty.ca"
+HOMEPAGE="http://conky.sf.net"
 SRC_URI="mirror://sourceforge/conky/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="truetype seti metar"
+IUSE="truetype seti X"
 
 DEPEND_COMMON="
 	virtual/libc
-	virtual/x11
-	truetype? ( >=media-libs/freetype-2 )
-	!amd64? (
-			metar? ( dev-libs/mdsplib )
+	X? (
+		virtual/x11
+		truetype? ( >=media-libs/freetype-2 )
 	)"
-
-#am64 awaiting keywords as per bug #99262
-
 
 RDEPEND="${DEPEND_COMMON}
 	seti? ( sci-astronomy/setiathome )"
 
 DEPEND="
 	${DEPEND_COMMON}
-	>=sys-devel/automake-1.4
-	sys-devel/autoconf
+	>=sys-devel/automake-1.9
+	>=sys-devel/autoconf-2.59
+	sys-devel/libtool
 	sys-apps/grep
 	sys-apps/sed
-	sys-devel/gcc
-	>=sys-process/procps-3.2.5"
+	sys-devel/gcc"
 
 
 src_compile() {
 	local myconf
-	myconf="--enable-double-buffer --enable-own-window --enable-proc-uptime --enable-mpd --enable-mldonkey"
-	if !use amd64 && !use sparc
-	then
-		myconf="${myconf} $(use_enable metar)"
-	fi
+	myconf="--enable-double-buffer --enable-own-window --enable-proc-uptime
+	--enable-mpd --enable-mldonkey"
 	econf \
 		${myconf} \
 		$(use_enable truetype xft) \
-		$(use_enable seti) \
-		$(use_enable metar) || die "econf failed"
+		$(use_enable X x11) \
+		$(use_enable seti) || die "econf failed"
 	emake || die "compile failed"
 }
 
 src_install() {
 	emake DESTDIR=${D} install || die "make install failed"
-	dodoc ChangeLog AUTHORS README conkyrc.sample
+	dodoc ChangeLog AUTHORS README doc/conkyrc.sample doc/variables.html
+	dodoc doc/docs.html doc/config_settings.html
 }
 
 pkg_postinst() {
-	einfo 'default configuration file is "~/.conkyrc"'
+	einfo 'Default configuration file is "~/.conkyrc"'
 	einfo "you can find a sample configuration file in"
 	einfo "/usr/share/doc/${PF}/conkyrc.sample.gz"
 	einfo
@@ -66,10 +60,15 @@ pkg_postinst() {
 	einfo "please look at the README and ChangeLog:"
 	einfo "/usr/share/doc/${PF}/README.gz"
 	einfo "/usr/share/doc/${PF}/ChangeLog.gz"
+	einfo "There are also pretty html docs available"
+	einfo "on Conky's site or in /usr/share/doc/${PF}"
 	einfo
 	einfo "Comment out temperature info lines if you have no kernel"
 	einfo "support for it."
 	einfo
 	ewarn "Conky doesn't work with window managers that"
 	ewarn "take control over root window such as Gnome's nautilus."
+	ewarn
+	ewarn "Please note that METAR support has been removed since 1.2"
+	ewarn
 }
