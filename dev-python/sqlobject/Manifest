@@ -1,19 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b047630c434f6448bdaa2d406b5c0a0d ChangeLog 1191
-MD5 4f1a2e57adc3709e1eb06286ce386e62 metadata.xml 373
-MD5 5a306315fc1222463464324ce05c2a53 sqlobject-0.6.1-r1.ebuild 1083
-MD5 4ee5c20c841709f9d6d7be6d6ab72a68 sqlobject-0.6.1.ebuild 884
 MD5 4c84be3857d1268c0ac3ac0874e1de1b sqlobject-0.6.ebuild 884
-MD5 5b2d75adc12e9723956e5f5bc0d6dbcf files/converters-0.6.1-gentoo.diff 894
+MD5 4f1a2e57adc3709e1eb06286ce386e62 metadata.xml 373
+MD5 6bce37e2c2c48a9b5027ea58a47df0ab ChangeLog 1322
+MD5 4ee5c20c841709f9d6d7be6d6ab72a68 sqlobject-0.6.1.ebuild 884
+MD5 5a306315fc1222463464324ce05c2a53 sqlobject-0.6.1-r1.ebuild 1083
+MD5 142e903f3a1ecb69235ec2e2f891544a sqlobject-0.7.0.ebuild 1069
 MD5 d0031ecb2e25667b84c0f038fbfd9824 files/digest-sqlobject-0.6 65
 MD5 1f977e1d1bdca5117fa468d6d620ca80 files/digest-sqlobject-0.6.1 67
+MD5 5b2d75adc12e9723956e5f5bc0d6dbcf files/converters-0.6.1-gentoo.diff 894
 MD5 1f977e1d1bdca5117fa468d6d620ca80 files/digest-sqlobject-0.6.1-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDJO0vwUpWvClEHQoRAuWBAJsHCbXJ6lLGFmaZM8o5rtjWtWnc3ACfeMYK
-Cubl/nofebA58rJjnFAA0qM=
-=y1hL
------END PGP SIGNATURE-----
+MD5 23723737850551f1799a5656cd7f0cde files/digest-sqlobject-0.7.0 67
