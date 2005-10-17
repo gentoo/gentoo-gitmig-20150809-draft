@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd61e4a32ddae29f373729b0e67330ca ChangeLog 563
+MD5 6a376196d952de4de14a94456c744692 files/50gambit-gentoo.el 351
+MD5 fe701231e9bd4a56c61ee9ca2d8d28ba files/digest-gambit-4.0_beta15 63
+MD5 db660a1e8f64bae5158e29267e71780a gambit-4.0_beta15.ebuild 1416
+MD5 50b0f9698722324cfb463e8cb165fc87 metadata.xml 159
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDUyRVyiNZaEAZA+ARAvZHAJ9z1JPaFtVIsC+MVZG3YtXM0IalFgCfQT0g
+kKWMfMlv9d4XbyC2gv8suPc=
+=AIlm
+-----END PGP SIGNATURE-----
