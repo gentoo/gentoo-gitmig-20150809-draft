@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccrypt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.6 2005/09/29 01:46:06 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.7 2005/10/17 05:11:06 josejx Exp $
+
+  17 Oct 2005; Joseph Jezak <josejx@gentoo.org> ccrypt-1.7.ebuild:
+  Marked ppc stable for bug #108173.
 
   29 Sep 2005; Marcelo Goes <vanquirius@gentoo.org> ccrypt-1.7.ebuild:
   Remove redundant src_compile, do not install COPYING/INSTALL.
