@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zopex3
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/ChangeLog,v 1.10 2005/05/21 14:33:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/ChangeLog,v 1.11 2005/10/17 22:11:17 radek Exp $
+
+  17 Oct 2005; Radoslaw Stachowiak <radek@gentoo.org> zopex3-3.0.0.ebuild:
+  fixed bug #109482
 
   21 May 2005; Simon Stelling <blubb@gentoo.org> zopex3-3.0.0.ebuild:
   added ~amd64 keyword
