@@ -4,8 +4,9 @@ MD5 f23ae998b29e9b8c89629a960daf7bf8 suspend2-sources-2.6.13-r1.ebuild 2013
 MD5 6390d140bb44f262eb10401c6de55326 suspend2-sources-2.6.13.ebuild 2070
 MD5 87f85d43a2586902805f98101306cdb3 suspend2-sources-2.6.13-r3.ebuild 1974
 MD5 6a6afac09e206eb57664c020b521b29b suspend2-sources-2.6.12-r6.ebuild 2157
+MD5 509af92e8b755497d58fa8a7c241e4f5 suspend2-sources-2.6.13-r5.ebuild 1974
 MD5 b2b02e62be94dd09f2b39fcfb91800d0 suspend2-sources-2.6.13-r2.ebuild 1974
-MD5 50be06fa4dfac26baa92537b941f1ced ChangeLog 3145
+MD5 5b27860716c38940d95126cd55a7b7c2 ChangeLog 3350
 MD5 e40cb3df546efa5003fe3778c5a50854 metadata.xml 275
 MD5 8c885e50de95004ba759a137c3f93495 files/101-software-suspend-2.2-rc3-for-2.6.13-gcc4.patch 877
 MD5 320c41493bbe3f054a0a90d92c98e67f files/linux-2.6.12-try_to_freeze.patch 3190
@@ -16,6 +17,7 @@ MD5 5ff92c313009119044ed51956fb509f9 files/digest-suspend2-sources-2.6.13-r1 310
 MD5 16d093ac8154cc561af7a4a90179d885 files/digest-suspend2-sources-2.6.13-r2 310
 MD5 63ce46eba91fa8e586a2a26ed6432987 files/digest-suspend2-sources-2.6.13-r3 310
 MD5 a1ecfa4588d9177bc680ebe3acf020b9 files/digest-suspend2-sources-2.6.13-r4 310
+MD5 906ae7417b7d3ae2f2bf7859812f8396 files/digest-suspend2-sources-2.6.13-r5 310
 MD5 d1eff82a3bab3c5b67dec45a552888e4 files/linux-2.6.13-poweroff.patch 500
 MD5 a67db8b8f894652b4d1456406d307a37 files/digest-suspend2-sources-2.6.13 310
 MD5 2b6c45a5cc42e34edf11954e71a95815 files/4306_dm-bbr-create_workqueue.patch 548
