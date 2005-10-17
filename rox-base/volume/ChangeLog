@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/volume
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.1 2004/12/18 19:19:00 sergey Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.2 2005/10/17 09:41:46 svyatogor Exp $
+
+*volume-0.0.7 (17 Oct 2005)
+
+  17 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +volume-0.0.7.ebuild:
+  Version bump up to 0.0.7. Thanks to Peter Hyman bug #109110.
 
 *volume-0.0.6 (18 Dec 2004)
 
