@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4eb41e471f0b8475284437703a912f9b ChangeLog 15403
+MD5 c5b047e19f5b3b38f8b12eec93c4497c ChangeLog 15654
 MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
 MD5 a4df32e089db48d7c99fd6be36368475 bash-2.05b-r9.ebuild 3516
 MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
@@ -24,7 +21,7 @@ MD5 e685741a0d3aede0600541b946b99564 files/bash-3.0-force-static-linking.patch 9
 MD5 dced48405f7f282987d6e23d6d83499d files/bash-3.0-gentoo.patch 2955
 MD5 340ff85349dde64927124f82b2722fc4 files/bash-3.0-histtimeformat.patch 1718
 MD5 095c2675a00fb2006a23dc1617f257da files/bash-3.0-invisible.patch 846
-MD5 187405c198c05b4a4887211b2e52e17e files/bash-3.0-jobs.patch 1075
+MD5 a5a7563fda04dc09b924a0291d34391f files/bash-3.0-jobs.patch 1438
 MD5 10903eb578a9ab4992dc6a3b1a23df54 files/bash-3.0-local-array.patch 364
 MD5 34c51cd635ce6c67ad48916664d8bd0d files/bash-3.0-locale.patch 3426
 MD5 2cb2e2808cdef5be2c06f7b0e5e6933d files/bash-3.0-manpage.patch 498
@@ -53,10 +50,3 @@ MD5 7d8a8ef90c1818a0cd66808ac2740638 files/dot-bash_logout 127
 MD5 d76b9aa6b733175df21c2bb6afe8900d files/dot-bash_profile 193
 MD5 6dcc418c7812b5f8ebf2f6562eb2e57c files/dot-bashrc 983
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUb6dgIKl8Uu19MoRAudKAJ478tUVITF5rszU1F/leVcIjmnx6gCfVLMb
-RpbttIvNYam0uN5doORgqIg=
-=lBTY
------END PGP SIGNATURE-----

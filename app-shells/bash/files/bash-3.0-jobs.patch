@@ -4,6 +4,21 @@ Ripped from Fedora
 - Check for EINVAL from waitpid() and avoid WCONTINUED in that case.
 - Fixed jobs4 test.
 
+From: 	Tim Waugh
+Subject: 	[patch] bash-3.0: avoid WCONTINUED if invalid
+Date: 	Wed, 8 Sep 2004 16:52:38 +0100
+User-agent: 	Mutt/1.4.1i
+
+Hi,
+
+GNU libc defines WCONTINUED, but (at least on Linux 2.4.x kernels)
+waitpid() returns -1 with errno set to EINVAL if WCONTINUED is
+supplied in options.
+
+Here is a patch to retry without WCONTINUED set in that case.
+
+Tim.
+
 --- bash-3.0/tests/jobs4.sub
 +++ bash-3.0/tests/jobs4.sub
 @@ -18,5 +18,5 @@
