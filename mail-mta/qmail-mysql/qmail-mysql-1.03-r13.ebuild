@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.8 2005/08/06 20:18:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/qmail-mysql-1.03-r13.ebuild,v 1.9 2005/10/17 20:42:55 hansmi Exp $
 
 inherit eutils fixheadtails
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	"
 # broken stuffs
 #http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
-#http://www.dataloss.nl/software/patches/qmail-pop3d-stat.patch 
+#http://www.dataloss.nl/software/patches/qmail-pop3d-stat.patch
 
 SLOT="0"
 LICENSE="as-is"
@@ -358,7 +358,7 @@ pkg_postinst() {
 	env-update
 
 	einfo "To setup qmail to run out-of-the-box on your system, run:"
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "ebuild --config =${PF}"
 	echo
 	einfo "To start qmail at boot you have to add svscan to your startup"
 	einfo "and create the following links:"
