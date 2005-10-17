@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.11 2005/09/21 17:52:06 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.12 2005/10/17 13:49:25 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -538,7 +538,7 @@ pkg_postinst() {
 		# your friendly public service announcement...
 		einfo
 		einfo "You might want to run:"
-		einfo "\"ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config\""
+		einfo "\"emerge --config =${PF}\""
 		einfo "if this is a new install."
 		einfo
 		if [[ "${PREVIOUS_DATADIR}" == "yes" ]] ; then
