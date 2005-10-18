@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.9 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.10 2005/10/18 16:36:10 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -184,7 +184,7 @@ standard-impl-postinst() {
 	if test-in ${impl} cmucl sbcl; then
 		impl-restore-timestamp-hack ${impl}
 	fi
-	chown -R root:root /usr/$(get_libdir)/${impl}
+	chown -R root:0 /usr/$(get_libdir)/${impl}
 	/usr/bin/clc-autobuild-impl ${impl} yes
 	register-common-lisp-implementation ${impl}
 }
