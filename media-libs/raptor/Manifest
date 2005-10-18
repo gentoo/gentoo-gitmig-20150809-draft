@@ -2,19 +2,15 @@
 Hash: SHA1
 
 MD5 35b0a876bf75e6c20cdfcbe61e435486 ChangeLog 2958
-MD5 feb9d1aa2b9359aefd32236c42748615 files/digest-raptor-1.2.0 64
-MD5 d5368b0ed0013f29758afc9a12bd4007 files/digest-raptor-1.4.2 64
 MD5 1bdb97a56fbd4ed14588121781fad850 files/digest-raptor-1.4.5 64
 MD5 a9760c67971a37403703a4eaaec19d21 files/digest-raptor-1.4.7 65
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 fea2b22a7184775713570221f24078c3 raptor-1.2.0.ebuild 2203
-MD5 fbaed81e4d8f4cde95594e090c048339 raptor-1.4.2.ebuild 2123
 MD5 afe69650affe0acb8179b1e62866cf4b raptor-1.4.5.ebuild 2183
 MD5 ba987cf7a6925c74b87947977e62e993 raptor-1.4.7.ebuild 2193
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVEIUgIKl8Uu19MoRAtDTAJ9DeSBm1wJ5pmwJFlCHQ4sPRgJQFgCfUK3M
-qJaQ3rJg3rmdDVYyjFdQf80=
-=+Zbr
+iD8DBQFDVFa8gIKl8Uu19MoRAnfpAJ9RAuG0qSUhbXMpwT41fQzjNRchegCfUewc
+6nykZF6MVWPOt8IPto38/Zo=
+=t7oG
 -----END PGP SIGNATURE-----
