@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.22 2005/10/16 06:40:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.23 2005/10/18 17:17:53 weeve Exp $
+
+  18 Oct 2005; Jason Wever <weeve@gentoo.org> libdnet-1.10.ebuild:
+  Really stable on SPARC this time
 
   16 Oct 2005; Jason Wever <weeve@gentoo.org> ChangeLog:
   Stable on SPARC.
