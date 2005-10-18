@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/nmrpipe
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.4 2005/08/31 00:40:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/ChangeLog,v 1.5 2005/10/18 14:40:51 ribosome Exp $
+
+*nmrpipe-2.3.2005.167.14.44 (18 Oct 2005)
+
+  18 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
+  -files/nmrpipe-20050616-env, +files/env-nmrpipe,
+  +nmrpipe-2.3.2005.167.14.44.ebuild, -nmrpipe-20050616-r1.ebuild:
+  New version. Removing obsolete version.
 
 *nmrpipe-20050616-r1 (31 Aug 2005)
 

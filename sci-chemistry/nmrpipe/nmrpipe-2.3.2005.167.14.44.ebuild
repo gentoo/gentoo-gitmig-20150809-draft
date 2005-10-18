@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-20050616-r1.ebuild,v 1.1 2005/08/31 00:40:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrpipe/nmrpipe-2.3.2005.167.14.44.ebuild,v 1.1 2005/10/18 14:40:51 ribosome Exp $
 
 DESCRIPTION="Spectral visualisation, analysis and Fourier processing"
 # The specific terms of this license are printed automatically on startup
@@ -27,8 +27,6 @@ SRC_URI="${PN}.linux9.tar.Z
 	acme.tar.Z
 	binval.com
 	install.com"
-# The maintainer absolutely wants to control redistribution.
-RESTRICT="fetch"
 
 SLOT="0"
 IUSE=""
@@ -38,16 +36,21 @@ IUSE=""
 # if there are such requests.
 KEYWORDS="-* ~x86"
 
-RDEPEND="virtual/x11
-	dev-lang/f2c
+# The maintainer absolutely wants to control redistribution.
+RESTRICT="fetch"
+
+DEPEND="app-shells/tcsh
+	dev-lang/f2c"
+
+RDEPEND="${DEPEND}
 	dev-lang/tcl
 	dev-lang/tk
 	dev-tcltk/blt
 	media-gfx/gnuplot
-	app-shells/tcsh
+	sci-chemistry/rasmol
 	sys-libs/libtermcap-compat
-	x11-libs/xview
-	sci-chemistry/rasmol"
+	virtual/x11
+	x11-libs/xview"
 
 S="${WORKDIR}"
 NMRBASE="/opt/${PN}"
@@ -84,40 +87,43 @@ src_compile() {
 	DISPLAY="" ./install.com "${S}" || die
 	# Remove the symlinks for the archives and the installation scripts.
 	for i in ${A}; do
-		rm ${i}
+		rm ${i} || die "Failed to remove archive symlinks."
 	done
 	# Remove some of the bundled applications and libraries; they are
 	# provided by Gentoo instead.
-	rm -r xview XView nmrbin.linux9/{0.0,lib,*timestamp,xv,gnuplot*,rasmol*}
+	rm -r xview XView nmrbin.linux9/{0.0,lib,*timestamp,xv,gnuplot*,rasmol*} \
+		|| die "Failed to remove unnecessary libraries."
 	# Remove the initialisation script generated during the installation.
 	# It contains incorrect hardcoded paths; only the "nmrInit.com" script
 	# should be used.
-	rm com/nmrInit.linux9.com
+	rm com/nmrInit.linux9.com || die "Failed to remove broken init script."
 	# Make the precompiled Linux binaries executable.
-	chmod +x nmrbin.linux9/*
+	chmod +x nmrbin.linux9/* || die "Failed to make programs executable."
 	# Set the correct path to NMRPipe in the auxiliary scripts.
 	cd com
 	for i in *; do
-		sed -e "s%/u/delaglio%${NMRBASE}%" -i ${i} || die
+		sed -e "s%/u/delaglio%${NMRBASE}%" -i ${i} || die \
+			"Failed patching scripts."
 	done
 	# Remove installation log files.
 	cd "${S}"
-	rm *.log
+	rm *.log || die "Failed to remove installation log."
 }
 
 src_install() {
-	newenvd "${FILESDIR}"/${P}-env 40${PN}
-	insinto /opt/${PN}
+	newenvd "${FILESDIR}"/env-${PN} 40${PN} || die "Failed to install env file."
+	insinto ${NMRBASE}
 	insopts -m0755
-	doins -r *
-	dosym /opt/${PN}/nmrbin.linux9 /opt/${PN}/bin
+	doins -r * || die "Failed to install application."
+	dosym ${NMRBASE}/nmrbin.linux9 ${NMRBASE}/bin || die \
+		"Failed to symlink binaries."
 }
 
 pkg_postinst() {
 	echo
 	ewarn "Before using NMRPipe applications, users must source the following"
 	ewarn "csh script, which will set the necessary environment variables:"
-	ewarn "\t/opt/${PN}/com/nmrInit.com"
+	ewarn "\t${NMRBASE}/com/nmrInit.com"
 	ewarn
 	ewarn "Be aware that this script redefines the locations of the Tcl"
 	ewarn "libraries. This could break other non-NMRPipe Tcl applications"
