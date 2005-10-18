@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc3.ebuild,v 1.1 2005/10/18 05:11:46 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0_rc3.ebuild,v 1.2 2005/10/18 06:45:16 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -121,6 +121,9 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${PATCHDIR}
 	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.diff
+
+	#Additional and new patches get here
+	cp -pPRf ${FILESDIR}/${OO_VER}/stlport-vector-ppc-buildfix.diff ${PATCHDIR}/patches/src680 || die
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"

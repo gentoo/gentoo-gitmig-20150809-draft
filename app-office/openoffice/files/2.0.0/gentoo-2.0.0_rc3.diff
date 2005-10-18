@@ -1,6 +1,6 @@
 --- patches/OOO_2_0/apply 
 +++ patches/OOO_2_0/apply
-@@ -741,7 +741,10 @@
+@@ -741,7 +741,12 @@
  gentoo-splash.diff
  # Do not use mozilla-ldap, it breaks for us
  no-ldap-mozilla.diff
@@ -9,6 +9,8 @@
 +no-fontooo-wizard.diff
 +# Fix the system default fpicker
 +default-system-fpicker.diff
++# Fix for build breakage on PPC
++stlport-vector-ppc-buildfix.diff
  #
  # NOTE: 64 bit OOo is work in progress!
  #
