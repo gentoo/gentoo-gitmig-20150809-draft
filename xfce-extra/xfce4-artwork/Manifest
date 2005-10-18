@@ -1,6 +1,16 @@
-MD5 9bebaed25e4e5733dbba4772ae8e68fe xfce4-artwork-0.0.4-r1.ebuild 413
-MD5 6b591f8494df50fa9fea7be2eede2a98 xfce4-artwork-0.0.4-r2.ebuild 368
-MD5 714ad1495a2960176f400d213b0bed63 ChangeLog 1133
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 b27fc1ce5215fa1c9b94d1ed2355109a files/digest-xfce4-artwork-0.0.4-r1 72
+MD5 976b2ae7c8dcd699e292f0541c6e166a ChangeLog 1252
+MD5 7f1ce3347ffa1d1d458013078c5baa2b xfce4-artwork-0.0.4-r1.ebuild 413
+MD5 6b591f8494df50fa9fea7be2eede2a98 xfce4-artwork-0.0.4-r2.ebuild 368
 MD5 b27fc1ce5215fa1c9b94d1ed2355109a files/digest-xfce4-artwork-0.0.4-r2 72
+MD5 b27fc1ce5215fa1c9b94d1ed2355109a files/digest-xfce4-artwork-0.0.4-r1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVQ6jJrHF4yAQTrARAotYAJ9MBeV3UlIEI4/GselU+BQXCq31bQCgwdue
+8YpGyzu5ZJRyt5EygUQ1v5k=
+=h2d4
+-----END PGP SIGNATURE-----
