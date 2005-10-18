@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5ec487cf04e9856969484d8a8dbda7b2 ChangeLog 581
 MD5 171c18c2267f35e417ca682278d437bb files/digest-rasqal-0.9.10 65
-MD5 a8ae9b4609c9beddd44263a73d10439e files/digest-rasqal-0.9.4 64
 MD5 65aff1c8cff8eeb576a308587c1095ec files/digest-rasqal-0.9.6 64
 MD5 7eafd72661ca19e10eb7e8c567af5c9e rasqal-0.9.10.ebuild 931
-MD5 cc134182134ad30564feb834b556be01 rasqal-0.9.4.ebuild 636
 MD5 243144526d38c8722679f60083a96cc5 rasqal-0.9.6.ebuild 640
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVFKbgIKl8Uu19MoRAoP7AJ99bhv7bHSrt4cQeJplt1JAn1nRLwCfbUly
-BZ8h3zGyjPRvHZSstsNQIms=
-=dKlW
------END PGP SIGNATURE-----
