@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glitz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.12 2005/08/18 09:10:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.13 2005/10/18 13:46:22 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  glitz-0.3.0.20050115.ebuild:
+  Mark 0.3.0.20050115 stable on alpha
 
 *glitz-0.4.4 (18 Aug 2005)
 

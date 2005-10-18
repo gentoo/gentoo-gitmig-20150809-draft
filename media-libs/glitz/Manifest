@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1682b7c4997956b91e0014253333ea9a ChangeLog 1736
-MD5 1bcad3b98a9f7ca2a88c5119df7c8bde glitz-0.2.3.ebuild 1045
-MD5 93d174d6af08cb9828d6af0d8ca03221 glitz-0.3.0.20050115.ebuild 623
-MD5 0024906341e1e45f6ebb88fed0c008a9 glitz-0.4.0.ebuild 602
 MD5 13d5049b8405e67dc76afb9670cb0d4b metadata.xml 429
+MD5 1539bd8704951c0ddfdb8045592c41d0 ChangeLog 1858
+MD5 0024906341e1e45f6ebb88fed0c008a9 glitz-0.4.0.ebuild 602
+MD5 1bcad3b98a9f7ca2a88c5119df7c8bde glitz-0.2.3.ebuild 1045
 MD5 bab19a11aa91d22c0c929514dc065e93 glitz-0.4.4.ebuild 601
-MD5 da3806ac5f02e88b51d0e0a91077f7ab files/digest-glitz-0.2.3 63
+MD5 63577effcd3dadaf24303e3140733517 glitz-0.3.0.20050115.ebuild 624
+MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
 MD5 da3d9e4c1a226dc5c7a4af62ce6896d3 files/digest-glitz-0.3.0.20050115 72
 MD5 2dd21fec0a014af9c094c3ed6e9670a2 files/digest-glitz-0.4.0 63
-MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
 MD5 5d7326021d00d72666e1b83f7e887755 files/digest-glitz-0.4.4 63
+MD5 da3806ac5f02e88b51d0e0a91077f7ab files/digest-glitz-0.2.3 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDBFCrBtvusYtCZMsRAqo5AKCCkCO/MN0zACo4+TL3TMzqKdW2vQCeJcxe
-d4vZqf4NVZX4UUofKlgK8b4=
-=4T7z
+iD8DBQFDVPzDJrHF4yAQTrARAnqUAJ0SagpbSLu2ZKWgCKZBkU3Y1RmAzACgi9vA
+/QAOianCD/SGRydE5nHBX7I=
+=davX
 -----END PGP SIGNATURE-----
