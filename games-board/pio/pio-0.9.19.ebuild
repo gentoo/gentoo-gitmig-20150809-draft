@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pio/pio-0.9.19.ebuild,v 1.4 2005/10/13 05:01:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pio/pio-0.9.19.ebuild,v 1.5 2005/10/18 03:05:07 rizzo Exp $
 
-inherit eutils gnome2 debug
+inherit eutils gnome2
 
 MY_P="pioneers-${PV}"
 DESCRIPTION="A clone of the popular board game The Settlers of Catan"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pio/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
-IUSE="nls debug X"
+IUSE="nls X"
 
 RDEPEND=">=dev-libs/glib-2.0
 	X? ( >=gnome-base/libgnomeui-2.6.1.1
@@ -25,7 +25,6 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	export G2CONF="${G2CONF} `use_enable nls`"
-	export G2CONF="${G2CONF} `use_enable debug`"
 
 	if use X ; then
 		gnome2_src_compile
