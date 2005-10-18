@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmymoney2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.33 2005/08/14 14:35:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/ChangeLog,v 1.34 2005/10/18 18:19:08 cryos Exp $
+
+  18 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> kmymoney2-0.8.ebuild:
+  Marked stable on amd64, bug 109721.
 
 *kmymoney2-0.8 (14 Aug 2005)
 
