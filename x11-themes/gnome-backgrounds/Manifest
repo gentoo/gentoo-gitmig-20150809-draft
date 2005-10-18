@@ -1,10 +1,20 @@
-MD5 7a5d6b8f09a0c3d2f894a251fb866b69 ChangeLog 3685
-MD5 7c86767974461d3fab6c7a948b090fa1 gnome-backgrounds-2.10.0.ebuild 550
-MD5 f87765f6933edb3626cc347c7cd78ea2 gnome-backgrounds-2.10.1.ebuild 546
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 4a55582e260b59dc7914bf4b43514427 gnome-backgrounds-2.10.2.ebuild 561
+MD5 d1380f4eeeb751b957048696ffeae023 ChangeLog 3802
+MD5 7c86767974461d3fab6c7a948b090fa1 gnome-backgrounds-2.10.0.ebuild 550
 MD5 e8c325b8de110bf04ae6ad338abf07a6 gnome-backgrounds-2.12.1.ebuild 568
-MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
-MD5 c547e18a1541ee20308a075e7c49b66f files/digest-gnome-backgrounds-2.10.1 78
+MD5 f87765f6933edb3626cc347c7cd78ea2 gnome-backgrounds-2.10.1.ebuild 546
+MD5 170bbcac59f0ce0881b098f816249866 gnome-backgrounds-2.10.2.ebuild 561
 MD5 e6b3decb3b0dcc7326beaeb08559538d files/digest-gnome-backgrounds-2.10.2 78
 MD5 923cb2ea690b6972e5ab285f4e3243ea files/digest-gnome-backgrounds-2.12.1 78
+MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
+MD5 c547e18a1541ee20308a075e7c49b66f files/digest-gnome-backgrounds-2.10.1 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVQt+JrHF4yAQTrARAkwdAJ4sSrDSqQNlg75mNxj2ioVglYMZRwCfVWTW
+Vth8EFQY8Nqmb5gBFjnlblg=
+=MYaC
+-----END PGP SIGNATURE-----
