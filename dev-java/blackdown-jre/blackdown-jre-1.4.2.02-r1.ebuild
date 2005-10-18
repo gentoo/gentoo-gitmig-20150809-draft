@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.02-r1.ebuild,v 1.1 2005/10/06 20:33:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.02-r1.ebuild,v 1.2 2005/10/18 19:22:41 agriffis Exp $
 
 inherit java versionator
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.blackdown.org"
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="browserplugin mozilla"
+IUSE="nsplugin mozilla"
 DEPEND="virtual/libc
 	>=dev-java/java-config-1.2.11
 	>=sys-apps/sed-4"
@@ -101,7 +101,7 @@ src_install() {
 	dohtml README.html
 
 	# Install mozilla plugin
-	if use browserplugin || use mozilla; then
+	if use nsplugin || use mozilla; then
 		case ${ARCH} in
 			x86) platform="i386" ;;
 			ppc) platform="ppc" ;;
@@ -128,9 +128,9 @@ src_install() {
 
 pkg_postinst() {
 	java_pkg_postinst
-	if ! use browserplugin && use mozilla; then
+	if ! use nsplugin && use mozilla; then
 		ewarn
 		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'browserplugin' please update your USE"
+		ewarn "has been renamed to 'nsplugin' please update your USE"
 	fi
 }

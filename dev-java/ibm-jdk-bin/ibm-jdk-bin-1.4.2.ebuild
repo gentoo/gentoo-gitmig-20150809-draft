@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.27 2005/10/01 07:29:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.28 2005/10/18 19:23:47 agriffis Exp $
 
 inherit java eutils
 
@@ -29,7 +29,7 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	!ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
 
-IUSE="X doc javacomm browserplugin mozilla"
+IUSE="X doc javacomm nsplugin mozilla"
 
 if use ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-142"
@@ -68,7 +68,7 @@ src_install() {
 		doins ${FILESDIR}/cpuinfo
 	fi
 
-	if ( use browserplugin || use mozilla ) && ! use ppc && ! use amd64 && ! use ppc64; then
+	if ( use nsplugin || use mozilla ) && ! use ppc && ! use amd64 && ! use ppc64; then
 		local plugin="libjavaplugin_oji.so"
 		if has_version '>=sys-devel/gcc-3' ; then
 			plugin="libjavaplugin_ojigcc3.so"
@@ -92,10 +92,10 @@ pkg_postinst() {
 		eerror "Some parts of IBM JDK require XFree86 to be installed."
 		eerror "Be careful which Java libraries you attempt to use."
 	fi
-	if ! use browserplugin && use mozilla; then
+	if ! use nsplugin && use mozilla; then
 		ewarn
 		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'browserplugin' please update your USE"
+		ewarn "has been renamed to 'nsplugin' please update your USE"
 	fi
 
 }

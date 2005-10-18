@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.22 2005/07/11 13:23:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.23 2005/10/18 19:22:41 agriffis Exp $
 
 inherit java toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ppc? ( http://distro.ibiblio.org/pub/Linux/distributions/yellowdog/soft
 LICENSE="sun-bcla-java-vm"
 SLOT="0"
 KEYWORDS="ppc -*"
-IUSE="browserplugin mozilla"
+IUSE="nsplugin mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -50,7 +50,7 @@ src_install() {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
-	if use browserplugin || use mozilla; then
+	if use nsplugin || use mozilla; then
 		case ${ARCH} in
 			amd64|x86) platform="i386" ;;
 			ppc) platform="ppc" ;;
@@ -63,9 +63,9 @@ src_install() {
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
 
-	if ! use browserplugin && use mozilla; then
+	if ! use nsplugin && use mozilla; then
 		ewarn
 		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'browserplugin' please update your USE"
+		ewarn "has been renamed to 'nsplugin' please update your USE"
 	fi
 }

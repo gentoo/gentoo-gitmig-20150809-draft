@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.20 2005/10/01 07:34:45 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.21 2005/10/18 19:19:03 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> ibm-jre-bin-1.4.2.ebuild:
+  Respect the global USE=nsplugin instead of the local USE=browserplugin
 
   01 Oct 2005; Thomas Matthijs <axxo@gentoo.org>
   -ibm-jre-bin-1.4.1-r1.ebuild, ibm-jre-bin-1.4.2.ebuild:

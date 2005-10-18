@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.05.ebuild,v 1.1 2005/10/10 16:00:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.05.ebuild,v 1.2 2005/10/18 19:20:32 agriffis Exp $
 
 inherit java eutils
 
@@ -24,7 +24,7 @@ SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~amd64 -*"
 RESTRICT="fetch"
-IUSE="browserplugin mozilla"
+IUSE="nsplugin mozilla"
 
 DEPEND=">=dev-java/java-config-1.2
 	sys-apps/sed"
@@ -105,7 +105,7 @@ src_install() {
 	dodoc COPYRIGHT LICENSE README
 	dohtml Welcome.html
 
-	if use browserplugin || use mozilla; then
+	if use nsplugin || use mozilla; then
 		local plugin_dir="ns7-gcc29"
 		if has_version '>=sys-devel/gcc-3' ; then
 			plugin_dir="ns7"
@@ -184,9 +184,9 @@ pkg_postinst() {
 	eerror "Some parts of Sun's JRE require virtual/x11 and virtual/lpr to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
 
-	if ! use browserplugin && use mozilla; then
+	if ! use nsplugin && use mozilla; then
 		ewarn
 		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'browserplugin' please update your USE."
+		ewarn "has been renamed to 'nsplugin' please update your USE."
 	fi
 }

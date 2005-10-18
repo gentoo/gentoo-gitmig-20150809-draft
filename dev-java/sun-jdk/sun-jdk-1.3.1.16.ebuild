@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.16.ebuild,v 1.1 2005/10/13 09:50:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.16.ebuild,v 1.2 2005/10/18 19:25:14 agriffis Exp $
 
 inherit java eutils
 
@@ -24,7 +24,7 @@ SLOT="1.3"
 KEYWORDS="x86 -*"
 RESTRICT="fetch"
 
-IUSE="doc browserplugin mozilla"
+IUSE="doc nsplugin mozilla"
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
@@ -87,7 +87,7 @@ src_install() {
 	dodir /opt/${P}/share/
 	cp -a demo src.jar ${D}/opt/${P}/share/
 
-	if use browserplugin || use mozilla; then
+	if use nsplugin || use mozilla; then
 		install_mozilla_plugin  /opt/${P}/jre/plugin/i386/ns600/libjavaplugin_oji.so
 	fi
 
