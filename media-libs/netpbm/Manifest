@@ -1,34 +1,47 @@
-MD5 fc5b2c41ccdc4c486d3f7b65771753b5 netpbm-10.19.ebuild 1739
-MD5 e1d7f1307e675fbbfc3a07f2539c0708 netpbm-10.20-r1.ebuild 2442
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 13948142cf9dfbf4f7d0bc984f3d03de ChangeLog 10972
+MD5 d3afaf9141525a706f8c077f66918670 files/10.11.14/Makefile.config 17308
+MD5 be5dafab017b8247e09f643e9798441e files/10.11.14/Makefile.svga 17374
+MD5 d3afaf9141525a706f8c077f66918670 files/10.11.5/Makefile.config 17308
+MD5 be5dafab017b8247e09f643e9798441e files/10.11.5/Makefile.svga 17374
+MD5 943662580b449abb996444e348c48298 files/9.12/Makefile.config 11635
+MD5 6735fc271948c349d02f59361b4c373e files/digest-netpbm-10.11.14 65
+MD5 15efd1a3748d1c9b0a9d9e88374bcbbc files/digest-netpbm-10.11.15 65
+MD5 19ce2b4d396523dcbcb1e415d4bdb8c9 files/digest-netpbm-10.11.5-r3 64
+MD5 74da89b4a373ba2116b4ba5d8e9d31a0 files/digest-netpbm-10.18.7 64
+MD5 c06a062a991dc2b0f8bd88ac44a1e5e5 files/digest-netpbm-10.19 62
+MD5 40a3370de6ed591305e4585ffbc605bd files/digest-netpbm-10.20 62
+MD5 40a3370de6ed591305e4585ffbc605bd files/digest-netpbm-10.20-r1 62
+MD5 c6c3222383568021fbbdc34114b6f279 files/digest-netpbm-10.28 62
+MD5 8c4a20ca06c83687436b8cb75917d5f1 files/digest-netpbm-10.29 62
+MD5 e03ba0a74da10891ecaa41fb86191275 files/digest-netpbm-10.29-r1 136
+MD5 af57721491b0a7cd11ccba542d8e20c6 files/digest-netpbm-10.30 136
+MD5 b38412609f4a8671a787d303b8d2b876 files/digest-netpbm-9.12-r4 61
+MD5 3e364cbe32c6c5bd2f329b8dbcf604d5 files/netpbm-10.29-anytopnm.patch 1562
+MD5 102062d84b1750c991d13e5528a9420b files/netpbm-10.29-build.patch 2278
+MD5 103e8f6f6474dcc4b17ee049111bc3f6 files/netpbm-10.29-infinity.patch 5840
+MD5 d0d44fe5de727324db35e8110dc81f63 files/netpbm-10.29-pnmtopng-alpha-check.patch 603
+MD5 ffa6c02e94b0dfc779d129cd7e09e928 files/netpbm-10.30-build.patch 1886
+MD5 ef9c07e7cbf6b830f8dd61e59fb0a34b files/netpbm-dSAFER.patch 818
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 e356185ae787b984b1502205834c74f4 netpbm-10.11.14.ebuild 2010
-MD5 11d5f86df1298bfe5c076cd3ff802616 ChangeLog 10821
-MD5 28ca860ea5e88498171e08bc22685c16 netpbm-10.11.5-r3.ebuild 1567
-MD5 6aeff0855ca82c4712982529c5d4ba9c netpbm-10.29-r1.ebuild 2923
-MD5 a936cf1a2061cebff85f7a54e12d6422 netpbm-10.20.ebuild 2273
 MD5 bc37890e535cf2fcbe66043b92491072 netpbm-10.11.15.ebuild 2009
-MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
+MD5 28ca860ea5e88498171e08bc22685c16 netpbm-10.11.5-r3.ebuild 1567
 MD5 323b69ef703b303e44f51be5b762df65 netpbm-10.18.7.ebuild 2009
-MD5 f17a1fb0d30a71452e534e435c7295b2 netpbm-9.12-r4.ebuild 1343
+MD5 fc5b2c41ccdc4c486d3f7b65771753b5 netpbm-10.19.ebuild 1739
+MD5 e1d7f1307e675fbbfc3a07f2539c0708 netpbm-10.20-r1.ebuild 2442
+MD5 a936cf1a2061cebff85f7a54e12d6422 netpbm-10.20.ebuild 2273
+MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
+MD5 6aeff0855ca82c4712982529c5d4ba9c netpbm-10.29-r1.ebuild 2923
 MD5 1439cca7e279cd1c0e71f589f9b94aac netpbm-10.29.ebuild 2429
-MD5 3e364cbe32c6c5bd2f329b8dbcf604d5 files/netpbm-10.29-anytopnm.patch 1562
-MD5 74da89b4a373ba2116b4ba5d8e9d31a0 files/digest-netpbm-10.18.7 64
-MD5 6735fc271948c349d02f59361b4c373e files/digest-netpbm-10.11.14 65
-MD5 40a3370de6ed591305e4585ffbc605bd files/digest-netpbm-10.20-r1 62
-MD5 102062d84b1750c991d13e5528a9420b files/netpbm-10.29-build.patch 2278
-MD5 8c4a20ca06c83687436b8cb75917d5f1 files/digest-netpbm-10.29 62
-MD5 d0d44fe5de727324db35e8110dc81f63 files/netpbm-10.29-pnmtopng-alpha-check.patch 603
-MD5 103e8f6f6474dcc4b17ee049111bc3f6 files/netpbm-10.29-infinity.patch 5840
-MD5 40a3370de6ed591305e4585ffbc605bd files/digest-netpbm-10.20 62
-MD5 c06a062a991dc2b0f8bd88ac44a1e5e5 files/digest-netpbm-10.19 62
-MD5 e03ba0a74da10891ecaa41fb86191275 files/digest-netpbm-10.29-r1 136
-MD5 ef9c07e7cbf6b830f8dd61e59fb0a34b files/netpbm-dSAFER.patch 818
-MD5 b38412609f4a8671a787d303b8d2b876 files/digest-netpbm-9.12-r4 61
-MD5 19ce2b4d396523dcbcb1e415d4bdb8c9 files/digest-netpbm-10.11.5-r3 64
-MD5 15efd1a3748d1c9b0a9d9e88374bcbbc files/digest-netpbm-10.11.15 65
-MD5 c6c3222383568021fbbdc34114b6f279 files/digest-netpbm-10.28 62
-MD5 be5dafab017b8247e09f643e9798441e files/10.11.14/Makefile.svga 17374
-MD5 d3afaf9141525a706f8c077f66918670 files/10.11.14/Makefile.config 17308
-MD5 be5dafab017b8247e09f643e9798441e files/10.11.5/Makefile.svga 17374
-MD5 d3afaf9141525a706f8c077f66918670 files/10.11.5/Makefile.config 17308
-MD5 943662580b449abb996444e348c48298 files/9.12/Makefile.config 11635
+MD5 53647d93024c9fc3be41fc1fce7eceb2 netpbm-10.30.ebuild 2738
+MD5 f17a1fb0d30a71452e534e435c7295b2 netpbm-9.12-r4.ebuild 1343
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVXtugIKl8Uu19MoRAk1oAJwNLOQGtTbiZg67ivyR5Biw603wiACfQZG+
+VGsd9sXPU0VcU2CFeqMTE8E=
+=cJaL
+-----END PGP SIGNATURE-----
