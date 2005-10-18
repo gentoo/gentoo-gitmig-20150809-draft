@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+MD5 aed452930c31d29d227abbb68cb7b4e1 ChangeLog 1951
 MD5 b613f22d8c4048df84acc9592ee34f27 ee-0.3.12-r2.ebuild 985
-MD5 20fe1d1677a326b95ffc478c207e104e ee-0.3.12-r3.ebuild 1489
-MD5 a75926a88f492f00986f0f53b2330127 ChangeLog 1836
+MD5 f68040d1aef8436f41b3c79d6aee2e40 ee-0.3.12-r3.ebuild 1357
 MD5 bd6a1a727ab6ef5c722ecf4f77cf719e files/digest-ee-0.3.12-r2 61
 MD5 bd6a1a727ab6ef5c722ecf4f77cf719e files/digest-ee-0.3.12-r3 61
 MD5 3a9923f87aa62b5de53e8fe037fc0dae files/ee-mo.diff 502
+MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+q+MCRZPokWLroQRAl1WAKCqfhv2YDdPAB+nRMAilSVVzk+bBQCdGrZJ
-QmNv4djct4hHnEXATJjWVoo=
-=ydu5
+iD8DBQFDVHkWgIKl8Uu19MoRAtGVAJ9pkznHWf+IQppM6WPpzUvQbiyV8QCfYI7g
+bWuTWqKxvw22VyCS+0Ngow0=
+=0qGz
 -----END PGP SIGNATURE-----
