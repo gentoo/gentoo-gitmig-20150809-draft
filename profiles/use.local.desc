@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1501 2005/10/17 19:42:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1502 2005/10/18 00:03:00 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -255,6 +255,8 @@ dev-lang/php:pear - Enable PEAR support
 dev-lang/php:zip - Enable ZIP file support
 dev-lang/python:ucs2 - Enable byte size 2 unicode
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
+dev-lang/swig:lua - Enable Lua scripting support
+dev-lang/swig:pike - Enable Pike scripting support
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
