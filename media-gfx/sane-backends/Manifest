@@ -1,22 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
+MD5 531409932020eb0aae035507a6660688 ChangeLog 13931
+MD5 61d573be9593ba3be2da335586ac7eb2 sane-backends-1.0.16-r1.ebuild 3743
 MD5 a89929370bb0df2da7a794efc7811785 sane-backends-1.0.16-r2.ebuild 4297
 MD5 ebd00143bfe66f76d0d0da95cbc84923 sane-backends-1.0.15.ebuild 2598
-MD5 544c2bc7c5a23b2ae8280b879eac1fbb sane-backends-1.0.15-r2.ebuild 3912
+MD5 d04dce955a1bf3c5436bc517f2e2070c sane-backends-1.0.15-r3.ebuild 3973
 MD5 4c8053c87e31c8209998ba49c07d60a5 sane-backends-1.0.13-r3.ebuild 1717
-MD5 61d573be9593ba3be2da335586ac7eb2 sane-backends-1.0.16-r1.ebuild 3743
 MD5 e73a3bf54c049342701898a62ea3b301 sane-backends-1.0.15-r1.ebuild 2674
-MD5 039ac4d8d7926902ac3ec374061bba84 ChangeLog 13813
-MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
-MD5 bf9d1f03f70dfafd088f5b106c8a3108 sane-backends-1.0.15-r3.ebuild 3974
-MD5 365f695ec2c079ac06dd5bbf495f87ce files/linux_sg3_err.h 4894
-MD5 f49c8e2b591496e87e91ae243d9864d0 files/sane-backend-1.0.15-gt68xx-update67.patch 5682
+MD5 544c2bc7c5a23b2ae8280b879eac1fbb sane-backends-1.0.15-r2.ebuild 3912
+MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r2 151
 MD5 820e842ff4247de984a89752ac129ceb files/libusbscanner-device.patch 582
-MD5 026dc517ef9d45268cd506ec83519a0e files/canoscan-focus.patch 472
-MD5 cb4dcb744752238bdfed71fdcce81c79 files/libusbscanner-device-r1.patch 681
-MD5 01607471a4380f74f7b9da650e5ca5ad files/digest-sane-backends-1.0.13-r3 160
+MD5 d16f7594dad0db0c268e143c3676041e files/digest-sane-backends-1.0.15-r3 220
 MD5 83640d1e7caa2aa50c676d40b64866c7 files/digest-sane-backends-1.0.15-r1 157
 MD5 83640d1e7caa2aa50c676d40b64866c7 files/digest-sane-backends-1.0.15-r2 157
-MD5 d16f7594dad0db0c268e143c3676041e files/digest-sane-backends-1.0.15-r3 220
-MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r1 151
-MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r2 151
+MD5 365f695ec2c079ac06dd5bbf495f87ce files/linux_sg3_err.h 4894
+MD5 01607471a4380f74f7b9da650e5ca5ad files/digest-sane-backends-1.0.13-r3 160
+MD5 026dc517ef9d45268cd506ec83519a0e files/canoscan-focus.patch 472
 MD5 0bc1f6b8682b5585c8e87a325f983ade files/lide25.patch 5565
+MD5 cb4dcb744752238bdfed71fdcce81c79 files/libusbscanner-device-r1.patch 681
+MD5 f49c8e2b591496e87e91ae243d9864d0 files/sane-backend-1.0.15-gt68xx-update67.patch 5682
 MD5 83640d1e7caa2aa50c676d40b64866c7 files/digest-sane-backends-1.0.15 157
+MD5 d5d1e4a4c8d3839c16329c105f2580d3 files/digest-sane-backends-1.0.16-r1 151
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVE3dJrHF4yAQTrARAppgAJ9G4mxKNDKAuO2sFOiz+iUFVLW+lACfWESf
+uO7/nw2SsOsyAxlCCjh6tMA=
+=VzzM
+-----END PGP SIGNATURE-----
