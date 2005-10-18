@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.18 2005/09/24 16:12:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.19 2005/10/18 14:51:42 puggy Exp $
+
+  18 Oct 2005; Douglas Russell <puggy@gentoo.org> libkpgp-3.5_beta1.ebuild:
+  Keyword ~ppc and ~x86
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -libkpgp-3.5_alpha1.ebuild:
