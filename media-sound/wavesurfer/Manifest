@@ -1,10 +1,20 @@
-MD5 edd56d06a578a315862b159c434b4210 wavesurfer-1.7.5.ebuild 1032
-MD5 3100f2628065e9c367602fcd9964bb96 wavesurfer-1.7.ebuild 1018
-MD5 476549f89f94b269de8144d5e92ed739 wavesurfer-1.8.4.ebuild 1042
-MD5 1c0ac4a076e05f9fab1f526ce404ef88 ChangeLog 2279
-MD5 147cf5ac2791a67d7fede66b0e31ba95 wavesurfer-1.8.1.ebuild 1040
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ddb5abc628437c31ac92692ebc87c828 ChangeLog 2381
 MD5 f9ea75ad7d39ed14938ee7189e4517e5 files/digest-wavesurfer-1.7 66
 MD5 d368528d29144cd88ad94513794f4bcf files/digest-wavesurfer-1.7.5 68
 MD5 ecba4e35af54210917d46707ab8dcc21 files/digest-wavesurfer-1.8.1 68
 MD5 a3ebafcaaf4849557c7f26e1965aeef2 files/digest-wavesurfer-1.8.4 68
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+MD5 edd56d06a578a315862b159c434b4210 wavesurfer-1.7.5.ebuild 1032
+MD5 3100f2628065e9c367602fcd9964bb96 wavesurfer-1.7.ebuild 1018
+MD5 b72fe33dacc9be005ccccd9fd550f239 wavesurfer-1.8.1.ebuild 1041
+MD5 476549f89f94b269de8144d5e92ed739 wavesurfer-1.8.4.ebuild 1042
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDVQAmKRy60XGEcJIRAru7AJ9VMEgXxk7tBywurMhemG89zxkNigCfZsXz
+YmtsGTrbmXeIIOZ5ixACMTI=
+=RHqM
+-----END PGP SIGNATURE-----

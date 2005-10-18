@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/wavesurfer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/ChangeLog,v 1.17 2005/10/15 11:21:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/ChangeLog,v 1.18 2005/10/18 14:00:17 gustavoz Exp $
+
+  18 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  wavesurfer-1.8.1.ebuild:
+  Stable on sparc
 
 *wavesurfer-1.8.4 (15 Oct 2005)
 
