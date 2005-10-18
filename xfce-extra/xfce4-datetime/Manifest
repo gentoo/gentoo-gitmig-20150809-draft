@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 7357ecfa0aeacac9ce4b8ce4d2280563 ChangeLog 1590
 MD5 fcf43e878353738f2c8ac78aa27ebcbf xfce4-datetime-0.3.1-r1.ebuild 416
 MD5 ac51ff5f7497b794714baf07fa6ebb2f xfce4-datetime-0.3.1-r2.ebuild 419
 MD5 4709813b5da202e157bfac073beb9908 files/digest-xfce4-datetime-0.3.1-r1 79
 MD5 4709813b5da202e157bfac073beb9908 files/digest-xfce4-datetime-0.3.1-r2 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVRJnJrHF4yAQTrARAji+AJ9SvWAxi+YZz8DBJvV3+KXvOb08JACcCiyz
+O3kkB4VxKpRwecd/C2XzxCE=
+=kC9n
+-----END PGP SIGNATURE-----
