@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.15 2005/07/14 21:44:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.16 2005/10/18 12:02:52 gmsoft Exp $
 
 inherit flag-o-matic libtool eutils multilib
 
@@ -50,7 +50,9 @@ src_compile() {
 
 	local myconf=""
 	use sparc || myconf="--enable-mpfr"
-	use hppa && export CHOST="hppa-unknown-linux-gnu"
+
+	# We need to force 1.0 ABI as 2.0w doesn't work with GNU AS
+	use hppa && export GMPABI="1.0"
 
 	econf \
 		--localstatedir=/var/state/gmp \

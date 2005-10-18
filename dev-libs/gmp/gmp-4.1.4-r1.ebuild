@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r1.ebuild,v 1.4 2005/10/09 23:59:41 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r1.ebuild,v 1.5 2005/10/18 12:02:52 gmsoft Exp $
 
 inherit flag-o-matic eutils
 
@@ -46,6 +46,10 @@ src_compile() {
 
 	local myconf=""
 	use sparc || myconf="--enable-mpfr"
+
+	# We need to force 1.0 ABI as 2.0w doesn't work with GNU AS
+	use hppa && export GMPABI="1.0"
+
 
 	# FreeBSD libc already have bsdmp
 	econf \
