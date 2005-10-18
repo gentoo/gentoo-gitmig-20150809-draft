@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/tuxfrw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.7 2005/10/17 05:03:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.8 2005/10/18 11:45:49 angusyoung Exp $
+
+  18 Oct 2005; <otavio@gentoo.org> -tuxfrw-2.58-r1.ebuild:
+  Removed old version
 
   17 Oct 2005; Joseph Jezak <josejx@gentoo.org> tuxfrw-2.61.ebuild:
   Marked ~ppc for bug #108081.
