@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.53 2005/10/14 18:04:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.54 2005/10/18 06:53:35 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -50,7 +50,7 @@ if [ "$KDEBASE" = "true" ]; then
 	# Main tarball for normal downloading style
 	# Note that we set SRC_PATH, and add it to SRC_URI later on
 	case "$PV" in
-		3.5.0_*)	SRC_PATH="unstable/${PV/_/-}/src/$TARBALL" ;;
+		3.5.0_*)	SRC_PATH="unstable/${PV/.0_/-}/src/$TARBALL" ;;
 		3.5_*)		SRC_PATH="unstable/${PV/_/-}/src/$TARBALL" ;;
 		3.4.0_*)	SRC_PATH="unstable/$TARBALLVER/src/$TARBALL" ;;
 		3.4.0)		SRC_PATH="stable/3.4/src/$TARBALL" ;;
