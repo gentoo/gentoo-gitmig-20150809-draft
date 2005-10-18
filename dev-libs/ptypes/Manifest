@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aad5c52439cdfd74caae39c9fa0d5607 ChangeLog 1337
-MD5 bb0bbc3d574069f70ec586072502e988 ptypes-1.7.4.ebuild 666
-MD5 b36507eb2a1c3a681be11a13ea8a31b0 ptypes-1.7.5.ebuild 666
-MD5 2443ddcdf9b16c45c90fd188a8f70258 ptypes-1.8.2.ebuild 666
-MD5 4f920ee2f212973e73328c2f0e3b69a2 ptypes-1.8.3.ebuild 673
-MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
-MD5 0c3015681ab9252360f14918803fcb91 ptypes-2.0.2.ebuild 674
+MD5 4176203a54925462f71c015d6ead3115 ChangeLog 1337
 MD5 ac9727774e731871409c39efb5e7f80d files/digest-ptypes-1.7.4 64
 MD5 670a2069b108b32c7e54625f736a1f1f files/digest-ptypes-1.7.5 64
 MD5 ce4a0ef80b3ed572bff4164344c8027f files/digest-ptypes-1.8.2 64
 MD5 62f3c4901e0097d72f5fa982b6c0598b files/digest-ptypes-1.8.3 64
 MD5 bc7d4f96d79bc592a9f45f6970274586 files/digest-ptypes-2.0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLzx9CRZPokWLroQRAqNPAKCAIGrNySeHFh52/YgmHJ4gMH+hJgCfYESv
-fFCreTwmbR74OsjhH9U3AfA=
-=nxua
------END PGP SIGNATURE-----
+MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
+MD5 2cfc749318c138292ad4116350fced02 ptypes-1.7.4.ebuild 662
+MD5 a4902dd8c848755a70fd1f6eb593c682 ptypes-1.7.5.ebuild 662
+MD5 b6de88a457b5efaf0f0b769c2c421efa ptypes-1.8.2.ebuild 662
+MD5 c4b762a207caa551c7485128c2aa646e ptypes-1.8.3.ebuild 669
+MD5 0c3015681ab9252360f14918803fcb91 ptypes-2.0.2.ebuild 674
