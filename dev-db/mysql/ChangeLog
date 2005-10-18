@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.245 2005/10/17 13:49:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.246 2005/10/18 16:14:01 vivo Exp $
+
+  18 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.14.ebuild:
+  Addressed problem in src_test() (reverted to bash mysql-test program)
 
   17 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-3.23.58-r1.ebuild,
   mysql-4.0.22.ebuild, mysql-4.0.22-r2.ebuild, mysql-4.0.24.ebuild,

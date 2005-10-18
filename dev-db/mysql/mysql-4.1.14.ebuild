@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.10 2005/10/17 13:49:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.11 2005/10/18 16:14:01 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -352,10 +352,18 @@ src_test() {
 		local retstatus
 		addpredict /this-dir-does-not-exist/t9.MYI
 
-		version_is_at_least "5.0.6_beta" \
-		&& make test-force \
-		|| make test
+		# Temporary removed, 4.1.14 use mysql-test-run.pl instead 
+		# of mysql-test-run, thus failing on test that should be
+		# skipped.
+		#version_is_at_least "5.0.6_beta" \
+		#&& make test-force \
+		#|| make test
+
+		# <replace me whenever possible>
+		cd mysql-test; ./mysql-test-run && ./mysql-test-run --ps-protocol
 		retstatus=$?
+		cd ..
+		# </replace me whenever possible>
 
 		# to be sure ;)
 		pkill -9 -f "${S}/ndb" 2>/dev/null
