@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 136af3ce7e16ae7a9dfa20867f973b7f ChangeLog 1349
 MD5 7ae16d31f173f4d4f3b4f842f484f070 xfce4-taskbar-0.2.2-r2.ebuild 382
 MD5 eec629628795db723c3f0fff6bf12d92 xfce4-taskbar-0.2.2-r1.ebuild 376
 MD5 78a9b99c33be4401990751c6d16d70db files/digest-xfce4-taskbar-0.2.2-r2 78
 MD5 78a9b99c33be4401990751c6d16d70db files/digest-xfce4-taskbar-0.2.2-r1 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVRQeJrHF4yAQTrARAtw2AKC6p6A5yVvFg351lvYvzN3d231t5ACgufyv
+4FP8aTzi0Yhxdrx1PZiOhz0=
+=8VDN
+-----END PGP SIGNATURE-----
