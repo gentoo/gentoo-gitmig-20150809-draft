@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.212 2005/10/16 10:23:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.213 2005/10/18 23:02:59 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -869,6 +869,15 @@ gcc-compiler_pkg_postinst() {
 		ewarn "when switching to this profile.  It is safe to ignore this warning,"
 		ewarn "and this problem has been corrected in >=sys-devel/gcc-config-1.3.10-r1."
 	fi
+
+	if ! is_crosscompile && ! use multislot && [[ ${GCCMAJOR}.${GCCMINOR} == 3.4 ]] ; then
+		echo
+		einfo "You should make sure to rebuild all your C++ packages when"
+		einfo "upgrading between different versions of gcc.  For example,"
+		einfo "when moving to gcc-3.4 from gcc-3.3, emerge gentoolkit and run:"
+		einfo "  # revdep-rebuild --library libstdc++.so.5"
+		echo
+	fi
 }
 
 gcc-compiler_pkg_prerm() {
@@ -994,12 +1003,13 @@ gcc_src_unpack() {
 	fi
 
 	# disable --as-needed from being compiled into gcc specs
-	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
-	# done to keep our gcc backwards compatible with binutils.
-	# gcc 3.4.1 cvs has patches that need back porting..
-	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
-	if [[ ${GCCMAJOR} -lt 4 ]] ; then
-		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+	# natively when using a gcc version < 3.4.4
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992
+	if [[ ${GCCMAJOR} < 3 ]] || \
+	   [[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] || \
+	   [[ ${GCCMAJOR}.${GCCMINOR}.${GCCMICRO} < 3.4.4 ]]
+	then
+		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g "${S}"/gcc/config.in
 	fi
 
 	# Fixup libtool to correctly generate .la files with portage
@@ -2135,6 +2145,7 @@ fix_libtool_libdir_paths() {
 }
 
 is_multilib() {
+	[[ ${GCCMAJOR} < 3 ]] && return 1
 	case ${CTARGET} in
 		mips64*|powerpc64*|s390x*|sparc64*|x86_64*)
 			has_multilib_profile || use multilib ;;
