@@ -5,4 +5,4 @@ MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-mimelib-3.5_beta1 68
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 2739af1ccf73445db9a3428c766a36c5 mimelib-3.4.1.ebuild 378
 MD5 cf05d15618557631be4ebb3535853c81 mimelib-3.4.2.ebuild 395
-MD5 5ca944d964a82ef10dbae9166965f6b3 mimelib-3.5_beta1.ebuild 374
+MD5 f0079c2037946ae4a797fce338570739 mimelib-3.5_beta1.ebuild 384
