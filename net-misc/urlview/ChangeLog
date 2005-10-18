@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/urlview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.16 2005/02/26 12:15:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.17 2005/10/18 21:35:15 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> urlview-0.9.ebuild:
+  Mark 0.9 stable on amd64
 
   26 Feb 2005; Simon Stelling <blubb@gentoo.org> +files/include-fix.patch,
   urlview-0.9.ebuild:

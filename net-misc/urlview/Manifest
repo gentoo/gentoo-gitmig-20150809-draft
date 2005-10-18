@@ -1,5 +1,15 @@
-MD5 d16efdeb10528e4126943dc4231cbb89 ChangeLog 1932
-MD5 64f71567a9efab4478d4bffe1161edb6 urlview-0.9.ebuild 1386
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 659bacec4472ac464b6de0c57b17e63e ChangeLog 2033
 MD5 593ad36c743cdc743a30217f4814febb files/digest-urlview-0.9 62
-MD5 c3cd1ba7a6d71c5c30a75ef47d767eee files/no-trailing-newline.patch 527
 MD5 f631f5ca3775f966209cb1425160f52f files/include-fix.patch 238
+MD5 c3cd1ba7a6d71c5c30a75ef47d767eee files/no-trailing-newline.patch 527
+MD5 9bf6deb71ef4b12cc5d240e97370e50d urlview-0.9.ebuild 1384
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFDVWqdJrHF4yAQTrARAt53AJ9CbTNIN55zCMsoSZBfIXnAOfZoFQCY8u6e
+lw1WoU4QycR0ROgSa5H/Zw==
+=bSch
+-----END PGP SIGNATURE-----
