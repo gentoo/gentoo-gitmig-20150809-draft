@@ -1,17 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 fda96699361e71e1f60886c745807ed8 pgadmin3-1.2.2.ebuild 1947
-MD5 ff00d8ed50ff601b2cc5d49a26797fb4 ChangeLog 2838
-MD5 85d8072c5cd7a7f299a0367ad704611b pgadmin3-1.0.2.ebuild 1276
-MD5 87c2509be27973faac529f94388b8180 files/digest-pgadmin3-1.2.2 67
-MD5 ea8ba09f3c984e557eb454fcf10b23aa files/pgadmin3-1.2.2-configure.patch 985
+MD5 8cb1a4d80982959b3459ea98c7fe8ab1 ChangeLog 3018
 MD5 e69c2dd9e40469e9bc040a05e04054f1 files/digest-pgadmin3-1.0.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDTtpLJrHF4yAQTrARAq6BAKCTWabxs2vTCMaF95XBYMB1JYYAPwCgxAMb
-TInrimnvZ3YKPsMNgi82EYQ=
-=iuTb
------END PGP SIGNATURE-----
+MD5 87c2509be27973faac529f94388b8180 files/digest-pgadmin3-1.2.2 67
+MD5 e1e7cb10442a3f692fc93ddefb3799dd files/digest-pgadmin3-1.4.0_beta2 73
+MD5 ea8ba09f3c984e557eb454fcf10b23aa files/pgadmin3-1.2.2-configure.patch 985
+MD5 ea8ba09f3c984e557eb454fcf10b23aa files/pgadmin3-1.4.0-beta2-configure.patch 985
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 85d8072c5cd7a7f299a0367ad704611b pgadmin3-1.0.2.ebuild 1276
+MD5 fda96699361e71e1f60886c745807ed8 pgadmin3-1.2.2.ebuild 1947
+MD5 f26d394e1f205e41b6b039a5b22a071c pgadmin3-1.4.0_beta2.ebuild 1970
