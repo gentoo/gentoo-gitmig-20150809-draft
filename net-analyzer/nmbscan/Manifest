@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0052e903feec599fb14e64f75a45fe26 metadata.xml 817
-MD5 bbffbcdef13dd011cd02fd3c3f9b0e3e ChangeLog 691
-MD5 4e593fe32a2c984d7a465debae83d5f3 nmbscan-1.2.4.ebuild 802
+MD5 3aa156bf5e6331ff3341360ce1482735 ChangeLog 793
+MD5 62f3dd2930fb1a527a455d5f2b944cde nmbscan-1.2.4.ebuild 801
 MD5 f68b926ad4d4bd973e446645aa2662dd files/nmbscan-1.2.4-head.diff 862
 MD5 578cfd7c8c46c97cbbf1d2dec1dd81ca files/digest-nmbscan-1.2.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVF0JJrHF4yAQTrARArdPAKCZuDHmDFWx8145+yEsmCw2zk+rVACdHiYu
+5s7P3SZd8gpyW5cWAyICW2g=
+=D20o
+-----END PGP SIGNATURE-----
