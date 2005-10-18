@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.101 2005/10/15 15:48:33 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.102 2005/10/18 15:15:11 greg_g Exp $
+
+  18 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> kdevelop-3.2.3.ebuild,
+  kdevelop-3.3.0_beta2.ebuild:
+  Add dependency on kdesdk-kioslaves (#107823).
 
 *kdevelop-3.3.0_beta2 (15 Oct 2005)
 
