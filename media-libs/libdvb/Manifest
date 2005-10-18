@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09bb7132a1ed7128d491f461a5e3a1b7 libdvb-0.5.0-r2.ebuild 1157
-MD5 46b3654b1563aad69c575e55e8d67b61 metadata.xml 220
-MD5 e06a3239a390f45bbe6a5f0af42b00e4 libdvb-0.5.5.ebuild 1325
 MD5 ae32484b2b184a42bbe021b3f2ae4399 libdvb-0.5.5.1.ebuild 1271
-MD5 37d747a7b341e2b33b169c7f8afc542a libdvb-0.5.5-r1.ebuild 1382
+MD5 e235f63dea425107a874d58b48cee69f libdvb-0.5.5.ebuild 1324
+MD5 46b3654b1563aad69c575e55e8d67b61 metadata.xml 220
 MD5 ea65129ec98a5fa97e7ed60dd668379b libdvb-0.5.0-r1.ebuild 1099
-MD5 4a3ecaf715f3c1afebad47f54942e541 ChangeLog 3398
+MD5 65df7bfc1842304fa504ffe27f0fe4a0 ChangeLog 3500
+MD5 37d747a7b341e2b33b169c7f8afc542a libdvb-0.5.5-r1.ebuild 1382
 MD5 71ed0a08695456fdefa04fac5ed8f528 libdvb-0.5.5.1-r1.ebuild 1291
-MD5 2be0eba6ba9919ca334c327d3310a254 files/libdvb-0.5.5-gentoo.patch 1065
-MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r1 64
-MD5 76dfb6639fdd6868d34b0eec46123c06 files/libdvb-0.5.0-gentoo.patch 2448
+MD5 09bb7132a1ed7128d491f461a5e3a1b7 libdvb-0.5.0-r2.ebuild 1157
 MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1-r1 66
 MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5 64
-MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r2 64
-MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1 66
+MD5 2be0eba6ba9919ca334c327d3310a254 files/libdvb-0.5.5-gentoo.patch 1065
 MD5 34510a9d50277d893ab3a8b316291349 files/libdvb-0.5.5.1-gentoo.patch 1052
-MD5 69502406503f38e60bd8e35f2f80e586 files/errno.patch 258
 MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNoiwgIKl8Uu19MoRArl2AJ4jyF6/D3KHvKMuGa94k63VnHTfLgCfXUNP
-xMwH2TDsbOOPcc6MKLJNCZQ=
-=rxRW
------END PGP SIGNATURE-----
+MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r2 64
+MD5 76dfb6639fdd6868d34b0eec46123c06 files/libdvb-0.5.0-gentoo.patch 2448
+MD5 69502406503f38e60bd8e35f2f80e586 files/errno.patch 258
+MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1 66
+MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r1 64
