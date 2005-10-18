@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08b590b8ab0701c144d40f77ab64ef39 avr-libc-1.2.5.ebuild 1106
-MD5 d1c4320071ecda323d47223295763b86 ChangeLog 1960
+MD5 607d7b3e44048f5febedebdd8cace741 avr-libc-1.2.5-r1.ebuild 1612
 MD5 4286f0a7edd4a06a4d296a3cd54fdda4 avr-libc-1.2.3.ebuild 1006
+MD5 08b590b8ab0701c144d40f77ab64ef39 avr-libc-1.2.5.ebuild 1106
+MD5 4ca90ddefcbbb69df946c4cdab7a55ea ChangeLog 2275
 MD5 344ed7ef46ebb29e928c6f475d8daca0 metadata.xml 585
-MD5 5291f3174429fd8ad46b0db85f5f5b67 avr-libc-1.2.5-r1.ebuild 1617
 MD5 f7663133f4544fe22f702b8bce716c3e files/digest-avr-libc-1.2.5-r1 221
 MD5 ee96360211c9e70e81677b740b1b139a files/digest-avr-libc-1.2.3 67
-MD5 a171e49ae4824538fe554c27b30d5fd0 files/avr-libc-macros.patch 497
 MD5 d42ca83e3a453900cd76b5b9d500fd65 files/digest-avr-libc-1.2.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFDQ/KHKRy60XGEcJIRAvdXAJ4gZx5mR+qu4VcmGsP8N408JfyxgQCfZJM8
-Ano5fNiI01cIZ4fVxr/I4xU=
-=Ahyk
------END PGP SIGNATURE-----
+MD5 a171e49ae4824538fe554c27b30d5fd0 files/avr-libc-macros.patch 497
