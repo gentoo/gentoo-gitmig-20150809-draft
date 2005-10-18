@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.9.2.ebuild,v 1.1 2005/10/15 21:53:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.9.2.ebuild,v 1.2 2005/10/18 18:05:22 herbs Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -49,11 +49,6 @@ src_unpack() {
 
 src_compile() {
 	strip-flags
-	# Replace O2 flag on amd64. See bug #96719
-	if use amd64
-	then
-		replace-flags -O2 -O1
-	fi
 
 	local myconf="--with-preview=yes"
 
