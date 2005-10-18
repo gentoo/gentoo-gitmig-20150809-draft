@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/package.mask,v 1.2 2005/10/18 18:13:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/package.mask,v 1.3 2005/10/18 18:15:20 gustavoz Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask alsa-lib and alsa-utils so people don't accidently emerge them on a
@@ -21,3 +21,53 @@ media-libs/alsa-lib
 gnome-base/gnome-volume-manager
 sys-apps/hal
 sys-apps/pmount
+
+# Jason Wever <weeve@gentoo.org>
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Packages masked that have hard deps on alsa
+app-accessibility/speech-dispatcher
+app-forensics/regviewer
+dev-games/neoengine
+dev-java/sun-j2sdk
+games-arcade/emergence-bin
+games-emulation/mupen64-alsasnd
+games-roguelike/crossfire-client
+media-libs/alsa-lib
+media-libs/alsa-oss
+media-libs/ladcca
+media-libs/libclalsadrv
+media-libs/libmustux
+media-plugins/alsa-jack
+media-plugins/gst-plugins-alsa
+media-plugins/xmms-alsa
+media-sound/alsa-patch-bay
+media-sound/alsa-tools
+media-sound/alsa-utils
+media-sound/alsamixergui
+media-sound/ams
+media-sound/aseqview
+media-sound/brutefir
+media-sound/gmorgan
+media-sound/gnome-alsamixer
+media-sound/horgand
+media-sound/jaaa
+media-sound/jamin
+media-sound/kaconnect
+media-sound/kamix
+media-sound/tk707
+media-sound/krecord
+media-sound/museseq
+media-sound/pmidi
+media-sound/qjackconnect
+media-sound/qjackctl
+media-sound/qmidiarp
+media-sound/rosegarden
+media-sound/seq24
+media-sound/sfc
+media-sound/supercollider
+media-sound/tapiir
+media-video/gephe
+
+# Jason Wever <weeve@gentoo.org>
+# Masking versions of libffi that don't apply to this profile
+>=dev-libs/libffi-3.4.1
