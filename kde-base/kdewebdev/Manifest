@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fd4f3d21bf48ea4b18b96f11445353a6 kdewebdev-3.5_beta1.ebuild 485
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 889caf41d1f6ad1fa263b5ffabce4c5f kdewebdev-3.4.3.ebuild 487
@@ -13,3 +16,10 @@ MD5 5f811f6d3a4356fe91386db8ad46b787 files/digest-kdewebdev-3.4.3 69
 MD5 ffc57982196e2f3a80e0fa7cdcacfc60 files/digest-kdewebdev-3.5.0_beta2 70
 MD5 dbf048ce767888392930a6446896b4c7 files/digest-kdewebdev-3.5_beta1 70
 MD5 94ceb356a311fd77a423e29df704051e files/digest-kdewebdev-3.4.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVD+dJrHF4yAQTrARAgyhAJ9t/U/lagc0kh0RbSuseNAu1W8oVwCdE5Yf
+MNBFV+v13TYM6SDJdPfxEvc=
+=11qX
+-----END PGP SIGNATURE-----
