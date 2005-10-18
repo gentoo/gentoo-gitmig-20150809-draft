@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kioslaves
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.23 2005/10/15 11:08:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/ChangeLog,v 1.24 2005/10/18 23:14:28 puggy Exp $
+
+  18 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  kdepim-kioslaves-3.5.0_beta2.ebuild:
+  Keyword ~ppc and ~x86
 
 *kdepim-kioslaves-3.5.0_beta2 (14 Oct 2005)
 
