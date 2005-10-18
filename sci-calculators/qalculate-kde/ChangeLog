@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/qalculate-kde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.5 2005/09/22 11:41:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.6 2005/10/18 17:09:29 ribosome Exp $
+
+*qalculate-kde-0.8.2 (18 Oct 2005)
+
+  18 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
+  +qalculate-kde-0.8.2.ebuild:
+  New version.
 
   22 Sep 2005; Luis Medinas <metalgod@gentoo.org>
   qalculate-kde-0.8.1.1.ebuild:

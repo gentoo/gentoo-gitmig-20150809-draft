@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/qalculate-gtk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.9 2005/09/20 15:43:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.10 2005/10/18 17:07:54 ribosome Exp $
+
+*qalculate-gtk-0.8.2.1 (18 Oct 2005)
+
+  18 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
+  +qalculate-gtk-0.8.2.1.ebuild:
+  New version.
 
   20 Sep 2005; <dang@gentoo.org> qalculate-gtk-0.8.1.ebuild:
   Marked ~amd64

@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 70c55e55977e3ca9027be9df30fb78c7 qalculate-gtk-0.8.1.ebuild 799
 MD5 9023b7ac8aa85bf39754f9ca25ce6520 ChangeLog 928
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 47824c8037b8d87471623e62aeaab815 qalculate-gtk-0.8.0.ebuild 779
+MD5 15f1eff2e3c1137f25403a32481b365f qalculate-gtk-0.8.2.1.ebuild 798
 MD5 734c64b7e4fa42a5dfcb70f424178b1c files/digest-qalculate-gtk-0.8.0 72
 MD5 ba487672f4176a31fe1dbe121169f7bb files/digest-qalculate-gtk-0.8.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMC5gomPajV0RnrERAmPHAJ9Td6U0kpd6js9+qKNaAU3SF/YLggCfQzuH
-3UMbGs+BFs+tX+N1bxrdBZ8=
-=f+6U
------END PGP SIGNATURE-----
+MD5 7e92d8e6f3ab8a79798d06b540561175 files/digest-qalculate-gtk-0.8.2.1 74
