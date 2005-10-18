@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.25 2005/10/15 11:08:41 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.26 2005/10/18 14:25:35 greg_g Exp $
+
+  18 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> kdeedu-meta-3.4.3.ebuild,
+  kdeedu-meta-3.5.0_beta2.ebuild:
+  Do not compile kmathtool by default (#109318).
 
 *kdeedu-meta-3.5.0_beta2 (14 Oct 2005)
 
