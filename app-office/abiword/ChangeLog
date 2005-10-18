@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.136 2005/10/18 15:16:51 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.137 2005/10/18 16:54:44 fmccor Exp $
+
+  18 Oct 2005; Ferris McCormick <fmccor@gentoo.org> abiword-2.2.11.ebuild:
+  Stable on sparc, Security Bug #109157.
 
 *abiword-2.2.11 (18 Oct 2005)
 
