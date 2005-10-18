@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/streamtuner
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.23 2005/07/30 17:53:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.24 2005/10/18 23:21:11 chainsaw Exp $
+
+  18 Oct 2005; Tony Vroon <chainsaw@gentoo.org>
+  streamtuner-0.99.99-r1.ebuild:
+  Package depends on libxml2, not libxml. Closes bug #99159.
 
 *streamtuner-0.99.99-r1 (30 Jul 2005)
 
