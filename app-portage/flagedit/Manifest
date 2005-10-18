@@ -1,4 +1,14 @@
-MD5 32ecba304120193e5956d1e2d4f9b569 ChangeLog 420
-MD5 b65665d43270676b80e0389cf877dbb3 metadata.xml 251
-MD5 1db622cc38a6e96a5e046132c8ab38ae flagedit-0.0.2.ebuild 582
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e1eb91612c41d832833bd22eb8bd25b ChangeLog 533
 MD5 92b9af1bbae1bb2cd67c5e4eb996b986 files/digest-flagedit-0.0.2 65
+MD5 90ecdaf495143836015f6096f6c754ac flagedit-0.0.2.ebuild 590
+MD5 b65665d43270676b80e0389cf877dbb3 metadata.xml 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVPYgntT9W3vfTuoRAov1AJ9Tt2QhWc230So53AYTMO4mo8GBvQCfZBbW
+DQC39gsySQ57vbkQ5cW8m2U=
+=Je7Z
+-----END PGP SIGNATURE-----
