@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1504 2005/10/18 19:26:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1505 2005/10/18 20:18:45 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -202,6 +202,8 @@ dev-java/ant-tasks:noxalan - Disable Xalan Ant task -- Warning: Enabling this co
 dev-java/ant-tasks:noxerces - Disable Xerces Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
+dev-java/blackdown-jdk:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
+dev-java/blackdown-jre:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon - Add optional support for the avalon-framework
@@ -215,7 +217,9 @@ dev-java/hibernate:jcs - Java Cache Support
 dev-java/hibernate:oscache - Enable OSCache support
 dev-java/hibernate:proxool - Enable Proxool support
 dev-java/hibernate:swarmcache - Enable SwarmCache support
+dev-java/ibm-jdk-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
+dev-java/ibm-jre-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/log4j:javamail - Build the SMTPAppender
@@ -228,7 +232,9 @@ dev-java/quartz:jta - Enable jta support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
+dev-java/sun-jdk:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
+dev-java/sun-jre-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/swt:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
 dev-java/velocity:j2ee - Add j2ee support
@@ -926,8 +932,8 @@ net-proxy/squid:underscores - Enables support for domain names containing unders
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-proxy/ziproxy:jpeg2k - Enable support for jpeg2k (jasper)
-net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
 net-wireless/hostapd:madwifi - Add support for madwifi-driver (Atheros chipset)
+net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/linux-wlan-ng-modules:pci - Enable the Prism2.5 native PCI (_pci) driver
 net-wireless/linux-wlan-ng-modules:plx - Enable the Prism2 PLX9052 based PCI (_plx) adapter driver
