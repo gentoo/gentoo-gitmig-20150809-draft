@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
 MD5 4ed531f3e16bf8617452d88f6d9d9ae8 ChangeLog 10670
 MD5 d3caaf1691b52006d2295f1443fe691b xv-3.10a-r9.ebuild 2529
@@ -24,3 +27,10 @@ MD5 cda66dd1f3a032802881a6ae4430e0d6 files/xv-use-getcwd.patch 222
 MD5 bf64513c42257ec1f60b78efabf94e6e files/digest-xv-3.10a-r12 145
 MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r9 127
 MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r10 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVE53JrHF4yAQTrARAmvlAKDH8LIPWtuJGxQ6SmLKUMVPJOKE4QCgvazd
+3WdheixTJ8DX3tZqMAEFfp0=
+=oI4Z
+-----END PGP SIGNATURE-----
