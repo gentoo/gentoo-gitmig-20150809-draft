@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3378f3de404cfcc2e5d4913825df3ab7 ChangeLog 1234
-MD5 317b0332aa1b608dc8a8f31a3128c199 alee-fonts-3.1.ebuild 563
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
-MD5 ec3b60ee3666e6eb5cd56ae580e9523e alee-fonts-4.1.ebuild 581
+MD5 c9c8ddf15fba94b1d55b86d63d2254f5 ChangeLog 1336
+MD5 317b0332aa1b608dc8a8f31a3128c199 alee-fonts-3.1.ebuild 563
+MD5 cfe9f528b06beaab7dd11d019ee4d2f9 alee-fonts-4.1.ebuild 580
 MD5 a2440dd6671dd9f2bf78fe7c60be0264 files/digest-alee-fonts-4.1 64
 MD5 7de80bf0cb884ac30f3e27bcde969dfc files/digest-alee-fonts-3.1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDNB6QKRy60XGEcJIRAtk2AKC1elInsVKO+FFVpiaFYiNHuDasWQCggryv
-Zrj3U1HYhbpvJJgHFAL1irc=
-=d7D1
+iD8DBQFDVEm+JrHF4yAQTrARAoUMAJ41vq5NO5srdaiMfUURCbpAxRggegCgr9RD
+A0rOgnvcb3groVtuVd4d5aU=
+=Opu3
 -----END PGP SIGNATURE-----
