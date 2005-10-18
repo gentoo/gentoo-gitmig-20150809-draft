@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.10 2005/10/18 18:07:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.11 2005/10/18 22:44:56 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,6 +33,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-compile-updates.patch
 	epatch "${FILESDIR}"/${P}-tempfile.patch
 	epatch "${FILESDIR}"/${P}-build-fixes.patch
+
+	# punt bogus manpage #109511
+	rm -f man/man1/template.1
 
 	# stupid OS X declares a stack_t type already #107428
 	sed -i -e 's:stack_t:_urt_stack:g' tools/clock/rleClock.c || die
