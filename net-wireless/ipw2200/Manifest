@@ -6,7 +6,8 @@ MD5 4ce2b88ec5f872d1621a5af9cf1d0da1 ipw2200-1.0.6-r2.ebuild 2304
 MD5 b2138b76ba85eeea301d8fa9f72470df ipw2200-1.0.3.ebuild 2488
 MD5 8a1b21691e17dc6de38c7238cd4e4522 ipw2200-1.0.5.ebuild 2145
 MD5 7453a3247e41a7bf8c6e939cf55c45f0 ipw2200-1.0.6-r1.ebuild 2260
-MD5 38d3df4e45c8372a7f2ae43852633485 ChangeLog 8312
+MD5 03399d17d9c93e93af882111e0da0dee ipw2200-1.0.7.ebuild 2776
+MD5 52721d70e63b9211ec4bbbcd5da61348 ChangeLog 8436
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 57bc9c6eb5f4015c48658642ca771b54 files/ipw2200-1.0.6-ibss-wep.patch 1249
 MD5 2dc4d1d726fc4dce22dee416d6028353 files/ipw2200-1.0.4-is_multicast_ether_addr.patch 647
@@ -34,3 +35,4 @@ MD5 1953868cbb8ae6ee8eee55c5848417ab files/digest-ipw2200-1.0.3 62
 MD5 bcf142294729f1a55d7b3fd29c1a8239 files/digest-ipw2200-1.0.4 62
 MD5 0bc9168b6730de57fff46a22dacc8ea4 files/digest-ipw2200-1.0.5 62
 MD5 aab93fcc37b1a1282d7a02e9b64430a3 files/digest-ipw2200-1.0.6 62
+MD5 a5c0ccca10c12b4e5d5a7df55df96dfd files/digest-ipw2200-1.0.7 62
