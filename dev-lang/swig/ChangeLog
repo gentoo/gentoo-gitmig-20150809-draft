@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.55 2005/09/18 06:11:10 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.56 2005/10/18 04:04:53 vapier Exp $
+
+*swig-1.3.27 (18 Oct 2005)
+
+  18 Oct 2005; Mike Frysinger <vapier@gentoo.org> +swig-1.3.27.ebuild:
+  Version bump.
 
   18 Sep 2005; Chris White <chriswhite@gentoo.org> ChangeLog:
   Re-doing this with proper gpg signing :|
