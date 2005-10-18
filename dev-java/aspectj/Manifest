@@ -5,8 +5,6 @@ MD5 15c78c530ecb8ff4287a71ebb3fa32e6 ChangeLog 1705
 MD5 5f80accb3c4baa44ed55ccfa8c0f08f3 aspectj-1.2.ebuild 2383
 MD5 46d9b1155eb3ab559158a93afe23b36c files/ajbrowser 149
 MD5 c46c31665f413547763e5b2c860e1782 files/ajc 143
-MD5 6f9b4aef0d744f489b6f506b3b83a542 files/aspectj-1.1.1-version-gentoo.patch 1263
-MD5 6d54bb03fec483072f2b33b8f2600d9d files/aspectj-1.1.1.build.xml.patch 545
 MD5 15d8886f1eb56232e7d76c4e71c34763 files/aspectj-1.2-fix-examples-build.xml.patch 649
 MD5 a28d4390d35f00659399d020dceaa71c files/aspectj-1.2-fix-javadoc.patch 939
 MD5 d8e6e955badeb042ec37383717e5ca0c files/aspectj-1.2-version-gentoo.patch 964
@@ -15,7 +13,7 @@ MD5 72ba0dd87abe126d73774a74b1b4cbb1 metadata.xml 663
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVMXy/rLF9B432nYRAoxlAKCuPU6o6Mh3ZFYTr8C9F7BlzWV+lACfX1FX
-W0FhFfWjG+GHNR4rgcCNMPM=
-=u9I+
+iD8DBQFDVMci/rLF9B432nYRAszgAKC7GbiHzkigi1XM7CwKf/zH+7da7ACdEQUj
+LefdpALN6Hm2ky8ZE1K6N8g=
+=3Zf/
 -----END PGP SIGNATURE-----
