@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d7aceeffef35cb0a42a723e00538f7d4 ChangeLog 2316
+MD5 7cd8adc34a7c0e7b400dcd24793ff4cf files/digest-paxctl-0.2 60
+MD5 a0ea6419bb80b6a3650accc386c91847 files/digest-paxctl-0.3 60
+MD5 a0ea6419bb80b6a3650accc386c91847 files/digest-paxctl-0.3-r1 60
+MD5 3fc2f5499fe5630cab3a2c01e4bdbbe7 files/paxctl-0.3-error-codes.patch 11421
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9cad725774767f17c4dc0a2c42c6988b ChangeLog 2224
 MD5 9af9b79a175a826ed1ddbf58c2746fc0 paxctl-0.2.ebuild 727
 MD5 b7baf2626ffe222baedb846eea3a54ff paxctl-0.3-r1.ebuild 803
-MD5 d427a8a1ca480f6c167ba09e6936cdae paxctl-0.3.ebuild 726
-MD5 a0ea6419bb80b6a3650accc386c91847 files/digest-paxctl-0.3-r1 60
-MD5 a0ea6419bb80b6a3650accc386c91847 files/digest-paxctl-0.3 60
-MD5 3fc2f5499fe5630cab3a2c01e4bdbbe7 files/paxctl-0.3-error-codes.patch 11421
-MD5 7cd8adc34a7c0e7b400dcd24793ff4cf files/digest-paxctl-0.2 60
+MD5 c07f98ef40a8fe547ac6f4e6123da971 paxctl-0.3.ebuild 725
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDVTpZKRy60XGEcJIRAlZqAJ9dyHT8Ek99gWawtdFJy8wKmq5mOwCeIoGE
+5R7jydNRQSamGTHZMPM8858=
+=qnVh
+-----END PGP SIGNATURE-----
