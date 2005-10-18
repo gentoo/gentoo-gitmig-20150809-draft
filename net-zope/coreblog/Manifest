@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7df2a78cbc36888bcf4dec9123e46baa ChangeLog 1201
 MD5 5801c5ea76209eb3e1a73a2abaf70dcd coreblog-0.6.ebuild 454
-MD5 713892267f6b2289d96f428533444753 coreblog-1.20.ebuild 454
-MD5 eb7b8f9d83035b2f6563690aa6baaff1 coreblog-1.11.ebuild 455
 MD5 5ce9fb7fc6a263abff4381c67a2fa00f coreblog-1.0.ebuild 452
-MD5 6e8369faa6d36810275b77137883f6d9 ChangeLog 1130
-MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 f38c7624b4d10057ff505bdeb88eb3a8 files/digest-coreblog-1.11 59
-MD5 b4991e7135a17cbe8a166ba9dc99e984 files/digest-coreblog-1.20 58
+MD5 eb7b8f9d83035b2f6563690aa6baaff1 coreblog-1.11.ebuild 455
+MD5 038d13a744ed6c0e8fa530bcfcf1f9e8 coreblog-1.20.ebuild 460
 MD5 b7d463c1b662da09f7cd4c9283bc2ff6 files/digest-coreblog-0.6 59
 MD5 bb2032e03623aab437333e6985010ca6 files/digest-coreblog-1.0 58
+MD5 f38c7624b4d10057ff505bdeb88eb3a8 files/digest-coreblog-1.11 59
+MD5 b4991e7135a17cbe8a166ba9dc99e984 files/digest-coreblog-1.20 58
+MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVF5xomPajV0RnrERAg2JAJ9ZVqnMYAGyt26eyGbckIa4KGps8gCeL4E+
+rvWKSFcjXGhUDp0MvciNcdg=
+=Hmyx
+-----END PGP SIGNATURE-----

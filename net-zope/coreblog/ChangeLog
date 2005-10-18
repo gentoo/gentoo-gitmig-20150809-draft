@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/coreblog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/coreblog/ChangeLog,v 1.7 2005/09/24 12:40:03 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/coreblog/ChangeLog,v 1.8 2005/10/18 02:30:52 dang Exp $
+
+  18 Oct 2005; <dang@gentoo.org> coreblog-1.20.ebuild:
+  Marked ~amd64
 
 *coreblog-1.20 (24 Sep 2005)
 
