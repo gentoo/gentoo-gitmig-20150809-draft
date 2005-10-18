@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/package.mask,v 1.1 2005/03/30 19:38:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/package.mask,v 1.2 2005/10/18 18:13:14 gustavoz Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask alsa-lib and alsa-utils so people don't accidently emerge them on a
@@ -16,3 +16,8 @@ media-libs/alsa-lib
 # gradm requires 64 bit support, which doesn't exist in this profile
 >sys-apps/gradm-2.0.1-r1
 
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# New toys enabled by the dev/ profile and linux-headers-2.6
+gnome-base/gnome-volume-manager
+sys-apps/hal
+sys-apps/pmount
