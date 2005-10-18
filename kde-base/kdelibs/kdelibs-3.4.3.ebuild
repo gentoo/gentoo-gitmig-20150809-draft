@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.3.ebuild,v 1.1 2005/10/12 13:20:16 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.3.ebuild,v 1.2 2005/10/18 19:24:55 eradicator Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.4
@@ -55,6 +55,9 @@ src_unpack() {
 
 	# Configure patch. Applied for 3.5.
 	epatch "${FILESDIR}/kdelibs-3.4.1-configure.patch"
+
+	# Missing <inttypes.h> include causes compilation to bork
+	epatch "${FILESDIR}/kdelibs-3.4.3-inttypes.patch"
 
 	# for the configure patch
 	make -f admin/Makefile.common || die

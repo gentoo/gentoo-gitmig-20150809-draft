@@ -1,0 +1,12 @@
+--- kdelibs-3.4.3/kwallet/backend/sha1.cc.orig	2005-10-18 10:18:33.000000000 -0700
++++ kdelibs-3.4.3/kwallet/backend/sha1.cc	2005-10-18 10:20:53.000000000 -0700
+@@ -25,6 +25,9 @@
+ #ifdef HAVE_SYS_BITYPES_H
+ #include <sys/bitypes.h> /* For uintXX_t on Tru64 */
+ #endif
++#ifdef HAVE_INTTYPES_H
++#include <inttypes.h>
++#endif
+ 
+ #include "sha1.h"
+ #include <string.h>

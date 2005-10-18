@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.282 2005/10/17 23:26:36 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.283 2005/10/18 19:24:55 eradicator Exp $
+
+  18 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/kdelibs-3.4.3-inttypes.patch, kdelibs-3.4.3.ebuild:
+  Fixed compilation problem with missing inttypes.h.
 
   17 Oct 2005; Douglas Russell <puggy@gentoo.org>
   +files/kdelibs-3.5.0_beta2-kwallet-stdint.patch,
