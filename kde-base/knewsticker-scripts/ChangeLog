@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker-scripts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.18 2005/10/15 11:08:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.19 2005/10/18 00:23:48 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  knewsticker-scripts-3.4.1.ebuild:
+  Mark 3.4.1 stable on alpha
 
 *knewsticker-scripts-3.5.0_beta2 (14 Oct 2005)
 
