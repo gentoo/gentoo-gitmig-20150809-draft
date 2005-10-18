@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2d68158a8c35849ba05759677e336a90 blackdown-jdk-1.4.2.02.ebuild 4593
-MD5 b9518fa148151cde5bf1215f432d19af blackdown-jdk-1.3.1-r8.ebuild 2540
-MD5 7049abf7479134e1fb3e7944a744dee5 blackdown-jdk-1.4.1-r1.ebuild 4041
-MD5 4e5eeea329289889cf2431f3f6564053 blackdown-jdk-1.3.1-r10.ebuild 2420
-MD5 af88fd152f8ad4b36bcfe11b468de6f7 ChangeLog 15450
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 24ff32595b32cca806e635bcdddfc0b4 blackdown-jdk-1.4.2.01-r2.ebuild 4593
-MD5 c9852c72bb83b5f0d4b48f1dd3ca4459 files/blackdown-jdk-1.4.2.01 637
-MD5 edf4d6e89e3578c9afae61c6d1436d7f files/blackdown-jdk-1.4.2.02 632
+MD5 8335c1fe60e9a0e52870f1d860a1dd95 ChangeLog 15738
+MD5 eb78a49e7d1c3a4b20c03916b03f00ed blackdown-jdk-1.3.1-r10.ebuild 2404
+MD5 11c4e17eba90d112e19b860e81545f62 blackdown-jdk-1.3.1-r8.ebuild 2519
+MD5 bfdcb8510e03784412818deefe176d0f blackdown-jdk-1.4.1-r1.ebuild 4015
+MD5 f2461425dc6566ede1e271bc1aebdfeb blackdown-jdk-1.4.2.01-r2.ebuild 4577
+MD5 795ea87527aa93ee9e401d99b2090181 blackdown-jdk-1.4.2.02.ebuild 4577
 MD5 4180217fbbedc728995047569e9bd581 files/blackdown-jdk-1.3.1 594
 MD5 b553ff878f45505a9285c3a9612c7584 files/blackdown-jdk-1.4.1 589
-MD5 4e91fa8beedb2d7c135e05318b097702 files/digest-blackdown-jdk-1.4.2.01-r2 153
+MD5 c9852c72bb83b5f0d4b48f1dd3ca4459 files/blackdown-jdk-1.4.2.01 637
+MD5 edf4d6e89e3578c9afae61c6d1436d7f files/blackdown-jdk-1.4.2.02 632
 MD5 729ed4be8a29fe7d7c3d946b8f14d8d4 files/digest-blackdown-jdk-1.3.1-r10 80
 MD5 f150863fcc96f4ca2d2bdd75f1c0a1c5 files/digest-blackdown-jdk-1.3.1-r8 243
 MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
+MD5 4e91fa8beedb2d7c135e05318b097702 files/digest-blackdown-jdk-1.4.2.01-r2 153
 MD5 c36468f22832c3157f0fcda9b03b3bff files/digest-blackdown-jdk-1.4.2.02 153
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKEhy/rLF9B432nYRAglRAJ0RcrZaoVeyaJxWVRdjn+iH7M2FBQCgu6vM
-ynOnwRV0w/L1gUmFHeTma4Y=
-=i/eU
------END PGP SIGNATURE-----
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
