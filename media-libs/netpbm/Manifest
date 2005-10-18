@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 13948142cf9dfbf4f7d0bc984f3d03de ChangeLog 10972
+MD5 25530c2a9146500b7a3d4cb8a8dde060 ChangeLog 11152
 MD5 d3afaf9141525a706f8c077f66918670 files/10.11.14/Makefile.config 17308
 MD5 be5dafab017b8247e09f643e9798441e files/10.11.14/Makefile.svga 17374
 MD5 d3afaf9141525a706f8c077f66918670 files/10.11.5/Makefile.config 17308
@@ -34,14 +34,14 @@ MD5 fc5b2c41ccdc4c486d3f7b65771753b5 netpbm-10.19.ebuild 1739
 MD5 e1d7f1307e675fbbfc3a07f2539c0708 netpbm-10.20-r1.ebuild 2442
 MD5 a936cf1a2061cebff85f7a54e12d6422 netpbm-10.20.ebuild 2273
 MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
-MD5 6aeff0855ca82c4712982529c5d4ba9c netpbm-10.29-r1.ebuild 2923
-MD5 1439cca7e279cd1c0e71f589f9b94aac netpbm-10.29.ebuild 2429
-MD5 53647d93024c9fc3be41fc1fce7eceb2 netpbm-10.30.ebuild 2738
+MD5 1555f48fc3fbf52b5f764c390d45d051 netpbm-10.29-r1.ebuild 2930
+MD5 07720672e50a0563700873ae249f018c netpbm-10.29.ebuild 2426
+MD5 7ec06efb33186e2401b559b6926a1bfe netpbm-10.30.ebuild 2745
 MD5 f17a1fb0d30a71452e534e435c7295b2 netpbm-9.12-r4.ebuild 1343
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVXtugIKl8Uu19MoRAk1oAJwNLOQGtTbiZg67ivyR5Biw603wiACfQZG+
-VGsd9sXPU0VcU2CFeqMTE8E=
-=cJaL
+iD8DBQFDVX9mKf2g/qXtneoRAk7mAJ9mvpuNAcy0JAXKjU/BsMUdyTXK/ACgq/cb
+jy/Snrd2o4XDaGuXaqdz9iI=
+=TXXP
 -----END PGP SIGNATURE-----
