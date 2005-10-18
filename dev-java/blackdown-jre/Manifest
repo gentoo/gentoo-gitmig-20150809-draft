@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1f7381ba8dbcd1ce11ac3437dc1e2334 ChangeLog 10986
-MD5 c44f0eece3ef9723544e1e0a8dd94c56 blackdown-jre-1.3.1-r9.ebuild 1910
-MD5 31b3147b8d1a64ac53c1c41046b0cd90 blackdown-jre-1.4.1-r1.ebuild 2907
-MD5 c33dba70d6a95bfa13d3a17c4d14b9ae blackdown-jre-1.4.2.01-r1.ebuild 3580
-MD5 024cd59ddd4309ac22d72a058f18d9df blackdown-jre-1.4.2.02-r1.ebuild 3823
-MD5 bf1aa2ef2d1ddbeba6bbd748536326b9 blackdown-jre-1.4.2.02.ebuild 3579
+MD5 f58bb74f11453d8cdcae2e2d54ab89c3 ChangeLog 11250
+MD5 f46f38d24a8e09a0248800bbe8e7345b blackdown-jre-1.3.1-r9.ebuild 2142
+MD5 7095ff1843f160ccb8c433a894cf131f blackdown-jre-1.4.1-r1.ebuild 3015
+MD5 8c1b240e5c7f57f80947f7d1c8dcb76c blackdown-jre-1.4.2.01-r1.ebuild 3812
+MD5 bcdb68fa4cd74925bffec10a676f3844 blackdown-jre-1.4.2.02-r1.ebuild 4055
+MD5 6497d0dafadf32c00c7dccfbb0c5f9e2 blackdown-jre-1.4.2.02.ebuild 3811
 MD5 3facc5cbb2965471e9b1986926221552 files/blackdown-jre-1.3.1 429
 MD5 271b1f89b9f0f70dd5154090978263b1 files/blackdown-jre-1.4.1 425
 MD5 57462605c4cce61fe2ac166306c5b491 files/blackdown-jre-1.4.2.01 428
@@ -17,10 +14,3 @@ MD5 7d186c2364cc118125d06076161306a8 files/digest-blackdown-jre-1.4.2.01-r1 151
 MD5 71bbb04601fe32e845c98fab7f732ae4 files/digest-blackdown-jre-1.4.2.02 151
 MD5 71bbb04601fe32e845c98fab7f732ae4 files/digest-blackdown-jre-1.4.2.02-r1 151
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVUuaJrHF4yAQTrARAv8NAJ4l+2G8hnEfYSOFgdAlVYCQQinQAACfa6Vh
-5FkmQcAm1lkh/Pxdlya/5rg=
-=WzOJ
------END PGP SIGNATURE-----
