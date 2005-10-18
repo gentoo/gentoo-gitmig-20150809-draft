@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.5-r1.ebuild,v 1.9 2005/07/11 22:51:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.5-r1.ebuild,v 1.10 2005/10/18 13:55:00 agriffis Exp $
 
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
 SRC_URI="http://icculus.org/openbox/obconf/${P}.tar.gz"
 HOMEPAGE="http://icculus.org/openbox/obconf.php"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64 ~alpha"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 SLOT="0"
 
