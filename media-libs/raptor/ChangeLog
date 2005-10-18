@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/raptor
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.24 2005/04/19 08:18:10 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.25 2005/10/18 00:27:48 vapier Exp $
+
+*raptor-1.4.7 (18 Oct 2005)
+
+  18 Oct 2005; Mike Frysinger <vapier@gentoo.org> +raptor-1.4.7.ebuild:
+  Version bump.
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
