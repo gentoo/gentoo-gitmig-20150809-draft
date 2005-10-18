@@ -1,8 +1,18 @@
-MD5 b4005173a2d5d68d4a04503503663674 adjtimex-1.16.ebuild 1205
-MD5 8efcab799b2a50ceb42854897d263629 adjtimex-1.16-r1.ebuild 1410
-MD5 7af977a4d8d46c8f988f455924c4e153 ChangeLog 1297
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 89628cad98b31ff9c3d6e9b718c28667 ChangeLog 1405
+MD5 d2831b58771c94ba5c8472346576af42 adjtimex-1.16-r1.ebuild 1410
+MD5 b4005173a2d5d68d4a04503503663674 adjtimex-1.16.ebuild 1205
 MD5 f740d2ecd7c08cc4dee2578c3c0c2557 files/digest-adjtimex-1.16-r1 136
 MD5 f740d2ecd7c08cc4dee2578c3c0c2557 files/digest-adjtimex-1.16 136
 MD5 644aa729406bc03a2df4f6dc23da298f files/adjtimex.init 687
 MD5 a7a3b52817fb5f425852e1cbc523b485 files/adjtimex-1.16-pic.patch 315
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVG0bJrHF4yAQTrARAugxAKDJePE1Vuru0V+/kWtnhMX4JmJ/TQCdHR6t
+yIxwNeeC4cLB6XS7/OPrsIk=
+=PX2e
+-----END PGP SIGNATURE-----
