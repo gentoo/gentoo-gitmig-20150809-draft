@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5cb3102b5887be89c0079df0a6028d51 kdeaddons-3.4.1.ebuild 1350
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3a692b7c76a442ddec552bbb5786d366 kdeaddons-3.3.2.ebuild 994
@@ -15,3 +18,10 @@ MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0.diff
 MD5 76a1c9bb2b631b0233e79ed5ab7eb20e files/kdeaddons-3.4-configure.patch 3422
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-kdeaddons-3.5_beta1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVUx0JrHF4yAQTrARAn7iAJ9mFxWqLdTuOterMy9lGvuG6/7AjwCeOzzQ
+hqpjyn2mn8yM3RXiDViZlL8=
+=50qx
+-----END PGP SIGNATURE-----
