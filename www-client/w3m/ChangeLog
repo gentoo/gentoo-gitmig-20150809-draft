@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.15 2005/10/02 17:00:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.16 2005/10/18 13:21:38 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> w3m-0.5.1-r3.ebuild:
+  Mark 0.5.1-r3 stable on alpha
 
   02 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> w3m-0.5.1-r3.ebuild:
   Stable on ppc.
