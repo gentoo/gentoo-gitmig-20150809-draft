@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.5 2005/10/04 09:50:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v.ebuild,v 1.6 2005/10/18 21:46:37 chainsaw Exp $
 
 IUSE="static 16bit esd"
 
@@ -44,6 +44,9 @@ src_unpack() {
 	fi
 
 	use 16bit && sed -i 's|//#define MAKE_16BIT|#define MAKE_16BIT|' mpp.h
+
+	# Bug #109699; console redirection to /dev/tty makes no sense
+	sed -i -e 's/$(LDADD) &> $(LOGFILE)/$(LDADD)/' Makefile
 }
 
 src_compile() {

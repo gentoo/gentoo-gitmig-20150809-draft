@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb1e450305e2fd32c9ad32003b4cb0b9 ChangeLog 394
+MD5 5c410b4ddc83b3e908cabed638e639d2 ChangeLog 585
 MD5 bcc5f47731716bc28439384e2b1a12f6 files/digest-pympd-0.04 61
+MD5 c0ef81c22b9be4fb4b946feccd8970f6 files/digest-pympd-0.05 61
 MD5 db53de635739e34187c013fc78a83604 metadata.xml 358
 MD5 69d62c8f69c966588a38a0b58be1c0d3 pympd-0.04.ebuild 957
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUtS0QlM6RnzZP+IRAjojAJ0ZShuNn/oVukfLtS+NZmVu1HTtWgCgo9MP
-p21tsqGzWqkTQBalW9gTSNU=
-=pFfv
------END PGP SIGNATURE-----
+MD5 83d82c2f5b126ca1c1027f44978b5596 pympd-0.05.ebuild 1000

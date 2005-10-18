@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.26 2005/10/04 09:50:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.27 2005/10/18 21:46:37 chainsaw Exp $
+
+  18 Oct 2005; Tony Vroon <chainsaw@gentoo.org> musepack-tools-1.15v.ebuild:
+  Do not attempt to redirect output to /dev/tty, this makes no sense. Closes
+  bug #109699.
 
   04 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/musepack-tools-1.15v-Makefile.patch, musepack-tools-1.15v.ebuild:
