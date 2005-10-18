@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 64d92746b3b5755e7460863140c3ccfc ChangeLog 1609
-MD5 15c860c244cb942a93b3d426e50c99c9 conky-1.3.0.ebuild 2034
+MD5 aa02467310784f385d3c003f2029def5 ChangeLog 1833
 MD5 199085e7a8ed12031f881663a3c100d1 conky-1.3.1.ebuild 2019
-MD5 cb56f0b6b72f5dbe973cd821a333f9a3 conky-1.3.2.ebuild 2035
-MD5 50640cfe7f4aa4c127c6ff3100560e1d files/digest-conky-1.3.0 64
+MD5 eb5f557defc5b1ed505b906498cdc395 conky-1.3.3.ebuild 1954
 MD5 31acfc146c31ba015fb9b8643deb2d57 files/digest-conky-1.3.1 64
-MD5 f2790a5c3e6e3b87339b64a077afafe4 files/digest-conky-1.3.2 64
+MD5 6e51a33ec07b6f71db430f1839fd7902 files/digest-conky-1.3.3 64
 MD5 32bd4230c3ee12a8d5502d4bd57a9a3d metadata.xml 588
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDU/nYmdTrptrqvGERArqSAKCLDloGv8wbO+H2dyij/pcF/qFy5wCcCdxJ
-O7K+cSYtVpsivDeFS2ymA8w=
-=cH+L
+iD8DBQFDVOMtmdTrptrqvGERAkCmAJ9eIjo4RyyrjBDhaa/TWyzzu15OaACfaqim
+WnXJW/wrUaXVGb3JwtxC/aM=
+=tCua
 -----END PGP SIGNATURE-----
