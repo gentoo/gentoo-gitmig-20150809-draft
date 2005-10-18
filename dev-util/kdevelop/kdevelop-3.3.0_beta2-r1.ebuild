@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.0_beta2-r1.ebuild,v 1.1 2005/10/18 15:33:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.0_beta2-r1.ebuild,v 1.2 2005/10/18 17:13:50 greg_g Exp $
 
 inherit kde eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	# See bug #86780 and kde bug 98852.
 	epatch "${FILESDIR}/kdevelop-3.2.1-makefiles.patch"
 
-	# Fix building of ant projects (kde bug 100813).
+	# Fix building of ant projects (kde bug 100813). Applied for rc1.
 	epatch "${FILESDIR}/kdevelop-3.2.3-ant.patch"
 
 	# Update the admin dir used in KDE template projects.
