@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.23 2005/10/12 10:18:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.24 2005/10/18 17:06:23 zzam Exp $
+
+  18 Oct 2005; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.27.ebuild,
+  vdr-1.3.34.ebuild, vdr-1.3.34-r1.ebuild:
+  Added installation of missing header files, needed for some plugins.
 
 *vdr-1.3.34-r1 (12 Oct 2005)
 

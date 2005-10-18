@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.34-r1.ebuild,v 1.1 2005/10/12 10:18:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.3.34-r1.ebuild,v 1.2 2005/10/18 17:06:23 zzam Exp $
 
 inherit eutils
 
@@ -152,6 +152,9 @@ src_install() {
 	insinto ${VDR_INCLUDE_DIR}
 	doins *.h
 	doins Make.config
+
+	insinto ${VDR_INCLUDE_DIR}/libsi
+	doins libsi/*.h
 
 	diropts -m755 -ovdr -gvdr
 	keepdir ${CONF_DIR}
