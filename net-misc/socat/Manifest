@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cc9dea082ba9b0166efd8300450984eb ChangeLog 3117
-MD5 3e1450e1811fbf675f8069ed1bbe2a18 files/digest-socat-1.4.0.3 66
-MD5 7e75e101e793cb7f39eddab4eeb0d286 files/digest-socat-1.4.2.0 66
-MD5 7e75e101e793cb7f39eddab4eeb0d286 files/digest-socat-1.4.2.0-r1 66
-MD5 c69f1c15c04237f76ac1c77d96a70dc0 files/digest-socat-1.4.3.0 66
-MD5 c69f1c15c04237f76ac1c77d96a70dc0 files/digest-socat-1.4.3.0-r1 66
-MD5 6d502092a174c12aa520b1ab3ac8798f files/socat-1.4.3.0-noptytest.patch 2906
-MD5 80bc464d7deaff0335540eb32a60c827 files/socat-1.4.3.0-tmp-tail.patch 986
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
+MD5 178c7731706c17a7a8c94613c5a8053d ChangeLog 3227
+MD5 b6333d9d43942f7e98f845361fc85944 socat-1.4.2.0-r1.ebuild 1098
 MD5 f3009c0be501848ecefacf09a76b117b socat-1.4.0.3.ebuild 1021
-MD5 10a5a37694063f81698207ffe41c1ccb socat-1.4.2.0-r1.ebuild 1099
-MD5 7496b06950337734d9a6c273d9ee67b4 socat-1.4.2.0.ebuild 1024
 MD5 86c44cf1fb95715c2973ac7370b0247e socat-1.4.3.0-r1.ebuild 1329
 MD5 dadb08b3ec55ab84c53735ef8a5b5535 socat-1.4.3.0.ebuild 1264
+MD5 7496b06950337734d9a6c273d9ee67b4 socat-1.4.2.0.ebuild 1024
+MD5 80bc464d7deaff0335540eb32a60c827 files/socat-1.4.3.0-tmp-tail.patch 986
+MD5 c69f1c15c04237f76ac1c77d96a70dc0 files/digest-socat-1.4.3.0 66
+MD5 6d502092a174c12aa520b1ab3ac8798f files/socat-1.4.3.0-noptytest.patch 2906
+MD5 c69f1c15c04237f76ac1c77d96a70dc0 files/digest-socat-1.4.3.0-r1 66
+MD5 7e75e101e793cb7f39eddab4eeb0d286 files/digest-socat-1.4.2.0-r1 66
+MD5 3e1450e1811fbf675f8069ed1bbe2a18 files/digest-socat-1.4.0.3 66
+MD5 7e75e101e793cb7f39eddab4eeb0d286 files/digest-socat-1.4.2.0 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDU84zKRy60XGEcJIRAvi6AJ4rMHqNX0PYgAI1LkJZxbppmu4wrgCghyt0
-6wZ7ztgwur4+fgB+63YXNHU=
-=l8k0
+iD8DBQFDVHRvJrHF4yAQTrARAisoAKCLivNbiYAC6DKJUQ4bo6jPPaK1XACeOump
+61D7Aqy7HLp7qmSuuAbk9G8=
+=z8CA
 -----END PGP SIGNATURE-----
