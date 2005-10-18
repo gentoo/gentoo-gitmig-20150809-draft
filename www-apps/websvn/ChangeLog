@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.8 2005/10/17 13:00:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.9 2005/10/18 16:08:44 uberlord Exp $
+
+  18 Oct 2005; Roy Marples <uberlord@gentoo.org>
+  files/websvn-1.61-german.patch:
+  Fixed gay CR's in the german patch - thanks to vapier, #109589
 
 *websvn-1.61-r3 (17 Oct 2005)
 
