@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.13 2005/10/18 19:21:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.14 2005/10/18 20:20:27 agriffis Exp $
 
 
 inherit java
@@ -21,7 +21,7 @@ CHPAX_CONSERVATIVE_FLAGS="pemsv"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.4.1"
 KEYWORDS="-* x86 sparc amd64"
-IUSE="doc emul-linux-x86 nsplugin mozilla"
+IUSE="doc emul-linux-x86 browserplugin nsplugin mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
@@ -111,7 +111,7 @@ pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
-	if use nsplugin || use mozilla; then
+	if use nsplugin || use browserplugin || use mozilla; then
 		echo
 		einfo "nsplugin plugin NOT installed"
 		einfo "http://www.blackdown.org/java-linux/java2-status/security/Blackdown-SA-2004-01.txt"
@@ -138,10 +138,10 @@ pkg_postinst() {
 		ewarn "on the physical files - help for PaX and grsecurity"
 		ewarn "can be given by #gentoo-hardened + hardened@gentoo.org"
 	fi
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
-
 }

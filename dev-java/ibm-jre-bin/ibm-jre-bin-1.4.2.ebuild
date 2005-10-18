@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.14 2005/10/18 19:19:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.15 2005/10/18 20:21:36 agriffis Exp $
 
 inherit java
 
@@ -11,7 +11,7 @@ SRC_URI="ppc? ( IBMJava2-JRE-142.ppc.tgz )
 	ppc64? ( IBMJava2-JRE-142.ppc64.tgz )
 	x86? ( IBMJava2-JRE-142.tgz )"
 PROVIDE="virtual/jre"
-IUSE="nsplugin mozilla"
+IUSE="browserplugin nsplugin mozilla"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86 ppc64 -*"
@@ -59,19 +59,24 @@ src_install() {
 		> ${D}/etc/env.d/java/20${P} \
 		|| die "unable to install environment file"
 
-	if ( use nsplugin || use mozilla ) && ! ( use ppc || use ppc64 ); then
-		local plugin="libjavaplugin_oji.so"
-		if has_version '>=sys-devel/gcc-3' ; then
-			plugin="libjavaplugin_ojigcc3.so"
+	if ! use ppc && ! use ppc64; then
+		if use nsplugin ||       # global useflag for netscape-compat plugins
+		   use browserplugin ||  # deprecated but honor for now
+		   use mozilla; then     # wrong but used to honor it
+			local plugin="libjavaplugin_oji.so"
+			if has_version '>=sys-devel/gcc-3' ; then
+				plugin="libjavaplugin_ojigcc3.so"
+			fi
+			install_mozilla_plugin /opt/${P}/bin/${plugin}
 		fi
-		install_mozilla_plugin /opt/${P}/bin/${plugin}
 	fi
-
 }
+
 pkg_postinst() {
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
 }

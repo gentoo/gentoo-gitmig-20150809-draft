@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.13 2005/10/18 19:22:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.14 2005/10/18 20:20:51 agriffis Exp $
 
 inherit java toolchain-funcs
 
@@ -30,7 +30,7 @@ PROVIDE="virtual/jre"
 SLOT="0"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 sparc amd64 -*"
-IUSE="emul-linux-x86 nsplugin mozilla"
+IUSE="emul-linux-x86 browserplugin nsplugin mozilla"
 
 src_unpack () {
 	typeset a want_gcc_ver
@@ -92,15 +92,16 @@ src_install() {
 pkg_postinst() {
 	java_pkg_postinst
 
-	if use nsplugin || use mozilla; then
+	if use nsplugin || use browserplugin || use mozilla; then
 		echo
 		einfo "mozilla plugin NOT installed"
 		einfo "http://www.blackdown.org/java-linux/java2-status/security/Blackdown-SA-2004-01.txt"
 	fi
 
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
 }

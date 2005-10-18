@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.33 2005/10/18 19:20:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.34 2005/10/18 20:22:25 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  sun-jre-bin-1.4.2.08.ebuild, sun-jre-bin-1.4.2.08-r1.ebuild,
+  sun-jre-bin-1.4.2.09.ebuild, sun-jre-bin-1.5.0.04.ebuild,
+  sun-jre-bin-1.5.0.05.ebuild:
+  Warn about deprecated browserplugin useflag
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   sun-jre-bin-1.4.2.08.ebuild, sun-jre-bin-1.4.2.08-r1.ebuild,

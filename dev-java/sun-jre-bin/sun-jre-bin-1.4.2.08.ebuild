@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08.ebuild,v 1.7 2005/10/18 19:20:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.08.ebuild,v 1.8 2005/10/18 20:22:25 agriffis Exp $
 
 inherit java eutils
 
@@ -15,7 +15,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm-1.4.2"
 KEYWORDS="x86 -*"
 RESTRICT="fetch"
-IUSE="nsplugin mozilla"
+IUSE="browserplugin nsplugin mozilla"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed"
@@ -78,7 +78,9 @@ src_install() {
 	dodoc CHANGES COPYRIGHT README LICENSE THIRDPARTYLICENSEREADME.txt
 	dohtml Welcome.html ControlPanel.html
 
-	if use nsplugin || use mozilla; then
+	if use nsplugin ||       # global useflag for netscape-compat plugins
+	   use browserplugin ||  # deprecated but honor for now
+	   use mozilla; then     # wrong but used to honor it
 		local plugin_dir="ns610"
 		if has_version '>=sys-devel/gcc-3.2' ; then
 			plugin_dir="ns610-gcc32"
@@ -112,7 +114,14 @@ pkg_postinst () {
 
 	java_pkg_postinst
 
-	#Show info about netscape
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
+	fi
+
+	# Show info about netscape
 	if has_version '>=www-client/netscape-navigator-4.79-r1' || has_version '>=www-client/netscape-communicator-4.79-r1' ; then
 		echo
 		einfo "If you want to install the plugin for Netscape 4.x, type"
@@ -147,9 +156,4 @@ pkg_postinst () {
 	echo
 	eerror "Some parts of Sun's JDK require virtual/x11 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
-	fi
 }

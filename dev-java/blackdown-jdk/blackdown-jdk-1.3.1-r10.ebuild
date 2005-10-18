@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.20 2005/10/18 19:21:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.21 2005/10/18 20:20:27 agriffis Exp $
 
 inherit java toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ppc? ( http://distro.ibiblio.org/pub/Linux/distributions/yellowdog/soft
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="ppc -*"
-IUSE="doc nsplugin mozilla"
+IUSE="doc browserplugin nsplugin mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -51,7 +51,9 @@ src_install() {
 	dohtml README.html
 
 	# Install ns plugin
-	if use nsplugin || use mozilla; then
+	if use nsplugin ||       # global useflag for netscape-compat plugins
+	   use browserplugin ||  # deprecated but honor for now
+	   use mozilla; then     # wrong but used to honor it
 		if [ "${ARCH}" == "x86" ] ; then
 			PLATFORM="i386"
 		elif [ "${ARCH}" == "ppc" ] ; then
@@ -80,10 +82,11 @@ src_install() {
 
 pkg_postinst() {
 	java_pkg_postinst
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
 }
 

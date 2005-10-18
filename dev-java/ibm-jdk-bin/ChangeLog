@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.32 2005/10/18 19:23:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.33 2005/10/18 20:21:14 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> ibm-jdk-bin-1.4.2.ebuild:
+  Warn about deprecated browserplugin useflag
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> ibm-jdk-bin-1.4.2.ebuild:
   Respect the global USE=nsplugin instead of the local USE=browserplugin

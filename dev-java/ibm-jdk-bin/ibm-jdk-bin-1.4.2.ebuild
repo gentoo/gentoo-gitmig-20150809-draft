@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.28 2005/10/18 19:23:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.29 2005/10/18 20:21:14 agriffis Exp $
 
 inherit java eutils
 
@@ -29,7 +29,7 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	!ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
 
-IUSE="X doc javacomm nsplugin mozilla"
+IUSE="X doc javacomm browserplugin nsplugin mozilla"
 
 if use ppc; then
 	S="${WORKDIR}/IBMJava2-ppc-142"
@@ -68,12 +68,16 @@ src_install() {
 		doins ${FILESDIR}/cpuinfo
 	fi
 
-	if ( use nsplugin || use mozilla ) && ! use ppc && ! use amd64 && ! use ppc64; then
-		local plugin="libjavaplugin_oji.so"
-		if has_version '>=sys-devel/gcc-3' ; then
-			plugin="libjavaplugin_ojigcc3.so"
+	if ! use amd64 && ! use ppc && ! use ppc64; then
+		if use nsplugin ||       # global useflag for netscape-compat plugins
+		   use browserplugin ||  # deprecated but honor for now
+		   use mozilla; then     # wrong but used to honor it
+			local plugin="libjavaplugin_oji.so"
+			if has_version '>=sys-devel/gcc-3' ; then
+				plugin="libjavaplugin_ojigcc3.so"
+			fi
+			install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
 		fi
-		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
 	fi
 
 	dohtml -a html,htm,HTML -r docs
@@ -92,10 +96,10 @@ pkg_postinst() {
 		eerror "Some parts of IBM JDK require XFree86 to be installed."
 		eerror "Be careful which Java libraries you attempt to use."
 	fi
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
-
 }

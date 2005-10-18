@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.23 2005/10/18 19:21:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.24 2005/10/18 20:20:27 agriffis Exp $
 
 inherit java
 
@@ -14,7 +14,7 @@ SRC_URI="x86? ( mirror://blackdown.org/JDK-${PV}/i386/FCS/j2sdk-${PV}-FCS-linux-
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="x86 ~ppc sparc -*"
-IUSE="doc nsplugin mozilla"
+IUSE="doc browserplugin nsplugin mozilla"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
@@ -49,7 +49,9 @@ src_install() {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
-	if use nsplugin || use mozilla; then
+	if use nsplugin ||       # global useflag for netscape-compat plugins
+	   use browserplugin ||  # deprecated but honor for now
+	   use mozilla; then     # wrong but used to honor it
 		if [ "${ARCH}" == "x86" ] ; then
 			PLATFORM="i386"
 		elif [ "${ARCH}" == "ppc" ] ; then
@@ -77,15 +79,15 @@ pkg_postinst() {
 	# Set as default system VM if none exists
 	java_pkg_postinst
 
-	if use nsplugin || use mozilla; then
+	if use nsplugin || use browserplugin || use mozilla; then
 		einfo "The java mozilla plugin supplied by this package does not"
 		einfo "work with newer version mozilla/firefox."
 		einfo "You need >=${PN}-1.4 for them."
 	fi
-
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
 }

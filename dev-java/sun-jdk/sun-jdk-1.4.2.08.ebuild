@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.08.ebuild,v 1.10 2005/10/18 19:25:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.08.ebuild,v 1.11 2005/10/18 20:22:01 agriffis Exp $
 
 inherit java eutils
 
@@ -20,7 +20,7 @@ SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 -*"
 RESTRICT="fetch"
-IUSE="doc nsplugin jce mozilla"
+IUSE="doc browserplugin nsplugin jce mozilla"
 
 #glibc dep: #102423
 DEPEND=">=dev-java/java-config-1.1.5
@@ -116,7 +116,9 @@ src_install() {
 		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
 	fi
 
-	if use nsplugin || use mozilla; then
+	if use nsplugin ||       # global useflag for netscape-compat plugins
+	   use browserplugin ||  # deprecated but honor for now
+	   use mozilla; then     # wrong but used to honor it
 		local plugin_dir="ns610"
 		if has_version '>=sys-devel/gcc-3.2' ; then
 			plugin_dir="ns610-gcc32"
@@ -189,9 +191,10 @@ pkg_postinst() {
 	eerror "Some parts of Sun's JDK require virtual/x11 to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
 
-	if ! use nsplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'nsplugin' please update your USE"
+	if ! use nsplugin && ( use browserplugin || use mozilla ); then
+		echo
+		ewarn "The 'browserplugin' and 'mozilla' useflags will not be honored in"
+		ewarn "future jdk/jre ebuilds for plugin installation.  Please"
+		ewarn "update your USE to include 'nsplugin'."
 	fi
 }
