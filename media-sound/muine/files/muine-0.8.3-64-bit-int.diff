@@ -1,0 +1,11 @@
+--- plugins/egg-sharp.cs.old	2005-09-09 16:29:07.146334128 +0200
++++ plugins/egg-sharp.cs	2005-09-09 16:29:23.521844672 +0200
+@@ -185,7 +185,7 @@
+ 	[StructLayout(LayoutKind.Sequential)]
+ 	internal struct XClientMessageEvent {
+ 		internal XEventName     type;
+-		internal int            serial;
++		internal IntPtr         serial;
+ 		internal bool           send_event;
+ 		internal IntPtr         display;
+ 		internal IntPtr         window;

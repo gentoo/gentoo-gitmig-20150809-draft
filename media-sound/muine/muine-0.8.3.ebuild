@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.6 2005/09/16 06:26:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.3.ebuild,v 1.7 2005/10/18 18:32:55 herbs Exp $
 
 inherit gnome2 mono eutils multilib
 
@@ -76,6 +76,7 @@ src_unpack() {
 		${S}/data/Makefile.am || die "sed failed"
 
 	epatch ${FILESDIR}/${P}-gtk-sharp-2.x.90-compat.diff || die
+	epatch ${FILESDIR}/${P}-64-bit-int.diff || die
 
 	autoconf || die "autoconf failed"
 	automake || die "automake failed"
