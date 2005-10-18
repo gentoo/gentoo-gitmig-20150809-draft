@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gkismet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.9 2005/08/26 10:19:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.10 2005/10/18 12:49:41 metalgod Exp $
+
+  18 Oct 2005; Luis Medinas <metalgod@gentoo.org> gkismet-0.0.10.ebuild:
+  Added ~amd64 keyword. Bug #108370.
 
   26 Aug 2005; Henrik Brix Andersen <brix@gentoo.org> -gkismet-0.0.9.ebuild:
   Pruned old version.

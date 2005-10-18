@@ -1,4 +1,14 @@
-MD5 b25942d2ef3c74b179e43f6be525fb27 gkismet-0.0.10.ebuild 1162
-MD5 7afaf34bc21dadeb71d4f9b2651c6c84 ChangeLog 1383
-MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21948882beb1a66afcdd3757fd71bf22 ChangeLog 1499
 MD5 75b0bc4b902a6194df9a84af8f245275 files/digest-gkismet-0.0.10 66
+MD5 252f4bc1125a728088b8bb10d3d2fbe8 gkismet-0.0.10.ebuild 1173
+MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVP5VwUpWvClEHQoRAkWmAJ4xlPZU1868tP9nJLXAo/xR+fNN4wCggaDD
+HwR/WkCPOo9McNFQWgaoxp0=
+=j4Il
+-----END PGP SIGNATURE-----
