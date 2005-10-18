@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/openjgraph-0.9.2-r1.ebuild,v 1.3 2005/07/15 20:15:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjgraph/openjgraph-0.9.2-r1.ebuild,v 1.4 2005/10/18 15:12:42 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -14,8 +14,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	app-arch/unzip
-	dev-java/junit
-	>=dev-java/ant-1.6"
+	dev-java/junit"
 
 LICENSE="GPL-2"
 SLOT="0"
