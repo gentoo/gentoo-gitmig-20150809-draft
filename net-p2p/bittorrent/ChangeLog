@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.62 2005/10/13 17:20:34 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.63 2005/10/18 04:10:52 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> bittorrent-4.0.2.ebuild:
+  Mark 4.0.2 stable on alpha
 
 *bittorrent-4.1.6 (13 Oct 2005)
 
