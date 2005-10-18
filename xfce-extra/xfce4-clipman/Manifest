@@ -1,6 +1,16 @@
-MD5 f338e51e398d663ddeea48c6e8f8f66c xfce4-clipman-0.4.1-r2.ebuild 392
-MD5 2471ff4def43b17e250c57bd5be763f6 xfce4-clipman-0.4.1-r1.ebuild 386
-MD5 21ffda4baa8c46b730a1bb3e7f61c955 ChangeLog 1645
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 013cabc7d1b28e212bd46892f990d281 xfce4-clipman-0.4.1-r1.ebuild 386
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 ae9615d7229ef0a2ee2a20144ce30451 ChangeLog 1763
+MD5 f338e51e398d663ddeea48c6e8f8f66c xfce4-clipman-0.4.1-r2.ebuild 392
 MD5 51113de7354dc7d05f71d664c4d741d1 files/digest-xfce4-clipman-0.4.1-r1 78
 MD5 51113de7354dc7d05f71d664c4d741d1 files/digest-xfce4-clipman-0.4.1-r2 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVRHlJrHF4yAQTrARAjecAJ9CTFyFcme9In4aZwu0lLd4LL/o4wCfTZS2
+7ZV2KBKeak9HjxhpK2MAE7o=
+=JIDW
+-----END PGP SIGNATURE-----
