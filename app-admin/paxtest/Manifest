@@ -1,9 +1,19 @@
-MD5 9c5dbafecd20ecb58187ab6fea0bb53d ChangeLog 3119
-MD5 9c3ac1379620120fbd744ce753b30ab5 metadata.xml 1075
-MD5 45b4d7ef46e496dc198373339532418b paxtest-0.9.5-r1.ebuild 1089
-MD5 abe9b392322ccda85c5d82df3e3b5982 paxtest-0.9.6.ebuild 948
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ed9a32c87af66a0eb3efc9f6443c456 ChangeLog 3217
 MD5 72e240fcd006ff512fa354491c0ed637 files/Makefile-portable 7373
 MD5 d2c0f3f930cc073ecca57b22266fc4af files/digest-paxtest-0.9.5-r1 64
 MD5 cd07586dbaa6a36a4e8ae197de829875 files/digest-paxtest-0.9.6 64
 MD5 30e5dbdc3446194bf75504fe4c83d5d9 files/paxtest-0.9.5-use-fPIE.patch 813
 MD5 424438ef95656aae91eb2f6c53c663d9 files/paxtest-0.9.5.1.diff 2369
+MD5 9c3ac1379620120fbd744ce753b30ab5 metadata.xml 1075
+MD5 45b4d7ef46e496dc198373339532418b paxtest-0.9.5-r1.ebuild 1089
+MD5 804bab1cd2ce614f9f8d8a27ba7474e3 paxtest-0.9.6.ebuild 950
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDVTmUKRy60XGEcJIRAk6GAJ9/ne6DnKkXEtQ1BHd8Qx4DqP2hZgCfba2V
+1ENqSQnoRJ+5g0zyDbOACUg=
+=w1uS
+-----END PGP SIGNATURE-----
