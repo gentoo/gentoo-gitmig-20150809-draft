@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 337ac879e6eddb5fb3169ad15e379bdc ChangeLog 4226
+MD5 401a00771c42097fe01d29eadd23324e ChangeLog 4343
 MD5 549bbb2af346742bc5e0aec8d405f88c files/digest-ntfsprogs-1.11.1-r1 68
 MD5 0aaf0cd7f2c2123f7d4ed5bcfc96a3d0 files/digest-ntfsprogs-1.11.2 68
 MD5 47897d207e03e02303e7d27672ca0533 files/digest-ntfsprogs-1.12.1 68
@@ -10,12 +7,5 @@ MD5 c617403d6c91f218ab38a9fe51e9c9f9 files/ntfsprogs-1.11.1-utf8.patch 1153
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 20357016a796cec7f8729f3e32eb4a12 ntfsprogs-1.11.1-r1.ebuild 1078
 MD5 dd269b6c45910290bfd7b07efeb131fc ntfsprogs-1.11.2.ebuild 987
-MD5 2a6a90f4e25cf951b6ce5d53a3dcacb3 ntfsprogs-1.12.1.ebuild 954
+MD5 913e97af86106a0343aa9d9a18a021ae ntfsprogs-1.12.1.ebuild 955
 MD5 1ad543ffd184aa04245f1be49d94f955 ntfsprogs-1.9.4.ebuild 835
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVCAPgIKl8Uu19MoRAvS4AJ9RApIiPwUz7Vp95SoXEdnGEajmggCeO2bl
-QUEYAdEO44dMKZsqRjCxDos=
-=N6tq
------END PGP SIGNATURE-----
