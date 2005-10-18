@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/brutefir
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.7 2005/05/04 12:00:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.8 2005/10/18 22:37:56 chainsaw Exp $
+
+*brutefir-1.0f (18 Oct 2005)
+
+  18 Oct 2005; Tony Vroon <chainsaw@gentoo.org> +brutefir-1.0f.ebuild:
+  Version bump, closes bug #108906.
 
   04 May 2005; David Holm <dholm@gentoo.org> brutefir-1.0c.ebuild:
   Readded to ~ppc. Please don't remove it without filing a proper bugreport.
