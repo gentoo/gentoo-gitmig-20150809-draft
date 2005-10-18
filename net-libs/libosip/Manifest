@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
 MD5 9c50539aee2c28a817278f3c50ae9878 ChangeLog 3306
 MD5 6db12aae86c36824727616a140006d1c libosip-2.2.1.ebuild 824
@@ -6,3 +9,10 @@ MD5 bef19142522b953ef2e7488cb01a82e3 libosip-0.9.7.ebuild 543
 MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
 MD5 5249f8f6a6158f8730e719f07b021acb files/digest-libosip-2.2.1 66
 MD5 bdae20c3d071939ffd92629f5d3c00f5 files/digest-libosip-0.9.6 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVGdhJrHF4yAQTrARAjbrAJ9BEiHsy70O8F/weeGOEr5u8U3fWgCgsI1v
+sbDVD2lrnE9zC7YS32BDfJo=
+=RjJ2
+-----END PGP SIGNATURE-----
