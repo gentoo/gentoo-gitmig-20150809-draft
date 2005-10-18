@@ -1,4 +1,4 @@
-MD5 23f09c15e39f99f4c514eaedae970677 ChangeLog 29465
+MD5 735ba5f66c420afa208092924910e766 ChangeLog 29596
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
 MD5 cd0429c945d4f2e1fbbb9fd5322a6c2b files/1.1.4/freetype-217.patch 766
@@ -35,6 +35,7 @@ MD5 4821a498748cc2b42dd3d32b27c95da9 files/2.0.0/config_office-openldap-fix.diff
 MD5 9fcafd818f3e84a8adda72501784243e files/2.0.0/gentoo-2.0.0_rc2.diff 1105
 MD5 39239f7e09e3fdd536498728404bfbef files/2.0.0/gentoo-2.0.0_rc3.diff 957
 MD5 078172057d5be938e24273c359b42435 files/2.0.0/no-ldap-mozilla.diff 1292
+MD5 705ccd454942401009fad47768eb3595 files/2.0.0/stlport-vector-ppc-buildfix.diff 1675
 MD5 b2cb01ba0d5824f2892c150dce1d8771 files/digest-openoffice-1.1.4-r1 325
 MD5 387adcb6e397b6e7f825c8384ce52389 files/digest-openoffice-1.1.5 322
 MD5 cd8007c1f613acc2ee85255b0d20b711 files/digest-openoffice-2.0.0_rc2 416
