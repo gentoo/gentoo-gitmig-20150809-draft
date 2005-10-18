@@ -1,4 +1,7 @@
-MD5 9781473d1b57a6a0ae7c1594c48ffdfa ChangeLog 3557
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 af87588eb658574edf44f9c033ae3c7e ChangeLog 3550
 MD5 94649610e3e4a64b74b8e868c0b7d2ca files/digest-muine-0.6.3-r2 63
 MD5 94649610e3e4a64b74b8e868c0b7d2ca files/digest-muine-0.6.3-r3 63
 MD5 80e26562df326c5879e45ac707aa7923 files/digest-muine-0.8.3 63
@@ -12,3 +15,10 @@ MD5 42dcaa983276bbd8e849c07f13677337 metadata.xml 245
 MD5 efc18f554d45025127675ee4601d23e8 muine-0.6.3-r2.ebuild 1642
 MD5 49f354dc1e312093cd9012b8933da075 muine-0.6.3-r3.ebuild 1751
 MD5 f4ef8887344cdabeb17f5640c301ab6a muine-0.8.3.ebuild 2819
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVUiF2G5bA0cA/ScRAraGAJ4kN+nqsxugroUEulGoiOnMfSwF4wCfWmaK
+YY86YowlvremjN64m24rbQE=
+=H7Sn
+-----END PGP SIGNATURE-----
