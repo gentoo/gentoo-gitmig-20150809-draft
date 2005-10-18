@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f3711cb88c767faf16636e0c3933ff1 ChangeLog 4370
 MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
 MD5 cfb8abeb0f582ad72b0971269e7dee32 files/digest-ibm-jdk-bin-1.4.2 443
@@ -5,3 +8,10 @@ MD5 2a5694754d47014cb37eae87a4758efb files/ibm-jdk-bin-1.4.1 451
 MD5 605642c801114b645d12bc93a5f3e911 files/ibm-jdk-bin-1.4.2 472
 MD5 052149264d14e12757fbb6d275152bc8 ibm-jdk-bin-1.4.2.ebuild 3036
 MD5 2f88465cd5ad6adb1c76759ff3078666 metadata.xml 348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVVlUJrHF4yAQTrARAsadAJ0fL1ZRIzIqBaqDqyhvbUmhQGFmtwCeMYFZ
+JudYilk7WZAyoFljgoyHCM8=
+=/qbd
+-----END PGP SIGNATURE-----
