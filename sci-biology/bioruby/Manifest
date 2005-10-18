@@ -1,4 +1,6 @@
 MD5 b6aa80d6b32a6eed86464a3e90bafc5d bioruby-0.6.2.ebuild 463
-MD5 6904bfa11aa823c6b6b98ca85ce7b4dc ChangeLog 532
+MD5 102fef512c80091dd8f9c5c5efeab3b5 ChangeLog 654
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+MD5 ceb0fc4499a0a2d1a9cac6dff403b746 bioruby-0.6.4.ebuild 463
 MD5 bbb30d670eb6cbd584d1af2ca4066878 files/digest-bioruby-0.6.2 65
+MD5 550626f843c53e2f3464451389598c45 files/digest-bioruby-0.6.4 65
