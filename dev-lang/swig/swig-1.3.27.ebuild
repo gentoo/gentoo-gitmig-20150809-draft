@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.27.ebuild,v 1.1 2005/10/18 04:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.27.ebuild,v 1.2 2005/10/18 22:26:35 vapier Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -49,7 +49,7 @@ src_compile() {
 	econf \
 		$(use_with X x) \
 		$(use_with tcltk tcl) \
-		$(use_with python) \
+		$(use_with python python python) \
 		$(use_with perl perl5 /usr/bin/perl) \
 		$(use_with java java "${JAVA_HOME}") \
 		$(use_with java javaincl "${JAVA_HOME}/include") \

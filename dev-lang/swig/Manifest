@@ -9,12 +9,12 @@ MD5 011d2439bc52a3cc1e8c61a29068f52e files/digest-swig-1.3.27 64
 MD5 c642968e8d7284836603f2f63216bcb4 metadata.xml 768
 MD5 ee73f98bd5bd9c43b8ef87a8d380ed46 swig-1.3.21.ebuild 1922
 MD5 e27ffef811e03d0bffed935db35d13e9 swig-1.3.24.ebuild 1840
-MD5 c578d11b71abe0985449eb1e5d1e0cbc swig-1.3.25.ebuild 1777
-MD5 8d6bedc40e4d2bcd6daba78238cec342 swig-1.3.27.ebuild 1807
+MD5 58550efefe8e1a56696a8d47c3725062 swig-1.3.25.ebuild 1784
+MD5 c20a2186fd28a3badc857cd428119751 swig-1.3.27.ebuild 1821
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVHT5gIKl8Uu19MoRAouBAJ9AESti7iTGbPxkA2qJVDcjLwEUCwCff7kT
-SgPFKuHJNl5sVpyNoL7J5e0=
-=tB4B
+iD8DBQFDVXc2gIKl8Uu19MoRAgmhAJ9qrC/ZnXwXRGlBlYYKniPi+L78aACcDdoa
+wOE9VL795isjGv4JaeCn6C0=
+=ppky
 -----END PGP SIGNATURE-----
