@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.0.2.ebuild,v 1.4 2005/08/17 22:48:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.0.2.ebuild,v 1.5 2005/10/18 01:54:52 vapier Exp $
 
 inherit eutils mono
 
@@ -29,6 +29,7 @@ src_unpack() {
 	sed -i 's:$(INSTALL_PROGRAM) $(TCL_PACKAGE):$(INSTALL_PROGRAM) -D $(TCL_PACKAGE):' tcl/Makefile.in
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-DESTDIR.patch
+	epatch "${FILESDIR}"/${P}-swig-update.patch
 }
 
 src_compile() {
@@ -46,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog* INSTALL NEWS README TODO
 	dohtml *.html
 }
