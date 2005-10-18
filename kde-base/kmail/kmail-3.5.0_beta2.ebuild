@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.0_beta2.ebuild,v 1.2 2005/10/15 08:39:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-3.5.0_beta2.ebuild,v 1.3 2005/10/18 23:15:27 puggy Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE mail client"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="$(deprange 3.5_beta1 $MAXKDEVER kde-base/libkdenetwork)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)
