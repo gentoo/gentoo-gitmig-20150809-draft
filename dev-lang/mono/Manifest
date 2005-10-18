@@ -1,4 +1,7 @@
-MD5 72d62796a1d8964496b095eab3118383 ChangeLog 19440
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fd94c6b8f3e6b56f0a3b2f364adfd802 ChangeLog 19444
 MD5 9e2e1b58a310e4236f757e683b71c879 files/digest-mono-1.0.5-r5 127
 MD5 e57f70fb8569f040ed1b4669c3e07652 files/digest-mono-1.1.8.3 66
 MD5 c15043c4c7276f0e4f9edac5d2da1a27 files/digest-mono-1.1.9.1 66
@@ -20,3 +23,10 @@ MD5 10c58186e6ce0ab643d16c883f2071ff mono-1.0.5-r5.ebuild 3718
 MD5 5415fa75de6e201ae1a0e12c17498709 mono-1.1.8.3.ebuild 2501
 MD5 9e335202b997822eafad0c2f80137f66 mono-1.1.9.1.ebuild 2285
 MD5 8a27590ee5780db41e7f4124b7de58d0 mono-1.1.9.2.ebuild 2000
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVUkG2G5bA0cA/ScRAjglAJ9LsaEPWetfTNi5JWJxAeAtSWqC1wCgn4dK
+gnK+heprZhLKi4mGzfagCmg=
+=SjtM
+-----END PGP SIGNATURE-----
