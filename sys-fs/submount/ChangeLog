@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/submount
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.17 2005/03/28 15:11:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.18 2005/10/18 13:08:33 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> submount-0.9-r2.ebuild:
+  Mark 0.9-r2 stable on alpha
 
   28 Mar 2005; Stefan Schweizer <genstef@gentoo.org> submount-0.9-r2.ebuild:
   Fix 2.4 kernel compile: BUILD_TARGETS="default" -> BUILD_TARGETS=" " thanks
