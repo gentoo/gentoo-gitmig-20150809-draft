@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-oss
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-oss/ChangeLog,v 1.9 2005/07/12 05:03:18 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-oss/ChangeLog,v 1.10 2005/10/18 21:52:30 metalgod Exp $
+
+  18 Oct 2005; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Added myself as new maintainer.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org> xmms-oss-1.2.10.ebuild:
   stable on mips

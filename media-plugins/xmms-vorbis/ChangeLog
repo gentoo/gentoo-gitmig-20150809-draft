@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-vorbis
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-vorbis/ChangeLog,v 1.8 2005/07/12 05:02:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-vorbis/ChangeLog,v 1.9 2005/10/18 21:54:07 metalgod Exp $
+
+  18 Oct 2005; Luis Medinas <metalgod@gentoo.org> metadata.xml:
+  Added myself as new maintainer.
 
   12 Jul 2005; Stephen P. Becker <geoman@gentoo.org>
   xmms-vorbis-1.2.10-r1.ebuild:
