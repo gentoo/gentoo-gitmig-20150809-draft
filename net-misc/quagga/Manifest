@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 95af004409f46b53eb8c5277bfd5b5b8 quagga-0.98.2.ebuild 4625
-MD5 32d1b21f3a7df65fe58533a8152060f8 ChangeLog 8764
-MD5 7eb6d4f48ba75934fc51d92287a1d38d quagga-0.98.4.ebuild 4393
 MD5 f0c8f9afaf3bbefcea71ff3b6fa139c4 metadata.xml 1389
+MD5 8de3633537d3e4e5d72379d59efdb3af quagga-0.98.4.ebuild 4394
+MD5 f1ee3ebc325669549b37323c040409f6 ChangeLog 8869
+MD5 95af004409f46b53eb8c5277bfd5b5b8 quagga-0.98.2.ebuild 4625
 MD5 6f7bbd50a0af9c0e1f2fae5116a8eacf quagga-0.96.5-r1.ebuild 4017
-MD5 cc109a746273bc0d6aee9d758e7524ab files/bgpd.init 900
 MD5 44547b687343ebfed7524cebc5626067 files/ospf6d.init 919
-MD5 1a1df9fb95d48001187e1f56dc4ff5e5 files/digest-quagga-0.98.2 66
-MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
-MD5 39b8cb21b55de53af38c94c2f5d85917 files/ripd.init 900
+MD5 0b834e6f9fd5d40f3018fb7e4ba04faa files/quagga.pam 1145
 MD5 120ab1b53975ec86e78266f31e935ab6 files/ripngd.init 920
 MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5-r1 142
-MD5 18c1046db57ea850aabd385058522cc4 files/quagga.env 25
-MD5 0b834e6f9fd5d40f3018fb7e4ba04faa files/quagga.pam 1145
+MD5 1a1df9fb95d48001187e1f56dc4ff5e5 files/digest-quagga-0.98.2 66
+MD5 8550c2f78b4c3ba7ba66c6bcb0bf4913 files/digest-quagga-0.98.4 147
 MD5 89b0cf4e70172bfcd195b2869cae28da files/ospfd.init 910
+MD5 18c1046db57ea850aabd385058522cc4 files/quagga.env 25
 MD5 c38e884372406e9e59616e436cd26388 files/zebra.conf 371
 MD5 2c1c5b782f96a74b48ccc496ad7a3865 files/zebra.init 1168
-MD5 7da4097332468741416e156a2e5d35e4 files/patches-0.98.2/amir-connected-route.patch 6336
-MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch 14570
+MD5 39b8cb21b55de53af38c94c2f5d85917 files/ripd.init 900
+MD5 cc109a746273bc0d6aee9d758e7524ab files/bgpd.init 900
 MD5 e70bf25e2ca5f76efb2c5704234ccc1f files/patches-0.98.2/ht-20040304-classless-bgp.patch 1581
+MD5 6c9cdbdc237bb8d24dfd26504059464b files/patches-0.98.2/ht-20050110-0.98.0-bgp-md5.patch 14570
+MD5 7da4097332468741416e156a2e5d35e4 files/patches-0.98.2/amir-connected-route.patch 6336
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDTz/mNSP4Vda7IdsRAmfUAKCSM5++hEKa8wp+JfZBzkr1U6LshACfYf4b
-gRBILuFXTuSG+m0ALVamO18=
-=AqBA
+iD8DBQFDVHLbJrHF4yAQTrARAt9LAJ9jUVCZtDFB9UK2VtbolHTVo6Hs7QCffGB6
+X/fP1pUIVDEgTu9OLvYCXRw=
+=XypX
 -----END PGP SIGNATURE-----
