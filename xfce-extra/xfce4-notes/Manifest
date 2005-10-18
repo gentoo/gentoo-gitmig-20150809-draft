@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0fced766f6059422ee6ef0b868484c74 xfce4-notes-0.10.0.ebuild 377
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 8032df3bec249cf0042aca3f2c6eb790 ChangeLog 1685
@@ -9,3 +12,10 @@ MD5 26718c962f6a184d14efff98f76c2bd7 files/notes_applet.c.patch 285
 MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r2 77
 MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0 77
 MD5 6b41a6e0f0f511c726ef91eb894a79cd files/digest-xfce4-notes-0.9.7-r1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVRNxJrHF4yAQTrARAiWeAJ46BHCJefYgaSTSmhpDO/zpd1rEuQCdFLh+
+E9uXYfVpA3zms8veHbrpucU=
+=wTNn
+-----END PGP SIGNATURE-----

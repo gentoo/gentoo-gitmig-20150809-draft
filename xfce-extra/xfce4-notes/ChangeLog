@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-notes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.12 2005/10/06 17:40:45 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.13 2005/10/18 15:23:06 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
+  xfce4-notes-0.10.0-r1.ebuild:
+  Mark 0.10.0-r1 stable on alpha
 
 *xfce4-notes-0.10.0-r2 (06 Oct 2005)
 
