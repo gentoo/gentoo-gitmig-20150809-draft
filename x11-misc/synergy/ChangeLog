@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.33 2005/09/17 21:24:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.34 2005/10/18 13:59:22 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> synergy-1.2.4.ebuild:
+  Mark 1.2.4 stable on alpha
 
   17 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> synergy-1.2.4.ebuild:
   Stable on ppc.
