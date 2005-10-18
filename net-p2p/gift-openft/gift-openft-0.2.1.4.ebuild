@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.4.ebuild,v 1.8 2005/04/07 16:47:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.4.ebuild,v 1.9 2005/10/18 15:21:23 metalgod Exp $
+
+inherit eutils
 
 IUSE="berkdb"
 DESCRIPTION="The giFT OpenFT plugin"
@@ -26,7 +28,7 @@ src_compile() {
 
 src_install() {
 	einstall giftconfdir=${D}/etc/giFT \
-		 plugindir=${D}/usr/lib/giFT \
+		 plugindir=${D}/usr/$(get_libdir)/giFT \
 		 datadir=${D}/usr/share/giFT \
 		 giftperldir=${D}/usr/bin \
 		 libgiftincdir=${D}/usr/include/libgift || die "Install failed"
