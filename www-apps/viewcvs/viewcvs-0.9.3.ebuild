@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.3.ebuild,v 1.7 2005/10/12 19:40:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.3.ebuild,v 1.8 2005/10/18 18:04:20 gustavoz Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://viewcvs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="viewcvs"
-KEYWORDS="ppc ~sparc x86"
+KEYWORDS="ppc sparc x86"
 IUSE="cvsgraph enscript"
 
 RDEPEND="|| (

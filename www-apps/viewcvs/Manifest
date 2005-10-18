@@ -1,4 +1,7 @@
-MD5 46f7cc6f72ac6e231be8fb3349c0d3ab ChangeLog 7891
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f4375ad31d96a6fc83f16d2114f42ac8 ChangeLog 7988
 MD5 48783b2b9bd95be9a4eb1525a0bf708a files/digest-viewcvs-0.9.2_p20041207-r1 69
 MD5 1ebd12b88a2c6a6964c0d02b5c82911a files/digest-viewcvs-0.9.3 65
 MD5 26ecfea58fa51e62bc28985ff0f73048 files/digest-viewcvs-0.9.4 65
@@ -13,7 +16,14 @@ MD5 9b65df9cd8e1bae9bca4fcf9623396e7 files/viewcvs-mysql-4.0.sql 2495
 MD5 6260728f582a42a165dcf791a36b4825 files/viewcvs-mysql-4.1.sql 2422
 MD5 fa8daabae86da3beefbc3ea1e5ccd42c metadata.xml 779
 MD5 de35d046cef5f9b95a5ddce9f2bf990d viewcvs-0.9.2_p20041207-r1.ebuild 2536
-MD5 b186059892f68649d29203287184bd49 viewcvs-0.9.3.ebuild 1476
+MD5 5c453b1274f323a9abbfa87e169d77b8 viewcvs-0.9.3.ebuild 1477
 MD5 add81eb48bf3db049469feb65a64c0dd viewcvs-0.9.4.ebuild 1513
 MD5 1efa77758ff6f9f8fa039c77a4e4d032 viewcvs-1.0_pre20050523.ebuild 1523
 MD5 1c738f44ce7a084b6122c8baed0470a3 viewcvs-1.0_pre20050929.ebuild 3426
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDVTlAKRy60XGEcJIRAmlKAJ9ZXJRDOTGsX03YzKmQEnRLsPFxOwCglaZy
+C/zZLJeMUL1qoRUnDQIce1Q=
+=fru5
+-----END PGP SIGNATURE-----
