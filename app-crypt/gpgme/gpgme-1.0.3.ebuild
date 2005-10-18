@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.3.ebuild,v 1.2 2005/10/17 19:25:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.3.ebuild,v 1.3 2005/10/18 03:56:17 mr_bones_ Exp $
 
 inherit eutils libtool
 
@@ -55,8 +55,8 @@ src_compile() {
 	#	$(use_with smime gpgsm /usr/bin/gpgsm) \
 
 	if use selinux; then
-		sed  -i -e "s:tests = tests:tests = :" Makefile.in || die 
-	fi 
+		sed  -i -e "s:tests = tests:tests = :" Makefile.in || die
+	fi
 
 	econf \
 		--includedir=/usr/include/gpgme \
