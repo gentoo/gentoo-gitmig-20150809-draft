@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 673bc7f641679a4d78b461c5e370dd84 ChangeLog 3312
-MD5 c2898e702ba9d02702277c8be7512abf mhash-0.9.1.ebuild 989
-MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
-MD5 4bfc6abb87840ebaea9242ccfdf21abe mhash-0.9.2.ebuild 982
 MD5 b82524ff78b486ef79cccd400ad79348 files/digest-mhash-0.9.1 63
 MD5 fb060fa52ccd63f4970aa3099a43c235 files/digest-mhash-0.9.2 63
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
+MD5 c2898e702ba9d02702277c8be7512abf mhash-0.9.1.ebuild 989
+MD5 8567eb305f9641f5257de243688b5efc mhash-0.9.2.ebuild 893
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCs7+xgIKl8Uu19MoRAjTYAJ9IwpP+OGv8FpBdC/+n2UI7agb5EwCfSghq
-ZPjmLn6MKKgxT8rNQsqvt9U=
-=pISs
+iD8DBQFDVIoJgIKl8Uu19MoRAnvKAJ9F5SXZ0V28GOHWy81ON9dHAla24QCcCen6
+16V41bG9kzs8qIqxPTH2Xl0=
+=gBVv
 -----END PGP SIGNATURE-----

@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.2.ebuild,v 1.3 2005/06/18 06:30:15 vapier Exp $
-
-inherit libtool
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.2.ebuild,v 1.4 2005/10/18 05:34:45 vapier Exp $
 
 DESCRIPTION="library providing a uniform interface to a large number of hash algorithms"
 HOMEPAGE="http://mhash.sourceforge.net/"
@@ -16,15 +14,10 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	uclibctoolize
-}
-
 src_compile() {
-	local myconf
-	myconf="--enable-static --enable-shared"
-	econf ${myconf} || die
+	econf \
+		--enable-static \
+		--enable-shared || die
 	emake || die "make failure"
 }
 
