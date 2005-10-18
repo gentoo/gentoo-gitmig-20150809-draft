@@ -1,0 +1,11 @@
+--- src/logfile/Makefile.orig	2005-10-13 15:42:09.000000000 -0300
++++ src/logfile/Makefile	2005-10-13 15:42:27.000000000 -0300
+@@ -34,7 +34,7 @@
+ all: logfile.o
+ 
+ install:
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(LOGDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(LOGDIR)
+ 
+ clean:
+ 	$(RM) *.o

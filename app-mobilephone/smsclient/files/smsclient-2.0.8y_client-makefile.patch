@@ -1,0 +1,15 @@
+--- src/client/Makefile.orig	2005-10-13 15:40:41.000000000 -0300
++++ src/client/Makefile	2005-10-13 15:41:26.000000000 -0300
+@@ -35,9 +35,9 @@
+ all: ../../bin/sms_client ../../bin/sms_address 
+ 
+ install: ../../bin/sms_client ../../bin/sms_address
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(BINDIR)
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_client $(BINDIR)
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_address $(BINDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(BINDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_client $(DESTDIR)$(BINDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_address $(DESTDIR)$(BINDIR)
+ 
+ uninstall:
+ 	$(RM) $(BINDIR)/sms_client

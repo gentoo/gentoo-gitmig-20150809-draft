@@ -1,0 +1,48 @@
+--- sms/Makefile.orig	2005-10-13 15:36:18.000000000 -0300
++++ sms/Makefile	2005-10-13 15:38:26.000000000 -0300
+@@ -34,28 +34,28 @@
+ all:
+ 
+ install: 
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(MSERVICEDIR)/services
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/errors
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/locks
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/incoming
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/named_pipes
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/services
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(MSERVICEDIR)/scripts
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(MSERVICEDIR)/services
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/errors
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/locks
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/incoming
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/named_pipes
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/services
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(MSERVICEDIR)/scripts
+ 
+ 	( cd services ;\
+ 	  for service in * ; do \
+-		  $(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 $$service $(MSERVICEDIR)/services; \
+-		  $(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/services/$$service ; \
+-		  $(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(SPOOLDIR)/sms/errors/$$service ; \
++		  $(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 $$service $(DESTDIR)$(MSERVICEDIR)/services; \
++		  $(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/services/$$service ; \
++		  $(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)$(SPOOLDIR)/sms/errors/$$service ; \
+ 	  done )
+ 
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 scripts/email $(MSERVICEDIR)/scripts
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_config $(MSERVICEDIR)
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_addressbook $(MSERVICEDIR)
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_modem $(MSERVICEDIR)
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_services $(MSERVICEDIR)
+-	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_daemons $(MSERVICEDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 scripts/email $(DESTDIR)$(MSERVICEDIR)/scripts
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_config $(DESTDIR)$(MSERVICEDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_addressbook $(DESTDIR)$(MSERVICEDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_modem $(DESTDIR)$(MSERVICEDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_services $(DESTDIR)$(MSERVICEDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 644 sms_daemons $(DESTDIR)$(MSERVICEDIR)
+ 	
+ uninstall:
+ 	$(RM) $(MSERVICEDIR)/services/*
