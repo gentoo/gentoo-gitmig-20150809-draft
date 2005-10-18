@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3c18cc969415f6905d54b3806c9fb7c4 ChangeLog 529
-MD5 2a7576f932aca9918744cd27ac2fdee0 led-1.79.4.ebuild 849
-MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
+MD5 9c5389604f2ab478945e76ba434820e2 ChangeLog 622
 MD5 ac56805f330fe3bd6c178a858074bd2d files/digest-led-1.79.4 62
+MD5 a466ddeb07f55ef519a97fc808f8c25f led-1.79.4.ebuild 856
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCk0+RtG5z4I8BtQoRAhSqAJ4z2JS1SrcbS179LBIdgH3bjBH8mwCdGEfh
-5gTP5OZdL5TvUyIRzUGVSAk=
-=vKAk
+iD8DBQFDVUBGZ/iYVBmujdURAo0VAJ9crVncqMHFAIw3Tady9UJexdEKzgCg55g+
+lFIdIcEqO+wyt1srR6HYCK0=
+=nfIm
 -----END PGP SIGNATURE-----
