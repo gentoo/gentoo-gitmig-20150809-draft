@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.45 2005/09/21 19:19:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.46 2005/10/18 00:16:05 vapier Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -103,3 +103,5 @@ sybase-ct
 
 # Unmask ultra1
 -ultra1
+
+pike
