@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61894a77a7fbe367c5443bf3af3d100e ChangeLog 1768
+MD5 9b90659e3d9beecaa30ce55e2f524952 ChangeLog 1898
 MD5 66c1f7dfa9c09e11c9e248dd7ec07a5e cryptsetup-luks-1.0-r1.ebuild 2126
-MD5 e2d0f6b93d4f04cf87353855106d816e cryptsetup-luks-1.0.1.ebuild 2147
+MD5 6584dd04272035afc8f465e9f1a54aa1 cryptsetup-luks-1.0.1.ebuild 2150
 MD5 3caa86ef66126cc858551801beb4b6d0 cryptsetup-luks-1.0.ebuild 2004
+MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
 MD5 6d86b15e07cd0cdf96d8a363b1d778cd files/cryptfs.confd 1548
 MD5 f254479b9a12868d43ab10e4658fab51 files/digest-cryptsetup-luks-1.0 72
 MD5 f254479b9a12868d43ab10e4658fab51 files/digest-cryptsetup-luks-1.0-r1 72
 MD5 6d83c52472ad8d3b12ec5dbc4e056ed7 files/digest-cryptsetup-luks-1.0.1 74
 MD5 c653a0b4ace27569ccc659b7cb43b4a9 files/dm-crypt-start.sh 4306
 MD5 a3bb6598f67c8922ccb6576ff256ced0 files/dm-crypt-stop.sh 1297
-MD5 6c788beeca78bd11e5cd6e759e52fadc metadata.xml 228
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDU1PxQiJ/wx066S4RAr61AJ4hV5/DN8D0q6hhOqLhMEMRUwCI5gCgj5vK
-tL1/JMmRbp6ESftuiZo/gwE=
-=K6w7
------END PGP SIGNATURE-----
