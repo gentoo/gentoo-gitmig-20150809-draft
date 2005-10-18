@@ -1,0 +1,87 @@
+--- src/defs.cpp
++++ src/defs.cpp
+@@ -183,7 +183,7 @@
+ 	//char * file_place = new char[ 6 ];
+ 	char file_place[ 30 ];
+ 	//file_place = strdup( "data" );
+-	sprintf( file_place, "data" );
++	sprintf( file_place, "GENTOO_DATADIR" );
+ 	put_backslash( file_place );
+ 	char * final = append( file_place, file_name );
+ 	//delete[] file_place;
+--- src/loadsave.h
++++ src/loadsave.h
+@@ -4,5 +4,6 @@
+ class SpaceObject;
+ int savePlayer( SpaceObject * player, int game_slot );
+ SpaceObject * loadPlayer( int game_slot );
++const char *getSaveName(int game_slot);
+ 
+ #endif
+--- src/loadsave.cpp
++++ src/loadsave.cpp
+@@ -48,6 +48,20 @@
+ #define debug printf("File: %s Line: %d\n", __FILE__, __LINE__ );
+ #endif
+ 
++const char *getSaveName(int i)
++{
++	static char savename[1024];
++	const char *homedir = getenv("HOME");
++	if (homedir == NULL) {
++		fprintf(stderr, "HOME is not set, unable to save games");
++		exit(1);
++	}
++	snprintf(savename, sizeof(savename), "%s/." PACKAGE, homedir);
++	mkdir(savename, 0755);
++	snprintf(savename, sizeof(savename), "%s/." PACKAGE "/player%d.rap", homedir, i);
++	return savename;
++}
++
+ /* savePlayer:
+  * Saves the player in at player#.rap where # = game_slot
+  */
+@@ -56,8 +68,7 @@
+ 	if ( player == NULL ) return 1;
+ 	printf("Save player\n");
+ 
+-	char filename[ 64 ];
+-	snprintf( filename, 64, "player%d.rap", game_slot );
++	const char *filename = getSaveName(game_slot);
+ 
+ 	// PlayerHull * hull = dynamic_cast<PlayerHull *>(player->getHull());
+ 	PlayerHull * hull = dynamic_cast<PlayerHull *>(player->getHull() );
+@@ -227,8 +238,7 @@
+ 
+ 	FILE * fv;
+ 	
+-	char filename[ 64 ];
+-	snprintf( filename, 64, "player%d.rap", game_slot );
++	const char *filename = getSaveName(game_slot);
+ 	fv = fopen( filename, "rb" );
+ 	if ( fv == NULL ){
+ 		printf("Could not open %s\n", filename );
+--- src/menu.cpp
++++ src/menu.cpp
+@@ -575,8 +575,7 @@
+ char * menuClass::getFileInfo( int number ){
+ 
+ 	char * temp = (char *)malloc( sizeof(char) * 1024 );
+-	char buf[ 64 ];
+-	sprintf( buf, "player%d.rap", number+1 );
++	const char *buf = getSaveName(number+1);
+ 	FILE * fv = fopen( buf, "rb" );
+ 	if ( !fv ){
+ 		sprintf( temp, "Slot %d Empty", number+1 );
+--- src/raptor.cpp
++++ src/raptor.cpp
+@@ -216,8 +216,7 @@
+ 
+ 	menu->clear();
+ 	for ( int q = 0; q < 6; q++ ){
+-		char filename[ 64 ];
+-		snprintf( filename, 64, "player%d.rap", q+1 );
++		const char *filename = getSaveName(q+1);;
+ 		if ( exists( filename ) ){
+ 			time_t tl = file_time( filename );
+ 			struct tm * real_time = localtime( &tl );

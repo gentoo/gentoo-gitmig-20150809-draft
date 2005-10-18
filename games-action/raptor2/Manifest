@@ -1,5 +1,18 @@
-MD5 32aa9c2ae679cab35864265b0fc893e8 raptor2-1.0.0-r1.ebuild 995
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d3dceb6bc9e2cc35020bf77d2c9f301e ChangeLog 1421
-MD5 ee85df7f290384c5b32e7aa0f1ff1bc5 files/digest-raptor2-1.0.0-r1 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac2f6f407ad2eb87f51d169d8d491243 ChangeLog 1614
 MD5 563987e822f08af130b65e3862776d6c files/1.0.0-chdir.patch 291
+MD5 ee85df7f290384c5b32e7aa0f1ff1bc5 files/digest-raptor2-1.0.0-r1 65
+MD5 c7e408e637bd5fca9ab78d916862cd1d files/digest-raptor2-1.2.0 65
+MD5 cc6d76fa2f34830fdefb5426152ec2c6 files/raptor2-1.2.0-gentoo-paths.patch 2499
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 32aa9c2ae679cab35864265b0fc893e8 raptor2-1.0.0-r1.ebuild 995
+MD5 96fc455c579abab8af896e0edf0eab91 raptor2-1.2.0.ebuild 1025
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVGZ2gIKl8Uu19MoRAhFxAJ9MD9xactVWjyHLd9Yy/pVElQSo/QCeOSlD
+THJN7hMxlYI4507a3coBrsU=
+=7gVy
+-----END PGP SIGNATURE-----
