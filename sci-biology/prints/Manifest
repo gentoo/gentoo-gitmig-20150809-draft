@@ -1,4 +1,6 @@
+MD5 11a2a6a90411587555140aca04678982 prints-38.0.ebuild 1253
+MD5 ce1197690baba2bc94dcae35cb6f7079 prints-37.0.ebuild 1397
 MD5 814568ea948f01625f4fd8b61047b704 ChangeLog 1468
 MD5 1ac1b9a7f4647c51e178fee97f2e8fa8 metadata.xml 876
-MD5 ce1197690baba2bc94dcae35cb6f7079 prints-37.0.ebuild 1397
 MD5 480ec57dbfe7db281e30726e6e1160bd files/digest-prints-37.0 365
+MD5 aec0974e2bbc992669aec8865dae02fc files/digest-prints-38.0 66
