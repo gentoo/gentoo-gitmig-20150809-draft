@@ -1,4 +1,6 @@
-MD5 b78719b4e6f683481e3fac55dcce1769 ChangeLog 2994
+MD5 22be4554cada0fd30a522d7b9e27b0bf phylip-3.65.ebuild 1273
+MD5 4f5e4fad2ff0866da98dff9d77c52279 ChangeLog 3112
 MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
 MD5 b56d632ce611256d9e51dff8a142efe1 phylip-3.64.ebuild 988
 MD5 6a0365a6136c482528c2ddcd860a9d97 files/digest-phylip-3.64 64
+MD5 d87091a1c48c794109dbfb88336d9068 files/digest-phylip-3.65 64

@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.13 2005/10/17 17:45:13 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.14 2005/10/18 01:03:07 ribosome Exp $
+
+*phylip-3.65 (18 Oct 2005)
+
+  18 Oct 2005; Olivier Fisette <ribosome@gentoo.org> +phylip-3.65.ebuild:
+  New version.
 
   17 Oct 2005; Olivier Fisette <ribosome@gentoo.org> -phylip-3.63.ebuild:
   Pruning old version.
