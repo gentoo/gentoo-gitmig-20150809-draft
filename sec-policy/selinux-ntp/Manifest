@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67f3705673f141097816dc46ec4626c5 ChangeLog 2047
 MD5 7b934e487cdd9276a8b46f45b31c80ca files/digest-selinux-ntp-20050626 71
 MD5 61c66db11638dd8eb879fa487fa4750b files/digest-selinux-ntp-20050918 71
 MD5 ed58290361b061defc07c7f48ee829af metadata.xml 532
 MD5 08e3f15cdf6e332e36015fcc4875d288 selinux-ntp-20050626.ebuild 455
 MD5 8f7d71e14e5f15877334aef6bfb809d1 selinux-ntp-20050918.ebuild 459
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFDVM/EGSBEIeh4AEYRAjH3AJ9FyEmMLjR2SYzphemxagQme7t+6ACeNSL6
+VCfh5rrWb3WfL1gJzwLdxr8=
+=ArlF
+-----END PGP SIGNATURE-----
