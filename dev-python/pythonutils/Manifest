@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3b536c3be851ba1bf964daf48c011d7 pythonutils-0.2.0.ebuild 734
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 35f9060c839cd682ac445fe2c89f2bd4 ChangeLog 521
-MD5 5cc9c672b260891002f7c4e5f024131d pythonutils-0.2.2.ebuild 734
+MD5 878a20ea8a6e87bf0405e27467395272 ChangeLog 696
 MD5 30e5d743b45d15cee2eed77e8762690b files/digest-pythonutils-0.2.0 82
 MD5 2fa01d26a34c5e18786aeff254cba72a files/digest-pythonutils-0.2.2 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK2CjDAg8Nbq0d9kRAkCxAJ9VWopjsWuvVX64k84mAFOVMEhMKACfWfL4
-NRSW/mJvR/LwaKX680HBfR8=
-=z8cI
------END PGP SIGNATURE-----
+MD5 3b7f7e9e8328b7314d8703c2b60b9c6d files/digest-pythonutils-0.2.3 82
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 f3b536c3be851ba1bf964daf48c011d7 pythonutils-0.2.0.ebuild 734
+MD5 5cc9c672b260891002f7c4e5f024131d pythonutils-0.2.2.ebuild 734
+MD5 ea06ce594c7cf588d0546966d3ac99b5 pythonutils-0.2.3.ebuild 741
