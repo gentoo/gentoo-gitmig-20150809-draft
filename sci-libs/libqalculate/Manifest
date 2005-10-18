@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1803721c94e929bc8a941ae4f5c4c160 libqalculate-0.8.0.ebuild 880
+MD5 88e5cd0fea22d81ae347db95ff66017b libqalculate-0.8.2.ebuild 1001
 MD5 82eb6a08d0ebaed7f179206b30228c0f libqalculate-0.8.1.1.ebuild 886
-MD5 5068edc447e496c835700a9890f82eae ChangeLog 876
+MD5 2beee94d018cd3856fc360c3b08ba8b8 ChangeLog 1014
 MD5 0ffcd41aa96cf1bcffd8b539c27957db metadata.xml 157
 MD5 2b47144c6436521714ff42311362d404 files/digest-libqalculate-0.8.1.1 72
 MD5 c210c6e4ec4f0f714180cab06e5bbc2f files/digest-libqalculate-0.8.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMC4MomPajV0RnrERApXqAJ9MTwUjo+7704ITeBKNp3YiFfCLUQCfTKis
-WyaZM5fXYiXEenRFc5F4MmM=
-=YGKj
------END PGP SIGNATURE-----
+MD5 041145653248cc9ac0faaf6a3c33d12e files/digest-libqalculate-0.8.2 70
