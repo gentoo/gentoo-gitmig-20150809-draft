@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.5 2005/10/17 22:11:17 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.6 2005/10/18 16:49:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -63,7 +63,7 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo 
+	einfo
 	einfo "This release ($PN) can create default instance using command: ebuild  --config =${PV}"
 	einfo
 }
