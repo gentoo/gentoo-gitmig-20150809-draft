@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/groovy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.11 2005/05/06 09:53:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.12 2005/10/18 08:28:01 axxo Exp $
+
+  18 Oct 2005; Thomas Matthijs <axxo@gentoo.org> files/basescript-1.0_beta4,
+  groovy-1.0_beta4-r1.ebuild:
+  Actualy build without previous groovy install, and fixes #55870. Thanks too
+  Eivind Tagseth <eivindt-gentoo@multinet.no>
 
   06 May 2005; Sven Wegener <swegener@gentoo.org>
   groovy-1.0_beta4-r1.ebuild:

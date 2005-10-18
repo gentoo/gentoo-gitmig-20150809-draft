@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.8 2005/05/06 09:53:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.9 2005/10/18 08:28:01 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND="=dev-java/xerces-2.6* \
 	>=dev-java/commons-cli-1.0-r3
 	>=dev-java/ant-1.5
 	=dev-java/junit-3.8*
-	=dev-java/asm-1.4*
+	=dev-java/asm-1.4.1*
 	>=dev-java/classworlds-1.0-r2
 	=dev-java/mockobjects-0.0*
 	=dev-java/bsf-2.3*
@@ -34,15 +34,15 @@ src_unpack() {
 	mkdir -p ${S}/target/lib
 
 	cd ${S}/target/lib
-	java-pkg_jar-from xerces-2 || die "Missing xerces"
-	java-pkg_jar-from junit || die "Missing junit"
-	java-pkg_jar-from asm-1.4 || die "Missing asm"
-	java-pkg_jar-from commons-cli-1 || die "Missing commons-cli"
-	java-pkg_jar-from classworlds-1 || die "Missing classworlds"
-	java-pkg_jar-from bsf-2.3 || die "Missing bsf"
-	java-pkg_jar-from mockobjects || die "Missing mockobjects"
-	java-pkg_jar-from xmojo-bin-5.0 || die "Missing xmojo-bin"
-	java-pkg_jar-from servletapi-2.4 servlet-api.jar || die "Missing servletapi"
+	java-pkg_jar-from xerces-2
+	java-pkg_jar-from junit
+	java-pkg_jar-from asm-1.4.1
+	java-pkg_jar-from commons-cli-1
+	java-pkg_jar-from classworlds-1
+	java-pkg_jar-from bsf-2.3
+	java-pkg_jar-from mockobjects
+	java-pkg_jar-from xmojo-bin-5.0
+	java-pkg_jar-from servletapi-2.4 servlet-api.jar
 
 	cd ${S}
 
@@ -65,21 +65,20 @@ src_compile() {
 
 	# Generate command-line scripts
 	for x in grok groovy groovyc groovysh groovyConsole ; do
-		generate_script $x
+		generate_script "$x" "${S}/src" ":${S}/target/classes"
 	done
 
+	mkdir src/lib
 	cd src/main
-	sh groovyc \
-		--classpath ../../target/classes/ \
-		groovy/ui/Console.groovy || die "Failed to invoke groovyc"
+	sh ${S}/groovyc groovy/ui/Console.groovy || die "Failed to invoke groovyc"
 
 	jar uf ../../target/groovy-1.0-beta-4.jar groovy/ui/Console*.class || die "Failed to backpatch Console*.class"
 }
 
 generate_script() {
-	scriptname=$1
+	scriptname="${1}"
 	classworlds_classpath="$(java-config -p classworlds-1)"
-	asm_classpath="$(java-config -p asm-1)"
+	asm_classpath="$(java-config -p asm-1.4.1)"
 	bsf_classpath="$(java-config -p bsf-2.3)"
 	classworlds_classpath="$(java-config -p classworlds-1)"
 	commons_cli_classpath="$(java-config -p commons-cli-1)"
@@ -87,8 +86,13 @@ generate_script() {
 	xerces_classpath="$(java-config -p xerces-2)"
 	xmojo_classpath="$(java-config -p xmojo-bin-5.0)"
 
+	if [[ -n ${2} ]]; then
+		local groovy_home="${2}"
+	else
+		local groovy_home="/usr/share/groovy-${SLOT}"
+	fi
 	sed -e "s;@scriptname@;${scriptname};" \
-		-e "s;@groovy-home@;/usr/share/groovy-${SLOT};" \
+		-e "s;@groovy-home@;${groovy_home};" \
 		-e "s;@classworlds_classpath@;${classworlds_classpath};" \
 		-e "s;@asm_classpath@;${asm_classpath};" \
 		-e "s;@bsf_classpath@;${bsf_classpath};" \
@@ -96,22 +100,15 @@ generate_script() {
 		-e "s;@mockobjects_classpath@;${mockobjects_classpath};" \
 		-e "s;@xerces_classpath@;${xerces_classpath};" \
 		-e "s;@xmojo_classpath@;${xmojo_classpath};" \
+		-e "s;@extra_classpath@;${3};" \
 		< ${FILESDIR}/basescript-${PV} \
 		> ${scriptname} || die "Failed to generate ${scriptname}"
 }
 
 src_install() {
-
-	# Install misc. documentation
-	dodoc LICENSE.txt
-
-	# Install jar files
 	java-pkg_dojar target/groovy-1.0-beta-4.jar
 
-	# Install API documentation
-	if use doc ; then
-		java-pkg_dohtml -r dist/docs/api
-	fi
+	use doc && java-pkg_dohtml -r dist/docs/api
 
 	# Install configuration files
 	confdir=/usr/share/groovy-${SLOT}/conf
@@ -121,7 +118,10 @@ src_install() {
 
 	# Install command-line scripts
 	exeinto /usr/bin
+
 	for x in grok groovy groovyc groovysh groovyConsole ; do
+		rm -f $x
+		generate_script $x
 		doexe $x || die "Failed to install ${x}"
 	done
 }
