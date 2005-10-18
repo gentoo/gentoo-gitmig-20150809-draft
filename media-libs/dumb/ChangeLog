@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/dumb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.14 2005/09/13 18:34:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.15 2005/10/18 22:03:17 chainsaw Exp $
+
+*dumb-0.9.2-r3 (18 Oct 2005)
+
+  18 Oct 2005; Tony Vroon <chainsaw@gentoo.org> -dumb-0.9.1.ebuild,
+  -dumb-0.9.2-r1.ebuild, +dumb-0.9.2-r3.ebuild:
+  Properly install debug version of the library, as demonstrated by Ciaran
+  Hamilton <gentoo-bugs@theblob.org> in bug #106309. Clean out old ebuilds.
 
   13 Sep 2005; Aron Griffis <agriffis@gentoo.org> dumb-0.9.2-r2.ebuild:
   Mark 0.9.2-r2 stable on alpha
