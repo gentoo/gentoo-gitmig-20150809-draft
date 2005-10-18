@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.19 2005/09/16 22:57:52 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.20 2005/10/18 01:35:56 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> libdvb-0.5.5.ebuild:
+  Mark 0.5.5 stable on alpha
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
