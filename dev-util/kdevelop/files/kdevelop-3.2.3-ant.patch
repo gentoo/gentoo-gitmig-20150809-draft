@@ -1,0 +1,21 @@
+diff -Nur kdevelop-3.2.3.orig/buildtools/ant/antprojectpart.cpp kdevelop-3.2.3/buildtools/ant/antprojectpart.cpp
+--- kdevelop-3.2.3.orig/buildtools/ant/antprojectpart.cpp	2005-10-05 15:32:08.000000000 +0200
++++ kdevelop-3.2.3/buildtools/ant/antprojectpart.cpp	2005-10-18 17:28:46.000000000 +0200
+@@ -431,7 +431,7 @@
+ 
+ void AntProjectPart::ant(const QString &target)
+ {
+-  QString cmd = "%0 cd %1 && ant %2 -buildfile %3 %4 %5";
++  QString cmd = "cd %0 && %1 ant %2 -buildfile %3 %4 %5";
+ 
+   QString verb = "";
+   switch (m_antOptions.m_verbosity)
+@@ -457,7 +457,7 @@
+   if (!m_classPath.count() == 0)
+     cp = "CLASSPATH="+m_classPath.join(":");
+   
+-  makeFrontend()->queueCommand(m_projectDirectory, cmd.arg(cp).arg(m_projectDirectory).arg(target).arg(m_antOptions.m_buildXML).arg(verb).arg(options));
++  makeFrontend()->queueCommand(m_projectDirectory, cmd.arg(m_projectDirectory).arg(cp).arg(target).arg(m_antOptions.m_buildXML).arg(verb).arg(options));
+ }
+ 
+ 
