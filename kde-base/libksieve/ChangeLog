@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.16 2005/09/24 16:15:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.17 2005/10/18 23:11:36 puggy Exp $
+
+  18 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  libksieve-3.5_beta1.ebuild:
+  Keyword ~ppc and ~x86
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -libksieve-3.5_alpha1.ebuild:
