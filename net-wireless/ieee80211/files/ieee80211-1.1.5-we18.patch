@@ -1,0 +1,50 @@
+diff -Nup ieee80211-1.1.5-orig/ieee80211_crypt_tkip.c ieee80211-1.1.5/ieee80211_crypt_tkip.c
+--- ieee80211-1.1.5-orig/ieee80211_crypt_tkip.c	2005-10-13 13:12:12.000000000 -0500
++++ ieee80211-1.1.5/ieee80211_crypt_tkip.c	2005-10-18 14:31:51.000000000 -0500
+@@ -555,6 +555,7 @@ static void ieee80211_michael_mic_failur
+ 					  struct ieee80211_hdr_4addr *hdr,
+ 					  int keyidx)
+ {
++#if WIRELESS_EXT >= 18
+ 	union iwreq_data wrqu;
+ 	struct iw_michaelmicfailure ev;
+ 
+@@ -570,6 +571,7 @@ static void ieee80211_michael_mic_failur
+ 	memset(&wrqu, 0, sizeof(wrqu));
+ 	wrqu.data.length = sizeof(ev);
+ 	wireless_send_event(dev, IWEVMICHAELMICFAILURE, &wrqu, (char *)&ev);
++#endif
+ }
+ 
+ static int ieee80211_michael_mic_verify(struct sk_buff *skb, int keyidx,
+diff -Nup ieee80211-1.1.5-orig/ieee80211_wx.c ieee80211-1.1.5/ieee80211_wx.c
+--- ieee80211-1.1.5-orig/ieee80211_wx.c	2005-10-13 13:12:12.000000000 -0500
++++ ieee80211-1.1.5/ieee80211_wx.c	2005-10-18 14:31:51.000000000 -0500
+@@ -41,6 +41,10 @@ static const char *ieee80211_modes[] = {
+ 	"?", "a", "b", "ab", "g", "ag", "bg", "abg"
+ };
+ 
++#if WIRELESS_EXT < 17
++
++#endif
++
+ #define MAX_CUSTOM_LEN 64
+ static inline char *ipw2100_translate_scan(struct ieee80211_device *ieee,
+ 					   char *start, char *stop,
+@@ -488,6 +492,7 @@ int ieee80211_wx_get_encode(struct ieee8
+ 	return 0;
+ }
+ 
++#if WIRELESS_EXT >= 18
+ int ieee80211_wx_set_encodeext(struct ieee80211_device *ieee,
+ 			       struct iw_request_info *info,
+ 			       union iwreq_data *wrqu, char *extra)
+@@ -721,6 +726,7 @@ int ieee80211_wx_get_encodeext(struct ie
+ 
+ EXPORT_SYMBOL(ieee80211_wx_set_encodeext);
+ EXPORT_SYMBOL(ieee80211_wx_get_encodeext);
++#endif
+ 
+ EXPORT_SYMBOL(ieee80211_wx_get_scan);
+ EXPORT_SYMBOL(ieee80211_wx_set_encode);
+Common subdirectories: ieee80211-1.1.5-orig/net and ieee80211-1.1.5/net
