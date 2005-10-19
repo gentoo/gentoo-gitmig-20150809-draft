@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krecipes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.13 2005/07/31 23:10:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.14 2005/10/19 10:37:45 greg_g Exp $
+
+  19 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> krecipes-0.8.1.ebuild:
+  Correct handling of mysql and postgres dependencies.
 
 *krecipes-0.8.1 (31 Jul 2005)
 
