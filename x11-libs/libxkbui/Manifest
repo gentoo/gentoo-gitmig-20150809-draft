@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a3092d0cbef0f9a615dbb95dd4b3f66d ChangeLog 718
 MD5 672a18e4d76b89f88174cfe948ff7ee2 files/digest-libxkbui-0.99.0 68
-MD5 9ed8a8f12dab61cc1ba81ff0eb36d81a libxkbui-0.99.0.ebuild 564
+MD5 cb4ef2b5a13a3e5d08ed6dc19411d597 libxkbui-0.99.0.ebuild 570
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUfBaBtvusYtCZMsRAtl8AJ9h4EetX6/y8r6rf+FjksgdI3VQHwCfQ3Je
-Sb/kzhgmPnhJpTEl7gc3WT8=
-=8ihz
------END PGP SIGNATURE-----

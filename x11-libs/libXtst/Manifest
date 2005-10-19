@@ -1,4 +1,4 @@
 MD5 2bb0bc2b1a6d75bed96ad3970ead452d ChangeLog 733
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 25c1ad75d430cb762dc41613a54fb772 libXtst-0.99.0.ebuild 604
 MD5 904c2b8bb4a841effaeeb55b5ec094d4 files/digest-libXtst-0.99.0 67
+MD5 ebf5a21cf8352e004fdd01ad1c3e6c48 libXtst-0.99.0.ebuild 609
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
