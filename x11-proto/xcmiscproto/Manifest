@@ -1,4 +1,4 @@
 MD5 bdd857061c7c5be65a01983f6429245f ChangeLog 844
-MD5 bd0e0d4720e4ef84e725616fe8dd2caf xcmiscproto-1.1.ebuild 539
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 4e5f41311aff270d0c0b5208e21da83e files/digest-xcmiscproto-1.1 67
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 bec0b84fe4646373ee0361bbf8082601 xcmiscproto-1.1.ebuild 545

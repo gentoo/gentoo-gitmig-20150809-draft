@@ -1,4 +1,4 @@
 MD5 b4d8eaa4d7fe815ff4061973ab037b1b ChangeLog 851
-MD5 644f053b36e992e9328f6bc5f7cb0e3a recordproto-1.13.ebuild 540
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 d60ca01e62493a607d2126c3271982df files/digest-recordproto-1.13 68
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 078b3a2cec02bbf5191492f07161e4ef recordproto-1.13.ebuild 546

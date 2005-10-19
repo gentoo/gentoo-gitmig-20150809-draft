@@ -1,4 +1,4 @@
 MD5 c46d3d6b9329eecb3c35a79db07944d2 ChangeLog 892
-MD5 354571ffe8876581c13309307f89aba4 xf86vidmodeproto-2.2.ebuild 554
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 cc96eb90d5fe07194e773cfc0280bf48 files/digest-xf86vidmodeproto-2.2 72
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 1f901ffe724a5ab0a9c4b092bd219cff xf86vidmodeproto-2.2.ebuild 560

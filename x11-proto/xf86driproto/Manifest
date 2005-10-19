@@ -1,4 +1,4 @@
 MD5 c9bb5d3acbce562c079252acc9a29a38 ChangeLog 764
-MD5 2f8057dd165b604ad8ee722f90ab937f xf86driproto-2.0.ebuild 538
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 b45f9d0fde481d5d5e152276d450a3cd files/digest-xf86driproto-2.0 68
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 75c9229d47b2b3c9b9b2b695af2b82f1 xf86driproto-2.0.ebuild 544
