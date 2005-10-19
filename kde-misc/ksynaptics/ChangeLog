@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/ksynaptics
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksynaptics/ChangeLog,v 1.1 2005/10/19 13:22:45 trapni Exp $
+
+*ksynaptics-0.2.2 (19 Oct 2005)
+
+  19 Oct 2005; Christian Parpart <trapni@gentoo.org> +metadata.xml,
+  +ksynaptics-0.2.2.ebuild:
+  initial import
+
