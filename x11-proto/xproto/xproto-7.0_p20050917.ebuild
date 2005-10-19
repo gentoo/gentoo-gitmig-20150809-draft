@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/xproto-7.0_p20050917.ebuild,v 1.1 2005/09/17 16:33:47 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/xproto-7.0_p20050917.ebuild,v 1.2 2005/10/19 04:20:10 geoman Exp $
 
 inherit versionator
 
@@ -22,7 +22,7 @@ SRC_URI="http://dev.gentoo.org/~joshuabaergen/distfiles/${P}.tar.bz2
 
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 #IUSE="X gnome"
 #DEPEND=""
 #RDEPEND=""
