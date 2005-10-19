@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.8.ebuild,v 1.3 2005/09/15 22:03:57 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.8.ebuild,v 1.4 2005/10/19 02:07:39 geoman Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64 ~sparc"
+KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug pcmcia doc livecd"
 
 RDEPEND=">=dev-libs/glib-2.4
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.4
 	sys-libs/libcap
 	dev-libs/popt
 	>=sys-apps/util-linux-2.12i
-	>=sys-kernel/linux-headers-2.6"
+	||( >=sys-kernel/linux-headers-2.6 >=sys-kernel/mips-headers-2.6 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
