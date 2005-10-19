@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4584 2005/10/19 16:18:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4585 2005/10/19 22:11:04 greg_g Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -600,6 +600,20 @@ x11-misc/driconf
 >=kde-base/vimpart-3.5_alpha1
 >=kde-base/xparts-3.5_alpha1
 >=kde-base/kde-meta-3.5_alpha1
+>=kde-base/kdebindings-meta-3.5_alpha1
+>=kde-base/dcopperl-3.5_alpha1
+>=kde-base/dcoppython-3.5_alpha1
+>=kde-base/kalyptus-3.5_alpha1
+>=kde-base/kdejava-3.5_alpha1
+>=kde-base/kjsembed-3.5_alpha1
+>=kde-base/korundum-3.5_alpha1
+>=kde-base/qtjava-3.5_alpha1
+>=kde-base/qtruby-3.5_alpha1
+>=kde-base/smoke-3.5_alpha1
+>=kde-base/qtsharp-3.5_alpha1
+>=kde-base/dcopc-3.5_alpha1
+>=kde-base/dcopjava-3.5_alpha1
+>=kde-base/xparts-3.5_alpha1
 
 # Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
 # Beta code
