@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.125 2005/09/20 11:22:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.126 2005/10/19 17:39:23 greg_g Exp $
+
+*k3b-0.12.5 (19 Oct 2005)
+
+  19 Oct 2005; Gregorio Guidi <greg_g@gentoo.org> +k3b-0.12.5.ebuild:
+  New version. Make support for libsndfile and musicbrainz optional (#106956).
+  Respect the vcd USE flag (#100089). Cleanup.
 
   20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/k3b-0.12.4a-qt-3.3.5.patch, k3b-0.12.4a.ebuild:
