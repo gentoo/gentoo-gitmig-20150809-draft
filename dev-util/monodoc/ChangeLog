@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.37 2005/05/22 14:38:47 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.38 2005/10/19 16:38:24 latexer Exp $
+
+*monodoc-1.1.9 (15 Oct 2005)
+
+  15 Oct 2005; Peter Johanson <latexer@gentoo.org> monodoc-1.0.6.ebuild,
+  +monodoc-1.1.9.ebuild:
+  Bump to new release, and mark 1.0.6 stable.
 
   17 May 2005; Tom Martin <slarti@gentoo.org> monodoc-1.0.6.ebuild:
   Marked ~amd64.
