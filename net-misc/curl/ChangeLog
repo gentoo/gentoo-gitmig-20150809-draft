@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.50 2005/10/19 19:16:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.51 2005/10/19 23:38:40 yoswink Exp $
+
+  19 Oct 2005; Jose Luis Rivero <yoswink@gentoo.org> curl-7.15.0.ebuild:
+  Stable on alpha wrt security bug #109097
 
   19 Oct 2005; Daniel Black <dragonheart@gentoo.org> curl-7.15.0.ebuild:
   removed dual KEYWORD line
