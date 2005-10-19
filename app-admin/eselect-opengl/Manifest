@@ -1,4 +1,16 @@
-MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
-MD5 3d4d51f1ddb876573310c35049cae441 ChangeLog 1190
-MD5 08e743c19133bdc32646eb0bc6953ff6 eselect-opengl-1.0.2-r1.ebuild 2754
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50a07282ef04a2be10539384cc267ae9 ChangeLog 1383
+MD5 ba4e086844bf3653e064c8386d598a78 eselect-opengl-1.0.2-r1.ebuild 2760
+MD5 a368e50fb3197d978dc6e226d17dd0bf eselect-opengl-1.0.3.ebuild 2761
 MD5 3a40d87eb84b0f56ac411645aec50f87 files/digest-eselect-opengl-1.0.2-r1 183
+MD5 013ad5da746b1b0aa09b89734b753dbc files/digest-eselect-opengl-1.0.3 183
+MD5 69eeef9cee49974bcaae3cb9ddce8abd metadata.xml 366
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVqswOpjtAl+gMRURArnjAKDhQ2QnaJ2YT0VTRkCzKbyy0dxDyQCg2ASU
+h9CsSBcebw0UNvE6+VMdb3A=
+=QXPW
+-----END PGP SIGNATURE-----
