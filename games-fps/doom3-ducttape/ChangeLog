@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-ducttape
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-ducttape/ChangeLog,v 1.1 2005/10/19 03:30:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-ducttape/ChangeLog,v 1.2 2005/10/19 22:15:41 wolf31o2 Exp $
+
+  19 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-ducttape-0006.ebuild:
+  Fixed pk4 file installations to match current files in download and made
+  compatible with Resurrection of Evil. Closing bug #109864.
 
 *doom3-ducttape-0006 (18 Oct 2005)
 
