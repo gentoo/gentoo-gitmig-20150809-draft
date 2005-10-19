@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/libXScrnSaver-0.99.1.ebuild,v 1.2 2005/09/21 21:42:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXScrnSaver/libXScrnSaver-0.99.1.ebuild,v 1.3 2005/10/19 04:09:32 geoman Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -14,7 +14,7 @@ DESCRIPTION="X.Org XScrnSaver library"
 #SRC_URI="ftp://foo.bar.com/${P}.tar.bz2"
 #LICENSE=""
 #SLOT="0"
-KEYWORDS="~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~arm ~mips ~ppc ~s390 ~sparc ~x86"
 #IUSE="X gnome"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext"
