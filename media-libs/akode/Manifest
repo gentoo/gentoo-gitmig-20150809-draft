@@ -1,4 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 087ab81e1b7af5738a3b072c08f3fb35 akode-2.0_beta2.ebuild 1186
 MD5 2dd01fd1f1e3eee0f8ff54035325037b akode-2.0_beta1.ebuild 1263
-MD5 2304f9c3572e39eafeda3d3c1c222cb7 ChangeLog 479
+MD5 db1c22299d5c3254e4ea8ae3e87fdbfa ChangeLog 602
+MD5 fd4275fd81b773b75b187af568ae2953 files/digest-akode-2.0_beta2 63
 MD5 12c0f7f84011a6cddc1def9189bed660 files/digest-akode-2.0_beta1 63
