@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.45 2005/10/15 15:57:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.46 2005/10/19 04:42:21 ticho Exp $
+
+  19 Oct 2005; Andrej Kacian <ticho@gentoo.org> curl-7.15.0.ebuild:
+  Stable on x86, security bug #109097.
 
   15 Oct 2005; Daniel Black <dragonheart@gentoo.org> curl-7.15.0.ebuild:
   libcurl.pc installed as per bug #104110 by Christoph Gysin
