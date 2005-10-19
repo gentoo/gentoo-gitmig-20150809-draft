@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.30 2005/10/14 01:26:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.31 2005/10/19 17:30:59 killerfox Exp $
+
+  19 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  MIME-tools-5.417.ebuild:
+  Unstable on hppa.
 
   14 Oct 2005; Aron Griffis <agriffis@gentoo.org> MIME-tools-5.417.ebuild:
   Mark 5.417 stable on alpha
