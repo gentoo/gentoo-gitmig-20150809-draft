@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.36 2005/10/18 00:16:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.37 2005/10/19 02:08:38 geoman Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masking mono because it doesn't work on mips
@@ -87,10 +87,6 @@ mzscheme
 # Stephen P. Becker <geoman@gentoo.org>
 # masked because gaim sucks
 evo
-
-# Stephen P. Becker <geoman@gentoo.org>
-# masked due to header issues
-hal
 
 # Ilya A. Volynets-Evenbach
 # no nptl on mips yet
