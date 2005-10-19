@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.3.ebuild,v 1.3 2005/10/19 12:48:49 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.3.ebuild,v 1.4 2005/10/19 13:00:58 greg_g Exp $
 
 inherit kde eutils
 
@@ -17,8 +17,7 @@ visualization vorbis musicbrainz"
 
 DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	arts? ( kde-base/arts
-		|| ( ( kde-base/kdemultimedia-arts kde-base/akode )
-		kde-base/kdemultimedia ) )
+	        || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
 	gstreamer? ( >=media-libs/gstreamer-0.8.8
 	             >=media-libs/gst-plugins-0.8.6 )
