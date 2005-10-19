@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.3.ebuild,v 1.2 2005/10/11 19:20:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.3.3.ebuild,v 1.3 2005/10/19 12:48:49 greg_g Exp $
 
 inherit kde eutils
 
-MY_P=${P/_/-}
-
 DESCRIPTION="amaroK - the audio player for KDE."
 HOMEPAGE="http://amarok.kde.org/"
-SRC_URI="mirror://sourceforge/amarok/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/amarok/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -17,23 +15,21 @@ IUSE="arts flac gstreamer kde mp3 mysql noamazon opengl postgres xine xmms
 visualization vorbis musicbrainz"
 # kde: enables compilation of the konqueror sidebar plugin
 
-S=${WORKDIR}/${MY_P}
-
 DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
-	 arts? ( kde-base/arts
-		 || ( ( kde-base/kdemultimedia-arts kde-base/akode )
-		 	kde-base/kdemultimedia ) )
-	 xine? ( >=media-libs/xine-lib-1_rc4 )
-	 gstreamer? ( >=media-libs/gstreamer-0.8.8
-	              >=media-libs/gst-plugins-0.8.6 )
-	 musicbrainz? ( >=media-libs/tunepimp-0.3.0 )
-	 >=media-libs/taglib-1.4
-	 mysql? ( >=dev-db/mysql-4.0.16 )
-	 postgres? ( dev-db/postgresql )
-	 opengl? ( virtual/opengl )
-	 xmms? ( >=media-sound/xmms-1.2 )
-	 visualization? ( media-libs/libsdl
-			  >=media-plugins/libvisual-plugins-0.2 )"
+	arts? ( kde-base/arts
+		|| ( ( kde-base/kdemultimedia-arts kde-base/akode )
+		kde-base/kdemultimedia ) )
+	xine? ( >=media-libs/xine-lib-1_rc4 )
+	gstreamer? ( >=media-libs/gstreamer-0.8.8
+	             >=media-libs/gst-plugins-0.8.6 )
+	musicbrainz? ( >=media-libs/tunepimp-0.3.0 )
+	>=media-libs/taglib-1.4
+	mysql? ( >=dev-db/mysql-4.0.16 )
+	postgres? ( dev-db/postgresql )
+	opengl? ( virtual/opengl )
+	xmms? ( >=media-sound/xmms-1.2 )
+	visualization? ( media-libs/libsdl
+	                 >=media-plugins/libvisual-plugins-0.2 )"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( >=media-plugins/gst-plugins-mad-0.8.6 )
@@ -76,10 +72,10 @@ src_compile() {
 	              $(use_with opengl) $(use_with xmms)
 	              $(use_with visualization libvisual)
 	              $(use_enable !noamazon amazon)
-				  $(use_with musicbrainz)
-				  --without-helix
-				  --without-mas
-				  --without-nmm"
+	              $(use_with musicbrainz)
+	              --without-helix
+	              --without-mas
+	              --without-nmm"
 
 	kde_src_compile
 }
