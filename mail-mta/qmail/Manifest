@@ -1,4 +1,4 @@
-MD5 8294d44e49e1552c471d227dc7da0108 ChangeLog 31731
+MD5 23e7888ba5bd3f91cbd7a64cec487c31 ChangeLog 31888
 MD5 cc5c84d3a0837007b8af4a1f2e657872 files/1.03-r14/auth-after-tls-only.patch 2151
 MD5 3eb989291a872a5ff2f5d40d6eba92d8 files/1.03-r14/maildir-quota-fix.patch 547
 MD5 b8f5d6adfb941c184715695cc58a5c72 files/1.03-r14/nullenvsender-recipcount.tls.patch 1616
@@ -68,4 +68,4 @@ MD5 2d3271eba444e0c0ad2bd39626ba9156 files/tcp.qmtp.sample 821
 MD5 fe86ebf974cc7cb1aaddff8311ae89bc files/tcp.smtp.sample 4166
 MD5 e60e7e9ed6a2c7d3a2ebcee6a6af429e metadata.xml 277
 MD5 0529d296e1768b0fd380db59728d053a qmail-1.03-r15.ebuild 18774
-MD5 8e3a4fc19def388bbf8a45408b4e8b17 qmail-1.03-r16.ebuild 21555
+MD5 52798d851a1ffe5ba66897eb63d9f553 qmail-1.03-r16.ebuild 21661

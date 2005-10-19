@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.40 2005/10/17 20:29:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.41 2005/10/19 19:51:54 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
-IUSE="ssl noauthcram notlsbeforeauth selinux logmail mailwrapper"
+IUSE="ssl noauthcram notlsbeforeauth selinux logmail mailwrapper gencertdaily"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
 	http://members.elysium.pl/brush/qmail-smtpd-auth/
@@ -68,6 +68,12 @@ PROVIDE="virtual/mta
 MY_PVR=${PV}-r14
 
 TCPRULES_DIR=/etc/tcprules.d
+
+if use gencertdaily; then
+	CRON_FOLDER=cron.daily
+else
+	CRON_FOLDER=cron.hourly
+fi
 
 src_unpack() {
 	# unpack the initial stuff
@@ -456,9 +462,9 @@ src_install() {
 		einfo "SSL Certificate creation script"
 		dobin ${FILESDIR}/mkservercert
 		einfo "RSA key generation cronjob"
-		insinto /etc/cron.hourly
+		insinto /etc/${CRON_FOLDER}
 		doins ${FILESDIR}/qmail-genrsacert.sh
-		chmod +x ${D}/etc/cron.hourly/qmail-genrsacert.sh
+		chmod +x ${D}/etc/${CRON_FOLDER}/qmail-genrsacert.sh
 
 		# for some files
 		keepdir /var/qmail/control/tlshosts/
@@ -616,7 +622,7 @@ pkg_config() {
 
 	if use ssl; then
 		ebegin "Generating RSA keys for SSL/TLS, this can take some time"
-		${ROOT}etc/cron.hourly/qmail-genrsacert.sh
+		${ROOT}etc/${CRON_FOLDER}/qmail-genrsacert.sh
 		eend $?
 		einfo "Creating a self-signed ssl-certificate:"
 		/var/qmail/bin/mkservercert
