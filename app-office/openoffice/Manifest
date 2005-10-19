@@ -1,4 +1,4 @@
-MD5 735ba5f66c420afa208092924910e766 ChangeLog 29596
+MD5 d7eac5d8d0034e2b4285f5e883c9ab17 ChangeLog 29751
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
 MD5 cd0429c945d4f2e1fbbb9fd5322a6c2b files/1.1.4/freetype-217.patch 766
@@ -32,7 +32,7 @@ MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.5/openoffice-java.patch 2092
 MD5 fd1c64677627b46e5528f72564bcc8fd files/1.1.5/pthreadlink-fix.patch 1133
 MD5 aa01d8f68b27d3df4af58ed02c080df5 files/1.1.5/pyunolink-fix.patch 475
 MD5 39239f7e09e3fdd536498728404bfbef files/2.0.0/gentoo-2.0.0_rc3.diff 957
-MD5 705ccd454942401009fad47768eb3595 files/2.0.0/stlport-vector-ppc-buildfix.diff 1675
+MD5 10f9f087e0e267786691ea0909909504 files/2.0.0/stlport-vector-ppc-buildfix.diff 2213
 MD5 b2cb01ba0d5824f2892c150dce1d8771 files/digest-openoffice-1.1.4-r1 325
 MD5 387adcb6e397b6e7f825c8384ce52389 files/digest-openoffice-1.1.5 322
 MD5 c27522fd99b4d48dc035d2defbe57015 files/digest-openoffice-2.0.0_rc3 478
