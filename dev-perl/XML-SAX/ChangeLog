@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.23 2005/10/03 12:12:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.24 2005/10/19 19:04:50 killerfox Exp $
+
+  19 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> XML-SAX-0.12.ebuild:
+  Unstable on hppa.
 
   03 Oct 2005; Aron Griffis <agriffis@gentoo.org> XML-SAX-0.12.ebuild:
   Mark 0.12 stable on ia64
