@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec7fa611d905bb1bd271a33b8a24f08d ChangeLog 10228
-MD5 79b7fd0dcd4776ca1851d30a45275e78 curl-7.13.1.ebuild 1140
 MD5 c6b9b093ceb98fd1efbc9ca3700888ec curl-7.13.2.ebuild 2392
-MD5 9c637722ec0a7d5cdb7ce829917a830c curl-7.15.0.ebuild 2294
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 79b7fd0dcd4776ca1851d30a45275e78 curl-7.13.1.ebuild 1140
+MD5 fd7d235b73541ba04031820caadda08b ChangeLog 10419
+MD5 eeb3a96049abb6364c8260b67502f16f curl-7.15.0.ebuild 2386
+MD5 7bcded56c13b85b72508c00b8d3d7e73 files/digest-curl-7.15.0 65
 MD5 159b437588320b2a3f726d3aa55890e5 files/digest-curl-7.13.1 65
 MD5 71c346cc704727e0bdaef7333521adeb files/digest-curl-7.13.2 130
-MD5 7bcded56c13b85b72508c00b8d3d7e73 files/digest-curl-7.15.0 65
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVc7BQlM6RnzZP+IRAnUNAKCzGRYiq8ytSCSgqcQXQu9IYENvTACZAWZw
-i+A0KT0rMHlmT7AFw1EjH1o=
-=5tJI
------END PGP SIGNATURE-----

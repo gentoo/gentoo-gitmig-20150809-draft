@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.46 2005/10/19 04:42:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.47 2005/10/19 11:43:09 hansmi Exp $
+
+  19 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> curl-7.15.0.ebuild:
+  Moved all keywords which are missing on c-ares to a new line. Stable on hppa.
+  Thanks to KillerFox for testing.
 
   19 Oct 2005; Andrej Kacian <ticho@gentoo.org> curl-7.15.0.ebuild:
   Stable on x86, security bug #109097.
