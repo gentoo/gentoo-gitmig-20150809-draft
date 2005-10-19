@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.7 2005/10/19 14:22:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.8 2005/10/19 17:46:51 gustavoz Exp $
+
+  19 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> c-ares-1.2.0.ebuild:
+  Stable on sparc directly wrt #109097
 
   19 Oct 2005; Brent Baude <ranger@gentoo.org> c-ares-1.2.1-r1.ebuild:
   Marking c-ares-1.2.1-r1 ~ppc64
