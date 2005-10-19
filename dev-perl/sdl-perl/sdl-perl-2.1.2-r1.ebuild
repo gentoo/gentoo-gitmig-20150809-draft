@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.2-r1.ebuild,v 1.3 2005/03/16 16:07:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.2-r1.ebuild,v 1.4 2005/10/19 04:09:12 vapier Exp $
 
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="SDL binding for perl"
 HOMEPAGE="http://sdl.perl.org/"
@@ -28,3 +28,17 @@ DEPEND="virtual/opengl
 	truetype? ( >=media-libs/sdl-ttf-2.0.5 )"
 
 S=${WORKDIR}/SDL_Perl-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-libpaths.patch #104221
+}
+
+src_install() {
+	perl-module_src_install
+	# The build doesnt properly abort when there is an error
+	if [[ -z $(find "${D}" -name SDL.pm) ]] ; then
+		die "failed to install properly"
+	fi
+}

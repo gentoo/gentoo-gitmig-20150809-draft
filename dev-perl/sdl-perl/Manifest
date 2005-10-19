@@ -1,7 +1,18 @@
-MD5 221818389bbcf920a92c5a3296494a83 ChangeLog 5332
-MD5 709cd2696c593abb0a2090e0640315f6 metadata.xml 176
-MD5 c30699292bc3948accdfd007e38cab1c sdl-perl-2.1.2-r1.ebuild 925
-MD5 78dfe631b6600ced14e912a9d01142d0 sdl-perl-1.20.3-r1.ebuild 751
-MD5 72ae0cc47c5672c970fa5aa9557fe555 files/sdl-perl-1.20.3-pie-typo.patch 578
-MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2-r1 66
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2c89c30a78d43f315897e39a6d167c4 ChangeLog 5496
 MD5 000eb623a9e2ce37c9e3efd665f6e5c2 files/digest-sdl-perl-1.20.3-r1 67
+MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2-r1 66
+MD5 72ae0cc47c5672c970fa5aa9557fe555 files/sdl-perl-1.20.3-pie-typo.patch 578
+MD5 d3c54b1ec66a374f2d2e24124aee1ee3 files/sdl-perl-2.1.2-libpaths.patch 460
+MD5 709cd2696c593abb0a2090e0640315f6 metadata.xml 176
+MD5 78dfe631b6600ced14e912a9d01142d0 sdl-perl-1.20.3-r1.ebuild 751
+MD5 097686a60897e207eb3e66515e19ee2d sdl-perl-2.1.2-r1.ebuild 1210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVceGgIKl8Uu19MoRAulFAJ9nhg7yM7MNyRHVRugefgHHdTUROACeJvwv
+/35Ai2fJFryuiNBGF5f5A2E=
+=8WiR
+-----END PGP SIGNATURE-----
