@@ -1,6 +1,16 @@
-MD5 ee65024b0ffa73d8755a214d98e61147 netplug-1.2.9-r1.ebuild 1139
-MD5 019c37ba80d6e01ea4d01f93e0565bd3 metadata.xml 333
-MD5 a57ee6d1aba8ee565a888e07b16a408b ChangeLog 667
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 38d5cc50578b87c1995cd2b6ae03cdaf ChangeLog 763
+MD5 e5ca23da76196da2b350d78793138426 files/digest-netplug-1.2.9-r1 65
 MD5 ab668235065a75c98fb3896a70bab40f files/netplug 1000
 MD5 a310e86707b8f304165f61160b3ce215 files/netplug-1.2.9-gcc4.patch 362
-MD5 e5ca23da76196da2b350d78793138426 files/digest-netplug-1.2.9-r1 65
+MD5 019c37ba80d6e01ea4d01f93e0565bd3 metadata.xml 333
+MD5 67cf72afba42e89e1f5714846b75e517 netplug-1.2.9-r1.ebuild 1142
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVl8yBtvusYtCZMsRAiHlAJ4l8gxtP7Hi/4VTvkK+TAld20NlSgCfXT9d
+PLfks/nB4zOVgjiyvtZVnAg=
+=D7bW
+-----END PGP SIGNATURE-----
