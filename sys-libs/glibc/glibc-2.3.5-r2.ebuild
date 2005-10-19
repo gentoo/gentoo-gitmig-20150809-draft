@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.17 2005/10/19 18:02:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.18 2005/10/19 21:00:35 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -979,6 +979,10 @@ setup_env() {
 		multilib_env ${CTARGET}
 		if ! use multilib ; then
 			MULTILIB_ABIS=${DEFAULT_ABI}
+		else
+			case ${CTARGET} in
+			mips64*) MULTILIB_ABIS=${MULTILIB_ABIS/o32} ;;
+			esac
 		fi
 	fi
 
