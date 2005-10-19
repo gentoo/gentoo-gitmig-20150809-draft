@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 715e2fce4cf980abc172c720d746baa1 ChangeLog 18298
+MD5 f8d4b6caf4768a0d25f9384b7ab3a107 ChangeLog 18434
 MD5 aeb219db77df24fb0917fc9ce671ea47 abiword-2.2.10.ebuild 2333
-MD5 70fb10bb8ad6069f355c3d40f139f81e abiword-2.2.11.ebuild 2335
+MD5 685e973d8cd982ed9acdfd6e6129c48d abiword-2.2.11.ebuild 2335
 MD5 c8736c4b16b0d76461f3fca45ef6d40e abiword-2.2.5-r1.ebuild 2365
 MD5 104b0fc7f156da8e5b73eb8f9acec45c abiword-2.2.7-r1.ebuild 2459
 MD5 9e4591bf64ea466fd2fa7e545c67842f abiword-2.2.8-r1.ebuild 2540
@@ -18,9 +18,9 @@ MD5 73661645f9c415ca25f9da7c17fd2628 files/digest-abiword-2.2.8-r1 68
 MD5 ed594302c92a3587c8057f0d36a8e90a files/digest-abiword-2.2.9 68
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDVbgfomPajV0RnrERAofIAJ9aTI7ijdb5JTcx/PPVx/G3/PXE7QCfaaba
-9AXIJJOx2CmFx13f/pjU9dI=
-=HySk
+iD8DBQFDVkxoKRy60XGEcJIRAmyjAJ9bIXu1f0ooy9VGB7v3Ov9TvwKFdwCgsnSX
+HsrFsuxbkXorQw9JYGRrGQc=
+=wTEQ
 -----END PGP SIGNATURE-----

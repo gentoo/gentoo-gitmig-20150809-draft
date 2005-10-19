@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.140 2005/10/19 03:05:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.141 2005/10/19 13:38:18 gustavoz Exp $
+
+  19 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> abiword-2.2.11.ebuild:
+  Back to hppa, ppc, ppc64 & sparc stable, blame dang
 
   19 Oct 2005; <dang@gentoo.org> abiword-2.2.11.ebuild:
   Marked stable on amd64
