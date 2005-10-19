@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4582 2005/10/19 11:54:09 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4583 2005/10/19 15:44:58 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -272,11 +272,6 @@ sci-chemistry/gamess
 # Masked for security reasons, bug 103524
 dev-python/py2play
 games-action/slune
-
-# Aaron Walker <ka0ttic@gentoo.org> (11 Sep 2005)
-# Testing release
-=app-portage/herdstat-1.1.2_alpha*
-dev-cpp/libherdstat
 
 # Marcelo Goes <vanquirius@gentoo.org> (10 Sep 2005)
 # Masking for removal
