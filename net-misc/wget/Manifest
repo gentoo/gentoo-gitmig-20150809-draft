@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 795f24819ed265cef72a91c3c7a0ddc6 ChangeLog 12542
-MD5 7a36e0deda24735775c38e0d2a84a122 files/digest-wget-1.10.2 137
-MD5 9da83719265c58f22ba93bcb2e8d299f files/digest-wget-1.9.1-r5 136
-MD5 8e4630728c37bc391e699cd91c848d5f files/wgetrc-ipv6 54
+MD5 b4cfac5755cd7222a1d7dfcf81c17717 ChangeLog 12656
 MD5 bc1353abf3bc2339ee85980675343fdf metadata.xml 252
-MD5 e71b36bf441d53a0dc9409eb9d17433a wget-1.10.2.ebuild 1840
 MD5 420bb5bbf1253af5fd8dc56a60f6f092 wget-1.9.1-r5.ebuild 1613
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVcWBQlM6RnzZP+IRAmuEAJ0dLJhRm4n9II39qBARL/W51CiyrwCgvqa1
-jvtme42gXUXb2DSk1OSm8Ow=
-=RM4F
------END PGP SIGNATURE-----
+MD5 446caef0841d2bf8f44d8a39004fa243 wget-1.10.2.ebuild 1843
+MD5 8e4630728c37bc391e699cd91c848d5f files/wgetrc-ipv6 54
+MD5 9da83719265c58f22ba93bcb2e8d299f files/digest-wget-1.9.1-r5 136
+MD5 7a36e0deda24735775c38e0d2a84a122 files/digest-wget-1.10.2 137

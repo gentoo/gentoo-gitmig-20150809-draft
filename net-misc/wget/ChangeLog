@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.75 2005/10/19 04:02:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.76 2005/10/19 06:04:27 killerfox Exp $
+
+  19 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> wget-1.10.2.ebuild:
+  Stable on hppa. See bug #109097.
 
   19 Oct 2005; Andrej Kacian <ticho@gentoo.org> wget-1.10.2.ebuild:
   Stable on x86, security bug #109097.
