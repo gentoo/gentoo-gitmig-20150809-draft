@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.22 2005/10/15 11:08:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.23 2005/10/19 13:52:14 greg_g Exp $
+
+*kdm-3.4.3-r1 (19 Oct 2005)
+
+  19 Oct 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdebase-3.4.3-noimake.patch, +files/kdebase-3.4.3-xdmcp.patch,
+  +files/kdebase-3.5.0_beta2-noimake.patch, +kdm-3.4.3-r1.ebuild,
+  kdm-3.5.0_beta2.ebuild:
+  Add patch to fix segfault in XDMCP (#109528). Add patch to compile without
+  imake (#102780).
 
 *kdm-3.5.0_beta2 (14 Oct 2005)
 

@@ -1,0 +1,17 @@
+diff -Nur kdebase-3.4.3.orig/kdm/backend/xdmcp.c kdebase-3.4.3/kdm/backend/xdmcp.c
+--- kdebase-3.4.3.orig/kdm/backend/xdmcp.c	2005-10-05 15:39:11.000000000 +0200
++++ kdebase-3.4.3/kdm/backend/xdmcp.c	2005-10-18 15:30:05.000000000 +0200
+@@ -940,7 +940,12 @@
+ 			}
+ 			DisposeProtoDisplay( pdpy );
+ 			Debug( "starting display %s,%s\n", d->name, d->class2 );
+-			StartDisplay( d );
++			if (LoadDisplayResources( d ) < 0) {
++				LogError( "Unable to read configuration for display %s; "
++				          "stopping it.\n", d->name );
++				StopDisplay( d );
++			} else
++				StartDisplay( d );
+ 			CloseGetter();
+ 		}
+ 	}

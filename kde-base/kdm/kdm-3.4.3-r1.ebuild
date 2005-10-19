@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.0_beta2.ebuild,v 1.2 2005/10/19 13:52:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.3-r1.ebuild,v 1.1 2005/10/19 13:52:14 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -8,24 +8,24 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam"
 
 KMEXTRA="kdmlib/"
-# kioslave/thumbnail/configure.in.in is to have HAVE_LIBART. Can be dropped on
-# 3.5_beta1.
 KMEXTRACTONLY="libkonq/konq_defaults.h
-	    kioslave/thumbnail/configure.in.in"
+	    kioslave/thumbnail/configure.in.in" # for the HAVE_LIBART test
 KMCOMPILEONLY="kcontrol/background"
-DEPEND="$DEPEND
-	pam? ( kde-base/kdebase-pam )
+DEPEND="pam? ( kde-base/kdebase-pam )
 	$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm modules,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
 	# there's a dep here
 
+# Fix XDMCP (kde bug 114385). Applied for 3.4.4.
+PATCHES="${FILESDIR}/kdebase-3.4.3-xdmcp.patch"
+
 # Avoid using imake (kde bug 114466).
-PATCHES="${FILESDIR}/kdebase-3.5.0_beta2-noimake.patch"
+PATCHES="${PATCHES} ${FILESDIR}/kdebase-3.4.3-noimake.patch"
 
 src_compile() {
 	local myconf="--with-x-binaries-dir=/usr/bin"
@@ -45,9 +45,19 @@ src_install() {
 	kde-meta_src_install
 	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install
 
-	# Customize the kdmrc configuration
+	# We tell kdm to /use session files from /usr/share/xsessions.
+	# I've removed some other kdmrc mods from here, since it's not clear why
+	# the default aren't ok (and I'm not sure about the benefits of using
+	# the xdm configfiles under /etc/X11 instead of our own ones),
+	# and it's the Gentoo Way to avoid modifying upstream behaviour.
+	# Tell me if you don't like this. --danarmak
+	cd ${D}/${KDEDIR}/share/config/kdm || die
 	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" \
-		${D}/${KDEDIR}/share/config/kdm/kdmrc || die
+		-e "s:#GreetFont=:GreetFont=Sans Serif,24,-1,5,50,0,0,0,0,0\n#GreetFont=:" \
+		-e "s:#StdFont=:StdFont=Sans Serif,12,-1,5,50,0,0,0,0,0\n#StdFont=:" \
+		-e "s:#FailFont=:FailFont=Sans Serif,12,-1,5,75,0,0,0,0,0\n#FailFont=:" \
+		-e "s:#AntiAliasing=:AntiAliasing=true\n#AntiAliasing=:" \
+		kdmrc
 }
 
 pkg_postinst() {
@@ -57,10 +67,5 @@ pkg_postinst() {
 		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
 		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/default1.png" \
 		    "${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
-	fi
-	if [ ! -e "${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon" ]; then
-		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
-		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/root1.png" \
-			"${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon"
 	fi
 }

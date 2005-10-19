@@ -1,13 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0_beta2.ebuild,v 1.2 2005/10/19 13:48:05 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.3-r1.ebuild,v 1.1 2005/10/19 13:48:05 greg_g Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl pam samba ssl zeroconf"
+SRC_URI="${SRC_URI} mirror://gentoo/kdebase-3.4.3-kubuntu-hal.patch.gz"
+
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse openexr opengl pam samba ssl"
 # hal: enables hal backend for 'media:' ioslave
 
 DEPEND="arts? ( ~kde-base/arts-${PV} )
@@ -24,9 +26,8 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	lm_sensors? ( sys-apps/lm_sensors )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
-	hal? ( >=sys-apps/dbus-0.33
-	       =sys-apps/hal-0.5* )
-	zeroconf? ( net-misc/mDNSResponder )"
+	hal? ( sys-apps/dbus
+	       sys-apps/hal )"
 
 RDEPEND="${DEPEND}
 	java? ( >=virtual/jre-1.4 )
@@ -38,23 +39,31 @@ DEPEND="${DEPEND}
 src_unpack() {
 	kde_src_unpack
 
-	epatch "${FILESDIR}/kdebase-3.5-startkde-gentoo.patch"
+	epatch "${FILESDIR}/kdebase-3.4.1-startkde-gentoo.patch"
+
+	# Configure patch. Applied for 3.5.
+	epatch "${FILESDIR}/kdebase-3.4-configure.patch"
+
+	# Support for hal-0.5, backported from 3.5 branch.
+	epatch "${WORKDIR}/kdebase-3.4.3-kubuntu-hal.patch"
+
+	# Fix XDMCP (kde bug 114385). Applied for 3.4.4.
+	epatch "${FILESDIR}/kdebase-3.4.3-xdmcp.patch"
 
 	# Avoid using imake (kde bug 114466).
-	epatch "${FILESDIR}/kdebase-3.5.0_beta2-noimake.patch"
+	epatch "${FILESDIR}/kdebase-3.4.3-noimake.patch"
 
-	# For the noimake patch.
+	# For the configure and noimake patch.
 	make -f admin/Makefile.common || die
 }
 
 src_compile() {
-	local myconf="--with-dpms
+	local myconf="--with-dpms --with-x-binaries-dir=/usr/bin
 	              $(use_with arts) $(use_with ldap)
-	              $(use_with opengl gl) $(use_with ssl)
-	              $(use_with samba) $(use_with openexr)
+	              $(use_with cups) $(use_with opengl gl)
+	              $(use_with ssl) $(use_with samba) $(use_with openexr)
 	              $(use_with lm_sensors sensors) $(use_with logitech-mouse libusb)
-	              $(use_with ieee1394 libraw1394) $(use_with hal)
-	              $(use_enable zeroconf dnssd)"
+	              $(use_with ieee1394 libraw1394) $(use_with hal)"
 
 	if use pam; then
 		myconf="${myconf} --with-pam=yes"
@@ -105,6 +114,10 @@ EOF
 
 	# Customize the kdmrc configuration
 	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" \
+	       -e "s:#GreetFont=:GreetFont=Sans Serif,24,-1,5,50,0,0,0,0,0\n#GreetFont=:" \
+	       -e "s:#StdFont=:StdFont=Sans Serif,12,-1,5,50,0,0,0,0,0\n#StdFont=:" \
+	       -e "s:#FailFont=:FailFont=Sans Serif,12,-1,5,75,0,0,0,0,0\n#FailFont=:" \
+	       -e "s:#AntiAliasing=:AntiAliasing=true\n#AntiAliasing=:" \
 		${D}/${KDEDIR}/share/config/kdm/kdmrc || die
 
 	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
@@ -116,11 +129,6 @@ pkg_postinst() {
 		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
 		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/default1.png" \
 			"${ROOT}${KDEDIR}/share/apps/kdm/faces/.default.face.icon"
-	fi
-	if [ ! -e "${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon" ]; then
-		mkdir -p "${ROOT}${KDEDIR}/share/apps/kdm/faces"
-		cp "${ROOT}${KDEDIR}/share/apps/kdm/pics/users/root1.png" \
-			"${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon"
 	fi
 
 	mkdir -p ${ROOT}${KDEDIR}/share/templates/.source/emptydir
