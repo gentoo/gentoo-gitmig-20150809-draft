@@ -1,0 +1,49 @@
+diff -Nur kdeutils-3.4.3.orig/klaptopdaemon/laptop_daemon.cpp kdeutils-3.4.3/klaptopdaemon/laptop_daemon.cpp
+--- kdeutils-3.4.3.orig/klaptopdaemon/laptop_daemon.cpp	2005-10-05 15:26:42.000000000 +0200
++++ kdeutils-3.4.3/klaptopdaemon/laptop_daemon.cpp	2005-10-18 15:38:21.000000000 +0200
+@@ -919,7 +919,7 @@
+ 	// the lid button turns stuff on when it's down and back off again when it's raised
+ 	// 	(kind of like the fridge door light)
+ 	//
+-	if (lid_state != laptop_portable::get_button(laptop_portable::LidButton)) {
++	if (s.enable_lid_button && (lid_state != laptop_portable::get_button(laptop_portable::LidButton))) {
+ 		lid_state = !lid_state;
+ 		if (lid_state) {
+ 			if (s.button_lid_bright_enabled) {
+@@ -982,7 +982,7 @@
+ 	//
+ 	// the power button on the other hand is an off/on switch for non-suspend type ops
+ 	//
+-	if (power_state != laptop_portable::get_button(laptop_portable::PowerButton)) {
++	if (s.enable_power_button && (power_state != laptop_portable::get_button(laptop_portable::PowerButton))) {
+ 		power_state = !power_state;
+ 		if (power_state) {
+ 			if (power_button_off) {
+diff -Nur kdeutils-3.4.3.orig/klaptopdaemon/portable.cpp kdeutils-3.4.3/klaptopdaemon/portable.cpp
+--- kdeutils-3.4.3.orig/klaptopdaemon/portable.cpp	2005-10-05 15:26:42.000000000 +0200
++++ kdeutils-3.4.3/klaptopdaemon/portable.cpp	2005-10-18 15:38:21.000000000 +0200
+@@ -1937,19 +1937,19 @@
+ laptop_portable::get_button(LaptopButton l)	// true if a button is pressed
+ {
+ 	if (::has_acpi()) {
+-		QString *name=0;
++		QString name;
+ 		switch (l) {
+ 		case LidButton:
+-			name = &acpi_lid_name;
++			name = acpi_lid_name;
+ 			break;
+ 		case PowerButton:
+-			name = &acpi_power_name;
++			name = acpi_power_name;
+ 			break;
+ 		default:
+ 			break;
+ 		}
+-		if (name) {
+-			QFile f(*name);
++		if (!name.isNull()) {
++			QFile f(name);
+ 			if (f.open(IO_ReadOnly)) {
+ 				while (!f.atEnd()) {
+ 					QString l;
