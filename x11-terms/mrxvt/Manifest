@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
-MD5 d1f0588da51da543594d58599b989109 mrxvt-0.3.13-r1.ebuild 2239
-MD5 ea1ecd6fd30dcbcea34f37b20cf25c7f mrxvt-0.4.0-r1.ebuild 1740
-MD5 7e9267cd8d4f6472fbc67c97433ab41c mrxvt-0.4.0.ebuild 2151
-MD5 6a6d9e7e0791572de1dc9a53b40b536d mrxvt-0.4.1.ebuild 1719
-MD5 83fb53505b494586234c6102a00bc2f8 ChangeLog 4137
+MD5 64b7ac9d683b6e8417f9b100a6dcee9d ChangeLog 4233
 MD5 c1c69c0365b65e6fe61bb9d71061a16a files/digest-mrxvt-0.3.13-r1 64
 MD5 830b24e022601d0b5a2cf12b56a4a389 files/digest-mrxvt-0.4.0 63
 MD5 830b24e022601d0b5a2cf12b56a4a389 files/digest-mrxvt-0.4.0-r1 63
 MD5 7543e73c29de0cdf2bb56ee68aa5ef86 files/digest-mrxvt-0.4.1 63
 MD5 d7ac26627011150a523bf15955a9067d files/mrxvt-0.3.13-xdefaults.patch 7709
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDK/+wKf2g/qXtneoRAiEyAJ9MijkRL652xuHkTdHrAxopley2RQCgmH4i
-tYHlx+jfxllVeVa6PEk1Qms=
-=Fgh8
------END PGP SIGNATURE-----
+MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
+MD5 d1f0588da51da543594d58599b989109 mrxvt-0.3.13-r1.ebuild 2239
+MD5 ea1ecd6fd30dcbcea34f37b20cf25c7f mrxvt-0.4.0-r1.ebuild 1740
+MD5 7e9267cd8d4f6472fbc67c97433ab41c mrxvt-0.4.0.ebuild 2151
+MD5 80acc15c5bd02c419ddf4d1afeb66a82 mrxvt-0.4.1.ebuild 1725
