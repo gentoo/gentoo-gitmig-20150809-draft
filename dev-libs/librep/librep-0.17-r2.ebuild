@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.3 2005/09/19 21:28:28 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17-r2.ebuild,v 1.4 2005/10/19 09:50:30 truedfx Exp $
 
 inherit eutils libtool toolchain-funcs multilib
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}/rep_file_fdopen.patch"
 	sed -i -e '7s/AM_PATH_REP/[&]/' rep.m4 || die "sed failed"
 	elibtoolize || die "elibtoolize failed"
+	epunt_cxx
 }
 
 src_compile() {

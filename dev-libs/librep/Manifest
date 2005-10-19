@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 758445e270ba95a3f5b8c40beb15b26c ChangeLog 4891
-MD5 cb0797d43ae9e4509e2103ffa7426a7d librep-0.16.2.ebuild 1224
-MD5 2b12c87768b0043836c8726d237f1881 librep-0.17-r1.ebuild 1385
-MD5 886a431c62f6a8149b34adf8dbebaabf librep-0.17-r2.ebuild 1294
-MD5 480474336414d1a7f92e33f628fb9a8e librep-0.17.ebuild 1281
-MD5 aabaa608acb879f04a961ad9e6d8e19c metadata.xml 233
-MD5 4d33f5e870cd659d295eaa8c1a8948da files/libtool.patch 3037
+MD5 0dcc0efcbd10c28c10fa9245ae255a22 ChangeLog 4984
 MD5 f3efabdde310e7d8da74859ea2af221c files/digest-librep-0.16.2 65
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r1 64
 MD5 07a234e62724c3d45a1b69f1c04cd0a9 files/digest-librep-0.17-r2 64
 MD5 8c655620e7f5d0dc0ee9b8ef6351158d files/librep-0.15.2-exec.patch 425
+MD5 4d33f5e870cd659d295eaa8c1a8948da files/libtool.patch 3037
 MD5 ad28e56472f07a05a704ecfc7cf58434 files/rep_file_fdopen.patch 219
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLy1VwnQyISwouHwRAp78AKCP+XnszF8kRCQLyrv6wLgMyqisMQCguSjX
-2pkzh/UDI00diNejG80wFsg=
-=lYU2
------END PGP SIGNATURE-----
+MD5 cb0797d43ae9e4509e2103ffa7426a7d librep-0.16.2.ebuild 1224
+MD5 2b12c87768b0043836c8726d237f1881 librep-0.17-r1.ebuild 1385
+MD5 01e448f001d9dd44a1a77dbcda9291b5 librep-0.17-r2.ebuild 1305
+MD5 480474336414d1a7f92e33f628fb9a8e librep-0.17.ebuild 1281
+MD5 aabaa608acb879f04a961ad9e6d8e19c metadata.xml 233
