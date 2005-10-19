@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.10 2005/10/07 10:33:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.11 2005/10/19 20:30:59 eradicator Exp $
+
+*eselect-compiler-2.0.0_rc1 (19 Oct 2005)
+
+  19 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  eselect-compiler-2.0.0_beta5.ebuild, +eselect-compiler-2.0.0_rc1.ebuild:
+  Version bump and fixed to work with eselect-1.0_rc1.
 
 *eselect-compiler-2.0.0_beta5 (07 Oct 2005)
 

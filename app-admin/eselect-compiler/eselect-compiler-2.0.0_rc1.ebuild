@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_beta5.ebuild,v 1.2 2005/10/19 20:30:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1.ebuild,v 1.1 2005/10/19 20:30:59 eradicator Exp $
 
 DESCRIPTION="Utility to configure the active toolchain compiler"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
-RDEPEND="=app-admin/eselect-0.9*"
+RDEPEND=">=app-admin/eselect-1.0_rc1"
 
 pkg_postinst() {
 	# Some toolchain.eclass installed confs aren't quite right
