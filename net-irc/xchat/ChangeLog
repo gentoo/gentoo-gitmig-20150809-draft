@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.176 2005/10/18 08:19:37 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.177 2005/10/19 13:19:43 fmccor Exp $
+
+  19 Oct 2005; Ferris McCormick <fmccor@gentoo.org> xchat-2.4.5.ebuild:
+  Reverting to ~sparc for more testing.  On a few systems, under as yet unknown
+  context, xchat-2.4.5 generates a Bus Error when it tries to connect.  Details
+  not yet known.
 
   18 Oct 2005; Luis Medinas <metalgod@gentoo.org> xchat-2.4.5.ebuild:
   Marked Stable on amd64.
