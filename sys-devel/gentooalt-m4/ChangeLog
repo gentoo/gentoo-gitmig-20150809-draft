@@ -1,7 +1,0 @@
-# ChangeLog for sys-devel/gentooalt-m4
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gentooalt-m4/ChangeLog,v 1.1 2005/10/13 10:08:19 flameeyes Exp $
-
-  13 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
-  Initial import from Gentoo/ALT overlay.
-
