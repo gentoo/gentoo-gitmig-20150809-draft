@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5590c66a04e4a8c41eebeaabc1cf706f crossfire-client-1.6.1.ebuild 1416
 MD5 558223609e46a54824114b9499d9d972 crossfire-client-1.7.0.ebuild 1376
-MD5 bb0aef5bf31f84bc7872f4d66d6c65c4 crossfire-client-1.7.1.ebuild 1458
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b1507c67516ebd784202adf3a44ca404 ChangeLog 2122
-MD5 28ec33590a7f24478841e039ce87f81c files/digest-crossfire-client-1.6.1 153
-MD5 ad1e49c4a56222488166b9c4f4091a55 files/1.6.0-errno.patch 682
-MD5 85c1a21c69c23d3fd2540dd54a0f0fc3 files/digest-crossfire-client-1.7.0 74
+MD5 09b03922764a438e1bf74ff3cb1891e8 crossfire-client-1.8.0.ebuild 1457
+MD5 5590c66a04e4a8c41eebeaabc1cf706f crossfire-client-1.6.1.ebuild 1416
+MD5 bb0aef5bf31f84bc7872f4d66d6c65c4 crossfire-client-1.7.1.ebuild 1458
+MD5 598bad611e5aa7f019ff4efc172b672a ChangeLog 2315
 MD5 ad1e49c4a56222488166b9c4f4091a55 files/1.5.0-errno.patch 682
+MD5 85c1a21c69c23d3fd2540dd54a0f0fc3 files/digest-crossfire-client-1.7.0 74
+MD5 5f6e9f388a8529fb8caec99c17126fe3 files/digest-crossfire-client-1.8.0 74
+MD5 ad1e49c4a56222488166b9c4f4091a55 files/1.6.0-errno.patch 682
+MD5 28ec33590a7f24478841e039ce87f81c files/digest-crossfire-client-1.6.1 153
 MD5 88be26521277f1cf1eec6dcdfb35bcf8 files/digest-crossfire-client-1.7.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFDK0U5LLFUmVNQ7rkRAsobAKDF8OUjicCCEnV582mbjkS5MBro0wCYxxLl
-7wYq+UgkhQGkI+LorK5dXQ==
-=0lwN
------END PGP SIGNATURE-----
