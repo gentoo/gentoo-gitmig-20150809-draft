@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.18.6.ebuild,v 1.1 2005/10/15 16:18:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.18.6.ebuild,v 1.2 2005/10/19 14:20:48 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -32,7 +32,6 @@ pkg_setup(){
 	#check kernel and sets up KV_OBJ
 	linux-mod_pkg_setup
 	local agp
-
 	ebegin "Checking for MTRR support enabled"
 	linux_chkconfig_present MTRR
 	eend $?
@@ -58,10 +57,10 @@ pkg_setup(){
 
 	fi
 	ebegin "Checking for DRM support disabled"
-	! linux_chkconfig_present DRM
+	! linux_chkconfig_builtin DRM
 	eend $?
 	if [[ $? -ne 0 ]] ; then
-	ewarn "You have DRM support enabled, the direct rendering"
+	ewarn "You have DRM support enabled builtin, the direct rendering"
 	ewarn "will not work."
 	fi
 
@@ -80,11 +79,13 @@ src_unpack() {
 
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
 
-#	if kernel_is 2 6
-#	then
+	if kernel_is 2 6
+	then
+		sed -i -e "s:verify_area:access_ok:g" \
+			drm_os_linux.h firegl_public.c firegl_public.h
 #		epatch ${FILESDIR}/fglrx-2.6.12-pci_name.patch
 #		epatch ${FILESDIR}/fglrx-2.6.12-inter_module_get.patch
-#	fi
+	fi
 #	epatch ${FILESDIR}/8.8.25-via-amd64.patch
 #	epatch ${FILESDIR}/8.8.25-smp.patch
 #	epatch ${FILESDIR}/8.14.13-amd64.patch
@@ -119,7 +120,7 @@ src_compile() {
 			-e "s:\`uname -r\`:${KV_FULL}:" \
 			-i make.sh
 		chmod +x make.sh
-		./make.sh || die "DRM module not built"
+		./make.sh || ewarn "DRM module not built"
 	fi
 }
 

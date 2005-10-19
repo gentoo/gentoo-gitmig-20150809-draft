@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.118 2005/10/16 15:27:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.119 2005/10/19 14:20:48 lu_zero Exp $
+
+  19 Oct 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.18.6.ebuild:
+  Fix the verify_area/access_ok symbol, as reported in bug #109493 (thank you
+  Alex Giouzenis <agios@computer.org>), fixed the bug #109689 ( thank you Jakub
+  Argasiñski <argasek@tekla.art.pl>)
 
   16 Oct 2005; Luca Barbato <lu_zero@gentoo.org>
   files/digest-ati-drivers-8.18.6, Manifest:
