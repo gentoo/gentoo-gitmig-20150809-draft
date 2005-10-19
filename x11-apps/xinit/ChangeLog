@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.17 2005/09/09 07:07:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.18 2005/10/19 02:35:36 geoman Exp $
+
+  19 Oct 2005; Stephen P. Becker <geoman@gentoo.org>
+  xinit-0.99.1_pre20050905-r3.ebuild:
+  added ~mips keyword
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.

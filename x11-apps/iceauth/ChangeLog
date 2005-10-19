@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/iceauth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.6 2005/09/09 07:07:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.7 2005/10/19 02:22:03 geoman Exp $
+
+  19 Oct 2005; Stephen P. Becker <geoman@gentoo.org> iceauth-0.99.0.ebuild:
+  added ~mips keyword
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.

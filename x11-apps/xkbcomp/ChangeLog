@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xkbcomp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.9 2005/09/09 07:07:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.10 2005/10/19 02:37:00 geoman Exp $
+
+  19 Oct 2005; Stephen P. Becker <geoman@gentoo.org>
+  xkbcomp-0.99.0-r1.ebuild:
+  added ~mips keyword
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
