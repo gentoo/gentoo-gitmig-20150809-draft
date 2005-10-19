@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.208 2005/10/14 13:33:59 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.209 2005/10/19 10:58:56 satya Exp $
+
+  19 Oct 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.20b.ebuild:
+  patchset PORTAGE_TMPDIR fix: version bump to force mirror deployment (bug
+  #109297)
 
 *samba-3.0.20b (14 Oct 2005)
 
