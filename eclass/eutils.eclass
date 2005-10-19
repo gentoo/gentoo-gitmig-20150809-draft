@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.208 2005/10/19 03:36:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.209 2005/10/19 03:37:16 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1367,7 +1367,7 @@ cdrom_locate_file_on_cd() {
 		local mline=""
 		local showedmsg=0
 
-		for mline in $(mount | egrep -e '(iso|cdrom)' | awk '{print $3}') ; do
+		for mline in $(mount | egrep -e '(iso|cdrom|fs=cdfss)' | awk '{print $3}') ; do
 			[[ -d ${mline}/${dir} ]] || continue
 			[[ ! -z $(find ${mline}/${dir} -maxdepth 1 -iname ${file}) ]] \
 				&& export CDROM_ROOT=${mline}
