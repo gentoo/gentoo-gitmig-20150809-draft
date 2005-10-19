@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4586 2005/10/19 22:18:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4587 2005/10/19 22:50:44 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -819,7 +819,7 @@ x11-apps/scripts
 x11-apps/setxkbmap
 x11-apps/showfont
 x11-apps/smproxy
-x11-apps/twm
+x11-wm/twm
 x11-apps/viewres
 x11-apps/x11perf
 x11-apps/xauth
