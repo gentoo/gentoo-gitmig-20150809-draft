@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.0_beta1.ebuild,v 1.1 2005/10/06 18:25:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.0_p1.ebuild,v 1.1 2005/10/19 15:43:09 ka0ttic Exp $
 
 DESCRIPTION="C++ library offering interfaces for portage-related things such as Gentoo-specific XML files, package searching, and version sorting"
 HOMEPAGE="http://developer.berlios.de/projects/libherdstat/"
@@ -10,13 +10,14 @@ RESTRICT="primaryuri"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="debug doc curl ncurses static"
+IUSE="debug doc curl static"
 
 RDEPEND=">=dev-libs/xmlwrapp-0.5.0
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
 	!curl? ( net-misc/wget )"
 
@@ -24,11 +25,14 @@ src_compile() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable static) \
-		$(use_with ncurses) \
 		$(use_with curl) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
+
+	if use doc ; then
+		emake docs || die "failed to build API docs"
+	fi
 }
 
 src_install() {
