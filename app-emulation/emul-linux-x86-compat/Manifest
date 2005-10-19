@@ -1,7 +1,17 @@
-MD5 0d2c879893e58931a3a4930edf8d8524 ChangeLog 907
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2beb80f8c96baf8109237f48419fadc1 ChangeLog 1029
 MD5 89af66f57ab60bffc4f30b35f30cfa82 emul-linux-x86-compat-1.0-r1.ebuild 972
 MD5 ff6244bd767be7b762499ec878b384ba emul-linux-x86-compat-1.0.ebuild 924
 MD5 3ac141b3a5850345c246b5c4ce924ccc files/75emul-linux-x86-compat 51
 MD5 4c37476a27e99f8df37a1c0b0288c74e files/digest-emul-linux-x86-compat-1.0 79
 MD5 4c37476a27e99f8df37a1c0b0288c74e files/digest-emul-linux-x86-compat-1.0-r1 79
-MD5 869ce605a0d7dfff1b73e2030778e34f metadata.xml 350
+MD5 5e8c61d551dad88488a66992865ba737 metadata.xml 290
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVgT92G5bA0cA/ScRAmsLAJ9i/Z3r59mAWLeJ8vRoFUlYS9J+gQCfRC7g
+nShuMJNRRpvgOGrY0h+k0qk=
+=Sbmi
+-----END PGP SIGNATURE-----

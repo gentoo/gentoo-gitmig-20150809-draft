@@ -3,13 +3,10 @@
 <pkgmetadata>
 	<herd>amd64</herd>
 	<maintainer>
+		<email>herbs@gentoo.org</email>
+	</maintainer>
+	<maintainer>
 		<email>kugelfang@gentoo.org</email>
-	</maintainer>
-	<maintainer>
-		<email>lv@gentoo.org</email>
-	</maintainer>
-	<maintainer>
-		<email>amd64@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>
 
