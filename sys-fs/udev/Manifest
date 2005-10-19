@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 45371d84374b3d62d837368d0fb14a5b ChangeLog 26821
+MD5 9d44b618f6d110bd5fec59bf5526d662 ChangeLog 26983
 MD5 511c376c4c6346bcbf51531ef811f00c files/digest-udev-030 61
 MD5 c104f1a0b8423e8f410aaa2fb7b6c745 files/digest-udev-045 61
 MD5 ce48708bcbf9e1e3fcfb02c02e412f54 files/digest-udev-056 61
@@ -19,6 +16,7 @@ MD5 d03e92ce93131fd7d29fcae1b3f2627b files/digest-udev-068 61
 MD5 d03e92ce93131fd7d29fcae1b3f2627b files/digest-udev-068-r1 61
 MD5 05abfc4c9a5cad86f814161806c97148 files/digest-udev-069 61
 MD5 760a25fb7cc243e76c1889076b6ec829 files/digest-udev-070 61
+MD5 760a25fb7cc243e76c1889076b6ec829 files/digest-udev-070-r1 61
 MD5 f00e3e0d3382e93cbd0c64fcef99f826 files/udev-021-udev_add_c-gcc295-compat.patch 493
 MD5 7b0a35c905183730e4dfdcf29f5a1816 files/udev-050-udev_volume_id.patch 388
 MD5 b4fe7fdaaa57f99e5c6468632f42cfed files/udev-070-gcc2.patch 340
@@ -52,11 +50,5 @@ MD5 428e955c009eebb4173dd0e059327e96 udev-067.ebuild 5914
 MD5 0b0240991924922eab433e39cf1ca953 udev-068-r1.ebuild 6698
 MD5 bd19acabc0ff3c10b792a8ad7e102009 udev-068.ebuild 6646
 MD5 0bd16f42f1bd404a650da235c6eda855 udev-069.ebuild 6648
+MD5 8873c4eb5a966c5cd4ec554896c3cb33 udev-070-r1.ebuild 6696
 MD5 72655a260a70e822b27e42775b83e905 udev-070.ebuild 6731
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVZOGgIKl8Uu19MoRAvdbAJ0drgej3FTiSRPqBRuAWz+vnD3LEQCfXny1
-9f+loSBhtq+dRsLV/r1fp80=
-=lY6s
------END PGP SIGNATURE-----
