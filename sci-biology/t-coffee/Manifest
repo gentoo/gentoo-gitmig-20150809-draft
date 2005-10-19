@@ -1,4 +1,6 @@
 MD5 6fb318682c83d5a0f5d956f5272a66c6 t-coffee-2.66.ebuild 1142
-MD5 f5115567e411d3524b23f98a8c0e1acd ChangeLog 1421
+MD5 5ce8de4bef54a9ec4985afe372813566 t-coffee-3.18.ebuild 1478
+MD5 4316c00d993b42f6191d12059c0be8a0 ChangeLog 1543
 MD5 0bbfd32ca9864625c55ab6460dbbd963 metadata.xml 755
 MD5 ed78ff61d489ff54debcffde53dca64e files/digest-t-coffee-2.66 87
+MD5 1b980450cd09068868ab6fc2868cd19e files/digest-t-coffee-3.18 87
