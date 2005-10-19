@@ -1,4 +1,4 @@
 MD5 4cfd048b0001f16f1b06e2bef97a0f32 ChangeLog 575
-MD5 4bb91bbb04a5bb7603aa5ba7fedbd4bc xclipboard-0.99.0.ebuild 621
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 3f52e540fb44a4472080d912654e3081 files/digest-xclipboard-0.99.0 69
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 5abfe55ed54ea916639137c8a817a706 xclipboard-0.99.0.ebuild 627

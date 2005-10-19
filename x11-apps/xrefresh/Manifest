@@ -1,4 +1,4 @@
 MD5 65d63612340ccb15de19db20425260f4 ChangeLog 563
-MD5 4481954043daa05f057b9eb426f4e08d xrefresh-0.99.0.ebuild 427
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 992a8cbf8469f9bfa34c2e23f296c9ef files/digest-xrefresh-0.99.0 67
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 807f46cd962aa7c1498577684fe2fbe7 xrefresh-0.99.0.ebuild 433

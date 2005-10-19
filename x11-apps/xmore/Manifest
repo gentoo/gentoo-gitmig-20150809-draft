@@ -1,4 +1,4 @@
 MD5 50a6465df9265c2f13b07bf7bec745fc ChangeLog 546
-MD5 7d6c8bcfe3ea03d946f6d2c97e4a674e xmore-0.99.0.ebuild 542
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 1834b6705e62a75d31e8d8b23d1cdbe4 files/digest-xmore-0.99.0 64
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 ccb1622eb86531bf37240bce5cf3d948 xmore-0.99.0.ebuild 548

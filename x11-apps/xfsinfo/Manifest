@@ -1,4 +1,4 @@
 MD5 3735d64996f81a76c73738bdf201123f ChangeLog 558
-MD5 3654644114c4ebf0eff5a56f2fd9a595 xfsinfo-0.99.0.ebuild 429
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 9775e297225e7fd343bdf7d7b85ef7f7 files/digest-xfsinfo-0.99.0 66
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 40a6fc5c4c2304986a4dcd64d7ac1208 xfsinfo-0.99.0.ebuild 435

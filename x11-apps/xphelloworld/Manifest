@@ -1,4 +1,4 @@
 MD5 fd03ea2cee58664caf83bac20a9ac337 ChangeLog 585
-MD5 54c6bac480f4af874a795fd038cd1e80 xphelloworld-0.99.0.ebuild 624
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 2ef38d162364461c0fac144c4552c1fa files/digest-xphelloworld-0.99.0 71
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 67a255632d3868a97ab784d646a537e7 xphelloworld-0.99.0.ebuild 630

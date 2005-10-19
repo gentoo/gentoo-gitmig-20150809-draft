@@ -1,4 +1,4 @@
 MD5 c0575bdeef76b6210522c588d53ebc61 ChangeLog 580
-MD5 25133074da6740d18ca07278c5bcfc9a xsetpointer-0.99.0.ebuild 452
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 d471f21b2394e3fa05cb7ff8754972ca files/digest-xsetpointer-0.99.0 70
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 1445bd700c1cb60248678165f5bca87d xsetpointer-0.99.0.ebuild 458

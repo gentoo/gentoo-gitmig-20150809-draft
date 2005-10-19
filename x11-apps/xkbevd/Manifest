@@ -1,4 +1,4 @@
 MD5 f48ab49fcfeb4f87e37203bfc7462333 ChangeLog 553
-MD5 aab494b7b28af38c8844153b2c18fb6d xkbevd-0.99.0.ebuild 425
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 133e59551c15f4d6ec5d4607e92b1988 files/digest-xkbevd-0.99.0 65
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 80ab74ea0e3c40eb765c1debb5a77e3d xkbevd-0.99.0.ebuild 431

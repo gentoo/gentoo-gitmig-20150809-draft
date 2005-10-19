@@ -1,4 +1,4 @@
 MD5 4f827af1f0d0e00b178fa157a50e69d9 ChangeLog 536
-MD5 585802c625d84d5f55fdd555b903228b twm-0.99.0.ebuild 445
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 3156d15ead919b9a87c84bfb1e614cf3 files/digest-twm-0.99.0 63
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 6eabbd7fa7bdd943892aaf2f12d4b8b5 twm-0.99.0.ebuild 451

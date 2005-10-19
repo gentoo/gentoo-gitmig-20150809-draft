@@ -1,4 +1,4 @@
 MD5 8ac573a19adf6e0936d345496af324a8 ChangeLog 546
-MD5 030db90284f3ab8bb513b0161555d65a xcalc-0.99.0.ebuild 606
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 5fdfd0786b43e6b9df59995bb983cc24 files/digest-xcalc-0.99.0 64
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 0b82ddd8ce5d1bdd02347846eae03c86 xcalc-0.99.0.ebuild 612

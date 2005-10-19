@@ -1,4 +1,4 @@
 MD5 296291582b3aba28bafc2db691ada529 ChangeLog 563
-MD5 112761d714c1f52d36fd127cdb18dc52 xwininfo-0.99.0.ebuild 444
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 e3ab74efab3779bf34cbd8f5cd4a0e09 files/digest-xwininfo-0.99.0 67
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 c822be69e813eda17c6d752553f2e819 xwininfo-0.99.0.ebuild 450

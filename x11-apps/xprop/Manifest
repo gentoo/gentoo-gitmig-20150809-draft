@@ -1,4 +1,4 @@
 MD5 cee85a5ff17a37370fed41043091b327 ChangeLog 546
-MD5 6d8310eabadfb4b2689f43ba505478d7 xprop-0.99.0.ebuild 435
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 bf2f8b0cac98c08c7deb2ab2691c714e files/digest-xprop-0.99.0 64
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 112352cdb346004a3d3d276567b934b3 xprop-0.99.0.ebuild 441

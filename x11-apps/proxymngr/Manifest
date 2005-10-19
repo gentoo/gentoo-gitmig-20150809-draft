@@ -1,4 +1,4 @@
 MD5 e53cafb44e9b52eb505cad4451da4ff4 ChangeLog 568
-MD5 8513c6a9d20c6ae8837665c70490bb74 proxymngr-0.99.0.ebuild 499
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 4ab0d2e0615f8ddec808855d456c9bc3 files/digest-proxymngr-0.99.0 68
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 d2c0050a9a1c322807e6e701e5b0a932 proxymngr-0.99.0.ebuild 505

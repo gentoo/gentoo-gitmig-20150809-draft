@@ -1,4 +1,4 @@
 MD5 f9168cc895d7da0822092de3c2ccdd4b ChangeLog 553
-MD5 1e56e9bca4b8a775cc7c1eabaf92b665 oclock-0.99.0.ebuild 456
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 6c5397e7fc892e2faa8c32134ca092f5 files/digest-oclock-0.99.0 65
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 808422845ccb6cfca693013957d12ae3 oclock-0.99.0.ebuild 462

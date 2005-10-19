@@ -1,4 +1,4 @@
 MD5 cd3752f1970fe6ef09f87da9c9a31b91 ChangeLog 642
-MD5 5f6055dbdcc958c67d2ab20b9e5f8899 xrandr-0.99.0.ebuild 448
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 e0622f28462eb3bc1735bd2cfd7659c5 files/digest-xrandr-0.99.0 65
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 86aaff23f275e54925e69f051447a459 xrandr-0.99.0.ebuild 454

@@ -1,4 +1,4 @@
 MD5 81b301916a2aa355acdf2480bb2dc450 ChangeLog 575
-MD5 907fe368896c80e5c41a09193be5afa6 xlsclients-0.99.0.ebuild 450
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 5848d1e673d82794ab9fee74065de385 files/digest-xlsclients-0.99.0 69
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 66d12973ee8878f964168e355ae2c195 xlsclients-0.99.0.ebuild 456

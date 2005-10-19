@@ -1,4 +1,4 @@
 MD5 c26cfa7595bac97a5675b436fb8a90f7 ChangeLog 563
-MD5 330a85f9c231844f09faed7cda24f4b0 xditview-0.99.0.ebuild 615
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 047d7e4c68dc77479167d0d3887abb49 files/digest-xditview-0.99.0 67
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 51d30df5cf8043cf523703182c5b300c xditview-0.99.0.ebuild 621

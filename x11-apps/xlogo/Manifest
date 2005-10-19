@@ -1,4 +1,4 @@
 MD5 237feb257b87023fed251ca7a2c965ed ChangeLog 546
-MD5 b5e3e73941d3ef640abdb9b9547d3329 xlogo-0.99.0.ebuild 583
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 6dd4ed8d30aedc2fa474845f6a73265a files/digest-xlogo-0.99.0 64
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 1c598780ef7e1b5213f4acc31d3ecef5 xlogo-0.99.0.ebuild 589

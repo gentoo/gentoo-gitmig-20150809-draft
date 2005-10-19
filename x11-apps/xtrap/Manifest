@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e37886ecaeeb5e37c0fdbc6e5f0c8191 ChangeLog 697
 MD5 f1bc74ff24ca181e4b1eb8fd6bda0086 files/digest-xtrap-0.99.0 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 a0548eab9370fa3c625f417bd929af48 xtrap-0.99.0.ebuild 447
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDT/C9omPajV0RnrERAoAXAJ4viPpHoPJ0vjTR5gxJbOwtDc1bgwCfZ5VM
-ZW/+4HWlKGl2KiqCauYPUYU=
-=4aSO
------END PGP SIGNATURE-----
+MD5 81990b6328b2ba44e2c0db5008e742c6 xtrap-0.99.0.ebuild 455
