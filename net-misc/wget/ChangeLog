@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.74 2005/10/13 13:34:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.75 2005/10/19 04:02:27 ticho Exp $
+
+  19 Oct 2005; Andrej Kacian <ticho@gentoo.org> wget-1.10.2.ebuild:
+  Stable on x86, security bug #109097.
 
 *wget-1.10.2 (13 Oct 2005)
 
