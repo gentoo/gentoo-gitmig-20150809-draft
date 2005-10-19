@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.10.ebuild,v 1.2 2005/06/09 23:11:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.10.ebuild,v 1.3 2005/10/19 19:50:59 dang Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -11,7 +11,7 @@ IUSE=""
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ~ppc ~amd64 sparc"
+KEYWORDS="amd64 ~ppc sparc x86"
 
 #  Note to developers:
 #  This is a wrapper for the 'light' Gnome2 desktop,
