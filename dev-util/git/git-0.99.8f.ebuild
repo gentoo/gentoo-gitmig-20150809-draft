@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.8e.ebuild,v 1.1 2005/10/18 22:48:38 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.8f.ebuild,v 1.1 2005/10/19 15:09:31 ferdy Exp $
 
 inherit python
 
@@ -88,6 +88,11 @@ src_install() {
 	newconfd "${FILESDIR}/git-daemon.confd" git-daemon
 }
 
+src_test() {
+	cd ${S}
+	make test || die "tests failed"
+}
+
 pkg_postinst() {
 	echo
 	ewarn "Some commands will be renamed before the final 1.0. Use the git"
@@ -98,9 +103,9 @@ pkg_postinst() {
 	echo
 	einfo
 	einfo "If you want to import arch repositories into git, consider using the"
-	einfo "git-archimport command. You should install dev-util/tla before."
+	einfo "git-archimport command. You should install dev-util/tla before"
 	einfo
 	einfo "If you want to import cvs repositories into git, consider using the"
-	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1"
+	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1 before"
 	einfo
 }
