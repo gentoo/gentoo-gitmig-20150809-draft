@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/flagedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.4 2005/10/19 10:30:14 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.5 2005/10/19 11:32:22 dams Exp $
+
+*flagedit-0.0.4 (19 Oct 2005)
+
+  19 Oct 2005; Damien Krotkine <dams@gentoo.org> +flagedit-0.0.4.ebuild:
+  version bump
 
 *flagedit-0.0.3 (19 Oct 2005)
 
