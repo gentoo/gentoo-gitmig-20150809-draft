@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.27 2005/10/13 19:16:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.28 2005/10/19 18:38:41 danarmak Exp $
+
+*kjsembed-3.5.0_beta2 (19 Oct 2005)
+
+  19 Oct 2005; Dan Armak <danarmak@gentoo.org> +kjsembed-3.5.0_beta2.ebuild:
+  New version. Reminder: prerelease versions are permanently package.masked.
 
   13 Oct 2005; Brent Baude <ranger@gentoo.org> kjsembed-3.4.1.ebuild:
   Marking kjsembed-3.4.1 ppc64 stable

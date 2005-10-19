@@ -4,6 +4,7 @@ MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtruby-3.4.1 221
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtruby-3.4.1-r1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-qtruby-3.4.2 300
 MD5 f6bd746271de83bcbcacc04a445d590f files/digest-qtruby-3.4.3 71
+MD5 7b7cadef2c4eb7dc5409c01c4e689481 files/digest-qtruby-3.5.0_beta2 225
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 d859fab9468c7c54cc414ab700d5a16c files/qtruby-3.4.1-handlers.diff 379
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
@@ -12,3 +13,4 @@ MD5 eecff78ef52887dc284d2e9317853e8f qtruby-3.4.1-r1.ebuild 968
 MD5 baacbf2d0922839852335524bb6aeea0 qtruby-3.4.1.ebuild 926
 MD5 ef77385ae6fe6889038523a0288355a2 qtruby-3.4.2.ebuild 932
 MD5 16abf5d9efb538f328f36bbe6857e934 qtruby-3.4.3.ebuild 934
+MD5 d8b5ea94698b1fff509b22a8f121b900 qtruby-3.5.0_beta2.ebuild 914

@@ -2,8 +2,10 @@ MD5 28223701c09daa3af9d91cf3118ed42e ChangeLog 2213
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-kalyptus-3.3.2 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kalyptus-3.4.1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-kalyptus-3.4.2 300
+MD5 7b7cadef2c4eb7dc5409c01c4e689481 files/digest-kalyptus-3.5.0_beta2 225
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 67f69a490c47381d82c77c9cde372ce5 kalyptus-3.3.2.ebuild 688
 MD5 0ee39aeccf35dcd265240cd4f12be93e kalyptus-3.4.1.ebuild 701
 MD5 034a5fbc51861b8c8baa756c341feb43 kalyptus-3.4.2.ebuild 709
+MD5 ce8493d825ba8e118d36eeb320ff96d8 kalyptus-3.5.0_beta2.ebuild 689
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

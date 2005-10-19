@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.17 2005/10/13 00:09:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.18 2005/10/19 18:38:41 danarmak Exp $
+
+*kdejava-3.5.0_beta2 (19 Oct 2005)
+
+  19 Oct 2005; Dan Armak <danarmak@gentoo.org> +kdejava-3.5.0_beta2.ebuild:
+  New version. Reminder: prerelease versions are permanently package.masked.
 
 *kdejava-3.4.3 (13 Oct 2005)
 
