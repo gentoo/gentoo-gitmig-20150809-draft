@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.207 2005/10/12 13:52:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.208 2005/10/19 03:36:15 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -168,6 +168,7 @@ EPATCH_FORCE="no"
 # <azarah@gentoo.org> (10 Nov 2002)
 #
 epatch() {
+	_epatch_assert() { local _pipestatus=${PIPESTATUS[*]}; [[ ${_pipestatus// /} -eq 0 ]] ; }
 	local PIPE_CMD=""
 	local STDERR_TARGET="${T}/$$.out"
 	local PATCH_TARGET="${T}/$$.patch"
@@ -315,7 +316,7 @@ epatch() {
 					fi
 				fi
 
-				if (cat ${PATCH_TARGET} | patch -p${count} ${popts} --dry-run -f) >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/} 2>&1
+				if (cat ${PATCH_TARGET} | patch -p${count} ${popts} --dry-run -f ; _epatch_assert) >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/} 2>&1
 				then
 					draw_line "***** ${patchname} *****" >	${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
 					echo >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
@@ -324,6 +325,7 @@ epatch() {
 					draw_line "***** ${patchname} *****" >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real
 
 					cat ${PATCH_TARGET} | patch -p${count} ${popts} >> ${STDERR_TARGET%/*}/${patchname}-${STDERR_TARGET##*/}.real 2>&1
+					_epatch_assert
 
 					if [ "$?" -ne 0 ]
 					then
