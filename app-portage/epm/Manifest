@@ -1,6 +1,16 @@
-MD5 7c76cbd0b4adf1ee59a9fd807ae0ab14 ChangeLog 3508
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c9bb624305757fbf878ecd1a5ef18cb4 ChangeLog 3605
 MD5 e266c776bf46f85ed27001b26e931732 epm-0.8.8.ebuild 620
-MD5 fd734d385c097a936c63336d85f19beb metadata.xml 347
-MD5 87c1aba6b99873608fc0680a296334b5 epm-0.9.0.ebuild 629
-MD5 00bcd2005272bc4bc226a78f7dc4f86e files/digest-epm-0.9.0 60
+MD5 8f7c8d4f8bbb8215d2dcdf6a59bb5c19 epm-0.9.0.ebuild 619
 MD5 5bd675162d7c4eaccc3525a63234930d files/digest-epm-0.8.8 59
+MD5 00bcd2005272bc4bc226a78f7dc4f86e files/digest-epm-0.9.0 60
+MD5 fd734d385c097a936c63336d85f19beb metadata.xml 347
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVmz6JrHF4yAQTrARAqlKAJ9EiwZu2S13ieJPaI1v7loblLoAEQCghCfP
+MpUNXX4Y641rbpFuHrElgNY=
+=8mN2
+-----END PGP SIGNATURE-----
