@@ -1,4 +1,7 @@
-MD5 3b2bd60faacceea55db95169d8132ce0 ChangeLog 4714
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 211c5cefaae03989ef79365f41751b1a ChangeLog 4810
 MD5 ff7259ac67f0e172df7e51f0242c9db3 files/digest-pgpool-2.5.2 64
 MD5 ff7259ac67f0e172df7e51f0242c9db3 files/digest-pgpool-2.5.2-r1 64
 MD5 2bb57037e517f94326861c668942e789 files/digest-pgpool-2.6 62
@@ -9,5 +12,12 @@ MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 b830c8d1a52a3a4fc68f009b03a2e475 pgpool-2.5.2-r1.ebuild 900
 MD5 9a5706e7be6b95c80da0394bb4c9a64f pgpool-2.5.2.ebuild 898
 MD5 d8d7aaba0b36393f8c9d49e9ef563f6e pgpool-2.6.2.ebuild 866
-MD5 4f919c280df1dee5c49220b8f8a5f60b pgpool-2.6.3.ebuild 867
+MD5 480b2476295bf32bb61717d7aa55d38e pgpool-2.6.3.ebuild 868
 MD5 86fbc8f5b7a4bd08d1be2c3a2658339b pgpool-2.6.ebuild 867
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDVo4yKRy60XGEcJIRAmUSAJ9SMbuw8BLYFNgeyR2K17xIwo7xCgCfdlHk
+AH1mjNSePsfQ4RD3oFB3iYs=
+=ERsr
+-----END PGP SIGNATURE-----
