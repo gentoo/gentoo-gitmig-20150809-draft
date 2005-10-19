@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.3.ebuild,v 1.5 2005/10/17 01:15:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.3.ebuild,v 1.6 2005/10/19 19:29:00 halcy0n Exp $
+
+inherit mono eutils
 
 DESCRIPTION="SIFT algorithm for automatic panorama creation"
 HOMEPAGE="http://user.cs.tu-berlin.de/~nowozin/autopano-sift/"
@@ -10,8 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
-
-inherit mono eutils
 
 DEPEND="dev-lang/mono
 	<dev-dotnet/glade-sharp-2

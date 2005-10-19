@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4ba1fe9de3e72177013289ea0d788283 ChangeLog 862
-MD5 2b6321730ab66d25e77a9c14bf4b2edb autopano-sift-2.3.ebuild 1220
+MD5 58496b736d2939000271934a9c075318 ChangeLog 973
+MD5 eb821fa87990ed912911f4dc62e1bc49 autopano-sift-2.3.ebuild 1220
 MD5 c073bbed555060fa2e9480e18c6e8f1a files/autopano 69
 MD5 ccbf46e7346bb84f417ab7ee4f1a3d0c files/digest-autopano-sift-2.3 69
 MD5 c836299e3ca9efee2a4f1c97875bba76 metadata.xml 384
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUvsuCRZPokWLroQRAn7sAJ4s9TU9sNJeCc7UYFYMN9i8Tz0wVQCgoOc+
-39VjOo9+nwxY8vuUWhNAAsg=
-=ao1w
+iD8DBQFDVp6bCRZPokWLroQRAq6hAKDaSCxWIYjPO46B66rj5DrX7w+gwQCguhFJ
+2c7r8tnlkaJFgdwYoCtv2GU=
+=BdlH
 -----END PGP SIGNATURE-----
