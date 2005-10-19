@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.16 2005/10/17 03:01:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.17 2005/10/19 18:02:02 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -32,14 +32,14 @@ PATCH_VER="1.13"
 # C Stubbs addon (contained in fedora, so ignoring)
 #CSTUBS_VER="2.1.2"
 #CSTUBS_TARBALL="c_stubs-${CSTUBS_VER}.tar.bz2"
-#CSTUBS_URI="http://dev.gentoo.org/~eradicator/glibc/${CSTUBS_TARBALL}"
+#CSTUBS_URI="mirror://gentoo/${CSTUBS_TARBALL}"
 
 # Fedora addons (from RHEL's glibc-2.3.4-2.src.rpm)
 FEDORA_VER="20041219T2331"
 FEDORA_TARBALL="glibc-fedora-${FEDORA_VER}.tar.bz2"
-FEDORA_URI="http://dev.gentoo.org/~eradicator/glibc/${FEDORA_TARBALL}"
+FEDORA_URI="mirror://gentoo/${FEDORA_TARBALL}"
 
-GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~eradicator/glibc"
+GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 
 ### PUNT OUT TO ECLASS?? ###
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
@@ -115,11 +115,7 @@ LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
 #			which is useful for individual library targets.
 #
 get_glibc_src_uri() {
-	# This variable should be set to the devspace of whoever is currently
-	# maintaining GLIBC. Please dont set this to mirror, that would just
-	# make the files unavailable until they get mirrored.
-	local devspace_uri="http://dev.gentoo.org/~eradicator/glibc/"
-	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-${devspace_uri}}
+	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-"mirror://gentoo"}
 
 #	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
 #	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2

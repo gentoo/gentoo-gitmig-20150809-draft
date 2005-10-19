@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.400 2005/10/17 03:01:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.401 2005/10/19 18:02:01 eradicator Exp $
+
+  19 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20041102-r2.ebuild, glibc-2.3.4.20050125-r1.ebuild,
+  glibc-2.3.5.ebuild, glibc-2.3.5-r1.ebuild, glibc-2.3.5-r2.ebuild,
+  glibc-2.3.5.20050421.ebuild, glibc-2.3.5.20050722.ebuild:
+  Removing my devspace as a fallback URI so people stop blaming me about
+  missing distfiles when mirrors fail.
 
   17 Oct 2005; Joseph Jezak <josejx@gentoo.org> glibc-2.3.5-r2.ebuild:
   Marked ppc stable.
