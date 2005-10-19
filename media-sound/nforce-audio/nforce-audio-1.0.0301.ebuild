@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0301.ebuild,v 1.4 2005/06/09 15:48:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/nforce-audio-1.0.0301.ebuild,v 1.5 2005/10/19 18:16:47 chainsaw Exp $
 
 inherit eutils linux-mod
 
@@ -60,5 +60,9 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	einfo "You may also be interested in media-sound/nforce-nvmixer"
+	einfo "If you want to restore your volume settings between sessions add this line to your"
+	einfo "/etc/conf.d/local.start:"
+	einfo "/usr/bin/nvmix-reg -f /etc/nvmixrc -L >/dev/null 2>&1"
+	einfo "And this line to your /etc/conf.d/local.stop"
+	einfo "/usr/bin/nvmix-reg -f /etc/nvmixrc -S >/dev/null 2>&1"
 }
