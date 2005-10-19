@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.7 2005/10/02 12:56:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.8 2005/10/19 16:05:06 killerfox Exp $
+
+  19 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  MIME-Types-1.13.ebuild:
+  Unstable on hppa.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> MIME-Types-1.13.ebuild:
   Mark 1.13 stable on ia64
