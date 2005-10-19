@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-xcursors
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.2 2005/09/09 17:34:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-xcursors/ChangeLog,v 1.3 2005/10/19 04:21:51 geoman Exp $
+
+  19 Oct 2005; Stephen P. Becker <geoman@gentoo.org>
+  gentoo-xcursors-0.3.1.ebuild:
+  added ~mips keyword
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
