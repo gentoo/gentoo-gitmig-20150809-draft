@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1.ebuild,v 1.2 2005/09/08 23:54:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1.ebuild,v 1.3 2005/10/19 03:32:26 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -49,29 +49,33 @@ src_unpack() {
 	unpack ${PARCH}.tar.gz
 	cd "${S}"
 
+	sed -i \
+		-e '/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:/usr/bin/xauth:' \
+		pathnames.h || die
+
 	#epatch "${FILESDIR}"/openssh-3.9_p1-largekey.patch.bz2
 	epatch "${FILESDIR}"/openssh-4.2_p1-kerberos-detection.patch #80811
 
-	use X509 && epatch ${DISTDIR}/${X509_PATCH}
-	use sftplogging && epatch ${FILESDIR}/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2
-	use skey && epatch ${FILESDIR}/openssh-3.9_p1-skey.patch.bz2
-	use chroot && epatch ${FILESDIR}/openssh-3.9_p1-chroot.patch
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
-	use smartcard && epatch ${FILESDIR}/openssh-3.9_p1-opensc.patch.bz2
+	use X509 && epatch "${DISTDIR}"/${X509_PATCH}
+	use sftplogging && epatch "${FILESDIR}"/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2
+	use skey && epatch "${FILESDIR}"/openssh-3.9_p1-skey.patch.bz2
+	use chroot && epatch "${FILESDIR}"/openssh-3.9_p1-chroot.patch
+	use selinux && epatch "${FILESDIR}"/${SELINUX_PATCH}.bz2
+	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch.bz2
 	if ! use X509 ; then
 		if [[ -n ${SECURID_PATCH} ]] && use smartcard ; then
-			epatch ${DISTDIR}/${SECURID_PATCH} ${FILESDIR}/openssh-securid-1.3.1-updates.patch
-			use ldap && epatch ${FILESDIR}/openssh-4.0_p1-smartcard-ldap-happy.patch
+			epatch "${DISTDIR}"/${SECURID_PATCH} "${FILESDIR}"/openssh-securid-1.3.1-updates.patch
+			use ldap && epatch "${FILESDIR}"/openssh-4.0_p1-smartcard-ldap-happy.patch
 		fi
 		if use sftplogging ; then
 			ewarn "Sorry, sftplogging and ldap don't get along"
 		else
-			use ldap && epatch ${DISTDIR}/${LDAP_PATCH}
+			use ldap && epatch "${DISTDIR}"/${LDAP_PATCH}
 		fi
 	elif [[ -n ${SECURID_PATCH} ]] && use smartcard || use ldap ; then
 		ewarn "Sorry, x509 and smartcard/ldap don't get along"
 	fi
-	[[ -n ${HPN_PATCH} ]] && use hpn && epatch ${DISTDIR}/${HPN_PATCH}
+	[[ -n ${HPN_PATCH} ]] && use hpn && epatch "${DISTDIR}"/${HPN_PATCH}
 
 	sed -i '/LD.*ssh-keysign/s:$: -Wl,-z,now:' Makefile.in || die "setuid"
 

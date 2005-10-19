@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.26 2005/09/08 23:54:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.27 2005/10/19 03:32:26 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -42,20 +42,25 @@ PROVIDE="virtual/ssh"
 S=${WORKDIR}/${PARCH}
 
 src_unpack() {
-	unpack ${PARCH}.tar.gz ; cd ${S}
+	unpack ${PARCH}.tar.gz
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-resolv_functions.patch.bz2
+	sed -i \
+		-e '/_PATH_XAUTH/s:/usr/X11R6/bin/xauth:/usr/bin/xauth:' \
+		pathnames.h || die
 
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
-	use skey && epatch ${FILESDIR}/${P}-skey.patch.bz2
-	use chroot && epatch ${FILESDIR}/${P}-chroot.patch.bz2
-	use X509 && epatch ${DISTDIR}/${X509_PATCH}
-	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch.bz2
+	epatch "${FILESDIR}"/${P}-resolv_functions.patch.bz2
+
+	use selinux && epatch "${FILESDIR}"/${SELINUX_PATCH}.bz2
+	use skey && epatch "${FILESDIR}"/${P}-skey.patch.bz2
+	use chroot && epatch "${FILESDIR}"/${P}-chroot.patch.bz2
+	use X509 && epatch "${DISTDIR}"/${X509_PATCH}
+	use smartcard && epatch "${FILESDIR}"/${P}-opensc.patch.bz2
 	if use ldap ; then
 		if use X509 ; then
 			ewarn "Sorry, x509 and ldap don't get along"
 		else
-			epatch ${DISTDIR}/${LDAP_PATCH}
+			epatch "${DISTDIR}"/${LDAP_PATCH}
 		fi
 	fi
 
@@ -75,13 +80,7 @@ src_compile() {
 	use selinux && append-flags -DWITH_SELINUX
 	use static && append-ldflags -static
 
-	autoconf
-
-	local myconf="\
-		$( use_with tcpd tcp-wrappers ) \
-		$( use_with pam ) \
-		$( use_with skey )"
-
+	local myconf=""
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
 	use kerberos && myconf="${myconf} --with-kerberos5=/usr" || \
 		myconf="${myconf} --without-kerberos5"
@@ -96,10 +95,10 @@ src_compile() {
 		--with-privsep-path=/var/empty \
 		--with-privsep-user=sshd \
 		--with-md5-passwords \
-		`use_with tcpd tcp-wrappers` \
-		`use_with pam` \
-		`use_with skey` \
-		`use_with smartcard opensc` \
+		$(use_with tcpd tcp-wrappers) \
+		$(use_with pam) \
+		$(use_with skey) \
+		$(use_with smartcard opensc) \
 		${myconf} \
 		|| die "bad configure"
 
@@ -112,11 +111,11 @@ src_compile() {
 }
 
 src_install() {
-	make install-files DESTDIR=${D} || die
-	chmod 600 ${D}/etc/ssh/sshd_config
+	make install-files DESTDIR="${D}" || die
+	chmod 600 "${D}"/etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
-	use pam && ( insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd )
-	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
+	use pam && ( insinto /etc/pam.d  ; newins "${FILESDIR}"/sshd.pam sshd )
+	newinitd "${FILESDIR}"/sshd.rc6 sshd
 	keepdir /var/empty
 	dosed "/^#Protocol /s:.*:Protocol 2:" /etc/ssh/sshd_config
 	use pam && dosed "/^#UsePAM /s:.*:UsePAM yes:" /etc/ssh/sshd_config
@@ -137,7 +136,7 @@ pkg_postinst() {
 	einfo "new one with UID 22.  If you have any scripts or programs that"
 	einfo "that referenced the old UID directly, you will need to update them."
 	einfo
-	use pam >/dev/null 2>&1 && {
+	use pam && {
 		einfo "Please be aware users need a valid shell in /etc/passwd"
 		einfo "in order to be allowed to login."
 		einfo
