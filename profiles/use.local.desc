@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1506 2005/10/18 23:19:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1507 2005/10/19 03:39:14 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -61,7 +61,6 @@ app-editors/gvim:termcap-compat - Use libtermcap-compat rather than ncurses (not
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
-app-editors/scite:lua - Enable Lua scripting support
 app-editors/vim-core:termcap-compat - Use libtermcap-compat rather than ncurses (not generally recommended)
 app-editors/vim:mzscheme - Include support for the mzscheme interpreter
 app-editors/vim:termcap-compat - Use libtermcap-compat rather than ncurses (not generally recommended)
@@ -120,7 +119,6 @@ app-mobilephone/gammu:irda - Enable infrared support
 app-mobilephone/gnokii:irda - Enable infrared support
 app-mobilephone/gnokii:sms - Enable SMS support
 app-mobilephone/yaps:capi - Enable CAPI support
-app-mobilephone/yaps:lua - Enable Lua scripting support
 app-mobilephone/yaps:slang - Enable SLang scripting support
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
@@ -255,7 +253,6 @@ dev-lang/php:pear - Enable PEAR support
 dev-lang/php:zip - Enable ZIP file support
 dev-lang/python:ucs2 - Enable byte size 2 unicode
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
-dev-lang/swig:lua - Enable Lua scripting support
 dev-lang/swig:pike - Enable Pike scripting support
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
@@ -366,7 +363,6 @@ games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
-games-fps/alephone:lua - Enable Lua scripting support
 games-fps/doom3:cdinstall - Copies files from the CD rather than asking the user to copy them
 games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
@@ -1137,7 +1133,6 @@ www-apps/viewcvs:standalone - Install the standalone client
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
-www-client/elinks:lua - enable lua support
 www-client/elinks:nntp - Enable support for the NNTP
 www-client/epiphany-extensions:firefox - build against firefox instead of mozilla
 www-client/epiphany:firefox - build against firefox instead of mozilla
@@ -1167,7 +1162,6 @@ www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mi
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
 www-servers/gorg:apache - Install apache
-www-servers/lighttpd:lua - Use lua for mod_cml
 www-servers/lighttpd:memcache - Enable memcache support for mod_cml and mod_trigger_b4_dl
 www-servers/lighttpd:rrdtool - Enable rrdtool support via mod_rrdtool
 www-servers/lighttpd:webdav - Enables webdev properties

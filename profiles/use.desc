@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.268 2005/10/16 23:57:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.269 2005/10/19 03:39:14 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -181,6 +181,7 @@ libwww - Adds libwww support (General purpose WEB API)
 lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
 livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building.
 lm_sensors - Adds linux lm_sensors (hardware sensors) support
+lua - Enable Lua scripting support
 m17n-lib - Enable m17n-lib support
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
 maildir - Adds support for maildir (~/.maildir) style mail spools
