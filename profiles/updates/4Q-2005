@@ -1,3 +1,4 @@
 move dev-java/jmx dev-java/sun-jmx
 move dev-java/jms dev-java/sun-jms
 move net-misc/entropy net-p2p/entropy_rsa
+move x11-apps/twm x11-wm/twm
