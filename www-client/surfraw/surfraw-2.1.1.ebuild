@@ -1,27 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.0.2.1.ebuild,v 1.1 2005/04/19 14:19:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.1.1.ebuild,v 1.1 2005/10/19 18:31:39 seemant Exp $
 
-inherit versionator bash-completion eutils
+inherit bash-completion eutils
 
-MY_PF=${PN}_$(replace_version_separator 3 '-')
-MY_P=${P%.*}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="A fast unix command line interface to WWW"
 HOMEPAGE="http://alioth.debian.org/projects/surfraw/"
-SRC_URI="mirror://debian/pool/main/s/surfraw/${MY_PF}.tar.gz
-	mirror://gentoo/${P}-gentoo-patches.tar.bz2"
+SRC_URI="mirror://debian/pool/main/s/surfraw/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
 	unpack ${A}; cd ${S}
 
 	sed -i 's,/lib/,/share/,g' surfraw-bash-completion surfraw.1.in elvi.1sr.in
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/gentoo-patches
+	epatch ${FILESDIR}/${PN}-gentoo_pkg_tools.patch
 }
 
 src_compile() {
@@ -32,7 +28,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS HACKING NEWS README TODO
+	dodoc debian/changelog AUTHORS HACKING NEWS README TODO
 
 	dobashcompletion surfraw-bash-completion
 }

@@ -1,0 +1,37 @@
+  Needs a little more thought, or some method which would allow for an upstream
+push without affecting the non-Gentoo users.
+
+Index: surfraw-2.0.2/surfraw-bash-completion
+===================================================================
+--- surfraw-2.0.2/surfraw-bash-completion	{cset 4e580034-b124-4c8c-a69c-350d291577a1}
++++ surfraw-2.0.2/surfraw-bash-completion	{local clone}
+@@ -1,4 +1,20 @@
+ # -*- sh -*- bash programmable completion for Surfraw, v2.2
++_srpkgname()
++{
++	local pd
++	local dir=$(sed -n -e '/^PORTDIR=/ { s/^[^=]\+="\?\([^"]\+\|\S\+\).*/\1/p ; q }' \
++		/etc/make.{conf,globals})/*
++	local cur="$1"
++
++	COMPREPLY=($(compgen -W "$(
++	    for pd in $dir
++		do
++			[ ! -d ${pd} ] && continue
++			builtin cd ${pd}
++			echo *
++		done)" -- ${cur})
++	)
++}
+ _surfraw() 
+ {       COMPREPLY=()
+ 	local cur=${COMP_WORDS[COMP_CWORD]}
+@@ -14,7 +30,7 @@ _surfraw() 
+ 	then    COMPREPLY=( $( compgen -W "$elvi" -- $cur ) )
+ 		# "sr g<tab>" for google
+ 	elif    [[ $prev == @(alioth|deb@(bug|content|package|pt)s|freshmeat|sourceforge) ]]
+-	then    COMPREPLY=( $(apt-cache --generate pkgnames $cur) )
++	then    _srpkgname ${cur}
+ 		# "sr debbugs 4<tab>" to check 44bsd-rdist bugs...
+ 	elif    test -x /usr/bin/look # in bsdmainutils, "important"
+ 	then	COMPREPLY=( $(/usr/bin/look ${cur:-''}) )
