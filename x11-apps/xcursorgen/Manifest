@@ -1,4 +1,4 @@
-MD5 0da742a46e40d606a596157cd2c9e255 ChangeLog 846
-MD5 86920e655bd610ad9fef50c73d1e315b xcursorgen-0.99.0.ebuild 495
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 f000e36dcedfdd61dbb3118656b65e44 ChangeLog 947
 MD5 b44d55ae8bcce033bcdbf1d416a86acb files/digest-xcursorgen-0.99.0 69
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 848e926d0e1b3366edcd268250f01c8f xcursorgen-0.99.0.ebuild 501
