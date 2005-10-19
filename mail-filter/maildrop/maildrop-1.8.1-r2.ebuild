@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1-r2.ebuild,v 1.4 2005/10/16 16:30:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.1-r2.ebuild,v 1.5 2005/10/19 16:56:29 ferdy Exp $
 
-inherit eutils gnuconfig
+inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Mail delivery agent/filter"
 [[ -z ${PV/?.?} ]] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -73,6 +73,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	replace-flags -Os -O2
 
 	if use gdbm ; then
 		myconf="${myconf} --with-db=gdbm"

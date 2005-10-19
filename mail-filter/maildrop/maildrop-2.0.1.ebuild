@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.2 2005/10/16 16:30:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1.ebuild,v 1.3 2005/10/19 16:56:29 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -78,6 +78,8 @@ src_compile() {
 	local myconf
 	local mytrustedusers="apache dspam root mail \
 		daemon postmaster qmaild mmdf vmail alias"
+
+	replace-flags -Os -O2
 
 	if use gdbm ; then
 		myconf="${myconf} --with-db=gdbm"

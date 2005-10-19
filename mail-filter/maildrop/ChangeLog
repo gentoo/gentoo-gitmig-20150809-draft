@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.47 2005/10/16 16:30:37 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.48 2005/10/19 16:56:29 ferdy Exp $
+
+  19 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  maildrop-1.8.1-r2.ebuild, maildrop-2.0.1.ebuild:
+  replace-flags -Os -O2 since it causes segfaults. Discovered by Diego
+  'Flameeyes' Pettenò
 
   16 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org>
   maildrop-1.8.1-r2.ebuild, maildrop-2.0.1.ebuild:
