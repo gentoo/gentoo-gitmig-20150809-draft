@@ -1,9 +1,26 @@
-MD5 b4dd3c83d4a7beb03fe81545e8b96ab4 gmp-4.1.4.ebuild 1904
-MD5 e91d07c7bf0c88bbcb85e8767369581c ChangeLog 7498
-MD5 b09c48dc9a2b0af55284315d91caae96 gmp-4.1.4-r1.ebuild 1941
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0de20b97afd948ce922ae181d21ee171 ChangeLog 7934
+MD5 3ffd372397aa4b63f5a08f711df8e02c files/4.1.4/gmp-impl.h.MPF_SIGNIFICANT_DIGITS.diff 1182
+MD5 62a1429c81d8b2631590acf519385b7c files/4.1.4/gmp-impl.h.MPN_SIZEINBASE.diff 1315
+MD5 9ed7fdde964f92400549a7a4bc2d1982 files/4.1.4/gmp-impl.h.x86.ULONG_PARITY.diff 1357
+MD5 4083cba7bced11f16a6672b2bbcbb364 files/4.1.4/mpn_rootrem.c.diff 813
 MD5 1dbc1772df649dae89ad8e00042c5b46 files/amd64.patch 1166
 MD5 8c7f521cf77fb56ab019223cf92a6bca files/digest-gmp-4.1.4 62
-MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
-MD5 d70b080c2f0efd82a800ba8a1af7b305 files/ppc64-gmp-acinclude.patch 474
 MD5 406c6cb8cc162ea7baec4e4d5115c708 files/digest-gmp-4.1.4-r1 124
+MD5 e9d24618243d8e46e39eebb5b35b16d9 files/digest-gmp-4.1.4-r2 125
+MD5 ee91d8f397ce79dd0ff7e4ae48a47b21 files/gmp-4.1.4-multilib.patch 2864
+MD5 b52419c7a4ccb630ec3e44cc7ea926c9 files/gmp-hppa-2.0.patch 16826
+MD5 d70b080c2f0efd82a800ba8a1af7b305 files/ppc64-gmp-acinclude.patch 474
+MD5 b09c48dc9a2b0af55284315d91caae96 gmp-4.1.4-r1.ebuild 1941
+MD5 2a6d693d10caa19c95cbc9a388d77318 gmp-4.1.4-r2.ebuild 1868
+MD5 b4dd3c83d4a7beb03fe81545e8b96ab4 gmp-4.1.4.ebuild 1904
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVc04gIKl8Uu19MoRAvEmAJ0Sf9aOsbFf65RLuLd4dzE18t6ZTgCfR7wW
+2iPYSAPyNE1grFmS+ZwYNpA=
+=iktP
+-----END PGP SIGNATURE-----

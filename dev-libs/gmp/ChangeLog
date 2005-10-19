@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/gmp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.55 2005/10/18 12:02:52 gmsoft Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.56 2005/10/19 04:33:36 vapier Exp $
+
+*gmp-4.1.4-r2 (19 Oct 2005)
+
+  19 Oct 2005; Mike Frysinger <vapier@gentoo.org> +files/gmp-hppa-2.0.patch,
+  +files/4.1.4/gmp-impl.h.MPF_SIGNIFICANT_DIGITS.diff,
+  +files/4.1.4/gmp-impl.h.x86.ULONG_PARITY.diff,
+  +files/4.1.4/gmp-impl.h.MPN_SIZEINBASE.diff,
+  +files/4.1.4/mpn_rootrem.c.diff, +gmp-4.1.4-r2.ebuild:
+  Add more patches from upstream, track down the hppa issues, and fork mpfr
+  into a sep package like upstream suggests.
 
   18 Oct 2005; Guy Martin <gmsoft@gentoo.org> gmp-4.1.4.ebuild,
   gmp-4.1.4-r1.ebuild:

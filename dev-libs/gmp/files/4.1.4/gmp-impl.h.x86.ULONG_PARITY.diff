@@ -1,0 +1,35 @@
+Index: gmp-impl.h
+===================================================================
+RCS file: /home/cvsfiles/gmp/gmp-impl.h,v
+retrieving revision 1.281.2.12
+diff -u -r1.281.2.12 gmp-impl.h
+--- gmp-impl.h	22 Apr 2004 23:59:53 -0000	1.281.2.12
++++ gmp-impl.h	29 Sep 2004 19:22:23 -0000
+@@ -2188,14 +2188,24 @@
+    there's an even number.  */
+ 
+ #if defined (__GNUC__) && ! defined (NO_ASM) && HAVE_HOST_CPU_FAMILY_x86
++/* Some clever GCC maintainer decided to change the meaning of the q register
++   flag with GCC version 3.1.  He added a Q flag with the old meaning at the
++   same time.  This forces us to use a conditional on GCC version.  */
++#if __GMP_GNUC_PREREQ (3,1)
++#define __GMP_qm "=Qm"
++#define __GMP_q "=Q"
++#else
++#define __GMP_qm "=qm"
++#define __GMP_q "=q"
++#endif
+ #define ULONG_PARITY(p, n)              \
+   do {                                  \
+     char           __p;                 \
+     unsigned long  __n = (n);           \
+     __n ^= (__n >> 16);                 \
+-    asm ("xorb   %h1, %b1\n"            \
+-         "setpo  %0\n"                  \
+-         : "=qm" (__p), "=q" (__n)      \
++    asm ("xorb   %h1, %b1\n\t"          \
++         "setpo  %0"                    \
++         : __GMP_qm (__p), __GMP_q (__n)\
+          : "1" (__n));                  \
+     (p) = __p;                          \
+   } while (0)

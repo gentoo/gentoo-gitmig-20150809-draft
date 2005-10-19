@@ -1,0 +1,25 @@
+Index: gmp-impl.h
+===================================================================
+RCS file: /home/cvsfiles/gmp/gmp-impl.h,v
+retrieving revision 1.281.2.13
+diff -c -1 -r1.281.2.13 gmp-impl.h
+*** gmp-impl.h	29 Sep 2004 20:04:54 -0000	1.281.2.13
+--- gmp-impl.h	13 Jan 2005 01:08:01 -0000
+***************
+*** 1844,1846 ****
+      int       __lb_base, __cnt;                                         \
+!     mp_size_t __totbits;                                                \
+                                                                          \
+--- 1844,1846 ----
+      int       __lb_base, __cnt;                                         \
+!     size_t __totbits;                                                   \
+                                                                          \
+***************
+*** 1857,1859 ****
+          count_leading_zeros (__cnt, (ptr)[(size)-1]);                   \
+!         __totbits = (size) * GMP_NUMB_BITS - (__cnt - GMP_NAIL_BITS);   \
+                                                                          \
+--- 1857,1859 ----
+          count_leading_zeros (__cnt, (ptr)[(size)-1]);                   \
+!         __totbits = (size_t) (size) * GMP_NUMB_BITS - (__cnt - GMP_NAIL_BITS);\
+                                                                          \

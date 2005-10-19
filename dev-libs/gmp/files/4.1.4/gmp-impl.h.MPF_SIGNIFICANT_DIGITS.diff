@@ -1,0 +1,25 @@
+Index: gmp-impl.h
+===================================================================
+RCS file: /home/cvsfiles/gmp/gmp-impl.h,v
+retrieving revision 1.281.2.14
+retrieving revision 1.281.2.15
+diff -c -r1.281.2.14 -r1.281.2.15
+*** gmp-impl.h	13 Jan 2005 01:32:36 -0000	1.281.2.14
+--- gmp-impl.h	23 May 2005 17:54:15 -0000	1.281.2.15
+***************
+*** 2783,2789 ****
+  #define MPF_SIGNIFICANT_DIGITS(n, base, prec)                           \
+    do {                                                                  \
+      ASSERT (base >= 2 && base < numberof (mp_bases));                   \
+!     (n) = 2 + (size_t) ((((prec) - 1) * BITS_PER_MP_LIMB)               \
+                          * mp_bases[(base)].chars_per_bit_exactly);      \
+    } while (0)
+  
+--- 2783,2789 ----
+  #define MPF_SIGNIFICANT_DIGITS(n, base, prec)                           \
+    do {                                                                  \
+      ASSERT (base >= 2 && base < numberof (mp_bases));                   \
+!     (n) = 2 + (size_t) ((((size_t) (prec) - 1) * GMP_NUMB_BITS)         \
+                          * mp_bases[(base)].chars_per_bit_exactly);      \
+    } while (0)
+  

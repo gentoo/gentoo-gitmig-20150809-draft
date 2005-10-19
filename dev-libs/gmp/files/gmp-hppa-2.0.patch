@@ -1,0 +1,738 @@
+--- gmp/mpn/pa64/mul_1.asm
++++ gmp/mpn/pa64/mul_1.asm
+@@ -139,14 +139,14 @@
+ 	fstd		%fr24, -0x80(%r30)	C low product to  -0x80..-0x79
+ 	addib,<>	-1, %r5, L(two_or_more)
+ 	fstd		%fr25, -0x68(%r30)	C high product to -0x68..-0x61
+-L(one)
++.label L(one)
+ 	ldd		-0x78(%r30), p032a1
+ 	ldd		-0x70(%r30), p032a2
+ 	ldd		-0x80(%r30), p000a
+ 	b		L(0_one_out)
+ 	ldd		-0x68(%r30), p064a
+ 
+-L(two_or_more)
++.label L(two_or_more)
+ 	fldd		0(up), %fr4
+ 	ldo		8(up), up
+ 	xmpyu		%fr8R, %fr4L, %fr22
+@@ -162,7 +162,7 @@
+ 	ldd		-0x68(%r30), p064a
+ 	addib,<>	-1, %r5, L(three_or_more)
+ 	fstd		%fr25, -0x68(%r30)	C high product to -0x68..-0x61
+-L(two)
++.label L(two)
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+ 	depd,z		m032, 31, 32, ma000
+@@ -170,7 +170,7 @@
+ 	b		L(0_two_out)
+ 	depd		m096, 31, 32, ma064
+ 
+-L(three_or_more)
++.label L(three_or_more)
+ 	fldd		0(up), %fr4
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+@@ -178,7 +178,7 @@
+ 	extrd,u		m032, 31, 32, ma064
+ dnl	addib,=		-1, %r5, L(0_out)
+ 	depd		m096, 31, 32, ma064
+-L(oop0)
++.label L(oop0)
+ dnl	xmpyu		%fr8R, %fr4L, %fr22
+ dnl	xmpyu		%fr8L, %fr4R, %fr23
+ dnl	ldd		-0x78(%r30), p032a1
+@@ -212,7 +212,7 @@
+ dnl	extrd,u		m032, 31, 32, ma064
+ dnl	addib,<>	-1, %r5, L(oop0)
+ dnl	depd		m096, 31, 32, ma064
+-L(0_out)
++.label L(0_out)
+ 	ldo		8(up), up
+ 	xmpyu		%fr8R, %fr4L, %fr22
+ 	xmpyu		%fr8L, %fr4R, %fr23
+@@ -237,7 +237,7 @@
+ 	depd,z		m032, 31, 32, ma000
+ 	extrd,u		m032, 31, 32, ma064
+ 	depd		m096, 31, 32, ma064
+-L(0_two_out)
++.label L(0_two_out)
+ 	ldd		-0x78(%r30), p032a1
+ 	ldd		-0x70(%r30), p032a2
+ 	ldo		8(rp), rp
+@@ -248,7 +248,7 @@
+ 	add		ma000, s000, s000
+ 	add,dc		ma064, climb, climb
+ 	std		s000, -8(rp)
+-L(0_one_out)
++.label L(0_one_out)
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+ 	depd,z		m032, 31, 32, ma000
+@@ -266,7 +266,7 @@
+ 
+ dnl 4-way unrolled code.
+ 
+-L(BIG)
++.label L(BIG)
+ 
+ define(`p032a1',`%r1')	dnl
+ define(`p032a2',`%r19')	dnl
+@@ -317,7 +317,7 @@
+ ',`	extrd,u		n, 61, 30, n		C right shift 2, zero extend
+ ')
+ 
+-L(4_or_more)
++.label L(4_or_more)
+ 	fldd		0(up), %fr4
+ 	fldd		8(up), %fr5
+ 	fldd		16(up), %fr6
+@@ -366,7 +366,7 @@
+ 	b		L(end1)
+ 	nop
+ 
+-L(8_or_more)
++.label L(8_or_more)
+ 	fstd		%fr28, -0x18(%r30)	C mid product to  -0x18..-0x11
+ 	fstd		%fr29, -0x10(%r30)	C mid product to  -0x10..-0x09
+ 	ldo		32(up), up
+@@ -413,7 +413,7 @@
+ 	fstd		%fr27, -0x50(%r30)	C mid product to  -0x50..-0x49
+ 	addib,=		-1, n, L(end2)
+ 	xmpyu		%fr8L, %fr7L, %fr27
+-L(oop)
++.label L(oop)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -519,7 +519,7 @@
+ 	addib,<>	-1, n, L(oop)
+ 	ldo		32(rp), rp
+ 
+-L(end2)
++.label L(end2)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -576,7 +576,7 @@
+ 	ldd		-0x10(%r30), p224d2
+ 	ldo		32(rp), rp
+ 
+-L(end1)
++.label L(end1)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -622,7 +622,7 @@
+ 	ldd		-0xd8(%r30), %r8
+ 	ldd		-0xe0(%r30), %r7
+ 	ldd		-0xe8(%r30), %r6
+-L(done)
++.label L(done)
+ ifdef(`HAVE_ABI_2_0w',
+ `	copy		climb, %r28
+ ',`	extrd,u		climb, 63, 32, %r29
+--- gmp/mpn/pa64/sqr_diagonal.asm
++++ gmp/mpn/pa64/sqr_diagonal.asm
+@@ -57,7 +57,8 @@
+ 	addib,=		-1,n,L(end2)
+ 	ldo		16(rp),rp
+ 
+-L(loop)	fldds,ma	8(up),%fr8		C load next up limb
++.label L(loop)
++	fldds,ma	8(up),%fr8		C load next up limb
+ 	xmpyu		%fr4l,%fr4r,%fr6
+ 	fstd		%fr6,-128(%r30)
+ 	xmpyu		%fr4r,%fr4r,%fr5	C multiply in fp regs
+@@ -95,7 +96,8 @@
+ 	addib,<>	-1,n,L(loop)
+ 	ldo		16(rp),rp
+ 
+-L(end2)	xmpyu		%fr4l,%fr4r,%fr6
++.label L(end2)
++	xmpyu		%fr4l,%fr4r,%fr6
+ 	fstd		%fr6,-128(%r30)
+ 	xmpyu		%fr4r,%fr4r,%fr5
+ 	fstd		%fr5,0(rp)
+@@ -123,7 +125,8 @@
+ 	bve		(%r2)
+ 	ldo		-128(%r30),%r30
+ 
+-L(exit)	xmpyu		%fr8l,%fr8r,%fr10
++.label L(exit)
++	xmpyu		%fr8l,%fr8r,%fr10
+ 	fstd		%fr10,-120(%r30)
+ 	xmpyu		%fr8r,%fr8r,%fr9
+ 	fstd		%fr9,0(rp)
+@@ -155,7 +158,8 @@
+ 	bve		(%r2)
+ 	ldo		-128(%r30),%r30
+ 
+-L(end1)	xmpyu		%fr8l,%fr8r,%fr10
++.label L(end1)
++	xmpyu		%fr8l,%fr8r,%fr10
+ 	fstd		%fr10,-128(%r30)
+ 	xmpyu		%fr8r,%fr8r,%fr9
+ 	fstd		%fr9,0(rp)
+--- gmp/mpn/pa64/lshift.asm
++++ gmp/mpn/pa64/lshift.asm
+@@ -65,36 +65,45 @@
+ 	b		L(7)
+ 	copy		%r21, %r20
+ 
+-L(loop)
+-L(0)	ldd		-16(up), %r20
++.label L(loop)
++.label L(0)
++	ldd		-16(up), %r20
+ 	shrpd		%r21, %r20, %sar, %r21
+ 	std		%r21, -8(rp)
+-L(7)	ldd		-24(up), %r21
++.label L(7)
++	ldd		-24(up), %r21
+ 	shrpd		%r20, %r21, %sar, %r20
+ 	std		%r20, -16(rp)
+-L(6)	ldd		-32(up), %r20
++.label L(6)
++	ldd		-32(up), %r20
+ 	shrpd		%r21, %r20, %sar, %r21
+ 	std		%r21, -24(rp)
+-L(5)	ldd		-40(up), %r21
++.label L(5)
++	ldd		-40(up), %r21
+ 	shrpd		%r20, %r21, %sar, %r20
+ 	std		%r20, -32(rp)
+-L(4)	ldd		-48(up), %r20
++.label L(4)
++	ldd		-48(up), %r20
+ 	shrpd		%r21, %r20, %sar, %r21
+ 	std		%r21, -40(rp)
+-L(3)	ldd		-56(up), %r21
++.label L(3)
++	ldd		-56(up), %r21
+ 	shrpd		%r20, %r21, %sar, %r20
+ 	std		%r20, -48(rp)
+-L(2)	ldd		-64(up), %r20
++.label L(2)
++	ldd		-64(up), %r20
+ 	shrpd		%r21, %r20, %sar, %r21
+ 	std		%r21, -56(rp)
+-L(1)	ldd		-72(up), %r21
++.label L(1)
++	ldd		-72(up), %r21
+ 	ldo		-64(up), up
+ 	shrpd		%r20, %r21, %sar, %r20
+ 	std		%r20, -64(rp)
+ 	addib,>		-8, n, L(loop)
+ 	ldo		-64(rp), rp
+ 
+-L(end)	shrpd		%r21, %r0, %sar, %r21
++.label L(end)
++	shrpd		%r21, %r0, %sar, %r21
+ 	std		%r21, -8(rp)
+ 	bve		(%r2)
+ ifdef(`HAVE_ABI_2_0w',
+--- gmp/mpn/pa64/add_n.asm
++++ gmp/mpn/pa64/add_n.asm
+@@ -48,35 +48,43 @@
+ 	blr		%r28, %r0		C branch into loop
+ 	add		%r0, %r0, %r0		C reset carry
+ 
+-L(loop)	ldd		0(up), %r20
++.label L(loop)
++	ldd		0(up), %r20
+ 	ldd		0(vp), %r31
+ 	add,dc		%r20, %r31, %r20
+ 	std		%r20, 0(rp)
+-L(7)	ldd		8(up), %r21
++.label L(7)
++	ldd		8(up), %r21
+ 	ldd		8(vp), %r19
+ 	add,dc		%r21, %r19, %r21
+ 	std		%r21, 8(rp)
+-L(6)	ldd		16(up), %r20
++.label L(6)
++	ldd		16(up), %r20
+ 	ldd		16(vp), %r31
+ 	add,dc		%r20, %r31, %r20
+ 	std		%r20, 16(rp)
+-L(5)	ldd		24(up), %r21
++.label L(5)
++	ldd		24(up), %r21
+ 	ldd		24(vp), %r19
+ 	add,dc		%r21, %r19, %r21
+ 	std		%r21, 24(rp)
+-L(4)	ldd		32(up), %r20
++.label L(4)
++	ldd		32(up), %r20
+ 	ldd		32(vp), %r31
+ 	add,dc		%r20, %r31, %r20
+ 	std		%r20, 32(rp)
+-L(3)	ldd		40(up), %r21
++.label L(3)
++	ldd		40(up), %r21
+ 	ldd		40(vp), %r19
+ 	add,dc		%r21, %r19, %r21
+ 	std		%r21, 40(rp)
+-L(2)	ldd		48(up), %r20
++.label L(2)
++	ldd		48(up), %r20
+ 	ldd		48(vp), %r31
+ 	add,dc		%r20, %r31, %r20
+ 	std		%r20, 48(rp)
+-L(1)	ldd		56(up), %r21
++.label L(1)
++	ldd		56(up), %r21
+ 	ldd		56(vp), %r19
+ 	add,dc		%r21, %r19, %r21
+ 	ldo		64(up), up
+--- gmp/mpn/pa64/rshift.asm
++++ gmp/mpn/pa64/rshift.asm
+@@ -62,36 +62,45 @@
+ 	b		L(7)
+ 	copy		%r21, %r20
+ 
+-L(loop)
+-L(0)	ldd		8(up), %r20
++.label L(loop)
++.label L(0)
++	ldd		8(up), %r20
+ 	shrpd		%r20, %r21, %sar, %r21
+ 	std		%r21, 0(rp)
+-L(7)	ldd		16(up), %r21
++.label L(7)
++	ldd		16(up), %r21
+ 	shrpd		%r21, %r20, %sar, %r20
+ 	std		%r20, 8(rp)
+-L(6)	ldd		24(up), %r20
++.label L(6)
++	ldd		24(up), %r20
+ 	shrpd		%r20, %r21, %sar, %r21
+ 	std		%r21, 16(rp)
+-L(5)	ldd		32(up), %r21
++.label L(5)
++	ldd		32(up), %r21
+ 	shrpd		%r21, %r20, %sar, %r20
+ 	std		%r20, 24(rp)
+-L(4)	ldd		40(up), %r20
++.label L(4)
++	ldd		40(up), %r20
+ 	shrpd		%r20, %r21, %sar, %r21
+ 	std		%r21, 32(rp)
+-L(3)	ldd		48(up), %r21
++.label L(3)
++	ldd		48(up), %r21
+ 	shrpd		%r21, %r20, %sar, %r20
+ 	std		%r20, 40(rp)
+-L(2)	ldd		56(up), %r20
++.label L(2)
++	ldd		56(up), %r20
+ 	shrpd		%r20, %r21, %sar, %r21
+ 	std		%r21, 48(rp)
+-L(1)	ldd		64(up), %r21
++.label L(1)
++	ldd		64(up), %r21
+ 	ldo		64(up), up
+ 	shrpd		%r21, %r20, %sar, %r20
+ 	std		%r20, 56(rp)
+ 	addib,>		-8, n, L(loop)
+ 	ldo		64(rp), rp
+ 
+-L(end)	shrpd		%r0, %r21, %sar, %r21
++.label L(end)
++	shrpd		%r0, %r21, %sar, %r21
+ 	std		%r21, 0(rp)
+ 	bve		(%r2)
+ ifdef(`HAVE_ABI_2_0w',
+--- gmp/mpn/pa64/addmul_1.asm
++++ gmp/mpn/pa64/addmul_1.asm
+@@ -141,14 +141,14 @@
+ 	fstd		%fr24, -0x80(%r30)	C low product to  -0x80..-0x79
+ 	addib,<>	-1, %r5, L(two_or_more)
+ 	fstd		%fr25, -0x68(%r30)	C high product to -0x68..-0x61
+-L(one)
++.label L(one)
+ 	ldd		-0x78(%r30), p032a1
+ 	ldd		-0x70(%r30), p032a2
+ 	ldd		-0x80(%r30), p000a
+ 	b		L(0_one_out)
+ 	ldd		-0x68(%r30), p064a
+ 
+-L(two_or_more)
++.label L(two_or_more)
+ 	fldd		0(up), %fr4
+ 	ldo		8(up), up
+ 	xmpyu		%fr8R, %fr4L, %fr22
+@@ -164,7 +164,7 @@
+ 	ldd		-0x68(%r30), p064a
+ 	addib,<>	-1, %r5, L(three_or_more)
+ 	fstd		%fr25, -0x68(%r30)	C high product to -0x68..-0x61
+-L(two)
++.label L(two)
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+ 	depd,z		m032, 31, 32, ma000
+@@ -173,7 +173,7 @@
+ 	b		L(0_two_out)
+ 	depd		m096, 31, 32, ma064
+ 
+-L(three_or_more)
++.label L(three_or_more)
+ 	fldd		0(up), %fr4
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+@@ -182,7 +182,7 @@
+ 	ldd		0(rp), r000
+ dnl	addib,=		-1, %r5, L(0_out)
+ 	depd		m096, 31, 32, ma064
+-L(oop0)
++.label L(oop0)
+ dnl	xmpyu		%fr8R, %fr4L, %fr22
+ dnl	xmpyu		%fr8L, %fr4R, %fr23
+ dnl	ldd		-0x78(%r30), p032a1
+@@ -219,7 +219,7 @@
+ dnl	ldd		0(rp), r000
+ dnl	addib,<>	-1, %r5, L(oop0)
+ dnl	depd		m096, 31, 32, ma064
+-L(0_out)
++.label L(0_out)
+ 	ldo		8(up), up
+ 	xmpyu		%fr8R, %fr4L, %fr22
+ 	xmpyu		%fr8L, %fr4R, %fr23
+@@ -247,7 +247,7 @@
+ 	extrd,u		m032, 31, 32, ma064
+ 	ldd		0(rp), r000
+ 	depd		m096, 31, 32, ma064
+-L(0_two_out)
++.label L(0_two_out)
+ 	ldd		-0x78(%r30), p032a1
+ 	ldd		-0x70(%r30), p032a2
+ 	ldo		8(rp), rp
+@@ -260,7 +260,7 @@
+ 	add		r000, s000, s000
+ 	add,dc		%r0, climb, climb
+ 	std		s000, -8(rp)
+-L(0_one_out)
++.label L(0_one_out)
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+ 	depd,z		m032, 31, 32, ma000
+@@ -281,7 +281,7 @@
+ 
+ dnl 4-way unrolled code.
+ 
+-L(BIG)
++.label L(BIG)
+ 
+ define(`p032a1',`%r1')	dnl
+ define(`p032a2',`%r19')	dnl
+@@ -337,7 +337,7 @@
+ ',`	extrd,u		n, 61, 30, n		C right shift 2, zero extend
+ ')
+ 
+-L(4_or_more)
++.label L(4_or_more)
+ 	fldd		0(up), %fr4
+ 	fldd		8(up), %fr5
+ 	fldd		16(up), %fr6
+@@ -386,7 +386,7 @@
+ 	b		L(end1)
+ 	nop
+ 
+-L(8_or_more)
++.label L(8_or_more)
+ 	fstd		%fr28, -0x18(%r30)	C mid product to  -0x18..-0x11
+ 	fstd		%fr29, -0x10(%r30)	C mid product to  -0x10..-0x09
+ 	ldo		32(up), up
+@@ -433,7 +433,7 @@
+ 	fstd		%fr27, -0x50(%r30)	C mid product to  -0x50..-0x49
+ 	addib,=		-1, n, L(end2)
+ 	xmpyu		%fr8L, %fr7L, %fr27
+-L(oop)
++.label L(oop)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -550,7 +550,7 @@
+ 	addib,<>	-1, n, L(oop)
+ 	ldo		32(rp), rp
+ 
+-L(end2)
++.label L(end2)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -616,7 +616,7 @@
+ 	ldd		-0x10(%r30), p224d2
+ 	ldo		32(rp), rp
+ 
+-L(end1)
++.label L(end1)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -671,7 +671,7 @@
+ 	ldd		-0xd8(%r30), %r8
+ 	ldd		-0xe0(%r30), %r7
+ 	ldd		-0xe8(%r30), %r6
+-L(done)
++.label L(done)
+ ifdef(`HAVE_ABI_2_0w',
+ `	copy		climb, %r28
+ ',`	extrd,u		climb, 63, 32, %r29
+--- gmp/mpn/pa64/submul_1.asm
++++ gmp/mpn/pa64/submul_1.asm
+@@ -139,14 +139,14 @@
+ 	fstd		%fr24, -0x80(%r30)	C low product to  -0x80..-0x79
+ 	addib,<>	-1, %r5, L(two_or_more)
+ 	fstd		%fr25, -0x68(%r30)	C high product to -0x68..-0x61
+-L(one)
++.label L(one)
+ 	ldd		-0x78(%r30), p032a1
+ 	ldd		-0x70(%r30), p032a2
+ 	ldd		-0x80(%r30), p000a
+ 	b		L(0_one_out)
+ 	ldd		-0x68(%r30), p064a
+ 
+-L(two_or_more)
++.label L(two_or_more)
+ 	fldd		0(up), %fr4
+ 	ldo		8(up), up
+ 	xmpyu		%fr8R, %fr4L, %fr22
+@@ -162,7 +162,7 @@
+ 	ldd		-0x68(%r30), p064a
+ 	addib,<>	-1, %r5, L(three_or_more)
+ 	fstd		%fr25, -0x68(%r30)	C high product to -0x68..-0x61
+-L(two)
++.label L(two)
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+ 	depd,z		m032, 31, 32, ma000
+@@ -171,7 +171,7 @@
+ 	b		L(0_two_out)
+ 	depd		m096, 31, 32, ma064
+ 
+-L(three_or_more)
++.label L(three_or_more)
+ 	fldd		0(up), %fr4
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+@@ -180,7 +180,7 @@
+ 	ldd		0(rp), r000
+ dnl	addib,=		-1, %r5, L(0_out)
+ 	depd		m096, 31, 32, ma064
+-L(oop0)
++.label L(oop0)
+ dnl	xmpyu		%fr8R, %fr4L, %fr22
+ dnl	xmpyu		%fr8L, %fr4R, %fr23
+ dnl	ldd		-0x78(%r30), p032a1
+@@ -218,7 +218,7 @@
+ dnl	ldd		0(rp), r000
+ dnl	addib,<>	-1, %r5, L(oop0)
+ dnl	depd		m096, 31, 32, ma064
+-L(0_out)
++.label L(0_out)
+ 	ldo		8(up), up
+ 	xmpyu		%fr8R, %fr4L, %fr22
+ 	xmpyu		%fr8L, %fr4R, %fr23
+@@ -247,7 +247,7 @@
+ 	extrd,u		m032, 31, 32, ma064
+ 	ldd		0(rp), r000
+ 	depd		m096, 31, 32, ma064
+-L(0_two_out)
++.label L(0_two_out)
+ 	ldd		-0x78(%r30), p032a1
+ 	ldd		-0x70(%r30), p032a2
+ 	ldo		8(rp), rp
+@@ -261,7 +261,7 @@
+ 	sub,db		%r0, climb, climb
+ 	sub		%r0, climb, climb
+ 	std		s000, -8(rp)
+-L(0_one_out)
++.label L(0_one_out)
+ 	add		p032a1, p032a2, m032
+ 	add,dc		%r0, %r0, m096
+ 	depd,z		m032, 31, 32, ma000
+@@ -283,7 +283,7 @@
+ 
+ dnl 4-way unrolled code.
+ 
+-L(BIG)
++.label L(BIG)
+ 
+ define(`p032a1',`%r1')	dnl
+ define(`p032a2',`%r19')	dnl
+@@ -339,7 +339,7 @@
+ ',`	extrd,u		n, 61, 30, n		C right shift 2, zero extend
+ ')
+ 
+-L(4_or_more)
++.label L(4_or_more)
+ 	fldd		0(up), %fr4
+ 	fldd		8(up), %fr5
+ 	fldd		16(up), %fr6
+@@ -388,7 +388,7 @@
+ 	b		L(end1)
+ 	nop
+ 
+-L(8_or_more)
++.label L(8_or_more)
+ 	fstd		%fr28, -0x18(%r30)	C mid product to  -0x18..-0x11
+ 	fstd		%fr29, -0x10(%r30)	C mid product to  -0x10..-0x09
+ 	ldo		32(up), up
+@@ -435,7 +435,7 @@
+ 	fstd		%fr27, -0x50(%r30)	C mid product to  -0x50..-0x49
+ 	addib,=		-1, n, L(end2)
+ 	xmpyu		%fr8L, %fr7L, %fr27
+-L(oop)
++.label L(oop)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -553,7 +553,7 @@
+ 	addib,<>	-1, n, L(oop)
+ 	ldo		32(rp), rp
+ 
+-L(end2)
++.label L(end2)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -620,7 +620,7 @@
+ 	ldd		-0x10(%r30), p224d2
+ 	ldo		32(rp), rp
+ 
+-L(end1)
++.label L(end1)
+ 	add		p032a1, p032a2, m032
+ 	ldd		-0x80(%r30), p000a
+ 	add,dc		p096b1, p096b2, m096
+@@ -676,7 +676,7 @@
+ 	ldd		-0xd8(%r30), %r8
+ 	ldd		-0xe0(%r30), %r7
+ 	ldd		-0xe8(%r30), %r6
+-L(done)
++.label L(done)
+ ifdef(`HAVE_ABI_2_0w',
+ `	copy		climb, %r28
+ ',`	extrd,u		climb, 63, 32, %r29
+--- gmp/mpn/pa64/udiv_qrnnd.asm
++++ gmp/mpn/pa64/udiv_qrnnd.asm
+@@ -62,12 +62,13 @@
+ 	ldw		-60(%r30),%r23
+ ')
+ 	ldi		0,q
+-	cmpib,*>=	0,d,large_divisor
++	cmpib,*>=	0,d,L(large_divisor)
+ 	ldi		8,%r31		C setup loop counter
+ 
+ 	sub		%r0,d,dn
+-Loop	divstep divstep divstep divstep divstep divstep divstep divstep
+-	addib,<>	-1,%r31,Loop
++.label L(Loop)
++	divstep divstep divstep divstep divstep divstep divstep divstep
++	addib,<>	-1,%r31,L(Loop)
+ 	nop
+ 
+ ifdef(`HAVE_ABI_2_0n',
+@@ -77,7 +78,7 @@
+ 	bve		(%r2)
+ 	std		n1,0(remptr)	C store remainder
+ 
+-large_divisor
++.label L(large_divisor)
+ 	extrd,u		n0,63,1,%r19	C save lsb of dividend
+ 	shrpd		n1,n0,1,n0	C n0 = lo(n1n0 >> 1)
+ 	shrpd		%r0,n1,1,n1	C n1 = hi(n1n0 >> 1)
+@@ -86,11 +87,12 @@
+ 	add,l		%r20,d,d	C d = ceil(orig_d / 2)
+ 
+ 	sub		%r0,d,dn
+-Loop2	divstep divstep divstep divstep divstep divstep divstep divstep
+-	addib,<>	-1,%r31,Loop2
++.label L(Loop2)
++	divstep divstep divstep divstep divstep divstep divstep divstep
++	addib,<>	-1,%r31,L(Loop2)
+ 	nop
+ 
+-	cmpib,*=	0,%r20,even_divisor
++	cmpib,*=	0,%r20,L(even_divisor)
+ 	shladd		n1,1,%r19,n1	C shift in omitted dividend lsb
+ 
+ 	add		d,d,d		C restore orig...
+@@ -105,7 +107,7 @@
+ 	add,l		n1,dn,n1	C adjust remainder
+ 	add,dc		%r0,q,q		C adjust quotient
+ 
+-even_divisor
++.label L(even_divisor)
+ ifdef(`HAVE_ABI_2_0n',
+ `	copy		%r28,%r29
+ 	extrd,u		%r28,31,32,%r28
+--- gmp/mpn/pa64/sub_n.asm
++++ gmp/mpn/pa64/sub_n.asm
+@@ -47,35 +47,43 @@
+ 	blr		%r28, %r0		C branch into loop
+ 	sub		rp, %r22, rp		C offset rp and set carry
+ 
+-L(loop)	ldd		0(up), %r20
++.label L(loop)
++	ldd		0(up), %r20
+ 	ldd		0(vp), %r31
+ 	sub,db		%r20, %r31, %r20
+ 	std		%r20, 0(rp)
+-L(7)	ldd		8(up), %r21
++.label L(7)
++	ldd		8(up), %r21
+ 	ldd		8(vp), %r19
+ 	sub,db		%r21, %r19, %r21
+ 	std		%r21, 8(rp)
+-L(6)	ldd		16(up), %r20
++.label L(6)
++	ldd		16(up), %r20
+ 	ldd		16(vp), %r31
+ 	sub,db		%r20, %r31, %r20
+ 	std		%r20, 16(rp)
+-L(5)	ldd		24(up), %r21
++.label L(5)
++	ldd		24(up), %r21
+ 	ldd		24(vp), %r19
+ 	sub,db		%r21, %r19, %r21
+ 	std		%r21, 24(rp)
+-L(4)	ldd		32(up), %r20
++.label L(4)
++	ldd		32(up), %r20
+ 	ldd		32(vp), %r31
+ 	sub,db		%r20, %r31, %r20
+ 	std		%r20, 32(rp)
+-L(3)	ldd		40(up), %r21
++.label L(3)
++	ldd		40(up), %r21
+ 	ldd		40(vp), %r19
+ 	sub,db		%r21, %r19, %r21
+ 	std		%r21, 40(rp)
+-L(2)	ldd		48(up), %r20
++.label L(2)
++	ldd		48(up), %r20
+ 	ldd		48(vp), %r31
+ 	sub,db		%r20, %r31, %r20
+ 	std		%r20, 48(rp)
+-L(1)	ldd		56(up), %r21
++.label L(1)
++	ldd		56(up), %r21
+ 	ldd		56(vp),%r19
+ 	sub,db		%r21, %r19, %r21
+ 	ldo		64(up), up
+--- gmp/longlong.h
++++ gmp/longlong.h
+@@ -204,7 +204,7 @@
+ /* These macros are for ABI=2.0w.  In ABI=2.0n they can't be used, since GCC
+    (3.2) puts longlong into two adjacent 32-bit registers.  Presumably this
+    is just a case of no direct support for 2.0n but treating it like 1.0. */
+-#if defined (__GNUC__) && ! defined (_LONG_LONG_LIMB)
++#if defined (__GNUC__) && ! defined (_LONG_LONG_LIMB) && ! defined (__linux__)
+ #define add_ssaaaa(sh, sl, ah, al, bh, bl) \
+   __asm__ ("add %4,%5,%1\n\tadd,dc %2,%3,%0"				\
+ 	   : "=r" (sh), "=&r" (sl)					\

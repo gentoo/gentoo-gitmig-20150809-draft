@@ -1,0 +1,25 @@
+Index: mpn/generic/rootrem.c
+===================================================================
+RCS file: /home/cvsfiles/gmp/mpn/generic/rootrem.c,v
+retrieving revision 1.10
+retrieving revision 1.11
+diff -c -r1.10 -r1.11
+*** mpn/generic/rootrem.c	12 Jan 2003 02:23:05 -0000	1.10
+--- mpn/generic/rootrem.c	8 Apr 2005 09:30:42 -0000	1.11
+***************
+*** 94,100 ****
+  
+    xn = (xnb + GMP_NUMB_BITS - 1) / GMP_NUMB_BITS;
+  
+!   qp = TMP_ALLOC_LIMBS (un + 1);
+    xp = TMP_ALLOC_LIMBS (xn + 1);
+  
+    /* Set initial root to only ones.  This is an overestimate of the actual root
+--- 94,100 ----
+  
+    xn = (xnb + GMP_NUMB_BITS - 1) / GMP_NUMB_BITS;
+  
+!   qp = TMP_ALLOC_LIMBS (PP_ALLOC);
+    xp = TMP_ALLOC_LIMBS (xn + 1);
+  
+    /* Set initial root to only ones.  This is an overestimate of the actual root
