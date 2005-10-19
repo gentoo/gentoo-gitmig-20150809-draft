@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.190 2005/10/10 21:04:44 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.191 2005/10/19 13:24:54 nigoro Exp $
+
+  19 Oct 2005; Yuta SATOH <nigoro@gentoo.org> gtk+-2.8.6.ebuild:
+  Fixes #109089 by not applying the patch which fixes the problem of the
+  cursor key for ppc64.
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org> gtk+-2.6.8.ebuild:
   Stable on mips.

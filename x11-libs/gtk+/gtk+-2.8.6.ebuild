@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6.ebuild,v 1.1 2005/10/08 18:22:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6.ebuild,v 1.2 2005/10/19 13:24:54 nigoro Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -77,8 +77,6 @@ src_unpack() {
 	# easier, so even this should be amd64 specific.
 	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${FILESDIR}/${PN}-2.8.0-multilib.patch
 
-	# patch for ppc64 (#64359)
-	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
 	use ppc64 && append-flags -mminimal-toc
 
 	autoconf || die "autoconf failed"

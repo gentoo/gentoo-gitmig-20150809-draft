@@ -1,4 +1,7 @@
-MD5 c0897c3df5199069d97840182f6a89a1 ChangeLog 27262
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 abd3bedd6e1736cdd4892959c4350bf4 ChangeLog 27424
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r11 138
 MD5 f56b08a8f40b528e72b6406ea337c51c files/digest-gtk+-2.6.10 212
@@ -14,5 +17,12 @@ MD5 afb0e5aa8f6410c088c2e177a17efe5d gtk+-1.2.10-r10.ebuild 1719
 MD5 88d6d5cc6a5a4f0e0426646667134046 gtk+-1.2.10-r11.ebuild 1831
 MD5 d9750f9180ebd11501fbbe1768786b73 gtk+-2.6.10.ebuild 2826
 MD5 84922ae73641da1e89dc052f5fe89c9c gtk+-2.6.8.ebuild 2838
-MD5 a2f6a77434853ea8d70e47a53712525f gtk+-2.8.6.ebuild 3430
+MD5 0932776d5ee1eee66db5c66f4421b82c gtk+-2.8.6.ebuild 3342
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDVklV60LfUIagIAkRAuHYAKDzBycN7XBzHdswsBeSEgKMoQddhwCfTWRf
+zddVczVhynZ/S/ums97UP2k=
+=ymT3
+-----END PGP SIGNATURE-----
