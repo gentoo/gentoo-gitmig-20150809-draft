@@ -1,0 +1,22 @@
+So we can compile with gcc-2.x
+
+--- udev_rules.h
++++ udev_rules.h
+@@ -93,7 +93,7 @@
+ 		     ignore_remove:1;
+ 
+ 	size_t bufsize;
+-	char buf[];
++	char *buf;
+ };
+ 
+ struct udev_rules {
+--- udevd.h
++++ udevd.h
+@@ -76,5 +76,5 @@
+ 	char *physdevpath;
+ 	unsigned int timeout;
+ 	char *envp[UEVENT_NUM_ENVP+1];
+-	char envbuf[];
++	char *envbuf;
+ };

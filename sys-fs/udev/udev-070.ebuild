@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-070.ebuild,v 1.7 2005/10/18 13:11:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-070.ebuild,v 1.8 2005/10/19 00:27:29 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,8 +19,7 @@ RDEPEND="${DEPEND}
 # We need some changes for devfs type layout
 PROVIDE="virtual/dev-manager"
 
-if use static
-then
+if use static ; then
 	USE_KLIBC=true
 else
 	USE_KLIBC=false
@@ -38,10 +37,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# patches go here...
 	#epatch ${FILESDIR}/${P}-udev_volume_id.patch
+	epatch "${FILESDIR}"/${P}-gcc2.patch
 
 	# No need to clutter the logs ...
 	sed -ie '/^DEBUG/ c\DEBUG = false' Makefile
