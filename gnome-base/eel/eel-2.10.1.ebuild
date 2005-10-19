@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.10.1.ebuild,v 1.20 2005/10/17 13:08:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.10.1.ebuild,v 1.21 2005/10/19 18:51:22 seemant Exp $
 
-inherit gnome2
+inherit virtualx gnome2
 
 DESCRIPTION="The Eazel Extentions Library"
 HOMEPAGE="http://www.gnome.org/"
@@ -32,3 +32,12 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING THANKS README NEWS TODO MAINTAINERS"
 USE_DESTDIR="1"
+
+src_test() {
+	if hasq userpriv ${FEATURES} ;
+	then
+		Xmake check || die
+	else
+		einfo "Not running tests without userpriv"
+	fi
+}

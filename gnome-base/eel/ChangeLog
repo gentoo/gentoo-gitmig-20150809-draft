@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.126 2005/10/17 13:08:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.127 2005/10/19 18:51:22 seemant Exp $
+
+  19 Oct 2005; Seemant Kulleen <seemant@gentoo.org> eel-2.10.1.ebuild,
+  eel-2.12.1.ebuild:
+  fix the src_test in stable eel
 
   17 Oct 2005; Aron Griffis <agriffis@gentoo.org> eel-2.10.1.ebuild:
   Mark 2.10.1 stable on alpha
