@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e19f959a21e9afda5ee61802dcba87f3 ChangeLog 10644
+MD5 8ed971e842137f8b9c4ed21cca082173 ChangeLog 10749
 MD5 79b7fd0dcd4776ca1851d30a45275e78 curl-7.13.1.ebuild 1140
 MD5 c6b9b093ceb98fd1efbc9ca3700888ec curl-7.13.2.ebuild 2392
-MD5 d11e8c324a2ea372ed76a5381ae732ef curl-7.15.0.ebuild 2393
+MD5 72829f72f137100f32986ba0269ed314 curl-7.15.0.ebuild 2403
 MD5 159b437588320b2a3f726d3aa55890e5 files/digest-curl-7.13.1 65
 MD5 71c346cc704727e0bdaef7333521adeb files/digest-curl-7.13.2 130
 MD5 7bcded56c13b85b72508c00b8d3d7e73 files/digest-curl-7.15.0 65
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDVohBKRy60XGEcJIRAh04AJ0QSvfogeCSdb0XMc7ZT01sm2TvaQCgiZcl
-GgNNg/PAB6gcZwgzikd2E08=
-=dYI6
+iD8DBQFDVpubmdTrptrqvGERAom+AJ9jotZZUpfGwl4eAkf+O/PESo6kBACfU2W0
+yxp4xk4VoQtAPbO/ELltBUY=
+=SrAA
 -----END PGP SIGNATURE-----
