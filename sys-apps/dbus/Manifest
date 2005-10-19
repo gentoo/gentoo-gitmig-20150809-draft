@@ -1,33 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2440fb43629f09b85c050b3557459b05 dbus-0.23.4-r1.ebuild 3440
-MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
-MD5 bb8292b02298d653808cb0d0edd271da dbus-0.23.4.ebuild 3413
+MD5 77b90ef709735c7e7047040a5dcc48b7 ChangeLog 7491
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
 MD5 fedfd2a1281d8773038a8036a2a75ef8 dbus-0.23.2-r1.ebuild 3454
+MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
+MD5 fc8c0f943b0a6462694f8f3874a2db6c dbus-0.23.4-r1.ebuild 3448
+MD5 bb8292b02298d653808cb0d0edd271da dbus-0.23.4.ebuild 3413
 MD5 f8bd660039b662df08bede526975e30d dbus-0.36.2.ebuild 3606
-MD5 7901b4f27ef9dce93dc0b7b2e7523565 ChangeLog 7390
-MD5 f33c0c04340639e98aeaed265a7a6cd1 metadata.xml 307
-MD5 9308d3d8014ebf53a946c6219675ffc3 files/dbus-0.23.2-abi_api.patch 1893
-MD5 6e8a551caef6f55569fa4724d3cf1fe0 files/dbus 663
-MD5 db2189cd44431086b05de29565090861 files/dbus-0.23-qt.patch 816
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
-MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2 64
-MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4 64
-MD5 19d40bbc05e7cf89bf6d023540874468 files/digest-dbus-0.36.2 64
-MD5 403b7724a698be1509916991e87224a4 files/dbus-0.23-pyexecdir.patch 1131
+MD5 6e8a551caef6f55569fa4724d3cf1fe0 files/dbus 663
 MD5 768e500cfda89809161576ea2080a7aa files/dbus-0.23-dbus_session_connect.patch 1185
-MD5 b683f990bc7207366b4dac487a8d1416 files/digest-dbus-0.23-r3 62
-MD5 038de28fe446b2303c072e96df531500 files/dbus-0.23.2-version_fix.patch 496
-MD5 c66dfd4b07508de75f541b24035b74af files/dbus-0.23.2-python_api.patch 571
-MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2-r1 64
-MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
 MD5 f3ab25d85c77b7f859d4d2cefc787aef files/dbus-0.23-fd_set.patch 293
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDKfB3omPajV0RnrERAonIAJ0Zr4oFdRfp1trHyrs/NhcZ7cn1kACfXtky
-Gpdkj9JbcZRCSHSIngBODuY=
-=PlXP
------END PGP SIGNATURE-----
+MD5 403b7724a698be1509916991e87224a4 files/dbus-0.23-pyexecdir.patch 1131
+MD5 db2189cd44431086b05de29565090861 files/dbus-0.23-qt.patch 816
+MD5 9308d3d8014ebf53a946c6219675ffc3 files/dbus-0.23.2-abi_api.patch 1893
+MD5 c66dfd4b07508de75f541b24035b74af files/dbus-0.23.2-python_api.patch 571
+MD5 038de28fe446b2303c072e96df531500 files/dbus-0.23.2-version_fix.patch 496
+MD5 b683f990bc7207366b4dac487a8d1416 files/digest-dbus-0.23-r3 62
+MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2 64
+MD5 dd13fcb75ab8edf4c308de6a66f2b3e3 files/digest-dbus-0.23.2-r1 64
+MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4 64
+MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
+MD5 19d40bbc05e7cf89bf6d023540874468 files/digest-dbus-0.36.2 64
+MD5 f33c0c04340639e98aeaed265a7a6cd1 metadata.xml 307
