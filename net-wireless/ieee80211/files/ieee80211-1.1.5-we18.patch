@@ -1,6 +1,31 @@
-diff -Nup ieee80211-1.1.5-orig/ieee80211_crypt_tkip.c ieee80211-1.1.5/ieee80211_crypt_tkip.c
---- ieee80211-1.1.5-orig/ieee80211_crypt_tkip.c	2005-10-13 13:12:12.000000000 -0500
-+++ ieee80211-1.1.5/ieee80211_crypt_tkip.c	2005-10-18 14:31:51.000000000 -0500
+diff --git a/net/ieee80211.h b/net/ieee80211.h
+--- a/net/ieee80211.h
++++ b/net/ieee80211.h
+@@ -29,6 +29,21 @@
+ #include <linux/kernel.h>	/* ARRAY_SIZE */
+ #include <linux/wireless.h>
+ 
++#if WIRELESS_EXT < 18
++#define IW_QUAL_QUAL_UPDATED    0x01    /* Value was updated since last read */
++#define IW_QUAL_LEVEL_UPDATED   0x02
++#define IW_QUAL_NOISE_UPDATED   0x04
++#define IW_QUAL_ALL_UPDATED     0x07
++#define IW_QUAL_QUAL_INVALID    0x10    /* Driver doesn't provide value */
++#define IW_QUAL_LEVEL_INVALID   0x20
++#define IW_QUAL_NOISE_INVALID   0x40
++#define IW_QUAL_ALL_INVALID     0x70
++#endif
++
++#if WIRELESS_EXT < 19
++#define IW_QUAL_DBM             0x08    /* Level + Noise are dBm */
++#endif
++
+ #define IEEE80211_VERSION "1.1.5"
+ 
+ #define IEEE80211_DATA_LEN		2304
+diff --git a/ieee80211_crypt_tkip.c b/ieee80211_crypt_tkip.c
+--- a/ieee80211_crypt_tkip.c
++++ b/ieee80211_crypt_tkip.c
 @@ -555,6 +555,7 @@ static void ieee80211_michael_mic_failur
  					  struct ieee80211_hdr_4addr *hdr,
  					  int keyidx)
@@ -17,21 +42,10 @@ diff -Nup ieee80211-1.1.5-orig/ieee80211_crypt_tkip.c ieee80211-1.1.5/ieee80211_
  }
  
  static int ieee80211_michael_mic_verify(struct sk_buff *skb, int keyidx,
-diff -Nup ieee80211-1.1.5-orig/ieee80211_wx.c ieee80211-1.1.5/ieee80211_wx.c
---- ieee80211-1.1.5-orig/ieee80211_wx.c	2005-10-13 13:12:12.000000000 -0500
-+++ ieee80211-1.1.5/ieee80211_wx.c	2005-10-18 14:31:51.000000000 -0500
-@@ -41,6 +41,10 @@ static const char *ieee80211_modes[] = {
- 	"?", "a", "b", "ab", "g", "ag", "bg", "abg"
- };
- 
-+#if WIRELESS_EXT < 17
-+
-+#endif
-+
- #define MAX_CUSTOM_LEN 64
- static inline char *ipw2100_translate_scan(struct ieee80211_device *ieee,
- 					   char *start, char *stop,
-@@ -488,6 +492,7 @@ int ieee80211_wx_get_encode(struct ieee8
+diff --git a/ieee80211_wx.c b/ieee80211_wx.c
+--- a/ieee80211_wx.c
++++ b/ieee80211_wx.c
+@@ -488,6 +488,7 @@ int ieee80211_wx_get_encode(struct ieee8
  	return 0;
  }
  
@@ -39,7 +53,7 @@ diff -Nup ieee80211-1.1.5-orig/ieee80211_wx.c ieee80211-1.1.5/ieee80211_wx.c
  int ieee80211_wx_set_encodeext(struct ieee80211_device *ieee,
  			       struct iw_request_info *info,
  			       union iwreq_data *wrqu, char *extra)
-@@ -721,6 +726,7 @@ int ieee80211_wx_get_encodeext(struct ie
+@@ -721,6 +722,7 @@ int ieee80211_wx_get_encodeext(struct ie
  
  EXPORT_SYMBOL(ieee80211_wx_set_encodeext);
  EXPORT_SYMBOL(ieee80211_wx_get_encodeext);
@@ -47,4 +61,3 @@ diff -Nup ieee80211-1.1.5-orig/ieee80211_wx.c ieee80211-1.1.5/ieee80211_wx.c
  
  EXPORT_SYMBOL(ieee80211_wx_get_scan);
  EXPORT_SYMBOL(ieee80211_wx_set_encode);
-Common subdirectories: ieee80211-1.1.5-orig/net and ieee80211-1.1.5/net

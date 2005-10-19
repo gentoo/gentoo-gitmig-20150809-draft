@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.11 2005/10/19 13:06:03 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.12 2005/10/19 19:40:19 brix Exp $
+
+  19 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  files/ieee80211-1.1.5-we18.patch:
+  Updated pre-WE-18 patch.
 
   19 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   +files/ieee80211-1.1.5-we18.patch, ieee80211-1.1.5.ebuild:
