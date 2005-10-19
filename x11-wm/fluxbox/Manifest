@@ -1,4 +1,4 @@
-MD5 d29ac290d09edcae14e3585e0879a0ad ChangeLog 30578
+MD5 7276f3d6ec35ad6c1cdabe092d2bb61b ChangeLog 30677
 MD5 97574b9984c119ced3c259bd8c314588 files/0.9.10/fluxbox-0.9.10-all-about-me.patch 674
 MD5 ee36523cd5cf3281d0261244260840c9 files/0.9.10/fluxbox-0.9.10-amd64-font-fix.patch 774
 MD5 6c400d01c4fe9bea1d751ea6cbc718b5 files/0.9.10/fluxbox-0.9.10-eat-this-setlocale.patch 1295
@@ -39,6 +39,6 @@ MD5 66b6f17a72007858528df08e2f9ae678 fluxbox-0.9.11.ebuild 4783
 MD5 335240c333191381fae47a37c9f9f0e8 fluxbox-0.9.12-r1.ebuild 5120
 MD5 b75091771835d3197ea941ceed0efcf4 fluxbox-0.9.13-r1.ebuild 4160
 MD5 dd94d6b0f9297b6fd140373fd7652cd5 fluxbox-0.9.13.ebuild 4022
-MD5 e2a670c22a6520aabde93c49cbe4cf87 fluxbox-0.9.14-r1.ebuild 4467
+MD5 cc1807fb8bc545c3d686957873382d1c fluxbox-0.9.14-r1.ebuild 4466
 MD5 ba3c40b11884514f9fa692fd8e9788b4 fluxbox-0.9.9.ebuild 1700
 MD5 fb91a86bbf58cb4d7e40f9536c319766 metadata.xml 437
