@@ -1,4 +1,4 @@
-MD5 3a5bc47bf49bc213c5a8d8e3ca06b655 ChangeLog 5812
+MD5 5d439633e96c5f5a7837cd407a693490 ChangeLog 6015
 MD5 fb41d7c55db5124d7488a923e4223576 files/0.88-bigendian.patch 478
 MD5 0479a09fdd4ce855d35e36563cab4743 files/0.88-errno.patch 239
 MD5 b36e99b422384451ac68b3a9b31b7ed6 files/0.88-head-1.patch 1403
@@ -16,6 +16,6 @@ MD5 66ed278686866a3187b68d81fe47fa24 metadata.xml 592
 MD5 38badb1189a3476d5066e21ab764aef1 ucspi-tcp-0.88-r10.ebuild 2341
 MD5 e01f5cc6f4c8c36cde32a1f14dfe8ba0 ucspi-tcp-0.88-r11.ebuild 2427
 MD5 9b7edefc3244d63241311cb3b66b1a44 ucspi-tcp-0.88-r12.ebuild 2574
-MD5 aecb4bd62f2e8f3c55abdaa9baa9eed0 ucspi-tcp-0.88-r13.ebuild 2612
+MD5 fe0db462f0ec7c282c9a6e9ffaec8c67 ucspi-tcp-0.88-r13.ebuild 2613
 MD5 f28315c57485584788c9824481bc7603 ucspi-tcp-0.88-r8.ebuild 2148
 MD5 76034b124658a585b29a772acbf2b798 ucspi-tcp-0.88-r9.ebuild 2246

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r13.ebuild,v 1.1 2005/10/15 21:54:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r13.ebuild,v 1.2 2005/10/19 18:40:41 hansmi Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,6 +37,7 @@ src_unpack() {
 		epatch ${WORKDIR}/ucspi-tcp-0.88-ipv6.${IPV6_PATCH}
 		# Fixes bug 18892
 		epatch ${FILESDIR}/${PV}-bigendian.patch
+		epatch ${FILESDIR}/${PV}-tcprules.patch
 	else
 		# This is already present in ipv6 patch
 		epatch ${FILESDIR}/${PV}-errno.patch
@@ -54,7 +55,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-head-1.patch
 	epatch ${FILESDIR}/${PV}-rblsmtpd-ignore-on-RELAYCLIENT.patch
 	epatch ${FILESDIR}/${PV}-limits.patch
-	epatch ${FILESDIR}/${PV}-tcprules.patch
 
 	tc-export CC
 	echo "${CC} ${CFLAGS}" > conf-cc

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.40 2005/10/15 21:54:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.41 2005/10/19 18:40:41 hansmi Exp $
+
+  19 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ucspi-tcp-0.88-r13.ebuild:
+  Moved the tcprules patch so it only gets applied when using IPv6. The
+  non-ipv6 version isn't affected by this bug.
 
 *ucspi-tcp-0.88-r13 (15 Oct 2005)
 
