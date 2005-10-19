@@ -1,4 +1,4 @@
-MD5 ea914fa409d32c89de3b569f6be4e388 ChangeLog 3981
+MD5 5235b4df22d5f10fbc022a4088a3e517 ChangeLog 4175
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-kjsembed-3.3.1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kjsembed-3.4.1 221
 MD5 8b94700e5ddd1504207b279995e101c7 files/digest-kjsembed-3.4.2 300
@@ -9,5 +9,5 @@ MD5 2ab598379ff4129787909fdbc4339d43 kjsembed-3.3.1.ebuild 680
 MD5 d7596490e67b0da2db1d138218dab8ba kjsembed-3.4.1.ebuild 629
 MD5 90104d9c951529e4ec9b23197274f3d5 kjsembed-3.4.2.ebuild 643
 MD5 f90cb4951311d01815249a6bbd86a93e kjsembed-3.4.3.ebuild 643
-MD5 01fbfd81b6131e927574ef394c7c3929 kjsembed-3.5.0_beta2.ebuild 606
+MD5 b6d320c72f270222eb5da815cc6b940d kjsembed-3.5.0_beta2.ebuild 612
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

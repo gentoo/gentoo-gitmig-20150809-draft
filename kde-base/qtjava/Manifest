@@ -1,4 +1,4 @@
-MD5 c2aaaa6a4e1681e51313ef266e88c765 ChangeLog 2454
+MD5 3d22ab3a4f54c942e053098138461ccb ChangeLog 2642
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-qtjava-3.3.2 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtjava-3.4.1 221
 MD5 f6bd746271de83bcbcacc04a445d590f files/digest-qtjava-3.4.3 71
@@ -8,4 +8,4 @@ MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 be6ae9de13610751d4b751c0a6e438ba qtjava-3.3.2.ebuild 943
 MD5 38127ecd985ccba4d59543bea433a552 qtjava-3.4.1.ebuild 962
 MD5 7ec3f30e7acdfd5789621603039e7620 qtjava-3.4.3.ebuild 962
-MD5 257b953cee2e931163e0a3af56860e27 qtjava-3.5.0_beta2.ebuild 945
+MD5 8b0c61bc4ccc78bdfa63441d0db83ca9 qtjava-3.5.0_beta2.ebuild 951

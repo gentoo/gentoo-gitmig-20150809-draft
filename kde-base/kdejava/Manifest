@@ -1,4 +1,4 @@
-MD5 021749b4142db6e04b2e6b41a715341e ChangeLog 2808
+MD5 211da7b758fdba8bc0f86fe2dc07cbbd ChangeLog 2998
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-kdejava-3.3.1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-kdejava-3.4.1 221
 MD5 f6bd746271de83bcbcacc04a445d590f files/digest-kdejava-3.4.3 71
@@ -9,5 +9,5 @@ MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 e3ad32e72065b892d2fe02daebcf73d0 kdejava-3.3.1.ebuild 1537
 MD5 a0cbdd2cea95d5ccf2f9116e467fe3fa kdejava-3.4.1.ebuild 1458
 MD5 cc57af7c265295470e0b935845a3ba58 kdejava-3.4.3.ebuild 1473
-MD5 8e286572148055f59f2a293d45c94a07 kdejava-3.5.0_beta2.ebuild 1456
+MD5 17508d2f9626b7e50e84da1a5fb414cd kdejava-3.5.0_beta2.ebuild 1462
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
