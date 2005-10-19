@@ -5,9 +5,10 @@ MD5 3252fa596db43411fe94d7a5ce1392d2 gentoo-vdr-scripts-0.1_alpha9.ebuild 1521
 MD5 95ba83ec48404fdd7b7ea09f83f0c498 gentoo-vdr-scripts-0.1_alpha4.ebuild 1060
 MD5 27b8715054e25aecbc713a19e3c54e13 gentoo-vdr-scripts-0.1_alpha6.ebuild 1109
 MD5 c65d5798b45144fc4a4d77a9594fd150 gentoo-vdr-scripts-0.1_alpha1.ebuild 831
+MD5 46acbcee63ea93bebb32e8d7ba497d78 gentoo-vdr-scripts-0.1_alpha10.ebuild 1522
 MD5 636cc9a6303ab06a9b245375d6d2e388 gentoo-vdr-scripts-0.1_alpha8.ebuild 1521
 MD5 6e40fa5403e7f7e380669ea7c6b8b733 gentoo-vdr-scripts-0.1_alpha3.ebuild 756
-MD5 05905be90437e51c4b3193b1c539e2d7 ChangeLog 2656
+MD5 348373e7825129734fa996249410d2b1 ChangeLog 2817
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 MD5 cc3806f7a39109c105d0603dc651edb4 files/gentoo-vdr-scripts-0.1_alpha1-merge-commands.diff 1785
 MD5 b8fba7f5ebd2c87f79834578f56c2a31 files/digest-gentoo-vdr-scripts-0.1_alpha1 76
@@ -20,3 +21,4 @@ MD5 cbf2cf556659a63f7b7ec50b8d0fdb5f files/digest-gentoo-vdr-scripts-0.1_alpha7 
 MD5 249777d3f71c8756d66384c9091a8e6c files/digest-gentoo-vdr-scripts-0.1_alpha8 77
 MD5 ebb1d4701ce717646380f2350c060d4a files/digest-gentoo-vdr-scripts-0.1_alpha9 77
 MD5 87da33b96f1f2cd1a018545f67f8d0e6 files/gentoo-vdr-scripts-0.1_alpha4-video-parameter.diff 1275
+MD5 3ed8c7ed5b16f567b87b0be74cc40b88 files/digest-gentoo-vdr-scripts-0.1_alpha10 78
