@@ -1,4 +1,4 @@
 MD5 fab83bd18f293ff3cbf79d218d7aec88 ChangeLog 924
-MD5 8c57d578c5fbd470c1740de251696531 xf86-input-keyboard-1.0.0.ebuild 492
-MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 d3ad8f46a3d9db56229bec8b9d63f650 files/digest-xf86-input-keyboard-1.0.0 78
+MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 713956ea8280d1985d48b4749c290496 xf86-input-keyboard-1.0.0.ebuild 498
