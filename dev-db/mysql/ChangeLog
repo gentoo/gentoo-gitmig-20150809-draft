@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.246 2005/10/18 16:14:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.247 2005/10/19 01:44:17 cryos Exp $
+
+  19 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> mysql-4.1.14.ebuild:
+  Marked stable on amd64, bug 109301.
 
   18 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.14.ebuild:
   Addressed problem in src_test() (reverted to bash mysql-test program)
