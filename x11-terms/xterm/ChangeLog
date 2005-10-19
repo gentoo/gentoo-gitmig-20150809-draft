@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.110 2005/10/19 14:44:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.111 2005/10/19 14:54:27 seemant Exp $
+
+  19 Oct 2005; Seemant Kulleen <seemant@gentoo.org> xterm-205.ebuild:
+  remove postinst message about security, since that issue is old and dead.
+  Added the doc use flag which is used to optionally create the ctlseqs.txt
+  document, installed into /usr/share/doc. The latter is at the request of Joe
+  Wells in bug #108053
 
 *xterm-205 (19 Oct 2005)
 
