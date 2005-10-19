@@ -1,12 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.109 2005/10/19 14:43:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.110 2005/10/19 14:44:45 seemant Exp $
 
 *xterm-205 (19 Oct 2005)
 
   19 Oct 2005; Seemant Kulleen <seemant@gentoo.org> +xterm-205.ebuild:
   new version, and I'm a month behind, for crying out loud. This version
-  should fix bug #105369 and bug #100728
+  should fix bug #105369 and bug #100728. Want to think Martin Ehmsen in
+  bug #109101 for notifying me of the new release.
 
   03 Oct 2005; Seemant Kulleen <seemant@gentoo.org> -xterm-200-r3.ebuild:
   204 is now stable, (closing bug #10133) -- thanks to all the arch teams
