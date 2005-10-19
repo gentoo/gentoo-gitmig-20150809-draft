@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 6fc15ee3b6ee6184b9a0b65d5453c634 ChangeLog 742
 MD5 46a1d838b5b9f7ad952de8ee586fde52 dmraid-1.0.0_rc8-r1.ebuild 1802
-MD5 33fde53a400fbc7df899c9f27f5e5bca ChangeLog 500
-MD5 3bb7e945a8c9e94592bf5ad614aeb57a metadata.xml 449
 MD5 397241bdc56be36ee9e2bc81b7a67f67 files/digest-dmraid-1.0.0_rc8-r1 69
+MD5 8c17f396f0abb1ea11c2d5fcc8006ca3 metadata.xml 457
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iQCVAwUBQuhBHZ4WFLgrx1GWAQL0swP/Wm9ZgD4+RZJ+0CQssU4KFlg0WKVqgbJs
-oOTq1D5DpSNzQnl6aNE7ayL3fUl9YwEOa1jXq58mKyqdRysg8e0wq1gTST07KZVZ
-m+QyfsUocMVqHOc4f8qvzvloSY5IUYKDMclZJJcd2inInm4iZr+NDQSS8yMrJ5Wd
-IG21pn/Wavg=
-=U2jc
+iQCVAwUBQ1a+GZ4WFLgrx1GWAQLiBwP+Oh4UXsfVV6YYjIC2Cf7nf1b3XVBP7SgR
+KoNOjpt1LwwdNmBm1Gb62X6ojg5mU9SGIodbYkVdEVHTOT39Mx9PT/XTzzwxUrcx
+rfMQLuMJAMfXtZ/piTpNy5TjCSrXzv01KcrKovQCigXQhYnG3hUB97gkLy/0rRXN
+HYXofsFDMpg=
+=olIm
 -----END PGP SIGNATURE-----
