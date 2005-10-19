@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.71 2005/08/25 11:14:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.72 2005/10/19 19:05:09 metalgod Exp $
+
+  19 Oct 2005; Luis Medinas <metalgod@gentoo.org> flac-1.1.2-r3.ebuild:
+  Marked Stable on amd64.
 
 *flac-1.1.2-r3 (25 Aug 2005)
 
