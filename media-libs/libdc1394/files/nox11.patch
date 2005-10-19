@@ -1,92 +1,46 @@
-*** Makefile.in	Wed Jun 30 03:25:27 2004
---- ../../../libdc1394-0.9.5/examples/Makefile.in	Wed Sep 22 13:19:19 2004
-***************
-*** 87,93 ****
-  
-  MAINTAINERCLEANFILES = Makefile.in
-  bin_PROGRAMS = dc1394_vloopback
-! noinst_PROGRAMS = grab_gray_image grab_partial_image dc1394_multiview grab_color_image
-  
-  grab_gray_image_SOURCES = grab_gray_image.c
-  grab_gray_image_LDADD = ../libdc1394/libdc1394_control.la -lraw1394
---- 87,93 ----
-  
-  MAINTAINERCLEANFILES = Makefile.in
-  bin_PROGRAMS = dc1394_vloopback
-! noinst_PROGRAMS = grab_gray_image grab_partial_image grab_color_image
-  
-  grab_gray_image_SOURCES = grab_gray_image.c
-  grab_gray_image_LDADD = ../libdc1394/libdc1394_control.la -lraw1394
-***************
-*** 98,106 ****
-  grab_partial_image_SOURCES = grab_partial_image.c
-  grab_partial_image_LDADD = ../libdc1394/libdc1394_control.la -lraw1394
-  
-- dc1394_multiview_SOURCES = dc1394_multiview.c
-- dc1394_multiview_LDADD = ../libdc1394/libdc1394_control.la -lraw1394 -L/usr/X11R6/lib -lXv -lXext -lX11 
-- 
-  dc1394_vloopback_SOURCES = dc1394_vloopback.c affine.c affine.h
-  dc1394_vloopback_LDADD = -lm ../libdc1394/libdc1394_control.la -lraw1394
-  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
---- 98,103 ----
-***************
-*** 108,114 ****
-  CONFIG_CLEAN_FILES = 
-  bin_PROGRAMS =  dc1394_vloopback$(EXEEXT)
-  noinst_PROGRAMS =  grab_gray_image$(EXEEXT) grab_partial_image$(EXEEXT) \
-! dc1394_multiview$(EXEEXT) grab_color_image$(EXEEXT)
-  PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
-  
-  
---- 105,111 ----
-  CONFIG_CLEAN_FILES = 
-  bin_PROGRAMS =  dc1394_vloopback$(EXEEXT)
-  noinst_PROGRAMS =  grab_gray_image$(EXEEXT) grab_partial_image$(EXEEXT) \
-!  grab_color_image$(EXEEXT)
-  PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
-  
-  
-***************
-*** 125,133 ****
-  grab_partial_image_OBJECTS =  grab_partial_image.$(OBJEXT)
-  grab_partial_image_DEPENDENCIES =  ../libdc1394/libdc1394_control.la
-  grab_partial_image_LDFLAGS = 
-- dc1394_multiview_OBJECTS =  dc1394_multiview.$(OBJEXT)
-- dc1394_multiview_DEPENDENCIES =  ../libdc1394/libdc1394_control.la
-- dc1394_multiview_LDFLAGS = 
-  grab_color_image_OBJECTS =  grab_color_image.$(OBJEXT)
-  grab_color_image_DEPENDENCIES =  ../libdc1394/libdc1394_control.la
-  grab_color_image_LDFLAGS = 
---- 122,127 ----
-***************
-*** 143,150 ****
-  
-  TAR = tar
-  GZIP_ENV = --best
-! SOURCES = $(dc1394_vloopback_SOURCES) $(grab_gray_image_SOURCES) $(grab_partial_image_SOURCES) $(dc1394_multiview_SOURCES) $(grab_color_image_SOURCES)
-! OBJECTS = $(dc1394_vloopback_OBJECTS) $(grab_gray_image_OBJECTS) $(grab_partial_image_OBJECTS) $(dc1394_multiview_OBJECTS) $(grab_color_image_OBJECTS)
-  
-  all: all-redirect
-  .SUFFIXES:
---- 137,144 ----
-  
-  TAR = tar
-  GZIP_ENV = --best
-! SOURCES = $(dc1394_vloopback_SOURCES) $(grab_gray_image_SOURCES) $(grab_partial_image_SOURCES) $(grab_color_image_SOURCES)
-! OBJECTS = $(dc1394_vloopback_OBJECTS) $(grab_gray_image_OBJECTS) $(grab_partial_image_OBJECTS) $(grab_color_image_OBJECTS)
-  
-  all: all-redirect
-  .SUFFIXES:
-***************
-*** 247,256 ****
-  	@rm -f grab_partial_image$(EXEEXT)
-  	$(LINK) $(grab_partial_image_LDFLAGS) $(grab_partial_image_OBJECTS) $(grab_partial_image_LDADD) $(LIBS)
-  
-- dc1394_multiview$(EXEEXT): $(dc1394_multiview_OBJECTS) $(dc1394_multiview_DEPENDENCIES)
-- 	@rm -f dc1394_multiview$(EXEEXT)
-- 	$(LINK) $(dc1394_multiview_LDFLAGS) $(dc1394_multiview_OBJECTS) $(dc1394_multiview_LDADD) $(LIBS)
-- 
-  grab_color_image$(EXEEXT): $(grab_color_image_OBJECTS) $(grab_color_image_DEPENDENCIES)
-  	@rm -f grab_color_image$(EXEEXT)
-  	$(LINK) $(grab_color_image_LDFLAGS) $(grab_color_image_OBJECTS) $(grab_color_image_LDADD) $(LIBS)
---- 241,246 ----
+diff -urN libdc1394-1.0.0.orig/examples/Makefile.in libdc1394-1.0.0/examples/Makefile.in
+--- libdc1394-1.0.0.orig/examples/Makefile.in	2004-09-16 04:13:18.000000000 -0400
++++ libdc1394-1.0.0/examples/Makefile.in	2005-10-19 12:18:32.000000000 -0400
+@@ -134,7 +134,7 @@
+ target_alias = @target_alias@
+ MAINTAINERCLEANFILES = Makefile.in
+ bin_PROGRAMS = dc1394_vloopback
+-noinst_PROGRAMS = grab_gray_image grab_partial_image dc1394_multiview grab_color_image
++noinst_PROGRAMS = grab_gray_image grab_partial_image grab_color_image
+ 
+ grab_gray_image_SOURCES = grab_gray_image.c
+ grab_gray_image_LDADD = ../libdc1394/libdc1394_control.la -lraw1394
+@@ -145,9 +145,6 @@
+ grab_partial_image_SOURCES = grab_partial_image.c
+ grab_partial_image_LDADD = ../libdc1394/libdc1394_control.la -lraw1394
+ 
+-dc1394_multiview_SOURCES = dc1394_multiview.c
+-dc1394_multiview_LDADD = ../libdc1394/libdc1394_control.la -lraw1394 -L/usr/X11R6/lib -lXv -lXext -lX11 
+-
+ dc1394_vloopback_SOURCES = dc1394_vloopback.c affine.c affine.h
+ dc1394_vloopback_LDADD = -lm ../libdc1394/libdc1394_control.la -lraw1394
+ subdir = examples
+@@ -157,13 +154,9 @@
+ CONFIG_CLEAN_FILES =
+ bin_PROGRAMS = dc1394_vloopback$(EXEEXT)
+ noinst_PROGRAMS = grab_gray_image$(EXEEXT) grab_partial_image$(EXEEXT) \
+-	dc1394_multiview$(EXEEXT) grab_color_image$(EXEEXT)
++	grab_color_image$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
+ 
+-am_dc1394_multiview_OBJECTS = dc1394_multiview.$(OBJEXT)
+-dc1394_multiview_OBJECTS = $(am_dc1394_multiview_OBJECTS)
+-dc1394_multiview_DEPENDENCIES = ../libdc1394/libdc1394_control.la
+-dc1394_multiview_LDFLAGS =
+ am_dc1394_vloopback_OBJECTS = dc1394_vloopback.$(OBJEXT) \
+ 	affine.$(OBJEXT)
+ dc1394_vloopback_OBJECTS = $(am_dc1394_vloopback_OBJECTS)
+@@ -202,7 +195,7 @@
+ 	$(grab_color_image_SOURCES) $(grab_gray_image_SOURCES) \
+ 	$(grab_partial_image_SOURCES)
+ DIST_COMMON = $(srcdir)/Makefile.in Makefile.am
+-SOURCES = $(dc1394_multiview_SOURCES) $(dc1394_vloopback_SOURCES) $(grab_color_image_SOURCES) $(grab_gray_image_SOURCES) $(grab_partial_image_SOURCES)
++SOURCES = $(dc1394_vloopback_SOURCES) $(grab_color_image_SOURCES) $(grab_gray_image_SOURCES) $(grab_partial_image_SOURCES)
+ 
+ all: all-am
+ 
