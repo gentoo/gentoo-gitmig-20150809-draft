@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 285ff13fa6dfa9377fb3db567c1aa9ea c-ares-1.3.0.ebuild 616
-MD5 09fdd72d0c8bca6f752a0c69cca3895a c-ares-1.2.1.ebuild 555
-MD5 73518900c2e974dceb0b263cd2645fc6 c-ares-1.2.1-r1.ebuild 621
+MD5 ad6f75af1ef264ca409e983c4f6729fd ChangeLog 1948
 MD5 cb242629555b6aa0aa4f2a0075e58d44 c-ares-1.2.0.ebuild 558
-MD5 91010ffaa6409ac6c46fd116754ce40c ChangeLog 1833
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 53597bb8599e2adab4f4faa87f13d14f c-ares-1.2.1-r1.ebuild 622
+MD5 09fdd72d0c8bca6f752a0c69cca3895a c-ares-1.2.1.ebuild 555
+MD5 285ff13fa6dfa9377fb3db567c1aa9ea c-ares-1.3.0.ebuild 616
 MD5 141b0263e86d51beb41b240cdb9bd5e7 files/digest-c-ares-1.2.0 64
 MD5 bd65ab3ab5c90d4f6ad98c7394e98f7f files/digest-c-ares-1.2.1 64
-MD5 2b7b0e0d54228cc590dbe3340d43f49b files/digest-c-ares-1.3.0 64
 MD5 bd65ab3ab5c90d4f6ad98c7394e98f7f files/digest-c-ares-1.2.1-r1 64
+MD5 2b7b0e0d54228cc590dbe3340d43f49b files/digest-c-ares-1.3.0 64
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDVtie3og80iZgVQgRAjsEAJ4nEEhpPJlx/dafBqu3SPlDBqXmngCgrif6
-D6SRF9MZe//gHxsHkZBHmNk=
-=j3q1
+iD8DBQFDVx9CwUpWvClEHQoRAsoUAJ0cpWb8tqDisERUcf/goeBj9Vtr8wCfUuH3
+SiHP1VvMqhtNzx6M984Ltq0=
+=Wav9
 -----END PGP SIGNATURE-----
