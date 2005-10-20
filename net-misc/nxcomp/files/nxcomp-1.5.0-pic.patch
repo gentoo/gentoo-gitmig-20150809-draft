@@ -1,0 +1,20 @@
+--- nxcomp/Makefile.in.agriffis	2005-10-20 11:09:59.000000000 -0400
++++ nxcomp/Makefile.in	2005-10-20 11:10:11.000000000 -0400
+@@ -32,7 +32,7 @@
+ 
+ CXX         = @CXX@
+ CXXFLAGS    = @CXXFLAGS@ @X_CFLAGS@ @DEFS@ \
+-              -Wall -Wpointer-arith
++              -Wall -Wpointer-arith -fPIC
+ CXXINCLUDES =
+ CXXDEFINES  =
+ 
+@@ -43,7 +43,7 @@
+ 
+ CC          = @CC@
+ CCFLAGS     = @X_CFLAGS@ @DEFS@ \
+-              -Wall -Wpointer-arith
++              -Wall -Wpointer-arith -fPIC
+ CCINCLUDES  =
+ CCDEFINES   =
+ 
