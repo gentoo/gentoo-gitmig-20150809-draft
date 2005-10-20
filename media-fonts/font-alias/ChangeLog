@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-alias
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.6 2005/09/09 06:48:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.7 2005/10/20 00:35:00 geoman Exp $
+
+  20 Oct 2005; Stephen P. Becker <geoman@gentoo.org>
+  font-alias-0.99.0.ebuild:
+  added ~mips keyword
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
