@@ -1,0 +1,40 @@
+diff -Nup ipw2200-1.0.7-orig/ipw2200.c ipw2200-1.0.7/ipw2200.c
+--- ipw2200-1.0.7-orig/ipw2200.c	2005-10-19 15:21:46.000000000 -0500
++++ ipw2200-1.0.7/ipw2200.c	2005-10-19 15:21:40.000000000 -0500
+@@ -8980,11 +8980,13 @@ static int ipw_wx_get_range(struct net_d
+ 
+ 	up(&priv->sem);
+ 
++#if WIRELESS_EXT >= 17
+ 	/* Event capability (kernel + driver) */
+ 	range->event_capa[0] = (IW_EVENT_CAPA_K_0 |
+ 				IW_EVENT_CAPA_MASK(SIOCGIWTHRSPY) |
+ 				IW_EVENT_CAPA_MASK(SIOCGIWAP));
+ 	range->event_capa[1] = IW_EVENT_CAPA_K_1;
++#endif
+ 
+ 	IPW_DEBUG_WX("GET Range\n");
+ 	return 0;
+@@ -10102,7 +10104,9 @@ static struct iw_handler_def ipw_wx_hand
+ 	.num_private_args = ARRAY_SIZE(ipw_priv_args),
+ 	.private = ipw_priv_handler,
+ 	.private_args = ipw_priv_args,
++#if WIRELESS_EXT >= 17
+ 	.get_wireless_stats = ipw_get_wireless_stats,
++#endif
+ };
+ 
+ /*
+@@ -11622,9 +11626,12 @@ static int ipw_pci_probe(struct pci_dev 
+ 	priv->wireless_data.ieee80211 = priv->ieee;
+ 	net_dev->wireless_data = &priv->wireless_data;
+ #else
++	net_dev->get_wireless_stats = ipw_get_wireless_stats;
++#if WIRELESS_EXT == 16
+ 	ipw_wx_handler_def.spy_offset = offsetof(struct ieee80211_device,
+ 						 spy_data);
+ #endif
++#endif
+ 	net_dev->wireless_handlers = &ipw_wx_handler_def;
+ 	net_dev->ethtool_ops = &ipw_ethtool_ops;
+ 	net_dev->irq = pdev->irq;
