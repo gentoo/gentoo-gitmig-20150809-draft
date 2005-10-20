@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.18 2005/10/19 21:00:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.19 2005/10/20 00:05:36 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1153,20 +1153,19 @@ src_compile() {
 	setup_env
 
 	if [[ -z ${OABI} ]] ; then
+		local abilist=""
 		if has_multilib_profile ; then
+			abilist=$(get_install_abis)
+			einfo "Building multilib glibc for ABIs: ${abilist}"
+		elif is_crosscompile || tc-is-cross-compiler ; then
+			abilist=${DEFAULT_ABI}
+		fi
+		if [[ -n ${abilist} ]] ; then
 			OABI=${ABI}
-			einfo "Building multilib glibc for ABIs: $(get_install_abis)"
-			for ABI in $(get_install_abis) ; do
+			for ABI in ${abilist} ; do
 				export ABI
 				src_compile
 			done
-			ABI=${OABI}
-			unset OABI
-			return 0
-		elif is_crosscompile || tc-is-cross-compiler ; then
-			OABI=${ABI}
-			export ABI=${DEFAULT_ABI}
-			src_compile
 			ABI=${OABI}
 			unset OABI
 			return 0
@@ -1198,16 +1197,24 @@ src_test() {
 src_install() {
 	setup_env
 
-	if [[ -z ${OABI} ]] && has_multilib_profile ; then
-		OABI=${ABI}
-		einfo "Installing multilib glibc for ABIs: $(get_install_abis)"
-		for ABI in $(get_install_abis) ; do
-			export ABI
-			src_install
-		done
-		ABI=${OABI}
-		unset OABI
-		return 0
+	if [[ -z ${OABI} ]] ; then
+		local abilist=""
+		if has_multilib_profile ; then
+			abilist=$(get_install_abis)
+			einfo "Installing multilib glibc for ABIs: ${abilist}"
+		elif is_crosscompile || tc-is-cross-compiler ; then
+			abilist=${DEFAULT_ABI}
+		fi
+		if [[ -n ${abilist} ]] ; then
+			OABI=${ABI}
+			for ABI in ${abilist} ; do
+				export ABI
+				src_install
+			done
+			ABI=${OABI}
+			unset OABI
+			return 0
+		fi
 	fi
 
 	# Handle stupid lib32 BS
