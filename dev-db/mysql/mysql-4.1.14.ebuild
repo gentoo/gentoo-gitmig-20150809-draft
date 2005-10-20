@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.13 2005/10/19 05:53:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.14 2005/10/20 08:17:44 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -47,7 +47,7 @@ mysql_upgrade_error() {
 	ewarn "Some gentoo documentation on how to do it:"
 	ewarn "http://www.gentoo.org/doc/en/mysql-upgrading.xml"
 	ewarn "Also on the MySQL website:"
-	ewarn "http://dev.mysql.com/doc/mysql/en/upgrading-from-4-0.html"
+	ewarn "http://dev.mysql.com/doc/refman/4.1/en/upgrading-from-4-0.html"
 	ewarn ""
 	ewarn "You can also choose to preview some new MySQL 4.1 behaviour"
 	ewarn "adding a section \"[mysqld-4.0]\" followed by the word \"new\""

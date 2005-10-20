@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.248 2005/10/19 05:53:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.249 2005/10/20 08:17:44 vivo Exp $
+
+  20 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.13-r1.ebuild,
+  mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild, mysql-5.0.13_rc.ebuild:
+  - changed upstream upgrade link, Andy Dustman bug #109301, c#10 
+  - unmasked MySQL 5.0, temporary removed keywords that don't have a stable 4.1
 
   19 Oct 2005; Mark Loeser <halcy0n@gentoo.org> mysql-4.1.14.ebuild:
   Stable on x86

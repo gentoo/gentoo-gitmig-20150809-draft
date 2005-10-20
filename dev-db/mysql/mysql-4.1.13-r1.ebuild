@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.12 2005/10/17 13:49:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.13-r1.ebuild,v 1.13 2005/10/20 08:17:44 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -40,7 +40,7 @@ mysql_upgrade_error() {
 	mysql_get_datadir
 	ewarn "Sorry plain upgrade from version of MySQL before 4.1.4 is NOT supported."
 	ewarn "Be sure to read \"Upgrading from version 4.0 to 4.1\" section"
-	ewarn "http://dev.mysql.com/doc/mysql/en/upgrading-from-4-0.html"
+	ewarn "http://dev.mysql.com/doc/refman/4.1/en/upgrading-from-4-0.html"
 	ewarn "then unmerge previous version of MySQL with"
 	ewarn "#emerge -C dev-db/mysql"
 	ewarn "move your data out of \"${DATADIR}\""
