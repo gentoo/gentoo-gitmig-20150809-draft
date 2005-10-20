@@ -1,7 +1,6 @@
 MD5 3b54910d381bac92f7784c3843d986e1 ChangeLog 9214
 MD5 c3af0a9f9ed1ea8eb162da439b88bf78 files/digest-vsftpd-2.0.3-r1 64
 MD5 c3af0a9f9ed1ea8eb162da439b88bf78 files/digest-vsftpd-2.0.3-r2 64
-MD5 5a140ccd0017f39fe3c63e6a29e1abcd files/ftpusers 365
 MD5 10727329a1de642694a73e3655774015 files/vsftpd-2.0.3-gentoo.diff 5598
 MD5 2008f701278d9e59c755433c8e987606 files/vsftpd-2.0.3-gentoo.patch 7128
 MD5 d0f6c4bc146ade78fdcc3ecc94ffece2 files/vsftpd.conf 3842
