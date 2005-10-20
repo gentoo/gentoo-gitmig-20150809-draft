@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/maloc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.1 2005/10/20 01:20:05 ribosome Exp $
+
+*maloc-0.1.2 (20 Oct 2005)
+
+  20 Oct 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +maloc-0.1.2.ebuild:
+  Initial import. Thanks to Markus Dittrich <markusle@gmail.com> for his work.
+
