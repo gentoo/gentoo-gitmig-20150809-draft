@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 48ffc979ac7b9ae82baef92f8a13dbae ChangeLog 1218
+MD5 c3049e5988c1303f33876c52215a7a7b ChangeLog 1308
 MD5 c5275cd26abcb8b119ef56a063913c64 libsvg-0.1.2.ebuild 602
-MD5 35d12ce939f5c5ac8055d15033172721 libsvg-0.1.3.ebuild 604
+MD5 7a21ee68523e9d4da92d5a7eebf2dd58 libsvg-0.1.3.ebuild 610
 MD5 e876eef2ea8bf1533c5f65b794158dba libsvg-0.1.4.ebuild 609
 MD5 65d1d5c2aa536148fb35cee02b3a8428 metadata.xml 337
 MD5 221159834aa05211384cb6588c4a622b files/digest-libsvg-0.1.2 64
 MD5 27938101d08e34cdba28c2208f8480ce files/digest-libsvg-0.1.3 64
 MD5 6cb1306c473ce3a4cf949eb325054a30 files/digest-libsvg-0.1.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKeiGwUpWvClEHQoRAkReAJ4kOBxmypQrw01BPQYbWbWtK4e3IwCbBZ/Z
-5FbF+gHqOUJklwKT3xxO6IA=
-=ZIam
------END PGP SIGNATURE-----
