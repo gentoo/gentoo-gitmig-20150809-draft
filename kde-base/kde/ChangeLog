@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.122 2005/10/15 11:08:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.123 2005/10/20 15:20:09 agriffis Exp $
+
+  18 Oct 2005; Aron Griffis <agriffis@gentoo.org> kde-3.4.1.ebuild:
+  Mark 3.4.1 stable on alpha
 
 *kde-3.5.0_beta2 (15 Oct 2005)
 
