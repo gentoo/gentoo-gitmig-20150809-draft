@@ -1,22 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc3a8fcabee1d2838a6e32ea8cb5bfad glurp-0.11.2.ebuild 682
-MD5 e529b2748c93ef894dbaeda8ce87a8f2 glurp-0.11.4.ebuild 681
-MD5 4794cc09c012a223aa0fece559ba6282 glurp-0.11.6.ebuild 680
-MD5 2d6160679c83b6931d9730fce0b5b737 glurp-0.11.3.ebuild 684
-MD5 e1180c288ea49e235f3a3601e91233cb glurp-0.11.5.ebuild 681
-MD5 bea79fe1811bca95a7043bbd38bc272c ChangeLog 1969
-MD5 39ca3cc9726f35001924ecf3baea20d1 metadata.xml 219
-MD5 ac9e071393589dec888716d4cdb12d81 files/digest-glurp-0.11.2 63
-MD5 e89720d903388dd91903baea27dd2aa3 files/digest-glurp-0.11.3 63
-MD5 2a49f08ff1678ec9effead8ae42a1675 files/digest-glurp-0.11.4 64
+MD5 59165be97788d78bedc86137c0605266 ChangeLog 2116
 MD5 ea7e81fd74d0a020a28c17bb293bb394 files/digest-glurp-0.11.5 64
 MD5 98ec2e88a5663f422daf8920ae34cebb files/digest-glurp-0.11.6 64
+MD5 e1180c288ea49e235f3a3601e91233cb glurp-0.11.5.ebuild 681
+MD5 4794cc09c012a223aa0fece559ba6282 glurp-0.11.6.ebuild 680
+MD5 39ca3cc9726f35001924ecf3baea20d1 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK+D1QlM6RnzZP+IRAsmzAJ94lVuqEKTSp9XMSlpcNXZj13FQ3gCgutab
-UShIi0Hi1ghFv3JdLlfF9OE=
-=jKC8
+iD8DBQFDV1q+QlM6RnzZP+IRAr4lAJ9jwQCW0ceWNsaH7fQIP6tT9I1+kACfX+CX
+mJJnr1CpoRg/2al32m4HD9w=
+=qcWU
 -----END PGP SIGNATURE-----
