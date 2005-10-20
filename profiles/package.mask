@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4595 2005/10/20 13:31:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4596 2005/10/20 15:25:13 agriffis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Aron Griffis <agriffis@gentoo.org> (20 Oct 2005)
+# New version of NX stuff, masked for testing
+>=net-misc/nx-x11-1.5
+>=net-misc/nxclient-1.5
+>=net-misc/nxcomp-1.5
+>=net-misc/nxproxy-1.5
+>=net-misc/nxserver-freenx-1.5
+>=net-misc/nxssh-1.5
 
 # Olivier Fisette <ribosome@gentoo.org> (19 Oct 2005)
 # Masking until proper testing is done.
