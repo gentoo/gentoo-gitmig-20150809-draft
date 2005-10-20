@@ -1,0 +1,10 @@
+# ChangeLog for x11-drivers/xf86-video-v4l
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.1 2005/10/20 06:42:50 joshuabaergen Exp $
+
+*xf86-video-v4l-0.0.1.1 (20 Oct 2005)
+
+  20 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org> +metadata.xml,
+  +xf86-video-v4l-0.0.1.1.ebuild:
+  New package for 7.0 RC1.
+
