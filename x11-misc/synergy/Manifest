@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 b26313332df0b3ffa5fccb539b5c99c6 ChangeLog 3964
-MD5 2d6469b46fef166832fec79ea2e5a4e7 synergy-1.2.2.ebuild 895
-MD5 5f6901d4141d7f707a8080b718617a91 synergy-1.2.4.ebuild 904
-MD5 8df622cd2b80b71b685a7b80f3f44309 synergy-1.2.3.ebuild 896
-MD5 1b56ced5a2b781f91433e0656f51ecee files/digest-synergy-1.2.3 65
+MD5 bf8d808c4738c202b42e14bbac92b083 ChangeLog 4083
 MD5 3e52dad483caddfa64708897f220dd92 files/digest-synergy-1.2.2 65
+MD5 1b56ced5a2b781f91433e0656f51ecee files/digest-synergy-1.2.3 65
 MD5 d8b0d98a25b5d57140f0bd5f7e6307b0 files/digest-synergy-1.2.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVP/PJrHF4yAQTrARAgvKAJ9iufxYGzTYN0IG8W9PKVtJcj3lVgCggim0
-ypLZ51IQ/Q9wElvrzpQTHlk=
-=0kRX
------END PGP SIGNATURE-----
+MD5 6ae1c41860d170a2a890a695cf65877f files/digest-synergy-1.2.5 65
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 2d6469b46fef166832fec79ea2e5a4e7 synergy-1.2.2.ebuild 895
+MD5 8df622cd2b80b71b685a7b80f3f44309 synergy-1.2.3.ebuild 896
+MD5 5f6901d4141d7f707a8080b718617a91 synergy-1.2.4.ebuild 904
+MD5 9460ca54811914b318591f0ca4f6a46e synergy-1.2.5.ebuild 906
