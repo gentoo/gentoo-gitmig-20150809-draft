@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.18 2005/08/23 10:27:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.19 2005/10/20 20:29:46 genstef Exp $
+
+*fritzcapi-2.6.42 (20 Oct 2005)
+
+  20 Oct 2005; Stefan Schweizer <genstef@gentoo.org>
+  +fritzcapi-2.6.42.ebuild:
+  Version bump including amd64 support thanks to Jochen Klumpp
+  <jochen.klumpp@online.de> and sbriesen for testing.
 
   23 Aug 2005; Stefan Schweizer <genstef@gentoo.org>
   fritzcapi-2.6.35.ebuild:
