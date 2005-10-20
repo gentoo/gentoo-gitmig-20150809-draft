@@ -1,0 +1,13 @@
+--- setxkbmap-0.99.1.orig/Makefile.am	2005-10-17 16:56:20.000000000 -0700
++++ setxkbmap-0.99.1/Makefile.am	2005-10-20 15:12:51.000000000 -0700
+@@ -21,7 +21,9 @@
+ 
+ bin_PROGRAMS = setxkbmap
+ 
+-setxkbmap_CFLAGS = $(SETXKBMAP_CFLAGS) -D__XKBDEFRULES__='"xorg"'
++setxkbmap_CFLAGS = $(SETXKBMAP_CFLAGS) \
++	-D__XKBDEFRULES__='"xorg"' \
++	-DDFLT_XKB_CONFIG_ROOT='"$(datadir)/X11/xkb"'
+ setxkbmap_LDADD = $(SETXKBMAP_LIBS)
+ 
+ setxkbmap_SOURCES =	\
