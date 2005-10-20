@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxproxy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.13 2005/10/20 21:37:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/ChangeLog,v 1.14 2005/10/20 22:21:18 agriffis Exp $
+
+  20 Oct 2005; Aron Griffis <agriffis@gentoo.org> nxproxy-1.5.0.ebuild:
+  Need to get nxcomp's NX.h from /usr/NX/include
 
 *nxproxy-1.5.0 (20 Oct 2005)
 

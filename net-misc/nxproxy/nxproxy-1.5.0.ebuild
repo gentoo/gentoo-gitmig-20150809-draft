@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.5.0.ebuild,v 1.1 2005/10/20 21:37:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.5.0.ebuild,v 1.2 2005/10/20 22:21:18 agriffis Exp $
 
 inherit flag-o-matic multilib
 
@@ -20,6 +20,14 @@ DEPEND="=net-misc/nxcomp-1.5*
 	sys-libs/zlib"
 
 S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# unfortunately this package doesn't honor environment variables correctly
+	# in configure, so append-flags doesn't work.
+	sed -i '/^C\(XX\|C\)INCLUDES =/s/$/ -I\/usr\/NX\/include/' Makefile.in
+}
 
 src_compile() {
 	append-ldflags -L/usr/NX/$(get_libdir)
