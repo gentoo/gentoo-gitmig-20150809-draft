@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.124 2005/10/09 18:08:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.125 2005/10/20 16:57:57 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -125,7 +125,8 @@ if [[ $(get_major_version ) -ge 7 ]] ; then
 		RDEPEND="${RDEPEND}
 			!<app-vim/align-30-r1
 			!app-vim/vimspell
-			!<app-vim/vimbuddy-0.9.1-r1"
+			!<app-vim/vimbuddy-0.9.1-r1
+			!app-vim/autoalign"
 	fi
 fi
 
