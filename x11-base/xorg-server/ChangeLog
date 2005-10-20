@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.62 2005/10/20 18:31:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.63 2005/10/20 19:26:58 spyderous Exp $
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-server-0.99.2-r1.ebuild:
+  Use --enable-install-setuid instead of manually changing permissions.
 
 *xorg-server-0.99.2-r1 (20 Oct 2005)
 
