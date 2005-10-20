@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 177f04d7f9b9d0fdb6098ea18ba57eb6 tmsnc-0.2.4.ebuild 1113
-MD5 1b00457e2e2f63f8392ec3dcd9b5b4b1 ChangeLog 493
-MD5 a9df75e0d6358c894c7236055a417c7d metadata.xml 583
-MD5 27a07840b3cb5c90276169127e6936a2 tmsnc-0.2.5.ebuild 1113
+MD5 72d6cd926f294db8780287c99c9d7757 ChangeLog 609
 MD5 fb5cdbfe31d6f8753f77a5d0868b5ff4 files/digest-tmsnc-0.2.4 63
 MD5 8b105b1aef1e3ecc9a59746e20db13b1 files/digest-tmsnc-0.2.5 63
+MD5 96107b54f248cf1898d8720e668a7de5 files/digest-tmsnc-0.3.0 63
+MD5 a9df75e0d6358c894c7236055a417c7d metadata.xml 583
+MD5 177f04d7f9b9d0fdb6098ea18ba57eb6 tmsnc-0.2.4.ebuild 1113
+MD5 27a07840b3cb5c90276169127e6936a2 tmsnc-0.2.5.ebuild 1113
+MD5 7fdad03e80cdcf82a35be1c2d8c39512 tmsnc-0.3.0.ebuild 1113
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDPeb6wUpWvClEHQoRAvO1AJ90t0ZP4CJQ/MwNrf3ut7NzyfhjTgCbBIew
-249+jwp0XXByyzFrteB8roc=
-=Pmd5
+iD8DBQFDVyPAwUpWvClEHQoRAoZmAJoDd6g2ni7GyHQv9uJApMEYKw8i8wCfZbBB
+9LKbywjbAVoGWxvJyn2MkD4=
+=dxsX
 -----END PGP SIGNATURE-----
