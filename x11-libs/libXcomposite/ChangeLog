@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.5 2005/09/09 08:10:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.6 2005/10/20 05:36:58 spyderous Exp $
+
+*libXcomposite-0.2.1 (20 Oct 2005)
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +libXcomposite-0.2.1.ebuild:
+  Bump for 7.0 RC1.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.

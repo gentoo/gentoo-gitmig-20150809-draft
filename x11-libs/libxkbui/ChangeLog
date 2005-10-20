@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbui
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.5 2005/10/15 21:19:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.6 2005/10/20 05:44:38 spyderous Exp $
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
+  Bump for 7.0 RC1.
 
   15 Oct 2005; Doug Goldstein <cardoe@gentoo.org> ChangeLog:
   adding ~ppc keyword
