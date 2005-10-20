@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.15 2005/10/20 03:26:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.16 2005/10/20 05:09:02 spyderous Exp $
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  files/digest-glproto-1.4.1:
+  Fix digest.
 
 *glproto-1.4.1 (20 Oct 2005)
 
