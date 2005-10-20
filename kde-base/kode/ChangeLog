@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.18 2005/10/13 00:10:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.19 2005/10/20 22:42:43 puggy Exp $
+
+  20 Oct 2005; Douglas Russell <puggy@gentoo.org> kode-3.5_beta1.ebuild:
+  Keyword ~ppc and ~x86
 
 *kode-3.4.3 (13 Oct 2005)
 
