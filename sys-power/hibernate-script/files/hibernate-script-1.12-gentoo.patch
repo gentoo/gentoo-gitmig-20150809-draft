@@ -1,0 +1,29 @@
+diff -urp hibernate-script-1.12/init.d/hibernate-cleanup.sh hibernate-script-1.12-gentoo/init.d/hibernate-cleanup.sh
+--- hibernate-script-1.12/init.d/hibernate-cleanup.sh	2005-10-02 07:54:23.000000000 +0200
++++ hibernate-script-1.12-gentoo/init.d/hibernate-cleanup.sh	2005-10-20 15:31:33.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/sbin/runscript
+ 
+ # This script invalidates any stale swsusp and Software Suspend 2 images. It
+ # searches all swap partitions on your machine, as well as Suspend2's
+@@ -66,9 +66,14 @@ check_filewriter_sig() {
+ 	esac
+ }
+ 
+-echo -n "Clearing Software Suspend 2 signatures... "
+-check_swap_sig
+-check_filewriter_sig
+-echo "done."
++depend() {
++	after localmount
++	before bootmisc
++}
+ 
+-exit 0
++start() {
++	ebegin "Clearing Software Suspend signatures"
++	check_swap_sig
++	check_filewriter_sig
++	eend
++}
