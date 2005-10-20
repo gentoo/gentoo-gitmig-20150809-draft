@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4591 2005/10/20 06:37:48 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4592 2005/10/20 07:01:38 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -764,6 +764,7 @@ media-sound/bmpx
 
 # Donnie Berkholz <spyderous@gentoo.org> (07 Aug 2005)
 # Modularized X, upstream release candidates
+app-doc/xorg-sgml-doctools
 media-fonts/encodings
 media-fonts/font-adobe-100dpi
 media-fonts/font-adobe-75dpi
