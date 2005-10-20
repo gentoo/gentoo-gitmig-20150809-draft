@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.14 2005/10/20 08:17:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.14.ebuild,v 1.15 2005/10/20 11:35:57 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -444,17 +444,21 @@ src_install() {
 	        chown -R mysql:mysql "${D}/${DATADIR}"
 		fi
 
-		dodir "/var/log/mysql"
-		touch ${D}/var/log/mysql/mysql.{log,err}
-		chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
+		if [ -a "${DATADIR}" ] ; then
+			diropts "-m0755"
+			dodir "/var/log/mysql"
+			touch ${D}/var/log/mysql/mysql.{log,err}
+			chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
+			keepdir "/var/log/mysql"
+			chown -R mysql:mysql "${D}/var/log/mysql"
+		fi
 
 		diropts "-m0755"
 		dodir "/var/run/mysqld"
 
-		keepdir "/var/run/mysqld" "${D}/var/log/mysql"
+		keepdir "/var/run/mysqld"
 		chown -R mysql:mysql \
-	        "${D}/var/run/mysqld" \
-	        "${D}/var/log/mysql"
+	        "${D}/var/run/mysqld"
 	fi
 
 	# docs
