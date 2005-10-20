@@ -1,0 +1,44 @@
+diff -urp ieee80211-1.1.5/ieee80211_rx.c ieee80211-1.1.5-broadcast/ieee80211_rx.c
+--- ieee80211-1.1.5/ieee80211_rx.c	2005-10-14 02:12:12.000000000 +0800
++++ ieee80211-1.1.5-broadcast/ieee80211_rx.c	2005-10-19 15:52:46.000000000 +0800
+@@ -409,8 +409,9 @@ int ieee80211_rx(struct ieee80211_device
+ 		return 1;
+ 	}
+ 
+-	if (is_multicast_ether_addr(hdr->addr1) ? ieee->host_mc_decrypt :
+-	    ieee->host_decrypt) {
++	if ((is_multicast_ether_addr(hdr->addr1) ||
++	     ieee80211_is_broadcast_ether_addr(hdr->addr1)) ? ieee->host_mc_decrypt :
++	     ieee->host_decrypt) {
+ 		int idx = 0;
+ 		if (skb->len >= hdrlen + 3)
+ 			idx = skb->data[hdrlen + 3] >> 6;
+diff -urp ieee80211-1.1.5/ieee80211_tx.c ieee80211-1.1.5-broadcast/ieee80211_tx.c
+--- ieee80211-1.1.5/ieee80211_tx.c	2005-10-14 02:12:12.000000000 +0800
++++ ieee80211-1.1.5-broadcast/ieee80211_tx.c	2005-10-19 15:55:38.000000000 +0800
+@@ -338,7 +338,8 @@ int ieee80211_xmit(struct sk_buff *skb, 
+ 	if (host_encrypt || ieee->host_open_frag) {
+ 		/* Determine fragmentation size based on destination (multicast
+ 		 * and broadcast are not fragmented) */
+-		if (is_multicast_ether_addr(dest))
++		if (is_multicast_ether_addr(dest) ||
++		    ieee80211_is_broadcast_ether_addr(dest))
+ 			frag_size = MAX_FRAG_THRESHOLD;
+ 		else
+ 			frag_size = ieee->fts;
+diff -urp ieee80211-1.1.5/net/ieee80211.h ieee80211-1.1.5-broadcast/net/ieee80211.h
+--- ieee80211-1.1.5/net/ieee80211.h	2005-10-14 02:12:12.000000000 +0800
++++ ieee80211-1.1.5-broadcast/net/ieee80211.h	2005-10-19 15:51:31.000000000 +0800
+@@ -962,6 +962,12 @@ static inline int is_multicast_ether_add
+ }
+ #endif
+ 
++static inline int ieee80211_is_broadcast_ether_addr(const u8 *addr)
++{
++	return (addr[0] == 0xff && addr[1] == 0xff && addr[2] == 0xff &&
++		addr[3] == 0xff && addr[4] == 0xff && addr[5] == 0xff);
++}
++
+ static inline void *ieee80211_priv(struct net_device *dev)
+ {
+ 	return ((struct ieee80211_device *)netdev_priv(dev))->priv;
