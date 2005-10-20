@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 726255af8c0c26825382b01d6c899f08 ChangeLog 2567
 MD5 bbbdf1a4b71647d0606017837bb7fc69 files/digest-nxcomp-1.3.2-r1 66
 MD5 eb79d26514557a9076393ddca0e9db75 files/digest-nxcomp-1.5.0 67
@@ -5,3 +8,10 @@ MD5 b3913b98fb03efcd7677b50a7d8d0b71 files/nxcomp-1.5.0-pic.patch 513
 MD5 8e92b9291198042d907534cb08b013f8 metadata.xml 361
 MD5 10613855f29c1af490bb1bb997eb46a3 nxcomp-1.3.2-r1.ebuild 979
 MD5 dd9f164f3ed12ba4eb1b422aea61f3b8 nxcomp-1.5.0.ebuild 1053
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDWBkzJrHF4yAQTrARAjOlAJ934Wr/AsEkcalgQnNsp4WEMj3pNgCglfgb
+dj6ogNmpQfPx/IVklvKCaLE=
+=sn+W
+-----END PGP SIGNATURE-----

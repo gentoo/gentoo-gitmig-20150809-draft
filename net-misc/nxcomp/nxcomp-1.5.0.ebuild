@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0.ebuild,v 1.1 2005/10/20 21:24:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/nxcomp-1.5.0.ebuild,v 1.2 2005/10/20 22:24:41 agriffis Exp $
 
 inherit eutils multilib
 
@@ -35,6 +35,10 @@ src_compile() {
 src_install() {
 	into /usr/NX
 	dolib libXcomp.so.${PV}
+	if [[ $(get_libdir) != lib ]]; then
+		# necessary for nxclient to work, it seems
+		ln -s "$(get_libdir)" ${D}/usr/NX/lib
+	fi
 
 	insinto /usr/NX/include
 	doins NX.h
