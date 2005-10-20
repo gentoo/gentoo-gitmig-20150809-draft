@@ -1,5 +1,4 @@
-MD5 a50f0c97ec43cb55f021ac0d2f4a9ff0 ChangeLog 541
+MD5 c2def1734dcbc641bb07d2a23bd8a344 ChangeLog 375
 MD5 6c014ac962b996f9eaff72e6f091e1ec files/digest-xfindproxy-0.99.1 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 5c974c0164d5ad0ae667f0381f16cf25 xfindproxy-0.99.0.ebuild 421
-MD5 5c7b79d2b7e8c655d77185d1e55e95fd xfindproxy-0.99.1.ebuild 436
+MD5 799fccd6c2d79b1fac6b2bc8374dd371 xfindproxy-0.99.1.ebuild 451
