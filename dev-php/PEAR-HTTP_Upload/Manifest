@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3b69703714774bf1b2722c9008898a33 ChangeLog 407
+MD5 1cfec00b2f00741d6b2df98f7af7fd67 PEAR-HTTP_Upload-0.9.1.ebuild 383
+MD5 069dfa8e96cb8b7f6ac85ff373c6f891 files/digest-PEAR-HTTP_Upload-0.9.1 64
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDV6vzaGfFFLhbXWkRAmuTAKCVmUT972sDEfPLufM+5sAbWH3ZDACgk9ny
+u8Lq+UqCPLa+8cqxWMNdcmE=
+=yQjt
+-----END PGP SIGNATURE-----
