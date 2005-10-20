@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.39 2005/10/16 10:35:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.40 2005/10/20 17:47:25 vapier Exp $
 
 cd /
 
@@ -320,6 +320,12 @@ setup_portage_vars
 if [[ -z ${PORTDIR_OVERLAY} ]] ; then
 	eerror "You need to set PORTDIR_OVERLAY in your make.conf."
 	eerror "A standard setting is /usr/local/portage"
+	exit 1
+fi
+
+if [[ $(env -u CHOST portageq envvar CHOST) == ${CTARGET} ]] ; then
+	eerror "Refusing to create a cross-compiler using the same"
+	eerror "target name as your host utils."
 	exit 1
 fi
 
