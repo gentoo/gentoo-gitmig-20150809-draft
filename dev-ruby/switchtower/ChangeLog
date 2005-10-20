@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/switchtower
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/switchtower/ChangeLog,v 1.1 2005/10/20 15:54:58 caleb Exp $
+
+*switchtower-0.9.0 (20 Oct 2005)
+
+  20 Oct 2005; Caleb Tennis <caleb@gentoo.org> +switchtower-0.9.0.ebuild:
+  Initial commit
+
