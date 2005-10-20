@@ -1,7 +1,20 @@
-MD5 7a748c58d044cc838db215b91aae8fc8 ChangeLog 1000
-MD5 2a9f92590a5e32d504c2da5357e6778d yiff-2.14.2.ebuild 1247
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5a4ce9d4f2c639172627ca9f369b97e8 ChangeLog 1146
 MD5 731dde7e0d27725a199275a23aaec33e files/digest-yiff-2.14.2 64
+MD5 61cbb76cbf96e6d9072c9cd8b20cd953 files/digest-yiff-2.14.5 64
 MD5 e02e251b89e6fcfb2c260727647689fe files/yiff-2.14.2-PIC.patch 1242
-MD5 32aaf5e677ef87bb8eda8e8054eeb947 files/yiff-2.14.2-gcc33.patch 903
 MD5 ef4bfd407742f9337dc6a49be6f328f9 files/yiff-2.14.2-gcc3.patch 2745
+MD5 32aaf5e677ef87bb8eda8e8054eeb947 files/yiff-2.14.2-gcc33.patch 903
+MD5 49883a9994da1db61dcd100c66cbbacc files/yiff-2.14.5-build.patch 1542
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 2a9f92590a5e32d504c2da5357e6778d yiff-2.14.2.ebuild 1247
+MD5 38e71fd0577161c2117dc4a313e0fb8d yiff-2.14.5.ebuild 1280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDVuDlgIKl8Uu19MoRAgwYAJ9dsG+u9yWESJy6PI4c8lPhOA/9+ACeLpFA
+tC6aWqqqj0PR4r3uR0KmrlE=
+=BFZc
+-----END PGP SIGNATURE-----

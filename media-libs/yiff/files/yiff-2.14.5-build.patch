@@ -1,0 +1,50 @@
+--- yiffconfig/Makefile
++++ yiffconfig/Makefile
+@@ -49,7 +49,7 @@
+ #				to debug the program.
+ #
+ 
+-CFLAGS = `gtk-config --cflags` -Wall -O2 -g
++CFLAGS += `gtk-config --cflags` -Wall
+ #CFLAGS = `gtk-config --cflags` -Wall -O6 \
+ #         -fomit-frame-pointer -funroll-loops -finline-functions \
+ #         -ffast-math -march=i586
+--- libY2/Makefile.Linux
++++ libY2/Makefile.Linux
+@@ -134,12 +134,12 @@
+ OBJ_C   = $(SRC_C:.c=.o)
+ OBJ_CPP = $(SRC_CPP:.cpp=.o)
+ .c.o:
+-	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS)
++	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS) -fPIC
+ .cpp.o:
+-	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS)
++	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS) -fPIC
+ 
+ $(LIB): $(OBJ_C) $(OBJ_CPP)
+-	$(CC) $(OBJ_C) $(OBJ_CPP) -Wl,-soname=$(LIB) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
++	$(CPP) $(OBJ_C) $(OBJ_CPP) -Wl,-soname=$(LIB) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
+ 	$(LINK) $(LINKFLAGS) $(LIB) $(LIBPFX).so
+ 
+ all: $(LIB)
+--- Makefile
++++ Makefile
+@@ -13,7 +13,7 @@
+ linux:
+ 	for subdir in $(LINUX_DIRS); do					\
+ 	  LIB_DIR=-L../libY2;						\
+-	  $(MAKE) -C $$subdir -f Makefile.Linux all; 			\
++	  $(MAKE) -C $$subdir -f Makefile.Linux all || exit 1; 			\
+ 	done
+ 
+ linux_noserver:
+--- stuff/Makefile
++++ stuff/Makefile
+@@ -38,6 +38,7 @@
+ SOUNDS_DIR = share/sounds
+ 
+ install:
++	$(INSTALL) -m 755 -d $(PREFIX)/$(ICONS_DIR) $(PREFIX)/$(SOUNDS_DIR)
+ 	$(INSTALL) $(INSTDATFLAGS) Y.xpm $(PREFIX)/$(ICONS_DIR)
+ 	$(INSTALL) $(INSTDATFLAGS) yiff.xpm $(PREFIX)/$(ICONS_DIR)
+ 	$(INSTALL) $(INSTDATFLAGS) yiff.wav $(PREFIX)/$(SOUNDS_DIR)
