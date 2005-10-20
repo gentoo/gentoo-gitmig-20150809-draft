@@ -1,6 +1,6 @@
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 78d4e20db83d64aeaeafbafb7fc5b135 ChangeLog 3008
-MD5 b3d0b4dbe293c5541207d6e6607adbd9 artsplugin-mpg123-3.5.0_beta2.ebuild 637
+MD5 b8ac5920becf55a5a056338cf338516c artsplugin-mpg123-3.5.0_beta2.ebuild 582
 MD5 a76ef67c68527da5d4393efdde06f4ae artsplugin-mpg123-3.4.1.ebuild 659
 MD5 3c1e5d8e79e121173ca7c897f5b751c7 artsplugin-mpg123-3.5_beta1.ebuild 636
 MD5 ed6772ec21e7a7b2ada7417ff6b5be82 files/artsplugin-mpg123-mcpu.patch 451
