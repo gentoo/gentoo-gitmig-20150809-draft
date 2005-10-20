@@ -1,14 +1,13 @@
-diff -urN rzip-2.0/Makefile.in rzip-2.0-darwin/Makefile.in
---- rzip-2.0/Makefile.in	2003-10-06 06:53:00.000000000 -0500
-+++ rzip-2.0-darwin/Makefile.in	2005-09-21 22:48:29.000000000 -0500
+--- rzip-2.0/Makefile.in
++++ rzip-2.0/Makefile.in
 @@ -3,8 +3,8 @@
  
  prefix=@prefix@
  exec_prefix=@exec_prefix@
 -INSTALL_BIN=$(exec_prefix)/bin
 -INSTALL_MAN=$(prefix)/man
-+INSTALL_BIN=$(DESTDIR)/$(exec_prefix)/bin
-+INSTALL_MAN=$(DESTDIR)/$(prefix)/man
++INSTALL_BIN=$(DESTDIR)/@bindir@
++INSTALL_MAN=$(DESTDIR)/@mandir@
  
  LIBS=@LIBS@
  CC=@CC@
@@ -25,13 +24,12 @@ diff -urN rzip-2.0/Makefile.in rzip-2.0-darwin/Makefile.in
  	${INSTALLCMD} -m 755 rzip ${INSTALL_BIN}
  	-mkdir -p ${INSTALL_MAN}/man1
  	${INSTALLCMD} -m 644 $(srcdir)/rzip.1 ${INSTALL_MAN}/man1/
-+	-ln -s ${INSTALL_BIN}/rzip runzip
++	ln -s rzip $(INSTALL_BIN)/runzip
  
  rzip: $(OBJS)
  	$(CC) $(CFLAGS) -o rzip $(OBJS) $(LIBS)
-diff -urN rzip-2.0/configure.in rzip-2.0-darwin/configure.in
---- rzip-2.0/configure.in	2003-11-03 02:19:11.000000000 -0600
-+++ rzip-2.0-darwin/configure.in	2005-09-21 22:51:47.000000000 -0500
+--- rzip-2.0/configure.in
++++ rzip-2.0/configure.in
 @@ -2,6 +2,12 @@
  AC_INIT(main.c)
  AC_CONFIG_HEADER(config.h)
@@ -92,9 +90,8 @@ diff -urN rzip-2.0/configure.in rzip-2.0-darwin/configure.in
 +AC_CHECK_FUNCS(strndup)
  
  AC_OUTPUT(Makefile)
-diff -urN rzip-2.0/main.c rzip-2.0-darwin/main.c
---- rzip-2.0/main.c	2004-02-11 18:01:08.000000000 -0600
-+++ rzip-2.0-darwin/main.c	2005-09-21 22:37:50.000000000 -0500
+--- rzip-2.0/main.c
++++ rzip-2.0/main.c
 @@ -18,6 +18,7 @@
  /* rzip compression - main program */
  
@@ -112,9 +109,8 @@ diff -urN rzip-2.0/main.c rzip-2.0-darwin/main.c
  	v = htonl(st.st_size & 0xFFFFFFFF);
  	memcpy(&magic[6], &v, 4);
  	v = htonl(st.st_size >> 32);
-diff -urN rzip-2.0/rzip.h rzip-2.0-darwin/rzip.h
---- rzip-2.0/rzip.h	2003-10-07 17:08:28.000000000 -0500
-+++ rzip-2.0-darwin/rzip.h	2005-09-21 22:37:50.000000000 -0500
+--- rzip-2.0/rzip.h
++++ rzip-2.0/rzip.h
 @@ -94,7 +94,7 @@
  #define strerror(i) sys_errlist[i]
  #endif
@@ -124,9 +120,8 @@ diff -urN rzip-2.0/rzip.h rzip-2.0-darwin/rzip.h
  extern int errno;
  #endif
  
-diff -urN rzip-2.0/strutils.c rzip-2.0-darwin/strutils.c
---- rzip-2.0/strutils.c	1969-12-31 18:00:00.000000000 -0600
-+++ rzip-2.0-darwin/strutils.c	2005-09-21 22:37:50.000000000 -0500
+--- rzip-2.0/strutils.c
++++ rzip-2.0/strutils.c
 @@ -0,0 +1,29 @@
 +/* 
 +   Copyright (C) 2005 Gentoo Foundation
@@ -157,9 +152,8 @@ diff -urN rzip-2.0/strutils.c rzip-2.0-darwin/strutils.c
 +	return(memcpy(ret, s, n));
 +}
 +#endif
-diff -urN rzip-2.0/strutils.h rzip-2.0-darwin/strutils.h
---- rzip-2.0/strutils.h	1969-12-31 18:00:00.000000000 -0600
-+++ rzip-2.0-darwin/strutils.h	2005-09-21 22:37:50.000000000 -0500
+--- rzip-2.0/strutils.h
++++ rzip-2.0/strutils.h
 @@ -0,0 +1,31 @@
 +/* 
 +   Copyright (C) 2005 Gentoo Foundation

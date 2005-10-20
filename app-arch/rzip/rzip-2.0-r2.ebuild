@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/rzip-2.0-r2.ebuild,v 1.2 2005/09/23 15:55:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/rzip-2.0-r2.ebuild,v 1.3 2005/10/20 00:09:17 vapier Exp $
 
 inherit autotools
 
@@ -18,13 +18,12 @@ DEPEND="app-arch/bzip2
 RDEPEND="app-arch/bzip2"
 
 src_unpack() {
-	unpack "${A}"
-	epatch "${FILESDIR}/${P}-darwin.patch"
-	cd ${S}
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-darwin.patch
 	WANT_AUTOCONF="2.5" eautoreconf
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "failed installing"
-	dosym rzip /usr/bin/runzip || die "failed creating runzip symlink"
 }
