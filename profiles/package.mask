@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4589 2005/10/20 01:16:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4590 2005/10/20 06:26:00 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -780,6 +780,7 @@ media-fonts/font-bh-ttf
 media-fonts/font-bh-type1
 media-fonts/font-bitstream-100dpi
 media-fonts/font-bitstream-75dpi
+media-fonts/font-bitstream-speedo
 media-fonts/font-bitstream-type1
 media-fonts/font-cronyx-cyrillic
 media-fonts/font-cursor-misc
@@ -790,6 +791,8 @@ media-fonts/font-isas-misc
 media-fonts/font-jis-misc
 media-fonts/font-micro-misc
 media-fonts/font-misc-cyrillic
+media-fonts/font-misc-ethiopic
+media-fonts/font-misc-meltho
 media-fonts/font-misc-misc
 media-fonts/font-mutt-misc
 media-fonts/font-schumacher-misc
