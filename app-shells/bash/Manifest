@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c5b047e19f5b3b38f8b12eec93c4497c ChangeLog 15654
+MD5 88a51efef2d1978e42f43b78224b3c82 ChangeLog 15907
 MD5 3da49e27281cbe16582393239ba5b29b bash-2.05b-r11.ebuild 3715
 MD5 a4df32e089db48d7c99fd6be36368475 bash-2.05b-r9.ebuild 3516
 MD5 27a795f52631ec69ef83b28d72e449dc bash-3.0-r11.ebuild 5143
 MD5 30fb11f3c3ffeebf09fa3ae90dd0d351 bash-3.0-r12.ebuild 5407
-MD5 6e5c1610b6ebc475ccf11c0f88a4f764 bash-3.0-r13.ebuild 4822
+MD5 f999a51dcdf23cdb6597ea549b58c170 bash-3.0-r13.ebuild 4957
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 ca64aff9caa582e07e0b34ed87d60d80 files/bash-2.05b-jobs.patch 876
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
@@ -38,6 +38,7 @@ MD5 6bc03ea9b1de46a4789e8223f2224658 files/bash-3.0-read-builtin-pipe.patch 689
 MD5 b3345c5274b7b08ce50dc5ec0aa11197 files/bash-3.0-read-e-segfault.patch 825
 MD5 d27b7513a05817757fdea6195bbdf80a files/bash-3.0-rl-display.patch 5641
 MD5 5b8b23036c704629f7acdfdffcf69f2f files/bash-3.0-rl-self-insert.patch 2479
+MD5 52fd67f8ad9d3b47bc49027b3beaddb3 files/bash-3.0-strnlen.patch 5235
 MD5 b86b65863c2ae21b59d8201c2a3a9e91 files/bash-3.0-trap-fg-signals.patch 641
 MD5 47fca8c27b11bcc6641a78a8cc9414e5 files/bash-3.0-ulimit.patch 5226
 MD5 c16b3704ff34112b6f152205c2565f5b files/bash-3.0-utf8.patch 1392
@@ -56,7 +57,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDVCeHgIKl8Uu19MoRAjeNAJ9O9n81pybeh+dL8HXiPsqLgLgOcgCeO/Er
-3Dm/dGl8ZF+ON+WPmZ2OQTw=
-=1mbk
+iD8DBQFDV8tSj5H05b2HAEkRAjvLAJ9O/+n+RTtiN65qQqTCHlfQNUSmYgCeONEc
+dCKiL7rsHJE8YnTWlTqM89I=
+=4i/1
 -----END PGP SIGNATURE-----

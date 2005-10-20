@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r13.ebuild,v 1.1 2005/10/16 02:42:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r13.ebuild,v 1.2 2005/10/20 16:51:39 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -79,6 +79,10 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${P}-configs.patch
+
+	# Add strnlen function for non-glibc systems, as one of Fedora's patches
+	# requires it.
+	epatch "${FILESDIR}"/${P}-strnlen.patch
 
 	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
 }
