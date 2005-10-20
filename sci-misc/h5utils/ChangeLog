@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/h5utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.5 2005/05/06 20:30:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.6 2005/10/20 01:00:30 ribosome Exp $
+
+*h5utils-1.10 (20 Oct 2005)
+
+  20 Oct 2005; Olivier Fisette <ribosome@gentoo.org> +h5utils-1.10.ebuild:
+  New version.
 
   06 May 2005; David Holm <dholm@gentoo.org> h5utils-1.7.2.ebuild:
   Added to ~ppc.
