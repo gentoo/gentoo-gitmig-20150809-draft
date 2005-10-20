@@ -1,6 +1,19 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.63 2005/10/02 23:02:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.64 2005/10/20 09:50:44 uberlord Exp $
+
+*vsftpd-2.0.3-r2 (20 Oct 2005)
+
+  20 Oct 2005; Roy Marples <uberlord@gentoo.org>
+  +files/vsftpd-2.0.3-gentoo.patch, +files/vsftpd.init, -files/vsftpd.pam,
+  -files/vsftpd.pam-include, +vsftpd-2.0.3-r2.ebuild:
+  New init script which allows for running multiple vsftpd daemons with
+  different config files - works like net.ethx scripts, #97140
+
+  Punted unused pam files.
+
+  Patch now updates the default vsftpd.conf for using /etc/vsftpd instead
+  of maintaining our own config.
 
   02 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> vsftpd-2.0.3-r1.ebuild:
   Stable on sh
