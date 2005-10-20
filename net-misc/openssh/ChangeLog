@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.132 2005/10/19 03:32:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.133 2005/10/20 18:42:28 ranger Exp $
+
+  20 Oct 2005; Brent Baude <ranger@gentoo.org> openssh-4.2_p1.ebuild:
+  Marking openssh-4.2_p1 ppc64 for bug 109678
 
   19 Oct 2005; Mike Frysinger <vapier@gentoo.org>
   openssh-3.8.1_p1-r1.ebuild, openssh-3.9_p1-r3.ebuild,
