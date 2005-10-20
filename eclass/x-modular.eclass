@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.13 2005/09/12 21:44:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.14 2005/10/20 00:35:21 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -19,7 +19,8 @@ XDIR="/usr"
 
 IUSE=""
 HOMEPAGE="http://xorg.freedesktop.org/"
-SRC_URI="http://xorg.freedesktop.org/X11R7.0-RC0/everything/${P}.tar.bz2"
+SRC_URI="http://xorg.freedesktop.org/releases/X11R7.0-RC1/everything/${P}.tar.bz2
+	http://xorg.freedesktop.org/releases/X11R7.0-RC0/everything/${P}.tar.bz2"
 LICENSE="X11"
 SLOT="0"
 
@@ -34,7 +35,7 @@ if [ -n "${SNAPSHOT}" ]; then
 fi
 
 # If we're a font package, but not the font.alias one
-if [[ "${PN/#font}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
+if [[ "${PN/#font-}" != "${PN}" ]] && [[ "${PN}" != "font-alias" ]]; then
 	# Activate font code in the rest of the eclass
 	FONT="yes"
 
