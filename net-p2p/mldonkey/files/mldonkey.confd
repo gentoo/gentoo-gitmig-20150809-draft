@@ -8,11 +8,8 @@
 # owner of mlnet process (don't change, must be existing)
 USER="p2p"
 
-# home dir of owner (don't change, must be existing)
-BASEDIR="/home/p2p"
-
-# subdir if any (will be created, if not existing)
-SUBDIR=".mldonkey"
+# mldonkey's working dir (must be existing)
+MLDONKEY_DIR="/home/p2p/mldonkey"
 
 # logfile (/dev/null for nowhere)
 LOG="/var/log/mldonkey.log"

@@ -7,37 +7,35 @@ depend() {
 }
 
 start() {
-	result=0
 	ebegin "Starting mldonkey"
-	if [ ! -d ${BASEDIR}/${SUBDIR} ]
-	then
-		einfo "Directory ${BASEDIR}/${SUBDIR} not existing, trying to create..."
-		if [ ! -d ${BASEDIR} ]
-		then
-			mkdir -p ${BASEDIR}
-			chown ${USER}:users ${BASEDIR}
-			if [ ! -d ${BASEDIR} ]
-                	then
-                        	eerror "Directory ${BASEDIR} could not be created!"
-                        	result=$(( ${result} + 1 ))
-			fi
-                fi
-		su ${USER} -c "mkdir ${BASEDIR}/${SUBDIR}" 
-		if [ ! -d ${BASEDIR}/${SUBDIR} ]
-		then
-			eerror "Directory ${BASEDIR}/${SUBDIR} could not be created!"
-			result=$(( ${result} + 1 ))
-		fi
-		einfo "...ok!"
+	result=0
+
+	if [ -z "${MLDONKEY_DIR}" ]; then
+		ewarn "mldonkey's start script has been changed. You should remove"
+		ewarn "BASEDIR and SUBDIR from /etc/conf.d/mldonkey and set MLDONKEY_DIR"
+		ewarn "to corect value (you propably want MLDONKEY_DIR=${BASEDIR}/${SUBDIR}"
+		MLDONKEY_DIR=${BASEDIR}/${SUBDIR}
+		einfo "Using ${MLDONKEY_DIR} as working directory"
 	fi
-	cd ${BASEDIR}/${SUBDIR}/
-	env HOME=${BASEDIR} start-stop-daemon --quiet --start -c ${USER}  \
-		--nicelevel ${NICE} -x /usr/bin/mlnet &>${LOG} &
+	
+	if [ ! -d ${MLDONKEY_DIR} ]; then
+		einfo "Directory ${MLDONKEY_DIR} not existing, trying to create..."
+		if `mkdir -p ${MLDONKEY_DIR} 2>/dev/null`; then 
+			chown ${USER}:users ${MLDONKEY_DIR}
+		else
+           	eerror "Directory ${MLDONKEY_DIR} could not be created!"
+           	((result++))
+		fi
+	fi
+	
+	cd ${MLDONKEY_DIR}
+	env MLDONKEY_DIR=${MLDONKEY_DIR} start-stop-daemon --quiet --start \
+		-c ${USER} -N ${NICE} -x /usr/bin/mlnet &>${LOG} &
 	sleep 5
 	if ! pgrep -u ${USER} mlnet >/dev/null
 	then
 		eerror "MLDonkey could not be started! Check logfile: ${LOG}"
-		result=$(( ${result} + 1 ))
+		((result++))
 	fi
 	eend $result
 }
