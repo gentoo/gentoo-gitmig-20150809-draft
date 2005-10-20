@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4-r2.ebuild,v 1.1 2005/10/16 21:46:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-385_p4-r2.ebuild,v 1.2 2005/10/20 04:59:27 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.greenwoodsoftware.com/less/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE=""
+IUSE="unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 PROVIDE="virtual/pager"
@@ -29,6 +29,14 @@ src_unpack() {
 	epatch "${DISTDIR}"/less-${PATCH_VER}.patch.bz2
 	cp "${DISTDIR}"/code2color "${S}"/
 	epatch "${FILESDIR}"/code2color.patch
+}
+
+yesno() { use $1 && echo yes || echo no ; }
+src_compile() {
+	export ac_cv_lib_ncursesw_initscr=$(yesno unicode)
+	export ac_cv_lib_ncurses_initscr=$(yesno !unicode)
+	econf || die
+	emake || die
 }
 
 src_install() {
