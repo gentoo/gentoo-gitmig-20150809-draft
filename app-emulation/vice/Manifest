@@ -1,21 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34c6342b1d43e8092b348599ba4fa503 ChangeLog 3520
-MD5 5467080b8555dc1bad201449fbdaf87e files/1.14-console-security.patch 3709
-MD5 962c8cfd8a9a308b180e1a26c4973625 files/1.14-po-Makefile.patch 560
-MD5 eca7586b8ef1c0d8665368c0328f9250 files/digest-vice-1.14-r1 62
-MD5 fd15ab780139d6d1ff8ed8c0d5d85f90 files/digest-vice-1.16 62
-MD5 feb8195c915d5109dfd6b96df7bf4f91 files/digest-vice-1.17 62
-MD5 818e0e7dbc321296c08530856f1c297a files/vice_gcc4_patch.gz 1805
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 99c5daa624fb08ea5e9f1a08e3b78976 vice-1.14-r1.ebuild 1427
-MD5 79d16f38addfa775c113ea773fbe43fd vice-1.16.ebuild 1832
 MD5 a490a6fbf0efc8d327ee8de9118ee334 vice-1.17.ebuild 1369
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVBvOr2QksT29OyARAjU3AJ0RgmG7V53H/saBAgHUthqW5wx7ggCfd8jm
-OlpYTUSc0LUf8slGhFJghdU=
-=x6yI
------END PGP SIGNATURE-----
+MD5 5c8b323beb048f8b50d26aa6c11fbcec ChangeLog 3648
+MD5 99c5daa624fb08ea5e9f1a08e3b78976 vice-1.14-r1.ebuild 1427
+MD5 eca7586b8ef1c0d8665368c0328f9250 files/digest-vice-1.14-r1 62
+MD5 962c8cfd8a9a308b180e1a26c4973625 files/1.14-po-Makefile.patch 560
+MD5 feb8195c915d5109dfd6b96df7bf4f91 files/digest-vice-1.17 62
+MD5 5467080b8555dc1bad201449fbdaf87e files/1.14-console-security.patch 3709
