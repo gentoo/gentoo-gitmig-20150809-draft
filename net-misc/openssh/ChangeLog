@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.134 2005/10/20 18:57:56 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.135 2005/10/20 19:03:39 hansmi Exp $
+
+  20 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> openssh-4.2_p1.ebuild:
+  Stable on hppa, ppc.
 
   20 Oct 2005; <mkay@gentoo.org> openssh-4.2_p1.ebuild:
   Marking stable on x86
