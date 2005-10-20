@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.14 2005/10/20 00:35:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.15 2005/10/20 06:58:58 spyderous Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -53,7 +53,7 @@ fi
 
 DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.18
-	x11-misc/util-macros"
+	>=x11-misc/util-macros-0.99.0_p20051007"
 
 RDEPEND="${RDEPEND}
 	!<x11-base/xorg-x11-7"
