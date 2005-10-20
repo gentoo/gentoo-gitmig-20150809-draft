@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.22 2005/10/15 11:08:43 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.23 2005/10/20 23:16:10 puggy Exp $
+
+  20 Oct 2005; Douglas Russell <puggy@gentoo.org> kicker-3.5.0_beta2.ebuild:
+  Keyword ~ppc
 
 *kicker-3.5.0_beta2 (14 Oct 2005)
 
