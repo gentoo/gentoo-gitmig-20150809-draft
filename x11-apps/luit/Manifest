@@ -1,4 +1,6 @@
-MD5 a8db025dce2699a8491793885ae86a69 ChangeLog 541
+MD5 37dfa34221b5d806553ba71b9e670076 ChangeLog 666
 MD5 a3f9bc891eeed91fe2d7edd450460d43 files/digest-luit-0.99.0 63
+MD5 0270dd6b4e259d0a3d463c1106fb6909 files/digest-luit-0.99.1 63
 MD5 fad54619b5fe95497e2ae60aed21097a luit-0.99.0.ebuild 442
+MD5 43888357e2f1e973409fc6cd2e4bd800 luit-0.99.1.ebuild 445
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

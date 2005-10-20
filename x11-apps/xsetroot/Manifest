@@ -1,4 +1,6 @@
-MD5 eb2c8590b53e170f60a46c724a26df55 ChangeLog 654
+MD5 5dcb7073dab4aa6c8c38b53629269028 ChangeLog 789
 MD5 8da7c3ad691f5585df5d8ca2fb1fcc11 files/digest-xsetroot-0.99.0 67
+MD5 68baa0c0c6292f032fd86536e653df2f files/digest-xsetroot-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 cccf37584c012dde20a9f51ef45aa3bc xsetroot-0.99.0.ebuild 457
+MD5 3b9d57fa638b02cbe80d23e3de60efb3 xsetroot-0.99.1.ebuild 460

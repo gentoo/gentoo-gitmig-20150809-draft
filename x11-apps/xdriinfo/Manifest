@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1bed90e02615d31dad39226f6278175c ChangeLog 472
+MD5 853dd7e26121f2b21bdedfc2344fda58 ChangeLog 607
 MD5 63ab6f4cf13a90444d29d6babb42e75f files/digest-xdriinfo-0.99.0_pre20050908 79
+MD5 ec7017d97f84bd6d6b6d10edbb7bd158 files/digest-xdriinfo-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 8d1dda7af5f91c4930540a39e4102483 xdriinfo-0.99.0_pre20050908.ebuild 650
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDIXH2I1lqEGTUzyQRAgEpAJ4/a3R9bMai96WOVUZtbxlm8Zn6BQCdEl6H
-LoyyN6KPaGIFn6TvIt0nLGI=
-=wM9N
------END PGP SIGNATURE-----
+MD5 98d176c2693da53601a2229a38821f61 xdriinfo-0.99.1.ebuild 431

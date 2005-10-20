@@ -1,4 +1,6 @@
-MD5 691331ffa44c8fe3d7ed99e1d8be0028 ChangeLog 568
+MD5 6511fd29cb9e89e3cbf6a0f2a9d42bf9 ChangeLog 705
 MD5 0ceadc204448499927a6111cf06ac655 files/digest-fslsfonts-0.99.0 68
+MD5 1de2e17f4df00711a0a4eaadf0d9a572 files/digest-fslsfonts-0.99.1 68
 MD5 c6a0609631633d2b7be23d1e8dd96002 fslsfonts-0.99.0.ebuild 452
+MD5 2cb03a8e3811993968a395a14a0facdb fslsfonts-0.99.1.ebuild 455
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

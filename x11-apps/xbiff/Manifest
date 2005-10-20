@@ -1,4 +1,6 @@
-MD5 c419cfb0214530b3c22a7d4c2bb5aacb ChangeLog 681
+MD5 b0f60985a56ba9e2056ba2b71177b90f ChangeLog 808
 MD5 2f5ccc747384ae473b643a1c75b22799 files/digest-xbiff-0.99.0 64
+MD5 01305f18e10cb943e3d749fc4f2c6331 files/digest-xbiff-0.99.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c4bfeb1356527f4d0bcd5741a5e78c61 xbiff-0.99.0.ebuild 679
+MD5 e1b01e8d34fe617e64b1f4720d91aab4 xbiff-0.99.1.ebuild 502

@@ -1,4 +1,6 @@
-MD5 b8a0674837a631a9d97400a1920bf0ce ChangeLog 648
+MD5 04c368ff51aa1b9e06048d4a661f38b1 ChangeLog 782
 MD5 1a3cf8d56e130ea86fe79f9d716061e6 files/digest-xclock-0.99.0 65
+MD5 f72386976e619d0c9cfe8197b47c1bbd files/digest-xclock-0.99.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 dfef70ad4c11a9b38755a19dd6fdf1ca xclock-0.99.0.ebuild 691
+MD5 6e487b2841401a189c45d2e1815b5655 xclock-0.99.1.ebuild 694

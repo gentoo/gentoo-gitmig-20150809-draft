@@ -1,4 +1,6 @@
-MD5 e37886ecaeeb5e37c0fdbc6e5f0c8191 ChangeLog 697
+MD5 97cd3d6aa2b95cc486f76bd4e7c646ca ChangeLog 829
 MD5 f1bc74ff24ca181e4b1eb8fd6bda0086 files/digest-xtrap-0.99.0 64
+MD5 6e2f4478bdc4840c70152770fd7f86aa files/digest-xtrap-0.99.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 81990b6328b2ba44e2c0db5008e742c6 xtrap-0.99.0.ebuild 455
+MD5 233bd96a05d556ba8055421ba62619f1 xtrap-0.99.1.ebuild 458

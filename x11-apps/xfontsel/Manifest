@@ -1,4 +1,6 @@
-MD5 d1ca4c5de89d1657c0763b04fa737a31 ChangeLog 563
+MD5 207b9090e9bba301bca4f573b9a627ee ChangeLog 698
 MD5 ac7b52bfc7738dcb94ebd6f10316e7c8 files/digest-xfontsel-0.99.0 67
+MD5 5aed554bf374fd037ed43cb049c1e821 files/digest-xfontsel-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 56da789b637e703b3c56880c2cf58b8a xfontsel-0.99.0.ebuild 621
+MD5 108b6ee6bd9376fc1fcb9003321badea xfontsel-0.99.1.ebuild 624

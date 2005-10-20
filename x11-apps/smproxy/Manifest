@@ -1,4 +1,6 @@
-MD5 5757e7044a86ec98648f226bea51ce1b ChangeLog 558
+MD5 4a38cd748a46653efa531d09de9bf157 ChangeLog 691
 MD5 67c1b3b34aa26aa326380454b578b650 files/digest-smproxy-0.99.0 66
+MD5 ab0e4c7ac1d02a61218d77973ce61e6c files/digest-smproxy-0.99.1 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a0538693c409ab8f21bdd346ebd4e68c smproxy-0.99.0.ebuild 446
+MD5 9f9a4246196f748a6740559b963b4f45 smproxy-0.99.1.ebuild 449

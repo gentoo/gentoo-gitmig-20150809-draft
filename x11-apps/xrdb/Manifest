@@ -1,4 +1,6 @@
-MD5 c39a412cf2133f93f9dc24421934bbde ChangeLog 721
+MD5 174011acf51dbaddd4ef2c1065c87189 ChangeLog 849
 MD5 b81b40a21b0597218d918038fc191af5 files/digest-xrdb-0.99.0 63
+MD5 8753e4677c6ad0f77335f1cecb8d9518 files/digest-xrdb-0.99.1 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 0ce51ae055a62009858543f56774efc6 xrdb-0.99.0.ebuild 445
+MD5 9cfa32aff1a62dc33ad797f345486eea xrdb-0.99.1.ebuild 448

@@ -1,4 +1,6 @@
-MD5 d29d8427eb5715b648fe7bc58ede3759 ChangeLog 585
+MD5 9981e19438510a195c662d9919d74522 ChangeLog 728
 MD5 a938937243f17fb5dd64ec94d0ba7d08 files/digest-xplsprinters-0.99.0 71
+MD5 553447fda963d42b41b9989e76a9f368 files/digest-xplsprinters-0.99.1 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 016842f1e8d1531b9ac635f6dd77827c xplsprinters-0.99.0.ebuild 485
+MD5 8c72e87c2a3137fa1c79fdaad2d4d2a1 xplsprinters-0.99.1.ebuild 488

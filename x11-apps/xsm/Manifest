@@ -1,4 +1,6 @@
-MD5 bf9b212035caec282eaa5669c612b480 ChangeLog 536
+MD5 2627b9016f43db02f5297eeb3ffaa408 ChangeLog 659
 MD5 560fc47517073ce9c0020442f4149c89 files/digest-xsm-0.99.0 62
+MD5 fbab563d6fee5defb0f7033ce0a7b24c files/digest-xsm-0.99.1 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 c2711ed40174b88e138898a8b5e1799a xsm-0.99.0.ebuild 627
+MD5 edd2a7dfaa7245957ce48c236a246450 xsm-0.99.1.ebuild 630

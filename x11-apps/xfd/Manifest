@@ -1,4 +1,6 @@
-MD5 f2d3cfc70c00f72f53438b4fc3bb7eb0 ChangeLog 669
+MD5 f498afe5ebf2422782749f0641f6bd35 ChangeLog 792
 MD5 0a7afb456adad031438816c42636154f files/digest-xfd-0.99.0 62
+MD5 8fd11f866a17d8b542be9bf7c516927d files/digest-xfd-0.99.1 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f613e6ef7dda91a717d68684d814f56a xfd-0.99.0.ebuild 676
+MD5 66b6c37dda47f91f005173a22ae49fe7 xfd-0.99.1.ebuild 632

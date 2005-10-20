@@ -1,4 +1,6 @@
-MD5 c0f42ed032e58c022fd308eebd195efb ChangeLog 541
+MD5 e649fd03d40f33031567c00f1ae9f88e ChangeLog 666
 MD5 bc0965047fafeae371f08acfdac0f07c files/digest-xfwp-0.99.0 63
+MD5 a711caec0d36614a0231681274d0b70d files/digest-xfwp-0.99.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 1e9484aeef3aa5a793dbc335abc90eab xfwp-0.99.0.ebuild 474
+MD5 0d15487c5e42579f5e226b36805f7724 xfwp-0.99.1.ebuild 477

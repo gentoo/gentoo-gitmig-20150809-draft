@@ -1,4 +1,6 @@
-MD5 af5db34c0244356557c36afc531fce50 ChangeLog 563
+MD5 fbee73101467353ba38f5d9d43ed11b5 ChangeLog 698
 MD5 1e1e1d32300eb1bf6ae97bf7a326785f files/digest-xconsole-0.99.0 67
+MD5 c250486a1376ee103cfb028abb0546e5 files/digest-xconsole-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 261d3badfad4e3ff6828c792cf17e23e xconsole-0.99.0.ebuild 610
+MD5 e40490f840a46f3c2f11f6c33c46a799 xconsole-0.99.1.ebuild 613

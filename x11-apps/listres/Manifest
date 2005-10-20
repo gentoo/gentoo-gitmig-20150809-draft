@@ -1,4 +1,6 @@
-MD5 e2d8d1374a4034dbedb42711df6a3d66 ChangeLog 558
+MD5 081584deda4a17360b8df3e42f3c1a3e ChangeLog 691
 MD5 60c8277df82dd59b74e292aba08e911b files/digest-listres-0.99.0 66
+MD5 c9adf77b94e3d850cd60df139cc4149f files/digest-listres-0.99.1 66
 MD5 0a1c02a64134266bb900e44aff08a71d listres-0.99.0.ebuild 668
+MD5 dbb2cc8e4a620bf32fecc81cd29546f4 listres-0.99.1.ebuild 671
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

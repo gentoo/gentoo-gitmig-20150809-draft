@@ -1,4 +1,6 @@
-MD5 92ced381aecb00bade7da337aeceba7f ChangeLog 553
+MD5 4c1f92e2ae52eecce8d7ec1e7c6b51e0 ChangeLog 684
 MD5 781f788790740d04a7db56e9a8a10421 appres-0.99.0.ebuild 443
+MD5 53d627352f57b5aeecf76c9e9b6571d5 appres-0.99.1.ebuild 446
 MD5 9f343d8d89afad7b128590f7fe341d60 files/digest-appres-0.99.0 65
+MD5 4691ed81ff534fc81fdce4a8861164fd files/digest-appres-0.99.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

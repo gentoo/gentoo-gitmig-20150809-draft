@@ -1,4 +1,6 @@
-MD5 7d4fc163919b8658decde03106a6f462 ChangeLog 637
+MD5 2d610e6d7f2b55d860a03f721bec5178 ChangeLog 770
 MD5 4a09f52913e8defc03c5b9cf688b55dd files/digest-xvinfo-0.99.0 65
+MD5 91b1bcd28b441279a6fe47202723efe4 files/digest-xvinfo-0.99.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f4f648fe83da5ea574fe85b09b572f5d xvinfo-0.99.0.ebuild 448
+MD5 5bc75f819fff791da386e80956ac7408 xvinfo-0.99.1.ebuild 451

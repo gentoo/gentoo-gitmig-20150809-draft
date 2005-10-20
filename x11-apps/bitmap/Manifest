@@ -1,4 +1,6 @@
-MD5 17984b982d62b9b2db6bb91c923328c4 ChangeLog 620
+MD5 672a384e02cafa5ce2f4c913136007cd ChangeLog 756
 MD5 99ae4816ac71fb59b8d9dcce5edb1014 bitmap-0.99.0.ebuild 675
+MD5 1530052a25d24e7c524ab42facac00c7 bitmap-0.99.1.ebuild 678
 MD5 d6d3cf0f93f8859831e591dce2561e04 files/digest-bitmap-0.99.0 65
+MD5 d763833f9e74ab73aa444dda1ef3ff3e files/digest-bitmap-0.99.1 66
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

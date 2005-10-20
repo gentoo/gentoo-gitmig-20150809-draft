@@ -1,4 +1,6 @@
-MD5 5ffa9e850f5b6e5b26fe33f81baa6ab1 ChangeLog 563
+MD5 2547556668c60a72c0680bad604a2778 ChangeLog 698
 MD5 a6a385eda0d63f9885a26d9ac215457e files/digest-xstdcmap-0.99.0 67
+MD5 f114a3d44c815317b5d73687f104dc05 files/digest-xstdcmap-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f739ecc95039d326dd525637d82d6489 xstdcmap-0.99.0.ebuild 450
+MD5 8e21b353f70b163feef564f9e327cbde xstdcmap-0.99.1.ebuild 453

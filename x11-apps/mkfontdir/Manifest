@@ -1,4 +1,6 @@
-MD5 1b73bb9efff7ea14104658bf6fa2724d ChangeLog 937
+MD5 9c927695fa97f54c4f5c86548af1b7fc ChangeLog 1077
 MD5 29aa0018fc2b45e1b62f7667964f7810 files/digest-mkfontdir-0.99.0 68
+MD5 77732e7a25f3f8991e462b06af2edfaf files/digest-mkfontdir-0.99.1 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 61daebc929834ccbcfafbcca8f8cd190 mkfontdir-0.99.0.ebuild 457
+MD5 41f62eebfe9b0000df27f200f87f7517 mkfontdir-0.99.1.ebuild 460

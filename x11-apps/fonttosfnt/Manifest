@@ -1,4 +1,6 @@
-MD5 f40b1ad5cd1004770af60c523fdce65f ChangeLog 575
+MD5 bb04fe22c6eb5c1fc71d7cddae66d603 ChangeLog 714
 MD5 56f377aaed74f81f0df927c532649678 files/digest-fonttosfnt-0.99.0 69
+MD5 c780e41ac0d7472e26f20482c276a005 files/digest-fonttosfnt-0.99.1 69
 MD5 28bef689ea0b7ea98b656c69428da348 fonttosfnt-0.99.0.ebuild 485
+MD5 f436534e7fc940d8d6c4baea1781e5a4 fonttosfnt-0.99.1.ebuild 488
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

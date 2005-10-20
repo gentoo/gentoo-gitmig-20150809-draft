@@ -1,4 +1,6 @@
-MD5 edbd6311b785ac00184e2e83d9a8c2c4 ChangeLog 568
+MD5 317987f8d4f7477cd679b516f9bf965f ChangeLog 705
 MD5 737a46bfbdf25cef248f981510f7c927 files/digest-xdbedizzy-0.99.0 68
+MD5 af43c1df136a26a8e91c7c96147d092b files/digest-xdbedizzy-0.99.1 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 e7d6a31f0c12df5742e733a9c9bfb89a xdbedizzy-0.99.0.ebuild 654
+MD5 91b4277f4c5cbb90f698dbd682b922c0 xdbedizzy-0.99.1.ebuild 657

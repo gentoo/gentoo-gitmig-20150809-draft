@@ -1,4 +1,6 @@
-MD5 ed8942ae11340c2dc9becd966b0b9e0d ChangeLog 558
+MD5 fda79b866dc0bf8a8607335c0e3e7cd9 ChangeLog 691
 MD5 7470d5ddb9a2261b33c458864b337c4d files/digest-x11perf-0.99.0 67
+MD5 928d78bab0ed7897fc4fc9656634df58 files/digest-x11perf-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 48ba85ac451841bb02de1d2db734f80a x11perf-0.99.0.ebuild 447
+MD5 e8c8427136e3a1ed5f9b87864968ded1 x11perf-0.99.1.ebuild 450

@@ -1,4 +1,6 @@
-MD5 bfb4e702976ed89b1da34695edf6a5f2 ChangeLog 558
+MD5 cfb6b798d3bec6b1875c734b88038c56 ChangeLog 691
 MD5 12ea4845d8868c4671a6fafbca4d4c09 files/digest-fstobdf-0.99.0 66
+MD5 7b334e3784c4cb6fd6fdb937efe27b55 files/digest-fstobdf-0.99.1 66
 MD5 e3da6f6b5c587db1746ffbf86a1b5496 fstobdf-0.99.0.ebuild 446
+MD5 8736bc681926126b71c099f407efa4b7 fstobdf-0.99.1.ebuild 449
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

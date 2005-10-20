@@ -1,4 +1,6 @@
-MD5 4e57bc23dc9429c256980dc4c334eded ChangeLog 563
+MD5 f9c9853291e1cb9c8888c2d8d5e91464 ChangeLog 698
 MD5 847c5e7c2d0f16e3acc28cbdbf72a286 files/digest-xsetmode-0.99.0 67
+MD5 1531b3f269b2c885e41ac017ed35ef79 files/digest-xsetmode-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 76b18db2328afbe0a8f1666a0bb7a88a xsetmode-0.99.0.ebuild 449
+MD5 18d7c1ecec64a7839625caa3e028bab0 xsetmode-0.99.1.ebuild 452

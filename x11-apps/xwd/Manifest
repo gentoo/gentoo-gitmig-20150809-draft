@@ -1,4 +1,6 @@
-MD5 234297b5e8686d3dc7668ed17723f42b ChangeLog 536
+MD5 f94b87354d9170203c37f134c86e130e ChangeLog 659
 MD5 7fe6c713a5a2b9e77ed295c7c29d11e9 files/digest-xwd-0.99.0 62
+MD5 5e42e445bbda8f41018e09c84164eac2 files/digest-xwd-0.99.1 62
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 23dbfb30703c3bcfa0ce8f9f66f1e7d5 xwd-0.99.0.ebuild 435
+MD5 0a506b68a44a5686d9ef01fde101fa09 xwd-0.99.1.ebuild 438

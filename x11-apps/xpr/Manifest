@@ -1,4 +1,6 @@
-MD5 2d669de5825974d39dea9297df7e1e02 ChangeLog 536
+MD5 a71843bd1ad0a2a923f80afec22251ea ChangeLog 659
 MD5 263c298dd69f8c10fe908f590d587023 files/digest-xpr-0.99.0 62
+MD5 58b8d1deba80d22e867a241acfef8e56 files/digest-xpr-0.99.1 63
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 379382e0057553cfae9a2a2f0700b8e5 xpr-0.99.0.ebuild 435
+MD5 00b9360901366e76dc79bbf65bb06c7b xpr-0.99.1.ebuild 438

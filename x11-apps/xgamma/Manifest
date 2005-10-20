@@ -1,4 +1,6 @@
-MD5 aed4417ce881ff0071009122194d141b ChangeLog 553
+MD5 7b1de161a77319fa3c04f129041eeec2 ChangeLog 684
 MD5 01d9bc25b70676bdd469ce1a78c57212 files/digest-xgamma-0.99.0 65
+MD5 d449aa3dc187b345be38e8f346b4c25f files/digest-xgamma-0.99.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 a32c35f088ef255ba5374cc10864874b xgamma-0.99.0.ebuild 431
+MD5 22eff39eaf914ed075864330965898e2 xgamma-0.99.1.ebuild 434
