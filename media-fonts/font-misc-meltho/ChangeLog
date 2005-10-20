@@ -1,0 +1,46 @@
+# ChangeLog for media-fonts/font-misc-misc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-meltho/ChangeLog,v 1.1 2005/10/20 06:26:12 spyderous Exp $
+
+*font-misc-meltho-0.99.1 (20 Oct 2005)
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
+  +font-misc-meltho-0.99.1.ebuild:
+  New package for 7.0 RC1.
+
+  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
+
+  01 Sep 2005; MATSUU Takuto <matsuu@gentoo.org>
+  font-misc-misc-0.99.0.ebuild:
+  Added ~sh
+
+  20 Aug 2005; Luca Barbato <lu_zero@gentoo.org>
+  font-misc-misc-0.99.0.ebuild:
+  Marked ~ppc
+
+  15 Aug 2005; Herbie Hopkins <herbs@gentoo.org>
+  font-misc-misc-0.99.0.ebuild:
+  Marked ~amd64.
+
+  14 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  font-misc-misc-0.99.0.ebuild:
+  Autodiscover fonts instead of specifying them.
+
+  09 Aug 2005; Ferris McCormick <fmccor@gentoo.org>
+  font-misc-misc-0.99.0.ebuild:
+  Add ~sparc keyword (modular X testing).
+
+  11 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  font-misc-misc-0.99.0.ebuild:
+  Activate new font setup code in x-modular.eclass by setting FONT and
+  FONT_DIRS. This ensures correct fonts.* setup, which isn't happening
+  currently since each subpackage provides its own fonts.* but installs into
+  the same dir as other packages.
+
+*font-misc-misc-0.99.0 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +font-misc-misc-0.99.0.ebuild:
+  Initial commit for modular X.
+
