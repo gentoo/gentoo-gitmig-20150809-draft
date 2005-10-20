@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcmciautils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.7 2005/08/29 20:32:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.8 2005/10/20 15:01:21 brix Exp $
+
+*pcmciautils-010 (20 Oct 2005)
+
+  20 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +pcmciautils-010.ebuild:
+  Version bump. This version installs as an udev handler when USE=udev, and as
+  a hotplug handler when USE=-udev.
 
 *pcmciautils-008 (29 Aug 2005)
 
