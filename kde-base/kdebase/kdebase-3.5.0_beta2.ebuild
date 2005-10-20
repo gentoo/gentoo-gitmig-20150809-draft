@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0_beta2.ebuild,v 1.2 2005/10/19 13:48:05 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.0_beta2.ebuild,v 1.3 2005/10/20 10:59:45 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -42,6 +42,10 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466).
 	epatch "${FILESDIR}/kdebase-3.5.0_beta2-noimake.patch"
+
+	# Fixes problem with PIE and kcheckpass with --enable-final on PIC plaforms
+	# Already applied for 3.5 RC.
+	epatch "${FILESDIR}/kcheckpass-pie-final.patch"
 
 	# For the noimake patch.
 	make -f admin/Makefile.common || die

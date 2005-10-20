@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.20 2005/10/15 11:08:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.21 2005/10/20 11:01:46 flameeyes Exp $
+
+  20 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kcheckpass-pie-final.patch, kcheckpass-3.5.0_beta2.ebuild:
+  Added patch to compile kcheckpass fine on PIC architectures when using
+  --enable-final. See bug #107218.
 
 *kcheckpass-3.5.0_beta2 (14 Oct 2005)
 
