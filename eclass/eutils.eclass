@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.209 2005/10/19 03:37:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.210 2005/10/20 00:13:20 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1626,8 +1626,12 @@ make_wrapper() {
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir:-.}"
-if [ "\${LD_LIBRARY_PATH+set}" = "set" ] && [ -n "${libdir}" ] ; then
-	export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
+if [ -n "${libdir}" ] ; then
+	if [ "\${LD_LIBRARY_PATH+set}" = "set" ] ; then
+		export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
+	else
+		export LD_LIBRARY_PATH="${libdir}"
+	fi
 fi
 exec ${bin} "\$@"
 EOF
