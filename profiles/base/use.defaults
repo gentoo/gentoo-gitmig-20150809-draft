@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.21 2005/06/14 09:45:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.22 2005/10/20 14:55:42 brix Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -79,6 +79,7 @@ tcltk				dev-lang/tcl dev-lang/tk
 tcpd				sys-apps/tcp-wrappers
 tetex				app-text/tetex
 tiff				media-libs/tiff
+udev				sys-fs/udev
 ungif				media-libs/ungif
 vorbis				media-libs/libvorbis
 X					virtual/x11
