@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/apbs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.1 2005/10/20 01:22:57 ribosome Exp $
+
+*apbs-0.3.2 (20 Oct 2005)
+
+  20 Oct 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +apbs-0.3.2.ebuild:
+  Initial import. Thanks to Markus Dittrich <markusle@gmail.com> for his work.
+
