@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.15 2005/09/15 20:34:18 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.16 2005/10/20 03:02:24 tgall Exp $
+
+  19 Oct 2005; Tom Gall <tgall@gentoo.org> libsvg-cairo-0.1.6.ebuild:
+  added ~ppc64, bug #108808
 
   15 Sep 2005; Luis Medinas <metalgod@gentoo.org> libsvg-cairo-0.1.4.ebuild:
   Marked Stable on AMD64

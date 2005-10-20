@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ceb693f399048e2c2aec07b28ac10937 ChangeLog 2042
+MD5 8bdf5f84011a3db5b6a6481ebe77f12d ChangeLog 2138
 MD5 0f8643b6988d365904140a0262145cbb libsvg-cairo-0.1.4.ebuild 632
 MD5 60365af1819c223e699c336eec829f94 libsvg-cairo-0.1.5.ebuild 545
-MD5 ba58fb272a4e63f015943fe48c58bc68 libsvg-cairo-0.1.6.ebuild 554
+MD5 8f32a8897d172b50e04a1030e23ae052 libsvg-cairo-0.1.6.ebuild 558
 MD5 65d1d5c2aa536148fb35cee02b3a8428 metadata.xml 337
 MD5 3e7e9d7a6e3e4afe23bfd9723509c591 files/digest-libsvg-cairo-0.1.4 70
 MD5 1dbb228ceae58584108ac2b30c407c11 files/digest-libsvg-cairo-0.1.5 70
-MD5 50f230b9997ff42cc37394c4649262d9 files/libsvg-cairo-stdarg_h.patch 352
 MD5 640217d293a1bf7751648d818ace8d97 files/digest-libsvg-cairo-0.1.6 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDKekQwUpWvClEHQoRAoRHAJ41FkRD+shtTNau4FUtRUXPhR/PjwCeK1iC
-jWk6N83obf2pQ2qWmk+yFoY=
-=xrlo
------END PGP SIGNATURE-----
+MD5 50f230b9997ff42cc37394c4649262d9 files/libsvg-cairo-stdarg_h.patch 352
