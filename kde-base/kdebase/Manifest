@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bb5a9cbc17d56cf6af08e6655362f191 ChangeLog 39476
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.2-r1/Xsetup 758
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.2-r1/backgroundrc 342
@@ -50,3 +53,10 @@ MD5 591117532cfbeb0a773148c9edf13f60 kdebase-3.4.3.ebuild 4256
 MD5 b358eab7eab8c227d0985ba4f2280470 kdebase-3.5.0_beta2.ebuild 4265
 MD5 c9a8dd6584d378e6e0130a37ab107632 kdebase-3.5_beta1.ebuild 4087
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDV3jYj5H05b2HAEkRAgDDAJsGrzl66O8OvXNJvRl0k0BZOkG1GwCghhiT
+JV3gB2ya312JS8ZqlbVorI4=
+=9Gm6
+-----END PGP SIGNATURE-----
