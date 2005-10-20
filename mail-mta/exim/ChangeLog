@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.49 2005/10/16 09:49:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.50 2005/10/20 18:35:35 peitolm Exp $
+
+  20 Oct 2005; Colin Morey <peitolm@gentoo.org> :
+  Fix for bug #54909
 
   16 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> exim-4.54.ebuild:
   marked ~alpha as per bug #103894
