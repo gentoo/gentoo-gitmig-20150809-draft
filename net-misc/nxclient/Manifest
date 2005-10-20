@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b9fb340275e6855b947b60d8030c95d1 ChangeLog 3323
 MD5 a2e15c37686ddad8dd3854b2b9b70700 files/1.3.0/50nxclient 57
 MD5 05726c6d42d87195bcf8f5b5c76de1d3 files/digest-nxclient-1.3.2-r1 70
@@ -11,3 +14,10 @@ MD5 54b5602fe26868c7055fa7f42d772a07 nxclient-1.4.0-r3.ebuild 1742
 MD5 b962e5524fcf60e8a8e897c78b854cc1 nxclient-1.4.0-r4.ebuild 1763
 MD5 4429f22294184b7381a98271588fc29b nxclient-1.4.0-r5.ebuild 1648
 MD5 01fed891e8ee5b34831e2bb2713396cf nxclient-1.5.0.ebuild 2079
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDWAxOJrHF4yAQTrARAj+2AKDA8XSA7oSbLi3jGPRnvfrkWD/1/gCfRBco
+qAF513eQNhDVFLlIDHmJQc4=
+=oC56
+-----END PGP SIGNATURE-----
