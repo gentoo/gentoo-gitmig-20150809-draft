@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 48cc23f89693ad8f0901e0290838a283 ChangeLog 678
-MD5 0930570e858d41f9f51127fa0d064a9e files/digest-xf86-video-vesa-1.0.0 74
+MD5 77359e0d3e33852e0cfee620d5e070c4 ChangeLog 840
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 13321ced38fe21a20e58cded2c88cc38 xf86-video-vesa-1.0.0.ebuild 461
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDT+/OomPajV0RnrERAmKUAJ419VGKBtGsjMU6nrI9vc/zSJUmNgCbBI6Y
-SRcqyhAx4vL3YomXdcWUY7k=
-=bkMP
------END PGP SIGNATURE-----
+MD5 3fe37521fbd5397bba033d485600335e xf86-video-vesa-1.0.0.1.ebuild 472
+MD5 0930570e858d41f9f51127fa0d064a9e files/digest-xf86-video-vesa-1.0.0 74
+MD5 45ac29021338d76ef95f4198cf6bb1ac files/digest-xf86-video-vesa-1.0.0.1 76

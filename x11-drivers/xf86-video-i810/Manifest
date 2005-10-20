@@ -1,4 +1,6 @@
-MD5 5ee8c3515b7e73a252ebd48cb2eeabc2 ChangeLog 2051
+MD5 7e97db2d1d8eee2ac451d8aaed57eb37 ChangeLog 2209
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 c7c2f67682bfea5338e413cd478d997a xf86-video-i810-1.4.0.1.ebuild 692
 MD5 9470ce01205b54f00584268ed0fa1d4f xf86-video-i810-1.4.0-r3.ebuild 692
 MD5 d07ac9320a6fe2848f59b5e9d4562569 files/digest-xf86-video-i810-1.4.0-r3 74
+MD5 6bd7b472c705ed7fd580b7d54fafbb50 files/digest-xf86-video-i810-1.4.0.1 76
