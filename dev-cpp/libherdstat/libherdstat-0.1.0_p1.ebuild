@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.0_p1.ebuild,v 1.1 2005/10/19 15:43:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.0_p1.ebuild,v 1.2 2005/10/20 15:20:41 ka0ttic Exp $
 
 DESCRIPTION="C++ library offering interfaces for portage-related things such as Gentoo-specific XML files, package searching, and version sorting"
 HOMEPAGE="http://developer.berlios.de/projects/libherdstat/"
@@ -22,6 +22,7 @@ RDEPEND="${RDEPEND}
 	!curl? ( net-misc/wget )"
 
 src_compile() {
+	automake || die "automake failed"
 	econf \
 		$(use_enable debug) \
 		$(use_enable static) \
