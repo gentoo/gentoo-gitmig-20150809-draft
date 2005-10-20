@@ -1,4 +1,6 @@
-MD5 7bb64e3179c9b72f475bf8f30803e9f0 ChangeLog 749
+MD5 85f01edb13f90a8f426b315b30c00161 ChangeLog 886
 MD5 0ba2c555c1a4cbb3cc992db55645a112 files/digest-libXrandr-0.99.0 69
+MD5 d88946f4386bcdd48e0f782be80a466f files/digest-libXrandr-0.99.1 69
 MD5 fdb3195f3106b65ef8710d40e818219c libXrandr-0.99.0.ebuild 637
+MD5 980b403d0bf33b64f0f26ebfea9f9a09 libXrandr-0.99.1.ebuild 640
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

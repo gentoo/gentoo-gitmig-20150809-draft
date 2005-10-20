@@ -1,4 +1,6 @@
-MD5 11e5ba6181f2b8dcd3c96476b685c470 ChangeLog 846
+MD5 416954d46fedeeb93ad56076eb535c89 ChangeLog 985
 MD5 3809df95e91c23a082aa51ff8afbd5a9 files/digest-libfontenc-0.99.0 70
+MD5 cb94053450ec3a81cf2e7ad305437e8b files/digest-libfontenc-0.99.1 70
 MD5 b16036c2a180a01981803dcc7237fe4b libfontenc-0.99.0.ebuild 451
+MD5 e474eb3758b5952587819bf97f2868b6 libfontenc-0.99.1.ebuild 454
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

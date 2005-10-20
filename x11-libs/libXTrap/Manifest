@@ -1,4 +1,6 @@
-MD5 b768ae8d583ed5f0f017c82efba5a13e ChangeLog 720
+MD5 b52abcfdf3e7caaa66be83f2fb781216 ChangeLog 860
 MD5 e98fcdc048278691bf3024ce89cd51a2 files/digest-libXTrap-0.99.0 68
+MD5 5d1b7127d5604abc868fa3d40d799d0d files/digest-libXTrap-0.99.1 68
 MD5 1f50b231bc7eb144e30467ee245b7d1a libXTrap-0.99.0.ebuild 626
+MD5 03fdf6caeca9c142632379cedb18249a libXTrap-0.99.1.ebuild 629
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

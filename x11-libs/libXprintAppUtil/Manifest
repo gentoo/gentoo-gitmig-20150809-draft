@@ -1,4 +1,6 @@
-MD5 2f4da815b6e63ceaea061ba07df4875a ChangeLog 605
+MD5 599835c7dac77bbab998f381475af145 ChangeLog 756
 MD5 20379d37844dcd828e88b72b4e9797e7 files/digest-libXprintAppUtil-0.99.0 76
+MD5 f6900af315727cba2b47207cf2355b79 files/digest-libXprintAppUtil-0.99.1 76
 MD5 0ec5eeb1e461366e5124e22745ece52f libXprintAppUtil-0.99.0.ebuild 602
+MD5 0fdf1f4fc3b5ac73b2f4b9d29594a54f libXprintAppUtil-0.99.1.ebuild 605
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

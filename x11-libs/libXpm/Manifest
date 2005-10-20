@@ -1,4 +1,6 @@
-MD5 8b488d73851901fbe1972af83e26035a ChangeLog 804
+MD5 01469d0266341f469b889e0af1ed3082 ChangeLog 931
 MD5 56e3c1936ab6f9d7059ff21137be0d8e files/digest-libXpm-3.5.2 65
+MD5 7942b7a64d8de84cbe73d59ba8e27d31 files/digest-libXpm-3.5.3 65
 MD5 3684354fba9f6a36d06f963c79238b61 libXpm-3.5.2.ebuild 599
+MD5 8aa247e51382b9dc26efa2681c3e1bd4 libXpm-3.5.3.ebuild 602
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

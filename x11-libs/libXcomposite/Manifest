@@ -1,4 +1,6 @@
-MD5 eddf22910bed74f4f0e6fe628e690f0f ChangeLog 774
+MD5 b8262186d5bbac38482f77f5cb8fc141 ChangeLog 917
 MD5 28f34303582cefb87fb9d208e406244a files/digest-libXcomposite-0.2.0 72
+MD5 af1f9bff9664e258b4599e53291b7732 files/digest-libXcomposite-0.2.1 72
 MD5 3140aa1ee886fa5fac7427d718277b32 libXcomposite-0.2.0.ebuild 617
+MD5 32aa98dc253cfce11d3fa6afcae50e52 libXcomposite-0.2.1.ebuild 620
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

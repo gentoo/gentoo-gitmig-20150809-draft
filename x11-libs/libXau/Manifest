@@ -1,4 +1,6 @@
-MD5 d77e98a5d71dcf4c58d753c8e8f0c063 ChangeLog 812
+MD5 d37fffc1eaeb28d3eb90fc6b3bd178c2 ChangeLog 943
 MD5 307da1c8c237ae455de8b9e27ddb38fc files/digest-libXau-0.99.0 66
+MD5 f0f947403305092c9f735db43e041432 files/digest-libXau-0.99.1 66
 MD5 9d94d8626a33cd397681f61e96689816 libXau-0.99.0.ebuild 551
+MD5 c520c4049be1f2d84c5537047a92548f libXau-0.99.1.ebuild 554
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

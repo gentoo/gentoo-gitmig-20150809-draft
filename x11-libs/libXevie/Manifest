@@ -1,4 +1,6 @@
-MD5 f4b364687653cafdace21f63880bb8e2 ChangeLog 563
+MD5 a4ea06930214f1f6f0f1e7e46d36efe6 ChangeLog 698
 MD5 715e3ba09d034cb03c5d416deb92853d files/digest-libXevie-0.99.0 68
+MD5 2ed3514e944b0821721cb6bbdf3cccdd files/digest-libXevie-0.99.2 68
 MD5 0ca85f739af0c00a5b8d82b84909bd5f libXevie-0.99.0.ebuild 595
+MD5 98784677714cde6cc08fffe7fb719620 libXevie-0.99.2.ebuild 598
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
