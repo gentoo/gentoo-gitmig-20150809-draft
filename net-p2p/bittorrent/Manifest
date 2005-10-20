@@ -1,4 +1,4 @@
-MD5 ab79779047c367d5f65496cf02d047d0 ChangeLog 10082
+MD5 6df06222476561088e50d5ac6eec7df4 ChangeLog 10272
 MD5 4cd212682be24bfbff707f07b8549f83 bittorrent-3.4.2-r2.ebuild 1930
 MD5 d6f1c6f8065a984e5ebefed06d3fabfd bittorrent-4.0.2.ebuild 1973
 MD5 462e522f275310b5d305c18a6ef57829 bittorrent-4.0.4.ebuild 2045
@@ -7,6 +7,7 @@ MD5 6c942f2d89711fe775a838da6ce4b457 bittorrent-4.1.4.ebuild 2305
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 4cc659a077dc3dbf02ad922c9175cb81 bittorrent-4.1.6.ebuild 2305
 MD5 6ab119c930ad668919b114f90b649a94 bittorrent-4.1.6-r1.ebuild 2533
+MD5 6ebefdf591f1aa04943ae861f6cb6108 bittorrent-4.1.6-r2.ebuild 1962
 MD5 21ec89d06de83ddcc4cf6d6616355190 files/bittorrent-4.1.0-fix-all.patch 2483
 MD5 139c4a4367e37fcf7dc6bd18515456c2 files/btdownloadgui.desktop 166
 MD5 a94d4e97cceef0143a1a5c8784b6f70c files/bttrack.conf 728
@@ -20,3 +21,4 @@ MD5 1f68732157a0742ec30e29327ad0baf1 files/digest-bittorrent-4.1.4 69
 MD5 7779a7eaf51eb9f84da8a588050f53fa files/favicon.ico 1406
 MD5 70e745b9990496effb12387c283f76d1 files/digest-bittorrent-4.1.6 69
 MD5 70e745b9990496effb12387c283f76d1 files/digest-bittorrent-4.1.6-r1 69
+MD5 70e745b9990496effb12387c283f76d1 files/digest-bittorrent-4.1.6-r2 69
