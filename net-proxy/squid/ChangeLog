@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.46 2005/10/19 21:55:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.47 2005/10/20 19:00:26 hansmi Exp $
+
+  20 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> squid-2.5.11.ebuild:
+  Stable on hppa, ppc.
 
   19 Oct 2005; Jason Wever <weeve@gentoo.org> squid-2.5.11.ebuild:
   Stable on SPARC wrt security bug #109827.
