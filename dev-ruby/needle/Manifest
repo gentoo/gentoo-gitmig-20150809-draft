@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c371f9a59630d3601e1256375c8d15d needle-1.2.1.ebuild 455
-MD5 27c445526f86c11a1e1c79feb13915e2 ChangeLog 570
-MD5 51d7fcdd635fd0590ec84b8cfb4d8561 metadata.xml 158
+MD5 4571c9d36320986bf54a4406eb6b1c0a ChangeLog 701
 MD5 27bf14c3bbf0962c24637f3b069d72b1 files/digest-needle-1.2.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSxGQQlM6RnzZP+IRAuHmAKDEi7t0yAkTTnqUuHnxT1SG7yXQqACdFLGs
-Q0vjSVJbWLN6fPhnjGodnek=
-=tzaI
------END PGP SIGNATURE-----
+MD5 9e652004a056ef1e12be60f0bb97b855 files/digest-needle-1.2.1-r1 61
+MD5 51d7fcdd635fd0590ec84b8cfb4d8561 metadata.xml 158
+MD5 65b1f1655da5c5230edf11e26c7805b9 needle-1.2.1-r1.ebuild 446
+MD5 2c371f9a59630d3601e1256375c8d15d needle-1.2.1.ebuild 455

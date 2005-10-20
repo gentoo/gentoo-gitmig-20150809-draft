@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/needle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/ChangeLog,v 1.3 2005/10/11 01:12:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/ChangeLog,v 1.4 2005/10/20 15:17:02 caleb Exp $
+
+*needle-1.2.1-r1 (20 Oct 2005)
+
+  20 Oct 2005; Caleb Tennis <caleb@gentoo.org> +needle-1.2.1-r1.ebuild:
+  Bump to use gem version
 
   11 Oct 2005; Andrej Kacian <ticho@gentoo.org> needle-1.2.1.ebuild:
   Stable on x86, bug #108486.
