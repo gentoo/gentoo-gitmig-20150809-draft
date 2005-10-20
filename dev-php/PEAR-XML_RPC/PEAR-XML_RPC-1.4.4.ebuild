@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/PEAR-XML_RPC-1.4.3.ebuild,v 1.1 2005/09/26 05:04:48 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RPC/PEAR-XML_RPC-1.4.4.ebuild,v 1.1 2005/10/20 05:57:57 sebastian Exp $
 
 inherit php-pear-r1
 
