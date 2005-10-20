@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdpyinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.6 2005/09/15 13:43:41 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.7 2005/10/20 00:45:22 spyderous Exp $
+
+*xdpyinfo-0.99.1 (20 Oct 2005)
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xdpyinfo-0.99.1.ebuild:
+  Bump for 7.0 RC1.
 
   15 Sep 2005; Herbie Hopkins <herbs@gentoo.org> xdpyinfo-0.99.0.ebuild:
   Marked ~amd64.
