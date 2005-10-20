@@ -1,4 +1,4 @@
-MD5 29de015a5d78101c1b6355189a6f4967 ChangeLog 34562
+MD5 c3e2a27d189e95149329b0e7e0d54b53 ChangeLog 34765
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
 MD5 ffcbf659ca6f54e8e15401cced99af77 files/1.1.4/gcc-instlib.patch 393
@@ -27,6 +27,8 @@ MD5 aa01d8f68b27d3df4af58ed02c080df5 files/1.1.5/pyunolink-fix.patch 475
 MD5 ba6affa60977e5d658fe5a2125abb691 files/1.1.5/xooffice-wrapper-1.3 6091
 MD5 53867a5ca81d65d0139b4334ef63bd72 files/digest-openoffice-ximian-1.3.16 490
 MD5 e84e07ee231b9ceaabacc5556a63f647 files/digest-openoffice-ximian-1.3.9-r1 492
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-openoffice-ximian-1.9.199 0
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 a05de7453d373da927b2b9c6cc6c7bbe openoffice-ximian-1.3.16.ebuild 17873
 MD5 2172597e048d38d848b3ee1ffdda7790 openoffice-ximian-1.3.9-r1.ebuild 17912
+MD5 efec554c496b451894937cca768a7226 openoffice-ximian-1.9.199.ebuild 1351
