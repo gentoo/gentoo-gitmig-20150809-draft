@@ -1,4 +1,6 @@
-MD5 e6ae12a0b24545dc8428e8fcbf932ea7 ChangeLog 862
+MD5 a6c3d3a4384d9e2e7074b05315404ba5 ChangeLog 1005
 MD5 be66bd2b11f3f39889fc520f4ed68b4f files/digest-xf86miscproto-0.9 69
+MD5 3ab44a31eb29d329e784a77ac1fbb3fa files/digest-xf86miscproto-0.9.1 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 1f0cbc41156cab6965c5f102981cff69 xf86miscproto-0.9.1.ebuild 453
 MD5 f0a5ebeab422030a807422cee46489a5 xf86miscproto-0.9.ebuild 551

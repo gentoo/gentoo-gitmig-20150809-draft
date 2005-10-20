@@ -1,4 +1,6 @@
-MD5 a598bfacfb68918dc47d707d3f501b7b ChangeLog 862
+MD5 0fac778712a15836cf2ee0f80c49616f ChangeLog 1005
 MD5 132945a9bec6796f8acdf583e6ed5b30 files/digest-resourceproto-1.0 69
+MD5 903537cbf6453f193f57a78181d2ec2d files/digest-resourceproto-1.0.1 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 8edf3c2e155b7f521457817e047b4b35 resourceproto-1.0.1.ebuild 452
 MD5 59d0e0bf11e25ddc29f0c2740e7a79ff resourceproto-1.0.ebuild 551

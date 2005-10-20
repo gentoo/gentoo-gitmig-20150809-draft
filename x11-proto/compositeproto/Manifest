@@ -1,4 +1,6 @@
-MD5 3b95b5a1a0ef79867938ec8ac7c1400a ChangeLog 870
+MD5 a6e3d2f328f53f1523afe1a97a28ae67 ChangeLog 1015
+MD5 45a4ae16c3953d26814ebbf7f45a1410 compositeproto-0.2.1.ebuild 455
 MD5 890f7c2591d7e745d33dc1d042e0a3c7 compositeproto-0.2.ebuild 554
 MD5 5768de4cffc33a40fa7d5ba5dab288ab files/digest-compositeproto-0.2 70
+MD5 fa8e25b6fe4f0f72ad56e9a604d135d5 files/digest-compositeproto-0.2.1 72
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

@@ -1,4 +1,6 @@
-MD5 0209bb5549ffeede7ee4328ecb047604 ChangeLog 749
+MD5 d12aeac690e2fe1776ed91fa81b62522 ChangeLog 914
 MD5 db01e50d6cd6932b00987d8178f85685 files/digest-xproxymanagementprotocol-1.0 80
+MD5 891b0aad372608b2d1fe235ba2965f4c files/digest-xproxymanagementprotocol-1.0.1 82
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 50fd0098ef649f2aa40c75e7949693d2 xproxymanagementprotocol-1.0.1.ebuild 457
 MD5 b1ec50f1fec5bb93965facf437d93217 xproxymanagementprotocol-1.0.ebuild 556

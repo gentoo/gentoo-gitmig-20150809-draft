@@ -1,4 +1,6 @@
-MD5 023b4b4787ec528c027d1e9818b9c96c ChangeLog 848
+MD5 c11a115d7d5eae423a6efcfd5469596b ChangeLog 985
 MD5 c187881a846fb48cda601d58d4376d54 files/digest-fixesproto-3.0 66
+MD5 3eb5ab76e82cf122358bc08b32207064 files/digest-fixesproto-3.0.1 68
+MD5 70ddbe1cde03e4433f183fc92b03cde3 fixesproto-3.0.1.ebuild 443
 MD5 94f6fabd0c1c20cb9f12fb83ccd5cccc fixesproto-3.0.ebuild 542
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

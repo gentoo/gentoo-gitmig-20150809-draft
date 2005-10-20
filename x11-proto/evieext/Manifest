@@ -1,4 +1,6 @@
-MD5 de813923f1eec068b092a88e49a99344 ChangeLog 811
+MD5 ebc3834e254bfe8203789ace2555ea2c ChangeLog 942
+MD5 73d1e5c61de48d2a37f0cfcd19db8176 evieext-1.0.1.ebuild 436
 MD5 2c060184717e811434fcc1c438733634 evieext-1.0.ebuild 535
 MD5 0128904dbcce506be3559d1bddbb0cf1 files/digest-evieext-1.0 63
+MD5 0829130ec2beb377df36604bfbf57a83 files/digest-evieext-1.0.1 65
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

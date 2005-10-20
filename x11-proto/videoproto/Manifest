@@ -1,4 +1,6 @@
-MD5 eefab27b1d71965700d645ce069c0d1e ChangeLog 836
+MD5 a11a397d87f9ae2a2afcc80dfdf2a674 ChangeLog 973
 MD5 526b9ee86dbc63eb64940da9e73334b3 files/digest-videoproto-2.2 66
+MD5 31c9b58bcd2b4a766fa0b7323509bb22 files/digest-videoproto-2.2.1 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 0289f77150458abb512e12a4065190de videoproto-2.2.1.ebuild 443
 MD5 e739deb0a0b67dbc3276d5a5349efea8 videoproto-2.2.ebuild 542

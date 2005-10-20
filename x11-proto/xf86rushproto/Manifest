@@ -1,4 +1,6 @@
-MD5 a145f70e426a47a45042e06f3b790810 ChangeLog 862
+MD5 11a8163faae1502e7477cecd5992e940 ChangeLog 1005
 MD5 8fc9724cd8685b542ddbc56d1f227fb0 files/digest-xf86rushproto-1.1 69
+MD5 dd21035a1586a17afcbe1ac1d6b44a1c files/digest-xf86rushproto-1.1.1 71
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 70800879f313e5f4b58d9067b9aa1632 xf86rushproto-1.1.1.ebuild 452
 MD5 2e5fa9d3d34ae01d120b455d41417ab3 xf86rushproto-1.1.ebuild 551

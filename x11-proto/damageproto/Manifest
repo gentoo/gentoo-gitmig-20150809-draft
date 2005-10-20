@@ -1,4 +1,6 @@
-MD5 58c38a14adf63abd47478d983faed6cc ChangeLog 844
+MD5 67e0a578d9ce9aed08807f6e1ff55194 ChangeLog 983
+MD5 9edfe9f78531c168fb241941ee93aae9 damageproto-1.0.1.ebuild 446
 MD5 988489b82483b0476cc3f36046d437f4 damageproto-1.0.ebuild 545
 MD5 a08a6b8bf2d2f799de213c4ce615ebae files/digest-damageproto-1.0 67
+MD5 e0bb8e27024b09b56ec10725c66735e9 files/digest-damageproto-1.0.1 69
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156

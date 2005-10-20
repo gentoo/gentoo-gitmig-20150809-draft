@@ -1,4 +1,6 @@
-MD5 c05af58710369e2e8c34e5320f007c95 ChangeLog 836
+MD5 e0af4211a1848a378a33cda6e89b72ed ChangeLog 973
 MD5 37d99d9231b33622dc217d7ffcd9e6f2 files/digest-printproto-1.0 66
+MD5 9d022f7dbc75f1ba6217693f7f89c53c files/digest-printproto-1.0.1 68
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 b7b14dd73441823b8e13741ee7602561 printproto-1.0.1.ebuild 443
 MD5 9d8ea78bc55f1cf0a3c615ac31005ad8 printproto-1.0.ebuild 542

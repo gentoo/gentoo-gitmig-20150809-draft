@@ -1,4 +1,6 @@
-MD5 4121e817d0b5ec0cd92833c506540b46 ChangeLog 828
+MD5 d4ac21f80973d4c85ae4426e7734abc2 ChangeLog 963
 MD5 004793dba6ce628945df9a8471901ff0 files/digest-trapproto-3.4 65
+MD5 6d549a67b3db2443525bfec1fa251471 files/digest-trapproto-3.4.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
+MD5 f61568409935acd4b43b6f0269e9ba73 trapproto-3.4.1.ebuild 440
 MD5 a9888a07e42ea6418a0abaae610fb0b9 trapproto-3.4.ebuild 539
