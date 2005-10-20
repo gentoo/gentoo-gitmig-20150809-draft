@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.54.ebuild,v 1.7 2005/10/16 09:49:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.54.ebuild,v 1.8 2005/10/20 18:32:19 peitolm Exp $
 
 inherit eutils
 
@@ -57,8 +57,8 @@ src_unpack() {
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
 		-e "s:BIN_DIRECTORY=/usr/exim/bin:BIN_DIRECTORY=/usr/sbin:" \
-		-e "s:COMPRESS_COMMAND=/opt/gnu/bin/gzip:COMPRESS_COMMAND=/bin/gzip:" \
-		-e "s:ZCAT_COMMAND=/opt/gnu/bin/zcat:ZCAT_COMMAND=/bin/zcat:" \
+		-e "s:COMPRESS_COMMAND=/usr/bin/gzip:COMPRESS_COMMAND=/bin/gzip:" \
+		-e "s:ZCAT_COMMAND=/usr/bin/zcat:ZCAT_COMMAND=/bin/zcat:" \
 		-e "s:CONFIGURE_FILE=/usr/exim/configure:CONFIGURE_FILE=/etc/exim/exim.conf:" \
 		-e "s:EXIM_MONITOR=eximon.bin:# EXIM_MONITOR=eximon.bin:" \
 		-e "s:# INFO_DIRECTORY=/usr/local/info:INFO_DIRECTORY=/usr/share/info:" \
