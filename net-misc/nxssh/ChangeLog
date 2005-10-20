@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxssh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/ChangeLog,v 1.13 2005/02/17 12:54:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/ChangeLog,v 1.14 2005/10/20 21:25:37 agriffis Exp $
+
+*nxssh-1.5.0 (20 Oct 2005)
+
+  20 Oct 2005; Aron Griffis <agriffis@gentoo.org> +nxssh-1.5.0.ebuild:
+  Bump to 1.5.0 (from 1.4.0-r1)
 
   17 Feb 2005; Stuart Herbert <stuart@gentoo.org> nxssh-1.4.0-r1.ebuild:
   Bug 62567: missing dep; Manuzhai <mail@manuzhai.nl>
