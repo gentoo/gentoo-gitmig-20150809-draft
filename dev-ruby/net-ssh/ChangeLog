@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.3 2005/10/11 01:13:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.4 2005/10/20 15:19:03 caleb Exp $
+
+*net-ssh-1.0.2-r1 (20 Oct 2005)
+
+  20 Oct 2005; Caleb Tennis <caleb@gentoo.org> +net-ssh-1.0.2-r1.ebuild:
+  Bump to use gem
 
   11 Oct 2005; Andrej Kacian <ticho@gentoo.org> net-ssh-1.0.2.ebuild:
   Stable on x86, bug #108486.
