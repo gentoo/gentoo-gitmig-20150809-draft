@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.24 2005/10/15 11:08:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.25 2005/10/20 22:45:15 puggy Exp $
+
+  20 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  kdepim-kresources-3.5.0_beta2.ebuild:
+  Keyword ~ppc and ~x86
 
   15 Oct 2005; Dan Armak <danarmak@gentoo.org>
   kdepim-kresources-3.5.0_beta2.ebuild:
