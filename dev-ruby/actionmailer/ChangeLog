@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.16 2005/10/19 21:22:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.17 2005/10/20 00:21:32 lu_zero Exp $
+
+  19 Oct 2005; Luca Barbato <lu_zero@gentoo.org> actionmailer-1.0.1.ebuild:
+  Marked ppc
 
 *actionmailer-1.1.1 (19 Oct 2005)
 
