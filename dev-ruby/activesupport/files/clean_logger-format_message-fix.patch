@@ -1,0 +1,16 @@
+--- activesupport-1.1.1/lib/active_support/clean_logger.rb.orig	2005-10-19 18:18:09.000000000 -0400
++++ activesupport-1.1.1/lib/active_support/clean_logger.rb	2005-10-19 18:07:00.000000000 -0400
+@@ -10,9 +10,11 @@
+   end
+ 
+   private
+-    remove_const "Format"
++    if const_defined?(:Format) # Not defined in Ruby 1.8.3
++      remove_const "Format"
++    end
+     Format = "%s\n"
+-    def format_message(severity, timestamp, msg, progname)
++    def format_message(severity, timestamp, progname, msg)
+       Format % [msg]
+     end
+ end

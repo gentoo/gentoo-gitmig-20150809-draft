@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.15 2005/10/20 00:19:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.16 2005/10/20 13:10:54 caleb Exp $
+
+*activesupport-1.1.1-r2 (20 Oct 2005)
+
+  20 Oct 2005; Caleb Tennis <caleb@gentoo.org>
+  +files/clean_logger-format_message-fix.patch,
+  +activesupport-1.1.1-r2.ebuild:
+  This is a slightly modified patch from -r1 from bug #107663
 
   20 Oct 2005; Luca Barbato <lu_zero@gentoo.org>
   activesupport-1.1.1-r1.ebuild:
