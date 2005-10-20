@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4597 2005/10/20 17:48:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4598 2005/10/20 18:06:08 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -84,10 +84,6 @@ dev-python/setuptools
 # Christian Heim <phreak@gentoo.org (12 Oct 2005)
 # prerelease, needs some testing
 =sys-kernel/vserver-sources-2.1.0*
-
-# Andreas Proschofsky <suka@gentoo.org> (11 Oct 2005)
-# Release Candidate, needs testing
->=app-office/openoffice-2.0.0_rc2
 
 # Hanno Boeck <hanno@gentoo.org> (09 Oct 2005)
 # Development version, needs cairo 1.0
