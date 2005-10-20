@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/nxssh-1.5.0.ebuild,v 1.1 2005/10/20 21:25:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxssh/nxssh-1.5.0.ebuild,v 1.2 2005/10/20 21:54:54 agriffis Exp $
 
 inherit multilib flag-o-matic
 
@@ -25,6 +25,7 @@ DEPEND="
 S=${WORKDIR}/${PN}
 
 src_compile() {
+	append-flags -I/usr/NX/include
 	append-ldflags -L/usr/NX/$(get_libdir)
 	./configure \
 	    --prefix=/usr \
