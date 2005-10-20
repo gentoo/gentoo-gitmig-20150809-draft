@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.9 2005/10/20 00:01:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.10 2005/10/20 05:38:23 vapier Exp $
 
 inherit enlightenment
 
@@ -17,6 +17,7 @@ DEPEND=">=x11-libs/evas-0.9.9
 
 src_compile() {
 	export MY_ECONF="
+		--enable-ecore-txt
 		$(use_enable X ecore-x)
 		--enable-ecore-job
 		$(use_enable fbcon ecore-fb)
