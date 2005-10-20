@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.61 2005/10/20 06:58:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.62 2005/10/20 18:31:47 spyderous Exp $
+
+*xorg-server-0.99.2-r1 (20 Oct 2005)
+
+  20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-server-0.99.2-r1.ebuild:
+  (#109926) No need to specify xkb path anymore, it's wrong now as well.
 
 *xorg-server-0.99.2 (20 Oct 2005)
 
