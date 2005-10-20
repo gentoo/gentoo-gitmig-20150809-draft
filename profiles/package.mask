@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4587 2005/10/19 22:50:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4588 2005/10/20 01:07:25 spyderous Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -808,6 +808,7 @@ x11-apps/ico
 x11-apps/lbxproxy
 x11-apps/listres
 x11-apps/luit
+x11-apps/mkcfm
 x11-apps/mkfontdir
 x11-apps/mkfontscale
 x11-apps/oclock
@@ -816,6 +817,7 @@ x11-apps/proxymngr
 x11-apps/rgb
 x11-apps/rstart
 x11-apps/scripts
+x11-apps/sessreg
 x11-apps/setxkbmap
 x11-apps/showfont
 x11-apps/smproxy
@@ -841,6 +843,7 @@ x11-apps/xev
 x11-apps/xeyes
 x11-apps/xf86dga
 x11-apps/xfd
+x11-apps/xfindproxy
 x11-apps/xfontsel
 x11-apps/xfs
 x11-apps/xfsinfo
@@ -873,6 +876,7 @@ x11-apps/xprop
 x11-apps/xrandr
 x11-apps/xrdb
 x11-apps/xrefresh
+x11-apps/xrx
 x11-apps/xset
 x11-apps/xsetmode
 x11-apps/xsetpointer
