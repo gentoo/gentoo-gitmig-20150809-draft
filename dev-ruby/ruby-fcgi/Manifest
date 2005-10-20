@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28dae81ec9e0be957a15d1f8c0039f61 ChangeLog 1322
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 951a04387863c2fc014a7d1644b22dce ruby-fcgi-0.8.4.ebuild 494
-MD5 48197c357c0d728cd8b6bd56fdb4ca86 ruby-fcgi-0.8.5.ebuild 537
-MD5 d9fd71512ddc15e5acfae4e87dcb6845 ruby-fcgi-0.8.5-r1.ebuild 582
 MD5 166b63c03040876826003f9436f7d288 ruby-fcgi-0.8.6.ebuild 512
+MD5 57cc2439acf3e44e14639d3155096943 ruby-fcgi-0.8.5-r1.ebuild 583
+MD5 48197c357c0d728cd8b6bd56fdb4ca86 ruby-fcgi-0.8.5.ebuild 537
+MD5 b91cb0b917ce0510ee3c4591e89642a9 ChangeLog 1409
+MD5 951a04387863c2fc014a7d1644b22dce ruby-fcgi-0.8.4.ebuild 494
 MD5 4eea712873b2f18a1972a94c6f1f59aa files/digest-ruby-fcgi-0.8.4 66
-MD5 13d8759a437f19b78ac7c9d6a1af99a5 files/digest-ruby-fcgi-0.8.5 66
 MD5 c230547a3d1a9b39d37f221583855ce1 files/ruby-fcgi-sigabrt.patch 497
-MD5 13d8759a437f19b78ac7c9d6a1af99a5 files/digest-ruby-fcgi-0.8.5-r1 66
 MD5 e23d001e3dd969b126193cd686e9a71f files/ruby-fcgi-leak.patch 1341
+MD5 13d8759a437f19b78ac7c9d6a1af99a5 files/digest-ruby-fcgi-0.8.5-r1 66
+MD5 13d8759a437f19b78ac7c9d6a1af99a5 files/digest-ruby-fcgi-0.8.5 66
 MD5 f382d8aa9d0a925d4fb17f4bf47c935f files/digest-ruby-fcgi-0.8.6 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCUiNEz2gxt1z4IGYRAlTjAJwOg7+keyTl4eZ694JCOHe9zZsfqACgsaCg
-cMjFaZ3ajf9RGkhvVOcL/LU=
-=1vNM
------END PGP SIGNATURE-----
