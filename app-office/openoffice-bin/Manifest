@@ -3,8 +3,6 @@ MD5 475dbfca78a66962143b39d3aac7915a files/1.1.5/ooffice-wrapper-1.3 6659
 MD5 2919847c6afebe7fd157c48e78fb5770 files/2.0.0/ooo-wrapper2 3703
 MD5 5828bbd9e0139dae2ff43c23a65a844b files/digest-openoffice-bin-1.1.5 82
 MD5 c58947c9f5d0d10691dfb8d7769bc0f0 files/digest-openoffice-bin-2.0.0 4613
-MD5 b7cc05577f058653d4ceec20b19eed1b files/digest-openoffice-bin-2.0.0_rc3 4623
 MD5 7134ec08f56019fc5db7f3e84acea4df metadata.xml 460
 MD5 754b2a399f6c90c5a6f17d2efc30131d openoffice-bin-1.1.5.ebuild 4718
 MD5 05a28d71787a0cc087badb995016b20b openoffice-bin-2.0.0.ebuild 7018
-MD5 01df73a99c193956d64da5153f003b6d openoffice-bin-2.0.0_rc3.ebuild 7105
