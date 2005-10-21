@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.20 2005/09/21 20:43:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.21 2005/10/21 17:37:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,8 +49,8 @@ src_install() {
 	insinto ${dir}
 	doexe bin/x86/{quake3.x86,q3ded}
 	doins quake3.xpm README* Q3A_EULA.txt
-	games_make_wrapper quake3 ./quake3.x86 ${dir}
-	games_make_wrapper q3ded ./q3ded ${dir}
+	games_make_wrapper quake3 ./quake3.x86 "${dir}" "${dir}"
+	games_make_wrapper q3ded ./q3ded "${dir}" "${dir}"
 
 	newinitd ${FILESDIR}/q3ded.rc q3ded
 	newconfd ${FILESDIR}/q3ded.conf.d q3ded

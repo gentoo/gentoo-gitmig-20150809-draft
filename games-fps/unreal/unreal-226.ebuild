@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.11 2005/09/16 02:52:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.12 2005/10/21 17:43:48 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -74,7 +74,7 @@ src_install() {
 	exeinto "${dir}"
 	doexe bin/x86/unreal
 
-	games_make_wrapper unreal ./unreal "${dir}"
+	games_make_wrapper unreal ./unreal "${dir}" "${dir}"
 
 	prepgamesdirs
 }

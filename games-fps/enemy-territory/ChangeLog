@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.27 2005/09/21 20:51:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.28 2005/10/21 17:32:45 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.60.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   enemy-territory-2.60.ebuild:

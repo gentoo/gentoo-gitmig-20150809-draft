@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.31 2005/10/16 21:55:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.32 2005/10/21 17:47:39 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r3.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   16 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r3.ebuild:
   Added CATEGORY.

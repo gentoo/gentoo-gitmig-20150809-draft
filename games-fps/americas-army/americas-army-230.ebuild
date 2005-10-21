@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.7 2005/09/03 22:01:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.8 2005/10/21 17:29:04 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -66,7 +66,7 @@ src_install() {
 		games_make_wrapper armyops-ded ./server-bin ${dir}/System
 	fi
 
-	games_make_wrapper armyops ./armyops ${dir}
+	games_make_wrapper armyops ./armyops "${dir}" "${dir}"
 
 	prepgamesdirs
 	make_desktop_entry armyops "America's Army" armyops.xpm

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.9 2005/09/21 20:36:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3/doom3-1.3.1302.ebuild,v 1.10 2005/10/21 17:29:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -77,7 +77,7 @@ src_install() {
 			|| die "copying pak003 and pak004"
 	fi
 
-	games_make_wrapper doom3 ./doom.x86 ${dir}
+	games_make_wrapper doom3 ./doom.x86 "${dir}" "${dir}"
 	games_make_wrapper doom3-ded ./doomded.x86 ${dir}
 
 	use cdinstall && find ${Ddir} -exec touch '{}' \;

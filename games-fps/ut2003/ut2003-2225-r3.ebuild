@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.7 2005/10/16 21:55:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r3.ebuild,v 1.8 2005/10/21 17:47:39 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2003.com/"
@@ -112,11 +112,11 @@ src_install() {
 
 	# installing documentation/icon
 	dodoc ${S}/README.linux || die "dodoc README.linux"
-	insinto /usr/share/pixmaps ; newins ${S}/Unreal.xpm UT2003.xpm || die "copying pixmap"
+	newicon Unreal.xpm ut2003.xpm || die "copying pixmap"
 	insinto ${dir}
 	doins ${S}/README.linux ${S}/Unreal.xpm || die "copying readme/icon"
 
-	games_make_wrapper ut2003 ./ut2003 ${dir}
+	games_make_wrapper ut2003 ./ut2003 "${dir}" "${dir}"
 
 	# this brings our install up to the newest version
 	cp -r ${S}/ut2003-lnx-2225/* ${Ddir} || die

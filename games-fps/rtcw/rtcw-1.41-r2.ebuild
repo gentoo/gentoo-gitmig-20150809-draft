@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.8 2005/09/21 20:34:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.9 2005/10/21 17:39:31 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -45,8 +45,8 @@ src_install() {
 	exeinto ${dir}
 	doexe bin/Linux/x86/*.x86 openurl.sh
 
-	games_make_wrapper wolfmp ./wolf.x86 ${dir}
-	games_make_wrapper wolfsp ./wolfsp.x86 ${dir}
+	games_make_wrapper wolfmp ./wolf.x86 "${dir}" "${dir}"
+	games_make_wrapper wolfsp ./wolfsp.x86 "${dir}" "${dir}"
 
 	if use dedicated; then
 		games_make_wrapper wolf-ded ./wolfded.x86 ${dir}

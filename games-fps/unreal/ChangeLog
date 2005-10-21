@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/unreal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.7 2005/09/16 02:52:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.8 2005/10/21 17:43:48 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> unreal-226.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   16 Sep 2005; Michael Sterrett <mr_bones_@gentoo.org> unreal-226.ebuild:
   needs app-arch/unzip; tidy

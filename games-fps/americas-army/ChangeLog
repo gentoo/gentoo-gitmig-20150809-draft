@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.34 2005/09/03 22:01:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.35 2005/10/21 17:29:04 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  americas-army-230.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   03 Sep 2005; Jeremy Huddleston <eradicator@gentoo.org>
   americas-army-230.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.11 2005/09/06 17:39:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.12 2005/10/21 17:40:37 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="First-person shooter based on the mercenary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
@@ -55,7 +55,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	games_make_wrapper sof ./sof ${dir}
+	games_make_wrapper sof ./sof "${dir}" "${dir}"
 	doicon ${CDROM_ROOT}/sof.xpm
 
 	prepgamesdirs

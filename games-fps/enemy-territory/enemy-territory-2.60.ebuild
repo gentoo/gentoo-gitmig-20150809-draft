@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.10 2005/09/21 20:51:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.11 2005/10/21 17:32:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -49,7 +49,7 @@ src_install() {
 
 	cp -r Docs pb etmain "${Ddir}" || die "cp failed"
 
-	games_make_wrapper et ./et.x86 ${dir}
+	games_make_wrapper et ./et.x86 "${dir}" "${dir}"
 
 	if use dedicated ; then
 		doexe bin/Linux/x86/etded.x86 || die "doexe failed"
