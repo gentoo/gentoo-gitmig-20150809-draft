@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2.ebuild,v 1.11 2005/04/27 18:01:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.2.ebuild,v 1.12 2005/10/21 11:58:41 leonardop Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -101,7 +101,7 @@ RDEPEND="!gnome-base/gnome-core
 	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.6 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.6 )
 
-	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
+	!mips? ( hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 ) )
 
 	>=gnome-extra/evolution-data-server-1.0.3
 	>=mail-client/evolution-2.0.3
