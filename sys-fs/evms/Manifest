@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5cefa1b7b6b69e8db62df46fbfae19a7 ChangeLog 8919
-MD5 56506764cd7ab73aa3b1a06b9e55f08a evms-2.5.3.ebuild 2295
+MD5 680648204a2e05c0e968bdb7ea6e1695 ChangeLog 9022
 MD5 a36fa36a0ee39f02fa7162fa72a488af evms-2.5.2-r1.ebuild 2297
-MD5 03fd79295c7694f7191a72727bd2276a evms-2.5.3-r1.ebuild 2428
-MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
-MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3 63
-MD5 996ea6d43e86cc65954540da80e56061 files/digest-evms-2.5.2-r1 63
-MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3-r1 63
-MD5 5eb632aa94b0537e1983f935e3706d74 files/evms2-start.sh 382
+MD5 f0ca09432581c602e78b49f6edeaf111 evms-2.5.3-r1.ebuild 2426
+MD5 56506764cd7ab73aa3b1a06b9e55f08a evms-2.5.3.ebuild 2295
 MD5 fea531c10f3cb1d47c0f0af40bad0fa9 files/2.5.3/compaq_segments.patch 478
 MD5 fbf48e09c52473403af443f9ee5d8403 files/2.5.3/md_expand.patch 2152
+MD5 996ea6d43e86cc65954540da80e56061 files/digest-evms-2.5.2-r1 63
+MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3 63
+MD5 2769ffa4ae1f09667ac42e94da8036ba files/digest-evms-2.5.3-r1 63
+MD5 5eb632aa94b0537e1983f935e3706d74 files/evms2-start.sh 382
+MD5 59d559390ca6a6d365a5d6c3012c0343 metadata.xml 387
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDDjj8ArHZZzCEUG0RAm8WAJ46ELK2By0XVZSEnoJDkW0PxT/G9wCdGMTI
-wguErplcZxCtV44luCpL28E=
-=Za/4
+iD8DBQFDWJ+aOpjtAl+gMRURAkMdAKCpVaCHEMZL6MBwd/wQCU/YahdtewCeNyt/
+GnB9xDJl/cqish8ApKyyvrg=
+=Tymz
 -----END PGP SIGNATURE-----
