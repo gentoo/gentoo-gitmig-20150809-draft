@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2912126307110b5621bb18f47979433e ChangeLog 4298
+MD5 94ffdd47b0e8b275ed299208e7fdf8b8 ChangeLog 4450
 MD5 96d50f09283d0a87235b23ce0795499e files/Makefile.in 980
 MD5 63658f0d53451dbb79e4330fd997bfab files/digest-gld-1.5.2 57
 MD5 f91281c6461e403a77e5351e89e398be files/digest-gld-1.6 55
-MD5 135d0ec2459d5f7c3bbeb4cea3381364 files/gld-1.5.2-mxgrey-fix.patch 1702
+MD5 27b82bb6cc99d52bb22a2e19b4d100c9 files/gld-1.5.2-mxgrey-fix.patch 1675
 MD5 4e2b779070d26c7675574fe2420541b8 files/gld.rc 544
 MD5 92553e000dd0a23d31042352b053cbdf gld-1.5.2.ebuild 1562
 MD5 c82f4d42b6f4cb1d4a64e6d031b018d6 gld-1.6.ebuild 1554
@@ -13,7 +13,7 @@ MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUMQgCHk4+ZoBpvsRAroZAJ9GFnBVmxGhUw5ezOv2tU0btvwSdACbBsxa
-9Xrhn9FavCqZ0qfXMsRqHfE=
-=i7Hj
+iD8DBQFDWSYMCHk4+ZoBpvsRAphHAKCJFfNletmYcom3e6rdV7mQIX91ygCglEj8
+H+FmCHProSohmLqnUDbzFAE=
+=qWqE
 -----END PGP SIGNATURE-----

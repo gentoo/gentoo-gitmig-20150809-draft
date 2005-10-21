@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.26 2005/10/15 08:55:38 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.27 2005/10/21 16:31:21 slarti Exp $
+
+  21 Oct 2005; Tom Martin <slarti@gentoo.org>
+  files/gld-1.5.2-mxgrey-fix.patch:
+  Updated patch. Thanks to <kyberneticist@yahoo.com> in bug #108900.
 
   15 Oct 2005; Tom Martin <slarti@gentoo.org>
   +files/gld-1.5.2-mxgrey-fix.patch:
