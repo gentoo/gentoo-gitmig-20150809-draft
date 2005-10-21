@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7f37c76163f118855c8df53038cc727 libspf2-1.2.5.ebuild 1102
-MD5 2012766cbfa944caf5c3b4937dc7258f ChangeLog 1192
-MD5 7592cdf7e52f0ff74af7d26ef10ac79d metadata.xml 673
-MD5 24fbae68d15ea6b77461743de234ba1c libspf2-1.2.5-r1.ebuild 1246
-MD5 53f5f654a4ee10db28906b4ae684b7c8 libspf2-1.0.4.ebuild 1099
+MD5 766141938738350db3d8fc5dbbfd702f ChangeLog 1290
 MD5 7e5b1b94c60f5c981f62872ba6e3f59d files/digest-libspf2-1.0.4 65
 MD5 03192942320df4e8f8fcb40e21a7c268 files/digest-libspf2-1.2.5 65
 MD5 03192942320df4e8f8fcb40e21a7c268 files/digest-libspf2-1.2.5-r1 65
 MD5 7f0d294117ec50cb8a321ad12d161c6e files/patch-libspf2-1.2.5-nointernal 384
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUiIAViELBEf1JB0RAkP+AJ9O832UKVDwjClMRcFnGwxO1jYTSACfS65o
-+eRK2hNvtW7T9RZS3awIROA=
-=PJ5o
------END PGP SIGNATURE-----
+MD5 53f5f654a4ee10db28906b4ae684b7c8 libspf2-1.0.4.ebuild 1099
+MD5 136ff6a8a415f7c0b98525b1bfa955e7 libspf2-1.2.5-r1.ebuild 1253
+MD5 f7f37c76163f118855c8df53038cc727 libspf2-1.2.5.ebuild 1102
+MD5 7592cdf7e52f0ff74af7d26ef10ac79d metadata.xml 673
