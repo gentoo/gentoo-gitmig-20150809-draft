@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_pre1-r1.ebuild,v 1.2 2005/10/17 09:11:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.0.0_pre1-r1.ebuild,v 1.3 2005/10/21 20:01:13 brix Exp $
 
 inherit eutils
 
@@ -12,13 +12,13 @@ NVCLOCK_VERSION="0.8b"
 DESCRIPTION="CPU Frequency Daemon"
 HOMEPAGE="http://cpufreqd.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-		nvidea? ( http://www.linuxhardware.org/nvclock/nvclock${NVCLOCK_VERSION}.tar.gz )"
+		nvidia? ( http://www.linuxhardware.org/nvclock/nvclock${NVCLOCK_VERSION}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="acpi apm lm_sensors nforce2 nvidea pmu"
+IUSE="acpi apm lm_sensors nforce2 nvidia pmu"
 DEPEND="sys-power/cpufrequtils
 		lm_sensors? ( sys-apps/lm_sensors )"
 RDEPEND="${DEPEND}"
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 
-	if use nvidea; then
+	if use nvidia; then
 		cd ${WORKDIR}/nvclock${NVCLOCK_VERSION}
 		epatch ${FILESDIR}/nvclock${NVCLOCK_VERSION}-fd.patch
 	fi
@@ -38,7 +38,7 @@ src_unpack() {
 src_compile() {
 	local config
 
-	if use nvidea; then
+	if use nvidia; then
 		cd ${WORKDIR}/nvclock${NVCLOCK_VERSION}
 		econf \
 			--disable-gtk \

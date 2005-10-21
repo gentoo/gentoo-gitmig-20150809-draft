@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.17 2005/10/17 09:11:20 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.18 2005/10/21 20:01:13 brix Exp $
+
+  21 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  cpufreqd-2.0.0_pre1.ebuild, cpufreqd-2.0.0_pre1-r1.ebuild:
+  Fix USE flag type-o.
 
   17 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   cpufreqd-2.0.0_pre1-r1.ebuild:
