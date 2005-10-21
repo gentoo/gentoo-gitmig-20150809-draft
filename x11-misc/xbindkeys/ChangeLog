@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.27 2005/10/03 19:45:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.28 2005/10/21 10:54:35 blubb Exp $
+
+  21 Oct 2005; Simon Stelling <blubb@gentoo.org> xbindkeys-1.7.2.ebuild:
+  stable on amd64
 
   03 Oct 2005; Markus Rothe <corsair@gentoo.org> xbindkeys-1.7.2.ebuild:
   Stable on ppc64
