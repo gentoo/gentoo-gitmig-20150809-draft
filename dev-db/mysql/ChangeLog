@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.251 2005/10/20 12:53:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.252 2005/10/21 08:58:03 vivo Exp $
+
+  21 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
+  mysql-4.0.26.ebuild, mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild,
+  mysql-5.0.13_rc.ebuild:
+  Reverted, fix Bug #109881
 
   20 Oct 2005; Luca Barbato <lu_zero@gentoo.org> mysql-4.1.14.ebuild:
   Marked ppc
