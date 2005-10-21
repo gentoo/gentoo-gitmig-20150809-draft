@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3-r4.ebuild,v 1.3 2005/07/16 11:01:20 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3-r4.ebuild,v 1.4 2005/10/21 02:12:43 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -100,11 +100,11 @@ src_install() {
 	fi
 
 	if ! has noinfo ${FEATURES} ; then
-		make -C "${S}"/gdb/doc \
+		make \
 			infodir="${D}"/usr/share/info \
-			install-info || die "install doc info"
-		make -C "${S}"/bfd/doc \
-			infodir="${D}"/usr/share/info \
-			install-info || die "install bfd info"
+			install-info \
+			|| die "install doc info"
+		# Remove shared info pages
+		rm -f "${D}"/usr/share/info/{annotate,bfd,configure,standards}.info*
 	fi
 }
