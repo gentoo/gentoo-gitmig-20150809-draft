@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.18 2005/10/04 20:51:07 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.19 2005/10/21 14:48:16 matsuu Exp $
+
+*libcddb-1.2.1 (21 Oct 2005)
+
+  21 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> +libcddb-1.2.1.ebuild:
+  Version bumped. Bug 107456.
 
   04 Oct 2005; Hardave Riar <hardave@gentoo.org> libcddb-0.9.5.ebuild:
   Keyworded ~mips.
