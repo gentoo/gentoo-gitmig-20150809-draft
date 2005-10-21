@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.138 2005/10/21 15:49:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.139 2005/10/21 21:27:39 suka Exp $
+
+  21 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.0.ebuild:
+  Remove the python use-flag, we are now using system-python by default. Makes
+  no sense to have it anyway, as portage needs python, and
+  --without-system-python just grows the build and currently results in build
+  breakage, see bug #109996
 
   21 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.0.ebuild:

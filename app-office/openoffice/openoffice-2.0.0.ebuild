@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.2 2005/10/21 15:49:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.3 2005/10/21 21:27:39 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="curl eds gnome java kde ldap mozilla nas python zlib xml2"
+IUSE="curl eds gnome java kde ldap mozilla nas zlib xml2"
 
 PATCHLEVEL="OOO680"
 PATCHDIR="${WORKDIR}/ooo-build-${PV}"
@@ -66,13 +66,13 @@ DEPEND="${RDEPEND}
 	zlib? ( sys-libs/zlib )
 	sys-libs/pam
 	!dev-util/dmake
+	>=dev-lang/python-2.3.4
 	java? ( =virtual/jdk-1.4*
 		dev-java/ant-core
 		>=dev-java/java-config-1.2.11-r1 )
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
-	python? ( >=dev-lang/python-2.3.4 )
 	xml2? ( >=dev-libs/libxml2-2.0 )"
 
 PROVIDE="virtual/ooo"
@@ -125,7 +125,6 @@ src_unpack() {
 
 	echo "`use_with curl system-curl`" >> ${CONFFILE}
 	echo "`use_with nas system-nas`" >> ${CONFFILE}
-	echo "`use_with python system-python`" >> ${CONFFILE}
 	echo "`use_with xml2 system-libxml`" >> ${CONFFILE}
 	echo "`use_with zlib system-zlib`" >> ${CONFFILE}
 
