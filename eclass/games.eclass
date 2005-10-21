@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.105 2005/09/04 06:27:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.106 2005/10/21 18:24:23 wolf31o2 Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -192,7 +192,7 @@ games_pkg_postinst() {
 	echo
 }
 
-# Unpack .uz(2) files for UT/UT2003
+# Unpack .uz(2) files for UT/UT2003/UT2004
 # $1: directory or file to unpack
 games_ut_unpack() {
 	local ut_unpack="$1"
@@ -224,6 +224,6 @@ games_umod_unpack() {
 	cd "${UT_DATA_PATH}"
 	./ucc-bin umodunpack -x "${S}/${umod}" -nohomedir &> /dev/null \
 		|| die "uncompressing file ${umod}"
-	rm -f "${Ddir}"/System/{ucc-bin,{Manifest,Def{ault,User},User,UT2003}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int,ucc.log} &>/dev/null \
+	rm -f "${Ddir}"/System/{ucc-bin,{Manifest,Def{ault,User},User,UT200{3,4}}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int,ucc.log} &>/dev/null \
 		|| die "Removing temporary files"
 }

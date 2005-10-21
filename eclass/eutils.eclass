@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.210 2005/10/20 00:13:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.211 2005/10/21 18:24:23 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1118,7 +1118,7 @@ unpack_makeself() {
 				skip=`grep -a ^offset= "${src}" | awk '{print $3}'`
 				let skip="skip + 1"
 				;;
-			2.1.4)
+			2.1.4|2.1.5)
 				skip=$(grep -a offset=.*head.*wc "${src}" | awk '{print $3}' | head -n 1)
 				skip=$(head -n ${skip} "${src}" | wc -c)
 				exe="dd"
