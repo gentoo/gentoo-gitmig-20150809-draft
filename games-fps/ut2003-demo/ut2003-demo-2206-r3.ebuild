@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.10 2005/09/21 20:35:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.11 2005/10/21 17:54:15 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Unreal Tournament 2003 Demo"
 HOMEPAGE="http://www.ut2003.com/"
@@ -83,10 +83,8 @@ w
 q
 EOT
 
-	# create menu entry (closes bug #27594)
-	insinto /usr/share/pixmaps
-	newins "${S}/Unreal.xpm" UT2003-demo.xpm || die "newins failed"
-	make_desktop_entry ut2003-demo "Unreal Tournament 2003 (Demo)" UT2003-demo.xpm
+	newicon Unreal.xpm ut2003-demo.xpm
+	make_desktop_entry ut2003-demo "Unreal Tournament 2003 (Demo)" ${PN}.xpm
 
 	prepgamesdirs
 }
