@@ -31,14 +31,10 @@ MD5 475dbfca78a66962143b39d3aac7915a files/1.1.5/ooffice-wrapper-1.3 6659
 MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.5/openoffice-java.patch 2092
 MD5 fd1c64677627b46e5528f72564bcc8fd files/1.1.5/pthreadlink-fix.patch 1133
 MD5 aa01d8f68b27d3df4af58ed02c080df5 files/1.1.5/pyunolink-fix.patch 475
-MD5 39239f7e09e3fdd536498728404bfbef files/2.0.0/gentoo-2.0.0_rc3.diff 957
-MD5 10f9f087e0e267786691ea0909909504 files/2.0.0/stlport-vector-ppc-buildfix.diff 2213
 MD5 b2cb01ba0d5824f2892c150dce1d8771 files/digest-openoffice-1.1.4-r1 325
 MD5 387adcb6e397b6e7f825c8384ce52389 files/digest-openoffice-1.1.5 322
 MD5 c45a70a1b4109bc275d7e55083b85d44 files/digest-openoffice-2.0.0 476
-MD5 c27522fd99b4d48dc035d2defbe57015 files/digest-openoffice-2.0.0_rc3 478
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 60a58fcd938c9d5a770a92f6b7eb9b5d openoffice-1.1.4-r1.ebuild 16561
 MD5 a69a836ff536fa824b7bb4390198d2e6 openoffice-1.1.5.ebuild 16566
 MD5 464fff747f1300df8ae63c7648a2db6d openoffice-2.0.0.ebuild 6817
-MD5 94c7530a7b2b51223c1087fdf108db76 openoffice-2.0.0_rc3.ebuild 7083
