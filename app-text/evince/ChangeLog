@@ -1,6 +1,13 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.15 2005/10/17 15:09:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.16 2005/10/21 10:02:22 leonardop Exp $
+
+  21 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> metadata.xml,
+  evince-0.4.0-r2.ebuild:
+  Pass --copy to libtoolize call. Pass --disable-scrollkeeper instead of using
+  gnome2_omf_fix. Move gnome-doc-utils from RDEPEND to DEPEND. Added gconf and
+  libglade dependencies. Set G2CONF in pkg_setup() instead of the global
+  scope. Misc clean-ups. Added gnome herd to metadata.xml.
 
   17 Oct 2005; <dang@gentoo.org> +files/evince-0.4.0-no-tiff.patch,
   evince-0.4.0-r2.ebuild:
