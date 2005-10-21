@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2e193cb84f3e2a0b279825052b7fa7a4 ChangeLog 4434
-MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 560b4d27624fadae1348b5ae9796ed6c apr-util-0.9.6-r2.ebuild 2039
+MD5 f64f543f52e9c1af9b4f61b8352b657a ChangeLog 4526
+MD5 069b36180a4df1925f6d6b7ab8eed362 apr-util-0.9.6-r2.ebuild 2036
 MD5 eb1e072b34afd26a02d5673d81dd0046 apr-util-1.1.2.ebuild 1910
 MD5 5c39070c5a30db4f82b9373cadee4c45 files/apr-util-0.9.x-161086:161087.patch 4671
 MD5 467e8ba98a938b691d27ec9971dbfe12 files/digest-apr-util-0.9.6-r2 66
 MD5 c46881efc10b92ab7b6189cdc9070929 files/digest-apr-util-1.1.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDStZ35mJXAu5GbtIRArrmAJ0dFmXN2A2aQfIhdNvSBLY8HMX8ZwCeO18l
-R7sBmXkJwSpoX51B3RvZJX8=
-=6Ihx
------END PGP SIGNATURE-----
+MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
