@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6e16818fbd9d29fa60dcd55d069602ae ChangeLog 1397
+MD5 3bf5c4a751f124c189545e982356f178 ChangeLog 1395
 MD5 20334d6c9fadd4a5dfbe6df3f6ea6be2 cproto-4.6-r1.ebuild 683
-MD5 3f944bd77217eca3533bb3e61e660e6e cproto-4.6.ebuild 695
+MD5 aaecba8afb3f8507b02f053b5598e0bd cproto-4.6.ebuild 693
 MD5 10bb14145eaff685443420d8f3d512ab files/4.6-YYSTYPE.patch 349
 MD5 d765e837084055cec0ef65e3f765a728 files/cproto-4.6-mkstemp.patch 1077
 MD5 7697a7cacbdf87628dfeae27bb4dd163 files/digest-cproto-4.6 62
 MD5 7697a7cacbdf87628dfeae27bb4dd163 files/digest-cproto-4.6-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDJMfcwUpWvClEHQoRAhZkAJoDG+gZixOfX6Ni15Ci8GuCnHfTCwCfUTTs
-zchYRbiSwBUWFEu65zphXAI=
-=V41Q
------END PGP SIGNATURE-----

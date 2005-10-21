@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/cproto
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.10 2005/09/11 23:13:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.11 2005/10/21 21:58:51 george Exp $
 
   12 Sep 2005; Luis Medinas <metalgod@gentoo.org> cproto-4.6-r1.ebuild:
   Added ~amd64 keyword. Closes bug #105390.
@@ -27,7 +27,7 @@
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cproto-4.6.ebuild:
   Don't assign default to S; header fix
 
-*cproto-4.6 (06 ‰≈À 2002)
+*cproto-4.6 (06 Dec 2002)
 
   06 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, cproto-4.6.ebuild, files/\{cproto-4.6-mkstemp.patch,digest-cproto-4.6\} :
   initial release
