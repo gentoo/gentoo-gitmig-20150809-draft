@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.80 2005/10/19 15:33:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.81 2005/10/21 12:15:32 ka0ttic Exp $
+
+  21 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> netpbm-10.29.ebuild,
+  netpbm-10.29-r1.ebuild, netpbm-10.30.ebuild:
+  10.29 stable on mips for bug #109705. 10.29-r1 and 10.30 marked ~mips.
 
   19 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> netpbm-10.29.ebuild:
   Stable on sparc wrt #109705
