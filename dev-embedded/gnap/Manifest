@@ -1,3 +1,4 @@
+MD5 68e42f132158d0eaac4a229ec48e27a2 gnap-1.8.2.ebuild 898
 MD5 68e42f132158d0eaac4a229ec48e27a2 gnap-1.8.1.ebuild 898
 MD5 c64dd98ef00faa17003c9c6154b64b78 gnap-1.8.ebuild 896
 MD5 15cb5766088996cf05736a0a95f82ba7 gnap-1.7.ebuild 883
@@ -8,5 +9,6 @@ MD5 ac39c05c7782ec46aaa1dbb07c90f08d gnap-1.7.1.ebuild 885
 MD5 7573013d7d028f65ae663aa45857370b files/digest-gnap-1.7.1 134
 MD5 1df06884ddd4108b1d26836730513b3b files/digest-gnap-1.7 130
 MD5 90e463097164c37fcc018f08018c2ba7 files/digest-gnap-1.6 130
+MD5 1c35b9b6ec46279d586a27fabf2783a0 files/digest-gnap-1.8.2 134
 MD5 fab642f5db57c39d833b27cf2d44d0c2 files/digest-gnap-1.8.1 134
 MD5 4e84d0d34751b0440a81fbe6326adb02 files/digest-gnap-1.8 130
