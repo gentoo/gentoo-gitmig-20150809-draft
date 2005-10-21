@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.6 2005/09/26 18:04:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.7 2005/10/21 18:01:37 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -52,7 +52,7 @@ src_install() {
 	doexe System/{libSDL-1.2.so.0,openal.so,ucc-bin,ut2004-bin}
 
 	dodir
-	games_make_wrapper ut2004-demo ./ut2004-demo ${dir}
+	games_make_wrapper ut2004-demo ./ut2004-demo "${dir}" "${dir}"
 
 	prepgamesdirs
 	make_desktop_entry ut2004-demo "UT2004 Demo" ut2004-demo.xpm
