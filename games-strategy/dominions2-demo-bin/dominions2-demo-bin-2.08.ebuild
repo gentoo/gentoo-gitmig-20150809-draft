@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo-bin/dominions2-demo-bin-2.08.ebuild,v 1.1 2004/08/08 07:14:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo-bin/dominions2-demo-bin-2.08.ebuild,v 1.2 2005/10/21 18:14:26 wolf31o2 Exp $
 
 inherit games
 
@@ -21,6 +21,8 @@ DEPEND="virtual/x11
 	kde-base/arts"
 
 S="${WORKDIR}/dominions2demo"
+dir="${GAMES_PREFIX_OPT}/${PN}"
+Ddir="${D}/${dir}"
 
 src_unpack() {
 	unpack ${A}
@@ -29,8 +31,8 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "${GAMES_PREFIX_OPT}/${PN}"
-	cp -R "${S}/"* "${D}${GAMES_PREFIX_OPT}/${PN}" || die "cp failed"
-	games_make_wrapper dominions2-demo ./dom2demo "${GAMES_PREFIX_OPT}/${PN}"
+	dodir "${dir}"
+	cp -r "${S}/"* "${Ddir}" || die "cp failed"
+	games_make_wrapper dominions2-demo ./dom2demo "${dir}" "${dir}"
 	prepgamesdirs
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.6 2005/09/27 19:55:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.7 2005/10/21 18:15:48 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -71,7 +71,7 @@ src_install() {
 	loki_patch --verify patch.dat
 	loki_patch patch.dat ${Ddir} >& /dev/null || die "patching"
 
-	games_make_wrapper heroes3 ./heroes3 ${dir}
+	games_make_wrapper heroes3 ./heroes3 "${dir}" "${dir}"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)

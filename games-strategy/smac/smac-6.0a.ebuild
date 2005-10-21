@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.2 2005/09/27 19:56:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.3 2005/10/21 18:17:16 wolf31o2 Exp $
 
 inherit games
 
@@ -68,8 +68,8 @@ src_install() {
 	insinto /usr/share/pixmaps
 	newins ${CDROM_ROOT}/icon.xpm smac.xpm
 
-	games_make_wrapper ${PN} ./${PN} "${dir}"
-	games_make_wrapper ${PN}x ./${PN}x "${dir}"
+	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
+	games_make_wrapper ${PN}x ./${PN}x "${dir}" "${dir}"
 	prepgamesdirs
 
 	einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."

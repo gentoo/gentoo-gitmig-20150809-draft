@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.2.1.ebuild,v 1.4 2005/10/04 22:15:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.2.1.ebuild,v 1.5 2005/10/21 18:08:37 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -40,6 +40,6 @@ src_install() {
 	exeinto "${dir}"
 	doexe bin/Linux/x86/darwinia || die "couldn't do exe"
 
-	games_make_wrapper darwinia-demo ./darwinia "${dir}"
+	games_make_wrapper darwinia-demo ./darwinia "${dir}" "${dir}"
 	prepgamesdirs
 }

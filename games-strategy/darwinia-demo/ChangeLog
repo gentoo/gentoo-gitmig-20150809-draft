@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/darwinia-demo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.3 2005/09/21 20:54:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.4 2005/10/21 18:08:37 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  darwinia-demo-1.2.1.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   darwinia-demo-1.2.1.ebuild:

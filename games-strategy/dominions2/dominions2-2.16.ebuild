@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.2 2005/10/05 23:34:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.3 2005/10/21 18:12:26 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -31,6 +31,9 @@ DEPEND="virtual/x11
 	amd64? ( app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-sdl )"
 
+dir="${GAMES_PREFIX_OPT}/${PN}"
+Ddir="${D}/${dir}"
+
 src_unpack() {
 	mkdir -p ${S}/patch
 	cd ${S}/patch
@@ -47,9 +50,7 @@ src_install() {
 	cdrom_get_cds dom2icon.ico
 	einfo "Copying files to harddisk... this may take a while..."
 
-	DOM2DIR="${GAMES_PREFIX_OPT}/${PN}"
-	dodir ${DOM2DIR}
-	exeinto ${DOM2DIR}
+	exeinto "${dir}"
 	if use amd64 || use x86
 	then
 		doexe ${CDROM_ROOT}/bin_lin/x86/dom2* || die "doexe failed"
@@ -57,7 +58,7 @@ src_install() {
 	then
 		doexe ${CDROM_ROOT}/bin_lin/ppc/dom2* || die "doexe failed"
 	fi
-	insinto ${DOM2DIR}
+	insinto "${dir}"
 	doins -r ${CDROM_ROOT}/dominions2.app/Contents/Resources/* || \
 		die "doins failed"
 	dodoc ${CDROM_ROOT}/doc/* || die "dodoc failed"
@@ -85,7 +86,7 @@ src_install() {
 	# update times
 	find ${D} -exec touch '{}' \;
 
-	games_make_wrapper dominions2 ./dom2 ${DOM2DIR}
+	games_make_wrapper dominions2 ./dom2 "${dir}" "${dir}"
 	make_desktop_entry dominions2 "Dominions II" dominions2.png
 
 	prepgamesdirs

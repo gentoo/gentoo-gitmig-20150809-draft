@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.1 2005/06/17 17:53:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mindrover-demo/mindrover-demo-1.07b.ebuild,v 1.2 2005/10/21 18:16:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -42,7 +42,7 @@ src_install() {
 		bin/Linux/x86/glibc-2.1/lib/libopenal.so.0.0.6 || die "doexe failed"
 	dosym ${dir}/libopenal.so.0.0.6 ${dir}/libopenal.so.0
 
-	games_make_wrapper ${PN} ./mindrover_demo ${dir}
+	games_make_wrapper ${PN} ./mindrover_demo "${dir}" "${dir}"
 
 	prepgamesdirs
 	make_desktop_entry ${PN} "Mindrover: Europa Project (Demo)" ${PN}.xpm
