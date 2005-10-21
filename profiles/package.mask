@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4603 2005/10/21 17:25:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4604 2005/10/21 21:36:48 halcy0n Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -240,11 +240,6 @@ games-rpg/nwn-data
 # Stefan Knoblich <stkn@gentoo.org> (20 Sep 2005)
 # Asterisk-1.2.0_beta still masked, therefore mask this one too.
 >=net-misc/asterisk-oh323-0.7.3
-
-# Mark Loeser <halcy0n@gentoo.org> (19 Sep 2005)
-# Masking gzip-x86 before its pending removal due to dead upstream and
-# security exploits (see email to gentoo-dev@)
-app-arch/gzip-x86
 
 # Olivier Fisette <ribosome@gentoo.org> (19 Sep 2005)
 # The new GAMESS package will need some testing before it
