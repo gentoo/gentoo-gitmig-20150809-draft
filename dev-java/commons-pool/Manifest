@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5a30009e7b790956d6ce9e79cec4aa1a ChangeLog 4054
 MD5 71ed1c628bb58dea58ce0eb26ad19cb7 commons-pool-1.1.ebuild 1310
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 fd277f66a33978758a05b6cbb2830786 ChangeLog 3914
-MD5 adbf8806eb96a7b184fd23e22ed447be commons-pool-1.2.ebuild 1318
+MD5 f91862950cc27f25a00554de11716819 commons-pool-1.2.ebuild 1327
 MD5 b8d9ac4e67767842878c535474df7961 files/digest-commons-pool-1.1 71
 MD5 d41c8c7c7d3b3490c197807fbe38f8a6 files/digest-commons-pool-1.2 72
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWNtYQiJ/wx066S4RArVkAJ0b/OGKCa+qWMn7mbiiSu6nSFJC9wCfW78r
+0cJ2RGxn5b+H2wr/qoLwGPE=
+=SQXI
+-----END PGP SIGNATURE-----

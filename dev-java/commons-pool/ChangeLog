@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.27 2005/08/07 13:00:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.28 2005/10/21 12:12:08 betelgeuse Exp $
+
+  21 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  commons-pool-1.2.ebuild:
+  commons-pool only needs ant-core instead of full ant
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   commons-pool-1.2.ebuild:
