@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 0761cdb2663e3d91bbe4077e68eb78e4 ChangeLog 691
-MD5 4bad11c28340c7e3c3f7c01a2a221a06 barbarian-bin-1.01.ebuild 1180
+MD5 c7cafdcf742a54b9d040019aeb6dea9a ChangeLog 812
+MD5 f9bd3baaba1350a49b8e899304f76e44 barbarian-bin-1.01.ebuild 1236
 MD5 cec2934dd3a5320912478e9ad5019325 files/digest-barbarian-bin-1.01 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC++VxmOfEJZHYOKcRAhhQAJsFxtlgOEUnIe0iBuW2GzyePaGRcwCdGLKm
-qnmKFjmZ00hb1yeN7qQ4ZRs=
-=ydSd
------END PGP SIGNATURE-----
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
