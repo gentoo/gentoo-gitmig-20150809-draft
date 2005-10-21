@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 fa09b198e494a1086b748a70d8c82b98 ChangeLog 3433
 MD5 3e474572fe4df01c7632a78f013c6d1e STLport-4.5.3-r3.ebuild 1086
-MD5 9bc93614f7fe1e68a404de378b15d2c2 STLport-4.6.2-r2.ebuild 1290
+MD5 9ae2d5e0911688042ea4ee50791841ae STLport-4.6.2-r2.ebuild 1395
 MD5 f480213ed01d6d7700f14c15cb0f5229 STLport-5.0_rc2.ebuild 1317
 MD5 2f3f666186f0f3ba7e64d101c9f5c05d files/4.6.2-gcc-includes.patch 812
 MD5 7949a0c399ae8cd1c8c6d7ada426848f files/4.6.2-optimize.patch 999
@@ -19,7 +19,7 @@ MD5 4817a0bcc65305e3dd392deee8e84e0c metadata.xml 246
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTGX8gIKl8Uu19MoRAlF/AJ0cjmZE4iDF/Yn2oMDwv6k7odIF6wCfXsGV
-k9OYc4eL34CO905FzpmofIc=
-=Pqse
+iD8DBQFDWFbZgIKl8Uu19MoRAqI2AJ0eew8dzRXMjaliwljSQxwubry82QCfSzAZ
+9nqPzQjHSIFtfh2F9tBtwPI=
+=iy4+
 -----END PGP SIGNATURE-----
