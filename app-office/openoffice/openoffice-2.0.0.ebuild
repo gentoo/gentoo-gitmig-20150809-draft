@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.1 2005/10/20 18:04:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.2 2005/10/21 15:49:37 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -67,7 +67,8 @@ DEPEND="${RDEPEND}
 	sys-libs/pam
 	!dev-util/dmake
 	java? ( =virtual/jdk-1.4*
-		dev-java/ant-core )
+		dev-java/ant-core
+		>=dev-java/java-config-1.2.11-r1 )
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )

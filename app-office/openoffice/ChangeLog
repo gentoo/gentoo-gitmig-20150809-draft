@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.137 2005/10/20 18:04:43 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.138 2005/10/21 15:49:37 suka Exp $
+
+  21 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.0.ebuild:
+  Add dependency to >=dev-java/java-config-1.2.11-r1 as some people seem to be
+  building OOo 2.0.0 on stable, and the build will fail without the newest
+  version of java-config
 
 *openoffice-2.0.0 (20 Oct 2005)
 
