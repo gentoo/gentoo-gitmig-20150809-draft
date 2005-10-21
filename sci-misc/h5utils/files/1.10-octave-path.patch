@@ -1,0 +1,13 @@
+--- h5utils-1.10/configure.ac.orig	2005-09-03 04:36:33.000000000 +0700
++++ h5utils-1.10/configure.ac	2005-10-20 13:56:02.000000000 +0700
+@@ -131,8 +131,9 @@
+ else
+ 	# try to find installation directory
+ 	AC_CHECK_PROGS(OCTAVE, octave, echo)
++	AC_CHECK_PROGS(OCTAVE_CONFIG, octave-config, echo)
+ 	AC_MSG_CHECKING(where octave plugins go)
+-	OCT_INSTALL_DIR=`echo "DEFAULT_LOADPATH" | $OCTAVE -q | tr ':' '\n' | grep "site/oct" | head -1`
++	OCT_INSTALL_DIR=`${OCTAVE_CONFIG} --oct-site-dir | sed -e "s:${prefix}:\\\${prefix}:"`
+ 	if test -n "$OCT_INSTALL_DIR"; then
+ 		AC_MSG_RESULT($OCT_INSTALL_DIR)
+ 		H5READ=h5read.oct
