@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxcomp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.19 2005/10/20 22:24:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcomp/ChangeLog,v 1.20 2005/10/21 01:33:38 agriffis Exp $
+
+  21 Oct 2005; Aron Griffis <agriffis@gentoo.org> nxcomp-1.5.0.ebuild:
+  Install libXcomp.so* instead of libXcomp.so.${PV} so that nxssh and others
+  can link
 
   20 Oct 2005; Aron Griffis <agriffis@gentoo.org> nxcomp-1.5.0.ebuild:
   Add lib -> $(get_libdir) symlink in /usr/NX; seems to be necessary for
