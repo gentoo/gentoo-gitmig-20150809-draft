@@ -1,4 +1,4 @@
-MD5 73c9342890e79b792b6f0f5db780c990 ChangeLog 5398
+MD5 89296d655a5274209137f848b22c647e ChangeLog 5581
 MD5 3952e8e76ebdde92fe0bf84facaaea38 files/digest-nwn-1.65-r1 892
 MD5 a15f98043e8a4c08555ef8384a1e848c files/digest-nwn-1.66 1147
 MD5 25cad5bc0f76382b0577ef11b5d5aeef files/digest-nwn-1.66-r1 1551
@@ -6,6 +6,6 @@ MD5 004cf98b585a8186262ea2117907129e files/fixinstall 2453
 MD5 3eddaf5e88a92951762058756003c855 files/nwn 44
 MD5 d05b3b73edd2b4beadbce95837e2ab20 files/nwn.png 4296
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
-MD5 57e27c9c8e911b890eb76d61aef16eec nwn-1.65-r1.ebuild 3696
-MD5 97c7f7099fff033df8bae1550632319d nwn-1.66-r1.ebuild 3981
-MD5 c1bea5ab95cba80ee5c082c124103f25 nwn-1.66.ebuild 4318
+MD5 b09157145a832f02eb5ccbdff5244310 nwn-1.65-r1.ebuild 3688
+MD5 c5d586f33f317fa732d6bbd20bf3a802 nwn-1.66-r1.ebuild 3992
+MD5 69d62e623dfb29a0ca928233044220c7 nwn-1.66.ebuild 4228
