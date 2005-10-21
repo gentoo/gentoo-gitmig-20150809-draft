@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-discovery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.13 2005/04/17 14:41:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.14 2005/10/21 14:52:12 betelgeuse Exp $
+
+  21 Oct 2005; Petteri Räty <betelgeuse@gentoo.org>
+  commons-discovery-0.2-r2.ebuild:
+  commons-discovery does not need the full ant - only ant-core. Also removed
+  dodoc RELEASE-NOTES.txt because RELEASE-NOTES.txt does not exist.
 
   17 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   files/commons-discovery-0.2-gentoo.diff, -commons-discovery-0.2-r1.ebuild,
