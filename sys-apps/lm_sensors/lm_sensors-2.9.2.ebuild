@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.2.ebuild,v 1.1 2005/09/06 21:06:02 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.2.ebuild,v 1.2 2005/10/21 15:19:45 brix Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
@@ -37,11 +37,16 @@ pkg_setup() {
 			die "sys-apps/lm_sensors-modules-${PV} not installed"
 		fi
 	else
-		if ! (linux_chkconfig_present I2C_SENSOR); then
+		if kernel_is lt 2 6 14 && ! (linux_chkconfig_present I2C_SENSOR); then
 			eerror
 			eerror "${P} requires CONFIG_I2C_SENSOR to be enabled for non-2.4.x kernels."
 			eerror
 			die "CONFIG_I2C_SENSOR not detected"
+		elif ! (linux_chkconfig_present HWMON); then
+			eerror
+			eerror "${P} requires CONFIG_HWMON to be enabled for 2.6.14+ kernels."
+			eerror
+			die "CONFIG_HWMON not detected"
 		fi
 		if ! (linux_chkconfig_present I2C_CHARDEV); then
 			eerror
