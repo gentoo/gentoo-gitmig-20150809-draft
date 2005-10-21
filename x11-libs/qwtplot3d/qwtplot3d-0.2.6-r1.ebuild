@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6.ebuild,v 1.1 2005/10/14 02:01:32 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.6-r1.ebuild,v 1.1 2005/10/21 16:47:59 cryos Exp $
 
 inherit multilib
 
@@ -11,9 +11,9 @@ DESCRIPTION="opengl and qt-based 3D widget library for C++"
 HOMEPAGE="http://qwtplot3d.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qwtplot3d/${MY_P}.tgz"
 
-LICENSE="as-is"
+LICENSE="ZLIB"
 SLOT="0"
-IUSE="doc"
+IUSE="examples"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="=x11-libs/qt-3*
@@ -43,8 +43,13 @@ src_install () {
 	dosym libqwtplot3d.so.${PV} /usr/$(get_libdir)/libqwtplot3d.so
 	dosym libqwtplot3d.so.${PV} /usr/$(get_libdir)/libqwtplot3d.so.${PV/.*/}
 	chmod -R 644 examples
+	chmod 755 examples examples/simpleplot/ examples/mesh2/ \
+		examples/enrichments/ examples/axes/ examples/autoswitch/ \
+		examples/axes/src/
 	mkdir -p ${D}/usr/include/qwtplot3d/
 	install include/* ${D}/usr/include/qwtplot3d/
-	use doc && (dodir /usr/share/doc/${PF}
-				cp -pPR examples ${D}/usr/share/doc/${PF}/)
+	if use examples; then
+		dodir /usr/share/doc/${PF}
+		cp -pPR examples ${D}/usr/share/doc/${PF}/
+	fi
 }
