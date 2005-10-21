@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.8 2005/07/31 20:31:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.9 2005/10/21 22:01:34 halcy0n Exp $
+
+*mailgraph-1.12 (21 Oct 2005)
+
+  21 Oct 2005; Mark Loeser <halcy0n@gentoo.org> +mailgraph-1.12.ebuild:
+  Version bump; bug #110055
 
   31 Jul 2005; Mark Loeser <halcy0n@gentoo.org> mailgraph-1.11-r1.ebuild:
   Stable on x86.
