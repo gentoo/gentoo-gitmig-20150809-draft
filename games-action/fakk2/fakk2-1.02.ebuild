@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.10 2005/09/21 20:24:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.11 2005/10/21 17:25:56 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -53,7 +53,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	games_make_wrapper ${PN} ./${PN} ${dir}
+	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	newicon ${CDROM_ROOT}/icon.xpm ${PN}.xpm
 
 	prepgamesdirs

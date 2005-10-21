@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.10 2005/09/21 20:28:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.11 2005/10/21 17:26:30 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -65,7 +65,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	games_make_wrapper hg2 ./hg2 ${dir}
+	games_make_wrapper hg2 ./hg2 "${dir}" "${dir}"
 	newicon ${CDROM_ROOT}/icon.xpm hg2.xpm
 
 	prepgamesdirs

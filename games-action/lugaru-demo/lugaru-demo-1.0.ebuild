@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0.ebuild,v 1.2 2005/10/10 14:47:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0.ebuild,v 1.3 2005/10/21 17:27:06 wolf31o2 Exp $
 
 inherit games
 
@@ -34,7 +34,7 @@ src_install() {
 
 	exeinto "${dir}"
 	doexe lugaru-bin *.so *.so.0 || die "doexe"
-	games_make_wrapper lugaru ./lugaru-bin "${dir}"
+	games_make_wrapper lugaru ./lugaru-bin "${dir}" "${dir}"
 
 	doicon lugaru.xpm
 	make_desktop_entry lugaru "Lugaru" lugaru.xpm

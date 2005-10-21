@@ -1,6 +1,10 @@
 # ChangeLog for games-action/heavygear2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/ChangeLog,v 1.10 2005/09/21 20:28:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/ChangeLog,v 1.11 2005/10/21 17:26:30 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  heavygear2-1.0b.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   21 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   heavygear2-1.0b.ebuild:

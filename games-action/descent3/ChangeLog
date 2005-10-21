@@ -1,6 +1,10 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.12 2005/09/06 17:35:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.13 2005/10/21 17:25:18 wolf31o2 Exp $
+
+  21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b.ebuild:
+  Added addition dir variable to games_make_wrapper for bug #109793.
 
   06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   descent3-1.4.0b.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.12 2005/09/06 17:35:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.13 2005/10/21 17:25:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -79,7 +79,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	games_make_wrapper ${PN} ./${PN} ${dir}
+	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	newicon ${CDROM_ROOT}/icon.xpm ${PN}.xpm
 
 	# Fix for 2.6 kernel crash
