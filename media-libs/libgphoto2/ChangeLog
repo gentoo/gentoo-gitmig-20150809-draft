@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.55 2005/10/14 23:54:15 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.56 2005/10/21 04:02:40 joem Exp $
+
+  21 Oct 2005; Joe McCann <joem@gentoo.org> libgphoto2-2.1.6-r1.ebuild:
+  Only display error if use=jpeg and ! use=exif. It was confusing for users
+  and me to see the error message when we had the right combo of use flags
 
 *libgphoto2-2.1.6-r1 (14 Oct 2005)
 
