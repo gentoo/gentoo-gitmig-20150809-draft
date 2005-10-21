@@ -6,13 +6,13 @@ MD5 c089b7d34f96c556a34bb8c402794023 files/build-2.1.12.xml 1546
 MD5 c089b7d34f96c556a34bb8c402794023 files/build-3.0.8.xml 1546
 MD5 dd6372768b0929aa8504a4526358ff34 files/digest-hessian-2.1.12 67
 MD5 3b1b79f1af4dbee2b94e9b3cfaaea881 files/digest-hessian-3.0.8 66
-MD5 d88b891bd498395b1eff5947e9eb2af5 hessian-2.1.12.ebuild 1392
-MD5 2a9065ad1f5a548c679e89cef42daab2 hessian-3.0.8.ebuild 1367
+MD5 45cc330851ab33e6237231eb99158f36 hessian-2.1.12.ebuild 1419
+MD5 8403d0569f1ac6a66fc0ff6060d685ed hessian-3.0.8.ebuild 1394
 MD5 1ee3b9eb31c4a1302dc9c690a069fb77 metadata.xml 493
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWPsTQiJ/wx066S4RAvvmAKCL2IxiweqjM/di+aK/mrkSh7wMEQCbBuRb
-GQNoxyPRls53jBeCfsquZa8=
-=pOu3
+iD8DBQFDWPyLQiJ/wx066S4RAvSEAJ4lpyaYO4g2GKpcahK++NIFUePBjgCfZptx
+CPmJYT/RO3MKqV5zzgOMLN0=
+=W7l9
 -----END PGP SIGNATURE-----
