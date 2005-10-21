@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2.ebuild,v 1.8 2005/07/10 13:01:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/commons-httpclient-2.0.2.ebuild,v 1.9 2005/10/21 15:01:55 betelgeuse Exp $
 
 inherit java-pkg eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/jre-1.3
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	sys-apps/sed
-	>=dev-java/ant-1.4
+	>=dev-java/ant-core-1.4
 	source? ( app-arch/zip )
 	jikes? ( dev-java/jikes )"
 
