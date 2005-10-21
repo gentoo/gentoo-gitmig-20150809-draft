@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 46818db3c12825a7218f0ce54a1a2430 qstat-2.8.ebuild 713
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ee93c87ffde3d4b4ea878e581183904c qstat-2.7.ebuild 712
 MD5 e28253a9c49e1ede65bdd6442723745d ChangeLog 2411
-MD5 287da18857bb8dc64495f2f20f5b2ba5 qstat-2.6.ebuild 698
-MD5 4c6bd6c9dcda3d5e4a889b4c5ed5f81f files/digest-qstat-2.6 61
 MD5 dac50c59f937c5744939c8d374e74e86 files/digest-qstat-2.8 61
-MD5 565d1e1f9c6239d0f9b94aaf4a3ba703 files/digest-qstat-2.7 61
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 e2ec844a658e8b4de76d21bfaed15e2c qstat-2.8.ebuild 712
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDF48egIKl8Uu19MoRAuuBAJ46HZ0C/zN5rYhZu/l9pRIGGz8nGgCeIqwt
-TZz5cRTiOpsWDKZAvFMzKkw=
-=olGw
+iD8DBQFDWHYOgIKl8Uu19MoRAkBHAJsGoO+SXHZEklKXkgTh4HsNOux3twCfTwRE
+/K2kbN/1Gn4kXaVYTB6bpZw=
+=grqN
 -----END PGP SIGNATURE-----
