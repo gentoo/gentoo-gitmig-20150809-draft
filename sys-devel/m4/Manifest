@@ -1,10 +1,22 @@
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8a400c9c40cbf89b7fa00401e187ba92 ChangeLog 4983
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87698eb003ce8322b1942fa515b36a8e ChangeLog 5149
+MD5 235e74bf79f972d9fe52eaca8532119f files/digest-m4-1.4.1 60
+MD5 7703a5bdcc14909f62302b74508db3d3 files/digest-m4-1.4.2-r1 60
+MD5 a0fbe19c80ff3efb55bbc711d4ef2648 files/digest-m4-1.4.3 61
+MD5 1b64751b46f09e76ce3b0ee0828fcd41 files/digest-m4-1.4.4 61
+MD5 1c9901ef77c76aba3f66e96448a12769 files/m4-1.4.3-autotools.patch 913
+MD5 df6d359aafe64845b09d1a1055643936 files/m4-1.4.3-pointer.patch 1705
 MD5 0a077ae68e101000521f46b2bf974085 m4-1.4.1.ebuild 781
 MD5 91da8d2c90ce807e73b59ec3ba895e7e m4-1.4.2-r1.ebuild 763
 MD5 9634159e65a2cf932e875f9e35196a46 m4-1.4.3.ebuild 1007
-MD5 235e74bf79f972d9fe52eaca8532119f files/digest-m4-1.4.1 60
-MD5 1c9901ef77c76aba3f66e96448a12769 files/m4-1.4.3-autotools.patch 913
-MD5 7703a5bdcc14909f62302b74508db3d3 files/digest-m4-1.4.2-r1 60
-MD5 df6d359aafe64845b09d1a1055643936 files/m4-1.4.3-pointer.patch 1705
-MD5 a0fbe19c80ff3efb55bbc711d4ef2648 files/digest-m4-1.4.3 61
+MD5 129e76bc263beb6e494bdfc6a0ac5470 m4-1.4.4.ebuild 982
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDWOJIJrHF4yAQTrARAnLXAJ9DgF5FWs3iz3uS4AeUZkYxGiIF9QCeKlu/
+1dirB6itthgx8nSMXc5oeVs=
+=V8d5
+-----END PGP SIGNATURE-----
