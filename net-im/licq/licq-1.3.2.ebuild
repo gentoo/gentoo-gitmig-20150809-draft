@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2_rc1.ebuild,v 1.1 2005/10/01 14:58:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2.ebuild,v 1.1 2005/10/21 16:08:34 voxus Exp $
 
 inherit eutils kde-functions multilib
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P/_rc/RC}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -25,8 +25,6 @@ DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	qt? ( =x11-libs/qt-3* )
 	ncurses? ( sys-libs/ncurses >=dev-libs/cdk-4.9.11.20031210-r1 )
 	crypt? ( >=app-crypt/gpgme-1.0.0 )"
-
-S="${WORKDIR}/${P/_rc/RC}"
 
 src_unpack() {
 	unpack ${A}
@@ -74,7 +72,7 @@ src_compile() {
 		myconf="${myconf} --disable-gpgme"
 	fi
 
-	for n in `echo auto-reply console email msn osd qt-gui rms`; do
+	for n in `echo auto-reply console email msn qt-gui rms`; do
 		cd ${S}/plugins/${n}
 
 		ebegin "Recreating configure in plugins/${n}"
@@ -154,6 +152,7 @@ src_compile() {
 
 	# Email PLugin
 	cd ${S}/plugins/email
+	epatch ${FILESDIR}/${PV}-email_typo.patch
 	einfo "Compiling Email plug-in"
 	econf || die
 	emake || die

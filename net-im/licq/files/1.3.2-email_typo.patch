@@ -1,0 +1,11 @@
+--- plugins/email/src/forwarder.cpp	2005-10-21 19:55:08.032358648 +0400
++++ plugins/email/src/forwarder.cpp	2005-10-21 19:55:13.245566120 +0400
+@@ -373,7 +373,7 @@
+     if (nPPID == LICQ_PPID)
+       sprintf (szFrom, "From: \"%s\" <%s@pager.icq.com>", u->GetAlias(), u->IdString());
+     else
+-      sprintf (szFrom, "From: \"%s\" <%s>", u->GeAlias(), u->GetEmailPrimary());
++      sprintf (szFrom, "From: \"%s\" <%s>", u->GetAlias(), u->GetEmailPrimary());
+     sprintf (szReplyTo, "Reply-To: \"%s %s\" <%s>", u->GetFirstName(), u->GetLastName(), u->GetEmailPrimary());
+   }
+   sprintf (szDate, "Date: %s", ctime(&t));
