@@ -1,25 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9dd2d4469df37616f8133d14b58a2ff7 ChangeLog 12935
-MD5 7e423c353b08a2c05693d13f21e067d0 files/depsort.py 1958
-MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
-MD5 9e9c22452b545fd9ec1367155c15d8e2 files/digest-ghc-6.2.2 67
-MD5 75417bc4dea34cd08ea105457ccd3032 files/digest-ghc-6.4 65
-MD5 7c38a5e2d5ecf8446f38ff41fa4d4152 files/digest-ghc-6.4.1 67
-MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
-MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
-MD5 ffd472c0685cf2766ce6533265f9a3c9 files/ghc-6.4-powerpc.patch 908
-MD5 af174f2e566a288f0e2276883a866827 files/ghc-updater 9075
+MD5 670ea0013a01dc7771a7ee918ae62187 ghc-6.4.1.ebuild 5943
 MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
 MD5 49113531ecf3c15247194f067ffe00bd ghc-6.2.2.ebuild 5582
-MD5 670ea0013a01dc7771a7ee918ae62187 ghc-6.4.1.ebuild 5943
 MD5 9620778937a1aff6ef88863c81222cfc ghc-6.4.ebuild 6109
+MD5 096c7e091b383a94afd2a3483545c98f ghc-6.4.1-r1.ebuild 5982
+MD5 ac3dfa5ebb04b0461ee5412e35140cf8 ChangeLog 13083
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+MD5 af174f2e566a288f0e2276883a866827 files/ghc-updater 9075
+MD5 7e423c353b08a2c05693d13f21e067d0 files/depsort.py 1958
+MD5 1ae8c6b539b6706ba0e8b988a918a944 files/ghc-6.2.hardened.patch 525
+MD5 ffd472c0685cf2766ce6533265f9a3c9 files/ghc-6.4-powerpc.patch 908
+MD5 7c38a5e2d5ecf8446f38ff41fa4d4152 files/digest-ghc-6.4.1-r1 67
+MD5 d417c9e24a826959ad6d921247e43328 files/digest-ghc-6.0.1 67
+MD5 9e9c22452b545fd9ec1367155c15d8e2 files/digest-ghc-6.2.2 67
+MD5 7c38a5e2d5ecf8446f38ff41fa4d4152 files/digest-ghc-6.4.1 67
+MD5 75417bc4dea34cd08ea105457ccd3032 files/digest-ghc-6.4 65
+MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDRs29I1lqEGTUzyQRAqhmAJwKgc+7tGaHH0itu9sBiceOY95BbQCgj67+
-ElMSmjPwkk6eO9FGaKqP27o=
-=qDx7
+iD8DBQFDWNCqkyZuKN4EQ6YRAl6IAJ4yov3BA/RaIBPPPuxBTQcnA8DUNQCfcqVN
+Q83sYtCJ3l5nN4Q7Zf5W6M0=
+=GMuE
 -----END PGP SIGNATURE-----
