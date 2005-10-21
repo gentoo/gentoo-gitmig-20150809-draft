@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.6 2005/10/04 11:21:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.7 2005/10/21 10:10:27 flameeyes Exp $
+
+*mt-daapd-0.2.3-r1 (21 Oct 2005)
+
+  21 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mt-daapd-0.2.3-pidfile.patch, +files/mt-daapd.init.2,
+  +mt-daapd-0.2.3-r1.ebuild:
+  New revision, patched to allow launching more than one instance of mt-daapd.
+  Also new init.d file that allows symlinked-launches.
 
   04 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> mt-daapd-0.2.3.ebuild:
   Added ~sh.
