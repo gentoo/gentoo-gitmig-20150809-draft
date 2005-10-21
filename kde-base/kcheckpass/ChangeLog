@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.21 2005/10/20 11:01:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.22 2005/10/21 22:00:50 puggy Exp $
+
+  21 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  kcheckpass-3.5.0_beta2.ebuild:
+  Keyword ~ppc
 
   20 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/kcheckpass-pie-final.patch, kcheckpass-3.5.0_beta2.ebuild:
