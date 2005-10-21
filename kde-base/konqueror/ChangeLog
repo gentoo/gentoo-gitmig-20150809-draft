@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.23 2005/10/15 11:08:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.24 2005/10/21 22:39:52 puggy Exp $
+
+  21 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  konqueror-3.5.0_beta2.ebuild:
+  Keyword ~ppc
 
 *konqueror-3.5.0_beta2 (14 Oct 2005)
 
