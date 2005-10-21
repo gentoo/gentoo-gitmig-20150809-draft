@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.23 2005/10/15 11:08:42 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.24 2005/10/21 22:09:29 puggy Exp $
+
+  21 Oct 2005; Douglas Russell <puggy@gentoo.org>
+  kdesktop-3.5.0_beta2.ebuild:
+  Keyword ~ppc
 
 *kdesktop-3.5.0_beta2 (14 Oct 2005)
 
