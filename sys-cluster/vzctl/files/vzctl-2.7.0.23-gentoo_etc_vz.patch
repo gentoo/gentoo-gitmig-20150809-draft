@@ -1,0 +1,173 @@
+diff -urN vzctl-2.7.0-23/etc/cron.d/vpsnetclean vzctl-2.7.0-23_etc_vz/etc/cron.d/vpsnetclean
+--- vzctl-2.7.0-23/etc/cron.d/vpsnetclean	2005-08-05 19:46:38.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/etc/cron.d/vpsnetclean	2005-10-23 00:31:40.956253816 +0400
+@@ -10,5 +10,5 @@
+ # Clean VPS network rules (arp,route,iptables)
+ #
+ 
+-*/5 * * * * root /etc/sysconfig/vz-scripts/vpsnetclean
++*/5 * * * * root /etc/vz/vpsnetclean
+ 
+diff -urN vzctl-2.7.0-23/etc/cron.d/vpsreboot vzctl-2.7.0-23_etc_vz/etc/cron.d/vpsreboot
+--- vzctl-2.7.0-23/etc/cron.d/vpsreboot	2005-08-05 20:40:45.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/etc/cron.d/vpsreboot	2005-10-23 00:31:40.957253664 +0400
+@@ -11,4 +11,4 @@
+ # If vzagent not installed you can enable reboot functionality by
+ # commented out the line below.
+ 
+-*/5 * * * * root /etc/sysconfig/vz-scripts/vpsreboot
++*/5 * * * * root /etc/vz/vpsreboot
+diff -urN vzctl-2.7.0-23/etc/dists/Makefile vzctl-2.7.0-23_etc_vz/etc/dists/Makefile
+--- vzctl-2.7.0-23/etc/dists/Makefile	2005-08-12 16:37:33.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/etc/dists/Makefile	2005-10-23 00:31:40.957253664 +0400
+@@ -8,7 +8,7 @@
+ # WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+ 
+ INSTALL = install
+-DISTCONFDIR = /etc/sysconfig/vz-scripts/dists
++DISTCONFDIR = /etc/vz/dists
+ DISTSCRIPTDIR = ${DISTCONFDIR}/scripts
+ DISTSCRIPTS = debian-add_ip.sh debian-del_ip.sh debian-set_hostname.sh 	\
+ 	functions postcreate.sh redhat-7.x_add_ip.sh redhat-add_ip.sh 	\
+diff -urN vzctl-2.7.0-23/etc/vps-functions vzctl-2.7.0-23_etc_vz/etc/vps-functions
+--- vzctl-2.7.0-23/etc/vps-functions	2005-10-17 13:55:59.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/etc/vps-functions	2005-10-23 00:31:40.957253664 +0400
+@@ -26,7 +26,7 @@
+ 
+ # iptables parameters
+ VE_STATE_DIR="/var/vz/veip/"
+-CONF_DIR="/etc/sysconfig/vz-scripts/"
++CONF_DIR="/etc/vz/"
+ 
+ ARPSEND_CMD="arpsend -c 1 -w 1"
+ IP_CMD=/sbin/ip
+diff -urN vzctl-2.7.0-23/etc/vpsreboot vzctl-2.7.0-23_etc_vz/etc/vpsreboot
+--- vzctl-2.7.0-23/etc/vpsreboot	2005-10-23 00:30:51.060839072 +0400
++++ vzctl-2.7.0-23_etc_vz/etc/vpsreboot	2005-10-23 00:31:40.958253512 +0400
+@@ -11,7 +11,7 @@
+ # Script to start VPS was rebooted
+ #
+ 
+-CONF_DIR=/etc/sysconfig/vz-scripts
++CONF_DIR=/etc/vz
+ VE_INFO=/proc/vz/veinfo
+ REBOOT_MARK='reboot'
+ LOCKFILE='/var/lock/vereboot.lock'
+diff -urN vzctl-2.7.0-23/include/dist.h vzctl-2.7.0-23_etc_vz/include/dist.h
+--- vzctl-2.7.0-23/include/dist.h	2005-08-19 18:08:38.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/include/dist.h	2005-10-23 00:31:40.958253512 +0400
+@@ -23,7 +23,7 @@
+ #define	SET_UGID_QUOTA		6
+ #define	POST_CREATE		7
+ 
+-#define DIST_DIR		"/etc/sysconfig/vz-scripts/dists"
++#define DIST_DIR		"/etc/vz/dists"
+ 
+ typedef struct {
+ 	char *def_ostmpl;
+diff -urN vzctl-2.7.0-23/include/types.h vzctl-2.7.0-23_etc_vz/include/types.h
+--- vzctl-2.7.0-23/include/types.h	2005-10-23 00:30:51.060839072 +0400
++++ vzctl-2.7.0-23_etc_vz/include/types.h	2005-10-23 00:31:40.958253512 +0400
+@@ -12,7 +12,7 @@
+ #define	_TYPES_H_
+ 
+ #define GLOBAL_CFG              "/etc/conf.d/vz"
+-#define VPS_CONF_DIR            "/etc/sysconfig/vz-scripts/"
++#define VPS_CONF_DIR            "/etc/vz/"
+ #define LIB_DIR			"/usr/lib/vzctl/lib/"
+ #define VPS_SCRIPTS_DIR         "/usr/lib/vzctl/scripts/"
+ 
+diff -urN vzctl-2.7.0-23/include/vzlist.h vzctl-2.7.0-23_etc_vz/include/vzlist.h
+--- vzctl-2.7.0-23/include/vzlist.h	2005-10-23 00:30:51.061838920 +0400
++++ vzctl-2.7.0-23_etc_vz/include/vzlist.h	2005-10-23 00:31:40.959253360 +0400
+@@ -25,7 +25,7 @@
+ #define PROCVEINFO	"/proc/vz/veinfo"
+ #define PROCFSHED	"/proc/fairsched"
+ 
+-#define SCRIPT_DIR	"/etc/sysconfig/vz-scripts/"
++#define SCRIPT_DIR	"/etc/vz/"
+ #define CFG_FILE	"/etc/conf.d/vz"
+ #define VZQUOTA		"/usr/sbin/vzquota"
+ 
+diff -urN vzctl-2.7.0-23/man/vps.conf.5 vzctl-2.7.0-23_etc_vz/man/vps.conf.5
+--- vzctl-2.7.0-23/man/vps.conf.5	2005-10-17 16:50:30.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/man/vps.conf.5	2005-10-23 00:31:40.959253360 +0400
+@@ -3,10 +3,10 @@
+ .SH NAME
+ vps.conf \- configuration file for a Virtual Private Server.
+ .SH SYNOPSIS
+-/etc/sysconfig/vz-scripts/XXX.conf
++/etc/vz/XXX.conf
+ .SH DESCRIPTION
+ This is a configuration file for a VPS. It is stored as
+-\fB/etc/sysconfig/vz-scripts/\fR\fIXXX\fB.conf\fR, where \fIXXX\fR
++\fB/etc/vz/\fR\fIXXX\fB.conf\fR, where \fIXXX\fR
+ is the ID of the given VPS.
+ .PP
+ Configuration file consists of lines in the form
+diff -urN vzctl-2.7.0-23/man/vzctl.8 vzctl-2.7.0-23_etc_vz/man/vzctl.8
+--- vzctl-2.7.0-23/man/vzctl.8	2005-10-23 00:30:51.062838768 +0400
++++ vzctl-2.7.0-23_etc_vz/man/vzctl.8	2005-10-23 00:31:40.960253208 +0400
+@@ -318,7 +318,7 @@
+ .TP
+ \fB--applyconfig\fR \fIname\fR
+ Read VPS parameters from VPS sample configuration file
+-\f(CW\fB/etc/sysconfig/vz-scripts/ve-\fIname\fR\f(CW\fB.conf-sample\fR, and
++\f(CW\fB/etc/vz/ve-\fIname\fR\f(CW\fB.conf-sample\fR, and
+ apply them, if --save option specified save to VPS config file. These parameters
+ are not changed (\fBHOSTNAME\fR \fBIP_ADDRESS\fR \fBOSTEMPLATE\fR \fBVE_ROOT\fR \fBVE_PRIVATE\fR)
+ .SS Performing VPS actions
+@@ -328,7 +328,7 @@
+ 
+ If the \fB--config\fR \fIname\fR option is specified, values from
+ example configuration file
+-\f(CW\fB/etc/sysconfig/vz-scripts/ve-\fIname\fR\f(CW\fB.conf-sample\fR
++\f(CW\fB/etc/vz/ve-\fIname\fR\f(CW\fB.conf-sample\fR
+ are put into VPS configuration file. If VPS configuration file already exists,
+ it will be removed.
+ 
+@@ -422,7 +422,7 @@
+ \f(CR
+ /etc/conf.d/vz
+ .br
+-/etc/sysconfig/vz-scripts/vpsid.conf
++/etc/vz/vpsid.conf
+ .br
+ /proc/vz/veinfo
+ .br
+diff -urN vzctl-2.7.0-23/man/vzsplit.8 vzctl-2.7.0-23_etc_vz/man/vzsplit.8
+--- vzctl-2.7.0-23/man/vzsplit.8	2005-10-17 16:50:30.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/man/vzsplit.8	2005-10-23 00:31:54.328220968 +0400
+@@ -16,7 +16,7 @@
+ .TP
+ \fB-f\fR \fIconf_name\fR
+ Specify the configuration file name. The program output is placed to
+-/etc/sysconfig/vz-scripts/ve-\fIconf_name\fR.conf-sample.
++/etc/vz/ve-\fIconf_name\fR.conf-sample.
+ .TP
+ \fB-s\fR \fIswapsize\fR
+ Specify the swap size in Kbytes. If not provided in the option, the swap size will be read from /proc/meminfo.
+diff -urN vzctl-2.7.0-23/src/Makefile vzctl-2.7.0-23_etc_vz/src/Makefile
+--- vzctl-2.7.0-23/src/Makefile	2005-10-23 00:30:51.063838616 +0400
++++ vzctl-2.7.0-23_etc_vz/src/Makefile	2005-10-23 00:31:40.961253056 +0400
+@@ -14,7 +14,7 @@
+       LIBDIR = $(PREFIX)/lib/vzctl
+     CACHEDIR = /vz/template/cache
+    VZCONFDIR = /etc/conf.d
+-  VPSCONFDIR = /etc/sysconfig/vz-scripts
++  VPSCONFDIR = /etc/vz
+  DISTCONFDIR = $(VPSCONFDIR)/dists
+ NETSCRIPTDIR = /etc/sysconfig/network-scripts
+     CRONDDIR = /etc/cron.d
+diff -urN vzctl-2.7.0-23/src/vzsplit.c vzctl-2.7.0-23_etc_vz/src/vzsplit.c
+--- vzctl-2.7.0-23/src/vzsplit.c	2005-09-27 15:01:16.000000000 +0400
++++ vzctl-2.7.0-23_etc_vz/src/vzsplit.c	2005-10-23 00:31:40.962252904 +0400
+@@ -27,7 +27,7 @@
+ 
+ #define PROCMEM		"/proc/meminfo"
+ #define PROCTHREADS	"/proc/sys/kernel/threads-max"
+-#define OUTPATH		"/etc/sysconfig/vz-scripts/"
++#define OUTPATH		"/etc/vz/"
+ #define PROCCPU		"/proc/cpuinfo"
+ 
+ #define MAX_SL		3

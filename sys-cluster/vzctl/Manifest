@@ -8,14 +8,15 @@ MD5 fcbd31791ac21aa1698228fde3a600ef files/digest-vzctl-2.7.0.23 66
 MD5 a2de79b189da1c2d3fd01fa2116bcea9 files/vz.initd 5465
 MD5 687eaa4427600a7a5edfc0b8b7f69480 files/vzctl-2.7.0-gentoo_conf_d.patch 3899
 MD5 9ab78117d5f3fb123a7c44f948aafb3d files/vzctl-2.7.0-gentoo_etc_vz.patch 7412
+MD5 48002ae17f4c768412ac70a33023d09d files/vzctl-2.7.0.23-gentoo_etc_vz.patch 7115
 MD5 b55bfb88b955107a0f0e6c5aaef21723 metadata.xml 162
 MD5 9dd7479c278946fc668a457f0256d77f vzctl-2.7.0.21.ebuild 1577
 MD5 67c5b5981b6aefbbdac3ce516b3a7ddb vzctl-2.7.0.22.ebuild 1575
-MD5 0aaf59453295091ec912e4fc30eb17cf vzctl-2.7.0.23.ebuild 1575
+MD5 4f0e8a8008b3f3457e219a1da52c1c12 vzctl-2.7.0.23.ebuild 1578
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWSW7mPFBzbX68WERAtoeAJ0VYpMuDBDxB9OyXFkXGeeEMDvD/QCfTybC
-YW7TRWQyLjQYSieNRNDtSzU=
-=zmdb
+iD8DBQFDWVN+mPFBzbX68WERAseKAJ9b5XRY1UWhn5zA/ulTAGJyzgGySACeMl7m
+xWWQgl3rH9N6JvqmuzqQGG0=
+=0A1W
 -----END PGP SIGNATURE-----
