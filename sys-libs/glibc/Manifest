@@ -1,7 +1,43 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 93223fb7612f3d92ad863880d48ed1fc ChangeLog 85293
+MD5 15484067ffeb4a889e013690eb34ddeb ChangeLog 85438
+MD5 f8bf77d5057759d82db6401f9ff5211c glibc-2.2.5-r10.ebuild 4523
+MD5 e5c30ea961ed5d60c6c4b7ee1fc240ae glibc-2.3.2-r12.ebuild 22495
+MD5 6726c272dd0883b0c6f06a920c7ef30a glibc-2.3.3.20040420-r2.ebuild 21726
+MD5 a789e9155b746cc1c16da9a7604a0fb2 glibc-2.3.4.20040619-r2.ebuild 21400
+MD5 d4685f67b36e4a0c1fc0db8516523d2e glibc-2.3.4.20040808-r1.ebuild 27749
+MD5 53ca9d018c1156e40ae6b4aecfafc7c1 glibc-2.3.4.20041102-r1.ebuild 34314
+MD5 5eeb3fe6a71b64a081e642ffb08c0cbe glibc-2.3.4.20041102-r2.ebuild 41281
+MD5 9bc40ac03e72b63652f67be3dcecc184 glibc-2.3.4.20050125-r1.ebuild 39474
+MD5 2e7e5fc05139d73ced40d2cb52816b44 glibc-2.3.5-r1.ebuild 40533
+MD5 1cb57f1757c26c0e0286cb0ef6c36171 glibc-2.3.5.20050421.ebuild 40152
+MD5 48b60115273ba9fa755a6ef94fe8c3b6 glibc-2.3.5.20050722.ebuild 39299
+MD5 9c15c32a0bbef91769c4fd0c0d7a66c3 glibc-2.3.5.ebuild 40143
+MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+MD5 b1cba6eb03515d24e61e321c457670fd glibc-2.3.5-r2.ebuild 38859
+MD5 bed7cbcac1e8582deda43664e5b3f19c files/digest-glibc-2.2.5-r10 290
+MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
+MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
+MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r2 307
+MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808-r1 382
+MD5 75b85b24e4ded1b0e8a0a762d5805818 files/digest-glibc-2.3.4.20041102-r1 383
+MD5 2a03ed91154589a9473bac46eacff1e9 files/digest-glibc-2.3.4.20041102-r2 387
+MD5 71c18ba0155b5cf1e7e4bf990225d566 files/digest-glibc-2.3.4.20050125-r1 521
+MD5 6a7b14ffb6320bc8c7fc73e86f6bb973 files/digest-glibc-2.3.5 518
+MD5 433ac29a7eb82cc504288c72af4de3fb files/digest-glibc-2.3.5-r1 516
+MD5 7a909f8df7cc20f37fb7553c8dcb47b4 files/digest-glibc-2.3.5.20050421 604
+MD5 e8833674518301b1dc7798d5f856aad4 files/digest-glibc-2.3.5.20050722 604
+MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
+MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
+MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
+MD5 184eddb92615fb991dce41b9edbfa690 files/glibc-manpages-2.3.2.tar.bz2 14700
+MD5 13701e6cc0de584680502c0cd958f2cf files/glibc-sec-hotfix-20040804.patch 4319
+MD5 bbe355d94c5a36e11f543d12b70b5702 files/glibc-sec-hotfix-20040916.patch 3080
+MD5 c4300e2f8808cb38a308745ed8b77367 files/locales.build 602
+MD5 6d49cf08909f89da5748956452bebb03 files/nscd 1339
+MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
+MD5 8d58079469aedb014a800101ef60558f files/nsswitch.conf 503
+MD5 d8830438ea871dbfd1acf7a3d0299159 files/test-__thread.c 53
+MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
+MD5 a839a12be46a8fa315fd6244a60e1886 files/digest-glibc-2.3.5-r2 516
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
 MD5 67b125cec4f1f0d26ce4df706451fee6 files/2.3.1/glibc-2.3.1-fpu-cw-mips.patch 433
 MD5 1c4e567ed001f9489e11ee06c1ced0b7 files/2.3.1/glibc-2.3.1-libc_wait-compat.patch 1053
@@ -95,49 +131,3 @@ MD5 76185820806d5641f0314281ceb4790b files/2.3.4/hppa-no-pie.patch 1265
 MD5 04bcec718f2883f28bf862b7e390d1b0 files/2.3.5/glibc-2.3.5-frandom-detect.patch 3080
 MD5 13dd059e6383c7cac94d1bda126af21d files/2.3.5/glibc-2.3.5-propolice-guard-functions.patch 1302
 MD5 b3ce53b86060b6209a182366c501a0f1 files/2.3.5/ssp.c 4297
-MD5 bed7cbcac1e8582deda43664e5b3f19c files/digest-glibc-2.2.5-r10 290
-MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
-MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
-MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r2 307
-MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808-r1 382
-MD5 75b85b24e4ded1b0e8a0a762d5805818 files/digest-glibc-2.3.4.20041102-r1 383
-MD5 2a03ed91154589a9473bac46eacff1e9 files/digest-glibc-2.3.4.20041102-r2 387
-MD5 71c18ba0155b5cf1e7e4bf990225d566 files/digest-glibc-2.3.4.20050125-r1 521
-MD5 6a7b14ffb6320bc8c7fc73e86f6bb973 files/digest-glibc-2.3.5 518
-MD5 433ac29a7eb82cc504288c72af4de3fb files/digest-glibc-2.3.5-r1 516
-MD5 a839a12be46a8fa315fd6244a60e1886 files/digest-glibc-2.3.5-r2 516
-MD5 7a909f8df7cc20f37fb7553c8dcb47b4 files/digest-glibc-2.3.5.20050421 604
-MD5 e8833674518301b1dc7798d5f856aad4 files/digest-glibc-2.3.5.20050722 604
-MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
-MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
-MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
-MD5 184eddb92615fb991dce41b9edbfa690 files/glibc-manpages-2.3.2.tar.bz2 14700
-MD5 13701e6cc0de584680502c0cd958f2cf files/glibc-sec-hotfix-20040804.patch 4319
-MD5 bbe355d94c5a36e11f543d12b70b5702 files/glibc-sec-hotfix-20040916.patch 3080
-MD5 c4300e2f8808cb38a308745ed8b77367 files/locales.build 602
-MD5 6d49cf08909f89da5748956452bebb03 files/nscd 1339
-MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
-MD5 8d58079469aedb014a800101ef60558f files/nsswitch.conf 503
-MD5 d8830438ea871dbfd1acf7a3d0299159 files/test-__thread.c 53
-MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
-MD5 f8bf77d5057759d82db6401f9ff5211c glibc-2.2.5-r10.ebuild 4523
-MD5 e5c30ea961ed5d60c6c4b7ee1fc240ae glibc-2.3.2-r12.ebuild 22495
-MD5 6726c272dd0883b0c6f06a920c7ef30a glibc-2.3.3.20040420-r2.ebuild 21726
-MD5 a789e9155b746cc1c16da9a7604a0fb2 glibc-2.3.4.20040619-r2.ebuild 21400
-MD5 d4685f67b36e4a0c1fc0db8516523d2e glibc-2.3.4.20040808-r1.ebuild 27749
-MD5 53ca9d018c1156e40ae6b4aecfafc7c1 glibc-2.3.4.20041102-r1.ebuild 34314
-MD5 5eeb3fe6a71b64a081e642ffb08c0cbe glibc-2.3.4.20041102-r2.ebuild 41281
-MD5 9bc40ac03e72b63652f67be3dcecc184 glibc-2.3.4.20050125-r1.ebuild 39474
-MD5 5348d2828d213442a4c0d6e49b0f58be glibc-2.3.5-r1.ebuild 40537
-MD5 08437b93ab868fb95412cf2dd658b7e9 glibc-2.3.5-r2.ebuild 38859
-MD5 1cb57f1757c26c0e0286cb0ef6c36171 glibc-2.3.5.20050421.ebuild 40152
-MD5 48b60115273ba9fa755a6ef94fe8c3b6 glibc-2.3.5.20050722.ebuild 39299
-MD5 9c15c32a0bbef91769c4fd0c0d7a66c3 glibc-2.3.5.ebuild 40143
-MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDVt/ogIKl8Uu19MoRApZoAJ97iIdLD1CTgqfhsUQfhwxw/4688QCggiwR
-3HnsqWxoYKSh054iVg42+Zc=
-=S9Dh
------END PGP SIGNATURE-----
