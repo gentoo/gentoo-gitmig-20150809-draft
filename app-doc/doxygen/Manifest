@@ -1,7 +1,10 @@
-MD5 f89dbffa02bd55dc99ad764cdeb1bf4c ChangeLog 13559
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d81d969896421a20e340826976a45812 ChangeLog 13649
 MD5 b9eaac8ad7a41889db03fdfd59b06167 doxygen-1.4.2.ebuild 2822
 MD5 03f4ec6c6bd879079084705815f0f58e doxygen-1.4.3-r1.ebuild 2909
-MD5 0d885552d801ba149c735f17f681b639 doxygen-1.4.4.ebuild 2749
+MD5 9e7127965dc80ac22ae5afa545b5c395 doxygen-1.4.4.ebuild 2748
 MD5 75cd0b86c4cd27c628f1152f659097fe doxygen-1.4.5.ebuild 2767
 MD5 0c3111e09b7ea538f06a0655e7898e38 files/bsd-configure.patch 504
 MD5 b48fe99d1b1e8929f752daedeb56ed5c files/digest-doxygen-1.4.2 70
@@ -12,3 +15,10 @@ MD5 3eae39cd24982cc69c7ca5a767b1157c files/doxygen-1.4.3-cp1251.patch 683
 MD5 1473b90cf51c0df70eed324ededc8624 files/doxygen-1.4.3-nls.patch 1019
 MD5 461d2d8b233682be4ea9191058708a77 files/doxygen-1.4.4-darwin.patch 536
 MD5 cf200318691ccdabdcdf603792fc907d metadata.xml 447
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDWM2rEZCkKN40op4RAhUmAJ9MxX078xo/9v1JVIDarNBaM36GXQCgwZYy
+s1GmjLIcokK2s6wyM9XDpYQ=
+=SV6v
+-----END PGP SIGNATURE-----
