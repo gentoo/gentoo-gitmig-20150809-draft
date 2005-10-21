@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.23 2005/10/19 13:52:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.24 2005/10/21 22:04:09 puggy Exp $
+
+  21 Oct 2005; Douglas Russell <puggy@gentoo.org> kdm-3.5.0_beta2.ebuild:
+  Keyword ~ppc
 
 *kdm-3.4.3-r1 (19 Oct 2005)
 
