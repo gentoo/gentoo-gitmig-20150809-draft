@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4602 2005/10/21 17:11:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4603 2005/10/21 17:25:31 hollow Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,7 @@
 # Benedikt Boehm <hollow@gentoo.org> (21 Oct 2005)
 # Masked for testing
 =sys-kernel/openvz-sources-022.044
+=sys-cluster/vzctl-2.7.0.23
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Oct 2005)
 # Last updated in 2002 and doesn't work with latest xmame
