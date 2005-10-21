@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.20 2005/09/07 21:25:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.21 2005/10/21 11:12:19 blubb Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Mask multilib amd64 things
@@ -32,6 +32,7 @@ app-emulation/winex
 app-emulation/winex-cvs
 app-emulation/winex-transgaming
 app-text/acroread
+games-arcade/barbarian-bin
 games-emulation/nestra
 games-emulation/snes9x
 games-emulation/zsnes
