@@ -1,0 +1,4 @@
+default-linux/x86/vserver
+# emerge -n '>=sys-apps/portage-2.0.51'
+# sudo rm /etc/make.profile
+# sudo ln -s ../usr/portage/profiles/default-linux/x86/vserver/ /etc/make.profile
