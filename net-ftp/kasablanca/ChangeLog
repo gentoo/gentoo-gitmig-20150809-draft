@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/kasablanca
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.15 2005/09/16 23:20:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.16 2005/10/21 21:43:56 yoswink Exp $
+
+  21 Oct 2005; Jose Luis Rivero <yoswink@gentoo.org>
+  kasablanca-0.4.0.2.ebuild:
+  Marked ~alpha wrt bug #109886
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
