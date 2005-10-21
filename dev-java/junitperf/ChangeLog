@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/junitperf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.4 2005/05/12 16:17:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.5 2005/10/21 16:01:43 betelgeuse Exp $
+
+  21 Oct 2005; Petteri Räty <betelgeuse@gentoo.org> junitperf-1.9.1.ebuild:
+  Improved build time dependencies. junitperf only needs ant-tasks when junit
+  use flag is on.
 
   12 May 2005; Jan Brinkmann <luckyduck@gentoo.org> junitperf-1.9.1.ebuild:
   stable on ppc, change junit and and ant-dependencies. fixes #91985

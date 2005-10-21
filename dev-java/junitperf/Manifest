@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f673e1eac03b275db269a450dfb0f501 junitperf-1.9.1.ebuild 989
-MD5 be6a9b2e86604fe423bbff4465a09a81 ChangeLog 811
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 ba71522fb59d5e5d10566f2985aac3ec ChangeLog 986
 MD5 e6bd9c030c72847507dfa879c8cda062 files/digest-junitperf-1.9.1 64
+MD5 ea41b63c7f0d70932d43d366ee023faa junitperf-1.9.1.ebuild 1059
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC3EY9/rLF9B432nYRAvavAKC0Ea0oKWxa2ObWvUuRX4lncQfT9gCgmxPU
-P1Qa6+5oqVN9t5OpTy/2Tj4=
-=+4rv
+iD8DBQFDWREnQiJ/wx066S4RAqIKAJ0Rvhaq1bOppS6F+zNoT96E5zTWTACgizci
+OiXvyMkycrv+XMXWA214Ck4=
+=vO4G
 -----END PGP SIGNATURE-----
