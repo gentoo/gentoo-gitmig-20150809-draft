@@ -5,7 +5,7 @@ MD5 2e76bfaf4ebe754e591379085c9d25fd ChangeLog 2150
 MD5 cb242629555b6aa0aa4f2a0075e58d44 c-ares-1.2.0.ebuild 558
 MD5 baedd21b43b48c466625c12ea7b73565 c-ares-1.2.1-r1.ebuild 627
 MD5 09fdd72d0c8bca6f752a0c69cca3895a c-ares-1.2.1.ebuild 555
-MD5 c92f45b716c7003726693a55e13f062e c-ares-1.3.0.ebuild 628
+MD5 374be28025887856729c56eff59c350d c-ares-1.3.0.ebuild 639
 MD5 141b0263e86d51beb41b240cdb9bd5e7 files/digest-c-ares-1.2.0 64
 MD5 bd65ab3ab5c90d4f6ad98c7394e98f7f files/digest-c-ares-1.2.1 64
 MD5 bd65ab3ab5c90d4f6ad98c7394e98f7f files/digest-c-ares-1.2.1-r1 64
@@ -14,7 +14,7 @@ MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWWk1Kf2g/qXtneoRAv09AKC/vRyJ1zPjRFbjoEdeq7SPnwNaYwCfWLmm
-x6jkm6c+BTGZmOzKTDIKqGY=
-=wJbm
+iD8DBQFDWf9ygIKl8Uu19MoRAqJ0AJ45SHQxqKRLmYAWnYb5sUNdFI4nNACbBhaz
+8kHNVb+7DeA7yg756s3IzPw=
+=Ibm/
 -----END PGP SIGNATURE-----
