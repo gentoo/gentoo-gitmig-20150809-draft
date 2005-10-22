@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.53 2005/10/22 16:55:17 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.54 2005/10/22 17:35:39 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -98,14 +98,18 @@ check_vermagic() {
 	local curr_gcc_ver=$(gcc -dumpversion)
 	local tmpfile old_chost old_gcc_ver result=0
 
-	tmpfile=`find ${KV_DIR} -iname "*.o.cmd" -exec grep usr/lib/gcc {} \; -quit`
+	tmpfile=`find ${KV_DIR}/ -iname "*.o.cmd" -exec grep usr/lib/gcc {} \; -quit`
 	tmpfile=${tmpfile//*usr/lib}
 	tmpfile=${tmpfile//\/include*}
 	old_chost=${tmpfile//*gcc\/}
 	old_chost=${old_chost//\/*}
 	old_gcc_ver=${tmpfile//*\/}
 
-	if [[ ${curr_gcc_ver} != ${old_gcc_ver} ]]; then
+	if [[ -z ${old_gcc_ver} || -z ${old_chost} ]]; then
+		ewarn ""
+		ewarn "Unable to detect what version of GCC was used to compile"
+		ewarn "the kernel. Build will continue, but you may experience problems."
+	elif [[ ${curr_gcc_ver} != ${old_gcc_ver} ]]; then
 		ewarn ""
 		ewarn "The version of GCC you are using (${curr_gcc_ver}) does"
 		ewarn "not match the version of GCC used to compile the"
@@ -116,10 +120,6 @@ check_vermagic() {
 		ewarn "The current CHOST (${CHOST}) does not match the chost"
 		ewarn "used when compiling the kernel (${old_chost})."
 		result=1
-	elif [[ -z ${old_gcc_ver} || -z ${old_chost} ]]; then
-		ewarn ""
-		ewarn "Unable to detect what version of GCC was used to compile"
-		ewarn "the kernel. Build will continue, but you may experience problems."
 	fi
 
 	if [[ ${result} -gt 0 ]]; then
@@ -277,7 +277,7 @@ generate_modulesd() {
 	# This function will generate the neccessary modules.d file from the
 	# information contained in the modules exported parms
 
-	local 	currm_path currm t myIFS myVAR
+	local 	currm_path currm currm_t t myIFS myVAR
 	local 	module_docs module_enabled module_aliases \
 			module_additions module_examples module_modinfo module_opts
 
@@ -285,12 +285,16 @@ generate_modulesd() {
 	do
 		currm=${currm_path//*\/}
 		currm=$(echo ${currm} | tr '[:lower:]' '[:upper:]')
+		currm_t=${currm}
+		while [[ -z ${currm_t//*-*} ]]; do
+			currm_t=${currm_t/-/_}
+		done
 
-		module_docs="$(eval echo \${MODULESD_${currm}_DOCS})"
-		module_enabled="$(eval echo \${MODULESD_${currm}_ENABLED})"
-		module_aliases="$(eval echo \${#MODULESD_${currm/-/_}_ALIASES[*]})"
-		module_additions="$(eval echo \${#MODULESD_${currm/-/_}_ADDITIONS[*]})"
-		module_examples="$(eval echo \${#MODULESD_${currm/-/_}_EXAMPLES[*]})"
+		module_docs="$(eval echo \${MODULESD_${currm_t}_DOCS})"
+		module_enabled="$(eval echo \${MODULESD_${currm_t}_ENABLED})"
+		module_aliases="$(eval echo \${#MODULESD_${currm_t}_ALIASES[*]})"
+		module_additions="$(eval echo \${#MODULESD_${currm_t}_ADDITIONS[*]})"
+		module_examples="$(eval echo \${#MODULESD_${currm_t}_EXAMPLES[*]})"
 
 		[[ ${module_aliases} -eq 0 ]] 	&& unset module_aliases
 		[[ ${module_additions} -eq 0 ]]	&& unset module_additions
