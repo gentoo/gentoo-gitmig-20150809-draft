@@ -1,3 +1,25 @@
+--- fortune-mod-1.99.1/datfiles/Makefile
++++ fortune-mod-1.99.1/datfiles/Makefile
+@@ -58,7 +58,7 @@
+ 	if [ $(WEB) = 1 ] ; then cd html && $(MAKE) install ; fi
+ 	for i in $(COOKIES) ; do \
+ 		install -m 0644 $$i $$i.dat $(COOKIEDIR) || exit $? ; \
+-		cp -d $$i.u8 $(COOKIEDIR) ; \
++		cp -P $$i.u8 $(COOKIEDIR) ; \
+ 		done
+ 
+ clean:
+--- fortune-mod-1.99.1/datfiles/off/Makefile
++++ fortune-mod-1.99.1/datfiles/off/Makefile
+@@ -38,7 +38,7 @@
+ 	install -m 0755 -d $(OCOOKIEDIR)
+ 	for i in $(OCOOKIES) ; \
+ 	    do install -m 0644 $$i $$i.dat $(OCOOKIEDIR) || exit $$? ; \
+-	    cp -d $$i.u8 $(OCOOKIEDIR) ; \
++	    cp -P $$i.u8 $(OCOOKIEDIR) ; \
+ 	done
+ 
+ clean:
 --- fortune-mod-1.99.1/Makefile
 +++ fortune-mod-1.99.1/Makefile
 @@ -65,8 +65,7 @@
