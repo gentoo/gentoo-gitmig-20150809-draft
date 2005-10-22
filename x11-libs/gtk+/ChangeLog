@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.191 2005/10/19 13:24:54 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.192 2005/10/22 15:11:38 nigoro Exp $
+
+  22 Oct 2005; Yuta SATOH <nigoro@gentoo.org> gtk+-2.6.8.ebuild,
+  gtk+-2.6.10.ebuild:
+  also fixes #109089 of 2.6.x
 
   19 Oct 2005; Yuta SATOH <nigoro@gentoo.org> gtk+-2.8.6.ebuild:
   Fixes #109089 by not applying the patch which fixes the problem of the

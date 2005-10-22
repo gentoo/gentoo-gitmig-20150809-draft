@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.8.ebuild,v 1.12 2005/10/10 21:04:44 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.8.ebuild,v 1.13 2005/10/22 15:11:38 nigoro Exp $
 
 inherit flag-o-matic eutils
 
@@ -55,8 +55,8 @@ src_unpack() {
 	# easier, so even this should be amd64 specific.
 	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 
-	# patch for ppc64 (#64359)
-	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
+	# patch for ppc64 (#64359,#109089)
+	use ppc64 && ! has_version '>=dev-libs/glib-2.8' && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
 	use ppc64 && append-flags -mminimal-toc
 
 	autoconf || die
