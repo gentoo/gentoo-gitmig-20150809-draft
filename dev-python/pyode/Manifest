@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dd98a30f3d3813ff3c3ada858875f26d ChangeLog 841
+MD5 28319c1ee83741ae44d70c2d45f71178 files/digest-pyode-1.0.0 63
+MD5 4ec18c02e226fd64ce9e7121ed4e817b files/digest-pyode-1.1.0 64
+MD5 7e9af3d258e2ec74950c8a970c37fcfe files/odepath.patch 720
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 76cec8c1f6757e829c128897da993059 pyode-1.0.0.ebuild 627
-MD5 a5e44fcbcee1e5405d5950b0925bcbb3 pyode-1.1.0.ebuild 677
-MD5 28319c1ee83741ae44d70c2d45f71178 files/digest-pyode-1.0.0 63
-MD5 7e9af3d258e2ec74950c8a970c37fcfe files/odepath.patch 720
-MD5 4ec18c02e226fd64ce9e7121ed4e817b files/digest-pyode-1.1.0 64
+MD5 7c267e321cb1eb025694b0920c6ed596 pyode-1.1.0.ebuild 917
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdTRgIKl8Uu19MoRAoSDAJ9jxp7neZim6qDT4M/5AuwmzbY4GACfWAGK
+zCB/lG17TytI6DZg9fnXiOQ=
+=b4/O
+-----END PGP SIGNATURE-----
