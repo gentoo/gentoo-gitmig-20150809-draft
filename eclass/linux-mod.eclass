@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.52 2005/09/22 14:13:36 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.53 2005/10/22 16:55:17 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -93,6 +93,43 @@ DEPEND="virtual/linux-sources
 
 # eclass utilities
 # ----------------------------------
+
+check_vermagic() {
+	local curr_gcc_ver=$(gcc -dumpversion)
+	local tmpfile old_chost old_gcc_ver result=0
+
+	tmpfile=`find ${KV_DIR} -iname "*.o.cmd" -exec grep usr/lib/gcc {} \; -quit`
+	tmpfile=${tmpfile//*usr/lib}
+	tmpfile=${tmpfile//\/include*}
+	old_chost=${tmpfile//*gcc\/}
+	old_chost=${old_chost//\/*}
+	old_gcc_ver=${tmpfile//*\/}
+
+	if [[ ${curr_gcc_ver} != ${old_gcc_ver} ]]; then
+		ewarn ""
+		ewarn "The version of GCC you are using (${curr_gcc_ver}) does"
+		ewarn "not match the version of GCC used to compile the"
+		ewarn "kernel (${old_gcc_ver})."
+		result=1
+	elif [[ ${CHOST} != ${old_chost} ]]; then
+		ewarn ""
+		ewarn "The current CHOST (${CHOST}) does not match the chost"
+		ewarn "used when compiling the kernel (${old_chost})."
+		result=1
+	elif [[ -z ${old_gcc_ver} || -z ${old_chost} ]]; then
+		ewarn ""
+		ewarn "Unable to detect what version of GCC was used to compile"
+		ewarn "the kernel. Build will continue, but you may experience problems."
+	fi
+
+	if [[ ${result} -gt 0 ]]; then
+		ewarn ""
+		ewarn "Build will not continue, because you will experience problems."
+		ewarn "To fix this either change the version of GCC you wish to use"
+		ewarn "to match the kernel, or recompile the kernel first."
+		die "GCC Version Mismatch."
+	fi
+}
 
 unpack_pcmcia_sources() {
 	# So while the two eclasses exist side-by-side and also the ebuilds inherit
@@ -422,6 +459,7 @@ linux-mod_pkg_setup() {
 	check_kernel_built;
 	check_modules_supported;
 	set_kvobj;
+	check_vermagic;
 }
 
 linux-mod_src_compile() {
