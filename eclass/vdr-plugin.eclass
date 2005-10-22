@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.5 2005/10/09 20:13:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.6 2005/10/22 20:39:21 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -116,7 +116,7 @@ vdr-plugin_src_unpack() {
 			cd ${S}
 
 			ebegin "Patching Makefile"
-			sed -i Makefile \
+			sed -i.orig Makefile \
 				-e "s:^VDRDIR.*$:VDRDIR = ${VDR_INCLUDE_DIR}:" \
 				-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
 				-e "s:^LIBDIR.*$:LIBDIR = ${S}:" \
@@ -134,13 +134,36 @@ vdr-plugin_src_unpack() {
 	done
 }
 
+vdr-plugin_copy_source_tree() {
+	cp -r ${S} ${T}/source-tree
+	cd ${T}/source-tree
+	mv Makefile.orig Makefile
+	sed -i Makefile \
+		-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
+		-e 's:^CXXFLAGS:#CXXFLAGS:' \
+		-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
+		-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):'
+}
+
+vdr-plugin_install_source_tree() {
+	einfo "Installing sources"
+	destdir=${VDRSOURCE_DIR}/vdr-${VDRVERSION}/PLUGINS/src/${VDRPLUGIN}
+	insinto ${destdir}-${PV}
+	doins -r ${T}/source-tree/*
+
+	dosym ${VDRPLUGIN}-${PV} ${destdir}
+}
+
 vdr-plugin_src_compile() {
+	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_copy_source_tree
+
 	cd ${S}
 
 	emake ${VDRPLUGIN_MAKE_TARGET:-all} || die "emake failed"
 }
 
 vdr-plugin_src_install() {
+	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_install_source_tree
 	cd ${S}
 
 	insinto "${VDR_PLUGIN_DIR}"
