@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.58 2005/10/01 12:35:13 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.59 2005/10/22 16:27:09 grobian Exp $
+
+  22 Oct 2005; Fabian Groffen <grobian@gentoo.org> rxvt-unicode-5.7.ebuild:
+  Marked ~ppc-macos (bug #109216)
 
   01 Oct 2005; Luis Medinas <metalgod@gentoo.org> rxvt-unicode-5.3.ebuild:
   Marked Stable on amd64.
