@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.12 2005/10/22 06:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r1.ebuild,v 1.13 2005/10/22 06:57:14 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Game that helps young kids learn their letters and numbers"
 HOMEPAGE="http://lln.sourceforge.net/"

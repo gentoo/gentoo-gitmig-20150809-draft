@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 4748cfb2caed36e46c396f1824eadcbb lletters-0.1.95-r1.ebuild 1101
 MD5 3a23156ef185ff214cbaf083cc483913 ChangeLog 2685
 MD5 a259a5d00bd54dc2a2dc9905b28b808d files/digest-lletters-0.1.95-r1 141
 MD5 1291047f7e926ab70ceba5f6d7fde683 files/lletters-0.1.95-build.patch 875
 MD5 a21b498ef02d981381f06d7e7ee0777b files/tellhow.h.gentoo 762
-MD5 f9638233342d841b9684475146059947 lletters-0.1.95-r1.ebuild 1091
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDWdvKgIKl8Uu19MoRAitHAJ95XMSnQJan32D96fcbzSiEU+IjhwCePV/F
-9N0CAtms6Gfe1jXXwL+4NKw=
-=EZ4C
------END PGP SIGNATURE-----
