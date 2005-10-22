@@ -1,7 +1,17 @@
-MD5 a3df31fd98db085c9be76ed7aa7debba ChangeLog 489
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2d492cc4a580cf30f88c2e9c4037efb ChangeLog 595
 MD5 8104d29f4f544ed24fc54349b3c50968 files/2.2.0/patch01 1248
 MD5 34ae93cd0ed0b3adcb49cfdc68c18b75 files/2.2.0/patch02 2177
 MD5 a7af9750238fdf49c8dffcf151f57049 files/2.2.0/patch03 407
 MD5 2244e0aef66bc63773899b1758b8e812 files/2.2.0/patch04 811
 MD5 f6dac72eea74ed7475bfcb5461ebe3af files/digest-mpfr-2.2.0_p4 63
-MD5 a3321a748c15b80772e2eb88f41e77f7 mpfr-2.2.0_p4.ebuild 944
+MD5 58f42371f90d3cb9f5b4c196cd9b08c9 mpfr-2.2.0_p4.ebuild 940
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWpDNCRZPokWLroQRAnnfAKCJe/K8nBxRcK+SlgTvZU8thEKrhwCaAjdh
+LeYlosZe+sisBywAz2RjRek=
+=Hpig
+-----END PGP SIGNATURE-----
