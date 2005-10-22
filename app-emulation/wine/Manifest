@@ -12,6 +12,7 @@ MD5 73a9223d839cbaa35c2497dd40a17015 files/digest-wine-20050628 67
 MD5 f2d7d30c9e5811da2b6f4cb79c80f5cd files/digest-wine-20050725-r1 67
 MD5 c8ec4d9cf45eb34d587a17129ab09fb9 files/digest-wine-20050830 67
 MD5 cf49af131a341a471a493cd0d5693fd2 files/digest-wine-20050930 67
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-wine-9999 0
 MD5 138d22e6669e8997cdf4dc6292db748d files/wine-20041019-alsa-headers.patch 448
 MD5 bcce3a9782f7fdfae1035b456e394ce2 files/wine-20041019-no-stack.patch 180
 MD5 32c5bd022b8547d02b07517dd7a9bc02 files/wine-20050111-upstream-registry-fix.patch.bz2 13584
@@ -37,10 +38,11 @@ MD5 ed97cc2654ee134dbf6a5bc116d754e3 wine-20050628.ebuild 3902
 MD5 9a41fead49d0b0dc56c7514149b7ec50 wine-20050725-r1.ebuild 3950
 MD5 b73ae6c5fefdd0c51498e89fcc6acef8 wine-20050830.ebuild 3936
 MD5 5232d42638aee222cccec305a9cc2b3a wine-20050930.ebuild 3905
+MD5 ca7a9bdea4000762a84cf360bb4164fb wine-9999.ebuild 3844
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDTxABgIKl8Uu19MoRAnlOAJ9Bgh+N5W54w9NejGznXjBC4YgiNQCdE6iB
-yaHM1eTwwx/oYd6S9Y71FlQ=
-=qk1V
+iD8DBQFDWe7HgIKl8Uu19MoRAqgkAJ9Tk3HLlQ/vb5zFNWSu+3fwJD5YzACeIfJP
+Na5Qqm2D1wzxUzYjyuvUwCg=
+=a9rS
 -----END PGP SIGNATURE-----
