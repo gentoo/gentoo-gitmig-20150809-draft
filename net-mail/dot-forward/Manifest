@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 78eb3f48b22f507275d9af90c1ae5a5c metadata.xml 159
 MD5 9cafd49c3043566feddc0144d22a924e ChangeLog 2470
 MD5 42c22b661196ed5253e6047fd7048f98 dot-forward-0.71-r1.ebuild 1004
-MD5 d9f8d171476a4ab26138341cbc1009c7 dot-forward-0.71-r2.ebuild 994
+MD5 92352311ad7890148639b56bc4a81bbc dot-forward-0.71-r2.ebuild 1004
 MD5 170b78e7a24cf34fa1256bc6b1e4f469 files/0.71-errno.patch 243
+MD5 ec78dbd60b8f7aa9ddcbee4685688fe8 files/0.71-head-1.patch 589
 MD5 8f5247dcfeba2890710d9c0ba840f385 files/digest-dot-forward-0.71-r1 67
 MD5 8f5247dcfeba2890710d9c0ba840f385 files/digest-dot-forward-0.71-r2 67
-MD5 ec78dbd60b8f7aa9ddcbee4685688fe8 files/0.71-head-1.patch 589
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVGxeJrHF4yAQTrARAiqpAJ9k4uJCEuhbco1J5RUdRTgOgeqdKwCgxG2n
-23MvnZkhgS5Wrv+nUGuWPpY=
-=OpmS
------END PGP SIGNATURE-----
+MD5 78eb3f48b22f507275d9af90c1ae5a5c metadata.xml 159
