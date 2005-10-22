@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0dab8c49d7dec6be6f53f65d96d215e4 ChangeLog 1701
 MD5 ee773e58992bb7ec580593e339d568cc files/digest-latex-unicode-20030605 75
 MD5 aae1bb411ff5864dfeb2a27c6fe77400 files/digest-latex-unicode-20040307 135
@@ -6,3 +9,10 @@ MD5 ebb84301159d80faf1833c08fbdfe57a latex-unicode-20030605.ebuild 1184
 MD5 a2b291cd509b18bdcda4155f050ccef0 latex-unicode-20040307.ebuild 1486
 MD5 4d26bfebf34ec797132d2f181293d215 latex-unicode-20041017.ebuild 1483
 MD5 a43370bbb57cb967dbffe1a084475550 metadata.xml 181
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWYKfCRZPokWLroQRAo79AJ9PfbnVqNT1GTyp4lUq7Gs2t+c37QCgjJVv
+HBkjpgyTgf223EVoDT5kwPg=
+=KBY5
+-----END PGP SIGNATURE-----
