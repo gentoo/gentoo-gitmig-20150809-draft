@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.35 2005/10/13 18:11:56 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.36 2005/10/22 01:35:36 ka0ttic Exp $
+
+  22 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> gamin-0.1.6.ebuild:
+  Stable on mips.
 
   13 Oct 2005; John N. Laliberte <allanonjl@gentoo.org> gamin-0.1.6.ebuild:
   stable on x86, #109154
