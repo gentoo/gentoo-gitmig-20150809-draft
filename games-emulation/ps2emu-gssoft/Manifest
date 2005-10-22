@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2998b790b2ed91defe961d3186a9e8e2 ChangeLog 929
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 80b16657451b98d8563044c1e5c56215 ps2emu-gssoft-0.9.ebuild 1061
-MD5 bff04080295f4bf58991f54ae1b0ff30 ps2emu-gssoft-0.6.1.ebuild 878
-MD5 630aac09a02e38ccd4fd77073b968dae files/digest-ps2emu-gssoft-0.9 58
 MD5 a1009be2d1e95d9ceaacdb2f481c82fc files/digest-ps2emu-gssoft-0.6.1 60
-MD5 0b00447cf9975807680c81734370150e files/ps2emu-gssoft-0.9-PIC.patch 534
+MD5 630aac09a02e38ccd4fd77073b968dae files/digest-ps2emu-gssoft-0.9 58
+MD5 5d3e3ce50ad2715a4711030edf18b7b3 files/ps2emu-gssoft-0.9-PIC.patch 554
 MD5 150b0f64695512493376ada8e4401757 files/ps2emu-gssoft-0.9-gentoo.patch 850
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 bff04080295f4bf58991f54ae1b0ff30 ps2emu-gssoft-0.6.1.ebuild 878
+MD5 80b16657451b98d8563044c1e5c56215 ps2emu-gssoft-0.9.ebuild 1061
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdEFgIKl8Uu19MoRApmjAJ4sSUWFb+ywdzm2m7JBk3RNizAKqACfd1VO
+h5aFD3sE7igRq314d7NctqA=
+=hM/e
+-----END PGP SIGNATURE-----

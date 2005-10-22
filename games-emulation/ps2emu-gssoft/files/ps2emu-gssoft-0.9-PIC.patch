@@ -5,19 +5,19 @@ http://bugs.gentoo.org/101627
     }
  
     __asm__ __volatile__ (
-+      "push %%ebx\n"
++      "mov %%ebx, %%edi\n"
        "mov %4, %%eax\n"
        "cpuid\n"
        "mov %%eax, %0\n"
        "mov %%ebx, %1\n"
        "mov %%ecx, %2\n"
        "mov %%edx, %3\n"
-+      "pop %%ebx\n"
++      "mov %%edi, %%ebx\n"
        : "=m" (regs[0]), "=m" (regs[1]),
          "=m" (regs[2]), "=m" (regs[3])
        : "m"(cmd)
 -      : "eax", "ebx", "ecx", "edx"
-+      : "eax", "ecx", "edx"
++      : "eax", "ecx", "edx", "edi"
     );
  
     return 0;
