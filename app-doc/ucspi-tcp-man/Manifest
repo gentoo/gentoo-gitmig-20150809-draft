@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 420c2a4fa30831afb91814b69b5e8635 ChangeLog 969
-MD5 9fdec90521298c46b868c466a9cd5192 ucspi-tcp-man-20020317.ebuild 612
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 5f32104538b60bc8d4f95686a8b2620b files/digest-ucspi-tcp-man-20020317 77
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 3f4facaa6aa4a730e537460786469a0d ucspi-tcp-man-20020317.ebuild 620
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWf/2gIKl8Uu19MoRAuHnAJwJwxjGdKKK3j9MtHjEAsqrzB9o0gCfUXEW
+z/MpZt68ZnmPnX6DstiQeZ0=
+=zKxR
+-----END PGP SIGNATURE-----
