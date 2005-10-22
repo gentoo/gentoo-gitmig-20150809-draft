@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1ac52a15138e321ce1a50da141027ca6 ChangeLog 3338
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-ktnef-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-ktnef-3.4.2 282
@@ -10,3 +13,10 @@ MD5 793b9b9404bf6cdf5e2f394d743842df ktnef-3.4.3.ebuild 422
 MD5 9a36d72449a83752a3905f0272d242ed ktnef-3.5.0_beta2.ebuild 404
 MD5 59f109bc2aad748e30b99a8f25cb604c ktnef-3.5_beta1.ebuild 399
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWevRCRZPokWLroQRAoO4AKCGr4BhuFdh0ghuQGLfiucxK6vTowCcDBzO
+t7EWkoe68AhcckxfxE1xz38=
+=7rIA
+-----END PGP SIGNATURE-----

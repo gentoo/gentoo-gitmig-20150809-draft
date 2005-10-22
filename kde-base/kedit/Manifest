@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c444b474a85f0cb0bd3e1becdd46bc33 ChangeLog 2855
 MD5 e29bbb2db20451106f7980c7008328fa files/digest-kedit-3.4.1 212
 MD5 7693585dde083d1c2cc205db10692163 files/digest-kedit-3.4.3 68
@@ -8,3 +11,10 @@ MD5 16afc6a03a86f2ab16b4677ea2dcc925 kedit-3.4.3.ebuild 401
 MD5 53c760cc2e7cd3997aac6deb2c51a185 kedit-3.5.0_beta2.ebuild 380
 MD5 d22f53204859e99c64764fdf84595770 kedit-3.5_beta1.ebuild 378
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeKRCRZPokWLroQRAvp4AJ4xF5ISkWPQECj62u7PhFNS7kvMxACgtHJW
+VKUUtj4pZThVRJVci5l6Wb4=
+=etfv
+-----END PGP SIGNATURE-----

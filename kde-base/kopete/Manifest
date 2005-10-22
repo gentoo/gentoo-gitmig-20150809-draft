@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff14e232a4eea39b3d317c2de8b51c58 ChangeLog 4693
 MD5 100ba684bf2f7b3bd7061b488264a21d files/configure-fix-kdenetwork-gadu.patch 2626
 MD5 3a5877277804af9bdafd5fd0e80c9f61 files/configure-fix-kdenetwork-xmms.patch 1183
@@ -15,3 +18,10 @@ MD5 e095c97e8d4fb931d8514a4c9f43c33e kopete-3.4.3.ebuild 1044
 MD5 78512e3622661d63f595d83e3c20f461 kopete-3.5.0_beta2.ebuild 966
 MD5 873857041cd1f0d400a0ae252d367b43 kopete-3.5_beta1.ebuild 961
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWegJCRZPokWLroQRAg0yAKDZRJoCYzlHUvoxoN/x77XscTodMQCdGHb1
+UODWVef+TM4zrZHKewwbY1k=
+=3o/P
+-----END PGP SIGNATURE-----

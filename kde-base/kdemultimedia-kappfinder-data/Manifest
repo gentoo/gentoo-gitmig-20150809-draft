@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 67c8e0805614674893384c29bbc20375 ChangeLog 3669
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-kappfinder-data-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kdemultimedia-kappfinder-data-3.4.2 308
@@ -10,3 +13,10 @@ MD5 b7cac5f722f9bd0f4f16ec67e8984409 kdemultimedia-kappfinder-data-3.4.3.ebuild 
 MD5 58462e39604b164f491bc653f6ddd274 kdemultimedia-kappfinder-data-3.5.0_beta2.ebuild 465
 MD5 187c4bbeab6cd93ce458149f677cf43c kdemultimedia-kappfinder-data-3.5_beta1.ebuild 463
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeBaCRZPokWLroQRAoqUAKDCMskOkOXxFF+7XawsefTuFXJt0gCeMSUq
+fxRZfPMjRHNsxyBvZ6bDbQc=
+=Zqsz
+-----END PGP SIGNATURE-----

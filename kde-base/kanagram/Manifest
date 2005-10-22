@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 107115c0b3fc84ee396f0141d6c81281 ChangeLog 644
 MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-kanagram-3.5.0_beta2 212
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kanagram-3.5_beta1 68
 MD5 4169ac6c7fa07403767e98370e67a8ec kanagram-3.5.0_beta2.ebuild 381
 MD5 3d1a1f65ed2903f1e9795796c52cebf2 kanagram-3.5_beta1.ebuild 379
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWduLCRZPokWLroQRAqXZAJsHHbGVuIWetC2CjThQStiIN+DdBwCfRgcp
+IcSGrxghQxH6ZyBtYp5AQZU=
+=ogAg
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0d94abd7f2eab08d4e01c14ed435e7b3 ChangeLog 3090
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-korganizer-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-korganizer-3.4.2 282
@@ -10,3 +13,10 @@ MD5 7be360aa4d717da6b668367f76dbba61 korganizer-3.4.3.ebuild 1790
 MD5 fdeb479c39841ddd751e9fc40c9ed3b8 korganizer-3.5.0_beta2.ebuild 1772
 MD5 c37ef8c7ac2a9749fe2ab8c03c337782 korganizer-3.5_beta1.ebuild 1767
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWegeCRZPokWLroQRAjckAKDTXN59npTrhl4J5YKfX/x/X0Ob8gCfbusR
+LxavuhKJrIv2evL3OxL7ivY=
+=uBWP
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9ff558a37255d7611c6a62473272c65d ChangeLog 3615
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kaudiocreator-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kaudiocreator-3.4.2 308
@@ -10,3 +13,10 @@ MD5 3a6e4b3c876bc4e69e2e1a81d334f820 kaudiocreator-3.4.3.ebuild 1107
 MD5 57e131e399c610855a8e24c4b49c61a3 kaudiocreator-3.5.0_beta2.ebuild 1306
 MD5 94369157daad09346ca12f60fdfd28ba kaudiocreator-3.5_beta1.ebuild 1304
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdxVCRZPokWLroQRAgJHAKCBNWkCJoYGTYRabENSN44+MkXhYwCgqnRH
+Hh4nKhwGKVm0UZFBUuih+rE=
+=5LKW
+-----END PGP SIGNATURE-----

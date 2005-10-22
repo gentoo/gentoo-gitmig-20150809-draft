@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 536fbb3c80dd4efae7509b447c1b5290 ChangeLog 3472
 MD5 98742ffe69ec2a609069bb2804d85af8 files/configure-fix-kdepim-gnokii-3.4.patch 1965
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kaddressbook-3.4.1 208
@@ -11,3 +14,10 @@ MD5 cbb657ffa1fc80df5b4e42cf06edb588 kaddressbook-3.4.3.ebuild 1679
 MD5 f54d8964095aa91672e3829416b69563 kaddressbook-3.5.0_beta2.ebuild 1607
 MD5 d888709cfef349749024c72f624cee4b kaddressbook-3.5_beta1.ebuild 1596
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdsVCRZPokWLroQRAphNAJ9BLEa/Cs7LDW1u/71R0aJbg30BUACglbED
+XSPGch2vsmkmTax1di7Y2gU=
+=KcKw
+-----END PGP SIGNATURE-----

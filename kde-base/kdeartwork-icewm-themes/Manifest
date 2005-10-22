@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c5d6a220adc7f8bd533b8fd35f3738a0 ChangeLog 2893
 MD5 3ce4c765a64632e913584e2bc500f6d3 files/digest-kdeartwork-icewm-themes-3.4.1 220
 MD5 7f1e0c6f226befe1c3b684e3bdf5b4a8 files/digest-kdeartwork-icewm-themes-3.5_beta1 72
 MD5 62898423d8e9847b89c1a80d2dd56269 kdeartwork-icewm-themes-3.4.1.ebuild 466
 MD5 5782f87b4fc93ddcada04cb100f608d7 kdeartwork-icewm-themes-3.5_beta1.ebuild 454
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWd6kCRZPokWLroQRAiG4AKC4bEVTFZRCh5GwptZ2xKFpGO4+4wCeLhT7
+HDahYAQDZlPyvl1wfjI/1ps=
+=pZrx
+-----END PGP SIGNATURE-----

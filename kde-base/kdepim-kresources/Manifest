@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d5f4a867bb3a47bc888a80bd78f35afb ChangeLog 3860
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-kresources-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-kresources-3.4.2 282
@@ -11,3 +14,10 @@ MD5 5ed7b15a1745fef63c0fbc58d68c015a kdepim-kresources-3.4.3.ebuild 1247
 MD5 a02ad46ba870efee2b8fca4a445bfc6a kdepim-kresources-3.5.0_beta2.ebuild 1309
 MD5 ded2e75747453250c35e61384f4e7cd1 kdepim-kresources-3.5_beta1.ebuild 1242
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeEgCRZPokWLroQRAttIAJ9mWkyBGORM0JmzrM7oCZfRZY+A9gCgwtYd
+E0slF0cjr/DlQmOhSw1mj6c=
+=n3i8
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f8b3de3f26e1e0d48f84a7953ffa84bd ChangeLog 3125
 MD5 c5fa588b242d6077e2c13bc01f2e0761 files/digest-kstars-3.4.1 208
 MD5 b190e5cce85ed284d453d1a2e85c1e67 files/digest-kstars-3.4.2 282
@@ -10,3 +13,10 @@ MD5 9bc1ce68b93dfd753c5f21284b1830b6 kstars-3.4.3.ebuild 666
 MD5 01bdbf5f52fed3b1904baac22218acc7 kstars-3.5.0_beta2.ebuild 662
 MD5 79749813def409c1fde782006d333a5b kstars-3.5_beta1.ebuild 695
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWernCRZPokWLroQRAs4zAKDYCRGjRvcrP+iCiGAfT9hqXqU3TACgtkl5
+iswomXudr+tCWlCubJkEQIU=
+=MXEE
+-----END PGP SIGNATURE-----

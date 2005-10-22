@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 953588bc1ee0e4d7e597a081cc398209 ChangeLog 3043
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-ksmiletris-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-ksmiletris-3.4.2 288
@@ -10,3 +13,10 @@ MD5 25e7f9099b870b18c5f714a70d5bfde7 ksmiletris-3.4.3.ebuild 547
 MD5 70aea9597368430df68b16e91719d6bc ksmiletris-3.5.0_beta2.ebuild 489
 MD5 06db9b9c13c7c9660c8836a9f21598cf ksmiletris-3.5_beta1.ebuild 524
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWepoCRZPokWLroQRAnF+AJ0XIoNBXfa3ybOc+gMxkoQ3U6Ft6gCdG98h
+TJ1g79gok+ruDOTeBQxQQ8A=
+=xPGG
+-----END PGP SIGNATURE-----

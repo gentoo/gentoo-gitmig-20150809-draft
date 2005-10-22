@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 701937d0f4c1c00c23f3613fc3702974 ChangeLog 3733
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-kdemultimedia-kioslaves-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-kdemultimedia-kioslaves-3.4.2 308
@@ -10,3 +13,10 @@ MD5 8e4477d75fd0bd129859025ceabb46f6 kdemultimedia-kioslaves-3.4.3.ebuild 1181
 MD5 e22850e5a5b145fae4520559166d2538 kdemultimedia-kioslaves-3.5.0_beta2.ebuild 1462
 MD5 375fc5ac3db29106232d291d17d66861 kdemultimedia-kioslaves-3.5_beta1.ebuild 1460
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeCFCRZPokWLroQRAgtGAKC4dLhzY+QbsGUHYTiIcjvbSnMM4wCgqJQ0
+MKZjEKG8eeTlI/wx13Gx1/U=
+=RsNZ
+-----END PGP SIGNATURE-----

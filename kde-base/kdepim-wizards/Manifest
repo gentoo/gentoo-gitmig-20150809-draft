@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8c5e8b85f3f27d394b6d816f8fc58c0a ChangeLog 3179
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kdepim-wizards-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-kdepim-wizards-3.4.2 282
@@ -10,3 +13,10 @@ MD5 46367d38a21d95797f05ef5f8d919d2f kdepim-wizards-3.4.3.ebuild 2259
 MD5 7b7cc600d703530101b79ea8b7aead24 kdepim-wizards-3.5.0_beta2.ebuild 2086
 MD5 a310ac9995d4fc5ace931e41d0ee3e7a kdepim-wizards-3.5_beta1.ebuild 2236
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeFQCRZPokWLroQRAi43AKCsmdrj3DMNJpEtBR1r9dXPdf7jSwCbBURO
+JhgWRFzgvORjh6pRBzvjUOM=
+=BE4I
+-----END PGP SIGNATURE-----

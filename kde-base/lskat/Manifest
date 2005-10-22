@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d50eef938c7eb5ac6ec1bc5908ce2136 ChangeLog 2854
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-lskat-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-lskat-3.4.2 288
@@ -10,3 +13,10 @@ MD5 a59664f76b086d885672fc8a98f7c5e2 lskat-3.4.3.ebuild 537
 MD5 748e04946907cca10817faad416cba03 lskat-3.5.0_beta2.ebuild 479
 MD5 5e6363eaa64163cee134b5d6cff3f756 lskat-3.5_beta1.ebuild 514
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWe7ACRZPokWLroQRAn7aAJ95fsIvhy/Y+uK3oaPVsr2hI/uIuACfXIvl
+D1fqjUJIIFI59jfYsNidg+s=
+=BYZQ
+-----END PGP SIGNATURE-----

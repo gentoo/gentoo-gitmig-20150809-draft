@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8d16bdb32ab0e13e8eaa8699f22e6bd8 ChangeLog 3126
 MD5 1334abaee53983ad0a0810adeafef453 files/digest-ksnapshot-3.4.1 221
 MD5 ad9f9a5920cdd067ae76d39d768fce5f files/digest-ksnapshot-3.4.3 71
@@ -9,3 +12,10 @@ MD5 d3e719d472764887f36ed2f5b18dd945 ksnapshot-3.4.3.ebuild 405
 MD5 7ee7ef32880c0a38aec8bd983036489f ksnapshot-3.5.0_beta2.ebuild 387
 MD5 2ec5b49d0dcf056e3256053c6310da89 ksnapshot-3.5_beta1.ebuild 429
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeqQCRZPokWLroQRAr9dAKDcwCOzMLeA8x4pny/uJ14A7e9KJgCg3UQr
+8ePTeouHTOHhwtHDql0pFLo=
+=iOO1
+-----END PGP SIGNATURE-----

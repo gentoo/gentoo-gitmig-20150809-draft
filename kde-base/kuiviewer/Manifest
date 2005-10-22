@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c62b2ffc1d1ae50a3feb9bc84488e9d5 ChangeLog 2678
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kuiviewer-3.4.1 206
 MD5 0a38813829924b012d8b632f47abb45d files/digest-kuiviewer-3.4.2 280
@@ -10,3 +13,10 @@ MD5 a3593d98ccf5fa21cbc95184c78e9483 kuiviewer-3.4.3.ebuild 413
 MD5 5e1b8880ea0490fdad2e824adc0a3486 kuiviewer-3.5.0_beta2.ebuild 398
 MD5 c51277b086a319003e47d6db58048632 kuiviewer-3.5_beta1.ebuild 396
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWex+CRZPokWLroQRAialAJ9qgFTWSg4ZZiuSkhna0GiYZtOa6wCgiZ6k
+SZIZXdn61iz+4XIUsHyU72c=
+=vQvm
+-----END PGP SIGNATURE-----

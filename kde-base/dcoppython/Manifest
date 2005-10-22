@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c58fb9668aa61de3e79b3e3c9320bd88 ChangeLog 2718
 MD5 aa7cfb47c40b615833da94ef9e90d964 dcoppython-3.3.1-r1.ebuild 701
 MD5 659b6ddda0b8033accba7ff3f32bf751 dcoppython-3.4.1.ebuild 729
@@ -9,3 +12,10 @@ MD5 8b94700e5ddd1504207b279995e101c7 files/digest-dcoppython-3.4.2 300
 MD5 7b7cadef2c4eb7dc5409c01c4e689481 files/digest-dcoppython-3.5.0_beta2 225
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWfAiCRZPokWLroQRAq2CAJ0ach0vapsmyr9mSChRxwrvJAzvXACfdBRr
+PyDFmbkJcOeBlG58RIe7zVg=
+=uOgr
+-----END PGP SIGNATURE-----

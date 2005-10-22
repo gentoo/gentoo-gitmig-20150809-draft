@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fc5f07960a5cb36ff8eb196ccb5a2b23 ChangeLog 660
 MD5 d47df4f385ff7eb56f23fef8afe30b6b files/digest-kgeography-3.5.0_beta2 212
 MD5 bb87804db4b06c40fdff58984b70c393 files/digest-kgeography-3.5_beta1 68
 MD5 69df939632e33f4448f2121cd8755660 kgeography-3.5.0_beta2.ebuild 393
 MD5 56c533b43637c7b1e6ec874cc65896fb kgeography-3.5_beta1.ebuild 391
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWeNQCRZPokWLroQRAqBBAJ94Gc8EN0OLnjhOsazTaHAkp6u1tgCfU3ZL
+3+bGnPDUqkyIsT+YVB1qsDg=
+=mPCX
+-----END PGP SIGNATURE-----

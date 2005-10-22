@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 161a074accd5bbdc8312bd0f39dcd4a7 ChangeLog 894
 MD5 6459ffe513c6e763b83b2bbac6b4fc08 artsplugin-akode-3.5.0_beta2.ebuild 774
 MD5 fdd53b43894650057b361c127296c3c5 artsplugin-akode-3.5_beta1.ebuild 675
 MD5 f783b93289974c92ff2e2ca0ba942946 files/digest-artsplugin-akode-3.5.0_beta2 231
 MD5 ddf8dc1d73d9fea63d15f91300cf12ba files/digest-artsplugin-akode-3.5_beta1 74
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdmVCRZPokWLroQRAvF7AKCU/Jv/ZjJF8wojV9wPNVHVxVK0iwCfQuj9
+ceHOOJC/4Hnyei/jMFJrUbw=
+=PzoU
+-----END PGP SIGNATURE-----

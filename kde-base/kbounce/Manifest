@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 32245c249919c40b8665a0cdaa9e70bb ChangeLog 2804
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-kbounce-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-kbounce-3.4.2 288
@@ -10,3 +13,10 @@ MD5 1652f6296065701df819bb64c3c88963 kbounce-3.4.3.ebuild 549
 MD5 51688561b2e8f3ad122071fa5c72bf14 kbounce-3.5.0_beta2.ebuild 491
 MD5 815736cda87c9adf50b7c363a638e517 kbounce-3.5_beta1.ebuild 526
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdzMCRZPokWLroQRAiqvAJ9bGRajVoHacK9pWTlMcMz/AydKfwCgsLAk
++s6VE/BWTMXdU0snpMEBv9E=
+=wls8
+-----END PGP SIGNATURE-----

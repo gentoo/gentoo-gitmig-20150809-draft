@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2a3892c42263ae0a1f77dc9526fa422a ChangeLog 2743
 MD5 c4bcc944c1ceb822f4ecd9b288d77bef files/digest-qtjava-3.3.2 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-qtjava-3.4.1 221
@@ -9,3 +12,10 @@ MD5 be6ae9de13610751d4b751c0a6e438ba qtjava-3.3.2.ebuild 943
 MD5 38127ecd985ccba4d59543bea433a552 qtjava-3.4.1.ebuild 962
 MD5 7ec3f30e7acdfd5789621603039e7620 qtjava-3.4.3.ebuild 962
 MD5 41bc788757a84820a6f0593fdf6ecf00 qtjava-3.5.0_beta2.ebuild 955
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWfCTCRZPokWLroQRAvjXAJ9VnUrV689wgX7frHQmO3tSlNHclACfawyb
+5nS+9D0NEfsK57fBLNnJROQ=
+=WPFE
+-----END PGP SIGNATURE-----

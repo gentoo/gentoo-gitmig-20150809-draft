@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5499764422240c1c4512f9206eaa2cc3 ChangeLog 2866
 MD5 6b1138834ead945e1b1116dd3a92a7f9 files/configure-fix-kdesdk-db-3.4.patch 999
 MD5 9b4e9e38740207531ab771519519d01e files/digest-kbabel-3.4.1 206
@@ -11,3 +14,10 @@ MD5 f27d283418bc05479052efa325636675 kbabel-3.4.3.ebuild 1016
 MD5 3971deff74059669f9b0fef49c87753b kbabel-3.5.0_beta2.ebuild 943
 MD5 39332cf4e8cbd8a4d9129fa9be2db9b2 kbabel-3.5_beta1.ebuild 999
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdxyCRZPokWLroQRAj8bAJ96+cIsf2oHN/QtmWR1wOULTOjd+gCeLRHb
+IlCCP24NU5l8zTuc5LUdUcE=
+=MkK5
+-----END PGP SIGNATURE-----

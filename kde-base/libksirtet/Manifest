@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9449892855406eeaa29983f845674c0a ChangeLog 3015
 MD5 7f12555bf2fdc56b256b49f72230e062 files/digest-libksirtet-3.4.1 212
 MD5 b780128b9240f26d24e96f1b7d8a0208 files/digest-libksirtet-3.4.2 288
@@ -10,3 +13,10 @@ MD5 86fd2bd81224c049146b67a1de741f5c libksirtet-3.4.3.ebuild 567
 MD5 b6d059b0d85715ae7f511349e541c885 libksirtet-3.5.0_beta2.ebuild 509
 MD5 630bb9e2b9e3ce262fd65683dd3b5b86 libksirtet-3.5_beta1.ebuild 544
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWe5xCRZPokWLroQRAhQNAJ46RAKblKXmX/F9vGvkgWTkH26S9gCfaKqn
+Pwelgm8J0i4LbUui/PTvviM=
+=6GF6
+-----END PGP SIGNATURE-----

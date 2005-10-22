@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 58655370a5d12c6d8312c1403dba66b3 ChangeLog 3078
 MD5 5503be4dfa64fd0d3bf2165747a97fb0 files/digest-noatun-3.4.1 227
 MD5 453075362e3201c7f44fea430afec5d5 files/digest-noatun-3.4.2 308
@@ -10,3 +13,10 @@ MD5 04cb30ceff698aa909979938da920912 noatun-3.4.2.ebuild 1019
 MD5 fc0d7868b4deb75f8f2c989f48849d07 noatun-3.4.3.ebuild 1019
 MD5 33bde28bf2b005acb45cb5278eb61624 noatun-3.5.0_beta2.ebuild 620
 MD5 2e7a7dc6461325b85ab20d2a4dff7b07 noatun-3.5_beta1.ebuild 618
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWe8CCRZPokWLroQRAh+UAJ0Sc4bt34wMJ/UT+HgKBIxlB7GaZgCfYAJu
+f0+GULjB5RHR2ExnqFQT1/U=
+=Gc7X
+-----END PGP SIGNATURE-----

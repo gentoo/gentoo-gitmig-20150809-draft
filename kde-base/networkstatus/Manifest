@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ffa04cc358971ea72ec8b8d94942fb44 ChangeLog 2631
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-networkstatus-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-networkstatus-3.4.2 282
@@ -8,3 +11,10 @@ MD5 e99f178608901d861b2f73237e1c9b22 networkstatus-3.4.1.ebuild 418
 MD5 908be276c122b63d9c9a21ff90f1bf95 networkstatus-3.4.2.ebuild 435
 MD5 9870a6e590dcf9e84f99045840830fb9 networkstatus-3.5.0_beta2.ebuild 412
 MD5 1b35df147ce88bcde59e3c3e967257d2 networkstatus-3.5_beta1.ebuild 410
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWe7rCRZPokWLroQRAhTfAJ9CyWnwsLRrcoxFgQ3sNmC4oeiXMQCgyQgA
+o8niMd22HsN8YOlAaR6vc/Y=
+=jGt5
+-----END PGP SIGNATURE-----
