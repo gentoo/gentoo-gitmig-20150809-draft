@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71.ebuild,v 1.1 2005/08/21 04:15:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.71.ebuild,v 1.2 2005/10/22 23:39:18 cryos Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,7 @@ DEPEND="virtual/libc
 # more information
 
 pkg_setup() {
-	use ifc || if [ -z `which g77` ]; then
+	use ifc || if [ -z `which g77` ] && [ -z `which gfortran` ]; then
 		#if ifc is defined then the dep was already checked
 		eerror "No fortran compiler found on the system!"
 		eerror "Please add fortran to your USE flags and reemerge gcc!"
