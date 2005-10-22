@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.212 2005/10/22 02:32:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.213 2005/10/22 19:04:02 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1557,8 +1557,11 @@ built_with_use() {
 	local PKG=$(best_version $1)
 	shift
 
-	local USEFILE="${ROOT}/var/db/pkg/${PKG}/USE"
-	[[ ! -e ${USEFILE} ]] && return 1
+	local USEFILE=${ROOT}/var/db/pkg/${PKG}/USE
+
+	# if the USE file doesnt exist, assume the $PKG is either
+	# injected or package.provided
+	[[ ! -e ${USEFILE} ]] && return 0
 
 	local USE_BUILT=$(<${USEFILE})
 	while [[ $# -gt 0 ]] ; do
