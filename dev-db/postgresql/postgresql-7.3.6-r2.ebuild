@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r2.ebuild,v 1.7 2005/10/08 17:29:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r2.ebuild,v 1.8 2005/10/22 06:48:56 nakano Exp $
 
 inherit gnuconfig flag-o-matic java-pkg
 
@@ -169,7 +169,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Execute the following command"
-	einfo "ebuild  /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
+	einfo "emerge --config =${PF}"
 	einfo "to setup the initial database environment."
 	einfo ""
 	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell"

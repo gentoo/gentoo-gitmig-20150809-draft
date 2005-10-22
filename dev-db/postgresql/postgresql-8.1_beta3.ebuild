@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1_beta3.ebuild,v 1.1 2005/10/15 19:49:20 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1_beta3.ebuild,v 1.2 2005/10/22 06:48:56 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -166,7 +166,7 @@ pkg_postinst() {
 
 	einfo ""
 	einfo "Execute the following command when you want to setup the initial database environment."
-	einfo "ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
+	einfo "emerge --config =${PF}"
 	einfo ""
 	einfo "autovacuum function, which  was in contrib, has moved to main PostgreSQL function from 8.1."
 	einfo "You can enable it in postgresql.conf."

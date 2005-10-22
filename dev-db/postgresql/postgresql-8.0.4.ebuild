@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.4.ebuild,v 1.1 2005/10/08 23:06:23 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.4.ebuild,v 1.2 2005/10/22 06:48:56 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -169,7 +169,7 @@ pkg_postinst() {
 	if [ ! -f ${PG_DIR}/data/PG_VERSION ] ; then
 		einfo ""
 		einfo "Execute the following command"
-		einfo "ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
+		einfo "emerge --config =${PF}"
 		einfo "to setup the initial database environment."
 		einfo ""
 	fi
