@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.98 2005/10/17 16:18:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.99 2005/10/22 14:17:35 anarchy Exp $
+
+  23 Oct 2005; <anarchy@gentoo.org> -files/1.5/embed-typeaheadfind.patch,
+  mozilla-firefox-1.5_beta2-r1.ebuild:
+  moved typeaheadfind patch to mirror
 
   17 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-1.0.7-r2.ebuild:

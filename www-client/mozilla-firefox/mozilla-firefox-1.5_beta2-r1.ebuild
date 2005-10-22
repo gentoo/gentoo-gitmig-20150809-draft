@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_beta2-r1.ebuild,v 1.1 2005/10/13 19:21:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_beta2-r1.ebuild,v 1.2 2005/10/22 14:17:35 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -16,7 +16,8 @@ FV=${MY_P/beta/b}
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${FV}/source/firefox-${FV}-source.tar.bz2
-	mirror://gentoo/mozilla-jslibmath-alpha.patch"
+	mirror://gentoo/mozilla-jslibmath-alpha.patch
+	mirror://gentoo/embed-typeaheadfind.patch"
 
 KEYWORDS="-*"
 SLOT="0"
@@ -87,7 +88,7 @@ src_unpack() {
 
 	# patch to fix typeahead find for browsers which embed Firefox
 	# http://bugzilla.gnome.org/show_bug.cgi?id=157435
-	epatch ${FILESDIR}/1.5/embed-typeaheadfind.patch
+	epatch ${DISTDIR}/embed-typeaheadfind.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"
