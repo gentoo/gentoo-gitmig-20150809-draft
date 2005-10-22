@@ -6,5 +6,4 @@
 -3dnow
 -3dnowext
 -win32codecs
--divx4linux
 -kqemu

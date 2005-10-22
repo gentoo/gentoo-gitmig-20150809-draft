@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.6 2005/09/14 09:15:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.7 2005/10/22 00:25:40 halcy0n Exp $
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
@@ -13,7 +13,6 @@ altivec
 -3dnow
 -3dnowext
 -win32codecs
--divx4linux
 
 # nVidia XvMC support
 -nvidia
