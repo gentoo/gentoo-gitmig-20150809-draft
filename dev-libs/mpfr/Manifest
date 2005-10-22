@@ -7,11 +7,11 @@ MD5 34ae93cd0ed0b3adcb49cfdc68c18b75 files/2.2.0/patch02 2177
 MD5 a7af9750238fdf49c8dffcf151f57049 files/2.2.0/patch03 407
 MD5 2244e0aef66bc63773899b1758b8e812 files/2.2.0/patch04 811
 MD5 f6dac72eea74ed7475bfcb5461ebe3af files/digest-mpfr-2.2.0_p4 63
-MD5 56bdb0be468131f371f30e9e3f9a0fdf mpfr-2.2.0_p4.ebuild 945
+MD5 99c28b9fc77e8b182208c512366e47f4 mpfr-2.2.0_p4.ebuild 952
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWpEFgIKl8Uu19MoRAmnKAJoD4ZccGqUZXmlNmvqze/JFISLY3QCdGa/g
-2Xk7tWhMx2l/HYuPs0YaYwo=
-=0BWe
+iD8DBQFDWpmwgIKl8Uu19MoRAhgIAJ4wQa7zpep2DOfWSdgss72h3fT92gCfUFZA
+DwyDaxWLn+etI9BETx6UcgY=
+=g1jU
 -----END PGP SIGNATURE-----
