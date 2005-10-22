@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186.ebuild,v 1.4 2005/05/16 16:06:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186.ebuild,v 1.5 2005/10/22 22:31:05 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -18,10 +18,15 @@ DEPEND="games-util/uz2unpack"
 
 S=${WORKDIR}
 
+GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
 
 pkg_setup() {
+	ewarn "This is a huge package.  If you do not have at least 7GB of free"
+	ewarn "disk space in ${PORTAGE_TMPDIR} and also in ${GAMES_PREFIX_OPT} then"
+	ewarn "You should abort this installation now and free up some space."
+	games_pkg_setup
 	check_dvd
 
 	if [[ ${USE_DVD} -eq 1 ]]
@@ -53,8 +58,6 @@ pkg_setup() {
 			Music/KR-UT2004-Menu.ogg \
 			Speech/ons.xml DirectX9/BDA.cab
 	fi
-
-	games_pkg_setup
 }
 
 src_unpack() {
