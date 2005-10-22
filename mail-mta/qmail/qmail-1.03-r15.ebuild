@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.35 2005/10/17 20:29:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.36 2005/10/22 20:27:40 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -53,7 +53,7 @@ RDEPEND="!virtual/mta
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-process/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
-	~net-mail/cmd5checkpw-0.22
+	<net-mail/cmd5checkpw-0.30
 	>=net-mail/dot-forward-0.71
 	>=net-mail/queue-fix-1.4-r1
 	selinux? ( sec-policy/selinux-qmail )"
@@ -61,7 +61,6 @@ RDEPEND="!virtual/mta
 PROVIDE="virtual/mta
 	 virtual/mda"
 
-#MY_PVR=${PVR}
 MY_PVR=${PV}-r14
 
 TCPRULES_DIR=/etc/tcprules.d
