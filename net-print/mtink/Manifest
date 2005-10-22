@@ -1,10 +1,18 @@
-MD5 18ff9b9a5ffdf5c6c250afcf9c6d6e97 ChangeLog 2027
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 64ee877aedee0030ecffcededcabb723 mtink-1.0.5.ebuild 1318
-MD5 80e7e2c3799de123ddd5d99f03472600 mtink-1.0.8.ebuild 1319
-MD5 e0487c3bacca72686c748f8b641de757 mtink-1.0.9.ebuild 1539
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90a59679f21ba2f71d9efe7273ec25bc ChangeLog 2237
+MD5 6bf7b30c283a992ce56095736e46c764 files/digest-mtink-1.0.5 63
+MD5 651ef751bcc8d6f211743e77dc6ed352 files/digest-mtink-1.0.9 63
 MD5 3d7d657325f8c614eab923174f39d213 files/mtinkd.confd 494
 MD5 3d70b9a7f2797c53b2514593ca34d634 files/mtinkd.rc 439
-MD5 6bf7b30c283a992ce56095736e46c764 files/digest-mtink-1.0.5 63
-MD5 99447a47f4ae7ca9d7e5dbf13747af12 files/digest-mtink-1.0.8 63
-MD5 651ef751bcc8d6f211743e77dc6ed352 files/digest-mtink-1.0.9 63
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 fa7e1a19bdf30d50217691ac7b21fc11 mtink-1.0.5.ebuild 1320
+MD5 fb934b7d9b5bb758c11f81e59689d660 mtink-1.0.9.ebuild 1542
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDWsTAwUpWvClEHQoRAmlKAJoCNkrL5iE5XHhsIkb9pMEDAaPeBgCeOd0Q
+5Hvmn1bkP+gP1zbgYlFYccg=
+=qsYM
+-----END PGP SIGNATURE-----

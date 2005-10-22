@@ -1,6 +1,11 @@
 # ChangeLog for net-print/mtink
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.16 2005/08/09 17:58:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.17 2005/10/22 22:01:29 metalgod Exp $
+
+  22 Oct 2005; Luis Medinas <metalgod@gentoo.org> mtink-1.0.5.ebuild,
+  -mtink-1.0.8.ebuild, mtink-1.0.9.ebuild:
+  Fix typo thanks to ph <phajdan.jr@gmail.com> closes bug #110061. Removing
+  older version.
 
   09 Aug 2005; David Holm <dholm@gentoo.org> mtink-1.0.9.ebuild:
   Added to ~ppc.
