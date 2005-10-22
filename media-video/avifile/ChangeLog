@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.113 2005/09/15 20:39:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.114 2005/10/22 07:06:34 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
+  avifile-0.7.38.20030710-r1.ebuild:
+  Add divx4linux useflag
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   avifile-0.7.43.20050224-r1.ebuild:
