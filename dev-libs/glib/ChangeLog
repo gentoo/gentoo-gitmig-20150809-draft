@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.163 2005/10/22 15:37:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.164 2005/10/22 17:48:33 grobian Exp $
 
-  22 Oct 2005; Fabian Groffen <grobian@gentoo.org> glib-2.8.3.ebuild:
+  22 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/glib-2.8.3-macos.patch, glib-2.8.3.ebuild:
   Removed unnecessary conditional operations for ppc-macos (bug #110127).
-  Thanks to <emanuele.giaquinta %40 gmail.com>
+  Added patch for ppc-macos that forces use of emulated poll(), since the OSX
+  provided one is buggy as hell.  Patch provided by and thanks to
+  <emanuele.giaquinta %40 gmail.com>
 
 *glib-2.8.3 (20 Oct 2005)
 
