@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.68 2005/10/22 12:38:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.69 2005/10/22 14:47:10 chainsaw Exp $
+
+  22 Oct 2005; Tony Vroon <chainsaw@gentoo.org>
+  beep-media-player-0.9.7.1.ebuild:
+  USE-flag oggvorbis is deprecated, use vorbis instead. As requested by tove
+  on IRC.
 
 *beep-media-player-0.9.7.1 (22 Oct 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7.1.ebuild,v 1.1 2005/10/22 12:38:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7.1.ebuild,v 1.2 2005/10/22 14:47:10 chainsaw Exp $
 
-IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
+IUSE="nls gnome mp3 vorbis alsa oss esd mmx old-eq"
 
 inherit flag-o-matic eutils libtool
 
@@ -27,7 +27,7 @@ RDEPEND="app-arch/unzip
 	>=gnome-base/libglade-2.3.1
 	>=dev-util/pkgconfig-0.9.0
 	esd? ( >=media-sound/esound-0.2.30 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
 	alsa? ( >=media-libs/alsa-lib-1.0.9_rc2 )
 	gnome? ( >=gnome-base/gconf-2.6.0 )
 	mp3? ( media-libs/id3lib )"
@@ -67,7 +67,7 @@ src_compile() {
 		`use_with old-eq xmms-eq` \
 		`use_enable mmx simd` \
 		`use_enable gnome gconf` \
-		`use_enable oggvorbis vorbis` \
+		`use_enable vorbis` \
 		`use_enable esd` \
 		`use_enable mp3` \
 		`use_enable nls` \
