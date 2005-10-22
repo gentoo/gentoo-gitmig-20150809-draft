@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf24e029ecc3e48718e7ccf867f5888d ChangeLog 392
+MD5 b8e3c8ac659c01bc0a5f3ef8c1eaf8db accelerator3d-0.1.0.ebuild 984
+MD5 f5cf47ace8c11eed2413011837029027 files/accelerator3d-0.1.0-gentoo-paths.patch 307
+MD5 4b68311bbba9323e9f182a6aebc67090 files/digest-accelerator3d-0.1.0 70
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWdUWgIKl8Uu19MoRAqraAJ43C7d+J9ZdJ4kdzqp8TgtLWlt1WgCfVBg5
+n90osbFxI9b/WQM3tX2Jagc=
+=Rouh
+-----END PGP SIGNATURE-----

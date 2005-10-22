@@ -1,0 +1,9 @@
+--- accelerator.py
++++ accelerator.py
+@@ -63,5 +63,5 @@
+ 	def __init__(self,texfile,mipmap = False):
+ 		global activeTexture
+-		filename = os.path.join('gfx',texfile)
++		filename = os.path.join('@GENTOO_DATADIR@',texfile)
+ 		image = pygame.image.load(filename)
+ 		data = pygame.image.tostring(image,'RGBX')
