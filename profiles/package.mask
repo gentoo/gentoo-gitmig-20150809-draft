@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4606 2005/10/22 00:25:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4607 2005/10/22 13:20:42 genone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1297,10 +1297,6 @@ sci-calculators/calculator
 # and completely abandoned upstream
 dev-dotnet/winelib
 
-# Marius Mauch <genone@gentoo.org> (26 April 2005)
-# CVS is still broken :( Masking till I'm sure it's fixed.
-=app-portage/gentoolkit-0.2.1_pre1
-
 # Fernando J. Pereda <ferdy@gentoo.org> (25 April 2005)
 # mask these until the new mailwrapper/mailer-config scheme is ready
 # it is secure to unmask them to test
@@ -1334,10 +1330,6 @@ www-client/netscape
 # Donnie Berkholz <spyderous@gentoo.org> 
 # CVS HEAD snapshots
 =x11-base/xorg-x11-6.8.99*
-
-# Marius Mauch <genone@gentoo.org> (17 Apr 2005)
-# Site is dead.
-app-portage/basc
 
 # Konstantin Arkhipov <voxus@gentoo.org> (15 Apr 2005)
 # Masked until arrival of userland tools. At least.
