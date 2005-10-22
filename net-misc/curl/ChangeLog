@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.55 2005/10/22 11:09:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.56 2005/10/22 13:52:51 grobian Exp $
+
+  22 Oct 2005; Fabian Groffen <grobian@gentoo.org> curl-7.15.0.ebuild:
+  Marked ~ppc-macos (bug #109097)
 
   22 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> curl-7.15.0.ebuild:
   Stable on mips for bug #109097.
