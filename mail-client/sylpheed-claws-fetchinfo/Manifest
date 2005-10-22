@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 73f7d2ea3fb68bc293722d4319679951 ChangeLog 442
 MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-fetchinfo-0.4.6 82
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 MD5 c52e0bd068929f4e6826952eb627b845 sylpheed-claws-fetchinfo-0.4.6.ebuild 826
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWjgI6J2i8a8J4okRAobzAJ9GiS6rbRq27qwtYPfnlqysussq8gCfS4Nq
+Mhis9dQPQRlJ3Ry8dBo+C7w=
+=UGC8
+-----END PGP SIGNATURE-----

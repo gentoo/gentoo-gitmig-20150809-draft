@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b73270cb8cb064b85e5584e36ed10b61 ChangeLog 553
 MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-cachesaver-0.5 82
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 MD5 0c9092fa5df3fd0ef3b439b36325ef1d sylpheed-claws-cachesaver-0.5.ebuild 852
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWjdI6J2i8a8J4okRAkRbAJ9Fi8ZcJv5qZH0YFazQOVbiSW/sSACbBM3O
+zn/+1/DFYa3eM3Zgb5JEi/E=
+=42Ev
+-----END PGP SIGNATURE-----

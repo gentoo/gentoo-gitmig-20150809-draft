@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5552c50ff1ac8c23b2afa5cf32763ae8 ChangeLog 454
 MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-etpan-privacy-0.9 82
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 MD5 22c12d7072c7eb1866dde5c6c16e7a6f sylpheed-claws-etpan-privacy-0.9.ebuild 845
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWjfE6J2i8a8J4okRAkHcAJ4vvPrtlbiWSdl0Zzcz1hVtF83bRgCguBqI
+lxe8DUxR4uz3GKyYrcuYgh0=
+=f272
+-----END PGP SIGNATURE-----
