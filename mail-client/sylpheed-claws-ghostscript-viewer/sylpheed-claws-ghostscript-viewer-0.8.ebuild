@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-ghostscript-viewer/sylpheed-claws-ghostscript-viewer-0.8.ebuild,v 1.10 2005/05/18 12:18:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-ghostscript-viewer/sylpheed-claws-ghostscript-viewer-0.8.ebuild,v 1.11 2005/10/22 13:08:46 genone Exp $
 
 MY_P="${P##sylpheed-claws-}"
 
 DESCRIPTION="Plugin for sylpheed-claws to view pdf and postscript attachments inline"
-HOMEPAGE="http://sylpheed-claws.sourceforge.net"
+HOMEPAGE="http://claws.sylpheed.org"
 SRC_URI="mirror://sourceforge/sylpheed-claws/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"

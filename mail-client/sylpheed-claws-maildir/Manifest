@@ -2,5 +2,5 @@ MD5 b5f314c1b9f4ec9259cbacf222ff5c42 ChangeLog 2549
 MD5 5ca5fb343f8db75bb3935347183d5e5d files/digest-sylpheed-claws-maildir-0.7 64
 MD5 533df443910817abfe0a629eebc741f4 files/digest-sylpheed-claws-maildir-0.8 82
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 88fbe5f30711b01e22b8259239310af2 sylpheed-claws-maildir-0.7.ebuild 762
-MD5 41ac913791f712b43a54352aee62dd4d sylpheed-claws-maildir-0.8.ebuild 829
+MD5 ea89ff23c0a340bcf27d4a53cd3a9d5e sylpheed-claws-maildir-0.7.ebuild 750
+MD5 7d14bfb2fa9ceecc4f431aa1ad2c27ea sylpheed-claws-maildir-0.8.ebuild 817

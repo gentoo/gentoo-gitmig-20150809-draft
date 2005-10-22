@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/sylpheed-claws-pgpinline-0.5-r1.ebuild,v 1.6 2005/08/23 14:34:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/sylpheed-claws-pgpinline-0.5-r1.ebuild,v 1.7 2005/10/22 13:17:17 genone Exp $
 
 inherit eutils
 
 MY_P="${P##sylpheed-claws-}"
 
 DESCRIPTION="Plugin for sylpheed-claws to support mails with inline pgp signatures"
-HOMEPAGE="http://sylpheed-claws.sourceforge.net"
+HOMEPAGE="http://claws.sylpheed.org"
 SRC_URI="http://colin.pclinux.fr/${PN%%-pgpinline}-gtk2-${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
