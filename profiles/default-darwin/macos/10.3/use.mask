@@ -17,6 +17,8 @@ gtk2
 perl
 # imlib depends on gtk+-1
 imlib
+# rxvt-unicode's tabs requires dev-perl/gtk2-perl
+tabs
 
 # wxwindows needs wxGTK which in turn needs gtk+
 wxwindows
