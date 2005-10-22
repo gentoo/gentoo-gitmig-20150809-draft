@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.53 2005/10/16 09:11:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.54 2005/10/22 22:45:06 genstef Exp $
+
+*slmodem-2.9.11_pre20051009-r1 (22 Oct 2005)
+
+  22 Oct 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/slmodem-2.9.11.init, +slmodem-2.9.11_pre20051009-r1.ebuild:
+  Fix init script to work also when we do not get a device node automatically
 
   16 Oct 2005; Alin Nastac <mrness@gentoo.org> slmodem-2.9.9d.ebuild,
   slmodem-2.9.11_pre20050816.ebuild, slmodem-2.9.11_pre20051009.ebuild:
