@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9d90031f388722701f2af283ff26b229 ChangeLog 324
+MD5 a3df31fd98db085c9be76ed7aa7debba ChangeLog 489
 MD5 8104d29f4f544ed24fc54349b3c50968 files/2.2.0/patch01 1248
 MD5 34ae93cd0ed0b3adcb49cfdc68c18b75 files/2.2.0/patch02 2177
 MD5 a7af9750238fdf49c8dffcf151f57049 files/2.2.0/patch03 407
 MD5 2244e0aef66bc63773899b1758b8e812 files/2.2.0/patch04 811
 MD5 f6dac72eea74ed7475bfcb5461ebe3af files/digest-mpfr-2.2.0_p4 63
-MD5 6109518a0fc9529609612acebba07054 mpfr-2.2.0_p4.ebuild 926
+MD5 4ab60251b8dd488d6939b550a859ec04 mpfr-2.2.0_p4.ebuild 939
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDVcnagIKl8Uu19MoRAl0MAJ9YW4N8iZ5TNGVMbflcXtb15JyTUQCfTV1+
-mi894caedg8FndRFD/CSo1I=
-=n/2d
+iD8DBQFDWcJ9mdTrptrqvGERAsZNAJ0WYCo0o5br8Kdhnfw5pyrH9kumygCfUUfi
+dBwBlVrqjQBl3Zuc9hZfMDc=
+=/YKc
 -----END PGP SIGNATURE-----
