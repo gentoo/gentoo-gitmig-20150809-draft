@@ -1,0 +1,11 @@
+diff -u -r /tmp/OpenEXR-1.2.2/exrmaketiled/Image.h ./exrmaketiled/Image.h
+--- /tmp/OpenEXR-1.2.2/exrmaketiled/Image.h	2004-06-04 06:11:23.000000000 +0200
++++ ./exrmaketiled/Image.h	2005-08-08 20:29:50.000000000 +0200
+@@ -49,6 +49,7 @@
+ #include <string>
+ #include <map>
+ 
++class Image;
+ 
+ class ImageChannel
+ {

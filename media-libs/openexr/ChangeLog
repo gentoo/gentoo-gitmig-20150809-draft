@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.27 2005/09/12 12:18:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.28 2005/10/22 22:57:43 hanno Exp $
+
+  22 Oct 2005; Hanno Boeck <hanno@gentoo.org>
+  +files/openexr-1.2.2-gcc4.patch, openexr-1.2.2-r1.ebuild:
+  Fix for gcc4.
 
   12 Sep 2005; Aron Griffis <agriffis@gentoo.org> openexr-1.2.2.ebuild:
   Mark 1.2.2 stable on alpha
