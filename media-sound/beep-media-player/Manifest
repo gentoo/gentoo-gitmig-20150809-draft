@@ -1,28 +1,29 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 5f0d5d812cb19c3f1dd91bab090008bd ChangeLog 12138
+MD5 7d55b6e3a32ab5f01b588bae62a75521 ChangeLog 12412
 MD5 3e970dc883c7abdd6bf77e8ee07f6ad3 beep-media-player-0.9.7-r6.ebuild 2769
 MD5 9af2ef1afbca5de81d3767bd710a8c29 beep-media-player-0.9.7-r8.ebuild 2999
-MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
-MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r6 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r8 62
-MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
+MD5 4a79bf7b47b6d018ca5b327f1cc0b6a7 beep-media-player-0.9.7.1.ebuild 2789
 MD5 4fe36295e02a77ccc81d9f710ebcc9fb files/0.9.7-bogus-songinfo.patch 517
+MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
+MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
 MD5 3f601435320f38af453b506ced22e342 files/0.9.7-ipv6.patch 10063
 MD5 0e011dce894959d58bb98199a10b9a6a files/0.9.7-link-gconf.patch 1173
 MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
-MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
-MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
-MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
+MD5 07dd84987f30f2cbb9ca16ec80cb6962 files/0.9.7-playlist-deadfile-delete.patch 540
 MD5 e279329d65732e4ce62f2ea78badc901 files/0.9.7-volume-crash.patch 600
+MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
 MD5 539d031b4930b4ce080fbe0804edfc28 files/0.9.7-window-focus.patch 850
+MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r6 62
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r8 62
+MD5 18a0c44ab6e0927dc058a0f43f0795f4 files/digest-beep-media-player-0.9.7.1 135
+MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKHbBp5vW4rUFj5oRAkbuAKCl7/9YqQA0YNnsT5pXXokYFiOxLACghVa8
-V7QmaqdxnrRVYSoOID1gkNs=
-=G5Kn
+iD8DBQFDWjT5p5vW4rUFj5oRAvnrAKCXP66ZzNINv5I8Uf9U1jApyy7S0QCgr9uf
+1bNVmZpBaedKheKMCoSqQN4=
+=ykMY
 -----END PGP SIGNATURE-----
