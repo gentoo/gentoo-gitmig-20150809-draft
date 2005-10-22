@@ -1,3 +1,5 @@
+MD5 6c89525f43b93fb2671af345dd85783b openssh-4.2p1+SecurID_v1.3.2.patch 616248
+MD5 cda9a91dc66ff20be49ba379be9089fd openssh-4.2p1+x509-5.2.diff.gz 123592
+MD5 4b8f0befa09f234d6e7f1a5849b86197 openssh-4.2p1-hpn11.diff 14765
 MD5 df899194a340c933944b193477c628fa openssh-4.2p1.tar.gz 914165
 MD5 b779906d657d63794144cabe2bf978b8 openssh-lpk-4.1p1-0.3.6.patch 60312
-MD5 cda9a91dc66ff20be49ba379be9089fd openssh-4.2p1+x509-5.2.diff.gz 123592

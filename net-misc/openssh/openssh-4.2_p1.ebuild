@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1.ebuild,v 1.10 2005/10/21 21:09:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1.ebuild,v 1.11 2005/10/22 00:03:45 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -8,20 +8,18 @@ inherit eutils flag-o-matic ccc pam
 # and _p? releases.
 PARCH=${P/_/}
 
-SFTPLOG_PATCH_VER="1.2"
 X509_PATCH="${PARCH}+x509-5.2.diff.gz"
-SELINUX_PATCH="openssh-3.9_p1-selinux.diff"
-SECURID_PATCH="" #${PARCH}+SecurID_v1.3.1.patch"
+SECURID_PATCH="${PARCH}+SecurID_v1.3.2.patch"
 LDAP_PATCH="${PARCH/-4.2/-lpk-4.1}-0.3.6.patch"
-HPN_PATCH="" #${PARCH/4.2/4.1}-hpn11.diff"
+HPN_PATCH="${PARCH}-hpn11.diff"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	ldap? ( http://www.opendarwin.org/en/projects/openssh-lpk/files/${LDAP_PATCH} )
-	X509? ( http://roumenpetrov.info/openssh/x509-5.2/${X509_PATCH} )"
-#	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )"
-#	smartcard? ( http://www.omniti.com/~jesus/projects/${SECURID_PATCH} )"
+	X509? ( http://roumenpetrov.info/openssh/x509-5.2/${X509_PATCH} )
+	hpn? ( http://www.psc.edu/networking/projects/hpn-ssh/${HPN_PATCH} )
+	smartcard? ( http://www.omniti.com/~jesus/projects/${SECURID_PATCH} )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -60,11 +58,11 @@ src_unpack() {
 	use sftplogging && epatch "${FILESDIR}"/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2
 	use skey && epatch "${FILESDIR}"/openssh-3.9_p1-skey.patch.bz2
 	use chroot && epatch "${FILESDIR}"/openssh-3.9_p1-chroot.patch
-	use selinux && epatch "${FILESDIR}"/${SELINUX_PATCH}.bz2
+	epatch "${FILESDIR}"/openssh-4.2_p1-selinux.patch
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch.bz2
 	if ! use X509 ; then
 		if [[ -n ${SECURID_PATCH} ]] && use smartcard ; then
-			epatch "${DISTDIR}"/${SECURID_PATCH} "${FILESDIR}"/openssh-securid-1.3.1-updates.patch
+			epatch "${DISTDIR}"/${SECURID_PATCH}
 			use ldap && epatch "${FILESDIR}"/openssh-4.0_p1-smartcard-ldap-happy.patch
 		fi
 		if use sftplogging ; then
@@ -93,7 +91,7 @@ src_compile() {
 		filter-flags -funroll-loops
 		myconf="${myconf} --with-ldap"
 	fi
-	use selinux && append-flags "-DWITH_SELINUX"
+	use selinux && append-flags -DWITH_SELINUX && append-ldflags -lselinux
 
 	if use static ; then
 		append-ldflags -static
