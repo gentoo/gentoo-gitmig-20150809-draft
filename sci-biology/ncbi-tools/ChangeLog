@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.29 2005/10/18 05:14:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.30 2005/10/22 16:02:56 grobian Exp $
+
+  22 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  ncbi-tools-20050605.ebuild:
+  Marked ppc-macos per bug #108334
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   ncbi-tools-20050605.ebuild:
