@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20051004-r1.ebuild,v 1.2 2005/10/22 05:17:35 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20051004-r1.ebuild,v 1.3 2005/10/22 05:36:25 morfic Exp $
+
+inherit multilib
 
 IUSE="X debug threads"
 
@@ -21,6 +23,7 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	./configure --prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		$(use_enable debug) \
 		$(use_enable threads pthread) \
 		$(use_enable X visualize) \
