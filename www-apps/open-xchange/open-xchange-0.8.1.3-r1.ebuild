@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.3-r1.ebuild,v 1.1 2005/10/22 01:21:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.1.3-r1.ebuild,v 1.2 2005/10/22 01:21:56 eradicator Exp $
 
 inherit eutils webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -447,13 +447,13 @@ pkg_postinst() {
 	einfo "        /etc/init.d/open-xchange restart"
 	einfo
 	einfo "Execute the following command"
-	
+
 	if has_version '<=sys-apps/portage-2.0.51*' ; then
 	    einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	else
 	    einfo "emerge --config ${CATEGORY}/${PN}"
 	fi
-	
+
 	einfo "to setup the initial open-xchange environment."
 	einfo
 
