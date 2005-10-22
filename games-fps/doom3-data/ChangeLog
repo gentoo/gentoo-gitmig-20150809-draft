@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/ChangeLog,v 1.1 2005/10/22 16:44:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/ChangeLog,v 1.2 2005/10/22 16:53:46 wolf31o2 Exp $
+
+  22 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-data-1.1.1282.ebuild:
+  Fixed dir variable and changed to use GAMES_CHECK_LICENSE from games.eclass.
 
 *doom3-data-1.1.1282 (22 Oct 2005)
 

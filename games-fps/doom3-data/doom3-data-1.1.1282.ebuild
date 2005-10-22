@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/doom3-data-1.1.1282.ebuild,v 1.1 2005/10/22 16:44:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-data/doom3-data-1.1.1282.ebuild,v 1.2 2005/10/22 16:53:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,15 +20,15 @@ RDEPEND="games-fps/doom3"
 
 S=${WORKDIR}
 
-dir=${GAMES_PREFIX_OPT}/${PN}
+GAMES_CHECK_LICENSE="yes"
+dir=${GAMES_PREFIX_OPT}/doom3
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license DOOM3
+	games_pkg_setup
 	cdrom_get_cds Setup/Data/base/pak002.pk4 \
 		Setup/Data/base/pak000.pk4 \
 		Setup/Data/base/pak003.pk4
-	games_pkg_setup
 }
 
 src_install() {
