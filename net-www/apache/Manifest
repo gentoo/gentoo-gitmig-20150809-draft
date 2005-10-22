@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c0dbdd0f7623f7fdf179c4a8b55ef2a5 ChangeLog 71946
+MD5 7983ef303bfee3d7a0fdd3b14e6af440 ChangeLog 72068
 MD5 b56779cb8460b101ad6912c8f45ff583 apache-1.3.29-r2.ebuild 7237
 MD5 3e32afd7bbab740bdce0fc0cf45d5be3 apache-1.3.31-r1.ebuild 6816
 MD5 a448a0e7566f85098cf55c54e4c6621f apache-1.3.31-r2.ebuild 6941
@@ -23,17 +20,9 @@ MD5 8dfa3f0fbdc01264e754bd3ebf7b8a5a apache-2.0.54-r15.ebuild 12594
 MD5 be59fbc220730a0212fbf6f34a1a6652 apache-2.0.54-r30.ebuild 12930
 MD5 2106ad9aafa7004e5d3e0f2a105f6ee3 apache-2.0.54-r31.ebuild 13258
 MD5 e1e33b99a1b8f95a419f0e95a6ebb2dc apache-2.0.54-r9.ebuild 12595
+MD5 27c9cb37c510e08bb69df277229a03ea metadata.xml 566
+MD5 325fc1469a4859d8fb47e1211bb49666 apache-2.0.55.ebuild 13261
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
-MD5 3d94c56af17136b6c408f076c32e0362 files/2.0.49/40_mod_ssl.conf 3213
-MD5 1d10cc98714a34ddc38525743c2989f9 files/2.0.49/41_mod_ssl.default-vhost.conf 8053
-MD5 819ee444395cf42ccc8009529a94af37 files/2.0.49/45_mod_dav.conf 583
-MD5 50b76a8df795c79378c02f1edea750a4 files/2.0.49/46_mod_ldap.conf 902
-MD5 1c4d9999353237c8b3835b7d73ba7a15 files/2.0.49/apache2-builtin-mods 2215
-MD5 228b5a816ea5534287be3c5e1d6ec7cd files/2.0.49/apache2.confd 1944
-MD5 20f6868829149f669a7afd1e03245692 files/2.0.49/apache2.initd 2494
-MD5 b610d37fd521de1f8fc782069e165969 files/2.0.49/apache2logserverstatus 4652
-MD5 8570b1055b64f29120e21be94bbdd73d files/2.0.49/apache2splitlogfile 4875
-MD5 8a234c8eb9cc840fe2d3cfbcdfedc315 files/2.0.49/gentestcrt.sh 8807
 MD5 998b4b7df08eb15641e0b9132443b365 files/apache-1.3.27-apachectl.patch 1328
 MD5 37d2c4ea8e1a6725deaca42b6aa22c69 files/apache-1.3.27_db4_gentoo.patch 1006
 MD5 c2866f70c91c7c7f718b89d92530d5f2 files/apache-1.3.29-usertrack_bug.patch 2588
@@ -49,14 +38,6 @@ MD5 042973893566b6b09b4dd9755d8f0881 files/apacheaddmod 5979
 MD5 ba87ae612a52d75f0109a2aba6cd605b files/apachedelmod 3187
 MD5 647bdf060613bdf1fdb840ed5ae51b72 files/apachelogserverstatus 4765
 MD5 8b5e7c3c7da4ebb58471f917a693e047 files/apachesplitlogfile 5068
-MD5 54c0546fa2b1985686cf22c9efa2c7dc files/common/apr-config.layout 434
-MD5 fe80b29c20bb6794eb7f4a0875588306 files/common/apr-util-config.layout 437
-MD5 5a7b58d54689d6e9d8f8214b5150d18f files/common/config.layout 741
-MD5 162afe15726e298774bc36b586ae070a files/conf/DynamicVhosts.conf 965
-MD5 139f5b0d5e2bf3525464a336ed2e1f83 files/conf/Vhosts.conf 1910
-MD5 9c606730ea7cc37417109915b2fbe522 files/conf/VirtualHomePages.conf 909
-MD5 a7f15bdba3786353deb7bfaf8de0efb9 files/conf/apache.conf 8115
-MD5 c70dc2c9a5e56660f3f120fcb822fadc files/conf/commonapache.conf 22216
 MD5 589e8773eb94f785be510f74b2e39ad0 files/digest-apache-1.3.29-r2 211
 MD5 bb36b429c433a5cbf2712605a76ce8fb files/digest-apache-1.3.31 139
 MD5 7d4cec8690cb2c6406b84990d8365587 files/digest-apache-1.3.31-r1 139
@@ -81,6 +62,33 @@ MD5 35d8cf2217559d96a69696d69f4c85cc files/digest-apache-2.0.54-r9 214
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 MD5 d52999376f67a872ee48cbae72db0160 files/httpd-2.0.49-cgi.patch 10319
 MD5 8cb4313e58d7bd5dc369eb92f75daa2b files/httpd-2.0.49-ipv6.patch 788
+MD5 59a6ba7dcde461f5350af41e6aff92b1 files/robots.txt 342
+MD5 d3626a1e31a675c60d066c111d552adf files/suexec.pam 59
+MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
+MD5 88b09cce96bc7b0905d0767343f4a079 files/digest-apache-2.0.55 147
+MD5 3d94c56af17136b6c408f076c32e0362 files/2.0.49/40_mod_ssl.conf 3213
+MD5 1d10cc98714a34ddc38525743c2989f9 files/2.0.49/41_mod_ssl.default-vhost.conf 8053
+MD5 819ee444395cf42ccc8009529a94af37 files/2.0.49/45_mod_dav.conf 583
+MD5 50b76a8df795c79378c02f1edea750a4 files/2.0.49/46_mod_ldap.conf 902
+MD5 1c4d9999353237c8b3835b7d73ba7a15 files/2.0.49/apache2-builtin-mods 2215
+MD5 228b5a816ea5534287be3c5e1d6ec7cd files/2.0.49/apache2.confd 1944
+MD5 20f6868829149f669a7afd1e03245692 files/2.0.49/apache2.initd 2494
+MD5 b610d37fd521de1f8fc782069e165969 files/2.0.49/apache2logserverstatus 4652
+MD5 8570b1055b64f29120e21be94bbdd73d files/2.0.49/apache2splitlogfile 4875
+MD5 8a234c8eb9cc840fe2d3cfbcdfedc315 files/2.0.49/gentestcrt.sh 8807
+MD5 54c0546fa2b1985686cf22c9efa2c7dc files/common/apr-config.layout 434
+MD5 fe80b29c20bb6794eb7f4a0875588306 files/common/apr-util-config.layout 437
+MD5 5a7b58d54689d6e9d8f8214b5150d18f files/common/config.layout 741
+MD5 162afe15726e298774bc36b586ae070a files/conf/DynamicVhosts.conf 965
+MD5 139f5b0d5e2bf3525464a336ed2e1f83 files/conf/Vhosts.conf 1910
+MD5 9c606730ea7cc37417109915b2fbe522 files/conf/VirtualHomePages.conf 909
+MD5 a7f15bdba3786353deb7bfaf8de0efb9 files/conf/apache.conf 8115
+MD5 c70dc2c9a5e56660f3f120fcb822fadc files/conf/commonapache.conf 22216
+MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31/00_gentoo_apachectl.patch 32836
+MD5 3c0dfc9f2dc93ae46eb6382cf9533f18 files/patches/1.3.31/00_gentoo_base.patch 27799
+MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31/00_gentoo_db4_detect.patch 1304
+MD5 161245c7aa1eb785db53b34d6a10be43 files/patches/1.3.31/00_gentoo_suexec_pam.patch 2149
+MD5 28272b16a4f701f29eb73d932fd81101 files/patches/1.3.31/Readme.PATCHES 747
 MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31-r1/00_gentoo_apachectl.patch 32836
 MD5 3c0dfc9f2dc93ae46eb6382cf9533f18 files/patches/1.3.31-r1/00_gentoo_base.patch 27799
 MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31-r1/00_gentoo_db4_detect.patch 1304
@@ -90,25 +98,9 @@ MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31-r2/00_gentoo_apachectl
 MD5 3c0dfc9f2dc93ae46eb6382cf9533f18 files/patches/1.3.31-r2/00_gentoo_base.patch 27799
 MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31-r2/00_gentoo_db4_detect.patch 1304
 MD5 161245c7aa1eb785db53b34d6a10be43 files/patches/1.3.31-r2/00_gentoo_suexec_pam.patch 2149
-MD5 61df284cb67dfde3085aec5543eeb03c files/patches/1.3.31/00_gentoo_apachectl.patch 32836
-MD5 3c0dfc9f2dc93ae46eb6382cf9533f18 files/patches/1.3.31/00_gentoo_base.patch 27799
-MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31/00_gentoo_db4_detect.patch 1304
-MD5 161245c7aa1eb785db53b34d6a10be43 files/patches/1.3.31/00_gentoo_suexec_pam.patch 2149
-MD5 28272b16a4f701f29eb73d932fd81101 files/patches/1.3.31/Readme.PATCHES 747
 MD5 59deb12158a55cc2259cd79c245eb00d files/patches/2.0.49-r1/00_ssl_verify_client.patch 6671
 MD5 b30d264a0cfb08b2ce2300132abbe654 files/patches/2.0.49-r1/01_apache_ldap_fixes.patch 18048
 MD5 30add456de1ed8fab4bc473a4afda161 files/patches/2.0.49-r1/04_ssl_makefile.patch 619
 MD5 21a6ee55341125140e40c0f48144277d files/patches/2.0.49-r1/Readme.PATCHES 507
 MD5 d52999376f67a872ee48cbae72db0160 files/patches/2.0.49-r2/01_gentoo_cgi.patch 10319
 MD5 5d45e2b46965e7c6866b259df4efe4b2 files/patches/2.0.50-r1/Readme.PATCHES 357
-MD5 59a6ba7dcde461f5350af41e6aff92b1 files/robots.txt 342
-MD5 d3626a1e31a675c60d066c111d552adf files/suexec.pam 59
-MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
-MD5 27c9cb37c510e08bb69df277229a03ea metadata.xml 566
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSX1bKf2g/qXtneoRAtLQAJ0UBTMVPuMnvnaHEl/9AfW/mTP8BQCgnw5x
-Cy2KK02lcHTnZn/RoHj3hH4=
-=yBuO
------END PGP SIGNATURE-----
