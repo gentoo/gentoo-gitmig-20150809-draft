@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.11 2005/10/19 18:38:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.12 2005/10/22 07:57:44 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> dcopjava-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *dcopjava-3.5.0_beta2 (19 Oct 2005)
 

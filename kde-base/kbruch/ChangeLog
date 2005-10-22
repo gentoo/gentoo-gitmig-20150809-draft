@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbruch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.17 2005/09/24 13:18:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.18 2005/10/22 06:31:45 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kbruch-3.5_beta1.ebuild:
+  Adding ~x86 to keywords
 
   24 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   -kbruch-3.5_alpha1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/kdemultimedia-arts-3.5_beta1.ebuild,v 1.1 2005/09/22 18:29:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/kdemultimedia-arts-3.5_beta1.ebuild,v 1.2 2005/10/22 06:46:10 halcy0n Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=arts
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="aRts pipeline builder and other tools"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 KMEXTRACTONLY="mpeglib_artsplug/configure.in.in" # needed because the artsc-config call is here
 KMEXTRA="doc/artsbuilder"

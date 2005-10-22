@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kicker-applets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.21 2005/10/15 11:08:43 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.22 2005/10/22 07:01:16 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
+  kicker-applets-3.5_beta1.ebuild, kicker-applets-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *kicker-applets-3.5.0_beta2 (14 Oct 2005)
 

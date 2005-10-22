@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.21 2005/10/21 09:58:51 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.22 2005/10/22 07:27:24 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
+  kscreensaver-3.5_beta1.ebuild:
+  Adding ~x86 to keywords
 
   21 Oct 2005; Douglas Russell <puggy@gentoo.org>
   kscreensaver-3.5.0_beta2.ebuild:

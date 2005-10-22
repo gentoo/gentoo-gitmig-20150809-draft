@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpimidentities
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.22 2005/10/18 14:58:48 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.23 2005/10/22 07:45:49 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
+  libkpimidentities-3.5_beta1.ebuild:
+  Adding ~x86 to keywords
 
   18 Oct 2005; Douglas Russell <puggy@gentoo.org>
   libkpimidentities-3.5.0_beta2.ebuild:

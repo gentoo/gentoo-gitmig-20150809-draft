@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.20 2005/10/15 11:08:44 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.21 2005/10/22 07:17:29 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> konquest-3.5_beta1.ebuild,
+  konquest-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *konquest-3.5.0_beta2 (14 Oct 2005)
 

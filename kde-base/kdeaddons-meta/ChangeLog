@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.36 2005/10/15 11:08:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.37 2005/10/22 06:37:51 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
+  kdeaddons-meta-3.5_beta1.ebuild, kdeaddons-meta-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *kdeaddons-meta-3.5.0_beta2 (14 Oct 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kvoctrain
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.26 2005/10/15 11:08:46 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.27 2005/10/22 07:40:05 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kvoctrain-3.5_beta1.ebuild,
+  kvoctrain-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *kvoctrain-3.5.0_beta2 (14 Oct 2005)
 

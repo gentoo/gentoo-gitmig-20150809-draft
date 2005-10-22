@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.25 2005/10/15 11:08:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.26 2005/10/22 06:36:43 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org>
+  kdeaccessibility-meta-3.5_beta1.ebuild,
+  kdeaccessibility-meta-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *kdeaccessibility-meta-3.5.0_beta2 (14 Oct 2005)
 

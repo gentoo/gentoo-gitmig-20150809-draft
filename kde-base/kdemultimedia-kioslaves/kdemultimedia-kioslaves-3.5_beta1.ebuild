@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5_beta1.ebuild,v 1.1 2005/09/22 18:31:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5_beta1.ebuild,v 1.2 2005/10/22 06:47:17 halcy0n Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=kioslave
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kioslaves from kdemultimedia package"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="encode flac mp3 vorbis"
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)
 	media-sound/cdparanoia

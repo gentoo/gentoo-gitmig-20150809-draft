@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.8 2005/10/19 18:38:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.9 2005/10/22 07:57:23 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> dcopc-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *dcopc-3.5.0_beta2 (19 Oct 2005)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.31 2005/10/18 00:51:55 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.32 2005/10/22 07:19:20 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kopete-3.5_beta1.ebuild:
+  Adding ~x86 to keywords
 
   18 Oct 2005; Douglas Russell <puggy@gentoo.org> kopete-3.5.0_beta2.ebuild:
   Keyword ~ppc and ~x86

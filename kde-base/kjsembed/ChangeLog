@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.28 2005/10/19 18:38:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.29 2005/10/22 07:55:03 halcy0n Exp $
+
+  22 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kjsembed-3.5.0_beta2.ebuild:
+  Adding ~x86 to keywords
 
 *kjsembed-3.5.0_beta2 (19 Oct 2005)
 
