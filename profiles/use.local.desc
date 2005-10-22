@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1513 2005/10/21 20:01:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1514 2005/10/22 13:06:17 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -599,6 +599,7 @@ media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/snd:gsl - Use the GNU scientific library for calculations
 media-sound/snd:ladspa - Enables the ability to support ladspa plugins
 media-sound/timidity++:ao - Use libao for sound playback
+media-sound/zinf:corba - Enables corba interface support
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/mythtv:frontendonly - Only builds the Frontend component rather then the whole suite
