@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.6 2005/08/02 22:50:53 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.7 2005/10/22 05:54:55 vapier Exp $
 
 inherit eutils
 
@@ -53,15 +53,15 @@ src_install() {
 	if use doc; then
 		dodoc README CHANGELOG ode/doc/ode.pdf
 		dohtml ode/doc/ode.html
-		dodir /usr/share/doc/${P}/html/pix/
-		insinto /usr/share/doc/${P}/html/pix/
+		dodir /usr/share/doc/${PF}/html/pix/
+		insinto /usr/share/doc/${PF}/html/pix/
 		doins ode/doc/pix/*.jpg
 		# install examples
-		dodir /usr/share/${P}/examples
-		exeinto /usr/share/${P}/examples
+		dodir /usr/share/${PF}/examples
+		exeinto /usr/share/${PF}/examples
 		doexe ode/test/*.exe
 		doexe drawstuff/dstest/dstest.exe
-		insinto /usr/share/${P}/examples
+		insinto /usr/share/${PF}/examples
 		doins ode/test/*.c ode/test/*.cpp
 		doins drawstuff/textures/*.ppm
 		doins drawstuff/dstest/dstest.cpp
