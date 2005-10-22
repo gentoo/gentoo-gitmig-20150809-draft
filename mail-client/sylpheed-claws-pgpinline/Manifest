@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 73af231d3106beb0e5e4e96d4e273707 sylpheed-claws-pgpinline-0.5.ebuild 847
 MD5 4a34d01569fa61af0bfb589e855d39ea ChangeLog 3063
-MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 7b58a0e557e8aa6e90553c8d244550af sylpheed-claws-pgpinline-0.5-r1.ebuild 1007
-MD5 abcc71c595357a8c9565de372117ae0d files/glib2-buildfix.patch 496
-MD5 18e62ef52ab0e737893cc86afa38be15 files/digest-sylpheed-claws-pgpinline-0.5-r1 85
 MD5 37698a2e1113f7b90ebb97a82e70df14 files/digest-sylpheed-claws-pgpinline-0.5 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDCzQr6J2i8a8J4okRAqRbAJ0SHgBsPbhk3XtU2T7EiG9QciEB6wCaA9iA
-Jz92N+DAd/1HoaRUnxT57gQ=
-=Hodv
------END PGP SIGNATURE-----
+MD5 18e62ef52ab0e737893cc86afa38be15 files/digest-sylpheed-claws-pgpinline-0.5-r1 85
+MD5 abcc71c595357a8c9565de372117ae0d files/glib2-buildfix.patch 496
+MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
+MD5 ca669b89b6f4c5657498dc98a193d02a sylpheed-claws-pgpinline-0.5-r1.ebuild 995
+MD5 96f63f9d4de06e9912ba0df2e427ae6e sylpheed-claws-pgpinline-0.5.ebuild 823
