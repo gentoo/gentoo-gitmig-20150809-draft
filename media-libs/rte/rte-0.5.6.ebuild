@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.2 2005/08/29 23:55:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rte/rte-0.5.6.ebuild,v 1.3 2005/10/22 16:23:01 vanquirius Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="esd? ( media-sound/esound )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -sparc"
+KEYWORDS="x86 -sparc"
 
 src_unpack() {
 	unpack ${A}
