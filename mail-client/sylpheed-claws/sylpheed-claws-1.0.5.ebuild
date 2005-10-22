@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.5.ebuild,v 1.7 2005/09/13 15:30:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.5.ebuild,v 1.8 2005/10/22 13:27:00 genone Exp $
 
 IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
@@ -12,7 +12,7 @@ PGP_VERSION="pgpinline-0.5"
 MAILDIR_VERSION="maildir-0.7"
 
 DESCRIPTION="Bleeding edge version of Sylpheed"
-HOMEPAGE="http://sylpheed-claws.sf.net"
+HOMEPAGE="http://claws.sylpheed.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 #SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~genone/distfiles/${P}.tar.bz2"
 
