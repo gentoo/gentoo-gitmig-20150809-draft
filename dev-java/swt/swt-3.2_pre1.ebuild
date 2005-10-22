@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.2 2005/09/10 21:55:00 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2_pre1.ebuild,v 1.3 2005/10/22 17:11:03 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="accessibility cairo firefox gnome mozilla"
 RDEPEND=">=virtual/jre-1.4
+		 >=x11-libs/gtk+-2.8.6
 		 mozilla? (
 		 			 firefox? ( >=www-client/mozilla-firefox-1.0.6 )
 					!firefox? ( >=www-client/mozilla-1.4 )
