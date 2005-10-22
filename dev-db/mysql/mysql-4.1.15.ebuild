@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.12_beta.ebuild,v 1.15 2005/10/21 08:58:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15.ebuild,v 1.1 2005/10/22 14:29:44 vivo Exp $
 
-inherit eutils flag-o-matic versionator
+inherit eutils gnuconfig flag-o-matic versionator
 
 SVER=${PV%.*}
 NEWP="${PN}-${PV}"
-NEWP="${NEWP/_beta/-beta}"
+#NEWP="${NEWP/_beta/-beta}"
 
 
 # shorten the path because the socket path length must be shorter than 107 chars
@@ -20,13 +20,13 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~x86 ~amd64 ~sparc ~ia64 ~ppc ~ppc64"
-KEYWORDS="~x86 ~amd64"
-IUSE="big-tables berkdb debug doc minimal perl readline selinux ssl static"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="big-tables berkdb debug doc minimal perl readline selinux ssl static tcpd"
 RESTRICT="primaryuri"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	bdb? ( sys-apps/ed )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
 	userland_GNU? ( sys-process/procps )
@@ -38,7 +38,12 @@ RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
 
 if version_is_at_least "4.1.3" ; then
-	IUSE="${IUSE} cluster utf8 geometry extraengine"
+	# 2005-09-29
+	#   geometry has been removed due to repeated compile problems _without_ it.
+	#   From now on it will be *always* enabled
+	#   if you need to compile *without it* take a look at 
+	#	http://lists.mysql.com/internals/29559
+	IUSE="${IUSE} cluster utf8 extraengine"
 fi
 
 mysql_upgrade_error() {
@@ -47,11 +52,13 @@ mysql_upgrade_error() {
 	ewarn "Some gentoo documentation on how to do it:"
 	ewarn "http://www.gentoo.org/doc/en/mysql-upgrading.xml"
 	ewarn "Also on the MySQL website:"
-	ewarn "http://dev.mysql.com/doc/refman/5.0/en/upgrading-from-4-1.html"
+	ewarn "http://dev.mysql.com/doc/refman/4.1/en/upgrading-from-4-0.html"
 	ewarn ""
 	ewarn "You can also choose to preview some new MySQL 4.1 behaviour"
 	ewarn "adding a section \"[mysqld-4.0]\" followed by the word \"new\""
 	ewarn "into /etc/mysql/my.cnf (you need a recent MySQL version)"
+	ewarn ""
+
 }
 
 mysql_upgrade_warning() {
@@ -103,7 +110,7 @@ pkg_setup() {
 
 	if [[ -z $MYSQL_STRAIGHT_UPGRADE ]] ; then
 		mysql_get_datadir
-		local curversion="dev-db/${PN}-${PV%.*}"
+		local local curversion="dev-db/${PN}-${PV%.*}"
 		local oldversion="$(best_version dev-db/mysql)"
 		oldversion=${oldversion%.*}
 
@@ -138,10 +145,9 @@ src_unpack() {
 
 	if version_is_at_least "4.1.3" \
 	&& useq cluster \
-	|| useq geometry \
 	|| useq extraengine \
 	&& useq minimal ; then
-		die "USEs cluster, geometry, extraengine conflicts with \"minimal\""
+		die "USEs cluster, extraengine conflicts with \"minimal\""
 	fi
 
 	unpack ${A} || die
@@ -153,30 +159,22 @@ src_unpack() {
 
 	local MY_PATCH_SOURCE="${WORKDIR}/mysql-extras"
 
-	epatch "${MY_PATCH_SOURCE}/010_all_my-print-defaults-r2.patch" || die
-	epatch "${MY_PATCH_SOURCE}/035_x86_asm-pic-fixes-r7.patch" || die
-	epatch "${MY_PATCH_SOURCE}/703_all_test-rpl_rotate_logs.patch" || die
-	epatch "${MY_PATCH_SOURCE}/705_all_view_geometry.patch" || die
+	epatch ${MY_PATCH_SOURCE}/010_all_my-print-defaults-r0.patch || die
+	epatch ${MY_PATCH_SOURCE}/030_all_thrssl-r1.patch || die
+	epatch ${MY_PATCH_SOURCE}/040_all_tcpd-vars-fix.patch || die
 
-	find . -name Makefile -o -name Makefile.in -o -name configure -exec rm {} \;
-	aclocal && autoheader \
-		|| die "failed reconfigure step 01"
-	libtoolize --automake --force \
-		|| die "failed reconfigure step 02"
-	automake --force --add-missing && autoconf \
-		|| die "failed reconfigure step 03"
-
-	if version_is_at_least "5.1_alpha" ; then
-		pushd storage/innobase || die "failed chdir"
-	else
-		pushd innobase || die "failed chroot"
-	fi
-	aclocal && autoheader && autoconf && automake
-	popd
-
-	pushd bdb/dist && sh s_all \
-		|| die "failed bdb reconfigure"
-	popd
+	for d in ${S} ${S}/innobase; do
+		cd ${d}
+		# WARNING, plain autoconf breaks it!
+		#autoconf
+		# must use this instead
+		WANT_AUTOCONF="2.59" autoreconf --force
+		# Fix the evil "libtool.m4 and ltmain.sh have a version mismatch!"
+		libtoolize --copy --force
+		# Saving this for a rainy day, in case we need it again
+		#WANT_AUTOMAKE=1.7 automake
+		gnuconfig_update
+	done
 
 	# Temporary workaround for bug in test suite, a correct solution
 	# should work inside the include files to enable/disable the tests
@@ -200,7 +198,6 @@ src_unpack() {
 			&> /dev/null
 		done
 	fi
-
 }
 
 src_compile() {
@@ -220,8 +217,7 @@ src_compile() {
 		myconf="${myconf} --enable-shared --enable-static"
 	fi
 
-	#myconf="${myconf} `use_with tcpd libwrap`"
-	myconf="${myconf} --without-libwrap"
+	myconf="${myconf} `use_with tcpd libwrap`"
 
 	if useq ssl ; then
 		# --with-vio is not needed anymore, it's on by default and
@@ -256,11 +252,17 @@ src_compile() {
 	# these are things we exclude from a minimal build
 	# note that the server actually does get built and installed
 	# but we then delete it before packaging.
-	local minimal_exclude_list="server embedded-server extra-tools innodb raid"
+	local minimal_exclude_list="server embedded-server extra-tools innodb"
 	if ! useq minimal; then
 		for i in ${minimal_exclude_list}; do
 			myconf="${myconf} --with-${i}"
 		done
+		if useq static ; then
+			myconf="${myconf} --without-raid"
+			ewarn "disabling raid support, has problem with static"
+		else
+			myconf="${myconf} --with-raid"
+		fi
 
 		if ! version_is_at_least "5.0_alpha" ; then
 			if version_is_at_least "4.1_alpha" && useq utf8; then
@@ -288,7 +290,8 @@ src_compile() {
 		fi
 
 		if version_is_at_least "4.1.3" ; then
-			myconf="${myconf} $(use_with geometry)"
+			myconf="${myconf} -with-geometry"
+			#myconf="${myconf} $(use_with geometry)"
 			myconf="${myconf} $(use_with cluster ndbcluster)"
 		fi
 
@@ -331,7 +334,6 @@ src_compile() {
 	export CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-exceptions -fno-rtti"
 	version_is_at_least "5.0_alpha" \
 	&& export CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
-
 	econf \
 		--libexecdir=/usr/sbin \
 		--sysconfdir=/etc/mysql \
@@ -360,9 +362,9 @@ src_test() {
 		local retstatus
 		addpredict /this-dir-does-not-exist/t9.MYI
 
-		version_is_at_least "5.0.6_beta" \
-		&& make test-force \
-		|| make test
+		version_is_at_least "5.0.13_rc" \
+		&& make test-force-pl \
+		|| make test-pl
 		retstatus=$?
 
 		# to be sure ;)
@@ -444,13 +446,14 @@ src_install() {
 	        chown -R mysql:mysql "${D}/${DATADIR}"
 		fi
 
-		diropts "-m0755"
-		dodir "/var/log/mysql"
-		touch ${D}/var/log/mysql/mysql.{log,err}
-		chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
-		keepdir "/var/log/mysql"
-		chown -R mysql:mysql "${D}/var/log/mysql"
+		#diropts "-m0755"
+		#dodir "/var/log/mysql"
+		#touch ${D}/var/log/mysql/mysql.{log,err}
+		#chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
+		#keepdir "/var/log/mysql"
+		#chown -R mysql:mysql "${D}/var/log/mysql"
 
+		diropts "-m0755"
 		dodir "/var/run/mysqld"
 
 		keepdir "/var/run/mysqld"
@@ -594,3 +597,18 @@ pkg_config() {
 	rm  "${sqltmp}"
 	einfo "done"
 }
+
+pkg_postinst() {
+	# mind at FEATURES=collision-protect before to remove this
+	#empty dirs...
+	[ -d "${ROOT}/var/log/mysql" ] \
+		|| install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
+
+	#secure the logfiles... does this bother anybody?
+	touch ${ROOT}/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
+	chmod 0660 ${ROOT}/var/log/mysql/mysql*
+	# secure some directories
+	chmod 0750 ${ROOT}/var/log/mysql
+}
+

@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.252 2005/10/21 08:58:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.253 2005/10/22 14:29:44 vivo Exp $
+
+*mysql-4.1.15 (22 Oct 2005)
+
+  22 Oct 2005; Francesco Riosa <vivo@gentoo.org> -mysql-4.0.22.ebuild,
+  -mysql-4.0.22-r2.ebuild, -mysql-4.0.24.ebuild, mysql-4.0.25-r2.ebuild,
+  mysql-4.0.26.ebuild, -mysql-4.1.13-r1.ebuild, mysql-4.1.14.ebuild,
+  +mysql-4.1.15.ebuild, -mysql-5.0.12_beta.ebuild, mysql-5.0.13_rc.ebuild:
+  - fix Bug #109951 and Bug #109881
+    Moved again creation of /var/log/mysql/* where it does not cause 
+    problems with FEATURES="collision-protect".
+    Side effect of the previous bug fix is that /var/log/mysql/* files
+    are not included anymore in the binpkg
+  - cleanup of old ebuilds
+  - version bump for 4.1.15
+    Disabling "raid" support with "static" use flag
+    test suite has inverted behaviour than 4.1.14, need to use the perl
+    based one here
 
   21 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
   mysql-4.0.26.ebuild, mysql-4.1.14.ebuild, mysql-5.0.12_beta.ebuild,

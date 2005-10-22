@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.13_rc.ebuild,v 1.5 2005/10/21 08:58:03 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.13_rc.ebuild,v 1.6 2005/10/22 14:29:44 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${SVER}/${NEWP}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~amd64 ~sparc ~ia64 ~ppc ~ppc64"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="big-tables berkdb debug doc minimal perl readline selinux ssl static"
 RESTRICT="primaryuri"
 
@@ -448,13 +448,14 @@ src_install() {
 	        chown -R mysql:mysql "${D}/${DATADIR}"
 		fi
 
-		diropts "-m0755"
-		dodir "/var/log/mysql"
-		touch ${D}/var/log/mysql/mysql.{log,err}
-		chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
-		keepdir "/var/log/mysql"
-		chown -R mysql:mysql "${D}/var/log/mysql"
+		#diropts "-m0755"
+		#dodir "/var/log/mysql"
+		#touch ${D}/var/log/mysql/mysql.{log,err}
+		#chmod 0660 ${D}/var/log/mysql/mysql.{log,err}
+		#keepdir "/var/log/mysql"
+		#chown -R mysql:mysql "${D}/var/log/mysql"
 
+		diropts "-m0755"
 		dodir "/var/run/mysqld"
 
 		keepdir "/var/run/mysqld"
@@ -598,3 +599,18 @@ pkg_config() {
 	rm  "${sqltmp}"
 	einfo "done"
 }
+
+pkg_postinst() {
+	# mind at FEATURES=collision-protect before to remove this
+	#empty dirs...
+	[ -d "${ROOT}/var/log/mysql" ] \
+		|| install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
+
+	#secure the logfiles... does this bother anybody?
+	touch ${ROOT}/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
+	chmod 0660 ${ROOT}/var/log/mysql/mysql*
+	# secure some directories
+	chmod 0750 ${ROOT}/var/log/mysql
+}
+
