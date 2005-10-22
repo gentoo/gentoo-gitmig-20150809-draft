@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.211 2005/10/21 18:24:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.212 2005/10/22 02:32:48 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1012,7 +1012,7 @@ unpack_pdv() {
 	[[ -z ${src} ]] && die "Could not locate source for '$1'"
 	[[ -z ${sizeoff_t} ]] && die "No idea what off_t size was used for this pdv :("
 
-	local shrtsrc="`basename ${src}`"
+	local shrtsrc=$(basename "${src}")
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
 	local metaskip=`tail -c ${sizeoff_t} ${src} | hexdump -e \"%i\"`
 	local tailskip=`tail -c $((${sizeoff_t}*2)) ${src} | head -c ${sizeoff_t} |  hexdump -e \"%i\"`
@@ -1094,9 +1094,8 @@ unpack_makeself() {
 
 	local shrtsrc=$(basename "${src}")
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
-	if [ -z "${skip}" ]
-	then
-		local ver="`grep -a '#.*Makeself' ${src} | awk '{print $NF}'`"
+	if [[ -z ${skip} ]] ; then
+		local ver=$(grep -a '#.*Makeself' "${src}" | awk '{print $NF}')
 		local skip=0
 		exe=tail
 		case ${ver} in
