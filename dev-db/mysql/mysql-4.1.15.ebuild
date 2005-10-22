@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15.ebuild,v 1.1 2005/10/22 14:29:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.15.ebuild,v 1.2 2005/10/22 16:51:04 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -154,7 +154,7 @@ src_unpack() {
 
 	mv "${WORKDIR}/${NEWP}" "${S}"
 	cd "${S}"
-	rm -rf "${S}/zlib"
+	rm -rf "${S}/zlib/"*.[ch]
 	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
 
 	local MY_PATCH_SOURCE="${WORKDIR}/mysql-extras"

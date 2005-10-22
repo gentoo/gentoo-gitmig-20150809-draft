@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.253 2005/10/22 14:29:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.254 2005/10/22 16:51:04 vivo Exp $
+
+  22 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.26.ebuild,
+  -mysql-4.1.13-r1.ebuild, mysql-4.1.14.ebuild, mysql-4.1.15.ebuild,
+  mysql-5.0.13_rc.ebuild:
+  less destructive zlib removal, still enforcing usage of the system zlib
 
 *mysql-4.1.15 (22 Oct 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.12 2005/10/22 14:29:44 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.13 2005/10/22 16:51:04 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -40,14 +40,6 @@ PDEPEND="perl? ( dev-perl/DBD-mysql )"
 mysql_upgrade_error() {
 	ewarn "Sorry, plain up/downgrade between different version of MySQL is (still)"
 	ewarn "un-supported."
-	ewarn "Some gentoo documentation on how to do it:"
-	ewarn "http://www.gentoo.org/doc/en/mysql-upgrading.xml"
-	ewarn "Also on the MySQL website:"
-	ewarn "http://dev.mysql.com/doc/mysql/en/upgrading-from-4-0.html"
-	ewarn ""
-	ewarn "You can also choose to preview some new MySQL 4.1 behaviour"
-	ewarn "adding a section \"[mysqld-4.0]\" followed by the word \"new\""
-	ewarn "into /etc/mysql/my.cnf (you need a recent MySQL version)"
 }
 
 mysql_upgrade_warning() {
