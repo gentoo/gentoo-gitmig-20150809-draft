@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.56 2005/10/18 04:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.57 2005/10/22 20:50:18 vapier Exp $
+
+  22 Oct 2005; Mike Frysinger <vapier@gentoo.org> swig-1.3.25.ebuild,
+  swig-1.3.27.ebuild:
+  No longer need to change the java find since the code has been tweaked
+  already to handle multiple results.
 
 *swig-1.3.27 (18 Oct 2005)
 

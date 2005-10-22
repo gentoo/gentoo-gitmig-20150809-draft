@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.2 2005/10/18 22:26:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.25.ebuild,v 1.3 2005/10/22 20:50:18 vapier Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -24,12 +24,6 @@ DEPEND="virtual/libc
 		dev-lang/tcl
 		X? ( dev-lang/tk )
 	)"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	sed -i -e 's:-name jni_md.h -print:-xtype f -name jni_md.h -print:g' configure
-}
 
 src_compile() {
 	strip-flags
