@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.139 2005/10/21 21:27:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.140 2005/10/22 18:55:11 suka Exp $
+
+  22 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.0.ebuild:
+  Add gtk use-flag for all the people wanting gtk-style (and the industrial
+  icons) but not all the other gnome-stuff (gnome-vfs, lockdown). If using the
+  gnome use-flag the gtk use-flag setting is overridden. Closes bug #110155
 
   21 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.0.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.3 2005/10/21 21:27:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.4 2005/10/22 18:55:11 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="curl eds gnome java kde ldap mozilla nas zlib xml2"
+IUSE="curl eds gnome gtk java kde ldap mozilla nas zlib xml2"
 
 PATCHLEVEL="OOO680"
 PATCHDIR="${WORKDIR}/ooo-build-${PV}"
@@ -36,6 +36,7 @@ RDEPEND="!app-office/openoffice-bin
 	gnome? ( >=x11-libs/gtk+-2.4
 		>=gnome-base/gnome-vfs-2.6
 		>=gnome-base/gconf-2.0 )
+	gtk? ( >=x11-libs/gtk+-2.4 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	kde? ( kde-base/kdelibs )
 	mozilla? ( >=www-client/mozilla-1.7.10 )
@@ -150,6 +151,9 @@ src_compile() {
 		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"` && [ ${JOBS} -gt 10 ] && export JOBS="10"
 	fi
 
+	# Make sure gnome-users get gtk-support
+	export GTKFLAG="`use_enable gtk`" && use gnome && GTKFLAG="--enable-gtk"
+
 	cd ${PATCHDIR}
 	autoconf || die
 	./configure ${MYCONF} \
@@ -161,7 +165,7 @@ src_compile() {
 		--with-num-cpus="${JOBS}" \
 		--with-binsuffix="2" \
 		--with-installed-ooo-dirname="openoffice" \
-		`use_enable gnome gtk` \
+		"${GTKFLAG}" \
 		`use_enable kde` \
 		--disable-access \
 		--disable-mono \
