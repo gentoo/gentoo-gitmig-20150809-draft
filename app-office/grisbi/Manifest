@@ -1,8 +1,18 @@
-MD5 5387e76e6294c5f60159aab38850fee9 metadata.xml 443
-MD5 d335a4ee555f08df0f1d4f7764bd2078 ChangeLog 3507
-MD5 62448d1154588cf7e57683b4721338dd grisbi-0.5.6.ebuild 1678
-MD5 e42b881cfef970d5735f24d44986f2fb grisbi-0.5.7.ebuild 1685
-MD5 34efdef1d5896910c218177e358bb019 files/grisbi.desktop 207
-MD5 4b586e8dc048875af95711c52e2f7ab3 files/grisbi-0.5.6-latex-unicode.patch 461
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e8d699fd7f0b245313cb66785503ba13 ChangeLog 3606
 MD5 25fe3a6e8d61a4ff5e7209f41d101e10 files/digest-grisbi-0.5.6 65
 MD5 3a58ad7603fa0514804ef4027dd31201 files/digest-grisbi-0.5.7 65
+MD5 4b586e8dc048875af95711c52e2f7ab3 files/grisbi-0.5.6-latex-unicode.patch 461
+MD5 34efdef1d5896910c218177e358bb019 files/grisbi.desktop 207
+MD5 62448d1154588cf7e57683b4721338dd grisbi-0.5.6.ebuild 1678
+MD5 de46a5458b7c6588cd6761737dd26464 grisbi-0.5.7.ebuild 1684
+MD5 5387e76e6294c5f60159aab38850fee9 metadata.xml 443
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDWYLpCRZPokWLroQRAi4HAJ9BDyMehcDBclltE2m91yKGwDvWSQCfU6I2
+OnnQMCBs0MQMH0bBlg/iHHY=
+=39kr
+-----END PGP SIGNATURE-----
