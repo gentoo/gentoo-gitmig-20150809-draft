@@ -45,11 +45,11 @@ MD5 3af6afd052caef27a0707c9b941d41c6 openssh-3.8.1_p1-r1.ebuild 4407
 MD5 007223c0520d91c52557714c4bc6b0ca openssh-3.9_p1-r3.ebuild 5010
 MD5 f57b335cd90d3ec4233a98c6617dce3b openssh-4.0_p1-r2.ebuild 5362
 MD5 6a8c34205a609252e4811a9ff5fbb8bf openssh-4.1_p1-r1.ebuild 5323
-MD5 da3c2285f1201b47e97a6ae506fb839a openssh-4.2_p1.ebuild 5273
+MD5 949e94179fedf55aff0863c52f3f9051 openssh-4.2_p1.ebuild 5274
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWYHzgIKl8Uu19MoRAlIQAJ46vJQgEpYnptZq3vDL5xw4ayCbUwCdHKdQ
-iSzHTQFHx/qyU/tWX56477c=
-=GtnT
+iD8DBQFDWdaFgIKl8Uu19MoRAkxDAJ9pNOoS/cAkbXcdB37r1P/evUN7UgCeNCpk
+wLCMdmyBJVXchxwp7b8vitg=
+=c4sy
 -----END PGP SIGNATURE-----

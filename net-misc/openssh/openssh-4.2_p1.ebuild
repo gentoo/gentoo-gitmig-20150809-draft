@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1.ebuild,v 1.11 2005/10/22 00:03:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.2_p1.ebuild,v 1.12 2005/10/22 06:04:32 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -56,7 +56,6 @@ src_unpack() {
 
 	use X509 && epatch "${DISTDIR}"/${X509_PATCH}
 	use sftplogging && epatch "${FILESDIR}"/openssh-4.2_p1-sftplogging-1.4-gentoo.patch.bz2
-	use skey && epatch "${FILESDIR}"/openssh-3.9_p1-skey.patch.bz2
 	use chroot && epatch "${FILESDIR}"/openssh-3.9_p1-chroot.patch
 	epatch "${FILESDIR}"/openssh-4.2_p1-selinux.patch
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch.bz2
@@ -81,10 +80,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
 	addwrite /dev/ptmx
+	addpredict /etc/skey/skeykeys #skey configure code triggers this
 
+	local myconf
 	# make sure .sbss is large enough
 	use skey && use alpha && append-ldflags -mlarge-data
 	if use ldap ; then
