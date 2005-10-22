@@ -1,4 +1,4 @@
-MD5 778f8704e7f800010b6e1c0f951cb26f ChangeLog 3033
+MD5 94bda7abb36cb793e062b6aca5d55a47 ChangeLog 3137
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmailcvt-3.4.1 208
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-kmailcvt-3.4.1-r1 208
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-kmailcvt-3.4.3 67
@@ -9,5 +9,5 @@ MD5 4840c4d850f6d4f468b7e2217ec22b61 kmailcvt-3.4.1-r1.ebuild 471
 MD5 cef98d58639182ee17a50ebbdc116f34 kmailcvt-3.4.1.ebuild 384
 MD5 97f9ad777f0acc3cc000552811a1112f kmailcvt-3.4.3.ebuild 399
 MD5 4d3690153586214ca879fb5e78cd229d kmailcvt-3.5.0_beta2.ebuild 380
-MD5 21cdf4f0e1c04d166a272376da82fc99 kmailcvt-3.5_beta1.ebuild 372
+MD5 5ab92d8621cb17f96bf468c482e62c5c kmailcvt-3.5_beta1.ebuild 375
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 40337ad1982cc76d9875c41fedddf3d4 ChangeLog 3112
+MD5 0e804ba27c41412b35ead9959f4c66d8 ChangeLog 3225
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-libkpimexchange-3.4.1 208
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-libkpimexchange-3.4.3 67
 MD5 272c5df8f8a9b01e08acbeb4bb050f61 files/digest-libkpimexchange-3.5.0_beta2 212
@@ -6,5 +6,5 @@ MD5 e4e6543138c08f4f74d9c68aa53f6c06 files/digest-libkpimexchange-3.5_beta1 68
 MD5 26596c7dc6ebbbcb8f61ef8078b79563 libkpimexchange-3.4.1.ebuild 960
 MD5 21e3ef0e557eb59f7f7be90bacf75276 libkpimexchange-3.4.3.ebuild 969
 MD5 1972ef9cec95a39d33a977d1781e8c8a libkpimexchange-3.5.0_beta2.ebuild 919
-MD5 dbff192cdc9d59c03e6312122cbee885 libkpimexchange-3.5_beta1.ebuild 943
+MD5 a9b933cf7f12a39865b0ca337ca8673e libkpimexchange-3.5_beta1.ebuild 946
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

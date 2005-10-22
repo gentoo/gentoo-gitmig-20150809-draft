@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 1202799de5a32c9aa62044367944c1e4 knewsticker-scripts-3.4.1.ebuild 520
-MD5 386fedd001988a96b6cc9898e0e3e148 ChangeLog 3004
-MD5 adbb6c4e99f9f4037b83b3e87873a4b1 knewsticker-scripts-3.5.0_beta2.ebuild 466
-MD5 16c63967235a98707543758fd74dcc16 knewsticker-scripts-3.4.3.ebuild 528
-MD5 52c14058c546e986fe4f9a7e36b19444 knewsticker-scripts-3.5_beta1.ebuild 502
-MD5 c87a32e577bf07599564a43d36f80fef files/digest-knewsticker-scripts-3.5.0_beta2 218
-MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-knewsticker-scripts-3.4.3 69
+MD5 a807f9be9d356795aaecb14fdbef91b2 ChangeLog 3160
 MD5 60c005ebe876a0e127dcf1083620803e files/digest-knewsticker-scripts-3.4.1 215
+MD5 5c3e9d5cad224b1bbe07653e24cf97a3 files/digest-knewsticker-scripts-3.4.3 69
+MD5 c87a32e577bf07599564a43d36f80fef files/digest-knewsticker-scripts-3.5.0_beta2 218
 MD5 d9f3b4e8b636086a5e9a145444ed5906 files/digest-knewsticker-scripts-3.5_beta1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVECfJrHF4yAQTrARAgRMAKCEOFVSspots3u1eK0QT24Pm/htKQCghayZ
-eDpPCOgr9jjnrdurq4rUorw=
-=GJ/o
------END PGP SIGNATURE-----
+MD5 1202799de5a32c9aa62044367944c1e4 knewsticker-scripts-3.4.1.ebuild 520
+MD5 16c63967235a98707543758fd74dcc16 knewsticker-scripts-3.4.3.ebuild 528
+MD5 fe6ae04f9a8620125006b2b71c194554 knewsticker-scripts-3.5.0_beta2.ebuild 470
+MD5 c40f24a2ccfd4e7cc860d7baf87b9a44 knewsticker-scripts-3.5_beta1.ebuild 505
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

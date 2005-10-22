@@ -1,4 +1,4 @@
-MD5 b99772bfa2e74616b292fd0270f4f74f ChangeLog 2076
+MD5 804a715fae08a6df40842ae19364310b ChangeLog 2279
 MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-xparts-3.3.1 71
 MD5 6a7b860a285423d0fc6516e274fcaaea files/digest-xparts-3.4.1 221
 MD5 7b7cadef2c4eb7dc5409c01c4e689481 files/digest-xparts-3.5.0_beta2 225
@@ -6,4 +6,4 @@ MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 ca9550c47090fc658c5e454dc7069f9c xparts-3.3.1.ebuild 1244
 MD5 14e232766ea82cd9591e2c5be9b94194 xparts-3.4.1.ebuild 1201
-MD5 42ef87214039d8f9b901bfa86f291602 xparts-3.5.0_beta2.ebuild 1197
+MD5 e6baff27c4ecdd9058bd09df9074f1ff xparts-3.5.0_beta2.ebuild 1201

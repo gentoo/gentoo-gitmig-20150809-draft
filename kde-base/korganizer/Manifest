@@ -1,4 +1,4 @@
-MD5 6a7ffe86d614301dd18981c718a8b5d1 ChangeLog 2984
+MD5 0d94abd7f2eab08d4e01c14ed435e7b3 ChangeLog 3090
 MD5 e8e3fc943d40a2fa3260a042e8f0dcf6 files/digest-korganizer-3.4.1 208
 MD5 ed5f8c08265b32641a4cc480b7414fce files/digest-korganizer-3.4.2 282
 MD5 1abd06c61033b13feaa26798ccacf032 files/digest-korganizer-3.4.3 67
@@ -8,5 +8,5 @@ MD5 5c29d0f89ffe92e5785210c8adc7f619 korganizer-3.4.1.ebuild 1775
 MD5 d4050f3b2c5989e74656f3a0652e5317 korganizer-3.4.2.ebuild 1792
 MD5 7be360aa4d717da6b668367f76dbba61 korganizer-3.4.3.ebuild 1790
 MD5 fdeb479c39841ddd751e9fc40c9ed3b8 korganizer-3.5.0_beta2.ebuild 1772
-MD5 e45f73eb36d4640313ea4502b7563d7c korganizer-3.5_beta1.ebuild 1764
+MD5 c37ef8c7ac2a9749fe2ab8c03c337782 korganizer-3.5_beta1.ebuild 1767
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156

@@ -1,4 +1,4 @@
-MD5 63e6ff363dcb402c8a1dfa52e1a03132 ChangeLog 3139
+MD5 0bb9ed8f6746d9bc1473cfefe9a4c972 ChangeLog 3249
 MD5 d4f721aede14b18d9aa83c9d9f18900d files/configure-fix-kdeartwork-libart.patch 2503
 MD5 205c13a78065c2decb403b1984abab5f files/configure-fix-kdeartwork-xscreensaver.patch 1577
 MD5 b22a687fe2e8cf06cd5147f1ec68efb7 files/digest-kscreensaver-3.4.1 212
@@ -10,5 +10,5 @@ MD5 39002f99dacfa6fcdc7ec202e3fe3790 kscreensaver-3.4.1.ebuild 520
 MD5 0af9b25b83b198577161f5dadfd4526e kscreensaver-3.4.2.ebuild 532
 MD5 4fa159b6e17c22ccf92e282b95266a66 kscreensaver-3.4.3.ebuild 534
 MD5 ad0205b7410093b24946d18320380724 kscreensaver-3.5.0_beta2.ebuild 516
-MD5 2133b90e339758594f75fe26d519268b kscreensaver-3.5_beta1.ebuild 508
+MD5 9ea5fa0ae3ca1cb3023e865060c835b4 kscreensaver-3.5_beta1.ebuild 511
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
