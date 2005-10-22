@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 c36fd974b895b5399c6488149ebfefde ChangeLog 436
-MD5 731034515b08edd640359ebdd66fa0f5 caucho-services-2.1.12.ebuild 1001
+MD5 9f24a20166a5bd2caf4acf1e14ad46d7 caucho-services-2.1.12.ebuild 1056
 MD5 775360389b5005eb491ecb0c6da02780 files/digest-caucho-services-2.1.12 73
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWqB7QiJ/wx066S4RAtQOAJ9T7ugyyH8JgdxYzvt+kwh2TcLp9wCfbOIc
-eJGWzO/9k13u+68KmwZLiMs=
-=z3kO
+iD8DBQFDWqSDQiJ/wx066S4RAjBBAJ4/k/V/Oys2GzkRjH8qWpAyWgLkCQCePihp
+t1XbOMf+SmYJylgwax2wjLw=
+=5E2N
 -----END PGP SIGNATURE-----

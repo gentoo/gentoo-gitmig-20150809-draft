@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/caucho-services-2.1.12.ebuild,v 1.1 2005/10/22 20:25:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/caucho-services/caucho-services-2.1.12.ebuild,v 1.2 2005/10/22 20:42:33 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -19,6 +19,8 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
 		dev-java/ant-core
+		jikes? ( dev-java/jikes )
+		source? ( app-arch/zip )
 		${RDEPEND}"
 
 src_compile() {
