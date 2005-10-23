@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.54 2005/10/22 17:35:39 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.55 2005/10/23 15:25:48 weeve Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -463,7 +463,10 @@ linux-mod_pkg_setup() {
 	check_kernel_built;
 	check_modules_supported;
 	set_kvobj;
-	check_vermagic;
+	# Commented out with permission from johnm until a fixed version for arches
+	# who intentionally use different kernel and userland compilers can be
+	# introduced - Jason Wever <weeve@gentoo.org>, 23 Oct 2005
+	#check_vermagic;
 }
 
 linux-mod_src_compile() {
