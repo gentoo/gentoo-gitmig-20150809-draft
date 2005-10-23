@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.27 2005/10/22 17:11:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.28 2005/10/23 04:29:00 compnerd Exp $
+
+  24 Oct 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.2_pre1.ebuild:
+  Updating CAIRO depend.  Minor ebuild cleanup.
 
   23 Oct 2005; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.2_pre1.ebuild:
   Fixing dependency on GTK+  Resolves bug #109267
