@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 682fe1f9c08a4d3f4b5608d93e6c36b1 ChangeLog 971
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 3a5128d624103803bd71227425b11a08 basket-0.4.0d.ebuild 503
-MD5 2e70f00f82224d74173682ed9cbea819 basket-0.5.0.ebuild 763
+MD5 4134f56d7d4f104e49a09091bc468bd4 basket-0.5.0.ebuild 652
+MD5 9a857873d6c9b63c730dd9daca71ac9a ChangeLog 1072
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 1a9c1e6cd25c2910634165d0a87ed671 files/digest-basket-0.5.0 79
 MD5 8433b9ef958f62f31c4a2b5c3c45b520 files/digest-basket-0.4.0d 65
 MD5 770706f890ef65821f7eaa27000313e4 files/basket-0.5.0-noarts.patch 3468
-MD5 1a9c1e6cd25c2910634165d0a87ed671 files/digest-basket-0.5.0 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCtZfkl5AvwDPiUowRAqxlAKC/mlkCKIKVXn9t8FRaMImNFsRzNACfdxnj
-PB5u4SD4ZL5zZmql85xm+FU=
-=VK18
------END PGP SIGNATURE-----
