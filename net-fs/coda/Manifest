@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 469a020b1649b3e874d9c772e8003da1 ChangeLog 5126
-MD5 6018929c97b227fa6d769263fd4534a2 coda-6.0.10.ebuild 7736
-MD5 1ace070514205dcf1b63261baf94c49c coda-6.0.11.ebuild 7659
-MD5 76e5ad6cb465f82a6f28b7e9097aece9 coda-6.0.12.ebuild 7659
+MD5 a1ccb711cf71f01ddb5118676c3a9bd1 ChangeLog 5333
+MD5 c048c72d0ae39dc5e46aa54d70669160 coda-6.0.10.ebuild 7736
+MD5 304c6f62d91a078ed731d55cb9a6d43e coda-6.0.11.ebuild 7659
+MD5 88d284f6d2265c46ef1b18e7116da46a coda-6.0.12.ebuild 7659
 MD5 b4e38a53462318a1c6db3a3b1d7e3db3 files/6.0.10/venus 703
 MD5 818953dac5d5dd5981ea6b6125cc7d91 files/6.0.11/venus 703
 MD5 e8eceaf4a75c95c4960701632ab31578 files/6.0.12/venus 703
@@ -19,7 +19,7 @@ MD5 f905a614fde3a85e0adefb203ece18fc metadata.xml 321
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDU/iBMGnpIbeahxwRAjEQAJ9kCVmcVpQq1+676LzZ3QepNqoBrACdH7fQ
-utUsBYm2TUV2SrmYMydWyqM=
-=ZOsC
+iD8DBQFDW1zHMGnpIbeahxwRAi10AKCy5S3+9Mgh8CgrZ02Ts0Pv7l9EsQCgjf1Z
+Fwj94tV/X3wiCllx1bjiUhU=
+=9uNn
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.11.ebuild,v 1.3 2005/10/17 19:15:48 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.11.ebuild,v 1.4 2005/10/23 09:49:37 griffon26 Exp $
 
 inherit eutils
 
@@ -111,7 +111,7 @@ pkg_postinst () {
 	einfo "To get started, run vice-setup and venus-setup."
 	einfo
 	einfo "Alternatively you can get a default coda setup by running:"
-	einfo "    ebuild --config =${PF}"
+	einfo "    emerge --config =${PF}"
 }
 
 pkg_config () {
