@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>netmon</herd>
-<longdescription>Snorticus is a collection of shell scripts designed to allow easy management of Snort sensors.</longdescription>
-</pkgmetadata>
