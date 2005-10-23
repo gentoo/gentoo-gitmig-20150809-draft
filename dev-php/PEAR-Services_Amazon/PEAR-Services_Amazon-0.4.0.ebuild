@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/PEAR-Services_Amazon-0.3.1.ebuild,v 1.1 2005/10/10 13:35:09 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Amazon/PEAR-Services_Amazon-0.4.0.ebuild,v 1.1 2005/10/23 05:41:28 sebastian Exp $
 
 inherit php-pear-r1
 
