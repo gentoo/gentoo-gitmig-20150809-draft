@@ -2,8 +2,8 @@ MD5 06a2fa1e0308f065f818db6fae959fe9 metadata.xml 257
 MD5 6c2dbb020749666ec5b29ce60d0bb242 syslog-ng-1.6.5-r2.ebuild 1662
 MD5 cbc7874f982b353d4572bfb305a83397 syslog-ng-1.6.7.ebuild 1794
 MD5 8888c99dea38bb903bb48307590918ee syslog-ng-1.6.8.ebuild 1860
-MD5 8f382c63e19540115b78da4878225d6f syslog-ng-1.6.8-r1.ebuild 2030
-MD5 fb03117f23dc38fd5031399647b9853e ChangeLog 15097
+MD5 a2dcef1d32d21d1f34e0671a03f82d88 syslog-ng-1.6.8-r1.ebuild 2029
+MD5 c0e9d4a11dc47d4b2bc6a767012f5112 ChangeLog 15199
 MD5 3dd4a02b90618330fe2c13f839307df0 syslog-ng-1.6.6.ebuild 1811
 MD5 16631a83d959b680a453099a5dee73a8 files/digest-syslog-ng-1.6.6 67
 MD5 64a1b2ff422529b8bafc38f12d790376 files/syslog-ng.conf.gentoo 1067
