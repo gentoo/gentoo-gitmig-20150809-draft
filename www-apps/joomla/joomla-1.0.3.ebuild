@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.1.ebuild,v 1.3 2005/10/23 15:02:24 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.3.ebuild,v 1.1 2005/10/23 21:59:23 rl03 Exp $
 
 inherit webapp eutils
 
-MY_P="${PN/j/J}_${PV}-Stable"
 DESCRIPTION="Joomla is one of the most powerful Open Source Content Management
 Systems on the planet."
 HOMEPAGE="http://www.joomla.org/"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
