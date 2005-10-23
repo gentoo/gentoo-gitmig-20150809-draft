@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.22 2005/10/23 14:46:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.23 2005/10/23 20:28:06 halcy0n Exp $
+
+  23 Oct 2005; Mark Loeser <halcy0n@gentoo.org> opera-8.50.ebuild:
+  Stable on x86; bug #109936
 
   23 Oct 2005; Joseph Jezak <josejx@gentoo.org> opera-8.50.ebuild:
   Marked ppc stable.
