@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.16.ebuild,v 1.3 2005/04/28 00:40:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.16.ebuild,v 1.4 2005/10/23 22:32:57 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -44,7 +44,7 @@ pkg_postinst() {
 	einfo "To add ${PN} to your services file just run"
 	einfo "this command after you install:"
 	echo
-	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo "emerge  --config =${PF}"
 }
 
 pkg_config() {
