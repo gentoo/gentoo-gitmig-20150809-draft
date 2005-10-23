@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.6.9.ebuild,v 1.1 2005/10/14 02:26:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtiplot/qtiplot-0.7.ebuild,v 1.1 2005/10/23 15:02:38 cryos Exp $
+
+inherit eutils
 
 IUSE=""
 DESCRIPTION="Qt based clone of the Origin plotting package"
@@ -38,7 +40,6 @@ src_compile () {
 }
 
 src_install() {
-	cd ${S}
+	make_desktop_entry qtiplot qtiplot qtiplot Graphics
 	dobin qtiplot || die 'Binary installation failed.'
-#	dohtml *.html (doesn't appear to be any documentation)
 }
