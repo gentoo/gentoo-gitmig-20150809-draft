@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e1f76089d001e98aec17a95f920dcd3 ChangeLog 845
-MD5 3828d2f77c0b7aecbdda4339290ef267 files/digest-polymer-0.3.2 66
+MD5 a196660cf195b7cebce88198a399be0a polymer-0.3.2.ebuild 930
+MD5 4e137952b39ee453d55068b6f4dfcf71 ChangeLog 933
 MD5 2f25ed577cbe195d965fe51b7b257f11 metadata.xml 487
-MD5 9634ed20fe26ab365767615f3b457059 polymer-0.3.2.ebuild 931
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDW5msntT9W3vfTuoRApZ+AJ0Y/XUDt4F2x/xdZfEjYHL2BOFf9ACfSzt7
-pMvbZxNwY1+anArJlE6it6c=
-=JMZQ
------END PGP SIGNATURE-----
+MD5 3828d2f77c0b7aecbdda4339290ef267 files/digest-polymer-0.3.2 66
