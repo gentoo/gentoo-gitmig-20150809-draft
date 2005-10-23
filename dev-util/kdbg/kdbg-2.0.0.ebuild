@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.0.0.ebuild,v 1.3 2005/10/22 01:03:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.0.0.ebuild,v 1.4 2005/10/23 17:37:49 carlo Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://members.nextra.at/johsixt/kdbg.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-devel/gdb-5.0"
