@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a88d65346ebb5a16a9e06043b81bda80 ChangeLog 518
 MD5 3ecbbe6777dd00034441f6c95d36df9c burlap-2.1.12.ebuild 1400
 MD5 697b62a1b281878b1212d2236aa808df burlap-3.0.8.ebuild 1374
@@ -5,3 +8,10 @@ MD5 c089b7d34f96c556a34bb8c402794023 files/build-2.1.12.xml 1546
 MD5 7f2aa42b2e06ae864ebe9f4e946c1446 files/digest-burlap-2.1.12 66
 MD5 665567e9968b5379daa1bc7eecaab593 files/digest-burlap-3.0.8 64
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDW372QiJ/wx066S4RAmVsAJ9BFDKR6I7lIe1qmuDYJnHpx+tE4wCgh2vI
+haj1tYuohkF/aFdHeRhiGIQ=
+=rDjC
+-----END PGP SIGNATURE-----
