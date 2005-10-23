@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 96b25db563dc7079cb5293701c67b10a phprojekt-5.0.1.ebuild 933
 MD5 a330d108aba1ec4937addc23fa5aac89 phprojekt-4.2.3.ebuild 1176
-MD5 7725582adfbf451be05cc06571caec11 phprojekt-5.0.ebuild 968
-MD5 61dd6fcfbc927aec9b5716a9b60f5467 ChangeLog 3658
+MD5 33a61c6ec9cc3af572c511ce12d623da ChangeLog 3803
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 ea1a78c6499e50ff18624b82294686d6 files/postinstall-en.txt 612
 MD5 6eaeb910f5378708b62665ecdaaf8be2 files/phprojekt-4.2.3-fix-chat-vuln.diff 773
 MD5 0a2c5111e69c0d6f6c3299c5d892f427 files/digest-phprojekt-4.2.3 170
-MD5 0249c2be31c6433d178a9c67bc2c8593 files/digest-phprojekt-5.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDClozEzitwsaoONoRArdrAJ9+6q5VvkAdtJcIfQ0cejPfHIFYFQCeJjRq
-DzfaQh0FcUEQqT7akSK08h8=
-=TXBS
------END PGP SIGNATURE-----
+MD5 195b337dbdc69faa7a462ef7bae29418 files/digest-phprojekt-5.0.1 68
