@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.3 2005/10/02 14:02:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.4 2005/10/23 14:41:23 spock Exp $
 
 inherit eutils
 
@@ -105,8 +105,9 @@ src_install() {
 	# are more or less the same.  -- Fabian Groffen (2005-06-30)
 	if use ppc-macos; then
 		rm -f ${D}/usr/lib/charset.alias
-		rm -f ${D}/usr/share/locale/locale.alias
 	fi
+
+	rm -f ${D}/usr/share/locale/locale.alias
 }
 
 # Disable it as the only test available is interactive..
