@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-3.0.0.ebuild,v 1.1 2005/08/12 10:29:45 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_mysql/mod_auth_mysql-3.0.0.ebuild,v 1.2 2005/10/23 03:53:14 halcy0n Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/modauthmysql/${P}.tar.gz"
 
 DEPEND="dev-db/mysql"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 
 BASE_CONFIG_PVR="2.8.1"
