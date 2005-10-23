@@ -3,7 +3,7 @@ Setup Completion
 
 If there is no existing TikiWiki install and database you will need to
 create an empty database for TikiWiki before starting setup.
-You can run the pkg_config script in the ebuild, or (MySQL):
+You can run "emerge --config =${PF}", or (MySQL):
 
 mysql -p -u root mysql <<__EOSQL
   CREATE DATABASE tiki;
