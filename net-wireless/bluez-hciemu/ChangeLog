@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-hciemu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.7 2005/07/06 10:40:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.8 2005/10/23 10:33:18 brix Exp $
+
+  23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  bluez-hciemu-1.2.ebuild:
+  Stable on x86, bug #103095.
 
 *bluez-hciemu-1.2 (06 Jul 2005)
 
