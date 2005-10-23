@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.2_pre20050605.ebuild,v 1.3 2005/07/19 12:06:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.2_pre20051020.ebuild,v 1.1 2005/10/23 17:29:00 cardoe Exp $
+
+inherit eutils
 
 S=${WORKDIR}/nuvexport-0.2
 DESCRIPTION="Export from mythtv recorded NuppelVideo files"
 HOMEPAGE="http://www.forevermore.net/mythtv/"
-SRC_URI="http://www.forevermore.net/files/nuvexport/nuvexport-0.2-0.20050605.cvs.tar.bz2
-	http://www.forevermore.net/files/nuvexport/archive/nuvexport-0.2-0.20050605.cvs.tar.bz2"
+SRC_URI="http://www.forevermore.net/files/nuvexport/nuvexport-0.2-0.20051020.svn.tar.bz2
+	http://www.forevermore.net/files/nuvexport/archive/nuvexport-0.2-0.20051020.svn.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 
@@ -28,24 +30,22 @@ RDEPEND="dev-perl/DBI
 	media-tv/mythtv"
 
 pkg_setup() {
-	local trans_use="$(</var/db/pkg/`best_version media-video/transcode`/USE)"
-	if ! has mjpeg ${trans_use} ; then
+	if ! built_with_use media-video/transcode mjpeg ; then
 		eerror "media-video/transcode is missing mjpeg support. Please add"
 		eerror "'mjpeg' to your USE flags, and re-emerge media-video/transcode."
 		die "transcode needs mjpeg support"
 	fi
 
-	local ffmpeg_use="$(</var/db/pkg/`best_version media-video/ffmpeg`/USE)"
 	ffmpeg_need="aac dvd encode threads xvid"
 	for flag in ${ffmpeg_need} ; do
-		if ! has ${flag} ${ffmpeg_use} ; then
+		if ! built_with_use media-video/ffmpeg ${flag} ; then
 			eerror "media-video/ffmpeg is missing ${flag} support. Please add"
 			eerror "'${flag}' to your USE flags, and re-emerge media-video/ffmpeg."
 			die "ffmpeg needs ${flag} support"
 		fi
 	done
 
-	if has pic ${ffmpeg_use} ; then
+	if built_with_use media-video/ffmpeg pic ; then
 		ewarn "You have 'pic' enabled in your USE for your ffmpeg build. This is NOT"
 		ewarn "recommended as it will hurt your performance badly. Only use this if"
 		ewarn "necessary for your arch."
