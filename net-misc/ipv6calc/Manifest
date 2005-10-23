@@ -1,13 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 baadccf927e3003ec8ff51bb8061ca74 ChangeLog 796
-MD5 389e8590f0f6a4d170256fbf2d9c6e29 files/digest-ipv6calc-0.45 65
+MD5 7d2899b942500736ac203010c3a26c50 ipv6calc-0.50.ebuild 660
+MD5 ed9b3da98b412722bee524415cfd1f36 ChangeLog 948
+MD5 0cfca467e84241c868c54b1740b5d1e3 metadata.xml 220
 MD5 d47d5c17ff31ab8156b7627a931d991f ipv6calc-0.45.ebuild 720
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC68FQI1lqEGTUzyQRAssSAKDWV+O33vHGg3BANyrqc0dyp1moKwCgmvBr
-HnwtUL8ygQPbzqn3cDMOSiM=
-=k0OF
------END PGP SIGNATURE-----
+MD5 389e8590f0f6a4d170256fbf2d9c6e29 files/digest-ipv6calc-0.45 65
+MD5 988a6afec624745df5882167c7310b36 files/digest-ipv6calc-0.50 65
