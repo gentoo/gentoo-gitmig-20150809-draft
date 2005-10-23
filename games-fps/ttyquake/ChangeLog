@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ttyquake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ttyquake/ChangeLog,v 1.4 2005/05/17 18:28:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ttyquake/ChangeLog,v 1.5 2005/10/23 21:29:11 mr_bones_ Exp $
+
+  23 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  ttyquake-0.4.2.ebuild:
+  make keywords match games-fps/quake1
 
   17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> ttyquake-0.4.2.ebuild:
   Cleanup for bug #92745.
