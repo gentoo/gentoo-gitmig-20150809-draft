@@ -3,18 +3,20 @@ Hash: SHA1
 
 MD5 e17d38be862fddd5f77f546d789a0102 gallery-2.0.ebuild 995
 MD5 4d5507b46a55c4d8ed0d5bcbec9acbcf gallery-1.5_p1.ebuild 981
-MD5 44fcb586d4affdc858a16be45c7fa924 gallery-1.5.1.ebuild 986
-MD5 9070c2900f899125e764a2fe92249bd0 ChangeLog 8947
+MD5 ee46f62377995bf9784aa4bdde3fa290 gallery-2.0.1.ebuild 997
+MD5 73236b6975260c00097fd899ae3c7cba gallery-1.5.1.ebuild 986
+MD5 84981a90dd146b5ca5a86ac7313827b8 ChangeLog 9112
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 d86a2cffa618ecf7fe9a2b001be69523 files/postinstall-en.txt 430
 MD5 d8aa1a55fbfe46c99088bb0c360794f2 files/postinstall-en2.txt 770
 MD5 57ed8c8bd13cb72d366ece232dcc2fe9 files/digest-gallery-1.5.1 66
+MD5 333c010f344b786fc985f3f1bff279ff files/digest-gallery-2.0.1 71
 MD5 b3af300647af02a72b020a046286d440 files/digest-gallery-2.0 69
 MD5 60f82816cecf216b054f0e889324bcde files/digest-gallery-1.5_p1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDMy6kEzitwsaoONoRArwbAJ47lBazyeJ9T8vXS31iI6d+4LI7pwCgl50Q
-neMOYDRAYZI/0QLI8PZGymk=
-=PBvu
+iD8DBQFDW+WKEzitwsaoONoRAoUCAJ9qsyO7r7Iz6v6NsHGJPjZeuZOgfACgsZS+
+Q3anLuusNtfkAIk3CBkS0os=
+=I7zQ
 -----END PGP SIGNATURE-----
