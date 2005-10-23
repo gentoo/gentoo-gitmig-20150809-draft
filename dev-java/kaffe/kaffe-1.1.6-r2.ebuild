@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.6-r1.ebuild,v 1.1 2005/10/09 22:05:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.6-r2.ebuild,v 1.1 2005/10/23 15:23:36 betelgeuse Exp $
 
 inherit base eutils java flag-o-matic
 
@@ -109,7 +109,7 @@ src_install() {
 	local javadoc=${D}/opt/${P}/bin/javadoc
 	# xno append here to zero the kaffe installed one
 	echo '#!/bin/bash' > ${javadoc}
-	echo '/usr/bin/gjdoc ${@}' >> ${javadoc}
+	echo 'exec /usr/bin/gjdoc "${@}"' >> ${javadoc}
 }
 
 pkg_postinst() {
