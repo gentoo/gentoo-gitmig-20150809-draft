@@ -1,6 +1,18 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.72 2005/09/21 17:23:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.73 2005/10/23 19:46:25 mkennedy Exp $
+
+*sbcl-0.9.5 (23 Oct 2005)
+
+  23 Oct 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9.5/README.Gentoo,
+  +files/0.9.5/customize-target-features.lisp-prefix,
+  +files/0.9.5/customize-target-features.lisp-suffix,
+  +files/0.9.5/install-clc.lisp, +files/0.9.5/sbcl.sh,
+  +files/0.9.5/sbcl-gentoo.patch, +files/0.9.5/sbclrc, metadata.xml,
+  +sbcl-0.9.5.ebuild:
+  New upstream version; Revise metadata.xml for recent changes in NPTL/Linux
+  2.6 threading support changes; Resolves Bug #110046.
 
   21 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> sbcl-0.9.4.ebuild:
   Stable on sparc
