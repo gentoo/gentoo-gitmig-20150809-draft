@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0.ebuild,v 1.1 2005/10/20 13:29:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.0.ebuild,v 1.2 2005/10/23 21:33:02 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -52,6 +52,7 @@ SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz
 	linguas_pa_IN? ( ${LANGPACKPATH}_pa-IN.tar.gz )
 	linguas_pl? ( ${LANGPACKPATH}_pl.tar.gz )
 	linguas_pt_BR? ( ${LANGPACKPATH}_pt-BR.tar.gz )
+	linguas_ru? ( ${LANGPACKPATH}_ru.tar.gz )
 	linguas_rw? ( ${LANGPACKPATH}_rw.tar.gz )
 	linguas_sh_YU? ( ${LANGPACKPATH}_sh-YU.tar.gz )
 	linguas_sk? ( ${LANGPACKPATH}_sk.tar.gz )
@@ -104,7 +105,7 @@ src_unpack() {
 	use gnome && rpm_unpack ${S}/openoffice.org-gnome-integration-${PV}-3.i586.rpm
 	use java && rpm_unpack ${S}/openoffice.org-javafilter-${PV}-3.i586.rpm
 
-	strip-linguas en af be_BY bg bn br ca cs cy da de el en_GB es et fi fr ga gu_IN hr hu it ja km ko lt lv mk nb ne nl nn ns pa_IN pl pt_BR rw sh_YU sk sl sr_CS sv sw_TZ tn tr vi xh zh_CN zh_TW zu
+	strip-linguas en af be_BY bg bn br ca cs cy da de el en_GB es et fi fr ga gu_IN hr hu it ja km ko lt lv mk nb ne nl nn ns pa_IN pl pt_BR ru rw sh_YU sk sl sr_CS sv sw_TZ tn tr vi xh zh_CN zh_TW zu
 
 	for i in ${LINGUAS}; do
 		i="${i/_/-}"
