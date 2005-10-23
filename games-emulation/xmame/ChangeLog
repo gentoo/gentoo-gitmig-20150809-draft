@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.52 2005/09/25 02:46:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.53 2005/10/23 07:45:11 mr_bones_ Exp $
+
+*xmame-0.101 (23 Oct 2005)
+
+  23 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.101.ebuild:
+  version bump
 
 *xmame-0.100 (25 Sep 2005)
 
