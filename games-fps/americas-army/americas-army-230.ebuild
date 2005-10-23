@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.8 2005/10/21 17:29:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.9 2005/10/23 21:14:53 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,6 +24,7 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-compat
 		|| ( >=media-video/nvidia-glx-1.0.6629-r3
 			>=media-video/ati-drivers-8.8.25-r1 ) )
 	dedicated? ( app-misc/screen )"
