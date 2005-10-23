@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6-r1.ebuild,v 1.1 2005/08/02 14:44:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.6-r2.ebuild,v 1.1 2005/10/23 09:18:44 genstef Exp $
 
 inherit eutils kde-functions
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${MY_P}-kcm-fixinstallationdir.patch
+	epatch ${FILESDIR}/gtk-2.8-fix.patch
 }
 
 src_compile() {
