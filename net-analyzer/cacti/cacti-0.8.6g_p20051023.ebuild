@@ -1,20 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6g.ebuild,v 1.2 2005/10/23 22:22:32 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6g_p20051023.ebuild,v 1.1 2005/10/23 22:22:32 ramereth Exp $
 
 inherit eutils webapp
 
+MY_P=${P/_p*/}
+
 DESCRIPTION="Cacti is a complete frontend to rrdtool"
 HOMEPAGE="http://www.cacti.net/"
-# patches (none needed for new 0.8.6g)
-#UPSTREAM_PATCHES=""
-SRC_URI="http://www.cacti.net/downloads/${P}.tar.gz"
-#for i in $UPSTREAM_PATCHES ; do
-#	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV}/${i}"
-#done
+# patches 
+UPSTREAM_PATCHES="short_open_tag_parse_error graph_properties_zoom
+script_server_snmp_auth mib_file_loading"
+SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
+for i in $UPSTREAM_PATCHES ; do
+	SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
+done
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="snmp"
 
 DEPEND=""
@@ -30,11 +33,11 @@ RDEPEND="net-www/apache
 	virtual/httpd-php"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	# patches (none needed for new 0.8.6g)
-	#for i in ${UPSTREAM_PATCHES} ; do
-	#	EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}
-	#done ;
+	unpack ${MY_P}.tar.gz ; mv ${MY_P} ${P}
+	# patches
+	for i in ${UPSTREAM_PATCHES} ; do
+		EPATCH_OPTS="-p1 -d ${S} -N" epatch ${DISTDIR}/${i}.patch
+	done ;
 }
 
 pkg_setup() {

@@ -1,0 +1,5 @@
+MD5 b3cf31349d2db47d14dcf347b8422bc2 cacti-0.8.6g.tar.gz 1076607
+MD5 a68318191df3363e3f591bebdb08d238 short_open_tag_parse_error.patch 1818
+MD5 1c50c7167e118ca55ddd13cbece373a9 graph_properties_zoom.patch 1387
+MD5 09fbc74b3867b1bb6196d195f5fa57ac script_server_snmp_auth.patch 4911
+MD5 826201b2d96415f81d800aa32e31ee4c mib_file_loading.patch 477
