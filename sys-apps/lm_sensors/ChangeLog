@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.42 2005/10/23 12:48:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.43 2005/10/23 13:30:18 brix Exp $
+
+  23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  lm_sensors-2.9.2.ebuild:
+  Fix bug #107494... correctly.
 
   23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
   lm_sensors-2.9.1-r1.ebuild, lm_sensors-2.9.2.ebuild:
