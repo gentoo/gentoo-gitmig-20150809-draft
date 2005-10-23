@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.50.ebuild,v 1.1 2005/10/23 15:26:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.50.ebuild,v 1.2 2005/10/23 22:26:31 brix Exp $
+
+inherit fixheadtails
 
 DESCRIPTION="IPv6 address calculator"
 HOMEPAGE="http://www.deepspace6.net/projects/ipv6calc.html"
@@ -13,6 +15,12 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+
+	ht_fix_file ${S}/configure
+}
 
 src_compile() {
 	econf || die "econf failed"

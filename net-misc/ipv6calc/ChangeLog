@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.9 2005/10/23 15:26:05 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.10 2005/10/23 22:26:31 brix Exp $
+
+  23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org> ipv6calc-0.50.ebuild:
+  Fix head -1 warning, bug #110259.
 
 *ipv6calc-0.50 (23 Oct 2005)
 
