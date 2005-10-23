@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.0.ebuild,v 1.1 2005/08/22 23:05:12 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.0.1.ebuild,v 1.1 2005/10/23 19:38:38 rl03 Exp $
 
-inherit webapp versionator
+inherit webapp
 
 DESCRIPTION="Project management and coordination system"
 HOMEPAGE="http://www.phprojekt.com/"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
 IUSE="postgres mysql"
 
-S=${WORKDIR}/${PN}$(delete_all_version_separators)
+S=${WORKDIR}/${PN}
 
 RDEPEND="net-www/apache
 		postgres? ( dev-db/postgresql )
@@ -29,7 +29,7 @@ src_install() {
 	local file
 
 	cp -R . ${D}/${MY_HTDOCSDIR}
-	for file in attach chat; do
+	for file in attach chat upload; do
 		webapp_serverowned ${MY_HTDOCSDIR}/${file}
 	done
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
