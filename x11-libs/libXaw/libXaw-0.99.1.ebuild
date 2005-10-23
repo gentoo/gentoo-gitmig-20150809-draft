@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-0.99.1.ebuild,v 1.1 2005/10/20 05:36:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-0.99.1.ebuild,v 1.2 2005/10/23 23:17:34 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -20,6 +20,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	xprint? ( x11-libs/libXp )"
 DEPEND="${RDEPEND}
-	x11-proto/xproto"
+	x11-proto/xproto
+	sys-apps/ed"
 
 CONFIGURE_OPTIONS="`use_enable xprint xaw8`"
