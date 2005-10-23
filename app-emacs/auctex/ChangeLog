@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.33 2005/08/15 03:03:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.34 2005/10/23 00:35:16 ranger Exp $
+
+  23 Oct 2005; Brent Baude <ranger@gentoo.org> auctex-11.55.ebuild:
+  Marking auctex-11.55 ~ppc64 for bug 109774
 
   15 Aug 2005; Luis Medinas <metalgod@gentoo.org> auctex-11.55.ebuild:
   Marked Stable on AMD64.
