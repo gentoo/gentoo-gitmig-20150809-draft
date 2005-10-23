@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r12.ebuild,v 1.9 2005/10/07 18:11:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r12.ebuild,v 1.10 2005/10/23 23:23:45 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050917"
+GENTOO_PATCHSTAMP="20051023"
 GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
