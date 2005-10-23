@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.48 2005/10/21 22:04:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.49 2005/10/23 00:13:31 cryos Exp $
+
+  23 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> squid-2.5.11.ebuild:
+  Stable on amd64, bug 109827.
 
   21 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> squid-2.5.11.ebuild:
   Stable on alpha + ia64, bug 109827.
