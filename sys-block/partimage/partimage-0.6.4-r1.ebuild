@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r1.ebuild,v 1.4 2005/10/07 00:20:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r1.ebuild,v 1.5 2005/10/23 22:36:59 xmerlin Exp $
 
 inherit gnuconfig eutils
 
@@ -146,7 +146,7 @@ partimagesslperms() {
 pkg_postinst() {
 	if use ssl; then
 		einfo "To create the required SSL certificates, please do:"
-		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+		einfo "emerge  --config =${PF}"
 		# force a permmissions fixup
 		partimagesslperms
 		return 0
