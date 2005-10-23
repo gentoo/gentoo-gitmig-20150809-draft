@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 3125178f0c0fc4dd09ce92f66a0b258b ChangeLog 13461
-MD5 8109f25727a6a0626b545a3df71b934a w3m-0.5.1-r3.ebuild 3594
-MD5 ef673798787980429901d8a8c9e8933a w3m-0.5.1-r1.ebuild 3500
-MD5 6dbb19793ae901d3aa90c1ef1dabdabb w3m-0.4.2.ebuild 1887
 MD5 a256d4b0c2ea4055801f91dc9af9729f w3m-0.4.2-r10.ebuild 2952
-MD5 3734d8d1d8c19bfa94a11477e6cc38cd files/digest-w3m-0.5.1-r1 201
-MD5 ccf8db4eb493664368e4e4c77cea99d4 files/digest-w3m-0.4.2 61
-MD5 c6c17e9ab9b7b1e694542f4fb51fa8f2 files/digest-w3m-0.5.1-r3 205
-MD5 0fd075401455ce9205836b4267202e22 files/w3m-w3mman-gentoo.diff 1059
-MD5 f818841f47776f4cdfe686de95223019 files/digest-w3m-0.4.2-r10 210
+MD5 ef673798787980429901d8a8c9e8933a w3m-0.5.1-r1.ebuild 3500
+MD5 95cdb1d14dd30219f5e2aa26f277589e w3m-0.5.1-r3.ebuild 3601
+MD5 6dbb19793ae901d3aa90c1ef1dabdabb w3m-0.4.2.ebuild 1887
+MD5 d1a7a67927d1771f804bdad2c7f14008 ChangeLog 13568
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 f91cc75929689839efc1a8dfb0dcbd83 files/w3m-0.4.2-imglib-gentoo.diff 5019
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVPb3JrHF4yAQTrARApCCAKCNfjgohfI2O0Srxk8kIqnCJt54jgCgpIJW
-VoVQ5dKBfCKJt0oDlNqTmSY=
-=pw3C
------END PGP SIGNATURE-----
+MD5 3734d8d1d8c19bfa94a11477e6cc38cd files/digest-w3m-0.5.1-r1 201
+MD5 c6c17e9ab9b7b1e694542f4fb51fa8f2 files/digest-w3m-0.5.1-r3 205
+MD5 f818841f47776f4cdfe686de95223019 files/digest-w3m-0.4.2-r10 210
+MD5 0fd075401455ce9205836b4267202e22 files/w3m-w3mman-gentoo.diff 1059
+MD5 ccf8db4eb493664368e4e4c77cea99d4 files/digest-w3m-0.4.2 61

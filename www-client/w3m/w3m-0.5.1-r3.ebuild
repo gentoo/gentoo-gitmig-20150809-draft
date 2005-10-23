@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r3.ebuild,v 1.6 2005/10/18 13:21:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.1-r3.ebuild,v 1.7 2005/10/23 12:26:58 matsuu Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ src_compile() {
 
 	if [ ! -z "${imagelibval}" ] ; then
 		use X && imageval="${imageval}${imageval:+,}x11"
-		use fbcon && imageval="${imageval}${imageval:+,}fb"
+		use X && use fbcon && imageval="${imageval}${imageval:+,}fb"
 	fi
 
 	if use migemo ; then
