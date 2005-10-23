@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea6b68d30ba6b69a9950066d9e3fc213 ChangeLog 1786
+MD5 89728089f1a9d8f30d5ee81b0705d837 ChangeLog 1922
 MD5 cc285f0ff6418e9efb599e45fe4c695c files/77_mod_watch.conf 748
 MD5 2d99e90c1a0ac34fbc7ad74473f526f7 files/digest-mod_watch-3.18 60
 MD5 2d99e90c1a0ac34fbc7ad74473f526f7 files/digest-mod_watch-3.18-r1 60
@@ -9,14 +9,14 @@ MD5 b25f10c1011d104c6daebadda90b25a6 files/digest-mod_watch-4.03 60
 MD5 b25f10c1011d104c6daebadda90b25a6 files/digest-mod_watch-4.03-r1 60
 MD5 50267e95c06324c0c4f9a603358501ad files/mod_watch.conf 627
 MD5 7272d8b6d09e3e301b6a08aa9c912eb0 metadata.xml 226
-MD5 237d531f1650dd757a4b3034be79ccca mod_watch-3.18-r1.ebuild 778
+MD5 0b4fe10889b304295771834abd7be73d mod_watch-3.18-r1.ebuild 776
 MD5 93eb96301afe2fd10f6fd4d486e94286 mod_watch-3.18.ebuild 1271
-MD5 a8a8ffc98759ba297c0cdbbf39718a02 mod_watch-4.03-r1.ebuild 1024
+MD5 ebc7d3db1761da52827c6c9318d28f1c mod_watch-4.03-r1.ebuild 1027
 MD5 105f83e8c4fb05ae442dfeeac384e4e6 mod_watch-4.03.ebuild 1030
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDSXVRKf2g/qXtneoRAoonAJ9ablQUTyjXt4jUMA1nKXpLUc1fJgCgnMY9
-whC7MyBx56zhhCJ1Cb1s3yQ=
-=cJ17
+iD8DBQFDWxwuCRZPokWLroQRAoRpAKCkZst45ORaIGR0qMw1tej+OQWt5gCfX98Q
+OWGEEooRxA9MbQ8vQnE4d1s=
+=tRyo
 -----END PGP SIGNATURE-----
