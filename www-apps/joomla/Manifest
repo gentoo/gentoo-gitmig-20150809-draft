@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1243d92a5301bf936d7bf68c09994950 joomla-1.0.1.ebuild 2971
+MD5 8fb3a0c5158d7cfc978be1bd0fb529bb joomla-1.0.1.ebuild 2941
 MD5 34a765c56dbb3b4903de17edcbaf514e ChangeLog 475
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 c81ce886a23ab451a7c1a3e0a4b1984d files/postinstall-en.txt 830
 MD5 aab606d225591bb796c9ba39b0c72192 files/digest-joomla-1.0.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDO9tUEzitwsaoONoRAswyAJ9E6yM1snH581R65PdqXP3xw2glBQCeItYX
-S37C188BHHhyb29nE5spyFU=
-=Vsxt
------END PGP SIGNATURE-----

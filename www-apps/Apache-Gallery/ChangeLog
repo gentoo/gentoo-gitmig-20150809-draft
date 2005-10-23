@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/Apache-Gallery
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.15 2005/09/24 18:53:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.16 2005/10/23 14:59:08 rl03 Exp $
+
+  23 Oct 2005; Renat Lumpau <rl03@gentoo.org> Apache-Gallery-0.6.ebuild,
+  Apache-Gallery-0.8.ebuild, Apache-Gallery-0.8-r1.ebuild,
+  Apache-Gallery-0.8-r2.ebuild:
+  Fixed emerge --config wrt bug #109482.
 
   24 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
   Apache-Gallery-0.9.1.ebuild:
