@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.4 2005/10/22 18:55:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.5 2005/10/23 12:42:56 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -148,7 +148,7 @@ src_compile() {
 
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break 
 	if [ "${WANT_DISTCC}" == "true" ]; then
-		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"` && [ ${JOBS} -gt 10 ] && export JOBS="10"
+		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	fi
 
 	# Make sure gnome-users get gtk-support
@@ -170,6 +170,7 @@ src_compile() {
 		--disable-access \
 		--disable-mono \
 		--disable-cairo \
+		--disable-post-install-scripts \
 		|| die "Configuration failed!"
 
 	# Compile problems with these ...
