@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.3.4m.ebuild,v 1.5 2005/07/14 20:52:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.3.4m.ebuild,v 1.6 2005/10/23 11:13:03 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	junit? ( dev-java/junit )
 	jikes? ( dev-java/jikes )
-	dev-java/ant"
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${MY_P}

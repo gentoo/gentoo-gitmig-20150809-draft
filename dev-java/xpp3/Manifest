@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fbd3ebaec3c83a77ad67d366901424f0 xpp3-1.1.3.4m.ebuild 1126
 MD5 137d7dd80265b055f9b5bfa304311a05 ChangeLog 613
-MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 dd17a37a22e7c98f54e4f0610502965d files/digest-xpp3-1.1.3.4m 67
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 e752159db82cba914271a4133cd3f4bf xpp3-1.1.3.4m.ebuild 1133
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC1tCzBXaUFmZvwyMRAjYPAJ91u0tHgA0sTAirKMNjFHpOmuieDACfSEr5
-LhR12TPki+Il44Q7fJPRhTs=
-=n8wI
+iD8DBQFDW3DRQiJ/wx066S4RArMzAJ9WshB1avXaJlKMBd6Zs3A2uddUtACbB5m4
+xkphpGi8TJVe57pMs2kM33c=
+=V+1l
 -----END PGP SIGNATURE-----
