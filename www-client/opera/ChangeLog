@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.21 2005/09/21 16:14:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.22 2005/10/23 14:46:20 josejx Exp $
+
+  23 Oct 2005; Joseph Jezak <josejx@gentoo.org> opera-8.50.ebuild:
+  Marked ppc stable.
 
   21 Sep 2005; Thomas Matthijs <axxo@gentoo.org> opera-8.50.ebuild:
   Updated license
