@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kzenexplorer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/ChangeLog,v 1.5 2005/09/17 21:19:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kzenexplorer/ChangeLog,v 1.6 2005/10/23 16:46:37 carlo Exp $
+
+  23 Oct 2005; Carsten Lohrke <carlo@gentoo.org> kzenexplorer-0.6.ebuild:
+  QA: inheriting eutils not necessary, need-kde() belongs after R/DEPEND
 
   17 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
   -kzenexplorer-0.6_rc1.ebuild:
