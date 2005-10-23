@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cc67a5ece36049d5f53ffa29f05b1845 xmms-scrobbler-0.3.6.ebuild 648
-MD5 e90dc68718088d5959ee90759d49a780 ChangeLog 3205
-MD5 2bea1aff1c8983876c6c507a4f02a29c xmms-scrobbler-0.3.7.ebuild 645
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7bd462dbef8154c7aaade1e8dc1d5cff ChangeLog 3535
 MD5 f3f9865258d1a7ab26719dc5e241b524 files/digest-xmms-scrobbler-0.3.6 73
 MD5 c790015adb5c08af62d5e99d64a34da4 files/digest-xmms-scrobbler-0.3.7 73
+MD5 f1fada66ccc897082f19b62f1c8af09b files/digest-xmms-scrobbler-0.3.8.1 75
+MD5 a06ccc8cb0399bb9cbaf1e5d276a1d47 files/scrobbler.c.patch 421
+MD5 97ef549ab2ba1767497788587237f301 files/xmms_scrobbler.c.patch 241
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 cc67a5ece36049d5f53ffa29f05b1845 xmms-scrobbler-0.3.6.ebuild 648
+MD5 2bea1aff1c8983876c6c507a4f02a29c xmms-scrobbler-0.3.7.ebuild 645
+MD5 69fe570b734f6caccbf286a3271f7ea6 xmms-scrobbler-0.3.8.1.ebuild 791
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDIX3sj5H05b2HAEkRAobSAJ9EArGKaAtrvq3zYd5Cy1iGl4iB8gCghzJu
-w/Nhh2N5hDkCviec+hpyrcg=
-=DDbt
+iD8DBQFDXBF5wUpWvClEHQoRAnAuAJ0Xo6fa/Un65LWR0pp1kUfqOSarwACeNM2E
+zmHa+gLM+dl9SzQZdJpL1tk=
+=RmBp
 -----END PGP SIGNATURE-----

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/xmms-scrobbler
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.20 2005/09/09 12:19:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.21 2005/10/23 21:41:09 metalgod Exp $
+
+*xmms-scrobbler-0.3.8.1 (23 Oct 2005)
+
+  23 Oct 2005; Luis Medinas <metalgod@gentoo.org> +files/scrobbler.c.patch,
+  +files/xmms_scrobbler.c.patch, +xmms-scrobbler-0.3.8.1.ebuild:
+  Version Bump. Thanks to Ben Jackson <benj@puremourning.co.uk> and Felix
+  Braun <Felix.Braun@mail.mcgill.ca> for Debian patches. Closes bug #99606.
 
   09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-scrobbler-0.3.6.ebuild, xmms-scrobbler-0.3.7.ebuild:
