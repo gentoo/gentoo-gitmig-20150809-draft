@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.15 2005/10/20 06:58:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.16 2005/10/23 18:02:17 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -12,7 +12,7 @@
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
-inherit eutils
+inherit eutils libtool
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -63,6 +63,10 @@ RDEPEND="${RDEPEND}
 x-modular_unpack_source() {
 	unpack ${A}
 	cd ${S}
+
+	# Joshua Baergen - October 23, 2005
+	# Fix shared lib issues on MIPS, FBSD, etc etc
+	elibtoolize
 }
 
 x-modular_patch_source() {
