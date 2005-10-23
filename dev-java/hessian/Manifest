@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e93293130fcd8abb763c20eb1f9eeb95 ChangeLog 879
+MD5 e49559e1160d13e1fae321c92144d499 ChangeLog 1088
 MD5 c089b7d34f96c556a34bb8c402794023 files/build-2.1.12.xml 1546
 MD5 c089b7d34f96c556a34bb8c402794023 files/build-3.0.8.xml 1546
 MD5 dd6372768b0929aa8504a4526358ff34 files/digest-hessian-2.1.12-r1 67
-MD5 3b1b79f1af4dbee2b94e9b3cfaaea881 files/digest-hessian-3.0.8-r1 66
+MD5 3b1b79f1af4dbee2b94e9b3cfaaea881 files/digest-hessian-3.0.8-r2 66
 MD5 a91b4ef7d02c6d2c63f2413ab8c75c66 hessian-2.1.12-r1.ebuild 1602
-MD5 557c1d9ca65b01253444b90660537d6e hessian-3.0.8-r1.ebuild 1521
+MD5 223bf4de6521f798791be450a4661706 hessian-3.0.8-r2.ebuild 1632
 MD5 1ee3b9eb31c4a1302dc9c690a069fb77 metadata.xml 493
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDWqJPQiJ/wx066S4RAqqhAJ9qAaGeSUdk2cozcnzhm7OTt/zIrgCfWong
-UXKY2jWtetdc7R9SFKioP2M=
-=u5jm
+iD8DBQFDW37GQiJ/wx066S4RAsspAKCUKVhjon+g80R9suHcVlF6wFQ3ewCgjfzp
+t5gdRxWM/xukFKvLco7LqOw=
+=eRq4
 -----END PGP SIGNATURE-----

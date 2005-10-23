@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r1.ebuild,v 1.1 2005/10/22 20:33:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r2.ebuild,v 1.1 2005/10/23 12:13:39 betelgeuse Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86"
 IUSE="doc jikes source"
 
 RDEPEND=">=virtual/jre-1.4
-		=dev-java/servletapi-2.3*"
+		=dev-java/servletapi-2.3*
+		~dev-java/caucho-services-${PV}"
 
 DEPEND=">=virtual/jdk-1.4
 		app-arch/unzip
@@ -30,13 +31,14 @@ src_unpack() {
 	# They package stuff from burlap in here
 	# Burlap is a separate protocol
 	rm -fr ${S}/src/com/caucho/burlap
+	rm -fr ${S}/src/com/caucho/services
 
 	cd ${S}
 	# No included ant script! Bad Java developer, bad!
 	cp ${FILESDIR}/build-${PV}.xml build.xml
 
 	# Populate classpath
-	echo "classpath=$(java-pkg_getjars servletapi-2.3)" >> build.properties
+	echo "classpath=$(java-pkg_getjars servletapi-2.3):$(java-pkg_getjars caucho-services-3.0)" >> build.properties
 }
 
 src_compile() {
