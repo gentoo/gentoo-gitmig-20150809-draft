@@ -1,18 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2_rc1.ebuild,v 1.1 2005/10/19 15:45:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.2_rc2.ebuild,v 1.1 2005/10/23 17:24:04 ka0ttic Exp $
 
 inherit bash-completion
 
+TEST_DATA_PV="20051023"
+TEST_DATA_P="${PN}-test-data-${TEST_DATA_PV}"
+
 DESCRIPTION="A multi-purpose query tool capable of things such as displaying herd/developer information and displaying category/package metadata"
 HOMEPAGE="http://developer.berlios.de/projects/herdstat/"
-SRC_URI="http://download.berlios.de/herdstat/${P}.tar.bz2"
+SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
+	test? ( http://download.berlios.de/lib${PN}/${TEST_DATA_P}.tar.bz2 )"
 RESTRICT="primaryuri"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="debug doc ncurses"
+IUSE="debug doc ncurses test"
 
 RDEPEND=">=dev-cpp/libherdstat-0.1.0"
 DEPEND="${RDEPEND}
@@ -22,6 +26,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	econf \
+		--with-test-data=${WORKDIR}/${TEST_DATA_P} \
 		$(use_enable debug) \
 		$(use_with ncurses) \
 		|| die "econf failed"
