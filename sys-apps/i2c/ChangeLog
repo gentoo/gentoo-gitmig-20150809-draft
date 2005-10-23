@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.40 2005/09/06 21:00:52 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.41 2005/10/23 11:23:07 brix Exp $
+
+  23 Oct 2005; Henrik Brix Andersen <brix@gentoo.org> i2c-2.9.2.ebuild:
+  Stable on x86, bug #108270.
 
 *i2c-2.9.2 (06 Sep 2005)
 
