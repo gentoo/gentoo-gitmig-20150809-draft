@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca38a5abaf7e1e3a73d1abddb0561fea perdition-1.15.ebuild 1527
-MD5 d1e4f02e47f82dc133adaaea2e119511 ChangeLog 605
+MD5 09e8fce8ca547e160b3db3dfce6b59a3 perdition-1.17.ebuild 1553
+MD5 4b37fe1eeca66407dcb1df7726d99f0f ChangeLog 789
 MD5 d2ad787f28f30ff5958b88a76ef96560 metadata.xml 644
 MD5 e0c3899301e1eddbef44acd4e5e18c7c files/perdition.confd 1734
 MD5 f6a22f3221ec5499cab3065e47af2248 files/perdition.initd 2438
-MD5 21c456c0fa0d465a1858b62399ebe404 files/digest-perdition-1.15 66
+MD5 4e7bad08b5717da7aa6ba52316523791 files/digest-perdition-1.17 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCvIxUBXaUFmZvwyMRAovxAKC9XWSRx8ILmbotQe1sUrzq5L93kACdGPEf
-MV55zyRpUaP7xnAN+P3Uxvw=
-=xuPz
+iD8DBQFDW3fcViELBEf1JB0RAmKxAJ0SmUKJo3+ic//WVfJOWtKLuyq56gCfZDgk
+Bei4NezwnT1rHOIV/LI4hkA=
+=q2cf
 -----END PGP SIGNATURE-----

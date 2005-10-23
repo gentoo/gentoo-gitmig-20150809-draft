@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.15.ebuild,v 1.2 2005/06/24 22:42:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.17.ebuild,v 1.1 2005/10/23 11:40:57 ferdy Exp $
 
 inherit eutils
 
@@ -37,18 +37,18 @@ src_compile() {
 		$(use_enable odbc) \
 		$(use_enable postgres) \
 		$(use_enable gdbm) \
-		$(use_enable ldap) || die
+		$(use_enable ldap) || die "econf failed"
 
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "install failed"
 
 	dodoc README AUTHORS TODO
 
 	newinitd "${FILESDIR}/perdition.initd" perdition
-	insinto /etc/conf.d; newins "${FILESDIR}/perdition.confd" perdition
+	newconfd "${FILESDIR}/perdition.confd" perdition
 
 	keepdir /var/run/perdition
 }
