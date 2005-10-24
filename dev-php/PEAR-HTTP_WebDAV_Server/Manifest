@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f982108c278b5092e866e08a1cdc4f4a ChangeLog 1831
 MD5 c796f08b1363ea183723873134f33ede PEAR-HTTP_WebDAV_Server-0.99.1-r1.ebuild 418
 MD5 a62dfe5eab24e611b3b8f92fa4b274c7 PEAR-HTTP_WebDAV_Server-0.99.1.ebuild 426
 MD5 fad509fccea782029c99f4282752fe28 files/digest-PEAR-HTTP_WebDAV_Server-0.99.1 73
 MD5 fad509fccea782029c99f4282752fe28 files/digest-PEAR-HTTP_WebDAV_Server-0.99.1-r1 73
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXOYZaGfFFLhbXWkRAlgsAKCHY5u2pjsDngYidJKlS+E5ql7CgACfSwHW
+atXsVoic+aD/OzEDXv2kfZ0=
+=cofa
+-----END PGP SIGNATURE-----

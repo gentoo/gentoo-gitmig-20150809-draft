@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a9155342f754ed2270f79d804a525eb1 ChangeLog 3375
 MD5 f6474bac9e0df3fe59a800c1c16a0c03 PEAR-Spreadsheet_Excel_Writer-0.7.ebuild 463
 MD5 1df81836a04b0f2788b176b5955da0c8 PEAR-Spreadsheet_Excel_Writer-0.8-r1.ebuild 446
@@ -6,3 +9,10 @@ MD5 7829ee421f046aaf83445b03a13e6de7 files/digest-PEAR-Spreadsheet_Excel_Writer-
 MD5 b6c2ea91e6fc27e638cf4a7e9eb1bc06 files/digest-PEAR-Spreadsheet_Excel_Writer-0.8 76
 MD5 b6c2ea91e6fc27e638cf4a7e9eb1bc06 files/digest-PEAR-Spreadsheet_Excel_Writer-0.8-r1 76
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXOYYaGfFFLhbXWkRAnLlAJsEm0cE84vli6sYqfNIGe16iLWZYgCfW085
+NBq6FfP/gLTBf6wDiBrvp8M=
+=JvVL
+-----END PGP SIGNATURE-----
