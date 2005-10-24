@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 983fb46c48a1dc9250df4722608475dc p3scan-2.2.1.ebuild 2036
-MD5 855e5cf6d556040bf46dbef3dc0f8fd5 p3scan-2.1.ebuild 2029
-MD5 bac731654126646b99c66274f75331df p3scan-2.2.ebuild 2034
-MD5 f962d05f609626eef7fd25bd48442887 ChangeLog 909
-MD5 36d9f272b13fc5cb611787183970922e metadata.xml 409
-MD5 b975015ac20e9c892caf8c357696247e files/digest-p3scan-2.2.1 64
+MD5 756a5f4bd7149d1b0a3955595bd07390 ChangeLog 1038
 MD5 360cf261a5fa438c27e1d3febac36c87 files/digest-p3scan-2.1 62
-MD5 f9256a008b470cedefe3d3d4307ee3b4 files/digest-p3scan-2.2 62
+MD5 b975015ac20e9c892caf8c357696247e files/digest-p3scan-2.2.1 64
 MD5 ccbcdd1c08592b87665d4d1dd4f394fa files/p3scan.init 612
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDMoyTQlM6RnzZP+IRAhjFAJ9zF3t1+LzYe+ZHvJePXr8Ds7U+1wCdGPjX
-OKQzpgNVD2WTZqCBl0GIU8c=
-=NQpX
------END PGP SIGNATURE-----
+MD5 36d9f272b13fc5cb611787183970922e metadata.xml 409
+MD5 855e5cf6d556040bf46dbef3dc0f8fd5 p3scan-2.1.ebuild 2029
+MD5 44df3141e08ac958cf6301ef7a6be362 p3scan-2.2.1.ebuild 2035
