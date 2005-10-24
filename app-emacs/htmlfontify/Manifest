@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 54ed0edb51532d4e4a13f42a9533d144 ChangeLog 779
 MD5 4f2171cc57ec51f59c407f6bf8c1efc8 files/50htmlfontify-gentoo.el 112
 MD5 29cb44272c00732b1bc6f13514277783 files/digest-htmlfontify-0.17 75
 MD5 a3a713a8c377419d54ff47c0fa40edec htmlfontify-0.17.ebuild 799
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPCEcsIHjyDViGQRAhA3AKC9QzzY54JnoysbQhXIaexrWlj56ACg522j
+bma5EOfbV/Ih3l+IO/wQKj8=
+=8l8r
+-----END PGP SIGNATURE-----

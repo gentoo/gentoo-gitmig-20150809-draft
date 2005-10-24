@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f4fe5dc6e40bc79c15ba89457e584f59 ChangeLog 742
 MD5 87c352d048271d9502fef6f73377a840 files/50gnuplot-gentoo.el 406
 MD5 8a8cfa291853d00fac0d679ca2bcd20e files/digest-gnuplot-mode-0.6.0 70
 MD5 8066ada01d34639125cd91122888842e gnuplot-mode-0.6.0.ebuild 961
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXO9icsIHjyDViGQRAiOuAJ9SPT/r72131dfJhp6csk/nVh1NHgCg6ONe
+0AR+raALyor/Q4ZLV+C5vCM=
+=TWrN
+-----END PGP SIGNATURE-----

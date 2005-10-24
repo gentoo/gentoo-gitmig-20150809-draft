@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aeebf2fab7860360aa477375cfaba031 ChangeLog 1385
 MD5 d15b1cd425f42df4dc4151cdd59220f5 emacs-wiki-2.69.ebuild 1117
 MD5 75277e8288b9116c92657bdf4f54b68e files/50emacs-wiki-gentoo.el 111
 MD5 54010873793caf7c486543d0daf07dd8 files/digest-emacs-wiki-2.69 67
 MD5 ad233270cb8f454e2923316f8c7e229d metadata.xml 808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXO6ScsIHjyDViGQRAprfAJ4kV0EhlnqQ6Lu14i7mr/MDIxUY2ACgo3Ky
+TX7xdhy4PS7Lw/G+g+G+KnU=
+=jlfK
+-----END PGP SIGNATURE-----

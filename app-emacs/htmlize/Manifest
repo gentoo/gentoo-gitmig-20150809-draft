@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f6ff0c30f598b978a18076201fa0726 ChangeLog 1087
 MD5 3f9a23f355fb5e1981e4b03c03007863 files/50htmlize-gentoo.el 95
 MD5 167eb07957b3f230bac501c70b377801 files/digest-htmlize-1.16 63
 MD5 7ef29dcbacba26a257fd0d7f0ad9968d htmlize-1.16.ebuild 535
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXO1PcsIHjyDViGQRAiFfAKCnkL1k4iwpk57XTYmzLqtxIClAHwCfUOfm
+BFwP+euFebOOgX7T1YvOpeE=
+=c7Tq
+-----END PGP SIGNATURE-----

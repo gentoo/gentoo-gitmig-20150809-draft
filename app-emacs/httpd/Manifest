@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 698b685e80283c66ad3ba3c973a65fbd ChangeLog 841
 MD5 187a5ade021e7bc1aac19e09158aaac1 files/50httpd-gentoo.el 74
 MD5 95aa7756d3ef71d4591e4ad6d43d3efa files/digest-httpd-1.0 59
 MD5 f20295511fa17f48aa5d4997a946130d httpd-1.0.ebuild 464
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXOxGcsIHjyDViGQRAhPsAJ4y/p1dV07IbUBOoCyPJqbvRTXN9QCeL1Di
+g1RLQh/5nQinSZHgY/Kbt8Y=
+=9q7r
+-----END PGP SIGNATURE-----

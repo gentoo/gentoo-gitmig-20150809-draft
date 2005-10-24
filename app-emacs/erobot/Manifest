@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f392d74232864cd0f063f95fc5ea2eb ChangeLog 578
 MD5 e39d1fd60a002dc844e2edec36c006be erobot-2.1.0.ebuild 464
 MD5 3856faad80971bd5fff491581ff5737d files/50erobot-gentoo.el 103
 MD5 9b5214372359a36fb50d698a57c54403 files/digest-erobot-2.1.0 63
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXO8ncsIHjyDViGQRAhq5AKDoz/0FmnX+EqYeTcMfuZ1R9x3RagCgoc42
+QjgIrsgSMmyKsMMY5yVBQYw=
+=J50M
+-----END PGP SIGNATURE-----

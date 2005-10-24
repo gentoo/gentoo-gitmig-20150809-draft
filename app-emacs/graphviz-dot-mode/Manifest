@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 189db79322cdcab24884b2394ce749be ChangeLog 434
 MD5 e6aabcd03e12074a52d113a3271138a9 files/50graphviz-dot-mode-gentoo.el 90
 MD5 ee0df00d70ac9de5dbe3f99f5e904fb8 files/digest-graphviz-dot-mode-0.2 71
 MD5 1858a42de9c364449130f660810799e3 graphviz-dot-mode-0.2.ebuild 557
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPAFcsIHjyDViGQRAnhfAJ9wPTJ7c4q1qTYeRM3/I8Ke57YQfQCfdIJl
+erGzzr6+xNa/6z1XPry5n8w=
+=cDAg
+-----END PGP SIGNATURE-----
