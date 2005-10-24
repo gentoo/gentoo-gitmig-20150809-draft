@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.22 2005/09/24 11:01:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.23 2005/10/24 14:00:13 rl03 Exp $
+
+  24 Oct 2005; Renat Lumpau <rl03@gentoo.org> -rt-3.4.2-r1.ebuild,
+  rt-3.4.3.ebuild:
+  Dependency checking fixes wrt bug #110030.
 
   24 Sep 2005; Michael Hanselmann <hansmi@gentoo.org> rt-3.4.3.ebuild:
   Added to ~ppc.

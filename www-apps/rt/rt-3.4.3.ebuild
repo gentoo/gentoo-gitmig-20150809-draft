@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.5 2005/09/24 11:01:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.6 2005/10/24 14:00:13 rl03 Exp $
 
 inherit webapp eutils
 
@@ -148,6 +148,9 @@ src_unpack() {
 	cat ${FILESDIR}/3.4.2/config.layout-gentoo >> config.layout
 	sed -e "s|PREFIX|${D}/${MY_HOSTROOTDIR}/${PF}|
 			s|HTMLDIR|${D}/${MY_HTDOCSDIR}|g" -i ./config.layout || die
+
+	# don't need to check dev dependencies
+	sed -e "s|\$args{'with-DEV'} =1;|#\$args{'with-DEV'} =1;|" -i sbin/rt-test-dependencies.in || die
 }
 
 src_compile() {
@@ -166,9 +169,16 @@ src_compile() {
 		--with-web-group=${web}
 
 	# check for missing deps and ask to report if something is broken
-	/usr/bin/perl ./sbin/rt-test-dependencies --verbose \
-		$(use_with mysql) \
-		$(use_with postgres pg) > ${T}/t
+	local myconf="--verbose $(use_with mysql) \
+		$(use_with postgres pg) \
+		$(use_with fastcgi) \
+		$(use_with lighttpd fastcgi)"
+	if ! useq fastcgi && ! useq lighttpd; then
+		myconf="${myconf} $(use_with apache2 modperl2)"
+		! useq apache2 && myconf="${myconf} --with-modperl1"
+	fi
+
+	/usr/bin/perl ./sbin/rt-test-dependencies ${myconf} > ${T}/t
 	if grep -q "MISSING" ${T}/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn
