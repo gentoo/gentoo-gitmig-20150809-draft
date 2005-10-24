@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.190 2005/10/24 10:04:44 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.191 2005/10/24 14:35:26 pauldv Exp $
+
+  24 Oct 2005; <pauldv@gentoo.org> subversion-1.2.3-r3.ebuild:
+  Fix the runtime dependency on the jdk to only be a jre dependency. Bug 
+  #110322
 
   21 Oct 2005; <pauldv@gentoo.org> subversion-1.2.3-r3.ebuild:
   Add support for ruby bindings. Courtessy of Tom Payne <twp@gentoo.org> 
