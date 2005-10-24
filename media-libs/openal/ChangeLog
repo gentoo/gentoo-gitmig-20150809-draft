@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.45 2005/10/11 23:55:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.46 2005/10/24 16:53:14 wolf31o2 Exp $
+
+*openal-20051024 (24 Oct 2005)
+
+  24 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/openal-20051024-alsa_dmix.patch, +openal-20051024.ebuild:
+  Updated to CVS HEAD and closing bug #110270.
 
   11 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   openal-20050504-r2.ebuild:
