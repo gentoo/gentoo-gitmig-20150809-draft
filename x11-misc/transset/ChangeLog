@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/transset
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.6 2004/09/11 19:25:04 slarti Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.7 2005/10/24 04:50:17 spyderous Exp $
+
+  24 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  transset-0.1_pre20040821.ebuild:
+  Port to modular X.
 
   11 Sep 2004; Tom Martin <slarti@gentoo.org> :
   Marked ~amd64.
