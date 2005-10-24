@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4611 2005/10/24 09:47:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4612 2005/10/24 13:25:09 azarah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -767,10 +767,6 @@ media-video/toxine
 =mail-client/mozilla-thunderbird-1.0.6-r5
 =www-client/mozilla-firefox-1.0.6-r6
 =www-client/mozilla-1.7.11-r2
-
-# Martin Schlemmer <azarah@gentoo.org>
-# Waiting on Gnome 2.12
-media-sound/bmpx
 
 # <genstef@gentoo.org> (14 Aug 2005)
 # Does not play nice together with wpa_supplicant
