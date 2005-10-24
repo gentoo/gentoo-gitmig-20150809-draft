@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.140 2005/10/24 16:44:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.141 2005/10/24 19:57:17 hansmi Exp $
+
+  24 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ethereal-0.10.13.ebuild:
+  Stable on ppc.
 
   24 Oct 2005; Brent Baude <ranger@gentoo.org> ethereal-0.10.13.ebuild:
   Marking ethereal-0.10.13 ppc64 stable for bug 109348
