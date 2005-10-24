@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8cf629f43862cd4ac14776bfb2fa86ee ethereal-0.10.13.ebuild 3363
+MD5 826c74670c9b90a8c55077f5199bcac0 ethereal-0.10.13.ebuild 3361
 MD5 f8df469837b3a964d556a54c89c4dd7e ethereal-0.10.12.ebuild 3472
-MD5 16d3387b3f0ca8c7f731a65c200bf6d2 ChangeLog 11618
+MD5 94c2612227acf6e9d1bb1d6dfa8239fb ChangeLog 11741
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
 MD5 34bd8a0285aea402be479f40304aa947 files/digest-ethereal-0.10.12 70
 MD5 ce9e77144029b2f1104aa92c1927f4e9 files/digest-ethereal-0.10.13 70
@@ -11,7 +11,7 @@ MD5 e37a324c1e08bfd08a70fd5958dadeb4 files/ethereal-0.10.12-fix-encrypted-confli
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDXVAoKRy60XGEcJIRAig8AJ9En7WNy2j33Gri0tVLXHu6l0dcgACfTc/I
-8XFJqHBRzMo/cqmm1Q8YH+M=
-=nTdD
+iD8DBQFDXW4/3og80iZgVQgRApxaAKCBTF8iqCPt9TfbnnlOYsUjOBNH/wCfcU+v
+1vdWUDzrdQJ4yeZ6Gp6p+wA=
+=omti
 -----END PGP SIGNATURE-----
