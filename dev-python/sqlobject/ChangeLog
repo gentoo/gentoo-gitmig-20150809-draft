@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.7 2005/10/17 20:39:16 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.8 2005/10/24 17:17:51 dertobi123 Exp $
+
+  24 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  sqlobject-0.7.0.ebuild:
+  Added to ~ppc, bug #109627
 
 *sqlobject-0.7.0 (17 Oct 2005)
 
