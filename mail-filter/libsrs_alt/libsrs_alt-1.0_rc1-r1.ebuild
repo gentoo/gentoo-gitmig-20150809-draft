@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0_rc1-r1.ebuild,v 1.7 2005/10/24 19:44:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0_rc1-r1.ebuild,v 1.8 2005/10/24 19:48:40 hansmi Exp $
 
 MY_PV=${PV%_rc*}
 MY_RC=${PV#*_rc}
@@ -12,7 +12,7 @@ SRC_URI="http://srs.mirtol.com/libsrs_alt-${MY_PV}rc${MY_RC}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
