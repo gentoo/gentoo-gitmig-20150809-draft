@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/quake4-bin
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/ChangeLog,v 1.1 2005/10/24 18:59:46 wolf31o2 Exp $
+
+*quake4-bin-1.0.2147.12 (24 Oct 2005)
+
+  24 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +quake4-bin-1.0.2147.12.ebuild:
+  Initial import.  Ebuilds by me.  Closing bug #109825.
+
