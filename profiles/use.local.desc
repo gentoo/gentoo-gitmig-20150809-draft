@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1515 2005/10/24 14:03:22 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1516 2005/10/24 18:58:12 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -374,6 +374,7 @@ games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
+games-fps/quake4-bin:cdinstall - Copies files from the CD rather than asking the user to copy them
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3
 games-fps/ut2004:experimental - Enables support for icculus' experimental patch
 games-kids/gcompris:editor - Build the optional editor program.
