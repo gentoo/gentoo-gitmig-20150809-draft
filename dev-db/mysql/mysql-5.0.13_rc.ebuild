@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.13_rc.ebuild,v 1.7 2005/10/22 16:51:04 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.13_rc.ebuild,v 1.8 2005/10/24 17:00:19 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -62,8 +62,9 @@ mysql_upgrade_warning() {
 	ewarn "If you're upgrading from MySQL-3.x to 4.0, or 4.0.x to 4.1.x, you"
 	ewarn "must recompile the other packages on your system that link with"
 	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
-	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
-	ewarn "app-portage/gentoolkit."
+	ewarn "of packages for your system, you may use:"
+	ewarn "revdep-rebuild --soname=libmysqlclient.so.14"
+	ewarn "from app-portage/gentoolkit."
 	ewarn ""
 	ewarn "the value of \"innodb_log_file_size\" into /etc/mysql/my.cnf file "
 	ewarn "has changed size from \"8M\" to \"5M\"."

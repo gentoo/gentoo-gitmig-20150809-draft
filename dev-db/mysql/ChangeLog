@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.254 2005/10/22 16:51:04 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.255 2005/10/24 17:00:19 vivo Exp $
+
+*mysql-5.0.15 (24 Oct 2005)
+
+  24 Oct 2005; Francesco Riosa <vivo@gentoo.org> +mysql-5.0.15.ebuild:
+  Version bump, 5.0.15 is the first version declared GA from upstream
+
+  24 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.15.ebuild:
+  fixed typo, readded /var/log/mysql to binpkg
+
+  24 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.14.ebuild,
+  mysql-4.1.15.ebuild, mysql-5.0.13_rc.ebuild:
+  Added revdep-rebuild --soname hint
 
   22 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.26.ebuild,
   -mysql-4.1.13-r1.ebuild, mysql-4.1.14.ebuild, mysql-4.1.15.ebuild,
