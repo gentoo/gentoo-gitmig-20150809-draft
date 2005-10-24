@@ -1,0 +1,14 @@
+diff -upr mantis-0.19.3/core/database_api.php mantis-0.19.3_fixed/core/database_api.php
+--- mantis-0.19.3/core/database_api.php	2004-12-09 13:55:06.000000000 -0500
++++ mantis-0.19.3_fixed/core/database_api.php	2005-10-24 10:30:31.000000000 -0400
+@@ -9,6 +9,10 @@
+ 	# $Id: 0.19.3-debian.patch,v 1.1 2005/10/24 14:41:57 rl03 Exp $
+ 	# --------------------------------------------------------
+ 
++	# Patch for #0005956: Database system scanner via variable poisoning
++	if (isset($_REQUEST["g_db_type"]))
++		die("");
++
+ 	### Database ###
+ 
+ 	# This is the general interface for all database calls.
