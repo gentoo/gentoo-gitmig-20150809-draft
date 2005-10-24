@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/quake3-tremulous
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-tremulous/ChangeLog,v 1.1 2005/10/24 19:57:23 wolf31o2 Exp $
+
+*quake3-tremulous-1.0.2 (24 Oct 2005)
+
+  24 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +quake3-tremulous-1.0.2.ebuild:
+  Initial import. Ebuild by Damien Thebault <damien.thebault@laposte.net>.
+  Closing bug #102432.
+
