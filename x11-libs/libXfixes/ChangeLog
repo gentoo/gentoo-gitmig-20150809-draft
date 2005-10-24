@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.6 2005/09/09 08:10:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.7 2005/10/24 22:19:41 spider Exp $
+
+  24 Oct 2005; D.m.D. Ljungmark <spider@gentoo.org> libXfixes-3.0.0.ebuild:
+  Tweaked dependencies to match the headerfiles, making sure they are 
+  RDEPEND.
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
