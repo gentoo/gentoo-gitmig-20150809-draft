@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0b.ebuild,v 1.3 2005/07/09 19:49:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgcluster/pgcluster-1.3.0b.ebuild,v 1.4 2005/10/24 03:50:17 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib
 
@@ -184,7 +184,7 @@ pkg_postinst() {
 	if [ ! -f ${PG_DIR}/data/PG_VERSION ] ; then
 		einfo
 		einfo "Execute the following command"
-		einfo "ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
+		einfo "emerge --config =${PF}"
 		einfo "to setup the initial database environment."
 	fi
 
