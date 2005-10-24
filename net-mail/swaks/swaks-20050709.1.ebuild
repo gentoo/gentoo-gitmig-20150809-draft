@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20050709.1.ebuild,v 1.1 2005/09/12 08:37:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20050709.1.ebuild,v 1.2 2005/10/24 18:53:30 ticho Exp $
 
 MY_P=${P/-/.}
 DESCRIPTION="Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.jetmore.org/john/code/#swaks"
 SRC_URI="http://www.jetmore.org/john/code/${MY_P}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 
 IUSE="ssl"
 
