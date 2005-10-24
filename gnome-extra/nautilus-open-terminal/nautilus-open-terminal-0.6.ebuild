@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.6.ebuild,v 1.2 2005/10/12 16:53:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.6.ebuild,v 1.3 2005/10/24 15:44:32 dertobi123 Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://manny.cluecoder.org/packages/nautilus-open-terminal/${PF}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/nautilus-2.6.0
