@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.25 2005/10/22 20:36:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.26 2005/10/24 11:30:35 zzam Exp $
+
+*vdr-1.3.34-r2 (24 Oct 2005)
+
+  24 Oct 2005; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-1.3.32-daemon.patch, +vdr-1.3.34-r2.ebuild:
+  Added patch for better daemonization.
 
   22 Oct 2005; Matthias Schwarzott <zzam@gentoo.org> vdr-1.3.34-r1.ebuild:
   Better source installation for debugging
