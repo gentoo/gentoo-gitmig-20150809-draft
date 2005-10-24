@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.9 2005/05/03 11:42:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.10 2005/10/24 14:29:28 josejx Exp $
+
+  24 Oct 2005; Joseph Jezak <josejx@gentoo.org> gnuserv-3.12.7.ebuild:
+  Marked ~ppc.
 
   03 May 2005; Mamoru KOMACHI <usata@gentoo.org> gnuserv-3.12.5.ebuild,
   gnuserv-3.12.7.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.69.ebuild,v 1.3 2005/07/01 18:14:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.69.ebuild,v 1.4 2005/10/24 14:23:46 josejx Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.mwolson.org/projects/EmacsWiki.html
 SRC_URI="http://www.mwolson.org/static/dist/emacs-wiki/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="app-emacs/htmlize
