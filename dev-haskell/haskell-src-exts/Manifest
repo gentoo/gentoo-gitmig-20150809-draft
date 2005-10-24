@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 08e21738049ae8c8237a33d3b2b5bd1e haskell-src-exts-0.2.ebuild 721
+MD5 5173f3cddccbc40b8657fb05a97bfae1 metadata.xml 671
+MD5 bd126acb975242d5ada8c1c95c9c8706 ChangeLog 402
+MD5 a68f55ac7cf8dc83e25c1aeb35383b09 files/digest-haskell-src-exts-0.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPpmBQBy/eDH5uERAq01AJ44daB8+G5BoW+loFtMxQjq1CSitQCgtLGD
+J1q4lsFkfPe7PJAc805QLiY=
+=PQK0
+-----END PGP SIGNATURE-----
