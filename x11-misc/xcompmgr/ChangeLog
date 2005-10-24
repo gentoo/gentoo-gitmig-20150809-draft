@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.14 2005/08/07 13:15:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.15 2005/10/24 03:27:31 spyderous Exp $
+
+  24 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xcompmgr-1.1.2.ebuild:
+  Port to modular X.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> xcompmgr-1.1.ebuild:
   Stable on ppc.
