@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.33 2005/10/23 17:37:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.34 2005/10/24 16:58:30 dertobi123 Exp $
+
+  24 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org> kdbg-2.0.0.ebuild:
+  Marked ppc stable, bug #109809
 
   23 Oct 2005; Carsten Lohrke <carlo@gentoo.org> kdbg-2.0.0.ebuild:
   stable on x86
