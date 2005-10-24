@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Select_Common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.16 2005/10/08 11:02:34 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Select_Common/ChangeLog,v 1.17 2005/10/24 13:46:21 sebastian Exp $
+
+  24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-HTML_Select_Common-1.1-r2.ebuild:
+  Add ~amd64.
 
   08 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-HTML_Select_Common-1.1-r2.ebuild:

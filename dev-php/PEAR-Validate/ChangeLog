@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Validate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.5 2005/10/12 06:59:55 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.6 2005/10/24 13:46:22 sebastian Exp $
+
+  24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Validate-0.6.1.ebuild:
+  Add ~amd64.
 
 *PEAR-Validate-0.6.1 (12 Oct 2005)
 

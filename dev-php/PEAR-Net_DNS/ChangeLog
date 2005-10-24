@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_DNS
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.9 2005/09/11 19:51:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNS/ChangeLog,v 1.10 2005/10/24 13:46:22 sebastian Exp $
+
+  24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Net_DNS-0.03-r1.ebuild:
+  Add ~amd64.
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org> PEAR-Net_DNS-0.03-r1.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.14 2005/10/09 09:52:26 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.15 2005/10/24 13:46:22 sebastian Exp $
+
+  24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-PEAR_Info-1.6.0.ebuild:
+  Add ~amd64.
 
 *PEAR-PEAR_Info-1.6.0 (09 Oct 2005)
 

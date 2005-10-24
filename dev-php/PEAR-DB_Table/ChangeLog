@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_Table
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.9 2005/10/15 21:32:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_Table/ChangeLog,v 1.10 2005/10/24 13:46:21 sebastian Exp $
+
+  24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-DB_Table-1.2.1.ebuild:
+  Add ~amd64.
 
   15 Oct 2005; Jason Wever <weeve@gentoo.org> PEAR-DB_Table-1.2.1.ebuild:
   Added ~sparc keyword.

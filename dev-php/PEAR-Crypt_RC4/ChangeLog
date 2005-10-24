@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Crypt_RC4
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_RC4/ChangeLog,v 1.9 2005/09/11 04:20:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_RC4/ChangeLog,v 1.10 2005/10/24 13:46:21 sebastian Exp $
+
+  24 Oct 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Crypt_RC4-1.0.2-r1.ebuild:
+  Add ~amd64.
 
   11 Sep 2005; Jason Wever <weeve@gentoo.org>
   PEAR-Crypt_RC4-1.0.2-r1.ebuild:
