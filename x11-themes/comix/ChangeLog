@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/comix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.10 2005/09/19 13:07:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.11 2005/10/24 15:53:44 dertobi123 Exp $
+
+  24 Oct 2005; Tobias Scherbaum <dertobi123@gentoo.org> comix-1.3.4.ebuild:
+  Marked ppc stable, bug #109815
 
   19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> comix-1.3.3.ebuild:
   Stable on sparc
