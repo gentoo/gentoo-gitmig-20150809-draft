@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fc06eaa97fb260172cbb70b440b8e7c harp-0.2.ebuild 651
+MD5 a0ee385fda4563d5256fb186720dc1a6 metadata.xml 684
+MD5 fcc1118eace298911c072eca91553eb0 ChangeLog 342
+MD5 a68f55ac7cf8dc83e25c1aeb35383b09 files/digest-harp-0.2 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPfEBQBy/eDH5uERAkxrAJ9tTJKGk21it59+Iv5ZGngKS/lEpQCfdM8X
+wX4/iRo5hw9ulZoRKtfWARo=
+=TdO7
+-----END PGP SIGNATURE-----
