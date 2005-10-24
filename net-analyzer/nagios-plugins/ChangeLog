@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.40 2005/10/07 18:33:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.41 2005/10/24 03:48:26 ramereth Exp $
+
+*nagios-plugins-1.4.2 (24 Oct 2005)
+
+  24 Oct 2005; Lance Albertson <ramereth@gentoo.org>
+  -files/nagios-plugins-1.4.1-noradius.patch,
+  +files/nagios-plugins-1.4-noradius.patch, nagios-plugins-1.4.1.ebuild,
+  +nagios-plugins-1.4.2.ebuild:
+  * Version bump
+  * Fixed die on chmod
+  * Updated noradius patch
 
   07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   nagios-plugins-1.4.ebuild:
