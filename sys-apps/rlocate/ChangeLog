@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rlocate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.5 2005/07/29 10:42:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rlocate/ChangeLog,v 1.6 2005/10/24 01:08:38 malc Exp $
+
+  23 Oct 2005; Malcolm Lashley <malc@gentoo.org> rlocate-0.3.2.ebuild:
+  Added to ~amd64 per bug #109312
 
   29 Jul 2005; David Holm <dholm@gentoo.org> rlocate-0.3.2.ebuild:
   Added to ~ppc.
