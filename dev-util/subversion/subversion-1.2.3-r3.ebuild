@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r3.ebuild,v 1.1 2005/10/17 11:24:34 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.2.3-r3.ebuild,v 1.2 2005/10/24 10:04:44 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
-IUSE="apache2 berkdb python emacs perl java nls nowebdav zlib"
+IUSE="apache2 berkdb python emacs perl java nls nowebdav zlib ruby"
 RESTRICT="test"
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
@@ -21,6 +21,8 @@ RDEPEND="apache2? ( ${APACHE2_DEPEND} )
 	perl? ( >=dev-lang/swig-1.3.21
 		>=dev-lang/perl-5.8.6-r6
 		!=dev-lang/perl-5.8.7 )
+	ruby? ( >=dev-lang/swig-1.3.21
+		dev-lang/ruby )
 	!nowebdav? ( ~net-misc/neon-0.24.7 )
 	berkdb? ( =sys-libs/db-4* )
 	zlib? ( sys-libs/zlib )
@@ -61,6 +63,7 @@ src_unpack() {
 	epatch ${FILESDIR}/subversion-db4.patch
 	epatch ${FILESDIR}/subversion-1.1.1-perl-vendor.patch
 	epatch ${FILESDIR}/subversion-hotbackup-config.patch
+	epatch ${FILESDIR}/subversion-swig.m4-ruby.patch
 
 	export WANT_AUTOCONF=2.5
 	elibtoolize
@@ -83,7 +86,7 @@ src_compile() {
 #	use java && myconf="${myconf} $(use_with jikes)"
 	use java && myconf="${myconf} --without-jikes"
 
-	if use python || use perl; then
+	if use python || use perl || use ruby; then
 		myconf="${myconf} --with-swig"
 	else
 		myconf="${myconf} --without-swig"
@@ -122,6 +125,10 @@ src_compile() {
 		# Work around a buggy Makefile.PL, bug 64634
 		mkdir -p subversion/bindings/swig/perl/native/blib/arch/auto/SVN/{_Client,_Delta,_Fs,_Ra,_Repos,_Wc}
 		make swig-pl || die "Perl library building failed"
+	fi
+
+	if use ruby; then
+		make swig-rb || die "Ruby library building failed"
 	fi
 
 	if use java; then
@@ -172,6 +179,9 @@ src_install () {
 	if use perl; then
 		make DESTDIR=${D} install-swig-pl || die "Perl library building failed"
 		fixlocalpod
+	fi
+	if use ruby; then
+		make DESTDIR=${D} install-swig-rb || die "Installation of subversion ruby bindings failed"
 	fi
 	if use java; then
 		make DESTDIR="${D}" install-javahl || die "installation failed"
