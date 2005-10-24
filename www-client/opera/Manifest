@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5cf989c7a198572b29f4d57d00934eb0 opera-8.01.ebuild 4063
 MD5 d69991ffa059792b16159dd5e44f156c opera-8.50.ebuild 4066
 MD5 654eabba23cdab9ffe12a45fe6338fcd opera-8.00.ebuild 4060
@@ -13,3 +16,10 @@ MD5 2f86a42f50ba144aae2761dc9f922906 files/digest-opera-8.50 372
 MD5 05a269373a205b54700e2265119951a0 files/digest-opera-7.54-r3 372
 MD5 3fbc8c365c121ec93a041532f07942f7 files/opera-qt.patch 328
 MD5 bafbdb86632b055a10fe826d16ea5b7f files/opera.desktop 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDXSEZKRy60XGEcJIRAsDGAJ4r/30adhkZh2pN8BoF3k6AKdUxxgCgrQ5z
+bs6s+nKjTQiCZ917Y3N9Jkw=
+=SUVO
+-----END PGP SIGNATURE-----
