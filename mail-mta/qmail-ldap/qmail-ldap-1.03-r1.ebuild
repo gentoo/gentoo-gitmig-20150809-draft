@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.8 2005/10/17 20:36:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.9 2005/10/24 11:45:35 hansmi Exp $
 
 IUSE="ssl"
 
@@ -297,7 +297,7 @@ pkg_postinst() {
 	fi
 
 	echo -e "\e[32;01m Please do not forget to run, the following syntax :\033[0m"
-	echo -e "\e[32;01m ebuild --config =${PF} \033[0m"
+	echo -e "\e[32;01m emerge --config =${PF} \033[0m"
 	echo -e "\e[32;01m This will setup qmail to run out-of-the-box on your system. \033[0m"
 	echo -e ""
 	echo -e "\e[32;01m To start qmail at boot you have to enable the /etc/init.d/svscan rc file \033[0m"

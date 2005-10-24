@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r3.ebuild,v 1.7 2005/10/17 20:36:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r3.ebuild,v 1.8 2005/10/24 11:45:35 hansmi Exp $
 
 IUSE="ssl"
 
@@ -297,7 +297,7 @@ pkg_postinst() {
 	fi
 
 	einfo "Please do not forget to run, the following syntax :"
-	einfo "ebuild --config =${PF} "
+	einfo "emerge --config =${PF} "
 	einfo "This will setup qmail to run out-of-the-box on your system including SSL. "
 	echo
 	einfo "To start qmail at boot you have to enable the /etc/init.d/svscan rc file "
