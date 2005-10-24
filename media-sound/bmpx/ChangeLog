@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.9 2005/10/04 20:57:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.10 2005/10/24 13:24:26 azarah Exp $
+
+*bmpx-0.12 (24 Oct 2005)
+
+  24 Oct 2005; Martin Schlemmer <azarah@gentoo.org> +bmpx-0.12.ebuild:
+  Version bump, bug #109776 (I am still not happy, as there is a memory leak
+  that we have difficulty to track). Should also resolve bug #109494. Add the
+  gentoo_ice skin, which is also in XMMS (bug #109772). Some tweaks from Tony
+  Vroon <chainsaw@gentoo.org>.
 
 *bmpx-0.12_rc2 (04 Oct 2005)
 
