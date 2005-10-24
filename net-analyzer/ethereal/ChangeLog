@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.141 2005/10/24 19:57:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.142 2005/10/24 21:20:19 gustavoz Exp $
+
+  24 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ethereal-0.10.13.ebuild:
+  Stable on sparc wrt #109348
 
   24 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
   ethereal-0.10.13.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.13.ebuild,v 1.4 2005/10/24 19:57:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.13.ebuild,v 1.5 2005/10/24 21:20:19 gustavoz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="adns gtk ipv6 snmp ssl kerberos"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
