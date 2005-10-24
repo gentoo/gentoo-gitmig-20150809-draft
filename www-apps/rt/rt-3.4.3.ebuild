@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.6 2005/10/24 14:00:13 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.4.3.ebuild,v 1.7 2005/10/24 14:19:14 rl03 Exp $
 
 inherit webapp eutils
 
@@ -143,6 +143,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/3.4.2/Callback.patch # fix for bug #109745
 
 	# add Gentoo-specific layout
 	cat ${FILESDIR}/3.4.2/config.layout-gentoo >> config.layout

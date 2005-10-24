@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c6ad11fb5960b43189687370b23f3956 rt-3.4.3.ebuild 5967
+MD5 1605616b290d97fe75bc29a197c952a4 rt-3.4.3.ebuild 6030
 MD5 939107934a799efb520c62c057341273 rt-3.2.1.ebuild 4362
-MD5 29197b69d7a3cb53503620e0f1aa46a2 ChangeLog 3969
+MD5 92dc20327e49512a91079db5434c7244 ChangeLog 4087
 MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
 MD5 5f5c3f76ea4676e743612e38341780fe files/digest-rt-3.2.1 61
 MD5 74849aa771037cfdb03fc4a8b8d01af6 files/digest-rt-3.4.3 61
@@ -15,12 +15,13 @@ MD5 3a24e1ccdc0d6b7c6b0d40e19c586365 files/3.4.2/postinstall-en.txt 703
 MD5 3d2e627499ec86839cc0099719fcc3bd files/3.4.2/rt_apache.conf 574
 MD5 c807deb11e08ab9f37a658bd5e971c7f files/3.4.2/rt.conf.d 405
 MD5 54a1cd04dc0d0788ce920d941e5601d0 files/3.4.2/rt.init.d 1019
+MD5 cee32ca276838f6d74230c66d0bfc961 files/3.4.2/Callback.patch 1567
 MD5 bf81df666e02df7b1e6f73ee9908a767 files/3.4.2/reconfig 1206
 MD5 73c354dd8ba0f64a74e5c6cd01b33834 files/3.4.2/rt_apache2_fcgi.conf 993
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDXOkFEzitwsaoONoRAtLcAJ9kXFdVOAfm8wTP0QDEjdp28oDZtQCgjAAX
-8uckmYdsRjaVw9WOEJMLBfw=
-=KgcW
+iD8DBQFDXO15EzitwsaoONoRAoVrAKDZsbMZYWyDKUWFp3UvQq3xXjSG7wCfRgUM
+Np8uThHqBGIRAUwVuEv16Ng=
+=1cm4
 -----END PGP SIGNATURE-----
