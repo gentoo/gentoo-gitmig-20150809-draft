@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXprintUtil
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXprintUtil/ChangeLog,v 1.4 2005/10/20 05:40:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXprintUtil/ChangeLog,v 1.5 2005/10/24 03:17:05 spyderous Exp $
+
+  24 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  libXprintUtil-0.99.1.ebuild:
+  Add libXt to DEPEND, uses a header from that.
 
 *libXprintUtil-0.99.1 (20 Oct 2005)
 

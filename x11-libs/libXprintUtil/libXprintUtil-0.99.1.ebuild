@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXprintUtil/libXprintUtil-0.99.1.ebuild,v 1.1 2005/10/20 05:40:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXprintUtil/libXprintUtil-0.99.1.ebuild,v 1.2 2005/10/24 03:17:05 spyderous Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -16,4 +16,5 @@ KEYWORDS="~arm ~mips ~s390 ~sparc ~x86"
 #IUSE="X gnome"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXp"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-libs/libXt"
