@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.2 2005/10/19 06:57:56 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.3 2005/10/24 15:33:35 carlo Exp $
+
+*akode-2.0_beta3 (24 Oct 2005)
+
+  24 Oct 2005; Carsten Lohrke <carlo@gentoo.org> +akode-2.0_beta3.ebuild:
+  version bump
 
 *akode-2.0_beta2 (19 Oct 2005)
 
