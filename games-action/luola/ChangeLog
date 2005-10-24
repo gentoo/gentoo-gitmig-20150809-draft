@@ -1,6 +1,11 @@
 # ChangeLog for games-action/luola
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/luola/ChangeLog,v 1.4 2005/08/23 18:11:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/luola/ChangeLog,v 1.5 2005/10/24 20:16:47 mr_bones_ Exp $
+
+*luola-1.3.0 (24 Oct 2005)
+
+  24 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +luola-1.3.0.ebuild:
+  version bump
 
 *luola-1.2.9 (23 Aug 2005)
 
