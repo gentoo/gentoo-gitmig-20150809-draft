@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-squid
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.13 2005/06/26 17:47:38 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.14 2005/10/24 15:13:51 kaiowas Exp $
+
+*selinux-squid-20051023 (24 Oct 2005)
+
+  24 Oct 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-squid-20050408.ebuild, +selinux-squid-20051023.ebuild:
+  added mips keyword, merge with upstream
 
 *selinux-squid-20050626 (26 Jun 2005)
 
