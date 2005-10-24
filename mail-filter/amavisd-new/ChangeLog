@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.67 2005/10/18 00:57:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.68 2005/10/24 09:22:02 ticho Exp $
+
+*amavisd-new-2.3.3-r2 (24 Oct 2005)
+
+  24 Oct 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/amavisd-new-2.3.3-bsmtp-quarantine.patch,
+  +amavisd-new-2.3.3-r2.ebuild:
+  Applied patch from Thomas Jarosch to prevent quarantine misbehavior if
+  stored as BSMTP files. Security bug #110289.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   amavisd-new-2.3.3-r1.ebuild:
