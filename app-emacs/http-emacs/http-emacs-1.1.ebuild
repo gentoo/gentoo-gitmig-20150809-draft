@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/http-emacs-1.1.ebuild,v 1.7 2005/09/09 15:59:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/http-emacs-1.1.ebuild,v 1.8 2005/10/24 15:01:14 josejx Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://emacswiki.org/cgi-bin/wiki.pl?SimpleWikiEditMode"
 SRC_URI="http://savannah.nongnu.org/download/http-emacs/http-emacs.pkg/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc-macos x86"
+KEYWORDS="alpha ~amd64 ~ppc ~ppc-macos x86"
 IUSE=""
 S=${WORKDIR}/${PN}
 

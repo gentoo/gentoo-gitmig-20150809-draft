@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ognus/ognus-0.24.ebuild,v 1.9 2005/08/28 02:18:55 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ognus/ognus-0.24.ebuild,v 1.10 2005/10/24 14:50:07 josejx Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnus.org/"
 SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="virtual/emacs"
 

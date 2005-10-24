@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/simple-wiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/simple-wiki/ChangeLog,v 1.4 2005/08/28 02:24:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/simple-wiki/ChangeLog,v 1.5 2005/10/24 15:04:30 josejx Exp $
+
+  24 Oct 2005; Joseph Jezak <josejx@gentoo.org> simple-wiki-1.1.ebuild:
+  Marked ~ppc.
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> simple-wiki-1.1.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing

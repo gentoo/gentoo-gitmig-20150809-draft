@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/setnu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.3 2005/08/28 02:23:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.4 2005/10/24 14:56:50 josejx Exp $
+
+  24 Oct 2005; Joseph Jezak <josejx@gentoo.org> setnu-1.06.ebuild:
+  Marked ~ppc.
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> setnu-1.06.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing

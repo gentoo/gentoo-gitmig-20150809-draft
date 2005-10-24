@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/md5
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.6 2005/07/01 19:49:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.7 2005/10/24 14:45:40 josejx Exp $
+
+  24 Oct 2005; Joseph Jezak <josejx@gentoo.org> md5-1.0-r1.ebuild:
+  Marked ~ppc.
 
   01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org> md5-1.0-r1.ebuild:
   Keywording ~amd64.

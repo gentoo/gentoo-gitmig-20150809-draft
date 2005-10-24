@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/matlab-2.2.3.ebuild,v 1.9 2005/04/05 15:55:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/matlab-2.2.3.ebuild,v 1.10 2005/10/24 14:52:15 josejx Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.mathworks.com/pub/contrib/emacs_add_ons/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 DEPEND="virtual/emacs"
 
