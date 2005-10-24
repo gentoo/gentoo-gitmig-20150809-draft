@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r1.ebuild,v 1.2 2005/10/18 23:21:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r1.ebuild,v 1.3 2005/10/24 12:17:32 swegener Exp $
 
 IUSE="xmms"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 DEPEND=">=x11-libs/gtk+-2.4
 	>=net-misc/curl-7.10.8
 	>=app-text/scrollkeeper-0.3.0
-	>=dev-libs/libxml2
+	dev-libs/libxml2
 	>=media-libs/taglib-1.2"
 
 RDEPEND="${DEPEND}
