@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.12 2005/09/15 20:39:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.13 2005/10/24 09:22:43 flameeyes Exp $
 
 inherit eutils flag-o-matic qt3
 
@@ -17,13 +17,12 @@ LICENSE="GPL-2"
 SLOT="0.7"
 
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips sparc ~x86"
-IUSE="3dnow X alsa debug divx4linux dmalloc dpms a52 encode esd mad matrox
+IUSE="3dnow X alsa debug dmalloc dpms a52 encode esd mad matrox
 mmx vorbis oss qt sblive sdl sse truetype v4l vidix win32codecs xinerama xv xvid
 zlib"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	win32codecs? ( >=media-libs/win32codecs-0.90 )
-	divx4linux? ( >=media-libs/divx4linux-20030428 )
 	dmalloc? ( !amd64? ( !arm? ( !mips? ( dev-libs/dmalloc ) ) ) )
 	a52? ( >=media-libs/a52dec-0.7 )
 	encode? ( >=media-sound/lame-3.90 )

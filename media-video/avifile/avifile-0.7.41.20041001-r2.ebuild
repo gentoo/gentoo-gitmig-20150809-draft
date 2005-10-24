@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r2.ebuild,v 1.5 2005/07/25 17:51:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r2.ebuild,v 1.6 2005/10/24 09:22:43 flameeyes Exp $
 
 inherit eutils flag-o-matic qt3
 
@@ -18,12 +18,11 @@ SLOT="0.7"
 
 #-sparc: 0.7.41 - dsputil_init_vis undefined - eradicator
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips -sparc ~x86"
-IUSE="3dnow X alsa avi debug divx4linux dmalloc dpms dvd encode esd mad matrox
+IUSE="3dnow X alsa avi debug dmalloc dpms dvd encode esd mad matrox
 mmx oggvorbis oss qt sblive sdl sse static truetype v4l vidix xinerama xv xvid zlib"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	avi? ( x86? ( >=media-libs/win32codecs-0.90 ) )
-	divx4linux? ( x86? ( >=media-libs/divx4linux-20030428 ) )
 	dmalloc? ( !amd64? ( !arm? ( !mips? ( dev-libs/dmalloc ) ) ) )
 	dvd? ( >=media-libs/a52dec-0.7 )
 	encode? ( >=media-sound/lame-3.90 )

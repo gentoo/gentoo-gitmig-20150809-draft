@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710-r1.ebuild,v 1.5 2005/10/22 07:06:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710-r1.ebuild,v 1.6 2005/10/24 09:22:43 flameeyes Exp $
 
 inherit eutils qt3
 
@@ -19,8 +19,7 @@ KEYWORDS="x86 ~sparc alpha amd64 ia64"
 IUSE="3dnow X alsa avi debug dvd esd mmx oggvorbis qt sdl sse static truetype xv zlib"
 
 DEPEND=">=media-libs/jpeg-6b
-	x86? ( divx4linux? ( >=media-libs/divx4linux-20030428 )
-		>=media-libs/win32codecs-0.90 )
+	x86? ( >=media-libs/win32codecs-0.90 )
 	>=media-video/ffmpeg-0.4
 	>=media-libs/xvid-0.9.0
 	>=media-sound/lame-3.90
