@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c7870e2154e6f56bbbf55418342ccff8 ChangeLog 1418
+MD5 0e243040ed6aecc66a3b2f5b98d91f7f ChangeLog 1647
+MD5 86c95cfc84bede2f50b92367f025dd4a files/digest-xmms-wma-1.0.4 67
+MD5 2e033b8d9a3a271c4c06c594aceb59e7 files/digest-xmms-wma-1.0.5 67
+MD5 94d9ef7188afd52346e89ec625494085 files/xmms-wma-1.0.4-ffmpeg.patch 3884
+MD5 150baf260442010c0c272c4280216034 files/xmms-wma-1.0.5-ffmpeg.patch 3188
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 caea6b3a5ee81893119c8f463f019c10 xmms-wma-1.0.4.ebuild 833
-MD5 86c95cfc84bede2f50b92367f025dd4a files/digest-xmms-wma-1.0.4 67
-MD5 94d9ef7188afd52346e89ec625494085 files/xmms-wma-1.0.4-ffmpeg.patch 3884
+MD5 c98d33cd9226799676c625fad1e675a2 xmms-wma-1.0.5.ebuild 831
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPjgtArHZZzCEUG0RApBFAJ4/A7zImTPEMz4kcpP5rohaJjT5vACePiSx
-RnM4XldLl3Byg9DxM8d+87k=
-=4bOR
+iD8DBQFDXD0GwUpWvClEHQoRApSxAJoD6HxqcVsDXEJFMZEnPdxO7qg4JACffpNC
+i27h5neXlTYY/TQZUtP88Hs=
+=DmHK
 -----END PGP SIGNATURE-----
