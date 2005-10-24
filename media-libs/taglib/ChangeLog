@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.41 2005/10/24 16:42:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.42 2005/10/24 18:51:06 gustavoz Exp $
+
+  24 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> taglib-1.4.ebuild:
+  Stable on sparc wrt #109810
 
   24 Oct 2005; Brent Baude <ranger@gentoo.org> taglib-1.4.ebuild:
   Marking taglib-1.4 stable per bug request 109810
