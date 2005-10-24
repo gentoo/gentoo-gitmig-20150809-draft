@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.6-r2.ebuild,v 1.1 2005/10/20 23:22:27 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.6-r2.ebuild,v 1.2 2005/10/24 19:56:36 mkay Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	dev-python/dnspython"
 PROVIDE="virtual/bittorrent"
 
-DOCS="TRACKERLESS.txt LICENSE.txt"
+DOCS="TRACKERLESS.txt LICENSE.txt public.key"
 PYTHON_MODNAME="BitTorrent"
 
 src_unpack() {
@@ -48,10 +48,11 @@ src_install() {
 	fi
 	dohtml redirdonate.html
 
-	rm ${D}/usr/share/doc/${P}/redirdonate.html
-	mv ${D}/usr/share/doc/${MY_P}/* ${D}/usr/share/doc/${P}/
-	rm -fr ${D}/usr/share/doc/${MY_P}
-
+	mv ${D}/usr/share/doc/${P}/{credits-l10n.txt,credits.txt} \
+		${D}/usr/share/doc/${PF} 
+	rm -rf ${D}/usr/share/doc/${P}
+	mv ${D}/usr/share/doc/${PF} ${D}/usr/share/doc/${P}
+		
 	if use gtk ; then
 		cp ${D}/usr/share/pixmaps/${MY_P}/bittorrent.ico ${D}/usr/share/pixmaps/
 		make_desktop_entry "bittorrent" "BitTorrent" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.6-r1.ebuild,v 1.1 2005/10/19 15:57:06 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.1.6-r1.ebuild,v 1.2 2005/10/24 19:56:36 mkay Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -50,10 +50,12 @@ src_install() {
 	dodir etc
 	cp -pPR /etc/mailcap ${D}/etc/
 
-	rm ${D}/usr/share/doc/${P}/redirdonate.html
-	mv ${D}/usr/share/doc/${MY_P}/* ${D}/usr/share/doc/${P}/
-	rm -fr ${D}/usr/share/doc/${MY_P}
-
+    mv ${D}/usr/share/doc/${P}/{credits-l10n.txt,credits.txt} \
+		${D}/usr/share/doc/${PF}
+	rm -rf ${D}/usr/share/doc/${P}
+	mv ${D}/usr/share/doc/${PF} ${D}/usr/share/doc/${P}
+					
+			
 	MAILCAP_STRING="application/x-bittorrent; /usr/bin/bittorrent '%s'; test=test -n \"\$DISPLAY\""
 
 	if use gtk; then
