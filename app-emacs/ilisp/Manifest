@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd5b1183098aef76acb1d9e132321909 ChangeLog 1631
 MD5 9b253aa445c6c9f0a5583cfae4b471de files/50ilisp-gentoo.el 4832
 MD5 5ca477f60456b29d61f0ed9ea0d698c1 files/50ilispclc-gentoo.el 750
@@ -6,3 +9,10 @@ MD5 5c3294f5ca7bb7c6ef341170ed1ee54e files/digest-ilisp-5.12.0-r3 79
 MD5 886b2444bf37aba86e0cd4b284724a5e ilisp-5.12.0-r1.ebuild 979
 MD5 8a9ef2d517185146338248b6771db71c ilisp-5.12.0-r3.ebuild 2199
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPLxcsIHjyDViGQRAo3hAKC+iSRta0yYzXy2mvEmt8oUq1UZjQCgput+
+hRQZjvjto5OdU3ylarETVG4=
+=z0LW
+-----END PGP SIGNATURE-----

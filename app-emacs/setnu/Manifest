@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44b589cb0088cbc076fe93d4281ca2b6 ChangeLog 649
 MD5 6db5846550a257ea00daa0f261ceb72f files/50setnu-gentoo.el 194
 MD5 f0af45b7ea787906556c07d2204ad90b files/digest-setnu-1.06 60
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 bb2b1a6ae01405950c2020128c746dcb setnu-1.06.ebuild 663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPZTcsIHjyDViGQRAsR+AKCYqhxJcji129gZKfuyQF0EwHi2tACfZasX
+giOW63vHgcyfMo8K1L6bV3I=
+=nSzV
+-----END PGP SIGNATURE-----

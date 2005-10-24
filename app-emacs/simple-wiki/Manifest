@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6f77057c7c17e044486287e4e9d3307 ChangeLog 669
 MD5 6192421c4f9acd7ac2dad4823b807690 files/60simple-wiki-gentoo.el 409
 MD5 3c3f1ae83ee53786e797df5b16a72633 files/digest-simple-wiki-1.1 65
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 4c22771f445aac2a59c5887e93d83b4c simple-wiki-1.1.ebuild 807
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPgTcsIHjyDViGQRAm0cAKCNL3eaaoTemma+Lst6dojTM974LwCfceYA
+ESsRnJEDewr+E+Ep9PJQ7m4=
+=2wCT
+-----END PGP SIGNATURE-----

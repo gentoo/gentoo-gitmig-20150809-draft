@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c3e3cc158a76eb6a96cd7d7a4d2795c5 ChangeLog 593
 MD5 45ecd04158f003c0d23f93b7505d735a files/50protbuf-gentoo.el 104
 MD5 eb90c3e4a2085a7fb9a299a57c04ba7e files/digest-protbuf-1.7 62
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 fc7b5dba8891d8d45a3210304100bda7 protbuf-1.7.ebuild 519
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPYdcsIHjyDViGQRArbaAKCtBnqg/dJXQb7lIagGiD3yXNi/JQCg3jb/
+2SeC7LAfKsRQnDCRg/51/FE=
+=Jcz7
+-----END PGP SIGNATURE-----

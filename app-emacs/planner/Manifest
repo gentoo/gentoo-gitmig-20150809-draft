@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f990f38a99c0d0a97dc8462cdd0e5643 ChangeLog 707
 MD5 f273f34026f0ead22d6803db8c79f47d files/80planner-gentoo.el 96
 MD5 28bb6f548de0302c9b5bd006e0f765f1 files/digest-planner-3.26 72
 MD5 92e9a822945aa2dea4f840e125898501 metadata.xml 430
 MD5 ed7b132970618f44e1fc993da4229b4c planner-3.26.ebuild 955
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPVccsIHjyDViGQRAvR8AKCJ3f2l2s6TB2ehCWB0SHdEKtGs7QCgwqhV
+SJnrXX0BuA57jkehD1AXjcg=
+=V4P6
+-----END PGP SIGNATURE-----

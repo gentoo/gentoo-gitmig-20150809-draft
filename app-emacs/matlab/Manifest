@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ec73904a5bd6dd10a51835d4aa528ca8 ChangeLog 774
 MD5 585f9e842d3ddae0483c38ff2c9992f9 files/50matlab-gentoo.el 410
 MD5 4ca7d27b7cfcaa20dff07173ba9d01a1 files/digest-matlab-2.2.3 64
 MD5 39e05bc5404b3801f31b17c7d9bfab70 matlab-2.2.3.ebuild 853
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPVDcsIHjyDViGQRAilAAJ0Vlqo0oGU3RMCGOnxqAcbqhIU8TgCfW9KB
+aNTvc+udvAP1vYDoEIvmdfM=
+=CWJy
+-----END PGP SIGNATURE-----

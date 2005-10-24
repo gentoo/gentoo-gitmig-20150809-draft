@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45a186fd138a48b13af76116a81f92c3 ChangeLog 967
 MD5 7de52a52a8d47b90c0eb6593c8d7894b files/50thumbs-gentoo.el 119
 MD5 775e38291c21b17e0b0c4a8f8341decd files/digest-thumbs-0.8.1 63
@@ -6,3 +9,10 @@ MD5 f6524318a33281d5bb3005cc5909a4b8 files/thumbs.el-gentoo.patch 651
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 e8732a73722b946dd50278717c57add2 thumbs-0.8.1.ebuild 873
 MD5 c4c4e8059a0d59afc337989c48f858d7 thumbs-1.8.ebuild 797
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPilcsIHjyDViGQRAlM/AJ4q4N3eFIo55ELRvoG/Bsj83L0BCgCeKjRi
+pyHR+n3YSJhCOvY9Iykz3h0=
+=J+vg
+-----END PGP SIGNATURE-----

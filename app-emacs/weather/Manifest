@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fb1130a871f39f07c66b00372d1eac78 ChangeLog 481
 MD5 9b25a1a13acb1189e635430d930f753d files/50weather-gentoo.el 105
 MD5 3cbc1109038bdd800d3866bee3079b7a files/digest-weather-2.2 62
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 04fcf33ac7c178e74a2000a9f6c4dec9 weather-2.2.ebuild 906
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPi4csIHjyDViGQRAqeNAKC01cRy1oSto0rXNdmI4CmBnhpzzACgnRGU
+2dn1272Wi/0KvLhnKtwZ9YI=
+=BHv3
+-----END PGP SIGNATURE-----

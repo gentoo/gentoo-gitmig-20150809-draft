@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a361537ebcec43a0295ac568da078075 ChangeLog 496
 MD5 15fbbb4437f8e2a5f3078a68727ba406 files/50mmm-mode-gentoo.el 106
 MD5 a91bc1220be4b1f18aee15a6391cb7aa files/digest-mmm-mode-0.4.7 66
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 2b5f7f5ae70dc73806c052160c3999b0 mmm-mode-0.4.7.ebuild 959
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPQscsIHjyDViGQRAhrMAJ9vaIYOdlC3OqICvExiWlsB2ibETwCdFvcz
+j1swhW8S9AcrN7PZwlBEUXI=
+=l+w1
+-----END PGP SIGNATURE-----

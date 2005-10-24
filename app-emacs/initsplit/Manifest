@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f3715270a3f527b9e4be6164e1beaa8c ChangeLog 832
 MD5 0916dbd04c7da0cbb2764cca1a67ce9b files/50initsplit-gentoo.el 433
 MD5 f3f73a0c3447dd52cd8fa70db47c8465 files/digest-initsplit-1.6 63
 MD5 a8654ec3276231b36d8d023cdae358be initsplit-1.6.ebuild 483
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDXPLtcsIHjyDViGQRAiPeAKDVq5Q6eZ4FFStoXRac2nbKhBrbswCfYaDA
+4ltx73Zbu350czo9m+5//fY=
+=Lbqd
+-----END PGP SIGNATURE-----
