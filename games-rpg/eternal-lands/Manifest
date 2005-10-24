@@ -1,4 +1,6 @@
 MD5 f14047c98a46008d55322cc6df542db0 metadata.xml 218
-MD5 d297a30b0973849e5c91922c61e32f25 ChangeLog 796
+MD5 22d15306394949aba36e294a0aea862d eternal-lands-1.1.2.ebuild 4007
+MD5 8ecd65b78393d73df937a5e9535ac156 ChangeLog 934
 MD5 5880576ab7a69d81483583d9bc20fdb9 eternal-lands-1.0.1.ebuild 3971
 MD5 cd095b45439a8c74608347887c8eb72a files/digest-eternal-lands-1.0.1 236
+MD5 e6486bdc48faa0017a36591fb674f105 files/digest-eternal-lands-1.1.2 242
