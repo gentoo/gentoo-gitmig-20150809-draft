@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.17 2005/10/17 14:34:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.18 2005/10/25 18:22:23 dang Exp $
+
+  25 Oct 2005; <dang@gentoo.org> xsnap-1.4.3-r1.ebuild:
+  Marked stable on amd64
 
   17 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> xsnap-1.4.3-r1.ebuild:
   Stable on sparc
