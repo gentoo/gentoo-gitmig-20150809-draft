@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.20 2005/09/17 00:51:03 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.21 2005/10/25 12:33:20 nelchael Exp $
+
+*lineakd-0.8.3-r1 (25 Oct 2005)
+
+  25 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/lineakd-0.8.3-lineakkb.def.patch, -lineakd-0.7.2.ebuild,
+  +lineakd-0.8.3-r1.ebuild:
+  Fix bug 109294 - typos in lineakkb.def, removed old ebuild.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
