@@ -1,18 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8cbe13cf7fd412cfdf3609b3bf67eebe metadata.xml 504
-MD5 9e6d670636a859de71780126e6c9d53f online-bookmarks-0.2.6.ebuild 1457
-MD5 a498a6db1435464edf643c4c1a1d3f81 online-bookmarks-0.2.8.ebuild 1457
+MD5 b1914f24c7c3de9dba6c745d45d45c13 online-bookmarks-0.6.1c.ebuild 951
 MD5 b81a11ffafa1d5c4c69a4d1dcd3cb901 online-bookmarks-0.4.0.ebuild 1463
-MD5 aa73fc0b21279114cb7c02ae81ba5051 ChangeLog 1316
-MD5 17d5aedf274dc89da9c51a078276b928 files/digest-online-bookmarks-0.2.6 73
-MD5 108a2e1964d7b79417880adaf4846171 files/digest-online-bookmarks-0.2.8 73
+MD5 f6d6a36c61b73c3a466b085bd211f4dd ChangeLog 1575
+MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 b887b7150525fd0effaa66c705c2599a files/postinstall-en.txt 96
 MD5 ecc864d6e8a42284be157e0ce864593c files/digest-online-bookmarks-0.4.0 73
+MD5 30f252628aa933133b811094d4f7f3c2 files/digest-online-bookmarks-0.6.1c 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBOtPXI1lqEGTUzyQRAnVaAKCcPRlkyPxx+9edjrDtnbMxjp5DBwCgrr0w
-Tn8B9qCeBqcolzI3ZLRcWS4=
-=eWfV
+iD8DBQFDXqPtEzitwsaoONoRAsZiAKDKpx2y6D3bBJpSh3f7pJS17XEv+ACeKMni
+W5mXpEjrlXhIZEuFMzTV23M=
+=jPYr
 -----END PGP SIGNATURE-----
