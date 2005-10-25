@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.5 2005/10/23 12:42:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.6 2005/10/25 05:21:58 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -206,6 +206,9 @@ src_install() {
 	# Install corrected Symbol Font
 	insinto /usr/share/fonts/TTF/
 	doins ${PATCHDIR}/fonts/*.ttf
+
+	# Temporary, hacky fix for the filetype problem without java
+	use !java && cp -pPRf ${FILESDIR}/${PV}/Filter.xcu ${D}/usr/lib/openoffice/share/registry/res/en-US/org/openoffice/TypeDetection/ || die
 
 }
 
