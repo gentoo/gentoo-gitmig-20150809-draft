@@ -1,6 +1,7 @@
-diff -uprN daapd-0.2.4.orig/makefile daapd-0.2.4/makefile
---- daapd-0.2.4.orig/makefile	2005-04-28 17:35:27.000000000 +0200
-+++ daapd-0.2.4/makefile	2005-04-28 17:36:49.000000000 +0200
+Index: daapd-0.2.4a/makefile
+===================================================================
+--- daapd-0.2.4a.orig/makefile
++++ daapd-0.2.4a/makefile
 @@ -11,19 +11,19 @@ MPEG4_ENABLE = 0
  CC = g++
  MAKE = $(MAKE_COMMAND)
@@ -12,10 +13,11 @@ diff -uprN daapd-0.2.4.orig/makefile daapd-0.2.4/makefile
 -LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
 -INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
 -DEPLOY = /usr/local
+-CFLAGS = -Wall -Wno-multichar
 +LIBPATH = -L. -L/usr/lib
 +INCPATH = -I. -I/usr/include
 +DEPLOY = /usr
- CFLAGS = -Wall -Wno-multichar
++CFLAGS := $(OPTFLAGS) -Wall -Wno-multichar
  
  # HOWL
  ifeq ($(HOWL_ENABLE),1)
@@ -27,9 +29,10 @@ diff -uprN daapd-0.2.4.orig/makefile daapd-0.2.4/makefile
  endif
  	HOWLRECENT := $(word $(words $(HOWLDIRS)),$(HOWLDIRS) )
  	INCPATH := $(INCPATH) -I$(HOWLRECENT)
-diff -uprN daapd-0.2.4.orig/types.h daapd-0.2.4/types.h
---- daapd-0.2.4.orig/types.h	2005-04-28 17:35:27.000000000 +0200
-+++ daapd-0.2.4/types.h	2005-04-28 17:37:15.000000000 +0200
+Index: daapd-0.2.4a/types.h
+===================================================================
+--- daapd-0.2.4a.orig/types.h
++++ daapd-0.2.4a/types.h
 @@ -20,6 +20,10 @@
  	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.4a-r1.ebuild,v 1.1 2005/10/17 11:44:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.4a-r2.ebuild,v 1.1 2005/10/25 05:26:32 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,7 +23,8 @@ DEPEND="sys-libs/zlib
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.2.4-gentoo.patch
+	epatch "${FILESDIR}/${PN}-0.2.4-gentoo.patch"
+	epatch "${FILESDIR}/${P}-defaults.patch"
 }
 
 src_compile() {
@@ -31,21 +32,17 @@ src_compile() {
 	use howl && want_howl="1" || want_howl="0"
 	use mpeg4 && want_mpeg4="1" || want_mpeg4="0"
 
-	# This warning outputs a lot of noise and it's disabled by the original
-	# makefile, as we rewrite CFLAGS, append this again.
-	append-flags -Wno-multichar
-
-	# The makefile is dump, uses $(CC) to compile .cc files
+	# The makefile is dumb, uses $(CC) to compile .cc files
 	# pass it a C++ compiler and C++ flags
 	emake \
-		CC=$(tc-getCXX) CFLAGS="${CXXFLAGS}" \
+		CC=$(tc-getCXX) OPTFLAGS="${CXXFLAGS}" \
 		HOWL_ENABLE="$want_howl" MPEG4_ENABLE="$want_mpeg4" \
 		|| die "make failed"
 
 	# Make sure that it requires mDNSResponder while using howl
 	cp ${FILESDIR}/daapd.init.d-2 ${WORKDIR}/daapd.init.d
 	use howl && \
-		sed -i -e 's:#WITHHOWL::' ${WORKDIR}/daapd.init.d || \
+		sed -i -e 's:#WITHHOWL ::' ${WORKDIR}/daapd.init.d || \
 		sed -i -e '/#WITHHOWL/d' ${WORKDIR}/daapd.init.d
 }
 

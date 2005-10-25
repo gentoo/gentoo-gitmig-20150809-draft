@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/daapd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.17 2005/10/17 11:44:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.18 2005/10/25 05:26:32 flameeyes Exp $
+
+*daapd-0.2.4a-r2 (25 Oct 2005)
+
+  25 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  files/daapd-0.2.4-gentoo.patch, +files/daapd-0.2.4a-defaults.patch,
+  -daapd-0.2.4a-r1.ebuild, +daapd-0.2.4a-r2.ebuild:
+  Make sure that HOWL support is really enabled, as per bug #96818.
 
 *daapd-0.2.4a-r1 (17 Oct 2005)
 
