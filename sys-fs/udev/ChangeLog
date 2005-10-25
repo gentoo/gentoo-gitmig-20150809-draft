@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.150 2005/10/19 22:54:11 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.151 2005/10/25 21:19:28 gregkh Exp $
+
+  25 Oct 2005; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -files/udev-070-gcc2.patch, -udev-030.ebuild, -udev-059.ebuild,
+  -udev-060.ebuild, -udev-062.ebuild, -udev-063.ebuild, -udev-064.ebuild,
+  -udev-064-r1.ebuild, -udev-065.ebuild, -udev-066.ebuild, -udev-067.ebuild,
+  -udev-070.ebuild:
+  remove a bunch of old udev versions from the tree
 
 *udev-071 (19 Oct 2005)
 
