@@ -28,7 +28,7 @@ else
 	then
 		echo "Running artsd found"
 		echo "Starting artsd wrapped ${progname}" | tee --append "${logfile}"
-		skypecmd="MALLOC_CHECK_=0 artsdsp -m ${skypecmd}"
+		skypecmd="env MALLOC_CHECK_=0 artsdsp -m ${skypecmd}"
 	elif [[ ${wrapsound} == "yes" && ${shellcheck2} == /usr/bin/esd && -n ${esdcheck} ]]
 	then
 		echo "Running esd found"

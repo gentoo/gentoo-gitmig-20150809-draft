@@ -1,6 +1,14 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.47 2005/09/22 23:17:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.48 2005/10/25 14:58:33 humpback Exp $
+
+*skype-1.2.0.18 (25 Oct 2005)
+
+  25 Oct 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  files/sDaemonWrapper-r1, -skype-1.2.0.11-r1.ebuild,
+  -skype-1.2.0.17.ebuild, +skype-1.2.0.18.ebuild:
+  Removed older versions with security issue, added new version that fixes sec
+  bug #110430
 
 *skype-1.2.0.17 (22 Sep 2005)
 
