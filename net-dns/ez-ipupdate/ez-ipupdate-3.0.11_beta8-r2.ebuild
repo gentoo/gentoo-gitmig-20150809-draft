@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r2.ebuild,v 1.1 2005/10/09 22:48:08 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r2.ebuild,v 1.2 2005/10/25 04:10:45 flameeyes Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup ez-ipupd
-	enewuser ez-ipupd -1 /bin/false /var/cache/ez-ipupdate ez-ipupd
+	enewuser ez-ipupd -1 -1 /var/cache/ez-ipupdate ez-ipupd
 }
 
 pkg_postinst() {
