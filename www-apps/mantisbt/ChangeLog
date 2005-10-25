@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.18 2005/10/25 15:24:55 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.19 2005/10/25 15:31:40 rl03 Exp $
+
+  25 Oct 2005; Renat Lumpau <rl03@gentoo.org> mantisbt-1.0.0_rc2.ebuild:
+  Added postgres support wrt bug #106488.
 
   25 Oct 2005; Renat Lumpau <rl03@gentoo.org> -files/0.19.2-debian.patch,
   -mantisbt-0.19.2.ebuild:
