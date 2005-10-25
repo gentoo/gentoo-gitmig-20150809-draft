@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.8 2005/10/25 16:02:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.9 2005/10/25 17:44:24 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -118,6 +118,13 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	unpack ooo-build-${PV}.tar.gz
+
+	#Some fixes for our patchset
+	cd ${PATCHDIR}
+	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
+
+	#Additional and new patches get here
+	cp -pPRf ${FILESDIR}/${PV}/build-beanshell-fix.diff ${PATCHDIR}/patches/src680 || die
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"

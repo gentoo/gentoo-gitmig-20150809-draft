@@ -1,0 +1,8 @@
+--- beanshell/prj/build.lst 
++++ beanshell/prj/build.lst 
+@@ -1,4 +1,4 @@
+-be	beanshell	:	solenv NULL
++be	beanshell	:	solenv soltools NULL
+ be	beanshell							usr1		-	all	be_mkout				NULL
+ be	beanshell							nmake		-	all	be_beanshell		NULL
+ 

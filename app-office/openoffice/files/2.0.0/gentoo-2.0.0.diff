@@ -1,0 +1,12 @@
+--- patches/OOO_2_0/apply 
++++ patches/OOO_2_0/apply
+@@ -496,6 +496,9 @@
+ buildfix-ucb-without-stlport4.diff
+ buildfix-svx-without-stlport4.diff
+ 
++# Fix beanshell dep
++build-beanshell-fix.diff
++
+ [ ArkOnly ]
+ system-db-4.3-use-lpthread.diff
+ # FIXME this is generally useful -- currently applied here only because
