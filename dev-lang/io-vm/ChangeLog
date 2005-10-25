@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/io-vm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/ChangeLog,v 1.6 2005/01/03 00:21:05 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io-vm/ChangeLog,v 1.7 2005/10/25 04:20:22 flameeyes Exp $
+
+  25 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> io-vm-20030923.ebuild:
+  Don't refer directly to libdl, use $(dlopen_lib) to get the right library to
+  link to.
 
   02 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> io-vm-20030923.ebuild:
   Stable ppc-macos.
