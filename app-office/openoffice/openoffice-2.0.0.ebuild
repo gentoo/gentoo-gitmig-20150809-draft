@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.7 2005/10/25 06:35:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.8 2005/10/25 16:02:03 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -209,8 +209,11 @@ src_install() {
 	doins ${PATCHDIR}/fonts/*.ttf
 
 	# Temporary, hacky fix for the filetype problem without java
-	use !java && cp -pPRf ${FILESDIR}/${PV}/Filter.xcu ${D}/usr/lib/openoffice/share/registry/res/en-US/org/openoffice/TypeDetection/ || die
-
+	if use !java; then
+		for i in ${LINGUAS_OOO}; do
+			cp -pPRf ${FILESDIR}/${PV}/Filter.xcu ${D}/usr/lib/openoffice/share/registry/res/${i}/org/openoffice/TypeDetection/ || die
+		done
+	fi
 }
 
 pkg_postinst() {
