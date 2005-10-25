@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnomad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.20 2005/08/13 12:34:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.21 2005/10/25 09:16:04 axxo Exp $
+
+*gnomad-2.8.2 (25 Oct 2005)
+
+  25 Oct 2005; Thomas Matthijs <axxo@gentoo.org> +gnomad-2.8.2.ebuild:
+  Version bump
 
   13 Aug 2005; Thomas Matthijs <axxo@gentoo.org> gnomad-2.8.0.ebuild:
   keyword x86
