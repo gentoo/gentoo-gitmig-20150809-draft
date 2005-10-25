@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.1.ebuild,v 1.1 2005/10/04 04:11:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.1.ebuild,v 1.2 2005/10/25 15:17:30 dang Exp $
 
 inherit eutils gnome2
 
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.4
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR="1"
