@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0.ebuild,v 1.1 2005/10/20 21:29:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0.ebuild,v 1.2 2005/10/25 11:48:09 agriffis Exp $
 
 inherit rpm
 
@@ -73,4 +73,8 @@ src_install() {
 		mv ${D}/usr/NX/share/applnk/"NX Client for Linux"
 			${D}/usr/share/applnk/Internet
 	fi
+
+	# Install env.d snippet to add /usr/NX/bin to the PATH
+	insinto /etc/env.d
+	doins ${FILESDIR}/1.5.0/50nxclient
 }
