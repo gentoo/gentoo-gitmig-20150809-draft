@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.5b.ebuild,v 1.3 2005/10/21 22:32:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.5b.ebuild,v 1.4 2005/10/25 14:47:21 gustavoz Exp $
 
 IUSE="alsa arts esd jack ladspa libsamplerate nls oss portaudio sdl sndfile sox"
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/mhwaveedit/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 
 DEPEND=">=x11-libs/gtk+-2
 	sndfiile? ( >=media-libs/libsndfile-1.0.10 )
