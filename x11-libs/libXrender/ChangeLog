@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXrender
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.7 2005/10/24 20:03:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.8 2005/10/25 04:12:05 joshuabaergen Exp $
+
+  25 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  libXrender-0.9.0.ebuild:
+  Reset proto dependency.
 
   24 Oct 2005; D.m.D. Ljungmark <spider@gentoo.org> libXrender-0.9.0.ebuild:
   since Xrender.h includes render.h, make it a runtime depend on the 
