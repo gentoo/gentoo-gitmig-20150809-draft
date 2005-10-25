@@ -1,6 +1,6 @@
 # ChangeLog for games-fps/quake3
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.22 2005/10/21 17:37:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.1 2005/10/25 00:38:03 vapier Exp $
 
   21 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> quake3-1.31.ebuild,
   quake3-1.32b-r3.ebuild:
