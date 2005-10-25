@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.11 2005/10/17 16:00:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.22-r4.ebuild,v 1.12 2005/10/25 11:19:30 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails
 
@@ -85,6 +85,7 @@ src_unpack() {
 
 	# disable not-safe-for-work xscreensavers
 	use offensive || epatch ${FILESDIR}/${PN}-4.16-nsfw.patch
+	use offensive || epatch ${FILESDIR}/${PN}-4.22-nsfw-webcollage.patch
 
 	# change old head/tail to POSIX ones
 	#cd hacks

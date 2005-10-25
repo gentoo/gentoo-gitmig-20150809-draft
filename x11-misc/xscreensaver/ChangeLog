@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.112 2005/10/17 16:00:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.113 2005/10/25 11:19:30 nelchael Exp $
+
+  25 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xscreensaver-4.22-nsfw-webcollage.patch,
+  xscreensaver-4.22-r4.ebuild:
+  Fix bug 103267 - remove webcollage when -offensive is in USE.
 
   17 Oct 2005; <dang@gentoo.org> xscreensaver-4.22-r4.ebuild:
   Marked stable on amd64
