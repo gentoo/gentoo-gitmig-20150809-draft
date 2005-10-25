@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.79 2005/10/20 03:48:04 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.80 2005/10/25 13:07:25 seemant Exp $
+
+  25 Oct 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.10.2.ebuild:
+  Fix for bug #110035, so now it will build statically and with ssl support.
+  Azarah wrote the patch for that, and upstram has been notified of it.
 
   20 Oct 2005; Luis Medinas <metalgod@gentoo.org> wget-1.10.2.ebuild:
   Marked Stable on amd64. Bug #109097.
