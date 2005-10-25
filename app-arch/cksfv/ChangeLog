@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/cksfv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.18 2005/08/14 10:07:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.19 2005/10/25 00:31:00 vapier Exp $
+
+*cksfv-1.3.7 (25 Oct 2005)
+
+  25 Oct 2005; Mike Frysinger <vapier@gentoo.org> +cksfv-1.3.7.ebuild:
+  Version bump #110264 by Heikki Orsila.
 
   14 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> cksfv-1.3.5.ebuild:
   Stable on ppc.
