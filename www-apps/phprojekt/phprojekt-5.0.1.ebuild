@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.0.1.ebuild,v 1.1 2005/10/23 19:38:38 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.0.1.ebuild,v 1.2 2005/10/25 12:23:26 rl03 Exp $
 
 inherit webapp
 
@@ -29,7 +29,7 @@ src_install() {
 	local file
 
 	cp -R . ${D}/${MY_HTDOCSDIR}
-	for file in attach chat upload; do
+	for file in attach chat; do
 		webapp_serverowned ${MY_HTDOCSDIR}/${file}
 	done
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
