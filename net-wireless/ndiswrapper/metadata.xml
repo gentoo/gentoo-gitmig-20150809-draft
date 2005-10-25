@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>mobile</herd>
 <maintainer>
-  <email>cardoe@gentoo.org</email>
-  <name>Doug Goldstein</name>
+  <email>brad@gentoo.org</email>
   <description>Actively maintained</description>
 </maintainer>
 <longdescription>ndiswrapper provides a kernel module and utility for

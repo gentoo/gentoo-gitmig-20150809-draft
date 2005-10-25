@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.30 2005/10/23 17:38:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.31 2005/10/25 20:34:37 cardoe Exp $
+
+  25 Oct 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  ndiswrapper-1.4.ebuild:
+  maintainership over to brad since I haven't had the hardware for ages
 
 *ndiswrapper-1.4 (23 Oct 2005)
 
