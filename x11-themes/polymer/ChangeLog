@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/polymer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.7 2005/10/23 17:48:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polymer/ChangeLog,v 1.8 2005/10/25 14:31:32 gustavoz Exp $
+
+  25 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> polymer-0.3.2.ebuild:
+  Stable on sparc wrt #109816
 
   23 Oct 2005; Carsten Lohrke <carlo@gentoo.org> polymer-0.3.2.ebuild:
   stable on x86
