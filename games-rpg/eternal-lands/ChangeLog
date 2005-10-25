@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.5 2005/10/24 05:47:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.6 2005/10/25 18:56:28 wolf31o2 Exp $
+
+  25 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  eternal-lands-1.0.1.ebuild, eternal-lands-1.1.2.ebuild:
+  Made openal dependency work for both older openal and newer with split alut.
+  Closing bug #110392.
 
 *eternal-lands-1.1.2 (24 Oct 2005)
 
