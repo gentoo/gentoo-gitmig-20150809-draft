@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/entropy_rsa
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/entropy_rsa/ChangeLog,v 1.1 2005/10/17 02:02:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/entropy_rsa/ChangeLog,v 1.2 2005/10/25 04:14:10 flameeyes Exp $
+
+  25 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  entropy_rsa-0.9.1.439.ebuild:
+  Don't use /bin/false as shell for non-GNU userlands.
 
 *entropy_rsa-0.9.1.439 (16 Oct 2005)
 

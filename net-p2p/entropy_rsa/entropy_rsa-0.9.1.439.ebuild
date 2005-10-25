@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/entropy_rsa/entropy_rsa-0.9.1.439.ebuild,v 1.1 2005/10/17 02:02:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/entropy_rsa/entropy_rsa-0.9.1.439.ebuild,v 1.2 2005/10/25 04:14:10 flameeyes Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 pkg_setup() {
 	enewgroup entropy
-	enewuser entropy -1 /bin/false /var/entropy entropy
+	enewuser entropy -1 -1 /var/entropy entropy
 }
 
 src_compile() {
