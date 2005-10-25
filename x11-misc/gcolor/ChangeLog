@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/ChangeLog,v 1.8 2005/07/09 07:05:04 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/ChangeLog,v 1.9 2005/10/25 11:52:32 nelchael Exp $
+
+  25 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> gcolor-0.4.ebuild:
+  Fix bug 109228 - wrong GTK depend.
 
   09 Jul 2005; Jonathan Smith <smithj@gentoo.org> gcolor-0.4.ebuild:
   stable amd64
