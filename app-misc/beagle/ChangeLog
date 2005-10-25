@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.1 2005/10/24 14:02:17 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.2 2005/10/25 17:01:02 dsd Exp $
+
+  25 Oct 2005; Daniel Drake <dsd@gentoo.org> beagle-0.1.1.ebuild:
+  Stop using gnome2 eclass. Use emake -j1 to prevent compilation errors -
+  solves the USE=webservices problem.
 
 *beagle-0.1.1 (24 Oct 2005)
 

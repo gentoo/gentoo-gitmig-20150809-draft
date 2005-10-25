@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.1.ebuild,v 1.1 2005/10/24 14:02:17 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.1.ebuild,v 1.2 2005/10/25 17:01:02 dsd Exp $
 
-inherit gnome.org gnome2 eutils mono
+inherit gnome.org eutils mono
 
 DESCRIPTION="Beagle is a search tool that ransacks your personal information space to find whatever you're looking for."
 HOMEPAGE="http://www.beagle-project.org/"
@@ -49,16 +49,9 @@ DEPEND="${RDEPEND}
 		x11-proto/scrnsaverproto )
 	virtual/x11 )"
 
-USE_DESTDIR="1"
+EXTRA_EMAKE="-j1"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog INSTALL NEWS README"
-
-	G2CONF="${G2CONF} \
-	$(use_enable webservices) \
-	--enable-libbeagle \
-	--disable-evolution-sharp"
-
 	if built_with_use dev-libs/gmime mono
 	then
 		einfo "Mono support enabled in dev-libs/gmime, I will continue..."
@@ -91,17 +84,25 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-uri-serialization.patch
 }
 
+src_compile() {
+	econf $(use_enable webservices) \
+		--enable-libbeagle \
+		--disable-evolution-sharp \
+		|| die "configure failed"
+	emake -j1 || die "Make failed"
+}
+
 src_install() {
-	gnome2_src_install
+	make DESTDIR="${D}" install || die "Install failed!"
 
 	dodir /usr/share/beagle
 	insinto /usr/share/beagle
 	doins mozilla-extension/beagle.xpi
+
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
 
 pkg_postinst () {
-	gnome2_pkg_postinst
-
 	einfo "If available, Beagle greatly benefits from using certain operating"
 	einfo "system features such as Extended Attributes and inotify."
 	echo
