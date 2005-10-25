@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.30 2005/10/25 05:40:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.31 2005/10/25 05:55:56 flameeyes Exp $
+
+*netatalk-2.0.3-r1 (25 Oct 2005)
+
+  25 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/netatalk-2.0.3-setXid.patch, +netatalk-2.0.3-r1.ebuild:
+  Moved here patch from Gentoo/ALT overlay to get the right bindnow flags for
+  the current used linker.
 
   25 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Fix my name on the changelog.
