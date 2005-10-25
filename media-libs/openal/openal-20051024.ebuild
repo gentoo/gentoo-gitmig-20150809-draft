@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20051024.ebuild,v 1.1 2005/10/24 16:53:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20051024.ebuild,v 1.2 2005/10/25 18:15:24 wolf31o2 Exp $
 
 inherit eutils gnuconfig
 
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 S="${S}/linux"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack "${A}"
+	cd "${S}"
 
 	use alsa && epatch ${FILESDIR}/${P}-alsa_dmix.patch
 
@@ -53,8 +53,12 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug-maximus"
 
 	econf ${myconf} --enable-paranoid-locks --libdir=/usr/$(get_libdir) \
-		--enable-capture --enable-optimize || die
+		--enable-capture --enable-optimization || die
 	emake all || die
+}
+
+src_test() {
+	einfo "Testing is broken, so we're going to skip it."
 }
 
 src_install() {
