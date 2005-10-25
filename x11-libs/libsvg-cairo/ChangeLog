@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.16 2005/10/20 03:02:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.17 2005/10/25 08:11:16 killerfox Exp $
+
+  25 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  libsvg-cairo-0.1.6.ebuild:
+  Unstable on hppa.
 
   19 Oct 2005; Tom Gall <tgall@gentoo.org> libsvg-cairo-0.1.6.ebuild:
   added ~ppc64, bug #108808
