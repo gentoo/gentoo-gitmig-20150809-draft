@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.29 2005/09/24 01:08:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.30 2005/10/25 04:53:25 mr_bones_ Exp $
 
 inherit games
-
 
 EXPORT_FUNCTIONS src_install pkg_postinst
 
@@ -14,7 +13,7 @@ KEYWORDS="-* x86 amd64"
 IUSE="opengl X dedicated"
 
 DEPEND="app-arch/unzip"
-RDEPEND="games-fps/quake3
+RDEPEND="games-fps/quake3-bin
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		X? ( app-emulation/emul-linux-x86-xlibs ) )
 	dedicated? ( app-misc/screen )
