@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.0-r1.ebuild,v 1.3 2005/10/25 07:22:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.1 2005/10/25 07:22:14 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
-IUSE="jpeg png geos gif jasper netcdf hdf hdf5 python postgres mysql \
+IUSE="jpeg png geos gif jasper netcdf hdf hdf5 python postgres \
 	odbc sqlite ogdi fits gml doc debug"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
@@ -28,10 +28,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	ogdi? ( sci-libs/ogdi )
 	gml? ( dev-libs/xerces-c )
 	hdf5? ( >=sci-libs/hdf5-1.6.4 )
-	|| (
-	    postgres? ( dev-db/postgresql )
-	    mysql? ( dev-db/mysql )
-	)
+	postgres? ( dev-db/postgresql )
 	|| (
 	    netcdf? ( sci-libs/netcdf )
 	    hdf? ( sci-libs/hdf )
@@ -63,18 +60,24 @@ src_unpack() {
 src_compile() {
 	distutils_python_version
 
-	pkg_conf="--enable-static=no --enable-shared=yes --with-gnu-ld"
+	pkg_conf="--enable-static=no --enable-shared=yes --with-gnu-ld \
+		--with-libgrass=no"
 
-	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
+	use_conf="$(use_with jpeg) $(use_with png) \
 	    $(use_with postgres pg) $(use_with fits cfitsio) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
 	    $(use_with sqlite) $(use_with jasper) $(use_with odbc) \
 	    $(use_with gml xerces) $(use_with hdf5)"
+	    # mysql support temporarily disabled $(use_with mysql)
 
 	# It can't find this
 	if useq ogdi ; then
 	    use_conf="--with-ogdi=/usr/${get_libdir} ${use_conf}"
 	fi
+
+#	if useq mysql ; then
+#	    use_conf="--with-mysql=/usr/bin/mysql_config ${use_conf}"
+#	fi
 
 	if useq gif ; then
 	    use_conf="--with-gif=internal ${use_conf}"
@@ -97,6 +100,7 @@ src_compile() {
 	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" GDALmake.opt.in
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
+	# parallel makes fail on the ogr stuff (C++, what can I say?)
 	emake  || die "emake failed"
 	if useq doc ; then
 	    emake docs || die "emake docs failed"
@@ -118,8 +122,8 @@ pkg_postinst() {
 	einfo "GDAL is most useful with full graphics support enabled via various"
 	einfo "USE flags: png, jpeg, gif, jasper, etc. Also python, fits, ogdi,"
 	einfo "geos, and support for either netcdf or HDF4 is available, as well as"
-	einfo "grass, and mysql, sqlite, or postgres (grass support requires newer"
-	einfo "gdal and gdal-grass)."
+	einfo "grass, and mysql, sqlite, or postgres (grass support requires grass 6"
+	einfo "and the new gdal-grass ebuild).  HDF5 support is now included."
 	ewarn
 	einfo "Note: tiff and geotiff are now hard depends, so no USE flags."
 	einfo "Also, this package will check for netcdf before hdf, so if you"
@@ -129,4 +133,3 @@ pkg_postinst() {
 	einfo "Check available image and data formats after building with"
 	einfo "gdalinfo and ogrinfo (using the --formats switch)."
 }
-
