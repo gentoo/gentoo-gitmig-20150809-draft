@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.47 2005/10/05 01:11:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.48 2005/10/26 19:36:56 grobian Exp $
+
+  26 Oct 2005; Fabian Groffen <grobian@gentoo.org> cairo-1.0.2.ebuild:
+  Marked ~ppc-macos (bug #109963)
 
 *cairo-1.0.2 (05 Oct 2005)
 
