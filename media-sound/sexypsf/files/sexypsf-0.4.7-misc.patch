@@ -1,0 +1,183 @@
+--- sexypsf/driver.h
++++ sexypsf/driver.h
+@@ -23,4 +23,4 @@
+ PSFINFO *sexy_getpsfinfo(char *path);
+ void sexy_freepsfinfo(PSFINFO *info);
+ 
+-void sexyd_update(char*,long);
++void sexyd_update(unsigned char*,long);
+--- sexypsf/Linux/Makefile
++++ sexypsf/Linux/Makefile
+@@ -4,12 +4,10 @@
+ 
+ all: sexypsf
+ 
+-CC = gcc 
+ RM = rm -f
+ STRIP = strip
+ 
+-OPTIMIZE = -O2 -fomit-frame-pointer -finline-functions -ffast-math
+-FLAGS = -g  -D__LINUX__ -DPSS_STYLE=1 
++FLAGS = -D__LINUX__ -DPSS_STYLE=1 
+ #-DTIMEO
+ LIBS = -lz
+ 
+@@ -20,11 +18,11 @@
+ 
+ OBJS+= LnxMain.o
+ 
+-CFLAGS = -Wall -Winline ${OPTIMIZE} -I. -I.. ${FLAGS}
++CFLAGS += -Wall -Winline -I. -I.. ${FLAGS}
+ #CFLAGS+= $(shell pkg-config gtk+-2.0 --cflags)
+ 
+ sexypsf:	${OBJS}
+-		${CC} ${CFLAGS} ${OBJS} -o sexypsf ${LIBS}
++		${CC} ${LDFLAGS} ${OBJS} -o sexypsf ${LIBS}
+ 
+ .PHONY: clean sexypsf
+ 
+--- sexypsf/Makefile
++++ sexypsf/Makefile
+@@ -12,8 +12,7 @@
+ RM = rm -f
+ 
+ LIBS = -shared -lz
+-OPTIMIZE = -O2 -finline-functions -ffast-math
+-FLAGS = -DPSS_STYLE=1 -DSPSFVERSION="\"${VERSION}\""
++FLAGS = -DPSS_STYLE=1 -DSPSFVERSION="\"${VERSION}\"" -fPIC
+ 
+ OBJS =	PsxBios.o PsxCounters.o PsxDma.o Spu.o PsxHw.o PsxMem.o Misc.o	\
+ 	R3000A.o PsxInterpreter.o PsxHLE.o spu/spu.o
+@@ -21,10 +20,6 @@
+ OBJS+=	xmms/xmms.o
+ FLAGS+=	`gtk-config --cflags`
+ 
+-ifeq (${CPU}, ix86)
+-	OPTIMIZE += -fomit-frame-pointer -mcpu=i686 -fno-exceptions
+-endif
+-
+ ifeq (${CPU}, ppc)
+ 	FLAGS+=-DMSB_FIRST
+ endif	
+@@ -33,10 +28,10 @@
+ 	FLAGS+=-DMSB_FIRST
+ endif
+ 
+-CFLAGS = -Wall ${OPTIMIZE} -I. ${FLAGS}
++CFLAGS += -Wall -I. ${FLAGS}
+ 
+ sexypsf: ${OBJS}
+-	${CC} ${CFLAGS} ${OBJS} -o libsexypsf.so ${LIBS}
++	${CC} ${LDFLAGS} ${OBJS} -o libsexypsf.so ${LIBS}
+ 
+ install: sexypsf
+ 	mv libsexypsf.so ${HOME}/.xmms/Plugins
+--- sexypsf/PsxInterpreter.c
++++ sexypsf/PsxInterpreter.c
+@@ -417,7 +417,7 @@
+ * Load higher 16 bits of the first word in GPR with imm  *
+ * Format:  OP rt, immediate                              *
+ *********************************************************/
+-static void psxLUI() { if (!_Rt_) return; _u32(_rRt_) = psxRegs.code << 16; } // Upper halfword of Rt = Im
++static void psxLUI() { if (!_Rt_) return; _rRt_ = psxRegs.code << 16; } // Upper halfword of Rt = Im
+ 
+ /*********************************************************
+ * Move from HI/LO to GPR                                 *
+@@ -491,7 +491,7 @@
+ 
+ static void psxLBU() {
+ 	if (_Rt_) {
+-		_u32(_rRt_) = psxMemRead8(_oB_);
++		_rRt_ = psxMemRead8(_oB_);
+ 	} else {
+ 		psxMemRead8(_oB_); 
+ 	}
+@@ -507,7 +507,7 @@
+ 
+ static void psxLHU() {
+ 	if (_Rt_) {
+-		_u32(_rRt_) = psxMemRead16(_oB_);
++		_rRt_ = psxMemRead16(_oB_);
+ 	} else {
+ 		psxMemRead16(_oB_);
+ 	}
+@@ -515,7 +515,7 @@
+ 
+ static void psxLW() {
+ 	if (_Rt_) {
+-		_u32(_rRt_) = psxMemRead32(_oB_);
++		_rRt_ = psxMemRead32(_oB_);
+ 	} else {
+ 		psxMemRead32(_oB_);
+ 	}
+@@ -530,7 +530,7 @@
+ 	u32 mem = psxMemRead32(addr & ~3);
+ 
+ 	if (!_Rt_) return;
+-	_u32(_rRt_) =	( _u32(_rRt_) & LWL_MASK[shift]) | 
++	_rRt_ =	( _u32(_rRt_) & LWL_MASK[shift]) | 
+ 					( mem << LWL_SHIFT[shift]);
+ 
+ 	/*
+@@ -552,7 +552,7 @@
+ 	u32 mem = psxMemRead32(addr & ~3);
+ 
+ 	if (!_Rt_) return;
+-	_u32(_rRt_) =	( _u32(_rRt_) & LWR_MASK[shift]) | 
++	_rRt_ =	( _u32(_rRt_) & LWR_MASK[shift]) | 
+ 					( mem >> LWR_SHIFT[shift]);
+ 
+ 	/*
+--- sexypsf/PsxMem.c
++++ sexypsf/PsxMem.c
+@@ -56,8 +56,8 @@
+ 
+ 	writeok=1;
+ 
+-	psxMemLUT = (u32*)malloc(0x10000 * 4);
+-	memset(psxMemLUT, 0, 0x10000 * 4);
++	psxMemLUT = malloc(0x10000 * sizeof *psxMemLUT);
++	memset(psxMemLUT, 0, 0x10000 * sizeof *psxMemLUT);
+ 
+ 	psxM = (char*)malloc(0x00200000);
+ 	psxP = (char*)malloc(0x00010000);
+@@ -67,7 +67,7 @@
+ 		printf("Error allocating memory"); return -1;
+ 	}
+ 
+-	for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16];
++	for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = &psxM[(i & 0x1f) << 16];
+ 
+ 	memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * 4);
+ 	memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
+@@ -222,7 +222,7 @@
+ 					case 0x1e988:
+ 						if (writeok == 1) break;
+ 						writeok = 1;
+-						for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16];
++						for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = &psxM[(i & 0x1f) << 16];
+ 						memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * 4);
+ 						memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
+ 						break;
+--- sexypsf/PsxMem.h
++++ sexypsf/PsxMem.h
+@@ -55,7 +55,7 @@
+ #define psxHu16(mem)   	(*(u16*)&psxH[(mem) & 0xffff])
+ #define psxHu32(mem)   	(*(u32*)&psxH[(mem) & 0xffff])
+ 
+-u32 *psxMemLUT;
++char **psxMemLUT;
+ 
+ #define PSXM(mem)		(psxMemLUT[(mem) >> 16] == 0 ? NULL : (void*)(psxMemLUT[(mem) >> 16] + ((mem) & 0xffff)))
+ 
+--- sexypsf/xmms/xmms.c
++++ sexypsf/xmms/xmms.c
+@@ -101,7 +101,7 @@
+ }
+ 
+ static pthread_t dethread;
+-void sexyd_update(char *Buffer, long count)
++void sexyd_update(unsigned char *Buffer, long count)
+ {
+  int mask = ~((((16 / 8) * 2)) - 1);
+  if(count)
