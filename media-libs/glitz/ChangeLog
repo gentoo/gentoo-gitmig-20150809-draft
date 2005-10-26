@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glitz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.13 2005/10/18 13:46:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/ChangeLog,v 1.14 2005/10/26 12:03:06 grobian Exp $
+
+  26 Oct 2005; Fabian Groffen <grobian@gentoo.org> glitz-0.4.4.ebuild:
+  Marked ~ppc-macos for bug #108690
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   glitz-0.3.0.20050115.ebuild:
