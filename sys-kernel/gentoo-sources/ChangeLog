@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.203 2005/10/15 10:10:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.204 2005/10/26 08:27:05 dsd Exp $
+
+*gentoo-sources-2.6.13-r5 (26 Oct 2005)
+
+  26 Oct 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.13-r5.ebuild:
+  Fix suspend on iBooks. Fix amd64 pageattr bug. Fix inotify memory leak. Fix
+  vesafb-tng compile error. Fix 'make mandocs' target.
 
   15 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-sources-2.6.13-r4.ebuild:
