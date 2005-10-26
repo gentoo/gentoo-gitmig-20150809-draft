@@ -1,0 +1,7 @@
+# ChangeLog for app-misc/scope
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scope/ChangeLog,v 1.1 2005/10/26 14:39:50 chrb Exp $
+
+  26 Oct 2005; Chris Bainbridge <chrb@gentoo.org> ChangeLog:
+  new package
+
