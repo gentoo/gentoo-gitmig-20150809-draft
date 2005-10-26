@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.4.3.0-r1.ebuild,v 1.1 2005/10/17 05:58:55 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.4.3.0-r1.ebuild,v 1.2 2005/10/26 04:48:25 soulse Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
-	tcpd? (sys-apps/tcp-wrappers)
+	tcpd? ( sys-apps/tcp-wrappers )
 	virtual/libc"
 
 S=${WORKDIR}/socat-${PV:0:3}
