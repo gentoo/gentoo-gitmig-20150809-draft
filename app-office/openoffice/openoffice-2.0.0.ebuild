@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.10 2005/10/26 10:50:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.11 2005/10/26 11:19:10 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -180,6 +180,7 @@ src_compile() {
 		--disable-mono \
 		--disable-cairo \
 		--disable-post-install-scripts \
+		--mandir=/usr/share/man \
 		|| die "Configuration failed!"
 
 	# Compile problems with these ...

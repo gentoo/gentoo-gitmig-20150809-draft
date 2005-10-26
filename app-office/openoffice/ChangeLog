@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.146 2005/10/26 10:50:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.147 2005/10/26 11:19:10 suka Exp $
+
+  26 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.0.ebuild:
+  Install man-file into the correct path, fixes bug #110510
 
   26 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.0.ebuild:
