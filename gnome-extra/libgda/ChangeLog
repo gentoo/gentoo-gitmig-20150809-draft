@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.74 2005/09/11 08:50:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.75 2005/10/26 18:32:37 leonardop Exp $
+
+*libgda-1.2.2-r1 (26 Oct 2005)
+
+  26 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/libgda-1.2.2-freetds_fixes.patch,
+  +files/libgda-1.2-syslog_format_fix.patch, +libgda-1.2.2-r1.ebuild:
+  Added patch to fix problem with syslog() calls (bug #110467). Added patch to
+  fix compilation with freetds-0.63 (bug #110135). Misc. clean-ups.
 
   11 Sep 2005; Aron Griffis <agriffis@gentoo.org> libgda-1.2.2.ebuild:
   Mark 1.2.2 stable on alpha
