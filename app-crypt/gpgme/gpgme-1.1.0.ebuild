@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.3.ebuild,v 1.4 2005/10/26 14:06:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.0.ebuild,v 1.1 2005/10/26 14:06:05 grobian Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE=""
 #IUSE="smime"
 
@@ -32,7 +32,6 @@ RDEPEND="virtual/libc
 	dev-libs/pth"
 
 src_compile() {
-
 	if [ -x /usr/bin/gpg2 ]; then
 		GPGBIN=/usr/bin/gpg2
 	else
@@ -54,7 +53,6 @@ src_compile() {
 	emake CFLAGS="${CFLAGS} -I../assuan/"  || die
 
 #		--disable-test \
-
 }
 
 #src_test() {
