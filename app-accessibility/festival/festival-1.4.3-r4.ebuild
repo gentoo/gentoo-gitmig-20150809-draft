@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r4.ebuild,v 1.5 2005/08/24 23:13:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r4.ebuild,v 1.6 2005/10/26 01:13:12 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -135,9 +135,11 @@ pkg_postinst() {
 # databases: as long as the target of a link exists, the link cannot be
 # removed by Portage.
 # So we do it by hand here...
-pkg_prerm() {
-	find /usr/share/festival/voices -type l -path "*_mbrola*" -exec rm -f {} \;
-}
+#
+# If we do this, it gets deleted during an upgrade.
+#pkg_prerm() {
+#	find /usr/share/festival/voices -type l -path "*_mbrola*" -exec rm -f {} \;
+#}
 
 # Fix mbrola databases: create symbolic links from festival voices
 # directories to MBROLA install dirs.
