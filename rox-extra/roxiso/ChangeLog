@@ -1,0 +1,9 @@
+# ChangeLog for rox-extra/roxiso
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/ChangeLog,v 1.1 2005/10/26 13:48:59 svyatogor Exp $
+
+*roxiso-050508 (26 Oct 2005)
+
+  26 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +roxiso-050508.ebuild:
+  New application in ro family - burn ISO's easily.
+
