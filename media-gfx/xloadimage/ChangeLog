@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.20 2005/09/17 11:54:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.21 2005/10/26 18:58:38 nelchael Exp $
+
+*xloadimage-4.1-r4 (26 Oct 2005)
+
+  26 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xloadimage-gentoo.patch, +xloadimage-4.1-r4.ebuild:
+  Fix security bug 108365.
 
 *xloadimage-4.1-r2 (25 Aug 2005)
 
