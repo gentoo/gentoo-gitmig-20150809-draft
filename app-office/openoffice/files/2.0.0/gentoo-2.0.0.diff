@@ -10,3 +10,19 @@
  [ ArkOnly ]
  system-db-4.3-use-lpthread.diff
  # FIXME this is generally useful -- currently applied here only because
+--- bin/package-ooo 
++++ bin/package-ooo 
+@@ -124,11 +124,11 @@
+   	# Menu icons are currently made in debian/rules
+ 	;;
+   *)
+-	mkdir -p $OODESTDIR/opt/gnome/share/applications
++	mkdir -p $OODESTDIR/usr/share/applications
+ 	cd $TOOLSDIR/desktop
+ 	for source in *.desktop; do
+ 	    dest=`echo $source | sed "s|.desktop\$||"`
+-	    dest="$OODESTDIR/opt/gnome/share/applications/$dest$BINSUFFIX.desktop"
++	    dest="$OODESTDIR/usr/share/applications/$dest$BINSUFFIX.desktop"
+ 	    add_version=
+ 	    test "z$VENDORNAME" = "zNovell" -a "z$BINSUFFIX" != "z" && add_version=" ($VERSION)" || :
+ 	    sed -e "s|@BINSUFFIX@|$BINSUFFIX|g
