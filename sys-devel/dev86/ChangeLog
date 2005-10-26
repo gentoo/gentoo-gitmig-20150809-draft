@@ -1,0 +1,10 @@
+# ChangeLog for sys-devel/dev86
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.1 2005/10/26 15:23:38 chrb Exp $
+
+*dev86-0.16.17 (26 Oct 2005)
+
+  26 Oct 2005; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +dev86-0.16.17.ebuild:
+  This package was submitted by Olaf Wepner in bug #101754
+
