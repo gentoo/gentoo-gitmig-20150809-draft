@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.25 2005/09/17 11:53:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.26 2005/10/26 15:09:15 taviso Exp $
+
+*xli-1.17.0-r2 (26 Oct 2005)
+
+  26 Oct 2005; Tavis Ormandy <taviso@gentoo.org>
+  +files/xli-security-gentoo.diff, +xli-1.17.0-r2.ebuild:
+  security fix, #108365
 
   24 Apr 2005; Markus Rothe <corsair@gentoo.org> xli-1.17.0-r1.ebuild:
   Stable on ppc64
