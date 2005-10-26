@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.13 2005/10/25 07:51:31 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.14 2005/10/26 12:16:26 grobian Exp $
+
+  26 Oct 2005; Fabian Groffen <grobian@gentoo.org> libsvg-0.1.4.ebuild:
+  Marked ~ppc-macos for bug #108690
 
   25 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> libsvg-0.1.4.ebuild:
   Unstable on hppa.
