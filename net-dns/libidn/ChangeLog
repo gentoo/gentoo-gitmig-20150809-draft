@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/libidn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.37 2005/09/16 23:19:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.38 2005/10/26 17:13:43 carlo Exp $
+
+*libidn-0.5.20 (26 Oct 2005)
+
+  26 Oct 2005; Carsten Lohrke <carlo@gentoo.org> +libidn-0.5.20.ebuild:
+  version bump
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
