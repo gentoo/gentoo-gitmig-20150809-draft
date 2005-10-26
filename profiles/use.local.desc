@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1518 2005/10/25 05:17:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1519 2005/10/26 07:56:39 latexer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -757,6 +757,8 @@ net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
 net-dns/pdns:recursor - Enable the recursing nameserver
 net-dns/pdns:tdb - Enable the Trivial Database (xdb) backend
 net-dns/pdnsd:isdn - enable isdn features
+net-firewall/ipsec-tools:idea - Enable support for the patented IDEA algorithm
+net-firewall/ipsec-tools:rc5 - Enable support for the patented RC5 algorithm
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-fs/netatalk:cracklib - Support for cracklib strong password checking
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
