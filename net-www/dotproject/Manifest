@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5f830fea37f820b9da79956fc95c611f dotproject-2.0.1.ebuild 963
+MD5 683ad8b4febefb9e2a3c2e80b6e94308 dotproject-2.0.1.ebuild 965
 MD5 022e253ccc4df1644b12a399d4cfd172 dotproject-1.0.2.ebuild 925
-MD5 fc5f542f6f0abf10095cb7ee7cd0f1b3 ChangeLog 1202
+MD5 b56d7a01696cf0669e0e2c27e814349e ChangeLog 1304
 MD5 88b2c84c1b3552228d711637cb7d9269 metadata.xml 274
 MD5 c31cbdbd8f336b876284208f18c75c30 files/digest-dotproject-1.0.2 70
 MD5 d8127a3fdfe8a494e623564d6556ccc8 files/digest-dotproject-2.0.1 69
@@ -13,7 +13,7 @@ MD5 c4f284f40579675183423345fc84c49d files/1.0.2/install-en.txt 816
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDXqvkEzitwsaoONoRAsmkAKDDuacdz/84KhAKQDip0471888zlwCghOp0
-2Bj2Gg03fm8P3oIxTrhPq14=
-=ilog
+iD8DBQFDX4lvEzitwsaoONoRAgYbAJwJPQMBRozm2UVXb3Vr7uswSH4uqQCePFXF
+fLxBZWhuT+cFZI6++rVQkGo=
+=6o9u
 -----END PGP SIGNATURE-----

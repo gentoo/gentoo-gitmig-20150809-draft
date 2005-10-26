@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-2.0.1.ebuild,v 1.1 2005/10/25 22:04:10 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/dotproject-2.0.1.ebuild,v 1.2 2005/10/26 13:49:23 rl03 Exp $
 
 inherit webapp
 
@@ -27,7 +27,7 @@ src_install () {
 	webapp_configfile ${MY_HTDOCSDIR}/includes/config.php
 	webapp_serverowned ${MY_HTDOCSDIR}/files
 	webapp_serverowned ${MY_HTDOCSDIR}/files/temp
-	webapp_serverowned ${MY_HTDOCSDIR}/files/en
+	webapp_serverowned ${MY_HTDOCSDIR}/locales/en
 
 	webapp_postinst_txt en ${FILESDIR}/install-en.txt
 	webapp_src_install
