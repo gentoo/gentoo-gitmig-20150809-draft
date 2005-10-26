@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e743df7e633f59bff547edf0fe573add ChangeLog 3773
-MD5 bc0c70970f00f61f7ca127119e1fc919 files/digest-smb4k-0.5.2 64
-MD5 f586a4aec829d18b65e75af3333772c0 files/digest-smb4k-0.6.3 64
+MD5 b2c540c071d619c0fe01c4eeceb0ffe9 smb4k-0.5.2.ebuild 565
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 629fa180ed5bfe6024c3e3657e31b204 smb4k-0.5.2.ebuild 579
-MD5 a75f86b7f0cf3382aa6a4b45e1868cd1 smb4k-0.6.3.ebuild 643
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXymuCRZPokWLroQRAhqLAKCOxUtk3LD8/wAxEIGMc3Qa/PkcmACbB2tU
-XC5tDopTBXspn/1SqwcsLOM=
-=YmQn
------END PGP SIGNATURE-----
+MD5 b23a18a47ebb5a6a0c31bedf65e869a3 smb4k-0.6.3.ebuild 627
+MD5 e743df7e633f59bff547edf0fe573add ChangeLog 3773
+MD5 f586a4aec829d18b65e75af3333772c0 files/digest-smb4k-0.6.3 64
+MD5 bc0c70970f00f61f7ca127119e1fc919 files/digest-smb4k-0.5.2 64
