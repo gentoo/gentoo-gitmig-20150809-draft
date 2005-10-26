@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r4.ebuild,v 1.3 2005/10/25 07:22:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.2.6-r4.ebuild,v 1.4 2005/10/26 01:13:32 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -21,7 +21,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
 	sci-libs/libgeotiff
 	jpeg? ( media-libs/jpeg )
-	gif? ( media-libs/libungif )
+	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	python? ( dev-lang/python )
 	fits? ( sci-libs/cfitsio )
