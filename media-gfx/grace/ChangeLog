@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/grace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.35 2005/06/16 18:41:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.36 2005/10/26 18:20:20 cryos Exp $
+
+  26 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> -grace-5.1.13.ebuild,
+  grace-5.1.18.ebuild:
+  Stable on amd64, pruned old version.
 
   16 Jun 2005; Marcus D. Hanwell <marcus@gentoo.org> grace-5.1.14.ebuild:
   Stable on amd64.
