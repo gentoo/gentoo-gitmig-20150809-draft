@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/xoops
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.11 2005/10/25 20:42:08 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.12 2005/10/26 12:14:20 rl03 Exp $
+
+  26 Oct 2005; Renat Lumpau <rl03@gentoo.org> -xoops-2.2.1.ebuild,
+  -xoops-2.2.2.ebuild:
+  Removing old versions
 
 *xoops-2.2.3 (25 Oct 2005)
 
