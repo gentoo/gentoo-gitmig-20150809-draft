@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/magnant/magnant-2.00.ebuild,v 1.2 2005/10/26 01:00:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/magnant/magnant-2.00.ebuild,v 1.3 2005/10/26 01:15:26 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Trading Card Game where cards are used in a Real Time Strategy Environment"
 HOMEPAGE="http://linux.insectwar.com/"
