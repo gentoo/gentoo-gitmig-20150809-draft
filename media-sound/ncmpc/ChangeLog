@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.14 2005/10/25 06:56:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.15 2005/10/26 19:19:29 gustavoz Exp $
+
+  26 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  ncmpc-0.11.1-r1.ebuild:
+  Stable on sparc
 
   25 Oct 2005; Andrej Kacian <ticho@gentoo.org> ncmpc-0.11.1-r1.ebuild:
   Stable on x86.
