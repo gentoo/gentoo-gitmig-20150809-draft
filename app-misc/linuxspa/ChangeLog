@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/linuxspa
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linuxspa/ChangeLog,v 1.1 2005/10/26 14:54:28 chrb Exp $
+
+*linuxspa-0.7.1 (26 Oct 2005)
+
+  26 Oct 2005; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +linuxspa-0.7.1.ebuild:
+  This package was submitted by Chris Bainbridge
+
