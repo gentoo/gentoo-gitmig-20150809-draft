@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.213 2005/10/22 19:04:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.214 2005/10/26 00:39:12 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1246,7 +1246,7 @@ cdrom_get_cds() {
 	local cdcnt=0
 	local f=
 	for f in "$@" ; do
-		cdcnt=$((cdcnt + 1))
+		((++cdcnt))
 		export CDROM_CHECK_${cdcnt}="$f"
 	done
 	export CDROM_TOTAL_CDS=${cdcnt}
@@ -1264,7 +1264,7 @@ cdrom_get_cds() {
 		local var=
 		cdcnt=0
 		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
-			cdcnt=$((cdcnt + 1))
+			((++cdcnt))
 			var="CD_ROOT_${cdcnt}"
 			if [[ -z ${!var} ]] ; then
 				eerror "You must either use just the CD_ROOT"
@@ -1299,7 +1299,7 @@ cdrom_get_cds() {
 		einfo "This package will need access to ${CDROM_TOTAL_CDS} cds."
 		cdcnt=0
 		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
-			cdcnt=$((cdcnt + 1))
+			((++cdcnt))
 			var="CDROM_NAME_${cdcnt}"
 			[[ ! -z ${!var} ]] && einfo " CD ${cdcnt}: ${!var}"
 		done
@@ -1310,7 +1310,7 @@ cdrom_get_cds() {
 		einfon ""
 		cdcnt=0
 		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
-			cdcnt=$((cdcnt + 1))
+			((++cdcnt))
 			echo -n " CD_ROOT_${cdcnt}"
 		done
 		echo
@@ -1323,6 +1323,7 @@ cdrom_get_cds() {
 		einfo "export CD_ROOT_1=/mnt/cdrom"
 		echo
 	fi
+	export CDROM_SET=""
 	export CDROM_CURRENT_CD=0
 	cdrom_load_next_cd
 }
@@ -1360,46 +1361,59 @@ cdrom_load_next_cd() {
 # (1) the file is found on a mounted cdrom
 # (2) the user hits CTRL+C
 cdrom_locate_file_on_cd() {
-	while [[ -z ${CDROM_ROOT} ]] ; do
-		local dir=$(dirname "$*")
-		local file=$(basename "$*")
-		local mline=""
-		local showedmsg=0
+	local mline=""
+	local showedmsg=0
 
-		for mline in $(mount | egrep -e '(iso|cdrom|fs=cdfss)' | awk '{print $3}') ; do
-			[[ -d ${mline}/${dir} ]] || continue
-			[[ ! -z $(find ${mline}/${dir} -maxdepth 1 -iname ${file}) ]] \
-				&& export CDROM_ROOT=${mline}
+	while [[ -z ${CDROM_ROOT} ]] ; do
+		local i=0
+		local -a cdset=(${*//:/ })
+		if [[ -n ${CDROM_SET} ]] ; then
+			cdset=(${cdset[${CDROM_SET}]})
+		fi
+
+		while [[ -n ${cdset[${i}]} ]] ; do
+			local dir=$(dirname ${cdset[${i}]})
+			local file=$(basename ${cdset[${i}]})
+
+			for mline in $(mount | gawk '/(iso|cdrom|fs=cdfss)/ {print $3}') ; do
+				[[ -d ${mline}/${dir} ]] || continue
+				if [[ -n $(find ${mline}/${dir} -maxdepth 1 -iname ${file}) ]] ; then
+					export CDROM_ROOT=${mline}
+					export CDROM_SET=${i}
+					export CDROM_MATCH=${cdset[${i}]}
+					return
+				fi
+			done
+
+			((++i))
 		done
 
-		if [[ -z ${CDROM_ROOT} ]] ; then
-			echo
-			if [[ ${showedmsg} -eq 0 ]] ; then
-				if [[ ${CDROM_TOTAL_CDS} -eq 1 ]] ; then
-					if [[ -z ${CDROM_NAME} ]] ; then
-						einfo "Please insert the cdrom for ${PN} now !"
-					else
-						einfo "Please insert the ${CDROM_NAME} cdrom now !"
-					fi
+		echo
+		if [[ ${showedmsg} -eq 0 ]] ; then
+			if [[ ${CDROM_TOTAL_CDS} -eq 1 ]] ; then
+				if [[ -z ${CDROM_NAME} ]] ; then
+					einfo "Please insert+mount the cdrom for ${PN} now !"
 				else
-					if [[ -z ${CDROM_NAME_1} ]] ; then
-						einfo "Please insert cd #${CDROM_CURRENT_CD} for ${PN} now !"
-					else
-						local var="CDROM_NAME_${CDROM_CURRENT_CD}"
-						einfo "Please insert+mount the ${!var} cdrom now !"
-					fi
+					einfo "Please insert+mount the ${CDROM_NAME} cdrom now !"
 				fi
-				showedmsg=1
+			else
+				if [[ -z ${CDROM_NAME_1} ]] ; then
+					einfo "Please insert+mount cd #${CDROM_CURRENT_CD} for ${PN} now !"
+				else
+					local var="CDROM_NAME_${CDROM_CURRENT_CD}"
+					einfo "Please insert+mount the ${!var} cdrom now !"
+				fi
 			fi
-			einfo "Press return to scan for the cd again"
-			einfo "or hit CTRL+C to abort the emerge."
-			echo
-			einfo "If you are having trouble with the detection"
-			einfo "of your CD, it is possible that you do not have"
-			einfo "Joliet support enabled in your kernel.  Please"
-			einfo "check that CONFIG_JOLIET is enabled in your kernel."
-			read
+			showedmsg=1
 		fi
+		einfo "Press return to scan for the cd again"
+		einfo "or hit CTRL+C to abort the emerge."
+		echo
+		einfo "If you are having trouble with the detection"
+		einfo "of your CD, it is possible that you do not have"
+		einfo "Joliet support enabled in your kernel.  Please"
+		einfo "check that CONFIG_JOLIET is enabled in your kernel."
+		read
 	done
 }
 
