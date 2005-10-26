@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/magnant/magnant-2.00.ebuild,v 1.1 2005/10/26 00:36:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/magnant/magnant-2.00.ebuild,v 1.2 2005/10/26 01:00:47 vapier Exp $
 
 inherit games eutils
 
@@ -32,7 +32,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r data/* || die
 
-	games_make_wrapper magnant "stratagus -d '${GAMES_DATADIR}'/${PN}" "${dir}"
+	games_make_wrapper magnant "stratagus -d '${GAMES_DATADIR}'/${PN}"
 	doicon magnant.xpm
 	make_desktop_entry magnant "Magnant" magnant.xpm
 
