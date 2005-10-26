@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.7 2005/05/30 03:40:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.8 2005/10/26 14:46:18 iggy Exp $
 
 IUSE="build bootstrap"
 
@@ -19,6 +19,12 @@ PROVIDE="virtual/baselayout"
 
 src_install() {
 	keepdir /bin /etc /etc/init.d /home /lib /sbin /usr /var /root /mnt
+	keepdir /var/log /proc
+
+	# if ROOT=/ and we make /proc, we will get errors when portage tries 
+	# to create /proc/.keep, so we remove it if we need to
+	[ "${ROOT}" = "/" ] && rm -rf ${D}/proc
+	[ "${ROOT}" = "" ] && rm -rf ${D}/proc
 
 	# (Jul 23 2004 -solar)
 	# This fails a when merging if /proc is already mounted. We
@@ -28,6 +34,9 @@ src_install() {
 
 	insinto /etc
 	doins ${S}/{fstab,group,nsswitch.conf,passwd,profile.env,protocols,shells}
+
+	# Fixup the inittab file first
+	sed -i -e 's:/usr/bin/tail:/bin/tail:' ${S}/init/inittab
 	doins ${S}/init/inittab
 
 	use elibc_uclibc && rm -f ${D}/etc/nsswitch.conf
