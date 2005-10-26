@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation, Copyright 2003 The Hackers Choice - http://www.thc.org
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.9 2005/10/09 10:28:42 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/thcrut-1.2.5.ebuild,v 1.10 2005/10/26 04:24:15 soulse Exp $
 
 inherit eutils
 

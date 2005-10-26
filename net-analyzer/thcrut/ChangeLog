@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thcrut
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.8 2005/10/09 10:28:42 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.9 2005/10/26 04:24:15 soulse Exp $
+
+  25 Oct 2005; <soulse@gentoo.org> thcrut-1.2.5.ebuild:
+  Bad header fixed
 
   09 Oct 2005; <mkay@gentoo.org> thcrut-1.2.5.ebuild:
   Removing >=net-libs/libnet-1.0.2a-r3 from DEPEND - we do not have older
