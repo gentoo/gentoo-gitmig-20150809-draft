@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264-svn
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.6 2005/10/22 05:36:25 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/ChangeLog,v 1.7 2005/10/26 13:52:45 zypher Exp $
+
+  26 Oct 2005; Marc Hildebrand <zypher@gentoo.org>
+  x264-svn-20051004-r1.ebuild:
+  Removed --enable-visualize which causes too much trouble atm.
 
   22 Oct 2005; Daniel Goller <morfic@gentoo.org>
   x264-svn-20051004-r1.ebuild:
