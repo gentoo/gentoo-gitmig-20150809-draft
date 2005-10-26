@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.1 2005/10/26 14:21:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.2 2005/10/26 14:29:31 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,13 +11,13 @@ SRC_URI="ftp://ftp.infogrames.net/misc/ut2003/ut2003lnx_patch2225.tar.tar"
 LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdinstall dedicated"
+IUSE="dedicated"
 RESTRICT="nostrip"
 
 DEPEND="virtual/libc"
 RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )
-	cdinstall? ( games-fps/ut2003-data )
+	games-fps/ut2003-data
 	amd64? ( app-emulation/emul-linux-x86-compat 
 		app-emulation/emul-linux-x86-xlibs )"
 
