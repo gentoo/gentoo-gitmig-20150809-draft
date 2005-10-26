@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20051023.ebuild,v 1.1 2005/10/24 09:53:17 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20051023-r1.ebuild,v 1.1 2005/10/26 12:00:12 twp Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ DEPEND="virtual/x11
 S=${WORKDIR}/${MY_PN}
 
 src_compile() {
+
+	epatch ${FILESDIR}/${PF}.patch
 
 	autoreconf -i
 
