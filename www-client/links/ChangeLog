@@ -1,6 +1,11 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.43 2005/10/18 19:17:53 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.44 2005/10/26 20:07:20 vanquirius Exp $
+
+*links-2.1_pre19 (26 Oct 2005)
+
+  26 Oct 2005; Marcelo Goes <vanquirius@gentoo.org> +links-2.1_pre19.ebuild:
+  Version bump for bug 110502. Thanks to Daniel Webert <rockoo at gmail dot com>.
 
   18 Oct 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre18.ebuild:
   Use mirror://gentoo since the main server seems to be having some problems.
