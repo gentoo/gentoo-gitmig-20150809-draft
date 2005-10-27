@@ -33,7 +33,7 @@
  .PHONY: nonmerge
  nonmerge: $(PRODUCT_SUBDIRS:%=%/all)
 +
-+$(PRODUCT_SUBDIRS:%=%/all): $(LIBOPT)
++$(PRODUCT_SUBDIRS:%=%/all): buildtools/all
 +converter/all analyzer/all editor/all generator/all other/all: lib/all
  
  OMIT_CONFIG_RULE = 1
