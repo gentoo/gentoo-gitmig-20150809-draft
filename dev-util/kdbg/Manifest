@@ -1,12 +1,22 @@
-MD5 97c7518dddb95eaf82ca5d3ffcb500c2 kdbg-2.0.0.ebuild 610
-MD5 6e58caf14b5f184b081a8a04cce4b64a kdbg-1.9.5.ebuild 490
-MD5 b23a4cae00f65f0518e6802ee0ac158e kdbg-1.9.7.ebuild 490
-MD5 4f6395890db39f256792957a47ddaf9e kdbg-1.2.10.ebuild 488
-MD5 ca7685c98288822024d1872957a2e233 kdbg-2.0.1.ebuild 609
-MD5 6fb46b95212aca4dda4e0ed1bc08a460 ChangeLog 4225
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb04b76c962beaf7be1c3894e17ff619 ChangeLog 4328
+MD5 b51ddd8e289867ee79772a68a41f6a3d files/digest-kdbg-1.2.10 63
 MD5 07853fd027ce8cc6a2a27435364b65f8 files/digest-kdbg-1.9.5 62
 MD5 9876c61c0c55ad057675e34c8f27219b files/digest-kdbg-1.9.7 62
 MD5 f651f7c381308802e76cf22b1cfecf8f files/digest-kdbg-2.0.0 62
 MD5 7a292cfd8e3e1370d803d82abf595a6f files/digest-kdbg-2.0.1 62
-MD5 b51ddd8e289867ee79772a68a41f6a3d files/digest-kdbg-1.2.10 63
+MD5 4f6395890db39f256792957a47ddaf9e kdbg-1.2.10.ebuild 488
+MD5 6e58caf14b5f184b081a8a04cce4b64a kdbg-1.9.5.ebuild 490
+MD5 b23a4cae00f65f0518e6802ee0ac158e kdbg-1.9.7.ebuild 490
+MD5 9266689a975317d16adcf48f75353c58 kdbg-2.0.0.ebuild 604
+MD5 ca7685c98288822024d1872957a2e233 kdbg-2.0.1.ebuild 609
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDYP6nntT9W3vfTuoRAjp/AJsFg4BGirF3WyPrDhc28qZkBjJfAwCeOEW2
+Vf+nblXh08hc3tv1xor1tME=
+=q6XC
+-----END PGP SIGNATURE-----
