@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10.ebuild,v 1.3 2005/08/28 14:52:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10.ebuild,v 1.4 2005/10/27 00:25:26 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -37,7 +37,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-internal_header.patch
 
 	gnuconfig_update ${S}
-	uclibctoolize
+	elibtoolize
 	epunt_cxx
 
 }
