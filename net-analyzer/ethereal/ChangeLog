@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.143 2005/10/24 23:28:23 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.144 2005/10/27 12:34:09 ka0ttic Exp $
+
+*ethereal-0.10.13-r1 (27 Oct 2005)
+
+  27 Oct 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/ethereal-0.10.13-fix-irc-loop-DoS-CVE-2005-3313.diff,
+  +ethereal-0.10.13-r1.ebuild:
+  Revision bump; added patch from bug #109348 that fixes a DoS (CVE-2005-3313).
 
   24 Oct 2005; Jose Luis Rivero <yoswink@gentoo.org>
   ethereal-0.10.13.ebuild:
