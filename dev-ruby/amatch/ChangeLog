@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/amatch
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.1 2005/10/27 12:48:47 killerfox Exp $
+
+*amatch-0.2.1 (27 Oct 2005)
+
+  27 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> +metadata.xml,
+  +amatch-0.2.1.ebuild:
+  Initial import. ebuild written by myself.
+
