@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-mysql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mysql/ChangeLog,v 1.14 2005/10/24 14:49:36 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mysql/ChangeLog,v 1.15 2005/10/27 19:01:38 kaiowas Exp $
+
+  27 Oct 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-mysql-20051023.ebuild:
+  mark stable on amd64 mips ppc sparc x86
 
 *selinux-mysql-20051023 (24 Oct 2005)
 

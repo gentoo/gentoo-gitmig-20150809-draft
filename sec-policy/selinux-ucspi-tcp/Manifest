@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d8f6ae510bd79d2144eece2fb540b25 ChangeLog 1251
+MD5 05316e2801791ac0040495b9bf383ebc ChangeLog 1379
 MD5 56328a8a5a770aaff2bf878513e95a68 files/digest-selinux-ucspi-tcp-20050316 76
 MD5 57b1bef21cfe1670970a3f5c0f68eb4d files/digest-selinux-ucspi-tcp-20050507 76
 MD5 f4d91f7617ad4c2a053060b0105e726d metadata.xml 549
 MD5 f6c629b7f1287b533ed74344d9390b31 selinux-ucspi-tcp-20050316.ebuild 401
-MD5 30e40e55197cad0d6c0395b38ee1bed5 selinux-ucspi-tcp-20050507.ebuild 411
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFDXPxyGSBEIeh4AEYRAoAHAJ41x1lqPDOu1+4wI9PmRG+OY30OmwCfZMDZ
-oeKGxlOG8/slaNPcWrPA0pk=
-=li5h
------END PGP SIGNATURE-----
+MD5 5197db7cd213148e2924b0fe010f627e selinux-ucspi-tcp-20050507.ebuild 406
