@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
-<maintainer><email>obz@gentoo.org</email></maintainer>
+	<herd>gdesklets</herd>
+	<maintainer><email>nixphoeni@gentoo.org</email></maintainer>
+	<maintainer><email>obz@gentoo.org</email></maintainer>
 </pkgmetadata>
