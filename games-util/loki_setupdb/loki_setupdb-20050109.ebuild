@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.2 2005/06/05 11:33:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.3 2005/10/27 03:09:20 wolf31o2 Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 src_compile() {
 	./autogen.sh || "autogen.sh failed"
 	econf || die "econf failed"
-	emake all setupdb || die "emake failed"
+	emake -j1 all setupdb || die "emake failed"
 }
 
 src_install() {
