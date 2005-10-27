@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.30 2005/10/10 03:05:52 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.31 2005/10/27 08:14:33 eradicator Exp $
+
+*spim-7.2.1-r2 (27 Oct 2005)
+
+  27 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/spim-7.2.1-multiple-exception.patch, -spim-7.2.1-r1.ebuild,
+  +spim-7.2.1-r2.ebuild:
+  Added another patch (sent/accepted upstream) which allows the user to list
+  multiple exception handler/libraries rather than require it to be in just
+  one file.
 
   11 Oct 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   spim-7.2.1-r1.ebuild:
