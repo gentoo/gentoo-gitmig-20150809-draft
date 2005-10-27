@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/fcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.9 2005/09/27 14:17:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.10 2005/10/27 23:53:50 ka0ttic Exp $
+
+  27 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> files/fcron.rc6,
+  fcron-3.0.0.ebuild:
+  Add various use statements to the init for bug #25250; add a better
+  explanation for when the pkg_setup EDITOR check fails, bug #108699.
 
   27 Sep 2005; Aaron Walker <ka0ttic@gentoo.org> fcron-3.0.0.ebuild:
   Use egetent to set --with-root{name,group} configure options, bug #107374.

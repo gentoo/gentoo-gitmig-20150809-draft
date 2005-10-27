@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.0.ebuild,v 1.3 2005/09/27 14:17:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.0.ebuild,v 1.4 2005/10/27 23:53:50 ka0ttic Exp $
 
 inherit cron pam eutils
 
@@ -18,6 +18,13 @@ DEPEND="virtual/editor
 	pam? ( >=sys-libs/pam-0.77 )"
 
 pkg_setup() {
+	# sudo unsets EDITOR
+	if [[ -z "${EDITOR}" ]] ; then
+		eerror "EDITOR seems to be unset. If you use sudo, it may be the cause."
+		eerror "Try using 'sudo env EDITOR=\${EDITOR} emerge' instead."
+		die "Please set the EDITOR env variable to the path of a valid executable."
+	fi
+
 	# bug #65263
 	# fcron's ./configure complains if EDITOR is not set to an absolute path,
 	# so try to set it to the abs path if it isn't

@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/files/fcron.rc6,v 1.1 2005/03/04 23:50:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/files/fcron.rc6,v 1.2 2005/10/27 23:53:50 ka0ttic Exp $
 
 depend() {
-	use logger
+	use logger slapd mysql postgresql
 	need clock hostname
 	provide cron
 }
