@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 411b5dba346ef3ec6286d2049e49787f ChangeLog 358
+MD5 1185d0d80ae45ba7cc96254a4b0b8462 files/digest-sparse-2005.10.28 69
+MD5 09adef9c41d44b360b856a5913d179f3 metadata.xml 220
+MD5 f0e687ab88a42372752afb3448eed6d4 sparse-2005.10.28.ebuild 638
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iQCVAwUBQ2Fgzp4WFLgrx1GWAQLKoAP9GmbRqNw/IyWrGiRlzDd90jdzVlrxSLhc
+GihEValbeUUxZkR9+9glnbhhXpns4YGrp3QiegXSzPx7vm2+iz3MyHjqgKz4K29b
+ApwSVr6Y0lfwgkskuyNMDsbMgimQUFh4CBysXPh4Rk8PCY3r1gv79gV20xafwkpB
+DoDY2eLJ6Qo=
+=5FDW
+-----END PGP SIGNATURE-----

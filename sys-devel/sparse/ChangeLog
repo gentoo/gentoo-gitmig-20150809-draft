@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/sparse
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.1 2005/10/27 23:20:33 solar Exp $
+
+*sparse-2005.10.28 (27 Oct 2005)
+
+  27 Oct 2005; <solar.@gentoo.org> +metadata.xml, +sparse-2005.10.28.ebuild:
+  - initial commit of sparse. Bug #110656
+
