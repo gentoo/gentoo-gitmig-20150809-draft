@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.19 2005/10/02 14:18:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.20 2005/10/27 22:00:58 metalgod Exp $
+
+*pyxmms-2.06 (27 Oct 2005)
+
+  27 Oct 2005; Luis Medinas <metalgod@gentoo.org> +pyxmms-2.06.ebuild:
+  Version bump. Closes bug #110647.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> pyxmms-2.02.ebuild:
   Mark 2.02 stable on ia64
