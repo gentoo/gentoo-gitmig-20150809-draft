@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.13 2005/10/22 16:51:04 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.26.ebuild,v 1.14 2005/10/27 22:17:31 vivo Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -391,6 +391,18 @@ pkg_preinst() {
 pkg_postinst() {
 	mysql_get_datadir
 
+	# mind at FEATURES=collision-protect before to remove this
+	#empty dirs...
+	[ -d "${ROOT}/var/log/mysql" ] \
+		|| install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
+
+	#secure the logfiles... does this bother anybody?
+	touch ${ROOT}/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
+	chmod 0660 ${ROOT}/var/log/mysql/mysql*
+	# secure some directories
+	chmod 0750 ${ROOT}/var/log/mysql
+
 	if ! useq minimal; then
 		# your friendly public service announcement...
 		einfo
@@ -419,7 +431,7 @@ pkg_config() {
 	local pwd2="b"
 	local maxtry=5
 
-	if [[ -d "${DATADIR}/mysql" ]] ; then
+	if [[ -d "${ROOT}/${DATADIR}/mysql" ]] ; then
 		ewarn "You have already a MySQL database in place."
 		ewarn "Please rename it or delete it if you wish to replace it."
 		die "MySQL database already exists!"
@@ -442,7 +454,7 @@ pkg_config() {
 	${ROOT}/usr/bin/mysql_install_db || die "MySQL databases not installed"
 
 	# MySQL 5.0 don't ned this
-	chown -R mysql:mysql ${DATADIR}
+	chown -R mysql:mysql ${ROOT}/${DATADIR}
 	chmod 0750 ${ROOT}/${DATADIR}
 
 	# now we can set the password
@@ -450,7 +462,7 @@ pkg_config() {
 	local mysqld="${ROOT}/usr/sbin/mysqld \
 		--skip-grant-tables \
 		--basedir=${ROOT}/usr \
-		--datadir=${ROOT}/var/lib/mysql \
+		--datadir=${ROOT}/${DATADIR} \
 		--skip-innodb \
 		--skip-bdb \
 		--max_allowed_packet=8M \
@@ -481,18 +493,3 @@ pkg_config() {
 
 	einfo "done"
 }
-
-pkg_postinst() {
-	# mind at FEATURES=collision-protect before to remove this
-	#empty dirs...
-	[ -d "${ROOT}/var/log/mysql" ] \
-		|| install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
-
-	#secure the logfiles... does this bother anybody?
-	touch ${ROOT}/var/log/mysql/mysql.{log,err}
-	chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
-	chmod 0660 ${ROOT}/var/log/mysql/mysql*
-	# secure some directories
-	chmod 0750 ${ROOT}/var/log/mysql
-}
-

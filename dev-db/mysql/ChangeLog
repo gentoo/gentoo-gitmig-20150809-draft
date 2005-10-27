@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.256 2005/10/25 17:50:45 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.257 2005/10/27 22:17:31 vivo Exp $
+
+  27 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
+  mysql-4.0.26.ebuild, mysql-4.1.14.ebuild, mysql-4.1.15.ebuild,
+  mysql-5.0.13_rc.ebuild, mysql-5.0.15.ebuild:
+  fix bug #110553, removed duplicate code
 
   25 Oct 2005; Francesco Riosa <vivo@gentoo.org> mysql-4.1.14.ebuild:
   Backport fixes from 4.1.15, fix Bug 110442

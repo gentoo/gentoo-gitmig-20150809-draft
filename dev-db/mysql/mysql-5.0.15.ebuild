@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.15.ebuild,v 1.1 2005/10/24 17:00:19 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.15.ebuild,v 1.2 2005/10/27 22:17:31 vivo Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -491,24 +491,6 @@ pkg_preinst() {
 pkg_postinst() {
 	mysql_get_datadir
 
-	if ! useq minimal; then
-		# your friendly public service announcement...
-		einfo
-		einfo "You might want to run:"
-		einfo "\"emerge --config =${PF}\""
-		einfo "if this is a new install."
-		einfo
-		if [[ "${PREVIOUS_DATADIR}" == "yes" ]] ; then
-			ewarn "Previous datadir found, it's YOUR job to change"
-			ewarn "ownership and have care of it"
-		fi
-	fi
-
-	mysql_upgrade_warning
-	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
-}
-
-pkg_postinst() {
 	# mind at FEATURES=collision-protect before to remove this
 	#empty dirs...
 	[ -d "${ROOT}/var/log/mysql" ] \
@@ -520,6 +502,18 @@ pkg_postinst() {
 	chmod 0660 ${ROOT}/var/log/mysql/mysql*
 	# secure some directories
 	chmod 0750 ${ROOT}/var/log/mysql
+
+	if ! useq minimal; then
+		# your friendly public service announcement...
+		einfo
+		einfo "You might want to run:"
+		einfo "\"emerge --config =${PF}\""
+		einfo "if this is a new install."
+		einfo
+	fi
+
+	mysql_upgrade_warning
+	einfo "InnoDB is not optional as of MySQL-4.0.24, at the request of upstream."
 }
 
 pkg_config() {
@@ -537,7 +531,7 @@ pkg_config() {
 	local pwd2="b"
 	local maxtry=5
 
-	if [[ -d "${DATADIR}/mysql" ]] ; then
+	if [[ -d "${ROOT}/${DATADIR}/mysql" ]] ; then
 		ewarn "You have already a MySQL database in place."
 		ewarn "Please rename it or delete it if you wish to replace it."
 		die "MySQL database already exists!"
@@ -560,7 +554,7 @@ pkg_config() {
 	${ROOT}/usr/bin/mysql_install_db || die "MySQL databases not installed"
 
 	# MySQL 5.0 don't need this
-	chown -R mysql:mysql ${DATADIR}
+	chown -R mysql:mysql ${ROOT}/${DATADIR}
 	chmod 0750 ${ROOT}/${DATADIR}
 
 	local options=""
@@ -585,7 +579,7 @@ pkg_config() {
 		${options} \
 		--skip-grant-tables \
 		--basedir=${ROOT}/usr \
-		--datadir=${ROOT}/var/lib/mysql \
+		--datadir=${ROOT}/${DATADIR} \
 		--skip-innodb \
 		--skip-bdb \
 		--max_allowed_packet=8M \
@@ -621,4 +615,3 @@ pkg_config() {
 	rm  "${sqltmp}"
 	einfo "done"
 }
-
