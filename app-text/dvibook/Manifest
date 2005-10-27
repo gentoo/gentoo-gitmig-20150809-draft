@@ -1,5 +1,15 @@
-MD5 6a2e2bb387a0e1aea27575cf417c01d2 ChangeLog 553
-MD5 e2b26f4c3ab37546562d0d0ee0d8fa80 dvibook-20001129.ebuild 818
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0af494b197bb8e9e1ce7db88a8c92596 ChangeLog 671
+MD5 33e4f98ca46da2bf38291ffef4d8c396 dvibook-20001129.ebuild 823
 MD5 5c835f52537e3cb25e44b92522053212 files/digest-dvibook-20001129 68
 MD5 4fb393810e12dff455d47f2a00eb97c4 files/dvibook-20001129.patch 6625
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDYNqJwUpWvClEHQoRAvEcAJ9TtihYR+641/KBaJULAKTrmuAh4gCffaOE
+ysNueHWNDw1J1c5vs5Tv71I=
+=5emr
+-----END PGP SIGNATURE-----
