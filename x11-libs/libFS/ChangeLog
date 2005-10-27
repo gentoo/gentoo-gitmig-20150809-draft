@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libFS
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.4 2005/10/20 05:35:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.5 2005/10/27 03:55:02 joshuabaergen Exp $
+
+  27 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  libFS-0.99.1.ebuild:
+  Added ipv6 USE flag.
 
 *libFS-0.99.1 (20 Oct 2005)
 

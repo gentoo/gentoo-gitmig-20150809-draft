@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXmu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.7 2005/10/20 05:39:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.8 2005/10/27 03:55:52 joshuabaergen Exp $
+
+  27 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  libXmu-0.99.1.ebuild:
+  Added ipv6 USE flag.
 
 *libXmu-0.99.1 (20 Oct 2005)
 
