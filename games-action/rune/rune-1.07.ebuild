@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07.ebuild,v 1.1 2005/10/27 14:09:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07.ebuild,v 1.2 2005/10/27 22:39:43 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="Viking hack and slay game"
-HOMEPAGE="http://www.humanheadstudios.com"
+HOMEPAGE="http://www.runegame.com"
 SRC_URI=""
 
 LICENSE="LOKI-EULA"

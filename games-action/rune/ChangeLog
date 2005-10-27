@@ -1,6 +1,9 @@
 # ChangeLog for games-action/rune
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.1 2005/10/27 14:09:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.2 2005/10/27 22:39:43 wolf31o2 Exp $
+
+  27 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> rune-1.07.ebuild:
+  Changed HOMEPAGE.
 
 *rune-1.07 (27 Oct 2005)
 
