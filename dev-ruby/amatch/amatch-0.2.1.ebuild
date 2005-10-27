@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/amatch-0.2.1.ebuild,v 1.1 2005/10/27 12:48:47 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/amatch-0.2.1.ebuild,v 1.2 2005/10/27 20:43:39 hansmi Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/6031/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~x86"
+KEYWORDS="~hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/ruby"
