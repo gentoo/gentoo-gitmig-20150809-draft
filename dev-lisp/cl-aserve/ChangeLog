@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-aserve
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/ChangeLog,v 1.19 2005/08/14 22:33:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/ChangeLog,v 1.20 2005/10/27 20:34:05 mkennedy Exp $
+
+  27 Oct 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/1.2.42.20050805-clisp-gentoo.patch,
+  cl-aserve-1.2.42.20050805.ebuild:
+  Apply patch from Matthew Swank <akopa@charter.net> to enable compilation on
+  CLISP; Resolves Bug #104938.
 
 *cl-aserve-1.2.42.20050805 (14 Aug 2005)
 

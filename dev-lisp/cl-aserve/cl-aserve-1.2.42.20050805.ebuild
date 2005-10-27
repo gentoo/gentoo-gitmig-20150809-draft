@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20050805.ebuild,v 1.1 2005/08/14 22:33:29 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.42.20050805.ebuild,v 1.2 2005/10/27 20:34:05 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -21,6 +21,11 @@ DEPEND="=dev-lisp/cl-acl-compat-${PV}*
 CLPACKAGE=aserve
 
 S=${WORKDIR}/cl-portable-aserve-${MY_PV}+cvs.${CVS_PV}.orig
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}; epatch ${FILESDIR}/${PV}-clisp-gentoo.patch
+}
 
 src_install() {
 	common-lisp-install aserve/*.cl aserve/*.asd
