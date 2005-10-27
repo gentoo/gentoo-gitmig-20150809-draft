@@ -1,0 +1,11 @@
+# ChangeLog for games-action/rune
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/ChangeLog,v 1.1 2005/10/27 14:09:59 wolf31o2 Exp $
+
+*rune-1.07 (27 Oct 2005)
+
+  27 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +rune-1.07.ebuild:
+  Initial import. Original ebuild by Patrick Zimmermann <patrick@zakweb.de>
+  and modified by me. Closing bug #41732.
+
