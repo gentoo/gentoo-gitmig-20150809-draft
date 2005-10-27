@@ -1,4 +1,14 @@
-MD5 79fdb07ac9cf40c947a4bdd7341cb14d ChangeLog 1813
-MD5 449e43b971aad19940251d1a11b078a3 angband-3.0.5.ebuild 1322
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d560e20db1b9f351a5ed46fad8ba39f ChangeLog 1912
+MD5 3386abf681808afc69bd816da55c601a angband-3.0.5.ebuild 1321
 MD5 664ca676ca11ddb5e8c75f01ed3d89cf files/digest-angband-3.0.5 66
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDYNyPwUpWvClEHQoRAoQCAJ4rx6FSnRwR0wTjCnaMyAr8pwYFsQCfcbIb
+fHCND1g+yaj0MYp+z8plW2o=
+=ERGB
+-----END PGP SIGNATURE-----
