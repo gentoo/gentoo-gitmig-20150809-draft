@@ -1,10 +1,20 @@
-MD5 cf561c430effb1a821c2e9fde02edcbd ChangeLog 12135
-MD5 f8df469837b3a964d556a54c89c4dd7e ethereal-0.10.12.ebuild 3472
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 826c74670c9b90a8c55077f5199bcac0 ethereal-0.10.13.ebuild 3361
+MD5 7800de52ad244636bb5c6a4b4307a5e7 ethereal-0.10.13-r1.ebuild 3469
+MD5 f8df469837b3a964d556a54c89c4dd7e ethereal-0.10.12.ebuild 3472
+MD5 f15641e23ce60d0b9bee9305d6e483e9 ChangeLog 12252
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
-MD5 627a1ad12192a4242ba6acf70cc0bc23 ethereal-0.10.13-r1.ebuild 3468
 MD5 34bd8a0285aea402be479f40304aa947 files/digest-ethereal-0.10.12 70
 MD5 ce9e77144029b2f1104aa92c1927f4e9 files/digest-ethereal-0.10.13 70
+MD5 e58b082ef143490cd14bbd423d5e7f4d files/ethereal-0.10.13-fix-irc-loop-DoS-CVE-2005-3313.diff 612
 MD5 e37a324c1e08bfd08a70fd5958dadeb4 files/ethereal-0.10.12-fix-encrypted-conflict.diff 2838
 MD5 ce9e77144029b2f1104aa92c1927f4e9 files/digest-ethereal-0.10.13-r1 70
-MD5 e58b082ef143490cd14bbd423d5e7f4d files/ethereal-0.10.13-fix-irc-loop-DoS-CVE-2005-3313.diff 612
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDYTN3KRy60XGEcJIRAir1AJ0brtfzGl9pgW/UHZhUgXAOWKhXegCfUVc0
+u5EhV1o/3kuuzOSJbRn1E10=
+=lBFU
+-----END PGP SIGNATURE-----
