@@ -1,4 +1,4 @@
-MD5 95012747cd74dc04a1ed2dfd251f03ab ChangeLog 390
-MD5 0b69f4d246be341cc59cdfee97f91a6a files/digest-quake3-1.33_alpha177 73
+MD5 420d40268fda31888ddc60bdabb37b6c ChangeLog 343
+MD5 3b1ec2a094429f0f6e046d2109aea1a3 files/digest-quake3-1.33_alpha187 73
 MD5 0a25a9c85ee385ef578cb770a957756d metadata.xml 954
-MD5 3a415bd0a3088af7eeb32c7439c99ebd quake3-1.33_alpha177.ebuild 1678
+MD5 7eb45d00017b1b0e59a5020eb4804513 quake3-1.33_alpha187.ebuild 1683
