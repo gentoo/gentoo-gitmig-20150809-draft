@@ -1,5 +1,5 @@
-MD5 06a4dc19e17da456c756b3a4f2da0396 ChangeLog 356
+MD5 b4ca87182621b2c7984dbd9d7674224b ChangeLog 458
 MD5 d63afc85b422a2e85f255c74ea505795 files/digest-timezone-data-2005n 126
 MD5 3a77c465da9b935def81c873d6015e27 files/timezone-data-2005n-makefile.patch 2800
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 e3788ff7da1a4e13b6fc9e2b20b360f0 timezone-data-2005n.ebuild 809
+MD5 0d0d0dab2d8dcb755fb8cbee6b338dec timezone-data-2005n.ebuild 814
