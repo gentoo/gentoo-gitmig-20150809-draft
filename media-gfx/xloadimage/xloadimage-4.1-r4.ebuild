@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.1 2005/10/26 18:58:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r4.ebuild,v 1.2 2005/10/27 08:37:33 grobian Exp $
 
 inherit alternatives eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="tiff jpeg png"
 
 RDEPEND="virtual/x11
@@ -39,7 +39,7 @@ src_unpack() {
 	sed -i "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf
 	sed -i "s:^#include <varargs.h>:#include <stdarg.h>:" ${S}/rlelib.c
 
-	if use ppc-macos ; then
+	if use userland_Darwin ; then
 		sed -i 's,<malloc.h>,<malloc/malloc.h>,' vicar.c
 		for f in $(grep zopen * | cut -d':' -f1 | uniq);do
 			sed -i "s:zopen:zloadimage_zopen:g" $f
