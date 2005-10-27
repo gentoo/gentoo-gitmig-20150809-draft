@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2003
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.34 2005/10/26 14:29:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.35 2005/10/27 03:18:07 wolf31o2 Exp $
+
+  27 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r4.ebuild:
+  UT2003.xpm->ut2003.xpm
 
   26 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225-r4.ebuild:
   Removed cdinstall since ut2003-data is not optional due to being non-trivial
