@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bde15401316753bf331704431dcd5f7a ChangeLog 10010
+MD5 f2d3086d36be5cdddba201a4075d62a7 ChangeLog 10110
 MD5 10e3c20015120e6380904475d127c3f3 chkrootkit-0.44-r1.ebuild 1591
 MD5 b889e1ad878a53a563e5be3ae4607b90 chkrootkit-0.45.ebuild 1513
-MD5 098499489217ba25be38668411233c56 chkrootkit-0.46.ebuild 1830
+MD5 e340fcde29e785c856855bea30444f10 chkrootkit-0.46.ebuild 1840
 MD5 99d10c59971b4836291ff235c6f480a6 files/chkrootkit-0.44-coreutils-static-falsepositive.patch 793
 MD5 c67831eb3ec73b91c86f9f686b0e176b files/chkrootkit-0.45-makefile.diff 1866
 MD5 c9af76526f66b71c6f9a92582b470969 files/chkrootkit-0.46-add-missing-includes.diff 769
@@ -16,7 +16,7 @@ MD5 7460fdec86596dcf99c66fbb167712af metadata.xml 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYMoMEZCkKN40op4RAromAJ9gkKLqDL0gm75lVLCeH5jir7+TtACdHLpv
-5NL84TUFXQZvd5R+d+bwq0Y=
-=r0Rb
+iD8DBQFDYMs9EZCkKN40op4RAs3/AJwNyQu8QdP1vaFuR/pfc2Efs9t0owCcDjvM
+nWyefMY2sPCzwM1VyxLxJM8=
+=kelm
 -----END PGP SIGNATURE-----
