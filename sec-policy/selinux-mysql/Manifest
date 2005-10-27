@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2cf648e1f55d449f6a9d113a1f1a344a ChangeLog 2213
+MD5 fa9807bad61f09a5308c88dda08e3c6c ChangeLog 2337
 MD5 95b181aed42460f40e3aabd98bf6bcbb files/digest-selinux-mysql-20050605 73
 MD5 2080fa4a60e9b1e15f533a6685124fb8 files/digest-selinux-mysql-20051023 73
 MD5 46e72c8d2f5d2d58d53e25b822d9e4c9 metadata.xml 507
 MD5 a9091c4fc27d6312a1942f60d0715047 selinux-mysql-20050605.ebuild 435
-MD5 968d4e6c4377a0708373236a255beca2 selinux-mysql-20051023.ebuild 445
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFDXPWvGSBEIeh4AEYRAieMAJ9KjxErbuYAvYyy0Vl4EPfVS5S//QCfeInX
-951Gbgt3fn5wbMM+FjvP+t8=
-=BM0f
------END PGP SIGNATURE-----
+MD5 7af3ba42bb882d2f6ab17db4d5bf167c selinux-mysql-20051023.ebuild 440
