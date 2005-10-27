@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.35 2005/09/30 22:47:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.36 2005/10/27 23:31:46 leonardop Exp $
+
+*libwww-5.4.0-r4 (27 Oct 2005)
+
+  27 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +files/libwww-5.4.0-htbound.patch, +libwww-5.4.0-r4.ebuild:
+  Added patch with a new implementation of HTBound.c, fixing several logic
+  errors (bug #109040).
 
   30 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> libwww-5.4.0-r3.ebuild:
   Stable on sh.
