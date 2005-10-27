@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.214 2005/10/26 00:39:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.215 2005/10/27 07:28:49 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1254,38 +1254,35 @@ cdrom_get_cds() {
 
 	# now we see if the user gave use CD_ROOT ...
 	# if they did, let's just believe them that it's correct
-	if [[ ! -z ${CD_ROOT} ]] ; then
-		export CDROM_ROOT=${CD_ROOT}
-		einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
-		return
-	fi
-	# do the same for CD_ROOT_X
-	if [[ ! -z ${CD_ROOT_1} ]] ; then
+	if [[ -n ${CD_ROOT}${CD_ROOT_1} ]] ; then
 		local var=
 		cdcnt=0
 		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
 			((++cdcnt))
 			var="CD_ROOT_${cdcnt}"
+			[[ -z ${!var} ]] && var="CD_ROOT"
 			if [[ -z ${!var} ]] ; then
 				eerror "You must either use just the CD_ROOT"
 				eerror "or specify ALL the CD_ROOT_X variables."
 				eerror "In this case, you will need ${CDROM_TOTAL_CDS} CD_ROOT_X variables."
 				die "could not locate CD_ROOT_${cdcnt}"
 			fi
-			export CDROM_ROOTS_${cdcnt}="${!var}"
 		done
-		export CDROM_ROOT=${CDROM_ROOTS_1}
+		export CDROM_ROOT=${CD_ROOT_1:-${CD_ROOT}}
 		einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
+		export CDROM_SET=-1
+		for f in ${CDROM_CHECK_1//:/ } ; do
+			((++CDROM_SET))
+			[[ -e ${CD_ROOT}/${f} ]] && break
+		done
+		export CDROM_MATCH=${f}
 		return
 	fi
 
+	# User didn't help us out so lets make sure they know they can
+	# simplify the whole process ...
 	if [[ ${CDROM_TOTAL_CDS} -eq 1 ]] ; then
-		einfon "This ebuild will need the "
-		if [[ -z ${CDROM_NAME} ]] ; then
-			echo "cdrom for ${PN}."
-		else
-			echo "${CDROM_NAME}."
-		fi
+		einfo "This ebuild will need the ${CDROM_NAME:-cdrom for ${PN}}"
 		echo
 		einfo "If you do not have the CD, but have the data files"
 		einfo "mounted somewhere on your filesystem, just export"
@@ -1323,6 +1320,7 @@ cdrom_get_cds() {
 		einfo "export CD_ROOT_1=/mnt/cdrom"
 		echo
 	fi
+
 	export CDROM_SET=""
 	export CDROM_CURRENT_CD=0
 	cdrom_load_next_cd
@@ -1333,19 +1331,15 @@ cdrom_get_cds() {
 # when it returns, CDROM_ROOT will be pointing to the second cd.
 # remember, you can only go forward in the cd chain, you can't go back.
 cdrom_load_next_cd() {
-	export CDROM_CURRENT_CD=$((CDROM_CURRENT_CD + 1))
-	local var=
-
-	if [[ ! -z ${CD_ROOT} ]] ; then
-		einfo "Using same root as before for CD #${CDROM_CURRENT_CD}"
-		return
-	fi
+	local var
+	((++CDROM_CURRENT_CD))
 
 	unset CDROM_ROOT
-	var=CDROM_ROOTS_${CDROM_CURRENT_CD}
+	var=CD_ROOT_${CDROM_CURRENT_CD}
+	[[ -z ${!var} ]] && var="CD_ROOT"
 	if [[ -z ${!var} ]] ; then
 		var="CDROM_CHECK_${CDROM_CURRENT_CD}"
-		cdrom_locate_file_on_cd ${!var}
+		_cdrom_locate_file_on_cd ${!var}
 	else
 		export CDROM_ROOT=${!var}
 	fi
@@ -1360,7 +1354,7 @@ cdrom_load_next_cd() {
 # displayed and we'll hang out here until:
 # (1) the file is found on a mounted cdrom
 # (2) the user hits CTRL+C
-cdrom_locate_file_on_cd() {
+_cdrom_locate_file_on_cd() {
 	local mline=""
 	local showedmsg=0
 
