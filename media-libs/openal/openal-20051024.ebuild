@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20051024.ebuild,v 1.3 2005/10/26 14:06:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20051024.ebuild,v 1.4 2005/10/27 13:26:54 wolf31o2 Exp $
 
 inherit eutils gnuconfig
 
@@ -67,13 +67,12 @@ src_install() {
 
 	make install DESTDIR="${D}" || die
 
-	dodoc CREDITS ChangeLog INSTALL NOTES PLATFORM TODO
+	dodoc ChangeLog INSTALL NOTES PLATFORM TODO
 	dodoc ${FILESDIR}/openalrc
 	makeinfo doc/openal.texi
 	doinfo doc/openal.info
 
 	cd ${S}
-	dodoc CHANGES COPYING CREDITS
 	dohtml docs/*.html
 }
 

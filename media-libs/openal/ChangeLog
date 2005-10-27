@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.48 2005/10/26 14:06:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.49 2005/10/27 13:26:54 wolf31o2 Exp $
+
+  27 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  openal-20051024.ebuild:
+  Fixed up dodoc.  Blame cardoe.  :P
 
   26 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/openal-20051024-amd64-configure.patch, openal-20051024.ebuild:
