@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.3 2005/10/27 07:34:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.4 2005/10/27 07:39:03 vapier Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-${PV}-3.x86
 
 LICENSE="Q3AEULA"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="cdinstall"
 
 RDEPEND="|| ( games-fps/quake3 games-fps/quake3-bin )"
