@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.63 2005/10/23 17:24:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.64 2005/10/28 08:27:51 ka0ttic Exp $
+
+  28 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> herdstat-1.1.1_p7.ebuild,
+  herdstat-1.1.2_rc2.ebuild:
+  Remove RESTRICT=primaryuri since berlios' mirror seems to suck as of late.
 
 *herdstat-1.1.2_rc2 (23 Oct 2005)
 

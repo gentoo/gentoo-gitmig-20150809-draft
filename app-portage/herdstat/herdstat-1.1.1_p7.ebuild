@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p7.ebuild,v 1.5 2005/09/15 20:25:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.1_p7.ebuild,v 1.6 2005/10/28 08:27:51 ka0ttic Exp $
 
 inherit bash-completion toolchain-funcs
 
 DESCRIPTION="A multi-purpose query tool capable of things such as displaying herd/developer information and displaying category/package metadata"
 HOMEPAGE="http://developer.berlios.de/projects/herdstat/"
 SRC_URI="http://download.berlios.de/herdstat/${P}.tar.bz2"
-RESTRICT="primaryuri"
 
 LICENSE="GPL-2"
 SLOT="0"
