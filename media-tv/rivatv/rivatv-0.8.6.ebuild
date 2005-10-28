@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.6.ebuild,v 1.1 2005/10/28 01:13:52 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.6.ebuild,v 1.2 2005/10/28 01:27:00 blauwers Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
 
-CONFIG_CHECK="VIDEO_DEV"
+CONFIG_CHECK="VIDEO_DEV I2C_ALGOBIT"
 MODULE_NAMES="tuner(media/video:${S}:${S}/bttv) tvmixer(media/video:${S}:${S}/bttv) tvaudio(media/video:${S}:${S}/bttv) rivatv(media/video:${S}:${S}/src) \
 	saa7108e(media/video:${S}:${S}/src) saa7111a(media/video:${S}:${S}/src) saa7113h(media/video:${S}:${S}/src) saa7174hl(media/video:${S}:${S}/src) \
 	tw98(media/video:${S}:${S}/src) vpx32xx(media/video:${S}:${S}/src)"

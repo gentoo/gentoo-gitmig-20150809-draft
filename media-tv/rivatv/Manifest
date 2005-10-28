@@ -3,7 +3,7 @@ MD5 0be39e6eace0493c9141af3c18e13f5e metadata.xml 253
 MD5 5131b86f70269727631f034136b8f1fb rivatv-0.8.2.ebuild 970
 MD5 718bd9b01897d40d98b4074e95c0ad6f rivatv-0.8.5-r2.ebuild 2536
 MD5 71b6a86fcc50c85cd482cb7142ead820 rivatv-0.8.5-r3.ebuild 1539
-MD5 52266256ec98296791faab93c52010cf rivatv-0.8.6.ebuild 1538
+MD5 b09a40b892e418bf5a896a68676959dd rivatv-0.8.6.ebuild 1550
 MD5 675738a65f00503869783cd7f88ce0b1 files/digest-rivatv-0.8.2 64
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r2 64
 MD5 84ee270b3c1dc945b92fb29af05a6323 files/digest-rivatv-0.8.5-r3 64
