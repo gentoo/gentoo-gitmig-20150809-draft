@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.7 2005/05/17 18:10:17 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.8 2005/10/28 15:49:14 ka0ttic Exp $
+
+*thttpd-2.25b-r3 (28 Oct 2005)
+
+  28 Oct 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/thttpd-2.25/fix-insecure-tmp-creation-CVE-2005-3124.diff,
+  +thttpd-2.25b-r3.ebuild:
+  Revision bump; added patch to fix insecure tmp file creation in the
+  syslogtocern script, bug #110637.
 
   17 May 2005; Michael Hanselmann <hansmi@gentoo.org> thttpd-2.25b.ebuild:
   Stable on ppc.
