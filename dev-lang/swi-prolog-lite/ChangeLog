@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/swi-prolog-lite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.20 2005/10/08 21:45:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.21 2005/10/28 03:27:25 vapier Exp $
+
+*swi-prolog-lite-5.5.36 (28 Oct 2005)
+
+  28 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/swi-prolog-lite-5.5.30-runtime-build.patch,
+  +swi-prolog-lite-5.5.36.ebuild:
+  Version bump with more package support.
 
   08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org>
   swi-prolog-lite-5.4.7.ebuild:
