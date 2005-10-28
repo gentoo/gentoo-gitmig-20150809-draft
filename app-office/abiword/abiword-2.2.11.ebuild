@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.11.ebuild,v 1.7 2005/10/19 15:48:51 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.11.ebuild,v 1.8 2005/10/28 15:35:38 leonardop Exp $
 
 inherit eutils fdo-mime alternatives
 
@@ -26,6 +26,7 @@ RDEPEND="virtual/x11
 	>=gnome-base/libglade-2
 	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
+	dev-libs/popt
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
 	xml2? ( >=dev-libs/libxml2-2.4.10 )
 	!xml2? ( dev-libs/expat )
