@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r1.ebuild,v 1.4 2005/09/05 23:18:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7676-r1.ebuild,v 1.5 2005/10/28 10:06:41 flameeyes Exp $
 
 inherit eutils multilib versionator
 
@@ -9,11 +9,13 @@ AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
+X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
 
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-${X86_PKG_V}.run )
-	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )"
+	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )
+	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
@@ -26,21 +28,30 @@ IUSE="dlloader"
 RDEPEND="|| ( virtual/x11 >=x11-base/xorg-server-0.99.1-r7 )
 	 || ( virtual/x11 media-libs/mesa )
 	 app-admin/eselect-opengl
-	 ~media-video/nvidia-kernel-${PV}
+	 kernel_linux? ( ~media-video/nvidia-kernel-${PV} )
 	 !app-emulation/emul-linux-x86-nvidia"
+# This should be added to have full dependencies for Gentoo FreeBSD
+# but can't be added until the profiles are in main portage (for repoman)
+# kernel_FreeBSD? ( ~media-video/nvidia-freebsd-${PV} )
 
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
 
 if use x86; then
-	PKG_V="${X86_PKG_V}"
+	PKG_V="-${X86_PKG_V}"
 	NV_PACKAGE="${X86_NV_PACKAGE}"
 elif use amd64; then
-	PKG_V="${AMD64_PKG_V}"
+	PKG_V="-${AMD64_PKG_V}"
 	NV_PACKAGE="${AMD64_NV_PACKAGE}"
+elif use x86-fbsd; then
+	PKG_V=""
+	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
 fi
 
-S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}"
+S="${WORKDIR}/${NV_PACKAGE}${PKG_V}"
+
+# On BSD userland it wants real make command
+MAKE="make"
 
 check_xfree() {
 	# This isn't necessary, true. But its about time people got the idea.
@@ -61,13 +72,21 @@ pkg_setup() {
 src_unpack() {
 	local NV_PATCH_PREFIX="${FILESDIR}/${PV}/NVIDIA_glx-${PV}"
 
-	cd ${WORKDIR}
-	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
+	if ! use x86-fbsd; then
+		cd ${WORKDIR}
+		bash ${DISTDIR}/${NV_PACKAGE}${PKG_V}.run --extract-only
+	else
+		unpack ${A}
+	fi
 
 	# Patchs go below here, add breif description
 	cd ${S}
-	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
+	if ! use x86-fbsd; then
+		# nVidia wants us to use nvidia-installer, removing warning.
+		epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
+	else
+		cd ${S}/doc
+	fi
 	# Use the correct defines to make gtkglext build work
 	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
@@ -102,13 +121,33 @@ src_install() {
 
 	is_final_abi || return 0
 
-	# Docs, remove nvidia-settings as provided by media-video/nvidia-settings
-	rm -f usr/share/doc/nvidia-settings*
-	dodoc usr/share/doc/*
+	if ! use x86-fbsd; then
+		# Docs, remove nvidia-settings as provided by media-video/nvidia-settings
+		rm -f usr/share/doc/nvidia-settings*
+		dodoc usr/share/doc/*
+	else
+		dodoc doc/README doc/README.Linux doc/XF86Config.sample
+	fi
 
 	# nVidia want bug reports using this script
 	exeinto /usr/bin
 	doexe usr/bin/nvidia-bug-report.sh
+}
+
+# Install nvidia library:
+# the first parameter is the place where to install it
+# the second paramis the base name of the library
+# the third parameter is the provided soversion
+donvidia() {
+	dodir $1
+	exeinto $1
+
+	libname=$(basename $2)
+
+	doexe $2.$3
+	dosym ${libname}.$3 $1/${libname}
+
+	[[ $3 != "1" ]] && dosym ${libname}.$3 $1/${libname}.1
 }
 
 src_install-libs() {
@@ -122,78 +161,91 @@ src_install-libs() {
 		pkglibdir=lib32
 	fi
 
+	local usrpkglibdir=usr/${pkglibdir}
+	local libdir=usr/X11R6/${pkglibdir}
+	local drvdir=${libdir}/modules/drivers
+	local extdir=${libdir}/modules/extensions
+	local incdir=usr/include/GL
+	local sover=${PV}
 	local NV_ROOT="/usr/${inslibdir}/opengl/nvidia"
 	local NO_TLS_ROOT="${NV_ROOT}/no-tls"
 	local TLS_ROOT="${NV_ROOT}/tls"
 	local X11_LIB_DIR="/usr/${inslibdir}/xorg"
 
+	if use x86-fbsd; then
+		# on FreeBSD everything is on obj/
+		pkglibdir=obj
+		usrpkglibdir=obj
+		x11pkglibdir=obj
+		drvdir=obj
+		extdir=obj
+
+		# don't ask me why the headers are there.. glxext.h is missing
+		incdir=doc
+
+		# on FreeBSD it has just .1 suffix
+		sover=1
+	fi
+
 	# The GLX libraries
-	exeinto ${NV_ROOT}/lib
-	doexe usr/${pkglibdir}/libGL.so.${PV}
-	doexe usr/${pkglibdir}/libGLcore.so.${PV}
-	dosym libGL.so.${PV} ${NV_ROOT}/lib/libGL.so
-	dosym libGL.so.${PV} ${NV_ROOT}/lib/libGL.so.1
-	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so
-	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so.1
+	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGL.so ${sover}
+	donvidia ${NV_ROOT}/lib ${usrpkglibdir}/libGLcore.so ${sover}
 
 	dodir ${NO_TLS_ROOT}
-	exeinto ${NO_TLS_ROOT}
-	doexe usr/${pkglibdir}/libnvidia-tls.so.${PV}
-	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so
-	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so.1
+	donvidia ${NO_TLS_ROOT} ${usrpkglibdir}/libnvidia-tls.so ${sover}
 
-	dodir ${TLS_ROOT}
-	exeinto ${TLS_ROOT}
-	doexe usr/${pkglibdir}/tls/libnvidia-tls.so.${PV}
-	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so
-	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
+	if ! use x86-fbsd; then
+		donvidia ${TLS_ROOT} ${usrpkglibdir}/tls/libnvidia-tls.so ${sover}
+	fi
 
 	if want_tls ; then
 		dosym ../tls/libnvidia-tls.so ${NV_ROOT}/lib
 		dosym ../tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
-		dosym ../tls/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.${sover} ${NV_ROOT}/lib
 	else
 		dosym ../no-tls/libnvidia-tls.so ${NV_ROOT}/lib
 		dosym ../no-tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
-		dosym ../no-tls/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.${sover} ${NV_ROOT}/lib
 	fi
 
-	# Not sure whether installing the .la file is neccessary;
-	# this is adopted from the `nvidia' ebuild
-	local ver1=$(get_version_component_range 1)
-	local ver2=$(get_version_component_range 2)
-	local ver3=$(get_version_component_range 3)
-	sed -e "s:\${PV}:${PV}:"     \
-	    -e "s:\${ver1}:${ver1}:" \
-	    -e "s:\${ver2}:${ver2}:" \
-	    -e "s:\${ver3}:${ver3}:" \
-	    -e "s:\${libdir}:${inslibdir}:" \
-	    ${FILESDIR}/libGL.la-r2 > ${D}/${NV_ROOT}/lib/libGL.la
+	if ! use x86-fbsd; then
+		# Not sure whether installing the .la file is neccessary;
+		# this is adopted from the `nvidia' ebuild
+		local ver1=$(get_version_component_range 1)
+		local ver2=$(get_version_component_range 2)
+		local ver3=$(get_version_component_range 3)
+		sed -e "s:\${PV}:${PV}:"     \
+			-e "s:\${ver1}:${ver1}:" \
+			-e "s:\${ver2}:${ver2}:" \
+			-e "s:\${ver3}:${ver3}:" \
+			-e "s:\${libdir}:${inslibdir}:" \
+			${FILESDIR}/libGL.la-r2 > ${D}/${NV_ROOT}/lib/libGL.la
+	fi
 
 	exeinto ${X11_LIB_DIR}/modules/drivers
-	# The below section was changed to fix bug #96514 and bug #91101.
+
 	if use dlloader; then
-		[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so ]] && \
-			doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.so
+		[[ -f ${drvdir}/nvidia_drv.so ]] && \
+			doexe ${drvdir}/nvidia_drv.so
 	else
-		[[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ]] && \
-			doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
+		[[ -f ${drvdir}/nvidia_drv.o ]] && \
+			doexe ${drvdir}/nvidia_drv.o
 	fi
 
 	insinto ${X11_LIB_DIR}
-	[[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a ]] && \
-		doins usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a
+	[[ -f ${libdir}/libXvMCNVIDIA.a ]] && \
+		doins ${libdir}/libXvMCNVIDIA.a
 	exeinto ${X11_LIB_DIR}
-	[[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV} ]] && \
-		doexe usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV}
+	[[ -f ${libdir}/libXvMCNVIDIA.so.${PV} ]] && \
+		doexe ${libdir}/libXvMCNVIDIA.so.${PV}
 
 	exeinto ${NV_ROOT}/extensions
-	[[ -f usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} ]] && \
-		newexe usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} libglx.so
+	[[ -f ${extdir}/libglx.so.${sover} ]] && \
+		newexe ${extdir}/libglx.so.${sover} libglx.so
 
 	# Includes
 	insinto ${NV_ROOT}/include
-	doins usr/include/GL/*.h
+	doins ${incdir}/*.h
 }
 
 pkg_preinst() {
