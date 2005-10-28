@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7642583c7c2f9a8ddcdee54e9f95aa1c ChangeLog 7001
-MD5 f4c51fea71475ebe46a82e096640fdd9 afterstep-1.8.11-r2.ebuild 1547
+MD5 99cbfeb8180ec48e7188f6b0dc38af7f afterstep-2.1.2.ebuild 3379
 MD5 7036af2d5fa6c9837c13df9e041d7e34 afterstep-2.00.05.ebuild 3359
-MD5 96be45e836f168971acbfce2311344cb afterstep-2.1.2.ebuild 3379
+MD5 f4c51fea71475ebe46a82e096640fdd9 afterstep-1.8.11-r2.ebuild 1547
+MD5 9308c3f8b2b06e7b6ea12d19bc5d61d1 ChangeLog 7101
+MD5 bb0cd3dcc1a371b3fba19147868d7c5c metadata.xml 350
+MD5 9735d9a9bce29bcbd35792c0c4064ea0 files/digest-afterstep-1.8.11-r2 70
 MD5 720723e9a9846b9d6a7e64a25b1adbbc files/afterstep 29
 MD5 7d3868b85f7325c35e5165a8c10ce77d files/afterstep-1.8.11-gentoo.diff 1321
-MD5 9735d9a9bce29bcbd35792c0c4064ea0 files/digest-afterstep-1.8.11-r2 70
 MD5 aa6dd1f671415f2083b1161571752859 files/digest-afterstep-2.00.05 71
 MD5 f92576044c379b6c3b3240972a1be536 files/digest-afterstep-2.1.2 69
-MD5 bb0cd3dcc1a371b3fba19147868d7c5c metadata.xml 350
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDYUu5EZCkKN40op4RAlYtAJ9o+ywWwTAKj743bGIIkUjJ01SDnQCgo/nH
-l1vno1a/n98ej4vpPYW/ds8=
-=SlTD
+iD8DBQFDYi1MKRy60XGEcJIRAs8lAJ9GD3b8CTNjRgh3cwsELdw2Q00bGACffMCI
+jeW9+MusYp+AvHIPPIQAJOs=
+=Imwj
 -----END PGP SIGNATURE-----
