@@ -4,3 +4,6 @@ move net-misc/entropy net-p2p/entropy_rsa
 move x11-apps/twm x11-wm/twm
 move app-arch/open_c-lit app-text/convertlit
 move app-text/open_c-lit app-text/convertlit
+move sys-apps/kudzu sys-libs/libkudzu
+move sys-apps/kudzu-knoppix sys-libs/libkudzu
+move sys-libs/libkudzu-knoppix sys-libs/libkudzu
