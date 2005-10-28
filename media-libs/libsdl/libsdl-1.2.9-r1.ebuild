@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.3 2005/10/05 00:34:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9-r1.ebuild,v 1.4 2005/10/28 01:22:35 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -66,8 +66,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-SDL_stretch.patch
 	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-hermes-call-dont-jump.patch
 	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-load-mmx-masks-from-stack.patch
-	epatch "${FILESDIR}"/libsdl-1.2.9-PIC-yuv-mmx.patch
+	[[ $(gcc-major-version) != "2" ]] && epatch "${FILESDIR}"/libsdl-1.2.9-PIC-yuv-mmx.patch
 	epatch "${FILESDIR}"/${P}-sdl-blit-mmx-check.patch #104533
+	epatch "${FILESDIR}"/${P}-DirectFB-updates.patch
 
 	./autogen.sh || die "autogen failed"
 	epunt_cxx
