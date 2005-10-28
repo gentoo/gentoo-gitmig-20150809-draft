@@ -1,7 +1,20 @@
-MD5 ae8e64bd9eee8c8027174e01ef029362 ChangeLog 3529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b5faf2e05f475d4be565cc209a7f759 ChangeLog 3711
 MD5 d1e5886d87cfe90f8ede10a68de0e6b0 bnc-2.9.3-r1.ebuild 976
 MD5 0230592900cfd7b3857cab0207d91d4b bnc-2.9.3-r2.ebuild 1064
-MD5 b2fd9f07925d7c1a3f1ed2366d0c74ba metadata.xml 221
+MD5 57079f4ae38f545e0d1bccb60972fc55 bnc-2.9.4.ebuild 1061
+MD5 2f9e8261e9af06984792f0ee03ab40c2 files/bnc-2.9.3-64bit.patch 402
+MD5 5834a42ea841a6e9834af47976af0eba files/bnc-2.9.4-build.patch 791
 MD5 a6f25e4b520bc1540a80f78bb419d53f files/digest-bnc-2.9.3-r1 59
 MD5 a6f25e4b520bc1540a80f78bb419d53f files/digest-bnc-2.9.3-r2 59
-MD5 2f9e8261e9af06984792f0ee03ab40c2 files/bnc-2.9.3-64bit.patch 402
+MD5 03b8633d6f52645050cadf01d4d6334c files/digest-bnc-2.9.4 59
+MD5 b2fd9f07925d7c1a3f1ed2366d0c74ba metadata.xml 221
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDYqymgIKl8Uu19MoRAm+cAJ9fEjjHSWSuXAnOsi2yS/F76DJfdwCcC6EE
+iVS2EqZBwjzkLfSfwCEndaw=
+=xvCk
+-----END PGP SIGNATURE-----
