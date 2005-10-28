@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyunit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.8 2005/10/01 18:18:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.9 2005/10/28 04:20:04 weeve Exp $
+
+  28 Oct 2005; Jason Wever <weeve@gentoo.org> pyunit-1.4.1.ebuild:
+  Added ~sparc keyword.
 
   01 Oct 2005; Luis Medinas <metalgod@gentoo.org> pyunit-1.4.1.ebuild:
   Readded ~amd64 keyword. Probably was a cvs issue.
