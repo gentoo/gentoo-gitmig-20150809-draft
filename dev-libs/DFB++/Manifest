@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 06bafdcfffa06adf148dd8686f3089ad ChangeLog 607
 MD5 7a1e97ec83d79b93b4f1e1e37d0cc1a0 DFB++-0.9.22.ebuild 547
 MD5 5c952577cdbfa08f28ccfcd70dcea074 DFB++-0.9.23.ebuild 550
 MD5 97fa809c45af7f730bb051c7a18dca33 files/digest-DFB++-0.9.22 64
 MD5 94ffbf74d059fa56eb82859b9aa4b447 files/digest-DFB++-0.9.23 64
 MD5 f698cd51f3dd4f72ae8efea493a99bac metadata.xml 219
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDYXDbgIKl8Uu19MoRAtbZAJ9Xr/7MqLl5/KyF0e57HFwZbQi53gCfeNk3
+j0Z8x4Vt2e4KRr1NAVSgmMU=
+=KOxN
+-----END PGP SIGNATURE-----
