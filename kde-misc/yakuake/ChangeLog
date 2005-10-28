@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.1 2005/10/16 16:11:13 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.2 2005/10/28 12:35:18 cryos Exp $
+
+*yakuake-2.7.3 (28 Oct 2005)
+
+  28 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> -yakuake-2.7.2.ebuild,
+  +yakuake-2.7.3.ebuild:
+  Version bump.
 
 *yakuake-2.7.2 (16 Oct 2005)
 
