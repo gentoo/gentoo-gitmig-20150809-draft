@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.55 2005/10/27 18:50:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.56 2005/10/28 17:26:12 gustavoz Exp $
+
+  28 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> exim-4.54.ebuild:
+  Stable on sparc wrt #103894
 
   27 Oct 2005; Simon Stelling <blubb@gentoo.org> exim-4.54.ebuild:
   marked stable on amd64 wrt bug 103894
