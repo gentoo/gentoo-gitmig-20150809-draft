@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 feb6391ece9afa87e4d19534b1ccb996 ChangeLog 31540
+MD5 ca19cb0c7613d2c6dfb298520ce3f0c9 ChangeLog 31887
 MD5 b5b7f947ffb9e6c19f7457ff7c14d0db files/1.0.6111/conftest_koutput_includes.patch 1082
 MD5 762e6f6e16aa6dd5b2469e99fe8decd3 files/1.0.6111/nv-pci_find_class.patch 2903
 MD5 c2b155f40d7b904f07550e8e326969c2 files/1.0.6111/nv-remap-range.patch 5715
@@ -47,17 +44,10 @@ MD5 4ea42a34abde5c81fe828b09afab7651 files/digest-nvidia-kernel-1.0.7676 163
 MD5 4ea42a34abde5c81fe828b09afab7651 files/digest-nvidia-kernel-1.0.7676-r1 163
 MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
 MD5 075fe48a4f1fc90d2c3814e7bcd1d1ab metadata.xml 313
-MD5 31dc5b8d10b1e9dc8bff64fd56fd642a nvidia-kernel-1.0.6111-r3.ebuild 4494
-MD5 cde8131d8df1e65490d7de0923721b8a nvidia-kernel-1.0.6629-r4.ebuild 4571
-MD5 e4bd52644954f799ac186b4ad070d4dc nvidia-kernel-1.0.7167-r1.ebuild 3953
-MD5 4005c9a8094dcdfcba1fdec1fc2dfd9d nvidia-kernel-1.0.7174.ebuild 3991
-MD5 6aba502097ccdfa8ae9697ecfbb42383 nvidia-kernel-1.0.7667.ebuild 4507
-MD5 731d9029e10a2cc3667dcb12b80be70c nvidia-kernel-1.0.7676-r1.ebuild 4642
-MD5 bb1452c4b0662d0852e6a817b1058819 nvidia-kernel-1.0.7676.ebuild 4520
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDYc+HOpjtAl+gMRURAiEXAJ0WkUx0YJk+7OMxId8FuSVq+mpBjwCfSO9p
-Xu3W3JFcw6JvdShTk+ZVBmM=
-=VVYh
------END PGP SIGNATURE-----
+MD5 6912838fee04de491aa184c309e274a9 nvidia-kernel-1.0.6111-r3.ebuild 4523
+MD5 29777a7a6934d750d1f2743d384267d2 nvidia-kernel-1.0.6629-r4.ebuild 4600
+MD5 b44523732e779c46cebed035eb62cbfc nvidia-kernel-1.0.7167-r1.ebuild 3982
+MD5 2e12cd6f21aaabd1424b51b10d2c0c34 nvidia-kernel-1.0.7174.ebuild 4025
+MD5 0da986517ab8d7beb13c5d1fe5a4c1c6 nvidia-kernel-1.0.7667.ebuild 4538
+MD5 6e28642fae4a75a66584dd04910cbac4 nvidia-kernel-1.0.7676-r1.ebuild 4669
+MD5 044c61105ab94548ebf0d98a8482eec6 nvidia-kernel-1.0.7676.ebuild 4549
