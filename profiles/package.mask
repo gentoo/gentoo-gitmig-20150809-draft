@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4625 2005/10/28 14:51:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4626 2005/10/28 22:26:19 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -34,14 +34,6 @@ games-fps/ut2003-data
 # Removing old gdesklets-core's that have been deprecated
 # for quite a while - see bug #103857
 <gnome-extra/gdesklets-core-0.33.1
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (25 Oct 2005)
-# This mask is in preparation for these packages being removed from the tree
-# on October 28th due to lack of interest from the maintainer and no new
-# maintainer stepping forward.  Plus, they never worked right on Gentoo anyway.
-sys-apps/kudzu
-sys-apps/kudzu-knoppix
-sys-libs/libkudzu-knoppix
 
 # Doug Goldstein <cardoe@gentoo.org> (25 Oct 2005)
 # ndiswrapper 1.4 causes a bunch of people's systems
