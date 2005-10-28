@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6a55c07d85c4b69821b6f7a803ee14b7 cmdparse-2.0.0.ebuild 471
+MD5 7ecca89623f5b8e7d942d2df67743ad5 ChangeLog 354
+MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
+MD5 35acf05dcbcaea14de76b489494d418c files/digest-cmdparse-2.0.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDYhk5ZgSmR+etHJoRAtOdAJ9EdUZBXZarvQ3lhHdGwb3ElSvjIQCg2X/k
+3GGo61XkRsJ1jG+9inxUJnE=
+=cUcI
+-----END PGP SIGNATURE-----
