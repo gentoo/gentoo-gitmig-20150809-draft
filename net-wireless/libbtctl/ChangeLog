@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.18 2005/10/05 12:01:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.19 2005/10/28 04:52:35 latexer Exp $
+
+*libbtctl-0.5.0 (28 Oct 2005)
+
+  28 Oct 2005; Peter Johanson <latexer@gentoo.org> +libbtctl-0.5.0.ebuild:
+  Bump.
 
   05 Oct 2005; Simon Stelling <blubb@gentoo.org>
   +files/libbtctl-0.4.1-libdir.patch, libbtctl-0.4.1-r1.ebuild:
