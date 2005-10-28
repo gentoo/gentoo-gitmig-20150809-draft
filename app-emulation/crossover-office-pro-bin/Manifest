@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 796c17250424e1342ffd06874c79f5a7 crossover-office-pro-bin-4.2.ebuild 1058
-MD5 7b564fe05c6c5c4b81c7e19902ddf073 ChangeLog 565
-MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
+MD5 69d849d563c10397b30b8c291f8e7180 ChangeLog 445
+MD5 05c2d894b1170e5dd30cc44dd96a65d4 crossover-office-pro-bin-4.2.ebuild 1061
 MD5 3cc7ad0128dedb3cf0fed61e510b7cc1 files/digest-crossover-office-pro-bin-4.2 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCkgYR2G5bA0cA/ScRAgg3AJ0cb5Unt8XFxxisZiWfFhHTzvt15QCZAXgP
-Vo2GV6UaEMOoATsu+FnCT58=
-=3wkb
------END PGP SIGNATURE-----
+MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
