@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.46.ebuild,v 1.2 2005/10/27 12:42:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.46a.ebuild,v 1.1 2005/10/28 17:22:27 ka0ttic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-gentoo.diff
 
 	epatch ${FILESDIR}/${PN}-0.45-makefile.diff
-	epatch ${FILESDIR}/${P}-add-missing-includes.diff
+	epatch ${FILESDIR}/${PN}-0.46-add-missing-includes.diff
 
 	sed -i 's:${head} -:${head} -n :' chkrootkit || die "sed chkrootkit failed"
 	sed -i 's:/var/adm:/var/log:g' chklastlog.c || die "sed chklastlog.c failed"

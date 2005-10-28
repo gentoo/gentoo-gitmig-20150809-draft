@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f2d3086d36be5cdddba201a4075d62a7 ChangeLog 10110
+MD5 fb5809356decdc02129eb7dbfaeca2b0 ChangeLog 10284
 MD5 10e3c20015120e6380904475d127c3f3 chkrootkit-0.44-r1.ebuild 1591
 MD5 b889e1ad878a53a563e5be3ae4607b90 chkrootkit-0.45.ebuild 1513
-MD5 e340fcde29e785c856855bea30444f10 chkrootkit-0.46.ebuild 1840
+MD5 d4490d93d215197454e18661f4f62554 chkrootkit-0.46a.ebuild 1847
 MD5 99d10c59971b4836291ff235c6f480a6 files/chkrootkit-0.44-coreutils-static-falsepositive.patch 793
 MD5 c67831eb3ec73b91c86f9f686b0e176b files/chkrootkit-0.45-makefile.diff 1866
 MD5 c9af76526f66b71c6f9a92582b470969 files/chkrootkit-0.46-add-missing-includes.diff 769
 MD5 bb6a980a762d72e1928231eabf4a9304 files/chkrootkit.cron 78
 MD5 1f4cc273611ca05137d997b8d4bad9de files/digest-chkrootkit-0.44-r1 140
 MD5 ed6966a6a37372ee449f7dd995a4e0bb files/digest-chkrootkit-0.45 140
-MD5 7ef1be73b16a5e26960d1380252cc98d files/digest-chkrootkit-0.46 140
+MD5 7fd8fef5e617c26af637338a3f1fdfbe files/digest-chkrootkit-0.46a 141
 MD5 7460fdec86596dcf99c66fbb167712af metadata.xml 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYMs9EZCkKN40op4RAs3/AJwNyQu8QdP1vaFuR/pfc2Efs9t0owCcDjvM
-nWyefMY2sPCzwM1VyxLxJM8=
-=kelm
+iD8DBQFDYl5nEZCkKN40op4RApUQAKCAOLc4DzW8R+JwpaaflSfSCAL4LgCfdaLg
+gUy68+wA84jt6kdEoY656Lk=
+=fAx0
 -----END PGP SIGNATURE-----
