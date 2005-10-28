@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.6 2005/10/25 18:56:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.7 2005/10/28 14:34:38 wolf31o2 Exp $
+
+  28 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  eternal-lands-1.0.1.ebuild, eternal-lands-1.1.2.ebuild:
+  Since this won't work with the newer openal, I need to make it a blocker.
+  Closing bug #110709.
 
   25 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   eternal-lands-1.0.1.ebuild, eternal-lands-1.1.2.ebuild:
