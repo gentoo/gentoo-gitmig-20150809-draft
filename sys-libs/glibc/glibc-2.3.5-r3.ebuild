@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.2 2005/10/27 20:45:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.3 2005/10/28 01:10:31 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -103,7 +103,7 @@ LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
 #	PATCH_GLIBC_VER
 #			This should be set to the version of the gentoo patch tarball.
 #			The resulting filename of this tarball will be:
-#			${PN}-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+#			glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 #
 #	GLIBC_MANPAGE_VERSION
 #	GLIBC_INFOPAGE_VERSION
@@ -117,31 +117,31 @@ LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
 get_glibc_src_uri() {
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-"mirror://gentoo"}
 
-#	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-#	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-#	               http://ftp.gnu.org/gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
-	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-	               mirror://gnu/glibc/${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2"
+#	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${GLIBC_RELEASE_VER}.tar.bz2
+#	               http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+#	               http://ftp.gnu.org/gnu/glibc/glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2
+	GLIBC_SRC_URI="mirror://gnu/glibc/glibc-${GLIBC_RELEASE_VER}.tar.bz2
+	               mirror://gnu/glibc/glibc-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+	               mirror://gnu/glibc/glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2"
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2"
 	fi
 
 	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
 	fi
 
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2"
 	fi
 
 	if [[ -n ${CSTUBS_URI} ]] ; then
@@ -156,25 +156,25 @@ get_glibc_src_uri() {
 }
 
 SRC_URI=$(get_glibc_src_uri)
-S=${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}
+S=${WORKDIR}/glibc-${GLIBC_RELEASE_VER}
 
 ### EXPORTED FUNCTIONS ###
 toolchain-glibc_src_unpack() {
 	# Check NPTL support _before_ we unpack things to save some time
 	want_nptl && check_nptl_support
 
-	unpack ${PN}-${GLIBC_RELEASE_VER}.tar.bz2
+	unpack glibc-${GLIBC_RELEASE_VER}.tar.bz2
 
 	cd "${S}"
-	unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-	unpack ${PN}-libidn-${GLIBC_RELEASE_VER}.tar.bz2
+	unpack glibc-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
+	unpack glibc-libidn-${GLIBC_RELEASE_VER}.tar.bz2
 
 	[[ -n ${CSTUBS_TARBALL} ]] && unpack ${CSTUBS_TARBALL}
 	[[ -n ${FEDORA_TARBALL} ]] && unpack ${FEDORA_TARBALL}
 
 	if [[ -n ${PATCH_VER} ]] ; then
 		cd "${WORKDIR}"
-		unpack ${PN}-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
+		unpack glibc-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 	fi
 
 	# XXX: We should do the branchupdate, before extracting the manpages and
@@ -182,7 +182,7 @@ toolchain-glibc_src_unpack() {
 	# to them with branchupdate)
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		cd "${S}"
-		epatch "${DISTDIR}"/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		epatch "${DISTDIR}"/glibc-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 
 		# Snapshot date patch
 		einfo "Patching version to display snapshot date ..."
@@ -191,12 +191,12 @@ toolchain-glibc_src_unpack() {
 
 	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
 		cd "${WORKDIR}"
-		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+		unpack glibc-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		cd "${S}"
-		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+		unpack glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
