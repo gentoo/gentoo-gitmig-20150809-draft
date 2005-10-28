@@ -1,9 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.404 2005/10/27 20:45:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.405 2005/10/28 01:31:25 eradicator Exp $
 
   27 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> glibc-2.3.5-r3.ebuild:
   Added to ~ppc.
+
+  28 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.5-r3.ebuild:
+  Cleaned up setup_env, and fixed the usage of CFLAGS_<CTARGET>.
 
 *glibc-2.3.5-r3 (27 Oct 2005)
 

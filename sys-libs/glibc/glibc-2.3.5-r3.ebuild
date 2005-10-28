@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.3 2005/10/28 01:10:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.4 2005/10/28 01:31:25 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -987,22 +987,25 @@ setup_env() {
 		else
 			case ${CTARGET} in
 			mips64*) MULTILIB_ABIS=${MULTILIB_ABIS/o32} ;;
+			*)       MULTILIB_ABIS=${MULTILIB_ABIS:-${DEFAULT_ABI}} ;;
 			esac
 		fi
-	fi
 
-	export ABI=${ABI:-${DEFAULT_ABI:-default}}
+		# If the user has CFLAGS_<CTARGET> in their make.conf, use that,
+		# and fall back on CFLAGS.
+		local VAR=CFLAGS_${CTARGET//[-.]/_}
+		CFLAGS=${!VAR-${CFLAGS}}
+	fi
 
 	setup_flags
 
-	if is_crosscompile || tc-is-cross-compiler ; then
-		# We only install for this CTARGET on crosscompilers
-		MULTILIB_ABIS=${MULTILIB_ABIS:-${DEFAULT_ABI}}
+	export ABI=${ABI:-${DEFAULT_ABI:-default}}
 
+	if is_crosscompile || tc-is-cross-compiler ; then
+		local VAR=CFLAGS_${ABI}
 		# We need to export CFLAGS with abi information in them because
 		# glibc's configure script checks CFLAGS for some targets (like mips)
-		local VAR1=CFLAGS_${CTARGET//[-.]/_} VAR2=CFLAGS_${ABI}
-		export CFLAGS="${CFLAGS} ${!VAR1-${!VAR2--O2 -pipe}}"
+		export CFLAGS="${!VAR} ${CFLAGS}"
 	fi
 }
 
