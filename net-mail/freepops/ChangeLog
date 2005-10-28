@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.16 2005/08/19 19:52:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.17 2005/10/28 23:15:15 dragonheart Exp $
+
+*freepops-0.0.95 (28 Oct 2005)
+
+  28 Oct 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/freepops-0.0.95-srcmake.patch, +freepops-0.0.95.ebuild:
+  version bump
 
   19 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   freepops-0.0.31.ebuild:

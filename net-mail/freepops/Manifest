@@ -1,8 +1,21 @@
-MD5 21c9bd65b924f959e9ec675d33b6df27 metadata.xml 222
-MD5 6f0c9ab8babd9f09d69f1d197fc1f0cc freepops-0.0.27-r1.ebuild 1193
-MD5 34b01736e1d0b44967869522f096103d ChangeLog 2642
-MD5 98c599d235e47a75f8ddee78c4ec2b83 freepops-0.0.31.ebuild 1190
-MD5 787d8c0e312170927dde02eadb05f199 files/digest-freepops-0.0.31 68
-MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.31-srcmake.patch 466
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a7a2bde0a65826dd5cfdab67483caaa8 ChangeLog 2813
 MD5 d7ca204372719b1d3fa4aca59cf9a442 files/digest-freepops-0.0.27-r1 68
+MD5 787d8c0e312170927dde02eadb05f199 files/digest-freepops-0.0.31 68
+MD5 cc59d60c97a67dab4adc6379cd88c6cc files/digest-freepops-0.0.95 68
 MD5 87de47c4792aa1687b9d521a4e4c313a files/freepops-0.0.27-initd.patch 634
+MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.31-srcmake.patch 466
+MD5 21057de46bc1ad28a002f98771043d47 files/freepops-0.0.95-srcmake.patch 466
+MD5 6f0c9ab8babd9f09d69f1d197fc1f0cc freepops-0.0.27-r1.ebuild 1193
+MD5 98c599d235e47a75f8ddee78c4ec2b83 freepops-0.0.31.ebuild 1190
+MD5 1a8363d9df6cb6f3dd72da2d5b31ffbf freepops-0.0.95.ebuild 1192
+MD5 c5cea2c71a3038980c2975d684e9e1fb metadata.xml 288
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDYrEXmdTrptrqvGERAsV+AKCUHAF9xNHt+v2v5LKfkV/ZAY9/ywCZAdT7
+FVM2C5qYwirE1DtBdq6XTJI=
+=0NKH
+-----END PGP SIGNATURE-----
