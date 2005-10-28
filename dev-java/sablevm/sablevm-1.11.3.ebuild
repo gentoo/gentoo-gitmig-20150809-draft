@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.11.3.ebuild,v 1.6 2005/10/17 21:18:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.11.3.ebuild,v 1.7 2005/10/28 16:57:54 axxo Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="A robust, clean, extremely portable, efficient, and specification-compliant Java virtual machine."
 HOMEPAGE="http://sablevm.org/"
@@ -19,12 +21,19 @@ DEPEND=">=dev-libs/libffi-1.20
 	>=dev-libs/popt-1.7
 	>=dev-java/jikes-1.19
 	gtk? (
-		=x11-libs/gtk+-2.6*
+		>=x11-libs/gtk+-2.4
 		>=media-libs/libart_lgpl-2.1
 	)"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
+
+src_unpack() {
+	unpack ${A}
+	cd ${WORKDIR}/sablevm-classpath-${PV}
+	epatch ${FILESDIR}/gtk28.patch
+	eautoconf
+}
 
 src_compile() {
 	export LDFLAGS="$LDFLAGS -L/usr/lib/libffi" CPPFLAGS="$CPPFLAGS	-I/usr/include/libffi"
