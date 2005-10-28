@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.31 2005/10/27 20:21:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.32 2005/10/28 07:22:41 halcy0n Exp $
+
+  28 Oct 2005; Mark Loeser <halcy0n@gentoo.org> xli-1.17.0-r2.ebuild:
+  Stable on x86; bug #108365
 
   27 Oct 2005; Simon Stelling <blubb@gentoo.org> xli-1.17.0-r2.ebuild:
   stable on amd64 wrt bug 108365
