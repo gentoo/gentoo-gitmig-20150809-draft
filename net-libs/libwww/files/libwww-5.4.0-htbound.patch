@@ -1,15 +1,6 @@
 diff -NurdB w3c-libwww-5.4.0/Library/src/HTBound.c w3c-libwww-5.4.0-patched/Library/src/HTBound.c
 --- w3c-libwww-5.4.0/Library/src/HTBound.c	1999-02-22 17:10:10.000000000 -0500
 +++ w3c-libwww-5.4.0-patched/Library/src/HTBound.c	2005-10-27 08:23:47.000000000 -0500
-@@ -3,7 +3,7 @@
- **
- **	(c) COPYRIGHT MIT 1995.
- **	Please first read the full copyright statement in the file COPYRIGH.
--**	@(#) $Id: libwww-5.4.0-htbound.patch,v 1.1 2005/10/27 23:31:46 leonardop Exp $
-+**	@(#) HTBound.c,v 1.2 2005/06/06 15:22:10 mrsam Exp
- **
- **	This stream parses a MIME multipart stream and builds a set of new
- **	streams via the stream stack each time we encounter a boundary start.
 @@ -11,9 +11,12 @@
  **
  ** Authors
