@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 041f6862bec0efa0c82f18c66a866169 ChangeLog 617
 MD5 0beae7b52d1e4edc0efc5bd00d5dca1d files/digest-pyxattr-0.2 61
 MD5 6ba61fa77894059355155874b2416967 pyxattr-0.2.ebuild 505
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDYcRYCRZPokWLroQRApHOAJwPap2Vccon1FuDX64Ekiend+KIbACfdjtz
+DUuNl+yCJRswcR3dJP7KAHc=
+=LECO
+-----END PGP SIGNATURE-----
