@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.101.ebuild,v 1.1 2005/10/23 08:12:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.101.ebuild,v 1.2 2005/10/28 17:55:03 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -55,6 +55,8 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-keyboard.patch" #Bug #110671
 
 	case ${ARCH} in
 		x86)	mycpu="i386";;
