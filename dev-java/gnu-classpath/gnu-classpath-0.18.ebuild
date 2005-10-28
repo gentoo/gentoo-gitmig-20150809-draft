@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.18.ebuild,v 1.5 2005/10/28 16:31:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.18.ebuild,v 1.6 2005/10/28 16:32:06 axxo Exp $
 
 inherit eutils autotools
 
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
 IUSE="examples gtk xml2"
 
 #cairo? ( >=x11-libs/cairo-0.5.0 )
-RDEPEND="gtk? ( >=x11-libs/gtk+-2.6*
+RDEPEND="gtk? ( >=x11-libs/gtk+-2.4
 				>=dev-libs/glib-2.0 )
 		 xml2? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
