@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1.ebuild,v 1.1 2005/10/19 20:30:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc1-r1.ebuild,v 1.1 2005/10/28 00:52:37 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="Utility to configure the active toolchain compiler"
 HOMEPAGE="http://www.gentoo.org/"
@@ -41,6 +43,12 @@ pkg_postinst() {
 
 	ewarn "Thanks for beta testing eselect-compiler.  If you have any problems,"
 	ewarn "please contact eradicator@gentoo.org."
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-inherit.patch
 }
 
 src_install() {
