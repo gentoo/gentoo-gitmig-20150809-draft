@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.0_p2.ebuild,v 1.1 2005/10/23 16:52:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/libherdstat-0.1.0_p2.ebuild,v 1.2 2005/10/28 08:26:41 ka0ttic Exp $
 
 TEST_DATA_PV="20051023"
 TEST_DATA_P="${PN/lib/}-test-data-${TEST_DATA_PV}"
@@ -9,7 +9,6 @@ DESCRIPTION="C++ library offering interfaces for portage-related things such as 
 HOMEPAGE="http://developer.berlios.de/projects/libherdstat/"
 SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2
 	test? ( http://download.berlios.de/${PN}/${TEST_DATA_P}.tar.bz2 )"
-RESTRICT="primaryuri"
 
 LICENSE="GPL-2"
 SLOT="0"
