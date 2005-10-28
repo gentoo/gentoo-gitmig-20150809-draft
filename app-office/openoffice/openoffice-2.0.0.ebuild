@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.12 2005/10/26 20:32:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.0.ebuild,v 1.13 2005/10/28 05:31:45 suka Exp $
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
@@ -125,7 +125,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Additional and new patches get here
-	cp -pPRf ${FILESDIR}/${PV}/build-beanshell-fix.diff ${PATCHDIR}/patches/src680 || die
+	cp -pPRf ${FILESDIR}/${PV}/nojava-fix-stringparam.diff ${PATCHDIR}/patches/src680 || die
+	cp -pPRf ${FILESDIR}/${PV}/buildfix-new-xslt.diff ${PATCHDIR}/patches/src680 || die
 
 	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
@@ -212,12 +213,6 @@ src_install() {
 	insinto /usr/share/fonts/TTF/
 	doins ${PATCHDIR}/fonts/*.ttf
 
-	# Temporary, hacky fix for the filetype problem without java
-	if use !java; then
-		for i in ${LINGUAS_OOO}; do
-			cp -pPRf ${FILESDIR}/${PV}/Filter.xcu ${D}/usr/lib/openoffice/share/registry/res/${i}/org/openoffice/TypeDetection/ || die
-		done
-	fi
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.148 2005/10/26 20:32:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.149 2005/10/28 05:31:45 suka Exp $
+
+  28 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  files/2.0.0/gentoo-2.0.0.diff, -files/2.0.0/Filter.xcu,
+  -files/2.0.0/build-beanshell-fix.diff,
+  +files/2.0.0/buildfix-new-xslt.diff,
+  +files/2.0.0/nojava-fix-stringparam.diff, openoffice-2.0.0.ebuild:
+  Implement a proper solution for the --without-java issue
 
   26 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   files/2.0.0/gentoo-2.0.0.diff, openoffice-2.0.0.ebuild:
