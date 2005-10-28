@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.10.2.ebuild,v 1.12 2005/10/17 13:07:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.10.2.ebuild,v 1.13 2005/10/28 17:21:28 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -40,7 +40,8 @@ RDEPEND=">=x11-libs/gtk+-2.4
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/intltool"
+	dev-util/intltool
+	dev-util/desktop-file-utils"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
