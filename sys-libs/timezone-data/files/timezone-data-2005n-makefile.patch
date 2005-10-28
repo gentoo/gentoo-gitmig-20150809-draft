@@ -6,6 +6,7 @@
  - Move zic zdump to sbin and tzselect to bin ala glibc
  - Install posix zoneinfo into zoneinfo/posix/ instead of zoneinfo-posix/ ala glibc
  - Install leaps zoneinfo into zoneinfo/right/ ala glibc
+ - Disable broken web test
 
 --- Makefile
 +++ Makefile
@@ -90,3 +91,10 @@
 +			-d $(TZDIR)/right -L leapseconds $(TDATA)
  
  posix_right:	posix_only other_two
+@@ -366,5 +366,5 @@
+ 		chmod +x $@
+ 
+-check:		check_tables check_web
++check:		check_tables
+ 
+ check_tables:	checktab.awk $(PRIMARY_YDATA)
