@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4624 2005/10/27 12:40:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4625 2005/10/28 14:51:45 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1778,7 +1778,3 @@ dev-db/mysqltool
 # Security issues, and unmaintained upstream
 # <dang@gentoo.org> (18 Aug 2005)
 app-admin/gwcc
-
-# Masking gamin for bug #109642 until someone can verify it works.
-# <dang@gentoo.org> (25 Oct 2005)
->=app-admin/gamin-0.1.6-r1
