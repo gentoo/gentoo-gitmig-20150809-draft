@@ -1,3 +1,7 @@
+DirectFB peeps changed their API again:
+
+http://www.directfb.org/index.php/viewcvs.cgi/DirectFB/include/directfb.h.diff?r1=1.266&r2=1.267
+
 --- src/video/directfb/SDL_DirectFB_video.c
 +++ src/video/directfb/SDL_DirectFB_video.c
 @@ -376,7 +376,11 @@ int DirectFB_VideoInit(_THIS, SDL_PixelF
