@@ -1,4 +1,16 @@
-MD5 8ecfbe60648a08fb336bb5684947b30f ChangeLog 1854
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 14497e58ec61ae5273418cab764219ad ChangeLog 1985
 MD5 c832ca611a1304a28ca98ca7c15b6af7 cl-kmrcl-1.82.ebuild 760
-MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 520f1f95fafb0deb4cd14ff9f6931bcb cl-kmrcl-1.84.ebuild 764
 MD5 e7873ad69605986eebbca523a017508a files/digest-cl-kmrcl-1.82 61
+MD5 3087b0242d22113b01f3fa3df303e431 files/digest-cl-kmrcl-1.84 61
+MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDYkNtyiNZaEAZA+ARAnh+AJ40ePGSiRUSDoietuvy+OzvSDoUEgCdF+Oq
+0STyYblbJHSzjy3R6dRQCX4=
+=g7tE
+-----END PGP SIGNATURE-----
