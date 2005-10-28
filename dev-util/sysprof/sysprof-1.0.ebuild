@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.ebuild,v 1.1 2005/10/05 08:06:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.ebuild,v 1.2 2005/10/28 00:07:54 vapier Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.0"
+DEPEND=">=x11-libs/gtk+-2.6"
 
 pkg_setup() {
 	MODULE_NAMES="sysprof-module(misc:${S}/module)"

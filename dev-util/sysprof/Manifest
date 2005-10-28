@@ -5,11 +5,11 @@ MD5 0697ddab41c19eed32f4535106422a0b ChangeLog 469
 MD5 adee278e0e445f2badb640ef691c2caf files/digest-sysprof-0.91 64
 MD5 5fec4f12ce04d543378e727bb656b667 files/digest-sysprof-1.0 63
 MD5 daf49bff783b56d005079fd65a2bf10d sysprof-0.91.ebuild 974
-MD5 45239709693c161e5a356d2ea1b9cb3a sysprof-1.0.ebuild 984
+MD5 21681e9f1f0fed0cca56543e5cdab098 sysprof-1.0.ebuild 980
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDQ4mHOpjtAl+gMRURAssTAKCn0jrQXEC4siEVzXBv24W2ph78agCdGV78
-ExGuMOzbGFqPK4t27c1dqOY=
-=wQ+j
+iD8DBQFDYWvpgIKl8Uu19MoRAgQpAJ4zTP2orqKthtwWcCWkFPsj2ShC4gCbBp9q
+V8gwqw6keyvN9oBSRuVAQ6I=
+=WxZW
 -----END PGP SIGNATURE-----
