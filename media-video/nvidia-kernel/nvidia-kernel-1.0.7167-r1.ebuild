@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7167-r1.ebuild,v 1.2 2005/05/22 15:40:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.7167-r1.ebuild,v 1.3 2005/10/28 07:19:45 eradicator Exp $
 
 inherit eutils linux-mod
 
@@ -31,6 +31,7 @@ KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="nostrip"
 IUSE=""
 
+RDEPEND="virtual/modutils"
 DEPEND="virtual/linux-sources"
 export _POSIX2_VERSION="199209"
 
