@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7.2.ebuild,v 1.6 2005/03/30 16:46:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.7.2.ebuild,v 1.7 2005/10/28 00:14:16 vapier Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -35,8 +35,8 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/enlightenment
-	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README
+	doexe "${FILESDIR}"/enlightenment
+	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README*
 }
