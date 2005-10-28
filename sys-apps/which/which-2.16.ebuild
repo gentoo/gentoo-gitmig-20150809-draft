@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.16.ebuild,v 1.18 2005/05/22 01:59:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.16.ebuild,v 1.19 2005/10/28 23:11:36 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="sys-apps/texinfo"
+DEPEND="sys-apps/texinfo"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -22,8 +23,6 @@ src_unpack() {
 }
 
 src_install() {
-	dobin which || die
-	doman which.1
-	doinfo which.info
+	make install DESTDIR="${D}" || die
 	dodoc AUTHORS EXAMPLES NEWS README*
 }
