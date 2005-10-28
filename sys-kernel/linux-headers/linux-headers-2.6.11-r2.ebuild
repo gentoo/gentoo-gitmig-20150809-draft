@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r2.ebuild,v 1.17 2005/09/29 14:38:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.11-r2.ebuild,v 1.18 2005/10/28 06:00:32 dostrow Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm hppa m68k ia64 ppc ppc64 s390 sh sparc x86"
@@ -36,4 +36,10 @@ src_unpack() {
 	mv iSeries asm-ppc64/
 	headers___fix asm-ppc64/iSeries/*
 	headers___fix linux/{ethtool,jiffies}.h
+
+	# Apply patch for spinlick.h only with 32bit userland on ppc64.
+	# Will add to the main patchball when plasmaroo returns.
+	if use ppc && [[ ${PROFILE_ARCH} == "ppc64" ]]; then
+		epatch ${FILESDIR}/2.6.11-ppc64-32ul-spinlock.patch
+	fi
 }
