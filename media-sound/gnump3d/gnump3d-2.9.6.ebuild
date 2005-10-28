@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.4.ebuild,v 1.4 2005/08/24 16:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.6.ebuild,v 1.1 2005/10/28 15:49:18 eradicator Exp $
 
 inherit eutils
 
@@ -16,14 +16,14 @@ IUSE=""
 DEPEND="sys-apps/sed"
 RDEPEND=">=dev-lang/perl-5.8.0"
 
-LIBDIR=/usr/$(get_libdir)/gnump3d
-
 pkg_setup() {
 	enewuser gnump3d '' '' '' nogroup || die "couldnt add new user"
+	LIBDIR=/usr/$(get_libdir)/gnump3d
 }
 
 src_unpack() {
 	unpack ${A}
+
 	cd ${S}/bin
 	for binary in gnump3d-index gnump3d-top gnump3d2; do
 		sed -i "s,/usr/bin/perl,/usr/bin/perl -I${LIBDIR},g" $binary
