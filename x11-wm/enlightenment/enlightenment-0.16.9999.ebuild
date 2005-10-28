@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.11 2005/10/28 00:14:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.12 2005/10/28 23:01:05 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
@@ -26,7 +26,7 @@ S=${WORKDIR}/e16/e
 
 src_unpack() {
 	cvs_src_unpack
-	cd ${S}
+	cd "${S}"
 	NOCONFIGURE=blah ./autogen.sh
 }
 
@@ -50,7 +50,7 @@ src_install() {
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/enlightenment
 
-	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README*
+	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README* docs/README*
 
 	# fix default xcursor support
 	cd "${D}"/usr/share/enlightenment/themes
