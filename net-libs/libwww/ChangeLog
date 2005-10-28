@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.40 2005/10/28 15:24:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.41 2005/10/28 16:36:28 blubb Exp $
+
+  28 Oct 2005; Simon Stelling <blubb@gentoo.org> libwww-5.4.0-r4.ebuild:
+  stable on amd64 wrt bug 109040
 
   28 Oct 2005; Fabian Groffen <grobian@gentoo.org> libwww-5.4.0-r4.ebuild:
   Reverting elibtoolize change, and back to ppc-macos conditional on request of
