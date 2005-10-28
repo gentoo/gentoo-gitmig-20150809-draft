@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.6 2005/10/22 20:39:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.7 2005/10/28 08:58:19 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -155,11 +155,23 @@ vdr-plugin_install_source_tree() {
 }
 
 vdr-plugin_src_compile() {
-	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_copy_source_tree
+	[ -z "$1" ] && vdr-plugin_src_compile prepare compile
 
-	cd ${S}
+	while [ "$1" ]; do
 
-	emake ${VDRPLUGIN_MAKE_TARGET:-all} || die "emake failed"
+		case "$1" in
+		prepare)
+			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_copy_source_tree
+			;;
+		compile)
+			cd ${S}
+
+			emake ${VDRPLUGIN_MAKE_TARGET:-all} || die "emake failed"
+			;;
+		esac
+
+		shift
+	done
 }
 
 vdr-plugin_src_install() {
