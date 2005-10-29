@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/yate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/ChangeLog,v 1.8 2005/09/23 00:04:39 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yate/ChangeLog,v 1.9 2005/10/29 15:55:35 stkn Exp $
+
+*yate-0.9.0_pre2 (29 Oct 2005)
+
+  29 Oct 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/yate-0.9.0-gtk2.diff, +yate-0.9.0_pre2.ebuild:
+  Version bump.
 
   23 Sep 2005; Stefan Knoblich <stkn@gentoo.org> yate-0.9.0_pre1.ebuild:
   gtk2 -> gtk use-flag change for bug #106560 and small cleanup.
