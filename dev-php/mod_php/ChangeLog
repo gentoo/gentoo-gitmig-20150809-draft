@@ -1,6 +1,24 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.278 2005/10/07 18:28:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.279 2005/10/29 22:16:12 chtekk Exp $
+
+*mod_php-4.4.0-r5 (29 Oct 2005)
+*mod_php-4.4.0-r4 (29 Oct 2005)
+
+  29 Oct 2005; Luca Longinotti <chtekk@gentoo.org>
+  +files/php4.3.11-fopen_wrappers.patch,
+  +files/php4.3.11-gd_safe_mode.patch,
+  +files/php4.3.11-pspell-ext-segf.patch,
+  +files/php4.3.11-session_save_path-segf.patch,
+  +files/php4.4.0-fopen_wrappers.patch, +files/php4.4.0-gd_safe_mode.patch,
+  +files/php4.4.0-pspell-ext-segf.patch,
+  +files/php4.4.0-session_save_path-segf.patch, -files/stdint.diff,
+  -files/with-iodbc.diff, mod_php-4.3.11.ebuild, mod_php-4.3.11-r1.ebuild,
+  +mod_php-4.3.11-r2.ebuild, mod_php-4.4.0.ebuild, mod_php-4.4.0-r1.ebuild,
+  mod_php-4.4.0-r2.ebuild, mod_php-4.4.0-r3.ebuild,
+  +mod_php-4.4.0-r4.ebuild, +mod_php-4.4.0-r5.ebuild:
+  Old-style PHP update: change URI of a mirror, remove two unused patches and
+  fix bugs #99312, #109669, #102943, #107602, #109482.
 
   07 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mod_php-4.4.0-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.11-r1.ebuild,v 1.17 2005/10/01 09:15:46 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.11-r1.ebuild,v 1.18 2005/10/29 22:16:12 chtekk Exp $
 
 IUSE="apache2"
 
@@ -71,7 +71,7 @@ PDEPEND=">=${PHP_PROVIDER_PKG}-4.3.11"
 PROVIDE="${PROVIDE} virtual/httpd-php"
 
 # fixed PCRE library for security issues, bug #102373
-SRC_URI="${SRC_URI} http://dl.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 # Add a 'return 0' as we DON'T want the return code checked
 pkg_setup() {
@@ -202,7 +202,7 @@ pkg_postinst() {
 		apache2msg
 	else
 		einfo "1. Execute the command:"
-		einfo " \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+		einfo " \"emerge --config =${PF}\""
 		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\" to APACHE_OPTS"
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."

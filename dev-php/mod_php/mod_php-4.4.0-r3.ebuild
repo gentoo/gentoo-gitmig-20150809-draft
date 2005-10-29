@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0-r3.ebuild,v 1.12 2005/10/09 06:44:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0-r3.ebuild,v 1.13 2005/10/29 22:16:12 chtekk Exp $
 
 IUSE="apache2"
 
@@ -70,7 +70,7 @@ PDEPEND=">=${PHP_PROVIDER_PKG}-4.4.0"
 PROVIDE="${PROVIDE} virtual/httpd-php"
 
 # fixed PCRE library for security issues, bug #102373
-SRC_URI="${SRC_URI} http://dl.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 # generalize some apache{,2} vars (defined by apache-module.eclass)
 if [ -n ${USE_APACHE2} ]; then

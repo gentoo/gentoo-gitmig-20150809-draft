@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11-r1.ebuild,v 1.6 2005/09/27 02:47:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11-r1.ebuild,v 1.7 2005/10/29 22:16:13 chtekk Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
@@ -11,32 +11,32 @@ KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86"
 IUSE=""
 
 # fixed PCRE library for security issues, bug #102373
-SRC_URI="${SRC_URI} http://dl.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 src_unpack() {
 	php-sapi_src_unpack
-	[ "${ARCH}" == "amd64" ] && epatch ${FILESDIR}/php-4.3.4-amd64hack.diff
+	[ "${ARCH}" == "amd64" ] && epatch "${FILESDIR}/php-4.3.4-amd64hack.diff"
 
 	# Bug 88756
-	use flash && epatch ${FILESDIR}/php-4.3.11-flash.patch
+	use flash && epatch "${FILESDIR}/php-4.3.11-flash.patch"
 
 	# Bug 88795
-	use gmp && epatch ${FILESDIR}/php-4.3.11-gmp.patch
+	use gmp && epatch "${FILESDIR}/php-4.3.11-gmp.patch"
 
 	# fix imap symlink creation, bug #105351
-	use imap && epatch ${FILESDIR}/php4.3.11-imap-symlink.diff
+	use imap && epatch "${FILESDIR}/php4.3.11-imap-symlink.diff"
 
 	# we need to unpack the files here, the eclass doesn't handle this
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	unpack php-pcrelib-new-secpatch.tar.bz2
-	cd ${S}
+	cd "${S}"
 
 	# patch to fix PCRE library security issues, bug #102373
-	epatch ${FILESDIR}/php4.3.11-pcre-security.patch
+	epatch "${FILESDIR}/php4.3.11-pcre-security.patch"
 
 	# sobstitute the bundled PCRE library with a fixed version for bug #102373
 	einfo "Updating bundled PCRE library"
-	rm -rf ${S}/ext/pcre/pcrelib && mv -f ${WORKDIR}/pcrelib-new ${S}/ext/pcre/pcrelib || die "Unable to update the bundled PCRE library"
+	rm -rf "${S}/ext/pcre/pcrelib" && mv -f "${WORKDIR}/pcrelib-new" "${S}/ext/pcre/pcrelib" || die "Unable to update the bundled PCRE library"
 }
 
 src_compile() {

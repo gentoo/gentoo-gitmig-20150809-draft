@@ -1,6 +1,23 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.101 2005/10/02 14:02:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.102 2005/10/29 22:16:13 chtekk Exp $
+
+*php-cgi-4.4.0-r3 (29 Oct 2005)
+*php-cgi-4.3.11-r3 (29 Oct 2005)
+
+  29 Oct 2005; Luca Longinotti <chtekk@gentoo.org>
+  +files/php4.3.11-gd_safe_mode.patch,
+  +files/php4.3.11-pspell-ext-segf.patch,
+  +files/php4.3.11-session_save_path-segf.patch,
+  +files/php4.4.0-fopen_wrappers.patch, +files/php4.4.0-gd_safe_mode.patch,
+  +files/php4.4.0-pspell-ext-segf.patch,
+  +files/php4.3.11-fopen_wrappers.patch,
+  +files/php4.4.0-session_save_path-segf.patch, -files/stdint.diff,
+  php-cgi-4.3.11-r1.ebuild, php-cgi-4.3.11-r2.ebuild,
+  +php-cgi-4.3.11-r3.ebuild, php-cgi-4.4.0.ebuild, php-cgi-4.4.0-r1.ebuild,
+  php-cgi-4.4.0-r2.ebuild, +php-cgi-4.4.0-r3.ebuild:
+  Old-style PHP update: fix quotation of some vars, change URI of a mirror,
+  remove an unused patch and fix bugs #99312, #109669, #102943, #107602.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> php-cgi-4.4.0-r2.ebuild:
   Mark 4.4.0-r2 stable on ia64
