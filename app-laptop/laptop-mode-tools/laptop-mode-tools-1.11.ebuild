@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.11.ebuild,v 1.1 2005/10/29 19:00:42 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.11.ebuild,v 1.2 2005/10/29 19:31:03 brix Exp $
 
-inherit linux-info
+inherit fixheadtails linux-info
 
 MY_P=${PN}_${PV}
 
@@ -33,6 +33,12 @@ pkg_setup() {
 		eerror/eti
 		die "${P} requires kernel version 2.4.23 or newer"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	ht_fix_file ${S}/usr/sbin/lm-profiler
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.18 2005/10/29 19:00:42 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.19 2005/10/29 19:31:03 brix Exp $
+
+  29 Oct 2005; Henrik Brix Andersen <brix@gentoo.org>
+  laptop-mode-tools-1.11.ebuild:
+  Fix head -1 issue with lm-profiler.
 
 *laptop-mode-tools-1.11 (29 Oct 2005)
 
