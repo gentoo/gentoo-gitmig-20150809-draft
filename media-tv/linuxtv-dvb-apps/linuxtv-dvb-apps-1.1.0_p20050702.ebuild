@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0_p20050702.ebuild,v 1.4 2005/10/29 19:24:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.0_p20050702.ebuild,v 1.5 2005/10/29 19:44:29 zzam Exp $
 
 
 inherit eutils
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 x86"
 S=${WORKDIR}/${MY_P}
 
 DEPEND="usb? ( >=dev-libs/libusb-0.1.10a )"
+RDEPEND="${DEPEND}"
 
 src_unpack()
 {
@@ -43,6 +44,9 @@ src_compile()
 
 src_install()
 {
+	# interferes with variable in Makefile
+	unset ARCH
+
 	emake bindir=/usr/bin datadir=/usr/share libdir=/usr/lib DESTDIR=${D} INSTDIR=${T} install || die "install failed"
 
 	dodoc README TODO INSTALL
