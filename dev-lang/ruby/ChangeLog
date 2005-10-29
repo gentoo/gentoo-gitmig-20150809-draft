@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.165 2005/10/08 15:02:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.166 2005/10/29 02:36:27 usata Exp $
+
+  29 Oct 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.3.ebuild:
+  Added cjk USE flag back. This closes bug #106293.
 
   08 Oct 2005; Fabian Groffen <grobian@gentoo.org> ruby-1.8.2.ebuild:
   Dropping ppc-macos keyword to ~ppc-macos for bug #106996
