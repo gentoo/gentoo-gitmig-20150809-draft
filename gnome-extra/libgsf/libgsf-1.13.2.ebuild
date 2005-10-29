@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.13.2.ebuild,v 1.2 2005/10/29 06:03:11 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.13.2.ebuild,v 1.3 2005/10/29 22:38:41 joem Exp $
 
 inherit eutils gnome2
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
 
 G2CONF="${G2CONF} $(use_with bzip2 bz2) $(use_with gnome) $(use_enable static)"
-USE_DESTRIR="1"
+USE_DESTDIR="1"
 
 src_install() {
 	gnome2_src_install
