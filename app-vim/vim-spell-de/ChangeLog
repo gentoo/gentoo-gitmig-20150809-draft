@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-de
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.2 2005/10/08 10:59:02 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.3 2005/10/29 12:16:54 slarti Exp $
+
+  29 Oct 2005; Tom Martin <slarti@gentoo.org> vim-spell-de-20051008.ebuild:
+  Marked ~amd64.
 
 *vim-spell-de-20051008 (08 Oct 2005)
 
