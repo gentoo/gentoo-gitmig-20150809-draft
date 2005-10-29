@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.6 2005/09/13 11:06:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.7 2005/10/29 19:24:48 zzam Exp $
+
+  29 Oct 2005; Matthias Schwarzott <zzam@gentoo.org> metadata.xml,
+  linuxtv-dvb-apps-1.1.0_p20050702.ebuild:
+  changed DEPEND to >=dev-libs/libusb-0.1.10a, see bug #110524,
+  added herd media-tv to metadata
 
   13 Sep 2005; Matthias Schwarzott <zzam@gentoo.org>
   linuxtv-dvb-apps-1.1.0_p20050702.ebuild:
