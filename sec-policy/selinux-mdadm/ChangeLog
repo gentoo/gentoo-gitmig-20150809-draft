@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-mdadm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.1 2005/10/29 02:48:55 spb Exp $
+
+*selinux-mdadm-20051029 (29 Oct 2005)
+
+  29 Oct 2005; Stephen Bennett <spb@gentoo.org> +metadata.xml,
+  +selinux-mdadm-20051029.ebuild:
+  Initial commit.
+
