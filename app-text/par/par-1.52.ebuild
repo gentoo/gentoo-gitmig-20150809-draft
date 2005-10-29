@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/par-1.52.ebuild,v 1.7 2005/01/01 16:29:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/par-1.52.ebuild,v 1.8 2005/10/29 13:13:25 grobian Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.nicemice.net/par/${MY_P/./}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc-macos ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"

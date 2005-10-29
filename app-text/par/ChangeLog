@@ -1,6 +1,9 @@
 # ChangeLog for app-text/par
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.8 2005/01/01 16:29:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.9 2005/10/29 13:13:25 grobian Exp $
+
+  29 Oct 2005; Fabian Groffen <grobian@gentoo.org> par-1.52.ebuild:
+  Marked ~ppc-macos (bug #109427)
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> par-1.52.ebuild:
   Added amd64 keyword, closing #63600.
