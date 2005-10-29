@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>x86-kernel</herd>
+  <herd>kernel</herd>
   <maintainer>
     <email>kernel@gentoo.org</email>
     <name>kernel team</name>
