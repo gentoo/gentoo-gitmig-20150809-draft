@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e7b1c02135f5f2a316846dd8d5526a7c ChangeLog 1134
-MD5 83e3db15f16af9c258c6c6ef25ca2fd2 gccxml-0.6.0.ebuild 810
-MD5 d698342d42579c976d124866016978c1 metadata.xml 228
-MD5 c79d320ec210d61db57c6594771b1917 gccxml-0.6.0-r1.ebuild 865
+MD5 18f06ac378eb2b2d137992fc07b2492d ChangeLog 1222
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0-r1 65
 MD5 792c797769c6059ef2f9ebd6ce4b2e65 files/obstack.h.diff 3852
+MD5 c79d320ec210d61db57c6594771b1917 gccxml-0.6.0-r1.ebuild 865
+MD5 a8b450d46ca0ff085af0238d32d858a6 gccxml-0.6.0.ebuild 810
+MD5 d698342d42579c976d124866016978c1 metadata.xml 228
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYwIb/aM9DdBw91cRAmctAKCSNP91ajHen5vliwvkx6I/f65tXQCeM/uz
-FrNF1jzucBXmMyQBrv1w/zA=
-=1j99
+iD8DBQFDYxTdCRZPokWLroQRAhewAJ9DxbbNH1djh/QR/VDN4pPpG1Kt4wCeJf3c
+Ock0A3C3nE9v1kr/k+A9jrw=
+=GqvC
 -----END PGP SIGNATURE-----
