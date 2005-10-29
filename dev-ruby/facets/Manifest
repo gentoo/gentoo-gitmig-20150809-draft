@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 a5844bae1892e6b43005bcbf98ff5d72 facets-0.7.2.ebuild 763
+MD5 1c7a336a4d1a57b368f01a7326b60d6e facets-20051030.ebuild 608
 MD5 62d5d2c9cb9e4df1b5afd78cec8c8bee facets-0.6.3.ebuild 525
-MD5 6678b74baba5c3625e88b1b62e90ed05 ChangeLog 801
+MD5 38649a8420cd308dd568ad57cd991938 ChangeLog 960
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 ac4c714a39330ad298454f8742a12f4d files/digest-facets-20051030 66
 MD5 40fb0b9f093ec0e46fa02ab0fb0de1c7 files/digest-facets-0.6.3 61
 MD5 8ab4cf53fb7b00799a0abf2d1de8737a files/digest-facets-0.7.2 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDR8ZoZgSmR+etHJoRAlWxAJ91IKijSnCEdbefS/azDdnGS1bLMACglgZ2
-93smCBlGXu132qoLueg71p4=
-=ZR6T
+iD8DBQFDY1WaZgSmR+etHJoRArn6AKCqn57EN8d7ySZlkmH49KP0fIcqegCeJcMY
+xgZaz74zHRwq7B0CsUffntk=
+=zujJ
 -----END PGP SIGNATURE-----

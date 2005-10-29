@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facets
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.4 2005/10/08 13:14:32 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.5 2005/10/29 10:57:15 citizen428 Exp $
+
+*facets-20051030 (29 Oct 2005)
+
+  29 Oct 2005; Michael Kohl <citizen428@gentoo.org> +facets-20051030.ebuild:
+  Version bump. Upstream changed version scheme.
 
   08 Oct 2005; Michael Kohl <citizen428@gentoo.org> facets-0.6.3.ebuild,
   facets-0.7.2.ebuild:
