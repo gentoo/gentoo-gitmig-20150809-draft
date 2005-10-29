@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.41 2005/10/07 00:33:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.42 2005/10/29 21:49:21 eradicator Exp $
+
+*iproute2-051007 (29 Oct 2005)
+
+  29 Oct 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/iproute2-051007-esfq-2.6.13.patch,
+  iproute2-2.6.7.20040608-r1.ebuild, iproute2-2.6.10.20050112-r1.ebuild,
+  iproute2-2.6.10.20050124.ebuild, iproute2-2.6.11.20050310-r1.ebuild,
+  iproute2-2.6.11.20050310-r2.ebuild, iproute2-2.6.11.20050330.ebuild,
+  iproute2-2.6.11.20050330-r1.ebuild, +iproute2-051007.ebuild:
+  Fixed HOMEPAGE.  Version bump.  Updated esfq patch.  Closes bug #110777.
 
 *iproute2-2.6.11.20050330-r1 (07 Oct 2005)
 
