@@ -1,4 +1,7 @@
-MD5 c8212cd85faa55f0de3fbb8fe94639f3 ChangeLog 24143
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c7a473cc9988b5b87b7da634cafc14a3 ChangeLog 24248
 MD5 42fd34630ded62400ed31be1426e3b32 files/digest-imagemagick-6.1.8.8 73
 MD5 b5fd28bb0167a5ab5f5422e7335a5c11 files/digest-imagemagick-6.2.0.4 72
 MD5 3463dd071a5d891ab69d1797c256df76 files/digest-imagemagick-6.2.0.6 72
@@ -22,7 +25,14 @@ MD5 e217021f88f2b1597d5946f36f4f7ec3 imagemagick-6.2.2.0-r1.ebuild 2609
 MD5 3dce9cbb137138524f39515905101a35 imagemagick-6.2.2.0.ebuild 2584
 MD5 44276ac94f4ce41654185285a85dd336 imagemagick-6.2.2.3-r1.ebuild 2658
 MD5 6ddba8488efcce8504bb7c7143f55345 imagemagick-6.2.2.3.ebuild 2582
-MD5 51b5c821c88a83ada08bcaa5fec022bc imagemagick-6.2.4.2-r1.ebuild 2707
+MD5 3d1be3c42879feb77861d1897529165b imagemagick-6.2.4.2-r1.ebuild 2706
 MD5 f83f94636e500cc9b4e38e637e19eeaa imagemagick-6.2.4.2.ebuild 2678
 MD5 cc6c155e7a58cc1d780b805d3f4fdab1 imagemagick-6.2.5.2.ebuild 2714
 MD5 3dc350be33069338fa083ca16ec11cc8 metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDY9V2Kf2g/qXtneoRAhPMAJwNZuQSv1+J8gaN6HH3LwP+oNUWPQCgrVNv
+oe+Icj7lDpaiXwD3h0dLots=
+=5yL2
+-----END PGP SIGNATURE-----
