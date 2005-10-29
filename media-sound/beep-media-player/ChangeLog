@@ -1,10 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.73 2005/10/29 17:59:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.74 2005/10/29 18:02:59 flameeyes Exp $
 
   29 Oct 2005; <chainsaw@gentoo.org> beep-media-player-0.9.7.1.ebuild:
   Use eautoreconf instead of regular autoreconf, as suggested by Diego
-  Petten\uffff\uffff <flameeyes@gentoo.org>. Closes bug #110208.
+  Pettenò <flameeyes@gentoo.org>. Closes bug #110208.
 
   26 Oct 2005; Luis Medinas <metalgod@gentoo.org>
   beep-media-player-0.9.7-r8.ebuild:
