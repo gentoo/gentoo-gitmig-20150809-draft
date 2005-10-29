@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.4 2005/06/15 19:22:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.5 2005/10/29 12:37:52 lu_zero Exp $
+
+  29 Oct 2005; Luca Barbato <lu_zero@gentoo.org> widelands-0.0.9.ebuild:
+  fixed ppc osdep, still broken on gcc4
 
   15 Jun 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   widelands-0.0.9.ebuild:
