@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.209 2005/10/19 10:58:56 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.210 2005/10/29 11:07:00 flameeyes Exp $
+
+  29 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> samba-3.0.20b.ebuild:
+  Disable pie support for *BSD systems as it's not supported. Fixes bug #110278.
 
   19 Oct 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.20b.ebuild:
   patchset PORTAGE_TMPDIR fix: version bump to force mirror deployment (bug

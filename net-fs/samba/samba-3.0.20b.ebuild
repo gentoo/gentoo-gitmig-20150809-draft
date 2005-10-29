@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20b.ebuild,v 1.2 2005/10/19 10:58:56 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.20b.ebuild,v 1.3 2005/10/29 11:07:00 flameeyes Exp $
 
 inherit eutils versionator
 
@@ -102,6 +102,8 @@ src_compile() {
 		myconf="${myconf} --without-ldapsam"
 	fi
 	use winbind && myconf="${myconf} $(use_with winbind) --with-shared-modules=idmap_rid"
+
+	[[ ${CHOST} == *-*bsd* ]] && myconf="${myconf} --disable-pie"
 
 	econf \
 		--with-fhs \
