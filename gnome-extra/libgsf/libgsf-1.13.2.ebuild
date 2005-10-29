@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.13.2.ebuild,v 1.1 2005/10/29 03:26:08 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.13.2.ebuild,v 1.2 2005/10/29 06:03:11 joem Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="The GNOME Structured File Library"
 HOMEPAGE="http://www.gnome.org/"
@@ -25,4 +25,16 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_with bzip2 bz2) $(use_with gnome) $(use_enable static)"
 USE_DESTRIR="1"
+
+src_install() {
+	gnome2_src_install
+
+	preserve_old_lib /usr/$(get_libdir)/libgsf-1.so.1
+	preserve_old_lib /usr/$(get_libdir)/libgsf-gnome-1.so.1
+}
+
+pkg_postinst() {
+	 preserve_old_lib_notify /usr/$(get_libdir)/libgsf-1.so.1
+	 preserve_old_lib_notify /usr/$(get_libdir)/libgsf-gnome-1.so.1
+}
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
