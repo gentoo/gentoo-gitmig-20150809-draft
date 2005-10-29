@@ -1,5 +1,2 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-symlinks/package.mask,v 1.1 2005/10/07 02:22:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-symlinks/package.mask,v 1.2 2005/10/29 11:04:55 herbs Exp $
 
-# Simon Stelling <blubb@gentoo.org>
-# default library location is fubared on >2.0.51.x; bug #103818
->=sys-apps/portage-2.0.52
