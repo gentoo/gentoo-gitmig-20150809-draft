@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.12.1.ebuild,v 1.1 2005/10/07 02:11:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.12.1.ebuild,v 1.2 2005/10/29 22:22:47 allanonjl Exp $
 
 inherit gnome2
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.28
 	>=dev-util/pkgconfig-0.9
-	app-text/gnome-doc-utils"
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
