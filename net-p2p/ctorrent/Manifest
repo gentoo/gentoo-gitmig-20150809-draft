@@ -1,4 +1,16 @@
-MD5 36a7b5e38587c96dabfaa89272291ff8 ChangeLog 1015
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 20b8900fbd1fbf5589c0db709562ede2 ChangeLog 1198
 MD5 b3fd047ea183b0d2156386d848389886 ctorrent-1.3.4-r1.ebuild 561
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 19d36871c5c92a0eb1a6a48dcf04904a ctorrent-1.3.4-r2.ebuild 730
 MD5 6586ffb5b6accaa9fab65ab8b83a5e67 files/digest-ctorrent-1.3.4-r1 66
+MD5 00596f2b58c085e135af4ccdb182dcf2 files/digest-ctorrent-1.3.4-r2 143
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDY18iZ/iYVBmujdURAqEAAKDwXTkhvbVk4QQ/5MgsKT7sSMWgnACgqgBp
+I1wzMrlVO6++GJoqpPAZTMQ=
+=EQOS
+-----END PGP SIGNATURE-----
