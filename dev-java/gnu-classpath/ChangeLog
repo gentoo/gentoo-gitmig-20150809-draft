@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.41 2005/10/28 16:31:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.42 2005/10/29 11:26:54 betelgeuse Exp $
 
   28 Oct 2005; Thomas Matthijs <axxo@gentoo.org> +files/gtk28.patch,
   gnu-classpath-0.18.ebuild:
-  compile with gtk 2.8
+  compile with gtk 2.8. Fixes bug #110573.
 
   17 Oct 2005; Thomas Matthijs <axxo@gentoo.org> gnu-classpath-0.18.ebuild:
   Depend on gtk =2.6*, since it doesnt build with 2.8
