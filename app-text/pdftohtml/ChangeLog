@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdftohtml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.24 2005/03/16 12:48:44 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.25 2005/10/29 14:14:46 grobian Exp $
+
+  29 Oct 2005; Fabian Groffen <grobian@gentoo.org> pdftohtml-0.36-r3.ebuild:
+  Marked ~ppc-macos (bug #109429)
 
   16 Mar 2005; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
   -pdftohtml-0.36-r1.ebuild, -pdftohtml-0.36-r2.ebuild,
