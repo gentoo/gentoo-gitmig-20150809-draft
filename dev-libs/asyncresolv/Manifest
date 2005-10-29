@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 633d1a879bc623b26df1bed2c4feb408 ChangeLog 516
-MD5 5f36e7f5e44c5884a869e5c2227b14c3 asyncresolv-0.0.3.ebuild 609
-MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
+MD5 c8e94098c6e6276efd60f41af7b0648f ChangeLog 607
+MD5 438fffbc04a6b3d3b1ee0bc0e03c0f78 asyncresolv-0.0.3.ebuild 610
 MD5 52282e7dac280bc79a8a23f2869642f7 files/digest-asyncresolv-0.0.3 69
+MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLznaCRZPokWLroQRAuGxAJ9aQTOkOryv53fZJX+Fanl8G0qkiACeJVJa
-UsccTSNS+vMSUbJx8x8osdA=
-=IkFS
+iD8DBQFDYvgHCRZPokWLroQRAmhuAJ49K9UvXb5x599KnpB999vkL0Ay0gCeIXj7
+U5NNF4esUQAMK4rQVkHF82Q=
+=gH2W
 -----END PGP SIGNATURE-----
