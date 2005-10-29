@@ -1,10 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0d751983462c8c424f43049ea6bd45ef ChangeLog 2826
+MD5 10476607dd4c21c0bee6d873ab90ace4 ChangeLog 2994
 MD5 49a7e8cec076e51e91ff720503a859c8 boinc-4.72.20050813-r1.ebuild 2254
-MD5 f34dc99c2f866383c11c0a3ac849baf8 files/boinc-4.32_cmdline_options.patch 2477
-MD5 25cfc5918b31da56263edfee7a5fa682 files/boinc-4.32_socket_close_fix.patch 1208
 MD5 5418cddcce4923a19fdf0c6bafea11bf files/boinc.conf 440
 MD5 3629c69dacf62b1cb3f9118e757fae00 files/boinc.init 1730
 MD5 54ee39e6bbb50b705cb5fac638568d8b files/digest-boinc-4.72.20050813-r1 80
@@ -12,7 +10,7 @@ MD5 4b2e94b92c84896e0204d9e7710f9c6a metadata.xml 420
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDY4wbntT9W3vfTuoRAqOzAKCRQgG4jKWhynIej5bK6aEbY5SYOQCgpTLy
-0SScI+ngtgVf5k9I8ml1erI=
-=w5LN
+iD8DBQFDY40wntT9W3vfTuoRAvQkAJ0d9hbJ+XPH7cwBN7Bahv6KeUfTUwCgnsxp
+QiQ646l4TATG4MgLwBKA0ro=
+=lvIq
 -----END PGP SIGNATURE-----
