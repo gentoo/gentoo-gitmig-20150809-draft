@@ -37,9 +37,9 @@ start() {
 		ARGS="${ARGS} -allow_remote_gui_rpc"
 	fi
 
-	setsid start-stop-daemon --quiet --start --exec ${BOINCBIN} \
-		--chuid ${USER}:${GROUP} --nicelevel ${NICELEVEL} -- ${ARGS} \
-		--chdir ${RUNTIMEDIR} > ${LOGFILE} 2>&1 &
+	setsid start-stop-daemon --quiet --start  --chdir ${RUNTIMEDIR} \
+		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
+		--nicelevel ${NICELEVEL} -- ${ARGS} > ${LOGFILE} 2>&1 &
 
 	eend $?
 }

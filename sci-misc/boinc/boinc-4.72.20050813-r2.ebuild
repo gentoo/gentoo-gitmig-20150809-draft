@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r1.ebuild,v 1.1 2005/10/29 14:49:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-4.72.20050813-r2.ebuild,v 1.1 2005/10/29 22:49:29 cryos Exp $
 
 inherit eutils
 
