@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.6-r1.ebuild,v 1.1 2005/09/29 08:48:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.6-r1.ebuild,v 1.2 2005/10/29 09:38:06 vapier Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ RDEPEND="dev-lang/perl
 	sys-devel/automake-wrapper
 	>=sys-devel/autoconf-2.59-r6
 	>=sys-apps/texinfo-4.7
-	sys-devel/gnuconfig"
+	sys-devel/gnuconfig
+	sys-apps/help2man"
 
 src_unpack() {
 	unpack ${A}
@@ -34,14 +35,19 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	rm -f "${D}"/usr/bin/{aclocal,automake}
+
+	local x
+	for x in aclocal automake ; do
+		help2man ${x} > ${x}.1
+		doman ${x}.1
+		rm -f "${D}"/usr/bin/${x}
+	done
 
 	dodoc NEWS README THANKS TODO AUTHORS ChangeLog
 	doinfo doc/*.info*
 
 	# remove all config.guess and config.sub files replacing them
 	# w/a symlink to a specific gnuconfig version
-	local x=
 	for x in guess sub ; do
 		dosym ../gnuconfig/config.${x} /usr/share/${PN}-${SLOT}/config.${x}
 	done
