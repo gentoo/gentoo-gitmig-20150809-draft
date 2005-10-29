@@ -39,14 +39,14 @@ MD5 1aec1ecf1921c28a0b02c6e47c35b192 files/libsdl-1.2.9-no-exec-stack.patch 1146
 MD5 7335dd719002ab81477446278b2f786f files/libsdl-1.2.9-sdl-blit-mmx-check.patch 551
 MD5 33a794f49d333129e866fc0f51ea6ddb libsdl-1.2.6-r3.ebuild 3023
 MD5 3ce9b61a50a330133454637dccdbb9e9 libsdl-1.2.7-r3.ebuild 3968
-MD5 70a9110d4bc653c86cf8fde1b9e59840 libsdl-1.2.8-r1.ebuild 5016
+MD5 458d9903cf678ea5065444a33f93e574 libsdl-1.2.8-r1.ebuild 5073
 MD5 73615ae9e9d33c956f8a802dab0f0897 libsdl-1.2.9-r1.ebuild 4661
-MD5 741ea667dd2543b0155d32ae2d5a5126 libsdl-1.2.9.ebuild 4229
+MD5 950a76c3f9f7cf9503758f5432319e2b libsdl-1.2.9.ebuild 4279
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYX2/gIKl8Uu19MoRAl7hAJ0fXLpLg7SFvljpTAlTeref4AM69wCeKYy7
-5F2W+RvnnYEpBe9SM9Lo0Fc=
-=cWLi
+iD8DBQFDYuLggIKl8Uu19MoRAiiSAJ4/31RYFH/ns0ynZf06NsTf4ihkPwCbBfY8
+zWHdWdx1UdWh5o92etWOMHk=
+=jJYW
 -----END PGP SIGNATURE-----

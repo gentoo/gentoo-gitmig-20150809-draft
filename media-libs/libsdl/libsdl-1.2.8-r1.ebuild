@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.22 2005/10/05 00:34:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.23 2005/10/29 02:47:41 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -70,6 +70,7 @@ src_unpack() {
 	#fix for building with gcc4 (within bounds - here I need to
 	#build with -O0 to get it done)
 	epatch "${FILESDIR}"/${PV}-gcc4.patch
+	epatch "${FILESDIR}"/${PN}-1.2.9-DirectFB-updates.patch
 
 	./autogen.sh || die "autogen failed"
 	epunt_cxx

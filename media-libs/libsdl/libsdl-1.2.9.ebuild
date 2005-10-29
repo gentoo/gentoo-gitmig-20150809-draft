@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.7 2005/10/05 00:34:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.9.ebuild,v 1.8 2005/10/29 02:47:41 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/libsdl-1.2.8-no-cxx.patch
 	epatch "${FILESDIR}"/libsdl-1.2.9-dlvsym-check.patch #105160
 	epatch "${FILESDIR}"/1.2.8-gcc4.patch
+	epatch "${FILESDIR}"/${P}-DirectFB-updates.patch
 
 	./autogen.sh || die "autogen failed"
 	epunt_cxx
