@@ -1,0 +1,70 @@
+#!/bin/bash -x
+
+if [ "$1" == "" ]; then
+	KERN=/lib/modules/`uname -r`/build
+else
+	KERN="$1"
+fi
+
+echo ${KERN} | grep "/\$" || KERN="${KERN}/"
+
+function ask_comment()
+{
+        while true; do
+		read -p "Above definitions found.  Comment out? [y], n "
+                case ${REPLY} in
+                
+		n) return 1;;
+                        
+		""|y) 	sed -i \
+				-e "s:^\(CONFIG_IEEE80211.*\):#\1:" \
+				${KERN}/.config || return 1
+			sed -i -r \
+				-e "s:^(#(un)?def.*CONFIG_IEEE80211.*):/*\1*/:" \
+				${KERN}/include/linux/autoconf.h || return 1
+			return 0;;
+                                
+		*) continue;;
+                esac
+	done || return 1
+}
+
+function ask_remove()
+{
+        while true; do
+		read -p "Above files found.  Remove? [y],n "
+                case ${REPLY} in
+                
+		n) return 1;;
+                        
+		""|y)	find ${KERN} -type f -name 'ieee80211*' | \
+			while read fn; do 
+				[ ! -d $fn ] && (rm -f ${fn} || return 1)
+			done || return 1
+			return 0;;
+                                
+		*) continue;;
+                esac
+	done || return 1
+}
+
+function do_check()
+{
+	echo -e "Checking in ${1} for ieee80211 components...\n"
+
+	FILES=`find ${1} -type f -name 'ieee80211*'`
+
+	if [ -n "${FILES}" ]; then
+		echo -e "${FILES}\n" | sed -e "s# #\n#"
+		ask_remove || return 1
+	fi
+
+	( egrep "^(CONFIG_IEEE80211.*)" ${1}/.config || \
+		egrep "^#(un)?def.*(CONFIG_IEEE80211.*)" \
+			${1}/include/linux/autoconf.h ) && \
+			(ask_comment || return 1)
+
+	return 0
+}
+
+do_check ${KERN}
