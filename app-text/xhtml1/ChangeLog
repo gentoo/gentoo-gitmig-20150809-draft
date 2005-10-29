@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xhtml1
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.13 2005/06/21 09:25:29 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.14 2005/10/29 15:37:12 grobian Exp $
+
+  29 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  xhtml1-20020801-r3.ebuild:
+  Marked ~ppc-macos (bug #109440)
 
 *xhtml1-20020801-r3 (21 Jun 2005)
 
