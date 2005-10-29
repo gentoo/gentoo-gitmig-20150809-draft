@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7.1.ebuild,v 1.2 2005/10/22 14:47:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7.1.ebuild,v 1.3 2005/10/29 17:59:46 chainsaw Exp $
 
 IUSE="nls gnome mp3 vorbis alsa oss esd mmx old-eq"
 
-inherit flag-o-matic eutils libtool
+inherit flag-o-matic eutils libtool autotools
 
 MY_PN="bmp"
 MY_P=bmp-${PV/_/}
@@ -47,10 +47,7 @@ src_unpack() {
 	epatch ${FILESDIR}/0.9.7-window-focus.patch
 	epatch ${FILESDIR}/0.9.7-ipv6.patch
 
-	ebegin "Rebuilding configure script (this will take a while)"
-	autoreconf -f -i &> /dev/null
-	eend $?
-
+	eautoreconf
 	elibtoolize
 }
 
