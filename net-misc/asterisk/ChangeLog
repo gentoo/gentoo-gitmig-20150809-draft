@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.86 2005/10/28 23:06:23 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.87 2005/10/29 02:53:16 stkn Exp $
+
+  29 Oct 2005; Stefan Knoblich <stkn@gentoo.org>
+  files/1.0.0/asterisk-1.0.9-freetds.diff:
+  tds_free_connect has been renamed too, update patch
 
   29 Oct 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/1.0.0/asterisk-1.0.9-freetds.diff, asterisk-1.0.9-r1.ebuild:
