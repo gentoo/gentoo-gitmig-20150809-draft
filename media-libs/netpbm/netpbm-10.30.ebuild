@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.30.ebuild,v 1.3 2005/10/21 12:15:32 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.30.ebuild,v 1.4 2005/10/29 01:17:47 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
+MAN_VER=${PV}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
-	mirror://gentoo/${P}-manpages.tar.bz2"
+	mirror://gentoo/${PN}-${MAN_VER}-manpages.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -104,7 +105,7 @@ src_install() {
 	GLOBIGNORE='*.html:.*' dodoc *
 	dohtml -r .
 
-	cd "${WORKDIR}"/${P}-manpages
+	cd "${WORKDIR}"/${PN}-${MAN_VER}-manpages || die
 	doman *.[0-9]
 	dodoc README* gen-netpbm-manpages
 }
