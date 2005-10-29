@@ -38,7 +38,8 @@ start() {
 	fi
 
 	setsid start-stop-daemon --quiet --start --exec ${BOINCBIN} \
-		--chuid ${USER}:${GROUP} --nicelevel ${NICELEVEL} -- ${ARGS} > ${LOGFILE} 2>&1 &
+		--chuid ${USER}:${GROUP} --nicelevel ${NICELEVEL} -- ${ARGS} \
+		--chdir ${RUNTIMEDIR} > ${LOGFILE} 2>&1 &
 
 	eend $?
 }
@@ -50,16 +51,15 @@ attach() {
 	read key
 
 	RC_QUIET_STDOUT="yes" svc_status
-	if [ $? == 0 ]; then
-		ebegin "Attaching to project"
-			# boinc cmd does not return 1 when it fails currently
-			boinc_cmd --project_attach ${url} ${key} &> /dev/null
-		eend $?
-	else
-		ARGS="${ARGS} -attach_project ${url} ${key}" svc_start
+	if [ $? == 1 ]; then
+		svc_start
 	fi
+	ebegin "Attaching to project"
+		# boinc cmd does not return 1 when it fails currently
+		boinc_cmd --project_attach ${url} ${key} &> /dev/null
+	eend $?
 
-	sleep 9
+	sleep 10
 	tail ${LOGFILE}
 }
 
