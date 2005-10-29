@@ -1,6 +1,15 @@
 # ChangeLog for app-office/ooqstart-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ChangeLog,v 1.5 2005/07/22 17:12:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooqstart-gnome/ChangeLog,v 1.6 2005/10/29 22:20:37 suka Exp $
+
+*ooqstart-gnome-0.8.3-r1 (29 Oct 2005)
+
+  29 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/ooqstart-gnome-0.8.3-optflags.diff,
+  +files/ooqstart-gnome-0.8.3-options-2.0.diff,
+  +files/gnome2update-2.0.patch.bz2, +ooqstart-gnome-0.8.3-r1.ebuild:
+  Update for OpenOffice.org 2.0, hopefully the last one before we get a proper
+  solution. Patches taken from openSUSE.
 
   22 Jul 2005; David Holm <dholm@gentoo.org> ooqstart-gnome-0.8.3.ebuild:
   Added to ~ppc.
