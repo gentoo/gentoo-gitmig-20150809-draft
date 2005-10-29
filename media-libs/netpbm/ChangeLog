@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.82 2005/10/29 01:18:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.83 2005/10/29 08:41:49 vapier Exp $
+
+  29 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.30-anytopnm.patch, netpbm-10.30.ebuild:
+  Fix anytopnm as pointed out by Erik Thiele in #109781.
 
 *netpbm-10.26.17 (29 Oct 2005)
 

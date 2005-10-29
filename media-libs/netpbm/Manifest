@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 407eb8258e8170df6bbbc7c0e3d532fe ChangeLog 11813
+MD5 fcd07de03c3338e6f4eb5e034f348be5 ChangeLog 11980
 MD5 0a45793fc070f81d4d6f6806706a8a57 files/digest-netpbm-10.26.17 139
 MD5 c6c3222383568021fbbdc34114b6f279 files/digest-netpbm-10.28 62
 MD5 8c4a20ca06c83687436b8cb75917d5f1 files/digest-netpbm-10.29 62
@@ -11,6 +11,7 @@ MD5 3e364cbe32c6c5bd2f329b8dbcf604d5 files/netpbm-10.29-anytopnm.patch 1562
 MD5 e3ef1ff99bf9335b47ea62db7416b625 files/netpbm-10.29-build.patch 2283
 MD5 103e8f6f6474dcc4b17ee049111bc3f6 files/netpbm-10.29-infinity.patch 5840
 MD5 d0d44fe5de727324db35e8110dc81f63 files/netpbm-10.29-pnmtopng-alpha-check.patch 603
+MD5 d54a93389a63382e459a5aa153484b46 files/netpbm-10.30-anytopnm.patch 1434
 MD5 c63d12c2c7deaafa4fcddb6035b34169 files/netpbm-10.30-build.patch 2276
 MD5 ef9c07e7cbf6b830f8dd61e59fb0a34b files/netpbm-dSAFER.patch 818
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
@@ -18,11 +19,11 @@ MD5 dd5dad8f02465203f9d2aa46d3aee51b netpbm-10.26.17.ebuild 2799
 MD5 4ff1d95265184a7c760d4748a4cb1beb netpbm-10.28.ebuild 2460
 MD5 4b1a6bc24bd0b85afb5756e7c1e218e8 netpbm-10.29-r1.ebuild 2937
 MD5 44a56191027bdda13f3bd51f336a971a netpbm-10.29.ebuild 2423
-MD5 359d4caaf95f6f66d82886a31a711aae netpbm-10.30.ebuild 2796
+MD5 bde29df5f2df4f0fc7dfa96aeeddb7ca netpbm-10.30.ebuild 2846
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYs31gIKl8Uu19MoRAhOnAJsHp7X5GT6UGrt3lqABc07TtAXccACeIQNS
-3x5awAXRMOygiF76PfiNyKI=
-=RVaT
+iD8DBQFDYzXhgIKl8Uu19MoRAuZ4AJwPbpgm6rYftFfY5m1dZ4UmFpuJvACfcptj
+5IgKCxqh2xPd9BEf0kpZpK4=
+=qjjh
 -----END PGP SIGNATURE-----
