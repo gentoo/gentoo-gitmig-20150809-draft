@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/goffice
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.1 2005/10/29 04:51:40 joem Exp $
+
+*goffice-0.1.0 (29 Oct 2005)
+
+  29 Oct 2005; Joe McCann <joem@gentoo.org> +goffice-0.1.0.ebuild:
+  First release of goffice. GOffice is a library of document-centric objects
+  and utilities building on top of GLib and Gtk+ and used by software such as
+  Gnumeric.
+
