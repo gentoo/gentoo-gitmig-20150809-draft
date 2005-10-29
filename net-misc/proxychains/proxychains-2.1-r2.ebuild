@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-2.1-r2.ebuild,v 1.1 2005/04/19 22:12:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-2.1-r2.ebuild,v 1.2 2005/10/29 09:31:40 vapier Exp $
 
 # This doesn't seem to be 64bit clean ... on amd64 for example,
 # trying to do `proxychains telnet 192.168.0.77` will attempt to 
@@ -24,9 +24,13 @@ DEPEND=""
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:/etc/:$(DESTDIR)/etc/:' proxychains/Makefile.in || die
+	sed -i 's:/etc/:$(DESTDIR)/etc/:' proxychains/Makefile.am || die
 	epatch "${FILESDIR}"/${P}-libc-connect.patch
-	touch *
+
+	# bundled timestamps/autotools are all busted so rebuild
+	epatch "${FILESDIR}"/${P}-autotools.patch
+	rm acconfig.h *.m4
+	aclocal && autoheader && libtoolize -c -f && autoconf && automake || die "autotools failed"
 }
 
 src_install() {

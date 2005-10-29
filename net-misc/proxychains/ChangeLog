@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/proxychains
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.6 2005/04/19 22:12:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.7 2005/10/29 09:31:40 vapier Exp $
+
+  29 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/proxychains-2.1-autotools.patch, proxychains-2.1-r2.ebuild:
+  Cleanup autotools #91677.
 
 *proxychains-2.1-r2 (19 Apr 2005)
 

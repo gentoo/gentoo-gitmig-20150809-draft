@@ -1,0 +1,84 @@
+Update autotools and remove cruft that kdevelop added for no reason
+
+--- configure.in
++++ configure.in
+@@ -1,30 +1,24 @@
+ dnl without this order in this file, autoconf will not work!
+ dnl the argument is a source file out of your sources. But
+ dnl acinclude.m4 makes the job for all programs ;-)
+-AC_INIT(acinclude.m4)
++AC_INIT(proxychains,2.1)
+ 
+ dnl enable the following if you want to use autoconf/automake
+ dnl framework from a certain directory (like kde-common)
+ dnl AC_CONFIG_AUX_DIR(admin)
+ 
+ AC_CANONICAL_SYSTEM
+-AC_ARG_PROGRAM
+ 
+-AM_INIT_AUTOMAKE(proxychains,2.1)
++AM_INIT_AUTOMAKE
+ 
+ AC_PREFIX_DEFAULT(/usr)
+-if test "x$prefix" = "xNONE"; then
+-  prefix=$ac_default_prefix
+-  ac_configure_args="$ac_configure_args --prefix $prefix"
+-fi
+ 
+ dnl without this order in this file, automake will be confused!
+ dnl 
+ AM_CONFIG_HEADER(config.h)
+ 
+-dnl checks for programs.
+-dnl first check for c compiler
+-AC_CHECK_C_COMPILER
++AC_PROG_CC
++AC_PROG_LIBTOOL
+ 
+ dnl create only shared libtool-libraries
+ AC_ENABLE_SHARED(yes)
+@@ -33,44 +27,6 @@
+ dnl libtool-libraries
+ AC_ENABLE_STATIC(no)
+ 
+-dnl create a working libtool-script
+-if test -z "$LIBTOOL"; then
+-  AC_LANG_SAVE
+-  AC_LANG_C
+-  AC_LIBTOOL_DLOPEN
+-  AM_PROG_LIBTOOL
+-  dnl LIBTOOL="$LIBTOOL --silent"
+-  dnl AC_SUBST(LIBTOOL)
+-  AC_LANG_RESTORE
+-  LIBTOOL_SHELL='/bin/sh ./libtool'
+-else
+-  LIBTOOL_SHELL=$LIBTOOL
+-fi
+-
+-dnl check for presence of dynamic-loading-library functions
+-KDE_CHECK_LIBDL
+-
+-dnl activate the following for some additional tests
+-dnl   (compat, crypt, socket, nsl, ...)
+-dnl KDE_MISC_TESTS
+-
+-dnl add --with-extra-includes and --with-extra-libs switch to ./configure
+-dnl 
+-AC_REQUIRE([KDE_CHECK_EXTRA_LIBS])
+-all_libraries="$all_libraries $USER_LDFLAGS"
+-all_includes="$all_includes $USER_INCLUDES"
+-AC_SUBST(all_includes)
+-AC_SUBST(all_libraries)
+-
+-AC_SUBST(AUTODIRS)
+-
+-dnl in this space add everything you want to check for
+-dnl examples are specific headers, libraries, etc.
+-
+-
+-
+-dnl perform program name transformation
+-AC_ARG_PROGRAM
+ 
+ dnl add here all your Makefiles. These will be created by configure
+ AC_OUTPUT(Makefile proxychains/Makefile proxychains/docs/Makefile proxychains/docs/en/Makefile )

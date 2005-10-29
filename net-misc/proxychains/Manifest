@@ -1,5 +1,16 @@
-MD5 4e73a03cb8d1fdf233dd7cac68912ae9 ChangeLog 1014
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 9a6466422caf413973d53237ffde15c7 proxychains-2.1-r2.ebuild 1065
-MD5 31f74f67a6811847c3b733a8ee3595c3 files/proxychains-2.1-libc-connect.patch 294
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4ef70dcf883dcbb7992ef179282f1ca5 ChangeLog 1162
 MD5 4cebebd00e1b468ed723ce38470e87e8 files/digest-proxychains-2.1-r2 67
+MD5 1c061d1b2cf15c31098b00f930145f11 files/proxychains-2.1-autotools.patch 2198
+MD5 31f74f67a6811847c3b733a8ee3595c3 files/proxychains-2.1-libc-connect.patch 294
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 7ebce22a77ec6ee78d053fc5532410e9 proxychains-2.1-r2.ebuild 1271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDY0GRgIKl8Uu19MoRAl8nAJ9iJKf7/C8186NcjQnaHz/2ObWJIQCfWJwZ
+RZmUDIb1BCw28+OcgvsglDE=
+=dGal
+-----END PGP SIGNATURE-----
