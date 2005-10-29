@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/videothumbnail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.1 2005/10/29 09:06:55 svyatogor Exp $
+
+*videothumbnail-0.1.6 (29 Oct 2005)
+
+  29 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +videothumbnail-0.1.6.ebuild:
+  Application for creating thumbnails for video files using mplayer or totem
+  backends.
+
