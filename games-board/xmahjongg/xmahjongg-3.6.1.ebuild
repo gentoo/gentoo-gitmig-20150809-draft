@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/xmahjongg-3.6.1.ebuild,v 1.5 2005/08/07 13:09:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/xmahjongg-3.6.1.ebuild,v 1.6 2005/10/29 08:44:03 grobian Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="friendly GUI version of xmahjongg"
 HOMEPAGE="http://www.lcdf.org/xmahjongg/"
 SRC_URI="http://www.lcdf.org/xmahjongg/${P}.tar.gz"
 
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ~ppc-macos x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
