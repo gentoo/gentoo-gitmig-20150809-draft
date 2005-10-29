@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.24 2005/09/05 19:17:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.25 2005/10/29 20:25:08 mkennedy Exp $
+
+*erlang-10.2.7 (29 Oct 2005)
+
+  29 Oct 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/erlang-10.2.7-export-TARGET.patch,
+  +files/10.2.7-manpage-emacs-gentoo.patch, +erlang-10.2.7.ebuild:
+  New upstream version; Added epoll support and condition support for
+  dev-lang/tk via X USE flag; Resolves Bug #106208.
 
   05 Sep 2005; Jason Wever <weeve@gentoo.org> erlang-10.2.5.ebuild:
   Stable on SPARC.
