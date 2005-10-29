@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.5.ebuild,v 1.1 2005/03/30 12:58:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.6.ebuild,v 1.1 2005/10/29 18:33:52 vanquirius Exp $
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
 HOMEPAGE="http://www.tildeslash.com/monit/"
@@ -23,13 +23,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc CHANGES.txt CONTRIBUTORS FAQ.txt README* STATUS UPGRADE.txt
 	dohtml -r doc/*
 
 	insinto /etc; insopts -m700; doins monitrc || die
-	newinitd ${FILESDIR}/monit.initd monit || die
+	newinitd "${FILESDIR}"/monit.initd monit || die
 }
 
 pkg_postinst() {
