@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.5.0.ebuild,v 1.2 2005/10/13 17:54:49 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.5.0.ebuild,v 1.3 2005/10/29 12:37:26 grobian Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://simh.trailing-edge.com/sources/${MY_P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc-macos ~x86"
 
 RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}
