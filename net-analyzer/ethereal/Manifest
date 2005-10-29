@@ -1,10 +1,20 @@
-MD5 8efdb131bdac51ef3943f75c9701ef80 ChangeLog 12474
-MD5 826c74670c9b90a8c55077f5199bcac0 ethereal-0.10.13.ebuild 3361
-MD5 30525c25656d0be84277dbe7f625c536 ethereal-0.10.13-r1.ebuild 3464
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b858370cda14ad4cb63bd1345f231141 ChangeLog 12582
 MD5 f8df469837b3a964d556a54c89c4dd7e ethereal-0.10.12.ebuild 3472
-MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
-MD5 ce9e77144029b2f1104aa92c1927f4e9 files/digest-ethereal-0.10.13 70
+MD5 53d7216bb51f654f7c717742643995db ethereal-0.10.13-r1.ebuild 3465
+MD5 826c74670c9b90a8c55077f5199bcac0 ethereal-0.10.13.ebuild 3361
 MD5 34bd8a0285aea402be479f40304aa947 files/digest-ethereal-0.10.12 70
-MD5 e37a324c1e08bfd08a70fd5958dadeb4 files/ethereal-0.10.12-fix-encrypted-conflict.diff 2838
+MD5 ce9e77144029b2f1104aa92c1927f4e9 files/digest-ethereal-0.10.13 70
 MD5 ce9e77144029b2f1104aa92c1927f4e9 files/digest-ethereal-0.10.13-r1 70
+MD5 e37a324c1e08bfd08a70fd5958dadeb4 files/ethereal-0.10.12-fix-encrypted-conflict.diff 2838
 MD5 e58b082ef143490cd14bbd423d5e7f4d files/ethereal-0.10.13-fix-irc-loop-DoS-CVE-2005-3313.diff 612
+MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDYr5gCRZPokWLroQRAghvAKCnjfRs/SuCSD/t2digQfx0X+5hkACgktTr
+Zg4lUPoZ3kv7XaL/kSejzW0=
+=pq76
+-----END PGP SIGNATURE-----
