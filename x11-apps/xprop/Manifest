@@ -1,6 +1,16 @@
-MD5 950e596729db99242eb6d0313f5d7bd4 ChangeLog 673
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 885d66489f86ba4fbb4ec67e68806e32 ChangeLog 757
 MD5 bf2f8b0cac98c08c7deb2ab2691c714e files/digest-xprop-0.99.0 64
 MD5 6eedb391dd6ab83bdc16d27ee08d715f files/digest-xprop-0.99.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 112352cdb346004a3d3d276567b934b3 xprop-0.99.0.ebuild 441
-MD5 95474d361f1a31450361f165bb1c34a2 xprop-0.99.1.ebuild 444
+MD5 daea87c733b98fa9f293010ef8082a06 xprop-0.99.1.ebuild 447
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDY1Ks2G5bA0cA/ScRAlgHAJ4hxOuGfTbhcdXhVk2W9ZFodgr1LwCgmMbY
+CvD5U1le0lp/dAhRNWRw2eo=
+=CJTA
+-----END PGP SIGNATURE-----
