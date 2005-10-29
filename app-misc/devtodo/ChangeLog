@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.53 2005/09/17 15:20:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.54 2005/10/29 15:18:20 ka0ttic Exp $
+
+*devtodo-0.1.19-r1 (29 Oct 2005)
+
+  29 Oct 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/devtodo-0.1.19-fix-multiline-segv.diff, +devtodo-0.1.19-r1.ebuild:
+  Revision bump; added a patch that fixes a segmentation fault when trying to
+  read a .todo file after adding a multi-line item (fex 'cat $somefile |
+  tda').
 
   15 Aug 2005; Luis Medinas <metalgod@gentoo.org> devtodo-0.1.19.ebuild:
   Stable on AMD64.
