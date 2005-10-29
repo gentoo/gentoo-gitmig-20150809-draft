@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-4.0.11.ebuild,v 1.7 2005/10/02 16:58:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-4.0.11.ebuild,v 1.8 2005/10/29 13:03:10 grobian Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/o/offlineimap/${P/-/_}.tar.gz"
 HOMEPAGE="http://gopher.quux.org:70/devel/offlineimap"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="alpha amd64 ia64 ppc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc-macos x86"
 SLOT="0"
 
 DEPEND=""
