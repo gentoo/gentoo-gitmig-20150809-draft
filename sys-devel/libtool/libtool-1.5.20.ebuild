@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.20.ebuild,v 1.8 2005/10/18 13:03:11 agriffis Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.20.ebuild,v 1.9 2005/10/29 09:42:58 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils
 
@@ -13,11 +13,11 @@ SLOT="1.5"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND="sys-devel/gnuconfig
+RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.9"
-# the autoconf dep is due to it complaining 'configure.ac:55: error: Autoconf version 2.58 or higher is required'
-# the automake dep is due to Bug #46037
+DEPEND="${RDEPEND}
+	sys-apps/help2man"
 
 lt_setup() {
 	export WANT_AUTOCONF=2.5
@@ -141,6 +141,12 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
+
+	local x
+	for x in libtool libtoolize ; do
+		help2man ${x} > ${x}.1
+		doman ${x}.1
+	done
 
 	for x in $(find "${D}" -name config.guess -o -name config.sub) ; do
 		rm -f "${x}" ; ln -sf ../gnuconfig/$(basename "${x}") "${x}"
