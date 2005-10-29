@@ -4,7 +4,6 @@ MD5 cca6898907a4441d1f2c7e1a76b6b585 lgeneral-1.2_beta2.ebuild 1481
 MD5 128afa83e71a3141c957a56313b92000 lgeneral-1.1.1-r1.ebuild 1113
 MD5 c407e1590daa8a5fb4ede173f7ca0f16 lgeneral-1.2_beta7.ebuild 1601
 MD5 b118818aa9218a8feb970928eefd607d ChangeLog 3695
-MD5 2ed49392adca7517991f0115bf18bc5f files/1.2_beta5-gcc4.patch 841
 MD5 5706fe2761ce54d1193998d40a3752fe files/digest-lgeneral-1.2_beta7 130
 MD5 77fda12a372abfd55040151b84dd2d7b files/1.1.1-netbsd-audio.patch 813
 MD5 a439ff98a9b35e8e232647449c5de2a0 files/digest-lgeneral-1.2_beta2 129
