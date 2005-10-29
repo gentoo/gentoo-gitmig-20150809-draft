@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.46.ebuild,v 1.4 2005/10/18 03:37:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.46.ebuild,v 1.5 2005/10/29 06:57:11 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="small SSH 2 client/server designed for small memory environments"
-HOMEPAGE="http://matt.ucc.asn.au/dropbear/"
+HOMEPAGE="http://matt.ucc.asn.au/dropbear/dropbear.html"
 SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 	http://matt.ucc.asn.au/dropbear/testing/${P}.tar.bz2"
 
