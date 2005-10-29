@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.66 2005/10/26 03:33:48 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.67 2005/10/29 04:12:59 morfic Exp $
+
+  29 Oct 2005; Daniel Goller <morfic@gentoo.org> boost-1.33.0-r1.ebuild:
+  Fix bjam directory, thanks to Phil Richards for reporting, Bug #110687
 
   26 Oct 2005; Daniel Goller <morfic@gentoo.org> boost-1.33.0-r1.ebuild:
   Deprecating icc at last
