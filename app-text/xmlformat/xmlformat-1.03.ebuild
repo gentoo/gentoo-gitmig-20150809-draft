@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/xmlformat-1.03.ebuild,v 1.3 2005/01/01 16:43:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/xmlformat-1.03.ebuild,v 1.4 2005/10/29 15:56:05 grobian Exp $
 
 DESCRIPTION="Reformat XML documents to your custom style"
 SRC_URI="http://www.kitebird.com/software/${PN}/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.kitebird.com/software/xmlformat/"
 
 SLOT="0"
 LICENSE="xmlformat"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~ppc-macos ~x86"
 
 DEPEND="ruby? ( virtual/ruby )
 	!ruby? ( dev-lang/perl )"
