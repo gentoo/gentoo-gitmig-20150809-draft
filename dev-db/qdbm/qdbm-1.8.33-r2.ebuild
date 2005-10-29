@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.33-r1.ebuild,v 1.1 2005/10/15 09:06:56 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.33-r2.ebuild,v 1.1 2005/10/29 11:22:45 hattya Exp $
 
 inherit eutils java-pkg multilib
 
