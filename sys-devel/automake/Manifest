@@ -7,7 +7,7 @@ MD5 88db2f78adf73dd93c0e21a58259d2eb automake-1.5.ebuild 1696
 MD5 c2b7648d70be8a4ab0080ed00cb796e3 automake-1.6.3.ebuild 1431
 MD5 f648af66d23f848644ae7f0e0a0fd8a9 automake-1.7.9-r1.ebuild 1506
 MD5 3ad0b6b355e91b67210e8e14e81de267 automake-1.8.5-r3.ebuild 1503
-MD5 3628b548f17dafdbcdfa152b8833e707 automake-1.9.6-r1.ebuild 1547
+MD5 0b42082f125f9a48da51a94aee2b1284 automake-1.9.6-r1.ebuild 1567
 MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
 MD5 91bfbe9a39ed2eee6bfa0254bad56d5d files/automake-1.4-libtoolize.patch 542
 MD5 a4327436d159f9262364994c88489ee6 files/automake-1.4-subdirs-89656.patch 944
@@ -29,7 +29,7 @@ MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDY0MTgIKl8Uu19MoRAlSuAJ9hNCFPjFGOKAObWfkYVTX8vml5BwCfZ5Zj
-tcxMPdG3cuilYPE42oItWsk=
-=rpkx
+iD8DBQFDY0NzgIKl8Uu19MoRAj0YAJ0UlPoEY/BWshQAhohjAhpVAbESEACfe0xO
+Ak8JzyTcoW24yd2fZ2hfaWY=
+=Qqc4
 -----END PGP SIGNATURE-----
