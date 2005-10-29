@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.31 2005/07/25 23:45:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.32 2005/10/29 03:44:14 solar Exp $
+
+  28 Oct 2005; <solar@gentoo.org> pax-utils-0.1.3.ebuild:
+  - #103173 pax-utils installs docs into /usr/share/doc
 
 *pax-utils-0.1.3 (25 Jul 2005)
 
