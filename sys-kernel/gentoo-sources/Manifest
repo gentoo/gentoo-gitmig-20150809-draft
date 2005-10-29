@@ -10,7 +10,7 @@ MD5 9c17d336cb966ab5940ab7310eca21ab files/digest-gentoo-sources-2.6.12-r9 224
 MD5 45b3d45d2c8aa2357866223b77b53896 files/digest-gentoo-sources-2.6.13-r3 222
 MD5 1a6d9b8b740a728909cc5dad107f2e55 files/digest-gentoo-sources-2.6.13-r5 222
 MD5 a0bbc4339013a85527d8e66627e579e4 files/digest-gentoo-sources-2.6.14 221
-MD5 1cd653d48c2ece7fbb55c16134288362 files/digest-gentoo-sources-2.6.9-r9 221
+MD5 99f953806141558102cef23e64948908 files/digest-gentoo-sources-2.6.9-r9 221
 MD5 b09e0ad41a8658a3e1309e5ab3ad652b files/gentoo-sources-2.4.28.77181.patch 295
 MD5 0c2bca31a62192779bf6129b3b23238b files/gentoo-sources-2.4.28.arpFix.patch 1021
 MD5 29e531cdd3f2effce5e31a1f2afb5b5d files/gentoo-sources-2.4.28.brk-locked.patch 8912
@@ -41,7 +41,7 @@ MD5 410c3afeb274354a7ce68257edc18012 metadata.xml 283
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDY/PjOpjtAl+gMRURAsRIAJ9yJW4uz4/2gv0diOG93bP3hme9VQCgklBN
-zFmlMlgkZbA7un4uEc8yohk=
-=/MaE
+iD8DBQFDY/QtOpjtAl+gMRURAgXHAKChcdHNNN6/ADbiJOHDfwIA1BSwdgCfd+ze
+Op5SqlNDduU4dRkTqmQ1brM=
+=8qoW
 -----END PGP SIGNATURE-----
