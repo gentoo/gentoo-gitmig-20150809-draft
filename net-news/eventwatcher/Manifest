@@ -1,6 +1,18 @@
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 964a83e1a31b22701a00709b83406375 eventwatcher-0.4.2.ebuild 550
 MD5 03eed28f8d8a9555815bc1386e8a52db eventwatcher-0.4.1.ebuild 551
-MD5 4cdd848ce2d6291b1bd6fa5ad5b19167 eventwatcher-0.4.2.ebuild 552
-MD5 5a9d8cc1168cb17e5c406506cea0a9ae ChangeLog 2038
-MD5 8098a7b7b1c7806f2221c742a6fb9b17 files/digest-eventwatcher-0.4.2 71
+MD5 39dc46a8d471f6f1d817c765ef7dbe24 eventwatcher-0.4.3.ebuild 551
+MD5 d522ae77d7ca1c3d19a71c0cffe0a35e ChangeLog 2245
+MD5 bb20e1aed73be1502e9b1f87dc925b4d metadata.xml 255
 MD5 304c4a092488847276952be861142c4a files/digest-eventwatcher-0.4.1 71
+MD5 8098a7b7b1c7806f2221c742a6fb9b17 files/digest-eventwatcher-0.4.2 71
+MD5 fac17f78e836af7da9aae2601abd6447 files/digest-eventwatcher-0.4.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFDY+GQT+MN7JbqCpMRAiHkAJwKRZdmMtG3secqfneoj/OJ0XdxAwCeORRd
+77BZi9ekEJRMEtp5Ni2r2Eo=
+=p4j1
+-----END PGP SIGNATURE-----
