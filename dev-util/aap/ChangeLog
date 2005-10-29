@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.20 2005/07/01 13:07:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.21 2005/10/29 17:24:34 grobian Exp $
+
+  29 Oct 2005; Fabian Groffen <grobian@gentoo.org> aap-1.076.ebuild:
+  Marked ~ppc-macos (bug #109955)
 
 *aap-1.076 (01 Jul 2005)
 
