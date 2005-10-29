@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmctrl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.7 2005/02/20 10:42:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.8 2005/10/29 02:09:35 usata Exp $
+
+  29 Oct 2005; Mamoru KOMACHI <usata@gentoo.org> wmctrl-1.07.ebuild:
+  Added missing dependency to glib-2. Thanks to Michael Imamura
+  <zoogie@lugatgt.org>; bug #107215.
 
 *wmctrl-1.07 (20 Feb 2005)
 
