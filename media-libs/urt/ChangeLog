@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.15 2005/10/29 15:54:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.16 2005/10/29 19:50:15 kloeri Exp $
+
+  29 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> urt-3.1b-r1.ebuild:
+  Stable on alpha.
 
   29 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> urt-3.1b-r1.ebuild:
   Stable on hppa, ppc.
