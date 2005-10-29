@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.107 2005/10/23 21:33:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.108 2005/10/29 21:41:50 suka Exp $
+
+  29 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-2.0.0.ebuild:
+  Some reorganizations to be more in-line with the source-based build, further
+  cleanups include the mime and icon stuff. This also removes the need for the
+  "kde" use-flag. And don't believe what someone else is telling you, there
+  never was any kde-integration in openoffice-bin (so it wasn't removed now ;)
+  ), if you want this you'll have to use app-office/openoffice until upstream
+  decides to package this.
 
   23 Oct 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-2.0.0.ebuild:
