@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd25860b406427db4695a112017de991 ChangeLog 3955
+MD5 696a130550b0964283d73489b9962ca6 ChangeLog 4071
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3 64
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3-r1 64
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3-r2 64
@@ -9,12 +6,5 @@ MD5 9a1e5d96731f8a129a1ae6aa5e4983e2 files/digest-giflib-4.1.4 64
 MD5 b9e664b4e74671655579f4fb136e4797 giflib-4.1.3-r1.ebuild 931
 MD5 556bcf27151fa78d17677f951bc7f1fb giflib-4.1.3-r2.ebuild 1087
 MD5 70abac308378271f9afde1e5dc3870a0 giflib-4.1.3.ebuild 1505
-MD5 bff1aec5b77340d7041304b3d066dbef giflib-4.1.4.ebuild 1019
+MD5 e049d15696ce60a2d36e8c905d19e21c giflib-4.1.4.ebuild 1022
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDYrCTgIKl8Uu19MoRAhJtAJ0WWF/EXfKMO+bb5P8z9NXktOmoewCdFoQE
-DMtHMhBTseN3BjzLGn5I/i0=
-=WZ08
------END PGP SIGNATURE-----
