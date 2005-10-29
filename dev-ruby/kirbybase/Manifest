@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cafb18210901727cd436371f3dc1b31 kirbybase-2.3.ebuild 866
+MD5 d48c8507a06845563f249e2d0af5d403 ChangeLog 354
+MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
+MD5 3cc1b7fc91465ce3e65c949209c98653 files/digest-kirbybase-2.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDY5oEZgSmR+etHJoRAmFdAKCU+hmnyEKAHmyQpuk1S+2mjWJGdQCffq9e
+hoEFryymYFWdB0QKx1B//ZQ=
+=Z7M0
+-----END PGP SIGNATURE-----
