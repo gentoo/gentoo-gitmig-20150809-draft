@@ -1,6 +1,9 @@
 # ChangeLog for app-text/clara
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.7 2005/04/24 11:34:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.8 2005/10/29 11:55:35 grobian Exp $
+
+  29 Oct 2005; Fabian Groffen <grobian@gentoo.org> clara-20031214.ebuild:
+  Marked ~ppc-macos (bug #108592)
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> clara-20031214.ebuild:
   Stable on ppc.
