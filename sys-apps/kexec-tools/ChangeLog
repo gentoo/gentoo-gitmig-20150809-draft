@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.3 2005/03/12 16:40:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.4 2005/10/29 07:42:29 halcy0n Exp $
+
+  29 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kexec-tools-1.101.ebuild:
+  Stable on x86; bug #110734
 
 *kexec-tools-1.101 (12 Mar 2005)
 
