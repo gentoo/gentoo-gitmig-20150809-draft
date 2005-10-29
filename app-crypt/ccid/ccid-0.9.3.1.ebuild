@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-0.9.3.1.ebuild,v 1.3 2005/09/29 01:40:35 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-0.9.3.1.ebuild,v 1.4 2005/10/29 18:50:30 vanquirius Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack () {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/ccid_${MY_PV}-${MY_PV_P}.diff"
+	epatch "${FILESDIR}/${P}-ifdhandler.diff"
 }
 
 src_install() {
