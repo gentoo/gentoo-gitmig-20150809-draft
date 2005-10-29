@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.5.ebuild,v 1.1 2005/10/17 10:14:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.5.ebuild,v 1.2 2005/10/29 12:53:55 brix Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -21,8 +21,9 @@ MODULESD_HOSTAP_CRYPT_WEP_ENABLED="no"
 MODULESD_HOSTAP_CRYPT_TKIP_ENABLED="no"
 MODULESD_HOSTAP_CRYPT_CCMP_ENABLED="no"
 
-CONFIG_CHECK="NET_RADIO"
-NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+CONFIG_CHECK="!HOSTAP NET_RADIO"
+ERROR_HOSTAP="${P} requires the in-kernel version of the hostap driver to be disabled (CONFIG_HOSTAP)"
+ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
 
 pkg_setup() {
 	linux-mod_pkg_setup
