@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aegis
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.15 2004/11/02 02:30:02 karltk Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aegis/ChangeLog,v 1.16 2005/10/29 17:18:46 grobian Exp $
+
+  29 Oct 2005; Fabian Groffen <grobian@gentoo.org> aegis-4.19.ebuild:
+  Marked ~ppc-macos (bug #109954)
 
   02 Nov 2004; Karl Trygve Kalleberg <karltk@gentoo.org> aegis-4.19.ebuild:
   New upstream version. Fixes #69059.
