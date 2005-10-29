@@ -12,6 +12,15 @@
  # NOTE: 64 bit OOo is work in progress!
 --- bin/package-ooo 
 +++ bin/package-ooo 
+@@ -50,7 +50,7 @@
+ 	mkdir -p $MANDIR/man1
+ 	cp -f $OOBUILDDIR/ooo-wrapper$BINSUFFIX $PREFIX/bin
+ 	chmod +x $PREFIX/bin/ooo-wrapper$BINSUFFIX
+-	for app in base calc draw fromtemplate html impress math web writer ffice; do
++	for app in base calc draw fromtemplate impress math web writer ffice; do
+ 		ln -sf ooo-wrapper${BINSUFFIX} $PREFIX/bin/oo${app}${BINSUFFIX}
+ 		if test "z$VENDORNAME" = "zNovell" -o "z$VENDORNAME" = "zSUSE" -o "z$VENDORNAME" = "zPLD" \
+ 		        -o "z$VENDORNAME" = "zDebian"; then
 @@ -124,11 +124,11 @@
    	# Menu icons are currently made in debian/rules
  	;;
