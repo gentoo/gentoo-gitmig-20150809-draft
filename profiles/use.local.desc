@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1524 2005/10/30 08:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1525 2005/10/30 10:06:48 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -740,9 +740,9 @@ net-dialup/isdn4k-utils:pcmcia - Install isdn-pcmcia framework
 net-dialup/isdn4k-utils:usb - Install isdn-usb framework
 net-dialup/ivcall:softfax - Enables soft fax support
 net-dialup/ppp:activefilter - Enables activefilter support
-net-dialup/ppp:atm - Enables support for pppoatm
-net-dialup/ppp:dhcp - Enables the dhcp plugin
-net-dialup/ppp:mppe-mppc - Enables support for mppe-mppc
+net-dialup/ppp:atm - Enables support for PPP over ATM (PPPoA)
+net-dialup/ppp:dhcp - Enables the DHCP plugin
+net-dialup/ppp:mppe-mppc - Enables support for MPPE-MPPC
 net-dns/bind:bind-mysql - enables mysql support for bind (non-dlz)
 net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
