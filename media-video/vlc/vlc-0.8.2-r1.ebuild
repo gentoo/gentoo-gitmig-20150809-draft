@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.5 2005/10/30 20:32:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.6 2005/10/30 23:04:53 flameeyes Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -24,11 +24,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga
-oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick hal stream
+oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick stream
 mp3 xv bidi gtk2 sdl png xml2 samba daap corba screen mod speex nsplugin"
 
-RDEPEND="hal? ( =sys-apps/hal-0.4* )
-		cdda? ( >=dev-libs/libcdio-0.71
+RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 			>=media-libs/libcddb-0.9.5 )
 		live? ( >=media-plugins/live-2005.01.29 )
 		dvd? (  media-libs/libdvdread
@@ -203,7 +202,6 @@ src_compile () {
 		$(use_enable ggi) \
 		$(use_enable 3dfx glide) \
 		$(use_enable sdl) \
-		$(use_enable hal) \
 		$(use_enable png) \
 		$(use_enable xml2 libxml2) \
 		$(use_enable samba smb) \
@@ -215,6 +213,7 @@ src_compile () {
 		--disable-pth \
 		--disable-portaudio \
 		--disable-slp \
+		--disable-hal \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then
