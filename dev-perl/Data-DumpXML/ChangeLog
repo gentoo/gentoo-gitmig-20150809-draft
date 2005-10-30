@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-DumpXML
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.7 2005/10/02 12:33:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.8 2005/10/30 03:25:51 weeve Exp $
+
+  30 Oct 2005; Jason Wever <weeve@gentoo.org> Data-DumpXML-1.06.ebuild:
+  Stable on SPARC.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> Data-DumpXML-1.06.ebuild:
   Mark 1.06 stable on ia64
