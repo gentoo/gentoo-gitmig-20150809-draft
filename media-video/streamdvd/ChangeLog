@@ -1,6 +1,10 @@
 # ChangeLog for media-video/streamdvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.12 2005/09/03 23:15:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.13 2005/10/30 23:24:02 flameeyes Exp $
+
+  30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  streamdvd-0.4-r1.ebuild:
+  Added missing lsdvd dependency as per bug #104375.
 
   03 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   streamdvd-0.4-r1.ebuild:
