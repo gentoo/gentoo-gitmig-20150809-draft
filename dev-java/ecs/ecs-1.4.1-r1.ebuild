@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.7 2005/07/16 13:55:33 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecs/ecs-1.4.1-r1.ebuild,v 1.8 2005/10/30 19:40:01 axxo Exp $
 
 inherit java-pkg
 
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	java-pkg_newjar bin/${P}.jar ${PN}.jar
 
-	dodoc AUTHORS ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog README
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/java/*
 }

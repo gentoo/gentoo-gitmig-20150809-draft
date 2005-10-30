@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0.ebuild,v 1.1 2005/09/17 22:05:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0.ebuild,v 1.2 2005/10/30 19:40:40 axxo Exp $
 
 inherit java-pkg
 
@@ -50,6 +50,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar gnumail.jar gnumail-providers.jar || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README README.*
+	dodoc AUTHORS ChangeLog NEWS README README.*
 	use doc && java-pkg_dohtml -r docs/*
 }

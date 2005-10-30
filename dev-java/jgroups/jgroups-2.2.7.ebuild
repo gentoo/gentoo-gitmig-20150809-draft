@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.7 2005/10/15 13:18:38 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.8 2005/10/30 19:39:15 axxo Exp $
 
 inherit java-pkg
 
@@ -51,7 +51,7 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar dist/jgroups-core.jar
-	dodoc doc/* CREDITS INSTALL.html README
+	dodoc doc/* CREDITS README
 	if use doc ; then
 		cd dist
 		java-pkg_dohtml -r javadoc
