@@ -1,6 +1,12 @@
 # ChangeLog for app-office/oooqs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.17 2005/09/24 06:46:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.18 2005/10/30 07:13:59 suka Exp $
+
+*oooqs-2.0.3-r2 (30 Oct 2005)
+
+  30 Oct 2005; Andreas Proschofsky <suka@gentoo.org> +files/oooqs-20.patch,
+  +oooqs-2.0.3-r2.ebuild:
+  New release, with some fixes to work with OpenOffice.org 2.0.0
 
   24 Sep 2005; Andreas Proschofsky <suka@gentoo.org> files/fixxooo.patch:
   Fix icons to correctly display for both openoffice and openoffice-ximian,
