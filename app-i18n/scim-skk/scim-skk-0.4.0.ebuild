@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/scim-prime-0.2.10.ebuild,v 1.2 2005/10/30 04:05:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/scim-skk-0.4.0.ebuild,v 1.1 2005/10/30 04:06:07 usata Exp $
 
-DESCRIPTION="Japanese input method PRIME IMEngine for SCIM"
-HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMPRIME"
-SRC_URI="mirror://sourceforge.jp/scim-imengine/16249/${P}.tar.gz"
+DESCRIPTION="Japanese input method SKK IMEngine for SCIM"
+HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMSKK"
+SRC_URI="mirror://sourceforge.jp/scim-imengine/17186/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="|| ( >=app-i18n/scim-1.0 >=app-i18n/scim-cvs-1.0 )
-	>=app-i18n/prime-1.0.0"
+DEPEND="|| ( >=app-i18n/scim-1.0 >=app-i18n/scim-cvs-1.0 )"
+RDEPEND="${DEPEND}
+	app-i18n/skk-jisyo"
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"

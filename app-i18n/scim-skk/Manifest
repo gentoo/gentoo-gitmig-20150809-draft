@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9df1105497f59695fb19a268f933d90d ChangeLog 1223
-MD5 7f01489ae3df1b5c5aacd3c113be0189 files/digest-scim-skk-0.3.0 66
+MD5 78baa3c296f763a88c76abbcda02a43a scim-skk-0.4.0.ebuild 991
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 9df1105497f59695fb19a268f933d90d ChangeLog 1223
 MD5 88d2037b727dc1b6568a043f69387d3c scim-skk-0.3.0.ebuild 989
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDNS0SI1lqEGTUzyQRAkpEAJ4oLek/cgquX/uS3c/Xh+Bq/bBK+QCggowl
-xuvuz3yw6u8SrkaJNWb4leU=
-=5nX7
------END PGP SIGNATURE-----
+MD5 9cb959f125aab8bad49796658f351899 files/digest-scim-skk-0.4.0 66
+MD5 7f01489ae3df1b5c5aacd3c113be0189 files/digest-scim-skk-0.3.0 66
