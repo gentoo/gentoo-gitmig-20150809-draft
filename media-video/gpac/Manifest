@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6b2ad09c987c10fdbe966f949bb7fd73 ChangeLog 663
 MD5 9ad278193077b6ebdc824745ba8600c2 files/digest-gpac-0.2.1 143
 MD5 b1903ea2936f4dfef488f1d3e877e2fe gpac-0.2.1.ebuild 2367
 MD5 cb378e7131783653c967c6365ca31a16 metadata.xml 347
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZRytj5H05b2HAEkRAsreAJ46gxnh8GCpRbe4KLxRRZRC5FRlxgCbBoOY
+f5IGtK7kdjxCM+s+qUgADIc=
+=vEXm
+-----END PGP SIGNATURE-----
