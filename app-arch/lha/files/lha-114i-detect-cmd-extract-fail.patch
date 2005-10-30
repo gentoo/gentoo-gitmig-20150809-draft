@@ -1,0 +1,150 @@
+Make sure that a corrupt archive file will return failure when we try
+and extract it
+
+patch by Mike Frysinger <vapier@gentoo.org>
+
+--- lha-114i/src/lha.h
++++ lha-114i/src/lha.h
+@@ -231,5 +231,6 @@
+ extern long		copyfile();
+ 
+-extern void		cmd_list(), cmd_extract(), cmd_add(), cmd_delete();
++extern void		cmd_list(), cmd_add(), cmd_delete();
++extern int		cmd_extract();
+ 
+ extern boolean	ignore_directory;
+--- lha-114i/src/lharc.c
++++ lha-114i/src/lharc.c
+@@ -431,5 +431,5 @@
+ 	switch (cmd) {
+ 	case CMD_EXTRACT:
+-		cmd_extract();
++		return cmd_extract();
+ 		break;
+ 	case CMD_ADD:
+--- lha-114i/src/lhext.c
++++ lha-114i/src/lhext.c
+@@ -175,5 +175,5 @@
+ 
+ /* ------------------------------------------------------------------------ */
+-static void
++static int
+ extract_one(afp, hdr)
+ 	FILE           *afp;	/* archive file */
+@@ -226,5 +226,5 @@
+ 		if (methods[method] == NULL) {
+ 			error("Unknown method skiped ...", name);
+-			return;
++			return 1;
+ 		}
+ 		if (bcmp(hdr->method, methods[method], 5) == 0)
+@@ -255,5 +255,5 @@
+ 						fgetc(afp);
+ 				}
+-				return;
++				return 0;
+ 			}
+ 
+@@ -279,5 +279,5 @@
+ 				up_flag = inquire_extract(name);
+ 				if (up_flag == FALSE && force == FALSE) {
+-					return;
++					return 0;
+ 				}
+ 			}
+@@ -288,5 +288,5 @@
+ 						if (quiet != TRUE)
+ 							printf("%s : Skipped...\n", name);
+-						return;
++						return 0;
+ 					}
+ 				}
+@@ -298,5 +298,5 @@
+ 						fgetc(afp);
+ 				}
+-				return;
++				return 0;
+ 			}
+ 
+@@ -318,10 +318,12 @@
+ 
+ 			if (!fp)
+-				return;
++				return 0;
+ 		}
+ 
+ 		errno = 0;
+-		if (hdr->has_crc && crc != hdr->crc)
++		if (hdr->has_crc && crc != hdr->crc) {
+ 			error("CRC error", name);
++			return 1;
++		}
+ 	}
+ 	else if ((hdr->unix_mode & UNIX_FILE_TYPEMASK) == UNIX_FILE_DIRECTORY
+@@ -333,5 +335,5 @@
+ 				if (quiet != TRUE)
+ 					printf("EXTRACT %s (directory)\n", name);
+-				return;
++				return 0;
+ 			}
+ 			/* NAME has trailing SLASH '/', (^_^) */
+@@ -348,5 +350,5 @@
+ 					up_flag = inquire_extract(name);
+ 					if (up_flag == FALSE && force == FALSE) {
+-						return;
++						return 0;
+ 					}
+ 				} else {
+@@ -355,5 +357,5 @@
+ 							if (quiet != TRUE)
+ 								printf("%s : Skipped...\n", bb1);
+-							return;
++							return 0;
+ 						}
+ 					}
+@@ -375,9 +377,9 @@
+ 				sprintf(buf, sizeof(buf), "%s -> %s", bb1, bb2);
+ 				warning("Can't make Symbolic Link", buf);
+-				return;
++				return 0;
+ #endif
+ 			} else { /* make directory */
+ 				if (!output_to_stdout && !make_parent_path(name))
+-					return;
++					return 0;
+ 			}
+ 		}
+@@ -389,4 +391,6 @@
+ 	if (!output_to_stdout)
+ 		adjust_info(name, hdr);
++
++	return 0;
+ }
+ 
+@@ -394,5 +398,5 @@
+ /* EXTRACT COMMAND MAIN														*/
+ /* ------------------------------------------------------------------------ */
+-void
++int
+ cmd_extract()
+ {
+@@ -400,4 +404,5 @@
+ 	long            pos;
+ 	FILE           *afp;
++	int             ret = 0;
+ 
+ 	/* open archive file */
+@@ -412,5 +417,5 @@
+ 		if (need_file(hdr.name)) {
+ 			pos = ftell(afp);
+-			extract_one(afp, &hdr);
++			ret += extract_one(afp, &hdr);
+ 			fseek(afp, pos + hdr.packed_size, SEEK_SET);
+ 		} else {
+@@ -428,5 +433,5 @@
+ 	fclose(afp);
+ 
+-	return;
++	return ret;
+ }
+ 

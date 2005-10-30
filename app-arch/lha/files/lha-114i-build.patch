@@ -1,0 +1,50 @@
+--- Makefile
++++ Makefile
+@@ -23,14 +23,15 @@
+ MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DSYSV_SYSTEM_DIR -DMKTIME
+ 
+ #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
+-OPTIMIZE	= -O2 -DSUPPORT_LH7 -DMKSTEMP
++OPTIMIZE	= $(CFLAGS) -DSUPPORT_LH7 -DMKSTEMP
+ 
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man
+-MANSECT = n
++DESTDIR = 
++BINDIR = /usr/bin
++MANDIR = /usr/share/man/ja
++MANSECT = 1
+ 
+ INSTALL = install
+-INSTALLBIN = -s -m 755
++INSTALLBIN = -m 755
+ INSTALLMAN = -m 644
+ 
+ SUBDIRS = src man
+@@ -42,6 +43,7 @@
+ LIBRARYOBJS	= patmatch$(O)
+ 
+ MYMAKEFLAGS = 'BINDIR=$(BINDIR)' 'MANDIR=$(MANDIR)' 'MANSECT=$(MANSECT)'\
++ 'DESTDIR=$(DESTDIR)' \
+  'INSTALL=$(INSTALL)' 'INSTALLBIN=$(INSTALLBIN)' 'INSTALLMAN=$(INSTALLMAN)'\
+  'CC=$(CC)' 'SWITCHES=$(SWITCHES)' 'O=$(O)' 'LIBRARYOBJS=$(LIBRARYOBJS)' \
+  'OPTIMIZE=$(OPTIMIZE)' 'MACHINE=$(MACHINE)'
+--- man/Makefile
++++ man/Makefile
+@@ -11,7 +11,7 @@
+ 	$(NROFF) -man lha.n > lha.man
+ 
+ install:
+-	$(INSTALL) $(INSTALLMAN) lha.n $(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
++	$(INSTALL) -D $(INSTALLMAN) lha.n $(DESTDIR)$(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
+ 
+ clean:
+ 	rm -f *~
+--- src/Makefile
++++ src/Makefile
+@@ -49,4 +49,4 @@
+ 	rm -f core *.o lha.tar lha.tar.Z *~ \#* *.orig
+ 
+ install:
+-	$(INSTALL) $(INSTALLBIN) lha $(BINDIR)/lha
++	$(INSTALL) -D $(INSTALLBIN) lha $(DESTDIR)$(BINDIR)/lha

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e470eb5963d8ee09bfd2727eeb56bba2 ChangeLog 3054
 MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r5 59
 MD5 2be58a222a07490e0347f138f65c97d4 files/lha-114i-build.patch 1341
@@ -8,3 +11,10 @@ MD5 a1ef659783bc7224c48dbc07cf436788 files/lha-114i-sec.patch 1621
 MD5 f44e42e6131c63f0e2e67e49732b6e57 files/lha-114i-sec2.patch 5754
 MD5 d409c5c0a2b75a477e7baa7ebc62a559 files/lha-114i-symlink.patch 228
 MD5 87f8394a1eaec58d059d1283e326daac lha-114i-r5.ebuild 1107
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZFs+gIKl8Uu19MoRAnYgAJ9ge/iE8+AU14oaU1T2Gw01qhKuAACaA4IV
+RdZKdfcrtbgZ8991ErJZWhQ=
+=9zmV
+-----END PGP SIGNATURE-----
