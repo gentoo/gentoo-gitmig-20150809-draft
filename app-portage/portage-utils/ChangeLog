@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.11 2005/10/11 13:59:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.12 2005/10/30 13:42:19 solar Exp $
+
+*portage-utils-0.1.7 (30 Oct 2005)
+
+  30 Oct 2005; <solar@gentoo.org> +portage-utils-0.1.7.ebuild:
+  - mantainience release. qlop -p option removed in favor of scanning /proc for
+  current emerges. color updates. compile fixes for gcc-2
 
   11 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   portage-utils-0.1.6.ebuild:
@@ -9,7 +15,7 @@
   11 Oct 2005; Stephen Bennett <spb@gentoo.org> portage-utils-0.1.6.ebuild:
   mips stable by request
 
-  10 Oct 2005; <solar.@gentoo.org> :
+  10 Oct 2005; <solar@gentoo.org> :
   - stable on arm ia64 ppc s390 x86, other arches welcome to follow
 
 *portage-utils-0.1.6 (06 Oct 2005)
@@ -20,7 +26,7 @@
 
 *portage-utils-0.1.5 (01 Oct 2005)
 
-  01 Oct 2005; <solar.@gentoo.org> -portage-utils-0.1.1.ebuild,
+  01 Oct 2005; <solar@gentoo.org> -portage-utils-0.1.1.ebuild,
   -portage-utils-0.1.2.ebuild, -portage-utils-0.1.4.ebuild,
   +portage-utils-0.1.5.ebuild:
   - added a bit of error handling to qdepends when dealing with *DEP syntax we
@@ -28,7 +34,7 @@
 
 *portage-utils-0.1.4 (24 Sep 2005)
 
-  24 Sep 2005; <solar.@gentoo.org> +portage-utils-0.1.4.ebuild:
+  24 Sep 2005; <solar@gentoo.org> +portage-utils-0.1.4.ebuild:
   - qpkg - new applet (quickpkg)
   - qdepends - 2 new options
   - qlist - 1 new option (azarah)
@@ -51,7 +57,7 @@
 
 *portage-utils-0.1.2 (19 Jul 2005)
 
-  19 Jul 2005; <solar.@gentoo.org> +portage-utils-0.1.2.ebuild:
+  19 Jul 2005; <solar@gentoo.org> +portage-utils-0.1.2.ebuild:
   - 3 new applets were added qlop, qtbz2 and qxpak. Lots of code cleanups and
   feature enhancements
 
