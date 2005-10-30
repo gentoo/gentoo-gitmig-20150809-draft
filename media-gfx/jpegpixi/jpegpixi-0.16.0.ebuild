@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegpixi/jpegpixi-0.16.0.ebuild,v 1.4 2004/10/29 11:11:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegpixi/jpegpixi-0.16.0.ebuild,v 1.5 2005/10/30 15:58:53 grobian Exp $
 
 DESCRIPTION="almost lossless JPEG pixel interpolator, for correcting digital camera defects."
 HOMEPAGE="http://www.zero-based.org/software/jpegpixi/"
