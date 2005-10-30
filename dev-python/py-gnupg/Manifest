@@ -1,4 +1,4 @@
-MD5 0c581817cde90e716c8ee4ee6783dc1e py-gnupg-0.3.2.ebuild 590
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 285e1fbc823acec6f5c099c3f3db633c ChangeLog 712
+MD5 4592e9d0354f9948ebf513bf9d7cfd0b ChangeLog 800
 MD5 73273e5d53d66eafc2baf3054c073e0e files/digest-py-gnupg-0.3.2 71
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 d2f758ba9cbd81bb53c362e3034d2e32 py-gnupg-0.3.2.ebuild 588
