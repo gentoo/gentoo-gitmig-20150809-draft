@@ -1,6 +1,12 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.143 2005/10/28 15:35:38 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.144 2005/10/30 02:25:13 joem Exp $
+
+*abiword-2.4.1 (30 Oct 2005)
+
+  30 Oct 2005; Joe McCann <joem@gentoo.org> +abiword-2.4.1.ebuild:
+  New 2.4 version. I have split the plugins out from this version and into
+  their own package called abiword-plugins
 
   28 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
   abiword-2.2.11.ebuild:
