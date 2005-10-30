@@ -6,5 +6,5 @@ MD5 d7c5f25c3240487c19bd100f83b2d857 files/digest-gtkmathview-0.7.5 69
 MD5 17e9052a6cc5c0a2a56235e7246382c6 gtkmathview-0.5.1.ebuild 724
 MD5 4b72d70c235f6d878a0ba686421a7ecf gtkmathview-0.5.2.ebuild 724
 MD5 c5833ca0cf6a78cb8fc27b711a504590 gtkmathview-0.6.3.ebuild 754
-MD5 0de21bd099f59179e11a1ffd9dba3359 gtkmathview-0.7.5.ebuild 967
+MD5 e4391676b6c7834765006c5c4a50a1a7 gtkmathview-0.7.5.ebuild 882
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
