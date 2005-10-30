@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.10 2005/10/27 15:24:51 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.11 2005/10/30 17:32:16 joshuabaergen Exp $
+
+  30 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  libSM-0.99.1-r1.ebuild:
+  Move xproto dep to reflect compile-time requirements.
 
 *libSM-0.99.1-r1 (27 Oct 2005)
 
