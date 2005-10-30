@@ -1,5 +1,5 @@
---- header.c.old	2000-10-05 19:36:03.000000000 +0200
-+++ header.c	2004-04-17 23:55:54.000000000 +0200
+--- lha-114i/src/header.c
++++ lha-114i/src/header.c
 @@ -538,6 +538,10 @@
  				/*
  				 * filename
@@ -22,8 +22,8 @@
  				for (i = 0; i < header_size - 3; i++)
  					dirname[i] = (char) get_byte();
  				dirname[header_size - 3] = '\0';
---- lhext.c.old	2000-10-04 16:57:38.000000000 +0200
-+++ lhext.c	2004-04-18 01:27:44.000000000 +0200
+--- lha-114i/src/lhext.c
++++ lha-114i/src/lhext.c
 @@ -190,8 +190,13 @@
  		q = (char *) rindex(hdr->name, '/') + 1;
  	}

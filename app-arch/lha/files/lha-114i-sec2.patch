@@ -1,6 +1,5 @@
-diff -urNp lha-114i.orig/src/lha_macro.h lha-114i/src/lha_macro.h
---- lha-114i.orig/src/lha_macro.h	2004-08-03 15:53:56.000000000 -0500
-+++ lha-114i/src/lha_macro.h	2004-08-03 15:54:05.000000000 -0500
+--- lha-114i/src/lha_macro.h
++++ lha-114i/src/lha_macro.h
 @@ -53,7 +53,7 @@
  #define SEEK_SET		0
  #define SEEK_CUR		1
@@ -10,9 +9,8 @@ diff -urNp lha-114i.orig/src/lha_macro.h lha-114i/src/lha_macro.h
  
  
  /* non-integral functions */
-diff -urNp lha-114i.orig/src/lharc.c lha-114i/src/lharc.c
---- lha-114i.orig/src/lharc.c	2004-08-03 15:53:56.000000000 -0500
-+++ lha-114i/src/lharc.c	2004-08-03 15:54:05.000000000 -0500
+--- lha-114i/src/lharc.c
++++ lha-114i/src/lharc.c
 @@ -830,9 +830,10 @@ find_files(name, v_filec, v_filev)
  	DIRENTRY       *dp;
  	struct stat     tmp_stbuf, arc_stbuf, fil_stbuf;
@@ -86,9 +84,8 @@ diff -urNp lha-114i.orig/src/lharc.c lha-114i/src/lharc.c
  	if (open_old_archive_1(expanded_archive_name, &fp)) {
  		archive_name = expanded_archive_name;
  		return fp;
-diff -urNp lha-114i.orig/src/lhext.c lha-114i/src/lhext.c
---- lha-114i.orig/src/lhext.c	2004-08-03 15:53:56.000000000 -0500
-+++ lha-114i/src/lhext.c	2004-08-03 15:55:40.000000000 -0500
+--- lha-114i/src/lhext.c
++++ lha-114i/src/lhext.c
 @@ -82,7 +82,8 @@ make_parent_path(name)
  	register char  *p;
  
@@ -137,9 +134,8 @@ diff -urNp lha-114i.orig/src/lhext.c lha-114i/src/lhext.c
  				warning("Can't make Symbolic Link", buf);
  				return;
  #endif
-diff -urNp lha-114i.orig/src/lhlist.c lha-114i/src/lhlist.c
---- lha-114i.orig/src/lhlist.c	2004-08-03 15:53:56.000000000 -0500
-+++ lha-114i/src/lhlist.c	2004-08-03 15:54:05.000000000 -0500
+--- lha-114i/src/lhlist.c
++++ lha-114i/src/lhlist.c
 @@ -250,7 +250,8 @@ list_one(hdr)
  			printf(" %s", hdr->name);
  		else {
@@ -150,9 +146,8 @@ diff -urNp lha-114i.orig/src/lhlist.c lha-114i/src/lhlist.c
  			b1 = strtok(buf, "|");
  			b2 = strtok(NULL, "|");
  			printf(" %s -> %s", b1, b2);
-diff -urNp lha-114i.orig/src/util.c lha-114i/src/util.c
---- lha-114i.orig/src/util.c	2004-08-03 15:53:56.000000000 -0500
-+++ lha-114i/src/util.c	2004-08-03 15:54:05.000000000 -0500
+--- lha-114i/src/util.c
++++ lha-114i/src/util.c
 @@ -276,21 +276,27 @@ rmdir(path)
  	char           *path;
  {
