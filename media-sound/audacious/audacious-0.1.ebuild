@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.1.ebuild,v 1.2 2005/10/30 17:05:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-0.1.ebuild,v 1.3 2005/10/30 21:56:57 betelgeuse Exp $
 
 IUSE="aac alsa esd flac gnome mmx mp3 nls oss sdl vorbis"
 
@@ -14,7 +14,7 @@ SRC_URI="http://audacious.nenolod.net/release/audacious-0.1.tgz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 # beep-config has a runtime depend on pkg-config
 RDEPEND="app-arch/unzip
