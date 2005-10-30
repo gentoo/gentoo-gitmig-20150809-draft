@@ -1,0 +1,13 @@
+# ChangeLog for media-sound/audacious
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.1 2005/10/30 14:20:41 chainsaw Exp $
+
+*audacious-0.1 (30 Oct 2005)
+
+  30 Oct 2005; <chainsaw@gentoo.org> +metadata.xml, +audacious-0.1.ebuild:
+  Initial commit, ebuild by me. Mikmod playback has been disabled, because
+  it fails compilation. AAC playback builds but does not appear to work.
+  If you submit a bug about that, include a patch to enable compilation and
+  include a test track. A bug report that misses either of these will be
+  closed.
+
