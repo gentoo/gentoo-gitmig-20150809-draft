@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/cute
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/ChangeLog,v 1.16 2005/08/18 18:51:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cute/ChangeLog,v 1.17 2005/10/30 01:52:09 weeve Exp $
+
+  30 Oct 2005; Jason Wever <weeve@gentoo.org> cute-0.2.9-r1.ebuild:
+  Added ~sparc keyword.
 
   18 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> cute-0.2.9-r1.ebuild:
   Stable on ppc.
