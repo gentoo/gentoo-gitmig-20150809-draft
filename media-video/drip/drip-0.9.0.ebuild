@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.7 2005/09/03 23:24:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.8 2005/10/30 19:05:30 flameeyes Exp $
 
-inherit eutils libtool flag-o-matic
+inherit eutils libtool flag-o-matic autotools
 
 DESCRIPTION="A DVD to DIVX convertor frontend"
 HOMEPAGE="http://drip.sourceforge.net/"
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
-	#>=media-libs/divx4linux-20020418
 RDEPEND="gnome-base/gnome-libs
 	!ppc? ( >=media-video/avifile-0.7.34 )
 	>=media-libs/a52dec-0.7.3
@@ -56,25 +55,15 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc34.patch
 
 	# Remove stale script ... "automake --add-missing" will add it again
-	einfo "Rerunnig autoconf/automake..."
-	cd ${S} ; rm -f ${S}/missing
 	export WANT_AUTOMAKE=1.5
-	aclocal -I macros
-	automake --add-missing
-	autoconf
-	libtoolize --copy --force
+	AT_M4DIR="macros" eautoreconf
 }
 
 src_compile() {
-	local myconf=
-
-	use nls || myconf="${myconf} --disable-nls"
-
 	use x86 && append-flags "-DARCH_X86"
 
-	econf ${myconf} || die
-
-	make || die
+	econf $(use_enable nls) || die
+	emake || die
 }
 
 src_install() {
@@ -91,8 +80,6 @@ src_install() {
 	insinto /usr/share/pixmaps
 	newins ${S}/pixmaps/drip_logo.jpg drip.jpg
 	insinto /usr/share/applications
-	doins ${FILESDIR}/drip.desktop
-	insinto /usr/share/applnk/Multimedia
 	doins ${FILESDIR}/drip.desktop
 
 	dodoc AUTHORS BUG-REPORT.TXT ChangeLog NEWS README TODO
