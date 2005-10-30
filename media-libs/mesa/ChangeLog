@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.44 2005/10/19 04:24:07 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.45 2005/10/30 16:49:40 joshuabaergen Exp $
+
+  30 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  mesa-6.3.2-r1.ebuild:
+  Change xorg-x11 blocker to allow for metabuilds.
 
   19 Oct 2005; Stephen P. Becker <geoman@gentoo.org> mesa-6.3.2-r1.ebuild:
   added ~mips keyword
