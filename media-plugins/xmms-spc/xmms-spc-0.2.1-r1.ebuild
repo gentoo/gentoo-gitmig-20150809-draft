@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1-r1.ebuild,v 1.7 2005/09/04 00:06:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/xmms-spc-0.2.1-r1.ebuild,v 1.8 2005/10/30 23:38:52 metalgod Exp $
 
 IUSE=""
 
-inherit eutils gnuconfig libtool
+inherit eutils gnuconfig libtool autotools
 
 MY_P=spcxmms-${PV}
 S=${WORKDIR}/${MY_P}
@@ -31,9 +31,7 @@ src_unpack() {
 	export WANT_AUTOMAKE=1.4
 	export WANT_AUTOCONF=2.5
 
-	aclocal || die
-	automake || die
-	autoconf || die
+	eautoreconf
 	elibtoolize
 	gnuconfig_update
 }

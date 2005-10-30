@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 612188ac7abe873a3eb1877a8cafbcd8 ChangeLog 1886
-MD5 7e92931e6562c3dbb2fbc49e564b1410 xmms-spc-0.2.1-r1.ebuild 992
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 af985b4ff79855c8d56e2358d1c678bb ChangeLog 2036
 MD5 2398436193eb0bbad90b6062d8d09980 files/digest-xmms-spc-0.2.1-r1 66
 MD5 2244fa5e3f55c79a7b9d51e42ce24e8e files/xmms-spc-0.2.1-amd64.patch 408
 MD5 73f665e685e8e66c587a7ec694f1b05f files/xmms-spc-0.2.1-r1.patch 2905
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 ee3c9b43fbd0ce9dbba66b2abd13a5eb xmms-spc-0.2.1-r1.ebuild 964
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDGjqWj5H05b2HAEkRAqE1AKCAjiK73OALbPeK7rbI5lX1aWKb2wCeI5Sl
-F9LskKwcyCYJYRsiAO8NKwI=
-=4C25
+iD8DBQFDZVkXwUpWvClEHQoRAkL8AJ98FgRDkGEfC16VB5Bpq3RBAYsTIACcDCkp
+huH44mw7HNewJaPfRF75wOU=
+=lpEK
 -----END PGP SIGNATURE-----

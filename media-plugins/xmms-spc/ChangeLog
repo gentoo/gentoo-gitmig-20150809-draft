@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-spc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.15 2005/09/04 00:06:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.16 2005/10/30 23:38:52 metalgod Exp $
+
+  30 Oct 2005; Luis Medinas <metalgod@gentoo.org> xmms-spc-0.2.1-r1.ebuild:
+  Fix package by adding eautoreconf before elibtoolize. Fixes bug #97046.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-spc-0.2.1-r1.ebuild:
