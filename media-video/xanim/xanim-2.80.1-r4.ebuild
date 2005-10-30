@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.28 2005/05/15 13:21:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.29 2005/10/30 22:59:34 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="program for playing a wide variety of animation, audio and video formats"
-HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
+HOMEPAGE="http://xanim.polter.net/"
 
 LICENSE="XAnim"
 SLOT="0"
