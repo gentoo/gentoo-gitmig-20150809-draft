@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 06e9de61040067a76cb768dc1d5a04d3 ChangeLog 2055
 MD5 9c4bfcd219f853db603ad6aaed00cba7 checkpassword-0.90-r1.ebuild 1047
 MD5 760d73c8b3091ca1cae9a1ae5b6fab8f files/0.90-errno.patch 243
 MD5 5c5ff561b8a7baeb2e1a0e38503fa425 files/0.90-head-1.patch 1201
 MD5 894ae022f7765b23ddfce23bc2f91c3e files/digest-checkpassword-0.90-r1 69
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZF9pgIKl8Uu19MoRAo57AKCDGbDTraP5Tq/qvhkNniLCnfJTIACeKZZa
+DjFQrqT+ZqzR0M/2ZYEEybU=
+=goag
+-----END PGP SIGNATURE-----
