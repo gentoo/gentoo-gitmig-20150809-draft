@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5c1bb807f2ca431dbe2eff0d32547a72 ChangeLog 937
 MD5 b9f8c4077dd01a35cb47847628da3e83 files/digest-xmms-lyrc-0.3 59
 MD5 b9f8c4077dd01a35cb47847628da3e83 files/digest-xmms-lyrc-0.3-r1 59
@@ -6,3 +9,10 @@ MD5 43ce6fb6f2b8689f366ec09ca62343a8 files/xmms-lyrc-0.3-xml-fix.patch 1179
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 ba126a73e209feaf0637388ca0363f30 xmms-lyrc-0.3-r1.ebuild 841
 MD5 d50d671a1e83fbe58ff0e35049acae2d xmms-lyrc-0.3.ebuild 798
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDZVQ5wUpWvClEHQoRAgmbAJ9VzGKoE3db1TalYDBQbVO85Cs53QCfS2mI
+RXltmmq1plY47HdsEizfegc=
+=lU9R
+-----END PGP SIGNATURE-----
