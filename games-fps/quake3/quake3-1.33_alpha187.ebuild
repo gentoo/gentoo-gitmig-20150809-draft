@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha187.ebuild,v 1.2 2005/10/27 07:39:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha187.ebuild,v 1.3 2005/10/30 04:25:56 vapier Exp $
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
@@ -70,4 +70,12 @@ src_install() {
 	doexe missionpack/*.so || die "missionpack .so"
 
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	echo
+	ewarn "The source version of Quake 3 will not work with Punk Buster."
+	ewarn "If you need pb support, then use the quake3-bin package."
+	echo
 }
