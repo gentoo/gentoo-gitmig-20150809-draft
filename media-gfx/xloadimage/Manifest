@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d9578685ef8f1a2a59a58d1453036a6f ChangeLog 5543
 MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r1 140
 MD5 bad387ba03d0111a70dd7066ba97d5e5 files/digest-xloadimage-4.1-r2 140
@@ -12,3 +15,10 @@ MD5 078fc3ab12c2f7564321ccdb25dda6f7 xloadimage-4.1-r1.ebuild 1987
 MD5 c70706f60bc9c49272d9117bd7d0ea00 xloadimage-4.1-r2.ebuild 2036
 MD5 eb2e15ec1eb2e879d416b8692be3cee6 xloadimage-4.1-r3.ebuild 2072
 MD5 717d209b1d88509ec1a349506f9611b8 xloadimage-4.1-r4.ebuild 2127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZF+ogIKl8Uu19MoRAn5cAJ0V9igpfhibLhG4OGwjCdfSfjARHQCfb6V8
+Lfpz9+GgEt2f7Mb5x+tqgb8=
+=q0nZ
+-----END PGP SIGNATURE-----
