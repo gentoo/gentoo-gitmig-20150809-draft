@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.3 2005/10/22 20:51:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.4 2005/10/30 05:58:54 vapier Exp $
 
 inherit eutils games
 
@@ -11,13 +11,14 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/source/q1source.zip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="X opengl svga 3dfx"
+IUSE="cdinstall X opengl svga 3dfx"
 
 RDEPEND="X? ( virtual/x11 )
 	opengl? ( virtual/opengl )
 	svga? ( media-libs/svgalib )
 	3dfx? ( media-libs/glide-v3 )"
 DEPEND="${RDEPEND}
+	cdinstall? ( games-fps/quake1-data )
 	app-arch/unzip"
 
 S=${WORKDIR}
@@ -41,7 +42,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/makefile-path-fixes.patch
 	epatch "${FILESDIR}"/gentoo-paths.patch
-	sed -i -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake-data:" \
+	sed -i -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake1:" \
 		{QW/client,WinQuake}/common.c || die "setting data paths"
 
 	epatch "${FILESDIR}"/makefile-cflags.patch
