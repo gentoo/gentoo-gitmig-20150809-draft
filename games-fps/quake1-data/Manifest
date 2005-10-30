@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16f0bd0e9793a52fec9a0fc74940496e ChangeLog 343
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-quake1-data-2.40 0
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9d862d20003cdd366874014831860170 quake1-data-2.40.ebuild 766
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZGDtgIKl8Uu19MoRAvhnAJ41t8FlHo4yco+3yZFKcBDx4wlz3wCfazxY
+HEuboQvroUaFUuR9jOIv5oU=
+=t/ms
+-----END PGP SIGNATURE-----
