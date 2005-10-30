@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-1.0.ebuild,v 1.2 2005/08/11 01:03:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-1.1.ebuild,v 1.1 2005/10/30 16:29:05 carlo Exp $
 
 inherit kde-functions eutils
 
 DESCRIPTION="Qt-based feature rich CHM file viewer."
 HOMEPAGE="http://kchmviewer.sourceforge.net/"
-SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
