@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gforth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.15 2005/09/16 21:53:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.16 2005/10/30 15:53:35 grobian Exp $
+
+  30 Oct 2005; Fabian Groffen <grobian@gentoo.org> gforth-0.6.2.ebuild:
+  Marked ~ppc-macos (bug #110818)
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
