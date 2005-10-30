@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.144 2005/10/30 02:25:13 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.145 2005/10/30 12:58:49 leonardop Exp $
+
+  30 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> abiword-2.4.1.ebuild:
+  Moved libgnomeprint(ui) dependencies since they are not optional (bug
+  #110865). Updated dependencies (zlib, libbonobo, glib, pango). Misc.
+  clean-ups.
 
 *abiword-2.4.1 (30 Oct 2005)
 
