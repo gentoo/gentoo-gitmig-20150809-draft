@@ -11,8 +11,8 @@ http://bugs.gentoo.org/77079
 +	"mov %%ebx,%%edi\n"
  	"mov $0,%%eax\n"
  	"cpuid\n"
--	: : : "%eax","%ebx","%ecx","%edx","cc","memory");
 +	"mov %%edi,%%ebx\n"
+-	: : : "%eax","%ebx","%ecx","%edx","cc","memory");
 +	: : : "%eax","%edi","%ecx","%edx","cc","memory");
  }
  
