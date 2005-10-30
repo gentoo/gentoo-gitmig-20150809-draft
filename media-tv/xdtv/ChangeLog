@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.8 2005/10/05 15:34:16 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.9 2005/10/30 19:21:26 flameeyes Exp $
+
+  30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0.ebuild,
+  xdtv-2.2.0-r1.ebuild:
+  Remove divx4linux useflag.
 
   05 Oct 2005; Paul Varner <fuzzyray@gentoo.org> xdtv-2.2.0-r1.ebuild:
   Stable on x86. Bug# 104642

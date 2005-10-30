@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.2 2005/10/05 15:34:16 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.3 2005/10/30 19:21:26 flameeyes Exp $
 
 inherit font multilib
 
-IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama divx4linux
+IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama
 	neXt Xaw3d mmx zvbi aqua_theme carbone_theme xv debug dvb"
 
 DESCRIPTION="TV viewer with support for AVI recording and plugins"
@@ -80,7 +80,6 @@ RDEPEND="virtual/x11
 	zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
 	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
-	divx4linux? ( >=media-libs/divx4linux-20030428 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
 	xvid? ( =media-libs/xvid-1* )
 	encode? ( >=media-sound/lame-3.93 )
@@ -152,7 +151,6 @@ src_compile() {
 		myconf="${myconf} --disable-mmx"
 
 	econf ${xawconf} \
-		$(use_enable divx4linux) \
 		$(use_enable alsa) \
 		$(use_enable jpeg) \
 		$(use_enable lirc) \
