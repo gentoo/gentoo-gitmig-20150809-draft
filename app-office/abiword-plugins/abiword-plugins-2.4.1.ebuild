@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.1.ebuild,v 1.1 2005/10/30 02:28:29 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.1.ebuild,v 1.2 2005/10/30 14:57:05 lu_zero Exp $
 
 DESCRIPTION="Set of plugins for abiword"
 HOMEPAGE="http://www.abisource.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.abisource.com/downloads/abiword/${PV}/abiword-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE="gnome grammar jpeg math svg libgda"
 S=${WORKDIR}/abiword-${PV}/${PN}
 
