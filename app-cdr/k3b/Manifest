@@ -1,4 +1,4 @@
-MD5 57fb017addcdbfa866ecf98ec82cf7a2 ChangeLog 17799
+MD5 df8c70ef4de4f0faf6b265734e6452ca ChangeLog 18010
 MD5 a1b5a05a8513587c957d81f2f7eb44c0 files/digest-k3b-0.11.24 133
 MD5 384b07ebe51023847a4cbdb756c9e867 files/digest-k3b-0.12.4a 135
 MD5 8bdf1530c459d3f1a176f6c1a93ad6ea files/digest-k3b-0.12.5 133
@@ -7,7 +7,7 @@ MD5 513df86e2c91f7c1209b63cea7d41b84 files/k3b-0.11.17-noarts.patch 893
 MD5 49d32c38a705809a2646228a8d0b71d4 files/k3b-0.12.4a-qt-3.3.5.patch 574
 MD5 5f469d8bb9067596d861b4a9a0a450a1 files/k3b-dvdrip-transcode.patch 1999
 MD5 c3794ba1b13d24f94fe2ab478c92f0ae k3b-0.11.24.ebuild 3106
-MD5 7298af5d69fd3744465305319b0d0545 k3b-0.12.4a.ebuild 3333
+MD5 a3567789f9a8771ba54c4b6b7d33c5f2 k3b-0.12.4a.ebuild 3343
 MD5 07519615ce63b52b1fec22f11ce8b6c6 k3b-0.12.5.ebuild 3209
 MD5 29fd37eefbdf691fefa5212bc6d4f3d5 k3b-0.12.6.ebuild 3208
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
