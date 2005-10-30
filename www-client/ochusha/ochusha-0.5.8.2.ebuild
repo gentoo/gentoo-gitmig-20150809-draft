@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2.ebuild,v 1.1 2005/09/29 09:12:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2.ebuild,v 1.2 2005/10/30 04:09:40 usata Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/16560/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~x86"
+KEYWORDS="~ppc ~ppc64 x86"
 
 DEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
