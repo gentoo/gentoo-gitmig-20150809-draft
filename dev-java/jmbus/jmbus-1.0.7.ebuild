@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmbus/jmbus-1.0.7.ebuild,v 1.7 2005/07/16 09:29:37 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmbus/jmbus-1.0.7.ebuild,v 1.8 2005/10/30 19:51:40 axxo Exp $
 
 inherit java-pkg
 
@@ -33,6 +33,6 @@ src_install() {
 	dobin jmspy.sh
 	dobin jmbuskeygen.sh
 	dobin jcetest.sh
-	dodoc AUTHORS README TODO INSTALL
+	dodoc AUTHORS README TODO
 }
 

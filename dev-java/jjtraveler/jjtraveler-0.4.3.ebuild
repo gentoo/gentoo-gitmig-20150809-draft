@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3.ebuild,v 1.7 2005/07/16 09:35:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jjtraveler/jjtraveler-0.4.3.ebuild,v 1.8 2005/10/30 19:53:19 axxo Exp $
 
 inherit java-pkg
 
@@ -30,5 +30,5 @@ src_install() {
 
 	dobin jjtraveler-config
 
-	dodoc AUTHORS COPYING INSTALL NEWS TODO ChangeLog
+	dodoc AUTHORS COPYING NEWS TODO ChangeLog
 }

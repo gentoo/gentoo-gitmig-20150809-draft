@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.8 2005/07/15 17:32:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/puretls/puretls-0.94_beta4.ebuild,v 1.9 2005/10/30 19:52:49 axxo Exp $
 
 inherit java-pkg
 
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar ${S}/build/${PN}.jar
 
-	dodoc ChangeLog CREDITS INSTALL README
+	dodoc ChangeLog CREDITS README
 	use doc && java-pkg_dohtml -r ${S}/build/doc/api/*
 	use source && java-pkg_dosrc src/COM
 }
