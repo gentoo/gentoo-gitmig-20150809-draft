@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.8 2005/07/16 14:27:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.9 2005/10/30 19:44:50 axxo Exp $
 
 inherit java-pkg
 
@@ -68,7 +68,7 @@ src_install() {
 
 	newbin datavision.sh datavision
 
-	dodoc ChangeLog Credits INSTALL README TODO
+	dodoc ChangeLog Credits README TODO
 	if use doc; then
 		java-pkg_dohtml docs/DataVision/*
 	fi
