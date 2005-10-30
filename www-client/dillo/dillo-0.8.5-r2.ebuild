@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.4-r2.ebuild,v 1.9 2005/07/10 20:50:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-0.8.5-r2.ebuild,v 1.1 2005/10/30 04:39:36 usata Exp $
 
 inherit flag-o-matic eutils
 
 S2=${WORKDIR}/dillo-gentoo-extras-patch4
-DILLO_I18N_P="${P}-i18n-misc-20050402"
+DILLO_I18N_P="${P}-i18n-misc-20051010"
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
@@ -15,7 +15,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 MISC_IUSE="nls truetype"
 IUSE="${MISC_IUSE} ipv6 ssl"
 
@@ -31,7 +31,8 @@ DEPEND="sys-devel/autoconf
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ../${DILLO_I18N_P}.diff
+	epatch ../${DILLO_I18N_P}.diff || die
+	sh autogen.sh || die
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
@@ -64,8 +65,6 @@ src_unpack() {
 	else
 		einfo "Using default Dillo icon set"
 	fi
-
-	cd ${S}; sh autogen.sh || die
 }
 
 src_compile() {
@@ -74,6 +73,7 @@ src_compile() {
 
 	local myconf
 
+	# misc features
 	myconf="$(use_enable nls)
 		$(use_enable truetype anti-alias)
 		--enable-tabs
