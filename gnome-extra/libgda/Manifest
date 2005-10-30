@@ -1,6 +1,7 @@
 MD5 112a1a7966b5ca0d707c24f6a6747646 ChangeLog 12533
 MD5 e92331f7677fcfc3e82541f08676bb32 files/digest-libgda-0.2.96-r2 66
 MD5 46b8c0b40219635d47ca4583d42dc814 files/digest-libgda-1.0.2 66
+MD5 907142ea1e11bcf5b01f25dfa2fd2b54 files/digest-libgda-1.0.3 66
 MD5 c15d8674b02051d6c9af76a12258ab8b files/digest-libgda-1.0.4 66
 MD5 ef67c275e1a496a0f75f76369994c248 files/digest-libgda-1.2.2-r1 66
 MD5 552028d2c6006f11a013b81e4e3fc56c files/libgda-0.2.96-gcc3.4.patch 607
@@ -18,6 +19,7 @@ MD5 b4dee0ec0bc3b4333c572810d035c68f files/libgda-1.2.1-mdb_fix.patch 617
 MD5 c95ffd3e34df767ced0741bb1ba184e2 files/libgda-1.2.2-freetds_fixes.patch 1771
 MD5 efe942efcc3bbe2a6ae347a7e6808a57 libgda-0.2.96-r2.ebuild 3487
 MD5 016ec893635c15e43c7159e1f1d92b33 libgda-1.0.2.ebuild 2893
+MD5 3d8fafea6831dfad58db40dbdef7e9a4 libgda-1.0.3.ebuild 2755
 MD5 eceac9d80b6e54f4091a9a3026c32fec libgda-1.0.4.ebuild 2939
 MD5 2ae6880dad03e541519a4a291ec8b07f libgda-1.2.2-r1.ebuild 2368
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
