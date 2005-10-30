@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f40cab96e845ac8fa625a2b4d4ec6eb lincvs-1.4.2.ebuild 1403
-MD5 2f256af8b470f507497d5a600f8b5b79 lincvs-1.4.1.ebuild 1403
-MD5 b8c160dbd1cce60488af079ce106d18f lincvs-1.4.3.ebuild 1410
-MD5 0e0336eb2ee193f4f66a4f1919e2a31e lincvs-1.4.0.ebuild 1401
-MD5 a335f80a65857c7ea980332261a152fe ChangeLog 5372
-MD5 70f06600556327dcfbc31fa03f610042 metadata.xml 155
+MD5 ca1c5f91ae69dbc7a830eda5b0467bdf ChangeLog 5459
 MD5 321475e6e6149f7fbc7747a3606a56af files/digest-lincvs-1.4.0 76
 MD5 75868314c62e02f5d9d821464e28559c files/digest-lincvs-1.4.1 76
 MD5 940c190d84bc73d611b0c3b811166b82 files/digest-lincvs-1.4.2 76
 MD5 4437f7ca0111ee0b788b6bcf1947dce5 files/digest-lincvs-1.4.3 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDHCl8ViELBEf1JB0RAoFCAJwJpykplm7W+m5H4FBsNDy6y0k0SwCeJ1Gp
-J1uyXPTcrnoWega0OphclRs=
-=HLAh
------END PGP SIGNATURE-----
+MD5 0e0336eb2ee193f4f66a4f1919e2a31e lincvs-1.4.0.ebuild 1401
+MD5 2f256af8b470f507497d5a600f8b5b79 lincvs-1.4.1.ebuild 1403
+MD5 9f40cab96e845ac8fa625a2b4d4ec6eb lincvs-1.4.2.ebuild 1403
+MD5 2e35dfaf447cd2b6ee0e1ed5bbaa641f lincvs-1.4.3.ebuild 1409
+MD5 70f06600556327dcfbc31fa03f610042 metadata.xml 155
