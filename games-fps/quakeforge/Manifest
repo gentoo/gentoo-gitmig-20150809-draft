@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 93ddcb7b41fc1be471c3db9136e80dbc ChangeLog 2389
 MD5 7c7c8315f5a4a12c1c7009e0e5a674ea files/0.5.5-ipv6.patch 302
 MD5 4b19724389aab51f2894c5bf5b0a615c files/digest-quakeforge-0.5.5 70
 MD5 3f7a2b4d0f9510d4ab1be5cb3f6de976 metadata.xml 1486
 MD5 58dd3746cbf64c68bf2f07dcab4aa4a8 quakeforge-0.5.5.ebuild 3674
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZGF4gIKl8Uu19MoRAllwAJ4lF1yEPm+bJyzFReMWS0wVayF3zgCePa4S
+6xWA1uQL3MZpz89B/WsYl20=
+=VCXd
+-----END PGP SIGNATURE-----

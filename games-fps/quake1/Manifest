@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ea42cd683df5c4f48a843986f04a9d4 ChangeLog 942
 MD5 1234946f709d4f661a2030a3b01fab6b files/digest-quake1-2.40-r1 58
 MD5 b9e1b8831a33b812643b9d5f3cab8cf2 files/fix-sys_printf.patch 666
@@ -7,3 +10,10 @@ MD5 6a5b3a494d26b4f1b8d1063f9a0aa6e4 files/makefile-path-fixes.patch 1539
 MD5 6f4c55f7cf280c7c87e1e5a20934b813 files/makefile-sedable.patch 1064
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7a1977ef24135e111cc2a05f905d3bfd quake1-2.40-r1.ebuild 2427
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZGE2gIKl8Uu19MoRAjTQAJ9rpfanb1YgCAVRHI3Sf4DVsjv7kACdEyK0
+mlz2ilXBHCkcITT1hc3w7Hw=
+=YLc2
+-----END PGP SIGNATURE-----
