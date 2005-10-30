@@ -23,6 +23,7 @@ lesspipe_file() {
 		*" troff "*)        lesspipe "$1" ".man" ;;
 		*" shared object"*) lesspipe "$1" ".so" ;;
 		*" Zip archive"*)   lesspipe "$1" ".zip" ;;
+		*" LHa"*archive*)   lesspipe "$1" ".lha" ;;
 		*" ELF "*)          readelf -a -- "$1" ;;
 		*": data")          hexdump -C -- "$1" ;;
 		*)                  return 1 ;;
