@@ -1,9 +1,19 @@
-MD5 415c94ef6cf92fe327522a25266ea7ee rte-0.5.6.ebuild 812
-MD5 a57f2283c55afdb6d8b6ec5d5ceb1c96 rte-0.5.1.ebuild 609
-MD5 cd371a5572eb31f3d0a2b4225e72771c rte-0.4.ebuild 608
-MD5 df964f68c50d6f8cb8cfaa1408fb2aaf ChangeLog 1800
-MD5 bae5e28f1886711cfc1b8ad272f0aa95 files/rte-0.5.6-config.patch 560
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cd7e4320e31d8c6c17c36c51813897d3 ChangeLog 1948
 MD5 94e8ac4087bcb4fc94bb9db086f760f4 files/config.patch 506
 MD5 568a7af3da8a232d133815ec259b1860 files/digest-rte-0.4 60
 MD5 ac93146084e012d268bb28e06a04e827 files/digest-rte-0.5.1 62
 MD5 e7aaba20571a8a98e7addb6de5f9ac8f files/digest-rte-0.5.6 62
+MD5 bae5e28f1886711cfc1b8ad272f0aa95 files/rte-0.5.6-config.patch 560
+MD5 cd371a5572eb31f3d0a2b4225e72771c rte-0.4.ebuild 608
+MD5 a57f2283c55afdb6d8b6ec5d5ceb1c96 rte-0.5.1.ebuild 609
+MD5 258de8f24f342e69cc1f8071a8de0fe0 rte-0.5.6.ebuild 654
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZRvuj5H05b2HAEkRAo4dAJ9Nb9Z6rQ85fWC/hbNdjSboxVyzvQCgk16J
+9E88ZqwEWf2ibhvZkSMlTZM=
+=9UY5
+-----END PGP SIGNATURE-----
