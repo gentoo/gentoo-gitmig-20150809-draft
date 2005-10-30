@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1523 2005/10/30 02:27:47 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1524 2005/10/30 08:39:02 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -365,7 +365,6 @@ dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/pida:gvim - Enable gvim as embedded editor
 dev-util/strace:aio - Enable libaio support
 dev-util/subversion:nowebdav - Disables WebDAV support via neon library
-games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
@@ -373,14 +372,10 @@ games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
-games-fps/doom3:cdinstall - Copies files from the CD rather than asking the user to copy them
 games-fps/duke3d:nophysfs - Disables support for physfs
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
-games-fps/quake3-bin:cdinstall - Copies files from the CD rather than asking the user to copy them
-games-fps/quake3-data:cdinstall - Copies files from the CD rather than asking the user to copy them
-games-fps/quake4-bin:cdinstall - Copies files from the CD rather than asking the user to copy them
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3
 games-fps/ut2004:experimental - Enables support for icculus' experimental patch
 games-kids/gcompris:editor - Build the optional editor program.
