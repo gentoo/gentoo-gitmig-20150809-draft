@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.8f.ebuild,v 1.1 2005/10/19 15:09:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9.ebuild,v 1.1 2005/10/30 09:48:28 ferdy Exp $
 
 inherit python
 
@@ -107,5 +107,8 @@ pkg_postinst() {
 	einfo
 	einfo "If you want to import cvs repositories into git, consider using the"
 	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1 before"
+	einfo
+	einfo "If you want to import svn repositories into git, consider using the"
+	einfo "git-svnimport command. You should install dev-util/subversion before"
 	einfo
 }
