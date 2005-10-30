@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.1 2005/10/29 18:31:47 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.2 2005/10/30 14:53:43 lu_zero Exp $
+
+  30 Oct 2005; Luca Barbato <lu_zero@gentoo.org> link-grammar-4.1.3.ebuild:
+  Marked ~ppc
 
 *link-grammar-4.1.3 (29 Oct 2005)
 
