@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.3-r3.ebuild,v 1.6 2005/10/17 16:31:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.1 2005/10/30 03:05:34 steev Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,7 +29,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -e 's:/sbin/cryptsetup:/bin/cryptsetup:' -i policy.h
+	sed -e 's:/sbin/cryptsetup:/bin/cryptsetup:' -i src/policy.h
 
 	append-ldflags "-Wl,-z,now"
 }
@@ -38,19 +38,16 @@ src_install () {
 	#this is where we mount stuff
 	keepdir /media
 
-	# HAL informed mounter, used by Gnome/KDE
-	#dobin pmount-hal
-
 	# Must be run SETUID
 	exeinto /usr/bin
 	exeopts -m 4710 -g plugdev
-	doexe pmount pumount pmount-hal
+	doexe src/pmount src/pumount src/pmount-hal
 
 	dodoc AUTHORS CHANGES TODO
-	doman pmount.1 pumount.1 pmount-hal.1
+	doman man/pmount.1 man/pumount.1 man/pmount-hal.1
 
 	insinto /etc
-	doins pmount.allow
+	doins etc/pmount.allow
 }
 
 pkg_postinst() {

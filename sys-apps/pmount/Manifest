@@ -1,4 +1,4 @@
-MD5 cfc4aca4f638934d9c1b1549ed3455f9 ChangeLog 1383
+MD5 9482a850c4c55118e4314287be7dc9cf ChangeLog 1583
+MD5 0460e313c5378e4ac58402a91e1b130e files/digest-pmount-0.9.6 64
 MD5 aac86bf5e50eb9cef83a6f6800c560af metadata.xml 253
-MD5 531a173ad8504f74717e4431653717a6 pmount-0.9.3-r3.ebuild 1496
-MD5 840c7e69303d19acc8e0a62976a4c135 files/digest-pmount-0.9.3-r3 63
+MD5 8be71c16c79569b79275c93fd1e1fc8a pmount-0.9.6.ebuild 1461
