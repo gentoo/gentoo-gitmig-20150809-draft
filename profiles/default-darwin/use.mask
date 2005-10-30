@@ -10,7 +10,6 @@ apm
 cap
 caps
 directfb
-divx4linux
 djbfft
 emul-linux-x86
 fbcon

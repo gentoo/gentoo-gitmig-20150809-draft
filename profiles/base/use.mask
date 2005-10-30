@@ -1,5 +1,4 @@
 win32codecs
-divx4linux
 vis
 mmxext
 selinux

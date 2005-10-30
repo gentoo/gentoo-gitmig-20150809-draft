@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.270 2005/10/30 08:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.271 2005/10/30 19:32:51 flameeyes Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -69,7 +69,6 @@ dedicated - Adds support for dedicated game servers (some packages do not provid
 dga - Adds DGA Support (Xfree86) (DGA=Direct Graphic Access)
 dio - Adds direct i/o support
 directfb - Adds support for DirectFB layer (library for FB devices)
-divx4linux - Adds support for divx.com's DivX(tm) mpeg4 libary
 doc - Adds extra documentation (API, Javadoc, etc)
 dri - Enable direct rendering: used for accelerated 3D and some 2D, like DMA
 dts - Enables libdts (DTS Coherent Acoustics decoder) support
