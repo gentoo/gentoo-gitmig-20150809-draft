@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.83 2005/10/29 08:41:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.84 2005/10/30 01:59:21 vapier Exp $
 
-  29 Oct 2005; Mike Frysinger <vapier@gentoo.org>
-  +files/netpbm-10.30-anytopnm.patch, netpbm-10.30.ebuild:
-  Fix anytopnm as pointed out by Erik Thiele in #109781.
+*netpbm-10.30-r1 (30 Oct 2005)
+
+  30 Oct 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.30-pngtopnm.patch, +files/netpbm-10.30-tifftopnm.patch,
+  +files/netpbm-10.30-anytopnm.patch, +netpbm-10.30-r1.ebuild:
+  Fix anytopnm/tifftopnm #109781 and pngtopnm #109783 (both by Erik Thiele).
 
 *netpbm-10.26.17 (29 Oct 2005)
 
