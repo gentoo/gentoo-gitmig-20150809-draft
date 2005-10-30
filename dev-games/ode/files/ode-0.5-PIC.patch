@@ -1,0 +1,19 @@
+Make sure we don't clobber %ebx (important with PIC).
+
+http://bugs.gentoo.org/77079
+
+--- ode-0.5/ode/src/timer.cpp
++++ ode-0.5/ode/src/timer.cpp
+@@ -117,9 +117,11 @@ static inline void getClockCount (unsign
+ static inline void serialize()
+ {
+   asm volatile (
++	"mov %%ebx,%%edi\n"
+ 	"mov $0,%%eax\n"
+ 	"cpuid\n"
+-	: : : "%eax","%ebx","%ecx","%edx","cc","memory");
++	"mov %%edi,%%ebx\n"
++	: : : "%eax","%edi","%ecx","%edx","cc","memory");
+ }
+ 
+ 
