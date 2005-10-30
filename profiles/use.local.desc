@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1525 2005/10/30 10:06:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1526 2005/10/30 18:17:55 joem Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -128,6 +128,8 @@ app-mobilephone/yaps:capi - Enable CAPI support
 app-mobilephone/yaps:slang - Enable SLang scripting support
 app-office/abiword-plugins:math - Enable gtkmathview support
 app-office/abiword-plugins:grammar - Enable grammar checking via grammar-link
+app-office/abiword-plugins:thesaurus - Enable thesaurus support
+app-office/abiword-plugins:wordperfect - Enable wordperfect file support via libwpd
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
