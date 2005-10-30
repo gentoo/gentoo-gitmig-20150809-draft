@@ -1,0 +1,11 @@
+# ChangeLog for app-office/abiword-plugins
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.1 2005/10/30 02:28:29 joem Exp $
+
+*abiword-plugins-2.4.1 (30 Oct 2005)
+
+  30 Oct 2005; Joe McCann <joem@gentoo.org> +metadata.xml,
+  +abiword-plugins-2.4.1.ebuild:
+  This is a collection of plugins for abiword that was split out of the main
+  build
+
