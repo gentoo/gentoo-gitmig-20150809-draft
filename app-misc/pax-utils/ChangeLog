@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.32 2005/10/29 03:44:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.33 2005/10/30 13:24:19 solar Exp $
+
+*pax-utils-0.1.4 (30 Oct 2005)
+
+  30 Oct 2005; <solar@gentoo.org> +pax-utils-0.1.4.ebuild:
+  - version bump. This release adds 3 scanelf options. -S, -b, -g
 
   28 Oct 2005; <solar@gentoo.org> pax-utils-0.1.3.ebuild:
   - #103173 pax-utils installs docs into /usr/share/doc
