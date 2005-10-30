@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e470eb5963d8ee09bfd2727eeb56bba2 ChangeLog 3054
-MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r5 59
-MD5 2be58a222a07490e0347f138f65c97d4 files/lha-114i-build.patch 1341
-MD5 bf52f3a88c9f88cdbaadda926050333e files/lha-114i-detect-cmd-extract-fail.patch 3151
-MD5 de7e57548c17115a6a39b8cb5f88234d files/lha-114i-dir_length_bounds_check.patch 502
-MD5 254ee5496c0968b19e8e1a20c3b90289 files/lha-114i-malloc.patch 180
+MD5 87f8394a1eaec58d059d1283e326daac lha-114i-r5.ebuild 1107
+MD5 ac6dd53f23a9165c38efa159e6c350ec ChangeLog 3281
 MD5 a1ef659783bc7224c48dbc07cf436788 files/lha-114i-sec.patch 1621
+MD5 bf52f3a88c9f88cdbaadda926050333e files/lha-114i-detect-cmd-extract-fail.patch 3151
+MD5 6cea43d9473cb137305f2a1c9175eac6 files/lha-114i-build.patch 1450
+MD5 de7e57548c17115a6a39b8cb5f88234d files/lha-114i-dir_length_bounds_check.patch 502
+MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r5 59
+MD5 07b705eca29332c442fab7a7cd7877ce files/lha-114i-malloc.patch 207
 MD5 f44e42e6131c63f0e2e67e49732b6e57 files/lha-114i-sec2.patch 5754
 MD5 d409c5c0a2b75a477e7baa7ebc62a559 files/lha-114i-symlink.patch 228
-MD5 87f8394a1eaec58d059d1283e326daac lha-114i-r5.ebuild 1107
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZFs+gIKl8Uu19MoRAnYgAJ9ge/iE8+AU14oaU1T2Gw01qhKuAACaA4IV
-RdZKdfcrtbgZ8991ErJZWhQ=
-=9zmV
------END PGP SIGNATURE-----

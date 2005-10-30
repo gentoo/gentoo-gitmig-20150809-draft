@@ -31,20 +31,22 @@
   'OPTIMIZE=$(OPTIMIZE)' 'MACHINE=$(MACHINE)'
 --- man/Makefile
 +++ man/Makefile
-@@ -11,7 +11,7 @@
+@@ -11,7 +11,8 @@
  	$(NROFF) -man lha.n > lha.man
  
  install:
 -	$(INSTALL) $(INSTALLMAN) lha.n $(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
-+	$(INSTALL) -D $(INSTALLMAN) lha.n $(DESTDIR)$(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
++	mkdir -p `dirname $(DESTDIR)$(MANDIR)/man$(MANSECT)/lha.$(MANSECT)`
++	$(INSTALL) $(INSTALLMAN) lha.n $(DESTDIR)$(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
  
  clean:
  	rm -f *~
 --- src/Makefile
 +++ src/Makefile
-@@ -49,4 +49,4 @@
+@@ -49,4 +49,5 @@
  	rm -f core *.o lha.tar lha.tar.Z *~ \#* *.orig
  
  install:
++	mkdir -p `dirname $(DESTDIR)$(BINDIR)/lha`
++	$(INSTALL) $(INSTALLBIN) lha $(DESTDIR)$(BINDIR)/lha
 -	$(INSTALL) $(INSTALLBIN) lha $(BINDIR)/lha
-+	$(INSTALL) -D $(INSTALLBIN) lha $(DESTDIR)$(BINDIR)/lha
