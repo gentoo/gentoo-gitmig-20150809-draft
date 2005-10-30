@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.4 2005/09/10 15:34:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.2.1.ebuild,v 1.5 2005/10/30 19:18:57 flameeyes Exp $
 
 inherit wxwidgets flag-o-matic
 
@@ -8,13 +8,12 @@ DESCRIPTION="GPAC is an implementation of the MPEG-4 Systems standard developed 
 HOMEPAGE="http://gpac.sourceforge.net/"
 LVER=0.1.3
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	amr? ( mirror://sourceforge/${PN}/${PN}_extra_libs-${LVER}_linux.tar.gz )
-	divx4linux? ( mirror://sourceforge/${PN}/${PN}_extra_libs-${LVER}_linux.tar.gz )"
+	amr? ( mirror://sourceforge/${PN}/${PN}_extra_libs-${LVER}_linux.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="amr debug divx4linux jpeg mad mozilla mpeg oss png sdl truetype xml2 xvid"
+IUSE="amr debug jpeg mad mozilla mpeg oss png sdl truetype xml2 xvid"
 S=${WORKDIR}/${PN}
 
 DEPEND="jpeg? ( media-libs/jpeg )
@@ -30,8 +29,6 @@ DEPEND="jpeg? ( media-libs/jpeg )
 
 src_unpack() {
 	unpack ${A}
-	use divx4linux && \
-		mv gpac_extra_libs/opendivx/* gpac/Plugins/OpenDivx/divx
 	# audio codec used in 3GP
 	use amr && \
 		mv gpac_extra_libs/amr_nb gpac/Plugins/amr_dec/AMR_NB
@@ -64,7 +61,6 @@ src_compile() {
 		--localstatedir=${D}/var/lib \
 		$(use_enable amr amr-nb) \
 		$(use_enable debug) \
-		$(use_enable divx4linux opendivx) \
 		$(use_enable mpeg faad) \
 		$(use_enable mpeg ffmpeg) \
 		$(use_enable jpeg) \
