@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/sumibi
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sumibi/ChangeLog,v 1.1 2005/10/30 10:05:27 usata Exp $
+
+*sumibi-0.5.2 (30 Oct 2005)
+
+  30 Oct 2005; Mamoru KOMACHI <usata@gentoo.org> +files/50sumibi-gentoo.el,
+  +metadata.xml, +sumibi-0.5.2.ebuild:
+  Initial import.
+
