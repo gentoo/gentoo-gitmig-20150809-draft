@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.4.ebuild,v 1.4 2005/10/30 00:52:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.4.ebuild,v 1.5 2005/10/30 10:52:10 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libungif/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ppc ~ppc-macos ~ppc64 s390 sh ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ~ppc-macos ~ppc64 s390 sh ~x86"
 IUSE="rle X"
 
 DEPEND="X? ( virtual/x11 )

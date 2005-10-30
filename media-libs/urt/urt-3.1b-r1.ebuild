@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.15 2005/10/30 00:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.16 2005/10/30 10:51:58 blubb Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.iastate.edu/pub/utah-raster/${P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~x86"
 IUSE="gif gs tiff X"
 
 DEPEND="X? ( virtual/x11 )
