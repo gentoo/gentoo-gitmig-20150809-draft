@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1522 2005/10/29 10:40:09 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1523 2005/10/30 02:27:47 joem Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -126,6 +126,8 @@ app-mobilephone/gnokii:irda - Enable infrared support
 app-mobilephone/gnokii:sms - Enable SMS support
 app-mobilephone/yaps:capi - Enable CAPI support
 app-mobilephone/yaps:slang - Enable SLang scripting support
+app-office/abiword-plugins:math - Enable gtkmathview support
+app-office/abiword-plugins:grammar - Enable grammar checking via grammar-link
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
