@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d5961a558aa43f5438f74222062f1497 mp3kult-0.7-r2.ebuild 1368
-MD5 173c5b9e474ff0a556082ac5db1fc82e ChangeLog 823
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 345a61e8b9807860f5d029d4219895df mp3kult-0.7-r1.ebuild 894
+MD5 9a4e9a125501febfc016ad98f748b499 ChangeLog 990
 MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r1 63
 MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r2 63
+MD5 7b989c066e996f89f577698ff23a71ed files/digest-mp3kult-0.7-r3 63
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 345a61e8b9807860f5d029d4219895df mp3kult-0.7-r1.ebuild 894
+MD5 d5961a558aa43f5438f74222062f1497 mp3kult-0.7-r2.ebuild 1368
+MD5 f262116e7ba5dc8e832ccaed8e9eb028 mp3kult-0.7-r3.ebuild 594
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGs62j5H05b2HAEkRAiobAJ9Z+S1cnMElFgn1sqzrDF/dAL3bdACdHLEP
-Ws49qDFoDmAekKzZTInzsmA=
-=fEOO
+iD8DBQFDZOesj5H05b2HAEkRArowAJ9gTK15Cv+hFOEweBJiK2DbVyVczwCfTGlB
+ZBlltVX0wLQwjvfqd8vKgWw=
+=9g5p
 -----END PGP SIGNATURE-----
