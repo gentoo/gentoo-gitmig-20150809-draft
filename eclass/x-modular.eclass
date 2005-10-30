@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.16 2005/10/23 18:02:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.17 2005/10/30 05:32:27 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -56,7 +56,7 @@ DEPEND="${DEPEND}
 	>=x11-misc/util-macros-0.99.0_p20051007"
 
 RDEPEND="${RDEPEND}
-	!<x11-base/xorg-x11-7"
+	!<x11-base/xorg-x11-7.0.0_rc0"
 # Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
 
