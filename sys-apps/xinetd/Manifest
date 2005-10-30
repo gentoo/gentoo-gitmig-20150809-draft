@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ab68f826254e9a7c9e80dad789730460 ChangeLog 5626
 MD5 3b6428878ffb5338d7eaff85ccbe6f6a files/digest-xinetd-2.3.13 65
 MD5 1664118097dcca0bdd6c3f9dc6da4b86 files/digest-xinetd-2.3.14 65
@@ -20,3 +23,10 @@ MD5 5e5499c1d0e11aa5ef488642d7c3e5db files/xinetd.rc6 868
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 0ab919c245efca6ef554559091b2ae33 xinetd-2.3.13.ebuild 1999
 MD5 a623795bb4b7660f0e0fda4cf3d1529e xinetd-2.3.14.ebuild 1655
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZEAOgIKl8Uu19MoRAo0eAJkB2VFLzQBObZS7sVa7xobRxjocXACfQ02a
+e25KwWUthGZP8LAyUrO+nNg=
+=GhGg
+-----END PGP SIGNATURE-----
