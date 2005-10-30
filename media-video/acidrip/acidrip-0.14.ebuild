@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.14.ebuild,v 1.3 2005/09/03 23:27:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.14.ebuild,v 1.4 2005/10/30 23:20:40 flameeyes Exp $
 
 inherit perl-module
 
@@ -15,7 +15,6 @@ IUSE="encode"
 
 DEPEND="dev-lang/perl
 		dev-perl/gtk2-perl
-		dev-perl/glade-perl
 		>=media-video/lsdvd-0.10
 		media-video/mplayer
 		encode? ( >=media-sound/lame-3.92 )"
