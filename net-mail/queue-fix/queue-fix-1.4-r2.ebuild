@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.12 2005/05/30 19:05:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.13 2005/10/30 05:50:27 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.netmeridian.com/e-huss/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k mips ppc ~s390 ~sh sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc-config"
