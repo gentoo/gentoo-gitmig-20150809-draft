@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/pycrash-0.4_pre3.ebuild,v 1.2 2004/11/29 12:09:35 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/pycrash-0.4_pre3.ebuild,v 1.3 2005/10/30 01:58:46 weeve Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 DOCS="NEWS TODO THANKS"
 DEPEND=">=virtual/python-2.3"
 S="${WORKDIR}/${MY_P}"
