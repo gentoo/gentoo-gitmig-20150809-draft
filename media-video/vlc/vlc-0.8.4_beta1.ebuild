@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta1.ebuild,v 1.2 2005/10/14 19:31:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4_beta1.ebuild,v 1.3 2005/10/30 20:32:57 halcy0n Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -12,7 +12,7 @@
 # media-video/vlc:avahi - Enables Bonjour service discovery via Avahi
 # media-video/vlc:h264 - Enables H264 encoding support with libx264
 
-inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools
+inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
 MY_P="${P/_beta/-test}"
 
@@ -223,7 +223,9 @@ src_compile () {
 		--disable-hal \
 		${myconf} || die "configuration failed"
 
-	sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
+	if [[ $(gcc-major-version) == 2 ]]; then
+		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
+	fi
 
 	emake -j1 || die "make of VLC failed"
 }

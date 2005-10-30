@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.4 2005/09/10 15:39:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.2-r1.ebuild,v 1.5 2005/10/30 20:32:57 halcy0n Exp $
 
 # Missing USE-flags due to missing deps:
 # media-vidoe/vlc:tremor - Enables Tremor decoder support
@@ -10,7 +10,7 @@
 # Missing USE-flags due to needed testing
 # media-video/vlc:dirac - Enables experimental dirac codec
 
-inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools
+inherit libtool eutils wxwidgets flag-o-matic nsplugins multilib autotools toolchain-funcs
 
 PATCHLEVEL="7"
 DESCRIPTION="VLC media player - Video player and streamer"
@@ -217,7 +217,9 @@ src_compile () {
 		--disable-slp \
 		${myconf} || die "configuration failed"
 
-	sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
+	if [[ $(gcc-major-version) == 2 ]]; then
+		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
+	fi
 
 	emake -j1 || die "make of VLC failed"
 }

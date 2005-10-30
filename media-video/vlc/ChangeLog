@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.109 2005/10/14 19:31:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.110 2005/10/30 20:32:57 halcy0n Exp $
+
+  30 Oct 2005; Mark Loeser <halcy0n@gentoo.org> vlc-0.8.2-r1.ebuild,
+  vlc-0.8.2-r2.ebuild, vlc-0.8.4_beta1.ebuild:
+  Add back logic to strip -fomit-frame-pointer only when using gcc-2; fixes bug
+  #99813
 
   14 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4_beta1.ebuild:
   Remove comments that are no more needed here as they are on the project page
