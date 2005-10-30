@@ -1,9 +1,19 @@
-MD5 6728800d72fb8515cd29c2532a339ec2 tse3-0.2.7.ebuild 1095
-MD5 02d5b8b7d9b6a1b3cd1d63e13fb5890c tse3-0.3.0.ebuild 1120
-MD5 6ee05386c34f19166c589c8b6bd56f7e ChangeLog 1987
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 bf413ad8b299236102baab56aff1b7e9 files/tse3-0.2.7-gcc34.patch 3155
-MD5 71287d128bdfd588b7c22645025e4b31 files/tse3-0.2.7-size_t-64bit.patch 1089
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 68790c032f65ef97bc30cb6cb9df729a ChangeLog 2255
 MD5 e5b12a211e5880ca3f3a11bd9ec606f4 files/digest-tse3-0.2.7 62
-MD5 424eeeed01112957b2e9cec605965440 files/digest-tse3-0.3.0 62
+MD5 424eeeed01112957b2e9cec605965440 files/digest-tse3-0.3.0-r1 62
+MD5 bf413ad8b299236102baab56aff1b7e9 files/tse3-0.2.7-gcc34.patch 3155
 MD5 7a3c4c8d46dfe16a96514a204d2ebead files/tse3-0.2.7-gcc4.patch 290
+MD5 71287d128bdfd588b7c22645025e4b31 files/tse3-0.2.7-size_t-64bit.patch 1089
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 6728800d72fb8515cd29c2532a339ec2 tse3-0.2.7.ebuild 1095
+MD5 b2a3450b9652d800e4d8b28f2bd3da62 tse3-0.3.0-r1.ebuild 1240
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZNVrj5H05b2HAEkRAnoSAJ9x4cD6cWqhd9pt26E5dNeU7zN8IQCgmLK+
+/NobFE/9Pscwxe7Az5J+t0U=
+=d/ec
+-----END PGP SIGNATURE-----
