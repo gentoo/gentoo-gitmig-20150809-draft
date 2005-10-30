@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 081811e0bfe6ea79412dc6ad97e9a8a0 musicman-0.15.ebuild 670
-MD5 1c182f15cc5650aaf7715d124638e3a6 ChangeLog 1766
-MD5 e0c3546df9c8751c2c6e3007e9cae8c8 musicman-0.14.ebuild 670
-MD5 a8c5814c84d8aeb0cd28e53d4f01fc02 musicman-0.11-r1.ebuild 698
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4892a92b0613b41678edd70a8a159c73 files/musicman-0.11-amd64.patch 1545
+MD5 415d6270e991fcf1c07e6a2170f7877a ChangeLog 1961
 MD5 a58a50415fde57a82addf30f60a148b0 files/digest-musicman-0.11-r1 66
 MD5 753e111a286622934d862faa982f33fe files/digest-musicman-0.14 66
-MD5 ff2d1e9a961983e13704bcffb9510e4a files/musicman-0.11-gcc34.patch 1055
 MD5 bd407db3ed242d94c796ff61ba2349c1 files/digest-musicman-0.15 66
+MD5 4892a92b0613b41678edd70a8a159c73 files/musicman-0.11-amd64.patch 1545
+MD5 ff2d1e9a961983e13704bcffb9510e4a files/musicman-0.11-gcc34.patch 1055
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 740d92aebf6ae912af6d17b16647854e musicman-0.11-r1.ebuild 857
+MD5 55076627115dbebca11570dae985dc97 musicman-0.14.ebuild 827
+MD5 57533dbe1279eb910c89580e2831e353 musicman-0.15.ebuild 827
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDFGm6j5H05b2HAEkRAvphAKClgo0RCUmCX8m2LNGP7hqPXrKSbQCfbMS+
-yliUJbyZOo1oN4kZ9VwzcuE=
-=H7w8
+iD8DBQFDZUrlj5H05b2HAEkRAiwWAKCf/3Gox8gUsq3R5COR+1WvTgWYqACcDlTv
+KlHnUImX4aLf5x/eGqkb1jo=
+=Z+1H
 -----END PGP SIGNATURE-----
