@@ -1,4 +1,4 @@
-MD5 28c4a4796deb241a207931a483d978d0 ChangeLog 1154
-MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 6b7d55afea1573184f4763ef4a1364b7 slrnconf-0.8.4.ebuild 837
+MD5 6be375fda28410fe13e9b2446d97e6b4 ChangeLog 1248
 MD5 5987dc28a8ca15c7ae66b61550edaabc files/digest-slrnconf-0.8.4 66
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 e46d330c9425a830750678c37da9ae44 slrnconf-0.8.4.ebuild 844
