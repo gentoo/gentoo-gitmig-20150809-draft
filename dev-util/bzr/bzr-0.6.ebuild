@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.0.8.ebuild,v 1.1 2005/09/20 19:15:20 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.6.ebuild,v 1.1 2005/10/30 20:21:23 arj Exp $
 
 inherit distutils
 MY_P="bzr-${PV}"
