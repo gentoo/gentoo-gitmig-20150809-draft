@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/shared-objects-1.4.ebuild,v 1.7 2005/07/15 16:52:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/shared-objects-1.4.ebuild,v 1.8 2005/10/30 19:35:42 axxo Exp $
 
 inherit java-pkg
 
@@ -28,5 +28,5 @@ src_install() {
 
 	dobin shared-objects-config
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL
+	dodoc AUTHORS ChangeLog
 }
