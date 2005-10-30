@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.16.ebuild,v 1.4 2005/07/25 14:39:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.16.ebuild,v 1.5 2005/10/30 19:41:35 axxo Exp $
 
 inherit java-pkg
 
@@ -26,6 +26,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar mysql-connector-java-${PV}-ga-bin.jar
 
-	dodoc COPYING CHANGES README
+	dodoc CHANGES README
 	use doc && cp docs/connector-j-en.pdf ${D}/usr/share/doc/${PF}/
 }

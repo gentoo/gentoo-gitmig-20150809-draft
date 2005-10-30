@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.17.ebuild,v 1.6 2005/09/03 21:07:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.0.17.ebuild,v 1.7 2005/10/30 19:41:35 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -43,6 +43,6 @@ src_compile() {
 
 src_install() {
 	java-pkg_newjar ${WORKDIR}/build-mysql-jdbc/${At}/${At}-bin.jar ${PN}.jar
-	dodoc README CHANGES COPYING
+	dodoc README CHANGES
 }
 
