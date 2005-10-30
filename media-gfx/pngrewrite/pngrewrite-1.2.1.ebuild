@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/pngrewrite-1.2.1.ebuild,v 1.8 2005/06/05 12:18:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/pngrewrite-1.2.1.ebuild,v 1.9 2005/10/30 17:56:45 grobian Exp $
 
 DESCRIPTION="A utility which reduces large palettes in PNG images"
 HOMEPAGE="http://entropymine.com/jason/pngrewrite/"
@@ -15,7 +15,7 @@ RDEPEND="media-libs/libpng
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="ppc ~ppc-macos sparc x86"
 
 IUSE=""
 
