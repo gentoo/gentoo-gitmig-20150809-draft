@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.17 2005/10/13 22:40:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.18 2005/10/30 22:02:01 flameeyes Exp $
+
+*kamix-0.6.4 (30 Oct 2005)
+
+  30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kamix-0.6.4-misc.patch, +kamix-0.6.4.ebuild:
+  Updated to 0.6.4 and added patch to compile with GCC4 and without vumeter
+  (arts).
 
 *kamix-0.6.3 (10 Oct 2005)
 
