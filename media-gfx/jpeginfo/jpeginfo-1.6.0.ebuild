@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.0.ebuild,v 1.9 2005/04/24 03:04:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.0.ebuild,v 1.10 2005/10/30 16:06:33 grobian Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cc.jyu.fi/~tjko/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha ~amd64 ppc64"
+KEYWORDS="alpha ~amd64 ppc ~ppc-macos ppc64 ~sparc x86"
 
 DEPEND=">=media-libs/jpeg-6b"
 
