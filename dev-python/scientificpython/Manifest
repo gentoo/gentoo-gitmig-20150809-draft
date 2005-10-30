@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a629a0433c164cbf1c689008e99c2ec ChangeLog 3286
+MD5 94ff9479f3c318ce7a434531b1c7c1f2 ChangeLog 3382
 MD5 dfa7ad22fed0bcb416294783fb84bb6c files/digest-scientificpython-2.2-r1 72
 MD5 79c71d20dabb984dca635936b7736c0a files/digest-scientificpython-2.4.3 74
 MD5 18849ce82bbffddae7acaefd7c21f3fa files/digest-scientificpython-2.4.5 74
@@ -12,11 +9,4 @@ MD5 ff59939d28b0261f00a55c95d53e6ae5 scientificpython-2.2-r1.ebuild 838
 MD5 1d27fa6f9c07018c95a9fef68c85824e scientificpython-2.4.3.ebuild 851
 MD5 950931f991d0e7fe6a8b61c73ddfbbaa scientificpython-2.4.5.ebuild 855
 MD5 a181ec6b4aeafb1874071f8fd4143df9 scientificpython-2.4.6.ebuild 862
-MD5 ee3e187cb224f7ad691c13937972ec89 scientificpython-2.4.9.ebuild 864
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDUsAkKf2g/qXtneoRAtbZAKC0gKANhY8f5QH0PND04ZgslEO8lACdEU8p
-xbxCppYBEyqllZY/boGWgPI=
-=2mBp
------END PGP SIGNATURE-----
+MD5 9e972d386cb029fdc1c0407d1a51890b scientificpython-2.4.9.ebuild 862
