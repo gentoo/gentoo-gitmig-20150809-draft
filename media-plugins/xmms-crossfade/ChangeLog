@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-crossfade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/ChangeLog,v 1.18 2005/06/17 20:18:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/ChangeLog,v 1.19 2005/10/30 23:05:32 metalgod Exp $
+
+  30 Oct 2005; Luis Medinas <metalgod@gentoo.org>
+  xmms-crossfade-0.3.8.ebuild:
+  Added info about arts output plugin on the ebuild to warn users about how to
+  use it. Thanks to Ricardo Cordeiro <Ricardo.Cordeiro@iscte.pt>.
 
   17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   xmms-crossfade-0.3.8.ebuild:
