@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/eventwatcher-0.4.3.ebuild,v 1.1 2005/10/29 20:53:27 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/eventwatcher-0.4.3.ebuild,v 1.2 2005/10/30 16:24:38 carlo Exp $
 
 inherit kde
 
