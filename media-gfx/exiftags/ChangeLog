@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiftags
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.10 2005/06/05 12:07:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.11 2005/10/30 16:09:40 grobian Exp $
+
+  30 Oct 2005; Fabian Groffen <grobian@gentoo.org> exiftags-1.00.ebuild:
+  Marked ~ppc-macos (bug #110821)
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   exiftags-0.99.1.ebuild:
