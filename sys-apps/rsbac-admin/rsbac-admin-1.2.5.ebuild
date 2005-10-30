@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.5.ebuild,v 1.2 2005/10/14 11:30:23 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.5.ebuild,v 1.3 2005/10/30 22:27:24 kang Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.rsbac.org/code/${PV}/rsbac-admin-${PV}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 NSS="1.2.5"
 
 DEPEND="dev-util/dialog
@@ -45,14 +45,24 @@ src_install() {
 	newins ${FILESDIR}/rsbac.conf rsbac.conf ${FILESDIR}/nsswitch.conf
 	dodir /secoff
 	keepdir /secoff
-	dodir /secoff/log
-	keepdir /secoff/log
+	dodir /var/log/rsbac
+	keepdir /var/log/rsbac
 }
 
 pkg_postinst() {
 	enewgroup secoff 400 || die "problem adding group secoff"
-	enewuser secoff 400 /bin/bash /secoff secoff || die "problem adding user secoff"
+	enewuser secoff 400 /bin/bash /secoff secoff || \
+	die "problem adding user secoff"
+	enewgroup audit 404 || die "problem adding group audit"
+	enewuser audit 404 /bin/false /dev/null audit || \
+	die "problem adding user audit"
 
-	chmod 700 /secoff /secoff/log || die "problem changing permissions of /secoff and/or /secoff/log"
-	chown secoff:secoff -R /secoff || die "problem changing ownership of /secoff"
+	chmod 700 /secoff /var/log/rsbac ||  \
+	die "problem changing permissions of /secoff and/or /secoff/log"
+	chown secoff:secoff -R /secoff || \
+	die "problem changing ownership of /secoff"
+	einfo "It is suggested to run (for example) a separate copy of syslog-ng to"
+	einfo "log RSBAC messages, as user audit (uid 404) instead of using the deprecated"
+	einfo "rklogd. See http://rsbac.org/documentation/administration_examples/syslog-ng"
+	einfo "for more information."
 }

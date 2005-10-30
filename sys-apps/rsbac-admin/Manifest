@@ -10,5 +10,5 @@ MD5 3b63c2f46e9c0531be23e630133fe6a7 files/rsbac.conf 209
 MD5 035ff78da2388cc0585f93ef2247332d metadata.xml 161
 MD5 6b79594e93eecd76a98fd248d9eb3ad8 rsbac-admin-1.2.3.ebuild 2229
 MD5 2af626ad2bd32bd1a95f45b88c18f545 rsbac-admin-1.2.4.ebuild 2771
-MD5 9ed4eb52c06b058095b07abffe84e296 rsbac-admin-1.2.5.ebuild 1656
+MD5 5225ef1c49ae4dc304b6eeb3238f7cd4 rsbac-admin-1.2.5.ebuild 2097
 MD5 9ba0cdc1f37fca8eee5d069870b6bb9c rsbac-admin-1.2.99.ebuild 2716
