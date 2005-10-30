@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.32 2005/10/02 14:28:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.33 2005/10/30 03:26:42 weeve Exp $
+
+  30 Oct 2005; Jason Wever <weeve@gentoo.org> libconf-0.40.00.ebuild:
+  Stable on SPARC.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> libconf-0.40.00.ebuild:
   Mark 0.40.00 stable on ia64
