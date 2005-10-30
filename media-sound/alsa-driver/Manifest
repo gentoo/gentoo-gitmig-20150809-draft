@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0f89bbd4dd1a08da1dd28cac6ccf64aa ChangeLog 27937
-MD5 179b232de1a139d6783ede643ad28bb3 alsa-driver-1.0.10_rc2.ebuild 4618
+MD5 b405b3dd00f433a93256e197c186482a ChangeLog 28134
+MD5 30e2221cce294766193f92f251a63171 alsa-driver-1.0.10_rc2.ebuild 4661
 MD5 3c0f4daec01807f3cce65c8fff87ff3f alsa-driver-1.0.3.ebuild 3366
 MD5 4f4a1c953e628c974d5accd88a6c0d0c alsa-driver-1.0.8.ebuild 4688
 MD5 2225d603271147071152961c6f768d37 alsa-driver-1.0.9b.ebuild 4560
 MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
 MD5 ed352c464a295465543d8933c162f101 files/alsa-driver-1.0.10_rc1-include.patch 346
+MD5 2f9a74cca5e78c63142073f0c90b9ff8 files/alsa-driver-1.0.10_rc2-audigy2zs.patch 460
 MD5 be4912a88e538a1f620b2fd422859ef6 files/alsa-driver-1.0.9b-sparc64-ioctl-detect.patch 513
 MD5 569ec84f258f90c508827a3040062f41 files/digest-alsa-driver-1.0.10_rc2 75
 MD5 938a2ee36c54416322d1acd47b249c99 files/digest-alsa-driver-1.0.3 71
@@ -20,7 +21,7 @@ MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDS+a7j5H05b2HAEkRArzzAJ9PNg4rXRZnOq18JTP/qWEyCTNdqwCfZIzb
-HeL2m3uqzk8eNkx71fpSy0s=
-=8s7g
+iD8DBQFDZT25j5H05b2HAEkRAg/LAJ9nbuF25VGyf6rlJUNG+DPUUxffHACeKOKi
+GGmDRR0vHrb7zfSw+dfK2lY=
+=CmyM
 -----END PGP SIGNATURE-----

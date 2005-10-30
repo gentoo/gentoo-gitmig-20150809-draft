@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc2.ebuild,v 1.2 2005/10/11 16:21:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.10_rc2.ebuild,v 1.3 2005/10/30 21:39:23 flameeyes Exp $
 
 inherit linux-mod flag-o-matic eutils
 
@@ -67,6 +67,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-1.0.10_rc1-include.patch
+	epatch "${FILESDIR}"/${P}-audigy2zs.patch
 	convert_to_m ${S}/Makefile
 }
 

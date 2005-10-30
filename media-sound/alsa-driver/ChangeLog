@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.159 2005/10/11 16:21:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.160 2005/10/30 21:39:23 flameeyes Exp $
+
+  30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-driver-1.0.10_rc2-audigy2zs.patch,
+  alsa-driver-1.0.10_rc2.ebuild:
+  Added patch for Audigy 2 ZS soundcards as per bug #110699.
 
   11 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   alsa-driver-1.0.10_rc2.ebuild:
