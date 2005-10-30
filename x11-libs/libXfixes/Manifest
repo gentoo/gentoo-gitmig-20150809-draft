@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bbbd2e70a60dbbe60cbb9952aa7f4555 ChangeLog 986
+MD5 c0a184b8c3d4c3b90c9f2527ec230cac ChangeLog 1138
 MD5 e5454e746ed2a1bf0c57081f6f9eea91 files/digest-libXfixes-3.0.0 68
-MD5 3fe0bc23d7d20cbb409830a9b8a05945 libXfixes-3.0.0.ebuild 575
+MD5 b491c6fc460d0d22ad0c2f3846516423 libXfixes-3.0.0.ebuild 603
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXV4dZS9CZTi033kRAv6UAKCpISviZlyM0Hsj+jvY64QHgkbl8wCfZXWe
-7Z/mS/LoPCV1tBUdL8n6Qes=
-=IVew
------END PGP SIGNATURE-----
