@@ -1,4 +1,6 @@
-MD5 f53a2a215bafe1ff541ed60fa1025afe ChangeLog 1271
+MD5 e63bcf4d69618da6ea2822b82a7dc0bb ChangeLog 1394
+MD5 3449717d3acbf215d0402da79a9d1dc9 libgmail-0.1.3.3.ebuild 506
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 6c64a38f1033db7bc35b1506468320ed libgmail-0.1.1.ebuild 504
+MD5 17d62f4f4df6c58ef872e66f116c9a20 files/digest-libgmail-0.1.3.3 67
 MD5 1e62cd3440b1a696b5eae7e3537933f6 files/digest-libgmail-0.1.1 65
