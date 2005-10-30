@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeg2ps
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/ChangeLog,v 1.9 2005/09/13 16:34:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeg2ps/ChangeLog,v 1.10 2005/10/30 15:48:12 grobian Exp $
+
+  30 Oct 2005; Fabian Groffen <grobian@gentoo.org> jpeg2ps-1.9-r1.ebuild:
+  Marked ~ppc-macos (bug #110822)
 
   13 Sep 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/jpeg2ps-1.9-include.diff, jpeg2ps-1.9-r1.ebuild:
