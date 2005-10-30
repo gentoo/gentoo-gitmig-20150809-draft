@@ -1,6 +1,16 @@
-MD5 c102c4514262b5121dc03d71dd96a338 ChangeLog 977
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 814fa40a5bfb10fe697cf92bc87cacba ChangeLog 1076
 MD5 17679febecd68dbfa353f7b58ee2abf4 files/digest-ncpufreqd-1.8 65
 MD5 0c6f8b76f5b7a7fe9053ed06c1917b13 files/digest-ncpufreqd-2.0 65
 MD5 8e68b886362847ceb4918cd9cac53748 metadata.xml 223
 MD5 2b5328357368c15a44a68a1f857e97ab ncpufreqd-1.8.ebuild 732
-MD5 f1a69b43b355ad2db3eb2389d5c161b4 ncpufreqd-2.0.ebuild 665
+MD5 df947d67177a2b05dd6375a4971685b2 ncpufreqd-2.0.ebuild 664
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDZR28wUpWvClEHQoRAqV2AJ9W9QJP0lIvz/e6n4vHjlgA0lsiwQCfYYoO
+H5mx0X/IXGaS/rMJNUBjSmo=
+=Jzpv
+-----END PGP SIGNATURE-----
