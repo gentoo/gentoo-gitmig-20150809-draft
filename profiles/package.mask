@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4632 2005/10/30 18:27:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4633 2005/10/30 18:41:47 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -63,11 +63,6 @@ games-fps/ut2003-data
 # to lock. we have nfc why nor does any dev have the
 # hardware to test.
 =net-wireless/ndiswrapper-1.4
-
-# Diego Pettenò <flameeyes@gentoo.org> (24 Oct 2005)
-# quicktime4linux has too many problems, and it's unportable.
-# Pending removal.
-media-libs/quicktime4linux
 
 # Thomas Matthijs <axxo@gentoo.org> (23 Oct 2005)
 # Preview release
