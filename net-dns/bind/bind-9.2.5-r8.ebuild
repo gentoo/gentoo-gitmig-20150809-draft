@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r8.ebuild,v 1.1 2005/09/30 22:33:25 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r8.ebuild,v 1.2 2005/10/30 01:36:11 voxus Exp $
 
 inherit eutils libtool
 
@@ -25,6 +25,13 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
 
 src_unpack() {
+	use threads && {
+		echo
+		ewarn "If you're in vserver enviroment, you're probably want to"
+		ewarn "disable threads support because of linux capabilities dependency"
+		echo
+	}
+
 	unpack ${A} && cd ${S}
 
 	# Adjusting PATHs in manpages
