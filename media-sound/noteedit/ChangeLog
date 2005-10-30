@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/noteedit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.15 2005/08/04 15:04:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.16 2005/10/30 15:12:41 flameeyes Exp $
+
+*noteedit-2.8.0 (30 Oct 2005)
+
+  30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/noteedit-gcc4.patch, +files/noteedit-2.8.0-qt-3.3.5.patch,
+  +noteedit-2.8.0.ebuild:
+  Updated to version 2.8.0 as per bug #99305 (and masked because it crashes
+  here). Also applied GCC4 patch as per bug #99988.
 
   04 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> noteedit-2.7.4.ebuild:
   Narrowed down kde-meta dependencies.
