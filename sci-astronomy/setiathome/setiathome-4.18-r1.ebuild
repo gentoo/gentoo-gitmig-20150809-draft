@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18.ebuild,v 1.5 2005/08/25 13:56:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/setiathome/setiathome-4.18-r1.ebuild,v 1.1 2005/10/30 13:29:15 cryos Exp $
 
 MY_PN="seti_boinc-client-cvs"
 MY_PV="2005-08-20"
@@ -45,4 +45,6 @@ src_install() {
 
 pkg_postinst() {
 	chown -R boinc:boinc /var/lib/boinc
+	cd /var/lib/boinc/projects/setiathome.berkeley.edu
+	chown -R root:0 setiathome-${PV}.${CHOST} app_info.xml
 }
