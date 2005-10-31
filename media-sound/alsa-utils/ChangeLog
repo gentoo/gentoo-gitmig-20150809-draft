@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.111 2005/10/11 15:37:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.112 2005/10/31 18:39:21 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsasound-1.0.10_rc2, alsa-utils-1.0.10_rc2.ebuild:
+  Don't fail if restoring a card fails. See bug #100911.
 
 *alsa-utils-1.0.10_rc2 (11 Oct 2005)
 

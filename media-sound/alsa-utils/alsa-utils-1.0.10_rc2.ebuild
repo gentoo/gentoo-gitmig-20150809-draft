@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.10_rc2.ebuild,v 1.1 2005/10/11 15:37:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.10_rc2.ebuild,v 1.2 2005/10/31 18:39:21 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -53,7 +53,7 @@ src_install() {
 	newconfd ${FILESDIR}/alsasound.confd alsasound
 	insinto /etc/modules.d
 	newins ${FILESDIR}/alsa-modules.conf-rc alsa
-	doinitd ${FILESDIR}/alsasound
+	newinitd ${FILESDIR}/alsasound-1.0.10_rc2 alsasound
 }
 
 pkg_postinst() {
