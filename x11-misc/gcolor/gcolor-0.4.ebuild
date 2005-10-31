@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/gcolor-0.4.ebuild,v 1.9 2005/10/25 11:52:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/gcolor-0.4.ebuild,v 1.10 2005/10/31 15:31:38 nelchael Exp $
 
 DESCRIPTION="A simple color selector."
 HOMEPAGE="http://gcolor.sourceforge.net/"
@@ -24,5 +24,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc ABOUT-NLS INSTALL README AUTHORS COPYING NEWS ChangeLog
+	dodoc ABOUT-NLS README AUTHORS NEWS ChangeLog
 }

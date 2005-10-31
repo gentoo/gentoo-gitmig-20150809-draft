@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/ChangeLog,v 1.9 2005/10/25 11:52:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor/ChangeLog,v 1.10 2005/10/31 15:31:38 nelchael Exp $
+
+  31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> gcolor-0.4.ebuild:
+  Fixed dodoc not to install COPYING and INSTALL.
 
   25 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> gcolor-0.4.ebuild:
   Fix bug 109228 - wrong GTK depend.
