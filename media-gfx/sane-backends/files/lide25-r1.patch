@@ -1,0 +1,180 @@
+diff -Nur sane-backends-1.0.16/backend/plustek-usb.c sane-backends-lide25v2/backend/plustek-usb.c
+--- sane-backends-1.0.16/backend/plustek-usb.c	2005-07-04 18:59:54.000000000 +0200
++++ sane-backends-lide25v2/backend/plustek-usb.c	2005-10-25 12:19:03.601593864 +0200
+@@ -880,11 +880,13 @@
+ 
+ 	if( si->ImgDef.wDataType == COLOR_256GRAY ) {
+ 
+-		if( !(si->ImgDef.dwFlag & SCANDEF_Adf ) &&
+-		  (dev->usbDev.Caps.OpticDpi.x == 1200 && si->ImgDef.xyDpi.x <= 300)) {
+-			dev->scanning.fGrayFromColor = 2;
+-			si->ImgDef.wDataType = COLOR_TRUE24;
+-			DBG( _DBG_INFO, "* Gray from color set!\n" );
++		if((dev->usbDev.vendor != 0x04A9) && (dev->usbDev.product != 0x2220)) {
++			if( !(si->ImgDef.dwFlag & SCANDEF_Adf ) &&
++			  (dev->usbDev.Caps.OpticDpi.x==1200 && si->ImgDef.xyDpi.x<=300)) {
++				dev->scanning.fGrayFromColor = 2;
++				si->ImgDef.wDataType = COLOR_TRUE24;
++				DBG( _DBG_INFO, "* Gray from color set!\n" );
++			}
+ 		}
+ 
+ 		if( caps->workaroundFlag & _WAF_GRAY_FROM_COLOR ) {
+@@ -1094,7 +1096,8 @@
+ 	/* the CanoScan CIS devices need special handling... */
+ 	if((dev->usbDev.vendor == 0x04A9) &&    
+ 		(dev->usbDev.product==0x2206 || dev->usbDev.product==0x2207 ||
+-		 dev->usbDev.product==0x220D || dev->usbDev.product==0x220E)) {
++		 dev->usbDev.product==0x220D || dev->usbDev.product==0x220E ||
++		 dev->usbDev.product==0x2220)) {
+ 		use_alt_cal = SANE_TRUE;
+ 		
+ 	} else {
+diff -Nur sane-backends-1.0.16/backend/plustek-usbdevs.c sane-backends-lide25v2/backend/plustek-usbdevs.c
+--- sane-backends-1.0.16/backend/plustek-usbdevs.c	2005-07-04 18:59:54.000000000 +0200
++++ sane-backends-lide25v2/backend/plustek-usbdevs.c	2005-10-25 12:19:03.598594320 +0200
+@@ -702,6 +702,24 @@
+ 	_WAF_MISC_IO_LAMPS | _WAF_BLACKFINE, _NO_MIO
+ };
+ 
++/* Canon LiDE25
++ */
++static DCapsDef Cap0x04A9_0x2220 =
++{
++	{{ 0, 100}, 50, 10, {2550, 3508}, {75, 75}, COLOR_BW },
++	{{ 0,   0},  0,  0, {0, 0}, { 0, 0 }, 0 },
++	{{ 0,   0},  0,  0, {0, 0}, { 0, 0 }, 0 },
++	{{ 0,   0},  0,  0, {0, 0}, { 0, 0 }, 0 },
++	{1200, 1200},
++	0,
++	SENSORORDER_rgb,
++	16,                 /* sensor distance                         */
++	3,                  /* number of buttons                       */
++	kCIS1240,           /* use default settings during calibration */
++	0,                  /* not used here...                        */
++	_WAF_MISC_IO_LAMPS | _WAF_BLACKFINE, _NO_MIO
++};
++
+ /******************* additional Hardware descriptions ************************/
+ 
+ /** U24, UT12 and UT16
+@@ -2279,6 +2297,75 @@
+ 	2.0
+ };
+ 
++/** Canon LiDE25 */
++static HWDef Hw0x04A9_0x2220 =
++{
++	0.70,   /* dMaxMotorSpeed (Max_Speed)                     */
++	0.25,   /* dMaxMoveSpeed (Max_Speed)                      */
++	0.85,   /* dHighSpeed                                     */
++	100,    /* wIntegrationTimeLowLamp                        */
++	100,    /* wIntegrationTimeHighLamp                       */
++	1200,   /* wMotorDpi (Full step DPI)                      */
++	512,    /* wRAMSize (KB)                                  */
++	3.75,   /* dMinIntegrationTimeLowres (ms)                 */
++	5.75,   /* dMinIntegrationTimeHighres (ms)                */
++	   0,   /* wGreenPWMDutyCycleLow (reg 0x2a + 0x2b)        */
++	   0,   /* wGreenPWMDutyCycleHigh (reg 0x2a + 0x2b)       */
++
++	0x11,   /* bSensorConfiguration (0x0b)                    */
++	0x4d,   /* sensor control settings (reg 0x0c)             */
++	0x2f,   /* sensor control settings (reg 0x0d)             */
++	0x00,   /* sensor control settings (reg 0x0e)             */
++
++	{0x00, 0x00, 0x04, 0x05, 0x06, 0x07, 0x00, 0x00, 0x00, 0x07},
++	       /* mono (reg 0x0f to 0x18)                        */
++
++	{0x00, 0x00, 0x04, 0x05, 0x06, 0x07, 0x00, 0x00, 0x00, 0x07},
++	      /* color (reg 0x0f to 0x18)                       */
++
++	(_BLUE_CH | _ONE_CH_COLOR), /* bReg_0x26 color mode       */
++
++	0x00,   /* bReg 0x27 color mode                           */
++	2,      /* bReg 0x29 illumination mode                    */
++
++	{ 3,  0,    0, 50, 3700,  0,    0 },
++	{ 2, 50, 5600, 50, 7100, 50, 4600 },
++
++	1,      /* StepperPhaseCorrection (reg 0x1a + 0x1b)       */
++	0,      /* bOpticBlackStart (reg 0x1c)                    */
++	0,      /* bOpticBlackEnd (reg 0x1d)                      */
++	0x7f,   /* wActivePixelsStart (reg 0x1e + 0x1f)           */
++	10559,  /* wLineEnd (reg 0x20 + 0x21)                     */
++
++	50,     /* red lamp on    (reg 0x2c + 0x2d)               */
++	5600,   /* red lamp off   (reg 0x2e + 0x2f)               */
++	50,     /* green lamp on  (reg 0x30 + 0x31)               */
++	7100,   /* green lamp off (reg 0x32 + 0x33)               */
++	50,     /* blue lamp on   (reg 0x34 + 0x35)               */
++	4600,   /* blue lamp off  (reg 0x36 + 0x37)               */
++
++	3,      /* stepper motor control (reg 0x45)               */
++	0,      /* wStepsAfterPaperSensor2 (reg 0x4c + 0x4d)      */
++	0x20,   /* steps to reverse when buffer is full reg 0x50) */
++	0xfc,   /* acceleration profile (reg 0x51)                */
++	0,      /* lines to process (reg 0x54)                    */
++	0x0f,   /* kickstart (reg 0x55)                           */
++	0x08,   /* pwm freq (reg 0x56)                            */
++	0x1f,   /* pwm duty cycle (reg 0x57)                      */
++
++	0x04,   /* Paper sense (reg 0x58)                         */
++
++	0x66,   /* misc io12 (reg 0x59)                           */
++	0x16,   /* misc io34 (reg 0x5a)                           */
++	0x91,   /* misc io56 (reg 0x5b)                           */
++	0x01,   /* test mode ADC Output CODE MSB (reg 0x5c)       */
++	0,      /* test mode ADC Output CODE LSB (reg 0x5d)       */
++	0,      /* test mode (reg 0x5e)                           */
++	_LM9833,
++	MODEL_CANON_LIDE25,
++	2.0
++};
++
+ /******************** all available combinations *****************************/
+ 
+ /** here we have all supported devices and their settings...
+@@ -2348,6 +2435,7 @@
+ 	{"0x04A9-0x2208",   &Cap0x04A9_0x2208, &Hw0x04A9_0x2208, "D660U"       },
+ 	{"0x04A9-0x220D",   &Cap0x04A9_0x220D, &Hw0x04A9_0x220D, "N670U/N676U/LiDE20" },
+ 	{"0x04A9-0x220E",   &Cap0x04A9_0x220E, &Hw0x04A9_0x220E, "N1240U/LiDE30"      },
++	{"0x04A9-0x2220",   &Cap0x04A9_0x2220, &Hw0x04A9_0x2220, "LiDE25"      },
+ 
+ 	/* Please add other devices here...
+ 	 * The first entry is a string, composed out of the vendor and product id,
+@@ -2546,7 +2634,23 @@
+ 		/* Gray mode MCLK settings */
+ 		{ 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0,  6.0,  6.0,  6.0 },
+ 		{ 6.5, 6.5, 6.5, 7.0, 8.0, 8.0, 8.0, 10.0, 10.0, 10.0 }
+-	}
++	},
++
++	{ MODEL_CANON_LIDE25, 8, 51, 9,
++		/* Motor settings (PWM and PWM_Duty) */
++		/* <=75dpi       <=100dpi      <=150dpi      <=200dpi      <=300dpi  */
++		{{ 8, 31, 1 }, { 8, 31, 1 }, { 8, 31, 1 }, { 8, 31, 1 }, { 8, 31, 1 },
++
++		/* <=400dpi     <=600dpi      <=800dpi      <=1200dpi     <=2400dpi */
++		{ 8, 31, 1 }, { 8, 31, 1 }, { 8, 31, 1 }, { 8, 31, 1 }, { 8, 31, 1 }},
++		/* Color mode MCLK settings */
++		{ 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0 },
++		{ 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 6.0, 6.0, 6.0 },
++		/* Gray mode MCLK settings */
++		{ 8.5, 7.0, 4.0, 4.0, 2.5, 2.5, 2.5,  2.5,  2.5,  2.5 },
++		{ 6.5, 6.5, 6.0, 6.0, 6.0, 6.0, 8.0, 12.0, 12.0, 12.0 }
++ 	}
++
+ };
+ 
+ /* END PLUSTEK-USBDEVS.C ....................................................*/
+diff -Nur sane-backends-1.0.16/backend/plustek-usb.h sane-backends-lide25v2/backend/plustek-usb.h
+--- sane-backends-1.0.16/backend/plustek-usb.h	2005-07-04 18:59:54.000000000 +0200
++++ sane-backends-lide25v2/backend/plustek-usb.h	2005-10-25 12:18:56.802627464 +0200
+@@ -278,6 +278,7 @@
+ 	MODEL_CANON600 ,      /**< for CanoScan 600dpi models   */
+ 	MODEL_CANON1200,      /**< for Canon 1200dpi models     */
+ 	MODEL_CANONCCD1200,   /**< for Canon CCD 1200dpi models */
++	MODEL_CANON_LIDE25,   /**< for CanoScan LiDE25          */
+ 	MODEL_UMAX,           /**< for UMAX 3400/3450           */
+ 	MODEL_UMAX1200,       /**< for UMAX 5400                */
+ 	MODEL_LAST
