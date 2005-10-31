@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ee9e38d4ccab5d8b947be6fe0407f028 taglib-1.4.ebuild 689
-MD5 755a55d67a07be6b2d0c0d1338dbf0f0 taglib-1.3.1.ebuild 903
-MD5 d1cc198d7de766a984c4adaabc987d04 ChangeLog 4627
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 f11a182a67ec0c3fa83eb1881d574c2f taglib-1.3.1-r2.ebuild 966
-MD5 103dd47ff1744397288b44834902e16c files/taglib-1.3.1-memleak-fix2.patch 2514
+MD5 c7466b8fb2b9b743ce216f0283d04666 ChangeLog 4724
+MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1 64
 MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1-r2 64
 MD5 3d477817a122fa21b6d9b051276777ba files/digest-taglib-1.4 62
-MD5 cc8a58ea8028f3539fcee148baeffcc1 files/digest-taglib-1.3.1 64
+MD5 103dd47ff1744397288b44834902e16c files/taglib-1.3.1-memleak-fix2.patch 2514
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+MD5 f11a182a67ec0c3fa83eb1881d574c2f taglib-1.3.1-r2.ebuild 966
+MD5 755a55d67a07be6b2d0c0d1338dbf0f0 taglib-1.3.1.ebuild 903
+MD5 9cd32e7631f6864581095eedb700dd41 taglib-1.4.ebuild 685
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDXS08KRy60XGEcJIRAiVyAJ4uLj1c1+1jQOXA8pdyt8t/0UNRwgCcDoUI
-d0f4vuWAlaYWizDcMWmWcWA=
-=ACLd
+iD8DBQFDZckGKf2g/qXtneoRAsM8AJ9GPhWlTXFG0wqmAOpE6AYkuBTUeACfdAJR
+cc+cb1oya1Lg/AS23+E/c+g=
+=t1hS
 -----END PGP SIGNATURE-----
