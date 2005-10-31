@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.39 2005/10/30 23:37:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.40 2005/10/31 20:40:25 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/configure-wx_config.patch,
+  -files/mkvtoolnix-configure-checks.patch, -mkvtoolnix-0.9.5-r1.ebuild,
+  -mkvtoolnix-0.9.7-r1.ebuild, -mkvtoolnix-1.4.2.ebuild,
+  -mkvtoolnix-1.4.2-r1.ebuild, -mkvtoolnix-1.5.0.ebuild:
+  Cleanup old versions of mkvtoolnix.
 
 *mkvtoolnix-1.6.0 (30 Oct 2005)
 

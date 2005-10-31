@@ -1,30 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9c6426de40e82e155718d383f8bcc20a ChangeLog 6470
-MD5 c5f6f35c4f302986ebe5e4e8741554c9 files/configure-wx_config.patch 1285
-MD5 2884e660a170f43abfa8d7634cebec36 files/digest-mkvtoolnix-0.9.5-r1 69
-MD5 098605d9da74ba7e766f45d74b6705ff files/digest-mkvtoolnix-0.9.7-r1 69
+MD5 d5ac83cd787bf194ef9e5feb0881fe71 ChangeLog 6785
 MD5 ad428bfa241077dcaf0763b2e5a1462a files/digest-mkvtoolnix-1.0.1 69
-MD5 f54516810bdfda76c7859d328889f01f files/digest-mkvtoolnix-1.4.2 69
-MD5 59e0afdc0467751917489792dcc4fab8 files/digest-mkvtoolnix-1.4.2-r1 147
-MD5 476efe37d5da5fcfa589354b4d5b8ee7 files/digest-mkvtoolnix-1.5.0 69
 MD5 dc82e2c687345769c53a013331f2abb3 files/digest-mkvtoolnix-1.5.5 69
 MD5 91ac5c9285fd2276b87d33e01746488a files/digest-mkvtoolnix-1.6.0 69
-MD5 e7fad70f0521de5b83e98ff6955408a7 files/mkvtoolnix-configure-checks.patch 1092
 MD5 29655c309de058bf3e45772adc64c83e metadata.xml 253
-MD5 240c69ba609af9182deed35a0ba20453 mkvtoolnix-0.9.5-r1.ebuild 1274
-MD5 781db6142cda972ade21b1f81f406e61 mkvtoolnix-0.9.7-r1.ebuild 1187
 MD5 e5331199a530acaf9e6b060be9ece0cc mkvtoolnix-1.0.1.ebuild 1078
-MD5 cd9c267112d63ce7fe68d16e8342464f mkvtoolnix-1.4.2-r1.ebuild 1733
-MD5 a36ff9cb50b4631ffe840060d80d168c mkvtoolnix-1.4.2.ebuild 1609
-MD5 4e4b8d4f8bfbd8fa31ab439c5b7ca6e8 mkvtoolnix-1.5.0.ebuild 1481
 MD5 0a5fc5681b67e01a3facaa9e2fd4877a mkvtoolnix-1.5.5.ebuild 1481
 MD5 63619e91f73daaecfcdf1412cff70352 mkvtoolnix-1.6.0.ebuild 1481
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDZVlBj5H05b2HAEkRAkTIAJ4uM8NwCZZnY/vfKv8PMLcSAJvdvACeKHfc
-qvLG7ftnWqF0/njDr7pWZ7s=
-=aYkL
+iD8DBQFDZoFLj5H05b2HAEkRAnGdAJ9qmJ63s+2CZw6ddT6+di0hdg5BAACfQUw4
+XAHmShLPqFjvCdKEpGW5aOI=
+=z6IK
 -----END PGP SIGNATURE-----
