@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ad5602deac93b6f0c3d2ebb97da99180 ChangeLog 597
-MD5 39fca4287af076a1128d0745f4e099a9 sub2srt-0.5.3.ebuild 540
-MD5 9d4874084aa6769df917a01037fe241c metadata.xml 160
+MD5 4ea5bcc187c66c5287d4bd0e99348f68 ChangeLog 694
 MD5 6de78660587399a7b85d59c632c2e67f files/digest-sub2srt-0.5.3 64
+MD5 9d4874084aa6769df917a01037fe241c metadata.xml 160
+MD5 abe8a8232dcb2eb0473c943acd89976a sub2srt-0.5.3.ebuild 537
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGi9aj5H05b2HAEkRAgKqAJ9fw+leIxwysT/dH+vLf7YdX9H+lgCfVpZM
-+fBCg/sFCdWeZ90pumdnwvg=
-=+/TI
+iD8DBQFDZXZuCRZPokWLroQRAvaPAKDH2TGJoNAYBrXCqFVxTSgzkBaLVwCfbvI8
+KKs/Bzd81ty9l6gAD7qD3qc=
+=RRnt
 -----END PGP SIGNATURE-----
