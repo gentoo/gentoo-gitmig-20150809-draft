@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 77abab59b42e08b33c749cdb4825f5f4 ChangeLog 510
+MD5 9212e00747b601f77481f6365feaca89 ChangeLog 646
 MD5 0ba11b58a42e84e42c6e96cffc54b2c5 apetag-1.5.ebuild 789
-MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
+MD5 08d9fbfbc0c0d96b6372f7612b69b256 apetag-1.7.ebuild 803
 MD5 e8bc9fc658d549f4fd8542f071ebdb92 files/digest-apetag-1.5 61
+MD5 18138b31536d6dae52e6a962e063ac13 files/digest-apetag-1.7 61
+MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFBZQN9ArHZZzCEUG0RAgv9AJ9VKIh3GO8GreKsn87egkxsmT5jzwCfVyFD
-LXhluVjzgEg2t+5N3/wLoUU=
-=aQr1
+iD8DBQFDZlEaj5H05b2HAEkRAihMAJ9IItnUbiwyfaz91bxRkJQKcsg+wwCferBS
+ZTCqQIDSTokzZdmXBv9OYok=
+=LokO
 -----END PGP SIGNATURE-----
