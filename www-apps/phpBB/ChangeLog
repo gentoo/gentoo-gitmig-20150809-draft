@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.19 2005/10/31 13:55:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.20 2005/10/31 19:04:36 rl03 Exp $
+
+  31 Oct 2005; Renat Lumpau <rl03@gentoo.org> files/digest-phpBB-2.0.18,
+  Manifest:
+  Recommiting digest as UPSTREAM updated tarball
 
 *phpBB-2.0.18 (31 Oct 2005)
 
