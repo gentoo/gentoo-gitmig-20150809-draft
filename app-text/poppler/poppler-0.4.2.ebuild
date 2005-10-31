@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.2.ebuild,v 1.1 2005/09/28 15:12:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.4.2.ebuild,v 1.2 2005/10/31 16:39:50 dang Exp $
 
 inherit eutils autotools
 
@@ -11,12 +11,12 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
-IUSE="gtk jpeg qt zlib"
-# Cairo is in package.mask
+IUSE="gtk jpeg qt zlib cairo"
 
 RDEPEND=">=media-libs/freetype-2.1.8
 	media-libs/fontconfig
 	virtual/ghostscript
+	cairo? ( >=x11-libs/cairo-0.5 )
 	gtk? ( >=x11-libs/gtk+-2.4 )
 	qt? ( =x11-libs/qt-3* )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -35,7 +35,7 @@ src_unpack(){
 
 src_compile() {
 	econf --disable-poppler-qt4 --enable-opi \
-		--disable-cairo-output \
+		$(use_enable cairo cairo-output) \
 		$(use_enable jpeg libjpeg) \
 		$(use_enable zlib) \
 		$(use_enable gtk poppler-glib) \
