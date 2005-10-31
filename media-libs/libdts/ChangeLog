@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.22 2005/10/31 15:58:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.23 2005/10/31 16:07:43 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> -libdts-0.0.2.ebuild:
+  Remove old version.
 
   31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
   Use eautoreconf instead of manual call to the various tools.

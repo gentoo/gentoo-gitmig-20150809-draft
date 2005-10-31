@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.17 2005/10/31 16:02:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.18 2005/10/31 16:04:47 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> -libcaca-0.9.ebuild:
+  Remove old version.
 
   31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> libcaca-0.9-r1.ebuild:
   Fixed DEPEND/RDEPEND to avoid having doxygen in RDEPEND. Use eautoreconf
