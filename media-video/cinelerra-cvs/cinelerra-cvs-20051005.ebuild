@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20051005.ebuild,v 1.1 2005/10/06 14:00:08 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20051005.ebuild,v 1.2 2005/10/31 14:25:18 lu_zero Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -26,7 +26,7 @@ RDEPEND="!media-video/cinelerra
 	x86? ( media-libs/x264-svn )
 	media-libs/libiec61883
 	media-video/mjpegtools
-	>=sys-libs/libavc1394-0.4.1
+	>=sys-libs/libavc1394-0.5.0
 	>=sys-libs/libraw1394-0.9.0
 	esd? ( >=media-sound/esound-0.2.34 )
 	>=media-libs/openexr-1.2.2
