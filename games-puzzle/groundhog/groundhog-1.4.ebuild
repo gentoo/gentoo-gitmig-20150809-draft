@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.11 2004/12/28 15:55:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.12 2005/10/31 08:54:59 mr_bones_ Exp $
 
 inherit eutils gnuconfig games
 
@@ -10,7 +10,7 @@ SRC_URI="http://home-2.consunet.nl/~cb007736/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE="nls"
 
 DEPEND="virtual/x11
@@ -19,8 +19,8 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${PV}-gcc3.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-gcc3.patch
 }
 
 src_compile() {
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README NEWS AUTHORS TODO Changelog
 	prepgamesdirs
 }

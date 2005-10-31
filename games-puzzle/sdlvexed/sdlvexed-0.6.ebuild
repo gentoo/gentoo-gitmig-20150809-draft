@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.6.ebuild,v 1.3 2004/11/22 12:52:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.6.ebuild,v 1.4 2005/10/31 08:52:41 mr_bones_ Exp $
 
 inherit games
 
@@ -10,19 +10,16 @@ SRC_URI="http://core.segfault.pl/~krzynio/vexed/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	>=dev-lang/perl-5.6.1
+DEPEND=">=dev-lang/perl-5.6.1
 	>=media-libs/sdl-mixer-1.2.3
 	>=dev-perl/sdl-perl-1.19.0"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	mv vexed sdlvexed
 	sed -i \
 		-e "/PREFIX=/s:\.:${GAMES_DATADIR}/${PN}:" sdlvexed \
@@ -32,8 +29,8 @@ src_unpack() {
 
 src_install() {
 	dogamesbin sdlvexed || die "dogamesbin failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -R {gfx,levelpacks} "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r {gfx,levelpacks} || die "doins failed"
 	dodoc CHANGELOG README
 	prepgamesdirs
 }
