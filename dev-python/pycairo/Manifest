@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7102be86f2472050d7d508570e1abcc3 ChangeLog 967
 MD5 197f8f1d3b3932ad729ffd62de589135 files/digest-pycairo-0.1.4 65
 MD5 58ef26ed3b878a1c07a7736189bac202 files/digest-pycairo-0.9.0 65
 MD5 73ba9acd24345470457468c6cee45490 metadata.xml 160
 MD5 155eb7cb92d1f8892b5d24a2e47ef62c pycairo-0.1.4.ebuild 1003
 MD5 897725a123a2e8d45c1eab850f68253a pycairo-0.9.0.ebuild 1033
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZdRrKf2g/qXtneoRAhpvAJ9P9bsnc3t4GTsMjArRMRDvdqXrWgCfTEAt
+m2p4AqKH8O8ExHmo2LxMH4I=
+=dvHt
+-----END PGP SIGNATURE-----
