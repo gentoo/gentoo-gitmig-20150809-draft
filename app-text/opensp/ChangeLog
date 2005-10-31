@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.26 2005/10/10 06:54:43 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.27 2005/10/31 10:37:45 leonardop Exp $
+
+  31 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> opensp-1.5.1.ebuild:
+  Use the same CFLAGS filters from openjade to avoid obscure bugs (bug #100828).
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org> opensp-1.5.1.ebuild:
   Stable on mips.
