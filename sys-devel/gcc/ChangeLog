@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.461 2005/10/31 00:33:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.462 2005/10/31 21:25:04 kloeri Exp $
+
+  31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> gcc-3.4.4-r1.ebuild:
+  Stable on alpha.
 
   31 Oct 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.2-r1.ebuild:
   Adding 28_all_gcc4-pr19520.patch to GENTOO_PATCH_EXCLUDE due to it causing
