@@ -1,8 +1,8 @@
 # Copyright 2005-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.3.2.ebuild,v 1.1 2005/08/22 16:31:29 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.3.2.ebuild,v 1.2 2005/10/31 09:08:39 pbienst Exp $
 
-inherit distutils
+inherit distutils fortran
 
 MY_P="SciPy_complete-${PV}"
 SRC_URI="http://www.scipy.org/download/scipy/src/${MY_P}.tar.gz"
@@ -14,6 +14,8 @@ SLOT="0"
 IUSE="fftw wxwindows"
 KEYWORDS="~x86"
 S="${WORKDIR}/${MY_P}"
+
+FORTAN="g77"
 
 DEPEND=">=dev-lang/python-2.3.3
 	>=dev-python/numeric-21.0
@@ -32,11 +34,6 @@ RDEPEND=">=dev-lang/python-2.3.3
 	wxwindows? ( >=dev-python/wxpython-2.4 )"
 
 src_unpack() {
-	if [ -z `which g77` ]; then
-		eerror "No Fortran compiler found on the system!"
-		eerror "Please add fortran to your USE flags and reemerge gcc!"
-		die
-	fi
 	unpack ${A} || die
 	cd ${S}
 	epatch ${FILESDIR}/system_info.diff
