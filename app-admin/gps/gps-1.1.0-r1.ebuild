@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0-r1.ebuild,v 1.8 2005/08/25 17:41:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0-r1.ebuild,v 1.9 2005/10/31 13:06:36 nelchael Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_install() {
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/rgpsp
 
-	dodoc TODO README* CHANGELOG INSTALL
+	dodoc TODO README* CHANGELOG
 
 	doman rgpsp/rgpsp.1
 	doman gps.1x
