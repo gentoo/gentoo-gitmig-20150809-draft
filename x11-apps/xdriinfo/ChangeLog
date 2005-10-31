@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xdriinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.3 2005/10/20 00:45:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.4 2005/10/31 17:42:41 spyderous Exp $
+
+  31 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xdriinfo-0.99.0_pre20050908.ebuild:
+  Pull old versions.
 
 *xdriinfo-0.99.1 (20 Oct 2005)
 
