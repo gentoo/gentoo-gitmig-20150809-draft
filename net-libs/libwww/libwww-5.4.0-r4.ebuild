@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r4.ebuild,v 1.9 2005/10/30 23:06:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r4.ebuild,v 1.10 2005/10/31 11:15:23 leonardop Exp $
 
 inherit eutils multilib
 
@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc-macos ~ppc64 ~s390 ~sh sparc x86"
 IUSE="mysql ssl"
 
-RDEPEND="dev-lang/perl
-	>=sys-libs/zlib-1.1.4
+RDEPEND=">=sys-libs/zlib-1.1.4
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
-DEPEND="!dev-libs/9libs
+DEPEND="${RDEPEND}
+	!dev-libs/9libs
 	>=sys-devel/autoconf-2.13
-	${RDEPEND}"
+	dev-lang/perl"
 
 S=${WORKDIR}/${MY_P}
 

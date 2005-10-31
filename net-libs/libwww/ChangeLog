@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.45 2005/10/30 23:06:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.46 2005/10/31 11:15:23 leonardop Exp $
+
+  31 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  libwww-5.4.0-r4.ebuild:
+  Moved perl dependency from RDEPEND to DEPEND (bug #101073).
 
   30 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> libwww-5.4.0-r4.ebuild:
   Stable on ia64.
