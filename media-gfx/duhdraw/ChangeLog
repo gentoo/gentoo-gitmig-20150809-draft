@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/duhdraw
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.7 2005/06/05 12:06:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.8 2005/10/31 18:42:32 grobian Exp $
+
+  31 Oct 2005; Fabian Groffen <grobian@gentoo.org>
+  +files/duhdraw-2.8.12-macos.patch, duhdraw-2.8.12.ebuild:
+  Adding a small patch to allow compilation on OSX.  Marked ~ppc-macos (bug
+  #110946)
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> duhdraw-2.8.12.ebuild:
   Stable on ppc.

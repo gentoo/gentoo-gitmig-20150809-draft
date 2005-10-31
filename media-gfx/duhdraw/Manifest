@@ -1,3 +1,4 @@
-MD5 1612b1aa50795f202449e68a6c904264 duhdraw-2.8.12.ebuild 624
-MD5 e14ff7519258b601bccace6abf9a7417 ChangeLog 803
+MD5 5702c3b2740e60c1c92047c8f1f42cb4 duhdraw-2.8.12.ebuild 715
+MD5 1a41ca3bb299a7dae1f7ecac9c3daa74 ChangeLog 1003
+MD5 60e17777f9055fb9661ea67f3844b90a files/duhdraw-2.8.12-macos.patch 325
 MD5 f5c613c6ba0e95bfbc2e828b96191f50 files/digest-duhdraw-2.8.12 65
