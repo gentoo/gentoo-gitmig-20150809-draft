@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/wmapm-3.1-r1.ebuild,v 1.10 2004/06/24 23:04:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmapm/wmapm-3.1-r1.ebuild,v 1.11 2005/10/31 13:35:48 nelchael Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}/${PN}
@@ -20,5 +20,5 @@ src_install () {
 	doman wmapm.1
 
 	cd ..
-	dodoc BUGS CHANGES COPYING HINTS INSTALL README TODO
+	dodoc BUGS CHANGES HINTS README TODO
 }
