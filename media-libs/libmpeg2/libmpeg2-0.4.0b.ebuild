@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.24 2005/07/02 13:37:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.25 2005/10/31 16:34:05 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 DESCRIPTION="library for decoding mpeg-2 and mpeg-1 video"
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="sdl X"
 
-DEPEND="virtual/libc
-	sdl? ( media-libs/libsdl )
+DEPEND="sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
 
 S="${WORKDIR}/${MY_P/b/}"
@@ -26,10 +25,6 @@ src_unpack() {
 
 	use alpha && append-flags -fPIC
 
-	# Resolves bug 73224.
-	# <slarti@gentoo.org> Dec 2004
-	use amd64 && append-flags -fPIC
-
 	# Fix a compilation-error with gcc 3.4. Bug #51964.
 	epatch "${FILESDIR}/gcc34-inline-fix-${PV}.diff"
 	epatch "${FILESDIR}/altivec-fix-${PV}.diff"
@@ -38,8 +33,9 @@ src_unpack() {
 		-e '/-mcpu/d' \
 		configure.in \
 		|| die "sed configure failed"
-	aclocal && automake && libtoolize --copy --force && autoconf \
-		|| die "autotools failed"
+	
+	eautoreconf
+	elibtoolize
 }
 
 src_compile() {
