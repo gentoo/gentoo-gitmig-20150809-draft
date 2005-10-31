@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.116 2005/10/29 11:22:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.117 2005/10/31 03:54:18 weeve Exp $
+
+  31 Oct 2005; Jason Wever <weeve@gentoo.org> gnumeric-1.6.0.ebuild:
+  Added ~sparc keyword wrt bug #110767.
 
   29 Oct 2005; Luca Barbato <lu_zero@gentoo.org> gnumeric-1.6.0.ebuild:
   Marked ~ppc
