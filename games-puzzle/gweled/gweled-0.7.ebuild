@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.7.ebuild,v 1.1 2005/10/04 20:07:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.7.ebuild,v 1.2 2005/10/31 08:40:31 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="http://sebdelestaing.free.fr/gweled/Release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2
