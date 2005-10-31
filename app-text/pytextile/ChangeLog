@@ -1,0 +1,11 @@
+# ChangeLog for app-text/pytextile
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.1 2005/10/31 23:22:47 dju Exp $
+
+*pytextile-2.0.10 (31 Oct 2005)
+
+  31 Oct 2005; Julien Allanos <dju@gentoo.org> +metadata.xml,
+  +pytextile-2.0.10.ebuild:
+  New ebuild, closes bug #92151.
+  Thanks to Tyson Burghardt <tysonburghardt@sbcglobal.net> for initial input.
+
