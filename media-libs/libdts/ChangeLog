@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.21 2005/10/15 19:01:09 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.22 2005/10/31 15:58:11 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> libdts-0.0.2-r3.ebuild:
+  Use eautoreconf instead of manual call to the various tools.
 
   15 Oct 2005; Hardave Riar <hardave@gentoo.org> libdts-0.0.2-r3.ebuild:
   Keyworded ~mips.
