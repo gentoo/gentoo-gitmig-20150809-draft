@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.20 2005/09/19 22:21:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.21 2005/10/31 09:13:44 pbienst Exp $
+
+*blitz-0.9 (31 Oct 2005)
+
+  31 Oct 2005; Peter Bienstman <pbienst@gentoo.org> +blitz-0.9.ebuild:
+  New version.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
