@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lintar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lintar/ChangeLog,v 1.1 2005/10/01 15:57:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lintar/ChangeLog,v 1.2 2005/10/31 16:28:26 nelchael Exp $
+
+  31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> lintar-0.6.2.ebuild:
+  Stable on x86.
 
 *lintar-0.6.2 (01 Oct 2005)
 
