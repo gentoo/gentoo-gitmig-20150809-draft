@@ -1,10 +1,14 @@
-MD5 f0fb7299b877bae8ef37d36916edff11 luola-1.2.7.ebuild 1415
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 cfc1ee4fbbccb77c3b25a5f35aee1ab5 luola-1.2.9.ebuild 1294
-MD5 c4d23170406fd4ddf25699c615e64470 luola-1.2.6.ebuild 1412
-MD5 fafd778822b1102426125d4406cb491f luola-1.3.0.ebuild 1179
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bf3e9436e57dcd8d070dc459946b845a ChangeLog 828
-MD5 6bd42fd1f0bdcb094673b0dda831f77e files/digest-luola-1.2.6 246
-MD5 f30f67bc307bddebf94a910e0950c97f files/digest-luola-1.2.9 186
 MD5 344365fbd8da2ab911242176e445161d files/digest-luola-1.3.0 191
-MD5 fa94eebc0b8da37068e8ac21a3161084 files/digest-luola-1.2.7 246
+MD5 2c9cb0d29aa03853501249d362919c83 luola-1.3.0.ebuild 1152
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZaOagIKl8Uu19MoRAtXiAJsG090uhmAN9AAjSEyi3+YdVkMV5ACfQJgq
+A8CVPkuzehgyMADLvBNx8Pg=
+=z2bj
+-----END PGP SIGNATURE-----
