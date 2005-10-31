@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.14 2005/10/30 17:38:03 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.15 2005/10/31 17:46:43 spyderous Exp $
+
+  31 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -files/fix-xkeysymdb-location.patch, -libX11-0.99.0.ebuild,
+  -libX11-0.99.0-r1.ebuild, -libX11-0.99.1_pre20050905.ebuild:
+  Pull old versions.
 
   30 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   libX11-0.99.2.ebuild:
