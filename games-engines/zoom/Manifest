@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 3f4886fe89f04b289457b7ea8cd97148 zoom-1.0.4a.ebuild 934
 MD5 39d0f8b59197d9e6f4eb340c8de83ad9 zoom-1.0.3.ebuild 850
-MD5 d4163610973dbfed80cc689065e80f4d ChangeLog 1101
+MD5 294475558f973ccbcdaf88c96e09c269 ChangeLog 1225
+MD5 1e15861ace990280699817e98aeb64bb files/digest-zoom-1.0.4a 64
 MD5 3a375c20ba41bed38aa1b2b1892ec41b files/digest-zoom-1.0.3 63
