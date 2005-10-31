@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.3 2005/10/31 01:07:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.4 2005/10/31 10:33:45 leonardop Exp $
+
+  31 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> goffice-0.1.0.ebuild:
+  Don't install COPYING and INSTALL documents. Moved G2CONF declaration to
+  pkg_setup(). Misc. clean-ups.
 
   31 Oct 2005; Jason Wever <weeve@gentoo.org> goffice-0.1.0.ebuild:
   Added ~sparc keyword wrt bug #110858.
