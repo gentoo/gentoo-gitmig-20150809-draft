@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.63 2005/09/16 21:27:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.64 2005/10/31 13:12:37 nelchael Exp $
+
+  31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> -gentoo-0.11.51.ebuild,
+  gentoo-0.11.54.ebuild, gentoo-0.11.55.ebuild:
+  Fixed dodoc not to install INSTALL. Removed old 0.11.51.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups

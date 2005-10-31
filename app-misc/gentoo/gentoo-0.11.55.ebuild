@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.55.ebuild,v 1.6 2005/09/09 17:36:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.55.ebuild,v 1.7 2005/10/31 13:12:37 nelchael Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -35,7 +35,7 @@ src_install() {
 		doins ${FILESDIR}/gentoo.desktop
 	fi
 
-	dodoc AUTHORS BUGS CONFIG-CHANGES CREDITS ChangeLog INSTALL \
+	dodoc AUTHORS BUGS CONFIG-CHANGES CREDITS ChangeLog \
 		NEWS ONEWS README* TODO
 	dodoc docs/FAQ docs/menus.txt
 
