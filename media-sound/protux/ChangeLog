@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/protux
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.18 2005/09/04 10:58:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/ChangeLog,v 1.19 2005/10/31 11:13:44 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> protux-0.20.1.ebuild,
+  protux-0.20.2.ebuild:
+  Cleanup of econf call, without assuming GNU ld.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> protux-0.20.1.ebuild,
   protux-0.20.2.ebuild:

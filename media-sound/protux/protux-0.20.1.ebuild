@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.1.ebuild,v 1.7 2005/09/04 10:58:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.20.1.ebuild,v 1.8 2005/10/31 11:13:44 flameeyes Exp $
 
 inherit eutils kde-functions
 
@@ -28,10 +28,7 @@ src_unpack() {
 
 src_compile() {
 	export QT_MOC=${QTDIR}/bin/moc
-	local myconf
-	myconf="--with-gnu-ld"
-	use static || myconf="${myconf} --enable-static=no"
-	econf ${myconf} || die "configure failed"
+	econf $(use_enable static) || die "configure failed"
 	emake || die
 }
 

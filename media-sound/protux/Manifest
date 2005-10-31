@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 241b1a7e098b4e3027fc55b1f15a026f ChangeLog 2442
-MD5 dc993a56aa285ea3598f5e64fe110d75 protux-0.20.2.ebuild 946
-MD5 8b1b6dfc4b9756a910c06f78769d4b7d protux-0.20.1.ebuild 922
-MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+MD5 630ba8b07f22b89b0247adc0191eca97 ChangeLog 2592
+MD5 2ef4161f2da38462aeb9b3ef66c67442 files/digest-protux-0.20.1 65
 MD5 c4d75b6d370a9e848f5dd0e5a87b2d02 files/digest-protux-0.20.2 65
 MD5 1cd68658f27d5467ba72e158eaf76083 files/protux-gentoo.patch 468
-MD5 2ef4161f2da38462aeb9b3ef66c67442 files/digest-protux-0.20.1 65
+MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
+MD5 87e7c1ff4787e2c726be24d7552a3bfb protux-0.20.1.ebuild 842
+MD5 9d6032f3d9a16872b2eb0b850cfe4dc6 protux-0.20.2.ebuild 866
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGtNZj5H05b2HAEkRAhP9AJ4t51wthP3et1ThzM2GzElKVFFH6ACfT3Ob
-qLwMvI0a4yoDS2WVCRqXYJ8=
-=edQB
+iD8DBQFDZfx0j5H05b2HAEkRAuLUAJ9wUeHtKAJStFMxDIJB6G4kbRzieACfdI1b
+dnkzxaG/O4jhgfFpikUIxeo=
+=ErJ2
 -----END PGP SIGNATURE-----
