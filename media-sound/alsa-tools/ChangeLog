@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.78 2005/10/30 22:52:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.79 2005/10/31 16:47:16 flameeyes Exp $
+
+*alsa-tools-1.0.9-r2 (31 Oct 2005)
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-tools-1.0.9-r1.ebuild, +alsa-tools-1.0.9-r2.ebuild:
+  Split X useflag into fltk and gtk flags as per bug #111028. Patch from
+  Henrik 'Brix' Andersen <brix@gentoo.org>. Don't rewrite LDFLAGS.
 
 *alsa-tools-1.0.9-r1 (30 Oct 2005)
 
