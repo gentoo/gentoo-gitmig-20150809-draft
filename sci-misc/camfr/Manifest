@@ -1,5 +1,5 @@
-MD5 e444a55e7213fa934499628af573f0c3 camfr-1.2.ebuild 1721
-MD5 af9cc9adb236ecbe37bdf5cf7b4471ee ChangeLog 293
+MD5 9e7bab8dc8ecb2ab616f8e0f47227c0a camfr-1.2.ebuild 1519
+MD5 a9c52ba3af5c65b11df7c519b8c2f157 ChangeLog 386
 MD5 b29bc1bc900b3946fa0120f24f1061df metadata.xml 254
 MD5 85926d5ac680e6e8b6c0271a4527f030 files/SConstruct 611
 MD5 d2774ba5f369e9f1f58d5bc1f5d0e3ad files/camfr_wrap.cpp 33757
