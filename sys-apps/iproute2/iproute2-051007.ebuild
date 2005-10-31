@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-051007.ebuild,v 1.2 2005/10/30 04:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-051007.ebuild,v 1.3 2005/10/31 11:06:54 herbs Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,7 +32,7 @@ src_unpack() {
 	# Multilib fixes
 	sed -i 's:/usr/local:/usr:' tc/m_ipt.c
 	sed -i "s:/usr/lib:/usr/$(get_libdir):g" \
-		netem/Makefile tc/tc.c tc/q_netem.c tc/m_ipt.c || die
+		netem/Makefile tc/{Makefile,tc.c,q_netem.c,m_ipt.c} || die
 }
 
 src_compile() {

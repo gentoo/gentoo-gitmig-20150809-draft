@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.42 2005/10/29 21:49:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.43 2005/10/31 11:06:54 herbs Exp $
+
+  31 Oct 2005; Herbie Hopkins <herbs@gentoo.org> iproute2-051007.ebuild:
+  Update multilib fixes
 
 *iproute2-051007 (29 Oct 2005)
 
