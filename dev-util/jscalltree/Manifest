@@ -1,4 +1,14 @@
-MD5 d31382c3898fada9a2988656bee7c1c1 ChangeLog 507
-MD5 d48635046cdab788af491e57e7fa4d9f jscalltree-2.3.ebuild 907
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b3d517024e3f55c524ee63cbb2d2f3e2 ChangeLog 765
+MD5 ba63506c71c97f1521692430b5585e0a jscalltree-2.3.ebuild 962
 MD5 ae71feb28329a0e90ef4e89af1c6d309 metadata.xml 223
 MD5 51175ce652917010f35c437f37bd2a3e files/digest-jscalltree-2.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDZpPpDAg8Nbq0d9kRAm5iAJ9LisiLspOpnhlTPn7iseuDVfehxgCdGLRR
+eDh6F3wBmtjiZjZBa+RM38A=
+=6B64
+-----END PGP SIGNATURE-----
