@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.7 2005/09/18 14:45:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.8 2005/10/31 22:49:37 cryos Exp $
+
+*kuroo-0.71.0_beta1 (31 Oct 2005)
+
+  31 Oct 2005; Marcus D. Hanwell <cryos@gentoo.org> -kuroo-0.60.0.ebuild,
+  +kuroo-0.71.0_beta1.ebuild:
+  Added new beta version (p.masked), and removed obsolete version.
 
 *kuroo-0.70.1 (18 Sep 2005)
 
