@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.3 2005/10/31 01:06:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.4 2005/10/31 19:53:29 ranger Exp $
+
+  31 Oct 2005; Brent Baude <ranger@gentoo.org> link-grammar-4.1.3.ebuild:
+  marking link-grammar-4.1.3 ~ppc64 in support of bug 110858
 
   31 Oct 2005; Jason Wever <weeve@gentoo.org> link-grammar-4.1.3.ebuild:
   Added ~sparc keyword wrt bug #110858.
