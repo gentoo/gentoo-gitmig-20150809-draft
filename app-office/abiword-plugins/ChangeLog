@@ -1,6 +1,16 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.5 2005/10/31 19:54:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.6 2005/10/31 21:41:07 leonardop Exp $
+
+*abiword-plugins-2.4.1-r2 (31 Oct 2005)
+
+  31 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
+  +abiword-plugins-2.4.1-r2.ebuild:
+  Added 'bzip2', 'debug', 'pdf', 'readline' and 'wmf' USE flags. Added
+  libgsf dependency to enable some document filters by default. Removed
+  duplicated aiksaurus dependency. Added fribidi dependency. Fixed libgda
+  dependencies. Updated other dependencies version numbers. Don't install
+  COPYING. Misc.  clean-ups.
 
   31 Oct 2005; Brent Baude <ranger@gentoo.org>
   abiword-plugins-2.4.1-r1.ebuild:
