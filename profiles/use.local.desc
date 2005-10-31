@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1527 2005/10/31 04:02:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1528 2005/10/31 11:13:22 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -257,6 +257,7 @@ dev-lang/php:fastbuild - Build PHP quicker (experimental)
 dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:java-external - Use the external java extension rather than the bundled one
 dev-lang/php:java-internal - Use the bundled java extension in PHP4
+dev-lang/php:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-lang/php:overload - Enable the overload extension
 dev-lang/php:pdo-external - Use the external pecl-pdo extension rather than the bundled one
 dev-lang/php:pear - Enable PEAR support
