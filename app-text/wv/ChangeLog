@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.26 2005/10/06 22:14:51 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.27 2005/10/31 13:12:47 leonardop Exp $
+
+*wv-1.2.0 (31 Oct 2005)
+
+  31 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> +wv-1.2.0.ebuild:
+  New version (bug #110986).
 
 *wv-1.0.3-r1 (06 Oct 2005)
 
