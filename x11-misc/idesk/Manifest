@@ -1,4 +1,4 @@
-MD5 020bd6fc523984a0017b010a48064fbd ChangeLog 4998
+MD5 95f366fae449e57746b73c0f20c0001f ChangeLog 5089
 MD5 5e31e5eb7d0cfc2bc90454a7f4354605 files/digest-idesk-0.5.6 62
 MD5 e6dbe5d03053f90f9af131a2af23a5b3 files/digest-idesk-0.7.3-r1 63
 MD5 b0f0dd588dfad60594b8bb6d34ff5248 files/digest-idesk-0.7.4 64
@@ -8,5 +8,5 @@ MD5 7391b893cc28213bef73f7f929155698 files/ideskrc.5 2329
 MD5 d6f779298131bfbc97f59b71dea6e5ce files/ideskrc05.5 7091
 MD5 f2d95dda422d93aa01721baa62137a58 idesk-0.5.6.ebuild 1171
 MD5 33334cc453618ae274a98289335f4fed idesk-0.7.3-r1.ebuild 1030
-MD5 8f93face4e8960923021c94a44a2833a idesk-0.7.4.ebuild 1028
+MD5 c1cecf9b2082fab3101ff18e4a99e647 idesk-0.7.4.ebuild 1027
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
