@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/krconlinux/krconlinux-0.2.ebuild,v 1.4 2005/08/24 04:20:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/krconlinux/krconlinux-0.2.ebuild,v 1.5 2005/10/31 05:33:18 mr_bones_ Exp $
 
 inherit kde
 
@@ -13,4 +13,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
+DEPEND="kde-base/arts"
 need-kde 3
