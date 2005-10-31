@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.1.0.ebuild,v 1.4 2005/10/31 10:33:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.1.0.ebuild,v 1.5 2005/10/31 11:31:35 leonardop Exp $
 
 inherit eutils gnome2
 
-DESCRIPTION="GOffice is a library of document-centric objects and utilities
-building on top of GLib and Gtk+ and used by software such as Gnumeric."
+DESCRIPTION="A library of document-centric objects and utilities"
 HOMEPAGE="http://freshmeat.net/projects/goffice/"
 
 LICENSE="GPL-2"
