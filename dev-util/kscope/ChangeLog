@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.17 2005/10/31 03:10:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.18 2005/10/31 03:27:58 halcy0n Exp $
+
+  31 Oct 2005; Mark Loeser <halcy0n@gentoo.org> kscope-1.2.0.ebuild:
+  Stable on x86; bug #110955
 
   31 Oct 2005; Jason Wever <weeve@gentoo.org> kscope-1.2.0.ebuild:
   Stable on SPARC wrt bug #110955.
