@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c74c31213a04733108b50a248aaaa8b9 ChangeLog 2108
 MD5 10e57d8e7f99d193701fbe89a2ad4f0d files/digest-kscope-1.0 62
 MD5 6228bb334f376822e634c783258c6701 files/digest-kscope-1.1.0 64
@@ -8,3 +11,10 @@ MD5 33b128e4dc5cf888f7440c8725296ae2 kscope-1.1.0.ebuild 555
 MD5 22647aebfe1a59f2c3eab6ef0ccd9eeb kscope-1.1.1.ebuild 564
 MD5 5fa6342bbe0c255505424cf52c711c93 kscope-1.2.0.ebuild 509
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZY9ICRZPokWLroQRAreeAJ9rVKAKFEDJQm1nfGJ6XHyG+xacmwCgnU2c
+7Ktl13ai11ardXific1s5Lo=
+=h0Jb
+-----END PGP SIGNATURE-----
