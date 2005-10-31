@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.35 2005/10/31 15:00:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.36 2005/10/31 15:11:56 nelchael Exp $
+
+  31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> -d4x-2.5.1.ebuild:
+  Removed old 2.5.1.
 
 *d4x-2.5.6 (31 Oct 2005)
 
