@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libebml
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.48 2005/07/14 12:23:45 flameeyes Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.49 2005/10/31 23:10:22 vapier Exp $
+
+  31 Oct 2005; Mike Frysinger <vapier@gentoo.org> libebml-0.7.4.ebuild,
+  libebml-0.7.5.ebuild:
+  Add ia64 love to shutp Flameeyes.
 
 *libebml-0.7.5 (14 Jul 2005)
 
