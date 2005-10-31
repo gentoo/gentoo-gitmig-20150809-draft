@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-goom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.14 2005/09/09 12:23:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.15 2005/10/31 02:38:02 metalgod Exp $
+
+  31 Oct 2005; Luis Medinas <metalgod@gentoo.org> xmms-goom-2004.0.ebuild:
+  Marked Stable on amd64.
 
   09 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   xmms-goom-1.99.4.ebuild, xmms-goom-2004.0.ebuild:
