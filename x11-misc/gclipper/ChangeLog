@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gclipper
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gclipper/ChangeLog,v 1.7 2004/06/24 22:19:39 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gclipper/ChangeLog,v 1.8 2005/10/31 16:24:25 nelchael Exp $
+
+  31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> gclipper-1.1a.ebuild:
+  Fixed dodoc not to install COPYING.
 
   06 May 2004; Brandon Hale <tseng@gentoo.org> gclipper-1.1a.ebuild:
   Add IUSE=
