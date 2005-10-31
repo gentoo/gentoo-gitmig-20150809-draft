@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.460 2005/10/10 14:10:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.461 2005/10/31 00:33:30 halcy0n Exp $
+
+  31 Oct 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.2-r1.ebuild:
+  Adding 28_all_gcc4-pr19520.patch to GENTOO_PATCH_EXCLUDE due to it causing
+  ICEs in a few packages. I will remove it from the patchset in the next
+  revision
 
   10 Oct 2005; Mark Loeser <halcy0n@gentoo.org> gcc-4.0.2-r1.ebuild:
   Remove SPLIT_SPECS for now, until we have a better complete solution; bug
