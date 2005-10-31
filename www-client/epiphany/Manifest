@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a53ec902f241ff1f32c669a7566b04e ChangeLog 18220
+MD5 a1e163a9196a654d25f04959c1bce566 ChangeLog 18314
 MD5 5ef08e685400da84661b9f037d81a668 epiphany-1.6.0-r3.ebuild 1539
 MD5 d89a18b9e1f3c752a5ea444c4ccfc52f epiphany-1.6.3.ebuild 1387
 MD5 4c5adfec221fca880f8114d80bcaf86c epiphany-1.6.4.ebuild 1540
-MD5 ae6bb56212f15a51df46021fe9efc9c0 epiphany-1.8.2.ebuild 1781
+MD5 d38df47603c2c49e802b486d6b10f728 epiphany-1.8.2.ebuild 1787
 MD5 6d49238d1100396b965c157b89c7038f files/digest-epiphany-1.6.0-r3 68
 MD5 eb83ab75c0e81a4aff0d93a8d8a4e338 files/digest-epiphany-1.6.3 68
 MD5 f5e29a6e660b776ab387ee60f32007da files/digest-epiphany-1.6.4 68
@@ -19,7 +19,7 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDUWd/csIHjyDViGQRAiJxAJ4/gqUrFZCvBP4nrbayz2hb4K4lBwCgueKb
-hPwoWrWMeOloNGGGgtQytuk=
-=AerX
+iD8DBQFDZdVpKf2g/qXtneoRAsa0AJ4i1JNnL38X67LCyoElLbm7b+Yh0gCgtud0
+tasoivtdgz+7wX9qI4wApDo=
+=WKdP
 -----END PGP SIGNATURE-----
