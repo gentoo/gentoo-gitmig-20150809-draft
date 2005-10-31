@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.10 2005/07/14 23:23:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.11 2005/10/31 17:08:38 betelgeuse Exp $
 
 inherit pcmcia
 
@@ -33,7 +33,7 @@ src_unpack() {
 	okvminor="${KV#*.}" ; okvminor="${okvminor%%.*}"
 	if [ "${okvminor}" -gt 4 ]; then
 		eerror "This version of linux-wlan-ng will NOT work with 2.6 kernels"
-		eerror "Please use linux-wlan-ng-0.2.1_pre17 for 2.6 kernels."
+		eerror "Please use >=linux-wlan-ng-0.2.1_pre17 for 2.6 kernels."
 		eerror "For now, you will need to disable sandbox to get this to merge."
 		eerror "See bug #32737 for info on work being done to fix this."
 		die "This version of linux-wlan-ng does not support 2.6 kernels"
