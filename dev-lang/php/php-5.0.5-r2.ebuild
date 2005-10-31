@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5-r1.ebuild,v 1.2 2005/09/24 19:21:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5-r2.ebuild,v 1.1 2005/10/31 14:10:39 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -63,10 +63,28 @@ src_unpack() {
 		unpack ${A}
 	fi
 
-	cd ${S}
+	cd "${S}"
+
+	# fix PHP branding
+	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl2-gentoo"|g' -i configure.in
+
+	# patch to fix pspell extension, bug #99312 (new patch by upstream)
+	use spell && epatch "${FILESDIR}/5.0.5/php5.0.5-pspell-ext-segf.patch"
+
+	# patch to fix safe_mode bypass in GD extension, bug #109669
+	if use gd || use gd-external ; then
+		epatch "${FILESDIR}/5.0.5/php5.0.5-gd_safe_mode.patch"
+	fi
+
+	# patch open_basedir directory bypass, bug #102943
+	epatch "${FILESDIR}/5.0.5/php5.0.5-fopen_wrappers.patch"
+
+	# patch to fix session.save_path segfault and other issues in
+	# the apache2handler SAPI, bug #107602
+	epatch "${FILESDIR}/5.0.5/php5.0.5-session_save_path-segf.patch"
 
 	# fix a object serialization bug, bug #105374
-	epatch ${FILESDIR}/5.0.0/php5.0.5-obj-serialize.patch
+	epatch "${FILESDIR}/5.0.5/php5.0.5-obj-serialize.patch"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0
@@ -161,15 +179,15 @@ src_install() {
 				;;
 			apache*)
 				einfo "Installing apache${USE_APACHE2} SAPI"
-				make INSTALL_ROOT=${D} install-sapi || die "Unable to install ${x} SAPI"
+				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
 				if [ -n "${USE_APACHE2}" ] ; then
 					einfo "Installing Apache2 config for PHP5 (70_mod_php5.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					doins "${FILESDIR}/5.1.0/apache-2.0/70_mod_php5.conf"
+					doins "${FILESDIR}/5.0-any/apache-2.0/70_mod_php5.conf"
 				else
 					einfo "Installing Apache config for PHP5 (70_mod_php5.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					doins "${FILESDIR}/5.1.0/apache-1.3/70_mod_php5.conf"
+					doins "${FILESDIR}/5.0-any/apache-1.3/70_mod_php5.conf"
 				fi
 				php5_0-sapi_install_ini
 				;;
@@ -182,9 +200,9 @@ pkg_postinst()
 	# Output some general info to the user
 	if useq apache || useq apache2 ; then
 		APACHE1_MOD_DEFINE="PHP5"
-		APACHE1_MOD_CONF="70_mod_php5.conf"
+		APACHE1_MOD_CONF="70_mod_php5"
 		APACHE2_MOD_DEFINE="PHP5"
-		APACHE2_MOD_CONF="70_mod_php5.conf"
+		APACHE2_MOD_CONF="70_mod_php5"
 		apache-module_pkg_postinst
 	fi
 	php5_0-sapi_pkg_postinst

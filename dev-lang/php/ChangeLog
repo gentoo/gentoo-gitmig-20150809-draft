@@ -1,6 +1,80 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.48 2005/09/24 19:21:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.49 2005/10/31 14:10:39 chtekk Exp $
+
+*php-5.0.5-r2 (31 Oct 2005)
+*php-5.0.4-r2 (31 Oct 2005)
+*php-4.4.0-r2 (31 Oct 2005)
+*php-4.3.11-r2 (31 Oct 2005)
+
+  31 Oct 2005; Luca Longinotti <chtekk@gentoo.org>
+  -files/4.4.0/php4.3.11-pcre-security.patch,
+  +files/4.4.0/php4.4.0-fopen_wrappers.patch,
+  +files/4.4.0/php4.4.0-gd_safe_mode.patch,
+  files/4.4.0/php4.4.0-pcre-security.patch,
+  +files/4.4.0/php4.4.0-pspell-ext-segf.patch,
+  +files/4.4.0/php4.4.0-session_save_path-segf.patch,
+  -files/4.4.0/apache-1.3/70_mod_php.conf,
+  -files/4.4.0/apache-2.0/70_mod_php.conf,
+  +files/4-any/php4-fastbuild.patch, +files/4-any/php4-imap-symlink.diff,
+  +files/4-any/php4-iodbc-config.diff,
+  +files/5.0-any/php5-imap-symlink.diff,
+  +files/4-any/php4-libtool-1.5.patch,
+  +files/4-any/php4-uClibc-have_dn_skipname.patch,
+  +files/4-any/php4-with-iodbc.diff, +files/5.0-any/php5-iodbc-config.diff,
+  +files/4-any/apache-1.3/70_mod_php.conf,
+  +files/5.0-any/php5-libtool-1.5.patch,
+  +files/4-any/apache-2.0/70_mod_php.conf,
+  +files/4.3.11/php4.3.11-fopen_wrappers.patch,
+  +files/4.3.11/php4.3.11-gd_safe_mode.patch,
+  +files/4.3.11/php4.3.11-pcre-security.patch,
+  +files/4.3.11/php4.3.11-pspell-ext-segf.patch,
+  +files/4.3.11/php4.3.11-session_save_path-segf.patch,
+  -files/4.4.0/fastbuild.patch, -files/4.4.0/php4-imap-symlink.diff,
+  -files/4.4.0/php4-iodbc-config.diff, -files/4.4.0/php4-libtool-1.5.patch,
+  -files/4.4.0/php4-with-iodbc.diff, +files/5.0-any/php5-prefork.patch,
+  +files/5.0-any/php5-soap_persistence_session.diff,
+  +files/5.0-any/php5-with-iodbc.diff,
+  +files/5.0-any/apache-1.3/70_mod_php5.conf,
+  +files/5.0-any/apache-2.0/70_mod_php5.conf,
+  -files/5.0.0/php5-imap-symlink.diff, -files/5.0.0/php5-iodbc-config.diff,
+  -files/5.0.0/php5-libtool-1.5.patch,
+  -files/5.0.0/php5.0.4-pcre-security.patch,
+  -files/5.0.0/php5.0.4-xmlrcp-ccode.diff,
+  -files/5.0.0/php5.0.5-obj-serialize.patch,
+  +files/5.0.4/php5.0.4-fopen_wrappers.patch,
+  +files/5.0.4/php5.0.4-gd_safe_mode.patch,
+  +files/5.0.4/php5.0.4-pcre-security.patch,
+  +files/5.0.4/php5.0.4-pspell-ext-segf.patch,
+  +files/5.0.4/php5.0.4-session_save_path-segf.patch,
+  +files/5.0.4/php5.0.4-xmlrcp-ccode.diff,
+  +files/5.0.5/php5.0.5-fopen_wrappers.patch,
+  +files/5.0.5/php5.0.5-gd_safe_mode.patch,
+  +files/5.0.5/php5.0.5-obj-serialize.patch,
+  +files/5.0.5/php5.0.5-pspell-ext-segf.patch,
+  +files/5.0.5/php5.0.5-session_save_path-segf.patch,
+  +files/5.1-any/php5-fastbuild.patch,
+  +files/5.1-any/php5-imap-symlink.diff,
+  +files/5.1-any/php5-iodbc-config.diff, +files/5.1-any/php5-prefork.patch,
+  +files/5.1-any/php5-soap_persistence_session.diff,
+  +files/5.1-any/php5-with-iodbc.diff,
+  +files/5.1-any/apache-1.3/70_mod_php5.conf,
+  +files/5.1-any/apache-2.0/70_mod_php5.conf,
+  -files/5.1.0/php5-imap-symlink.diff, -files/5.1.0/php5-iodbc-config.diff,
+  -files/5.1.0/php5-prefork.patch, -files/5.1.0/php5-with-iodbc.diff,
+  -files/5.1.0/php5_soap_persistence_session.diff,
+  -files/5.1.0/apache-1.3/70_mod_php5.conf,
+  -files/5.1.0/apache-2.0/70_mod_php5.conf, -php-4.3.11-r1.ebuild,
+  +php-4.3.11-r2.ebuild, -php-4.4.0-r1.ebuild, +php-4.4.0-r2.ebuild,
+  -php-5.0.4-r1.ebuild, +php-5.0.4-r2.ebuild, -php-5.0.5-r1.ebuild,
+  +php-5.0.5-r2.ebuild:
+  New-style PHP update: fix quotation of some vars, change URI of a mirror,
+  change ordering of patches in the files/ directory, add 'mnogosearch' USE
+  flag, add 'oci8-instant-client' USE flag, add 'pic' USE flag, add 'cjk' USE
+  flag, delete 'png' and 'jpeg' USE flags now directly controlled by 'gd' USE
+  flag, change PHP extensions enabling/disabling system, fix a bug with
+  Apache1 + fastbuild, fix elibtoolize call (bug #106176) and fix bugs #99312,
+  #109669, #102943, #107602, #99225, #108834.
 
   24 Sep 2005; Jason Wever <weeve@gentoo.org> php-5.0.5-r1.ebuild:
   Added ~sparc keyword.
