@@ -1,0 +1,21 @@
+Index: libq/virtuals.c
+===================================================================
+RCS file: /var/cvsroot/gentoo-projects/portage-utils/libq/virtuals.c,v
+retrieving revision 1.6
+diff -u -b -B -w -p -r1.6 virtuals.c
+--- libq/virtuals.c	30 Oct 2005 00:48:51 -0000	1.6
++++ libq/virtuals.c	31 Oct 2005 13:06:36 -0000
+@@ -12,13 +12,6 @@
+ 
+ #include <stdio.h>
+ #include <unistd.h>
+-
+-#if 0
+- <jstubbs> portage/{,profile/}virtuals should both behave the same now.
+- <jstubbs> but it's /etc/portage/.../virtuals ; /var/db/pkg/*/*/PROVIDE ; /etc/make.profile stacking ; */
+-#endif
+-
+-
+ #include <stdlib.h>
+ #include <string.h>
+ 
