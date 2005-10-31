@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.127 2005/10/26 13:08:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.128 2005/10/31 21:42:29 ranger Exp $
+
+  31 Oct 2005; Brent Baude <ranger@gentoo.org> libxslt-1.1.15.ebuild:
+  marking libxslt-1.1.15 ppc64 stable per bug 110454
 
   26 Oct 2005; Aaron Walker <ka0ttic@gentoo.org> libxslt-1.1.15.ebuild:
   Stable on mips for bug #110454.
