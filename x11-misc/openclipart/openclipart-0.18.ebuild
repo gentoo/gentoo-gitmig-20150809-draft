@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.15.ebuild,v 1.1 2005/07/09 08:01:44 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/openclipart-0.18.ebuild,v 1.1 2005/10/31 15:58:41 nelchael Exp $
 
 inherit eutils
 
 DESCRIPTION="Open Clip Art Library (openclipart.org)"
 HOMEPAGE="http://www.openclipart.org/"
-SRC_URI="http://www.openclipart.org/downloads/${PV}/${P}.tar.bz2"
+SRC_URI="http://www.openclipart.org/downloads/${PV}/${P}-full.tar.bz2"
 
 LICENSE="public-domain" # creative commons
 SLOT="0"
@@ -19,6 +19,14 @@ RDEPEND=""
 
 # suggested basedir for cliparts
 CLIPART="/usr/share/clipart/${PN}"
+S="${WORKDIR}/openclipart-${PV}-full"
+
+src_unpack() {
+	unpack "${A}"
+	einfo "Removing nsis directory"
+	cd "${S}"
+	rm -fr nsis
+}
 
 select_files() {
 	# select wanted formats, optionally compress them
@@ -64,7 +72,7 @@ src_compile() {
 
 src_install() {
 	local DIR FILES
-	dodoc LICENSE.txt README.txt
+	dodoc LICENSE README
 	find -type d | sort | while read DIR
 	do
 		FILES=$(select_files "$DIR")
@@ -72,7 +80,9 @@ src_install() {
 		then
 			einfo "Installing ${DIR#*/}"
 			insinto "${CLIPART}/${DIR#*/}"
-			doins ${FILES}
+			for f in ${FILES}; do
+				doins "${f}"
+			done;
 		fi
 	done
 }
