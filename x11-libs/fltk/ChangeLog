@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.51 2005/08/23 21:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.52 2005/10/31 13:22:21 nelchael Exp $
+
+  31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> fltk-1.1.4.ebuild,
+  fltk-1.1.6.ebuild:
+  Fixed dodoc not to install COPYING.
 
   23 Aug 2005; Aron Griffis <agriffis@gentoo.org> fltk-1.1.4.ebuild:
   stable on ia64

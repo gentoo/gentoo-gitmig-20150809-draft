@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.6 2005/07/25 19:20:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.7 2005/10/31 13:22:21 nelchael Exp $
 
 IUSE="noxft opengl debug"
 
@@ -74,7 +74,7 @@ src_install() {
 
 	ranlib ${D}${LIBDIR}/*.a
 
-	dodoc CHANGES COPYING README
+	dodoc CHANGES README
 
 	echo "LDPATH=${LIBDIR}" > 99fltk-${SLOT}
 	echo "FLTK_DOCDIR=/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
