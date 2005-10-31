@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/monsterz
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.8 2005/10/30 18:11:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.9 2005/10/31 07:56:50 mr_bones_ Exp $
+
+  31 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/monsterz-0.4.2-gentoo.patch, -files/monsterz-0.6.0-gentoo.patch,
+  -monsterz-0.4.2.ebuild, -monsterz-0.6.0.ebuild:
+  clean old files
 
   30 Oct 2005; Ferris McCormick <fmccor@gentoo.org> monsterz-0.6.1.ebuild:
   Add ~sparc keyword.  Appears to run fine.
