@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.7 2005/10/29 10:42:05 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.8 2005/10/31 01:04:28 weeve Exp $
+
+  31 Oct 2005; Jason Wever <weeve@gentoo.org> gtkmathview-0.7.5.ebuild:
+  Added ~sparc keyword wrt bug #110858.
 
 *gtkmathview-0.7.5 (29 Oct 2005)
 
