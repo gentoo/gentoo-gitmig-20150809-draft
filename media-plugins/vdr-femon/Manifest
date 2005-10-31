@@ -1,4 +1,6 @@
+MD5 33fc8d487fce789387ae031b76833d82 vdr-femon-0.9.4.ebuild 544
 MD5 fe6b5364d530fbb5fc7282d6fdc32640 vdr-femon-0.9.1.ebuild 544
-MD5 f431e87091841ebc5d220718b6f03f6b ChangeLog 485
+MD5 0bc245c36cd7e5b8efe59e3b508fedb3 ChangeLog 616
 MD5 a973dfa1638779880ca99f1c1435cac7 metadata.xml 259
 MD5 a56a5dbae3107fd3c80e79b285f37b0e files/digest-vdr-femon-0.9.1 63
+MD5 f4720cc38be3acde8a7f21ec71ec3420 files/digest-vdr-femon-0.9.4 63
