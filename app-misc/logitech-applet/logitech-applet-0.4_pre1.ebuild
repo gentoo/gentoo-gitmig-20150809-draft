@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1.ebuild,v 1.2 2005/07/26 23:32:09 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1.ebuild,v 1.3 2005/10/31 13:19:23 nelchael Exp $
 
 MY_P=${P/_pre/test}
 MY_P=${MY_P/-applet/_applet}
@@ -22,5 +22,5 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	dosbin logitech_applet
-	dodoc AUTHORS COPYING ChangeLog README doc/article.txt
+	dodoc AUTHORS ChangeLog README doc/article.txt
 }
