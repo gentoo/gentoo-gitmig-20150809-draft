@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.21 2005/10/05 20:27:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.22 2005/10/31 19:16:20 ranger Exp $
+
+  31 Oct 2005; Brent Baude <ranger@gentoo.org> aiksaurus-1.2.1.ebuild:
+  Marking aiksaurus-1.2.1 ~ppc64 for bug 110862
 
   05 Oct 2005; Simon Stelling <blubb@gentoo.org> aiksaurus-0.15-r1.ebuild:
   make it adhere multilib-strict; bug 106995
