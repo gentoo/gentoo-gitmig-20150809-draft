@@ -1,4 +1,7 @@
-MD5 280392f5cf8f500a8fa1871982d21529 ChangeLog 5740
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6285918b8da539741ae3265c14651ed7 ChangeLog 5849
 MD5 5e73e3df7c9ba5df4312934edf80cd9a files/digest-qdbm-1.8.16 63
 MD5 340399145118f869822d6127294a3ebb files/digest-qdbm-1.8.17 63
 MD5 171bad7087326755b76957b5ffafc318 files/digest-qdbm-1.8.30 63
@@ -10,4 +13,11 @@ MD5 baa34b4deb9f8a225a9751b44b1f2d71 qdbm-1.8.16.ebuild 1165
 MD5 da3f7a934564aae0528dbeec95c99fe1 qdbm-1.8.17.ebuild 1200
 MD5 358c12eedbb9ecdff61f17ae3f6aca73 qdbm-1.8.30.ebuild 1202
 MD5 35939dae282498c83fdfdd9316003774 qdbm-1.8.31.ebuild 1209
-MD5 1d171572ef654e5bf6add03de83db4f4 qdbm-1.8.33-r2.ebuild 1300
+MD5 fa2bcb2bcaf241d781317b74a8c9bbfa qdbm-1.8.33-r2.ebuild 1300
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZdzfKf2g/qXtneoRAoXkAJ9ltHByYLs/zWwREORz7h6nyJ7pjgCgjXo0
+Qz5HRnzlA/ZKKaplHCAhbb4=
+=HRS/
+-----END PGP SIGNATURE-----
