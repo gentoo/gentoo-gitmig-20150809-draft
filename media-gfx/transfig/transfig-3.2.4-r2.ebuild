@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.6 2005/09/13 17:14:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r2.ebuild,v 1.7 2005/10/31 18:30:22 grobian Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.xfig.org"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="alpha amd64 ~hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc-macos ppc64 ~sparc ~x86"
 
 DEPEND="virtual/x11
 	>=media-libs/jpeg-6
@@ -29,8 +29,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.patch
 	epatch ../${SHAPE_P}/${PN}.${SHAPE_P#*.}.patch	# bug #20877
 
-	#bad way to fix a bad issue
-	if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -ge "3" ]
+	# Apply gcc-3.3 patch for GCC 3.3 and above -- bug #110948
+	if [ "$(gcc-major-version)$(gcc-minor-version)" -ge "33" ];
 	then
 		epatch  ${FILESDIR}/${P}-gcc-3.3.patch
 	fi
