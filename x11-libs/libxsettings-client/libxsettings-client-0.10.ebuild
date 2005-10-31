@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.5 2005/07/01 22:04:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.6 2005/10/31 13:28:24 nelchael Exp $
 
 IUSE=""
 
@@ -26,5 +26,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "install failed"
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
