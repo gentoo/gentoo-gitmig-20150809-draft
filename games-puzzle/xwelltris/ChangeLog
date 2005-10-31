@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xwelltris
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/ChangeLog,v 1.6 2004/12/28 15:27:00 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xwelltris/ChangeLog,v 1.7 2005/10/31 08:34:38 mr_bones_ Exp $
+
+  31 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  xwelltris-1.0.1.ebuild:
+  tidy
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> xwelltris-1.0.1.ebuild:
   Marked ppc stable.
