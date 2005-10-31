@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.63 2005/08/23 21:09:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.64 2005/10/31 20:09:13 blubb Exp $
+
+  31 Oct 2005; Simon Stelling <blubb@gentoo.org>
+  +files/blender-2.37a-gcc-4.0.patch, blender-2.37a.ebuild:
+  adding patch to make blender work with gcc 4.0
 
   23 Aug 2005; Luca Barbato <lu_zero@gentoo.org> blender-2.37a.ebuild:
   BSD support
