@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.5 2005/09/13 16:07:50 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.6 2005/10/31 14:08:42 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -38,13 +38,13 @@ PEAR_PN=${PHP_PEAR_PKG_NAME}-${PEAR_PV}
 S="${WORKDIR}/${PEAR_PN}"
 
 php-pear-r1_src_install() {
-	# SNMP is nuts sometimes
+	# SNMP support
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
 
-	cd ${S}
-	mv ${WORKDIR}/package.xml ${S}
-	pear install --nodeps --installroot=${D} ${S}/package.xml || die "Unable to install PEAR package"
-	rm ${D}/usr/share/php/.filemap
-	rm ${D}/usr/share/php/.lock
+	cd "${S}"
+	mv "${WORKDIR}/package.xml" "${S}"
+	pear install --nodeps --installroot="${D}" "${S}/package.xml" || die "Unable to install PEAR package"
+	rm -rf "${D}/usr/share/php/.filemap" \
+	"${D}/usr/share/php/.lock"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.6 2005/09/25 15:21:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.7 2005/10/31 14:08:42 chtekk Exp $
 #
 # ########################################################################
 #
@@ -14,8 +14,8 @@
 # Author(s)		Stuart Herbert
 #				<stuart@gentoo.org>
 #
-#				CHTEKK
-#				<chtekk@longitekk.org>
+#				Luca Longinotti
+#				<chtekk@gentoo.org>
 #
 # ========================================================================
 
@@ -39,7 +39,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external jpeg kerberos ldap libedit mcve memlimit mhash ming msql mssql mysql mysqli ncurses nls oci8 odbc oracle7 ovrimos pcntl pcre pdo pdo-external pear pfpro png posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype vm-goto vm-switch wddx xml2 xmlreader xmlrpc xpm xsl yaz zip zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl curlwrappers db2 dba dbase dbmaker debug doc empress empress-bcs esoob exif fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-external kerberos ldap libedit mcve memlimit mhash ming msql mssql mysql mysqli ncurses nls oci8 oci8-instant-client odbc oracle7 ovrimos pcntl pcre pdo pdo-external pear pfpro pic posix postgres qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype vm-goto vm-switch wddx xml2 xmlreader xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
 DEPEND="${DEPEND}
@@ -58,13 +58,13 @@ DEPEND="${DEPEND}
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
 	curl? ( >=net-misc/curl-7.10.5 )
 	fdftk? ( app-text/fdftk )
-	firebird? ( dev-db/firebird  )
+	firebird? ( dev-db/firebird )
+	gd? ( >=media-libs/jpeg-6b media-libs/libpng )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
 	imap? ( virtual/imap-c-client )
 	iodbc? ( dev-db/libiodbc )
-	jpeg? ( >=media-libs/jpeg-6b )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	libedit? ( dev-libs/libedit )
@@ -76,9 +76,9 @@ DEPEND="${DEPEND}
 	mysqli? ( >=dev-db/mysql-4.1 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
+	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	postgres? ( >=dev-db/postgresql-7.1 )
-	png? ( media-libs/libpng )
 	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
@@ -87,7 +87,7 @@ DEPEND="${DEPEND}
 	simplexml? ( >=dev-libs/libxml2-2.6.8 )
 	snmp? ( >=net-analyzer/net-snmp-5.2 )
 	soap? ( >=dev-libs/libxml2-2.6.8 )
-	spell? ( >=app-text/aspell-0.60 )
+	spell? ( >=app-text/aspell-0.50 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
@@ -171,16 +171,15 @@ php5_1-sapi_check_awkward_uses() {
 	confutils_use_depend_all "qdbm"		"dba"
 
 	# EXIF only gets built if we support a file format that uses it
-	confutils_use_depend_any "exif" "jpeg" "tiff"
+	confutils_use_depend_any "exif" "gd" "tiff"
 
 	# support for the GD graphics library
 	confutils_use_conflict "gd" "gd-external"
 	confutils_use_depend_any "truetype" "gd" "gd-external"
-	confutils_use_depend_any "jpeg" "gd" "gd-external"
-	confutils_use_depend_any "png"  "gd" "gd-external"
-	confutils_use_depend_any "tiff" "gd" "gd-external"
-	confutils_use_depend_any "xpm"  "gd" "gd-external"
-	confutils_use_depend_all "png"  "zlib"
+	confutils_use_depend_any "cjk"	"gd" "gd-external"
+	confutils_use_depend_all "tiff"	"gd"
+	confutils_use_depend_all "xpm"	"gd"
+	confutils_use_depend_all "gd"	"zlib"
 
 	# IMAP support
 	php_check_imap
@@ -192,6 +191,7 @@ php5_1-sapi_check_awkward_uses() {
 	php_check_mta
 
 	# Oracle support
+	confutils_use_conflict "oci8" "oci8-instant-client"
 	php_check_oracle
 
 	# LDAP-sasl support
@@ -253,16 +253,16 @@ php5_1-sapi_src_unpack() {
 		unpack ${A}
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	# Patch PHP to show Gentoo as the server platform
 	sed -e "s/PHP_UNAME=\`uname -a | xargs\`/PHP_UNAME=\`uname -s -n -r -v | xargs\`/g" -i configure.in
 
 	# Patch for PostgreSQL support
-	sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4
+	use postgres && sed -e 's|include/postgresql|include/postgresql include/postgresql/pgsql|g' -i ext/pgsql/config.m4
 
 	# Patch for session persistence bug
-	epatch ${FILESDIR}/5.1.0/php5_soap_persistence_session.diff
+	epatch "${FILESDIR}/5.1-any/php5-soap_persistence_session.diff"
 
 	# stop php from activating the apache config, as we will do that ourselves
 	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4 ; do
@@ -271,39 +271,41 @@ php5_1-sapi_src_unpack() {
 	done
 
 	# imap support
-	use imap && epatch ${FILESDIR}/5.1.0/php5-imap-symlink.diff
+	use imap && epatch "${FILESDIR}/5.1-any/php5-imap-symlink.diff"
 
 	# iodbc support
-	use iodbc && epatch ${FILESDIR}/5.1.0/php5-iodbc-config.diff
-	use iodbc && epatch ${FILESDIR}/5.1.0/php5-with-iodbc.diff
+	use iodbc && epatch "${FILESDIR}/5.1-any/php5-iodbc-config.diff"
+	use iodbc && epatch "${FILESDIR}/5.1-any/php5-with-iodbc.diff"
 
 	# hardenedphp support
 	if use hardenedphp ; then
 		if [ -n "${HARDENEDPHP_PATCH}" ] ; then
-			epatch ${DISTDIR}/${HARDENEDPHP_PATCH}
+			epatch "${DISTDIR}/${HARDENEDPHP_PATCH}"
 		else
 			ewarn "There is no Hardened-PHP available for this PHP release yet!"
 		fi
 	fi
 
 	# fastbuild support
-	use fastbuild && epatch ${FILESDIR}/5.1.0/fastbuild.patch
+	use fastbuild && epatch "${FILESDIR}/5.1-any/php5-fastbuild.patch"
 
 	# fix problems compiling with apache2
 	if useq apache2 && ! useq threads ; then
-		epatch ${FILESDIR}/5.1.0/php5-prefork.patch || die "Unable to patch for prefork support"
+		epatch "${FILESDIR}/5.1-any/php5-prefork.patch" || die "Unable to patch for prefork support"
 	fi
 
-	# fix configure scripts to recognize uClibc, now done with elibtoolize
+	# fix configure scripts to correctly support HardenedPHP
 	einfo "Running aclocal"
 	WANT_AUTOMAKE=1.9 aclocal --force || die "Unable to run aclocal successfully"
-	elibtoolize
 	einfo "Running libtoolize"
 	libtoolize --copy --force || die "Unable to run libtoolize successfully"
 
 	# rebuild configure to make sure it's up to date
 	einfo "Rebuilding configure script"
 	WANT_AUTOCONF=2.5 autoreconf --force -W no-cross || die "Unable to regenerate configure script"
+
+	# run elibtoolize
+	elibtoolize
 
 	# Just in case ;-)
 	chmod 755 configure
@@ -312,16 +314,17 @@ php5_1-sapi_src_unpack() {
 set_php_ini_dir() {
 	PHP_INI_DIR="/etc/php/${PHPSAPI}-php5"
 	PHP_EXT_INI_DIR="${PHP_INI_DIR}/ext"
+	PHP_EXT_INI_DIR_ACTIVE="${PHP_INI_DIR}/ext-active"
 }
 
 php5_1-sapi_src_compile() {
 	destdir=/usr/$(get_libdir)/php5
 	set_php_ini_dir
 
-	cd ${S}
+	cd "${S}"
 	confutils_init
 
-	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR} --without-pear"
+	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR_ACTIVE} --without-pear"
 
 	#				extension		USE flag		shared support?
 	enable_extension_enable		"bcmath"		"bcmath"		1
@@ -344,7 +347,6 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"informix"		"informix"		1
 	enable_extension_disable	"ipv6"			"ipv6"			0
 	# ircg extension not supported on Gentoo at this time
-	enable_extension_with 		"jpeg-dir" 		"jpeg" 			0 "/usr"
 	enable_extension_with		"kerberos"		"kerberos"		0 "/usr"
 	enable_extension_disable	"libxml"		"xml2"			0
 	enable_extension_enable		"mbstring"		"nls"			1
@@ -357,6 +359,7 @@ php5_1-sapi_src_compile() {
 	enable_extension_with		"mssql"			"mssql"			1
 	enable_extension_with		"ncurses"		"ncurses"		1
 	enable_extension_with		"oci8"			"oci8"			1
+	enable_extension_with		"oci8-instant-client"	"oci8-instant-client"	1
 	enable_extension_with		"oracle"		"oracle7"		1
 	enable_extension_with		"openssl"		"ssl"			1
 	enable_extension_with		"openssl-dir"	"ssl"			0 "/usr"
@@ -406,15 +409,16 @@ php5_1-sapi_src_compile() {
 	if useq gd-external ; then
 		enable_extension_with	"freetype-dir"	"truetype"		0 "/usr"
 		enable_extension_with	"t1lib"			"truetype"		0 "/usr"
-		enable_extension_enable	"gd-jis-conv"	"nls" 			0
+		enable_extension_enable	"gd-jis-conv"	"cjk" 			0
 		enable_extension_enable	"gd-native-ttf"	"truetype"		0
 		enable_extension_with 	"gd" 			"gd-external"	1 "/usr"
 	else
 		enable_extension_with	"freetype-dir"	"truetype"		0 "/usr"
 		enable_extension_with	"t1lib"			"truetype"		0 "/usr"
-		enable_extension_enable	"gd-jis-conv"	"nls"			0
+		enable_extension_enable	"gd-jis-conv"	"cjk"			0
 		enable_extension_enable	"gd-native-ttf"	"truetype"		0
-		enable_extension_with 	"png-dir" 		"png" 			0 "/usr"
+		enable_extension_with	"jpeg-dir"		"gd"			0 "/usr"
+		enable_extension_with 	"png-dir" 		"gd" 			0 "/usr"
 		enable_extension_with 	"tiff-dir" 		"tiff" 			0 "/usr"
 		enable_extension_with 	"xpm-dir" 		"xpm" 			0 "/usr/X11R6"
 		# enable gd last, so configure can pick up the previous settings
@@ -471,6 +475,11 @@ php5_1-sapi_src_compile() {
 		enable_extension_with		"pdo-firebird"	"firebird"		1
 		enable_extension_with		"pdo-mysql"		"mysql"			1 "/usr"
 		enable_extension_with		"pdo-oci"		"oci8"			1
+		if useq oci8-instant-client ; then
+			OCI8IC_PKG="`best_version dev-db/oracle-instantclient-basic`"
+			OCI8IC_PKG="`printf ${OCI8IC_PKG} | sed -e 's|dev-db/oracle-instantclient-basic-||g'`"
+		fi
+		enable_extension_with		"pdo-oci"		"oci8-instant-client"	1	"instantclient,/usr,${OCI8IC_PKG}"
 		enable_extension_with		"pdo-odbc"		"odbc"			1 "unixODBC,/usr"
 		enable_extension_with		"pdo-pgsql"		"postgres"		1
 		enable_extension_without	"pdo-sqlite"	"sqlite"		1
@@ -506,7 +515,7 @@ php5_1-sapi_src_compile() {
 	fi
 
 	# fix ELF-related problems
-	if has_pic ; then
+	if useq pic ; then
 		einfo "Enabling PIC support"
 		my_conf="${my_conf} --with-pic"
 	fi
@@ -535,12 +544,12 @@ php5_1-sapi_src_compile() {
 php5_1-sapi_src_install() {
 	destdir=/usr/$(get_libdir)/php5
 
-	cd ${S}
+	cd "${S}"
 	addpredict /usr/share/snmp/mibs/.index
 
 	PHP_INSTALLTARGETS="install-build install-headers install-programs"
 	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
-	make INSTALL_ROOT=${D} ${PHP_INSTALLTARGETS} || die "install failed"
+	make INSTALL_ROOT="${D}" ${PHP_INSTALLTARGETS} || die "install failed"
 
 	# install missing header files
 	if useq nls ; then
@@ -552,7 +561,7 @@ php5_1-sapi_src_install() {
 	fi
 
 	# get the extension dir
-	PHPEXTDIR="`${D}/${destdir}/bin/php-config --extension-dir`"
+	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
 
 	# don't forget the php.ini file
 	local phpinisrc=php.ini-dist
@@ -566,22 +575,21 @@ php5_1-sapi_src_install() {
 
 	# Set the include path to point to where we want to find PEAR packages
 	einfo "Setting correct include_path"
-	sed -e 's|^;include_path .*|include_path = ".:/usr/share/php:/usr/share/php5"|' -i ${phpinisrc}
-
-	# Install any extensions built as shared objects
-	if useq sharedext; then
-		for x in `ls ${D}/${PHPEXTDIR}/*.so | sort`; do
-			echo "extension=`basename ${x}`" >> ${phpinisrc}
-		done;
-	fi
+	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:/usr/share/php5:/usr/share/php"|' -i ${phpinisrc}
 
 	# create the directory where we'll put php5-only php scripts
 	keepdir /usr/share/php5
 }
 
 php5_1-sapi_install_ini() {
+	destdir=/usr/$(get_libdir)/php5
+
+	# get the extension dir
+	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
+
 	# work out where we are installing the ini file
 	set_php_ini_dir
+
 	local phpinisrc=php.ini-dist
 
 	dodir ${PHP_INI_DIR}
@@ -589,6 +597,17 @@ php5_1-sapi_install_ini() {
 	newins ${phpinisrc} ${PHP_INI_FILE}
 
 	dodir ${PHP_EXT_INI_DIR}
+	dodir ${PHP_EXT_INI_DIR_ACTIVE}
+
+	# Install any extensions built as shared objects
+	if useq sharedext ; then
+		for x in `ls "${D}/${PHPEXTDIR}/"*.so | sort` ; do
+			inifilename=${x/.so/.ini}
+			inifilename=`basename ${inifilename}`
+			echo "extension=`basename ${x}`" >> "${D}/${PHP_EXT_INI_DIR}/${inifilename}"
+			dosym "${PHP_EXT_INI_DIR}/${inifilename}" "${PHP_EXT_INI_DIR_ACTIVE}/${inifilename}"
+		done
+	fi
 }
 
 php5_1-sapi_pkg_postinst() {
@@ -641,6 +660,10 @@ php5_1-sapi_pkg_postinst() {
 
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php5/phpdbg) you may need to recompile them now."
+	ewarn "A new way of enabling/disabling PHP extensions was introduced"
+	ewarn "with the newer PHP packages releases, so please reemerge any"
+	ewarn "PHP extensions you have installed to automatically adapt to"
+	ewarn "the new configuration layout."
 	ewarn
 
 	if useq curl; then
@@ -648,4 +671,12 @@ php5_1-sapi_pkg_postinst() {
 		ewarn "This can be a security risk!"
 		ewarn
 	fi
+
+	ewarn "The 'pic' USE flag was added to newer releases of dev-lang/php."
+	ewarn "With PIC enabled, your PHP installation may become slower, but"
+	ewarn "PIC is required on Hardened-Gentoo platforms (where the USE flag"
+	ewarn "is enabled automatically). You may also need this on other"
+	ewarn "configurations where you disabled TEXTRELs, for example using"
+	ewarn "PaX in the kernel."
+	ewarn
 }

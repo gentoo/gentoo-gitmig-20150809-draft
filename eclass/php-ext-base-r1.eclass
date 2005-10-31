@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.2 2005/09/25 15:21:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.3 2005/10/31 14:08:42 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -63,6 +63,12 @@ php-ext-base-r1_src_install() {
 	if [ "${PHP_EXT_INI}" = "yes" ] ; then
 		php-ext-base-r1_addextension "${PHP_EXT_NAME}.so"
 	fi
+	for inifile in ${PHPINIFILELIST} ; do
+		inidir=${inifile/${PHP_EXT_NAME}.ini/}
+		inidir=${inidir/ext/ext-active}
+		dodir "/${inidir}"
+		dosym "/${inifile}" "/${inifile/ext/ext-active}"
+	done
 	# add support for installing php files into a version dependant directory
 	PHP_EXT_SHARED_DIR="/usr/share/${PHP_SHARED_CAT}/${PHP_EXT_NAME}"
 }

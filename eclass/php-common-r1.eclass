@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.2 2005/09/18 12:57:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.3 2005/10/31 14:08:42 chtekk Exp $
 
 # ########################################################################
 #
@@ -94,7 +94,7 @@ php_check_java() {
 
 	JDKVER=$(java-config --java-version 2>&1 | awk '/^java version/ { print $3 }' | xargs )
 	einfo "Active JDK version: ${JDKVER}"
-	case ${JDKVER} in
+	case "${JDKVER}" in
 		1.4.*) ;;
 		1.5.*) ewarn "Java 1.5 is NOT supported at this time, and might not work." ;;
 		*) eerror "A Java 1.4 JDK is required for Java support in PHP." ; die ;;
@@ -115,16 +115,21 @@ php_install_java() {
 	einfo "Installing Java test page"
 	newins ext/java/except.php java-test.php
 
-	JAVA_LIBRARY="`grep -- '-DJAVALIB' Makefile | sed -e 's,.\+-DJAVALIB=\"\([^"]*\)\".*$,\1,g;'| sort | uniq `"
-	sed -e "s|;java.library .*$|java.library = ${JAVA_LIBRARY}|g" -i ${phpinisrc}
-	sed -e "s|;java.class.path .*$|java.class.path = ${PHPEXTDIR}/php_java.jar|g" -i ${phpinisrc}
-	sed -e "s|;java.library.path .*$|java.library.path = ${PHPEXTDIR}|g" -i ${phpinisrc}
-	sed -e "s|;extension=php_java.dll.*$|extension = java.so|g" -i ${phpinisrc}
-
 	einfo "Installing Java extension for PHP"
 	doins modules/java.so
 
 	dosym ${PHPEXTDIR}/java.so ${PHPEXTDIR}/libphp_java.so
+}
+
+php_install_java_inifile() {
+	JAVA_LIBRARY="`grep -- '-DJAVALIB' Makefile | sed -e 's,.\+-DJAVALIB=\"\([^"]*\)\".*$,\1,g;'| sort | uniq `"
+
+	echo "extension = java.so" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
+	echo "java.library = ${JAVA_LIBRARY}" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
+	echo "java.class.path = ${PHPEXTDIR}/php_java.jar" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
+	echo "java.library.path = ${PHPEXTDIR}" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
+
+	dosym "${PHP_EXT_INI_DIR}/java.ini" "${PHP_EXT_INI_DIR_ACTIVE}/java.ini"
 }
 
 # ########################################################################

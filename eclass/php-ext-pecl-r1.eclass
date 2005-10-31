@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.1 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r1.eclass,v 1.2 2005/10/31 14:08:42 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -30,7 +30,8 @@ fi
 
 SRC_URI="http://pecl.php.net/get/${FILENAME}"
 HOMEPAGE="http://pecl.php.net/${PECL_PKG}"
-S=${WORKDIR}/${PECL_PKG_V}
+
+S="${WORKDIR}/${PECL_PKG_V}"
 
 php-ext-pecl-r1_src_compile() {
 	has_php
@@ -42,5 +43,5 @@ php-ext-pecl-r1_src_install() {
 	php-ext-source-r1_src_install
 
 	# Those two are always present
-	dodoc ${WORKDIR}/package.xml CREDITS
+	dodoc-php "${WORKDIR}/package.xml" CREDITS
 }

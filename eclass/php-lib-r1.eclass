@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-lib-r1.eclass,v 1.2 2005/09/11 16:39:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-lib-r1.eclass,v 1.3 2005/10/31 14:08:42 chtekk Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 #
@@ -49,6 +49,6 @@ php-lib-r1_src_install() {
 	for x in $@ ; do
 		SUBDIR="`dirname ${x}`"
 		insinto ${PHP_LIB_DIR}/${SUBDIR}
-		doins ${S_DIR}/${x}
+		doins "${S_DIR}/${x}"
 	done
 }

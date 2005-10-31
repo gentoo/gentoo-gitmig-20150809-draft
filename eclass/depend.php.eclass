@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.5 2005/09/25 12:30:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.6 2005/10/31 14:08:42 chtekk Exp $
 #
 # ========================================================================
 #
@@ -133,7 +133,7 @@ need_php_by_category()
 # Portage
 #
 # $1 ... a list of SAPI USE flags (eg cli, cgi, apache2)
-#
+# 
 # returns if any one of the listed SAPIs has been installed
 # dies if none of the listed SAPIs has been installed
 
@@ -173,7 +173,7 @@ require_php_sapi_from()
 # Portage
 #
 # $1 ... a list of USE flags
-#
+# 
 # returns if all of the listed USE flags are set
 # dies if any of the listed USE flags are not set
 
@@ -220,10 +220,10 @@ has_php()
 
 	if [[ -z ${PHP_VERSION} ]]; then
 		# detect which PHP version installed
-		if has_version '=dev-lang/php-5*' ; then
-			PHP_VERSION=5
-		elif has_version '=dev-lang/php-4*' ; then
+		if has_version '=dev-lang/php-4*' ; then
 			PHP_VERSION=4
+		elif has_version '=dev-lang/php-5*' ; then
+			PHP_VERSION=5
 		else
 			die "Unable to find an installed dev-lang/php package"
 		fi
@@ -337,15 +337,15 @@ require_php_cli()
 	fi
 
 	# detect which PHP version installed
-	if has_version '=dev-lang/php-5*' ; then
-		pkg="`best_version '=dev-lang/php-5*'`"
-		if built_with_use =${pkg} cli ; then
-			PHP_VERSION=5
-		fi
-	elif has_version '=dev-lang/php-4*' ; then
+	if has_version '=dev-lang/php-4*' ; then
 		pkg="`best_version '=dev-lang/php-4*'`"
 		if built_with_use =${pkg} cli ; then
 			PHP_VERSION=4
+		fi
+	elif has_version '=dev-lang/php-5*' ; then
+		pkg="`best_version '=dev-lang/php-5*'`"
+		if built_with_use =${pkg} cli ; then
+			PHP_VERSION=5
 		fi
 	else
 		die "Unable to find an installed dev-lang/php package"
@@ -375,15 +375,15 @@ require_php_cgi()
 	fi
 
 	# detect which PHP version installed
-	if has_version '=dev-lang/php-5*' ; then
-		pkg="`best_version '=dev-lang/php-5*'`"
-		if built_with_use =${pkg} cgi ; then
-			PHP_VERSION=5
-		fi
-	elif has_version '=dev-lang/php-4*' ; then
+	if has_version '=dev-lang/php-4*' ; then
 		pkg="`best_version '=dev-lang/php-4*'`"
 		if built_with_use =${pkg} cgi ; then
 			PHP_VERSION=4
+		fi
+	elif has_version '=dev-lang/php-5*' ; then
+		pkg="`best_version '=dev-lang/php-5*'`"
+		if built_with_use =${pkg} cgi ; then
+			PHP_VERSION=5
 		fi
 	else
 		die "Unable to find an installed dev-lang/php package"
@@ -430,6 +430,8 @@ require_sqlite()
 	die "No sqlite extension for PHP found"
 }
 
+# require a PHP built with GD support
+
 require_gd()
 {
 	has_php
@@ -456,4 +458,69 @@ require_gd()
 	eerror "turned on."
 	eerror
 	die "No GD support found for PHP"
+}
+
+# ========================================================================
+# Misc functions
+#
+# These functions provide miscellaneous checks and functionality.
+# ========================================================================
+
+# executes some checks needed when installing a binary PHP extension
+
+php_binary_extension() {
+	has_php
+
+	# binary extensions do not support the change of PHP
+	# API version, so they can't be installed when USE flags
+	# are enabled wich change the PHP API version
+
+	if built_with_use =${PHP_PKG} hardenedphp ; then
+		eerror
+		eerror "You cannot install binary PHP extensions"
+		eerror "when the 'hardenedphp' USE flag is enabled!"
+		eerror "Please reemerge dev-lang/php with the"
+		eerror "'hardenedphp' USE flag turned off."
+		eerror
+		die "'hardenedphp' USE flag turned on"
+	fi
+
+	if built_with_use =${PHP_PKG} debug ; then
+		eerror
+		eerror "You cannot install binary PHP extensions"
+		eerror "when the 'debug' USE flag is enabled!"
+		eerror "Please reemerge dev-lang/php with the"
+		eerror "'debug' USE flag turned off."
+		eerror
+		die "'debug' USE flag turned on"
+	fi
+}
+
+# alternative to dodoc for use in our php eclasses and ebuilds
+# stored here because depend.php gets always sourced everywhere
+# in the PHP ebuilds and eclasses
+# it simply is dodoc with a changed path to the docs
+# no support for docinto is given!
+
+dodoc-php()
+{
+if [ $# -lt 1 ] ; then
+	echo "$0: at least one argument needed" 1>&2
+	exit 1
+fi
+
+phpdocdir="${D}/usr/share/doc/${CATEGORY}/${PF}/"
+
+if [ ! -d "${phpdocdir}" ] ; then
+	install -d "${phpdocdir}"
+fi
+
+for x in "$@" ; do
+	if [ -s "${x}" ] ; then
+		install -m0644 "${x}" "${phpdocdir}"
+		gzip -f -9 "${phpdocdir}/${x##*/}"
+	elif [ ! -e "${x}" ] ; then
+		echo "dodoc-php: ${x} does not exist" 1>&2
+	fi
+done
 }

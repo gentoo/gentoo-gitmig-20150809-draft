@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.2 2005/09/25 15:21:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.3 2005/10/31 14:08:42 chtekk Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -37,7 +37,7 @@ php-ext-source-r1_src_compile() {
 	has_php
 	my_conf="${my_conf} --prefix=${PHPPREFIX} --with-php-config=${PHPCONFIG}"
 	addpredict /usr/share/snmp/mibs/.index
-	#phpize creates configure out of config.m4
+	# phpize creates configure out of config.m4
 	export WANT_AUTOMAKE=1.9 WANT_AUTOCONF=2.5
 	${PHPIZE}
 	./configure ${my_conf} || die "Unable to configure code to compile"
