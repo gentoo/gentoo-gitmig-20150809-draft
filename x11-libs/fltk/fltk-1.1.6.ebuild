@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.8 2005/10/31 13:26:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.6.ebuild,v 1.9 2005/10/31 17:54:46 gustavoz Exp $
 
 IUSE="noxft opengl debug"
 
@@ -10,7 +10,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
 SRC_URI="http://ftp.easysw.com/pub/${PN}/${PV}/${P}-source.tar.bz2"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~mips ~ppc64 ~hppa"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64 ~mips ~ppc64 ~hppa"
 LICENSE="FLTK LGPL-2"
 
 PV_MAJOR=${PV/.*/}
