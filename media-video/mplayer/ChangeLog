@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.328 2005/10/30 19:27:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.329 2005/10/31 09:47:21 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  mplayer-1.0_pre6-r4.ebuild, mplayer-1.0_pre6-r5.ebuild,
+  mplayer-1.0_pre6-r6.ebuild, mplayer-1.0_pre7.ebuild:
+  Disable divx4linux in every version, not just the last one, to avoid
+  breakage now that the package is gone.
 
   30 Oct 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre7-r1.ebuild:
   Removed ancient divx4linux support, internal support if far better anyway.

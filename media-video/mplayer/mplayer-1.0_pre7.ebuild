@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.17 2005/08/25 20:01:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.18 2005/10/31 09:47:21 flameeyes Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl cpudetection
-custom-cflags debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv
+custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia vorbis opengl
 oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2
@@ -32,7 +32,6 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
-	divx4linux? (  >=media-libs/divx4linux-20030428 )
 	win32codecs? ( >=media-libs/win32codecs-20040916 )
 	x86? ( real? ( >=media-video/realplayer-10.0.3 ) )
 	aalib? ( media-libs/aalib )
@@ -320,7 +319,7 @@ src_compile() {
 	#########
 	# Codecs #
 	########
-	myconf="${myconf} $(use_enable divx4linux)"
+	myconf="${myconf} --disable-divx4linux"
 	myconf="${myconf} $(use_enable gif)"
 	myconf="${myconf} $(use_enable jpeg)"
 	#myconf="${myconf} $(use_enable ladspa)"

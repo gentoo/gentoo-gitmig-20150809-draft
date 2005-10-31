@@ -1,4 +1,7 @@
-MD5 1273007c4795e2e3b53e47ee1257aea0 ChangeLog 60428
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f3a97201b2d310dd8f87b12a0ca4644 ChangeLog 60709
 MD5 13bcf07a21789edf9b2f7b7935828b5b files/digest-mplayer-1.0_pre6-r4 429
 MD5 13bcf07a21789edf9b2f7b7935828b5b files/digest-mplayer-1.0_pre6-r5 429
 MD5 13bcf07a21789edf9b2f7b7935828b5b files/digest-mplayer-1.0_pre6-r6 429
@@ -20,8 +23,15 @@ MD5 59120b22317a30fb88a5e4946eaed3f0 files/mplayer-nl.patch 673
 MD5 995f560631c6874f08bf6cc9ae01fb08 files/mplayer.desktop 794
 MD5 1dc7b4b16903461c2ea8663d5dfc5795 files/rtsp_fix_20050415.diff 634
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 f61b143e75e30cdba4019237e32d4de2 mplayer-1.0_pre6-r4.ebuild 18372
-MD5 0929553017cf92b1bc65d12df2bf6b21 mplayer-1.0_pre6-r5.ebuild 18458
-MD5 a1059d3d7970cd21dbbcb9c89d0bed8d mplayer-1.0_pre6-r6.ebuild 18368
+MD5 ccbdd321ba9b7a55d8639595d8eba9cb mplayer-1.0_pre6-r4.ebuild 18306
+MD5 208d770ca540bb94744fe9d853c19bf2 mplayer-1.0_pre6-r5.ebuild 18392
+MD5 05078a9dddec9d095ecfcc94dbb7113f mplayer-1.0_pre6-r6.ebuild 18303
 MD5 9db4da1d181f02f73446918de28d3955 mplayer-1.0_pre7-r1.ebuild 15976
-MD5 a7ee6a7da902ae3aab61ef0f6c00cea9 mplayer-1.0_pre7.ebuild 17868
+MD5 2a78fe5aac657d3fd54db3bcba903f55 mplayer-1.0_pre7.ebuild 17803
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZehKj5H05b2HAEkRAnsaAKCby/TZMBTsEZkMIIZBpKc8m6DD0wCfaX1s
+e2R/wzwvBthn0qRKYbV6sD4=
+=/tBB
+-----END PGP SIGNATURE-----
