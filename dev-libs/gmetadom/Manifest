@@ -1,4 +1,4 @@
-MD5 8572cc12048ec5f38a3d6bebf4b755f3 ChangeLog 1832
+MD5 32cfe479cfc62ae8c789e1ca5aa69c85 ChangeLog 1944
 MD5 7192830dc2daf239e593ee9d302af67e files/digest-gmetadom-0.0.3-r3 66
 MD5 61a42bb68511dea925d7f7860eb7027c files/digest-gmetadom-0.1.8 66
 MD5 51735b8a4a855394319affc43667b6de files/digest-gmetadom-0.2.1-r2 66
@@ -10,6 +10,6 @@ MD5 53221ec88d4b81a5575d819f720941d2 files/gmetadom-0.2.2-gentoo.patch 1693
 MD5 78bfc4c074695496ebe116fc8e565cb6 gmetadom-0.0.3-r3.ebuild 1469
 MD5 1efffaeae461cb2e5c3a26b73985e367 gmetadom-0.1.8.ebuild 732
 MD5 4a0d1d405250503757bedff7ef793dd6 gmetadom-0.2.1-r2.ebuild 1184
-MD5 fd46e1b387dae95f63aec855a03de4b0 gmetadom-0.2.2-r1.ebuild 1276
+MD5 b086b7ff3bb3bc8aac905e49a2084ca9 gmetadom-0.2.2-r1.ebuild 1275
 MD5 66f606b975a4b66c5572d166e0d871d1 gmetadom-0.2.2.ebuild 1196
 MD5 e10a0da4fac2882942ffa8360ccdd921 metadata.xml 201
