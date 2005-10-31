@@ -1,4 +1,17 @@
-MD5 f9e4428d945f924ed2272df5b5023394 xmms-infopipe-1.3.ebuild 869
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 da89ad0a60757334009563db86c8a65e ChangeLog 1969
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 35ab38c519a78a5f08c5d2987439adbf ChangeLog 2188
 MD5 14dae097605a2dc2254a02f3972d5e28 files/digest-xmms-infopipe-1.3 69
+MD5 14dae097605a2dc2254a02f3972d5e28 files/digest-xmms-infopipe-1.3-r1 69
+MD5 05bf51208a6679dd57ebca0be69f1ff1 files/xmms-infopipe-tweaks.patch 2865
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 72084d81d455aa08161971f4be7e96e6 xmms-infopipe-1.3-r1.ebuild 934
+MD5 f9e4428d945f924ed2272df5b5023394 xmms-infopipe-1.3.ebuild 869
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDZYpZwUpWvClEHQoRAlxAAKCGkN5I7nWlrla3eDWBJmF5WY4EOgCeKCW5
+bzjra5B5Y7004ezi7flnLpU=
+=3SjL
+-----END PGP SIGNATURE-----
