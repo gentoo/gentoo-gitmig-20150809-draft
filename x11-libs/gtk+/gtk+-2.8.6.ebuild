@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6.ebuild,v 1.3 2005/10/27 21:43:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.6.ebuild,v 1.4 2005/10/31 16:59:44 leonardop Exp $
 
 inherit gnome.org flag-o-matic eutils debug
 
@@ -52,7 +52,8 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.4
 		~app-text/docbook-xml-dtd-4.1.2 )"
 
-pkg_setup() {
+
+set_gtk2_confdir() {
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
@@ -112,7 +113,9 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
+	set_gtk2_confdir
 	dodir ${GTK2_CONFDIR}
+	keepdir ${GTK2_CONFDIR}
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
 	dodir /etc/env.d
@@ -122,6 +125,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	gtk-query-immodules-2.0  > ${GTK2_CONFDIR}/gtk.immodules
-	gdk-pixbuf-query-loaders > ${GTK2_CONFDIR}/gdk-pixbuf.loaders
+	set_gtk2_confdir
+
+	if [ -d "${ROOT}${GTK2_CONFDIR}" ]; then
+		gtk-query-immodules-2.0  > ${ROOT}${GTK2_CONFDIR}/gtk.immodules
+		gdk-pixbuf-query-loaders > ${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders
+	else
+		ewarn "The destination path ${ROOT}${GTK2_CONFDIR} doesn't exist;"
+		ewarn "to complete the installation of GTK+, please create the"
+		ewarn "directory and then manually run:"
+		ewarn "  cd ${ROOT}${GTK2_CONFDIR}"
+		ewarn "  gtk-query-immodules-2.0  > gtk.immodules"
+		ewarn "  gdk-pixbuf-query-loaders > gdk-pixbuf.loaders"
+	fi
 }

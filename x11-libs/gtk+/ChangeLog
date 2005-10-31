@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.193 2005/10/27 21:43:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.194 2005/10/31 16:59:44 leonardop Exp $
+
+  31 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> gtk+-2.6.10.ebuild,
+  gtk+-2.8.6.ebuild:
+  Fix logic around GTK2_CONFDIR to make the postinst hook work on binary
+  packages.
 
   27 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/gtk+-2.8.6-freebsd.patch, gtk+-2.8.6.ebuild:

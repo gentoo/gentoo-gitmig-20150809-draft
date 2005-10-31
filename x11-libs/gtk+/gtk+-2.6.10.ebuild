@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10.ebuild,v 1.3 2005/10/22 15:11:38 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.10.ebuild,v 1.4 2005/10/31 16:59:44 leonardop Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,16 +30,18 @@ DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-# An arch specific config directory is used on multilib systems
-has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+
+set_gtk2_confdir() {
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0}
+}
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
+
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
@@ -86,8 +88,9 @@ src_compile() {
 }
 
 src_install() {
-
+	set_gtk2_confdir
 	dodir ${GTK2_CONFDIR}
+	keepdir ${GTK2_CONFDIR}
 
 	make DESTDIR=${D} install || die
 
@@ -96,12 +99,11 @@ src_install() {
 	echo "GDK_USE_XFT=1" >${D}/etc/env.d/50gtk2
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
-
 }
 
 pkg_postinst() {
+	set_gtk2_confdir
 
-	gtk-query-immodules-2.0 >	/${GTK2_CONFDIR}/gtk.immodules
-	gdk-pixbuf-query-loaders >	/${GTK2_CONFDIR}/gdk-pixbuf.loaders
-
+	gtk-query-immodules-2.0  > ${ROOT}${GTK2_CONFDIR}/gtk.immodules
+	gdk-pixbuf-query-loaders > ${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders
 }
