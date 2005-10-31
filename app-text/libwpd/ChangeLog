@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.18 2005/10/23 11:32:34 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.19 2005/10/31 07:41:58 kloeri Exp $
+
+  31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> libwpd-0.8.2.ebuild:
+  ~ia64 keyword.
 
   23 Oct 2005; Jose Luis Rivero <yoswink@gentoo.org> libwpd-0.8.2.ebuild:
   Marked ~alpha wrt bug #108874
