@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/urt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.17 2005/10/30 10:51:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/ChangeLog,v 1.18 2005/10/31 15:17:11 gustavoz Exp $
+
+  31 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> urt-3.1b-r1.ebuild:
+  Stable on sparc wrt #109997
 
   30 Oct 2005; Simon Stelling <blubb@gentoo.org> urt-3.1b-r1.ebuild:
   stable on amd64 wrt bug 109997
