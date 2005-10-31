@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.9-r1.ebuild,v 1.2 2005/10/31 16:47:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.9-r1.ebuild,v 1.3 2005/10/31 16:48:23 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit gnuconfig eutils flag-o-matic
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
