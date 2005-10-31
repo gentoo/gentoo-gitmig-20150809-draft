@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.160 2005/10/30 21:39:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.161 2005/10/31 18:23:13 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-driver-1.0.10_rc2.ebuild:
+  Resolve collision-protect errors as per bug #93286.
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsa-driver-1.0.10_rc2-audigy2zs.patch,
