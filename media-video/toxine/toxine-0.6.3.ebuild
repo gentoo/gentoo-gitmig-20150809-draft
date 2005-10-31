@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/toxine-0.6.3.ebuild,v 1.2 2005/08/19 19:31:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/toxine-0.6.3.ebuild,v 1.3 2005/10/31 16:39:30 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Text user interface to xine media player"
 HOMEPAGE="http://toxine.sourceforge.net/"
@@ -21,7 +21,8 @@ DEPEND="sys-libs/readline
 	X? ( virtual/x11 )"
 RDEPEND="${DEPEND}
 	sys-devel/autoconf
-	sys-devel/automake"
+	sys-devel/automake
+	sys-devel/libtool"
 
 src_unpack() {
 	unpack ${A}
@@ -31,10 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-nox.patch
 
-	aclocal -I m4 || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake || die "automake failed"
-	libtoolize --copy --force || die "libtoolize failed"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {

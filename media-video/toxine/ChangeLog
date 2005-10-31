@@ -1,6 +1,9 @@
 # ChangeLog for media-video/toxine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/ChangeLog,v 1.2 2005/08/19 19:31:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/ChangeLog,v 1.3 2005/10/31 16:39:30 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> toxine-0.6.3.ebuild:
+  use autotools eclass. Added missing dependency over libtool.
 
   19 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/toxine-0.6.3-nox.patch, toxine-0.6.3.ebuild:
