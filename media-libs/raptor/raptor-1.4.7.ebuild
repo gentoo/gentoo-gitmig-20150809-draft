@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.7.ebuild,v 1.1 2005/10/18 00:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.7.ebuild,v 1.2 2005/10/31 12:28:04 flameeyes Exp $
 
 inherit eutils
 
@@ -70,6 +70,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
-	dohtml INSTALL.html NEWS.html README.html
+	dodoc AUTHORS ChangeLog NEWS README
+	dohtml NEWS.html README.html
 }

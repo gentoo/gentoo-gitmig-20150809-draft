@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.25 2005/10/18 00:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.26 2005/10/31 12:28:04 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> raptor-1.4.5.ebuild,
+  raptor-1.4.7.ebuild:
+  Don't install INSTALL documentation.
 
 *raptor-1.4.7 (18 Oct 2005)
 

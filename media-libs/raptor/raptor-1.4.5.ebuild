@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.5.ebuild,v 1.4 2005/06/14 00:03:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.5.ebuild,v 1.5 2005/10/31 12:28:04 flameeyes Exp $
 
 inherit eutils
 
@@ -40,8 +40,8 @@ RDEPEND="virtual/libc
 #	ssl? ( dev-libs/openssl )
 #	curl? ( net-misc/curl ) : ( !xml2? ( libwww? ( net-libs/libwww ) ) )"
 
-DOC="AUTHORS ChangeLog INSTALL NEWS README"
-HTML="INSTALL.html NEWS.html README.html"
+DOC="AUTHORS ChangeLog NEWS README"
+HTML="NEWS.html README.html"
 
 src_unpack() {
 	unpack ${A}
