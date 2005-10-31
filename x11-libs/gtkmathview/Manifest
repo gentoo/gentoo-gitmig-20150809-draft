@@ -1,4 +1,4 @@
-MD5 35beed7294457ee806c487f61f13d292 ChangeLog 1150
+MD5 dc0ba9365e295501c05e367f85c58e90 ChangeLog 1264
 MD5 3a0ed27c8e0851676f171a5fd00affba files/digest-gtkmathview-0.5.1 69
 MD5 00b7d8f65dfcc01cf66295ddfc50f117 files/digest-gtkmathview-0.5.2 69
 MD5 d8f7283d3e1c5da9f86469416106595e files/digest-gtkmathview-0.6.3 69
@@ -6,5 +6,5 @@ MD5 d7c5f25c3240487c19bd100f83b2d857 files/digest-gtkmathview-0.7.5 69
 MD5 17e9052a6cc5c0a2a56235e7246382c6 gtkmathview-0.5.1.ebuild 724
 MD5 4b72d70c235f6d878a0ba686421a7ecf gtkmathview-0.5.2.ebuild 724
 MD5 c5833ca0cf6a78cb8fc27b711a504590 gtkmathview-0.6.3.ebuild 754
-MD5 613e1374e0a3da88c148fe1bedcb9da2 gtkmathview-0.7.5.ebuild 889
+MD5 6f1c71ef9db368c560933e5ca416b284 gtkmathview-0.7.5.ebuild 890
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
