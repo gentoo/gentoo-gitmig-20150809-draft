@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.3 2005/10/30 19:21:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.4 2005/10/31 11:10:08 flameeyes Exp $
 
 inherit font multilib
 
@@ -192,7 +192,7 @@ src_install() {
 	font_src_install
 
 	# Install documentation
-	dodoc ChangeLog AUTHORS INSTALL FAQ* README.* TODO lisez-moi* \
+	dodoc ChangeLog AUTHORS FAQ* README.* TODO lisez-moi* \
 		xdtvrc.sample lircrc.*.sample
 	docinto alevt
 	dodoc alevt/README alevt/ReadmeGR alevt/CHANGELOG alevt/COPYRIGHT

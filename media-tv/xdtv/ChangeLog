@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.9 2005/10/30 19:21:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.10 2005/10/31 11:10:08 flameeyes Exp $
+
+  31 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0.ebuild,
+  xdtv-2.2.0-r1.ebuild:
+  Don't install INSTALL file.
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0.ebuild,
   xdtv-2.2.0-r1.ebuild:
