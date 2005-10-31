@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r2.ebuild,v 1.1 2005/10/08 14:45:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r2.ebuild,v 1.2 2005/10/31 11:11:23 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -160,7 +160,7 @@ src_install() {
 	dodir /usr/share/xine/libxine1/fonts
 	mv ${D}/usr/share/*.xinefont.gz ${D}/usr/share/xine/libxine1/fonts/
 
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 	cd ${S}/doc
 	dodoc dataflow.dia README*
 }
