@@ -6,3 +6,5 @@ selinux
 # nVidia XvMC requires nvidia-glx
 nvidia
 
+# dev-db/oracle-instantclient-basic is only available on x86
+oci8-instant-client
