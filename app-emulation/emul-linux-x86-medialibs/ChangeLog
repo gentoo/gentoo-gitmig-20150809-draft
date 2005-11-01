@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.4 2005/10/16 03:15:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.5 2005/11/01 15:53:01 dang Exp $
+
+  01 Nov 2005; <dang@gentoo.org> +emul-linux-x86-medialibs-1.2.ebuild:
+  New rev of medialibs with lirc client lib
+
+*emul-linux-x86-medialibs-1.2 (01 Nov 2005)
+
+  01 Nov 2005; <dang@gentoo.org> +emul-linux-x86-medialibs-1.2.ebuild:
+  New rev of medialibs with lirc client lib
 
   16 Oct 2005; <dang@gentoo.org> emul-linux-x86-medialibs-1.1-r1.ebuild:
   Marked stable on amd64
