@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.3.ebuild,v 1.1 2005/09/05 01:23:44 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.3.ebuild,v 1.2 2005/11/01 03:22:44 soulse Exp $
 
 inherit webapp eutils
 
@@ -57,7 +57,7 @@ src_install() {
 
 	webapp_configfile ${MY_HTDOCSDIR}/sites/default/settings.php
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en ${FILESDIR}/postinstall-en-4.6.3.txt
 
 	webapp_src_install
 }
@@ -66,7 +66,7 @@ pkg_postinst() {
 	webapp_pkg_postinst
 	einfo
 	einfo "You might want to run:"
-	einfo "\"ebuild /var/db/pkg/www-apps/${PF}/${PF}.ebuild config\""
+	einfo "\"emerge --config =${PF} \""
 	einfo "if this is a new install."
 	einfo
 }
