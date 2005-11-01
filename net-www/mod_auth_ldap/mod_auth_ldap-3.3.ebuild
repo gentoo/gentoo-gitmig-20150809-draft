@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-3.3.ebuild,v 1.4 2005/10/19 03:37:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-3.3.ebuild,v 1.5 2005/11/01 19:32:17 dertobi123 Exp $
 
 inherit eutils apache-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="Apache module for LDAP authorization"
 HOMEPAGE="http://www.muquit.com/muquit/software/mod_auth_ldap/mod_auth_ldap.html"
 SRC_URI="http://www.muquit.com/muquit/software/${PN}/${PN}${PV}.tar.gz"
 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="ppc ~sparc x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE="apache2 berkdb disk-cache gdbm mem-cache"
