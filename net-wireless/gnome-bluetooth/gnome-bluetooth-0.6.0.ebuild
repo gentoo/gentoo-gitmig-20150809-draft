@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.6.0.ebuild,v 1.1 2005/10/28 04:53:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.6.0.ebuild,v 1.2 2005/11/01 14:03:41 brix Exp $
 
 inherit distutils gnome2 eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=dev-util/gob-2
 	>=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2.7
-	>=net-wireless/libbtctl-0.4.1
+	>=net-wireless/libbtctl-0.5.0
 	>=dev-python/pygtk-2.0
 	>=dev-python/gnome-python-2"
 

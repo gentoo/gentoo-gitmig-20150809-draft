@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.19 2005/10/28 04:53:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.20 2005/11/01 14:03:41 brix Exp $
+
+  01 Nov 2005; Henrik Brix Andersen <brix@gentoo.org>
+  gnome-bluetooth-0.6.0.ebuild:
+  Fixed libbtctl version dependency, bug #111096.
 
 *gnome-bluetooth-0.6.0 (28 Oct 2005)
 
