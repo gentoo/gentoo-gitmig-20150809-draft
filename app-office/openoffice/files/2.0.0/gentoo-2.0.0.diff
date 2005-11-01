@@ -35,3 +35,16 @@
  	    add_version=
  	    test "z$VENDORNAME" = "zNovell" -a "z$BINSUFFIX" != "z" && add_version=" ($VERSION)" || :
  	    sed -e "s|@BINSUFFIX@|$BINSUFFIX|g
+@@ -215,8 +215,10 @@
+ 
+ echo "Done";
+ 
+-# Java-disabled builds do not create help
+-if test -d $OOINSTDIR/help; then
++# Check if the English help is installed and is in the main package (is first on the list)
++# Note that Java-disabled builds do not create help at all.
++if test -f $OOINSTDIR/help/en/sbasic.cfg -a \
++        "`for lang in $OOO_LANGS_LIST ; do echo $lang ; break ; done`" = "en-US" ; then
+     echo "Removing duplicated English help..."
+   
+     for lang in $OOO_LANGS_LIST ; do

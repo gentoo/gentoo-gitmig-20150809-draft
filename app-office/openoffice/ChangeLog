@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.151 2005/10/31 14:39:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.152 2005/11/01 21:44:50 suka Exp $
+
+  01 Nov 2005; Andreas Proschofsky <suka@gentoo.org>
+  files/2.0.0/gentoo-2.0.0.diff:
+  Fix for build problem with not fully translated languages, closes bug #110340.
 
   31 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   openoffice-2.0.0.ebuild:
