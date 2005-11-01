@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4640 2005/11/01 10:34:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4641 2005/11/01 19:32:21 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1766,3 +1766,8 @@ dev-db/mysqltool
 # Security issues, and unmaintained upstream
 # <dang@gentoo.org> (18 Aug 2005)
 app-admin/gwcc
+
+# Mask until fils propagate
+# <dang@gentoo.org> (01 nov 2005)
+=app-emulation/emul-linux-x86-medialibs-1.2
+=media-video/mplayer-bin-1.0_pre7-r3
