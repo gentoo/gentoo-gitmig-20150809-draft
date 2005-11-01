@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.4-r1.ebuild,v 1.5 2005/08/03 22:16:13 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.4-r1.ebuild,v 1.6 2005/11/01 07:41:27 nerdboy Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="OGDI - Open Geographical Datastore Interface, a GIS support library"
 HOMEPAGE="http://ogdi.sourceforge.net"
@@ -16,6 +16,12 @@ IUSE=""
 DEPEND="sci-libs/proj
 	sys-libs/zlib
 	dev-libs/expat"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fpic.patch
+}
 
 src_compile() {
 	export TOPDIR="${S}"

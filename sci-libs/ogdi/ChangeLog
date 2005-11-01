@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.17 2005/08/03 22:16:13 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.18 2005/11/01 07:41:27 nerdboy Exp $
+
+  01 Nov 2005; Steve Arnold <nerdboy@gentoo.org>
+  +files/ogdi-3.1.4-fpic.patch, -ogdi-3.1.1-r1.ebuild, ogdi-3.1.4-r1.ebuild,
+  -ogdi-3.1.5.ebuild:
+  added fPIC patch and cleaned up ebuilds; stable bump for sparc and x86.
 
   03 Aug 2005; Herbie Hopkins <herbs@gentoo.org> ogdi-3.1.1-r1.ebuild,
   ogdi-3.1.4-r1.ebuild, ogdi-3.1.5.ebuild, ogdi-3.1.5-r1.ebuild:
