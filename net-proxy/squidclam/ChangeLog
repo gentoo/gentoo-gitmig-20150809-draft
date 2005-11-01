@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squidclam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/ChangeLog,v 1.4 2005/10/12 21:27:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/ChangeLog,v 1.5 2005/11/01 04:04:21 mrness Exp $
+
+*squidclam-0.18 (01 Nov 2005)
+
+  01 Nov 2005; Alin Nastac <mrness@gentoo.org> -squidclam-0.11.ebuild,
+  -squidclam-0.16.ebuild, +squidclam-0.18.ebuild:
+  Remove obsolete versions. Version bump (#110844).
 
 *squidclam-0.17 (12 Oct 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/squidclam-0.16.ebuild,v 1.1 2005/10/04 21:23:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclam/squidclam-0.18.ebuild,v 1.1 2005/11/01 04:04:21 mrness Exp $
 
 DESCRIPTION="A redirector for Squid which scans accessed URLs for viruses, using Clam Anti-Virus"
 HOMEPAGE="http://squidclam.sourceforge.net/"
