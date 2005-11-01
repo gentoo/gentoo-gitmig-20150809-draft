@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.38.4.ebuild,v 1.2 2005/11/01 21:41:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.39_p1.ebuild,v 1.1 2005/11/01 21:41:54 matsuu Exp $
 
-IUSE="X alsa debug jack"
+IUSE="alsa debug jack"
 
-inherit eutils versionator
+inherit eutils
 
 # Miller Puckette uses nonstandard versioning scheme that we have to crunch
-MY_PV=$(replace_version_separator 2 '-')
-MY_P="${PN}-${MY_PV}"
+MY_P="${P/_p/-}"
 S=${WORKDIR}/${MY_P}/src
 
 DESCRIPTION="real-time music and multimedia environment"
@@ -17,21 +16,12 @@ SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.src.tar.gz"
 
 LICENSE="|| ( BSD as-is )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
-	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
-	X? ( virtual/x11 )"
-
-src_unpack() {
-	unpack ${A}
-
-	# Fix install borkage... this errors in sandbox, but it still performs the copy,
-	# so we remove it from the makefile and just do it ourselves ignoring the error
-	sed -i 's:\(cp -pr ../doc ../extra $(INSTDIR)/lib/pd/\):# \1:' ${S}/makefile.in
-}
+	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )"
 
 src_compile() {
 	local myconf
@@ -43,7 +33,6 @@ src_compile() {
 
 	econf \
 		${myconf} \
-		$(use_with X x) \
 		$(use_enable jack) \
 		$(use_enable debug) \
 		|| die "./configure failed"
@@ -51,12 +40,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	# tb: install private headers ... several external developers use them
-	cp m_imp.h ${D}/usr/include
-	cp g_canvas.h ${D}/usr/include
-
-	cd ..
-	cp -pr doc extra ${D}/usr/lib/pd
+	insinto /usr/include
+	doins m_imp.h g_canvas.h
 }
