@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.6 2005/11/01 13:46:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.7 2005/11/01 19:39:48 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/Xutils/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11"
