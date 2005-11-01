@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.25 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.26 2005/11/01 21:18:12 leonardop Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -99,10 +99,17 @@ latex-package_src_doinstall() {
 					texi2dvi -q -c --language=latex $i &> /dev/null
 					done
 				;;
-			"tfm" | "vf" | "afm" | "pfb")
+			"tfm" | "vf" | "afm")
 				for i in `find . -maxdepth 1 -type f -name "*.${1}"`
 				do
 					insinto ${TEXMF}/fonts/${1}/${SUPPLIER}/${PN}
+					doins $i || die "doins $i failed"
+				done
+				;;
+			"pfb")
+				for i in `find . -maxdepth 1 -type f -name "*.pfb"`
+				do
+					insinto ${TEXMF}/fonts/type1/${SUPPLIER}/${PN}
 					doins $i || die "doins $i failed"
 				done
 				;;
