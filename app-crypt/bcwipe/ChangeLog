@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.14 2005/10/17 05:09:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.15 2005/11/01 20:27:35 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> bcwipe-1.5_p3.ebuild:
+  Stable on x86. Bug 111163.
 
   17 Oct 2005; Joseph Jezak <josejx@gentoo.org> bcwipe-1.5_p3.ebuild:
   Marked ppc stable for bug #108171.
