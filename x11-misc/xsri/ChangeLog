@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xsri
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.1 2005/11/01 15:42:29 nelchael Exp $
+
+*xsri-2.1.0 (01 Nov 2005)
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +xsri-2.1.0.ebuild:
+  New package. Bug 97375, thanks to Thomas Weidner (3.14159@gmx.net).
+
