@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.ebuild,v 1.1 2005/11/01 00:06:43 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.ebuild,v 1.2 2005/11/01 00:40:30 cryos Exp $
 
 inherit distutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://trac.edgewall.com/"
 SRC_URI="http://ftp.edgewall.com/pub/trac/${P}.tar.gz"
 
 LICENSE="trac"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="vhosts cgi fastcgi postgres sqlite enscript silvercity"
 
 # doing so because utils (such as trac-admin), manpages... overlap
