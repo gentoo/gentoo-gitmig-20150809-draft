@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-4.0.1a-r1.ebuild,v 1.4 2005/09/18 19:22:34 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-4.0.1a-r1.ebuild,v 1.5 2005/11/01 18:55:45 dertobi123 Exp $
 
 inherit apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://software.tangent.org/"
 
 SRC_URI="http://download.tangent.org/${P}.tar.gz"
 LICENSE="as-is"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 SLOT="2"
 
