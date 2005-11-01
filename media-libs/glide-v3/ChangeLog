@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.19 2005/05/19 03:52:51 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.20 2005/11/01 06:47:26 spyderous Exp $
+
+  01 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Change ownership to x11-drivers.
 
   19 May 2005; Bryan Stine <battousai@gentoo.org> glide-v3-3.10-r3.ebuild,
   glide-v3-3.10-r4.ebuild:
