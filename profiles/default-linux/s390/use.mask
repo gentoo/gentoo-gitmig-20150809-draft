@@ -21,6 +21,8 @@ trusted
 voodoo3
 wavelan
 java
+java-internal
+java-external
 nptl
 hardened
 
@@ -54,6 +56,7 @@ gtk
 gtk2
 gnome
 X
+xpm
 vim-with-x
 
 # I need to have some of the bad tcltk uses fixed, until then...
@@ -69,3 +72,4 @@ glitz
 mono
 pike
 ocaml
+sdl
