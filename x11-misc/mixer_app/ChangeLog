@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mixer_app
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.15 2004/09/02 22:49:41 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.16 2005/11/01 13:22:55 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> mixer_app-1.7.0.ebuild,
+  mixer_app-1.8.0.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mixer_app-1.8.0.ebuild:

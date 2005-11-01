@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.8.0.ebuild,v 1.8 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.8.0.ebuild,v 1.9 2005/11/01 13:22:55 nelchael Exp $
 
 #need to do some name mangling
 #so that ebuild name adheres to "standart"
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	#make DESTDIR=${D} install || die
 	dobin Mixer.app
-	dodoc COPYING README ChangeLog
+	dodoc README ChangeLog
 }

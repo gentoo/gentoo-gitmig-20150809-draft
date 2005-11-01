@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.0.ebuild,v 1.20 2005/10/02 11:41:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.0.ebuild,v 1.21 2005/11/01 13:20:40 nelchael Exp $
 
 DESCRIPTION="Turns on numlock in X"
 HOMEPAGE="http://ktown.kde.org/~seli/numlockx/"
@@ -15,8 +15,7 @@ DEPEND="virtual/x11"
 
 src_install(){
 	dobin numlockx
-
-	dodoc AUTHORS INSTALL LICENSE README
+	dodoc AUTHORS LICENSE README
 }
 
 pkg_postinst(){

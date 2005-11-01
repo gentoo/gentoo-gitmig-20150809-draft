@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.10 2005/08/13 23:41:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.11 2005/11/01 13:26:40 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  -gxmessage-2.0.11.ebuild, gxmessage-2.4.4.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   gxmessage-2.4.4.ebuild:

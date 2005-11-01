@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.4.4.ebuild,v 1.6 2005/08/13 23:41:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.4.4.ebuild,v 1.7 2005/11/01 13:26:40 nelchael Exp $
 
 DESCRIPTION="A GTK2 based xmessage clone"
 HOMEPAGE="http://homepages.ihug.co.nz/~trmusson/programs.html#gxmessage"
@@ -18,7 +18,7 @@ IUSE=""
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS ABOUT-NLS COPYING ChangeLog README INSTALL
+	dodoc AUTHORS ABOUT-NLS ChangeLog README
 
 	docinto examples
 	dodoc examples/gxaddress examples/gxdialup examples/gxdict examples/gxman \
