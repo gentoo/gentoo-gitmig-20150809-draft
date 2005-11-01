@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.9.ebuild,v 1.1 2005/10/28 00:46:29 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.9.ebuild,v 1.2 2005/11/01 11:43:38 azarah Exp $
 
 inherit flag-o-matic libtool eutils fdo-mime alternatives
 
@@ -158,7 +158,8 @@ pkg_postinst() {
 	alternatives_auto_makesym "/usr/bin/gimp" "/usr/bin/gimp-[0-9].[0-9]"
 
 	# fix for bug #76050
-	ln -s $(gimptool-2.0 --gimpdatadir)/images/wilber-icon.png /usr/share/pixmaps/
+	ln -s $(gimptool-2.0 --gimpdatadir)/images/wilber-icon.png \
+		${ROOT}/usr/share/pixmaps/
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
@@ -168,7 +169,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	rm /usr/share/pixmaps/wilber-icon.png
+	[[ ! -f ${ROOT}/usr/bin/gimp-2.2 ]] && \
+		rm -f ${ROOT}/usr/share/pixmaps/wilber-icon.png
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update

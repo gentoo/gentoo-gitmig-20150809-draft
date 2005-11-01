@@ -1,14 +1,24 @@
-MD5 326e632efd23ae195f7be64beaaa659d gimp-2.2.8-r1.ebuild 4424
-MD5 2649b2a2f35aa2549ab4d81e750ea2d2 gimp-1.2.5.ebuild 3279
-MD5 39d4983eff8a926fd6bc0b8bc122ee3f gimp-2.2.6-r1.ebuild 4307
-MD5 47857ec6ff7f169a808aefefaa83de3b ChangeLog 19370
-MD5 7db7dfd359898019a9a7e255d096c1a7 gimp-2.2.9.ebuild 4251
-MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
-MD5 9d903731e90f07c2492aab4bd55f0e62 files/gimp-2.2.8-restart-marker.patch 611
-MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
-MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86dd44b9cfacfe4b681b20e5ee102e91 ChangeLog 19480
+MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
 MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6-r1 134
 MD5 aebd823dc72aefe0a0e4596da64c7277 files/digest-gimp-2.2.8-r1 134
-MD5 ff17b80bceb6bd818e20556c23647b0f files/gimp-2.2.8-configure-fix.patch 2423
-MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
 MD5 1fec061bf029a6b9159111d1b54df32c files/digest-gimp-2.2.9 134
+MD5 ff17b80bceb6bd818e20556c23647b0f files/gimp-2.2.8-configure-fix.patch 2423
+MD5 9d903731e90f07c2492aab4bd55f0e62 files/gimp-2.2.8-restart-marker.patch 611
+MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
+MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
+MD5 2649b2a2f35aa2549ab4d81e750ea2d2 gimp-1.2.5.ebuild 3279
+MD5 39d4983eff8a926fd6bc0b8bc122ee3f gimp-2.2.6-r1.ebuild 4307
+MD5 326e632efd23ae195f7be64beaaa659d gimp-2.2.8-r1.ebuild 4424
+MD5 d3d11252683dd54108025b6564f9ad0e gimp-2.2.9.ebuild 4312
+MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZ1XA1ZcsMnZjRyIRAq1RAJsHoY4x9ce/mWV6EdtxZ5Bnv9f9XACfUzH9
+4y8KoxDcneO0b04pw20virE=
+=j35n
+-----END PGP SIGNATURE-----
