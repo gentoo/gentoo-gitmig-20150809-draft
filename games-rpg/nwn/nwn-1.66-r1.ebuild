@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.4 2005/10/21 18:06:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.66-r1.ebuild,v 1.5 2005/11/01 20:07:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -118,7 +118,7 @@ src_install() {
 		-e "s:GENTOO_GROUP:${GAMES_GROUP}:" \
 		-e "s:GENTOO_DIR:${GAMES_PREFIX_OPT}:" \
 		${FILESDIR}/fixinstall > ${S}/fixinstall
-	fperm ug+x ${dir}/fixinstall
+	fperms ug+x ${dir}/fixinstall
 	mv ${S}/* ${Ddir}
 	games_make_wrapper nwn ./nwn "${dir}" "${dir}"
 	make_desktop_entry nwn "Neverwinter Nights"
