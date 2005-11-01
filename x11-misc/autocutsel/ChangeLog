@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/autocutsel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.12 2005/06/15 09:22:08 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.13 2005/11/01 13:41:02 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  autocutsel-0.6.2.ebuild, autocutsel-0.8.0.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL. Stable on x86.
 
 *autocutsel-0.8.0 (15 Jun 2005)
 
