@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.10 2005/10/30 19:27:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.11 2005/11/01 16:41:13 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -123,7 +123,7 @@ src_unpack() {
 	# Remove kernel-2.6 workaround as the problem it works around is
 	# fixed, and the workaround breaks sparc
 	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
-	epatch ${FILESDIR}/${PN}-1.0_pre6-ppc64.patch
+	epatch ${FILESDIR}/${P}-ppc64.patch
 
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${P}-gcc4.patch
