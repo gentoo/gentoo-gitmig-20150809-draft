@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/gkrellm-giFT-0.2.2.ebuild,v 1.6 2004/08/23 03:02:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/gkrellm-giFT-0.2.2.ebuild,v 1.7 2005/11/01 14:32:39 nelchael Exp $
 
 inherit eutils
 
@@ -26,12 +26,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING FAQ README
+	dodoc AUTHORS ChangeLog FAQ README
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-giFT
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/ChangeLog,v 1.9 2004/10/01 05:10:22 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/ChangeLog,v 1.10 2005/11/01 14:32:39 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  gkrellm-giFT-0.2.2.ebuild, gkrellm-giFT-0.2.3.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   01 Oct 2004; Jon Hood <squinky86@gentoo.org> -gkrellm-giFT-0.2.1.ebuild,
   gkrellm-giFT-0.2.3.ebuild:
