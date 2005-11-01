@@ -8,6 +8,11 @@ depend() {
 }
 
 checkconfig() {
+	if [ ! -d /var/run/radiusd ] && ! mkdir /var/run/radiusd; then
+		eeror "Failed to create /var/run/radiusd"
+		return 1
+	fi
+	
 	if [ ! -f /etc/raddb/radiusd.conf ] ; then
 		eerror "No /etc/raddb/radiusd.conf file exists!"
 		return 1
@@ -38,7 +43,6 @@ checkconfig() {
 
 start() {
 	cd /var/log/radius #set the location of log files, including startup.log created by check-radiusd-config
-	# Comment out the following line to get faster startups
 	checkconfig || return 1
 
 	ebegin "Starting radiusd"
