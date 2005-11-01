@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb0639360f76cdb1b9e09ce38487a323 ChangeLog 1783
+MD5 01413c0092978b38dbded9d07a0bf08b ChangeLog 1880
 MD5 fc53f7d8ad4e855bf0cfa4139baae246 files/digest-yafc-1.0 61
 MD5 17a81b5b4a16ec89dfe5963c885f96ab files/digest-yafc-1.1 61
 MD5 ef6247904f7210ae0c5c607a8db1e828 files/digest-yafc-1.1.1 63
 MD5 44011aac929360f02f786a44321d861a yafc-1.0.ebuild 801
 MD5 8dadb30fcf4ac7e7eae9aaf999ccb59e yafc-1.1.1.ebuild 1324
-MD5 7012fddb5846c4722d1e2b8192f9bba1 yafc-1.1.ebuild 767
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDSQz2I1lqEGTUzyQRAj4eAKCrYtrhW1eEsC09MEPro4nBv1nVtACfXKct
-95QSpUZQDIu5npPiexOUOxk=
-=U8oF
------END PGP SIGNATURE-----
+MD5 134fcf87f6aa2fd7ecdff8a3b17a69b8 yafc-1.1.ebuild 765
