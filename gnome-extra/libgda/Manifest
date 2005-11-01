@@ -1,4 +1,7 @@
-MD5 112a1a7966b5ca0d707c24f6a6747646 ChangeLog 12533
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3ab3fdcd35e730dcfd4d68813fd0d2ea ChangeLog 12703
 MD5 e92331f7677fcfc3e82541f08676bb32 files/digest-libgda-0.2.96-r2 66
 MD5 46b8c0b40219635d47ca4583d42dc814 files/digest-libgda-1.0.2 66
 MD5 907142ea1e11bcf5b01f25dfa2fd2b54 files/digest-libgda-1.0.3 66
@@ -21,5 +24,12 @@ MD5 efe942efcc3bbe2a6ae347a7e6808a57 libgda-0.2.96-r2.ebuild 3487
 MD5 016ec893635c15e43c7159e1f1d92b33 libgda-1.0.2.ebuild 2893
 MD5 3d8fafea6831dfad58db40dbdef7e9a4 libgda-1.0.3.ebuild 2755
 MD5 eceac9d80b6e54f4091a9a3026c32fec libgda-1.0.4.ebuild 2939
-MD5 2ae6880dad03e541519a4a291ec8b07f libgda-1.2.2-r1.ebuild 2368
+MD5 9c1b481e13a0195ca518975b071c3a68 libgda-1.2.2-r1.ebuild 2248
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZxhk1ZcsMnZjRyIRAqMPAJ9AYCZwETc/umltqfth3OAneIpVbgCfTpt1
+dxYh07VXGSh13ssaeBJ7CN4=
+=9ROj
+-----END PGP SIGNATURE-----
