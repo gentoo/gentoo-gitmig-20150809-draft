@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.1.0.ebuild,v 1.8 2005/11/01 14:48:19 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.1.0.ebuild,v 1.9 2005/11/01 15:58:02 yoswink Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/goffice/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~sparc ~x86 ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome"
 #cairo support broken and -gtk broken
 
