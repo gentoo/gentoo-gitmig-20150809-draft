@@ -1,0 +1,25 @@
+diff -Naur ion-3ds-20051029/mod_statusbar/ion-statusd/ion-statusd.c ion-3ds/mod_statusbar/ion-statusd/ion-statusd.c
+--- ion-3ds-20051029/mod_statusbar/ion-statusd/ion-statusd.c	2005-10-29 14:33:05.000000000 +0200
++++ ion-3ds/mod_statusbar/ion-statusd/ion-statusd.c	2005-11-01 23:42:53.000000000 +0100
+@@ -24,6 +24,10 @@
+ #include <libmainloop/signal.h>
+ #include <libmainloop/defer.h>
+ 
++#ifndef CF_NO_LOCALE
++#include <locale.h>
++#endif
++
+ #include "../../version.h"
+ 
+ 
+@@ -143,8 +147,10 @@
+     int opt;
+     bool quiet=FALSE;
+ 
++#ifndef CF_NO_LOCALE
+     if(setlocale(LC_ALL, "")==NULL)
+         warn("setlocale() call failed.");
++#endif
+ 
+     configtab=extl_table_none();
+     

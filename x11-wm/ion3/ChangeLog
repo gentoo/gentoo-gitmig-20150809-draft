@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.27 2005/10/29 20:35:42 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.28 2005/11/01 23:04:29 twp Exp $
+
+  01 Nov 2005; Tom Payne <twp@gentoo.org>
+  +files/ion3-20051029-statusd-locale.patch, ion3-20051029.ebuild:
+  Add patch for amd64. Bug # 110860.
 
 *ion3-20051029 (29 Oct 2005)
 

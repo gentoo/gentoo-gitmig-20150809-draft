@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20051029.ebuild,v 1.1 2005/10/29 20:35:42 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20051029.ebuild,v 1.2 2005/11/01 23:04:29 twp Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ DEPEND="virtual/x11
 S=${WORKDIR}/${MY_PN}
 
 src_compile() {
+
+	epatch ${FILESDIR}/${P}-statusd-locale.patch
 
 	autoreconf -i
 
