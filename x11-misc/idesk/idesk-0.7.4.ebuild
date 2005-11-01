@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.4.ebuild,v 1.3 2005/10/31 18:04:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.4.ebuild,v 1.4 2005/11/01 15:43:26 ranger Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86 ~alpha ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/imlib2-1.1.2.20040912
