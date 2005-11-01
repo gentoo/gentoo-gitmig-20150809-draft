@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.62 2005/10/24 13:41:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.63 2005/11/01 10:48:50 ticho Exp $
+
+*mpd-0.11.5-r2 (01 Nov 2005)
+
+  01 Nov 2005; Andrej Kacian <ticho@gentoo.org> +mpd-0.11.5-r2.ebuild:
+  Changed home directory of mpd user and all related config settings to
+  /var/lib/mpd. Closes bug #83644.
 
   24 Oct 2005; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6:
   Use nfsmount in initscript depend(). Closes bug #110065, reported by Daniel
