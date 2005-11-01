@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xchm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.30 2005/10/31 22:14:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/ChangeLog,v 1.31 2005/11/01 13:08:39 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xchm-0.9.6.ebuild,
+  xchm-1.1.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
 *xchm-1.2 (31 Oct 2005)
 
