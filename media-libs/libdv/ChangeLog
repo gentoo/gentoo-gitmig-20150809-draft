@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.41 2005/05/19 19:25:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.42 2005/11/01 14:39:18 solar Exp $
+
+*libdv-0.104-r1 (01 Nov 2005)
+
+  01 Nov 2005; <solar@gentoo.org> +libdv-0.104-r1.ebuild:
+  - x86 pic fix that allows us to not have to use the --disable-asm while still
+  retaining proper pic shared objects
 
   19 May 2005; <solar@gentoo.org> libdv-0.104.ebuild:
   - Enable --disable-asm on x86 when using pic code or the compiled libdv will
