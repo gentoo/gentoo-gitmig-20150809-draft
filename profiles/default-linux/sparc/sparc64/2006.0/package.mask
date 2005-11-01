@@ -1,0 +1,13 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/package.mask,v 1.1 2005/11/01 13:26:14 gustavoz Exp $
+
+# Jason Wever <weeve@gentoo.org>
+# gradm requires 64 bit support, which doesn't exist in this profile
+>sys-apps/gradm-2.0.1-r1
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# Java is broken for the new stuff
+# This is a work in progress
+dev-java/blackdown-jdk
+dev-java/blackdown-jre
