@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/pecl-pdo-sqlite-0.9.ebuild,v 1.4 2005/09/18 14:38:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-pdo-sqlite/pecl-pdo-sqlite-0.9.ebuild,v 1.5 2005/11/01 01:45:06 vapier Exp $
 
 PHP_EXT_ZENDEXT="no"
 PHP_EXT_PECL_PKG="PDO_SQLITE"
@@ -13,7 +13,7 @@ IUSE=""
 DESCRIPTION="PHP Data Objects (PDO) Driver For SQLite Server"
 SLOT="0"
 LICENSE="PHP"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~s390 ~sparc ~x86"
 DEPEND="${DEPEND}
 		dev-php5/pecl-pdo"
 
