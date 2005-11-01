@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.69 2005/11/01 05:56:06 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.70 2005/11/01 21:02:40 soulse Exp $
+
+  01 Nov 2005; <soulse@gentoo.org> boost-1.33.0-r1.ebuild:
+  Stable on x86 wrt bug #111080
 
   01 Nov 2005; Daniel Goller <morfic@gentoo.org> boost-1.33.0-r1.ebuild:
   Fix quoting of variables
