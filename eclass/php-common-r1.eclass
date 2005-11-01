@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.3 2005/10/31 14:08:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.4 2005/11/01 10:04:13 chtekk Exp $
 
 # ########################################################################
 #
@@ -122,6 +122,10 @@ php_install_java() {
 }
 
 php_install_java_inifile() {
+	if ! useq java-internal ; then
+		return 1
+	fi
+
 	JAVA_LIBRARY="`grep -- '-DJAVALIB' Makefile | sed -e 's,.\+-DJAVALIB=\"\([^"]*\)\".*$,\1,g;'| sort | uniq `"
 
 	echo "extension = java.so" >> "${D}/${PHP_EXT_INI_DIR}/java.ini"
