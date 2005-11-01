@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dc09e8fb71337e36e9a5c116bd5a20a9 ChangeLog 423
 MD5 f2b3da4e05eef24588059186e22e1378 files/digest-xmkmf-0.99.1 64
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 008b1b5ce6ef2328b3cf5d8e1c9d5fca xmkmf-0.99.1.ebuild 448
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZ7LIomPajV0RnrERAlCxAJ4ojbuFCdkiYIqZ44u2lcuE7fWJTACeM+Rb
+PWXR/JPejxxIMaPsGY4ZIDU=
+=sl33
+-----END PGP SIGNATURE-----
