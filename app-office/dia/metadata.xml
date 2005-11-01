@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>gnome</herd>
+  <herd>gnome-office</herd>
   <longdescription>
     Dia is a gtk+ based diagram creation program. It can be used to
     draw many different kinds of diagrams. It currently has special
