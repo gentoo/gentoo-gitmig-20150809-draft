@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8dd3f33b1c59e63d9bfda98b37b910dd ChangeLog 1850
+MD5 9c1ac60e8b92dc293a6b43c35a7d3a20 ChangeLog 2008
 MD5 dec245eeb76cf36a886240aecdf41d1a files/digest-xtoolwait-1.3 64
 MD5 dec245eeb76cf36a886240aecdf41d1a files/digest-xtoolwait-1.3-r1 64
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 cfd4e03f9335ead5878e17b36ee8554b xtoolwait-1.3-r1.ebuild 1000
-MD5 fd307e700c7beb8ef3e233e012bcf9c8 xtoolwait-1.3.ebuild 954
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZQicBtvusYtCZMsRAvpPAJ9Ky3LS85QXLzQOy8yXSdbjQsvJ3wCfbXry
-vC881WesAOqvAzMtoCXlvt4=
-=RTgi
------END PGP SIGNATURE-----
+MD5 3264b9923ea447dcf953c62ee8d8d248 xtoolwait-1.3-r1.ebuild 990
+MD5 e3a76f73f099e4adf939d9fb220be9b1 xtoolwait-1.3.ebuild 944
