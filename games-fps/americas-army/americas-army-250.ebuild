@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.1 2005/10/30 18:12:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.2 2005/11/01 18:56:24 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -62,7 +62,7 @@ src_install() {
 	newicon ArmyOps.xpm armyops.xpm || die "doins failed"
 	exeinto ${dir}
 	doexe bin/armyops || die "doexe failed"
-	fperms ug+x ${dir}/System/bp/pbweb.x86
+	fperms ug+x ${dir}/System/pb/pbweb.x86
 
 	if use dedicated; then
 		newinitd ${S}/armyops-ded.rc armyops-ded
