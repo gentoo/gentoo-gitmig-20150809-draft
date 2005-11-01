@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rudl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.7 2004/06/25 02:04:22 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.8 2005/11/01 14:22:18 caleb Exp $
+
+*rudl-0.8 (01 Nov 2005)
+
+  01 Nov 2005; Caleb Tennis <caleb@gentoo.org> +rudl-0.8.ebuild:
+  Version bump, remove patches (bug #110239)
 
   17 Apr 2004; David Holm <dholm@gentoo.org> rudl-0.7.1.ebuild:
   Added to ~ppc.
