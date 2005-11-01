@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/wmpop-0.53.ebuild,v 1.4 2004/11/25 05:40:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/wmpop-0.53.ebuild,v 1.5 2005/11/01 10:17:02 nelchael Exp $
 
 IUSE=""
 
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "Install failed"
-	dodoc AUTHORS COPYING README ChangeLog NEWS INSTALL TODO THANKS ABOUT-NLS
+	dodoc AUTHORS README ChangeLog NEWS TODO THANKS ABOUT-NLS
 }

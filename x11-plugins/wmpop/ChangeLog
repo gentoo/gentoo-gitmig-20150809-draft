@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.4 2004/11/25 05:40:21 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpop/ChangeLog,v 1.5 2005/11/01 10:17:02 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> wmpop-0.53.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmpop-0.53.ebuild:
   Added ~sparc keyword.
