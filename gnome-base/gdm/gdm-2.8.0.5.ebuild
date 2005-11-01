@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.5.ebuild,v 1.3 2005/10/16 00:28:07 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.8.0.5.ebuild,v 1.4 2005/11/01 17:43:17 dang Exp $
 
 inherit eutils pam gnome2
 
@@ -114,6 +114,8 @@ src_install() {
 	# list available users
 	dosed "s:^#MinimalUID=.*:MinimalUID=1000:" /etc/X11/gdm/gdm.conf
 	dosed "s:^#IncludeAll=.*:IncludeAll=true:" /etc/X11/gdm/gdm.conf
+	# Fix old X11R6 paths
+	dosed "s:/usr/X11R6/bin:/usr/bin:" /etc/X11/gdm/gdm.conf
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
