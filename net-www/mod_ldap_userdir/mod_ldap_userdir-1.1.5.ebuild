@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.5.ebuild,v 1.2 2005/07/14 22:48:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/mod_ldap_userdir-1.1.5.ebuild,v 1.3 2005/11/01 19:35:47 dertobi123 Exp $
 
 inherit apache-module
 
 IUSE="apache2 ssl"
 DESCRIPTION="Apache module that enables ~/public_html from an LDAP directory."
 HOMEPAGE="http://horde.net/~jwm/software/mod_ldap_userdir/"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="ppc ~x86"
 
 SRC_URI="http://horde.net/~jwm/software/mod_ldap_userdir/${P}.tar.gz"
 
