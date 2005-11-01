@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.10 2005/10/18 01:22:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r12.ebuild,v 1.11 2005/11/01 09:24:02 grobian Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.bz2 ftp:/
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 mips ~ppc ~ppc-macos ~ppc64 sparc x86"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
@@ -31,6 +31,10 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-jumbo-fix-patch-20050410.txt || die
 	epatch ${WORKDIR}/${P}-jumbo-enh-patch-${JUMBOV}.txt || die
 
+	# OSX malloc and define patches
+	epatch "${FILESDIR}/${P}"-r12-xv-osx.patch || die
+	epatch "${FILESDIR}/${P}"-vdcomp-osx.patch || die
+
 	sed -i	-e 's/\(^JPEG.*\)/#\1/g' \
 			-e 's/\(^PNG.*\)/#\1/g' \
 			-e 's/\(^TIFF.*\)/#\1/g' \
@@ -41,7 +45,6 @@ src_unpack() {
 
 	# fix installation of ps docs.
 	sed -i -e 's#$(DESTDIR)$(LIBDIR)#$(LIBDIR)#g' Makefile
-
 }
 
 src_compile() {
