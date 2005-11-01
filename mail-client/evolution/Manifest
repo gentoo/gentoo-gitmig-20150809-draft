@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fea4d6fae865658b389bf603c475e742 ChangeLog 30775
 MD5 3318548ad5a620ebd3b5405ef77100fd evolution-1.2.4.ebuild 6254
 MD5 b2bf22eca079cbb39f39c374cb306715 evolution-2.0.3-r2.ebuild 4206
@@ -27,11 +24,4 @@ MD5 b5eaa2e30f75b8ec2df29cfd90a1e1f0 files/evolution-2.3.7-configure_plugins.pat
 MD5 35dfdb3422f49ada8891285f5104d29c files/evolution-2.3.8-gentoo.patch 660
 MD5 56a0d793e598c8e0c91ec5ab0e2a4e4b files/evolution.formatstring.patch 2146
 MD5 2381d584d4a3104a6c491b21ecc0bc47 files/evolution_mail-account-gui_authtype.diff 737
-MD5 6ec9b6a7896b799d17a21c4edffd33c9 metadata.xml 272
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQx8WI1lqEGTUzyQRApQbAJ9AK6+5ib1wbi/3ATYiDPCBB9G1lACgpD/w
-rYeVsJwnuKkCGl+PfpgAHFY=
-=9EvP
------END PGP SIGNATURE-----
+MD5 f0750af493d9560f5faf50f39fd644c5 metadata.xml 285
