@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3.ebuild,v 1.5 2005/06/24 23:45:44 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3.ebuild,v 1.6 2005/11/01 10:46:49 nelchael Exp $
 
 IUSE=""
 
@@ -29,5 +29,5 @@ src_compile() {
 
 src_install () {
 	einstall || die "Install failed"
-	dodoc README INSTALL COPYING NEWS ChangeLog TODO AUTHORS
+	dodoc README NEWS ChangeLog TODO AUTHORS
 }

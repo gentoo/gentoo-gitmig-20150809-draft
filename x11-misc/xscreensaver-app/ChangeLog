@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver-app
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.5 2005/06/24 23:45:44 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.6 2005/11/01 10:46:49 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  xscreensaver-app-2.3.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   24 Jun 2005; Jonathan Smith <smithj@gentoo.org>
   xscreensaver-app-2.3.ebuild:
