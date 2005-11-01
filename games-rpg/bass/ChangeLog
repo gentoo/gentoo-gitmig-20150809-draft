@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/bass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.6 2005/11/01 00:06:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.7 2005/11/01 21:51:14 mr_bones_ Exp $
+
+*bass-1.2 (01 Nov 2005)
+
+  01 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org> +bass-1.2.ebuild:
+  version bump
 
 *bass-0-r1 (01 Nov 2005)
 
