@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.1.0.ebuild,v 1.7 2005/11/01 13:33:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.1.0.ebuild,v 1.8 2005/11/01 14:48:19 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -26,8 +26,8 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		>=gnome-base/libgnomeui-2 )"
 
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.9
-		>=dev-util/intltool-0.28"
+	>=dev-util/pkgconfig-0.9
+	>=dev-util/intltool-0.28"
 
 DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 USE_DESTDIR="1"
