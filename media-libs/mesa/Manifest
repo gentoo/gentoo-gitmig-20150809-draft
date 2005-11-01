@@ -1,4 +1,4 @@
-MD5 663bfcf722fa79b13a2fccd2cffb4acf ChangeLog 9436
+MD5 202f76eefb19d8b63cd99750336a0d59 ChangeLog 9569
 MD5 ae36bba4e878c77dc2e823ce00e98869 files/6.4-dont-install-gles-headers.patch 421
 MD5 cdc08801bd33dadb19c29e4c91863c73 files/change-default-dri-driver-dir.patch 412
 MD5 bd015b299e16dfdc191313c06776eb96 files/digest-mesa-6.3.2-r1 67
@@ -9,5 +9,5 @@ MD5 9abdd26694e6f1d7bd93193f900acc6c files/lib/libGLU.la 752
 MD5 ceae0782c8844ebdc68ede6b4d8969d9 files/makedepend-location.patch 375
 MD5 a9b60dbab413bb1645804918f13b7378 files/mesa-add-dri-asm-files.patch 21517
 MD5 981e09096766f1fe044e29505c84bd05 mesa-6.3.2-r1.ebuild 5692
-MD5 1fb477a7ff6acdc8dd73197d110207a6 mesa-6.4.ebuild 5640
+MD5 302bc9e4117d63db8cdbc941f8ad230b mesa-6.4.ebuild 5652
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
