@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.57 2005/10/31 22:43:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.58 2005/11/01 12:20:51 ranger Exp $
+
+  01 Nov 2005; Brent Baude <ranger@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  Remarking qdbm-1.8.33-r2 as ppc64 stable for 108534; didnt take the first time
 
   31 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.33-r2.ebuild:
   Stable on ppc. See bug #108534.
