@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.4 2005/10/17 21:24:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.5 2005/11/01 20:04:30 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -100,7 +100,7 @@ src_install() {
 	dodir "${dir}"
 	# Since the movies don't play anyway, we'll remove them
 	rm -rf "${S}"/movies
-	mkdir -p "${S}"/dmvault "${S}"/hak "${S}"/portraits
+	mkdir -p "${S}"/dmvault "${S}"/hak "${S}"/portraits "${S}"/localvault
 	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dmclient "${S}"/nwmain \
 		"${S}"/nwserver  "${S}"/nwm/* "${S}"/SDL-1.2.5 "${S}"/fixinstall
 	mv "${S}"/* "${Ddir}"
@@ -125,9 +125,9 @@ src_install() {
 			cd ${Ddir}
 		fi
 	done
-	if ! use sou && ! use hou
+	if ! use sou && ! use hou && use nowin
 	then
-		chmod a-x ${Ddir}/data/patch.bif chmod a-x${Ddir}/patch.key
+		chmod a-x ${Ddir}/data/patch.bif ${Ddir}/patch.key
 	fi
 	doicon "${FILESDIR}"/nwn.png
 	prepgamesdirs
@@ -142,25 +142,34 @@ pkg_postinst() {
 		einfo "The NWN linux client data is now installed."
 		einfo "Proceed with the following steps in order to get it working:"
 		einfo "1) Copy the following directories/files from your installed and"
-		einfo "   patched (${PV}) Neverwinter Nights to ${GAMES_PREFIX_OPT}/nwn:"
+		einfo "   patched (1.66) Neverwinter Nights to ${dir}:"
 		einfo "    ambient/"
-		einfo "    data/ (all files except for patch.bif)"
+		einfo "    data/"
 		einfo "    dmvault/"
 		einfo "    hak/"
 		einfo "    localvault/"
 		einfo "    modules/"
 		einfo "    music/"
-		einfo "    override/"
 		einfo "    portraits/"
 		einfo "    saves/"
 		einfo "    servervault/"
 		einfo "    texturepacks/"
 		einfo "    chitin.key"
-		einfo "2) Chown and chmod the files with the following commands"
+		einfo "2) Remove some files to make way for the patch"
+		einfo "    rm ${dir}/music/mus_dd_{kingmaker,shadowgua,witchwake}.bmu"
+		einfo "    rm ${dir}/override/iit_medkit_001.tga"
+		einfo "    rm ${dir}/data/patch.bif"
+		if use sou 
+		then
+			einfo "    rm ${dir}/xp1patch.key ${dir}/data/xp1patch.bif"
+		fi
+		if use hou
+		then
+			einfo "    rm ${dir}/xp2patch.key ${dir}/data/xp2patch.bif"
+		fi
+		einfo "3) Chown and chmod the files with the following commands"
 		einfo "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${dir}"
 		einfo "    chmod -R g+rwX ${dir}"
-		einfo "3) Run ${dir}/fixinstall as root"
-		einfo "4) Make sure that you are in group ${GAMES_GROUP}"
 		echo
 		einfo "Or try emerging with USE=nowin"
 	else

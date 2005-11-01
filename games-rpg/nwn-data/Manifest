@@ -1,5 +1,5 @@
-MD5 63470a42064e9bf172f720a22b8f9763 ChangeLog 1014
+MD5 ee63872d4738fa7fe84d089810772c12 ChangeLog 1138
 MD5 a1f70c52e9c1098e5bd13153dce5b63d files/digest-nwn-data-1.29 396
 MD5 d05b3b73edd2b4beadbce95837e2ab20 files/nwn.png 4296
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
-MD5 9ff557db0f245ee2d120e078696e781a nwn-data-1.29.ebuild 5092
+MD5 f804081bddb98548323ed90bae03db2f nwn-data-1.29.ebuild 5334
