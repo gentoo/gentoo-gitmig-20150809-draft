@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/regexxer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.12 2005/08/12 20:27:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.13 2005/11/01 10:00:26 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> regexxer-0.6.ebuild,
+  regexxer-0.8.ebuild:
+  Fixed dodoc not to install COPYING and INSTALL.
 
   12 Aug 2005; Luis Medinas <metalgod@gentoo.org> regexxer-0.8.ebuild:
   Added ~amd64 Keywords.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.8.ebuild,v 1.3 2005/08/12 20:27:57 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.8.ebuild,v 1.4 2005/11/01 10:00:26 nelchael Exp $
 
 DESCRIPTION="An interactive tool for performing search and replace operations"
 HOMEPAGE="http://regexxer.sourceforge.net/"
@@ -32,7 +32,7 @@ src_compile() {
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	einstall || die "install failed"
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
