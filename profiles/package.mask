@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4638 2005/10/31 22:42:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4639 2005/11/01 03:18:09 steev Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1394,10 +1394,6 @@ dev-lang/gpc
 # Rob Holland <tigger@gentoo.org> (21 March 2005)
 # marked due to bad code #84659
 net-misc/dyndnsupdate
-
-# Aaron Walker <ka0ttic@gentoo.org> (18 Mar 2005)
-# buffer overflows galore; pending removal.
-x11-terms/tilda
 
 # Alastair Tse <liquidx@gentoo.org> (09 Mar 2005)
 # Unsupported upstream, superceded by qc-usb.
