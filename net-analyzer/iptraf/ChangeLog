@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptraf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.31 2005/09/16 23:11:01 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.32 2005/11/01 05:44:04 vapier Exp $
+
+*iptraf-3.0.0 (01 Nov 2005)
+
+  01 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/iptraf-3.0.0-atheros.patch, +files/iptraf-3.0.0-build.patch,
+  +files/iptraf-3.0.0-linux-headers.patch, +iptraf-3.0.0.ebuild:
+  Version bump #106775 by tonich/Tudor Alexandru Dragos.
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
