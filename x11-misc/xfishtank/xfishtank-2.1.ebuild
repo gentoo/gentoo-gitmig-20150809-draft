@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.6 2005/04/28 06:01:19 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfishtank/xfishtank-2.1.ebuild,v 1.7 2005/11/01 18:31:09 dertobi123 Exp $
 
 DESCRIPTION="Turns your root window into an aquarium."
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/X11/demos/"
@@ -10,7 +10,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ppc64 ~ppc"
+KEYWORDS="ppc ppc64 x86"
 
 IUSE=""
 DEPEND="virtual/x11"
