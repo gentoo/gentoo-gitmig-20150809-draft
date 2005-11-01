@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xrmap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.9 2005/06/15 16:25:19 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.10 2005/11/01 11:42:14 nelchael Exp $
+
+*xrmap-2.32 (01 Nov 2005)
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xrmap-2.32-Makefile.kit.patch, xrmap-2.29.ebuild,
+  xrmap-2.30.ebuild, +xrmap-2.32.ebuild:
+  Fix dodoc, version bump.
 
 *xrmap-2.30 (15 Jun 2005)
 

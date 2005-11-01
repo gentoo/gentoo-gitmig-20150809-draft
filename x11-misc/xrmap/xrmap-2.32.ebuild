@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.30.ebuild,v 1.2 2005/11/01 11:42:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.32.ebuild,v 1.1 2005/11/01 11:42:14 nelchael Exp $
+
+inherit eutils
 
 DESCRIPTION="The Xrmap program is a X client for generating images of the Earth and manipulating the CIA World data bank"
 HOMEPAGE="http://frmas.free.fr/li_1.htm#_Xrmap_"
@@ -25,6 +27,7 @@ src_unpack() {
 	rm -rf ${S}
 	mv ${WORKDIR}/${PN}-${FULL_DIST} ${S}
 	unpack ${A}
+	epatch "${FILESDIR}/${P}-Makefile.kit.patch"
 	cd ${S}/editkit && xmkmf || die
 }
 

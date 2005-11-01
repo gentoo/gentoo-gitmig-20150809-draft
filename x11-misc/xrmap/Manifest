@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ac07cc5322160aff56c331a570f67429 ChangeLog 1097
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 3601ea3aafdcf814938e2ba2b8e74585 xrmap-2.29.ebuild 2044
-MD5 c12a853ce73675639395f34a2d5f9d1c xrmap-2.30.ebuild 2046
+MD5 6340d2593084c0220d4c89a33d5394fa ChangeLog 1308
 MD5 a6a793c0c22c5a0b6255f93bed17b0a4 files/digest-xrmap-2.29 185
 MD5 ec6e902eadf9754724dbaa860e288acb files/digest-xrmap-2.30 185
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCsFaWl5AvwDPiUowRAhRfAJ0cSlSIqVYnWjphCxTtuv2oF2B3RgCgj9WK
-UKN+fSuaMuLluH5CkNayhhc=
-=KwzR
------END PGP SIGNATURE-----
+MD5 8ecf9f6b2852ef3841ee919c2c1b31be files/digest-xrmap-2.32 185
+MD5 68f544c43102455686aedc82bd5a2727 files/xrmap-2.32-Makefile.kit.patch 750
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 4578bf01dee82a5900058673e3431e41 xrmap-2.29.ebuild 2039
+MD5 4aa929bb8e2c0e51fd0ad5bd0d56df9f xrmap-2.30.ebuild 2040
+MD5 1e8973749bab8197851db03d0a14b7ca xrmap-2.32.ebuild 2102
