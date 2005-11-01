@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/mod_chroot-0.4.ebuild,v 1.2 2005/09/18 20:46:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/mod_chroot-0.4.ebuild,v 1.3 2005/11/01 19:23:24 dertobi123 Exp $
 
 inherit eutils apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://core.segfault.pl/~hobbit/mod_chroot/"
 SRC_URI="http://core.segfault.pl/~hobbit/mod_chroot/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 SLOT="0"
 
