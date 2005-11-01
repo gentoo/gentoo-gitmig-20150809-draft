@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.5 2005/11/01 20:04:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.6 2005/11/01 20:05:34 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -159,7 +159,7 @@ pkg_postinst() {
 		einfo "    rm ${dir}/music/mus_dd_{kingmaker,shadowgua,witchwake}.bmu"
 		einfo "    rm ${dir}/override/iit_medkit_001.tga"
 		einfo "    rm ${dir}/data/patch.bif"
-		if use sou 
+		if use sou
 		then
 			einfo "    rm ${dir}/xp1patch.key ${dir}/data/xp1patch.bif"
 		fi
