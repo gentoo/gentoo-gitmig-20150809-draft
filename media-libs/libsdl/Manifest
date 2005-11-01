@@ -27,7 +27,7 @@ MD5 358c3d6380bf0b6ba3e78ce47c5ec578 files/libsdl-1.2.8-gcc2.patch.bz2 2639
 MD5 ebca26b8a60c4c68471691ab7bd9271e files/libsdl-1.2.8-libcaca.patch 19418
 MD5 14e090fd7a72ed528972ddc8b6a90fb4 files/libsdl-1.2.8-no-cxx.patch 688
 MD5 5b76156f2699a03a798bd4ed9b0f4233 files/libsdl-1.2.8-sdl-config.patch 738
-MD5 d7dda2b6e1aed2eaecc5f27226282e2c files/libsdl-1.2.9-DirectFB-updates.patch 1049
+MD5 451154b078c34e2f51443f4e76050b05 files/libsdl-1.2.9-DirectFB-updates.patch 1210
 MD5 2ce49535d1db8c32ba4345ecc63eee24 files/libsdl-1.2.9-PIC-SDL_stretch.patch 396
 MD5 327bae5c9d159acaa55b2da63c3ee561 files/libsdl-1.2.9-PIC-hermes-call-dont-jump.patch 4928
 MD5 c214458f3c67b5451a5f305a2532ce64 files/libsdl-1.2.9-PIC-hermes-cpuid.patch 452
@@ -46,7 +46,7 @@ MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDYuLggIKl8Uu19MoRAiiSAJ4/31RYFH/ns0ynZf06NsTf4ihkPwCbBfY8
-zWHdWdx1UdWh5o92etWOMHk=
-=jJYW
+iD8DBQFDZtgEgIKl8Uu19MoRAtKTAJ4rmqStTQkQ4QWW8P4+xEhXt6KCGgCeONyv
+hnGvIdchbdasWPly8wv/lOk=
+=qi31
 -----END PGP SIGNATURE-----

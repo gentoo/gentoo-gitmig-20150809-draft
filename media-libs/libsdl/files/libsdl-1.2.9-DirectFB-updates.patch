@@ -4,6 +4,14 @@ http://www.directfb.org/index.php/viewcvs.cgi/DirectFB/include/directfb.h.diff?r
 
 --- src/video/directfb/SDL_DirectFB_video.c
 +++ src/video/directfb/SDL_DirectFB_video.c
+@@ -40,6 +40,7 @@ static char rcsid =
+ #include <sys/mman.h>
+ 
+ #include <directfb.h>
++#include <directfb_version.h>
+ 
+ #include "SDL.h"
+ #include "SDL_error.h"
 @@ -376,7 +376,11 @@ int DirectFB_VideoInit(_THIS, SDL_PixelF
  {
    int                      i;
