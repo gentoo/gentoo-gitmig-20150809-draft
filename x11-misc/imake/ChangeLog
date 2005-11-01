@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.1 2005/10/20 06:51:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.2 2005/11/01 18:23:05 dang Exp $
+
+  01 Nov 2005; <dang@gentoo.org> imake-0.99.1.ebuild:
+  Marked ~amd64
 
 *imake-0.99.1 (20 Oct 2005)
 
