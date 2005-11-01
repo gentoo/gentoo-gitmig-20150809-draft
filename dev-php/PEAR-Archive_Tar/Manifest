@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fe95e86963c2a0787fe7173b074ac5e1 ChangeLog 2806
 MD5 d8cd480acbbe18362594dc940889a546 PEAR-Archive_Tar-1.2.ebuild 384
 MD5 a2eeb2271edb3b85c2a6c8231644d5c6 PEAR-Archive_Tar-1.3.1-r1.ebuild 374
@@ -6,3 +9,10 @@ MD5 d6e6a0abb56ce9ac771f2ebbe38f47c6 files/digest-PEAR-Archive_Tar-1.2 63
 MD5 6ab681a0eae04a2760bfbe24ee1f21d7 files/digest-PEAR-Archive_Tar-1.3.1 65
 MD5 6ab681a0eae04a2760bfbe24ee1f21d7 files/digest-PEAR-Archive_Tar-1.3.1-r1 65
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDZvdmgIKl8Uu19MoRAgLiAJ49Ik4UwUhfnyPYY32giDOXHJcCaACdFaNj
+C3QmqsNAVtaC/KglPOj5ETE=
+=xLeE
+-----END PGP SIGNATURE-----
