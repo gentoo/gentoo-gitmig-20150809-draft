@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_security
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/ChangeLog,v 1.11 2005/09/18 22:12:12 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_security/ChangeLog,v 1.12 2005/11/01 19:01:31 dertobi123 Exp $
+
+  01 Nov 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  mod_security-1.8.7.ebuild:
+  Marked ppc stable, bug #106430
 
   18 Sep 2005; Michael Stewart <vericgar@gentoo.org>
   mod_security-1.8.7.ebuild:
