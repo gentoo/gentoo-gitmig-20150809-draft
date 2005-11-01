@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.5 2005/10/01 00:30:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfm/xfm-1.4.3.ebuild,v 1.6 2005/11/01 12:58:26 nelchael Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install install.man || die "make install failed"
-	dodoc ChangeLog INSTALL README README-1.2 README-1.4 TODO
+	dodoc ChangeLog README README-1.2 README-1.4 TODO
 }
 
 pkg_postinst() {

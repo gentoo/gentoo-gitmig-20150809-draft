@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.6 2005/09/27 20:41:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.7 2005/11/01 12:52:57 nelchael Exp $
 
 inherit eutils
 
@@ -39,5 +39,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "Installation failed"
-	dodoc COPYING ChangeLog INSTALL README TODO
+	dodoc ChangeLog README TODO
 }
