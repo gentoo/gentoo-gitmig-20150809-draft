@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.0.ebuild,v 1.5 2005/11/01 13:37:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.6.0.ebuild,v 1.6 2005/11/01 14:35:09 leonardop Exp $
 
 inherit eutils flag-o-matic gnome2
 
@@ -12,9 +12,10 @@ SLOT="0"
 KEYWORDS="~ppc ~ppc64 ~sparc ~x86 ~amd64"
 
 IUSE="gnome python static"
-# bonobo gnomedb libgda
+# bonobo libgda
 
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND="sys-libs/zlib
+	>=dev-libs/glib-2.6
 	>=gnome-extra/libgsf-1.13.2
 	>=x11-libs/goffice-0.1.0
 	>=dev-libs/libxml2-2.4.12
@@ -35,19 +36,25 @@ RDEPEND=">=dev-libs/glib-2.6
 	python? (
 		>=dev-lang/python-2
 		>=dev-python/pygtk-2 )"
-	#libgda? ( >=gnome-extra/libgda-1.0.1 )
-#	gnomedb? ( >=gnome-extra/libgnomedb-0.90.2 )
+	# libgda? (
+	#	>=gnome-extra/libgda-1.3
+	#	>=gnome-extra/libgnomedb-1.3 )
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.9
 	app-text/scrollkeeper"
 
-DOCS="AUTHORS COPYING* ChangeLog HACKING NEWS README TODO"
+DOCS="AUTHORS BEVERAGES BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 USE_DESTDIR="1"
 
 
 pkg_setup() {
+	G2CONF="--enable-ssindex \
+		$(use_with python) \
+		$(use_with gnome)  \
+		$(use_enable static)"
+
 	if use gnome && ! built_with_use gnome-extra/libgsf gnome; then
 		einfo "libgsf needs to be compiled with gnome in USE"
 		einfo "for this version of gnumeric to work. Rebuild"
@@ -55,24 +62,22 @@ pkg_setup() {
 		einfo "USE=gnome emerge libgsf -vp"
 		die "libgsf was built without gnome support..."
 	fi
+
 	#gcc bug (http://bugs.gnome.org/show_bug.cgi?id=128834)
 	replace-flags "-Os" "-O2"
 }
 
 src_unpack() {
 	unpack "${A}"
-	gnome2_omf_fix
-	cd ${S}/doc/C
-	gnome2_omf_fix Makefile.in
+	gnome2_omf_fix ${S}/doc/C/Makefile.in
 }
 
-G2CONF="${G2CONF} $(use_with python) $(use_with gnome) $(use_enable static) --enable-ssindex"
 
 src_install() {
 
 	gnome2_src_install
 
-	# make gnumeric find it's help
+	# make gnumeric find its help
 	dosym \
 		/usr/share/gnome/help/gnumeric \
 		/usr/share/${PN}/${PV}/doc

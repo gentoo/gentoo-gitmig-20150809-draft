@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.119 2005/11/01 13:37:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.120 2005/11/01 14:35:09 leonardop Exp $
+
+  01 Nov 2005; Leonardo Boshell <leonardop@gentoo.org>
+  gnumeric-1.6.0.ebuild:
+  Moved G2CONF declaration to pkg_setup(). Added zlib dependency. Misc.
+  clean-ups.
 
   01 Nov 2005; Martin Schlemmer <azarah@gentoo.org> gnumeric-1.6.0.ebuild:
   Add ~amd64 keyword.
