@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.8 2005/06/09 01:10:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.9 2005/11/01 03:12:27 soulse Exp $
 
 inherit webapp eutils
 
@@ -86,12 +86,12 @@ pkg_postinst() {
 	then
 		echo
 		einfo "To create and enable the mysql database, please run: "
-		einfo "ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config"
+		einfo "emerge --config =${PF}"
 
 		if use http
 		then
 			echo "To create and enable the mysql database, please run:
-			ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config" > apache-postinst
+			emerge --config =${PF}" > apache-postinst
 			webapp_postinst_txt en apache-postinst
 		fi
 	fi
