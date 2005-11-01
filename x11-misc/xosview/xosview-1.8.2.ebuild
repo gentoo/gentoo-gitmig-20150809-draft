@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.10 2005/09/17 18:18:39 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.11 2005/11/01 15:13:17 nelchael Exp $
 
 inherit eutils gnuconfig
 
@@ -43,5 +43,5 @@ src_install() {
 	doins XOsview
 	into /usr
 	doman *.1
-	dodoc CHANGES COPYING README README.linux TODO
+	dodoc CHANGES README README.linux TODO
 }

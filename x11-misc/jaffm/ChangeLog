@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/jaffm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.9 2005/10/01 13:51:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.10 2005/11/01 15:08:22 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> jaffm-1.0.ebuild,
+  jaffm-1.2.1.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   01 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/jaffm-1.2.1-wx24.patch, jaffm-1.2.1.ebuild:
