@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.125 2005/10/10 21:16:16 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.126 2005/11/01 17:10:33 allanonjl Exp $
+
+  01 Nov 2005; John N. Laliberte <allanonjl@gentoo.org>
+  gnome-games-2.10.1-r1.ebuild:
+  stable on x86
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org> gnome-games-2.10.1.ebuild:
   Stable on mips.
