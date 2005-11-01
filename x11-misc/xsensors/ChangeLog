@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.13 2005/08/24 00:56:29 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.14 2005/11/01 10:45:17 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
+  Fixed ChangeLog.
 
   24 Aug 2005; Jonathan Smith <smithj@gentoo.org> xsensors-0.46.ebuild,
   xsensors-0.47.ebuild:
@@ -12,6 +15,8 @@
 
   17 Jun 2005; David Holm <dholm@gentoo.org> xsensors-0.47.ebuild:
   Added to ~ppc.
+
+*xsensors-0.47 (16 Jun 2005)
 
   16 Jun 2005; <augustus@gentoo.org> xsensors-0.46.ebuild, Manifest:
   New xsensors release.
