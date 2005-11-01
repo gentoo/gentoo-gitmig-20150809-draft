@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 88bc48cb2db477c384e6195027cb194d iptraf-2.7.0-r1.ebuild 1469
-MD5 a94566c6927ccaeca24681c25540624d metadata.xml 236
 MD5 2241eff22a9bc92e90270a1ff8c1f034 ChangeLog 3885
+MD5 301043df68f5969e9455c53d409a8c3e files/digest-iptraf-2.7.0-r1 138
 MD5 98fb7659373bc05930f0f3837135c811 files/iptraf-2.7.0-2.6.patch 1711
 MD5 1bf72405b3017f7732841188b6914160 files/iptraf-2.7.0-atheros.patch 1644
-MD5 301043df68f5969e9455c53d409a8c3e files/digest-iptraf-2.7.0-r1 138
+MD5 ff7fbdbad9ee9726c93c7ae00b072900 iptraf-2.7.0-r1.ebuild 1455
+MD5 a94566c6927ccaeca24681c25540624d metadata.xml 236
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK1E6LLFUmVNQ7rkRAtP9AJ97i81Io9qbyrZ8RdveoMZ/i2Hz+gCgxIMt
-yR8hiyY20qU8Q/L5HnJKuCY=
-=/3iK
+iD8DBQFDZvjlgIKl8Uu19MoRAltUAJ9PcT/0DueM5J1DplKd8o3RQiiPyACeOSMD
+KfXnCNyf+gXBWIYomdpRvXM=
+=5j/n
 -----END PGP SIGNATURE-----
