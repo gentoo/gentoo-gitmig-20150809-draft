@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fsv/fsv-0.9.ebuild,v 1.9 2005/07/26 14:06:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fsv/fsv-0.9.ebuild,v 1.10 2005/11/01 14:39:52 nelchael Exp $
 
 IUSE="nls"
 
@@ -16,7 +16,6 @@ DEPEND="virtual/opengl
 	virtual/x11
 	<x11-libs/gtkglarea-1.99"
 
-
 src_compile() {
 	local myconf
 
@@ -28,5 +27,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc ABOUT-NLS AUTHORS COPYING NOTES TODO
+	dodoc ABOUT-NLS AUTHORS NOTES TODO
 }
