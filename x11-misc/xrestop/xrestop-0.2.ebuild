@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.2.ebuild,v 1.8 2005/10/13 23:53:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/xrestop-0.2.ebuild,v 1.9 2005/11/01 00:01:09 nelchael Exp $
 
 IUSE=""
 
@@ -16,5 +16,5 @@ DEPEND="virtual/x11"
 
 src_install () {
 	einstall || die
-	dodoc AUTHORS ChangeLog INSTALL  NEWS README COPYING
+	dodoc AUTHORS ChangeLog NEWS README
 }
