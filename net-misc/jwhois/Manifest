@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 992581cf5af62258ff037cee4a3d0c6c ChangeLog 2645
+MD5 1e4465f5f5187a6b57ed215d911ad807 jwhois-3.2.3.ebuild 745
+MD5 8650b911e7bd5abb5571edbc236a1c83 jwhois-3.2.0.ebuild 767
+MD5 1340e640f52c2106618adcf5200fc519 jwhois-3.2.2.ebuild 789
+MD5 232dc7d34a05a7c82704d6f92853d1b0 jwhois-3.2.1.ebuild 784
+MD5 18c758085252c5f51e0f0c69d0a15843 ChangeLog 2741
+MD5 d99678f16c4fcc4e0bc71763e07dbb22 metadata.xml 221
 MD5 a3be5e722f33856d6bf281f4251e8b03 files/digest-jwhois-3.2.0 64
 MD5 8cbb8abe6a191a786d5b46109cda625d files/digest-jwhois-3.2.1 64
 MD5 7411f47db9ecd1d63caf18c87ef5c9db files/digest-jwhois-3.2.2 64
 MD5 bdae1dc474252cf39261057151097484 files/digest-jwhois-3.2.3 64
-MD5 8650b911e7bd5abb5571edbc236a1c83 jwhois-3.2.0.ebuild 767
-MD5 232dc7d34a05a7c82704d6f92853d1b0 jwhois-3.2.1.ebuild 784
-MD5 1340e640f52c2106618adcf5200fc519 jwhois-3.2.2.ebuild 789
-MD5 99dfeb084c75b44024817d7a2876c128 jwhois-3.2.3.ebuild 744
-MD5 d99678f16c4fcc4e0bc71763e07dbb22 metadata.xml 221
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDYrAVgIKl8Uu19MoRAlTPAJ0SVUYPr9maPoTqeQ7uvCSY393Z3ACbB4up
-QLQDb2ZSHEocq5UjSOG+xW0=
-=GcUG
+iD8DBQFDZ2rrKRy60XGEcJIRAklgAKCEJPR7EO5lvM2o2kgrpH2K7RK6hwCgpM8r
+jDla6+DzUflOKXTRMYQeY0Q=
+=ckmE
 -----END PGP SIGNATURE-----
