@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.19 2005/09/26 10:35:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.20 2005/11/01 07:07:12 ticho Exp $
+
+  01 Nov 2005; Andrej Kacian <ticho@gentoo.org> hotwayd-0.8.4.ebuild:
+  Stable on x86.
 
 *hotwayd-0.8.4 (26 Sep 2005)
 
