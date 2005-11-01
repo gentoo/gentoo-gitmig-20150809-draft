@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1531 2005/10/31 21:20:54 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1532 2005/11/01 06:12:55 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -531,6 +531,9 @@ media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar forma
 media-gfx/inkscape:effects - enables additional scripts (effects)
 media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
+media-gfx/k3d:ngui - build NGUI user-interface plug-in
+media-gfx/k3d:openexr - build OpenEXR plug-ins
+media-gfx/k3d:plib - build plib-based import/export library
 media-gfx/labplot:cdf - Adds cdf data exchange format support
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/maya:maya-shaderlibrary - Install the maya shader library
