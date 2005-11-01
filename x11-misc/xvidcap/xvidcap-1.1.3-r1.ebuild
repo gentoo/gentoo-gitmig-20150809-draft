@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r1.ebuild,v 1.5 2005/10/08 17:08:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3-r1.ebuild,v 1.6 2005/11/01 10:28:07 nelchael Exp $
 
 inherit eutils
 
@@ -41,5 +41,5 @@ src_install() {
 
 	# Fix for #58322
 	rm -fr ${D}/usr/share/doc/${PN}_${PV}
-	dodoc NEWS TODO README AUTHORS INSTALL ChangeLog XVidcap.ad
+	dodoc NEWS TODO README AUTHORS ChangeLog XVidcap.ad
 }
