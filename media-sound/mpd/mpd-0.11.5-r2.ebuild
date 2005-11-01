@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.1 2005/11/01 10:48:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.2 2005/11/01 10:53:07 ticho Exp $
 
 inherit eutils
 
@@ -92,11 +92,10 @@ src_install() {
 	dosed 's:^#state_file.*$:state_file "/var/lib/mpd/state":' /etc/mpd.conf
 
 	diropts -m0755 -o mpd -g audio
-	dodir /usr/share/mpd/music
-	keepdir /usr/share/mpd/music
-	dodir /usr/share/mpd/playlists
-	keepdir /usr/share/mpd/playlists
-	dodir /usr/share/mpd/
+	dodir /var/lib/mpd/music
+	keepdir /var/lib/mpd/music
+	dodir /var/lib/mpd/playlists
+	keepdir /var/lib/mpd/playlists
 	insinto /var/log
 	touch ${T}/blah
 	insopts -m0640 -o mpd -g audio
