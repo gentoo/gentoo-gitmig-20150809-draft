@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.8 2005/06/05 12:26:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.9 2005/11/01 20:39:57 twp Exp $
+
+*judy-1.0.1 (01 Nov 2005)
+
+  01 Nov 2005; Tom Payne <twp@gentoo.org> -files/jhton.patch,
+  -judy-1.0.0.ebuild, +judy-1.0.1.ebuild, -judy-20020627.ebuild,
+  -judy-20020627-r1.ebuild:
+  Version bump. Support 64-bit architectures.
 
   05 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
   judy-20020627-r1.ebuild:
