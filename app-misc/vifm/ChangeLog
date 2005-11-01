@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vifm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.9 2005/05/12 23:24:27 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.10 2005/11/01 20:21:40 nelchael Exp $
+
+  01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> vifm-0.2a.ebuild:
+  Stable on x86. Bug 111167.
 
   12 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> vifm-0.2a.ebuild:
   mark ~ppc
