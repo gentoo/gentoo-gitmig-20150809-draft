@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/gtkdialog-0.59.4.ebuild,v 1.3 2005/06/26 09:12:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/gtkdialog-0.59.4.ebuild,v 1.4 2005/11/01 13:32:32 nelchael Exp $
 
 DESCRIPTION="GUI-creation utility that can be used with an arbitrary interpreter"
 HOMEPAGE="http://linux.pte.hu/~pipas/gtkdialog/"
@@ -15,7 +15,7 @@ DEPEND="=x11-libs/gtk+-2*"
 
 src_install(){
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	if use doc; then
 		mkdir -p ${D}/usr/share/${P} && cp -r examples/* ${D}/usr/share/${P}
 	fi
