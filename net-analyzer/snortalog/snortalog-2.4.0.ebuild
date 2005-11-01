@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.5 2005/06/25 02:03:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.6 2005/11/01 08:13:18 soulse Exp $
 
 inherit eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 	sed -i -e "s:\(modules/\):/usr/lib/snortalog/${PV}/\1:g" \
 		-e 's:\($domains_file = "\)conf/\(domains\)\(".*\):\1/etc/snortalog/\2\3:' \
 		-e 's:\($rules_file = "\)conf/\(rules\)\(".*\):\1/etc/snortalog/\2\3:' \
+		-e 's:\($picts_dir ="\)picts\(".*\):\1/etc/snortalog/picts\2:' \
 		-e 's:\($hw_file = "\)conf/\(hw\)\(".*\):\1/etc/snortalog/\2\3:' \
 		-e 's:\($lang_file ="\)conf/\(lang\)\(".*\):\1/etc/snortalog/\2\3:' \
 		-e 's:Can access:Cannot access:' \
@@ -51,6 +52,8 @@ src_install () {
 
 	insinto /etc/${PN}
 	doins conf/{domains,hw,lang,rules}
+
+	keepdir /etc/${PN}/picts
 
 	insinto /usr/lib/${PN}/${PV}/modules
 	doins -r modules/*
