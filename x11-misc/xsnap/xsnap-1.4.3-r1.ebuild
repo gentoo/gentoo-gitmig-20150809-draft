@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.5 2005/10/25 18:22:23 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.6 2005/11/01 13:46:07 nelchael Exp $
 
 inherit eutils
 
@@ -31,5 +31,5 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	make DESTDIR=${D} install.man || die "make install.man failed"
-	dodoc README INSTALL AUTHORS
+	dodoc README AUTHORS
 }
