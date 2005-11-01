@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.49 2005/11/01 12:54:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.50 2005/11/01 18:35:32 dertobi123 Exp $
+
+  01 Nov 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  xplanet-1.2.0.ebuild:
+  Marked ppc stable, bug #111124
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xplanet-1.1.1.ebuild,
   xplanet-1.1.2-r1.ebuild, xplanet-1.2.0.ebuild:
