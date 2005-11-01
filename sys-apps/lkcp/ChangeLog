@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lkcp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.8 2005/11/01 10:40:39 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.9 2005/11/01 22:23:53 r3pek Exp $
+
+*lkcp-0.5.3-r2 (01 Nov 2005)
+
+  01 Nov 2005; Carlos Silva <r3pek@gentoo.org> -lkcp-0.5.3-r1.ebuild,
+  +lkcp-0.5.3-r2.ebuild:
+  Added =glib-1* as a dep
 
   01 Nov 2005; Carlos Silva <r3pek@gentoo.org> lkcp-0.5.3-r1.ebuild:
   Do not install COPYING
