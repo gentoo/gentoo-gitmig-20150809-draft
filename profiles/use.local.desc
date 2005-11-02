@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1533 2005/11/02 00:16:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1534 2005/11/02 11:40:31 uberlord Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -899,6 +899,7 @@ net-misc/openssh:chroot - Enable chrooting support
 net-misc/openssh:hpn - Enable high performance ssh
 net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
+net-misc/openvpn:passwordsave - Enables openvpn to save passwords
 net-misc/partysip:syslog - Enable syslog support
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP 
