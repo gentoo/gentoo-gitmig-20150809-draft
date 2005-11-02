@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.99 2005/10/22 14:17:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.100 2005/11/02 15:49:13 azarah Exp $
+
+  02 Nov 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch,
+  +files/mozilla-1.7.12-pango-needs-pangox.patch:
+  Add pangox to pango enabled build.
 
   23 Oct 2005; <anarchy@gentoo.org> -files/1.5/embed-typeaheadfind.patch,
   mozilla-firefox-1.5_beta2-r1.ebuild:

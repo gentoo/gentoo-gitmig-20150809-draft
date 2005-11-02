@@ -7,7 +7,7 @@
 -    PKG_CHECK_MODULES(MOZ_XFT, xft)
      if test "$MOZ_ENABLE_GTK2"; then
 -        PKG_CHECK_MODULES(_PANGOCHK, pango >= 1.1.0)
-+        PKG_CHECK_MODULES(MOZ_XFT, xft pangoxft >= 1.1.0)
++        PKG_CHECK_MODULES(MOZ_XFT, xft pangox >= 1.1.0 pangoxft >= 1.1.0)
 +    else
 +        PKG_CHECK_MODULES(MOZ_XFT, xft)
      fi
