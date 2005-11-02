@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.31-r1.ebuild,v 1.1 2005/07/20 15:13:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.31-r1.ebuild,v 1.2 2005/11/02 00:00:39 vapier Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
 KEYWORDS="~x86 -ppc"
-IUSE=''
+IUSE=""
 
 UNIPATCH_STRICTORDER='Y'
 UNIPATCH_LIST="${DISTDIR}/${PF}.tar.bz2
