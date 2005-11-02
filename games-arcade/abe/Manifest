@@ -1,7 +1,4 @@
 MD5 7385643aab369f79284961456842d0ba abe-1.1.ebuild 1024
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3e0dfffb41d59a04472a886bf1de549d abe-1.0.ebuild 1352
 MD5 048ee75975ed0ce163c7c707a87c9b4e ChangeLog 698
 MD5 cb5e0e3bc370e0f8d486acf184856635 files/digest-abe-1.1 60
-MD5 a67caf6d55013988b16d44cdfdf8460e files/1.0-gentoo-paths.patch 3503
-MD5 aa38d7b594fae9c33a8d595f7f60f730 files/digest-abe-1.0 60
