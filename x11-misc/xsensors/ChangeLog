@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.14 2005/11/01 10:45:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.15 2005/11/02 15:26:02 augustus Exp $
+
+  02 Nov 2005; <augustus@gentoo.org> xsensors-0.47.ebuild:
+  Stabilize 0.47 on amd64 ppc x86.
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
   Fixed ChangeLog.
