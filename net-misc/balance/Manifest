@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aeda21609d96a2d28c63f8dc34812d61 ChangeLog 763
-MD5 52ca188da6662bac6122bf8857c44c35 balance-3.24.ebuild 709
+MD5 897b9f88ad279c491351f5cfb1fab8ce ChangeLog 903
 MD5 d0bf3b5ac6c9f85ab572801f481da471 balance-3.19.ebuild 572
-MD5 873e603607234f6e8d88ff6e500b8e5c balance-3.26.ebuild 734
-MD5 85ccbebb4e4992ee1b77f80ae2270ec2 files/digest-balance-3.24 63
+MD5 9be19bbb85bd872a76639dbef983ea13 balance-3.24.ebuild 709
+MD5 ecdf471e2d5e946e0e0d2716a0af82da balance-3.26.ebuild 729
 MD5 1d240110decb7e81c75494407a26d6bb files/digest-balance-3.19 63
+MD5 85ccbebb4e4992ee1b77f80ae2270ec2 files/digest-balance-3.24 63
 MD5 7078b91e1d2983b6515ea5bca1ec068b files/digest-balance-3.26 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGWRSmdTrptrqvGERAuNXAJ0fbyLzYemwLGirzVXLd9tQkoeo/wCbBT0p
-F7eeXp0AkrYp1zuV+0lYyJQ=
-=usxf
------END PGP SIGNATURE-----
