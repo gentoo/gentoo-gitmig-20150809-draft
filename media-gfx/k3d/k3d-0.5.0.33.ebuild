@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.33.ebuild,v 1.1 2005/11/01 23:42:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.5.0.33.ebuild,v 1.2 2005/11/02 04:50:01 lu_zero Exp $
 
 inherit eutils
 
@@ -57,6 +57,7 @@ src_compile() {
 		$(use_with qt) \
 		$(use_with svg svg-icons) \
 		$(use_with tiff) \
+		$(use_with ngui) \
 		${myconf} \
 		|| die
 	emake || die
