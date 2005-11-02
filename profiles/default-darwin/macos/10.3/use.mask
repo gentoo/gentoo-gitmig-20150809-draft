@@ -29,5 +29,5 @@ static
 # pulls libidn, which has problems with java-config
 idn
 
-# we don't have pam, so don't try to do something with it
+# OSX has pam, but openvpn doesn't compile against it (yet?)
 pam
