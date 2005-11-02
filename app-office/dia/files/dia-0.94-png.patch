@@ -1,0 +1,127 @@
+diff -ur dia-0.94/sheets/ER/Makefile.am dia-0.94-png/sheets/ER/Makefile.am
+--- dia-0.94/sheets/ER/Makefile.am	2004-08-16 15:56:30.000000000 +0800
++++ dia-0.94-png/sheets/ER/Makefile.am	2005-11-02 16:56:49.000000000 +0800
+@@ -1,7 +1,7 @@
+ ERsheetdir = $(pkgdatadir)/sheets/ER
+ 
+ PIX = \
+-	weakentity.xpm
++	weakentity.png
+ 
+ ERsheet_DATA = $(PIX)
+ 
+diff -ur dia-0.94/sheets/GRAFCET/Makefile.am dia-0.94-png/sheets/GRAFCET/Makefile.am
+--- dia-0.94/sheets/GRAFCET/Makefile.am	2004-08-16 15:56:30.000000000 +0800
++++ dia-0.94-png/sheets/GRAFCET/Makefile.am	2005-11-02 17:00:04.000000000 +0800
+@@ -2,12 +2,12 @@
+ GRAFCETsheetdir = $(pkgdatadir)/sheets/GRAFCET
+ 
+ PIX = \
+-	etapei.xpm \
+-	etapems.xpm \
+-	etapeme.xpm \
+-	etapemc.xpm \
+-	etapesp.xpm \
+-	vergent_and.xpm
++	etapei.png \
++	etapems.png \
++	etapeme.png \
++	etapemc.png \
++	etapesp.png \
++	vergent_and.png
+ 
+ GRAFCETsheet_DATA = $(PIX)
+ EXTRA_DIST = $(PIX)
+diff -ur dia-0.94/sheets/Istar/Makefile.am dia-0.94-png/sheets/Istar/Makefile.am
+--- dia-0.94/sheets/Istar/Makefile.am	2004-08-16 15:56:31.000000000 +0800
++++ dia-0.94-png/sheets/Istar/Makefile.am	2005-11-02 17:10:13.000000000 +0800
+@@ -2,16 +2,16 @@
+ Istarsheetdir = $(pkgdatadir)/sheets/Istar
+ 
+ PIX = \
+-	agent.xpm \
+-	decomposition.xpm \
+-	dependency.xpm \
+-	goal.xpm \
+-	means_ends.xpm \
+-	neg_contrib.xpm \
+-	pos_contrib.xpm \
+-	position.xpm \
+-	role.xpm \
+-	task.xpm 
++	agent.png \
++	decomposition.png \
++	dependency.png \
++	goal.png \
++	means_ends.png \
++	neg_contrib.png \
++	pos_contrib.png \
++	position.png \
++	role.png \
++	task.png 
+ 
+ Istarsheet_DATA = $(PIX)
+ EXTRA_DIST = $(PIX)
+diff -ur dia-0.94/sheets/Jackson/Makefile.am dia-0.94-png/sheets/Jackson/Makefile.am
+--- dia-0.94/sheets/Jackson/Makefile.am	2004-08-16 15:56:31.000000000 +0800
++++ dia-0.94-png/sheets/Jackson/Makefile.am	2005-11-02 17:11:00.000000000 +0800
+@@ -2,9 +2,9 @@
+ Jacksonsheetdir = $(pkgdatadir)/sheets/Jackson
+ 
+ PIX = \
+-	designed_domain.xpm \
+-	machine_domain.xpm \
+-	req_phen.xpm 
++	designed_domain.png \
++	machine_domain.png \
++	req_phen.png 
+ 
+ Jacksonsheet_DATA = $(PIX)
+ EXTRA_DIST = $(PIX)
+diff -ur dia-0.94/sheets/KAOS/Makefile.am dia-0.94-png/sheets/KAOS/Makefile.am
+--- dia-0.94/sheets/KAOS/Makefile.am	2004-08-16 15:56:31.000000000 +0800
++++ dia-0.94-png/sheets/KAOS/Makefile.am	2005-11-02 18:16:47.000000000 +0800
+@@ -2,24 +2,24 @@
+ KAOSsheetdir = $(pkgdatadir)/sheets/KAOS
+ 
+ PIX = \
+-	and-complete-ref.xpm \
+-	and-ref.xpm \
+-	assumption.xpm \
+-	capable-of.xpm \
+-	conflicts.xpm \
+-	controls.xpm \
+-	input.xpm \
+-	monitors.xpm \
+-	obstacle.xpm \
+-	obstructs.xpm \
+-	op-ref.xpm \
+-	or-complete-ref.xpm \
+-	or-ref.xpm \
+-	output.xpm \
+-	performs.xpm \
+-	requirement.xpm \
+-	responsibility.xpm \
+-	softgoal.xpm
++	and-complete-ref.png \
++	and-ref.png \
++	assumption.png \
++	capable-of.png \
++	conflicts.png \
++	controls.png \
++	input.png \
++	monitors.png \
++	obstacle.png \
++	obstructs.png \
++	op-ref.png \
++	or-complete-ref.png \
++	or-ref.png \
++	output.png \
++	performs.png \
++	requirement.png \
++	responsibility.png \
++	softgoal.png
+ 
+ KAOSsheet_DATA = $(PIX)
+ EXTRA_DIST = $(PIX)
+
