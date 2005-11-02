@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.1 2005/11/02 06:37:17 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.2 2005/11/02 07:21:22 spyderous Exp $
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta
 package)"
@@ -9,7 +9,7 @@ HOMEPAGE="http://xorg.freedesktop.org"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="xinerama xprint"
+IUSE="xprint"
 
 # Collision protect will scream bloody murder if we install over old versions
 RDEPEND="!<x11-base/xorg-x11-7.0.0_rc0"
@@ -35,7 +35,7 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/libXfixes-3.0.0
 	>=x11-libs/libXv-0.99.1
 	>=x11-libs/libXxf86dga-0.99.1
-	xinerama? ( >=x11-libs/libXinerama-0.99.1 )
+	>=x11-libs/libXinerama-0.99.1
 	xprint? ( >=x11-libs/libXp-0.99.1 )"
 
 # Some fonts
