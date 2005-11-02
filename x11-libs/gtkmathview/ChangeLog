@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.9 2005/10/31 19:51:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.10 2005/11/02 10:48:29 herbs Exp $
+
+  02 Nov 2005; Herbie Hopkins <herbs@gentoo.org> gtkmathview-0.7.5.ebuild:
+  Marked ~amd64 wrt bug #110858.
 
   31 Oct 2005; Brent Baude <ranger@gentoo.org> gtkmathview-0.7.5.ebuild:
   marking gtkmathview-0.7.5 ~ppc64 for bug 110858
