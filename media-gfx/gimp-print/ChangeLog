@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.62 2005/09/26 01:38:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.63 2005/11/02 23:52:51 metalgod Exp $
+
+*gimp-print-5.0.0_rc1 (02 Nov 2005)
+
+  02 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +gimp-print-5.0.0_rc1.ebuild:
+  Version Bump.
 
   26 Sep 2005; <dang@gentoo.org> gimp-print-5.0.0_beta4.ebuild:
   Add ppds to IUSE
