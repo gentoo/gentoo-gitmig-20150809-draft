@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 89b31b6f5c38956e75300ec422a509bf ChangeLog 336
-MD5 f23469427ca41105a3fc81473cec9fb7 axiom-9999.ebuild 2877
-MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+MD5 31e3467519edf2226abfc483fb1ad378 axiom-9999.ebuild 2874
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-axiom-9999 0
+MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDaAPogIKl8Uu19MoRAhoZAJ9eX3pfQG8+dP8AWRq1M1aKH7SJ1ACfd/i7
+R5L4Tv5h8QcmAFABjwiayaM=
+=+Mf/
+-----END PGP SIGNATURE-----
