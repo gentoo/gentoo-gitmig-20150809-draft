@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.47 2005/10/14 02:58:05 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.48 2005/11/02 21:01:32 rocket Exp $
+
+  02 Nov 2005; Eric Edgar <rocket@gentoo.org> files/lvm2-stop.sh:
+  Update lvm2-stop.sh for bug 57229
 
 *lvm2-2.01.14 (14 Oct 2005)
 

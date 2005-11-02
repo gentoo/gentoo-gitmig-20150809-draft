@@ -1,5 +1,5 @@
 # /lib/rcscripts/addons/lvm2-stop.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-stop.sh,v 1.4 2005/06/18 07:11:05 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-stop.sh,v 1.5 2005/11/02 21:01:32 rocket Exp $
 
 # Stop LVM2
 if [ -x /sbin/vgchange ] && \
@@ -46,7 +46,10 @@ then
 		then
 			
 			ROOT_DEVICE=`mount|grep " / "|awk '{print $1}'`
-			if [ ! ${ROOT_DEVICE} = ${x} ]
+			MOUNTED_DEVICE=${x}
+			[ -L ${ROOT_DEVICE} ] && ROOT_DEVICE="`/bin/readlink ${ROOT_DEVICE}`"
+			[ -L ${x} ] && MOUNTED_DEVICE="`/bin/readlink ${x}`"
+			if [ ! ${ROOT_DEVICE} = ${MOUNTED_DEVICE} ]
 			then
 				ewarn "  Unable to shutdown: ${x} "
 			fi
