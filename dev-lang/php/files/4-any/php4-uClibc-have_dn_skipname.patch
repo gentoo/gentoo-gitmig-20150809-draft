@@ -1,3 +1,6 @@
+Backport from php-5 which will only use the dn_skipname function if the host 
+system supports it (uClibc for example does not).
+
 --- ext/standard/dns.c
 +++ ext/standard/dns.c
 @@ -275,6 +275,7 @@ PHP_FUNCTION(checkdnsrr)

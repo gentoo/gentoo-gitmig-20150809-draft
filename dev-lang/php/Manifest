@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d488db4999a774213ac88afa0b1203f8 ChangeLog 7255
 MD5 389638f1d46b6c41cd4d87b471572f4b files/4-any/apache-1.3/70_mod_php.conf 484
 MD5 ee36e31632adb08b7abf70f78b5b2125 files/4-any/apache-2.0/70_mod_php.conf 485
@@ -5,7 +8,7 @@ MD5 f0acca9c6387b8ca139d2849665bd16f files/4-any/php4-fastbuild.patch 9012
 MD5 6d2047e069da7178fc841c4c7c890aa8 files/4-any/php4-imap-symlink.diff 620
 MD5 22ed61ab0175cd83985a90e5d2b3b8b2 files/4-any/php4-iodbc-config.diff 511
 MD5 a7036ee38aa3b37256c0a6fe2afdbbe2 files/4-any/php4-libtool-1.5.patch 613
-MD5 f1142e6ec88928aeb4eb0120c267e53c files/4-any/php4-uClibc-have_dn_skipname.patch 839
+MD5 d3a9c21b313d418005ad021cc194d0aa files/4-any/php4-uClibc-have_dn_skipname.patch 968
 MD5 f2ab14c7be0482a4f25fc438fa6f5399 files/4-any/php4-with-iodbc.diff 443
 MD5 cb36a386184ed6a887f62d2205f57173 files/4.3.11/php4.3.11-fopen_wrappers.patch 1481
 MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/4.3.11/php4.3.11-gd_safe_mode.patch 1573
@@ -49,7 +52,14 @@ MD5 c9e2d252f3ae26871c06d35ebfe6fb1e files/digest-php-4.4.0-r2 221
 MD5 71facfede997494a03e635bc07a14a2f files/digest-php-5.0.4-r2 220
 MD5 96fdb35fc6f5b775c569db88d89200d7 files/digest-php-5.0.5-r2 143
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
-MD5 f103552f91a89b2a01a7af3e546b80f8 php-4.3.11-r2.ebuild 8850
-MD5 4e500d2d3950816464e12d30a683a0fb php-4.4.0-r2.ebuild 8851
-MD5 8deedda3c7fb2fe1c6fba3bdf0264386 php-5.0.4-r2.ebuild 5909
-MD5 94d452c40e94cbe3775732802448ea52 php-5.0.5-r2.ebuild 5376
+MD5 67ba8c3a515b8bfa3bf1ae1e86384979 php-4.3.11-r2.ebuild 8861
+MD5 0002f829be314cc3df32a8881f3fe66a php-4.4.0-r2.ebuild 8862
+MD5 cc79bb6e1971f1aef8c625d2292c7602 php-5.0.4-r2.ebuild 5920
+MD5 7d1b40bbac8d9bb8c90219926183086f php-5.0.5-r2.ebuild 5387
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDaAQUgIKl8Uu19MoRArJaAJ91jSTfbX/Z9Jb8+nMdZaHqa3PzyACffmI5
+Z8NVCLuesYnM6VjlKRJD82M=
+=DRSm
+-----END PGP SIGNATURE-----
