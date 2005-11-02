@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.3 2005/11/02 23:37:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.4 2005/11/02 23:38:10 spyderous Exp $
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta
 package)"
@@ -24,7 +24,8 @@ RDEPEND="${RDEPEND}
 	>=x11-apps/xauth-0.99.1
 	>=x11-apps/xhost-0.99.1
 	>=x11-apps/xinit-0.99.2
-	>=x11-apps/xmodmap-0.99.1"
+	>=x11-apps/xmodmap-0.99.1
+	>=x11-apps/xrandr-0.99.1"
 
 # Common Libraries - move these to eclass eventually
 RDEPEND="${RDEPEND}
