@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9705d0ddca15077d35b7755ff77b5939 ChangeLog 1653
 MD5 492b2eb08a11c62cc38f7941322f9fc1 cal3d-0.10.0.ebuild 712
-MD5 05e52c12550fd521c02ea980750d3db1 metadata.xml 251
-MD5 8e67d9541fffbd933676fb2ce3d18fb8 cal3d-0.11.0_pre20050823.ebuild 746
-MD5 05997f6f05d2c7d3fb934fef59071902 files/digest-cal3d-0.11.0_pre20050823 78
+MD5 a971f64beb9e04a0b9f9b07f9cb65f17 cal3d-0.11.0_pre20050823.ebuild 728
 MD5 f3ca4d499a49cfb9c816eac941532332 files/digest-cal3d-0.10.0 71
+MD5 05997f6f05d2c7d3fb934fef59071902 files/digest-cal3d-0.11.0_pre20050823 78
+MD5 05e52c12550fd521c02ea980750d3db1 metadata.xml 251
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDaAbRgIKl8Uu19MoRAtIuAJ9/49eibF6g7GTwefDTMHSy+e6aRACfbpbb
+LKY0TUxgS3qlyMYkvnN7N+U=
+=uh1c
+-----END PGP SIGNATURE-----

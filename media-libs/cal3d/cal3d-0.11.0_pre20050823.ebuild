@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.1 2005/08/31 19:12:05 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0_pre20050823.ebuild,v 1.2 2005/11/02 00:22:05 vapier Exp $
 
 inherit debug
 
@@ -10,11 +10,10 @@ SRC_URI="mirror://sourceforge/cal3d/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="${IUSE}"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="debug"
 
-RDEPEND="virtual/libc"
-
+RDEPEND=""
 DEPEND=">=sys-devel/automake-1.4
 	>=sys-devel/autoconf-2.13"
 
