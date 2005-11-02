@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.150 2005/10/13 15:13:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.151 2005/11/02 00:01:05 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -294,9 +294,9 @@ unpack_2_4() {
 	# When cross-compiling, we need to set the ARCH/CROSS_COMPILE
 	# variables properly or bad things happen !
 	local xmakeopts="ARCH=${KARCH}"
-	if [[ ${CTARGET} != ${CHOST} ]]; then
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
-	elif type -p ${CHOST}-ar; then
+	elif type -p ${CHOST}-ar > /dev/null ; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
 	fi
 
