@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r1.ebuild,v 1.2 2005/11/02 21:17:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r1.ebuild,v 1.3 2005/11/02 21:48:01 grobian Exp $
 
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
 IUSE="perl"
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.1
 	perl? ( dev-lang/perl )"
 
@@ -35,25 +35,29 @@ src_install() {
 		dohtml tcsh.html/*.html
 	fi
 
-	[ ! -e /bin/csh ] && dosym /bin/tcsh /bin/csh
 	dodoc FAQ Fixes NewThings Ported README WishList Y2K
 
 	insinto /etc
-	doins ${WORKDIR}/gentoo/csh.cshrc
-	doins ${WORKDIR}/gentoo/csh.login
+	doins \
+		${WORKDIR}/gentoo/csh.cshrc \
+		${WORKDIR}/gentoo/csh.login
 
 	insinto /etc/skel
 	newins ${WORKDIR}/gentoo/tcsh.config .tcsh.config
 
 	insinto /etc/profile.d
-	doins ${WORKDIR}/gentoo/tcsh-bindkey.csh
-	doins ${WORKDIR}/gentoo/tcsh-settings.csh
-	doins ${WORKDIR}/gentoo/tcsh-aliases
-	doins ${WORKDIR}/gentoo/tcsh-complete
-	doins ${WORKDIR}/gentoo/tcsh-gentoo_legacy
+	doins \
+		${WORKDIR}/gentoo/tcsh-bindkey.csh \
+		${WORKDIR}/gentoo/tcsh-settings.csh \
+		${WORKDIR}/gentoo/tcsh-aliases \
+		${WORKDIR}/gentoo/tcsh-complete \
+		${WORKDIR}/gentoo/tcsh-gentoo_legacy
 }
 
 pkg_postinst() {
+	# add csh -> tcsh symlink only if csh is not yet there
+	[ ! -e /bin/csh ] && dosym /bin/tcsh /bin/csh
+
 	while read line; do einfo "${line}"; done <<EOF
 The default behaviour of tcsh has significantly changed starting from
 this ebuild.  In contrast to previous ebuilds, the amount of
