@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm-themes-extra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes-extra/ChangeLog,v 1.6 2005/08/14 18:54:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes-extra/ChangeLog,v 1.7 2005/11/02 14:37:52 metalgod Exp $
+
+  02 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  fvwm-themes-extra-0.7.0.ebuild:
+  Marked Stable on amd64. Bug #111102.
 
   14 Aug 2005; Luis Medinas <metalgod@gentoo.org>
   fvwm-themes-extra-0.7.0.ebuild:
