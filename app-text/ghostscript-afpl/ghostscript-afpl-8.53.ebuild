@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.1 2005/11/02 00:29:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.2 2005/11/02 14:40:25 genstef Exp $
 
 inherit eutils
 
@@ -52,11 +52,12 @@ src_unpack() {
 		#81418
 		sed -i 's:OUTPUTFILE="%stdout" $profile $6$:OUTPUTFILE="%stdout" $profile $6 -:' pstoraster
 		sed -i -e "s:pstopcl6:pstopxl:" cups.mak
-		cd ..
-		epatch ${FILESDIR}/gs852-lib.patch
+		cd ${S}
 		epatch ${FILESDIR}/gdevcups.patch
 	fi
 
+	cd ${S}
+	epatch ${FILESDIR}/gs852-lib.patch
 	epatch ${FILESDIR}/rinkj.patch
 
 	# enable cfax device (bug #56704)

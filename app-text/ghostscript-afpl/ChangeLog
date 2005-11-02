@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.29 2005/11/02 00:29:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.30 2005/11/02 14:40:25 genstef Exp $
+
+  02 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-afpl-8.53.ebuild:
+  Fix unpack with USE=-cups thanks to Hans-Werner Hilse <hilse@web.de> in bug
+  111240
 
 *ghostscript-afpl-8.53 (02 Nov 2005)
 
