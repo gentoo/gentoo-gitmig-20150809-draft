@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.13 2005/01/25 16:08:24 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-0.6.ebuild,v 1.14 2005/11/02 22:35:52 wolf31o2 Exp $
 
 inherit eutils kde
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
-#need-kde isn't smart enough yet so we have to set both *DEPEND right now
+# need-kde isn't smart enough yet so we have to set both *DEPEND right now
 # arts dep - bug #73352
 DEPEND="kde-base/arts"
 RDEPEND="kde-base/arts"
