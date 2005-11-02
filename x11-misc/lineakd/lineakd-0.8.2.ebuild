@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.2.ebuild,v 1.4 2005/07/07 12:05:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.2.ebuild,v 1.5 2005/11/02 19:52:49 nelchael Exp $
 
 IUSE=""
 MY_PV=${PV/_/}
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} lineakddocdir=/usr/share/doc/${P} install || die
-	dodoc AUTHORS COPYING INSTALL README TODO
+	dodoc AUTHORS README TODO
 	keepdir /usr/lib/lineakd/plugins
 
 	insinto /etc/lineak
