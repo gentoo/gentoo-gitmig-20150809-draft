@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.28 2005/05/02 18:31:46 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.29 2005/11/02 22:55:01 taviso Exp $
+
+*csh-1.29-r4 (02 Nov 2005)
+
+  02 Nov 2005; Tavis Ormandy <taviso@gentoo.org> +csh-1.29-r4.ebuild:
+  dont install init files so that tcsh block can be removed.
 
   02 May 2005; Stephen Bennett <spb@gentoo.org> csh-1.29-r3.ebuild:
   Fixed build when LIBC is set. #91179.
