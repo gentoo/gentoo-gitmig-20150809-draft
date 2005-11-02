@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-ghostscript-viewer/sylpheed-claws-ghostscript-viewer-0.8.ebuild,v 1.11 2005/10/22 13:08:46 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-ghostscript-viewer/sylpheed-claws-ghostscript-viewer-0.8.ebuild,v 1.12 2005/11/02 20:23:44 genstef Exp $
 
 MY_P="${P##sylpheed-claws-}"
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 alpha ppc64"
 IUSE=""
 DEPEND=">=mail-client/sylpheed-claws-0.9.12b-r1
-		app-text/ghostscript"
+		virtual/ghostscript"
 
 S="${WORKDIR}/${MY_P}"
 
