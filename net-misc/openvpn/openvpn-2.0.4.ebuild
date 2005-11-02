@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.4.ebuild,v 1.3 2005/11/02 18:04:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.4.ebuild,v 1.4 2005/11/02 18:08:47 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -11,12 +11,13 @@ HOMEPAGE="http://openvpn.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ppc ~ppc-macos ~sparc x86"
-IUSE="examples iproute2 minimal passwordsave selinux ssl static threads"
+IUSE="examples iproute2 minimal pam passwordsave selinux ssl static threads"
 
 RDEPEND=">=dev-libs/lzo-1.07
 	kernel_linux? (
 		iproute2? ( sys-apps/iproute2 ) !iproute2? ( sys-apps/net-tools )
 	)
+	!minimal? ( pam? ( virtual/pam ) )
 	selinux? ( sec-policy/selinux-openvpn )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="${RDEPEND}
@@ -49,6 +50,7 @@ src_compile() {
 		cd plugin
 		for i in $( ls 2>/dev/null ); do
 			[[ ${i} == "README" || ${i} == "examples" ]] && continue
+			[[ ${i} == "auth-pam" ]] && ! use pam && continue
 			einfo "Building ${i} plugin"
 			cd "${i}"
 			emake || die "make failed"
