@@ -1,6 +1,4 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a3868630413bfe7a06b394eaefec7548 dboxfe-0.0.3.ebuild 549
 MD5 bf7842855f902749162192960dfd72c1 ChangeLog 812
 MD5 dd018556af0fccebf122738802fdae9b dboxfe-0.0.5.ebuild 550
-MD5 c375207f1f1d42afc03a258ece5ec70d files/digest-dboxfe-0.0.3 65
 MD5 d0d0148015ca5016193d4eb56cb69e1d files/digest-dboxfe-0.0.5 64
