@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.37 2005/11/02 18:21:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.38 2005/11/02 19:47:10 metalgod Exp $
+
+  02 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  azureus-bin-2.3.0.4.ebuild:
+  Marked Stable on amd64. Bug #111273.
 
   02 Nov 2005; Thomas Matthijs <axxo@gentoo.org> azureus-bin-2.3.0.4.ebuild:
   stable 2.3 as 2.1 is broken and gives very bad advice
