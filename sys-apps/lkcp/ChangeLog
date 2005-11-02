@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lkcp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.10 2005/11/01 22:43:39 soulse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lkcp/ChangeLog,v 1.11 2005/11/02 23:13:03 r3pek Exp $
+
+*lkcp-0.5.3-r3 (02 Nov 2005)
+
+  02 Nov 2005; Carlos Silva <r3pek@gentoo.org> -lkcp-0.5.3-r2.ebuild,
+  +lkcp-0.5.3-r3.ebuild:
+  Another rev bump. This time to remove the strange 'Resetting Terminal'
+  stuff. Fixes bug #111234, thx to Erik Zeek for reporting.
 
   01 Nov 2005; <soulse@gentoo.org> lkcp-0.5.3-r2.ebuild:
   Stable on x86 wrt bug #111108.
