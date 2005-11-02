@@ -1,15 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.10.2.ebuild,v 1.8 2005/10/25 13:07:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.10.2.ebuild,v 1.9 2005/11/02 15:44:38 seemant Exp $
 
 inherit eutils flag-o-matic
 
-PATCHVER=0.1
+PATCHVER=0.2
 DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://wget.sunsite.dk/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gnu/wget/${P}.tar.gz
-	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCHVER}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2"
