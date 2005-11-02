@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.18 2005/11/02 05:51:38 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.19 2005/11/02 06:11:29 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -59,18 +59,6 @@ RDEPEND="${RDEPEND}
 	!<x11-base/xorg-x11-7.0.0_rc0"
 # Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
-
-x-modular_pkg_setup() {
-	# Collision protect will scream bloody murder if we install over old versions
-	if $(has_version "<x11-base/xorg-x11-7.0.0_rc0"); then
-		if has collision-protect ${FEATURES}; then
-			eerror "Having collision-protect in FEATURES will disrupt upgrades"
-			eerror "from non-modular versions of xorg-x11."
-			eerror "Please remove collision-protect from FEATURES while upgrading."
-			die    ""
-		fi
-	fi
-}
 
 x-modular_unpack_source() {
 	unpack ${A}
