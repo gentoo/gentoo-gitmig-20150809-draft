@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.12 2005/10/30 03:05:34 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.13 2005/11/02 04:38:16 steev Exp $
+
+  02 Nov 2005; Steev Klimaszewski <steev@gentoo.org> pmount-0.9.6.ebuild:
+  CHANGES became ChangeLog.  Re-emerge if you really want to read the 
+  file.  Not going to force a recompile for the ChangeLog
 
 *pmount-0.9.6 (30 Oct 2005)
 

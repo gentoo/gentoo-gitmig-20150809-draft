@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.1 2005/10/30 03:05:34 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.6.ebuild,v 1.2 2005/11/02 04:38:16 steev Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,7 @@ src_install () {
 	exeopts -m 4710 -g plugdev
 	doexe src/pmount src/pumount src/pmount-hal
 
-	dodoc AUTHORS CHANGES TODO
+	dodoc AUTHORS ChangeLog TODO
 	doman man/pmount.1 man/pumount.1 man/pmount-hal.1
 
 	insinto /etc
