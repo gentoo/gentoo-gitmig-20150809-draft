@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.25 2005/11/01 21:41:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.26 2005/11/02 18:14:30 gustavoz Exp $
+
+  02 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> pd-0.38.4.ebuild:
+  Stable on sparc
 
   01 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> -files/pd-0.37.1-exp.patch,
   -pd-0.37.1.ebuild, pd-0.38.4.ebuild:
