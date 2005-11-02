@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.5 2004/12/28 14:54:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.6 2005/11/02 01:32:58 mr_bones_ Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.omega.clara.net/anagramarama/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2
@@ -32,6 +32,7 @@ src_unpack() {
 		src/{ag.c,dlb.c} \
 		|| die "sed failed"
 	sed -i \
+		-e "/^LFLAGS/s:-funroll-loops -fomit-frame-pointer -pipe -O9:${CFLAGS}:" \
 		-e "/^CFLAGS/s:-funroll-loops -fomit-frame-pointer -pipe -O9:${CFLAGS}:" \
 		makefile \
 		|| die "sed failed"
@@ -42,7 +43,7 @@ src_install() {
 	newgamesbin ag ${PN} || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins wordlist.txt || die "doins failed"
-	cp -r images/ audio/ "${D}${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	doins -r images/ audio/ || die "doins failed"
 	dodoc readme
 	prepgamesdirs
 }

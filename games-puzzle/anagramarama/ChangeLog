@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/anagramarama
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/ChangeLog,v 1.4 2004/12/28 14:54:29 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/ChangeLog,v 1.5 2005/11/02 01:32:58 mr_bones_ Exp $
+
+  02 Nov 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  anagramarama-0.2.ebuild:
+  use doins -r; tidy
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> anagramarama-0.2.ebuild:
   Marked ppc stable.
