@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/autocutsel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.13 2005/11/01 13:41:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.14 2005/11/02 13:37:11 gustavoz Exp $
+
+  02 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  autocutsel-0.8.0.ebuild:
+  Stable on sparc
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
   autocutsel-0.6.2.ebuild, autocutsel-0.8.0.ebuild:
