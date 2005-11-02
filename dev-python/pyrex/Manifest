@@ -7,4 +7,4 @@ MD5 c587d86c063eda8fb02e18b9b1c83aec files/pyrex-0.9.3-python24_distutils.patch 
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 d08c9ca7453de3d3f1520a83830e794b pyrex-0.9.3-r1.ebuild 988
 MD5 f17d1977aeaf8245f9d7a45a9f23dcc1 pyrex-0.9.3-r2.ebuild 1062
-MD5 e106f22da66420910ac4ea196a118d5b pyrex-0.9.3.1.ebuild 844
+MD5 b9141dcf36828837124ac0814eb3df7e pyrex-0.9.3.1.ebuild 718
