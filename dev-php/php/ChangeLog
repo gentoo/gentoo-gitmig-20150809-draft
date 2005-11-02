@@ -1,6 +1,18 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.196 2005/10/29 22:16:13 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.197 2005/11/02 22:10:15 chtekk Exp $
+
+*php-4.4.0-r3 (02 Nov 2005)
+*php-4.3.11-r3 (02 Nov 2005)
+
+  02 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  +files/php4.3.11-curl_safemode.patch, +files/php4.3.11-phpinfo_xss.patch,
+  +files/php4.3.11-globals_overwrite.patch,
+  +files/php4.4.0-curl_safemode.patch,
+  +files/php4.4.0-globals_overwrite.patch,
+  +files/php4.4.0-phpinfo_xss.patch, -php-4.3.11-r2.ebuild,
+  +php-4.3.11-r3.ebuild, -php-4.4.0-r2.ebuild, +php-4.4.0-r3.ebuild:
+  Security-update: fix bugs #111032, #111015, #111011 and bug #111014.
 
 *php-4.4.0-r2 (29 Oct 2005)
 *php-4.3.11-r2 (29 Oct 2005)

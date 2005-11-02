@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0-r5.ebuild,v 1.1 2005/10/29 22:16:12 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.4.0-r6.ebuild,v 1.1 2005/11/02 22:13:28 chtekk Exp $
 
 IUSE="apache2"
 
@@ -56,12 +56,13 @@ PHPSAPI="apache${APACHEVER}"
 # the php eclass requires the PHPSAPI setting!
 # In this case the PHPSAPI setting is dependant on the detectapache function
 # above this point as well!
-inherit php-sapi eutils apache-module flag-o-matic
+inherit php-sapi eutils
 
 DESCRIPTION="Apache module for PHP"
 
-DEPEND_EXTRA=">=net-www/apache-1.3.33-r10
-			  apache2? ( >=net-www/apache-2.0.54-r30 )"
+DEPEND_EXTRA=">=net-www/apache-1.3.26-r2
+			  apache2? ( >=net-www/apache-2.0.43-r1
+			            !>=net-www/apache-2.0.54-r30 )"
 DEPEND="${DEPEND} ${DEPEND_EXTRA}"
 RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 IUSE="${IUSE} debug"
@@ -71,15 +72,6 @@ PROVIDE="${PROVIDE} virtual/httpd-php"
 
 # fixed PCRE library for security issues, bug #102373
 SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
-
-# generalize some apache{,2} vars (defined by apache-module.eclass)
-if [ -n ${USE_APACHE2} ]; then
-	APACHE_MODULESDIR=${APACHE2_MODULESDIR}
-	APACHE_CONFDIR=${APACHE2_CONFDIR}
-else
-	APACHE_MODULESDIR=${APACHE_MODULESDIR}
-	APACHE_CONFDIR=${APACHE_CONFDIR}
-fi
 
 # Add a 'return 0' as we DON'T want the return code checked
 pkg_setup() {
@@ -115,6 +107,15 @@ src_unpack() {
 		epatch "${FILESDIR}/php4.4.0-gd_safe_mode.patch"
 	fi
 
+	# patch fo fix safe_mode bypass in CURL extension, bug #111032
+	use curl && epatch "${FILESDIR}/php4.4.0-curl_safemode.patch"
+
+	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
+	epatch "${FILESDIR}/php4.4.0-globals_overwrite.patch"
+
+	# patch phpinfo() XSS vulnerability, bug #111015
+	epatch "${FILESDIR}/php4.4.0-phpinfo_xss.patch"
+
 	# patch open_basedir directory bypass, bug #102943
 	epatch "${FILESDIR}/php4.4.0-fopen_wrappers.patch"
 
@@ -135,25 +136,18 @@ src_unpack() {
 	rm -rf ${S}/ext/pcre/pcrelib && mv -f ${WORKDIR}/pcrelib-new ${S}/ext/pcre/pcrelib || die "Unable to update the bundled PCRE library"
 }
 
-setup_environ() {
-	append-flags `apr-config --cppflags --cflags`
-}
-
 src_compile() {
-	setup_environ
-
 	# Every Apache2 MPM EXCEPT prefork needs Zend Thread Safety
 	if [ -n "${USE_APACHE2}" ]; then
-		APACHE2_MPM="`/usr/sbin/apache2 -l | egrep 'worker|perchild|leader|threadpool|prefork'|cut -d. -f1|sed -e 's/^[[:space:]]*//g;s/[[:space:]]+/ /g;'`"
+		APACHE2_MPM="`/usr/sbin/apache2 -l |egrep 'worker|perchild|leader|threadpool|prefork'|cut -d. -f1|sed -e 's/^[[:space:]]*//g;s/[[:space:]]+/ /g;'`"
 		einfo "Apache2 MPM: ${APACHE2_MPM}"
 		case "${APACHE2_MPM}" in
 			*prefork*) ;;
-			*peruser*) ;;
 			*) myconf="${myconf} --enable-experimental-zts" ; ewarn "Enabling ZTS for Apache2 MPM" ;;
 		esac;
 	fi
 
-	#use apache2
+	# use apache2
 	myconf="${myconf} --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
 
 	# Do not build CLI SAPI module.
@@ -162,29 +156,40 @@ src_compile() {
 	php-sapi_src_compile
 }
 
+
 src_install() {
 	PHP_INSTALLTARGETS="install"
 	php-sapi_src_install
-
-	dodir ${APACHE_CONFDIR}
+	einfo "Adding extra symlink to php.ini for Apache${USE_APACHE2}"
+	dodir /etc/apache${USE_APACHE2}/conf/
 	dodir ${PHPINIDIRECTORY}
+	dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/apache${USE_APACHE2}/conf/${PHPINIFILENAME}
 
 	einfo "Cleaning up a little"
-	rm -rf ${D}${APACHE_MODULESDIR}/libphp4.so
-
-	exeinto ${APACHE_MODULESDIR}
+	rm -rf ${D}/usr/lib/apache${USE_APACHE2}/modules/libphp4.so
+	einfo "Adding extra symlink to Apache${USE_APACHE2} extramodules for PHP"
+	dosym /usr/lib/apache${USE_APACHE2}-extramodules ${PHPINIDIRECTORY}/lib
+	exeinto /usr/lib/apache${USE_APACHE2}-extramodules
 	einfo "Installing mod_php shared object now"
 	doexe .libs/libphp4.so
 
 	if [ -n "${USE_APACHE2}" ] ; then
 		einfo "Installing a Apache2 config for PHP (70_mod_php.conf)"
-		insinto ${APACHE2_MODULES_CONFDIR}
-		doins ${FILESDIR}/4.4.0-a2/70_mod_php.conf
+		insinto /etc/apache2/conf/modules.d
+		doins ${FILESDIR}/70_mod_php.conf
 	else
-		einfo "Installing a Apache config for PHP (70_mod_php.conf)"
-		insinto ${APACHE1_MODULES_CONFDIR}
-		doins ${FILESDIR}/4.4.0-a1/70_mod_php.conf
+		einfo "Installing a Apache config for PHP (mod_php.conf)"
+		insinto /etc/apache/conf/addon-modules
+		doins ${FILESDIR}/mod_php.conf
+		dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/apache/conf/addon-modules/${PHPINIFILENAME}
 	fi
+}
+
+apache2msg() {
+	einfo "Edit /etc/conf.d/apache2 and add \"-D PHP4\" to APACHE2_OPTS"
+	ewarn "This is a CHANGE from previous behavior, which was \"-D PHP\""
+	ewarn "This is for the upcoming PHP5 support. The ebuild will attempt"
+	ewarn "to make this update between PHP and PHP4 automatically"
 }
 
 multiinstwarn() {
@@ -213,9 +218,27 @@ pkg_preinst() {
 pkg_postinst() {
 	php-sapi_pkg_postinst
 	multiinstwarn
-	APACHE1_MOD_DEFINE="PHP4"
-	APACHE1_MOD_CONF="70_mod_php.conf"
-	APACHE2_MOD_DEFINE="PHP4"
-	APACHE2_MOD_CONF="70_mod_php.conf"
-	apache-module_pkg_postinst
+	einfo "To have Apache run php programs, please do the following:"
+	if [ -n "${USE_APACHE2}" ]; then
+		apache2msg
+	else
+		einfo "1. Execute the command:"
+		einfo " \"emerge --config =${PF}\""
+		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\" to APACHE_OPTS"
+		einfo "That will include the php mime types in your configuration"
+		einfo "automagically and setup Apache to load php when it starts."
+	fi
+}
+
+pkg_config() {
+	multiinstwarn
+	if [ -n "${USE_APACHE2}" ]; then
+		apache2msg
+	else
+		${ROOT}/usr/sbin/apacheaddmod \
+			${ROOT}/etc/apache/conf/apache.conf \
+			extramodules/libphp4.so mod_php4.c php4_module \
+			before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf
+			:;
+	fi
 }

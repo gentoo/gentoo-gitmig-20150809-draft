@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.4.0-r2.ebuild,v 1.3 2005/10/29 22:33:54 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11-r3.ebuild,v 1.1 2005/11/02 22:10:15 chtekk Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
 
 DESCRIPTION="PHP Shell Interpreter"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 # fixed PCRE library for security issues, bug #102373
@@ -17,23 +17,38 @@ src_unpack() {
 	php-sapi_src_unpack
 	[ "${ARCH}" == "amd64" ] && epatch "${FILESDIR}/php-4.3.4-amd64hack.diff"
 
+	# Bug 88756
+	use flash && epatch "${FILESDIR}/php-4.3.11-flash.patch"
+
+	# Bug 88795
+	use gmp && epatch "${FILESDIR}/php-4.3.11-gmp.patch"
+
 	# fix imap symlink creation, bug #105351
-	use imap && epatch "${FILESDIR}/php4.4.0-imap-symlink.diff"
+	use imap && epatch "${FILESDIR}/php4.3.11-imap-symlink.diff"
 
 	# patch to fix pspell extension, bug #99312 (new patch by upstream)
-	use spell && epatch "${FILESDIR}/php4.4.0-pspell-ext-segf.patch"
+	use spell && epatch "${FILESDIR}/php4.3.11-pspell-ext-segf.patch"
 
 	# patch to fix safe_mode bypass in GD extension, bug #109669
 	if use gd || use gd-external ; then
-		epatch "${FILESDIR}/php4.4.0-gd_safe_mode.patch"
+		epatch "${FILESDIR}/php4.3.11-gd_safe_mode.patch"
 	fi
 
+	# patch fo fix safe_mode bypass in CURL extension, bug #111032
+	use curl && epatch "${FILESDIR}/php4.3.11-curl_safemode.patch"
+
+	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
+	epatch "${FILESDIR}/php4.3.11-globals_overwrite.patch"
+
+	# patch phpinfo() XSS vulnerability, bug #111015
+	epatch "${FILESDIR}/php4.3.11-phpinfo_xss.patch"
+
 	# patch open_basedir directory bypass, bug #102943
-	epatch "${FILESDIR}/php4.4.0-fopen_wrappers.patch"
+	epatch "${FILESDIR}/php4.3.11-fopen_wrappers.patch"
 
 	# patch to fix session.save_path segfault and other issues in
 	# the apache2handler SAPI, bug #107602
-	epatch "${FILESDIR}/php4.4.0-session_save_path-segf.patch"
+	epatch "${FILESDIR}/php4.3.11-session_save_path-segf.patch"
 
 	# we need to unpack the files here, the eclass doesn't handle this
 	cd "${WORKDIR}"
@@ -41,7 +56,7 @@ src_unpack() {
 	cd "${S}"
 
 	# patch to fix PCRE library security issues, bug #102373
-	epatch "${FILESDIR}/php4.4.0-pcre-security.patch"
+	epatch "${FILESDIR}/php4.3.11-pcre-security.patch"
 
 	# sobstitute the bundled PCRE library with a fixed version for bug #102373
 	einfo "Updating bundled PCRE library"

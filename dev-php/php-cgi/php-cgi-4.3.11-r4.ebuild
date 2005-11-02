@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11-r3.ebuild,v 1.1 2005/10/29 22:16:13 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11-r4.ebuild,v 1.1 2005/11/02 22:11:28 chtekk Exp $
 
 PHPSAPI="cgi"
 inherit php-sapi eutils
@@ -36,6 +36,15 @@ src_unpack() {
 	if use gd || use gd-external ; then
 		epatch "${FILESDIR}/php4.3.11-gd_safe_mode.patch"
 	fi
+
+	# patch fo fix safe_mode bypass in CURL extension, bug #111032
+	use curl && epatch "${FILESDIR}/php4.3.11-curl_safemode.patch"
+
+	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
+	epatch "${FILESDIR}/php4.3.11-globals_overwrite.patch"
+
+	# patch phpinfo() XSS vulnerability, bug #111015
+	epatch "${FILESDIR}/php4.3.11-phpinfo_xss.patch"
 
 	# patch open_basedir directory bypass, bug #102943
 	epatch "${FILESDIR}/php4.3.11-fopen_wrappers.patch"
