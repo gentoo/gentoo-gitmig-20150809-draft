@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.1 2005/08/31 19:34:16 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.3.011.ebuild,v 1.2 2005/11/02 00:05:49 vapier Exp $
 
 inherit eutils games debug
 
@@ -11,12 +11,11 @@ SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 Planeshift )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="${IUSE}"
+IUSE="debug"
 
 RDEPEND="net-misc/curl
 	>=dev-games/crystalspace-0.99_pre*
 	>=dev-games/cel-0.99_pre*"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

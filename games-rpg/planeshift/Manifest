@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e95a4cff22b82f67d41788b36eb6f80c ChangeLog 2006
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 fbc5fee220605ed36d1a07b407e503a0 planeshift-0.3.011.ebuild 2524
-MD5 d36ebb08ae2a044431da73cf9af175f2 files/planeshift-setup 290
 MD5 ef4af237db8a9c93c7fb476c87e0e9d8 files/digest-planeshift-0.3.011 73
 MD5 c88f36fa5955068c95a8717023d99a87 files/planeshift 305
+MD5 d36ebb08ae2a044431da73cf9af175f2 files/planeshift-setup 290
 MD5 b0529daec0a1a5176bc138c2cb99654d files/planeshift-updater 335
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 22305942b48821e0fe6f83cfdad076d3 planeshift-0.3.011.ebuild 2518
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDaAMCgIKl8Uu19MoRAr5AAJ4vYFHaSGHDINd08qh0urr+hzoVZgCeM4+h
+Y6Hc1OvsEXXP0XAzZ3zCraE=
+=MEaq
+-----END PGP SIGNATURE-----
