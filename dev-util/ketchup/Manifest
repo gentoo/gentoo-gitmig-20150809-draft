@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 efd5fee311d215143c9c0b91bb3a5cfe ketchup-0.9.5.ebuild 663
+MD5 652d20c57f0f3679717f84715f5d0146 metadata.xml 494
+MD5 00ef7f749548460bad18ad85d5f59882 ChangeLog 364
+MD5 cdfd35508318525d1080c64d12e3f9fd files/digest-ketchup-0.9.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDaBlP/aM9DdBw91cRAod5AJ95YILBXR1oib2O1OA8XLl1l4skXwCfelst
+eynG5lOiEYzjq7O+3t2ogLU=
+=9eit
+-----END PGP SIGNATURE-----
