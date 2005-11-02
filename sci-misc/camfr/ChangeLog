@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/camfr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/ChangeLog,v 1.2 2005/10/31 08:26:30 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/camfr/ChangeLog,v 1.3 2005/11/02 20:24:21 genstef Exp $
+
+  02 Nov 2005; Stefan Schweizer <genstef@gentoo.org> camfr-1.2.ebuild:
+  app-text/ghostscript -> virtual/ghostscript
 
   31 Oct 2005; Peter Bienstman <pbienst@gentoo.org> camfr-1.2.ebuild:
   Use fortran eclass.
