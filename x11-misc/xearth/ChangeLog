@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xearth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.7 2005/11/01 13:06:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.8 2005/11/02 14:58:08 metalgod Exp $
+
+  02 Nov 2005; Luis Medinas <metalgod@gentoo.org> xearth-1.1.ebuild:
+  Marked Stable on amd64. Bug #111126.
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> xearth-1.1.ebuild:
   Fixed dodoc not to install COPYING and/or INSTALL.
