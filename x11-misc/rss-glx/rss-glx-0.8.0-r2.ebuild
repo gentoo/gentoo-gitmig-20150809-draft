@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r2.ebuild,v 1.6 2005/08/26 18:52:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0-r2.ebuild,v 1.7 2005/11/02 20:08:14 nelchael Exp $
 
 inherit flag-o-matic eutils
 
@@ -80,7 +80,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-	dodoc COPYING INSTALL README README.xscreensaver
+	dodoc README README.xscreensaver
 
 	# symlink to satisfy kde's kxs*
 	use kde && dosym /usr/share/control-center/screensavers /usr/lib/xscreensaver/config

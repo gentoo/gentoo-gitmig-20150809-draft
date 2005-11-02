@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7-r1.ebuild,v 1.6 2005/08/30 18:05:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7-r1.ebuild,v 1.7 2005/11/02 20:03:10 nelchael Exp $
 
 inherit eutils
 
@@ -42,5 +42,5 @@ src_install () {
 	make \
 		INSTALL_DIR=${D}/${GNUSTEP_LOCAL_ROOT:-/usr/lib/GNUstep}/Apps/Login.app \
 		install
-	dodoc README* TODO COPYING
+	dodoc README* TODO
 }

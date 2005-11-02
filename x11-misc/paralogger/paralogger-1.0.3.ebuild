@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/paralogger-1.0.3.ebuild,v 1.6 2005/04/29 21:00:06 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/paralogger-1.0.3.ebuild,v 1.7 2005/11/02 20:04:48 nelchael Exp $
 
 DESCRIPTION="Bourne shell script to "tail" the system log(s) in borderless transparent Eterm(s)"
 HOMEPAGE="http://gtk.no/paralogger"
@@ -29,5 +29,5 @@ src_install() {
 	insinto /usr/X11R6/lib/X11/fonts/misc
 	doins fonts/*pcf.gz
 	doman paralogger.1.gz
-	dodoc README INSTALL AUTHORS BUGS ChangeLog FAQ THANKS TODO REPORTING-BUGS
+	dodoc README AUTHORS BUGS ChangeLog FAQ THANKS TODO REPORTING-BUGS
 }

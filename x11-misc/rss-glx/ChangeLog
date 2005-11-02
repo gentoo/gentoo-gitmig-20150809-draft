@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.37 2005/08/26 18:52:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.38 2005/11/02 20:08:14 nelchael Exp $
+
+  02 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  rss-glx-0.8.0-r2.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   26 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   rss-glx-0.8.0-r2.ebuild:
