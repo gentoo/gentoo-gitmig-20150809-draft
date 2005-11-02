@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.108 2005/09/17 15:24:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.109 2005/11/02 20:43:58 genstef Exp $
+
+  02 Nov 2005; Stefan Schweizer <genstef@gentoo.org>
+  -ghostscript-7.05.6-r2.ebuild, -ghostscript-7.07.1-r9.ebuild:
+  Remove unused ebuilds
 
 *ghostscript-7.07.1-r10 (01 Sep 2005)
 
