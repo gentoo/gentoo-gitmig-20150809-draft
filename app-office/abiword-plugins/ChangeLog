@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.6 2005/10/31 21:41:07 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.7 2005/11/02 10:52:47 herbs Exp $
+
+  02 Nov 2005; Herbie Hopkins <herbs@gentoo.org>
+  abiword-plugins-2.4.1-r2.ebuild:
+  Marked ~amd64 wrt bug #110858.
 
 *abiword-plugins-2.4.1-r2 (31 Oct 2005)
 
