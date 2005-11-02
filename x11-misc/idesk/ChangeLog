@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.36 2005/11/01 17:20:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.37 2005/11/02 14:43:39 metalgod Exp $
+
+  02 Nov 2005; Luis Medinas <metalgod@gentoo.org> idesk-0.7.4.ebuild:
+  Marked Stable on amd64. Bug #111038.
 
   01 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> idesk-0.7.4.ebuild:
   Stable on sparc wrt #111038
