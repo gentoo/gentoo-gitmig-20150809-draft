@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 493d1228509e4bfab25e185a93ee0b2d lineak-xosdplugin-0.8.3.ebuild 794
-MD5 6591bebce39b421420d7367175461101 lineak-xosdplugin-0.8.2.ebuild 1011
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 ca5f6403875abc92d61e4024a369d3e7 ChangeLog 1031
-MD5 77a79cee691c172377bf3662767f0149 files/digest-lineak-xosdplugin-0.8.3 75
+MD5 ced03ec066112efcd02560a157fa0cc2 ChangeLog 1205
 MD5 6f29dbffa938505fdbf0dfb7110f1077 files/digest-lineak-xosdplugin-0.8.2 75
+MD5 77a79cee691c172377bf3662767f0149 files/digest-lineak-xosdplugin-0.8.3 75
 MD5 6b06a7712d74799e4f33b60968ecee3d files/do-not-depend-on-kde.patch 1158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK2iSLLFUmVNQ7rkRAiHbAKDVkWYQETCAUdqo77nXgnuYoT/syACfaUN4
-343dsj+fwkxOGF8xG10+zBM=
-=NFNV
------END PGP SIGNATURE-----
+MD5 f7b62ce09c68c9bb95809fca76bf43b4 lineak-xosdplugin-0.8.2.ebuild 996
+MD5 ca967025bd45c976717308014b13e661 lineak-xosdplugin-0.8.3.ebuild 779
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
