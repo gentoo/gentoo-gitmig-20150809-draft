@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r1.ebuild,v 1.1 2005/09/30 19:42:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r1.ebuild,v 1.2 2005/11/02 21:17:41 grobian Exp $
 
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -35,7 +35,7 @@ src_install() {
 		dohtml tcsh.html/*.html
 	fi
 
-	dosym /bin/tcsh /bin/csh
+	[ ! -e /bin/csh ] && dosym /bin/tcsh /bin/csh
 	dodoc FAQ Fixes NewThings Ported README WishList Y2K
 
 	insinto /etc
