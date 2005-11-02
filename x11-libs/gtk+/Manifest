@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 88d6d5cc6a5a4f0e0426646667134046 gtk+-1.2.10-r11.ebuild 1831
-MD5 435b9e913f3e39bd813828c59b7ce966 gtk+-2.6.10.ebuild 2969
+MD5 a036ea42a87172019dbb501f93f2bf99 gtk+-2.6.10.ebuild 2967
 MD5 afb0e5aa8f6410c088c2e177a17efe5d gtk+-1.2.10-r10.ebuild 1719
 MD5 5033b22f68c770cc1738680edc951abf gtk+-2.6.8.ebuild 2884
 MD5 d38317657c696b42dccf01cd12309530 gtk+-2.8.6.ebuild 3935
-MD5 67ac667b4d06232d9a5f3d9db7d4e1ba ChangeLog 27984
+MD5 3be71250d40399baffc15effaec0e05c ChangeLog 28076
 MD5 58b5c1a403ab43f5160c44c32761cbe0 metadata.xml 424
 MD5 71f1edf217fe1b660ed78cd89f9832b2 files/digest-gtk+-2.6.8 208
 MD5 e9729297feed3e63e6176140ee4cb463 files/digest-gtk+-2.8.6 140
@@ -17,3 +20,10 @@ MD5 88f458873590e6a355d2bcb76fa859f7 files/gtk+-2.8.6-freebsd.patch 507
 MD5 f56b08a8f40b528e72b6406ea337c51c files/digest-gtk+-2.6.10 212
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 MD5 0df92cf64a9324ef85fc72885a4285b1 files/gtk+-2.4.9-ppc64.patch 1732
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDaPIPKRy60XGEcJIRAs8lAJ9dI72TKz5e3dlnFqlx3JolryMExgCcDoyb
+J/agiLn5PIC+QFnpr2dZ/OI=
+=nnCv
+-----END PGP SIGNATURE-----
