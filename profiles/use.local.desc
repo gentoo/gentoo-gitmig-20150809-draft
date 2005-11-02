@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1534 2005/11/02 11:40:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1535 2005/11/02 20:43:20 grobian Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -32,6 +32,7 @@ app-backup/bacula:bacula-split - NFC what this does
 app-backup/bacula:client-only - Disable DB support, and just build a client
 app-backup/bacula:logrotate - Install support files for logrotate
 app-backup/bacula:logwatch - Install support files for logwatch
+app-backup/boxbackup:client-only - Disable server support, and just build a client
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinint by 32 bits integers.
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 64 bits integers.
 app-backup/kdar:dar32 - Support libdar32.so to use.
