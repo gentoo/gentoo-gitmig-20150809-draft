@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e71189578c6957a1a66541c432f8b86 ratpoison-1.4.0_beta2.ebuild 1499
-MD5 480301c1bfce20a9a72b7c446c46b356 ratpoison-1.4.0_beta4.ebuild 1499
-MD5 d6dc62049d4af16eb42ce96b3aee90cd ratpoison-1.3.0.ebuild 1443
-MD5 0dc401dca3401344d482d660aedf9b3b metadata.xml 829
-MD5 2588636b9469476c21a46a87962cc258 ChangeLog 4122
+MD5 4f5f6e41a8552aebb4e880b3987dbbbc ChangeLog 4240
+MD5 608274a76e39130af139a7a1f12ab564 files/50ratpoison-gentoo.el 524
+MD5 e4205db91428787672e5463c32d4b701 files/digest-ratpoison-1.3.0 67
+MD5 e97b940b1d366b59e727dd7c8f727874 files/digest-ratpoison-1.4.0_beta2 73
 MD5 68d1d603290ff4bc9e9221078e552364 files/digest-ratpoison-1.4.0_beta4 73
+MD5 129f353e076455306b034fd577a6cdd2 files/ratpoison.el-gentoo.patch 273
 MD5 f2ca283925e8bbb408427e4a29c8592d files/ratpoison.xsession 19
 MD5 a7dd337c32ae9d2fe627cf230b77965c files/ratpoisonrc 609
-MD5 129f353e076455306b034fd577a6cdd2 files/ratpoison.el-gentoo.patch 273
-MD5 e4205db91428787672e5463c32d4b701 files/digest-ratpoison-1.3.0 67
-MD5 ab1a7f36971489b5cffb75d84a2b2d0a files/50ratpoison-gentoo.el 82
-MD5 e97b940b1d366b59e727dd7c8f727874 files/digest-ratpoison-1.4.0_beta2 73
+MD5 0dc401dca3401344d482d660aedf9b3b metadata.xml 829
+MD5 d6dc62049d4af16eb42ce96b3aee90cd ratpoison-1.3.0.ebuild 1443
+MD5 8e71189578c6957a1a66541c432f8b86 ratpoison-1.4.0_beta2.ebuild 1499
+MD5 480301c1bfce20a9a72b7c446c46b356 ratpoison-1.4.0_beta4.ebuild 1499
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDK2myLLFUmVNQ7rkRAhg7AJ9I+P735LP7xpDhdO6Eu+Smhlt1FgCgnbxc
-ky4CCR5cJWEAGv1+2FsVvdQ=
-=Idmc
+iD8DBQFDaO9dyiNZaEAZA+ARAvLUAJ9kWmgbsvSWd23qOZxmIpnyXhXiswCeJ345
+Isa0MEkjHDTPtXKrcvo1z1I=
+=mowJ
 -----END PGP SIGNATURE-----

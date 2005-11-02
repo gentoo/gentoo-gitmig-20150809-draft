@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.31 2005/09/17 00:55:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.32 2005/11/02 16:54:39 mkennedy Exp $
+
+  02 Nov 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  files/50ratpoison-gentoo.el:
+  Added useful Emacs autoloads.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
