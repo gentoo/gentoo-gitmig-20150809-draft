@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.4.ebuild,v 1.3 2005/09/13 22:42:45 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.4.ebuild,v 1.4 2005/11/02 18:21:26 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2 BSD"
 SLOT="0"
 
 # Still in progress... trying to get most external classes in through DEPENDs rather than 
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="kde gtk"
 
 DEPEND="virtual/libc
