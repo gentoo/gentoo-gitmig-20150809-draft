@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.2 2005/11/02 07:21:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.3 2005/11/02 23:37:10 spyderous Exp $
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta
 package)"
@@ -36,6 +36,7 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/libXv-0.99.1
 	>=x11-libs/libXxf86dga-0.99.1
 	>=x11-libs/libXinerama-0.99.1
+	>=x11-libs/libXScrnSaver-0.99.2
 	xprint? ( >=x11-libs/libXp-0.99.1 )"
 
 # Some fonts
