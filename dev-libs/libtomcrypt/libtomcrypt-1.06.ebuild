@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.06.ebuild,v 1.1 2005/08/10 02:23:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.06.ebuild,v 1.2 2005/11/02 20:37:20 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND="libtommath? ( dev-libs/libtommath )
 	tomsfastmath? ( dev-libs/tomsfastmath )
 	!libtommath? ( !tomsfastmath? ( dev-libs/libtommath ) )"
 DEPEND="${RDEPEND}
-	doc? ( virtual/tetex app-text/ghostscript )"
+	doc? ( virtual/tetex virtual/ghostscript )"
 
 src_unpack() {
 	unpack crypt-${PV}.tar.bz2
