@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/cryptlib_py
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/ChangeLog,v 1.1 2005/11/02 03:46:57 sbriesen Exp $
+
+*cryptlib_py-3.2.2 (02 Nov 2005)
+
+  02 Nov 2005; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +cryptlib_py-3.2.2.ebuild:
+  initial commit, using ~x86 and ~amd64 keywords (both tested).
+
