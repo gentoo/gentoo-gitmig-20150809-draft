@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r1.ebuild,v 1.3 2005/11/02 21:48:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r1.ebuild,v 1.4 2005/11/02 22:15:37 grobian Exp $
 
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install install.man || die
+	make DESTDIR="${D}" install install.man || die
 
 	if use perl ; then
 		perl tcsh.man2html || die
@@ -39,19 +39,19 @@ src_install() {
 
 	insinto /etc
 	doins \
-		${WORKDIR}/gentoo/csh.cshrc \
-		${WORKDIR}/gentoo/csh.login
+		"${WORKDIR}"/gentoo/csh.cshrc \
+		"${WORKDIR}"/gentoo/csh.login
 
 	insinto /etc/skel
-	newins ${WORKDIR}/gentoo/tcsh.config .tcsh.config
+	newins "${WORKDIR}"/gentoo/tcsh.config .tcsh.config
 
 	insinto /etc/profile.d
 	doins \
-		${WORKDIR}/gentoo/tcsh-bindkey.csh \
-		${WORKDIR}/gentoo/tcsh-settings.csh \
-		${WORKDIR}/gentoo/tcsh-aliases \
-		${WORKDIR}/gentoo/tcsh-complete \
-		${WORKDIR}/gentoo/tcsh-gentoo_legacy
+		"${WORKDIR}"/gentoo/tcsh-bindkey.csh \
+		"${WORKDIR}"/gentoo/tcsh-settings.csh \
+		"${WORKDIR}"/gentoo/tcsh-aliases \
+		"${WORKDIR}"/gentoo/tcsh-complete \
+		"${WORKDIR}"/gentoo/tcsh-gentoo_legacy
 }
 
 pkg_postinst() {
