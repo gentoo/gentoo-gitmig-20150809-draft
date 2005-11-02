@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9.ebuild,v 1.1 2005/10/30 09:48:28 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9b.ebuild,v 1.1 2005/11/02 17:57:35 ferdy Exp $
 
 inherit python
 
@@ -94,13 +94,9 @@ src_test() {
 }
 
 pkg_postinst() {
-	echo
-	ewarn "Some commands will be renamed before the final 1.0. Use the git"
-	ewarn "wrapper in your scripts to avoid compatibility problems. Check the"
-	ewarn "changes table at:"
-	echo
-	echo "http://dev.gentoo.org/~r3pek/git-new-command-list.txt"
-	echo
+	# Remove old links. Workarounds a portage bug not removing symlinks
+	${S}/cmd-rename.sh "${ROOT}/usr/bin"
+
 	einfo
 	einfo "If you want to import arch repositories into git, consider using the"
 	einfo "git-archimport command. You should install dev-util/tla before"
