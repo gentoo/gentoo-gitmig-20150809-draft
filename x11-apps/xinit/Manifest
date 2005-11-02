@@ -1,4 +1,7 @@
-MD5 7870302dff82072670e0ae22d5cf44bb ChangeLog 3772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ecf17f5831cd61c98916f617307143d ChangeLog 3887
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 files/Xsession 2187
 MD5 2b07bc84cc3afab6b4de90b9e9c597c3 files/chooser.sh 1566
 MD5 25ca8e4cacf6c712886ea0e8a69a05fe files/digest-xinit-0.99.2-r1 64
@@ -9,4 +12,11 @@ MD5 2d8c9c76bd932f311ad86f490680d349 files/xdm.start 3418
 MD5 49f1bd860cfa5fc4adb6023d8a1bb4f8 files/xinitrc 900
 MD5 708a3daf8950bbfe3aa231efb7533cb0 files/xserver.pamd 125
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
-MD5 39b7ed0c851a570747129ab657043b2c xinit-0.99.2-r1.ebuild 1144
+MD5 ffc35e70872b2bcf32d0338bfefd2fd3 xinit-0.99.2-r1.ebuild 1144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDaJs+j5H05b2HAEkRAlTqAJ9ivMANBD1mxzxII1+hDc/IpMYADQCbBoTi
+MMCa0849IbZ5ZZ7CU4IaLDw=
+=F/Ci
+-----END PGP SIGNATURE-----

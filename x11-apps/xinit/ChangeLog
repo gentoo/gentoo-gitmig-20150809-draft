@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.22 2005/10/30 05:13:24 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.23 2005/11/02 10:55:38 flameeyes Exp $
+
+  02 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> xinit-0.99.2-r1.ebuild:
+  If you use dopamd, inherit pam eclass.
 
   30 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   xinit-0.99.2-r1.ebuild:
