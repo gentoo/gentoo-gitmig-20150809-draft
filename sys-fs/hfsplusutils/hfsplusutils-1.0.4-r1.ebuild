@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.8 2005/02/16 09:59:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.9 2005/11/02 18:43:04 josejx Exp $
 
 inherit eutils libtool
 
@@ -26,6 +26,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/hfsplusutils-1.0.4-glob.patch
 	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch
+	epatch ${FILESDIR}/hfsplusutils-1.0.4-gcc4.patch
 	#let's avoid the Makefile.cvs since isn't working for us
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.6
