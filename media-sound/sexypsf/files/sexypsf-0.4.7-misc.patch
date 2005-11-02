@@ -135,29 +135,48 @@
  	writeok=1;
  
 -	psxMemLUT = (u32*)malloc(0x10000 * 4);
--	memset(psxMemLUT, 0, 0x10000 * 4);
 +	psxMemLUT = malloc(0x10000 * sizeof *psxMemLUT);
+-	memset(psxMemLUT, 0, 0x10000 * 4);
 +	memset(psxMemLUT, 0, 0x10000 * sizeof *psxMemLUT);
  
  	psxM = (char*)malloc(0x00200000);
  	psxP = (char*)malloc(0x00010000);
-@@ -67,7 +67,7 @@
+@@ -67,10 +67,10 @@
  		printf("Error allocating memory"); return -1;
  	}
  
 -	for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16];
 +	for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = &psxM[(i & 0x1f) << 16];
  
- 	memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * 4);
- 	memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
-@@ -222,7 +222,7 @@
+-	memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * 4);
++	memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * sizeof *psxMemLUT);
+-	memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
++	memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * sizeof *psxMemLUT);
+ 
+ 	for (i=0; i<0x01; i++) psxMemLUT[i + 0x1f00] = (u32)&psxP[i << 16];
+ 
+@@ -215,16 +215,16 @@
+ 					case 0x800: case 0x804:
+ 						if (writeok == 0) break;
+ 						writeok = 0;
+-						memset(psxMemLUT + 0x0000, 0, 0x80 * 4);
++						memset(psxMemLUT + 0x0000, 0, 0x80 * sizeof *psxMemLUT);
+-						memset(psxMemLUT + 0x8000, 0, 0x80 * 4);
++						memset(psxMemLUT + 0x8000, 0, 0x80 * sizeof *psxMemLUT);
+-						memset(psxMemLUT + 0xa000, 0, 0x80 * 4);
++						memset(psxMemLUT + 0xa000, 0, 0x80 * sizeof *psxMemLUT);
+ 						break;
  					case 0x1e988:
  						if (writeok == 1) break;
  						writeok = 1;
 -						for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = (u32)&psxM[(i & 0x1f) << 16];
 +						for (i=0; i<0x80; i++) psxMemLUT[i + 0x0000] = &psxM[(i & 0x1f) << 16];
- 						memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * 4);
- 						memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
+-						memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * 4);
++						memcpy(psxMemLUT + 0x8000, psxMemLUT, 0x80 * sizeof *psxMemLUT);
+-						memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * 4);
++						memcpy(psxMemLUT + 0xa000, psxMemLUT, 0x80 * sizeof *psxMemLUT);
+ 						break;
+ 					default:
  						break;
 --- sexypsf/PsxMem.h
 +++ sexypsf/PsxMem.h
