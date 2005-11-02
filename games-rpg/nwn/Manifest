@@ -1,4 +1,4 @@
-MD5 2c7b0ffe9825ec6b1f2888d93a6fe4ed ChangeLog 5690
+MD5 666a92ee1e461e1147a5b7d7eb024839 ChangeLog 5832
 MD5 3952e8e76ebdde92fe0bf84facaaea38 files/digest-nwn-1.65-r1 892
 MD5 a15f98043e8a4c08555ef8384a1e848c files/digest-nwn-1.66 1147
 MD5 25cad5bc0f76382b0577ef11b5d5aeef files/digest-nwn-1.66-r1 1551
@@ -7,5 +7,5 @@ MD5 3eddaf5e88a92951762058756003c855 files/nwn 44
 MD5 d05b3b73edd2b4beadbce95837e2ab20 files/nwn.png 4296
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
 MD5 b09157145a832f02eb5ccbdff5244310 nwn-1.65-r1.ebuild 3688
-MD5 06e970b4b1f0bf1b494be93184fb1000 nwn-1.66-r1.ebuild 3993
+MD5 d3cc4071c19c1a08d527239dd69176ea nwn-1.66-r1.ebuild 4144
 MD5 69d62e623dfb29a0ca928233044220c7 nwn-1.66.ebuild 4228

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.5 2005/11/01 20:04:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.6 2005/11/02 22:53:22 wolf31o2 Exp $
+
+  02 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> nwn-data-1.29.ebuild:
+  Added license checking.
 
   01 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org> nwn-data-1.29.ebuild:
   Fixed installation when not using USE=nowin.
@@ -20,6 +23,6 @@
   +metadata.xml, +nwn-data-1.29.ebuild:
   Initial import. Ebuild by me. This is the first ebuild for breaking up
   Neverwinter Nights into 2 ebuilds. This ebuild also adds support for
-  installing the Shadows of Undrentide and Hourdes of the Underdark expansion
+  installing the Shadows of Undrentide and Hordes of the Underdark expansion
   packs from CD using USE=sou and USE=hou respectively.
 

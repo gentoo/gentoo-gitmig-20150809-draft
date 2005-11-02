@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.6 2005/11/01 20:05:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.7 2005/11/02 22:53:22 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -34,10 +34,13 @@ RDEPEND="virtual/x11
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S=${WORKDIR}/nwn
+
+GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/nwn
 Ddir=${D}/${dir}
 
 pkg_setup() {
+	games_pkg_setup
 	if use sou && use hou
 	then
 		echo "You will need the SoU and HoU CDs for this installation."
@@ -64,7 +67,8 @@ src_unpack() {
 	rm -rf override/*
 	# the following is so ugly, please pretend it doesnt exist
 	declare -a Aarray=(${A})
-	use nowin && if [ "${#Aarray[*]}" == "3" ]; then
+	use nowin && if [ "${#Aarray[*]}" == "3" ]
+	then
 		unpack ${Aarray[1]}
 	fi
 	if use sou
