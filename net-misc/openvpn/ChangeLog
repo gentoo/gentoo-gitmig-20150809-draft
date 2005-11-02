@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.51 2005/11/02 18:08:47 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.52 2005/11/02 18:18:40 uberlord Exp $
+
+*openvpn-2.0.4-r2 (02 Nov 2005)
+*openvpn-2.0.4-r1 (02 Nov 2005)
+
+  02 Nov 2005; Roy Marples <uberlord@gentoo.org> -openvpn-2.0.4.ebuild,
+  +openvpn-2.0.4-r1.ebuild, +openvpn-2.0.4-r2.ebuild:
+  2.0.4 removed as it had the new init script
+  2.0.4-r1 added with old init script
+  2.0.4-r2 added with new init script
 
   02 Nov 2005; Roy Marples <uberlord@gentoo.org> openvpn-2.0.4.ebuild:
   Fixed pam issue when building plugins, #111267
