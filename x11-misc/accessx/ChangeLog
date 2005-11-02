@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/accessx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.17 2004/10/23 16:31:26 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.18 2005/11/02 19:03:12 nelchael Exp $
+
+  02 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -accessx-0950.ebuild,
+  accessx-0951.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> accessx-0951.ebuild:
   Stable on sparc.

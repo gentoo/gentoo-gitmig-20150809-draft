@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951.ebuild,v 1.6 2004/10/23 16:31:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951.ebuild,v 1.7 2005/11/02 19:03:12 nelchael Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Interface to the XKEYBOARD extension in X11"
@@ -22,5 +22,5 @@ src_compile() {
 src_install () {
 	into /usr
 	dobin accessx ax || die
-	dodoc README INSTALL CHANGES
+	dodoc README CHANGES
 }
