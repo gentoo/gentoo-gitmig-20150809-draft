@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 3ce85fd8eacae74818fcf7ac44fca613 ChangeLog 5375
+MD5 d78f40c86d15063d2920a6c48d59ef47 libmpeg2-0.4.0b.ebuild 1459
+MD5 b76ada2d9c18a21260a268f4e3018e6a files/gcc34-inline-fix-0.4.0b.diff 513
 MD5 6ed53be491fa83ebc59d0d7b285c5e4f files/altivec-fix-0.4.0b.diff 890
 MD5 c7958c7996a268d8cf161e4b32e70ac0 files/digest-libmpeg2-0.4.0b 67
-MD5 b76ada2d9c18a21260a268f4e3018e6a files/gcc34-inline-fix-0.4.0b.diff 513
-MD5 9a613424de200d770d912ef360e4f38f libmpeg2-0.4.0b.ebuild 1460
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDZkeJj5H05b2HAEkRArWMAKCD77pNt4rwntu8mmYWKufRM1Q3/QCfWTl/
-HZGQ3qUozwrSpjp9Dx8hq3w=
-=pYOL
------END PGP SIGNATURE-----

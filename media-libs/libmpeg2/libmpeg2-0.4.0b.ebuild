@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.25 2005/10/31 16:34:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.26 2005/11/02 01:36:09 mr_bones_ Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -33,7 +33,7 @@ src_unpack() {
 		-e '/-mcpu/d' \
 		configure.in \
 		|| die "sed configure failed"
-	
+
 	eautoreconf
 	elibtoolize
 }
