@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.2 2005/10/26 01:13:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.3 2005/11/02 08:48:21 nerdboy Exp $
 
 inherit eutils libtool gnuconfig distutils
 
@@ -72,7 +72,7 @@ src_compile() {
 
 	# It can't find this
 	if useq ogdi ; then
-	    use_conf="--with-ogdi=/usr/${get_libdir} ${use_conf}"
+	    use_conf="--with-ogdi=/usr/$(get_libdir) ${use_conf}"
 	fi
 
 #	if useq mysql ; then
@@ -90,7 +90,7 @@ src_compile() {
 	fi
 
 	if useq python ; then
-	    use_conf="--with-pymoddir=/usr/${get_libdir}/python${PYVER}/site-packages \
+	    use_conf="--with-pymoddir=/usr/$(get_libdir)/python${PYVER}/site-packages \
 	    ${use_conf}"
 	else
 	    use_conf="--with-python=no ${use_conf}"
