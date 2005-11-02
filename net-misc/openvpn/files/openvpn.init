@@ -1,4 +1,6 @@
 #!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
 VPNDIR="/etc/openvpn"
 VPN="${myservice##*.}"
@@ -37,10 +39,16 @@ start() {
 		eend 1 "${VPNCONF} does not exist"
 		return 1
 	fi
-		
+
+	local args=""
+	# If the config file does not specify the cd option, we do
+	# But if we specify it, we override the config option which we do not want
+	if ! grep -q "^[ \t]*cd[ \t].*" "${VPNCONF}" ; then
+		args="${args} --cd ${VPNDIR}"
+	fi
+
 	start-stop-daemon --start --exec /usr/sbin/openvpn --pidfile "${VPNPID}" \
-		-- --config "${VPNCONF}" --writepid "${VPNPID}"	\
-		--daemon --cd "${VPNDIR}"
+		-- --config "${VPNCONF}" --writepid "${VPNPID}" --daemon ${args}
 	eend $? "Check your logs to see why startup failed"
 }
 
