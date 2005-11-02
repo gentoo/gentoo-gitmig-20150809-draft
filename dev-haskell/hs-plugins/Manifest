@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0317a5e6d14bd22bc15d6ed12b474c3b ChangeLog 1007
+MD5 ca9b254d139eb304aefa5c8485e2a01f files/digest-hs-plugins-0.9.10 135
+MD5 cf6036e55a430934f50b03f1904f87cf files/digest-hs-plugins-0.9.6 134
+MD5 5a354330583e81ac898f6f5ec9f2dd9a files/digest-hs-plugins-0.9.8 134
+MD5 ac6c789a8e3d14cf053b00193d05a7f0 hs-plugins-0.9.10.ebuild 1538
 MD5 c61ca0ef9d84c675dfdefa1e1e1f33fe hs-plugins-0.9.6.ebuild 779
 MD5 1a599d524ebd834499dd7e64eaf71a4b hs-plugins-0.9.8.ebuild 1109
 MD5 271db8af4d4636c2b1ff7fcc2d903d71 metadata.xml 160
-MD5 9fae4e4a977233d764838fa38dbeebe1 hs-plugins-0.9.10.ebuild 1538
-MD5 cf6036e55a430934f50b03f1904f87cf files/digest-hs-plugins-0.9.6 134
-MD5 5a354330583e81ac898f6f5ec9f2dd9a files/digest-hs-plugins-0.9.8 134
-MD5 ca9b254d139eb304aefa5c8485e2a01f files/digest-hs-plugins-0.9.10 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDXPvSBQBy/eDH5uERAt7jAJ9uc9XAkV6x/r0iNYEDrWYHHqAhMQCgqDKH
-Iwsl2kLLiC9gbInnA3rAr/0=
-=mRm9
------END PGP SIGNATURE-----
