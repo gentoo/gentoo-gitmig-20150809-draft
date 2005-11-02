@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.1 2005/11/01 20:47:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.2 2005/11/02 01:35:06 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -68,12 +68,12 @@ src_compile() {
 
 		[[ $(gcc-major-version) -eq 3 ]] && append-flags -mno-sse2
 	fi
-	
+
 	if use amd64; then
 		myconf="${myconf} --enable-simd-accel"
 		myconf="${myconf} --enable-cmov-extension"
 	fi
-	
+
 	econf \
 		$(use_with X x) \
 		$(use_enable dga xfree-ext) \
