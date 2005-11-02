@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.2 2005/11/01 18:22:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.3 2005/11/02 19:32:08 fmccor Exp $
+
+  02 Nov 2005; Ferris McCormick <fmccor@gentoo.org>
+  xorg-cf-files-0.99.1.ebuild:
+  Add ~sparc keyword (needed with X-modular for some packages).
 
   01 Nov 2005; <dang@gentoo.org> xorg-cf-files-0.99.1.ebuild:
   Marked ~amd64

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmkmf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmkmf/ChangeLog,v 1.2 2005/11/01 18:24:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmkmf/ChangeLog,v 1.3 2005/11/02 19:38:13 fmccor Exp $
+
+  02 Nov 2005; Ferris McCormick <fmccor@gentoo.org> xmkmf-0.99.1.ebuild:
+  Add ~sparc keyword (needed with X-modular for some packages).
 
   01 Nov 2005; <dang@gentoo.org> xmkmf-0.99.1.ebuild:
   Marked ~amd64
