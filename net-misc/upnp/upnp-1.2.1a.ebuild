@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.2.1a.ebuild,v 1.3 2005/07/09 15:54:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.2.1a.ebuild,v 1.4 2005/11/02 20:23:02 genstef Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="doc debug"
 DEPEND="sys-fs/e2fsprogs
 	doc? ( app-doc/doc++
 	       app-text/tetex
-	       app-text/ghostscript )"
+	       virtual/ghostscript )"
 
 S="${WORKDIR}"/lib${P}/upnp
 
