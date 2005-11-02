@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.35 2005/07/27 17:42:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.36 2005/11/02 03:14:07 sbriesen Exp $
+
+*pyrex-0.9.3.1 (02 Nov 2005)
+
+  02 Nov 2005; Stefan Briesenick <sbriesen@gentoo.org>
+  +pyrex-0.9.3.1.ebuild:
+  version bump (patches are not needed anymore), fixing PYTHON_MODNAME
+  handling (modules are now correctly compiled), ebuild cleanup.
 
   27 Jul 2005; Guy Martin <gmsoft@gentoo.org> pyrex-0.9.3-r1.ebuild:
   Stable on hppa.
