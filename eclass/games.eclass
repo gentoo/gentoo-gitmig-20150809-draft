@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.107 2005/10/22 02:22:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.108 2005/11/02 06:40:28 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -169,14 +169,14 @@ games_src_compile() {
 games_pkg_preinst() {
 	local f
 
-	for f in $(find "${IMAGE}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
+	for f in $(find "${D}/${GAMES_STATEDIR}" -type f -printf '%P ' 2>/dev/null) ; do
 		if [[ -e ${ROOT}/${GAMES_STATEDIR}/${f} ]] ; then
 			cp -p \
 				"${ROOT}/${GAMES_STATEDIR}/${f}" \
-				"${IMAGE}/${GAMES_STATEDIR}/${f}" \
+				"${D}/${GAMES_STATEDIR}/${f}" \
 				|| die "cp failed"
 			# make the date match the rest of the install
-			touch "${IMAGE}/${GAMES_STATEDIR}/${f}"
+			touch "${D}/${GAMES_STATEDIR}/${f}"
 		fi
 	done
 }
