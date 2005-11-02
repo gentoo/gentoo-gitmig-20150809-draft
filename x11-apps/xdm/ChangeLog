@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.21 2005/10/31 17:40:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.22 2005/11/02 04:21:54 spyderous Exp $
+
+*xdm-0.99.2_p20051026-r1 (02 Nov 2005)
+
+  02 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xdm-0.99.2_p20051026.ebuild, +xdm-0.99.2_p20051026-r1.ebuild:
+  Set --with-xdm-configdir correctly so files don't end up directly in /etc.
 
   31 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xdm-0.99.0-r2.ebuild, -xdm-0.99.1_pre20050905-r1.ebuild,
