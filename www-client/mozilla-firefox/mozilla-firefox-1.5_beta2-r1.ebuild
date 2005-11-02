@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_beta2-r1.ebuild,v 1.2 2005/10/22 14:17:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_beta2-r1.ebuild,v 1.3 2005/11/02 18:02:53 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -185,7 +185,7 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/icon/deerpark-icon.png
+	doins ${FILESDIR}/icon/firefox-icon.png
 
 	# Fix bug 54179: Install .desktop file into /usr/share/applications
 	# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)

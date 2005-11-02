@@ -2,7 +2,7 @@
 Name=Mozilla Firefox
 Comment=Web Browser
 Exec=/usr/bin/firefox %U
-Icon=deerpark-icon.png
+Icon=firefox-icon.png
 Terminal=false
 Type=Application
 Categories=Application;Network;
