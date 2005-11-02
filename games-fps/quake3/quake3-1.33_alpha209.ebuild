@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha187.ebuild,v 1.3 2005/10/30 04:25:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha209.ebuild,v 1.1 2005/11/02 00:11:48 vapier Exp $
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
