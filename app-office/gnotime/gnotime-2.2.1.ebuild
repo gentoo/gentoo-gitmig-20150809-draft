@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.1.ebuild,v 1.1 2005/09/26 16:50:35 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.2.1.ebuild,v 1.2 2005/11/02 07:36:41 obz Exp $
 
 inherit gnome2
 
@@ -18,7 +18,7 @@ RDEPEND=">=gnome-base/libgnome-2.0
 	>=gnome-base/gnome-vfs-2
 	>=dev-libs/glib-2
 	>=gnome-base/libglade-2.0
-	>=gnome-extra/libgtkhtml-3.1
+	=gnome-extra/libgtkhtml-3.2*
 	>=gnome-base/gconf-2.0
 	x11-libs/pango
 	dev-libs/libxml2
