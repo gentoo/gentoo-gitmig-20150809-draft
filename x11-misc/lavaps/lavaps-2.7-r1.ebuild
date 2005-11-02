@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r1.ebuild,v 1.2 2005/07/26 14:44:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r1.ebuild,v 1.3 2005/11/02 19:46:19 nelchael Exp $
 
 inherit eutils
 
@@ -36,6 +36,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	doman lavaps.1
-	dodoc COPYING README
+	dodoc README
 	dohtml doc/*.html
 }
