@@ -4,6 +4,8 @@ hardened
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
 java
+java-internal
+java-external
 
 icc
 icc-pgo
