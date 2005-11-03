@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.6.5.ebuild,v 1.1 2005/09/21 18:48:01 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.6.5.ebuild,v 1.2 2005/11/03 16:13:55 mattam Exp $
+
+inherit eutils
 
 EXTRAPV="-2"
 DESCRIPTION="Make replacement"
@@ -24,6 +26,11 @@ use_boolean() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s/Ae/Aexyz/g" OMakefile
+}
 
 src_compile() {
 	make boot
@@ -33,7 +40,7 @@ src_compile() {
 	echo "FAM_ENABLED = " $(use_boolean fam) > .config
 	echo "READLINE_ENABLED = " $(use_boolean readline) > .config
 
-	PREFIX=/usr	OMAKEFLAGS= ./omake-boot --dotomake .omake --force-dotomake -j2 -S --progress main
+	PREFIX=/usr	OMAKEFLAGS= ./omake-boot --dotomake .omake --force-dotomake -j2 -S --progress main || die "Bootstrapping failed"
 
 
 	PREFIX=/usr OMAKEFLAGS= src/main/omake --dotomake .omake \

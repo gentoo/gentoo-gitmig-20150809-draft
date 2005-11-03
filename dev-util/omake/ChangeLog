@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/omake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.6 2005/09/21 18:48:01 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.7 2005/11/03 16:13:55 mattam Exp $
+
+  03 Nov 2005; Matthieu Sozeau <mattam@gentoo.org> omake-0.9.6.5.ebuild:
+  Compile without errors with new ocaml version.
 
 *omake-0.9.6.5 (21 Sep 2005)
 
