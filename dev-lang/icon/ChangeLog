@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.9 2005/04/22 09:19:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.10 2005/11/03 12:26:56 grobian Exp $
+
+  03 Nov 2005; Fabian Groffen <grobian@gentoo.org> icon-9.4.2.ebuild:
+  Note: 9.4.2 is newer than 9.40.  Marked 9.4.2 ~ppc-macos (bug #110834)
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> icon-9.40.ebuild:
   re-added ~amd64
