@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/fig2sxd-0.13.ebuild,v 1.2 2005/09/07 01:07:00 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fig2sxd/fig2sxd-0.13.ebuild,v 1.3 2005/11/03 09:49:19 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~ppc-macos ~x86"
 
 IUSE=""
 
