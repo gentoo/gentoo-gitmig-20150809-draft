@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lupy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/ChangeLog,v 1.6 2005/02/07 05:00:39 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/ChangeLog,v 1.7 2005/11/03 19:22:44 liquidx Exp $
+
+*lupy-0.2.1-r1 (03 Nov 2005)
+
+  03 Nov 2005; Alastair Tse <liquidx@gentoo.org> +lupy-0.2.1-r1.ebuild:
+  added examples (#72183)
 
   07 Feb 2005; Fernando Serboncini <fserb@gentoo.org> lupy-0.1.5.5.1.ebuild:
   stable on x86
