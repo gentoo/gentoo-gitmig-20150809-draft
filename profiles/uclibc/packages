@@ -1,9 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/packages,v 1.26 2005/08/03 23:18:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/packages,v 1.27 2005/11/03 00:53:12 vapier Exp $
 
 # core
 *>=sys-apps/portage-2.0.51
 *virtual/baselayout
-*sys-apps/util-linux
 
 # minimal versions
 #-*>=net-misc/iputils-021109-r3
@@ -16,16 +15,13 @@
 # man pages disabled (noman)
 -*sys-apps/man
 -*sys-apps/man-pages
-# no support for pam
--*sys-apps/pam-login
 # this will be added by nls
 -*sys-devel/gettext
-# no support for pam
--*sys-libs/pam
 # added by readline
 -*sys-libs/readline
 # added by zlib
 -*sys-libs/zlib
+
 #
 # busybox/uclibc w/o shadow support
 #-*sys-apps/shadow
@@ -34,11 +30,8 @@
 
 -*sys-devel/bc
 
-# this needs to be package.masked all together.
--*sys-libs/glibc
-
 #no idea why this is in base system
 <dev-libs/glib-2.5
 
-# This just saves everybody time.
-*sys-apps/busybox
+-*sys-apps/hdparm
+-*sys-libs/pwdb
