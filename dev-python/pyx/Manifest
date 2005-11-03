@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 785209b60a091a21ec0745afd0d0a60b ChangeLog 1852
 MD5 709e65698a4cd367d0a7260414515a6a files/digest-pyx-0.6.1 61
 MD5 38b4424ad0a10c8e987231286f2edcaa files/digest-pyx-0.6.3 62
@@ -10,3 +13,10 @@ MD5 c3b3bba4d2a4191bec9eef885bbf4151 pyx-0.6.1.ebuild 672
 MD5 9be0a9b000a254e04f1e54f4f173e294 pyx-0.6.3.ebuild 686
 MD5 a6954e3959a109ab2e74d5044c8532e0 pyx-0.7.1.ebuild 982
 MD5 8bc7d37a833c9a08a63b2288624c1f5c pyx-0.8.1.ebuild 985
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDanvv9ZFPrqoILX8RAgnsAKC1dkG137RZW2fpShH4IX3fTufnPQCfbBxi
+ORys/Wmpk8fExiRhKOYQYm8=
+=d/oc
+-----END PGP SIGNATURE-----

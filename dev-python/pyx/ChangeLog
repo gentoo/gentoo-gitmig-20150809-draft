@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.12 2005/09/03 16:02:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.13 2005/11/03 21:05:35 liquidx Exp $
+
+*pyx-0.8.1 (03 Nov 2005)
+
+  03 Nov 2005; Alastair Tse <liquidx@gentoo.org> +files/pyx-0.8.1.patch,
+  +pyx-0.8.1.ebuild:
+  version bump (#103036)
 
   03 Sep 2005; <dang@gentoo.org> pyx-0.7.1.ebuild:
   Marked ~amd64
