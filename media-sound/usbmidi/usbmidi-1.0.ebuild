@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.6 2005/07/09 19:09:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/usbmidi-1.0.ebuild,v 1.7 2005/11/03 22:30:49 eldad Exp $
 
 DESCRIPTION="Sets up hotplugging support for MidiMan midisport 1x1/2x2 usb devices"
-HOMEPAGE="http:///"
-SRC_URI="http://member.nifty.ne.jp/Breeze/softwares/unix/bin/usbmidi-20030126.tar.gz"
+HOMEPAGE="http://homepage3.nifty.com/StudioBreeze/software/usbmidi-e.html"
+SRC_URI="http://homepage3.nifty.com/StudioBreeze/software/bin/usbmidi-20030126.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

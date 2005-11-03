@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/usbmidi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/ChangeLog,v 1.4 2004/06/25 00:27:43 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/usbmidi/ChangeLog,v 1.5 2005/11/03 22:30:49 eldad Exp $
+
+  03 Nov 2005; Eldad Zack <eldad@gentoo.org> usbmidi-1.0.ebuild:
+  Bug #111242 : updated HOMEPAGE and SRC_URI. Thanks to Arvid
+  <anmaster@tele2.se> for reporting.
 
   24 May 2003; jje <jje@gentoo.org> usbmidi-1.0.ebuild:
   Fixed install.
