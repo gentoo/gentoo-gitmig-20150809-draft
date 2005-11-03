@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.67 2005/10/31 05:07:01 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.68 2005/11/03 12:41:59 lu_zero Exp $
+
+  03 Nov 2005; Luca Barbato <lu_zero@gentoo.org> graphviz-1.16-r1.ebuild:
+  Backport 2.6 postinst
 
   31 Oct 2005; Lina Pezzella <j4rg0n@gentoo.org>
   +files/graphviz-2.6-no-undefined.patch, graphviz-2.4.ebuild,
