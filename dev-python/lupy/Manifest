@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cd19dbb161b4a0ee3660b0166ae754ec ChangeLog 851
 MD5 0f60e060b28ea362d83860a419037ac5 files/digest-lupy-0.1.5.5.1 65
 MD5 fc06876de6c00000062b0458ac1a4be2 files/digest-lupy-0.2.1 61
@@ -6,3 +9,10 @@ MD5 3864d8be41281f533d86005b487129d4 lupy-0.1.5.5.1.ebuild 569
 MD5 5647f3be95657481dffb281c578ec1ec lupy-0.2.1-r1.ebuild 754
 MD5 6a8c093ffea10c4afe499069cd40771f lupy-0.2.1.ebuild 572
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDamkR9ZFPrqoILX8RAhvwAKDAD0+m/b4VnuXB1pf2XSBdtFjTUwCg0Qdr
+Ev63RyzJCNMaSlvPwmQUMeU=
+=fsKk
+-----END PGP SIGNATURE-----
