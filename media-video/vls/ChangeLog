@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vls
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.19 2005/09/02 21:41:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.20 2005/11/03 12:15:31 flameeyes Exp $
+
+  03 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> vls-0.5.5.ebuild,
+  vls-0.5.5-r1.ebuild, vls-0.5.6-r1.ebuild, vls-0.5.6-r2.ebuild:
+  Don't install INSTALL file.
 
   02 Sep 2005; Matthias Schwarzott <zzam@gentoo.org> vls-0.5.6-r1.ebuild,
   vls-0.5.6-r2.ebuild:
