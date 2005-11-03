@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.9 2005/05/04 06:03:07 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.10 2005/11/03 13:25:46 seemant Exp $
+
+*jove-4.16.0.65.4 (03 Nov 2005)
+
+  03 Nov 2005; Seemant Kulleen <seemant@gentoo.org>
+  -jove-4.16.0.65.3.ebuild, +jove-4.16.0.65.4.ebuild:
+  Version bump to newest stable release from debian -- this should go to
+  stable for us pretty soon
 
   03 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   jove-4.16.0.65.3.ebuild:
