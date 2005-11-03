@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2.ebuild,v 1.2 2005/06/20 12:32:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2.ebuild,v 1.3 2005/11/03 12:54:52 nelchael Exp $
 
 inherit eutils
 
@@ -8,11 +8,11 @@ MY_P="${PN}_${PV}"
 
 DESCRIPTION="A webcomic reader."
 HOMEPAGE="http://stripclub.sourceforge.net/"
-SRC_URI="http://easynews.dl.sourceforge.net/sourceforge/stripclub/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/stripclub/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/fltk-1.1.4

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/stripclub
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.2 2005/06/20 12:32:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/ChangeLog,v 1.3 2005/11/03 12:54:52 nelchael Exp $
+
+  03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  stripclub-0.9.1.2.ebuild:
+  Fixed SRC_URI, stable on x86.
 
   20 Jun 2005; David Holm <dholm@gentoo.org> stripclub-0.9.1.2.ebuild:
   Added to ~ppc.
