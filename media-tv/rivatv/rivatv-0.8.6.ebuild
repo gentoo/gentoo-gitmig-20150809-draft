@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.6.ebuild,v 1.2 2005/10/28 01:27:00 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/rivatv-0.8.6.ebuild,v 1.3 2005/11/03 23:23:23 blauwers Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -12,7 +12,7 @@ DEPEND="virtual/x11
 	>=virtual/linux-sources-2.4.20"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 CONFIG_CHECK="VIDEO_DEV I2C_ALGOBIT"
