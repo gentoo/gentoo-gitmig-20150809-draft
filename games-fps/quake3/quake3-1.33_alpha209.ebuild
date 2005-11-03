@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha209.ebuild,v 1.1 2005/11/02 00:11:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha209.ebuild,v 1.2 2005/11/03 00:54:45 vapier Exp $
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
@@ -42,11 +42,12 @@ src_unpack() {
 }
 
 src_compile() {
+	# Force -fno-strict-aliasing to fix graphical bugs #110509
 	emake \
 		TEMPDIR="${T}" \
 		CC="$(tc-getCC)" \
 		ARCH=$(tc-arch-kernel) \
-		OPTIMIZE="${CFLAGS}" \
+		OPTIMIZE="${CFLAGS} -fno-strict-aliasing" \
 		DEFAULT_BASEDIR="${GAMES_DATADIR}/quake3" \
 		DEFAULT_LIBDIR="${GAMES_LIBDIR}/quake3" \
 		|| die
