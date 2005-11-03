@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.47 2005/09/16 08:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.48 2005/11/03 01:41:02 vapier Exp $
+
+*debianutils-2.15 (03 Nov 2005)
+
+  03 Nov 2005; Mike Frysinger <vapier@gentoo.org> +debianutils-2.15.ebuild:
+  Version bump #111275 by Richard Hartmann.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   debianutils-2.14.1-r1.ebuild:
