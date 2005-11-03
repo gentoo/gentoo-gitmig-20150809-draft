@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.66.ebuild,v 1.1 2005/08/29 02:30:49 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.66.ebuild,v 1.2 2005/11/03 20:58:02 liquidx Exp $
 
 inherit toolchain-funcs
 
@@ -12,10 +12,9 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 LICENSE="Scintilla"
 SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86 ~amd64"
-IUSE="gtk2 lua"
+IUSE="lua"
 
-RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )
-	!gtk2? ( =x11-libs/gtk+-1.2* )
+RDEPEND=">=x11-libs/gtk+-2
 	lua? ( >=dev-lang/lua-5 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -43,12 +42,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local makeopts
-	use gtk2 || makeopts="GTK1=1"
-	#use debug && makeopts="${makeopts} DEBUG=1"
-
-	make -C ../../scintilla/gtk ${makeopts}  || die "prep make failed"
-	emake ${makeopts} || die "make failed"
+	make -C ../../scintilla/gtk || die "prep make failed"
+	emake || die "make failed"
 }
 
 src_install() {
