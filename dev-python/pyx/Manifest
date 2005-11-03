@@ -1,19 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3b3bba4d2a4191bec9eef885bbf4151 pyx-0.6.1.ebuild 672
-MD5 9be0a9b000a254e04f1e54f4f173e294 pyx-0.6.3.ebuild 686
-MD5 a6954e3959a109ab2e74d5044c8532e0 pyx-0.7.1.ebuild 982
-MD5 ff73b3faed0adfa5c8aa3d9d542d71db ChangeLog 1703
-MD5 efb565b5394bcf6412b0389c86261a92 metadata.xml 445
+MD5 785209b60a091a21ec0745afd0d0a60b ChangeLog 1852
 MD5 709e65698a4cd367d0a7260414515a6a files/digest-pyx-0.6.1 61
 MD5 38b4424ad0a10c8e987231286f2edcaa files/digest-pyx-0.6.3 62
 MD5 b1f9c1c64dfbbc629a354643a0dae13e files/digest-pyx-0.7.1 61
+MD5 3f544696b1bfdeda213a4fa0d6afaccb files/digest-pyx-0.8.1 61
 MD5 1e8ad4caf14ac87fdda7709c2d3330df files/pyx-0.7.1.patch 3768
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGckwomPajV0RnrERAl5dAJ4l0EULuscbdtMddlsoz408t5Q1iACfWmm5
-lGppuVHeHiVo9mkZjAEMsng=
-=HXLj
------END PGP SIGNATURE-----
+MD5 5fd2d4c28b2be8d5b4c3cd64fc1774a6 files/pyx-0.8.1.patch 7431
+MD5 efb565b5394bcf6412b0389c86261a92 metadata.xml 445
+MD5 c3b3bba4d2a4191bec9eef885bbf4151 pyx-0.6.1.ebuild 672
+MD5 9be0a9b000a254e04f1e54f4f173e294 pyx-0.6.3.ebuild 686
+MD5 a6954e3959a109ab2e74d5044c8532e0 pyx-0.7.1.ebuild 982
+MD5 8bc7d37a833c9a08a63b2288624c1f5c pyx-0.8.1.ebuild 985
