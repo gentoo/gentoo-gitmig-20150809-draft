@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc1.ebuild,v 1.1 2005/11/03 03:24:51 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc1.ebuild,v 1.2 2005/11/03 16:13:29 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -25,7 +25,8 @@ LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
 
 RDEPEND="java? ( virtual/jre )
-	>=www-client/mozilla-launcher-1.39"
+	>=www-client/mozilla-launcher-1.39
+	=x11-libs/pango-1.10.1"
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
@@ -94,6 +95,14 @@ src_unpack() {
 	ebegin "Patching smime to call perl from /usr/bin"
 	sed -i -e '1s,usr/local/bin,usr/bin,' ${S}/security/nss/cmd/smimetools/smime
 	eend $? || die "sed failed"
+
+	ewarn ""
+	ewarn ""
+	ewarn "This firefox-1.5rc1 ebuild is provided for your convenience,"
+	ewarn "the use of this ebuild is not supported by gentoo developers. "
+	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
+	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
+	ewarn "Thank you Anarchy"
 }
 
 src_compile() {
@@ -198,7 +207,7 @@ src_install() {
 	#
 	####################################
 
-	einfo "Installing includes and idl files..."
+	ewarn "Installing includes and idl files..."
 	dodir ${MOZILLA_FIVE_HOME}/idl ${MOZILLA_FIVE_HOME}/include
 	cd ${S}/dist
 	cp -LfR include/* ${D}${MOZILLA_FIVE_HOME}/include || die "failed to copy"
@@ -265,11 +274,13 @@ pkg_postinst() {
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
 
-	einfo "This firefox-1.5rc1 ebuild is provided for your convenience,"
-	einfo "the use of this ebuild is not supported by gentoo developers. "
-	einfo "Please file bugs related to firefox-1.5 with upstream developers."
-	einfo "Bugs should be filed @ https://bugzilla.mozilla.org."
-	einfo "Thank you Anarchy"
+	ewarn ""
+	ewarn ""
+	ewarn "This firefox-1.5rc1 ebuild is provided for your convenience,"
+	ewarn "the use of this ebuild is not supported by gentoo developers. "
+	ewarn "Please file bugs related to firefox-1.5 with upstream developers."
+	ewarn "Bugs should be filed @ https://bugzilla.mozilla.org."
+	ewarn "Thank you Anarchy"
 }
 
 pkg_postrm() {
