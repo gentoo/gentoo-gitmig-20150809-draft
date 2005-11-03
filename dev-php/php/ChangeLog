@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.199 2005/11/03 22:05:15 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.200 2005/11/03 22:30:51 ferdy Exp $
+
+  03 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> php-4.3.11-r3.ebuild:
+  stable on alpha wrt bug #111032
 
   03 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> php-4.4.0-r3.ebuild:
   stable on alpha wrt bug #111032
