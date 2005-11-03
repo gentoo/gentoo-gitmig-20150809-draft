@@ -1,9 +1,19 @@
-MD5 894e767ec70f33044b8b60dda17ca31f ChangeLog 2028
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 62e87d0b50d6761dee1bac4de8f69de3 ChangeLog 2127
 MD5 34d8c98cfb7f3c538f8177c24c2b4152 files/digest-lavaps-2.4 62
 MD5 ccae6ec1333b846db55deb7538155cc6 files/digest-lavaps-2.7 62
 MD5 ccae6ec1333b846db55deb7538155cc6 files/digest-lavaps-2.7-r1 62
 MD5 308abf7f4c9df163feabd98e62c1e9b6 files/lavaps-2.7-this-makes-it-compile.patch 2387
 MD5 a15004a13de3a670961ccbbacede755e lavaps-2.4.ebuild 562
-MD5 0f7910c4ca7a0731cb7ee414ecbc7d3d lavaps-2.7-r1.ebuild 986
+MD5 28e83fab60abbc7436a24a863b4a4348 lavaps-2.7-r1.ebuild 984
 MD5 52b28248c2ed3789ff2cf4fbb7912d34 lavaps-2.7.ebuild 869
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDab/vCRZPokWLroQRAsHVAKCQl5iWhi5s4KQKbzysRXoMxWgzhQCaA2D+
+uFWoOOJFqbq8JnVNz5ugIak=
+=ypqZ
+-----END PGP SIGNATURE-----

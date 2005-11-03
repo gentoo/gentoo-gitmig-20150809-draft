@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r1.ebuild,v 1.3 2005/11/02 19:46:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r1.ebuild,v 1.4 2005/11/03 07:44:38 halcy0n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="gtk"
 
 DEPEND=">=dev-lang/tk-8.3.3
