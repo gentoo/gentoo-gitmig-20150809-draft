@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28.ebuild,v 1.2 2005/06/15 07:01:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28.ebuild,v 1.3 2005/11/03 12:38:12 nelchael Exp $
 
 inherit eutils pam
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://voins.program.ru/wdm/"
 SRC_URI="http://voins.program.ru/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc x86"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-wm/windowmaker-0.70.0
