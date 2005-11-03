@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.405 2005/10/28 01:31:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.406 2005/11/03 18:34:53 gustavoz Exp $
+
+  03 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> glibc-2.3.5-r3.ebuild:
+  Give it some ~sparc keyword
 
   27 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> glibc-2.3.5-r3.ebuild:
   Added to ~ppc.

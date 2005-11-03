@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 53ca9d018c1156e40ae6b4aecfafc7c1 glibc-2.3.4.20041102-r1.ebuild 34314
 MD5 b1cba6eb03515d24e61e321c457670fd glibc-2.3.5-r2.ebuild 38859
 MD5 9c15c32a0bbef91769c4fd0c0d7a66c3 glibc-2.3.5.ebuild 40143
@@ -133,3 +136,10 @@ MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
 MD5 b3ce53b86060b6209a182366c501a0f1 files/2.3.5/ssp.c 4297
 MD5 04bcec718f2883f28bf862b7e390d1b0 files/2.3.5/glibc-2.3.5-frandom-detect.patch 3080
 MD5 13dd059e6383c7cac94d1bda126af21d files/2.3.5/glibc-2.3.5-propolice-guard-functions.patch 1302
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDalhhKRy60XGEcJIRAjACAKCU1sY3I6ImY43WnVuxk0HJKFIEBwCfbQ0I
+3rQC7jERdztoUSrAPfYD2GM=
+=oeeW
+-----END PGP SIGNATURE-----
