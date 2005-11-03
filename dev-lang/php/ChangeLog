@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.50 2005/11/03 14:09:24 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.51 2005/11/03 23:54:59 chtekk Exp $
+
+*php-4.4.1-r1 (03 Nov 2005)
+
+  03 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  +files/4.4.1/php4.4.1-mod_rewrite-crash.patch, -php-4.4.1.ebuild,
+  +php-4.4.1-r1.ebuild:
+  Update Hardened-PHP to latest version for PHP 4.4.1 and 5.0.5, fix bug in
+  the Apache2 SAPI of PHP 4.4.1 (mentioned in bug #111032).
 
 *php-5.0.5-r3 (02 Nov 2005)
 *php-5.0.4-r3 (02 Nov 2005)
