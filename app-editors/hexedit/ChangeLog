@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.23 2005/11/03 12:59:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.24 2005/11/03 13:01:39 nelchael Exp $
+
+  03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> -hexedit-1.2.2.ebuild:
+  Removed old ebuild.
 
   03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> hexedit-1.2.10.ebuild:
   Stable on x86, bug 111302.
