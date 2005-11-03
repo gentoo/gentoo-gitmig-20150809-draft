@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.36 2005/10/31 15:45:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.37 2005/11/03 19:49:37 halcy0n Exp $
+
+  03 Nov 2005; Mark Loeser <halcy0n@gentoo.org> ChangeLog:
+  Stable on x86; bug #109997
 
   31 Oct 2005; Brent Baude <ranger@gentoo.org> giflib-4.1.4.ebuild:
   Marking  giflib-4.1.4 ppc64 stable for security bug 109997
