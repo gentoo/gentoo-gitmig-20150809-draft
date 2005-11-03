@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.12 2005/04/15 16:40:08 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r4.ebuild,v 1.13 2005/11/03 00:07:17 metalgod Exp $
 
 inherit eutils
 
-DESCRIPTION="standard ghostscript frontend used by programs like LyX"
+DESCRIPTION="gv is used to view PostScript and PDF documents using Ghostscript"
 HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/${P}.tar.gz"
 

@@ -1,6 +1,14 @@
 # ChangeLog for app-text/gv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.34 2005/06/07 09:58:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.35 2005/11/03 00:07:17 metalgod Exp $
+
+*gv-3.6.1-r1 (03 Nov 2005)
+
+  03 Nov 2005; Luis Medinas <metalgod@gentoo.org>
+  +files/gv-3.6.1-scrollbar.patch, gv-3.5.8-r4.ebuild, gv-3.6.1.ebuild,
+  +gv-3.6.1-r1.ebuild:
+  Added a patch to fix scrollbar bug and added a better description thanks to
+  Ulrich Mueller <ulm@kph.uni-mainz.de> closes bug #111024 and #111114.
 
 *gv-3.6.1 (07 Jun 2005)
 

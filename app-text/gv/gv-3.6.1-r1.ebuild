@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1.ebuild,v 1.2 2005/11/03 00:07:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.6.1-r1.ebuild,v 1.1 2005/11/03 00:07:17 metalgod Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-setenv.patch
 	epatch ${FILESDIR}/${P}-a0.patch
 	epatch ${DISTDIR}/gv_3.6.1-10.diff.gz
+	epatch ${FILESDIR}/${P}-scrollbar.patch
 }
 
 src_compile() {
