@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5-r2.ebuild,v 1.2 2005/11/02 00:10:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5-r3.ebuild,v 1.1 2005/11/03 14:09:24 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
@@ -66,10 +66,13 @@ src_unpack() {
 	cd "${S}"
 
 	# fix PHP branding
-	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl2-gentoo"|g' -i configure.in
+	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl3-gentoo"|g' -i configure.in
 
 	# patch to fix pspell extension, bug #99312 (new patch by upstream)
 	use spell && epatch "${FILESDIR}/5.0.5/php5.0.5-pspell-ext-segf.patch"
+
+	# patch fo fix safe_mode bypass in CURL extension, bug #111032
+	use curl && epatch "${FILESDIR}/5.0.5/php5.0.5-curl_safemode.patch"
 
 	# patch to fix safe_mode bypass in GD extension, bug #109669
 	if use gd || use gd-external ; then
@@ -78,6 +81,9 @@ src_unpack() {
 
 	# patch open_basedir directory bypass, bug #102943
 	epatch "${FILESDIR}/5.0.5/php5.0.5-fopen_wrappers.patch"
+
+	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
+	epatch "${FILESDIR}/5.0.5/php5.0.5-globals_overwrite.patch"
 
 	# patch to fix session.save_path segfault and other issues in
 	# the apache2handler SAPI, bug #107602
