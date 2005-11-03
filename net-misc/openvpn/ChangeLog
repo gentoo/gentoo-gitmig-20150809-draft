@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.54 2005/11/03 14:05:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.55 2005/11/03 14:36:55 uberlord Exp $
+
+  03 Nov 2005; Roy Marples <uberlord@gentoo.org> openvpn-2.0.4-r1.ebuild,
+  openvpn-2.0.4-r2.ebuild:
+  easy-rsa now gets installed properly, #111351
 
   03 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   openvpn-2.0.4-r1.ebuild:

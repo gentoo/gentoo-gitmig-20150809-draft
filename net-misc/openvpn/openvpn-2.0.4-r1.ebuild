@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.4-r1.ebuild,v 1.3 2005/11/03 14:05:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.4-r1.ebuild,v 1.4 2005/11/03 14:36:55 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -74,11 +74,11 @@ src_install() {
 	# Install the init script
 	newinitd "${FILESDIR}/openvpn" openvpn
 
-	# Install easy-rsa stuffs
-	dodir "/usr/share/${PN}/easy-rsa"
+	# Install easy-rsa stuff
 	exeinto "/usr/share/${PN}/easy-rsa"
-	doexe easy-rsa/2.0/*
-	exeopts -m0644
+	doexe easy-rsa/*-*
+	insinto "/usr/share/${PN}/easy-rsa"
+	doins easy-rsa/{README,openssl.cnf,vars}
 
 	# install examples, controlled by the respective useflag
 	if use examples ; then
@@ -90,7 +90,6 @@ src_install() {
 
 	# Install plugins
 	if ! use minimal ; then
-		dodir "/usr/$(get_libdir)/${PN}"
 		exeinto "/usr/$(get_libdir)/${PN}"
 		doexe plugin/*/*.so
 	fi
