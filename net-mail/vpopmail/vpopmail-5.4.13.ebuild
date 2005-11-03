@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.13.ebuild,v 1.1 2005/11/03 04:02:26 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.13.ebuild,v 1.2 2005/11/03 15:32:03 anarchy Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -115,7 +115,6 @@ src_compile() {
 		--enable-logging=y \
 		--enable-log-name=vpopmail \
 		--enable-qmail-ext \
-		--enable-domainquotas \
 		--disable-tcp-rules-prog --disable-tcpserver-file --disable-roaming-users \
 		|| die
 
