@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.119 2005/10/30 19:23:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.120 2005/11/03 12:08:29 flameeyes Exp $
+
+  03 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-0.6.14-r2.ebuild, transcode-0.6.14-r3.ebuild,
+  transcode-1.0.1.ebuild:
+  Update SRC_URI to use transcode mirrors (and remove dead mirror).
 
   30 Oct 2005; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.14-r2.ebuild:
