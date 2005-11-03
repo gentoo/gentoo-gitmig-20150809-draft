@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 630b4628cc900b5d0d956fe389a1a94f povtree-1.3.ebuild 734
-MD5 6e4d20e2f9464781c35901bc9176e1cf povtree-1.5.ebuild 769
-MD5 81ce2d045c45e912735172c5a17044ee ChangeLog 831
+MD5 0916adb7eb79bd93b658dd5ceeedfe8b povtree-1.5.ebuild 782
+MD5 ca4aa80dfa5ead0a5eb21f210ffcec94 ChangeLog 939
 MD5 3b6e4e59090e71b1df7a82f962f14a3c files/digest-povtree-1.3 59
 MD5 e6ebb078dfb750f6956e797626c378ff files/digest-povtree-1.5 59
 MD5 f17c326278ce2e29473737c7d8adb87a files/povtree 434
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHyiDntT9W3vfTuoRAgluAJ90ztaTbRVYuCZ+T3oDZWl0s43eoACfVekY
-vyatZlhL2z2VKVgfeIMpS4E=
-=CVLn
------END PGP SIGNATURE-----
