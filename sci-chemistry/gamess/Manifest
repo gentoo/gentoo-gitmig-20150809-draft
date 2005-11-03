@@ -1,6 +1,6 @@
 MD5 e8532902166cb90f198e1f2b931d9d30 gamess-05272005.ebuild 6710
 MD5 2e4a26c2bf13bcd4842d50dcb080d0b9 ChangeLog 712
-MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
+MD5 041650a939ada57b9df1755a488ad1b7 metadata.xml 254
 MD5 bfc4049f6e2546889b161c6c9b3be72f files/runall-gentoo.patch 688
 MD5 42ad79e7a475c0246839aa8137381e43 files/digest-gamess-05272005 67
 MD5 d2f6837d02ac960e7bed4addf9632eec files/lked-gentoo.patch 783
