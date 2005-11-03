@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3.ebuild,v 1.6 2005/11/01 10:46:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/xscreensaver-app-2.3.ebuild,v 1.7 2005/11/03 20:38:41 metalgod Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://xscreensaverapp.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 DEPEND="virtual/x11
 	x11-libs/libdockapp"
