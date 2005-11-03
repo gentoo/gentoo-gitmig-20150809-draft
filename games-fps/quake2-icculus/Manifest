@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 588496390ebe85582924126956f0c5a4 quake2-icculus-0.16.1.ebuild 4428
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 d666d4c7e1d052081181543885db4ffd ChangeLog 3178
-MD5 799bccbb58711b8831aeaeaa3142b965 files/digest-quake2-icculus-0.16.1 250
+MD5 9e14e81431a029df748fbdf29634c856 ChangeLog 3489
 MD5 a9abc17ddbcfc3e70d9b57276eaccfba files/0.16-rogue-nan.patch 242
-MD5 e3666835a5f4b277940d15f143792c33 files/quake2-icculus-0.16.1-gentoo-paths.patch 6855
 MD5 74cb73011282b923820f35f8450ba583 files/README-postinstall 3083
+MD5 799bccbb58711b8831aeaeaa3142b965 files/digest-quake2-icculus-0.16.1 250
 MD5 2df7805117c32223db23d0ae9c61881e files/quake2-icculus-0.16.1-amd64.patch 534
+MD5 8ca258baafe8f83f1ce63d9abe0b5bb6 files/quake2-icculus-0.16.1-gentoo-paths.patch 7688
 MD5 4b84093c6bccf958d3ca1b865c3f9402 files/quake2.xpm 1234
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDFmjagIKl8Uu19MoRApe3AJ9xAwLZHj8z6a8L5aDF1JGsfGijNgCcCfbf
-Lkq15HlIktvjxZEpijssxew=
-=X14t
------END PGP SIGNATURE-----
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 ebcc49cdb3fd2ba8bad222830c06365f quake2-icculus-0.16.1.ebuild 4445

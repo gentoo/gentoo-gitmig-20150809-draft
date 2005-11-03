@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.8 2005/09/01 02:34:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.9 2005/11/03 18:30:24 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -90,7 +90,7 @@ src_compile() {
 			BUILD_XATRIX=$(yesno xatrix) \
 			BUILD_ROGUE=$(yesno rogue) \
 			BUILD_JOYSTICK=$(yesno joystick) \
-			BUILD_DEDICATED=YES \
+			BUILD_DEDICATED=$(yesno dedicated) \
 			BUILD_AA=$(yesno aalib) \
 			BUILD_QMAX=${BUILD_QMAX} \
 			HAVE_IPV6=$(yesno ipv6) \

@@ -5,7 +5,7 @@ retrieving revision 1.56
 diff -u -p -r1.56 Makefile
 --- Makefile	5 May 2005 22:23:34 -0000	1.56
 +++ Makefile	29 Aug 2005 22:52:28 -0000
-@@ -74,35 +74,38 @@ endif
+@@ -74,35 +74,46 @@ endif
  
  CC=gcc
  
@@ -47,6 +47,14 @@ diff -u -p -r1.56 Makefile
  endif
 +endif
 +RELEASE_CFLAGS=$(BASE_CFLAGS) $(OPT_CFLAGS)
++
++ifeq ($(ADDCFLAGS),debug)
++CFLAGS=$(DEBUG_CFLAGS) -DLINUX_VERSION=\"$(VERSION) Debug\"
++endif
++
++ifeq ($(ADDCFLAGS),release)
++CFLAGS=$(RELEASE_CFLAGS) -DLINUX_VERSION=\"$(VERSION)\"
++endif
  
  VERSION=3.21+r0.16
  
@@ -55,15 +63,33 @@ diff -u -p -r1.56 Makefile
  endif
  
 +ifdef DEFAULT_BASEDIR
-+BASE_CFLAGS += -DDEFAULT_BASEDIR='\"$(DEFAULT_BASEDIR)\"'
++BASE_CFLAGS += -DDEFAULT_BASEDIR=\"$(DEFAULT_BASEDIR)\"
 +endif
 +ifdef DEFAULT_LIBDIR
-+BASE_CFLAGS += -DDEFAULT_LIBDIR='\"$(DEFAULT_LIBDIR)\"'
++BASE_CFLAGS += -DDEFAULT_LIBDIR=\"$(DEFAULT_LIBDIR)\"
 +endif
 +
  ifeq ($(strip $(BUILD_QMAX)),YES)
  	BASE_CFLAGS+=-DQMAX
  endif
+@@ -406,7 +424,7 @@
+ 		$(BUILD_DEBUG_DIR)/ctf \
+ 		$(BUILD_DEBUG_DIR)/xatrix \
+ 		$(BUILD_DEBUG_DIR)/rogue
+-	$(MAKE) targets BUILDDIR=$(BUILD_DEBUG_DIR) CFLAGS="$(DEBUG_CFLAGS) -DLINUX_VERSION='\"$(VERSION) Debug\"'"
++	$(MAKE) targets BUILDDIR=$(BUILD_DEBUG_DIR) ADDCFLAGS=debug
+ 
+ build_release:
+ 	@-mkdir -p $(BUILD_RELEASE_DIR) \
+@@ -418,7 +436,7 @@
+ 		$(BUILD_RELEASE_DIR)/ctf \
+ 		$(BUILD_RELEASE_DIR)/xatrix \
+ 		$(BUILD_RELEASE_DIR)/rogue
+-	$(MAKE) targets BUILDDIR=$(BUILD_RELEASE_DIR) CFLAGS="$(RELEASE_CFLAGS) -DLINUX_VERSION='\"$(VERSION)\"'"
++	$(MAKE) targets BUILDDIR=$(BUILD_RELEASE_DIR) ADDCFLAGS=release
+ 
+ targets: $(TARGETS)
+ 
 Index: src/linux/qgl_linux.c
 ===================================================================
 RCS file: /cvs/cvsroot/quake2/src/linux/qgl_linux.c,v
