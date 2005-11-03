@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.0.ebuild,v 1.1 2005/11/03 07:20:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.0.ebuild,v 1.2 2005/11/03 07:35:27 swegener Exp $
 
 inherit versionator
 
@@ -50,6 +50,7 @@ src_compile() {
 	unset PYTHONPATH
 
 	econf \
+		--enable-shm \
 		$(use_enable ssl openssl) \
 		$(use_enable perl) \
 		$(use_enable python) \
