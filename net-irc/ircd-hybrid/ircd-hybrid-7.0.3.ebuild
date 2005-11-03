@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.4 2004/10/16 18:54:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.5 2005/11/03 07:31:17 swegener Exp $
 
 inherit eutils fixheadtails
 
@@ -335,7 +335,7 @@ pkg_postinst() {
 	if use ssl
 	then
 		einfo "To create a rsa keypair for crypted links execute:"
-		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+		einfo "emerge --config =${CATEGORY}/${PF}"
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.1.0.ebuild,v 1.2 2005/07/21 23:27:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.1.0.ebuild,v 1.3 2005/11/03 07:31:17 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -163,7 +163,7 @@ pkg_postinst() {
 	if use ssl
 	then
 		einfo "To create an RSA keypair for crypted links execute:"
-		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+		einfo "emerge --config =${CATEGORY}/${PF}"
 	fi
 }
 
