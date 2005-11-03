@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.100 2005/11/02 15:49:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.101 2005/11/03 03:24:51 anarchy Exp $
+
+*mozilla-firefox-1.5_rc1 (03 Nov 2005)
+
+  03 Nov 2005; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-1.5_beta2-r1.ebuild, +mozilla-firefox-1.5_rc1.ebuild:
+  1.5rc1 changed to use default desktop file and icon
 
   02 Nov 2005; Martin Schlemmer <azarah@gentoo.org>
   files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch,

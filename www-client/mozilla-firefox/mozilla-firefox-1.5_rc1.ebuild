@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_beta2-r1.ebuild,v 1.3 2005/11/02 18:02:53 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5_rc1.ebuild,v 1.1 2005/11/03 03:24:51 anarchy Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 MOZ_FREETYPE2="no"   # Need to disable for newer .. remove here and in mozconfig
@@ -54,7 +54,7 @@ src_unpack() {
 	use alpha && epatch ${FILESDIR}/1.5/mozilla-1.3-alpha-stubs.patch
 
 	# amd64 visibility patch
-	if [[ ${ARCH} == amd64 ]] && [[ $(gcc-major-version) -eq 3 ]]; then
+	if [[ ${ARCH} == amd64 ]] && [[ $(gcc-major-version) -ge 3 ]]; then
 	    epatch ${FILESDIR}/1.5/firefox-visibility.patch
 	fi
 
@@ -264,6 +264,12 @@ pkg_postinst() {
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
+
+	einfo "This firefox-1.5rc1 ebuild is provided for your convenience,"
+	einfo "the use of this ebuild is not supported by gentoo developers. "
+	einfo "Please file bugs related to firefox-1.5 with upstream developers."
+	einfo "Bugs should be filed @ https://bugzilla.mozilla.org."
+	einfo "Thank you Anarchy"
 }
 
 pkg_postrm() {
