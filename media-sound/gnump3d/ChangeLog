@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.37 2005/10/28 20:19:42 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.38 2005/11/03 11:12:39 flameeyes Exp $
+
+*gnump3d-2.9.7 (03 Nov 2005)
+
+  03 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> +gnump3d-2.9.7.ebuild:
+  Bump to 2.9.7 as per bug #109667.
 
   28 Oct 2005; Fernando J. Pereda <ferdy@gentoo.org> gnump3d-2.9.6.ebuild:
   stable on alpha as per bug #109667
