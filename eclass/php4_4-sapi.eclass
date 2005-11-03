@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.5 2005/10/31 14:08:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.6 2005/11/03 23:33:53 chtekk Exp $
 #
 # ########################################################################
 #
@@ -136,6 +136,7 @@ PHP_INI_FILE="php.ini"
 case "${PV}" in
 	4.3.11) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.3.patch.gz" ;;
 	4.4.0) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.3.patch.gz" ;;
+	4.4.1) HARDENEDPHP_PATCH="hardening-patch-${PV}-0.4.5.patch.gz" ;;
 esac
 
 [ -n "${HARDENEDPHP_PATCH}" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/${HARDENEDPHP_PATCH} )"
