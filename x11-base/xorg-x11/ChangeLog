@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.471 2005/11/02 23:38:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.472 2005/11/03 18:36:30 fmccor Exp $
+
+  03 Nov 2005; Ferris McCormick <fmccor@gentoo.org>
+  xorg-x11-7.0.0_rc1.ebuild:
+  Add ~sparc keyword (facilitate X-modular testing).
 
   02 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-7.0.0_rc1.ebuild:
