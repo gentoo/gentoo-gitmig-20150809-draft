@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.2.ebuild,v 1.8 2005/08/07 13:24:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.9.2.ebuild,v 1.9 2005/11/03 12:26:49 nelchael Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 	#	prefix=${D}/usr \
 	#	install || die
 
-	dodoc README MANUAL AUTHORS TODO COPYING ChangeLog
+	dodoc README MANUAL AUTHORS TODO ChangeLog
 	#dohtml -r .
 }
 

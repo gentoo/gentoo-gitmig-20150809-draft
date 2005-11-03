@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/xdaf-0.01.11.01.ebuild,v 1.4 2005/07/26 15:10:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/xdaf-0.01.11.01.ebuild,v 1.5 2005/11/03 12:20:00 nelchael Exp $
 
 MY_P=${P/-0/-A}
 DESCRIPTION="Small tool to provide visual feedback of local disks activity by changing the default X11 mouse pointer"
@@ -24,5 +24,5 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 	newman xdaf.man xdaf.1
-	dodoc COPYING README INSTALL
+	dodoc README
 }

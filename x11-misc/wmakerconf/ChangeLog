@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/wmakerconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.24 2005/08/07 13:24:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.25 2005/11/03 12:26:49 nelchael Exp $
+
+  03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
+  wmakerconf-2.8.1-r2.ebuild, wmakerconf-2.9.2.ebuild,
+  wmakerconf-2.11.ebuild:
+  Fixed dodoc not to install COPYING and/or INSTALL.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org>
   wmakerconf-2.9.2.ebuild:

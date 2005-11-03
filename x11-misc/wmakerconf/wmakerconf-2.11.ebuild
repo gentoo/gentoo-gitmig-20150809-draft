@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.11.ebuild,v 1.3 2005/07/11 02:11:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.11.ebuild,v 1.4 2005/11/03 12:26:49 nelchael Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install() {
 		gnulocaledir=${D}/usr/share/locale \
 		install || die "install failed"
 
-	dodoc README NEWS INSTALL MANUAL AUTHORS TODO COPYING ChangeLog
+	dodoc README NEWS MANUAL AUTHORS TODO ChangeLog
 	doman man/*
 }
 

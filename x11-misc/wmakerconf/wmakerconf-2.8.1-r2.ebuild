@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.20 2005/02/26 12:39:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.8.1-r2.ebuild,v 1.21 2005/11/03 12:26:49 nelchael Exp $
 
 IUSE="nls gnome imlib perl"
 
@@ -50,6 +50,6 @@ src_install() {
 			GNOMEDIR=${D}/usr/share/gnome/apps/Settings \
 			install || die
 
-	dodoc README MANUAL AUTHORS TODO COPYING ChangeLog
-		dohtml -r .
+	dodoc README MANUAL AUTHORS TODO ChangeLog
+	dohtml -r .
 }

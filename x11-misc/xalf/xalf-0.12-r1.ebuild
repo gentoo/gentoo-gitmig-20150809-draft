@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.16 2005/07/26 15:06:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.17 2005/11/03 12:23:42 nelchael Exp $
 
 IUSE="gnome"
 
@@ -35,5 +35,5 @@ src_install() {
 
 	make prefix=${D}/usr install || die
 
-	dodoc AUTHORS COPYING ChangeLog README
+	dodoc AUTHORS ChangeLog README
 }
