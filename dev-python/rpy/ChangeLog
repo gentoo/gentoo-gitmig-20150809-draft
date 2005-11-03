@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.9 2005/06/12 18:20:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.10 2005/11/03 20:25:42 liquidx Exp $
+
+*rpy-0.4.6 (03 Nov 2005)
+
+  03 Nov 2005; Alastair Tse <liquidx@gentoo.org> +rpy-0.4.6.ebuild:
+  version bump (#102729)
 
   12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> -rpy-0.3.5.ebuild:
   Remove version 0.3.5, requested by Marcus Hanwell <cryos@gentoo.org> in bug
