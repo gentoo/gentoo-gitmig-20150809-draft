@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.6 2005/08/28 12:06:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.7 2005/11/03 07:33:46 swegener Exp $
+
+*xchat-gnome-0.6 (03 Nov 2005)
+
+  03 Nov 2005; Sven Wegener <swegener@gentoo.org> +xchat-gnome-0.6.ebuild:
+  Version bump, bug #110766
 
 *xchat-gnome-0.5 (28 Aug 2005)
 
