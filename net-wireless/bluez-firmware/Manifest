@@ -1,4 +1,6 @@
 MD5 cee52ece0449377bb3032bd54d7d270d bluez-firmware-1.0.ebuild 492
-MD5 e21e19d9bbb1e38b6542991781059830 ChangeLog 358
+MD5 0f85395b682124bd04cb103d24b4ff27 ChangeLog 494
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+MD5 6a55939e43a47596ccaec411e48550f6 bluez-firmware-1.1.ebuild 517
 MD5 89e9bb7bee2e0f86d5c43804967d59ef files/digest-bluez-firmware-1.0 70
+MD5 2c5f5d1dee59e459c098929b814f7802 files/digest-bluez-firmware-1.1 70
