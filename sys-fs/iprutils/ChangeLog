@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.8 2005/09/14 21:14:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.9 2005/11/03 21:44:33 ranger Exp $
+
+  03 Nov 2005; Brent Baude <ranger@gentoo.org> iprutils-2.0.15.3-r1.ebuild:
+  Marking iprutils-2.0.15.3-r1 ~ppc for 32bit ppc64 userlands
 
   14 Sep 2005; Brent Baude <ranger@gentoo.org> iprutils-2.0.15.3-r1.ebuild:
   marking iprutils-2.0.15.3-r1 stable for ppc64
