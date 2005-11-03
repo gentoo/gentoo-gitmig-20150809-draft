@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.14 2005/01/27 10:39:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.15 2005/11/03 21:34:26 liquidx Exp $
 
 inherit perl-module eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--with-gnu-ld --includedir=/usr/include/libpisock"
+	local myconf="--includedir=/usr/include/libpisock"
 
 	use java \
 		&& myconf="${myconf} --with-java=yes" \
