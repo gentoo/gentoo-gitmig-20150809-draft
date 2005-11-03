@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.04.ebuild,v 1.1 2005/10/16 19:15:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.04.ebuild,v 1.2 2005/11/03 07:46:53 swegener Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ IUSE="gnome lirc"
 RDEPEND=">=virtual/python-2.4
 	>=dev-python/pygtk-2
 	gnome? ( dev-python/gnome-python-extras )
-	lirc?(  dev-python/python-xlib
+	lirc? (  dev-python/python-xlib
 			dev-python/pyosd )"
 
 DOCS="README"
