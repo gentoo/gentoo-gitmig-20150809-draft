@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/toxine-0.6.3.ebuild,v 1.3 2005/10/31 16:39:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/toxine/toxine-0.6.3.ebuild,v 1.4 2005/11/03 12:22:45 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -13,13 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="X ncurses aalib libcaca"
 
-DEPEND="sys-libs/readline
+RDEPEND="sys-libs/readline
 	>=media-libs/xine-lib-1_rc3
 	aalib? ( media-libs/aalib )
 	libcaca? ( media-libs/libcaca )
 	ncurses? ( sys-libs/ncurses )
 	X? ( virtual/x11 )"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/libtool"
