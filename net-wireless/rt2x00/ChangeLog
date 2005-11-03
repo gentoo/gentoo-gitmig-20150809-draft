@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rt2x00
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.1 2005/11/03 20:32:36 uberlord Exp $
+
+*rt2x00-2.0.0_beta2 (03 Nov 2005)
+
+  03 Nov 2005; Roy Marples <uberlord@gentoo.org> +metadata.xml,
+  +rt2x00-2.0.0_beta2.ebuild:
+  Initial import
+
