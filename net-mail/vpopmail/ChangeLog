@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.61 2005/08/24 09:33:08 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.62 2005/11/03 04:02:26 anarchy Exp $
+
+*vpopmail-5.4.13 (03 Nov 2005)
+
+  03 Nov 2005; Jory A. Pratt <anarchy@gentoo.org> +vpopmail-5.4.13.ebuild:
+  revision bump, -fPIC support added upstream
 
   24 Aug 2005; Fernando J. Pereda <ferdy@gentoo.org>
   vpopmail-5.4.6-r1.ebuild, vpopmail-5.4.9-r2.ebuild,

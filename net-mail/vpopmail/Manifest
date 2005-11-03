@@ -1,27 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c2f97b7d1bc24143fb775daf0ec27f5 vpopmail-5.4.9-r2.ebuild 7825
-MD5 99a7c3865421e69d06bb053a9940bee3 vpopmail-5.4.10.ebuild 7830
-MD5 2e61dc38b00dcafb76d248bbbb1c4b12 vpopmail-5.4.6-r1.ebuild 7636
-MD5 ed1e2d9c4678b62c6fce8c6bb87d9f05 ChangeLog 10098
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 8c6ca78a4c32c9a267dd9c3f7e9db5f1 files/vpopmail-Maildir-dotmaildir-fix.sh 1480
+MD5 3dbc9ad11a6c2b5a46d4bf5c87ece431 ChangeLog 10254
 MD5 3041a3223960dc956b67ac1230f00db7 files/99vpopmail 86
-MD5 aa40d1572827d929f64cdcdabb71f437 files/vpopmail-fPIC.patch 7397
-MD5 7bdd629eebc8f1ea4ba47e8cd4f3f3eb files/vpopmail-5.2.1-showall.patch 754
-MD5 4b9ecca5815031b05bd173888da4d228 files/vpopmail-cdb-Makefile.patch 363
+MD5 175cc82c17dfbb2ab785271ff71e8f5c files/digest-vpopmail-5.4.10 67
+MD5 932b241ee21fdbe7601622592f4ef78e files/digest-vpopmail-5.4.13 67
 MD5 1c75d4c70c599202edf1d9599bf40ef2 files/digest-vpopmail-5.4.6-r1 66
 MD5 aea08e2e6df4cf89a2a32a8817cc7135 files/digest-vpopmail-5.4.9-r2 66
-MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.9-access.violation.patch 918
-MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
-MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
+MD5 7bdd629eebc8f1ea4ba47e8cd4f3f3eb files/vpopmail-5.2.1-showall.patch 754
 MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.6-access.violation.patch 918
-MD5 175cc82c17dfbb2ab785271ff71e8f5c files/digest-vpopmail-5.4.10 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDDD75ViELBEf1JB0RAs/YAJ9NhfYIbbr958J1MF6mP/1M2chgbACeKJHv
-fhvxn29rN0LKwSfhzaE1FSA=
-=R8tm
------END PGP SIGNATURE-----
+MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.9-access.violation.patch 918
+MD5 8c6ca78a4c32c9a267dd9c3f7e9db5f1 files/vpopmail-Maildir-dotmaildir-fix.sh 1480
+MD5 4b9ecca5815031b05bd173888da4d228 files/vpopmail-cdb-Makefile.patch 363
+MD5 aa40d1572827d929f64cdcdabb71f437 files/vpopmail-fPIC.patch 7397
+MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
+MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 99a7c3865421e69d06bb053a9940bee3 vpopmail-5.4.10.ebuild 7830
+MD5 324ec743fecd3312d323f90b94bb948b vpopmail-5.4.13.ebuild 7678
+MD5 2e61dc38b00dcafb76d248bbbb1c4b12 vpopmail-5.4.6-r1.ebuild 7636
+MD5 6c2f97b7d1bc24143fb775daf0ec27f5 vpopmail-5.4.9-r2.ebuild 7825
