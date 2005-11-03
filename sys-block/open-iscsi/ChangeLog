@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.4 2005/09/23 05:55:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.5 2005/11/03 05:51:55 robbat2 Exp $
+
+*open-iscsi-0.4.434 (03 Nov 2005)
+
+  03 Nov 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +open-iscsi-0.4.434.ebuild:
+  Version bump.
 
 *open-iscsi-0.4.413-r1 (23 Sep 2005)
 
