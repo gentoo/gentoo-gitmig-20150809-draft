@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.1.ebuild,v 1.2 2005/10/25 17:01:02 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.1.1.ebuild,v 1.3 2005/11/03 07:46:14 swegener Exp $
 
 inherit gnome.org eutils mono
 
@@ -30,11 +30,11 @@ RDEPEND=">=dev-lang/mono-1.1.9.1
 	>=dev-libs/atk-1.2.4
 	>=media-libs/libexif-0.6.0
 	>=dev-libs/libxml2-2.6.19
-	wv? (>=app-text/wv-1.0.3-r1)
-	chm? (app-doc/chmlib)
+	wv? ( >=app-text/wv-1.0.3-r1 )
+	chm? ( app-doc/chmlib )
 	pdf? ( app-text/xpdf )
 	spreadsheet? ( >=app-office/gnumeric-1.4.3-r3 )
-	||( (
+	|| ( (
 		x11-libs/libX11
 		x11-libs/libXScrnSaver
 		x11-libs/libXt
@@ -44,12 +44,10 @@ RDEPEND=">=dev-lang/mono-1.1.9.1
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	||( (
+	|| ( (
 		x11-proto/xproto
 		x11-proto/scrnsaverproto )
 	virtual/x11 )"
-
-EXTRA_EMAKE="-j1"
 
 pkg_setup() {
 	if built_with_use dev-libs/gmime mono
