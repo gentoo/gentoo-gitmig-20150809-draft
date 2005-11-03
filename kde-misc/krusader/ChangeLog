@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.23 2005/11/03 14:43:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.24 2005/11/03 19:17:30 hansmi Exp $
+
+  03 Nov 2005; Michael Hanselmann <hansmi@gentoo.org>
+  krusader-1.60.1.ebuild:
+  Stable on ppc. See bug #111076.
 
 *krusader-1.60.1 (03 Nov 2005)
 
