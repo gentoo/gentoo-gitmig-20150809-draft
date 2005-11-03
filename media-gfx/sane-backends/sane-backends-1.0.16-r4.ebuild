@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.16-r4.ebuild,v 1.1 2005/11/02 12:17:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.16-r4.ebuild,v 1.2 2005/11/03 19:25:16 phosphan Exp $
 
 inherit eutils flag-o-matic
 
@@ -89,6 +89,7 @@ src_unpack() {
 	fi
 	epatch ${FILESDIR}/lide25-r1.patch
 	epatch ${FILESDIR}/kernel2.6.13usb-problem.patch
+	epatch ${FILESDIR}/sm3600usb.patch
 
 	# trouble with -ffast-math, see bug #103118
 	for file in backend/matsushita.c backend/sceptre.c backend/leo.c \
