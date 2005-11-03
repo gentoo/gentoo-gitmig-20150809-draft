@@ -3,7 +3,7 @@
 opts="depend start stop"
 
 depend() {
-	need logger sshd
+	use logger sshd
 }
 
 start() {
