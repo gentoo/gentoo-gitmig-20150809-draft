@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Diego Pettenò <flameeyes@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.9 2005/09/09 10:31:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pam.eclass,v 1.10 2005/11/03 21:27:02 flameeyes Exp $
 #
 # This eclass contains functions to install pamd configuration files and
 # pam modules.
@@ -19,6 +19,7 @@ dopamd() {
 	fi
 
 	INSDESTTREE=/etc/pam.d \
+	INSOPTIONS="-m 0644" \
 	doins "$@" || die "failed to install $@"
 	cleanpamd "$@"
 }
@@ -34,6 +35,7 @@ newpamd() {
 	fi
 
 	INSDESTTREE=/etc/pam.d \
+	INSOPTIONS="-m 0644" \
 	newins "$1" "$2" || die "failed to install $1 as $2"
 	cleanpamd $2
 }
@@ -49,6 +51,7 @@ dopamsecurity() {
 	fi
 
 	INSDESTTREE=/etc/security/$1 \
+	INSOPTIONS="-m 0644" \
 	doins "${@:2}" || die "failed to install ${@:2}"
 }
 
@@ -63,6 +66,7 @@ newpamsecurity() {
 	fi
 
 	INSDESTTREE=/etc/security/$1 \
+	INSOPTIONS="-m 0644" \
 	newins "$2" "$3" || die "failed to install $2 as $3"
 }
 
