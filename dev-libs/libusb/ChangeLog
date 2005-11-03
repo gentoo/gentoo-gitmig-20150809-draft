@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.38 2005/07/02 20:31:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.39 2005/11/03 21:36:42 liquidx Exp $
+
+  03 Nov 2005; Alastair Tse <liquidx@gentoo.org> +files/0.1.10a-fbsd.patch,
+  libusb-0.1.10a.ebuild:
+  added freebsd patch (#100881)
 
   02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> libusb-0.1.10a.ebuild:
   Stable on alpha.

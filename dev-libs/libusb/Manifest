@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 67bd4c482479738a34057710a43b70de libusb-0.1.7-r1.ebuild 917
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 ecc4ed6c771b98aea70ec6f3955f569f libusb-0.1.8.ebuild 1361
-MD5 8d36e3a4a1028a9f2c272233b3a7ed27 ChangeLog 4540
-MD5 6276b178ab4ea6603bcff9b7db20845b libusb-0.1.10a.ebuild 1278
+MD5 2110573d82885a9618824d4b57949999 ChangeLog 4675
+MD5 c819378823e7b8610d4e164757dc25be files/0.1.10a-fbsd.patch 734
 MD5 9b71253641038ba3d13b833a85cdcf76 files/digest-libusb-0.1.10a 66
 MD5 9cb49945879f78000d198c898d197e54 files/digest-libusb-0.1.7-r1 64
-MD5 13b0f271f94755b89f904270daa0659d files/libusb-0.1.8-amd64-fPIC.patch 268
 MD5 edf695ba0c7ee442c501401384faaa94 files/digest-libusb-0.1.8 64
+MD5 13b0f271f94755b89f904270daa0659d files/libusb-0.1.8-amd64-fPIC.patch 268
+MD5 b9610d03edbab0b827b861f1f2dd85c2 libusb-0.1.10a.ebuild 1034
+MD5 67bd4c482479738a34057710a43b70de libusb-0.1.7-r1.ebuild 917
+MD5 ecc4ed6c771b98aea70ec6f3955f569f libusb-0.1.8.ebuild 1361
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFCzHe2gIKl8Uu19MoRAjzqAJ0WYNG9mEtCEi6HViv1tRnikpMsAwCcC2gq
-OgLRUntK1jZh8VqpU/+tcLQ=
-=OfV+
+iD8DBQFDaoL79ZFPrqoILX8RAnBuAJ9fu981ImpLcAn7gnljtQmXnl4CGQCeOglR
++4zza0zT3oedEtr86UfX/lU=
+=VpMi
 -----END PGP SIGNATURE-----

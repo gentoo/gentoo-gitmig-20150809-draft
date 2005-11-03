@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.10a.ebuild,v 1.13 2005/07/07 00:29:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.10a.ebuild,v 1.14 2005/11/03 21:36:42 liquidx Exp $
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="Userspace access to USB devices"
 HOMEPAGE="http://libusb.sourceforge.net/"
@@ -21,32 +21,19 @@ DEPEND="sys-devel/libtool
 
 src_unpack(){
 	unpack ${A}
+	cd ${S}
 
-	if use ppc-macos ; then
-		aclocal || die
-		autoconf || die
-		automake --add-missing || die
-	fi
+	epatch ${FILESDIR}/${PV}-fbsd.patch
+	eautoreconf
+	elibtoolize
 }
 
 src_compile() {
-	local myconf
-
-	# keep this otherwise libraries will not have .so extensions
-	use ppc-macos \
-	  && glibtoolize --force \
-	  || elibtoolize
-
-	use doc \
-		&& myconf="--enable-build-docs" \
-		|| myconf="--disable-build-docs"
-
-	use debug \
-		&& myconf="${myconf} --enable-debug=all" \
-		|| myconf="${myconf} --disable-debug"
-
-	econf ${myconf} || die
-	make || die
+	econf \
+		$(use_enable debug debug all) \
+		$(use_enable doc build-docs) \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
