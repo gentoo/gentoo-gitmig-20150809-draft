@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.1 2005/10/30 03:37:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.2 2005/11/03 00:57:33 vapier Exp $
 
 inherit eutils
 
@@ -21,7 +21,6 @@ PROVIDE="virtual/inetd"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	cp Makefile.in{,.orig}
 	epatch "${FILESDIR}"/${P}-DESTDIR.patch
 	epatch "${FILESDIR}"/${P}-install-contrib.patch
 	epatch "${FILESDIR}"/${P}-config.patch
