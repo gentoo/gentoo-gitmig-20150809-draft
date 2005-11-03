@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4a.ebuild,v 1.1 2005/10/01 11:13:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4a.ebuild,v 1.2 2005/11/03 13:10:41 nelchael Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnomefiles.org/app.php?soft_id=84"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/suxpanel
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.1 2005/10/01 11:13:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.2 2005/11/03 13:10:41 nelchael Exp $
+
+  03 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> suxpanel-0.4a.ebuild:
+  Stable on x86.
 
 *suxpanel-0.4a (01 Oct 2005)
 
