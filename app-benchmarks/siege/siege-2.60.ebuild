@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.10 2005/02/26 19:10:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.60.ebuild,v 1.11 2005/11/03 21:47:24 ka0ttic Exp $
 
 inherit eutils bash-completion
 
@@ -32,6 +32,13 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
+
+	# bug 111057 - siege.config utility uses ${} which gets
+	# interpreted by bash sending the contents to stderr
+	# instead of ${HOME}/.siegerc
+	sed -i -e 's|\${}|\\${}|' -e 's|\$(HOME)|\\$(HOME)|' \
+		${D}/usr/bin/siege.config
+
 	dodoc AUTHORS ChangeLog INSTALL MACHINES README KNOWNBUGS \
 		siegerc-example urls.txt || die "dodoc failed"
 	use ssl && dodoc README.https
