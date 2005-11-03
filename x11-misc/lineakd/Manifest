@@ -1,10 +1,20 @@
-MD5 a9e617136e70686b5a0121fd75eb19cf ChangeLog 3393
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44e6829af83355eb63b77ef0390582b8 ChangeLog 3495
 MD5 7d34394cb4d85fa0c1aeca17e614ab85 files/digest-lineakd-0.8.2 65
 MD5 c3a210f82bfa5f48a2de86956bccec43 files/digest-lineakd-0.8.3 65
 MD5 c3a210f82bfa5f48a2de86956bccec43 files/digest-lineakd-0.8.3-r1 65
 MD5 e717a512457930f279382e5d4f677ff6 files/lineakd-0.8.3-lineakkb.def.patch 555
 MD5 c5669d240c36c2f263c6ace7678e382c files/lkey-cast.patch 519
 MD5 f453744ffac61ecc1c9736351cf190af lineakd-0.8.2.ebuild 841
-MD5 108e7c011df8c11fe651565f5ccade39 lineakd-0.8.3-r1.ebuild 931
+MD5 edeec6627acc5c7a9b02eb064227565a lineakd-0.8.3-r1.ebuild 929
 MD5 159f5c76c3a78856bb20affbb6c210f1 lineakd-0.8.3.ebuild 833
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDacLJCRZPokWLroQRAroCAKCG36lAAMM7Ynh15d9ZAdq/+vwSaQCfZ80V
+G/Z6XnLk20l1/vvlHytopxk=
+=LxfW
+-----END PGP SIGNATURE-----
