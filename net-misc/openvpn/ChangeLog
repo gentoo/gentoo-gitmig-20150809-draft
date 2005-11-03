@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.55 2005/11/03 14:36:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.56 2005/11/03 17:58:45 uberlord Exp $
+
+*openvpn-2.0.5-r1 (03 Nov 2005)
+*openvpn-2.0.5 (03 Nov 2005)
+
+  03 Nov 2005; Roy Marples <uberlord@gentoo.org> +openvpn-2.0.5.ebuild,
+  +openvpn-2.0.5-r1.ebuild:
+  Version bump - fixes some serious issues 2.0.4 had
+  2.0.5 has old init script
+  2.0.5-r1 has new init script
 
   03 Nov 2005; Roy Marples <uberlord@gentoo.org> openvpn-2.0.4-r1.ebuild,
   openvpn-2.0.4-r2.ebuild:
