@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.5.ebuild,v 1.8 2005/08/24 19:14:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.5.ebuild,v 1.9 2005/11/03 21:25:08 liquidx Exp $
 
 inherit libtool flag-o-matic
 
@@ -27,12 +27,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	elibtoolize
-
 	aclocal
 	# -pipe does no work
 	# liquidx: why doesn't it work? bug #?
 	# filter-flags -pipe
+	elibtoolize
 
 	local myconf
 	use nls \

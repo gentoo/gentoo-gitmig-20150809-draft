@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.4.ebuild,v 1.11 2005/05/09 00:26:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.4.ebuild,v 1.12 2005/11/03 21:25:08 liquidx Exp $
 
 inherit libtool flag-o-matic
 
@@ -27,9 +27,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
+	aclocal
 	elibtoolize
 
-	aclocal
 	# -pipe does no work
 	filter-flags -pipe
 
