@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0_rc2.ebuild,v 1.2 2005/10/14 07:25:17 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0_rc2.ebuild,v 1.3 2005/11/03 07:47:45 swegener Exp $
 
 MY_P="${P/_rc/.RC}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
@@ -21,7 +21,7 @@ RDEPEND=">=x11-wm/fvwm-2.5.13
 		>=media-sound/xmms-1.2.7
 		media-plugins/xmms-find )
 	!xmms? ( media-sound/mpc
-		|| ( media-sound/mpd media-sound/mpd-svn ))"
+		|| ( media-sound/mpd media-sound/mpd-svn ) )"
 
 S=${WORKDIR}/${MY_P}
 
