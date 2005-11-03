@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.56 2005/11/03 17:58:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.57 2005/11/03 19:15:33 hansmi Exp $
+
+  03 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> openvpn-2.0.5.ebuild:
+  Stable on ppc. See bug #111116.
 
 *openvpn-2.0.5-r1 (03 Nov 2005)
 *openvpn-2.0.5 (03 Nov 2005)
