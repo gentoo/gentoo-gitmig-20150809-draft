@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Apache-AuthTicket
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.1 2005/11/04 18:47:11 chriswhite Exp $
+
+*Apache-AuthTicket-0.40 (04 Nov 2005)
+
+  04 Nov 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +Apache-AuthTicket-0.40.ebuild:
+  Initial import into the tree to meet Eidetic depend.
+

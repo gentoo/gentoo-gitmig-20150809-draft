@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 40c969321ec4486054bc1a76e6354c8e Apache-AuthTicket-0.40.ebuild 617
+MD5 b063924ee6e4cb8a17ba9c796cc98147 ChangeLog 424
+MD5 9bbccbc098efe9d0d7633481bec86b26 files/digest-Apache-AuthTicket-0.40 73
+MD5 4c87a5ff945b67c3bebcfb25142fe1b1 metadata.xml 522
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDa6zEFdQwWVoAgN4RAiQPAKDksFLz7J+ljpugmW3ygt4blU8zGQCfVmSY
+PcD7eLbFwHPsZyyQqQGeuE4=
+=faZq
+-----END PGP SIGNATURE-----
