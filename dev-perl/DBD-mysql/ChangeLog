@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.41 2005/10/20 12:49:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.42 2005/11/04 18:51:46 gustavoz Exp $
+
+  04 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  DBD-mysql-2.9007.ebuild:
+  Stable on sparc wrt #109301
 
   20 Oct 2005; Luca Barbato <lu_zero@gentoo.org> DBD-mysql-2.9007.ebuild:
   Marked ppc
