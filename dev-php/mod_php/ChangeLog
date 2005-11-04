@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.288 2005/11/04 20:19:15 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.289 2005/11/04 20:57:43 halcy0n Exp $
+
+  04 Nov 2005; Mark Loeser <halcy0n@gentoo.org> mod_php-4.3.11-r4.ebuild,
+  mod_php-4.4.0-r8.ebuild, mod_php-4.4.0-r9.ebuild:
+  Stable on x86; bug #111032
 
   04 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mod_php-4.3.11-r4.ebuild:
