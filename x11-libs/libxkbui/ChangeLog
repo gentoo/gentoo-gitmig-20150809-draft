@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxkbui
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.6 2005/10/20 05:44:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.7 2005/11/04 17:00:27 joshuabaergen Exp $
+
+  04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  libxkbui-0.99.0.ebuild:
+  Add missing kbproto dep.
 
   20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
   Bump for 7.0 RC1.
