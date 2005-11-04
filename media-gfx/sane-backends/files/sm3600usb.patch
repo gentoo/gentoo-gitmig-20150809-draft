@@ -1,3 +1,9 @@
+Index: sm3600.c
+===================================================================
+RCS file: /cvsroot/sane/sane-backends/backend/sm3600.c,v
+retrieving revision 1.13
+retrieving revision 1.14
+diff -u -r1.13 -r1.14
 --- backend/sm3600.c	3 Jul 2005 13:35:48 -0000	1.13
 +++ backend/sm3600.c	16 Aug 2005 19:50:34 -0000	1.14
 @@ -55,24 +55,25 @@
@@ -182,6 +188,12 @@
      }
    ResetCalibration(this); /* release calibration data */
    /* unlink active device entry */
+Index: sm3600.h
+===================================================================
+RCS file: /cvsroot/sane/sane-backends/backend/sm3600.h,v
+retrieving revision 1.10
+retrieving revision 1.11
+diff -u -r1.10 -r1.11
 --- backend/sm3600.h	30 Apr 2004 21:02:04 -0000	1.10
 +++ backend/sm3600.h	16 Aug 2005 19:50:34 -0000	1.11
 @@ -190,7 +190,7 @@
@@ -193,6 +205,12 @@
    FILE              *fhLog;
    FILE              *fhScan;
    int                ichPageBuffer; /* write position in full page buffer */
+Index: sm3600-scanusb.c
+===================================================================
+RCS file: /cvsroot/sane/sane-backends/backend/sm3600-scanusb.c,v
+retrieving revision 1.11
+retrieving revision 1.12
+diff -u -r1.11 -r1.12
 --- backend/sm3600-scanusb.c	15 Apr 2004 21:06:58 -0000	1.11
 +++ backend/sm3600-scanusb.c	16 Aug 2005 19:50:34 -0000	1.12
 @@ -43,7 +43,7 @@
@@ -274,6 +292,12 @@
      }
    dprintf(DEBUG_COMM,"writing %d bytes\n",cchRead);
    
+Index: sm3600-scanutil.c
+===================================================================
+RCS file: /cvsroot/sane/sane-backends/backend/sm3600-scanutil.c,v
+retrieving revision 1.11
+retrieving revision 1.12
+diff -u -r1.11 -r1.12
 --- backend/sm3600-scanutil.c	15 Apr 2004 21:06:58 -0000	1.11
 +++ backend/sm3600-scanutil.c	16 Aug 2005 19:50:34 -0000	1.12
 @@ -43,10 +43,11 @@
