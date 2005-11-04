@@ -1,0 +1,8 @@
+# ChangeLog for app-arch/deltarpm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.1 2005/11/04 23:51:36 vapier Exp $
+
+*deltarpm-3.3 (04 Nov 2005)
+
+  04 Nov 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

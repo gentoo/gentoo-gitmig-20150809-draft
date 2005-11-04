@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f47b94d7d5fb844258141e136d88e1e2 ChangeLog 331
 MD5 c34f936bcf91cfeeb86c2e680eba1069 deltarpm-3.3.ebuild 766
 MD5 03a61b9868eef43a93df131b4a3a6fa4 files/digest-deltarpm-3.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDa/RCgIKl8Uu19MoRAqhrAJ4jCbBFVsrIdbV9pn57TlZvsK6QoQCfVQ/i
+RPDYPhmHvgIcsDtVdEjeOdI=
+=J+74
+-----END PGP SIGNATURE-----
