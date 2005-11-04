@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.1 2005/11/03 20:32:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.2 2005/11/04 22:05:07 uberlord Exp $
+
+*rt2x00-9999 (04 Nov 2005)
+
+  04 Nov 2005; Roy Marples <uberlord@gentoo.org> rt2x00-2.0.0_beta2.ebuild,
+  +rt2x00-9999.ebuild:
+  Added cvs ebuild
+  Added warning to beta2 ebuild
 
 *rt2x00-2.0.0_beta2 (03 Nov 2005)
 
