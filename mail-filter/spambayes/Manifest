@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 01a3b624374daf39e6843fded70ee2aa spambayes-1.0.4.ebuild 918
+MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
+MD5 c2926d6cf30f0f29f68a8a22d2487491 spambayes-1.0_rc1.ebuild 1427
 MD5 06d2e541d0478a3a8f2a24e552b69582 ChangeLog 1701
 MD5 e493796b04c4c8ab5e2a0e50bbd4f3fd files/bayescustomize.ini 3968
-MD5 c9a8c1e5a7f1edd822990d9525fb2cc2 files/digest-spambayes-1.0.4 67
-MD5 52c534163bb7d37f2b179098aa65339c files/digest-spambayes-1.0_rc1 68
 MD5 ba6377ec98f33913c8794cedbbf34454 files/spambayespop3proxy.rc 705
-MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
-MD5 f1652b499fe68623a12e26626752c7db spambayes-1.0.4.ebuild 917
-MD5 c2926d6cf30f0f29f68a8a22d2487491 spambayes-1.0_rc1.ebuild 1427
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDanIH9ZFPrqoILX8RAvOpAJ42dui6IWSgAULU8CN3NdqTSD2bcwCeJRHV
-Pc0A8vNFCEyKcgJT7U+R3vE=
-=oymE
------END PGP SIGNATURE-----
+MD5 52c534163bb7d37f2b179098aa65339c files/digest-spambayes-1.0_rc1 68
+MD5 c9a8c1e5a7f1edd822990d9525fb2cc2 files/digest-spambayes-1.0.4 67
