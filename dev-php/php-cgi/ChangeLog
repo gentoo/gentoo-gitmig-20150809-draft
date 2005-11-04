@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.108 2005/11/04 12:57:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.109 2005/11/04 19:01:16 gustavoz Exp $
+
+  04 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  php-cgi-4.3.11-r5.ebuild, php-cgi-4.4.0-r5.ebuild:
+  Stable on sparc wrt #111032
 
   04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
   files/php4.3.11-session_save_path-segf.patch,
