@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.178 2005/11/03 07:20:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.179 2005/11/04 07:18:35 swegener Exp $
+
+  04 Nov 2005; Sven Wegener <swegener@gentoo.org>
+  +files/xc260-fix-fetext.diff, xchat-2.6.0.ebuild:
+  Pull in a patch from upstream to fix text frontend building.
 
 *xchat-2.6.0 (03 Nov 2005)
 
