@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.5.2.ebuild,v 1.1 2005/10/03 17:35:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.5.2.ebuild,v 1.2 2005/11/04 07:23:58 swegener Exp $
 
 inherit eutils qt3 mono
 
@@ -38,6 +38,11 @@ DEPEND="${RDEPEND}
 export PKG_CONFIG_PATH="${QTDIR}/lib/pkgconfig"
 
 pkg_setup() {
+	if ! built_with_use dev-lang/python gdbm
+	then
+		die "Need dev-lang/python compiled with gdbm support!"
+	fi
+
 	enewgroup avahi
 	enewuser avahi -1 -1 -1 avahi
 }
