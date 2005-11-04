@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmwifi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.5 2005/10/02 09:31:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/ChangeLog,v 1.6 2005/11/04 16:18:59 s4t4n Exp $
+
+*wmwifi-0.5 (04 Nov 2005)
+
+  04 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmwifi-0.5.ebuild:
+  Version bump.
+  metdata.xml:
+  Assigned to desktop-dock herd.
 
   02 Oct 2005; Tom Martin <slarti@gentoo.org> wmwifi-0.3.ebuild:
   Marked ~amd64.
