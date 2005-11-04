@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.7 2005/10/20 05:36:27 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.8 2005/11/04 17:53:34 joshuabaergen Exp $
+
+  04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libXau-0.99.0.ebuild, libXau-0.99.1.ebuild:
+  Fix xproto depend and drop old version.
 
 *libXau-0.99.1 (20 Oct 2005)
 
