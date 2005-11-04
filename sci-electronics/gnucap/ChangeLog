@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.8 2005/11/04 21:37:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.9 2005/11/04 23:06:11 plasmaroo Exp $
+
+*gnucap-20050808 (04 Nov 2005)
+
+  04 Nov 2005; <plasmaroo@gentoo.org> +gnucap-20050808.ebuild:
+  Version bump; bug #111101.
 
   04 Nov 2005; <plasmaroo@gentoo.org> gnucap-0.34.ebuild,
   gnucap-20050220.ebuild:
