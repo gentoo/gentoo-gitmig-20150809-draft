@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.1_pre1.ebuild,v 1.1 2005/08/22 12:04:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.1_pre1.ebuild,v 1.2 2005/11/04 10:39:34 flameeyes Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -20,7 +20,7 @@ IUSE="a52 aac alsa altivec arts encode mad nls vorbis sdl truetype xvid xv oss"
 RDEPEND="
 	>=x11-libs/gtk+-2.6
 	>=dev-libs/libxml2-2.6.7
-	dev-lang/spidermonkey
+	>=dev-lang/spidermonkey-1.5_rc6-r1
 	xv? ( virtual/x11 )
 	a52? ( >=media-libs/a52dec-0.7.4 )
 	encode? ( >=media-sound/lame-3.93 )
@@ -41,14 +41,14 @@ DEPEND="$RDEPEND
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8.3"
 
-filter-flags "-fno-default-inline"
-filter-flags "-funroll-loops"
-filter-flags "-funroll-all-loops"
-filter-flags "-fforce-addr"
-
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	filter-flags "-fno-default-inline"
+	filter-flags "-funroll-loops"
+	filter-flags "-funroll-all-loops"
+	filter-flags "-fforce-addr"
+
 	if ! ( use oss || use arts || use alsa ); then
 		die "You must select at least one between oss, arts and alsa audio output."
 	fi

@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4a6f60bac17643f45f47a8e5aded8225 ChangeLog 17342
-MD5 d573443c44494270349c77440f8b3435 avidemux-2.0.42-r1.ebuild 2851
-MD5 2e1b0d5cff1b913575ae472a0900bd9d avidemux-2.1_pre1.ebuild 2949
+MD5 a334cfca0dcd72127516891408c711a5 ChangeLog 17574
 MD5 ee5806b95c2dcfc5b397bcf7b64fc053 avidemux-2.0.24.ebuild 2486
-MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 829b17a9790d79f257614bfcd384f049 files/digest-avidemux-2.1_pre1 142
+MD5 d573443c44494270349c77440f8b3435 avidemux-2.0.42-r1.ebuild 2851
+MD5 0c90a24580fdf60989581fbb1f95bfc3 avidemux-2.1_pre1.ebuild 2966
 MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
 MD5 0d0a90c34a5456ea2cad99a4bab62b50 files/digest-avidemux-2.0.42-r1 139
+MD5 829b17a9790d79f257614bfcd384f049 files/digest-avidemux-2.1_pre1 142
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDLHEBj5H05b2HAEkRAnEZAKCkJkjcBbXlRKw7SH82vr4TnTZPmwCfeIrl
-0doxWd2SpyeYH4NSHBrKaBQ=
-=NDhM
+iD8DBQFDazqIj5H05b2HAEkRAgW4AKCLpXmp94UXQ3p6dI9k8JtED9ooYgCfXpCr
+2apkGeu+IF+Wt0k9rpcnS+s=
+=Uffb
 -----END PGP SIGNATURE-----

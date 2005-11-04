@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.92 2005/09/17 19:39:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.93 2005/11/04 10:39:34 flameeyes Exp $
+
+  04 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  avidemux-2.1_pre1.ebuild:
+  Bump requirement of spidermonkey to a version that actually provide jsapi.h.
+  See bug #111445. Move flags filtering in pkg_setup in the mean time.
 
 *avidemux-2.0.42-r1 (03 Sep 2005)
 
