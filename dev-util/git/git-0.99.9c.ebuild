@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9b.ebuild,v 1.1 2005/11/02 17:57:35 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.99.9c.ebuild,v 1.1 2005/11/04 15:44:23 ferdy Exp $
 
 inherit python
 

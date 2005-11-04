@@ -2,19 +2,19 @@
 Hash: SHA1
 
 MD5 d35a0c0793dbfc65191588d2eca405d1 git-0.99.8a.ebuild 2835
-MD5 5bb15d7e7bc4669d933de2bb46aae5e2 git-0.99.9b.ebuild 2999
 MD5 edebd592261315b29a6b903b414573d2 git-0.7.ebuild 1312
-MD5 f22d59325c493bcfabd29c335ebb87de ChangeLog 5766
+MD5 8696eb1b772c81e2004fad4a4c8bbd99 ChangeLog 5927
+MD5 33a9259a23d8d61083b29240cc3c0ac9 git-0.99.9c.ebuild 2999
 MD5 3526aab52e4319669bc1064d4d4ac83a metadata.xml 316
 MD5 5c96e23fef078682e648254d9197f618 files/git-daemon.confd 376
 MD5 ad6b9193f41375013fad4455bf1acda7 files/git-daemon.initd 526
 MD5 62316f61a79143fdaf1e9f747d1ddf03 files/digest-git-0.99.8a 69
-MD5 5cb89083f7fe175024a65efc99b6b5dd files/digest-git-0.99.9b 69
+MD5 962e181ac768e78450b3f03e3075a735 files/digest-git-0.99.9c 69
 MD5 8ebc37d29c321b95a3c0ae51ebee4d4d files/digest-git-0.7 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDaQ06ViELBEf1JB0RArpoAJ45MqdbsWwQSv5kSmLJnjQB8gSKzACfVX3b
-MP/TktuQjcvMr2+tfsFisOw=
-=CU3X
+iD8DBQFDa4HzViELBEf1JB0RAueCAJ0bU4CNRGaQvt+SSGZdI2hyUCZI/gCfSPas
+BRCUtF7brbJTaGITj0+e/48=
+=Pcxe
 -----END PGP SIGNATURE-----
