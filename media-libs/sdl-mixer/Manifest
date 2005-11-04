@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7c716e9117528d5569b6a234c91a149b ChangeLog 4472
 MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
 MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
@@ -7,5 +10,12 @@ MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 92
 MD5 85c429a982fe437337599502a8fa6c1d files/sdl-mixer-1.2.6-mikmod-music-init.patch 260
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 39b686f066984e4b0942a03eb596250f sdl-mixer-1.2.5-r1.ebuild 1430
-MD5 105bd937f731521730bc492e4173f68d sdl-mixer-1.2.6-r1.ebuild 1324
+MD5 d6686251612298eb01cd14b8ec7395a3 sdl-mixer-1.2.6-r1.ebuild 1411
 MD5 f84eb8e4df8c2d8e6cc02b8f50990127 sdl-mixer-1.2.6.ebuild 1236
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDa/OdgIKl8Uu19MoRAqIFAJ4gk6+M78Mhp2BlzUUwNcnogNM/TQCfdt1v
+UYNLrXzo9LJyqgqlo0sefrA=
+=AZbQ
+-----END PGP SIGNATURE-----
