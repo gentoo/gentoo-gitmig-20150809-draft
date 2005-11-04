@@ -1,4 +1,4 @@
-MD5 93bcd7e03130437f414d738de2b070a5 ChangeLog 15477
+MD5 bb300d45d66bfd049b1265862dd098c6 ChangeLog 15609
 MD5 cc21a816357d93a1d31cd44f861183c7 files/digest-php-cgi-4.3.11-r1 287
 MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r2 364
 MD5 05df4c881b1833626d9a75a08a0098fd files/digest-php-cgi-4.3.11-r4 364
@@ -29,8 +29,8 @@ MD5 83fb9efb602c178741ea2e40e13b014f files/php4.4.0-session_save_path-segf.patch
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 ff97ecdd5c6b9744c3770bf335bb1157 php-cgi-4.3.11-r1.ebuild 1116
 MD5 f03786f41f7eb2be4bf8854c52d09f97 php-cgi-4.3.11-r2.ebuild 1866
-MD5 5944b82e6f5e08d8b7c86f106cb64089 php-cgi-4.3.11-r4.ebuild 2791
+MD5 0c9a7ada8a0d25557a23085f12325d39 php-cgi-4.3.11-r4.ebuild 2792
 MD5 56118eb0c5d90c47c6f73c9db6eccb69 php-cgi-4.4.0-r1.ebuild 972
 MD5 d9deaac08b78b996c648e1cbc9640ffa php-cgi-4.4.0-r2.ebuild 1711
-MD5 e82d56e2d1a5dbbac4c378e7b16ca46e php-cgi-4.4.0-r4.ebuild 2630
+MD5 806d1e1d7328261507b266b11849344a php-cgi-4.4.0-r4.ebuild 2631
 MD5 daa51bac42996b36311b5c6049f95b4e php-cgi-4.4.0.ebuild 972
