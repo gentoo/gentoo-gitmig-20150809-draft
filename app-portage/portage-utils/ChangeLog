@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.13 2005/10/31 13:21:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.14 2005/11/04 04:42:30 solar Exp $
+
+*portage-utils-0.1.8 (03 Nov 2005)
+
+  03 Nov 2005; <solar@gentoo.org> +portage-utils-0.1.8.ebuild:
+  - New quse describe flag option -D - Add test/check Makefiles and basic tests.
+  - Make qlop return with error msgs when the user can open a given logfile due
+  to permissions or other. - Make qlop return revision, date, user from the cvs
+  $Header: at verbose level > 3 - Fixed semi major bug in quse when processing
+  the variable of a string.
 
   31 Oct 2005; <solar@gentoo.org> +files/portage-utils-0.1.7-comments.patch,
   portage-utils-0.1.7.ebuild:
