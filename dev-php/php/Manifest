@@ -1,4 +1,4 @@
-MD5 04941d947e1c1c15538c229a884b8952 ChangeLog 29337
+MD5 8eea2efe1969dffe84d4d8fa3ebf5068 ChangeLog 29462
 MD5 289778209b2df87dbc5052351e604b1a files/digest-php-4.3.11 213
 MD5 a7b81d42cc56fdd6c72fbe2549dbe898 files/digest-php-4.3.11-r1 290
 MD5 a7b81d42cc56fdd6c72fbe2549dbe898 files/digest-php-4.3.11-r3 290
@@ -31,9 +31,9 @@ MD5 3d3986815e0e06adce512b36959e6f26 files/php4.4.0-session_save_path-segf.patch
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 5c877d02b146b5885cecc89b9f445c73 php-4.3.11-r1.ebuild 1972
 MD5 c757b9ce357a04d26ae0f88d731cf5c2 php-4.3.11-r3.ebuild 2898
-MD5 c8763769a1d62259acbcabd103f4c3da php-4.3.11-r4.ebuild 2895
+MD5 fe1e46c66155e73f9c46e7e7d4f49fe8 php-4.3.11-r4.ebuild 2897
 MD5 7b0585a1b1826288946cd49c26d85d61 php-4.3.11.ebuild 1219
 MD5 1bbf33997259477ea2ff61296875184e php-4.4.0-r1.ebuild 1831
 MD5 f8b5aa5ec5358b0ecced16d21e3613a9 php-4.4.0-r3.ebuild 2753
-MD5 df12036840e53caf23e03b0c9f50895e php-4.4.0-r4.ebuild 2753
+MD5 28787633672de33e0f7c5d8412785f21 php-4.4.0-r4.ebuild 2753
 MD5 3457e095190ae0497eff026b2351bb14 php-4.4.0.ebuild 1082
