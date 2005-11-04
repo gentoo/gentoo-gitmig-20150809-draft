@@ -2,18 +2,21 @@
 Hash: SHA1
 
 MD5 8bd5affbf916cafa3ee089c1ce8cc54b eagle-usb-2.3.1.ebuild 2372
+MD5 3f943ad547d252ddae938f5e972ab9fb eagle-usb-2.3.1-r1.ebuild 2459
 MD5 ab58f19ab2eb89eda0b06230e27395a2 eagle-usb-2.1.1.ebuild 2376
-MD5 983b5b2d116a5952e4f6aa8ba4a0f416 ChangeLog 810
+MD5 a9076e8b4d38e52554e4a3485a7ca073 ChangeLog 1041
 MD5 784ec6993aa07588926fec5a7fbf2c70 metadata.xml 246
 MD5 9bcb1e4277b2ca63a52b873a3c8b632d files/confd 805
 MD5 e6bb5c4e3d40da64218b22962001d51e files/initd 9194
+MD5 3e4640108bd9d4f20b535eb371e7a38b files/eagle-usb-2.3.1-kernel-2.6.14.patch 1025
 MD5 4062d2a6eb8bbb26c70db6813102e56c files/digest-eagle-usb-2.1.1 68
 MD5 638f7cece06abaad09f9e13f5d2164f8 files/digest-eagle-usb-2.3.1 68
 MD5 a26da8905bd09e0c8d5628c0afd96a8b files/dsl.peer 185
+MD5 638f7cece06abaad09f9e13f5d2164f8 files/digest-eagle-usb-2.3.1-r1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCd0N+jiC39V7gKu0RAk/SAJ9F3TScHtb20NLihTmxsmdk58EN2gCfXIv/
-J9VHToCL+L9qzDsYC0WL8Ac=
-=PKYX
+iD8DBQFDavOCNSP4Vda7IdsRAg6xAJ9Nd9QsG97cAJfykCC3i0YuKSIAqACeLX8e
+joR1pk0SQ87bfTqz8kOJqQ0=
+=qd9V
 -----END PGP SIGNATURE-----
