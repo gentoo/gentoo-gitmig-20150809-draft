@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.48 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.49 2005/11/04 23:45:36 caleb Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -43,7 +43,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install econf emake einstall
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=${PN}"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-IUSE=""
+IUSE="examples"
 
 SLOT="0"
 LICENSE="Ruby"
@@ -148,12 +148,16 @@ erubydoc() {
 	else
 		dohtml -r *
 	fi
-	for dir in sample example examples; do
-		if [ -d ${dir} ] ; then
-			dodir /usr/share/doc/${PF}
-			cp -pPR ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
-		fi
-	done
+
+	if ( use examples ); then	
+		for dir in sample example examples; do
+			if [ -d ${dir} ] ; then
+				dodir /usr/share/doc/${PF}
+				cp -pPR ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
+			fi
+		done
+	fi
+
 	for i in ChangeLog* [A-Z][A-Z]* ; do
 		[ -e $i ] && dodoc $i
 	done
