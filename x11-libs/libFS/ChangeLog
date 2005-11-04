@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libFS
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.8 2005/10/31 21:45:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.9 2005/11/04 17:35:04 joshuabaergen Exp $
+
+  04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libFS-0.99.0.ebuild, -libFS-0.99.1.ebuild:
+  Drop old versions.
 
   31 Oct 2005; <dang@gentoo.org> libFS-0.99.1-r1.ebuild:
   Marked ~amd64
