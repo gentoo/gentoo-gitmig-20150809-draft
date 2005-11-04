@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.121 2005/10/28 07:18:47 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.122 2005/11/04 12:38:19 lu_zero Exp $
+
+*ati-drivers-8.18.8-r1 (04 Nov 2005)
+
+  04 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-2.6.14-access_ok.patch,
+  +files/fglrx-2.6.14-compat_ioctl.patch, +ati-drivers-8.18.8-r1.ebuild:
+  New ebuild with linux 2.6.14 and modular X support, thanks to Mike Auty
+  <m.auty@softhome.net> and George L. Emigh <george@georgelemigh.com>, kernel
+  patches from ati unofficial bugzilla
 
 *ati-drivers-8.18.8 (28 Oct 2005)
 
