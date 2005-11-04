@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 812d0a9b9fe6580464a14e2ef82b01d9 gnump3d-2.9.7.ebuild 2102
-MD5 67475177dc841a2657bde43f5b609560 gnump3d-2.9.6.ebuild 2105
-MD5 fd8704794b34ed1ba5774a91f4a7ba09 ChangeLog 5801
-MD5 f2a3d664729281a0c1f0b7aa1c6ab928 gnump3d-2.9.3.ebuild 2135
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 53ddcd88da020240ac2ec48f0100c4a9 files/gnump3d.conf.d 159
-MD5 27e1721a1708176c950425eeb3d4cfdd files/gnump3d.init.d 740
+MD5 aacb4b2d475c480ee47f1ccf2bc6cb2b ChangeLog 5881
 MD5 dce48bd262348fc40db6d19da442dd5b files/digest-gnump3d-2.9.3 66
 MD5 90360f0100c17cf3101caa425a5ec240 files/digest-gnump3d-2.9.6 66
 MD5 fc8c45be4cb18a2b33cd0c321917b268 files/digest-gnump3d-2.9.7 66
+MD5 53ddcd88da020240ac2ec48f0100c4a9 files/gnump3d.conf.d 159
+MD5 27e1721a1708176c950425eeb3d4cfdd files/gnump3d.init.d 740
+MD5 f2a3d664729281a0c1f0b7aa1c6ab928 gnump3d-2.9.3.ebuild 2135
+MD5 67475177dc841a2657bde43f5b609560 gnump3d-2.9.6.ebuild 2105
+MD5 cb9bb8fdb84fc2146a4324aed5703bbb gnump3d-2.9.7.ebuild 2100
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDa9jYViELBEf1JB0RAitrAJ963K8+Ncj9tLjqIjDz1izm7pA1DwCfTfGe
-/gYkjwVO7L+xT/t2+k7MFUU=
-=Dzu4
+iD8DBQFDa+0GomPajV0RnrERAusPAJ0UE9Oz89wAkK7yft05VWg3Fm3s4ACcDuYD
+opBitcebrsOrSoesJfEGb8I=
+=5hgV
 -----END PGP SIGNATURE-----
