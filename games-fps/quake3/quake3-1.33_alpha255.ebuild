@@ -1,8 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha209.ebuild,v 1.2 2005/11/03 00:54:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.33_alpha255.ebuild,v 1.1 2005/11/04 03:57:37 vapier Exp $
 
-if [[ ${PV} == "9999" ]] ; then
+# quake3-9999          -> latest svn
+# quake3-9999.REV      -> use svn REV
+# quake3-VER_alphaREV  -> svn snapshot REV for version VER
+# quake3-VER           -> normal quake release
+
+if [[ ${PV} == 9999* ]] ; then
+	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999.}"
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
 	inherit subversion games toolchain-funcs
 
@@ -30,11 +36,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dedicated opengl"
 
-RDEPEND="opengl? ( virtual/opengl virtual/x11 )
+RDEPEND="opengl? ( virtual/opengl virtual/x11 media-libs/libsdl )
+	!dedicated? ( virtual/opengl virtual/x11 media-libs/libsdl )
 	games-fps/quake3-data"
 
 src_unpack() {
-	if [[ ${PV} == "9999" ]] ; then
+	if [[ ${PV} == 9999* ]] ; then
 		subversion_src_unpack
 	else
 		unpack ${A}
@@ -42,12 +49,14 @@ src_unpack() {
 }
 
 src_compile() {
-	# Force -fno-strict-aliasing to fix graphical bugs #110509
+	buildit() { use $1 && echo 1 || echo 0 ; }
 	emake \
+		BUILD_SERVER=$(buildit dedicated) \
+		BUILD_CLIENT=$(buildit opengl) \
 		TEMPDIR="${T}" \
 		CC="$(tc-getCC)" \
 		ARCH=$(tc-arch-kernel) \
-		OPTIMIZE="${CFLAGS} -fno-strict-aliasing" \
+		OPTIMIZE="${CFLAGS}" \
 		DEFAULT_BASEDIR="${GAMES_DATADIR}/quake3" \
 		DEFAULT_LIBDIR="${GAMES_LIBDIR}/quake3" \
 		|| die
