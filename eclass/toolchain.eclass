@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.213 2005/10/18 23:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.214 2005/11/04 02:32:16 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1060,7 +1060,7 @@ gcc-compiler-configure() {
 		# Add --with-abi flags to enable respective MIPS ABIs
 		mips)
 		if is_crosscompile && is_multilib; then
-			confgcc="${confgcc} --with-abi=32 --with-abi=n32 --with-abi=64"
+			confgcc="${confgcc} --with-abi=32 --with-abi=64 --with-abi=n32"
 		else
 			is_multilib && confgcc="${confgcc} --with-abi=32"
 			use n64 && confgcc="${confgcc} --with-abi=64"
@@ -1307,10 +1307,12 @@ gcc_do_make() {
 		${GCC_MAKE_TARGET} \
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
 
-	if ! use build && ! is_crosscompile ; then
-		if ! use nocxx && type -p doxygen > /dev/null ; then
+	if ! use build && ! is_crosscompile && ! use nocxx ; then
+		if type -p doxygen > /dev/null ; then
 			cd "${CTARGET}"/libstdc++-v3
 			make doxygen-man || ewarn "failed to make docs"
+		else
+			ewarn "Skipping libstdc++ manpage generation since you don't have doxygen installed"
 		fi
 	fi
 
