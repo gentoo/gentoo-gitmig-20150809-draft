@@ -5,11 +5,11 @@ MD5 1b40dd6f97fb0f471a0e1878597c45fd ChangeLog 1858
 MD5 8c8297e1f481bd0a0e076393cd827e40 files/digest-zziplib-0.13.36 68
 MD5 6f915eca707d184af05408eb5a75e73c files/digest-zziplib-0.13.38 68
 MD5 de39c4481f01799a68687e64255b391b zziplib-0.13.36.ebuild 934
-MD5 3d29f78029d2a97c588d087a0d4a4f4a zziplib-0.13.38.ebuild 1018
+MD5 0ae2982053a2ae8d84a29a110db80518 zziplib-0.13.38.ebuild 1024
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDZ/7+gIKl8Uu19MoRAlwwAJ0famcmFZ1vwIzBqVYLnHKJP3oYkgCggTHJ
-+CrjNpgV5j4tRZSiaTVnX10=
-=RrTo
+iD8DBQFDasIqgIKl8Uu19MoRAmT3AJ4lb51U5h1DwJgODge+/vyszNsg1ACfRitp
+ARHsbtkQEmnVFI0bHCn3fWU=
+=QRkG
 -----END PGP SIGNATURE-----
