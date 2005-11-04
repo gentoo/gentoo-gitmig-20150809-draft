@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3f14ded303ebc634f7694525e4c96c4 ChangeLog 28388
+MD5 ed892477937163e8b6c84bfb6bc3e904 ChangeLog 28573
 MD5 289778209b2df87dbc5052351e604b1a files/digest-php-4.3.11 213
 MD5 a7b81d42cc56fdd6c72fbe2549dbe898 files/digest-php-4.3.11-r1 290
 MD5 a7b81d42cc56fdd6c72fbe2549dbe898 files/digest-php-4.3.11-r3 290
@@ -14,7 +11,7 @@ MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
 MD5 09637e8f6f861b1f3698ec0390ec6b57 files/php4.3.11-curl_safemode.patch 5129
 MD5 cb36a386184ed6a887f62d2205f57173 files/php4.3.11-fopen_wrappers.patch 1481
 MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/php4.3.11-gd_safe_mode.patch 1573
-MD5 480060d9a5de72030e2fce541e2830f8 files/php4.3.11-globals_overwrite.patch 18395
+MD5 89d12226b1726b681df274be79043411 files/php4.3.11-globals_overwrite.patch 18011
 MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
 MD5 a9b932952f12aa01a9f98a7fcbf32ed9 files/php4.3.11-pcre-security.patch 6031
 MD5 43b4113d1fb159955b0d5ed307cac143 files/php4.3.11-phpinfo_xss.patch 2518
@@ -23,7 +20,7 @@ MD5 17b906361a7ab8a3008446871623eeae files/php4.3.11-session_save_path-segf.patc
 MD5 0429f8334ba4bab659a2e41ce5debc80 files/php4.4.0-curl_safemode.patch 1937
 MD5 cb36a386184ed6a887f62d2205f57173 files/php4.4.0-fopen_wrappers.patch 1481
 MD5 a540c54ba22dc16b157edcf1ecb6258f files/php4.4.0-gd_safe_mode.patch 883
-MD5 ac3e0691fbecf920d030a35bc8e02109 files/php4.4.0-globals_overwrite.patch 10115
+MD5 7c45198e6118d82c680e9ed56e7d1df0 files/php4.4.0-globals_overwrite.patch 9731
 MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
 MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
 MD5 57644300fb52ad610fa52ae8ba6b522b files/php4.4.0-phpinfo_xss.patch 1284
@@ -36,10 +33,3 @@ MD5 7b0585a1b1826288946cd49c26d85d61 php-4.3.11.ebuild 1219
 MD5 1bbf33997259477ea2ff61296875184e php-4.4.0-r1.ebuild 1831
 MD5 f8b5aa5ec5358b0ecced16d21e3613a9 php-4.4.0-r3.ebuild 2753
 MD5 3457e095190ae0497eff026b2351bb14 php-4.4.0.ebuild 1082
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDaxEQCRZPokWLroQRAtl7AJ9na5xXJ5OH+wK8D2esUEAno2OGfgCdEJGI
-6+Qwop9jK8/V4yosNQhUb4k=
-=nKia
------END PGP SIGNATURE-----

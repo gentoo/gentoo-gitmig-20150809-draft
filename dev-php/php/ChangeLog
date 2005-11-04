@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.201 2005/11/04 07:42:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.202 2005/11/04 10:56:29 chtekk Exp $
+
+  04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  files/php4.3.11-globals_overwrite.patch,
+  files/php4.4.0-globals_overwrite.patch:
+  Fix for http://bugs.php.net/bug.php?id=35067.
 
   04 Nov 2005; Mark Loeser <halcy0n@gentoo.org> php-4.3.11-r3.ebuild,
   php-4.4.0-r3.ebuild:
