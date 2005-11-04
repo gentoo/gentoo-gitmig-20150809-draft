@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXrandr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.7 2005/11/04 18:27:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.8 2005/11/04 18:28:54 joshuabaergen Exp $
+
+  04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  libXrandr-0.99.1.ebuild:
+  Fix xproto dep.
 
   04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   -libXrandr-0.99.0.ebuild, libXrandr-0.99.1.ebuild:
