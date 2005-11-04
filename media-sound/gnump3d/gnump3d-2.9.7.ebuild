@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.7.ebuild,v 1.3 2005/11/04 05:58:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.7.ebuild,v 1.4 2005/11/04 14:45:55 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ppc64 sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"
