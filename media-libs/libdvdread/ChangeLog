@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.23 2005/11/01 13:40:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.24 2005/11/04 17:09:39 gustavoz Exp $
+
+  04 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libdvdread-0.9.4-r1.ebuild:
+  Stable on sparc wrt #111134
 
   01 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
   -libdvdread-0.9.3.ebuild:
