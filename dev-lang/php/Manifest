@@ -60,7 +60,7 @@ MD5 5f8f18e68edb61b60cfa21a4ff65170b files/digest-php-4.3.11-r3 223
 MD5 c9e2d252f3ae26871c06d35ebfe6fb1e files/digest-php-4.4.0-r3 221
 MD5 c273cf40d79922fb1d77d7bd352d1bb9 files/digest-php-4.4.1-r1 143
 MD5 71facfede997494a03e635bc07a14a2f files/digest-php-5.0.4-r3 220
-MD5 cfdebb276cf798bc25f1ecc97d4c5072 files/digest-php-5.0.5-r3 143
+MD5 96fdb35fc6f5b775c569db88d89200d7 files/digest-php-5.0.5-r3 143
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 dd4e596a3be26f261e3a5a52330f9b2d php-4.3.11-r3.ebuild 9240
 MD5 466de8a0d0e1860f4487428a1c7106d5 php-4.4.0-r3.ebuild 9235
