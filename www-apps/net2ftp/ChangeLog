@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/net2ftp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/ChangeLog,v 1.6 2005/09/05 10:34:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/ChangeLog,v 1.7 2005/11/04 11:05:08 uberlord Exp $
+
+  04 Nov 2005; Roy Marples <uberlord@gentoo.org> net2ftp-0.82.ebuild:
+  doins does not work for webapps, do use cp -pPR instead
 
   05 Sep 2005; Roy Marples <uberlord@gentoo.org> net2ftp-0.82.ebuild:
   DEPEND on virtual/php and not dev-php/mod_php

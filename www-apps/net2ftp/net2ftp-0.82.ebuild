@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.82.ebuild,v 1.3 2005/09/05 10:34:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.82.ebuild,v 1.4 2005/11/04 11:05:08 uberlord Exp $
 
 inherit eutils webapp
 
@@ -48,8 +48,7 @@ src_install() {
 
 	rm -f temp/chmod_this_dir_to_777.txt
 
-	insinto "${MY_HTDOCSDIR}"
-	doins -r *
+	cp -pPR * "${D}/${MY_HTDOCSDIR}"
 
 	webapp_serverowned "${MY_HTDOCSDIR}/temp"
 
