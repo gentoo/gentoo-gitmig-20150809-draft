@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.28 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.29 2005/11/04 03:28:06 vapier Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -43,7 +43,7 @@ distutils_src_install() {
 	fi
 
 	DDOCS="CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO"
-	DDOCS="${DDOCS} CONTRIBUTORS LICENSE COPYING*"
+	DDOCS="${DDOCS} CONTRIBUTORS TODO"
 	DDOCS="${DDOCS} Change* MANIFEST* README*"
 
 	for doc in ${DDOCS}; do
