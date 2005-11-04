@@ -1,6 +1,4 @@
-MD5 16c3d6ffb85b7d69b6935340f7c717ed ChangeLog 1164
-MD5 2be91ab2d559aca7d580b15b10b04adb files/digest-libXaw-0.99.0 66
+MD5 b4c4b7954a7e53c69f95e412d225f48b ChangeLog 1267
 MD5 c8e98fbbd1b06a8bab4e4683a033c59f files/digest-libXaw-0.99.1 66
-MD5 5fbd4da9d24159c838f9f9990dec7252 libXaw-0.99.0.ebuild 688
 MD5 888187f7131ba0e8a41b9ab7e3439641 libXaw-0.99.1.ebuild 708
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
