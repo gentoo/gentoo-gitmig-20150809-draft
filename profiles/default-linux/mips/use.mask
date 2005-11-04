@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.38 2005/10/22 11:06:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.39 2005/11/04 23:48:35 vapier Exp $
 
 # Aaron Walker <ka0ttic@gentoo.org>
 # Temporarily masking until net-nds/c-ares can be tested properly
@@ -179,6 +179,7 @@ djbfft
 glitz
 pike
 ocaml
+timidity
 
 # Unmask our instruction sets
 -n32

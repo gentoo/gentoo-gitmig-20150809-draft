@@ -76,3 +76,5 @@ lm_sensors
 wifi
 
 pike
+
+timidity

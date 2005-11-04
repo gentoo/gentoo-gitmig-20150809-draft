@@ -67,3 +67,5 @@ dbus
 3dfx
 mono
 pike
+
+timidity
