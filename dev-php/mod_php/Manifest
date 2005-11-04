@@ -1,17 +1,47 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb22665d5b1f870598e76961a06c2d52 ChangeLog 51224
-MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
-MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
-MD5 389638f1d46b6c41cd4d87b471572f4b files/4.4.0-a1/70_mod_php.conf 484
-MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0-a2/70_mod_php.conf 485
-MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
+MD5 921eddffa3b656c7c08da0d0c709622b mod_php-4.4.0-r7.ebuild 7069
+MD5 b7f57c4f896ce046f8a6b4472ddfcb2b mod_php-4.4.0.ebuild 6336
+MD5 68092beafbec1bd1b054a153b834bd13 mod_php-4.4.0-r2.ebuild 7074
+MD5 90610a0b9cdbcbec3cd33fcef432e00c mod_php-4.3.11-r1.ebuild 7127
+MD5 9b18ad039b0b7e157dac09b5927b3a4c mod_php-4.4.0-r9.ebuild 7063
+MD5 3e4b2d8a6ea6c859ef96e9de3aed8b81 mod_php-4.3.11-r3.ebuild 8053
+MD5 9b13b3622e2a53585adc6c881198bdb6 mod_php-4.4.0-r6.ebuild 7994
+MD5 29d9e7ef90de139245d7c5e06dd9b67c mod_php-4.4.0-r1.ebuild 6561
+MD5 cd88a76d8ca70243cb58ed076582a857 mod_php-4.3.11.ebuild 6387
+MD5 0c98176a7d728d8feaee223d13c70546 mod_php-4.4.0-r8.ebuild 7990
+MD5 47959bde0d770eddf3d212d43766332d mod_php-4.4.0-r3.ebuild 6145
+MD5 8714d32af556c2844449f87573b6cc3d ChangeLog 51362
+MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
+MD5 0f550915b7063ee91358b9a9018a119f mod_php-4.3.11-r4.ebuild 8051
+MD5 3d3986815e0e06adce512b36959e6f26 files/php4.4.0-session_save_path-segf.patch 4155
+MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
+MD5 89d12226b1726b681df274be79043411 files/php4.3.11-globals_overwrite.patch 18011
+MD5 48d9c939434e9b01d0696410d59c503c files/php4.3.11-pspell-ext-segf.patch 8482
+MD5 7c45198e6118d82c680e9ed56e7d1df0 files/php4.4.0-globals_overwrite.patch 9731
+MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
+MD5 48d9c939434e9b01d0696410d59c503c files/php4.4.0-pspell-ext-segf.patch 8482
+MD5 cb36a386184ed6a887f62d2205f57173 files/php4.3.11-fopen_wrappers.patch 1481
+MD5 cb36a386184ed6a887f62d2205f57173 files/php4.4.0-fopen_wrappers.patch 1481
+MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
 MD5 cc21a816357d93a1d31cd44f861183c7 files/digest-mod_php-4.3.11 287
+MD5 43b4113d1fb159955b0d5ed307cac143 files/php4.3.11-phpinfo_xss.patch 2518
+MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/php4.3.11-gd_safe_mode.patch 1573
+MD5 0429f8334ba4bab659a2e41ce5debc80 files/php4.4.0-curl_safemode.patch 1937
+MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
+MD5 2646498369dc5c64c318ee6da2f9487a files/php4.3.11-session_save_path-segf.patch 4961
+MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-mod_php-4.4.0 285
+MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
+MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
+MD5 09637e8f6f861b1f3698ec0390ec6b57 files/php4.3.11-curl_safemode.patch 5129
+MD5 a540c54ba22dc16b157edcf1ecb6258f files/php4.4.0-gd_safe_mode.patch 883
 MD5 05df4c881b1833626d9a75a08a0098fd files/digest-mod_php-4.3.11-r1 364
 MD5 05df4c881b1833626d9a75a08a0098fd files/digest-mod_php-4.3.11-r3 364
 MD5 05df4c881b1833626d9a75a08a0098fd files/digest-mod_php-4.3.11-r4 364
-MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-mod_php-4.4.0 285
+MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
+MD5 57644300fb52ad610fa52ae8ba6b522b files/php4.4.0-phpinfo_xss.patch 1284
+MD5 a9b932952f12aa01a9f98a7fcbf32ed9 files/php4.3.11-pcre-security.patch 6031
 MD5 09d7dee078c684b0de0e4de6209ef634 files/digest-mod_php-4.4.0-r1 285
 MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-mod_php-4.4.0-r2 362
 MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-mod_php-4.4.0-r3 362
@@ -19,46 +49,16 @@ MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-mod_php-4.4.0-r6 362
 MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-mod_php-4.4.0-r7 362
 MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-mod_php-4.4.0-r8 362
 MD5 472ce8342d69fdad9d2a642b03b31bac files/digest-mod_php-4.4.0-r9 362
-MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
-MD5 3bf664b414787f8f3c1dcbda5750aef4 files/mod_php-4.3.5-apache1security.diff 425
-MD5 cceddd5c262e0ffef31d45b7da269851 files/mod_php.conf 148
-MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
-MD5 09637e8f6f861b1f3698ec0390ec6b57 files/php4.3.11-curl_safemode.patch 5129
-MD5 cb36a386184ed6a887f62d2205f57173 files/php4.3.11-fopen_wrappers.patch 1481
-MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/php4.3.11-gd_safe_mode.patch 1573
-MD5 89d12226b1726b681df274be79043411 files/php4.3.11-globals_overwrite.patch 18011
-MD5 47a031979331eeb527d0918d2c38cdbe files/php4.3.11-imap-symlink.diff 1238
-MD5 a9b932952f12aa01a9f98a7fcbf32ed9 files/php4.3.11-pcre-security.patch 6031
-MD5 43b4113d1fb159955b0d5ed307cac143 files/php4.3.11-phpinfo_xss.patch 2518
-MD5 48d9c939434e9b01d0696410d59c503c files/php4.3.11-pspell-ext-segf.patch 8482
-MD5 2646498369dc5c64c318ee6da2f9487a files/php4.3.11-session_save_path-segf.patch 4961
-MD5 0429f8334ba4bab659a2e41ce5debc80 files/php4.4.0-curl_safemode.patch 1937
-MD5 cb36a386184ed6a887f62d2205f57173 files/php4.4.0-fopen_wrappers.patch 1481
-MD5 a540c54ba22dc16b157edcf1ecb6258f files/php4.4.0-gd_safe_mode.patch 883
-MD5 7c45198e6118d82c680e9ed56e7d1df0 files/php4.4.0-globals_overwrite.patch 9731
-MD5 4c86d8ed96f2bb38b94e826c1f028c80 files/php4.4.0-imap-symlink.diff 1238
-MD5 54a4ad0766f89185d7de2c6d07b07296 files/php4.4.0-pcre-security.patch 6177
-MD5 57644300fb52ad610fa52ae8ba6b522b files/php4.4.0-phpinfo_xss.patch 1284
-MD5 48d9c939434e9b01d0696410d59c503c files/php4.4.0-pspell-ext-segf.patch 8482
-MD5 3d3986815e0e06adce512b36959e6f26 files/php4.4.0-session_save_path-segf.patch 4155
-MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 90610a0b9cdbcbec3cd33fcef432e00c mod_php-4.3.11-r1.ebuild 7127
-MD5 3e4b2d8a6ea6c859ef96e9de3aed8b81 mod_php-4.3.11-r3.ebuild 8053
-MD5 0f550915b7063ee91358b9a9018a119f mod_php-4.3.11-r4.ebuild 8051
-MD5 cd88a76d8ca70243cb58ed076582a857 mod_php-4.3.11.ebuild 6387
-MD5 29d9e7ef90de139245d7c5e06dd9b67c mod_php-4.4.0-r1.ebuild 6561
-MD5 68092beafbec1bd1b054a153b834bd13 mod_php-4.4.0-r2.ebuild 7074
-MD5 47959bde0d770eddf3d212d43766332d mod_php-4.4.0-r3.ebuild 6145
-MD5 9b13b3622e2a53585adc6c881198bdb6 mod_php-4.4.0-r6.ebuild 7994
-MD5 921eddffa3b656c7c08da0d0c709622b mod_php-4.4.0-r7.ebuild 7069
-MD5 f53fd2a7cfa0b8f706ffa25ec1dedbbb mod_php-4.4.0-r8.ebuild 7993
-MD5 422893e25c18b9a15a047d6f67eec5da mod_php-4.4.0-r9.ebuild 7066
-MD5 b7f57c4f896ce046f8a6b4472ddfcb2b mod_php-4.4.0.ebuild 6336
+MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
+MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
+MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
+MD5 389638f1d46b6c41cd4d87b471572f4b files/4.4.0-a1/70_mod_php.conf 484
+MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0-a2/70_mod_php.conf 485
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDa8tYCRZPokWLroQRAnHkAKCbgIDWlgc865Xux0mj4FecCmlY9wCggwJn
-v9RHYVs2r5itGDFRYEaxwEk=
-=E7Vs
+iD8DBQFDa9OHViELBEf1JB0RAqg6AJ975M+b8sDkrR8RsHi/aKT210tVHQCdHmx0
+QjFUKp7OLH+8XNR6jbE6w/o=
+=538p
 -----END PGP SIGNATURE-----
