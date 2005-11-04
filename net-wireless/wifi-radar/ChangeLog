@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/wifi-radar
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.1 2005/11/04 18:31:27 s4t4n Exp $
+
+
+*wifi-radar-1.9.4 (04 Nov 2005)
+
+  04 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wifi-radar-1.9.4.ebuild:
+  Initial import. Closes bug #70591.
+
