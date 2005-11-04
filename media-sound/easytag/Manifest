@@ -3,17 +3,19 @@ Hash: SHA1
 
 MD5 47d31e84c98784c88f825859e67f022c easytag-1.0-r1.ebuild 1227
 MD5 2d431f0585b1ef6ba722f6d3aac5db80 easytag-1.99.7.ebuild 1245
+MD5 898596764300bc5f2b42995253b41b1c easytag-1.99.9.ebuild 1270
 MD5 c098be94d123e11991c84dc35fd2be93 easytag-1.1.ebuild 1183
-MD5 475d6f2f53ef36f946e263a24cedcbda ChangeLog 11337
+MD5 1734be7e994bcecbe33013c85e085c19 ChangeLog 11540
 MD5 79119f45cab878d56945e1c66e22550c metadata.xml 402
 MD5 bfafbbfb1a845e93498456dafa59b9ca files/digest-easytag-1.1 65
 MD5 bed011d8cb53800acb92633c0341a526 files/digest-easytag-1.0-r1 65
 MD5 ebff0425ede09fdd1218fee1fc3b0daa files/digest-easytag-1.99.7 68
+MD5 06108156dd5eb758f4ceabc882bc6a98 files/digest-easytag-1.99.9 68
 MD5 86777318233983d77338c33ab4bf266b files/easytag-ape-fix.patch 684
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFC+m9OTOXg++0VvJQRAnwOAKDPd8pd5FHx63+ia7t18VV2S21g2wCgklEx
-ZNkHYP2Exy3HadwlfgY7Rkg=
-=9v52
+iD8DBQFDarIfTOXg++0VvJQRAnKXAJ9exzIPw2no/gmlQ/6J1t5169JDqACbBn5L
+ExndvwfNbhqpnY7NtEwDxJc=
+=purH
 -----END PGP SIGNATURE-----
