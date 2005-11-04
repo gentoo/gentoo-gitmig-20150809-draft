@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/extensions
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extensions/ChangeLog,v 1.1 2005/11/04 23:07:34 caleb Exp $
+
+*extensions-0.6.0 (04 Nov 2005)
+
+  04 Nov 2005; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +extensions-0.6.0.ebuild:
+  Initial import
+
