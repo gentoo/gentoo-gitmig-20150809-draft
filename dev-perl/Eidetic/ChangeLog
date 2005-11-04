@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Eidetic
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.1 2005/11/04 20:55:04 chriswhite Exp $
+
+*Eidetic-2.003003 (04 Nov 2005)
+
+  04 Nov 2005; Chris White <chriswhite@gentoo.org>
+  +files/Eidetic-2.003003-destdir.patch, +files/Eidetic-2.003003-sql.patch,
+  +metadata.xml, +Eidetic-2.003003.ebuild:
+  Initial import into the tree to meet rackview depend.
+
