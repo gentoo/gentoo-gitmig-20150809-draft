@@ -1,20 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.14.ebuild,v 1.2 2005/11/04 13:54:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.14.ebuild,v 1.3 2005/11/04 13:55:54 karltk Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Stratego term-rewriting language"
 HOMEPAGE="http://www.stratego-language.org/"
 SRC_URI="ftp://ftp.stratego-language.org/pub/stratego/StrategoXT/strategoxt-${PV}/strategoxt-${PV}.tar.gz"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-
 DEPEND=">=dev-libs/aterm-2.3.1
 	>=dev-libs/sdf2-bundle-2.3"
 S=${WORKDIR}/strategoxt-${PV}
+IUSE=""
 
 src_compile() {
 	filter-flags -fomit-frame-pointer
