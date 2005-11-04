@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.16 2005/10/21 10:02:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.17 2005/11/04 18:25:36 dang Exp $
+
+  04 Nov 2005; <dang@gentoo.org> evince-0.4.0-r2.ebuild:
+  Modular X deps
 
   21 Oct 2005; Leonardo Boshell <leonardop@gentoo.org> metadata.xml,
   evince-0.4.0-r2.ebuild:

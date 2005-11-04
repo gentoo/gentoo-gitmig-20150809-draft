@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.6 2005/10/21 10:02:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r2.ebuild,v 1.7 2005/11/04 18:25:36 dang Exp $
 
 inherit eutils gnome2
 
@@ -31,14 +31,18 @@ RDEPEND="
 	>=gnome-base/libgnomeui-2.6
 	nautilus? ( >=gnome-base/nautilus-2.10 )
 	>=x11-libs/gtk+-2.8
-	virtual/x11
 	"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.28"
+	>=dev-util/intltool-0.28
+	|| ( ( x11-libs/libXt
+		x11-proto/xproto
+		)
+		virtual/x11
+	)"
 
 PROVIDE="virtual/pdfviewer
 	virtual/psviewer"
