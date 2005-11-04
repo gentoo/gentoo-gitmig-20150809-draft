@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.0-r3.ebuild,v 1.1 2005/11/03 14:09:24 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.4-r4.ebuild,v 1.1 2005/11/04 12:45:21 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
@@ -14,11 +14,11 @@ KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 PROVIDE="virtual/php virtual/httpd-php"
 
 # php package settings
-SLOT="4"
+SLOT="5"
 MY_PHP_P="php-${PV}"
 PHP_PACKAGE=1
 
-inherit eutils php4_4-sapi apache-module
+inherit eutils php5_0-sapi apache-module
 
 want_apache
 
@@ -56,18 +56,7 @@ pkg_setup() {
 		fi
 	fi
 
-	if useq fastbuild ; then
-		ewarn
-		ewarn "'fastbuild' attempts to build all SAPIs in a single pass."
-		ewarn "This is an experimental feature, which may fail to compile"
-		ewarn "and may produce PHP binaries which are broken."
-		ewarn
-		ewarn "Rebuild without 'fastbuild' and reproduce any bugs before filing"
-		ewarn "any bugs in Gentoo's Bugzilla or bugs.php.net."
-		ewarn
-	fi
-
-	php4_4-sapi_pkg_setup
+	php5_0-sapi_pkg_setup
 }
 
 src_unpack() {
@@ -82,32 +71,35 @@ src_unpack() {
 	# fix PHP branding
 	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl3-gentoo"|g' -i configure.in
 
+	# fix a GCC4 compile bug in XMLRPC extension, bug #96813
+	use xmlrpc && epatch "${FILESDIR}/5.0.4/php5.0.4-xmlrcp-ccode.diff"
+
 	# patch to fix pspell extension, bug #99312 (new patch by upstream)
-	use spell && epatch "${FILESDIR}/4.4.0/php4.4.0-pspell-ext-segf.patch"
+	use spell && epatch "${FILESDIR}/5.0.4/php5.0.4-pspell-ext-segf.patch"
 
 	# patch fo fix safe_mode bypass in CURL extension, bug #111032
-	use curl && epatch "${FILESDIR}/4.4.0/php4.4.0-curl_safemode.patch"
+	use curl && epatch "${FILESDIR}/5.0.4/php5.0.4-curl_safemode.patch"
 
 	# patch to fix safe_mode bypass in GD extension, bug #109669
 	if use gd || use gd-external ; then
-		epatch "${FILESDIR}/4.4.0/php4.4.0-gd_safe_mode.patch"
+		epatch "${FILESDIR}/5.0.4/php5.0.4-gd_safe_mode.patch"
 	fi
 
 	# patch open_basedir directory bypass, bug #102943
-	epatch "${FILESDIR}/4.4.0/php4.4.0-fopen_wrappers.patch"
+	epatch "${FILESDIR}/5.0.4/php5.0.4-fopen_wrappers.patch"
 
 	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
-	epatch "${FILESDIR}/4.4.0/php4.4.0-globals_overwrite.patch"
+	epatch "${FILESDIR}/5.0.4/php5.0.4-globals_overwrite.patch"
 
 	# patch phpinfo() XSS vulnerability, bug #111015
-	epatch "${FILESDIR}/4.4.0/php4.4.0-phpinfo_xss.patch"
+	epatch "${FILESDIR}/5.0.4/php5.0.4-phpinfo_xss.patch"
 
 	# patch to fix session.save_path segfault and other issues in
 	# the apache2handler SAPI, bug #107602
-	epatch "${FILESDIR}/4.4.0/php4.4.0-session_save_path-segf.patch"
+	epatch "${FILESDIR}/5.0.4/php5.0.4-session_save_path-segf.patch"
 
 	# patch to fix PCRE library security issues, bug #102373
-	epatch "${FILESDIR}/4.4.0/php4.4.0-pcre-security.patch"
+	epatch "${FILESDIR}/5.0.4/php5.0.4-pcre-security.patch"
 
 	# sobstitute the bundled PCRE library with a fixed version for bug #102373
 	einfo "Updating bundled PCRE library"
@@ -115,7 +107,7 @@ src_unpack() {
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0
-	php4_4-sapi_src_unpack
+	php5_0-sapi_src_unpack
 	PHP_PACKAGE=1
 }
 
@@ -143,99 +135,6 @@ php_determine_sapis() {
 }
 
 src_compile() {
-	if useq fastbuild ; then
-		src_compile_fastbuild
-	else
-		src_compile_normal
-	fi
-}
-
-src_compile_fastbuild() {
-	php_determine_sapis
-
-	build_cli=0
-	build_cgi=0
-	build_apache=0
-
-	for x in ${PHPSAPIS} ; do
-		case ${x} in
-			cli)
-				build_cli=1
-				;;
-			cgi)
-				build_cgi=1
-				;;
-			apache*)
-				build_apache=1
-				;;
-		esac
-	done
-
-	if [[ ${build_cli} = 1 ]] ; then
-		my_conf="${my_conf} --enable-cli"
-	else
-		my_conf="${my_conf} --disable-cli"
-	fi
-
-	if [[ ${build_cgi} = 1 ]] ; then
-		my_conf="${my_conf} --enable-cgi --enable-fastcgi"
-		enable_extension_enable "discard-path" "discard-path" 0
-		enable_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
-	else
-		my_conf="${my_conf} --disable-cgi"
-	fi
-
-	if [[ ${build_apache} = 1 ]] ; then
-		my_conf="${my_conf} --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
-	fi
-
-	# now we know what we are building, build it
-	php4_4-sapi_src_compile
-
-	# to keep the separate php.ini files for each SAPI, we change the
-	# build-defs.h and recompile
-
-	if [[ ${build_cli} = 1 ]] ; then
-		einfo
-		einfo "Building CLI SAPI"
-		einfo
-
-		sed -e 's|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH "/etc/php/cli-php4"|g;' -i main/build-defs.h
-		sed -e 's|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR "/etc/php/cli-php4/ext-active"|g;' -i main/build-defs.h
-		for x in main/main.o main/main.lo main/php_ini.o main/php_ini.lo ; do
-			[[ -f ${x} ]] && rm -f ${x}
-		done
-		make sapi/cli/php || die "Unable to make CLI SAPI"
-		cp sapi/cli/php php-cli || die "Unable to copy CLI SAPI"
-	fi
-	if [[ ${build_cgi} = 1 ]] ; then
-		einfo
-		einfo "Building CGI SAPI"
-		einfo
-
-		sed -e 's|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH "/etc/php/cgi-php4"|g;' -i main/build-defs.h
-		sed -e 's|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR "/etc/php/cgi-php4/ext-active"|g;' -i main/build-defs.h
-		for x in main/main.o main/main.lo main/php_ini.o main/php_ini.lo ; do
-			[[ -f ${x} ]] && rm -f ${x}
-		done
-		make sapi/cgi/php || die "Unable to make CGI SAPI"
-		cp sapi/cgi/php php-cgi || die "Unable to copy CGI SAPI"
-	fi
-	if [[ ${build_apache} = 1 ]] ; then
-		einfo
-		einfo "Building apache${USE_APACHE2} SAPI"
-		einfo
-
-		sed -e "s|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH \"/etc/php/apache${APACHE_VERSION}-php4\"|g;" -i main/build-defs.h
-		sed -e "s|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR \"/etc/php/apache${APACHE_VERSION}-php4/ext-active\"|g;" -i main/build-defs.h
-		for x in main/main.o main/main.lo main/php_ini.o main/php_ini.lo ; do
-			[[ -f ${x} ]] && rm -f ${x}
-		done
-		make || die "Unable to build mod_php"
-	fi
-}
-
-src_compile_normal() {
 	php_determine_sapis
 
 	CLEAN_REQUIRED=0
@@ -250,19 +149,19 @@ src_compile_normal() {
 		case ${x} in
 			cli)
 				my_conf="--enable-cli --disable-cgi"
-				php4_4-sapi_src_compile
+				php5_0-sapi_src_compile
 				cp sapi/cli/php php-cli
 				;;
 			cgi)
 				my_conf="${orig_conf} --disable-cli --enable-cgi --enable-fastcgi"
 				enable_extension_enable "discard-path" "discard-path" 0
 				enable_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
-				php4_4-sapi_src_compile
+				php5_0-sapi_src_compile
 				cp sapi/cgi/php php-cgi
 				;;
 			apache*)
 				my_conf="${orig_conf} --disable-cli --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
-				php4_4-sapi_src_compile
+				php5_0-sapi_src_compile
 				;;
 		esac
 
@@ -273,10 +172,10 @@ src_compile_normal() {
 src_install() {
 	php_determine_sapis
 
-	destdir=/usr/$(get_libdir)/php4
+	destdir=/usr/$(get_libdir)/php5
 
 	# let the eclass do the heavy lifting
-	php4_4-sapi_src_install
+	php5_0-sapi_src_install
 
 	einfo
 	einfo "Installing SAPI(s) ${PHPSAPIS}"
@@ -289,42 +188,41 @@ src_install() {
 				einfo "Installing CLI SAPI"
 				into ${destdir}
 				newbin php-cli php || die "Unable to install ${x} sapi"
-				php4_4-sapi_install_ini
+				php5_0-sapi_install_ini
 				;;
 			cgi)
 				einfo "Installing CGI SAPI"
 				into ${destdir}
 				dobin php-cgi || die "Unable to install ${x} sapi"
-				php4_4-sapi_install_ini
+				php5_0-sapi_install_ini
 				;;
 			apache*)
 				einfo "Installing apache${USE_APACHE2} SAPI"
 				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
 				if [ -n "${USE_APACHE2}" ] ; then
-					einfo "Installing Apache2 config for PHP (70_mod_php.conf)"
+					einfo "Installing Apache2 config for PHP5 (70_mod_php5.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					doins "${FILESDIR}/4-any/apache-2.0/70_mod_php.conf"
+					doins "${FILESDIR}/5.0-any/apache-2.0/70_mod_php5.conf"
 				else
-					einfo "Installing Apache config for PHP (70_mod_php.conf)"
+					einfo "Installing Apache config for PHP5 (70_mod_php5.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					doins "${FILESDIR}/4-any/apache-1.3/70_mod_php.conf"
+					doins "${FILESDIR}/5.0-any/apache-1.3/70_mod_php5.conf"
 				fi
-				php4_4-sapi_install_ini
+				php5_0-sapi_install_ini
 				;;
 		esac
 	done
-
 }
 
 pkg_postinst()
 {
 	# Output some general info to the user
 	if useq apache || useq apache2 ; then
-		APACHE1_MOD_DEFINE="PHP4"
-		APACHE1_MOD_CONF="70_mod_php"
-		APACHE2_MOD_DEFINE="PHP4"
-		APACHE2_MOD_CONF="70_mod_php"
+		APACHE1_MOD_DEFINE="PHP5"
+		APACHE1_MOD_CONF="70_mod_php5"
+		APACHE2_MOD_DEFINE="PHP5"
+		APACHE2_MOD_CONF="70_mod_php5"
 		apache-module_pkg_postinst
 	fi
-	php4_4-sapi_pkg_postinst
+	php5_0-sapi_pkg_postinst
 }

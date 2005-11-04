@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.1-r1.ebuild,v 1.2 2005/11/04 11:19:08 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.0-r4.ebuild,v 1.1 2005/11/04 12:45:21 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
@@ -26,6 +26,9 @@ DESCRIPTION="The PHP language runtime engine"
 
 DEPEND="${DEPEND} app-admin/eselect-php"
 RDEPEND="${RDEPEND} app-admin/eselect-php"
+
+# fixed PCRE library for security issues, bug #102373
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
@@ -77,13 +80,38 @@ src_unpack() {
 	cd "${S}"
 
 	# fix PHP branding
-	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl1-gentoo"|g' -i configure.in
+	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl3-gentoo"|g' -i configure.in
 
-	# patch crash with mod_rewrite in Apache2 SAPI, mentioned in bug #111032
-	epatch "${FILESDIR}/4.4.1/php4.4.1-mod_rewrite-crash.patch"
+	# patch to fix pspell extension, bug #99312 (new patch by upstream)
+	use spell && epatch "${FILESDIR}/4.4.0/php4.4.0-pspell-ext-segf.patch"
 
-	# fix for http://bugs.php.net/bug.php?id=35067
-	epatch "${FILESDIR}/4.4.1/php4.4.1-current_key_by_reference.patch"
+	# patch fo fix safe_mode bypass in CURL extension, bug #111032
+	use curl && epatch "${FILESDIR}/4.4.0/php4.4.0-curl_safemode.patch"
+
+	# patch to fix safe_mode bypass in GD extension, bug #109669
+	if use gd || use gd-external ; then
+		epatch "${FILESDIR}/4.4.0/php4.4.0-gd_safe_mode.patch"
+	fi
+
+	# patch open_basedir directory bypass, bug #102943
+	epatch "${FILESDIR}/4.4.0/php4.4.0-fopen_wrappers.patch"
+
+	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
+	epatch "${FILESDIR}/4.4.0/php4.4.0-globals_overwrite.patch"
+
+	# patch phpinfo() XSS vulnerability, bug #111015
+	epatch "${FILESDIR}/4.4.0/php4.4.0-phpinfo_xss.patch"
+
+	# patch to fix session.save_path segfault and other issues in
+	# the apache2handler SAPI, bug #107602
+	epatch "${FILESDIR}/4.4.0/php4.4.0-session_save_path-segf.patch"
+
+	# patch to fix PCRE library security issues, bug #102373
+	epatch "${FILESDIR}/4.4.0/php4.4.0-pcre-security.patch"
+
+	# sobstitute the bundled PCRE library with a fixed version for bug #102373
+	einfo "Updating bundled PCRE library"
+	rm -rf "${S}/ext/pcre/pcrelib" && mv -f "${WORKDIR}/pcrelib-new" "${S}/ext/pcre/pcrelib" || die "Unable to update the bundled PCRE library"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.4-r3.ebuild,v 1.1 2005/11/03 14:09:24 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.0.5-r4.ebuild,v 1.1 2005/11/04 12:45:21 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
@@ -26,9 +26,6 @@ DESCRIPTION="The PHP language runtime engine"
 
 DEPEND="${DEPEND} app-admin/eselect-php"
 RDEPEND="${RDEPEND} app-admin/eselect-php"
-
-# fixed PCRE library for security issues, bug #102373
-SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-pcrelib-new-secpatch.tar.bz2"
 
 pkg_setup() {
 	# make sure the user has specified a SAPI
@@ -71,39 +68,29 @@ src_unpack() {
 	# fix PHP branding
 	sed -e 's|^EXTRA_VERSION=""|EXTRA_VERSION="-pl3-gentoo"|g' -i configure.in
 
-	# fix a GCC4 compile bug in XMLRPC extension, bug #96813
-	use xmlrpc && epatch "${FILESDIR}/5.0.4/php5.0.4-xmlrcp-ccode.diff"
-
 	# patch to fix pspell extension, bug #99312 (new patch by upstream)
-	use spell && epatch "${FILESDIR}/5.0.4/php5.0.4-pspell-ext-segf.patch"
+	use spell && epatch "${FILESDIR}/5.0.5/php5.0.5-pspell-ext-segf.patch"
 
 	# patch fo fix safe_mode bypass in CURL extension, bug #111032
-	use curl && epatch "${FILESDIR}/5.0.4/php5.0.4-curl_safemode.patch"
+	use curl && epatch "${FILESDIR}/5.0.5/php5.0.5-curl_safemode.patch"
 
 	# patch to fix safe_mode bypass in GD extension, bug #109669
 	if use gd || use gd-external ; then
-		epatch "${FILESDIR}/5.0.4/php5.0.4-gd_safe_mode.patch"
+		epatch "${FILESDIR}/5.0.5/php5.0.5-gd_safe_mode.patch"
 	fi
 
 	# patch open_basedir directory bypass, bug #102943
-	epatch "${FILESDIR}/5.0.4/php5.0.4-fopen_wrappers.patch"
+	epatch "${FILESDIR}/5.0.5/php5.0.5-fopen_wrappers.patch"
 
 	# patch $GLOBALS overwrite vulnerability, bug #111011 and bug #111014
-	epatch "${FILESDIR}/5.0.4/php5.0.4-globals_overwrite.patch"
-
-	# patch phpinfo() XSS vulnerability, bug #111015
-	epatch "${FILESDIR}/5.0.4/php5.0.4-phpinfo_xss.patch"
+	epatch "${FILESDIR}/5.0.5/php5.0.5-globals_overwrite.patch"
 
 	# patch to fix session.save_path segfault and other issues in
 	# the apache2handler SAPI, bug #107602
-	epatch "${FILESDIR}/5.0.4/php5.0.4-session_save_path-segf.patch"
+	epatch "${FILESDIR}/5.0.5/php5.0.5-session_save_path-segf.patch"
 
-	# patch to fix PCRE library security issues, bug #102373
-	epatch "${FILESDIR}/5.0.4/php5.0.4-pcre-security.patch"
-
-	# sobstitute the bundled PCRE library with a fixed version for bug #102373
-	einfo "Updating bundled PCRE library"
-	rm -rf "${S}/ext/pcre/pcrelib" && mv -f "${WORKDIR}/pcrelib-new" "${S}/ext/pcre/pcrelib" || die "Unable to update the bundled PCRE library"
+	# fix a object serialization bug, bug #105374
+	epatch "${FILESDIR}/5.0.5/php5.0.5-obj-serialize.patch"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0
