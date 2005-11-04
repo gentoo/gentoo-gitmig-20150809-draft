@@ -6,3 +6,4 @@ nis
 aqua
 
 emul-linux-x86
+-uclibc
