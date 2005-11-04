@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.3 2005/09/04 12:37:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.9.ebuild,v 1.4 2005/11/04 00:37:01 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -42,6 +42,9 @@ src_compile() {
 	# on some archs
 	unset CFLAGS
 	unset CXXFLAGS
+
+	# See bug #98854, requires access to fonts cache for TeX
+	use doc && addwrite /var/cache/fonts
 
 	econf \
 		$(use_enable static) \
