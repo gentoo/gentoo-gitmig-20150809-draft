@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/sdf2-bundle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/ChangeLog,v 1.9 2005/05/10 23:52:01 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/ChangeLog,v 1.10 2005/11/04 12:59:33 karltk Exp $
+
+*sdf2-bundle-2.3.3 (04 Nov 2005)
+
+  04 Nov 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +sdf2-bundle-2.3.3.ebuild:
+  -m New upstream version. Needed by dev-lang/stratego-0.16.
 
 *sdf2-bundle-2.3 (10 May 2005)
 
