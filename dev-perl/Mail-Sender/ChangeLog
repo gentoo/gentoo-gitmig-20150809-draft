@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Mail-Sender
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.1 2005/11/04 11:17:39 chriswhite Exp $
+
+*Mail-Sender-0.8.10 (04 Nov 2005)
+
+  04 Nov 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +Mail-Sender-0.8.10.ebuild:
+  Initial import into the tree.  Needed for package Eidetic.
+
