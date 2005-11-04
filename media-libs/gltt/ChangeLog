@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gltt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/ChangeLog,v 1.8 2005/07/19 11:32:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/ChangeLog,v 1.9 2005/11/04 16:11:45 seemant Exp $
+
+*gltt-2.5.2-r2 (04 Nov 2005)
+
+  04 Nov 2005; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +gltt-2.5.2-r2.ebuild:
+  Adding metadata, plus a revision bump which uses patches from SuSE's src.rpm
+  -- they fix gcc3 compiling. Additionally, the ebuild is not 64bit multilib
+  friendly and is being tested on amd64
 
   19 Jul 2005; David Holm <dholm@gentoo.org> gltt-2.5.2-r1.ebuild:
   Added to ~ppc.
