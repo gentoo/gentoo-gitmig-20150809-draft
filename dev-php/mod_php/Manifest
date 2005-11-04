@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 921eddffa3b656c7c08da0d0c709622b mod_php-4.4.0-r7.ebuild 7069
 MD5 b7f57c4f896ce046f8a6b4472ddfcb2b mod_php-4.4.0.ebuild 6336
 MD5 68092beafbec1bd1b054a153b834bd13 mod_php-4.4.0-r2.ebuild 7074
@@ -52,3 +55,10 @@ MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
 MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
 MD5 389638f1d46b6c41cd4d87b471572f4b files/4.4.0-a1/70_mod_php.conf 484
 MD5 ee36e31632adb08b7abf70f78b5b2125 files/4.4.0-a2/70_mod_php.conf 485
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDa6+mKRy60XGEcJIRAiKzAKCBDmNjxWx50EduhQbLh1jds2djJQCfQHjC
+xn0TCx37T8jeKdoRUs90KuQ=
+=cezk
+-----END PGP SIGNATURE-----
