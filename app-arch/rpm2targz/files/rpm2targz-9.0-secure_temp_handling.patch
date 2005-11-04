@@ -1,13 +1,5 @@
---- rpm2targz.orig	2005-06-15 10:19:12.000000000 -0400
-+++ rpm2targz	2005-06-15 12:55:10.000000000 -0400
-@@ -2,6 +2,7 @@
- # Copyright 1997, 1998 Patrick Volkerding, Moorhead, MN USA
- # Copyright 2002 Slackware Linux, Inc., Concord, CA USA
- # All rights reserved.
-+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/files/rpm2targz-9.0-secure_temp_handling.patch,v 1.1 2005/06/25 12:40:21 liquidx Exp $
- #
- # Redistribution and use of this script, with or without modification, is
- # permitted provided that the following conditions are met:
+--- rpm2targz
++++ rpm2targz
 @@ -23,20 +24,24 @@
  
  # debug switch to allow to bypass use of rpm2cpio provided by the rpm package
