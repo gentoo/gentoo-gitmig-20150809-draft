@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6.ebuild,v 1.8 2005/07/09 22:58:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6.ebuild,v 1.9 2005/11/04 16:22:05 wolf31o2 Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="Simple Direct Media Layer Mixer Library"
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="mp3 mikmod vorbis"
 
 DEPEND=">=media-libs/libsdl-1.2.5
-	>=media-libs/smpeg-0.4.4-r1
+	mp3? ( >=media-libs/smpeg-0.4.4-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 media-libs/libogg )
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )"
 

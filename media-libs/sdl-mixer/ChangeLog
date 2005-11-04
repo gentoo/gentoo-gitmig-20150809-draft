@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.29 2005/10/10 15:01:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.30 2005/11/04 16:22:05 wolf31o2 Exp $
+
+  04 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  sdl-mixer-1.2.5-r1.ebuild, sdl-mixer-1.2.6.ebuild,
+  sdl-mixer-1.2.6-r1.ebuild:
+  Made smpeg conditional based on mp3 USE flag and closing bug #111395.
 
 *sdl-mixer-1.2.6-r1 (10 Oct 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6-r1.ebuild,v 1.2 2005/10/10 15:02:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.6-r1.ebuild,v 1.3 2005/11/04 16:22:05 wolf31o2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mp3 mikmod vorbis"
 
 DEPEND=">=media-libs/libsdl-1.2.5
-	>=media-libs/smpeg-0.4.4-r1
+	mp3? ( >=media-libs/smpeg-0.4.4-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 media-libs/libogg )
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )"
 
