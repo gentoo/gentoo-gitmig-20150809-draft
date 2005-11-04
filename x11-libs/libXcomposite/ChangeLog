@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.7 2005/10/30 17:42:46 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.8 2005/11/04 17:57:10 joshuabaergen Exp $
+
+  04 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -libXcomposite-0.2.0.ebuild:
+  Drop old version.
 
   30 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   libXcomposite-0.2.1.ebuild:
