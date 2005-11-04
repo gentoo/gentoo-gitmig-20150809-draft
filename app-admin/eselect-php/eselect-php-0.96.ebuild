@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/eselect-php-0.96.ebuild,v 1.5 2005/11/01 23:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/eselect-php-0.96.ebuild,v 1.6 2005/11/04 02:49:09 vapier Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://svn.gnqs.org/projects/gentoo-php-overlay/wiki/InstallPhpEselect
 SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 DEPEND="app-admin/eselect"
 

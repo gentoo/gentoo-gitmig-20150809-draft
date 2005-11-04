@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 7d502024f710f60e8f278fa8c3f38dcf ChangeLog 562
-MD5 59bc27f655dc5f5f92b1f97428f1a53d eselect-php-0.96.ebuild 681
+MD5 bc74643e0abe797db33803627daed99b eselect-php-0.96.ebuild 694
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-eselect-php-0.96 0
 MD5 2c2f1ee6a6de5732b601b8444099aa18 files/php-cgi.eselect 4261
 MD5 0e16c19617c890564754bba88e29ba78 files/php-devel.eselect 4275
@@ -11,7 +11,7 @@ MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDaACZgIKl8Uu19MoRAq3zAJ43GfEoK6HYr6DdTKfEKxidRfx40QCfUPc2
-gih2+kI346rkOGGuQQRhl4Q=
-=5Neb
+iD8DBQFDasxSgIKl8Uu19MoRAqVhAJ4mO/hcxrwrVcmRDDSn1VI4DJA7BACfVmar
+7d0I3BfVOpnSKoaojP+zYzw=
+=vbmE
 -----END PGP SIGNATURE-----
