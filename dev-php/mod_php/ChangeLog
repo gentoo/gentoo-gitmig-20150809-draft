@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.283 2005/11/04 10:58:43 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.284 2005/11/04 12:12:57 chtekk Exp $
+
+*mod_php-4.4.0-r9 (04 Nov 2005)
+*mod_php-4.4.0-r8 (04 Nov 2005)
+*mod_php-4.3.11-r4 (04 Nov 2005)
+
+  04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  +mod_php-4.3.11-r4.ebuild, +mod_php-4.4.0-r8.ebuild,
+  +mod_php-4.4.0-r9.ebuild:
+  Revbump to fix http://bugs.php.net/bug.php?id=35067.
 
   04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
   files/php4.3.11-globals_overwrite.patch,

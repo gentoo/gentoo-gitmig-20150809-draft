@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.106 2005/11/04 10:57:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.107 2005/11/04 12:11:00 chtekk Exp $
+
+*php-cgi-4.4.0-r5 (04 Nov 2005)
+*php-cgi-4.3.11-r5 (04 Nov 2005)
+
+  04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  +php-cgi-4.3.11-r5.ebuild, +php-cgi-4.4.0-r5.ebuild:
+  Revbump to fix http://bugs.php.net/bug.php?id=35067.
 
   04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
   files/php4.3.11-globals_overwrite.patch,
