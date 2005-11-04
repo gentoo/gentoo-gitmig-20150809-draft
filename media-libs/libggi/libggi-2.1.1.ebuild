@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.2 2005/06/04 20:03:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.3 2005/11/04 01:11:12 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -19,9 +19,15 @@ DEPEND=">=media-libs/libgii-0.9.0
 	aalib? ( >=media-libs/aalib-1.2-r1 )
 	dga? ( virtual/x11 )"
 
-src_compile() {
-	elibtoolize
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+	elibtoolize
+}
+
+src_compile() {
 	local myconf=""
 
 	use svga \
@@ -55,11 +61,6 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die "make install failed"
-
-	# This la file seems to bug mesa.
-# Hopefully libtoolize will fix for mesa-3.5.  The *.la needed
-# for mesa-5.0 in the works - <azarah@gentoo.org> (28 Dec 2002)
-#	rm ${D}/usr/$(get_libdir)/*.la
 
 	dodoc ChangeLog* FAQ NEWS README TODO
 	docinto txt
