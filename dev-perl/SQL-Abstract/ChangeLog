@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/SQL-Abstract
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.1 2005/11/04 18:37:57 chriswhite Exp $
+
+*SQL-Abstract-1.20 (04 Nov 2005)
+
+  04 Nov 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +SQL-Abstract-1.20.ebuild:
+  Initial import into the tree for Apache-AuthTicket dep.
+
