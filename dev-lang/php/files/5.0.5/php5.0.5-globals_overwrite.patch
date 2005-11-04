@@ -92,17 +92,6 @@
  
  #include "php.h"
  #include "php_streams.h"
-@@ -742,8 +743,8 @@
- 	PHP_FE(prev,					first_arg_force_ref)
- 	PHP_FE(next,					first_arg_force_ref)
- 	PHP_FE(reset,					first_arg_force_ref)
--	PHP_FE(current,					first_arg_force_ref)
--	PHP_FE(key,						first_arg_force_ref)
-+	PHP_FE(current,					NULL)
-+	PHP_FE(key,					NULL)
- 	PHP_FE(min,																NULL)
- 	PHP_FE(max,																NULL)
- 	PHP_FE(in_array,														NULL)
 @@ -3076,11 +3077,25 @@
  	prefix = va_arg(args, char *);
  	prefix_len = va_arg(args, uint);

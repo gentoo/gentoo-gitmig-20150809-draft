@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.1-r1.ebuild,v 1.1 2005/11/03 23:54:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.1-r1.ebuild,v 1.2 2005/11/04 11:19:08 chtekk Exp $
 
 IUSE="cgi cli discard-path force-cgi-redirect"
 KEYWORDS="~x86"
@@ -81,6 +81,9 @@ src_unpack() {
 
 	# patch crash with mod_rewrite in Apache2 SAPI, mentioned in bug #111032
 	epatch "${FILESDIR}/4.4.1/php4.4.1-mod_rewrite-crash.patch"
+
+	# fix for http://bugs.php.net/bug.php?id=35067
+	epatch "${FILESDIR}/4.4.1/php4.4.1-current_key_by_reference.patch"
 
 	# we call the eclass src_unpack, but don't want ${A} to be unpacked again
 	PHP_PACKAGE=0

@@ -1,4 +1,4 @@
-MD5 77d8ce70844fee5be60623205d302567 ChangeLog 8608
+MD5 4e347979e1038dbddfe1bba47fb8972a ChangeLog 8979
 MD5 389638f1d46b6c41cd4d87b471572f4b files/4-any/apache-1.3/70_mod_php.conf 484
 MD5 ee36e31632adb08b7abf70f78b5b2125 files/4-any/apache-2.0/70_mod_php.conf 485
 MD5 f0acca9c6387b8ca139d2849665bd16f files/4-any/php4-fastbuild.patch 9012
@@ -10,7 +10,7 @@ MD5 f2ab14c7be0482a4f25fc438fa6f5399 files/4-any/php4-with-iodbc.diff 443
 MD5 09637e8f6f861b1f3698ec0390ec6b57 files/4.3.11/php4.3.11-curl_safemode.patch 5129
 MD5 cb36a386184ed6a887f62d2205f57173 files/4.3.11/php4.3.11-fopen_wrappers.patch 1481
 MD5 4db8e0b66cde22dd4e4d9f51e59f6098 files/4.3.11/php4.3.11-gd_safe_mode.patch 1573
-MD5 480060d9a5de72030e2fce541e2830f8 files/4.3.11/php4.3.11-globals_overwrite.patch 18395
+MD5 89d12226b1726b681df274be79043411 files/4.3.11/php4.3.11-globals_overwrite.patch 18011
 MD5 3f80d0c6c58fd4ea02b7efdf69265721 files/4.3.11/php4.3.11-pcre-security.patch 1667
 MD5 43b4113d1fb159955b0d5ed307cac143 files/4.3.11/php4.3.11-phpinfo_xss.patch 2518
 MD5 48d9c939434e9b01d0696410d59c503c files/4.3.11/php4.3.11-pspell-ext-segf.patch 8482
@@ -18,11 +18,12 @@ MD5 17b906361a7ab8a3008446871623eeae files/4.3.11/php4.3.11-session_save_path-se
 MD5 0429f8334ba4bab659a2e41ce5debc80 files/4.4.0/php4.4.0-curl_safemode.patch 1937
 MD5 cb36a386184ed6a887f62d2205f57173 files/4.4.0/php4.4.0-fopen_wrappers.patch 1481
 MD5 a540c54ba22dc16b157edcf1ecb6258f files/4.4.0/php4.4.0-gd_safe_mode.patch 883
-MD5 ac3e0691fbecf920d030a35bc8e02109 files/4.4.0/php4.4.0-globals_overwrite.patch 10115
+MD5 7c45198e6118d82c680e9ed56e7d1df0 files/4.4.0/php4.4.0-globals_overwrite.patch 9731
 MD5 5f1f48c87cafe0949e73ef064c99e5ed files/4.4.0/php4.4.0-pcre-security.patch 1741
 MD5 57644300fb52ad610fa52ae8ba6b522b files/4.4.0/php4.4.0-phpinfo_xss.patch 1284
 MD5 48d9c939434e9b01d0696410d59c503c files/4.4.0/php4.4.0-pspell-ext-segf.patch 8482
 MD5 83fb9efb602c178741ea2e40e13b014f files/4.4.0/php4.4.0-session_save_path-segf.patch 4132
+MD5 e2dde7269b4d3315f2030622f016478c files/4.4.1/php4.4.1-current_key_by_reference.patch 864
 MD5 7a68ebae340c5eb9fdb97fa8e2e3870f files/4.4.1/php4.4.1-mod_rewrite-crash.patch 940
 MD5 96ed6efe383833dbb880fef3b6c562bb files/5.0-any/apache-1.3/70_mod_php5.conf 524
 MD5 21bc6cc85150b5a5385f213d45efbe67 files/5.0-any/apache-2.0/70_mod_php5.conf 525
@@ -35,7 +36,7 @@ MD5 f2ab14c7be0482a4f25fc438fa6f5399 files/5.0-any/php5-with-iodbc.diff 443
 MD5 9a0a0587350d748d5fbbb3d34da7d488 files/5.0.4/php5.0.4-curl_safemode.patch 5262
 MD5 2eddbf70a0b940789a0e68f029beb2b3 files/5.0.4/php5.0.4-fopen_wrappers.patch 1554
 MD5 89b001b449fdd567ffba6aaf2a3e804f files/5.0.4/php5.0.4-gd_safe_mode.patch 1216
-MD5 923a659668d907e94d093486f7df6b94 files/5.0.4/php5.0.4-globals_overwrite.patch 32692
+MD5 c5e906110383e3e5157ead566c2f5797 files/5.0.4/php5.0.4-globals_overwrite.patch 32308
 MD5 03a57319b93ee44a2fe159a0fb67592e files/5.0.4/php5.0.4-pcre-security.patch 1659
 MD5 2c557f6641927cbf40e25abf71e46a1b files/5.0.4/php5.0.4-phpinfo_xss.patch 2476
 MD5 ab931f65aefab4da99c6353b2c503d70 files/5.0.4/php5.0.4-pspell-ext-segf.patch 9422
@@ -44,7 +45,7 @@ MD5 e157161249ad2b217dc532f5289ba74b files/5.0.4/php5.0.4-xmlrcp-ccode.diff 750
 MD5 3a3e34b20c95ab90b8a9ceeb787462bd files/5.0.5/php5.0.5-curl_safemode.patch 2061
 MD5 9e31c5edb0ded1d57ed90859d3ef168c files/5.0.5/php5.0.5-fopen_wrappers.patch 942
 MD5 8f52c6df24afb096109118582c1bf3eb files/5.0.5/php5.0.5-gd_safe_mode.patch 875
-MD5 fe69695583b11b8be29dd59318f77f68 files/5.0.5/php5.0.5-globals_overwrite.patch 6671
+MD5 54462370e3ddc7b0a1f46509ad43120c files/5.0.5/php5.0.5-globals_overwrite.patch 6287
 MD5 b95f630e058c1b0f9cc47e186ef182cf files/5.0.5/php5.0.5-obj-serialize.patch 1364
 MD5 ab931f65aefab4da99c6353b2c503d70 files/5.0.5/php5.0.5-pspell-ext-segf.patch 9422
 MD5 8845848ffde7cfee1a3f57f6feaae8dd files/5.0.5/php5.0.5-session_save_path-segf.patch 4090
@@ -64,6 +65,6 @@ MD5 96fdb35fc6f5b775c569db88d89200d7 files/digest-php-5.0.5-r3 143
 MD5 c58d07ca1c1235bbad9bccaec96fc062 metadata.xml 157
 MD5 dd4e596a3be26f261e3a5a52330f9b2d php-4.3.11-r3.ebuild 9240
 MD5 466de8a0d0e1860f4487428a1c7106d5 php-4.4.0-r3.ebuild 9235
-MD5 08c3a9a0ec9cb4a249f8ed4041914757 php-4.4.1-r1.ebuild 7874
+MD5 1f67a51ce9e57a180ad4db2017ede648 php-4.4.1-r1.ebuild 7991
 MD5 6e8ab5a55a1bc9eda90d0f8fa7e93b32 php-5.0.4-r3.ebuild 6293
 MD5 6ad12146831f0ab9b9bae8a5f6bfe566 php-5.0.5-r3.ebuild 5654

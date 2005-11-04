@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.51 2005/11/03 23:54:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.52 2005/11/04 11:19:08 chtekk Exp $
+
+  04 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  files/4.3.11/php4.3.11-globals_overwrite.patch,
+  files/4.4.0/php4.4.0-globals_overwrite.patch,
+  +files/4.4.1/php4.4.1-current_key_by_reference.patch,
+  files/5.0.4/php5.0.4-globals_overwrite.patch,
+  files/5.0.5/php5.0.5-globals_overwrite.patch, php-4.4.1-r1.ebuild:
+  Fix for http://bugs.php.net/bug.php?id=35067.
 
 *php-4.4.1-r1 (03 Nov 2005)
 
