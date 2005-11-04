@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.12 2005/01/17 19:17:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.13 2005/11/04 01:05:18 dsd Exp $
 
 inherit eutils
 
@@ -45,6 +45,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/mpeg4ip-1.1-gcc3.4.patch
 	epatch ${FILESDIR}/mpeg4ip-1.1-gentoo-fixes.patch
+
+	# ships with old version of libtool, causes problems (bug #98133)
+	libtoolize --copy --force
 }
 
 src_compile() {
