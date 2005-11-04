@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rt2570
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.1 2005/11/04 21:47:07 genstef Exp $
+
+*rt2570-1.1.0_beta1 (04 Nov 2005)
+
+  04 Nov 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +rt2570-1.1.0_beta1.ebuild:
+  New ebuild contirbutet by kang@gentoo.org
+
