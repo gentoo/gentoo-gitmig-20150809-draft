@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.205 2005/11/04 18:57:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.206 2005/11/04 19:24:50 hansmi Exp $
+
+  04 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> php-4.3.11-r4.ebuild,
+  php-4.4.0-r4.ebuild:
+  Stable on hppa, ppc. See bug #111032.
 
   04 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> php-4.3.11-r4.ebuild,
   php-4.4.0-r4.ebuild:
