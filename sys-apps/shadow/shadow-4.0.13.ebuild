@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.13.ebuild,v 1.1 2005/10/10 22:42:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.13.ebuild,v 1.2 2005/11/04 23:41:54 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*" #~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls pam selinux skey nousuid"
 
 RDEPEND=">=sys-libs/cracklib-2.7-r3
@@ -201,10 +201,11 @@ src_install() {
 		'(' -name id.1 -o -name passwd.5 -o -name getspnam.3 ')' \
 		-exec rm {} \;
 
-	cd "${S}"/doc
-	dodoc INSTALL README WISHLIST
-	docinto txt
-	dodoc HOWTO LSM README.* *.txt
+	cd "${S}"
+	dodoc ChangeLog NEWS TODO
+	newdoc README README.download
+	cd doc
+	dodoc HOWTO LSM README* WISHLIST *.txt
 }
 
 pkg_preinst() {
@@ -212,11 +213,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	use pam || return 0;
+	use pam || return 0
 
 	if [ "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]; then
-		local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
-		local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
+		local CHECK1=$(md5sum "${ROOT}"/etc/pam.d/system-auth | cut -d ' ' -f 1)
+		local CHECK2=$(md5sum "${ROOT}"/etc/pam.d/system-auth.new | cut -d ' ' -f 1)
 
 		if [ "${CHECK1}" != "${CHECK2}" ]; then
 			ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
@@ -226,13 +227,13 @@ pkg_postinst() {
 			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
 			echo
 
-			cp -pPR ${ROOT}/etc/pam.d/system-auth \
-				${ROOT}/etc/pam.d/system-auth.bak;
-			mv -f ${ROOT}/etc/pam.d/system-auth.new \
-				${ROOT}/etc/pam.d/system-auth
-			rm -f ${ROOT}/etc/pam.d/._cfg????_system-auth
+			cp -pPR "${ROOT}"/etc/pam.d/system-auth \
+				"${ROOT}"/etc/pam.d/system-auth.bak;
+			mv -f "${ROOT}"/etc/pam.d/system-auth.new \
+				"${ROOT}"/etc/pam.d/system-auth
+			rm -f "${ROOT}"/etc/pam.d/._cfg????_system-auth
 		else
-			rm -f ${ROOT}/etc/pam.d/system-auth.new
+			rm -f "${ROOT}"/etc/pam.d/system-auth.new
 		fi
 	fi
 }
