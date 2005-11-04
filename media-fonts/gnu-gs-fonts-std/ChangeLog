@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/gnu-gs-fonts-std
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.8 2004/10/27 19:11:42 kito Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/gnu-gs-fonts-std/ChangeLog,v 1.9 2005/11/04 10:00:44 grobian Exp $
+
+  04 Nov 2005; Fabian Groffen <grobian@gentoo.org>
+  gnu-gs-fonts-std-8.11.ebuild:
+  Marked ppc-macos as deep dependency of bug #109997
 
   27 Oct 2004; Kito <kito@gentoo.org> gnu-gs-fonts-std-8.11.ebuild:
   added ~ppc-macos
