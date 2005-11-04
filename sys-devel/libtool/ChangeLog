@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.91 2005/10/18 13:03:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.92 2005/11/04 02:33:25 vapier Exp $
+
+*libtool-1.5.20-r1 (04 Nov 2005)
+
+  04 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.5.20/libtool-1.5.20-version-checking.patch,
+  +libtool-1.5.20-r1.ebuild:
+  Dont use non-portable character classes in Gentoo sanity check #111353 by
+  Erik Månsson.
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> libtool-1.5.20.ebuild:
   Mark 1.5.20 stable on alpha
