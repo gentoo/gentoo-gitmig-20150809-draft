@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.13.ebuild,v 1.1 2005/11/04 01:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-2.13.ebuild,v 1.2 2005/11/04 23:23:26 vapier Exp $
 
 inherit eutils
 
@@ -40,4 +40,10 @@ src_compile() { :; }
 src_install() {
 	make install prefix="${D}" || die
 	dodoc man-pages-*.Announce README Changes*
+}
+
+pkg_postinst() {
+	einfo "If you don't have a makewhatis cronjob, then you"
+	einfo "should update the whatis database yourself:"
+	einfo " # makewhatis"
 }
