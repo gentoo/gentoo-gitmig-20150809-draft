@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.111 2005/11/04 20:36:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.112 2005/11/04 20:50:37 ferdy Exp $
+
+  04 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  php-cgi-4.4.0-r5.ebuild:
+  stable on alpha wrt bug #111032
 
   04 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
   php-cgi-4.3.11-r5.ebuild:

@@ -7,9 +7,9 @@ MD5 56118eb0c5d90c47c6f73c9db6eccb69 php-cgi-4.4.0-r1.ebuild 972
 MD5 f03786f41f7eb2be4bf8854c52d09f97 php-cgi-4.3.11-r2.ebuild 1866
 MD5 daa51bac42996b36311b5c6049f95b4e php-cgi-4.4.0.ebuild 972
 MD5 0c9a7ada8a0d25557a23085f12325d39 php-cgi-4.3.11-r4.ebuild 2792
-MD5 8f58954bb70aef51959ea4465467048e php-cgi-4.4.0-r5.ebuild 2630
+MD5 2f24b01b3234a2c56e517b9cd7a4f478 php-cgi-4.4.0-r5.ebuild 2628
 MD5 ff97ecdd5c6b9744c3770bf335bb1157 php-cgi-4.3.11-r1.ebuild 1116
-MD5 e90f79947b5c0e630ca1929bade6ac21 ChangeLog 16596
+MD5 256255aaf12a90db782a2035641de18e ChangeLog 16711
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 d9deaac08b78b996c648e1cbc9640ffa php-cgi-4.4.0-r2.ebuild 1711
 MD5 3d3986815e0e06adce512b36959e6f26 files/php4.4.0-session_save_path-segf.patch 4155
@@ -44,7 +44,7 @@ MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDa8Z4ViELBEf1JB0RAlzUAJ9XmCrMaRYb16EB8vkdds4NhLeZeACfQs4m
-RyVzbAYch/bOEHJpGsiDAr8=
-=7Zz5
+iD8DBQFDa8m4ViELBEf1JB0RAs27AJ9oxcoCA6lCWwaRF75YNbzxnYFeFwCfX53T
+xv8go+Nd0fEntfVlxSTnyG8=
+=gISr
 -----END PGP SIGNATURE-----
