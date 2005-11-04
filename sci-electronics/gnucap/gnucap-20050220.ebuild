@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20050220.ebuild,v 1.2 2005/04/08 14:57:05 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20050220.ebuild,v 1.3 2005/11/04 21:37:10 plasmaroo Exp $
 
 inherit eutils
 
@@ -32,6 +32,5 @@ src_install () {
 	fperms 755 /usr/bin/gnucap-ibis
 
 	cd doc
-	dodoc COPYING acs-tutorial whatisit history
 	doman gnucap.1 gnucap-ibis.1
 }
