@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 deab399ebb1671b699edb07aaea096d5 ChangeLog 907
 MD5 cb0fdae0bb069768434547df12ae42b8 files/digest-transaction-simple-1.1.1 75
 MD5 c392d1c1d4f609a4e5fa29ab09ecf579 files/digest-transaction-simple-1.3.0 72
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 efe848a664a8b2545df0f6040b23378c transaction-simple-1.1.1.ebuild 847
 MD5 71c581edec0beeed513c4301a60b55da transaction-simple-1.3.0.ebuild 519
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDa9ROCRZPokWLroQRAoW3AJ9VgaRzcgDmaEgv/oEY/SJZQd1mngCdF2B6
+6A99U42paEQje3KKfLTG6ko=
+=0PDx
+-----END PGP SIGNATURE-----
