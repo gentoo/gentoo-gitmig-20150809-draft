@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.42 2005/10/16 00:27:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.43 2005/11/04 19:57:34 gustavoz Exp $
+
+  04 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libquicktime-0.9.6-r1.ebuild, libquicktime-0.9.7-r1.ebuild:
+  ~sparc wrt #111137
 
 *libquicktime-0.9.7-r1 (16 Oct 2005)
 
