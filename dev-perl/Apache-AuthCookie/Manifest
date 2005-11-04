@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b41f0967943014b58fb1c06764a55d03 Apache-AuthCookie-3.08.ebuild 554
+MD5 29158bee026e87ae94b83bbecd5957e1 ChangeLog 447
+MD5 9bd5e78ad25e35d2f1a1abf9b11f3646 files/digest-Apache-AuthCookie-3.08 73
+MD5 a594262873480cace08512ed7c261956 metadata.xml 596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDa6enFdQwWVoAgN4RAnl8AJ9ykHulqaQGGX0/mN4/iFskzlsTjwCdHv5x
+DBLci8hHccG6p2iFxgzC+Yo=
+=Ux4g
+-----END PGP SIGNATURE-----
