@@ -1,6 +1,16 @@
-MD5 934c27300f670d69ad2fda9fd88f3b30 ChangeLog 1375
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b4cb645aefb4077cec6a874c184cd23 ChangeLog 1492
 MD5 4ccda06d3205ecd6959163d9054067dc files/digest-fireflies-2.06-r1 66
 MD5 8f06653a37476519552c8ed711defae0 files/fireflies-2.06-Make.include.in.patch 667
 MD5 657df9334348d7fe6574bb1607f08b01 files/fireflies-2.06-configure.patch 412
-MD5 d53ac4a5d9a8e1f170d1fe5df639c2a3 fireflies-2.06-r1.ebuild 961
+MD5 b06e69280b77b426c49a156fabd9dcfe fireflies-2.06-r1.ebuild 960
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDbL1twUpWvClEHQoRAqLkAJ9X8GlmLYVLaqlQYg6jqv8lAG23nACdHc8S
+wHHJ+SZ33nYNSaRTiWhtfwY=
+=2KCe
+-----END PGP SIGNATURE-----

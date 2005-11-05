@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fireflies
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.9 2005/11/01 14:36:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.10 2005/11/05 14:09:42 metalgod Exp $
+
+  05 Nov 2005; Luis Medinas <metalgod@gentoo.org> fireflies-2.06-r1.ebuild:
+  Marked Stable on amd64. Bug #111144.
 
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org>
   fireflies-2.06-r1.ebuild:
