@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zopeinterface
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.10 2005/08/23 20:16:03 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.11 2005/11/05 21:42:09 ferdy Exp $
+
+  05 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  zopeinterface-3.0.1.ebuild:
+  marked ~alpha as a dep of twisted
 
   23 Aug 2005; Jodok Batlogg <batlogg@gentoo.org>; zopeinterface-3.0.1.ebuild:
   QA #103487, cp parameters
