@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.33 2005/10/18 20:21:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.34 2005/11/05 21:11:43 compnerd Exp $
+
+*ibm-jdk-bin-1.4.2.03 (06 Nov 2005)
+
+  06 Nov 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  -files/ibm-jdk-bin-1.4.1, +files/ibm-jdk-bin-1.4.2.03,
+  +ibm-jdk-bin-1.4.2.03.ebuild:
+  Updating to latest SR, with fetch restrictions, and renaming for sources.
+  This should resolve the issue with digests.  Resolves bug #106839 and bug
+  #108251 .
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> ibm-jdk-bin-1.4.2.ebuild:
   Warn about deprecated browserplugin useflag
