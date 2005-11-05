@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-0.5.ebuild,v 1.7 2005/08/07 13:21:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-0.5.ebuild,v 1.8 2005/11/05 20:08:04 greg_g Exp $
 
 IUSE="arts"
 
 inherit kde eutils
 
-DESCRIPTION="A simple id3 tag editor for QT/KDE with automatic string replacements, case conversion etc."
+DESCRIPTION="A simple ID3 tag editor for QT/KDE."
 HOMEPAGE="http://kid3.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kid3/${P}.tar.gz"
 
