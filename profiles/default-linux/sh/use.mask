@@ -72,3 +72,7 @@ pam_console
 emacs
 xemacs
 ldap
+
+# MATSUU Takuto <matsuu@gentoo.org>
+# Bug 111178
+mysql
