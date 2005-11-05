@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r3.ebuild,v 1.1 2005/10/30 21:19:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r3.ebuild,v 1.2 2005/11/05 12:32:13 chrb Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 		-e "/^BUILD=/s:=.*:=$(config_use debug debug release):" \
 		-e "/^PRECISION=/s:=.*:=$(config_use double-precision DOUBLE SINGLE):" \
 		config/user-settings
+	sed -i -e "s/inline_[\t]*void[\t*]ResetCountDown/void ResetCountDown/" OPCODE/OPC_TreeCollider.h
 }
 
 src_compile() {

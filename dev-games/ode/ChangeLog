@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.15 2005/10/30 21:19:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.16 2005/11/05 12:32:13 chrb Exp $
+
+  05 Nov 2005; <chrb@gentoo.org> ode-0.5-r3.ebuild:
+  fix for gcc-3.4
 
 *ode-0.5-r3 (30 Oct 2005)
 
