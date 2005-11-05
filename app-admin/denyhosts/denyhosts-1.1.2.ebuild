@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-1.1.2.ebuild,v 1.1 2005/10/07 20:36:37 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-1.1.2.ebuild,v 1.2 2005/11/05 21:13:44 ferdy Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://denyhosts.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${my_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3"
 S="${WORKDIR}/${my_P}"
