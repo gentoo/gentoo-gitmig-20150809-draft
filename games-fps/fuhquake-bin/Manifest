@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 abd4ff108a47ce60557d07da7fa38981 ChangeLog 357
 MD5 073dc58c3b27fc65dbeafdf60586cb34 files/digest-fuhquake-bin-0.31 204
 MD5 08e2a5c52f2df8e38273c71c814edf69 fuhquake-bin-0.31.ebuild 1344
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbTbLgIKl8Uu19MoRAkUrAJ9tSgd/J6pW2frF/sd9gVoCPvB9FgCeMtpg
+t0xbHq5uc5mKiRQJi8yxAYk=
+=lL68
+-----END PGP SIGNATURE-----

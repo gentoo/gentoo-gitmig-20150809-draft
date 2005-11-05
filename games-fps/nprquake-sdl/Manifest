@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f9e69135df2c76e9e8697016cd8cf6d ChangeLog 622
 MD5 a473dd8dee18c2b7dd9bac29426881f1 files/1-gentoo.patch 2983
 MD5 5288c4fce9f6009f1859550578c8728d files/digest-nprquake-sdl-1-r1 65
 MD5 d2647edc1480507da3e0a528287eb1d4 metadata.xml 881
 MD5 f7fae64ebfb0c687678e54b13f2b04b1 nprquake-sdl-1-r1.ebuild 1149
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbTQwgIKl8Uu19MoRAq/MAJ9cu0EBR4rJERwdbubuUME2R8xavQCfb1f+
++EwIx9VHWwxb8YMobd0VlyI=
+=XNCN
+-----END PGP SIGNATURE-----

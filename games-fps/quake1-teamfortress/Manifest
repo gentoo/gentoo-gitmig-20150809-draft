@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7b948bd460bb7b305c1142042900ee61 ChangeLog 494
 MD5 65dad59cb070033870d2081ff178ece2 files/digest-quake1-teamfortress-2.9 109
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 a8e2201703529ae56734421241d4a3d0 quake1-teamfortress-2.9.ebuild 976
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbTWugIKl8Uu19MoRAqdkAJ0a9BqrpTuCBAOqGAAxPQqRBOPDVQCfVnoG
+6ypcwity5VZ+l/4IhpPcCv0=
+=GRLi
+-----END PGP SIGNATURE-----

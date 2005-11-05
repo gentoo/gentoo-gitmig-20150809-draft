@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 14a5e32ccc5846d371508639e4a61ec7 ChangeLog 623
 MD5 78130f5529419a6803cdb7578f9cb8ab files/digest-wmquake-1.1 64
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 2815c4cf6c3dccba4f09602d2116e9d3 wmquake-1.1.ebuild 1463
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbTaLgIKl8Uu19MoRAs5iAJ48N6VGq/DEKcAplSzLSKb5XuPiAQCeJOor
+KbJDkqbs8IlPZsj1KrcSGM8=
+=EJEG
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3aba9c6bf0d9ea5e4c4d46ba875941a8 ChangeLog 824
 MD5 9a02c13ded49f8e230aa3f96e01052c7 files/1.04-glhax.patch 1091
 MD5 101db2b4d5a51dc6f63c6c5433dee3c0 files/digest-tenebrae-1.04 125
 MD5 b251632170bb367c509d598998524a4b metadata.xml 625
 MD5 dc13c9e746a42e76e98bc506dd6ced9c tenebrae-1.04.ebuild 1497
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbTZGgIKl8Uu19MoRAgebAJ97q+tLyVXYp8zZqa96Gk8lLj1PQwCfcODV
+jYZS8VgBQIemc4O9rP3mOCo=
+=s6RH
+-----END PGP SIGNATURE-----
