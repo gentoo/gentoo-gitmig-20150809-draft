@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08595cef0633ef510bb4a9d799c32de3 upx-1.24-r1.ebuild 686
-MD5 ddcd889fb1b190dfd37ab62b64557adf upx-1.25.ebuild 679
-MD5 7e8319bc7f836b4c1723f2898551fed2 ChangeLog 1790
+MD5 d565a6d6510175a390a07d693cdb88bf ChangeLog 1913
 MD5 15c97f7637ba2e1497c15ab6c6945022 files/digest-upx-1.24-r1 66
 MD5 01501b975c2cda710ad177d925408b93 files/digest-upx-1.25 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDJO8AgIKl8Uu19MoRArTXAJ4k5ZNb1H/5LawBVIkCOOU6ULOLsACfUdzo
-qFyI5PN1zVuKa94ZMe1gMaw=
-=McSo
------END PGP SIGNATURE-----
+MD5 9f33bc32a5b86f033c2004768f1bf43c files/digest-upx-1.93 71
+MD5 08595cef0633ef510bb4a9d799c32de3 upx-1.24-r1.ebuild 686
+MD5 ddcd889fb1b190dfd37ab62b64557adf upx-1.25.ebuild 679
+MD5 41a98ab17bed2d7ea359cbda764ec9f8 upx-1.93.ebuild 789

@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/upx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.13 2005/09/03 13:14:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.14 2005/11/05 07:56:20 matsuu Exp $
+
+*upx-1.93 (05 Nov 2005)
+
+  05 Nov 2005; MATSUU Takuto <matsuu@gentoo.org> +upx-1.93.ebuild:
+  Version bumped. Bug 103833.
 
   03 Sep 2005; MATSUU Takuto <matsuu@gentoo.org> upx-1.25.ebuild:
   Stable on x86. Bug 103831.
