@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.2 2005/11/05 22:30:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.3 2005/11/05 22:55:18 vapier Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="iD Software's Quake 1 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
