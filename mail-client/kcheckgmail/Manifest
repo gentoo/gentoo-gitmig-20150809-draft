@@ -1,4 +1,6 @@
 MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
 MD5 4b2c73e4cdaa334197ef50bab0d07790 kcheckgmail-0.5.4.ebuild 580
-MD5 b60cd79d9d294b3f9be0b2b97f2eed9a ChangeLog 1425
+MD5 77d5ec7454344a434f1bce180539aa00 ChangeLog 1593
+MD5 d3ed92f5e9cfd29217798f9d8169a092 kcheckgmail-0.5.5.ebuild 597
+MD5 9406e8a8499a4bd342656150a8b6210e files/digest-kcheckgmail-0.5.5 70
 MD5 f3541a73a28bdaacf3f995c00416ad56 files/digest-kcheckgmail-0.5.4 70
