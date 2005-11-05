@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.462 2005/10/31 21:25:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.463 2005/11/05 19:47:57 halcy0n Exp $
+
+*gcc-4.1.0_beta20051105 (05 Nov 2005)
+
+  05 Nov 2005; Mark Loeser <halcy0n@gentoo.org>
+  +gcc-4.1.0_beta20051105.ebuild:
+  Adding back the gcc-4.1 snapshots. The installation should be fixed now; bug
+  #100679
 
   31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> gcc-3.4.4-r1.ebuild:
   Stable on alpha.
