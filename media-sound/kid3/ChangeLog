@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.15 2005/08/07 13:21:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.16 2005/11/05 20:07:00 greg_g Exp $
+
+*kid3-0.6 (05 Nov 2005)
+
+  05 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> +kid3-0.6.ebuild:
+  New version (#110998). Make kde support optional. Ad support for vorbis,
+  flac, musicbrainz.
 
   07 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> kid3-0.5.ebuild:
   Stable on ppc.
