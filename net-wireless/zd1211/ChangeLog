@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/zd1211
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.3 2005/09/09 22:03:44 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/ChangeLog,v 1.4 2005/11/05 04:15:57 superlag Exp $
+
+*zd1211-20050822-r1 (05 Nov 2005)
+
+  05 Nov 2005; Aaron Kulbe <superlag@gentoo.org>
+  +files/zd1211-gentoo-20051028.diff, +zd1211-20050822-r1.ebuild:
+  Added patch to make zd1211 compile properly. Bug #110776. Thanks to Cesare
+  Gargano!
 
 *zd1211-20050822 (09 Sep 2005)
 
