@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.34 2005/08/31 20:59:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.35 2005/11/05 21:49:00 centic Exp $
+
+  05 Nov 2005; Dominik Stadler <centic@gentoo.org>
+  kdebluetooth-1.0_beta1.ebuild:
+  Add RDEPEND bluez-utils, fixes Bug 107073
 
   31 Aug 2005; Guy Martin <gmsoft@gentoo.org> kdebluetooth-1.0_beta1.ebuild:
   Stable on hppa.
