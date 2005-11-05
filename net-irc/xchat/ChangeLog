@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.179 2005/11/04 07:18:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.180 2005/11/05 15:10:51 geoman Exp $
+
+  05 Nov 2005; Stephen P. Becker <geoman@gentoo.org> xchat-2.6.0.ebuild:
+  added ~mips keyword, bug 111322
 
   04 Nov 2005; Sven Wegener <swegener@gentoo.org>
   +files/xc260-fix-fetext.diff, xchat-2.6.0.ebuild:
