@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.29 2005/10/18 20:43:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.30 2005/11/05 15:04:22 flameeyes Exp $
+
+  05 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -libtorrent-0.7.5.ebuild:
+  Remove old version.
 
 *libtorrent-0.7.6 (18 Oct 2005)
 
