@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.20 2005/11/04 10:16:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.21 2005/11/05 02:56:20 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -44,11 +44,12 @@ src_unpack() {
 	cp "${FILESDIR}"/gentoo-config config/gentoo
 	cat >> config/gentoo <<-EOF
 	$(urt_config X X11)
-	$(urt_config gif GIF)
 	$(urt_config gs POSTSCRIPT)
 	$(urt_config tiff TIFF)
 	ExtraCFLAGS = ${CFLAGS}
 	MFLAGS = ${MAKEOPTS}
+	# prevent circular depend #111455
+	$(has_version media-libs/giflib && urt_config gif GIF)
 	EOF
 }
 
