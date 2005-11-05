@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.8 2005/09/26 18:05:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.9 2005/11/05 22:45:14 vapier Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
@@ -34,7 +34,7 @@ src_unpack() {
 		cvs_src_unpack
 	fi
 	cd tenebrae_0
-	epatch ${FILESDIR}/${PV}-glhax.patch
+	epatch "${FILESDIR}"/${PV}-glhax.patch
 	cd linux
 	sed "s:-mpentiumpro -O6:${CFLAGS}:" Makefile.i386linux > Makefile
 	#if use sdl ; then
@@ -44,8 +44,8 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/tenebrae_0/linux
-	make MASTER_DIR=${GAMES_DATADIR}/quake-data build_release || die
+	cd "${S}"/tenebrae_0/linux
+	make MASTER_DIR="${GAMES_DATADIR}/quake1" build_release || die
 	#if use sdl ; then
 	#	cd ${S}/tenebrae_0/sdl
 	#	egamesconf || die
@@ -55,8 +55,8 @@ src_compile() {
 
 src_install() {
 	newgamesbin tenebrae_0/linux/release*/bin/tenebrae.run tenebrae || die "newgamesbin"
-	insinto ${GAMES_DATADIR}/quake-data/tenebrae
-	doins ${WORKDIR}/tenebrae/* || die "doins data"
-	dodoc tenebrae_0/linux/README ${WORKDIR}/Tenebrae_Readme.txt
+	insinto "${GAMES_DATADIR}/quake1/tenebrae"
+	doins "${WORKDIR}"/tenebrae/* || die "doins data"
+	dodoc tenebrae_0/linux/README "${WORKDIR}"/Tenebrae_Readme.txt
 	prepgamesdirs
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/quake1-killer-2.2z.ebuild,v 1.2 2005/09/26 18:05:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/quake1-killer-2.2z.ebuild,v 1.3 2005/11/05 22:38:41 vapier Exp $
 
-inherit eutils games
+inherit games
 
 DESCRIPTION="The Killer Quake Patch"
 HOMEPAGE="http://kqp.mpog.com/ http://www.planetquake.com/qca/reviews/patch143.htm"
@@ -25,9 +25,7 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_DATADIR}/quake-data/killer
-	dodir "${dir}"
-	insinto "${dir}"
-	doins -r *
+	insinto "${GAMES_DATADIR}/quake-data/killer"
+	doins -r * || die
 	prepgamesdirs
 }

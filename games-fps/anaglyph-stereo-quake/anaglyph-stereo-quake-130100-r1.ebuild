@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.10 2005/09/26 18:02:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.11 2005/11/05 22:33:53 vapier Exp $
 
 inherit eutils games
 
@@ -25,32 +25,32 @@ S=${WORKDIR}/WinQuake
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	mv GLQUAKE.H glquake.h
 	mv GL_DRAW.C gl_draw.c
 	mv GL_RMAIN.C gl_rmain.c
-	epatch ${FILESDIR}/stupid-dosformat.patch
+	epatch "${FILESDIR}"/stupid-dosformat.patch
 	mv Makefile{.linuxi386,}
-	epatch ${FILESDIR}/makefile-path-fixes.patch
-	epatch ${FILESDIR}/fix-sys_printf.patch
-	epatch ${FILESDIR}/makefile-cflags.patch
-	epatch ${FILESDIR}/gentoo-paths.patch
-	edos2unix console.c ${WORKDIR}/${P}-SDL.patch
-	epatch ${WORKDIR}/${P}-SDL.patch
-	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch "${FILESDIR}"/makefile-path-fixes.patch
+	epatch "${FILESDIR}"/fix-sys_printf.patch
+	epatch "${FILESDIR}"/makefile-cflags.patch
+	epatch "${FILESDIR}"/gentoo-paths.patch
+	edos2unix console.c "${WORKDIR}"/${P}-SDL.patch
+	epatch "${WORKDIR}"/${P}-SDL.patch
+	epatch "${FILESDIR}"/${P}-amd64.patch
 }
 
 src_compile() {
 	make \
 		OPTFLAGS="${CFLAGS}" \
-		GENTOO_DATADIR=${GAMES_DATADIR}/quake-data \
+		GENTOO_DATADIR=${GAMES_DATADIR}/quake1 \
 		build_release \
 		|| die "failed to build WinQuake"
 }
 
 src_install() {
-	newgamesbin release*/bin/glquake.sdl anaglyph-stereo-quake
-	dodoc ${WORKDIR}/readme.id.txt
-	dohtml ${WORKDIR}/3dquake.html
+	newgamesbin release*/bin/glquake.sdl anaglyph-stereo-quake || die
+	dodoc "${WORKDIR}"/readme.id.txt
+	dohtml "${WORKDIR}"/3dquake.html
 	prepgamesdirs
 }

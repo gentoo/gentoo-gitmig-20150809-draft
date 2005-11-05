@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-teamfortress/quake1-teamfortress-2.9.ebuild,v 1.2 2005/09/26 18:11:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-teamfortress/quake1-teamfortress-2.9.ebuild,v 1.3 2005/11/05 22:42:43 vapier Exp $
 
 inherit eutils games
 
@@ -31,9 +31,7 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_DATADIR}/quake-data
-	dodir "${dir}"
-	insinto "${dir}"
-	doins -r *
+	insinto "${GAMES_DATADIR}/quake1"
+	doins -r * || die
 	prepgamesdirs
 }

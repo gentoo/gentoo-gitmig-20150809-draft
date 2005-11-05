@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.3 2004/12/10 21:41:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.4 2005/11/05 22:43:44 vapier Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ S=${WORKDIR}
 src_install () {
 	dodoc *.txt
 	rm *.txt
-	insinto ${GAMES_DATADIR}/quake-data/id1/textures
+	insinto "${GAMES_DATADIR}"/quake1/id1/textures
 	doins * || die "doins failed"
 	prepgamesdirs
 }

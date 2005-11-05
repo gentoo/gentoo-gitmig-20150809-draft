@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.9 2005/09/16 01:17:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.10 2005/11/05 22:35:19 vapier Exp $
 
 inherit toolchain-funcs games
 
@@ -43,7 +43,10 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -C linux MASTER_DIR="${GAMES_DATADIR}"/quake-data build_release \
+	emake \
+		-C linux \
+		MASTER_DIR="${GAMES_DATADIR}"/quake1 \
+		build_release \
 		|| die "emake failed"
 }
 
@@ -55,7 +58,7 @@ src_install() {
 	dodoc linux/README
 	cd "${WORKDIR}"/industri
 	dodoc *.txt && rm *.txt
-	insinto "${GAMES_DATADIR}"/quake-data/industri
+	insinto "${GAMES_DATADIR}"/quake1/industri
 	doins *
 	prepgamesdirs
 }
@@ -63,5 +66,5 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	einfo "Please setup your quake pak files before playing in"
-	einfo "${GAMES_DATADIR}/quake-data"
+	einfo "${GAMES_DATADIR}/quake1"
 }

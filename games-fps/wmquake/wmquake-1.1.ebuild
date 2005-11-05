@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.4 2004/06/24 22:50:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.5 2005/11/05 22:46:24 vapier Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:CFLAGS = .*:CFLAGS = ${CFLAGS}:" Makefile \
 		|| die "sed Makefile failed"
@@ -28,7 +28,7 @@ src_unpack() {
 src_install() {
 	exeinto "${GAMES_LIBDIR}/wmquake"
 	doexe wmquake || die "doexe failed"
-	games_make_wrapper wmquake "${GAMES_LIBDIR}/wmquake/wmquake" "${GAMES_DATADIR}/quake-data/"
+	games_make_wrapper wmquake "${GAMES_LIBDIR}/wmquake/wmquake" "${GAMES_DATADIR}/quake1/"
 	dodoc README*
 	prepgamesdirs
 }
@@ -40,12 +40,12 @@ pkg_postinst() {
 	einfo "wmquake can find your Quake .pak files"
 	echo
 	einfo "You have 2 choices to do this"
-	einfo "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake-data/id1"
-	einfo "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake-data/id1"
+	einfo "1 Copy pak*.pak files to ${GAMES_DATADIR}/quake1/id1"
+	einfo "2 Symlink pak*.pak files in ${GAMES_DATADIR}/quake1/id1"
 	echo
 	einfo "Example:"
 	einfo "my pak*.pak files are in /mnt/secondary/Games/Quake/Id1/"
-	einfo "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake-data/id1/pak0.pak"
+	einfo "ln -s /mnt/secondary/Games/Quake/Id1/pak0.pak ${GAMES_DATADIR}/quake1/id1/pak0.pak"
 	echo
 	einfo "You only need pak0.pak to play the demo version,"
 	einfo "the others are needed for registered version"

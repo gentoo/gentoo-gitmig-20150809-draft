@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/fuhquake-bin-0.31.ebuild,v 1.2 2005/09/06 04:49:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/fuhquake-bin-0.31.ebuild,v 1.3 2005/11/05 22:47:28 vapier Exp $
 
 inherit games
 
@@ -36,7 +36,7 @@ src_install() {
 	exeinto "${dir}"
 	doexe fuhquake-gl.glx fuhquake.svga fuhquake.x11 fuhquake-security.so || die "doexe"
 	cp -r fuhquake qw "${D}/${dir}"/ || die "cp data"
-	dosym "${GAMES_DATADIR}"/quake-data/id1 "${dir}"/id1
+	dosym "${GAMES_DATADIR}"/quake1/id1 "${dir}"/id1
 
 	for x in fuhquake-gl.glx fuhquake.svga fuhquake.x11 ; do
 		games_make_wrapper ${x} ./${x} "${dir}"
