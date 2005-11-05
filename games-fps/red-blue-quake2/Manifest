@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0359a6214a9d058d3a0204ccbf6581f0 ChangeLog 478
 MD5 86c6814acf8cf8b24f67557e5f96fb1e files/0.1-gentoo.patch 2304
 MD5 ac16b4e5cb958cca657192c316e60ec5 files/digest-red-blue-quake2-0.1 133
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 0e273d499bde9cdc2940b2ac12c235ea red-blue-quake2-0.1.ebuild 1511
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbTgfgIKl8Uu19MoRAk0eAJwLllijWW6uB9IulbDmMKgedlg2igCfdTMj
+HPmKRtgtpbJee9W7NPf2F4M=
+=uplT
+-----END PGP SIGNATURE-----
