@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.50 2005/11/05 14:32:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.51 2005/11/05 17:10:29 flameeyes Exp $
+
+*libebml-0.7.6 (05 Nov 2005)
+
+  05 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> +libebml-0.7.6.ebuild:
+  Version bump, required for newer vlc beta.
 
   05 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> -libebml-0.6.0.ebuild,
   -libebml-0.6.3.ebuild, -libebml-0.6.4.ebuild, -libebml-0.6.5.ebuild,
