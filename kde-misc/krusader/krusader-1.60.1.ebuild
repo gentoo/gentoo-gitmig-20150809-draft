@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.1.ebuild,v 1.3 2005/11/03 21:09:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.60.1.ebuild,v 1.4 2005/11/05 22:06:31 greg_g Exp $
 
 inherit kde
 
@@ -17,9 +17,18 @@ IUSE="javascript kde"
 DEPEND="kde? ( || ( ( kde-base/libkonq kde-base/kdebase-kioslaves )
 		    >=kde-base/kdebase-3.3 ) )
 	javascript? ( kde-base/kjsembed )"
+
 RDEPEND="${DEPEND}
 	kde? ( || ( kde-base/konqueror >=kde-base/kdebase-3.3 ) )"
+
 need-kde 3.3
+
+src_compile() {
+	sed -i -e 's/^rcdir =/#rcdir =/' krusader/Makefile.in krusader/Makefile.am
+	sed -i -e 's/^rc_DATA =/#rc_DATA =/' krusader/Makefile.in krusader/Makefile.am
+
+	kde_src_compile
+}
 
 pkg_postinst() {
 	echo
