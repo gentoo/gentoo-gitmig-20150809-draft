@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.129 2005/10/18 02:28:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.130 2005/11/05 12:09:22 mrness Exp $
+
+*ppp-2.4.3-r9 (05 Nov 2005)
+
+  05 Nov 2005; Alin Nastac <mrness@gentoo.org> +ppp-2.4.3-r9.ebuild:
+  Add experimental support for EAP-TLS, selectable through eap-tls useflag
+  (#109935).
 
   18 Oct 2005; Aron Griffis <agriffis@gentoo.org> ppp-2.4.2-r15.ebuild:
   Mark 2.4.2-r15 stable on alpha
