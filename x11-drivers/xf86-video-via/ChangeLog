@@ -1,11 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-via
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.6 2005/11/05 03:47:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/ChangeLog,v 1.7 2005/11/05 03:48:40 spyderous Exp $
 
   05 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xf86-video-via-0.1.31.1-r1.ebuild:
   Add >=x11-libs/libdrm-1.0.5 to DEPEND. Reported 20051104 by Michał Pytasz
-  on the xorg list.
+  on the dri-devel list.
 
 *xf86-video-via-0.1.31.1-r1 (27 Oct 2005)
 
