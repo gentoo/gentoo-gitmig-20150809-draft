@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/braa
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.8 2005/09/09 02:31:27 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.9 2005/11/05 16:35:32 vanquirius Exp $
+
+  05 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> braa-0.8-r1.ebuild:
+  0.8-r1 x86 stable.
 
 *braa-0.8-r1 (09 Sep 2005)
 
