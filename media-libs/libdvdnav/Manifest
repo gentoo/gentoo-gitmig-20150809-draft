@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4150fb47c8224575c02d9776b665645f ChangeLog 3439
 MD5 73c66a3d221e8a181c22a2ee48e6b9a9 files/digest-libdvdnav-0.1.10 68
 MD5 300cb5083129b821668609d693f86809 files/digest-libdvdnav-0.1.9 67
@@ -5,3 +8,10 @@ MD5 2c6ca547e6f0d62197be359672f3a401 files/libdvdnav-0.1.9-darwin.diff 1204
 MD5 145d1ae7173cb7a427b2f208411d963f libdvdnav-0.1.10.ebuild 589
 MD5 826522b85baf4525801cbd8899a6ddfc libdvdnav-0.1.9.ebuild 982
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbHLfCRZPokWLroQRAr0UAJ4q7MRYyAaLa1CV5TjdNoNgHPg5VQCdFAKS
+ste6z2TmfEXAVLyFNZtmB5I=
+=OeTp
+-----END PGP SIGNATURE-----
