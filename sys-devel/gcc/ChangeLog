@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.463 2005/11/05 19:47:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.464 2005/11/05 20:00:14 halcy0n Exp $
+
+  05 Nov 2005; Mark Loeser <halcy0n@gentoo.org>
+  gcc-4.1.0_beta20051105.ebuild:
+  Fix deps to match those from the gcc-4.0 ebuilds
 
 *gcc-4.1.0_beta20051105 (05 Nov 2005)
 
