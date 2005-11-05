@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-movies/quake1-movies-0.ebuild,v 1.4 2005/11/05 22:40:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-movies/quake1-movies-0.ebuild,v 1.5 2005/11/05 22:48:57 vapier Exp $
 
 inherit eutils games
 
@@ -77,7 +77,7 @@ src_unpack() {
 }
 
 src_install() {
-	insinto "${GAMES_DATADIR}/quake-data"
+	insinto "${GAMES_DATADIR}/quake1"
 	doins -r * || die "doins"
 	prepgamesdirs
 }
