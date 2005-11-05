@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.64 2005/10/25 15:17:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.65 2005/11/05 05:14:14 dang Exp $
+
+*evolution-data-server-1.4.1.1 (05 Nov 2005)
+
+  05 Nov 2005; <dang@gentoo.org> -evolution-data-server-1.4.0.ebuild,
+  +evolution-data-server-1.4.1.1.ebuild:
+  Revbump.  Fixed exchange-storage crashes
 
   25 Oct 2005; <dang@gentoo.org> evolution-data-server-1.4.1.ebuild:
   older gtk-doc doesn't support named enumerations. Bug #110151

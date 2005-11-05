@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.0.ebuild,v 1.3 2005/09/14 01:50:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.4.1.1.ebuild,v 1.1 2005/11/05 05:14:14 dang Exp $
 
 inherit eutils gnome2
 
@@ -35,11 +35,12 @@ RDEPEND=">=dev-libs/glib-2.4
 #		mozilla? ( !firefox? ( >=www-client/mozilla-1.7.3 ) )
 #		firefox? ( >=www-client/mozilla-firefox-1.0.6-r6 )
 #		!mozilla? ( !firefox? (
+#		)
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 USE_DESTDIR="1"
