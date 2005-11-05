@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4.1.ebuild,v 1.2 2005/07/09 15:24:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.4.1.ebuild,v 1.3 2005/11/05 15:53:55 st_lim Exp $
 
 inherit webapp eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=mail-filter/dspam-3.2_rc3
 	dev-perl/GD-Graph3d
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 S=${WORKDIR}/${MY_P}
 HOMEDIR=/etc/mail/dspam
 IUSE="debug large-domain mysql neural oci8 postgres sqlite sqlite3 virtual-users"
