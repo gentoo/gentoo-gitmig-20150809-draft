@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.3.ebuild,v 1.2 2005/06/09 00:30:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.3.ebuild,v 1.3 2005/11/05 19:03:15 tester Exp $
 
 inherit eutils multilib
 
@@ -110,6 +110,7 @@ src_compile() {
 		${EXTRA_ECONF} \
 		${myconf} || die "configure failed"
 
+	sed -i -e 's:-Werror::' common/video/iso-mpeg4/src/Makefile || die "sed failed"
 
 	emake || die "make failed"
 }
@@ -118,7 +119,7 @@ src_install () {
 	cd ${S}
 	make install DESTDIR="${D}" || die "make install failed"
 
-	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS COPYING TODO
+	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS TODO
 
 	dohtml doc/*.html FEATURES.html || die
 

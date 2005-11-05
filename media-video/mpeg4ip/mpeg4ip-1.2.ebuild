@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.6 2005/01/17 19:17:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.2.ebuild,v 1.7 2005/11/05 19:03:15 tester Exp $
 
 inherit eutils
 
@@ -96,7 +96,7 @@ src_install () {
 	mv ${D}/usr/include/mpeg4ip_config.h.modified \
 		${D}/usr/include/mpeg4ip_config.h
 
-	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS COPYING TODO
+	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS TODO
 
 	dohtml doc/*.html FEATURES.html || die
 
