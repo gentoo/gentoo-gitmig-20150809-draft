@@ -1,13 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4515c5ecd255cf46d020e15cfb276ffb ChangeLog 7664
+MD5 9025e3d57fac46fbc576fe9165358ae0 ChangeLog 7760
 MD5 fab22de6cb9a5cf7e0abedfe77c9b04a dbus-0.23-r3.ebuild 3246
 MD5 fedfd2a1281d8773038a8036a2a75ef8 dbus-0.23.2-r1.ebuild 3454
 MD5 321657dd580453465e0cab3102a92e98 dbus-0.23.2.ebuild 3242
 MD5 fc8c0f943b0a6462694f8f3874a2db6c dbus-0.23.4-r1.ebuild 3448
 MD5 bb8292b02298d653808cb0d0edd271da dbus-0.23.4.ebuild 3413
-MD5 fca1dec39eda998e2ca9e854ecb02e47 dbus-0.36.2.ebuild 3614
+MD5 93866034c91aa263619d32d914c2679f dbus-0.36.2.ebuild 3620
 MD5 d14e59575f04e55d21a04907b6fd9f3c files/30-dbus 243
 MD5 6e8a551caef6f55569fa4724d3cf1fe0 files/dbus 663
 MD5 768e500cfda89809161576ea2080a7aa files/dbus-0.23-dbus_session_connect.patch 1185
@@ -24,10 +21,3 @@ MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4 64
 MD5 8a28a6744a8a85a487c87eec1e1725b6 files/digest-dbus-0.23.4-r1 64
 MD5 19d40bbc05e7cf89bf6d023540874468 files/digest-dbus-0.36.2 64
 MD5 41b60b877b1e6ea53476ff69c5ed77d3 metadata.xml 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDatcPgIKl8Uu19MoRArJwAJ0U8FgICrCURKqLmIYVhv+MnBm31gCfYmUw
-tefBjTtX5d6OKP/Ioeq/9ME=
-=OzQ8
------END PGP SIGNATURE-----

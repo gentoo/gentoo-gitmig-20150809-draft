@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.54 2005/11/01 16:46:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.55 2005/11/05 15:06:08 geoman Exp $
+
+  05 Nov 2005; Stephen P. Becker <geoman@gentoo.org> dbus-0.36.2.ebuild:
+  added ~mips keyword
 
   01 Nov 2005; Doug Goldstein <cardoe@gentoo.org> dbus-0.36.2.ebuild:
   make dbus depend on gtk+ 2.6 while they claim gtk+ 2.0, they use 2.6 API
