@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/argouml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.15 2005/10/02 18:57:17 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.16 2005/11/05 20:39:02 grobian Exp $
+
+  05 Nov 2005; Fabian Groffen <grobian@gentoo.org> argouml-0.19.6.ebuild:
+  Marked ~ppc-macos (bug #111583)
 
 *argouml-0.19.6 (02 Oct 2005)
 

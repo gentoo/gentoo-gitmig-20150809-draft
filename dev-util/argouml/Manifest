@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4e847be90387a8baab8759eba21dd67a argouml-0.18.1-r1.ebuild 1396
-MD5 ec44f0001bf036b052f0e5eda196ffa8 argouml-0.19.6.ebuild 1377
-MD5 ef1175b3110eecaafdb035dbc94a4c2f ChangeLog 2094
+MD5 a8db6207a43ad42cd68e052c75e1b5a3 argouml-0.19.6.ebuild 1387
+MD5 27c86e76dee6dc4133012b32697e3fb9 ChangeLog 2202
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d787d7cc7dfb1990dbe39b0c6667efe4 files/digest-argouml-0.18.1-r1 336
 MD5 b91470e34414adb1a1b46ba53836aa77 files/digest-argouml-0.19.6 337
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDQC1b8zY1VwezZiERAgDZAJ9vUaSpYfdMs9+G/u0s9NZDRvzYEgCff8+n
-RFf8EVOSLajQ3HjVIhry9+k=
-=gRsV
------END PGP SIGNATURE-----
