@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.60 2005/10/31 23:10:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.61 2005/11/05 14:29:52 flameeyes Exp $
+
+  05 Nov 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libmatroska-shared2.patch, -libmatroska-0.5.2.ebuild,
+  -libmatroska-0.6.2.ebuild, -libmatroska-0.6.3.ebuild,
+  -libmatroska-0.7.0.ebuild, -libmatroska-0.7.1.ebuild,
+  -libmatroska-0.7.2.ebuild, -libmatroska-0.7.3.ebuild,
+  -libmatroska-0.7.4.ebuild, -libmatroska-0.7.5.ebuild:
+  Cleanup of old ebuilds.
 
   31 Oct 2005; Mike Frysinger <vapier@gentoo.org> libmatroska-0.7.6.ebuild,
   libmatroska-0.7.7.ebuild:
