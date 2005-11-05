@@ -1,4 +1,5 @@
+MD5 bb6dbe8ab5a94b622326d5d26c6b89fb ChangeLog 575
 MD5 0b81e94d25f7be4ed2880b7a5b1c549e metadata.xml 984
-MD5 b88437c230cba50d5e6b9099a9140143 cocom-0.995.ebuild 627
-MD5 2926c2e12ba20ae5a30204f7c0a8f824 ChangeLog 415
+MD5 02dce652fd6d9b6ba5dd5f8c1469f918 cocom-0.995.ebuild 725
 MD5 826cc4a5bf4a64c5c13141baf5e13ef8 files/digest-cocom-0.995 64
+MD5 e683729784d18a9847a0c8cbacad20c5 files/cocom-0.995-gcc4.patch 410
