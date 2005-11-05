@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/price
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.1 2005/03/30 16:45:41 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.2 2005/11/05 08:19:15 halcy0n Exp $
+
+  05 Nov 2005; Mark Loeser <halcy0n@gentoo.org> price-0.5.ebuild:
+  Added ~x86 to KEYWORDS; bug #111377
 
 *price-0.5 (24 Mar 2005)
 
