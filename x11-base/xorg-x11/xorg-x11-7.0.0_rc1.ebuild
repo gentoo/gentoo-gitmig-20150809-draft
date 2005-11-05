@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.5 2005/11/03 18:36:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0.0_rc1.ebuild,v 1.6 2005/11/05 04:56:31 spyderous Exp $
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation (meta
 package)"
@@ -50,3 +50,40 @@ DEPEND="${RDEPEND}"
 
 # We need some checks for weird symlinks on migrate
 # /usr/lib/X11/xdm -> ../../../etc/X11/xdm
+
+pkg_postinst() {
+	x-modular_pkg_postinst
+
+	echo
+	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}."
+	einfo "Any custom cursor sets should be placed in that directory."
+	echo
+	einfo "If you wish to set system-wide default cursors, please create"
+	einfo "/usr/local/share/cursors/${PN}/default/index.theme"
+	einfo "with content: \"Inherits=theme_name\" so that future"
+	einfo "emerges will not overwrite those settings."
+	echo
+	einfo "Listening on TCP is disabled by default with startx."
+	einfo "To enable it, edit /usr/bin/startx."
+	echo
+
+	ewarn "Please read the modular X migration guide at"
+	ewarn "http://dev.gentoo.org/~spyderous/xorg-x11/migrating_to_modular_x_howto.txt"
+	echo
+	einfo "If you encounter any non-configuration issues, please file a bug at"
+	einfo "http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux"
+	einfo "and attach /etc/X11/xorg.conf, /var/log/Xorg.0.log and emerge info"
+	echo
+	einfo "In the future, you will be able to affect which drivers are installed"
+	einfo "with the VIDEO_CARDS and INPUT_DEVICES settings."
+	echo
+
+	# (#76985)
+	einfo "Visit http://www.gentoo.org/doc/en/index.xml?catid=desktop"
+	einfo "for more information on configuring X."
+	echo
+
+	# Try to get people to read this, pending #11359
+	ebeep 5
+	epause 10
+}
