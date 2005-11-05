@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.99 2005/09/17 19:52:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.100 2005/11/05 20:02:27 halcy0n Exp $
+
+  05 Nov 2005; Mark Loeser <halcy0n@gentoo.org> xine-ui-0.99.3-r1.ebuild:
+  Stable on x86; bug #111563
 
 *xine-ui-0.99.4-r3 (14 Sep 2005)
 
