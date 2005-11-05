@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.122 2005/11/04 12:38:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.123 2005/11/05 02:29:42 lu_zero Exp $
+
+  05 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.18.8-r1.ebuild:
+  compat_ioctl should apply just on x86 for now, I'll properly fix later
 
 *ati-drivers-8.18.8-r1 (04 Nov 2005)
 

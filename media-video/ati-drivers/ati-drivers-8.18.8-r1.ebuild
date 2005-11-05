@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.18.8-r1.ebuild,v 1.1 2005/11/04 12:38:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.18.8-r1.ebuild,v 1.2 2005/11/05 02:29:42 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -115,7 +115,11 @@ src_unpack() {
 	if kernel_is 2 6
 	then
 		epatch "${FILESDIR}/fglrx-2.6.14-access_ok.patch"
+		
+		if use amd64
+		then
 		epatch "${FILESDIR}/fglrx-2.6.14-compat_ioctl.patch"
+		fi
 	fi
 }
 
