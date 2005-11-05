@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.50 2005/11/03 21:04:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.51 2005/11/05 21:42:52 ferdy Exp $
+
+  05 Nov 2005; Fernando J. Pereda <ferdy@gentoo.org> twisted-2.0.0.ebuild:
+  marked ~alpha wrt bug #110575
 
   03 Nov 2005; Alastair Tse <liquidx@gentoo.org> -twisted-1.1.0.ebuild,
   -twisted-1.1.1.ebuild, twisted-1.2.0.ebuild, -twisted-1.2.1_alpha2.ebuild,

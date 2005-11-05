@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d7302a5cd165078d8eecfcbd6657368e ChangeLog 10031
+MD5 b334a51322c3da107d175c71db5c5b68 twisted-1.2.0.ebuild 996
+MD5 742e8cfdb91ef5a2685eb8734f209c41 twisted-1.3.0.ebuild 1061
+MD5 7d5efe87283a25e3cf2f87d1a0e0c8b5 twisted-2.0.0.ebuild 899
+MD5 004f2084935a67c95bcf27419aad9b4f ChangeLog 10137
+MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
 MD5 9e8836d4aec3a1a4f688add9c6c64877 files/digest-twisted-1.2.0 74
 MD5 387f6df81a68c591e6f30fe8878d964b files/digest-twisted-1.3.0 74
 MD5 48ff6eb1136ce5dd8f785e589a7723d5 files/digest-twisted-2.0.0 67
-MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
-MD5 b334a51322c3da107d175c71db5c5b68 twisted-1.2.0.ebuild 996
-MD5 742e8cfdb91ef5a2685eb8734f209c41 twisted-1.3.0.ebuild 1061
-MD5 6fae0af207d2b4272bd4593c6a82196b twisted-2.0.0.ebuild 894
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDanty9ZFPrqoILX8RAgJeAKCATbdJPF84Bfrvp4tTjaHly2kGiwCfZl/4
-Mn37jKYsaU5OVwhouyeASio=
-=w56N
+iD8DBQFDbSeGViELBEf1JB0RArjgAJ99VcOyH+zsN4xIeN3txCu3ZBynJgCdEvnW
+JMcLeJTy7RsywlKG/Eg8+LA=
+=Iz+r
 -----END PGP SIGNATURE-----
