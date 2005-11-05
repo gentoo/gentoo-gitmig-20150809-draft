@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 948e4457265734cbd136d17f220936d4 ChangeLog 745
-MD5 1293bdfe52d4408fdd2768016e32408a figurine-1.0.5.ebuild 660
+MD5 d0cb238a4d47fc9b4955d8782e1e4f11 figurine-1.0.5.ebuild 671
+MD5 734fbd5a408da4581afb8b5f0cc29b9f ChangeLog 853
 MD5 9b6e35e430f713a5450fe5c973a36634 files/digest-figurine-1.0.5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHnAVwUpWvClEHQoRAuTTAJwNafS78GoZr6ZufisSFKNrFGGPBwCaAmE4
-sfvjM7BHXGcEIegQAeMTcNY=
-=eUiw
------END PGP SIGNATURE-----
