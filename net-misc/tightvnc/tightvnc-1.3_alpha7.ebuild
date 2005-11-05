@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.3 2005/08/14 23:53:19 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3_alpha7.ebuild,v 1.4 2005/11/05 18:10:25 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ DESCRIPTION="A great client/server software package allowing remote network acce
 SRC_URI="mirror://sourceforge/vnc-tight/${P/_alpha/dev}_unixsrc.tar.bz2"
 HOMEPAGE="http://www.tightvnc.com/"
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -27,18 +27,22 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 
-	echo
-	einfo "The 'server' USE flag will build tightvnc's server."
-	einfo "If '-server' is chosen only the client is built to save space."
-	einfo "Stop the build now if you need to add 'server' to USE flags.\n"
-	ebeep
-	epause 5
+	if ! use server;
+	then
+		echo
+		einfo "The 'server' USE flag will build tightvnc's server."
+		einfo "If '-server' is chosen only the client is built to save space."
+		einfo "Stop the build now if you need to add 'server' to USE flags.\n"
+		ebeep
+		epause 5
+	fi
 
 	unpack ${A} && cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-gentoo.security.patch
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 	epatch ${FILESDIR}/x86.patch
+	epatch "${FILESDIR}/${P}"-darwin.patch
 }
 
 src_compile() {
@@ -49,7 +53,9 @@ src_compile() {
 	if use server; then
 		cd Xvnc && ./configure || die "Configure failed."
 		if use tcpd; then
-			make EXTRA_LIBRARIES="-lwrap -lnss_nis" \
+			local myextra="-lwrap"
+			use userland_Darwin || myextra="${myextra} -lnss_nis"
+			make EXTRA_LIBRARIES="${myextra}" \
 				CDEBUGFLAGS="${CFLAGS}"  \
 				EXTRA_DEFINES="-DUSE_LIBWRAP=1" || die
 		else
