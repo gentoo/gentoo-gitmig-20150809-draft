@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.1_pre7.ebuild,v 1.1 2005/09/12 14:56:30 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.1_pre10.ebuild,v 1.1 2005/11/05 14:58:19 fuzzyray Exp $
 
 inherit eutils
 
@@ -39,5 +39,8 @@ pkg_postinst() {
 	ewarn "are no longer installed in ${ROOT}usr/bin in this release."
 	ewarn "They are still available in ${ROOT}usr/share/doc/${PF}/deprecated/"
 	ewarn "if you *really* want to use them."
+	echo
+	einfo "Another alternative to qpkg and equery are the q applets in"
+	einfo "app-portage/portage-utils"
 	echo
 }
