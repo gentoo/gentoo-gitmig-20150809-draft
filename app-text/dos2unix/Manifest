@@ -1,16 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 c8124a9407523fb01f69dcb8e056cac6 ChangeLog 1721
+MD5 47d2f8ba05e597010448d7c7a21aea25 dos2unix-3.1-r1.ebuild 977
 MD5 a60dc8479f8de55fecb5cd4a92a6b413 dos2unix-3.1.ebuild 877
-MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 a7725f24d6b92ae04d5768aafd197b27 ChangeLog 1310
-MD5 284eafc62e5d3fe95532af121f5278b7 files/dos2unix-3.1.patch 1146
 MD5 2b2ff8664186c867d4f5909878ba670c files/digest-dos2unix-3.1 64
-MD5 8fa72bf59beecca125d2b02558fb9175 files/dos2unix-3.1-segfault.patch 2281
+MD5 2b2ff8664186c867d4f5909878ba670c files/digest-dos2unix-3.1-r1 64
+MD5 76b91abedf2851834caf8bf8b1309481 files/dos2unix-3.1-includes.patch 238
+MD5 af76f97bd1518cc67d53d3c5060bd275 files/dos2unix-3.1-manpage-update.patch 4120
+MD5 e00ebced51602e39232860de69fa45fe files/dos2unix-3.1-preserve-file-modes.patch 790
+MD5 cf90173c1e6012628064d758def78882 files/dos2unix-3.1-safeconv.patch 2237
+MD5 605908dec54eefae120882df1591c388 files/dos2unix-3.1-segfault.patch 2224
+MD5 c84bee5adf468784b6b1fbd682c851f2 files/dos2unix-3.1.patch 364
+MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDKzvNLLFUmVNQ7rkRAtqZAJ9CqBnCYMHespK0wItgSoOiYqOO/wCZAapu
-yanm+fssfVdGCCi6mEa0ypo=
-=Yvgx
+iD8DBQFDbBuYgIKl8Uu19MoRAlC5AJ9QoBQL9QA0FXx5UlWWNJWle7QjZgCfSRyp
+vT4pgXyBmtCn7a2tWi7oryk=
+=+57+
 -----END PGP SIGNATURE-----
