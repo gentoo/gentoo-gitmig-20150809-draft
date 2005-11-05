@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.6-r1.ebuild,v 1.4 2005/07/10 12:49:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.6-r1.ebuild,v 1.5 2005/11/05 11:14:53 betelgeuse Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Reads XML configuration files to provide initialization of various Java objects within the system."
-HOMEPAGE="http://jakarta.apache.org/commons/digester.html"
+HOMEPAGE="http://jakarta.apache.org/commons/digester/"
 SRC_URI="mirror://apache/jakarta/commons/digester/source/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
