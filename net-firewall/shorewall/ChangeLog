@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.88 2005/09/14 20:35:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.89 2005/11/05 17:46:27 vanquirius Exp $
+
+*shorewall-2.4.6 (05 Nov 2005)
+
+  05 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> +shorewall-2.4.6.ebuild:
+  2.4.6 version bump for bug 111567. Thanks to Joakim <moonwalker at astro dot
+  nu>.
 
   14 Sep 2005; Daniel Black <dragonheart@gentoo.org>
   -shorewall-2.4.1.ebuild:
