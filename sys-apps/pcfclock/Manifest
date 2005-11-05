@@ -1,14 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea7742e85ac7f0789676b46f7eb11581 ChangeLog 543
-MD5 aa50ecdd0ce20833ba71e846ec861028 pcfclock-0.44.ebuild 852
+MD5 8e6796e60c8d9413c4601dae21934b79 ChangeLog 799
 MD5 7481cda919930a3db6d92e0b4ab47420 files/digest-pcfclock-0.44 64
+MD5 7481cda919930a3db6d92e0b4ab47420 files/digest-pcfclock-0.44-r1 64
+MD5 4c6c8a463bd6f58471a661cbd07604d7 files/pcfclock-0.44-udev-gentoo.patch 2124
 MD5 b60ea900b74d4f577955d7bbe079a376 files/pcfclock.modules.d 127
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWMRqI1lqEGTUzyQRAhe1AKCzyB8nWFEjK2xrRiTxu9pDPWgnMACgsjEU
-88R9i40azNlydFdWfQ/pTms=
-=36rl
------END PGP SIGNATURE-----
+MD5 dfd8fb7bae22002954771c4bbf209e44 metadata.xml 643
+MD5 400aedc3f7b7db52cae0de25212e8592 pcfclock-0.44-r1.ebuild 1443
+MD5 aa50ecdd0ce20833ba71e846ec861028 pcfclock-0.44.ebuild 852
