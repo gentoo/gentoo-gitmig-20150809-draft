@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.64 2005/11/05 15:49:25 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.65 2005/11/05 15:55:32 st_lim Exp $
+
+  05 Nov 2005; Lim Swee Tat <st_lim@gentoo.org> ChangeLog:
+  Added sqlite3 as a use flag, and removed older stuff
 
   05 Nov 2005; Lim Swee Tat <st_lim@gentoo.org> dspam-3.6.0.ebuild:
   Enabling sqlite3 again
