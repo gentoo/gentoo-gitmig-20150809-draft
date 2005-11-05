@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.2 2005/10/07 02:01:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.3 2005/11/05 21:12:43 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator fixheadtails gnuconfig
 
@@ -98,6 +98,8 @@ src_unpack() {
 }
 
 src_compile() {
+	export LINGUAS=""
+
 	# Make sure we have sane CFLAGS
 	do_filter_flags
 
