@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.2 2005/11/02 14:40:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.53.ebuild,v 1.3 2005/11/05 19:25:03 genstef Exp $
 
 inherit eutils
 
@@ -58,7 +58,8 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/gs852-lib.patch
-	epatch ${FILESDIR}/rinkj.patch
+	# see bug #111537
+	use amd64 || epatch ${FILESDIR}/rinkj.patch
 
 	# enable cfax device (bug #56704)
 	sed -i -e 's:DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev:DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev $(DD)cfax.dev:' ${S}/Makefile.in
