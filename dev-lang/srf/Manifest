@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb8d4c7add2b8d0d2eb1644753eefa67 srf-1.0.ebuild 645
+MD5 7ba2eee4489fe8d64ac7b4c7af82dd89 srf-1.0.ebuild 657
+MD5 3bd5e745340efd79feb07d1dc0c29f1d ChangeLog 485
 MD5 baf02779016b02c0290eb3fa40fcc019 metadata.xml 501
-MD5 5de05358da5c9606b7025cce0be3ffea ChangeLog 382
 MD5 29461754782b3543e072a80453a0db59 files/digest-srf-1.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDLBv+BQBy/eDH5uERAgbnAKC1PiM7H07wEtNepQgIumgr+a/jtACfTZGF
-hJ1pI+BP05kr9dX4ENwB1Ao=
-=+pVb
------END PGP SIGNATURE-----
