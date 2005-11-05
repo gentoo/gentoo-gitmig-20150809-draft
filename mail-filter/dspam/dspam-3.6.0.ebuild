@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.2 2005/11/05 15:21:58 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.3 2005/11/05 15:49:25 st_lim Exp $
 
 inherit eutils
 
@@ -14,14 +14,16 @@ LICENSE="GPL-2"
 IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users"
 DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
-		sqlite? ( dev-db/sqlite )
+		sqlite? ( <dev-db/sqlite-3* )
+		sqlite3? ( =dev-db/sqlite-3* )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		>=sys-libs/db-4.0
 		"
 RDEPEND="sys-process/cronbase
 		clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
-		sqlite? ( dev-db/sqlite )
+		sqlite? ( <dev-db/sqlite-3* )
+		sqlite3? ( =dev-db/sqlite-3* )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		>=sys-libs/db-4.0
 		logrotate? ( app-admin/logrotate )"
@@ -35,7 +37,7 @@ LOGDIR="/var/log/dspam"
 
 pkg_setup() {
 	local multiple_dbs="0"
-	local supported_dbs="mysql postgres oci8 sqlite"
+	local supported_dbs="mysql postgres oci8 sqlite sqlite3"
 	for foo in ${supported_dbs}; do
 		if use ${foo}; then
 			let multiple_dbs="((multiple_dbs + 1 ))"
@@ -102,6 +104,9 @@ src_compile() {
 	# select storage driver
 	if use sqlite ; then
 		myconf="${myconf} --with-storage-driver=sqlite_drv"
+		myconf="${myconf} --enable-virtual-users"
+	elif use sqlite3 ; then
+		myconf="${myconf} --with-storage-driver=sqlite3_drv"
 		myconf="${myconf} --enable-virtual-users"
 	elif use mysql; then
 		myconf="${myconf} --with-storage-driver=mysql_drv"
@@ -218,7 +223,11 @@ src_install () {
 	if use sqlite; then
 		insinto ${CONFDIR}
 		insopts -m644 -o dspam -g dspam
-		newins src/tools.sqlite_drv/purge.sql sqlite_purge.sql
+		newins src/tools.sqlite_drv/purge-2.sql sqlite_purge.sql
+	elif use sqlite3; then
+		insinto ${CONFDIR}
+		insopts -m644 -o dspam -g dspam
+		newins src/tools.sqlite_drv/purge-3.sql sqlite3_purge.sql
 	elif use mysql; then
 		# Use existing configuration if possible
 		if [[ -f ${ROOT}${CONFDIR}/mysql.data ]]; then
