@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1539 2005/11/05 15:22:27 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1540 2005/11/05 20:06:20 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -600,6 +600,7 @@ media-sound/gnusound:libsamplerate - Build gnusound with support for converting 
 media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
+media-sound/kid3:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/mhwaveedit:ladspa - Enables the ability to support ladspa plugins
 media-sound/mhwaveedit:libsamplerate - Build with libsamplerate support
 media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
