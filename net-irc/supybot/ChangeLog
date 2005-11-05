@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.12 2005/06/25 17:18:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.13 2005/11/05 16:13:02 liquidx Exp $
+
+*supybot-0.83.1 (05 Nov 2005)
+
+  05 Nov 2005; Alastair Tse <liquidx@gentoo.org> supybot-0.83.0_rc3.ebuild,
+  +supybot-0.83.1.ebuild:
+  version bump. modified sqlite dep to =dev-python/pysqlite-1\* (#99567)
 
 *supybot-0.83.0_rc3 (25 Jun 2005)
 
