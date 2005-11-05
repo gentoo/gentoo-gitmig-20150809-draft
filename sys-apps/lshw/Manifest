@@ -1,20 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 98c756557647126bc8fb1b4a859a7604 ChangeLog 3200
+MD5 d9d64853267c0e7e7da5573e15230cd7 ChangeLog 3412
 MD5 555b9015ffbcc8fd484c63ab096069d7 files/02.00b-cpuid-PIC.patch 1098
-MD5 e1b0c289650e6fc413a9001627b004a0 files/02.00b-dev.patch 966
-MD5 82aaf8441fb4eff63a536f97a4bfd9b5 files/digest-lshw-02.03b 64
 MD5 29a53d370bf1395481ea9d8528f410d1 files/digest-lshw-02.04b 64
 MD5 aa4eb15e3a195e90ce0bf111bcd37e2f files/digest-lshw-02.05.01b 67
-MD5 c3f7305f7029ae0433f991a43c09c55a lshw-02.03b.ebuild 1183
+MD5 83309023b708d6b03a2cc931a71e2352 files/digest-lshw-02.06b 64
+MD5 7fbeefb274e662632462f5a5465f24d9 files/lshw-02.06b-build.patch 1652
+MD5 fab2fbfdcae14bdfd177df3194e261ac files/lshw-02.06b-cpuid-PIC.patch 1023
 MD5 8acb70976be17c39d5349c85e31a76f8 lshw-02.04b.ebuild 1384
 MD5 ee4a0b25e41eafb85bfeae888844c924 lshw-02.05.01b.ebuild 1361
+MD5 f39283f94db7bdb2c0701974246853a1 lshw-02.06b.ebuild 1155
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDbAz3CRZPokWLroQRAnpyAJ4gRGSnkin5K4bYMyHmbaBoTO+kwQCguoyC
-urc3ziZ8piXUrA9UpGctXUY=
-=XnIn
+iD8DBQFDbDUcgIKl8Uu19MoRAmpVAJ4rDM9jZIJL1ilwUUU5Wc3b5SDUNQCfcKA8
+d/4YOvuj2juSjaxamJCWjy0=
+=F+qM
 -----END PGP SIGNATURE-----

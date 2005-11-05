@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.24 2005/11/05 01:37:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.25 2005/11/05 04:28:07 vapier Exp $
+
+*lshw-02.06b (05 Nov 2005)
+
+  05 Nov 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/lshw-02.06b-build.patch, +files/lshw-02.06b-cpuid-PIC.patch,
+  +lshw-02.06b.ebuild:
+  Version bump #111500 by Daniel Webert.
 
   05 Nov 2005; Mark Loeser <halcy0n@gentoo.org> lshw-02.05.01b.ebuild:
   Stable on x86; bug #111499
