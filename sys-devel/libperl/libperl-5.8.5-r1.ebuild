@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5-r1.ebuild,v 1.12 2005/08/08 15:01:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5-r1.ebuild,v 1.13 2005/11/05 14:54:47 solar Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -57,7 +57,7 @@ IUSE="berkdb debug gdbm ithreads"
 inherit eutils flag-o-matic toolchain-funcs
 
 # Perl has problems compiling with -Os in your flags
-use elibc_uclibc || replace-flags "-Os" "-O2"
+
 # This flag makes compiling crash in interesting ways
 filter-flags "-malign-double"
 
@@ -153,6 +153,8 @@ src_compile() {
 
 	export LC_ALL="C"
 	local myconf=""
+
+	use elibc_uclibc || replace-flags "-Os" "-O2"
 
 	if use ithreads
 	then
