@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.44 2005/08/24 02:48:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.45 2005/11/05 15:15:45 grobian Exp $
+
+  05 Nov 2005; Fabian Groffen <grobian@gentoo.org>
+  smartmontools-5.33.ebuild:
+  Marked ~ppc-macos (bug #109130)
 
   24 Aug 2005; Mike Frysinger <vapier@gentoo.org> smartmontools-5.33.ebuild:
   Add support for USE=static #103390 by Sascha Silbe.
