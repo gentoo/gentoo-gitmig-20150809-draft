@@ -6,4 +6,4 @@ MD5 2df7805117c32223db23d0ae9c61881e files/quake2-icculus-0.16.1-amd64.patch 534
 MD5 8ca258baafe8f83f1ce63d9abe0b5bb6 files/quake2-icculus-0.16.1-gentoo-paths.patch 7688
 MD5 4b84093c6bccf958d3ca1b865c3f9402 files/quake2.xpm 1234
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ebcc49cdb3fd2ba8bad222830c06365f quake2-icculus-0.16.1.ebuild 4445
+MD5 0fdba12be0b11b6fe543042dd3bac062 quake2-icculus-0.16.1.ebuild 4439
