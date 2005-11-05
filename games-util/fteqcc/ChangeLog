@@ -1,0 +1,8 @@
+# ChangeLog for games-util/fteqcc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/ChangeLog,v 1.1 2005/11/05 04:51:39 vapier Exp $
+
+*fteqcc-2501 (04 Nov 2005)
+
+  04 Nov 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by fabien Zouaoui #111281.
