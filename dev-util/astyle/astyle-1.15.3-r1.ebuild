@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3-r1.ebuild,v 1.9 2005/09/11 01:49:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3-r1.ebuild,v 1.10 2005/11/05 20:48:35 grobian Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/astyle/astyle_${PV}.zip"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc sparc x86"
+KEYWORDS="alpha ~amd64 ppc ~ppc-macos sparc x86"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.42"
