@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.0-r2.ebuild,v 1.3 2005/10/08 11:59:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-2.1.0-r2.ebuild,v 1.4 2005/11/05 21:29:38 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://people.suug.ch/~tgr/bmon/"
 SRC_URI="http://people.suug.ch/~tgr/bmon/files/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="dbi rrdtool"
 
 DEPEND=">=sys-libs/ncurses-5.3-r2
