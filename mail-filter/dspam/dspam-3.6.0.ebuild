@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.1 2005/10/17 16:11:47 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.2 2005/11/05 15:21:58 st_lim Exp $
 
 inherit eutils
 
@@ -11,14 +11,19 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="debug mysql neural oci8 postgres sqlite large-domain logrotate virtual-users"
-DEPEND="mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
+IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users"
+DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
+		mysql? ( >=dev-db/mysql-3.23 )
 		sqlite? ( dev-db/sqlite )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
-		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		>=sys-libs/db-4.0
 		"
 RDEPEND="sys-process/cronbase
+		clamav? ( >=app-antivirus/clamav-0.86 )
+		mysql? ( >=dev-db/mysql-3.23 )
+		sqlite? ( dev-db/sqlite )
+		postgres? ( >=dev-db/postgresql-7.4.3 )
+		>=sys-libs/db-4.0
 		logrotate? ( app-admin/logrotate )"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 SLOT="0"
@@ -88,6 +93,7 @@ src_compile() {
 	myconf="${myconf} --with-dspam-home=${HOMEDIR}"
 	myconf="${myconf} --sysconfdir=${CONFDIR}"
 	use virtual-users || myconf="${myconf} --enable-homedir"
+	use clamav || myconf="${myconf} --enable-clamav"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
 	# optional: even MORE debugging output, use with extreme caution!
