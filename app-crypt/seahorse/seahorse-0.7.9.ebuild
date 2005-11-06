@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.6 2005/11/06 21:20:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.7 2005/11/06 22:31:42 dang Exp $
 
 inherit gnome2 eutils autotools flag-o-matic
 
@@ -11,7 +11,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="virtual/x11
+RDEPEND="|| ( (
+		x11-libs/libICE
+		x11-libs/libSM )
+	virtual/x11 )
 	>=app-crypt/gnupg-1.2.0
 	>=app-crypt/gpgme-1.0.0
 	>=gnome-base/libgnomeui-2
