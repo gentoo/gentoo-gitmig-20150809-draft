@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0_beta5.ebuild,v 1.1 2005/11/06 01:32:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0_beta5.ebuild,v 1.2 2005/11/06 01:39:56 liquidx Exp $
 
 inherit distutils
 
@@ -24,5 +24,5 @@ DOCS="AUTHORS ChangeLog COPYING CREDITS INSTALL README NEWS docs/*"
 src_install () {
 	distutils_src_install
 	insinto /usr/share/doc/${PF}/examples
-	doins   doc/examples/*
+	doins   examples/*
 }
