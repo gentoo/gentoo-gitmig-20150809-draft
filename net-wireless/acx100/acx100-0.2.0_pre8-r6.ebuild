@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r6.ebuild,v 1.2 2005/06/20 18:10:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r6.ebuild,v 1.3 2005/11/06 00:10:01 genstef Exp $
 
 inherit linux-mod
 
@@ -12,7 +12,7 @@ USB driver disabled because it does not compile)"
 
 HOMEPAGE="http://acx100.sourceforge.net/"
 SRC_URI="http://lisas.de/~andi/${PN}/${P/_/}_plus_fixes_${FIX_VERSION}.tar.bz2
-	http://www.houseofcraig.net/acx_firmware.tar.bz2"
+	http://acx100.erley.org/acx_fw/craig.tar.bz2"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
@@ -49,5 +49,5 @@ src_install() {
 	dodoc README TODO ChangeLog doc/*
 
 	insinto /lib/firmware
-	doins ${WORKDIR}/usr/share/acx/*
+	doins ${WORKDIR}/craig/*
 }

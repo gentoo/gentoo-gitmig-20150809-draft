@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.4.ebuild,v 1.2 2005/08/20 06:52:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.4.ebuild,v 1.3 2005/11/06 00:10:01 genstef Exp $
 
 inherit linux-mod
 
@@ -8,7 +8,7 @@ DESCRIPTION="Driver for the ACX100 and ACX111 wireless chipset (CardBus, PCI, US
 
 HOMEPAGE="http://acx100.sourceforge.net/"
 SRC_URI="http://acx100.erley.org/acx-20050811.tar.bz2
-	http://acx100.erley.org/fw.tar.bz2"
+	http://acx100.erley.org/acx_fw/craig.tar.bz2"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
@@ -47,7 +47,7 @@ src_install() {
 	dodoc README doc/*
 
 	insinto /lib/firmware
-	doins fw/acx111_1.2.1.34/* fw/acx100_1.9.8.b/* fw/acx100_1.0.9-USB/*
+	doins craig/*
 }
 
 pkg_postinst() {
