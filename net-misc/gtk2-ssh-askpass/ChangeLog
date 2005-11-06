@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gtk2-ssh-askpass
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk2-ssh-askpass/ChangeLog,v 1.10 2005/09/16 02:58:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk2-ssh-askpass/ChangeLog,v 1.11 2005/11/06 22:34:54 dang Exp $
+
+  06 Nov 2005; <dang@gentoo.org> gtk2-ssh-askpass-0.3.ebuild:
+  Don't need an explicit dep on x11, gtk's dep is sufficient
 
   15 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   gtk2-ssh-askpass-0.3.ebuild:
