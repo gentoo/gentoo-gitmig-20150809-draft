@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.66 2005/10/24 19:56:36 mkay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.67 2005/11/06 13:26:44 sekretarz Exp $
+
+*bittorrent-4.1.7 (06 Nov 2005)
+
+  06 Nov 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +bittorrent-4.1.7.ebuild:
+  Version bump, bug #111462
 
   24 Oct 2005; <mkay@gentoo.org> bittorrent-4.1.6-r1.ebuild,
   bittorrent-4.1.6-r2.ebuild:
