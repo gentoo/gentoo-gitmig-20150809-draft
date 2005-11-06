@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r1.ebuild,v 1.9 2005/09/13 15:57:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-fonts/artwiz-fonts-2.4-r1.ebuild,v 1.10 2005/11/06 05:22:14 st_lim Exp $
 
 S=${WORKDIR}/xfonts-artwiz-2.3
 DESCRIPTION="Artwiz Fonts"
@@ -25,6 +25,8 @@ src_compile() {
 
 src_install() {
 	cd ${S}/upstream
+	rm cursor.pcf.gz
+
 	insopts -m0644
 	insinto /usr/share/fonts/artwiz/
 	doins *.pcf.gz
