@@ -1,29 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ac68604576ccfc58e653bc0982bef4d4 metadata.xml 281
-MD5 c9b104341465cbb56ca24ae37dfd0358 hddtemp-0.3_beta12.ebuild 1220
-MD5 67358d9fae033adf04e11bd6e19204d6 hddtemp-0.3_beta10.ebuild 1135
-MD5 bce791a4aafcd4332834ca2f07d0619e hddtemp-0.3_beta11.ebuild 1219
-MD5 e69dcbf82660ed31a9b47977b2494083 ChangeLog 4893
-MD5 18f827ae137a300c155ee91af047824d hddtemp-0.3_beta13.ebuild 1276
-MD5 7ecb6cd08be82281bfdb2c4e4de32fe5 hddtemp-0.2.ebuild 940
-MD5 8bb14bf26d828268c3494f280039c866 hddtemp-0.3_beta8.ebuild 1142
-MD5 0a2d5f9cdc1a222625e215b2b4025bb5 files/digest-hddtemp-0.3_beta8 70
-MD5 52e2d71a98fe1eabc27e90f889796a6a files/hddtemp-init 538
-MD5 91e4b7762278d6c80f97ce6039442e8d files/hddtemp-0.3_beta13-setsid.patch 370
-MD5 f9c75dfa602045fbaff0c841ee327006 files/digest-hddtemp-0.3_beta11 70
-MD5 f816512c3feee3cc9a92a9a8d27e9cff files/hddtemp.db 11325
-MD5 06b275391f52469a2773a41b9ccc48d6 files/digest-hddtemp-0.2 115
-MD5 104bbcc814d96186d58c38da7f001fda files/digest-hddtemp-0.3_beta12 71
-MD5 a4e0540c259f86b5ed2c4af2a7ead160 files/hddtemp-0.2-db_location.patch 593
-MD5 fb10a6dcf20731e49bdd8a408702e27a files/digest-hddtemp-0.3_beta10 70
+MD5 1feb2ee65821a48928b5638ab65aad7a ChangeLog 5236
 MD5 d2b4b7b99f1a5c3a26d093cea53e85a0 files/digest-hddtemp-0.3_beta13 71
+MD5 4784b9ba9acebc638325e817d252b9b1 files/digest-hddtemp-0.3_beta14 71
+MD5 91e4b7762278d6c80f97ce6039442e8d files/hddtemp-0.3_beta13-setsid.patch 370
 MD5 92bf0d7e78de1bafcedee9c9042df8b2 files/hddtemp-conf.d 342
+MD5 52e2d71a98fe1eabc27e90f889796a6a files/hddtemp-init 538
+MD5 f816512c3feee3cc9a92a9a8d27e9cff files/hddtemp.db 11325
+MD5 18f827ae137a300c155ee91af047824d hddtemp-0.3_beta13.ebuild 1276
+MD5 53a58650a8f1027d698952db031b455b hddtemp-0.3_beta14.ebuild 1280
+MD5 ac68604576ccfc58e653bc0982bef4d4 metadata.xml 281
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDMiQxgIKl8Uu19MoRAqHnAJwJajJLxcoggg2SVkmLVG8i8HJCVQCfVyPN
-uYLk3gJR0vIKsLQLQQSsaqk=
-=Q3qy
+iD8DBQFDbfVMchej4aZK9/cRAg3uAJ0dtBCbfa75QszkHHVpMiYeiDz4HgCfTVDd
+8V8PvsUeJdGPuTC5FCglzRA=
+=A/Mo
 -----END PGP SIGNATURE-----
