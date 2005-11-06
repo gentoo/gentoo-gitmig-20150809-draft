@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 851ace909b8d15c8fec9da1c3cbf160e ChangeLog 3093
+MD5 0df68817c5cdeb9b785f9ca596860f5d ChangeLog 3085
 MD5 d84449f9d7cdf190e22c6be4ccd485fa files/digest-gimps-24.13 62
 MD5 59b44ec0de10774c77941413d23f7608 files/digest-gimps-24.14 62
 MD5 59b44ec0de10774c77941413d23f7608 files/digest-gimps-24.14-r1 62
@@ -16,7 +16,7 @@ MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDbgeDchej4aZK9/cRAkZNAJ4hRKXtuHRYrEcXt4qJZSQr8zICSACfZcIL
-sTvZzciiP05AvbLB6oVns9M=
-=pW7s
+iD8DBQFDbge5chej4aZK9/cRAo4RAJ95sfWpRKRFdOSdVg/5VzK4e1JFgQCdG2sd
+9amI2ouihRUvWwBe4DYtX5E=
+=hx+A
 -----END PGP SIGNATURE-----
