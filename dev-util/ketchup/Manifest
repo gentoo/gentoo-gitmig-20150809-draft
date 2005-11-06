@@ -1,4 +1,16 @@
-MD5 00ef7f749548460bad18ad85d5f59882 ChangeLog 364
-MD5 cdfd35508318525d1080c64d12e3f9fd files/digest-ketchup-0.9.5 64
-MD5 efd5fee311d215143c9c0b91bb3a5cfe ketchup-0.9.5.ebuild 663
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79726088f2715319dfa814555f0f7878 ketchup-0.9.6.ebuild 663
 MD5 0cbe3ee0e8e5b0b58fdf0cea8add2b49 metadata.xml 495
+MD5 efd5fee311d215143c9c0b91bb3a5cfe ketchup-0.9.5.ebuild 663
+MD5 ed13f5eb3593b30b0068b72cfe727fd7 ChangeLog 482
+MD5 cdfd35508318525d1080c64d12e3f9fd files/digest-ketchup-0.9.5 64
+MD5 8a368708a3efb93651727a03361bc162 files/digest-ketchup-0.9.6 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbWU6/aM9DdBw91cRAsJvAJ9d1AnhyZoDHgwKy/8GiQJKWlKsEwCfWv5f
+NxMqZ1Nc3XoKm/oa5w2rj94=
+=B8Qk
+-----END PGP SIGNATURE-----
