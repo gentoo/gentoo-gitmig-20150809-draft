@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.473 2005/11/05 04:56:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.474 2005/11/06 02:02:23 dang Exp $
+
+  06 Nov 2005; <dang@gentoo.org> xorg-x11-7.0.0_rc1.ebuild:
+  Marked ~amd64
 
   05 Nov 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-7.0.0_rc1.ebuild:
