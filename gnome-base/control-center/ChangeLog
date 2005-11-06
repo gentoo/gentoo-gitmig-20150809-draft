@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.138 2005/10/28 17:21:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.139 2005/11/06 04:23:37 allanonjl Exp $
+
+*control-center-1.4.0.5-r2 (06 Nov 2005)
+
+  06 Nov 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +control-center-1.4.0.5-r2.ebuild:
+  add strip-linguas and gnome2_omf_fix to fix #102894
 
   28 Oct 2005; Leonardo Boshell <leonardop@gentoo.org>
   control-center-2.10.2.ebuild, control-center-2.12.1.ebuild:
