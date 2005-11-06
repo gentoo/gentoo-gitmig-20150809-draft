@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r1.ebuild,v 1.3 2005/11/06 11:48:00 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r1.ebuild,v 1.4 2005/11/06 11:52:50 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -14,7 +14,8 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 LICENSE="as-is"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb crypt gdbm ldap mysql postgres kerberos static ssl java pam
+# Removed 'static' USE flag because it is broken upstream, Bug #94137
+IUSE="berkdb crypt gdbm ldap mysql postgres kerberos ssl java pam
 		authdaemond sample urandom srp ntlm_unsupported_patch"
 
 RDEPEND="virtual/libc
@@ -112,7 +113,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--enable-login --enable-ntlm --disable-krb4 --disable-otp"
-	myconf="${myconf} `use_enable static`"
+#	myconf="${myconf} `use_enable static`" -- doesn't work upstream Bug #94137
 	myconf="${myconf} `use_with ssl openssl`"
 	myconf="${myconf} `use_with pam`"
 	myconf="${myconf} `use_with ldap`"
