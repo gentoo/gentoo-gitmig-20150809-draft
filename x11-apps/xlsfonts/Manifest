@@ -1,6 +1,16 @@
-MD5 dc9dc087964c5cf06ea0cadd699a1cf3 ChangeLog 698
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f30bc1b39e6bcdade02808151c551602 ChangeLog 767
 MD5 3de39edc74ab32e5b6bd405f8d593185 files/digest-xlsfonts-0.99.0 67
 MD5 f1447ec191d7804131c8332fb746acdb files/digest-xlsfonts-0.99.1 67
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 MD5 f0cddf7ea7fc2393376c950b70d27630 xlsfonts-0.99.0.ebuild 433
-MD5 1a1e203c57d309df04fcef9bd77f20c3 xlsfonts-0.99.1.ebuild 436
+MD5 85950c87c9fc2cb39b8c985cd89816f7 xlsfonts-0.99.1.ebuild 438
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDbk/KomPajV0RnrERAhrUAJsG8Eya3L3QnMYWE/YR9hRtCXod+QCdEG2I
+w7sLSr+KdbEinoahvgN1oSQ=
+=T3ci
+-----END PGP SIGNATURE-----
