@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.3 2005/11/05 15:49:25 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.4 2005/11/06 04:42:01 st_lim Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${P}.tar.gz
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users"
+IUSE="clamav debug large-domain logrotate mysql neural oci8 postgres sqlite virtual-users user-homedirs"
 DEPEND="clamav? ( >=app-antivirus/clamav-0.86 )
 		mysql? ( >=dev-db/mysql-3.23 )
 		sqlite? ( <dev-db/sqlite-3* )
@@ -80,6 +80,13 @@ pkg_setup() {
 		ewarn "(Control-C to abort)..."
 		epause 30
 	)
+	if use virtual-users && use user-homedirs ; then 
+		ewarn "If the users are virtual, then they probably should not have home directories."
+	fi
+	if use user-homedirs ; then
+		ewarn "WARNING: dspam-web will not work with user-homedirs.  Disable this USE flag "
+		ewarn "if you intend on using dspam-web."
+	fi
 	id dspam 2>/dev/null || enewgroup dspam 26
 	id dspam 2>/dev/null || enewuser dspam 26 /bin/bash ${HOMEDIR} dspam
 }
@@ -94,7 +101,7 @@ src_compile() {
 
 	myconf="${myconf} --with-dspam-home=${HOMEDIR}"
 	myconf="${myconf} --sysconfdir=${CONFDIR}"
-	use virtual-users || myconf="${myconf} --enable-homedir"
+	use user-homedirs || myconf="${myconf} --enable-homedir"
 	use clamav || myconf="${myconf} --enable-clamav"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
