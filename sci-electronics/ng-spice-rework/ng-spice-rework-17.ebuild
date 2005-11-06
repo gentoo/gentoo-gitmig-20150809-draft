@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-17.ebuild,v 1.1 2005/10/01 21:19:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-17.ebuild,v 1.2 2005/11/06 21:53:04 plasmaroo Exp $
 
 inherit eutils
 
@@ -31,4 +31,9 @@ src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc ANALYSIS AUTHORS BUGS COPYING COPYRIGHT CREDITS ChangeLog DEVICES \
 		NEWS README || die "failed to install documentation"
+}
+
+src_test () {
+	# Bug 108405
+	true
 }

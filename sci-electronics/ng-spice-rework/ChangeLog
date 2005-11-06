@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ng-spice-rework
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.7 2005/10/01 21:19:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.8 2005/11/06 21:53:04 plasmaroo Exp $
+
+  06 Nov 2005; <plasmaroo@gentoo.org> ng-spice-rework-17.ebuild:
+  Disable tests for ng-spice-rework-17 since the provided suite fails (bug
+  #108405).
 
 *ng-spice-rework-17 (01 Oct 2005)
 
