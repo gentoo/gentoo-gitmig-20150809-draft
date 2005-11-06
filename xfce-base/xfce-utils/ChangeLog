@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.55 2005/10/06 06:28:57 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.56 2005/11/06 00:02:01 dostrow Exp $
+
+  06 Nov 2005; <dostrow@gentoo.org> xfce-utils-4.2.2-r1.ebuild:
+  Add RDEPEND on x11-apps/xrdb for X modular for bug #111425. 
+  Thanks to Samuli Suominen <sasuomin@uusikaupunki.fi> for 
+  pointing it out.
 
 *xfce-utils-4.2.2-r1 (06 Oct 2005)
 
