@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libherdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.7 2005/11/06 02:37:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libherdstat/ChangeLog,v 1.8 2005/11/06 12:34:10 ka0ttic Exp $
+
+  06 Nov 2005; Aaron Walker <ka0ttic@gentoo.org>
+  libherdstat-0.1.1-r1.ebuild:
+  Fix digest. Also remove the RESTRICT=primaryuri that accidentally made it
+  back into the ebuild.
 
 *libherdstat-0.1.1-r1 (06 Nov 2005)
 
