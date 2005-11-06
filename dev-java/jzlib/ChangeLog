@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.15 2005/07/09 16:06:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.16 2005/11/06 22:36:09 betelgeuse Exp $
+
+  06 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> jzlib-1.0.5.ebuild:
+  Changed the license to BSD and removed mirror restriction because we are
+  allowed to mirror jzlib. Fixes bug #111717.
 
   09 Jul 2005; Thomas Matthijs <axxo@gentoo.org> jzlib-1.0.5.ebuild:
   fix deps, and source useflag support, small cleanup
