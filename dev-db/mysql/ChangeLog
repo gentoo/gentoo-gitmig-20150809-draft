@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.259 2005/11/04 18:53:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.260 2005/11/06 16:26:17 weeve Exp $
+
+  06 Nov 2005; Jason Wever <weeve@gentoo.org> mysql-5.0.15.ebuild:
+  Added ~sparc keyword.
 
   04 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.1.14.ebuild:
   Stable on sparc wrt #109301
