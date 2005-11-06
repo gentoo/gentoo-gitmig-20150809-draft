@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.1.ebuild,v 1.2 2005/10/28 17:21:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.12.1.ebuild,v 1.3 2005/11/06 21:54:27 dang Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,13 @@ IUSE="alsa eds gstreamer"
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=media-libs/fontconfig-1
 	virtual/xft
-	virtual/x11
+	|| ( (
+		x11-libs/libXdmcp
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libXxf86misc
+		x11-libs/libXau )
+	virtual/x11 )
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libbonobo-2
 	>=gnome-base/libgnomeui-2.2
@@ -37,6 +43,12 @@ RDEPEND=">=gnome-base/gnome-vfs-2.2
 	gstreamer? ( =media-libs/gst-plugins-0.8* )"
 
 DEPEND="${RDEPEND}
+	|| ( (
+		x11-libs/libxkbfile
+		x11-proto/kbproto
+		x11-proto/xf86miscproto
+		x11-proto/scrnsaverproto )
+	virtual/x11 )
 	app-text/scrollkeeper
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.28
