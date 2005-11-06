@@ -1,16 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cbb87716199f2cec08b60677ae3ba26f psycopg-1.1.18.ebuild 1241
-MD5 361cb771c24b78365c12d537bc254d35 psycopg-1.1.15.ebuild 1233
-MD5 ca39e3d6849f0433fd9ef054f460ef64 ChangeLog 3704
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 2fae6247e783452341aa2e1046cace34 ChangeLog 3982
 MD5 8ebd6298fe5d6837e93909612aecf857 files/digest-psycopg-1.1.15 66
 MD5 54e5dba3d18c0154107fc72b20fdb16c files/digest-psycopg-1.1.18 66
+MD5 9d8d5b9e83c27d9aaa657531bc0fd326 files/digest-psycopg-1.1.21 66
+MD5 ad48f20eabd11d29c2c865e4f1dcf3d2 files/digest-psycopg-2.0_beta5 66
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 361cb771c24b78365c12d537bc254d35 psycopg-1.1.15.ebuild 1233
+MD5 534166d220b32935356e18070f34eaec psycopg-1.1.18.ebuild 1243
+MD5 754f0c3b59e031b5eeaf9b2d33cd076b psycopg-1.1.21.ebuild 1244
+MD5 91488878128e027bf5edfac937bbe142 psycopg-2.0_beta5.ebuild 755
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.2 (GNU/Linux)
 
-iD8DBQFDGLKlomPajV0RnrERAhMyAJwJ40DgucPdzu7h2T/T+K9XgDHUwACfQNXe
-gEgybKoX5Q3gHKGGhyT97to=
-=F0X7
+iD8DBQFDbV059ZFPrqoILX8RAiiEAJ93vTk2P13ddtVSY7IqcEyfPfhKwwCfd9Al
+ZKLPvWXmwstDT6tqxXOj+jY=
+=Jj07
 -----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.28 2005/09/02 20:13:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.29 2005/11/06 01:32:06 liquidx Exp $
+
+*psycopg-2.0_beta5 (06 Nov 2005)
+*psycopg-1.1.21 (06 Nov 2005)
+
+  06 Nov 2005; Alastair Tse <liquidx@gentoo.org> psycopg-1.1.18.ebuild,
+  +psycopg-1.1.21.ebuild, +psycopg-2.0_beta5.ebuild:
+  version bump stable version, and also introduce hard-masked development
+  version.
 
   02 Sep 2005; <dang@gentoo.org> psycopg-1.1.18.ebuild:
   Marked ~amd64
