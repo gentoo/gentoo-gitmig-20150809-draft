@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/viewglob
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.7 2005/11/05 13:15:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.8 2005/11/06 16:25:36 slarti Exp $
+
+  06 Nov 2005; Tom Martin <slarti@gentoo.org> viewglob-2.0.3.ebuild:
+  Several stylistic changes to the ebuild. Thanks a lot to Petteri Räty
+  <betelgeuse@gentoo.org> in bug #111548.
 
   05 Nov 2005; Petteri Räty <betelgeuse@gentoo.org> viewglob-2.0.3.ebuild:
   Added ~x86 keyword. Fixes bug #111543.

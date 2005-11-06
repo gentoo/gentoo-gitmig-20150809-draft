@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.3.ebuild,v 1.3 2005/11/05 13:15:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.3.ebuild,v 1.4 2005/11/06 16:25:36 slarti Exp $
 
 inherit eutils
 
-DESCRIPTION="Graphical display of directories and globs referenced at the shell prompt"
+DESCRIPTION="Graphical display of directories and globs referenced at the shell
+prompt."
 HOMEPAGE="http://viewglob.sourceforge.net/"
 SRC_URI="mirror://sourceforge/viewglob/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -16,19 +17,9 @@ DEPEND=">=dev-libs/glib-2.2.0
 	>=x11-libs/gtk+-2.4.0
 	|| ( app-shells/bash app-shells/zsh )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
-
 src_install () {
 	make DESTDIR=${D} install || die "install failed"
-	dodoc AUTHORS COPYING COPYING2 ChangeLog HACKING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
 }
 
 pkg_postinst() {
