@@ -1,4 +1,14 @@
-MD5 5754256e4a49e8abfe4a37004b6b3161 ChangeLog 464
-MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 f355eee0d7faf76c0e667c189a2adfe9 wmappkill-0.2.ebuild 884
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8e04066875e5fd51d27472a40c8004a8 ChangeLog 577
 MD5 86d043f15a8d271d1f2575355dcbdf12 files/digest-wmappkill-0.2 64
+MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 8488a721ad4ee0580b8104c356f03e8e wmappkill-0.2.ebuild 894
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFDbXmEwUpWvClEHQoRAvLEAJ4nAF0bMRF+OWEZGLezgrpZxf5a2ACfYmAD
+R4Q/Fd3LcfMTX7ZkqCn7WsE=
+=peca
+-----END PGP SIGNATURE-----

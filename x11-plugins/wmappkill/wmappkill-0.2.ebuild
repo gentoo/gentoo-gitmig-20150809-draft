@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappkill/wmappkill-0.2.ebuild,v 1.2 2005/08/29 08:04:22 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappkill/wmappkill-0.2.ebuild,v 1.3 2005/11/06 03:34:53 metalgod Exp $
 
 IUSE=""
 S=${WORKDIR}/wmAppKill-${PV}
@@ -9,7 +9,7 @@ SRC_URI="http://internettrash.com/users/beuz/${P}.tar.gz"
 HOMEPAGE="http://internettrash.com/users/beuz/wmappkill.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 DEPEND="virtual/x11
 	=gnome-base/libgtop-1*
 	>=dev-util/pkgconfig-0.15.0
