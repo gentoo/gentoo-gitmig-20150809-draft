@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/fetch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.5 2005/10/06 15:45:06 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.6 2005/11/06 19:23:39 svyatogor Exp $
+
+*fetch-0.1.2 (06 Nov 2005)
+
+  06 Nov 2005; Sergey Kuleshov <svyatogor@gentoo.org> +fetch-0.1.2.ebuild:
+  Version bump. Added dbus as a dependency. (bug #106719 by Peter Hyman)
 
 *fetch-0.1.1 (06 Oct 2005)
 
