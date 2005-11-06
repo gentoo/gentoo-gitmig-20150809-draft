@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.5.ebuild,v 1.8 2005/11/06 14:04:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.5.ebuild,v 1.9 2005/11/06 14:37:43 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -77,7 +77,7 @@ src_install() {
 
 	# Install easy-rsa stuff
 	exeinto "/usr/share/${PN}/easy-rsa"
-	doexe easy-rsa/2.0/*-* pkitool
+	doexe easy-rsa/2.0/*-* easy-rsa/2.0/pkitool
 	insinto "/usr/share/${PN}/easy-rsa"
 	doins easy-rsa/2.0/{README,openssl.cnf,vars}
 
