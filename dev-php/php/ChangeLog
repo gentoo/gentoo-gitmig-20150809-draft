@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.210 2005/11/06 13:42:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.211 2005/11/06 18:36:07 chtekk Exp $
+
+  06 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  files/php4.3.11-pcre-security.patch, files/php4.4.0-pcre-security.patch:
+  Fix PHP branding.
 
   06 Nov 2005; Simon Stelling <blubb@gentoo.org> php-4.3.11-r4.ebuild,
   php-4.4.0-r4.ebuild:
