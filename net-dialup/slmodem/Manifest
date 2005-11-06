@@ -1,7 +1,8 @@
-MD5 c0a2b060e89d0375f0967bd2408cc7c7 ChangeLog 12719
+MD5 23c24b1f294ad4a937886c00d629dc8b ChangeLog 12869
 MD5 8338cfc9815a953d85195bdccd9fbc97 files/digest-slmodem-2.9.11_pre20050816 140
 MD5 cae2ec761f3db78791ab4ec7f0e83d5b files/digest-slmodem-2.9.11_pre20051009 140
 MD5 cae2ec761f3db78791ab4ec7f0e83d5b files/digest-slmodem-2.9.11_pre20051009-r1 140
+MD5 66a7f4e6682670216c1497606c9c600b files/digest-slmodem-2.9.11_pre20051101 140
 MD5 fd55ef399408a109742263cd5b4a5219 files/digest-slmodem-2.9.9d 66
 MD5 67168d0e7a1be3e5041ec3cb8dabb50d files/slmodem-2.9.11.init 2182
 MD5 e91d1df68be76c531a8514dba77c1886 files/slmodem-2.9.11.modules 106
@@ -18,4 +19,5 @@ MD5 e487a8ab7ec754f06a85f64f4aaa7540 metadata.xml 409
 MD5 efbbb8c40614e5c3d370b0c55eb6b67e slmodem-2.9.11_pre20050816.ebuild 4345
 MD5 d674ea9e8c47078b3bc481b565f1998f slmodem-2.9.11_pre20051009-r1.ebuild 4556
 MD5 54c73f3777213c30e2a93b7ff18bd711 slmodem-2.9.11_pre20051009.ebuild 4549
+MD5 76dc106e077e47aeb5d9dc6e79bca51a slmodem-2.9.11_pre20051101.ebuild 4491
 MD5 da3f5db025a3799ee1bdf5b9eef53601 slmodem-2.9.9d.ebuild 3553
