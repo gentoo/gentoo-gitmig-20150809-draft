@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/akode-3.4.3.ebuild,v 1.2 2005/10/13 15:08:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/akode-3.4.3.ebuild,v 1.3 2005/11/06 09:00:44 greg_g Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -23,7 +23,14 @@ DEPEND="arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) $(deprange 3.4.1 $MAXKD
 # MISSING: polypaudio - no gentoo ebuild as yet
 # TODO: configure needs a pkg-config file for media-sound/jack to detect it
 
-KMCOPYLIB="libartsbuilder arts/runtime"
+src_unpack() {
+	if use arts; then
+		KMCOPYLIB="${KMCOPYLIB}
+		           libartsbuilder arts/runtime"
+	fi
+
+	kde-meta_src_unpack
+}
 
 src_compile() {
 	use speex && myconf="$myconf --with-extra-includes=/usr/include/speex"

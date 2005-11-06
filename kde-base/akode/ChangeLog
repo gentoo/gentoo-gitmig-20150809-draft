@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.22 2005/10/13 15:08:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.23 2005/11/06 09:00:44 greg_g Exp $
+
+  06 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> akode-3.4.3.ebuild:
+  Fix compilation without arts (#109579).
 
   13 Oct 2005; Dan Armak <danarmak@gentoo.org> akode-3.4.3.ebuild:
   Added missing dep on kdemultimedia-arts and KMCOPYLIB instructions for
