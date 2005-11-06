@@ -1,12 +1,33 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.48 2005/10/21 02:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.49 2005/11/06 07:56:29 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
 # then switch the versions on the fly (with `binutils-config`).
+#
+# binutils-9999           -> live cvs
+# binutils-9999_preYYMMDD -> nightly snapshot date YYMMDD
+# binutils-#              -> normal release
 
-inherit eutils libtool flag-o-matic gnuconfig multilib
+extra_eclass=""
+if [[ ${PV} == "9999" ]] ; then
+	extra_eclass="cvs"
+	ECVS_SERVER="sourceware.org:/cvs/src"
+	ECVS_MODULE="binutils"
+	ECVS_USER="anoncvs"
+	ECVS_PASS="anoncvs"
+	BTYPE="cvs"
+	BVER="cvs"
+elif [[ ${PV} == 9999_pre* ]] ; then
+	BTYPE="snap"
+	BVER=${PV/9999_pre}
+else
+	BTYPE="rel"
+	BVER=${PV}
+fi
+
+inherit eutils libtool flag-o-matic gnuconfig multilib ${extra_eclass}
 EXPORT_FUNCTIONS src_unpack src_compile src_test src_install pkg_postinst pkg_postrm
 
 export CTARGET=${CTARGET:-${CHOST}}
@@ -18,9 +39,15 @@ fi
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
-SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${PV}.tar.bz2
-	mirror://kernel/linux/devel/binutils/test/binutils-${PV}.tar.bz2
-	mirror://gnu/binutils/binutils-${PV}.tar.bz2"
+
+case ${BTYPE} in
+	cvs)  SRC_URI="";;
+	snap) SRC_URI="ftp://gcc.gnu.org/pub/binutils/snapshots/binutils-${BVER}.tar.bz2";;
+	rel)
+		SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${PV}.tar.bz2
+			mirror://kernel/linux/devel/binutils/test/binutils-${PV}.tar.bz2
+			mirror://gnu/binutils/binutils-${PV}.tar.bz2"
+esac
 [[ -n ${PATCHVER} ]] && \
 	SRC_URI="${SRC_URI} mirror://gentoo/binutils-${PV}-patches-${PATCHVER}.tar.bz2"
 [[ -n ${UCLIBC_PATCHVER} ]] && \
@@ -29,7 +56,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${PV}.tar.bz2
 LICENSE="|| ( GPL-2 LGPL-2 )"
 IUSE="nls multitarget multislot test"
 if use multislot ; then
-	SLOT="${CTARGET}-${PV}"
+	SLOT="${CTARGET}-${BVER}"
 elif [[ ${CTARGET} != ${CHOST} ]] ; then
 	SLOT="${CTARGET}"
 else
@@ -41,12 +68,13 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}/binutils-${PV}
+S=${WORKDIR}/binutils
+[[ ${BVER} != "cvs" ]] && S=${S}-${BVER}
 
-LIBPATH=/usr/$(get_libdir)/binutils/${CTARGET}/${PV}
+LIBPATH=/usr/$(get_libdir)/binutils/${CTARGET}/${BVER}
 INCPATH=${LIBPATH}/include
-BINPATH=/usr/${CTARGET}/binutils-bin/${PV}
-DATAPATH=/usr/share/binutils-data/${CTARGET}/${PV}
+BINPATH=/usr/${CTARGET}/binutils-bin/${BVER}
+DATAPATH=/usr/share/binutils-data/${CTARGET}/${BVER}
 MY_BUILDDIR=${WORKDIR}/build
 
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
@@ -205,11 +233,11 @@ toolchain-binutils_src_install() {
 	insinto /etc/env.d/binutils
 	cat <<-EOF > env.d
 		TARGET="${CTARGET}"
-		VER="${PV}"
+		VER="${BVER}"
 		LIBPATH="${LIBPATH}"
 		FAKE_TARGETS="${FAKE_TARGETS}"
 	EOF
-	newins env.d ${CTARGET}-${PV}
+	newins env.d ${CTARGET}-${BVER}
 
 	# Handle documentation
 	if ! is_cross ; then
@@ -240,7 +268,7 @@ toolchain-binutils_src_install() {
 toolchain-binutils_pkg_postinst() {
 	# Make sure this ${CTARGET} has a binutils version selected
 	[[ -e ${ROOT}/etc/env.d/binutils/config-${CTARGET} ]] && return 0
-	binutils-config ${CTARGET}-${PV}
+	binutils-config ${CTARGET}-${BVER}
 }
 
 toolchain-binutils_pkg_postrm() {
@@ -252,7 +280,7 @@ toolchain-binutils_pkg_postrm() {
 	#       rerun binutils-config if this is a remerge, as
 	#       we want the mtimes on the symlinks updated (if
 	#       it is the same as the current selected profile)
-	if [[ ! -e ${BINPATH}/ld ]] && [[ ${current_profile} == ${CTARGET}-${PV} ]] ; then
+	if [[ ! -e ${BINPATH}/ld ]] && [[ ${current_profile} == ${CTARGET}-${BVER} ]] ; then
 		local choice=$(binutils-config -l | grep ${CTARGET} | awk '{print $2}')
 		choice=${choice//$'\n'/ }
 		choice=${choice/* }
@@ -261,7 +289,7 @@ toolchain-binutils_pkg_postrm() {
 		else
 			binutils-config ${choice}
 		fi
-	elif [[ $(CHOST=${CTARGET} binutils-config -c) == ${CTARGET}-${PV} ]] ; then
-		binutils-config ${CTARGET}-${PV}
+	elif [[ $(CHOST=${CTARGET} binutils-config -c) == ${CTARGET}-${BVER} ]] ; then
+		binutils-config ${CTARGET}-${BVER}
 	fi
 }
