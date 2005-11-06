@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.6 2005/09/09 06:49:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.7 2005/11/06 02:11:22 dang Exp $
+
+  06 Nov 2005; <dang@gentoo.org> font-bh-ttf-0.99.0.ebuild:
+  Marked ~amd64
 
   09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata.
