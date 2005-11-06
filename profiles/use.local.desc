@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1540 2005/11/05 20:06:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1541 2005/11/06 04:45:45 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -497,6 +497,7 @@ mail-filter/dspam:maildrop - Build with delivery options for maildrop
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
 mail-filter/dspam:sqlite3 - Build sqlite 3 support
+mail-filter/dspam:user-homedirs - Build with user homedir support
 mail-filter/dspam:virtual-users  - Build with virtual-users support
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
