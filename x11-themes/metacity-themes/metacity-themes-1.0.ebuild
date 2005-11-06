@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.13 2004/06/24 23:35:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.14 2005/11/06 07:14:15 obz Exp $
 
 inherit eutils
 
@@ -83,4 +83,8 @@ src_install() {
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	chmod -R ugo=rX *
+
+	# Remove all of the .xvpics directories, see bug #97368
+	find . -type d -iname ".xvpics" | xargs rm -rf
+
 }
