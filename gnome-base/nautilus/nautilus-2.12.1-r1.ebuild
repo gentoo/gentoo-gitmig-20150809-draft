@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.1-r1.ebuild,v 1.1 2005/11/01 19:40:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.12.1-r1.ebuild,v 1.2 2005/11/06 21:11:58 dang Exp $
 
 inherit virtualx gnome2 eutils
 
@@ -31,7 +31,10 @@ RDEPEND=">=media-libs/libart_lgpl-2.3.10
 	>=media-libs/libexif-0.5.12
 	>=gnome-base/gconf-2
 	dev-libs/popt
-	virtual/x11
+	|| ( (
+		x11-libs/libICE
+		x11-libs/libSM )
+	virtual/x11 )
 	virtual/eject"
 #	!gstreamer? ( vorbis? ( media-sound/vorbis-tools ) )
 #	gstreamer? (
