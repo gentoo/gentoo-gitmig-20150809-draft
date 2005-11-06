@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1541 2005/11/06 04:45:45 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1542 2005/11/06 17:44:25 dcoutts Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -194,6 +194,8 @@ dev-games/ogre:cg - nvidia toolkit plugin
 dev-games/ogre:devil - image loading support with DevIL
 dev-games/ogre:double-precision - more precise calculations at the expense of speed
 dev-games/ogre:openexr - support for the openexr file format
+dev-haskell/gtk2hs:firefox - Build the Mozilla Embeded Component against firefox rather than mozilla
+dev-haskell/gtk2hs:glade - Enable libglade bindings compilation
 dev-java/ant-tasks:javamail - Enable JavaMail Ant task
 dev-java/ant-tasks:noantlr - Disable ANTLR Ant task -- Warning: Enabling this could break some of the Java packages!!
 dev-java/ant-tasks:nobcel - Disable bcel Ant task -- Warning: Enabling this could break some of the Java packages!!
