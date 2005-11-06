@@ -1,4 +1,7 @@
-MD5 dc74aed45b8601d9ef27072251b945f7 ChangeLog 10795
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 66125c3152b8d49c4d8b36bcce1e1340 ChangeLog 10870
 MD5 41b41aaa36ba84805514d34f2d9b491f files/digest-vte-0.11.13-r2 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15 64
 MD5 d1ed443a14f417affb1932a7765c120c files/digest-vte-0.11.15-r1 64
@@ -8,5 +11,12 @@ MD5 3805528034f3d01fa27e24f600618c0d files/vte-line-scroll.patch 2234
 MD5 31acc289fb190f9bdd0285147233eee0 files/vte-no_lazy_bindings.patch 419
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aa4d3fbbdfc954475759cebe1f450a58 vte-0.11.13-r2.ebuild 1401
-MD5 7908ea079b9824d12b50b370a37876cf vte-0.11.15-r1.ebuild 1395
+MD5 b45b0e0e702c8f81d624ea8ba4748320 vte-0.11.15-r1.ebuild 1456
 MD5 91bbba7d68b5a5c202912b63bae30148 vte-0.11.15.ebuild 1301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFDboFhomPajV0RnrERApNuAJ4uW/gA6gX7LvJ49NoqTNwbI8+0eACdEN+L
+9b4Kr27aepb44CoUp4rP/1Q=
+=tuSz
+-----END PGP SIGNATURE-----
