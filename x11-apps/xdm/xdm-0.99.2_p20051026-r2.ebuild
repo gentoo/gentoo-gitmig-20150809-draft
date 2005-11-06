@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-0.99.2_p20051026-r2.ebuild,v 1.1 2005/11/02 06:20:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-0.99.2_p20051026-r2.ebuild,v 1.2 2005/11/06 21:23:45 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -10,7 +10,8 @@ inherit multilib x-modular pam
 DESCRIPTION="X.Org xdm application"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="xprint ipv6 pam"
-RDEPEND="x11-libs/libXdmcp
+RDEPEND="x11-apps/xrdb
+	x11-libs/libXdmcp
 	x11-libs/libXaw
 	>=x11-apps/xinit-0.99.1_pre20050905-r1
 	x11-libs/libX11
