@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.7 2005/10/10 00:15:52 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.8 2005/11/06 16:12:01 kugelfang Exp $
 
 inherit games
 
@@ -23,6 +23,7 @@ src_unpack() {
 	sed -i "s:X386:X11R6:" Makefile
 	sed -i "s:data/%s:${GAMES_DATADIR}/${PN}/%s:" bomber.c
 	sed -i "s:=\"data\":=\"${GAMES_DATADIR}/${PN}\":" sound.c
+	epatch ${FILESDIR}/${P}-va_list.patch
 }
 
 src_compile() {
