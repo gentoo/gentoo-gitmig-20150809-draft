@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.114 2005/11/06 13:42:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.115 2005/11/06 18:50:13 chtekk Exp $
+
+  06 Nov 2005; Luca Longinotti <chtekk@gentoo.org>
+  files/php4.3.11-pcre-security.patch, files/php4.4.0-pcre-security.patch:
+  Fix PHP branding.
 
   06 Nov 2005; Simon Stelling <blubb@gentoo.org> php-cgi-4.3.11-r5.ebuild,
   php-cgi-4.4.0-r5.ebuild:
