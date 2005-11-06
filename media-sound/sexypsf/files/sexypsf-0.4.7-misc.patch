@@ -38,7 +38,7 @@
  
 --- sexypsf/Makefile
 +++ sexypsf/Makefile
-@@ -12,8 +12,7 @@
+@@ -12,18 +12,14 @@
  RM = rm -f
  
  LIBS = -shared -lz
@@ -48,18 +48,19 @@
  
  OBJS =	PsxBios.o PsxCounters.o PsxDma.o Spu.o PsxHw.o PsxMem.o Misc.o	\
  	R3000A.o PsxInterpreter.o PsxHLE.o spu/spu.o
-@@ -21,10 +20,6 @@
- OBJS+=	xmms/xmms.o
- FLAGS+=	`gtk-config --cflags`
  
++XMMSCONF = xmms-config
+ OBJS+=	xmms/xmms.o
+-FLAGS+=	`gtk-config --cflags`
++FLAGS+=	`${XMMSCONF} --cflags`
+-
 -ifeq (${CPU}, ix86)
 -	OPTIMIZE += -fomit-frame-pointer -mcpu=i686 -fno-exceptions
 -endif
--
+ 
  ifeq (${CPU}, ppc)
  	FLAGS+=-DMSB_FIRST
- endif	
-@@ -33,10 +28,10 @@
+@@ -33,16 +30,16 @@
  	FLAGS+=-DMSB_FIRST
  endif
  
@@ -72,6 +73,13 @@
  
  install: sexypsf
  	mv libsexypsf.so ${HOME}/.xmms/Plugins
+ 
+ installglobal: sexypsf
+-	mv libsexypsf.so `xmms-config --input-plugin-dir`
++	mv libsexypsf.so `${XMMSCONF} --input-plugin-dir`
+ 
+ .PHONY: clean sexypsf
+ 
 --- sexypsf/PsxInterpreter.c
 +++ sexypsf/PsxInterpreter.c
 @@ -417,7 +417,7 @@

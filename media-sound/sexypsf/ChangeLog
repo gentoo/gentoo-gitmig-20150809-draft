@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sexypsf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.10 2005/11/02 19:46:39 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.11 2005/11/06 15:37:42 truedfx Exp $
+
+  06 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
+  files/sexypsf-0.4.7-misc.patch, sexypsf-0.4.7.ebuild:
+  Add bmp support
 
   02 Nov 2005; Harald van Dĳk <truedfx@gentoo.org>
   files/sexypsf-0.4.7-misc.patch:
