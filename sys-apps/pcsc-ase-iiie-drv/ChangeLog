@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/pcsc-ase-iiie-drv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-ase-iiie-drv/ChangeLog,v 1.1 2005/11/06 17:11:49 pylon Exp $
+
+*pcsc-ase-iiie-drv-3.1 (06 Nov 2005)
+
+  06 Nov 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +pcsc-ase-iiie-drv-3.1.ebuild:
+  Driver for the Athena ASE IIIe SmartCard Reader/Writer.
+
