@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r1.ebuild,v 1.2 2005/11/06 04:35:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r1.ebuild,v 1.3 2005/11/06 11:48:00 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -103,7 +103,7 @@ src_unpack() {
 		die "recreate configure failed"
 	eend $?
 
-	# Sypport for crypted passwords. Bug #45181
+	# Support for crypted passwords. Bug #45181
 	use crypt && epatch "${FILESDIR}/cyrus-sasl-2.1.19-checkpw.c.patch"
 
 	# Upstream doesn't even honor their own configure options... grumble
