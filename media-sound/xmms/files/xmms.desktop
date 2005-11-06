@@ -13,11 +13,10 @@ comment[ro]=X MultiMedia Sistem
 comment[th]=ระบบมัลติมีเดียบน X
 comment[tr]=X Multimedya Sistem
 comment[zh_TW]=X ฆhดCล้จtฒฮ
-Encoding=Legacy-Mixed
+Encoding=UTF-8
 Exec=/usr/bin/xmms
-Icon=mini/xmms_mini.xpm
+Icon=/usr/share/pixmaps/mini/xmms_mini.xpm
 MimeType=audio/x-scpls;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;audio/mpeg;audio/x-mpeg;audio/x-wav;application/x-ogg
 Terminal=0
 Type=Application
-Categories=Application;Multimedia;AudioVideo;Player
-
+Categories=Application;Multimedia;AudioVideo;Player;
