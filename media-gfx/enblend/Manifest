@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eacc63899cd5aa9e65ca93e3f3498827 ChangeLog 1104
+MD5 4673c6dabc418cd925a03f084a6bba03 ChangeLog 1202
 MD5 130338d6cc19602b633244fad664d8e8 enblend-2.1.ebuild 604
 MD5 92062b118713aa0611aee5c1d9c34a4d enblend-2.2.ebuild 603
-MD5 b4e9aec1bff048d0f83363a84edfa3b7 enblend-2.3.ebuild 605
-MD5 3a477b460f42a5c49aadc5971992e834 metadata.xml 251
+MD5 a2ae9ecb369821cec7523f45948a3291 enblend-2.3.ebuild 605
 MD5 d4cecbd66e4d004a854f32ca2c15e321 files/digest-enblend-2.1 63
 MD5 b0d7ff691bb4f3f1daf0fc7d5a3983d0 files/digest-enblend-2.2 63
 MD5 2ca5f402d09503ce5950b4868323184c files/digest-enblend-2.3 63
+MD5 3a477b460f42a5c49aadc5971992e834 metadata.xml 251
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDJwb2CRZPokWLroQRAr4ZAJ4oPmEtG7/LdPCUo30RV1DOavJ80gCgtbb9
-GjGmUA0Graa0nFgbEqr6X+s=
-=WIvz
+iD8DBQFDbXcQwUpWvClEHQoRAteZAJoCMC/bSp6qn2YghYbALTHVS+By8QCfeIG7
+qyEGqmVNFKCEYWpz7aT6L1M=
+=ar55
 -----END PGP SIGNATURE-----
