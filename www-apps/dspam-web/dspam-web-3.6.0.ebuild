@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.6.0.ebuild,v 1.1 2005/11/05 15:53:55 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.6.0.ebuild,v 1.2 2005/11/06 04:14:16 st_lim Exp $
 
 inherit webapp eutils
 
@@ -109,42 +109,26 @@ src_install () {
 		-i ${S}/webui/cgi-bin/admin.cgi
 	sed -e 's,/var/dspam,/etc/mail/dspam,' \
 		-e 's,/usr/local,/usr,' \
-		-i ${S}/webui/cgi-bin/admingraph.cgi
-	sed -e 's,/var/dspam,/etc/mail/dspam,' \
-		-e 's,/usr/local,/usr,' \
 		-i ${S}/webui/cgi-bin/dspam.cgi
-	sed -e 's,/var/dspam,/etc/mail/dspam,' \
-		-e 's,/usr/local,/usr,' \
-		-i ${S}/webui/cgi-bin/graph.cgi
 
+	cp -r ${S}/webui/htdocs/* ${D}/${MY_HTDOCSDIR} || die
+	cp -r ${S}/webui/cgi-bin/* ${D}/${MY_CGIBINDIR} || die
 	insinto ${MY_HTDOCSDIR}
 	insopts -m644 -o apache -g apache
-	doins ${S}/webui/htdocs/base.css
-	doins ${S}/webui/htdocs/dspam-logo-small.gif
-	doins ${S}/webui/cgi-bin/rgb.txt
-	doins ${S}/webui/cgi-bin/default.prefs
-	doins ${S}/webui/cgi-bin/admins
-	doins ${S}/webui/cgi-bin/configure.pl
 
 	newins ${FILESDIR}/htaccess .htaccess
 	newins ${FILESDIR}/htpasswd .htpasswd
 
-	insopts -m755 -o apache -g apache
-	doins ${S}/webui/cgi-bin/*.cgi
-
-	for CGI_SCRIPT in admin.cgi admingraph.cgi dspam.cgi graph.cgi; do
-		webapp_runbycgibin perl ${MY_HTDOCSDIR}/${CGI_SCRIPT}
+	#All files must be owned by server
+	cd ${D}/${MY_HTDOCSDIR}
+	for file in `find -type d -printf "%p/* "`; do
+		webapp_serverowned "${MY_HTDOCSDIR}/${file}"
 	done
 
-	dodir ${MY_HTDOCSDIR}/templates
-
-	insinto ${MY_HTDOCSDIR}/templates
-	doins ${S}/webui/cgi-bin/templates/*.html
-
 	#All files must be owned by server
-	cd ${D}${MY_HTDOCSDIR}
-	for x in `find . -type f -print` ; do
-		webapp_serverowned ${MY_HTDOCSDIR}/$x
+	cd ${D}/${MY_CGIBINDIR}
+	for file in `find -type d -printf "%p/* "`; do
+		webapp_serverowned "${MY_CGIBINDIR}/${file}"
 	done
 
 	webapp_src_install
