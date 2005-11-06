@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4658 2005/11/06 01:32:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.4659 2005/11/06 21:16:26 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1749,7 +1749,3 @@ app-text/sgml2x
 # Pre-removal masking
 # <vivo@gentoo.org> (18 Aug 2005)
 dev-db/mysqltool
-
-# Security issues, and unmaintained upstream
-# <dang@gentoo.org> (18 Aug 2005)
-app-admin/gwcc
