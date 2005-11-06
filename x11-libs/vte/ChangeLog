@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.91 2005/11/02 12:48:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.92 2005/11/06 15:21:07 obz Exp $
+
+*vte-0.11.15-r1 (06 Nov 2005)
+
+  06 Nov 2005; Mike Gardiner <obz@gentoo.org>
+  +files/vte-0.11.15-gdk-warnings.patch, +vte-0.11.15-r1.ebuild:
+  Added a fix for disabling gdk warnings, see bug #101401, and the upstream link.
 
   02 Nov 2005; Gustavo Zacarias <gustavoz@gentoo.org> vte-0.11.15.ebuild:
   Stable on sparc
