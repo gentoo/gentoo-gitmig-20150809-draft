@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.4 2005/11/06 04:42:01 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.0.ebuild,v 1.5 2005/11/06 17:22:03 mr_bones_ Exp $
 
 inherit eutils
 
@@ -80,7 +80,7 @@ pkg_setup() {
 		ewarn "(Control-C to abort)..."
 		epause 30
 	)
-	if use virtual-users && use user-homedirs ; then 
+	if use virtual-users && use user-homedirs ; then
 		ewarn "If the users are virtual, then they probably should not have home directories."
 	fi
 	if use user-homedirs ; then
