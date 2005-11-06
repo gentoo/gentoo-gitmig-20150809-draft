@@ -1,0 +1,22 @@
+--- configure.in.orig	2005-07-02 23:34:41.000000000 +0200
++++ configure.in	2005-10-30 22:10:47.000000000 +0100
+@@ -97,7 +97,7 @@
+ 		 sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\.\([[0-9]]*\).*/\3/'`
+ 
+ 	if test "$major" -eq "$req_major"; then
+-	   if test "$minor" -eq "$req_minor"; then
++	   if test "$minor" -ge "$req_minor"; then
+ 	     if test "$micro" -ge "$req_micro"; then
+ 	       ok="yes"
+ 	     fi
+--- configure.orig	2005-07-28 02:46:24.000000000 +0200
++++ configure	2005-10-30 22:10:23.000000000 +0100
+@@ -19614,7 +19614,7 @@
+ 		 sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
+ 
+ 	if test "$major" -eq "$req_major"; then
+-	   if test "$minor" -eq "$req_minor"; then
++	   if test "$minor" -ge "$req_minor"; then
+ 	     if test "$micro" -ge "$req_micro"; then
+ 	       ok="yes"
+ 	     fi

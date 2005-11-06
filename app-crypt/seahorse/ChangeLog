@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.46 2005/10/10 21:39:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.47 2005/11/06 21:20:22 dragonheart Exp $
+
+  06 Nov 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/seahorse-0.7.9-gpgme-1.1.0.patch, seahorse-0.7.9.ebuild:
+  fix to allow to work with gpgme-1.1.0 thanks to Doug Goldstein for the bug
+  report and Daniel Schindler for the patch. See bug #110841
 
   10 Oct 2005; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.6.ebuild,
   seahorse-0.7.8.ebuild, seahorse-0.7.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.5 2005/10/10 21:41:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.9.ebuild,v 1.6 2005/11/06 21:20:22 dragonheart Exp $
 
 inherit gnome2 eutils autotools flag-o-matic
 
@@ -45,6 +45,7 @@ src_unpack() {
 	# Apply patch to allow seahorse-0.7.9 to compile with
 	# gedit-2.12. See bug #106133, <obz@gentoo.org>
 	epatch ${FILESDIR}/${P}-gedit-2.12.patch
+	epatch ${FILESDIR}/${P}-gpgme-1.1.0.patch
 	# Re-configure
 	eautoconf
 
