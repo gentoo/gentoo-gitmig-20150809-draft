@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 51e2de844a2faf15c7a3b75ab33a8162 comix-1.3.4.ebuild 541
-MD5 26e8a078d322f770d3eb4c017c3d804c comix-1.3.3.ebuild 537
-MD5 6b29fffc88c9192a492bf9ab43daf86b ChangeLog 1705
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 4ea5df4d96d36541808eebcd1220dc60 files/digest-comix-1.3.3 70
+MD5 6b29fffc88c9192a492bf9ab43daf86b ChangeLog 1705
+MD5 51e2de844a2faf15c7a3b75ab33a8162 comix-1.3.4.ebuild 541
 MD5 d8a83ea9216d4701c0043aab5b5899dd files/digest-comix-1.3.4 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDXkFmKRy60XGEcJIRAhWMAJ9+gagr/SB3OS5FRZMxC/ICqIDzLQCfSSkM
-Urn84DdmmrruwZZc2u44kdI=
-=EapJ
------END PGP SIGNATURE-----
