@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.36 2005/09/20 02:39:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.37 2005/11/06 09:09:14 greg_g Exp $
+
+  06 Nov 2005; Gregorio Guidi <greg_g@gentoo.org> kaffeine-0.7.1.ebuild:
+  Add dependency on modular xorg for bug #110174.
 
   20 Sep 2005; Caleb Tennis <caleb@gentoo.org> kaffeine-0.7.1.ebuild:
   x86 stable

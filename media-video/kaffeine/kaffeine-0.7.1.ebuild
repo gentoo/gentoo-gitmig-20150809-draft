@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1.ebuild,v 1.2 2005/09/20 02:39:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.7.1.ebuild,v 1.3 2005/11/06 09:09:14 greg_g Exp $
 
 inherit eutils kde
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="dvb gstreamer"
 
-RDEPEND=">=x11-base/xorg-x11-6.8.0-r4
+RDEPEND="|| ( x11-base/xorg-server
+	      >=x11-base/xorg-x11-6.8.0-r4 )
 	>=media-libs/xine-lib-1
 	gstreamer? ( >=media-libs/gstreamer-0.8.8
 		>=media-libs/gst-plugins-0.8.6 )"
