@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.34 2005/10/10 08:12:32 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.35 2005/11/06 02:42:18 obz Exp $
+
+*desktop-file-utils-0.10-r1 (06 Nov 2005)
+
+  06 Nov 2005; Mike Gardiner <obz@gentoo.org>
+  +files/desktop-file-utils-0.10-man.patch,
+  +desktop-file-utils-0.10-r1.ebuild:
+  Added man pages to desktop-file-utils. See bug #85354 for more, thanks to
+  Matt Kynx for providing the man patch.
 
   10 Oct 2005; Hardave Riar <hardave@gentoo.org>
   desktop-file-utils-0.10.ebuild:
