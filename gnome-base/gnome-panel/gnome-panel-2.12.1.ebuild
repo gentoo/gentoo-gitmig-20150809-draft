@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.1.ebuild,v 1.1 2005/10/08 19:48:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.12.1.ebuild,v 1.2 2005/11/06 03:30:20 obz Exp $
 
 inherit gnome2
 
@@ -59,7 +59,6 @@ pkg_postinst() {
 		GCONF_CONFIG_SOURCE=`${ROOT}/usr/bin/gconftool-2 --get-default-source`
 		${ROOT}/usr/bin/gconftool-2 --direct --config-source \
 			${GCONF_CONFIG_SOURCE} --load=${entries}
-		rm -f ${entries}
 	fi
 
 	# Calling this late so it doesn't process the GConf schemas file we already
