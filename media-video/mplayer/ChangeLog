@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.330 2005/11/01 16:41:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.331 2005/11/06 23:23:32 lu_zero Exp $
 
   01 Nov 2005; Luca Barbato <lu_zero@gentoo.org>
   -files/mplayer-1.0_pre6-codecs.patch,
@@ -26,6 +26,9 @@
 
   30 Oct 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre7-r1.ebuild:
   Removed ancient divx4linux support, internal support if far better anyway.
+
+  06 Nov 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre7-r1.ebuild:
+  disable x264 for now
 
   10 Oct 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/mplayer-1.0_pre7-gcc4-amd64.patch, mplayer-1.0_pre7-r1.ebuild:

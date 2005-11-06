@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.11 2005/11/01 16:41:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7-r1.ebuild,v 1.12 2005/11/06 23:23:32 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -211,8 +211,8 @@ src_compile() {
 	else
 	unset CFLAGS CXXFLAGS
 	fi
-
-	local myconf=
+	#FIXME make it work in the snapshot
+	local myconf="--disable-x264"
 	################
 	#Optional features#
 	###############
